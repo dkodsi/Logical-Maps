@@ -2,13 +2,13 @@
 
 Research submission for the Logical Maps database owners. The collection includes work produced with Codex; each proof retains its attribution, assumptions and limitations. Database verdicts have not been automatically changed or imported.
 
-- **[Results and their significance](MAIN-RESULTS.md):** 26 explicit entries, including the pure/signature SP conflict, signature-extension boundaries, finite-domain and arithmetic consequences, Choice decompositions and rigidity classifications.
+- **[Results and their significance](MAIN-RESULTS.md):** 26 explicit entries grouped around central implications and separations; Choice, completeness and rigidity; arithmetic and evaluation; world structure and probability; and Strong Possibility and language extensions.
 - **[Complete result catalog](CATALOG.md):** all 160 tracked keys, with proof sources and formalization scope. A key can group related claims; it is not necessarily an independent theorem or a complete certificate.
 - **[Proof and certificate index](evidence/RESULT-INDEX.md):** exact declarations, saved compiler evidence and outstanding obligations.
 - **[Database-owner handoff](DATABASE-HANDOFF.md):** attribution, corrections and integration boundaries.
 - **[Reproducing checks](REPRODUCING.md):** pinned dependencies and the portable certificate helper.
 
-The corresponding structured indexes are [MAIN-RESULTS.json](MAIN-RESULTS.json) and [CATALOG.json](CATALOG.json). Written mathematical proofs, supporting Lean lemmas and complete Lean certificates are distinguished throughout. SP consistency remains unresolved.
+The corresponding structured indexes are [MAIN-RESULTS.json](MAIN-RESULTS.json) and [CATALOG.json](CATALOG.json). Written mathematical proofs, supporting Lean lemmas and complete Lean certificates are distinguished throughout. The guide identifies both unresolved mathematical questions and incomplete formalizations.
 
 ## Verification and provenance
 
