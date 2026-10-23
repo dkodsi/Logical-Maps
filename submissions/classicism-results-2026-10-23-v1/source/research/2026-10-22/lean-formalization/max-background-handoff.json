@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-22",
+  "status": "READY FOR INTEGRATION",
+  "build_owner": "01a1664d-7c13-7701-b52c-2070ee16eb06",
+  "full_inconsistency_verified": false,
+  "modules": [
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityWellOrder",
+      "path": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityWellOrder.lean",
+      "sha256": "9a3070e9f42e5880b039b3df47936c272b88ae3e513f406db172f2862552fd38",
+      "compiled_by_author": false,
+      "command": "/tmp/classicism-followup-venv/bin/python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.MaxAtomicityWellOrder --precompiled-root /tmp/classicism-mathlib/.lake/build/lib/lean --precompiled-root /tmp/classicism-mathlib/.lake/packages/LeanSearchClient/.lake/build/lib/lean --precompiled-root /tmp/classicism-mathlib/.lake/packages/Qq/.lake/build/lib/lean --precompiled-root /tmp/classicism-mathlib/.lake/packages/aesop/.lake/build/lib/lean --precompiled-root /tmp/classicism-mathlib/.lake/packages/batteries/.lake/build/lib/lean --precompiled-root /tmp/classicism-mathlib/.lake/packages/importGraph/.lake/build/lib/lean --precompiled-root /tmp/classicism-mathlib/.lake/packages/plausible/.lake/build/lib/lean --precompiled-root /tmp/classicism-mathlib/.lake/packages/proofwidgets/.lake/build/lib/lean --timeout 180"
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityRigidTransport",
+      "path": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityRigidTransport.lean",
+      "sha256": "bc0586cb57ba140534543960ba358971eecb7b6acd4efb809da6256b596671a0",
+      "compiled_by_author": false,
+      "command": "/tmp/classicism-followup-venv/bin/python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.MaxAtomicityRigidTransport --precompiled-root /tmp/classicism-mathlib/.lake/build/lib/lean --precompiled-root /tmp/classicism-mathlib/.lake/packages/LeanSearchClient/.lake/build/lib/lean --precompiled-root /tmp/classicism-mathlib/.lake/packages/Qq/.lake/build/lib/lean --precompiled-root /tmp/classicism-mathlib/.lake/packages/aesop/.lake/build/lib/lean --precompiled-root /tmp/classicism-mathlib/.lake/packages/batteries/.lake/build/lib/lean --precompiled-root /tmp/classicism-mathlib/.lake/packages/importGraph/.lake/build/lib/lean --precompiled-root /tmp/classicism-mathlib/.lake/packages/plausible/.lake/build/lib/lean --precompiled-root /tmp/classicism-mathlib/.lake/packages/proofwidgets/.lake/build/lib/lean --timeout 180"
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicitySplitSemantics",
+      "path": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySplitSemantics.lean",
+      "sha256": "b7e4aa4f624f6af3c778f370b21dbd979cb1341e26f920bdb496ad4e5294af9d",
+      "compiled_by_author": false,
+      "command": "/tmp/classicism-followup-venv/bin/python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.MaxAtomicitySplitSemantics --precompiled-root /tmp/classicism-mathlib/.lake/build/lib/lean --precompiled-root /tmp/classicism-mathlib/.lake/packages/LeanSearchClient/.lake/build/lib/lean --precompiled-root /tmp/classicism-mathlib/.lake/packages/Qq/.lake/build/lib/lean --precompiled-root /tmp/classicism-mathlib/.lake/packages/aesop/.lake/build/lib/lean --precompiled-root /tmp/classicism-mathlib/.lake/packages/batteries/.lake/build/lib/lean --precompiled-root /tmp/classicism-mathlib/.lake/packages/importGraph/.lake/build/lib/lean --precompiled-root /tmp/classicism-mathlib/.lake/packages/plausible/.lake/build/lib/lean --precompiled-root /tmp/classicism-mathlib/.lake/packages/proofwidgets/.lake/build/lib/lean --timeout 180"
+    }
+  ],
+  "verified_background": {
+    "modules": [
+      "Classicism.Semantics.BooleanValued",
+      "Classicism.Semantics.BooleanValuedSoundness",
+      "Classicism.Semantics.BooleanValuedChecks"
+    ],
+    "run": "checks/20261023T030824848245Z.json",
+    "axiom_report": "logs/runs/20261023T030824848245Z/Classicism_Semantics_BooleanValuedChecks.log",
+    "reported_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "sorryAx": false
+  },
+  "remaining": [
+    "Concrete rigid complete atomless Boolean algebra existence theorem",
+    "Mostowski collapse and hereditary-size cardinality/coding semantics",
+    "Constructible levels, condensation, finite canonical-order formula and interpretation",
+    "L-internal domains and finite-proof absoluteness, or ambient construction replacing that route",
+    "Concrete closed pure selector term and proof its interpretation is the constructed splitter"
+  ]
+}

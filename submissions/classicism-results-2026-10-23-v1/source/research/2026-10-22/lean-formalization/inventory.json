@@ -1,0 +1,1734 @@
+{
+  "scope": "Coverage queue, not Lean certificates or a recount of new discoveries. Latest followup/proof-refinement queue keys F01-F15 and R01-R09 are in INVENTORY.md and overlap this historical inventory.",
+  "snapshot_research_tasks": {
+    "completed_latest_passes": 6,
+    "active_before_resumption": 0,
+    "evidence": "coordinating task current chat-status check; this is not an automation or a live status query"
+  },
+  "original_family_count": 134,
+  "original_catalog_rows": 36,
+  "major_open_targets": [
+    "Relational Choice alone implies Transversal Choice",
+    "Consistency/inconsistency of pure and signature Strong Possibility"
+  ],
+  "source_lists": [
+    {
+      "path": "research/2026-10-22/counting/choice-counting-audit.md",
+      "retained_count": 26
+    },
+    {
+      "path": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "retained_count": 34
+    },
+    {
+      "path": "research/2026-10-22/counting/principles-counting-audit.md",
+      "retained_count": 35
+    },
+    {
+      "path": "research/2026-10-22/counting/sp-supplement-counting-audit.md",
+      "retained_count": 8
+    },
+    {
+      "path": "research/2026-10-22/counting/world-algebra-counting-audit.md",
+      "retained_count": 26
+    },
+    {
+      "path": "research/2026-10-22/counting/model-interpretation-counting-audit.md",
+      "retained_count": 5
+    }
+  ],
+  "original_families": [
+    {
+      "queue_id": "choice.01",
+      "source_index": "research/2026-10-22/counting/choice-counting-audit.md",
+      "source_ordinal": 1,
+      "source_entry": "FC iff Actuality + pointwise sections of actual surjections. Mirrored type-fragment reduction included, not separately counted. (`functional-choice-by-sections.md`)",
+      "queue_stage": "S1",
+      "dependency_obligation": "Exact typed C statement, gated proof and object-language certificate.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "choice.02",
+      "source_index": "research/2026-10-22/counting/choice-counting-audit.md",
+      "source_ordinal": 2,
+      "source_entry": "Boxed FC iff boxed Actuality + strong sections; fully boxed ordinary-section formulation included. (same)",
+      "queue_stage": "S1",
+      "dependency_obligation": "Exact typed C statement, gated proof and object-language certificate.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "choice.03",
+      "source_index": "research/2026-10-22/counting/choice-counting-audit.md",
+      "source_ordinal": 3,
+      "source_entry": "Plenitude iff Actuality + pointwise retractions of actual injections. (same; `choice-uniformization.md`)",
+      "queue_stage": "S1",
+      "dependency_obligation": "Exact typed C statement, gated proof and object-language certificate.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "choice.04",
+      "source_index": "research/2026-10-22/counting/choice-counting-audit.md",
+      "source_ordinal": 4,
+      "source_entry": "C5 iff persistence of actual injectivity iff strong retractions of actual injections. (`choice-uniformization.md`)",
+      "queue_stage": "S1",
+      "dependency_obligation": "Exact typed C statement, gated proof and object-language certificate.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "choice.05",
+      "source_index": "research/2026-10-22/counting/choice-counting-audit.md",
+      "source_ordinal": 5,
+      "source_entry": "BF_rel persistence/splitting calculus: persistence of surjectivity, idempotence or involutivity characterizes BF_rel; strong sections iff ordinary sections + BF_rel. These related law formulations are one family. (`functional-choice-by-sections.md`; `reversible-comprehension-and-algebraic-laws.md`)",
+      "queue_stage": "S1",
+      "dependency_obligation": "Exact typed C statement, gated proof and object-language certificate.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "choice.06",
+      "source_index": "research/2026-10-22/counting/choice-counting-audit.md",
+      "source_ordinal": 6,
+      "source_entry": "Per-map categorical/strong-splitting classification: Epi(f) iff necessary surjectivity; strong left invertibility iff necessary injectivity, at the stated relational types. (`choice-uniformization.md`)",
+      "queue_stage": "S1",
+      "dependency_obligation": "Exact typed C statement, gated proof and object-language certificate.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "choice.07",
+      "source_index": "research/2026-10-22/counting/choice-counting-audit.md",
+      "source_ordinal": 7,
+      "source_entry": "Plenitude iff representation of all total symmetric single-valued graphs (involution representation). (`reversible-comprehension-and-algebraic-laws.md`)",
+      "queue_stage": "S1",
+      "dependency_obligation": "Exact typed C statement, gated proof and object-language certificate.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "choice.08",
+      "source_index": "research/2026-10-22/counting/choice-counting-audit.md",
+      "source_ordinal": 8,
+      "source_entry": "The six evaluator equivalences, grouped as ONE hierarchy/classification: Actuality truth-fiber, ordinary BE, globally bivalent evaluator, unique ordinary BE, necessary local BE, fixed necessarily correct BE. Strictness counted separately below. (`actual-truth-evaluator-ladder.md`)",
+      "queue_stage": "S1",
+      "dependency_obligation": "Exact typed C statement, gated proof and object-language certificate.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "choice.09",
+      "source_index": "research/2026-10-22/counting/choice-counting-audit.md",
+      "source_ordinal": 9,
+      "source_entry": "GC canonical evaluator/extensionalization theorem: unique globally bivalent evaluator, selected-world normal form, unique TwoVal representatives, idempotent Boolean normalization and pullback naturality. Grouped rather than counting each operator law. (`gallin-bivalent-evaluator.md`)",
+      "queue_stage": "S1",
+      "dependency_obligation": "Exact typed C statement, gated proof and object-language certificate.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "choice.10",
+      "source_index": "research/2026-10-22/counting/choice-counting-audit.md",
+      "source_ordinal": 10,
+      "source_entry": "GC quantifier-law family: current-predicate commutation, safe boxed absorption, and exact selected-world-relative-BF characterization of the stronger law. No proof of the unrestricted stronger law is counted. (same)",
+      "queue_stage": "S1",
+      "dependency_obligation": "Exact typed C statement, gated proof and object-language certificate.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "choice.11",
+      "source_index": "research/2026-10-22/counting/choice-counting-audit.md",
+      "source_ordinal": 11,
+      "source_entry": "Ordinary BE plus modal commutation forces Extensionality (and converse). (same)",
+      "queue_stage": "S1",
+      "dependency_obligation": "Exact typed C statement, gated proof and object-language certificate.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "choice.12",
+      "source_index": "research/2026-10-22/counting/choice-counting-audit.md",
+      "source_ordinal": 12,
+      "source_entry": "Actuality iff localized extensionality; the supported current extensional relational Henkin HOL interpretation over all current individuals. (`actuality-world-slice-core.md`)",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "choice.13",
+      "source_index": "research/2026-10-22/counting/choice-counting-audit.md",
+      "source_ordinal": 13,
+      "source_entry": "Ambient Relational Choice transfers to ordinary Choice in the local core; GC-core version included as the same transfer family. (`actuality-world-slice-core.md`; `gallin-extensional-core.md`)",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "choice.14",
+      "source_index": "research/2026-10-22/counting/choice-counting-audit.md",
+      "source_ordinal": 14,
+      "source_entry": "Exact quantified Infinity transfer to the local/GC cores for the stated original base sort. Two constructions, one transfer family. (same two files)",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "choice.15",
+      "source_index": "research/2026-10-22/counting/choice-counting-audit.md",
+      "source_ordinal": 15,
+      "source_entry": "Complete atomic local intervals and their unique supported projection representatives; existing-join preservation included. (`actuality-world-slice-core.md`, §§7–8)",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "choice.16",
+      "source_index": "research/2026-10-22/counting/choice-counting-audit.md",
+      "source_ordinal": 16,
+      "source_entry": "Globally TwoVal GC core and its canonical isomorphism with the Actuality slice as current structures. (`gallin-extensional-core.md`)",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "choice.17",
+      "source_index": "research/2026-10-22/counting/choice-counting-audit.md",
+      "source_ordinal": 17,
+      "source_entry": "Exact preservation of represented individual relations, well-orders, cardinal comparisons and induction under the local projection, with extensional relation equality. (`actuality-world-slice-core.md`, §8)",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "choice.18",
+      "source_index": "research/2026-10-22/counting/choice-counting-audit.md",
+      "source_ordinal": 18,
+      "source_entry": "Faithful probability iff internally countable atomic worlds iff internal ccc; existence of a countably additive replacement. (`faithful-probability-countable-worlds.md`)",
+      "queue_stage": "S4",
+      "dependency_obligation": "Internal number/real graph coding, finite/countable sums and representation transfer; external real-valued analogue is insufficient.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "choice.19",
+      "source_index": "research/2026-10-22/counting/choice-counting-audit.md",
+      "source_ordinal": 19,
+      "source_entry": "Probability type classification and ceiling: atom-product criterion, et/all finite individual arities, tt iff finite worlds, and all-type incompatibility with quantified Infinity_e. Grouped as ONE classification. (same, §§7–8)",
+      "queue_stage": "S4",
+      "dependency_obligation": "Internal number/real graph coding, finite/countable sums and representation transfer; external real-valued analogue is insufficient.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "choice.20",
+      "source_index": "research/2026-10-22/counting/choice-counting-audit.md",
+      "source_ordinal": 20,
+      "source_entry": "Faithful probability versus full N-profile realization: incompatibility, despite compatibility with every finite binary pattern. (same, §5)",
+      "queue_stage": "S4",
+      "dependency_obligation": "Internal number/real graph coding, finite/countable sums and representation transfer; external real-valued analogue is insufficient.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "choice.21",
+      "source_index": "research/2026-10-22/counting/choice-counting-audit.md",
+      "source_ordinal": 21,
+      "source_entry": "Permutation-invariant faithful probability iff internally finitely many worlds, with unique uniform state. (`probability-and-world-symmetry.md`)",
+      "queue_stage": "S4",
+      "dependency_obligation": "Internal number/real graph coding, finite/countable sums and representation transfer; external real-valued analogue is insufficient.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "choice.22",
+      "source_index": "research/2026-10-22/counting/choice-counting-audit.md",
+      "source_ordinal": 22,
+      "source_entry": "Finite-parameter pure-term definability of faithful probability forces finite worlds, with the precise parameter/output-core restrictions. (same)",
+      "queue_stage": "S4",
+      "dependency_obligation": "Internal number/real graph coding, finite/countable sums and representation transfer; external real-valued analogue is insufficient.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "choice.23",
+      "source_index": "research/2026-10-22/counting/choice-counting-audit.md",
+      "source_ordinal": 23,
+      "source_entry": "Strict six-level evaluator hierarchy: five adjacent nonimplications, realized by the chain, double-retract, retract, atom-plus-atomless, and involution-group models. Counted as ONE separation family, not five new model constructions. (`actual-truth-evaluator-ladder.md`)",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "choice.24",
+      "source_index": "research/2026-10-22/counting/choice-counting-audit.md",
+      "source_ordinal": 24,
+      "source_entry": "Independence of the two section-decomposition conjuncts and the strong/modal scopes: four stated witness configurations. Existing chain/retract constructions overlap item 23, but the additional splitting verdicts are different claims. Counted as ONE independence family. (`functional-choice-by-sections.md`, §5)",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "choice.25",
+      "source_index": "research/2026-10-22/counting/choice-counting-audit.md",
+      "source_ordinal": 25,
+      "source_entry": "Probability model calibration: full (E,W)=(N,N), (N,P(N)), (P(N),N) separates propositional probability and individual-state probability while retaining the stated Infinity and F background. Counted as ONE family. (`faithful-probability-countable-worlds.md`)",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "choice.26",
+      "source_index": "research/2026-10-22/counting/choice-counting-audit.md",
+      "source_ordinal": 26,
+      "source_entry": "Finite torsor models plus Henkin compactness give endomorphism splitting + necessary all-type Infinity SCHEMA without ND. This is a RELATIVE CONSISTENCY construction, not a quantified-Infinity model claim. (`endomorphism-splitting-infinity-separator.md`)",
+      "queue_stage": "S5",
+      "dependency_obligation": "Metalogical/set-theoretic/computability infrastructure; all source and consistency dependencies explicit.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.01",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 1,
+      "source_entry": "**Nullary rigidity.** Weak rigidity and rigidity of a proposition both mean bottom or top; the corresponding nullary rigidity principles are C-theorems. Route: `maximalism-modal.md` §15.",
+      "queue_stage": "S1",
+      "dependency_obligation": "Exact typed C statement, gated proof and object-language certificate.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.02",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 2,
+      "source_entry": "**Atomicity plus rigid comprehension.** Atomicity + Rigid Comprehension implies Weakly Rigid Power. Route: `maximalism-modal.md` §16.",
+      "queue_stage": "S1",
+      "dependency_obligation": "Exact typed C statement, gated proof and object-language certificate.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.03",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 3,
+      "source_entry": "**One-property-type descent.** TR, RP, WRP, Rigid Comprehension, Weak Rigid Comprehension and IC each descend one property type. Counted as one transfer package. Routes: `maximalism-modal.md` §17; `nd-inextensible-comprehension-implies-weak-power.md` §5.",
+      "queue_stage": "S1",
+      "dependency_obligation": "Exact typed C statement, gated proof and object-language certificate.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.04",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 4,
+      "source_entry": "**Singleton reconstruction.** Weak rigidity is reconstruction as the join of current tuple haecceities; rigidity is the necessary version. Route: `rigidity-by-joins-and-boolean-closure.md` §1.",
+      "queue_stage": "S1",
+      "dependency_obligation": "Exact typed C statement, gated proof and object-language certificate.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.05",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 5,
+      "source_entry": "**Existing joins and TR.** Existing represented joins preserve weak rigidity; TR is exactly closure of rigid relations under those joins. Route: the same file §2.",
+      "queue_stage": "S1",
+      "dependency_obligation": "Exact typed C statement, gated proof and object-language certificate.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.06",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 6,
+      "source_entry": "**ND equivalence package.** ND is characterized by intersection/difference closure, pointwise bivalence, and section closure of rigid or weakly rigid relations. Counted as one package. Route: `rigid-boolean-closure.md` §§2–3,6–7.",
+      "queue_stage": "S1",
+      "dependency_obligation": "Exact typed C statement, gated proof and object-language certificate.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.07",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 7,
+      "source_entry": "**Complement closure.** Ambient complement closure has the exact typewise BF qualification and characterizes C5 at schema level. Route: the same file §§4,6.",
+      "queue_stage": "S1",
+      "dependency_obligation": "Exact typed C statement, gated proof and object-language certificate.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.08",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 8,
+      "source_entry": "**The bounded propagation gap.** WRP has an exact decomposition through TR, RP and bounded future tameness; ND supplies the missing condition, yielding ND+TR+RP⇒WRP. Route: `maximalism-modal.md` §§18–19.",
+      "queue_stage": "S1",
+      "dependency_obligation": "Exact typed C statement, gated proof and object-language certificate.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.09",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 9,
+      "source_entry": "**Inextensible comprehension supplies weak power.** ND_t + IC_(τt) ⇒ WRP_τ, including TR and RP consequences. The earlier ND+RigidComprehension result is subsumed and not counted again. Route: `nd-inextensible-comprehension-implies-weak-power.md`.",
+      "queue_stage": "S1",
+      "dependency_obligation": "Exact typed C statement, gated proof and object-language certificate.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.10",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 10,
+      "source_entry": "**The exact boundary over ND+BC.** IC, Rigid Comprehension, TR and WRP are equivalent additional assumptions over ND+BC. Routes: the preceding file, final section; `old-new-boolean-completeness-and-rigidity-separation.md`.",
+      "queue_stage": "S1",
+      "dependency_obligation": "Exact typed C statement, gated proof and object-language certificate.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.11",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 11,
+      "source_entry": "**Uniform rigidification.** Uniform weak/rigid comprehension is exactly the ND strengthening of the corresponding comprehension schema. Route: `rigidity-by-joins-and-boolean-closure.md` §6.",
+      "queue_stage": "S1",
+      "dependency_obligation": "Exact typed C statement, gated proof and object-language certificate.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.12",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 12,
+      "source_entry": "**Algebra of the weak and rigid fragments.** These fragments have the stated complete Boolean interval representation; uniform rigidification supplies a complete Boolean retraction. Route: the same file §§5–6. This is the rigidity-fragment theorem, not the separately counted Actuality/Gallin interpretation of extensional HOL.",
+      "queue_stage": "S1",
+      "dependency_obligation": "Exact typed C statement, gated proof and object-language certificate.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.13",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 13,
+      "source_entry": "**Strong Leibniz propagation.** Strong Leibniz + Rigid Comprehension implies necessary Strong Leibniz and necessary relational BF, including the sharper typed dependencies. Routes: `../strong-leibniz-rigid-bottom-cut.md`; `audit-rigid-bottom-cut.md`.",
+      "queue_stage": "S1",
+      "dependency_obligation": "Exact typed C statement, gated proof and object-language certificate.",
+      "evidence_status": "separate-agent audit explicitly reported in notes/INDEPENDENT-AUDIT-REPORT-01a164ea.md; no human/Lean certification inferred",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.14",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 14,
+      "source_entry": "**Finite rigid representatives.** Every internally finite property has a unique rigid coextension in bare C. Route: `quotient-abstraction-lane.md` §13.1.",
+      "queue_stage": "S1",
+      "dependency_obligation": "Exact typed C statement, gated proof and object-language certificate.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.15",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 15,
+      "source_entry": "**Functional-graph Bourbaki–Witt.** Bare-C fixed-point theorem for represented progressive functional graphs on genuinely antisymmetric chain-complete orders. Routes: `audit-bare-c-bourbaki-witt.md`; `quotient-abstraction-lane.md` §14.",
+      "queue_stage": "S2",
+      "dependency_obligation": "Represented families and antisymmetric orders; internal chain/fixed-point theorem; no external transfinite recursion.",
+      "evidence_status": "separate-agent audit explicitly reported in notes/INDEPENDENT-AUDIT-REPORT-01a164ea.md; no human/Lean certification inferred",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.16",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 16,
+      "source_entry": "**The transversal theorem.** Point-output Relational Choice plus represented well-ordered Boolean-chain joins implies Transversal Choice. Includes RC+BC⇒TC and its sharper choice-instance refinement as one theorem. Routes: `relational-choice-boolean-completeness-transversal-proof.md`; `rc-guarded-progressive-operation.md`.",
+      "queue_stage": "S2",
+      "dependency_obligation": "Represented families and antisymmetric orders; internal chain/fixed-point theorem; no external transfinite recursion.",
+      "evidence_status": "separate-agent audit explicitly reported in notes/INDEPENDENT-AUDIT-REPORT-01a164ea.md; no human/Lean certification inferred",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.17",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 17,
+      "source_entry": "**Chain-completeness upgrade.** Under the matching RC instance, well-ordered-chain completeness, chain completeness and BC are equivalent. Route: `quotient-abstraction-lane.md` §15.",
+      "queue_stage": "S2",
+      "dependency_obligation": "Represented families and antisymmetric orders; internal chain/fixed-point theorem; no external transfinite recursion.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.18",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 18,
+      "source_entry": "**Directed completeness.** Directed Boolean completeness is equivalent to BC in bare C. Route: the same file §15.1.",
+      "queue_stage": "S2",
+      "dependency_obligation": "Represented families and antisymmetric orders; internal chain/fixed-point theorem; no external transfinite recursion.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.19",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 19,
+      "source_entry": "**Countable-completeness upgrade.** Matching RC+CBC+CCC implies BC, with the sharpened point-choice transversal consequence. Route: `relational-choice-countable-completeness-ccc.md`.",
+      "queue_stage": "S2",
+      "dependency_obligation": "Represented families and antisymmetric orders; internal chain/fixed-point theorem; no external transfinite recursion.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.20",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 20,
+      "source_entry": "**Countable complete Boolean types.** An internally countable, countably complete Boolean type is internally finite, without Choice or an Infinity premise. Route: `quotient-abstraction-lane.md` §21.",
+      "queue_stage": "S2",
+      "dependency_obligation": "Represented families and antisymmetric orders; internal chain/fixed-point theorem; no external transfinite recursion.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.21",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 21,
+      "source_entry": "**Finite-index CCC.** Finite-index CCC forces internal finiteness of the Boolean type without a completeness premise. Route: `finite-index-countable-chain-condition.md`.",
+      "queue_stage": "S2",
+      "dependency_obligation": "Represented families and antisymmetric orders; internal chain/fixed-point theorem; no external transfinite recursion.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.22",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 22,
+      "source_entry": "**Dense-basis completeness.** Completeness for subfamilies of an admitted order-dense family implies BC; in particular a countable dense basis plus CBC suffices. Route: `maximalism-modal.md` §21.",
+      "queue_stage": "S2",
+      "dependency_obligation": "Represented families and antisymmetric orders; internal chain/fixed-point theorem; no external transfinite recursion.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.23",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 23,
+      "source_entry": "**Quotient-respecting relational choice.** Transversal Choice is equivalent, as an all-type schema, to Relational Choice respecting input equivalence classes. Route: `quotient-abstraction-lane.md` §20.",
+      "queue_stage": "S2",
+      "dependency_obligation": "Represented families and antisymmetric orders; internal chain/fixed-point theorem; no external transfinite recursion.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.24",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 24,
+      "source_entry": "**Finite cells and finite exceptional covers.** RC supplies transversals when all cells are internally finite, and more generally when the infinite cells have an internally finite represented cover. The finite-cell case is subsumed. Route: the same file §§13.2,17.3.",
+      "queue_stage": "S2",
+      "dependency_obligation": "Represented families and antisymmetric orders; internal chain/fixed-point theorem; no external transfinite recursion.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.25",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 25,
+      "source_entry": "**Class-coding routes.** Represented well-ordered class covers give transversals without Choice; represented identity-valued class labels give them with the matching RC instance. Counted as one class-coding package. Route: the same file §17.1.",
+      "queue_stage": "S2",
+      "dependency_obligation": "Represented families and antisymmetric orders; internal chain/fixed-point theorem; no external transfinite recursion.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.26",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 26,
+      "source_entry": "**Countable-cell transversals.** ND+CBC gives unique weakly rigid representatives of countable properties; with the matching RC instance this gives transversals for countable-cell equivalence relations. Route: the same file §17.2.",
+      "queue_stage": "S2",
+      "dependency_obligation": "Represented families and antisymmetric orders; internal chain/fixed-point theorem; no external transfinite recursion.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.27",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 27,
+      "source_entry": "**Symmetric full-profile choice characterization.** In the specified full symmetric-profile category models, the membership-selector RC instance has an exact stabilizer/well-order characterization and implies TC. The earlier one-object no-go is subsumed. Route: `rc-symmetric-ideal-full-categories.md` §§6–7. Here RC means Relational Choice, not Intensional Choice or Inextensible Comprehension.",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "separate-agent audit explicitly reported in notes/INDEPENDENT-AUDIT-REPORT-01a164ea.md; no human/Lean certification inferred",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.28",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 28,
+      "source_entry": "**Comparable-family supremum selection.** Coextension-invariant actual-supremum selection for comparable families is equivalent to Transversal, the coextension-representative principle, not full Transversal Choice. Route: `rc-alone-fixedpoint-obstruction.md` §2.",
+      "queue_stage": "S2",
+      "dependency_obligation": "Represented families and antisymmetric orders; internal chain/fixed-point theorem; no external transfinite recursion.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.29",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 29,
+      "source_entry": "**Shear-seed obstruction.** The specified finite-support rational shear seed cannot support the required membership selector after comprehension closure. Route: `rc-alone-shear-obstruction.md`.",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "separate-agent audit explicitly reported in notes/INDEPENDENT-AUDIT-REPORT-01a164ea.md; no human/Lean certification inferred",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.30",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 30,
+      "source_entry": "**Linear-vector seed obstruction.** The analogous full rational-linear automorphism seed is obstructed using represented endomorphism graphs. Route: `rc-alone-vector-endomorphism-obstruction.md`.",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "separate-agent audit explicitly reported in notes/INDEPENDENT-AUDIT-REPORT-01a164ea.md; no human/Lean certification inferred",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.31",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 31,
+      "source_entry": "**Corrected old/new model.** ND+full BC+¬IC_et+¬RigidComprehension_et at E, but ¬BC_et at O. All corrected consequences are counted once. Route: `old-new-boolean-completeness-and-rigidity-separation.md`.",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.32",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 32,
+      "source_entry": "**Fixed-point entrance cone.** Substantial local comprehension/completeness and WRP coexist with ¬□TR, relational BF failures and the stated further failures. Route: `fixed-point-entrance-cone.md`.",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.33",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 33,
+      "source_entry": "**Colour-collapse entrance.** Full TR+boxed BF+boxed RP_et+¬WRP_et. This refutes the single-type implication, not the full-schema conjecture. Route: `colour-collapse-entrance.md`.",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "rigidity.34",
+      "source_index": "research/2026-10-22/counting/rigidity-counting-audit.md",
+      "source_ordinal": 34,
+      "source_entry": "**Singleton symmetric-model applications.** Nine recorded construction families fail RC_(tt,t), while the old/new singleton variant satisfies □RC and □TC. Counted conservatively as one verdict package, not ten models. Route: `rc-symmetric-singleton-applications.md`.",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.01",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 1,
+      "source_entry": "Arithmetic-infinity equivalences, including the C5/domain-infinity boundary — `frege-infinity-20261022-1726.md` §§26–28,33.",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.02",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 2,
+      "source_entry": "Function-type finiteness classification and higher-type infinity propagation — `relational-coding-recursion-20261022.md` §§24,27,30.",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.03",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 3,
+      "source_entry": "Common first-order arithmetic theory of the positive packages, including the stated Functional Choice additions — `infinity-world-richness-consolidation-20261022.md` §2.",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.04",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 4,
+      "source_entry": "Exact Max arithmetic theory Cn(T+TrueΠ₁), including specified current graph-choice strengthenings — same §2; relational report §§36–37.",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.05",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 5,
+      "source_entry": "Canonical successor-preserving arithmetic graphs between original counting bases — relational report §38.",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.06",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 6,
+      "source_entry": "Max forbids predecessor operations and the displayed cross-base arithmetic operations — relational report §§34–35,38. These closely related collision arguments count once.",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.07",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 7,
+      "source_entry": "Explicit guarded numerical join and increasing-chain failure under Max — Frege report §§12–18,23.",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.08",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 8,
+      "source_entry": "Pure named atoms cannot meet the arithmetic region; no pure Actuality witness under Max — `fresh-constant-profile-root-20261022.md` §15.",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.09",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 9,
+      "source_entry": "Max forces an internally infinite region of failures of Actuality — same §16.",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.10",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 10,
+      "source_entry": "Pointed-completeness/finite-profile-width criteria for Max-consistent atomic cells — `profile-root-construction-20261022.md` §12; `sp-finite-profile-rank-20261022.md` §§1–3.",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.11",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 11,
+      "source_entry": "Finite stable C5-cell categoricity and explicit finite typed classification — `finite-c5-profile-cells-20261022.md` §§1–5.",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.12",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 12,
+      "source_entry": "Exact finite-signature boundary for Max consistency preservation, including the one-individual-name exception — `audit-signature-to-pure-sp-20261022.md` §§6,9.",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.13",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 13,
+      "source_entry": "Conservative signature extension with an infinite reservoir of fresh names — same §8.",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.14",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 14,
+      "source_entry": "Σ₁-completeness of the pure identity problem and Max's fixed pure diagram — `max-degree.md` §§1–2.",
+      "queue_stage": "S5",
+      "dependency_obligation": "Metalogical/set-theoretic/computability infrastructure; all source and consistency dependencies explicit.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.15",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 15,
+      "source_entry": "Stronger effective-axiomatization obstruction and exact oracle cone for consistent Max strengthenings — same §§3,11; `theory-space-comparison.md` §6. This counts the strengthening, not the published Max non-r.e. baseline.",
+      "queue_stage": "S5",
+      "dependency_obligation": "Metalogical/set-theoretic/computability infrastructure; all source and consistency dependencies explicit.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.16",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 16,
+      "source_entry": "Robust Σ₂-completeness of Max theoremhood — `max-degree.md` §10.",
+      "queue_stage": "S5",
+      "dependency_obligation": "Metalogical/set-theoretic/computability infrastructure; all source and consistency dependencies explicit.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.17",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 17,
+      "source_entry": "Exact adequate-Max-model capacity: PA over 0′, uniform DNR equivalence, low solutions and common information — `max-degree.md` §9; `effective-refinements.md` §§3,8.",
+      "queue_stage": "S5",
+      "dependency_obligation": "Metalogical/set-theoretic/computability infrastructure; all source and consistency dependencies explicit.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.18",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 18,
+      "source_entry": "Positive-package Σ₁ theoremhood/ordinary-PA model capacity, including the stronger bare-code lower bound from possible weak Infinity — `positive-effective.md` §§13–17,22.",
+      "queue_stage": "S5",
+      "dependency_obligation": "Metalogical/set-theoretic/computability infrastructure; all source and consistency dependencies explicit.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.19",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 19,
+      "source_entry": "Standard-number code bounds: HYP lower information, sub-Kleene-O solutions, exact common information — same §§18–20. Standard-model existence hypotheses remain explicit.",
+      "queue_stage": "S5",
+      "dependency_obligation": "Metalogical/set-theoretic/computability infrastructure; all source and consistency dependencies explicit.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.20",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 20,
+      "source_entry": "Analytic complexity of standard-model finite-condition problems — same §21; `max-degree.md` §13.",
+      "queue_stage": "S5",
+      "dependency_obligation": "Metalogical/set-theoretic/computability infrastructure; all source and consistency dependencies explicit.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.21",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 21,
+      "source_entry": "Effective pure-complete theories have recursive finite domain bounds and unique computably presentable actual structures — `effective-refinements.md` §§9.3–9.6.",
+      "queue_stage": "S5",
+      "dependency_obligation": "Metalogical/set-theoretic/computability infrastructure; all source and consistency dependencies explicit.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.22",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 22,
+      "source_entry": "Completion-space classifications: Max nowhere dense; positive isolated completions/perfect derivatives; exact effective-Borel distinctions — `theory-space-comparison.md`; `effective-refinements.md` §§2–5.",
+      "queue_stage": "S5",
+      "dependency_obligation": "Metalogical/set-theoretic/computability infrastructure; all source and consistency dependencies explicit.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.23",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 23,
+      "source_entry": "Equational conservativity and idempotence of relative distinctness maximalization above Max — `theory-space-comparison.md` §9.",
+      "queue_stage": "S5",
+      "dependency_obligation": "Metalogical/set-theoretic/computability infrastructure; all source and consistency dependencies explicit.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.24",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 24,
+      "source_entry": "Genuine infinitary comprehension boundary, including standardness transfer and incompatibility with original Max — `comparison-handoff-20261022.md` §7; `structural-lane-handoff.md`. This explicitly changes the object-language resources.",
+      "queue_stage": "S6",
+      "dependency_obligation": "Separate extended syntax and soundness, not an original-C theorem.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.25",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 25,
+      "source_entry": "Conditional SP Σ₃-completeness and PA-over-0″ model capacity — `strong-possibility-degree.md` §§2–6.",
+      "queue_stage": "S5",
+      "dependency_obligation": "Metalogical/set-theoretic/computability infrastructure; all source and consistency dependencies explicit.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.26",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 26,
+      "source_entry": "SP's exact finite-profile atom decompositions — `sp-finite-profile-rank-20261022.md` §4; finite-cell notes.",
+      "queue_stage": "S5",
+      "dependency_obligation": "Metalogical/set-theoretic/computability infrastructure; all source and consistency dependencies explicit.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.27",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 27,
+      "source_entry": "Pure/signature SP incompatibility and exact finite individual-name bounds — `audit-signature-to-pure-sp-20261022.md` §§1–7,10.",
+      "queue_stage": "S5",
+      "dependency_obligation": "Metalogical/set-theoretic/computability infrastructure; all source and consistency dependencies explicit.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.28",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 28,
+      "source_entry": "Finite-signature atom counts via pointed isomorphism orbits/Burnside formulas — `finite-c5-signature-cells-20261022.md`.",
+      "queue_stage": "S5",
+      "dependency_obligation": "Metalogical/set-theoretic/computability infrastructure; all source and consistency dependencies explicit.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.29",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 29,
+      "source_entry": "Explicit all-input-type Barcan and Functionality failures under pure SP and the stated finite-signature SP hypotheses — `finite-c5-profile-cells-20261022.md` §9; `signature-sp-barcan-20261022.md`.",
+      "queue_stage": "S5",
+      "dependency_obligation": "Metalogical/set-theoretic/computability infrastructure; all source and consistency dependencies explicit.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.30",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 30,
+      "source_entry": "Conditional finite possibility iterations: successive jumps and strict finite-hat consequences — `iterated-possibility-degrees.md`.",
+      "queue_stage": "S5",
+      "dependency_obligation": "Metalogical/set-theoretic/computability infrastructure; all source and consistency dependencies explicit.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.31",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 31,
+      "source_entry": "Conditional omega iteration: omega-jump model capacity and theoremhood/completion complexity — `limit-possibility-degree.md`.",
+      "queue_stage": "S5",
+      "dependency_obligation": "Metalogical/set-theoretic/computability infrastructure; all source and consistency dependencies explicit.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.32",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 32,
+      "source_entry": "Pure-term-profile roots, independently prescribed atomic/atomless cells, and related finite-fragment/retract-graft variants — `profile-root-construction-20261022.md`; structural proof package. Treat the retract variants as part of this family rather than new models each time a target is changed.",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.33",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 33,
+      "source_entry": "Fresh-constant/profile roots with prescribed finite atom counts, exact countability spectra, and arbitrary individual domains satisfying the stated UCP/raw-UWR conditions — `fresh-constant-profile-root-20261022.md`.",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.34",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 34,
+      "source_entry": "Finite-leaf coalesced model separating arithmetic infinity from possible domain infinity — Frege report §33.",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "principles.35",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_ordinal": 35,
+      "source_entry": "Finite pointed-complete/coalesced structures separating finite effective completeness from C5 and functional representation — profile report §§20–26; `positive-effective.md` §23.",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "sp_supplement.01",
+      "source_index": "research/2026-10-22/counting/sp-supplement-counting-audit.md",
+      "source_ordinal": 1,
+      "source_entry": "**Exact algebraic consistency/embedding criteria for SP.** SP equals Max plus the individually Max-consistent universal finite-Boolean-identity sentences; consistency is equivalent to the restricted existential-identity disjunction property. The normalized H-disjunction criterion and the criterion using embeddings into elementary extensions of every genuine Max model belong to this same family. Include the proved H-clopen embedding-invariance lemma here, not as another count. Routes: `notes/reflection-universal-core-20261022.md` §§2–7; `notes/sp-failed-disjunction-20261022.md` §§17,18.2. The required joint-embedding theorem/classification of H-clopen sentences is NOT proved and is not counted. The published Max-reflection baseline is not counted again.",
+      "queue_stage": "S3/S5",
+      "dependency_obligation": "Typed model/algebra construction, compactness or forcing and exact truth/operation preservation.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "sp_supplement.02",
+      "source_index": "research/2026-10-22/counting/sp-supplement-counting-audit.md",
+      "source_ordinal": 2,
+      "source_entry": "**Essential common-term algebra criterion.** Essentiality for the full pure term-operation signature is equivalent to the stated modal-ideal/density condition and is sufficient for a genuine Max model to satisfy SP; such an essential genuine model would fail Vicinity and Actuality. Route: `notes/sp-essential-extension-20261022.md` §§1–6,8. Exact status correction: essentiality has **not been shown necessary** for SP. There is no proved nonnecessity result and no essential genuine SP model is supplied.",
+      "queue_stage": "S3/S5",
+      "dependency_obligation": "Typed model/algebra construction, compactness or forcing and exact truth/operation preservation.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "sp_supplement.03",
+      "source_index": "research/2026-10-22/counting/sp-supplement-counting-audit.md",
+      "source_ordinal": 3,
+      "source_entry": "**Maximal B-preserving quotients and permanent-survival criterion.** Such maximal quotients exist and are essential; correct-B-truth ultrafilters give literal identity correctness, and the resulting complete operation/truth diagram embeds in a genuine Max Henkin completion. A specified disequality survives every maximal B-preserving quotient exactly when its principal congruence already collapses distinct B-elements, with a finite polynomial-chain certificate. Routes: `notes/sp-essential-extension-20261022.md` §§4,7,9; `notes/sp-henkin-minimal-20261022.md` §§16–21; `notes/sp-failed-disjunction-20261022.md` §§15–16. This is an algebraic quotient/completion theorem, not an SP model: Henkin witnesses can still lose truth in later quotients.",
+      "queue_stage": "S3/S5",
+      "dependency_obligation": "Typed model/algebra construction, compactness or forcing and exact truth/operation preservation.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "sp_supplement.04",
+      "source_index": "research/2026-10-22/counting/sp-supplement-counting-audit.md",
+      "source_ordinal": 4,
+      "source_entry": "**Guarded old-witness extraction and finite interpolation.** Positive existential equations admit old pure-term witnesses; under the explicit guards, finite truth observations, finite direct identities/disequalities, and finite entity-valued input/output tables admit permanent old witnesses/interpolants, including avoidance of finitely many forbidden functions. All these related finite replacement lemmas count once. Routes: `notes/sp-henkin-minimal-20261022.md` §§19–23; `notes/sp-existential-products-20261022.md` §§23–24; `notes/sp-failed-disjunction-20261022.md` §10. Arbitrary incoming higher-type operators, unbounded observations and unrestricted quantified dependence remain outside the theorem.",
+      "queue_stage": "S3/S5",
+      "dependency_obligation": "Typed model/algebra construction, compactness or forcing and exact truth/operation preservation.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "sp_supplement.05",
+      "source_index": "research/2026-10-22/counting/sp-supplement-counting-audit.md",
+      "source_ordinal": 5,
+      "source_entry": "**Product embeddings admit injective ultraproduct quotients.** Any embedding of a genuine C full-term algebra into a product has a finite-intersection family of pair-separation coordinates and therefore an injective ultraproduct quotient. For finite products an injective coordinate already exists. Route: `notes/sp-existential-products-20261022.md` §14. This is not ordinary published Max reflection and was not in the original35.",
+      "queue_stage": "S3/S5",
+      "dependency_obligation": "Typed model/algebra construction, compactness or forcing and exact truth/operation preservation.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "sp_supplement.06",
+      "source_index": "research/2026-10-22/counting/sp-supplement-counting-audit.md",
+      "source_ordinal": 6,
+      "source_entry": "**Nonrigid four-proposition rigid-leaf classification.** The specified chain family L_(n,k) is classified by conjugacy classes of transitive subgroups of Sym(n−1)×Sym(k), with finite pure orbit isolators and exact BF behavior. Route: `sp-structural-proof-package/finite-rigid-leaf-galois-classification-20261022.md` §§1–10. This is distinct from original item11's stable C5 cells. The construction itself is already within original item35 and is not added again. The full-schema BF/Functionality equivalence is already in the proved database and is excluded from the increment.",
+      "queue_stage": "S3/S5",
+      "dependency_obligation": "Typed model/algebra construction, compactness or forcing and exact truth/operation preservation.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "sp_supplement.07",
+      "source_index": "research/2026-10-22/counting/sp-supplement-counting-audit.md",
+      "source_ordinal": 7,
+      "source_entry": "**SP excludes strong worlds and allows atomless splitting of finite current diagrams.** SP rules out arbitrary strong worlds at every relational type, and yields the stated distinctness-preserving atomlessness possibilities preserving any fixed finite current diagram. Routes: `notes/sp-existential-products-20261022.md` §§5–6; `sp-structural-proof-package/reflection-universal-core-20261022.md` §§9–12. This does not refute weak atoms or establish SP inconsistency, and it does not say SP refutes unboxed Actuality.",
+      "queue_stage": "S1/S3",
+      "dependency_obligation": "Gated elementary obstruction followed by exact semantic/schema bridge.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "sp_supplement.08",
+      "source_index": "research/2026-10-22/counting/sp-supplement-counting-audit.md",
+      "source_ordinal": 8,
+      "source_entry": "**Restricted pure persistent ghosts and finite multiplicity.** At every relational input/output type there are explicit closed-pure C-provably persistent operators nonzero under Max but with bottom entity-values on all current inputs under SP; every current operator has arbitrarily many distinct entity-coextensive operators, for each external finite bound. The contrasting closed-pure single-individual-input result is included. Route: `notes/sp-existential-products-20261022.md` §§18–20,25. This strengthens original item29's unqualified BF/Functionality failures by a substantive purity/persistence restriction; it is counted once, not once per type, arity or finite bound. No internally infinite sequence of such operators is claimed.",
+      "queue_stage": "S1/S3",
+      "dependency_obligation": "Gated elementary obstruction followed by exact semantic/schema bridge.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "world_algebra.01",
+      "source_index": "research/2026-10-22/counting/world-algebra-counting-audit.md",
+      "source_ordinal": 1,
+      "source_entry": "**Internal world-indexed representation.** Encode/decode of arbitrary relational intensions as admitted rigid world-indexed extensions; world-times-tuple atomic normal form and internal truth lemma; the associated slicing/normalization laws. These are grouped as one representation family, with no external-fullness assertion. Route: world-representation §§3–4; root §1. The canonical Henkin Gallin expansion/biinterpretation is EXCLUDED here because it is in the root5 tally. This item concerns internal truth-table/atom representation, distinct from the LOCAL Actuality/GC mathematical cores already counted.",
+      "queue_stage": "S1/S2/S3",
+      "dependency_obligation": "Internal world/Boolean representation and represented maps; elementary lemmas before interpretation/schema bridge.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "world_algebra.02",
+      "source_index": "research/2026-10-22/counting/world-algebra-counting-audit.md",
+      "source_ordinal": 2,
+      "source_entry": "**Complete subalgebras are world partitions.** Admitted internally complete Boolean subalgebras correspond to admitted equivalence relations on world atoms; the generator/separating-family criterion is included. Route: algebraic-core §1.",
+      "queue_stage": "S1/S2/S3",
+      "dependency_obligation": "Internal world/Boolean representation and represented maps; elementary lemmas before interpretation/schema bridge.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "world_algebra.03",
+      "source_index": "research/2026-10-22/counting/world-algebra-counting-audit.md",
+      "source_ordinal": 3,
+      "source_entry": "**Complete Boolean maps are contravariant world maps.** Complete bivalent homomorphisms are evaluations at atoms; general complete Boolean homomorphisms correspond to represented maps of atom fields, including injective/surjective and inverse-direction consequences. Route: algebraic-core §9.",
+      "queue_stage": "S1/S2/S3",
+      "dependency_obligation": "Internal world/Boolean representation and represented maps; elementary lemmas before interpretation/schema bridge.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "world_algebra.04",
+      "source_index": "research/2026-10-22/counting/world-algebra-counting-audit.md",
+      "source_ordinal": 4,
+      "source_entry": "**Complete normal modal operators are world relations.** Representation by admitted binary world relations, with the proved modal-law/frame correspondences, including .2/confluence and the indicated product refinements. Counted as one correspondence family. Route: algebraic-core §§10, 17.",
+      "queue_stage": "S1/S2/S3",
+      "dependency_obligation": "Internal world/Boolean representation and represented maps; elementary lemmas before interpretation/schema bridge.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "world_algebra.05",
+      "source_index": "research/2026-10-22/counting/world-algebra-counting-audit.md",
+      "source_ordinal": 5,
+      "source_entry": "**Profile-map characterization and Cantor boundary.** EU is surjectivity and S injectivity of the world-to-rigid-profile map; literal pattern-cell characterization. The strongest type-boundary result is already in BARE C: unrestricted raw WR for all current profiles is impossible at every relational input type. Under T, raw WR and the rigid-profile EU formulation agree, so this supplies the EU boundary there. Do not silently identify the two outside T. Route: world-representation §5; root §§2, 4; world-cardinality-ucp-20261022.md §§12–17. The same UWR/WR formulation is counted only once.",
+      "queue_stage": "S1/S2/S3",
+      "dependency_obligation": "Internal world/Boolean representation and represented maps; elementary lemmas before interpretation/schema bridge.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "world_algebra.06",
+      "source_index": "research/2026-10-22/counting/world-algebra-counting-audit.md",
+      "source_ordinal": 6,
+      "source_entry": "**Separate EU and S witnesses can be combined under Choice or the precise retraction hypothesis.** Boxed FC suffices; the sharper EU+S+Ret_t condition and the single generated-subalgebra retraction version are included. Route: world-representation §6; algebraic-core §23; root §§5, 13. Failure without those added hypotheses is counted in construction 20.",
+      "queue_stage": "S1/S2/S3",
+      "dependency_obligation": "Internal world/Boolean representation and represented maps; elementary lemmas before interpretation/schema bridge.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "world_algebra.07",
+      "source_index": "research/2026-10-22/counting/world-algebra-counting-audit.md",
+      "source_ordinal": 7,
+      "source_entry": "**Canonical configuration algebra and complete freeness.** The internally free complete atomic algebra on a represented index field exists already over T; exact profiles are characterized by unique complete-endomorphism extension of generator assignments. Coherent coordinate flips and the precise atomic-target boundary are grouped here. The exact-profile double-powerset corollary t≅P_rigid(P_rigid(e)), under BP+UWR_e, is included in this same configuration-algebra family, not an extra count. Route: algebraic-core §§11, 21, 24; root §14; world-cardinality-ucp-20261022.md §22.",
+      "queue_stage": "S1/S2/S3",
+      "dependency_obligation": "Internal world/Boolean representation and represented maps; elementary lemmas before interpretation/schema bridge.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "world_algebra.08",
+      "source_index": "research/2026-10-22/counting/world-algebra-counting-audit.md",
+      "source_ordinal": 8,
+      "source_entry": "**Profile cardinal comparison and the Choice boundary.** The Choice-derived EU-or-S cardinal dichotomy, and the stronger all-represented-field comparability principle equivalent to boxed FC via typed Hartogs. Grouped as one cardinal-comparison family. Route: world-representation §§19, 21; root §18. Arithmetic/pairing proofs are not separately counted.",
+      "queue_stage": "S1/S2/S3",
+      "dependency_obligation": "Internal world/Boolean representation and represented maps; elementary lemmas before interpretation/schema bridge.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "world_algebra.09",
+      "source_index": "research/2026-10-22/counting/world-algebra-counting-audit.md",
+      "source_ordinal": 9,
+      "source_entry": "**Complete-evaluator density exactly characterizes T.** Every nonzero proposition is true under a complete evaluator iff T; separation formulation and the weaker truth-preservation presentation give the same strength. Consequently boxed FC is evaluator density plus Relational Choice. Route: world-representation §§26–27; root §§20, 22; digest §1. This is not the actual-truth BE hierarchy previously counted.",
+      "queue_stage": "S1/S2/S3",
+      "dependency_obligation": "Internal world/Boolean representation and represented maps; elementary lemmas before interpretation/schema bridge.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "world_algebra.10",
+      "source_index": "research/2026-10-22/counting/world-algebra-counting-audit.md",
+      "source_ordinal": 10,
+      "source_entry": "**Complete-evaluator existence has an atom-local Barcan characterization.** CE iff a persistently possible atom satisfies its specified local BF law; canonical replacement by E_w. In full action models this is existence of an epic outgoing arrow factoring through every outgoing arrow; chosen-type quantifier refinements are included. Route: world-representation §§22–24; root §§19, 21.",
+      "queue_stage": "S1/S2/S3",
+      "dependency_obligation": "Internal world/Boolean representation and represented maps; elementary lemmas before interpretation/schema bridge.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "world_algebra.11",
+      "source_index": "research/2026-10-22/counting/world-algebra-counting-audit.md",
+      "source_ordinal": 11,
+      "source_entry": "**Exact full-action categorical criterion.** At a root, ND_t iff every outgoing arrow is split monic, BF_t iff every outgoing arrow is epic, and T/complete-evaluator density/boxed ND_t iff every outgoing arrow is invertible. These are FULL action-hierarchy semantic statements, not arbitrary-Henkin presentation criteria. Route: world-representation §28.",
+      "queue_stage": "S1/S2/S3",
+      "dependency_obligation": "Internal world/Boolean representation and represented maps; elementary lemmas before interpretation/schema bridge.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "world_algebra.12",
+      "source_index": "research/2026-10-22/counting/world-algebra-counting-audit.md",
+      "source_ordinal": 12,
+      "source_entry": "**Complete Boolean retractions characterize full Choice.** Over T, complete retractions onto all admitted internally complete subalgebras at all relational types iff boxed FC. One canonical membership inclusion per output type suffices. Route: algebraic-core §§16, 18–19, 38; mixing §16; root §§10–11, 23. This is Boolean subalgebra splitting, distinct from the ordinary surjection sections counted earlier.",
+      "queue_stage": "S1/S2/S3",
+      "dependency_obligation": "Internal world/Boolean representation and represented maps; elementary lemmas before interpretation/schema bridge.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "world_algebra.13",
+      "source_index": "research/2026-10-22/counting/world-algebra-counting-audit.md",
+      "source_ordinal": 13,
+      "source_entry": "**Finite Boolean retractions characterize ultrafilter-valued Choice.** All-type finite retractions iff UFC; blockwise ultrafilter representation, uniform-free-ultrafilter formulation, and FC factorization via finite multiple selection plus finite retractions are grouped here. Route: algebraic-core §§20, 25, 30, 33, 38; mixing §22.",
+      "queue_stage": "S1/S2/S3",
+      "dependency_obligation": "Internal world/Boolean representation and represented maps; elementary lemmas before interpretation/schema bridge.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "world_algebra.14",
+      "source_index": "research/2026-10-22/counting/world-algebra-counting-audit.md",
+      "source_ordinal": 14,
+      "source_entry": "**FineUF/BPI/filter-extension factorization.** Internal FE iff BPI iff UFC+FineUF iff ACfin+FineUF; FineUF's canonical whole-type and indexed binary Rado formulations are included. These are one closely connected filter-extension classification, not separate counts per equivalence. Route: algebraic-core §§26, 28, 39–41; root §§16, 26. The independent factors' separation is item 23 below.",
+      "queue_stage": "S1/S2/S3",
+      "dependency_obligation": "Internal world/Boolean representation and represented maps; elementary lemmas before interpretation/schema bridge.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "world_algebra.15",
+      "source_index": "research/2026-10-22/counting/world-algebra-counting-audit.md",
+      "source_ordinal": 15,
+      "source_entry": "**Categorical injectivity/projectivity hierarchy.** For complete atomic algebras and complete maps: T makes every object projective; IC_all is injectivity of B_t; boxed FC is injectivity of every object. For finite Boolean maps with arbitrary Boolean sources, BPI is injectivity of complete atomic targets (the target 2 suffices for the converse). Grouped as one categorical classification. Route: algebraic-core §§34, 37; root §23.",
+      "queue_stage": "S1/S2/S3",
+      "dependency_obligation": "Internal world/Boolean representation and represented maps; elementary lemmas before interpretation/schema bridge.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "world_algebra.16",
+      "source_index": "research/2026-10-22/counting/world-algebra-counting-audit.md",
+      "source_ordinal": 16,
+      "source_entry": "**Well-ordered preservation yields restricted ordinary Choice.** Retractions preserving internally well-ordered indexed meets select on output fields with a well-ordered separating predicate family; the EU+IC_e+Ret_t transfer to individual ultrafilters/ordinary Choice retains exactly its stated preservation and separation hypotheses. Route: mixing §§26, 28; root §23. The bare EU+IC_e implication is NOT counted as proved.",
+      "queue_stage": "S1/S2/S3",
+      "dependency_obligation": "Internal world/Boolean representation and represented maps; elementary lemmas before interpretation/schema bridge.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "world_algebra.17",
+      "source_index": "research/2026-10-22/counting/world-algebra-counting-audit.md",
+      "source_ordinal": 17,
+      "source_entry": "**Uniform complete evaluators measure world well-orderability.** UCE_t iff the atom field is internally well-orderable iff uniform complete-retraction selection; higher-type UCE gives the corresponding atom-product well-orderability and all-type UCE iff boxed FC. EU+UCE_t supplies individual-output Choice without IC. Grouped as one uniformization classification. Route: algebraic-core §42; root §27.",
+      "queue_stage": "S1/S2/S3",
+      "dependency_obligation": "Internal world/Boolean representation and represented maps; elementary lemmas before interpretation/schema bridge.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "world_algebra.18",
+      "source_index": "research/2026-10-22/counting/world-algebra-counting-audit.md",
+      "source_ordinal": 18,
+      "source_entry": "**Admitted world and individual permutations lift through all finite types.** Simultaneous logical-automorphism lifts, with the unpointed/transported-parameters qualification; pure selected-world/profile witnesses and pure individual orders/selectors are correspondingly obstructed in the specified nontrivial cases. Route: algebraic-core §§35–37; root §24. Pure equality-pattern/arithmetic normal forms are not added separately to avoid overlap with the principles lane.",
+      "queue_stage": "S1/S2/S3",
+      "dependency_obligation": "Internal world/Boolean representation and represented maps; elementary lemmas before interpretation/schema bridge.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "world_algebra.19",
+      "source_index": "research/2026-10-22/counting/world-algebra-counting-audit.md",
+      "source_ordinal": 19,
+      "source_entry": "**Extensional witnessing and typed world-indexed Choice.** Exact local-to-global existence and uniform extensional Skolem formulations of Intensional Choice; uniform extensional Choice is the corresponding typed Choice over worlds and inputs, with the stated input/output scopes. Route: mixing §§5, 20, 23. This is not the earlier Actuality+RInv decomposition and does not claim arbitrary intensional witnessing.",
+      "queue_stage": "S1/S2/S3",
+      "dependency_obligation": "Internal world/Boolean representation and represented maps; elementary lemmas before interpretation/schema bridge.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "world_algebra.20",
+      "source_index": "research/2026-10-22/counting/world-algebra-counting-audit.md",
+      "source_ordinal": 20,
+      "source_entry": "**Ordered nominal hierarchy and endpoint-world variant.** Finite and even well-order-continuous Boolean retractions/BPI can coexist with failure of full Choice; separate EU and S witnesses can exist with no exact witness. The ordered atom and endpoint-world modifications are grouped, including their stated selector failures. Route: mixing §§17–19, 21; algebraic-core §§22, 31; world-representation §20. If the infinity lane already counted this exact endpoint model, count the construction once globally, retaining only the new Boolean-retraction/BPI verdicts here.",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "world_algebra.21",
+      "source_index": "research/2026-10-22/counting/world-algebra-counting-audit.md",
+      "source_ordinal": 21,
+      "source_entry": "**Finite-category complete-evaluator boundaries.** Proper/reverse retract and related finite-category witnesses distinguish CE existence, persistent or necessarily atomic witnesses, and CE density; even current ND plus necessary CE/Atomicity need not give T. Weak truth-preserving witnesses need not themselves preserve quantifiers as identities. Route: world-representation §§23–24, 27–28. Grouped rather than counting each tiny category separately.",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "world_algebra.22",
+      "source_index": "research/2026-10-22/counting/world-algebra-counting-audit.md",
+      "source_ordinal": 22,
+      "source_entry": "**Finite evaluation plus substantial Choice without T.** Finite-coordinate/ordered-cut examples and the fully atomless ordinary-ZFC generic Boolean Henkin construction establish finite-evaluator density/uniformity with the specified boxed Relational/Intensional Choice while Plenitude/FC/T fail. The known atom-plus-atomless Boolean model receives additional verdicts, not a new construction count. Route: world-representation §§30–34; mixing §§30–31; algebraic-core §43; root §28. Infinitary forcing repairs are excluded from this supplemental count.",
+      "queue_stage": "S3/S5",
+      "dependency_obligation": "Typed model/algebra construction, compactness or forcing and exact truth/operation preservation.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "world_algebra.23",
+      "source_index": "research/2026-10-22/counting/world-algebra-counting-audit.md",
+      "source_ordinal": 23,
+      "source_entry": "**Independence of the BPI factors.** Direct pair-flip construction gives FineUF without ACfin/UFC; the opposite UFC-without-BPI/FineUF direction uses the Howard–Tachtsis ZFA model as a literature-dependent input transferred to the typed hierarchy. Count the paired independence claim ONCE, and retain the dependency rather than call both constructions self-contained. Route: algebraic-core §§29, 32, 40.3; digest §3. Exact printed page of the cited Remark 4 was not recovered in the research notes.",
+      "queue_stage": "S3/S5",
+      "dependency_obligation": "Typed model/algebra construction, compactness or forcing and exact truth/operation preservation.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "world_algebra.24",
+      "source_index": "research/2026-10-22/counting/world-algebra-counting-audit.md",
+      "source_ordinal": 24,
+      "source_entry": "**Numerically indexed Boolean structure has an exact world-cardinality criterion.** Over BP+quantified Infinity_κ, existence of an internally N_κ-independent family ⇔ an admitted surjection Atoms→N_κ ⇔ an N_κ-indexed nonzero partition/numerical lottery; universal countable finite-intersection compactness is exactly the negation of these conditions. Under F, quantified Infinity_t ⇔ existence of an N_t-independent family, and with a separately infinite counting base universal countable compactness ⇔ propositional finiteness. Full N-profile realization is strictly stronger than finite-pattern independence, with the indicated N/P(N) full models. Counted as ONE Boolean/cardinality classification, not separate arithmetic, lottery, compactness and equivalent-arrow counts. The BP model with both infinities but no independent family in §34 supplies a new verdict for an already counted nominal construction and is NOT another model count. Routes: world-cardinality-ucp-20261022.md §§23–27, 34; infinity-world-richness-consolidation-20261022.md §6. The infinite-index hypothesis and internal finite/nonstandard-N interpretation are essential.",
+      "queue_stage": "S1/S2/S3",
+      "dependency_obligation": "Internal world/Boolean representation and represented maps; elementary lemmas before interpretation/schema bridge.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "world_algebra.25",
+      "source_index": "research/2026-10-22/counting/world-algebra-counting-audit.md",
+      "source_ordinal": 25,
+      "source_entry": "**Exact and arbitrarily high supported profile richness without Choice.** Explicit ordinary-ZFC nominal models have BP+both quantified infinities+UWR_e/AUCP_e but fail Functional Choice; the tagged nominal hierarchy realizes every finite supported rigid-core WR rank simultaneously while still failing FC. The finite-profile Fin(A) versus full admitted-profile Fin(A)∪Cofin(A) separation is grouped with this construction family. These are distinct from item 20's ordered endpoint construction: here full exact individual profiles DO exist, and the point is their insufficiency for Choice. Routes: world-cardinality-ucp-20261022.md §§35–36; infinity-world-richness-consolidation-20261022.md §6. Do not recount their nominal Intensional-Choice/Dedekind-infinity/general-support classifications, which belong to the root tally.",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "world_algebra.26",
+      "source_index": "research/2026-10-22/counting/world-algebra-counting-audit.md",
+      "source_ordinal": 26,
+      "source_entry": "**Pair-individual support hierarchy, with fixed worlds.** This is NOT the root5 family whose individual action is trivial. Here E=J×{0,1}, G=(Z/2Z)^J acts NONTRIVIALLY by independent individual-pair flips, W has TRIVIAL action, and supports contain fewer than a fixed infinite regular κ pair indices. The model has BP and a full e-free hierarchy. All-type Intensional Choice holds exactly when |W|<κ; all e-free IC instances hold for every W; Relational Choice fails for every nonempty W. For κ=ω and J=W=ω, Ret_t holds while IC_e fails. These verdicts form one distinct model family, not a second count of root's world-action/Dedekind/support classification. Route: structural-mixing-models.md §§2–3, 15.2. The separate pair-WORLD construction with trivial individuals is left to the root tally and does not add another count here.",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "model_interpretation.01",
+      "source_index": "research/2026-10-22/counting/model-interpretation-counting-audit.md",
+      "source_ordinal": 1,
+      "source_entry": "**C5 transfer of generated algebras and natural cardinalities.** The finite-sorted impredicative-generation transfer theorem, with admitted commuting maps and its explicit inverse conditions, includes the original/core Frege-natural isomorphism at every counting type. Group the general theorem and this application once. No Actuality or Choice is required. Proofs: [generated algebras](../notes/c5-generated-algebra-transfer-20261022.md), §§1–6; [natural-cardinality transfer](../notes/audit-infinity-transfer-20261022.md), §§3–7. This concerns the rigid C5 core and is distinct from the Actuality/GC slice transfer and the arithmetic-infinity classification counted elsewhere.",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "model_interpretation.02",
+      "source_index": "research/2026-10-22/counting/model-interpretation-counting-audit.md",
+      "source_ordinal": 2,
+      "source_entry": "**Exact finite-support nominal classification.** For the specified Sym(A) hierarchy with trivial-action individuals E=N, classify all-type Intensional Choice, propositional Dedekind Infinity, Functional Choice and Relational Choice by world orbits and stabilizers. Include the four-way separating examples in this one classification family. Proof: [nominal classification](../notes/nominal-choice-classification-20261022.md), §§1–8. It is not a classification of all positive models.",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "model_interpretation.03",
+      "source_index": "research/2026-10-22/counting/model-interpretation-counting-audit.md",
+      "source_ordinal": 3,
+      "source_entry": "**Larger support bounds and world geometry.** Countable supports give boxed Intensional Choice and propositional Dedekind Infinity without Functional or Relational Choice. Group this construction with its regular/singular support-bound and world-stabilizer classification. Proofs: [countable supports](../notes/countable-support-choice-countermodel-20261022.md), §§8–9; [general bounds](../notes/support-bounds-world-geometry-20261022.md), §§1–5. These use ZFC metatheory. They do not subsume the pair-individual construction with a nontrivial individual action in the world/algebra count.",
+      "queue_stage": "S3",
+      "dependency_obligation": "Typed interpretation and lambda/quantifier closure; exact admissibility, transport and verdict proofs.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "model_interpretation.04",
+      "source_index": "research/2026-10-22/counting/model-interpretation-counting-audit.md",
+      "source_ordinal": 4,
+      "source_entry": "**Effective Gallin representation of every positive model.** Original positive models and the specified relational Henkin presentations have explicit effective reconstructions, with exact degree preservation for the stated canonical type/operation coding. The treatment of truth and arbitrary signature constants retains its qualifications. Count the coding refinements and biinterpretation once. Proofs: [representation audit](../notes/effective-gallin-representation-audit-20261022.md); [biinterpretation](../notes/gallin-biinterpretation-20261022.md). The computational content is additional to the semantic world-indexed representation counted in the algebra list.",
+      "queue_stage": "S5",
+      "dependency_obligation": "Metalogical/set-theoretic/computability infrastructure; all source and consistency dependencies explicit.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    },
+    {
+      "queue_id": "model_interpretation.05",
+      "source_index": "research/2026-10-22/counting/model-interpretation-counting-audit.md",
+      "source_ordinal": 5,
+      "source_entry": "**Exact degree realization preserving a supplied complete theory.** Every complete consistent pure theory extending C has a uniformly constructed adequate model of exactly its degree and with that exact pure theory. Group the resulting exact degree spectra and the stronger oracle needed to parametrize the entire completion space in this one family. Proofs: [exact spectra](../notes/exact-completion-model-spectra-20261022.md), §§3–6; [parametrization boundary](../notes/completion-space-parametrization-audit-20261022.md), §§1–4. This strengthens, and is not a recount of, the oracle-capacity results. Conditional SP applications retain their consistency hypotheses.",
+      "queue_stage": "S5",
+      "dependency_obligation": "Metalogical/set-theoretic/computability infrastructure; all source and consistency dependencies explicit.",
+      "evidence_status": "ordinary_proof_reported_in_source_index; no fresh full-proof audit by inventory",
+      "lean_status": "not_assessed_here; no new certificate asserted",
+      "conditionality": "Retain all hypotheses and source qualifications in the source entry and linked proof; do not infer unconditionality from this index."
+    }
+  ],
+  "catalog": [
+    {
+      "catalog_row": 1,
+      "family": "Necessary local truth evaluation",
+      "statement_and_boundary": "B iff □∃E Eval(E), where Eval sends current truths to top and current falsehoods to bottom. A single necessarily correct E instead yields Extensionality.",
+      "proof_route": "[Evaluator hierarchy](notes/actual-truth-evaluator-ladder.md)"
+    },
+    {
+      "catalog_row": 2,
+      "family": "Six strict evaluator levels",
+      "statement_and_boundary": "Actuality < ND + Actuality < Gallin Comprehension < C5 + Actuality < B < Extensionality, with explicit separators. The inequalities concern the displayed equivalent evaluator principles.",
+      "proof_route": "[Evaluator hierarchy](notes/actual-truth-evaluator-ladder.md)"
+    },
+    {
+      "catalog_row": 3,
+      "family": "Gallin canonicalization",
+      "statement_and_boundary": "Gallin Comprehension gives a unique globally bivalent current evaluator and unique globally two-valued representatives of current extensions. It preserves quantifiers for each current predicate; the stronger universally boxed commutation remains unproved.",
+      "proof_route": "[Gallin evaluator](notes/gallin-bivalent-evaluator.md)"
+    },
+    {
+      "catalog_row": 4,
+      "family": "Choice by sections",
+      "statement_and_boundary": "Functional Choice iff Actuality plus right inverses for actual surjections between relational types. Boxed Functional Choice iff boxed Actuality plus strong right inverses. Both the source and target of the split maps are relational types; quantifier placement is essential.",
+      "proof_route": "[Sections](notes/functional-choice-by-sections.md)"
+    },
+    {
+      "catalog_row": 5,
+      "family": "Plenitude by retractions",
+      "statement_and_boundary": "Plenitude iff Actuality plus left inverses for injections between relational types. Strong left inverses for actual injections characterize C5; strong left invertibility of a particular such map corresponds to its necessary injectivity.",
+      "proof_route": "[Sections](notes/functional-choice-by-sections.md)"
+    },
+    {
+      "catalog_row": 6,
+      "family": "Uniform half-comprehension",
+      "statement_and_boundary": "At any one relational type, operation-valued uniform Persistent, Weak Persistent, or Weak Inextensible Comprehension each characterizes Actuality. No analogous equivalence for full uniform IC is asserted.",
+      "proof_route": "[Definitions](notes/uniform-half-comprehension-definitions.md)"
+    },
+    {
+      "catalog_row": 7,
+      "family": "Actuality's mathematical core",
+      "statement_and_boundary": "Actuality alone interprets current extensional relational Henkin HOL on all current individuals. Relational Choice transfers, as does the quantified Infinity axiom exactly. Truth in the slice is the actual atom, which can disappear later.",
+      "proof_route": "[World slice](notes/actuality-world-slice-core.md)"
+    },
+    {
+      "catalog_row": 8,
+      "family": "Local complete atomic algebras",
+      "statement_and_boundary": "Below the actual atom, every represented family has a join given by a supported existential union. Local atoms are world-and-tuple haecceities. This does not give ambient BC.",
+      "proof_route": "[World slice, §§7–8](notes/actuality-world-slice-core.md)"
+    },
+    {
+      "catalog_row": 9,
+      "family": "Canonical comparison of cores",
+      "statement_and_boundary": "Under Gallin Comprehension, the Actuality slice and the globally two-valued core are canonically isomorphic as current extensional structures. This does not identify their future domains.",
+      "proof_route": "[Gallin core, §8](notes/gallin-extensional-core.md)"
+    },
+    {
+      "catalog_row": 10,
+      "family": "A separate rigid core",
+      "statement_and_boundary": "ND + Rigid Power gives extensional relational HOL over any nonempty rigid individual domain. The all-current-individual and Choice refinements retain their explicit extra assumptions.",
+      "proof_route": "[Bounded core](notes/bounded-extensional-core.md)"
+    },
+    {
+      "catalog_row": 11,
+      "family": "Inextensible comprehension supplies weak power",
+      "statement_and_boundary": "ND_t + IC_(τt) implies WRP_τ. In particular, ND + IC implies full Weakly Rigid Power. Neither IC nor ND is silently boxed.",
+      "proof_route": "[Full proof](notes/nd-inextensible-comprehension-implies-weak-power.md)"
+    },
+    {
+      "catalog_row": 12,
+      "family": "Rigidity as closure under joins",
+      "statement_and_boundary": "Tame Rigidity iff rigid relations are closed under all existing represented joins. Weakly rigid relations already have that closure in C.",
+      "proof_route": "[Join characterization](notes/rigidity-by-joins-and-boolean-closure.md)"
+    },
+    {
+      "catalog_row": 13,
+      "family": "Rigidity as Boolean closure",
+      "statement_and_boundary": "ND corresponds to binary intersection/difference closure of rigid relations; complement closure has the stronger BF/C5 requirements specified in the note. These are type-sensitive exact definitions.",
+      "proof_route": "[Boolean laws](notes/rigid-boolean-closure.md)"
+    },
+    {
+      "catalog_row": 14,
+      "family": "Existing transversal conjecture",
+      "statement_and_boundary": "Relational Choice + BC implies Transversal Choice. The sharpened local choice instance selects a point of type σ from a property of type σt. Represented well-ordered chain joins suffice.",
+      "proof_route": "[Main proof](notes/relational-choice-boolean-completeness-transversal-proof.md), [sharpening](notes/rc-guarded-progressive-operation.md)"
+    },
+    {
+      "catalog_row": 15,
+      "family": "Chain completeness upgrade",
+      "statement_and_boundary": "Relational Choice_(τ,τ) plus represented chain completeness, even only the relevant internally well-ordered chains, implies BC_τ.",
+      "proof_route": "[Structural guide](notes/structural-lane-handoff.md)"
+    },
+    {
+      "catalog_row": 16,
+      "family": "Countable completeness upgrade",
+      "statement_and_boundary": "Relational Choice + matching countable Boolean completeness + matching internal ccc implies BC. The same guarded progression gives the sharper transversal corollary.",
+      "proof_route": "[CBC–ccc proof](notes/relational-choice-countable-completeness-ccc.md)"
+    },
+    {
+      "catalog_row": 17,
+      "family": "Countable complete Boolean domains",
+      "statement_and_boundary": "An internally countable Boolean type with the matching countable completeness is internally finite. No external-finiteness conclusion is intended.",
+      "proof_route": "[Structural guide](notes/structural-lane-handoff.md), [proof §21](notes/quotient-abstraction-lane.md)"
+    },
+    {
+      "catalog_row": 18,
+      "family": "Existing Strong Leibniz conjecture",
+      "statement_and_boundary": "Strong Leibniz + Rigid Comprehension implies necessary Strong Leibniz and necessary BF at relational types. Including bottom in the rigid world cover repairs the future-cut argument.",
+      "proof_route": "[Clean proof](strong-leibniz-rigid-bottom-cut.md), [audit](notes/audit-rigid-bottom-cut.md)"
+    },
+    {
+      "catalog_row": 19,
+      "family": "Corrected old/new model",
+      "statement_and_boundary": "The existing model has ND + full BC + ¬IC_et + ¬RigidComprehension_et at E, but ¬BC_et at O. The earlier even-haecceity family was not admitted.",
+      "proof_route": "[Clean separation](notes/old-new-boolean-completeness-and-rigidity-separation.md)"
+    },
+    {
+      "catalog_row": 20,
+      "family": "Exact boundary over ND + BC",
+      "statement_and_boundary": "Over ND + BC, IC, Rigid Comprehension, Tame Rigidity and WRP are equivalent additional assumptions. The corrected old/new model shows they need not hold.",
+      "proof_route": "[Separation and equivalence](notes/old-new-boolean-completeness-and-rigidity-separation.md)"
+    },
+    {
+      "catalog_row": 21,
+      "family": "Single-type rigidity counterexample",
+      "statement_and_boundary": "Full TR and boxed BF, together with boxed RP_et, do not imply WRP_et. This does not settle the all-type TR + RP conjecture.",
+      "proof_route": "[Colour-collapse model](notes/colour-collapse-entrance.md)"
+    },
+    {
+      "catalog_row": 22,
+      "family": "Gallin models with Infinity",
+      "statement_and_boundary": "Full Gallin constructions give F with both quantified Infinity axioms. The model and the exact distinction between arithmetic infinity and domain infinity are explicit.",
+      "proof_route": "[Infinity guide](notes/infinity-world-richness-consolidation-20261022.md)"
+    },
+    {
+      "catalog_row": 23,
+      "family": "Consistent world-profile strengthenings",
+      "statement_and_boundary": "Unique realization of all individual profiles is realized by suitable full Gallin models. Unrestricted realization at a relational input type is impossible by a diagonal; supported-core variants avoid it.",
+      "proof_route": "[World profiles](notes/world-cardinality-ucp-20261022.md)"
+    },
+    {
+      "catalog_row": 24,
+      "family": "Richness without Choice",
+      "statement_and_boundary": "B plus both Infinity axioms and profile realization at every finite supported core rank can hold while Functional Choice fails. Ordinary e-core Choice can also coexist with failure of every nontrivial ambient unary FC instance.",
+      "proof_route": "[World profiles](notes/world-cardinality-ucp-20261022.md), [comparison](notes/gallin-comparison.md)"
+    },
+    {
+      "catalog_row": 25,
+      "family": "Finite intermediate choice principles",
+      "statement_and_boundary": "B < C + □FC_(t,t) ≤ C + □Sel_t < F. Strictness of the middle inclusion and finite relative axiomatizability of full F remain unresolved.",
+      "proof_route": "[Comparison handoff](notes/comparison-root-final-handoff-20261022.md)"
+    },
+    {
+      "catalog_row": 26,
+      "family": "Faithful probability",
+      "statement_and_boundary": "Over F + quantified Infinity_e, a strictly positive finitely additive probability exists iff atomic worlds are internally countable iff internal ccc; a countably additive such state then exists.",
+      "proof_route": "[Probability theorem](notes/faithful-probability-countable-worlds.md)"
+    },
+    {
+      "catalog_row": 27,
+      "family": "Probability's type ceiling",
+      "statement_and_boundary": "Over F + quantified Infinity_e, using internal Dedekind reals over N_e, a faithful state at et corresponds to countable worlds and individuals, and covers all finite individual arities. At tt it forces internally finitely many worlds. The all-type state schema conflicts with quantified Infinity_e.",
+      "proof_route": "[Probability, §§7–8](notes/faithful-probability-countable-worlds.md)"
+    },
+    {
+      "catalog_row": 28,
+      "family": "Probability and symmetry",
+      "statement_and_boundary": "Over F + quantified Infinity_e with those internal reals, a faithful state invariant under all represented world permutations exists iff the worlds are internally finite; it is then uniform. The stated finite-parameter term-definability condition also forces finiteness.",
+      "proof_route": "[Symmetry theorem](notes/probability-and-world-symmetry.md)"
+    },
+    {
+      "catalog_row": 29,
+      "family": "Maximalism's predecessor obstruction",
+      "statement_and_boundary": "Max refutes any operation f with f(Suc n)=n for every internal number, although the corresponding functional graph exists. Possible finite numerical collisions plus NI give the contradiction.",
+      "proof_route": "[Infinity guide](notes/infinity-world-richness-consolidation-20261022.md), [coding report §§34–35](notes/relational-coding-recursion-20261022.md)"
+    },
+    {
+      "catalog_row": 30,
+      "family": "Arithmetic graphs need not be operations",
+      "statement_and_boundary": "Max permits canonical current arithmetic bijections as graphs but forbids operations representing the indicated e-to-t and t-to-e numerical correspondences. Plenitude removes this representation obstruction.",
+      "proof_route": "[Coding report §38](notes/relational-coding-recursion-20261022.md)"
+    },
+    {
+      "catalog_row": 31,
+      "family": "A concrete missing join under Max",
+      "statement_and_boundary": "Max fails the displayed guarded numerical join and its increasing finite-initial-segment version. This is sharper than an unspecified failure of BC.",
+      "proof_route": "[Infinity guide, §3](notes/infinity-world-richness-consolidation-20261022.md)"
+    },
+    {
+      "catalog_row": 32,
+      "family": "Pure/signature Strong Possibility",
+      "statement_and_boundary": "Pure SP and signature SP are incompatible when the signature has a relational constant. The signature-to-pure implication is therefore equivalent to signature SP inconsistency, which remains unsettled.",
+      "proof_route": "[Signature audit](notes/audit-signature-to-pure-sp-20261022.md)"
+    },
+    {
+      "catalog_row": 33,
+      "family": "Signature sensitivity",
+      "statement_and_boundary": "With finitely many individual names, signature SP forces the exact actual individual-domain bound given in the proof. Adding names is not an innocuous version of the pure principle.",
+      "proof_route": "[Signature audit](notes/audit-signature-to-pure-sp-20261022.md)"
+    },
+    {
+      "catalog_row": 34,
+      "family": "Effective model comparison",
+      "statement_and_boundary": "Under the stated infinity and adequate-code hypotheses, B/F theoremhood is Σ₁-complete, Max is Σ₂-complete, and SP is Σ₃-complete if consistent. Model-oracle capacities are ordinary PA degrees, PA over 0′, and PA over 0″ respectively.",
+      "proof_route": "[Precise guide](notes/comparison-handoff-20261022.md)"
+    },
+    {
+      "catalog_row": 35,
+      "family": "Standard-number qualification",
+      "statement_and_boundary": "Externally standard numerical models have substantially harder codes even for positive theories. Standard-model existence for SP is not established. This prevents a blanket claim that every positive model problem is computationally easy.",
+      "proof_route": "[Precise guide, §3](notes/comparison-handoff-20261022.md)"
+    },
+    {
+      "catalog_row": 36,
+      "family": "Explicit infinitary boundary",
+      "statement_and_boundary": "Certain genuine infinitary lambda-comprehension resources standardize arithmetic and contradict original Max_C. They extend the object language; this is not a contradiction in original finitary Max.",
+      "proof_route": "[Structural guide](notes/structural-lane-handoff.md)"
+    }
+  ]
+}

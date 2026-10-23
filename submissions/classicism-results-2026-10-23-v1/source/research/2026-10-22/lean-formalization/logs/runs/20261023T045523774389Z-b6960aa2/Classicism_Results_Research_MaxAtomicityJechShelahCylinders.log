@@ -1,0 +1,110 @@
+Classicism/Results/Research/MaxAtomicityJechShelahCylinders.lean:75:2: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Decidable (MasterNode s)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Classicism/Results/Research/MaxAtomicityJechShelahCylinders.lean:78:72: error: unsolved goals
+s : List ℕ
+hs : MasterNode s
+⊢ sorry = condition Condition (masterCondition.restrict s hs)
+Classicism/Results/Research/MaxAtomicityJechShelahCylinders.lean:79:13: warning: declaration uses `sorry`
+Classicism/Results/Research/MaxAtomicityJechShelahCylinders.lean:79:23: warning: This simp argument is unused:
+  dif_pos hs
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [cylinder]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityJechShelahCylinders.lean:97:4: error: unsolved goals
+case neg
+s t : List ℕ
+hlen : s.length = t.length
+hne : s ≠ t
+hs : MasterNode s
+ht : ¬MasterNode t
+⊢ sorry ⊓ sorry = ⊥
+Classicism/Results/Research/MaxAtomicityJechShelahCylinders.lean:98:2: error: unsolved goals
+case neg
+s t : List ℕ
+hlen : s.length = t.length
+hne : s ≠ t
+hs : ¬MasterNode s
+⊢ sorry ⊓ sorry = ⊥
+Classicism/Results/Research/MaxAtomicityJechShelahCylinders.lean:97:17: warning: declaration uses `sorry`
+Classicism/Results/Research/MaxAtomicityJechShelahCylinders.lean:97:27: warning: This simp argument is unused:
+  dif_neg ht
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [cylinder, inf_bot_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityJechShelahCylinders.lean:97:39: warning: This simp argument is unused:
+  inf_bot_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [cylinder, dif_neg ht]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityJechShelahCylinders.lean:98:25: warning: This simp argument is unused:
+  dif_neg hs
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [cylinder, bot_inf_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityJechShelahCylinders.lean:98:37: warning: This simp argument is unused:
+  bot_inf_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [cylinder, dif_neg hs]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityJechShelahCylinders.lean:117:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ?a ⊓ ⨆ i, ?f i
+in the target expression
+  cylinder s ⊓ ⨆ s_1, cylinder ↑s_1 = ⊥
+
+T : Condition
+s : List ℕ
+hs : s ∉ T.tree
+⊢ cylinder s ⊓ ⨆ s_1, cylinder ↑s_1 = ⊥
+Classicism/Results/Research/MaxAtomicityJechShelahCylinders.lean:171:20: error: Invalid `⟨...⟩` notation: The expected type of this term could not be determined
+Classicism/Results/Research/MaxAtomicityJechShelahCylinders.lean:183:6: error: Invalid rewrite argument: The pattern to be substituted is a metavariable (`?b`) in this equality
+  ?b = ⨆ T, condition Condition ↑T
+Classicism/Results/Research/MaxAtomicityJechShelahCylinders.lean:188:25: error: Application type mismatch: The argument
+  List ℕ
+has type
+  Type
+of sort `Type 1` but is expected to have type
+  ℕ
+of sort `Type` in the application
+  Encodable.decode (List ℕ)
+Classicism/Results/Research/MaxAtomicityJechShelahCylinders.lean:192:87: error: unsolved goals
+s : List ℕ
+⊢ (match sorry with
+    | some s => cylinder s
+    | none => ⊥) =
+    cylinder s
+Classicism/Results/Research/MaxAtomicityJechShelahCylinders.lean:193:13: warning: declaration uses `sorry`
+Classicism/Results/Research/MaxAtomicityJechShelahCylinders.lean:193:24: warning: This simp argument is unused:
+  Encodable.encodek
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [generator]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Classicism.Meta.Research.MaxAtomicityJechShelahCylinders.condition_eq_iInf_levelJoin' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahCylinders.cylinders_completely_generate' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahCylinders.generator_completely_generates' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahCylinders.branchSplitter_splits' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

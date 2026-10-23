@@ -1,0 +1,18 @@
+Classicism/Results/Research/MaxAtomicityJechShelahConditionSemantics.lean:66:27: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+Classicism/Results/Research/MaxAtomicityJechShelahConditionSemantics.lean:124:49: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+Classicism/Results/Research/MaxAtomicityJechShelahConditionSemantics.lean:144:39: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+'Classicism.Meta.Research.MaxAtomicityJechShelahConditionSemantics.manyChildren_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahConditionSemantics.conditionCode_iff_tree' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahConditionSemantics.canonical_generatorGraph' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahConditionSemantics.canonical_sound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahConditionSemantics.canonical_exists_of_arithmetic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

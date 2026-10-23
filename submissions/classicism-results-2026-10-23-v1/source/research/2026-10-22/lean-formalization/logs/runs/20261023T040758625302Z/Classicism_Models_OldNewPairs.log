@@ -1,0 +1,63 @@
+Classicism/Models/OldNewPairs.lean:21:17: error: failed to set `[local reducible]` for `FunCat.Ob`, recall that `[reducible]` affects the term indexing datastructures used by `simp` and type class resolution
+
+Note: Use `set_option allowUnsafeReducibility true` to override reducibility status validation
+Classicism/Models/OldNewPairs.lean:59:4: error: unsolved goals
+case refine_2.refine_2
+ρ : RTy
+S : Set ℕ
+hS : S.Finite
+P : PairData ρ
+V : base.F.Ob
+a : Args (SymT base.F.De base.G base.J) ρ V
+k : base.W₀ ⟶ V
+s : V ⟶ V
+hs : s ∈ base.G V
+g : ⟨V, (a, k)⟩.fst ⟶ ⟨V, (a, k)⟩.fst
+hg : g ∈ syms ⟨V, (a, k)⟩.fst
+hag : AgreeOn cat.De S ⟨V, (a, k)⟩.snd.2 (canon ⟨V, (a, k)⟩.fst ≫ g)
+b : Tup ρ ⟨V, (a, k)⟩.fst
+hb : P ⟨V, (a, k)⟩.fst b
+he : Args.map model.inner ρ g b = ⟨V, (a, k)⟩.snd.1
+⊢ Args.map model.inner ρ s ⟨V, (a, k)⟩.snd.1 = ⟨V, (Args.map (SymT base.F.De base.G base.J) ρ s a, k ≫ s)⟩.snd.1
+Classicism/Models/OldNewPairs.lean:66:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ⟨V, (a, canon V)⟩.snd.1
+in the target expression
+  P V a
+
+case mp
+ρ : RTy
+S : Set ℕ
+P : PairData ρ
+hP : Invariant S P
+V : cat.Ob
+a : Tup ρ V
+g : ⟨V, (a, canon V)⟩.fst ⟶ ⟨V, (a, canon V)⟩.fst
+hg : g ∈ syms ⟨V, (a, canon V)⟩.fst
+hag : AgreeOn cat.De S ⟨V, (a, canon V)⟩.snd.2 (canon ⟨V, (a, canon V)⟩.fst ≫ g)
+b : Tup ρ ⟨V, (a, canon V)⟩.fst
+hb : P ⟨V, (a, canon V)⟩.fst b
+he : Args.map model.inner ρ g b = ⟨V, (a, canon V)⟩.snd.1
+⊢ P V a
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  function expected
+    P V a
+Classicism/Models/OldNewPairs.lean:183:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  @Premodel.Holds Signature.pure cat.Ob cat.instSmallCategoryOb model [] ?W ?h (Sentence.bc ?ρ) IEnv.nil
+in the target expression
+  @Premodel.Holds Signature.pure cat.Ob cat.instSmallCategoryOb model [] E (𝟙 E) (Sentence.bc ρ) IEnv.nil
+
+ρ : RTy
+⊢ model.Holds (𝟙 E) (Sentence.bc ρ) IEnv.nil
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    𝟙 E
+  has type
+    @Quiver.Hom cat.Ob cat.instSmallCategoryOb.toQuiver E E
+  but is expected to have type
+    @Quiver.Hom cat.Ob cat.instSmallCategoryOb.toQuiver model.W₀ E
+  in the application
+    model.Holds (𝟙 E)

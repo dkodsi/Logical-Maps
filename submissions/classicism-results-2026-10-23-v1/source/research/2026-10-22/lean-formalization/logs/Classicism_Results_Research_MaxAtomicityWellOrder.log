@@ -1,0 +1,34 @@
+Classicism/Results/Research/MaxAtomicityWellOrder.lean:110:65: error: unsolved goals
+B : Type u
+inst✝ : BooleanAlgebra B
+r : B → B → Prop
+wf : WellFounded r
+atomless : AtomlessParts B
+⊢ (if h : True then ⊥ else leastPart wf atomless ⊥ ⋯) = ⊥
+Classicism/Results/Research/MaxAtomicityWellOrder.lean:112:23: warning: This simp argument is unused:
+  dif_pos rfl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [selector]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Classicism.Meta.Research.MaxAtomicityWellOrder.exists_unique_leastPart' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityWellOrder.properPart_splits' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityWellOrder.leastPart_spec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityWellOrder.selector_splits' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityWellOrder.exists_unique_selector' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityWellOrder.exists_splitter' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

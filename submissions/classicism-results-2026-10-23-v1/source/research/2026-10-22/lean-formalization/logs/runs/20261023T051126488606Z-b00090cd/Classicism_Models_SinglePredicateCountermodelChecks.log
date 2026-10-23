@@ -1,0 +1,57 @@
+'Classicism.Meta.FullPure.denote_pure_move' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.FullPure.closed_pure_fixed' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.SinglePredicateFull.signature_admitted' does not depend on any axioms
+'Classicism.Meta.SinglePredicateFull.bool_independence' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.SinglePredicateFull.nat_independence' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.FullExtensional.holds_atomicity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.FullExtensional.holds_extensionality' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.FullExtensional.holds_C5' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.FullExtensional.holds_boxedFunctionalChoice' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.FullExtensional.bool_not_quantifiedInfinity_e' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.FullExtensional.not_quantifiedInfinity_t' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.FullExtensional.nat_quantifiedInfinity_e' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.FullExtensional.nat_infinitySchema_e' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.SinglePredicateFull.c5_independence_boxedChoice_consistent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.SinglePredicateFull.c5_independence_choice_consistent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.SinglePredicateFull.c5_atomic_independence_collapse_consistent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.SinglePredicateFull.c5_atomic_independence_noContingency_not_schemaInfinity_t' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.SinglePredicateFull.c5_atomic_independence_intensionalChoice_not_schemaInfinity_t' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.SinglePredicateFull.c5_atomic_independence_modalFreedom_not_schemaInfinity_t' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.SinglePredicateFull.c5_atomic_independence_noContingency_not_quantifiedInfinity_t' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.SinglePredicateFull.extensional_independence_infinity_consistent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.SinglePredicateFull.extensional_independence_schemaInfinity_consistent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.SinglePredicateFull.extensional_independence_choice_consistent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.SinglePredicateFull.extensional_independence_not_infinity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.SinglePredicateFull.extensional_independence_choice_not_infinity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.SinglePredicateFull.bool_complete_countermodel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.SinglePredicateFull.nat_complete_countermodel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,28 @@
+Classicism/Results/Research/MaxAtomicitySplitSemantics.lean:122:13: warning: This simp argument is unused:
+  eval_bot
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_app, eval_weaken, eval_v0, compl_compl, inf_compl_eq_bot]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Classicism.Meta.Research.MaxAtomicitySplitSemantics.guardedSup_eq_unique' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicitySplitSemantics.splitValue_eq_top' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicitySplitSemantics.guardedLeastPart_eq_selector' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicitySplitSemantics.guardedLeastPart_splits' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicitySplitSemantics.guardedLeastPart_splitValue' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicitySplitSemantics.eval_split' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicitySplitSemantics.split_identity_not_C_theorem' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

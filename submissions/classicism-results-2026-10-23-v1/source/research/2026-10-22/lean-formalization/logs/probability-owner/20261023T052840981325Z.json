@@ -1,0 +1,23 @@
+{
+  "modules": [
+    "Classicism.Results.Research.AtomicProbabilityConcreteRealInverse"
+  ],
+  "stop_at": "2026-10-23T05:55:00+00:00",
+  "wall_budget_seconds": 420,
+  "command": [
+    "/private/tmp/classicism-followup-venv/bin/python3",
+    "/Users/danielkodsi/Downloads/classicism-map/research/2026-10-22/lean-formalization/check_module.py",
+    "Classicism.Results.Research.AtomicProbabilityConcreteRealInverse",
+    "--timeout",
+    "60",
+    "--lock-wait",
+    "180",
+    "--keep-going"
+  ],
+  "output": "/Users/danielkodsi/Downloads/classicism-map/research/2026-10-22/lean-formalization/logs/probability-owner/20261023T052840981325Z.out",
+  "state": "completed",
+  "pid": 50037,
+  "process_group": 50037,
+  "exit_code": 75,
+  "seconds": 180.08
+}

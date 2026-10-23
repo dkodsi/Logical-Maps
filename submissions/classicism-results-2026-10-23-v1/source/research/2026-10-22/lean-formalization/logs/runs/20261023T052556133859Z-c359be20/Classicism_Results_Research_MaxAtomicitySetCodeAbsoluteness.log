@@ -1,0 +1,36 @@
+Classicism/Results/Research/MaxAtomicitySetCodeAbsoluteness.lean:46:25: error: Application type mismatch: The argument
+  present_injective K
+has type
+  Function.Injective (present K)
+but is expected to have type
+  present K a = present K b → a = b
+in the application
+  { mp := congrArg (present K), mpr := present_injective K }
+Classicism/Results/Research/MaxAtomicitySetCodeAbsoluteness.lean:106:2: error: No goals to be solved
+Classicism/Results/Research/MaxAtomicitySetCodeAbsoluteness.lean:118:2: error: No goals to be solved
+'Classicism.Meta.Research.MaxAtomicitySetCodeAbsoluteness.present_encode' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicitySetCodeAbsoluteness.subset_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicitySetCodeAbsoluteness.singleton_iff' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicitySetCodeAbsoluteness.unorderedPair_iff' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicitySetCodeAbsoluteness.orderedPair_iff' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicitySetCodeAbsoluteness.graphApp_iff' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicitySetCodeAbsoluteness.canonicalPresentation' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

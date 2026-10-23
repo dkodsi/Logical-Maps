@@ -1,0 +1,39 @@
+Classicism.Research.Splitting.ExistenceTailCons ⟶ Classicism.Research.Splitting.ExistenceTailCons.schema:
+  fun τ' σ' =>
+    Classicism.Meta.Term.exists'
+      (Classicism.Meta.Term.exists'
+        (Classicism.Meta.Term.conj
+          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).eq'
+            (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ))
+          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).eq'
+            (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))
+#classicism_schema: 1 of 1 principles with a Ty-parameter have list forms
+Classicism.Research.Splitting.mask_existence_nil ⟶ Classicism.Research.Splitting.mask_existence_nil.derivable : Classicism.Meta.Theorem
+  Classicism.Meta.C.axiomsMinus Classicism.Meta.Term.top
+derived ✓ in C⁻
+Classicism.Research.Splitting.mask_existence_e ⟶ Classicism.Research.Splitting.mask_existence_e.rule : Classicism.Meta.Theorem
+  Classicism.Meta.C.axioms (Classicism.P.Existence.quoted Classicism.Meta.Ty.e)
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.mask_existence_rel ⟶ Classicism.Research.Splitting.mask_existence_rel.rule : ∀
+  (τ' : Classicism.Meta.RTy),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms (Classicism.P.Existence.quoted (Classicism.Meta.Ty.rel τ'))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.mask_existence_cons ⟶ Classicism.Research.Splitting.mask_existence_cons.rule : ∀
+  (τ' σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.Existence.quoted τ')
+      (Classicism.Meta.Term.imp (Classicism.P.Existence.quoted σ')
+        (Classicism.Research.Splitting.ExistenceTailCons.quoted τ' σ')))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.mask_existence_cons ⟶ Classicism.Research.Splitting.mask_existence_cons.listRule : ∀
+  (σs : List Classicism.Meta.Ty) (τ1 : Classicism.Meta.Ty),
+  τ1.Closed →
+    Classicism.Meta.Theorem Classicism.Meta.C.axioms
+      (Classicism.Meta.Term.imp (Classicism.P.Existence.listQuoted σs)
+        (Classicism.Meta.Term.imp (Classicism.P.Existence.quoted τ1)
+          (Classicism.Research.Splitting.ExistenceTailCons.listQuoted σs τ1)))
+Classicism.Research.Splitting.mask_existence_e ⟶ Classicism.Research.Splitting.mask_existence_e.entails : Classicism.Meta.AxiomSet.empty ⟹
+  Classicism.Meta.AxiomSet.single (Classicism.P.Existence.quoted Classicism.Meta.Ty.e)
+Classicism.Research.Splitting.mask_existence_rel ⟶ Classicism.Research.Splitting.mask_existence_rel.entails : Classicism.Meta.AxiomSet.empty ⟹
+  fun a => ∃ τ', τ'.Closed ∧ a = Classicism.P.Existence.quoted (Classicism.Meta.Ty.rel τ')
+'Classicism.Meta.Research.Splitting.mask_list_existence' depends on axioms: [propext, Quot.sound]

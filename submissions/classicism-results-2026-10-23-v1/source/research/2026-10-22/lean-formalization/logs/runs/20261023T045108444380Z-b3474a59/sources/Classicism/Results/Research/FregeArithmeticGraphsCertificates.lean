@@ -1,0 +1,13 @@
+import Classicism.Results.Research.FregeArithmeticGraphs
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Translate
+
+#classicism_audit Classicism.Results.Research.FregeArithmeticGraphs
+#classicism_types_audit Classicism.Results.Research.FregeArithmeticGraphs
+#classicism_derive_audit Classicism.Results.Research.FregeArithmeticGraphs
+
+#print axioms Classicism.Research.FregeArithmeticGraphs.add_total.derivable
+#print axioms Classicism.Research.FregeArithmeticGraphs.add_functional.derivable
+#print axioms Classicism.Research.FregeArithmeticGraphs.mul_total.derivable
+#print axioms Classicism.Research.FregeArithmeticGraphs.mul_functional.derivable

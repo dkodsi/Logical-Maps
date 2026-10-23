@@ -1,0 +1,4 @@
+import Classicism.Results.Research.ModalPropagationSchemas
+
+#print axioms Classicism.Meta.Research.ModalPropagation.all_four
+#print axioms Classicism.Research.ModalPropagationConsequences.sl_rc_necessary_completeness.listEntails

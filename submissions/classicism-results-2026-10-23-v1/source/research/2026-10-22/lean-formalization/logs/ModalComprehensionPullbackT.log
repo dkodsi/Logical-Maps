@@ -1,0 +1,6 @@
+Classicism.Research.ModalPropagation.rigid_comprehension_pullback_t ⟶ Classicism.Research.ModalPropagation.rigid_comprehension_pullback_t.rule : Classicism.Meta.Theorem
+  Classicism.Meta.C.axioms
+  (Classicism.Meta.Term.imp
+    (Classicism.P.RigidComprehension.quoted (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ Classicism.Meta.RTy.t))
+    (Classicism.P.RigidComprehension.quoted Classicism.Meta.RTy.t))
+certified ✓ (axioms: [propext, Quot.sound])

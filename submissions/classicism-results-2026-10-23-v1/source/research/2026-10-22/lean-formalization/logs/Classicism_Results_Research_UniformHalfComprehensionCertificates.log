@@ -1,0 +1,304 @@
+Classicism.Research.actualEvaluator_positive: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.actualWorld_all: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.actualWorld_positiveEvaluator: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.actualWorld_unique: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.actuality_iff_positiveEvaluator: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.actuality_positiveEvaluator: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.positiveEvaluator_actualWorld: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.positiveEvaluator_actuality: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.truthKernel_instance: Classicism ✓ [C⁻] (axioms: [])
+#classicism_audit Classicism.Results.Research.Evaluator: 9/9 theorems pass; 9 in C⁻, 0 needing e_exists
+Classicism.Research.actuality_uniformPersistent: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.actuality_uniformPersistent_t: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.actuality_uniformWeakInextensible: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.actuality_uniformWeakInextensible_t: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.actuality_uniformWeakPersistent: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.empty_weaklyInextensible: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.incl_self_neg: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.incl_self_neg_t: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.uniformInextensible_actuality: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.uniformInextensible_weak: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.uniformPersistent_actuality: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.uniformPersistent_weak: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.uniformWeakInextensible_actuality: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.uniformWeakInextensible_actuality_t: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.uniformWeakInextensible_evaluator_at: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.uniformWeakPersistent_actuality: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.uniformWeakPersistent_actuality_t: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.uniformWeakPersistent_evaluator_at: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.actuality_uniformWeakInextensible_t.imp_of_w_imp_t: Classicism ✓ [C⁻] (axioms: [])
+#classicism_audit Classicism.Results.Research.UniformHalfComprehension: 19/19 theorems pass; 19 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.Evaluator: 9/9 inside R
+#classicism_types_audit Classicism.Results.Research.UniformHalfComprehension: 19/19 inside R
+Classicism.P.Existence ⟶ Classicism.P.Existence.schema:
+  fun σ' =>
+    Classicism.Meta.Term.exists'
+      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).eq' (Classicism.Meta.Term.var Classicism.Meta.Var.zero))
+#classicism_schema: 1 of 1 principles with a Ty-parameter have list forms
+Classicism.Research.positiveEvaluator_actualWorld ⟶ Classicism.Research.positiveEvaluator_actualWorld.derivable : Classicism.Meta.Theorem
+  Classicism.Meta.C.axiomsMinus
+  (Classicism.Meta.Term.forall'
+    (Classicism.Meta.Term.imp
+      (Classicism.Meta.Term.conj
+        (Classicism.Meta.Term.forall'
+          (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).iff
+            (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))
+        (Classicism.Meta.Term.forall'
+          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).imp
+            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).box)))
+      (Classicism.Meta.Term.conj
+        (Classicism.Meta.Term.forall'
+          (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+            (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))
+        (Classicism.Meta.Term.forall'
+          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).imp
+            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).eq'
+              (Classicism.Meta.Term.disj
+                (Classicism.Meta.Term.forall'
+                  (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))
+                (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))))))
+derived ✓ in C⁻
+Classicism.Research.actualEvaluator_positive ⟶ Classicism.Research.actualEvaluator_positive.derivable : Classicism.Meta.Theorem
+  Classicism.Meta.C.axiomsMinus
+  (Classicism.Meta.Term.forall'
+    (Classicism.Meta.Term.imp
+      (Classicism.Meta.Term.forall'
+        (Classicism.Meta.Term.conj
+          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).imp
+            (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).eq'
+              Classicism.Meta.Term.top))
+          (Classicism.Meta.Term.imp (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg
+            (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).eq'
+              Classicism.Meta.Term.bot))))
+      (Classicism.Meta.Term.conj
+        (Classicism.Meta.Term.forall'
+          (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).iff
+            (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))
+        (Classicism.Meta.Term.forall'
+          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).imp
+            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).box)))))
+derived ✓ in C⁻
+Classicism.Research.actualWorld_unique ⟶ Classicism.Research.actualWorld_unique.derivable : Classicism.Meta.Theorem
+  Classicism.Meta.C.axiomsMinus
+  (Classicism.Meta.Term.forall'
+    (Classicism.Meta.Term.forall'
+      (Classicism.Meta.Term.imp
+        ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).conj
+          (Classicism.Meta.Term.forall'
+            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).imp
+              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).eq'
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).disj
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))))
+        (Classicism.Meta.Term.imp
+          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).conj
+            (Classicism.Meta.Term.forall'
+              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).imp
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).eq'
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).disj
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))))
+          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).eq'
+            (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))))
+derived ✓ in C⁻
+Classicism.Research.actualWorld_all ⟶ Classicism.Research.actualWorld_all.derivable : ∀ (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axiomsMinus
+    (Classicism.Meta.Term.forall'
+      (Classicism.Meta.Term.imp
+        ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).conj
+          (Classicism.Meta.Term.forall'
+            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).imp
+              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).eq'
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).disj
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))))
+        (Classicism.Meta.Term.forall'
+          (Classicism.Meta.Term.imp
+            (Classicism.Meta.Term.forall'
+              (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).eq'
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).disj
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))))
+            (Classicism.Meta.Term.eq'
+              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).forall'
+              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).disj
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).forall'))))))
+derived ✓ in C⁻
+Classicism.Research.empty_weaklyInextensible ⟶ Classicism.Research.empty_weaklyInextensible.derivable : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axiomsMinus
+    (Classicism.Meta.Term.forall'
+      (Classicism.Meta.Term.imp
+        (Classicism.Meta.Term.forall'
+          ((((Classicism.Meta.Term.lam
+                          (((Classicism.Meta.Term.lam
+                                        ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).imp
+                                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).lam.app
+                                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).app
+                              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).forall').lam.app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)).app
+                ((Classicism.Meta.Term.lam
+                        ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).box).lam.app
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).imp
+            (((Classicism.Meta.Term.lam
+                          (((Classicism.Meta.Term.lam
+                                        ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).imp
+                                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).lam.app
+                                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).app
+                              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).forall').lam.app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)).app
+                (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).box))
+        (Classicism.Meta.Term.imp
+          (Classicism.Meta.Term.forall'
+            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).neg)
+          (Classicism.Meta.Term.box
+            (Classicism.Meta.Term.forall'
+              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).neg)))))
+derived ✓ in C⁻
+Classicism.Research.positiveEvaluator_actuality ⟶ Classicism.Research.positiveEvaluator_actuality.rule : Classicism.Meta.Theorem
+  Classicism.Meta.C.axioms
+  (Classicism.Meta.Term.imp Classicism.Research.HasPositiveEvaluator.quoted Classicism.P.Actuality.quoted)
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.actuality_positiveEvaluator ⟶ Classicism.Research.actuality_positiveEvaluator.rule : Classicism.Meta.Theorem
+  Classicism.Meta.C.axioms
+  (Classicism.Meta.Term.imp Classicism.P.Actuality.quoted Classicism.Research.HasPositiveEvaluator.quoted)
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.uniformPersistent_weak ⟶ Classicism.Research.uniformPersistent_weak.rule : ∀
+  (τ' : Classicism.Meta.RTy),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.Research.UniformPersistent.quoted τ')
+      (Classicism.Research.UniformWeakPersistent.quoted τ'))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.uniformInextensible_weak ⟶ Classicism.Research.uniformInextensible_weak.rule : ∀
+  (τ' : Classicism.Meta.RTy),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.Research.UniformInextensible.quoted τ')
+      (Classicism.Research.UniformWeakInextensible.quoted τ'))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.actuality_uniformPersistent ⟶ Classicism.Research.actuality_uniformPersistent.rule : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp Classicism.P.Actuality.quoted
+      (Classicism.Research.UniformPersistent.quoted (σ' ⇒ Classicism.Meta.RTy.t)))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.actuality_uniformPersistent ⟶ Classicism.Research.actuality_uniformPersistent.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp Classicism.P.Actuality.quoted
+      (Classicism.Research.UniformPersistent.quoted (σs ⇒* Classicism.Meta.RTy.t)))
+Classicism.Research.actuality_uniformWeakPersistent ⟶ Classicism.Research.actuality_uniformWeakPersistent.rule : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp Classicism.P.Actuality.quoted
+      (Classicism.Research.UniformWeakPersistent.quoted (σ' ⇒ Classicism.Meta.RTy.t)))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.actuality_uniformWeakPersistent ⟶ Classicism.Research.actuality_uniformWeakPersistent.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp Classicism.P.Actuality.quoted
+      (Classicism.Research.UniformWeakPersistent.quoted (σs ⇒* Classicism.Meta.RTy.t)))
+Classicism.Research.actuality_uniformWeakInextensible ⟶ Classicism.Research.actuality_uniformWeakInextensible.rule : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp Classicism.P.Actuality.quoted
+      (Classicism.Research.UniformWeakInextensible.quoted (σ' ⇒ Classicism.Meta.RTy.t)))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.actuality_uniformWeakInextensible ⟶ Classicism.Research.actuality_uniformWeakInextensible.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp Classicism.P.Actuality.quoted
+      (Classicism.Research.UniformWeakInextensible.quoted (σs ⇒* Classicism.Meta.RTy.t)))
+Classicism.Research.uniformWeakPersistent_actuality ⟶ Classicism.Research.uniformWeakPersistent_actuality.rule : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.Existence.quoted σ')
+      (Classicism.Meta.Term.imp (Classicism.Research.UniformWeakPersistent.quoted (σ' ⇒ Classicism.Meta.RTy.t))
+        Classicism.P.Actuality.quoted))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.uniformWeakPersistent_actuality ⟶ Classicism.Research.uniformWeakPersistent_actuality.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.Existence.listQuoted σs)
+      (Classicism.Meta.Term.imp (Classicism.Research.UniformWeakPersistent.quoted (σs ⇒* Classicism.Meta.RTy.t))
+        Classicism.P.Actuality.quoted))
+Classicism.Research.uniformPersistent_actuality ⟶ Classicism.Research.uniformPersistent_actuality.rule : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.Existence.quoted σ')
+      (Classicism.Meta.Term.imp (Classicism.Research.UniformPersistent.quoted (σ' ⇒ Classicism.Meta.RTy.t))
+        Classicism.P.Actuality.quoted))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.uniformPersistent_actuality ⟶ Classicism.Research.uniformPersistent_actuality.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.Existence.listQuoted σs)
+      (Classicism.Meta.Term.imp (Classicism.Research.UniformPersistent.quoted (σs ⇒* Classicism.Meta.RTy.t))
+        Classicism.P.Actuality.quoted))
+Classicism.Research.uniformWeakInextensible_actuality ⟶ Classicism.Research.uniformWeakInextensible_actuality.rule : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.Existence.quoted σ')
+      (Classicism.Meta.Term.imp (Classicism.Research.UniformWeakInextensible.quoted (σ' ⇒ Classicism.Meta.RTy.t))
+        Classicism.P.Actuality.quoted))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.uniformWeakInextensible_actuality ⟶ Classicism.Research.uniformWeakInextensible_actuality.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.Existence.listQuoted σs)
+      (Classicism.Meta.Term.imp (Classicism.Research.UniformWeakInextensible.quoted (σs ⇒* Classicism.Meta.RTy.t))
+        Classicism.P.Actuality.quoted))
+Classicism.Research.uniformInextensible_actuality ⟶ Classicism.Research.uniformInextensible_actuality.rule : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.Existence.quoted σ')
+      (Classicism.Meta.Term.imp (Classicism.Research.UniformInextensible.quoted (σ' ⇒ Classicism.Meta.RTy.t))
+        Classicism.P.Actuality.quoted))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.uniformInextensible_actuality ⟶ Classicism.Research.uniformInextensible_actuality.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.Existence.listQuoted σs)
+      (Classicism.Meta.Term.imp (Classicism.Research.UniformInextensible.quoted (σs ⇒* Classicism.Meta.RTy.t))
+        Classicism.P.Actuality.quoted))
+Classicism.Research.actuality_uniformPersistent_t ⟶ Classicism.Research.actuality_uniformPersistent_t.rule : Classicism.Meta.Theorem
+  Classicism.Meta.C.axioms
+  (Classicism.Meta.Term.imp Classicism.P.Actuality.quoted
+    (Classicism.Research.UniformPersistent.quoted Classicism.Meta.RTy.t))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.actuality_uniformWeakInextensible_t ⟶ Classicism.Research.actuality_uniformWeakInextensible_t.rule : Classicism.Meta.Theorem
+  Classicism.Meta.C.axioms
+  (Classicism.Meta.Term.imp Classicism.P.Actuality.quoted
+    (Classicism.Research.UniformWeakInextensible.quoted Classicism.Meta.RTy.t))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.uniformWeakPersistent_actuality_t ⟶ Classicism.Research.uniformWeakPersistent_actuality_t.rule : Classicism.Meta.Theorem
+  Classicism.Meta.C.axioms
+  (Classicism.Meta.Term.imp (Classicism.Research.UniformWeakPersistent.quoted Classicism.Meta.RTy.t)
+    Classicism.P.Actuality.quoted)
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.uniformWeakInextensible_actuality_t ⟶ Classicism.Research.uniformWeakInextensible_actuality_t.rule : Classicism.Meta.Theorem
+  Classicism.Meta.C.axioms
+  (Classicism.Meta.Term.imp (Classicism.Research.UniformWeakInextensible.quoted Classicism.Meta.RTy.t)
+    Classicism.P.Actuality.quoted)
+certified ✓ (axioms: [propext, Quot.sound])
+'Classicism.Research.positiveEvaluator_actualWorld.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.actualWorld_all.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.actuality_uniformPersistent.rule' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.uniformWeakInextensible_actuality.rule' depends on axioms: [propext, Quot.sound]

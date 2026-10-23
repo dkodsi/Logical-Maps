@@ -1,0 +1,22 @@
+Classicism.Research.SealedWorldCover.sl_rc_power_implies_necessary_barcan ⟶ Classicism.Research.SealedWorldCover.sl_rc_power_implies_necessary_barcan.rule : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.StrongLeibniz.quoted (σ' ⇒ Classicism.Meta.RTy.t))
+      (Classicism.Meta.Term.imp
+        (Classicism.P.RigidComprehension.quoted
+          (Classicism.Meta.Ty.rel (σ' ⇒ Classicism.Meta.RTy.t) ⇒ Classicism.Meta.RTy.t))
+        (Classicism.Meta.Term.imp
+          (Classicism.P.RigidPower.quoted (Classicism.Meta.Ty.rel (σ' ⇒ Classicism.Meta.RTy.t) ⇒ Classicism.Meta.RTy.t))
+          (Classicism.P.NecBarcan.quoted (Classicism.Meta.Ty.rel (σ' ⇒ Classicism.Meta.RTy.t))))))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.SealedWorldCover.sl_rc_power_implies_necessary_barcan ⟶ Classicism.Research.SealedWorldCover.sl_rc_power_implies_necessary_barcan.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.StrongLeibniz.quoted (σs ⇒* Classicism.Meta.RTy.t))
+      (Classicism.Meta.Term.imp
+        (Classicism.P.RigidComprehension.quoted
+          (Classicism.Meta.Ty.rel (σs ⇒* Classicism.Meta.RTy.t) ⇒ Classicism.Meta.RTy.t))
+        (Classicism.Meta.Term.imp
+          (Classicism.P.RigidPower.quoted
+            (Classicism.Meta.Ty.rel (σs ⇒* Classicism.Meta.RTy.t) ⇒ Classicism.Meta.RTy.t))
+          (Classicism.P.NecBarcan.quoted (Classicism.Meta.Ty.rel (σs ⇒* Classicism.Meta.RTy.t))))))

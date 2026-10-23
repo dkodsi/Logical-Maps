@@ -1,0 +1,86 @@
+Classicism.Research.Splitting.low_persistent_injections_c5: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.Splitting.low_strong_retractions_c5: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.Splitting.maskT_coext: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.maskT_collapses: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.maskT_false: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.Splitting.maskT_identity: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.maskT_injective_all: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.Splitting.maskT_slots: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.maskT_surjective_all: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.slotsT_false: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.Splitting.slotsT_true: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.Splitting.strong_truth_sections_barcan: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.truth_injectivity_persistence_barcan: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.Splitting.truth_surjectivity_persistence_barcan: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+#classicism_audit Classicism.Results.Research.SectionsRetractionsMasks: 14/14 theorems pass; 14 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.SectionsRetractionsMasks: 14/14 inside R
+Classicism.Results.Research.SectionsRetractionsMasks: 14 of 14 theorems derived
+
+[1/14] Classicism.Research.Splitting.low_persistent_injections_c5 ✓ 402 ms
+[2/14] Classicism.Research.Splitting.low_strong_retractions_c5 ✓ 16 ms
+[3/14] Classicism.Research.Splitting.maskT_coext ✓ 0 ms
+[4/14] Classicism.Research.Splitting.maskT_collapses ✓ 0 ms
+[5/14] Classicism.Research.Splitting.maskT_false ✓ 2 ms
+[6/14] Classicism.Research.Splitting.maskT_identity ✓ 0 ms
+[7/14] Classicism.Research.Splitting.maskT_injective_all ✓ 0 ms
+[8/14] Classicism.Research.Splitting.maskT_slots ✓ 0 ms
+[9/14] Classicism.Research.Splitting.maskT_surjective_all ✓ 63 ms
+[10/14] Classicism.Research.Splitting.slotsT_false ✓ 0 ms
+[11/14] Classicism.Research.Splitting.slotsT_true ✓ 0 ms
+[12/14] Classicism.Research.Splitting.strong_truth_sections_barcan ✓ 69 ms
+[13/14] Classicism.Research.Splitting.truth_injectivity_persistence_barcan ✓ 0 ms
+[14/14] Classicism.Research.Splitting.truth_surjectivity_persistence_barcan ✓ 0 ms
+Classicism.Research.Splitting.truth_surjectivity_persistence_barcan ⟶ Classicism.Research.Splitting.truth_surjectivity_persistence_barcan.rule : Classicism.Meta.Theorem
+  Classicism.Meta.C.axioms
+  (Classicism.Meta.Term.imp
+    (Classicism.Research.Splitting.SurjectivityPersists.quoted
+      (Classicism.Meta.Ty.rel (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ Classicism.Meta.RTy.t))
+      (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ Classicism.Meta.RTy.t))
+    (Classicism.P.Barcan.quoted (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t)))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.truth_injectivity_persistence_barcan ⟶ Classicism.Research.Splitting.truth_injectivity_persistence_barcan.rule : Classicism.Meta.Theorem
+  Classicism.Meta.C.axioms
+  (Classicism.Meta.Term.imp
+    (Classicism.Research.Splitting.InjectivityPersists.quoted
+      (Classicism.Meta.Ty.rel (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ Classicism.Meta.RTy.t))
+      (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ Classicism.Meta.RTy.t))
+    (Classicism.P.Barcan.quoted (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t)))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.strong_truth_sections_barcan ⟶ Classicism.Research.Splitting.strong_truth_sections_barcan.rule : Classicism.Meta.Theorem
+  Classicism.Meta.C.axioms
+  (Classicism.Meta.Term.imp
+    (Classicism.Research.Splitting.StrongRightSplitting.quoted
+      (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ Classicism.Meta.RTy.t)
+      (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ Classicism.Meta.RTy.t))
+    (Classicism.P.Barcan.quoted (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t)))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.low_strong_retractions_c5 ⟶ Classicism.Research.Splitting.low_strong_retractions_c5.rule : Classicism.Meta.Theorem
+  Classicism.Meta.C.axioms
+  (Classicism.Meta.Term.imp
+    (Classicism.Research.Splitting.StrongLeftSplitting.quoted Classicism.Meta.RTy.t
+      (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ Classicism.Meta.RTy.t))
+    (Classicism.Meta.Term.imp
+      (Classicism.Research.Splitting.StrongLeftSplitting.quoted
+        (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ Classicism.Meta.RTy.t)
+        (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ Classicism.Meta.RTy.t))
+      (Classicism.P.NecNecessityOfDistinctness.quoted (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t))))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.low_persistent_injections_c5 ⟶ Classicism.Research.Splitting.low_persistent_injections_c5.rule : Classicism.Meta.Theorem
+  Classicism.Meta.C.axioms
+  (Classicism.Meta.Term.imp
+    (Classicism.Research.Splitting.InjectivityPersists.quoted (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t)
+      (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ Classicism.Meta.RTy.t))
+    (Classicism.Meta.Term.imp
+      (Classicism.Research.Splitting.InjectivityPersists.quoted
+        (Classicism.Meta.Ty.rel (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ Classicism.Meta.RTy.t))
+        (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ Classicism.Meta.RTy.t))
+      (Classicism.P.NecNecessityOfDistinctness.quoted (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t))))
+certified ✓ (axioms: [propext, Quot.sound])
+'Classicism.Research.Splitting.low_strong_retractions_c5.rule' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.Splitting.low_persistent_injections_c5.rule' depends on axioms: [propext, Quot.sound]

@@ -1,0 +1,74 @@
+{
+  "title": "Independent ordinary audit of the symmetric surjection model with free-word gluing",
+  "audit_date": "2026-10-22",
+  "auditor": "OpenAI Codex agent /root/significance_ranking",
+  "status": "independent ordinary agent audit; not Lean verification",
+  "source": "research/2026-10-22/followup/central-map-complete-gluing.md",
+  "source_sections_audited": ["1. Domains and closure", "2. Boolean Completeness: a direct hull argument", "3. BF and simultaneous fixed-signature gluing", "4. Atomlessness, Actuality and Vicinity", "5. Exact images and Tame Rigidity", "6. Rigid Power and Weakly Rigid Power", "7. Why this does not settle Relational Choice + BC implies Actuality"],
+  "conclusion": "No counterexample or mathematical gap was identified in the primary construction through section 7. This is an independent ordinary proof audit, not a formal certificate, human referee report, database verdict, or literature-novelty claim.",
+  "checks": [
+    {
+      "source_section": "1",
+      "subject": "Recursive typed closure and exact identity",
+      "argument": "If F has support N, transport by (v,r) has support r(N). Application has flattened profile (F a)_h(b) = F_h(h.a,b), so supports combine by union and transport commutes with application. A permutation is an automorphism of the actual typed structure: (pi.F)_1(pi.a) = F_pi(pi.a) = (pi.F_1)(pi.a) = F_1(a). This supplies covariance for abstraction. Once transported external parameters agree, quantifier evaluations range over the same full domain; no union over supports of all quantified entities is needed. Moving haecceities are supported and symmetric, so literal entities are separated. The reasoning includes mixed and empty argument tuples."
+    },
+    {
+      "source_section": "2",
+      "subject": "Hull join membership and leastness",
+      "argument": "The displayed hull J is N-supported and symmetric. For a member a supported by L and competing upper bound Z supported by T, choose pi fixing N and moving L minus N off T. The prescriptions r restricted to T equals s restricted to T and (r pi) restricted to L equals t restricted to L agree on overlaps because t and s agree on N. They constrain at most kappa arguments and extend to a surjection of U using its kappa-plus complement. Hence (pi.a)_(w,r) = a_(w,r pi) = a_(w,t), while pi.a remains in the actual family. The upper-bound inclusion and pinning of Z prove leastness. This matches the database's actual-instance LUB form of Boolean Completeness."
+    },
+    {
+      "source_section": "3",
+      "subject": "Surjective transports and BF",
+      "argument": "For s surjective and support N of F, choose a preimage of each member of N and extend the resulting small partial injection to a permutation pi of U. Then (s pi) restricted to N is the identity and s.(pi.F) = F. The word component has preimages by stripping a fixed suffix, using right cancellation. Thus every typed transport is onto, yielding the recorded dual BF. Pure closed sentence invariance then yields boxed BF.",
+      "critical_boundary": "Transport maps are not generally injective. If s(a) = s(b), transport sends the nonzero proposition q_(a,b) to bottom. The audit supports BF, not ND or C5."
+    },
+    {
+      "source_section": "3",
+      "subject": "Simultaneous gluing for every fixed permitted set-sized signature",
+      "argument": "There are at most kappa finitary sentences. External ZFC selection supplies one full interpretation for each satisfiable sentence. Gluing its constant values along distinct final free letters preserves the union-of-at-most-kappa support bound and symmetry. At h_alpha = (f_alpha,id), direct evaluation gives (h_alpha.G_c)_(u,r) = G_c(u f_alpha,r) = J_alpha(c)_(u,r), an equality of entire entities simultaneously for all constants. The primary singleton individual domain handles all individual constants. Satisfiability over the fixed pure model therefore agrees with possibility in the glued expansion, giving exactly the distinct-symbol, pure-formula Logical Necessity schema by duality.",
+      "critical_boundary": "Logical Necessity is asserted at the root. Its boxed version is not inferred from pure closed sentence invariance."
+    },
+    {
+      "source_section": "4",
+      "subject": "Atomlessness and direct failure of Actuality",
+      "argument": "For any true p supported by N, choose distinct a,b outside N. The admitted proposition q_(a,b) is true at identity. A surjection fixing N and collapsing a,b preserves p's truth while falsifying q_(a,b), so p cannot entail every actual truth. This directly refutes the recorded Actuality formula. For any nonzero profile, two surjections preserving its support data and respectively separating/collapsing the fresh pair give nonzero complementary pieces; the same calculation works at every relational type. Once a pair has collapsed, later compositions preserve its collapse, establishing the stated Vicinity failure."
+    },
+    {
+      "source_section": "5",
+      "subject": "Exact images and Tame Rigidity",
+      "argument": "The profile B_N(E) is admitted by pinning and equivariance, and necessarily contains each current member of E. Weak inextensibility bounds Y by this profile. For a resulting witness (w,t).a with t and s agreeing on N, prescribe a surjection u fixing N and satisfying su = t on a support L of a. Compatibility on L intersect N is immediate and the small partial map extends surjectively. Pinning plus weak persistence gives u.a in E, hence Y_(w,s) equals (w,s).E. Conversely every admitted exact-image profile remains an exact-image profile after transport and satisfies the necessary-cover characterization of rigidity."
+    },
+    {
+      "source_section": "6",
+      "subject": "Rigid-power lifting",
+      "argument": "The specially chosen j_0 has nonsingleton fibres only within N, so P = N union j_0 inverse-image T has size at most kappa. If u fixes P, j_0 u is constant on every j_0-fibre, and therefore factors as v j_0 for a surjective v fixing T. Weak persistence of the source and target exact-image relations gives stability of A = {a in E : j.a in D}. The stability lemma makes H_A admitted and rigid, and j.A = D proves j.H_A = H_D. Agreement of j and h on the support of the necessary cover then proves weak inextensibility of the power property. Its ordinary C persistence and Tame Rigidity yield Rigid Power; global identification of weakly rigid and rigid subrelations supplies the stated Weakly Rigid Power conclusion."
+    },
+    {
+      "source_section": "7",
+      "subject": "Explicit failure of relational selection",
+      "argument": "For a putative selecting graph supported by N, choose a,b,c outside N. The propositions q_(c,a) and q_(c,b) are distinct and are exchanged by the permutation swapping a and b while fixing c and N. Their two-member haecceity property is fixed, as is the graph. Equivariance forces both permitted outputs whenever it forces one, contradicting functionality. This directly verifies the displayed RC_(tt,t) failure; the sharper RC_(t,t) assertion in the separate support audit was not independently re-proved here."
+    }
+  ],
+  "definition_cross_checks": [
+    "topics/classicism/principles/logical-necessity-r.yaml: exact pure-formula and distinct-constant side conditions and dual form",
+    "topics/classicism/principles/barcan-r.yaml: original and dual BF formulations",
+    "topics/classicism/principles/boolean-completeness-r.yaml: actual-instance LUB variant",
+    "topics/classicism/principles/actuality.yaml: true proposition entailing every true proposition",
+    "topics/classicism/principles/rigid-power-r.yaml: power property and its C-persistence observation",
+    "topics/classicism/background.md: notation, Boolean order, cardinalities and fixed signature convention",
+    "topics/classicism/lean/Classicism/Semantics/Action.lean: action-premodel closure and interpretation obligations",
+    "topics/classicism/groups/symmetric-ideally-full.yaml: symmetry and pinning construction background"
+  ],
+  "recommended_first_formal_target": "A concrete model of C with Logical Necessity at the prescribed root, boxed Boolean Completeness, boxed BF, and failure of Actuality; then add Tame Rigidity, Weakly Rigid Power and the explicit Choice failure.",
+  "limitations": [
+    "No Lean, Lake, or compiler command was run for this audit. No Lean proof or database verification status is asserted.",
+    "The full arithmetic paragraph and all obligations of the moving-individual extension in section 9 were not independently audited.",
+    "Every claim of the general noncancellative variants in section 8 was not independently audited.",
+    "The sharper RC_(t,t) failure in the separately linked support audit was not independently re-proved here.",
+    "The construction and these arguments use ordinary external ZFC choice; no choice-free metatheory claim is made.",
+    "Surjective transports justify BF; noninjective collapse prevents inferring ND or C5.",
+    "A Lean implementation must construct the recursive domains, establish actual term closure and instantiate C soundness. Assuming those obligations or gluing in an abstract interface would not certify the concrete countermodel.",
+    "No original research note, database record, other worker file or generated statement was changed."
+  ]
+}

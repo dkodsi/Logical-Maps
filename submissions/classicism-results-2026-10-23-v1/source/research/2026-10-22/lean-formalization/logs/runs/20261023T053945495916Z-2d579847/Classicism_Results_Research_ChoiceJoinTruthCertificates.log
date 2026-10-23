@@ -1,0 +1,20 @@
+Classicism.Research.Choice.actuality_iff_join_truth: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.Choice.actuality_join_coext: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.Choice.actuality_join_truth: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.Choice.choice_completeness_join_coext: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.Choice.falsehoods_lub_top: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.Choice.join_truth_actuality: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+#classicism_audit Classicism.Results.Research.ChoiceJoinTruth: 6/6 theorems pass; 6 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.ChoiceJoinTruth: 6/6 inside R
+Classicism.Results.Research.ChoiceJoinTruth: 6 of 6 theorems derived
+
+[1/6] Classicism.Research.Choice.actuality_iff_join_truth ✓ 116 ms
+[2/6] Classicism.Research.Choice.actuality_join_coext ✓ 217 ms
+[3/6] Classicism.Research.Choice.actuality_join_truth ✓ 0 ms
+[4/6] Classicism.Research.Choice.choice_completeness_join_coext ✓ 37 ms
+[5/6] Classicism.Research.Choice.falsehoods_lub_top ✓ 0 ms
+[6/6] Classicism.Research.Choice.join_truth_actuality ✓ 0 ms
+'Classicism.Research.Choice.actuality_iff_join_truth.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.Choice.choice_completeness_join_coext.derivable' depends on axioms: [propext, Quot.sound]

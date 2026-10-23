@@ -1,0 +1,60 @@
+Classicism.Research.Splitting.involution_surjective: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.Splitting.involutivity_relational_barcan: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.relational_barcan_involutivity: Classicism ✓ [C⁻] (axioms: [propext])
+#classicism_audit Classicism.Results.Research.SectionsRetractionsInvolutivePersistence: 3/3 theorems pass; 3 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.SectionsRetractionsInvolutivePersistence: 3/3 inside R
+Classicism.Results.Research.SectionsRetractionsInvolutivePersistence: 3 of 3 theorems derived
+
+[1/3] Classicism.Research.Splitting.involution_surjective ✓ 8 ms
+[2/3] Classicism.Research.Splitting.involutivity_relational_barcan ✓ 116 ms
+[3/3] Classicism.Research.Splitting.relational_barcan_involutivity ✓ 12 ms
+Classicism.Research.Splitting.InvolutivityPersists ⟶ Classicism.Research.Splitting.InvolutivityPersists.schema:
+  fun A' =>
+    Classicism.Meta.Term.forall'
+      (Classicism.Meta.Term.imp
+        (Classicism.Meta.Term.forall'
+          (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).eq'
+            (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))
+        (Classicism.Meta.Term.box
+          (Classicism.Meta.Term.forall'
+            (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).eq'
+              (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))))
+Classicism.Research.Splitting.relational_barcan_involutivity ⟶ Classicism.Research.Splitting.relational_barcan_involutivity.rule : ∀
+  (A' : Classicism.Meta.RTy),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.BarcanRelational.quoted A')
+      (Classicism.Research.Splitting.InvolutivityPersists.quoted A'))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.involutivity_relational_barcan ⟶ Classicism.Research.Splitting.involutivity_relational_barcan.rule : ∀
+  (ν' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.Existence.quoted ν')
+      (Classicism.Meta.Term.imp
+        (Classicism.Research.Splitting.InvolutivityPersists.quoted
+          (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ ν' ⇒ Classicism.Meta.RTy.t))
+        (Classicism.P.BarcanRelational.quoted (ν' ⇒ Classicism.Meta.RTy.t))))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.involutivity_relational_barcan ⟶ Classicism.Research.Splitting.involutivity_relational_barcan.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.Existence.listQuoted σs)
+      (Classicism.Meta.Term.imp
+        (Classicism.Research.Splitting.InvolutivityPersists.quoted
+          (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ σs ⇒* Classicism.Meta.RTy.t))
+        (Classicism.P.BarcanRelational.quoted (σs ⇒* Classicism.Meta.RTy.t))))
+Classicism.Research.Splitting.relational_barcan_involutivity ⟶ Classicism.Research.Splitting.relational_barcan_involutivity.entails : Classicism.P.BarcanRelational.schema ⟹
+  Classicism.Research.Splitting.InvolutivityPersists.schema
+Classicism.Research.Splitting.involutivity_relational_barcan ⟶ Classicism.Research.Splitting.involutivity_relational_barcan.entails : Classicism.P.Existence.schema ∪
+    Classicism.Research.Splitting.InvolutivityPersists.schema ⟹
+  fun a => ∃ ν', ν'.Closed ∧ a = Classicism.P.BarcanRelational.quoted (ν' ⇒ Classicism.Meta.RTy.t)
+Classicism.Research.Splitting.involutivity_relational_barcan ⟶ Classicism.Research.Splitting.involutivity_relational_barcan.listEntails : Classicism.P.Existence.listSchema ∪
+    Classicism.Research.Splitting.InvolutivityPersists.schema ⟹
+  fun a =>
+  ∃ σs, Classicism.Meta.Ty.AllClosed σs ∧ a = Classicism.P.BarcanRelational.quoted (σs ⇒* Classicism.Meta.RTy.t)
+Classicism.Research.Splitting.involutivity_relational_barcan.listEntails :
+  Classicism.P.Existence.listSchema ∪ Classicism.Research.Splitting.InvolutivityPersists.schema ⟹ fun a =>
+    ∃ σs, Classicism.Meta.Ty.AllClosed σs ∧ a = Classicism.P.BarcanRelational.quoted (σs ⇒* Classicism.Meta.RTy.t)

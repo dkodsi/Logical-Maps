@@ -1,0 +1,179 @@
+id: coalesced-pinned-substitutions-root
+name: 'Coalesced sum: interpretation and substitution arrows, finitely pinned root'
+certificate:
+  source_id: misc
+  produced_by: Cian Dorr, 19 October 2026 (the construction, a variant of coalesced-pinned-interpretations-root
+    with substitutions of constants as further root arrows), with Claude Opus 5.5 (Anthropic), who wrote the
+    verification
+  recorded_by: Claude Opus 5.5 (Anthropic), 19 October 2026
+  checked_by: []
+  date: '2026-10-19'
+  lean: none
+sources:
+- Cian Dorr, construction of 19 October 2026, with Claude Opus 5.5 (Anthropic); verification in the
+  write-up.
+- Andrew Bacon and Cian Dorr, Classicism, draft of 16 May 2023, Appendix D, Definitions D.1–D.3 and
+  Proposition D.4, pp. 73–74; Appendix E, Definition E.2, pp. 80–83.
+source_names:
+- Dorr 19 Oct
+- Classicism
+references:
+- paper: bacon-dorr-classicism
+  role: background
+  locator: Appendix D, Definitions D.1–D.3, Proposition D.4, pp. 73–74; Appendix E, Definition E.2,
+    pp. 80–83
+  note: The finitely pinned domains of Appendix D, with finite sets of constants in place of finite sets
+    of individuals, over the components of a coalesced sum as in Appendix E.
+group: coalesced-sums
+settings:
+  root-arrows: interpretations-and-substitutions
+  construction: 'As in coalesced-pinned-interpretations-root, with further arrows from $W_0$ to itself: one for
+    every type-preserving map $f$ of the constants of $\Sigma^+$ to themselves, the identity among them.
+    $f$ acts on the individuals at $W_0$ as on constants; maps compose with each other as functions, and
+    $\langle V,I\rangle\circ f=\langle V,I\circ f\rangle$. Evaluation point: $W_0$, at its identity arrow.
+    Interpretation of Σ, fixed for this record: each constant $c$ of Σ denotes $\hat c$, with transport
+    $I(c)$ along $\langle V,I\rangle$ and $\widehat{f(c)}$ along $f$, and empty extension at every map.'
+  domains:
+    text: 'An entity at $W_0$ of a relational type is an intension over the arrows out of $W_0$ that is
+      pinned down by a finite set $S$ of constants of $\Sigma^+$ (two arrows $\langle V,I\rangle$,
+      $\langle V,I^{\prime}\rangle$ with $I{\restriction}S=I^{\prime}{\restriction}S$, or two maps of the
+      constants agreeing on $S$, give it the same value) and whose transport along every arrow $\langle
+      V,I\rangle$ is in the domain of $V$ in its component. Transport along a map $f$ keeps an entity in
+      the domain: it is pinned down by $f(S)$, and its transports are transports of the original.'
+meets:
+  complete-components: The models in $A$ are complete for C($\Sigma$), so in particular for C.
+  extensionally-full: Any set $R$ of tuples at the identity is the extension there of the entity with
+    value $R$ at every map of the constants and empty at every arrow into a component; it is pinned
+    down by $\emptyset$, and its transports into the components are empty, so they land.
+arguments:
+- id: barcan
+  holds:
+  - barcan-r
+  by: Cian Dorr, recorded by Claude Opus 5.5 (Anthropic)
+  date: '2026-10-19'
+  choice: free
+  writeup: coalesced-pinned-substitutions-root
+  text: >-
+    At every type, in the form $\Diamond\exists x\, .\,Fx\to\exists x\, .\,\Diamond Fx$, for $F$ pinned
+    down by a finite $S$. A witness $y$ at an arrow $\langle V,I\rangle$ is handled as in
+    coalesced-pinned-interpretations-root, by a fresh constant $c$ with $I^{\prime}(c)=y$. A witness $y$
+    at a map $f$ is an entity at $W_0$, pinned down by some finite $S_y$: let $g$ send $S_y$ to fresh
+    constants outside $S$, and $f^{\prime}$ agree with $f$ on $S$ and send them back, so that
+    $f^{\prime}\circ g$ fixes $S_y$. Then $F$ holds at $f^{\prime}$ of $y=f^{\prime}\cdot(g\cdot y)$, so
+    $\Diamond F(g\cdot y)$.
+- id: maximalism
+  holds:
+  - distinctness-signature-r
+  by: Cian Dorr, recorded by Claude Opus 5.5 (Anthropic)
+  date: '2026-10-19'
+  choice: free
+  writeup: coalesced-pinned-substitutions-root
+  text: >-
+    A closed sentence of $\Sigma$ holds at $\langle V,I\rangle$ iff it holds at $V$ in its component
+    under the restriction of $I$ to $\Sigma$, the constants of $\Sigma$ denoting the entities $\hat c$.
+    Every $\Sigma$-sentence consistent with C($\Sigma$) holds at the root of some model in $A$ under some
+    interpretation, which extends to $\Sigma^+$, so it is possible at $W_0$: Maximalism for $\Sigma$ in its
+    possibility form, and with it the pure form.
+- id: possibility-plus
+  holds:
+  - possibility-plus-signature-r
+  by: Claude Opus 5.5 (Anthropic), at Cian Dorr's direction
+  date: '2026-10-19'
+  choice: free
+  text: >-
+    The individuals at $W_0$ are the individual constants of $\Sigma^+$, none of them in $\Sigma$. Let
+    $P$ be a $\Sigma$-formula with free individual variables among $\bar x$, consistent with C($\Sigma$),
+    and $\bar c$ pairwise distinct individual constants. Some model in $A$ has $P$ true at its root $V$
+    of some $\bar a$ under some interpretation of $\Sigma$; let $I$ extend it with $I(\bar c)=\bar a$,
+    possibly identifying constants. Then $\langle V,I\rangle\cdot\bar c=\bar a$, so $P(\bar c)$ holds at
+    $\langle V,I\rangle$ and $\Diamond P(\bar c)$ at $W_0$: Possibility+ for $\Sigma$, and with it the
+    pure form.
+- id: actuality
+  fails:
+  - actuality
+  by: Cian Dorr, recorded by Claude Opus 5.5 (Anthropic)
+  date: '2026-10-19'
+  choice: free
+  text: >-
+    A true proposition pinned down by a finite $S$ contains every map of the constants fixing $S$
+    pointwise, since such a map agrees with the identity on $S$. For a constant $c\notin S$ the set of
+    maps fixing $S\cup\{c\}$, together with no arrow into a component, is a truth not entailed by it: a
+    map fixing $S$ and moving $c$ separates them. So no truth entails every truth, as in the all-maps
+    finitely pinned model.
+- id: as-in-all-maps
+  fails:
+  - distinctness-preserving-collapse
+  - vicinity
+  - weakly-inextensible-comprehension-r
+  - boolean-completeness-t
+  by: Claude Opus 5.5 (Anthropic), at Cian Dorr's direction
+  date: '2026-10-19'
+  choice: free
+  text: >-
+    The arguments of finite-support-two-object-all-maps carry over, the maps of the constants playing
+    the part of the maps of $\mathbb N$, with every proposition used containing no arrow into a
+    component, so that its transports there are empty and land. Truth implies ND-necessity: the
+    transposition of two constants $c,d$ is invertible, so it sees every truth, while the true
+    proposition that $c$ is fixed is false there. Vicinity: a truth pinned down by $S$ contains a map
+    fixing $S$ that collapses two individual constants outside $S$; that they are distinct is true and
+    possible at no world seen from there. Weakly Inextensible Comprehension at type $t\to t$: as there,
+    for the propositions $p_c$ that the individual constant $c$ is fixed, the test property $X$ being
+    defined at the maps as there and as the property of being $\bot$ at the arrows into components,
+    which is definable and so lands. Boolean Completeness at type $t$: enumerate the individual
+    constants and take the propositions $A_m$ that a map is constant on the first $2m$ of them and first
+    changes value at the next, whose least pinned covers strictly shrink; the property with that family
+    as its value at every map and empty at the components is in the domain.
+- id: atomlessness
+  holds:
+  - atomlessness
+  by: Claude Opus 5.5 (Anthropic), at Cian Dorr's direction
+  date: '2026-10-19'
+  choice: free
+  text: >-
+    Let $p$ be possible, pinned down by a finite $S$. If $p$ contains a map $f$, the maps in $p$
+    agreeing with $f$ at a fresh individual constant $c$ form a possible proposition below $p$, pinned
+    down by $S\cup\{c\}$ and landing (it has no arrow into a component), and a map agreeing with $f$
+    on $S$ and not at $c$ shows that it is not $p$. Otherwise $p$ contains some $\langle V,I\rangle$;
+    for a fresh constant $c$ of type $t$, the members of $p$ whose interpretation sends $c$ to $\top$
+    form a proposition pinned down by $S\cup\{c\}$ whose transports are the conjunctions of those of
+    $p$ with the propositions that the interpretation of $c$ is $\top$, so it lands; it is possible and
+    below $p$, and an interpretation agreeing with $I$ on $S$ and sending $c$ to $\bot$ shows it is not
+    $p$. The atom of finite-support-two-object-all-maps, at its singleton object, has no counterpart.
+- id: collapse-at-root
+  holds:
+  - two-hat-implies-nd-necessity
+  - five-implies-two-hat-necessity
+  fails:
+  - truth-implies-five-necessity
+  by: Claude Opus 5.5 (Anthropic), at Cian Dorr's direction
+  date: '2026-10-19'
+  choice: free
+  text: >-
+    As in collapse-at-root of finite-support-two-object-all-maps. Write $\mathrm{fix}_S$ for the maps of
+    the constants fixing the finite set $S$ pointwise, the least truth pinned down by $S$, and $\delta_S$
+    for the maps injective on $S$. $\Diamond\,\mathrm{fix}_S=\delta_S$: no composite with an arrow into a
+    component is a map, and a map injective on $S$ is undone on $S$ by another. At a map $k$,
+    $\Diamond_{\ne}$ of the transport of $\mathrm{fix}_S$ holds iff $k\in\delta_S$, and at an arrow into a
+    component that transport is $\bot$; so $\hat\Diamond\,\mathrm{fix}_S=\delta_S$ too, and $\Box_{\ne}$ and
+    $\hat{\hat\Box}$ coincide, each holding of exactly the propositions containing some $\delta_S$. BF at
+    type $t$ holds for $\hat{\hat\Box}$: an arrow in $\delta_N$ agrees on any pinning set with a bijection
+    $b$ of the constants, and an entity pinned down there has at it the value it has at $b$, which
+    contains every transport along $b$, that is, everything. So by Proposition D8 of The Bounds of
+    Possibility $\Box_5$ implies two-hat necessity. The truth $\mathrm{fix}_{\{c\}}$ is not two-hat necessary,
+    every $\delta_S$ containing a bijection moving $c$, so not 5-necessary.
+- id: strong-possibility
+  fails:
+  - strong-possibility-signature-r
+  by: Cian Dorr, recorded by Claude Opus 5.5 (Anthropic)
+  date: '2026-10-19'
+  choice: free
+  text: >-
+    Actuality is a closed sentence of $\Sigma$ consistent with Maximalist Classicism for $\Sigma$, both
+    holding at the root of coalesced-maximalist-root. By collapse-at-root, $\Box_{\ne}p$ holds at $W_0$
+    iff $p$ contains $\delta_S$ for some finite $S$, a set of maps of the constants, all with target
+    $W_0$; Actuality fails at $W_0$, hence at every map, so $\neg$Actuality contains every $\delta_S$ and
+    $\Diamond_{\ne}$Actuality fails.
+notes: 'A variant of coalesced-pinned-interpretations-root, suggested by Cian Dorr on 19 October 2026: the
+  substitutions of constants make Actuality fail, as in the finitely pinned model on all maps, while
+  Maximalism and BF still hold. The argument that it is a model of C is that of the original with the maps
+  added (see the write-up) and has not been checked by a second reader. No Lean verification is claimed.'

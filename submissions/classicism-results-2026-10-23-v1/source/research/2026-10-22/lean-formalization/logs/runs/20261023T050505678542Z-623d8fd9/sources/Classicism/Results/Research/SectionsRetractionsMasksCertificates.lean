@@ -1,0 +1,14 @@
+import Classicism.Results.Research.SectionsRetractionsStrongCertificates
+import Classicism.Results.Research.SectionsRetractionsMasks
+
+#classicism_audit Classicism.Results.Research.SectionsRetractionsMasks
+#classicism_types_audit Classicism.Results.Research.SectionsRetractionsMasks
+set_option maxHeartbeats 0 in
+#classicism_derive_audit Classicism.Results.Research.SectionsRetractionsMasks
+#classicism_certify Classicism.Research.Splitting.truth_surjectivity_persistence_barcan
+  Classicism.Research.Splitting.truth_injectivity_persistence_barcan
+  Classicism.Research.Splitting.strong_truth_sections_barcan
+  Classicism.Research.Splitting.low_strong_retractions_c5
+  Classicism.Research.Splitting.low_persistent_injections_c5
+#print axioms Classicism.Research.Splitting.low_strong_retractions_c5.rule
+#print axioms Classicism.Research.Splitting.low_persistent_injections_c5.rule

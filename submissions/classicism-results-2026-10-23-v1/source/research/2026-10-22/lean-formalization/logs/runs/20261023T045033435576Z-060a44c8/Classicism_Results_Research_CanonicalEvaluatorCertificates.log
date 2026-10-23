@@ -1,0 +1,303 @@
+Classicism.Research.actualEvaluator_kernel_possible: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.canonicalEvaluator_actual: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.canonicalEvaluator_all: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.canonicalEvaluator_exists: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.canonicalEvaluator_idempotent: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.canonicalEvaluator_unique: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.evaluator_endpoints_possible: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.incompatible_world_tests: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.incompatible_world_tests_step: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.not_all_test: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.worldEvaluator_actual: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.worldEvaluator_all: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.worldEvaluator_exists: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.world_all_instance: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.world_all_test: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.world_exists_intro: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.world_no_exists_test: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.world_not_exists_instance: Classicism ✓ [C⁻] (axioms: [])
+#classicism_audit Classicism.Results.Research.CanonicalEvaluator: 18/18 theorems pass; 18 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.CanonicalEvaluator: 18/18 inside R
+Classicism.Research.actualEvaluator_kernel_possible ⟶ Classicism.Research.actualEvaluator_kernel_possible.derivable : Classicism.Meta.Theorem
+  Classicism.Meta.C.axiomsMinus
+  (Classicism.Meta.Term.forall'
+    (Classicism.Meta.Term.imp
+      (Classicism.Meta.Term.forall'
+        (Classicism.Meta.Term.conj
+          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).imp
+            (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).eq'
+              Classicism.Meta.Term.top))
+          (Classicism.Meta.Term.imp (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg
+            (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).eq'
+              Classicism.Meta.Term.bot))))
+      (Classicism.Meta.Term.box
+        (Classicism.Meta.Term.dia
+          (Classicism.Meta.Term.forall'
+            (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+              (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))))))
+derived ✓ in C⁻
+Classicism.Research.worldEvaluator_actual ⟶ Classicism.Research.worldEvaluator_actual.derivable : Classicism.Meta.Theorem
+  Classicism.Meta.C.axiomsMinus
+  (Classicism.Meta.Term.forall'
+    (Classicism.Meta.Term.imp
+      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).conj
+        (Classicism.Meta.Term.forall'
+          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).imp
+            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).eq'
+              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).disj
+                (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))))
+      (Classicism.Meta.Term.imp (Classicism.Meta.Term.box (Classicism.Meta.Term.var Classicism.Meta.Var.zero).dia)
+        (Classicism.Meta.Term.forall'
+          (Classicism.Meta.Term.conj
+            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).imp
+              (Classicism.Meta.Term.eq'
+                (Classicism.Meta.Term.box
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).imp
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))
+                Classicism.Meta.Term.top))
+            (Classicism.Meta.Term.imp (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg
+              (Classicism.Meta.Term.eq'
+                (Classicism.Meta.Term.box
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).imp
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))
+                Classicism.Meta.Term.bot)))))))
+derived ✓ in C⁻
+Classicism.Research.canonicalEvaluator_actual ⟶ Classicism.Research.canonicalEvaluator_actual.derivable : Classicism.Meta.Theorem
+  Classicism.Meta.C.axiomsMinus
+  (Classicism.Meta.Term.forall'
+    (Classicism.Meta.Term.imp
+      (Classicism.Meta.Term.forall'
+        (Classicism.Meta.Term.conj
+          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).imp
+            (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).eq'
+              Classicism.Meta.Term.top))
+          (Classicism.Meta.Term.imp (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg
+            (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).eq'
+              Classicism.Meta.Term.bot))))
+      (Classicism.Meta.Term.forall'
+        (Classicism.Meta.Term.conj
+          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).imp
+            (Classicism.Meta.Term.eq'
+              (Classicism.Meta.Term.box
+                (Classicism.Meta.Term.imp
+                  (Classicism.Meta.Term.forall'
+                    (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))
+              Classicism.Meta.Term.top))
+          (Classicism.Meta.Term.imp (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg
+            (Classicism.Meta.Term.eq'
+              (Classicism.Meta.Term.box
+                (Classicism.Meta.Term.imp
+                  (Classicism.Meta.Term.forall'
+                    (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))
+              Classicism.Meta.Term.bot))))))
+derived ✓ in C⁻
+Classicism.Research.canonicalEvaluator_unique ⟶ Classicism.Research.canonicalEvaluator_unique.derivable : Classicism.Meta.Theorem
+  Classicism.Meta.C.axiomsMinus
+  (Classicism.Meta.Term.forall'
+    (Classicism.Meta.Term.forall'
+      (Classicism.Meta.Term.imp
+        (Classicism.Meta.Term.forall'
+          (Classicism.Meta.Term.conj
+            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).imp
+              (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).eq'
+                Classicism.Meta.Term.top))
+            (Classicism.Meta.Term.imp (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg
+              (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).eq'
+                Classicism.Meta.Term.bot))))
+        (Classicism.Meta.Term.imp
+          (Classicism.Meta.Term.forall'
+            (Classicism.Meta.Term.conj
+              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).imp
+                (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).eq'
+                  Classicism.Meta.Term.top))
+              (Classicism.Meta.Term.imp (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg
+                (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).eq'
+                  Classicism.Meta.Term.bot))))
+          ((Classicism.Meta.Term.lam
+                (Classicism.Meta.Term.box
+                  (Classicism.Meta.Term.imp
+                    (Classicism.Meta.Term.forall'
+                      (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ.succ).app
+                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))).eq'
+            (Classicism.Meta.Term.lam
+              (Classicism.Meta.Term.box
+                (Classicism.Meta.Term.imp
+                  (Classicism.Meta.Term.forall'
+                    (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))))))))
+derived ✓ in C⁻
+Classicism.Research.canonicalEvaluator_idempotent ⟶ Classicism.Research.canonicalEvaluator_idempotent.derivable : Classicism.Meta.Theorem
+  Classicism.Meta.C.axiomsMinus
+  (Classicism.Meta.Term.forall'
+    (Classicism.Meta.Term.imp
+      (Classicism.Meta.Term.forall'
+        (Classicism.Meta.Term.conj
+          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).imp
+            (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).eq'
+              Classicism.Meta.Term.top))
+          (Classicism.Meta.Term.imp (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg
+            (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).eq'
+              Classicism.Meta.Term.bot))))
+      ((Classicism.Meta.Term.lam
+            (Classicism.Meta.Term.box
+              (Classicism.Meta.Term.imp
+                (Classicism.Meta.Term.forall'
+                  (Classicism.Meta.Term.imp
+                    (Classicism.Meta.Term.box
+                      (Classicism.Meta.Term.imp
+                        (Classicism.Meta.Term.forall'
+                          (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ.succ).app
+                                (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))
+                (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))).eq'
+        (Classicism.Meta.Term.lam
+          (Classicism.Meta.Term.box
+            (Classicism.Meta.Term.imp
+              (Classicism.Meta.Term.forall'
+                (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))
+              (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))))))
+derived ✓ in C⁻
+Classicism.Research.worldEvaluator_all ⟶ Classicism.Research.worldEvaluator_all.derivable : ∀ (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axiomsMinus
+    (Classicism.Meta.Term.forall'
+      (Classicism.Meta.Term.imp
+        ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).conj
+          (Classicism.Meta.Term.forall'
+            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).imp
+              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).eq'
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).disj
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))))
+        (Classicism.Meta.Term.imp (Classicism.Meta.Term.box (Classicism.Meta.Term.var Classicism.Meta.Var.zero).dia)
+          (Classicism.Meta.Term.forall'
+            (Classicism.Meta.Term.eq'
+              (Classicism.Meta.Term.box
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).imp
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).forall'))
+              (Classicism.Meta.Term.forall'
+                (Classicism.Meta.Term.box
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).imp
+                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))))))))
+derived ✓ in C⁻
+Classicism.Research.canonicalEvaluator_all ⟶ Classicism.Research.canonicalEvaluator_all.derivable : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axiomsMinus
+    (Classicism.Meta.Term.forall'
+      (Classicism.Meta.Term.imp
+        (Classicism.Meta.Term.forall'
+          (Classicism.Meta.Term.conj
+            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).imp
+              (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).eq'
+                Classicism.Meta.Term.top))
+            (Classicism.Meta.Term.imp (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg
+              (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).eq'
+                Classicism.Meta.Term.bot))))
+        (Classicism.Meta.Term.forall'
+          (Classicism.Meta.Term.eq'
+            (Classicism.Meta.Term.box
+              (Classicism.Meta.Term.imp
+                (Classicism.Meta.Term.forall'
+                  (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).forall'))
+            (Classicism.Meta.Term.forall'
+              (Classicism.Meta.Term.box
+                (Classicism.Meta.Term.imp
+                  (Classicism.Meta.Term.forall'
+                    (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ.succ).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))))))))
+derived ✓ in C⁻
+Classicism.Research.worldEvaluator_exists ⟶ Classicism.Research.worldEvaluator_exists.derivable : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axiomsMinus
+    (Classicism.Meta.Term.forall'
+      (Classicism.Meta.Term.imp
+        ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).conj
+          (Classicism.Meta.Term.forall'
+            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).imp
+              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).eq'
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).disj
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))))
+        (Classicism.Meta.Term.imp (Classicism.Meta.Term.box (Classicism.Meta.Term.var Classicism.Meta.Var.zero).dia)
+          (Classicism.Meta.Term.forall'
+            (Classicism.Meta.Term.eq'
+              (Classicism.Meta.Term.box
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).imp
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).exists'))
+              (Classicism.Meta.Term.exists'
+                (Classicism.Meta.Term.box
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).imp
+                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))))))))
+derived ✓ in C⁻
+Classicism.Research.canonicalEvaluator_exists ⟶ Classicism.Research.canonicalEvaluator_exists.derivable : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axiomsMinus
+    (Classicism.Meta.Term.forall'
+      (Classicism.Meta.Term.imp
+        (Classicism.Meta.Term.forall'
+          (Classicism.Meta.Term.conj
+            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).imp
+              (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).eq'
+                Classicism.Meta.Term.top))
+            (Classicism.Meta.Term.imp (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg
+              (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).eq'
+                Classicism.Meta.Term.bot))))
+        (Classicism.Meta.Term.forall'
+          (Classicism.Meta.Term.eq'
+            (Classicism.Meta.Term.box
+              (Classicism.Meta.Term.imp
+                (Classicism.Meta.Term.forall'
+                  (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).exists'))
+            (Classicism.Meta.Term.exists'
+              (Classicism.Meta.Term.box
+                (Classicism.Meta.Term.imp
+                  (Classicism.Meta.Term.forall'
+                    (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ.succ).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))))))))
+derived ✓ in C⁻
+'Classicism.Research.canonicalEvaluator_all.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.canonicalEvaluator_exists.derivable' depends on axioms: [propext, Quot.sound]

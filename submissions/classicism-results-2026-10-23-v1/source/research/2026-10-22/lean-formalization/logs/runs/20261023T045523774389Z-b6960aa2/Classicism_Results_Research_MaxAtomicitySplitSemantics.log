@@ -1,0 +1,47 @@
+Classicism/Results/Research/MaxAtomicitySplitSemantics.lean:123:2: error: Tactic `rfl` failed: The left-hand side
+  ⨅ x,
+    crisp x ((⨅ x, x) ⊓ (⨅ x, x)ᶜ) ⊔
+      (crisp (x ⊓ eval I F IEnv.nil x) ((⨅ x, x) ⊓ (⨅ x, x)ᶜ))ᶜ ⊓
+        (crisp (x ⊓ (eval I F IEnv.nil x)ᶜ) ((⨅ x, x) ⊓ (⨅ x, x)ᶜ))ᶜ
+is not definitionally equal to the right-hand side
+  splitValue (eval I F IEnv.nil)
+
+B : Type
+inst✝ : CompleteBooleanAlgebra B
+I : Interpretation Signature.pure B
+F : Term Signature.pure [] (Ty.rel MaxAtomicitySplitCertificate.SplitterTy)
+⊢ ⨅ x,
+      crisp x ((⨅ x, x) ⊓ (⨅ x, x)ᶜ) ⊔
+        (crisp (x ⊓ eval I F IEnv.nil x) ((⨅ x, x) ⊓ (⨅ x, x)ᶜ))ᶜ ⊓
+          (crisp (x ⊓ (eval I F IEnv.nil x)ᶜ) ((⨅ x, x) ⊓ (⨅ x, x)ᶜ))ᶜ =
+    splitValue (eval I F IEnv.nil)
+Classicism/Results/Research/MaxAtomicitySplitSemantics.lean:122:45: warning: This simp argument is unused:
+  eval_bot
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_app, eval_weaken, eval_v0, compl_compl]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Classicism.Meta.Research.MaxAtomicitySplitSemantics.guardedSup_eq_unique' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicitySplitSemantics.splitValue_eq_top' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicitySplitSemantics.guardedLeastPart_eq_selector' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicitySplitSemantics.guardedLeastPart_splits' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicitySplitSemantics.guardedLeastPart_splitValue' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicitySplitSemantics.eval_split' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicitySplitSemantics.split_identity_not_C_theorem' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

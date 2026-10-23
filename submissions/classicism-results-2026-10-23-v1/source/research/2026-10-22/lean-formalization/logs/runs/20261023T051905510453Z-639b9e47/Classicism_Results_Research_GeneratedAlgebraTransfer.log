@@ -1,0 +1,64 @@
+Classicism/Results/Research/GeneratedAlgebraTransfer.lean:32:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.GeneratedAlgebra.carrier_base`:
+  [Rel μ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Rel μ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/GeneratedAlgebraTransfer.lean:35:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.GeneratedAlgebra.carrier_unary`:
+  [Rel μ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Rel μ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/GeneratedAlgebraTransfer.lean:39:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.GeneratedAlgebra.carrier_binary`:
+  [Rel μ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Rel μ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/GeneratedAlgebraTransfer.lean:45:54: warning: Variable name `x` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _x
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Classicism/Results/Research/GeneratedAlgebraTransfer.lean:83:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.GeneratedAlgebra.forward`:
+  [Rel μ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Rel μ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/GeneratedAlgebraTransfer.lean:102:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.GeneratedAlgebra.image_intro`:
+  [Rel μ]
+  [Rel ν]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Rel μ] [Rel ν] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/GeneratedAlgebraTransfer.lean:119:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.GeneratedAlgebra.image_support`:
+  [Rel μ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Rel μ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/GeneratedAlgebraTransfer.lean:161:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.GeneratedAlgebra.left_inverse`:
+  [Rel μ]
+  [Rel ν]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Rel μ] [Rel ν] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/GeneratedAlgebraTransfer.lean:185:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.GeneratedAlgebra.injective_of_left_inverse`:
+  [Rel μ]
+  [Rel ν]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Rel μ] [Rel ν] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/GeneratedAlgebraTransfer.lean:191:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.GeneratedAlgebra.right_inverse_on_target`:
+  [Rel μ]
+  [Rel ν]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Rel μ] [Rel ν] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

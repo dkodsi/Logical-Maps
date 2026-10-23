@@ -1,0 +1,90 @@
+Classicism/Results/Research/MaxAtomicityJechShelahFiniteRefinement.lean:37:41: error(lean.unknownIdentifier): Unknown identifier `below`
+Classicism/Results/Research/MaxAtomicityJechShelahFiniteRefinement.lean:40:24: error(lean.unknownIdentifier): Unknown identifier `below`
+Classicism/Results/Research/MaxAtomicityJechShelahFiniteRefinement.lean:47:59: error(lean.unknownIdentifier): Unknown identifier `lengths`
+Classicism/Results/Research/MaxAtomicityJechShelahFiniteRefinement.lean:48:12: error(lean.unknownIdentifier): Unknown identifier `below`
+Classicism/Results/Research/MaxAtomicityJechShelahFiniteRefinement.lean:48:31: error: Tactic `rcases` failed: `x✝ : ?m.48` is not an inductive datatype
+Classicism/Results/Research/MaxAtomicityJechShelahFiniteRefinement.lean:52:28: error(lean.unknownIdentifier): Unknown identifier `valid`
+Classicism/Results/Research/MaxAtomicityJechShelahFiniteRefinement.lean:57:23: error: Function expected at
+  selected_stem_mem ?m.26
+but this term has type
+  ?m.24 ?m.26 ∈ (union ?m.25).tree
+
+Note: Expected a function because this term is being applied to the argument
+  below
+Classicism/Results/Research/MaxAtomicityJechShelahFiniteRefinement.lean:62:44: error: Application type mismatch: The argument
+  valid
+has type
+  ∀ (i : I), stem i ∈ T.tree
+of sort `Prop` but is expected to have type
+  List ℕ
+of sort `Type` in the application
+  selected_level_iff valid
+Classicism/Results/Research/MaxAtomicityJechShelahFiniteRefinement.lean:62:13: error: Tactic `rcases` failed: `x✝ : ?m.48` is not an inductive datatype
+Classicism/Results/Research/MaxAtomicityJechShelahFiniteRefinement.lean:57:41: error: Application type mismatch: The argument
+  valid
+has type
+  ∀ (i : I), stem i ∈ T.tree
+of sort `Prop` but is expected to have type
+  ?m.22
+of sort `Type ?u.38` in the application
+  selected_stem_mem valid
+Classicism/Results/Research/MaxAtomicityJechShelahFiniteRefinement.lean:66:42: error(lean.unknownIdentifier): Unknown identifier `valid`
+Classicism/Results/Research/MaxAtomicityJechShelahFiniteRefinement.lean:75:28: error(lean.unknownIdentifier): Unknown identifier `valid`
+Classicism/Results/Research/MaxAtomicityJechShelahFiniteRefinement.lean:79:42: error(lean.unknownIdentifier): Unknown identifier `below`
+Classicism/Results/Research/MaxAtomicityJechShelahFiniteRefinement.lean:84:33: error: Function expected at
+  selected_stem_mem ?m.19
+but this term has type
+  ?m.17 ?m.19 ∈ (union ?m.18).tree
+
+Note: Expected a function because this term is being applied to the argument
+  below
+Classicism/Results/Research/MaxAtomicityJechShelahFiniteRefinement.lean:84:51: error: Application type mismatch: The argument
+  valid
+has type
+  ∀ (i : I), stem i ∈ T.tree
+of sort `Prop` but is expected to have type
+  ?m.15
+of sort `Type ?u.34` in the application
+  selected_stem_mem valid
+Classicism/Results/Research/MaxAtomicityJechShelahFiniteRefinement.lean:109:51: error(lean.unknownIdentifier): Unknown identifier `level`
+Classicism/Results/Research/MaxAtomicityJechShelahFiniteRefinement.lean:110:43: error(lean.unknownIdentifier): Unknown identifier `valid`
+Classicism/Results/Research/MaxAtomicityJechShelahFiniteRefinement.lean:110:49: error(lean.unknownIdentifier): Unknown identifier `lengths`
+Classicism/Results/Research/MaxAtomicityJechShelahFiniteRefinement.lean:110:11: error: Tactic `rcases` failed: `x✝ : ?m.64` is not an inductive datatype
+Classicism/Results/Research/MaxAtomicityJechShelahFiniteRefinement.lean:141:0: warning: automatically included section variable(s) unused in theorem `Classicism.Meta.Research.MaxAtomicityJechShelahFiniteRefinement.decide_selected`:
+  [Nonempty I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/MaxAtomicityJechShelahFiniteRefinement.lean:143:14: warning: Variable name `i` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _i
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'Classicism.Meta.Research.MaxAtomicityJechShelahFiniteRefinement.selectedFrontEquiv' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahFiniteRefinement.selected_front_card' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahFiniteRefinement.selected_preserves_level' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+Classicism/Results/Research/MaxAtomicityJechShelahFiniteRefinement.lean:153:14: error(lean.unknownIdentifier): Unknown constant `selected_restrict_eq`
+'Classicism.Meta.Research.MaxAtomicityJechShelahFiniteRefinement.selected_union_value' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahFiniteRefinement.decision_unique' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahFiniteRefinement.decision_preserved' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahFiniteRefinement.decide_selected' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

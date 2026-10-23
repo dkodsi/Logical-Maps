@@ -1,0 +1,15 @@
+import Classicism.Results.Research.C5ActualityNumbers
+import Classicism.Results.Research.C5FregeCertificates
+import Classicism.Results.Research.ActualityNumericalRelationsCertificates
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Translate
+
+#classicism_audit Classicism.Results.Research.C5ActualityNumbers
+#classicism_types_audit Classicism.Results.Research.C5ActualityNumbers
+#classicism_derive_audit Classicism.Results.Research.C5ActualityNumbers
+
+#print axioms Classicism.Research.C5ActualityNumbers.numberMap_injective_c5.derivable
+#print axioms Classicism.Research.C5ActualityNumbers.numberMap_inverse_graph_c5.derivable
+#print axioms Classicism.Research.C5ActualityNumbers.addition_iff_c5.derivable
+#print axioms Classicism.Research.C5ActualityNumbers.multiplication_iff_c5.derivable

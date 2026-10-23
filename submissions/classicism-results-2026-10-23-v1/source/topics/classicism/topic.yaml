@@ -1,0 +1,217 @@
+id: classicism
+title: Classicism
+require_sources: true
+framework: 'The fixed base is Bacon and Dorr’s Classicism (C) in their relational type system. Types are
+  generated from e and t by forming sigma→tau when tau is not e; every non-base type therefore ends in
+  t. C is the smallest H-theory containing Logical Equivalence (Classicism, §1.3): lambda abstractions
+  of H-equivalent formulas are identical. Preserve the theoremhood side condition; equivalence under optional
+  assumptions does not satisfy it.'
+background: []
+source_catalog:
+- id: bacon-dorr-classicism
+  name: Classicism (2024)
+  kind: published-paper
+- id: dorr-bc-not-rc
+  name: BC does not imply RC (draft)
+  kind: misc
+- id: lewin-1991
+  name: Lewin, A Simple Proof of Zorn's Lemma
+  kind: published-paper
+- id: prior-1963
+  name: Prior, Formal Logic
+  kind: published-paper
+- id: prior-lemmon
+  name: Prior / Lemmon on BF
+  kind: published-paper
+- id: bacon-2020
+  name: Logical Combinatorialism
+  kind: published-paper
+- id: bacon-2024-book
+  name: Philosophical Introduction to HOL (2024)
+  kind: published-paper
+- id: bacon-mathematical-contingency
+  name: Could the truths of mathematics have been different? (draft)
+  kind: misc
+- id: barton-goodsell-continuum-contingency
+  name: Continuum Contingency (draft)
+  kind: misc
+- id: the-broadest-necessity
+  name: The Broadest Necessity
+  kind: published-paper
+- id: necessity-of-identity
+  name: Necessity of identity (historical)
+  kind: misc
+- id: goodsell-yli-vakkuri-unpublished
+  name: Goodsell / Yli-Vakkuri (unpublished)
+  kind: misc
+- id: goodsell-pc
+  name: Goodsell (personal communication)
+  kind: misc
+- id: goodsell-arithmetic-necessary
+  name: Arithmetic is Necessary (2024 draft)
+  kind: misc
+- id: sun-possible-worlds-without-atomicity
+  name: Possible Worlds Without Atomicity (draft)
+  kind: misc
+- id: bounds-of-possibility
+  name: The Bounds of Possibility (2021)
+  kind: published-paper
+- id: misc
+  name: Misc.
+  kind: misc
+notation: All type schemata use the fixed relational type system. Types and application associate to the
+  right; curried application is parenthesized. Box applies after closing object variables. See Background
+  for definitions and schema side conditions.
+principle_categories:
+- id: extensionality
+  name: Extensionality
+- id: coarse
+  name: Modal principles
+- id: lattice
+  name: Boolean structure
+- id: comprehension
+  name: Comprehension
+- id: choice
+  name: Choice and Plenitude
+- id: infinity
+  name: Infinity
+- id: schematic
+  name: Possibility and pure schemata
+- id: necessity-varieties
+  name: Varieties of necessity
+- id: signature
+  name: Signature schemata (Σ)
+  hidden_by_default: true
+- id: base
+  name: Background consequences
+default_tab: lattice
+background_presets:
+- id: c5
+  name: C5
+  category: coarse
+  principles:
+  - necessary-distinctness-necessary-r
+- id: c5-atomic
+  name: C5 + Atomicity
+  category: lattice
+  principles:
+  - necessary-distinctness-necessary-r
+  - atomicity-r
+- id: extensional
+  name: Extensionalism
+  category: extensionality
+  principles:
+  - extensionality-r
+- id: pure-maximalist
+  name: Pure Maximalist Classicism
+  category: schematic
+  principles:
+  - distinctness-schema-r
+
+lattice_views:
+- id: modality-rigid-comprehension
+  name: Modality and rigid comp.
+  default: true
+  description: 'The conjunctions of Extensionality and five boxed principles: □ND, □Atomicity, □Actuality,
+    □Rigid Comprehension and □BF.'
+  principles:
+  - extensionality-r
+  - necessary-distinctness-necessary-r
+  - necessary-atomicity-r
+  - necessary-actuality
+  - necessary-rigid-comprehension-r
+  - necessary-barcan-r
+- id: combinatorialism
+  name: Combinatorialism
+  description: 'Logical Combinatorialism and its relatives for the signature Σ: Logical Necessity, the
+    witnessed-possibility principles, Modal Freedom, Separated Structure, No Contingency, Maximalism and the
+    Possibility schemata.'
+  principles:
+  - strong-possibility-signature-r
+  - logical-necessity-r
+  - distinctness-signature-r
+  - modal-freedom-signature-r
+  - no-contingency-signature-r
+  - converse-witnessed-possibility-r
+  - separated-structure-r
+  - witnessed-possibility-r
+- id: modal-laws
+  name: Modal laws
+  principles:
+  - barcan-r
+  - necessary-barcan-r
+  - distinctness-necessary-r
+  - necessary-distinctness-necessary-r
+  - fregean-axiom
+- id: choice-principles
+  name: Choice principles
+  principles:
+  - intensional-choice-r
+  - relational-choice-r
+  - transversal-r
+  - transversal-choice-r
+  - plenitude-r
+  - functional-choice-r
+- id: boolean-structure
+  name: Boolean Structure
+  principles:
+  - actuality
+  - atomicity-r
+  - boolean-completeness-r
+  - weak-rigid-comprehension-r
+  - rigid-comprehension-r
+  - strong-leibniz-r
+lean_lib: Classicism
+lean:
+  index:
+    script: scripts/MapIndex.lean
+    file: map/index.json
+  source_url: https://github.com/zwlgzwlg/Logical-Maps/blob/{commit}/logical-maps/topics/classicism/lean/{file}#L{start}-L{end}
+  imports:
+  - Classicism.Certified.Signatures
+  - Classicism.Certified.Arithmetic
+  namespace: Classicism
+  definition_check: "example {Sig : Classicism.Meta.Signature} : Classicism.Meta.AxiomSet Sig :=\n  {def}"
+  result:
+    binder: '∀ {Sig : Classicism.Meta.Signature} (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig),'
+    principle: Classicism.Meta.AxiomSet.Entails Ax {def}
+    falsum: ¬ Classicism.Meta.AxiomSet.Consistent Ax
+  model:
+    binder: '∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧'
+    principle: Classicism.Meta.AxiomSet.Entails Ax {def}
+  verdict:
+    imports:
+    - Classicism.Semantics.IntensionalTheory
+    - Classicism.Models.Permutations
+    - Classicism.Models.Monoids
+    - Classicism.Models.ContingentBarcan
+    - Classicism.Semantics.IntensionalExamples
+    - Classicism.Models.Conditions
+    - Classicism.Models.FullActionModels
+    - Classicism.Semantics.Interpretations
+    - Classicism.Models.SymmetricFull
+    - Classicism.Models.SymmetricIdeal
+    - Classicism.Models.PairInjCollapse
+    holds: ({model}).IsModel ∧ ({model}).HoldsAx {def}
+    fails: ({model}).IsModel ∧ ¬ ({model}).HoldsAx {def}
+    relative_categories: [signature]
+    relative: ({model}).Admitted
+    # A model with Σ interpreted, built from the record's model of the pure language by its
+    # setting `sigma` (Semantics/Interpretations.lean).
+    relative_models:
+      setting: sigma
+      values:
+        top:
+          model: Classicism.Meta.Intensional.Premodel.withTop ({model}) ({is_model})
+          is_model: Classicism.Meta.Intensional.Premodel.withTop_isModel ({is_model})
+          relative: Classicism.Meta.Signature.sigmaTop_admitted
+          meets:
+            sigma-top: Classicism.Meta.Intensional.Premodel.withTop_sigmaTop ({is_model})
+          given: Classicism.Meta.Intensional.Premodel.holdsAx_interp_ofPure.2 ({proof})
+  argument:
+    binder: '∀ {Sig : Classicism.Meta.Signature} {C : Type} [CategoryTheory.SmallCategory C] (A : Classicism.Meta.Intensional.Premodel Sig C), A.IsModel →'
+    model: A
+    condition: '{cond} {model}'
+    holds: ({model}).HoldsAx {def}
+    fails: ¬ ({model}).HoldsAx {def}
+    relative: ({model}).Admitted

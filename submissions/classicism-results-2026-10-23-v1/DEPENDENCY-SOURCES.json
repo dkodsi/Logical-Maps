@@ -1,0 +1,863 @@
+{
+  "scope": "Only exact matching external sources from the selected saved manifests; full dependencies/toolchain are pinned separately, not bundled.",
+  "entries": [
+    {
+      "module": "Mathlib.Lean.Expr.Rat",
+      "sha256": "eee815f267e8c72f5735fb973b5a910ac143f58d0dd40eddf3f65169ad3b6e91",
+      "package_path": "dependencies/sources/eee815f267e8c72f/Mathlib/Lean/Expr/Rat.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Lean/Expr/Rat.lean"
+    },
+    {
+      "module": "Batteries.Classes.RatCast",
+      "sha256": "2d2f0265802ab69e891924f62d1ddca1b82c303027dfa0ef3453bea37577e7b9",
+      "package_path": "dependencies/sources/2d2f0265802ab69e/Batteries/Classes/RatCast.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Batteries/Classes/RatCast.lean"
+    },
+    {
+      "module": "Mathlib.Data.Rat.Init",
+      "sha256": "8bf4701007955ed168463dde3a8a30fe19d3ea979aec1dfd128d4ef8858aa1a2",
+      "package_path": "dependencies/sources/8bf4701007955ed1/Mathlib/Data/Rat/Init.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Data/Rat/Init.lean"
+    },
+    {
+      "module": "Mathlib.Data.Rat.Defs",
+      "sha256": "e644776b8813e3764493563b13beac92092a98854d017081f496c329078d2c1f",
+      "package_path": "dependencies/sources/e644776b8813e376/Mathlib/Data/Rat/Defs.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Data/Rat/Defs.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Ring.Unbundled.Rat",
+      "sha256": "742678627ed95430c10e6aa66ab24eab6d6853f8fa268604dcc5cc62e9974b38",
+      "package_path": "dependencies/sources/742678627ed95430/Mathlib/Algebra/Order/Ring/Unbundled/Rat.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Order/Ring/Unbundled/Rat.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.GroupWithZero.Units.Lemmas",
+      "sha256": "5896e7e015b3d69eecc8e580c28f0dd1473ad71dd752a3cb352c8427822410b2",
+      "package_path": "dependencies/sources/5896e7e015b3d69e/Mathlib/Algebra/GroupWithZero/Units/Lemmas.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/GroupWithZero/Units/Lemmas.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Field.Defs",
+      "sha256": "dd76629c3d0e73c19ace31701313aa093d43e709c853f4384568588e9548e1a0",
+      "package_path": "dependencies/sources/dd76629c3d0e73c1/Mathlib/Algebra/Field/Defs.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Field/Defs.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.GroupWithZero.Invertible",
+      "sha256": "0346f2341701522ed100549af08842381741bb3171eba7576133b08378fdef9d",
+      "package_path": "dependencies/sources/0346f2341701522e/Mathlib/Algebra/GroupWithZero/Invertible.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/GroupWithZero/Invertible.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Ring.Invertible",
+      "sha256": "dbdda924dfbd616ca02f6fa317784faaf45c2d063cdccd41cef7a725c5a86ea7",
+      "package_path": "dependencies/sources/dbdda924dfbd616c/Mathlib/Algebra/Ring/Invertible.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Ring/Invertible.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Ring.Synonym",
+      "sha256": "d8848c2263e9c91419b45f43b262cd3f7e2e5d04b14dab51953adecc15066a4e",
+      "package_path": "dependencies/sources/d8848c2263e9c914/Mathlib/Algebra/Order/Ring/Synonym.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Order/Ring/Synonym.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Field.Basic",
+      "sha256": "4aa5c7c0a9a17d356d084bfabe5a2a54c0fa108ef3a90282e23961710cf06643",
+      "package_path": "dependencies/sources/4aa5c7c0a9a17d35/Mathlib/Algebra/Field/Basic.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Field/Basic.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Nonneg.Basic",
+      "sha256": "a77216411155ea27c12e19c45ca8f655fca771cf3044f862c4c37241a35416be",
+      "package_path": "dependencies/sources/a77216411155ea27/Mathlib/Algebra/Order/Nonneg/Basic.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Order/Nonneg/Basic.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Ring.Rat",
+      "sha256": "79f6035d695e48393153602fb2bbd2c858621816a9bc3b0b82453b69ca7db6ea",
+      "package_path": "dependencies/sources/79f6035d695e4839/Mathlib/Algebra/Ring/Rat.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Ring/Rat.lean"
+    },
+    {
+      "module": "Mathlib.Data.NNRat.Defs",
+      "sha256": "dd6bb82cc9f41b4dc737f683b0451d5a989be8ea7769cce9df13804a15fd498f",
+      "package_path": "dependencies/sources/dd6bb82cc9f41b4d/Mathlib/Data/NNRat/Defs.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Data/NNRat/Defs.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Field.Rat",
+      "sha256": "4ce45b3b3bd7ddbab18b511e748778d8aca6b70ecca6078a0feee29ac2e9114f",
+      "package_path": "dependencies/sources/4ce45b3b3bd7ddba/Mathlib/Algebra/Field/Rat.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Field/Rat.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Group.Semiconj.Basic",
+      "sha256": "06f1af57cc0109141f9aacb5f71de610db070f10de3187675345d4c12f71065c",
+      "package_path": "dependencies/sources/06f1af57cc010914/Mathlib/Algebra/Group/Semiconj/Basic.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Group/Semiconj/Basic.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Group.Commute.Basic",
+      "sha256": "25164de3ccbb6554365e45fb0bc04dcfa7cff307d8dc2fa7327b1fa137ae45b1",
+      "package_path": "dependencies/sources/25164de3ccbb6554/Mathlib/Algebra/Group/Commute/Basic.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Group/Commute/Basic.lean"
+    },
+    {
+      "module": "Mathlib.Data.Int.Cast.Lemmas",
+      "sha256": "f7c3f9f1d28bd9e40b51f5c6dbf5a2735cce02d91f1b93ad8b2789e17ea26bf2",
+      "package_path": "dependencies/sources/f7c3f9f1d28bd9e4/Mathlib/Data/Int/Cast/Lemmas.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Data/Int/Cast/Lemmas.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Ring.Int.Parity",
+      "sha256": "667d592d3c92514ece0c60f45f82b3f7f9382c75a72a086b00710f7e2847db16",
+      "package_path": "dependencies/sources/667d592d3c92514e/Mathlib/Algebra/Ring/Int/Parity.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Ring/Int/Parity.lean"
+    },
+    {
+      "module": "Mathlib.Data.Rat.Lemmas",
+      "sha256": "7708278a1b4f28c587dd3c8710e191ee4c692b0b32f43ae8ee339bd0615cfa92",
+      "package_path": "dependencies/sources/7708278a1b4f28c5/Mathlib/Data/Rat/Lemmas.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Data/Rat/Lemmas.lean"
+    },
+    {
+      "module": "Mathlib.Data.Rat.Cast.Defs",
+      "sha256": "0e71257b1ee1db6fb243f76c916f39332288323ca8ae00c85ac1271fd2deb0eb",
+      "package_path": "dependencies/sources/0e71257b1ee1db6f/Mathlib/Data/Rat/Cast/Defs.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Data/Rat/Cast/Defs.lean"
+    },
+    {
+      "module": "Mathlib.Data.Rat.Cast.CharZero",
+      "sha256": "39c30fd995f1c9f0b8e74b8d494ee14295763c6d290c46b81af97a15d6bc3764",
+      "package_path": "dependencies/sources/39c30fd995f1c9f0/Mathlib/Data/Rat/Cast/CharZero.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Data/Rat/Cast/CharZero.lean"
+    },
+    {
+      "module": "Mathlib.Tactic.HaveI",
+      "sha256": "0c3c94c1eb65d523e91ce2dcc93efc9f3aade8040329ca0f4de920aed0213ca4",
+      "package_path": "dependencies/sources/0c3c94c1eb65d523/Mathlib/Tactic/HaveI.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Tactic/HaveI.lean"
+    },
+    {
+      "module": "Mathlib.Tactic.NormNum.Result",
+      "sha256": "9cf9896928ade9cf3e5b7264750d5256374ba37b24b73f0c28919a284717da65",
+      "package_path": "dependencies/sources/9cf9896928ade9cf/Mathlib/Tactic/NormNum/Result.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Tactic/NormNum/Result.lean"
+    },
+    {
+      "module": "Mathlib.Tactic.NormNum.Core",
+      "sha256": "60010da4c961753d1895171471f7816ca40dd71c1444462f9f66264213fb76da",
+      "package_path": "dependencies/sources/60010da4c961753d/Mathlib/Tactic/NormNum/Core.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Tactic/NormNum/Core.lean"
+    },
+    {
+      "module": "Mathlib.Tactic.NormNum.Basic",
+      "sha256": "c41f553c80eb65c5730d3fcaef800ba9bba5bcb3c8433132e6c59cea890f58d4",
+      "package_path": "dependencies/sources/c41f553c80eb65c5/Mathlib/Tactic/NormNum/Basic.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Tactic/NormNum/Basic.lean"
+    },
+    {
+      "module": "Mathlib.Tactic.NormNum.Inv",
+      "sha256": "8c1834cbc470868957d2c382f59c5cbb2b41442470cd514155de91f952bc7a9f",
+      "package_path": "dependencies/sources/8c1834cbc4708689/Mathlib/Tactic/NormNum/Inv.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Tactic/NormNum/Inv.lean"
+    },
+    {
+      "module": "Mathlib.Tactic.NormNum.Pow",
+      "sha256": "902ad19cab3ba33e794d9ecce78cc36b0557c70330ea0a3b24acc21b2d92d1b1",
+      "package_path": "dependencies/sources/902ad19cab3ba33e/Mathlib/Tactic/NormNum/Pow.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Tactic/NormNum/Pow.lean"
+    },
+    {
+      "module": "Mathlib.Tactic.Ring.Common",
+      "sha256": "75f07cf27cf4b5c7f4b74de36d99ed29766f3e7a7d915581376d3780845eec5b",
+      "package_path": "dependencies/sources/75f07cf27cf4b5c7/Mathlib/Tactic/Ring/Common.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Tactic/Ring/Common.lean"
+    },
+    {
+      "module": "Mathlib.Tactic.Ring.Basic",
+      "sha256": "dc40cdf7146c4ec77b3e71c776ddc50911f71426f639070e5b17546460b01eaf",
+      "package_path": "dependencies/sources/dc40cdf7146c4ec7/Mathlib/Tactic/Ring/Basic.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Tactic/Ring/Basic.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Positive.Ring",
+      "sha256": "75c9b2b9237331374d5ad1defd16cecec7840ec07d109f9a12d9f483abf427b2",
+      "package_path": "dependencies/sources/75c9b2b923733137/Mathlib/Algebra/Order/Positive/Ring.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Order/Positive/Ring.lean"
+    },
+    {
+      "module": "Mathlib.Data.PNat.Basic",
+      "sha256": "9cac947dfc03c2ed6a73f32ba95422122c3c286812f501e49229fe43917f354e",
+      "package_path": "dependencies/sources/9cac947dfc03c2ed/Mathlib/Data/PNat/Basic.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Data/PNat/Basic.lean"
+    },
+    {
+      "module": "Mathlib.Util.AtomM.Recurse",
+      "sha256": "8dbef9ac01a4cd2caa8612a580431d6f1cfa493d1e46a500e911e9c912112ce8",
+      "package_path": "dependencies/sources/8dbef9ac01a4cd2c/Mathlib/Util/AtomM/Recurse.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Util/AtomM/Recurse.lean"
+    },
+    {
+      "module": "Mathlib.Data.Fin.VecNotation",
+      "sha256": "08b3449fd3135bb1b4123e74445bad9317b2aa7515a0464aaddc0d656971568e",
+      "package_path": "dependencies/sources/08b3449fd3135bb1/Mathlib/Data/Fin/VecNotation.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Data/Fin/VecNotation.lean"
+    },
+    {
+      "module": "Mathlib.SetTheory.ZFC.PSet",
+      "sha256": "67c480b5c73efdede91beca021f27df0af01064318cff06c37b277b021264038",
+      "package_path": "dependencies/sources/67c480b5c73efded/Mathlib/SetTheory/ZFC/PSet.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/SetTheory/ZFC/PSet.lean"
+    },
+    {
+      "module": "Mathlib.SetTheory.ZFC.Basic",
+      "sha256": "3063d0ae7371fc60adeb609031ceb9582b1726081d1e6cb46637946778d9508b",
+      "package_path": "dependencies/sources/3063d0ae7371fc60/Mathlib/SetTheory/ZFC/Basic.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/SetTheory/ZFC/Basic.lean"
+    },
+    {
+      "module": "Mathlib.Order.Heyting.Regular",
+      "sha256": "dc7a83c1eb70da8d3ca703a602b6a96706f55b88f4b16cc5437746f0ac16014e",
+      "package_path": "dependencies/sources/dc7a83c1eb70da8d/Mathlib/Order/Heyting/Regular.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Order/Heyting/Regular.lean"
+    },
+    {
+      "module": "Mathlib.Order.Interval.Set.OrderIso",
+      "sha256": "c2afcacb6e3bd5b4dff3954efee8fda304277137c79a6266376e87a9c12937a0",
+      "package_path": "dependencies/sources/c2afcacb6e3bd5b4/Mathlib/Order/Interval/Set/OrderIso.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Order/Interval/Set/OrderIso.lean"
+    },
+    {
+      "module": "Mathlib.Order.UpperLower.CompleteLattice",
+      "sha256": "f94347fc1d73cc7b5002195c794cde8bb984e90d3f9ce49a1852fca93baf4c67",
+      "package_path": "dependencies/sources/f94347fc1d73cc7b/Mathlib/Order/UpperLower/CompleteLattice.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Order/UpperLower/CompleteLattice.lean"
+    },
+    {
+      "module": "Mathlib.Order.UpperLower.Principal",
+      "sha256": "cac39daca08e48e4e1d73ed5e7e03b4ccc9ec577d1e02dd8a19a5da8b33ecb25",
+      "package_path": "dependencies/sources/cac39daca08e48e4/Mathlib/Order/UpperLower/Principal.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Order/UpperLower/Principal.lean"
+    },
+    {
+      "module": "Mathlib.Data.Set.Functor",
+      "sha256": "536a5831c0fd0e29e382ee52aded56dda63c85eaf3050f7516c9382fb57c9ec2",
+      "package_path": "dependencies/sources/536a5831c0fd0e29/Mathlib/Data/Set/Functor.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Data/Set/Functor.lean"
+    },
+    {
+      "module": "Mathlib.Data.Finset.Lattice.Prod",
+      "sha256": "0fb758f4d517a5338d10429c551fec006070b8342068a8f37d91e4976d4ded19",
+      "package_path": "dependencies/sources/0fb758f4d517a533/Mathlib/Data/Finset/Lattice/Prod.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Data/Finset/Lattice/Prod.lean"
+    },
+    {
+      "module": "Mathlib.Order.Closure",
+      "sha256": "56507f04cbc6a2e537f31c4c518a6f573c870d5f8b1fe7ccc9475b96d7e4e6d4",
+      "package_path": "dependencies/sources/56507f04cbc6a2e5/Mathlib/Order/Closure.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Order/Closure.lean"
+    },
+    {
+      "module": "Mathlib.Order.SupClosed",
+      "sha256": "35af799b4b5d75e339b85ba1806f7e49367eecdb8c20bf525c6873b4196ef796",
+      "package_path": "dependencies/sources/35af799b4b5d75e3/Mathlib/Order/SupClosed.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Order/SupClosed.lean"
+    },
+    {
+      "module": "Mathlib.Order.Sublattice",
+      "sha256": "921fa10ef2b717f3a5b1dbe8d360a7618faec15f01a514b5eca20794fd7495f4",
+      "package_path": "dependencies/sources/921fa10ef2b717f3/Mathlib/Order/Sublattice.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Order/Sublattice.lean"
+    },
+    {
+      "module": "Mathlib.Order.Hom.CompleteLattice",
+      "sha256": "cd68deac3a42149809b14d66991b1689911786dfb4fb67f103477f47c89da36b",
+      "package_path": "dependencies/sources/cd68deac3a421498/Mathlib/Order/Hom/CompleteLattice.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Order/Hom/CompleteLattice.lean"
+    },
+    {
+      "module": "Mathlib.Order.CompleteSublattice",
+      "sha256": "d92bfb6b2e9ac896be11642d9d4143082705e663613cf16582d8cc9303f58ed6",
+      "package_path": "dependencies/sources/d92bfb6b2e9ac896/Mathlib/Order/CompleteSublattice.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Order/CompleteSublattice.lean"
+    },
+    {
+      "module": "Mathlib.Order.CompleteLattice.SetLike",
+      "sha256": "70a580250eb3cc81ce5caf1ee302ac9446b880e163e7609cacc7e4d5afd27429",
+      "package_path": "dependencies/sources/70a580250eb3cc81/Mathlib/Order/CompleteLattice/SetLike.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Order/CompleteLattice/SetLike.lean"
+    },
+    {
+      "module": "Mathlib.SetTheory.Descriptive.Tree",
+      "sha256": "b5a8da7c04aa770c86c89c1080970098e2c86ec2113869931dfe2ffe732c40d8",
+      "package_path": "dependencies/sources/b5a8da7c04aa770c/Mathlib/SetTheory/Descriptive/Tree.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/SetTheory/Descriptive/Tree.lean"
+    },
+    {
+      "module": "Mathlib.Logic.Equiv.Multiset",
+      "sha256": "72f8a0e22afbb2203120a9102a76e556d3bf93e75f1ecbb721d1e7548413dd65",
+      "package_path": "dependencies/sources/72f8a0e22afbb220/Mathlib/Logic/Equiv/Multiset.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Logic/Equiv/Multiset.lean"
+    },
+    {
+      "module": "Mathlib.Logic.Equiv.Finset",
+      "sha256": "78e2c7179ac30df98d9697a46a91fe40e97ece473f69f5f4ba6ae26007a55fd5",
+      "package_path": "dependencies/sources/78e2c7179ac30df9/Mathlib/Logic/Equiv/Finset.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Logic/Equiv/Finset.lean"
+    },
+    {
+      "module": "Mathlib.Logic.Encodable.Pi",
+      "sha256": "0ee96b0937043b2ecf835aa7da8512a85f90e9a039aa6c2664060b976c231f15",
+      "package_path": "dependencies/sources/0ee96b0937043b2e/Mathlib/Logic/Encodable/Pi.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Logic/Encodable/Pi.lean"
+    },
+    {
+      "module": "Mathlib.Data.W.Basic",
+      "sha256": "c7651f163f1125668a31a74a119e6ccf947ac4a9162e3c756b4ec6a94938b491",
+      "package_path": "dependencies/sources/c7651f163f112566/Mathlib/Data/W/Basic.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Data/W/Basic.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Monoid.Basic",
+      "sha256": "0ac62cf4b13a404e4fc6f998bfe43bbab836e7f4c780161a27cb8cce3eb7e0d9",
+      "package_path": "dependencies/sources/0ac62cf4b13a404e/Mathlib/Algebra/Order/Monoid/Basic.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Order/Monoid/Basic.lean"
+    },
+    {
+      "module": "Mathlib.Order.Cofinal",
+      "sha256": "cfba7b78a76259d0154e66b40f410a29bc55aa4b3c24fe325add457a6a880da7",
+      "package_path": "dependencies/sources/cfba7b78a76259d0/Mathlib/Order/Cofinal.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Order/Cofinal.lean"
+    },
+    {
+      "module": "Mathlib.SetTheory.Cardinal.Cofinality.Basic",
+      "sha256": "5dbb0d46f2ee666dda99d9bf0269aa9deca91cfd110e51fffcf7fe578942d254",
+      "package_path": "dependencies/sources/5dbb0d46f2ee666d/Mathlib/SetTheory/Cardinal/Cofinality/Basic.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/SetTheory/Cardinal/Cofinality/Basic.lean"
+    },
+    {
+      "module": "Mathlib.Order.SuccPred.InitialSeg",
+      "sha256": "76e4c09e3083c0265cb44dfefc660cb743b17821457730e1e20834675610a979",
+      "package_path": "dependencies/sources/76e4c09e3083c026/Mathlib/Order/SuccPred/InitialSeg.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Order/SuccPred/InitialSeg.lean"
+    },
+    {
+      "module": "Mathlib.Order.DirSupClosed",
+      "sha256": "4a20209370b04628c475df4b6d1a36b8ea132afffb84a8e6cb0db611a3c8d8c3",
+      "package_path": "dependencies/sources/4a20209370b04628/Mathlib/Order/DirSupClosed.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Order/DirSupClosed.lean"
+    },
+    {
+      "module": "Mathlib.Order.IsNormal",
+      "sha256": "441d4d47a684d141d2b59321a5b6c717b79f3a4984d75453d3407ba12712d68b",
+      "package_path": "dependencies/sources/441d4d47a684d141/Mathlib/Order/IsNormal.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Order/IsNormal.lean"
+    },
+    {
+      "module": "Mathlib.SetTheory.Ordinal.Basic",
+      "sha256": "ebf02f5adbbf30960418a820f8f1df4503e9ccb88dc8c236db72050d757d43bb",
+      "package_path": "dependencies/sources/ebf02f5adbbf3096/Mathlib/SetTheory/Ordinal/Basic.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/SetTheory/Ordinal/Basic.lean"
+    },
+    {
+      "module": "Mathlib.SetTheory.Ordinal.Arithmetic",
+      "sha256": "24c6859f3b75df90b5277035d052a0eb76dec2d56ef0248a9202017fc46701f9",
+      "package_path": "dependencies/sources/24c6859f3b75df90/Mathlib/SetTheory/Ordinal/Arithmetic.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/SetTheory/Ordinal/Arithmetic.lean"
+    },
+    {
+      "module": "Mathlib.SetTheory.Ordinal.Family",
+      "sha256": "250c1a2226584f3a052f667eab6f9d792f13375703ea13548148051a81f034fb",
+      "package_path": "dependencies/sources/250c1a2226584f3a/Mathlib/SetTheory/Ordinal/Family.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/SetTheory/Ordinal/Family.lean"
+    },
+    {
+      "module": "Mathlib.SetTheory.Ordinal.Univ",
+      "sha256": "48268bbdb6ac0ed8feac298bfb5dba2a2fb8a1586cf73886e5768762375d5d75",
+      "package_path": "dependencies/sources/48268bbdb6ac0ed8/Mathlib/SetTheory/Ordinal/Univ.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/SetTheory/Ordinal/Univ.lean"
+    },
+    {
+      "module": "Mathlib.SetTheory.Cardinal.Cofinality.Enum",
+      "sha256": "d47f0ad5c49873fb3908b5831d75fe4aa23e6e235b5233a04dbb1492bcb8ca83",
+      "package_path": "dependencies/sources/d47f0ad5c49873fb/Mathlib/SetTheory/Cardinal/Cofinality/Enum.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/SetTheory/Cardinal/Cofinality/Enum.lean"
+    },
+    {
+      "module": "Mathlib.SetTheory.Ordinal.Enum",
+      "sha256": "f6cf789b90ef749f359a89e2d1fe3990d4c0f08f7feb7a7fd5ba64d2a208a4d0",
+      "package_path": "dependencies/sources/f6cf789b90ef749f/Mathlib/SetTheory/Ordinal/Enum.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/SetTheory/Ordinal/Enum.lean"
+    },
+    {
+      "module": "Mathlib.Logic.Small.List",
+      "sha256": "74999dd980e900a7146c4a1a1a8b526de4b2c38c05f8b83c3d44ac078a8dabf3",
+      "package_path": "dependencies/sources/74999dd980e900a7/Mathlib/Logic/Small/List.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Logic/Small/List.lean"
+    },
+    {
+      "module": "Mathlib.Data.Nat.Log",
+      "sha256": "9800e6942155e28138ed981a06340d7333aacccfafcd1aa35147147ae57d8e3f",
+      "package_path": "dependencies/sources/9800e6942155e281/Mathlib/Data/Nat/Log.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Data/Nat/Log.lean"
+    },
+    {
+      "module": "Mathlib.SetTheory.Ordinal.Exponential",
+      "sha256": "797197b278e623619803cfb522c88d04309269589d35addaf6cb9bac654b14cb",
+      "package_path": "dependencies/sources/797197b278e62361/Mathlib/SetTheory/Ordinal/Exponential.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/SetTheory/Ordinal/Exponential.lean"
+    },
+    {
+      "module": "Mathlib.SetTheory.Ordinal.FixedPoint",
+      "sha256": "baa08012cdff8a088ad1c76416d66e69427796c4fe5e5fce6d07e0f48a0f273d",
+      "package_path": "dependencies/sources/baa08012cdff8a08/Mathlib/SetTheory/Ordinal/FixedPoint.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/SetTheory/Ordinal/FixedPoint.lean"
+    },
+    {
+      "module": "Mathlib.SetTheory.Ordinal.Principal",
+      "sha256": "7f9cd58ef01d4ebcbbf5f7d1ed6d725c6e9c01d9e3888d340e38856f225cbbb7",
+      "package_path": "dependencies/sources/7f9cd58ef01d4ebc/Mathlib/SetTheory/Ordinal/Principal.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/SetTheory/Ordinal/Principal.lean"
+    },
+    {
+      "module": "Mathlib.SetTheory.Cardinal.Aleph",
+      "sha256": "6cde9290d3aef7b64fd70f9ee4644f8fac0822b905c1dee64c4a46a48cf03853",
+      "package_path": "dependencies/sources/6cde9290d3aef7b6/Mathlib/SetTheory/Cardinal/Aleph.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/SetTheory/Cardinal/Aleph.lean"
+    },
+    {
+      "module": "Mathlib.SetTheory.Cardinal.Arithmetic",
+      "sha256": "43505f6d6434b8111c787fe51602b111b6a935def35227bcd2bdcab7d867692a",
+      "package_path": "dependencies/sources/43505f6d6434b811/Mathlib/SetTheory/Cardinal/Arithmetic.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/SetTheory/Cardinal/Arithmetic.lean"
+    },
+    {
+      "module": "Mathlib.Data.W.Cardinal",
+      "sha256": "766af83cced8b6523cd6ac24000434a2802e18cb1da6f0583e2af0d68b638dfa",
+      "package_path": "dependencies/sources/766af83cced8b652/Mathlib/Data/W/Cardinal.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Data/W/Cardinal.lean"
+    },
+    {
+      "module": "Mathlib.SetTheory.ZFC.Cardinal",
+      "sha256": "d7903c2f6215352e18eac5d807203a451b012bdd855804e325ef2cec5ec20b74",
+      "package_path": "dependencies/sources/d7903c2f6215352e/Mathlib/SetTheory/ZFC/Cardinal.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/SetTheory/ZFC/Cardinal.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Group.Pi.Lemmas",
+      "sha256": "4fec4f596d73c33510188320c1c81e868b6963be79e6117cfdaebe1bfe83d4e2",
+      "package_path": "dependencies/sources/4fec4f596d73c335/Mathlib/Algebra/Group/Pi/Lemmas.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Group/Pi/Lemmas.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Notation.Support",
+      "sha256": "46042b6b4dc79797e9ac9c28cb8d794c4a1b1b6a59ae0062d2356c9c9e732c91",
+      "package_path": "dependencies/sources/46042b6b4dc79797/Mathlib/Algebra/Notation/Support.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Notation/Support.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.BigOperators.Group.Finset.Lemmas",
+      "sha256": "ecef49416c1cc2fa4c9d05e13ebeaa1e2e921f338100324dfa730d9f854aa1b6",
+      "package_path": "dependencies/sources/ecef49416c1cc2fa/Mathlib/Algebra/BigOperators/Group/Finset/Lemmas.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/BigOperators/Group/Finset/Lemmas.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Notation.Indicator",
+      "sha256": "cdffdb2811704a457253c1387d7e7ae784d9ba10f51bc38d3697bcfaf9ab4ef9",
+      "package_path": "dependencies/sources/cdffdb2811704a45/Mathlib/Algebra/Notation/Indicator.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Notation/Indicator.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.BigOperators.GroupWithZero.Finset",
+      "sha256": "388ad8361bc7479fb144e15c7e39f8f8f30880918dcbf5daa2a5150475b52371",
+      "package_path": "dependencies/sources/388ad8361bc7479f/Mathlib/Algebra/BigOperators/GroupWithZero/Finset.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/BigOperators/GroupWithZero/Finset.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Group.Action.Pi",
+      "sha256": "52fe6416b1e06d309ddeb0fdf0790ba41005b97c0044613c3a640c6d39b6c0bd",
+      "package_path": "dependencies/sources/52fe6416b1e06d30/Mathlib/Algebra/Group/Action/Pi.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Group/Action/Pi.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.GroupWithZero.Pi",
+      "sha256": "a3afc10aa4c1359a1b94d9a82be04b0910f8817d29cd62d0483676bdb568a137",
+      "package_path": "dependencies/sources/a3afc10aa4c1359a/Mathlib/Algebra/GroupWithZero/Pi.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/GroupWithZero/Pi.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Ring.CompTypeclasses",
+      "sha256": "902ae1b7d67b406ccfb84513f032ebede5a0eb2316fd24e4bb9d0174d50a980e",
+      "package_path": "dependencies/sources/902ae1b7d67b406c/Mathlib/Algebra/Ring/CompTypeclasses.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Ring/CompTypeclasses.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Ring.Pi",
+      "sha256": "07e06b0914db30dc0e75f885a5fa7f8170217848d7a276440b4b9fa1738cb3a9",
+      "package_path": "dependencies/sources/07e06b0914db30dc/Mathlib/Algebra/Ring/Pi.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Ring/Pi.lean"
+    },
+    {
+      "module": "Mathlib.Data.FunLike.IsApply",
+      "sha256": "1ad954780c731478ef6072389cb050f7d2db32fcec1c301d6c3a06f82152c6b5",
+      "package_path": "dependencies/sources/1ad954780c731478/Mathlib/Data/FunLike/IsApply.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Data/FunLike/IsApply.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.BigOperators.Pi",
+      "sha256": "45020113307de3d0666a4aead78684fe8ea53576c40f28f0a3d750160e21e1e1",
+      "package_path": "dependencies/sources/45020113307de3d0/Mathlib/Algebra/BigOperators/Pi.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/BigOperators/Pi.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.FiniteSupport.Defs",
+      "sha256": "f54771c85f8985dba9a3249ac9feec696c2326817429f7128ba53a6f7bcb5eb3",
+      "package_path": "dependencies/sources/f54771c85f8985db/Mathlib/Algebra/FiniteSupport/Defs.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/FiniteSupport/Defs.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Group.Indicator",
+      "sha256": "81acaba3ac1ad1fb036505a505348e3dac5be9aa9c9bdfc0defce2a797322128",
+      "package_path": "dependencies/sources/81acaba3ac1ad1fb/Mathlib/Algebra/Group/Indicator.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Group/Indicator.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Group.Support",
+      "sha256": "8d2253880b0c3c948e232892b69cb1dcde99a71a41ac0af4000edbd9141255e7",
+      "package_path": "dependencies/sources/8d2253880b0c3c94/Mathlib/Algebra/Group/Support.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Group/Support.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Group.Action.Opposite",
+      "sha256": "5a54cbb30376eebbbdd9cd1af120c095bf9f747da45d2744a4c1125ffac1471a",
+      "package_path": "dependencies/sources/5a54cbb30376eebb/Mathlib/Algebra/Group/Action/Opposite.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Group/Action/Opposite.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.GroupWithZero.Opposite",
+      "sha256": "4f8f9e402677f46f16073c3fdcd4648d9633eaccdba8cf1412481e8d994d7b2b",
+      "package_path": "dependencies/sources/4f8f9e402677f46f/Mathlib/Algebra/GroupWithZero/Opposite.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/GroupWithZero/Opposite.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.GroupWithZero.Action.Defs",
+      "sha256": "a93ae4530f70b40200c9c9f1aced293b3ceaacd73058887f0d4d7878489a5b24",
+      "package_path": "dependencies/sources/a93ae4530f70b402/Mathlib/Algebra/GroupWithZero/Action/Defs.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/GroupWithZero/Action/Defs.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Module.Defs",
+      "sha256": "96d46d0159b89a95223868218da7958c045b9dda5140d8e91d60fcbc9fc26af3",
+      "package_path": "dependencies/sources/96d46d0159b89a95/Mathlib/Algebra/Module/Defs.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Module/Defs.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Module.NatInt",
+      "sha256": "a3f7e0a982cd0b1a00cab16d6fd2fa28f5c526557e1e1b1fd4af871490bd74e2",
+      "package_path": "dependencies/sources/a3f7e0a982cd0b1a/Mathlib/Algebra/Module/NatInt.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Module/NatInt.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.GroupWithZero.Action.Opposite",
+      "sha256": "b110d95532bb45564892d5844e9e4c31c38f5eda730352d3dff43dbafac80278",
+      "package_path": "dependencies/sources/b110d95532bb4556/Mathlib/Algebra/GroupWithZero/Action/Opposite.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/GroupWithZero/Action/Opposite.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Ring.Opposite",
+      "sha256": "458687c8715f11b2c76ba8504fd2ccefcde3f87ce46aa54d371cdd21dc4e99d7",
+      "package_path": "dependencies/sources/458687c8715f11b2/Mathlib/Algebra/Ring/Opposite.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Ring/Opposite.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Module.Opposite",
+      "sha256": "5561a228cd166b846ec579a97e87dab3439c77e21d26507991c8a5c6d71fd2b2",
+      "package_path": "dependencies/sources/5561a228cd166b84/Mathlib/Algebra/Module/Opposite.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Module/Opposite.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Regular.Opposite",
+      "sha256": "ad18f71c67e0a6db308c2264f0a43e6a7e1f3894c3e1f0d238ff12d3d8c02b5f",
+      "package_path": "dependencies/sources/ad18f71c67e0a6db/Mathlib/Algebra/Regular/Opposite.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Regular/Opposite.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Regular.SMul",
+      "sha256": "618e7239951cc7765754a4794bf1f2c21ea3746c3fcde7d3df65fe9efa57a542",
+      "package_path": "dependencies/sources/618e7239951cc776/Mathlib/Algebra/Regular/SMul.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Regular/SMul.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Module.Torsion.Free",
+      "sha256": "a596bba0c7b55f7dc5d73fbb3aab93ba481805fdef8cde77003c2da4f80fcc15",
+      "package_path": "dependencies/sources/a596bba0c7b55f7d/Mathlib/Algebra/Module/Torsion/Free.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Module/Torsion/Free.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Notation.FiniteSupport",
+      "sha256": "c9183337e816d9a27c2a07695318b435d5cc5ca85b7814d037776f6648df5966",
+      "package_path": "dependencies/sources/c9183337e816d9a2/Mathlib/Algebra/Notation/FiniteSupport.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Notation/FiniteSupport.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Group.Indicator",
+      "sha256": "43f7a5240e1be1675429c6aa93f713ad50e009546ec1b28b57067f1932ed11bb",
+      "package_path": "dependencies/sources/43f7a5240e1be167/Mathlib/Algebra/Order/Group/Indicator.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Order/Group/Indicator.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.GroupWithZero.Indicator",
+      "sha256": "3d5ee30e11eaf793ab372fe198ded6c2b08df869b05fef46da9ec95dd8a2e0e4",
+      "package_path": "dependencies/sources/3d5ee30e11eaf793/Mathlib/Algebra/GroupWithZero/Indicator.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/GroupWithZero/Indicator.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.GroupWithZero.Action.Units",
+      "sha256": "d7bb6945fc7d665cde2c713efb1c0bb408ebdf21bf46a88ba4ea80072a116f93",
+      "package_path": "dependencies/sources/d7bb6945fc7d665c/Mathlib/Algebra/GroupWithZero/Action/Units.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/GroupWithZero/Action/Units.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Module.Basic",
+      "sha256": "01fe7531c619eff57ecc715e7a32558c5c874f41994d28e788bf89f74f045e64",
+      "package_path": "dependencies/sources/01fe7531c619eff5/Mathlib/Algebra/Module/Basic.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Module/Basic.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.FiniteSupport.Basic",
+      "sha256": "7e3d2de5537d6809436dace68af505f4aa9904d1d70aa00a6668eb3a3600685f",
+      "package_path": "dependencies/sources/7e3d2de5537d6809/Mathlib/Algebra/FiniteSupport/Basic.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/FiniteSupport/Basic.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Group.Hom.End",
+      "sha256": "d109bb4dcd2e25e779a26f11259de51b3476405eca775d6d3c5be3dd4cdf7bd8",
+      "package_path": "dependencies/sources/d109bb4dcd2e25e7/Mathlib/Algebra/Group/Hom/End.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Group/Hom/End.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Module.End",
+      "sha256": "64bc6a1922f63857d1c193958f78cb189f494ad6707b01733edbd8e023428925",
+      "package_path": "dependencies/sources/64bc6a1922f63857/Mathlib/Algebra/Module/End.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Module/End.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.BigOperators.Group.Finset.Pi",
+      "sha256": "f6af797dd1f4f94069691e6a05445605368c5319074e482ec4cbbd981027f8fa",
+      "package_path": "dependencies/sources/f6af797dd1f4f940/Mathlib/Algebra/BigOperators/Group/Finset/Pi.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/BigOperators/Group/Finset/Pi.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Ring.Divisibility.Basic",
+      "sha256": "f2d14fb9c3b3fee641b949f07ea3cec1aa95799a1636bbc58ab5f443e9cb7c17",
+      "package_path": "dependencies/sources/f2d14fb9c3b3fee6/Mathlib/Algebra/Ring/Divisibility/Basic.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Ring/Divisibility/Basic.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.BigOperators.Ring.List",
+      "sha256": "09294b112339b0d3fd08d5f18b7a5e22522431cb59885a63a560d0547d9abc50",
+      "package_path": "dependencies/sources/09294b112339b0d3/Mathlib/Algebra/BigOperators/Ring/List.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/BigOperators/Ring/List.lean"
+    },
+    {
+      "module": "Mathlib.Data.Multiset.Antidiagonal",
+      "sha256": "7a304f2ca9df0680ff927f8f76c52966b01756a365edddc2745a3d6061477dc1",
+      "package_path": "dependencies/sources/7a304f2ca9df0680/Mathlib/Data/Multiset/Antidiagonal.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Data/Multiset/Antidiagonal.lean"
+    },
+    {
+      "module": "Mathlib.Data.Multiset.Sections",
+      "sha256": "6713601b83b87f519372221e9ddc0eb328a79afc7a06c7aca77ceeae8e722729",
+      "package_path": "dependencies/sources/6713601b83b87f51/Mathlib/Data/Multiset/Sections.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Data/Multiset/Sections.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.BigOperators.Ring.Multiset",
+      "sha256": "9c867163686a23de93938de9bfb8496b699c9eadf2f80dc6b91c5592abeffecc",
+      "package_path": "dependencies/sources/9c867163686a23de/Mathlib/Algebra/BigOperators/Ring/Multiset.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/BigOperators/Ring/Multiset.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.BigOperators.Ring.Finset",
+      "sha256": "472cd5000412d8ec35c8b9ee919b2aeedbf0a830033a55009aad436595923809",
+      "package_path": "dependencies/sources/472cd5000412d8ec/Mathlib/Algebra/BigOperators/Ring/Finset.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/BigOperators/Ring/Finset.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Group.Abs",
+      "sha256": "8202da6c6bf6f5e4f82af7f19398fb9f1e06adf241edc664ecc42806867778d3",
+      "package_path": "dependencies/sources/8202da6c6bf6f5e4/Mathlib/Algebra/Order/Group/Abs.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Order/Group/Abs.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Hom.Basic",
+      "sha256": "8a2c888bc8609c7fe25349150692d2dd164a487008b9415422244e499910419b",
+      "package_path": "dependencies/sources/8a2c888bc8609c7f/Mathlib/Algebra/Order/Hom/Basic.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Order/Hom/Basic.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Ring.Basic",
+      "sha256": "233bc658567513dee910a069df216bc1a0c7cb7863c9ad3f94b51c026567f7f1",
+      "package_path": "dependencies/sources/233bc658567513de/Mathlib/Algebra/Order/Ring/Basic.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Order/Ring/Basic.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Ring.Int",
+      "sha256": "f2f77b89730c05abc6dc89511b039fe7c9dcc7a4bfe64a01d110daecda72ca71",
+      "package_path": "dependencies/sources/f2f77b89730c05ab/Mathlib/Algebra/Order/Ring/Int.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Order/Ring/Int.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Ring.Int.Units",
+      "sha256": "4b4b590738bb979f2582b88c0f5ec46d2b4b847ea4ee9e09204268e3e2107384",
+      "package_path": "dependencies/sources/4b4b590738bb979f/Mathlib/Algebra/Ring/Int/Units.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Ring/Int/Units.lean"
+    },
+    {
+      "module": "Mathlib.Data.Nat.Cast.Order.Ring",
+      "sha256": "005f95e3c0d18bc11034eff9c7f726e719d61cac7d8fafa1e739096d6d4da255",
+      "package_path": "dependencies/sources/005f95e3c0d18bc1/Mathlib/Data/Nat/Cast/Order/Ring.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Data/Nat/Cast/Order/Ring.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Ring.Abs",
+      "sha256": "2d76883de1b832557bb342945af172261f17b536cce4194ae4fabf4234619d40",
+      "package_path": "dependencies/sources/2d76883de1b83255/Mathlib/Algebra/Order/Ring/Abs.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Order/Ring/Abs.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Invertible",
+      "sha256": "1e29f469ed2561a8652a4f894e99ee19e4a598968f9afa1f5a97221184812746",
+      "package_path": "dependencies/sources/1e29f469ed2561a8/Mathlib/Algebra/Order/Invertible.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Order/Invertible.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Ring.Cast",
+      "sha256": "9a251f799c3fbae7e6fa42cce52ef3408482a9d06e0eb2a3e296236aef97c6ba",
+      "package_path": "dependencies/sources/9a251f799c3fbae7/Mathlib/Algebra/Order/Ring/Cast.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Order/Ring/Cast.lean"
+    },
+    {
+      "module": "Mathlib.Tactic.Positivity.Core",
+      "sha256": "f6a7869df090efd0ea1c3cdb07dd85913ec172803c0c07da3e013caa9eb0b2dd",
+      "package_path": "dependencies/sources/f6a7869df090efd0/Mathlib/Tactic/Positivity/Core.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Tactic/Positivity/Core.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.AbsoluteValue.Basic",
+      "sha256": "b55072f644b54ef766f0e2ce1c99098e9c9342784f234ac6a3c413e830b1cf7d",
+      "package_path": "dependencies/sources/b55072f644b54ef7/Mathlib/Algebra/Order/AbsoluteValue/Basic.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Order/AbsoluteValue/Basic.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.BigOperators.Group.List",
+      "sha256": "f1d73025faff2102cde5ed81186b627f8cd625fabc082b8dfed92d96636030ef",
+      "package_path": "dependencies/sources/f1d73025faff2102/Mathlib/Algebra/Order/BigOperators/Group/List.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Order/BigOperators/Group/List.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.BigOperators.Group.Multiset",
+      "sha256": "32320a190531a14e224a6574126b9ad5b0c67d5d5b337c1c6e71ddf4ada66007",
+      "package_path": "dependencies/sources/32320a190531a14e/Mathlib/Algebra/Order/BigOperators/Group/Multiset.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Order/BigOperators/Group/Multiset.lean"
+    },
+    {
+      "module": "Mathlib.Data.Multiset.OrderedMonoid",
+      "sha256": "620e18cd56a1060f4cbabca80757a99d02471f2acc6f3b48217d486b005c9dfe",
+      "package_path": "dependencies/sources/620e18cd56a1060f/Mathlib/Data/Multiset/OrderedMonoid.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Data/Multiset/OrderedMonoid.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+      "sha256": "6a8daafb9e3b8b6ac48a696661c99a2d10dce57f48907ae18280914bf0ac639f",
+      "package_path": "dependencies/sources/6a8daafb9e3b8b6a/Mathlib/Algebra/Order/BigOperators/Group/Finset.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Order/BigOperators/Group/Finset.lean"
+    },
+    {
+      "module": "Mathlib.Tactic.Ring.PNat",
+      "sha256": "4b7b6a240cbbbfd1f0081a2650671d48e5751429edddaafbe17841edb67b0f41",
+      "package_path": "dependencies/sources/4b7b6a240cbbbfd1/Mathlib/Tactic/Ring/PNat.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Tactic/Ring/PNat.lean"
+    },
+    {
+      "module": "Mathlib.Tactic.Ring.RingNF",
+      "sha256": "96f7e73f696f2e0f28592538eade5e1bfae6c63bb7fc58744d3e1f8aae219b28",
+      "package_path": "dependencies/sources/96f7e73f696f2e0f/Mathlib/Tactic/Ring/RingNF.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Tactic/Ring/RingNF.lean"
+    },
+    {
+      "module": "Mathlib.Tactic.Ring",
+      "sha256": "d3ef5c49ebbd1108ce3f935e5ad95485e143abf02f28c027dba4bb6f3be8196e",
+      "package_path": "dependencies/sources/d3ef5c49ebbd1108/Mathlib/Tactic/Ring.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Tactic/Ring.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.BigOperators.GroupWithZero.Finset",
+      "sha256": "3be238a809840f7dff49a99a02fd83fd5fc93d3efd5f8f34354c5e5c4e796e7d",
+      "package_path": "dependencies/sources/3be238a809840f7d/Mathlib/Algebra/Order/BigOperators/GroupWithZero/Finset.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Order/BigOperators/GroupWithZero/Finset.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.BigOperators.GroupWithZero.List",
+      "sha256": "93dd065687bc4cf18d3fdab010880177865ed2713d31ebe45ef68941a0f78f4c",
+      "package_path": "dependencies/sources/93dd065687bc4cf1/Mathlib/Algebra/Order/BigOperators/GroupWithZero/List.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Order/BigOperators/GroupWithZero/List.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.BigOperators.GroupWithZero.Multiset",
+      "sha256": "947db90aa986f0b4091ac75d2b28e266791d43bbb5a05d1a1bd99d2fd4e37e80",
+      "package_path": "dependencies/sources/947db90aa986f0b4/Mathlib/Algebra/Order/BigOperators/GroupWithZero/Multiset.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Order/BigOperators/GroupWithZero/Multiset.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.BigOperators.Ring.List",
+      "sha256": "95f1a6dd8377e95951612c3c94409f4ab1b526bb3a290b98e681733d2ff250a2",
+      "package_path": "dependencies/sources/95f1a6dd8377e959/Mathlib/Algebra/Order/BigOperators/Ring/List.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Order/BigOperators/Ring/List.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.BigOperators.Ring.Multiset",
+      "sha256": "2f383367a4741d2840770b42a34617ffc9c0cbacf7fdaed071ec9d4a1406d2cf",
+      "package_path": "dependencies/sources/2f383367a4741d28/Mathlib/Algebra/Order/BigOperators/Ring/Multiset.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Order/BigOperators/Ring/Multiset.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+      "sha256": "c89a7463df5acd6485e64d14b958daaedf6b857aad2808a4ead0570b52220568",
+      "package_path": "dependencies/sources/c89a7463df5acd64/Mathlib/Algebra/Order/BigOperators/Ring/Finset.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Order/BigOperators/Ring/Finset.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.BigOperators.Finprod",
+      "sha256": "af518ca33c61054cdeaba1e3e6cc49012403bb07ce1404454094a45804668c8d",
+      "package_path": "dependencies/sources/af518ca33c61054c/Mathlib/Algebra/BigOperators/Finprod.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/BigOperators/Finprod.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.BigOperators.GroupWithZero.Action",
+      "sha256": "96ffeb6042bed2ccd5d2880386938c633598ffa0d830f64affcb9938dbdcf908",
+      "package_path": "dependencies/sources/96ffeb6042bed2cc/Mathlib/Algebra/BigOperators/GroupWithZero/Action.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/BigOperators/GroupWithZero/Action.lean"
+    },
+    {
+      "module": "Mathlib.Algebra.Module.BigOperators",
+      "sha256": "7302b008a3a91770afb8c3084094d9be32f9cf7899f72146e8b3827735cbb771",
+      "package_path": "dependencies/sources/7302b008a3a91770/Mathlib/Algebra/Module/BigOperators.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Algebra/Module/BigOperators.lean"
+    },
+    {
+      "module": "Mathlib.Combinatorics.Enumerative.DoubleCounting",
+      "sha256": "7b2177666ad3691894e1324859c8beca8024ab70c40f109ab42af60add6b84f0",
+      "package_path": "dependencies/sources/7b2177666ad36918/Mathlib/Combinatorics/Enumerative/DoubleCounting.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Combinatorics/Enumerative/DoubleCounting.lean"
+    },
+    {
+      "module": "Mathlib.Combinatorics.Pigeonhole",
+      "sha256": "5752ace39b839ca3867baf0fc439d6744d4efbe6d1346f115f47f2e1bd75f840",
+      "package_path": "dependencies/sources/5752ace39b839ca3/Mathlib/Combinatorics/Pigeonhole.lean",
+      "original_path": "/private/tmp/classicism-max-missing-sources/Mathlib/Combinatorics/Pigeonhole.lean"
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+id: finite-support-truncations
+name: 'Finite-support action model: truncations of N'
+certificate:
+  source_id: bacon-dorr-classicism
+  produced_by: Andrew Bacon and Cian Dorr
+  recorded_by: OpenAI Codex (GPT-6), 17 September 2026
+  checked_by: []
+  date: '2026-09-17'
+  lean: stated
+  # migration: the `trawl` block moves to
+  # provenance/admission-c0a37bbe6b6c45cc985428b174812564.yaml, which holds the blocks of the eight
+  # records admitted together: this record's discovery and evidence in its entry, and the
+  # checkpoint, review and admission they share once. No argument here names it: the review argument
+  # it concerned, for Strong Leibniz (type t) and BF (type t), was dropped once both verdicts were
+  # derived.
+sources:
+- Andrew Bacon and Cian Dorr, Classicism, draft of 16 May 2023, Appendix D, Proposition D.5, part 6, pp.
+  74, 78; p. 79 (No Pure Contingency).
+- DeepSeek (deepseek-flash), Classicism theorem trawl, 25 September 2026; mathematically reviewed and
+  corrected by OpenAI Codex (GPT-6), 25 September 2026. Accepted additions only; original construction
+  attribution is unchanged. writeups/strong-worlds-one-object-action-models.md; Classicism, pp. 55–59,
+  74 and 78; checks/action_strong_worlds.py.
+source_names:
+- Classicism
+- DeepSeek trawl; GPT-6 review 25 Sep
+references:
+- paper: bacon-dorr-classicism
+  role: proof
+  locator: Appendix D, Proposition D.5(6), pp. 74–75; construction p. 78, Part 6; p. 79 (No Pure Contingency)
+
+group: finite-support-one-object
+# migration: the definition is the group's, completed by these settings: `monoid` is the
+# sentence before "In every part", verbatim; Σ is one of the group's two interpretations.
+settings:
+  monoid: >-
+    Proposition D.5, part 6 (p. 78): the arrows are the identity and the truncations $g_n$,
+    $g_nm=\min\{m,n\}$, which compose as $g_n\circ g_m=g_{\min\{n,m\}}$.
+  sigma: top
+
+meets:
+  uniformly-pinned-rigidity: >-
+    An intension is pinned down by $[0,s]$ iff it is constant on $\{g_n:n\ge s\}\cup\{1\}$. Weak
+    inextensibility at the identity, tested with $[0,s']$ for $s'>n$, where $g_n$ is the only arrow
+    with its germ, forces $Y(g_n)=g_n\cdot Y(1)$ for every $n$; and $k\mapsto k\cdot E$ is in the
+    domain iff $g_n\cdot E=E$ for all large $n$, which, as $g_n\cdot E\subseteq\operatorname{Pin}([0,n])$,
+    holds iff $E\subseteq\operatorname{Pin}([0,n_0])$ for some $n_0$.
+  arrows-finitely-determined: >-
+    Each $g_n$ is the only arrow with $g_n(n+1)=n$, so $\{g_n\}$ is pinned down by $\{n+1\}$.
+  evens-avoidable: >-
+    With $N_0\subseteq[0,M_0]$: $i:=g_n$ with $n\ge M_0$, an even $b>n$, and $N^{\prime}:=[0,n+1]$:
+    the only arrow agreeing with $g_n$ on $[0,n+1]$ is $g_n$ itself, whose range $[0,n]$ omits $b$.
+  pinned-atoms: >-
+    Every nonempty proposition contains some $g_n$, and each $\{g_n\}$ is pinned down by a finite
+    set ($\{n-1,n,n+1\}$ for $n>0$, $\{0,1\}$ for $n=0$).
+  unbounded-haecceities: >-
+    With $A:=\mathbb N$: the strongest persistent property with extension $\mathbb N$ pinned down
+    by $\{0,\ldots,n\}$ becomes ever stronger.
+  no-least-pinned-cover: >-
+    Let $F$ be the family of singletons $\{g_n\}$ for even $n$. A superset of $\bigcup F$ pinned
+    down by $\{0,\ldots,N\}$ contains, with any $g_m$ for $m\ge N$, every arrow agreeing with it on
+    $\{0,\ldots,N\}$, so the least one is $\bigcup F\cup\{1_{\mathbb N}\}\cup\{g_m : m\ge N\}$,
+    which strictly shrinks as $N$ grows.
+
+arguments:
+
+# Rewritten at Cian Dorr's direction on 2 October 2026 (Claude Opus 5.5): every argument this
+# record shared in substance with another member is now a shared argument of the group
+# finite-support-one-object, with this record's witness under `meets`; second arguments for a
+# verdict already argued (the trawl's, among them) were dropped. What follows is this record's own.
+# Only the verdicts the engine needs to derive the rest are recorded, the source's first. Lead-ins
+# naming the verdict, and attribution sentences, are dropped from the texts, their content being in
+# holds, fails, by and date.
+
+- id: actuality
+  fails: [actuality]
+  source: {paper: bacon-dorr-classicism, locator: 'Proposition D.5(6), p. 78'}
+  text: >-
+    The strongest true proposition pinned down by $\{0,\ldots,n\}$ is
+    $\{1_{\mathbb N}\}\cup\{g_m:m\ge n\}$, ever stronger as $n$ grows.
+
+- holds: [distinctness-preserving-collapse]
+  by: Claude Fable 5.1 (Anthropic)
+  date: '2026-09-23'
+  text: >-
+    For a true proposition $p$ pinned down by a finite set take as the witness $q$ the strongest
+    true proposition pinned down by $\{0,\ldots,N\}$ for $N$ beyond the pinning set of $p$,
+    namely $\{1_{\mathbb N}\}\cup\{g_m:m\ge N\}$. Under $g_n$ the only arrows reachable are
+    $g_m$ with $m\le n$, so $\Diamond q$ holds at $g_n$ only if $n\ge N$, and then $g_n$ agrees
+    with the identity on the pinning set of $p$ and is in $p$.
+
+notes: >-
+  The cited construction is a model of the map’s relational-type framework. The description
+  identifies its evaluation point; construction and verification are given at the PDF locations in
+  References. Everything that implies these fails with them. Even the universal property has no
+  inextensible coextension, since $\operatorname{Inextensible}(\top_{et})$ unfolds to $\Box$BF at
+  type $e$.
+
+was_conjectured: true
+# The old `changes` log, verbatim and frozen.
+history:
+- date: '2026-09-17'
+  by: OpenAI Codex (GPT-6)
+  summary: Adopted the source’s relational type system at the user’s request. The cited construction now
+    directly supplies the recorded model; the former type-extension obligation is removed.
+  satisfies:
+  - atomicity-r
+  - no-pure-contingency-r
+  - necessary-atomicity-r
+  violates:
+  - distinctness-necessary-r
+  - actuality
+  - barcan-r
+  - boolean-completeness-r
+  - rigid-comprehension-r
+- date: '2026-09-20'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Added both Axioms of Infinity at Cian Dorr's direction. The individuals are the natural numbers
+    and identity at the evaluation arrow is literal, so no numeral counts them. The propositions that
+    a given individual is fixed by the arrow, one for each individual, are pairwise distinct and each
+    has that individual as finite support, so there are infinitely many propositions. The set of numerals
+    at each type is invariant under every arrow, hence has empty support and lies in the domain, so finite
+    cardinality is standard and no finite cardinality holds of the universal property at either type.
+  satisfies:
+  - axiom-of-infinity-e
+  - axiom-of-infinity-t
+- date: '2026-09-22'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Fixed an interpretation of Σ (relational constants as top, individual constants as one fixed
+    individual) and recorded the signature schemata it refutes, at Cian Dorr’s request.
+  violates:
+  - witnessed-possibility-r
+  - separated-structure-r
+  - independence-signature-r
+  - distinctness-signature-r
+- date: '2026-09-23'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Expanded the description from Appendix D, naming Proposition D.5 and its part; added the failure
+    of Countable Boolean Completeness at type e→t; settled the Distinctness-preserving collapse.
+  satisfies:
+  - distinctness-preserving-collapse
+  violates:
+  - countable-boolean-completeness-r
+- date: '2026-09-23'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Added the failure of Boolean Completeness at type t, by the family of even truncation singletons;
+    see the notes.
+  violates:
+  - boolean-completeness-t
+- date: '2026-09-23'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: 'Added Relational Choice and its necessitation at Cian Dorr’s direction: ideally full models
+    are extensionally full at every object, and choice in the metatheory supplies the functional subrelation;
+    see the notes.'
+  satisfies:
+  - relational-choice-r
+  - necessary-relational-choice-r
+- date: '2026-09-25'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: 'Added Transversal Choice, by the argument recorded for Relational Choice: the model is extensionally
+    full at every object, so for an equivalence relation at the evaluation point a transversal of its
+    extension there, chosen in the metatheory, is the extension of an element pinned down by the empty
+    set; the equivalence and transversal conditions are unboxed. Recorded on a question of Zachary Goodsell,
+    after an observation of Christopher Sun.'
+  satisfies:
+  - transversal-choice-r
+- date: '2026-09-25'
+  by: OpenAI Codex (GPT-6)
+  summary: 'Confirmed the trawl''s Strong Leibniz-t failure: an admitted nonidentity-idempotent singleton
+    shifts to a set containing both the identity and the idempotent, which a target-domain proposition
+    separates. Quantifiers inside the box range over the entire target domain. The boxed failure follows
+    by T.'
+  violates:
+  - strong-leibniz-t
+- date: '2026-09-23'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Recorded the failure of Inextensible Comprehension at type e→t for the property of being even,
+    sharpening the failure of Actuality; argument in the notes.
+  violates:
+  - inextensible-comprehension-r
+- date: '2026-09-23'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Recorded the failure of BF at type t, sharpening the failure of BF; argument in the notes.
+  violates:
+  - barcan-t
+- date: '2026-09-23'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Recorded the failure of the type-t Strong Leibniz Biconditionals, which come apart from Atomicity
+    here; see the notes.
+  violates:
+  - strong-leibniz-t
+- date: '2026-09-25'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Added the failure of Strong Leibniz Biconditionals (type t), of BF (type t) and of Inextensible
+    Comprehension, with the arguments in the notes.
+  violates:
+  - strong-leibniz-t
+  - barcan-t
+  - inextensible-comprehension-r
+- date: '2026-09-25'
+  by: Claude Opus 5.5 (Anthropic)
+  summary: 'Merged the two sets of arguments recorded on 23 and 25 September into one: BF (type t) now
+    follows from Atomicity and the failure of the type-t Strong Leibniz Biconditionals, with the direct
+    counterexample of 25 September; the Inextensible Comprehension argument already refutes the weak form.'
+  violates:
+  - weakly-inextensible-comprehension-r
+- date: '2026-09-27'
+  by: Claude Opus 5.5 (Anthropic), at Cian Dorr's request
+  summary: Recorded the failure of Vicinity; argument in the notes.
+  violates:
+  - vicinity
+
+# The model in Lean, and its verdicts proved there (Classicism/MapModels.lean); statuses are written by
+# lean-check --update. The verdicts the map's general arguments give it are certified from the
+# arguments' (MapDerived.lean), with the proofs under `meets` that it meets their conditions.
+lean:
+  param: Classicism.Meta.Intensional.Monoids.truncs
+  verdicts:
+  - fails: actuality
+    ref: Classicism.Map.Models.finite_support_truncations.actuality
+    status: verified
+  - fails: boolean-completeness-r
+    ref: Classicism.Map.Models.finite_support_truncations.boolean_completeness_r
+    status: verified

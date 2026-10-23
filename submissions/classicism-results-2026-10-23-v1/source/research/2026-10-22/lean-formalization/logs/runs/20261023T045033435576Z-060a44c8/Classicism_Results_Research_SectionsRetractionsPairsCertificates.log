@@ -1,0 +1,34 @@
+Classicism.Research.Splitting.decodePair_code: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.invalid_bottom: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.Splitting.mixPair_false: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.mixPair_true: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.mix_false: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.mix_true: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.pairCode_components: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.Splitting.pairCode_nonzero: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.Splitting.pin_injective: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.Splitting.pin_nonzero: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.Splitting.projectPair_actual: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.projectPair_coext: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.slotsPair_false: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.slotsPair_true: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+#classicism_audit Classicism.Results.Research.SectionsRetractionsPairs: 14/14 theorems pass; 14 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.SectionsRetractionsPairs: 14/14 inside R
+Classicism.Results.Research.SectionsRetractionsPairs: 14 of 14 theorems derived
+
+[1/14] Classicism.Research.Splitting.decodePair_code ✓ 26 ms
+[2/14] Classicism.Research.Splitting.invalid_bottom ✓ 29 ms
+[3/14] Classicism.Research.Splitting.mixPair_false ✓ 22 ms
+[4/14] Classicism.Research.Splitting.mixPair_true ✓ 21 ms
+[5/14] Classicism.Research.Splitting.mix_false ✓ 0 ms
+[6/14] Classicism.Research.Splitting.mix_true ✓ 0 ms
+[7/14] Classicism.Research.Splitting.pairCode_components ✓ 6 ms
+[8/14] Classicism.Research.Splitting.pairCode_nonzero ✓ 0 ms
+[9/14] Classicism.Research.Splitting.pin_injective ✓ 5 ms
+[10/14] Classicism.Research.Splitting.pin_nonzero ✓ 4 ms
+[11/14] Classicism.Research.Splitting.projectPair_actual ✓ 241 ms
+[12/14] Classicism.Research.Splitting.projectPair_coext ✓ 0 ms
+[13/14] Classicism.Research.Splitting.slotsPair_false ✓ 20 ms
+[14/14] Classicism.Research.Splitting.slotsPair_true ✓ 20 ms
+'Classicism.Research.Splitting.projectPair_actual.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.Splitting.decodePair_code.derivable' depends on axioms: [propext, Quot.sound]

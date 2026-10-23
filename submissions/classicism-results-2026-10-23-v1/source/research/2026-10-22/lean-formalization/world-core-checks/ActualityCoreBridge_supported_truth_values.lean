@@ -1,0 +1,9 @@
+import Classicism.Results.Research.ActualityCoreBridge
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Translate
+
+#classicism_check Classicism.Research.ActualityCore.supported_truth_values
+#classicism_types Classicism.Research.ActualityCore.supported_truth_values
+#classicism_derive Classicism.Research.ActualityCore.supported_truth_values
+#print axioms Classicism.Research.ActualityCore.supported_truth_values.derivable

@@ -1,0 +1,93 @@
+{
+  "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "modules": [
+    "research/2026-10-22/lean-formalization/StrongPossibilityConsequencesAlgebra.lean",
+    "research/2026-10-22/lean-formalization/StrongPossibilityConsequencesComputability.lean"
+  ],
+  "complete": false,
+  "checked": [
+    {
+      "module": "StrongPossibilityConsequencesAlgebra",
+      "seconds": 4.86,
+      "exit_code": 0,
+      "fingerprint": "a78a427965733d44e4fdca43a475d108c56c7e43738f4afecb36a62baec70fdc",
+      "log": "logs/runs/20261023T040940460714Z/StrongPossibilityConsequencesAlgebra.log"
+    },
+    {
+      "module": "Mathlib.Computability.Primrec.Basic",
+      "seconds": 0.24,
+      "exit_code": 1,
+      "fingerprint": "89dbaf576d223d194f99322e7e3812e098796e5901c6bdc68f09a5938b935862",
+      "log": "logs/runs/20261023T040940460714Z/Mathlib_Computability_Primrec_Basic.log"
+    },
+    {
+      "module": "Mathlib.Logic.Equiv.Multiset",
+      "seconds": 0.15,
+      "exit_code": 1,
+      "fingerprint": "7afbc8f45af5518cfb3ea98828d767896cadbfcea232876b133dca4cef17d466",
+      "log": "logs/runs/20261023T040940460714Z/Mathlib_Logic_Equiv_Multiset.log"
+    },
+    {
+      "module": "Mathlib.Logic.Equiv.Finset",
+      "skipped": "dependency failed",
+      "exit_code": 125,
+      "fingerprint": "88e478bfe822d1a57ee318ed03e134b2a2b634175cb0923010e80da8b2b92004"
+    },
+    {
+      "module": "Mathlib.Logic.Encodable.Pi",
+      "skipped": "dependency failed",
+      "exit_code": 125,
+      "fingerprint": "c3c4c03e9fcc682576ef84507b4114c53c697d7a2fcaa72e39bd7f0c4542ba2f"
+    },
+    {
+      "module": "Mathlib.Computability.Primrec.List",
+      "skipped": "dependency failed",
+      "exit_code": 125,
+      "fingerprint": "b81031f90e75c7baac7c63fc5d25b5499fe36cb70c4135b86449dc7b036b3de7"
+    },
+    {
+      "module": "Mathlib.Data.Nat.PSub",
+      "seconds": 0.14,
+      "exit_code": 1,
+      "fingerprint": "821a278c95acae0d47068b10d62b9d09e303c51c4930930008228fa9c527b901",
+      "log": "logs/runs/20261023T040940460714Z/Mathlib_Data_Nat_PSub.log"
+    },
+    {
+      "module": "Mathlib.Data.Rel",
+      "seconds": 0.14,
+      "exit_code": 1,
+      "fingerprint": "5f7a6625770271ed4d4c7b13feff436dbdbede62a1ba9713e815e5e7944da410",
+      "log": "logs/runs/20261023T040940460714Z/Mathlib_Data_Rel.log"
+    },
+    {
+      "module": "Mathlib.Data.PFun",
+      "skipped": "dependency failed",
+      "exit_code": 125,
+      "fingerprint": "caa9299146ab7ab40bd4008908078859c40a7d1dd64493890359434103259152"
+    },
+    {
+      "module": "Mathlib.Computability.Partrec",
+      "skipped": "dependency failed",
+      "exit_code": 125,
+      "fingerprint": "05dacede402da89376416fa3ad6745427b325def834524e607d01eb9353bbde5"
+    },
+    {
+      "module": "Mathlib.Computability.PartrecCode",
+      "skipped": "dependency failed",
+      "exit_code": 125,
+      "fingerprint": "2afe554bbfbacea831c0292767699d1883e5f9266a80c4c64cceb42b032efce4"
+    },
+    {
+      "module": "Mathlib.Computability.RE",
+      "skipped": "dependency failed",
+      "exit_code": 125,
+      "fingerprint": "758d539713eac7ad3cf402a6ef092f2bd1ef482f6ed8465c7028b8ed26ba7639"
+    },
+    {
+      "module": "StrongPossibilityConsequencesComputability",
+      "skipped": "dependency failed",
+      "exit_code": 125,
+      "fingerprint": "c85fcb74b70be1fd3d97e93f48ec7c153ec03704246d39e71881577ed2cac227"
+    }
+  ]
+}

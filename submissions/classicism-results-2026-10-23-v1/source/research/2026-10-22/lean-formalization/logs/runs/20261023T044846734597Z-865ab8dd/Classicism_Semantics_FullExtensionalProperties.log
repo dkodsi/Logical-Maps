@@ -1,0 +1,397 @@
+Classicism/Semantics/FullExtensionalProperties.lean:132:8: warning: Variable name `X` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _X
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Classicism/Semantics/FullExtensionalProperties.lean:132:11: warning: Variable name `Y` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _Y
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Classicism/Semantics/FullExtensionalProperties.lean:138:69: error: Application type mismatch: The argument
+  Term.box p
+has type
+  Formula Sig []
+of sort `Type` but is expected to have type
+  Interp ?m.1
+of sort `Type 1` in the application
+  Sentence.holds (Term.box p)
+Classicism/Semantics/FullExtensionalProperties.lean:143:69: error: Application type mismatch: The argument
+  Term.dia p
+has type
+  Formula Sig []
+of sort `Type` but is expected to have type
+  Interp ?m.1
+of sort `Type 1` in the application
+  Sentence.holds (Term.dia p)
+Classicism/Semantics/FullExtensionalProperties.lean:152:19: error: Application type mismatch: The argument
+  Term.ofPure (P.Extensionality.quoted ρ)
+has type
+  Term ?m.2 [] (Ty.rel RTy.t)
+of sort `Type` but is expected to have type
+  Interp ?m.1
+of sort `Type 1` in the application
+  Sentence.holds (Term.ofPure (P.Extensionality.quoted ρ))
+Classicism/Semantics/FullExtensionalProperties.lean:154:13: warning: This simp argument is unused:
+  P.Extensionality.quoted
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Term.ofPure, Sentence.holds, Term.denote, Var.denote, imp_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalProperties.lean:154:38: warning: This simp argument is unused:
+  Term.ofPure
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [P.Extensionality.quoted, Sentence.holds, Term.denote, Var.denote, imp_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalProperties.lean:154:67: warning: This simp argument is unused:
+  Term.denote
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [P.Extensionality.quoted, Term.ofPure, Sentence.holds, Var.denote, imp_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalProperties.lean:154:80: warning: This simp argument is unused:
+  Var.denote
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [P.Extensionality.quoted, Term.ofPure, Sentence.holds, Term.denote, imp_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalProperties.lean:154:92: warning: This simp argument is unused:
+  imp_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [P.Extensionality.quoted, Term.ofPure, Sentence.holds, Term.denote, Var.denote]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalProperties.lean:158:19: error: Application type mismatch: The argument
+  Term.ofPure (P.Atomicity.quoted ρ)
+has type
+  Term ?m.2 [] (Ty.rel RTy.t)
+of sort `Type` but is expected to have type
+  Interp ?m.1
+of sort `Type 1` in the application
+  Sentence.holds (Term.ofPure (P.Atomicity.quoted ρ))
+Classicism/Semantics/FullExtensionalProperties.lean:163:19: error: Application type mismatch: The argument
+  Term.ofPure (P.FunctionalChoice.quoted σ ρ)
+has type
+  Term ?m.2 [] (Ty.rel RTy.t)
+of sort `Type` but is expected to have type
+  Interp ?m.1
+of sort `Type 1` in the application
+  Sentence.holds (Term.ofPure (P.FunctionalChoice.quoted σ ρ))
+Classicism/Semantics/FullExtensionalProperties.lean:166:8: error: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce
+
+Sig : Signature
+I : Interp Sig
+σ : Ty
+ρ : RTy
+⊢ Term.denote sorry sorry Env.nil
+Classicism/Semantics/FullExtensionalProperties.lean:165:13: warning: This simp argument is unused:
+  P.FunctionalChoice.quoted
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Term.ofPure, Sentence.holds, Term.denote, Var.denote, imp_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalProperties.lean:165:40: warning: This simp argument is unused:
+  Term.ofPure
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [P.FunctionalChoice.quoted, Sentence.holds, Term.denote, Var.denote, imp_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalProperties.lean:165:69: warning: This simp argument is unused:
+  Term.denote
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [P.FunctionalChoice.quoted, Term.ofPure, Sentence.holds, Var.denote, imp_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalProperties.lean:165:82: warning: This simp argument is unused:
+  Var.denote
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [P.FunctionalChoice.quoted, Term.ofPure, Sentence.holds, Term.denote, imp_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalProperties.lean:165:94: warning: This simp argument is unused:
+  imp_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [P.FunctionalChoice.quoted, Term.ofPure, Sentence.holds, Term.denote, Var.denote]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalProperties.lean:170:19: error: Application type mismatch: The argument
+  Term.ofPure (P.NecessityOfDistinctness.quoted σ)
+has type
+  Term ?m.2 [] (Ty.rel RTy.t)
+of sort `Type` but is expected to have type
+  Interp ?m.1
+of sort `Type 1` in the application
+  Sentence.holds (Term.ofPure (P.NecessityOfDistinctness.quoted σ))
+Classicism/Semantics/FullExtensionalProperties.lean:173:8: error: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce
+
+Sig : Signature
+I : Interp Sig
+σ : Ty
+⊢ Term.denote sorry sorry Env.nil
+Classicism/Semantics/FullExtensionalProperties.lean:171:13: warning: This simp argument is unused:
+  P.NecessityOfDistinctness.quoted
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Term.ofPure, Sentence.holds, Term.denote, Var.denote, top_eq, imp_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalProperties.lean:171:47: warning: This simp argument is unused:
+  Term.ofPure
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [P.NecessityOfDistinctness.quoted, Sentence.holds, Term.denote, Var.denote, top_eq, imp_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalProperties.lean:172:4: warning: This simp argument is unused:
+  Term.denote
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [P.NecessityOfDistinctness.quoted, Term.ofPure, Sentence.holds, Var.denote, top_eq, imp_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalProperties.lean:172:17: warning: This simp argument is unused:
+  Var.denote
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [P.NecessityOfDistinctness.quoted, Term.ofPure, Sentence.holds, Term.denote, top_eq, imp_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalProperties.lean:172:29: warning: This simp argument is unused:
+  top_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [P.NecessityOfDistinctness.quoted, Term.ofPure, Sentence.holds, Term.denote, Var.denote, imp_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalProperties.lean:172:37: warning: This simp argument is unused:
+  imp_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [P.NecessityOfDistinctness.quoted, Term.ofPure, Sentence.holds, Term.denote, Var.denote, top_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalProperties.lean:177:19: error: Application type mismatch: The argument
+  Term.ofPure (P.NecFunctionalChoice.quoted σ ρ)
+has type
+  Term ?m.2 [] (Ty.rel RTy.t)
+of sort `Type` but is expected to have type
+  Interp ?m.1
+of sort `Type 1` in the application
+  Sentence.holds (Term.ofPure (P.NecFunctionalChoice.quoted σ ρ))
+Classicism/Semantics/FullExtensionalProperties.lean:178:24: error: Application type mismatch: The argument
+  (Term.ofPure (P.FunctionalChoice.quoted σ ρ)).box
+has type
+  Formula ?m.10 []
+of sort `Type` but is expected to have type
+  Interp ?m.7
+of sort `Type 1` in the application
+  Sentence.holds (Term.ofPure (P.FunctionalChoice.quoted σ ρ)).box
+Classicism/Semantics/FullExtensionalProperties.lean:179:9: error(lean.unknownIdentifier): Unknown identifier `box_iff`
+Classicism/Semantics/FullExtensionalProperties.lean:182:19: error: Application type mismatch: The argument
+  Term.ofPure (P.NecNecessityOfDistinctness.quoted σ)
+has type
+  Term ?m.2 [] (Ty.rel RTy.t)
+of sort `Type` but is expected to have type
+  Interp ?m.1
+of sort `Type 1` in the application
+  Sentence.holds (Term.ofPure (P.NecNecessityOfDistinctness.quoted σ))
+Classicism/Semantics/FullExtensionalProperties.lean:183:24: error: Application type mismatch: The argument
+  (Term.ofPure (P.NecessityOfDistinctness.quoted σ)).box
+has type
+  Formula ?m.10 []
+of sort `Type` but is expected to have type
+  Interp ?m.7
+of sort `Type 1` in the application
+  Sentence.holds (Term.ofPure (P.NecessityOfDistinctness.quoted σ)).box
+Classicism/Semantics/FullExtensionalProperties.lean:184:9: error(lean.unknownIdentifier): Unknown identifier `box_iff`
+Classicism/Semantics/FullExtensionalProperties.lean:186:8: warning: declaration uses `sorry`
+Classicism/Semantics/FullExtensionalProperties.lean:188:2: warning: Unused tactic linter: `exact extensionality_quoted I ρ` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Classicism/Semantics/FullExtensionalProperties.lean:190:8: warning: declaration uses `sorry`
+Classicism/Semantics/FullExtensionalProperties.lean:192:2: warning: Unused tactic linter: `exact atomicity_quoted I ρ` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Classicism/Semantics/FullExtensionalProperties.lean:194:8: warning: declaration uses `sorry`
+Classicism/Semantics/FullExtensionalProperties.lean:196:2: warning: Unused tactic linter: `exact functionalChoice_quoted I σ ρ` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Classicism/Semantics/FullExtensionalProperties.lean:200:8: error(lean.unknownIdentifier): Unknown identifier `boxedFunctionalChoice_quoted`
+Classicism/Semantics/FullExtensionalProperties.lean:204:8: error(lean.unknownIdentifier): Unknown identifier `boxedDistinctness_quoted`
+Classicism/Semantics/FullExtensionalProperties.lean:207:19: error: Application type mismatch: The argument
+  Term.ofPure (P.IntensionalChoice.quoted σ)
+has type
+  Term ?m.2 [] (Ty.rel RTy.t)
+of sort `Type` but is expected to have type
+  Interp ?m.1
+of sort `Type 1` in the application
+  Sentence.holds (Term.ofPure (P.IntensionalChoice.quoted σ))
+Classicism/Semantics/FullExtensionalProperties.lean:210:8: error: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce
+
+Sig : Signature
+I : Interp Sig
+σ : Ty
+⊢ Term.denote sorry sorry Env.nil
+Classicism/Semantics/FullExtensionalProperties.lean:208:13: warning: This simp argument is unused:
+  P.IntensionalChoice.quoted
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Term.ofPure, Sentence.holds, Term.denote, Var.denote, top_eq, imp_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalProperties.lean:208:41: warning: This simp argument is unused:
+  Term.ofPure
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [P.IntensionalChoice.quoted, Sentence.holds, Term.denote, Var.denote, top_eq, imp_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalProperties.lean:209:4: warning: This simp argument is unused:
+  Term.denote
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [P.IntensionalChoice.quoted, Term.ofPure, Sentence.holds, Var.denote, top_eq, imp_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalProperties.lean:209:17: warning: This simp argument is unused:
+  Var.denote
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [P.IntensionalChoice.quoted, Term.ofPure, Sentence.holds, Term.denote, top_eq, imp_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalProperties.lean:209:29: warning: This simp argument is unused:
+  top_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [P.IntensionalChoice.quoted, Term.ofPure, Sentence.holds, Term.denote, Var.denote, imp_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalProperties.lean:209:37: warning: This simp argument is unused:
+  imp_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [P.IntensionalChoice.quoted, Term.ofPure, Sentence.holds, Term.denote, Var.denote, top_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalProperties.lean:219:8: warning: declaration uses `sorry`
+Classicism/Semantics/FullExtensionalProperties.lean:221:2: warning: Unused tactic linter: `exact intensionalChoice_quoted I σ` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Classicism/Semantics/FullExtensionalProperties.lean:224:19: error: Application type mismatch: The argument
+  Term.ofPure P.DistinctnessPreservingCollapse.quoted
+has type
+  Term ?m.2 [] (Ty.rel RTy.t)
+of sort `Type` but is expected to have type
+  Interp ?m.1
+of sort `Type 1` in the application
+  Sentence.holds (Term.ofPure P.DistinctnessPreservingCollapse.quoted)
+Classicism/Semantics/FullExtensionalProperties.lean:227:8: error: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce
+
+Sig : Signature
+I : Interp Sig
+⊢ Term.denote sorry sorry Env.nil
+Classicism/Semantics/FullExtensionalProperties.lean:225:13: warning: This simp argument is unused:
+  P.DistinctnessPreservingCollapse.quoted
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Term.ofPure, Sentence.holds, Term.denote, Var.denote, top_eq, bot_eq, imp_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalProperties.lean:225:54: warning: This simp argument is unused:
+  Term.ofPure
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [P.DistinctnessPreservingCollapse.quoted, Sentence.holds, Term.denote, Var.denote, top_eq, bot_eq,
+    imp_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalProperties.lean:226:4: warning: This simp argument is unused:
+  Term.denote
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [P.DistinctnessPreservingCollapse.quoted, Term.ofPure, Sentence.holds, Var.denote, top_eq, bot_eq,
+    imp_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalProperties.lean:226:17: warning: This simp argument is unused:
+  Var.denote
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [P.DistinctnessPreservingCollapse.quoted, Term.ofPure, Sentence.holds, Term.denote, top_eq, bot_eq,
+    imp_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalProperties.lean:226:29: warning: This simp argument is unused:
+  top_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [P.DistinctnessPreservingCollapse.quoted, Term.ofPure, Sentence.holds, Term.denote, Var.denote,
+    bot_eq, imp_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalProperties.lean:226:37: warning: This simp argument is unused:
+  bot_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [P.DistinctnessPreservingCollapse.quoted, Term.ofPure, Sentence.holds, Term.denote, Var.denote,
+    top_eq, imp_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalProperties.lean:226:45: warning: This simp argument is unused:
+  imp_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [P.DistinctnessPreservingCollapse.quoted, Term.ofPure, Sentence.holds, Term.denote, Var.denote,
+    top_eq, bot_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalProperties.lean:232:8: warning: declaration uses `sorry`
+Classicism/Semantics/FullExtensionalProperties.lean:235:2: warning: Unused tactic linter: `exact distinctnessPreservingCollapse_quoted I` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Classicism/Semantics/FullExtensionalProperties.lean:240:38: error: Application type mismatch: The argument
+  Term.box p
+has type
+  Formula Sig []
+of sort `Type` but is expected to have type
+  Interp ?m.31
+of sort `Type 1` in the application
+  Sentence.holds (Term.box p)
+Classicism/Semantics/FullExtensionalProperties.lean:246:27: error: Application type mismatch: The argument
+  Term.dia (Term.atConsts cs P)
+has type
+  Formula Sig []
+of sort `Type` but is expected to have type
+  Interp ?m.58
+of sort `Type 1` in the application
+  Sentence.holds (Term.dia (Term.atConsts cs P))
+Classicism/Semantics/FullExtensionalProperties.lean:246:78: error: Application type mismatch: The argument
+  Term.dia (Term.atConsts ds Q)
+has type
+  Formula Sig []
+of sort `Type` but is expected to have type
+  Interp ?m.62
+of sort `Type 1` in the application
+  Sentence.holds (Term.dia (Term.atConsts ds Q))
+Classicism/Semantics/FullExtensionalProperties.lean:247:19: error: Application type mismatch: The argument
+  Term.dia (Term.conj (Term.atConsts cs P) (Term.atConsts ds Q))
+has type
+  Formula Sig []
+of sort `Type` but is expected to have type
+  Interp ?m.66
+of sort `Type 1` in the application
+  Sentence.holds (Term.dia (Term.conj (Term.atConsts cs P) (Term.atConsts ds Q)))

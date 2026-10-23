@@ -1,0 +1,14 @@
+import Classicism.Results.Research.SectionsRetractionsInvolutionsCertificates
+import Classicism.Results.Research.SectionsRetractionsRelationalMasksCertificates
+import Classicism.Results.Research.SectionsRetractionsIdempotence
+
+#classicism_audit Classicism.Results.Research.SectionsRetractionsIdempotence
+#classicism_types_audit Classicism.Results.Research.SectionsRetractionsIdempotence
+set_option maxHeartbeats 0 in
+#classicism_derive_audit Classicism.Results.Research.SectionsRetractionsIdempotence
+#classicism_schema Classicism.Research.Splitting.IdempotencePersists
+#classicism_certify Classicism.Research.Splitting.relational_barcan_idempotence
+  Classicism.Research.Splitting.idempotence_relational_barcan
+#classicism_entails Classicism.Research.Splitting.relational_barcan_idempotence
+  Classicism.Research.Splitting.idempotence_relational_barcan
+#check Classicism.Research.Splitting.idempotence_relational_barcan.listEntails

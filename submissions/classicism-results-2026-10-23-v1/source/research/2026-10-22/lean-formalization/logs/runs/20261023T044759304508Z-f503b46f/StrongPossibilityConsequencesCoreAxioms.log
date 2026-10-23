@@ -1,0 +1,150 @@
+Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.cell_closedTypes
+  {Sig : Classicism.Meta.Signature} :
+  Classicism.Meta.Term.closedTypes (Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.cell Sig) =
+    true
+'Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.cell_closedTypes' does not depend on any axioms
+Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.atom_closedTypes {Sig : Classicism.Meta.Signature}
+  {w : Classicism.Meta.Sentence Sig} (hw : Classicism.Meta.Term.closedTypes w = true) :
+  Classicism.Meta.Term.closedTypes (Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.atom w) = true
+'Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.atom_closedTypes' depends on axioms: [propext]
+Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.cell_holds {Sig : Classicism.Meta.Signature}
+  (b : Prop) :
+  Classicism.Meta.Sentence.holds (Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.singleton Sig b)
+    (Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.cell Sig)
+'Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.cell_holds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.top_denote {Sig : Classicism.Meta.Signature}
+  {Γ : Classicism.Meta.Ctx} (I : Classicism.Meta.Interp Sig) (env : Classicism.Meta.Env I.D Γ) :
+  Classicism.Meta.Term.denote I Classicism.Meta.Term.top env = True
+'Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.top_denote' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.topR_denote {Sig : Classicism.Meta.Signature}
+  {Γ : Classicism.Meta.Ctx} (I : Classicism.Meta.Interp Sig) (env : Classicism.Meta.Env I.D Γ)
+  (ρ : Classicism.Meta.RTy) :
+  Classicism.Meta.Term.denote I (Classicism.Meta.Term.topR ρ) env = Classicism.Meta.RTy.constD I.D ρ True
+'Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.topR_denote' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.constD_false_ne_true (D : Type) [Nonempty D]
+  (ρ : Classicism.Meta.RTy) : Classicism.Meta.RTy.constD D ρ False ≠ Classicism.Meta.RTy.constD D ρ True
+'Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.constD_false_ne_true' depends on axioms: [Classical.choice]
+Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.namedTop_closedTypes
+  {Sig : Classicism.Meta.Signature} (c : Sig.Const) {ρ : Classicism.Meta.RTy}
+  (h : Sig.typeOf c = Classicism.Meta.Ty.rel ρ) (hρ : ρ.Closed) :
+  Classicism.Meta.Term.closedTypes
+      (Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.namedTop c h) =
+    true
+'Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.namedTop_closedTypes' depends on axioms: [propext]
+Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.named_denote {Sig : Classicism.Meta.Signature}
+  (b : Prop) (c : Sig.Const) {ρ : Classicism.Meta.RTy} (h : Sig.typeOf c = Classicism.Meta.Ty.rel ρ) :
+  Classicism.Meta.Term.denote (Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.singleton Sig b)
+      (h ▸ Classicism.Meta.Term.const c) Classicism.Meta.Env.nil =
+    Classicism.Meta.RTy.constD Unit ρ b
+'Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.named_denote' does not depend on any axioms
+Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.namedTop_holds {Sig : Classicism.Meta.Signature}
+  (c : Sig.Const) {ρ : Classicism.Meta.RTy} (h : Sig.typeOf c = Classicism.Meta.Ty.rel ρ) :
+  Classicism.Meta.Sentence.holds
+    (Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.singleton Sig True)
+    (Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.namedTop c h)
+'Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.namedTop_holds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.namedTop_fails {Sig : Classicism.Meta.Signature}
+  (c : Sig.Const) {ρ : Classicism.Meta.RTy} (h : Sig.typeOf c = Classicism.Meta.Ty.rel ρ) :
+  ¬Classicism.Meta.Sentence.holds
+      (Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.singleton Sig False)
+      (Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.namedTop c h)
+'Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.namedTop_fails' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.positive_cell_consistent
+  {Sig : Classicism.Meta.Signature} (c : Sig.Const) {ρ : Classicism.Meta.RTy}
+  (h : Sig.typeOf c = Classicism.Meta.Ty.rel ρ) :
+  (Classicism.Meta.AxiomSet.single
+      (Classicism.Meta.Term.conj (Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.cell Sig)
+        (Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.namedTop c h))).Consistent
+'Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.positive_cell_consistent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.negative_cell_consistent
+  {Sig : Classicism.Meta.Signature} (c : Sig.Const) {ρ : Classicism.Meta.RTy}
+  (h : Sig.typeOf c = Classicism.Meta.Ty.rel ρ) :
+  (Classicism.Meta.AxiomSet.single
+      (Classicism.Meta.Term.conj (Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.cell Sig)
+        (Classicism.Meta.Term.neg
+          (Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.namedTop c h)))).Consistent
+'Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.negative_cell_consistent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.maximalist_not_atom_cell_at
+  {Sig : Classicism.Meta.Signature} (c : Sig.Const) {ρ : Classicism.Meta.RTy}
+  (h : Sig.typeOf c = Classicism.Meta.Ty.rel ρ) (hρ : ρ.Closed) :
+  Classicism.Meta.Theorem (Classicism.Meta.C.axioms ∪ Classicism.Meta.AxiomSet.maximalist)
+    (Classicism.Meta.Term.neg
+      (Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.atom
+        (Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.cell Sig)))
+'Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.maximalist_not_atom_cell_at' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.maximalist_not_atom_cell
+  {Sig : Classicism.Meta.Signature} (hS : Sig.Admitted) :
+  Classicism.Meta.Theorem (Classicism.Meta.C.axioms ∪ Classicism.Meta.AxiomSet.maximalist)
+    (Classicism.Meta.Term.neg
+      (Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.atom
+        (Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.cell Sig)))
+'Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.maximalist_not_atom_cell' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.maximalist_add_atom_inconsistent
+  {Sig : Classicism.Meta.Signature} (hS : Sig.Admitted) :
+  ¬(Classicism.Meta.AxiomSet.maximalist ∪
+        Classicism.Meta.AxiomSet.single
+          (Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.atom
+            (Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.cell Sig))).Consistent
+'Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.maximalist_add_atom_inconsistent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Classicism.Research.StrongPossibilityConsequences.Conservativity.reflected_neg_box (p : Prop) : (◇p → p) → ¬p → □¬p
+'Classicism.Research.StrongPossibilityConsequences.Conservativity.reflected_neg_box' depends on axioms: [propext,
+ Classicism.em]
+Classicism.Research.StrongPossibilityConsequences.Conservativity.reflected_neg_box.derivable :
+  Classicism.Meta.Theorem Classicism.Meta.C.axiomsMinus
+    (Classicism.Meta.Term.forall'
+      (Classicism.Meta.Term.imp
+        (Classicism.Meta.Term.imp (Classicism.Meta.Term.var Classicism.Meta.Var.zero).dia
+          (Classicism.Meta.Term.var Classicism.Meta.Var.zero))
+        (Classicism.Meta.Term.imp (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg
+          (Classicism.Meta.Term.box (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg))))
+'Classicism.Research.StrongPossibilityConsequences.Conservativity.reflected_neg_box.derivable' depends on axioms: [propext,
+ Quot.sound]
+Classicism.Meta.Research.StrongPossibilityConsequences.MaxConservativity.conjunction_closed
+  {Sig : Classicism.Meta.Signature} (L : List (Classicism.Meta.Sentence Sig)) :
+  (∀ (a : Classicism.Meta.Sentence Sig), a ∈ L → Classicism.Meta.Term.closedTypes a = true) →
+    Classicism.Meta.Term.closedTypes (Classicism.Meta.Research.StrongPossibilityConsequences.Reflection.conjunction L) =
+      true
+'Classicism.Meta.Research.StrongPossibilityConsequences.MaxConservativity.conjunction_closed' depends on axioms: [propext]
+Classicism.Meta.Research.StrongPossibilityConsequences.MaxConservativity.identity_conservative_of_max_consistent
+  {Sig : Classicism.Meta.Signature} {Ax : Classicism.Meta.AxiomSet Sig}
+  (hcon : (Classicism.Meta.AxiomSet.maximalist ∪ Ax).Consistent) :
+  Classicism.Meta.Research.StrongPossibilityConsequences.MaxConservativity.IdentityConservative Ax
+'Classicism.Meta.Research.StrongPossibilityConsequences.MaxConservativity.identity_conservative_of_max_consistent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Classicism.Meta.Research.StrongPossibilityConsequences.MaxConservativity.max_consistent_of_identity_conservative
+  {Sig : Classicism.Meta.Signature} (hM : Classicism.Meta.AxiomSet.maximalist.Consistent)
+  {Ax : Classicism.Meta.AxiomSet Sig}
+  (hconserv : Classicism.Meta.Research.StrongPossibilityConsequences.MaxConservativity.IdentityConservative Ax) :
+  (Classicism.Meta.AxiomSet.maximalist ∪ Ax).Consistent
+'Classicism.Meta.Research.StrongPossibilityConsequences.MaxConservativity.max_consistent_of_identity_conservative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Classicism.Meta.Research.StrongPossibilityConsequences.MaxConservativity.identity_conservative_iff_max_consistent
+  {Sig : Classicism.Meta.Signature} (hM : Classicism.Meta.AxiomSet.maximalist.Consistent)
+  (Ax : Classicism.Meta.AxiomSet Sig) :
+  Classicism.Meta.Research.StrongPossibilityConsequences.MaxConservativity.IdentityConservative Ax ↔
+    (Classicism.Meta.AxiomSet.maximalist ∪ Ax).Consistent
+'Classicism.Meta.Research.StrongPossibilityConsequences.MaxConservativity.identity_conservative_iff_max_consistent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

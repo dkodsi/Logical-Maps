@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "run_id": "20261023T050137522026Z-a9748f2c",
+  "modules": [
+    "Classicism.Semantics.Research.CentralSupportedProductChoice"
+  ],
+  "cache": "/private/tmp/classicism-lean-cert-cache",
+  "state": "failed",
+  "complete": false,
+  "checked": [],
+  "error": "RuntimeError: Unavailable external dependency; no fetch attempted: Mathlib.Algebra.FreeMonoid.Basic, Mathlib.Tactic.DeriveEncodable",
+  "exit_code": 1
+}

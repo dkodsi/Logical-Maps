@@ -1,0 +1,133 @@
+{
+  "lane": "strong_possibility_universal_disjunction",
+  "updated_at_utc": "2026-10-23T04:51:26.389656+00:00",
+  "state": "checked_main_target",
+  "checked_target": [
+    "StrongPossibilityConsequencesUniversalCore",
+    "StrongPossibilityConsequencesDisjunction"
+  ],
+  "manifest": "research/2026-10-22/lean-formalization/sp-universal-verification/checks/20261023T044336274999Z-6b5c1cb4.json",
+  "additional_manifest": "research/2026-10-22/lean-formalization/sp-universal-verification/checks/20261023T043010003441Z-33fa960f.json",
+  "principal_declarations": {
+    "StrongPossibilityConsequencesUniversalCore": [
+      "Classicism.Meta.Research.StrongPossibilityConsequences.UniversalCore.Matrix.decides",
+      "Classicism.Meta.Research.StrongPossibilityConsequences.UniversalCore.Universal.reflects",
+      "Classicism.Meta.Research.StrongPossibilityConsequences.UniversalCore.fixedCore_equiv",
+      "Classicism.Meta.Research.StrongPossibilityConsequences.UniversalCore.fixedCore_closed",
+      "Classicism.Meta.Research.StrongPossibilityConsequences.UniversalCore.sp_entails_universal_core",
+      "Classicism.Meta.Research.StrongPossibilityConsequences.UniversalCore.universal_core_entails_sp",
+      "Classicism.Meta.Research.StrongPossibilityConsequences.UniversalCore.sp_consistent_iff_universal_core"
+    ],
+    "StrongPossibilityConsequencesDisjunction": [
+      "Classicism.Meta.Research.StrongPossibilityConsequences.Disjunction.consistent_add_iff_not_neg",
+      "Classicism.Meta.Research.StrongPossibilityConsequences.Disjunction.restricted_disjunction_of_core_consistent",
+      "Classicism.Meta.Research.StrongPossibilityConsequences.Disjunction.core_consistent_of_restricted_disjunction",
+      "Classicism.Meta.Research.StrongPossibilityConsequences.Disjunction.core_consistent_iff_restricted_disjunction",
+      "Classicism.Meta.Research.StrongPossibilityConsequences.Disjunction.sp_consistent_iff_restricted_disjunction"
+    ]
+  },
+  "source_hashes": {
+    "StrongPossibilityConsequencesUniversalCore": "b986bf950f38d0b359c22c9cde1b0ab02dbb6b8b8f8db79ac41996671a566288",
+    "StrongPossibilityConsequencesDisjunction": "df4c167dd99accceb555f9a8aaa89d0a8b5e9beac6d86c1cdc8c4fbf20fa566e"
+  },
+  "fingerprints": {
+    "StrongPossibilityConsequencesUniversalCore": "5899be473914d817c9abe704c42e978307e4bf979fb3c81c165610cc6a0ecd25",
+    "StrongPossibilityConsequencesDisjunction": "938ab76bb19794e13ba94aa7f7c448dbe13430e2843141dfe82acace3007b23e"
+  },
+  "checks": {
+    "StrongPossibilityConsequencesUniversalCore": {
+      "source_sha256": "b986bf950f38d0b359c22c9cde1b0ab02dbb6b8b8f8db79ac41996671a566288",
+      "fingerprint": "5899be473914d817c9abe704c42e978307e4bf979fb3c81c165610cc6a0ecd25",
+      "axiom_log": "research/2026-10-22/lean-formalization/sp-universal-verification/logs/runs/20261023T043010003441Z-33fa960f/StrongPossibilityConsequencesUniversalCore.log",
+      "axiom_reports": {
+        "Classicism.Meta.Research.StrongPossibilityConsequences.UniversalCore.Matrix.decides": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.StrongPossibilityConsequences.UniversalCore.Universal.reflects": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.StrongPossibilityConsequences.UniversalCore.fixedCore_equiv": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.StrongPossibilityConsequences.UniversalCore.fixedCore_closed": [
+          "propext"
+        ],
+        "Classicism.Meta.Research.StrongPossibilityConsequences.UniversalCore.sp_entails_universal_core": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.StrongPossibilityConsequences.UniversalCore.universal_core_entails_sp": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.StrongPossibilityConsequences.UniversalCore.sp_consistent_iff_universal_core": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      "exit_code": 0
+    },
+    "StrongPossibilityConsequencesDisjunction": {
+      "source_sha256": "df4c167dd99accceb555f9a8aaa89d0a8b5e9beac6d86c1cdc8c4fbf20fa566e",
+      "fingerprint": "938ab76bb19794e13ba94aa7f7c448dbe13430e2843141dfe82acace3007b23e",
+      "axiom_log": "research/2026-10-22/lean-formalization/sp-universal-verification/logs/runs/20261023T044336274999Z-6b5c1cb4/StrongPossibilityConsequencesDisjunction.log",
+      "axiom_reports": {
+        "Classicism.Meta.Research.StrongPossibilityConsequences.Disjunction.consistent_add_iff_not_neg": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.StrongPossibilityConsequences.Disjunction.restricted_disjunction_of_core_consistent": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.StrongPossibilityConsequences.Disjunction.core_consistent_of_restricted_disjunction": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.StrongPossibilityConsequences.Disjunction.core_consistent_iff_restricted_disjunction": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.StrongPossibilityConsequences.Disjunction.sp_consistent_iff_restricted_disjunction": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "exit_code": 0
+    }
+  },
+  "all_snapshot_sources_current": true,
+  "snapshot_source_count": 69,
+  "next_target": null,
+  "source_edit_state": "Accepted owned modules frozen; no further edits planned.",
+  "exact_scope": {
+    "UniversalCore": "Actual C Derivable reflection for the finite universal/Boolean-identity grammar, over one fixed Sig; arbitrary typed terms may occur in identities. Exact SP/core entailments and consistency equivalence retain closedTypes on schema instances and require no Max/SP consistency assumption.",
+    "Disjunction": "Actual C deduction and finite-support criterion. Under the explicitly supplied Consistent(maximalist), consistency of the universal core and of SP is equivalent to the defined restricted finite disjunction property. The reverse restricted-property-to-core-consistency direction needs no extra consistency hypothesis. The global property is not proved."
+  },
+  "mathematical_gaps": [
+    "No proof of consistency of SP or the universal core.",
+    "No proof that Max globally satisfies the restricted disjunction property.",
+    "The separate genuine Max-model consistency certificate remains an input to the criterion.",
+    "No new model existence, arithmetic interpretation, or effective-degree classification is supplied."
+  ],
+  "prose_proof_links": [
+    "research/2026-10-22/notes/reflection-universal-core-20261022.md",
+    "research/2026-10-22/notes/sp-failed-disjunction-20261022.md#17-exact-normalization-to-a-strong-modal-disjunction-property",
+    "research/2026-10-22/lean-formalization/sp-verification/proof-summary.md"
+  ],
+  "contribution_summary_links": [
+    "research/2026-10-22/lean-formalization/sp-family-status.md",
+    "research/2026-10-22/lean-formalization/sp-universal-verification/status.md"
+  ],
+  "reproduction_links": [
+    "research/2026-10-22/lean-formalization/sp-verification/reproduction.md",
+    "research/2026-10-22/lean-formalization/sp-universal-verification/check_isolated.py"
+  ],
+  "parent_lane_update": "research/2026-10-22/lean-formalization/verification-updates/strong_possibility.json"
+}

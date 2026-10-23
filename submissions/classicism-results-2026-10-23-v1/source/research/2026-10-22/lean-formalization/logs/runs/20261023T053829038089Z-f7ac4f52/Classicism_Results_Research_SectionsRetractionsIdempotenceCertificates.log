@@ -1,0 +1,76 @@
+Classicism.Research.Splitting.idempotence_relational_barcan: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.Splitting.relational_barcan_idempotence: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.Splitting.toggleMask_coext: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.toggleMask_false: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.toggleMask_idempotent_all: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.Splitting.toggleMask_identity: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.toggleMask_slots_top: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.toggleMask_twice: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+#classicism_audit Classicism.Results.Research.SectionsRetractionsIdempotence: 8/8 theorems pass; 8 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.SectionsRetractionsIdempotence: 8/8 inside R
+Classicism.Results.Research.SectionsRetractionsIdempotence: 8 of 8 theorems derived
+
+[1/8] Classicism.Research.Splitting.idempotence_relational_barcan ✓ 1141 ms
+[2/8] Classicism.Research.Splitting.relational_barcan_idempotence ✓ 12 ms
+[3/8] Classicism.Research.Splitting.toggleMask_coext ✓ 0 ms
+[4/8] Classicism.Research.Splitting.toggleMask_false ✓ 0 ms
+[5/8] Classicism.Research.Splitting.toggleMask_idempotent_all ✓ 0 ms
+[6/8] Classicism.Research.Splitting.toggleMask_identity ✓ 0 ms
+[7/8] Classicism.Research.Splitting.toggleMask_slots_top ✓ 0 ms
+[8/8] Classicism.Research.Splitting.toggleMask_twice ✓ 0 ms
+Classicism.Research.Splitting.IdempotencePersists ⟶ Classicism.Research.Splitting.IdempotencePersists.schema:
+  fun A' =>
+    Classicism.Meta.Term.forall'
+      (Classicism.Meta.Term.imp
+        (Classicism.Meta.Term.forall'
+          (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).eq'
+            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+              (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))
+        (Classicism.Meta.Term.box
+          (Classicism.Meta.Term.forall'
+            (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).eq'
+              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))))
+Classicism.Research.Splitting.relational_barcan_idempotence ⟶ Classicism.Research.Splitting.relational_barcan_idempotence.rule : ∀
+  (A' : Classicism.Meta.RTy),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.BarcanRelational.quoted A')
+      (Classicism.Research.Splitting.IdempotencePersists.quoted A'))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.idempotence_relational_barcan ⟶ Classicism.Research.Splitting.idempotence_relational_barcan.rule : ∀
+  (ν' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.Existence.quoted ν')
+      (Classicism.Meta.Term.imp
+        (Classicism.Research.Splitting.IdempotencePersists.quoted
+          (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ ν' ⇒ Classicism.Meta.RTy.t))
+        (Classicism.P.BarcanRelational.quoted (ν' ⇒ Classicism.Meta.RTy.t))))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.idempotence_relational_barcan ⟶ Classicism.Research.Splitting.idempotence_relational_barcan.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.Existence.listQuoted σs)
+      (Classicism.Meta.Term.imp
+        (Classicism.Research.Splitting.IdempotencePersists.quoted
+          (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ σs ⇒* Classicism.Meta.RTy.t))
+        (Classicism.P.BarcanRelational.quoted (σs ⇒* Classicism.Meta.RTy.t))))
+Classicism.Research.Splitting.relational_barcan_idempotence ⟶ Classicism.Research.Splitting.relational_barcan_idempotence.entails : Classicism.P.BarcanRelational.schema ⟹
+  Classicism.Research.Splitting.IdempotencePersists.schema
+Classicism.Research.Splitting.idempotence_relational_barcan ⟶ Classicism.Research.Splitting.idempotence_relational_barcan.entails : Classicism.P.Existence.schema ∪
+    Classicism.Research.Splitting.IdempotencePersists.schema ⟹
+  fun a => ∃ ν', ν'.Closed ∧ a = Classicism.P.BarcanRelational.quoted (ν' ⇒ Classicism.Meta.RTy.t)
+Classicism.Research.Splitting.idempotence_relational_barcan ⟶ Classicism.Research.Splitting.idempotence_relational_barcan.listEntails : Classicism.P.Existence.listSchema ∪
+    Classicism.Research.Splitting.IdempotencePersists.schema ⟹
+  fun a =>
+  ∃ σs, Classicism.Meta.Ty.AllClosed σs ∧ a = Classicism.P.BarcanRelational.quoted (σs ⇒* Classicism.Meta.RTy.t)
+Classicism.Research.Splitting.idempotence_relational_barcan.listEntails :
+  Classicism.P.Existence.listSchema ∪ Classicism.Research.Splitting.IdempotencePersists.schema ⟹ fun a =>
+    ∃ σs, Classicism.Meta.Ty.AllClosed σs ∧ a = Classicism.P.BarcanRelational.quoted (σs ⇒* Classicism.Meta.RTy.t)

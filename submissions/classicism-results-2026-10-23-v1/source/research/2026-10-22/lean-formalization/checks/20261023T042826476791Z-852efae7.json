@@ -1,0 +1,38 @@
+{
+  "schema_version": 2,
+  "run_id": "20261023T042826476791Z-852efae7",
+  "modules": [
+    "Classicism.Syntax.Types"
+  ],
+  "cache": "/private/tmp/classicism-lean-cert-cache",
+  "state": "complete",
+  "complete": true,
+  "checked": [
+    {
+      "module": "Classicism.Syntax.Types",
+      "fingerprint": "f920c6417fb0d73d4b6cb333a5de66a5647023a45396e3a09a0b7e943245c8cf",
+      "source_sha256": "567828e8f9a707cf635e3b4fb30bc868a419967307613d0686d795d195606eac",
+      "artifacts": {
+        ".olean": "06ab8b44ce7d7b6c90c25d4cc9e58b72ad316cb1c73e67e82c214ebc3117b126"
+      },
+      "seconds": 2.2,
+      "exit_code": 0,
+      "log": "logs/runs/20261023T042826476791Z-852efae7/Classicism_Syntax_Types.log"
+    }
+  ],
+  "sources": {
+    "Classicism.Syntax.Types": {
+      "path": "/Users/danielkodsi/Downloads/classicism-map/topics/classicism/lean/Classicism/Syntax/Types.lean",
+      "sha256": "567828e8f9a707cf635e3b4fb30bc868a419967307613d0686d795d195606eac"
+    }
+  },
+  "precompiled_roots": [],
+  "precompiled_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "compiler_path": "/private/tmp/classicism-lean-toolchain/lean-4.33.1-darwin_aarch64/bin/lean",
+  "compiler_sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554",
+  "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "source_snapshot": "/Users/danielkodsi/Downloads/classicism-map/research/2026-10-22/lean-formalization/logs/runs/20261023T042826476791Z-852efae7/sources",
+  "source_drift": [],
+  "current_sources_match": true,
+  "exit_code": 0
+}

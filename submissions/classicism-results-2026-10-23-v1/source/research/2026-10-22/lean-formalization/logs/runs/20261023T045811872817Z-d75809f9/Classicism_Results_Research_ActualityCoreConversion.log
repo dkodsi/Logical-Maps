@@ -1,0 +1,14 @@
+Classicism/Results/Research/ActualityCoreConversion.lean:24:4: error: Type mismatch: After simplification, term
+  h
+ has type
+  @Conv Sig Γ (Ty.rel RTy.t) ((Term.weaken w).lam.app a) w
+but is expected to have type
+  @Conv Sig Γ (Ty.rel RTy.t) ((domain Ty.e w).app a) (member Ty.e w a)
+Classicism/Results/Research/ActualityCoreConversion.lean:27:4: error: Type mismatch: After simplification, term
+  h
+ has type
+  @Conv Sig Γ (Ty.rel RTy.t) ((Term.weaken w).lam.app a) w
+but is expected to have type
+  @Conv Sig Γ (Ty.rel RTy.t) ((domain (Ty.var a✝) w).app a) (member (Ty.var a✝) w a)
+'Classicism.Meta.ActualityCoreSyntax.translate_typing' depends on axioms: [propext, sorryAx, Quot.sound]
+'Classicism.Meta.ActualityCoreSyntax.core_eta' depends on axioms: [propext, Quot.sound]

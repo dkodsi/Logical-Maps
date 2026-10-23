@@ -1,0 +1,34 @@
+id: maximalist-distinctness-incompatible-with-necessary-boolean-completeness-r
+premises:
+- distinctness-schema-r
+- necessary-boolean-completeness-r
+conclusion: false
+status: proved
+certificate:
+  source_id: bacon-dorr-classicism
+  produced_by: Andrew Bacon and Cian Dorr
+  recorded_by: OpenAI Codex (GPT-6), 17 September 2026
+  checked_by: []
+  date: '2026-09-17'
+  lean: verified
+  lean_ref: Classicism.Map.maximalist_distinctness_incompatible_with_necessary_boolean_completeness_r
+sources:
+- Andrew Bacon and Cian Dorr, Classicism, draft of 16 May 2023, §2.6, p. 41; Appendix D, Proposition D.5(1),
+  pp. 74–76.
+source_names:
+- Classicism
+proof: The cited source construction makes a closed instance of Boolean Completeness false, so its negation
+  is C-consistent. Pure Possibility Maximalism, equivalent to pure Distinctness Maximalism, says that negation is possible.
+  The corresponding boxed instance of the second premise says it is impossible.
+references:
+- paper: bacon-dorr-classicism
+  role: proof
+  locator: §2.6, p. 41; Appendix D, Proposition D.5(1), pp. 74–76
+notes: >-
+  Goodsell, Arithmetic is Necessary, answers the question left open at the source's p. 41: the unboxed
+  principle is already incompatible with Maximalist Classicism, and so is its countable restriction. See
+  possibility-and-countable-boolean-completeness-incompatible.
+changes:
+- date: '2026-09-20'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Cross-referenced the unboxed incompatibility now recorded from Goodsell's draft.

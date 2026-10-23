@@ -1,0 +1,28 @@
+Classicism/Models/NominalSupportCore.lean:77:16: error: Type mismatch
+  A.act g '' hS
+has type
+  Set A.Carrier
+of sort `Type` but is expected to have type
+  hS.Finite → (A.act g '' hS).Finite
+of sort `Prop`
+Classicism/Models/NominalSupportCore.lean:84:16: error: Type mismatch
+  A.act g '' hS
+has type
+  Set A.Carrier
+of sort `Type` but is expected to have type
+  hS.Countable → (A.act g '' hS).Countable
+of sort `Prop`
+Classicism/Models/NominalSupportCore.lean:131:12: warning: Variable name `x` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _x
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Classicism/Models/NominalSupportCore.lean:153:3: error: Application type mismatch: The argument
+  id
+has type
+  (X : Nom ?m.16 ?m.17) → Hom X X
+of sort `Type 1` but is expected to have type
+  X.obj.Carrier → X.obj.Carrier
+of sort `Type` in the application
+  mk id

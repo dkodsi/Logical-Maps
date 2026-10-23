@@ -1,0 +1,38 @@
+Classicism/Results/Research/MaxAtomicityJechShelahBranch.lean:133:80: warning: This simp argument is unused:
+  bot_sup_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [branchEntry, if_pos hi, if_neg hj, sup_bot_eq, inf_sup_right, child_disjoint k i j hij,
+    inf_comm ((parent k)ᶜ), child_inf_parent_compl]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityJechShelahBranch.lean:135:56: warning: This simp argument is unused:
+  bot_sup_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [branchEntry, if_neg hi, if_pos hj, sup_bot_eq, inf_sup_left, child_disjoint k i j hij,
+    child_inf_parent_compl]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityJechShelahBranch.lean:145:34: warning: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [branchEntry, zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Classicism.Meta.Research.MaxAtomicityJechShelahBranch.children_cover' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahBranch.branchName' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahBranch.escape_slalom' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahBranch.branch_inf_capture' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahBranch.condition_le_marker' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

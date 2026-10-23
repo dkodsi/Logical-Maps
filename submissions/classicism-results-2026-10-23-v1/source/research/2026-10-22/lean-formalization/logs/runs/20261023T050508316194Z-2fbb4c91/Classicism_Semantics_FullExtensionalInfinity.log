@@ -1,0 +1,77 @@
+Classicism/Semantics/FullExtensionalInfinity.lean:40:38: error: Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+Classicism/Semantics/FullExtensionalInfinity.lean:82:71: error: unsolved goals
+Sig : Signature
+I : Interp Sig
+⊢ (¬∃ x,
+        (∀ (x_1 : Ty.denote I.D (Ty.rel (Ty.rel (Ty.rel (Ty.e ⇒ RTy.t) ⇒ RTy.t) ⇒ RTy.t))),
+            ((x_1 fun x => ∀ (x_2 : Ty.denote I.D Ty.e), ¬x x_2) ∧
+                ∀ (x : Ty.denote I.D (Ty.rel (Ty.rel (Ty.e ⇒ RTy.t) ⇒ RTy.t))),
+                  x_1 x → x_1 fun x_2 => ∃ x_3, x_2 x_3 ∧ x fun x => x_2 x ∧ ¬x = x_3) →
+              x_1 x) ∧
+          x fun x => True) ↔
+    ¬∃ Z,
+        (∀ (W : ((I.D → Prop) → Prop) → Prop), (W (Zero I.D) ∧ ∀ (Y : (I.D → Prop) → Prop), W Y → W (Succ Y)) → W Z) ∧
+          Z fun x => True
+Classicism/Semantics/FullExtensionalInfinity.lean:83:13: warning: This simp argument is unused:
+  P.AxiomOfInfinityE.quoted
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Term.ofPure, Sentence.holds, Term.denote, Var.denote, imp_eq, top_eq, FiniteCard, Zero, Succ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalInfinity.lean:84:44: warning: This simp argument is unused:
+  Zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [P.AxiomOfInfinityE.quoted, Term.ofPure, Sentence.holds, Term.denote, Var.denote, imp_eq, top_eq,
+    FiniteCard, Succ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalInfinity.lean:84:50: warning: This simp argument is unused:
+  Succ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [P.AxiomOfInfinityE.quoted, Term.ofPure, Sentence.holds, Term.denote, Var.denote, imp_eq, top_eq,
+    FiniteCard, Zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalInfinity.lean:88:72: error: unsolved goals
+Sig : Signature
+I : Interp Sig
+⊢ (¬∃ x,
+        (∀ (x_1 : Ty.denote I.D (Ty.rel (Ty.rel (Ty.rel (Ty.rel RTy.t ⇒ RTy.t) ⇒ RTy.t) ⇒ RTy.t))),
+            ((x_1 fun x => ∀ (x_2 : Ty.denote I.D (Ty.rel RTy.t)), ¬x x_2) ∧
+                ∀ (x : Ty.denote I.D (Ty.rel (Ty.rel (Ty.rel RTy.t ⇒ RTy.t) ⇒ RTy.t))),
+                  x_1 x → x_1 fun x_2 => ∃ x_3, x_2 x_3 ∧ x fun x => x_2 x ∧ ¬x = x_3) →
+              x_1 x) ∧
+          x fun x => True) ↔
+    ¬∃ Z,
+        (∀ (W : ((Prop → Prop) → Prop) → Prop),
+            (W (Zero Prop) ∧ ∀ (Y : (Prop → Prop) → Prop), W Y → W (Succ Y)) → W Z) ∧
+          Z fun x => True
+Classicism/Semantics/FullExtensionalInfinity.lean:89:13: warning: This simp argument is unused:
+  P.AxiomOfInfinityT.quoted
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Term.ofPure, Sentence.holds, Term.denote, Var.denote, imp_eq, top_eq, FiniteCard, Zero, Succ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalInfinity.lean:90:44: warning: This simp argument is unused:
+  Zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [P.AxiomOfInfinityT.quoted, Term.ofPure, Sentence.holds, Term.denote, Var.denote, imp_eq, top_eq,
+    FiniteCard, Succ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Semantics/FullExtensionalInfinity.lean:90:50: warning: This simp argument is unused:
+  Succ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [P.AxiomOfInfinityT.quoted, Term.ofPure, Sentence.holds, Term.denote, Var.denote, imp_eq, top_eq,
+    FiniteCard, Zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

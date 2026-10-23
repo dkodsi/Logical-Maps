@@ -1,0 +1,128 @@
+{
+  "author_thread": "01a164a4-f326-7161-9eac-b9cf19e5ff50",
+  "integration_owner": "01a1664d-7c13-7701-b52c-2070ee16eb06",
+  "status": "READY FOR INTEGRATION",
+  "language": "Original finitary C; explicit finite type instances",
+  "source_modules": [
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/SealedWorldCover.lean",
+      "module": "Classicism.Results.Research.SealedWorldCover",
+      "source_sha256": "e51c691a52cd1d6e5b3df8c7c95dd5d895ca7a39565a40b8ebb9cf6c5c110901",
+      "theorems": 32,
+      "status": "READY FOR INTEGRATION; not compiled by author"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/ModalPropagation.lean",
+      "module": "Classicism.Results.Research.ModalPropagation",
+      "source_sha256": "cf77a123eb9e5e99c074043b77d122a10fad8487c690441a417756cdfb59ff8e",
+      "theorems": 31,
+      "status": "READY FOR INTEGRATION; not compiled by author"
+    }
+  ],
+  "certificate_drivers": [
+    {
+      "path": "research/2026-10-22/lean-formalization/modal-checks/ModalCutRigidity.lean",
+      "source_sha256": "4c0205ce331085c7deab78636f68e3591650c4982583fe4eefffa2cf6c3e930f",
+      "command": "derive",
+      "theorem": "Classicism.Research.SealedWorldCover.cut_rigid",
+      "status": "pending"
+    },
+    {
+      "path": "research/2026-10-22/lean-formalization/modal-checks/ModalBoxedStrongLeibniz.lean",
+      "source_sha256": "7750061af927924fae9d55e6a4feb9a1b39f68f87872b4a5b6c1007ceaf96f11",
+      "command": "certify",
+      "theorem": "Classicism.Research.SealedWorldCover.sl_rc_implies_necessary_strong_leibniz",
+      "status": "pending"
+    },
+    {
+      "path": "research/2026-10-22/lean-formalization/modal-checks/ModalBoxedStrongLeibnizT.lean",
+      "source_sha256": "157b4b65c2572a7bdbfe63721c2dfabaa1eb5ecd3f3ba21fd090f55cfd261718",
+      "command": "certify",
+      "theorem": "Classicism.Research.SealedWorldCover.sl_rc_implies_necessary_strong_leibniz_t",
+      "status": "pending"
+    },
+    {
+      "path": "research/2026-10-22/lean-formalization/modal-checks/ModalBoxedBarcan.lean",
+      "source_sha256": "126276a54eca7167ed325e749c7d8c7fa1a76d085eff2261a97a5b6bd8dab86a",
+      "command": "certify",
+      "theorem": "Classicism.Research.SealedWorldCover.sl_rc_power_implies_necessary_barcan",
+      "status": "pending"
+    },
+    {
+      "path": "research/2026-10-22/lean-formalization/modal-checks/ModalBoxedBarcanT.lean",
+      "source_sha256": "7fc63c1c913215193051c2d2c4e67686b2684dbfd96a120cba15ddefd3d537b2",
+      "command": "certify",
+      "theorem": "Classicism.Research.SealedWorldCover.sl_rc_power_implies_necessary_barcan_t",
+      "status": "pending"
+    },
+    {
+      "path": "research/2026-10-22/lean-formalization/modal-checks/ModalRigidUniverse.lean",
+      "source_sha256": "6dff44b6d1fd6931fd3a61736d2a339d4686cfb3072328a5ae41e16cf5bb18a7",
+      "command": "certify",
+      "theorem": "Classicism.Research.ModalPropagation.universe_rigid_iff_necessary_barcan",
+      "status": "pending"
+    },
+    {
+      "path": "research/2026-10-22/lean-formalization/modal-checks/ModalLocalBarcanPropagation.lean",
+      "source_sha256": "85878fd4dcc3e712ac0419d92cbd4d5075fc3c517683df94f5f38244d3b3845e",
+      "command": "certify",
+      "theorem": "Classicism.Research.ModalPropagation.rigid_comprehension_barcan_implies_necessary_barcan",
+      "status": "pending"
+    },
+    {
+      "path": "research/2026-10-22/lean-formalization/modal-checks/ModalRigidPullback.lean",
+      "source_sha256": "fd1d236fda07e64eb119e39f514af9abe73be335252f235a35e5326161bf7f5f",
+      "command": "derive",
+      "theorem": "Classicism.Research.ModalPropagation.rigid_pullback_of_sealed_image",
+      "status": "pending"
+    },
+    {
+      "path": "research/2026-10-22/lean-formalization/modal-checks/ModalComprehensionPullback.lean",
+      "source_sha256": "e02ef9b60ad0ba049e8033b6f79743fdff5e4928abcdc60fcdf97382380003c0",
+      "command": "certify",
+      "theorem": "Classicism.Research.ModalPropagation.rigid_comprehension_pullback",
+      "status": "pending"
+    },
+    {
+      "path": "research/2026-10-22/lean-formalization/modal-checks/ModalComprehensionPullbackT.lean",
+      "source_sha256": "1f4793aa5a65257e35a3be08c95b456363309e891fc9057669844719f427c1d1",
+      "command": "certify",
+      "theorem": "Classicism.Research.ModalPropagation.rigid_comprehension_pullback_t",
+      "status": "pending"
+    },
+    {
+      "path": "research/2026-10-22/lean-formalization/modal-checks/ModalBoxedComprehension.lean",
+      "source_sha256": "e8de991b8b82fe1d62e5666f86a58ccfea488180c3b9f611d1c481078acad48f",
+      "command": "certify",
+      "theorem": "Classicism.Research.ModalPropagation.sl_rc_relational_barcan_propagates_comprehension",
+      "status": "pending"
+    },
+    {
+      "path": "research/2026-10-22/lean-formalization/modal-checks/ModalBoxedComprehensionT.lean",
+      "source_sha256": "e9451c3c93a99ae57fc3450aa747095759b70060037eaf0d54deb8f6206a9e9d",
+      "command": "certify",
+      "theorem": "Classicism.Research.ModalPropagation.sl_rc_barcan_propagates_comprehension_t",
+      "status": "pending"
+    },
+    {
+      "path": "research/2026-10-22/lean-formalization/modal-checks/ModalBoxedCompleteness.lean",
+      "source_sha256": "d069c6507cb37d4e99b89d1a1b2914e9fb813fe4967d4d306867ccd38dd2f83c",
+      "command": "certify",
+      "theorem": "Classicism.Research.ModalPropagation.sl_rc_relational_barcan_propagates_completeness",
+      "status": "pending"
+    },
+    {
+      "path": "research/2026-10-22/lean-formalization/modal-checks/ModalBoxedCompletenessT.lean",
+      "source_sha256": "f6609a112b9078e096f56a97e5bc1ed2ab8ba82c963be7b4337a53011350b219",
+      "command": "certify",
+      "theorem": "Classicism.Research.ModalPropagation.sl_rc_barcan_propagates_completeness_t",
+      "status": "pending"
+    }
+  ],
+  "compiled": false,
+  "gate_checked": false,
+  "type_checked": false,
+  "object_language_certified": false,
+  "repository_validation": "132 principles, 447 results, 162 models \u2014 OK",
+  "no_lean_or_lake_executed_by_author": true
+}

@@ -1,0 +1,126 @@
+Classicism.ChoiceHierarchyRetractions.Retraction ⟶ Classicism.ChoiceHierarchyRetractions.Retraction.schema:
+  fun α' β' =>
+    Classicism.Meta.Term.exists'
+      (Classicism.Meta.Term.exists'
+        (Classicism.Meta.Term.forall'
+          (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).eq'
+            (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))
+Classicism.ChoiceHierarchyRetractions.NecRetraction ⟶ Classicism.ChoiceHierarchyRetractions.NecRetraction.schema:
+  fun α' β' =>
+    Classicism.Meta.Term.box
+      (Classicism.Meta.Term.exists'
+        (Classicism.Meta.Term.exists'
+          (Classicism.Meta.Term.forall'
+            (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).eq'
+              (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))))
+Classicism.ChoiceHierarchyRetractions.HaecceityDecoder ⟶ Classicism.ChoiceHierarchyRetractions.HaecceityDecoder.schema:
+  fun τ' =>
+    Classicism.Meta.Term.exists'
+      (Classicism.Meta.Term.forall'
+        (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+              (Classicism.Meta.Term.lam
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).eq'
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)))).eq'
+          (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))
+Classicism.ChoiceHierarchyRetractions.NecHaecceityDecoder ⟶ Classicism.ChoiceHierarchyRetractions.NecHaecceityDecoder.schema:
+  fun τ' =>
+    Classicism.Meta.Term.box
+      (Classicism.Meta.Term.exists'
+        (Classicism.Meta.Term.forall'
+          (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                (Classicism.Meta.Term.lam
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).eq'
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)))).eq'
+            (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))
+Classicism.ChoiceHierarchyRetractions.retraction_of_embedding_plenitude: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.ChoiceHierarchyRetractions.necRetraction_of_embedding_plenitude: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em])
+Classicism.ChoiceHierarchyRetractions.decoder_predicate: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.ChoiceHierarchyRetractions.necDecoder_predicate: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.ChoiceHierarchyRetractions.retraction_of_decoder: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.ChoiceHierarchyRetractions.necRetraction_of_decoder: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.ChoiceHierarchyRetractions.selector_of_decoder_diagonal: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.ChoiceHierarchyRetractions.necSelector_of_decoder_diagonal: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.ChoiceHierarchyRetractions.retraction_of_embedding_plenitude: type system ✓
+Classicism.ChoiceHierarchyRetractions.necRetraction_of_embedding_plenitude: type system ✓
+Classicism.ChoiceHierarchyRetractions.decoder_predicate: type system ✓
+Classicism.ChoiceHierarchyRetractions.necDecoder_predicate: type system ✓
+Classicism.ChoiceHierarchyRetractions.retraction_of_decoder: type system ✓
+Classicism.ChoiceHierarchyRetractions.necRetraction_of_decoder: type system ✓
+Classicism.ChoiceHierarchyRetractions.selector_of_decoder_diagonal: type system ✓
+Classicism.ChoiceHierarchyRetractions.necSelector_of_decoder_diagonal: type system ✓
+Classicism.ChoiceHierarchyRetractions.retraction_of_embedding_plenitude ⟶ Classicism.ChoiceHierarchyRetractions.retraction_of_embedding_plenitude.rule : ∀
+  (α' β' : Classicism.Meta.RTy),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp
+      (Classicism.ChoiceHierarchyRealizationSteps.Embedding.quoted (Classicism.Meta.Ty.rel α') β')
+      (Classicism.Meta.Term.imp (Classicism.P.Plenitude.quoted (Classicism.Meta.Ty.rel β') α')
+        (Classicism.ChoiceHierarchyRetractions.Retraction.quoted α' β')))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.ChoiceHierarchyRetractions.necRetraction_of_embedding_plenitude ⟶ Classicism.ChoiceHierarchyRetractions.necRetraction_of_embedding_plenitude.rule : ∀
+  (α' β' : Classicism.Meta.RTy),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp
+      (Classicism.ChoiceHierarchyRealizationSteps.NecEmbedding.quoted (Classicism.Meta.Ty.rel α') β')
+      (Classicism.Meta.Term.imp (Classicism.P.NecPlenitude.quoted (Classicism.Meta.Ty.rel β') α')
+        (Classicism.ChoiceHierarchyRetractions.NecRetraction.quoted α' β')))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.ChoiceHierarchyRetractions.decoder_predicate ⟶ Classicism.ChoiceHierarchyRetractions.decoder_predicate.rule : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.ChoiceHierarchyRetractions.HaecceityDecoder.quoted (σ' ⇒ Classicism.Meta.RTy.t))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.ChoiceHierarchyRetractions.decoder_predicate ⟶ Classicism.ChoiceHierarchyRetractions.decoder_predicate.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.ChoiceHierarchyRetractions.HaecceityDecoder.quoted (σs ⇒* Classicism.Meta.RTy.t))
+Classicism.ChoiceHierarchyRetractions.necDecoder_predicate ⟶ Classicism.ChoiceHierarchyRetractions.necDecoder_predicate.rule : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.ChoiceHierarchyRetractions.NecHaecceityDecoder.quoted (σ' ⇒ Classicism.Meta.RTy.t))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.ChoiceHierarchyRetractions.necDecoder_predicate ⟶ Classicism.ChoiceHierarchyRetractions.necDecoder_predicate.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.ChoiceHierarchyRetractions.NecHaecceityDecoder.quoted (σs ⇒* Classicism.Meta.RTy.t))
+Classicism.ChoiceHierarchyRetractions.retraction_of_decoder ⟶ Classicism.ChoiceHierarchyRetractions.retraction_of_decoder.rule : ∀
+  (τ' : Classicism.Meta.RTy),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.ChoiceHierarchyRetractions.HaecceityDecoder.quoted τ')
+      (Classicism.ChoiceHierarchyRetractions.Retraction.quoted τ' (Classicism.Meta.Ty.rel τ' ⇒ Classicism.Meta.RTy.t)))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.ChoiceHierarchyRetractions.necRetraction_of_decoder ⟶ Classicism.ChoiceHierarchyRetractions.necRetraction_of_decoder.rule : ∀
+  (τ' : Classicism.Meta.RTy),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.ChoiceHierarchyRetractions.NecHaecceityDecoder.quoted τ')
+      (Classicism.ChoiceHierarchyRetractions.NecRetraction.quoted τ'
+        (Classicism.Meta.Ty.rel τ' ⇒ Classicism.Meta.RTy.t)))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.ChoiceHierarchyRetractions.selector_of_decoder_diagonal ⟶ Classicism.ChoiceHierarchyRetractions.selector_of_decoder_diagonal.rule : ∀
+  (τ' : Classicism.Meta.RTy),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.ChoiceHierarchyRetractions.HaecceityDecoder.quoted τ')
+      (Classicism.Meta.Term.imp
+        (Classicism.P.FunctionalChoice.quoted
+          (Classicism.Meta.Ty.rel (Classicism.Meta.Ty.rel τ' ⇒ Classicism.Meta.RTy.t))
+          (Classicism.Meta.Ty.rel τ' ⇒ Classicism.Meta.RTy.t))
+        (Classicism.ChoiceHierarchy.Selector.quoted τ')))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.ChoiceHierarchyRetractions.necSelector_of_decoder_diagonal ⟶ Classicism.ChoiceHierarchyRetractions.necSelector_of_decoder_diagonal.rule : ∀
+  (τ' : Classicism.Meta.RTy),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.ChoiceHierarchyRetractions.NecHaecceityDecoder.quoted τ')
+      (Classicism.Meta.Term.imp
+        (Classicism.P.NecFunctionalChoice.quoted
+          (Classicism.Meta.Ty.rel (Classicism.Meta.Ty.rel τ' ⇒ Classicism.Meta.RTy.t))
+          (Classicism.Meta.Ty.rel τ' ⇒ Classicism.Meta.RTy.t))
+        (Classicism.ChoiceHierarchy.NecSelector.quoted τ')))
+certified ✓ (axioms: [propext, Quot.sound])

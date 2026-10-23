@@ -1,0 +1,109 @@
+Classicism/Results/Research/ActualityCoreMembership.lean:38:12: error: don't know how to synthesize implicit argument `Δ`
+  @Derivable.allE₃β Sig C.axioms Γ ?m.36 (Ty.rel RTy.t) (Ty.rel ρ) (Ty.rel ρ)
+    (Term.rec (motive := fun Γ σ x => (Δ : Ctx) → Ren Γ Δ → Term Sig Δ σ) (fun {Γ} {σ} v x r => Term.var (r σ v))
+      (fun {Γ} c x x_1 => Term.const c) (fun {Γ} {σ} {ρ} x x_1 f a Δ' r => (f Δ' r).app (a Δ' r))
+      (fun {Γ} {σ} {ρ} x b x_1 r => (b (σ :: x_1) r.lift).lam) (fun {Γ} x x_1 => Term.and) (fun {Γ} x x_1 => Term.or)
+      (fun {Γ} x x_1 => Term.not) (fun {Γ} σ x x_1 => Term.all σ) (fun {Γ} σ x x_1 => Term.ex σ)
+      (fun {Γ} σ x x_1 => Term.eq σ) (fun {Γ} ρ x x_1 => Term.constR ρ) (fun {Γ} ρ x x_1 => Term.negR ρ)
+      (fun {Γ} ρ x x_1 => Term.andR ρ) (fun {Γ} ρ x x_1 => Term.orR ρ) (fun {Γ} ρ x x_1 => Term.coextR ρ)
+      (fun {Γ} ρ x x_1 => Term.boxR ρ) (fun {Γ} ρ x x_1 => Term.inclR ρ)
+      (Term.rec (fun {Γ} {σ} v => Term.var v) (fun {Γ} c => Empty.elim c) (fun {Γ} {σ} {ρ} x x_1 f a => f.app a)
+        (fun {Γ} {σ} {ρ} x b => b.lam) (fun {Γ} => Term.and) (fun {Γ} => Term.or) (fun {Γ} => Term.not)
+        (fun {Γ} σ => Term.all σ) (fun {Γ} σ => Term.ex σ) (fun {Γ} σ => Term.eq σ) (fun {Γ} ρ => Term.constR ρ)
+        (fun {Γ} ρ => Term.negR ρ) (fun {Γ} ρ => Term.andR ρ) (fun {Γ} ρ => Term.orR ρ) (fun {Γ} ρ => Term.coextR ρ)
+        (fun {Γ} ρ => Term.boxR ρ) (fun {Γ} ρ => Term.inclR ρ)
+        (Term.imp
+          ((Term.var Var.zero.succ.succ).conj
+            (Term.forall'
+              ((Term.var Var.zero).imp
+                ((Term.var Var.zero).eq' ((Term.var Var.zero.succ.succ.succ).disj (Term.var Var.zero))))))
+          ((Term.var Var.zero.succ.succ).conj
+            ((Term.var Var.zero.succ).eq'
+              (((Term.orR ρ).app (((Term.andR ρ).app (Term.var Var.zero.succ)).app (Term.var Var.zero))).app
+                (Term.var Var.zero.succ))))))
+      (Ty.rel ρ :: Ty.rel ρ :: Ty.rel RTy.t :: Γ) Ren.ofEmpty.lift.lift.lift)
+    (C.Derivable.of_minus
+      (Derivable.ofTheorem (C.TheoremMinus.ofPure (Research.ActualityCore.interpretation_cut_rule.derivable ρ))))
+    w A a
+context:
+Sig : Signature
+Γ : Ctx
+ρ : RTy
+Δ : List (Formula Sig Γ)
+w : Formula Sig Γ
+A a : Term Sig Γ (Ty.rel ρ)
+hw : C.Derivable Δ (actualWorld w)
+⊢ List (Formula Sig Γ)
+Classicism/Results/Research/ActualityCoreMembership.lean:39:5: error: don't know how to synthesize implicit argument `Δ`
+  @C.Derivable.of_minus Sig Γ ?m.36
+    (Term.forall'
+      (Term.forall'
+        (Term.rec (motive := fun Γ σ x => (Δ : Ctx) → Ren Γ Δ → Term Sig Δ σ) (fun {Γ} {σ} v x r => Term.var (r σ v))
+            (fun {Γ} c x x_1 => Term.const c) (fun {Γ} {σ} {ρ} x x_1 f a Δ' r => (f Δ' r).app (a Δ' r))
+            (fun {Γ} {σ} {ρ} x b x_1 r => (b (σ :: x_1) r.lift).lam) (fun {Γ} x x_1 => Term.and)
+            (fun {Γ} x x_1 => Term.or) (fun {Γ} x x_1 => Term.not) (fun {Γ} σ x x_1 => Term.all σ)
+            (fun {Γ} σ x x_1 => Term.ex σ) (fun {Γ} σ x x_1 => Term.eq σ) (fun {Γ} ρ x x_1 => Term.constR ρ)
+            (fun {Γ} ρ x x_1 => Term.negR ρ) (fun {Γ} ρ x x_1 => Term.andR ρ) (fun {Γ} ρ x x_1 => Term.orR ρ)
+            (fun {Γ} ρ x x_1 => Term.coextR ρ) (fun {Γ} ρ x x_1 => Term.boxR ρ) (fun {Γ} ρ x x_1 => Term.inclR ρ)
+            (Term.rec (fun {Γ} {σ} v => Term.var v) (fun {Γ} c => Empty.elim c) (fun {Γ} {σ} {ρ} x x_1 f a => f.app a)
+              (fun {Γ} {σ} {ρ} x b => b.lam) (fun {Γ} => Term.and) (fun {Γ} => Term.or) (fun {Γ} => Term.not)
+              (fun {Γ} σ => Term.all σ) (fun {Γ} σ => Term.ex σ) (fun {Γ} σ => Term.eq σ) (fun {Γ} ρ => Term.constR ρ)
+              (fun {Γ} ρ => Term.negR ρ) (fun {Γ} ρ => Term.andR ρ) (fun {Γ} ρ => Term.orR ρ)
+              (fun {Γ} ρ => Term.coextR ρ) (fun {Γ} ρ => Term.boxR ρ) (fun {Γ} ρ => Term.inclR ρ)
+              (Term.imp
+                ((Term.var Var.zero.succ.succ).conj
+                  (Term.forall'
+                    ((Term.var Var.zero).imp
+                      ((Term.var Var.zero).eq' ((Term.var Var.zero.succ.succ.succ).disj (Term.var Var.zero))))))
+                ((Term.var Var.zero.succ.succ).conj
+                  ((Term.var Var.zero.succ).eq'
+                    (((Term.orR ρ).app (((Term.andR ρ).app (Term.var Var.zero.succ)).app (Term.var Var.zero))).app
+                      (Term.var Var.zero.succ))))))
+            (Ty.rel ρ :: Ty.rel ρ :: Ty.rel RTy.t :: Γ) Ren.ofEmpty.lift.lift.lift).forall'))
+    (Derivable.ofTheorem (C.TheoremMinus.ofPure (Research.ActualityCore.interpretation_cut_rule.derivable ρ)))
+context:
+Sig : Signature
+Γ : Ctx
+ρ : RTy
+Δ : List (Formula Sig Γ)
+w : Formula Sig Γ
+A a : Term Sig Γ (Ty.rel ρ)
+hw : C.Derivable Δ (actualWorld w)
+⊢ List (Formula Sig Γ)
+Classicism/Results/Research/ActualityCoreMembership.lean:39:27: error: don't know how to synthesize implicit argument `Δ`
+  @Derivable.ofTheorem Sig C.axiomsMinus Γ ?m.36
+    (Term.ofPure
+      (Term.forall'
+        (Term.forall'
+          (Term.forall'
+            (Term.imp
+              ((Term.var Var.zero.succ.succ).conj
+                (Term.forall'
+                  ((Term.var Var.zero).imp
+                    ((Term.var Var.zero).eq' ((Term.var Var.zero.succ.succ.succ).disj (Term.var Var.zero))))))
+              ((Term.var Var.zero.succ.succ).conj
+                ((Term.var Var.zero.succ).eq'
+                  (((Term.orR ρ).app (((Term.andR ρ).app (Term.var Var.zero.succ)).app (Term.var Var.zero))).app
+                    (Term.var Var.zero.succ)))))))))
+    (C.TheoremMinus.ofPure (Research.ActualityCore.interpretation_cut_rule.derivable ρ))
+context:
+Sig : Signature
+Γ : Ctx
+ρ : RTy
+Δ : List (Formula Sig Γ)
+w : Formula Sig Γ
+A a : Term Sig Γ (Ty.rel ρ)
+hw : C.Derivable Δ (actualWorld w)
+⊢ List (Formula Sig Γ)
+Classicism/Results/Research/ActualityCoreMembership.lean:38:7: error: failed to infer `have` declaration type
+Classicism/Results/Research/ActualityCoreMembership.lean:37:67: error: unsolved goals
+Sig : Signature
+Γ : Ctx
+ρ : RTy
+Δ : List (Formula Sig Γ)
+w : Formula Sig Γ
+A a : Term Sig Γ (Ty.rel ρ)
+hw : C.Derivable Δ (actualWorld w)
+⊢ C.Derivable Δ (memberRel ρ w A (((Term.andR ρ).app A).app a))
+Classicism/Results/Research/ActualityCoreMembership.lean:55:15: error(lean.unknownIdentifier): Unknown constant `Classicism.Meta.Derivable.andEL`
+Classicism/Results/Research/ActualityCoreMembership.lean:56:19: error(lean.unknownIdentifier): Unknown constant `Classicism.Meta.Derivable.andEL`

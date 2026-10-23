@@ -1,0 +1,249 @@
+{
+  "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "modules": [
+    "research/2026-10-22/lean-formalization/StrongPossibilityConsequencesUniversalCore.lean"
+  ],
+  "checked": [
+    {
+      "module": "Classicism.Core",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "bf319a4b6f0860cf44de8718088ef6b9d7401f650a236ca60f33fdb03dc187d1"
+    },
+    {
+      "module": "Classicism.Paper",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "703a03b88030dc89423cc400ae3f587c677c4973326193ae9fe8fb6b3ebb3ce8"
+    },
+    {
+      "module": "Classicism.Equivalence",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "47328654956b87126fce1056a3924b466857f027d5772bfa50581ea56da8bce6"
+    },
+    {
+      "module": "Classicism.Booleanism",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "cb18bac223dc4fb141f513b499a14b3bca23cc853d2da4d3ef750cb536e0110e"
+    },
+    {
+      "module": "Classicism.Modal",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "7efa9607da23b10fcbbfe957f0084b531b8ff5161287098440ffc077176d5a85"
+    },
+    {
+      "module": "Classicism.Order",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "bf9d1f4bfa125239cab96b85a8512eb8ec1537fb2b4519dc6f74df5870a7c15d"
+    },
+    {
+      "module": "Classicism.Pointwise",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "6735702aec084b89ecb8a2c31ed255e3c531cb1f7012a073bec768d664e64fe6"
+    },
+    {
+      "module": "Classicism.Comprehension",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "3dd28b615f6e626aeeb09ea799dce9195ebe7cc1ec92049938ca05254c66feed"
+    },
+    {
+      "module": "Classicism.Lattice",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "baaf4040a505a6a8aca73065d4b0c2bca51d50c2c72f77a5c4f2e0bb7623be5d"
+    },
+    {
+      "module": "Classicism.Principles.Schematic",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "3ee733d5abfc740d8f4bc83a487cf0e621d1fcff36802c675c7bb54c9fc3f687"
+    },
+    {
+      "module": "Classicism.Tools.Check",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "0ed26669b10e25813fb07f83467e696b96c5336cdaa7021d841c4a4a398219de"
+    },
+    {
+      "module": "Classicism.Tools.TypeSystem",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "0b4ff2acad9f3b35826ce9f5e3ff1fae389a50ba049ab2d1cc56a571ff9faeb1"
+    },
+    {
+      "module": "Classicism.Syntax.Types",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "07df345faa0bc772732f7d92d2d70bc9e98684e0474a3e9513213d52a1cd202c"
+    },
+    {
+      "module": "Classicism.Syntax.Term",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "c985f9d073087c935e2b64f9c0503b909a3a3d2bc6603871661e80a7aaa0bc76"
+    },
+    {
+      "module": "Classicism.Syntax.Conversion",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "3452ccbab9592b35912b00a0c40855b2ad68d387526de7e565970846e0e33a3d"
+    },
+    {
+      "module": "Classicism.Syntax.Derivation",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "9397e2f2e7a7a13c11a5ca5126b71930a51abeb2ddae0a2c9ff0ea68d35fc521"
+    },
+    {
+      "module": "Classicism.Syntax.Axioms",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "baf39452832f2901859d4de2edabde78f03d2590f27d96357995f407164916ae"
+    },
+    {
+      "module": "Classicism.Syntax.Entailment",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "36bb45c1856e08cc774815f8dac2285fdb5c54ff61a3b285d7923e0b4bf00a3a"
+    },
+    {
+      "module": "Classicism.Semantics.Denotation",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "eff86dd697694b0b0552900ef16a6cbe870cf0a65f248fca15952a97bc63816d"
+    },
+    {
+      "module": "Classicism.Identities",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "52cc2e4a92a63d391a1d108f36c39a1d41a8388e7e3015f32d01a4abc3aa1e84"
+    },
+    {
+      "module": "Classicism.Strict.Axiomatization",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "26c09dcfb5b9a0c3cefcb2a25246a01b7ae9d084e761c8866c644a540d782804"
+    },
+    {
+      "module": "Classicism.Strict.Algebra",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "c9214afa8d8b6899b3d245b282b3a9c44daa0a47ed3e94efe3834b67a114bf58"
+    },
+    {
+      "module": "Classicism.Strict.Vocabulary",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "467ae3d714872536770d21d063c7e1e83f63297d0c8b452e75469fa0290b1a16"
+    },
+    {
+      "module": "Classicism.Strict.Tautology",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "c70419fb5529a9717151f5b81a2b9fbf2848936d455ad6f7a1b7335d2b6799a7"
+    },
+    {
+      "module": "Classicism.Strict.Quantifier",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "691d5dc3ef34450dc522ca39fe7348ac199c7ed87095a9077f471582748129f7"
+    },
+    {
+      "module": "Classicism.Strict.Rules",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "58bd6a80ff5f8f1c58e3d9a8e4644e395eb3766c1ba67f7e5a23843fcb0c755c"
+    },
+    {
+      "module": "Classicism.Strict.Primitives",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "244b8929507936522e29597d10f6a6353d7c1eefb641a9ddfb38ddc4356ace4e"
+    },
+    {
+      "module": "Classicism.Strict.Transform",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "fe34235ad30530a69cd45bcee66c7cf88d9f11e898bf6e0e24a618551aba1f6a"
+    },
+    {
+      "module": "Classicism.Strict.Mirror",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "ea0889cbbc99eedfd999b55329108aae5c5d4e6259dc3ae12457f4c4f779496b"
+    },
+    {
+      "module": "Classicism.Semantics.Relational",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "b962fd9f7c8ec2a22c5e29c5b00cfcf1fc24d35a0978ed47d2aa34654ded46d4"
+    },
+    {
+      "module": "Classicism.Tools.Quote",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "9613850997c726878bd51b7e58016c6b2f50f763933bab6ec94c4330fe671d38"
+    },
+    {
+      "module": "Classicism.Syntax.Normalize",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "bd101ebbee31778c6e9e7c6fa434b4f8e97d8fa8534af9d418761e1b3388e77f"
+    },
+    {
+      "module": "Classicism.Tools.Translate",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "40017207876e46514f5ed7e95922ace2ce5ee799d615f65131fd3ba0cbbc3c68"
+    },
+    {
+      "module": "StrongPossibilityConsequencesC",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "c97d1f86740cf58a9023743943b345a77e5553578c9e841cfeb940f319e5d0e0"
+    },
+    {
+      "module": "StrongPossibilityConsequencesStability",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "a9ce2cb5b1490a9d5f2b4d45d85bc3ce839070fa9478bf863d7662e3f6621c2c"
+    },
+    {
+      "module": "Classicism.Syntax.ClosedTypes",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "1afa431c973784f384ea866b7537c05288597b1e058113e54644c045c9841617"
+    },
+    {
+      "module": "Classicism.Syntax.SentenceSchemas",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "d4468743200ccf4b950dadad63e98441b14c38df1cab995027ee535520ede3a0"
+    },
+    {
+      "module": "Classicism.Syntax.StrongPossibility",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "d1b3823a765db3ff4286013b1285390948561c033709d8c229f8945f6befc514"
+    },
+    {
+      "module": "Classicism.Syntax.Pure",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "ee848fb9448ed42e8a44b37d6fa932c2615d47bc05f1cc140256bfe77ab3a3e2"
+    },
+    {
+      "module": "StrongPossibilityConsequencesUniversalCore",
+      "seconds": 13.84,
+      "exit_code": 1,
+      "fingerprint": "77e2de2d5bf26c101c4583cdbdbb7c4d11f6ad26ff0e18f2c19d291658d37567",
+      "log": "logs/runs/20261023T041700254857Z/StrongPossibilityConsequencesUniversalCore.log"
+    }
+  ]
+}

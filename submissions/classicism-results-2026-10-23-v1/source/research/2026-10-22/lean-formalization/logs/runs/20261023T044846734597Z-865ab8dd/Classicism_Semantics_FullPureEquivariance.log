@@ -1,0 +1,20 @@
+Classicism/Semantics/FullPureEquivariance.lean:148:14: error(lean.unknownIdentifier): Unknown constant `Bool.and_eq_true.mp`
+Classicism/Semantics/FullPureEquivariance.lean:147:31: error: unsolved goals
+Sig : Signature
+I : Interp Sig
+p : Perm I.D
+x✝ : Ctx
+σ✝ : Ty
+ρ✝ : RTy
+f : Term Sig x✝ (Ty.rel (σ✝ ⇒ ρ✝))
+t : Term Sig x✝ σ✝
+hp : (f.app t).pure = true
+env : Env I.D x✝
+⊢ Term.denote I (f.app t) (moveEnv p env) = moveT p (Ty.rel ρ✝) (Term.denote I (f.app t) env)
+Classicism/Semantics/FullPureEquivariance.lean:156:4: error: Type mismatch: After simplification, term
+  h
+ has type
+  @Eq (Ty.denote I.D (Ty.rel ρ✝)) (Term.denote I b (Env.cons x (moveEnv p env)))
+    (moveR p ρ✝ (Term.denote I b (Env.cons (moveT p.symm σ✝ x) env)))
+but is expected to have type
+  @Eq (RTy.denote I.D ρ✝) (Term.denote I b.lam (moveEnv p env) x) (moveR p (σ✝ ⇒ ρ✝) (Term.denote I b.lam env) x)

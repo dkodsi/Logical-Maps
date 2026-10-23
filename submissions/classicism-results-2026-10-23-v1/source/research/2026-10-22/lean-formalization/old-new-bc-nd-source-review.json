@@ -1,0 +1,77 @@
+{
+  "audit_id": "old-new-bc-nd-source-review",
+  "reviewed_at_utc": "2026-10-23 03:25:35 UTC",
+  "auditor": "Independent Codex audit agent /root/old_new_audit",
+  "audit_kind": "Independent source-level mathematical and API review; not Lean certification",
+  "policy": "No compilation and no edits to reviewed Lean modules. The core integrator remains the sole compiler.",
+  "reviewed_files": [
+    {
+      "path": "topics/classicism/lean/Classicism/Models/OldNewBase.lean",
+      "sha256": "492004766ed6816fc4ab6bc58208fcf6d8db4d3942d8bd55e1733b321f636a29",
+      "scope": "Literal category, symmetry groups, canonical inclusions, finite extensions and finite inverse"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Models/OldNewPairs.lean",
+      "sha256": "7d20108f024d334e765e73f6725e4911257ecf66de9d4126a66420f6b92b9436",
+      "scope": "Reconstruction admission, pair-order classification, family intersections and exact full root BC"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Models/OldNewND.lean",
+      "sha256": "5386911da6aa8b842f576bd0c178e5c138470115570886f54cac20e7bbd43ea7",
+      "scope": "Injectivity of every root transport and exact full root ND"
+    }
+  ],
+  "mathematical_findings": [
+    {
+      "subject": "OldNewBase",
+      "verdict": "Faithful to the owning two-object symmetric-ideal construction",
+      "explanation": "E is Nat, O is Nat plus Nat; all arrows are injective; E to O and collapsing O to O arrows have old range; symmetry O to O arrows preserve old/new status. Model soundness is obtained from the existing SymBase model construction. finite_inverse explicitly builds an allowed arrow by extending the finite prescribed map into target old coordinates."
+    },
+    {
+      "subject": "OldNewPairs.rebuild_mem",
+      "verdict": "Substantive literal admission proof, with no hidden representation assumption",
+      "explanation": "The existential reconstruction is automatically symmetric and pinned even for arbitrary pair data. Invariance is required only for rebuild_component to recover the intended pair. This separation is sound."
+    },
+    {
+      "subject": "OldNewPairs.subset_iff_components",
+      "verdict": "Correct arbitrary-relational-type order classification",
+      "explanation": "A common finite support is used for both entities, one target symmetry approximates the arrow on that support, and its inverse transports the same arbitrary target tuple. No noninvertible transport is assumed surjective."
+    },
+    {
+      "subject": "OldNewPairs.intersection_invariant",
+      "verdict": "Correct represented-family argument",
+      "explanation": "Every target symmetry factors over the canonical arrow through a root symmetry. If it fixes canonical images of the family pin, the root symmetry and its inverse fix that pin. The actual family is closed under that inverse by orbit_ext, and component_map transports the intersection membership. New-coordinate permutations are included in factor_sym; they induce the identity root action."
+    },
+    {
+      "subject": "OldNewPairs.root_glbs and root_bc",
+      "verdict": "Exact all-type BC result is proved at source level",
+      "explanation": "The meet is reconstructed from componentwise intersections, admitted, and characterized by its lower bounds using pair order. root_bc invokes the actual official quoted BC statement through holds_bc_iff. The result is unboxed and asserted only at E. Empty families and proposition type are covered by the uniform definitions."
+    },
+    {
+      "subject": "OldNewND.root_transport_injective and root_nd",
+      "verdict": "Correct exact all-type ND route",
+      "explanation": "Equality of transported intensions is pulled back at a finite inverse arrow; pinning converts both profiles to the original separating arrow. The Iff orientations eF.symm, hm and eG are correct. The relation case does not assume BC. Individual and type-variable branches use the underlying injective arrow, consistent with SymT mapping type variables to the individual action."
+    }
+  ],
+  "compiler_watchpoints": [
+    {
+      "status": "Possible elaboration issue only; not a confirmed failure",
+      "locations": [
+        "OldNewPairs.rebuild_mem: (ha.comp_right cat.De k).symm",
+        "OldNewPairs.profile_agree: hp ha.symm a"
+      ],
+      "reason": "AgreeOn.symm in Semantics/IdeallyFull.lean:67 has an explicit De parameter. The current call syntax omits it. Similar syntax already appears in existing SymBase, so whether elaboration accepts it must be determined by the sole compiler.",
+      "minimal_repair_if_needed": "Use AgreeOn.symm cat.De ha, or directly fun x hx => (ha x hx).symm. Supply the same explicit De for the composed agreement.",
+      "severity": "Routine API/elaboration repair; no mathematical issue"
+    }
+  ],
+  "boundary": {
+    "proved_by_this_audit": "No formal theorem is certified by this review.",
+    "no_math_gap_found": true,
+    "no_extra_premises_found": true,
+    "inspected_ics": false,
+    "final_nonentailment_not_yet_reviewed": "IC/RC failure and schema soundness assembly were still being authored; they remain separate obligations.",
+    "prior_audit": "research/2026-10-22/lean-formalization/old-new-independent-audit.json",
+    "direct_math_source": "research/2026-10-22/notes/old-new-boolean-completeness-and-rigidity-separation.md, Full Boolean Completeness at E and Consequence: ND + BC does not imply RC or IC"
+  }
+}

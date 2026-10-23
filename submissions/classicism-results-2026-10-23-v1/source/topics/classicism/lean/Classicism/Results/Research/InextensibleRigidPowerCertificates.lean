@@ -1,0 +1,9 @@
+import Classicism.Results.Research.InextensibleRigidPower
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Schema
+
+#classicism_audit Classicism.Results.Research.InextensibleRigidPower
+#classicism_types_audit Classicism.Results.Research.InextensibleRigidPower
+#classicism_certify Classicism.Research.InextensiblePower.nd_ic_rigidPower
+#print axioms Classicism.Research.InextensiblePower.nd_ic_rigidPower.rule

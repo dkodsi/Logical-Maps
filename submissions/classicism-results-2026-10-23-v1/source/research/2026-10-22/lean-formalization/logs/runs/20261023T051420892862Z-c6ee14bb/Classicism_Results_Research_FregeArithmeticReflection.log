@@ -1,0 +1,18 @@
+Classicism/Results/Research/FregeArithmeticReflection.lean:97:26: error: Application type mismatch: The argument
+  Env.nil
+has type
+  Env e []
+but is expected to have type
+  Env e (numCtx σ ?m.8)
+in the application
+  environment σ Env.nil
+'Classicism.Meta.Research.FregeArithmeticReflection.term_reflect' depends on axioms: [propext, Classicism.e, Quot.sound]
+'Classicism.Meta.Research.FregeArithmeticReflection.formula_reflect' depends on axioms: [propext,
+ Classical.choice,
+ Classicism.e,
+ Quot.sound]
+'Classicism.Meta.Research.FregeArithmeticReflection.sentence_reflect' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Classicism.e,
+ Quot.sound]

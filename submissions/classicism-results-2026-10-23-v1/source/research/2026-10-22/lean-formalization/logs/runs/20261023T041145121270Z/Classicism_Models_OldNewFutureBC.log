@@ -1,0 +1,9 @@
+Classicism/Models/OldNewFutureBC.lean:74:11: error: invalid 'by' tactic, expected type has not been provided
+Classicism/Models/OldNewFutureBC.lean:141:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  𝟙 ?m.28 ≫ ?f
+in the target expression
+  model.Holds (𝟙 E ≫ canon O) (P.BooleanCompleteness.quoted et) (model.push (canon O) IEnv.nil)
+
+hBC : model.HoldsSentence (Term.box (P.BooleanCompleteness.quoted et))
+hO : model.Holds (𝟙 E ≫ canon O) (P.BooleanCompleteness.quoted et) (model.push (canon O) IEnv.nil)
+⊢ False

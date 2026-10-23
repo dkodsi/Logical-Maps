@@ -1,0 +1,19 @@
+'Classicism.Meta.Research.MaxAtomicityRegularOpenCode.satisfies_regular' depends on axioms: [propext]
+'Classicism.Meta.Research.MaxAtomicityRegularOpenCode.satisfies_algebraCarrier' depends on axioms: [propext]
+'Classicism.Meta.Research.MaxAtomicityRegularOpenCode.satisfies_complementGraph' depends on axioms: [propext]
+'Classicism.Meta.Research.MaxAtomicityRegularOpenCode.satisfies_meetGraph' depends on axioms: [propext]
+'Classicism.Meta.Research.MaxAtomicityRegularOpenCode.pseudoLower_eq_compl' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityRegularOpenCode.PosetCoding.regular_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityRegularOpenCode.PosetCoding.regular_meet_iff_rep' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityRegularOpenCode.PosetCoding.regular_compl_iff_rep' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityRegularOpenCode.PosetCoding.regularEquiv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

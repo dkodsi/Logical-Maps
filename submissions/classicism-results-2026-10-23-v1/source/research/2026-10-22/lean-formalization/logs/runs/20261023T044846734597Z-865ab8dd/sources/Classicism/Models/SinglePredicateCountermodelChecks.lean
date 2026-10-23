@@ -1,0 +1,33 @@
+import Classicism.Models.SinglePredicateCountermodels
+
+/-! Ordinary metatheory checks for actual signature/model/schema certificates.
+No shallow gate applies to the external semantics proofs. A successful compiler
+run plus dependency inspection is required before calling these verified. -/
+
+#print axioms Classicism.Meta.FullPure.denote_pure_move
+#print axioms Classicism.Meta.FullPure.closed_pure_fixed
+#print axioms Classicism.Meta.SinglePredicateFull.signature_admitted
+#print axioms Classicism.Meta.SinglePredicateFull.bool_independence
+#print axioms Classicism.Meta.SinglePredicateFull.nat_independence
+#print axioms Classicism.Meta.FullExtensional.holds_atomicity
+#print axioms Classicism.Meta.FullExtensional.holds_extensionality
+#print axioms Classicism.Meta.FullExtensional.holds_C5
+#print axioms Classicism.Meta.FullExtensional.holds_boxedFunctionalChoice
+#print axioms Classicism.Meta.FullExtensional.bool_not_quantifiedInfinity_e
+#print axioms Classicism.Meta.FullExtensional.not_quantifiedInfinity_t
+#print axioms Classicism.Meta.FullExtensional.nat_quantifiedInfinity_e
+#print axioms Classicism.Meta.FullExtensional.nat_infinitySchema_e
+#print axioms Classicism.Meta.SinglePredicateFull.c5_independence_boxedChoice_consistent
+#print axioms Classicism.Meta.SinglePredicateFull.c5_independence_choice_consistent
+#print axioms Classicism.Meta.SinglePredicateFull.c5_atomic_independence_collapse_consistent
+#print axioms Classicism.Meta.SinglePredicateFull.c5_atomic_independence_noContingency_not_schemaInfinity_t
+#print axioms Classicism.Meta.SinglePredicateFull.c5_atomic_independence_intensionalChoice_not_schemaInfinity_t
+#print axioms Classicism.Meta.SinglePredicateFull.c5_atomic_independence_modalFreedom_not_schemaInfinity_t
+#print axioms Classicism.Meta.SinglePredicateFull.c5_atomic_independence_noContingency_not_quantifiedInfinity_t
+#print axioms Classicism.Meta.SinglePredicateFull.extensional_independence_infinity_consistent
+#print axioms Classicism.Meta.SinglePredicateFull.extensional_independence_schemaInfinity_consistent
+#print axioms Classicism.Meta.SinglePredicateFull.extensional_independence_choice_consistent
+#print axioms Classicism.Meta.SinglePredicateFull.extensional_independence_not_infinity
+#print axioms Classicism.Meta.SinglePredicateFull.extensional_independence_choice_not_infinity
+#print axioms Classicism.Meta.SinglePredicateFull.bool_complete_countermodel
+#print axioms Classicism.Meta.SinglePredicateFull.nat_complete_countermodel

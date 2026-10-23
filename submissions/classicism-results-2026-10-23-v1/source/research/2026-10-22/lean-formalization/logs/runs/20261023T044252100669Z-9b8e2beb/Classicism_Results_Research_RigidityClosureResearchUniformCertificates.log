@@ -1,0 +1,317 @@
+Classicism.Research.RigidityClosure.actualEvaluator_implies_nd: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.RigidityClosure.coext_common_source: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.RigidityClosure.evaluator_identity_obstruction: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.RigidityClosure.nd_rigid_comprehension_uniform: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.RigidityClosure.nd_weak_comprehension_uniform: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.RigidityClosure.rigid_comprehension_plenitude_uniform: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.RigidityClosure.uniform_rigid_implies_comprehension: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.RigidityClosure.uniform_rigid_implies_uniform_weak: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.RigidityClosure.uniform_rigid_t_implies_nd: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.RigidityClosure.uniform_weak_actual_evaluator_at: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.RigidityClosure.uniform_weak_implies_actuality: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.RigidityClosure.uniform_weak_implies_comprehension: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.RigidityClosure.uniform_weak_implies_nd: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.RigidityClosure.uniform_weak_t_actual_evaluator: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em])
+Classicism.Research.RigidityClosure.uniform_weak_t_implies_nd: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.RigidityClosure.weak_comprehension_plenitude_uniform: Classicism ✓ [C⁻] (axioms: [propext])
+#classicism_audit Classicism.Results.Research.RigidityClosureResearchUniform: 16/16 theorems pass; 16 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.RigidityClosureResearchUniform: 16/16 inside R
+Classicism.Research.RigidityClosure.UniformWeakRigidComprehension ⟶ Classicism.Research.RigidityClosure.UniformWeakRigidComprehension.schema:
+  fun τ' =>
+    Classicism.Meta.Term.exists'
+      (Classicism.Meta.Term.forall'
+        (Classicism.Meta.Term.conj
+          ((((Classicism.Meta.Term.inclR τ').app
+                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).app
+                ((Classicism.Meta.Term.boxR τ').app
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))).conj
+            (Classicism.Meta.Term.forall'
+              ((((Classicism.Meta.Term.inclR τ').app
+                        ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ))).app
+                    ((Classicism.Meta.Term.boxR τ').app (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).imp
+                (((Classicism.Meta.Term.inclR τ').app
+                        ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ))).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).box)))
+          (((Classicism.Meta.Term.coextR τ').app (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).app
+            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+              (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))))
+Classicism.Research.RigidityClosure.UniformRigidComprehension ⟶ Classicism.Research.RigidityClosure.UniformRigidComprehension.schema:
+  fun τ' =>
+    Classicism.Meta.Term.exists'
+      (Classicism.Meta.Term.forall'
+        (Classicism.Meta.Term.conj
+          (Classicism.Meta.Term.conj
+            (((Classicism.Meta.Term.inclR τ').app
+                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).app
+                ((Classicism.Meta.Term.boxR τ').app
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))).box
+            (Classicism.Meta.Term.box
+              (Classicism.Meta.Term.forall'
+                ((((Classicism.Meta.Term.inclR τ').app
+                          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ))).app
+                      ((Classicism.Meta.Term.boxR τ').app (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).imp
+                  (((Classicism.Meta.Term.inclR τ').app
+                          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ))).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).box))))
+          (((Classicism.Meta.Term.coextR τ').app (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).app
+            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+              (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))))
+Classicism.Research.RigidityClosure.actualEvaluator_implies_nd ⟶ Classicism.Research.RigidityClosure.actualEvaluator_implies_nd.derivable : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axiomsMinus
+    (Classicism.Meta.Term.forall'
+      (Classicism.Meta.Term.imp
+        (Classicism.Meta.Term.forall'
+          (Classicism.Meta.Term.conj
+            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).imp
+              (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).eq'
+                Classicism.Meta.Term.top))
+            (Classicism.Meta.Term.imp (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg
+              (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).eq'
+                Classicism.Meta.Term.bot))))
+        (Classicism.Meta.Term.forall'
+          (Classicism.Meta.Term.forall'
+            (Classicism.Meta.Term.imp
+              (Classicism.Meta.Term.neg
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).eq'
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))
+              (Classicism.Meta.Term.box
+                (Classicism.Meta.Term.neg
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).eq'
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))))))))
+derived ✓ in C⁻
+Classicism.Research.RigidityClosure.uniform_weak_actual_evaluator_at ⟶ Classicism.Research.RigidityClosure.uniform_weak_actual_evaluator_at.derivable : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axiomsMinus
+    (Classicism.Meta.Term.forall'
+      (Classicism.Meta.Term.imp
+        (Classicism.Meta.Term.exists'
+          (Classicism.Meta.Term.forall'
+            (Classicism.Meta.Term.conj
+              ((((Classicism.Meta.Term.lam
+                              (((Classicism.Meta.Term.lam
+                                            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).imp
+                                              (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).lam.app
+                                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).app
+                                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).forall').lam.app
+                        ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).app
+                    ((Classicism.Meta.Term.lam
+                            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).box).lam.app
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))).conj
+                (Classicism.Meta.Term.forall'
+                  ((((Classicism.Meta.Term.lam
+                                  (((Classicism.Meta.Term.lam
+                                                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).imp
+                                                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).lam.app
+                                          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).app
+                                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).forall').lam.app
+                            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                              (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ))).app
+                        ((Classicism.Meta.Term.lam
+                                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).box).lam.app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).imp
+                    (((Classicism.Meta.Term.lam
+                                  (((Classicism.Meta.Term.lam
+                                                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).imp
+                                                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).lam.app
+                                          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).app
+                                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).forall').lam.app
+                            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                              (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ))).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).box)))
+              (((Classicism.Meta.Term.lam
+                          (Classicism.Meta.Term.forall'
+                            (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).iff
+                              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))).lam.app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).app
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))))
+        (Classicism.Meta.Term.exists'
+          (Classicism.Meta.Term.forall'
+            (Classicism.Meta.Term.conj
+              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).imp
+                (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).eq'
+                  Classicism.Meta.Term.top))
+              (Classicism.Meta.Term.imp (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg
+                (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).eq'
+                  Classicism.Meta.Term.bot)))))))
+derived ✓ in C⁻
+Classicism.Research.RigidityClosure.uniform_weak_implies_comprehension ⟶ Classicism.Research.RigidityClosure.uniform_weak_implies_comprehension.rule : ∀
+  (τ' : Classicism.Meta.RTy),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.Research.RigidityClosure.UniformWeakRigidComprehension.quoted τ')
+      (Classicism.P.WeakRigidComprehension.quoted τ'))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.RigidityClosure.uniform_rigid_implies_comprehension ⟶ Classicism.Research.RigidityClosure.uniform_rigid_implies_comprehension.rule : ∀
+  (τ' : Classicism.Meta.RTy),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.Research.RigidityClosure.UniformRigidComprehension.quoted τ')
+      (Classicism.P.RigidComprehension.quoted τ'))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.RigidityClosure.nd_weak_comprehension_uniform ⟶ Classicism.Research.RigidityClosure.nd_weak_comprehension_uniform.rule : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp
+      (Classicism.P.NecessityOfDistinctness.quoted (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t))
+      (Classicism.Meta.Term.imp (Classicism.P.WeakRigidComprehension.quoted (σ' ⇒ Classicism.Meta.RTy.t))
+        (Classicism.Meta.Term.imp
+          (Classicism.P.WeakRigidComprehension.quoted
+            (Classicism.Meta.Ty.rel (σ' ⇒ Classicism.Meta.RTy.t) ⇒
+              Classicism.Meta.Ty.rel (σ' ⇒ Classicism.Meta.RTy.t) ⇒ Classicism.Meta.RTy.t))
+          (Classicism.Research.RigidityClosure.UniformWeakRigidComprehension.quoted (σ' ⇒ Classicism.Meta.RTy.t)))))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.RigidityClosure.nd_weak_comprehension_uniform ⟶ Classicism.Research.RigidityClosure.nd_weak_comprehension_uniform.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp
+      (Classicism.P.NecessityOfDistinctness.quoted (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t))
+      (Classicism.Meta.Term.imp (Classicism.P.WeakRigidComprehension.quoted (σs ⇒* Classicism.Meta.RTy.t))
+        (Classicism.Meta.Term.imp
+          (Classicism.P.WeakRigidComprehension.quoted
+            (Classicism.Meta.Ty.rel (σs ⇒* Classicism.Meta.RTy.t) ⇒
+              Classicism.Meta.Ty.rel (σs ⇒* Classicism.Meta.RTy.t) ⇒ Classicism.Meta.RTy.t))
+          (Classicism.Research.RigidityClosure.UniformWeakRigidComprehension.quoted (σs ⇒* Classicism.Meta.RTy.t)))))
+Classicism.Research.RigidityClosure.nd_rigid_comprehension_uniform ⟶ Classicism.Research.RigidityClosure.nd_rigid_comprehension_uniform.rule : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp
+      (Classicism.P.NecessityOfDistinctness.quoted (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t))
+      (Classicism.Meta.Term.imp (Classicism.P.RigidComprehension.quoted (σ' ⇒ Classicism.Meta.RTy.t))
+        (Classicism.Meta.Term.imp
+          (Classicism.P.RigidComprehension.quoted
+            (Classicism.Meta.Ty.rel (σ' ⇒ Classicism.Meta.RTy.t) ⇒
+              Classicism.Meta.Ty.rel (σ' ⇒ Classicism.Meta.RTy.t) ⇒ Classicism.Meta.RTy.t))
+          (Classicism.Research.RigidityClosure.UniformRigidComprehension.quoted (σ' ⇒ Classicism.Meta.RTy.t)))))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.RigidityClosure.nd_rigid_comprehension_uniform ⟶ Classicism.Research.RigidityClosure.nd_rigid_comprehension_uniform.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp
+      (Classicism.P.NecessityOfDistinctness.quoted (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t))
+      (Classicism.Meta.Term.imp (Classicism.P.RigidComprehension.quoted (σs ⇒* Classicism.Meta.RTy.t))
+        (Classicism.Meta.Term.imp
+          (Classicism.P.RigidComprehension.quoted
+            (Classicism.Meta.Ty.rel (σs ⇒* Classicism.Meta.RTy.t) ⇒
+              Classicism.Meta.Ty.rel (σs ⇒* Classicism.Meta.RTy.t) ⇒ Classicism.Meta.RTy.t))
+          (Classicism.Research.RigidityClosure.UniformRigidComprehension.quoted (σs ⇒* Classicism.Meta.RTy.t)))))
+Classicism.Research.RigidityClosure.uniform_weak_t_implies_nd ⟶ Classicism.Research.RigidityClosure.uniform_weak_t_implies_nd.rule : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp
+      (Classicism.Research.RigidityClosure.UniformWeakRigidComprehension.quoted Classicism.Meta.RTy.t)
+      (Classicism.P.NecessityOfDistinctness.quoted σ'))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.RigidityClosure.uniform_weak_t_implies_nd ⟶ Classicism.Research.RigidityClosure.uniform_weak_t_implies_nd.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp
+      (Classicism.Research.RigidityClosure.UniformWeakRigidComprehension.quoted Classicism.Meta.RTy.t)
+      (Classicism.P.NecessityOfDistinctness.listQuoted σs))
+Classicism.Research.RigidityClosure.uniform_rigid_t_implies_nd ⟶ Classicism.Research.RigidityClosure.uniform_rigid_t_implies_nd.rule : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp
+      (Classicism.Research.RigidityClosure.UniformRigidComprehension.quoted Classicism.Meta.RTy.t)
+      (Classicism.P.NecessityOfDistinctness.quoted σ'))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.RigidityClosure.uniform_rigid_t_implies_nd ⟶ Classicism.Research.RigidityClosure.uniform_rigid_t_implies_nd.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp
+      (Classicism.Research.RigidityClosure.UniformRigidComprehension.quoted Classicism.Meta.RTy.t)
+      (Classicism.P.NecessityOfDistinctness.listQuoted σs))
+Classicism.Research.RigidityClosure.uniform_weak_implies_comprehension ⟶ Classicism.Research.RigidityClosure.uniform_weak_implies_comprehension.entails : Classicism.Research.RigidityClosure.UniformWeakRigidComprehension.schema ⟹
+  Classicism.P.WeakRigidComprehension.schema
+Classicism.Research.RigidityClosure.uniform_rigid_implies_comprehension ⟶ Classicism.Research.RigidityClosure.uniform_rigid_implies_comprehension.entails : Classicism.Research.RigidityClosure.UniformRigidComprehension.schema ⟹
+  Classicism.P.RigidComprehension.schema
+Classicism.Research.RigidityClosure.nd_weak_comprehension_uniform ⟶ Classicism.Research.RigidityClosure.nd_weak_comprehension_uniform.entails : Classicism.P.NecessityOfDistinctness.schema ∪
+      Classicism.P.WeakRigidComprehension.schema ∪
+    Classicism.P.WeakRigidComprehension.schema ⟹
+  fun a =>
+  ∃ σ',
+    σ'.Closed ∧
+      a = Classicism.Research.RigidityClosure.UniformWeakRigidComprehension.quoted (σ' ⇒ Classicism.Meta.RTy.t)
+Classicism.Research.RigidityClosure.nd_weak_comprehension_uniform ⟶ Classicism.Research.RigidityClosure.nd_weak_comprehension_uniform.listEntails : Classicism.P.NecessityOfDistinctness.schema ∪
+      Classicism.P.WeakRigidComprehension.schema ∪
+    Classicism.P.WeakRigidComprehension.schema ⟹
+  fun a =>
+  ∃ σs,
+    Classicism.Meta.Ty.AllClosed σs ∧
+      a = Classicism.Research.RigidityClosure.UniformWeakRigidComprehension.quoted (σs ⇒* Classicism.Meta.RTy.t)
+Classicism.Research.RigidityClosure.nd_rigid_comprehension_uniform ⟶ Classicism.Research.RigidityClosure.nd_rigid_comprehension_uniform.entails : Classicism.P.NecessityOfDistinctness.schema ∪
+      Classicism.P.RigidComprehension.schema ∪
+    Classicism.P.RigidComprehension.schema ⟹
+  fun a =>
+  ∃ σ',
+    σ'.Closed ∧ a = Classicism.Research.RigidityClosure.UniformRigidComprehension.quoted (σ' ⇒ Classicism.Meta.RTy.t)
+Classicism.Research.RigidityClosure.nd_rigid_comprehension_uniform ⟶ Classicism.Research.RigidityClosure.nd_rigid_comprehension_uniform.listEntails : Classicism.P.NecessityOfDistinctness.schema ∪
+      Classicism.P.RigidComprehension.schema ∪
+    Classicism.P.RigidComprehension.schema ⟹
+  fun a =>
+  ∃ σs,
+    Classicism.Meta.Ty.AllClosed σs ∧
+      a = Classicism.Research.RigidityClosure.UniformRigidComprehension.quoted (σs ⇒* Classicism.Meta.RTy.t)
+Classicism.Research.RigidityClosure.uniform_weak_t_implies_nd ⟶ Classicism.Research.RigidityClosure.uniform_weak_t_implies_nd.entails : Classicism.Research.RigidityClosure.UniformWeakRigidComprehension.schema ⟹
+  Classicism.P.NecessityOfDistinctness.schema
+Classicism.Research.RigidityClosure.uniform_weak_t_implies_nd ⟶ Classicism.Research.RigidityClosure.uniform_weak_t_implies_nd.listEntails : Classicism.Research.RigidityClosure.UniformWeakRigidComprehension.schema ⟹
+  Classicism.P.NecessityOfDistinctness.listSchema
+Classicism.Research.RigidityClosure.uniform_rigid_t_implies_nd ⟶ Classicism.Research.RigidityClosure.uniform_rigid_t_implies_nd.entails : Classicism.Research.RigidityClosure.UniformRigidComprehension.schema ⟹
+  Classicism.P.NecessityOfDistinctness.schema
+Classicism.Research.RigidityClosure.uniform_rigid_t_implies_nd ⟶ Classicism.Research.RigidityClosure.uniform_rigid_t_implies_nd.listEntails : Classicism.Research.RigidityClosure.UniformRigidComprehension.schema ⟹
+  Classicism.P.NecessityOfDistinctness.listSchema
+Classicism.Research.RigidityClosure.nd_weak_comprehension_uniform.listRule (σs : List Classicism.Meta.Ty) :
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp
+      (Classicism.P.NecessityOfDistinctness.quoted (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t))
+      (Classicism.Meta.Term.imp (Classicism.P.WeakRigidComprehension.quoted (σs ⇒* Classicism.Meta.RTy.t))
+        (Classicism.Meta.Term.imp
+          (Classicism.P.WeakRigidComprehension.quoted
+            (Classicism.Meta.Ty.rel (σs ⇒* Classicism.Meta.RTy.t) ⇒
+              Classicism.Meta.Ty.rel (σs ⇒* Classicism.Meta.RTy.t) ⇒ Classicism.Meta.RTy.t))
+          (Classicism.Research.RigidityClosure.UniformWeakRigidComprehension.quoted (σs ⇒* Classicism.Meta.RTy.t)))))
+Classicism.Research.RigidityClosure.nd_rigid_comprehension_uniform.listRule (σs : List Classicism.Meta.Ty) :
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp
+      (Classicism.P.NecessityOfDistinctness.quoted (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t))
+      (Classicism.Meta.Term.imp (Classicism.P.RigidComprehension.quoted (σs ⇒* Classicism.Meta.RTy.t))
+        (Classicism.Meta.Term.imp
+          (Classicism.P.RigidComprehension.quoted
+            (Classicism.Meta.Ty.rel (σs ⇒* Classicism.Meta.RTy.t) ⇒
+              Classicism.Meta.Ty.rel (σs ⇒* Classicism.Meta.RTy.t) ⇒ Classicism.Meta.RTy.t))
+          (Classicism.Research.RigidityClosure.UniformRigidComprehension.quoted (σs ⇒* Classicism.Meta.RTy.t)))))
+'Classicism.Research.RigidityClosure.nd_weak_comprehension_uniform.listRule' depends on axioms: [propext, Quot.sound]

@@ -1,0 +1,201 @@
+StrongPossibilityConsequencesSchemas.lean:60:4: error: Tactic `rfl` failed: The left-hand side
+  ((Term.or.app
+            (Term.not.app
+              (Term.not.app
+                ((Term.ex (Ty.rel RTy.t)).app
+                  ((Term.and.app (Term.var Var.zero)).app
+                      (((Term.eq (Ty.rel RTy.t)).app
+                            ((Term.or.app
+                                  (Term.not.app
+                                    (Term.not.app
+                                      (((Term.eq (Ty.rel RTy.t)).app (Term.var Var.zero)).app
+                                        ((Term.and.app ((Term.all (Ty.rel RTy.t)).app (Term.var Var.zero).lam)).app
+                                          (Term.not.app
+                                            ((Term.all (Ty.rel RTy.t)).app (Term.var Var.zero).lam))))))).app
+                              (Term.not.app
+                                (Term.not.app
+                                  ((Term.ex (Ty.rel RTy.t)).app
+                                    ((Term.and.app (Term.var Var.zero)).app
+                                        (((Term.eq (Ty.rel RTy.t)).app
+                                              ((Term.or.app
+                                                    (Term.not.app
+                                                      (Term.not.app
+                                                        (((Term.eq (Ty.rel RTy.t)).app (Term.var Var.zero)).app
+                                                          ((Term.and.app
+                                                                ((Term.all (Ty.rel RTy.t)).app
+                                                                  (Term.var Var.zero).lam)).app
+                                                            (Term.not.app
+                                                              ((Term.all (Ty.rel RTy.t)).app
+                                                                (Term.var Var.zero).lam))))))).app
+                                                (Term.not.app (Term.var Var.zero.succ.succ)))).app
+                                          ((Term.or.app ((Term.all (Ty.rel RTy.t)).app (Term.var Var.zero).lam)).app
+                                            (Term.not.app
+                                              ((Term.all (Ty.rel RTy.t)).app (Term.var Var.zero).lam))))).lam))))).app
+                        ((Term.or.app ((Term.all (Ty.rel RTy.t)).app (Term.var Var.zero).lam)).app
+                          (Term.not.app ((Term.all (Ty.rel RTy.t)).app (Term.var Var.zero).lam))))).lam)))).app
+        (Term.not.app
+          ((Term.ex (Ty.rel RTy.t)).app
+            ((Term.and.app (Term.var Var.zero)).app
+                (((Term.eq (Ty.rel RTy.t)).app
+                      ((Term.or.app
+                            (Term.not.app
+                              (Term.not.app
+                                (((Term.eq (Ty.rel RTy.t)).app (Term.var Var.zero)).app
+                                  ((Term.and.app ((Term.all (Ty.rel RTy.t)).app (Term.var Var.zero).lam)).app
+                                    (Term.not.app ((Term.all (Ty.rel RTy.t)).app (Term.var Var.zero).lam))))))).app
+                        (Term.not.app (Term.var Var.zero.succ)))).app
+                  ((Term.or.app ((Term.all (Ty.rel RTy.t)).app (Term.var Var.zero).lam)).app
+                    (Term.not.app ((Term.all (Ty.rel RTy.t)).app (Term.var Var.zero).lam))))).lam))).instantiate
+    p
+is not definitionally equal to the right-hand side
+  (Term.not.app
+        (Term.not.app
+          ((Term.ex Ty.t).app
+            ((Term.and.app Term.v0).app
+                (Term.eq'
+                  ((Term.not.app (Term.not.app (Term.v0.eq' Term.bot))).disj
+                    (Term.not.app
+                      (Term.not.app
+                        ((Term.ex Ty.t).app
+                          ((Term.and.app (Term.var (Ren.shift.lift (Ty.rel RTy.t) Var.zero))).app
+                              (((Term.eq (Ty.rel RTy.t)).app
+                                    ((Term.or.app
+                                          (Term.not.app
+                                            (Term.not.app
+                                              (((Term.eq (Ty.rel RTy.t)).app
+                                                    (Term.var (Ren.shift.lift (Ty.rel RTy.t) Var.zero))).app
+                                                ((Term.and.app
+                                                      ((Term.all (Ty.rel RTy.t)).app
+                                                        (Term.var
+                                                            (Ren.shift.lift.lift (Ty.rel RTy.t) Var.zero)).lam)).app
+                                                  (Term.not.app
+                                                    ((Term.all (Ty.rel RTy.t)).app
+                                                      (Term.var
+                                                          (Ren.shift.lift.lift (Ty.rel RTy.t) Var.zero)).lam))))))).app
+                                      (Term.not.app (Term.rename (Ren.shift.lift.comp Ren.shift) p)))).app
+                                ((Term.or.app
+                                      ((Term.all (Ty.rel RTy.t)).app
+                                        (Term.var (Ren.shift.lift.lift (Ty.rel RTy.t) Var.zero)).lam)).app
+                                  (Term.not.app
+                                    ((Term.all (Ty.rel RTy.t)).app
+                                      (Term.var (Ren.shift.lift.lift (Ty.rel RTy.t) Var.zero)).lam))))).lam))))
+                  Term.top)).lam))).disj
+    (Term.not.app
+      ((Term.ex Ty.t).app
+        ((Term.and.app Term.v0).app
+            (Term.eq'
+              ((Term.not.app (Term.not.app (Term.v0.eq' Term.bot))).disj (Term.not.app (Term.rename Ren.shift p)))
+              Term.top)).lam))
+
+Sig : Signature
+p : Sentence Sig
+h :
+  Derivable C.axiomsMinus []
+    ((Term.rec (fun {Γ} {σ} v => Term.var v) (fun {Γ} c => Empty.elim c) (fun {Γ} {σ} {ρ} x x_1 f a => f.app a)
+          (fun {Γ} {σ} {ρ} x b => b.lam) (fun {Γ} => Term.and) (fun {Γ} => Term.or) (fun {Γ} => Term.not)
+          (fun {Γ} σ => Term.all σ) (fun {Γ} σ => Term.ex σ) (fun {Γ} σ => Term.eq σ) (fun {Γ} ρ => Term.constR ρ)
+          (fun {Γ} ρ => Term.negR ρ) (fun {Γ} ρ => Term.andR ρ) (fun {Γ} ρ => Term.orR ρ) (fun {Γ} ρ => Term.coextR ρ)
+          (fun {Γ} ρ => Term.boxR ρ) (fun {Γ} ρ => Term.inclR ρ)
+          (Term.imp
+            (Term.neg
+              (Term.exists'
+                ((Term.var Var.zero).conj
+                  (Term.box
+                    (Term.imp (Term.var Var.zero).dia
+                      (Term.neg
+                        (Term.neg
+                          (Term.exists'
+                            ((Term.var Var.zero).conj
+                              (Term.box (Term.imp (Term.var Var.zero).dia (Term.var Var.zero.succ.succ).neg)))))))))))
+            (Term.neg
+              (Term.exists'
+                ((Term.var Var.zero).conj
+                  (Term.box (Term.imp (Term.var Var.zero).dia (Term.var Var.zero.succ).neg))))))).instantiate
+      p)
+⊢ ((Term.or.app
+              (Term.not.app
+                (Term.not.app
+                  ((Term.ex (Ty.rel RTy.t)).app
+                    ((Term.and.app (Term.var Var.zero)).app
+                        (((Term.eq (Ty.rel RTy.t)).app
+                              ((Term.or.app
+                                    (Term.not.app
+                                      (Term.not.app
+                                        (((Term.eq (Ty.rel RTy.t)).app (Term.var Var.zero)).app
+                                          ((Term.and.app ((Term.all (Ty.rel RTy.t)).app (Term.var Var.zero).lam)).app
+                                            (Term.not.app
+                                              ((Term.all (Ty.rel RTy.t)).app (Term.var Var.zero).lam))))))).app
+                                (Term.not.app
+                                  (Term.not.app
+                                    ((Term.ex (Ty.rel RTy.t)).app
+                                      ((Term.and.app (Term.var Var.zero)).app
+                                          (((Term.eq (Ty.rel RTy.t)).app
+                                                ((Term.or.app
+                                                      (Term.not.app
+                                                        (Term.not.app
+                                                          (((Term.eq (Ty.rel RTy.t)).app (Term.var Var.zero)).app
+                                                            ((Term.and.app
+                                                                  ((Term.all (Ty.rel RTy.t)).app
+                                                                    (Term.var Var.zero).lam)).app
+                                                              (Term.not.app
+                                                                ((Term.all (Ty.rel RTy.t)).app
+                                                                  (Term.var Var.zero).lam))))))).app
+                                                  (Term.not.app (Term.var Var.zero.succ.succ)))).app
+                                            ((Term.or.app ((Term.all (Ty.rel RTy.t)).app (Term.var Var.zero).lam)).app
+                                              (Term.not.app
+                                                ((Term.all (Ty.rel RTy.t)).app (Term.var Var.zero).lam))))).lam))))).app
+                          ((Term.or.app ((Term.all (Ty.rel RTy.t)).app (Term.var Var.zero).lam)).app
+                            (Term.not.app ((Term.all (Ty.rel RTy.t)).app (Term.var Var.zero).lam))))).lam)))).app
+          (Term.not.app
+            ((Term.ex (Ty.rel RTy.t)).app
+              ((Term.and.app (Term.var Var.zero)).app
+                  (((Term.eq (Ty.rel RTy.t)).app
+                        ((Term.or.app
+                              (Term.not.app
+                                (Term.not.app
+                                  (((Term.eq (Ty.rel RTy.t)).app (Term.var Var.zero)).app
+                                    ((Term.and.app ((Term.all (Ty.rel RTy.t)).app (Term.var Var.zero).lam)).app
+                                      (Term.not.app ((Term.all (Ty.rel RTy.t)).app (Term.var Var.zero).lam))))))).app
+                          (Term.not.app (Term.var Var.zero.succ)))).app
+                    ((Term.or.app ((Term.all (Ty.rel RTy.t)).app (Term.var Var.zero).lam)).app
+                      (Term.not.app ((Term.all (Ty.rel RTy.t)).app (Term.var Var.zero).lam))))).lam))).instantiate
+      p =
+    (Term.not.app
+          (Term.not.app
+            ((Term.ex Ty.t).app
+              ((Term.and.app Term.v0).app
+                  (Term.eq'
+                    ((Term.not.app (Term.not.app (Term.v0.eq' Term.bot))).disj
+                      (Term.not.app
+                        (Term.not.app
+                          ((Term.ex Ty.t).app
+                            ((Term.and.app (Term.var (Ren.shift.lift (Ty.rel RTy.t) Var.zero))).app
+                                (((Term.eq (Ty.rel RTy.t)).app
+                                      ((Term.or.app
+                                            (Term.not.app
+                                              (Term.not.app
+                                                (((Term.eq (Ty.rel RTy.t)).app
+                                                      (Term.var (Ren.shift.lift (Ty.rel RTy.t) Var.zero))).app
+                                                  ((Term.and.app
+                                                        ((Term.all (Ty.rel RTy.t)).app
+                                                          (Term.var
+                                                              (Ren.shift.lift.lift (Ty.rel RTy.t) Var.zero)).lam)).app
+                                                    (Term.not.app
+                                                      ((Term.all (Ty.rel RTy.t)).app
+                                                        (Term.var
+                                                            (Ren.shift.lift.lift (Ty.rel RTy.t)
+                                                              Var.zero)).lam))))))).app
+                                        (Term.not.app (Term.rename (Ren.shift.lift.comp Ren.shift) p)))).app
+                                  ((Term.or.app
+                                        ((Term.all (Ty.rel RTy.t)).app
+                                          (Term.var (Ren.shift.lift.lift (Ty.rel RTy.t) Var.zero)).lam)).app
+                                    (Term.not.app
+                                      ((Term.all (Ty.rel RTy.t)).app
+                                        (Term.var (Ren.shift.lift.lift (Ty.rel RTy.t) Var.zero)).lam))))).lam))))
+                    Term.top)).lam))).disj
+      (Term.not.app
+        ((Term.ex Ty.t).app
+          ((Term.and.app Term.v0).app
+              (Term.eq'
+                ((Term.not.app (Term.not.app (Term.v0.eq' Term.bot))).disj (Term.not.app (Term.rename Ren.shift p)))
+                Term.top)).lam))

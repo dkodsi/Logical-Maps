@@ -1,0 +1,24 @@
+Classicism/Results/Research/FregeInfinity.lean:38:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.frege_outside_of_not_universal`:
+  [Ty σ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Ty σ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/FregeInfinity.lean:65:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.frege_realized_ne_bottom`:
+  [Ty σ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Ty σ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/FregeInfinity.lean:123:47: warning: Variable name `X` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _X
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Classicism/Results/Research/FregeInfinity.lean:127:47: warning: Variable name `X` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _X
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

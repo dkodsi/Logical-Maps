@@ -1,0 +1,102 @@
+Classicism.Research.WorldRepresentation.actualWorld_of_true_atom: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.WorldRepresentation.at_all: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.WorldRepresentation.at_and: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.WorldRepresentation.at_box: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.WorldRepresentation.at_constant: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.WorldRepresentation.at_current: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.WorldRepresentation.at_identity: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.WorldRepresentation.at_neg: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.WorldRepresentation.at_or: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.WorldRepresentation.at_or_step: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.WorldRepresentation.at_transport: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.WorldRepresentation.at_true: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.WorldRepresentation.atom_necessary: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.WorldRepresentation.atom_possible: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.WorldRepresentation.atomic_coverage: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.WorldRepresentation.atoms_persistent: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.WorldRepresentation.binary_inextensible: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.WorldRepresentation.binary_weakly_inextensible: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.WorldRepresentation.decode_at_true_atom: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.WorldRepresentation.decode_encode: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.WorldRepresentation.decode_encode_current: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.WorldRepresentation.encode_admissible: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.WorldRepresentation.encode_below: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.WorldRepresentation.encode_bottom: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.WorldRepresentation.encode_decode: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.WorldRepresentation.encode_decode_current: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.WorldRepresentation.encode_injective: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.WorldRepresentation.encode_join: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.WorldRepresentation.encode_meet: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.WorldRepresentation.encode_neg: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.WorldRepresentation.encode_persistent: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.WorldRepresentation.encode_top: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.WorldRepresentation.encode_weakly_persistent: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.WorldRepresentation.necessary_plenitude_representation: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.WorldRepresentation.not_at_false: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.WorldRepresentation.persistent_negative: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.WorldRepresentation.rigid_ext: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.WorldRepresentation.true_atom_unique: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+#classicism_audit Classicism.Results.Research.WorldRepresentation: 38/38 theorems pass; 38 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.WorldRepresentation: 38/38 inside R
+Classicism.Results.Research.WorldRepresentation: 38 of 38 theorems derived
+
+[1/38] Classicism.Research.WorldRepresentation.actualWorld_of_true_atom ✓ 30 ms
+[2/38] Classicism.Research.WorldRepresentation.at_all ✓ 59 ms
+[3/38] Classicism.Research.WorldRepresentation.at_and ✓ 50 ms
+[4/38] Classicism.Research.WorldRepresentation.at_box ✓ 267 ms
+[5/38] Classicism.Research.WorldRepresentation.at_constant ✓ 0 ms
+[6/38] Classicism.Research.WorldRepresentation.at_current ✓ 0 ms
+[7/38] Classicism.Research.WorldRepresentation.at_identity ✓ 47 ms
+[8/38] Classicism.Research.WorldRepresentation.at_neg ✓ 19 ms
+[9/38] Classicism.Research.WorldRepresentation.at_or ✓ 70 ms
+[10/38] Classicism.Research.WorldRepresentation.at_or_step ✓ 0 ms
+[11/38] Classicism.Research.WorldRepresentation.at_transport ✓ 39 ms
+[12/38] Classicism.Research.WorldRepresentation.at_true ✓ 6 ms
+[13/38] Classicism.Research.WorldRepresentation.atom_necessary ✓ 235 ms
+[14/38] Classicism.Research.WorldRepresentation.atom_possible ✓ 0 ms
+[15/38] Classicism.Research.WorldRepresentation.atomic_coverage ✓ 0 ms
+[16/38] Classicism.Research.WorldRepresentation.atoms_persistent ✓ 51 ms
+[17/38] Classicism.Research.WorldRepresentation.binary_inextensible ✓ 567 ms
+[18/38] Classicism.Research.WorldRepresentation.binary_weakly_inextensible ✓ 0 ms
+[19/38] Classicism.Research.WorldRepresentation.decode_at_true_atom ✓ 109 ms
+[20/38] Classicism.Research.WorldRepresentation.decode_encode ✓ 127 ms
+[21/38] Classicism.Research.WorldRepresentation.decode_encode_current ✓ 0 ms
+[22/38] Classicism.Research.WorldRepresentation.encode_admissible ✓ 228 ms
+[23/38] Classicism.Research.WorldRepresentation.encode_below ✓ 0 ms
+[24/38] Classicism.Research.WorldRepresentation.encode_bottom ✓ 63 ms
+[25/38] Classicism.Research.WorldRepresentation.encode_decode ✓ 1267 ms
+[26/38] Classicism.Research.WorldRepresentation.encode_decode_current ✓ 0 ms
+[27/38] Classicism.Research.WorldRepresentation.encode_injective ✓ 72 ms
+[28/38] Classicism.Research.WorldRepresentation.encode_join ✓ 167 ms
+[29/38] Classicism.Research.WorldRepresentation.encode_meet ✓ 147 ms
+[30/38] Classicism.Research.WorldRepresentation.encode_neg ✓ 169 ms
+[31/38] Classicism.Research.WorldRepresentation.encode_persistent ✓ 0 ms
+[32/38] Classicism.Research.WorldRepresentation.encode_top ✓ 54 ms
+[33/38] Classicism.Research.WorldRepresentation.encode_weakly_persistent ✓ 0 ms
+[34/38] Classicism.Research.WorldRepresentation.necessary_plenitude_representation ✓ 421 ms
+[35/38] Classicism.Research.WorldRepresentation.not_at_false ✓ 0 ms
+[36/38] Classicism.Research.WorldRepresentation.persistent_negative ✓ 0 ms
+[37/38] Classicism.Research.WorldRepresentation.rigid_ext ✓ 0 ms
+[38/38] Classicism.Research.WorldRepresentation.true_atom_unique ✓ 0 ms
+'Classicism.Research.WorldRepresentation.encode_decode.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.WorldRepresentation.decode_encode.derivable' depends on axioms: [propext, Quot.sound]

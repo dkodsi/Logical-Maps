@@ -1,0 +1,99 @@
+{
+  "mathlib_revision": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "compiler": "/tmp/classicism-lean-toolchain/lean-4.33.1-darwin_aarch64/bin/lean",
+  "precompiled_roots": [
+    "/tmp/classicism-mathlib/.lake/build/lib/lean",
+    "/tmp/classicism-mathlib/.lake/packages/plausible/.lake/build/lib/lean",
+    "/tmp/classicism-mathlib/.lake/packages/proofwidgets/.lake/build/lib/lean",
+    "/tmp/classicism-mathlib/.lake/packages/batteries/.lake/build/lib/lean",
+    "/tmp/classicism-mathlib/.lake/packages/aesop/.lake/build/lib/lean",
+    "/tmp/classicism-mathlib/.lake/packages/importGraph/.lake/build/lib/lean",
+    "/tmp/classicism-mathlib/.lake/packages/LeanSearchClient/.lake/build/lib/lean",
+    "/tmp/classicism-mathlib/.lake/packages/Qq/.lake/build/lib/lean"
+  ],
+  "requested_roots": [
+    "Mathlib.Algebra.Group.Action.Defs",
+    "Mathlib.Algebra.Group.Action.End",
+    "Mathlib.Algebra.Group.Action.Faithful",
+    "Mathlib.Algebra.Group.Even",
+    "Mathlib.Algebra.Group.Nat.Even",
+    "Mathlib.Algebra.Group.Submonoid.MulAction",
+    "Mathlib.Algebra.Order.Group.Nat",
+    "Mathlib.CategoryTheory.Functor.Basic",
+    "Mathlib.CategoryTheory.Groupoid.Basic",
+    "Mathlib.CategoryTheory.SingleObj",
+    "Mathlib.CategoryTheory.Types.Basic",
+    "Mathlib.Data.Fintype.Card",
+    "Mathlib.Data.List.OfFn",
+    "Mathlib.Data.Nat.Nth",
+    "Mathlib.Data.Set.Basic",
+    "Mathlib.Data.Set.Card",
+    "Mathlib.Data.Set.Finite.Basic",
+    "Mathlib.Data.Set.Finite.Lattice",
+    "Mathlib.Logic.Equiv.Nat",
+    "Mathlib.Logic.Equiv.Set",
+    "Mathlib.Order.CompleteBooleanAlgebra",
+    "Mathlib.Order.Monotone.Basic",
+    "Mathlib.SetTheory.Cardinal.NatCard"
+  ],
+  "cached_module_count": 1028,
+  "downloaded_source_pins": [
+    {
+      "name": "plausible",
+      "rev": "b7eb3304aeae834b12dda98993a37f6a41f6f0bb",
+      "url": "https://codeload.github.com/leanprover-community/plausible/tar.gz/b7eb3304aeae834b12dda98993a37f6a41f6f0bb",
+      "archive_sha256": "87803609f486ebaa9c65484982df3ea1dbf6e4dc489f57fb90a512d89a1c5d43",
+      "path": "/tmp/classicism-mathlib/.lake/packages/plausible"
+    },
+    {
+      "name": "LeanSearchClient",
+      "rev": "5f4d51b81cbd3f6b32b156bfad9056621a040404",
+      "url": "https://codeload.github.com/leanprover-community/LeanSearchClient/tar.gz/5f4d51b81cbd3f6b32b156bfad9056621a040404",
+      "archive_sha256": "c2ab5c8f1f784ce6d6db5bca2fc9c17ba546964c46e72e3a4c04d76950482f31",
+      "path": "/tmp/classicism-mathlib/.lake/packages/LeanSearchClient"
+    },
+    {
+      "name": "importGraph",
+      "rev": "16f02aa7642864af59f1ff0e384a015994db9118",
+      "url": "https://codeload.github.com/leanprover-community/import-graph/tar.gz/16f02aa7642864af59f1ff0e384a015994db9118",
+      "archive_sha256": "38c89aeb92ea23d97b837ddb94952e5bdaa96f1fa6b5947a826e863a42d28ee3",
+      "path": "/tmp/classicism-mathlib/.lake/packages/importGraph"
+    },
+    {
+      "name": "proofwidgets",
+      "rev": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957",
+      "url": "https://codeload.github.com/leanprover-community/ProofWidgets4/tar.gz/4be2e3d5087eeb272cf5a8853b8f9dd025ef5957",
+      "archive_sha256": "f8163e84efa0def5d9e67adf7ae20c158372d484b39471ae6ac2d41b45a5d913",
+      "path": "/tmp/classicism-mathlib/.lake/packages/proofwidgets"
+    },
+    {
+      "name": "aesop",
+      "rev": "3448c0bcc5ce01b2d1546e483ec3620e32df3d0e",
+      "url": "https://codeload.github.com/leanprover-community/aesop/tar.gz/3448c0bcc5ce01b2d1546e483ec3620e32df3d0e",
+      "archive_sha256": "631f56cc06bbee196bdd4611b54751c18a28139ffbfc23f2301f25cc27ee0179",
+      "path": "/tmp/classicism-mathlib/.lake/packages/aesop"
+    },
+    {
+      "name": "Qq",
+      "rev": "92c15be17b7caf78c2ad767ec40f89052d908d81",
+      "url": "https://codeload.github.com/leanprover-community/quote4/tar.gz/92c15be17b7caf78c2ad767ec40f89052d908d81",
+      "archive_sha256": "dc91b0aa60373eb486c1144859384f51ea829074fc91d741d1bf93879828ddce",
+      "path": "/tmp/classicism-mathlib/.lake/packages/Qq"
+    },
+    {
+      "name": "batteries",
+      "rev": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d",
+      "url": "https://codeload.github.com/leanprover-community/batteries/tar.gz/4488d40d070b9700d4d5a6aa342f0d40c31b2a2d",
+      "archive_sha256": "34dbf9bdf569593df8aaa740b513565b4c47d87a84758b19dd287d6744ab6725",
+      "path": "/tmp/classicism-mathlib/.lake/packages/batteries"
+    },
+    {
+      "name": "Cli",
+      "rev": "6130a47896ce867c6a4a55373441e59e565bad0f",
+      "url": "https://codeload.github.com/leanprover/lean4-cli/tar.gz/6130a47896ce867c6a4a55373441e59e565bad0f",
+      "archive_sha256": "a9327b57e2bf81f132612804ec835277e523f02648a8265c6911aa3b031caa46",
+      "path": "/tmp/classicism-mathlib/.lake/packages/Cli"
+    }
+  ],
+  "mathlib_source_archive_sha256": "4906567b829fea7e354022c603aeebead7dd2f4ad1a39a91cc42ffae5de46326"
+}

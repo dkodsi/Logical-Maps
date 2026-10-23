@@ -1,0 +1,4 @@
+import Classicism.Results.Research.ModalPropagationCertificates.BoxedBarcan
+
+#classicism_certify Classicism.Research.ModalPropagationConsequences.sl_rc_necessary_comprehension
+#classicism_entails Classicism.Research.ModalPropagationConsequences.sl_rc_necessary_comprehension

@@ -1,0 +1,25 @@
+import Classicism.Results.Research.AtomicProbabilitySupportedReals
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Schema
+
+#classicism_audit Classicism.Results.Research.AtomicProbabilitySupportedReals
+#classicism_types_audit Classicism.Results.Research.AtomicProbabilitySupportedReals
+
+#classicism_derive Classicism.Research.ProbabilitySupportedReals.reals_supported
+  Classicism.Research.ProbabilitySupportedReals.reals_current
+  Classicism.Research.ProbabilitySupportedReals.baseSupport_supported
+  Classicism.Research.ProbabilitySupportedReals.realCode_supported
+  Classicism.Research.ProbabilitySupportedReals.realCode_extensional
+  Classicism.Research.ProbabilitySupportedReals.supremum_below
+  Classicism.Research.ProbabilitySupportedReals.supremum_current
+  Classicism.Research.ProbabilitySupportedReals.supremum_is_real
+  Classicism.Research.ProbabilitySupportedReals.supremum_is_lub
+  Classicism.Research.ProbabilitySupportedReals.real_lub_unique
+  Classicism.Research.ProbabilitySupportedReals.represented_real_supremum
+  Classicism.Research.ProbabilitySupportedReals.supGraph_supported
+  Classicism.Research.ProbabilitySupportedReals.supGraph_total_unique
+  Classicism.Research.ProbabilitySupportedReals.real_order_iff
+
+#print axioms Classicism.Research.ProbabilitySupportedReals.represented_real_supremum.derivable
+#print axioms Classicism.Research.ProbabilitySupportedReals.supGraph_total_unique.derivable

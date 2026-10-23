@@ -1,0 +1,20 @@
+import Classicism.Results.Research.AtomicProbabilityConcreteRealAddition
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Schema
+
+#classicism_audit Classicism.Results.Research.AtomicProbabilityConcreteRealAddition
+#classicism_types_audit Classicism.Results.Research.AtomicProbabilityConcreteRealAddition
+
+#classicism_derive Classicism.Research.ProbabilityConcreteReals.realAdd_below
+  Classicism.Research.ProbabilityConcreteReals.realAdd_supported
+  Classicism.Research.ProbabilityConcreteReals.member_below_nonmember
+  Classicism.Research.ProbabilityConcreteReals.realAdd_in_field
+  Classicism.Research.ProbabilityConcreteReals.realAdd_comm
+  Classicism.Research.ProbabilityConcreteReals.realAdd_assoc
+  Classicism.Research.ProbabilityConcreteReals.realAdd_mono
+  Classicism.Research.ProbabilityConcreteReals.realAdd_zero_right
+  Classicism.Research.ProbabilityConcreteReals.realAdd_zero_left
+  Classicism.Research.ProbabilityConcreteReals.realAdd_sup_left
+
+#print axioms Classicism.Research.ProbabilityConcreteReals.realAdd_sup_left.derivable

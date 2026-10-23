@@ -1,0 +1,169 @@
+Classicism/Models/NominalSubstitution.lean:32:12: warning: Variable name `η` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _η
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Classicism/Models/NominalSubstitution.lean:32:15: warning: Variable name `θ` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _θ
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Classicism/Models/NominalSubstitution.lean:65:31: error: unsolved goals
+G : Type
+inst✝ : Group G
+A : Action G
+I : SupportIdeal A
+W : Nom A I
+Sig : Signature
+C : FixedConstants W Sig
+x✝¹ x✝ : Ctx
+r : Ren x✝¹ x✝
+σ✝ : Ty
+ρ✝ : RTy
+f : Term Sig x✝¹ (Ty.rel (σ✝ ⇒ ρ✝))
+x : Term Sig x✝¹ σ✝
+η : (env W x✝).obj.Carrier
+⊢ ↑((denote W C f).fn (pullRen W r η)) ((denote W C x).fn (pullRen W r η)) =
+    ↑((denote W C f).fn (pullRen W r η)) ((denote W C x).fn (pullRen W r η))
+Classicism/Models/NominalSubstitution.lean:71:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (denote W C (Term.rename ?r ?t)).fn ?η
+in the target expression
+  (denote W C (Term.rename r.lift b)).fn (x, η) = ↑((denote W C b.lam).fn (pullRen W r η)) x
+
+G : Type
+inst✝ : Group G
+A : Action G
+I : SupportIdeal A
+W : Nom A I
+Sig : Signature
+C : FixedConstants W Sig
+x✝¹ x✝ : Ctx
+r : Ren x✝¹ x✝
+σ✝ : Ty
+ρ✝ : RTy
+b : Term Sig (σ✝ :: x✝¹) (Ty.rel ρ✝)
+η : (env W x✝).obj.Carrier
+x : (dom W σ✝).obj.Carrier
+⊢ (denote W C (Term.rename r.lift b)).fn (x, η) = ↑((denote W C b.lam).fn (pullRen W r η)) x
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    (x, η)
+  has type
+    (dom W σ✝).obj.Carrier × (env W x✝).obj.Carrier
+  but is expected to have type
+    (env W (σ✝ :: x✝)).obj.Carrier
+  in the application
+    (denote W C (Term.rename r.lift b)).fn (x, η)
+Classicism/Models/NominalSubstitution.lean:76:19: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (denote ?W ?C (Term.rename ?r ?t)).fn ?η
+in the target expression
+  (denote W C (Term.rename Ren.shift t)).fn (x, η) = (denote W C t).fn η
+
+G : Type
+inst✝ : Group G
+A : Action G
+I : SupportIdeal A
+W : Nom A I
+Sig : Signature
+C : FixedConstants W Sig
+Γ : Ctx
+σ τ : Ty
+t : Term Sig Γ τ
+η : (env W Γ).obj.Carrier
+x : (dom W σ).obj.Carrier
+⊢ (denote W C (Term.rename Ren.shift t)).fn (x, η) = (denote W C t).fn η
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    (x, η)
+  has type
+    (dom W σ).obj.Carrier × (env W Γ).obj.Carrier
+  but is expected to have type
+    (env W (σ :: Γ)).obj.Carrier
+  in the application
+    (denote W C (Term.rename Ren.shift t)).fn (x, η)
+Classicism/Models/NominalSubstitution.lean:98:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (lookup ?W ?v).fn (pullSub ?W ?C ?s ?η)
+in the target expression
+  (lookup W v.succ).fn (pullSub W C s.lift (x, η)) = (lookup W v.succ).fn (x, pullSub W C s η)
+
+case succ
+G : Type
+inst✝ : Group G
+A : Action G
+I : SupportIdeal A
+W : Nom A I
+Sig : Signature
+C : FixedConstants W Sig
+Γ Δ : Ctx
+σ : Ty
+s : Sub Sig Γ Δ
+η : (env W Δ).obj.Carrier
+x : (dom W σ).obj.Carrier
+τ : Ty
+v : Var Γ τ
+⊢ (lookup W v.succ).fn (pullSub W C s.lift (x, η)) = (lookup W v.succ).fn (x, pullSub W C s η)
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    (x, η)
+  has type
+    (dom W σ).obj.Carrier × (env W Δ).obj.Carrier
+  but is expected to have type
+    (env W (σ :: Δ)).obj.Carrier
+  in the application
+    pullSub W C s.lift (x, η)
+Classicism/Models/NominalSubstitution.lean:109:31: error: unsolved goals
+G : Type
+inst✝ : Group G
+A : Action G
+I : SupportIdeal A
+W : Nom A I
+Sig : Signature
+C : FixedConstants W Sig
+x✝¹ x✝ : Ctx
+s : Sub Sig x✝¹ x✝
+σ✝ : Ty
+ρ✝ : RTy
+f : Term Sig x✝¹ (Ty.rel (σ✝ ⇒ ρ✝))
+x : Term Sig x✝¹ σ✝
+η : (env W x✝).obj.Carrier
+⊢ ↑((denote W C f).fn (pullSub W C s η)) ((denote W C x).fn (pullSub W C s η)) =
+    ↑((denote W C f).fn (pullSub W C s η)) ((denote W C x).fn (pullSub W C s η))
+Classicism/Models/NominalSubstitution.lean:115:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (denote W C (Term.subst ?s ?t)).fn ?η
+in the target expression
+  (denote W C (Term.subst s.lift b)).fn (x, η) = ↑((denote W C b.lam).fn (pullSub W C s η)) x
+
+G : Type
+inst✝ : Group G
+A : Action G
+I : SupportIdeal A
+W : Nom A I
+Sig : Signature
+C : FixedConstants W Sig
+x✝¹ x✝ : Ctx
+s : Sub Sig x✝¹ x✝
+σ✝ : Ty
+ρ✝ : RTy
+b : Term Sig (σ✝ :: x✝¹) (Ty.rel ρ✝)
+η : (env W x✝).obj.Carrier
+x : (dom W σ✝).obj.Carrier
+⊢ (denote W C (Term.subst s.lift b)).fn (x, η) = ↑((denote W C b.lam).fn (pullSub W C s η)) x
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    (x, η)
+  has type
+    (dom W σ✝).obj.Carrier × (env W x✝).obj.Carrier
+  but is expected to have type
+    (env W (σ✝ :: x✝)).obj.Carrier
+  in the application
+    (denote W C (Term.subst s.lift b)).fn (x, η)

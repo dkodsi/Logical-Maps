@@ -1,0 +1,93 @@
+{
+  "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "modules": [
+    "research/2026-10-22/lean-formalization/StrongPossibilityConsequencesComputability.lean"
+  ],
+  "complete": true,
+  "checked": [
+    {
+      "module": "Mathlib.Computability.Primrec.Basic",
+      "seconds": 4.68,
+      "exit_code": 0,
+      "fingerprint": "89dbaf576d223d194f99322e7e3812e098796e5901c6bdc68f09a5938b935862",
+      "log": "logs/runs/20261023T041012326835Z/Mathlib_Computability_Primrec_Basic.log"
+    },
+    {
+      "module": "Mathlib.Logic.Equiv.Multiset",
+      "seconds": 1.14,
+      "exit_code": 0,
+      "fingerprint": "7afbc8f45af5518cfb3ea98828d767896cadbfcea232876b133dca4cef17d466",
+      "log": "logs/runs/20261023T041012326835Z/Mathlib_Logic_Equiv_Multiset.log"
+    },
+    {
+      "module": "Mathlib.Logic.Equiv.Finset",
+      "seconds": 1.22,
+      "exit_code": 0,
+      "fingerprint": "88e478bfe822d1a57ee318ed03e134b2a2b634175cb0923010e80da8b2b92004",
+      "log": "logs/runs/20261023T041012326835Z/Mathlib_Logic_Equiv_Finset.log"
+    },
+    {
+      "module": "Mathlib.Logic.Encodable.Pi",
+      "seconds": 0.98,
+      "exit_code": 0,
+      "fingerprint": "c3c4c03e9fcc682576ef84507b4114c53c697d7a2fcaa72e39bd7f0c4542ba2f",
+      "log": "logs/runs/20261023T041012326835Z/Mathlib_Logic_Encodable_Pi.log"
+    },
+    {
+      "module": "Mathlib.Computability.Primrec.List",
+      "seconds": 2.16,
+      "exit_code": 0,
+      "fingerprint": "b81031f90e75c7baac7c63fc5d25b5499fe36cb70c4135b86449dc7b036b3de7",
+      "log": "logs/runs/20261023T041012326835Z/Mathlib_Computability_Primrec_List.log"
+    },
+    {
+      "module": "Mathlib.Data.Nat.PSub",
+      "seconds": 0.86,
+      "exit_code": 0,
+      "fingerprint": "821a278c95acae0d47068b10d62b9d09e303c51c4930930008228fa9c527b901",
+      "log": "logs/runs/20261023T041012326835Z/Mathlib_Data_Nat_PSub.log"
+    },
+    {
+      "module": "Mathlib.Data.Rel",
+      "seconds": 4.14,
+      "exit_code": 0,
+      "fingerprint": "5f7a6625770271ed4d4c7b13feff436dbdbede62a1ba9713e815e5e7944da410",
+      "log": "logs/runs/20261023T041012326835Z/Mathlib_Data_Rel.log"
+    },
+    {
+      "module": "Mathlib.Data.PFun",
+      "seconds": 2.91,
+      "exit_code": 0,
+      "fingerprint": "caa9299146ab7ab40bd4008908078859c40a7d1dd64493890359434103259152",
+      "log": "logs/runs/20261023T041012326835Z/Mathlib_Data_PFun.log"
+    },
+    {
+      "module": "Mathlib.Computability.Partrec",
+      "seconds": 2.6,
+      "exit_code": 0,
+      "fingerprint": "05dacede402da89376416fa3ad6745427b325def834524e607d01eb9353bbde5",
+      "log": "logs/runs/20261023T041012326835Z/Mathlib_Computability_Partrec.log"
+    },
+    {
+      "module": "Mathlib.Computability.PartrecCode",
+      "seconds": 4.74,
+      "exit_code": 0,
+      "fingerprint": "2afe554bbfbacea831c0292767699d1883e5f9266a80c4c64cceb42b032efce4",
+      "log": "logs/runs/20261023T041012326835Z/Mathlib_Computability_PartrecCode.log"
+    },
+    {
+      "module": "Mathlib.Computability.RE",
+      "seconds": 2.26,
+      "exit_code": 0,
+      "fingerprint": "758d539713eac7ad3cf402a6ef092f2bd1ef482f6ed8465c7028b8ed26ba7639",
+      "log": "logs/runs/20261023T041012326835Z/Mathlib_Computability_RE.log"
+    },
+    {
+      "module": "StrongPossibilityConsequencesComputability",
+      "seconds": 11.66,
+      "exit_code": 0,
+      "fingerprint": "c85fcb74b70be1fd3d97e93f48ec7c153ec03704246d39e71881577ed2cac227",
+      "log": "logs/runs/20261023T041012326835Z/StrongPossibilityConsequencesComputability.log"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+import StrongPossibilityConsequencesSignatureSplit
+import StrongPossibilityConsequencesMaxConservativity
+
+/-! Public theorem statement and axiom audit for the two core-owned SP modules.
+Source proofs and exact limits are documented in sp-core-verification-status.md.
+This audit adds no mathematical assumptions or claims. -/
+
+#check Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.cell_closedTypes
+#print axioms Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.cell_closedTypes
+
+#check Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.atom_closedTypes
+#print axioms Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.atom_closedTypes
+
+#check Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.cell_holds
+#print axioms Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.cell_holds
+
+#check Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.top_denote
+#print axioms Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.top_denote
+
+#check Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.topR_denote
+#print axioms Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.topR_denote
+
+#check Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.constD_false_ne_true
+#print axioms Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.constD_false_ne_true
+
+#check Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.namedTop_closedTypes
+#print axioms Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.namedTop_closedTypes
+
+#check Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.named_denote
+#print axioms Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.named_denote
+
+#check Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.namedTop_holds
+#print axioms Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.namedTop_holds
+
+#check Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.namedTop_fails
+#print axioms Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.namedTop_fails
+
+#check Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.positive_cell_consistent
+#print axioms Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.positive_cell_consistent
+
+#check Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.negative_cell_consistent
+#print axioms Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.negative_cell_consistent
+
+#check Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.maximalist_not_atom_cell_at
+#print axioms Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.maximalist_not_atom_cell_at
+
+#check Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.maximalist_not_atom_cell
+#print axioms Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.maximalist_not_atom_cell
+
+#check Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.maximalist_add_atom_inconsistent
+#print axioms Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.maximalist_add_atom_inconsistent
+
+#check Classicism.Research.StrongPossibilityConsequences.Conservativity.reflected_neg_box
+#print axioms Classicism.Research.StrongPossibilityConsequences.Conservativity.reflected_neg_box
+
+#check Classicism.Research.StrongPossibilityConsequences.Conservativity.reflected_neg_box.derivable
+#print axioms Classicism.Research.StrongPossibilityConsequences.Conservativity.reflected_neg_box.derivable
+
+#check Classicism.Meta.Research.StrongPossibilityConsequences.MaxConservativity.conjunction_closed
+#print axioms Classicism.Meta.Research.StrongPossibilityConsequences.MaxConservativity.conjunction_closed
+
+#check Classicism.Meta.Research.StrongPossibilityConsequences.MaxConservativity.identity_conservative_of_max_consistent
+#print axioms Classicism.Meta.Research.StrongPossibilityConsequences.MaxConservativity.identity_conservative_of_max_consistent
+
+#check Classicism.Meta.Research.StrongPossibilityConsequences.MaxConservativity.max_consistent_of_identity_conservative
+#print axioms Classicism.Meta.Research.StrongPossibilityConsequences.MaxConservativity.max_consistent_of_identity_conservative
+
+#check Classicism.Meta.Research.StrongPossibilityConsequences.MaxConservativity.identity_conservative_iff_max_consistent
+#print axioms Classicism.Meta.Research.StrongPossibilityConsequences.MaxConservativity.identity_conservative_iff_max_consistent
+

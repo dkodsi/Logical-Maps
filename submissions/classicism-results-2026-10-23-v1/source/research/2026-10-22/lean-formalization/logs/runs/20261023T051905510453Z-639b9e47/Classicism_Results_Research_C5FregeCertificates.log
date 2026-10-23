@@ -1,0 +1,47 @@
+Classicism.Research.C5Frege.deletion_persistent: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.C5Frege.deletion_weakly_persistent: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.C5Frege.finite_base_iff_numbers: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.C5Frege.finite_top_excludes_successor: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.C5Frege.infinity_iff_arithmeticI: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.C5Frege.infinity_iff_bottom_not_number: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.C5Frege.infinity_iff_noncollapse: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.C5Frege.null_collapse: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.C5Frege.numerical_extensionality: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.C5Frege.persistent_count_settled: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.C5Frege.persistent_membership_settled: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.C5Frege.realized_or_bottom: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.C5Frege.settled_all: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.C5Frege.settled_and: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.C5Frege.settled_exists: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.C5Frege.settled_neg: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.C5Frege.top_persistent: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+#classicism_audit Classicism.Results.Research.C5Frege: 17/17 theorems pass; 17 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.C5Frege: 17/17 inside R
+Classicism.Results.Research.C5Frege: 17 of 17 theorems derived
+
+[1/17] Classicism.Research.C5Frege.deletion_persistent ✓ 179 ms
+[2/17] Classicism.Research.C5Frege.deletion_weakly_persistent ✓ 0 ms
+[3/17] Classicism.Research.C5Frege.finite_base_iff_numbers ✓ 916 ms
+[4/17] Classicism.Research.C5Frege.finite_top_excludes_successor ✓ 0 ms
+[5/17] Classicism.Research.C5Frege.infinity_iff_arithmeticI ✓ 38 ms
+[6/17] Classicism.Research.C5Frege.infinity_iff_bottom_not_number ✓ 25 ms
+[7/17] Classicism.Research.C5Frege.infinity_iff_noncollapse ✓ 0 ms
+[8/17] Classicism.Research.C5Frege.null_collapse ✓ 17 ms
+[9/17] Classicism.Research.C5Frege.numerical_extensionality ✓ 58 ms
+[10/17] Classicism.Research.C5Frege.persistent_count_settled ✓ 0 ms
+[11/17] Classicism.Research.C5Frege.persistent_membership_settled ✓ 0 ms
+[12/17] Classicism.Research.C5Frege.realized_or_bottom ✓ 0 ms
+[13/17] Classicism.Research.C5Frege.settled_all ✓ 0 ms
+[14/17] Classicism.Research.C5Frege.settled_and ✓ 0 ms
+[15/17] Classicism.Research.C5Frege.settled_exists ✓ 0 ms
+[16/17] Classicism.Research.C5Frege.settled_neg ✓ 0 ms
+[17/17] Classicism.Research.C5Frege.top_persistent ✓ 0 ms
+'Classicism.Research.C5Frege.persistent_count_settled.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.C5Frege.realized_or_bottom.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.C5Frege.numerical_extensionality.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.C5Frege.infinity_iff_arithmeticI.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.C5Frege.finite_base_iff_numbers.derivable' depends on axioms: [propext, Quot.sound]

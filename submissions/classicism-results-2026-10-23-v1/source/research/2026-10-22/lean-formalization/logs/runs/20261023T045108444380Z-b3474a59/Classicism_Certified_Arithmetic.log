@@ -1,0 +1,19 @@
+Classicism.Arith.zero ⟶ Classicism.Arith.zero.term, reflects ✓
+Classicism.Arith.suc ⟶ Classicism.Arith.suc.term, reflects ✓
+Classicism.Arith.N ⟶ Classicism.Arith.N.term, reflects ✓
+Classicism.Arith.Sum ⟶ Classicism.Arith.Sum.term, reflects ✓
+Classicism.Arith.Prod ⟶ Classicism.Arith.Prod.term, reflects ✓
+Classicism/Certified/Arithmetic.lean:149:40: warning: This simp argument is unused:
+  Term.closedTypes
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [ATerm.toTerm, hσ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Certified/Arithmetic.lean:166:24: warning: This simp argument is unused:
+  Term.closedTypes
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [AForm.toTerm, ATerm.closedTypes_toTerm hσ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

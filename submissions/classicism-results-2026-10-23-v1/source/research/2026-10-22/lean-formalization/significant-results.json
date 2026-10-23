@@ -1,0 +1,183 @@
+{
+  "purpose": "Significance-led Lean formalization priorities; not a database verdict or novelty claim.",
+  "assessment_date_utc": "2026-10-23",
+  "criteria": [
+    "Exact existing question settled or sharpened",
+    "Consequences for choice, actual truth, modality, arithmetic, or model existence",
+    "Nontrivial proof ingredients and reusable mathematical ideas",
+    "Remaining mathematical and formal verification burden"
+  ],
+  "resource_policy": "Several isolated authors; one serial compiler; no previews or large displayed output.",
+  "families": [
+    {
+      "rank": 1,
+      "id": "choice-completeness-actuality",
+      "claim": "Unboxed Relational Choice_(t,t) plus Boolean Completeness_tt implies Actuality; the appropriate further choice instance gives Transversal Choice.",
+      "significance": "Connects selection, Boolean joins, and actual truth without adding ND or BF.",
+      "proof_ingredients": [
+        "evaluation adjunction",
+        "true disjoint joins",
+        "represented disjoint refinement",
+        "Bourbaki-Witt fixed point"
+      ],
+      "source": "research/2026-10-22/followup/choice-completeness-actuality.md",
+      "checked_target": "Classicism.Results.Research.ChoiceActualityCertificates",
+      "status_at_assessment": "Successful translated C certificates; direct local chain/transversal strengthenings remain in the integration queue."
+    },
+    {
+      "rank": 2,
+      "id": "central-negative-gluing-models",
+      "claim": "Logical Necessity does not imply Actuality, under either of two separately specified strong packages.",
+      "packages": [
+        "Supported product: boxed BF and Tame Rigidity, Relational Choice, Countable Boolean Completeness, atomlessness; failure of Actuality, Vicinity and Weakly Inextensible Comprehension.",
+        "Symmetric surjection: boxed BC, BF, Tame Rigidity and Weakly Rigid Power, atomlessness; failure of Actuality and Vicinity; Relational Choice fails."
+      ],
+      "significance": "Separates combinatorial realization from actual-world propositions and resolves principal central negative questions.",
+      "proof_ingredients": [
+        "recursive typed supported domains",
+        "lambda and quantifier closure",
+        "simultaneous fixed-signature gluing",
+        "symmetric hull joins",
+        "exact local and boxed verdicts"
+      ],
+      "sources": [
+        "research/2026-10-22/followup/central-map.md",
+        "research/2026-10-22/followup/central-map-complete-gluing.md"
+      ],
+      "owner_thread": "01a164a4-f326-7161-9eac-b9cf19e5ff50",
+      "status_at_assessment": "Both primary constructions independently agent-audited with no gap found in audited scope. Concrete Lean model implementations active; not yet certified.",
+      "audit_reports": [
+        "central-supported-independent-audit.json",
+        "central-symmetric-independent-audit.json"
+      ],
+      "first_semantic_milestone": "A complete nontrivial model for one permitted finite signature, such as Sigma={c:et}, retaining all admitted type instances. This suffices to refute the uniform central implication; the arbitrary fixed set-sized signature extension remains a distinct later target."
+    },
+    {
+      "rank": 3,
+      "id": "full-modal-propagation",
+      "claim": "Strong Leibniz plus Rigid Comprehension entails necessary Strong Leibniz, relational BF, Rigid Comprehension and Boolean Completeness.",
+      "significance": "Explains how a local structural package forces its own modal stability.",
+      "proof_ingredients": [
+        "bottom-inclusive rigid cover",
+        "future cuts",
+        "sealed domains",
+        "haecceity pullback without individual BF",
+        "all-arity schema composition"
+      ],
+      "source": "research/2026-10-22/followup/modal-propagation.md",
+      "check_target": "Classicism.Results.Research.ModalPropagationSchemas",
+      "status_at_assessment": "Full all-type schema certified by serial run 20261023T025257130403Z; all 68 source/dependency fingerprints independently matched after the run. Empty tuples included; no individual BF conclusion.",
+      "successful_manifest": "checks/20261023T025257130403Z.json"
+    },
+    {
+      "rank": 4,
+      "id": "functional-choice-no-finite-basis",
+      "claim": "Full boxed Functional Choice has no finite basis of fixed-type closed formulas over C; bounded type order also does not suffice.",
+      "significance": "Places precise limits on finite simplicity of the favored strong theory while exposing a structured hierarchy of approximations.",
+      "proof_ingredients": [
+        "symmetric ZF models",
+        "preservation of low-type domains",
+        "choice failure at higher types",
+        "ground Henkin extraction",
+        "finite proof support"
+      ],
+      "source": "research/2026-10-22/followup/finite-functional-choice.md",
+      "owner_thread": "01a164c3-4456-7fd1-9acd-e1b0cf56b2a0",
+      "status_at_assessment": "Positive recursive embedding, all-type selector-stage cofinality, diagonal-schema equivalence, diagonal-stage cofinality and actual budget retractions certified in checks/20261023T030134260568Z.json. Negative strictness/nonfinite-basis still lacks symmetric forcing and ground extraction infrastructure. Author reread found no gap in the ordinary argument, but is not independent certification.",
+      "scope_limit": "Does not rule out a finite number of unbounded type schemata.",
+      "negative_audit": "finite-choice-negative-audit.md",
+      "new_metatheory_submission": "Classicism.Models.ChoiceFreshColumns (fresh-column common extension and no finite-supported selector; not a C countermodel)"
+    },
+    {
+      "rank": 5,
+      "id": "exact-arithmetic-core",
+      "claim": "Actuality plus quantified Infinity_e gives a current numerical isomorphism with the actual-world slice, preserving arithmetic and represented numerical relations, without Choice or BF.",
+      "significance": "Justifies simpler extensional mathematics without changing the original internal counting base.",
+      "proof_ingredients": [
+        "realization of finite cardinalities",
+        "normalization",
+        "numerical exclusivity",
+        "admitted graph operations",
+        "predicate and relation transfer"
+      ],
+      "source": "research/2026-10-22/proof-refinements/infinity-core-number-isomorphism.md",
+      "check_targets": [
+        "Classicism.Results.Research.ActualityCoreNumbersCertificates",
+        "Classicism.Results.Research.ActualityCoreArithmeticCertificates",
+        "Classicism.Results.Research.ActualityNumericalRelationsCertificates"
+      ],
+      "status_at_assessment": "Frege foundation and conditional number-map kernel checked. Concrete slice arithmetic sources submitted; full Gallin and arbitrary-syntax interpretations remain distinct obligations."
+    },
+    {
+      "rank": 6,
+      "id": "choice-free-probability",
+      "claim": "Over boxed Plenitude and quantified Infinity_e, faithful probability corresponds to finite-fibre numerical labelling; higher-type probability has a sharp finiteness obstruction.",
+      "significance": "Removes full Functional Choice and identifies where finite Choice is needed to obtain an injection into the numbers.",
+      "proof_ingredients": [
+        "finite atomic subsums",
+        "internal Dedekind reals",
+        "represented complete additivity",
+        "finite-fibre estimates",
+        "choice-free diagonal obstruction"
+      ],
+      "sources": [
+        "research/2026-10-22/proof-refinements/choice-free-faithful-probability.md",
+        "research/2026-10-22/proof-refinements/choice-free-probability-type-ceiling.md"
+      ],
+      "status_at_assessment": "External conditional algebra partly checked; constructive dependency repair and actual internal number/real/state bridge remain. No complete C probability theorem certified."
+    },
+    {
+      "rank": 7,
+      "id": "max-arithmetic-graph-operation-obstruction",
+      "claim": "Max permits the current predecessor graph but forbids an admitted operation realizing numerical predecessor; analogous cross-sort arithmetic obstructions are available.",
+      "significance": "Gives a concrete mathematical cost of Max and a precise way Plenitude strengthens representability.",
+      "proof_ingredients": [
+        "finite full-model numerical collision",
+        "Max possibility instance",
+        "necessity of identity",
+        "internal arithmetic graphs"
+      ],
+      "source": "research/2026-10-22/notes/relational-coding-recursion-20261022.md",
+      "source_sections": "34-35 and 38",
+      "owner_thread": "01a164a4-d112-7cb1-a556-503d96b45eea",
+      "status_at_assessment": "Completed written argument selected for formalization; actual finite-model witness and Max instance must be certified."
+    },
+    {
+      "rank": 8,
+      "id": "elementary-signature-separators",
+      "claim": "For Sigma={c:et}, Independence coexists with boxed FC, C5, Atomicity and Extensionality, and does not force the displayed infinity conclusions.",
+      "significance": "Corrects twelve displayed signature-uniform questions and supplies reusable semantic certification infrastructure.",
+      "proof_ingredients": [
+        "full one-world interpretation",
+        "pure-term permutation equivariance",
+        "proper nonempty named subset",
+        "finite and natural individual domains"
+      ],
+      "source": "research/2026-10-22/central-questions-audit.md",
+      "owner_thread": "01a164d9-10d5-73e1-8b61-9ebfb3368e85",
+      "status_at_assessment": "Ordinary separately agent-audited argument; concrete Lean construction now assigned.",
+      "scope_limit": "One permitted signature refutes a uniform claim; this does not establish the verdict for every richer fixed signature."
+    }
+  ],
+  "high_impact_but_unresolved_verification": {
+    "claim": "Proposed Max plus Atomicity inconsistency",
+    "remaining": [
+      "concrete rigid-algebra theorem",
+      "finite coding adequacy",
+      "Mostowski and size absoluteness",
+      "Boolean-valued soundness",
+      "nonzero witness"
+    ],
+    "policy": "Do not count the conditional separator reduction or bounded splitter as certification of the main contradiction."
+  },
+  "accounting": "Sixteen of twenty-five displayed central rows are covered by the saved ordinary arguments. Row coverage is not a count of independent theorems or Lean certificates.",
+  "controlling_evidence": "checks/*.json and matching source/dependency fingerprints supersede this assessment snapshot and author handoffs.",
+  "coverage_policy": "This ranking determines implementation order only. Every interesting completed result in the full research inventory remains in scope, including all independence and model-separation results. Main-theorem/model completion must be tracked separately from helpers and drafts.",
+  "specific_omission_corrected": {
+    "claim": "C + unboxed ND + full Boolean Completeness does not entail Rigid Comprehension, failing already at et",
+    "source": "research/2026-10-22/notes/old-new-boolean-completeness-and-rigidity-separation.md",
+    "owner_thread": "01a164c3-4456-7fd1-9acd-e1b0cf56b2a0",
+    "audit": "old-new-independent-audit.json",
+    "status": "Concrete OldNew implementation assigned and started; no Lean certification yet."
+  }
+}

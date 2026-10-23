@@ -1,0 +1,11 @@
+Classicism/Semantics/FullExtensionalCounting.lean:41:24: error: unsolved goals
+case e_head
+Sig : Signature
+I : Interp Sig
+σ : Ty
+n : ℕ
+Γ : Ctx
+f : Fin (n + 1) → Ty.denote I.D σ
+env : Env I.D Γ
+⊢ Var.zero.denote (Env.cons (f 0) env) = f 0
+Classicism/Semantics/FullExtensionalCounting.lean:67:12: error: Insufficient number of fields for `⟨...⟩` constructor: Constructor `Iff.intro` has 2 explicit field, but only 1 was provided

@@ -1,0 +1,52 @@
+Classicism.Research.MaxAtomicitySplitCertificate.guard_eq_split: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.MaxAtomicitySplitCertificate.guard_eq_split: type system ✓
+Classicism.Research.MaxAtomicitySplitCertificate.guard_eq_split ⟶ Classicism.Research.MaxAtomicitySplitCertificate.guard_eq_split.derivable : Classicism.Meta.Theorem
+  Classicism.Meta.C.axiomsMinus
+  (Classicism.Meta.Term.forall'
+    (Classicism.Meta.Term.eq'
+      (Classicism.Meta.Term.conj Classicism.Meta.Term.top
+        (Classicism.Meta.Term.forall'
+          (Classicism.Meta.Term.imp
+            (Classicism.Meta.Term.conj
+              (Classicism.Meta.Term.neg
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).eq' Classicism.Meta.Term.bot))
+              (Classicism.Meta.Term.eq' Classicism.Meta.Term.top
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).disj Classicism.Meta.Term.top)))
+            (Classicism.Meta.Term.conj
+              (Classicism.Meta.Term.neg
+                (Classicism.Meta.Term.eq'
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).conj
+                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))
+                  Classicism.Meta.Term.bot))
+              (Classicism.Meta.Term.neg
+                (Classicism.Meta.Term.eq'
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).conj
+                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).neg)
+                  Classicism.Meta.Term.bot))))))
+      (Classicism.Meta.Term.forall'
+        (Classicism.Meta.Term.imp
+          (Classicism.Meta.Term.neg ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).eq' Classicism.Meta.Term.bot))
+          (Classicism.Meta.Term.conj
+            (Classicism.Meta.Term.neg
+              (Classicism.Meta.Term.eq'
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).conj
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))
+                Classicism.Meta.Term.bot))
+            (Classicism.Meta.Term.neg
+              (Classicism.Meta.Term.eq'
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).conj
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).neg)
+                Classicism.Meta.Term.bot)))))))
+derived ✓ in C⁻
+'Classicism.Research.MaxAtomicitySplitCertificate.guard_eq_split.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.Research.MaxAtomicitySplitCertificate.split_closedTypes' depends on axioms: [propext]
+'Classicism.Meta.Research.MaxAtomicitySplitCertificate.split_pure' depends on axioms: [propext]
+'Classicism.Meta.Research.MaxAtomicitySplitCertificate.split_zero_under_atomicity' depends on axioms: [propext,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicitySplitCertificate.separatorOfNonTheorem' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.Research.MaxAtomicitySplitCertificate.inconsistent_of_split_not_zero_theorem' depends on axioms: [propext,
+ Quot.sound]

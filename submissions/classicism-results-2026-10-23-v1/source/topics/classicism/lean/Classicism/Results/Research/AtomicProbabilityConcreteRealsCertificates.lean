@@ -1,0 +1,19 @@
+import Classicism.Results.Research.AtomicProbabilityConcreteReals
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Schema
+
+#classicism_audit Classicism.Results.Research.AtomicProbabilityConcreteReals
+#classicism_types_audit Classicism.Results.Research.AtomicProbabilityConcreteReals
+
+#classicism_derive Classicism.Research.ProbabilityConcreteReals.principal_below
+  Classicism.Research.ProbabilityConcreteReals.principal_real
+  Classicism.Research.ProbabilityConcreteReals.principal_in_field
+  Classicism.Research.ProbabilityConcreteReals.principal_order_iff
+  Classicism.Research.ProbabilityConcreteReals.principal_injective
+  Classicism.Research.ProbabilityConcreteReals.real_field_inhabited
+  Classicism.Research.ProbabilityConcreteReals.real_field_nontrivial
+  Classicism.Research.ProbabilityConcreteReals.real_order_total
+  Classicism.Research.ProbabilityConcreteReals.concrete_real_supremum
+
+#print axioms Classicism.Research.ProbabilityConcreteReals.concrete_real_supremum.derivable

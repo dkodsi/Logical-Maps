@@ -1,0 +1,489 @@
+{
+  "lane": "infinity_arithmetic_profiles",
+  "date": "2026-10-23",
+  "state": "paused_for_user_hard_stop",
+  "repair_owner": "01a164a4-e3fb-7140-87cf-9f5b5ca8e00a",
+  "next_target": "On explicit human resumption: FiniteProfilesCertificates, then FiniteAtomProfilesCertificates and RawWorldRepresentationBoundarySchemas; separately split GeneratedAlgebraFinite certificate translation within the resource limit.",
+  "source_changes": [
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/CrossBaseFirstOrder.lean",
+      "change": "Applied documented witness-destructuring repair against current source; derive numberhood from synch_numbers."
+    },
+    {
+      "paths": [
+        "topics/classicism/lean/Classicism/Results/Research/FregeFiniteSetsCertificates.lean",
+        "topics/classicism/lean/Classicism/Results/Research/FregeNoncollapseCertificates.lean",
+        "topics/classicism/lean/Classicism/Results/Research/CrossBaseArithmeticCertificates.lean",
+        "topics/classicism/lean/Classicism/Results/Research/GeneratedAlgebraFiniteCertificates.lean"
+      ],
+      "change": "Added dependency-certificate imports to avoid repeated translation."
+    },
+    {
+      "path": "research/2026-10-22/lean-formalization/generate_generated_algebra.py",
+      "change": "Certificate emitter now imports GeneratedAlgebraTransferCertificates; temporary regeneration reproduces both checked-in source and certificate driver exactly."
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FregeNoncollapse.lean",
+      "change": "Parenthesized IStar under diamond and annotated existing cardinality witnesses; no premise added."
+    },
+    {
+      "paths": [
+        "topics/classicism/lean/Classicism/Results/Research/FregeArithmeticVocabularyCertificates.lean",
+        "topics/classicism/lean/Classicism/Results/Research/C5FregeCertificates.lean",
+        "topics/classicism/lean/Classicism/Results/Research/FiniteProfilesCertificates.lean",
+        "topics/classicism/lean/Classicism/Results/Research/FiniteAtomProfilesCertificates.lean",
+        "topics/classicism/lean/Classicism/Results/Research/FiniteRigidPowersCertificates.lean",
+        "topics/classicism/lean/Classicism/Results/Research/FiniteFunctionFieldsCertificates.lean",
+        "topics/classicism/lean/Classicism/Results/Research/C5ActualityNumbersCertificates.lean",
+        "topics/classicism/lean/Classicism/Results/Research/FregeHumeClassesCertificates.lean",
+        "topics/classicism/lean/Classicism/Results/Research/RawWorldRepresentationBoundaryCertificates.lean",
+        "topics/classicism/lean/Classicism/Results/Research/FiniteTupleLawsCertificates.lean"
+      ],
+      "change": "Reuse translated certificates for already-required arithmetic/finite dependencies. No mathematical statements changed."
+    }
+  ],
+  "files": [
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FregeFiniteSets.lean",
+      "sha256": "9510257847837420c4ed3398a45107e5f6b47d040a14a7e52957eb238af9d2e3",
+      "main_declarations": [
+        "finite_fibre_union",
+        "finite_separated_family",
+        "infinity_iff_realizes",
+        "finite_self_injection_surjective"
+      ],
+      "current_verification": "PASS in checks/20261023T043014649782Z-ffe74996.json"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FregeNoncollapse.lean",
+      "sha256": "3d560d54f9ab4209f6376729348edf4046d311a47254ff8699475b136436a312",
+      "main_declarations": [
+        "noncollapse_iff_bottom_not_number",
+        "arithmeticI_iff_istar",
+        "finite_numbers_iff_bottom_number",
+        "infinite_numbers_iff_dedekind"
+      ],
+      "current_verification": "PASS in research/2026-10-22/lean-formalization/checks/20261023T044223622850Z-528e6bf0.json"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/CrossBaseArithmetic.lean",
+      "sha256": "a71fa2104c6f0867637f83fdb5284edf47761eecda63a5768a7d111f2ee8c058",
+      "main_declarations": [
+        "synch_bijection",
+        "addition_iff",
+        "multiplication_iff"
+      ],
+      "current_verification": "PASS in research/2026-10-22/lean-formalization/checks/20261023T045108444380Z-b3474a59.json"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/CrossBaseFirstOrder.lean",
+      "sha256": "2966852219db565e5aba652f562e7e6dd7a48fbfd220375bd6706012a91a6fe3",
+      "main_declarations": [
+        "formula_transfer",
+        "sentence_transfer_of_arithmeticI"
+      ],
+      "current_verification": "PASS metatheory only in research/2026-10-22/lean-formalization/checks/20261023T045914763270Z-feef3c75.json"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/GeneratedAlgebraFinite.lean",
+      "sha256": "b4911c128403a5c245e384369aeb01cc340b4b4e9f72cb1de46b842fae176f1d",
+      "main_declarations": [
+        "onto0",
+        "onto1",
+        "onto2",
+        "left_inverse0",
+        "left_inverse1",
+        "left_inverse2",
+        "right_inverse0",
+        "right_inverse1",
+        "right_inverse2"
+      ],
+      "current_verification": "SOURCE PASS in research/2026-10-22/lean-formalization/checks/20261023T051905510453Z-639b9e47.json; certificate timed out"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FregeFiniteSetsCertificates.lean",
+      "sha256": "c25badcf8584581bd15b980cfd2ac900f34329bd039eda03b094bb691e56a05f",
+      "change": "Reuse translated dependency certificates through imports. No theorem statement changed.",
+      "current_verification": "PASS in checks/20261023T043014649782Z-ffe74996.json"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FregeNoncollapseCertificates.lean",
+      "sha256": "7190112f16bd8d7eb9de3658b764f6dcf7324abbce17bd1dfead4d99d8b41749",
+      "change": "Reuse translated dependency certificates through imports. No theorem statement changed.",
+      "current_verification": "PASS in research/2026-10-22/lean-formalization/checks/20261023T044223622850Z-528e6bf0.json"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/CrossBaseArithmeticCertificates.lean",
+      "sha256": "e57eb0f684b724d137497b483a61fb1627c86a92dfc93724975e34978278a707",
+      "change": "Reuse translated dependency certificates through imports. No theorem statement changed.",
+      "current_verification": "PASS in research/2026-10-22/lean-formalization/checks/20261023T045108444380Z-b3474a59.json"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/GeneratedAlgebraFiniteCertificates.lean",
+      "sha256": "86a13ea9e6a297cdc13fde6e435c337fe290d2924d41a562c086d9ea3693e1ab",
+      "change": "Reuse translated dependency certificates through imports. No theorem statement changed.",
+      "current_verification": "TIMEOUT after 180 seconds in research/2026-10-22/lean-formalization/checks/20261023T051905510453Z-639b9e47.json"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FregeArithmeticQuotation.lean",
+      "sha256": "62933d17b2dbccb9013bdab797ee1945876698834ff05530ca0cfa9de89df112",
+      "main_declarations": [
+        "arithmeticI_conversion"
+      ],
+      "current_verification": "PASS syntax conversion and standard-denotation reflection in research/2026-10-22/lean-formalization/checks/20261023T050602611952Z-deea884a.json"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FregeArithmeticReflection.lean",
+      "sha256": "10ebce97fa65169c23f30f48a7c48b2137fc2fd461471d68deaf819169c7047c",
+      "main_declarations": [
+        "formula_reflect",
+        "sentence_reflect"
+      ],
+      "current_verification": "PASS in research/2026-10-22/lean-formalization/checks/20261023T051905510453Z-639b9e47.json"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FregeArithmeticVocabularyCertificates.lean",
+      "sha256": "471acd5ce280b9da8baadd41fd99bcdd2ed822eadb2e16919bdb9a0821a05d78",
+      "current_verification": "PASS in research/2026-10-22/lean-formalization/checks/20261023T045108444380Z-b3474a59.json"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/C5FregeCertificates.lean",
+      "sha256": "08b846cfa5e986ff2edc9ea44b27b596dcc201bba59f22ff00951ba78fd3b773",
+      "current_verification": "PASS in research/2026-10-22/lean-formalization/checks/20261023T051905510453Z-639b9e47.json"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FiniteProfilesCertificates.lean",
+      "sha256": "abbddcae581fc3598b199142987790f786c6f7e9b83baebddf3fddf7362f9336",
+      "current_verification": "Dependency-certificate import repair; uncompiled"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FiniteAtomProfilesCertificates.lean",
+      "sha256": "bde7303b1c68033ee9d0e709228a573994731eca7f044954c5dcb1ec2ed10945",
+      "current_verification": "Dependency-certificate import repair; uncompiled"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FiniteRigidPowersCertificates.lean",
+      "sha256": "c4bea45192c3165924d48d9b22d1ff7371eff98242de815c9e77f7efa4d76625",
+      "current_verification": "Dependency-certificate import repair; uncompiled"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FiniteFunctionFieldsCertificates.lean",
+      "sha256": "e4cfeb17d5536cf470ee2984c8d4fe2248983c98028df72fa51eecc9850a5736",
+      "current_verification": "Dependency-certificate import repair; uncompiled"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/C5ActualityNumbersCertificates.lean",
+      "sha256": "76502e2d3084e4a7b1884d7b06a9ae463b68d97ccfc25ddb640bb28a27131df4",
+      "current_verification": "PASS in research/2026-10-22/lean-formalization/checks/20261023T052411006203Z-90a4d7dd.json"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FregeHumeClassesCertificates.lean",
+      "sha256": "14df1ae01d27ed031fef61a67cc461eec0828737d46449d35d883a87d41895d5",
+      "current_verification": "PASS in research/2026-10-22/lean-formalization/checks/20261023T052411006203Z-90a4d7dd.json"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/RawWorldRepresentationBoundaryCertificates.lean",
+      "sha256": "559de56f62ea2a58c3ad6f2e84db3befe2f48a8953680f2234c16c1d3346a28f",
+      "current_verification": "Dependency-certificate import repair; uncompiled"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FiniteTupleLawsCertificates.lean",
+      "sha256": "c18210ec25559bf0670f75552022f5bc4fe103244d1ada9c36dd68a60512eb6c",
+      "current_verification": "Dependency-certificate import repair; uncompiled"
+    }
+  ],
+  "noncompiler_generation_check": {
+    "reproduces_current_source": true,
+    "source_sha256": "b4911c128403a5c245e384369aeb01cc340b4b4e9f72cb1de46b842fae176f1d",
+    "compiler_run": false,
+    "reproduces_current_certificates": true,
+    "generator_sha256": "55200a9dc32e93213aebca081ae3cdb9e764bae15005c57109881576bf71d084"
+  },
+  "repository_validation": "PASS: 132 principles, 447 results, 162 models; validator is not Lean certification.",
+  "prior_pass_manifests": [
+    "checks/20261023T022700791873Z.json",
+    "checks/20261023T022836525581Z.json",
+    "checks/20261023T030625392337Z.json",
+    "checks/20261023T030824848245Z.json"
+  ],
+  "shared_dependency_requests": [
+    {
+      "dependency": "Classicism.Results.Research.RigidityClosureResearchNullary",
+      "owner": "designated rigidity repair lane",
+      "request": "Later FiniteRigidPowers/FiniteFunctionFields/FiniteTupleLaws depend on Nullary. Please return a passing repaired dependency when available; this lane will not edit it. Core handback lists line 96/99 transport repairs.",
+      "current_status": "Nullary source repaired by its owner and passed source check per owner ledger; full certificate chain checking."
+    }
+  ],
+  "ownership_note": "Root dispatch mentions FiniteSort; live queue assigns FiniteSortStructure to model foundations. No edit needed because recorded certificates pass. Preserve it; resolve ownership before any future repair.",
+  "mathematical_gaps": [
+    "All-finite-signature proof emitter is not a single internally certified all-signature interpretation theorem.",
+    "Recursive Gallin/arbitrary-syntax interpretation remains joint world/core work.",
+    "CrossBaseFirstOrder and exact AForm.toTerm standard-denotation reflection are checked as metatheory. A uniform object-C derivation builder and arbitrary intensional-model reflection remain absent.",
+    "Exact deep I quotation now checked; queued semantic/effective separators remain explicit."
+  ],
+  "activation": "LOCK READY received from root",
+  "checker_invocation_started": true,
+  "compiler_mode": "common global-lock runner, via check_with_mathlib.py for pinned precompiled dependencies",
+  "active_target": [],
+  "contribution_summary": "research/2026-10-22/lean-formalization/arithmetic-contribution-summary.md",
+  "prose_proofs": [
+    "research/2026-10-22/notes/frege-infinity-20261022-1726.md",
+    "research/2026-10-22/notes/relational-coding-recursion-20261022.md",
+    "research/2026-10-22/proof-refinements/infinity-core-number-isomorphism.md",
+    "research/2026-10-22/notes/c5-generated-algebra-transfer-20261022.md",
+    "research/2026-10-22/notes/world-cardinality-ucp-20261022.md"
+  ],
+  "completed_checks": [
+    {
+      "target": "Classicism.Results.Research.FregeFiniteSetsCertificates",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T043014649782Z-ffe74996.json",
+      "result": "PASS source, gate/type audits and full C-derivation audit",
+      "main_declarations": [
+        "finite_fibre_union.derivable",
+        "finite_separated_family.derivable",
+        "infinity_iff_realizes.derivable",
+        "finite_self_injection_surjective.derivable"
+      ],
+      "source_sha256": "9510257847837420c4ed3398a45107e5f6b47d040a14a7e52957eb238af9d2e3"
+    },
+    {
+      "target": "Classicism.Results.Research.FregeNoncollapseCertificates",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T044223622850Z-528e6bf0.json",
+      "result": "PASS source, gate/type audits and full C-derivation audit",
+      "main_declarations": [
+        "Classicism.Research.FregeNoncollapse.noncollapse_iff_bottom_not_number.derivable",
+        "Classicism.Research.FregeNoncollapse.arithmeticI_iff_istar.derivable",
+        "Classicism.Research.FregeNoncollapse.finite_numbers_iff_bottom_number.derivable",
+        "Classicism.Research.FregeNoncollapse.infinite_numbers_iff_dedekind.derivable"
+      ],
+      "source_sha256": "3d560d54f9ab4209f6376729348edf4046d311a47254ff8699475b136436a312"
+    },
+    {
+      "target": "Classicism.Results.Research.CrossBaseArithmeticCertificates",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T045108444380Z-b3474a59.json",
+      "result": "PASS source, gate/type and full C-derivation audit; later independent metatheory module in this batch failed",
+      "main_declarations": [
+        "Classicism.Research.CrossBaseArithmetic.synch_bijection.derivable",
+        "Classicism.Research.CrossBaseArithmetic.addition_iff.derivable",
+        "Classicism.Research.CrossBaseArithmetic.multiplication_iff.derivable"
+      ],
+      "source_sha256": "a71fa2104c6f0867637f83fdb5284edf47761eecda63a5768a7d111f2ee8c058"
+    },
+    {
+      "target": "Classicism.Results.Research.FregeArithmeticVocabularyCertificates",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T045108444380Z-b3474a59.json",
+      "result": "PASS source, gate/type and full C-derivation audit; later independent metatheory module in this batch failed",
+      "main_declarations": [
+        "Classicism.Research.FregeArithmeticVocabulary.sum_cross_base.derivable",
+        "Classicism.Research.FregeArithmeticVocabulary.prod_cross_base.derivable"
+      ],
+      "source_sha256": "ce212432c93f250f5daa69fc0abcd733f2c7eb2100c1f73c7e6875a47b766599"
+    },
+    {
+      "target": "Classicism.Results.Research.CrossBaseFirstOrderChecks",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T045914763270Z-feef3c75.json",
+      "result": "PASS ordinary metatheory source and axiom audit only; not a universal object-C derivation certificate",
+      "main_declarations": [
+        "Classicism.Research.CrossBaseFirstOrder.formula_transfer",
+        "Classicism.Research.CrossBaseFirstOrder.sentence_transfer_of_arithmeticI"
+      ],
+      "source_sha256": "2966852219db565e5aba652f562e7e6dd7a48fbfd220375bd6706012a91a6fe3"
+    },
+    {
+      "target": "Classicism.Results.Research.FregeArithmeticQuotation",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T050602611952Z-deea884a.json",
+      "result": "PASS exact syntax conversion and ordinary standard-denotation reflection, not a new object-C implication",
+      "main_declarations": [
+        "Classicism.Meta.Research.FregeArithmeticQuotation.arithmeticI_conversion",
+        "Classicism.Research.FregeArithmeticQuotation.ArithmeticCondition.reflect"
+      ],
+      "axioms": {
+        "arithmeticI_conversion": [
+          "propext",
+          "Quot.sound"
+        ],
+        "ArithmeticCondition.reflect": [
+          "propext",
+          "Classical.choice",
+          "Classicism.e",
+          "Quot.sound"
+        ]
+      },
+      "source_sha256": "62933d17b2dbccb9013bdab797ee1945876698834ff05530ca0cfa9de89df112"
+    },
+    {
+      "target": "Classicism.Results.Research.C5FregeCertificates",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T051905510453Z-639b9e47.json",
+      "result": "PASS source, gate/type and full C-derivation audit",
+      "main_declarations": [
+        "Classicism.Research.C5Frege.realized_or_bottom.derivable",
+        "Classicism.Research.C5Frege.numerical_extensionality.derivable",
+        "Classicism.Research.C5Frege.infinity_iff_arithmeticI.derivable",
+        "Classicism.Research.C5Frege.finite_base_iff_numbers.derivable"
+      ],
+      "source_sha256": "157a0a6be950be4ed400e020871e48603ca006e22b18b56dcf5855c69cda246b"
+    },
+    {
+      "target": "Classicism.Results.Research.FregeArithmeticReflection",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T051905510453Z-639b9e47.json",
+      "result": "PASS ordinary standard-denotation reflection; not a C-derivation builder",
+      "main_declarations": [
+        "Classicism.Meta.Research.FregeArithmeticReflection.formula_reflect",
+        "Classicism.Meta.Research.FregeArithmeticReflection.sentence_reflect"
+      ],
+      "source_sha256": "10ebce97fa65169c23f30f48a7c48b2137fc2fd461471d68deaf819169c7047c"
+    },
+    {
+      "target": "Classicism.Results.Research.C5ActualityNumbersCertificates",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T052411006203Z-90a4d7dd.json",
+      "result": "PASS source, gate/type and full C-derivation audit",
+      "main_declarations": [
+        "Classicism.Research.C5ActualityNumbers.numberMap_inverse_graph_c5.derivable",
+        "Classicism.Research.C5ActualityNumbers.addition_iff_c5.derivable",
+        "Classicism.Research.C5ActualityNumbers.multiplication_iff_c5.derivable",
+        "Classicism.Research.C5ActualityNumbers.order_iff_c5.derivable"
+      ],
+      "source_sha256": "f88bef4440fe4c357058584eab7e75a9fd40d9811fe11dc663cd71278d187af6"
+    },
+    {
+      "target": "Classicism.Results.Research.FregeHumeClassesCertificates",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T052411006203Z-90a4d7dd.json",
+      "result": "PASS source, gate/type and full C-derivation audit",
+      "main_declarations": [
+        "Classicism.Research.FregeHumeClasses.count_iff_equinumerous.derivable",
+        "Classicism.Research.FregeHumeClasses.hume_eq_number_c5.derivable",
+        "Classicism.Research.FregeHumeClasses.hume_identity_iff_c5.derivable"
+      ],
+      "source_sha256": "c694371e538d035a1c9310d86fde17c6d21a6b5b8fbbb8f1cf74ed4f83275484"
+    }
+  ],
+  "updated_at_utc": "2026-10-23T05:39:53.737776+00:00",
+  "last_check_attempt": {
+    "targets": [
+      "Classicism.Results.Research.FiniteProfilesCertificates",
+      "Classicism.Results.Research.FiniteAtomProfilesCertificates",
+      "Classicism.Results.Research.RawWorldRepresentationBoundarySchemas"
+    ],
+    "result": "Exit 75 after 300-second lock wait; no compilation started. No mathematical failure inferred."
+  },
+  "checked_target": [
+    "Classicism.Results.Research.C5ActualityNumbersCertificates",
+    "Classicism.Results.Research.FregeHumeClassesCertificates"
+  ],
+  "manifest": "research/2026-10-22/lean-formalization/checks/20261023T052411006203Z-90a4d7dd.json",
+  "scope": "Prepare existing research for delivery: formalization and repair of existing proofs, exact certificates, no new conjecture campaign.",
+  "principal_declarations": [
+    "Classicism.Research.FregeNoncollapse.noncollapse_iff_bottom_not_number.derivable",
+    "Classicism.Research.FregeNoncollapse.arithmeticI_iff_istar.derivable",
+    "Classicism.Research.FregeNoncollapse.finite_numbers_iff_bottom_number.derivable",
+    "Classicism.Research.FregeNoncollapse.infinite_numbers_iff_dedekind.derivable"
+  ],
+  "source_hashes": {
+    "topics/classicism/lean/Classicism/Results/Research/ActualityCoreArithmetic.lean": "915e0846eb10c5d7adf9bd46ab6e5021c82885a9dfe5995ffe510fbe5dceb0ad",
+    "topics/classicism/lean/Classicism/Results/Research/ActualityCoreArithmeticCertificates.lean": "5feaeeb149c6070c6f7452fb364d5381a97f3155041883199b89ca64eff2cfb6",
+    "topics/classicism/lean/Classicism/Results/Research/ActualityCoreNumbers.lean": "d27975e179f732034febf810fc97b1a5f77441c95e392d8ae8c6bcc7328eba07",
+    "topics/classicism/lean/Classicism/Results/Research/ActualityCoreNumbersCertificates.lean": "e7780286bad74294159b6a436dbfa8b64a9dff8f9bfc72e657112272119648e6",
+    "topics/classicism/lean/Classicism/Results/Research/ActualityNumericalRelations.lean": "cf8a004cfad81f3f16af4f653869e5162c8da461a61617204498f850d3439c1d",
+    "topics/classicism/lean/Classicism/Results/Research/ActualityNumericalRelationsCertificates.lean": "5882beb5132f1e9515f8a94dcd8d96c58d5d8937097640112d2e8f1ac3f6024f",
+    "topics/classicism/lean/Classicism/Results/Research/C5ActualityNumbers.lean": "f88bef4440fe4c357058584eab7e75a9fd40d9811fe11dc663cd71278d187af6",
+    "topics/classicism/lean/Classicism/Results/Research/C5ActualityNumbersCertificates.lean": "76502e2d3084e4a7b1884d7b06a9ae463b68d97ccfc25ddb640bb28a27131df4",
+    "topics/classicism/lean/Classicism/Results/Research/C5Frege.lean": "157a0a6be950be4ed400e020871e48603ca006e22b18b56dcf5855c69cda246b",
+    "topics/classicism/lean/Classicism/Results/Research/C5FregeCertificates.lean": "08b846cfa5e986ff2edc9ea44b27b596dcc201bba59f22ff00951ba78fd3b773",
+    "topics/classicism/lean/Classicism/Results/Research/CoreNumberIsomorphism.lean": "c1d44eb1f1b3c5f5f02107ddcecfe54a6b6bf888f8294e0a72f34d65749200d4",
+    "topics/classicism/lean/Classicism/Results/Research/CoreNumberIsomorphismCertificates.lean": "6dfb81fa07aa82610da79b597faec08bb4455bf12f0d9e1ea50bf24de0a9d079",
+    "topics/classicism/lean/Classicism/Results/Research/CrossBaseArithmetic.lean": "a71fa2104c6f0867637f83fdb5284edf47761eecda63a5768a7d111f2ee8c058",
+    "topics/classicism/lean/Classicism/Results/Research/CrossBaseArithmeticCertificates.lean": "e57eb0f684b724d137497b483a61fb1627c86a92dfc93724975e34978278a707",
+    "topics/classicism/lean/Classicism/Results/Research/CrossBaseFirstOrder.lean": "2966852219db565e5aba652f562e7e6dd7a48fbfd220375bd6706012a91a6fe3",
+    "topics/classicism/lean/Classicism/Results/Research/CrossBaseFirstOrderChecks.lean": "ef8fecbfeb77a66abd4efccc3b752958d682dfa4af71dda4dcde73d32a62717f",
+    "topics/classicism/lean/Classicism/Results/Research/FiniteAtomProfiles.lean": "fa1fac0c6cbb662e70b193187ba44b90876f79f794854ca831eec6ec57b42ebd",
+    "topics/classicism/lean/Classicism/Results/Research/FiniteAtomProfilesCertificates.lean": "bde7303b1c68033ee9d0e709228a573994731eca7f044954c5dcb1ec2ed10945",
+    "topics/classicism/lean/Classicism/Results/Research/FiniteFunctionFields.lean": "2aa575af1ef32f47c8d8a1d6ec73783ed97a83255b914ca82c1fb549682e20d0",
+    "topics/classicism/lean/Classicism/Results/Research/FiniteFunctionFieldsCertificates.lean": "e4cfeb17d5536cf470ee2984c8d4fe2248983c98028df72fa51eecc9850a5736",
+    "topics/classicism/lean/Classicism/Results/Research/FiniteProfiles.lean": "abbc3a0bcdefbd3dc238d4ce6b2bd446108b3ab8d1935bcfc4e39b0283a4de37",
+    "topics/classicism/lean/Classicism/Results/Research/FiniteProfilesCertificates.lean": "abbddcae581fc3598b199142987790f786c6f7e9b83baebddf3fddf7362f9336",
+    "topics/classicism/lean/Classicism/Results/Research/FiniteRigidPowers.lean": "49ccd0c2e87ca33182998458922082f56a75dcd828f1accaf1e5b40427c7f2a1",
+    "topics/classicism/lean/Classicism/Results/Research/FiniteRigidPowersCertificates.lean": "c4bea45192c3165924d48d9b22d1ff7371eff98242de815c9e77f7efa4d76625",
+    "topics/classicism/lean/Classicism/Results/Research/FiniteTupleLaws.lean": "5e1bb21b3a0476893464ceb3ce64bf900d9ef08521152c1873ae2f49c8afa564",
+    "topics/classicism/lean/Classicism/Results/Research/FiniteTupleLawsCertificates.lean": "c18210ec25559bf0670f75552022f5bc4fe103244d1ada9c36dd68a60512eb6c",
+    "topics/classicism/lean/Classicism/Results/Research/FregeArithmeticGraphs.lean": "d0448a51f720730ab5a6932a819d8250f4a5f71fe0b890999fa496b433f33bf4",
+    "topics/classicism/lean/Classicism/Results/Research/FregeArithmeticGraphsCertificates.lean": "8891b31ef9f2505c90b6e63c43fa9ed2ef83397805eb7ed9f716cb5f5fbab7d7",
+    "topics/classicism/lean/Classicism/Results/Research/FregeArithmeticQuotation.lean": "62933d17b2dbccb9013bdab797ee1945876698834ff05530ca0cfa9de89df112",
+    "topics/classicism/lean/Classicism/Results/Research/FregeArithmeticReflection.lean": "10ebce97fa65169c23f30f48a7c48b2137fc2fd461471d68deaf819169c7047c",
+    "topics/classicism/lean/Classicism/Results/Research/FregeArithmeticVocabulary.lean": "ce212432c93f250f5daa69fc0abcd733f2c7eb2100c1f73c7e6875a47b766599",
+    "topics/classicism/lean/Classicism/Results/Research/FregeArithmeticVocabularyCertificates.lean": "471acd5ce280b9da8baadd41fd99bcdd2ed822eadb2e16919bdb9a0821a05d78",
+    "topics/classicism/lean/Classicism/Results/Research/FregeFiniteSets.lean": "9510257847837420c4ed3398a45107e5f6b47d040a14a7e52957eb238af9d2e3",
+    "topics/classicism/lean/Classicism/Results/Research/FregeFiniteSetsCertificates.lean": "c25badcf8584581bd15b980cfd2ac900f34329bd039eda03b094bb691e56a05f",
+    "topics/classicism/lean/Classicism/Results/Research/FregeHumeClasses.lean": "c694371e538d035a1c9310d86fde17c6d21a6b5b8fbbb8f1cf74ed4f83275484",
+    "topics/classicism/lean/Classicism/Results/Research/FregeHumeClassesCertificates.lean": "14df1ae01d27ed031fef61a67cc461eec0828737d46449d35d883a87d41895d5",
+    "topics/classicism/lean/Classicism/Results/Research/FregeInfinity.lean": "b0007e4dad8fdcf52a01e8ef77bbce988fa3f6aa06570c89c4f2397ea138c759",
+    "topics/classicism/lean/Classicism/Results/Research/FregeInfinityCertificates.lean": "02f55108d0ae28c0e3cb7489dc9dc590525ff7c8b38637facc4f8100a65af46d",
+    "topics/classicism/lean/Classicism/Results/Research/FregeNoncollapse.lean": "3d560d54f9ab4209f6376729348edf4046d311a47254ff8699475b136436a312",
+    "topics/classicism/lean/Classicism/Results/Research/FregeNoncollapseCertificates.lean": "7190112f16bd8d7eb9de3658b764f6dcf7324abbce17bd1dfead4d99d8b41749",
+    "topics/classicism/lean/Classicism/Results/Research/GeneratedAlgebraFinite.lean": "b4911c128403a5c245e384369aeb01cc340b4b4e9f72cb1de46b842fae176f1d",
+    "topics/classicism/lean/Classicism/Results/Research/GeneratedAlgebraFiniteCertificates.lean": "86a13ea9e6a297cdc13fde6e435c337fe290d2924d41a562c086d9ea3693e1ab",
+    "topics/classicism/lean/Classicism/Results/Research/GeneratedAlgebraTransfer.lean": "9611715d82e682bd3c52822fd195644151859ea4ad8369f432ca2f94845d322d",
+    "topics/classicism/lean/Classicism/Results/Research/GeneratedAlgebraTransferCertificates.lean": "15777964d1eae3e2ee9072582234cf5b151645ff637af8f1f6793b4a48753011",
+    "topics/classicism/lean/Classicism/Results/Research/RawWorldRepresentationBoundary.lean": "0a9132fce0b8b10570e2cf33db8d6f1de4d0972ecc454abe4ef117cae6b8773c",
+    "topics/classicism/lean/Classicism/Results/Research/RawWorldRepresentationBoundaryCertificates.lean": "559de56f62ea2a58c3ad6f2e84db3befe2f48a8953680f2234c16c1d3346a28f",
+    "topics/classicism/lean/Classicism/Results/Research/RawWorldRepresentationBoundarySchemas.lean": "239b50a921d47164b242452846d453f332e95534220dad8f810a61ca85694337",
+    "research/2026-10-22/lean-formalization/generate_generated_algebra.py": "55200a9dc32e93213aebca081ae3cdb9e764bae15005c57109881576bf71d084",
+    "research/2026-10-22/lean-formalization/generated-algebra-finite-signature.json": "099248c62d3a6319822693a89202cfd44d88a8dff982042aa25bfcc8dd8daf7f"
+  },
+  "static_hole_scan": {
+    "files": 47,
+    "matches": [],
+    "verification": "Static only; not a compiler certificate."
+  },
+  "principal_statement_index": "research/2026-10-22/lean-formalization/arithmetic-principal-statements.json",
+  "delivery_target_utc": "2026-10-23T05:57:00Z",
+  "new_checks_cutoff_utc": "2026-10-23T05:37:00Z",
+  "near_term_assessment": "Delivery checkpoint saved and lane stopped before the hard deadline. No active compiler session or child agent remains. Exact passed evidence, source hashes, current-dependency audit, prose sources, reproduction steps and unfinished obligations are linked. Work resumes only at explicit human request.",
+  "hard_stop_utc": "2026-10-23T05:57:00Z",
+  "turn_end_safety_margin_utc": "2026-10-23T05:55:00Z",
+  "final_checkpoint_start_utc": "2026-10-23T05:40:00Z",
+  "continuation_policy": "Hard human stop: no automatic continuation, polling, follow-ups or scheduled runs after cutoff without explicit human resumption. No live child agents in this lane.",
+  "final_delivered_scope": {
+    "fresh_C_certificate_modules": [
+      "FregeFiniteSetsCertificates",
+      "FregeNoncollapseCertificates",
+      "CrossBaseArithmeticCertificates",
+      "FregeArithmeticVocabularyCertificates",
+      "C5FregeCertificates",
+      "C5ActualityNumbersCertificates",
+      "FregeHumeClassesCertificates"
+    ],
+    "fresh_metatheory_modules": [
+      "CrossBaseFirstOrderChecks",
+      "FregeArithmeticQuotation",
+      "FregeArithmeticReflection"
+    ],
+    "source_only_with_certificate_timeout": [
+      "GeneratedAlgebraFinite"
+    ],
+    "unchecked_continuation_certificates": [
+      "FiniteProfilesCertificates",
+      "FiniteAtomProfilesCertificates",
+      "RawWorldRepresentationBoundaryCertificates",
+      "RawWorldRepresentationBoundarySchemas",
+      "FiniteRigidPowersCertificates",
+      "FiniteFunctionFieldsCertificates",
+      "FiniteTupleLawsCertificates"
+    ],
+    "prior_foundation_passes": "Preserved in earlier named manifests and contribution summary; not conflated with the fresh continuation passes."
+  },
+  "shutdown": {
+    "at_utc": "2026-10-23T05:37:59.832018+00:00",
+    "active_compiler_sessions": [],
+    "active_child_agents": [],
+    "active_goal": null,
+    "scheduled_continuation_created": false
+  },
+  "delivery_manifest": "research/2026-10-22/lean-formalization/arithmetic-delivery-manifest.json",
+  "current_evidence_audit": "research/2026-10-22/lean-formalization/arithmetic-current-evidence.json",
+  "final_artifact_verification": {
+    "delivery_hashes_match": true,
+    "principal_statement_locations_match": true,
+    "passing_targets_with_matching_full_local_dependency_sources_and_snapshots": 10,
+    "Lean_source_files_without_holes_or_added_axiom_declarations": 47
+  }
+}

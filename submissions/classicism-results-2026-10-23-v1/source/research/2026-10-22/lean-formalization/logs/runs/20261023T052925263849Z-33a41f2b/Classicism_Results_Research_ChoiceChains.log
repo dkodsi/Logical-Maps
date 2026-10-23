@@ -1,0 +1,12 @@
+Classicism/Results/Research/ChoiceChains.lean:30:31: warning: Variable name `z` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _z
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Classicism/Results/Research/ChoiceChains.lean:196:14: warning: Variable name `x` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _x
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

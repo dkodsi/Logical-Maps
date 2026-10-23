@@ -1,0 +1,102 @@
+Classicism/Models/OldNewBase.lean:93:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  e (e.symm ?x)
+in the target expression
+  old V (e (e.symm x)) ↔ old V (e.symm x)
+
+V : cat.Ob
+g : V ⟶ V
+hg : g ∈ syms V
+e : cat.X V ≃ cat.X V := Equiv.ofBijective (FunCat.fn g) ⋯
+x : X V
+h : old V (e (e.symm x)) ↔ old V (e.symm x)
+⊢ old V (e.symm x) ↔ old V x
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    V
+  has type
+    cat.Ob
+  but is expected to have type
+    Bool
+  in the application
+    old V
+Classicism/Models/OldNewBase.lean:107:29: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat (cat.X false) 0
+numerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is
+  cat.X false
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Classicism/Models/OldNewBase.lean:153:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  FunCat.fn h a
+in the target expression
+  ↑h a = ↑h b
+
+V : cat.Ob
+h : E ⟶ V
+a b : ℕ
+hab : coord h a = coord h b
+⊢ ↑h a = ↑h b
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    V
+  has type
+    cat.Ob
+  but is expected to have type
+    Bool
+  in the application
+    X V
+Classicism/Models/OldNewBase.lean:186:33: error: Application type mismatch: The argument
+  S
+has type
+  Set ℕ
+but is expected to have type
+  Set (cat.De.obj ?m.11)
+in the application
+  AgreeOn cat.De S
+Classicism/Models/OldNewBase.lean:186:54: error: unsolved goals
+V : cat.Ob
+h : E ⟶ V
+S : Set ℕ
+hS : S.Finite
+e : ℕ ≃ ℕ
+he : ∀ x ∈ S, e x = coord h x
+n : cat.De.obj E
+hn : n ∈ sorry
+hh : canonFn V (coord h n) = FunCat.fn h n
+⊢ FunCat.fn h n = (liftPerm V e) (canonFn V n)
+Classicism/Models/OldNewBase.lean:199:18: error: unsolved goals
+g : false ⟶ false
+hg : g ∈ syms false
+⊢ 𝟙 E ≫ g = g
+Classicism/Models/OldNewBase.lean:250:32: error: Application type mismatch: The argument
+  S
+has type
+  Set ℕ
+but is expected to have type
+  Set (cat.De.obj ?m.11)
+in the application
+  AgreeOn cat.De S
+Classicism/Models/OldNewBase.lean:256:6: error: Type mismatch: After simplification, term
+  hab
+ has type
+  (coord h ∘ Function.invFun (FunCat.fn f)) (FunCat.fn f a) = (coord h ∘ Function.invFun (FunCat.fn f)) (FunCat.fn f b)
+but is expected to have type
+  coord h a = coord h b
+Classicism/Models/OldNewBase.lean:250:47: error: unsolved goals
+V U : cat.Ob
+f : E ⟶ V
+h : E ⟶ U
+S : Set ℕ
+hS : S.Finite
+q : X V → ℕ := coord h ∘ Function.invFun (FunCat.fn f)
+hq : Set.InjOn q (FunCat.fn f '' S)
+e : X V ≃ X E
+he : ∀ x ∈ FunCat.fn f '' S, e x = q x
+k : V ⟶ U := FunCat.arr (canonFn U ∘ ⇑e) ⋯
+n : cat.De.obj E
+hn : n ∈ sorry
+⊢ canonFn U (e (FunCat.fn f n)) = FunCat.fn h n

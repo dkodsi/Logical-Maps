@@ -1,0 +1,15 @@
+Classicism.Research.ActualityCore.cut_fixed ⟶ Classicism.Research.ActualityCore.cut_fixed.derivable : ∀
+  (τ' : Classicism.Meta.RTy),
+  Classicism.Meta.Theorem Classicism.Meta.C.axiomsMinus
+    (Classicism.Meta.Term.forall'
+      (Classicism.Meta.Term.forall'
+        (Classicism.Meta.Term.imp
+          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).eq'
+            (((Classicism.Meta.Term.orR τ').app (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).app
+              (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)))
+          ((((Classicism.Meta.Term.andR τ').app (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)).app
+                (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).eq'
+            (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))))
+derived ✓ in C⁻
+'Classicism.Meta.ActualityCoreSyntax.application_member' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.ActualityCoreSyntax.translate_application' depends on axioms: [propext, Quot.sound]

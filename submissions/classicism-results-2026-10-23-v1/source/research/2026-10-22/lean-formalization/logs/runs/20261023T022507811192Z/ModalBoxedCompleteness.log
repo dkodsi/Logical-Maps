@@ -1,0 +1,29 @@
+Classicism.Research.ModalPropagation.sl_rc_relational_barcan_propagates_completeness ⟶ Classicism.Research.ModalPropagation.sl_rc_relational_barcan_propagates_completeness.rule : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp Classicism.P.StrongLeibnizT.quoted
+      (Classicism.Meta.Term.imp
+        (Classicism.P.RigidComprehension.quoted (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ Classicism.Meta.RTy.t))
+        (Classicism.Meta.Term.imp
+          (Classicism.P.RigidComprehension.quoted
+            (Classicism.Meta.Ty.rel (σ' ⇒ Classicism.Meta.RTy.t) ⇒ Classicism.Meta.RTy.t))
+          (Classicism.Meta.Term.imp (Classicism.P.Barcan.quoted (Classicism.Meta.Ty.rel (σ' ⇒ Classicism.Meta.RTy.t)))
+            (Classicism.Meta.Term.imp
+              (Classicism.P.Barcan.quoted
+                (Classicism.Meta.Ty.rel (Classicism.Meta.Ty.rel (σ' ⇒ Classicism.Meta.RTy.t) ⇒ Classicism.Meta.RTy.t)))
+              (Classicism.P.NecBooleanCompleteness.quoted (σ' ⇒ Classicism.Meta.RTy.t)))))))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.ModalPropagation.sl_rc_relational_barcan_propagates_completeness ⟶ Classicism.Research.ModalPropagation.sl_rc_relational_barcan_propagates_completeness.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp Classicism.P.StrongLeibnizT.quoted
+      (Classicism.Meta.Term.imp
+        (Classicism.P.RigidComprehension.quoted (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ Classicism.Meta.RTy.t))
+        (Classicism.Meta.Term.imp
+          (Classicism.P.RigidComprehension.quoted
+            (Classicism.Meta.Ty.rel (σs ⇒* Classicism.Meta.RTy.t) ⇒ Classicism.Meta.RTy.t))
+          (Classicism.Meta.Term.imp (Classicism.P.Barcan.quoted (Classicism.Meta.Ty.rel (σs ⇒* Classicism.Meta.RTy.t)))
+            (Classicism.Meta.Term.imp
+              (Classicism.P.Barcan.quoted
+                (Classicism.Meta.Ty.rel (Classicism.Meta.Ty.rel (σs ⇒* Classicism.Meta.RTy.t) ⇒ Classicism.Meta.RTy.t)))
+              (Classicism.P.NecBooleanCompleteness.quoted (σs ⇒* Classicism.Meta.RTy.t)))))))

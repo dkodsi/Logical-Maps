@@ -1,0 +1,224 @@
+id: symmetric-range-gap
+name: 'Symmetric ideally-full model: arrows omitting a fixed individual'
+certificate:
+  source_id: dorr-bc-not-rc
+  produced_by: Cian Dorr
+  recorded_by: Claude Opus 5 (Anthropic), 19 September 2026
+  checked_by: []
+  date: '2026-09-19'
+  lean: stated
+sources:
+- Cian Dorr, Boolean Completeness does not imply Rigid Comprehension, draft of 30 July 2026, §7.1, p.
+  21; Proposition 43 and Proposition 44, p. 22; Lemma 21, p. 10; Remark 38, p. 19.
+source_names:
+- BC does not imply RC
+references:
+- paper: dorr-bc-not-rc
+  role: proof
+  locator: §7.1, p. 21; Proposition 43 and Proposition 44, p. 22; Lemma 21, p. 10; Remark 38, p. 19
+
+# migration: the definition is the old description's first paragraph without its verdict sentence,
+# then the notes' interpretation of Σ, in which "described above" becomes ", the symmetry group",
+# the Actuality witness of the argument below.
+group: symmetric-ideally-full
+# migration (2 October): the old definition is the group's, completed by these settings: `construction`
+# is its first paragraph, verbatim; its interpretation of Σ is one of the group's values.
+# migration (3 October): recorded at the group's defaults, Σ top and the base as the individuals; Σ true atom, until then the record's, is now a variant.
+settings:
+  construction: >-
+    A symmetric ideally-full intensional action model over one object, the set of natural numbers.
+    Its symmetry group is the permutations fixing a distinguished individual, and its arrows are
+    those permutations together with all the functions that omit the distinguished individual from
+    their range. The evaluation point is the identity arrow.
+  individuals: base
+  sigma: top
+meets:
+  factorizable-arrows: >-
+    Put the distinguished individual $d$ in $S$ and $N$, take $N^{\prime\prime}:=S$ and, enlarging $N$,
+    assume $h(N^{\prime\prime})\subseteq N$. An arrow's value at $d$ tells its kind: a permutation
+    fixing $d$, or a map omitting $d$; so $k^{\prime}$ has the kind of $kh$, and $k^{\prime\prime}$ and $j$
+    will have the kinds of $h$ and $k$. Let $k^{\prime\prime}$ agree with $h$ on $N^{\prime\prime}$; for
+    $m\in M\setminus N^{\prime\prime}$ let $k^{\prime\prime}m:=k^{-1}(k^{\prime}m)$ if $k$ is a permutation and
+    $k^{\prime}m\in k(N)$, and otherwise a fresh point outside $N\cup\{d\}$, one for each $m$ if $h$ is
+    a permutation and one for each value of $k^{\prime}$ if not. Let $j$ agree with $k$ on $N$ and send
+    each fresh point to its value. Since $k^{\prime}m\ne d$ for $m\ne d$, $k^{\prime\prime}m\ne d$; where
+    $h$ is a permutation so is $k^{\prime}$ or $k$ omits $d$, and $k^{\prime\prime}$ is injective on $M$;
+    where $k$ is a permutation the new values of $j$ lie outside $k(N)$ and are distinct. So both
+    extend to arrows of their kinds, and $jk^{\prime\prime}$ agrees with $k^{\prime}$ on $M$.
+  finitely-pinned-domains: >-
+    A relational domain holds exactly the symmetric intensions pinned down by a finite set, and
+    every individual $n$ is pinned down by $\{n\}$.
+  collapse-onto-point: >-
+    The distinguished individual $d$ is fixed by every symmetry, so take $F:=\lambda x\, .\,x\ne a\land\neg Ex$, where $E$ is the constant intension $\{d\}$, pinned down by $\varnothing$. Let $h$ be a range-deficient function constant with value $p\ne d$ on $N\cup\{a\}$. Then $F_h$ omits $p$ and $d$, and permutations fixing $p$ and $d$ move every other point.
+  one-object-action-model: >-
+    It has one object (Dorr, draft, §3.1: closed pure terms denote entities fixed by every arrow).
+  transposable: >-
+    $M=\{0\}$, the distinguished individual, and for $N$ the property of not belonging to
+    $N\cup\{0\}$: the transposition of $y$ with another individual outside $N\cup\{0\}$ fixes $0$, so
+    lies in the symmetry group.
+  separable-collapses: >-
+    The pairs $\{n,m\}$ of positive numbers: a function omitting $0$ from its range that collapses
+    $n$ with $m$ and nothing else is an arrow.
+  symmetry-group-pinned: >-
+    The two classes of arrows are told apart by an arrow's value at the distinguished individual.
+  fixes-or-omits: >-
+    The arrows are the permutations fixing $0$ and the functions omitting $0$ from their range.
+  transport-gap: >-
+    Take $N=\{0\}$, $i$ any arrow with $i0\ne0$, so that every arrow agreeing with it on $N$ omits
+    $0$ from its range, and $q:=\{k : k0=0\}$, the symmetry group, pinned down by $\{0\}$ and
+    symmetric: a permutation $k$ fixing $0$ and the arrow $k^{\prime}$ agreeing with it off $0$ but
+    sending $0$ elsewhere, which omits $0$ from its range, are separated by $q$. The intension the
+    argument uses is pinned down by $N$, and symmetric, since $g\cdot q=q$ for $g$ fixing $0$ and
+    $(g\circ j)0=0$ iff $j0=0$, so it lies in the domain.
+  actual-world-isolated: >-
+    The actual-world proposition is the set of arrows that are permutations, pinned down by $\{0\}$;
+    no composite with an arrow omitting $0$ from its range is a permutation, since the other arrows
+    fix $0$ and so cannot restore it to the range.
+  actuality-contingent: >-
+    The actual-world proposition, the symmetry group, is in the domain; at every world an arrow
+    omitting $0$ leads outside it, and such an arrow carries it to the empty set.
+  irreversible-arrow: >-
+    An arrow omitting $0$ from its range: no composite with it restores $0$ to the range.
+  hull-conditions: >-
+    With $M_0=\{0\}$, the distinguished individual (the draft's argument for this model). Moving
+    points off a finite set can be done by a permutation fixing that individual; an arrow that
+    $M_0$ does not separate omits $0$ from its range, as does any arrow agreeing with it at $0$, so
+    a prescription taken from the two of them extends by nonzero values to an arrow of that kind.
+
+arguments:
+
+# Restructured on 2 October 2026 (Claude Opus 5.5, at Cian Dorr's direction): every argument this
+# record shared in substance with another symmetric model is now a shared argument of the group
+# symmetric-ideally-full or one of the topic's general arguments (arguments/), with this record's
+# witness under `meets`; what follows is this record's own. Only the verdicts the engine needs to
+# derive the rest are recorded, the source's first.
+
+# --- from the source (19 Sep record) ---
+
+# --- later additions ---
+
+- fails: [atomicity-t]
+  by: Claude Fable 5.1 (Anthropic)
+  date: '2026-09-23'
+  text: >-
+    The symmetry group is an atom, but no atom lies inside the nonempty proposition $T$ of arrows
+    omitting $0$ from their range, which is symmetric and pinned down by $\{0\}$: a nonempty
+    symmetric $p\subseteq T$ pinned down by $N\ni0$ and containing $h$ contains every arrow in $T$
+    whose restriction to $N$ has the same fibres as $h$’s, and those whose restriction to
+    $N\cup\{m\}$ has the same fibres as $h$’s form a smaller nonempty symmetric proposition pinned
+    down by $N\cup\{m\}$, since $h$’s value at a fresh $m$ can be made to coincide with, or to
+    differ from, a value on $N$.
+
+# migration: text of the old notes that no argument holds, verbatim. Their argument for the failure
+# of ND, now derived, is dropped.
+
+- id: rigid-power
+  fails: [rigid-power-r]
+  by: GPT-6 Astra (OpenAI), at Cian Dorr's request; checked and recorded by Claude Opus 5.5 (Anthropic)
+  date: '2026-10-11'
+  text: >-
+    At type $t\to t$, with propositions as arguments, so for either choice of individuals. For points
+    $u,v$ let $q_{uv}:=\{h:hu=hv\}$, a symmetric proposition pinned down by $\{u,v\}$, with $h\cdot
+    q_{uv}=q_{hu,hv}$; let $Q(A):=\{q_{uv}:u,v\in A\}$. The arrows into $B$ (the points other than the
+    distinguished $d$) are arbitrary, so $q_{uv}=q_{xy}$ for distinct $u,v$ only if $\{u,v\}=\{x,y\}$
+    (an arrow merging just $u$ and $v$).
+
+    Let $F$ have extension $Q(B)$ at every arrow, and, for a fixed $c\in B$, let $Y_k:=Q(B\setminus
+    \{kc\})$ at a symmetry $k$ (a permutation fixing $d$) and $Y_k:=Q(B)$ at an arrow omitting $d$. Both
+    are symmetric, pinned down by $\emptyset$ and $\{d,c\}$, and equal to their $B_N$ for every finite
+    $N$ (at an arrow omitting $d$, two fresh points can be sent anywhere in $B$), so they are weakly
+    rigid (tame-rigidity-factorizable, part (1)) and rigid by Tame Rigidity; $Y\le F$, and $h\cdot F=F$
+    for every arrow $h$.
+
+    No rigid $Z\le F$ has $Z_h=Y_1=Q(B\setminus\{c\})$ at an arrow $h$ omitting $d$. Let
+    $T\supseteq\{d,c\}$ pin $Z$ down and take distinct $x,y\in B$ outside $hT\cup\{c\}$. Then $q_{xy}\in
+    Z_h$, so by part (1) $q_{xy}=g\cdot q_{uv}$ with $q_{uv}\in Z_1$ and $g$ agreeing with $h$ on $T$;
+    so $gu=x$, $gv=y$ (after swapping), and $u,v\notin T$. Changing $g$ at $u$ to $c$ gives an arrow
+    $g^{\prime}$ omitting $d$ and agreeing with $h$ on $T$, and weak persistence and pinning put
+    $q_{cy}=g^{\prime}\cdot q_{uv}$ in $Z_{g^{\prime}}=Z_h$, which is not in $Q(B\setminus\{c\})$.
+
+    The power property $R$ of $F$ has the set of rigid $Z\le F$ as its extension at every arrow. The
+    test $B_{\{d\}}$ of that extension necessarily holds of each of its instances, but at an arrow
+    omitting $d$ it would contain $Y$ only as $h^{\prime}\cdot Z$ with $Z_{h^{\prime}}=Y_1$ and
+    $h^{\prime}$ omitting $d$, which was just excluded. So $R$ is not weakly inextensible, though $F$ is
+    rigid: Rigid Power fails.
+
+notes: >-
+  The first of the draft's two variants in which BF is made to fail. Actuality and the range
+  deficiency come from the same finite test here, which is what the next variant prises apart.
+  Atomicity and Rigid Comprehension are not settled in the draft and are left unknown. The source
+  is a work in progress. Everything that implies these fails with them.
+
+# The old `changes` log, verbatim and frozen.
+history:
+- date: '2026-09-20'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Added both Axioms of Infinity at Cian Dorr's direction. The individuals are the natural numbers
+    and identity at the identity arrow is literal, so no numeral counts them. The propositions that a
+    given individual is fixed by the arrow, one for each individual, are pairwise distinct, symmetric
+    and pinned by that individual, so there are infinitely many propositions. The set of numerals at each
+    type is invariant under every arrow, hence symmetric and pinned by the empty set, so finite cardinality
+    is standard and no finite cardinality holds of the universal property at either type.
+  satisfies:
+  - axiom-of-infinity-e
+  - axiom-of-infinity-t
+- date: '2026-09-22'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Fixed an interpretation of Σ (relational constants as top, individual constants as one fixed
+    individual) and recorded the signature schemata it refutes, at Cian Dorr’s request.
+  violates:
+  - witnessed-possibility-r
+  - separated-structure-r
+  - independence-signature-r
+  - distinctness-signature-r
+- date: '2026-09-23'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Recorded the Distinctness-preserving collapse; see the notes.
+  satisfies:
+  - distinctness-preserving-collapse
+- date: '2026-09-23'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Re-fixed the interpretation of Σ so as to settle No Contingency (signature Σ) and B for sentences
+    of Σ, at Cian Dorr’s request; see the notes.
+  violates:
+  - no-contingency-signature-r
+  - signature-b-r
+- date: '2026-09-23'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: 'Corrected the reason given for the failures of Independence (signature Σ) and Distinctness
+    (signature Σ): the true atom is denoted by no closed pure term, since such terms denote entities fixed
+    by every arrow; the failures come from the other relational constants, which denote top. No verdict
+    changes.'
+- date: '2026-09-23'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: 'Recorded the failure of Relational Choice, at types (e→t) and e: a functional subrelation
+    of the serial relation pairing each property with its members would be symmetric and finitely pinned,
+    and a symmetry fixing its pinning set would carry its choice for the property of lying outside that
+    set to a second choice. Cian Dorr’s observation that a choice cannot be finitely pinned; argument
+    in the notes.'
+  violates:
+  - relational-choice-r
+- date: '2026-09-23'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Recorded the failure of BF at type t, sharpening the failure of BF; argument in the notes.
+  violates:
+  - barcan-t
+- date: '2026-09-23'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Recorded the failure of Atomicity (type t), and with it of the Strong Leibniz Biconditionals;
+    see the notes.
+  violates:
+  - atomicity-t
+
+# The model in Lean (Classicism/Models/SymmetricIdeal.lean): the base, the group's parameter.
+lean:
+  param: Classicism.Meta.Intensional.SymIdeal.Base.toSym Classicism.Meta.Intensional.SymIdeal.rangeGap
+  meets:
+    hull-conditions: Classicism.Meta.Intensional.SymIdeal.rangeGap_hullConditions
+    infinitely-many-individuals: Classicism.Meta.Intensional.SymIdeal.infinitelyManyIndividuals Classicism.Meta.Intensional.SymIdeal.rangeGap
+    separable-collapses: Classicism.Meta.Intensional.SymIdeal.rangeGap_separable
+    one-object-action-model: Classicism.Meta.Intensional.Premodel.oneObject_of_subsingleton _
+    actual-world-isolated: Classicism.Meta.Intensional.SymIdeal.rangeGap_actualWorldIsolated
+    transposable: Classicism.Meta.Intensional.SymIdeal.rangeGap_transposable
+    symmetry-group-pinned: Classicism.Meta.Intensional.SymIdeal.rangeGap_symmetryGroupPinned
+    fixes-or-omits: Classicism.Meta.Intensional.SymIdeal.rangeGap_fixesOrOmits

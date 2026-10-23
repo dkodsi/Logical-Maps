@@ -1,0 +1,11 @@
+*** Begin Patch
+*** Update File: topics/classicism/lean/Classicism/Results/Research/CrossBaseFirstOrder.lean
+@@
+-        obtain ⟨x, hx, hxy⟩ := synch_onto y hy
++        obtain ⟨x, hxy⟩ := synch_onto y hy
++        have hx := (synch_numbers x y hxy).1
+@@
+-        obtain ⟨y, hy, hxy⟩ := synch_total x hx
++        obtain ⟨y, hxy⟩ := synch_total x hx
++        have hy := (synch_numbers x y hxy).2
+*** End Patch

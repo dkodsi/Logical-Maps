@@ -1,0 +1,18 @@
+Classicism/Results/Records/Comprehension.lean:85:13: warning: Variable name `x` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _x
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Classicism/Results/Records/Comprehension.lean:85:15: warning: Variable name `y` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _y
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Classicism/Results/Records/Comprehension.lean:180:18: warning: Variable name `G` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _G
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

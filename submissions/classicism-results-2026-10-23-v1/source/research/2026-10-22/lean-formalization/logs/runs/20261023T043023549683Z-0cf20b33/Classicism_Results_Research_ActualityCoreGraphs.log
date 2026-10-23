@@ -1,0 +1,148 @@
+Classicism/Results/Research/ActualityCoreGraphs.lean:44:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.ActualityCore.graph_current`:
+  [Ty σ]
+  [Ty ρ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Ty σ] [Ty ρ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/ActualityCoreGraphs.lean:64:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.ActualityCore.serial_agreement`:
+  [Ty σ]
+  [Ty ρ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Ty σ] [Ty ρ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/ActualityCoreGraphs.lean:69:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.ActualityCore.singleValued_agreement`:
+  [Ty σ]
+  [Ty ρ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Ty σ] [Ty ρ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/ActualityCoreGraphs.lean:76:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.ActualityCore.injective_agreement`:
+  [Ty σ]
+  [Ty ρ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Ty σ] [Ty ρ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/ActualityCoreGraphs.lean:83:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.ActualityCore.surjective_agreement`:
+  [Ty σ]
+  [Ty ρ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Ty σ] [Ty ρ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/ActualityCoreGraphs.lean:100:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.ActualityCore.compose_serial`:
+  [Ty σ]
+  [Ty ρ]
+  [Ty κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Ty σ] [Ty ρ] [Ty κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/ActualityCoreGraphs.lean:106:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.ActualityCore.compose_singleValued`:
+  [Ty σ]
+  [Ty ρ]
+  [Ty κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Ty σ] [Ty ρ] [Ty κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/ActualityCoreGraphs.lean:116:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.ActualityCore.compose_injective`:
+  [Ty σ]
+  [Ty ρ]
+  [Ty κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Ty σ] [Ty ρ] [Ty κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/ActualityCoreGraphs.lean:126:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.ActualityCore.compose_surjective`:
+  [Ty σ]
+  [Ty ρ]
+  [Ty κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Ty σ] [Ty ρ] [Ty κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/ActualityCoreGraphs.lean:133:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.ActualityCore.compose_assoc`:
+  [Ty σ]
+  [Ty ρ]
+  [Ty κ]
+  [Ty υ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Ty σ] [Ty ρ] [Ty κ] [Ty υ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/ActualityCoreGraphs.lean:136:13: warning: Variable name `x` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _x
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Classicism/Results/Research/ActualityCoreGraphs.lean:136:29: warning: Variable name `z` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _z
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Classicism/Results/Research/ActualityCoreGraphs.lean:142:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.ActualityCore.compose_normalized`:
+  [Ty ρ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Ty ρ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/ActualityCoreGraphs.lean:147:36: warning: Variable name `x` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _x
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Classicism/Results/Research/ActualityCoreGraphs.lean:147:38: warning: Variable name `z` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _z
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Classicism/Results/Research/ActualityCoreGraphs.lean:155:38: warning: Variable name `y` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _y
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Classicism/Results/Research/ActualityCoreGraphs.lean:156:25: warning: Variable name `z` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _z
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Classicism/Results/Research/ActualityCoreGraphs.lean:162:36: warning: Variable name `x` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _x
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Classicism/Results/Research/ActualityCoreGraphs.lean:163:25: warning: Variable name `z` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _z
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Classicism/Results/Research/ActualityCoreGraphs.lean:176:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.ActualityCore.realize_supported`:
+  [Ty σ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Ty σ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/ActualityCoreGraphs.lean:180:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.ActualityCore.realize_below`:
+  [Ty σ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Ty σ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/ActualityCoreGraphs.lean:247:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.ActualityCore.hasMinimal_invariant`:
+  [Ty σ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Ty σ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

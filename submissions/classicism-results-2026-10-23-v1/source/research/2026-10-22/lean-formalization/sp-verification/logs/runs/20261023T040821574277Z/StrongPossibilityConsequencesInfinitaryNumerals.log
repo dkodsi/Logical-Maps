@@ -1,0 +1,9 @@
+StrongPossibilityConsequencesInfinitaryNumerals.lean:33:0: warning: `Frame`: universes `u`, `v` only occur together. This usually means there is a `max` expression in the type where none of these universes appear on their own.
+
+Note: This linter can be disabled with `set_option linter.checkUnivs false`
+'ClassicismResearch.StrongPossibilityConsequences.InfinitaryNumerals.number_iff_numeral' depends on axioms: [propext,
+ Quot.sound]
+'ClassicismResearch.StrongPossibilityConsequences.InfinitaryNumerals.unique_number_name' depends on axioms: [propext,
+ Quot.sound]
+'ClassicismResearch.StrongPossibilityConsequences.InfinitaryNumerals.unnamed_number_excludes_comprehension' depends on axioms: [propext,
+ Quot.sound]

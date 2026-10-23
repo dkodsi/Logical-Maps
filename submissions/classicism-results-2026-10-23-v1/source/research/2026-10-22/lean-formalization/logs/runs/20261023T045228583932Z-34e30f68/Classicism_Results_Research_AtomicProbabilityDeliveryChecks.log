@@ -1,0 +1,81 @@
+Classicism.Research.Probability.FiniteSupportSystem.graph_total_functional.{u, v, w} {R : Type u}
+  {s : Classicism.Research.Probability.MassScalar R} {E : Type v} {K : Type w}
+  (F : Classicism.Research.Probability.FiniteSupportSystem s E K)
+  (hc : Classicism.Research.Probability.HasBoundedMassSuprema s) (b : R) (hb : ∀ (k : K), s.le (F.mass k) b) (p : E) :
+  ∃ x, F.Value p x ∧ ∀ (y : R), F.Value p y → x = y
+Classicism.Research.Probability.FiniteSupportSystem.value_add.{u, v, w} {R : Type u}
+  {s : Classicism.Research.Probability.MassScalar R} {E : Type v} {K : Type w}
+  (F : Classicism.Research.Probability.FiniteSupportSystem s E K) {p q : E} {x y : R} (hd : F.disjoint p q)
+  (hx : F.Value p x) (hy : F.Value q y) : F.Value (F.join p q) (s.add x y)
+Classicism.Research.Probability.FiniteSupportSystem.value_positive.{u, v, w} {R : Type u}
+  {s : Classicism.Research.Probability.MassScalar R} {E : Type v} {K : Type w}
+  (F : Classicism.Research.Probability.FiniteSupportSystem s E K) {p : E} {x : R} (hx : F.Value p x)
+  (hp : ∃ k, F.below k p ∧ s.Positive (F.mass k)) : s.Positive x
+Classicism.Research.Probability.FiniteSupportSystem.residual_add.{u, v, w} {R : Type u}
+  {s : Classicism.Research.Probability.MassScalar R} {E : Type v} {K : Type w}
+  (F : Classicism.Research.Probability.FiniteSupportSystem s E K) {p q : E} {x y z : R} (hd : F.disjoint p q)
+  (hx : F.Value p x) (hy : F.Value q y) (hz : F.Value (F.join p q) z) (mu : E → R)
+  (hm : mu (F.join p q) = s.add (mu p) (mu q)) : s.sub (mu (F.join p q)) z = s.add (s.sub (mu p) x) (s.sub (mu q) y)
+Classicism.Research.Probability.FiniteSupportSystem.completely_additive_graph.{u, v, w, z} {R : Type u}
+  {s : Classicism.Research.Probability.MassScalar R} {E : Type v} {K : Type w} {I : Type z}
+  (F : Classicism.Research.Probability.FiniteSupportSystem s E K) (f : I → E) (v : I → R)
+  (hv : ∀ (i : I), F.Value (f i) (v i)) (p : E) (x : R) (hx : F.Value p x)
+  (hdisjoint : ∀ (is : List I), is.Nodup → F.JoinCompatible f is)
+  (hupper : ∀ (is : List I), is.Nodup → ∀ (k : K), F.below k (F.joinList f is) → F.below k p)
+  (hcover : ∀ (k : K), F.below k p → ∃ is, is.Nodup ∧ F.below k (F.joinList f is)) :
+  Classicism.Research.Probability.IsMassSup s (fun r => ∃ is, is.Nodup ∧ r = s.sum v is) x
+Classicism.Research.Probability.FiniteSupportSystem.normalize_atomic_state.{u, v, w} {R : Type u}
+  {s : Classicism.Research.Probability.MassScalar R} {E : Type v} {K : Type w}
+  (F : Classicism.Research.Probability.FiniteSupportSystem s E K) (T : Classicism.Research.Probability.PositiveScale s)
+  (v : E → R) (hv : ∀ (p : E), F.Value p (v p)) (top : E) (one : R) (hnorm : T.forward (v top) = one)
+  (nonzero : E → Prop) (hfaithful : ∀ (p : E), nonzero p → s.Positive (v p)) :
+  T.forward (v top) = one ∧
+    (∀ (p : E), (F.scaled T).Value p (T.forward (v p))) ∧
+      (∀ (p q : E), F.disjoint p q → T.forward (v (F.join p q)) = s.add (T.forward (v p)) (T.forward (v q))) ∧
+        ∀ (p : E), nonzero p → s.Positive (T.forward (v p))
+Classicism.Research.Probability.classAverage_total_functional.{u, v} {R : Type u} {A : Type v}
+  {s : Classicism.Research.Probability.MassScalar R} [DecidableEq A]
+  (d : Classicism.Research.Probability.FiniteDivision s) {r : A → A → Prop}
+  (hf : Classicism.Research.Probability.FiniteClasses r) (c : A → R) (a : A) :
+  ∃ x,
+    Classicism.Research.Probability.ClassAverageGraph d r c a x ∧
+      ∀ (y : R), Classicism.Research.Probability.ClassAverageGraph d r c a y → x = y
+Classicism.Research.Probability.classAverage_preserves_class_sum.{u, v} {R : Type u} {A : Type v}
+  {s : Classicism.Research.Probability.MassScalar R} [DecidableEq A]
+  (d : Classicism.Research.Probability.FiniteDivision s) {r : A → A → Prop} (hr : Equivalence r) {c v : A → R}
+  (hv : ∀ (a : A), Classicism.Research.Probability.ClassAverageGraph d r c a (v a)) {a : A} {xs : List A}
+  (hxs : Classicism.Research.Probability.ClassEnumeration r a xs) : s.sum v xs = s.sum c xs
+Classicism.Research.Probability.classAverage_idempotent.{u, v} {R : Type u} {A : Type v}
+  {s : Classicism.Research.Probability.MassScalar R} [DecidableEq A]
+  (d : Classicism.Research.Probability.FiniteDivision s) {r : A → A → Prop} (hr : Equivalence r) {c v w : A → R}
+  (hv : ∀ (a : A), Classicism.Research.Probability.ClassAverageGraph d r c a (v a))
+  (hw : ∀ (a : A), Classicism.Research.Probability.ClassAverageGraph d r v a (w a)) (a : A) : w a = v a
+Classicism.Research.Probability.saturated_envelopes_equal.{u, v} {R : Type u} {A : Type v}
+  {s : Classicism.Research.Probability.MassScalar R} (c v : A → R) (admissible saturated : List A → Prop)
+  (hsaturate :
+    ∀ (xs : List A),
+      admissible xs →
+        ∃ ys, admissible ys ∧ saturated ys ∧ s.le (s.sum c xs) (s.sum c ys) ∧ s.le (s.sum v xs) (s.sum v ys))
+  (hmass : ∀ (xs : List A), admissible xs → saturated xs → s.sum c xs = s.sum v xs) {x y : R}
+  (hx : Classicism.Research.Probability.IsMassSup s (Classicism.Research.Probability.FiniteMassValues s c admissible) x)
+  (hy :
+    Classicism.Research.Probability.IsMassSup s (Classicism.Research.Probability.FiniteMassValues s v admissible) y) :
+  x = y
+Classicism.Research.Probability.fibreWeight_total_functional.{u, v} {R : Type u} {A : Type v}
+  {s : Classicism.Research.Probability.MassScalar R} [DecidableEq A]
+  (d : Classicism.Research.Probability.FiniteDivision s) {label : A → Nat}
+  (hf : Classicism.Research.Probability.FiniteFibres label) (budget : Nat → R) (a : A) :
+  ∃ x,
+    Classicism.Research.Probability.FibreWeightGraph d label budget a x ∧
+      ∀ (y : R), Classicism.Research.Probability.FibreWeightGraph d label budget a y → x = y
+Classicism.Research.Probability.finiteFibre_finite_budget.{u, v} {R : Type u} {A : Type v}
+  {s : Classicism.Research.Probability.MassScalar R} [DecidableEq A]
+  (d : Classicism.Research.Probability.FiniteDivision s) {label : A → Nat}
+  (hf : Classicism.Research.Probability.FiniteFibres label) {budget : Nat → R}
+  (hb : ∀ (n : Nat), s.Nonnegative (budget n)) (bound : R)
+  (hbudget : ∀ (ns : List Nat), ns.Nodup → s.le (s.sum budget ns) bound) (c : A → R)
+  (hc : ∀ (a : A), Classicism.Research.Probability.FibreWeightGraph d label budget a (c a)) (xs : List A)
+  (hn : xs.Nodup) : s.le (s.sum c xs) bound
+'Classicism.Research.Probability.FiniteSupportSystem.completely_additive_graph' does not depend on any axioms
+'Classicism.Research.Probability.FiniteSupportSystem.normalize_atomic_state' does not depend on any axioms
+'Classicism.Research.Probability.PositiveScale.map_sup' does not depend on any axioms

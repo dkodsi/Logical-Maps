@@ -1,0 +1,158 @@
+Classicism.Research.Splitting.c5_injectivity_persists: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.Splitting.c5_strong_retractions: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.Splitting.c5_strong_retractions_t: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.Splitting.injectivity_persists_of_nd_barcan: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.Splitting.inverseKernelT_coext: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.inverseKernel_coext: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.necessary_injection_iff_retraction: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.necessary_injection_iff_retraction_t: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.necessary_injection_retraction: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.necessary_injection_retraction_t: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.necessary_injection_splitting: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.persistent_injections_strong_retractions: Classicism ✓ [C⁻] (axioms: [propext,
+ Quot.sound])
+Classicism.Research.Splitting.truthEmbedding_collapse: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.truthEmbedding_injective: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.truthEmbedding_inverse_possible: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.truth_retractions_modal_b: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.truth_retractions_nd: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+#classicism_audit Classicism.Results.Research.SectionsRetractionsStrong: 17/17 theorems pass; 17 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.SectionsRetractionsStrong: 17/17 inside R
+Classicism.Results.Research.SectionsRetractionsStrong: 17 of 17 theorems derived
+
+[1/17] Classicism.Research.Splitting.c5_injectivity_persists ✓ 308 ms
+[2/17] Classicism.Research.Splitting.c5_strong_retractions ✓ 169 ms
+[3/17] Classicism.Research.Splitting.c5_strong_retractions_t ✓ 113 ms
+[4/17] Classicism.Research.Splitting.injectivity_persists_of_nd_barcan ✓ 0 ms
+[5/17] Classicism.Research.Splitting.inverseKernelT_coext ✓ 0 ms
+[6/17] Classicism.Research.Splitting.inverseKernel_coext ✓ 0 ms
+[7/17] Classicism.Research.Splitting.necessary_injection_iff_retraction ✓ 31 ms
+[8/17] Classicism.Research.Splitting.necessary_injection_iff_retraction_t ✓ 28 ms
+[9/17] Classicism.Research.Splitting.necessary_injection_retraction ✓ 0 ms
+[10/17] Classicism.Research.Splitting.necessary_injection_retraction_t ✓ 0 ms
+[11/17] Classicism.Research.Splitting.necessary_injection_splitting ✓ 16 ms
+[12/17] Classicism.Research.Splitting.persistent_injections_strong_retractions ✓ 0 ms
+[13/17] Classicism.Research.Splitting.truthEmbedding_collapse ✓ 11 ms
+[14/17] Classicism.Research.Splitting.truthEmbedding_injective ✓ 3 ms
+[15/17] Classicism.Research.Splitting.truthEmbedding_inverse_possible ✓ 7 ms
+[16/17] Classicism.Research.Splitting.truth_retractions_modal_b ✓ 65 ms
+[17/17] Classicism.Research.Splitting.truth_retractions_nd ✓ 7 ms
+Classicism.Research.Splitting.NecessaryInjectionSplitting ⟶ Classicism.Research.Splitting.NecessaryInjectionSplitting.schema:
+  fun ν' B' =>
+    Classicism.Meta.Term.forall'
+      (Classicism.Meta.Term.imp
+        (Classicism.Meta.Term.box
+          (Classicism.Meta.Term.forall'
+            (Classicism.Meta.Term.forall'
+              (Classicism.Meta.Term.imp
+                (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)).eq'
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).eq'
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))))
+        (Classicism.Meta.Term.exists'
+          (Classicism.Meta.Term.box
+            (Classicism.Meta.Term.forall'
+              (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).eq'
+                (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))))
+#classicism_schema: 1 of 1 principles with a Ty-parameter have list forms
+Classicism.Research.Splitting.necessary_injection_splitting ⟶ Classicism.Research.Splitting.necessary_injection_splitting.rule : ∀
+  (ν' : Classicism.Meta.Ty) (B' : Classicism.Meta.RTy),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Research.Splitting.NecessaryInjectionSplitting.quoted ν' B')
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.necessary_injection_splitting ⟶ Classicism.Research.Splitting.necessary_injection_splitting.listRule : ∀
+  (σs : List Classicism.Meta.Ty) (ρ1 : Classicism.Meta.RTy),
+  ρ1.Closed →
+    Classicism.Meta.Theorem Classicism.Meta.C.axioms
+      (Classicism.Research.Splitting.NecessaryInjectionSplitting.listQuoted σs ρ1)
+Classicism.Research.Splitting.c5_injectivity_persists ⟶ Classicism.Research.Splitting.c5_injectivity_persists.rule : ∀
+  (A' : Classicism.Meta.Ty) (B' : Classicism.Meta.RTy),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp
+      (Classicism.P.NecNecessityOfDistinctness.quoted (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t))
+      (Classicism.Research.Splitting.InjectivityPersists.quoted A' B'))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.c5_injectivity_persists ⟶ Classicism.Research.Splitting.c5_injectivity_persists.listRule : ∀
+  (σs : List Classicism.Meta.Ty) (ρ1 : Classicism.Meta.RTy),
+  ρ1.Closed →
+    Classicism.Meta.Theorem Classicism.Meta.C.axioms
+      (Classicism.Meta.Term.imp
+        (Classicism.P.NecNecessityOfDistinctness.quoted (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t))
+        (Classicism.Research.Splitting.InjectivityPersists.listQuoted σs ρ1))
+Classicism.Research.Splitting.persistent_injections_strong_retractions ⟶ Classicism.Research.Splitting.persistent_injections_strong_retractions.rule : ∀
+  (ν' : Classicism.Meta.Ty) (B' : Classicism.Meta.RTy),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp
+      (Classicism.Research.Splitting.InjectivityPersists.quoted (Classicism.Meta.Ty.rel (ν' ⇒ Classicism.Meta.RTy.t))
+        B')
+      (Classicism.Research.Splitting.StrongLeftSplitting.quoted (ν' ⇒ Classicism.Meta.RTy.t) B'))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.persistent_injections_strong_retractions ⟶ Classicism.Research.Splitting.persistent_injections_strong_retractions.listRule : ∀
+  (σs : List Classicism.Meta.Ty) (ρ1 : Classicism.Meta.RTy),
+  ρ1.Closed →
+    Classicism.Meta.Theorem Classicism.Meta.C.axioms
+      (Classicism.Meta.Term.imp
+        (Classicism.Research.Splitting.InjectivityPersists.quoted (Classicism.Meta.Ty.rel (σs ⇒* Classicism.Meta.RTy.t))
+          ρ1)
+        (Classicism.Research.Splitting.StrongLeftSplitting.quoted (σs ⇒* Classicism.Meta.RTy.t) ρ1))
+Classicism.Research.Splitting.c5_strong_retractions ⟶ Classicism.Research.Splitting.c5_strong_retractions.rule : ∀
+  (ν' : Classicism.Meta.Ty) (B' : Classicism.Meta.RTy),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp
+      (Classicism.P.NecNecessityOfDistinctness.quoted (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t))
+      (Classicism.Research.Splitting.StrongLeftSplitting.quoted (ν' ⇒ Classicism.Meta.RTy.t) B'))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.c5_strong_retractions ⟶ Classicism.Research.Splitting.c5_strong_retractions.listRule : ∀
+  (σs : List Classicism.Meta.Ty) (ρ1 : Classicism.Meta.RTy),
+  ρ1.Closed →
+    Classicism.Meta.Theorem Classicism.Meta.C.axioms
+      (Classicism.Meta.Term.imp
+        (Classicism.P.NecNecessityOfDistinctness.quoted (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t))
+        (Classicism.Research.Splitting.StrongLeftSplitting.quoted (σs ⇒* Classicism.Meta.RTy.t) ρ1))
+Classicism.Research.Splitting.c5_strong_retractions_t ⟶ Classicism.Research.Splitting.c5_strong_retractions_t.rule : ∀
+  (B' : Classicism.Meta.RTy),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp
+      (Classicism.P.NecNecessityOfDistinctness.quoted (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t))
+      (Classicism.Research.Splitting.StrongLeftSplitting.quoted Classicism.Meta.RTy.t B'))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.truth_retractions_modal_b ⟶ Classicism.Research.Splitting.truth_retractions_modal_b.rule : Classicism.Meta.Theorem
+  Classicism.Meta.C.axioms
+  (Classicism.Meta.Term.imp
+    (Classicism.Research.Splitting.LeftSplitting.quoted Classicism.Meta.RTy.t
+      (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ Classicism.Meta.RTy.t))
+    Classicism.P.ModalB.quoted)
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.truth_retractions_nd ⟶ Classicism.Research.Splitting.truth_retractions_nd.rule : ∀
+  (A' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp
+      (Classicism.Research.Splitting.LeftSplitting.quoted Classicism.Meta.RTy.t
+        (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ Classicism.Meta.RTy.t))
+      (Classicism.P.NecessityOfDistinctness.quoted A'))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.truth_retractions_nd ⟶ Classicism.Research.Splitting.truth_retractions_nd.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp
+      (Classicism.Research.Splitting.LeftSplitting.quoted Classicism.Meta.RTy.t
+        (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ Classicism.Meta.RTy.t))
+      (Classicism.P.NecessityOfDistinctness.listQuoted σs))
+Classicism.Research.Splitting.necessary_injection_splitting.listRule (σs : List Classicism.Meta.Ty)
+  (ρ1 : Classicism.Meta.RTy) (h1 : ρ1.Closed) :
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Research.Splitting.NecessaryInjectionSplitting.listQuoted σs ρ1)
+Classicism.Research.Splitting.c5_strong_retractions.listRule (σs : List Classicism.Meta.Ty) (ρ1 : Classicism.Meta.RTy)
+  (h1 : ρ1.Closed) :
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp
+      (Classicism.P.NecNecessityOfDistinctness.quoted (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t))
+      (Classicism.Research.Splitting.StrongLeftSplitting.quoted (σs ⇒* Classicism.Meta.RTy.t) ρ1))
+'Classicism.Research.Splitting.necessary_injection_splitting.listRule' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.Splitting.necessary_injection_iff_retraction.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.Splitting.necessary_injection_iff_retraction_t.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.Splitting.truth_retractions_modal_b.rule' depends on axioms: [propext, Quot.sound]

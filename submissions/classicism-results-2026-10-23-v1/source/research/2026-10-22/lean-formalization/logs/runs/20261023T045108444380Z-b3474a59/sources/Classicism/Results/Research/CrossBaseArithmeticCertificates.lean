@@ -1,0 +1,16 @@
+import Classicism.Results.Research.CrossBaseArithmetic
+import Classicism.Results.Research.FregeNoncollapseCertificates
+import Classicism.Results.Research.FregeArithmeticGraphsCertificates
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Translate
+
+#classicism_audit Classicism.Results.Research.CrossBaseArithmetic
+#classicism_types_audit Classicism.Results.Research.CrossBaseArithmetic
+#classicism_derive_audit Classicism.Results.Research.CrossBaseArithmetic
+
+#print axioms Classicism.Research.CrossBaseArithmetic.synch_unfold.derivable
+#print axioms Classicism.Research.CrossBaseArithmetic.synch_bijection.derivable
+#print axioms Classicism.Research.CrossBaseArithmetic.synch_unique_graph.derivable
+#print axioms Classicism.Research.CrossBaseArithmetic.addition_iff.derivable
+#print axioms Classicism.Research.CrossBaseArithmetic.multiplication_iff.derivable

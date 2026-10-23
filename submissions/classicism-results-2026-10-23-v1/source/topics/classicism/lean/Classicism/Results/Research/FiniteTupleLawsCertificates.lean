@@ -1,0 +1,16 @@
+import Classicism.Results.Research.FiniteTupleLaws
+import Classicism.Results.Research.FiniteRigidPowersCertificates
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Schema
+
+#classicism_audit Classicism.Results.Research.FiniteTupleLaws
+#classicism_types_audit Classicism.Results.Research.FiniteTupleLaws
+#classicism_schema Classicism.Research.FiniteTupleLaws.FiniteRigidPowerLaw
+  Classicism.Research.FiniteTupleLaws.FiniteSeparationLaw
+#classicism_certify Classicism.Research.FiniteTupleLaws.finite_rigid_power_law
+  Classicism.Research.FiniteTupleLaws.finite_separation_law
+#check Classicism.Research.FiniteTupleLaws.finite_rigid_power_law.listRule
+#check Classicism.Research.FiniteTupleLaws.finite_separation_law.listRule
+#print axioms Classicism.Research.FiniteTupleLaws.finite_rigid_power_law.listRule
+#print axioms Classicism.Research.FiniteTupleLaws.finite_separation_law.listRule

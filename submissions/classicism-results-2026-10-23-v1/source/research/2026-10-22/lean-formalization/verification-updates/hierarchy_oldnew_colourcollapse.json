@@ -1,0 +1,182 @@
+{
+  "lane": "hierarchy_oldnew_colourcollapse",
+  "updated_at_utc": "2026-10-23T05:43:46.713461+00:00",
+  "state": "checkpointed_stopped",
+  "checked_target": "OldNewCompleteAxioms",
+  "manifest": "research/2026-10-22/lean-formalization/checks/20261023T045855511121Z-2911dd87.json",
+  "submitted_target": null,
+  "principal_declarations": [
+    "Classicism.Meta.Intensional.OldNew.complete_countermodel",
+    "Classicism.Meta.Intensional.OldNew.not_entails_tame",
+    "Classicism.Meta.Intensional.OldNew.not_entails_box_bc"
+  ],
+  "source_hashes": {
+    "research/2026-10-22/lean-formalization/integration-checks/ChoiceHierarchyAxioms.lean": "37d6e6c125bd1d3e03330ba7c1a83b0e7df757ec8ef962786eb4200461a2f132",
+    "research/2026-10-22/lean-formalization/integration-checks/ColourCollapseAxioms.lean": "e4a13ef7044566e310070b3c667602c49b82e6fe879f14f54d523ffb8774d50d",
+    "research/2026-10-22/lean-formalization/integration-checks/OldNewCompleteAxioms.lean": "868876b6cfce53b1b62bfbb030d617f0e9e534a5a9d88fa7e3951f649fb4a00b",
+    "research/2026-10-22/lean-formalization/integration-checks/OldNewSeparationAxioms.lean": "622837bca02de65b1eab081f37b7520c793a9d70f4e350f2e8def44fcab198c3",
+    "topics/classicism/lean/Classicism/ChoiceHierarchy.lean": "2bb73d4338f5bb2357f4d694cbe2d1a7a37b85ce51e3291043aa49ee053fa6e2",
+    "topics/classicism/lean/Classicism/ChoiceHierarchyEncoding.lean": "02b2eff3c594c35c1be0cdbf2f008b56791bee671a725918f901331f6aef7571",
+    "topics/classicism/lean/Classicism/ChoiceHierarchyPlenitude.lean": "82fd94c62e1a37c3e229d68913cf81c6da2334bfd5d441f1478f60e5be3e552d",
+    "topics/classicism/lean/Classicism/ChoiceHierarchyRealizationSteps.lean": "f5bdc620a2af8d9fe08522a72e2c07cdfe7b1b981dada52b051b75591c6cf46a",
+    "topics/classicism/lean/Classicism/ChoiceHierarchyRetractions.lean": "a57529ebf59a608ba4885db41aebcd7793380cf89d1e96f45687613e36229a7b",
+    "topics/classicism/lean/Classicism/Models/ColourCollapseBase.lean": "2c2a8c01c3976792f6db703c470391513279f41216d8d07eef3717e132525bec",
+    "topics/classicism/lean/Classicism/Models/ColourCollapseFormula.lean": "6eb96da12fd3054404a4896e10558414ea8c04f130978f636c4ceae83775feeb",
+    "topics/classicism/lean/Classicism/Models/ColourCollapsePowerCore.lean": "cca91b02b33d95104129d9810222c1e6b5767784d16c16d6b1101fd2fa50f992",
+    "topics/classicism/lean/Classicism/Models/ColourCollapseRigidity.lean": "cc65c873b1f9426d68ed6e9656316f53d659a271830b2a32131b01966b2ac29b",
+    "topics/classicism/lean/Classicism/Models/ColourCollapseSeparation.lean": "bc408c23418ae8fc9eb147fb208356262a7430ad10ce72376cf0ae6320814744",
+    "topics/classicism/lean/Classicism/Models/ColourCollapseSubobjects.lean": "ed623131e01e727b542b04f78684fceaac1e18666dc35e5939f19a2eec3a50a8",
+    "topics/classicism/lean/Classicism/Models/ColourCollapseUnary.lean": "3f88602414cbafbe9ed80864292742c32b511c2f1737d1dcf13f307a3bcf6d80",
+    "topics/classicism/lean/Classicism/Models/ColourCollapseWitness.lean": "edb427395ea433fa9b7c2471b26a15733c75c45112cc64c6b804a7148a558e56",
+    "topics/classicism/lean/Classicism/Models/OldNewBase.lean": "e0ae2485f502223a99c79c1e7d5ebef386632dfe76c74e5dba49d4206650acd6",
+    "topics/classicism/lean/Classicism/Models/OldNewComplete.lean": "dd5ed9731e5509d5e2097e7d8becbe340e74466f3713789ebea1c08af2be38b4",
+    "topics/classicism/lean/Classicism/Models/OldNewFailures.lean": "f4f4d8a7d1ac4f5f185d412953d4949596af5e83f91317d3fa1d3162be0d94a4",
+    "topics/classicism/lean/Classicism/Models/OldNewFutureBC.lean": "4da3fe37a77eeb05dbfa5787fd9a8320c45cffc95a3c3419100bd7c6bae84db6",
+    "topics/classicism/lean/Classicism/Models/OldNewND.lean": "5386911da6aa8b842f576bd0c178e5c138470115570886f54cac20e7bbd43ea7",
+    "topics/classicism/lean/Classicism/Models/OldNewPairs.lean": "eec9b5731f35056f7b4e8fd267f0ed39246964843c0e2f56c2682e6141dabfa4",
+    "topics/classicism/lean/Classicism/Models/OldNewPredicates.lean": "2490a69b17d4edae492997017ea87588ab1124c0c74123f35c2bdea2e1190443",
+    "topics/classicism/lean/Classicism/Models/OldNewSeparation.lean": "24c1347520275915cc751f51333acb45ee7c46a812224929bd92e0da708d8377",
+    "topics/classicism/lean/Classicism/Models/OldNewTame.lean": "38b3cc608d1a8ac861f9a192d88ce1cd56c3e7ee37f1b68bad8425decd2688ec",
+    "topics/classicism/lean/Classicism/Results/ChoiceHierarchyDiagonal.lean": "df22b2b6267d6cde808bc3f4c042ee77b73d473e09c7ce45f2d8cac49affb08d",
+    "topics/classicism/lean/Classicism/Results/ChoiceHierarchyRealization.lean": "b4d2a2ab5d085a0be50aefd39efae26a63862213769b7073baf9435684e19132",
+    "topics/classicism/lean/Classicism/Results/ChoiceHierarchySchemas.lean": "20b5e4e4e7fd451a89132d0cff3649b2a158af0aaf8afcdc03006852b41579fe",
+    "topics/classicism/lean/Classicism/Syntax/ChoiceHierarchyTypes.lean": "8d12b0c2e6ae16ec0be6602aa1dbf28306a41cb1a45098d00fa2f884dafd5742",
+    "topics/classicism/lean/Classicism/Syntax/FiniteChoiceBasis.lean": "bab32caca509fdffb7af226af4507be1072f04afc9967d4711753fce48d99dc8",
+    "topics/classicism/lean/Classicism/Models/ChoiceFreshColumns.lean": "ba14ec913280392062d3eea54e2499357ecbf54a66081de8c0fc51725fc1862c",
+    "research/2026-10-22/lean-formalization/integration-checks/ChoiceFreshColumnsAxioms.lean": "92f21d213b7a6109a174724788ffa70b7b9605c1ec8e37546db168e65661b880",
+    "research/2026-10-22/lean-formalization/integration-checks/ColourCollapsePartialAxioms.lean": "04d08bcd64dd7144e640eba069f36b2927948fe7bcf70a3780ba890b19a8731f",
+    "research/2026-10-22/lean-formalization/integration-checks/ColourCollapseWitnessAxioms.lean": "824657dd148c06b802771ccb0ea3436179346436ae703d2ec34fa83c35de4ba7"
+  },
+  "next_target": "Only after explicit human resumption: repair ColourCollapseUnary at the exact current error log, then Subobjects, PowerCore, Formula, Separation and ColourCollapseAxioms. No automatic continuation.",
+  "mathematical_gaps": [
+    "Fixed-point entrance concrete qualitative-link tail and separately pinned singleton-individual semantics",
+    "Negative finite-basis symmetric forcing and extraction formalization"
+  ],
+  "prose_proofs": [
+    "research/2026-10-22/notes/old-new-boolean-completeness-and-rigidity-separation.md",
+    "research/2026-10-22/notes/colour-collapse-entrance.md",
+    "research/2026-10-22/followup/finite-functional-choice.md"
+  ],
+  "contribution_summary": "research/2026-10-22/lean-formalization/hierarchy-verification-status.md",
+  "shared_dependency_request": {
+    "owner": "core_integration",
+    "module": "Classicism.Semantics.Intensional",
+    "kind": "precompiled interpreter import failure before owned model elaboration",
+    "diagnostic": "unknown declaration '_private.Aesop.Util.Basic.0.Aesop.initFn._@.Aesop.Util.Basic.4267802711._hygCtx._hyg.4'",
+    "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T043027133420Z-0b8af199/Classicism_Semantics_Intensional.log",
+    "request": "Repair or hand back the shared pinned-library/runner import issue; no shared dependency has been edited by this lane.",
+    "status": "resolved by core IR signature companion repair and real smoke check"
+  },
+  "wrap_up_target": "2026-10-23T01:57:00-04:00",
+  "near_term_assessment": "Final delivered scope: current OldNew complete certificate; current positive Choice hierarchy/retraction and fresh-column audits; colour-collapse category/full boxed BF/root TR partial axiom certificate and compiled coloured witness. Main Colour RP/WRP separator remains unverified. All owned compiler runs have ended; all three child agents are stopped. No active goal or automation was created.",
+  "helper_check": {
+    "target": "Classicism.Models.ChoiceFreshColumns",
+    "manifest": "research/2026-10-22/lean-formalization/checks/20261023T044134815441Z-91487346.json",
+    "status": "passed; external finite-support helper only"
+  },
+  "hard_stop_utc": "2026-10-23T05:57:00Z",
+  "checkpoint_start_utc": "2026-10-23T05:40:00Z",
+  "lane_stop_utc": "2026-10-23T05:55:00Z",
+  "stop_policy": "Explicit human stop: end lane and child turns by 01:55 New York. No resumes, polls, followups, automation, or token expenditure after 01:57 absent human resumption.",
+  "latest_source_repair": "ColourCollapseBase.bf_at now uses existing holds_bf_of_surjective; statement unchanged; validate passed.",
+  "oldnew_completed": {
+    "manifest": "research/2026-10-22/lean-formalization/checks/20261023T045855511121Z-2911dd87.json",
+    "checked_source_count": 114,
+    "current_source_hashes_match": true,
+    "axiom_log": "research/2026-10-22/lean-formalization/logs/runs/20261023T045855511121Z-2911dd87/OldNewCompleteAxioms.log",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "sorryAx": false,
+    "exact_scope": "Concrete C model; full unboxed ND+BC at root; not IC_et, not RC_et, not full TR schema; not boxed BC_et; BC_et fails at every E-to-O arrow. No boxed RP included in this certificate."
+  },
+  "choice_completed": {
+    "manifest": "research/2026-10-22/lean-formalization/checks/20261023T050742277842Z-9dd5be15.json",
+    "checked_source_count": 72,
+    "current_source_hashes_match": true,
+    "axiom_logs": [
+      "research/2026-10-22/lean-formalization/logs/runs/20261023T050742277842Z-9dd5be15/ChoiceHierarchyAxioms.log",
+      "research/2026-10-22/lean-formalization/logs/runs/20261023T050742277842Z-9dd5be15/ChoiceFreshColumnsAxioms.log"
+    ],
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ],
+    "sorryAx": false,
+    "exact_scope": "Pure-sentence boxed Functional Choice cofinality in selector and diagonal stages; boxed existential retraction from tower(relEmbeddingBudget rho) under C plus boxed Plenitude(t,t); external fresh-column amalgamation and absence of a finitely supported selector. No strictness or negative finite-basis certificate."
+  },
+  "colour_current": {
+    "manifest": "research/2026-10-22/lean-formalization/checks/20261023T053846469650Z-8a1e058e.json",
+    "passed_modules": [
+      "Classicism.Models.ColourCollapseBase",
+      "Classicism.Models.ColourCollapseRigidity",
+      "Classicism.Models.ColourCollapseWitness"
+    ],
+    "failed_module": "Classicism.Models.ColourCollapseUnary",
+    "error_log": "research/2026-10-22/lean-formalization/logs/runs/20261023T053846469650Z-8a1e058e/Classicism_Models_ColourCollapseUnary.log",
+    "next_obligations": [
+      "finite_mem: explicit map equalities at lines49-50",
+      "extension_finite: reduce the identity individual map at line70",
+      "no_coloured_exception: expose Nat domain and colored C decisions at lines183-213",
+      "rigid_unary_exact: explicit implicit-world binders in ExactImage proofs at lines270 and279",
+      "then verify Subobjects, PowerCore, Formula, Separation and main axiom audit"
+    ],
+    "main_theorem_verified": false,
+    "post_failure_model_proof_source_edits": false
+  },
+  "stopped_at_utc": "2026-10-23T05:43:46.713461+00:00",
+  "own_compiler_active": false,
+  "children_stopped": [
+    "colour_unary_audit",
+    "colour_base_audit",
+    "hierarchy_delivery_audit"
+  ],
+  "colour_partial_completed": {
+    "manifest": "research/2026-10-22/lean-formalization/checks/20261023T053543607148Z-fd14d406.json",
+    "batch_state": "failed later at Witness; PartialAxioms itself passed",
+    "audit_module": "ColourCollapsePartialAxioms",
+    "audit_exit_code": 0,
+    "axiom_log": "research/2026-10-22/lean-formalization/logs/runs/20261023T053543607148Z-fd14d406/ColourCollapsePartialAxioms.log",
+    "audited_declarations": [
+      "isModel",
+      "extend_finite",
+      "root_factor",
+      "boxed_bf",
+      "weak_exact",
+      "exact_rigid",
+      "tame_at_root"
+    ],
+    "namespace": "Classicism.Meta.Intensional.ColourCollapse",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "sorryAx": false,
+    "passed_prefix_source_count": 86,
+    "passed_prefix_current_hashes_match": true,
+    "exact_scope": "Actual C model; full boxed Barcan; full Tame Rigidity at root. Does not certify boxed RP_et or failure of WRP_et."
+  },
+  "colour_witness": {
+    "compiled": true,
+    "manifest": "research/2026-10-22/lean-formalization/checks/20261023T053846469650Z-8a1e058e.json",
+    "passed_prefix_source_count": 86,
+    "passed_prefix_current_hashes_match": true,
+    "declarations": [
+      "Classicism.Meta.Intensional.ColourCollapse.colour_weak",
+      "Classicism.Meta.Intensional.ColourCollapse.colour_not_rigid"
+    ],
+    "separate_axiom_audit": "not run: lock wait expired exit75",
+    "audit_source": "research/2026-10-22/lean-formalization/integration-checks/ColourCollapseWitnessAxioms.lean",
+    "busy_log": "/tmp/classicism-owned-colour-witness-audit.log"
+  },
+  "verification_limits": [
+    "ColourCollapse main separator has no passing certificate.",
+    "A successful audit inside a failed batch certifies only its named declarations and passed dependency prefix.",
+    "Positive Choice cofinality is pure-language and boxed; no strictness/nonfinite axiomatizability claim.",
+    "Fixed-point singleton/qualitative-link construction and negative finite-basis forcing/extraction remain unfinished and were not reopened."
+  ],
+  "validation_log": "/tmp/classicism-hierarchy-final-validation.log"
+}

@@ -1,0 +1,134 @@
+id: full-involution-group
+name: 'Full action model: two-element group'
+certificate:
+  source_id: bacon-dorr-classicism
+  produced_by: Andrew Bacon and Cian Dorr
+  recorded_by: OpenAI Codex (GPT-6), 17 September 2026
+  checked_by: []
+  date: '2026-09-17'
+  lean: stated
+sources:
+- Andrew Bacon and Cian Dorr, Classicism, draft of 16 May 2023, §3.5, p. 59, second paragraph; p. 61.
+source_names:
+- Classicism
+references:
+- paper: bacon-dorr-classicism
+  role: proof
+  locator: §3.5, p. 59, second paragraph; p. 61
+group: full-action-models
+settings:
+  construction: 'The full action model on the two-element group $\{1,k\}$ with $k^2=1$: the construction
+    of Classicism p. 59 (record full-idempotent-monoid) with the two-arrow multiplication changed to $k^2=1$.
+    Evaluate at the sole object. The propositions at the evaluation object are the subsets of the two
+    arrows out of it, four in all, and every intension of a full model is present.'
+  individuals: singleton
+  sigma: top
+meets:
+  returning-arrow: $k$, its own inverse.
+  coherent-retractions: '$r_g:=g^{-1}$: then $r_{x\circ g}\circ x=g^{-1}\circ x^{-1}\circ x=g^{-1}$.'
+  nonidentity-arrow: The involution $k$.
+  invertible-arrows: The arrows form a group.
+  epic-arrows: Every arrow is invertible; and on the individuals every arrow is the identity.
+  finitely-many-propositions-everywhere: There is one object, with four propositions, the sets of the
+    two arrows.
+  sigma-apart: The construction does not mention Σ.
+  one-object-action-model: It has one object.
+  finitely-many-propositions: The propositions at the evaluation object are the subsets of the two arrows
+    out of it, four in all.
+arguments: []
+notes: The cited construction is a model of the map’s relational-type framework. The description identifies
+  its evaluation point; construction and verification are given at the PDF locations in References. Everything
+  that implies these fails with them.
+was_conjectured: true
+history:
+- date: '2026-09-17'
+  by: OpenAI Codex (GPT-6)
+  summary: Adopted the source’s relational type system at the user’s request. The cited construction now
+    directly supplies the recorded model; the former type-extension obligation is removed.
+  satisfies:
+  - necessary-rigid-comprehension-r
+  - necessary-atomicity-r
+  - necessary-actuality
+  - necessary-distinctness-necessary-r
+  - no-pure-contingency-r
+  violates:
+  - fregean-axiom
+- date: '2026-09-20'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: 'Added Relational Choice at Cian Dorr''s direction. With choice in the metatheory a serial
+    relation has a functional subrelation, and a full model contains every intension, so that subrelation
+    is in the domain; see Classicism, p. 61, on the principles common to full models. The propositions
+    at the evaluation object are the subsets of the two arrows out of it, four in all, and every intension
+    of a full model is present, so the numerals are the finite cardinalities and the fourth holds of the
+    universal property of propositions: the Axiom of Infinity at type t fails, as does the fifth instance
+    of the schema.'
+  satisfies:
+  - relational-choice-r
+  violates:
+  - axiom-of-infinity-t
+  - infinity-t
+- date: '2026-09-22'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Fixed an interpretation of Σ (relational constants as top, individual constants as one fixed
+    individual) and recorded the signature schemata it refutes, at Cian Dorr’s request.
+  violates:
+  - witnessed-possibility-r
+  - separated-structure-r
+  - independence-signature-r
+  - distinctness-signature-r
+- date: '2026-09-22'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: 'Added □Strong Leibniz Biconditionals (type t): every singleton of an arrow is a strong world
+    in a propositionally full one-object model; see the notes.'
+  satisfies:
+  - necessary-strong-leibniz-t
+- date: '2026-09-22'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Boxed the Relational Choice claim; see the notes.
+  satisfies:
+  - necessary-relational-choice-r
+- date: '2026-09-23'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Re-fixed the interpretation of Σ so as to settle No Contingency (signature Σ) and B for sentences
+    of Σ, at Cian Dorr’s request; see the notes.
+  violates:
+  - no-contingency-signature-r
+- date: '2026-09-23'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: 'Corrected the reason given for the failures of Independence (signature Σ) and Distinctness
+    (signature Σ): the true atom is denoted by no closed pure term, since such terms denote entities fixed
+    by every arrow; the failures come from the other relational constants, which denote top. No verdict
+    changes.'
+- date: '2026-09-25'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: 'Added Transversal Choice, by the argument recorded for Relational Choice: a full model contains
+    every intension, in particular one whose extension at the evaluation point is a transversal, chosen
+    in the metatheory, of the extension there of an equivalence relation; the equivalence and transversal
+    conditions are unboxed. Recorded on a question of Zachary Goodsell, after an observation of Christopher
+    Sun.'
+  satisfies:
+  - transversal-choice-r
+- date: '2026-09-23'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: 'Corrected the justification of □Strong Leibniz Biconditionals (type t): the 22 September argument
+    tacitly used that the monoid is right-cancellative, which holds here; no verdict changes.'
+lean:
+  model: Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol
+  is_model: Classicism.Meta.Intensional.MSet.model_isModel Classicism.Meta.Intensional.Invol
+  meets:
+    returning-arrow: Classicism.Meta.Intensional.FullActionModels.group_returning Classicism.Meta.Intensional.Invol.k
+      Classicism.Meta.Intensional.Invol.k_ne_one
+    coherent-retractions: Classicism.Meta.Intensional.FullActionModels.group_coherent Classicism.Meta.Intensional.Invol
+    finitely-many-propositions-everywhere: Classicism.Meta.Intensional.FullActionModels.mset_finitely_many_everywhere
+      Classicism.Meta.Intensional.Invol
+    invertible-arrows: Classicism.Meta.Intensional.FullActionModels.group_invertible Classicism.Meta.Intensional.Invol
+    epic-arrows: Classicism.Meta.Intensional.FullActionModels.group_epic Classicism.Meta.Intensional.Invol
+    nonidentity-arrow: Classicism.Meta.Intensional.FullActionModels.mset_nonidentity Classicism.Meta.Intensional.Invol.k
+      Classicism.Meta.Intensional.Invol.k_ne_one
+    one-individual: Classicism.Map.Meets.mset_one_individual Classicism.Meta.Intensional.Invol
+    finitely-many-propositions: Classicism.Map.Meets.mset_finitely_many_propositions Classicism.Meta.Intensional.Invol
+    full-model: Classicism.Meta.Intensional.MSet.model_full Classicism.Meta.Intensional.Invol
+    full-action-model: Classicism.Meta.Intensional.MSet.model_full Classicism.Meta.Intensional.Invol
+    extensionally-full: Classicism.Meta.Intensional.Premodel.Full.extFull _ (Classicism.Meta.Intensional.MSet.model_full
+      Classicism.Meta.Intensional.Invol)
+    one-object-action-model: Classicism.Meta.Intensional.Premodel.oneObject_of_subsingleton _

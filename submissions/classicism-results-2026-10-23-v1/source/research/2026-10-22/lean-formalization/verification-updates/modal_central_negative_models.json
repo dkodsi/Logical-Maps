@@ -1,0 +1,206 @@
+{
+  "lane": "modal_central_negative_models",
+  "updated_at_utc": "2026-10-23T05:50:27.986089+00:00",
+  "state": "checked_main_target",
+  "checked_target": [
+    "Classicism.Semantics.Research.CentralSupport",
+    "Classicism.Semantics.Research.CentralChoice",
+    "CentralFoundationAxioms",
+    "Classicism.Semantics.Research.CentralWords",
+    "Classicism.Semantics.Research.CentralSupportedProduct",
+    "Classicism.Semantics.Research.CentralSupportedProductCountableJoins",
+    "Classicism.Semantics.Research.CentralSupportedProductNegative",
+    "Classicism.Semantics.Research.CentralProductChoice",
+    "CentralProductAxioms",
+    "Classicism.Semantics.Research.CentralSyntaxCountable",
+    "Classicism.Semantics.Research.CentralSupportedProductGluing",
+    "Classicism.Semantics.Research.CentralLogicalNecessity",
+    "Classicism.Semantics.Research.CentralSupportedProductChoice",
+    "CentralModelAxioms",
+    "Classicism.Semantics.Research.CentralSupportedProductFactorization",
+    "CentralGeometryAxioms",
+    "Classicism.Semantics.Research.CentralSupportedProductVicinity",
+    "CentralVicinityAxioms"
+  ],
+  "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054410104697Z-48120445.json",
+  "principal_declarations": [
+    "Classicism.Meta.Intensional.Central.model_isModel",
+    "Classicism.Meta.Intensional.Central.OneConstant.B_isModel",
+    "Classicism.Meta.Intensional.Central.OneConstant.holds_logicalNecessity",
+    "Classicism.Meta.Intensional.Central.OneConstant.package_not_entails_actuality",
+    "Classicism.Meta.Intensional.Central.OneConstant.package_consistent",
+    "Classicism.Meta.Intensional.Central.OneConstant.package_not_entails_vicinity"
+  ],
+  "source_hashes": {
+    "topics/classicism/lean/Classicism/Semantics/Research/CentralChoice.lean": "7ce65ab9fd150c314aa2afdace7f4513a2ee5fedb9d7054010a4de9eeb636479",
+    "topics/classicism/lean/Classicism/Semantics/Research/CentralLogicalNecessity.lean": "42593aa11e699c70754d1444379583f578019e5bdc506fbe00ca9212ae37b8d4",
+    "topics/classicism/lean/Classicism/Semantics/Research/CentralProductChoice.lean": "b0c1264f1733b40dbc382103b0387cc130c474e898a9d553b8316ad0c3bdfcf2",
+    "topics/classicism/lean/Classicism/Semantics/Research/CentralSupport.lean": "17eda64616dcbc5c2c2b826c3e7dcbe72db4cec0369c42a03af1791bc24d413e",
+    "topics/classicism/lean/Classicism/Semantics/Research/CentralSupportedProduct.lean": "4b7a47fff7ce34ae4c64453c74443c6df9c5d7e88bcb65124af6efbb1379bd36",
+    "topics/classicism/lean/Classicism/Semantics/Research/CentralSupportedProductChoice.lean": "4a4b67057b8874fc212898bbc414b0e7835f340f4abf0414c3fa6d9164bc0fdd",
+    "topics/classicism/lean/Classicism/Semantics/Research/CentralSupportedProductCountableJoins.lean": "b07320324c36eaa564d3b739945f17cc20933a2f1d8112fcf54bda2811f82531",
+    "topics/classicism/lean/Classicism/Semantics/Research/CentralSupportedProductFactorization.lean": "e025ca39492a636cd25112bc2cf17dc5d241ca1e3f0fb0273203ab19a0ed7fca",
+    "topics/classicism/lean/Classicism/Semantics/Research/CentralSupportedProductGluing.lean": "d78f4cab636bcdfa022ea9ca09265550b0fdc08361350fd05ffd83d5a677b2bf",
+    "topics/classicism/lean/Classicism/Semantics/Research/CentralSupportedProductNegative.lean": "48c39fc80386988fe23a232d90a5d3b498d41596e8fb0acd32119e04d7e3e49b",
+    "topics/classicism/lean/Classicism/Semantics/Research/CentralSupportedProductVicinity.lean": "1d97745c25f345aed11529575a146df30dd623b6d9ec8072d07773a77867ab25",
+    "topics/classicism/lean/Classicism/Semantics/Research/CentralSyntaxCountable.lean": "3ce00b9466d45be7f568049b2810e20c788f8e48246a9dd892790a0dee22fbfa",
+    "topics/classicism/lean/Classicism/Semantics/Research/CentralWords.lean": "fa52f3d517ba5b8ab3c260141ffeb17b197809bac3949d4b41dd56961fa46292",
+    "research/2026-10-22/lean-formalization/central-checks/CentralFoundationAxioms.lean": "f8e4b001c07d34de5236a760f6e3632dd982cd9e29f3e5e23ef63cd686991575",
+    "research/2026-10-22/lean-formalization/central-checks/CentralGeometryAxioms.lean": "1b5218067b70c1979b4b83bc91b82a0be88f62fa63e4fa47185613339816034f",
+    "research/2026-10-22/lean-formalization/central-checks/CentralModelAxioms.lean": "b31d835d1c7a1a70ed10be5a8f3f0304de81ac388f502128e834155c63929645",
+    "research/2026-10-22/lean-formalization/central-checks/CentralProductAxioms.lean": "8e5ff2ccb7d37bc4df6e158325726cc4cda116aabd8a74555dd89134526cbc87",
+    "research/2026-10-22/lean-formalization/central-checks/CentralVicinityAxioms.lean": "ac05e7478d15f9e09fdd65e786bea7543bd30982eded88eb028fa3b49ee527d8"
+  },
+  "next_target": "None scheduled. Lane closed for the explicit hard stop; only the separately listed stronger formalization variants remain, and require human resumption.",
+  "mathematical_gaps": [
+    "Exact boxed Tame Rigidity",
+    "Internal Countable Boolean Completeness via finite-cardinality successor orbit",
+    "Separate symmetric-surjection/full-completeness model",
+    "Arbitrary set-sized signatures and moving-individual infinity variants"
+  ],
+  "infrastructure_dependencies": [],
+  "prose_proof": "research/2026-10-22/followup/central-map.md",
+  "contribution_summary": "research/2026-10-22/lean-formalization/modal-central-delivery.md",
+  "current_notes": "research/2026-10-22/lean-formalization/central-verification-status.md",
+  "launch_log": "/tmp/classicism-central-vicinity-last-check.log",
+  "last_attempt": "Final Vicinity audit completed successfully; no own compiler/check sessions remain running.",
+  "audit_target": "research/2026-10-22/lean-formalization/central-checks/CentralModelAxioms.lean",
+  "source_repairs": [
+    "Checked actual external-support term closure and model construction.",
+    "Replaced missing FreeMonoid dependency by a checked finite-list monoid.",
+    "Replaced missing deriving tactic by checked explicit type/raw/term constructor codes, preserving hidden application types.",
+    "Isolated the concrete pure model and choice proof from the finite-signature LN expansion.",
+    "Repaired explicit type, world, categorical composition, namespace and dependent-elimination inference.",
+    "Checked the exact Actuality and Vicinity quotations and their schema nonentailments.",
+    "Checked existing coordinate-factorization and external countable-join arguments while retaining the unformalized TR/internal-CBC boundary."
+  ],
+  "scope": "Prepare existing central/modal research for delivery; formalize existing prose arguments and repair/check exact certificates; no new conjecture campaign.",
+  "dependency_handoff_request": {
+    "owner": "core_integration",
+    "missing_pinned_precompiled_modules": [
+      "Mathlib.Algebra.FreeMonoid.Basic",
+      "Mathlib.Tactic.DeriveEncodable"
+    ],
+    "note": "Needed after CentralSupport; no shared dependency fetch or edit performed by this lane.",
+    "state": "Superseded by owned supporting implementations: local finite words (checked) and direct constructor codes (pending check). No shared Mathlib modifications."
+  },
+  "last_result": "PASS: exact LN + all-type boxed BF + all-type boxed Relational Choice finite-signature model, package consistency, Actuality and Vicinity schema nonentailments. Main, product, foundation, geometry and Vicinity public axiom audits pass. All 18 prepared Central source modules and audit drivers have matching successful checks and current local dependency source hashes.",
+  "delivery_target_local": "2026-10-23 01:57 America/New_York",
+  "near_term_assessment": "Main certificate and prepared Vicinity consequence achieved and audited; final handoff complete. No further checks or work scheduled.",
+  "planned_delivered_scope": "Delivered: checked modal propagation/descent evidence; exact central finite-signature LN package with consistency and Actuality/Vicinity nonentailment; generic foundations, external countable joins and coordinate factorization; matching hashes, audits, full prose links, reproduction and exact limits.",
+  "hard_stop_utc": "2026-10-23T05:57:00Z",
+  "finish_turn_by_utc": "2026-10-23T05:55:00Z",
+  "handoff_begin_by_utc": "2026-10-23T05:40:00Z",
+  "stop_policy": "Explicit human hard stop. No activity after cutoff without human resumption; no automation or follow-up scheduled. Stop only this lane\u2019s own unfinished compiler sessions.",
+  "dependency_preflight_log": "research/2026-10-22/lean-formalization/central-checks/choice-preflight-20261023T0505Z.log",
+  "foundation_audit_target": "research/2026-10-22/lean-formalization/central-checks/CentralFoundationAxioms.lean",
+  "public_axiom_audit": {
+    "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T051518714412Z-101d064e/CentralFoundationAxioms.log",
+    "declarations": {
+      "Central.model_isModel": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Central.constantProfile_extension": [
+        "propext",
+        "Quot.sound"
+      ],
+      "Central.model_extFull": [
+        "propext",
+        "Quot.sound"
+      ],
+      "Central.model_holds_box_rc": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Central.model_holds_tc": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "scope": "Actual generic foundation and choice, not the full LN separator."
+  },
+  "last_completed_manifest": "research/2026-10-22/lean-formalization/checks/20261023T054809252922Z-5177013d.json",
+  "verified_modules_by_manifest": {
+    "research/2026-10-22/lean-formalization/checks/20261023T051518714412Z-101d064e.json": [
+      "CentralSupport",
+      "CentralChoice",
+      "CentralFoundationAxioms",
+      "CentralWords"
+    ],
+    "research/2026-10-22/lean-formalization/checks/20261023T051908385235Z-283c50a1.json": [
+      "CentralSupportedProduct"
+    ],
+    "research/2026-10-22/lean-formalization/checks/20261023T052853207752Z-1a114737.json": [
+      "CentralSupportedProductCountableJoins"
+    ],
+    "research/2026-10-22/lean-formalization/checks/20261023T053715003577Z-373ddacd.json": [
+      "CentralSupportedProductNegative",
+      "CentralProductChoice",
+      "CentralProductAxioms",
+      "CentralSyntaxCountable"
+    ],
+    "research/2026-10-22/lean-formalization/checks/20261023T054410104697Z-48120445.json": [
+      "CentralLogicalNecessity",
+      "CentralSupportedProductChoice",
+      "CentralModelAxioms"
+    ],
+    "research/2026-10-22/lean-formalization/checks/20261023T054120203114Z-4a90260b.json": [
+      "CentralSupportedProductGluing",
+      "CentralSupportedProductFactorization",
+      "CentralGeometryAxioms"
+    ],
+    "research/2026-10-22/lean-formalization/checks/20261023T054809252922Z-5177013d.json": [
+      "CentralSupportedProductVicinity",
+      "CentralVicinityAxioms"
+    ]
+  },
+  "verification_gaps": [],
+  "concrete_model_audit": {
+    "manifest": "research/2026-10-22/lean-formalization/checks/20261023T053715003577Z-373ddacd.json",
+    "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T053715003577Z-373ddacd/CentralProductAxioms.log",
+    "declarations": [
+      "Classicism.Meta.Intensional.Central.Product.model_isModel",
+      "Classicism.Meta.Intensional.Central.Product.holds_box_bf",
+      "Classicism.Meta.Intensional.Central.Product.pure_holds_box_rc",
+      "Classicism.Meta.Intensional.Central.Product.not_holds_actuality"
+    ],
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "scope": "Pure signature; arbitrary nonempty alphabet; I=P(Nat); singleton individuals. Does not yet certify the LN expansion."
+  },
+  "source_manifest": "research/2026-10-22/lean-formalization/modal-central-source-manifest.json",
+  "main_audit": {
+    "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054410104697Z-48120445.json",
+    "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T054410104697Z-48120445/CentralModelAxioms.log",
+    "exit_code": 0,
+    "captured_sources_match": true,
+    "local_module_count": 89,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "scope": "Original finitary C; exact signature Sigma={c:et}; full LN schema including empty tuple; all-type boxed BF and Relational Choice; fails exact Actuality; consistent package; Actuality schema nonentailment."
+  },
+  "vicinity_audit": {
+    "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054809252922Z-5177013d.json",
+    "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T054809252922Z-5177013d/CentralVicinityAxioms.log",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "scope": "Same exact finite-signature LN package does not entail the existing Vicinity schema."
+  },
+  "current_prepared_source_count": 18,
+  "current_prepared_sources_checked": 18,
+  "own_active_compiler_sessions": [],
+  "closed_at_utc": "2026-10-23T05:50:27.986100+00:00"
+}

@@ -1,0 +1,18 @@
+import Classicism.Results.Research.AtomicProbabilityFractionDensity
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Schema
+
+#classicism_audit Classicism.Results.Research.AtomicProbabilityFractionDensity
+#classicism_types_audit Classicism.Results.Research.AtomicProbabilityFractionDensity
+
+#classicism_derive Classicism.Research.ProbabilityFractions.qtwo_in_field
+  Classicism.Research.ProbabilityFractions.qtwo_ne_zero
+  Classicism.Research.ProbabilityFractions.qtimes_two
+  Classicism.Research.ProbabilityFractions.qhalf_in_field
+  Classicism.Research.ProbabilityFractions.qhalf_ne_zero
+  Classicism.Research.ProbabilityFractions.qhalf_add_half
+  Classicism.Research.ProbabilityFractions.qlt_add_nonzero
+  Classicism.Research.ProbabilityFractions.fraction_order_dense
+
+#print axioms Classicism.Research.ProbabilityFractions.fraction_order_dense.derivable

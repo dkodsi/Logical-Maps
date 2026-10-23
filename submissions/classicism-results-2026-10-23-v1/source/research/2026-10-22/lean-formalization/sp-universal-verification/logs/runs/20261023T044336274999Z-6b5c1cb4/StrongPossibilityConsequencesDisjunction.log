@@ -1,0 +1,13 @@
+'Classicism.Meta.Research.StrongPossibilityConsequences.Disjunction.consistent_add_iff_not_neg' depends on axioms: [propext,
+ Quot.sound]
+'Classicism.Meta.Research.StrongPossibilityConsequences.Disjunction.restricted_disjunction_of_core_consistent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.StrongPossibilityConsequences.Disjunction.core_consistent_of_restricted_disjunction' depends on axioms: [propext,
+ Quot.sound]
+'Classicism.Meta.Research.StrongPossibilityConsequences.Disjunction.core_consistent_iff_restricted_disjunction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.StrongPossibilityConsequences.Disjunction.sp_consistent_iff_restricted_disjunction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

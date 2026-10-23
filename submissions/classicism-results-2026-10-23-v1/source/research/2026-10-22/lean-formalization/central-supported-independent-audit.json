@@ -1,0 +1,138 @@
+{
+  "audit_kind": "independent ordinary mathematical agent audit",
+  "auditor": "Codex agent /root/central_lean_status",
+  "created_utc": "2026-10-23T02:56:29.343072+00:00",
+  "source": "research/2026-10-22/followup/central-map.md",
+  "assessment": "No mathematical defect found in the audited supported-product construction and hinge arguments. This is not a Lean certificate, human review, or a claim of literature novelty.",
+  "framework_sources": [
+    {
+      "path": "topics/classicism/topic.yaml",
+      "sections": [
+        "framework"
+      ]
+    },
+    {
+      "path": "topics/classicism/background.md",
+      "sections": [
+        "Framework",
+        "Notation",
+        "Modal scope",
+        "Pure and signature schemata",
+        "Countable Boolean Completeness and finite cardinalities"
+      ]
+    },
+    {
+      "path": "topics/classicism/principles/logical-necessity-r.yaml",
+      "sections": [
+        "formal",
+        "variants.dual"
+      ]
+    },
+    {
+      "path": "topics/classicism/principles/relational-choice-r.yaml",
+      "sections": [
+        "formal",
+        "definitions"
+      ]
+    },
+    {
+      "path": "topics/classicism/principles/actuality.yaml",
+      "sections": [
+        "formal"
+      ]
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Semantics/Intensional.lean",
+      "sections": [
+        "Premodel",
+        "Premodel.sem",
+        "Premodel.IsModel"
+      ]
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Semantics/IntensionalSoundness.lean",
+      "sections": [
+        "sound",
+        "theorem_holds",
+        "not_entails_of_model"
+      ]
+    }
+  ],
+  "checked_hinges": [
+    {
+      "source_sections": [
+        "1. The supported product model"
+      ],
+      "claim": "Restricted domains admit arbitrary higher quantification and lambda abstraction.",
+      "assessment": "For arrows agreeing on supports of the finitely many external parameters and occurring constants, those parameters agree as complete transported entities. Bound arguments and quantified entities range over the same admitted domains, so no union of supports of every quantified entity is needed.",
+      "implementation_warning": "Prove semantic dependence on environments and constant interpretations. Taking the union of supports of all possible bound-variable values would be invalid."
+    },
+    {
+      "source_sections": [
+        "1. The supported product model"
+      ],
+      "claim": "Application, beta and eta preserve complete profiles.",
+      "assessment": "The application equation (F a)_m(b) = F_m(m acting on a,b), action composition, and the stated abstraction clause give beta and eta as profile equalities. Members of profile extensions need not share the profile support. Constant-extension profiles are admitted."
+    },
+    {
+      "source_sections": [
+        "2. A gluing lemma that preserves the support bound",
+        "3. Interpret the fixed signature to obtain Logical Necessity"
+      ],
+      "claim": "Gluing simultaneously realizes every selected witness interpretation over the prescribed signature.",
+      "assessment": "At most kappa sentences times kappa constants times kappa support coordinates still uses at most kappa coordinates in ZFC. Choose a fresh coordinate and distinct final letters. Right multiplication changes only that coordinate, so each glued constant transports to its witness as a complete entity. No regularity assumption on kappa is needed.",
+      "scope": "Logical Necessity at the identity for each fixed set-sized permitted signature; no boxed Logical Necessity claim."
+    },
+    {
+      "source_sections": [
+        "Opening paragraphs",
+        "1. The supported product model"
+      ],
+      "claim": "Relational Choice holds for every admitted pair of sorts, including individual outputs.",
+      "assessment": "A current serial relation is an ordinary set-valued serial graph. External ZFC choice provides a selector, whose constant graph profile has empty support. Literal current equality gives uniqueness. Each fully closed RC instance is pure, so the one-object semantics also gives its necessity.",
+      "scope": "Metatheoretic choice is used explicitly; Functional Choice is not inferred."
+    },
+    {
+      "source_sections": [
+        "4. Atomlessness, failure of Actuality, and failure of Vicinity"
+      ],
+      "claim": "Actuality and Vicinity fail.",
+      "assessment": "For any current truth p choose a coordinate j outside its support. The proposition q_j asserting that coordinate j is empty is current true. Changing only j to a nonempty word preserves p but falsifies q_j, so p is not below q_j in profile inclusion. Also Diamond q_j equals q_j, giving failure of Vicinity."
+    },
+    {
+      "source_sections": [
+        "5. Failure of Weakly Inextensible Comprehension"
+      ],
+      "claim": "Weakly Inextensible Comprehension fails at tt.",
+      "assessment": "The externally defined test relation Z may mention untransported q_j as a set member. The cover premise tests transported current Y-members, whereas algebraic inclusion tests fresh target members. The proposed Z satisfies the former and defeats the latter for each candidate coextension Y."
+    },
+    {
+      "source_sections": [
+        "10. Countable Boolean Completeness holds at every counting type"
+      ],
+      "claim": "The internal countability bridge supports Countable Boolean Completeness.",
+      "assessment": "The constant property of the external successor orbit is admitted and inductive; ordinary induction gives the reverse inclusion. Hence internal finite-cardinality entities form an externally countable set. A countability witness gives an injection into natural numbers using the least numeral iteration index. Countable unions of supports remain bounded by kappa, so the pointwise union is admitted and is the required least upper bound."
+    }
+  ],
+  "limitations": [
+    "Ordinary independent agent audit only; no human certification and no Lean compilation or certificate.",
+    "The audit did not change database records, source mathematics, or proof status.",
+    "ND fails: a true q_j can transport to bottom. This construction does not refute C5-premised implications.",
+    "Relational Choice plus Countable Boolean Completeness is distinct from Relational Choice plus full Boolean Completeness. Full Boolean Completeness fails in this model.",
+    "The separate symmetric full-Boolean-completeness construction in central-map-complete-gluing.md was not audited in this pass.",
+    "The audit does not certify the separate moving-individual extension, Rigid Power counterexample, or every other claimed verdict in the source note.",
+    "Four no-extra-assumptions central rows from this construction combine with twelve earlier signature-qualified rows for sixteen of twenty-five displayed rows; this is row coverage, not sixteen independent theorems."
+  ],
+  "remaining_lean_obligations": [
+    "Construct recursive admitted domains and genuine natural injective subaction inclusions.",
+    "Prove support preservation under transport and application.",
+    "Prove semantic dependence on environments and constant interpretations, then lambda closure and Premodel.IsModel.",
+    "Instantiate existing IntensionalSoundness for the actual C calculus, retaining logical-only substitution side conditions.",
+    "Formalize cardinal bounds and the simultaneous whole-entity gluing theorem.",
+    "Bridge truth, purity and substitution to the exact logicalNecessity axiom schema at the prescribed signature.",
+    "Prove concrete order and box readings, construct q_j, and derive not Actuality and not Vicinity.",
+    "Construct the actual constant graph selector for Relational Choice.",
+    "Formalize the internal finite-cardinality orbit and internal-countability bridge before claiming Countable Boolean Completeness.",
+    "Construct and verify the concrete weak-inextensibility test relation rather than assuming its separation properties."
+  ]
+}

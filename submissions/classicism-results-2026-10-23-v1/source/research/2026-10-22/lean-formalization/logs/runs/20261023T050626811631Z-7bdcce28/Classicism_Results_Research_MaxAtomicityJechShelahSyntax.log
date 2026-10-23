@@ -1,0 +1,128 @@
+Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean:332:33: error: Application type mismatch: The argument
+  D
+has type
+  Type u_1
+of sort `Type (u_1 + 1)` but is expected to have type
+  Type
+of sort `Type 1` in the application
+  Parameters D
+Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean:338:33: error: Application type mismatch: The argument
+  D
+has type
+  Type u_1
+of sort `Type (u_1 + 1)` but is expected to have type
+  Type
+of sort `Type 1` in the application
+  Parameters D
+Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean:344:33: error: Application type mismatch: The argument
+  D
+has type
+  Type u_1
+of sort `Type (u_1 + 1)` but is expected to have type
+  Type
+of sort `Type 1` in the application
+  Parameters D
+Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean:350:36: error: Application type mismatch: The argument
+  D
+has type
+  Type u_1
+of sort `Type (u_1 + 1)` but is expected to have type
+  Type
+of sort `Type 1` in the application
+  Parameters D
+Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean:360:26: error: Application type mismatch: The argument
+  D
+has type
+  Type u_1
+of sort `Type (u_1 + 1)` but is expected to have type
+  Type
+of sort `Type 1` in the application
+  Parameters D
+Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean:364:38: error: Application type mismatch: The argument
+  D
+has type
+  Type u_1
+of sort `Type (u_1 + 1)` but is expected to have type
+  Type
+of sort `Type 1` in the application
+  Parameters D
+Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean:368:31: error: Application type mismatch: The argument
+  D
+has type
+  Type u_1
+of sort `Type (u_1 + 1)` but is expected to have type
+  Type
+of sort `Type 1` in the application
+  Parameters D
+Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean:375:33: error: Application type mismatch: The argument
+  D
+has type
+  Type u_1
+of sort `Type (u_1 + 1)` but is expected to have type
+  Type
+of sort `Type 1` in the application
+  Parameters D
+Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean:378:34: error: Application type mismatch: The argument
+  D
+has type
+  Type u_1
+of sort `Type (u_1 + 1)` but is expected to have type
+  Type
+of sort `Type 1` in the application
+  Parameters D
+Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean:384:33: error: Application type mismatch: The argument
+  D
+has type
+  Type u_1
+of sort `Type (u_1 + 1)` but is expected to have type
+  Type
+of sort `Type 1` in the application
+  Parameters D
+Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean:388:34: error: Application type mismatch: The argument
+  D
+has type
+  Type u_1
+of sort `Type (u_1 + 1)` but is expected to have type
+  Type
+of sort `Type 1` in the application
+  Parameters D
+Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean:391:35: error: Application type mismatch: The argument
+  D
+has type
+  Type u_1
+of sort `Type (u_1 + 1)` but is expected to have type
+  Type
+of sort `Type 1` in the application
+  Parameters D
+Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean:394:29: error: Application type mismatch: The argument
+  D
+has type
+  Type u_1
+of sort `Type (u_1 + 1)` but is expected to have type
+  Type
+of sort `Type 1` in the application
+  Parameters D
+Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean:397:4: warning: declaration uses `sorry`
+Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean:440:8: warning: declaration uses `sorry`
+Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean:444:8: warning: declaration uses `sorry`
+Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean:448:8: warning: declaration uses `sorry`
+Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean:452:8: warning: declaration uses `sorry`
+Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean:456:8: warning: declaration uses `sorry`
+Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean:460:8: warning: declaration uses `sorry`
+Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean:464:8: warning: declaration uses `sorry`
+Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean:468:8: warning: declaration uses `sorry`
+Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean:473:8: warning: declaration uses `sorry`
+Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean:477:8: warning: declaration uses `sorry`
+Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean:485:8: warning: declaration uses `sorry`
+Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean:490:8: warning: declaration uses `sorry`
+Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean:494:8: warning: declaration uses `sorry`
+Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean:503:66: error: Type mismatch
+  Iff.rfl
+has type
+  ?m.12 ↔ ?m.12
+but is expected to have type
+  satisfies JSCode R ρ ↔ Ordinary.JSCode R (ρ 0) (ρ 1) (ρ 2)
+'Classicism.Meta.Research.MaxAtomicityJechShelahSyntax.satisfies_binaryOn' depends on axioms: [propext]
+'Classicism.Meta.Research.MaxAtomicityJechShelahSyntax.satisfies_growthRecursion' depends on axioms: [propext, sorryAx]
+'Classicism.Meta.Research.MaxAtomicityJechShelahSyntax.satisfies_conditionCode' depends on axioms: [propext, sorryAx]
+'Classicism.Meta.Research.MaxAtomicityJechShelahSyntax.satisfies_JSCode' depends on axioms: [propext, sorryAx]

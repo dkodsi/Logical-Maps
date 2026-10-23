@@ -1,0 +1,83 @@
+{
+  "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "modules": [
+    "Classicism.Semantics.BooleanValuedChecks"
+  ],
+  "complete": false,
+  "checked": [
+    {
+      "module": "Classicism.Syntax.Types",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "07df345faa0bc772732f7d92d2d70bc9e98684e0474a3e9513213d52a1cd202c"
+    },
+    {
+      "module": "Classicism.Syntax.Term",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "c985f9d073087c935e2b64f9c0503b909a3a3d2bc6603871661e80a7aaa0bc76"
+    },
+    {
+      "module": "Classicism.Syntax.Conversion",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "3452ccbab9592b35912b00a0c40855b2ad68d387526de7e565970846e0e33a3d"
+    },
+    {
+      "module": "Classicism.Syntax.Derivation",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "9397e2f2e7a7a13c11a5ca5126b71930a51abeb2ddae0a2c9ff0ea68d35fc521"
+    },
+    {
+      "module": "Classicism.Syntax.Axioms",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "baf39452832f2901859d4de2edabde78f03d2590f27d96357995f407164916ae"
+    },
+    {
+      "module": "Classicism.Syntax.Entailment",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "36bb45c1856e08cc774815f8dac2285fdb5c54ff61a3b285d7923e0b4bf00a3a"
+    },
+    {
+      "module": "Classicism.Semantics.Env",
+      "seconds": 2.19,
+      "exit_code": 0,
+      "fingerprint": "33c350a04f4d94ee85bff12cb1dd3b63ad47b833b90fcda057de08e131e10f76",
+      "log": "logs/runs/20261023T030448721748Z/Classicism_Semantics_Env.log"
+    },
+    {
+      "module": "Classicism.Semantics.BooleanValued",
+      "seconds": 5.37,
+      "exit_code": 1,
+      "fingerprint": "d6e68ccf5bd780e06bd65b327d63952ca7cc263499c2eb1b79df564134f7b39f",
+      "log": "logs/runs/20261023T030448721748Z/Classicism_Semantics_BooleanValued.log"
+    },
+    {
+      "module": "Classicism.Semantics.BooleanValuedSoundness",
+      "skipped": "dependency failed",
+      "exit_code": 125,
+      "fingerprint": "f06a043e2265dc8c1ab7538a8c25db70ae4d4053a41e6d7dcb15392ffc26038a"
+    },
+    {
+      "module": "Classicism.Semantics.BooleanValuedPoint",
+      "skipped": "dependency failed",
+      "exit_code": 125,
+      "fingerprint": "1064c7731f0df08ec2eb48409e555eebf47d01fcc5c997fb1fc8586c85d55790"
+    },
+    {
+      "module": "Classicism.Semantics.BooleanValuedModal",
+      "skipped": "dependency failed",
+      "exit_code": 125,
+      "fingerprint": "f20d8e23bc850f1f1a3a90e44f6b3b2b9efac78efcb30ea9f352d33a11a22687"
+    },
+    {
+      "module": "Classicism.Semantics.BooleanValuedChecks",
+      "skipped": "dependency failed",
+      "exit_code": 125,
+      "fingerprint": "958355081fb7d27af8de3bb80e1bce3b1098ea5e0f1702e788d4d911fbb4cb36"
+    }
+  ]
+}

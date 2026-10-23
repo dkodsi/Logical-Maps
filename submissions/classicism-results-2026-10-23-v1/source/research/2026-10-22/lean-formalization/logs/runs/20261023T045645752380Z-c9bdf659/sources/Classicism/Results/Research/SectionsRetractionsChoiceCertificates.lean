@@ -1,0 +1,12 @@
+import Classicism.Results.Research.SectionsRetractionsPairsCertificates
+import Classicism.Results.Research.SectionsRetractionsChoice
+
+#classicism_audit Classicism.Results.Research.SectionsRetractionsChoice
+#classicism_types_audit Classicism.Results.Research.SectionsRetractionsChoice
+set_option maxHeartbeats 0 in
+#classicism_derive_audit Classicism.Results.Research.SectionsRetractionsChoice
+#classicism_certify Classicism.Research.Splitting.evaluator_sections_choice
+  Classicism.Research.Splitting.actuality_sections_choice
+#check Classicism.Research.Splitting.evaluator_sections_choice.listRule
+#check Classicism.Research.Splitting.actuality_sections_choice.listRule
+#print axioms Classicism.Research.Splitting.actuality_sections_choice.listRule

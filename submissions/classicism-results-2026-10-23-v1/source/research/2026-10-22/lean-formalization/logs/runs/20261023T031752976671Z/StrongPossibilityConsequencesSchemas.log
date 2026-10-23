@@ -1,0 +1,25 @@
+StrongPossibilityConsequencesSchemas.lean:55:10: error(lean.invalidField): Invalid field `cast`: The environment does not contain `Classicism.Meta.Derivable.cast`, so it is not possible to project the field `cast` from an expression
+  h
+of type
+  Derivable C.axiomsMinus []
+    ((Term.rec (fun {Γ} {σ} v => Term.var v) (fun {Γ} c => Empty.elim c) (fun {Γ} {σ} {ρ} x x_1 f a => f.app a)
+          (fun {Γ} {σ} {ρ} x b => b.lam) (fun {Γ} => Term.and) (fun {Γ} => Term.or) (fun {Γ} => Term.not)
+          (fun {Γ} σ => Term.all σ) (fun {Γ} σ => Term.ex σ) (fun {Γ} σ => Term.eq σ) (fun {Γ} ρ => Term.constR ρ)
+          (fun {Γ} ρ => Term.negR ρ) (fun {Γ} ρ => Term.andR ρ) (fun {Γ} ρ => Term.orR ρ) (fun {Γ} ρ => Term.coextR ρ)
+          (fun {Γ} ρ => Term.boxR ρ) (fun {Γ} ρ => Term.inclR ρ)
+          (Term.imp
+            (Term.neg
+              (Term.exists'
+                ((Term.var Var.zero).conj
+                  (Term.box
+                    (Term.imp (Term.var Var.zero).dia
+                      (Term.neg
+                        (Term.neg
+                          (Term.exists'
+                            ((Term.var Var.zero).conj
+                              (Term.box (Term.imp (Term.var Var.zero).dia (Term.var Var.zero.succ.succ).neg)))))))))))
+            (Term.neg
+              (Term.exists'
+                ((Term.var Var.zero).conj
+                  (Term.box (Term.imp (Term.var Var.zero).dia (Term.var Var.zero.succ).neg))))))).instantiate
+      p)

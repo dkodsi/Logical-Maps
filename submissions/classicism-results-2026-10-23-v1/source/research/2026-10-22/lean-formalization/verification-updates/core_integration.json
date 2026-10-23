@@ -1,0 +1,238 @@
+{
+  "lane": "core_integration",
+  "updated_at_utc": "2026-10-23T04:52:29.498790+00:00",
+  "state": "checked_main_target",
+  "checked_target": [
+    "StrongPossibilityConsequencesSignatureSplit",
+    "StrongPossibilityConsequencesMaxConservativity",
+    "StrongPossibilityConsequencesCoreAxioms"
+  ],
+  "manifest": "research/2026-10-22/lean-formalization/checks/20261023T044759304508Z-f503b46f.json",
+  "principal_declarations": [
+    "Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.positive_cell_consistent",
+    "Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.negative_cell_consistent",
+    "Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.maximalist_not_atom_cell_at",
+    "Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.maximalist_not_atom_cell",
+    "Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.maximalist_add_atom_inconsistent",
+    "Classicism.Meta.Research.StrongPossibilityConsequences.MaxConservativity.identity_conservative_of_max_consistent",
+    "Classicism.Meta.Research.StrongPossibilityConsequences.MaxConservativity.max_consistent_of_identity_conservative",
+    "Classicism.Meta.Research.StrongPossibilityConsequences.MaxConservativity.identity_conservative_iff_max_consistent"
+  ],
+  "source_hashes": {
+    "research/2026-10-22/lean-formalization/StrongPossibilityConsequencesSignatureSplit.lean": "1c95fc88dffdc5809ea02b43b498ddf4dac4e2b861f17647e242d978702096e9",
+    "research/2026-10-22/lean-formalization/StrongPossibilityConsequencesMaxConservativity.lean": "42f87ab0c6b3fe3e70801fd5761d17f4a9e1ec5a9f55802782f1420067b773fe",
+    "research/2026-10-22/lean-formalization/check_module.py": "80967de96b9b609e079f8c386449b8ccecf20e20724d1c77c745d7c8b8457a22",
+    "research/2026-10-22/lean-formalization/test_check_module.py": "2544bfa70777ee0ad4a933a955ee55fc52038671e0b9d63ee5a6f009d242d181",
+    "research/2026-10-22/lean-formalization/integration-checks/PrecompiledImportSmoke.lean": "fcfd8e9184ecdf0617f0c62b09ffc0a26e5f074b53ded4a40c2e91cab704a4bb",
+    "research/2026-10-22/lean-formalization/StrongPossibilityConsequencesCoreAxioms.lean": "de2f752e87be1da1f43e1e794ed610790536b7897ea1b7db5a28975d06c73ff3"
+  },
+  "next_target": "These two assigned SP deliverables and their public axiom audit are complete. Shared import repair is ready. Retain shared infrastructure/final cross-family acceptance role; other family authors own their pending checks.",
+  "mathematical_gaps": [
+    "No unresolved mathematical bridge remains in the exact two checked statements. The separate pure-profile Max+Atom model is outside SignatureSplit, so this file alone does not certify the full pure/signature SP incompatibility.",
+    "Strong Possibility consistency is not established or pursued. MaxConservativity explicitly assumes Con(Max), without claiming to prove that premise."
+  ],
+  "infrastructure": {
+    "state": "ready_real_import_verified",
+    "cause": "Runner omitted .ir.sig, causing Lean readIRPartsOfMod to return no IR even when .ir existed.",
+    "repair": "Preserve and hash .ir.sig and .ir.sig.hash in precompiled overlay and local artifact integrity checks.",
+    "tests": "/tmp/classicism-checker-regressions.log: 10/10 pass",
+    "validation": "132 principles, 447 results, 162 models OK",
+    "manifest": "research/2026-10-22/lean-formalization/checks/20261023T044120026462Z-e23dab5a.json",
+    "real_imports": [
+      "Mathlib.Order.CompleteBooleanAlgebra",
+      "Aesop.Script.Util",
+      "ImportGraph.Lean.Environment"
+    ],
+    "rollout": "Invocations started before the repair may retain old Python code while waiting. Restart only your own still-waiting invocation safely; let compiling jobs finish and rerun through the current helper if they report the relevant import failures. Never terminate another lane or release/unlink its lock."
+  },
+  "prose_proofs": [
+    "research/2026-10-22/notes/audit-signature-to-pure-sp-20261022.md",
+    "research/2026-10-22/notes/audit-profile-20261022.md",
+    "research/2026-10-22/notes/max-degree.md",
+    "research/2026-10-22/notes/theory-space-comparison.md"
+  ],
+  "contribution_summary": "research/2026-10-22/lean-formalization/sp-core-verification-status.md",
+  "checked_source_count": 72,
+  "all_captured_source_hashes_rechecked": true,
+  "public_axiom_audit": {
+    "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T044759304508Z-f503b46f/StrongPossibilityConsequencesCoreAxioms.log",
+    "declaration_count": 21,
+    "reports": [
+      {
+        "declaration": "Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.cell_closedTypes",
+        "axioms": []
+      },
+      {
+        "declaration": "Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.atom_closedTypes",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.cell_holds",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.top_denote",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.topR_denote",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.constD_false_ne_true",
+        "axioms": [
+          "Classical.choice"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.namedTop_closedTypes",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.named_denote",
+        "axioms": []
+      },
+      {
+        "declaration": "Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.namedTop_holds",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.namedTop_fails",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.positive_cell_consistent",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.negative_cell_consistent",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.maximalist_not_atom_cell_at",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.maximalist_not_atom_cell",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.maximalist_add_atom_inconsistent",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Research.StrongPossibilityConsequences.Conservativity.reflected_neg_box",
+        "axioms": [
+          "propext",
+          "Classicism.em"
+        ]
+      },
+      {
+        "declaration": "Classicism.Research.StrongPossibilityConsequences.Conservativity.reflected_neg_box.derivable",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Research.StrongPossibilityConsequences.MaxConservativity.conjunction_closed",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Research.StrongPossibilityConsequences.MaxConservativity.identity_conservative_of_max_consistent",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Research.StrongPossibilityConsequences.MaxConservativity.max_consistent_of_identity_conservative",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Research.StrongPossibilityConsequences.MaxConservativity.identity_conservative_iff_max_consistent",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "sorryAx": false
+  },
+  "targets": {
+    "StrongPossibilityConsequencesSignatureSplit": {
+      "source_sha256": "1c95fc88dffdc5809ea02b43b498ddf4dac4e2b861f17647e242d978702096e9",
+      "fingerprint": "79e8d2d42ac656f316223ccbcff9118420b5dee6b6f78eaa0dea58ae61d37e89",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T044759304508Z-f503b46f/StrongPossibilityConsequencesSignatureSplit.log",
+      "exit_code": 0
+    },
+    "StrongPossibilityConsequencesMaxConservativity": {
+      "source_sha256": "42f87ab0c6b3fe3e70801fd5761d17f4a9e1ec5a9f55802782f1420067b773fe",
+      "fingerprint": "e8b04eebcf355964bfacb4c633e9a5296d1e7e182ad203f8124c7448b1042af1",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T044759304508Z-f503b46f/StrongPossibilityConsequencesMaxConservativity.log",
+      "exit_code": 0
+    },
+    "StrongPossibilityConsequencesCoreAxioms": {
+      "source_sha256": "de2f752e87be1da1f43e1e794ed610790536b7897ea1b7db5a28975d06c73ff3",
+      "fingerprint": "a1d105ebcae2414a4711996c2215a47015ae3edae0cb84d3a2987bbcb9606e2a",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T044759304508Z-f503b46f/StrongPossibilityConsequencesCoreAxioms.log",
+      "exit_code": 0
+    }
+  },
+  "exact_scope": {
+    "SignatureSplit": "Every admitted signature has a closed relational constant. Two constructed singleton full extensional C interpretations prove consistency of cell and c=top, and cell and c\u2260top. Signature Max derives \u00acAtom(Fregean \u2227 oneIndividual), and Max plus that atom assertion is inconsistent. No finite-signature restriction.",
+    "MaxConservativity": "For any signature Sig and axiom set Ax, assuming Con(Max), C+Ax is conservative over C for closed typed identities iff Con(Max\u222aAx). The forward consistency-to-conservativity direction needs only Con(Max\u222aAx). The finite-support converse is implemented."
+  }
+}

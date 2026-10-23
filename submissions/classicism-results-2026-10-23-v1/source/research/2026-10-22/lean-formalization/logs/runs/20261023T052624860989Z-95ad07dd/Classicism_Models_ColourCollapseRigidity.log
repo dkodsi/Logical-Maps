@@ -1,0 +1,32 @@
+Classicism/Models/ColourCollapseRigidity.lean:158:30: error: Type mismatch: After simplification, term
+  ha
+ has type
+  ⟨V, (a, k)⟩ ∈ model.incl ρ model.W₀ F
+but is expected to have type
+  ⟨V, (a, 𝟙 V)⟩ ∈ model.incl ρ V ((ConcreteCategory.hom ((model.inner (Ty.rel ρ)).map k)) F)
+Classicism/Models/ColourCollapseRigidity.lean:159:4: error: Type mismatch: After simplification, term
+  hp
+ has type
+  ⟨U, (Args.map model.inner ρ j a, j)⟩ ∈ model.incl ρ V ((ConcreteCategory.hom ((model.inner (Ty.rel ρ)).map k)) F)
+but is expected to have type
+  ⟨U, (Args.map model.inner ρ j a, k ≫ j)⟩ ∈ model.incl ρ model.W₀ F
+Classicism/Models/ColourCollapseRigidity.lean:161:30: error: Type mismatch: After simplification, term
+  hZ
+ has type
+  ∀ (x : Args model.inner ρ V),
+    ⟨V, (x, k)⟩ ∈ model.incl ρ model.W₀ F →
+      ∀ (U : cat.Ob) (k : V ⟶ U),
+        @Membership.mem ((V_1 : cat.Ob) × Args model.inner ρ V_1 × (V ⟶ V_1)) (Outer model.inner (Ty.rel ρ) V)
+          Set.instMembership (model.incl ρ V Z) ⟨U, (Args.map model.inner ρ k x, k)⟩
+but is expected to have type
+  ∀ (a : TA ρ V),
+    ⟨V, (a, 𝟙 V)⟩ ∈ model.incl ρ V ((ConcreteCategory.hom ((model.inner (Ty.rel ρ)).map k)) F) →
+      ∀ {V_1 : cat.Ob} (h : V ⟶ V_1),
+        @Membership.mem ((V_2 : cat.Ob) × Args model.inner ρ V_2 × (V ⟶ V_2)) (Intension model.inner ρ V)
+          Set.instMembership (model.incl ρ V Z) ⟨V_1, (Args.map model.inner ρ h a, h)⟩
+Classicism/Models/ColourCollapseRigidity.lean:162:62: error: Type mismatch: After simplification, term
+  ha
+ has type
+  ⟨U, (a, k ≫ j)⟩ ∈ model.incl ρ model.W₀ F
+but is expected to have type
+  ⟨U, (a, j)⟩ ∈ model.incl ρ V ((ConcreteCategory.hom ((model.inner (Ty.rel ρ)).map k)) F)

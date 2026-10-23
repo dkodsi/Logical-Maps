@@ -1,0 +1,88 @@
+Classicism/Semantics/FullExtensionalProperties.lean:132:8: warning: Variable name `X` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _X
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Classicism/Semantics/FullExtensionalProperties.lean:132:11: warning: Variable name `Y` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _Y
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Classicism/Semantics/FullExtensionalProperties.lean:138:67: error(lean.invalidField): Invalid field `holds`: The environment does not contain `Classicism.Meta.Term.holds`, so it is not possible to project the field `holds` from an expression
+  Term.box p
+of type `Term Sig [] (Ty.rel RTy.t)`
+Classicism/Semantics/FullExtensionalProperties.lean:143:67: error(lean.invalidField): Invalid field `holds`: The environment does not contain `Classicism.Meta.Term.holds`, so it is not possible to project the field `holds` from an expression
+  Term.dia p
+of type `Term Sig [] (Ty.rel RTy.t)`
+Classicism/Semantics/FullExtensionalProperties.lean:152:46: error(lean.invalidField): Invalid field `holds`: The environment does not contain `Classicism.Meta.Term.holds`, so it is not possible to project the field `holds` from an expression
+  Term.ofPure (P.Extensionality.quoted ρ)
+of type `Term ?m.1 [] (Ty.rel RTy.t)`
+Classicism/Semantics/FullExtensionalProperties.lean:158:41: error(lean.invalidField): Invalid field `holds`: The environment does not contain `Classicism.Meta.Term.holds`, so it is not possible to project the field `holds` from an expression
+  Term.ofPure (P.Atomicity.quoted ρ)
+of type `Term ?m.1 [] (Ty.rel RTy.t)`
+Classicism/Semantics/FullExtensionalProperties.lean:163:50: error(lean.invalidField): Invalid field `holds`: The environment does not contain `Classicism.Meta.Term.holds`, so it is not possible to project the field `holds` from an expression
+  Term.ofPure (P.FunctionalChoice.quoted σ ρ)
+of type `Term ?m.1 [] (Ty.rel RTy.t)`
+Classicism/Semantics/FullExtensionalProperties.lean:170:55: error(lean.invalidField): Invalid field `holds`: The environment does not contain `Classicism.Meta.Term.holds`, so it is not possible to project the field `holds` from an expression
+  Term.ofPure (P.NecessityOfDistinctness.quoted σ)
+of type `Term ?m.1 [] (Ty.rel RTy.t)`
+Classicism/Semantics/FullExtensionalProperties.lean:177:53: error(lean.invalidField): Invalid field `holds`: The environment does not contain `Classicism.Meta.Term.holds`, so it is not possible to project the field `holds` from an expression
+  Term.ofPure (P.NecFunctionalChoice.quoted σ ρ)
+of type `Term ?m.1 [] (Ty.rel RTy.t)`
+Classicism/Semantics/FullExtensionalProperties.lean:178:66: error(lean.invalidField): Invalid field `holds`: The environment does not contain `Classicism.Meta.Term.holds`, so it is not possible to project the field `holds` from an expression
+  (Term.ofPure (P.FunctionalChoice.quoted σ ρ)).box
+of type `Term ?m.7 [] (Ty.rel RTy.t)`
+Classicism/Semantics/FullExtensionalProperties.lean:182:58: error(lean.invalidField): Invalid field `holds`: The environment does not contain `Classicism.Meta.Term.holds`, so it is not possible to project the field `holds` from an expression
+  Term.ofPure (P.NecNecessityOfDistinctness.quoted σ)
+of type `Term ?m.1 [] (Ty.rel RTy.t)`
+Classicism/Semantics/FullExtensionalProperties.lean:183:71: error(lean.invalidField): Invalid field `holds`: The environment does not contain `Classicism.Meta.Term.holds`, so it is not possible to project the field `holds` from an expression
+  (Term.ofPure (P.NecessityOfDistinctness.quoted σ)).box
+of type `Term ?m.7 [] (Ty.rel RTy.t)`
+Classicism/Semantics/FullExtensionalProperties.lean:186:8: warning: declaration uses `sorry`
+Classicism/Semantics/FullExtensionalProperties.lean:188:2: warning: Unused tactic linter: `exact extensionality_quoted I ρ` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Classicism/Semantics/FullExtensionalProperties.lean:190:8: warning: declaration uses `sorry`
+Classicism/Semantics/FullExtensionalProperties.lean:192:2: warning: Unused tactic linter: `exact atomicity_quoted I ρ` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Classicism/Semantics/FullExtensionalProperties.lean:194:8: warning: declaration uses `sorry`
+Classicism/Semantics/FullExtensionalProperties.lean:196:2: warning: Unused tactic linter: `exact functionalChoice_quoted I σ ρ` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Classicism/Semantics/FullExtensionalProperties.lean:198:8: warning: declaration uses `sorry`
+Classicism/Semantics/FullExtensionalProperties.lean:200:2: warning: Unused tactic linter: `exact boxedFunctionalChoice_quoted I σ ρ` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Classicism/Semantics/FullExtensionalProperties.lean:202:8: warning: declaration uses `sorry`
+Classicism/Semantics/FullExtensionalProperties.lean:204:2: warning: Unused tactic linter: `exact boxedDistinctness_quoted I σ` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Classicism/Semantics/FullExtensionalProperties.lean:207:49: error(lean.invalidField): Invalid field `holds`: The environment does not contain `Classicism.Meta.Term.holds`, so it is not possible to project the field `holds` from an expression
+  Term.ofPure (P.IntensionalChoice.quoted σ)
+of type `Term ?m.1 [] (Ty.rel RTy.t)`
+Classicism/Semantics/FullExtensionalProperties.lean:219:8: warning: declaration uses `sorry`
+Classicism/Semantics/FullExtensionalProperties.lean:221:2: warning: Unused tactic linter: `exact intensionalChoice_quoted I σ` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Classicism/Semantics/FullExtensionalProperties.lean:224:58: error(lean.invalidField): Invalid field `holds`: The environment does not contain `Classicism.Meta.Term.holds`, so it is not possible to project the field `holds` from an expression
+  Term.ofPure P.DistinctnessPreservingCollapse.quoted
+of type `Term ?m.1 [] (Ty.rel RTy.t)`
+Classicism/Semantics/FullExtensionalProperties.lean:232:8: warning: declaration uses `sorry`
+Classicism/Semantics/FullExtensionalProperties.lean:235:2: warning: Unused tactic linter: `exact distinctnessPreservingCollapse_quoted I` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Classicism/Semantics/FullExtensionalProperties.lean:240:36: error(lean.invalidField): Invalid field `holds`: The environment does not contain `Classicism.Meta.Term.holds`, so it is not possible to project the field `holds` from an expression
+  Term.box p
+of type `Term Sig [] (Ty.rel RTy.t)`
+Classicism/Semantics/FullExtensionalProperties.lean:246:44: error(lean.invalidField): Invalid field `holds`: The environment does not contain `Classicism.Meta.Term.holds`, so it is not possible to project the field `holds` from an expression
+  Term.dia (Term.atConsts cs P)
+of type `Term Sig [] (Ty.rel RTy.t)`
+Classicism/Semantics/FullExtensionalProperties.lean:246:86: error(lean.invalidField): Invalid field `holds`: The environment does not contain `Classicism.Meta.Term.holds`, so it is not possible to project the field `holds` from an expression
+  Term.dia (Term.atConsts ds Q)
+of type `Term Sig [] (Ty.rel RTy.t)`
+Classicism/Semantics/FullExtensionalProperties.lean:247:69: error(lean.invalidField): Invalid field `holds`: The environment does not contain `Classicism.Meta.Term.holds`, so it is not possible to project the field `holds` from an expression
+  Term.dia (Term.conj (Term.atConsts cs P) (Term.atConsts ds Q))
+of type `Term Sig [] (Ty.rel RTy.t)`

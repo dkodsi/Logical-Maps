@@ -1,0 +1,14 @@
+import Classicism.Results.Research.SectionsRetractionsPairsCertificates
+import Classicism.Results.Research.SectionsRetractionsStableGraphs
+
+#classicism_audit Classicism.Results.Research.SectionsRetractionsStableGraphs
+#classicism_types_audit Classicism.Results.Research.SectionsRetractionsStableGraphs
+set_option maxHeartbeats 0 in
+#classicism_derive_audit Classicism.Results.Research.SectionsRetractionsStableGraphs
+#classicism_schema Classicism.Research.Splitting.StableUniqueGraphRepresentation
+#classicism_certify Classicism.Research.Splitting.barcan_stable_unique_graphs
+  Classicism.Research.Splitting.stable_unique_truth_graphs_barcan
+#check Classicism.Research.Splitting.barcan_stable_unique_graphs.listRule
+#check Classicism.Research.Splitting.stable_unique_truth_graphs_barcan.listRule
+#print axioms Classicism.Research.Splitting.barcan_stable_unique_graphs.listRule
+#print axioms Classicism.Research.Splitting.uniform_graph_iff_stable_witnesses.derivable

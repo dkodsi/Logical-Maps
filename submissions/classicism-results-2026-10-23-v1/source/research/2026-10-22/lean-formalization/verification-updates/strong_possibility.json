@@ -1,0 +1,151 @@
+{
+  "lane": "strong_possibility",
+  "updated_at_utc": "2026-10-23T04:52:35.183434+00:00",
+  "state": "checked_main_target",
+  "checked_target": [
+    "StrongPossibilityConsequencesAlgebra",
+    "StrongPossibilityConsequencesC",
+    "StrongPossibilityConsequencesComputability",
+    "StrongPossibilityConsequencesDisjunction",
+    "StrongPossibilityConsequencesInfinitaryNumerals",
+    "StrongPossibilityConsequencesMaxConservativity",
+    "StrongPossibilityConsequencesMaxDiagram",
+    "StrongPossibilityConsequencesReflection",
+    "StrongPossibilityConsequencesSchemas",
+    "StrongPossibilityConsequencesSignatureSplit",
+    "StrongPossibilityConsequencesStability",
+    "StrongPossibilityConsequencesUniversalCore"
+  ],
+  "manifest": "checks/20261023T044759304508Z-f503b46f.json",
+  "accepted_manifests": {
+    "StrongPossibilityConsequencesAlgebra": "sp-verification/checks/20261023T040940460714Z.json",
+    "StrongPossibilityConsequencesC": "checks/20261023T044759304508Z-f503b46f.json",
+    "StrongPossibilityConsequencesComputability": "sp-verification/checks/20261023T041012326835Z.json",
+    "StrongPossibilityConsequencesDisjunction": "sp-universal-verification/checks/20261023T044336274999Z-6b5c1cb4.json",
+    "StrongPossibilityConsequencesInfinitaryNumerals": "sp-verification/checks/20261023T040821574277Z.json",
+    "StrongPossibilityConsequencesMaxConservativity": "checks/20261023T044759304508Z-f503b46f.json",
+    "StrongPossibilityConsequencesMaxDiagram": "checks/20261023T044759304508Z-f503b46f.json",
+    "StrongPossibilityConsequencesReflection": "checks/20261023T044759304508Z-f503b46f.json",
+    "StrongPossibilityConsequencesSchemas": "checks/20261023T040926613001Z.json",
+    "StrongPossibilityConsequencesSignatureSplit": "checks/20261023T044759304508Z-f503b46f.json",
+    "StrongPossibilityConsequencesStability": "checks/20261023T044759304508Z-f503b46f.json",
+    "StrongPossibilityConsequencesUniversalCore": "sp-universal-verification/checks/20261023T044336274999Z-6b5c1cb4.json"
+  },
+  "principal_declarations": {
+    "Algebra": [
+      "quotient_no_new_fixed_below",
+      "numerical_return_is_inverse",
+      "numericalEquiv",
+      "numerical_named_of_profiles"
+    ],
+    "Computability": [
+      "no_computable_separator",
+      "computable_prediction_has_fixed_program",
+      "no_computable_diagonal_avoider"
+    ],
+    "InfinitaryNumerals": [
+      "number_iff_numeral",
+      "unique_number_name",
+      "unnamed_number_excludes_comprehension"
+    ],
+    "MaxDiagram": [
+      "identity_iff",
+      "distinctness_eq",
+      "max_consistent",
+      "IdentityBoolean.decides",
+      "IdentityBoolean.theorem_iff"
+    ],
+    "Schemas": [
+      "consistent_strongPossibility_iff",
+      "pureSP_monism",
+      "pureSP_not_atLeastTwo"
+    ],
+    "Reflection": [
+      "maximalist_reflects",
+      "sp_boxNe_diagram",
+      "sp_not_boxNe_diagram"
+    ],
+    "UniversalCore": [
+      "Matrix.decides",
+      "Universal.reflects",
+      "fixedCore_equiv",
+      "sp_entails_universal_core",
+      "universal_core_entails_sp",
+      "sp_consistent_iff_universal_core"
+    ],
+    "Disjunction": [
+      "consistent_add_iff_not_neg",
+      "restricted_disjunction_of_core_consistent",
+      "core_consistent_of_restricted_disjunction",
+      "core_consistent_iff_restricted_disjunction",
+      "sp_consistent_iff_restricted_disjunction"
+    ],
+    "SignatureSplit": [
+      "positive_cell_consistent",
+      "negative_cell_consistent",
+      "maximalist_not_atom_cell_at",
+      "maximalist_not_atom_cell",
+      "maximalist_add_atom_inconsistent"
+    ],
+    "MaxConservativity": [
+      "identity_conservative_of_max_consistent",
+      "max_consistent_of_identity_conservative",
+      "identity_conservative_iff_max_consistent"
+    ]
+  },
+  "source_hashes": {
+    "StrongPossibilityConsequencesAlgebra": "674145023a1a0a5340d05173bf7ccbbb1c70f08a9372869a7444f9353630aee9",
+    "StrongPossibilityConsequencesC": "d2c7c82da467d8436c9ba4dd02e5f4c815094dd2cab8dc702adc00a706edba6d",
+    "StrongPossibilityConsequencesComputability": "ca3edd76569f8b9e2370e1343a23574f84251f76a9c81f2be0b7701f924b24fb",
+    "StrongPossibilityConsequencesDisjunction": "df4c167dd99accceb555f9a8aaa89d0a8b5e9beac6d86c1cdc8c4fbf20fa566e",
+    "StrongPossibilityConsequencesInfinitaryNumerals": "f27b7d8a5e6ca67996cd2c4d9bc531f21e2481ca75988dcf942b7550f5ecedc9",
+    "StrongPossibilityConsequencesMaxConservativity": "42f87ab0c6b3fe3e70801fd5761d17f4a9e1ec5a9f55802782f1420067b773fe",
+    "StrongPossibilityConsequencesMaxDiagram": "9191956fb75c184a2f095201ec14c9f758451092b13b52899d0cb56b25866f6d",
+    "StrongPossibilityConsequencesReflection": "cb7bf2b33a80da79332d692451e08fa478cb6257f072453b6d3adddf88fc4355",
+    "StrongPossibilityConsequencesSchemas": "4450f37bc4e730f7e9e096a495dbd902c3d94fb30f44c292db03a83eedf1b78b",
+    "StrongPossibilityConsequencesSignatureSplit": "1c95fc88dffdc5809ea02b43b498ddf4dac4e2b861f17647e242d978702096e9",
+    "StrongPossibilityConsequencesStability": "da0b6017c78b6e541c6e818f075572cdba6dcc4daa9e25972c530943a8ee5fbe",
+    "StrongPossibilityConsequencesUniversalCore": "b986bf950f38d0b359c22c9cde1b0ab02dbb6b8b8f8db79ac41996671a566288"
+  },
+  "next_target": null,
+  "mathematical_gaps": [
+    "SP consistency and Con(Max+G+D not G) remain unresolved.",
+    "The pure profile/Henkin model and unconditional Max-consistency bridges remain separate implementation obligations.",
+    "Arithmetic interpretation, effective coding, oracle relativization and exact degree/classification reductions are not supplied by the local modules.",
+    "InfinitaryNumerals uses expressly enlarged syntax; the typed-world and arithmetic-independent-branch bridge remains separate."
+  ],
+  "ownership": {
+    "author": [
+      "Algebra",
+      "Computability",
+      "InfinitaryNumerals",
+      "MaxDiagram"
+    ],
+    "core_thread_id": "01a1664d-7c13-7701-b52c-2070ee16eb06",
+    "core": [
+      "SignatureSplit",
+      "Reflection",
+      "MaxConservativity"
+    ],
+    "dedicated_agent": "/root/sp_semantic_audit",
+    "dedicated_agent_scope": [
+      "UniversalCore",
+      "Disjunction"
+    ]
+  },
+  "prose_proof": "research/2026-10-22/lean-formalization/sp-verification/proof-summary.md",
+  "contribution_summary": "research/2026-10-22/lean-formalization/sp-verification/contribution-summary.md",
+  "evidence_ledger": "research/2026-10-22/lean-formalization/sp-verification/verification-status.json",
+  "scope_warning": "Supporting checked modules do not complete all 32 assigned mathematical families.",
+  "repository_validation": "132 principles, 447 results, 162 models \u2014 OK",
+  "reproduction_instructions": "research/2026-10-22/lean-formalization/sp-verification/reproduction.md",
+  "additional_public_audit": {
+    "module": "StrongPossibilityConsequencesCoreAxioms",
+    "manifest": "checks/20261023T044759304508Z-f503b46f.json",
+    "declarations": 21,
+    "source_sha256": "de2f752e87be1da1f43e1e794ed610790536b7897ea1b7db5a28975d06c73ff3",
+    "no_sorryAx": true,
+    "scope": "Public statements and axiom reports for SignatureSplit/MaxConservativity, including both shallow reflected_neg_box and its actual C derivation."
+  },
+  "completion_scope": "All twelve submitted SP/Max result modules and the additional CoreAxioms audit have matching current successful checks. The 32-family research inventory retains its separate unresolved or unformalized bridges."
+}

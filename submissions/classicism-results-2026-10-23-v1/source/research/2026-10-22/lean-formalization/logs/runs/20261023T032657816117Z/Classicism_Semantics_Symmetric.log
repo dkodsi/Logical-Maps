@@ -1,0 +1,68 @@
+Classicism/Semantics/Symmetric.lean:110:8: warning: `CategoryTheory.FunctorToTypes.map_comp_apply` has been deprecated: Use `CategoryTheory.Functor.map_comp_apply` instead
+
+Note: The updated constant has a different type:
+  ∀ {C : Type u₁} [inst : Category.{v₁, u₁} C] {D : Type u₂} [inst_1 : Category.{v₂, u₂} D] (self : C ⥤ D) {X Y Z : C}
+    (f : X ⟶ Y) (g : Y ⟶ Z) {F : D → D → Type uF} {carrier : D → Type w}
+    {instFunLike : (X Y : D) → FunLike (F X Y) (carrier X) (carrier Y)} [inst_2 : ConcreteCategory D F]
+    (x : carrier (self.obj X)),
+    (ConcreteCategory.hom (self.map (f ≫ g))) x =
+      (ConcreteCategory.hom (self.map g)) ((ConcreteCategory.hom (self.map f)) x)
+instead of
+  ∀ {C : Type u} [inst : Category.{v, u} C] (F : C ⥤ Type w) {X Y Z : C} (f : X ⟶ Y) (g : Y ⟶ Z) (a : F.obj X),
+    (ConcreteCategory.hom (F.map (f ≫ g))) a = (ConcreteCategory.hom (F.map g)) ((ConcreteCategory.hom (F.map f)) a)
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.map_comp_apply` to `Functor.map_comp_apply x`).
+Classicism/Semantics/Symmetric.lean:110:42: warning: `CategoryTheory.FunctorToTypes.map_id_apply` has been deprecated: Use `CategoryTheory.Functor.map_id_apply` instead
+
+Note: The updated constant has a different type:
+  ∀ {C : Type u₁} [inst : Category.{v₁, u₁} C] {D : Type u₂} [inst_1 : Category.{v₂, u₂} D] (self : C ⥤ D) (X : C)
+    {F : D → D → Type uF} {carrier : D → Type w} {instFunLike : (X Y : D) → FunLike (F X Y) (carrier X) (carrier Y)}
+    [inst_2 : ConcreteCategory D F] (x : carrier (self.obj X)), (ConcreteCategory.hom (self.map (𝟙 X))) x = x
+instead of
+  ∀ {C : Type u} [inst : Category.{v, u} C] (F : C ⥤ Type w) {X : C} (a : F.obj X),
+    (ConcreteCategory.hom (F.map (𝟙 X))) a = a
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.map_id_apply` to `Functor.map_id_apply x`).
+Classicism/Semantics/Symmetric.lean:163:0: warning: automatically included section variable(s) unused in theorem `Classicism.Meta.Intensional.Premodel.sym_andRead`:
+  hG
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit hG in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Semantics/Symmetric.lean:170:0: warning: automatically included section variable(s) unused in theorem `Classicism.Meta.Intensional.Premodel.sym_orRead`:
+  hG
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit hG in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Semantics/Symmetric.lean:177:0: warning: automatically included section variable(s) unused in theorem `Classicism.Meta.Intensional.Premodel.sym_constRead`:
+  hG
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit hG in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Semantics/Symmetric.lean:192:0: warning: automatically included section variable(s) unused in theorem `Classicism.Meta.Intensional.Premodel.sym_exRead`:
+  hG
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit hG in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Semantics/Symmetric.lean:200:0: warning: automatically included section variable(s) unused in theorem `Classicism.Meta.Intensional.Premodel.sym_eqRead`:
+  hG
+  hD
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit hG hD in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Semantics/Symmetric.lean:520:8: warning: Variable name `W` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _W
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Classicism/Semantics/Symmetric.lean:522:12: warning: Variable name `W` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _W
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

@@ -1,0 +1,8 @@
+Classicism/Models/NominalLogicalOperations.lean:49:13: error: Application type mismatch: The argument
+  act_injective X.obj g
+has type
+  Function.Injective (X.obj.act g)
+but is expected to have type
+  X.obj.act g z.1 = X.obj.act g z.2 → z.1 = z.2
+in the application
+  Iff.intro (act_injective X.obj g)

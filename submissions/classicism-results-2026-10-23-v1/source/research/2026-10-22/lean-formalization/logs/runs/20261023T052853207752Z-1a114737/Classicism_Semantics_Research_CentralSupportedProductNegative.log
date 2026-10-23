@@ -1,0 +1,19 @@
+Classicism/Semantics/Research/CentralSupportedProductNegative.lean:27:4: error: Tactic `apply` failed: could not unify the conclusion of `supported_of_profile I L (Set.countable_singleton j)`
+  Supported (control I L) (intensionAction (arguments I L ?m.13)) ?m.17
+with the goal
+  Supported (control I L)
+    (intensionAction
+      (RTy.rec (individuals I L) (fun x ih => supportedAction (control I L) (intensionAction ih))
+        (fun x => individuals I L) pointAction (fun x x_1 ihσ ihρ => prodAction ihσ ihρ) RTy.t))
+    {z | z.snd.2 j = 1}
+
+Note: The full type of `supported_of_profile I L (Set.countable_singleton j)` is
+  ProfileSupport I L {j} ?m.17 → Supported (control I L) (intensionAction (arguments I L ?m.13)) ?m.17
+
+I L : Type
+j : I
+⊢ Supported (control I L)
+    (intensionAction
+      (RTy.rec (individuals I L) (fun x ih => supportedAction (control I L) (intensionAction ih))
+        (fun x => individuals I L) pointAction (fun x x_1 ihσ ihρ => prodAction ihσ ihρ) RTy.t))
+    {z | z.snd.2 j = 1}

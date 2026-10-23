@@ -1,0 +1,40 @@
+Classicism.Research.Splitting.actuality_sections_evaluator: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.Splitting.escape_false_coext: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.Splitting.escape_guard_identity: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.Splitting.escape_section_impossible: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.Splitting.escape_slots_false: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.Splitting.escape_slots_true: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.Splitting.escape_surjective: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.Splitting.escape_true_coext: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.Splitting.not_possible_eq_false: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.Splitting.section_stabilizes_actual_world: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+#classicism_audit Classicism.Results.Research.SectionsRetractionsActuality: 10/10 theorems pass; 10 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.SectionsRetractionsActuality: 10/10 inside R
+Classicism.Results.Research.SectionsRetractionsActuality: 10 of 10 theorems derived
+
+[1/10] Classicism.Research.Splitting.actuality_sections_evaluator ✓ 272 ms
+[2/10] Classicism.Research.Splitting.escape_false_coext ✓ 0 ms
+[3/10] Classicism.Research.Splitting.escape_guard_identity ✓ 0 ms
+[4/10] Classicism.Research.Splitting.escape_section_impossible ✓ 0 ms
+[5/10] Classicism.Research.Splitting.escape_slots_false ✓ 0 ms
+[6/10] Classicism.Research.Splitting.escape_slots_true ✓ 0 ms
+[7/10] Classicism.Research.Splitting.escape_surjective ✓ 0 ms
+[8/10] Classicism.Research.Splitting.escape_true_coext ✓ 0 ms
+[9/10] Classicism.Research.Splitting.not_possible_eq_false ✓ 0 ms
+[10/10] Classicism.Research.Splitting.section_stabilizes_actual_world ✓ 0 ms
+Classicism.Research.Splitting.actuality_sections_evaluator ⟶ Classicism.Research.Splitting.actuality_sections_evaluator.rule : Classicism.Meta.Theorem
+  Classicism.Meta.C.axioms
+  (Classicism.Meta.Term.imp Classicism.P.Actuality.quoted
+    (Classicism.Meta.Term.imp
+      (Classicism.Research.Splitting.RightSplitting.quoted
+        (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ Classicism.Meta.RTy.t) Classicism.Meta.RTy.t)
+      Classicism.Research.Splitting.HasActualEvaluator.quoted))
+certified ✓ (axioms: [propext, Quot.sound])
+'Classicism.Research.Splitting.section_stabilizes_actual_world.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.Splitting.actuality_sections_evaluator.rule' depends on axioms: [propext, Quot.sound]

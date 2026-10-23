@@ -1,0 +1,21 @@
+Classicism.Research.Choice.append_conforming: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.Choice.canonical_fixedpoint_of_supremum: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.Choice.canonical_member_domain: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.Choice.canonical_successor_bound: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.Choice.canonical_union_conforming: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.Choice.chainSup_coext: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.Choice.chainSup_unique: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.Choice.conforming_fixedpoint_of_supremum: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+#classicism_audit Classicism.Results.Research.ChoiceChains: 8/8 theorems pass; 8 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.ChoiceChains: 8/8 inside R
+Classicism.Results.Research.ChoiceChains: 8 of 8 theorems derived
+
+[1/8] Classicism.Research.Choice.append_conforming ✓ 758 ms
+[2/8] Classicism.Research.Choice.canonical_fixedpoint_of_supremum ✓ 8924 ms
+[3/8] Classicism.Research.Choice.canonical_member_domain ✓ 708 ms
+[4/8] Classicism.Research.Choice.canonical_successor_bound ✓ 930 ms
+[5/8] Classicism.Research.Choice.canonical_union_conforming ✓ 0 ms
+[6/8] Classicism.Research.Choice.chainSup_coext ✓ 0 ms
+[7/8] Classicism.Research.Choice.chainSup_unique ✓ 0 ms
+[8/8] Classicism.Research.Choice.conforming_fixedpoint_of_supremum ✓ 0 ms
+'Classicism.Research.Choice.canonical_fixedpoint_of_supremum.derivable' depends on axioms: [propext, Quot.sound]

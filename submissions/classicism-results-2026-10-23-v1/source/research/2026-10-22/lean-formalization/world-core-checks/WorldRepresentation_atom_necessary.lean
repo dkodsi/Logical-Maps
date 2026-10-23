@@ -1,0 +1,9 @@
+import Classicism.Results.Research.WorldRepresentation
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Translate
+
+#classicism_check Classicism.Research.WorldRepresentation.atom_necessary
+#classicism_types Classicism.Research.WorldRepresentation.atom_necessary
+#classicism_derive Classicism.Research.WorldRepresentation.atom_necessary
+#print axioms Classicism.Research.WorldRepresentation.atom_necessary.derivable

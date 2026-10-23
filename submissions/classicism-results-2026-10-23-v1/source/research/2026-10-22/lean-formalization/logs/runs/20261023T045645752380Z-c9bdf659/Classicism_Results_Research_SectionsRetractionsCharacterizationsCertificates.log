@@ -1,0 +1,58 @@
+Classicism.Research.Splitting.functional_choice_actuality: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.Splitting.plenitude_actuality: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+#classicism_audit Classicism.Results.Research.SectionsRetractionsCharacterizations: 2/2 theorems pass; 2 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.SectionsRetractionsCharacterizations: 2/2 inside R
+Classicism.Research.Splitting.functional_choice_actuality ⟶ Classicism.Research.Splitting.functional_choice_actuality.rule : Classicism.Meta.Theorem
+  Classicism.Meta.C.axioms
+  (Classicism.Meta.Term.imp
+    (Classicism.P.FunctionalChoice.quoted (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t) Classicism.Meta.RTy.t)
+    Classicism.P.Actuality.quoted)
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.plenitude_actuality ⟶ Classicism.Research.Splitting.plenitude_actuality.rule : Classicism.Meta.Theorem
+  Classicism.Meta.C.axioms
+  (Classicism.Meta.Term.imp
+    (Classicism.P.Plenitude.quoted (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t) Classicism.Meta.RTy.t)
+    Classicism.P.Actuality.quoted)
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.functional_choice_actuality ⟶ Classicism.Research.Splitting.functional_choice_actuality.entails : Classicism.P.FunctionalChoice.schema ⟹
+  Classicism.Meta.AxiomSet.single Classicism.P.Actuality.quoted
+Classicism.Research.Splitting.plenitude_actuality ⟶ Classicism.Research.Splitting.plenitude_actuality.entails : Classicism.P.Plenitude.schema ⟹
+  Classicism.Meta.AxiomSet.single Classicism.P.Actuality.quoted
+Classicism.Research.Splitting.functional_choice_sections ⟶ Classicism.Research.Splitting.functional_choice_sections.entails : Classicism.P.FunctionalChoice.schema ⟹
+  Classicism.Research.Splitting.RightSplitting.schema
+Classicism.Research.Splitting.plenitude_retractions ⟶ Classicism.Research.Splitting.plenitude_retractions.entails : Classicism.P.Plenitude.schema ⟹
+  Classicism.Research.Splitting.LeftSplitting.schema
+Classicism.Research.Splitting.actuality_sections_choice ⟶ Classicism.Research.Splitting.actuality_sections_choice.entails : Classicism.P.Actuality.schema ∪
+      Classicism.Research.Splitting.RightSplitting.schema ∪
+    Classicism.Research.Splitting.RightSplitting.schema ⟹
+  fun a => ∃ ν' σ', ν'.Closed ∧ σ'.Closed ∧ a = Classicism.P.FunctionalChoice.quoted σ' (ν' ⇒ Classicism.Meta.RTy.t)
+Classicism.Research.Splitting.actuality_sections_choice ⟶ Classicism.Research.Splitting.actuality_sections_choice.listEntails : Classicism.P.Actuality.schema ∪
+      Classicism.Research.Splitting.RightSplitting.schema ∪
+    Classicism.Research.Splitting.RightSplitting.schema ⟹
+  fun a =>
+  ∃ σs τ1,
+    Classicism.Meta.Ty.AllClosed σs ∧
+      τ1.Closed ∧ a = Classicism.P.FunctionalChoice.quoted τ1 (σs ⇒* Classicism.Meta.RTy.t)
+Classicism.Research.Splitting.actuality_retractions_plenitude ⟶ Classicism.Research.Splitting.actuality_retractions_plenitude.entails : Classicism.P.Actuality.schema ∪
+      Classicism.Research.Splitting.LeftSplitting.schema ∪
+    Classicism.Research.Splitting.LeftSplitting.schema ⟹
+  fun a => ∃ ν' σ', ν'.Closed ∧ σ'.Closed ∧ a = Classicism.P.Plenitude.quoted σ' (ν' ⇒ Classicism.Meta.RTy.t)
+Classicism.Research.Splitting.actuality_retractions_plenitude ⟶ Classicism.Research.Splitting.actuality_retractions_plenitude.listEntails : Classicism.P.Actuality.schema ∪
+      Classicism.Research.Splitting.LeftSplitting.schema ∪
+    Classicism.Research.Splitting.LeftSplitting.schema ⟹
+  fun a =>
+  ∃ σs τ1,
+    Classicism.Meta.Ty.AllClosed σs ∧ τ1.Closed ∧ a = Classicism.P.Plenitude.quoted τ1 (σs ⇒* Classicism.Meta.RTy.t)
+Classicism.Research.Splitting.actuality_sections_choice.listEntails :
+  Classicism.P.Actuality.schema ∪ Classicism.Research.Splitting.RightSplitting.schema ∪
+      Classicism.Research.Splitting.RightSplitting.schema ⟹
+    fun a =>
+    ∃ σs τ1,
+      Classicism.Meta.Ty.AllClosed σs ∧
+        τ1.Closed ∧ a = Classicism.P.FunctionalChoice.quoted τ1 (σs ⇒* Classicism.Meta.RTy.t)
+Classicism.Research.Splitting.actuality_retractions_plenitude.listEntails :
+  Classicism.P.Actuality.schema ∪ Classicism.Research.Splitting.LeftSplitting.schema ∪
+      Classicism.Research.Splitting.LeftSplitting.schema ⟹
+    fun a =>
+    ∃ σs τ1,
+      Classicism.Meta.Ty.AllClosed σs ∧ τ1.Closed ∧ a = Classicism.P.Plenitude.quoted τ1 (σs ⇒* Classicism.Meta.RTy.t)

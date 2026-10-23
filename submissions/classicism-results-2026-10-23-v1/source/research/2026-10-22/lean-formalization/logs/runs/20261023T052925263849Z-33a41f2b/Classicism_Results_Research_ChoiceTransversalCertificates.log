@@ -1,0 +1,28 @@
+Classicism.Research.Choice.adjoinRep_above: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Choice.adjoinRep_pair_imp: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.Choice.adjoinRep_partial: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.Choice.full_partial_transversal: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.Choice.local_choice_completeness_transversal: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.Choice.local_choice_countable_ccc_transversal: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.Choice.partialRep_chain_complete: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.Choice.partialRep_chain_lub: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Choice.partialRep_step: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+#classicism_audit Classicism.Results.Research.ChoiceTransversal: 9/9 theorems pass; 9 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.ChoiceTransversal: 9/9 inside R
+Classicism.Results.Research.ChoiceTransversal: 9 of 9 theorems derived
+
+[1/9] Classicism.Research.Choice.adjoinRep_above ✓ 52 ms
+[2/9] Classicism.Research.Choice.adjoinRep_pair_imp ✓ 8 ms
+[3/9] Classicism.Research.Choice.adjoinRep_partial ✓ 76 ms
+[4/9] Classicism.Research.Choice.full_partial_transversal ✓ 36 ms
+[5/9] Classicism.Research.Choice.local_choice_completeness_transversal ✓ 2024 ms
+[6/9] Classicism.Research.Choice.local_choice_countable_ccc_transversal ✓ 38 ms
+[7/9] Classicism.Research.Choice.partialRep_chain_complete ✓ 0 ms
+[8/9] Classicism.Research.Choice.partialRep_chain_lub ✓ 0 ms
+[9/9] Classicism.Research.Choice.partialRep_step ✓ 0 ms
+'Classicism.Research.Choice.local_choice_completeness_transversal.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.Choice.local_choice_countable_ccc_transversal.derivable' depends on axioms: [propext, Quot.sound]

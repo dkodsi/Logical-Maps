@@ -1,0 +1,62 @@
+Classicism/Semantics/Research/CentralSupportedProductFactorization.lean:75:4: error: don't know how to synthesize implicit argument `X`
+  @DFunLike.coe (TypeCat.Fun (F.obj (?m.52 hb m n hmn a ha)) (F.obj W)) ((fun X => X) (F.obj (?m.52 hb m n hmn a ha)))
+    (fun x => (fun X => X) (F.obj W)) TypeCat.instFunLikeFun (ConcreteCategory.hom (F.map m))
+    ((ConcreteCategory.hom (F.map (cut I L (↑S) n))) a)
+context:
+I L : Type
+F : World I L ⥤ Type
+W : World I L
+S : (control I L).Key W
+b : F.obj W
+hb : SupportedBy (control I L) F S b
+m n : Arrow I L
+hmn : ∀ i ∈ ↑S, m i = n i
+a : F.obj W
+ha : (ConcreteCategory.hom (F.map n)) a = b
+⊢ World I L
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+Classicism/Semantics/Research/CentralSupportedProductFactorization.lean:75:23: error: don't know how to synthesize implicit argument `Y`
+  @DFunLike.coe (TypeCat.Fun (F.obj W) (F.obj (?m.52 hb m n hmn a ha))) ((fun X => X) (F.obj W))
+    (fun x => (fun X => X) (F.obj (?m.52 hb m n hmn a ha))) TypeCat.instFunLikeFun
+    (ConcreteCategory.hom (F.map (cut I L (↑S) n))) a
+context:
+I L : Type
+F : World I L ⥤ Type
+W : World I L
+S : (control I L).Key W
+b : F.obj W
+hb : SupportedBy (control I L) F S b
+m n : Arrow I L
+hmn : ∀ i ∈ ↑S, m i = n i
+a : F.obj W
+ha : (ConcreteCategory.hom (F.map n)) a = b
+⊢ World I L
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+Classicism/Semantics/Research/CentralSupportedProductFactorization.lean:76:8: warning: `CategoryTheory.FunctorToTypes.map_comp_apply` has been deprecated: Use `CategoryTheory.Functor.map_comp_apply` instead
+
+Note: The updated constant has a different type:
+  ∀ {C : Type u₁} [inst : Category.{v₁, u₁} C] {D : Type u₂} [inst_1 : Category.{v₂, u₂} D] (self : C ⥤ D) {X Y Z : C}
+    (f : X ⟶ Y) (g : Y ⟶ Z) {F : D → D → Type uF} {carrier : D → Type w}
+    {instFunLike : (X Y : D) → FunLike (F X Y) (carrier X) (carrier Y)} [inst_2 : ConcreteCategory D F]
+    (x : carrier (self.obj X)),
+    (ConcreteCategory.hom (self.map (f ≫ g))) x =
+      (ConcreteCategory.hom (self.map g)) ((ConcreteCategory.hom (self.map f)) x)
+instead of
+  ∀ {C : Type u} [inst : Category.{v, u} C] (F : C ⥤ Type w) {X Y Z : C} (f : X ⟶ Y) (g : Y ⟶ Z) (a : F.obj X),
+    (ConcreteCategory.hom (F.map (f ≫ g))) a = (ConcreteCategory.hom (F.map g)) ((ConcreteCategory.hom (F.map f)) a)
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.map_comp_apply` to `Functor.map_comp_apply x`).
+Classicism/Semantics/Research/CentralSupportedProductFactorization.lean:75:63: error: unsolved goals
+I L : Type
+F : World I L ⥤ Type
+W : World I L
+S : (control I L).Key W
+b : F.obj W
+hb : SupportedBy (control I L) F S b
+m n : Arrow I L
+hmn : ∀ i ∈ ↑S, m i = n i
+a : F.obj W
+ha : (ConcreteCategory.hom (F.map n)) a = b
+⊢ (ConcreteCategory.hom (F.map (cut I L (↑S) m * n))) a = b

@@ -1,0 +1,9 @@
+import Classicism.Results.Research.ActualityCoreBridge
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Translate
+
+#classicism_check Classicism.Research.ActualityCore.endpoint_bridge_injective
+#classicism_types Classicism.Research.ActualityCore.endpoint_bridge_injective
+#classicism_derive Classicism.Research.ActualityCore.endpoint_bridge_injective
+#print axioms Classicism.Research.ActualityCore.endpoint_bridge_injective.derivable

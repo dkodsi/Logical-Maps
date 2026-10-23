@@ -1,0 +1,21 @@
+Classicism/Semantics/BooleanValuedPoint.lean:49:30: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Classicism/Semantics/BooleanValuedPoint.lean:132:15: error: Type mismatch
+  eval I ?m.1902 env
+has type
+  Dom I.E B ?m.1901
+but is expected to have type
+  B
+Classicism/Semantics/BooleanValuedPoint.lean:189:15: error: Type mismatch
+  eval I ?m.2168 env
+has type
+  Dom I.E B ?m.2167
+but is expected to have type
+  B
+Classicism/Semantics/BooleanValuedPoint.lean:199:15: error: Type mismatch
+  eval I ?m.2246 env
+has type
+  Dom I.E B ?m.2245
+but is expected to have type
+  B

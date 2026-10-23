@@ -1,0 +1,86 @@
+Classicism.Research.FregeArithmeticQuotation.PeanoCondition ⟶ Classicism.Research.FregeArithmeticQuotation.PeanoCondition.term, reflects ✓
+Classicism/Results/Research/FregeArithmeticQuotation.lean:41:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Meta.Term.denote (Meta.Interp.ofDomain e)
+    (Meta.Term.forall'
+      (Meta.Term.forall'
+        (Meta.Term.imp
+          (Meta.Term.forall'
+            (Meta.Term.imp
+              (((Meta.Term.var Meta.Var.zero).app
+                    (Meta.Term.lam
+                      (Meta.Term.forall'
+                        ((Meta.Term.var Meta.Var.zero.succ).app (Meta.Term.var Meta.Var.zero)).neg))).conj
+                (Meta.Term.forall'
+                  (((Meta.Term.var Meta.Var.zero.succ).app (Meta.Term.var Meta.Var.zero)).imp
+                    ((Meta.Term.var Meta.Var.zero.succ).app
+                      (Meta.Term.lam
+                        (Meta.Term.exists'
+                          (((Meta.Term.var Meta.Var.zero.succ).app (Meta.Term.var Meta.Var.zero)).conj
+                            ((Meta.Term.var Meta.Var.zero.succ.succ).app
+                              (Meta.Term.lam
+                                (((Meta.Term.var Meta.Var.zero.succ.succ).app (Meta.Term.var Meta.Var.zero)).conj
+                                  (Meta.Term.neg
+                                    ((Meta.Term.var Meta.Var.zero).eq' (Meta.Term.var Meta.Var.zero.succ)))))))))))))
+              ((Meta.Term.var Meta.Var.zero).app (Meta.Term.var Meta.Var.zero.succ.succ))))
+          (Meta.Term.imp
+            (Meta.Term.forall'
+              (Meta.Term.imp
+                (((Meta.Term.var Meta.Var.zero).app
+                      (Meta.Term.lam
+                        (Meta.Term.forall'
+                          ((Meta.Term.var Meta.Var.zero.succ).app (Meta.Term.var Meta.Var.zero)).neg))).conj
+                  (Meta.Term.forall'
+                    (((Meta.Term.var Meta.Var.zero.succ).app (Meta.Term.var Meta.Var.zero)).imp
+                      ((Meta.Term.var Meta.Var.zero.succ).app
+                        (Meta.Term.lam
+                          (Meta.Term.exists'
+                            (((Meta.Term.var Meta.Var.zero.succ).app (Meta.Term.var Meta.Var.zero)).conj
+                              ((Meta.Term.var Meta.Var.zero.succ.succ).app
+                                (Meta.Term.lam
+                                  (((Meta.Term.var Meta.Var.zero.succ.succ).app (Meta.Term.var Meta.Var.zero)).conj
+                                    (Meta.Term.neg
+                                      ((Meta.Term.var Meta.Var.zero).eq' (Meta.Term.var Meta.Var.zero.succ)))))))))))))
+                ((Meta.Term.var Meta.Var.zero).app (Meta.Term.var Meta.Var.zero.succ))))
+            (Meta.Term.conj
+              (Meta.Term.neg
+                ((Meta.Term.lam
+                      (Meta.Term.forall'
+                        ((Meta.Term.var Meta.Var.zero.succ).app (Meta.Term.var Meta.Var.zero)).neg)).eq'
+                  (Meta.Term.lam
+                    (Meta.Term.exists'
+                      (((Meta.Term.var Meta.Var.zero.succ).app (Meta.Term.var Meta.Var.zero)).conj
+                        ((Meta.Term.var Meta.Var.zero.succ.succ.succ).app
+                          (Meta.Term.lam
+                            (((Meta.Term.var Meta.Var.zero.succ.succ).app (Meta.Term.var Meta.Var.zero)).conj
+                              (Meta.Term.neg
+                                ((Meta.Term.var Meta.Var.zero).eq' (Meta.Term.var Meta.Var.zero.succ)))))))))))
+              (Meta.Term.imp
+                ((Meta.Term.lam
+                      (Meta.Term.exists'
+                        (((Meta.Term.var Meta.Var.zero.succ).app (Meta.Term.var Meta.Var.zero)).conj
+                          ((Meta.Term.var Meta.Var.zero.succ.succ.succ).app
+                            (Meta.Term.lam
+                              (((Meta.Term.var Meta.Var.zero.succ.succ).app (Meta.Term.var Meta.Var.zero)).conj
+                                (Meta.Term.neg
+                                  ((Meta.Term.var Meta.Var.zero).eq' (Meta.Term.var Meta.Var.zero.succ))))))))).eq'
+                  (Meta.Term.lam
+                    (Meta.Term.exists'
+                      (((Meta.Term.var Meta.Var.zero.succ).app (Meta.Term.var Meta.Var.zero)).conj
+                        ((Meta.Term.var Meta.Var.zero.succ.succ).app
+                          (Meta.Term.lam
+                            (((Meta.Term.var Meta.Var.zero.succ.succ).app (Meta.Term.var Meta.Var.zero)).conj
+                              (Meta.Term.neg
+                                ((Meta.Term.var Meta.Var.zero).eq' (Meta.Term.var Meta.Var.zero.succ))))))))))
+                ((Meta.Term.var Meta.Var.zero.succ).eq' (Meta.Term.var Meta.Var.zero))))))))
+    Meta.Env.nil
+in the target expression
+  (¬Meta.Term.denote (Meta.Interp.ofDomain e) (PeanoCondition.term σ) Meta.Env.nil =
+        ((∀ (p : Prop), p) ∧ ¬∀ (p : Prop), p)) =
+    ArithmeticCondition (Meta.Ty.denote e σ)
+
+σ : Meta.Ty
+⊢ (¬Meta.Term.denote (Meta.Interp.ofDomain e) (PeanoCondition.term σ) Meta.Env.nil =
+        ((∀ (p : Prop), p) ∧ ¬∀ (p : Prop), p)) =
+    ArithmeticCondition (Meta.Ty.denote e σ)
+'Classicism.Research.FregeArithmeticQuotation.ArithmeticCondition.reflect' depends on axioms: [sorryAx, Classicism.e]
+'Classicism.Meta.Research.FregeArithmeticQuotation.arithmeticI_conversion' depends on axioms: [propext, Quot.sound]

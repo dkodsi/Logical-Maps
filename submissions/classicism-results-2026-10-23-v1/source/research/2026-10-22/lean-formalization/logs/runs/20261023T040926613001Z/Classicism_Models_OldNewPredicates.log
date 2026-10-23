@@ -1,0 +1,58 @@
+Classicism/Models/OldNewPredicates.lean:61:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (ConcreteCategory.hom (cat.De.map f)) x
+in the target expression
+  a.1 = FunCat.fn k (FunCat.fn f x) ↔ a.1 = FunCat.fn k (FunCat.fn g x)
+
+case refine_1
+W : cat.Ob
+x : X W
+V : cat.Ob
+f g : W ⟶ V
+ha : AgreeOn cat.De {x} f g
+U : cat.Ob
+a : Args model.inner et U
+k : V ⟶ U
+⊢ a.1 = FunCat.fn k (FunCat.fn f x) ↔ a.1 = FunCat.fn k (FunCat.fn g x)
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    FunCat.fn k (FunCat.fn f x)
+  has type
+    cat.X U
+  but is expected to have type
+    (model.inner Ty.e).obj U
+  in the application
+    a.1 = FunCat.fn k (FunCat.fn f x)
+Classicism/Models/OldNewPredicates.lean:72:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (ConcreteCategory.hom (cat.De.map f)) x
+in the target expression
+  a.1 ≠ FunCat.fn k (FunCat.fn f x) ↔ a.1 ≠ FunCat.fn k (FunCat.fn g x)
+
+case refine_1
+W : cat.Ob
+x : X W
+V : cat.Ob
+f g : W ⟶ V
+ha : AgreeOn cat.De {x} f g
+U : cat.Ob
+a : Args model.inner et U
+k : V ⟶ U
+⊢ a.1 ≠ FunCat.fn k (FunCat.fn f x) ↔ a.1 ≠ FunCat.fn k (FunCat.fn g x)
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    FunCat.fn k (FunCat.fn f x)
+  has type
+    cat.X U
+  but is expected to have type
+    (model.inner Ty.e).obj U
+  in the application
+    a.1 ≠ FunCat.fn k (FunCat.fn f x)
+Classicism/Models/OldNewPredicates.lean:154:2: error: Type mismatch: After simplification, term
+  Iff.of_eq he
+ has type
+  Iff (⟨V, (a, h)⟩ ∈ model.incl ρ W F) (⟨V, (a, i)⟩ ∈ model.incl ρ W F)
+but is expected to have type
+  Iff (profile F h a) (profile F i a)

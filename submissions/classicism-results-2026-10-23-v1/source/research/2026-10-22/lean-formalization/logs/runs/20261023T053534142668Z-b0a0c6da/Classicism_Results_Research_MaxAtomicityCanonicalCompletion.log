@@ -1,0 +1,27 @@
+Classicism/Results/Research/MaxAtomicityCanonicalCompletion.lean:42:22: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  codeRelation ?K ?a (encode ?K ?z ?hz)
+in the target expression
+  R a (encode B posetCode posetCode_mem_universeSet) ↔ ∃ T, treeEmbedding T = a
+
+a : D
+⊢ R a (encode B posetCode posetCode_mem_universeSet) ↔ ∃ T, treeEmbedding T = a
+'Classicism.Meta.Research.MaxAtomicityCanonicalCompletion.posetCoding' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityCanonicalCompletion.posetCoding_full' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityCanonicalCompletion.regular_iff_carrier' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityCanonicalCompletion.canonical_algebraCarrier' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityCanonicalCompletion.algebraCarrier_unique' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

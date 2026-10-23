@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-23",
+  "compiler_owner": "current task 01a164a4-d112-7cb1-a556-503d96b45eea",
+  "authorization": "User explicitly authorized serial Lean checks in this task instead of the paused compiler task.",
+  "full_inconsistency_verified": false,
+  "modules": [
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySlalomThinning.lean",
+      "sha256": "22e77ba07eaee37ca622586767c4d4ade97b5966a9769e3554184f4e6d8dd4c0",
+      "lean_verified": false
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahFiniteRefinement.lean",
+      "sha256": "6282e61c3e68dd07e5ebd08a9149dec9bf45029a7ee2cc99f0e0f4148c5dd59d",
+      "lean_verified": false
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySlalomLimit.lean",
+      "sha256": "c2f9e97abdaf7a054142462fac1a5dae99e015c590fbdb238339f76e72259fa3",
+      "lean_verified": false
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahSetCodes.lean",
+      "sha256": "8d248bc12ea7e2da6b4e68c98683f4191d5f78c3b87a43bc71c522e0ea775cc4",
+      "lean_verified": false
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahLocalStage.lean",
+      "sha256": "201f544ca7f62a9aa3537f62d955a36c73e8efe32979b7ec796fca389957a273",
+      "lean_verified": false
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahLocalFusion.lean",
+      "sha256": "36fe7b16202ea3e82a1c2e10ee8d2ef684028eca43cbfcfaf65a572638e5ed22",
+      "lean_verified": false
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahIndexedGenerators.lean",
+      "sha256": "a87bc612c88188e23dcee578bc59aa501dd760346600d0391c463961bb06dfb4",
+      "lean_verified": false
+    }
+  ],
+  "active_compiler": false,
+  "batch_finished": "2026-10-23T04:25Z",
+  "compiler_invocation": "check_with_mathlib.py -> shared check_module.py only; no raw Lean/Lake or alternate checker",
+  "cache": "/tmp/classicism-max-integrated-cache",
+  "additional_source_root": "/tmp/classicism-max-missing-sources",
+  "dependency_sources": "copies of already installed pinned Mathlib source; no downloads",
+  "coordination": "Current batch drained. New compiler runs held while shared runner global lock rollout is tested. Source repairs continue."
+}

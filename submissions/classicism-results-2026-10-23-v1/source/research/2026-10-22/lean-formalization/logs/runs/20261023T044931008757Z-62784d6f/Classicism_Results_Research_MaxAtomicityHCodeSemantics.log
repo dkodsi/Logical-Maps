@@ -1,0 +1,53 @@
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:234:20: warning: This simp argument is unused:
+  true_implies
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hX, truth_true, top_inf_eq, hx, compl_truth, sup_truth, inf_truth, iInf_truth, iSup_truth,
+    MinimalFor, imp_iff_not_or, not_true_eq_false, false_or]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Classicism.Meta.Research.MaxAtomicityHCodeSemantics.small_iff_embedding' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeSemantics.eval_crisp' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeSemantics.eval_crispRelation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeSemantics.eval_small' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeSemantics.eval_small_eq_top_iff_embedding' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeSemantics.eval_extensional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeSemantics.eval_rows' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeSemantics.minimalSubset_iff_wellFounded' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeSemantics.wellFoundedValue_eq_truth' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeSemantics.eval_wellFounded' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeSemantics.fillValue_eq_truth' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeSemantics.eval_fill' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeSemantics.eval_hCode' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeSemantics.eval_hCode_noncrisp' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeSemantics.eval_hCode_exact' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,114 @@
+Classicism.Research.Splitting.mask_coext: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.mask_collapses: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.mask_false: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.mask_identity: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.mask_injective_all: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.Splitting.mask_slots: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.mask_surjective_all: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.relational_injectivity_persistence_barcan: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.Splitting.relational_strong_sections_barcan: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.relational_surjectivity_persistence_barcan: Classicism ✓ [C⁻] (axioms: [propext,
+ Quot.sound])
+Classicism.Research.Splitting.slots_false: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.slots_true: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+#classicism_audit Classicism.Results.Research.SectionsRetractionsRelationalMasks: 12/12 theorems pass; 12 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.SectionsRetractionsRelationalMasks: 12/12 inside R
+Classicism.Results.Research.SectionsRetractionsRelationalMasks: 12 of 12 theorems derived
+
+[1/12] Classicism.Research.Splitting.mask_coext ✓ 64 ms
+[2/12] Classicism.Research.Splitting.mask_collapses ✓ 206 ms
+[3/12] Classicism.Research.Splitting.mask_false ✓ 13 ms
+[4/12] Classicism.Research.Splitting.mask_identity ✓ 86 ms
+[5/12] Classicism.Research.Splitting.mask_injective_all ✓ 170 ms
+[6/12] Classicism.Research.Splitting.mask_slots ✓ 0 ms
+[7/12] Classicism.Research.Splitting.mask_surjective_all ✓ 67 ms
+[8/12] Classicism.Research.Splitting.relational_injectivity_persistence_barcan ✓ 99 ms
+[9/12] Classicism.Research.Splitting.relational_strong_sections_barcan ✓ 93 ms
+[10/12] Classicism.Research.Splitting.relational_surjectivity_persistence_barcan ✓ 0 ms
+[11/12] Classicism.Research.Splitting.slots_false ✓ 0 ms
+[12/12] Classicism.Research.Splitting.slots_true ✓ 0 ms
+Classicism.Research.Splitting.relational_surjectivity_persistence_barcan ⟶ Classicism.Research.Splitting.relational_surjectivity_persistence_barcan.rule : ∀
+  (ν' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.Existence.quoted ν')
+      (Classicism.Meta.Term.imp
+        (Classicism.Research.Splitting.SurjectivityPersists.quoted
+          (Classicism.Meta.Ty.rel (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ ν' ⇒ Classicism.Meta.RTy.t))
+          (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ ν' ⇒ Classicism.Meta.RTy.t))
+        (Classicism.P.Barcan.quoted (Classicism.Meta.Ty.rel (ν' ⇒ Classicism.Meta.RTy.t)))))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.relational_surjectivity_persistence_barcan ⟶ Classicism.Research.Splitting.relational_surjectivity_persistence_barcan.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.Existence.listQuoted σs)
+      (Classicism.Meta.Term.imp
+        (Classicism.Research.Splitting.SurjectivityPersists.quoted
+          (Classicism.Meta.Ty.rel (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ σs ⇒* Classicism.Meta.RTy.t))
+          (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ σs ⇒* Classicism.Meta.RTy.t))
+        (Classicism.P.Barcan.quoted (Classicism.Meta.Ty.rel (σs ⇒* Classicism.Meta.RTy.t)))))
+Classicism.Research.Splitting.relational_strong_sections_barcan ⟶ Classicism.Research.Splitting.relational_strong_sections_barcan.rule : ∀
+  (ν' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.Existence.quoted ν')
+      (Classicism.Meta.Term.imp
+        (Classicism.Research.Splitting.StrongRightSplitting.quoted
+          (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ ν' ⇒ Classicism.Meta.RTy.t)
+          (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ ν' ⇒ Classicism.Meta.RTy.t))
+        (Classicism.P.Barcan.quoted (Classicism.Meta.Ty.rel (ν' ⇒ Classicism.Meta.RTy.t)))))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.relational_strong_sections_barcan ⟶ Classicism.Research.Splitting.relational_strong_sections_barcan.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.Existence.listQuoted σs)
+      (Classicism.Meta.Term.imp
+        (Classicism.Research.Splitting.StrongRightSplitting.quoted
+          (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ σs ⇒* Classicism.Meta.RTy.t)
+          (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ σs ⇒* Classicism.Meta.RTy.t))
+        (Classicism.P.Barcan.quoted (Classicism.Meta.Ty.rel (σs ⇒* Classicism.Meta.RTy.t)))))
+Classicism.Research.Splitting.relational_injectivity_persistence_barcan ⟶ Classicism.Research.Splitting.relational_injectivity_persistence_barcan.rule : ∀
+  (ν' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.Existence.quoted ν')
+      (Classicism.Meta.Term.imp
+        (Classicism.Research.Splitting.InjectivityPersists.quoted
+          (Classicism.Meta.Ty.rel (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ ν' ⇒ Classicism.Meta.RTy.t))
+          (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ ν' ⇒ Classicism.Meta.RTy.t))
+        (Classicism.P.Barcan.quoted (Classicism.Meta.Ty.rel (ν' ⇒ Classicism.Meta.RTy.t)))))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.relational_injectivity_persistence_barcan ⟶ Classicism.Research.Splitting.relational_injectivity_persistence_barcan.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.Existence.listQuoted σs)
+      (Classicism.Meta.Term.imp
+        (Classicism.Research.Splitting.InjectivityPersists.quoted
+          (Classicism.Meta.Ty.rel (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ σs ⇒* Classicism.Meta.RTy.t))
+          (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ σs ⇒* Classicism.Meta.RTy.t))
+        (Classicism.P.Barcan.quoted (Classicism.Meta.Ty.rel (σs ⇒* Classicism.Meta.RTy.t)))))
+Classicism.Research.Splitting.relational_surjectivity_persistence_barcan.listRule (σs : List Classicism.Meta.Ty) :
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.Existence.listQuoted σs)
+      (Classicism.Meta.Term.imp
+        (Classicism.Research.Splitting.SurjectivityPersists.quoted
+          (Classicism.Meta.Ty.rel (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ σs ⇒* Classicism.Meta.RTy.t))
+          (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ σs ⇒* Classicism.Meta.RTy.t))
+        (Classicism.P.Barcan.quoted (Classicism.Meta.Ty.rel (σs ⇒* Classicism.Meta.RTy.t)))))
+Classicism.Research.Splitting.relational_strong_sections_barcan.listRule (σs : List Classicism.Meta.Ty) :
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.Existence.listQuoted σs)
+      (Classicism.Meta.Term.imp
+        (Classicism.Research.Splitting.StrongRightSplitting.quoted
+          (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ σs ⇒* Classicism.Meta.RTy.t)
+          (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ σs ⇒* Classicism.Meta.RTy.t))
+        (Classicism.P.Barcan.quoted (Classicism.Meta.Ty.rel (σs ⇒* Classicism.Meta.RTy.t)))))
+Classicism.Research.Splitting.relational_injectivity_persistence_barcan.listRule (σs : List Classicism.Meta.Ty) :
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.Existence.listQuoted σs)
+      (Classicism.Meta.Term.imp
+        (Classicism.Research.Splitting.InjectivityPersists.quoted
+          (Classicism.Meta.Ty.rel (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ σs ⇒* Classicism.Meta.RTy.t))
+          (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ σs ⇒* Classicism.Meta.RTy.t))
+        (Classicism.P.Barcan.quoted (Classicism.Meta.Ty.rel (σs ⇒* Classicism.Meta.RTy.t)))))
+'Classicism.Research.Splitting.relational_surjectivity_persistence_barcan.listRule' depends on axioms: [propext,
+ Quot.sound]

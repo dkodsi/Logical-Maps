@@ -1,0 +1,82 @@
+{
+  "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "modules": [
+    "Cache.Main"
+  ],
+  "complete": true,
+  "checked": [
+    {
+      "module": "Cache.Cli",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "4f6c0823c652cc530cc27525e7c0f061645ef9ef26831b69c64d2fa42cbb4d7b"
+    },
+    {
+      "module": "Cache.Lean",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "3cc3e54c556fa34ded19fbd495274d9a4791c0ed642f2088cde12d1d7ee50039"
+    },
+    {
+      "module": "Batteries.Tactic.OpenPrivate",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "c344903c0cd25b635e0581ed72f738c6a5a9b5d317be41f2b44df8e3f03bb740"
+    },
+    {
+      "module": "Cache.IO",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "795c1cf77b77a2dfa0df729217f38aefd49e5c0cdbb9cbe5ddc3bfee8a8347fd"
+    },
+    {
+      "module": "Cache.Hashing",
+      "seconds": 3.93,
+      "exit_code": 0,
+      "fingerprint": "fb8ba1f66d326f56d6a104c2db030d7b74806fc245b32f26a681f82dd64b74d7",
+      "log": "logs/runs/20261023T030302557307Z/Cache_Hashing.log"
+    },
+    {
+      "module": "Cache.Infra",
+      "seconds": 0.2,
+      "exit_code": 0,
+      "fingerprint": "fb2ceb6bb2420704b8a880ebb2a07d771539ac00b801565c5d8ff36bc03c19d0",
+      "log": "logs/runs/20261023T030302557307Z/Cache_Infra.log"
+    },
+    {
+      "module": "Cache.Requests",
+      "seconds": 0.88,
+      "exit_code": 0,
+      "fingerprint": "3a71a553290e706f2cac1bad918d1daabc029c43f3a4f16493cc2a9365e1ccac",
+      "log": "logs/runs/20261023T030302557307Z/Cache_Requests.log"
+    },
+    {
+      "module": "Cache.Marker",
+      "seconds": 0.38,
+      "exit_code": 0,
+      "fingerprint": "bb11df279e82a9b1f1d9b91871781842a316ec6becb1a80df2c810701e325bfa",
+      "log": "logs/runs/20261023T030302557307Z/Cache_Marker.log"
+    },
+    {
+      "module": "Cache.Query",
+      "seconds": 0.36,
+      "exit_code": 0,
+      "fingerprint": "7c5df26a381cb23676891a83a94f1a1e307490d69dbcb6195cc096f36b35f107",
+      "log": "logs/runs/20261023T030302557307Z/Cache_Query.log"
+    },
+    {
+      "module": "Cache.Warning",
+      "seconds": 0.37,
+      "exit_code": 0,
+      "fingerprint": "025b8803e9c5606437d79c601fd122cbd828621bfda5f217f7b3f12ed4242bad",
+      "log": "logs/runs/20261023T030302557307Z/Cache_Warning.log"
+    },
+    {
+      "module": "Cache.Main",
+      "seconds": 0.6,
+      "exit_code": 0,
+      "fingerprint": "4190941aee3da5551f1e5f8cb5d72480fccb1a52e4713b997253f28251c5c951",
+      "log": "logs/runs/20261023T030302557307Z/Cache_Main.log"
+    }
+  ]
+}

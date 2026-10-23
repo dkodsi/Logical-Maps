@@ -1,0 +1,588 @@
+Classicism/Models/ColourCollapseBase.lean:36:20: error: don't know how to synthesize implicit argument `b`
+  @And.intro (rank ?m.24 ≤ rank ?m.24)
+    (Function.Surjective (g✝ ∘ f✝) ∧ ∀ (n : ℕ), colored ?m.24 n → colored ?m.24 ((g✝ ∘ f✝) n))
+    (Nat.le_trans hf.left hg.left)
+    ⟨Function.Surjective.comp hg.right.left hf.right.left, fun n hn => hg.right.right (f✝ n) (hf.right.right n hn)⟩
+context:
+i✝ j✝ k✝ : Stage
+f✝ g✝ : ℕ → ℕ
+hf : Arr f✝
+hg : Arr g✝
+⊢ Prop
+Classicism/Models/ColourCollapseBase.lean:36:20: error: don't know how to synthesize implicit argument `a`
+  @And.intro (rank ?m.24 ≤ rank ?m.24)
+    (Function.Surjective (g✝ ∘ f✝) ∧ ∀ (n : ℕ), colored ?m.24 n → colored ?m.24 ((g✝ ∘ f✝) n))
+    (Nat.le_trans hf.left hg.left)
+    ⟨Function.Surjective.comp hg.right.left hf.right.left, fun n hn => hg.right.right (f✝ n) (hf.right.right n hn)⟩
+context:
+i✝ j✝ k✝ : Stage
+f✝ g✝ : ℕ → ℕ
+hf : Arr f✝
+hg : Arr g✝
+⊢ Prop
+Classicism/Models/ColourCollapseBase.lean:36:20: error: don't know how to synthesize implicit argument `b`
+  @And.intro (Function.Surjective (g✝ ∘ f✝)) (∀ (n : ℕ), colored ?m.24 n → colored ?m.24 ((g✝ ∘ f✝) n))
+    (Function.Surjective.comp hg.right.left hf.right.left) fun n hn => hg.right.right (f✝ n) (hf.right.right n hn)
+context:
+i✝ j✝ k✝ : Stage
+f✝ g✝ : ℕ → ℕ
+hf : Arr f✝
+hg : Arr g✝
+⊢ Prop
+Classicism/Models/ColourCollapseBase.lean:37:16: error: don't know how to synthesize implicit argument `b`
+  @And.right (Function.Surjective g✝) (∀ (n : ℕ), colored ?m.24 n → colored ?m.24 (g✝ n)) hg.right (f✝ n)
+    (hf.right.right n hn)
+context:
+i✝ j✝ k✝ : Stage
+f✝ g✝ : ℕ → ℕ
+hf : Arr f✝
+hg : Arr g✝
+n : ℕ
+hn : colored ?m.24 n
+⊢ Prop
+Classicism/Models/ColourCollapseBase.lean:37:26: error: don't know how to synthesize implicit argument `b`
+  @And.right (Function.Surjective f✝) (∀ (n : ℕ), colored ?m.24 n → colored ?m.24 (f✝ n)) hf.right n hn
+context:
+i✝ j✝ k✝ : Stage
+f✝ g✝ : ℕ → ℕ
+hf : Arr f✝
+hg : Arr g✝
+n : ℕ
+hn : colored ?m.24 n
+⊢ Prop
+Classicism/Models/ColourCollapseBase.lean:37:26: error: don't know how to synthesize implicit argument `b`
+  @And.right (rank ?m.24 ≤ rank ?m.24) (Function.Surjective f✝ ∧ ∀ (n : ℕ), colored ?m.24 n → colored ?m.24 (f✝ n)) hf
+context:
+i✝ j✝ k✝ : Stage
+f✝ g✝ : ℕ → ℕ
+hf : Arr f✝
+hg : Arr g✝
+n : ℕ
+hn : colored ?m.24 n
+⊢ Prop
+Classicism/Models/ColourCollapseBase.lean:37:26: error: don't know how to synthesize implicit argument `a`
+  @And.right (rank ?m.24 ≤ rank ?m.24) (Function.Surjective f✝ ∧ ∀ (n : ℕ), colored ?m.24 n → colored ?m.24 (f✝ n)) hf
+context:
+i✝ j✝ k✝ : Stage
+f✝ g✝ : ℕ → ℕ
+hf : Arr f✝
+hg : Arr g✝
+n : ℕ
+hn : colored ?m.24 n
+⊢ Prop
+Classicism/Models/ColourCollapseBase.lean:37:16: error: don't know how to synthesize implicit argument `b`
+  @And.right (rank ?m.24 ≤ rank ?m.24) (Function.Surjective g✝ ∧ ∀ (n : ℕ), colored ?m.24 n → colored ?m.24 (g✝ n)) hg
+context:
+i✝ j✝ k✝ : Stage
+f✝ g✝ : ℕ → ℕ
+hf : Arr f✝
+hg : Arr g✝
+n : ℕ
+hn : colored ?m.24 n
+⊢ Prop
+Classicism/Models/ColourCollapseBase.lean:37:16: error: don't know how to synthesize implicit argument `a`
+  @And.right (rank ?m.24 ≤ rank ?m.24) (Function.Surjective g✝ ∧ ∀ (n : ℕ), colored ?m.24 n → colored ?m.24 (g✝ n)) hg
+context:
+i✝ j✝ k✝ : Stage
+f✝ g✝ : ℕ → ℕ
+hf : Arr f✝
+hg : Arr g✝
+n : ℕ
+hn : colored ?m.24 n
+⊢ Prop
+Classicism/Models/ColourCollapseBase.lean:37:10: error(lean.inferBinderTypeFailed): Failed to infer type of binder `hn`
+Classicism/Models/ColourCollapseBase.lean:36:57: error: don't know how to synthesize implicit argument `b`
+  @And.left (Function.Surjective f✝) (∀ (n : ℕ), colored ?m.24 n → colored ?m.24 (f✝ n)) hf.right
+context:
+i✝ j✝ k✝ : Stage
+f✝ g✝ : ℕ → ℕ
+hf : Arr f✝
+hg : Arr g✝
+⊢ Prop
+Classicism/Models/ColourCollapseBase.lean:36:57: error: don't know how to synthesize implicit argument `b`
+  @And.right (rank ?m.24 ≤ rank ?m.24) (Function.Surjective f✝ ∧ ∀ (n : ℕ), colored ?m.24 n → colored ?m.24 (f✝ n)) hf
+context:
+i✝ j✝ k✝ : Stage
+f✝ g✝ : ℕ → ℕ
+hf : Arr f✝
+hg : Arr g✝
+⊢ Prop
+Classicism/Models/ColourCollapseBase.lean:36:57: error: don't know how to synthesize implicit argument `a`
+  @And.right (rank ?m.24 ≤ rank ?m.24) (Function.Surjective f✝ ∧ ∀ (n : ℕ), colored ?m.24 n → colored ?m.24 (f✝ n)) hf
+context:
+i✝ j✝ k✝ : Stage
+f✝ g✝ : ℕ → ℕ
+hf : Arr f✝
+hg : Arr g✝
+⊢ Prop
+Classicism/Models/ColourCollapseBase.lean:36:45: error: don't know how to synthesize implicit argument `b`
+  @And.left (Function.Surjective g✝) (∀ (n : ℕ), colored ?m.24 n → colored ?m.24 (g✝ n)) hg.right
+context:
+i✝ j✝ k✝ : Stage
+f✝ g✝ : ℕ → ℕ
+hf : Arr f✝
+hg : Arr g✝
+⊢ Prop
+Classicism/Models/ColourCollapseBase.lean:36:45: error: don't know how to synthesize implicit argument `b`
+  @And.right (rank ?m.24 ≤ rank ?m.24) (Function.Surjective g✝ ∧ ∀ (n : ℕ), colored ?m.24 n → colored ?m.24 (g✝ n)) hg
+context:
+i✝ j✝ k✝ : Stage
+f✝ g✝ : ℕ → ℕ
+hf : Arr f✝
+hg : Arr g✝
+⊢ Prop
+Classicism/Models/ColourCollapseBase.lean:36:45: error: don't know how to synthesize implicit argument `a`
+  @And.right (rank ?m.24 ≤ rank ?m.24) (Function.Surjective g✝ ∧ ∀ (n : ℕ), colored ?m.24 n → colored ?m.24 (g✝ n)) hg
+context:
+i✝ j✝ k✝ : Stage
+f✝ g✝ : ℕ → ℕ
+hf : Arr f✝
+hg : Arr g✝
+⊢ Prop
+Classicism/Models/ColourCollapseBase.lean:36:21: error: don't know how to synthesize implicit argument `k`
+  @Nat.le_trans (rank ?m.24) (rank ?m.24) (rank ?m.24) hf.left hg.left
+context:
+i✝ j✝ k✝ : Stage
+f✝ g✝ : ℕ → ℕ
+hf : Arr f✝
+hg : Arr g✝
+⊢ ℕ
+Classicism/Models/ColourCollapseBase.lean:36:21: error: don't know how to synthesize implicit argument `m`
+  @Nat.le_trans (rank ?m.24) (rank ?m.24) (rank ?m.24) hf.left hg.left
+context:
+i✝ j✝ k✝ : Stage
+f✝ g✝ : ℕ → ℕ
+hf : Arr f✝
+hg : Arr g✝
+⊢ ℕ
+Classicism/Models/ColourCollapseBase.lean:36:21: error: don't know how to synthesize implicit argument `n`
+  @Nat.le_trans (rank ?m.24) (rank ?m.24) (rank ?m.24) hf.left hg.left
+context:
+i✝ j✝ k✝ : Stage
+f✝ g✝ : ℕ → ℕ
+hf : Arr f✝
+hg : Arr g✝
+⊢ ℕ
+Classicism/Models/ColourCollapseBase.lean:36:39: error: don't know how to synthesize implicit argument `b`
+  @And.left (rank ?m.24 ≤ rank ?m.24) (Function.Surjective g✝ ∧ ∀ (n : ℕ), colored ?m.24 n → colored ?m.24 (g✝ n)) hg
+context:
+i✝ j✝ k✝ : Stage
+f✝ g✝ : ℕ → ℕ
+hf : Arr f✝
+hg : Arr g✝
+⊢ Prop
+Classicism/Models/ColourCollapseBase.lean:36:39: error: don't know how to synthesize implicit argument `a`
+  @And.left (rank ?m.24 ≤ rank ?m.24) (Function.Surjective g✝ ∧ ∀ (n : ℕ), colored ?m.24 n → colored ?m.24 (g✝ n)) hg
+context:
+i✝ j✝ k✝ : Stage
+f✝ g✝ : ℕ → ℕ
+hf : Arr f✝
+hg : Arr g✝
+⊢ Prop
+Classicism/Models/ColourCollapseBase.lean:36:34: error: don't know how to synthesize implicit argument `b`
+  @And.left (rank ?m.24 ≤ rank ?m.24) (Function.Surjective f✝ ∧ ∀ (n : ℕ), colored ?m.24 n → colored ?m.24 (f✝ n)) hf
+context:
+i✝ j✝ k✝ : Stage
+f✝ g✝ : ℕ → ℕ
+hf : Arr f✝
+hg : Arr g✝
+⊢ Prop
+Classicism/Models/ColourCollapseBase.lean:36:34: error: don't know how to synthesize implicit argument `a`
+  @And.left (rank ?m.24 ≤ rank ?m.24) (Function.Surjective f✝ ∧ ∀ (n : ℕ), colored ?m.24 n → colored ?m.24 (f✝ n)) hf
+context:
+i✝ j✝ k✝ : Stage
+f✝ g✝ : ℕ → ℕ
+hf : Arr f✝
+hg : Arr g✝
+⊢ Prop
+Classicism/Models/ColourCollapseBase.lean:36:14: error(lean.inferBinderTypeFailed): Failed to infer type of binder `hg`
+Classicism/Models/ColourCollapseBase.lean:36:11: error(lean.inferBinderTypeFailed): Failed to infer type of binder `hf`
+Classicism/Models/ColourCollapseBase.lean:35:14: error: don't know how to synthesize implicit argument `b`
+  @And.intro (rank ?m.24 ≤ rank ?m.24) (Function.Surjective id ∧ ∀ (n : ℕ), colored ?m.24 n → colored ?m.24 (id n))
+    (Nat.le_refl (rank ?m.24)) ⟨Function.surjective_id, fun x h => h⟩
+context:
+x✝ : Stage
+⊢ Prop
+Classicism/Models/ColourCollapseBase.lean:35:14: error: don't know how to synthesize implicit argument `a`
+  @And.intro (rank ?m.24 ≤ rank ?m.24) (Function.Surjective id ∧ ∀ (n : ℕ), colored ?m.24 n → colored ?m.24 (id n))
+    (Nat.le_refl (rank ?m.24)) ⟨Function.surjective_id, fun x h => h⟩
+context:
+x✝ : Stage
+⊢ Prop
+Classicism/Models/ColourCollapseBase.lean:35:14: error: don't know how to synthesize implicit argument `b`
+  @And.intro (Function.Surjective id) (∀ (n : ℕ), colored ?m.24 n → colored ?m.24 (id n)) Function.surjective_id
+    fun x h => h
+context:
+x✝ : Stage
+⊢ Prop
+Classicism/Models/ColourCollapseBase.lean:35:60: error(lean.inferBinderTypeFailed): Failed to infer type of binder `h`
+Classicism/Models/ColourCollapseBase.lean:35:27: error: don't know how to synthesize placeholder for argument `n`
+context:
+x✝ : Stage
+⊢ ℕ
+Classicism/Models/ColourCollapseBase.lean:34:9: error: don't know how to synthesize implicit argument `V`
+  @Arr ?m.24 ?m.24
+context:
+i✝ j✝ : Stage
+⊢ Stage
+Classicism/Models/ColourCollapseBase.lean:34:9: error: don't know how to synthesize implicit argument `W`
+  @Arr ?m.24 ?m.24
+context:
+i✝ j✝ : Stage
+⊢ Stage
+Classicism/Models/ColourCollapseBase.lean:39:21: error: Type mismatch
+  Stage.A
+has type
+  Stage
+but is expected to have type
+  cat.Ob
+Classicism/Models/ColourCollapseBase.lean:40:21: error: Type mismatch
+  Stage.B
+has type
+  Stage
+but is expected to have type
+  cat.Ob
+Classicism/Models/ColourCollapseBase.lean:41:21: error: Type mismatch
+  Stage.C
+has type
+  Stage
+but is expected to have type
+  cat.Ob
+Classicism/Models/ColourCollapseBase.lean:44:55: error: Application type mismatch: The argument
+  W
+has type
+  cat.Ob
+but is expected to have type
+  Stage
+in the application
+  colored W
+Classicism/Models/ColourCollapseBase.lean:44:83: error: Application type mismatch: The argument
+  W
+has type
+  cat.Ob
+but is expected to have type
+  Stage
+in the application
+  colored W
+Classicism/Models/ColourCollapseBase.lean:49:25: error: Application type mismatch: The argument
+  W
+has type
+  cat.Ob
+but is expected to have type
+  Stage
+in the application
+  colored W
+Classicism/Models/ColourCollapseBase.lean:49:48: error: Application type mismatch: The argument
+  W
+has type
+  cat.Ob
+but is expected to have type
+  Stage
+in the application
+  colored W
+Classicism/Models/ColourCollapseBase.lean:52:19: error: Application type mismatch: The argument
+  W
+has type
+  cat.Ob
+but is expected to have type
+  Stage
+in the application
+  colored W
+Classicism/Models/ColourCollapseBase.lean:52:46: error: Application type mismatch: The argument
+  W
+has type
+  cat.Ob
+but is expected to have type
+  Stage
+in the application
+  colored W
+Classicism/Models/ColourCollapseBase.lean:56:4: error: Invalid `⟨...⟩` notation: The expected type `cat.3 ⇑e.symm` is not an inductive type
+
+Note: This notation can only be used when the expected type is an inductive type with a single constructor
+Classicism/Models/ColourCollapseBase.lean:68:11: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat (cat.X x✝) 0
+numerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is
+  cat.X x✝
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Classicism/Models/ColourCollapseBase.lean:72:49: error: Type mismatch
+  (base A).model
+has type
+  Premodel Signature.pure (base A).F.Ob
+but is expected to have type
+  Premodel Signature.pure cat.Ob
+Classicism/Models/ColourCollapseBase.lean:74:35: error: Type mismatch
+  SymBase.model_isModel (base A)
+has type
+  ∀ (h : (base A).model.W₀ ⟶ ?m.6) (t : Term Signature.pure ?m.4 ?m.5) (g : IEnv ((base A).model.Dom ?m.6) ?m.4),
+    (base A).model.sem h t g ∈ Set.range ((base A).model.Incl ?m.5 ?m.6)
+but is expected to have type
+  ∀ (h : model.W₀ ⟶ W✝) (t : Term Signature.pure Γ✝ σ✝) (g : IEnv (model.Dom W✝) Γ✝),
+    model.sem h t g ∈ Set.range (model.Incl σ✝ W✝)
+Classicism/Models/ColourCollapseBase.lean:78:56: error: Type mismatch
+  h
+has type
+  x✝ ∈ (base W).J.mem x✝¹
+but is expected to have type
+  x✝.Finite
+Classicism/Models/ColourCollapseBase.lean:78:61: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression
+  k.property
+has type `cat.3 ↑k` which does not have the necessary form.
+Classicism/Models/ColourCollapseBase.lean:81:16: error: Application type mismatch: The argument
+  h
+has type
+  A ⟶ W
+but is expected to have type
+  model.W₀ ⟶ ?m.7
+in the application
+  model.Holds h
+Classicism/Models/ColourCollapseBase.lean:86:21: error: Application type mismatch: The argument
+  𝟙 A
+has type
+  A ⟶ A
+but is expected to have type
+  model.W₀ ⟶ model.W₀
+in the application
+  model.Holds (𝟙 A)
+Classicism/Models/ColourCollapseBase.lean:92:2: error: Invalid `⟨...⟩` notation: The expected type `cat.3 id` is not an inductive type
+
+Note: This notation can only be used when the expected type is an inductive type with a single constructor
+Classicism/Models/ColourCollapseBase.lean:103:35: error: Application type mismatch: The argument
+  collapseFn
+has type
+  ℕ → ℕ
+but is expected to have type
+  cat.X B → cat.X C
+in the application
+  FunCat.arr collapseFn
+Classicism/Models/ColourCollapseBase.lean:110:2: error: Invalid `⟨...⟩` notation: The expected type `cat.3 fun n => n / 2` is not an inductive type
+
+Note: This notation can only be used when the expected type is an inductive type with a single constructor
+Classicism/Models/ColourCollapseBase.lean:109:42: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HDiv (cat.X C) ℕ (cat.X C)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Classicism/Models/ColourCollapseBase.lean:115:37: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat (cat.X C) 0
+numerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is
+  cat.X C
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Classicism/Models/ColourCollapseBase.lean:115:41: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat (cat.X C) 0
+numerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is
+  cat.X C
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Classicism/Models/ColourCollapseBase.lean:116:36: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat (cat.X C) 1
+numerals are polymorphic in Lean, but the numeral `1` cannot be used in a context where the expected type is
+  cat.X C
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Classicism/Models/ColourCollapseBase.lean:116:40: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat (cat.X C) 0
+numerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is
+  cat.X C
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Classicism/Models/ColourCollapseBase.lean:126:44: error: overloaded, errors 
+  126:49 Application type mismatch: The argument
+    W
+  has type
+    cat.Ob
+  but is expected to have type
+    Stage
+  in the application
+    rank W
+  
+  126:49 Application type mismatch: The argument
+    W
+  has type
+    cat.Ob
+  but is expected to have type
+    Stage
+  in the application
+    rank W
+Classicism/Models/ColourCollapseBase.lean:128:27: error: Application type mismatch: The argument
+  W
+has type
+  cat.Ob
+but is expected to have type
+  Stage
+in the application
+  colored W
+Classicism/Models/ColourCollapseBase.lean:128:41: error: Application type mismatch: The argument
+  V
+has type
+  cat.Ob
+but is expected to have type
+  Stage
+in the application
+  colored V
+Classicism/Models/ColourCollapseBase.lean:129:38: error: Application type mismatch: The argument
+  n
+has type
+  ℕ
+but is expected to have type
+  cat.X W
+in the application
+  FunCat.fn h n
+Classicism/Models/ColourCollapseBase.lean:129:42: error: Type mismatch
+  f n
+has type
+  ℕ
+but is expected to have type
+  cat.X V
+Classicism/Models/ColourCollapseBase.lean:135:60: error: Application type mismatch: The argument
+  W
+has type
+  cat.Ob
+but is expected to have type
+  Stage
+in the application
+  tail W
+Classicism/Models/ColourCollapseBase.lean:138:4: error: Tactic `cases` failed: major premise type is not an inductive type
+  cat.1
+
+Explanation: the `cases` tactic is for constructor-based reasoning as well as for applying custom cases principles with a 'using' clause or a registered '@[cases_eliminator]' theorem. The above type neither is an inductive type nor has a registered theorem.
+
+W V : cat.Ob
+hWV : sorry
+D : Set ℕ
+hD : D.Finite
+f : ℕ → ℕ
+hc : ∀ n ∈ D, colored sorry n → colored sorry (f n)
+b : ℕ
+hb : b ∈ upperBounds D
+N : ℕ := b + 2
+hN : 2 ≤ N
+hbound : ∀ n ∈ D, n < N
+q : ℕ → ℕ := fun n => if n ∈ D then f n else tail sorry N n
+y : ℕ
+⊢ ∃ a, q a = y
+Classicism/Models/ColourCollapseBase.lean:151:29: error: Application type mismatch: The argument
+  W
+has type
+  cat.Ob
+but is expected to have type
+  Stage
+in the application
+  colored W
+Classicism/Models/ColourCollapseBase.lean:151:43: error: Application type mismatch: The argument
+  V
+has type
+  cat.Ob
+but is expected to have type
+  Stage
+in the application
+  colored V
+Classicism/Models/ColourCollapseBase.lean:156:6: error: Tactic `cases` failed: major premise type is not an inductive type
+  cat.1
+
+Explanation: the `cases` tactic is for constructor-based reasoning as well as for applying custom cases principles with a 'using' clause or a registered '@[cases_eliminator]' theorem. The above type neither is an inductive type nor has a registered theorem.
+
+case neg
+W V : cat.Ob
+hWV : sorry
+D : Set ℕ
+hD : D.Finite
+f : ℕ → ℕ
+hc : ∀ n ∈ D, colored sorry n → colored sorry (f n)
+b : ℕ
+hb : b ∈ upperBounds D
+N : ℕ := b + 2
+hN : 2 ≤ N
+hbound : ∀ n ∈ D, n < N
+q : ℕ → ℕ := fun n => if n ∈ D then f n else tail sorry N n
+hsurj : Function.Surjective q
+n : ℕ
+hn : colored sorry n
+hd : n ∉ D
+⊢ colored sorry (tail sorry N n)
+Classicism/Models/ColourCollapseBase.lean:157:20: error: Application type mismatch: The argument
+  q
+has type
+  ℕ → ℕ
+but is expected to have type
+  cat.X W → cat.X V
+in the application
+  FunCat.arr q
+Classicism/Models/ColourCollapseBase.lean:157:56: error: unsolved goals
+W V : cat.Ob
+hWV : sorry
+D : Set ℕ
+hD : D.Finite
+f : ℕ → ℕ
+hc : ∀ n ∈ D, colored sorry n → colored sorry (f n)
+b : ℕ
+hb : b ∈ upperBounds D
+N : ℕ := b + 2
+hN : 2 ≤ N
+hbound : ∀ n ∈ D, n < N
+q : ℕ → ℕ := fun n => if n ∈ D then f n else tail sorry N n
+hsurj : Function.Surjective q
+hcolor : ∀ (n : ℕ), colored sorry n → colored sorry (q n)
+n : ℕ
+hn : n ∈ D
+⊢ sorry ()
+Classicism/Models/ColourCollapseBase.lean:157:65: warning: This simp argument is unused:
+  q
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hn]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Models/ColourCollapseBase.lean:157:68: warning: This simp argument is unused:
+  hn
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [q]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Models/ColourCollapseBase.lean:162:58: error: Application type mismatch: The argument
+  S
+has type
+  Set ℕ
+but is expected to have type
+  Set (cat.De.obj ?m.9)
+in the application
+  AgreeOn cat.De S
+Classicism/Models/ColourCollapseBase.lean:163:39: error: Application type mismatch: The argument
+  x
+has type
+  ℕ
+but is expected to have type
+  cat.X A
+in the application
+  FunCat.fn u x
+Classicism/Models/ColourCollapseBase.lean:163:43: error: Type mismatch
+  x
+has type
+  ℕ
+but is expected to have type
+  cat.X A
+Classicism/Models/ColourCollapseBase.lean:164:21: error: Application type mismatch: The argument
+  M
+has type
+  Set ℕ
+but is expected to have type
+  Set (cat.De.obj ?m.23)
+in the application
+  AgreeOn cat.De M
+Classicism/Models/ColourCollapseBase.lean:166:71: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression
+  h.property
+has type `cat.3 ↑h` which does not have the necessary form.
+Classicism/Models/ColourCollapseBase.lean:164:37: error: unsolved goals
+V : cat.Ob
+h h' : A ⟶ V
+S M : Set ℕ
+hS : S.Finite
+hM : M.Finite
+hag : AgreeOn cat.De sorry h h'
+⊢ ∃ u, (∀ x ∈ S, sorry) ∧ AgreeOn cat.De sorry (u ≫ h) h'

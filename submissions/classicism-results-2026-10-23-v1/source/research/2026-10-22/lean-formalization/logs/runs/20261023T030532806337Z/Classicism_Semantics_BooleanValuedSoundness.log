@@ -1,0 +1,26 @@
+Classicism/Semantics/BooleanValuedSoundness.lean:49:16: error: unsolved goals
+case cons
+Sig : Signature
+B : Type
+inst✝ : CompleteBooleanAlgebra B
+I : Interpretation Sig B
+Γ : Ctx
+σ : Ty
+x : Dom I.E B σ
+env : IEnv (Dom I.E B) Γ
+p : Formula Sig Γ
+Δ : List (Formula Sig Γ)
+ih : contextValue I (Hyps.weaken Δ) (IEnv.cons x env) = contextValue I Δ env
+⊢ eval I p env ⊓ contextValue I Δ env = contextValue I (p :: Δ) env
+Classicism/Semantics/BooleanValuedSoundness.lean:65:32: error: unsolved goals
+B : Type
+inst✝ : CompleteBooleanAlgebra B
+a b c : B
+h : a ≤ bᶜ ⊔ c
+⊢ (bᶜ ⊔ c) ⊓ b = (bᶜ ⊔ c ⊓ b) ⊓ (b ⊔ c ⊓ b)
+Classicism/Semantics/BooleanValuedSoundness.lean:188:32: error: Type mismatch
+  le_iSup ?m.79 x
+has type
+  ?m.79 x ≤ iSup ?m.79
+but is expected to have type
+  crisp x x ≤ ⨆ y, crisp y y

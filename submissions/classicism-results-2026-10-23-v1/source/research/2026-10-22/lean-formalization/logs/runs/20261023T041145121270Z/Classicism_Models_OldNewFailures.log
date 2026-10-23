@@ -1,0 +1,21 @@
+Classicism/Models/OldNewFailures.lean:26:63: error: unsolved goals
+⊢ (∀ (a : model.Dom model.W₀ (Ty.rel et)),
+      ∃ a_1,
+        (∀ {V : cat.Ob} (k : model.W₀ ⟶ V) (a : model.Dom V (Ty.rel et)),
+            (∀ (x : Args model.inner et V),
+                ⟨V, (x, k)⟩ ∈ model.incl et model.W₀ a_1 →
+                  ∀ (U : cat.Ob) (k : V ⟶ U), ⟨U, (Args.map model.inner et k x, k)⟩ ∈ model.incl et V a) →
+              ∀ {V_1 : cat.Ob} (k_1 : V ⟶ V_1) (x : Args model.inner et V_1),
+                ⟨V_1, (x, k ≫ k_1)⟩ ∈ model.incl et model.W₀ a_1 → ⟨V_1, (x, k_1)⟩ ∈ model.incl et V a) ∧
+          ∀ (x : Args model.inner et model.W₀),
+            ⟨model.W₀, (x, 𝟙 model.W₀)⟩ ∈ model.incl et model.W₀ a ↔
+              ⟨model.W₀, (x, 𝟙 model.W₀)⟩ ∈ model.incl et model.W₀ a_1) ↔
+    ∀ (X : RelDom E et),
+      ∃ Y,
+        (∀ {V : cat.Ob} (k : E ⟶ V) (Z : RelDom V et),
+            (∀ (a : Tup et V),
+                ⟨V, (a, k)⟩ ∈ model.incl et E Y →
+                  ∀ {U : cat.Ob} (j : V ⟶ U), ⟨U, (Args.map model.inner et j a, j)⟩ ∈ model.incl et V Z) →
+              ∀ {U : cat.Ob} (j : V ⟶ U) (a : Tup et U),
+                ⟨U, (a, k ≫ j)⟩ ∈ model.incl et E Y → ⟨U, (a, j)⟩ ∈ model.incl et V Z) ∧
+          ∀ (a : Tup et E), ⟨E, (a, 𝟙 E)⟩ ∈ model.incl et E X ↔ ⟨E, (a, 𝟙 E)⟩ ∈ model.incl et E Y

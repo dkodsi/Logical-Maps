@@ -1,0 +1,12 @@
+import Classicism.Results.Research.FregeArithmeticVocabulary
+import Classicism.Results.Research.CrossBaseArithmeticCertificates
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Translate
+
+#classicism_audit Classicism.Results.Research.FregeArithmeticVocabulary
+#classicism_types_audit Classicism.Results.Research.FregeArithmeticVocabulary
+#classicism_derive_audit Classicism.Results.Research.FregeArithmeticVocabulary
+
+#print axioms Classicism.Research.FregeArithmeticVocabulary.sum_cross_base.derivable
+#print axioms Classicism.Research.FregeArithmeticVocabulary.prod_cross_base.derivable

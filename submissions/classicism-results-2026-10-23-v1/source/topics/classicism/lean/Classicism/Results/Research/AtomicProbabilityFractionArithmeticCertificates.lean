@@ -1,0 +1,26 @@
+import Classicism.Results.Research.AtomicProbabilityFractionArithmetic
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Schema
+
+#classicism_audit Classicism.Results.Research.AtomicProbabilityFractionArithmetic
+#classicism_types_audit Classicism.Results.Research.AtomicProbabilityFractionArithmetic
+
+#classicism_derive Classicism.Research.ProbabilityFractions.sum_valid
+  Classicism.Research.ProbabilityFractions.product_valid
+  Classicism.Research.ProbabilityFractions.product_respects
+  Classicism.Research.ProbabilityFractions.sum_respects
+  Classicism.Research.ProbabilityFractions.fractionAdd_total
+  Classicism.Research.ProbabilityFractions.fractionMul_total
+  Classicism.Research.ProbabilityFractions.fractionAdd_unique
+  Classicism.Research.ProbabilityFractions.fractionMul_unique
+  Classicism.Research.ProbabilityFractions.qplus_supported
+  Classicism.Research.ProbabilityFractions.qtimes_supported
+  Classicism.Research.ProbabilityFractions.qplus_selected
+  Classicism.Research.ProbabilityFractions.qtimes_selected
+  Classicism.Research.ProbabilityFractions.qplus_in_field
+  Classicism.Research.ProbabilityFractions.qtimes_in_field
+  Classicism.Research.ProbabilityFractions.qplus_codes
+  Classicism.Research.ProbabilityFractions.qtimes_codes
+
+#print axioms Classicism.Research.ProbabilityFractions.qtimes_codes.derivable

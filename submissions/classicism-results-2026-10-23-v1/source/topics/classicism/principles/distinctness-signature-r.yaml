@@ -1,0 +1,32 @@
+id: distinctness-signature-r
+name: Maximalism (signature Σ)
+category: signature
+statement: >-
+  The Maximalism schema for the fixed nonlogical signature Σ: every closed identity of its language not
+  provable in C(Σ) is false.
+formal: $A\ne B\quad(A=B\text{ closed in }\mathcal L(\Sigma);\ C(\Sigma)\nvdash A=B)$
+date: '2026-09-17'
+sources:
+- Andrew Bacon and Cian Dorr, Classicism, draft of 16 May 2023, §2.5, pp. 37–39.
+source_names:
+- Classicism
+references:
+- paper: bacon-dorr-classicism
+  role: formulation
+  locator: §2.5, pp. 37–39
+notes: >-
+  Until 8 October 2026 this was Distinctness Maximalism (signature Σ), with Possibility Maximalism (signature Σ) a separate principle, provably equivalent; they were unified at Cian Dorr's direction.
+aliases:
+- Maximalist Classicism (R, Σ)
+variants:
+- id: possibility
+  lean:
+    ref: (Classicism.Meta.AxiomSet.possibilityC _)
+    equivalence_ref: Classicism.Map.distinctness_signature_r.possibility
+    status: verified
+  name: Possibility form
+  statement: Every closed sentence of the language of Σ consistent with C(Σ) is possible.
+  formal: $\Diamond P\quad(P\text{ closed in }\mathcal L(\Sigma);\ C(\Sigma)+P\text{ consistent})$
+  equivalence: >-
+    Possibility to Distinctness: if a closed identity $A=B$ is not a theorem of C(Σ), its negation is consistent with C(Σ), so the possibility form gives $\Diamond(A\ne B)$; by NI, $A=B$ would make this impossible, so $A\ne B$. Distinctness to Possibility: if $P$ is consistent with C(Σ), the closed identity $\neg P=\top$ is not a theorem of C(Σ), so the distinctness form gives $\neg P\ne\top$, equivalently $\Diamond P$.
+lean_def: (Classicism.Meta.AxiomSet.distinctnessC _)

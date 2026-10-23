@@ -1,0 +1,18 @@
+import Classicism.Results.Research.SectionsRetractionsRelationalMasksCertificates
+import Classicism.Results.Research.SectionsRetractionsPersistence
+
+#classicism_audit Classicism.Results.Research.SectionsRetractionsPersistence
+#classicism_types_audit Classicism.Results.Research.SectionsRetractionsPersistence
+set_option maxHeartbeats 0 in
+#classicism_derive_audit Classicism.Results.Research.SectionsRetractionsPersistence
+#classicism_certify Classicism.Research.Splitting.surjectivity_of_relational_barcan
+  Classicism.Research.Splitting.relational_barcan_of_surjectivity
+  Classicism.Research.Splitting.relational_barcan_of_strong_sections
+  Classicism.Research.Splitting.strong_sections_of_sections_relational_barcan
+#classicism_entails Classicism.Research.Splitting.surjectivity_of_relational_barcan
+  Classicism.Research.Splitting.relational_barcan_of_surjectivity
+  Classicism.Research.Splitting.relational_barcan_of_strong_sections
+  Classicism.Research.Splitting.strong_sections_of_sections_relational_barcan
+  Classicism.Research.Splitting.strong_sections_sections
+#check Classicism.Research.Splitting.relational_barcan_of_surjectivity.listEntails
+#check Classicism.Research.Splitting.relational_barcan_of_strong_sections.listEntails

@@ -1,0 +1,21 @@
+import Classicism.Results.Research.AtomicProbabilityConcreteRealInverse
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Schema
+
+#classicism_audit Classicism.Results.Research.AtomicProbabilityConcreteRealInverse
+#classicism_types_audit Classicism.Results.Research.AtomicProbabilityConcreteRealInverse
+
+#classicism_derive Classicism.Research.ProbabilityConcreteReals.realNeg_below
+  Classicism.Research.ProbabilityConcreteReals.realNeg_supported
+  Classicism.Research.ProbabilityConcreteReals.negative_member_not_neg
+  Classicism.Research.ProbabilityConcreteReals.realNeg_in_field
+  Classicism.Research.ProbabilityConcreteReals.realNeg_antitone
+  Classicism.Research.ProbabilityConcreteReals.realNeg_involution
+  Classicism.Research.ProbabilityConcreteReals.realAdd_neg
+  Classicism.Research.ProbabilityConcreteReals.realSub_in_field
+  Classicism.Research.ProbabilityConcreteReals.realSub_self
+  Classicism.Research.ProbabilityConcreteReals.realAdd_cancel_right
+  Classicism.Research.ProbabilityConcreteReals.realAdd_le_iff_le_sub
+
+#print axioms Classicism.Research.ProbabilityConcreteReals.realAdd_le_iff_le_sub.derivable

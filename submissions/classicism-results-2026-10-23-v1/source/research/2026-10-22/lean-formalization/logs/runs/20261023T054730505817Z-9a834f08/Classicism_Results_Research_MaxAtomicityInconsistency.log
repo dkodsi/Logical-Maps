@@ -1,0 +1,14 @@
+Classicism.Meta.Research.MaxAtomicityInconsistency.maximalism_atomicity_inconsistent :
+  ¬(AxiomSet.maximalist ∪ P.AtomicityT.schema).Consistent
+'Classicism.Meta.Research.MaxAtomicityInconsistency.canonical_adequacy' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityInconsistency.F_closedTypes' depends on axioms: [propext]
+'Classicism.Meta.Research.MaxAtomicityInconsistency.F_pure' depends on axioms: [propext]
+'Classicism.Meta.Research.MaxAtomicityInconsistency.F_splits' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityInconsistency.split_identity_not_C_theorem' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityInconsistency.maximalism_atomicity_inconsistent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

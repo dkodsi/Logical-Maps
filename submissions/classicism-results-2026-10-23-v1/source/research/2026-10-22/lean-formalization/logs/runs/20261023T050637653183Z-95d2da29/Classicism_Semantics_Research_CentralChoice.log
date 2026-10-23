@@ -1,0 +1,15 @@
+Classicism/Semantics/Research/CentralChoice.lean:40:57: error: unsolved goals
+C : Type
+inst✝ : SmallCategory C
+Q : Control C
+De : C ⥤ Type
+Sig : Signature
+W₀ : C
+hne : ∀ (W : C), Nonempty (De.obj W)
+I : (c : Sig.Const) → (Domain Q De (Sig.typeOf c)).obj W₀
+ρ : RTy
+W : C
+E : Set (Args (model Q De W₀ hne I).inner ρ W)
+E' : (V : C) → Set (Args (Domain Q De) ρ V) := fun V => {a | ∃ (h : V = W), h ▸ a ∈ E}
+a : Args (Domain Q De) ρ W
+⊢ a ∈ E ↔ a ∈ E

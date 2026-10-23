@@ -1,0 +1,70 @@
+Classicism/Results/Research/MaxAtomicityRegularOpenCode.lean:216:4: error: Tactic `apply` failed: could not unify the conclusion of `(rep_point c hX a).mp`
+  a ∈ S
+with the goal
+  b ∈ S
+
+Note: The full type of `(rep_point c hX a).mp` is
+  R (c.point a) X → a ∈ S
+
+case mp
+D : Type u_1
+α : Type u_2
+inst✝ : Preorder α
+R : D → D → Prop
+P O : D
+c : PosetCoding D α R P O
+S : Set α
+X : D
+hX : c.Represents S X
+h : Ordinary.Lower R P O X
+a b : α
+hab : b ≤ a
+hb : a ∈ S
+⊢ b ∈ S
+Classicism/Results/Research/MaxAtomicityRegularOpenCode.lean:271:6: error: Type mismatch
+  hY
+has type
+  c.Represents (↑S)ᶜ Y
+but is expected to have type
+  c.Represents (↑Sᶜ) Y
+Classicism/Results/Research/MaxAtomicityRegularOpenCode.lean:273:10: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  pseudoLower ↑?S
+in the target expression
+  c.Represents (↑(pseudoLower (↑S)ᶜ)) X
+
+case mpr.refine_2
+D : Type u_1
+α : Type u_2
+inst✝ : Preorder α
+R : D → D → Prop
+P O : D
+c : PosetCoding D α R P O
+hfull : c.Full
+S : LowerSet α
+X : D
+hX : c.Represents (↑S) X
+hS : Heyting.IsRegular S
+Y : D
+hY : c.Represents (↑S)ᶜ Y
+⊢ c.Represents (↑(pseudoLower (↑S)ᶜ)) X
+'Classicism.Meta.Research.MaxAtomicityRegularOpenCode.satisfies_regular' depends on axioms: [propext]
+'Classicism.Meta.Research.MaxAtomicityRegularOpenCode.satisfies_algebraCarrier' depends on axioms: [propext]
+'Classicism.Meta.Research.MaxAtomicityRegularOpenCode.satisfies_complementGraph' depends on axioms: [propext]
+'Classicism.Meta.Research.MaxAtomicityRegularOpenCode.satisfies_meetGraph' depends on axioms: [propext]
+'Classicism.Meta.Research.MaxAtomicityRegularOpenCode.pseudoLower_eq_compl' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityRegularOpenCode.PosetCoding.regular_iff' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityRegularOpenCode.PosetCoding.regular_meet_iff_rep' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityRegularOpenCode.PosetCoding.regular_compl_iff_rep' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityRegularOpenCode.PosetCoding.regularEquiv' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

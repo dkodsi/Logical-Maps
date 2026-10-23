@@ -1,0 +1,19 @@
+import Classicism.Results.Research.AtomicProbabilityFractionInverse
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Schema
+
+#classicism_audit Classicism.Results.Research.AtomicProbabilityFractionInverse
+#classicism_types_audit Classicism.Results.Research.AtomicProbabilityFractionInverse
+
+#classicism_derive Classicism.Research.ProbabilityFractions.fraction_reciprocal_product
+  Classicism.Research.ProbabilityFractions.fractionInv_total
+  Classicism.Research.ProbabilityFractions.fractionInv_unique
+  Classicism.Research.ProbabilityFractions.qinverse_supported
+  Classicism.Research.ProbabilityFractions.qinverse_selected
+  Classicism.Research.ProbabilityFractions.qinverse_in_field
+  Classicism.Research.ProbabilityFractions.qtimes_inverse
+  Classicism.Research.ProbabilityFractions.qinverse_ne_zero
+  Classicism.Research.ProbabilityFractions.qinverse_involution
+
+#print axioms Classicism.Research.ProbabilityFractions.qinverse_involution.derivable

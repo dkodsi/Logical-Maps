@@ -1,0 +1,43 @@
+Classicism/Results/Research/MaxAtomicityJechShelahSetCodes.lean:71:42: warning: `Nat.lt.step` has been deprecated: Use `Nat.lt_succ_of_lt` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.step` to `Nat.lt_succ_of_lt x`).
+Classicism/Results/Research/MaxAtomicityJechShelahSetCodes.lean:214:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  T ∈ ↑b
+in the target expression
+  T ∈ ↑↑b ↔ T ∈ ↑↑c
+
+b c : B
+h : codeOpen b = codeOpen c
+T : Condition
+⊢ T ∈ ↑↑b ↔ T ∈ ↑↑c
+'Classicism.Meta.Research.MaxAtomicityJechShelahSetCodes.natural_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahSetCodes.natural_mem_natural' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahSetCodes.natural_hereditary' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahSetCodes.realCode_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahSetCodes.treeCode_subset_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahSetCodes.conditionEmbedding' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahSetCodes.posetCode_hereditary' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahSetCodes.codeOpen_injective' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahSetCodes.algebraCode_hereditary' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahSetCodes.algebraCode_mem_universeSet' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

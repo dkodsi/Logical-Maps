@@ -1,0 +1,74 @@
+Classicism/Results/Research/MaxAtomicityJechShelahArithmeticSemantics.lean:71:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  MaxAtomicitySetFormulaTools.Ordinary.Empty (codeRelation B) ?a
+in the target expression
+  O.Empty R x ↔ x = number 0
+
+x : D
+⊢ O.Empty R x ↔ x = number 0
+Classicism/Results/Research/MaxAtomicityJechShelahArithmeticSemantics.lean:304:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  MaxAtomicitySetFormulaTools.Ordinary.GraphApp R a.ancestor (number i) (number j)
+in the target expression
+  O.GraphApp R a.ancestor (number i) (number j) ↔
+    i = j ∨ ∃ k, MaxAtomicityJechShelahIndexCoding.Child k j ∧ O.GraphApp R a.ancestor (number i) (number k)
+
+a : Parameters D
+hw : Ordinary.Omega R a.w
+hz : MaxAtomicitySetFormulaTools.Ordinary.Empty R a.zero
+h1 : Ordinary.Successor R a.zero a.one
+h2 : Ordinary.Successor R a.one a.two
+hzw : R a.zero a.w
+h1w : R a.one a.w
+h2w : R a.two a.w
+hA : Ordinary.BinaryOn R a.w a.add
+hM : Ordinary.BinaryOn R a.w a.mul
+hE : Ordinary.BinaryOn R a.w a.pow
+hP : Ordinary.UnaryOn R a.w a.p
+hN : Ordinary.UnaryOn R a.w a.n
+hO : Ordinary.UnaryOn R a.w a.offset
+hAr : Ordinary.AddRecursion R a
+hMr : Ordinary.MulRecursion R a
+hEr : Ordinary.PowRecursion R a
+hGr : Ordinary.GrowthRecursion R a
+hAnc : Ordinary.AncestorRecursion R a
+hw' : a.w = canonicalNaturals
+hz' : a.zero = number 0
+h1' : a.one = number 1
+h2' : a.two = number 2
+hmem : ∀ (k : ℕ), R (number k) a.w
+add : ∀ (x y v : ℕ), Ordinary.GraphApp₂ R a.add (number x) (number y) (number v) ↔ v = x + y
+mul : ∀ (x y v : ℕ), Ordinary.GraphApp₂ R a.mul (number x) (number y) (number v) ↔ v = x * y
+pow : ∀ (x y v : ℕ), Ordinary.GraphApp₂ R a.pow (number x) (number y) (number v) ↔ v = x ^ y
+p : ℕ → ℕ
+hp : ∀ (k v : ℕ), O.GraphApp R a.p (number k) (number v) ↔ v = p k
+n : ℕ → ℕ
+hn : ∀ (k v : ℕ), O.GraphApp R a.n (number k) (number v) ↔ v = n k
+o : ℕ → ℕ
+ho : ∀ (k v : ℕ), O.GraphApp R a.offset (number k) (number v) ↔ v = o k
+p0 : p 0 = 1
+n0 : n 0 = 1
+o0 : o 0 = 1
+step : ∀ (k : ℕ), p (k + 1) = p k * n k ∧ n (k + 1) = 2 ^ p (k + 1) ∧ o (k + 1) = o k + n k
+hgrowth :
+  ∀ (k : ℕ),
+    p k = MaxAtomicityJechShelahTrees.growthP k ∧
+      n k = MaxAtomicityJechShelahTrees.growthN k ∧ o k = MaxAtomicityJechShelahTrees.offset k
+pExact : ∀ (k v : ℕ), O.GraphApp R a.p (number k) (number v) ↔ v = MaxAtomicityJechShelahTrees.growthP k
+nExact : ∀ (k v : ℕ), O.GraphApp R a.n (number k) (number v) ↔ v = MaxAtomicityJechShelahTrees.growthN k
+oExact : ∀ (k v : ℕ), O.GraphApp R a.offset (number k) (number v) ↔ v = MaxAtomicityJechShelahTrees.offset k
+i j : ℕ
+⊢ O.GraphApp R a.ancestor (number i) (number j) ↔
+    i = j ∨ ∃ k, MaxAtomicityJechShelahIndexCoding.Child k j ∧ O.GraphApp R a.ancestor (number i) (number k)
+'Classicism.Meta.Research.MaxAtomicityJechShelahArithmeticSemantics.omega_iff' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahArithmeticSemantics.graphApp₂_unique' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahArithmeticSemantics.unary_decodable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahArithmeticSemantics.arithmetic_decoded' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

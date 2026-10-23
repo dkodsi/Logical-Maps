@@ -1,0 +1,100 @@
+Classicism.ChoiceHierarchy.Selector ⟶ Classicism.ChoiceHierarchy.Selector.schema:
+  fun τ' =>
+    Classicism.Meta.Term.exists'
+      (Classicism.Meta.Term.forall'
+        (Classicism.Meta.Term.imp
+          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+              (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).exists'
+          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app
+            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+              (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))))
+Classicism.ChoiceHierarchy.NecSelector ⟶ Classicism.ChoiceHierarchy.NecSelector.schema:
+  fun τ' =>
+    Classicism.Meta.Term.box
+      (Classicism.Meta.Term.exists'
+        (Classicism.Meta.Term.forall'
+          (Classicism.Meta.Term.imp
+            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).exists'
+            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app
+              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))))
+Classicism.ChoiceHierarchy.necSelector_of_necFunctionalChoice: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.ChoiceHierarchy.necFunctionalChoice_of_necSelector: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.ChoiceHierarchy.necSelector_down_predicate: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.ChoiceHierarchy.necSelector_prop_of_et: Classicism ✓ [C] (axioms: [propext,
+ Classicism.e,
+ Classicism.e_exists,
+ Quot.sound])
+Classicism.ChoiceHierarchy.necDiagonal_selector_predicate: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.ChoiceHierarchy.necSelector_of_necFunctionalChoice: type system ✓
+Classicism.ChoiceHierarchy.necFunctionalChoice_of_necSelector: type system ✓
+Classicism.ChoiceHierarchy.necSelector_down_predicate: type system ✓
+Classicism.ChoiceHierarchy.necSelector_prop_of_et: type system ✓
+Classicism.ChoiceHierarchy.necDiagonal_selector_predicate: type system ✓
+Classicism.ChoiceHierarchy.necSelector_of_necFunctionalChoice ⟶ Classicism.ChoiceHierarchy.necSelector_of_necFunctionalChoice.rule : ∀
+  (τ' : Classicism.Meta.RTy),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp
+      (Classicism.P.NecFunctionalChoice.quoted
+        (Classicism.Meta.Ty.rel (Classicism.Meta.Ty.rel τ' ⇒ Classicism.Meta.RTy.t)) τ')
+      (Classicism.ChoiceHierarchy.NecSelector.quoted τ'))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.ChoiceHierarchy.necFunctionalChoice_of_necSelector ⟶ Classicism.ChoiceHierarchy.necFunctionalChoice_of_necSelector.rule : ∀
+  (σ' : Classicism.Meta.Ty) (τ' : Classicism.Meta.RTy),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.ChoiceHierarchy.NecSelector.quoted τ')
+      (Classicism.P.NecFunctionalChoice.quoted σ' τ'))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.ChoiceHierarchy.necFunctionalChoice_of_necSelector ⟶ Classicism.ChoiceHierarchy.necFunctionalChoice_of_necSelector.listRule : ∀
+  (σs : List Classicism.Meta.Ty) (ρ1 : Classicism.Meta.RTy),
+  ρ1.Closed →
+    Classicism.Meta.Theorem Classicism.Meta.C.axioms
+      (Classicism.Meta.Term.imp (Classicism.ChoiceHierarchy.NecSelector.quoted ρ1)
+        (Classicism.P.NecFunctionalChoice.listQuoted σs ρ1))
+Classicism.ChoiceHierarchy.necSelector_down_predicate ⟶ Classicism.ChoiceHierarchy.necSelector_down_predicate.rule : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp
+      (Classicism.ChoiceHierarchy.NecSelector.quoted
+        (Classicism.Meta.Ty.rel (σ' ⇒ Classicism.Meta.RTy.t) ⇒ Classicism.Meta.RTy.t))
+      (Classicism.ChoiceHierarchy.NecSelector.quoted (σ' ⇒ Classicism.Meta.RTy.t)))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.ChoiceHierarchy.necSelector_down_predicate ⟶ Classicism.ChoiceHierarchy.necSelector_down_predicate.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp
+      (Classicism.ChoiceHierarchy.NecSelector.quoted
+        (Classicism.Meta.Ty.rel (σs ⇒* Classicism.Meta.RTy.t) ⇒ Classicism.Meta.RTy.t))
+      (Classicism.ChoiceHierarchy.NecSelector.quoted (σs ⇒* Classicism.Meta.RTy.t)))
+Classicism.ChoiceHierarchy.necSelector_prop_of_et ⟶ Classicism.ChoiceHierarchy.necSelector_prop_of_et.rule : Classicism.Meta.Theorem
+  Classicism.Meta.C.axioms
+  (Classicism.Meta.Term.imp
+    (Classicism.ChoiceHierarchy.NecSelector.quoted (Classicism.Meta.Ty.e ⇒ Classicism.Meta.RTy.t))
+    (Classicism.ChoiceHierarchy.NecSelector.quoted Classicism.Meta.RTy.t))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.ChoiceHierarchy.necDiagonal_selector_predicate ⟶ Classicism.ChoiceHierarchy.necDiagonal_selector_predicate.rule : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp
+      (Classicism.P.NecFunctionalChoice.quoted
+        (Classicism.Meta.Ty.rel (Classicism.Meta.Ty.rel (σ' ⇒ Classicism.Meta.RTy.t) ⇒ Classicism.Meta.RTy.t))
+        (Classicism.Meta.Ty.rel (σ' ⇒ Classicism.Meta.RTy.t) ⇒ Classicism.Meta.RTy.t))
+      (Classicism.ChoiceHierarchy.NecSelector.quoted (σ' ⇒ Classicism.Meta.RTy.t)))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.ChoiceHierarchy.necDiagonal_selector_predicate ⟶ Classicism.ChoiceHierarchy.necDiagonal_selector_predicate.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp
+      (Classicism.P.NecFunctionalChoice.quoted
+        (Classicism.Meta.Ty.rel (Classicism.Meta.Ty.rel (σs ⇒* Classicism.Meta.RTy.t) ⇒ Classicism.Meta.RTy.t))
+        (Classicism.Meta.Ty.rel (σs ⇒* Classicism.Meta.RTy.t) ⇒ Classicism.Meta.RTy.t))
+      (Classicism.ChoiceHierarchy.NecSelector.quoted (σs ⇒* Classicism.Meta.RTy.t)))
+Classicism/Results/ChoiceHierarchySchemas.lean:126:25: warning: Variable name `a` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _a
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

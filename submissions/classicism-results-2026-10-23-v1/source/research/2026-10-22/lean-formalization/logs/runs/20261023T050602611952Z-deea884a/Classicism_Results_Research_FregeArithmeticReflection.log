@@ -1,0 +1,191 @@
+Classicism/Results/Research/FregeArithmeticReflection.lean:31:18: error: Application type mismatch: The argument
+  Env.cons ?m.5 env
+has type
+  Env e (?m.4 :: numCtx σ k)
+but is expected to have type
+  Env e (numCtx σ ?m.1)
+in the application
+  environment σ (Env.cons ?m.5 env)
+Classicism/Results/Research/FregeArithmeticReflection.lean:31:25: error: Application type mismatch: The argument
+  x
+has type
+  Num (Ty.denote e σ)
+but is expected to have type
+  Ty.denote e ?m.4
+in the application
+  Env.cons x
+Classicism/Results/Research/FregeArithmeticReflection.lean:43:13: error: unsolved goals
+case suc
+σ : Ty
+k : ℕ
+env : Env e (numCtx σ k)
+t : ATerm k
+ih : Term.denote (Interp.ofDomain e) (ATerm.toTerm σ t) env = readTerm t (environment σ env)
+⊢ Term.denote (Interp.ofDomain e) (Arith.suc.term σ).close env (readTerm t (environment σ env)) =
+    SucCard (readTerm t (environment σ env))
+Classicism/Results/Research/FregeArithmeticReflection.lean:44:44: warning: This simp argument is unused:
+  Term.denote_close
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ATerm.toTerm, Term.denote, Classicism.Arith.suc.reflect, ih, readTerm, Classicism.Arith.suc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/FregeArithmeticReflection.lean:45:8: warning: This simp argument is unused:
+  Classicism.Arith.suc.reflect
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ATerm.toTerm, Term.denote, Term.denote_close, ih, readTerm, Classicism.Arith.suc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/FregeArithmeticReflection.lean:45:52: warning: This simp argument is unused:
+  Classicism.Arith.suc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ATerm.toTerm, Term.denote, Term.denote_close, Classicism.Arith.suc.reflect, ih, readTerm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/FregeArithmeticReflection.lean:51:2: error: Unnecessary `generalizing` argument: Variable `env` is generalized automatically
+Classicism/Results/Research/FregeArithmeticReflection.lean:52:10: error: unsolved goals
+case nat
+σ : Ty
+k k✝ : ℕ
+t : ATerm k✝
+env : Env e (numCtx σ k✝)
+⊢ Term.denote (Interp.ofDomain e) (Arith.N.term σ).close env (readTerm t (environment σ env)) =
+    Arith.N (Ty.denote e σ) (readTerm t (environment σ env))
+Classicism/Results/Research/FregeArithmeticReflection.lean:55:14: error: unsolved goals
+case sum
+σ : Ty
+k k✝ : ℕ
+t u v : ATerm k✝
+env : Env e (numCtx σ k✝)
+⊢ Term.denote (Interp.ofDomain e) (Arith.Sum.term σ).close env (readTerm t (environment σ env))
+      (readTerm u (environment σ env)) (readTerm v (environment σ env)) =
+    Arith.Sum (Ty.denote e σ) (readTerm t (environment σ env)) (readTerm u (environment σ env))
+      (readTerm v (environment σ env))
+Classicism/Results/Research/FregeArithmeticReflection.lean:58:15: error: unsolved goals
+case prod
+σ : Ty
+k k✝ : ℕ
+t u v : ATerm k✝
+env : Env e (numCtx σ k✝)
+⊢ Term.denote (Interp.ofDomain e) (Arith.Prod.term σ).close env (readTerm t (environment σ env))
+      (readTerm u (environment σ env)) (readTerm v (environment σ env)) =
+    Arith.Prod (Ty.denote e σ) (readTerm t (environment σ env)) (readTerm u (environment σ env))
+      (readTerm v (environment σ env))
+Classicism/Results/Research/FregeArithmeticReflection.lean:61:11: error: unsolved goals
+case eq
+σ : Ty
+k k✝ : ℕ
+t u : ATerm k✝
+env : Env e (numCtx σ k✝)
+⊢ (readTerm t (environment σ env) = readTerm u (environment σ env)) =
+    (readTerm t (environment σ env) = readTerm u (environment σ env))
+Classicism/Results/Research/FregeArithmeticReflection.lean:72:32: error(lean.unknownIdentifier): Unknown identifier `environment_cons`
+Classicism/Results/Research/FregeArithmeticReflection.lean:69:13: error: unsolved goals
+case all
+σ : Ty
+k k✝ : ℕ
+φ : AForm (k✝ + 1)
+ih :
+  ∀ (env : Env e (numCtx σ (k✝ + 1))),
+    Term.denote (Interp.ofDomain e) (AForm.toTerm σ φ) env = readFormula φ (environment σ env)
+env : Env e (numCtx σ k✝)
+⊢ (∀ (x : Ty.denote (Interp.ofDomain e).D (Ty.rel (Ty.rel (σ ⇒ RTy.t) ⇒ RTy.t))),
+      Term.denote (Interp.ofDomain e) (Arith.N.term σ) Env.nil (Var.zero.denote (Env.cons x env)) →
+        Term.denote (Interp.ofDomain e) (AForm.toTerm σ φ) (Env.cons x env)) =
+    ∀ (x : Num (Ty.denote e σ)), FiniteCardinality x → readFormula φ (extendEnv x (environment σ env))
+Classicism/Results/Research/FregeArithmeticReflection.lean:53:44: warning: This simp argument is unused:
+  Term.denote_close
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [AForm.toTerm, Term.denote, Classicism.Arith.N.reflect, term_reflect, readFormula]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/FregeArithmeticReflection.lean:54:8: warning: This simp argument is unused:
+  Classicism.Arith.N.reflect
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [AForm.toTerm, Term.denote, Term.denote_close, term_reflect, readFormula]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/FregeArithmeticReflection.lean:56:44: warning: This simp argument is unused:
+  Term.denote_close
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [AForm.toTerm, Term.denote, Classicism.Arith.Sum.reflect, term_reflect, readFormula]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/FregeArithmeticReflection.lean:57:8: warning: This simp argument is unused:
+  Classicism.Arith.Sum.reflect
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [AForm.toTerm, Term.denote, Term.denote_close, term_reflect, readFormula]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/FregeArithmeticReflection.lean:59:44: warning: This simp argument is unused:
+  Term.denote_close
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [AForm.toTerm, Term.denote, Classicism.Arith.Prod.reflect, term_reflect, readFormula]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/FregeArithmeticReflection.lean:60:8: warning: This simp argument is unused:
+  Classicism.Arith.Prod.reflect
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [AForm.toTerm, Term.denote, Term.denote_close, term_reflect, readFormula]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/FregeArithmeticReflection.lean:71:40: warning: This simp argument is unused:
+  Classicism.Arith.N.reflect
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [AForm.toTerm, Term.forall', Term.imp, Term.disj, Term.neg, Term.denote, Term.denote_close,
+    Var.denote, imp_eq, ih, environment_cons, readFormula, Classicism.Arith.N]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/FregeArithmeticReflection.lean:72:8: warning: This simp argument is unused:
+  Var.denote
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [AForm.toTerm, Term.forall', Term.imp, Term.disj, Term.neg, Term.denote, Term.denote_close,
+    Classicism.Arith.N.reflect, imp_eq, ih, environment_cons, readFormula, Classicism.Arith.N]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/FregeArithmeticReflection.lean:72:28: warning: This simp argument is unused:
+  ih
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [AForm.toTerm, Term.forall', Term.imp, Term.disj, Term.neg, Term.denote, Term.denote_close,
+    Classicism.Arith.N.reflect, Var.denote, imp_eq, environment_cons, readFormula, Classicism.Arith.N]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/FregeArithmeticReflection.lean:72:63: warning: This simp argument is unused:
+  Classicism.Arith.N
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [AForm.toTerm, Term.forall', Term.imp, Term.disj, Term.neg, Term.denote, Term.denote_close,
+    Classicism.Arith.N.reflect, Var.denote, imp_eq, ih, environment_cons, readFormula]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/FregeArithmeticReflection.lean:75:17: error(lean.invalidField): Invalid field `holds`: The environment does not contain `Classicism.Meta.Term.holds`, so it is not possible to project the field `holds` from an expression
+  AForm.toTerm σ φ
+of type
+  Term Signature.pure (numCtx σ 0) (Ty.rel RTy.t)
+Classicism/Results/Research/FregeArithmeticReflection.lean:77:27: error: Function expected at
+  Env.nil
+but this term has type
+  Env ?m.9 []
+
+Note: Expected a function because this term is being applied to the argument
+  Classicism.e
+'Classicism.Meta.Research.FregeArithmeticReflection.term_reflect' depends on axioms: [propext,
+ sorryAx,
+ Classicism.e,
+ Quot.sound]
+'Classicism.Meta.Research.FregeArithmeticReflection.formula_reflect' depends on axioms: [propext, sorryAx, Classicism.e]
+'Classicism.Meta.Research.FregeArithmeticReflection.sentence_reflect' depends on axioms: [propext,
+ sorryAx,
+ Classicism.e,
+ Quot.sound]

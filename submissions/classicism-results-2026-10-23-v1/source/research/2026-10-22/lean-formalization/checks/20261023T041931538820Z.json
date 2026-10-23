@@ -1,0 +1,19 @@
+{
+  "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "modules": [
+    "Mathlib.SetTheory.ZFC.Basic",
+    "Mathlib.Data.W.Cardinal",
+    "Mathlib.SetTheory.ZFC.Cardinal",
+    "Mathlib.Order.UpperLower.Principal",
+    "Mathlib.Order.Heyting.Regular"
+  ],
+  "checked": [
+    {
+      "module": "Mathlib.Data.Fin.VecNotation",
+      "seconds": 0.05,
+      "exit_code": 1,
+      "fingerprint": "c29caf06fd8033a361a9af089809321dab391e13237656b7dd68fbda68041f5b",
+      "log": "logs/runs/20261023T041931538820Z/Mathlib_Data_Fin_VecNotation.log"
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+Classicism/Models/ColourCollapseUnary.lean:19:14: warning: `CategoryTheory.FunctorToTypes.map_id_apply` has been deprecated: Use `CategoryTheory.Functor.map_id_apply` instead
+
+Note: The updated constant has a different type:
+  ∀ {C : Type u₁} [inst : Category.{v₁, u₁} C] {D : Type u₂} [inst_1 : Category.{v₂, u₂} D] (self : C ⥤ D) (X : C)
+    {F : D → D → Type uF} {carrier : D → Type w} {instFunLike : (X Y : D) → FunLike (F X Y) (carrier X) (carrier Y)}
+    [inst_2 : ConcreteCategory D F] (x : carrier (self.obj X)), (ConcreteCategory.hom (self.map (𝟙 X))) x = x
+instead of
+  ∀ {C : Type u} [inst : Category.{v, u} C] (F : C ⥤ Type w) {X : C} (a : F.obj X),
+    (ConcreteCategory.hom (F.map (𝟙 X))) a = a
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.map_id_apply` to `Functor.map_id_apply x`).
+Classicism/Models/ColourCollapseUnary.lean:24:14: warning: `CategoryTheory.FunctorToTypes.map_comp_apply` has been deprecated: Use `CategoryTheory.Functor.map_comp_apply` instead
+
+Note: The updated constant has a different type:
+  ∀ {C : Type u₁} [inst : Category.{v₁, u₁} C] {D : Type u₂} [inst_1 : Category.{v₂, u₂} D] (self : C ⥤ D) {X Y Z : C}
+    (f : X ⟶ Y) (g : Y ⟶ Z) {F : D → D → Type uF} {carrier : D → Type w}
+    {instFunLike : (X Y : D) → FunLike (F X Y) (carrier X) (carrier Y)} [inst_2 : ConcreteCategory D F]
+    (x : carrier (self.obj X)),
+    (ConcreteCategory.hom (self.map (f ≫ g))) x =
+      (ConcreteCategory.hom (self.map g)) ((ConcreteCategory.hom (self.map f)) x)
+instead of
+  ∀ {C : Type u} [inst : Category.{v, u} C] (F : C ⥤ Type w) {X Y Z : C} (f : X ⟶ Y) (g : Y ⟶ Z) (a : F.obj X),
+    (ConcreteCategory.hom (F.map (f ≫ g))) a = (ConcreteCategory.hom (F.map g)) ((ConcreteCategory.hom (F.map f)) a)
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.map_comp_apply` to `Functor.map_comp_apply x`).
+Classicism/Models/ColourCollapseUnary.lean:49:27: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (ConcreteCategory.hom (cat.De.map i)) x
+in the target expression
+  FunCat.fn k (FunCat.fn i x) = a.1
+
+W : cat.Ob
+D : Set ℕ
+hD : D.Finite
+V : cat.Ob
+h i : W ⟶ V
+ha : AgreeOn cat.De D h i
+U : cat.Ob
+a : Args (SymT cat.De syms (PinIdeal.fin cat.De)) et U
+k : V ⟶ U
+x : ℕ
+hx : x ∈ D
+he : FunCat.fn k (FunCat.fn h x) = a.1
+⊢ FunCat.fn k (FunCat.fn i x) = a.1
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    U
+  has type
+    cat.Ob
+  but is expected to have type
+    cat.Obj
+  in the application
+    cat.X U
+Classicism/Models/ColourCollapseUnary.lean:50:27: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (ConcreteCategory.hom (cat.De.map h)) x
+in the target expression
+  FunCat.fn k (FunCat.fn h x) = a.1
+
+W : cat.Ob
+D : Set ℕ
+hD : D.Finite
+V : cat.Ob
+h i : W ⟶ V
+ha : AgreeOn cat.De D h i
+U : cat.Ob
+a : Args (SymT cat.De syms (PinIdeal.fin cat.De)) et U
+k : V ⟶ U
+x : ℕ
+hx : x ∈ D
+he : FunCat.fn k (FunCat.fn i x) = a.1
+⊢ FunCat.fn k (FunCat.fn h x) = a.1
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    U
+  has type
+    cat.Ob
+  but is expected to have type
+    cat.Obj
+  in the application
+    cat.X U
+Classicism/Models/ColourCollapseUnary.lean:70:43: error: unsolved goals
+W : cat.Ob
+D : Set ℕ
+hD : D.Finite
+x : ℕ
+⊢ (∃ x_1 ∈ D, ↑(𝟙 W) x_1 = x) ↔ x ∈ D
+Classicism/Models/ColourCollapseUnary.lean:146:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+Classicism/Models/ColourCollapseUnary.lean:183:21: error: failed to synthesize
+  Decidable (colored C 0)
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+Classicism/Models/ColourCollapseUnary.lean:203:27: error: Expected type must not contain free variables
+  colored C 0
+
+Hint: Use the `+revert` option to automatically clean up and revert free variables
+Classicism/Models/ColourCollapseUnary.lean:204:39: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat ((model.inner Ty.e).obj C) 0
+numerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is
+  (model.inner Ty.e).obj C
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Classicism/Models/ColourCollapseUnary.lean:204:47: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat ((model.inner Ty.e).obj C) 1
+numerals are polymorphic in Lean, but the numeral `1` cannot be used in a context where the expected type is
+  (model.inner Ty.e).obj C
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Classicism/Models/ColourCollapseUnary.lean:204:57: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  LT ((model.inner Ty.e).obj C)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Classicism/Models/ColourCollapseUnary.lean:204:61: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat ((model.inner Ty.e).obj C) 2
+numerals are polymorphic in Lean, but the numeral `2` cannot be used in a context where the expected type is
+  (model.inner Ty.e).obj C
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Classicism/Models/ColourCollapseUnary.lean:211:34: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat ((model.inner Ty.e).obj C) 1
+numerals are polymorphic in Lean, but the numeral `1` cannot be used in a context where the expected type is
+  (model.inner Ty.e).obj C
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Classicism/Models/ColourCollapseUnary.lean:213:29: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat ((model.inner Ty.e).obj C) 1
+numerals are polymorphic in Lean, but the numeral `1` cannot be used in a context where the expected type is
+  (model.inner Ty.e).obj C
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Classicism/Models/ColourCollapseUnary.lean:270:4: error: Type mismatch
+  finite_exact ?m.81 ?m.82 ?m.83
+has type
+  ∀ (h : ?m.81 ⟶ ?m.84) (a : TA et ?m.84),
+    prof (finiteEntity ?m.81 ?m.82 ?m.83) h a ↔
+      ∃ b, prof (finiteEntity ?m.81 ?m.82 ?m.83) (𝟙 ?m.81) b ∧ Args.map model.inner et h b = a
+but is expected to have type
+  ExactImage (finiteEntity W (extension F) hfin)
+Classicism/Models/ColourCollapseUnary.lean:279:4: error: Type mismatch
+  top_exact W
+has type
+  ∀ (h : W ⟶ ?m.145) (a : TA et ?m.145),
+    prof (topEntity W) h a ↔ ∃ b, prof (topEntity W) (𝟙 W) b ∧ Args.map model.inner et h b = a
+but is expected to have type
+  ExactImage (topEntity W)

@@ -1,0 +1,7 @@
+Classicism/Results/Research/CoreNumberIsomorphism.lean:132:22: error: invalid `▸` notation, expected result type of cast is 
+  (fun n => V (q n)) n
+however, the equality 
+  Eq.symm he
+of type 
+  y = q n
+does not contain the expected result type on either the left or the right hand side

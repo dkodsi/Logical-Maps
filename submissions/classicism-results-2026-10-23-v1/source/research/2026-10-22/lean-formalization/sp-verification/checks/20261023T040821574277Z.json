@@ -1,0 +1,70 @@
+{
+  "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "modules": [
+    "research/2026-10-22/lean-formalization/StrongPossibilityConsequencesInfinitaryNumerals.lean"
+  ],
+  "complete": true,
+  "checked": [
+    {
+      "module": "Classicism.Syntax.Types",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "07df345faa0bc772732f7d92d2d70bc9e98684e0474a3e9513213d52a1cd202c"
+    },
+    {
+      "module": "Classicism.Syntax.Term",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "c985f9d073087c935e2b64f9c0503b909a3a3d2bc6603871661e80a7aaa0bc76"
+    },
+    {
+      "module": "Classicism.Syntax.Conversion",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "3452ccbab9592b35912b00a0c40855b2ad68d387526de7e565970846e0e33a3d"
+    },
+    {
+      "module": "Classicism.Syntax.Derivation",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "9397e2f2e7a7a13c11a5ca5126b71930a51abeb2ddae0a2c9ff0ea68d35fc521"
+    },
+    {
+      "module": "Classicism.Syntax.Axioms",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "baf39452832f2901859d4de2edabde78f03d2590f27d96357995f407164916ae"
+    },
+    {
+      "module": "Classicism.Syntax.Entailment",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "36bb45c1856e08cc774815f8dac2285fdb5c54ff61a3b285d7923e0b4bf00a3a"
+    },
+    {
+      "module": "Classicism.Syntax.ClosedTypes",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "1afa431c973784f384ea866b7537c05288597b1e058113e54644c045c9841617"
+    },
+    {
+      "module": "Classicism.Syntax.SentenceSchemas",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "d4468743200ccf4b950dadad63e98441b14c38df1cab995027ee535520ede3a0"
+    },
+    {
+      "module": "Classicism.Syntax.StrongPossibility",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "d1b3823a765db3ff4286013b1285390948561c033709d8c229f8945f6befc514"
+    },
+    {
+      "module": "StrongPossibilityConsequencesInfinitaryNumerals",
+      "seconds": 1.77,
+      "exit_code": 0,
+      "fingerprint": "7b900e6e282114ed9b1fc75da94a6e7f38095211393b59902a72f9d53558e9ad",
+      "log": "logs/runs/20261023T040821574277Z/StrongPossibilityConsequencesInfinitaryNumerals.log"
+    }
+  ]
+}

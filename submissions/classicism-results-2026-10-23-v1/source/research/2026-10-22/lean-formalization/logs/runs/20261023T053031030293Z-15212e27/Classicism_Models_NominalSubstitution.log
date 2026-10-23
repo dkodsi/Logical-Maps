@@ -1,0 +1,21 @@
+Classicism/Models/NominalSubstitution.lean:32:12: warning: Variable name `η` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _η
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Classicism/Models/NominalSubstitution.lean:32:15: warning: Variable name `θ` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _θ
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Classicism/Models/NominalSubstitution.lean:66:86: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Classicism/Models/NominalSubstitution.lean:97:4: warning: Unused tactic linter: `change (lookup W (.succ v)).fn (pullSub W C (Sub.lift s) (x, η)) = _` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Classicism/Models/NominalSubstitution.lean:110:83: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`

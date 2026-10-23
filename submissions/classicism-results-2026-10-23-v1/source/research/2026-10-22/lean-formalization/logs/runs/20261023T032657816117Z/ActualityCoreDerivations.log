@@ -1,0 +1,104 @@
+Classicism.Research.ActualityCore.actualWorld_atom: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.ActualityCore.current_pin_injective: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.ActualityCore.cut_fixed: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.ActualityCore.cut_idempotent: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.ActualityCore.cut_in_domain: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.ActualityCore.cut_kernel: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.ActualityCore.cut_le: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.ActualityCore.cut_le_right: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.ActualityCore.cut_supported: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.ActualityCore.domain_contains_bottom: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.ActualityCore.domain_contains_top: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.ActualityCore.domain_cut_fixed: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.ActualityCore.domain_supported: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.ActualityCore.equality_current: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.ActualityCore.intervalJoin_below: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.ActualityCore.intervalJoin_lub: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.ActualityCore.interval_completeness_law: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.ActualityCore.le_cut: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.ActualityCore.local_atom_coverage_law: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.ActualityCore.local_order_step: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.ActualityCore.localization_law: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.ActualityCore.localized_eq: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.ActualityCore.localized_le: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.ActualityCore.localized_le_iff: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.ActualityCore.member_le_intervalJoin: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.ActualityCore.pin_le_of_value: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.ActualityCore.pin_supported: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.ActualityCore.section_below: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.ActualityCore.section_in_domain: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.ActualityCore.supported_atom_below: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.ActualityCore.supported_atom_coordinates: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.ActualityCore.supported_beta: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.ActualityCore.supported_nonzero_has_value: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.ActualityCore.truth_current: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.ActualityCore.truth_eq_iff: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.ActualityCore.truth_false: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.ActualityCore.truth_join: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.ActualityCore.truth_meet: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.ActualityCore.truth_neg: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.ActualityCore.truth_supported: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.ActualityCore.truth_true: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.ActualityCore.truth_values: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.ActualityCore.universal_current: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.ActualityCore.universal_supported: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+#classicism_audit Classicism.Results.Research.ActualityCore: 44/44 theorems pass; 44 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.ActualityCore: 44/44 inside R
+Classicism.Results.Research.ActualityCore: 44 of 44 theorems derived
+
+[1/44] Classicism.Research.ActualityCore.actualWorld_atom ✓ 20 ms
+[2/44] Classicism.Research.ActualityCore.current_pin_injective ✓ 3 ms
+[3/44] Classicism.Research.ActualityCore.cut_fixed ✓ 281 ms
+[4/44] Classicism.Research.ActualityCore.cut_idempotent ✓ 131 ms
+[5/44] Classicism.Research.ActualityCore.cut_in_domain ✓ 6 ms
+[6/44] Classicism.Research.ActualityCore.cut_kernel ✓ 428 ms
+[7/44] Classicism.Research.ActualityCore.cut_le ✓ 0 ms
+[8/44] Classicism.Research.ActualityCore.cut_le_right ✓ 0 ms
+[9/44] Classicism.Research.ActualityCore.cut_supported ✓ 0 ms
+[10/44] Classicism.Research.ActualityCore.domain_contains_bottom ✓ 24 ms
+[11/44] Classicism.Research.ActualityCore.domain_contains_top ✓ 5 ms
+[12/44] Classicism.Research.ActualityCore.domain_cut_fixed ✓ 8 ms
+[13/44] Classicism.Research.ActualityCore.domain_supported ✓ 54 ms
+[14/44] Classicism.Research.ActualityCore.equality_current ✓ 6 ms
+[15/44] Classicism.Research.ActualityCore.intervalJoin_below ✓ 75 ms
+[16/44] Classicism.Research.ActualityCore.intervalJoin_lub ✓ 524 ms
+[17/44] Classicism.Research.ActualityCore.interval_completeness_law ✓ 114 ms
+[18/44] Classicism.Research.ActualityCore.le_cut ✓ 0 ms
+[19/44] Classicism.Research.ActualityCore.local_atom_coverage_law ✓ 368 ms
+[20/44] Classicism.Research.ActualityCore.local_order_step ✓ 0 ms
+[21/44] Classicism.Research.ActualityCore.localization_law ✓ 22 ms
+[22/44] Classicism.Research.ActualityCore.localized_eq ✓ 0 ms
+[23/44] Classicism.Research.ActualityCore.localized_le ✓ 0 ms
+[24/44] Classicism.Research.ActualityCore.localized_le_iff ✓ 23 ms
+[25/44] Classicism.Research.ActualityCore.member_le_intervalJoin ✓ 0 ms
+[26/44] Classicism.Research.ActualityCore.pin_le_of_value ✓ 0 ms
+[27/44] Classicism.Research.ActualityCore.pin_supported ✓ 0 ms
+[28/44] Classicism.Research.ActualityCore.section_below ✓ 42 ms
+[29/44] Classicism.Research.ActualityCore.section_in_domain ✓ 30 ms
+[30/44] Classicism.Research.ActualityCore.supported_atom_below ✓ 0 ms
+[31/44] Classicism.Research.ActualityCore.supported_atom_coordinates ✓ 129 ms
+[32/44] Classicism.Research.ActualityCore.supported_beta ✓ 165 ms
+[33/44] Classicism.Research.ActualityCore.supported_nonzero_has_value ✓ 0 ms
+[34/44] Classicism.Research.ActualityCore.truth_current ✓ 4 ms
+[35/44] Classicism.Research.ActualityCore.truth_eq_iff ✓ 52 ms
+[36/44] Classicism.Research.ActualityCore.truth_false ✓ 7 ms
+[37/44] Classicism.Research.ActualityCore.truth_join ✓ 3 ms
+[38/44] Classicism.Research.ActualityCore.truth_meet ✓ 2 ms
+[39/44] Classicism.Research.ActualityCore.truth_neg ✓ 2 ms
+[40/44] Classicism.Research.ActualityCore.truth_supported ✓ 0 ms
+[41/44] Classicism.Research.ActualityCore.truth_true ✓ 3 ms
+[42/44] Classicism.Research.ActualityCore.truth_values ✓ 22 ms
+[43/44] Classicism.Research.ActualityCore.universal_current ✓ 7 ms
+[44/44] Classicism.Research.ActualityCore.universal_supported ✓ 78 ms
+'Classicism.Research.ActualityCore.universal_current.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.ActualityCore.intervalJoin_lub.derivable' depends on axioms: [propext, Quot.sound]

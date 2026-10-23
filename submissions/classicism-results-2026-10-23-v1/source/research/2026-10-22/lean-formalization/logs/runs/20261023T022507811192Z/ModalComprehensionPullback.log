@@ -1,0 +1,15 @@
+Classicism.Research.ModalPropagation.rigid_comprehension_pullback ⟶ Classicism.Research.ModalPropagation.rigid_comprehension_pullback.rule : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp
+      (Classicism.P.RigidComprehension.quoted
+        (Classicism.Meta.Ty.rel (σ' ⇒ Classicism.Meta.RTy.t) ⇒ Classicism.Meta.RTy.t))
+      (Classicism.P.RigidComprehension.quoted (σ' ⇒ Classicism.Meta.RTy.t)))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.ModalPropagation.rigid_comprehension_pullback ⟶ Classicism.Research.ModalPropagation.rigid_comprehension_pullback.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp
+      (Classicism.P.RigidComprehension.quoted
+        (Classicism.Meta.Ty.rel (σs ⇒* Classicism.Meta.RTy.t) ⇒ Classicism.Meta.RTy.t))
+      (Classicism.P.RigidComprehension.quoted (σs ⇒* Classicism.Meta.RTy.t)))

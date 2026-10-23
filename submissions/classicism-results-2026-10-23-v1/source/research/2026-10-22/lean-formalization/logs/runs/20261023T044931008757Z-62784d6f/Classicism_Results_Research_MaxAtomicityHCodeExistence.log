@@ -1,0 +1,24 @@
+Classicism/Results/Research/MaxAtomicityHCodeExistence.lean:30:0: warning: automatically included section variable(s) unused in theorem `Classicism.Meta.Research.MaxAtomicityHCodeExistence.codeRelation_good`:
+  [Nontrivial B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/MaxAtomicityHCodeExistence.lean:68:6: error: Type mismatch
+  le_iSup ?m.99 witness
+has type
+  ?m.99 witness ≤ iSup ?m.99
+but is expected to have type
+  eval I (hCode Term.v0) (IEnv.cons witness IEnv.nil) ≤ ⨆ E, eval I (hCode Term.v0) (IEnv.cons E IEnv.nil)
+'Classicism.Meta.Research.MaxAtomicityHCodeExistence.codeRelation_good' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeExistence.hasHCode_pure' depends on axioms: [propext]
+'Classicism.Meta.Research.MaxAtomicityHCodeExistence.hasHCode_closedTypes' does not depend on any axioms
+'Classicism.Meta.Research.MaxAtomicityHCodeExistence.eval_witness_hCode' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeExistence.eval_hasHCode' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

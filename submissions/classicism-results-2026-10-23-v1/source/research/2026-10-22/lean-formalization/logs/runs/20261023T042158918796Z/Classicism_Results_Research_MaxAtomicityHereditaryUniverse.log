@@ -1,0 +1,55 @@
+Classicism/Results/Research/MaxAtomicityHereditaryUniverse.lean:132:36: error: Function expected at
+  zero_le
+but this term has type
+  0 ≤ ?m.40
+
+Note: Expected a function because this term is being applied to the argument
+  #K
+Classicism/Results/Research/MaxAtomicityHereditaryUniverse.lean:153:4: error: Type mismatch: After simplification, term
+  h
+ has type
+  @LE.le Cardinal.{u} instLE (ZFSet.range (decode K)).card #(SmallTree K)
+but is expected to have type
+  @LE.le Cardinal.{u} instLE (universeSet K).card #(SmallTree K)
+Classicism/Results/Research/MaxAtomicityHereditaryUniverse.lean:288:56: error: Application type mismatch: The argument
+  hyz
+has type
+  (fun y => ⟨present K ↑y, ⋯⟩) y = (fun y => ⟨present K ↑y, ⋯⟩) z
+but is expected to have type
+  (presentationEquiv K) ↑y = (presentationEquiv K) ↑z
+in the application
+  congrArg Subtype.val hyz
+'Classicism.Meta.Research.MaxAtomicityHereditaryUniverse.hereditary_has_tree' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHereditaryUniverse.mem_universeSet' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHereditaryUniverse.smallTree_card_le' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHereditaryUniverse.universeSet_card' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHereditaryUniverse.codeEquiv' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHereditaryUniverse.codeRelation_wellFounded' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHereditaryUniverse.codeRelation_extensional' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHereditaryUniverse.codeRelation_rows' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHereditaryUniverse.codeRelation_fills' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

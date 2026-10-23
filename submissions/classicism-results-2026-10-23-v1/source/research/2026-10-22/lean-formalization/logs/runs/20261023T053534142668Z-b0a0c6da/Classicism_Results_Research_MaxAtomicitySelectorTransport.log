@@ -1,0 +1,17 @@
+Classicism/Results/Research/MaxAtomicitySelectorTransport.lean:32:50: error: Type mismatch
+  Fin.elim0
+has type
+  Fin 0 → ?m.28
+but is expected to have type
+  ∀ (i : Fin 0), e (triple a b c i.succ.succ.succ) = triple (e a) (e b) (e c) i.succ.succ.succ
+'Classicism.Meta.Research.MaxAtomicitySelectorTransport.subset_equiv' depends on axioms: [Quot.sound]
+'Classicism.Meta.Research.MaxAtomicitySelectorTransport.graphApp_equiv' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.Research.MaxAtomicitySelectorTransport.pullbackPresentation' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.Research.MaxAtomicitySelectorTransport.adequate_of_canonical' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicitySelectorTransport.adequate_of_canonical_iff' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

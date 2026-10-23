@@ -1,0 +1,53 @@
+Classicism/Results/Research/AtomicProbabilityScalar.lean:86:28: error: Invalid field notation: Function `sum` does not have a usable parameter of type `MassScalar ...` for which to substitute `s`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Classicism/Results/Research/AtomicProbabilityScalar.lean:90:0: error: Not a definitional equality: the left-hand side
+  s.sum f (a :: xs)
+is not definitionally equal to the right-hand side
+  s.add (f a) (s.sum f xs)
+Classicism/Results/Research/AtomicProbabilityScalar.lean:91:52: error: Type mismatch
+  rfl
+has type
+  ?m.9 = ?m.9
+but is expected to have type
+  s.sum f (a :: xs) = s.add (f a) (s.sum f xs)
+Classicism/Results/Research/AtomicProbabilityScalar.lean:100:4: error: 'change' tactic failed, pattern
+  s.add (f a) (s.sum f xs) = s.add (g a) (s.sum g xs)
+is not definitionally equal to target
+  s.sum f (a :: xs) = s.sum g (a :: xs)
+Classicism/Results/Research/AtomicProbabilityScalar.lean:104:8: warning: declaration uses `sorry`
+Classicism/Results/Research/AtomicProbabilityScalar.lean:115:8: warning: declaration uses `sorry`
+Classicism/Results/Research/AtomicProbabilityScalar.lean:131:4: error: 'change' tactic failed, pattern
+  s.add (f a) (s.sum f (xs ++ ys)) = s.add (s.add (f a) (s.sum f xs)) (s.sum f ys)
+is not definitionally equal to target
+  s.sum f (a :: xs ++ ys) = s.add (s.sum f (a :: xs)) (s.sum f ys)
+Classicism/Results/Research/AtomicProbabilityScalar.lean:140:19: error: Type mismatch
+  add_left_comm s (f b) (f a) (s.sum f xs)
+has type
+  s.add (f b) (s.add (f a) (s.sum f xs)) = s.add (f a) (s.add (f b) (s.sum f xs))
+but is expected to have type
+  s.sum f (b :: a :: xs) = s.sum f (a :: b :: xs)
+Classicism/Results/Research/AtomicProbabilityScalar.lean:158:8: error: Application type mismatch: The argument
+  le_add_of_nonnegative_left s (hn b List.mem_cons_self) (s.sum f xs)
+has type
+  s.le (s.sum f xs) (s.add (f b) (s.sum f xs))
+but is expected to have type
+  s.le (s.sum f xs) (s.sum f (b :: xs))
+in the application
+  s.le_trans (ih htail hat) (le_add_of_nonnegative_left s (hn b List.mem_cons_self) (s.sum f xs))
+Classicism/Results/Research/AtomicProbabilityScalar.lean:167:22: error: Invalid field notation: Function `nsmul` does not have a usable parameter of type `MassScalar ...` for which to substitute `s`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Classicism/Results/Research/AtomicProbabilityScalar.lean:174:4: error: 'change' tactic failed, pattern
+  s.add x (s.sum (fun x_1 => x) xs) = s.add x (s.nsmul x xs.length)
+is not definitionally equal to target
+  s.sum (fun x_1 => x) (a :: xs) = s.nsmul x (a :: xs).length
+Classicism/Results/Research/AtomicProbabilityScalar.lean:177:8: warning: declaration uses `sorry`
+Classicism/Results/Research/AtomicProbabilityScalar.lean:188:24: error: Application type mismatch: The argument
+  le_add_of_nonnegative_left s hx ?m.29
+has type
+  s.le ?m.29 (s.add x ?m.29)
+but is expected to have type
+  s.le (s.nsmul x m✝) (s.nsmul x m✝.succ)
+in the application
+  s.le_trans ih (le_add_of_nonnegative_left s hx ?m.29)

@@ -1,0 +1,26 @@
+Classicism/Results/Research/MaxAtomicitySlalomThinning.lean:49:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+'Classicism.Meta.Research.MaxAtomicitySlalomThinning.monochromatic_embedding' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicitySlalomThinning.thin_power' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicitySlalomThinning.prod_growthN' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicitySlalomThinning.card_color' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicitySlalomThinning.thin_growth' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicitySlalomThinning.thin_growth_coordinates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

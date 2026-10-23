@@ -1,0 +1,33 @@
+Classicism/Results/Research/MaxAtomicityJechShelahFusion.lean:72:4: error: Type mismatch
+  F.decreasing n
+has type
+  F.tree (n + 1) ≤ F.tree n
+but is expected to have type
+  s ∈ (F.tree (n + 1)).tree → s ∈ (F.tree n).tree
+Classicism/Results/Research/MaxAtomicityJechShelahFusion.lean:142:38: error: Application type mismatch: The argument
+  hf hij
+has type
+  inc i = inc j
+but is expected to have type
+  i = j
+in the application
+  congrArg Fin.val (hf hij)
+'Classicism.Meta.Research.MaxAtomicityJechShelahFusion.extension_at_level' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahFusion.FusionSequence.agree_below' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahFusion.FusionSequence.survives_later' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahFusion.FusionSequence.fuse' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahFusion.FusionSequence.fuse_le' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

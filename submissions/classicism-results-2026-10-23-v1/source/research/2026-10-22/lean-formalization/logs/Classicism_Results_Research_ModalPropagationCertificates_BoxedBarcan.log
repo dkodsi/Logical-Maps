@@ -1,0 +1,44 @@
+Classicism.Research.ModalPropagationConsequences.sl_rc_necessary_barcan_relational ⟶ Classicism.Research.ModalPropagationConsequences.sl_rc_necessary_barcan_relational.rule : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.StrongLeibniz.quoted (σ' ⇒ Classicism.Meta.RTy.t))
+      (Classicism.Meta.Term.imp
+        (Classicism.P.StrongLeibniz.quoted
+          (Classicism.Meta.Ty.rel (Classicism.Meta.Ty.rel (σ' ⇒ Classicism.Meta.RTy.t) ⇒ Classicism.Meta.RTy.t) ⇒
+            Classicism.Meta.RTy.t))
+        (Classicism.Meta.Term.imp
+          (Classicism.P.RigidComprehension.quoted
+            (Classicism.Meta.Ty.rel (σ' ⇒ Classicism.Meta.RTy.t) ⇒ Classicism.Meta.RTy.t))
+          (Classicism.Meta.Term.imp
+            (Classicism.P.RigidComprehension.quoted
+              (Classicism.Meta.Ty.rel (Classicism.Meta.Ty.rel (σ' ⇒ Classicism.Meta.RTy.t) ⇒ Classicism.Meta.RTy.t) ⇒
+                Classicism.Meta.RTy.t))
+            (Classicism.P.NecBarcanRelational.quoted (σ' ⇒ Classicism.Meta.RTy.t))))))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.ModalPropagationConsequences.sl_rc_necessary_barcan_relational ⟶ Classicism.Research.ModalPropagationConsequences.sl_rc_necessary_barcan_relational.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.StrongLeibniz.quoted (σs ⇒* Classicism.Meta.RTy.t))
+      (Classicism.Meta.Term.imp
+        (Classicism.P.StrongLeibniz.quoted
+          (Classicism.Meta.Ty.rel (Classicism.Meta.Ty.rel (σs ⇒* Classicism.Meta.RTy.t) ⇒ Classicism.Meta.RTy.t) ⇒
+            Classicism.Meta.RTy.t))
+        (Classicism.Meta.Term.imp
+          (Classicism.P.RigidComprehension.quoted
+            (Classicism.Meta.Ty.rel (σs ⇒* Classicism.Meta.RTy.t) ⇒ Classicism.Meta.RTy.t))
+          (Classicism.Meta.Term.imp
+            (Classicism.P.RigidComprehension.quoted
+              (Classicism.Meta.Ty.rel (Classicism.Meta.Ty.rel (σs ⇒* Classicism.Meta.RTy.t) ⇒ Classicism.Meta.RTy.t) ⇒
+                Classicism.Meta.RTy.t))
+            (Classicism.P.NecBarcanRelational.quoted (σs ⇒* Classicism.Meta.RTy.t))))))
+Classicism.Research.ModalPropagationConsequences.sl_rc_necessary_barcan_relational ⟶ Classicism.Research.ModalPropagationConsequences.sl_rc_necessary_barcan_relational.entails : Classicism.P.StrongLeibniz.schema ∪
+        Classicism.P.StrongLeibniz.schema ∪
+      Classicism.P.RigidComprehension.schema ∪
+    Classicism.P.RigidComprehension.schema ⟹
+  fun a => ∃ σ', σ'.Closed ∧ a = Classicism.P.NecBarcanRelational.quoted (σ' ⇒ Classicism.Meta.RTy.t)
+Classicism.Research.ModalPropagationConsequences.sl_rc_necessary_barcan_relational ⟶ Classicism.Research.ModalPropagationConsequences.sl_rc_necessary_barcan_relational.listEntails : Classicism.P.StrongLeibniz.schema ∪
+        Classicism.P.StrongLeibniz.schema ∪
+      Classicism.P.RigidComprehension.schema ∪
+    Classicism.P.RigidComprehension.schema ⟹
+  fun a =>
+  ∃ σs, Classicism.Meta.Ty.AllClosed σs ∧ a = Classicism.P.NecBarcanRelational.quoted (σs ⇒* Classicism.Meta.RTy.t)

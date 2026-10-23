@@ -1,0 +1,24 @@
+import Classicism.Results.Research.RigidityClosureResearchAtomicPowerCertificates
+import Classicism.Results.Research.RigidityClosureResearchUniform
+
+#classicism_audit Classicism.Results.Research.RigidityClosureResearchUniform
+#classicism_types_audit Classicism.Results.Research.RigidityClosureResearchUniform
+#classicism_schema Classicism.Research.RigidityClosure.UniformWeakRigidComprehension
+  Classicism.Research.RigidityClosure.UniformRigidComprehension
+#classicism_derive Classicism.Research.RigidityClosure.actualEvaluator_implies_nd
+  Classicism.Research.RigidityClosure.uniform_weak_actual_evaluator_at
+#classicism_certify Classicism.Research.RigidityClosure.uniform_weak_implies_comprehension
+  Classicism.Research.RigidityClosure.uniform_rigid_implies_comprehension
+  Classicism.Research.RigidityClosure.nd_weak_comprehension_uniform
+  Classicism.Research.RigidityClosure.nd_rigid_comprehension_uniform
+  Classicism.Research.RigidityClosure.uniform_weak_t_implies_nd
+  Classicism.Research.RigidityClosure.uniform_rigid_t_implies_nd
+#classicism_entails Classicism.Research.RigidityClosure.uniform_weak_implies_comprehension
+  Classicism.Research.RigidityClosure.uniform_rigid_implies_comprehension
+  Classicism.Research.RigidityClosure.nd_weak_comprehension_uniform
+  Classicism.Research.RigidityClosure.nd_rigid_comprehension_uniform
+  Classicism.Research.RigidityClosure.uniform_weak_t_implies_nd
+  Classicism.Research.RigidityClosure.uniform_rigid_t_implies_nd
+#check Classicism.Research.RigidityClosure.nd_weak_comprehension_uniform.listRule
+#check Classicism.Research.RigidityClosure.nd_rigid_comprehension_uniform.listRule
+#print axioms Classicism.Research.RigidityClosure.nd_weak_comprehension_uniform.listRule

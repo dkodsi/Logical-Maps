@@ -1,0 +1,597 @@
+{
+  "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "modules": [
+    "Classicism.Models.OldNewSeparation",
+    "Classicism.Models.OldNewFutureBC",
+    "research/2026-10-22/lean-formalization/StrongPossibilityConsequencesSchemas.lean"
+  ],
+  "complete": false,
+  "checked": [
+    {
+      "module": "Classicism.Syntax.Types",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "07df345faa0bc772732f7d92d2d70bc9e98684e0474a3e9513213d52a1cd202c"
+    },
+    {
+      "module": "Classicism.Syntax.Term",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "c985f9d073087c935e2b64f9c0503b909a3a3d2bc6603871661e80a7aaa0bc76"
+    },
+    {
+      "module": "Classicism.Syntax.Conversion",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "3452ccbab9592b35912b00a0c40855b2ad68d387526de7e565970846e0e33a3d"
+    },
+    {
+      "module": "Classicism.Syntax.Derivation",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "9397e2f2e7a7a13c11a5ca5126b71930a51abeb2ddae0a2c9ff0ea68d35fc521"
+    },
+    {
+      "module": "Classicism.Syntax.Axioms",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "baf39452832f2901859d4de2edabde78f03d2590f27d96357995f407164916ae"
+    },
+    {
+      "module": "Classicism.Syntax.Entailment",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "36bb45c1856e08cc774815f8dac2285fdb5c54ff61a3b285d7923e0b4bf00a3a"
+    },
+    {
+      "module": "Classicism.Semantics.Env",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "33c350a04f4d94ee85bff12cb1dd3b63ad47b833b90fcda057de08e131e10f76"
+    },
+    {
+      "module": "Classicism.Semantics.Intensional",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "62811ef786b662667d50d62a58a2bd42e013ef99ef3246c0c154452ab5636a3d"
+    },
+    {
+      "module": "Classicism.Semantics.IntensionalSoundness",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "2fdee261d3c061dd8e56d77a5c7c575b659224ba9b0be2c0416621bf3847d99f"
+    },
+    {
+      "module": "Classicism.Syntax.Sentences",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "99f61f2a724045627ac8262c1bd4674270f5fe639a6e5d91d6e624d57bceb172"
+    },
+    {
+      "module": "Classicism.Semantics.IntensionalFacts",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "eb2fbc6cc9a5353c6376ea21d121d027498bd5877ed2617f5e8448c3d21ff1bc"
+    },
+    {
+      "module": "Classicism.Semantics.IntensionalFull",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "008725bd0728907cd09d0ea1919b7d04a38bb00962506d4bf35809b5c62ec110"
+    },
+    {
+      "module": "Classicism.Syntax.Constants",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "b16e8ec7befcb260e760bfb02dc26c42f2b206d7cd6bde907ad6752457881796"
+    },
+    {
+      "module": "Classicism.Semantics.IdeallyFull",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "dff031e4e170b9b00ac4f3b4daa9ddd394649d8ce4a34c9f9537a0c0e739fd78"
+    },
+    {
+      "module": "Classicism.Semantics.Symmetric",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "67b8148c122d92ea9e6924a2b41cab1791ef8abf7b99335e4a75dc5ac98e77b3"
+    },
+    {
+      "module": "Classicism.Semantics.Denotation",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "eff86dd697694b0b0552900ef16a6cbe870cf0a65f248fca15952a97bc63816d"
+    },
+    {
+      "module": "Classicism.Core",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "bf319a4b6f0860cf44de8718088ef6b9d7401f650a236ca60f33fdb03dc187d1"
+    },
+    {
+      "module": "Classicism.Equivalence",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "47328654956b87126fce1056a3924b466857f027d5772bfa50581ea56da8bce6"
+    },
+    {
+      "module": "Classicism.Booleanism",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "cb18bac223dc4fb141f513b499a14b3bca23cc853d2da4d3ef750cb536e0110e"
+    },
+    {
+      "module": "Classicism.Identities",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "52cc2e4a92a63d391a1d108f36c39a1d41a8388e7e3015f32d01a4abc3aa1e84"
+    },
+    {
+      "module": "Classicism.Strict.Axiomatization",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "26c09dcfb5b9a0c3cefcb2a25246a01b7ae9d084e761c8866c644a540d782804"
+    },
+    {
+      "module": "Classicism.Strict.Algebra",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "c9214afa8d8b6899b3d245b282b3a9c44daa0a47ed3e94efe3834b67a114bf58"
+    },
+    {
+      "module": "Classicism.Strict.Vocabulary",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "467ae3d714872536770d21d063c7e1e83f63297d0c8b452e75469fa0290b1a16"
+    },
+    {
+      "module": "Classicism.Strict.Tautology",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "c70419fb5529a9717151f5b81a2b9fbf2848936d455ad6f7a1b7335d2b6799a7"
+    },
+    {
+      "module": "Classicism.Strict.Quantifier",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "691d5dc3ef34450dc522ca39fe7348ac199c7ed87095a9077f471582748129f7"
+    },
+    {
+      "module": "Classicism.Strict.Rules",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "58bd6a80ff5f8f1c58e3d9a8e4644e395eb3766c1ba67f7e5a23843fcb0c755c"
+    },
+    {
+      "module": "Classicism.Strict.Primitives",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "244b8929507936522e29597d10f6a6353d7c1eefb641a9ddfb38ddc4356ace4e"
+    },
+    {
+      "module": "Classicism.Tools.Check",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "0ed26669b10e25813fb07f83467e696b96c5336cdaa7021d841c4a4a398219de"
+    },
+    {
+      "module": "Classicism.Strict.Transform",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "fe34235ad30530a69cd45bcee66c7cf88d9f11e898bf6e0e24a618551aba1f6a"
+    },
+    {
+      "module": "Classicism.Paper",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "703a03b88030dc89423cc400ae3f587c677c4973326193ae9fe8fb6b3ebb3ce8"
+    },
+    {
+      "module": "Classicism.Modal",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "7efa9607da23b10fcbbfe957f0084b531b8ff5161287098440ffc077176d5a85"
+    },
+    {
+      "module": "Classicism.Order",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "bf9d1f4bfa125239cab96b85a8512eb8ec1537fb2b4519dc6f74df5870a7c15d"
+    },
+    {
+      "module": "Classicism.Pointwise",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "6735702aec084b89ecb8a2c31ed255e3c531cb1f7012a073bec768d664e64fe6"
+    },
+    {
+      "module": "Classicism.Strict.Mirror",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "ea0889cbbc99eedfd999b55329108aae5c5d4e6259dc3ae12457f4c4f779496b"
+    },
+    {
+      "module": "Classicism.Semantics.Relational",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "b962fd9f7c8ec2a22c5e29c5b00cfcf1fc24d35a0978ed47d2aa34654ded46d4"
+    },
+    {
+      "module": "Classicism.Tools.Quote",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "9613850997c726878bd51b7e58016c6b2f50f763933bab6ec94c4330fe671d38"
+    },
+    {
+      "module": "Classicism.Syntax.Normalize",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "bd101ebbee31778c6e9e7c6fa434b4f8e97d8fa8534af9d418761e1b3388e77f"
+    },
+    {
+      "module": "Classicism.Tools.Translate",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "40017207876e46514f5ed7e95922ace2ce5ee799d615f65131fd3ba0cbbc3c68"
+    },
+    {
+      "module": "Classicism.Syntax.Blocks",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "ace44a5da8d7cf0bd3f90767939f5fe9139b5a32272439d25d5933cf460aa3ab"
+    },
+    {
+      "module": "Classicism.Syntax.Vectorize",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "8a7de42110af248f3320a14b6c38ddd1053cd71512c00e2178df48e1dfc2d202"
+    },
+    {
+      "module": "Classicism.Syntax.VectorizeDerivable",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "72b92b0ac721d9e9325a09dc9e6472734af8c53f34e0b9cab7773d03c0b48258"
+    },
+    {
+      "module": "Classicism.Tools.Schema",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "5f27e32817ba6ea57b7a440066c4d7b8c8d6c7092dccbd5692ad9144cfc26c93"
+    },
+    {
+      "module": "Classicism.Comprehension",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "3dd28b615f6e626aeeb09ea799dce9195ebe7cc1ec92049938ca05254c66feed"
+    },
+    {
+      "module": "Classicism.Lattice",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "baaf4040a505a6a8aca73065d4b0c2bca51d50c2c72f77a5c4f2e0bb7623be5d"
+    },
+    {
+      "module": "Classicism.Principles.Base",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "611072ae4ad935f6534d2cb43badd58fb4ce87a6e02109518d36bd0c9161167f"
+    },
+    {
+      "module": "Classicism.Principles.Coarse",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "db52885b507177608d61ff39e01e02e24d8d1d81ee821faee81250cedd8c446c"
+    },
+    {
+      "module": "Classicism.Principles.Extensionality",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "6e299eeef63fcb058412477bb392fae9d86423502d068873a2bc7244eec8246c"
+    },
+    {
+      "module": "Classicism.Cardinality",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "6842f38f73b11006c34fb39789e84c26593720451b17b1ee7a41c1283b9ab9ee"
+    },
+    {
+      "module": "Classicism.Principles.Lattice",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "b19320cf691041e4fb6bb09a394185f686e760e905575a527e80c16cbdfdacb2"
+    },
+    {
+      "module": "Classicism.Principles.Instances",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "d5bb92bcd70779d1918d476e1262cfd376832befa8b25a9275e060ae7f6b37af"
+    },
+    {
+      "module": "Classicism.Principles.Comprehension",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "417b10ec2fc732c8f6d67efca2e8a24676c51396c03c01f41c96d486c4538b1a"
+    },
+    {
+      "module": "Classicism.Principles.Choice",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "88df11dc5473c04b4925dbaede2bced4f96439d274b4ea67eea952efb12e838c"
+    },
+    {
+      "module": "Classicism.Principles.Infinity",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "2316568ed234f70ae8e780c70537bc3e971225449d7be587c351d3bbc23efea6"
+    },
+    {
+      "module": "Classicism.Principles.Schematic",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "3ee733d5abfc740d8f4bc83a487cf0e621d1fcff36802c675c7bb54c9fc3f687"
+    },
+    {
+      "module": "Classicism.Principles",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "abbf7fa70a160b848dd36cea12308d62f38fd5b8bf1fac0c106bce0ab777acd4"
+    },
+    {
+      "module": "Classicism.Results.Records.Base",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "295a6e188e7423dc306fbe822ae6311c6a707062593aed0bb2654d58fb81d7b0"
+    },
+    {
+      "module": "Classicism.Results.Records.Coarse",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "c6fe1c14fe0f5ccfe14ba3f23613a38934c40b7a29f067bff1c03d64083e5214"
+    },
+    {
+      "module": "Classicism.Results.Records.Extensionality",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "3380506cb53f05d737b5aec55a46aeee4b41a1760e69628d7285d433bd51c39a"
+    },
+    {
+      "module": "Classicism.Results.Records.Comprehension",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "0ad1a74ce6b5abea33ff446522a0dc37f85894689f0acd21b14cf40b849dd8c7"
+    },
+    {
+      "module": "Classicism.Results.Records.Lattice",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "09fa0f1397364e0e232732c4184dab9058e624a4358f2effe54e5abe4e2a3817"
+    },
+    {
+      "module": "Classicism.Results.Records.Choice",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "23ada448864be2c1af13509f5c697fd9e1867ddce1e3343cefdd5b3defe04a5c"
+    },
+    {
+      "module": "Classicism.Results.Records.C5",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "ab420dfacb60e309fadacf706d0a1825581c533d81a8ffc8379b79abc39e82b1"
+    },
+    {
+      "module": "Classicism.Results.Records.Infinity",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "82b3d25d700e9bf1cfc0575d4f3f0bc588226bd0fed81a0d253493f1c055b1f4"
+    },
+    {
+      "module": "Classicism.Results.Records",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "df09ceed26c77933ea0da0ecc4ea05f422737f8e53c7a4837d3066fcb7856ec8"
+    },
+    {
+      "module": "Classicism.Certified.Quoted",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "2f7c915fbacc238b4ba8ee4757e33f5a306cd72527ad20234e662110fe6adfc0"
+    },
+    {
+      "module": "Classicism.Syntax.ClosedTypes",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "1afa431c973784f384ea866b7537c05288597b1e058113e54644c045c9841617"
+    },
+    {
+      "module": "Classicism.Certified.Schemas",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "b81b685d09a2075e9c2c1a5e517da91f6dd17c388adc14314609aa4e8ea43219"
+    },
+    {
+      "module": "Classicism.Models.Functions",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "7051648fff839409cb641ad2e712484babcc65c2ca76b5a760ae1d1e3ef271a6"
+    },
+    {
+      "module": "Classicism.Models.MonoidModel",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "a3473fac9bf86cf7c36456d32226ab417c4bea386ee5f26a9d78fbab9b3aa407"
+    },
+    {
+      "module": "Classicism.Syntax.Pure",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "ee848fb9448ed42e8a44b37d6fa932c2615d47bc05f1cc140256bfe77ab3a3e2"
+    },
+    {
+      "module": "Classicism.Syntax.SentenceSchemas",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "d4468743200ccf4b950dadad63e98441b14c38df1cab995027ee535520ede3a0"
+    },
+    {
+      "module": "Classicism.Syntax.Conservativity",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "bb597e5346d8eaf1eae7c21c3ed78845641e1e4e1f19c2c2b77459883aa84fb5"
+    },
+    {
+      "module": "Classicism.Semantics.IntensionalTheory",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "2ff2349537cf4eb12671a6510b2a8cf202211df667c6e1bcf6d28af27562a66a"
+    },
+    {
+      "module": "Classicism.Semantics.IntensionalProperties",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "b258d790aafb53cec8e9c01f020b933aa742070b732edd5c773cefd6cb820667"
+    },
+    {
+      "module": "Classicism.Semantics.FullModels",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "f6057ccc8826b7856372a846717a6b2a62fac01d0ff93a9a15f09c8a95f7d20f"
+    },
+    {
+      "module": "Classicism.Syntax.PossibilityPlus",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "f9bc4b3ea1cff02fa462b85fcf530737c6efac93a20b1af7b43263f17c7dfdb9"
+    },
+    {
+      "module": "Classicism.Syntax.Infinity",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "546eb0dbef52b9640b8a37bad869119cd68663b3ce357643728c48b36b7aea83"
+    },
+    {
+      "module": "Classicism.Semantics.Counting",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "153cc18867b4f3ff0715e502a2162eba4d1188a589267bcf4cff542edce22979"
+    },
+    {
+      "module": "Classicism.Semantics.IntensionalExamples",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "4cd1a5bf4bbccc332612db83091f5a42e582d23a516c586e99524b5fd182e485"
+    },
+    {
+      "module": "Classicism.Semantics.Arrows",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "7ca8e3d47d4fab1509d1f6ddad1dbf5ada6d5fb6f4576a2e1f021394a4bcd3c2"
+    },
+    {
+      "module": "Classicism.Semantics.Numerals",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "217480d78d80e7e2796e4b616e5bf9531229a78b2396b6f5457c8540581561f4"
+    },
+    {
+      "module": "Classicism.Models.Conditions",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "d4381d6cce8b981f332ed5c1cdcc6c323ea082f21f72960f30f648c15072f3ad"
+    },
+    {
+      "module": "Classicism.Models.SymBase",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "9874d1aa02e5cddf39034e93a07586e0700f32e804da57e53c7e7d99479094af"
+    },
+    {
+      "module": "Classicism.Models.Monoids",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "6fcb61a43d873fcbd1300288c33a9b324f93005de4d02da83f5bd6c9a3b4a4a2"
+    },
+    {
+      "module": "Classicism.Models.PairInjCollapse",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "7f95c04671e48042026f6054345cb4871fb225b8364ae2c5e2823ce3b39758b8"
+    },
+    {
+      "module": "Classicism.Models.OldNewBase",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "ca1d79332e595333e127b3f3c6b2b5603a85841c5965f22f19b4ab65193820ff"
+    },
+    {
+      "module": "Classicism.Models.OldNewPairs",
+      "seconds": 28.1,
+      "exit_code": 0,
+      "fingerprint": "a9a7b35adf691cb74743f186ed8a032b57c41dec5e9d355c443671eac8c22223",
+      "log": "logs/runs/20261023T040926613001Z/Classicism_Models_OldNewPairs.log"
+    },
+    {
+      "module": "Classicism.Models.OldNewND",
+      "seconds": 27.81,
+      "exit_code": 0,
+      "fingerprint": "d7dcd3446dad3fb40a2fe929cf1e41a321a2972abf7ac74568383637a48f88fa",
+      "log": "logs/runs/20261023T040926613001Z/Classicism_Models_OldNewND.log"
+    },
+    {
+      "module": "Classicism.Models.OldNewPredicates",
+      "seconds": 23.66,
+      "exit_code": 1,
+      "fingerprint": "1110143c431bbde7f280ec80241852042d56a2958e1e99362322ae4ffff7a7c7",
+      "log": "logs/runs/20261023T040926613001Z/Classicism_Models_OldNewPredicates.log"
+    },
+    {
+      "module": "Classicism.Models.OldNewFailures",
+      "skipped": "dependency failed",
+      "exit_code": 125,
+      "fingerprint": "fb6834f7da2e18b7f3cc454e3a8b9fecd850682a0af7fe9046fe3869e437d9c7"
+    },
+    {
+      "module": "Classicism.Models.OldNewSeparation",
+      "skipped": "dependency failed",
+      "exit_code": 125,
+      "fingerprint": "bf14c9e71f6c7b6a71e378ab60d4e370c08679e2a07844317c353520fe89085a"
+    },
+    {
+      "module": "Classicism.Models.OldNewFutureBC",
+      "skipped": "dependency failed",
+      "exit_code": 125,
+      "fingerprint": "2308f1cc5042da1016c18d974633afa6db8aa34c3ff0f1175fd6a80e918b12b2"
+    },
+    {
+      "module": "Classicism.Tools.TypeSystem",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "0b4ff2acad9f3b35826ce9f5e3ff1fae389a50ba049ab2d1cc56a571ff9faeb1"
+    },
+    {
+      "module": "StrongPossibilityConsequencesC",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "c97d1f86740cf58a9023743943b345a77e5553578c9e841cfeb940f319e5d0e0"
+    },
+    {
+      "module": "StrongPossibilityConsequencesStability",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "a9ce2cb5b1490a9d5f2b4d45d85bc3ce839070fa9478bf863d7662e3f6621c2c"
+    },
+    {
+      "module": "Classicism.Syntax.StrongPossibility",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "d1b3823a765db3ff4286013b1285390948561c033709d8c229f8945f6befc514"
+    },
+    {
+      "module": "StrongPossibilityConsequencesSchemas",
+      "seconds": 7.84,
+      "exit_code": 0,
+      "fingerprint": "48954d49e0bc2c1c48ca8e406bd5e87bd842f53c61baa8ef71ea1fe2a3e22ba9",
+      "log": "logs/runs/20261023T040926613001Z/StrongPossibilityConsequencesSchemas.log"
+    }
+  ]
+}

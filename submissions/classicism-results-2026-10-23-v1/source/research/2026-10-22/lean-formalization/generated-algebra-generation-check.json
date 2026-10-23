@@ -1,0 +1,26 @@
+{
+  "valid_generation_cases": [
+    {
+      "namespace": "Classicism.Research.EmptySignature",
+      "sorts": 0,
+      "operations": 0,
+      "source_bytes": 689
+    },
+    {
+      "namespace": "Classicism.Research.EmptyGeneration",
+      "sorts": 2,
+      "operations": 0,
+      "source_bytes": 8571
+    },
+    {
+      "namespace": "Classicism.Research.Quaternary",
+      "sorts": 1,
+      "operations": 2,
+      "source_bytes": 10266
+    }
+  ],
+  "invalid_signatures_rejected": 3,
+  "saved_three_sort_source_reproducible": true,
+  "lean_executed": false,
+  "certification": "pending serial integrator"
+}

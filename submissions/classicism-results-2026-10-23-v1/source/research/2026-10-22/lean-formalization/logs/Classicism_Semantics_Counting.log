@@ -1,0 +1,7 @@
+Classicism/Semantics/Counting.lean:65:25: warning: This simp argument is unused:
+  Term.closedTypes
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Term.distinct, closedTypes_neAll hσ _ h1 n xs.tail h2, closedTypes_distinct hσ n xs.tail h2]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

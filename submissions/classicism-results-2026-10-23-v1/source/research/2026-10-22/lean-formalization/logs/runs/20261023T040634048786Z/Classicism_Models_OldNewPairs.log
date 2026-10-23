@@ -1,0 +1,122 @@
+Classicism/Models/OldNewPairs.lean:56:6: error: Type mismatch: After simplification, term
+  AgreeOn.comp_right cat.De hag s
+ has type
+  @AgreeOn cat.Ob cat.instSmallCategoryOb cat.De E V S (k ≫ s) ((canon V ≫ g) ≫ s)
+but is expected to have type
+  @AgreeOn cat.Ob cat.instSmallCategoryOb cat.De E V S (k ≫ s) (canon V ≫ g ≫ s)
+Classicism/Models/OldNewPairs.lean:57:10: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Args.map ?inner ?ρ (?j ≫ ?k) ?a
+in the target expression
+  Args.map model.inner ρ (g ≫ s) b = ⟨V, (Args.map (SymT base.F.De base.G base.J) ρ s a, k ≫ s)⟩.snd.1
+
+case refine_2.refine_2
+ρ : RTy
+S : Set ℕ
+hS : S.Finite
+P : PairData ρ
+V : base.F.Ob
+a : Args (SymT base.F.De base.G base.J) ρ V
+k : base.W₀ ⟶ V
+s : V ⟶ V
+hs : s ∈ base.G V
+g : ⟨V, (a, k)⟩.fst ⟶ ⟨V, (a, k)⟩.fst
+hg : g ∈ syms ⟨V, (a, k)⟩.fst
+hag : AgreeOn cat.De S ⟨V, (a, k)⟩.snd.2 (canon ⟨V, (a, k)⟩.fst ≫ g)
+b : Tup ρ ⟨V, (a, k)⟩.fst
+hb : P ⟨V, (a, k)⟩.fst b
+he : Args.map model.inner ρ g b = ⟨V, (a, k)⟩.snd.1
+⊢ Args.map model.inner ρ (g ≫ s) b = ⟨V, (Args.map (SymT base.F.De base.G base.J) ρ s a, k ≫ s)⟩.snd.1
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    ⟨V, (Args.map (SymT base.F.De base.G base.J) ρ s a, k ≫ s)⟩
+  has type
+    @Sigma base.F.Ob fun V => Args (SymT base.F.De base.G base.J) ρ V × (base.W₀ ⟶ V)
+  but is expected to have type
+    @Sigma cat.Ob fun V => Args model.inner ρ V × (E ⟶ V)
+  in the application
+    ⟨V, (Args.map (SymT base.F.De base.G base.J) ρ s a, k ≫ s)⟩.fst
+Classicism/Models/OldNewPairs.lean:64:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ⟨V, (a, canon V)⟩.snd.1
+in the target expression
+  P V a
+
+case mp
+ρ : RTy
+S : Set ℕ
+P : PairData ρ
+hP : Invariant S P
+V : cat.Ob
+a : Tup ρ V
+g : ⟨V, (a, canon V)⟩.fst ⟶ ⟨V, (a, canon V)⟩.fst
+hg : g ∈ syms ⟨V, (a, canon V)⟩.fst
+hag : AgreeOn cat.De S ⟨V, (a, canon V)⟩.snd.2 (canon ⟨V, (a, canon V)⟩.fst ≫ g)
+b : Tup ρ ⟨V, (a, canon V)⟩.fst
+hb : P ⟨V, (a, canon V)⟩.fst b
+he : Args.map model.inner ρ g b = ⟨V, (a, canon V)⟩.snd.1
+⊢ P V a
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  function expected
+    P V a
+Classicism/Models/OldNewPairs.lean:70:33: error: Application type mismatch: The argument
+  S
+has type
+  Set ℕ
+but is expected to have type
+  Set (model.Dom ?m.4 Ty.e)
+in the application
+  model.PinnedO (Ty.rel ρ) S
+Classicism/Models/OldNewPairs.lean:77:33: error: Application type mismatch: The argument
+  S
+has type
+  Set ℕ
+but is expected to have type
+  Set (model.Dom ?m.4 Ty.e)
+in the application
+  model.PinnedO (Ty.rel ρ) S
+Classicism/Models/OldNewPairs.lean:89:8: warning: declaration uses `sorry`
+Classicism/Models/OldNewPairs.lean:100:4: warning: Unused tactic linter: `have eF := profile_approx hpF hg hgi (fun x hx => hag x (Or.inl hx)) a` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Classicism/Models/OldNewPairs.lean:101:4: warning: Unused tactic linter: `have eG := profile_approx hpG hg hgi (fun x hx => hag x (Or.inr hx)) a` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Classicism/Models/OldNewPairs.lean:102:4: warning: Unused tactic linter: `exact eG.2 (hc V (eF.1 ha))` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Classicism/Models/OldNewPairs.lean:101:4: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Classicism/Models/OldNewPairs.lean:102:4: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Classicism/Models/OldNewPairs.lean:128:64: error: Application type mismatch: The argument
+  S
+has type
+  Set ℕ
+but is expected to have type
+  Set (model.Dom ?m.4 Ty.e)
+in the application
+  model.PinnedO (Ty.rel (Ty.rel ρ ⇒ RTy.t)) S
+Classicism/Models/OldNewPairs.lean:154:8: warning: declaration uses `sorry`
+Classicism/Models/OldNewPairs.lean:181:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  @Premodel.Holds Signature.pure cat.Ob cat.instSmallCategoryOb model [] ?W ?h (Sentence.bc ?ρ) IEnv.nil
+in the target expression
+  @Premodel.Holds Signature.pure cat.Ob cat.instSmallCategoryOb model [] E (𝟙 E) (Sentence.bc ρ) IEnv.nil
+
+ρ : RTy
+⊢ model.Holds (𝟙 E) (Sentence.bc ρ) IEnv.nil
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    𝟙 E
+  has type
+    @Quiver.Hom cat.Ob cat.instSmallCategoryOb.toQuiver E E
+  but is expected to have type
+    @Quiver.Hom cat.Ob cat.instSmallCategoryOb.toQuiver model.W₀ E
+  in the application
+    model.Holds (𝟙 E)

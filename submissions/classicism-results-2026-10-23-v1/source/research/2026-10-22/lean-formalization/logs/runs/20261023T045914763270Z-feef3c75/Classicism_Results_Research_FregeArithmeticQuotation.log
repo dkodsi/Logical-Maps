@@ -1,0 +1,80 @@
+Classicism/Results/Research/FregeArithmeticQuotation.lean:23:0: error: unsolved goals
+σ : Type
+inst✝ : Classicism.Ty σ
+σ' : Classicism.Meta.Ty
+⊢ (¬(∀
+          (x x_1 :
+            Classicism.Meta.Ty.denote (Classicism.Meta.Interp.ofDomain Classicism.e).D
+              (Classicism.Meta.Ty.rel (Classicism.Meta.Ty.rel (σ' ⇒ Classicism.Meta.RTy.t) ⇒ Classicism.Meta.RTy.t))),
+          (∀
+              (x_2 :
+                Classicism.Meta.Ty.denote (Classicism.Meta.Interp.ofDomain Classicism.e).D
+                  (Classicism.Meta.Ty.rel
+                    (Classicism.Meta.Ty.rel
+                        (Classicism.Meta.Ty.rel (σ' ⇒ Classicism.Meta.RTy.t) ⇒ Classicism.Meta.RTy.t) ⇒
+                      Classicism.Meta.RTy.t))),
+              ((x_2 fun x =>
+                    ∀ (x_3 : Classicism.Meta.Ty.denote (Classicism.Meta.Interp.ofDomain Classicism.e).D σ'), ¬x x_3) ∧
+                  ∀
+                    (x :
+                      Classicism.Meta.Ty.denote (Classicism.Meta.Interp.ofDomain Classicism.e).D
+                        (Classicism.Meta.Ty.rel
+                          (Classicism.Meta.Ty.rel (σ' ⇒ Classicism.Meta.RTy.t) ⇒ Classicism.Meta.RTy.t))),
+                    x_2 x → x_2 fun x_3 => ∃ x_4, x_3 x_4 ∧ x fun x => x_3 x ∧ ¬x = x_4) →
+                x_2 (Classicism.Meta.Var.zero.denote (Classicism.Meta.Env.cons x Classicism.Meta.Env.nil))) →
+            (∀
+                (x :
+                  Classicism.Meta.Ty.denote (Classicism.Meta.Interp.ofDomain Classicism.e).D
+                    (Classicism.Meta.Ty.rel
+                      (Classicism.Meta.Ty.rel
+                          (Classicism.Meta.Ty.rel (σ' ⇒ Classicism.Meta.RTy.t) ⇒ Classicism.Meta.RTy.t) ⇒
+                        Classicism.Meta.RTy.t))),
+                ((x fun x =>
+                      ∀ (x_2 : Classicism.Meta.Ty.denote (Classicism.Meta.Interp.ofDomain Classicism.e).D σ'), ¬x x_2) ∧
+                    ∀
+                      (x_2 :
+                        Classicism.Meta.Ty.denote (Classicism.Meta.Interp.ofDomain Classicism.e).D
+                          (Classicism.Meta.Ty.rel
+                            (Classicism.Meta.Ty.rel (σ' ⇒ Classicism.Meta.RTy.t) ⇒ Classicism.Meta.RTy.t))),
+                      x x_2 → x fun x => ∃ x_3, x x_3 ∧ x_2 fun x_4 => x x_4 ∧ ¬x_4 = x_3) →
+                  x x_1) →
+              (¬(fun x =>
+                      ∀ (x_2 : Classicism.Meta.Ty.denote (Classicism.Meta.Interp.ofDomain Classicism.e).D σ'), ¬x x_2) =
+                    fun x_2 =>
+                    ∃ x_3,
+                      x_2 x_3 ∧
+                        Classicism.Meta.Var.zero.denote (Classicism.Meta.Env.cons x Classicism.Meta.Env.nil) fun x =>
+                          x_2 x ∧ ¬x = x_3) ∧
+                (((fun x_2 =>
+                      ∃ x_3,
+                        x_2 x_3 ∧
+                          Classicism.Meta.Var.zero.denote (Classicism.Meta.Env.cons x Classicism.Meta.Env.nil) fun x =>
+                            x_2 x ∧ ¬x = x_3) =
+                    fun x => ∃ x_2, x x_2 ∧ x_1 fun x_3 => x x_3 ∧ ¬x_3 = x_2) →
+                  Classicism.Meta.Var.zero.denote (Classicism.Meta.Env.cons x Classicism.Meta.Env.nil) = x_1)) =
+        ((∀
+            (x :
+              Classicism.Meta.Ty.denote (Classicism.Meta.Interp.ofDomain Classicism.e).D
+                (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t)),
+            Classicism.Meta.Var.zero.denote (Classicism.Meta.Env.cons x Classicism.Meta.Env.nil)) ∧
+          ¬∀
+              (x :
+                Classicism.Meta.Ty.denote (Classicism.Meta.Interp.ofDomain Classicism.e).D
+                  (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t)),
+              Classicism.Meta.Var.zero.denote (Classicism.Meta.Env.cons x Classicism.Meta.Env.nil))) =
+    ¬(∀ (m n : (Classicism.Meta.Ty.denote Classicism.e σ' → Prop) → Prop),
+          (∀ (W : ((Classicism.Meta.Ty.denote Classicism.e σ' → Prop) → Prop) → Prop),
+              (W (Classicism.ZeroCard (Classicism.Meta.Ty.denote Classicism.e σ')) ∧
+                  ∀ (Y : (Classicism.Meta.Ty.denote Classicism.e σ' → Prop) → Prop), W Y → W (Classicism.SucCard Y)) →
+                W m) →
+            (∀ (W : ((Classicism.Meta.Ty.denote Classicism.e σ' → Prop) → Prop) → Prop),
+                (W (Classicism.ZeroCard (Classicism.Meta.Ty.denote Classicism.e σ')) ∧
+                    ∀ (Y : (Classicism.Meta.Ty.denote Classicism.e σ' → Prop) → Prop), W Y → W (Classicism.SucCard Y)) →
+                  W n) →
+              Classicism.ZeroCard (Classicism.Meta.Ty.denote Classicism.e σ') ≠ Classicism.SucCard m ∧
+                (Classicism.SucCard m = Classicism.SucCard n → m = n)) =
+        False
+Classicism/Results/Research/FregeArithmeticQuotation.lean:23:0: error: quote: Classicism.Research.FregeArithmeticQuotation.ArithmeticCondition does not reflect
+Classicism/Results/Research/FregeArithmeticQuotation.lean:30:10: error(lean.unknownIdentifier): Unknown constant `Classicism.Research.FregeArithmeticQuotation.ArithmeticCondition.term`
+Classicism/Results/Research/FregeArithmeticQuotation.lean:36:14: error(lean.unknownIdentifier): Unknown constant `Classicism.Research.FregeArithmeticQuotation.ArithmeticCondition.reflect`
+'Classicism.Meta.Research.FregeArithmeticQuotation.arithmeticI_conversion' depends on axioms: [propext, sorryAx]

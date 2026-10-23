@@ -1,0 +1,9 @@
+Classicism/Results/Research/MaxAtomicitySetSyntax.lean:72:4: error: Type mismatch: After simplification, term
+  rfl
+ has type
+  True
+but is expected to have type
+  (true && true) = true
+'Classicism.Meta.Research.MaxAtomicitySetSyntax.translate_closedTypes' depends on axioms: [propext, sorryAx]
+'Classicism.Meta.Research.MaxAtomicitySetSyntax.quoteBinary_closedTypes' depends on axioms: [propext, sorryAx]
+'Classicism.Meta.Research.MaxAtomicitySetSyntax.quoteBinary_pure' depends on axioms: [propext]

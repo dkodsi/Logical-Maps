@@ -1,0 +1,364 @@
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:120:2: error: Tactic `rfl` failed: The left-hand side
+  eval I (Term.ex (Ty.rel UP)) env
+    (eval I
+      (Term.lam
+        (Term.forall'
+          (Term.forall'
+            (Term.imp
+              (Term.conj (((Term.weaken X).weaken.weaken.app Term.v1).conj ((Term.weaken X).weaken.weaken.app Term.v0))
+                ((Term.v2.app Term.v1).eq' (Term.v2.app Term.v0)))
+              (Term.v1.eq' Term.v0)))))
+      env)
+is not definitionally equal to the right-hand side
+  smallValue (eval I X env)
+
+B : Type
+inst✝ : CompleteBooleanAlgebra B
+I : Interpretation Signature.pure B
+Γ : Ctx
+X : PT Γ (Ty.rel UP)
+env : IEnv (Dom I.E B) Γ
+⊢ eval I (Term.ex (Ty.rel UP)) env
+      (eval I
+        (Term.lam
+          (Term.forall'
+            (Term.forall'
+              (Term.imp
+                (Term.conj
+                  (((Term.weaken X).weaken.weaken.app Term.v1).conj ((Term.weaken X).weaken.weaken.app Term.v0))
+                  ((Term.v2.app Term.v1).eq' (Term.v2.app Term.v0)))
+                (Term.v1.eq' Term.v0)))))
+        env) =
+    smallValue (eval I X env)
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:118:20: warning: This simp argument is unused:
+  eval_exists
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [small, eval_forall, eval_imp, eval_conj, eval_eq, eval_app, eval_weaken, eval_v0, eval_v1, eval_v2]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:118:33: warning: This simp argument is unused:
+  eval_forall
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [small, eval_exists, eval_imp, eval_conj, eval_eq, eval_app, eval_weaken, eval_v0, eval_v1, eval_v2]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:118:46: warning: This simp argument is unused:
+  eval_imp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [small, eval_exists, eval_forall, eval_conj, eval_eq, eval_app, eval_weaken, eval_v0, eval_v1,
+    eval_v2]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:118:56: warning: This simp argument is unused:
+  eval_conj
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [small, eval_exists, eval_forall, eval_imp, eval_eq, eval_app, eval_weaken, eval_v0, eval_v1,
+    eval_v2]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:119:4: warning: This simp argument is unused:
+  eval_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [small, eval_exists, eval_forall, eval_imp, eval_conj, eval_app, eval_weaken, eval_v0, eval_v1,
+    eval_v2]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:119:23: warning: This simp argument is unused:
+  eval_weaken
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [small, eval_exists, eval_forall, eval_imp, eval_conj, eval_eq, eval_app, eval_v0, eval_v1, eval_v2]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:119:36: warning: This simp argument is unused:
+  eval_v0
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [small, eval_exists, eval_forall, eval_imp, eval_conj, eval_eq, eval_app, eval_weaken, eval_v1,
+    eval_v2]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:119:45: warning: This simp argument is unused:
+  eval_v1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [small, eval_exists, eval_forall, eval_imp, eval_conj, eval_eq, eval_app, eval_weaken, eval_v0,
+    eval_v2]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:119:54: warning: This simp argument is unused:
+  eval_v2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [small, eval_exists, eval_forall, eval_imp, eval_conj, eval_eq, eval_app, eval_weaken, eval_v0,
+    eval_v1]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:232:20: warning: This simp argument is unused:
+  true_implies
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hX, truth_true, top_inf_eq, hx, compl_truth, sup_truth, inf_truth, iInf_truth, iSup_truth,
+    MinimalFor, imp_iff_not_or, not_true_eq_false, false_or]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:261:2: error: 'change' tactic failed, pattern
+  wellFoundedValue R = truth (WellFounded R)
+is not definitionally equal to target
+  eval I (Term.all (Ty.rel UP)) env
+      (eval I
+        (Term.lam
+          (Term.imp (Term.conj (MaxAtomicitySyntax.crisp Term.v0) (Term.v1.app Term.v0).exists')
+            (Term.exists'
+              ((Term.v1.app Term.v0).conj
+                (Term.forall'
+                  ((((Term.weaken E).weaken.weaken.app Term.v0).app Term.v1).imp (Term.v2.app Term.v0).neg))))))
+        env) =
+    truth (WellFounded R)
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:258:45: warning: This simp argument is unused:
+  eval_forall
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MaxAtomicitySyntax.wellFounded, eval_imp, eval_conj, eval_exists, eval_neg, eval_crisp, member,
+    eval_app, eval_weaken, eval_v0, eval_v1, eval_v2, hE]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:258:58: warning: This simp argument is unused:
+  eval_imp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MaxAtomicitySyntax.wellFounded, eval_forall, eval_conj, eval_exists, eval_neg, eval_crisp, member,
+    eval_app, eval_weaken, eval_v0, eval_v1, eval_v2, hE]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:259:4: warning: This simp argument is unused:
+  eval_conj
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MaxAtomicitySyntax.wellFounded, eval_forall, eval_imp, eval_exists, eval_neg, eval_crisp, member,
+    eval_app, eval_weaken, eval_v0, eval_v1, eval_v2, hE]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:259:15: warning: This simp argument is unused:
+  eval_exists
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MaxAtomicitySyntax.wellFounded, eval_forall, eval_imp, eval_conj, eval_neg, eval_crisp, member,
+    eval_app, eval_weaken, eval_v0, eval_v1, eval_v2, hE]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:259:28: warning: This simp argument is unused:
+  eval_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MaxAtomicitySyntax.wellFounded, eval_forall, eval_imp, eval_conj, eval_exists, eval_crisp, member,
+    eval_app, eval_weaken, eval_v0, eval_v1, eval_v2, hE]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:259:38: warning: This simp argument is unused:
+  eval_crisp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MaxAtomicitySyntax.wellFounded, eval_forall, eval_imp, eval_conj, eval_exists, eval_neg, member,
+    eval_app, eval_weaken, eval_v0, eval_v1, eval_v2, hE]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:260:4: warning: This simp argument is unused:
+  eval_weaken
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MaxAtomicitySyntax.wellFounded, eval_forall, eval_imp, eval_conj, eval_exists, eval_neg,
+    eval_crisp, member, eval_app, eval_v0, eval_v1, eval_v2, hE]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:260:17: warning: This simp argument is unused:
+  eval_v0
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MaxAtomicitySyntax.wellFounded, eval_forall, eval_imp, eval_conj, eval_exists, eval_neg,
+    eval_crisp, member, eval_app, eval_weaken, eval_v1, eval_v2, hE]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:260:26: warning: This simp argument is unused:
+  eval_v1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MaxAtomicitySyntax.wellFounded, eval_forall, eval_imp, eval_conj, eval_exists, eval_neg,
+    eval_crisp, member, eval_app, eval_weaken, eval_v0, eval_v2, hE]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:260:35: warning: This simp argument is unused:
+  eval_v2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MaxAtomicitySyntax.wellFounded, eval_forall, eval_imp, eval_conj, eval_exists, eval_neg,
+    eval_crisp, member, eval_app, eval_weaken, eval_v0, eval_v1, hE]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:260:44: warning: This simp argument is unused:
+  hE
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MaxAtomicitySyntax.wellFounded, eval_forall, eval_imp, eval_conj, eval_exists, eval_neg,
+    eval_crisp, member, eval_app, eval_weaken, eval_v0, eval_v1, eval_v2]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:324:8: error: typeclass instance problem is stuck
+  Nontrivial ?m.29
+
+Note: Lean will not try to resolve this typeclass instance problem because the type argument to `Nontrivial` is a metavariable. This argument must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:321:19: warning: This simp argument is unused:
+  eval_forall
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fill, eval_imp, eval_conj, eval_exists, eval_eq, eval_crisp, eval_small_value, member, eval_app,
+    eval_weaken, eval_v0, eval_v1, eval_v2, hE]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:321:32: warning: This simp argument is unused:
+  eval_imp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fill, eval_forall, eval_conj, eval_exists, eval_eq, eval_crisp, eval_small_value, member, eval_app,
+    eval_weaken, eval_v0, eval_v1, eval_v2, hE]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:321:42: warning: This simp argument is unused:
+  eval_conj
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fill, eval_forall, eval_imp, eval_exists, eval_eq, eval_crisp, eval_small_value, member, eval_app,
+    eval_weaken, eval_v0, eval_v1, eval_v2, hE]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:321:53: warning: This simp argument is unused:
+  eval_exists
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fill, eval_forall, eval_imp, eval_conj, eval_eq, eval_crisp, eval_small_value, member, eval_app,
+    eval_weaken, eval_v0, eval_v1, eval_v2, hE]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:322:4: warning: This simp argument is unused:
+  eval_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fill, eval_forall, eval_imp, eval_conj, eval_exists, eval_crisp, eval_small_value, member,
+    eval_app, eval_weaken, eval_v0, eval_v1, eval_v2, hE]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:322:13: warning: This simp argument is unused:
+  eval_crisp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fill, eval_forall, eval_imp, eval_conj, eval_exists, eval_eq, eval_small_value, member, eval_app,
+    eval_weaken, eval_v0, eval_v1, eval_v2, hE]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:322:25: warning: This simp argument is unused:
+  eval_small_value
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fill, eval_forall, eval_imp, eval_conj, eval_exists, eval_eq, eval_crisp, member, eval_app,
+    eval_weaken, eval_v0, eval_v1, eval_v2, hE]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:323:4: warning: This simp argument is unused:
+  eval_weaken
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fill, eval_forall, eval_imp, eval_conj, eval_exists, eval_eq, eval_crisp, eval_small_value, member,
+    eval_app, eval_v0, eval_v1, eval_v2, hE]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:323:17: warning: This simp argument is unused:
+  eval_v0
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fill, eval_forall, eval_imp, eval_conj, eval_exists, eval_eq, eval_crisp, eval_small_value, member,
+    eval_app, eval_weaken, eval_v1, eval_v2, hE]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:323:26: warning: This simp argument is unused:
+  eval_v1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fill, eval_forall, eval_imp, eval_conj, eval_exists, eval_eq, eval_crisp, eval_small_value, member,
+    eval_app, eval_weaken, eval_v0, eval_v2, hE]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:323:35: warning: This simp argument is unused:
+  eval_v2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fill, eval_forall, eval_imp, eval_conj, eval_exists, eval_eq, eval_crisp, eval_small_value, member,
+    eval_app, eval_weaken, eval_v0, eval_v1, hE]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean:323:44: warning: This simp argument is unused:
+  hE
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fill, eval_forall, eval_imp, eval_conj, eval_exists, eval_eq, eval_crisp, eval_small_value, member,
+    eval_app, eval_weaken, eval_v0, eval_v1, eval_v2]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Classicism.Meta.Research.MaxAtomicityHCodeSemantics.small_iff_embedding' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeSemantics.eval_crisp' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeSemantics.eval_crispRelation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeSemantics.eval_small' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeSemantics.eval_small_eq_top_iff_embedding' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeSemantics.eval_extensional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeSemantics.eval_rows' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeSemantics.minimalSubset_iff_wellFounded' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeSemantics.wellFoundedValue_eq_truth' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeSemantics.eval_wellFounded' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeSemantics.fillValue_eq_truth' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeSemantics.eval_fill' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeSemantics.eval_hCode' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeSemantics.eval_hCode_noncrisp' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeSemantics.eval_hCode_exact' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

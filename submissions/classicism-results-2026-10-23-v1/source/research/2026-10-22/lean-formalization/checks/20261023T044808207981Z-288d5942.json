@@ -1,0 +1,112 @@
+{
+  "schema_version": 2,
+  "run_id": "20261023T044808207981Z-288d5942",
+  "modules": [
+    "Classicism.Results.Research.AtomicProbabilityAlgebraChecks"
+  ],
+  "cache": "/private/tmp/classicism-lean-cert-cache",
+  "state": "complete",
+  "complete": true,
+  "checked": [
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFiniteConstructive",
+      "fingerprint": "a2e25917ec91fd7b48c7c1950e6ac72722ad92f36e9763d4cff874e5110d4a18",
+      "source_sha256": "9c0003ad129a9e750ec7d80a50594782a48fe106192d623ec5efb8efa33fad3a",
+      "artifacts": {
+        ".olean": "6d2c4453a010f06700847289422529abf9308c67020d10796aa698004b505fd9"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityScalar",
+      "fingerprint": "b89f0ff7316a2302ec6fc26d56c9dbb18217a782b310697103bc1d50bfa11175",
+      "source_sha256": "16549e55101d8f69270764d6b5732cb2ab2a1486da023f01b727400435a766ba",
+      "artifacts": {
+        ".olean": "24e2c1cb930470d1d5ce7d6c9d008d880c9ff634bede497c2fcbce3dbb7892af"
+      },
+      "seconds": 0.38,
+      "exit_code": 0,
+      "log": "logs/runs/20261023T044808207981Z-288d5942/Classicism_Results_Research_AtomicProbabilityScalar.log"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityEnvelope",
+      "fingerprint": "aefe54e7cc96807d6308c669cce786e2a944c34939cd6c41ab32663acdca9c56",
+      "source_sha256": "ccff97610e11b0f8ceb9c9c865300a8e7f1af6632692ff48bbd14bd978da5739",
+      "artifacts": {
+        ".olean": "822ce35e1ccd8d130a9fc281f49d96012f17ef9c4a2ef1b35ca2717b902e5283"
+      },
+      "seconds": 0.3,
+      "exit_code": 0,
+      "log": "logs/runs/20261023T044808207981Z-288d5942/Classicism_Results_Research_AtomicProbabilityEnvelope.log"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFiniteFibres",
+      "fingerprint": "819fcb806d707027e62a42c81d78b62598752721afd9d721af61055a43414c75",
+      "source_sha256": "d8251bfe661561d3824aadb2d204a8cf38cccddd1fb7c30bd746136cc6da1ada",
+      "artifacts": {
+        ".olean": "7b16c36bc55f7dbb8fad1daa6db83b4a72a3c0397dbf4b51e735b590001141fb"
+      },
+      "seconds": 0.26,
+      "exit_code": 0,
+      "log": "logs/runs/20261023T044808207981Z-288d5942/Classicism_Results_Research_AtomicProbabilityFiniteFibres.log"
+    },
+    {
+      "module": "Classicism.Results.Research.ProbabilitySymmetryFinite",
+      "fingerprint": "8d0e80516377d1f722fc02cc661a7c9a98dc42ea49ca083d34918bc9a06ff288",
+      "source_sha256": "2fac90db528fdf13fc4f386e85e459c3535c9e4ada1084ab4870f8e655364598",
+      "artifacts": {
+        ".olean": "4b08f35ceea2a0e505bb2d5f91c715154011d124565611a9528e58c5f08c144a"
+      },
+      "seconds": 0.25,
+      "exit_code": 0,
+      "log": "logs/runs/20261023T044808207981Z-288d5942/Classicism_Results_Research_ProbabilitySymmetryFinite.log"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityAlgebraChecks",
+      "fingerprint": "01d725ce6a07701c29c029da90f96240993b02c8f3f32f74a9cb7e7011eb12d7",
+      "source_sha256": "1b5a60efc0c47b129da89f8f0c66f007551147db4541281fdb7cd9f9c1e3d09b",
+      "artifacts": {
+        ".olean": "a0e92e857025e4e428cdda4391b26c31183e0caa83ea00608312723889fa7590"
+      },
+      "seconds": 0.2,
+      "exit_code": 0,
+      "log": "logs/runs/20261023T044808207981Z-288d5942/Classicism_Results_Research_AtomicProbabilityAlgebraChecks.log"
+    }
+  ],
+  "sources": {
+    "Classicism.Results.Research.AtomicProbabilityFiniteConstructive": {
+      "path": "/Users/danielkodsi/Downloads/classicism-map/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFiniteConstructive.lean",
+      "sha256": "9c0003ad129a9e750ec7d80a50594782a48fe106192d623ec5efb8efa33fad3a"
+    },
+    "Classicism.Results.Research.AtomicProbabilityScalar": {
+      "path": "/Users/danielkodsi/Downloads/classicism-map/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityScalar.lean",
+      "sha256": "16549e55101d8f69270764d6b5732cb2ab2a1486da023f01b727400435a766ba"
+    },
+    "Classicism.Results.Research.AtomicProbabilityEnvelope": {
+      "path": "/Users/danielkodsi/Downloads/classicism-map/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityEnvelope.lean",
+      "sha256": "ccff97610e11b0f8ceb9c9c865300a8e7f1af6632692ff48bbd14bd978da5739"
+    },
+    "Classicism.Results.Research.AtomicProbabilityFiniteFibres": {
+      "path": "/Users/danielkodsi/Downloads/classicism-map/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFiniteFibres.lean",
+      "sha256": "d8251bfe661561d3824aadb2d204a8cf38cccddd1fb7c30bd746136cc6da1ada"
+    },
+    "Classicism.Results.Research.ProbabilitySymmetryFinite": {
+      "path": "/Users/danielkodsi/Downloads/classicism-map/topics/classicism/lean/Classicism/Results/Research/ProbabilitySymmetryFinite.lean",
+      "sha256": "2fac90db528fdf13fc4f386e85e459c3535c9e4ada1084ab4870f8e655364598"
+    },
+    "Classicism.Results.Research.AtomicProbabilityAlgebraChecks": {
+      "path": "/Users/danielkodsi/Downloads/classicism-map/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityAlgebraChecks.lean",
+      "sha256": "1b5a60efc0c47b129da89f8f0c66f007551147db4541281fdb7cd9f9c1e3d09b"
+    }
+  },
+  "precompiled_roots": [],
+  "precompiled_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "compiler_path": "/private/tmp/classicism-lean-toolchain/lean-4.33.1-darwin_aarch64/bin/lean",
+  "compiler_sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554",
+  "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "source_snapshot": "/Users/danielkodsi/Downloads/classicism-map/research/2026-10-22/lean-formalization/logs/runs/20261023T044808207981Z-288d5942/sources",
+  "source_drift": [],
+  "current_sources_match": true,
+  "exit_code": 0
+}

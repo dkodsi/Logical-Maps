@@ -1,0 +1,168 @@
+{
+  "date": "2026-10-23",
+  "core_compiler_running": false,
+  "new_compiler_launches": "Await coordinator shared-lock-ready instruction",
+  "current_batch": "checks/20261023T041703947503Z.json",
+  "central_separator_evidence": "checks/20261023T041530892093Z.json",
+  "future_bc_evidence": "checks/20261023T041341460587Z.json",
+  "groups": {
+    "old_new": [
+      {
+        "path": "topics/classicism/lean/Classicism/Models/OldNewBase.lean",
+        "sha256": "e0ae2485f502223a99c79c1e7d5ebef386632dfe76c74e5dba49d4206650acd6"
+      },
+      {
+        "path": "topics/classicism/lean/Classicism/Models/OldNewComplete.lean",
+        "sha256": "9e53947b96ca26bc6dd9288f10920132a1c9a55ce86df777a7fffcd8a1b49bba"
+      },
+      {
+        "path": "topics/classicism/lean/Classicism/Models/OldNewFailures.lean",
+        "sha256": "f4f4d8a7d1ac4f5f185d412953d4949596af5e83f91317d3fa1d3162be0d94a4"
+      },
+      {
+        "path": "topics/classicism/lean/Classicism/Models/OldNewFutureBC.lean",
+        "sha256": "4da3fe37a77eeb05dbfa5787fd9a8320c45cffc95a3c3419100bd7c6bae84db6"
+      },
+      {
+        "path": "topics/classicism/lean/Classicism/Models/OldNewND.lean",
+        "sha256": "5386911da6aa8b842f576bd0c178e5c138470115570886f54cac20e7bbd43ea7"
+      },
+      {
+        "path": "topics/classicism/lean/Classicism/Models/OldNewPairs.lean",
+        "sha256": "eec9b5731f35056f7b4e8fd267f0ed39246964843c0e2f56c2682e6141dabfa4"
+      },
+      {
+        "path": "topics/classicism/lean/Classicism/Models/OldNewPredicates.lean",
+        "sha256": "2490a69b17d4edae492997017ea87588ab1124c0c74123f35c2bdea2e1190443"
+      },
+      {
+        "path": "topics/classicism/lean/Classicism/Models/OldNewSeparation.lean",
+        "sha256": "24c1347520275915cc751f51333acb45ee7c46a812224929bd92e0da708d8377"
+      },
+      {
+        "path": "topics/classicism/lean/Classicism/Models/OldNewTame.lean",
+        "sha256": "38b3cc608d1a8ac861f9a192d88ce1cd56c3e7ee37f1b68bad8425decd2688ec"
+      }
+    ],
+    "rigidity": [
+      {
+        "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchAtomicPower.lean",
+        "sha256": "dbd4503280674c4407e3b848e269de23fa79589187caa23d2eb78665f59b4112"
+      },
+      {
+        "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchAtomicPowerCertificates.lean",
+        "sha256": "b8f8aa4045d5dd104b4fcb7de23a7619c2e59a627290b76d2ab6162b5c05491c"
+      },
+      {
+        "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchBounded.lean",
+        "sha256": "65a1109a5213f8456937a2c344d98e2e94074c0c1ffaff6a02b14b9f1349b628"
+      },
+      {
+        "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchBoundedCertificates.lean",
+        "sha256": "c6ab51e9f6feed79a9615ec9557b496713fc1a91df92029a63cc68c77960e644"
+      },
+      {
+        "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchClassification.lean",
+        "sha256": "668fe461733ce9bc64e063c5e5551fde1a6671c3c1167f7ce2282cbbb1b19625"
+      },
+      {
+        "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchClassificationCertificates.lean",
+        "sha256": "8adb65aa75552cedb7dab845881e01ac68652b241293a002bc7ad61aa97075a7"
+      },
+      {
+        "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchContinuationSchemas.lean",
+        "sha256": "8797ae790b2015ed511d1b695641b2eb983648b632722c9c43cf19bf65351896"
+      },
+      {
+        "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchFinite.lean",
+        "sha256": "8d1bf44fa65e1fde5a1a8ba9dd2aec780011520e4c1abe0af51215fac39bc490"
+      },
+      {
+        "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchFiniteCertificates.lean",
+        "sha256": "530d9484d3d363572716e0174f2bdf9e2d7cc055ffe9a686c66e046bbca039a5"
+      },
+      {
+        "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchJoins.lean",
+        "sha256": "e76ebcc0b34a0d2d9f1854e2cd05526628345010bd25d3337bd0d041faad066c"
+      },
+      {
+        "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchJoinsCertificates.lean",
+        "sha256": "36a9f94701246f11ae71c9aa7ee286686c26649493947fb9b18a37a3d70dc6c1"
+      },
+      {
+        "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchNullary.lean",
+        "sha256": "8a03deb010dce7238ef0f5c5d20dd14a16f6ba5ae97cb7e409b13375ce7c5f1f"
+      },
+      {
+        "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchNullaryCertificates.lean",
+        "sha256": "d69ae7225edf4402ed3c59a53fc395bbabe8ad92d35b77d78a22c273e07e843f"
+      },
+      {
+        "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchRetractions.lean",
+        "sha256": "a316e5405520c1f97791c0dc1bc917fab5b98fc36083a4ed04824c255f385416"
+      },
+      {
+        "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchRetractionsCertificates.lean",
+        "sha256": "26a2c693945a4117483e595ebc9b66b276ca89a7e9c4a208238f836eb7ecdd87"
+      },
+      {
+        "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchSchemas.lean",
+        "sha256": "65aafd12759579186d8fa5fbb481970486fc6c7c4d9ba8aac0000f0d4b50f6f7"
+      },
+      {
+        "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchTupleLaws.lean",
+        "sha256": "3a5a3aff5db6e339088e76cf71138774d568aa397a9cf0b887d11497eeb67597"
+      },
+      {
+        "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchTupleLawsCertificates.lean",
+        "sha256": "61aeef1fbef668db056c51d7a1c28c715a63be3dd2ec4e222c72c9d9400e722e"
+      },
+      {
+        "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchUniform.lean",
+        "sha256": "45edb0d226292e20cc7c23b8b00a5638f4276a9271821bba0eca91269bc411d8"
+      },
+      {
+        "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchUniformCertificates.lean",
+        "sha256": "fbb691fb9ac91cc5c54c36fa887e86c17dd915351950d10e65884fab6861030b"
+      }
+    ],
+    "modal_descent": [
+      {
+        "path": "topics/classicism/lean/Classicism/Results/Research/ModalRigidityDescent.lean",
+        "sha256": "e5f3a4c9ee6aff754ed84553f1736196112a2dd5d6bd683a2885b7435dc92270"
+      },
+      {
+        "path": "research/2026-10-22/lean-formalization/integration-checks/ModalRigidityDescentAll.lean",
+        "sha256": "cb65e2ba16b8c7b82d0af18c789d54e734b409300d95370bc0140a939c9d1e18"
+      }
+    ],
+    "sp_core": [
+      {
+        "path": "research/2026-10-22/lean-formalization/StrongPossibilityConsequencesSchemas.lean",
+        "sha256": "4450f37bc4e730f7e9e096a495dbd902c3d94fb30f44c292db03a83eedf1b78b"
+      },
+      {
+        "path": "research/2026-10-22/lean-formalization/StrongPossibilityConsequencesSignatureSplit.lean",
+        "sha256": "e2030df1f1511e783e1be0a96e3aabdf05f55ddd71bb539ec378cc81ae2d1341"
+      },
+      {
+        "path": "research/2026-10-22/lean-formalization/StrongPossibilityConsequencesReflection.lean",
+        "sha256": "cb7bf2b33a80da79332d692451e08fa478cb6257f072453b6d3adddf88fc4355"
+      },
+      {
+        "path": "research/2026-10-22/lean-formalization/StrongPossibilityConsequencesMaxConservativity.lean",
+        "sha256": "3421af96a64f29e775771fd24f7411b5dfa5423de3017eded4b60a76d2a1a4e4"
+      }
+    ],
+    "old_new_audits": [
+      {
+        "path": "research/2026-10-22/lean-formalization/integration-checks/OldNewSeparationAxioms.lean",
+        "sha256": "622837bca02de65b1eab081f37b7520c793a9d70f4e350f2e8def44fcab198c3"
+      },
+      {
+        "path": "research/2026-10-22/lean-formalization/integration-checks/OldNewCompleteAxioms.lean",
+        "sha256": "868876b6cfce53b1b62bfbb030d617f0e9e534a5a9d88fa7e3951f649fb4a00b"
+      }
+    ]
+  }
+}

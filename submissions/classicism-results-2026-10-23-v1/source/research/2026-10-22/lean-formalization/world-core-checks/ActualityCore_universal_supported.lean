@@ -1,0 +1,9 @@
+import Classicism.Results.Research.ActualityCore
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Translate
+
+#classicism_check Classicism.Research.ActualityCore.universal_supported
+#classicism_types Classicism.Research.ActualityCore.universal_supported
+#classicism_derive Classicism.Research.ActualityCore.universal_supported
+#print axioms Classicism.Research.ActualityCore.universal_supported.derivable

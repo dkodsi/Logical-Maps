@@ -1,0 +1,304 @@
+{
+  "lane": "model_foundations_signature_nominal",
+  "updated_at_utc": "2026-10-23T05:39:04.483409+00:00",
+  "state": "checked_main_target",
+  "checked_target": "Classicism.Models.SinglePredicateCountermodelChecks",
+  "requested_target": "Classicism.Models.SinglePredicateCountermodelChecks",
+  "manifest": "research/2026-10-22/lean-formalization/checks/20261023T051126488606Z-b00090cd.json",
+  "principal_declarations": [
+    "Classicism.Meta.SinglePredicateFull.c5_independence_boxedChoice_consistent",
+    "Classicism.Meta.SinglePredicateFull.extensional_independence_choice_consistent",
+    "Classicism.Meta.SinglePredicateFull.extensional_independence_choice_not_infinity",
+    "Classicism.Meta.SinglePredicateFull.c5_atomic_independence_noContingency_not_schemaInfinity_t",
+    "Classicism.Meta.SinglePredicateFull.c5_atomic_independence_noContingency_not_quantifiedInfinity_t",
+    "Classicism.Meta.SinglePredicateFull.c5_atomic_independence_modalFreedom_not_schemaInfinity_t",
+    "Classicism.Meta.SinglePredicateFull.c5_atomic_independence_intensionalChoice_not_schemaInfinity_t",
+    "Classicism.Meta.SinglePredicateFull.c5_independence_choice_consistent",
+    "Classicism.Meta.SinglePredicateFull.c5_atomic_independence_collapse_consistent",
+    "Classicism.Meta.SinglePredicateFull.extensional_independence_infinity_consistent",
+    "Classicism.Meta.SinglePredicateFull.extensional_independence_schemaInfinity_consistent",
+    "Classicism.Meta.SinglePredicateFull.extensional_independence_not_infinity",
+    "Classicism.Meta.SinglePredicateFull.bool_complete_countermodel",
+    "Classicism.Meta.SinglePredicateFull.nat_complete_countermodel"
+  ],
+  "source_hashes": {
+    "topics/classicism/lean/Classicism/Semantics/FullPureEquivariance.lean": "341ab38c2d78ef1ad2f3dd47ab364c28cf895e4b8a6ff180a771b33e0eedb17b",
+    "topics/classicism/lean/Classicism/Semantics/FullExtensionalProperties.lean": "9c9a4d0e0c543f0d26af1e37f7118100d707af91d635d93a6295a279fc13daa3",
+    "topics/classicism/lean/Classicism/Semantics/FullExtensionalInfinity.lean": "8754857d4a375823de58a0e1d0fe251a8955c425a89a0ebb174f8ec61d8a1f8a",
+    "topics/classicism/lean/Classicism/Semantics/FullExtensionalCounting.lean": "0fa2ff032f09b078403eacc346427575b6632f9ca821ae44feefc655f8c4db29",
+    "topics/classicism/lean/Classicism/Models/SinglePredicateCountermodelChecks.lean": "6fa0aec4bacb555cbc879c0e457f2434af31a433d3c9af353a4cca554309eef7",
+    "topics/classicism/lean/Classicism/Models/SinglePredicateCountermodels.lean": "8cc762691ea01682ae31a1807d8a63ef8bb27113f0060de88f3c502f802a9cb3",
+    "topics/classicism/lean/Classicism/Models/SinglePredicateFull.lean": "7132dc1d759f05fd8903cd915bf61f176ac950a24494615722f7544832273fdb",
+    "topics/classicism/lean/Classicism/Models/NominalC5.lean": "b5a19e43388cf16b3c426964116d4c4869a2445e5108ae5e10c928f7f0825766",
+    "topics/classicism/lean/Classicism/Models/NominalChoiceInfrastructure.lean": "46b1969b866379fdb9ae7ea0deb15dbf77cde02684a2bd358c36cfc86ee74e95",
+    "topics/classicism/lean/Classicism/Models/NominalConversion.lean": "b8479436d623c80c998a528aa862dc4a887cf9350a7585466931cd1a52ea70f9",
+    "topics/classicism/lean/Classicism/Models/NominalFiniteStrata.lean": "a7c7fb929a2648fba412fec0968c634ea34a3c9e0e81fee8cebe29bd942487f6",
+    "topics/classicism/lean/Classicism/Models/NominalFoundationChecks.lean": "ec970bb8738f5eb614dbe87fef8619bed0504f7903d9b560b7156c93bbc96f9d",
+    "topics/classicism/lean/Classicism/Models/NominalLogicalOperations.lean": "2841c0b3df26797ae3fe96e3c59b7df9d3961c70bb0d85d4d4403e83c0f9cf31",
+    "topics/classicism/lean/Classicism/Models/NominalOrbitShift.lean": "353b6ae00356653fa23ff542ea83b314ae778a4088f686adb2a23c68ec61ccf5",
+    "topics/classicism/lean/Classicism/Models/NominalSoundness.lean": "05bf03d2263c8503bd249b24f9a37802bb7db8e024b24165a367818960b75dcf",
+    "topics/classicism/lean/Classicism/Models/NominalStabilizerCriterion.lean": "c9abec836c0115519dc1d30ab6ef4d4e23cbfea0e9c3f76913edfcec9f76799d",
+    "topics/classicism/lean/Classicism/Models/NominalSubstitution.lean": "de7405ca3001bf953d3ffcb93dcd54f072332b61656b4bed038cb80b8cbda0ba",
+    "topics/classicism/lean/Classicism/Models/NominalSupportCore.lean": "0ab2960c2db9128fa0c10ad8a7013b03d1328011dad69fdfe3e5213bae9806a9",
+    "topics/classicism/lean/Classicism/Models/NominalTypedHierarchy.lean": "7ea7071122cd7041b9557c9bbeaad8c67b722b6c3d78d9d67c7de75e97dde4a6",
+    "topics/classicism/lean/Classicism/Models/NominalWorldExamples.lean": "80bfc867bb153244310892ab8ffbf243bc54e45e33ac6ab0589435f66f9cad6a",
+    "topics/classicism/lean/Classicism/Models/NominalFiniteOrbitStrata.lean": "a3f497d7bf3f6d061e427b0ee4cfc45a25140bdb27502a83a1d5ef2d9b4f19f5",
+    "topics/classicism/lean/Classicism/Results/Research/FiniteSortStructure.lean": "fe2613bc8800aa1b74d7e1c9e9b6dbf63cf89ec90ba9104c4670ab75904e7f31",
+    "topics/classicism/lean/Classicism/Results/Research/FiniteSortStructureBounds.lean": "9a4ab90ea3dc0ca0ba654234bd4c6c41083dc74a87010a74b40eeaed4d248728",
+    "topics/classicism/lean/Classicism/Results/Research/FiniteSortStructureCertificates.lean": "7650ae11e6f6e04b457a5931a34163ae8a3582049d32da5186a701e9a09e4a61",
+    "topics/classicism/lean/Classicism/Semantics/BooleanValuedModal.lean": "6cf664b9e6bcf11adec5e42db71a950464d2a4b24539a5111de468564dea8914",
+    "topics/classicism/lean/Classicism/Semantics/BooleanValued.lean": "f61196a8bd6e29ff34ad5e4e2038121cd15f273228fa130d024a6371568a69a0",
+    "topics/classicism/lean/Classicism/Semantics/BooleanValuedChecks.lean": "9b78513f4500b731581a114b53976ac89a6b751ab42e7b3228119574b308dd9a",
+    "topics/classicism/lean/Classicism/Semantics/BooleanValuedSoundness.lean": "3ffde61f91e9bcbb9aa804cf46621466c89b8829a816f48db0fa7f3cfe75cdf7",
+    "topics/classicism/lean/Classicism/Semantics/BooleanValuedPoint.lean": "93dffb20af747be98e67b778ca4070f5fa8e313b2f3e6f625afdf21c2f6194f5",
+    "research/2026-10-22/lean-formalization/generate_finite_sort_structure.py": "3d34d91afe2d64da5c35126b97e5feb422d2271b5cfc535d305dc5f6cad4607b"
+  },
+  "next_target": "Classicism.Models.NominalConversion",
+  "mathematical_gaps": [],
+  "prose_proofs": [
+    "research/2026-10-22/central-questions-audit.md",
+    "research/2026-10-22/notes/nominal-choice-classification-20261022.md",
+    "research/2026-10-22/notes/support-bounds-world-geometry-20261022.md"
+  ],
+  "contribution_summary": "research/2026-10-22/lean-formalization/model-foundations-delivery.md",
+  "notes": [
+    "LOCK READY received; owner resumed through shared check_with_mathlib.py runner, timeout 300 and lock-wait 300.",
+    "Source-only repairs: counting imports Mathlib.Data.List.FinRange for nodup_ofFn; nominal finite-strata imports Mathlib.Data.Finite.Defs and applies not_finite Nat without an extra explicit argument.",
+    "No main-model pass claimed.",
+    "First lock wait exited 75 after 300 seconds; no check was started. A second 300-second wait is active.",
+    "NominalOrbitShift now imports the already pinned Mathlib.Algebra.Group.End, the direct provider of the permutation group, instead of absent precompiled Mathlib.GroupTheory.Perm.Basic. No dependency installation.",
+    "Implemented existing finite stabilizer-orbit proof and concrete atom-world DedInf obstruction in NominalFiniteOrbitStrata.lean; added audit targets. Uncompiled. General nominal classification remains incomplete.",
+    "First substantive check repaired: 24 raw-Term .holds uses across FullExtensionalProperties/Infinity/Counting now explicitly call Sentence.holds. Recheck submitted with keep-going for independent dependencies. No handwritten sorry or new axiom was introduced; earlier sorry warnings were error-recovery cascades from ill-formed declaration types.",
+    "Corrected Sentence.holds argument order from its actual declaration; used Bool.and_eq_true_iff and explicit Term.denote/moveR unfolding in lambda equivariance. Third substantive check requested; no theorem statement strengthened.",
+    "Concrete Bool/Nat nonempty instances and explicit Unit subsingleton proof supplied without extra assumptions. No main target pass yet.",
+    "Current runner wrapper has an overall limit of at most 540 seconds and never continues beyond 05:40Z; it signals only its own new process group if stopped. No autonomous goal is active.",
+    "Counting distinctness transport direction corrected during source review. Bounded recheck uses a temporary wrapper of the shared runner, no raw compiler."
+  ],
+  "compiler_waits": {
+    "completed_busy_waits": 3,
+    "seconds_each": 300,
+    "check_started": true
+  },
+  "pending_principal_declarations": [
+    "Classicism.Meta.Nominal.Examples.finite_atoms_not_dedInfT",
+    "Classicism.Meta.Nominal.Examples.finite_atoms_boxed_not_dedInfT"
+  ],
+  "last_check_result": "Three main packages pass. Nominal SupportCore, LogicalOperations, TypedHierarchy and Substitution pass with current sources. NominalConversion was repaired after its last failing snapshot but the final check never started; conversion and downstream nominal verdicts remain unverified.",
+  "subsequent_target": "Classicism.Models.NominalFoundationChecks",
+  "check_history": [
+    "checks/20261023T044604932713Z-29645589.json",
+    "checks/20261023T044846734597Z-865ab8dd.json",
+    "checks/20261023T045118917857Z-b88ccbb9.json",
+    "checks/20261023T045553117591Z-ada074af.json",
+    "checks/20261023T050508316194Z-2fbb4c91.json",
+    "checks/20261023T050702410545Z-9724260e.json",
+    "checks/20261023T050849574132Z-173cc943.json",
+    "checks/20261023T051126488606Z-b00090cd.json",
+    "checks/20261023T051245030376Z-c1fd79a4.json",
+    "checks/20261023T051405215508Z-026dbc28.json",
+    "checks/20261023T051518667589Z-22073bfb.json",
+    "checks/20261023T051925557576Z-9f80cbf6.json",
+    "checks/20261023T052702396771Z-a289b198.json",
+    "checks/20261023T053031030293Z-15212e27.json"
+  ],
+  "wrap_up_target_utc": "2026-10-23T05:57:00+00:00",
+  "handoff_reserve_from_utc": "2026-10-23T05:37:00+00:00",
+  "near_term_assessment": "Three substantive packages are verified: single-predicate countermodels, finite-sort C-minus certificates, Boolean-valued semantics. Nominal SupportCore and LogicalOperations pass. The repaired typed evaluator and subsequent nominal sources still need checks; the entire nominal classification will remain explicitly incomplete at handoff.",
+  "hard_stop_utc": "2026-10-23T05:57:00+00:00",
+  "turn_end_by_utc": "2026-10-23T05:55:00+00:00",
+  "final_checkpoint_by_utc": "2026-10-23T05:40:00+00:00",
+  "child_agents": "No live child agents",
+  "shutdown_policy": "Stop only owned unfinished sessions, preserve shared lock, no automatic resumption or scheduled wakeup after cutoff.",
+  "passed_modules": [
+    {
+      "module": "Classicism.Semantics.FullExtensionalProperties",
+      "fingerprint": "0314e5ae0b99274049873197a65e830b2b2335b0c1c2d518e1dad8247d90ae56",
+      "source_sha256": "9c9a4d0e0c543f0d26af1e37f7118100d707af91d635d93a6295a279fc13daa3",
+      "artifacts": {
+        ".olean": "71041d39ea05757423de8adbbbba8a8edb966055891bbd9d64880607098297f6"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.FullPureEquivariance",
+      "fingerprint": "04288a5e1f08bfbec447dadba04ac8aed34afb598fa0a76891458a8d9f29a01d",
+      "source_sha256": "341ab38c2d78ef1ad2f3dd47ab364c28cf895e4b8a6ff180a771b33e0eedb17b",
+      "artifacts": {
+        ".olean": "7199872062a8622bf14ce2ed883925f799ac5c3f162f0c19598baa7c64520623"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.SinglePredicateFull",
+      "fingerprint": "ee68c2fb75257d04063c52b4cb785914481971a8e3492812900314d77c6457ad",
+      "source_sha256": "7132dc1d759f05fd8903cd915bf61f176ac950a24494615722f7544832273fdb",
+      "artifacts": {
+        ".olean": "969a29f5d7da7809e54ffacf5c228fe1ed850a9ff48ba6d0632a2455c2edc223"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.FullExtensionalInfinity",
+      "fingerprint": "9cb09c5a584f92f88f63327116dff32e1cd66f1d8dc134b40ae3f4d20a971de1",
+      "source_sha256": "8754857d4a375823de58a0e1d0fe251a8955c425a89a0ebb174f8ec61d8a1f8a",
+      "artifacts": {
+        ".olean": "e72354c3ce4e34403a32de801657af26d1264e79cb06aba06fdcc1bba36f8c5e"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.FullExtensionalCounting",
+      "fingerprint": "f5c98b854a85f2c71dc9cbd2761cc988969ca290b1bfc26f817bdfcc1d55d859",
+      "source_sha256": "0fa2ff032f09b078403eacc346427575b6632f9ca821ae44feefc655f8c4db29",
+      "artifacts": {
+        ".olean": "7ded7ce3922d99c6d12eaff5af3e2b4fcffd6798d894e438b70ebb8bc98fd4a2"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.SinglePredicateCountermodels",
+      "fingerprint": "ae43e4937951f8d21910523a8ea16e28c26442e21c31287814ba9e6cb6267a18",
+      "source_sha256": "8cc762691ea01682ae31a1807d8a63ef8bb27113f0060de88f3c502f802a9cb3",
+      "artifacts": {
+        ".olean": "8fca382c2d4a7062eaf42f83ff543dd93481ebe543ebf1adc04293fc914a90e2"
+      },
+      "seconds": 11.34,
+      "exit_code": 0,
+      "log": "logs/runs/20261023T051126488606Z-b00090cd/Classicism_Models_SinglePredicateCountermodels.log"
+    },
+    {
+      "module": "Classicism.Models.SinglePredicateCountermodelChecks",
+      "fingerprint": "1d4a9cbb0982c9f2383e647c472b6afbc8795d1184f75062654be9b9c210d57f",
+      "source_sha256": "6fa0aec4bacb555cbc879c0e457f2434af31a433d3c9af353a4cca554309eef7",
+      "artifacts": {
+        ".olean": "6df042c1d4887accc2c7f9e8ed86928c85bf5f909cbf011534918af93b1bae04"
+      },
+      "seconds": 1.01,
+      "exit_code": 0,
+      "log": "logs/runs/20261023T051126488606Z-b00090cd/Classicism_Models_SinglePredicateCountermodelChecks.log"
+    }
+  ],
+  "main_target_evidence": "research/2026-10-22/lean-formalization/singlepredicate-verified-20261023.json",
+  "axiom_audit": "All 27 driver declarations have only propext/Classical.choice/Quot.sound, or fewer; no sorryAx.",
+  "active_batch": [],
+  "nominal_manifest": "research/2026-10-22/lean-formalization/checks/20261023T053031030293Z-15212e27.json",
+  "existing_certificates_evidence": "research/2026-10-22/lean-formalization/model-foundations-existing-certificates-20261023.json",
+  "nominal_passed_modules": [
+    {
+      "module": "Classicism.Models.NominalSupportCore",
+      "fingerprint": "7a96efdb9c2823496bf1788933c6baff37ebaaa2c451bb3d095bda300021672d",
+      "source_sha256": "0ab2960c2db9128fa0c10ad8a7013b03d1328011dad69fdfe3e5213bae9806a9",
+      "artifacts": {
+        ".olean": "00eef8119601ffab55089ace689fe323dbe72e3a869ae5f329875010ad90baef"
+      },
+      "seconds": 1.34,
+      "exit_code": 0,
+      "log": "logs/runs/20261023T053031030293Z-15212e27/Classicism_Models_NominalSupportCore.log"
+    },
+    {
+      "module": "Classicism.Models.NominalLogicalOperations",
+      "fingerprint": "50f830f7be29a7459b7fd9375da7f0e30fcce767cf4d42492abc918003692bc5",
+      "source_sha256": "2841c0b3df26797ae3fe96e3c59b7df9d3961c70bb0d85d4d4403e83c0f9cf31",
+      "artifacts": {
+        ".olean": "37a8a25d9bba55e66ec0c2a821cd6a1548565143db52f148801f68bdd27e36cb"
+      },
+      "seconds": 0.88,
+      "exit_code": 0,
+      "log": "logs/runs/20261023T053031030293Z-15212e27/Classicism_Models_NominalLogicalOperations.log"
+    },
+    {
+      "module": "Classicism.Models.NominalTypedHierarchy",
+      "fingerprint": "919a024098c71ca585e226ba9fe49ce026940207f30bdb18f11e81d828826f8e",
+      "source_sha256": "7ea7071122cd7041b9557c9bbeaad8c67b722b6c3d78d9d67c7de75e97dde4a6",
+      "artifacts": {
+        ".olean": "cfac8afdec64e589f17d2bd9ff5d8305ecad2b0242c6a5cfabf0a0137818ceb6"
+      },
+      "seconds": 0.96,
+      "exit_code": 0,
+      "log": "logs/runs/20261023T053031030293Z-15212e27/Classicism_Models_NominalTypedHierarchy.log"
+    },
+    {
+      "module": "Classicism.Models.NominalSubstitution",
+      "fingerprint": "a2799882096646e5d05bf0b3435bcdb14730cc84bfeae56b7a494ffaa0a606a7",
+      "source_sha256": "de7405ca3001bf953d3ffcb93dcd54f072332b61656b4bed038cb80b8cbda0ba",
+      "artifacts": {
+        ".olean": "3af6e1866a3707ff0b02b17ababcffe44273973b596699c7e06109e6e612522c"
+      },
+      "seconds": 1.03,
+      "exit_code": 0,
+      "log": "logs/runs/20261023T053031030293Z-15212e27/Classicism_Models_NominalSubstitution.log"
+    }
+  ],
+  "formalization_gaps": [
+    "The conversion repair has not been rechecked; soundness, C/C5, choice infrastructure/stabilizer criterion, orbit shift, finite-strata and concrete world verdicts, including the new atom-world obstruction, remain unverified downstream.",
+    "The general nominal classifications still lack Lean implementations of least supports/orbit decomposition, reservoir and obstruction arguments, the full two-sided orbit theorem, FC/RC and Atomicity/standard-core/Frege-infinity verdicts, and the larger-support cardinal cases. Existing prose proofs are linked; no literature-open or falsity claim follows."
+  ],
+  "gap_qualification": "No new mathematical obstruction was established in this bounded verification pass. The nominal list records missing Lean bridges to existing prose proofs and unverified claims, not a claim that those results are false or open in the literature.",
+  "nominal_state": "incomplete_checkpoint",
+  "nominal_latest_attempt": "Final bounded attempt exited 75: compiler busy, no check started. No owned compiler remains active.",
+  "nominal_pre_repair_passed_modules": [
+    {
+      "module": "Classicism.Models.NominalSupportCore",
+      "fingerprint": "77f622da2e6fbe0fc9e8262fa42a9da2c2cb9c4d1f513c65f0af0e3a8463efb5",
+      "source_sha256": "2563f14402f8ba60c414ffdab5ac3da27cd40af5db51e278a734f6d9c4f569d0",
+      "artifacts": {
+        ".olean": "1f2f940579e43e9a05c948001c2dd1675886789fc5f1cd015883486dd744b7e1"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.NominalLogicalOperations",
+      "fingerprint": "34b5fc32fad11e944bad153e666dc90553992384037d0d5389a05ebfbac6204f",
+      "source_sha256": "2841c0b3df26797ae3fe96e3c59b7df9d3961c70bb0d85d4d4403e83c0f9cf31",
+      "artifacts": {
+        ".olean": "37a8a25d9bba55e66ec0c2a821cd6a1548565143db52f148801f68bdd27e36cb"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.NominalTypedHierarchy",
+      "fingerprint": "dcde5850ae126c5014d1ae0c5b5959f14b70fd03fceb6d9352f9e824e7897efb",
+      "source_sha256": "759b82e8e89713db58cd4df5bbc03e0e1d7a955fc788d49682a9c1ae66a7fdfb",
+      "artifacts": {
+        ".olean": "a3b662d26d4e9e0850fee71ca27b17bd03140655819153d95324cce2345a6097"
+      },
+      "seconds": 1.1,
+      "exit_code": 0,
+      "log": "logs/runs/20261023T052702396771Z-a289b198/Classicism_Models_NominalTypedHierarchy.log"
+    }
+  ],
+  "stopped_at_utc": "2026-10-23T05:39:04.483409+00:00",
+  "current_activity": "stopped_for_user_deadline",
+  "stopped": true,
+  "next_action": "Only after explicit human resumption: check/repair NominalConversion through the locked runner, then continue NominalFoundationChecks. No automatic continuation or scheduled wakeup.",
+  "source_consistency_evidence": "research/2026-10-22/lean-formalization/model-foundations-source-consistency-20261023.json",
+  "final_attempt_log": "research/2026-10-22/lean-formalization/model-foundations-final-attempt.log",
+  "final_delivered_scope": {
+    "checked_main_targets": [
+      "Classicism.Models.SinglePredicateCountermodelChecks",
+      "Classicism.Results.Research.FiniteSortStructureCertificates",
+      "Classicism.Semantics.BooleanValuedChecks"
+    ],
+    "singlepredicate_main_targets": 12,
+    "complete_theory_witnesses": 2,
+    "singlepredicate_audited_declarations": 27,
+    "finite_sort_translated_certificates": 12,
+    "boolean_valued_audited_declarations": 11,
+    "nominal_checked_prefix": [
+      "Classicism.Models.NominalSupportCore",
+      "Classicism.Models.NominalLogicalOperations",
+      "Classicism.Models.NominalTypedHierarchy",
+      "Classicism.Models.NominalSubstitution"
+    ],
+    "nominal_principal_driver": "not checked",
+    "database_verification_flags": "unchanged"
+  },
+  "final_validation_log": "research/2026-10-22/lean-formalization/model-foundations-final-validation.log"
+}

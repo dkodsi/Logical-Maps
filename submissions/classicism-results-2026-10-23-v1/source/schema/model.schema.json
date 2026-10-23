@@ -1,0 +1,339 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "model.schema.json",
+ "title": "Model",
+ "description": "A structure in the topic's framework, with the principles known to hold and to fail in it. Witnesses the consistency of the package satisfies ∪ {¬v : v ∈ violates}; every independence is derived from models. A record either lists satisfies and violates directly, or gives a definition and arguments, from which the build computes satisfies, violates and status.",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "id",
+  "name",
+  "certificate",
+  "sources"
+ ],
+ "properties": {
+  "id": {
+   "type": "string",
+   "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+  },
+  "name": {
+   "type": "string",
+   "description": "Short construction or ordering name: family, rule, and distinguishing variant. Keep authorship, conjecture status, and lists of satisfied/violated principles in their own fields. Match the write-up title; keep the id stable."
+  },
+  "description": {
+   "type": "string",
+   "description": "The construction, and the verification of each listed principle. Required for proved models."
+  },
+  "definition": {
+   "type": "string",
+   "minLength": 1,
+   "description": "Argument format: what the model is (construction, evaluation point, interpretation of Σ), and no verdicts. Replaces description."
+  },
+  "arguments": {
+   "type": "array",
+   "items": {"$ref": "#/$defs/argument"},
+   "description": "Argument format: the direct verdicts and their reasons. The build computes satisfies, violates and status from these."
+  },
+  "group": {
+   "type": "string",
+   "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+   "description": "Argument format: a group groups/<id>.yaml the model belongs to. The group's definition, completed by the settings, comes before the record's own, which is then optional; the group's shared arguments that apply join the record's arguments."
+  },
+  "settings": {
+   "type": "object",
+   "additionalProperties": {"oneOf": [{"type": "string", "minLength": 1}, {"type": "object", "additionalProperties": false, "required": ["text"], "properties": {"text": {"type": "string", "minLength": 1}}}]},
+   "description": "A group's member: a setting for each of the group's parameters. A parameter with named values takes one of them, or {text: ...} for prose of the record's own; a prose slot takes the prose."
+  },
+  "meets": {
+   "type": "object",
+   "additionalProperties": {"oneOf": [{"type": "string", "minLength": 1},
+     {"type": "object", "additionalProperties": false, "required": ["text", "when"], "properties": {
+      "text": {"type": "string", "minLength": 1},
+      "when": {"$ref": "#/$defs/argument/properties/when"}}}]},
+   "description": "Each condition it meets, with the reason: a condition of its group's, or of the topic's (conditions.yaml), which brings the topic's general arguments that require it. A reason given as {text, when} holds only at the group settings its `when` names."
+  },
+  "construction": {
+   "type": "object",
+   "additionalProperties": false,
+   "description": "Argument format: whether the definition really describes a model. Omitted means established. Replaces status.",
+   "properties": {
+    "standing": {"enum": ["established", "conjectured"], "default": "established"},
+    "tier": {"enum": ["bronze", "silver", "gold"]},
+    "text": {"type": "string"},
+    "by": {"type": "string"},
+    "date": {"type": "string"},
+    "withdrawn": {"$ref": "#/$defs/withdrawal", "description": "Retires the whole record from the engine; the text is kept."}
+   }
+  },
+  "history": {
+   "type": "array",
+   "items": {"$ref": "#/properties/changes/items"},
+   "description": "Argument format: the old changes log, frozen verbatim on migration. New work does not append to it."
+  },
+  "satisfies": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   },
+   "uniqueItems": true
+  },
+  "violates": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   },
+   "uniqueItems": true,
+   "description": "Known failures, or the proposed failures for a conjectured model. May be empty for a consistency construction; an omitted axiom is not thereby negated."
+  },
+  "status": {
+   "type": "string",
+   "enum": [
+    "proved",
+    "conjectured"
+   ],
+   "default": "conjectured"
+  },
+  "model_check": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": ["model", "satisfies", "violates"],
+   "description": "For a conjectured extension of an existing proved model, identify that model and the particular new verdicts being proposed. These assertions must occur in this record's full satisfies/violates package. The conjecture is attached to those model checks and can only be resolved by evidence about the named model.",
+   "properties": {
+    "model": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"},
+    "satisfies": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "violates": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+   }
+  },
+  "was_conjectured": {
+   "type": "boolean",
+   "description": "Historical marker for a record that began as a conjecture. It does not change proof status or supply inference evidence."
+  },
+  "certificate": {
+   "$ref": "result.schema.json#/properties/certificate"
+  },
+  "checks": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   },
+   "description": "Paths of executable sanity checks (numerical, Lean, …)."
+  },
+  "sources": {
+   "type": "array",
+   "items": {
+    "type": "string",
+    "pattern": "\\S"
+   }
+  },
+  "source_names": {
+   "type": "array",
+   "items": {
+    "type": "string",
+    "pattern": "\\S"
+   },
+   "description": "Short display names corresponding to sources, in the same order."
+  },
+  "notes": {
+   "type": "string",
+   "description": "In the argument format, miscellaneous text that supports no verdict."
+  },
+  "references": {
+   "type": "array",
+   "description": "References to papers.yaml; roles distinguish definition origins and background from direct proofs.",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "paper",
+     "role"
+    ],
+    "properties": {
+     "paper": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+     },
+     "role": {
+      "enum": [
+       "origin",
+       "formulation",
+       "proof",
+       "background",
+       "related"
+      ]
+     },
+     "locator": {
+      "type": "string",
+      "minLength": 1
+     },
+     "note": {
+      "type": "string",
+      "minLength": 1
+     }
+    }
+   }
+  },
+  "changes": {
+   "type": "array",
+   "description": "Dated revision log. Append an entry whenever a record gains content after its certificate date (new verified properties, an added proof, a corrected statement). The Changes tab lists each entry under its own date; certificate.date stays the record's original date.",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "date",
+     "summary"
+    ],
+    "properties": {
+     "date": {
+      "type": "string",
+      "description": "ISO date of the revision."
+     },
+     "by": {
+      "type": "string",
+      "description": "Who supplied the revision's content (author or agent, with date if useful)."
+     },
+     "summary": {
+      "type": "string",
+      "minLength": 1,
+      "description": "What changed and why, in one or two sentences."
+     },
+     "satisfies": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      },
+      "uniqueItems": true,
+      "description": "Principles newly verified to hold in this revision; must also appear in the record's satisfies."
+     },
+     "violates": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      },
+      "uniqueItems": true,
+      "description": "Principles newly verified to fail in this revision; must also appear in the record's violates."
+     }
+    }
+   }
+  },
+  "tier": {
+   "type": "string",
+   "enum": [
+    "bronze",
+    "silver",
+    "gold"
+   ],
+   "description": "Human ranking of an unresolved question by importance and difficulty, shown on its lynchpin star. A conjecture with notes is bronze on its own; silver and gold are given by hand."
+  },
+  "lean": {
+   "type": "object",
+   "additionalProperties": false,
+   "description": "The model formalized in Lean: its verdicts proved there one by one, and what the verdicts that the map's general arguments give it need. The model's own record only: a group's generated variants are other models.",
+   "properties": {
+    "model": {
+     "type": "string",
+     "pattern": "\\S",
+     "description": "A Lean term for the model, filling {model} in the topic's lean.verdict templates. A member with a `param` may leave it to its group's lean.model."
+    },
+    "param": {"type": "string", "pattern": "\\S", "description": "For a member of a group with lean: the value of the group's variable."},
+    "is_model": {"type": "string", "pattern": "\\S", "description": "A proof that the Lean model is a model; a member with a `param` may leave it to its group's."},
+    "meets": {"type": "object", "additionalProperties": {"type": "string"}, "description": "For each condition the record meets: a proof of the condition's Lean predicate, for the model (a condition of the topic) or for `param` (a group's)."},
+    "verdicts": {
+     "type": "array",
+     "minItems": 1,
+     "items": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ref"],
+      "oneOf": [{"required": ["holds"]}, {"required": ["fails"]}],
+      "properties": {
+       "holds": {"type": "string", "description": "A principle the Lean proof shows holds in the model."},
+       "fails": {"type": "string", "description": "A principle the Lean proof shows fails in the model."},
+       "ref": {"type": "string", "pattern": "\\S", "description": "The certificate: a declaration whose type is the generated statement of the verdict."},
+       "status": {"enum": ["stated", "verified"], "description": "Written by lean-check --update; never set by hand."}
+      }
+     }
+    }
+   }
+  }
+ },
+ "if": {"anyOf": [{"required": ["arguments"]}, {"required": ["definition"]}]},
+ "then": {
+  "required": ["arguments"],
+  "anyOf": [{"required": ["definition"]}, {"required": ["group"]}],
+  "dependentRequired": {"group": ["settings"], "settings": ["group"]},
+  "properties": {"satisfies": false, "violates": false, "status": false, "description": false, "model_check": false, "tier": false, "changes": false}
+ },
+ "else": {
+  "required": ["satisfies", "violates"],
+  "properties": {"construction": false, "history": false, "group": false, "settings": false, "meets": false},
+  "if": {
+   "properties": {
+    "status": {
+     "const": "conjectured"
+    }
+   }
+  },
+  "else": {
+   "required": [
+    "description"
+   ]
+  }
+ },
+ "$defs": {
+  "argument": {
+   "type": "object",
+   "additionalProperties": false,
+   "description": "One route to some direct verdicts. It needs at least one of holds and fails, and at least one of text, source, writeup and like; the validator checks both.",
+   "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "description": "Optional. Addresses the argument as <record>#<id>."},
+    "holds": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "fails": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "text": {"type": "string", "description": "The argument in prose."},
+    "source": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": ["paper"],
+     "description": "A citation of papers.yaml that gives the argument.",
+     "properties": {
+      "paper": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"},
+      "locator": {"type": "string", "minLength": 1},
+      "note": {"type": "string", "minLength": 1}
+     }
+    },
+    "writeup": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "description": "A write-up writeups/<id>.md that gives the argument."},
+    "like": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*#[a-z0-9]+(-[a-z0-9]+)*$", "description": "An analogous argument in another record, as <record>#<argument id>. Nothing is inherited from it."},
+    "adapt": {"type": "string", "description": "What changes from the argument named by like; used only with like. Empty claims that it applies word for word."},
+    "when": {
+     "type": "object",
+     "description": "A group's member only: the settings of the group's parameters at which the argument applies, as in a shared argument; `own` matches a setting given as the member's own prose. Without it the argument applies at every setting, the member's variants included.",
+     "additionalProperties": {"oneOf": [{"type": "string"}, {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true}]}
+    },
+    "by": {"type": "string", "description": "Who supplied the argument. Defaults to the certificate."},
+    "date": {"type": "string", "description": "When the argument was supplied. Defaults to the certificate date."},
+    "standing": {"enum": ["established", "conjectured"], "default": "established"},
+    "tier": {"enum": ["bronze", "silver", "gold"], "description": "Conjectured arguments only, as for conjectured records."},
+    "revisions": {
+     "type": "array",
+     "description": "Corrections that leave the verdicts alone.",
+     "items": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["date", "note"],
+      "properties": {"date": {"type": "string"}, "by": {"type": "string"}, "note": {"type": "string", "minLength": 1}}
+     }
+    },
+    "withdrawn": {"$ref": "#/$defs/withdrawal"},
+    "provenance": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "description": "A sidecar provenance/<id>.yaml holding provenance moved out of the record verbatim."},
+    "companion_id": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "description": "Conjectured arguments only: the id of the generated conjectured companion, kept from a folded record. Default <model>-conjectured."},
+    "choice": {"enum": ["free", "uses"], "description": "Whether the argument uses the axiom of choice in the metatheory: free (reviewed: it does not) or uses. Unmarked means unreviewed. A model or variant at a choiceless value of a group parameter gets only the arguments marked free."}
+   }
+  },
+  "withdrawal": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": ["date", "reason"],
+   "description": "The text is kept; what is withdrawn stops contributing verdicts.",
+   "properties": {"date": {"type": "string"}, "by": {"type": "string"}, "reason": {"type": "string", "minLength": 1}}
+  }
+ }
+}

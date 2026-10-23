@@ -1,0 +1,316 @@
+Classicism.Research.Splitting.decided_rigid: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.Splitting.decided_weaklyRigid: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.Splitting.decision_persistent: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.Splitting.false_weaklyRigid_necessary_false: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.Splitting.nd_equality_decision: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.Splitting.nd_rigid_point_sections: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.Splitting.nd_rigid_sections: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.Splitting.nd_weak_membership: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.Splitting.nd_weak_point_sections: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.Splitting.nd_weak_sections: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.Splitting.rigid_point_sections_iff_nd: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.Splitting.rigid_point_sections_nd: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.Splitting.weak_point_sections_iff_nd: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.Splitting.weak_point_sections_nd: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.Splitting.weak_section_decided: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+#classicism_audit Classicism.Results.Research.SectionsRetractionsRigidity: 15/15 theorems pass; 15 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.SectionsRetractionsRigidity: 15/15 inside R
+Classicism.Results.Research.SectionsRetractionsRigidity: 15 of 15 theorems derived
+
+[1/15] Classicism.Research.Splitting.decided_rigid ✓ 242 ms
+[2/15] Classicism.Research.Splitting.decided_weaklyRigid ✓ 0 ms
+[3/15] Classicism.Research.Splitting.decision_persistent ✓ 0 ms
+[4/15] Classicism.Research.Splitting.false_weaklyRigid_necessary_false ✓ 53 ms
+[5/15] Classicism.Research.Splitting.nd_equality_decision ✓ 10 ms
+[6/15] Classicism.Research.Splitting.nd_rigid_point_sections ✓ 237 ms
+[7/15] Classicism.Research.Splitting.nd_rigid_sections ✓ 952 ms
+[8/15] Classicism.Research.Splitting.nd_weak_membership ✓ 0 ms
+[9/15] Classicism.Research.Splitting.nd_weak_point_sections ✓ 45 ms
+[10/15] Classicism.Research.Splitting.nd_weak_sections ✓ 100 ms
+[11/15] Classicism.Research.Splitting.rigid_point_sections_iff_nd ✓ 222 ms
+[12/15] Classicism.Research.Splitting.rigid_point_sections_nd ✓ 0 ms
+[13/15] Classicism.Research.Splitting.weak_point_sections_iff_nd ✓ 205 ms
+[14/15] Classicism.Research.Splitting.weak_point_sections_nd ✓ 0 ms
+[15/15] Classicism.Research.Splitting.weak_section_decided ✓ 0 ms
+Classicism.Research.Splitting.WeakSectionClosure ⟶ Classicism.Research.Splitting.WeakSectionClosure.schema:
+  fun ν' σ' =>
+    Classicism.Meta.Term.forall'
+      (Classicism.Meta.Term.imp
+        (Classicism.Meta.Term.conj
+          (Classicism.Meta.Term.forall'
+            (Classicism.Meta.Term.forall'
+              ((((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+                (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).box)))
+          (Classicism.Meta.Term.forall'
+            (Classicism.Meta.Term.imp
+              (Classicism.Meta.Term.forall'
+                (Classicism.Meta.Term.forall'
+                  ((((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ.succ).app
+                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+                    (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).box)))
+              (Classicism.Meta.Term.box
+                (Classicism.Meta.Term.forall'
+                  (Classicism.Meta.Term.forall'
+                    ((((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ.succ).app
+                              (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+                      (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))))))))
+        (Classicism.Meta.Term.forall'
+          (Classicism.Meta.Term.conj
+            (Classicism.Meta.Term.forall'
+              ((((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+                (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).box))
+            (Classicism.Meta.Term.forall'
+              (Classicism.Meta.Term.imp
+                (Classicism.Meta.Term.forall'
+                  ((((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ.succ).app
+                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ)).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).box))
+                (Classicism.Meta.Term.box
+                  (Classicism.Meta.Term.forall'
+                    ((((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ.succ).app
+                              (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ)).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))))))))
+Classicism.Research.Splitting.RigidSectionClosure ⟶ Classicism.Research.Splitting.RigidSectionClosure.schema:
+  fun ν' σ' =>
+    Classicism.Meta.Term.forall'
+      (Classicism.Meta.Term.imp
+        (Classicism.Meta.Term.conj
+          (Classicism.Meta.Term.box
+            (Classicism.Meta.Term.forall'
+              (Classicism.Meta.Term.forall'
+                ((((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+                  (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).box))))
+          (Classicism.Meta.Term.box
+            (Classicism.Meta.Term.forall'
+              (Classicism.Meta.Term.imp
+                (Classicism.Meta.Term.forall'
+                  (Classicism.Meta.Term.forall'
+                    ((((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ.succ).app
+                              (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+                      (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                              (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).box)))
+                (Classicism.Meta.Term.box
+                  (Classicism.Meta.Term.forall'
+                    (Classicism.Meta.Term.forall'
+                      ((((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ.succ).app
+                                (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)).app
+                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+                        (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                              (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))))))))
+        (Classicism.Meta.Term.forall'
+          (Classicism.Meta.Term.conj
+            (Classicism.Meta.Term.box
+              (Classicism.Meta.Term.forall'
+                ((((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+                  (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).box)))
+            (Classicism.Meta.Term.box
+              (Classicism.Meta.Term.forall'
+                (Classicism.Meta.Term.imp
+                  (Classicism.Meta.Term.forall'
+                    ((((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ.succ).app
+                              (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ)).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).box))
+                  (Classicism.Meta.Term.box
+                    (Classicism.Meta.Term.forall'
+                      ((((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ.succ).app
+                                (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ)).app
+                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+                        ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))))))))))
+Classicism.Research.Splitting.WeakPointSectionClosure ⟶ Classicism.Research.Splitting.WeakPointSectionClosure.schema:
+  fun σ' =>
+    Classicism.Meta.Term.forall'
+      (Classicism.Meta.Term.imp
+        (Classicism.Meta.Term.conj
+          (Classicism.Meta.Term.forall'
+            (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).box))
+          (Classicism.Meta.Term.forall'
+            (Classicism.Meta.Term.imp
+              (Classicism.Meta.Term.forall'
+                (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).box))
+              (Classicism.Meta.Term.box
+                (Classicism.Meta.Term.forall'
+                  (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))))))
+        (Classicism.Meta.Term.forall'
+          (Classicism.Meta.Term.conj
+            (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).box)
+            (Classicism.Meta.Term.forall'
+              (Classicism.Meta.Term.imp
+                (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)).imp
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero).box)
+                (Classicism.Meta.Term.box
+                  (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)).imp
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))))))
+Classicism.Research.Splitting.RigidPointSectionClosure ⟶ Classicism.Research.Splitting.RigidPointSectionClosure.schema:
+  fun σ' =>
+    Classicism.Meta.Term.forall'
+      (Classicism.Meta.Term.imp
+        (Classicism.Meta.Term.conj
+          (Classicism.Meta.Term.box
+            (Classicism.Meta.Term.forall'
+              (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).box)))
+          (Classicism.Meta.Term.box
+            (Classicism.Meta.Term.forall'
+              (Classicism.Meta.Term.imp
+                (Classicism.Meta.Term.forall'
+                  (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).box))
+                (Classicism.Meta.Term.box
+                  (Classicism.Meta.Term.forall'
+                    (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))))))))
+        (Classicism.Meta.Term.forall'
+          (Classicism.Meta.Term.conj
+            (Classicism.Meta.Term.box
+              (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).box))
+            (Classicism.Meta.Term.box
+              (Classicism.Meta.Term.forall'
+                (Classicism.Meta.Term.imp
+                  (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)).imp
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero).box)
+                  (Classicism.Meta.Term.box
+                    (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)).imp
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))))))))
+#classicism_schema: 4 of 4 principles with a Ty-parameter have list forms
+Classicism.Research.Splitting.nd_weak_sections ⟶ Classicism.Research.Splitting.nd_weak_sections.rule : ∀
+  (ν' σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.NecessityOfDistinctness.quoted σ')
+      (Classicism.Research.Splitting.WeakSectionClosure.quoted ν' σ'))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.nd_weak_sections ⟶ Classicism.Research.Splitting.nd_weak_sections.listRule : ∀
+  (σs : List Classicism.Meta.Ty) (τ1 : Classicism.Meta.Ty),
+  τ1.Closed →
+    Classicism.Meta.Theorem Classicism.Meta.C.axioms
+      (Classicism.Meta.Term.imp (Classicism.P.NecessityOfDistinctness.quoted τ1)
+        (Classicism.Research.Splitting.WeakSectionClosure.listQuoted σs τ1))
+Classicism.Research.Splitting.nd_rigid_sections ⟶ Classicism.Research.Splitting.nd_rigid_sections.rule : ∀
+  (ν' σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.NecessityOfDistinctness.quoted σ')
+      (Classicism.Research.Splitting.RigidSectionClosure.quoted ν' σ'))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.nd_rigid_sections ⟶ Classicism.Research.Splitting.nd_rigid_sections.listRule : ∀
+  (σs : List Classicism.Meta.Ty) (τ1 : Classicism.Meta.Ty),
+  τ1.Closed →
+    Classicism.Meta.Theorem Classicism.Meta.C.axioms
+      (Classicism.Meta.Term.imp (Classicism.P.NecessityOfDistinctness.quoted τ1)
+        (Classicism.Research.Splitting.RigidSectionClosure.listQuoted σs τ1))
+Classicism.Research.Splitting.nd_weak_point_sections ⟶ Classicism.Research.Splitting.nd_weak_point_sections.rule : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.NecessityOfDistinctness.quoted σ')
+      (Classicism.Research.Splitting.WeakPointSectionClosure.quoted σ'))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.nd_weak_point_sections ⟶ Classicism.Research.Splitting.nd_weak_point_sections.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.NecessityOfDistinctness.listQuoted σs)
+      (Classicism.Research.Splitting.WeakPointSectionClosure.listQuoted σs))
+Classicism.Research.Splitting.nd_rigid_point_sections ⟶ Classicism.Research.Splitting.nd_rigid_point_sections.rule : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.NecessityOfDistinctness.quoted σ')
+      (Classicism.Research.Splitting.RigidPointSectionClosure.quoted σ'))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.nd_rigid_point_sections ⟶ Classicism.Research.Splitting.nd_rigid_point_sections.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.NecessityOfDistinctness.listQuoted σs)
+      (Classicism.Research.Splitting.RigidPointSectionClosure.listQuoted σs))
+Classicism.Research.Splitting.weak_point_sections_nd ⟶ Classicism.Research.Splitting.weak_point_sections_nd.rule : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.Research.Splitting.WeakPointSectionClosure.quoted σ')
+      (Classicism.P.NecessityOfDistinctness.quoted σ'))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.weak_point_sections_nd ⟶ Classicism.Research.Splitting.weak_point_sections_nd.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.Research.Splitting.WeakPointSectionClosure.listQuoted σs)
+      (Classicism.P.NecessityOfDistinctness.listQuoted σs))
+Classicism.Research.Splitting.rigid_point_sections_nd ⟶ Classicism.Research.Splitting.rigid_point_sections_nd.rule : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.Research.Splitting.RigidPointSectionClosure.quoted σ')
+      (Classicism.P.NecessityOfDistinctness.quoted σ'))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.Splitting.rigid_point_sections_nd ⟶ Classicism.Research.Splitting.rigid_point_sections_nd.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.Research.Splitting.RigidPointSectionClosure.listQuoted σs)
+      (Classicism.P.NecessityOfDistinctness.listQuoted σs))
+Classicism.Research.Splitting.nd_weak_sections.listRule (σs : List Classicism.Meta.Ty) (τ1 : Classicism.Meta.Ty)
+  (h1 : τ1.Closed) :
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.NecessityOfDistinctness.quoted τ1)
+      (Classicism.Research.Splitting.WeakSectionClosure.listQuoted σs τ1))
+Classicism.Research.Splitting.nd_rigid_sections.listRule (σs : List Classicism.Meta.Ty) (τ1 : Classicism.Meta.Ty)
+  (h1 : τ1.Closed) :
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.NecessityOfDistinctness.quoted τ1)
+      (Classicism.Research.Splitting.RigidSectionClosure.listQuoted σs τ1))
+'Classicism.Research.Splitting.nd_rigid_sections.listRule' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.Splitting.weak_point_sections_iff_nd.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.Splitting.rigid_point_sections_iff_nd.derivable' depends on axioms: [propext, Quot.sound]

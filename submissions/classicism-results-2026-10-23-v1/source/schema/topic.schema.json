@@ -1,0 +1,359 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "topic.schema.json",
+  "title": "Topic",
+  "description": "A topic is a self-contained map: a framework, a set of principles, and results relating them.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "framework"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Must equal the directory name."
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "require_sources": {
+      "type": "boolean",
+      "description": "Reject result/model records without a nonempty source. Opt in for existing datasets; enabled for new topics."
+    },
+    "source_catalog": {
+      "type": "array",
+      "description": "Direct sources used to classify and filter results and models. Miscellaneous records use the reserved id misc.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "kind"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "enum": [
+              "published-paper",
+              "online-submission",
+              "misc"
+            ]
+          }
+        }
+      }
+    },
+    "principle_categories": {
+      "type": "array",
+      "description": "Ordered display categories for the principle filter. Principles refer to these ids via category.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "hidden_by_default": {
+            "type": "boolean",
+            "description": "Start this category hidden in the graph and conjecture lists; readers can show it with the usual controls."
+          }
+        }
+      }
+    },
+    "initial_principles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true,
+      "description": "Principle ids the graph starts with; the rest start hidden and stay available in the sidebar. Omit to start with every principle shown."
+    },
+    "default_tab": {
+      "enum": ["background", "graph", "lattice", "models", "open", "results", "contribute"],
+      "description": "The tab the map opens on; default graph. models is the theory explorer, open the Conjectures tab and results the Changes tab."
+    },
+    "framework": {
+      "type": "string",
+      "description": "The setting all principles are stated in: the objects, the primitive relation(s), standing conventions. Every result is a claim about this framework."
+    },
+    "background": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true,
+      "description": "Principle ids assumed throughout. Every implication and independence is read relative to these."
+    },
+    "background_presets": {
+      "type": "array",
+      "description": "Named, removable viewer assumption packages and abbreviations for equivalent conjunctions. Defaults apply only when the URL has no explicit assume parameter. Abbreviations do not change stored premises or model assertions.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "category",
+          "principles"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "category": {
+            "type": "string"
+          },
+          "principles": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
+          },
+          "default": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "views": {
+      "type": "array",
+      "description": "Curated graph views, offered in the graph's View menu. A view sets exactly which principles the graph shows; it does not change the background.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "principles"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string"
+          },
+          "default": {
+            "type": "boolean",
+            "description": "Open the graph on this view when the URL names none."
+          },
+          "principles": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            },
+            "description": "Exactly the principles the view shows."
+          }
+        }
+      }
+    },
+    "lattice_views": {
+      "type": "array",
+      "description": "Curated lattice views, offered in the lattice's View menu, independent of the graph views. A view sets exactly which principles the lattice draws; it does not change the background.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "principles"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string"
+          },
+          "default": {
+            "type": "boolean",
+            "description": "Open the lattice on this view when the URL names none."
+          },
+          "principles": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            },
+            "description": "Exactly the principles the view shows. Keep it small: the lattice draws every conjunction."
+          }
+        }
+      }
+    },
+    "notation": {
+      "type": "string",
+      "description": "Optional notation guide shown in the viewer."
+    },
+    "lean_lib": {
+      "type": "string",
+      "description": "Lake library name under topics/<topic>/lean/, e.g. UnboundedUtility."
+    },
+    "lean": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "How this topic writes a generated Lean statement; {def} stands for a principle's lean_def. Without it, principles are plain propositions and a result reads A → B → C.",
+      "properties": {
+        "imports": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Modules Statements.lean imports. Default: <lean_lib>.Principles."
+        },
+        "namespace": {
+          "type": "string",
+          "description": "Namespace the definitions live in. Default: the prefix of the first lean_def."
+        },
+        "definition_check": {
+          "type": "string",
+          "description": "Template checking that a lean_def elaborates, may span lines. Default: example : Prop := {def}"
+        },
+        "result": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "binder": {
+              "type": "string",
+              "description": "Line after `def name : Prop :=`, e.g. a ∀ or ∃ with its variables; empty for none."
+            },
+            "principle": {
+              "type": "string",
+              "description": "How a principle applies inside the statement; {def} is its lean_def. Default {def}."
+            },
+            "falsum": {
+              "type": "string",
+              "description": "How a result concluding False is written. Default: False."
+            }
+          }
+        },
+        "model": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "binder": {
+              "type": "string",
+              "description": "Line after `def name : Prop :=`, e.g. a ∀ or ∃ with its variables; empty for none."
+            },
+            "principle": {
+              "type": "string",
+              "description": "How a principle applies inside the statement; {def} is its lean_def. Default {def}."
+            }
+          }
+        },
+        "verdict": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "How a model's single verdict proved in Lean is stated (a model record's lean.verdicts). {model} is the record's lean.model, {def} the principle's lean_def.",
+          "properties": {
+            "imports": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Modules the verdict statements import, besides the topic's imports: where the models are."
+            },
+            "holds": {"type": "string", "description": "A verdict that the principle holds."},
+            "fails": {"type": "string", "description": "A verdict that the principle fails."},
+            "relative_categories": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Principle categories whose lean_def depends on the model's signature."
+            },
+            "relative": {"type": "string", "description": "A further conjunct for a verdict on a principle in one of those categories."},
+            "relative_models": {
+              "type": "object",
+              "required": ["setting", "values"],
+              "additionalProperties": false,
+              "description": "How a model whose verdicts on the relative categories need more than its lean.model is built from it, by the value of one of its settings: {model} and {is_model} are the record's. A value gives the model (`model`), its proof of being one (`is_model`), its proof of the `relative` conjunct (`relative`), proofs of conditions it meets (`meets`), and how a verdict proved of the record's model carries over to it (`given`, with {proof}).",
+              "properties": {
+                "setting": {"type": "string"},
+                "values": {"type": "object", "additionalProperties": {
+                  "type": "object", "required": ["model", "is_model", "relative"], "additionalProperties": false,
+                  "properties": {
+                    "model": {"type": "string"}, "is_model": {"type": "string"}, "relative": {"type": "string"},
+                    "meets": {"type": "object", "additionalProperties": {"type": "string"}},
+                    "given": {"type": "string"}}}}
+              }
+            }
+          }
+        },
+        "argument": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "How a general argument's verdict proved in Lean is stated: for every model (`binder`, binding `model`) meeting each condition the argument requires ({cond} is the condition's lean, applied by `condition`) and holding each principle in its `given`, the verdict (`holds` or `fails`, with {model} and {def}). A group's argument binds the group's lean.binder instead.",
+          "properties": {
+            "binder": {"type": "string"},
+            "model": {"type": "string"},
+            "condition": {"type": "string"},
+            "holds": {"type": "string"},
+            "fails": {"type": "string"},
+            "relative": {"type": "string", "description": "A further hypothesis, after the model's, for a verdict on a principle in the verdict's relative_categories."}
+          }
+        },
+        "index": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "script": {
+              "type": "string",
+              "description": "Lean file, relative to the topic's lean directory, that lean-check runs with `lake env lean` after a successful build to write the index."
+            },
+            "file": {
+              "type": "string",
+              "description": "The index it writes, relative to the topic's lean directory: for each certificate and variant, where its proofs and definitions are."
+            }
+          },
+          "description": "The index of source locations the viewer links each result, principle and variant to."
+        },
+        "source_url": {
+          "type": "string",
+          "description": "Template for a link to a source location: {commit}, {file} (relative to the topic's lean directory), {start} and {end} lines. The build fills {commit} with the commit it was built from."
+        }
+      }
+    },
+    "draft": {
+      "type": "boolean",
+      "description": "A draft topic: built and validated, but its rankings, settled share and recorded-conjecture list are not computed, and commands skip it unless it is named."
+    }
+  }
+}

@@ -1,0 +1,6 @@
+Classicism/Models/ColourCollapseBase.lean:89:2: error: Type mismatch: After simplification, term
+  bf_at σ h
+ has type
+  @Premodel.Holds Signature.pure cat.Ob cat.instSmallCategoryOb model [] W h (P.Barcan.quoted σ) IEnv.nil
+but is expected to have type
+  @Premodel.Holds Signature.pure cat.Ob cat.instSmallCategoryOb model [] W (𝟙 A ≫ h) (P.Barcan.quoted σ) IEnv.nil

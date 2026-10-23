@@ -1,0 +1,23 @@
+Classicism.Research.Choice.append_conforming: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.Choice.canonical_fixedpoint_of_supremum: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.Choice.canonical_member_domain: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.Choice.canonical_successor_bound: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.Choice.canonical_union_conforming: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.Choice.chainSup_coext: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.Choice.chainSup_unique: Classicism ✓ [C⁻] (axioms: [])
+#classicism_audit Classicism.Results.Research.ChoiceChains: 7/7 theorems pass; 7 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.ChoiceChains: 7/7 inside R
+Classicism.Results.Research.ChoiceChains: 6 of 7 theorems derived
+Classicism.Research.Choice.canonical_fixedpoint_of_supremum: (deterministic) timeout at `derive`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+[1/7] Classicism.Research.Choice.append_conforming ✓ 747 ms
+[2/7] Classicism.Research.Choice.canonical_fixedpoint_of_supremum ✗ 18797 ms
+[3/7] Classicism.Research.Choice.canonical_member_domain ✓ 670 ms
+[4/7] Classicism.Research.Choice.canonical_successor_bound ✓ 0 ms
+[5/7] Classicism.Research.Choice.canonical_union_conforming ✓ 0 ms
+[6/7] Classicism.Research.Choice.chainSup_coext ✓ 0 ms
+[7/7] Classicism.Research.Choice.chainSup_unique ✓ 0 ms
+Classicism/Results/Research/ChoiceChainsCertificates.lean:11:14: error(lean.unknownIdentifier): Unknown constant `Classicism.Research.Choice.canonical_fixedpoint_of_supremum.derivable`

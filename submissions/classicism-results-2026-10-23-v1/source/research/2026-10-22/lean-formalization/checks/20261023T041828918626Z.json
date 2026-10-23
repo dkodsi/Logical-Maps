@@ -1,0 +1,102 @@
+{
+  "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "modules": [
+    "Classicism.Results.Research.MaxAtomicityHCodeSemantics"
+  ],
+  "checked": [
+    {
+      "module": "Classicism.Syntax.Types",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "07df345faa0bc772732f7d92d2d70bc9e98684e0474a3e9513213d52a1cd202c"
+    },
+    {
+      "module": "Classicism.Syntax.Term",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "c985f9d073087c935e2b64f9c0503b909a3a3d2bc6603871661e80a7aaa0bc76"
+    },
+    {
+      "module": "Classicism.Syntax.Conversion",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "3452ccbab9592b35912b00a0c40855b2ad68d387526de7e565970846e0e33a3d"
+    },
+    {
+      "module": "Classicism.Syntax.Derivation",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "9397e2f2e7a7a13c11a5ca5126b71930a51abeb2ddae0a2c9ff0ea68d35fc521"
+    },
+    {
+      "module": "Classicism.Syntax.Axioms",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "baf39452832f2901859d4de2edabde78f03d2590f27d96357995f407164916ae"
+    },
+    {
+      "module": "Classicism.Syntax.Entailment",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "36bb45c1856e08cc774815f8dac2285fdb5c54ff61a3b285d7923e0b4bf00a3a"
+    },
+    {
+      "module": "Classicism.Syntax.ClosedTypes",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "1afa431c973784f384ea866b7537c05288597b1e058113e54644c045c9841617"
+    },
+    {
+      "module": "Classicism.Syntax.SentenceSchemas",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "d4468743200ccf4b950dadad63e98441b14c38df1cab995027ee535520ede3a0"
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicitySyntax",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "013f756e2ecb245b1dea5223e18ebc8443de7e4a42c79d85ff95abf1c3d94fcf"
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicitySetSyntax",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "d55f5e903373e1f246c220b69ed0bf02024165bcde1c84a3fdfb2e4ff96ada15"
+    },
+    {
+      "module": "Classicism.Semantics.Env",
+      "reused": true,
+      "exit_code": 0,
+      "fingerprint": "33c350a04f4d94ee85bff12cb1dd3b63ad47b833b90fcda057de08e131e10f76"
+    },
+    {
+      "module": "Classicism.Semantics.BooleanValued",
+      "seconds": 10.2,
+      "exit_code": 0,
+      "fingerprint": "395434fa2044f96d50e296134f55aaa8de65e99112490797fb5b83a75deda70d",
+      "log": "logs/runs/20261023T041828918626Z/Classicism_Semantics_BooleanValued.log"
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicitySetSemantics",
+      "seconds": 5.55,
+      "exit_code": 0,
+      "fingerprint": "33786940271e48553677e4461f0fb625b422b3aec99dd7775c9f67bccf49a113",
+      "log": "logs/runs/20261023T041828918626Z/Classicism_Results_Research_MaxAtomicitySetSemantics.log"
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityHCodeSyntax",
+      "seconds": 0.44,
+      "exit_code": 0,
+      "fingerprint": "336fc2f5e484ad59cf1cddb668713ec3c43c82ef4b889c9a172d16698150a2e6",
+      "log": "logs/runs/20261023T041828918626Z/Classicism_Results_Research_MaxAtomicityHCodeSyntax.log"
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityHCodeSemantics",
+      "seconds": 23.52,
+      "exit_code": 1,
+      "fingerprint": "b18d24ce9003fb2d60c54ab764b12af0278ac2343db55661ed0683b1c196c272",
+      "log": "logs/runs/20261023T041828918626Z/Classicism_Results_Research_MaxAtomicityHCodeSemantics.log"
+    }
+  ]
+}

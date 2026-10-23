@@ -1,0 +1,30 @@
+Classicism/Results/Research/AtomicProbabilityCuts.lean:46:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.ProbabilityCuts.union_is_lub`:
+  [Ty σ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Ty σ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/AtomicProbabilityCuts.lean:53:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.ProbabilityCuts.union_is_cut`:
+  [Ty σ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Ty σ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/AtomicProbabilityCuts.lean:76:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.ProbabilityCuts.lub_unique_coextension`:
+  [Ty σ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Ty σ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/AtomicProbabilityCuts.lean:80:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.ProbabilityCuts.lowerCut_transport`:
+  [Ty σ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Ty σ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/AtomicProbabilityCuts.lean:91:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.ProbabilityCuts.lub_transport`:
+  [Ty σ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Ty σ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

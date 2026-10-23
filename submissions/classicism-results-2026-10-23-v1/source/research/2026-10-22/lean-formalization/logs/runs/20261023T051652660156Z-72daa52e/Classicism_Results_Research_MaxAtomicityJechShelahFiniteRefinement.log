@@ -1,0 +1,36 @@
+Classicism/Results/Research/MaxAtomicityJechShelahFiniteRefinement.lean:149:0: warning: automatically included section variable(s) unused in theorem `Classicism.Meta.Research.MaxAtomicityJechShelahFiniteRefinement.decide_selected`:
+  [Nonempty I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/MaxAtomicityJechShelahFiniteRefinement.lean:151:14: warning: Variable name `i` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _i
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'Classicism.Meta.Research.MaxAtomicityJechShelahFiniteRefinement.selectedFrontEquiv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahFiniteRefinement.selected_front_card' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahFiniteRefinement.selected_preserves_level' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahFiniteRefinement.selected_restrict_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahFiniteRefinement.selected_union_value' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahFiniteRefinement.decision_unique' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahFiniteRefinement.decision_preserved' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahFiniteRefinement.decide_selected' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

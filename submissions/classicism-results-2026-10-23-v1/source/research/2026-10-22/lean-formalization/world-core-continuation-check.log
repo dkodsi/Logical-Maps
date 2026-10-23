@@ -1,0 +1,35 @@
+Closure: 62 local modules; external: Lean
+PASS Classicism.Results.Research.ActualityCoreSyntax (0.88s)
+PASS Classicism.Results.Research.ActualityCoreInterpretationRules (1.87s)
+PASS Classicism.Syntax.Pure (1.05s)
+FAIL Classicism.Results.Research.ActualityCoreMembership (5.13s)
+Classicism/Results/Research/ActualityCoreMembership.lean:38:12: error: don't know how to synthesize implicit argument `Δ`
+  @Derivable.allE₃β Sig C.axioms Γ ?m.36 (Ty.rel RTy.t) (Ty.rel ρ) (Ty.rel ρ)
+    (Term.rec (motive := fun Γ σ x => (Δ : Ctx) → Ren Γ Δ → Term Sig Δ σ) (fun {Γ} {σ} v x r => Term.var (r σ v))
+      (fun {Γ} c x x_1 => Term.const c) (fun {Γ} {σ} {ρ} x x_1 f a Δ' r => (f Δ' r).app (a Δ' r))
+      (fun {Γ} {σ} {ρ} x b x_1 r => (b (σ :: x_1) r.lift).lam) (fun {Γ} x x_1 => Term.and) (fun {Γ} x x_1 => Term.or)
+      (fun {Γ} x x_1 => Term.not) (fun {Γ} σ x x_1 => Term.all σ) (fun {Γ} σ x x_1 => Term.ex σ)
+      (fun {Γ} σ x x_1 => Term.eq σ) (fun {Γ} ρ x x_1 => Term.constR ρ) (fun {Γ} ρ x x_1 => Term.negR ρ)
+      (fun {Γ} ρ x x_1 => Term.andR ρ) (fun {Γ} ρ x x_1 => Term.orR ρ) (fun {Γ} ρ x x_1 => Term.coextR ρ)
+      (fun {Γ} ρ x x_1 => Term.boxR ρ) (fun {Γ} ρ x x_1 => Term.inclR ρ)
+Classicism/Results/Research/ActualityCoreMembership.lean:39:5: error: don't know how to synthesize implicit argument `Δ`
+  @C.Derivable.of_minus Sig Γ ?m.36
+    (Term.forall'
+      (Term.forall'
+        (Term.rec (motive := fun Γ σ x => (Δ : Ctx) → Ren Γ Δ → Term Sig Δ σ) (fun {Γ} {σ} v x r => Term.var (r σ v))
+            (fun {Γ} c x x_1 => Term.const c) (fun {Γ} {σ} {ρ} x x_1 f a Δ' r => (f Δ' r).app (a Δ' r))
+            (fun {Γ} {σ} {ρ} x b x_1 r => (b (σ :: x_1) r.lift).lam) (fun {Γ} x x_1 => Term.and)
+            (fun {Γ} x x_1 => Term.or) (fun {Γ} x x_1 => Term.not) (fun {Γ} σ x x_1 => Term.all σ)
+            (fun {Γ} σ x x_1 => Term.ex σ) (fun {Γ} σ x x_1 => Term.eq σ) (fun {Γ} ρ x x_1 => Term.constR ρ)
+Classicism/Results/Research/ActualityCoreMembership.lean:39:27: error: don't know how to synthesize implicit argument `Δ`
+  @Derivable.ofTheorem Sig C.axiomsMinus Γ ?m.36
+    (Term.ofPure
+      (Term.forall'
+        (Term.forall'
+          (Term.forall'
+            (Term.imp
+              ((Term.var Var.zero.succ.succ).conj
+                (Term.forall'
+PASS ActualityCoreGraphsDerivations (7.47s)
+PASS ActualityCoreBridgeDerivations (15.87s)
+Some modules failed; independent checks completed.

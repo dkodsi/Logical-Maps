@@ -1,0 +1,34 @@
+{
+  "release_id": "classicism-results-2026-10-23-v1",
+  "captured_at_utc": "2026-10-23T12:40:20.509353+00:00",
+  "original_workspace": "/Users/danielkodsi/Downloads/classicism-map",
+  "git": {
+    "repository_root": null
+  },
+  "scope": "Source and certificate-evidence snapshot for review and possible integration by the database owners. No database verdict is changed by this release.",
+  "included": [
+    "All selected original research prose, Lean sources, metadata and logs",
+    "Classicism records, definitions and validation scripts",
+    "Selected exact external source dependencies and licenses",
+    "Final compiled Max-Atomicity author archive"
+  ],
+  "not_included": [
+    "Full external Lean/Mathlib distributions and binary caches",
+    "Reference PDFs except the locally catalogued counterexample required by repository validation",
+    "One superseded partial-background archive",
+    "Unrelated projects, private memory or chat histories"
+  ],
+  "excluded_source_artifacts": [
+    {
+      "path": "research/2026-10-22/lean-formalization/max-atomicity-checked-background-certificates.zip",
+      "sha256": "6f3328f5b03e6033258ddcf953452416de35a54c3847379f383b069ae0cd455f",
+      "bytes": 23220984,
+      "reason": "Superseded partial compiled archive"
+    }
+  ],
+  "new_lean_compilation": false,
+  "source_records_edited": false,
+  "registry_snapshot_generated_at_utc": "2026-10-23T04:53:53.365162+00:00",
+  "validation_exit_code": 0,
+  "historical_unresolved_link_count": 41
+}

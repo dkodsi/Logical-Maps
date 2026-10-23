@@ -1,0 +1,111 @@
+Classicism/Models/NominalConversion.lean:64:30: error: unsolved goals
+G : Type
+inst✝ : Group G
+A : Action G
+I : SupportIdeal A
+W : Nom A I
+Sig : Signature
+C : FixedConstants W Sig
+R : {Γ : Ctx} → {σ : Ty} → Term Sig Γ σ → Term Sig Γ σ → Prop
+hR :
+  ∀ {Γ : Ctx} {σ : Ty} {a b : Term Sig Γ σ},
+    R a b → ∀ (η : (env W Γ).obj.Carrier), (denote W C a).fn η = (denote W C b).fn η
+Γ✝ : Ctx
+σ✝ : Ty
+ρ✝ : RTy
+f✝ f'✝ : Term Sig Γ✝ (Ty.rel (σ✝ ⇒ ρ✝))
+a✝ : Term Sig Γ✝ σ✝
+h : Step (fun {Γ} {σ} => R) f✝ f'✝
+η : (env W Γ✝).obj.Carrier
+⊢ ↑((denote W C f'✝).fn η) ((denote W C a✝).fn η) = ↑((denote W C f'✝).fn η) ((denote W C a✝).fn η)
+Classicism/Models/NominalConversion.lean:66:30: error: unsolved goals
+G : Type
+inst✝ : Group G
+A : Action G
+I : SupportIdeal A
+W : Nom A I
+Sig : Signature
+C : FixedConstants W Sig
+R : {Γ : Ctx} → {σ : Ty} → Term Sig Γ σ → Term Sig Γ σ → Prop
+hR :
+  ∀ {Γ : Ctx} {σ : Ty} {a b : Term Sig Γ σ},
+    R a b → ∀ (η : (env W Γ).obj.Carrier), (denote W C a).fn η = (denote W C b).fn η
+Γ✝ : Ctx
+σ✝ : Ty
+ρ✝ : RTy
+f✝ : Term Sig Γ✝ (Ty.rel (σ✝ ⇒ ρ✝))
+a✝ a'✝ : Term Sig Γ✝ σ✝
+h : Step (fun {Γ} {σ} => R) a✝ a'✝
+η : (env W Γ✝).obj.Carrier
+⊢ ↑((denote W C f✝).fn η) ((denote W C a'✝).fn η) = ↑((denote W C f✝).fn η) ((denote W C a'✝).fn η)
+Classicism/Models/NominalConversion.lean:68:29: error: unsolved goals
+G : Type
+inst✝ : Group G
+A : Action G
+I : SupportIdeal A
+W : Nom A I
+Sig : Signature
+C : FixedConstants W Sig
+R : {Γ : Ctx} → {σ : Ty} → Term Sig Γ σ → Term Sig Γ σ → Prop
+hR :
+  ∀ {Γ : Ctx} {σ : Ty} {a b : Term Sig Γ σ},
+    R a b → ∀ (η : (env W Γ).obj.Carrier), (denote W C a).fn η = (denote W C b).fn η
+Γ✝ : Ctx
+σ✝ : Ty
+ρ✝ : RTy
+b✝ b'✝ : Term Sig (σ✝ :: Γ✝) (Ty.rel ρ✝)
+h : Step (fun {Γ} {σ} => R) b✝ b'✝
+η : (env W Γ✝).obj.Carrier
+x : (dom W σ✝).obj.Carrier
+⊢ (denote W C b'✝).fn (x, η) = (denote W C b'✝).fn (x, η)
+Classicism/Models/NominalConversion.lean:87:41: error: unsolved goals
+G : Type
+inst✝ : Group G
+A : Action G
+I : SupportIdeal A
+W : Nom A I
+Sig : Signature
+C : FixedConstants W Sig
+x✝⁴ x✝³ : Ctx
+x✝² σ✝ : Ty
+ρ✝ : RTy
+K : Hole Sig x✝⁴ (Ty.rel (σ✝ ⇒ ρ✝)) x✝³ x✝²
+a✝ : Term Sig x✝⁴ σ✝
+x✝¹ x✝ : Term Sig x✝³ x✝²
+h : ∀ (η' : (env W x✝³).obj.Carrier), (denote W C x✝¹).fn η' = (denote W C x✝).fn η'
+η : (env W x✝⁴).obj.Carrier
+⊢ ↑((denote W C (K.plug x✝)).fn η) ((denote W C a✝).fn η) = ↑((denote W C (K.plug x✝)).fn η) ((denote W C a✝).fn η)
+Classicism/Models/NominalConversion.lean:89:41: error: unsolved goals
+G : Type
+inst✝ : Group G
+A : Action G
+I : SupportIdeal A
+W : Nom A I
+Sig : Signature
+C : FixedConstants W Sig
+x✝⁴ x✝³ : Ctx
+x✝² σ✝ : Ty
+ρ✝ : RTy
+a✝ : Term Sig x✝⁴ (Ty.rel (σ✝ ⇒ ρ✝))
+K : Hole Sig x✝⁴ σ✝ x✝³ x✝²
+x✝¹ x✝ : Term Sig x✝³ x✝²
+h : ∀ (η' : (env W x✝³).obj.Carrier), (denote W C x✝¹).fn η' = (denote W C x✝).fn η'
+η : (env W x✝⁴).obj.Carrier
+⊢ ↑((denote W C a✝).fn η) ((denote W C (K.plug x✝)).fn η) = ↑((denote W C a✝).fn η) ((denote W C (K.plug x✝)).fn η)
+Classicism/Models/NominalConversion.lean:91:38: error: unsolved goals
+G : Type
+inst✝ : Group G
+A : Action G
+I : SupportIdeal A
+W : Nom A I
+Sig : Signature
+C : FixedConstants W Sig
+x✝⁴ x✝³ : Ctx
+x✝² σ✝ : Ty
+ρ✝ : RTy
+K : Hole Sig (σ✝ :: x✝⁴) (Ty.rel ρ✝) x✝³ x✝²
+x✝¹ x✝ : Term Sig x✝³ x✝²
+h : ∀ (η' : (env W x✝³).obj.Carrier), (denote W C x✝¹).fn η' = (denote W C x✝).fn η'
+η : (env W x✝⁴).obj.Carrier
+x : (dom W σ✝).obj.Carrier
+⊢ (denote W C (K.plug x✝)).fn (x, η) = (denote W C (K.plug x✝)).fn (x, η)

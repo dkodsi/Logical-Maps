@@ -1,0 +1,25 @@
+{
+  "modules": [
+    "Classicism.Results.Research.AtomicProbabilityNaturalOrderCertificates",
+    "Classicism.Results.Research.AtomicProbabilityNumericMultiplication"
+  ],
+  "stop_at": "2026-10-23T05:55:00+00:00",
+  "wall_budget_seconds": 600,
+  "command": [
+    "/private/tmp/classicism-followup-venv/bin/python3",
+    "/Users/danielkodsi/Downloads/classicism-map/research/2026-10-22/lean-formalization/check_module.py",
+    "Classicism.Results.Research.AtomicProbabilityNaturalOrderCertificates",
+    "Classicism.Results.Research.AtomicProbabilityNumericMultiplication",
+    "--timeout",
+    "180",
+    "--lock-wait",
+    "300",
+    "--keep-going"
+  ],
+  "output": "/Users/danielkodsi/Downloads/classicism-map/research/2026-10-22/lean-formalization/logs/probability-owner/20261023T051735216694Z.out",
+  "state": "completed",
+  "pid": 48968,
+  "process_group": 48968,
+  "exit_code": 0,
+  "seconds": 121.86
+}

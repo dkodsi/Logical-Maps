@@ -1,0 +1,38 @@
+{
+  "schema_version": 2,
+  "run_id": "20261023T043010164526Z-9af95bd5",
+  "modules": [
+    "Classicism.Results.Research.AtomicProbabilityFiniteConstructive"
+  ],
+  "cache": "/private/tmp/classicism-lean-cert-cache",
+  "state": "complete",
+  "complete": true,
+  "checked": [
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFiniteConstructive",
+      "fingerprint": "a2e25917ec91fd7b48c7c1950e6ac72722ad92f36e9763d4cff874e5110d4a18",
+      "source_sha256": "9c0003ad129a9e750ec7d80a50594782a48fe106192d623ec5efb8efa33fad3a",
+      "artifacts": {
+        ".olean": "6d2c4453a010f06700847289422529abf9308c67020d10796aa698004b505fd9"
+      },
+      "seconds": 0.38,
+      "exit_code": 0,
+      "log": "logs/runs/20261023T043010164526Z-9af95bd5/Classicism_Results_Research_AtomicProbabilityFiniteConstructive.log"
+    }
+  ],
+  "sources": {
+    "Classicism.Results.Research.AtomicProbabilityFiniteConstructive": {
+      "path": "/Users/danielkodsi/Downloads/classicism-map/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFiniteConstructive.lean",
+      "sha256": "9c0003ad129a9e750ec7d80a50594782a48fe106192d623ec5efb8efa33fad3a"
+    }
+  },
+  "precompiled_roots": [],
+  "precompiled_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "compiler_path": "/private/tmp/classicism-lean-toolchain/lean-4.33.1-darwin_aarch64/bin/lean",
+  "compiler_sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554",
+  "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "source_snapshot": "/Users/danielkodsi/Downloads/classicism-map/research/2026-10-22/lean-formalization/logs/runs/20261023T043010164526Z-9af95bd5/sources",
+  "source_drift": [],
+  "current_sources_match": true,
+  "exit_code": 0
+}

@@ -1,0 +1,38 @@
+Classicism/Results/Research/FregeNoncollapse.lean:31:46: error: Application type mismatch: The argument
+  IStar
+has type
+  (σ : Type) → [Ty σ] → Prop
+of sort `Type 1` but is expected to have type
+  Prop
+of sort `Type` in the application
+  ◇IStar
+Classicism/Results/Research/FregeNoncollapse.lean:38:14: warning: Variable name `X` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _X
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Classicism/Results/Research/FregeNoncollapse.lean:128:45: error: Application type mismatch: The argument
+  hp
+has type
+  ArithmeticI σ
+but is expected to have type
+  ◇(IStar σ)
+in the application
+  not_dia_of_box_not (IStar σ)
+    (modal_K (FiniteCardinality Bottom) (¬IStar σ)
+      (propext { mp := fun x => True.intro, mpr := fun x => bottom_number_not_istar })
+      (frege_number_persistent Bottom hb))
+    hp
+Classicism/Results/Research/FregeNoncollapse.lean:131:4: error: Type mismatch
+  dia_intro ?m.41
+has type
+  ?m.41 → ◇?m.41
+but is expected to have type
+  IStar σ → ArithmeticI σ
+Classicism/Results/Research/FregeNoncollapse.lean:240:59: error: typeclass instance problem is stuck
+  Ty (?m.30 n)
+
+Note: Lean will not try to resolve this typeclass instance problem because the type argument to `Ty` contains metavariables. This argument must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.

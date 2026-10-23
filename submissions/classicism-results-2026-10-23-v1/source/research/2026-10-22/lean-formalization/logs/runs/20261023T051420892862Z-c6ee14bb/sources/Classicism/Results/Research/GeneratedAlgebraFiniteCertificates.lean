@@ -1,0 +1,19 @@
+import Classicism.Results.Research.GeneratedAlgebraFinite
+import Classicism.Results.Research.GeneratedAlgebraTransferCertificates
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Translate
+
+#classicism_audit Classicism.Results.Research.GeneratedAlgebraFinite
+#classicism_types_audit Classicism.Results.Research.GeneratedAlgebraFinite
+#classicism_derive_audit Classicism.Results.Research.GeneratedAlgebraFinite
+
+#print axioms Classicism.Research.GeneratedAlgebraFinite.onto0.derivable
+#print axioms Classicism.Research.GeneratedAlgebraFinite.left_inverse0.derivable
+#print axioms Classicism.Research.GeneratedAlgebraFinite.right_inverse0.derivable
+#print axioms Classicism.Research.GeneratedAlgebraFinite.onto1.derivable
+#print axioms Classicism.Research.GeneratedAlgebraFinite.left_inverse1.derivable
+#print axioms Classicism.Research.GeneratedAlgebraFinite.right_inverse1.derivable
+#print axioms Classicism.Research.GeneratedAlgebraFinite.onto2.derivable
+#print axioms Classicism.Research.GeneratedAlgebraFinite.left_inverse2.derivable
+#print axioms Classicism.Research.GeneratedAlgebraFinite.right_inverse2.derivable

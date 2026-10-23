@@ -1,0 +1,42 @@
+Classicism/Results/Research/RigidityClosureResearchFinite.lean:233:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.RigidityClosure.de_morgan_meet`:
+  [Ty σ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Ty σ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/RigidityClosureResearchFinite.lean:240:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.RigidityClosure.true_cut_eq`:
+  [Ty σ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Ty σ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/RigidityClosureResearchFinite.lean:242:13: warning: Variable name `x` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _x
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Classicism/Results/Research/RigidityClosureResearchFinite.lean:244:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.RigidityClosure.complement_bottom_eq`:
+  [Ty σ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Ty σ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/RigidityClosureResearchFinite.lean:261:7: error: invalid `▸` notation, expected result type of cast is 
+  WeaklyRigid ModalPropagation.Universe
+however, the equality 
+  complement_bottom_eq
+of type 
+  (fun x => ¬False) = fun x => True
+does not contain the expected result type on either the left or the right hand side
+Classicism/Results/Research/RigidityClosureResearchFinite.lean:269:7: error: invalid `▸` notation, expected result type of cast is 
+  Rigid ModalPropagation.Universe
+however, the equality 
+  complement_bottom_eq
+of type 
+  (fun x => ¬False) = fun x => True
+does not contain the expected result type on either the left or the right hand side
+Classicism/Results/Research/RigidityClosureResearchFinite.lean:276:13: error(lean.unknownIdentifier): Unknown identifier `Proofs.distinctness_necessary_t_and_barcan_t_imply_necessary_distinctness_necessary_t`
+Classicism/Results/Research/RigidityClosureResearchFinite.lean:278:59: error(lean.unknownIdentifier): Unknown identifier `Proofs.bf_of_box_nd_t`
+Classicism/Results/Research/RigidityClosureResearchFinite.lean:282:13: error(lean.unknownIdentifier): Unknown identifier `Proofs.distinctness_necessary_t_and_barcan_t_imply_necessary_distinctness_necessary_t`
+Classicism/Results/Research/RigidityClosureResearchFinite.lean:286:19: error(lean.unknownIdentifier): Unknown identifier `Proofs.necessary_distinctness_necessary_r_implies_necessary_barcan_r`

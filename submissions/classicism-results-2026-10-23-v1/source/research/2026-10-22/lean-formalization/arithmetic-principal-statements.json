@@ -1,0 +1,540 @@
+{
+  "generated_at_utc": "2026-10-23T05:28:04.180126+00:00",
+  "scope": "Exact source statements for delivery; this index does not assert verification. Definitions and optional premises retain their source meanings. Later signatures can differ from ambient variables; inspect each complete statement.",
+  "verification_ledger": "verification-updates/infinity_arithmetic_profiles.json",
+  "prose_index": "arithmetic-contribution-summary.md",
+  "entries": [
+    {
+      "module": "Classicism.Results.Research.FregeInfinity",
+      "path": "topics/classicism/lean/Classicism/Results/Research/FregeInfinity.lean",
+      "sha256": "b0007e4dad8fdcf52a01e8ef77bbce988fa3f6aa06570c89c4f2397ea138c759",
+      "ambient_variables": [
+        "variable {σ : Type} [Ty σ]"
+      ],
+      "principals": [
+        {
+          "declaration": "Classicism.Research.frege_infinity_realizes",
+          "line": 54,
+          "statement": "theorem frege_infinity_realizes (hInf : P.AxiomOfInfinity σ)\n    (n : (σ → Prop) → Prop) (hn : FiniteCardinality n) : ∃ X, n X"
+        },
+        {
+          "declaration": "Classicism.Research.frege_infinity_suc_injective",
+          "line": 191,
+          "statement": "theorem frege_infinity_suc_injective (hInf : P.AxiomOfInfinity σ)\n    (n m : (σ → Prop) → Prop) (hn : FiniteCardinality n)\n    (hm : FiniteCardinality m) (he : SucCard n = SucCard m) : n = m"
+        }
+      ]
+    },
+    {
+      "module": "Classicism.Results.Research.CoreNumberIsomorphism",
+      "path": "topics/classicism/lean/Classicism/Results/Research/CoreNumberIsomorphism.lean",
+      "sha256": "c1d44eb1f1b3c5f5f02107ddcecfe54a6b6bf888f8294e0a72f34d65749200d4",
+      "ambient_variables": [
+        "variable {σ : Type} [Ty σ]"
+      ],
+      "principals": [
+        {
+          "declaration": "Classicism.Research.core_quantified_infinity_iff",
+          "line": 59,
+          "statement": "theorem core_quantified_infinity_iff\n    (P : (σ → Prop) → Prop) (q : ((σ → Prop) → Prop) → ((σ → Prop) → Prop))\n    (K : ((σ → Prop) → Prop) → Prop) (U : σ → Prop)\n    (htests : NumberMapTests P q) (hPU : P U) (hU : ∀ u, U u)\n    (hforward : ∀ n, FiniteCardinality n → K (q n))\n    (honto : ∀ y, K y → ∃ n, FiniteCardinality n ∧ q n = y) :\n    Classicism.P.AxiomOfInfinity σ ↔ ¬ ∃ y, K y ∧ y U"
+        },
+        {
+          "declaration": "Classicism.Research.core_number_inverse_graph",
+          "line": 87,
+          "statement": "theorem core_number_inverse_graph (hInf : Classicism.P.AxiomOfInfinity σ)\n    (P : (σ → Prop) → Prop) (q : ((σ → Prop) → Prop) → ((σ → Prop) → Prop))\n    (K : ((σ → Prop) → Prop) → Prop)\n    (hcovers : PropertyFieldCovers P) (htests : NumberMapTests P q)\n    (honto : ∀ y, K y → ∃ n, FiniteCardinality n ∧ q n = y) :\n    ∀ y, K y → ∃ n, NumberInverse K q y n ∧\n      ∀ m, NumberInverse K q y m → m = n"
+        }
+      ]
+    },
+    {
+      "module": "Classicism.Results.Research.GeneratedAlgebraTransfer",
+      "path": "topics/classicism/lean/Classicism/Results/Research/GeneratedAlgebraTransfer.lean",
+      "sha256": "9611715d82e682bd3c52822fd195644151859ea4ad8369f432ca2f94845d322d",
+      "ambient_variables": [
+        "variable {μ ν : Type} [Rel μ] [Rel ν]"
+      ],
+      "principals": [
+        {
+          "declaration": "Classicism.Research.GeneratedAlgebra.onto",
+          "line": 132,
+          "statement": "theorem onto\n    (hnd : □ (∀ p q : Prop, p ≠ q → □ (p ≠ q)))\n    (c : μ) (f : μ → μ) (b : μ → μ → μ)\n    (H : ν → Prop) (d : ν) (g : ν → ν) (k : ν → ν → ν) (q : μ → ν)\n    (hH : Persistent H) (hd : H d) (hg : ∀ a, H a → H (g a))\n    (hk : ∀ a z, H a → H z → H (k a z))\n    (hq0 : q c = d) (hqf : ∀ x, H (q x) → q (f x) = g (q x))\n    (hqb : ∀ x y, H (q x) → H (q y) → q (b x y) = k (q x) (q y))\n    (y : ν) (hy : CoreCarrier H d g k y) :\n    ∃ x, Carrier c f b x ∧ q x = y"
+        },
+        {
+          "declaration": "Classicism.Research.GeneratedAlgebra.left_inverse",
+          "line": 161,
+          "statement": "theorem left_inverse\n    (c : μ) (f : μ → μ) (b : μ → μ → μ)\n    (H : ν → Prop) (d : ν) (g : ν → ν) (k : ν → ν → ν)\n    (q : μ → ν) (l : ν → μ)\n    (hd : H d) (hg : ∀ a, H a → H (g a))\n    (hk : ∀ a z, H a → H z → H (k a z))\n    (hq0 : q c = d) (hqf : ∀ x, H (q x) → q (f x) = g (q x))\n    (hqb : ∀ x y, H (q x) → H (q y) → q (b x y) = k (q x) (q y))\n    (hl0 : l d = c) (hlg : ∀ y, H y → l (g y) = f (l y))\n    (hlk : ∀ y z, H y → H z → l (k y z) = b (l y) (l z))\n    (x : μ) (hx : Carrier c f b x) : H (q x) ∧ l (q x) = x"
+        },
+        {
+          "declaration": "Classicism.Research.GeneratedAlgebra.right_inverse_on_target",
+          "line": 191,
+          "statement": "theorem right_inverse_on_target (G : μ → Prop) (K : ν → Prop)\n    (q : μ → ν) (l : ν → μ)\n    (honto : ∀ y, K y → ∃ x, G x ∧ q x = y)\n    (hl : ∀ x, G x → l (q x) = x)\n    (y : ν) (hy : K y) : G (l y) ∧ q (l y) = y"
+        }
+      ]
+    },
+    {
+      "module": "Classicism.Results.Research.ActualityCoreNumbers",
+      "path": "topics/classicism/lean/Classicism/Results/Research/ActualityCoreNumbers.lean",
+      "sha256": "d27975e179f732034febf810fc97b1a5f77441c95e392d8ae8c6bcc7328eba07",
+      "ambient_variables": [
+        "variable {σ : Type} [Ty σ]"
+      ],
+      "principals": [
+        {
+          "declaration": "Classicism.Research.ActualityCoreNumbers.numberMap_onto",
+          "line": 132,
+          "statement": "theorem numberMap_onto (w : Prop) (hw : ActualWorld w)\n    (y : (σ → Prop) → Prop) (hy : Numbers w y) :\n    ∃ n, FiniteCardinality n ∧ numberMap w n = y"
+        },
+        {
+          "declaration": "Classicism.Research.ActualityCoreNumbers.quantified_infinity_iff",
+          "line": 145,
+          "statement": "theorem quantified_infinity_iff (w : Prop) (hw : ActualWorld w) :\n    Classicism.P.AxiomOfInfinity σ ↔\n      ¬ ∃ y, Numbers w y ∧ y (BaseTop (σ := σ) w)"
+        },
+        {
+          "declaration": "Classicism.Research.ActualityCoreNumbers.numberMap_inverse_graph",
+          "line": 165,
+          "statement": "theorem numberMap_inverse_graph (w : Prop) (hw : ActualWorld w)\n    (hInf : Classicism.P.AxiomOfInfinity σ) :\n    ∀ y : (σ → Prop) → Prop, Numbers w y → ∃ n, NumberInverse (Numbers w) (numberMap w) y n ∧\n      ∀ m, NumberInverse (Numbers w) (numberMap w) y m → m = n"
+        }
+      ]
+    },
+    {
+      "module": "Classicism.Results.Research.ActualityCoreArithmetic",
+      "path": "topics/classicism/lean/Classicism/Results/Research/ActualityCoreArithmetic.lean",
+      "sha256": "915e0846eb10c5d7adf9bd46ab6e5021c82885a9dfe5995ffe510fbe5dceb0ad",
+      "ambient_variables": [
+        "variable {σ : Type} [Ty σ]"
+      ],
+      "principals": [
+        {
+          "declaration": "Classicism.Research.ActualityCoreArithmetic.addition_iff",
+          "line": 129,
+          "statement": "theorem addition_iff (w : Prop) (hw : ActualWorld w)\n    (hInf : Classicism.P.AxiomOfInfinity σ)\n    (a b c : (σ → Prop) → Prop) (ha : FiniteCardinality a)\n    (hb : FiniteCardinality b) (hc : FiniteCardinality c) :\n    AddGraph a b c ↔ CoreAdd w (numberMap w a) (numberMap w b) (numberMap w c)"
+        },
+        {
+          "declaration": "Classicism.Research.ActualityCoreArithmetic.multiplication_iff",
+          "line": 216,
+          "statement": "theorem multiplication_iff (w : Prop) (hw : ActualWorld w)\n    (hInf : Classicism.P.AxiomOfInfinity σ)\n    (a b c : (σ → Prop) → Prop) (ha : FiniteCardinality a)\n    (hb : FiniteCardinality b) (hc : FiniteCardinality c) :\n    MulGraph a b c ↔ CoreMul w (numberMap w a) (numberMap w b) (numberMap w c)"
+        },
+        {
+          "declaration": "Classicism.Research.ActualityCoreArithmetic.order_iff",
+          "line": 255,
+          "statement": "theorem order_iff (w : Prop) (hw : ActualWorld w)\n    (hInf : Classicism.P.AxiomOfInfinity σ)\n    (a b : (σ → Prop) → Prop) (ha : FiniteCardinality a)\n    (hb : FiniteCardinality b) :\n    LeGraph a b ↔ CoreLe w (numberMap w a) (numberMap w b)"
+        }
+      ]
+    },
+    {
+      "module": "Classicism.Results.Research.ActualityNumericalRelations",
+      "path": "topics/classicism/lean/Classicism/Results/Research/ActualityNumericalRelations.lean",
+      "sha256": "cf8a004cfad81f3f16af4f653869e5162c8da461a61617204498f850d3439c1d",
+      "ambient_variables": [
+        "variable {σ : Type} [Ty σ]"
+      ],
+      "principals": [
+        {
+          "declaration": "Classicism.Research.ActualityNumericalRelations.subset_roundtrip",
+          "line": 37,
+          "statement": "theorem subset_roundtrip (w : Prop) (hw : ActualWorld w)\n    (V : ((σ → Prop) → Prop) → Prop) (hV : Domain w (Numbers w) V) :\n    SubsetPush w (fun n => V (numberMap w n)) = V"
+        },
+        {
+          "declaration": "Classicism.Research.ActualityNumericalRelations.binary_roundtrip",
+          "line": 100,
+          "statement": "theorem binary_roundtrip (w : Prop) (hw : ActualWorld w)\n    (R : ((σ → Prop) → Prop) → ((σ → Prop) → Prop) → Prop)\n    (hR : Domain w (NumberBinarySupport w) R) :\n    BinaryPush w (fun i j => R (numberMap w i) (numberMap w j)) = R"
+        },
+        {
+          "declaration": "Classicism.Research.ActualityNumericalRelations.core_number_induction",
+          "line": 131,
+          "statement": "theorem core_number_induction (w : Prop) (hw : ActualWorld w)\n    (V : ((σ → Prop) → Prop) → Prop) (hV : Domain w (Numbers w) V)\n    (hzero : V (coreZero w))\n    (hstep : ∀ y, Numbers w y → V y → V (coreSuc w y)) :\n    ∀ y, Numbers w y → V y"
+        }
+      ]
+    },
+    {
+      "module": "Classicism.Results.Research.FregeFiniteSets",
+      "path": "topics/classicism/lean/Classicism/Results/Research/FregeFiniteSets.lean",
+      "sha256": "9510257847837420c4ed3398a45107e5f6b47d040a14a7e52957eb238af9d2e3",
+      "ambient_variables": [
+        "variable {σ τ : Type} [Ty σ] [Ty τ]"
+      ],
+      "principals": [
+        {
+          "declaration": "Classicism.Research.FregeFiniteSets.finite_fibre_union",
+          "line": 109,
+          "statement": "theorem finite_fibre_union (A : σ → Prop) (R : σ → τ → Prop)\n    (hA : Finite A) (hR : ∀ x, A x → Finite (R x)) : Finite (Image A R)"
+        },
+        {
+          "declaration": "Classicism.Research.FregeFiniteSets.finite_separated_family",
+          "line": 152,
+          "statement": "theorem finite_separated_family (A : σ → Prop) (H : τ → Prop)\n    (E : σ → τ → Prop) (hA : Finite A)\n    (hsep : ∀ u v, H u → H v → (∀ x, A x → (E x u ↔ E x v)) → u = v) :\n    Finite H"
+        },
+        {
+          "declaration": "Classicism.Research.FregeFiniteSets.infinity_iff_realizes",
+          "line": 222,
+          "statement": "theorem infinity_iff_realizes : Classicism.P.AxiomOfInfinity σ ↔\n    ∀ n : (σ → Prop) → Prop, FiniteCardinality n → ∃ X, n X"
+        },
+        {
+          "declaration": "Classicism.Research.FregeFiniteSets.finite_self_injection_surjective",
+          "line": 277,
+          "statement": "theorem finite_self_injection_surjective (A : σ → Prop) (R : σ → σ → Prop)\n    (hA : Finite A) (htotal : ∀ x, A x → ∃ y, R x y)\n    (hclosed : ∀ x y, A x → R x y → A y)\n    (hsingle : ∀ x y z, A x → R x y → R x z → y = z)\n    (hinj : ∀ x z y, A x → A z → R x y → R z y → x = z) :\n    ∀ y, A y → ∃ x, A x ∧ R x y"
+        }
+      ]
+    },
+    {
+      "module": "Classicism.Results.Research.FregeNoncollapse",
+      "path": "topics/classicism/lean/Classicism/Results/Research/FregeNoncollapse.lean",
+      "sha256": "3d560d54f9ab4209f6376729348edf4046d311a47254ff8699475b136436a312",
+      "ambient_variables": [
+        "variable {σ : Type} [Ty σ]"
+      ],
+      "principals": [
+        {
+          "declaration": "Classicism.Research.FregeNoncollapse.noncollapse_iff_bottom_not_number",
+          "line": 101,
+          "statement": "theorem noncollapse_iff_bottom_not_number :\n    Noncollapse σ ↔ ¬ FiniteCardinality (Bottom (σ := σ))"
+        },
+        {
+          "declaration": "Classicism.Research.FregeNoncollapse.arithmeticI_iff_istar",
+          "line": 121,
+          "statement": "theorem arithmeticI_iff_istar : ArithmeticI σ ↔ IStar σ"
+        },
+        {
+          "declaration": "Classicism.Research.FregeNoncollapse.finite_numbers_iff_bottom_number",
+          "line": 203,
+          "statement": "theorem finite_numbers_iff_bottom_number : Finite (FiniteCardinality (σ := σ)) ↔\n    FiniteCardinality (Bottom (σ := σ))"
+        },
+        {
+          "declaration": "Classicism.Research.FregeNoncollapse.infinite_numbers_iff_dedekind",
+          "line": 217,
+          "statement": "theorem infinite_numbers_iff_dedekind : ¬ Finite (FiniteCardinality (σ := σ)) ↔\n    DedekindInfinite (FiniteCardinality (σ := σ))"
+        }
+      ]
+    },
+    {
+      "module": "Classicism.Results.Research.CrossBaseArithmetic",
+      "path": "topics/classicism/lean/Classicism/Results/Research/CrossBaseArithmetic.lean",
+      "sha256": "a71fa2104c6f0867637f83fdb5284edf47761eecda63a5768a7d111f2ee8c058",
+      "ambient_variables": [
+        "variable {σ ρ : Type} [Ty σ] [Ty ρ]"
+      ],
+      "principals": [
+        {
+          "declaration": "Classicism.Research.CrossBaseArithmetic.synch_bijection",
+          "line": 118,
+          "statement": "theorem synch_bijection (hσ : Noncollapse σ) (hρ : Noncollapse ρ) :\n    (∀ x : (σ → Prop) → Prop, FiniteCardinality x →\n      ∃ y : (ρ → Prop) → Prop, Synch x y) ∧\n    (∀ y : (ρ → Prop) → Prop, FiniteCardinality y →\n      ∃ x : (σ → Prop) → Prop, Synch x y) ∧\n    (∀ x y z, Synch (σ := σ) (ρ := ρ) x y → Synch x z → y = z) ∧\n    (∀ x z y, Synch (σ := σ) (ρ := ρ) x y → Synch z y → x = z)"
+        },
+        {
+          "declaration": "Classicism.Research.CrossBaseArithmetic.addition_iff",
+          "line": 164,
+          "statement": "theorem addition_iff (hσ : Noncollapse σ) (hρ : Noncollapse ρ)\n    (a b c : (σ → Prop) → Prop) (A B C : (ρ → Prop) → Prop)\n    (ha : Synch a A) (hb : Synch b B) (hc : Synch c C) :\n    AddGraph a b c ↔ AddGraph A B C"
+        },
+        {
+          "declaration": "Classicism.Research.CrossBaseArithmetic.multiplication_iff",
+          "line": 190,
+          "statement": "theorem multiplication_iff (hσ : Noncollapse σ) (hρ : Noncollapse ρ)\n    (a b c : (σ → Prop) → Prop) (A B C : (ρ → Prop) → Prop)\n    (ha : Synch a A) (hb : Synch b B) (hc : Synch c C) :\n    MulGraph a b c ↔ MulGraph A B C"
+        }
+      ]
+    },
+    {
+      "module": "Classicism.Results.Research.FregeArithmeticVocabulary",
+      "path": "topics/classicism/lean/Classicism/Results/Research/FregeArithmeticVocabulary.lean",
+      "sha256": "ce212432c93f250f5daa69fc0abcd733f2c7eb2100c1f73c7e6875a47b766599",
+      "ambient_variables": [
+        "variable {σ ρ : Type} [Ty σ] [Ty ρ]"
+      ],
+      "principals": [
+        {
+          "declaration": "Classicism.Research.FregeArithmeticVocabulary.sum_cross_base",
+          "line": 41,
+          "statement": "theorem sum_cross_base (hσ : Noncollapse σ) (hρ : Noncollapse ρ)\n    (a b c : (σ → Prop) → Prop) (A B C : (ρ → Prop) → Prop)\n    (ha : Synch a A) (hb : Synch b B) (hc : Synch c C) :\n    Arith.Sum σ a b c ↔ Arith.Sum ρ A B C"
+        },
+        {
+          "declaration": "Classicism.Research.FregeArithmeticVocabulary.prod_cross_base",
+          "line": 51,
+          "statement": "theorem prod_cross_base (hσ : Noncollapse σ) (hρ : Noncollapse ρ)\n    (a b c : (σ → Prop) → Prop) (A B C : (ρ → Prop) → Prop)\n    (ha : Synch a A) (hb : Synch b B) (hc : Synch c C) :\n    Arith.Prod σ a b c ↔ Arith.Prod ρ A B C"
+        }
+      ]
+    },
+    {
+      "module": "Classicism.Results.Research.CrossBaseFirstOrder",
+      "path": "topics/classicism/lean/Classicism/Results/Research/CrossBaseFirstOrder.lean",
+      "sha256": "2966852219db565e5aba652f562e7e6dd7a48fbfd220375bd6706012a91a6fe3",
+      "ambient_variables": [
+        "variable {σ ρ : Type} [Ty σ] [Ty ρ]"
+      ],
+      "principals": [
+        {
+          "declaration": "Classicism.Research.CrossBaseFirstOrder.formula_transfer",
+          "line": 66,
+          "statement": "theorem formula_transfer (hσ : Noncollapse σ) (hρ : Noncollapse ρ)\n    {k : Nat} (φ : AForm k) :\n    ∀ (η : NumEnv σ k) (θ : NumEnv ρ k), RelatedEnvs η θ →\n      (readFormula φ η ↔ readFormula φ θ)"
+        },
+        {
+          "declaration": "Classicism.Research.CrossBaseFirstOrder.sentence_transfer_of_arithmeticI",
+          "line": 122,
+          "statement": "theorem sentence_transfer_of_arithmeticI (hσ : ArithmeticI σ) (hρ : ArithmeticI ρ)\n    (φ : AForm 0) : readSentence σ φ ↔ readSentence ρ φ"
+        }
+      ]
+    },
+    {
+      "module": "Classicism.Results.Research.C5Frege",
+      "path": "topics/classicism/lean/Classicism/Results/Research/C5Frege.lean",
+      "sha256": "157a0a6be950be4ed400e020871e48603ca006e22b18b56dcf5855c69cda246b",
+      "ambient_variables": [
+        "variable {σ : Type} [Ty σ]"
+      ],
+      "principals": [
+        {
+          "declaration": "Classicism.Research.C5Frege.realized_or_bottom",
+          "line": 119,
+          "statement": "theorem realized_or_bottom\n    (c5 : □ (∀ p q : Prop, p ≠ q → □ (p ≠ q)))\n    (n : (σ → Prop) → Prop) (hn : FiniteCardinality n) :\n    (∃ X, n X) ∨ n = Bottom"
+        },
+        {
+          "declaration": "Classicism.Research.C5Frege.numerical_extensionality",
+          "line": 152,
+          "statement": "theorem numerical_extensionality\n    (c5 : □ (∀ p q : Prop, p ≠ q → □ (p ≠ q)))\n    (m n : (σ → Prop) → Prop) (hm : FiniteCardinality m)\n    (hn : FiniteCardinality n) (hext : ∀ X, m X ↔ n X) : m = n"
+        },
+        {
+          "declaration": "Classicism.Research.C5Frege.infinity_iff_arithmeticI",
+          "line": 181,
+          "statement": "theorem infinity_iff_arithmeticI\n    (c5 : □ (∀ p q : Prop, p ≠ q → □ (p ≠ q))) :\n    Classicism.P.AxiomOfInfinity σ ↔ ArithmeticI σ"
+        },
+        {
+          "declaration": "Classicism.Research.C5Frege.finite_base_iff_numbers",
+          "line": 187,
+          "statement": "theorem finite_base_iff_numbers\n    (c5 : □ (∀ p q : Prop, p ≠ q → □ (p ≠ q))) :\n    Finite (fun _ : σ => True) ↔ Finite (FiniteCardinality (σ := σ))"
+        }
+      ]
+    },
+    {
+      "module": "Classicism.Results.Research.GeneratedAlgebraFinite",
+      "path": "topics/classicism/lean/Classicism/Results/Research/GeneratedAlgebraFinite.lean",
+      "sha256": "b4911c128403a5c245e384369aeb01cc340b4b4e9f72cb1de46b842fae176f1d",
+      "ambient_variables": [
+        "variable {μ0 ν0 : Type} [Rel μ0] [Rel ν0]",
+        "variable {μ1 ν1 : Type} [Rel μ1] [Rel ν1]",
+        "variable {μ2 ν2 : Type} [Rel μ2] [Rel ν2]"
+      ],
+      "principals": [
+        {
+          "declaration": "Classicism.Research.GeneratedAlgebraFinite.onto0",
+          "line": 538,
+          "statement": "theorem onto0\n    (f0 : μ0)\n    (f1 : μ1)\n    (f2 : μ0 → μ1)\n    (f3 : μ0 → μ1 → μ2)\n    (f4 : μ2 → μ1 → μ0 → μ0)\n    (f5 : μ2 → μ2 → μ1)\n    (H0 : ν0 → Prop)\n    (H1 : ν1 → Prop)\n    (H2 : ν2 → Prop)\n    (g0 : ν0)\n    (g1 : ν1)\n    (g2 : ν0 → ν1)\n    (g3 : ν0 → ν1 → ν2)\n    (g4 : ν2 → ν1 → ν0 → ν0)\n    (g5 : ν2 → ν2 → ν1)\n    (q0 : μ0 → ν0)\n    (q1 : μ1 → ν1)\n    (q2 : μ2 → ν2)\n    (hnd : □ (∀ p q : Prop, p ≠ q → □ (p ≠ q)))\n    (hp0 : Persistent H0)\n    (hp1 : Persistent H1)\n    (hp2 : Persistent H2)\n    (hc0 : (H0 g0))\n    (hc1 : (H1 g1))\n    (hc2 : ∀ (y0 : ν0), (H0 y0) → (H1 (g2 y0)))\n    (hc3 : ∀ (y0 : ν0) (y1 : ν1), (H0 y0) → (H1 y1) → (H2 (g3 y0 y1)))\n    (hc4 : ∀ (y0 : ν2) (y1 : ν1) (y2 : ν0), (H2 y0) → (H1 y1) → (H0 y2) → (H0 (g4 y0 y1 y2)))\n    (hc5 : ∀ (y0 : ν2) (y1 : ν2), (H2 y0) → (H2 y1) → (H1 (g5 y0 y1)))\n    (hq0 : (q0 f0) = g0)\n    (hq1 : (q1 f1) = g1)\n    (hq2 : ∀ (x0 : μ0), (H0 (q0 x0)) → (q1 (f2 x0)) = (g2 (q0 x0)))\n    (hq3 : ∀ (x0 : μ0) (x1 : μ1), (H0 (q0 x0)) → (H1 (q1 x1)) → (q2 (f3 x0 x1)) = (g3 (q0 x0) (q1 x1)))\n    (hq4 : ∀ (x0 : μ2) (x1 : μ1) (x2 : μ0), (H2 (q2 x0)) → (H1 (q1 x1)) → (H0 (q0 x2)) → (q0 (f4 x0 x1 x2)) = (g4 (q2 x0) (q1 x1) (q0 x2)))\n    (hq5 : ∀ (x0 : μ2) (x1 : μ2), (H2 (q2 x0)) → (H2 (q2 x1)) → (q1 (f5 x0 x1)) = (g5 (q2 x0) (q2 x1)))\n    (y : ν0)\n    (hy : (K0 (ν0 := ν0) (ν1 := ν1) (ν2 := ν2) H0 H1 H2 g0 g1 g2 g3 g4 g5 y))\n    : ∃ x, (G0 (μ0 := μ0) (μ1 := μ1) (μ2 := μ2) f0 f1 f2 f3 f4 f5 x) ∧ (q0 x) = y"
+        },
+        {
+          "declaration": "Classicism.Research.GeneratedAlgebraFinite.onto1",
+          "line": 606,
+          "statement": "theorem onto1\n    (f0 : μ0)\n    (f1 : μ1)\n    (f2 : μ0 → μ1)\n    (f3 : μ0 → μ1 → μ2)\n    (f4 : μ2 → μ1 → μ0 → μ0)\n    (f5 : μ2 → μ2 → μ1)\n    (H0 : ν0 → Prop)\n    (H1 : ν1 → Prop)\n    (H2 : ν2 → Prop)\n    (g0 : ν0)\n    (g1 : ν1)\n    (g2 : ν0 → ν1)\n    (g3 : ν0 → ν1 → ν2)\n    (g4 : ν2 → ν1 → ν0 → ν0)\n    (g5 : ν2 → ν2 → ν1)\n    (q0 : μ0 → ν0)\n    (q1 : μ1 → ν1)\n    (q2 : μ2 → ν2)\n    (hnd : □ (∀ p q : Prop, p ≠ q → □ (p ≠ q)))\n    (hp0 : Persistent H0)\n    (hp1 : Persistent H1)\n    (hp2 : Persistent H2)\n    (hc0 : (H0 g0))\n    (hc1 : (H1 g1))\n    (hc2 : ∀ (y0 : ν0), (H0 y0) → (H1 (g2 y0)))\n    (hc3 : ∀ (y0 : ν0) (y1 : ν1), (H0 y0) → (H1 y1) → (H2 (g3 y0 y1)))\n    (hc4 : ∀ (y0 : ν2) (y1 : ν1) (y2 : ν0), (H2 y0) → (H1 y1) → (H0 y2) → (H0 (g4 y0 y1 y2)))\n    (hc5 : ∀ (y0 : ν2) (y1 : ν2), (H2 y0) → (H2 y1) → (H1 (g5 y0 y1)))\n    (hq0 : (q0 f0) = g0)\n    (hq1 : (q1 f1) = g1)\n    (hq2 : ∀ (x0 : μ0), (H0 (q0 x0)) → (q1 (f2 x0)) = (g2 (q0 x0)))\n    (hq3 : ∀ (x0 : μ0) (x1 : μ1), (H0 (q0 x0)) → (H1 (q1 x1)) → (q2 (f3 x0 x1)) = (g3 (q0 x0) (q1 x1)))\n    (hq4 : ∀ (x0 : μ2) (x1 : μ1) (x2 : μ0), (H2 (q2 x0)) → (H1 (q1 x1)) → (H0 (q0 x2)) → (q0 (f4 x0 x1 x2)) = (g4 (q2 x0) (q1 x1) (q0 x2)))\n    (hq5 : ∀ (x0 : μ2) (x1 : μ2), (H2 (q2 x0)) → (H2 (q2 x1)) → (q1 (f5 x0 x1)) = (g5 (q2 x0) (q2 x1)))\n    (y : ν1)\n    (hy : (K1 (ν0 := ν0) (ν1 := ν1) (ν2 := ν2) H0 H1 H2 g0 g1 g2 g3 g4 g5 y))\n    : ∃ x, (G1 (μ0 := μ0) (μ1 := μ1) (μ2 := μ2) f0 f1 f2 f3 f4 f5 x) ∧ (q1 x) = y"
+        },
+        {
+          "declaration": "Classicism.Research.GeneratedAlgebraFinite.onto2",
+          "line": 674,
+          "statement": "theorem onto2\n    (f0 : μ0)\n    (f1 : μ1)\n    (f2 : μ0 → μ1)\n    (f3 : μ0 → μ1 → μ2)\n    (f4 : μ2 → μ1 → μ0 → μ0)\n    (f5 : μ2 → μ2 → μ1)\n    (H0 : ν0 → Prop)\n    (H1 : ν1 → Prop)\n    (H2 : ν2 → Prop)\n    (g0 : ν0)\n    (g1 : ν1)\n    (g2 : ν0 → ν1)\n    (g3 : ν0 → ν1 → ν2)\n    (g4 : ν2 → ν1 → ν0 → ν0)\n    (g5 : ν2 → ν2 → ν1)\n    (q0 : μ0 → ν0)\n    (q1 : μ1 → ν1)\n    (q2 : μ2 → ν2)\n    (hnd : □ (∀ p q : Prop, p ≠ q → □ (p ≠ q)))\n    (hp0 : Persistent H0)\n    (hp1 : Persistent H1)\n    (hp2 : Persistent H2)\n    (hc0 : (H0 g0))\n    (hc1 : (H1 g1))\n    (hc2 : ∀ (y0 : ν0), (H0 y0) → (H1 (g2 y0)))\n    (hc3 : ∀ (y0 : ν0) (y1 : ν1), (H0 y0) → (H1 y1) → (H2 (g3 y0 y1)))\n    (hc4 : ∀ (y0 : ν2) (y1 : ν1) (y2 : ν0), (H2 y0) → (H1 y1) → (H0 y2) → (H0 (g4 y0 y1 y2)))\n    (hc5 : ∀ (y0 : ν2) (y1 : ν2), (H2 y0) → (H2 y1) → (H1 (g5 y0 y1)))\n    (hq0 : (q0 f0) = g0)\n    (hq1 : (q1 f1) = g1)\n    (hq2 : ∀ (x0 : μ0), (H0 (q0 x0)) → (q1 (f2 x0)) = (g2 (q0 x0)))\n    (hq3 : ∀ (x0 : μ0) (x1 : μ1), (H0 (q0 x0)) → (H1 (q1 x1)) → (q2 (f3 x0 x1)) = (g3 (q0 x0) (q1 x1)))\n    (hq4 : ∀ (x0 : μ2) (x1 : μ1) (x2 : μ0), (H2 (q2 x0)) → (H1 (q1 x1)) → (H0 (q0 x2)) → (q0 (f4 x0 x1 x2)) = (g4 (q2 x0) (q1 x1) (q0 x2)))\n    (hq5 : ∀ (x0 : μ2) (x1 : μ2), (H2 (q2 x0)) → (H2 (q2 x1)) → (q1 (f5 x0 x1)) = (g5 (q2 x0) (q2 x1)))\n    (y : ν2)\n    (hy : (K2 (ν0 := ν0) (ν1 := ν1) (ν2 := ν2) H0 H1 H2 g0 g1 g2 g3 g4 g5 y))\n    : ∃ x, (G2 (μ0 := μ0) (μ1 := μ1) (μ2 := μ2) f0 f1 f2 f3 f4 f5 x) ∧ (q2 x) = y"
+        },
+        {
+          "declaration": "Classicism.Research.GeneratedAlgebraFinite.left_inverse0",
+          "line": 742,
+          "statement": "theorem left_inverse0\n    (f0 : μ0)\n    (f1 : μ1)\n    (f2 : μ0 → μ1)\n    (f3 : μ0 → μ1 → μ2)\n    (f4 : μ2 → μ1 → μ0 → μ0)\n    (f5 : μ2 → μ2 → μ1)\n    (H0 : ν0 → Prop)\n    (H1 : ν1 → Prop)\n    (H2 : ν2 → Prop)\n    (g0 : ν0)\n    (g1 : ν1)\n    (g2 : ν0 → ν1)\n    (g3 : ν0 → ν1 → ν2)\n    (g4 : ν2 → ν1 → ν0 → ν0)\n    (g5 : ν2 → ν2 → ν1)\n    (q0 : μ0 → ν0)\n    (q1 : μ1 → ν1)\n    (q2 : μ2 → ν2)\n    (l0 : ν0 → μ0)\n    (l1 : ν1 → μ1)\n    (l2 : ν2 → μ2)\n    (hc0 : (H0 g0))\n    (hc1 : (H1 g1))\n    (hc2 : ∀ (y0 : ν0), (H0 y0) → (H1 (g2 y0)))\n    (hc3 : ∀ (y0 : ν0) (y1 : ν1), (H0 y0) → (H1 y1) → (H2 (g3 y0 y1)))\n    (hc4 : ∀ (y0 : ν2) (y1 : ν1) (y2 : ν0), (H2 y0) → (H1 y1) → (H0 y2) → (H0 (g4 y0 y1 y2)))\n    (hc5 : ∀ (y0 : ν2) (y1 : ν2), (H2 y0) → (H2 y1) → (H1 (g5 y0 y1)))\n    (hq0 : (q0 f0) = g0)\n    (hq1 : (q1 f1) = g1)\n    (hq2 : ∀ (x0 : μ0), (H0 (q0 x0)) → (q1 (f2 x0)) = (g2 (q0 x0)))\n    (hq3 : ∀ (x0 : μ0) (x1 : μ1), (H0 (q0 x0)) → (H1 (q1 x1)) → (q2 (f3 x0 x1)) = (g3 (q0 x0) (q1 x1)))\n    (hq4 : ∀ (x0 : μ2) (x1 : μ1) (x2 : μ0), (H2 (q2 x0)) → (H1 (q1 x1)) → (H0 (q0 x2)) → (q0 (f4 x0 x1 x2)) = (g4 (q2 x0) (q1 x1) (q0 x2)))\n    (hq5 : ∀ (x0 : μ2) (x1 : μ2), (H2 (q2 x0)) → (H2 (q2 x1)) → (q1 (f5 x0 x1)) = (g5 (q2 x0) (q2 x1)))\n    (hl0 : (l0 g0) = f0)\n    (hl1 : (l1 g1) = f1)\n    (hl2 : ∀ (y0 : ν0), (H0 y0) → (l1 (g2 y0)) = (f2 (l0 y0)))\n    (hl3 : ∀ (y0 : ν0) (y1 : ν1), (H0 y0) → (H1 y1) → (l2 (g3 y0 y1)) = (f3 (l0 y0) (l1 y1)))\n    (hl4 : ∀ (y0 : ν2) (y1 : ν1) (y2 : ν0), (H2 y0) → (H1 y1) → (H0 y2) → (l0 (g4 y0 y1 y2)) = (f4 (l2 y0) (l1 y1) (l0 y2)))\n    (hl5 : ∀ (y0 : ν2) (y1 : ν2), (H2 y0) → (H2 y1) → (l1 (g5 y0 y1)) = (f5 (l2 y0) (l2 y1)))\n    (x : μ0)\n    (hx : (G0 (μ0 := μ0) (μ1 := μ1) (μ2 := μ2) f0 f1 f2 f3 f4 f5 x))\n    : H0 (q0 x) ∧ (l0 (q0 x)) = x"
+        },
+        {
+          "declaration": "Classicism.Research.GeneratedAlgebraFinite.right_inverse0",
+          "line": 852,
+          "statement": "theorem right_inverse0\n    (f0 : μ0)\n    (f1 : μ1)\n    (f2 : μ0 → μ1)\n    (f3 : μ0 → μ1 → μ2)\n    (f4 : μ2 → μ1 → μ0 → μ0)\n    (f5 : μ2 → μ2 → μ1)\n    (H0 : ν0 → Prop)\n    (H1 : ν1 → Prop)\n    (H2 : ν2 → Prop)\n    (g0 : ν0)\n    (g1 : ν1)\n    (g2 : ν0 → ν1)\n    (g3 : ν0 → ν1 → ν2)\n    (g4 : ν2 → ν1 → ν0 → ν0)\n    (g5 : ν2 → ν2 → ν1)\n    (q0 : μ0 → ν0)\n    (q1 : μ1 → ν1)\n    (q2 : μ2 → ν2)\n    (l0 : ν0 → μ0)\n    (l1 : ν1 → μ1)\n    (l2 : ν2 → μ2)\n    (hc0 : (H0 g0))\n    (hc1 : (H1 g1))\n    (hc2 : ∀ (y0 : ν0), (H0 y0) → (H1 (g2 y0)))\n    (hc3 : ∀ (y0 : ν0) (y1 : ν1), (H0 y0) → (H1 y1) → (H2 (g3 y0 y1)))\n    (hc4 : ∀ (y0 : ν2) (y1 : ν1) (y2 : ν0), (H2 y0) → (H1 y1) → (H0 y2) → (H0 (g4 y0 y1 y2)))\n    (hc5 : ∀ (y0 : ν2) (y1 : ν2), (H2 y0) → (H2 y1) → (H1 (g5 y0 y1)))\n    (hq0 : (q0 f0) = g0)\n    (hq1 : (q1 f1) = g1)\n    (hq2 : ∀ (x0 : μ0), (H0 (q0 x0)) → (q1 (f2 x0)) = (g2 (q0 x0)))\n    (hq3 : ∀ (x0 : μ0) (x1 : μ1), (H0 (q0 x0)) → (H1 (q1 x1)) → (q2 (f3 x0 x1)) = (g3 (q0 x0) (q1 x1)))\n    (hq4 : ∀ (x0 : μ2) (x1 : μ1) (x2 : μ0), (H2 (q2 x0)) → (H1 (q1 x1)) → (H0 (q0 x2)) → (q0 (f4 x0 x1 x2)) = (g4 (q2 x0) (q1 x1) (q0 x2)))\n    (hq5 : ∀ (x0 : μ2) (x1 : μ2), (H2 (q2 x0)) → (H2 (q2 x1)) → (q1 (f5 x0 x1)) = (g5 (q2 x0) (q2 x1)))\n    (hl0 : (l0 g0) = f0)\n    (hl1 : (l1 g1) = f1)\n    (hl2 : ∀ (y0 : ν0), (H0 y0) → (l1 (g2 y0)) = (f2 (l0 y0)))\n    (hl3 : ∀ (y0 : ν0) (y1 : ν1), (H0 y0) → (H1 y1) → (l2 (g3 y0 y1)) = (f3 (l0 y0) (l1 y1)))\n    (hl4 : ∀ (y0 : ν2) (y1 : ν1) (y2 : ν0), (H2 y0) → (H1 y1) → (H0 y2) → (l0 (g4 y0 y1 y2)) = (f4 (l2 y0) (l1 y1) (l0 y2)))\n    (hl5 : ∀ (y0 : ν2) (y1 : ν2), (H2 y0) → (H2 y1) → (l1 (g5 y0 y1)) = (f5 (l2 y0) (l2 y1)))\n    (hnd : □ (∀ p q : Prop, p ≠ q → □ (p ≠ q)))\n    (hp0 : Persistent H0)\n    (hp1 : Persistent H1)\n    (hp2 : Persistent H2)\n    (y : ν0)\n    (hy : (K0 (ν0 := ν0) (ν1 := ν1) (ν2 := ν2) H0 H1 H2 g0 g1 g2 g3 g4 g5 y))\n    : (G0 (μ0 := μ0) (μ1 := μ1) (μ2 := μ2) f0 f1 f2 f3 f4 f5 (l0 y)) ∧ (q0 (l0 y)) = y"
+        }
+      ]
+    },
+    {
+      "module": "Classicism.Results.Research.FiniteProfiles",
+      "path": "topics/classicism/lean/Classicism/Results/Research/FiniteProfiles.lean",
+      "sha256": "abbc3a0bcdefbd3dc238d4ce6b2bd446108b3ab8d1935bcfc4e39b0283a4de37",
+      "ambient_variables": [
+        "variable {σ τ : Type} [Ty σ] [Ty τ]"
+      ],
+      "principals": [
+        {
+          "declaration": "Classicism.Research.FiniteProfiles.finite_profiles_iff_coordinates",
+          "line": 64,
+          "statement": "theorem finite_profiles_iff_coordinates (H : τ → Prop) (E : σ → τ → Prop)\n    (h : UniqueProfiles H E) : Finite H ↔ Finite (fun _ : σ => True)"
+        },
+        {
+          "declaration": "Classicism.Research.FiniteProfiles.profiles_no_injection",
+          "line": 70,
+          "statement": "theorem profiles_no_injection (H : τ → Prop) (E : σ → τ → Prop)\n    (hex : ProfilesExist H E) (R : τ → σ → Prop)\n    (htotal : ∀ w, H w → ∃ x, R w x)\n    (hinj : ∀ u v x, H u → H v → R u x → R v x → u = v) : False"
+        },
+        {
+          "declaration": "Classicism.Research.FiniteProfiles.raw_uwr_infinity_iff",
+          "line": 116,
+          "statement": "theorem raw_uwr_infinity_iff (V : σ → Prop) (hV : RawUWR V) :\n    Classicism.P.AxiomOfInfinity σ ↔ ¬ Finite (Atom (τ := Prop))"
+        }
+      ]
+    },
+    {
+      "module": "Classicism.Results.Research.FiniteAtomProfiles",
+      "path": "topics/classicism/lean/Classicism/Results/Research/FiniteAtomProfiles.lean",
+      "sha256": "fa1fac0c6cbb662e70b193187ba44b90876f79f794854ca831eec6ec57b42ebd",
+      "ambient_variables": [],
+      "principals": [
+        {
+          "declaration": "Classicism.Research.FiniteAtomProfiles.finite_atoms_iff_propositions",
+          "line": 45,
+          "statement": "theorem finite_atoms_iff_propositions (hat : AtomicityT) :\n    Finite (Atom (τ := Prop)) ↔ Finite (fun _ : Prop => True)"
+        },
+        {
+          "declaration": "Classicism.Research.FiniteAtomProfiles.raw_uwr_infinity_base_iff_propositions",
+          "line": 54,
+          "statement": "theorem raw_uwr_infinity_base_iff_propositions {σ : Type} [Ty σ]\n    (V : σ → Prop) (hV : RawUWR V) (hat : AtomicityT) :\n    AxiomOfInfinity σ ↔ AxiomOfInfinity Prop"
+        }
+      ]
+    },
+    {
+      "module": "Classicism.Results.Research.FiniteRigidPowers",
+      "path": "topics/classicism/lean/Classicism/Results/Research/FiniteRigidPowers.lean",
+      "sha256": "49ccd0c2e87ca33182998458922082f56a75dcd828f1accaf1e5b40427c7f2a1",
+      "ambient_variables": [
+        "variable {σ τ : Type} [Ty σ] [Ty τ]"
+      ],
+      "principals": [
+        {
+          "declaration": "Classicism.Research.FiniteRigidPowers.finite_rigid_power_iff",
+          "line": 45,
+          "statement": "theorem finite_rigid_power_iff (A : σ → Prop) :\n    Finite (RigidPowerField A) ↔ Finite A"
+        },
+        {
+          "declaration": "Classicism.Research.FiniteRigidPowers.finite_binary_rigid_field_iff",
+          "line": 133,
+          "statement": "theorem finite_binary_rigid_field_iff (A : σ → Prop) (B : τ → Prop)\n    (a : σ) (ha : A a) (b : τ) (hb : B b) :\n    Finite (BinaryRigidField A B) ↔ Finite A ∧ Finite B"
+        },
+        {
+          "declaration": "Classicism.Research.FiniteRigidPowers.finite_double_rigid_power",
+          "line": 144,
+          "statement": "theorem finite_double_rigid_power (A : σ → Prop) :\n    Finite (RigidPowerField (RigidPowerField A)) ↔ Finite A"
+        }
+      ]
+    },
+    {
+      "module": "Classicism.Results.Research.FiniteFunctionFields",
+      "path": "topics/classicism/lean/Classicism/Results/Research/FiniteFunctionFields.lean",
+      "sha256": "2aa575af1ef32f47c8d8a1d6ec73783ed97a83255b914ca82c1fb549682e20d0",
+      "ambient_variables": [
+        "variable {σ : Type} [Ty σ] {τ : Type} [Rel τ]"
+      ],
+      "principals": [
+        {
+          "declaration": "Classicism.Research.FiniteFunctionFields.finite_predicates_iff",
+          "line": 68,
+          "statement": "theorem finite_predicates_iff (a : σ) (bf : Barcan σ) :\n    Finite (fun _ : σ → Prop => True) ↔\n      Finite (fun _ : σ => True) ∧ Finite (fun _ : Prop => True)"
+        },
+        {
+          "declaration": "Classicism.Research.FiniteFunctionFields.infinity_predicates_iff",
+          "line": 82,
+          "statement": "theorem infinity_predicates_iff (a : σ) (bf : Barcan σ) :\n    AxiomOfInfinity (σ → Prop) ↔ AxiomOfInfinity σ ∨ AxiomOfInfinity Prop"
+        }
+      ]
+    },
+    {
+      "module": "Classicism.Results.Research.C5ActualityNumbers",
+      "path": "topics/classicism/lean/Classicism/Results/Research/C5ActualityNumbers.lean",
+      "sha256": "f88bef4440fe4c357058584eab7e75a9fd40d9811fe11dc663cd71278d187af6",
+      "ambient_variables": [
+        "variable {σ : Type} [Ty σ]"
+      ],
+      "principals": [
+        {
+          "declaration": "Classicism.Research.C5ActualityNumbers.numberMap_inverse_graph_c5",
+          "line": 58,
+          "statement": "theorem numberMap_inverse_graph_c5\n    (c5 : □ (∀ p q : Prop, p ≠ q → □ (p ≠ q)))\n    (w : Prop) (hw : ActualWorld w) (y : (σ → Prop) → Prop) (hy : Numbers w y) :\n    ∃ n, NumberInverse (Numbers w) (numberMap w) y n ∧\n      ∀ m, NumberInverse (Numbers w) (numberMap w) y m → m = n"
+        },
+        {
+          "declaration": "Classicism.Research.C5ActualityNumbers.addition_iff_c5",
+          "line": 112,
+          "statement": "theorem addition_iff_c5\n    (c5 : □ (∀ p q : Prop, p ≠ q → □ (p ≠ q)))\n    (w : Prop) (hw : ActualWorld w) (a b c : (σ → Prop) → Prop)\n    (ha : FiniteCardinality a) (hb : FiniteCardinality b) (hc : FiniteCardinality c) :\n    AddGraph a b c ↔ CoreAdd w (numberMap w a) (numberMap w b) (numberMap w c)"
+        },
+        {
+          "declaration": "Classicism.Research.C5ActualityNumbers.multiplication_iff_c5",
+          "line": 140,
+          "statement": "theorem multiplication_iff_c5\n    (c5 : □ (∀ p q : Prop, p ≠ q → □ (p ≠ q)))\n    (w : Prop) (hw : ActualWorld w) (a b c : (σ → Prop) → Prop)\n    (ha : FiniteCardinality a) (hb : FiniteCardinality b) (hc : FiniteCardinality c) :\n    MulGraph a b c ↔ CoreMul w (numberMap w a) (numberMap w b) (numberMap w c)"
+        }
+      ]
+    },
+    {
+      "module": "Classicism.Results.Research.FregeHumeClasses",
+      "path": "topics/classicism/lean/Classicism/Results/Research/FregeHumeClasses.lean",
+      "sha256": "c694371e538d035a1c9310d86fde17c6d21a6b5b8fbbb8f1cf74ed4f83275484",
+      "ambient_variables": [
+        "variable {σ : Type} [Ty σ]"
+      ],
+      "principals": [
+        {
+          "declaration": "Classicism.Research.FregeHumeClasses.count_iff_equinumerous",
+          "line": 88,
+          "statement": "theorem count_iff_equinumerous (n : (σ → Prop) → Prop) :\n    FiniteCardinality n → ∀ A : σ → Prop, n A →\n      ∀ B : σ → Prop, n B ↔ Equinumerous A B"
+        },
+        {
+          "declaration": "Classicism.Research.FregeHumeClasses.hume_eq_number_c5",
+          "line": 95,
+          "statement": "theorem hume_eq_number_c5\n    (c5 : □ (∀ p q : Prop, p ≠ q → □ (p ≠ q)))\n    (A : σ → Prop) (hA : Persistent A)\n    (n : (σ → Prop) → Prop) (hn : FiniteCardinality n) (hnA : n A) : Hume A = n"
+        },
+        {
+          "declaration": "Classicism.Research.FregeHumeClasses.hume_identity_iff_c5",
+          "line": 112,
+          "statement": "theorem hume_identity_iff_c5\n    (c5 : □ (∀ p q : Prop, p ≠ q → □ (p ≠ q)))\n    (A B : σ → Prop) (hA : Persistent A) (hB : Persistent B)\n    (hfA : Finite A) (hfB : Finite B) : Hume A = Hume B ↔ Equinumerous A B"
+        }
+      ]
+    },
+    {
+      "module": "Classicism.Results.Research.RawWorldRepresentationBoundary",
+      "path": "topics/classicism/lean/Classicism/Results/Research/RawWorldRepresentationBoundary.lean",
+      "sha256": "0a9132fce0b8b10570e2cf33db8d6f1de4d0972ecc454abe4ef117cae6b8773c",
+      "ambient_variables": [],
+      "principals": [
+        {
+          "declaration": "Classicism.Research.RawWorldRepresentationBoundary.existence_implies_no_raw_wr_unary",
+          "line": 19,
+          "statement": "theorem existence_implies_no_raw_wr_unary {σ : Type} [Ty σ] :\n    Classicism.P.Existence σ → NoRawWRRelational (σ → Prop)"
+        }
+      ]
+    },
+    {
+      "module": "Classicism.Results.Research.FiniteTupleLaws",
+      "path": "topics/classicism/lean/Classicism/Results/Research/FiniteTupleLaws.lean",
+      "sha256": "5e1bb21b3a0476893464ceb3ce64bf900d9ef08521152c1873ae2f49c8afa564",
+      "ambient_variables": [],
+      "principals": [
+        {
+          "declaration": "Classicism.Research.FiniteTupleLaws.finite_rigid_power_law",
+          "line": 20,
+          "statement": "theorem finite_rigid_power_law {σ : Type} [Ty σ] : FiniteRigidPowerLaw σ"
+        },
+        {
+          "declaration": "Classicism.Research.FiniteTupleLaws.finite_separation_law",
+          "line": 27,
+          "statement": "theorem finite_separation_law {σ τ : Type} [Ty σ] [Ty τ] : FiniteSeparationLaw σ τ"
+        }
+      ]
+    },
+    {
+      "module": "Classicism.Results.Research.FregeArithmeticQuotation",
+      "path": "topics/classicism/lean/Classicism/Results/Research/FregeArithmeticQuotation.lean",
+      "sha256": "62933d17b2dbccb9013bdab797ee1945876698834ff05530ca0cfa9de89df112",
+      "ambient_variables": [],
+      "principals": [
+        {
+          "declaration": "Classicism.Meta.Research.FregeArithmeticQuotation.arithmeticI_conversion",
+          "line": 52,
+          "statement": "theorem arithmeticI_conversion (σ : Ty) :\n    Conv (Classicism.Research.FregeArithmeticQuotation.ArithmeticCondition.term σ)\n      (Classicism.Meta.arithI σ)"
+        }
+      ]
+    },
+    {
+      "module": "Classicism.Results.Research.FregeArithmeticReflection",
+      "path": "topics/classicism/lean/Classicism/Results/Research/FregeArithmeticReflection.lean",
+      "sha256": "10ebce97fa65169c23f30f48a7c48b2137fc2fd461471d68deaf819169c7047c",
+      "ambient_variables": [],
+      "principals": [
+        {
+          "declaration": "Classicism.Meta.Research.FregeArithmeticReflection.formula_reflect",
+          "line": 53,
+          "statement": "theorem formula_reflect (σ : Ty) {k : Nat} (φ : AForm k)\n    (env : Env Classicism.e (numCtx σ k)) :\n    (φ.toTerm σ).denote (Interp.ofDomain Classicism.e) env =\n      readFormula φ (environment σ env)"
+        },
+        {
+          "declaration": "Classicism.Meta.Research.FregeArithmeticReflection.sentence_reflect",
+          "line": 94,
+          "statement": "theorem sentence_reflect (σ : Ty) (φ : AForm 0) :\n    Sentence.holds (Interp.ofDomain Classicism.e) (φ.toTerm σ) =\n      readSentence (σ.denote Classicism.e) φ"
+        }
+      ]
+    }
+  ]
+}

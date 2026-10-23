@@ -1,0 +1,6 @@
+import Classicism.Results.ChoiceHierarchyDiagonal
+import Classicism.ChoiceHierarchyRetractions
+
+#print axioms Classicism.Meta.ChoiceHierarchy.fullChoice_theorem_iff_stage
+#print axioms Classicism.Meta.ChoiceHierarchy.fullChoice_theorem_iff_diagonalStage
+#print axioms Classicism.Meta.ChoiceHierarchy.realizedRetraction

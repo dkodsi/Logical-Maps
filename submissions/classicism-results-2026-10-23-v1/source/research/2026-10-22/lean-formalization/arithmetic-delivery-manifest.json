@@ -1,0 +1,206 @@
+{
+  "created_at_utc": "2026-10-23T05:28:04.182518+00:00",
+  "scope": "Current owned source and generation inputs, preserved for delivery. File presence and hashes do not assert certification. Use verification ledger and exact check manifests.",
+  "verification_ledger": "verification-updates/infinity_arithmetic_profiles.json",
+  "principal_statements": "arithmetic-principal-statements.json",
+  "current_dependency_audit": "arithmetic-current-evidence.json",
+  "contribution_and_proof_index": "arithmetic-contribution-summary.md",
+  "files": [
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/ActualityCoreArithmetic.lean",
+      "sha256": "915e0846eb10c5d7adf9bd46ab6e5021c82885a9dfe5995ffe510fbe5dceb0ad"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/ActualityCoreArithmeticCertificates.lean",
+      "sha256": "5feaeeb149c6070c6f7452fb364d5381a97f3155041883199b89ca64eff2cfb6"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/ActualityCoreNumbers.lean",
+      "sha256": "d27975e179f732034febf810fc97b1a5f77441c95e392d8ae8c6bcc7328eba07"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/ActualityCoreNumbersCertificates.lean",
+      "sha256": "e7780286bad74294159b6a436dbfa8b64a9dff8f9bfc72e657112272119648e6"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/ActualityNumericalRelations.lean",
+      "sha256": "cf8a004cfad81f3f16af4f653869e5162c8da461a61617204498f850d3439c1d"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/ActualityNumericalRelationsCertificates.lean",
+      "sha256": "5882beb5132f1e9515f8a94dcd8d96c58d5d8937097640112d2e8f1ac3f6024f"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/C5ActualityNumbers.lean",
+      "sha256": "f88bef4440fe4c357058584eab7e75a9fd40d9811fe11dc663cd71278d187af6"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/C5ActualityNumbersCertificates.lean",
+      "sha256": "76502e2d3084e4a7b1884d7b06a9ae463b68d97ccfc25ddb640bb28a27131df4"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/C5Frege.lean",
+      "sha256": "157a0a6be950be4ed400e020871e48603ca006e22b18b56dcf5855c69cda246b"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/C5FregeCertificates.lean",
+      "sha256": "08b846cfa5e986ff2edc9ea44b27b596dcc201bba59f22ff00951ba78fd3b773"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/CoreNumberIsomorphism.lean",
+      "sha256": "c1d44eb1f1b3c5f5f02107ddcecfe54a6b6bf888f8294e0a72f34d65749200d4"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/CoreNumberIsomorphismCertificates.lean",
+      "sha256": "6dfb81fa07aa82610da79b597faec08bb4455bf12f0d9e1ea50bf24de0a9d079"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/CrossBaseArithmetic.lean",
+      "sha256": "a71fa2104c6f0867637f83fdb5284edf47761eecda63a5768a7d111f2ee8c058"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/CrossBaseArithmeticCertificates.lean",
+      "sha256": "e57eb0f684b724d137497b483a61fb1627c86a92dfc93724975e34978278a707"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/CrossBaseFirstOrder.lean",
+      "sha256": "2966852219db565e5aba652f562e7e6dd7a48fbfd220375bd6706012a91a6fe3"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/CrossBaseFirstOrderChecks.lean",
+      "sha256": "ef8fecbfeb77a66abd4efccc3b752958d682dfa4af71dda4dcde73d32a62717f"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FiniteAtomProfiles.lean",
+      "sha256": "fa1fac0c6cbb662e70b193187ba44b90876f79f794854ca831eec6ec57b42ebd"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FiniteAtomProfilesCertificates.lean",
+      "sha256": "bde7303b1c68033ee9d0e709228a573994731eca7f044954c5dcb1ec2ed10945"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FiniteFunctionFields.lean",
+      "sha256": "2aa575af1ef32f47c8d8a1d6ec73783ed97a83255b914ca82c1fb549682e20d0"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FiniteFunctionFieldsCertificates.lean",
+      "sha256": "e4cfeb17d5536cf470ee2984c8d4fe2248983c98028df72fa51eecc9850a5736"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FiniteProfiles.lean",
+      "sha256": "abbc3a0bcdefbd3dc238d4ce6b2bd446108b3ab8d1935bcfc4e39b0283a4de37"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FiniteProfilesCertificates.lean",
+      "sha256": "abbddcae581fc3598b199142987790f786c6f7e9b83baebddf3fddf7362f9336"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FiniteRigidPowers.lean",
+      "sha256": "49ccd0c2e87ca33182998458922082f56a75dcd828f1accaf1e5b40427c7f2a1"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FiniteRigidPowersCertificates.lean",
+      "sha256": "c4bea45192c3165924d48d9b22d1ff7371eff98242de815c9e77f7efa4d76625"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FiniteTupleLaws.lean",
+      "sha256": "5e1bb21b3a0476893464ceb3ce64bf900d9ef08521152c1873ae2f49c8afa564"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FiniteTupleLawsCertificates.lean",
+      "sha256": "c18210ec25559bf0670f75552022f5bc4fe103244d1ada9c36dd68a60512eb6c"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FregeArithmeticGraphs.lean",
+      "sha256": "d0448a51f720730ab5a6932a819d8250f4a5f71fe0b890999fa496b433f33bf4"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FregeArithmeticGraphsCertificates.lean",
+      "sha256": "8891b31ef9f2505c90b6e63c43fa9ed2ef83397805eb7ed9f716cb5f5fbab7d7"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FregeArithmeticQuotation.lean",
+      "sha256": "62933d17b2dbccb9013bdab797ee1945876698834ff05530ca0cfa9de89df112"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FregeArithmeticReflection.lean",
+      "sha256": "10ebce97fa65169c23f30f48a7c48b2137fc2fd461471d68deaf819169c7047c"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FregeArithmeticVocabulary.lean",
+      "sha256": "ce212432c93f250f5daa69fc0abcd733f2c7eb2100c1f73c7e6875a47b766599"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FregeArithmeticVocabularyCertificates.lean",
+      "sha256": "471acd5ce280b9da8baadd41fd99bcdd2ed822eadb2e16919bdb9a0821a05d78"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FregeFiniteSets.lean",
+      "sha256": "9510257847837420c4ed3398a45107e5f6b47d040a14a7e52957eb238af9d2e3"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FregeFiniteSetsCertificates.lean",
+      "sha256": "c25badcf8584581bd15b980cfd2ac900f34329bd039eda03b094bb691e56a05f"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FregeHumeClasses.lean",
+      "sha256": "c694371e538d035a1c9310d86fde17c6d21a6b5b8fbbb8f1cf74ed4f83275484"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FregeHumeClassesCertificates.lean",
+      "sha256": "14df1ae01d27ed031fef61a67cc461eec0828737d46449d35d883a87d41895d5"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FregeInfinity.lean",
+      "sha256": "b0007e4dad8fdcf52a01e8ef77bbce988fa3f6aa06570c89c4f2397ea138c759"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FregeInfinityCertificates.lean",
+      "sha256": "02f55108d0ae28c0e3cb7489dc9dc590525ff7c8b38637facc4f8100a65af46d"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FregeNoncollapse.lean",
+      "sha256": "3d560d54f9ab4209f6376729348edf4046d311a47254ff8699475b136436a312"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FregeNoncollapseCertificates.lean",
+      "sha256": "7190112f16bd8d7eb9de3658b764f6dcf7324abbce17bd1dfead4d99d8b41749"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/GeneratedAlgebraFinite.lean",
+      "sha256": "b4911c128403a5c245e384369aeb01cc340b4b4e9f72cb1de46b842fae176f1d"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/GeneratedAlgebraFiniteCertificates.lean",
+      "sha256": "86a13ea9e6a297cdc13fde6e435c337fe290d2924d41a562c086d9ea3693e1ab"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/GeneratedAlgebraTransfer.lean",
+      "sha256": "9611715d82e682bd3c52822fd195644151859ea4ad8369f432ca2f94845d322d"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/GeneratedAlgebraTransferCertificates.lean",
+      "sha256": "15777964d1eae3e2ee9072582234cf5b151645ff637af8f1f6793b4a48753011"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/RawWorldRepresentationBoundary.lean",
+      "sha256": "0a9132fce0b8b10570e2cf33db8d6f1de4d0972ecc454abe4ef117cae6b8773c"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/RawWorldRepresentationBoundaryCertificates.lean",
+      "sha256": "559de56f62ea2a58c3ad6f2e84db3befe2f48a8953680f2234c16c1d3346a28f"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/RawWorldRepresentationBoundarySchemas.lean",
+      "sha256": "239b50a921d47164b242452846d453f332e95534220dad8f810a61ca85694337"
+    },
+    {
+      "path": "research/2026-10-22/lean-formalization/generate_generated_algebra.py",
+      "sha256": "55200a9dc32e93213aebca081ae3cdb9e764bae15005c57109881576bf71d084"
+    },
+    {
+      "path": "research/2026-10-22/lean-formalization/generated-algebra-finite-signature.json",
+      "sha256": "099248c62d3a6319822693a89202cfd44d88a8dff982042aa25bfcc8dd8daf7f"
+    }
+  ]
+}
