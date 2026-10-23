@@ -1,8 +1,0 @@
-Classicism.dia_ne_imp_ne ⟶ Classicism.dia_ne_imp_ne.derivable : ∀ (σ' : Meta.Ty),
-  Meta.Theorem Meta.C.axiomsMinus
-    (Meta.Term.forall'
-      (Meta.Term.forall'
-        (Meta.Term.imp
-          (Meta.Term.dia (Meta.Term.neg ((Meta.Term.var Meta.Var.zero.succ).eq' (Meta.Term.var Meta.Var.zero))))
-          (Meta.Term.neg ((Meta.Term.var Meta.Var.zero.succ).eq' (Meta.Term.var Meta.Var.zero))))))
-derived ✓ in C⁻

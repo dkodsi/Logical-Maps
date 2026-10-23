@@ -184,11 +184,11 @@ Read synthesis §§7, 15, 24 and the corresponding detailed companion sections.
 
 ## 5. Separate audits of the parent Strong Possibility construction
 
-[The finite-profile atomicity audit](parent-profile-atomicity-audit.md)
+[The finite-profile atomicity audit](../notes/parent-profile-atomicity-audit.md)
 supplies the needed pure truth-table elimination and respects the fixed
 C-theoremhood restriction on necessitation.
 
-[The root closure audit](parent-profile-root-closure-audit.md) checks
+[The root closure audit](../notes/parent-profile-root-closure-audit.md) checks
 application, symbolic lambda abstraction, target-domain quantifiers and
 the explicit Functionality failure. Both remain conditional on the
 component-model existence/completeness theorem cited by the parent report.

@@ -8,4 +8,10 @@
 - **Rigidity and SP:** the exact local-rigidity schema assembly and twelve SP/Max modules have completed evidence. No SP consistency theorem is inferred.
 - **Arithmetic, probability and cores:** later foundational certificates are included; they do not certify every higher-level interpretation, probability classification or effective comparison.
 
-The original index and synthesis remain in the source tree, with their original hashes. MAIN-RESULTS, exact declarations and the final checkpoints provide the release overlay. This is a fixed source/evidence snapshot, not a claim of independent human review or complete formalization of all 160 tracked entries.
+The original index and synthesis remain in the original release archive. The current MAIN-RESULTS and evidence/RESULT-INDEX provide the result statements and exact certificate scopes. This is a fixed source/evidence snapshot, not a claim of independent human review or complete formalization of all 160 tracked entries.
+
+## Git-view cleanup, 23 October 2026
+
+Removed byte-identical source snapshots and proof documents, the nested compiled-certificate ZIP, uncited historical diagnostic logs, superseded compiler manifests, and operational reports, work queues and duplicate inventories. Unique mathematical proofs, corrections, selected certificate reports and their source/dependency inputs remain. ARCHIVED-ARTIFACTS.json records every omitted file and its recovery location. The complete original release and its checksum are unchanged.
+
+The results guide now has 26 explicit entries, each stating the result, significance, scope and Lean boundary. The full catalog retains all 160 keys. Newly surfaced entries include pure/signature SP incompatibility, finite and infinite signature-extension boundaries, SP’s finite individual-domain theorem, finite profile ranks, Barcan and Functionality failures, arithmetic reflection, the predecessor-operation obstruction, the ND+BC rigidity equivalence, countable-completeness finiteness and Boolean-retraction Choice. These were already present in the proof notes; this editorial work adds no mathematical theorem or Lean certificate.

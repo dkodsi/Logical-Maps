@@ -57,7 +57,7 @@ being claimed as formalized. No infinitary language extension is used here.
 The pure supported product independently satisfies all-type boxed Barcan and
 Relational Choice and fails Actuality for any nonempty alphabet. Its joint
 certificate and public audit passed in the successful subtargets of
-[`checks/20261023T053715003577Z-373ddacd.json`](checks/20261023T053715003577Z-373ddacd.json);
+[`checks/20261023T053715003577Z-373ddacd.json`](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1);
 see [`CentralProductAxioms.lean`](central-checks/CentralProductAxioms.lean) and
 [its axiom report](logs/runs/20261023T053715003577Z-373ddacd/CentralProductAxioms.log).
 This run also checked finitary syntax countability. Syntactic countability
@@ -70,14 +70,14 @@ Choice. It never assumes the members of an extension share a common support.
 The foundation/choice public audit is
 [`CentralFoundationAxioms.log`](logs/runs/20261023T051518714412Z-101d064e/CentralFoundationAxioms.log),
 with passing subtargets in
-[`checks/20261023T051518714412Z-101d064e.json`](checks/20261023T051518714412Z-101d064e.json).
+[`checks/20261023T051518714412Z-101d064e.json`](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1).
 The closure and choice declarations use the same three metatheoretic axioms;
 extension-profile and extensional-fullness lemmas use only `propext` and
 `Quot.sound`.
 
 Whole-entity gluing, supported-tuple coordinate factorization, and external
 countable joins now pass. The latter two have a public audit in
-[`checks/20261023T054120203114Z-4a90260b.json`](checks/20261023T054120203114Z-4a90260b.json),
+[`checks/20261023T054120203114Z-4a90260b.json`](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1),
 with [the exact report](logs/runs/20261023T054120203114Z-4a90260b/CentralGeometryAxioms.log).
 These support the ordinary arguments in central-map §§8 and 10. They do not
 by themselves establish the full Tame Rigidity or internal Countable Boolean
@@ -103,7 +103,7 @@ The full ordinary arguments are
 and [`followup/modal-propagation.md`](../followup/modal-propagation.md).
 
 The core's successful full-schema check is
-[`checks/20261023T025257130403Z.json`](checks/20261023T025257130403Z.json);
+[`checks/20261023T025257130403Z.json`](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1);
 its axiom audit is
 [`checks/20261023T030134260568Z.json`](checks/20261023T030134260568Z.json).
 The main entailment and final list entailment report only `propext` and
@@ -119,7 +119,7 @@ Principal declarations in `Classicism.Research.ModalRigidityDescent` include
 `rigid_comprehension_descent`.
 
 The core's repaired source and full-module derivation check passed in
-[`checks/20261023T040634048786Z.json`](checks/20261023T040634048786Z.json).
+[`checks/20261023T040634048786Z.json`](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1).
 All fifteen source theorems were derived. The three printed main `.derivable`
 declarations use only `propext` and `Quot.sound`. The core's equality-transport
 repair is preserved; its source hash still matches the handback snapshot.

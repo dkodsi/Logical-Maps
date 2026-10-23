@@ -1,7 +1,0 @@
-Classicism.Research.SealedWorldCover.sl_rc_implies_necessary_strong_leibniz_t ⟶ Classicism.Research.SealedWorldCover.sl_rc_implies_necessary_strong_leibniz_t.rule : Classicism.Meta.Theorem
-  Classicism.Meta.C.axioms
-  (Classicism.Meta.Term.imp Classicism.P.StrongLeibnizT.quoted
-    (Classicism.Meta.Term.imp
-      (Classicism.P.RigidComprehension.quoted (Classicism.Meta.Ty.rel Classicism.Meta.RTy.t ⇒ Classicism.Meta.RTy.t))
-      (Classicism.P.NecStrongLeibniz.quoted Classicism.Meta.RTy.t)))
-certified ✓ (axioms: [propext, Quot.sound])

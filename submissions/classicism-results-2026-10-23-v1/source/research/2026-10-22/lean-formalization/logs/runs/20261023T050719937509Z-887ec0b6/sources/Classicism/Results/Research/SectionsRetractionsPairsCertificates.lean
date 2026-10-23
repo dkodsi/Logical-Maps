@@ -1,9 +1,0 @@
-import Classicism.Results.Research.SectionsRetractionsActualityCertificates
-import Classicism.Results.Research.SectionsRetractionsPairs
-
-#classicism_audit Classicism.Results.Research.SectionsRetractionsPairs
-#classicism_types_audit Classicism.Results.Research.SectionsRetractionsPairs
-set_option maxHeartbeats 0 in
-#classicism_derive_audit Classicism.Results.Research.SectionsRetractionsPairs
-#print axioms Classicism.Research.Splitting.projectPair_actual.derivable
-#print axioms Classicism.Research.Splitting.decodePair_code.derivable

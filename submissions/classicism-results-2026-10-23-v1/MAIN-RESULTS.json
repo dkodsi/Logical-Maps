@@ -1,6 +1,6 @@
 {
   "release_id": "classicism-results-2026-10-23-v1",
-  "description": "Source and certificate-evidence snapshot for review and possible integration by the database owners. No database verdict is changed by this release.",
+  "description": "Result-first guide to the submitted mathematical arguments and their exact Lean scope. Original proof sources retain their attribution; no database verdicts or Lean sources are changed.",
   "results": [
     {
       "id": "MAX-ATOMICITY",
@@ -28,7 +28,261 @@
         "research/2026-10-22/lean-formalization/max-certificate-audit.json",
         "research/2026-10-22/lean-formalization/logs/runs/20261023T054730505817Z-9a834f08/Classicism_Results_Research_MaxAtomicityInconsistency.log"
       ],
-      "notes": "This supersedes the earlier conditional-only reports. The final axiom report lists propext, Classical.choice and Quot.sound, with no sorryAx or custom axioms. The proof uses an explicitly attributed Jech–Shelah construction; the new result and implementation retain the notes' misc attribution. This does not prove Strong Possibility consistent or inconsistent."
+      "notes": "This supersedes the earlier conditional-only reports. The final axiom report lists propext, Classical.choice and Quot.sound, with no sorryAx or custom axioms. The proof uses an explicitly attributed Jech–Shelah construction; the new result and implementation retain the notes' misc attribution. This does not prove Strong Possibility consistent or inconsistent.",
+      "significance": "An exact incompatibility between two major principles: propositional Atomicity cannot be added to pure Maximalism, even without boxing Atomicity.",
+      "mathematical_status": "Proofs or constructions supplied, with the stated scope and limitations; no literature-novelty claim."
+    },
+    {
+      "id": "SP-SIGNATURE-CONFLICT",
+      "title": "Signature SP entails pure SP exactly when signature SP is inconsistent",
+      "statement": "For every map-admitted signature Σ, SP(Σ) entails pure SP iff SP(Σ) is inconsistent. More strongly, pure SP is incompatible with signature Max. The reverse implication from pure SP to SP(Σ) holds iff pure SP is inconsistent.",
+      "scope": "Σ contains at least one relational nonlogical constant; it may be finite or infinite and may also contain individual names. Original finitary syntax and the distinct reference Max theories are retained.",
+      "significance": "Adding names changes which sentences are Max-consistent. Signature SP therefore need not extend pure SP: their demands conflict, and a proof of the proposed arrow would establish inconsistency of its antecedent.",
+      "registry_ids": [
+        "principles.27"
+      ],
+      "proofs": [
+        "research/2026-10-22/notes/audit-signature-to-pure-sp-20261022.md",
+        "research/2026-10-22/notes/audit-signature-conservativity-obstruction-20261022.md",
+        "research/2026-10-22/notes/profile-root-construction-20261022.md"
+      ],
+      "proof_locators": [
+        "audit-signature-to-pure-sp-20261022.md §§1–5",
+        "audit-signature-conservativity-obstruction-20261022.md §§3–6",
+        "profile-root-construction-20261022.md §§1–4"
+      ],
+      "notes": "Witness: A is Fregean ∧ ExactlyOneIndividual and U is Atom_t(A). The pure-profile model gives Con(Max(pure)+U); pure SP entails U; two signature-Max instances split A and give ¬U. This proves neither SP theory consistent or inconsistent separately.",
+      "lean_status": "Signature splitting checked; pure-profile consistency construction and full incompatibility equivalence not Lean-certified",
+      "lean_sources": [
+        "research/2026-10-22/lean-formalization/StrongPossibilityConsequencesSignatureSplit.lean"
+      ],
+      "declarations": [
+        "Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.maximalist_not_atom_cell",
+        "Classicism.Meta.Research.StrongPossibilityConsequences.SignatureSplit.maximalist_add_atom_inconsistent"
+      ],
+      "manifests": [
+        "research/2026-10-22/lean-formalization/checks/20261023T044759304508Z-f503b46f.json",
+        "research/2026-10-22/lean-formalization/sp-universal-verification/checks/20261023T044336274999Z-6b5c1cb4.json"
+      ],
+      "evidence": [
+        "research/2026-10-22/lean-formalization/sp-verification/proof-summary.md"
+      ],
+      "mathematical_status": "Ordinary proof supplied in the cited sources, subject to the stated assumptions; no literature-novelty claim."
+    },
+    {
+      "id": "SIGNATURE-FINITE-BOUNDARY",
+      "title": "An exact boundary for finite signature extensions",
+      "statement": "For a proper extension of finite signatures Σ ⊊ Σ′, Max(Σ′) preserves all Max(Σ)-consistent old-language conditions iff the extension adds exactly one individual name, adds no relational constants, and Σ has no individual names.",
+      "scope": "Signatures contain only constants of the admitted types. This comparative result also discusses signatures outside the map convention. Equal signatures are the trivial preservation case.",
+      "significance": "This is a classification, not just a failed generic-expansion argument. It isolates the one harmless finite extension and explains the otherwise conflicting SP schemes.",
+      "registry_ids": [
+        "principles.12"
+      ],
+      "proofs": [
+        "research/2026-10-22/notes/audit-signature-to-pure-sp-20261022.md"
+      ],
+      "proof_locators": [
+        "§§6,9"
+      ],
+      "notes": "In the negative cases the two SP theories are incompatible, and each direction of entailment is equivalent to inconsistency of its antecedent. In the positive case the larger-language SP entails the smaller-language SP; no reverse SP implication is asserted.",
+      "lean_status": "Ordinary proof supplied; complete theorem not Lean-certified",
+      "lean_sources": [],
+      "declarations": [],
+      "manifests": [],
+      "evidence": [],
+      "mathematical_status": "Ordinary proof supplied in the cited sources, subject to the stated assumptions; no literature-novelty claim."
+    },
+    {
+      "id": "SIGNATURE-INFINITE-RESERVOIR",
+      "title": "An infinite reserve of names restores conservativity",
+      "statement": "If Σ ⊆ Σ′ and Σ already has infinitely many constants of every type at which Σ′ adds constants, Max(Σ′) and SP(Σ′) are conservative over the corresponding old-language theories, preserving old-language consistency conditions.",
+      "scope": "Every proof is finite, so fresh old constants of matching types can replace the finitely many new names it uses. No generic expansion of each individual model is asserted.",
+      "significance": "Finite-signature nonconservativity and infinite-language conservativity have different mechanisms. The supply of unused names is the exact hypothesis used by this positive result.",
+      "registry_ids": [
+        "principles.13"
+      ],
+      "proofs": [
+        "research/2026-10-22/notes/audit-signature-to-pure-sp-20261022.md"
+      ],
+      "proof_locators": [
+        "§8"
+      ],
+      "notes": "",
+      "lean_status": "Ordinary proof supplied; complete theorem not Lean-certified",
+      "lean_sources": [],
+      "declarations": [],
+      "manifests": [],
+      "evidence": [],
+      "mathematical_status": "Ordinary proof supplied in the cited sources, subject to the stated assumptions; no literature-novelty claim."
+    },
+    {
+      "id": "SP-INDIVIDUAL-CARDINALITY",
+      "title": "SP fixes the actual domain from the number of individual names",
+      "statement": "If Σ has exactly u < ∞ individual constant symbols, SP(Σ) entails exactly max(1,u) actual individuals. For u ≥ 1 the individual names enumerate the domain bijectively. Pure SP therefore entails exactly one actual individual.",
+      "scope": "The relational part of Σ may be infinite. This is an actual-domain assertion, not a boxed cardinality claim. No exhaustion claim is made for infinitely many individual names.",
+      "significance": "SP has a much sharper cardinal consequence than an informal plenitude reading suggests. Adding individual names can change the forced actual cardinality and make theories incompatible.",
+      "registry_ids": [
+        "principles.27"
+      ],
+      "proofs": [
+        "research/2026-10-22/notes/audit-signature-to-pure-sp-20261022.md"
+      ],
+      "proof_locators": [
+        "§10"
+      ],
+      "notes": "The Max-consistent profile-root cardinality sentence transfers by universal-identity reflection; signature Max makes distinct individual name symbols denote distinct actual individuals. This remains a consequence of SP, not an SP consistency proof.",
+      "lean_status": "Conditional monism/reflection component checked; the required profile models and full finite-name theorem not Lean-certified",
+      "lean_sources": [
+        "research/2026-10-22/lean-formalization/StrongPossibilityConsequencesSchemas.lean"
+      ],
+      "declarations": [],
+      "manifests": [
+        "research/2026-10-22/lean-formalization/checks/20261023T044759304508Z-f503b46f.json",
+        "research/2026-10-22/lean-formalization/sp-universal-verification/checks/20261023T044336274999Z-6b5c1cb4.json"
+      ],
+      "evidence": [
+        "research/2026-10-22/lean-formalization/sp-verification/proof-summary.md"
+      ],
+      "mathematical_status": "Ordinary proof supplied in the cited sources, subject to the stated assumptions; no literature-novelty claim."
+    },
+    {
+      "id": "SP-FINITE-PROFILE-RANK",
+      "title": "Pointed theories determine the finite Boolean intervals forced by SP",
+      "statement": "For closed pure A, let S_A be the space of complete consistent theories extending C(a)+A for one fresh individual name a. Max + Width_k(A) is consistent iff S_A has at most k members. If S_A has exactly finite k members, pure SP forces exactly k atoms and 2^k elements below A.",
+      "scope": "k is an external fixed finite number; Width_k excludes k+1 disjoint nonzero subpropositions. When S_A is infinite, Max already refutes each finite width bound.",
+      "significance": "The atom obstruction is one case of a general classification. It computes entire finite intervals of the propositional algebra from pointed logical possibilities.",
+      "registry_ids": [
+        "principles.10",
+        "principles.11",
+        "principles.26",
+        "principles.28"
+      ],
+      "proofs": [
+        "research/2026-10-22/notes/sp-finite-profile-rank-20261022.md",
+        "research/2026-10-22/notes/finite-c5-profile-cells-20261022.md",
+        "research/2026-10-22/notes/finite-c5-signature-cells-20261022.md"
+      ],
+      "proof_locators": [
+        "sp-finite-profile-rank-20261022.md §§1–5",
+        "finite-c5-profile-cells-20261022.md §§1–8",
+        "finite-c5-signature-cells-20261022.md"
+      ],
+      "notes": "The finite-signature notes refine the cell counts using pointed isomorphism orbits. None of the profile models is asserted to satisfy full SP.",
+      "lean_status": "Ordinary proof supplied; complete theorem not Lean-certified",
+      "lean_sources": [],
+      "declarations": [],
+      "manifests": [],
+      "evidence": [],
+      "mathematical_status": "Ordinary proof supplied in the cited sources, subject to the stated assumptions; no literature-novelty claim."
+    },
+    {
+      "id": "SP-BARCAN-FUNCTIONALITY",
+      "title": "Finite-signature SP refutes Barcan and Functionality at every input type",
+      "statement": "For every finite signature Σ, including the empty signature, SP(Σ) refutes Barcan at every admitted input type α and every Functionality type instance with input α and relational output β. Explicit counterpredicates and pairs of operations witness the failures.",
+      "scope": "For an infinite relational signature with finitely many individual names, only the individual-input result is extended by this proof. Relational-input failures use a finite complete signature diagram.",
+      "significance": "The failure is type-by-type, including individual inputs, rather than merely failure of an all-type conjunction. Future domains contain values not transported from the actual domain.",
+      "registry_ids": [
+        "principles.29"
+      ],
+      "proofs": [
+        "research/2026-10-22/notes/signature-sp-barcan-20261022.md",
+        "research/2026-10-22/notes/finite-c5-profile-cells-20261022.md"
+      ],
+      "proof_locators": [
+        "signature-sp-barcan-20261022.md §§1–7",
+        "finite-c5-profile-cells-20261022.md §9"
+      ],
+      "notes": "A failed schema has a counterinstance; not every formula or every pair of operations is a counterexample. Consistency of the SP antecedent remains unresolved.",
+      "lean_status": "Ordinary proof supplied; complete theorem not Lean-certified",
+      "lean_sources": [],
+      "declarations": [],
+      "manifests": [],
+      "evidence": [],
+      "mathematical_status": "Ordinary proof supplied in the cited sources, subject to the stated assumptions; no literature-novelty claim."
+    },
+    {
+      "id": "SP-CRITERIA",
+      "registry_ids": [
+        "sp_supplement.01",
+        "sp_supplement.02",
+        "F13",
+        "F14",
+        "F15"
+      ],
+      "title": "Strong Possibility is an exact universal-identity theory",
+      "statement": "Over C, pure Strong Possibility is equivalent to the schema of all closed pure universal finite-Boolean-identity sentences individually consistent with Max. With Con(Max) retained, SP is consistent iff Max has the restricted finite-disjunction property for existential finite-Boolean-identity sentences.",
+      "scope": "Universal prefixes and finite Boolean matrices of typed identities; the terms inside those identities may contain quantifiers. Max-consistency is the original metalinguistic side condition. The disjunction property is a criterion, not a proved property of Max.",
+      "lean_status": "Universal-core equivalence and the stated conditional disjunction criterion checked; further model constructions remain partial",
+      "declarations": [
+        "Classicism.Meta.Research.StrongPossibilityConsequences.UniversalCore.sp_consistent_iff_universal_core",
+        "Classicism.Meta.Research.StrongPossibilityConsequences.MaxConservativity.identity_conservative_iff_max_consistent"
+      ],
+      "lean_sources": [
+        "research/2026-10-22/lean-formalization/StrongPossibilityConsequencesUniversalCore.lean",
+        "research/2026-10-22/lean-formalization/StrongPossibilityConsequencesMaxConservativity.lean"
+      ],
+      "proofs": [
+        "research/2026-10-22/lean-formalization/sp-verification/proof-summary.md",
+        "research/2026-10-22/notes/reflection-universal-core-20261022.md"
+      ],
+      "manifests": [
+        "research/2026-10-22/lean-formalization/checks/20261023T044759304508Z-f503b46f.json",
+        "research/2026-10-22/lean-formalization/sp-universal-verification/checks/20261023T044336274999Z-6b5c1cb4.json"
+      ],
+      "evidence": [
+        "research/2026-10-22/lean-formalization/sp-verification/verification-status.json",
+        "research/2026-10-22/lean-formalization/sp-verification/verification-status.md"
+      ],
+      "notes": "No consistency or inconsistency proof for SP is supplied. The separate elementary-extension embedding criterion has an ordinary proof; the full genuine-Henkin construction is not certified by the twelve checked modules.",
+      "significance": "SP can be analyzed through jointly realizable universal identity constraints. Its consistency question becomes a precise restricted disjunction question about Max, rather than an unspecified search for richer worlds.",
+      "mathematical_status": "Proofs or constructions supplied, with the stated scope and limitations; no literature-novelty claim."
+    },
+    {
+      "id": "SP-ARITHMETIC-REFLECTION",
+      "title": "Pure SP proves true Π₂ arithmetic, with a sharp conditional boundary",
+      "statement": "Pure SP proves every true Π⁰₂ arithmetic sentence under the specified pure Frege-arithmetic translation. More generally, if C + I_e proves every standard numeral instance of a fixed pure P(n), SP proves its universal numerical closure. If SP is consistent, some true Π⁰₃ sentence is not an SP theorem.",
+      "scope": "The one-step ω-rule has C + I_e as its reference theory. It uses external separate finite proofs, not an infinitary object-language formula. It is not an iterated ω-rule for SP.",
+      "significance": "This exhibits a concrete arithmetic gain over Max and a limit to that gain. The reflection principle is stronger than merely recognizing a list of familiar arithmetic axioms.",
+      "registry_ids": [
+        "F14"
+      ],
+      "proofs": [
+        "research/2026-10-22/followup/strong-possibility.md"
+      ],
+      "proof_locators": [
+        "“A one-step omega-rule consequence of pure SP”; “Pure SP contains true Pi^0_2 arithmetic”; “The arithmetic correctness bound is sharp if SP is consistent”"
+      ],
+      "notes": "The ordinary argument uses the standard-arithmetic Max model and the stated arithmetic interpretation. The upper-bound conclusion retains Con(SP); no standard-arithmetic SP model is supplied.",
+      "lean_status": "Ordinary proof supplied; complete theorem not Lean-certified",
+      "lean_sources": [],
+      "declarations": [],
+      "manifests": [],
+      "evidence": [],
+      "mathematical_status": "Ordinary proof supplied in the cited sources, subject to the stated assumptions; no literature-novelty claim."
+    },
+    {
+      "id": "MAX-PREDECESSOR",
+      "title": "Maximalism forbids a numerical predecessor operation",
+      "statement": "At every admitted counting type σ, pure Max refutes an operation f satisfying f(S_σ n)=n on all Frege numbers, although Max entails arithmetic noncollapse I_σ and has the definable predecessor graph. C + Plenitude + I_σ supplies such an operation.",
+      "scope": "Only a left inverse to successor is demanded; specifying f(0)=0 is unnecessary for the negative result. Number types are relational, so the operation type is admitted.",
+      "significance": "A total functional arithmetic graph need not have an intensional operation representing it. This pinpoints how Max can support relational arithmetic while opposing individual Plenitude instances.",
+      "registry_ids": [
+        "principles.05",
+        "principles.06"
+      ],
+      "proofs": [
+        "research/2026-10-22/notes/relational-coding-recursion-20261022.md"
+      ],
+      "proof_locators": [
+        "§38; related cross-base graph/operation results in §§34–35"
+      ],
+      "notes": "The obstruction uses two fixed numeral values, ordinary pure Max and necessity of identity. It does not require SP or a Barcan premise.",
+      "lean_status": "Ordinary proof supplied; complete theorem not Lean-certified",
+      "lean_sources": [],
+      "declarations": [],
+      "manifests": [],
+      "evidence": [],
+      "mathematical_status": "Ordinary proof supplied in the cited sources, subject to the stated assumptions; no literature-novelty claim."
     },
     {
       "id": "CHOICE-COMPLETENESS",
@@ -61,102 +315,9 @@
       "evidence": [
         "research/2026-10-22/lean-formalization/verification-updates/choice_sections_retractions.json"
       ],
-      "notes": "Relational Choice alone implying Transversal Choice is not settled by this result."
-    },
-    {
-      "id": "MODAL-PROPAGATION",
-      "registry_ids": [
-        "F05",
-        "rigidity.13"
-      ],
-      "title": "Strong Leibniz and Rigid Comprehension force modal stability",
-      "statement": "Strong Leibniz plus Rigid Comprehension entails necessary Strong Leibniz, necessary relational BF, necessary Rigid Comprehension and necessary Boolean Completeness.",
-      "scope": "Pure C; both initial premises unboxed; comprehension covers every admitted finite argument tuple, including individual and mixed tuples. BF is concluded only for relational types, not e.",
-      "lean_status": "Exact full schema checked; legacy-format evidence retained",
-      "declarations": [
-        "Classicism.Meta.Research.ModalPropagation.all_four"
-      ],
-      "lean_sources": [
-        "topics/classicism/lean/Classicism/Results/Research/ModalPropagationSchemas.lean"
-      ],
-      "proofs": [
-        "research/2026-10-22/strong-leibniz-rigid-bottom-cut.md",
-        "research/2026-10-22/followup/modal-propagation.md"
-      ],
-      "manifests": [
-        "research/2026-10-22/lean-formalization/checks/20261023T030134260568Z.json"
-      ],
-      "evidence": [
-        "research/2026-10-22/lean-formalization/logs/runs/20261023T030134260568Z/ModalPropagationAxioms.log",
-        "research/2026-10-22/lean-formalization/significant-results.json"
-      ],
-      "notes": "The coordinating technical review reported matching historical recursive fingerprints. This legacy manifest lacks the later per-file source map; the release does not pretend to have recomputed its entire historical fingerprint or rerun Lean."
-    },
-    {
-      "id": "OLDNEW-SEPARATION",
-      "registry_ids": [
-        "rigidity.31"
-      ],
-      "title": "Local ND and Boolean Completeness do not give Rigid Comprehension",
-      "statement": "A concrete model satisfies full local ND and full relational Boolean Completeness, but fails Inextensible Comprehension and Rigid Comprehension at et, Tame Rigidity, and boxed Boolean Completeness at et. BC at et also fails at each specified accessible E-to-O evaluation.",
-      "scope": "Pure C; ND and BC are unboxed. The complete declaration uses the original old/new construction. No boxed-Rigid-Power or signature-extension verdict is inferred from it.",
-      "lean_status": "Complete displayed countermodel checked",
-      "declarations": [
-        "Classicism.Meta.Intensional.OldNew.complete_countermodel",
-        "Classicism.Meta.Intensional.OldNew.background_consistent",
-        "Classicism.Meta.Intensional.OldNew.not_entails_rc",
-        "Classicism.Meta.Intensional.OldNew.not_entails_tame",
-        "Classicism.Meta.Intensional.OldNew.not_entails_box_bc"
-      ],
-      "lean_sources": [
-        "topics/classicism/lean/Classicism/Models/OldNewComplete.lean",
-        "topics/classicism/lean/Classicism/Models/OldNewSeparation.lean"
-      ],
-      "proofs": [
-        "research/2026-10-22/notes/old-new-boolean-completeness-and-rigidity-separation.md",
-        "research/2026-10-22/notes/old-new-boolean-completeness-source-caveat.md"
-      ],
-      "manifests": [
-        "research/2026-10-22/lean-formalization/checks/20261023T045855511121Z-2911dd87.json"
-      ],
-      "evidence": [
-        "research/2026-10-22/lean-formalization/verification-updates/hierarchy_oldnew_colourcollapse.json"
-      ],
-      "notes": "The earlier claim that BC failed at E used an inadmissible external even-haecceity family. Its correction must accompany any database integration. The broader assembly is now checked, superseding its earlier failed attempt."
-    },
-    {
-      "id": "RIGIDITY-CLASSIFICATIONS",
-      "registry_ids": [
-        "rigidity.02",
-        "rigidity.08",
-        "rigidity.11",
-        "rigidity.12"
-      ],
-      "title": "Rigidity has exact power, uniformization and algebraic descriptions",
-      "statement": "Atomicity + Rigid Comprehension implies Weakly Rigid Power. Full Weakly Rigid Power is equivalent to Tame Rigidity + Rigid Power + bounded future-tameness. Uniform weak/rigid comprehension is equivalent to local ND plus the corresponding weak/rigid comprehension schema.",
-      "scope": "Pure C, full schemas with nullary and finite-tuple cases. Bounded future-tameness says every future weakly rigid subrelation of an actual rigid bound is rigid. The WRP-to-RP route uses the next property type.",
-      "lean_status": "Exact full schemas and stated fragment/retraction certificates checked",
-      "declarations": [
-        "Classicism.Meta.Research.RigidityClosure.atomicity_rc_weak_power",
-        "Classicism.Meta.Research.RigidityClosure.weak_power_decomposition_equivalent",
-        "Classicism.Meta.Research.RigidityClosure.uniform_weak_equivalent",
-        "Classicism.Meta.Research.RigidityClosure.uniform_rigid_equivalent"
-      ],
-      "lean_sources": [
-        "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchContinuationSchemas.lean",
-        "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchBounded.lean"
-      ],
-      "proofs": [
-        "research/2026-10-22/notes/maximalism-modal.md",
-        "research/2026-10-22/notes/rigidity-by-joins-and-boolean-closure.md"
-      ],
-      "manifests": [
-        "research/2026-10-22/lean-formalization/checks/20261023T044252100669Z-9b8e2beb.json"
-      ],
-      "evidence": [
-        "research/2026-10-22/lean-formalization/verification-updates/local_rigidity_closure_replacement.json"
-      ],
-      "notes": "The final four schema reports list propext/Quot.sound. Current normalizer laws are not automatically boxed laws about all future inputs. Full TR + RP alone implying WRP remains distinct."
+      "notes": "Relational Choice alone implying Transversal Choice is not settled by this result.",
+      "significance": "Selection and Boolean completeness together recover an actual-world truth selector and quotient representatives. This identifies what completeness contributes beyond Relational Choice alone.",
+      "mathematical_status": "Proofs or constructions supplied, with the stated scope and limitations; no literature-novelty claim."
     },
     {
       "id": "SECTIONS-RETRACTIONS",
@@ -192,7 +353,216 @@
       "evidence": [
         "research/2026-10-22/lean-formalization/verification-updates/choice_sections_retractions.json"
       ],
-      "notes": "Necessary FC iff necessary Actuality plus unboxed strong sections is mathematically proved in the notes but remains a separate Lean obligation. This must not be confused with the checked necessitated ordinary-section equivalence."
+      "notes": "Necessary FC iff necessary Actuality plus unboxed strong sections is mathematically proved in the notes but remains a separate Lean obligation. This must not be confused with the checked necessitated ordinary-section equivalence.",
+      "significance": "Choice and Plenitude each separate into Actuality and a familiar inverse-map principle. This makes their different strengths easier to compare.",
+      "mathematical_status": "Proofs or constructions supplied, with the stated scope and limitations; no literature-novelty claim."
+    },
+    {
+      "id": "BOOLEAN-RETRACTIONS-CHOICE",
+      "title": "Complete Boolean retractions characterize necessary Functional Choice",
+      "statement": "Over C + necessary Plenitude, necessary Functional Choice is equivalent to the schema saying every admitted rigid internally complete Boolean subalgebra of every relational-type Boolean algebra has a complete Boolean retraction.",
+      "scope": "Internal completeness ranges over admitted families. The all-type requirement is essential; a single canonical membership inclusion per output type suffices for the converse.",
+      "significance": "This supplies an algebraic characterization of the step from the Plenitude baseline to full Choice. Retractions select representatives of the corresponding equivalence classes of atoms.",
+      "registry_ids": [
+        "world_algebra.12"
+      ],
+      "proofs": [
+        "research/2026-10-22/notes/structural-algebraic-core.md"
+      ],
+      "proof_locators": [
+        "§§16,18–19,38"
+      ],
+      "notes": "Propositional retractions alone do not imply full Choice: the notes give a nominal model with all such retractions but failure of Relational Choice. These are different from ordinary surjection-section decompositions.",
+      "lean_status": "Ordinary proof supplied; complete theorem not Lean-certified",
+      "lean_sources": [],
+      "declarations": [],
+      "manifests": [],
+      "evidence": [],
+      "mathematical_status": "Ordinary proof supplied in the cited sources, subject to the stated assumptions; no literature-novelty claim."
+    },
+    {
+      "id": "CHOICE-NO-FINITE-BASIS",
+      "registry_ids": [
+        "F09"
+      ],
+      "title": "Full necessary Functional Choice has no finite fixed-type basis",
+      "statement": "The ordinary proof reports that full boxed Functional Choice cannot be axiomatized over C by finitely many fixed-type closed formulas; it gives strict cofinal and bounded-type-order refinements.",
+      "scope": "Original relational grammar and ordinary ZFC metatheory, using symmetric forcing and ground Henkin extraction. This does not rule out a finite number of unbounded type schemata.",
+      "lean_status": "Positive hierarchy and support lemmas checked; negative main theorem not fully formalized",
+      "declarations": [],
+      "lean_sources": [
+        "topics/classicism/lean/Classicism/Models/ChoiceFreshColumns.lean"
+      ],
+      "proofs": [
+        "research/2026-10-22/followup/finite-functional-choice.md",
+        "research/2026-10-22/lean-formalization/finite-choice-negative-audit.md"
+      ],
+      "manifests": [],
+      "evidence": [
+        "research/2026-10-22/lean-formalization/verification-updates/hierarchy_oldnew_colourcollapse.json"
+      ],
+      "notes": "The surviving ordinary proof has an author audit, not a complete independent Lean certificate. Do not replace the missing forcing/extraction construction by an assumed finite-fragment-gap premise.",
+      "significance": "No finite list of fixed-type demands captures full boxed Functional Choice. The distinction between finitely many formulas and an unbounded type schema is essential.",
+      "mathematical_status": "Proofs or constructions supplied, with the stated scope and limitations; no literature-novelty claim."
+    },
+    {
+      "id": "MODAL-PROPAGATION",
+      "registry_ids": [
+        "F05",
+        "rigidity.13"
+      ],
+      "title": "Strong Leibniz and Rigid Comprehension force modal stability",
+      "statement": "Strong Leibniz plus Rigid Comprehension entails necessary Strong Leibniz, necessary relational BF, necessary Rigid Comprehension and necessary Boolean Completeness.",
+      "scope": "Pure C; both initial premises unboxed; comprehension covers every admitted finite argument tuple, including individual and mixed tuples. BF is concluded only for relational types, not e.",
+      "lean_status": "Exact full schema checked; legacy-format evidence retained",
+      "declarations": [
+        "Classicism.Meta.Research.ModalPropagation.all_four"
+      ],
+      "lean_sources": [
+        "topics/classicism/lean/Classicism/Results/Research/ModalPropagationSchemas.lean"
+      ],
+      "proofs": [
+        "research/2026-10-22/strong-leibniz-rigid-bottom-cut.md",
+        "research/2026-10-22/followup/modal-propagation.md"
+      ],
+      "manifests": [
+        "research/2026-10-22/lean-formalization/checks/20261023T030134260568Z.json"
+      ],
+      "evidence": [
+        "research/2026-10-22/lean-formalization/logs/runs/20261023T030134260568Z/ModalPropagationAxioms.log",
+        "research/2026-10-22/lean-formalization/significant-results.json"
+      ],
+      "notes": "The coordinating technical review reported matching historical recursive fingerprints. This legacy manifest lacks the later per-file source map; the release does not pretend to have recomputed its entire historical fingerprint or rerun Lean.",
+      "significance": "Two local hypotheses force several necessary principles. The result explains a substantial cluster of arrows in the map instead of treating each arrow separately.",
+      "mathematical_status": "Proofs or constructions supplied, with the stated scope and limitations; no literature-novelty claim."
+    },
+    {
+      "id": "RIGIDITY-ND-BC",
+      "title": "Four rigidity principles coincide over local ND and Boolean Completeness",
+      "statement": "Over C + unboxed ND + Boolean Completeness, Inextensible Comprehension, Rigid Comprehension, Tame Rigidity and Weakly Rigid Power are equivalent as full all-type schemas.",
+      "scope": "The equivalence uses the full relational type hierarchy; the route to Weakly Rigid Power uses a higher property type. The premises are local, not boxed.",
+      "significance": "Several seemingly different additions to this base express one strength. Combined with the old/new model, this identifies a real extra requirement rather than something already implied by ND + BC.",
+      "registry_ids": [
+        "rigidity.10"
+      ],
+      "proofs": [
+        "research/2026-10-22/notes/nd-inextensible-comprehension-implies-weak-power.md",
+        "research/2026-10-22/notes/old-new-boolean-completeness-and-rigidity-separation.md"
+      ],
+      "proof_locators": [
+        "“Exact classification over ND + BC”; corrected old/new separation"
+      ],
+      "notes": "This does not settle whether full Tame Rigidity + Rigid Power implies Weakly Rigid Power without the stated additional assumptions.",
+      "lean_status": "Exact full-schema equivalences checked",
+      "lean_sources": [
+        "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchSchemas.lean",
+        "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchClassification.lean"
+      ],
+      "declarations": [
+        "Classicism.Meta.Research.RigidityClosure.ic_rc_equivalent",
+        "Classicism.Meta.Research.RigidityClosure.tame_rc_equivalent",
+        "Classicism.Meta.Research.RigidityClosure.weak_power_rc_equivalent"
+      ],
+      "manifests": [
+        "research/2026-10-22/lean-formalization/checks/20261023T044252100669Z-9b8e2beb.json"
+      ],
+      "evidence": [
+        "research/2026-10-22/lean-formalization/verification-updates/local_rigidity_closure_replacement.json"
+      ],
+      "mathematical_status": "Ordinary proof supplied in the cited sources, subject to the stated assumptions; no literature-novelty claim."
+    },
+    {
+      "id": "RIGIDITY-CLASSIFICATIONS",
+      "registry_ids": [
+        "rigidity.02",
+        "rigidity.08",
+        "rigidity.11",
+        "rigidity.12"
+      ],
+      "title": "Rigidity has exact power, uniformization and algebraic descriptions",
+      "statement": "Atomicity + Rigid Comprehension implies Weakly Rigid Power. Full Weakly Rigid Power is equivalent to Tame Rigidity + Rigid Power + bounded future-tameness. Uniform weak/rigid comprehension is equivalent to local ND plus the corresponding weak/rigid comprehension schema.",
+      "scope": "Pure C, full schemas with nullary and finite-tuple cases. Bounded future-tameness says every future weakly rigid subrelation of an actual rigid bound is rigid. The WRP-to-RP route uses the next property type.",
+      "lean_status": "Exact full schemas and stated fragment/retraction certificates checked",
+      "declarations": [
+        "Classicism.Meta.Research.RigidityClosure.atomicity_rc_weak_power",
+        "Classicism.Meta.Research.RigidityClosure.weak_power_decomposition_equivalent",
+        "Classicism.Meta.Research.RigidityClosure.uniform_weak_equivalent",
+        "Classicism.Meta.Research.RigidityClosure.uniform_rigid_equivalent"
+      ],
+      "lean_sources": [
+        "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchContinuationSchemas.lean",
+        "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchBounded.lean"
+      ],
+      "proofs": [
+        "research/2026-10-22/notes/maximalism-modal.md",
+        "research/2026-10-22/notes/rigidity-by-joins-and-boolean-closure.md"
+      ],
+      "manifests": [
+        "research/2026-10-22/lean-formalization/checks/20261023T044252100669Z-9b8e2beb.json"
+      ],
+      "evidence": [
+        "research/2026-10-22/lean-formalization/verification-updates/local_rigidity_closure_replacement.json"
+      ],
+      "notes": "The final four schema reports list propext/Quot.sound. Current normalizer laws are not automatically boxed laws about all future inputs. Full TR + RP alone implying WRP remains distinct.",
+      "significance": "The decomposition identifies bounded future-tameness as the missing ingredient in a tempting identification of Weakly Rigid Power with Tame Rigidity plus Rigid Power.",
+      "mathematical_status": "Proofs or constructions supplied, with the stated scope and limitations; no literature-novelty claim."
+    },
+    {
+      "id": "OLDNEW-SEPARATION",
+      "registry_ids": [
+        "rigidity.31"
+      ],
+      "title": "Local ND and Boolean Completeness do not give Rigid Comprehension",
+      "statement": "A concrete model satisfies full local ND and full relational Boolean Completeness, but fails Inextensible Comprehension and Rigid Comprehension at et, Tame Rigidity, and boxed Boolean Completeness at et. BC at et also fails at each specified accessible E-to-O evaluation.",
+      "scope": "Pure C; ND and BC are unboxed. The complete declaration uses the original old/new construction. No boxed-Rigid-Power or signature-extension verdict is inferred from it.",
+      "lean_status": "Complete displayed countermodel checked",
+      "declarations": [
+        "Classicism.Meta.Intensional.OldNew.complete_countermodel",
+        "Classicism.Meta.Intensional.OldNew.background_consistent",
+        "Classicism.Meta.Intensional.OldNew.not_entails_rc",
+        "Classicism.Meta.Intensional.OldNew.not_entails_tame",
+        "Classicism.Meta.Intensional.OldNew.not_entails_box_bc"
+      ],
+      "lean_sources": [
+        "topics/classicism/lean/Classicism/Models/OldNewComplete.lean",
+        "topics/classicism/lean/Classicism/Models/OldNewSeparation.lean"
+      ],
+      "proofs": [
+        "research/2026-10-22/notes/old-new-boolean-completeness-and-rigidity-separation.md",
+        "research/2026-10-22/notes/old-new-boolean-completeness-source-caveat.md"
+      ],
+      "manifests": [
+        "research/2026-10-22/lean-formalization/checks/20261023T045855511121Z-2911dd87.json"
+      ],
+      "evidence": [
+        "research/2026-10-22/lean-formalization/verification-updates/hierarchy_oldnew_colourcollapse.json"
+      ],
+      "notes": "The earlier claim that BC failed at E used an inadmissible external even-haecceity family. Its correction must accompany any database integration. The broader assembly is now checked, superseding its earlier failed attempt.",
+      "significance": "Completeness and local stability of identity still leave a genuine rigidity gap. The corrected model supplies the lower side of the four-way equivalence over ND + BC.",
+      "mathematical_status": "Proofs or constructions supplied, with the stated scope and limitations; no literature-novelty claim."
+    },
+    {
+      "id": "COUNTABLE-BOOLEAN-FINITENESS",
+      "title": "Internal countability plus countable completeness forces finiteness",
+      "statement": "In bare C, an internally countable relational Boolean type is countably complete iff it is internally Frege-finite. Consequently internal countability plus the matching Countable Boolean Completeness implies Actuality.",
+      "scope": "Countability is relative to a specified admitted counting base. No Choice, Infinity, BF, ND or Plenitude premise is required. Internal finiteness does not imply external finiteness.",
+      "significance": "Countable completeness is unexpectedly strong on an internally countable whole Boolean type. It also gives a route to Actuality without the usual selection assumptions.",
+      "registry_ids": [
+        "rigidity.20"
+      ],
+      "proofs": [
+        "research/2026-10-22/notes/quotient-abstraction-lane.md"
+      ],
+      "proof_locators": [
+        "§§21–21.3"
+      ],
+      "notes": "Countability must remain a premise: without arithmetic noncollapse at the counting base, a finite Boolean type can have too many elements for the available numerical labels. The unrestricted converse from finiteness to countability is false.",
+      "lean_status": "Ordinary proof supplied; complete theorem not Lean-certified",
+      "lean_sources": [],
+      "declarations": [],
+      "manifests": [],
+      "evidence": [],
+      "mathematical_status": "Ordinary proof supplied in the cited sources, subject to the stated assumptions; no literature-novelty claim."
     },
     {
       "id": "LOGICAL-NECESSITY-SEPARATION",
@@ -222,7 +592,9 @@
       "evidence": [
         "research/2026-10-22/lean-formalization/verification-updates/modal_central_negative_models.json"
       ],
-      "notes": "Exact boxed Tame Rigidity, internal Countable BC, the separate full-BC symmetric-surjection construction, arbitrary-signature extension and moving-individual Infinity variants retain separate obligations."
+      "notes": "Exact boxed Tame Rigidity, internal Countable BC, the separate full-BC symmetric-surjection construction, arbitrary-signature extension and moving-individual Infinity variants retain separate obligations.",
+      "significance": "Strong selection and modal laws can coexist with failure of Actuality. Logical Necessity therefore does not supply the actual-world structure by itself.",
+      "mathematical_status": "Proofs or constructions supplied, with the stated scope and limitations; no literature-novelty claim."
     },
     {
       "id": "SIGNATURE-INDEPENDENCE",
@@ -250,42 +622,9 @@
       "evidence": [
         "research/2026-10-22/lean-formalization/verification-updates/model_foundations_signature_nominal.json"
       ],
-      "notes": "Twelve applications reuse two models; they are not twelve unrelated constructions. Completion of these certificates does not certify the separate nominal-world classifications."
-    },
-    {
-      "id": "ARITHMETIC-FOUNDATIONS",
-      "registry_ids": [
-        "principles.01",
-        "principles.02",
-        "R04",
-        "model_interpretation.01"
-      ],
-      "title": "Frege number structure and transfer can be separated from stronger model claims",
-      "statement": "The cited certificates establish the exact successor-noncollapse/bottom-number equivalences, finite-versus-Dedekind-infinite number-field results, and specified number-map/Hume-class and C5-Actuality transfer results.",
-      "scope": "Internal Frege finite cardinalities at the source's admitted counting types. Domain Infinity, arithmetic noncollapse, the finite-numeral schema and external standardness are different conditions.",
-      "lean_status": "Named foundations checked; complete interpretation/conservativity only partly formalized",
-      "declarations": [
-        "Classicism.Research.FregeNoncollapse.noncollapse_iff_bottom_not_number.derivable",
-        "Classicism.Research.FregeNoncollapse.arithmeticI_iff_istar.derivable",
-        "Classicism.Research.FregeNoncollapse.finite_numbers_iff_bottom_number.derivable",
-        "Classicism.Research.FregeNoncollapse.infinite_numbers_iff_dedekind.derivable"
-      ],
-      "lean_sources": [
-        "topics/classicism/lean/Classicism/Results/Research/FregeNoncollapseCertificates.lean",
-        "topics/classicism/lean/Classicism/Results/Research/C5ActualityNumbersCertificates.lean",
-        "topics/classicism/lean/Classicism/Results/Research/FregeHumeClassesCertificates.lean"
-      ],
-      "proofs": [
-        "research/2026-10-22/notes/frege-infinity-20261022-1726.md",
-        "research/2026-10-22/proof-refinements/infinity-core-number-isomorphism.md"
-      ],
-      "manifests": [
-        "research/2026-10-22/lean-formalization/checks/20261023T052411006203Z-90a4d7dd.json"
-      ],
-      "evidence": [
-        "research/2026-10-22/lean-formalization/verification-updates/infinity_arithmetic_profiles.json"
-      ],
-      "notes": "External syntax induction/reflection is not an object-C derivation builder or arbitrary-intensional-model truth lemma. The broad first-order arithmetic conservativity and effective-degree classifications are not marked fully formalized here."
+      "notes": "Twelve applications reuse two models; they are not twelve unrelated constructions. Completion of these certificates does not certify the separate nominal-world classifications.",
+      "significance": "Concrete interpretations answer several central signature questions while showing why a result for one specified language must not be promoted to every signature.",
+      "mathematical_status": "Proofs or constructions supplied, with the stated scope and limitations; no literature-novelty claim."
     },
     {
       "id": "EVALUATORS-CORES",
@@ -325,119 +664,46 @@
       "evidence": [
         "research/2026-10-22/lean-formalization/verification-updates/world_actuality_gallin.json"
       ],
-      "notes": "The full arbitrary-Henkin truth induction, Gallin comparison and every strictness countermodel are separate from the checked kernels."
+      "notes": "The full arbitrary-Henkin truth induction, Gallin comparison and every strictness countermodel are separate from the checked kernels.",
+      "significance": "An evaluator correct now, one correct at a selected world, and one fixed evaluator necessarily correct are different demands. The hierarchy explains why apparently similar definitions of evaluation have different strength.",
+      "mathematical_status": "Proofs or constructions supplied, with the stated scope and limitations; no literature-novelty claim."
     },
     {
-      "id": "SP-CRITERIA",
+      "id": "ARITHMETIC-FOUNDATIONS",
       "registry_ids": [
-        "sp_supplement.01",
-        "sp_supplement.02",
-        "F13",
-        "F14",
-        "F15"
+        "principles.01",
+        "principles.02",
+        "R04",
+        "model_interpretation.01"
       ],
-      "title": "Strong Possibility reflection and algebraic criteria",
-      "statement": "Twelve SP/Max modules establish their stated conditional reflection, universal-core, disjunction/conservativity, Boolean-algebra and computability results. Their exact statements are collected in the corrected prose proof summary.",
-      "scope": "Disjunction/conservativity equivalences retain Con(Max). UniversalCore allows arbitrary typed terms, including quantified terms inside identities; it is not a quantifier-free arithmetic hierarchy theorem. InfinitaryNumerals explicitly enlarges the syntax.",
-      "lean_status": "Twelve-module verification package complete; wider SP research remains partial",
+      "title": "Frege number structure and transfer can be separated from stronger model claims",
+      "statement": "The cited certificates establish the exact successor-noncollapse/bottom-number equivalences, finite-versus-Dedekind-infinite number-field results, and specified number-map/Hume-class and C5-Actuality transfer results.",
+      "scope": "Internal Frege finite cardinalities at the source's admitted counting types. Domain Infinity, arithmetic noncollapse, the finite-numeral schema and external standardness are different conditions.",
+      "lean_status": "Named foundations checked; complete interpretation/conservativity only partly formalized",
       "declarations": [
-        "Classicism.Meta.Research.StrongPossibilityConsequences.UniversalCore.sp_consistent_iff_universal_core",
-        "Classicism.Meta.Research.StrongPossibilityConsequences.MaxConservativity.identity_conservative_iff_max_consistent"
+        "Classicism.Research.FregeNoncollapse.noncollapse_iff_bottom_not_number.derivable",
+        "Classicism.Research.FregeNoncollapse.arithmeticI_iff_istar.derivable",
+        "Classicism.Research.FregeNoncollapse.finite_numbers_iff_bottom_number.derivable",
+        "Classicism.Research.FregeNoncollapse.infinite_numbers_iff_dedekind.derivable"
       ],
       "lean_sources": [
-        "research/2026-10-22/lean-formalization/StrongPossibilityConsequencesUniversalCore.lean",
-        "research/2026-10-22/lean-formalization/StrongPossibilityConsequencesMaxConservativity.lean"
+        "topics/classicism/lean/Classicism/Results/Research/FregeNoncollapseCertificates.lean",
+        "topics/classicism/lean/Classicism/Results/Research/C5ActualityNumbersCertificates.lean",
+        "topics/classicism/lean/Classicism/Results/Research/FregeHumeClassesCertificates.lean"
       ],
       "proofs": [
-        "research/2026-10-22/lean-formalization/sp-verification/proof-summary.md",
-        "research/2026-10-22/notes/reflection-universal-core-20261022.md"
+        "research/2026-10-22/notes/frege-infinity-20261022-1726.md",
+        "research/2026-10-22/proof-refinements/infinity-core-number-isomorphism.md"
       ],
       "manifests": [
-        "research/2026-10-22/lean-formalization/checks/20261023T044759304508Z-f503b46f.json",
-        "research/2026-10-22/lean-formalization/sp-universal-verification/checks/20261023T044336274999Z-6b5c1cb4.json"
+        "research/2026-10-22/lean-formalization/checks/20261023T052411006203Z-90a4d7dd.json"
       ],
       "evidence": [
-        "research/2026-10-22/lean-formalization/sp-verification/verification-status.json",
-        "research/2026-10-22/lean-formalization/sp-verification/verification-status.md"
+        "research/2026-10-22/lean-formalization/verification-updates/infinity_arithmetic_profiles.json"
       ],
-      "notes": "No SP consistency proof is supplied. The shallow reflected_neg_box intentionally uses Classicism.em; its translated C proof is separately audited. Module counts do not count independent research results."
-    },
-    {
-      "id": "CHOICE-NO-FINITE-BASIS",
-      "registry_ids": [
-        "F09"
-      ],
-      "title": "Full necessary Functional Choice has no finite fixed-type basis",
-      "statement": "The ordinary proof reports that full boxed Functional Choice cannot be axiomatized over C by finitely many fixed-type closed formulas; it gives strict cofinal and bounded-type-order refinements.",
-      "scope": "Original relational grammar and ordinary ZFC metatheory, using symmetric forcing and ground Henkin extraction. This does not rule out a finite number of unbounded type schemata.",
-      "lean_status": "Positive hierarchy and support lemmas checked; negative main theorem not fully formalized",
-      "declarations": [],
-      "lean_sources": [
-        "topics/classicism/lean/Classicism/Models/ChoiceFreshColumns.lean"
-      ],
-      "proofs": [
-        "research/2026-10-22/followup/finite-functional-choice.md",
-        "research/2026-10-22/lean-formalization/finite-choice-negative-audit.md"
-      ],
-      "manifests": [],
-      "evidence": [
-        "research/2026-10-22/lean-formalization/verification-updates/hierarchy_oldnew_colourcollapse.json"
-      ],
-      "notes": "The surviving ordinary proof has an author audit, not a complete independent Lean certificate. Do not replace the missing forcing/extraction construction by an assumed finite-fragment-gap premise."
-    },
-    {
-      "id": "PROBABILITY",
-      "registry_ids": [
-        "choice.18",
-        "choice.19",
-        "R02",
-        "R05",
-        "R06",
-        "R07",
-        "R09"
-      ],
-      "title": "Faithful probability has an exact finite-fibre condition and type ceiling",
-      "statement": "Over C + necessary Plenitude + quantified Infinity_e, the ordinary proofs equate faithful probability with admitted finite-fibre numerical labelling of world atoms. Countable Choice for finite fields upgrades this to internal countability. Higher-type probability has a finiteness obstruction.",
-      "scope": "Internal Dedekind reals and represented families. The weaker local version uses Actuality + Atomicity_t + BC_t + Infinity_e and graph-valued probabilities in the current core; it need not supply an ambient operation or future-stable real codes.",
-      "lean_status": "Arithmetic/real/finite-family components checked; main probability equivalences incomplete",
-      "declarations": [],
-      "lean_sources": [],
-      "proofs": [
-        "research/2026-10-22/proof-refinements/choice-free-faithful-probability.md",
-        "research/2026-10-22/proof-refinements/choice-free-probability-type-ceiling.md",
-        "research/2026-10-22/proof-refinements/local-propositional-probability.md"
-      ],
-      "manifests": [],
-      "evidence": [
-        "research/2026-10-22/lean-formalization/verification-updates/probability_internal_constructions.json"
-      ],
-      "notes": "Real multiplication/positive normalization and the full threshold/finite-fibre/interpretation bridges remain. A countably additive replacement exists in the ordinary proof; the original finite-additive state is not thereby shown countably additive."
-    },
-    {
-      "id": "PROFILE-WORLD-ALGEBRA",
-      "registry_ids": [
-        "world_algebra.01",
-        "world_algebra.05",
-        "world_algebra.12",
-        "world_algebra.25"
-      ],
-      "title": "Profile Realization and the Boolean structure of worlds",
-      "statement": "The ordinary notes give world-indexed representations over necessary Plenitude, consistent individual profile-realization strengthenings, relational-input diagonal obstructions, and nominal examples with all finite supported richness ranks but without Functional Choice.",
-      "scope": "Admitted internal fields; original rigid/possible PR and raw world representation are identified only under the stated background. Supported finite-rank richness is not unrestricted realization at relational input types, nor a quantified Infinity axiom.",
-      "lean_status": "Supporting sources and finite/arithmetic kernels; full classifications and models not certified",
-      "declarations": [],
-      "lean_sources": [],
-      "proofs": [
-        "research/2026-10-22/notes/world-cardinality-ucp-20261022.md",
-        "research/2026-10-22/notes/structural-world-representation.md",
-        "research/2026-10-22/notes/structural-algebraic-core.md"
-      ],
-      "manifests": [],
-      "evidence": [
-        "research/2026-10-22/lean-formalization/coverage-and-ownership.json",
-        "research/2026-10-22/lean-formalization/verification-updates/world_actuality_gallin.json"
-      ],
-      "notes": "PR is a research proposal, distinct from the original Actual Profile principle. B + individual quantified Infinity + PR yields the remaining Infinity instances in the ordinary arguments; PR does not itself supply Functional Choice."
+      "notes": "External syntax induction/reflection is not an object-C derivation builder or arbitrary-intensional-model truth lemma. The broad first-order arithmetic conservativity and effective-degree classifications are not marked fully formalized here.",
+      "significance": "Arithmetic noncollapse, quantified domain Infinity, and an infinity schema are different resources. The transfer theorems specify what survives changes of counting base or passage to a core.",
+      "mathematical_status": "Proofs or constructions supplied, with the stated scope and limitations; no literature-novelty claim."
     },
     {
       "id": "ARITHMETIC-COMPARISON",
@@ -465,7 +731,67 @@
         "research/2026-10-22/lean-formalization/verification-updates/infinity_arithmetic_profiles.json",
         "research/2026-10-22/lean-formalization/verification-updates/strong_possibility.json"
       ],
-      "notes": "Existing source claims are collected, not newly independently adjudicated. Literature novelty and the exact external-theorem locators remain separate review items."
+      "notes": "Existing source claims are collected, not newly independently adjudicated. Literature novelty and the exact external-theorem locators remain separate review items.",
+      "significance": "The comparison distinguishes agreement in first-order arithmetic from agreement about represented operations, modal structure, or the information needed to specify a model.",
+      "mathematical_status": "Proofs or constructions supplied, with the stated scope and limitations; no literature-novelty claim."
+    },
+    {
+      "id": "PROBABILITY",
+      "registry_ids": [
+        "choice.18",
+        "choice.19",
+        "R02",
+        "R05",
+        "R06",
+        "R07",
+        "R09"
+      ],
+      "title": "Faithful probability has an exact finite-fibre condition and type ceiling",
+      "statement": "Over C + necessary Plenitude + quantified Infinity_e, the ordinary proofs equate faithful probability with admitted finite-fibre numerical labelling of world atoms. Countable Choice for finite fields upgrades this to internal countability. Higher-type probability has a finiteness obstruction.",
+      "scope": "Internal Dedekind reals and represented families. The weaker local version uses Actuality + Atomicity_t + BC_t + Infinity_e and graph-valued probabilities in the current core; it need not supply an ambient operation or future-stable real codes.",
+      "lean_status": "Arithmetic/real/finite-family components checked; main probability equivalences incomplete",
+      "declarations": [],
+      "lean_sources": [],
+      "proofs": [
+        "research/2026-10-22/proof-refinements/choice-free-faithful-probability.md",
+        "research/2026-10-22/proof-refinements/choice-free-probability-type-ceiling.md",
+        "research/2026-10-22/proof-refinements/local-propositional-probability.md"
+      ],
+      "manifests": [],
+      "evidence": [
+        "research/2026-10-22/lean-formalization/verification-updates/probability_internal_constructions.json"
+      ],
+      "notes": "Real multiplication/positive normalization and the full threshold/finite-fibre/interpretation bridges remain. A countably additive replacement exists in the ordinary proof; the original finite-additive state is not thereby shown countably additive.",
+      "significance": "Faithful probability is controlled by internal world size, with an exact weaker labelling condition before Choice is added. The obstruction becomes stronger as the event type rises.",
+      "mathematical_status": "Proofs or constructions supplied, with the stated scope and limitations; no literature-novelty claim."
+    },
+    {
+      "id": "PROFILE-WORLD-ALGEBRA",
+      "registry_ids": [
+        "world_algebra.01",
+        "world_algebra.05",
+        "world_algebra.12",
+        "world_algebra.25"
+      ],
+      "title": "Profile Realization and the Boolean structure of worlds",
+      "statement": "The ordinary notes give world-indexed representations over necessary Plenitude, consistent individual profile-realization strengthenings, relational-input diagonal obstructions, and nominal examples with all finite supported richness ranks but without Functional Choice.",
+      "scope": "Admitted internal fields; original rigid/possible PR and raw world representation are identified only under the stated background. Supported finite-rank richness is not unrestricted realization at relational input types, nor a quantified Infinity axiom.",
+      "lean_status": "Supporting sources and finite/arithmetic kernels; full classifications and models not certified",
+      "declarations": [],
+      "lean_sources": [],
+      "proofs": [
+        "research/2026-10-22/notes/world-cardinality-ucp-20261022.md",
+        "research/2026-10-22/notes/structural-world-representation.md",
+        "research/2026-10-22/notes/structural-algebraic-core.md"
+      ],
+      "manifests": [],
+      "evidence": [
+        "research/2026-10-22/lean-formalization/verification-updates/world_actuality_gallin.json"
+      ],
+      "notes": "PR is a research proposal, distinct from the original Actual Profile principle. B + individual quantified Infinity + PR yields the remaining Infinity instances in the ordinary arguments; PR does not itself supply Functional Choice.",
+      "significance": "World richness and Choice are separate dimensions of strength. Individual-profile realization can coexist with failure of Functional Choice, while unrestricted relational-input realization hits a diagonal obstruction.",
+      "mathematical_status": "Proofs or constructions supplied, with the stated scope and limitations; no literature-novelty claim."
     }
-  ]
+  ],
+  "editorial_revision": "2026-10-23; expanded from 15 themes to 26 explicit result entries; this is not a claim of 26 disjoint new theorems."
 }

@@ -20,7 +20,7 @@ checked; no model-existence assumption substitutes for the construction.
 
 - Main model/package audit: [`20261023T054410104697Z-48120445.json`](checks/20261023T054410104697Z-48120445.json), exit 0, 89 local modules.
 - Vicinity audit: [`20261023T054809252922Z-5177013d.json`](checks/20261023T054809252922Z-5177013d.json), exit 0, 90 local modules.
-- Coordinate factorization and external countable-join audit: successful subtargets of [`20261023T054120203114Z-4a90260b.json`](checks/20261023T054120203114Z-4a90260b.json).
+- Coordinate factorization and external countable-join audit: successful subtargets of [`20261023T054120203114Z-4a90260b.json`](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1).
 
 Public axiom reports contain only `propext`, `Classical.choice`, and
 `Quot.sound`; the general extension-profile and extensional-fullness lemmas

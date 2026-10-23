@@ -1,7 +1,0 @@
-Classicism/Results/Research/ActualityCoreArithmetic.lean:73:47: error: invalid `▸` notation, expected result type of cast is 
-  (fun i j => R (numberMap w i) (numberMap w j)) i j
-however, the equality 
-  Eq.symm hje
-of type 
-  y = numberMap w j
-does not contain the expected result type on either the left or the right hand side

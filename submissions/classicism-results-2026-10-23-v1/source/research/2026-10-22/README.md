@@ -1,14 +1,14 @@
 # Classicism research, 22 October 2026
 
-For the evolving collection of results, prose proofs, Lean sources and contribution summaries, start with the [research collection](consolidation/README.md). The overview below preserves the original research summary; the collection links the subsequent formalization status and corrections.
+For the evolving collection of results, prose proofs, Lean sources and contribution summaries, start with the [research collection](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1). The overview below preserves the original research summary; the collection links the subsequent formalization status and corrections.
 
 This directory contains ordinary mathematical proofs and model constructions developed during the research session. The database and its published or human-authored proofs have not been changed. Several main arguments received independent checks by other research agents; none is labelled human-checked or Lean-verified. “New” here means a new argument or formulation in this session, not verified novelty in the literature.
 
 For a broader statement-by-statement overview, use the [consolidated result catalog](RESULT-CATALOG.md).
 
-The subsequent [counting audit and summary index](COUNT-AUDIT.md) identifies 134 distinct result families under conservative grouping and links the saved summaries from all eight research chats.
+The subsequent [counting audit and summary index](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) identifies 134 distinct result families under conservative grouping and links the saved summaries from all eight research chats.
 
-For the explanation and synthesis chat, start with the [synthesis handoff](SYNTHESIS-HANDOFF.md), which adds the latest conjecture accounting, reading order, and corrections to preserve.
+For the explanation and synthesis chat, start with the [synthesis handoff](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1), which adds the latest conjecture accounting, reading order, and corrections to preserve.
 
 The fixed framework is C in the database's relational type system. Write **B = C + □Plenitude = C5 + Atomicity** and **F = C + □Functional Choice**. C5 includes necessary distinctness, not merely current ND. Relational Choice and Rigid Comprehension are different principles; the notes sometimes abbreviate both as RC, so consult each note's definitions.
 

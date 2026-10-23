@@ -71,19 +71,19 @@ fresh passes:
 
 | Main certificate | Checked scope | Evidence |
 |---|---|---|
-| `FregeFiniteSetsCertificates` | Finite fibres, separating families, Infinity realization, finite self-injection surjectivity; full source/gate/type/translated-C audit | [Manifest](checks/20261023T043014649782Z-ffe74996.json) |
-| `FregeNoncollapseCertificates` | Bottom criterion, possible-realization criterion, `ArithmeticI ↔ IStar`, finite/Dedekind-infinite number-field dichotomy; full source/gate/type/translated-C audit | [Manifest](checks/20261023T044223622850Z-528e6bf0.json) |
-| `CrossBaseArithmeticCertificates` | Canonical synchronized graph bijection and addition/multiplication transfer under both noncollapse premises; full C derivations | [Manifest](checks/20261023T045108444380Z-b3474a59.json) |
-| `FregeArithmeticVocabularyCertificates` | Exact transfer for the existing Sum/Prod definitions on internal numbers; full C derivations | [Manifest](checks/20261023T045108444380Z-b3474a59.json) |
-| `C5FregeCertificates` | Realization-or-bottom, numerical extensionality, actual Infinity iff ArithmeticI, and finite base iff finite numerical field under boxed ND at propositions; full C derivations | [Manifest](checks/20261023T051905510453Z-639b9e47.json) |
+| `FregeFiniteSetsCertificates` | Finite fibres, separating families, Infinity realization, finite self-injection surjectivity; full source/gate/type/translated-C audit | [Manifest](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) |
+| `FregeNoncollapseCertificates` | Bottom criterion, possible-realization criterion, `ArithmeticI ↔ IStar`, finite/Dedekind-infinite number-field dichotomy; full source/gate/type/translated-C audit | [Manifest](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) |
+| `CrossBaseArithmeticCertificates` | Canonical synchronized graph bijection and addition/multiplication transfer under both noncollapse premises; full C derivations | [Manifest](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) |
+| `FregeArithmeticVocabularyCertificates` | Exact transfer for the existing Sum/Prod definitions on internal numbers; full C derivations | [Manifest](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) |
+| `C5FregeCertificates` | Realization-or-bottom, numerical extensionality, actual Infinity iff ArithmeticI, and finite base iff finite numerical field under boxed ND at propositions; full C derivations | [Manifest](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) |
 | `C5ActualityNumbersCertificates` | Concrete Actuality number-map bijection and arithmetic/order reflection under C5, including finite bases; full C derivations | [Manifest](checks/20261023T052411006203Z-90a4d7dd.json) |
 | `FregeHumeClassesCertificates` | Finite count iff equinumerosity and literal Hume-class/Frege-number identity under C5 for persistent finite properties; full C derivations | [Manifest](checks/20261023T052411006203Z-90a4d7dd.json) |
 
 `CrossBaseFirstOrderChecks` also passed as ordinary syntax metatheory in
-[its manifest](checks/20261023T045914763270Z-feef3c75.json). It does not build
+[its manifest](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1). It does not build
 a C derivation uniformly for every formula code. The later quotation target
 in that batch failed initially; its repaired module subsequently passed
-[exact conversion and reflection](checks/20261023T050602611952Z-deea884a.json).
+[exact conversion and reflection](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1).
 
 The printed principal `.derivable` proofs use only `propext` and `Quot.sound`
 in Lean's metatheory; the translated conclusions are C derivations. This is
@@ -95,7 +95,7 @@ cardinality witnesses; no premise was added.
 The generated-algebra emitter now regenerates both checked-in source and
 certificate driver exactly, including dependency-certificate imports. The
 three-sort source compiled, but its full translated-C driver timed out
-after 180 seconds in [this manifest](checks/20261023T051905510453Z-639b9e47.json).
+after 180 seconds in [this manifest](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1).
 The Python reproducibility and source-compilation passes do not supply that
 certificate; a bounded split of its translation driver is the next check step.
 `FregeArithmeticQuotation` now verifies the exact-I syntax conversion. Its
@@ -103,7 +103,7 @@ conversion proof uses only `propext` and `Quot.sound`; its standard-denotation
 reflection additionally uses existing `Classical.choice` and the type constant
 `Classicism.e`, as ordinary metatheory. `FregeArithmeticReflection` now passes
 for terms, all formulas and sentences
-([manifest](checks/20261023T051905510453Z-639b9e47.json)). It uses standard
+([manifest](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1)). It uses standard
 Prop-valued denotation and does not constitute an interpretation in arbitrary intensional models or a C-derivation builder.
 
 Outstanding main obligations include universal all-signature interpretation,

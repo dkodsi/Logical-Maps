@@ -14,7 +14,7 @@ When an existing argument exposes a genuinely unresolved mathematical step, pres
 
 Each owner should finish a coherent delivery handoff: exact statements and scope, full prose-proof links, principal Lean declarations, matching check and axiom evidence, reproduction instructions, corrections, and a concise account of the contribution. The priority is the existing main results and their complete evidence, followed by consolidation. Historical next-action text below is subordinate to this scope. The shared global compiler lock and current edit ownership remain in force.
 
-Each proof family has an author who also owns its diagnostics, repairs and verification loop. The [current queue](verification-queue.json) identifies the exact source scope, next target, evidence and unresolved mathematics. The core integrator owns shared infrastructure, dependency maintenance and final cross-family audits. A completed source submission is no longer a reason for its author to wait indefinitely.
+Each proof family has an author who also owns its diagnostics, repairs and verification loop. The [current queue](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) identifies the exact source scope, next target, evidence and unresolved mathematics. The core integrator owns shared infrastructure, dependency maintenance and final cross-family audits. A completed source submission is no longer a reason for its author to wait indefinitely.
 
 ## One compiler slot
 

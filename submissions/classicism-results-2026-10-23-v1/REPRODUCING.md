@@ -2,7 +2,7 @@
 
 ## 1. Check the delivered bytes
 
-Run `python3 verify_package.py`. Python's standard library is sufficient. This hashes the delivered files and does not execute Lean or any archived script. The adjacent `.zip.sha256` file supplies the outer archive hash.
+Run `python3 verify_package.py`. Python's standard library is sufficient. This hashes the delivered files and does not execute Lean or any archived script. The original release's `.zip.sha256` asset supplies its outer archive hash. This trimmed Git view has a separate SHA256SUMS inventory; omitted diagnostics and duplicate snapshots are indexed in ARCHIVED-ARTIFACTS.json.
 
 ## 2. Prerequisites
 

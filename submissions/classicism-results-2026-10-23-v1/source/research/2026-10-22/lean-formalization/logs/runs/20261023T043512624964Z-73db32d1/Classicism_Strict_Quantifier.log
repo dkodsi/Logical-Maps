@@ -1,6 +1,0 @@
-Classicism/Strict/Quantifier.lean:140:0: warning: automatically included section variable(s) unused in theorem `Classicism.Strict.lam_iff_self_top`:
-  [Ty σ]
-consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
-  omit [Ty σ] in theorem ...
-
-Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

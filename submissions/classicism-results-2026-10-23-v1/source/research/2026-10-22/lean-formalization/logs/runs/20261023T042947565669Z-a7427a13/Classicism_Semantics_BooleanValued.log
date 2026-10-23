@@ -1,2 +1,0 @@
-Classicism/Semantics/BooleanValued.lean:1:0: error: Could not find native implementation of external declaration 'Lean.registerNameMapAttribute._redArg' (symbols 'lp_batteries_Lean_registerNameMapAttribute___redArg___boxed' or 'lp_batteries_Lean_registerNameMapAttribute___redArg').
-For declarations from `Init`, `Std`, or `Lean`, you need to set `supportInterpreter := true` in the relevant `lean_exe` statement in your `lakefile.lean`.

@@ -72,19 +72,19 @@ Full-schema declarations have prefix `Classicism.Meta.Research.Splitting`.
 
 | Scope | Principal declaration | Successful manifest |
 | --- | --- | --- |
-| Strong retraction construction and arbitrary relational output | `necessary_injection_splitting.listRule`, `necessary_injection_iff_retraction.derivable` and separate `_t` theorem | [044838](checks/20261023T044838756253Z-50e18a7f.json) |
-| C5 gives strong retractions | `c5_strong_retractions.listRule` | [044838](checks/20261023T044838756253Z-50e18a7f.json) |
-| Actuality plus sections gives Choice | `actuality_sections_choice.listEntails` | [045645](checks/20261023T045645752380Z-c9bdf659.json) |
-| Actuality plus retractions gives Plenitude | `actuality_retractions_plenitude.listEntails` | [045645](checks/20261023T045645752380Z-c9bdf659.json) |
-| Full ordinary splitting characterizations | `functional_choice_equivalence`, `plenitude_equivalence` | [045645](checks/20261023T045645752380Z-c9bdf659.json) |
-| Relational BF mask, including nullary output | `relational_surjectivity_persistence_barcan.listRule` | [050342](checks/20261023T050342576754Z-30f85b43.json) |
-| Stable unique graph representation | `barcan_stable_unique_graphs.listRule`, `uniform_graph_iff_stable_witnesses.derivable` | [050342](checks/20261023T050342576754Z-30f85b43.json) |
-| Modal unique-witness collapse | `necessary_unique_witness_iff_extensionality.derivable` | [050342](checks/20261023T050342576754Z-30f85b43.json) |
-| Rigidity of sections and exact ND converse | `nd_rigid_sections.listRule`, `rigid_point_sections_iff_nd.derivable`, weak analogues | [050719](checks/20261023T050719937509Z-887ec0b6.json) |
-| Full completely boxed splitting characterizations | `necessary_choice_equivalence`, `necessary_plenitude_equivalence` | [050719](checks/20261023T050719937509Z-887ec0b6.json) |
-| Surjectivity persistence and strong sections | `persistence_surjectivity_equivalence`, `strong_sections_equivalence` | [053829](checks/20261023T053829038089Z-f7ac4f52.json) |
-| Pairing Representation iff Plenitude | `pairing_representation_equivalence` | [053829](checks/20261023T053829038089Z-f7ac4f52.json) |
-| Persistence of elementary algebraic laws | `idempotence_persistence_equivalence`, `involutivity_persistence_equivalence` | [053829](checks/20261023T053829038089Z-f7ac4f52.json) |
+| Strong retraction construction and arbitrary relational output | `necessary_injection_splitting.listRule`, `necessary_injection_iff_retraction.derivable` and separate `_t` theorem | [044838](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) |
+| C5 gives strong retractions | `c5_strong_retractions.listRule` | [044838](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) |
+| Actuality plus sections gives Choice | `actuality_sections_choice.listEntails` | [045645](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) |
+| Actuality plus retractions gives Plenitude | `actuality_retractions_plenitude.listEntails` | [045645](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) |
+| Full ordinary splitting characterizations | `functional_choice_equivalence`, `plenitude_equivalence` | [045645](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) |
+| Relational BF mask, including nullary output | `relational_surjectivity_persistence_barcan.listRule` | [050342](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) |
+| Stable unique graph representation | `barcan_stable_unique_graphs.listRule`, `uniform_graph_iff_stable_witnesses.derivable` | [050342](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) |
+| Modal unique-witness collapse | `necessary_unique_witness_iff_extensionality.derivable` | [050342](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) |
+| Rigidity of sections and exact ND converse | `nd_rigid_sections.listRule`, `rigid_point_sections_iff_nd.derivable`, weak analogues | [050719](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) |
+| Full completely boxed splitting characterizations | `necessary_choice_equivalence`, `necessary_plenitude_equivalence` | [050719](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) |
+| Surjectivity persistence and strong sections | `persistence_surjectivity_equivalence`, `strong_sections_equivalence` | [053829](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) |
+| Pairing Representation iff Plenitude | `pairing_representation_equivalence` | [053829](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) |
+| Persistence of elementary algebraic laws | `idempotence_persistence_equivalence`, `involutivity_persistence_equivalence` | [053829](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) |
 
 These manifests passed source compilation, the requested Classicism gate and
 relational-type audits, translated object-language certificates and requested
@@ -102,7 +102,7 @@ dependency closure, including the sharp Actuality theorem and JoinTruth.
 ## Final schema assemblies
 
 The four mathematical assemblies below all passed in
-[the final leaf manifest](checks/20261023T053829038089Z-f7ac4f52.json).
+[the final leaf manifest](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1).
 Its captured source closure was compared with the live files and matched.
 The separate aggregate import also passed in the final manifest linked above:
 
