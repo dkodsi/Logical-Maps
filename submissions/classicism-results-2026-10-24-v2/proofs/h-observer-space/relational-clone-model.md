@@ -8,26 +8,26 @@ There is an H model satisfying all Functionality instances and full typed materi
 
 Let
 
-$$
+```math
 D_t=\{c,d,c',d'\},\qquad A=\{c,d\},\qquad B=\{c',d'\}.
-$$
+```
 
 The true propositions are c and d'; the false propositions are d and c'. Define negation N by
 
-$$
+```math
 Nc=c',\quad Nc'=c,\qquad Nd=d',\quad Nd'=d.
-$$
+```
 
 Thus N reverses truth and is an involution. Put
 
-$$
+```math
 v=(c,d,c',d'),\qquad Nv=(c',d',c,d),
-$$
+```
 
-$$
+```math
 R_t:=A^4\cup B^4\cup\{v,Nv\}\subseteq D_t^4.
 \tag{1}
-$$
+```
 
 This four-place relation is reflexive: every constant tuple belongs to A⁴ or B⁴. Applying N coordinatewise exchanges A⁴ with B⁴ and v with Nv, so N preserves R_t.
 
@@ -37,22 +37,22 @@ Take D_e to be a singleton and R_e=D_e⁴. The relations R_σ are semantic restr
 
 At every admitted arrow type σρ, where ρ≠e, define
 
-$$
+```math
 D_{\sigma\rho}:=\{f:D_\sigma\to D_\rho:
 \forall(x_1,x_2,x_3,x_4)\in R_\sigma,
 (fx_1,fx_2,fx_3,fx_4)\in R_\rho\}.
 \tag{2}
-$$
+```
 
 For f₁,…,f₄ in this domain, define
 
-$$
+```math
 (f_1,f_2,f_3,f_4)\in R_{\sigma\rho}
 \quad\Longleftrightarrow\quad
 \forall(x_1,x_2,x_3,x_4)\in R_\sigma,
 (f_1x_1,f_2x_2,f_3x_3,f_4x_4)\in R_\rho.
 \tag{3}
-$$
+```
 
 Every R_σ is reflexive, inductively: at an arrow type, the diagonal tuple (f,f,f,f) satisfies (3) precisely because f satisfies (2). Every domain is nonempty. Given a∈D_ρ, the constant function with value a belongs to D_{σρ}, since the diagonal tuple of a belongs to R_ρ.
 
@@ -68,19 +68,19 @@ Because arrows are actual functions on the admitted domains, beta and eta hold a
 
 Interpret conjunction and disjunction by their ordinary truth conditions, returning c when the resulting condition is true and d when it is false. At every type σ, set
 
-$$
+```math
 \forall_\sigma F=
 \begin{cases}c&\text{if every }x\in D_\sigma\text{ makes }Fx\text{ true},\\
 d&\text{otherwise},\end{cases}
-$$
+```
 
 with the analogous existential interpretation, again returning c or d. Interpret equality at every type by
 
-$$
+```math
 \mathrm{Eq}_\sigma(x,y)=
 \begin{cases}c&x=y\text{ as domain elements},\\d&x\ne y.\end{cases}
 \tag{4}
-$$
+```
 
 Each displayed operation has its entire output range in A. Consequently, any four outputs form a tuple in A⁴⊆R_t. The uncurried operations preserve their product relations, and §2 supplies their curried admitted interpretations. This argument covers equality at every higher type and quantification over every admitted domain. Negation is admitted separately by its preservation of R_t in §1.
 
@@ -90,11 +90,11 @@ This verifies H directly. The rule inventory and its source-draft qualification 
 
 The fixed abbreviations have the following values. Since some propositions are false, a:=∀p p is d. Then ¬a=d', so
 
-$$
+```math
 \mathrm{Top}=a\lor\neg a=c,\qquad
 \mathrm{Bottom}=a\land\neg a=d.
 \tag{5}
-$$
+```
 
 In particular N(Top)=c'≠d=Bottom. Thus C fails: H proves the material equivalence of ¬Top and Bottom, while their proposition objects here differ.
 
@@ -102,10 +102,10 @@ In particular N(Top)=c'≠d=Bottom. Thus C fails: H proves the material equivale
 
 The admitted observer domain is
 
-$$
+```math
 D_{tt}=\{I,N\}\ \cup\ A^{D_t}\ \cup\ B^{D_t}.
 \tag{6}
-$$
+```
 
 Here I is identity, and A^{D_t} and B^{D_t} mean the maps whose ranges are contained in the indicated block.
 
@@ -117,25 +117,25 @@ Conversely, every map with range in one block preserves R_t because every output
 
 Write N_pt(E) for
 
-$$
+```math
 \forall p\,[E(Np)=N(Ep)].
-$$
+```
 
 No observer whose range is contained in A can satisfy this: E(Np) lies in A while N(Ep) lies in the disjoint block B. The same argument exchanges A and B. By (6), the only N_pt observers are I and N, and both do satisfy the identity.
 
 They agree in truth on the distinct propositions c and d'. Identity accepts both. Negation sends them to c' and d, both false. Thus
 
-$$
+```math
 \forall E\,[N_{\rm pt}(E)\to(Ec\leftrightarrow Ed')]
-$$
+```
 
 is true, while c=d' is false. Propositional pointwise negation separation fails.
 
 Whole-operation preservation is
 
-$$
+```math
 (\lambda p.E(Np))=(\lambda p.N(Ep)).
-$$
+```
 
 The two sides are actual functions on D_t. Hence this qualification is equivalent to N_pt(E) in the model, also as a consequence of its Functionality instance at t,t. Propositional whole-operation negation separation fails as well.
 
@@ -143,9 +143,9 @@ The two sides are actual functions on D_t. Hence this qualification is equivalen
 
 Write N_mat(E) for
 
-$$
+```math
 \forall p\,[E(Np)\leftrightarrow\neg Ep].
-$$
+```
 
 For each pair of ordinary Boolean values ε,δ, define an A-valued observer E_{εδ} by specifying its truth profile:
 
@@ -165,11 +165,11 @@ Double negation also holds as an output identity. The direct tests above indepen
 
 The model proves
 
-$$
+```math
 \mathrm H+\mathrm{Functionality}
  +\mathrm{FullSep}[N_{\rm mat}]
 \ \not\models\ \mathrm{Sep}_t[N_{\rm pt}].
-$$
+```
 
 Consequently the material and pointwise separation tiers differ over H even with all Functionality and full typed material separation. The pointwise and whole-operation tiers coincide in this model; it does not counterexample their equivalence under Functionality.
 

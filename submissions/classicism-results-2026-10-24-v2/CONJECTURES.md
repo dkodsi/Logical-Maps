@@ -69,28 +69,28 @@ Prove weak named existence or give a globally empty witness open. Failure of K�
 
 Separation by logical observers with logical left inverses (SplitMono) entails separation by injective logical observers (InjSep). The converse asks whether a separating family can be replaced by one whose members have logical left inverses; it does not require each original observer to have such an inverse. Over C5, the exact decompositions are
 
-$$
+```math
 \begin{aligned}
 \mathrm{InjSep}&\longleftrightarrow\mathrm{Rev}\lor(\mathrm{OS}\land J_t),\\
 \mathrm{SplitMono}&\longleftrightarrow\mathrm{Rev}\lor(\mathrm{OS}\land K_t).
 \end{aligned}
-$$
+```
 
-Here $J_t$ says that some injective logical observer $E$ and currently true $c$ satisfy $\forall p(Ep\le c\to p=\bot)$. The condition $K_t$ says that logical observers $E,F$ and currently true $c$ satisfy $F\circ E=I$ and $Fc=\bot$. Both use the same qualification at type t; C5 reduces the full schemas to these finite instances. See the [injective](proofs/h-observer-space/injective-separation-decomposition.md) and [left-inverse](proofs/h-observer-space/left-inverse-separation-decomposition.md) decompositions.
+Here $`J_t`$ says that some injective logical observer $`E`$ and currently true $`c`$ satisfy $`\forall p(Ep\le c\to p=\bot)`$. The condition $`K_t`$ says that logical observers $`E,F`$ and currently true $`c`$ satisfy $`F\circ E=I`$ and $`Fc=\bot`$. Both use the same qualification at type t; C5 reduces the full schemas to these finite instances. See the [injective](proofs/h-observer-space/injective-separation-decomposition.md) and [left-inverse](proofs/h-observer-space/left-inverse-separation-decomposition.md) decompositions.
 
-The regular-open countermodel refutes $J_t\Rightarrow K_t$, but fails OS, so it does not settle the separation question. Finite relative generation gives a positive case. With $\mathrm{BC}_t+\mathrm{Zorn}_t$, the stated support-coverage equation supplies the required logical inverse; a currently true admitted homogeneous interval is another sufficient condition. The [theorem map](proofs/h-observer-space/MAP.md#10-explicit-frontier) records their exact premises.
+The regular-open countermodel refutes $`J_t\Rightarrow K_t`$, but fails OS, so it does not settle the separation question. Finite relative generation gives a positive case. With $`\mathrm{BC}_t+\mathrm{Zorn}_t`$, the stated support-coverage equation supplies the required logical inverse; a currently true admitted homogeneous interval is another sufficient condition. The [theorem map](proofs/h-observer-space/MAP.md#10-explicit-frontier) records their exact premises.
 
 The established hierarchy includes H + OS ⇒ C + BF and endpoint separation ⇔ C5 + Atomicity (type t). Reversible separation has an exact invariant-proposition characterization; the [group-law and finite-family theorems](proofs/h-observer-space/GRAPH.md#any-nontrivial-group-equation) give further exact regions without resolving this comparison.
 
 The main C5 question is exactly whether
 
-$$
+```math
 \mathrm{C5}+\mathrm{OS}+J_t\ \vdash\ \mathrm{Rev}\lor K_t.
-$$
+```
 
 Over H the corresponding question is InjSep ⇒ SplitMono. A countermodel must satisfy the full injective separation schema, rather than merely contain an injective observer lacking a logical left inverse.
 
-Other unresolved comparisons are collected in the [research frontier](proofs/h-observer-space/MAP.md#10-explicit-frontier): the joint effect of $\mathrm{BC}_t$ and $\mathrm{Zorn}_t$ with OS; the remaining infinite connective and affine admission questions; the general atomless meet classification; the endpoint-parameter noncontingency converse for Rev; further inverse/necessity comparisons; and removing Actuality from the C-based FinBox theorem for empty or individual-only qualification lists.
+Other unresolved comparisons are collected in the [research frontier](proofs/h-observer-space/MAP.md#10-explicit-frontier): the joint effect of $`\mathrm{BC}_t`$ and $`\mathrm{Zorn}_t`$ with OS; the remaining infinite connective and affine admission questions; the general atomless meet classification; the endpoint-parameter noncontingency converse for Rev; further inverse/necessity comparisons; and removing Actuality from the C-based FinBox theorem for empty or individual-only qualification lists.
 
 **Lean-certified related results:** [`LOGICAL-OBSERVERS`](evidence/RESULT-INDEX.md#logical-observers): H + OS ⇒ C + BF with explicit endpoint identities. Their omission is justified by the linked ordinary reduction proof. [`FULL-IDENTITY-OBSERVERS`](evidence/RESULT-INDEX.md#full-identity-observers): Simultaneous propositional separation for every finite list of closed quantifier types under C5 + Atomicity (type t), including its necessary schema; the converses and equivalence of the two schemas under C5 + Actuality. [`DIAGONAL-CHARACTERS`](evidence/RESULT-INDEX.md#diagonal-characters).
 
@@ -111,11 +111,11 @@ The [forcing formulation](#abstract-forcing) has a separate source-comparison qu
 
 The proposed equality is
 
-$$
+```math
 \mathrm{Th}_{\mathrm{arith}}(\mathrm{Max}(C))=\mathrm{Cn}\bigl(T_{\mathrm{arith}}\cup\mathrm{True}_{\Pi_1}\bigr).
-$$
+```
 
-An ordinary proof is supplied for both inclusions, but the difficult upper inclusion still awaits independent review. Here $T_{\mathrm{arith}}$ is the common arithmetic theory of the positive Choice and Plenitude packages. See the [statement and proof](evidence/RESULT-INDEX.md#max-arithmetic-equality).
+An ordinary proof is supplied for both inclusions, but the difficult upper inclusion still awaits independent review. Here $`T_{\mathrm{arith}}`$ is the common arithmetic theory of the positive Choice and Plenitude packages. See the [statement and proof](evidence/RESULT-INDEX.md#max-arithmetic-equality).
 
 ---
 
@@ -357,12 +357,12 @@ This settles the relation between the two questions without deciding either cons
 <a id="sp-bf-functionality"></a>
 #### Finite-signature SP refutes BF and Functionality
 
-For every finite signature $\Sigma$, including the empty signature,
+For every finite signature $`\Sigma`$, including the empty signature,
 
-$$
+```math
 \mathrm{SP}(\Sigma)\vdash\neg\mathrm{BF}_{\alpha}\;\land\;\neg\mathrm{Functionality}_{\alpha,\beta}
 \qquad(\beta\ne e).
-$$
+```
 
 This holds at every admitted input type α and relational output type β, with explicit counterpredicates and counterfunctions. With infinitely many relational constants but finitely many individual names, the type-e BF failure and input-e Functionality failures still follow. The all-input result retains the finite-signature restriction. These are consequences of SP, not a proof of its consistency.
 
@@ -455,7 +455,7 @@ Assuming Con(ZFC), pure Maximalism + Non-contingency of CH is inconsistent. The 
 <a id="forcing-choice-infinity"></a>
 #### Forcing Possibilism is independent of necessary Choice and Infinity
 
-Strict-smallness Forcing Possibilism is independent over C + ☐Functional Choice + Axiom of Infinity (types e and t). A free-root model also satisfies Forcing Possibilism and both quantified Infinity axioms while failing Intensional Choice. In full S5 on an infinite world set W, the exact criterion is $2^{|W|}=2^{\aleph_0}$, in external ZFC.
+Strict-smallness Forcing Possibilism is independent over C + ☐Functional Choice + Axiom of Infinity (types e and t). A free-root model also satisfies Forcing Possibilism and both quantified Infinity axioms while failing Intensional Choice. In full S5 on an infinite world set W, the exact criterion is $`2^{|W|}=2^{\aleph_0}`$, in external ZFC.
 
 **Contribution:** the positive model, exact full-S5 cardinal criterion and separation from Intensional Choice. The negative independence direction was already recorded.
 

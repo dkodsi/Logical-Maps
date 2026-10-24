@@ -2,14 +2,14 @@
 
 By OpenAI Codex, prompted by Daniel Kodsi, 24 October 2026. Direct source for the new observer representation and verdicts: `misc`, this note, §§1–5, unpaginated. The existing full action-model construction and earlier omega-chain verdicts are attributed in §6.
 
-In the full omega-chain model, $\mathrm{Good}_{\{t\}}$ observers are exactly the inverse-image operations of maps f satisfying f(m)≥m. Such maps are called forward coordinate maps here; they need not be nondecreasing. Shifts give surjective observers which separate at every future stage. An injective logical observer must be the identity. This proves
+In the full omega-chain model, $`\mathrm{Good}_{\{t\}}`$ observers are exactly the inverse-image operations of maps f satisfying f(m)≥m. Such maps are called forward coordinate maps here; they need not be nondecreasing. Shifts give surjective observers which separate at every future stage. An injective logical observer must be the identity. This proves
 
-$$
+```math
 \mathrm C+\Box\mathrm{BF}+\Box\mathrm{Atomicity}_t
 +\Box\mathrm{SurjSep}
 \ \not\Longrightarrow\ \mathrm{C5},\quad\mathrm{SplitMono}.
 \tag{1}
-$$
+```
 
 SurjSep means full typed separation by currently surjective Good observers, with every finite external qualification list and full composite preservation identities. A box on a schema denotes the separate boxes of its closed instances. The failed SplitMono instance is already propositional, at Δ={t}. The model also shows directly that a necessarily surjective logical observer need not have any admitted right inverse over C.
 
@@ -17,10 +17,10 @@ SurjSep means full typed separation by currently surjective Good observers, with
 
 Take objects n∈ℕ, with one arrow n→m when n≤m, and singleton individuals. Use the full relational action-model domains. This is the existing omega-chain construction from [Two upper observer models](../observer-lattice-models.md), §1. At n,
 
-$$
+```math
 D_t(n)=\mathcal P(T_n),\qquad T_n=\{m:m\ge n\}.
 \tag{2}
-$$
+```
 
 Truth is membership of n, Boolean operations are set operations, and proposition transport restricts to a later tail. Fullness means that every relational truth profile on future stages and the admitted argument tuples there is an admitted intension. At every relational type, transport along n→j forgets the earlier stages of such a profile. An arbitrary profile on stages m≥j therefore extends by assigning arbitrary truth values on the omitted stages. Thus every forward type action is onto. At type e the transport is the unique map between singletons.
 
@@ -30,34 +30,34 @@ The full action construction supplies C. Surjective type transport gives BF at e
 
 Fix an external natural number k≥0. At n define an observer E_k^n by its entire future profile: at an arrow n→m and an arbitrary q∈D_t(m), its truth value is
 
-$$
+```math
 E_k^n(m,q)\quad\Longleftrightarrow\quad m+k\in q.
 \tag{3}
-$$
+```
 
 Fullness admits this profile. It specifies the observer on every future input, not only current propositions. Transport of E_k^n to m gives E_k^m, and application yields
 
-$$
+```math
 E_k^n(p)=\{m\ge n:m+k\in p\}.
 \tag{4}
-$$
+```
 
 For any q⊆T_n the admitted proposition p={m+k:m∈q} is a preimage under (4). Its membership on the omitted k initial positions is immaterial. Thus E_k^n satisfies the current internal formula ∀q∃p(E_k^n p=q). The same reasoning applies after every transport, so the fixed observer is also necessarily onto. This does not choose an admitted inverse operation.
 
 Equation (4) preserves every Boolean operation and both endpoints. For the full universal-quantifier law at type σ, let m≥n and F∈D_{σt}(m) be an arbitrary future input. Put j=m+k and let F_j be its transport to j. The truth of E_k^m(∀_σF) at m says
 
-$$
+```math
 \forall y\in D_\sigma(j)\quad F_j(y)\text{ is true at }j.
 \tag{5}
-$$
+```
 
 The truth of ∀_σ(λx.E_k^m(Fx)) at m says
 
-$$
+```math
 \forall x\in D_\sigma(m)\quad
 F_j\bigl(\rho_\sigma(m\to j)x\bigr)\text{ is true at }j.
 \tag{6}
-$$
+```
 
 These agree because ρ_σ(m→j) is onto. Replacing both universal quantifiers by existential ones proves the existential law. Since this comparison covers every future stage and every admitted F there, it proves the identity of the whole composite λF operations. The Boolean identities follow by the same all-stage test. The translated equality clauses follow from Boolean qualification over C; the shifts need not reflect identity. Thus E_k^n is Good_Δ for every requested finite Δ.
 
@@ -65,42 +65,42 @@ If p≠q in D_t(n), choose m≥n where their memberships differ and take k=m−n
 
 ## 3. Every Good_{t} observer is a forward coordinate map
 
-Let E be an arbitrary $\mathrm{Good}_{\{t\}}$ observer at n. Write E_m for its transport to m≥n. Its current Boolean truth test
+Let E be an arbitrary $`\mathrm{Good}_{\{t\}}`$ observer at n. Write E_m for its transport to m≥n. Its current Boolean truth test
 
-$$
+```math
 h_m(q):=[m\in E_m(q)]\qquad(q\subseteq T_m)
 \tag{7}
-$$
+```
 
 is a Boolean homomorphism to {0,1}, preserving both endpoints. We show it is evaluation at one point of T_m. Equivalently, the ultrafilter of propositions it accepts is principal.
 
 Suppose no singleton is accepted. Boolean preservation then rejects every finite subset of T_m and accepts every cofinite subset. Fullness admits a predicate F:tt at m with the following truth profile at every j≥m and x⊆T_j:
 
-$$
+```math
 F(j,x)\quad\Longleftrightarrow\quad x\ne\{j\}.
 \tag{8}
-$$
+```
 
 For a fixed p⊆T_m, its value F(p) is true at j exactly when p∩T_j≠{j}. It can fail only at the maximum of a nonempty finite p. Hence every F(p) is cofinite and is accepted by h_m. But ∀p Fp is Bottom: at every stage j the current argument x={j} falsifies F. Thus
 
-$$
+```math
 \forall p\,E_m(Fp)\text{ is true at }m,
 \qquad
 E_m(\forall p\,Fp)\text{ is false at }m,
 \tag{9}
-$$
+```
 
 contradicting the transported full Q_t law. Some singleton {f(m)} is therefore accepted. It is unique, and Boolean preservation now gives h_m(q)=1 exactly when f(m)∈q. Necessarily f(m)≥m.
 
 Application naturality consequently gives, for every current p⊆T_n,
 
-$$
+```math
 E(p)=f^{-1}[p],\qquad
 f:T_n\to T_n,\quad f(m)\ge m.
 \tag{10}
-$$
+```
 
-This also specifies E on arbitrary future arguments through (7), so it identifies the whole admitted observer. Conversely, every external map f with f(m)≥m supplies an admitted profile E_f(m,q):=[f(m)∈q]. The Boolean proof and (5)–(6), now using j=f(m), show that E_f satisfies all full quantifier identities. Thus the correspondence is exact. In this particular model, $\mathrm{Good}_{\{t\}}$ already equals the class qualified at every finite list containing t. This is a semantic classification, not a general reduction of qualification over H or C.
+This also specifies E on arbitrary future arguments through (7), so it identifies the whole admitted observer. Conversely, every external map f with f(m)≥m supplies an admitted profile E_f(m,q):=[f(m)∈q]. The Boolean proof and (5)–(6), now using j=f(m), show that E_f satisfies all full quantifier identities. Thus the correspondence is exact. In this particular model, $`\mathrm{Good}_{\{t\}}`$ already equals the class qualified at every finite list containing t. This is a semantic classification, not a general reduction of qualification over H or C.
 
 ## 4. Injectivity and the absence of admitted inverses
 
@@ -108,13 +108,13 @@ For the inverse-image map in (10), current injectivity of E is equivalent to sur
 
 An onto map f:T_n→T_n satisfying f(m)≥m must be the identity. Surjectivity at n forces f(n)=n. If the assertion has been proved up to m−1, the preimage of m can be neither an earlier point nor a later one, so f(m)=m. Ordinary external induction completes the proof. Hence
 
-$$
+```math
 E\text{ Good}_{\{t\}}\text{ and currently injective}
 \quad\Longrightarrow\quad E=I.
 \tag{11}
-$$
+```
 
-Any admitted whole left inverse F∘E=I makes E currently injective, even if F is unqualified. Thus the only $\mathrm{Good}_{\{t\}}$ observer with an admitted left inverse is I. At n, the distinct propositions ∅ and {n+1} are both false, and I does not distinguish their truth. The propositional SplitMono separation instance for Δ={t} therefore fails at every node. The statement uses neither a presumed global inverse nor an identification of internal and external finiteness.
+Any admitted whole left inverse F∘E=I makes E currently injective, even if F is unqualified. Thus the only $`\mathrm{Good}_{\{t\}}`$ observer with an admitted left inverse is I. At n, the distinct propositions ∅ and {n+1} are both false, and I does not distinguish their truth. The propositional SplitMono separation instance for Δ={t} therefore fails at every node. The statement uses neither a presumed global inverse nor an identification of internal and external finiteness.
 
 Current surjectivity of E_f, by contrast, is equivalent to injectivity of f. If f(m)=f(l) with m≠l, no output can contain exactly one of m,l. If f is injective, an arbitrary output q⊆T_n has preimage f[q]. Positive shifts are examples, so current onto does not imply injective here.
 
@@ -128,11 +128,11 @@ The distinction sharpens the surjective-observer theorem: [Canonical qualified s
 
 Globally, with the full schemas over H, the elementary implications are
 
-$$
+```math
 \mathrm{Rev}\ \Longrightarrow\ \mathrm{SurjSep}
 \ \Longrightarrow\ \mathrm{OS}.
 \tag{12}
-$$
+```
 
 Both are strict. The present model has SurjSep and fails Rev. The [linear and circular fibre model](linear-circular-fibre-left-inverse-gap.md) has C5+□OS and fails Rev; the C5 surjective-separation equivalence therefore makes SurjSep fail there too.
 

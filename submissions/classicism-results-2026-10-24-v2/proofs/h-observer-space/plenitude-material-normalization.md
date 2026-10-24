@@ -8,7 +8,7 @@ The single instance of Plenitude with both input and output type t supplies an a
 
 Use the existing [Plenitude](../../source/topics/classicism/principles/plenitude-r.yaml) formulation at σ=τ=t:
 
-$$
+```math
 \begin{aligned}
 \mathrm{Plen}_{t,t}:\quad
 \forall U^{ttt}\bigl[&\forall p\,\exists y\,
@@ -16,7 +16,7 @@ $$
 &\to\exists f^{tt}\,\forall p\,U(p,fp)\bigr].
 \end{aligned}
 \tag{1}
-$$
+```
 
 This is a single closed formula in the fixed relational language. Its premise is current total single-valuedness of an admitted relation; its conclusion is an admitted operation representing that relation. Neither Functionality nor a whole-operation identity is built into it. No individual-valued output or quantification over types is introduced.
 
@@ -26,40 +26,40 @@ The principle is sourced to Bacon and Dorr, *Classicism*, draft of 16 May 2023, 
 
 Let b₁ be true and b₀ false. They are distinct by equality substitution. The admitted relation
 
-$$
+```math
 U(p,y):=(p\land y=b_1)\lor(\neg p\land y=b_0)
 \tag{2}
-$$
+```
 
 is total and single-valued by ordinary H truth reasoning: in the true case its unique output is b₁, and in the false case its unique output is b₀. Apply (1). It gives an admitted χ:tt satisfying
 
-$$
+```math
 \forall p\left[(p\to\chi p=b_1)
 \land(\neg p\to\chi p=b_0)\right].
 \tag{3}
-$$
+```
 
 Consequently χ has at most two outputs, χp↔p for every p, χb₁=b₁, and χb₀=b₀. It is pointwise idempotent. These are output equations; no whole idempotence identity is inferred without Functionality.
 
 For any admitted E define the admitted composite
 
-$$
+```math
 E^\chi(p):=\chi(Ep).
 \tag{4}
-$$
+```
 
 This single χ works for every E at once. Every composite (4) retains E's entire current truth profile and takes values in {b₀,b₁}. In particular A, Z and any restriction depending only on that profile are retained. Arbitrary identity-based restrictions such as endpoint fixing, invertibility, or an identity involving E are not claimed to survive.
 
 ## 3. The truth-table subalgebra lemma
 
-Fix a finite list Σ of admitted propositional operations, with specified H truth tables. Suppose the chosen pair {b₀,b₁} realizes each such table as object identities. For an n-ary operation f with Boolean truth table $\widehat f$ this means the finite list of equations
+Fix a finite list Σ of admitted propositional operations, with specified H truth tables. Suppose the chosen pair {b₀,b₁} realizes each such table as object identities. For an n-ary operation f with Boolean truth table $`\widehat f`$ this means the finite list of equations
 
-$$
+```math
 f(b_{\epsilon_1},\ldots,b_{\epsilon_n})
 =b_{\widehat f(\epsilon_1,\ldots,\epsilon_n)}
 \qquad(\epsilon_i\in\{0,1\}).
 \tag{5}
-$$
+```
 
 The list and the zeros/ones in (5) are external finite notation. They do not introduce a type of truth values into H. No material truth-table agreement is substituted for these output identities.
 
@@ -71,12 +71,12 @@ If Σ includes preservation of a designated constant c, the pair must additional
 
 Whenever the structural consequences of material separation provide such a pair, the lemma gives
 
-$$
+```math
 S[O\land\mathrm{Mat}_\Sigma]
 \quad\longleftrightarrow\quad
 S[O\land\mathrm{Two}\land\mathrm{Pt}_\Sigma],
 \tag{6}
-$$
+```
 
 where O is none, A, Z or A∧Z. Forward, normalize each separating observer; reverse, a pointwise observer is material. The use of material separation to obtain the pair is essential in the applications below.
 

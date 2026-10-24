@@ -6,13 +6,13 @@ This two-object model satisfies C5 and necessary full ordinary logical separatio
 
 Consequently the established implication is strict:
 
-$$
+```math
 \boxed{\mathrm{Rev}\ \Longrightarrow\
 \mathrm{C5}+\Box\mathrm{OS},
 \qquad
 \mathrm{C5}+\Box\mathrm{OS}\ \not\Longrightarrow\ \mathrm{Rev}.}
 \tag{1}
-$$
+```
 
 All observer preservation laws are full composite identities. OS and its boxed form have the full relational scope and every finite external type list. The argument for failure of Rev uses [Rev implies No Pure Contingency](reversible-separation-and-pure-truth.md), not an unproved necessity of the local-conjugacy criterion.
 
@@ -23,14 +23,14 @@ Let W and V be countably infinite sets, partitioned as follows:
 - W has countably infinitely many blocks of each positive even finite size 2,4,6,8,….
 - V has countably infinitely many blocks of each size 2^n for n≥1, and no other block sizes.
 
-Write $\mathcal B$ and $\mathcal C$ for these respective block partitions. Define
+Write $`\mathcal B`$ and $`\mathcal C`$ for these respective block partitions. Define
 
-$$
+```math
 G:=\prod_{B\in\mathcal B}\mathrm{Sym}(B),
 \qquad
 H:=\prod_{C\in\mathcal C}\mathrm{Sym}(C).
 \tag{2}
-$$
+```
 
 Each group preserves **each individual block setwise**; it does not permute different blocks. It contains all independent choices of permutations within the blocks. These are closed permutation groups: preserving any specified finite block setwise is a closed condition, and the groups are the intersections of those conditions.
 
@@ -42,12 +42,12 @@ The construction is in the fixed relational language. All bijections of individu
 
 There exist bijections j:W→V and k:V→W such that
 
-$$
+```math
 jGj^{-1}\subseteq H,
 \qquad
 kHk^{-1}\subseteq G.
 \tag{3}
-$$
+```
 
 Here is an explicit general packing argument that proves both assertions. Each source and target partition has arbitrarily large even blocks and infinitely many 2-blocks. Enumerate the source blocks of size greater than two and all target blocks. At each finite stage:
 
@@ -58,9 +58,9 @@ Always use the least unused source 2-blocks in a fixed enumeration. Each finite 
 
 The [arrow-evaluation representation theorem](../operator-representation.md), §§4–6, applies to precisely this all-bijections, finite-pinning framework. It says that a map b:X→Y satisfying
 
-$$
+```math
 bG_{X,(S)}b^{-1}\subseteq G_Y
-$$
+```
 
 for a finite S supplies an admitted observer evaluating current propositions at b, qualified by the full Boolean and quantifier operation identities at every fixed finite type list. A sufficient separation condition at X is that each target Y has one such comparison bijection with a finite stabilizer.
 
@@ -68,9 +68,9 @@ For each self-target use the identity bijection. For the other target use j or k
 
 Functionality lifts this to every relational output type. The argument works at both objects, for every finite qualification list; every future evaluation is at one of these objects. Hence
 
-$$
+```math
 \mathrm{OS}\quad\text{and}\quad\Box\mathrm{OS}
-$$
+```
 
 hold at both objects, with the boxed schema read instance by instance. The witnesses are admitted observers with full composite identities, not just external evaluations or material homomorphisms.
 
@@ -98,18 +98,18 @@ For X:et let Six(X) say that exactly six individuals satisfy X. It can be writte
 
 For A:(et)t put
 
-$$
+```math
 \begin{aligned}
 \mathrm{DisjointSix}(A):={}&
 \forall X\,(AX\to\mathrm{Six}(X))\\
 &\land\forall X,Y\,[AX\land AY\land X\ne Y
 \to\forall x\,\neg(Xx\land Yx)].
 \end{aligned}
-$$
+```
 
 Define the closed pure sentence
 
-$$
+```math
 \begin{aligned}
 \mathrm{MC}_6:=\forall A^{(et)t}\bigl[
 \mathrm{DisjointSix}(A)\to
@@ -119,7 +119,7 @@ $$
 &\land\exists x\,(Xx\land\neg R(X,x))\bigr)\bigr].
 \end{aligned}
 \tag{4}
-$$
+```
 
 Thus R must select a nonempty proper subset of each family member. It need not select a single individual or an intensional property object. The only higher-type object requested is the admitted relation R.
 
@@ -127,16 +127,16 @@ Disjointness is stated for distinct intensional family members. Since each membe
 
 ## 6. MC₆ fails at the even-block object W
 
-For each six-block B∈$\mathcal B$, let X_B be the canonical rigid property whose extension at h:W→Y is h(B). Formally, its truth profile is
+For each six-block B∈$`\mathcal B`$, let X_B be the canonical rigid property whose extension at h:W→Y is h(B). Formally, its truth profile is
 
-$$
+```math
 X_B(h,x)\quad\Longleftrightarrow\quad x\in h(B).
-$$
+```
 
 It is pinned by B and symmetric at every target, so X_B is admitted. For g∈G, transport gives ρ(g)X_B=X_{g(B)}=X_B, because G preserves B setwise. The current family consisting of all these X_B is therefore G-invariant. The lemma of §4, with empty S, gives an admitted A with exactly that current extension. It satisfies DisjointSix(A).
 
 Suppose an admitted R selected a nonempty proper subset of each member. Let S be a finite pin for R. Choose a six-block B disjoint from S. Every permutation of B, extended by identity elsewhere, belongs to G_(S). Finite pinning and target symmetry make the current extension of R invariant under G_(S). Since X_B is itself fixed by these permutations, the selected subset
-$\{x\in B:R(X_B,x)\}$
+$`\{x\in B:R(X_B,x)\}`$
 is invariant under the full symmetric group of B. That group is transitive, so the subset is empty or all of B, contradicting (4). Thus MC₆ is false at W.
 
 ## 7. MC₆ holds at the power-of-two object V
@@ -145,12 +145,12 @@ Let A be any admitted object satisfying DisjointSix(A) at V. Choose a finite pin
 
 Call the six-element current extensions of A's members its cells. They are pairwise disjoint. We first show:
 
-$$
+```math
 \text{If a cell D meets a block C disjoint from S0, then }C\subseteq D.
 \tag{5}
-$$
+```
 
-Indeed, if x∈D∩C and y∈$C\setminus D$, the transposition exchanging x,y lies in H_(S0). It carries the property object X with extension D to another A-member with extension $(D\setminus\{x\})\cup\{y\}$. The two extensions differ but overlap in five points. The property objects must therefore be distinct, contradicting A's disjointness. This proves (5), including for cells that also meet S0.
+Indeed, if x∈D∩C and y∈$`C\setminus D`$, the transposition exchanging x,y lies in H_(S0). It carries the property object X with extension D to another A-member with extension $`(D\setminus\{x\})\cup\{y\}`$. The two extensions differ but overlap in five points. The property objects must therefore be distinct, contradicting A's disjointness. This proves (5), including for cells that also meet S0.
 
 Only finitely many cells meet S0, because they are disjoint and S0 is finite. Call them exceptional cells, and let S1 be S0 together with all their points. By (5), any points they add outside S0 comprise entire H-blocks. Hence S1 is itself a finite union of blocks. There is no iterative or infinite enlargement of the pin.
 
@@ -166,24 +166,24 @@ The sentence MC₆ is closed and pure. It is true at V and false at W, and there
 
 By [Reversible logical separation implies No Pure Contingency](reversible-separation-and-pure-truth.md), full Rev consequently fails at both objects. Together with §§1–3, this gives the announced atomless countermodel
 
-$$
+```math
 \mathrm{C5}+\Box\mathrm{OS}+\neg\mathrm{Rev}.
-$$
+```
 
 There is an explicit failed propositional instance. Take
 
-$$
+```math
 \Delta=\{t,e,et,(et)t,(et)(et)\}.
 \tag{6}
-$$
+```
 
 The types e, et, (et)t and (et)(et) are precisely the bound-variable types needed in the expanded sentence MC₆; t additionally covers the fixed endpoint abbreviation and is harmless. By the term-induction proof in the cited No Pure Contingency note, every Good_Δ involution fixes MC₆ as a proposition. It therefore cannot distinguish MC₆ from Top at V, or ¬MC₆ from Top at W.
 
 The [reversible-to-involutive patching construction](../logical-observer-hierarchy.md), §4, preserves the **same** qualification list Δ over the C5 background already present here. Explicitly, if a reversible Good_Δ observer E accepted a false nonbottom d, with qualified inverse F, put c=¬d∧Ed, b=Fc and r=¬(c∨b). Then
 
-$$
+```math
 T(p)=(c\land Ep)\lor(b\land Fp)\lor(r\land p)
-$$
+```
 
 is a Good_Δ involution accepting d. Boolean patching uses only the already listed quantifier laws; C5 supplies any required Barcan and Functionality instances without extending Δ. At V apply this to d=¬MC₆; at W apply it to d=MC₆. A reversible observer distinguishing the corresponding true sentence from Top would accept d, and hence would produce an impossible separating involution. Thus all eligible reversible observers agree on the displayed pair even though the propositions are unequal. Propositional reversible separation for exactly (6) fails at both objects. No assertion that every reversible separation instance fails is made.
 

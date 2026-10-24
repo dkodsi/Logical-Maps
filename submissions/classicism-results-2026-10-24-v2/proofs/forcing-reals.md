@@ -20,26 +20,26 @@ Using the standard nonempty-subset completeness clause explained in section 2,
 there is a canonical real-number structure R_B at the one fixed type sigma = et
 for which
 
-$$
+```math
 \|\mathrm{Real}_{et}(\mathfrak R_B)\|=1_B,
 \qquad
 \|\mathrm{CH}(\mathfrak R_B)\|
  =\|\mathrm{CH}\|_{M^B}.
 \tag{1}
-$$
+```
 
 There is also an explicit restriction and lifting comparison between this
 fragment in a component and the same fragment in the full rooted cloud. The
 lottery family therefore gives, at its root,
 
-$$
+```math
 \Diamond\exists\mathfrak R\,
  (\mathrm{Real}_{et}(\mathfrak R)\land\mathrm{CH}(\mathfrak R))
 \;\land\;
 \Diamond\exists\mathfrak R\,
  (\mathrm{Real}_{et}(\mathfrak R)\land\neg\mathrm{CH}(\mathfrak R)).
 \tag{2}
-$$
+```
 
 This is a result about the specified full lottery model. It does not prove the
 general implication from C + necessary Rigid Comprehension + Intensional Choice
@@ -104,12 +104,12 @@ Writing p for a nonzero condition, propositional identity at p is
 literal identity at every point. Full function spaces have all ground-model
 raw functions as underlying elements, with the source's partial identity:
 
-$$
+```math
  f\sim_p g\quad\Longleftrightarrow\quad
  \forall q\le p\ \forall a,b\,
  (a\sim_q b\Rightarrow f(a)\sim_q g(b)).
 \tag{3}
-$$
+```
 
 The condition q is nonzero where it denotes a frame point. A raw function
 exists at p exactly when it is related to itself there. Underlying fullness
@@ -122,25 +122,25 @@ both carriers exists everywhere. At sigma this follows directly from (3),
 since individual identity is literal and every proposition exists everywhere.
 Their identity values are
 
-$$
+```math
  \delta_e(n,m)=\begin{cases}1&n=m,\\0&n\ne m,\end{cases}
  \qquad
  \delta_\sigma(s,t)=\bigwedge_{n\in\omega}(s(n)\leftrightarrow t(n)).
 \tag{4}
-$$
+```
 
 Fix a finite list of argument sorts, each e or sigma, and let A be the product
 of their raw carriers. Put delta_A(a,c) equal to the meet of coordinate
 identities. Curried raw relations can be treated as ground-model functions
 F:A -> B. Iterating (3) gives
 
-$$
+```math
  F\text{ exists at }p
  \quad\Longleftrightarrow\quad
  p\wedge\delta_A(a,c)\le F(a)\leftrightarrow F(c)
  \quad\text{for all }a,c\in A.
 \tag{5}
-$$
+```
 
 For the forward direction use each nonzero
 `q = p meet delta_A(a,c)`: the arguments are identical there, so the output
@@ -151,20 +151,20 @@ everywhere and accessibility is transitive.
 
 Define the existence value
 
-$$
+```math
  \epsilon(F)=\bigwedge_{a,c\in A}
   \bigl(\delta_A(a,c)\Rightarrow(F(a)\leftrightarrow F(c))\bigr).
 \tag{6}
-$$
+```
 
 Here Boolean implication is `not b join c`. Write Ext(A) for those F with
 epsilon(F)=1. On arbitrary raw relations the partial identity value is
 
-$$
+```math
  \delta(F,H)=\epsilon(F)\wedge\epsilon(H)
               \wedge\bigwedge_{a\in A}(F(a)\leftrightarrow H(a)).
 \tag{7}
-$$
+```
 
 Indeed, cross-argument identity entails existence of both functions and
 pointwise agreement, by the PER laws and reflexivity of each argument.
@@ -173,10 +173,10 @@ Only on globally existing relations can the existence factors be omitted.
 
 **Local totalization.** If p <= epsilon(F), put
 
-$$
+```math
  F^p(a)=p\wedge F(a).
 \tag{8}
-$$
+```
 
 Then F^p is in Ext(A) and is identical to F at p. To verify extensionality,
 split delta_A(a,c) into its parts below p and below its complement. The first
@@ -188,10 +188,10 @@ for `forall F phi(F)` at p tests every q <= p and every F existing at q.
 For a globally existing assignment of the other parameters, it is equivalent
 to
 
-$$
+```math
  p\le\bigwedge_{H\in\mathrm{Ext}(A)}\llbracket\phi(H)\rrbracket.
 \tag{9}
-$$
+```
 
 One direction tests globally existing H at p. For the other, replace a raw F
 existing at q by F^q. They are identical at q, so the fundamental lemma
@@ -205,18 +205,18 @@ about a raw relation outside its existence region is needed.
 
 For s in U_sigma use the name
 
-$$
+```math
  \dot s=\{(\check n,s(n)):n\in\omega\}.
 \tag{10}
-$$
+```
 
 The recursive membership and equality clauses give
 
-$$
+```math
  \|\check n\in\dot s\|=s(n),\qquad
  \|\dot s=\dot t\|=\delta_\sigma(s,t).
 \tag{11}
-$$
+```
 
 Every name forced to be a subset of check-omega has a representative (10)
 equal to it with value one: take `s(n) = ||check n belongs to that name||`.
@@ -228,18 +228,18 @@ internal powerset of check-omega, not the check-name of the ground powerset.
 For a in A let dot-a be the finite tuple of its coordinate names, using
 check-n for individual coordinates. Define
 
-$$
+```math
  \dot K_A=\{(\dot a,1):a\in A\}.
 \tag{12}
-$$
+```
 
 This is forced to be the corresponding product of check-omega and the
 internal powerset of check-omega. Its members satisfy Boolean coverage:
 
-$$
+```math
  \|u\in\dot K_A\|=\bigvee_{a\in A}\|u=\dot a\|.
 \tag{13}
-$$
+```
 
 For individual coordinates, coverage follows from the name check-omega.
 For real-code coordinates it follows from (10), locally if necessary.
@@ -251,19 +251,19 @@ an antichain need not equal one fixed numeral with value one.
 
 For F in Ext(A) define a subset name
 
-$$
+```math
  \dot F=\{(\dot a,F(a)):a\in A\}.
 \tag{14}
-$$
+```
 
 Then dot-F is forced to be a subset of dot-K_A, and
 
-$$
+```math
  \|\dot c\in\dot F\|
  =\bigvee_{a\in A}\bigl(F(a)\wedge\delta_A(a,c)\bigr)
  =F(c).
 \tag{15}
-$$
+```
 
 Extensionality bounds every summand by F(c); the summand a=c supplies the
 reverse inequality.
@@ -287,11 +287,11 @@ represented, including all graphs on the stated carriers. This does not
 claim that all raw A -> B functions are extensional. Furthermore, for
 globally extensional F and H,
 
-$$
+```math
  \|\dot F=\dot H\|
  =\bigwedge_{a\in A}(F(a)\leftrightarrow H(a)),
 \tag{16}
-$$
+```
 
 by the same coverage argument. This matches (7) on existing parameters.
 
@@ -315,11 +315,11 @@ substitution show that bounded quantification over dot-K_A is the meet or
 join over represented tuples. Explicitly, if c is below every value
 `||phi(dot-a)||`, then
 
-$$
+```math
  c\wedge\|u\in\dot K_A\|
  =\bigvee_a(c\wedge\|u=\dot a\|)
  \le\|\phi(u)\|.
-$$
+```
 
 The converse uses each dot-a as an instance. For relation quantifiers,
 section 4 represents every internal subset, and (9) identifies quantification
@@ -337,11 +337,11 @@ globally by (5).
 
 The corresponding tuple has exactly the types required by the map:
 
-$$
+```math
  \mathfrak R_B=(X^{\sigma t},\le^{\sigma\sigma t},
  +^{\sigma\sigma\sigma t},\times^{\sigma\sigma\sigma t},
  0^\sigma,1^\sigma,N^{\sigma t}).
-$$
+```
 
 The ZFC construction of the Dedekind reals gives a complete ordered field,
 and its natural numbers are the least subset containing zero and closed
@@ -353,12 +353,12 @@ merely completeness with respect to ground-model subsets of the reals.
 
 The exact CH formula is
 
-$$
+```math
  \forall Y^{\sigma t}\,
  \bigl((\forall x\,(Yx\to Xx))\to
        (Y\precsim N\lor Y\approx X)\bigr),
 \tag{17}
-$$
+```
 
 where the two comparisons are witnessed by binary relational graphs.
 All its quantified subsets and graphs are covered by the transfer theorem.
@@ -391,9 +391,9 @@ existing ground representatives can have new generic evaluations.
 
 For a family (B_i), the full cloud has propositional algebra
 
-$$
+```math
  C=2\times\prod_iB_i.
-$$
+```
 
 Let pi_i:C -> B_i be projection and j_i:B_i -> C insert an element in
 coordinate i, with zero in every other coordinate including the root bit.
@@ -410,10 +410,10 @@ component i; individual coordinates are unchanged.
 
 If F is a globally extensional component relation, lift it by
 
-$$
+```math
  \widehat F(\vec a)=j_i\bigl(F(\pi_i\vec a)\bigr).
 \tag{18}
-$$
+```
 
 This raw relation exists at the root and throughout the cloud. On component
 i it respects identity by extensionality of F. On other components all
@@ -423,10 +423,10 @@ exactly the tests in the iterated form of (3).
 
 Conversely, if H is a cloud relation existing at p in component i, put
 
-$$
+```math
  f(\vec s)=\pi_i H(j_i\vec s).
 \tag{19}
-$$
+```
 
 It exists below p in the component. For arbitrary cloud arguments a,
 local extensionality and the identity of a with j_i pi_i(a) show that

@@ -6,12 +6,12 @@ Infinitely many points fixed by a source symmetry group give one admitted qualif
 
 Applying this criterion to the existing qualitative-contrast model at its trivial-symmetry object gives
 
-$$
+```math
 \mathrm{C5}+\mathrm{SplitMono}+\Box\mathrm{BF}
 +\Box\mathrm{Functionality}
 +\neg\Box\mathrm{OS}.
 \tag{1}
-$$
+```
 
 In particular C5+SplitMono implies neither necessary OS nor necessary SplitMono. The positive separation verdict has full relational output scope and every finite external qualification list. The boxed OS failure is already witnessed by the propositional Boolean-separation instance at the empty list.
 
@@ -21,23 +21,23 @@ Use a symmetric ideally-full action model whose arrows are all bijections betwee
 
 Assume a source object X has an external sequence
 
-$$
+```math
 x_0,x_1,x_2,\ldots
 \tag{2}
-$$
+```
 
 of pairwise distinct individuals, each fixed by every member of G_X. The argument needs precisely this sequence; it makes no object-language assertion of an admitted enumeration. In particular the hypothesis holds at a countably infinite source with trivial designated symmetry group. Other objects and their symmetry groups are unrestricted within the stated model framework.
 
 For a finite type list Δ, Good_Δ has the full Boolean and quantifier composite identities and translated equality clauses used throughout the observer notes. Recall the true-kernel condition
 
-$$
+```math
 \begin{aligned}
 K_\Delta:=\exists E^{tt}F^{tt}c^t\,[
 &\mathrm{Good}_\Delta(E)\land\mathrm{Good}_\Delta(F)\\
 &\land F\circ E=I\land c\land Fc=\bot].
 \end{aligned}
 \tag{3}
-$$
+```
 
 The construction below supplies the same admitted E,F,c for every finite Δ. This is a semantic fact about the witnesses, not an infinitary qualification formula.
 
@@ -45,23 +45,23 @@ The construction below supplies the same admitted E,F,c for every finite Δ. Thi
 
 Let ν₀=id_X. For n>0 let ν_n swap x₀ and x_n and fix all other individuals. Put
 
-$$
+```math
 \alpha_n=\nu_{n+1}\nu_n^{-1}.
 \tag{4}
-$$
+```
 
 Each α_n commutes with G_X: it is supported on points fixed individually by that group. Define pairwise disjoint sets of self-arrows
 
-$$
+```math
 C_n=\{h:X\to X:h(x_0)=x_n\}.
 \tag{5}
-$$
+```
 
 They are all pinned by {x₀} and are invariant under postcomposition by G_X. Moreover α_n maps C_n into C_{n+1} by postcomposition, and α_n^{-1} maps C_{n+1} into C_n. The complement of their union, including all arrows to other objects, is left unchanged in the construction.
 
 For every outgoing h:X→Y choose the following observation arrows, whose source is Y:
 
-$$
+```math
 a_h=
 \begin{cases}
 \alpha_n^{-1},&h\in C_{n+1},\\
@@ -74,28 +74,28 @@ b_h=
 \mathrm{id}_Y,&\text{otherwise}.
 \end{cases}
 \tag{6}
-$$
+```
 
 Define entire exponential truth profiles, for every proposition q at Y, by
 
-$$
+```math
 E(h,q)\Longleftrightarrow a_h\in q,
 \qquad
 F(h,q)\Longleftrightarrow b_h\in q.
 \tag{7}
-$$
+```
 
 Both profiles are {x₀}-pinned. If parallel h,h′ agree at x₀, they select the same branch and the same observation arrow, so (7) agrees for every input q.
 
 They also satisfy target symmetry. At target X, for μ∈G_X, the chart of μh is the chart of h, and μ commutes with its observation arrow s=a_h or b_h. The transport equation and proposition symmetry give
 
-$$
+```math
 s\in\rho_t(\mu)q
 \ \Longleftrightarrow\ s\mu\in q
 \ \Longleftrightarrow\ \mu s\in q
 \ \Longleftrightarrow\ s\in q.
 \tag{8}
-$$
+```
 
 On the complement the observation arrow is the identity, and the same calculation uses only proposition symmetry. At a different target Y, the entire branch is identity observation, which is likewise symmetric under G_Y. Thus ideal fullness admits E and F. Countably many cases in the external definition do not require an infinite pin: their selected value depends on the one point h(x₀).
 
@@ -103,16 +103,16 @@ On the complement the observation arrow is the identity, and the same calculatio
 
 For every outgoing h we have the arrow identity
 
-$$
+```math
 a_{b_hh}\,b_h=\mathrm{id}_{\mathrm{target}(h)}.
 \tag{9}
-$$
+```
 
 If h∈C_n, then b_h=α_n and b_hh∈C_{n+1}, where a_{b_hh}=α_n^{-1}. If h lies outside all charts, both observations are identity and it remains outside the charts. These cases exhaust all outgoing arrows. The E branch on C₀ is never used in this round trip.
 
 To check the whole operation identity rather than only current values, take any future arrow r:X→Y, arbitrary q∈D_t(Y), and further arrow l:Y→Z. Let E_r and F_r be the transported observers. Application and transport give
 
-$$
+```math
 \begin{aligned}
 l\in F_r(E_rq)
 &\Longleftrightarrow
@@ -120,16 +120,16 @@ a_{b_{lr}lr}\,b_{lr}\,l\in q\\
 &\Longleftrightarrow l\in q,
 \end{aligned}
 \tag{10}
-$$
+```
 
 where (9) is applied to h=lr. This holds for every future input and coordinate. Hence F∘E=I as an identity of admitted whole operations.
 
 Let c be the proposition C₀, false on all other-target arrows. It is symmetric and {x₀}-pinned, hence admitted. The identity arrow belongs to C₀, so c is currently true at X. For every outgoing h,
 
-$$
+```math
 h\in Fc\quad\Longleftrightarrow\quad b_hh\in C_0.
 \tag{11}
-$$
+```
 
 The right side never holds: each C_n maps into C_{n+1}, and the complement remains outside the charts. Thus Fc=Bottom as a proposition identity, not merely as current falsity.
 
@@ -141,10 +141,10 @@ The calculations cover all future inputs, so they give full composite identities
 
 The [true-kernel normalization theorem](left-inverse-separation-decomposition.md), §2, now has a useful uniform application. For any admitted Good_Δ observer G, the admitted term
 
-$$
+```math
 E_G(p)=(c\land Gp)\lor(\neg c\land Ep)
 \tag{12}
-$$
+```
 
 is Good_Δ, satisfies F∘E_G=I, and has exactly G's current truth profile, since c is true. The same F works for every G. Thus ordinary and qualified left-inverse observers have the same current separating power at X, at each fixed list and relational output type. In particular, full OS at this source implies full SplitMono. The fixed-point hypothesis alone does not claim ordinary separation for a general G_X.
 
@@ -152,14 +152,14 @@ is Good_Δ, satisfies F∘E_G=I, and has exactly G's current truth profile, sinc
 
 Suppose now G_X is trivial. For any outgoing arrow d:X→Y define an observer O_d by the profile
 
-$$
+```math
 O_d(h,q)\quad\Longleftrightarrow\quad
 \begin{cases}
 d\in q,&\mathrm{target}(h)=X,\\
 \mathrm{id}_{\mathrm{target}(h)}\in q,&\text{otherwise}.
 \end{cases}
 \tag{13}
-$$
+```
 
 In the first branch q is a proposition at X, so membership of d is well typed. This entire profile is empty-pinned: for parallel h,h′ the answer on each fixed input q is the same. The first branch has no nontrivial target-symmetry obligation, and every other branch is identity observation. Hence O_d is admitted.
 

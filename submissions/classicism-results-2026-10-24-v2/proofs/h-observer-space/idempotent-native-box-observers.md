@@ -10,11 +10,11 @@ There is an exact finite-model explanation. In a full model on a finite rooted p
 
 Use Good_Δ and BoxComm from [Native-Box logical observers](native-box-logical-observers.md), §1. All preservation equations are identities of the entire composite operations. In particular,
 
-$$
+```math
 \mathrm{BoxComm}(E):\quad
  (\lambda p.E(\Box p))=(\lambda p.\Box Ep),
 \qquad \Box p:=(p=\top).
-$$
+```
 
 Add the whole idempotence identity E∘E=E. Write IdemBoxSep(τ,Δ) for separation by the common class of observers satisfying all three conditions. Without indices, IdemBoxSep denotes the full schema over relational output types and finite external qualification lists. It implies BoxSep and therefore recovers C, current BF and Functionality over H. A boxed schema means the separately boxed closed instances.
 
@@ -26,28 +26,28 @@ Over C5, a Boolean observer commutes with native Box exactly when it is currentl
 
 Consequently, over C5 every IdemBox-qualified observer is identity. Propositional separation by this class says that material equivalence of p,q entails their identity. This is propositional Extensionality. Together with Functionality, already available over C5, it gives the full relational Extensionality schema. Conversely Extensionality makes identity alone separate at every relational type; identity is Good, idempotent and Box-commuting. Therefore, over H,
 
-$$
+```math
 \boxed{\mathrm{C5}+\mathrm{IdemBoxSep}
 \quad\Longleftrightarrow\quad\mathrm{Extensionality}.}
 \tag{1}
-$$
+```
 
 The full scope matters in recovering the background over H. The forward argument itself needs only the propositional separation instance once C5 is an explicit premise.
 
 ## 3. Full finite-frame observers are coordinate maps
 
 Let P be a finite partially ordered set with least point o. Regard its order as a thin category: one arrow x→y iff x≤y. Take singleton individuals and the full relational action-model domains. For x∈P put ↑x={y:x≤y}. Then
-$D_t(x)=\mathcal P(\mathord\uparrow x),$
+$`D_t(x)=\mathcal P(\mathord\uparrow x),`$
 with truth given by membership of x. Boolean operations are set operations. At any relational type, full objects are arbitrary future truth profiles on admitted argument tuples. Transport along x→y restricts such a profile to the future cone ↑y. Every such restricted profile extends to ↑x by arbitrary values outside ↑y. Thus transport is onto at every admitted type, including the singleton individual type.
 
 The full action-model theorem supplies C. Onto type transport gives BF and Functionality at every point, hence their necessary schemas. Proposition algebras are powersets, so Atomicity_t holds everywhere as well. All these claims concern this explicitly full construction.
 
 An arbitrary observer satisfying the whole Boolean laws induces at each future x a Boolean truth character on the finite powerset D_t(x). Every such character is evaluation at one unique point f(x)∈↑x: a character accepts one atom, since the finitely many atoms join to Top. Consequently every Boolean observer is determined by an inflationary coordinate map f:P→P, with x≤f(x), through
 
-$$
+```math
 E_f(p)=f^{-1}[p].
 \tag{2}
-$$
+```
 
 This description covers the whole observer, not just its current action. At a future x and an arbitrary input q⊆↑x, its truth profile is true exactly when f(x)∈q. Conversely any inflationary f defines an admitted full observer by this profile.
 
@@ -59,31 +59,31 @@ At every point, these unrestricted readers separate. For example, to read a from
 
 At any x, native Box is the universal test on ↑x. Applying the two sides of BoxComm to arbitrary p⊆↑x therefore gives the exact condition
 
-$$
+```math
 E_f\text{ commutes with Box}
 \quad\Longleftrightarrow\quad
  f[\mathord\uparrow x]=\mathord\uparrow f(x)
  \quad\text{for every }x.
 \tag{3}
-$$
+```
 
 Equality of these sets is necessary because every subset is admitted; it is sufficient at every future input, so it gives the whole operation identity. Condition (3) implies monotonicity: if x≤y, then f(y)∈↑f(x).
 
 Likewise the whole equation E_f²=E_f is exactly
 
-$$
+```math
 f^2=f.
 \tag{4}
-$$
+```
 
 For necessity test singleton propositions; for sufficiency compute the truth of the compositions at arbitrary future inputs.
 
 Fix a∈P. Suppose (3)–(4) hold and f(o)=a. Equation (3) at o says the image of f is ↑a. Idempotence makes every point of that image fixed. For any x, inflationarity and monotonicity give x≤f(x) and a=f(o)≤f(x). If y is any upper bound of x and a, then y∈↑a, so f(y)=y; monotonicity gives f(x)≤f(y)=y. Hence
 
-$$
+```math
 f(x)=x\lor a.
 \tag{5}
-$$
+```
 
 Thus joining with a exists for every x, and the qualifying reader of a is unique.
 
@@ -91,7 +91,7 @@ Conversely, if x∨a exists for every x, f_a(x)=x∨a is inflationary, monotone 
 
 To separate propositions at the root, the possible read points must include every a∈P. Otherwise the distinct propositions ∅ and {a} have the same truth under all qualifying observers. Conversely readers at every point distinguish every pair of different subsets. With Functionality this gives every relational separation instance. We have proved:
 
-$$
+```math
 \boxed{
 \begin{array}{c}
 \text{The full model on finite rooted P satisfies IdemBoxSep}\
@@ -99,7 +99,7 @@ $$
 \text{every pair of points of P has a join.}
 \end{array}}
 \tag{6}
-$$
+```
 
 The failure direction is already propositional at Δ={t}; the success direction supplies all types and all finite lists. If P is a join-semilattice, every ↑x is one as well. Hence the same construction satisfies □IdemBoxSep.
 
@@ -109,9 +109,9 @@ Equation (6) is an exact characterization for this model family. It is not an as
 
 Take P={o,x,a,b,c,1}, ordered in four levels
 
-$$
+```math
 \{o\}<\{x,a\}<\{b,c\}<\{1\},
-$$
+```
 
 where every point in a lower displayed level lies below every point in a higher one, and different points in a two-point level are incomparable. The pair x,a has two incomparable minimal upper bounds b,c, so no join. By (6), IdemBoxSep fails at the root.
 
@@ -130,10 +130,10 @@ Each row satisfies (3). For the a-reader, the cone images at o,x,a are respectiv
 
 This proves the strict implication, over H,
 
-$$
+```math
 \mathrm{IdemBoxSep}\quad\Longrightarrow\quad\mathrm{BoxSep}.
 \tag{7}
-$$
+```
 
 The countermodel retains C, □BF, □Functionality, □Atomicity_t and □OS. It does not rely on a failure of the ordinary idempotent-observer normalization.
 
@@ -141,13 +141,13 @@ The countermodel retains C, □BF, □Functionality, □Atomicity_t and □OS. I
 
 The six-point example belongs to a family with a sharp native-Box threshold. For positive finite integers m,n, let P_{m,n} have four levels: a root, an antichain A of m points, an antichain B of n points, and a top. Every point in a lower level lies below every point in a higher level. In the full model on this frame,
 
-$$
+```math
 \begin{aligned}
 \mathrm{BoxSep}&\quad\Longleftrightarrow\quad m=1\ \text{or}\ n\le m,\\
 \mathrm{IdemBoxSep}&\quad\Longleftrightarrow\quad m=1\ \text{or}\ n=1.
 \end{aligned}
 \tag{7a}
-$$
+```
 
 These external integer conditions characterize the specified finite model family. They are not object-language cardinality principles.
 
@@ -165,12 +165,12 @@ In particular P_{2,3}, a seven-point frame, has no BoxSep. It nonetheless satisf
 
 Take the four-point diamond o<a,b<1, with a,b incomparable. It is a join-semilattice, so §4 gives full □IdemBoxSep. It fails C5: the nonzero proposition {o} becomes Bottom at a. It also refutes the following reflexive form of the modal linearity principle .3:
 
-$$
+```math
 (\Diamond p\land\Diamond q)\to
 \bigl[\Diamond(p\land\Diamond q)
  \lor\Diamond(q\land\Diamond p)\bigr].
 \tag{8}
-$$
+```
 
 Set p={a} and q={b}. Both diamonds in the antecedent hold at o. The only p-point is a, from which no q-point is accessible; symmetrically no p-point is accessible from b. Both disjuncts in the consequent are false.
 
@@ -178,11 +178,11 @@ Thus even necessary IdemBoxSep, with the necessary BF, Functionality and proposi
 
 Combining this example with (1) gives the following exact comparisons. IdemBoxSep and Rev are incomparable: the diamond refutes IdemBoxSep⇒Rev, since Rev implies C5. Conversely any C5 model of Rev failing Extensionality refutes Rev⇒IdemBoxSep. The existing [two-colour symmetry model](finite-pinning-dedekind-propositions.md), §4, supplies such a model. Furthermore
 
-$$
+```math
 \boxed{\mathrm{IdemBoxSep}+\mathrm{Rev}
  \ \Longleftrightarrow\ \mathrm{Extensionality}.}
 \tag{9}
-$$
+```
 
 This conjunction permits different separating observer families. Rev supplies C5; equation (1) then applies. Extensionality supplies both factors.
 
@@ -200,12 +200,12 @@ The terminal cluster itself has endpoint separation: the two constant coordinate
 
 Consequently the root satisfies
 
-$$
+```math
 \mathrm{IdemBoxSep}+\Box\mathrm{OS}
 +\Box\mathrm{BF}+\Box\mathrm{Functionality},
 \qquad\neg\Box\mathrm{IdemBoxSep}.
 \tag{10}
-$$
+```
 
 This does not conflict with persistence of each whole idempotence identity. As in the earlier inverse examples, the additional separating power need not persist when parameters and propositions are transported.
 

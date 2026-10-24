@@ -10,13 +10,13 @@ Let L={0,a,b,1}. Give L two orders: the diamond order with incomparable a,b, and
 
 Take a nonempty individual domain, D_t=2×L, and the full function space at every higher relational type. Application and lambda abstraction are ordinary function application and abstraction. A proposition (i,l) is true just when i=1. Interpret the primitives by
 
-$$
+```math
 \begin{aligned}
 (i,l)\land(j,m)&:=(i\land j,l\land_d m),\\
 (i,l)\lor(j,m)&:=(i\lor j,l\lor_c m),\\
 \neg(i,l)&:=(1-i,c(l)).
 \end{aligned}
-$$
+```
 
 For every type σ and every admitted F:σt, interpret universal quantification by the coordinatewise Boolean and diamond meets of its values, and existential quantification by the coordinatewise Boolean and chain joins. The finite lattices are complete, so this defines quantification over every higher domain, however large. Equality at every type has value (1,1) for equal domain elements and (0,0) otherwise.
 
@@ -28,9 +28,9 @@ The fixed formula u:=∀p p has value (0,0). Its negation has value (1,1), so th
 
 For l∈L with l≠0, define an admitted endpoint-valued observer
 
-$$
+```math
 E_l(i,m):=\begin{cases}T&l\le_d m,\\B&\text{otherwise.}\end{cases}
-$$
+```
 
 Also let E_*(i,m) be T if i=1 and B otherwise. These are admitted because the type tt is a full function domain.
 
@@ -44,15 +44,15 @@ There is a stronger version. The diamond is a four-element Boolean algebra. The 
 
 For l∈{0,a,b}, define
 
-$$
+```math
 D_l(i,m):=\begin{cases}T&m\not\le_c l,\\B&\text{otherwise.}\end{cases}
-$$
+```
 
 Use these observers together with E_*. They fix both endpoints and all identity judgments. For every admitted nonempty family (m_x),
 
-$$
+```math
 \sup_c(m_x)\not\le_c l\quad\Longleftrightarrow\quad\exists x\,(m_x\not\le_c l).
-$$
+```
 
 This follows because l is an upper bound of the family exactly when every member is below l. It proves existential preservation; the two-input instance proves disjunction preservation. The endpoint operations are the Boolean join operations, so these are output identities and hence full composite identities.
 
@@ -64,9 +64,9 @@ Separation by any class preserving both primitive conjunction and primitive disj
 
 Here choose p=(0,a) and q=(0,b). Then
 
-$$
+```math
 p\lor q=(0,b),\qquad p\land(p\lor q)=(0,0)\ne(0,a)=p.
-$$
+```
 
 Thus even material common-class conjunction/disjunction separation fails. In particular C fails, since C identifies the H-equivalent formulas p and p∧(p∨q).
 

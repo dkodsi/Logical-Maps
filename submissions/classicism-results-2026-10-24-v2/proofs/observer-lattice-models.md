@@ -6,12 +6,12 @@ Use the full typed OS and finite-image separation Fin defined in [the main hiera
 
 The two results are:
 
-$$
+```math
 \begin{aligned}
 \text{Full omega chain:}&\quad\mathrm C+\Box\mathrm{Atomicity}_t+\Box\mathrm{BF}+\Box\mathrm{OS}+\neg\mathsf{Fin},\\
 \text{Root extension:}&\quad\mathrm C+\Box\mathrm{BF}+\mathsf{Fin}+\neg\mathrm{Atomicity}_t+\neg\Box\mathrm{OS}.
 \end{aligned}
-$$
+```
 
 Thus Fin is incomparable with C + Atomicity_t + BF and with ☐OS. The second model also fails ND_t.
 
@@ -35,36 +35,36 @@ Suppose E is Good_{t} and has finite image. At 0 it is a Boolean homomorphism fr
 
 For n∈C the truth test
 
-$$
+```math
 h(p):=[n\in E_0(p)].
-$$
+```
 
 is independent of which n in C is used, because each E_0(p) is a union of whole cells. It is a Boolean truth homomorphism.
 
 If p is finite, choose n∈C above its support. Naturality of application gives
 
-$$
+```math
 E_0(p)\restriction T_n=E_n(p\restriction T_n)=E_n(\varnothing).
-$$
+```
 
 The last proposition is empty, because the transported observer fixes Bottom. Hence h(p) is false. It follows by Boolean preservation that h accepts every cofinite proposition.
 
 Fullness admits a property F of propositions with the following truth profile, at every m and x⊆T_m:
 
-$$
+```math
 F_m(x)\text{ is true at }m\quad\leftrightarrow\quad x\ne\{m\}.
-$$
+```
 
 For a fixed p⊆N, the proposition F_0(p) is true at m iff p∩T_m≠{m}. It can fail only at the maximum of a nonempty finite p. Thus F_0(p) is always cofinite. But (∀p Fp)_0 is empty: at every m the current input x={m} falsifies F.
 
 Choose n∈C. Since every F_0(p) is cofinite, E_0(F_0(p)) contains n. Every x⊆T_n extends to some p⊆N; naturality of F and E then shows that E_n(F_n(x)) is true at n for every x. Consequently
 
-$$
+```math
 \begin{aligned}
 &\forall x\,E_n(F_n(x))\text{ is true at }n,\\
 &E_n(\forall x\,F_n(x))=E_n(\varnothing)\text{ is false at }n.
 \end{aligned}
-$$
+```
 
 This contradicts the transported full Q_t identity. The comparison must be evaluated at n∈C, not necessarily at 0. Hence no finite-image Good_{t} observer exists at 0. Since Top and Bottom are distinct, the (t,{t}) finite-image separation instance fails.
 
@@ -76,33 +76,33 @@ Let B be the existing qualitative-contrast action model, keeping its two objects
 
 Adjoin a fresh predecessor * with an arrow i:*→W0. The arrows from * to an old object V are g∘i for old g:W0→V. There is no arrow from an old object to *. Define root domains recursively. Write π for transport along i. For individuals use A_e=B_e(W0), π_e=id. For each relational type τ=σ₁…σ_k t, including k=0 for t, put
 
-$$
+```math
 A_\tau=\{0,1\}^{A_{\sigma_1}\times\cdots\times A_{\sigma_k}}\times B_\tau(W_0),
 \qquad\pi_\tau(f,b)=b.
-$$
+```
 
 Thus A_t={0,1}×B_t(W0). Root truth is its first coordinate. Every projection π_σ is onto, and later transports are the old g_σ composed with π_σ.
 
 Application sections the first truth function and applies the second component to the projected argument. In particular, if F=(f,b) has type σt and x∈A_σ,
 
-$$
+```math
 F(x)=(f(x),b(\pi_\sigma x)).
-$$
+```
 
 For curried types the same rule returns the section f(x,−) together with the old curried application. Boolean operations act by ordinary Boolean operations on root truth functions and by the old Boolean operations on tails. For a predicate F=(f,b),
 
-$$
+```math
 \begin{aligned}
 \forall_\sigma F&=(\forall x\in A_\sigma\,f(x),\forall_\sigma^B b),\\
 \exists_\sigma F&=(\exists x\in A_\sigma\,f(x),\exists_\sigma^B b).
 \end{aligned}
-$$
+```
 
 The equality proposition of x,y∈A_σ is
 
-$$
+```math
 \bigl(\delta(x,y),\,(\pi_\sigma x=\pi_\sigma y)^B\bigr).
-$$
+```
 
 Lambda abstraction takes the actual root truth function of its body and the old abstraction evaluated under the projected assignment. This rule is well-defined recursively at every admitted type.
 
@@ -118,29 +118,29 @@ Every π_σ is onto; every old arrow acts bijectively at every type. All root-to
 
 At W0, retain the admitted principal observer
 
-$$
+```math
 B_A(p):=\Box(A\to p).
-$$
+```
 
 It reads the W0-target component, is endpoint-valued, and satisfies every finite Good list by full composite identities. The direct proof at each old object is in the local observer proof §4: transported A remains the atom of all W0-target arrows; Boolean operations and the admitted quantifiers preserve its two-valued reading. The groupoid's bijective type actions supply the universal and existential laws.
 
 For every old arrow g:W0→V define a root observer E_g=(f_g,B_A), and define E_*=(f_*,B_A), by
 
-$$
+```math
 \begin{aligned}
 f_g(p)&:=\text{the truth at }V\text{ of }g_t(\pi_t p),\\
 f_*(p)&:=\text{the root truth of }p.
 \end{aligned}
-$$
+```
 
 All are admitted because the root truth function is unrestricted. Their values are
 
-$$
+```math
 \begin{aligned}
 E_g(p)&=(f_g(p),B_A(\pi_t p)),\\
 E_*(p)&=(f_*(p),B_A(\pi_t p)).
 \end{aligned}
-$$
+```
 
 Each image is contained in the finite list of pairs (ε,Bottom_B) and (ε,Top_B), ε∈{0,1}. Such a finite list witnesses the internal finite-cardinality formula, so each has finitely many outputs in the required sense.
 
@@ -164,11 +164,11 @@ The accessible object W0 still fails Boolean separation, the (t,empty) OS instan
 
 Writing At for C + BF + Atomicity_t and Nec for ☐OS, the models give
 
-$$
+```math
 \mathsf{At}+\mathsf{Nec}\ \nvdash\ \mathsf{Fin},\qquad
 \mathsf{Fin}+\Box\mathrm{BF}\ \nvdash\ \mathsf{At},\qquad
 \mathsf{Fin}+\Box\mathrm{BF}\ \nvdash\ \mathsf{Nec}.
-$$
+```
 
 In particular Fin and At are incomparable, and Fin and Nec are incomparable. Fin + Nec is a genuine stronger node than either alone. The two-object-chain model satisfies it and fails ND_t, so it remains strictly weaker than endpoint separation.
 

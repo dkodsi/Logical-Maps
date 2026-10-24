@@ -1016,9 +1016,9 @@ Pure SP proves every true Π⁰₂ arithmetic sentence under the specified pure 
 
 The supplied ordinary proof proposes that pure Maximalism proves exactly the ordinary first-order arithmetic consequences of the positive packages’ common arithmetic theory together with all standard-true Π₁ sentences.
 
-$$
+```math
 \mathrm{Th}_{\mathrm{arith}}(\mathrm{Max}(C))=\mathrm{Cn}\bigl(T_{\mathrm{arith}}\cup\mathrm{True}_{\Pi_1}\bigr).
-$$
+```
 
 **Scope:** Finitary pure Maximalism over fixed C, with the fixed Frege interpretation at any fixed counting type. T_arith is the ordinary arithmetic consequence theory shared by C+I and the positive quantified-Infinity packages. Standard truth on the right is metalinguistic; Cn means first-order deductive closure. This is a claim about actual arithmetic theorems, not higher-order/modal conservation or SP consistency.
 
@@ -1303,10 +1303,10 @@ The positive theories, Max and SP occupy three successive levels of computationa
 
 | Pure theory | Theoremhood | Oracles computing some adequate countable model |
 |---|---|---|
-| C + ☐Plenitude + Axiom of Infinity (types e and t) | $\Sigma^0_1$-complete | PA degrees |
-| C + ☐Functional Choice + Axiom of Infinity (types e and t) | $\Sigma^0_1$-complete | PA degrees |
-| Max | $\Sigma^0_2$-complete | PA degrees over $0'$ |
-| SP, **if consistent** | $\Sigma^0_3$-complete | PA degrees over $0''$ |
+| C + ☐Plenitude + Axiom of Infinity (types e and t) | $`\Sigma^0_1`$-complete | PA degrees |
+| C + ☐Functional Choice + Axiom of Infinity (types e and t) | $`\Sigma^0_1`$-complete | PA degrees |
+| Max | $`\Sigma^0_2`$-complete | PA degrees over $`0'`$ |
+| SP, **if consistent** | $`\Sigma^0_3`$-complete | PA degrees over $`0''`$ |
 
 Adequate codes provide term interpretation and actual truth. PA degree over an oracle means the ability to compute a binary diagonally nonrecursive function relative to it; ordinary PA degrees use no oracle. The positive bounds already hold with the weaker Infinity schema at one admitted type. The theoremhood classifications persist under consistent extensions enumerable in the corresponding oracle.
 
@@ -1457,7 +1457,7 @@ Over the specified λ-free classical typed applicative base, full typed endpoint
 
 **Attribution:** OpenAI Codex, prompted by Daniel Kodsi, 24 October 2026; source misc, lambda-free-endpoint-comprehension.md §§1–6, unpaginated. The finite reconstruction and ZF representation retain their cited sources and certification scopes.
 
-**Proof length:** long (9,087 words in the [selected exposition](proof-lengths.json)).
+**Proof length:** long (9,112 words in the [selected exposition](proof-lengths.json)).
 
 **Proof locators:** lambda-free-endpoint-comprehension.md §§1–6; lambda-free-reconstruction.md §§1–6; intrinsic-observer-axioms.md §§3–7
 
@@ -1666,13 +1666,13 @@ Over C + ☐Plenitude, one admitted operator choosing, for each nonzero proposit
 
 Separation of propositions by diagonal characters is equivalent over C to ND (type t) together with Atomicity (type t).
 
-**Scope:** For $E^{tt}$, put
+**Scope:** For $`E^{tt}`$, put
 
-$$
+```math
 w_E:=\forall p^t\, .\,Ep\to p.
-$$
+```
 
-A diagonal character preserves bottom and negation, has only top or bottom as each current value, and accepts $w_E$.
+A diagonal character preserves bottom and negation, has only top or bottom as each current value, and accepts $`w_E`$.
 
 **Significance:** A single diagonal acceptance condition replaces a much larger quantifier-preservation demand. Each character determines a necessarily nonbottom atom; no Barcan, C5 or Choice assumption is needed.
 

@@ -8,7 +8,7 @@ Restrictions on observer truth, number and output range have different effects. 
 
 Use the fixed relational language and the usual fixed abbreviations T for Top and B for Bottom. H proves T true, B false and T distinct from B. For E of type tt put
 
-$$
+```math
 \begin{aligned}
 A(E)&:=ET,& Z(E)&:=\neg EB,\\
 \mathrm{Fact}(E)&:=\forall p\,(Ep\to p),&
@@ -16,40 +16,40 @@ A(E)&:=ET,& Z(E)&:=\neg EB,\\
 \mathrm{Correct}(E)&:=\forall p\,(Ep\leftrightarrow p),&
 N_{\rm mat}(E)&:=\forall p\,[E(\neg p)\leftrightarrow\neg Ep].
 \end{aligned}
-$$
+```
 
 Inflationarity here concerns ordinary truth implication; it is not an order relation between proposition objects. Factivity is likewise truth reflection. The two endpoint clauses A,Z assert acceptance and rejection, not output identities.
 
 For a qualification K(E), write
 
-$$
+```math
 S[K]:=\forall p,q\left[
 p=q\leftrightarrow\forall E\bigl(K(E)\to(Ep\leftrightarrow Eq)\bigr)
 \right].
-$$
+```
 
 The relational instance Sep_tau[K], for tau=sigma_1...sigma_n t, tests E(X[arguments]) and E(Y[arguments]) at every current argument tuple. FullSep[K] is the schema at every relational type. The [general H lifting theorem](typed-separation-and-classicism.md), §2, gives
 
-$$
+```math
 \mathrm{FullSep}[K]
 \quad\leftrightarrow\quad
 S[K]+\mathrm{Functionality}.
-$$
+```
 
 Functionality is the explicit schema from pointwise identity to identity of functions with relational codomain. It is not a background rule in the arguments below.
 
 Define the two one-sided truth collapses
 
-$$
+```math
 \mathrm{NC}:=\forall p\,(\neg p\to p=B),\qquad
 \mathrm{PC}:=\forall p\,(p\to p=T).
-$$
+```
 
 The Fregean Axiom FA says materially equivalent propositions are identical. Over H,
 
-$$
+```math
 \mathrm{FA}\quad\leftrightarrow\quad \mathrm{NC}\land\mathrm{PC}.
-$$
+```
 
 Indeed false propositions then all equal B and true propositions all equal T. Conversely FA identifies a false proposition with B and a true proposition with T.
 
@@ -57,19 +57,19 @@ Indeed false propositions then all equal B and true propositions all equal T. Co
 
 **Theorem 1.** Over H,
 
-$$
+```math
 \boxed{S[\mathrm{Fact}]
 \ \leftrightarrow\
 S[A\land Z\land\mathrm{Fact}]
 \ \leftrightarrow\ \mathrm{NC},}
-$$
+```
 
-$$
+```math
 \boxed{S[\mathrm{Infl}]
 \ \leftrightarrow\
 S[A\land Z\land\mathrm{Infl}]
 \ \leftrightarrow\ \mathrm{PC}.}
-$$
+```
 
 Either or both endpoint truth conditions may also be imposed separately, with the same respective characterization.
 
@@ -81,9 +81,9 @@ Conversely assume NC. The identity observer I(r):=r satisfies A, Z and Fact, and
 
 Let p,q be distinct true propositions. At least one differs from T; take such a proposition as a and use the admitted term
 
-$$
+```math
 F_a(r):=r\land(r\ne a).
-$$
+```
 
 This is factive by its truth clause. It rejects B, and it accepts T because a differs from T. At a it is false, whereas at the other member of p,q it is true. Hence these endpoint-qualified factive tests separate every distinct pair, proving the strongest displayed version. No conjunction identity, identity bivalence or admission of an external function is used.
 
@@ -93,9 +93,9 @@ If p is true, every inflationary observer accepts p and T. Separation gives p=T,
 
 Conversely assume PC. Identity again distinguishes different-truth pairs. A distinct same-truth pair must now be false. Choose a member a different from B and use
 
-$$
+```math
 G_a(r):=r\lor(r=a).
-$$
+```
 
 This is inflationary by its truth clause. It accepts T and rejects B because a differs from B. It accepts a and rejects the other false member of the pair. Thus A,Z-qualified inflationary tests separate.
 
@@ -109,25 +109,25 @@ The distinction is witnessed by finite full-function H models. Take three propos
 
 **Lemma.** Over H,
 
-$$
+```math
 \mathrm{Fact}(E)\land N_{\rm mat}(E)
 \ \longrightarrow\ \mathrm{Correct}(E),
-$$
+```
 
-$$
+```math
 \mathrm{Infl}(E)\land N_{\rm mat}(E)
 \ \longrightarrow\ \mathrm{Correct}(E).
-$$
+```
 
 For the first implication, apply factivity to neg p. Negation preservation turns the result into neg Ep implies neg p; contraposition gives p implies Ep. For the second, apply inflationarity to neg p and contrapose to obtain Ep implies p. These are truth-level arguments only.
 
 More generally, suppose H proves K(I) and proves that every K-observer is Correct. Then, at each fixed relational type tau,
 
-$$
+```math
 \boxed{\mathrm{Sep}_{\tau}[K]
 \quad\leftrightarrow\quad
 \mathrm{Extensionality}_{\tau}.}
-$$
+```
 
 If two relations are coextensive, truth-correct observers agree on all their values, so separation identifies them. Conversely agreement under all qualified observers includes agreement under identity, which is coextension; Extensionality identifies the relations.
 
@@ -141,10 +141,10 @@ Thus adding both endpoint truth conditions to factivity leaves the one-sided col
 
 For a particular observer E write
 
-$$
+```math
 \mathrm{OneSep}(E):=
 \forall p,q\,[p=q\leftrightarrow(Ep\leftrightarrow Eq)].
-$$
+```
 
 This says that the singleton family containing E separates propositions. It does not say E is the only observer satisfying some independently specified qualification.
 
@@ -154,41 +154,41 @@ Since T differs from B, OneSep forces ET and EB to have opposite truth values. F
 
 Conversely FA makes identity a singleton separating family. Therefore, whenever H proves K(I),
 
-$$
+```math
 \boxed{\exists E\,[K(E)\land\mathrm{OneSep}(E)]
 \quad\leftrightarrow\quad\mathrm{FA}.}
-$$
+```
 
 This does not imply that the entire qualified class is a singleton. For example, with no qualification, both identity and negation remain distinct observers even when FA holds.
 
 Now define the different assertion
 
-$$
+```math
 \mathrm{AtMostOne}[K]:=
 \forall E,F\,[(K(E)\land K(F))\to E=F].
-$$
+```
 
 **Theorem 2.** For arbitrary K, over H,
 
-$$
+```math
 S[K]+\mathrm{AtMostOne}[K]\ \longrightarrow\ \mathrm{FA},
-$$
+```
 
-$$
+```math
 \mathrm{FullSep}[K]+\mathrm{AtMostOne}[K]
 \ \longrightarrow\ \mathrm{Extensionality}.
-$$
+```
 
 Separation of T and B ensures some eligible observer exists and distinguishes them: otherwise every eligible observer would agree on T,B. At-most-one makes every eligible observer identical to this witness E. Thus S[K] becomes OneSep(E), and the lemma gives FA. Full typed separation additionally gives Functionality, which lifts propositional identity under material coextension to identity of arbitrary relations.
 
 For an exact converse, suppose H proves K(I) and K(E) implies A(E) and Z(E). Then
 
-$$
+```math
 \boxed{
 \mathrm{FullSep}[K]+\exists!E\,K(E)
 \quad\leftrightarrow\quad
 \mathrm{Extensionality}.}
-$$
+```
 
 The existential uniqueness can equivalently be replaced by AtMostOne[K], since separation already supplies existence.
 
@@ -200,20 +200,20 @@ The role of uniqueness is therefore precise: a single separating subfamily is en
 
 Fix an external natural number n at least one. Define separation by a specified list E_1,...,E_n by
 
-$$
+```math
 \forall p,q\left[
 p=q\leftrightarrow
 \bigwedge_{i=1}^{n}(E_i p\leftrightarrow E_i q)
 \right].
-$$
+```
 
 Its truth-profile vector assigns to each proposition one of the 2^n Boolean patterns and distinguishes different propositions. Consequently it entails the finite sentence asserting that there are at most 2^n proposition objects:
 
-$$
+```math
 \mathrm{AtMost}_{2^n}(t):=
 \forall p_0,\ldots,p_{2^n}\,
 \bigvee_{0\le i<j\le 2^n}(p_i=p_j).
-$$
+```
 
 The proof is the ordinary finite pigeonhole argument, expanded into a finite H truth-case argument. It does not identify observer outputs as proposition objects with Boolean numbers.
 
@@ -221,22 +221,22 @@ The same bound follows from S[K] if all qualified observers are among an explici
 
 There is an exact converse when no observer qualification is imposed:
 
-$$
+```math
 \boxed{
 \exists E_1,\ldots,E_n\ \text{whose listed truth profiles separate}
 \quad\leftrightarrow\quad
 \mathrm{AtMost}_{2^n}(t).}
-$$
+```
 
 To prove it, the finite cardinal bound supplies a finite enumeration by k distinct objects a_1,...,a_k with k at most 2^n. This is finite classical reasoning in H: successively choose an unlisted object if one exists; exceeding 2^n distinct choices contradicts the bound. Equivalently, use the resulting finite disjunction of existential enumeration formulas for k=1,...,2^n. No choice schema is required.
 
 Assign the enumerated objects distinct n-bit patterns. For each coordinate i, use the admitted term
 
-$$
+```math
 E_i(r):=\bigvee_{\substack{1\le j\le k\\
                          \text{bit }i\text{ of }j\text{'s code is }1}}
                    (r=a_j).
-$$
+```
 
 An empty disjunction means the fixed false B. H truth conditions make these profiles exactly the chosen codes, so they separate. No pointwise or full-operation preservation is asserted for these coding observers.
 
@@ -246,34 +246,34 @@ All n, k, finite conjunctions and finite disjunctions in this section are extern
 
 Retain the notation and theorem of [Identity-fixing observers and identity collapse over H](identity-collapse.md): z:=(T=B), IC_t collapses each true propositional identity judgment to T and each false one to z. Define
 
-$$
+```math
 \mathrm{Range}_{T,z}(E):=
 \forall r\,(Er=T\lor Er=z),
-$$
+```
 
-$$
+```math
 \mathrm{Idem}^{\rm pt}(E):=
 \forall r\,E(Er)=Er,\qquad
 \mathrm{Idem}^{\rm op}(E):=
 (\lambda r.E(Er))=E.
-$$
+```
 
 Under IC_t, the separating witnesses in that note are
 
-$$
+```math
 E_0(r):=(r=T),\qquad
 E_a(r):=((r=T)=((r=a)=z))
 \quad(a\ne T,\ a\ne z).
-$$
+```
 
 Their exact output calculations show that their images lie in {T,z} and that they fix both T,z. They are therefore pointwise idempotent. Hence, for either Q equal to CorrectEq_t or to FixEq_t^pt,
 
-$$
+```math
 \boxed{
 S[A\land Q\land\mathrm{Range}_{T,z}
                   \land\mathrm{Idem}^{\rm pt}]
 \quad\leftrightarrow\quad \mathrm{IC}_t.}
-$$
+```
 
 Forward, discard the two extra restrictions and apply the identity-collapse theorem. Backward, its same admitted witnesses already satisfy both extra clauses. Either extra clause can also be imposed alone.
 

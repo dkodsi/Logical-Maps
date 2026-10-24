@@ -9,12 +9,12 @@ arguments retain their existing attributions. This note has no Lean certificate.
 The recorded conjecture asks whether the following four premises are
 incompatible over the map's fixed Classicism:
 
-$$
+```math
 \Box\mathrm{RigidComprehension},\quad
 \mathrm{IntensionalChoice},\quad
 \mathrm{ForcingPossibilism}_{<},\quad
 \mathrm{NonContingencyOfCH}.
-$$
+```
 
 Here the subscript emphasizes the **existing** definition: Forcing Possibilism
 requires representations only of complete Boolean algebras which are finite

@@ -6,24 +6,24 @@ Ordinary mathematical research by OpenAI Codex, prompted by Daniel Kodsi, 24 Oct
 
 Use the observer qualifications and separation tiers of [Local separation tiers](local-tiers-and-models.md), §3. In particular,
 
-$$
+```math
 M_{\rm mat}(E):\quad\forall p,q\,[E(p\land q)\leftrightarrow(Ep\land Eq)],
-$$
+```
 
-$$
+```math
 M_{\rm pt}(E):\quad\forall p,q\,[E(p\land q)=Ep\land Eq].
-$$
+```
 
 The qualifications V_mat and V_pt are the analogous disjunction laws. A(E) means ETop is true, and Z(E) means EBottom is false. An optional orientation O is any of no condition, A, Z or A∧Z. Sep_t is propositional separation; FullSep is separation at every relational type.
 
 Let All:=λp.Top and let Fin_t(All) be internal Frege finiteness, as defined in §2. Then, for every such O,
 
-$$
+```math
 \boxed{\mathrm H+\mathrm{Fin}_t(\mathrm{All})\ \vdash\
 \mathrm{Sep}_t[O\land M_{\rm mat}]
 \leftrightarrow\mathrm{Sep}_t[O\land M_{\rm pt}].}
 \tag{1}
-$$
+```
 
 The same equivalence holds with V in place of M, and at full typed scope. At full typed scope the whole-operation tier is equivalent to these two tiers as well. At propositional scope, passing to the whole-operation tier requires the local Functionality instances specified in §6.
 
@@ -33,21 +33,21 @@ The normalization uses a least true proposition in the meet order, or a greatest
 
 The [background definition](../../source/topics/classicism/background.md) is
 
-$$
+```math
 \mathbf0:=\lambda U.\forall x\neg Ux,
 \qquad
 \mathrm{Suc}(Z):=\lambda U.\exists y\,[Uy\land Z(\lambda x.Ux\land x\ne y)],
-$$
+```
 
-$$
+```math
 \mathrm{FiniteCardinality}_t(Z):=
 \forall W\,[(W\mathbf0\land\forall Y(WY\to W(\mathrm{Suc}(Y))))\to WZ],
-$$
+```
 
-$$
+```math
 \mathrm{Fin}_t(\mathrm{All}):=
 \exists Z^{(tt)t}\,[\mathrm{FiniteCardinality}_t(Z)\land Z(\mathrm{All})].
-$$
+```
 
 All these types are admitted. Internal finiteness neither supplies a standard external enumeration nor says that its cardinality witness is a standard numeral.
 
@@ -55,13 +55,13 @@ All these types are admitted. Internal finiteness neither supplies a standard ex
 
 **Proof.** Fix C. Comprehend the following property of cardinality objects:
 
-$$
+```math
 W(Z):=\forall U\left[ZU\to
 \left((\exists x\,[Ux\land Cx])\to
 \exists b\left[Cb\land
 \forall x\,((Ux\land Cx)\to b\le x)\right]\right)\right].
 \tag{2}
-$$
+```
 
 At cardinality zero, U has no members, so the antecedent asserting a member of U∩C is false. Thus W(0).
 
@@ -81,46 +81,46 @@ For a join semilattice, apply the same argument with its order reversed: every a
 
 Assume conjunction satisfies its associativity, commutativity and idempotence identities. Suppose u is true and least among the true propositions in its meet order:
 
-$$
+```math
 u,\qquad\forall p\,[p\to u\land p=u].
 \tag{3}
-$$
+```
 
 Put
 
-$$
+```math
 d:=u\land\neg u,
 \qquad n(p):=u\land\neg(u\land p),
 \qquad\chi(p):=n(n(p)).
 \tag{4}
-$$
+```
 
 Here u is true, d is false, and d≤u. All operations in (4) are explicitly admitted terms.
 
 If p is true, (3) gives u∧p=u, so n(p)=d. If p is false, u∧p is false, hence ¬(u∧p) is true; (3) then gives n(p)=u. Applying this calculation twice gives the identities
 
-$$
+```math
 p\ \Longrightarrow\ \chi(p)=u,
 \qquad
 \neg p\ \Longrightarrow\ \chi(p)=d.
 \tag{5}
-$$
+```
 
 Thus χ preserves current truth, takes exactly the two values u,d, and fixes both. In particular χ(χ(p))=χ(p). These are output identities, not just a claim about χ's truth profile.
 
 Given any materially meet-preserving observer E, define
 
-$$
+```math
 E'(p):=\chi(Ep).
 \tag{6}
-$$
+```
 
 Its truth profile is exactly E's. The two values u,d form a two-element meet chain, with u∧u=u, u∧d=d∧u=d and d∧d=d. Therefore the material M law for E and (5) imply, in all four truth cases for Ep and Eq,
 
-$$
+```math
 E'(p\land q)=E'p\land E'q.
 \tag{7}
-$$
+```
 
 Hence E' satisfies M_pt. Any A or Z condition on E survives, since E' has the same truth at every input. No equation identifying u with Top or d with Bottom is claimed; endpoint fixing is a different restriction.
 
@@ -130,19 +130,19 @@ This proves the stronger local assertion: under the semilattice equations and (3
 
 Assume disjunction satisfies the join-semilattice equations. Let v be false and greatest among the false propositions in its join order:
 
-$$
+```math
 \neg v,\qquad\forall p\,[\neg p\to v\lor p=v].
 \tag{8}
-$$
+```
 
 Put
 
-$$
+```math
 u:=v\lor\neg v,
 \qquad n(p):=v\lor\neg(v\lor p),
 \qquad\chi(p):=n(n(p)).
 \tag{9}
-$$
+```
 
 Then v is false, u is true and v≤u in the join order. If p is false, v∨p=v and n(p)=u. If p is true, v∨p is true and its negation is false, so (8) gives n(p)=v. Thus χ(p)=u when p is true and χ(p)=v when p is false.
 
@@ -164,10 +164,10 @@ The argument transfers every observer's entire truth profile. It therefore prove
 
 At propositional scope, (7) alone does not identify its two abstracted operations. Assume the local Functionality instances at t,t and t,tt. First apply Functionality at t,t, for each fixed p, to the two q-operations in (7). Then apply Functionality at t,tt to the resulting p-operations. This yields
 
-$$
+```math
 (\lambda p,q.E'(p\land q))
 =(\lambda p,q.E'p\land E'q).
-$$
+```
 
 The same argument applies to V. Hence internal finiteness plus these two local Functionality instances collapses all three propositional separation tiers for M or V, with any of the four A/Z orientations.
 

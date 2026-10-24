@@ -12,16 +12,16 @@ The construction distinguishes outer domains A_σ, used to interpret lambda abst
 
 Choose nonempty sets A_e and A_t. At every allowed arrow type put
 
-$$
+```math
 A_{\sigma\rho}:=A_\rho^{A_\sigma},\qquad\rho\ne e.
-$$
+```
 
 Choose nonempty D_e⊆A_e and D_t⊆A_t. Define recursively
 
-$$
+```math
 D_{\sigma\rho}:=
 \{f\in A_{\sigma\rho}:f[D_\sigma]\subseteq D_\rho\}.
-$$
+```
 
 All terms are evaluated in the full outer function hierarchy. Application is actual function application, and λx^σ.M is the function on **all of A_σ** obtained by varying x. Logical constants are total outer functions chosen so that they belong to their admitted domains. Relational constants may be any elements of their admitted domains; individual constants must belong to D_e.
 
@@ -29,7 +29,7 @@ An admissible assignment sends each variable of type σ into D_σ. By induction,
 
 Choose a truth map tr:D_t→{0,1}. On admitted inputs, interpret the logical operations so that
 
-$$
+```math
 \begin{aligned}
 \mathrm{tr}(\neg p)&=1-\mathrm{tr}(p),\\
 \mathrm{tr}(p\land q)&=\mathrm{tr}(p)\land\mathrm{tr}(q),\\
@@ -38,7 +38,7 @@ $$
 \quad\Longleftrightarrow\quad
 \forall x\in D_\sigma\;\mathrm{tr}(Fx)=1,
 \end{aligned}
-$$
+```
 
 with the analogous existential clause. Identity judgments are true exactly when their admitted arguments are the same outer-domain element. The examples below give explicit total interpretations meeting these requirements.
 
@@ -50,20 +50,20 @@ Outer assignments need not satisfy H's truth conditions: their role is to define
 
 Take
 
-$$
+```math
 A_e=\{0,1\},\quad D_e=\{0\},\qquad
 A_t=D_t=\{0,1\}.
-$$
+```
 
 Truth is the ordinary Boolean value. In this example D_σ=A_σ for every relational σ. This follows by induction: every relational codomain already has its entire outer domain admitted, so every outer function into it is admitted. Only the individual domain is smaller than its outer domain.
 
 Interpret negation, conjunction and disjunction by the ordinary Boolean operations. Set
 
-$$
+```math
 \forall_\sigma F=\bigwedge_{x\in D_\sigma}Fx,
 \qquad
 \exists_\sigma F=\bigvee_{x\in D_\sigma}Fx,
-$$
+```
 
 and let equality at σ return the Boolean value of actual identity in A_σ. These are total outer functions and admitted logical constants. Section 1 proves H soundness, including beta and eta.
 
@@ -73,17 +73,17 @@ Consequently **every propositional logical separation instance at every finite t
 
 Nevertheless Functionality at e,t fails. Choose the admitted outer predicates
 
-$$
+```math
 F(0)=F(1)=1,\qquad G(0)=1,\quad G(1)=0.
-$$
+```
 
 Then ∀x^e(Fx=Gx) is true, since x ranges only over {0}, while F and G are distinct outer functions. Full typed separation at et also fails: at the only admitted argument they give the same proposition, so every observer agrees on their current instances.
 
 C fails directly, not just by inference from that Functionality failure. H proves the universal-instantiation formula
 
-$$
+```math
 (\forall x^e\,Gx)\to Ga.
-$$
+```
 
 Its abstraction over a, and the abstraction of ⊤, are identified by C's Logical Equivalence. In this model ∀x Gx=1, but the two outer abstractions differ at the hidden individual a=1: the displayed conditional is false there, while ⊤ is true. Thus an actual H Logical Equivalence instance fails.
 
@@ -93,18 +93,18 @@ This proves that propositional full logical separation over H does not recover C
 
 This example uses one hidden proposition. Let
 
-$$
+```math
 D_t=\{0,u,v,1\}=\{(0,0),(0,1),(1,0),(1,1)\},
 \qquad A_t=D_t\cup\{z\}.
-$$
+```
 
 Truth reads the first coordinate on D_t. Take A_e=D_e to be a singleton and use the admitted-domain recursion of §1 at higher types.
 
 On D_t, interpret conjunction m as coordinatewise meet, negation and disjunction coordinatewise in the usual way. Extend m to the hidden inputs by
 
-$$
+```math
 m(z,z)=u,\qquad m(z,0)=z,
-$$
+```
 
 and put m(a,b)=0 at every other pair involving z. Extend negation and disjunction arbitrarily on hidden inputs, for example by returning 0 whenever an input is z. Their admitted-input truth conditions remain correct, and all three logical constants are admitted.
 
@@ -112,13 +112,13 @@ For any F∈D_{σt}, let ∀_σF be the diagonal value (b,b), where b is the ord
 
 Write
 
-$$
+```math
 \begin{aligned}
 M_{\rm mat}(E)&:\forall p,q\,[E(m(p,q))\leftrightarrow(Ep\land Eq)],\\
 M_{\rm pt}(E)&:\forall p,q\,[E(m(p,q))=m(Ep,Eq)],\\
 M_{\rm op}(E)&:(\lambda p,q.E(m(p,q)))=(\lambda p,q.m(Ep,Eq)).
 \end{aligned}
-$$
+```
 
 The first two quantifiers range over D_t. The third identity compares the whole outer functions and therefore also their values at hidden inputs.
 
@@ -126,9 +126,9 @@ The first two quantifiers range over D_t. The third identity compares the whole 
 
 For i=0,1 define E_i on D_t by
 
-$$
+```math
 E_i(b_0,b_1)=(b_i,b_i),
-$$
+```
 
 and set E_i(z)=0. These outer functions map D_t into D_t, so they are admitted observers. They preserve m at every admitted pair and jointly separate the four admitted propositions. Hence S[M_pt] holds, and so does S[M_mat].
 
@@ -147,11 +147,11 @@ In both cases E(0) and E(u) agree in truth. But 0≠u. Thus S[M_op] fails. Restr
 
 We have proved the strict implication
 
-$$
+```math
 \boxed{\mathrm H+S[M_{\rm op}]
 \ \Longrightarrow\ \mathrm H+S[M_{\rm pt}],
 \qquad\text{with no converse}.}
-$$
+```
 
 The same countermodel separates whole-operation separation from material separation. It does **not** separate material separation from pointwise-identity separation: both hold in it.
 
@@ -159,17 +159,17 @@ The same countermodel separates whole-operation separation from material separat
 
 The preceding model also distinguishes the two qualifications themselves. Define an admitted observer on D_t by
 
-$$
+```math
 E(b,c)=(b,b\lor c),
-$$
+```
 
 and extend it at z by E(z)=0. Its actual truth value equals that of its input, so M_mat(E) holds. It fixes 0 and 1. But for p=v and q=u,
 
-$$
+```math
 E(m(v,u))=E(0)=0,
 \qquad
 m(E(v),E(u))=m(1,u)=u.
-$$
+```
 
 Hence M_pt(E) fails. This is a strict distinction between observer predicates, not a proof that their propositional separation theories differ. The latter implication remains unclassified here. Under the explicit local identity-bivalence assumptions in [the representation theorem](representation-under-identity-bivalence.md), principal tests give the stated positive equivalences instead.
 
@@ -182,7 +182,7 @@ The distinction in §2 is not merely a consequence of failure of C. The existing
 The [saved observer proof](../observer-models.md), §2, gives admitted identity and coordinate-selection observers, proves their Boolean preservation at both objects, and proves their propositional separation. Here is a direct Functionality witness in the same model.
 
 The objects W,V have arrows h:W→V and j:V→W with jh=id_W and hj=k≠id_V. Propositions at W have two coordinates (b,c); those at V have three (a,b,c). The transport
-$h_t(b,c)=(c,b,c)$
+$`h_t(b,c)=(c,b,c)`$
 has proper image I⊊D_t(V). Let G be the bottom predicate at type tt. Fullness admits a predicate F whose truth profile is false at every current pair (id_W,p), and is true at a future pair (h,a) precisely when a∉I. For every current p, the proposition Fp is bottom: its current coordinate is false, and its future coordinate is false because h_t(p)∈I. Thus ∀p(Fp=Gp) is true. Yet F≠G, because their truth profiles differ on some (h,a) with a∉I. This refutes Fun_{t,t}, and hence full typed Boolean separation by the general factorization theorem.
 
 The source full-action construction supplies beta/eta and C soundness. This paragraph adds only the explicit Functionality witness; the new claim is not attributed to the published source.

@@ -8,18 +8,18 @@ Over H, necessity of distinctness at type t removes the material-versus-pointwis
 
 Use the defining formula of [ND at type t](../../source/topics/classicism/principles/distinctness-necessary-t.yaml):
 
-$$
+```math
 \mathrm{ND}_t:\quad
 \forall x,y\,[x\ne y\to\Box(x\ne y)],
 \qquad\Box r:=(r=\mathrm{Top}).
-$$
+```
 
 Thus the premise used below is exactly
 
-$$
+```math
 \forall x,y\,[\neg(x=y)\to\neg(x=y)=\mathrm{Top}].
 \tag{1}
-$$
+```
 
 No C-dependent equivalent form of ND is substituted. In particular, (1) alone does not say that a false identity judgment is Bottom or that a true one is Top.
 
@@ -29,36 +29,36 @@ For a finite external type list Δ, let Meet_Δ mean:
 - Top is its greatest element;
 - at each σ∈Δ, primitive ∀σ supplies admitted greatest lower bounds in that meet order:
 
-$$
+```math
   u\land\forall x^\sigma Fx=u
   \quad\leftrightarrow\quad
   \forall x^\sigma\,[u\land Fx=u].
   \tag{2}
-$$
+```
 
 Define Join_Δ dually: disjunction is a join semilattice with least element Bottom, and every listed primitive ∃σ supplies the admitted least upper bounds.
 
 Then over H+ND_t,
 
-$$
+```math
 \boxed{
 \mathrm{Sep}_t[A\land M_{\rm mat}\land Q^{\rm mat}_\Delta]
 \leftrightarrow\mathrm{Meet}_\Delta
 \leftrightarrow
 \mathrm{Sep}_t[A\land M_{\rm pt}\land Q^{\rm pt}_\Delta].}
 \tag{3}
-$$
+```
 
 Likewise,
 
-$$
+```math
 \boxed{
 \mathrm{Sep}_t[Z\land V_{\rm mat}\land P^{\rm mat}_\Delta]
 \leftrightarrow\mathrm{Join}_\Delta
 \leftrightarrow
 \mathrm{Sep}_t[Z\land V_{\rm pt}\land P^{\rm pt}_\Delta].}
 \tag{4}
-$$
+```
 
 The pointwise witnesses in both constructions have at most two outputs. The list Δ may be empty and need not contain t. Whole-operation identities require precisely the lifting described in §5.
 
@@ -68,14 +68,14 @@ The following output-level fact is useful independently. Suppose conjunction is 
 
 If every value is v, its GLB is v. If a value is b, its GLB is b: b is a lower bound of the whole family, and any lower bound is below that occurrence of b. Thus
 
-$$
+```math
 (\forall x^\sigma Gx)=
 \begin{cases}
 v&\text{if every }Gx\text{ is true},\\
 b&\text{otherwise}.
 \end{cases}
 \tag{5}
-$$
+```
 
 These are conditional identities, obtained from the GLB law and antisymmetry. In the all-v case the argument uses nonemptiness of the type σ. H supplies that for e and every relational type. No equality between two family objects, and no Functionality, is used.
 
@@ -87,43 +87,43 @@ Consequently, a material quantifier law for an observer valued in such a chain b
 
 Assume the conjunction semilattice equations. For each parameter a define
 
-$$
+```math
 J_a(p):=(a\land p=a),\qquad
 u_a:=(a=a),\qquad v_a:=\neg\neg u_a,\qquad f:=\neg\mathrm{Top}.
-$$
+```
 
 The propositions u_a,v_a are true, and f is false, by H's truth rules. If J_a(p) is true, substitution using a∧p=a gives J_a(p)=u_a. If J_a(p) is false, (1) gives ¬J_a(p)=Top. Therefore
 
-$$
+```math
 \neg\neg J_a(p)=
 \begin{cases}
 v_a&\text{if }a\le p,\\
 f&\text{if }a\not\le p.
 \end{cases}
 \tag{6}
-$$
+```
 
 This calculation does not use the output equation ¬¬r=r. Define the admitted observer
 
-$$
+```math
 E_a(p):=\neg\neg J_a(p)\land v_a.
 \tag{7}
-$$
+```
 
 Its true value is v_a and its false value is b_a:=f∧v_a. They are distinct by truth, and b_a≤v_a. The semilattice principal-filter calculation gives
 
-$$
+```math
 E_a(p\land q)\leftrightarrow(E_ap\land E_aq).
-$$
+```
 
 Both sides have the same value in the two-element meet chain, so this is the pointwise M identity. If Top is greatest, E_a accepts Top.
 
 Now assume (2) at every listed type. The principal-filter truth profile and (2) give
 
-$$
+```math
 E_a(\forall x^\sigma Fx)
 \leftrightarrow\forall x^\sigma E_a(Fx).
-$$
+```
 
 The family λx.E_a(Fx) is admitted and takes values only in b_a,v_a. Section 2 converts this material law into the pointwise Qσ identity. The same E_a works for every type in the finite list.
 
@@ -133,16 +133,16 @@ The principal tests separate: if every E_a agrees on p,q, E_p gives p≤q and E_
 
 Assume the join-semilattice equations and define
 
-$$
+```math
 J_a(p):=\neg(p\lor a=a),\qquad f_a:=\neg(a=a).
-$$
+```
 
 If p≤a, substitution gives J_a(p)=f_a, which is false. If p is not below a, ND gives J_a(p)=Top, which is true. Put
 
-$$
+```math
 D_a(p):=J_a(p)\lor f_a.
 \tag{8}
-$$
+```
 
 The two values are the false f_a and the true v_a:=Top∨f_a, with f_a≤v_a in the join order. The true value is not asserted to equal Top.
 
@@ -158,12 +158,12 @@ This is truth acceptance/rejection, not endpoint fixing: E_a(Top) may be v_a≠T
 
 To obtain whole-operation identities at propositional scope, assume
 
-$$
+```math
 \mathrm{Fun}_{t,t},\qquad
 \mathrm{Fun}_{t,tt},\qquad
 \{\mathrm{Fun}_{\sigma t,t}:\sigma\in\Delta\}.
 \tag{9}
-$$
+```
 
 The first two lift the binary law, one input at a time; the last lift the quantifier laws as identities of the F-operations. With (9), replace every pointwise qualification in (3)–(4) by its whole-operation version. No unlisted Functionality is required for this propositional upgrade.
 
@@ -175,7 +175,7 @@ Neither theorem recovers C. For example, the full-function four-proposition H mo
 
 There is a second application of §2 which requires no ND premise. For every finite Δ and any A/Z orientation O, over H,
 
-$$
+```math
 \boxed{
 \mathrm{Sep}_t[O\land\mathrm{FinIm}\land
  M_{\rm mat}\land Q^{\rm mat}_\Delta]
@@ -183,7 +183,7 @@ $$
 \mathrm{Sep}_t[O\land\mathrm{Two}\land
  M_{\rm pt}\land Q^{\rm pt}_\Delta].}
 \tag{10}
-$$
+```
 
 The dual statement replaces M,Q by V,P. FinIm is internal Frege finiteness of the observer image; Two is the explicit at-most-two-output condition, as in [Finite-image normalization](finite-image-material-normalization.md).
 
@@ -199,18 +199,18 @@ Similarly, under internal Fin_t(All), the material/pointwise/whole-operation tie
 
 The same finite-image result also covers the joint M,V signature, including both kinds of indexed bound. For finite lists Δ,Γ, put
 
-$$
+```math
 \Sigma:=\{M,V\}\cup Q_\Delta\cup P_\Gamma.
-$$
+```
 
 Then, still over bare H,
 
-$$
+```math
 \mathrm{Sep}_t[O\land\mathrm{FinIm}\land\Sigma_{\rm mat}]
 \ \leftrightarrow\
 \mathrm{Sep}_t[O\land\mathrm{Two}\land\Sigma_{\rm pt}].
 \tag{11}
-$$
+```
 
 Indeed, the left principle gives the original distributive-lattice identities by the material M,V truth-profile argument. In particular the meet and join orders coincide. The meet normalization produces outputs b≤v, so they form a join chain as well as a meet chain. Both binary material laws consequently become pointwise identities on the same pair. Each listed Q law makes the primitive universal an admitted GLB in this shared order, and each P law makes the primitive existential an admitted LUB. Section 2 therefore upgrades all those laws simultaneously. The constant-profile cases use the GLB/LUB identity of a constant nonempty family. The reverse implication is again Two⇒FinIm and pointwise⇒material.
 

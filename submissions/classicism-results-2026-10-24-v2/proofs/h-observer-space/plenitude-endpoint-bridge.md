@@ -10,27 +10,27 @@ Write OS and End for the full relational separation schemas using ordinary and e
 
 The single admission premise is
 
-$$
+```math
 \mathrm{Plen}_{t,t}:=
 \forall U^{ttt}\left[
 \mathrm{Functional}(U)\to
 \exists Z^{tt}\,\forall p^t\,U[p,Zp]\right],
 \tag{1}
-$$
+```
 
 where
 
-$$
+```math
 \mathrm{Functional}(U):=
 \forall p\,\exists q\left[
 U[p,q]\land\forall r\,(U[p,r]\to q=r)\right].
-$$
+```
 
 Bracketed application is left-nested. Functional relations and representing operations are admitted objects of the language. Formula (1) does not quantify over arbitrary external functions, and it requires no individual-valued operation.
 
 Let Plen_r be the full pre-existing Plenitude schema, BC_r the full Boolean Completeness schema, and Actuality the existence of a true proposition entailing every true proposition. C5 includes C and necessary distinctness at the stated types. The exact theory equivalences over H are
 
-$$
+```math
 \boxed{
 \begin{aligned}
 \mathrm{End}
@@ -41,7 +41,7 @@ $$
 &\longleftrightarrow \mathrm{C5}+\mathrm{Atomicity}_{t}.
 \end{aligned}}
 \tag{2}
-$$
+```
 
 The full typed OS premise supplies C and BF over H. A single propositional separation formula is not substituted for that premise while leaving C implicit. Once C5 is explicit, the atomicity step itself needs only the propositional separation instance qualified at the list {t}.
 
@@ -51,19 +51,19 @@ Work first over C. The proofs of Propositions 2.13 and 2.15 use only Plen_t,t fo
 
 **Necessary distinctness at t.** Fix distinct propositions p and q. Apply Plen_t,t to the functional relation that sends p to Top and every other proposition to Bottom:
 
-$$
+```math
 U[x,y]:=(x=p\land y=\top)\lor(x\ne p\land y=\bot).
 \tag{3}
-$$
+```
 
 The resulting admitted Z satisfies Zp=Top and Zq=Bottom. NI makes these identities necessary, and the endpoints are necessarily distinct in C. Equality substitution then gives □(p≠q). Universal generalization yields ND_t. The optional premise p≠q was discharged, not necessitated.
 
 **Actuality.** Apply Plen_t,t to the functional relation
 
-$$
+```math
 V[p,q]:=(p\land p=q)\lor(\neg p\land q=\top).
 \tag{4}
-$$
+```
 
 Let Z represent it and put a:=∀p Zp. Each Zp is true: if p is true, Zp=p; otherwise Zp=Top. Thus a is true. Universal instantiation as an unconditional C logical identity gives a≤Zp for every p. For true p, the identity Zp=p then gives a≤p. Therefore a witnesses Actuality.
 
@@ -71,30 +71,30 @@ The second disjunct in (4) is **q=Top**. This follows the intended construction 
 
 Add BF_t. The recorded type-t instance of Proposition 2.4 gives
 
-$$
+```math
 \mathrm{ND}_{t}+\mathrm{BF}_{t}
 \quad\Longrightarrow\quad\Box\mathrm{ND}_{t}.
 \tag{5}
-$$
+```
 
 This is a proved modal argument using NI, 4 and BF_t, not necessitation of the optional ND_t premise. The recorded boxed form of Proposition 2.2 then gives □ND at every required type. Consequently
 
-$$
+```math
 \mathrm{C}+\mathrm{BF}_{t}+\mathrm{Plen}_{t,t}
 \quad\Longrightarrow\quad
 \mathrm{C5}+\mathrm{Actuality}.
 \tag{6}
-$$
+```
 
 Conversely, the pre-existing C5+Actuality result gives BC_r, and C5+BC_r gives Plen_r. C5 also supplies every BF instance. Hence the admission bridge already has the exact strength
 
-$$
+```math
 \boxed{
 \mathrm{C}+\mathrm{BF}_{t}+\mathrm{Plen}_{t,t}
 \quad\longleftrightarrow\quad
 \mathrm{C5}+\mathrm{Actuality}.}
 \tag{7}
-$$
+```
 
 The left side may equivalently use all BF instances. In particular, over C+BF_t, the single Plen_t,t instance is equivalent to full Plen_r. The type reduction in the forward direction is a mathematical specialization of the source proofs; the database engine does not instantiate schemas on its own.
 

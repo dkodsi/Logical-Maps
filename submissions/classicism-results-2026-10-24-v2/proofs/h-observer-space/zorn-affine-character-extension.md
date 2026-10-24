@@ -10,15 +10,15 @@ Fix an admitted binary operation + on propositions. Assume the Boolean-group out
 
 Write L⊆K for ∀x(Lx→Kx), and write Subgroup(L) for
 
-$$
+```math
 L0\ \land\ \forall x,y\,(Lx\land Ly\to L(x+y)).
-$$
+```
 
 Every predicate and operation quantified over is admitted. Subgroup inclusion is truth inclusion; mutual inclusion is never replaced by predicate identity.
 
 Use [Zorn's Lemma](../../source/topics/classicism/principles/zorn-r.yaml) at σ=tt:
 
-$$
+```math
 \begin{aligned}
 \forall R^{(tt)(tt)t}\bigl[&\mathrm{Preorder}(R)\land
 \forall X^{(tt)t}\bigl(\mathrm{TotalOrder}(R,X)
@@ -26,7 +26,7 @@ $$
 &\to\exists K^{tt}\,\forall J^{tt}(R(K,J)\to R(J,K))\bigr].
 \end{aligned}
 \tag{1}
-$$
+```
 
 Preorder means reflexive and transitive. TotalOrder includes transitivity, totality and actual antisymmetry on X, exactly as in [Background, order predicates](../../source/topics/classicism/background.md). The argument below proves the upper-bound condition even for all admitted comparable families, so the record's stronger chain restriction causes no difficulty.
 
@@ -36,26 +36,26 @@ The database's ambient C is not imported: formula (1) is an explicit additional 
 
 Let L be an admitted subgroup and let d satisfy ¬Ld. Call a predicate K valid when
 
-$$
+```math
 V(K):=\mathrm{Subgroup}(K)\land L\subseteq K\land\neg Kd.
 \tag{2}
-$$
+```
 
 The given L is valid. On all proposition predicates define the admitted relation
 
-$$
+```math
 R(K,J):=\neg V(K)\lor\bigl(V(J)\land K\subseteq J\bigr).
 \tag{3}
-$$
+```
 
 It is a preorder. Invalid predicates are below everything. Among valid predicates it is inclusion, and a valid predicate is never below an invalid one. These observations directly verify reflexivity and transitivity; neither antisymmetry nor extensional identity of predicates is required.
 
 For an admitted R-chain X, define the admitted union
 
-$$
+```math
 U(x):=Lx\lor\exists K^{tt}\,(XK\land V(K)\land Kx).
 \tag{4}
-$$
+```
 
 This is valid. It contains L and 0. To verify closure under +, two elements coming from valid members K,J of X lie together in whichever of K,J contains the other, by totality of R on X. If one comes from L, it lies in every valid member; if both come from L, use its closure. Every contributing subgroup omits d, so U omits d. Formula (4) also works for the empty chain or a chain containing only invalid predicates, in which case it is coextensive with L.
 
@@ -63,11 +63,11 @@ Every X-member K satisfies R(K,U): invalid K does so by the first disjunct of (3
 
 Zorn gives a maximal predicate K. It must be valid. Otherwise R(K,L) would hold and maximality would imply R(L,K), impossible because L is valid and K invalid. Its maximality therefore says
 
-$$
+```math
 \forall J\bigl[\mathrm{Subgroup}(J)\land K\subseteq J\land\neg Jd
 \ \to\ J\subseteq K\bigr].
 \tag{5}
-$$
+```
 
 This is maximality up to coextension among admitted subgroups omitting d. It is exactly the conclusion needed; no quotient type of coextensive predicates is constructed.
 
@@ -75,34 +75,34 @@ This is maximality up to coextension among admitted subgroups omitting d. It is 
 
 For any y, the admitted predicate
 
-$$
+```math
 K_y(x):=Kx\lor K(x+y)
 \tag{6}
-$$
+```
 
 is a subgroup containing K and y. If neither Ky nor K(y+d) held, (6) would omit d and strictly extend K, contrary to (5). Hence
 
-$$
+```math
 \forall x\,[Kx\lor K(x+d)].
 \tag{7}
-$$
+```
 
 The two alternatives are disjoint: their conjunction and subgroup closure would give Kd. They are the two cosets K and d+K.
 
 Define the admitted truth test
 
-$$
+```math
 e(x):=\neg Kx.
 \tag{8}
-$$
+```
 
 It sends 0 to false and d to true, and it is false on L. Its truth values form an additive character:
 
-$$
+```math
 e(x+y)\ \leftrightarrow\
 \bigl((ex\land\neg ey)\lor(\neg ex\land ey)\bigr).
 \tag{9}
-$$
+```
 
 For both inputs in K, their sum is in K. For exactly one input in K, membership of the sum in K would put the other input there too. For both outside K, (7) puts x+d and y+d in K, and their sum is x+y. This proves (9) in all four cases.
 
@@ -114,10 +114,10 @@ An admitted partial truth character consists of a subgroup L₀ and an operation
 
 If e₀ is false everywhere on L₀, the constant-false term extends it. Otherwise choose a single d in L₀ with e₀d true, and form the admitted kernel
 
-$$
+```math
 L(x):=L_0x\land\neg e_0x.
 \tag{10}
-$$
+```
 
 The partial character law makes L a subgroup omitting d. Apply §3, obtaining a full character e whose kernel contains L and omits d. For x in L₀:
 

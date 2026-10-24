@@ -47,25 +47,25 @@ Let U_e = omega, U_t = B and U_(sigma -> rho) = U_rho ^ U_sigma. The latter
 are raw function sets: their elements need not exist. Define Boolean
 identity values recursively by
 
-$$
+```math
  \delta_e(n,m)=[n=m],\qquad \delta_t(b,c)=(b\leftrightarrow c),
-$$
+```
 
-$$
+```math
  \delta_{\sigma\to\rho}(f,g)
  =\bigwedge_{a,c\in U_\sigma}
      \bigl(\delta_\sigma(a,c)\Rightarrow\delta_\rho(fa,gc)\bigr).
  \tag{1}
-$$
+```
 
 Unfolding Definition 2.2 shows that a is identical to c at a nonzero
 condition p iff p <= delta_sigma(a,c). In particular
 
-$$
+```math
  E_\sigma(a):=\delta_\sigma(a,a),\qquad
  G_\sigma:=\{a\in U_\sigma:E_\sigma(a)=1\}
  \tag{2}
-$$
+```
 
 are the existence value and the globally existing representatives. The
 delta values are Boolean partial equivalence relations: they are symmetric
@@ -79,21 +79,21 @@ A = product_i U_sigma_i; for n=0 this identifies B with functions on a
 singleton. Write delta_A for the meet of the coordinate identities.
 Repeated use of (1) gives
 
-$$
+```math
  E_\rho(F)=\bigwedge_{a,c\in A}
        \bigl(\delta_A(a,c)\Rightarrow(F(a)\leftrightarrow F(c))\bigr).
  \tag{3}
-$$
+```
 
 The fact that argument existence may be partial is already in delta_A.
 For example its diagonal is E_A(a), not necessarily one.
 
 **Totalization lemma.** If p is any element of B with p <= E_rho(F), the flattened function
 
-$$
+```math
  F^p(a)=p\wedge F(a)
  \tag{4}
-$$
+```
 
 belongs to G_rho and p <= delta_rho(F,F^p). For nonzero p this says it is
 identical to F at p; p=0 simply gives the zero relation. For extensionality, below p
@@ -104,21 +104,21 @@ works at t. Individuals already exist globally and require no change.
 Taking p=E_sigma(a), and leaving individuals unchanged, gives a global
 representative T_sigma(a) with
 
-$$
+```math
  \delta_\sigma(a,T_\sigma(a))=E_\sigma(a).
  \tag{5}
-$$
+```
 
 The inequality from right to left follows from totalization; the reverse
 inequality is a PER law. Thus every local entity has a global representative
 on its entire existence region. For finite tuples the coordinatewise T
 gives the same assertion with E_A. In particular
 
-$$
+```math
  E_A(a)=\bigvee_{g\in G_A}\delta_A(a,g),
  \qquad G_A:=\prod_iG_{\sigma_i}.
  \tag{6}
-$$
+```
 
 There is even a single summand attaining E_A(a), namely T applied to the
 tuple. Equation (6) concerns existing parts of raw arguments, not the
@@ -128,17 +128,17 @@ existence of every raw argument.
 
 For an arbitrary raw F:A -> B define
 
-$$
+```math
  N(F)(a)=\bigvee_{g\in G_A} F(g)\wedge\delta_A(g,a).
  \tag{7}
-$$
+```
 
 This is a raw function available by fullness. It exists globally even if F
 does not: Boolean transitivity gives
 
-$$
+```math
  \delta_A(a,c)\wedge N(F)(a)\le N(F)(c),
-$$
+```
 
 and the reverse inequality follows symmetrically. Also N(F)(a) <= E_A(a),
 so the normal form vanishes outside the existence region of its arguments.
@@ -149,10 +149,10 @@ Indeed, every summand is bounded by F(a) below p by (3).
 For the converse, use (6); below delta_A(a,g), extensionality identifies
 F(a) and F(g). Consequently
 
-$$
+```math
  \delta_\rho(F,N(F))=E_\rho(F).
  \tag{8}
-$$
+```
 
 This is equality on the whole possible existence region, not literal
 equality of raw functions. In particular a globally existing F is identical
@@ -160,11 +160,11 @@ everywhere to N(F), but may differ on never-existing arguments.
 
 The same argument proves the useful equality test
 
-$$
+```math
  \delta_\rho(F,H)=E_\rho(F)\wedge E_\rho(H)
        \wedge\bigwedge_{g\in G_A}(F(g)\leftrightarrow H(g)).
  \tag{9}
-$$
+```
 
 For the nontrivial direction, work below the right-hand side and a
 condition where a and c are identical. Replace each coordinate by its
@@ -180,10 +180,10 @@ The test on G_A is valid only together with the two existence factors.
 Define the intended internal carriers recursively in Boolean-valued set
 theory. H_e is check-omega. For rho = sigma_1 ... sigma_n t, let
 
-$$
+```math
  H_\rho=\mathcal P\!\left(\prod_i H_{\sigma_i}\right).
  \tag{10}
-$$
+```
 
 Products and powersets here are internal to M^B. The empty product is a
 singleton, so H_t is its powerset, canonically the two truth values. This
@@ -209,57 +209,57 @@ internal product in (10), represented by the name containing each tuple
 g-hat, for g in G_A, with weight one. The inductive coverage properties and
 finite distributivity show that this is the whole product, with
 
-$$
+```math
  \|u\in K\|=\bigvee_{g\in G_A}\|u=\widehat g\|,
  \qquad \|\widehat g=\widehat h\|=\delta_A(g,h).
  \tag{11}
-$$
+```
 
 For F in G_rho put
 
-$$
+```math
  \widehat F=\{(\widehat g,F(g)):g\in G_A\}.
  \tag{12}
-$$
+```
 
 This name is a subset of K with value one. Extensionality of F and the
 self-identity of global g give
 
-$$
+```math
  \|\widehat g\in\widehat F\|
     =\bigvee_{h\in G_A}F(h)\wedge\delta_A(h,g)=F(g).
  \tag{13}
-$$
+```
 
 Coverage in (11) then gives
 
-$$
+```math
  \|\widehat F=\widehat H\|
     =\bigwedge_{g\in G_A}(F(g)\leftrightarrow H(g))
     =\delta_\rho(F,H),
  \tag{14}
-$$
+```
 
 where the last equality uses (9) for global F,H.
 
 It remains to prove powerset fullness, not merely that our names are
 subsets. Given a name X, let b=||X is a subset of K|| and put
 
-$$
+```math
  u(g)=b\wedge\|\widehat g\in X\|,
  \qquad
  F_X(a)=\bigvee_{g\in G_A}u(g)\wedge\delta_A(g,a).
  \tag{15}
-$$
+```
 
 The saturation proof for (7) shows F_X is global. Equality substitution for
 names makes u extensional on global tuples; hence F_X(g)=u(g) there.
 Equations (11)--(13) show
 
-$$
+```math
  b\le\|X=\widehat{F_X}\|.
  \tag{16}
-$$
+```
 
 In detail, below b both sets are subsets of K and have the same membership
 values on every g-hat. Cover an arbitrary name's membership in K using
@@ -277,11 +277,11 @@ coverage is needed and asserted.
 For a formula phi with globally existing other parameters, the source's
 universal quantifier at type sigma has Boolean value
 
-$$
+```math
  \llbracket\forall x^\sigma\,\phi(x)\rrbracket
        =\bigwedge_{g\in G_\sigma}\llbracket\phi(g)\rrbracket.
  \tag{17}
-$$
+```
 
 To verify the nontrivial direction, at any refinement q and any raw a
 existing there replace a by a^q, or by T_sigma(a). It is global and identical
@@ -294,12 +294,12 @@ The name coverage established in section 4 similarly identifies bounded
 Boolean-valued quantification over H_sigma with the meet or join over these
 representatives. If c is below every ||phi(g-hat)||, then for any name u,
 
-$$
+```math
  c\wedge\|u\in H_\sigma\|
    =\bigvee_g c\wedge\|u=\widehat g\|
    \le\|\phi(u)\|.
  \tag{18}
-$$
+```
 
 For application, if F and a exist globally, so does F(a). On every global
 tuple of remaining arguments, (13) identifies the name of F(a) with the
@@ -342,16 +342,16 @@ superscript C or B for the raw domains in the full rooted cloud and the
 standalone component respectively. Define raw maps R_sigma:U^C_sigma ->
 U^B_sigma and L_sigma:U^B_sigma -> U^C_sigma recursively:
 
-$$
+```math
  R_e=L_e=\mathrm{id},\qquad R_t=\pi,\quad L_t=j,
-$$
+```
 
-$$
+```math
  (R_{\sigma\to\rho}F)(x)=R_\rho\bigl(F(L_\sigma x)\bigr),
  \qquad
  (L_{\sigma\to\rho}f)(a)=L_\rho\bigl(f(R_\sigma a)\bigr).
  \tag{19}
-$$
+```
 
 All these functions belong to the raw full domains. Induction gives
 R_sigma L_sigma = id exactly on raw elements. Three further properties,
@@ -405,11 +405,11 @@ R L = id on existing component entities; all refinements stay in the same
 component. More precisely, induction on terms gives, for an assignment g
 existing at p and a term t of type sigma,
 
-$$
+```math
  R_\sigma(\llbracket t\rrbracket_{C,g})
        \sim^B_p \llbracket t\rrbracket_{B,Rg}.
  \tag{20}
-$$
+```
 
 For abstraction, test the functional identity at q <= p on component
 arguments x and y identical there. Lift these arguments by L, apply the

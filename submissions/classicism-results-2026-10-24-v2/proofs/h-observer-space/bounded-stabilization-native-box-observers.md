@@ -8,30 +8,30 @@ The reason is structural. In a frame built from successive two-point antichains,
 
 ## 1. Fixed finite bounds and theory scope
 
-For a fixed external integer r≥1, define powers of an admitted observer E:tt by finite term iteration: E⁰=I and Eⁱ⁺¹=E∘Eⁱ. Use the full logical qualification $\mathrm{Good}_\Delta$ and native-Box identity from [Native-Box logical observers](native-box-logical-observers.md), §1. The additional stabilization condition is the whole operation identity
+For a fixed external integer r≥1, define powers of an admitted observer E:tt by finite term iteration: E⁰=I and Eⁱ⁺¹=E∘Eⁱ. Use the full logical qualification $`\mathrm{Good}_\Delta`$ and native-Box identity from [Native-Box logical observers](native-box-logical-observers.md), §1. The additional stabilization condition is the whole operation identity
 
-$$
+```math
  E^{r+1}=E^r.
  \tag{1}
-$$
+```
 
-Write $B_r(\tau,\Delta)$ for separation by the common class satisfying $\mathrm{Good}_\Delta$, native-Box commutation and (1). Unindexed $B_r$ means the full schema over relational output types τ and finite external qualification lists Δ. A boxed $B_r$ means the separately boxed closed separation instances.
+Write $`B_r(\tau,\Delta)`$ for separation by the common class satisfying $`\mathrm{Good}_\Delta`$, native-Box commutation and (1). Unindexed $`B_r`$ means the full schema over relational output types τ and finite external qualification lists Δ. A boxed $`B_r`$ means the separately boxed closed separation instances.
 
-The index r is fixed in each principle. There is no object-language quantifier over natural numbers, no infinite qualification formula and no existential choice of an iteration bound inside $B_r$. In particular B₁ is exactly IdemBoxSep.
+The index r is fixed in each principle. There is no object-language quantifier over natural numbers, no infinite qualification formula and no existential choice of an iteration bound inside $`B_r`$. In particular B₁ is exactly IdemBoxSep.
 
 Multiplying (1) by E shows Eʳ⁺²=Eʳ⁺¹. Thus the qualifying classes grow with r, and their separation principles satisfy
 
-$$
+```math
  B_1\ \Longrightarrow\ B_2\ \Longrightarrow\ B_3
  \ \Longrightarrow\ \cdots\ \Longrightarrow\mathrm{BoxSep}.
  \tag{2}
-$$
+```
 
-These implications hold at each fixed τ,Δ, before any full-schema recovery argument. Full $B_r$ implies full BoxSep and hence recovers C, BF and Functionality over H. The model constructions below show that every successive arrow in (2) is strict, and that $B_r$⇒BoxSep is strict for every fixed r.
+These implications hold at each fixed τ,Δ, before any full-schema recovery argument. Full $`B_r`$ implies full BoxSep and hence recovers C, BF and Functionality over H. The model constructions below show that every successive arrow in (2) is strict, and that $`B_r`$⇒BoxSep is strict for every fixed r.
 
 Over C5, every native-Box Boolean observer is injective. Finite repeated cancellation in Eʳ(Ep)=Eʳp therefore gives Ep=p for every p. Functionality collects E=I. The same argument as for idempotence then gives, for every fixed r≥1,
 
-$$
+```math
 \boxed{
 \begin{aligned}
  \mathrm{C5}+B_r&\quad\Longleftrightarrow\quad\mathrm{Extensionality},\\
@@ -39,39 +39,39 @@ $$
  \mathrm{End}+B_r&\quad\Longleftrightarrow\quad\mathrm{Extensionality}.
 \end{aligned}}
 \tag{3}
-$$
+```
 
-These are full-schema equivalences over H. With C5 already assumed, the forward collapse needs only propositional separation. Rev and End supply C5; their conjunctions with $B_r$ allow different separating observer families. Conversely Extensionality supplies all these principles through identity. No claim is made that the qualifying observer classes coincide without C5.
+These are full-schema equivalences over H. With C5 already assumed, the forward collapse needs only propositional separation. Rev and End supply C5; their conjunctions with $`B_r`$ allow different separating observer families. Conversely Extensionality supplies all these principles through identity. No claim is made that the qualifying observer classes coincide without C5.
 
 ## 2. The full finite-frame interpretation
 
 Use the construction and proof in [Idempotent native-Box observers](idempotent-native-box-observers.md), §§3–4. A finite rooted poset P is viewed as a thin category, with singleton individuals and full relational action-model domains. At a point x,
-$D_t(x)=\mathcal P(\mathord\uparrow x),$
+$`D_t(x)=\mathcal P(\mathord\uparrow x),`$
 and current truth is membership of x. Relational objects are full future truth profiles. Transport restricts a profile to a future cone and is onto at every type, since every restricted profile extends by arbitrary values elsewhere. The construction therefore satisfies C, necessary BF, necessary Functionality and necessary propositional Atomicity.
 
 Every Boolean observer is uniquely a coordinate reader E_f for an inflationary map f:P→P:
 
-$$
+```math
  x\le f(x),\qquad E_f(p)=f^{-1}[p].
  \tag{4}
-$$
+```
 
 At an arbitrary future x, it reads an arbitrary input q⊆↑x at f(x). Every such map is admitted. Onto type transport proves its full composite preservation of all quantifiers, at every future input. Thus these readers are Good for every requested finite list. The translated equality clauses follow over C; no reflection of equality by individual transport arrows is required.
 
 Native-Box preservation is exactly the cone-image condition
 
-$$
+```math
  f[\mathord\uparrow x]=\mathord\uparrow f(x)
  \quad\text{for every }x.
  \tag{5}
-$$
+```
 
 It entails monotonicity. The whole stabilization identity (1) is exactly
 
-$$
+```math
  f^{r+1}=f^r.
  \tag{6}
-$$
+```
 
 Both equivalences concern the entire observer: they are checked on every future input, with singleton propositions giving the converse direction for (6).
 
@@ -81,9 +81,9 @@ Every inflationary map on a finite poset of height h stabilizes by h iterations,
 
 ## 3. Exact first three levels on two antichains
 
-For positive finite integers m,n, let $P_{m,n}$ have four levels: root o, an m-point antichain A, an n-point antichain B, and top 1. Every point in a lower level lies below every point in a higher level. In the full model,
+For positive finite integers m,n, let $`P_{m,n}`$ have four levels: root o, an m-point antichain A, an n-point antichain B, and top 1. Every point in a lower level lies below every point in a higher level. In the full model,
 
-$$
+```math
 \boxed{
 \begin{aligned}
  B_1&\quad\Longleftrightarrow\quad m=1\ \text{or}\ n=1,\\
@@ -92,7 +92,7 @@ $$
  \quad\Longleftrightarrow\quad m=1\ \text{or}\ n\le m.
 \end{aligned}}
 \tag{7}
-$$
+```
 
 The B₁ and BoxSep characterizations are proved in the idempotent note, §5, (7a). The former is the join-semilattice criterion. B₃ and BoxSep coincide by height three. It remains to prove the middle row.
 
@@ -102,11 +102,11 @@ Also f(a) cannot equal a. If it did, applying (5) at a would require f[↑a]=↑
 
 All n upper points must nevertheless occur in f[P]=↑a. Their only possible preimages now lie among the m−1 points of A other than a. Hence m>n.
 
-Conversely, if m>n, fix any a∈A. Map the root to a, map a to top, map $A\setminus\{a\}$ onto B by an explicit finite surjection, and map B and top to top. At any x∈$A\setminus\{a\}$, its cone image is {f(x),1}=↑f(x); at a and at an upper point it is {1}; at the root it is ↑a. Thus (5) holds, and every orbit stabilizes in at most two steps. Each upper point b has a join with every point, so x↦x∨b gives an idempotent reader of b. Identity and the constant-top map read o and 1. These observers establish B₂.
+Conversely, if m>n, fix any a∈A. Map the root to a, map a to top, map $`A\setminus\{a\}`$ onto B by an explicit finite surjection, and map B and top to top. At any x∈$`A\setminus\{a\}`$, its cone image is {f(x),1}=↑f(x); at a and at an upper point it is {1}; at the root it is ↑a. Thus (5) holds, and every orbit stabilizes in at most two steps. Each upper point b has a join with every point, so x↦x∨b gives an idempotent reader of b. Identity and the constant-top map read o and 1. These observers establish B₂.
 
-If m=1 or n=1, the frame is a join-semilattice and already has B₁. This completes (7). Every proper future cone of $P_{m,n}$ is a join-semilattice, so each successful $B_r$ statement in (7) also holds necessarily.
+If m=1 or n=1, the frame is a join-semilattice and already has B₁. This completes (7). Every proper future cone of $`P_{m,n}`$ is a join-semilattice, so each successful $`B_r`$ statement in (7) also holds necessarily.
 
-In particular $P_{3,2}$ satisfies □B₂ but fails B₁. P_{2,2} satisfies □B₃ but fails B₂. The first frame has seven points and the second six. These are external descriptions of the models, not internal cardinality assumptions in their separation principles.
+In particular $`P_{3,2}`$ satisfies □B₂ but fails B₁. P_{2,2} satisfies □B₃ but fails B₂. The first frame has seven points and the second six. These are external descriptions of the models, not internal cardinality assumptions in their separation principles.
 
 ## 4. Arbitrarily long forced stabilization
 
@@ -132,11 +132,11 @@ Finally, every x∈A_k lies above A_{k−1}. Its image is therefore an upper bou
 
 In particular the root orbit visits one point of each level in order:
 
-$$
+```math
  o\ \mapsto\ a\in A_1\ \mapsto\ A_2
  \ \mapsto\cdots\mapsto\ A_k\ \mapsto\ 1.
  \tag{8}
-$$
+```
 
 Thus fᵏ(o)∈A_k but fᵏ⁺¹(o)=1. No B_k-qualified observer reads a. The distinct propositions ∅ and {a} consequently agree under every B_k observer, proving failure of B_k(t,{t}).
 
@@ -152,27 +152,27 @@ A cone above a point of A_i is a smaller frame T_{k−i}, with that point as its
 
 ## 5. The strict hierarchy and its limits
 
-The base case $P_{3,2}$ and the frames T_k together show, for every fixed external r≥1,
+The base case $`P_{3,2}`$ and the frames T_k together show, for every fixed external r≥1,
 
-$$
+```math
 \boxed{B_r\ \Longrightarrow\ B_{r+1}
 \quad\text{strictly over H}.}
 \tag{9}
-$$
+```
 
-For r=1 use $P_{3,2}$. For r≥2 use T_r, which satisfies □$B_{r+1}$ but fails even the unboxed $B_r$. Thus the separately boxed hierarchy is also strict. The forward boxed implications follow by necessitating the unconditional class-inclusion theorem in C; the full boxed antecedent supplies the unboxed background through T and full separation.
+For r=1 use $`P_{3,2}`$. For r≥2 use T_r, which satisfies □$`B_{r+1}`$ but fails even the unboxed $`B_r`$. Thus the separately boxed hierarchy is also strict. The forward boxed implications follow by necessitating the unconditional class-inclusion theorem in C; the full boxed antecedent supplies the unboxed background through T and full separation.
 
 All these witnesses have a common top in every future cone. Consequently .2 holds at every point: if some future cone is contained in p, then top belongs to p, and every future point can access that top. Therefore the entire hierarchy remains strict over the common background
 
-$$
+```math
  \mathrm C+\Box\mathrm{BF}+\Box\mathrm{Functionality}
  +\Box\mathrm{OS}+\Box\mathrm{Atomicity}_t+\Box .2.
  \tag{10}
-$$
+```
 
-For each r≥2, T_r also witnesses BoxSep without $B_r$. For r=1, T₂ does so. Hence no fixed stabilization bound gives all of BoxSep. These finite countermodels already prove the unbounded strict hierarchy. Section 6 supplies one infinite model violating every fixed bound at once. Neither conclusion identifies BoxSep with an infinitary disjunction of $B_r$ theories.
+For each r≥2, T_r also witnesses BoxSep without $`B_r`$. For r=1, T₂ does so. Hence no fixed stabilization bound gives all of BoxSep. These finite countermodels already prove the unbounded strict hierarchy. Section 6 supplies one infinite model violating every fixed bound at once. Neither conclusion identifies BoxSep with an infinitary disjunction of $`B_r`$ theories.
 
-The four-point diamond already has B₁, and hence every $B_r$, while failing C5. In the opposite direction a terminal two-point cluster has End and Rev but fails Extensionality, so (3) makes it fail every $B_r$. Thus each fixed $B_r$ is incomparable with Rev and with End, even though conjoining either of those theories with $B_r$ gives Extensionality. The variable stabilization bounds refine the native-modal region without introducing a new reversible region under C5.
+The four-point diamond already has B₁, and hence every $`B_r`$, while failing C5. In the opposite direction a terminal two-point cluster has End and Rev but fails Extensionality, so (3) makes it fail every $`B_r`$. Thus each fixed $`B_r`$ is incomparable with Rev and with End, even though conjoining either of those theories with $`B_r`$ gives Extensionality. The variable stabilization bounds refine the native-modal region without introducing a new reversible region under C5.
 
 ## 6. One infinite frame defeats every fixed bound
 
@@ -182,37 +182,37 @@ The finite proof that every Boolean truth character reads a point no longer appl
 
 ### The diagonal predicate
 
-Fix any source x, and let E be $\mathrm{Good}_{\{t\}}$. Its current truth character is
+Fix any source x, and let E be $`\mathrm{Good}_{\{t\}}`$. Its current truth character is
 
-$$
+```math
  h(q)=\text{the current truth value of }Eq,
  \qquad q\subseteq\mathord\uparrow x.
  \tag{11}
-$$
+```
 
 Boolean qualification makes h a Boolean character. If it accepts a singleton {y}, then Boolean preservation makes h(q) true exactly when y∈q. Suppose instead that it accepts no singleton. Finite Boolean preservation then makes it reject every finite set and accept every cofinite set.
 
 Define a full admitted predicate F:tt at x by the following future truth profile: for every y≥x and every q⊆↑y,
 
-$$
+```math
  F(y,q)\text{ is true}\quad\Longleftrightarrow\quad q\ne\{y\}.
  \tag{12}
-$$
+```
 
 Fullness admits this specified profile; no arbitrary-family encoding or external character-extension theorem is being assumed. For any current p⊆↑x, its application has profile
 
-$$
+```math
  F_x(p)=\{y\ge x:p\cap\mathord\uparrow y\ne\{y\}\}.
  \tag{13}
-$$
+```
 
 The omitted points are exactly the maximal elements of p in ↑x. They form an antichain, and every antichain of T_ω has at most two points. Thus F_x(p) is cofinite for every current p, including the cases where there are no maximal elements or only top is maximal. The assumed nonprincipal h therefore accepts every F_x(p).
 
-But ∀p Fp is Bottom as a proposition: at each future y, choose the admitted input q={y}, which makes (12) false. Applying Q_t at x now yields a contradiction. Its left side h(∀p Fp)=h(Bottom) is false, while its right side ∀p h(F_x(p)) is true. Thus every $\mathrm{Good}_{\{t\}}$ truth character is principal.
+But ∀p Fp is Bottom as a proposition: at each future y, choose the admitted input q={y}, which makes (12) false. Applying Q_t at x now yields a contradiction. Its left side h(∀p Fp)=h(Bottom) is false, while its right side ∀p h(F_x(p)) is true. Thus every $`\mathrm{Good}_{\{t\}}`$ truth character is principal.
 
-Whole qualification applies the same argument at every future source. Consequently every $\mathrm{Good}_{\{t\}}$ observer on this frame is an admitted coordinate reader E_f for one inflationary map f, with the whole native-Box and finite-stabilization conditions still exactly (5) and (6). Conversely every inflationary coordinate reader is Good at every finite type list: the earlier arbitrary-future quantifier proof uses onto type transport, which holds in this infinite full construction as well.
+Whole qualification applies the same argument at every future source. Consequently every $`\mathrm{Good}_{\{t\}}`$ observer on this frame is an admitted coordinate reader E_f for one inflationary map f, with the whole native-Box and finite-stabilization conditions still exactly (5) and (6). Conversely every inflationary coordinate reader is Good at every finite type list: the earlier arbitrary-future quantifier proof uses onto type transport, which holds in this infinite full construction as well.
 
-The diagonal proof has a useful precise generality. In the full action model on any rooted poset of fixed finite external width, maximal elements of a subset form a finite antichain. The same admitted F therefore proves that every $\mathrm{Good}_{\{t\}}$ observer is a coordinate reader. Finite height is unnecessary. The cone-image characterization of native-Box preservation follows unchanged.
+The diagonal proof has a useful precise generality. In the full action model on any rooted poset of fixed finite external width, maximal elements of a subset form a finite antichain. The same admitted F therefore proves that every $`\mathrm{Good}_{\{t\}}`$ observer is a coordinate reader. Finite height is unnecessary. The cone-image characterization of native-Box preservation follows unchanged.
 
 It also extends the earlier join theorem: **a full model on a rooted poset of finite external width satisfies full IdemBoxSep exactly when every pair of frame points has a join.** For necessity, a coordinate reader of a that is idempotent and satisfies (5) has image ↑a and fixes that image. Monotonicity and inflationarity then make f(x) the least upper bound of x and a, exactly as in the finite proof. For sufficiency, the admitted coordinate maps f_a(x)=x∨a satisfy (5) and are idempotent, and they read every point. Failure remains propositional at Δ={t}; success supplies all relational types and every finite list. This is a theorem about the specified full-model family, not a finite-width axiom added to the object language.
 
@@ -224,22 +224,22 @@ These maps read every point and give full BoxSep for every finite qualification 
 
 Now fix a∈A₁. The forced-level induction in §4 applies at every finite stage: any native-Box coordinate reader f with f(o)=a must map A_i bijectively onto A_{i+1} for every finite i. Therefore fʳ(o)∈A_r and fʳ⁺¹(o)∈A_{r+1} for every fixed r≥1. It satisfies none of the finite stabilization identities.
 
-Principality shows that this excludes every $\mathrm{Good}_{\{t\}}$ native-Box observer with a finite stabilization bound, not merely the explicitly constructed maps. For every fixed r, ∅ and the same singleton {a} agree under all $B_r$-qualified observers, although they are distinct propositions. Hence
+Principality shows that this excludes every $`\mathrm{Good}_{\{t\}}`$ native-Box observer with a finite stabilization bound, not merely the explicitly constructed maps. For every fixed r, ∅ and the same singleton {a} agree under all $`B_r`$-qualified observers, although they are distinct propositions. Hence
 
-$$
+```math
  \boxed{
  T_\omega\models\Box\mathrm{BoxSep},
  \qquad
  T_\omega\not\models B_r(t,\{t\})
  \quad\text{for every external finite }r\ge1.}
  \tag{14}
-$$
+```
 
 The model retains the entire necessary background (10). Statement (14) is a metatheoretic family of verdicts about one fully specified model. It does not introduce an object-language natural-number quantifier, an infinite observer qualification, or an infinitary disjunction into the fixed framework.
 
 ## 7. Sources
 
-The stabilization classification on $P_{m,n}$, forced-level theorem on T_k, strict hierarchy, infinite-frame separation and their comparisons are new ordinary arguments by OpenAI Codex, prompted by Daniel Kodsi, 24 October 2026: direct source `misc`, this note, §§1–6, unpaginated. The explicit coordinate maps, diagonal predicate and level induction above provide the evidence; no computational search or missing arrow is used as a nonimplication proof.
+The stabilization classification on $`P_{m,n}`$, forced-level theorem on T_k, strict hierarchy, infinite-frame separation and their comparisons are new ordinary arguments by OpenAI Codex, prompted by Daniel Kodsi, 24 October 2026: direct source `misc`, this note, §§1–6, unpaginated. The explicit coordinate maps, diagonal predicate and level induction above provide the evidence; no computational search or missing arrow is used as a nonimplication proof.
 
 The full action-model construction is Bacon and Dorr, *Classicism*, draft of 16 May 2023, §3.5, pp. 58–61; Appendix D, pp. 73–74, recorded in [Full action models](../../source/topics/classicism/groups/full-action-models.yaml). Its epic-transport Barcan criterion is Proposition 3.24(ii), recorded in [Full epic Barcan](../../source/topics/classicism/arguments/full-epic-barcan.yaml). The specialization to full finite rooted posets, all-type observer qualification and native-Box cone condition are proved in [Idempotent native-Box observers](idempotent-native-box-observers.md), §§3–5. The C5 injectivity equivalence is [Native-Box logical observers](native-box-logical-observers.md), §3. The earlier idempotent Extensionality and terminal-cluster comparisons retain the proofs and attribution in the idempotent note, §§2, 6–7.
 

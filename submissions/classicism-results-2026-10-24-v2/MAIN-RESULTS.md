@@ -179,11 +179,11 @@ The two leaves use their own set-theoretic real fields and disagree about CH. Fr
 
 Assuming Con(ZFC), the separate C-consistency of real structures satisfying CH and its negation gives
 
-$$
+```math
 \mathrm{Max}(C)+\text{Non-contingency of CH}\ \vdash\ \bot.
-$$
+```
 
-Maximalism makes both real-structure assertions possible at the same type $e$.
+Maximalism makes both real-structure assertions possible at the same type $`e`$.
 
 **Lean certified:** Maximalism + Non-contingency of CH ⇒ ⊥, using constructed type-e components in Lean’s ambient metatheory. · [Proof length](#proof-length): medium.
 
@@ -203,9 +203,9 @@ In the specified full modalized-domain construction, finite relational types cor
 
 With the database’s strict-smallness definition, FP is independent over C + ☐Functional Choice + Axiom of Infinity (types e and t). Countably many S5 worlds supply the positive model; the negative direction was already recorded. More generally, for infinite W in external ZFC,
 
-$$
+```math
 \mathrm{FullS5}(W)\models\mathrm{FP}\quad\Longleftrightarrow\quad 2^{|W|}=2^{\aleph_0}.
-$$
+```
 
 A free-root model also satisfies FP and both quantified Infinity axioms while failing Intensional Choice. The cardinal criterion need not make W countable.
 
@@ -327,11 +327,11 @@ Under the specified pure Frege translation, pure SP proves every standard-true �
 
 The proposed equality says that pure Maximalism proves exactly the ordinary first-order arithmetic consequences of the positive packages’ common arithmetic theory together with all standard-true Π₁ sentences.
 
-$$
+```math
 \mathrm{Th}_{\mathrm{arith}}(\mathrm{Max}(C))=\mathrm{Cn}\bigl(T_{\mathrm{arith}}\cup\mathrm{True}_{\Pi_1}\bigr).
-$$
+```
 
-Here $T_{\mathrm{arith}}$ is the [common arithmetic theory](#arithmetic-comparison), $\mathrm{True}_{\Pi_1}$ means standard-true Π₁ sentences, and $\mathrm{Cn}$ is first-order deductive closure. The upper inclusion still awaits independent review.
+Here $`T_{\mathrm{arith}}`$ is the [common arithmetic theory](#arithmetic-comparison), $`\mathrm{True}_{\Pi_1}`$ means standard-true Π₁ sentences, and $`\mathrm{Cn}`$ is first-order deductive closure. The upper inclusion still awaits independent review.
 
 [Proof length](#proof-length): long.
 
@@ -407,10 +407,10 @@ The positive theories, Max and SP occupy three successive levels of computationa
 
 | Pure theory | Theoremhood | Oracles computing some adequate countable model |
 |---|---|---|
-| C + ☐Plenitude + Axiom of Infinity (types e and t) | $\Sigma^0_1$-complete | PA degrees |
-| C + ☐Functional Choice + Axiom of Infinity (types e and t) | $\Sigma^0_1$-complete | PA degrees |
-| Max | $\Sigma^0_2$-complete | PA degrees over $0'$ |
-| SP, **if consistent** | $\Sigma^0_3$-complete | PA degrees over $0''$ |
+| C + ☐Plenitude + Axiom of Infinity (types e and t) | $`\Sigma^0_1`$-complete | PA degrees |
+| C + ☐Functional Choice + Axiom of Infinity (types e and t) | $`\Sigma^0_1`$-complete | PA degrees |
+| Max | $`\Sigma^0_2`$-complete | PA degrees over $`0'`$ |
+| SP, **if consistent** | $`\Sigma^0_3`$-complete | PA degrees over $`0''`$ |
 
 Adequate codes provide term interpretation and actual truth. PA degree over an oracle means the ability to compute a binary diagonally nonrecursive function relative to it; ordinary PA degrees use no oracle. The positive bounds already hold with the weaker Infinity schema at one admitted type. The theoremhood classifications persist under consistent extensions enumerable in the corresponding oracle.
 
@@ -432,7 +432,7 @@ Every supplied complete consistent pure theory Γ extending C has a countable mo
 
 Requiring the Frege numbers to be exactly the standard numerals changes the comparison sharply. With numerical noncollapse, every adequate standard-number code computes every hyperarithmetical real and is itself nonhyperarithmetical. Yet, for the positive packages with the specified Infinity assumptions and for Max, some standard codes lie strictly below Kleene’s O, and there is no least solution degree. Exactly the hyperarithmetical reals are computable from every standard code.
 
-For those standard-model classes, finite-condition satisfiability is $\Sigma^1_1$-complete and validity is $\Pi^1_1$-complete. These are semantic restrictions; the corresponding SP claims require a standard SP model, whose existence is unresolved.
+For those standard-model classes, finite-condition satisfiability is $`\Sigma^1_1`$-complete and validity is $`\Pi^1_1`$-complete. These are semantic restrictions; the corresponding SP claims require a standard SP model, whose existence is unresolved.
 
 [Proof length](#proof-length): long.
 
@@ -476,9 +476,9 @@ The proof constructs bracket abstraction, substitution coherence and both term r
 
 Over the λ-free base of H, full typed endpoint separation together with boxed Infinitary Comprehension characterizes full standard relational hierarchies in ZF:
 
-$$
-\exists R^{\sigma_1\cdots\sigma_n t}\,\Box\forall x_1\cdots x_n\,\bigl(R[\bar x]\leftrightarrow A\bigr).
-$$
+```math
+\exists R^{\sigma_1\cdots\sigma_n t}\, .\,\Box\forall x_1\cdots x_n\, .\,\bigl(R[\bar x]\leftrightarrow A\bigr).
+```
 
 A is an arbitrary set-sized infinitary matrix with unrestricted simultaneous typed parameters; the bound tuple is finite and may be empty. The selected axioms are closed under necessitation.
 
@@ -511,22 +511,22 @@ A different addition—one countable numeral abstraction—makes the Frege numbe
 <a id="evaluators-cores"></a>
 #### Six strictly different strengths of actual-truth evaluation
 
-For $E^{tt}$, correct evaluation means
+For $`E^{tt}`$, correct evaluation means
 
-$$
+```math
 \mathrm{Eval}(E):=\forall p^t\, .\,(p\to Ep=\top)\land(\neg p\to Ep=\bot).
-$$
+```
 
 The following requirements form a strict hierarchy over C, with each row stronger than the preceding one.
 
 | Requirement | Equivalent principle |
 |---|---|
-| $\exists f^{tt}\, .\,\forall p^t\, .\,p\leftrightarrow fp=f\top$ | Actuality |
-| $\exists E^{tt}\, .\,\mathrm{Eval}(E)$ | ND + Actuality |
-| $\exists E^{tt}\, .\,\mathrm{Eval}(E)\land\bigl(\Box\forall p^t\, .\,Ep=\top\lor Ep=\bot\bigr)$ | Gallin Extensional Comprehension; equivalently ND + Strong Actuality |
-| $\exists!E^{tt}\, .\,\mathrm{Eval}(E)$ | C5 + Actuality |
-| $\Box\exists E^{tt}\, .\,\mathrm{Eval}(E)$, equivalently $\Box\exists!E^{tt}\, .\,\mathrm{Eval}(E)$ | ☐Plenitude |
-| $\exists E^{tt}\, .\,\Box\mathrm{Eval}(E)$ | Extensionality |
+| $`\exists f^{tt}\, .\,\forall p^t\, .\,p\leftrightarrow fp=f\top`$ | Actuality |
+| $`\exists E^{tt}\, .\,\mathrm{Eval}(E)`$ | ND + Actuality |
+| $`\exists E^{tt}\, .\,\mathrm{Eval}(E)\land\bigl(\Box\forall p^t\, .\,Ep=\top\lor Ep=\bot\bigr)`$ | Gallin Extensional Comprehension; equivalently ND + Strong Actuality |
+| $`\exists!E^{tt}\, .\,\mathrm{Eval}(E)`$ | C5 + Actuality |
+| $`\Box\exists E^{tt}\, .\,\mathrm{Eval}(E)`$, equivalently $`\Box\exists!E^{tt}\, .\,\mathrm{Eval}(E)`$ | ☐Plenitude |
+| $`\exists E^{tt}\, .\,\Box\mathrm{Eval}(E)`$ | Extensionality |
 
 The last two rows separate an evaluator available at each world from one fixed evaluator correct at every world. Uniqueness in the fourth row is among all evaluators correct at the current world. The third row already gives Boolean and quantifier identities for current predicates; the stronger ☐∀F law remains unresolved.
 
@@ -550,9 +550,9 @@ Over C + ☐Plenitude, one admitted operator choosing, for each nonzero proposit
 
 A diagonal character preserves ⊥ and negation, takes only ⊤/⊥ values, and accepts
 
-$$
+```math
 w_E:=\forall p^t\, .\,Ep\to p.
-$$
+```
 
 Separation by such characters is equivalent to ND (type t) + Atomicity (type t); neither BF nor Choice is needed.
 
@@ -586,9 +586,9 @@ The ordered symmetry construction separates these demands: Boolean observer sepa
 
 Requiring separation by **logical observers → endpoint observers → a unique observer** leads respectively to C + BF, C5 + Atomicity (type t), and Extensionality over H. Under Extensionality, truth is itself an endpoint-valued observer. Over C, every arrow below is strict:
 
-$$
+```math
 \small\text{Extensionality}\ \Rightarrow\ \mathrm{C5}+\mathrm{Atomicity}_t\ \Rightarrow\ \Box\mathrm{OS}\ \Rightarrow\ \mathrm{OS}\ \Rightarrow\ \mathrm{BF}.
-$$
+```
 
 Reversible logical separation implies No Pure Contingency without atoms or Actuality. The [observer section](#h-observer-separation) and [full map](proofs/h-observer-space/GRAPH.md) give the other branches and separating models.
 

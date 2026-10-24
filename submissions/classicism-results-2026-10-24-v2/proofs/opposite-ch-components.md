@@ -18,13 +18,13 @@ a domain X, order, addition and multiplication graphs, zero, one, and the
 least inductive subproperty N. Completeness means that every **nonempty**
 admitted subproperty of X bounded above has a least upper bound. Write
 
-$$
+```math
  CH(R)\;:\!\iff\;
  \forall Y\subseteq X\,
    \bigl(\exists G\;\mathrm{Injection}(Y,N,G)
        \;\lor\;
        \exists G\;\mathrm{Bijection}(Y,X,G)\bigr).
-$$
+```
 
 Both subproperty and graph quantifiers range over the component's admitted
 relational domains. They do not range over all external subsets or functions.
@@ -34,7 +34,7 @@ The definitions are those of `CoalescedCHVocabulary.lean` and the canonical
 In a classical metatheory supporting first-order completeness and the usual
 relative-consistency theorems, the assertion is
 
-$$
+```math
  \mathrm{Con}(\mathrm{ZFC})\Longrightarrow
  \exists H_+,H_-\;
  \left\{
@@ -43,7 +43,7 @@ $$
  H_+\models\exists R\,(\mathrm{Real}(R)\land CH(R)),\\
  H_-\models\exists R\,(\mathrm{Real}(R)\land\neg CH(R)).
  \end{array}\right.
-$$
+```
 
 The displayed assertion is a relative model-existence conclusion, not a proof
 of `Con(ZFC)`. In particular it does not assert that ZFC proves its own
@@ -56,10 +56,10 @@ The relative consistency of CH and its negation gives
 Apply ordinary first-order completeness separately to these theories. Obtain
 set-sized structures
 
-$$
+```math
  M_+\models\mathrm{ZFC}+CH,\qquad
  M_-\models\mathrm{ZFC}+\neg CH.
-$$
+```
 
 One may choose countable models, but countability is unnecessary below. Their
 membership relations may be externally ill founded; their natural numbers
@@ -92,13 +92,13 @@ nonindividual type ends in t. Define internal set codes by external recursion
 on these **standard finite** types. If rho is a finite argument list ending
 in t, put
 
-$$
+```math
  T_t=\{u\}^{M},\qquad
  T_{\sigma\to\rho}=D^{\rm code}_\sigma\times^{M}T_\rho,
  \qquad
  D^{\rm code}_e=r,\qquad
  D^{\rm code}_{\mathrm{rel}(\rho)}=\mathcal P^{M}(T_\rho).
-$$
+```
 
 Here u is a fixed element of M, for example its empty set; products use an
 internal injective ordered-pair coding. The external typed domains are
@@ -111,9 +111,9 @@ membership and the induction hypothesis prove surjectivity.
 An admitted relation is an element `A in M` that M regards as a subset of
 `T_rho`. Its profile on an external tuple a is
 
-$$
+```math
  \mathrm{profile}(A)(a)\iff M\models\mathrm{encode}(a)\in A.
-$$
+```
 
 If two admitted relations have the same profile, they have the same M-members
 by the tuple bijection; all their members lie in `T_rho`. Extensionality in M
@@ -190,9 +190,9 @@ the image `N_M` of the internally constructed omega are sets in M. Recode
 these relations into the nested tuple convention just defined. For example,
 an internal unary subset A of r is represented by
 
-$$
+```math
  \{\langle x,u\rangle:x\in A\}^{M}.
-$$
+```
 
 Replacement gives this code. Conversely, Separation on r decodes any
 admitted unary relation. The same two operations work for each finite arity.
@@ -226,11 +226,11 @@ correspond to all M-internal graphs between them. Support, totality,
 functionality, injectivity and surjectivity are first-order assertions about
 these sets. The satisfaction lemma consequently gives
 
-$$
+```math
  H(M)\models CH(R_M)\quad\Longleftrightarrow\quad
  M\models\forall Y\subseteq\mathbb R\,
    (Y\hookrightarrow\mathbb N\ \lor\ Y\cong\mathbb R).
-$$
+```
 
 The right-hand assertion is equivalent in ZFC to ordinary CH. Here is the
 cardinal argument, carried out **inside ZFC**, so it applies inside every M.

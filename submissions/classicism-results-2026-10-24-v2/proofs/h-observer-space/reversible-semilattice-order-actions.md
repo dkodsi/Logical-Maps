@@ -10,20 +10,20 @@ The action hypothesis concerns admitted automorphisms with whole-operation ident
 
 Work in H, retaining the fixed abbreviations T for Top and B for Bottom. Assume **BMeet**: primitive conjunction is associative, commutative and idempotent, and
 
-$$
+```math
 p\land T=p,\qquad p\land B=B.
 \tag{1}
-$$
+```
 
 Write p≤q for p∧q=p, and p<q for p≤q and p≠q. These are output identities, so BMeet supplies a bounded meet-semilattice. Its bounds have opposite truth values by the H truth clauses.
 
 Put I:=λp.p and define composition by the admitted lambda term. As in [Reversible meet characterization](reversible-meet-characterization.md), let
 
-$$
+```math
 M(E):=(\lambda p,q.E(p\land q))
        =(\lambda p,q.Ep\land Eq).
 \tag{2}
-$$
+```
 
 Let G be an admitted predicate of type (tt)t satisfying the following conditions:
 
@@ -36,21 +36,21 @@ Both inverse equations and (2) are whole-operation identities. The quantifiers r
 
 Every member of G is an order isomorphism. Meet preservation gives monotonicity, and its admitted inverse gives the reverse order implication. Surjectivity and uniqueness of the two bounds then give
 
-$$
+```math
 ET=T,\qquad EB=B.
 \tag{3}
-$$
+```
 
 Thus acceptance of T and rejection of B need not be separately imposed on this group.
 
 The separation principle is
 
-$$
+```math
 S[G]:=\forall p,q\left[
 p=q\leftrightarrow
 \forall E\,(GE\to(Ep\leftrightarrow Eq))\right].
 \tag{4}
-$$
+```
 
 No preservation of negation, disjunction or any quantifier is included in G unless expressly added. In particular the quantification used to define a relation below does not assert that the observers preserve that quantifier.
 
@@ -58,26 +58,26 @@ No preservation of negation, disjunction or any quantifier is included in G unle
 
 Define the admitted relation
 
-$$
+```math
 R_G(p,q):=\forall E^{tt}\,[GE\to(Ep\leftrightarrow Eq)].
 \tag{5}
-$$
+```
 
 This is one lambda-defined relation of type ttt. The use of all members of the admitted predicate G is ordinary object-language quantification.
 
 A relation U is **truth-compatible** when
 
-$$
+```math
 \forall p,q\,[U(p,q)\to(p\leftrightarrow q)],
 \tag{6}
-$$
+```
 
 and **G-invariant** when, for every E with GE,
 
-$$
+```math
 \forall p,q\,[U(p,q)\leftrightarrow U(Ep,Eq)].
 \tag{7}
-$$
+```
 
 These are material conditions on admitted relations. Equality of their higher-type objects is not being inferred from coextension.
 
@@ -87,10 +87,10 @@ These are material conditions on admitted relations. Equality of their higher-ty
 
 Suppose R_G(p,q) and R_G(r,s). For every E with GE, the full meet identity gives the output identities
 
-$$
+```math
 E(p\land r)=Ep\land Er,\qquad
 E(q\land s)=Eq\land Es.
-$$
+```
 
 The H conjunction truth clause and the two profile agreements make these outputs materially equivalent. Thus R_G(p∧r,q∧s), proving the congruence condition.
 
@@ -98,7 +98,7 @@ Finally, if U satisfies (6)–(7) and U(p,q), invariance gives U(Ep,Eq) for ever
 
 Consequently, over H+BMeet with the displayed group assumptions,
 
-$$
+```math
 \boxed{
 \begin{aligned}
 S[G]
@@ -108,16 +108,16 @@ S[G]
 \text{every admitted G-invariant truth-compatible meet congruence is equality}.
 \end{aligned}}
 \tag{8}
-$$
+```
 
 Here “is equality” means that the relation has precisely the pairs p=q as its current extension. The reverse implications use the particular admitted relation (5), so (8) does not assume that an external intersection of relations is admitted.
 
 There is also a semantic quotient interpretation. The external quotient of the proposition domain by R_G inherits meet and the G action. It embeds faithfully in the sets of admitted group members by
 
-$$
+```math
 [p]\longmapsto\{E:GE\text{ and }Ep\text{ is true}\}.
 \tag{9}
-$$
+```
 
 Meet becomes intersection. Acting on p by H replaces the displayed set by its inverse image under right composition E↦E∘H. This states the representation and its compatibility with the action. It does not assert an admitted quotient type, a set of all external subsets, or an identity of higher characteristic operations. Reversible separation says exactly that this canonical quotient has not identified distinct propositions.
 
@@ -129,21 +129,21 @@ Truth is an upper segment of the meet order. Indeed p≤q and p true give p∧q=
 
 Proposition 1 now has the chain formulation
 
-$$
+```math
 \boxed{S[G]\ \longleftrightarrow\quad
 \text{there is no nontrivial admitted G-invariant, truth-compatible
 convex equivalence}.}
 \tag{10}
-$$
+```
 
 “Nontrivial” here means that some distinct pair is related. The universal relation is not truth-compatible because T and B have opposite truth values. Convexity is an additional structural description of the maximal obstruction, not an assumption on arbitrary truth predicates.
 
 For the next statements, suppose the bounded chain is dense: whenever p<q there is r with p<r<q. Put
 
-$$
+```math
 J(p):=B<p<T.
 \tag{11}
-$$
+```
 
 All equivalence, invariance and convexity conditions can be restricted to J by guarding their variables with J. These are still formulas about admitted relations. Equation (3) makes J invariant under G.
 
@@ -161,10 +161,10 @@ Say that the admitted G action is **order-primitive on J** when every admitted G
 
 Assume also an interior truth contrast:
 
-$$
+```math
 \exists b,a\,[J(b)\land J(a)\land\neg b\land a].
 \tag{12}
-$$
+```
 
 Necessarily b<a, since truth is an upper segment.
 
@@ -176,11 +176,11 @@ This proof assumes neither an atom nor a least true proposition. It uses neither
 
 A convenient stronger hypothesis is **order 2-homogeneity on J**:
 
-$$
+```math
 \forall p<q\text{ in }J\;\forall u<v\text{ in }J\;
 \exists E\,[GE\land Ep=u\land Eq=v].
 \tag{13}
-$$
+```
 
 It implies order primitivity. If an invariant equivalence relates distinct p<q, (13) sends that pair to every u<v. Invariance and reflexivity make the relation universal. Thus (13) and (12) suffice. For an interior pair one can also see separation directly by sending it to b<a across the truth cut. The primitivity theorem does not require the stronger two-point motion in (13).
 
@@ -188,20 +188,20 @@ It implies order primitivity. If an invariant equivalence relates distinct p<q, 
 
 Take singleton individuals and proposition domain
 
-$$
+```math
 D_t=(\mathbb Q\cap[0,1])\setminus\{1/2\},
 \qquad p\text{ true}\Longleftrightarrow p>1/2.
 \tag{14}
-$$
+```
 
 At every allowed relational arrow type take the full set of functions between the corresponding domains. There are no hidden arguments: admitted and outer domains coincide. Application and abstraction are ordinary function application and abstraction. Set
 
-$$
+```math
 p\land q=\min(p,q),\qquad
 p\lor q=\max(p,q),\qquad
 \neg p=1-p.
 \tag{15}
-$$
+```
 
 The removal of 1/2 makes negation truth-correct and keeps it an involution of the domain. Interpret each universal quantifier by 1 if all of the predicate's admitted instances are true, and by 0 otherwise. Interpret each existential quantifier analogously. Identity at every type returns 1 for actual equality and 0 for inequality. All these total operations belong to their full function domains.
 
@@ -215,10 +215,10 @@ Thus the full admitted order-automorphism group satisfies (13). The elements 1/4
 
 C fails. For example p=1/4 gives
 
-$$
+```math
 p\lor\neg p=3/4\ne1=T,
 \tag{16}
-$$
+```
 
 whereas H proves the material equivalence of excluded middle and T, and C's Logical Equivalence rule would identify them. No negation or quantifier preservation is claimed for the separating automorphisms. The model therefore shows that this atomless reversible semilattice theory does not entail C.
 
@@ -226,11 +226,11 @@ whereas H proves the material equivalence of excluded middle and T, and C's Logi
 
 The same full-function model also exhibits a strict distinction between the two action hypotheses used above. Choose an external order isomorphism φ from the interior J of (14) onto the ordered rationals. It exists by the same enumerated extension argument. For each rational r define
 
-$$
+```math
 E_r(p)=\varphi^{-1}(\varphi(p)+r)\quad(p\in J),
 \qquad E_r(0)=0,\quad E_r(1)=1.
 \tag{17}
-$$
+```
 
 Every E_r and its inverse E_{−r} is an admitted full meet/join automorphism. Let G be a predicate whose true members are exactly these operations. Such a predicate is admitted in this particular model because its higher function domains are full; it can return 1 on the specified set of operations and 0 elsewhere. The construction makes no general claim that an external subgroup can be named in an arbitrary Henkin model, and it does not require an object-language choice of all the E_r.
 

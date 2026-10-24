@@ -4,12 +4,12 @@ By OpenAI Codex, prompted by Daniel Kodsi, 24 October 2026. Direct source for th
 
 The full three-object fork satisfies necessary ordinary logical separation but fails separation by qualified left-invertible observers. Together with the previously proved left-inverse models, this settles both strict arrows:
 
-$$
+```math
 \boxed{\mathrm{Rev}\ \Longrightarrow\ \mathrm{SplitMono}
 \ \Longrightarrow\ \mathrm{OS},
 \qquad\text{both implications strict}.}
 \tag{1}
-$$
+```
 
 It also separates necessary ordinary separation from qualified left-inverse separation. The converse separation already has a different model, so those two principles are incomparable.
 
@@ -19,38 +19,38 @@ All qualifications below use full composite operation identities. The failure oc
 
 Use exactly [Full three-object fork: all Barcan instances without binary families](fork-without-binary-families.md), §§1–2. Its category has objects r,l,h, identity arrows and just two nonidentity arrows
 
-$$
+```math
 \alpha:r\to l,\qquad\beta:r\to h.
-$$
+```
 
 Each object has a singleton individual domain. Use the full action construction in the fixed relational language, with no function types ending in e. The current proposition domains are
 
-$$
+```math
 D_t(r)=\{0,1\}^3,
 \qquad D_t(l)=D_t(h)=\{0,1\}.
 \tag{2}
-$$
+```
 
 Write a root proposition as p=(p_0,p_l,p_h). Its current truth is p₀, and its transports along α and β are p_l and p_h. Boolean operations act coordinatewise. Root function objects are natural families consisting of a root map and its two compatible leaf maps; every such family belongs to the full domain.
 
 The existing type induction gives joint surjectivity
 
-$$
+```math
 (\alpha_\sigma,\beta_\sigma):D_\sigma(r)
 \longrightarrow D_\sigma(l)\times D_\sigma(h)
 \tag{3}
-$$
+```
 
 for every admitted type σ. In particular each individual transport is onto. The existing proof consequently gives C, all BF instances and all Functionality instances at every object, including their separately boxed forms at r. These facts are retained without any change to the model.
 
 For a finite external Δ let Good_Δ be the complete logical qualification. Define
 
-$$
+```math
 \mathrm{SplitMono}_\Delta(E):=
 \mathrm{Good}_\Delta(E)\land
 \exists F^{tt}\,[\mathrm{Good}_\Delta(F)\land F\circ E=I].
 \tag{4}
-$$
+```
 
 The inverse equation in (4) is an identity of admitted operations. The negative proof will require only E's full Boolean identities and an admitted left inverse; qualification of that inverse is not needed.
 
@@ -58,12 +58,12 @@ The inverse equation in (4) is an identity of admitted operations. The negative 
 
 Define three admitted root observers. The first is identity. The other two have root components
 
-$$
+```math
 E_l(p_0,p_l,p_h):=(p_l,p_l,p_h),
 \qquad
 E_h(p_0,p_l,p_h):=(p_h,p_l,p_h),
 \tag{5}
-$$
+```
 
 and both have the identity map as each leaf component.
 
@@ -77,23 +77,23 @@ Every output coordinate in (5) is one input coordinate. Hence the root maps pres
 
 Fix any admitted type σ and any predicate F∈D_{σt}(r). Its universal proposition has coordinates
 
-$$
+```math
 \left(
 \bigwedge_{x\in D_\sigma(r)}F_r(x)_0,
 \ \bigwedge_{y\in D_\sigma(l)}F_l(y),
 \ \bigwedge_{z\in D_\sigma(h)}F_h(z)
 \right).
 \tag{6}
-$$
+```
 
 For E_l, the root truth bit of E_l(∀_σF) is the middle coordinate in (6). The root truth bit of ∀_σ(E_l∘F) is
 
-$$
+```math
 \bigwedge_{x\in D_\sigma(r)}F_r(x)_l
 =\bigwedge_{x\in D_\sigma(r)}F_l(\alpha_\sigma x)
 =\bigwedge_{y\in D_\sigma(l)}F_l(y).
 \tag{7}
-$$
+```
 
 The first equality is the definition of E_l, the second is naturality of F, and the last uses surjectivity of α_σ from (3). The two leaf coordinates also agree because the leaf observer components are identities. At a future leaf, the entire universal-commutation equation is simply the identity equation for the identity observer. Thus the calculation holds on every root input and every future input; it proves the full composite Q_σ identity.
 
@@ -107,11 +107,11 @@ Current Functionality lifts this to every relational output type: if two relatio
 
 At a leaf the model is an ordinary full extensional type structure, with only two proposition values. Identity is Good_Δ and separates at every relational type. Consequently ordinary full typed separation holds at all three objects. At r we therefore have both OS and its separately boxed schema:
 
-$$
+```math
 \mathrm C+\Box\mathrm{OS}+\Box\mathrm{BF}
 +\Box\mathrm{Fun}.
 \tag{8}
-$$
+```
 
 Each box in (8) is read instance by instance. No infinite conjunction is placed inside the object language.
 
@@ -127,39 +127,39 @@ Let E be an admitted root observer satisfying the full Boolean operation identit
 
 Each leaf component of E fixes Top and Bottom. Since its leaf proposition domain has just those two elements, that component is the identity map. Naturality therefore gives
 
-$$
+```math
 (ep)_l=p_l,
 \qquad(ep)_h=p_h
 \qquad\text{for every root proposition }p.
 \tag{9}
-$$
+```
 
 Put
 
-$$
+```math
 u:=(1,0,0).
-$$
+```
 
 Equation (9) makes both leaf bits of e(u) zero. Hence e(u) is either Bottom=(0,0,0) or u. Boolean preservation gives e(Bottom)=Bottom, and injectivity excludes e(u)=Bottom because u≠Bottom. Thus
 
-$$
+```math
 e(u)=u.
 \tag{10}
-$$
+```
 
 For every p, meet preservation now gives
 
-$$
+```math
 u\land e(p)=e(u\land p).
 \tag{11}
-$$
+```
 
 If p₀=0 then u∧p=Bottom, so (11) makes the root bit of e(p) zero. If p₀=1 then u∧p=u, and (10)–(11) make the root bit of e(p) one. Therefore e preserves the root bit as well as the two leaf bits in (9):
 
-$$
+```math
 e(p)=p\qquad\text{for every }p\in D_t(r).
 \tag{12}
-$$
+```
 
 In particular every possible SplitMono observer preserves current truth. The obstruction is the root atom u: any injective Boolean observer must preserve it, and preserving that atom preserves its corresponding truth test.
 
@@ -171,22 +171,22 @@ This refutes the instance for Δ={t}, and indeed the same argument applies to ev
 
 At the root the exact new model profile is
 
-$$
+```math
 \boxed{\mathrm C+\Box\mathrm{OS}+\Box\mathrm{BF}
 +\Box\mathrm{Fun}+\neg\mathrm{SplitMono}.}
 \tag{13}
-$$
+```
 
 Therefore the implication SplitMono⇒OS is strict, even over C with every boxed BF and Functionality instance. In conjunction with the finite-block model from [Finite-pinning models with qualified left-inverse separation](finite-block-symmetry-left-inverse.md), §§1–6, which satisfies SplitMono but not Rev, this establishes both strict arrows in (1). Qualified right-inverse separation remains equivalent to Rev by [the right-inverse patching theorem](split-inverse-logical-observers.md).
 
 The all-maps model in the left-inverse note, §7, satisfies SplitMono but fails necessary OS. Equation (13) supplies the reverse separation. Hence
 
-$$
+```math
 \mathrm{SplitMono}\not\Longrightarrow\Box\mathrm{OS},
 \qquad
 \Box\mathrm{OS}\not\Longrightarrow\mathrm{SplitMono}.
 \tag{14}
-$$
+```
 
 The two non-implications in (14) use two different models. The all-maps model's failures of necessary BF are not transferred to this fork; the fork satisfies every boxed BF instance.
 
@@ -194,10 +194,10 @@ The two non-implications in (14) use two different models. The all-maps model's 
 
 The finite-domain observation in §3 has an internal strengthening when current Functionality is explicitly available. Let All:=λp.Top and use the database's Frege definition
 
-$$
+```math
 \mathrm{Fin}_t(\mathrm{All}):=
 \exists Z^{(tt)t}\,[\mathrm{FiniteCardinality}_t(Z)\land Z(\mathrm{All})].
-$$
+```
 
 This asserts internal finiteness; it does not supply a standard external enumeration. Over H plus this premise, every admitted injective operation E:tt is onto. Here is the exact internal justification. If E were injective but omitted q₀, the admitted relation R(p,q):=(Ep=q) would be serial on All, would never send two distinct inputs to the same output, and would omit q₀. The [recorded Dedekind lemma](../../source/topics/classicism/writeups/pure-possibility-implies-axiom-of-infinity-t.md), Lemma 5, proves by Frege induction that no predicate having a finite cardinality admits such a relation. Apply it to All.
 
@@ -205,21 +205,21 @@ Only that lemma's internal logical argument is used, not the surrounding maximal
 
 Now suppose F∘E=I. This gives injectivity of E, hence internal surjectivity by the preceding argument. For any q choose p with Ep=q. Equality substitution gives
 
-$$
+```math
 E(Fq)=E(F(Ep))=Ep=q.
-$$
+```
 
 Under the explicit local premise Fun_{t,t}, these pointwise identities identify the whole operations E∘F=I. This is the step absent from a bare current-finiteness argument: here current Functionality, rather than a silent inference about future domains, supplies the identity. No necessity of the finiteness premise is asserted.
 
 Thus under H+Fin_t(All)+Fun_{t,t}, the SplitMono_Δ and reversible qualifications coincide for each finite Δ, with exactly the same E,F. In particular, at full relational scope, SplitMono itself supplies Functionality through ordinary separation. With Fin_t(All) retained as a common premise,
 
-$$
+```math
 \boxed{\mathrm{SplitMono}\ \longleftrightarrow\ \mathrm{Rev}
 \ \longleftrightarrow\ \mathrm{EndSep}.}
 \tag{15}
-$$
+```
 
-For the final equivalence, Rev recovers C and the identity observer is $\mathrm{Good}_{\{t\}}$ with internally finite image: its image predicate is unconditionally H-equivalent, hence C-identical, to All. The existing [single finite-image witness theorem](../logical-observer-hierarchy.md), §§5–6, turns Rev plus this one witness into endpoint separation EndSep. Conversely EndSep already supplies Rev without a finiteness assumption. The fork remains a countermodel because it has OS but lacks the left-invertible separating witnesses; (15) does not upgrade ordinary OS.
+For the final equivalence, Rev recovers C and the identity observer is $`\mathrm{Good}_{\{t\}}`$ with internally finite image: its image predicate is unconditionally H-equivalent, hence C-identical, to All. The existing [single finite-image witness theorem](../logical-observer-hierarchy.md), §§5–6, turns Rev plus this one witness into endpoint separation EndSep. Conversely EndSep already supplies Rev without a finiteness assumption. The fork remains a countermodel because it has OS but lacks the left-invertible separating witnesses; (15) does not upgrade ordinary OS.
 
 Finally the fork does not satisfy C5. The nonbottom proposition u is distinct from Bottom at r, but both its leaf transports are Bottom. Necessary distinctness therefore fails at r. The fork establishes the broad H comparison OS versus SplitMono in (13). The stronger implication C5 plus necessary OS⇒SplitMono is refuted by the distinct [linear and circular fibre model](linear-circular-fibre-left-inverse-gap.md), §§1–9, whose finite-pin proposition algebras and pure-sentence obstruction supply that result.
 

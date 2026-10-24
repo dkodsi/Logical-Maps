@@ -12,20 +12,20 @@ Fix an actual binary propositional operation + whose H truth table is either XOR
 
 Write Mat_+(E) for material preservation and Pt_+(E) for
 
-$$
+```math
 \forall x,y\; E(x+y)=Ex+Ey.
-$$
+```
 
 Two(E) means that E has at most two actual output objects. Separation S uses agreement in truth, as in the [atlas notation](README.md).
 
 **Theorem.** Over H+Fin_t(All),
 
-$$
+```math
 \mathrm{BG}(+)
 \quad\longleftrightarrow\quad S[\mathrm{Mat}_+]
 \quad\longleftrightarrow\quad S[\mathrm{Two}\land\mathrm{Pt}_+].
 \tag{1}
-$$
+```
 
 Consequently material and pointwise separation coincide for each separate affine operation in this finite region. Adding the local Functionality instances Fun_(t,t) and Fun_(t,tt) gives whole-operation separation as well. At full relational separation scope, the same equivalence holds with precisely the explicit Functionality schema on the structural side.
 
@@ -33,13 +33,13 @@ The witnesses have the two outputs 0,c for a suitable c≠0. They are not claime
 
 There is also an exact reduction without finiteness of the proposition domain. For O equal to no endpoint condition, A, Z or A∧Z, over bare H,
 
-$$
+```math
 \boxed{
 S[O\land\mathrm{FinIm}\land\mathrm{Mat}_+]
 \quad\longleftrightarrow\quad
 S[O\land\mathrm{Two}\land\mathrm{Pt}_+].}
 \tag{8}
-$$
+```
 
 FinIm is internal Frege finiteness of the admitted image predicate, as in [Finite-image material normalization](finite-image-material-normalization.md), §1. Section 6 proves (8), including the stronger individual-observer normalization under BG(+). Full relational scope again makes the pointwise and whole-operation versions equivalent. This does not settle unrestricted affine separation on an infinite domain.
 
@@ -47,40 +47,40 @@ FinIm is internal Frege finiteness of the admitted image predicate, as in [Finit
 
 Assume BG(+) and fix d≠0. We construct an admitted subgroup K avoiding d and an admitted operation A:tt satisfying
 
-$$
+```math
 \forall x\;(Ax\leftrightarrow Kx),
 \qquad
 \forall k,x\;(Kk\to A(x+k)=Ax).
 \tag{2}
-$$
+```
 
 The first condition concerns truth; the second is a pointwise identity. Initially take
 
-$$
+```math
 K(x):=(x=0),\qquad A(x):=(x=0).
-$$
+```
 
 This subgroup avoids d, and (2) holds by substitution. No assumption is made about the output object of a true or false identity judgment.
 
 Suppose y lies outside both K and d+K. Define
 
-$$
+```math
 K'(x):=Kx\lor K(x+y).
 \tag{3}
-$$
+```
 
 The two cosets in (3) are disjoint. Their union is a subgroup, contains K and y, and still avoids d: if d belonged to y+K, then y would belong to d+K.
 
 Define an admitted operation by the appropriate displayed term:
 
-$$
+```math
 A'(x):=
 \begin{cases}
 Ax+A(x+y),&\text{XOR truth table},\\
 \neg\bigl(Ax+A(x+y)\bigr),&\text{biconditional truth table}.
 \end{cases}
 \tag{4}
-$$
+```
 
 These are two externally specified constructions, not an object-language case operator. In either construction A'(x) has the XOR truth value of Ax and A(x+y). Since those tests cannot both be true, A' is true exactly on K'.
 
@@ -92,29 +92,29 @@ We have proved an extension step: whenever y is not yet covered by K∪(d+K), en
 
 Let Admissible_d(K,A) express the subgroup, avoidance and two conditions in (2). These are finite formulas in the admitted relational language. Define the property of cardinality objects
 
-$$
+```math
 W(Z):=\forall U\left[ZU\to
 \exists K,A\left(
 \mathrm{Admissible}_d(K,A)
 \land\forall x\bigl(Ux\to(Kx\lor K(x+d))\bigr)
 \right)\right].
 \tag{5}
-$$
+```
 
 The zero cardinality satisfies W: use the initial subgroup and test in §2, since its U is empty. For the successor step, suppose Suc(Z)U and choose its witness y. By the defining Frege successor formula,
 
-$$
+```math
 Z(\lambda x.Ux\land x\ne y).
-$$
+```
 
 Apply W(Z) to that deletion predicate. If y is already in K∪(d+K), retain the witnesses. Otherwise use (3)–(4). The resulting witnesses cover every member of U and establish W(Suc(Z)).
 
 Frege induction yields W(Z) for every internally finite cardinality Z. Apply it to a witness Z with Z(All). We obtain
 
-$$
+```math
 \forall x\;(Kx\lor K(x+d)),\qquad \neg Kd.
 \tag{6}
-$$
+```
 
 No uniform selection of witnesses over cardinalities or inputs occurs. At each successor step only the existential witnesses of that step are used. The operations in (3)–(5) are explicit lambda terms, so this proof does not presume admission of an externally chosen basis, sum, character, or enumeration.
 
@@ -122,20 +122,20 @@ No uniform selection of witnesses over cardinalities or inputs occurs. At each s
 
 Put u:=A0 and v:=Ad. Then u is true and v is false, hence u≠v. Translation invariance and (6) give the exact output table
 
-$$
+```math
 Ax=
 \begin{cases}
 u,&Kx,\\
 v,&K(x+d).
 \end{cases}
-$$
+```
 
 Define F(x):=Ax+u and c:=v+u. The two outputs of F are 0 and c, and c≠0 by group cancellation. Its kernel is K; the other coset is d+K. Adding two members of the other coset returns to K, while adding a K-member leaves coset membership unchanged. Because c+c=0, the four coset cases give
 
-$$
+```math
 F(x+y)=Fx+Fy.
 \tag{7}
-$$
+```
 
 In the XOR case 0 is false and c is true. In the biconditional case 0 is true and c is false. Thus F0 and Fd differ in truth in both cases.
 
@@ -164,43 +164,43 @@ These are truth conditions on the endpoint outputs; no endpoint fixing follows u
 
 Assume BG(+), and let E be any admitted observer with FinIm(E). We first construct a two-output observer F with
 
-$$
+```math
 \forall p\;(Fp\leftrightarrow Ep).
 \tag{9}
-$$
+```
 
 If E is materially + preserving, the construction will make F pointwise + preserving. The image of E need not be a subgroup, and no closure of that image under + is assumed.
 
 For compact notation define the admitted predicate
 
-$$
+```math
 \tau(x):=
 \begin{cases}
 x,&\text{XOR truth table},\\
 \neg x,&\text{biconditional truth table}.
 \end{cases}
-$$
+```
 
 This is two externally specified choices of a term. It is a truth character of the ambient group: τ0 is false, and τ(x+y) has the XOR truth value of τx and τy. No pointwise preservation by τ is asserted. Fix d with τd true: take Top for XOR and Bottom for biconditional. Thus d≠0. Write ker τ for the admitted predicate λx.¬τx.
 
 We strengthen the invariant-test induction in §3. Let B_τ(K,A) express that K is a subgroup, K⊆ker τ, A is truth-characteristic of K, and A is pointwise invariant under every K translation as in (2). Define
 
-$$
+```math
 \begin{aligned}
 \mathrm{Cover}_\tau(U,K):=\forall x\bigl[Ux\to
 &((\neg\tau x\to Kx)\\
 &\land(\tau x\to K(x+d)))\bigr],
 \end{aligned}
-$$
+```
 
 and the admitted induction property
 
-$$
+```math
 W_\tau(Z):=\forall U\left[ZU\to
 \exists K,A\bigl(B_\tau(K,A)\land
 \mathrm{Cover}_\tau(U,K)\bigr)\right].
 \tag{10}
-$$
+```
 
 For zero, use K(x):=(x=0) and A(x):=(x=0). For a successor witness y, apply the induction hypothesis to the exact deletion predicate λx.Ux∧x≠y. If τy is false put z:=y; if τy is true put z:=y+d. This is an ordinary proof by cases selecting one existing proposition in each case, not an assumed admitted conditional operation. In either case τz is false. If z∈K, retain K,A. Otherwise z lies outside K∪(d+K): membership in d+K would make τz true because K⊆ker τ. Apply the extension (3)–(4) with z in place of y.
 
@@ -208,23 +208,23 @@ The enlarged subgroup remains within ker τ, since both K and z have τ value fa
 
 Apply (10) to the actual image predicate Im(E)(x):=∃p(Ep=x), using FinIm(E). Put u:=A0 and v:=Ad. Then u is true and v is false: 0∈K, whereas τd is true and K⊆ker τ. Every output Ep satisfies
 
-$$
+```math
 A(Ep)=
 \begin{cases}
 u,&\neg\tau(Ep),\\
 v,&\tau(Ep).
 \end{cases}
 \tag{11}
-$$
+```
 
 Indeed, in the first case Ep∈K, so translation invariance gives A(Ep)=A0. In the second Ep+d∈K, so invariance applied at d gives A(Ep)=Ad. These are identities of output objects.
 
 Define the admitted operation
 
-$$
+```math
 F(p):=A(Ep)+u,\qquad c:=v+u.
 \tag{12}
-$$
+```
 
 It takes the values 0 and c, and c≠0. For XOR, 0 is false and c is true; for biconditional, 0 is true and c is false. By the definition of τ, (11) therefore gives exactly (9). This includes constant truth profiles; the construction does not require both truth values to occur in Im(E).
 

@@ -8,16 +8,16 @@ Over H, a small local identity package turns the intrinsic meet/universal and jo
 
 Use H in the fixed relational type system. The base types are e and t, and an arrow type is admitted only when its codomain is relational. All type lists below are finite external lists, not object-language type quantifiers. Retain the fixed abbreviations
 
-$$
+```math
 a:=\forall p^t\,p,\qquad \top:=a\lor\neg a,\qquad
 \bot:=a\land\neg a.
-$$
+```
 
 H makes Top true and Bottom false and therefore proves their distinctness. Their algebraic behavior under the primitive operations is not otherwise assumed.
 
 For an observer E of type tt, put
 
-$$
+```math
 \begin{aligned}
 A(E)&:=E\top,& Z(E)&:=\neg E\bot,\\
 M(E)&:=(\lambda p,q.E(p\land q))=(\lambda p,q.Ep\land Eq),\\
@@ -27,14 +27,14 @@ Q_\sigma(E)&:=(\lambda F^{\sigma t}.E(\forall x^\sigma Fx))
 P_\sigma(E)&:=(\lambda F^{\sigma t}.E(\exists x^\sigma Fx))
               =(\lambda F^{\sigma t}.\exists x^\sigma E(Fx)).
 \end{aligned}
-$$
+```
 
 Write Q_Delta and P_Delta for the finite conjunctions at the listed types. Every preservation clause is an identity of the displayed whole operations. Define
 
-$$
+```math
 S[R]:=\forall p,q\,[p=q\leftrightarrow
                   \forall E\,(R(E)\to(Ep\leftrightarrow Eq))].
-$$
+```
 
 The last biconditional compares truth values. It is not E(p iff q).
 
@@ -42,27 +42,27 @@ The last biconditional compares truth values. It is not E(p iff q).
 
 Assume identity bivalence at t:
 
-$$
+```math
 \mathrm{IB}_t:\quad
 \forall p,q\,[(p=q)=\top\lor(p=q)=\bot].
-$$
+```
 
 This concerns identity judgments, not every proposition. Together with H's truth clauses it says that a true identity judgment is Top and a false one is Bottom.
 
 For admitted sigma rho, let
 
-$$
+```math
 \mathrm{Fun}_{\sigma,\rho}:\quad
 \forall F,G^{\sigma\rho}
   [(\forall x^\sigma\,Fx=Gx)\to F=G].
-$$
+```
 
 For a finite Delta, the local package L_Delta consists of IB_t and
 
-$$
+```math
 \mathrm{Fun}_{t,t},\qquad \mathrm{Fun}_{t,tt},\qquad
 \{\mathrm{Fun}_{\sigma t,t}:\sigma\in\Delta\}.
-$$
+```
 
 The first two Functionality instances lift a doubly pointwise identity to an identity between the curried binary operations. The last instances lift the quantifier identities. No unlisted Functionality instance is used.
 
@@ -75,17 +75,17 @@ Say Meet_Delta holds when:
 1. Primitive conjunction is commutative, associative and idempotent, and p and Top equals p. Thus it is a meet-semilattice with greatest element Top.
 2. Writing u <=_meet v for u and v equals u, each listed primitive universal supplies an admitted greatest lower bound:
 
-$$
+```math
 \forall F^{\sigma t}\forall u\,
  [u\le_{\land}\forall x^\sigma Fx
   \leftrightarrow\forall x^\sigma(u\le_{\land}Fx)].
-$$
+```
 
 **Theorem.** Over H + L_Delta,
 
-$$
+```math
 \boxed{S[A\land M\land Q_\Delta]\ \leftrightarrow\ \mathrm{Meet}_\Delta.}
-$$
+```
 
 The right side does not require Bottom to be least.
 
@@ -93,29 +93,29 @@ The right side does not require Bottom to be least.
 
 This direction needs neither IB_t nor Functionality. For the qualified class R define
 
-$$
+```math
 p\preceq q\quad\text{iff}\quad
 \forall E\,[R(E)\to(Ep\to Eq)].
-$$
+```
 
 H makes this a preorder. Separation is its antisymmetry: mutual comparison says precisely that all eligible observers agree on the two propositions. Since every eligible observer accepts Top, Top is greatest.
 
 Evaluating the conjunction operation identity gives
 
-$$
+```math
 u\preceq(p\land q)\quad\leftrightarrow\quad
 (u\preceq p\ \land\ u\preceq q).
-$$
+```
 
 Thus primitive conjunction supplies binary meets. In particular it has the stated semilattice identities. Moreover p precedes q iff p and q equals p: in the forward direction all observers agree on p and q's meet and on p, so separation identifies them; the reverse follows by substitution and the conjunction truth clause. Hence this preorder is exactly <=_meet.
 
 Similarly, universal preservation and ordinary H quantifier reasoning give
 
-$$
+```math
 u\preceq\forall x^\sigma Fx
 \quad\leftrightarrow\quad
 \forall x^\sigma(u\preceq Fx).
-$$
+```
 
 Here one exchanges the universal quantifiers over observers and x after distributing implication over the universal whose variable is absent from Eu. This is a truth-level derivation in H, not a functional-identity inference. It proves the required GLB law in the identified order.
 
@@ -123,30 +123,30 @@ Here one exchanges the universal quantifiers over observers and x after distribu
 
 Assume Meet_Delta. For each a:t take the admitted term
 
-$$
+```math
 E_a(p):=(a\land p=a).
-$$
+```
 
 IB_t gives endpoint-valued outputs, and E_a(p) is true exactly when a <=_meet p. Since a and Top equals a, E_a(Top)=Top; in particular A(E_a).
 
 The semilattice law gives
 
-$$
+```math
 E_a(p\land q)\ \leftrightarrow\ E_a(p)\land E_a(q).
-$$
+```
 
 Both sides are endpoint propositions. Indeed Top is greatest, so Bottom <=_meet Top whether or not Bottom is least in the entire algebra. The set {Bottom,Top} therefore has the usual two-element meet table. Equality follows from truth agreement between endpoints:
 
-$$
+```math
 E_a(p\land q)=E_a(p)\land E_a(q).
-$$
+```
 
 For a listed sigma, the GLB law gives the material equivalence
 
-$$
+```math
 E_a(\forall x^\sigma Fx)\ \leftrightarrow\
 \forall x^\sigma E_a(Fx).
-$$
+```
 
 The right side is also an endpoint. If every E_a(Fx) is Top, its GLB is Top. Otherwise some value is Bottom; the family then consists only of Top and Bottom and has GLB Bottom. This uses Bottom <=_meet Top, not global leastness of Bottom. The left side is an endpoint by IB_t, so again truth agreement gives the pointwise identity.
 
@@ -161,17 +161,17 @@ Say Join_Delta holds when:
 1. Primitive disjunction is commutative, associative and idempotent, and p or Bottom equals p. Thus it is a join-semilattice with least element Bottom.
 2. Writing u <=_join v for u or v equals v, each listed primitive existential supplies an admitted least upper bound:
 
-$$
+```math
 \forall F^{\sigma t}\forall u\,
  [(\exists x^\sigma Fx)\le_{\lor}u
   \leftrightarrow\forall x^\sigma(Fx\le_{\lor}u)].
-$$
+```
 
 **Theorem.** Over H + L_Delta,
 
-$$
+```math
 \boxed{S[Z\land V\land P_\Delta]\ \leftrightarrow\ \mathrm{Join}_\Delta.}
-$$
+```
 
 Top need not be greatest. There is no assumption identifying primitive negation with endpoint complement.
 
@@ -179,17 +179,17 @@ Top need not be greatest. There is no assumption identifying primitive negation 
 
 Use the same observer preorder. Rejection of Bottom makes Bottom least. Disjunction preservation gives
 
-$$
+```math
 (p\lor q)\preceq u\quad\leftrightarrow\quad
 (p\preceq u\ \land\ q\preceq u),
-$$
+```
 
 so disjunction supplies binary joins. Separation identifies the preorder with <=_join and gives the join-semilattice and Bottom-unit identities. Existential preservation gives
 
-$$
+```math
 (\exists x^\sigma Fx)\preceq u
 \quad\leftrightarrow\quad\forall x^\sigma(Fx\preceq u).
-$$
+```
 
 For each observer this uses the H equivalence between an implication with existential antecedent and the universal family of implications, with x absent from Eu. Exchanging the universal observer and object quantifiers proves the displayed law. Again this forward direction requires no local identity package.
 
@@ -197,32 +197,32 @@ For each observer this uses the H equivalence between an implication with existe
 
 Assume Join_Delta. Define
 
-$$
+```math
 D_a(p):=((p\lor a=a)=\bot).
-$$
+```
 
 The inner judgment is Top exactly when p <=_join a and Bottom otherwise. IB_t also applies to the outer identity judgment. Since Top and Bottom are distinct,
 
-$$
+```math
 D_a(p)=\top\quad\text{iff}\quad p\not\le_{\lor}a,
-$$
+```
 
 and its other value is Bottom. This constructs endpoint complementation without applying primitive negation to the inner identity proposition. Since Bottom <=_join a, D_a(Bottom)=Bottom, so Z(D_a).
 
 A join is below a exactly when both arguments are below a. Classical truth reasoning therefore gives
 
-$$
+```math
 D_a(p\lor q)\ \leftrightarrow\ D_a(p)\lor D_a(q).
-$$
+```
 
 Both sides are endpoints: Bottom is least and hence Bottom <=_join Top, so the two endpoints have the usual two-element join table. Truth agreement yields identity.
 
 Likewise the LUB law gives
 
-$$
+```math
 D_a(\exists x^\sigma Fx)\ \leftrightarrow\
 \exists x^\sigma D_a(Fx).
-$$
+```
 
 The primitive existential on the right is an endpoint because it is the LUB of an endpoint family: Bottom if every value is Bottom, and Top otherwise. This does not require Top to be greatest in the whole algebra. The left side is an endpoint by IB_t, so the pointwise identity follows. The same local Functionality instances used in §3 now give full V(D_a) and P_sigma(D_a).
 
@@ -232,7 +232,7 @@ If p and q are distinct, antisymmetry says either p is not below q or q is not b
 
 The two exact refinements are:
 
-$$
+```math
 \begin{aligned}
 S[A\land Z\land M\land Q_\Delta]
 &\leftrightarrow\mathrm{Meet}_\Delta
@@ -241,7 +241,7 @@ S[A\land Z\land V\land P_\Delta]
 &\leftrightarrow\mathrm{Join}_\Delta
   +\forall p\,(p\lor\top=\top).
 \end{aligned}
-$$
+```
 
 Both are over H + L_Delta. In the forward meet direction, Z makes Bottom least in the observer order. In the forward join direction, A makes Top greatest.
 
@@ -259,9 +259,9 @@ The results concern one semilattice operation and its matching quantifiers. They
 
 To see directly that the local assumptions and the meet representation do not imply C, use the full-function H construction with proposition domain {0,1} squared, truth in the first coordinate, singleton individuals, and every admitted function space full. Use coordinatewise conjunction, negation and both quantifiers. Interpret equality at every type as (delta,delta), where delta is identity. Interpret primitive disjunction as
 
-$$
+```math
 (b,c)\lor(d,e)=(b\lor d,\ c\mathbin{\mathrm{XOR}}e).
-$$
+```
 
 All primitives have their ordinary first-coordinate truth conditions, so H is sound; beta/eta and all Functionality instances hold for the full function spaces. The fixed abbreviations give Top=(1,1) and Bottom=(0,0), and IB_t holds. Coordinatewise conjunction and universal quantification satisfy Meet_Delta for every finite Delta. Thus the meet theorem applies. But p or p differs from p at p=(0,1), refuting an instance of Logical Equivalence. The unlisted connective remains unconstrained.
 

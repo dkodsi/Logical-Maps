@@ -14,7 +14,7 @@ Write S_{τ,Δ}[Good], S_{τ,Δ}[SplitMono] and S_{τ,Δ}[Rev] for the correspon
 
 Define the following one-pair sentence:
 
-$$
+```math
 \begin{aligned}
 K_\Delta:=\exists E^{tt}F^{tt}c^t\,[
 &\mathrm{Good}_\Delta(E)\land
@@ -22,13 +22,13 @@ K_\Delta:=\exists E^{tt}F^{tt}c^t\,[
 &\land F\circ E=I\land c\land Fc=\bot].
 \end{aligned}
 \tag{1}
-$$
+```
 
 Thus c is currently true while F sends it to the Bottom proposition, and E is a qualified right inverse of F. This is not merely the assertion that Fc is currently false. The identity Fc=Bottom is what permits the normalization. No separation principle occurs in K_Δ.
 
 The main fixed-instance theorem is
 
-$$
+```math
 \boxed{
 S_{\tau,\Delta}[\mathrm{SplitMono}]
 \ \longleftrightarrow\
@@ -38,7 +38,7 @@ S_{\tau,\Delta}[\mathrm{Rev}]
 \land K_\Delta\bigr).
 }
 \tag{2}
-$$
+```
 
 The disjunction is between two sentences for the **same fixed output type and finite list**. It is not an assertion that the full schema globally chooses one disjunct for every list.
 
@@ -46,32 +46,32 @@ The disjunction is between two sentences for the **same fixed output type and fi
 
 Assume E,F,c witness K_Δ. For any admitted Good_Δ observer G, form the lambda term
 
-$$
+```math
 E_G(p):=(c\land Gp)\lor(\neg c\land Ep).
 \tag{3}
-$$
+```
 
 The coefficients c,¬c are a Boolean partition. The existing full-operation Boolean-patching lemma makes E_G a Good_Δ observer. Fixed propositional guards add no quantifier type to the qualification list. This lemma operates under the stated C+BF background and supplies full composite identities, rather than just current material preservation.
 
 Boolean preservation by F, Fc=Bottom and F∘E=I give, for every p,
 
-$$
+```math
 \begin{aligned}
 F(E_Gp)
 &=(Fc\land F(Gp))\lor(F(\neg c)\land F(Ep))\\
 &=(\bot\land F(Gp))\lor(\top\land p)=p.
 \end{aligned}
 \tag{4}
-$$
+```
 
 Functionality at tt, available from the stated Barcan background, collects (4) into F∘E_G=I. Equivalently one can apply NI to the pointwise identities, collect with BF_t, and apply C's Intensionality. Neither method necessitates an optional premise.
 
 Since c is currently true, propositional reasoning gives the entire current truth-profile agreement
 
-$$
+```math
 \forall p\,(E_Gp\leftrightarrow Gp).
 \tag{5}
-$$
+```
 
 The same F is a qualified left inverse of every E_G constructed by (3). Admission is explicit: E_G is a lambda term in the already admitted parameters. No choice of inverse or family of witnesses is required.
 
@@ -83,24 +83,24 @@ In fact under K_Δ, ordinary, left-inverse and qualified right-inverse-of-this-f
 
 Now assume only Good_Δ(E), Good_Δ(F) and F∘E=I. Put
 
-$$
+```math
 u:=\forall p^t\,[E(Fp)\leftrightarrow p].
 \tag{6}
-$$
+```
 
 The proposition u is defined, not assumed true. The unconditional universal-instantiation theorem and C's Boolean identities imply
 
-$$
+```math
 u\land E(Fp)=u\land p
 \qquad\text{for every }p.
 \tag{7}
-$$
+```
 
 This order calculation is the same discharged logical argument used for the equalizer proposition in [the right-inverse proof](split-inverse-logical-observers.md), §2. It does not turn a conditional material equivalence into an identity by an unrestricted Logical Equivalence step.
 
 Since t∈Δ, F's full Q_t and Boolean identities give
 
-$$
+```math
 \begin{aligned}
 Fu
 &=\forall p\,F(E(Fp)\leftrightarrow p)\\
@@ -108,7 +108,7 @@ Fu
 &=\forall p\,[Fp\leftrightarrow Fp]=\top.
 \end{aligned}
 \tag{8}
-$$
+```
 
 If u is currently false, c₀:=¬u is currently true and F c₀=Bottom. The very same E,F,c₀ therefore witness K_Δ.
 
@@ -118,19 +118,19 @@ If u is true, (7) supplies the missing opposite equation exactly where the next 
 
 Suppose d is currently false, Ed is currently true, and u from (6) is currently true. Define
 
-$$
+```math
 c:=\neg d\land Ed\land u,
 \qquad b:=Fc,
 \qquad r:=\neg(c\lor b),
 \tag{9}
-$$
+```
 
 and
 
-$$
+```math
 T(p):=(c\land Ep)\lor(b\land Fp)\lor(r\land p).
 \tag{10}
-$$
+```
 
 The following calculations use identities throughout; the current-truth assumptions are needed only at the final distinguishing step.
 
@@ -138,34 +138,34 @@ First c≤Ed, so b=Fc≤F(Ed)=d. Also c≤¬d, hence b≤F(¬d)=¬Fd. It follows
 
 On the c-region we have
 
-$$
+```math
 c\land Ec=\bot,
 \qquad c\land Eb=c,
 \qquad c\land Er=\bot,
 \qquad c\land E(Fp)=c\land p.
 \tag{11}
-$$
+```
 
 For the first equation, c≤Ed while Ec≤E(¬d)=¬Ed. For the second, Eb=E(Fc), and c≤u allows (7) at p=c. The third follows from Er=¬(Ec∨Eb) and the second. The last is (7) restricted further to c.
 
 On the b-region we have
 
-$$
+```math
 b\land Fc=b,
 \qquad b\land Fb=\bot,
 \qquad b\land Fr=\bot,
 \qquad F(Ep)=p.
 \tag{12}
-$$
+```
 
 The first is b=Fc. For the second, b≤d implies Fb≤Fd, while b≤¬Fd was already shown. The third follows from r≤¬c and b=Fc. The last is the given whole inverse equation evaluated at p.
 
 Expand T(Tp) along c,b,r. On c, (11) removes the E(Ep) and E(p) branches; the remaining term is c∧E(Fp)=c∧p. On b, (12) removes the F(Fp) and F(p) branches; the remaining term is b∧F(Ep)=b∧p. On r, the outer identity branch gives r∧Tp=r∧p. Therefore
 
-$$
+```math
 \forall p\,[T(Tp)=p].
 \tag{13}
-$$
+```
 
 NI, BF_t and Intensionality, or the resulting Functionality at tt, collect (13) into the whole-operation identity T∘T=I. Finally c is currently true, so Td has the same truth as Ed and is true. TBottom is false by Boolean qualification. Thus T is a qualified involution detecting the original false d.
 
@@ -175,27 +175,27 @@ We have proved a local alternative for every distinguishing left-invertible obse
 
 Assume S_{τ,Δ}[SplitMono]. Forgetting the inverse restriction gives S_{τ,Δ}[Good]. If S_{τ,Δ}[Rev] already holds, the first disjunct in (2) follows.
 
-Otherwise there are X≠Y of output type τ such that every qualified reversible observer agrees materially on X and Y at **every argument tuple**. SplitMono separation supplies E,F with F∘E=I and a tuple $\bar a$ at which $E(X\bar a)$ and $E(Y\bar a)$ have different truth values. Let
+Otherwise there are X≠Y of output type τ such that every qualified reversible observer agrees materially on X and Y at **every argument tuple**. SplitMono separation supplies E,F with F∘E=I and a tuple $`\bar a`$ at which $`E(X\bar a)`$ and $`E(Y\bar a)`$ have different truth values. Let
 
-$$
+```math
 d:=(X\bar a)\mathbin{\triangle}(Y\bar a)
 \tag{14}
-$$
+```
 
 be their Boolean symmetric difference. Boolean preservation makes Ed true. The identity observer is reversible, so the assumed reversible agreement at this very tuple makes d currently false.
 
-Form u from (6). If u were true, §4 would supply a qualified involution T with Td true. Its Boolean identities would make $T(X\bar a)$ and $T(Y\bar a)$ differ in truth, contradicting the chosen reversible agreement. Thus u is false, and §3 supplies K_Δ. This proves the second disjunct of (2).
+Form u from (6). If u were true, §4 would supply a qualified involution T with Td true. Its Boolean identities would make $`T(X\bar a)`$ and $`T(Y\bar a)`$ differ in truth, contradicting the chosen reversible agreement. Thus u is false, and §3 supplies K_Δ. This proves the second disjunct of (2).
 
 Conversely, reversible separation immediately gives SplitMono separation. The other disjunct supplies it by §2. This proves (2), including its typed scope.
 
 An equivalent useful formulation is
 
-$$
+```math
 \neg K_\Delta\ \longrightarrow\
 \bigl(S_{\tau,\Delta}[\mathrm{SplitMono}]
 \leftrightarrow S_{\tau,\Delta}[\mathrm{Rev}]\bigr).
 \tag{15}
-$$
+```
 
 Here ¬K_Δ means that no qualified pair has a currently true kernel element of the stated form. It does not assert that every left-invertible observer is a two-sided inverse. Formula (15) only replaces its distinguishing action by an involution.
 
@@ -203,7 +203,7 @@ Here ¬K_Δ means that no qualified pair has a currently true kernel element of 
 
 The full logical-separation theorem supplies C+BF from H+OS. Functionality then identifies propositional and full typed separation for any fixed observer class and list, as in [Typed separation and Classicism](typed-separation-and-classicism.md). Consequently (2) gives the following exact reformulation over H:
 
-$$
+```math
 \boxed{
 \text{full SplitMono}
 \ \longleftrightarrow\
@@ -215,7 +215,7 @@ S_{t,\Delta}[\mathrm{Rev}]\lor K_\Delta:
 \bigr\}.
 }
 \tag{16}
-$$
+```
 
 The braces denote an external schema. In the forward direction full SplitMono gives full OS and hence the background needed for (2). In the reverse direction full OS gives C+BF, each disjunction supplies propositional SplitMono separation, and Functionality lifts it to all relational output types. An arbitrary requested list can first be enlarged by t and then weakened back, so the restriction t∈Δ loses no full-schema instance.
 

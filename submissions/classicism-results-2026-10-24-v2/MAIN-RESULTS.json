@@ -2275,7 +2275,7 @@
       ],
       "proof_length": {
         "rating": "long",
-        "words": 9087
+        "words": 9112
       }
     },
     {
@@ -3619,14 +3619,14 @@
             "summary": "Finite instances reconstruct abstraction, so no separate finitary-comprehension or λ-closure axiom is required. Endpoint separation recovers C5 + Atomicity (type t). The initial observer qualification needs strict Boolean and quantifier preservation; the translated equality clauses follow in the reconstructed theory. Whole-operation preservation remains expressible without λ notation.\n\nThe resulting hierarchy contains every proposition profile and every operation at an admitted relational-output type. The representation is provable in ZF, with Infinity and Extensionality left optional.",
             "proof_length": {
               "rating": "long",
-              "words": 9087
+              "words": 9112
             },
             "evidence_labels": [
               "Proof and exact formulation"
             ],
             "principle": {
               "statement": "Over the λ-free base of H, full typed endpoint separation together with boxed Infinitary Comprehension characterizes full standard relational hierarchies in ZF:",
-              "formal": "\\exists R^{\\sigma_1\\cdots\\sigma_n t}\\,\\Box\\forall x_1\\cdots x_n\\,\\bigl(R[\\bar x]\\leftrightarrow A\\bigr).",
+              "formal": "\\exists R^{\\sigma_1\\cdots\\sigma_n t}\\, .\\,\\Box\\forall x_1\\cdots x_n\\, .\\,\\bigl(R[\\bar x]\\leftrightarrow A\\bigr).",
               "scope": "A is an arbitrary set-sized infinitary matrix with unrestricted simultaneous typed parameters; the bound tuple is finite and may be empty. The selected axioms are closed under necessitation."
             },
             "anchor_aliases": [

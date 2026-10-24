@@ -6,17 +6,17 @@ Ordinary mathematical research by OpenAI Codex, prompted by Daniel Kodsi, 24 Oct
 
 Let Γ be any fixed finite set of primitive preservation requirements, selected from
 
-$$
+```math
 M,\quad V,\quad N,\quad Q_\sigma,\quad P_\sigma.
-$$
+```
 
 at specified types σ. M,V,N concern primitive conjunction, disjunction and negation; Qσ,Pσ concern the independent primitive universal and existential quantifiers. They do not concern derived versions of those operations. A(E) means E accepts Top and Z(E) means E rejects Bottom.
 
 For J⊆Γ, let T_J be H together with separation by the common class
 
-$$
+```math
 A(E)\land Z(E)\land\bigwedge_{j\in J}j(E).
-$$
+```
 
 Fix one of the material, pointwise-identity or whole-operation preservation tiers, and fix either propositional or full typed separation. Use that same choice throughout the family T_J. The theorem below holds for each of these six choices.
 
@@ -24,13 +24,13 @@ Fix one of the material, pointwise-identity or whole-operation preservation tier
 
 For every J,K⊆Γ,
 
-$$
+```math
 T_K\vdash T_J\quad\Longleftrightarrow\quad J\subseteq K.
-$$
+```
 
 If J⊆K, every K-qualified observer is J-qualified. Separation by the smaller K-qualified class therefore entails separation by the J-qualified class. This proof is already in H.
 
-For the converse suppose $j\in J\setminus K$. The model in §3 satisfies every other primitive preservation requirement simultaneously, with a full typed strongly separating class fixing both endpoints. It fails even propositional material separation for j. Hence it satisfies T_K and refutes T_J in each of the six fixed presentations. This proves the reverse implication.
+For the converse suppose $`j\in J\setminus K`$. The model in §3 satisfies every other primitive preservation requirement simultaneously, with a full typed strongly separating class fixing both endpoints. It fails even propositional material separation for j. Hence it satisfies T_K and refutes T_J in each of the six fixed presentations. This proves the reverse implication.
 
 Thus there are exactly 2^|Γ| distinct theories in each displayed family, with precisely the implication order given by inclusion of the clause sets. There are no additional implications among these packages. This is a statement about the specified family, not a classification of every theory between its members or of cross-tier comparisons.
 
@@ -68,15 +68,15 @@ The inclusion classification holds separately in each presentation. For example,
 
 The map J↦T_J embeds the powerset inclusion order in the order of theories by strength. It need not preserve their joins. In particular,
 
-$$
+```math
 S[A\land Z\land M]\quad\text{and}\quad S[A\land Z\land V]
-$$
+```
 
 can be strictly weaker than
 
-$$
+```math
 S[A\land Z\land M\land V].
-$$
+```
 
 The [diamond-meet/chain-join model](two-orders-model.md) proves this even with full typed separation, endpoint-valued witnesses, equality fixing, and the matching universal/existential packages on the separate sides. A theory join combines the two assertions; it does not impose both qualifications on each witness.
 

@@ -6,10 +6,10 @@ The construction below specializes Dorr’s two-component coalescence to disagre
 
 Work in classical set-theoretic metatheory with Choice and assume Con(ZFC). The relative consistency results for CH and its negation, followed by first-order completeness and downward Löwenheim–Skolem, give countable first-order models
 
-$$
+```math
 N_+\models\mathrm{ZFC}+\mathrm{CH},\qquad
 N_-\models\mathrm{ZFC}+\neg\mathrm{CH}.
-$$
+```
 
 For each component, take its individual domain to be its own set of real numbers, its proposition domain to be its two-element Boolean algebra, and each admitted arrow domain to be the function set formed inside that component. Externalize membership and function evaluation. Internal extensionality ensures that two function objects with the same values on every available argument are identical. For each standard finite typed formula, Separation and Replacement supply the function denoted by its lambda abstraction; induction on terms and formulas establishes agreement with the corresponding set-theoretic interpretation. This yields a one-world extensional Henkin model of C at each component.
 
@@ -17,20 +17,20 @@ These domains contain the functions and subsets available in the relevant set-th
 
 Interpret the map’s real-structure tuple at type e using the component’s real field, its field operations and order, and its natural numbers. Its completeness condition quantifies over the component’s available subsets, exactly as the typed quantifiers do. The same applies to the least-inductive-property clause. Injections and bijections in the map’s CH formula are relational graphs; each such internal graph is in the appropriate admitted type. Satisfaction induction therefore gives
 
-$$
+```math
 M_+\models\exists\mathfrak R\,
   (\mathrm{Real}_e(\mathfrak R)\land\mathrm{CH}(\mathfrak R)),
 \qquad
 M_-\models\exists\mathfrak R\,
   (\mathrm{Real}_e(\mathfrak R)\land\neg\mathrm{CH}(\mathfrak R)).
-$$
+```
 
 The witnesses use the same admitted type e. Each component also satisfies Well-Ordering at every type: its internal well-orders have least elements for every nonempty admitted property, which is precisely the required Henkin reading.
 
 ## 2. Coalescence and CH variation
 
 Apply the coalesced-sum construction of *Classicism*, Appendix E, with one new root and a distinguished arrow to each component. Root individuals are pairs of component individuals. At a relational type, a root entity has an arbitrary current extension and one entity from each component. Write it as
-$Y=(E,Y_+,Y_-).$
+$`Y=(E,Y_+,Y_-).`$
 Transport to component i sends Y to its i-component, and sends individual pairs to their i-coordinate. Every root-to-component transport is surjective at every admitted type. Moreover, any pair of component entities has a common root preimage. These statements also hold coordinatewise for finite tuples. The cited construction validates C and leaves both component models intact.
 
 At the root, both displayed existential sentences from §1 are possible. Hence the type-e instance of Non-contingency of CH fails: its first boxed alternative is refuted at the negative component, and its second at the positive component. Necessity of Second-Order Analysis fails as a consequence.
@@ -45,9 +45,9 @@ The following arguments are generic for this coalescence of extensional componen
 
 **☐Tame Rigidity, ☐Rigid Rigidity and ☐Weakly Rigid Weak Rigidity.** Let pi_i map root argument tuples to component tuples. A root relation Y is weakly rigid exactly when
 
-$$
+```math
 Y_i=\pi_i[E]\quad(i\in\{+,-\}),
-$$
+```
 
 with those images admitted by their respective components. For necessity, weak persistence gives pi_i[E] contained in Y_i. If b were an additional member of Y_i, choose a test relation whose current and other component extensions are universal, and whose i-extension excludes only b. Every current Y-instance necessarily satisfies this test. Weak inextensibility contradicts the alleged extra member. Conversely, the displayed equalities give persistence and imply that any necessary cover of the current instances covers each component extension, which proves weak inextensibility.
 
@@ -67,9 +67,9 @@ Consequently, even the joint package of ☐Atomicity, ☐BF, ☐Strong Leibniz, 
 
 Let P and Q be the two closed pure type-e existential sentences displayed in §1. The component models establish their separate consistency with C. For any C-consistent closed pure sentence P, C does not prove the identity neg P = top. Pure Maximalism therefore supplies neg P != top, equivalently possibility P. Apply this to P and Q. Their simultaneous possibilities contradict both alternatives of Non-contingency of CH. Hence
 
-$$
+```math
 \mathrm{Max}(C)+\text{Non-contingency of CH}\ \vdash\ \bot.
-$$
+```
 
 The consistency justification uses the metatheory of §1. No verification of the coalesced model’s structural flags is needed for this deduction. It also follows using Bacon’s same-type CH witnesses at et in place of the components above.
 

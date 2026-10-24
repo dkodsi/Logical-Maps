@@ -10,90 +10,90 @@ A version for an arbitrarily restricted observer class uses an even more direct 
 
 Use H in its fixed relational language, with the fixed Top and Bottom abbreviations T,B. Let
 
-$$
+```math
 A(E):=ET,\qquad Z(E):=\neg EB,
-$$
+```
 
-$$
+```math
 M(E):=(\lambda p,q.E(p\land q))
       =(\lambda p,q.Ep\land Eq).
-$$
+```
 
 Write I for the identity operation and define composition by the admitted lambda term. Put
 
-$$
+```math
 \mathrm{Aut}_M(E):=
 M(E)\land
 \exists F^{tt}\,[M(F)\land E\circ F=I\land F\circ E=I].
-$$
+```
 
 All three preservation/inverse assertions are whole-operation identities. In particular an external permutation or a pointwise order bijection is not automatically an eligible observer.
 
 For any additional qualification R(E), set
 
-$$
+```math
 K_R(E):=R(E)\land\mathrm{Aut}_M(E),
-$$
+```
 
-$$
+```math
 S_R:=S[A\land Z\land K_R],
-$$
+```
 
 where S is propositional separation by material agreement of observer outputs:
 
-$$
+```math
 S[K]:=\forall p,q\left[
 p=q\leftrightarrow
 \forall E\,(K(E)\to(Ep\leftrightarrow Eq))
 \right].
-$$
+```
 
 The basic case has R always true.
 
 Let BMeet say that primitive conjunction is an associative, commutative, idempotent operation with
 
-$$
+```math
 p\land T=p,\qquad p\land B=B.
-$$
+```
 
 Thus it is a bounded meet-semilattice. Define
 
-$$
+```math
 p\le q\quad:\!\!\leftrightarrow\quad p\land q=p
-$$
+```
 
 and
 
-$$
+```math
 \mathrm{Atom}(a):=
 a\ne B\land
 \forall b\,[b\le a\to(b=B\lor b=a)].
-$$
+```
 
 Here Atom refers to this meet order, not to an unstated Boolean or modal structure.
 
 Write AS for the atomistic order condition
 
-$$
+```math
 \mathrm{AS}:=
 \forall p,q\left[
 \bigl(\forall a\,
   ((\mathrm{Atom}(a)\land a\le p)\to a\le q)\bigr)
 \to p\le q
 \right].
-$$
+```
 
 Under BMeet, this says exactly that each p is the least upper bound of its atoms. Equivalently, every failure p not below q is witnessed by an atom below p and not below q. It is stronger than merely requiring an atom below every nonbottom element.
 
 Finally put
 
-$$
+```math
 \mathrm{MoveTrue}_R:=
 \forall a\left[
 \mathrm{Atom}(a)\to
 \exists E\,(K_R(E)\land Ea)
 \right].
-$$
+```
 
 This is an internal existence condition on admitted observers. It does not choose a simultaneous observer-valued function of all atoms.
 
@@ -101,13 +101,13 @@ This is an internal existence condition on admitted observers. It does not choos
 
 **Theorem 1.** Over H, for every R,
 
-$$
+```math
 \boxed{
 S_R+\exists a\,\mathrm{Atom}(a)
 \quad\leftrightarrow\quad
 \mathrm{BMeet}+\mathrm{AS}
 +\mathrm{MoveTrue}_R.}
-$$
+```
 
 No closure property of R is required.
 
@@ -117,9 +117,9 @@ The [reversible meet theorem](reversible-meet-atomicity.md), §§2–4, proves p
 
 Separation of any atom a from B supplies an eligible E with Ea true, since EB is false. This establishes MoveTrue_R. The assumed atom therefore also supplies a true atom w. H's conjunction truth clause makes a true atom unique and gives
 
-$$
+```math
 p\quad\leftrightarrow\quad w\le p.
-$$
+```
 
 If p is not below q, separate p and p and q. Meet preservation forces a witness E with Ep true and Eq false. Pulling w back along its admitted inverse yields an atom below p and not below q. Thus AS holds. This argument requires no assertion that the inverse satisfies R.
 
@@ -129,9 +129,9 @@ Under BMeet, any Aut_M observer is an order isomorphism, fixes both bounds, and 
 
 Also any true atom w determines truth:
 
-$$
+```math
 \boxed{\forall p\,[p\leftrightarrow w\le p].}
-$$
+```
 
 If p is true, w and p is true and hence differs from the false B. Atomhood forces w and p equals w, giving w below p. Conversely w below p means w and p equals w; since w is true, H's conjunction truth clause makes p true. No identity between the two propositions of this biconditional is inferred.
 
@@ -153,32 +153,32 @@ The converse extracts one atom and one observer for the particular pair being se
 
 For the basic class R=true, let
 
-$$
+```math
 \mathrm{TrueAtom}:=
 \exists w\,(\mathrm{Atom}(w)\land w)
-$$
+```
 
 and
 
-$$
+```math
 \mathrm{Trans}_M:=
 \forall a,b\left[
 (\mathrm{Atom}(a)\land\mathrm{Atom}(b))
 \to
 \exists E\,(\mathrm{Aut}_M(E)\land Ea=b)
 \right].
-$$
+```
 
 **Theorem 2.** Over H,
 
-$$
+```math
 \boxed{
 S[A\land Z\land\mathrm{Aut}_M]
 +\exists a\,\mathrm{Atom}(a)
 \quad\leftrightarrow\quad
 \mathrm{BMeet}+\mathrm{AS}
 +\mathrm{TrueAtom}+\mathrm{Trans}_M.}
-$$
+```
 
 Under BMeet and AS, atoms exist. MoveTrue supplies a true atom w, which is unique by the truth/meet argument above. For any atoms a,b, choose admitted automorphisms E_a,E_b taking them to true atoms, hence to w. If F_b is an admitted inverse of E_b, then F_b composed with E_a takes a to b.
 
@@ -194,12 +194,12 @@ Theorem 1 remains valid with any R for which its displayed qualification is mean
 
 Under that closure assumption,
 
-$$
+```math
 \mathrm{MoveTrue}_R
 \quad\leftrightarrow\quad
 \mathrm{TrueAtom}
 +\mathrm{Trans}_{K_R}
-$$
+```
 
 in the presence of BMeet and AS. The proof is exactly the composition argument in §3, now within the restricted class. It is enough that each K_R map has an admitted K_R inverse; no claim about every independently chosen inverse is needed.
 
@@ -211,31 +211,31 @@ If R is indexed by a fixed finite type list, all witnesses in that instance use 
 
 Assume either characterization. At a current evaluation point let
 
-$$
+```math
 \mathcal A(p):=\{a:\mathrm{Atom}(a)\text{ and }a\le p\}.
-$$
+```
 
 AS makes this a faithful order representation, with
 
-$$
+```math
 \mathcal A(p\land q)=\mathcal A(p)\cap\mathcal A(q),\qquad
 \mathcal A(B)=\varnothing,\qquad
 \mathcal A(T)=\{\text{all atoms}\}.
-$$
+```
 
 Every singleton atom set is represented. If w is the true atom, p is true exactly when w belongs to A(p).
 
 An admitted meet automorphism E permutes the atoms and satisfies
 
-$$
+```math
 \mathcal A(Ep)=E[\mathcal A(p)].
-$$
+```
 
 Consequently its observer truth profile is
 
-$$
+```math
 Ep\quad\leftrightarrow\quad E^{-1}w\le p.
-$$
+```
 
 Thus the reversible observers observe membership at the atom obtained by moving the true atom backward. Transitivity means every atom is obtained in this way; AS means those atom tests distinguish every proposition.
 
@@ -243,10 +243,10 @@ This is a representation of propositions and their current truth profiles. It do
 
 For full typed separation, the exact structural characterizations acquire precisely the explicit Functionality schema. For example,
 
-$$
+```math
 \mathrm{FullSep}[A\land Z\land\mathrm{Aut}_M]
 +\exists a\,\mathrm{Atom}(a)
-$$
+```
 
 is equivalent over H to BMeet + AS + TrueAtom + Trans_M + Functionality. This follows from the [general typed-separation theorem](typed-separation-and-classicism.md), §2, applied to Theorem 2.
 
@@ -260,9 +260,9 @@ The following finite full-function H model verifies that the automorphism condit
 
 Let U={a,b,c} and take
 
-$$
+```math
 D_t=\{\varnothing,\{a\},\{b\},\{c\},\{a,b\},U\}.
-$$
+```
 
 A proposition p is true exactly when c belongs to p. Take a singleton individual domain and the full function space at every admitted arrow type. Interpret application and abstraction as actual function application and abstraction.
 
@@ -270,9 +270,9 @@ Interpret primitive conjunction by intersection, which is closed on D_t. Interpr
 
 **Fixed abbreviations and H soundness.** The proposition forall p p is the empty set, since the domain includes a false proposition. Its negation is U; their primitive disjunction is U, and their primitive conjunction is the empty set. Thus the fixed Top and Bottom really are
 
-$$
+```math
 T=U,\qquad B=\varnothing.
-$$
+```
 
 Intersection has the ordinary conjunction truth condition for membership of c. The other primitive truth conditions hold by their definitions. Actual function spaces validate application, lambda conversion and all Functionality instances; actual identity validates equality substitution. Hence this is an H model at every admitted relational type. Equality judgments have outputs T or B, so identity bivalence holds at every type as well.
 
@@ -284,13 +284,13 @@ Every such automorphism preserves current truth, because it fixes {c}. In partic
 
 For comparison, ordinary strong meet separation does hold. For each nonempty displayed set d, the full function space admits the principal observer
 
-$$
+```math
 P_d(p)=
 \begin{cases}
 U,&d\subseteq p,\\
 \varnothing,&d\not\subseteq p.
 \end{cases}
-$$
+```
 
 It fixes T,B, preserves intersection, and separates by taking d to be an atom in the symmetric difference of two displayed sets. Because the function domains are full, these are whole-operation preservation identities. The observers have two outputs and fix both, hence are idempotent as operations. Thus even ordinary meet separation with explicit binary-range idempotent witnesses does not supply the reversible atom motion required by the characterization.
 

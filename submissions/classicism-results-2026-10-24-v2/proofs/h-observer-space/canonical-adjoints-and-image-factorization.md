@@ -8,7 +8,7 @@ The image also has an admitted floor and ceiling. Its floor is an auxiliary S5 i
 
 ## 1. Assumptions and what was already known
 
-Work over C5 in the fixed relational type system. Write 0,1 for Bottom, Top, and x≤y for the output identity x∧y=x. Let $E^{tt}$ be an admitted $\mathrm{Good}_{\{t\}}$ observer: it has the full Boolean and type-t quantifier composite identities. Equivalently, one can begin with Good_Δ for any fixed finite external list containing t. No injectivity, surjectivity, inverse or choice assumption is imposed on E.
+Work over C5 in the fixed relational type system. Write 0,1 for Bottom, Top, and x≤y for the output identity x∧y=x. Let $`E^{tt}`$ be an admitted $`\mathrm{Good}_{\{t\}}`$ observer: it has the full Boolean and type-t quantifier composite identities. Equivalently, one can begin with Good_Δ for any fixed finite external list containing t. No injectivity, surjectivity, inverse or choice assumption is imposed on E.
 
 C5 supplies the Barcan and Functionality instances used below. In particular:
 
@@ -21,13 +21,13 @@ Only admitted families occur. No assertion is made that arbitrary external subse
 
 The individual-observer result
 
-$$
+```math
 \mathrm{Good}_{\{t\}}(E)
 \quad\Longrightarrow\quad
 \mathrm{Good}_{\Delta}(E)
 \text{ for every fixed finite external }\Delta
 \tag{1}
-$$
+```
 
 was already proved by range coding in [Modal selectors and quantifier reduction](../modal-selectors-and-quantifier-reduction.md), §4. Section 2 below gives an alternative proof through the new admitted adjoints. Equation (1) is therefore a recovered result, not a new type-collapse claim. It concerns the same E at each requested finite list; it does not introduce an infinitary qualification formula or an object-language type quantifier.
 
@@ -37,30 +37,30 @@ The earlier [canonical-section theorem](surjective-logical-observers.md), §§2�
 
 Define
 
-$$
+```math
 R(q):=\exists p^t\,[(Ep\le q)\land p],
 \qquad
 L(q):=\neg R(\neg q).
 \tag{2}
-$$
+```
 
 The order guard Ep≤q abbreviates an identity judgment. C5 makes it an endpoint, so E fixes it. Type-t existential preservation therefore gives
 
-$$
+```math
 E(Rq)=\exists p\,[(Ep\le q)\land Ep]\le q.
 \tag{3}
-$$
+```
 
 For the inequality, each joinand is 0 when its guard is false and is Ep≤q when its guard is true. Conversely, if Ep≤q, the p-joinand in (2) is p, and hence p≤Rq. Monotonicity of E and (3) prove
 
-$$
+```math
 \boxed{Ep\le q\quad\longleftrightarrow\quad p\le Rq.}
 \tag{4}
-$$
+```
 
 Boolean complementation gives the dual adjunction:
 
-$$
+```math
 \begin{aligned}
 Lq\le p
 &\longleftrightarrow \neg p\le R(\neg q)\\
@@ -68,13 +68,13 @@ Lq\le p
 &\longleftrightarrow q\le Ep.
 \end{aligned}
 \tag{5}
-$$
+```
 
 Thus L is left adjoint to E, and R is right adjoint to E. These are order adjoints. Neither is being presumed to be a Boolean observer or an inverse.
 
 **Admitted-family preservation.** R preserves every admitted meet, and L preserves every admitted join, regardless of the input family's type. For example, if F:σt is admitted, then for any p,
 
-$$
+```math
 \begin{aligned}
 p\le R(\forall x^\sigma Fx)
 &\longleftrightarrow Ep\le\forall x^\sigma Fx\\
@@ -83,7 +83,7 @@ p\le R(\forall x^\sigma Fx)
 &\longleftrightarrow p\le\forall x^\sigma R(Fx).
 \end{aligned}
 \tag{6}
-$$
+```
 
 Antisymmetry gives equality of the two outputs. The dual argument proves L(∃x Fx)=∃x L(Fx). The same adjunction calculations show that E, as a left adjoint, preserves all admitted joins, and as a right adjoint preserves all admitted meets. Consequently E has every requested quantifier law. C5 Functionality gives the full λF identities, and the translated equality clauses follow from Boolean qualification over C. This proves (1) again.
 
@@ -93,25 +93,25 @@ In particular R preserves binary meet and 1; L preserves binary join and 0. Thes
 
 Put
 
-$$
+```math
 k:=R0,\qquad a:=\neg k.
 \tag{7}
-$$
+```
 
 Equations (3)–(4) give
 
-$$
+```math
 Ek=0,
 \qquad
 Ep=0\quad\longleftrightarrow\quad p\le k.
 \tag{8}
-$$
+```
 
 This k is the greatest kernel proposition from the earlier canonical-section theorem. The guard Ep≤0 is equivalent to Ep=0; both guards are endpoints, so their terms in the admitted join agree. Boolean preservation also gives Ea=1.
 
 For any x,p,
 
-$$
+```math
 \begin{aligned}
 Ex\le Ep
 &\longleftrightarrow E(x\land\neg p)=0\\
@@ -119,70 +119,70 @@ Ex\le Ep
 &\longleftrightarrow x\le p\lor k.
 \end{aligned}
 \tag{9}
-$$
+```
 
 Combining (9) with (4), and then taking Boolean duals, yields
 
-$$
+```math
 \boxed{R(Ep)=p\lor k,\qquad L(Ep)=p\land a.}
 \tag{10}
-$$
+```
 
 The exact fiber and order conditions are
 
-$$
+```math
 \begin{aligned}
 Ep=Eq&\longleftrightarrow p\land a=q\land a,\\
 Ep\le Eq&\longleftrightarrow p\land a\le q\land a.
 \end{aligned}
 \tag{11}
-$$
+```
 
 The second is (9) rewritten by the Boolean partition a,k, and the first follows by applying it in both directions. Thus E is injective on [0,a].
 
 Define the normalized right adjoint and image predicate by
 
-$$
+```math
 r(q):=a\land Rq,
 \qquad
 \mathrm{Im}_E(q):=\exists p\,(Ep=q).
 \tag{12}
-$$
+```
 
 These are admitted terms. Since k≤Rq by monotonicity,
 
-$$
+```math
 Rq=k\lor r(q),\qquad
 R1=1,\quad L0=0,\quad L1=a,
 \quad r0=0,\quad r1=a.
 \tag{13}
-$$
+```
 
 Both r(q) and Lq lie in [0,a]. For an image value q=Ep, equation (10) gives
 
-$$
+```math
 r(q)=Lq=p\land a.
 \tag{14}
-$$
+```
 
 This is the unique representative of q in [0,a]. Accordingly E factors explicitly as
 
-$$
+```math
 p\longmapsto p\land a
 \longmapsto E(p\land a)=Ep,
 \tag{15}
-$$
+```
 
 where the second map, restricted to [0,a], is a Boolean order isomorphism onto the image. Its admitted inverse on that image is r, equivalently L. The interval uses relative top a and relative complement a∧¬p. No new object-language type for the interval or image is asserted; the isomorphism is expressed by the displayed terms and restricted quantifiers.
 
 The image is closed under every admitted quantifier family whose values lie in it. To see this without Choice, let F:σt and suppose Im_E(Fx) for every x. Then E(L(Fx))=Fx by (14). The admitted family λx.L(Fx) is a uniform lift, and E's quantifier preservation gives
 
-$$
+```math
 E(\forall x\,L(Fx))=\forall x\,Fx,
 \qquad
 E(\exists x\,L(Fx))=\exists x\,Fx.
 \tag{16}
-$$
+```
 
 Hence both outputs lie in the image. The interval [0,a] is likewise closed under its admitted inhabited meets and joins; all types in the framework are inhabited. The factorization respects the relative Boolean operations and these quantifiers as output identities under the indicated interval/image guards. No higher-type object with an unintroduced interval or image as its domain is asserted. For the actual ambient tt terms, putting m_a:=λp.a∧p gives the whole identities E∘m_a=E and r∘E=L∘E=m_a by (10)–(15) and Functionality.
 
@@ -190,34 +190,34 @@ Hence both outputs lie in the image. The interval [0,a] is likewise closed under
 
 Define the admitted operators
 
-$$
+```math
 j:=E\circ R,
 \qquad c:=E\circ L.
 \tag{17}
-$$
+```
 
 For every q, j(q) is the greatest image element below q. Indeed j(q)≤q by (3). If Ep≤q, then p≤Rq, so Ep≤j(q). Dually c(q) is the least image element above q, by (5). In particular
 
-$$
+```math
 j(q)\le q\le c(q),
 \tag{18}
-$$
+```
 
-$$
+```math
 \mathrm{Im}_E(q)
 \longleftrightarrow j(q)=q
 \longleftrightarrow c(q)=q.
 \tag{19}
-$$
+```
 
 The range of each of j,c is exactly the image of E. The floor and ceiling properties give
 
-$$
+```math
 j^2=j,\qquad c^2=c,\qquad
 j\circ c=c,\qquad c\circ j=j,
 \qquad c(q)=\neg j(\neg q).
 \tag{20}
-$$
+```
 
 Here, as throughout, the operator equations are whole identities supplied by C5 Functionality after the output calculations. Since E and R preserve admitted meets, j preserves them; c preserves admitted joins. Also j0=0,j1=1,c0=0,c1=1.
 
@@ -225,27 +225,27 @@ Thus j is an **auxiliary S5 interior operator** on the Boolean proposition algeb
 
 The normalized adjoints satisfy
 
-$$
+```math
 r(q)\le Lq.
 \tag{21}
-$$
+```
 
 For E(rq)=j(q)≤c(q)=E(Lq), and both arguments lie in [0,a], where E reflects order by (11). Equality holds precisely at the image values:
 
-$$
+```math
 r(q)=Lq\quad\longleftrightarrow\quad\mathrm{Im}_E(q).
 \tag{22}
-$$
+```
 
 The forward direction combines (18) with equality of the two E-images; the reverse is (14).
 
 There is also an exact test for idempotence of the original observer:
 
-$$
+```math
 \boxed{E\circ E=E\quad\longleftrightarrow\quad
 \forall q\,[j(q)\le Eq\le c(q)].}
 \tag{23}
-$$
+```
 
 If E is idempotent it fixes its image; applying E to (18) proves the inequalities. Conversely, take q=Ep. Both image approximations of q equal q, so the inequalities force E(Ep)=Ep. Functionality supplies the whole identity.
 
@@ -267,12 +267,12 @@ Each entry in a row is equivalent to the property in the first column.
 
 If R preserves binary joins, then
 
-$$
+```math
 j(q)\lor j(\neg q)
 =E(Rq\lor R(\neg q))
 =E(R1)=1.
 \tag{24}
-$$
+```
 
 The two terms lie below q and ¬q respectively. Boolean distributivity therefore gives j(q)=q, and E is onto.
 
@@ -290,38 +290,38 @@ The table concerns individual observers. In particular, an order adjoint fixing 
 
 Define
 
-$$
+```math
 T^-(q):=r(q)\lor(k\land q),
 \qquad
 T^+(q):=Lq\lor(k\land q).
 \tag{25}
-$$
+```
 
 These are admitted terms before any onto assumption. They satisfy
 
-$$
+```math
 T^-0=T^+0=0,\qquad T^-1=T^+1=1,
 \qquad T^-q\le T^+q,
 \tag{26}
-$$
+```
 
-$$
+```math
 T^+(q)=\neg T^-(\neg q),
 \qquad E\circ T^-=j,
 \qquad E\circ T^+=c.
 \tag{27}
-$$
+```
 
 The endpoint equations follow from (13), the inequality from (21), and the duality from Lq=¬R(¬q) together with the partition a,k. Applying E kills the k-part and gives (27).
 
 The operator r preserves binary meets and all admitted universal quantifiers, with relative top a. For the latter,
 
-$$
+```math
 r(\forall x\,Fx)
 =a\land\forall x\,R(Fx)
 =\forall x\,(a\land R(Fx)).
 \tag{28}
-$$
+```
 
 The last identity uses the fixed-guard quantifier law and the inhabited input type. L preserves binary joins and all admitted existential quantifiers, with relative top a. Patching each with identity on the complementary region k therefore gives:
 
@@ -330,7 +330,7 @@ The last identity uses the fixed-guard quantifier law and the inhabited input ty
 
 For example, the partition identity gives
 
-$$
+```math
 \begin{aligned}
 \forall x\,T^-(Fx)
 &=(a\land\forall x\,r(Fx))
@@ -339,19 +339,19 @@ $$
 =T^-(\forall x\,Fx).
 \end{aligned}
 \tag{29}
-$$
+```
 
 These are the existing C fixed-guard Boolean and quantifier identities, not arbitrary external-infimum exchanges. Functionality collects the equations into the full composite identities.
 
 Moreover,
 
-$$
+```math
 \boxed{
 E\text{ onto}\quad\longleftrightarrow\quad
 T^-=T^+\quad\longleftrightarrow\quad
 V(T^-)\quad\longleftrightarrow\quad N(T^-).}
 \tag{30}
-$$
+```
 
 The dual conditions M(T^+) and N(T^+) are equivalent as well. To see the first equivalence, intersect the equality T^-=T^+ with a and use (22). For the others, an endpoint-fixing meet/join homomorphism of Boolean algebras preserves complements, by uniqueness of complements. Negation preservation identifies T^- with its dual T^+ in (27). Conversely their equality combines the two displayed preservation halves.
 
@@ -359,28 +359,28 @@ When these equivalent conditions hold, their common value T is a fully qualified
 
 ## 7. Endpoint observers and the original necessity operation
 
-Write $\Box_t:=\lambda q.(q=1)$ for the fixed necessity operation, and $\Diamond_t:=\lambda q.(q\ne0)$. Over C5 their outputs are endpoints. In particular
+Write $`\Box_t:=\lambda q.(q=1)`$ for the fixed necessity operation, and $`\Diamond_t:=\lambda q.(q\ne0)`$. Over C5 their outputs are endpoints. In particular
 
-$$
+```math
 \Box_t(q)=
 \begin{cases}
 1& q=1,\\
 0& q\ne1.
 \end{cases}
 \tag{31}
-$$
+```
 
 No case-function admission is inferred from this notation: Box_t is the already admitted identity-judgment term.
 
 **Theorem.** For the original observer E,
 
-$$
+```math
 \boxed{
 \forall p\,(Ep=0\lor Ep=1)
 \quad\longleftrightarrow\quad j=\Box_t
 \quad\longleftrightarrow\quad c=\Diamond_t.}
 \tag{32}
-$$
+```
 
 **Proof.** If E is endpoint-valued, its image is exactly {0,1}, since it fixes both endpoints. Its image floor j sends 1 to 1. For q≠1, the only image element below q is 0: if 1≤q then q=1. Thus j has the values (31), and Functionality gives j=Box_t.
 
@@ -392,7 +392,7 @@ This identifies exactly one special case of the auxiliary modality. In general t
 
 **Native modal commutation.** There is a separate exact characterization, which requires only Boolean qualification of E over C5, not the type-t quantifier law:
 
-$$
+```math
 \boxed{
 E\text{ injective}
 \quad\longleftrightarrow\quad
@@ -400,7 +400,7 @@ E\circ\Box_t=\Box_t\circ E
 \quad\longleftrightarrow\quad
 E\circ\Diamond_t=\Diamond_t\circ E.}
 \tag{33}
-$$
+```
 
 E fixes every Box_t(q), because it is an endpoint. Box commutation is therefore equivalent to Box_t(Eq)=Box_t(q) for every q. By (31), and since E1=1, this is precisely reflection of Top: Eq=1 implies q=1. An injective Boolean E reflects Top. Conversely, if E reflects Top and Ep=0, then E(¬p)=1 forces ¬p=1 and p=0. Thus its Boolean kernel is trivial, and Ep=Eq implies E(p△q)=0 and hence p=q. This proves the first equivalence without using R or a maximal-kernel term.
 

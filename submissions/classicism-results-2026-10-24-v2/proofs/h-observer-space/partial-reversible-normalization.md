@@ -12,11 +12,11 @@ Use H, the fixed Top and Bottom abbreviations T,B, and the exact single instance
 
 For a fixed operation f, write Mat_f and Pt_f for material and pointwise preservation. Define a **pointwise involution** by
 
-$$
+```math
 \mathrm{Invol}_{\mathrm{pt}}(E):=
 \forall p\,[E(Ep)=p].
 \tag{1}
-$$
+```
 
 The whole-operation condition is instead E∘E=I. Equation (1) does not imply that condition over bare H. Likewise, pointwise preservation is not identified with identity of the complete composite operations.
 
@@ -28,13 +28,13 @@ We use the existing propositional separation formula S[K]. FullSep[K] is its ful
 
 **Theorem 1.** Under H+Plen_{t,t}, for every orientation O,
 
-$$
+```math
 S[O\land\mathrm{Mat}_N]
 \quad\longleftrightarrow\quad
 S[\mathrm{Fix}(O)\land\mathrm{Pt}_N
        \land\mathrm{Invol}_{\mathrm{pt}}].
 \tag{2}
-$$
+```
 
 Without both endpoint conditions these principles are equivalent to the double-negation identity DN:=∀p(¬¬p=p). With both conditions they are equivalent to DN together with B=¬T.
 
@@ -42,13 +42,13 @@ The material characterization and endpoint alignment are [Truth profiles](truth-
 
 It remains to construct the stronger witnesses under these output identities. DN and the H negation truth clause partition the propositions into pairs {r,¬r}, with precisely one true member of each pair. Fix a pair and use Plenitude on the admitted functional relation
 
-$$
+```math
 \begin{aligned}
 U_r(x,y):={}&((x=r\lor x=\neg r)\land y=\neg x)\\
 &\lor(\neg(x=r\lor x=\neg r)\land y=x).
 \end{aligned}
 \tag{3}
-$$
+```
 
 Ordinary bivalence determines one branch, and each branch specifies one proposition object. Thus U_r is total and single-valued in H, and Plenitude gives an admitted F_r satisfying it. This operation exchanges r and ¬r and fixes every other proposition.
 
@@ -64,26 +64,26 @@ Fix one admitted binary operation + with the H truth table of XOR or bicondition
 
 For the argument only, use the auxiliary formula
 
-$$
+```math
 \tau(x):=
 \begin{cases}
 x,&\text{for XOR},\\
 \neg x,&\text{for biconditional}.
 \end{cases}
 \tag{4}
-$$
+```
 
 Here τ is a formula giving a truth value, not a newly postulated two-element object type. It satisfies τ(0) false and the material XOR law for +. Choose any a with τ(a) true. Such an a exists: T works for XOR, and B for biconditional.
 
 **Theorem 2.** Under H+Plen_{t,t}, for every such a,
 
-$$
+```math
 S[\mathrm{Mat}_{+}]
 \quad\longleftrightarrow\quad
 S[\mathrm{Pt}_{+}\land\mathrm{Invol}_{\mathrm{pt}}
        \land Ea=a].
 \tag{5}
-$$
+```
 
 The proof is a pairwise construction. Suppose p≠q and put d=p+q, so d≠0 by the group laws. If τ(d) is true, p,q already differ in truth; identity is a witness fixing a.
 
@@ -93,36 +93,36 @@ Arrange additionally that χ(a) is false. If it is already false, keep χ. Other
 
 Plenitude now gives an admitted L with
 
-$$
+```math
 Lx=
 \begin{cases}
 a,&\chi(x),\\
 0,&\neg\chi(x).
 \end{cases}
 \tag{6}
-$$
+```
 
 More formally apply it to (χ(x)∧y=a)∨(¬χ(x)∧y=0), which is total and single-valued by H. The pair {0,a} is a two-element subgroup. Its exact group table, together with the character law, proves
 
-$$
+```math
 L(x+y)=Lx+Ly,\qquad L0=0,\qquad La=0.
 \tag{7}
-$$
+```
 
 Define the admitted operation
 
-$$
+```math
 Jx:=x+Lx.
 \tag{8}
-$$
+```
 
 Commutativity, associativity and (7) show J(x+y)=Jx+Jy. Also L(Lx)=0, because Lx is either 0 or a. Consequently
 
-$$
+```math
 J(Jx)=x+Lx+L(x+Lx)
      =x+Lx+Lx+L(Lx)=x.
 \tag{9}
-$$
+```
 
 Thus J is a pointwise involutive group homomorphism and Ja=a. Since χ(d) is true, Jd=d+a, whose τ-value is true. Homomorphism preservation gives Jd=Jp+Jq, so Jp,Jq differ in truth. This is the required witness. The reverse implication in (5) merely forgets qualifications.
 
@@ -132,13 +132,13 @@ The construction is often called a transvection: a homomorphism with square zero
 
 The preceding theorem strengthens all the usual affine orientations:
 
-$$
+```math
 S[O\land\mathrm{Mat}_{+}]
 \quad\longleftrightarrow\quad
 S[\mathrm{Fix}(O)\land\mathrm{Pt}_{+}
        \land\mathrm{Invol}_{\mathrm{pt}}].
 \tag{10}
-$$
+```
 
 For XOR choose a=T. The constructed witnesses always fix T. If Z is present, the existing material endpoint theorem identifies B=0: every material affine observer rejects both B and 0. Group homomorphisms fix 0, so they then fix B as well. No additional equation is needed for A alone.
 

@@ -7,11 +7,11 @@ Original mathematical argument, direct source misc; unpaginated.
 Keep the original finitary relational C, exactly Σ={c:e→t}, and no individual
 names in the original signature. Let a:e be the auxiliary root marker, and put
 
-$$
+```math
 M=\mathrm{Max}(C(\Sigma)),\qquad
 T=\mathrm{Max}(C(\Sigma,a))+E_1,
 \qquad E_1:=\forall x^e y^e\,(x=y).
-$$
+```
 
 Every SP side condition continues to use M. The marker does not enlarge the
 target schema. Write HP=∃q(q∧□(◇q→P)) and DP=¬H¬P.
@@ -19,12 +19,12 @@ target schema. Write HP=∃q(q∧□(◇q→P)) and DP=¬H¬P.
 Use the fixed algebra B of closed Σ(a)-terms modulo C(Σ,a)-provable identity,
 the compact space K=Stone(T), and
 
-$$
+```math
 W_F=\widehat{\neg\exists xF(x)}
           \cup\bigcup_{b\in B_\sigma}\widehat{F(b)},
 \qquad K_1=\bigcap_F\overline{W_F}^{\,K}.
 \tag{1}
-$$
+```
 
 Here F:σ→t ranges over closed predicate terms; lambda abstraction includes
 every formula with one displayed free variable and old term parameters.
@@ -34,22 +34,22 @@ The common term diagram and the identification K=Stone(T) are established in
 
 The main new conclusions are
 
-$$
+```math
 K_1\ne\varnothing\quad\Longrightarrow\quad
 \mathrm{Con}(\mathrm{SP}_\Sigma),
 \tag{2}
-$$
+```
 
 and the exact first-stage criterion
 
-$$
+```math
 K_1\ne\varnothing\quad\Longleftrightarrow\quad
 \bigl[\ T\vdash\exists x^\sigma F(x)
 \ \Longrightarrow\
 \exists b\in B_\sigma\ \mathrm{Con}(T+F(b))\ \bigr]
 \quad\text{for every }\sigma,F.
 \tag{3}
-$$
+```
 
 No reverse implication from SP consistency to K₁ survival is proved.
 
@@ -58,18 +58,18 @@ No reverse implication from SP consistency to K₁ survival is proved.
 The exact C-theorem from [universal-core analysis](../source/research/2026-10-22/notes/reflection-universal-core-20261022.md),
 §2, is
 
-$$
+```math
 DP\ \leftrightarrow\
 \forall r^t\bigl(r\ne\bot\ \to\ (P\land\Diamond r)\ne\bot\bigr).
 \tag{4}
-$$
+```
 
 Fix a closed original-Σ sentence P with Con(M+P), and define
 
-$$
+```math
 F_P(r):=(r\ne\bot)\land\bigl((P\land\Diamond r)=\bot\bigr).
 \tag{5}
-$$
+```
 
 Thus C proves ¬∃r F_P(r)↔DP. Choose an M+P model and interpret a by any
 actual individual. Since C proves P→DP, that model refutes F_P(b) for every
@@ -80,16 +80,16 @@ Their truth is fixed by the common marked term diagram in every M-model;
 REPORT §3 proves this independently of the chosen model or individual.
 Consequently
 
-$$
+```math
 T\vdash\neg F_P(b)\qquad\text{for every closed term }b:t.
-$$
+```
 
 All the named-witness cylinders in W_{F_P} are therefore empty, leaving
 
-$$
+```math
 W_{F_P}=\widehat{DP}\quad\text{inside }K.
 \tag{6}
-$$
+```
 
 This set is clopen, so K₁⊆hat(DP). The argument works for every licensed P,
 with the original signature-relative M in each side condition.
@@ -119,11 +119,11 @@ hat(DP). This verifies the same conclusion without using (4).
 
 Define the following set of finitary sentences metatheoretically:
 
-$$
+```math
 \Omega(T)=\{\forall x^\sigma\varphi(x):
        T\vdash\varphi(b)\text{ for every closed marked }b:\sigma\}.
 \tag{7}
-$$
+```
 
 The premise tests refer only to the original T. This is one application of
 the rule, followed by ordinary finitary consequence; it is not iteration of
@@ -138,10 +138,10 @@ universal sentence.
 Conversely suppose U∈K fails membership in cl(W_F). A finite clopen
 neighborhood hat(A) of U is disjoint from W_F. Completeness gives
 
-$$
+```math
 T\vdash A\to\exists xF(x),\qquad
 T\vdash A\to\neg F(b)\quad\text{for every }b.
-$$
+```
 
 Thus Ω(T) contains ∀x(A→¬F(x)). Together with A, which belongs to U,
 this contradicts the displayed existential consequence. Such a U cannot
@@ -152,24 +152,24 @@ extend T+Ω(T), proving the reverse inclusion.
 **Theorem.** K₁ is empty if and only if some single W_F is empty on all K.
 Equivalently,
 
-$$
+```math
 K_1=\varnothing\quad\Longleftrightarrow\quad
 \exists\sigma,F\
 \bigl(T\vdash\exists x^\sigma F(x)
 \ \land\ \forall b\in B_\sigma\ T\vdash\neg F(b)\bigr).
 \tag{8}
-$$
+```
 
 The reverse direction is immediate from (1). For the forward direction,
 the complement of K₁ covers compact K by interiors of failed witness sets.
 Choose a finite clopen refinement hat(A_i), for i=1,…,n, with associated
 predicates F_i:σ_i→t. Then
 
-$$
+```math
 T\vdash\bigvee_i A_i,\qquad
 T\vdash A_i\to\exists x_iF_i(x_i),\qquad
 T\vdash A_i\to\neg F_i(b)\quad\text{for every named }b:\sigma_i.
-$$
+```
 
 Put Ψ(x₁,…,x_n)=∨_i(A_i∧F_i(x_i)). Nonempty type domains and the displayed
 sentences give T⊢∃x₁…x_n Ψ, while T refutes every ground tuple instance
@@ -180,11 +180,11 @@ No individual-sort requirement has a bad region: T proves
 Finite tuples at these types have an exact C-definable coding with term
 projections. Write σ_i=α_i1…α_ik_i t, allowing k_i=0, and put
 
-$$
+```math
 \tau=(\sigma_1t)\cdots(\sigma_nt)t,\qquad
 \kappa(\bar x)=\lambda f_1^{\sigma_1t}\cdots f_n^{\sigma_nt}.
                      \bigvee_i f_i(x_i).
-$$
+```
 
 Define π_i(z):σ_i by applying z to n arguments, taking argument j≠i to
 be λu_j.⊥ and argument i to be λu_i.u_i[y₁,…,y_{k_i}], then abstracting
@@ -192,10 +192,10 @@ the y variables. Application to a displayed tuple is explicitly left-nested,
 as in the topic convention. Beta reduction, Boolean identities, and the
 C abstraction/eta laws give
 
-$$
+```math
 C\vdash\pi_i(\kappa(\bar x))=x_i.
 \tag{9}
-$$
+```
 
 All types used are relational; no function returning an individual, choice
 operator, or optional extensionality axiom is introduced.
@@ -208,11 +208,11 @@ Since T is consistent, W_F is nonempty exactly when either T does not
 prove ∃F, or some ground F-instance is T-consistent. This proves (3).
 It also proves the useful special feature of this family:
 
-$$
+```math
 K_1\ne\varnothing\quad\Longleftrightarrow\quad
 \forall F\ (W_F\ne\varnothing).
 \tag{10}
-$$
+```
 
 This is not a general assertion about arbitrary countable open families.
 It uses the definability, clopen conditioning, and tuple coding just proved.
@@ -274,11 +274,11 @@ disjunction. That property is false here, even for a C-theorem.
 
 Let Atom(p) be Boolean atomhood, and define
 
-$$
+```math
 A:=\exists p^t\bigl(p\land\mathrm{Atom}(p)\bigr),\qquad
 G(p):=A\to\bigl(p\land\mathrm{Atom}(p)\bigr).
 \tag{11}
-$$
+```
 
 C proves ∃pG(p): if A holds, take its witness; otherwise any proposition,
 such as bottom, works. This is classical case analysis, with no choice
@@ -307,10 +307,10 @@ atom of B: any nonzero proper B-part would embed as a nonzero proper
 part of j(b). The no-true-B-atom argument in §5 applies to the truth
 ultrafilter of every such model, giving a contradiction. Therefore
 
-$$
+```math
 T\vdash\neg\bigl(b\land\mathrm{Atom}(b)\bigr)
 \qquad\text{for every named }b:t.
-$$
+```
 
 For F(p)=p∧Atom(p), it follows that W_F=hat(¬A), a clopen set. Thus
 K₁⊆hat(¬A), and U_R, which contains A, is deleted at the first stage.

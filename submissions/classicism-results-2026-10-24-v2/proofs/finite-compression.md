@@ -8,9 +8,9 @@ Work in the fixed relational type system: `e` and `t` are types, and `sigma -> t
 
 The claim is the existence of a pointed model satisfying
 
-$$
+```math
  C+\mathrm{TR}+\mathrm{RP}+\neg\mathrm{WRP}_{et}.
-$$
+```
 
 TR and RP here are the full schemas at the distinguished root. No boxed RP or Barcan assumption is added. In fact Barcan at individual type fails in this construction.
 
@@ -19,16 +19,16 @@ Use the symmetric ideally-full category semantics recorded in [symmetric ideally
 For an arrow `h`, write `h*a` for transport of an entity or tuple. For a relation `X` at its source, write `X_h` for its extension at `h`; thus `(h*X)_k = X_(kh)`. A finite pin `P` of an entity means that arrows with the same target agreeing on `P` transport it identically. One can check admission of a relational profile by showing that its extensions agree on arrows agreeing on a fixed finite pin and that it respects postcomposition by target symmetries. Agreement after further postcomposition then gives equality of transported entities, not just current coextension. Transport carries a pin `P` to its finite image `hP`.
 
 We use two elementary facts about rigidity in C. First, coextensive weakly rigid relations are identical: apply each relation's weak inextensibility to the other, using weak persistence, and then use mutual entailment. Second, an admitted relation with the exact-image profile
-$X_h=h[D]$
+$`X_h=h[D]`$
 for its actual tuple set `D` is rigid. At any future arrow `h`, every subsequent extension is the direct image of `h[D]`. This gives persistence. Any test necessarily true of every member of `h[D]` is true of its image at every further arrow, giving weak inextensibility there. The argument works for tuples of any types.
 
 The definitions of weak persistence, weak inextensibility and rigidity are those in [Background](../source/topics/classicism/background.md): rigidity is necessary weak rigidity. The power properties are
 
-$$
+```math
  R_F(X):=\mathrm{Rigid}(X)\land X\le F,
  \qquad
  W_F(X):=\mathrm{WeaklyRigid}(X)\land X\le F.
-$$
+```
 
 Here entailment `<=` is necessary pointwise implication. The property `R_F` is persistent in C, since rigidity and entailment are themselves necessary conditions.
 
@@ -42,9 +42,9 @@ Let `N` be countably infinite, partitioned into infinitely many infinite blocks 
 
 All these labels are distinct. Define their fibres by
 
-$$
+```math
  R(q_i)=B_i,\qquad R(q_D)=D,\qquad R(q_{\mathrm{top}})=N.
-$$
+```
 
 The two objects have bases `A = N` and `B = N disjoint-union Q`.
 
@@ -52,10 +52,10 @@ The endomorphisms of `A` are all surjections `N -> N`. Arrows from `A` to `B` ar
 
 An endomorphism of `B` is a pair `(f,g)` acting separately on its two summands, where `f:N -> N` is surjective, `g:Q -> Q` fixes `q_top`, and
 
-$$
+```math
  f[R(q)]\subseteq R(g(q))\quad\text{for every }q\in Q.
 \tag{1}
-$$
+```
 
 The label map need not be surjective. In particular, for every surjective `f`, the pair consisting of `f` and the constant label map with value `q_top` is allowed.
 
@@ -73,18 +73,18 @@ Let `i:A -> B` be the entrance which is the identity on `N`. Call a tail entity 
 
 To prove pinning, take arrows `h,h':A -> V` with the same target, agreeing on `S`, and `a in D`. Choose a finite root pin `M` for `a`. Both arrows are surjective onto the target's `N` part. Prescribe a root map `u` to fix `S`, and for `x in M minus S` choose `u(x)` with `h(u(x)) = h'(x)`. These are compatible finite prescriptions. Extend them to a surjection `u:N -> N`, using the infinitely many unprescribed points. Then `ua in D` and
 
-$$
+```math
  h'a=h(ua)\in h[D].
-$$
+```
 
 Interchanging `h,h'` proves equality of the two image sets. The profile respects target symmetries since `s(h[D])=(sh)[D]`; hence it is admitted. Exact images imply rigidity by §1.
 
 Now let `F` be weakly rigid at the root, pinned by `S`, with actual extension `D`. If a root surjection `u` fixes `S`, then `uF=F`; weak persistence therefore gives `u[D] subset D`. The stable-set lemma supplies a rigid exact-image relation coextensive with `F`. Coextensive weak-rigidity uniqueness gives equality. Consequently
 
-$$
+```math
  F_h=h[F_{1_A}]
 \tag{2}
-$$
+```
 
 for every root weakly rigid relation and every root outgoing arrow. In particular every such relation is rigid. This proves TR at **every relational type** at `A`.
 
@@ -94,17 +94,17 @@ One special case will be our bound. Take `D=N` at individual argument type. Its 
 
 For a label `q`, define the unary tail relation `U_q` by
 
-$$
+```math
  (U_q)_{(f,g)}=R(g(q)).
 \tag{3}
-$$
+```
 
 It is pinned by `{q}` and respects tail symmetries, so it is admitted. Transport satisfies `(f,g)*U_q = U_(g(q))`. Every one of its extensions is contained in `N`; in particular `U_q <= iF` for the rigid root bound of §3.
 
 Fix an infinite block label `q_i`. Condition (1) gives weak persistence of `U_(q_i)`. We prove weak inextensibility directly.
 
 Let `Z` be an admitted unary test which is necessarily true of each current member of `B_i`. Let `P` be a finite pin of `Z`, enlarged to contain `q_i` and all points in every finite fibre whose label is in `P`. Fix an arbitrary tail arrow `h=(f,g)` and `y in R(g(q_i))`. Choose
-$n\in B_i$
+$`n\in B_i`$
 outside the finitely many pinned individual points. In particular `n` lies in no finite fibre whose label is pinned. There is a tail arrow `j` agreeing with `h` on `P` and sending `n` to `y`, as follows.
 
 Retain `g` on the pinned labels and send every unpinned label to `q_top`. On each pinned block retain `f`, except that `n` is sent to `y` in block `B_i`. Retain `f` on all pinned individual points. This preserves (1) on each pinned block and each pinned finite fibre. Since only finitely many blocks have pinned labels, choose a different infinite block; on its unpinned points supply all missing `N` targets to make the individual map surjective. Elsewhere choose arbitrary values in `N`. Every unpinned label has target fibre `N`, so its condition imposes no further restriction.
@@ -113,9 +113,9 @@ The hypothesis on `Z` gives `j*n=y in Z_j`. As `j` and `h` agree on the pin of `
 
 It is not rigid. Choose distinct `a,b in N`. There is a tail arrow sending `q_i` to `q_{ {a,b} }` and sending `B_i` into `{a,b}`; another infinite block supplies global surjectivity, and all other labels can go to `q_top`. The transported relation is `U_{q_{ {a,b} }}`, currently coextensive with the finite haecceity union
 
-$$
+```math
  H=\delta_a\lor\delta_b.
-$$
+```
 
 This union is rigid and necessarily true of both current members. There is a further tail arrow `m` fixing the label `q_{ {a,b} }` while mapping both `a` and `b` to `a`. Its `N` component can still be surjective because other points supply the missing targets; send all remaining labels to `q_top`. At this arrow the fibre relation still contains both `a,b`, while the transported haecceity union contains only `a`. Thus the fibre relation does not entail `H`, and fails weak inextensibility. The original infinite-block relation is therefore weakly rigid but not rigid.
 
@@ -139,11 +139,11 @@ By (2), every member of `hF`, and of any further transport of `hF`, is an old tu
 
 Choose a finite pin `P` of `Y`. Let `N_0 subset N` contain its individual part and every point of each finite fibre whose label lies in `P`. List the finitely many block labels in `P`. For each such `q_i`, choose a fresh point
 
-$$
+```math
  z_i\in B_i\setminus N_0,
  \qquad
  D_i=(B_i\cap N_0)\cup\{z_i\}.
-$$
+```
 
 The sets `D_i` are nonempty and pairwise distinct. None equals a pinned finite fibre, since those are contained in `N_0` whereas `D_i` contains `z_i`.
 
@@ -153,10 +153,10 @@ Construct a return arrow `r` whose individual component is the identity on all o
 
 The composite `rc` agrees with the identity on `P`, so
 
-$$
+```math
  r(cY)=Y.
 \tag{4}
-$$
+```
 
 The relation `T=cY` is rigid and is pinned by `cP`. All label members of `cP` now name finite fibres or `N`. Its actual members are old, since it is below `chF`. The finite-fibre lemma gives an exact-image profile and a finite `N` pin for `T`. As `r` fixes all of `N`, it fixes `T`; (4) therefore gives `Y=T`. The same two conclusions hold for `Y`, proving descent.
 
@@ -172,24 +172,24 @@ If `V=A`, choose an ordinary finite pin `T subset N` of `Y`. If `V=B`, choose a 
 
 Extend the finite prescription `h|N_1` to a surjection `j:N -> N` whose nonsingleton fibres are finitely many and finite: send `N minus N_1` bijectively onto `N minus h[N_1]`. Regard it as an arrow to `V`. It agrees with `h` on `S`, so `jF=hF`. Choose a finite `P subset N` containing `N_1`, every nonsingleton fibre of `j`, and a `j`-preimage of each member of `T`. Put
 
-$$
+```math
  D=\{a\in E:j*a\in Y_{1_V}\}.
 \tag{5}
-$$
+```
 
 Equation (2) gives `(jF)_(1_V)=j[E]`, and `Y <= jF`; consequently
 
-$$
+```math
  j[D]=Y_{1_V}.
 \tag{6}
-$$
+```
 
 We show that `D` is closed under root surjections fixing `P`. For such a surjection `u`, the map `ju` is constant on every fibre of `j`: a nonsingleton fibre is pointwise fixed by `u`, and a singleton fibre imposes no condition. Thus
 
-$$
+```math
  ju=vj
 \tag{7}
-$$
+```
 
 for a well-defined surjection `v:N -> N`. It is surjective because `ju` is surjective. It fixes `T`: for each `t in T`, use its chosen preimage in `P` in (7).
 
@@ -208,7 +208,7 @@ The approximate lifting step adapts parts (c)–(d) of [the recorded surjection 
 ## 8. Weakly Rigid Power fails
 
 Use the rigid unary root bound `F` from §3 and its weak power `W_F`. Root TR says that every current member of `W_F` is rigid. Since rigidity is necessary, the admitted test
-$Z(X):=\mathrm{Rigid}(X)$
+$`Z(X):=\mathrm{Rigid}(X)`$
 is necessarily true of every current member of `W_F`.
 
 At the identity entrance `i`, however, §4 supplies `U_(q_i)`, which is weakly rigid, entails `iF`, and is not rigid. It belongs to `(W_F)_i` and fails `Z` there. Hence `W_F` does not entail `Z`, violating weak inextensibility. The bound `F` is itself rigid, and therefore weakly rigid. This refutes WRP at relation type `et`.

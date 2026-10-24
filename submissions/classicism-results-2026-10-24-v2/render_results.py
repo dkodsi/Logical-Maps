@@ -20,6 +20,38 @@ def anchor(name):
     return '<a id="' + name.lower() + '"></a>'
 
 
+def protect_markdown_math(body):
+    """Keep LaTeX out of Markdown's escape and emphasis processing on GitHub.
+
+    Display/inline choices and all formula contents are preserved. Existing code
+    fences, code spans and protected formulas are left alone.
+    """
+    lines = body.splitlines(keepends=True)
+    out = []
+    fence = None
+    display = False
+    inline = re.compile(r'\$`[^`\n]*`\$|`[^`\n]*`|(?<![\\$])\$([^$\n]+)\$(?!\$)')
+    for line in lines:
+        marker = re.match(r'^\s*(`{3,}|~{3,})', line)
+        if fence:
+            out.append(line)
+            if marker and marker[1][0] == fence[0] and len(marker[1]) >= len(fence):
+                fence = None
+            continue
+        if not display and marker:
+            fence = marker[1]
+            out.append(line)
+        elif line.strip() == '$$':
+            out.append(line.replace('$$', '```' if display else '```math', 1))
+            display = not display
+        elif display:
+            out.append(line)
+        else:
+            out.append(inline.sub(lambda m: '$`' + m[1] + '`$' if m[1] is not None else m[0], line))
+    assert not display, 'Unclosed display math'
+    return ''.join(out)
+
+
 def math_layout_issues(name, body):
     """Check editable pages; source snapshots retain their original formatting."""
     issues = []
@@ -31,12 +63,14 @@ def math_layout_issues(name, body):
         if marker:
             if fence is None:
                 fence = marker[1][0]
+                if line.strip() == '```math' and i and lines[i - 1].strip():
+                    issues.append(name + ':' + str(i + 1) + ': missing blank line before display')
             elif marker[1][0] == fence:
                 fence = None
             continue
         if fence:
             continue
-        visible = re.sub(r'`[^`]*`', '', line)
+        visible = re.sub(r'\$`[^`\n]*`\$|`[^`]*`', '', line)
         if '$$' not in visible:
             continue
         location = name + ':' + str(i + 1)
@@ -52,7 +86,7 @@ def math_layout_issues(name, body):
                 issues.append(location + ': missing blank line after display')
     if opening is not None:
         issues.append(name + ':' + str(opening + 1) + ': unclosed display')
-    prose = re.sub(r'```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]*`|\$\$[\s\S]*?\$\$',
+    prose = re.sub(r'```[\s\S]*?```|~~~[\s\S]*?~~~|\$`[^`\n]*`\$|`[^`]*`|\$\$[\s\S]*?\$\$',
                    lambda match: re.sub(r'[^\n]', ' ', match[0]), body)
     for match in re.finditer(r'(?<![\\$])\$[^\n$]+\$(?!\$)', prose):
         before = prose[match.start() - 1:match.start()] if match.start() else ''
@@ -60,6 +94,8 @@ def math_layout_issues(name, body):
         if re.match(r'[\w=]', before) or re.match(r'[\w(]', after):
             line = body.count('\n', 0, match.start()) + 1
             issues.append(name + ':' + str(line) + ': put the complete inline expression inside its delimiters')
+    if protect_markdown_math(body) != body:
+        issues.append(name + ': protect math from Markdown escapes and emphasis')
     return issues
 
 
@@ -742,7 +778,7 @@ def render(root):
         'Source proofs and accepted certificate evidence are linked in [SOURCE-MANIFEST.json](SOURCE-MANIFEST.json) and [the certificate index](evidence/CERTIFICATES.json).', '',
         'The summaries and this scope note are generated from the canonical records. Follow [REPRODUCING.md](REPRODUCING.md) for drift checks, exact-source verification and intentional checksum refreshes.', '']
     out['RELEASE-NOTES.md'] = done(text)
-    return out
+    return {name: protect_markdown_math(body) for name, body in out.items()}
 
 
 def main():

@@ -6,10 +6,10 @@ For a fixed admitted counting type σ, put ν=(σt)t and let 0, S and N be
 the repository's Frege zero, successor and impredicative natural-number
 property. Define
 
-$$
+```math
 \mathrm{PredOp}_\sigma :=
 \exists f^{\nu\nu}\,\forall n^\nu\,(Nn\to f(Sn)=n).
-$$
+```
 
 There is no condition on f(0). The operation type is admitted because ν is
 relational. The conclusion is the unboxed negation of this sentence.
@@ -20,9 +20,9 @@ Suppose a and b are numbers and f satisfies the predecessor law. Then
 f(Sa)=a and f(Sb)=b. Necessity of Identity makes each identity necessary.
 The following implication is a bare logical theorem:
 
-$$
+```math
 f(Sa)=a\to f(Sb)=b\to\neg(Sa=Sb\land a\ne b).
-$$
+```
 
 Necessitate this theorem and apply K twice. The result is
 □¬(Sa=Sb∧a≠b), contradicting ◇(Sa=Sb∧a≠b).
@@ -45,11 +45,11 @@ property, whereas every successor fails there.
 There are therefore external natural indices i,j with a_(i+1)=a_(j+1)
 and a_i≠a_j. Their finite numeral terms define a closed pure sentence
 
-$$
+```math
 \psi_{\sigma,i,j}:=
 (\overline{i+1}_\sigma=\overline{j+1}_\sigma)
 \land(\bar i_\sigma\ne\bar j_\sigma).
-$$
+```
 
 This exact sentence holds in the interpretation. C soundness certifies its
 consistency with C. Pure Max therefore entails ◇ψ. The object-language
@@ -68,11 +68,11 @@ singleton property. A separate certificate retains this explicit instance.
 
 Define the represented relation on all of ν:
 
-$$
+```math
 U(x,y):=
 [Nx\land x\ne0\land Ny\land x=Sy]
 \lor[(\neg Nx\lor x=0)\land y=0].
-$$
+```
 
 C proves every number is zero or a successor of a number. Thus U is total
 even without noncollapse. Under Iσ (equivalently I*σ), it is single-valued:

@@ -8,23 +8,23 @@ There is a model of C5 and full reversible logical separation in which propositi
 
 Write
 
-$$
+```math
 \mathsf D_t:=\forall E^{tt}\left[
  \bigl(\forall p,q\,[Ep=Eq\to p=q]\bigr)
  \to\forall q\,\exists p\,[Ep=q]\right].
 \tag{1}
-$$
+```
 
 Every operation and proposition in (1) is admitted. This is an internal assertion about injective operations of type tt; it is not an assertion about all external functions on the proposition domain. Nor is it being identified here with a stronger formulation quantifying over arbitrary serial injective relations without an admitted function representing them.
 
 The internal Frege statement Fin_t(All) implies (1), by the finite Dedekind argument recalled in [the fork note](fork-one-sided-inverse-separation.md), §5. The converse fails in the model below. Its failure will be proved using the established finite observer-collapse theorem, not inferred merely from an externally infinite domain.
 
-Under H+$\mathsf D_t$+Fun_{t,t}, any admitted whole left inverse is also a whole right inverse. Indeed, F∘E=I gives injectivity of E. For any q, (1) gives p with Ep=q, and hence
+Under H+$`\mathsf D_t`$+Fun_{t,t}, any admitted whole left inverse is also a whole right inverse. Indeed, F∘E=I gives injectivity of E. For any q, (1) gives p with Ep=q, and hence
 
-$$
+```math
 E(Fq)=E(F(Ep))=Ep=q.
 \tag{2}
-$$
+```
 
 Current Functionality collects these output identities into E∘F=I. If E and F are Good_Δ for the same finite qualification list, they remain so: no witness is replaced. Therefore SplitMono_Δ and Rev_Δ have exactly the same eligible observers under these premises, at every fixed finite Δ. Their corresponding separation sentences coincide at every relational output type. This conclusion alone does not give endpoint separation.
 
@@ -32,10 +32,10 @@ Current Functionality collects these output identities into E∘F=I. If E and F 
 
 Use the symmetric ideally-full action framework with finite pinning, as specified in [the local-conjugacy note](local-conjugacy-and-reversible-observers.md), §1. At a source object X, a proposition p is a set of arrows out of X. A finite S⊆X pins p when arrows with the same target and the same restriction to S agree on membership in p. Put
 
-$$
+```math
 B_S:=\{p\in D_t(X):S\text{ pins }p\}.
 \tag{3}
-$$
+```
 
 This is an external collection used in the semantic proof; it need not itself be the extension of an admitted predicate. Boolean set operations make it a Boolean algebra. Suppose every B_S is externally finite.
 
@@ -43,21 +43,21 @@ This is an external collection used in the semantic proof; it need not itself be
 
 For an arrow h:X→Y, application has the truth clause
 
-$$
+```math
 h\in E(p)\quad\Longleftrightarrow\quad
 E\bigl(h,\rho_t(h)p\bigr).
 \tag{4}
-$$
+```
 
 Suppose h,h′ have target Y and agree on P∪S. The transported inputs in (4) are equal as entire proposition objects at Y. To see this, test them at an arbitrary further coordinate l:Y→Z:
 
-$$
+```math
 l\in\rho_t(h)p\ \Longleftrightarrow\ lh\in p,
 \qquad
 l\in\rho_t(h')p\ \Longleftrightarrow\ lh'\in p.
-$$
+```
 
-The arrows lh and lh′ agree on S, so these truth values agree for every l. Thus $\rho_t(h)p=\rho_t(h')p$. E's P-pinning now makes the two sides of (4) agree. This proves the lemma at arbitrary output coordinates, not merely at the identity arrow.
+The arrows lh and lh′ agree on S, so these truth values agree for every l. Thus $`\rho_t(h)p=\rho_t(h')p`$. E's P-pinning now makes the two sides of (4) agree. This proves the lemma at arbitrary output coordinates, not merely at the identity arrow.
 
 Consequently, if P⊆S, the current operation E sends B_S into B_S. Suppose E is injective on the whole current proposition domain. Its restriction to the finite set B_S is an injective self-map, hence onto B_S. Given any admitted q, choose a finite S containing both a pin for q and P. Then q∈B_S, so q=E(p) for some p∈B_S. This proves (1).
 
@@ -68,31 +68,31 @@ The only finiteness used is the external finiteness of each fixed-pin algebra. N
 Take one countably infinite object X partitioned into two disjoint infinite sets A and B. The partition is part of the external model specification; no nonlogical colour predicates are required in the language.
 
 - Arrows are all bijections X→X.
-- The designated symmetry group is $G=\mathrm{Sym}(A)\times\mathrm{Sym}(B)$: each symmetry preserves each colour class setwise.
+- The designated symmetry group is $`G=\mathrm{Sym}(A)\times\mathrm{Sym}(B)`$: each symmetry preserves each colour class setwise.
 - At every relational type, the domain consists of exactly the symmetric intensions pinned by some finite subset of X. Individuals are X, with the arrow action on X.
 - Evaluation is at the identity arrow. If a signature expansion is desired, every nonlogical relational constant may be interpreted as its type's top element.
 
 This is the symmetric ideally-full construction cited in §6, so it is a model of C. All arrows have inverses. Their induced actions at every admitted type are therefore bijective, and C5, all Barcan instances and Functionality hold throughout the model. The arrows and the colour permutation group are semantic data; no forbidden individual-output function type is introduced.
 
-For a finite S⊆X and arrow h, its colour pattern on S records, for each s∈S, whether h(s) lies in A or B. There are exactly $2^{|S|}$ patterns, and each occurs: prescribe distinct images of S in the requested infinite classes, then extend the finite partial injection to a bijection of X.
+For a finite S⊆X and arrow h, its colour pattern on S records, for each s∈S, whether h(s) lies in A or B. There are exactly $`2^{|S|}`$ patterns, and each occurs: prescribe distinct images of S in the requested infinite classes, then extend the finite partial injection to a bijection of X.
 
 If two arrows h,h′ have the same colour pattern on S, there is g∈G with (gh)|S=h′|S. Extend the finite partial bijections h(s)↦h′(s) separately within A and B. Symmetry and S-pinning therefore make every p∈B_S give h and h′ the same membership value. Conversely, any set of colour patterns defines a symmetric S-pinned proposition, hence an admitted proposition. Thus
 
-$$
+```math
 |B_S|=2^{\,2^{|S|}}.
 \tag{5}
-$$
+```
 
-Every fixed-pin algebra is finite. Section 2 proves that the internal sentence $\mathsf D_t$ holds, although the union of these algebras need not be finite.
+Every fixed-pin algebra is finite. Section 2 proves that the internal sentence $`\mathsf D_t`$ holds, although the union of these algebras need not be finite.
 
 ## 4. Atomlessness and reversible separation
 
 Let p be any nonbottom proposition, choose a finite pin S for p, and choose h∈p. Take x∈X outside S. The proposition
 
-$$
+```math
 q_x:=\{k:X\to X\text{ an arrow}:k(x)\in A\}
 \tag{6}
-$$
+```
 
 is symmetric under G and pinned by {x}, so it is admitted. There are arrows h_A,h_B agreeing with h on S and sending x respectively into A and B: choose the new image outside the finite set h(S), and extend the resulting finite partial injection to a bijection. Both arrows belong to p by S-pinning. Hence p∧q_x and p∧¬q_x are both nonbottom. Since the Boolean operations are the corresponding set operations, this splits p into two proper nonzero parts.
 
@@ -110,13 +110,13 @@ If Fin_t(All) held, the [internal finite boundary](fork-one-sided-inverse-separa
 
 The verified profile is therefore
 
-$$
+```math
 \boxed{\mathrm{C5}+\mathrm{Rev}+\mathsf D_t
  +\text{atomless propositions}
  +\neg\mathrm{EndSep}
  +\neg\mathrm{Fin}_t(\mathrm{All}).}
 \tag{7}
-$$
+```
 
 This establishes that Rev together with (1) need not imply EndSep, even though (1) still makes every qualified left inverse two-sided. The two consequences of internal Frege finiteness must be kept distinct: its injection-to-surjection consequence suffices for the inverse conversion, whereas the finite-image witness used for endpoint separation is not supplied by (1).
 

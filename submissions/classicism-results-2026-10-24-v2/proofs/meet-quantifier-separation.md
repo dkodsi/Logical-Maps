@@ -12,30 +12,30 @@ Work over H in the fixed relational language. Propositions have type t; observer
 
 For any qualification R define propositional separation:
 
-$$
+```math
 S[R]:=\forall p,q\, .\,p=q\leftrightarrow\forall E\, .\,R(E)\to(Ep\leftrightarrow Eq).
-$$
+```
 
 The observers agree in truth on their two outputs.
 
 Use these qualifications:
 
-$$
+```math
 \begin{aligned}
 A(E)&:=E\top, &U(E)&:=E\top=\top,\\
 M(E)&:=(\lambda p,q\, .\,E(p\land q))=(\lambda p,q\, .\,Ep\land Eq),\\
 Q_\sigma(E)&:=(\lambda F\, .\,E(\forall x^\sigma Fx))=(\lambda F\, .\,\forall x^\sigma E(Fx)),\\
 Q_\Delta(E)&:=\bigwedge_{\sigma\in\Delta}Q_\sigma(E).
 \end{aligned}
-$$
+```
 
 A is Top acceptance, a truth condition. U is Top fixing, an identity condition. All commutation clauses are identities between the composite operations.
 
 Abbreviate:
 
-$$
+```math
 \mathsf M:=S[A\land M],\qquad\mathsf Q_\Delta:=S[A\land Q_\Delta],\qquad\mathsf J_\Delta:=S[A\land M\land Q_\Delta].
-$$
+```
 
 M and QΔ without an observer argument refer to the separation principles; M(E) and QΔ(E) refer to qualifications. For the strict comparisons in sections 4–5, Q and J mean Δ={t}. That fixed instance already exhibits every strict comparison shown. The positive theorems hold for every finite Δ; allowing all finite Δ gives the corresponding schema.
 
@@ -45,23 +45,23 @@ These are propositional separation principles. They yield identities between pro
 
 For any of these qualifications R put:
 
-$$
+```math
 p\preceq_R q\quad\leftrightarrow\quad\forall E\, .\,R(E)\to(Ep\to Eq).
-$$
+```
 
 H proves reflexivity and transitivity. S[R] is precisely the antisymmetry of this preorder: mutual comparison says that every eligible observer agrees on p and q. For the qualifications containing A, Top is greatest. Identity is eligible, so p ≼R q also entails the material implication p→q.
 
 If R includes M(E), conjunction is a greatest lower bound:
 
-$$
+```math
 u\preceq_R(p\land q)\quad\leftrightarrow\quad(u\preceq_Rp\land u\preceq_Rq).
-$$
+```
 
 Indeed full M gives E(p∧q)=Ep∧Eq, and H then supplies its ordinary truth condition. Quantify this calculation over E. Moreover:
 
-$$
+```math
 p\preceq_Rq\quad\leftrightarrow\quad p\land q=p.
-$$
+```
 
 For the forward direction, Ep→Eq makes E(p∧q) and Ep agree for every eligible E; separation identifies p∧q and p. The reverse follows by substitution and the conjunction truth condition. Thus the observer order is exactly the order defined by the original conjunction.
 
@@ -69,9 +69,9 @@ Consequently M gives commutativity, associativity and idempotence of conjunction
 
 There is an exact redundancy result:
 
-$$
+```math
 S[A\land M]\quad\leftrightarrow\quad S[M]\land\forall p\, .\,p\land\top=p.
-$$
+```
 
 The forward direction follows from inclusion of observer classes and the unit law just proved. Conversely, assume bare meet separation and the unit law. If a meet observer rejects Top, then E(p)=E(p∧Top)=Ep∧E(Top) makes it reject every p. Such an observer cannot distinguish any pair. Removing those observers therefore preserves separation.
 
@@ -81,9 +81,9 @@ The same argument works with further restrictions, including QΔ, held fixed. It
 
 If R includes Qσ(E), H proves:
 
-$$
+```math
 u\preceq_R(\forall x^\sigma Fx)\quad\leftrightarrow\quad\forall x^\sigma\, .\,u\preceq_R Fx.
-$$
+```
 
 For each eligible E, universal commutation gives E(∀x Fx) ↔ ∀x E(Fx). Since x is absent from Eu, distribute implication over that universal and exchange the universal quantifiers over E and x. Separation then makes the preorder a partial order. Thus each listed quantifier supplies greatest lower bounds of admitted indexed families.
 
@@ -101,13 +101,13 @@ Vacuity and interchange follow from uniqueness of greatest lower bounds. Reindex
 
 JΔ supplies the extra identification of this order with conjunction order. It therefore entails:
 
-$$
+```math
 \begin{aligned}
 u\land(\forall x\,Fx)=u&\quad\leftrightarrow\quad\forall x\,(u\land Fx=u),\\
 \forall x\,(p\land Fx)&=p\land\forall x\,Fx,\\
 \forall x\,(Fx\land Gx)&=(\forall x\,Fx)\land(\forall x\,Gx).
 \end{aligned}
-$$
+```
 
 The last two formulas follow by comparing lower bounds in the common order. Domains are nonempty, as in H; this matters when pulling a constant factor out of a universal. Equivalently, transport each side through a jointly qualified observer and apply the corresponding H truth equivalence.
 
@@ -117,9 +117,9 @@ Separate M and QΔ do not provide this common order. Section 5 gives a model whe
 
 For every finite Δ, over C:
 
-$$
+```math
 \mathrm C\vdash\mathsf M,\qquad \mathrm C\vdash\mathsf Q_\Delta\leftrightarrow\mathsf J_\Delta\leftrightarrow\mathrm{BF}_\Delta.
-$$
+```
 
 These statements remain true when U replaces A in every qualification. BFΔ is the finite conjunction of the closed, universally quantified BF instances at the listed types.
 
@@ -127,17 +127,17 @@ For M, the admitted principal tests P_a(r)=Box(a→r) fix Top and preserve conju
 
 The quantifier proof requires a different observer. Let B be BFΔ and put:
 
-$$
+```math
 E_a(r):=(B\land\Box(a\to r))\lor(\neg B\land r).
-$$
+```
 
 C proves unconditionally that this operation fixes Top and preserves conjunction by full identity. This follows from the Boolean identities and the normal-modal conjunction identity for Box, on each side of the Boolean partition B,¬B.
 
 C also proves the following closed theorem, with no optional assumption:
 
-$$
+```math
 \forall a,F\, .\,E_a(\forall x^\sigma Fx)\leftrightarrow\forall x^\sigma E_a(Fx).
-$$
+```
 
 Split on B. If B, its BFσ conjunct and CBF give the material universal law for the principal test. If not B, E_a has the same current truth values as identity, which gives the other branch. B is closed and independent of x, so these case calculations apply uniformly to the family.
 
@@ -182,9 +182,9 @@ However, let E preserve both and write h(r) for the truth value of Er. Diamond c
 
 This proves M∧Q does not imply J. The witness is stronger: it has all BF, all CBF, full Functionality and the ordinary Boolean identities. A chain minimum equals 1 exactly when every input is 1. The failed interaction law is explicit: for range(F)={u,v},
 
-$$
+```math
 \forall x\,(u\land Fx)=0,\qquad u\land\forall x\,Fx=u.
-$$
+```
 
 The same failure of joint separation holds for acceptance or fixing whenever the tested list contains t. The model satisfies M and every QΔ while refuting the combined all-type schema. With only a singleton individual type tested, or with an empty list, it does not give this strict distinction.
 
@@ -192,9 +192,9 @@ The same failure of joint separation holds for acceptance or fixing whenever the
 
 Put
 
-$$
+```math
 R_\sigma(F):=\bigl(\text{all first coordinates of }Fx,\;1\text{ iff }F\text{ is constantly }\top\bigr).
-$$
+```
 
 Rσ(F)=Top iff F is constantly Top. Thus its BF and CBF instances hold. But Rσ(constant u)=0≠u, so vacuity fails.
 

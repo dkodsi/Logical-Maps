@@ -6,9 +6,9 @@ Original mathematical argument, direct source misc; unpaginated.
 
 Keep exactly the original finitary relational language with
 
-$$
+```math
 \Sigma=\{c:e\to t\},\qquad M=\mathrm{Max}(C(\Sigma)).
-$$
+```
 
 There are no individual names in this original signature. Every Strong
 Possibility side condition remains consistency with this same M. The
@@ -20,23 +20,23 @@ C(Σ,a)-provable identity, and a nonempty compact space K of Boolean truth
 assignments with the correct typed identity diagram and one individual.
 For each predicate term F of type σ→t, its witness requirement is
 
-$$
+```math
 W_F=\widehat{\neg\exists_\sigma F}
        \cup\bigcup_{b\in B_\sigma}\widehat{F(b)},
 \qquad
 \mathcal H=\bigcap_F W_F.
 \tag{1}
-$$
+```
 
 A point of H is exactly a genuine Henkin truth assignment on the fixed
 domains B. It yields a model of the requested SP_Σ by REPORT §5. Define
 
-$$
+```math
 K_0=K,\qquad
 K_{\alpha+1}=\bigcap_F\overline{K_\alpha\cap W_F},
 \qquad K_\lambda=\bigcap_{\alpha<\lambda}K_\alpha.
 \tag{2}
-$$
+```
 
 Closures may be taken in K or in the ambient Cantor space; K_α is closed.
 REPORT §6 proves stabilization at a countable ordinal γ and
@@ -53,12 +53,12 @@ K_γ=cl(H). Let γ denote the least stabilization ordinal.
    can have every W_F dense in L. The least stabilization ordinal always
    satisfies γ≤ω₁^CK, and
 
-$$
+```math
 \boxed{\mathcal H\ne\varnothing
        \quad\Longleftrightarrow\quad
        \gamma=\omega_1^{\mathrm{CK}}.}
 \tag{3}
-$$
+```
 
 Here ω₁^CK is the supremum of the order types of recursive well-orders.
 It is countable externally. If H is empty, the sequence becomes empty
@@ -77,12 +77,12 @@ V⊆N in a fixed recursive presentation.
 The conditions defining K are uniformly arithmetical: the Boolean truth
 laws, invariance under C-provable identity, the singleton sentence, and
 
-$$
+```math
 V(\ulcorner S=T\urcorner)=1
 \quad\Longleftrightarrow\quad
 C(\Sigma,a)\vdash S=T.
 \tag{4}
-$$
+```
 
 C-provability is computably enumerable. Its characteristic predicate is
 decidable in 0′, so all the forbidden finite truth patterns defining K
@@ -114,11 +114,11 @@ numerical domain is externally the standard natural numbers.
 
 For R∈B_{νt}, put
 
-$$
+```math
 X_R=\{n\in\mathbb N:V(\ulcorner R(\bar n)\urcorner)=1\},
 \qquad \mathcal S_V=\{X_R:R\in B_{\nu t}\}.
 \tag{5}
-$$
+```
 
 **Lemma.** (N,S_V) is an omega-model of full second-order arithmetic Z₂.
 
@@ -181,11 +181,11 @@ formula ¬R(x), using the standard arithmetical relation for syntactic
 substitution. This supplies a closed Σ(a)-sentence L for which the
 following material biconditional is true in the model:
 
-$$
+```math
 L\ \leftrightarrow\
 \neg R(\overline{\ulcorner L\urcorner}).
 \tag{6}
-$$
+```
 
 For completeness, let Sub(u,u,z) represent the computable operation
 that substitutes the numeral for u in the one free numerical variable
@@ -206,11 +206,11 @@ an optional assumption. The SP side-condition signature never changes.
 By §3, every hyperarithmetic real is in S_V. The lemma therefore proves
 that V is nonhyperarithmetic. Relativizing the same argument gives
 
-$$
+```math
 X\in\mathcal S_V\quad\Longrightarrow\quad
 V\notin\mathrm{HYP}(X).
 \tag{7}
-$$
+```
 
 Each such X is nevertheless Turing reducible to V: fix a term R
 representing it and query the truth bits for R(n̄). This is a restriction
@@ -225,11 +225,11 @@ in K_γ, V∈H. Some finite syntax-bit cylinder [s] isolates it, so
 H∩[s]={V}. The defining property of H∩[s] is lightface arithmetical.
 For each natural number n, the two assertions
 
-$$
+```math
 \exists Y\in\mathcal H\cap[s]\ (n\in Y),
 \qquad
 \exists Y\in\mathcal H\cap[s]\ (n\notin Y)
-$$
+```
 
 are lightface analytic and define complementary predicates on n.
 Thus V is Δ¹₁, equivalently hyperarithmetic, contrary to §4. For the
@@ -275,7 +275,7 @@ nonempty stable kernel cannot have a hyperarithmetic closed code.
 
 It remains to relate this fact to the stages in (2). If a closed set
 F has a Z-recursive binary-tree presentation, then
-$F\cap[s]\cap W_i\ne\varnothing$
+$`F\cap[s]\cap W_i\ne\varnothing`$
 is Σ⁰₂ relative to Z: choose an enumerated cylinder inside W_i and
 test whether its compatible intersection with [s] has an infinite
 subtree. Consequently Z″ decides which cylinders miss F∩W_i. The
@@ -306,10 +306,10 @@ supplies the matching upper bound and the extinction alternative.
 
 Represent each stage by its **saturated** open-complement code
 
-$$
+```math
 S_\alpha=\{s:[s]\cap K_\alpha=\varnothing\}.
 \tag{8}
-$$
+```
 
 These are sets of finite binary strings, coded by natural numbers.
 The seed S₀ is arithmetical: disjointness of a cylinder from the
@@ -324,14 +324,14 @@ clopen set when taking intersections of incompatible cylinders.
 
 Let E_i enumerate the cylinder codes whose union is W_i. Define
 
-$$
+```math
 \begin{aligned}
 R(A)&=\{s:\exists i\ \forall t\in E_i\,
                 \mathrm{Cover}([s]\cap[t],A)\},\\
 \Gamma(A)&=\mathrm{Sat}\bigl(S_0\cup A\cup R(A)\bigr).
 \end{aligned}
 \tag{9}
-$$
+```
 
 The notation Cover([s]∩[t],A) uses the longer string when compatible,
 and the empty clopen set otherwise. Enumeration membership in E_i is
@@ -347,10 +347,10 @@ cl(K_α∩W_i), because [s] is clopen. The complement of K_{α+1} is
 the union of these removed cylinders and the old complement. Taking
 Sat accounts for all cylinders lying inside that open union. Hence
 
-$$
+```math
 S_{\alpha+1}=\Gamma(S_\alpha).
 \tag{10}
-$$
+```
 
 At every nonzero limit λ, compactness gives
 S_λ=⋃_{α<λ}S_α. Indeed a cylinder disjoint from ⋂_{α<λ}K_α is covered
@@ -381,7 +381,7 @@ decreasing closed family implies K_α=∅ for some α<ω₁^CK: otherwise
 that family would have the finite intersection property. Thus in
 this case γ<ω₁^CK. We obtain the exact alternatives
 
-$$
+```math
 \begin{array}{ll}
 \mathcal H=\varnothing:
   &\text{extinction at a computable ordinal};\\
@@ -389,7 +389,7 @@ $$
   &\text{first stabilization, nonempty, at }\omega_1^{\mathrm{CK}}.
 \end{array}
 \tag{11}
-$$
+```
 
 No algorithm for deciding these alternatives is supplied.
 

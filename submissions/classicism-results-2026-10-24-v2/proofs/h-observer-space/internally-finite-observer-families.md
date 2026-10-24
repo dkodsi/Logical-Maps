@@ -10,7 +10,7 @@ The two induction arguments use different kinds of information. Observer separat
 
 Fix any object type α. For U:αt write U−a for λx.(Ux∧x≠a), and write U≈V for current coextension, ∀x(Ux↔Vx). The fixed [background definitions](../../source/topics/classicism/background.md) are
 
-$$
+```math
 \begin{aligned}
 \mathbf0_\alpha(U)&:=\forall x^\alpha\,\neg Ux,\\
 \mathrm{Suc}_\alpha(Z)(U)&:=
@@ -23,26 +23,26 @@ $$
  \exists Z^{(\alpha t)t}\,[\mathrm{FC}_\alpha(Z)\land ZU].
 \end{aligned}
 \tag{1}
-$$
+```
 
 All types here are fixed externally. Every predicate used in an induction below is an admitted lambda term.
 
 **Coextension bookkeeping.** Put
 
-$$
+```math
 \mathrm{Ext}_\alpha(Z):=
 \forall U,V\,[U\approx V\to(ZU\leftrightarrow ZV)].
 \tag{2}
-$$
+```
 
 This holds at zero. If it holds for Z, it holds for Suc(Z): the same chosen a belongs to either coextensive predicate, and their exact deletions remain coextensive. Frege induction therefore proves FC(Z)→Ext(Z), and consequently
 
-$$
+```math
 U\approx V\quad\Longrightarrow\quad
 (\mathrm{Fin}_\alpha(U)\leftrightarrow
  \mathrm{Fin}_\alpha(V)).
 \tag{3}
-$$
+```
 
 For each induction property P(Z) below one may use the full induction predicate
 FC(Z)∧Ext(Z)∧P(Z). FC holds at zero and is successor-closed directly from (1); the preceding argument supplies Ext. This keeps the predecessor's coextension invariance available whenever a deletion predicate is replaced by a coextensive one. It never identifies coextensive predicates or cardinality objects.
@@ -57,14 +57,14 @@ We will use the following H lemmas, with their internal proofs.
 
 **Finite indexed unions.** For an admitted R:αβt and X:αt,
 
-$$
+```math
 \mathrm{Fin}_\alpha(X)\land
 \forall x\,[Xx\to\mathrm{Fin}_\beta(\lambda y.R(x,y))]
 \ \Longrightarrow\
 \mathrm{Fin}_\beta
  \bigl(\lambda y.\exists x\,[Xx\land R(x,y)]\bigr).
 \tag{4}
-$$
+```
 
 Induct on a cardinality of X, universally over X and R. At zero the union is empty. A successor deletes a∈X. The union indexed by X−a is finite by the induction hypothesis, and the fibre at a is finite by the displayed premise. The original union is coextensive with their binary union, so the preceding lemma and (3) finish. The argument takes the finite witness for one fibre inside one induction step. It does not choose witnesses for all fibres simultaneously.
 
@@ -74,7 +74,7 @@ These closure proofs need only current identity, its substitution rule, classica
 
 For U:(tt)t and V:tt define
 
-$$
+```math
 \mathrm{Sep}(U,V):=
 \forall p,q\,
 \left[
@@ -83,27 +83,27 @@ $$
  \ \to\ p=q
 \right].
 \tag{5}
-$$
+```
 
 The family U and the class V are admitted predicates. The observers in U need not preserve any logical operation.
 
 **Finite-profile theorem, over H.**
 
-$$
+```math
 \boxed{
 \mathrm{Fin}_{tt}(U)\land\mathrm{Sep}(U,V)
 \ \Longrightarrow\ \mathrm{Fin}_t(V).}
 \tag{6}
-$$
+```
 
 Use Frege induction on Z at type tt, with property
 
-$$
+```math
 P(Z):=
 \forall U,V\,
 [(ZU\land\mathrm{Sep}(U,V))\to\mathrm{Fin}_t(V)],
 \tag{7}
-$$
+```
 
 and the bookkeeping conjuncts FC and Ext described in §1.
 
@@ -111,11 +111,11 @@ At zero U has no members. The observer-agreement premise in (5) is then vacuous,
 
 For the successor step choose E∈U with Z(U−E). Define
 
-$$
+```math
 V_+(p):=Vp\land Ep,\qquad
 V_-(p):=Vp\land\neg Ep.
 \tag{8}
-$$
+```
 
 The smaller family U−E separates each of these two classes. Indeed suppose p,q lie in the same one and agree under all members of U−E. For any G∈U, if G=E then Gp and Gq have the same current truth by (8), using equality substitution. If G≠E, G belongs to U−E and agreement is part of the premise. Thus p,q agree under all U and (5) gives p=q.
 
@@ -123,11 +123,11 @@ Apply the induction hypothesis twice, with the same cardinality witness Z for U�
 
 In particular, with All_t:=λp.Top,
 
-$$
+```math
 \mathrm{Fin}_{tt}(U)\land\mathrm{Sep}(U,\mathrm{All}_t)
 \ \Longrightarrow\ \mathrm{Fin}_t(\mathrm{All}_t).
 \tag{9}
-$$
+```
 
 Only the current truth bits in (8) are used. No identity between true propositions, truth-valued selector, Functionality or choice function is assumed. Equation (9) concerns one internally finite family that separates; it does not assert that every infinite family contains a finite separating subfamily.
 
@@ -135,7 +135,7 @@ Only the current truth bits in (8) are used. No identity between true propositio
 
 Fix types α,β with β≠e, so αβ is an allowed function type. Let X:αt, Y:βt and V:(αβ)t be admitted predicates. Define
 
-$$
+```math
 \begin{aligned}
 \mathrm{Values}(V,X,Y)&:=
  \forall f\,[Vf\to\forall x(Xx\to Y(fx))],\\
@@ -144,20 +144,20 @@ $$
  [(Vf\land Vg\land\forall x(Xx\to fx=gx))\to f=g].
 \end{aligned}
 \tag{10}
-$$
+```
 
 Here the evaluation test is the identity fx=gx. A material biconditional between these outputs, even when β=t, would be a different premise.
 
 **Finite-table theorem, over H.**
 
-$$
+```math
 \boxed{
 \mathrm{Fin}_\alpha(X)\land\mathrm{Fin}_\beta(Y)
 \land\mathrm{Values}(V,X,Y)
 \land\mathrm{Identifies}(X,V)
 \ \Longrightarrow\ \mathrm{Fin}_{\alpha\beta}(V).}
 \tag{11}
-$$
+```
 
 Frege-induct on a cardinality Z of X. The induction property universally quantifies X,Y,V, assuming ZX, Fin(Y) and the two conditions in (10). Include FC and Ext as before.
 
@@ -165,10 +165,10 @@ If X is empty, the evaluation premise in Identifies is vacuous and V has at most
 
 For a successor choose a∈X with Z(X−a). For each y∈Y define the admitted fibre
 
-$$
+```math
 V_y(f):=Vf\land fa=y.
 \tag{12}
-$$
+```
 
 All values on X−a still lie in Y. Moreover X−a identifies V_y: two members agreeing there also agree at a because both values equal y; therefore they agree on X, and Identifies(X,V) makes them equal. The induction hypothesis yields Fin(V_y) for every y∈Y.
 
@@ -179,7 +179,7 @@ This proof does not construct functions from arbitrary finite tables. It counts 
 Let Fun_{α,β} be the stated local Functionality premise
 ∀f,g[(∀x.fx=gx)→f=g]. Taking both X and Y to be their full domains gives
 
-$$
+```math
 \mathrm H+\mathrm{Fun}_{\alpha,\beta}\ \vdash\
 \left[
 \mathrm{Fin}_\alpha(\mathrm{All}_\alpha)
@@ -188,17 +188,17 @@ $$
 \mathrm{Fin}_{\alpha\beta}(\mathrm{All}_{\alpha\beta})
 \right].
 \tag{13}
-$$
+```
 
 In particular,
 
-$$
+```math
 \mathrm H+\mathrm{Fun}_{t,t}\ \vdash\
 \mathrm{Fin}_t(\mathrm{All}_t)
 \ \longrightarrow\
 \mathrm{Fin}_{tt}(\mathrm{All}_{tt}).
 \tag{14}
-$$
+```
 
 The subset lemma then makes every admitted observer subclass finite, regardless of its qualification.
 
@@ -206,14 +206,14 @@ The subset lemma then makes every admitted observer subclass finite, regardless 
 
 Let Aut:(tt)t be the admitted predicate
 
-$$
+```math
 \mathrm{Aut}(E):=
 \mathrm{Good}_{\{t\}}(E)\land
 \exists F^{tt}\,
 [\mathrm{Good}_{\{t\}}(F)\land
  E\circ F=I\land F\circ E=I].
 \tag{15}
-$$
+```
 
 Before C is recovered, Good is the original full typed logical qualification, with whole Boolean and quantifier identities and the translated equality clauses. Both inverse equations are whole-operation identities. Over C5 this predicate is coextensive with the reduced identity-based guard A in [Reversible fixed propositions](reversible-fixed-proposition-characterization.md), §1. Equation (3), rather than an assumed identity between the guards, makes their finiteness statements interchangeable there.
 
@@ -221,7 +221,7 @@ Rev and End below are the full reversible and endpoint logical separation schema
 
 **Theorem.**
 
-$$
+```math
 \boxed{
 \begin{aligned}
 \mathrm H+\mathrm{Rev}
@@ -234,11 +234,11 @@ $$
 \mathrm{C5}+\mathrm{FinBoxSep}.
 \end{aligned}}
 \tag{16}
-$$
+```
 
 The last line retains full finite-image native-Box separation, as in [Finite-image Box reflection](finite-image-box-reflection.md), §4. These are equivalences of the displayed theories; one fixed propositional separation instance is not being used to recover C.
 
-**From the finite reversible family.** Full Rev includes propositional separation by Aut at list {t}. Thus Sep(Aut,All_t), and (9) gives FinAll. Rev already supplies C5. Alternatively, to obtain End directly, identity is a $\mathrm{Good}_{\{t\}}$ observer with internally finite image under FinAll; the established [single finite-image witness theorem](../logical-observer-hierarchy.md), §6, gives End from Rev and that witness.
+**From the finite reversible family.** Full Rev includes propositional separation by Aut at list {t}. Thus Sep(Aut,All_t), and (9) gives FinAll. Rev already supplies C5. Alternatively, to obtain End directly, identity is a $`\mathrm{Good}_{\{t\}}`$ observer with internally finite image under FinAll; the established [single finite-image witness theorem](../logical-observer-hierarchy.md), §6, gives End from Rev and that witness.
 
 **From End and FinAll.** End supplies Rev and Functionality. Equation (14) makes the entire tt domain internally finite; the subset lemma gives Fin_tt(Aut). This proves the first equivalence without an external enumeration of observers or propositions.
 
@@ -259,7 +259,7 @@ For any of the original qualification predicates K_Δ, let finite-family K-separ
 
 For full schemas over H the preceding lemmas give
 
-$$
+```math
 \boxed{
 \begin{aligned}
 \text{finite-family ordinary logical separation}
@@ -272,7 +272,7 @@ $$
  \ \equiv\ \mathrm{FinBoxSep}.
 \end{aligned}}
 \tag{17}
-$$
+```
 
 Forwards, forgetting finiteness and using U⊆K_Δ gives the corresponding unrestricted separation instance. Any propositional instance also gives FinAll by (9). More generally a fixed relational instance yields the same conclusion: constant τ-relations associated with p,q reduce U-separation at τ to (5) for all propositions, and a tuple of arguments exists because types are nonempty. This reduction needs no Functionality.
 

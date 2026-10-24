@@ -11,10 +11,10 @@ Published background and the older components of the composition retain
 
 In the fixed framework C, with the map's relational type system,
 
-$$
+```math
 \mathrm{Relational\ Choice}+\mathrm{Boolean\ Completeness}
 \;\Longrightarrow\;\mathrm{Transversal\ Choice}.
-$$
+```
 
 All three schemata are unboxed. Here **RC means Relational Choice**, not
 Rigid Comprehension. The stable conjecture ID and its original certificate
@@ -22,13 +22,13 @@ date are retained.
 
 There are two useful proofs. The short database composition is
 
-$$
+```math
 \begin{aligned}
 \mathrm{RC}+\mathrm{BC}&\Rightarrow\mathrm{Actuality},\\
 \mathrm{BC}+\mathrm{Actuality}&\Rightarrow\mathrm{Weak\ Rigid\ Comprehension},\\
 \mathrm{RC}+\mathrm{Weak\ Rigid\ Comprehension}&\Rightarrow\mathrm{TC}.
 \end{aligned}
-$$
+```
 
 The first implication is the independent Codex research prompted by Daniel
 Kodsi, recorded in
@@ -53,14 +53,14 @@ its definitions.
 
 ## 2. Exact local strengths retained from the direct proof
 
-Fix an admitted type $\sigma$, including $e$, and put $\rho=\sigma t$.
-Write $\mathrm{RC}_{\alpha,\beta}$ for relational selection with input type
-$\alpha$ and output type $\beta$, and $\mathrm{BC}_\tau$ for Boolean
-Completeness at the relational type $\tau$.
+Fix an admitted type $`\sigma`$, including $`e`$, and put $`\rho=\sigma t`$.
+Write $`\mathrm{RC}_{\alpha,\beta}`$ for relational selection with input type
+$`\alpha`$ and output type $`\beta`$, and $`\mathrm{BC}_\tau`$ for Boolean
+Completeness at the relational type $`\tau`$.
 
 A **represented** family means an admitted predicate in the language of C.
-Let $\mathrm{ChainBC}_\tau$ require joins of represented families totally
-ordered by the algebraic Boolean order; let $\mathrm{WOChainBC}_\tau$
+Let $`\mathrm{ChainBC}_\tau`$ require joins of represented families totally
+ordered by the algebraic Boolean order; let $`\mathrm{WOChainBC}_\tau`$
 require them only for represented families which that order internally
 well-orders. These are descriptions of local formulas, not new principle
 records or external set-theoretic completeness assumptions. The empty
@@ -68,74 +68,74 @@ family has the already available bottom as its join.
 
 | Premises over C | Conclusion | Evidence retained below |
 | --- | --- | --- |
-| $\mathrm{RC}_{\rho,\sigma}+\mathrm{WOChainBC}_\rho$ | $\mathrm{TC}_\sigma$ | Direct argument plus guarded point-output refinement |
-| $\mathrm{RC}_{\rho,\rho}+\mathrm{WOChainBC}_\rho$ | $\mathrm{TC}_\sigma$ | Original functional-graph argument |
-| $\mathrm{RC}_{\tau,\tau}+\mathrm{WOChainBC}_\tau$ | $\mathrm{BC}_\tau$ | Cut and fixed-point argument |
-| $\mathrm{RC}_{\tau,\tau}+\mathrm{CBC}_{\kappa,\tau}+\mathrm{CCC}_{\kappa,\tau}$ | $\mathrm{BC}_\tau$ | Countable disjoint-increment argument |
-| $\mathrm{RC}_{\rho,\sigma}+\mathrm{CBC}_{\kappa,\rho}+\mathrm{CCC}_{\kappa,\rho}$ | $\mathrm{TC}_\sigma$ | The same disjoint-increment argument applied directly to the guarded operation |
+| $`\mathrm{RC}_{\rho,\sigma}+\mathrm{WOChainBC}_\rho`$ | $`\mathrm{TC}_\sigma`$ | Direct argument plus guarded point-output refinement |
+| $`\mathrm{RC}_{\rho,\rho}+\mathrm{WOChainBC}_\rho`$ | $`\mathrm{TC}_\sigma`$ | Original functional-graph argument |
+| $`\mathrm{RC}_{\tau,\tau}+\mathrm{WOChainBC}_\tau`$ | $`\mathrm{BC}_\tau`$ | Cut and fixed-point argument |
+| $`\mathrm{RC}_{\tau,\tau}+\mathrm{CBC}_{\kappa,\tau}+\mathrm{CCC}_{\kappa,\tau}`$ | $`\mathrm{BC}_\tau`$ | Countable disjoint-increment argument |
+| $`\mathrm{RC}_{\rho,\sigma}+\mathrm{CBC}_{\kappa,\rho}+\mathrm{CCC}_{\kappa,\rho}`$ | $`\mathrm{TC}_\sigma`$ | The same disjoint-increment argument applied directly to the guarded operation |
 
 In particular, the first two conclusions hold with ChainBC or BC in place
 of WOChainBC. The point-output choice premise is the useful later
 refinement of the original choice instance; the two displayed original
 proofs remain independently readable.
 
-Here $\mathrm{CBC}_{\kappa,\tau}$ means that every represented
-$\kappa$-countable family of $\tau$-entities has a Boolean join, and
-$\mathrm{CCC}_{\kappa,\tau}$ means that every represented disjoint family
-of nonbottom $\tau$-entities is $\kappa$-countable. Countability is the map's
+Here $`\mathrm{CBC}_{\kappa,\tau}`$ means that every represented
+$`\kappa`$-countable family of $`\tau`$-entities has a Boolean join, and
+$`\mathrm{CCC}_{\kappa,\tau}`$ means that every represented disjoint family
+of nonbottom $`\tau`$-entities is $`\kappa`$-countable. Countability is the map's
 Frege-countability notion: there is a represented relation to
-$\mathbb N_\kappa$ such that two family members share a numerical label
+$`\mathbb N_\kappa`$ such that two family members share a numerical label
 exactly when they are identical. Labels have the appropriate Frege number
-type $\nu_\kappa$; the construction does not assume a single-valued
+type $`\nu_\kappa`$; the construction does not assume a single-valued
 labeling, a selected enumeration, externally standard numbers, or Infinity.
 
 For clarity, the last row follows without upgrading the point-output
-choice premise to $\mathrm{RC}_{\rho,\rho}$. Under failure of
-$\mathrm{TC}_\sigma$, the guarded operation $g$ of Part B is strict on
-all partial transversals. Form the represented union $A$ of its internal
-$g$-chains as in Part A. No completeness is needed to form $A$ or prove it
-internally well-ordered. For $F\in A$, put
+choice premise to $`\mathrm{RC}_{\rho,\rho}`$. Under failure of
+$`\mathrm{TC}_\sigma`$, the guarded operation $`g`$ of Part B is strict on
+all partial transversals. Form the represented union $`A`$ of its internal
+$`g`$-chains as in Part A. No completeness is needed to form $`A`$ or prove it
+internally well-ordered. For $`F\in A`$, put
 
-$$
+```math
 d_F=g(F)\wedge_\rho\neg_\rho F.
-$$
+```
 
-Strictness makes $d_F$ nonbottom. If $F<G$ in $A$, its defining predecessor
-condition gives $g(F)\le G$, so $d_F\wedge_\rho d_G=0$. Thus the
+Strictness makes $`d_F`$ nonbottom. If $`F<G`$ in $`A`$, its defining predecessor
+condition gives $`g(F)\le G`$, so $`d_F\wedge_\rho d_G=0`$. Thus the
 represented image of the increments is disjoint and the increment map is
 injective. CCC supplies numerical labels for that image; composition with
-the represented increment graph labels $A$. CBC therefore gives the one
-join of $A$ needed by the final step of the fixed-point proof. Evaluation's
+the represented increment graph labels $`A`$. CBC therefore gives the one
+join of $`A`$ needed by the final step of the fixed-point proof. Evaluation's
 adjunction, already proved in Part A, ensures that this join is a partial
 transversal. The fixed point contradicts strictness. This is the point-output
 refinement recorded in
 [the structural handoff, §1](../source/research/2026-10-22/notes/structural-lane-handoff.md).
-Part C retains the full, separate BC-upgrade proof at arbitrary $\tau$.
+Part C retains the full, separate BC-upgrade proof at arbitrary $`\tau`$.
 
 The composition offers a different locality advantage. The Actuality
-result needs only $\mathrm{RC}_{t,t}+\mathrm{BC}_{tt}$. Christopher Sun's
+result needs only $`\mathrm{RC}_{t,t}+\mathrm{BC}_{tt}`$. Christopher Sun's
 [Actuality implies Transversal](../source/topics/classicism/results/actuality-implies-transversal.yaml)
 and
 [Transversal plus RC implies TC](../source/topics/classicism/results/transversal-and-relational-choice-imply-transversal-choice.yaml)
 then give
 
-$$
+```math
 \mathrm{RC}_{t,t}+\mathrm{BC}_{tt}+\mathrm{RC}_{\sigma t,\sigma}
 \Rightarrow\mathrm{TC}_\sigma.
-$$
+```
 
-Consequently all-type RC with BC at $tt$ alone suffices for all-type TC.
+Consequently all-type RC with BC at $`tt`$ alone suffices for all-type TC.
 This is complementary to the direct proof's completeness premise at
-$\sigma t$; it does not erase that proof or its chain/CBC+CCC refinements.
+$`\sigma t`$; it does not erase that proof or its chain/CBC+CCC refinements.
 
 ## 3. Shared limits and useful consequences
 
 The direct construction works for an equivalence relation that is an
 equivalence relation only actually. It uses no ND, BF, Plenitude, or
 identity of actually coextensive property entities. Its crucial
-partial-transversal predicate has **$\forall x\,y\,\Box$** scope.
+partial-transversal predicate has **$`\forall x\,y\,\Box`$** scope.
 A separate final purification, given in the original direct proof, gives a witness with
-**$\Box\forall x\,y$** partiality. That normalization is not substituted
+**$`\Box\forall x\,y`$** partiality. That normalization is not substituted
 into the chain-join argument.
 
 The internal fixed-point proof uses admitted predicates and represented
@@ -146,7 +146,7 @@ of arbitrary functional graphs and gives no Plenitude conclusion.
 With BC, the recorded TC⇒RC, TC⇒Zorn, Zorn⇒Well-Ordering and
 Well-Ordering⇒TC arrows make RC, TC, Zorn and Well-Ordering equivalent.
 Necessitating the discharged implication gives the boxed conditional
-$\Box\mathrm{RC}+\Box\mathrm{BC}\Rightarrow\Box\mathrm{TC}$.
+$`\Box\mathrm{RC}+\Box\mathrm{BC}\Rightarrow\Box\mathrm{TC}`$.
 Neither step permits necessitation of an optional unboxed premise.
 The RC-alone⇒TC question remains separate.
 

@@ -14,11 +14,11 @@ unpointed empty-world case is not presented as a pointed model.
 
 The first target is the exact equivalence
 
-$$
+```math
 \mathrm{DedInf}_t\quad\Longleftrightarrow\quad
 \text{the external set }W/G\text{ is infinite}.
 \tag{1}
-$$
+```
 
 Here DedInf_t is the existing **operational** sentence: an admitted operation
 on the whole proposition domain is injective and misses a proposition. It is
@@ -27,11 +27,11 @@ not the map's quantified Frege Axiom of Infinity. Both truth and falsity in
 
 The second target specializes W to A with its natural permutation action:
 
-$$
+```math
 \Box\mathrm{IC}_\sigma\quad\text{for every admitted type }\sigma,
 \qquad\Box\neg\mathrm{DedInf}_t.
 \tag{2}
-$$
+```
 
 For a pointed atom model A must be nonempty. The result includes infinite A,
 so all-type Intensional Choice can coexist with failure of operational
@@ -52,16 +52,16 @@ Fix a finite set S of atoms. First consider one global orbit with representative
 w and any finite support K of w. Least supports are unnecessary. For g∈G,
 record the finite pattern
 
-$$
+```math
 \pi_g:K\longrightarrow S\sqcup\{*\},\qquad
 \pi_g(a)=\begin{cases}g(a),&g(a)\in S,\\ *,&g(a)\notin S.\end{cases}
-$$
+```
 
-There are at most $(|S|+1)^{|K|}$ patterns. If g and h have the same pattern,
+There are at most $`(|S|+1)^{|K|}`$ patterns. If g and h have the same pattern,
 the finite partial bijection g(a)↦h(a), a∈K, fixes every point it mentions
 inside S and maps the mentioned points outside S bijectively to points
 outside S. Extend the latter partial bijection to a permutation of the
-finite union $(gK\cup hK)\setminus S$: the unassigned domain and range
+finite union $`(gK\cup hK)\setminus S`$: the unassigned domain and range
 have equal finite cardinalities, so choose a bijection between them. Extend
 by the identity elsewhere. The resulting p∈G fixes S pointwise and obeys
 p(g(a))=h(a) for every a∈K.
@@ -75,11 +75,11 @@ If W has finitely many global orbit representatives w1,…,wm with chosen
 finite supports K1,…,Km, take the union of those finite sets of local
 representatives. In particular,
 
-$$
+```math
 |W/\mathrm{Fix}(S)|\le
 \sum_{j=1}^{m}(|S|+1)^{|K_j|}.
 \tag{3}
-$$
+```
 
 The same proof covers finite and empty atom sets. This strengthens the
 countably-infinite-atom hypothesis of the existing Dedekind argument. It does
@@ -91,9 +91,9 @@ If W/G is infinite, choose pairwise distinct global orbits O0,O1,….
 Each characteristic proposition qn=On is fixed by every permutation. Define
 an operation on **every** admitted proposition by
 
-$$
+```math
 f(q_n)=q_{n+1},\qquad f(p)=p\text{ when }p\notin\{q_n:n<\omega\}.
-$$
+```
 
 It is equivariant, hence empty-supported and admitted at type tt. Its action
 on the chosen sequence is injective, and no off-sequence value can enter the
@@ -128,7 +128,7 @@ witness is fixed by the relevant stabilizer and the checked selector criterion
 applies. Assume otherwise and choose a0∉S. Choose an F-witness x0 at a0 and
 a finite support K for x0. For every a∈S choose an F-witness xa at a and a
 finite support Ka for xa. The set
-$T=S\cup\{a_0\}\cup K\cup\bigcup_{a\in S}K_a$
+$`T=S\cup\{a_0\}\cup K\cup\bigcup_{a\in S}K_a`$
 is finite and supports F. At w∈S use xw. At w∉S use
 x=(a0 w)·x0, where (a0 w) is the swap, interpreted as the identity when
 w=a0. This swap fixes S, so covariance of F makes x an F-witness at w.

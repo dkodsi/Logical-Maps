@@ -10,10 +10,10 @@ This permits atomless examples preserving both kinds of quantifier. A complete s
 
 Work over H in the fixed relational type system. Put B=Bottom and T=Top, retaining the fixed abbreviations of the atlas. Assume primitive conjunction is a bounded meet-semilattice with these bounds, and that its order is linear:
 
-$$
+```math
 p\le q\quad\Longleftrightarrow\quad p\land q=p.
 \tag{1}
-$$
+```
 
 As always, the semilattice laws and bound laws are identities of proposition objects. Truth is an upper segment: if p≤q and p is true, then p∧q=p is true, so q is true by the conjunction truth clause.
 
@@ -21,42 +21,42 @@ Let G:(tt)t be an admitted predicate containing identity and closed under compos
 
 Assume there are propositions f,u such that
 
-$$
+```math
 \neg f,\quad u,\qquad
 \forall p\,[\neg p\to p\le f],\qquad
 \forall p\,[p\to u\le p].
 \tag{2}
-$$
+```
 
 Thus f is greatest among the false propositions and u least among the true ones. They satisfy f<u and no proposition lies strictly between them. Indeed every proposition is true or false, and either alternative excludes an intermediate value. These are extrema of the truth classes, not global extrema of the chain.
 
 Define the admitted adjacency relation
 
-$$
+```math
 \mathrm{Gap}(a,b):=a<b\ \land\
 \neg\exists x\,(a<x\land x<b).
 \tag{3}
-$$
+```
 
 An order isomorphism preserves this relation in both directions. The **gap-density** condition is
 
-$$
+```math
 \forall p,q\,[p<q\to
 \exists a,b\,(p\le a\land\mathrm{Gap}(a,b)\land b\le q)].
 \tag{4}
-$$
+```
 
 It says every nontrivial closed interval contains an adjacent pair. This is different from density of the order, which would prohibit all adjacent pairs.
 
 The action is **transitive on gaps** when every two ordered adjacent pairs are matched by some G-member:
 
-$$
+```math
 \begin{aligned}
 \forall a,b,c,d\,[&\mathrm{Gap}(a,b)\land\mathrm{Gap}(c,d)\\
 &\to\exists E\,(GE\land Ea=c\land Eb=d)].
 \end{aligned}
 \tag{5}
-$$
+```
 
 All displayed quantifiers are over admitted objects. Formula (5) does not require an admitted operation choosing E uniformly for the pairs.
 
@@ -64,19 +64,19 @@ All displayed quantifiers are over admitted objects. Formula (5) does not requir
 
 Write
 
-$$
+```math
 S[G]:=\forall p,q\,[p=q\leftrightarrow
 \forall E\,(GE\to(Ep\leftrightarrow Eq))].
 \tag{6}
-$$
+```
 
 **Theorem 1.** Under the bounded-chain, admitted-group and truth-extremum hypotheses above,
 
-$$
+```math
 \boxed{S[G]\quad\longleftrightarrow\quad
 \text{gap-density and transitivity of G on gaps}.}
 \tag{7}
-$$
+```
 
 **Necessity.** Suppose S[G] and p<q. Some admitted E with GE distinguishes p,q. Since E is increasing and truth is an upper segment, Ep is false and Eq true. By (2), Ep≤f<u≤Eq. Choose an admitted inverse F in G. Put a=Ff and b=Fu. Then p≤a<b≤q, and (3) holds for a,b because it holds for f,u and F is an order isomorphism. This proves (4).
 
@@ -92,19 +92,19 @@ The theorem does not require C, NI, ND, BF, Plenitude, Choice or an atom premise
 
 Suppose a primitive universal quantifier at an admitted type σ supplies the greatest lower bound of every admitted family F:σt in the chain. Every G-member then preserves this universal **pointwise**:
 
-$$
+```math
 E(\forall x^\sigma Fx)=\forall x^\sigma E(Fx).
 \tag{8}
-$$
+```
 
 To prove this, write v=∀x Fx. Order preservation gives Ev≤E(Fx) for every x. If z≤E(Fx) for every x, apply the admitted inverse E⁻¹ to obtain E⁻¹z≤Fx for every x, hence E⁻¹z≤v and z≤Ev. Thus Ev is precisely the GLB of the admitted family λx.E(Fx), proving (8) by uniqueness. This reasoning does not quantify over external families or infer that every external subset is represented.
 
 Dually, if a primitive existential quantifier supplies the admitted LUBs, then
 
-$$
+```math
 E(\exists x^\sigma Fx)=\exists x^\sigma E(Fx).
 \tag{9}
-$$
+```
 
 If primitive disjunction is the join of the same chain, order isomorphisms likewise preserve it pointwise. At propositional scope, converting these equations into whole composite identities needs the relevant local Functionality instances: Fun_(σt,t) for each quantifier and the usual two curried instances for a binary connective. At full relational scope all Fun is already an explicit part of the factorization, so the whole-operation upgrade is available. No preservation of primitive negation follows from these order arguments.
 
@@ -114,20 +114,20 @@ Consequently Theorem 1 gives the same exact characterization for full relational
 
 There is a route to (2) from a pre-existing admission principle. Assume the original M,V operations give the bounded chain, Q_t supplies its admitted GLBs, P_t its admitted LUBs, and the single instance Plen_{t,t} holds. Apply that instance to the two current total single-valued relations
 
-$$
+```math
 \begin{aligned}
 U_+(p,y)&:=(p\land y=p)\lor(\neg p\land y=T),\\
 U_-(p,y)&:=(\neg p\land y=p)\lor(p\land y=B).
 \end{aligned}
 \tag{9a}
-$$
+```
 
 They supply admitted A₊,A₋:tt. Every A₊p is true, and A₊p=p whenever p is true. Every A₋p is false, and A₋p=p whenever p is false. Put
 
-$$
+```math
 u:=\forall p\,A_+p,\qquad f:=\exists p\,A_-p.
 \tag{9b}
-$$
+```
 
 The H truth clauses make u true and f false. The GLB property gives u≤A₊p=p for every true p, while the LUB property gives p=A₋p≤f for every false p. Thus (2) follows, and linearity makes (f,u) adjacent. No equation between function objects or optional-premise necessitation has been used; Fun and C are unnecessary for this step.
 
@@ -139,17 +139,17 @@ The [Plenitude normalization note](plenitude-material-normalization.md), §1, st
 
 Define the proposition domain
 
-$$
+```math
 L=\{B,T\}\ \cup\ ((0,1)\times\{0,1\}),
 \tag{10}
-$$
+```
 
 where (0,1) is the real open unit interval. Put B below every ordered pair, T above every pair, and use the lexicographic order on the pairs. The two points at a real coordinate x satisfy
 
-$$
+```math
 (x,0)<(x,1).
 \tag{11}
-$$
+```
 
 They are adjacent. These are all the adjacent pairs. If two interior points have distinct real coordinates, an intermediate real coordinate supplies a point strictly between them. The same argument supplies a point between B and any interior point, and between any interior point and T.
 
@@ -159,10 +159,10 @@ The chain has no meet atoms: every p>B has a strictly intermediate point between
 
 Designate a proposition true exactly when it is at least
 
-$$
+```math
 u=(1/2,1),\qquad f=(1/2,0).
 \tag{12}
-$$
+```
 
 Then (2) holds, with f,u as displayed.
 
@@ -170,11 +170,11 @@ Then (2) holds, with f,u as displayed.
 
 Use singleton individuals. At every allowed relational arrow type take the full set of functions between the relevant domains. Interpret abstraction and application by actual functions. Conjunction is min and disjunction max in L. Define primitive negation by
 
-$$
+```math
 \neg B=T,\quad\neg T=B,\qquad
 \neg(x,i)=(1-x,1-i).
 \tag{13}
-$$
+```
 
 This is an order-reversing involution and exchanges the true and false segments determined by (12). Interpret each universal quantifier as the infimum of the values of its admitted family, and each existential as the supremum. Completeness from §4 makes these operations total.
 
@@ -184,11 +184,11 @@ Thus the ordinary truth clauses, equality substitution, contextual beta/eta and 
 
 Every increasing bijection h:(0,1)→(0,1) induces an admitted operation
 
-$$
+```math
 E_h(B)=B,\quad E_h(T)=T,\qquad
 E_h(x,i)=(h(x),i).
 \tag{14}
-$$
+```
 
 Its inverse is induced by h⁻¹. The predicate G selecting exactly these operations is admitted because the higher function domains are full; take it to return T on the specified class and B elsewhere. Composition, identity and inverses remain in G.
 
@@ -200,10 +200,10 @@ Every order isomorphism of a complete chain preserves all infima and suprema: th
 
 The model fails C. Take p=(1/4,0). Then ¬p=(3/4,1), so
 
-$$
+```math
 p\lor\neg p=(3/4,1)\ne T.
 \tag{15}
-$$
+```
 
 H proves the material equivalence of p∨¬p and T. C's Logical Equivalence schema would identify the corresponding lambda terms and hence these output values. Thus (15) contradicts C, while all the positive preservation claims in §5 hold.
 

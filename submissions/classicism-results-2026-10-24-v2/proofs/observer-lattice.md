@@ -10,13 +10,13 @@ Above C + BF, full logical separation, Atomicity, necessary separation, reversib
 
 Use H and C in the fixed relational language. Propositions have type t and observers E have type tt. Put a = ∀p p, Top = a∨¬a and Bottom = a∧¬a, retaining these fixed abbreviations over H. Define propositional separation by
 
-$$
+```math
 S[R]:=\forall p,q\, .\,p=q\leftrightarrow\forall E\, .\,R(E)\to(Ep\leftrightarrow Eq).
-$$
+```
 
 Use the following qualifications:
 
-$$
+```math
 \begin{aligned}
 A(E)&:=E\top,&Z(E)&:=\neg E\bot,&U(E)&:=E\top=\top,\\
 M(E)&:=(\lambda p,q\, .\,E(p\land q))=(\lambda p,q\, .\,Ep\land Eq),\\
@@ -26,7 +26,7 @@ Q_\sigma(E)&:=(\lambda F\, .\,E(\forall x^\sigma Fx))=(\lambda F\, .\,\forall x^
 P_\sigma(E)&:=(\lambda F\, .\,E(\exists x^\sigma Fx))=(\lambda F\, .\,\exists x^\sigma E(Fx)),\\
 \mathrm{FixEq}_t(E)&:=(\lambda p,q\, .\,E(p=q))=(\lambda p,q\, .\,p=q).
 \end{aligned}
-$$
+```
 
 QΔ and PΔ are the respective conjunctions for a finite type list Δ. FixEq fixes identity judgments; it is not the different requirement E(p=q)=(Ep=Eq). Separation compares Ep and Eq in truth, not E(p↔q).
 
@@ -34,9 +34,9 @@ All displayed commutation requirements are identities between the whole composit
 
 The guarded construction in the [conjunction/quantifier note](meet-quantifier-separation.md), §4, gives qualifying observers over C. Let K(E) conjoin the universally closed truth equivalences for the requested finite list of operation laws, and put
 
-$$
+```math
 E^{\#}(p):=(K(E)\land Ep)\lor(\neg K(E)\land p).
-$$
+```
 
 H proves each requested truth equivalence for E# without assumptions: use K(E) in its true case and identity in its false case. Logical Equivalence, abstracting over E and all law inputs, gives the full composite laws. Requested endpoint truth conditions similarly become endpoint identities. When K(E) is true, the new observer agrees in current truth with E.
 
@@ -46,9 +46,9 @@ This constructs witnesses for the full composite identities. For constructions w
 
 For any separating class R, define
 
-$$
+```math
 p\preceq_Rq\quad\leftrightarrow\quad\forall E\, .\,R(E)\to(Ep\to Eq).
-$$
+```
 
 Separation is exactly antisymmetry of this preorder. Preservation of conjunction makes conjunction its meet; preservation of disjunction makes disjunction its join.
 
@@ -56,12 +56,12 @@ Separation is exactly antisymmetry of this preorder. Preservation of conjunction
 
 Bare S[V] gives a join-semilattice, and its order is p≼q iff p∨q=q. More precisely,
 
-$$
+```math
 \begin{aligned}
 S[Z\land V]&\leftrightarrow S[V]\land\forall p\,(p\lor\bot=p),\\
 S[A\land V]&\leftrightarrow S[V]\land\forall p\,(p\lor\top=\top).
 \end{aligned}
-$$
+```
 
 The first makes Bottom least; the second makes Top greatest. Requiring both gives a bounded join-semilattice.
 
@@ -69,9 +69,9 @@ For the forward implications, transport the two sides of the desired identity th
 
 This is the dual of the exact conjunction result
 
-$$
+```math
 S[A\land M]\leftrightarrow S[M]\land\forall p\,(p\land\top=p).
-$$
+```
 
 Acceptance of Top on the disjunction branch supplies an upper bound, not the join unit.
 
@@ -79,9 +79,9 @@ Acceptance of Top on the disjunction branch supplies an upper bound, not the joi
 
 Over H,
 
-$$
+```math
 S[N]\leftrightarrow S[A\land N]\quad\Longrightarrow\quad\forall p\,(\neg\neg p=p).
-$$
+```
 
 If an N observer distinguishing p,q rejects Top, postcompose it with negation. The resulting observer still satisfies the full N identity, now accepts Top, and still distinguishes p,q. This proves acceptance is redundant at separation level. For double negation, E¬¬p and Ep always agree in truth, so separation identifies ¬¬p and p.
 
@@ -109,33 +109,33 @@ Combining N with Qσ also gives preservation of the derived existential ¬∀x¬
 
 There is a direct dual of the universal-separation theorem. Over H, S[Z∧PΔ] gives least upper bounds of admitted indexed families, with least element Bottom:
 
-$$
+```math
 \begin{aligned}
 (\exists x\,Fx)\preceq u&\leftrightarrow\forall x\,(Fx\preceq u),\\
 (\exists x\,Fx)=\bot&\leftrightarrow\forall x\,(Fx=\bot).
 \end{aligned}
-$$
+```
 
 For the first identity of conditions, transport ∃ through each eligible observer and use (∃x E(Fx)→Eu) iff ∀x(E(Fx)→Eu). The second follows from uniqueness of a least upper bound and the least-element property of Bottom. Adjoining V makes these the least upper bounds in the original join order, and yields identities such as ∃x(p∨Fx)=p∨∃x Fx. The H endpoint equation is a dual statement in its own right; identifying it with BF uses C's connective and quantifier duality.
 
 Over C the exact bounds are
 
-$$
+```math
 \mathrm C\vdash S[Z\land P_\Delta]\leftrightarrow S[Z\land V\land P_\Delta]\leftrightarrow\mathrm{BF}_\Delta.
-$$
+```
 
 To see this, conjugate a meet/universal observer by negation: E†(p)=¬E(¬p). The full C De Morgan and quantifier-duality identities transfer M to V, Q to P, and Top acceptance to Bottom rejection. Apply separation to ¬p,¬q to transfer its distinguishing witnesses. Conjugation reverses itself, so the earlier exact universal bounds give the displayed equivalences. Bottom fixing can replace rejection by the same over-C normalization.
 
 ## 3 The Boolean triangle over C
 
-Write $\mathsf{Bool}=S[M\land V\land N]$ for Boolean separation. Over C,
+Write $`\mathsf{Bool}=S[M\land V\land N]`$ for Boolean separation. Over C,
 
-$$
+```math
 \begin{gathered}
 \mathrm C\vdash S[A\land M],\quad S[A\land Z\land V],\quad S[A\land N],\\
 \mathrm C\vdash S[M\land N]\leftrightarrow S[V\land N]\leftrightarrow S[M\land V]\leftrightarrow\mathsf{Bool}.
 \end{gathered}
-$$
+```
 
 The singleton theorems hold with both endpoint identities where applicable. Boolean separation is a genuine strengthening, even over C + BF.
 
@@ -143,9 +143,9 @@ For conjunction use the principal tests P_a(p)=Box(a→p), as in the earlier not
 
 For negation, C supplies double-negation identity. The admitted term
 
-$$
+```math
 T_a(r):=(r=a)\lor(r\land r\ne\neg a).
-$$
+```
 
 has the negation truth condition: when r=a it is true and its value at ¬r is false; when r=¬a the values reverse; otherwise it follows r and ¬r. The two exceptional cases are disjoint. If distinct p,q are both false, take a=p; if both true, take a=¬p; if their truth values differ, identity distinguishes them. Orient a test by U_a(r)=(T_a(Top)↔T_a(r)); this preserves the negation truth condition, accepts Top, and preserves its distinguishing power. Normalize to obtain the full N law and endpoint fixing.
 
@@ -159,14 +159,14 @@ These equivalences require one observer to preserve the combined operations. The
 
 Fixing identity judgments gives the following exact bounds:
 
-$$
+```math
 \begin{aligned}
 \mathrm C&\vdash S[A\land\mathrm{FixEq}_t]\leftrightarrow\mathrm{ND}_t,\\
 \mathrm C&\vdash S[A\land\mathrm{FixEq}_t\land Q_\Delta]
 \leftrightarrow S[A\land\mathrm{FixEq}_t\land M\land Q_\Delta]
 \leftrightarrow\mathrm{ND}_t\land\mathrm{BF}_\Delta.
 \end{aligned}
-$$
+```
 
 Here ND_t is ∀p,q(p≠q → Box(p≠q)), and Box r abbreviates r=Top. Top acceptance may be replaced by Top fixing, even over H at separation level.
 
@@ -174,18 +174,18 @@ First work over H. Every true identity judgment r is accepted by each identity-f
 
 If N is also required, a false judgment r has E¬r=¬Er=¬r true for every eligible observer. Separation gives ¬r=Top. Thus already over H,
 
-$$
+```math
 S[A\land N\land\mathrm{FixEq}_t]\quad\Longrightarrow\quad\mathrm{NI}_t\land\mathrm{ND}_t.
-$$
+```
 
 Over C, the H theorem ¬(Top=Bottom) and Logical Equivalence give (Top=Bottom)=Bottom. Hence the preceding false-judgment calculation gives ND_t without N. With QΔ, the earlier universal-separation argument also gives BFΔ.
 
 For the converse take a parameter a and the guard
 
-$$
+```math
 G_a:=\mathrm{ND}_t\land\mathrm{BF}_\Delta\land a\ne\bot,
 \qquad E_a(r):=(G_a\land\Box(a\to r))\lor(\neg G_a\land r).
-$$
+```
 
 Omit BFΔ and the quantifier laws for the first equivalence. Under G_a, C's NI and ND_t make every t-identity judgment an endpoint. The nonzero principal test is correct on both endpoints, so it agrees with those judgments in truth. It preserves conjunction, and BFΔ together with CBF supplies universal commutation. If G_a is false, E_a agrees in truth with identity. Therefore the required universally closed truth equivalences are unconditional C theorems. Necessitation, CBF and Intensionality turn them into full composite identities. Top is fixed as well.
 
@@ -199,22 +199,22 @@ The same identity-fixing argument handles a finite list of equality types contai
 
 Atomicity and BF suffice:
 
-$$
+```math
 \mathrm C+\mathrm{Atomicity}_t+\mathrm{BF}\quad\vdash\quad\mathrm{OS}.
-$$
+```
 
 For each finite Δ, put
 
-$$
+```math
 G_a:=\mathrm{Atom}(a)\land\mathrm{BF}_\Delta,
 \qquad E_a(r):=(G_a\land\Box(a\to r))\lor(\neg G_a\land r).
-$$
+```
 
 When G_a holds, an atom a decides each p: a≤p or a≤¬p, and not both. Thus its principal truth test has the Boolean truth conditions. BFσ and CBF give
 
-$$
+```math
 \Box(a\to\forall x^\sigma Fx)\quad\leftrightarrow\quad\forall x^\sigma\,\Box(a\to Fx).
-$$
+```
 
 This gives the universal truth condition; existential preservation follows by Boolean duality. If G_a fails, the test agrees in truth with identity. Universally close the resulting unconditional C theorems and use necessitation, CBF and Intensionality to obtain all full composite laws. Over C the translated equality clauses are redundant consequences of Boolean qualification.
 
@@ -264,15 +264,15 @@ Every displayed arrow is strict except Rev ⇒ C5 + ☐OS, whose converse remain
 
 In particular the following chain is strict:
 
-$$
+```math
 \small\mathrm C+\mathrm{BF}\ <\ \mathrm C+\mathrm{BF}+\mathsf{Bool}\ <\ \mathrm{OS}\ <\ \mathrm C+\mathrm{BF}+\mathrm{Atomicity}_t\ <\ \mathsf{End}\ <\ \mathrm{Extensionality}.
-$$
+```
 
 Here < means strictly weaker. The witnesses, in the same order, are qualitative contrast at W0; the ordered/unrestricted-role model at its ordered object; finite-support permutations; the two-object chain; and the full two-element group. The ordered-role argument uses the stated external extreme-amenability theorem and ordinary ZFC; its source qualifications remain in [the original note](ordered-observers.md), §§2–3.
 
 Several exact conjunctions locate the branches:
 
-$$
+```math
 \begin{gathered}
 \mathsf{Rev}+\mathsf{Fin}\ \equiv\ \mathsf{End},\qquad
 \mathsf{Rev}+\mathsf{At}\ \equiv\ \mathsf{End},\\
@@ -280,7 +280,7 @@ $$
 \mathrm{C5}+\mathsf{At}\ \equiv\ \mathsf{End},\qquad
 \mathsf{Fix}+\mathsf{Fin}\ \equiv\ \mathsf{End}.
 \end{gathered}
-$$
+```
 
 These conjoin separation principles, allowing their witness families to differ. They do not require a single observer to be both reversible and finite-image. The first, third and fifth use Rev ⇒ C5 and finite-image normalization under C5. The second uses Rev ⇒ C5 and endpoint separation ⇒ Rev. The fourth is the endpoint characterization.
 

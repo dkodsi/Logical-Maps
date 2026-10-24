@@ -13,23 +13,23 @@ The main conclusions are:
 
 Let K(E) be any formula whose only free variable is E of type tt. For a relational type τ=σ₁…σₙt, define
 
-$$
+```math
 \mathrm{Sep}_{\tau}[K]:\quad
 \forall X,Y^\tau\left[
 X=Y\leftrightarrow
 \forall E^{tt}\left(K(E)\to
 \forall z_1^{\sigma_1}\cdots z_n^{\sigma_n}
 \bigl(E(X[\bar z])\leftrightarrow E(Y[\bar z])\bigr)\right)\right].
-$$
+```
 
 The tuple can be empty, giving propositional separation Sep_t[K]. FullSep[K] contains these instances at every relational type. The same notation applies to a nonempty family of qualifications, with every member included on both sides of the results below. Canonical logical qualification is indexed by all finite type lists Δ, including the empty list. No type quantifier or infinite conjunction occurs inside an axiom.
 
 Functionality is the schema
 
-$$
+```math
 \forall X,Y^{\sigma\rho}\left[
 (\forall x^\sigma\,Xx=Yx)\to X=Y\right],\qquad\rho\ne e.
-$$
+```
 
 This is [current Functionality](../../source/topics/classicism/principles/functionality-r.yaml), not identity from current material coextension and not a rule permitting abstraction of arbitrary conditional identities.
 
@@ -37,17 +37,17 @@ This is [current Functionality](../../source/topics/classicism/principles/functi
 
 **Theorem 1.** For every K,
 
-$$
+```math
 \boxed{\mathrm H+\mathrm{FullSep}[K]
 \equiv
 \mathrm H+\mathrm{Sep}_t[K]+\mathrm{Functionality}.}
-$$
+```
 
 No preservation, endpoint, existence or correctness condition on the qualified observers is needed.
 
 **Proof.** FullSep includes its propositional instance. Suppose ∀x Xx=Yx, where X,Y have type σρ. Apply these identities to every remaining argument of the relational output ρ. Ordinary H substitution gives equality of the resulting propositions, and hence agreement in truth after applying any E. The full separation instance at σρ gives X=Y. This proves every Functionality instance.
 
-Conversely, suppose all K-observers agree on $X[\bar z]$ and $Y[\bar z]$ at every current tuple. Fix that tuple and apply propositional separation: $X[\bar z]=Y[\bar z]$. Generalize over the tuple. Iterating Functionality, starting with the final argument and proceeding outward, gives X=Y. The other direction of the separation biconditional is ordinary substitution. ∎
+Conversely, suppose all K-observers agree on $`X[\bar z]`$ and $`Y[\bar z]`$ at every current tuple. Fix that tuple and apply propositional separation: $`X[\bar z]=Y[\bar z]`$. Generalize over the tuple. Iterating Functionality, starting with the final argument and proceeding outward, gives X=Y. The other direction of the separation biconditional is ordinary substitution. ∎
 
 For a nonempty family of qualifications, use any one member to extract Functionality; apply the converse separately to each member. The theorem also locates the finite requirements for a particular output type: only the Functionality instances along its finite argument tuple are used.
 
@@ -59,7 +59,7 @@ The primitive logical-object families of H are negation, conjunction, disjunctio
 
 For finite Δ, let Good^mat_Δ(E) require the following material truth laws:
 
-$$
+```math
 \begin{aligned}
 E(\neg p)&\leftrightarrow\neg Ep,\\
 E(p\land q)&\leftrightarrow(Ep\land Eq),\\
@@ -68,17 +68,17 @@ E(\forall x^\sigma Fx)&\leftrightarrow\forall x^\sigma E(Fx),\\
 E(\exists x^\sigma Fx)&\leftrightarrow\exists x^\sigma E(Fx)
 \qquad(\sigma\in\Delta).
 \end{aligned}
-$$
+```
 
 Universally close each law over its displayed input variables. Add, for each σ∈Δ,
 
-$$
+```math
 \begin{aligned}
 R_\sigma(E)&:\quad\forall x^\sigma\,E(x=x),\\
 L_\sigma(E)&:\quad\forall x,y^\sigma\,\forall F^{\sigma t}
 \bigl(E(x=y)\to(E(Fx)\to E(Fy))\bigr).
 \end{aligned}
-$$
+```
 
 The Boolean truth laws imply E⊤ and ¬E⊥ in H. Separate endpoint-fixing identities are not required; see the [endpoint reduction](../logical-observer-endpoint-reduction.md).
 
@@ -90,11 +90,11 @@ This is a transformation of H proofs. It does not say qualified observers preser
 
 **Corollary 3.** FullSep[Good^mat_Δ], for all finite Δ, entails C, all BF instances and all Functionality instances over H.
 
-For C, take an H theorem P↔Q. The transport theorem gives EP↔EQ for every qualified E, uniformly in the free variables of P,Q. Apply separation at the type of $\lambda\bar z.P$ and $\lambda\bar z.Q$. Beta conversion gives
+For C, take an H theorem P↔Q. The transport theorem gives EP↔EQ for every qualified E, uniformly in the free variables of P,Q. Apply separation at the type of $`\lambda\bar z.P`$ and $`\lambda\bar z.Q`$. Beta conversion gives
 
-$$
+```math
 (\lambda\bar z.P)=(\lambda\bar z.Q).
-$$
+```
 
 These are exactly the Logical Equivalence instances defining C. The optional separation axioms have not been used as premises of the H theoremhood side condition.
 
@@ -108,19 +108,19 @@ Write OS^mat, OS^pt and OS^op for the corresponding full typed separation schema
 
 **Theorem 4.**
 
-$$
+```math
 \boxed{\mathrm H+\mathrm{OS}^{\mathrm{mat}}
 \equiv\mathrm H+\mathrm{OS}^{\mathrm{pt}}
 \equiv\mathrm H+\mathrm{OS}^{\mathrm{op}}.}
-$$
+```
 
 Application and identity substitution give Good^op→Good^pt→Good^mat in H. Since restriction to a smaller class strengthens separation, OS^op entails OS^pt, which entails OS^mat.
 
 For the reverse implication, first use Corollary 3 to recover C from OS^mat. Fix Δ and abbreviate K(E):=Good^mat_Δ(E). Define the admitted term
 
-$$
+```math
 E^\#p:=(K(E)\land Ep)\lor(\neg K(E)\land p).
-$$
+```
 
 H proves every requested material preservation law for E^# without assumptions. Split on K(E). In its true case E^# agrees in truth with E at every input and K supplies the requested law; in its false case E^# agrees with identity. K(E) has no free law-input variable, so the same case split works under each input quantifier. The identical argument proves R and L for E^#.
 
@@ -136,7 +136,7 @@ The theorem concerns separation theories. It does not assert material, pointwise
 
 Define, at a fixed type σ,
 
-$$
+```math
 \begin{aligned}
 \mathrm{Reflect}_\sigma(E)&:
 \forall x,y^\sigma\,(E(x=y)\to x=y),\\
@@ -145,7 +145,7 @@ $$
 \mathrm{FixEq}_\sigma(E)&:
 (\lambda x,y^\sigma.E(x=y))=(\lambda x,y^\sigma.x=y).
 \end{aligned}
-$$
+```
 
 Over H, R_σ plus Reflect_σ is equivalent to CorrectEq_σ. For the missing direction x=y→E(x=y), use R and ordinary substitution in E(x=x). CorrectEq implies both R and L: its reflection gives x=y, and H substitution then gives E(Fx)→E(Fy). Full FixEq implies CorrectEq by application. None of these conditions is the different equation E(p=q)=(Ep=Eq).
 
@@ -153,18 +153,18 @@ Starting with Good^op_Δ, replace R_σ,L_σ by CorrectEq_σ for each σ∈Δ. Al
 
 **Theorem 5.** Each replacement theory is exactly
 
-$$
+```math
 \boxed{\mathrm{C5}+\mathrm{OS},}
-$$
+```
 
 where OS is any equivalent complete logical separation theory from Theorem 4, and C5 is the database's boxed all-type ND preset.
 
 **Forward proof.** The new qualifications imply the old ones, so their separation schemas entail ordinary OS. Thus C, BF and Functionality have already been recovered. Take Δ containing t and suppose p≠q. Every newly qualified observer rejects the identity judgment (p=q), by CorrectEq, and rejects ⊥, by its Boolean laws. Its outputs on those propositions agree in truth. Separation gives (p=q)=⊥, which in C yields □(p≠q). Hence ND_t holds. The recorded implications
 
-$$
+```math
 \mathrm{ND}_t+\mathrm{BF}_t\Rightarrow\Box\mathrm{ND}_t
 \Rightarrow\Box\mathrm{ND}_{\mathrm{all}}
-$$
+```
 
 give C5: see [the first implication](../../source/topics/classicism/results/nd-t-and-bf-t-imply-necessary-nd-t.yaml) and [its all-type extension](../../source/topics/classicism/results/necessary-distinctness-necessary-t-implies-necessary-distinctness-necessary-r.yaml).
 
@@ -180,9 +180,9 @@ Take D_e to have two elements, D_t={0,1}², and every higher domain to be the fu
 
 The two admitted observers
 
-$$
+```math
 E_i(b_0,b_1)=(b_i,b_i),\qquad i=0,1,
-$$
+```
 
 satisfy all the full composite preservation identities and all translated equality clauses. They jointly separate propositions. Since the higher domains are full function spaces, two distinct relations differ at some complete argument tuple; the same two observers therefore separate every relational type.
 
@@ -201,7 +201,7 @@ Now modify just the second coordinate of one primitive operation or equality pre
 For each modification the fixed endpoints are still ⊤=(1,1) and ⊥=(0,0), so both coordinate readers even fix the endpoints. Every non-omitted clause holds for these readers, simultaneously at all its types. Thus the entire remaining full typed separation schema holds, while C fails.
 
 For the R row, the remaining translated L clause at σ is vacuous for E₁; E₀ reads actual equality. For the L row, E₁ satisfies R. Choose distinct x,y at σ and a full predicate F with Fx=⊤ and Fy=⊥. Then the H-valid formula
-$(x=y)\to(Fx\to Fy)$
+$`(x=y)\to(Fx\to Fy)`$
 has value (1,0), rather than ⊤=(1,1). C identifies this H tautology with ⊤. This is the failure of C; a false identity merely being different from ⊥ would by itself establish only a failure of ND. Every admitted type has at least two elements in this construction, including e.
 
 In particular, keeping conjunction, negation, both quantifier families and even full FixEq at every type does not recover primitive disjunction. The XOR join model in the table witnesses this. Similarly, preserving negation and universal quantification yields preservation of the derived existential ¬∀x¬Fx, but cannot identify it with the independent primitive existential without a bridge. Functional completeness in truth is insufficient to identify primitive logical objects over H.
@@ -212,10 +212,10 @@ An implication-only proposal must specify whether implication is a new primitive
 
 For the familiar abbreviation p→q:=¬p∨q, there is an explicit sharper example. In the preceding full-function model put
 
-$$
+```math
 \neg(b,c)=(\neg b,c),\qquad
 (b,c)\lor(d,e)=(b\lor d,\neg c\lor e).
-$$
+```
 
 Leave conjunction, all quantifiers and all equality predicates coordinatewise. The derived implication is then coordinatewise classical implication, so both coordinate readers preserve its full composite operation. They also preserve conjunction, all quantifiers and full FixEq, and fix both endpoints. They separate all relational types. Nevertheless ¬⊤=(0,1) differs from ⊥=(0,0), so C fails.
 

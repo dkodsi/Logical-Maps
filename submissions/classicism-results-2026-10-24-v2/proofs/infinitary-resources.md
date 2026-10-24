@@ -12,7 +12,7 @@ models and the external constructions below are understood in ZFC.
 
 For every relational type τ and every external set I, consider the instance
 
-$$
+```math
 \forall(a_i^\tau)_{i\in I}\left[
  \bigwedge_{i\in I}\mathrm{Atom}_\tau(a_i)
  \to\exists b^\tau\left(
@@ -21,14 +21,14 @@ $$
      \bigwedge_{i\in I}a_i\le_\tau c\to b\le_\tau c
    \right)\right)\right].
 \tag{AJ}_{\tau,I}
-$$
+```
 
 Here order and atoms are the existing C definitions. There is no added world
 sort. The choices of τ and I index the scheme in the **metalanguage**. Once
 infinitary conjunctions and the indicated simultaneous quantifier block are
 admitted, each displayed instance is an **object-language sentence**. For
 countable I, that quantifier block requires the analogue of
-$L_{\omega_1,\omega_1}$, not just $L_{\omega_1,\omega}$. Alternatively,
+$`L_{\omega_1,\omega_1}`$, not just $`L_{\omega_1,\omega}`$. Alternatively,
 use an open formula with externally many free variables, required under every
 external assignment. Closed instances substituting named terms cover only
 named families and do not suffice for all external joins.
@@ -46,8 +46,8 @@ external atom joins at every relational type are equivalent to external
 fullness. Here CC includes boxed Functional Choice and the quantified Frege
 infinities; this is not a claim about bare C. To see the nontrivial direction,
 write the represented universe at type τ as the set of world–argument points.
-The singleton at $(w,\bar a)$ is represented by
-$\lambda\bar x.(\delta_w\land\bar x=\bar a)$.
+The singleton at $`(w,\bar a)`$ is represented by
+$`\lambda\bar x.(\delta_w\land\bar x=\bar a)`$.
 For an arbitrary external set S of such points, join its singleton atoms.
 The join includes S. If it included a point z outside S, subtracting the
 represented singleton z would give a strictly smaller upper bound for every
@@ -67,16 +67,16 @@ model-existence theorem.
 
 Fix a finitary signature Σ with exactly u<ω individual constant symbols.
 Its relational signature may be any set; it need not be finite. For u≥1,
-write the individual names as $c_1,\ldots,c_u$. The recorded theorem is
+write the individual names as $`c_1,\ldots,c_u`$. The recorded theorem is
 
-$$
+```math
 \mathrm{SP}_\Sigma\vdash
 \begin{cases}
 \forall x^e\forall y^e\;x=y,&u=0,\\
 U_\Sigma:=\forall x^e\bigvee_{i=1}^{u}x=c_i,&u\ge1.
 \end{cases}
 \tag{FNE}
-$$
+```
 
 This is an externally indexed schema of ordinary finitary object sentences.
 Standing nonemptiness makes the zero-name case a singleton. For u≥1,
@@ -94,23 +94,23 @@ when the relational signature is infinite, so the profile substitution proof
 still applies. With no individual names, use the singleton-marker root.
 
 Second, if UΣ fails at a, the admitted proposition
-$q=\bigwedge_{i=1}^{u}a\ne c_i$ is true. NI implies
-$\Diamond q\to a\ne c_i$ for every i: an actual identity with ci would
+$`q=\bigwedge_{i=1}^{u}a\ne c_i`$ is true. NI implies
+$`\Diamond q\to a\ne c_i`$ for every i: an actual identity with ci would
 persist and preclude q. Thus
-$\Box(\Diamond q\to\neg U_\Sigma)$. The true q witnesses
-$\Box_{\ne}\neg U_\Sigma$, proving
-$\Diamond_{\ne}U_\Sigma\to U_\Sigma$. Eligibility supplies the
+$`\Box(\Diamond q\to\neg U_\Sigma)`$. The true q witnesses
+$`\Box_{\ne}\neg U_\Sigma`$, proving
+$`\Diamond_{\ne}U_\Sigma\to U_\Sigma`$. Eligibility supplies the
 antecedent as an SP instance. The zero-name case uses a counterpair a≠b in
 place of the finite list.
 
 Useful object-language corollaries, with all other free variables universally
 closed, are
 
-$$
+```math
 \forall x\,\varphi(x)\leftrightarrow\bigwedge_{i=1}^{u}\varphi(c_i),
 \qquad
 \exists x\,\varphi(x)\leftrightarrow\bigvee_{i=1}^{u}\varphi(c_i).
-$$
+```
 
 The theorem is in
 [the signature audit, §10](../source/research/2026-10-22/notes/audit-signature-to-pure-sp-20261022.md)
@@ -123,49 +123,49 @@ not build the profile model or prove all finite-name instances.
 
 ## 3. Countable names: one formation clause proves reflection
 
-Fix exactly the individual-name symbols $c_0,c_1,\ldots$. Admit one
+Fix exactly the individual-name symbols $`c_0,c_1,\ldots`$. Admit one
 distinguished definitional predicate
 
-$$
+```math
 d_\Sigma:=\lambda x^e.\bigwedge_{n<\omega}x\ne c_n,
 \qquad E_\Sigma:=\neg\exists x^e\,d_\Sigma x.
 \tag{D}
-$$
+```
 
 Its truth clause is required at **every evaluation point**. Equivalently,
 use ordinary finitary syntax with one symbol d of type et whose interpretation
 is constrained by that clause. It is not an arbitrary extra nonlogical
 constant. E then means
-$\forall x^e\bigvee_{n<\omega}x=c_n$. This is a restricted formation
+$`\forall x^e\bigvee_{n<\omega}x=c_n`$. This is a restricted formation
 resource: it does not admit all countable abstractions. An external assertion
 of all inequalities without an admitted d(a) proposition is insufficient for
 the following argument.
 
 **Reflection theorem.** Under (D) and C,
 
-$$
+```math
 \Diamond_{\ne}E_\Sigma\longrightarrow E_\Sigma.
 \tag{R}
-$$
+```
 
 For each n, d(a) implies a≠cn. If a=cn, NI gives □(a=cn), so ◇d(a) is
 impossible. Hence ◇d(a) implies every a≠cn, and the stipulated clause
 assembles these conclusions into d(a). Therefore
-$\Diamond d(a)\to d(a)\to\neg E_\Sigma$. This argument holds at
-every point, giving $\Box(\Diamond d(a)\to\neg E_\Sigma)$.
+$`\Diamond d(a)\to d(a)\to\neg E_\Sigma`$. This argument holds at
+every point, giving $`\Box(\Diamond d(a)\to\neg E_\Sigma)`$.
 If ¬E holds actually, choose an actual a with d(a). The admitted proposition
 q=d(a) witnesses
 
-$$
+```math
 \exists q^t\,[q\land\Box(\Diamond q\to\neg E_\Sigma)]
 =\Box_{\ne}\neg E_\Sigma.
-$$
+```
 
 Contraposition gives (R). No optional BF or ND is used.
 
 For a syntactic proof, explicitly provide the projections d(a)→a≠cn,
-contextual countable introduction from every $F\to a\ne c_n$ to
-$F\to d(a)$, and theorem necessitation for the enriched calculus. The
+contextual countable introduction from every $`F\to a\ne c_n`$ to
+$`F\to d(a)`$, and theorem necessitation for the enriched calculus. The
 boxed line comes from a theorem, not from necessitating an optional premise.
 If one first universally closes it, CBF (already a theorem of C) permits
 specializing the necessarily universal statement to an actual a.
@@ -174,13 +174,13 @@ E by itself says **at most countably many** individuals. It says exactly
 countably infinitely many only together with pairwise distinctness of these
 names. Crucially, (R) alone does not establish the needed SP eligibility:
 
-$$
+```math
 \mathrm{Con}\bigl(\mathrm{Max}(T)+E_\Sigma\bigr).
 \tag{Eligibility}
-$$
+```
 
 Consistency of T, or even of T+E, is not enough. The reference theory T must
-be specified. For an unspecified $C_\infty(\Sigma)$, the countable SP
+be specified. For an unspecified $`C_\infty(\Sigma)`$, the countable SP
 claim remains conditional on this separate obligation.
 
 ## 4. A restricted semantic reference with a proved eligibility bridge
@@ -189,7 +189,7 @@ The following is a new adaptation of the recorded profile construction.
 Let Ld be **finitary** C(Σ) syntax plus the constrained symbol d in (D).
 Let Kd be the class of set-sized action models of C satisfying its countable
 truth clause at every object. Define
-$T_d:=\mathrm{Th}(\mathcal K_d),$
+$`T_d:=\mathrm{Th}(\mathcal K_d),`$
 the set of finite Ld sentences valid at all points of all Kd models. This is
 an explicit, potentially noneffective **semantic reference theory**. It does
 not mean a theory deciding every sentence, and it asserts no completeness
@@ -202,11 +202,11 @@ identity s=t not in Td. Define SP(Td) using the corresponding
 Max(Td)-consistency side condition. The usual finitary C metarules remain
 available. We prove
 
-$$
+```math
 \mathrm{Con}(\mathrm{Max}(T_d)+E_\Sigma),
 \qquad \mathrm{SP}(T_d)\vdash E_\Sigma.
 \tag{SNE}
-$$
+```
 
 **Separating components.** For every closed identity absent from Td, choose
 a Kd model and a point refuting it. There are set-many finite Ld identities.
@@ -217,17 +217,17 @@ include the two full one-world models with individual domains ω and
 ω∪{*}, with cn=n and d respectively empty and {*}. Both satisfy (D).
 
 **Root and action.** Add an object o with individual domain the symbols
-$\{c_n:n<\omega\}$. For each component object V, add o→V sending cn
+$`\{c_n:n<\omega\}`$. For each component object V, add o→V sending cn
 to its interpretation at V. Compose this arrow with V→V′ as o→V′.
 Constant coherence guarantees compatibility. Arrows may merge names;
 injectivity would add an unwarranted ND requirement.
 
-At relational type $\tau=\tau_1\cdots\tau_k t$, define
+At relational type $`\tau=\tau_1\cdots\tau_k t`$, define
 
-$$
+```math
 D_\tau(o)=\mathcal P\!\left(\prod_{i=1}^{k}D_{\tau_i}(o)\right)
 \times B_\tau,
-$$
+```
 
 where Bτ consists of profiles of **closed Ld terms**, with equality of
 profiles meaning equality of denotations at every component object. A root
@@ -243,7 +243,7 @@ handled separately below.
 **Closure.** For a finite term M with root parameters p1,…,pm, choose closed
 profile representatives T1,…,Tm and substitute them simultaneously. This
 produces another finite Ld term. In an abstraction, leave its bound variables
-symbolic: use $\lambda y.M(y,T_1,\ldots,T_m)$. The actual coordinate is
+symbolic: use $`\lambda y.M(y,T_1,\ldots,T_m)`$. The actual coordinate is
 the unrestricted root extension of this abstraction; its profile is the
 displayed closed term. Application and βη agree in both coordinates.
 Quantification at a component uses that component's **whole original
@@ -268,7 +268,7 @@ closed e-terms are names, and distinct name symbols are distinct root
 individuals. The root therefore satisfies every Max disequality. Its
 individuals are exactly the names, so E holds. This is a
 model of Max(Td)+E and proves eligibility. In particular, the finite sentence
-$\forall x\,\Box(\Diamond d(x)\to\exists y\,d(y))$ is valid throughout
+$`\forall x\,\Box(\Diamond d(x)\to\exists y\,d(y))`$ is valid throughout
 Kd by the argument in §3, so it belongs to Td. It supplies reflection (R)
 by ordinary finite reasoning; no unprovided finitary rule assembles the
 countable inequalities. The eligible SP instance ◇≠E now gives E.
@@ -303,29 +303,29 @@ of (D) with original Max.
 
 ### One pure abstraction standardizes Frege arithmetic
 
-At the cardinality type $\nu=(et)t$, let νn denote the existing finite
-numeral term $\mathrm{Suc}_e^n0_e$. Admit just
+At the cardinality type $`\nu=(et)t`$, let νn denote the existing finite
+numeral term $`\mathrm{Suc}_e^n0_e`$. Admit just
 
-$$
+```math
 P:=\lambda Z^\nu.\bigvee_{n<\omega}Z=\nu_n
 \tag{Num}
-$$
+```
 
 with its pointwise clauses everywhere. P contains zero and is successor
 closed. Impredicative finite-cardinality numberhood N is consequently
 contained in P; ordinary finite induction proves the converse. At any point
-satisfying $I_e=\Diamond I_e^*$, an accessible I* point separates all
+satisfying $`I_e=\Diamond I_e^*`$, an accessible I* point separates all
 finite numerals. NI pulls their distinctness back, so N at the original
 point is precisely standard ω.
 
 No full relation domain is needed to get standard addition and multiplication.
 At standard m,n, the finite relation
 
-$$
+```math
 R_{m,n}(i,j)=
 \bigvee_{k=0}^{n}(i=\nu_k\land j=\nu_{m+k})
 \ \lor\ \bigwedge_{k=0}^{n}i\ne\nu_k
-$$
+```
 
 contains the initial pair, is closed under the addition recursion, and
 excludes every wrong endpoint at first coordinate νn. The unrestricted tail
@@ -334,9 +334,9 @@ using the already verified addition relation. Induction on finite arithmetic
 syntax now gives standard truth at every I point. Each arithmetical A
 therefore satisfies
 
-$$
+```math
 \Box(I_e\to A)\ \lor\ \Box(I_e\to\neg A).
-$$
+```
 
 This contradicts **original finitary Max**, whose reference theory C is
 recursively enumerable and consistent with I. A Rosser-independent arithmetic
@@ -359,8 +359,8 @@ provide (Num). Replacing original C in the Max side condition with a stronger
 reference theory is a different theory, as §4 explicitly does.
 
 With the **whole** countable infinitary λ language, every external
-$S\subseteq\omega^k$ is represented on standard numeral tuples by
-$\lambda\bar z.\bigvee_{\bar n\in S}\bigwedge_i z_i=\nu_{n_i}$.
+$`S\subseteq\omega^k`$ is represented on standard numeral tuples by
+$`\lambda\bar z.\bigvee_{\bar n\in S}\bigwedge_i z_i=\nu_{n_i}`$.
 This gives full second-order arithmetic there. An alternative is an ω-rule
 on intrinsic N together with enriched theorem necessitation: truth induction
 then derives each true arithmetic sentence under I and hence its necessary
@@ -388,14 +388,14 @@ closure does not suffice.
 
 With C5, the recorded implication from Atomicity to boxed Plenitude yields
 the full constant-domain intensional S5 representation. Propositions are
-$\mathcal P(W)$, not merely two truth values; actual Extensionality is
+$`\mathcal P(W)`$, not merely two truth values; actual Extensionality is
 not asserted. ZFC then supplies boxed Functional Choice in the full
 hierarchy. Over ZF the relevant external choice remains an additional
 assumption. Details are in the abstraction note, §§8 and 11.
 
 For every fixed infinite regular κ, the support construction in that note,
 §10.3, is closed under parameter formations of size <κ yet fails Actuality
-and Atomicity. It uses coordinates I=κ×2, worlds $\mathcal P(I)$, and
+and Atomicity. It uses coordinates I=κ×2, worlds $`\mathcal P(I)`$, and
 the full group Sym(I); admitted objects have supports of size <κ. Unions of
 <κ supports remain small.
 At a balanced world A, neither A nor its complement is small, so its singleton

@@ -10,21 +10,21 @@ Fix a finite external signature Σ of preservation clauses chosen from M,V,N,Qσ
 
 For example the material and pointwise M clauses are respectively
 
-$$
+```math
 \begin{aligned}\forall p,q\,[E(p\land q)&\leftrightarrow(Ep\land Eq)],\\\forall p,q\,[E(p\land q)&=(Ep\land Eq)].\end{aligned}
-$$
+```
 
 The analogous clauses use the other Boolean truth operations or the listed quantifiers. A fixed-constant clause is E(c)↔c materially, and E(c)=c pointwise. The constant may be a fixed parameter of the instance. MatΣ(E) and PtΣ(E) are the finite conjunctions of the corresponding clauses.
 
 An observer family is an admitted predicate X:(tt)t. Its membership is ordinary truth X(E). Define
 
-$$
+```math
 \begin{aligned}I&:=\lambda p.p,&F\circ E&:=\lambda p.F(Ep),\\
 \mathrm{Closed}(X)&:=\forall E,F\,[(X(E)\land X(F))\to X(F\circ E)],\\
 \mathrm{Monoid}(X)&:=X(I)\land\mathrm{Closed}(X),\\
 \mathrm{Material}_\Sigma(X)&:=\forall E\,[X(E)\to\mathrm{Mat}_\Sigma(E)],\\
 \mathrm{Sep}(X)&:=\forall p,q\,[p=q\leftrightarrow\forall E\,(X(E)\to(Ep\leftrightarrow Eq))].\end{aligned}
-$$
+```
 
 All these formulas and the predicate λE.PtΣ(E) are admitted lambda terms. There is no external quantification over arbitrary sets of observers, and no object-language quantification over types.
 
@@ -32,11 +32,11 @@ All these formulas and the predicate λE.PtΣ(E) are admitted lambda terms. Ther
 
 **Theorem.** Over H,
 
-$$
+```math
 \begin{aligned}S[\mathrm{Pt}_\Sigma]
 &\leftrightarrow\exists X\,[\mathrm{Sep}(X)\land\mathrm{Closed}(X)\land\mathrm{Material}_\Sigma(X)]\\
 &\leftrightarrow\exists X\,[\mathrm{Sep}(X)\land\mathrm{Monoid}(X)\land\mathrm{Material}_\Sigma(X)].\end{aligned}
-$$
+```
 
 ### From pointwise identities to a material monoid
 
@@ -44,15 +44,15 @@ Take the admitted predicate X(E):=PtΣ(E). Identity belongs to X, by conversion 
 
 Pointwise preservation is closed under composition. For conjunction, if E and F have the pointwise law then
 
-$$
+```math
 F(E(p\land q))=F(Ep\land Eq)=F(Ep)\land F(Eq).
-$$
+```
 
 Negation, disjunction and constants are the same equality-substitution argument. For a universal clause,
 
-$$
+```math
 F(E(\forall x\,Gx))=F(\forall x\,E(Gx))=\forall x\,F(E(Gx)).
-$$
+```
 
 The family λx.E(Gx) is admitted. The existential case is dual. These are equalities of outputs; no conditional equivalence is abstracted into a whole-operation identity. Thus X is a monoid of material observers. Its separation is the assumed S[PtΣ].
 
@@ -62,23 +62,23 @@ Assume Sep(X), Closed(X) and MaterialΣ(X). Fix E with X(E). We prove that E has
 
 For conjunction, compare E(p∧q) and Ep∧Eq using any F with X(F). Closure puts F∘E in X, so its material M law gives
 
-$$
+```math
 F(E(p\land q))\leftrightarrow(F(Ep)\land F(Eq)).
-$$
+```
 
 The material M law for F gives
 
-$$
+```math
 F(Ep\land Eq)\leftrightarrow(F(Ep)\land F(Eq)).
-$$
+```
 
 Therefore all X-observers agree on the two proposed outputs. Sep(X) identifies them. The same argument replaces conjunction by disjunction or negation.
 
 For a universal quantifier, the material Qσ laws for F∘E and F yield respectively
 
-$$
+```math
 \begin{aligned}F(E(\forall x\,Gx))&\leftrightarrow\forall x\,F(E(Gx)),\\F(\forall x\,E(Gx))&\leftrightarrow\forall x\,F(E(Gx)).\end{aligned}
-$$
+```
 
 Again Sep(X) yields E(∀x Gx)=∀x E(Gx). The existential proof is identical with ∃. No Barcan inference is involved: both sides are compared using the same admitted family and ordinary H truth conditions.
 
@@ -92,11 +92,11 @@ If Σ lists Top or Bottom as a fixed constant, the right-hand material family co
 
 Thus, for example,
 
-$$
+```math
 \begin{aligned}&S[\mathrm{Pt}_\Sigma\land E\top=\top\land E\bot=\bot]\\
 &\quad\leftrightarrow\exists X\,[\mathrm{Sep}(X)\land\mathrm{Monoid}(X)\land
 \forall E\,(X(E)\to(\mathrm{Mat}_\Sigma(E)\land A(E)\land Z(E)))].\end{aligned}
-$$
+```
 
 This is an exact bridge from truth conditions on a **closed separating family** to endpoint fixing. It does not say that the entire A,Z-qualified pointwise class is composition-closed: a map accepting Top can send it to a different true proposition which another map rejects. Nor does the theorem identify ordinary S[A Z PtΣ] with the displayed fixed-endpoint principle.
 
@@ -108,10 +108,10 @@ For a fixed relational type ρ, Sep_ρ(X) means separation by X of values after 
 
 For any ρ, over H,
 
-$$
+```math
 \begin{aligned}&S_t[\mathrm{Pt}_\Sigma]+S_\rho[\mathrm{Pt}_\Sigma]\\
 &\quad\leftrightarrow\exists X\,[\mathrm{Sep}_t(X)\land\mathrm{Sep}_\rho(X)\land\mathrm{Monoid}(X)\land\mathrm{Material}_\Sigma(X)].\end{aligned}
-$$
+```
 
 Forward use X=PtΣ. Reverse the propositional instance makes every X-member pointwise preserving by §2, and enlarging the class gives the ρ-instance too. No Functionality is needed for this paired statement.
 

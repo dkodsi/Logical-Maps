@@ -8,9 +8,9 @@ The proof uses an admitted proposition measuring where an automorphism moves pro
 
 ## 1. The group centre and finite qualification
 
-Fix a finite external list Δ. Write I=λp.p. $\mathrm{Good}_\Delta$ means the full established logical qualification, including its original translated equality clauses as well as the whole Boolean and listed quantifier identities. We do not replace that definition over H by a reduced Boolean/quantifier package. Once C has been recovered, the redundant equality clauses may be derived from Boolean preservation as in the existing observer proofs. Define
+Fix a finite external list Δ. Write I=λp.p. $`\mathrm{Good}_\Delta`$ means the full established logical qualification, including its original translated equality clauses as well as the whole Boolean and listed quantifier identities. We do not replace that definition over H by a reduced Boolean/quantifier package. Once C has been recovered, the redundant equality clauses may be derived from Boolean preservation as in the existing observer proofs. Define
 
-$$
+```math
 \begin{aligned}
 \mathrm{Aut}_\Delta(E)
 &:=\mathrm{Good}_\Delta(E)\land
@@ -22,20 +22,20 @@ $$
        \to E\circ G=G\circ E].
 \end{aligned}
 \tag{1}
-$$
+```
 
-Every composition equation in (1) is identity of the complete unary operations. The inverse is admitted and has the same qualification. Composition and inversion make the Aut_Δ members a group; the usual calculations use precisely these whole identities. ZAut_Δ is its centre. In particular it quantifies over **all** admitted reversible $\mathrm{Good}_\Delta$ observers, not a chosen abelian subgroup.
+Every composition equation in (1) is identity of the complete unary operations. The inverse is admitted and has the same qualification. Composition and inversion make the Aut_Δ members a group; the usual calculations use precisely these whole identities. ZAut_Δ is its centre. In particular it quantifies over **all** admitted reversible $`\mathrm{Good}_\Delta`$ observers, not a chosen abelian subgroup.
 
 Let CentreRevSep(τ,Δ) denote separation at relational output type τ by ZAut_Δ, and CentreRevSep the full schema over relational output types and finite external lists. Since ZAut_Δ implies Aut_Δ, full CentreRevSep implies full Rev, which supplies C5 by the [established reversible-separation theorem](../logical-observer-hierarchy.md), §4. This recovered premise will be used explicitly.
 
 Write
 
-$$
+```math
 \mathrm{Four}_t:=
 \exists u_0u_1u_2u_3\ \forall p\,
  (p=u_0\lor p=u_1\lor p=u_2\lor p=u_3).
 \tag{2}
-$$
+```
 
 Repetitions are allowed. This bounds proposition objects, not current truth values or an external family of profiles. The local argument in §§2–3 assumes C5, t∈Δ and CentreRevSep(t,Δ). C5 supplies the admitted quantifier order laws and Functionality used below. The full-H conclusion uses only the list {t} for this forward argument.
 
@@ -43,105 +43,105 @@ Repetitions are allowed. This bounds proposition objects, not current truth valu
 
 For any admitted reversible observer G define its moved support by the admitted proposition
 
-$$
+```math
 m_G:=\exists p^t\,(p\mathbin\triangle Gp),
 \tag{3}
-$$
+```
 
 where △ is Boolean symmetric difference. Under C5 this existential is the join of its admitted type-t family. It contains every p△Gp. Consequently
 
-$$
+```math
 m_G=0\quad\longleftrightarrow\quad G=I.
 \tag{4}
-$$
+```
 
 For the forward direction, each joinand is zero, so Gp=p for every p and Functionality gives the whole identity. The reverse direction evaluates (3) on the constant-zero family.
 
 If Z is a member of ZAut_Δ and G belongs to Aut_Δ, its type-t existential and Boolean laws give
 
-$$
+```math
 Z(m_G)=\exists p\,(Zp\mathbin\triangle Z(Gp))
        =\exists p\,(Zp\mathbin\triangle G(Zp))
        =m_G.
 \tag{5}
-$$
+```
 
 The middle equality is centrality. For the last equality, Z is onto by its admitted inverse: each joinand is below m_G, and each r△Gr occurs as a joinand by taking a preimage of that particular r. This proves equality by the two join bounds. It does not choose a preimage uniformly or reindex an external set.
 
 Thus all eligible central reversible observers fix m_G. If m_G is true, their truth profiles agree on m_G and Top; if false, they agree on m_G and Bottom. CentreRevSep(t,Δ) therefore gives
 
-$$
+```math
 \boxed{m_G=0\ \lor\ m_G=1.}
 \tag{6}
-$$
+```
 
-Together with (4), every nonidentity reversible $\mathrm{Good}_\Delta$ observer has moved support Top. The conclusion applies to every member of Aut_Δ, including the local swaps constructed next; those swaps need not themselves be central.
+Together with (4), every nonidentity reversible $`\mathrm{Good}_\Delta`$ observer has moved support Top. The conclusion applies to every member of Aut_Δ, including the local swaps constructed next; those swaps need not themselves be central.
 
 ## 3. Local swaps force two atoms
 
 Let G belong to Aut_Δ and fix an admitted qualified inverse F. Suppose a≠0 and a∧Ga=0. Put r=¬(a∨Ga) and define
 
-$$
+```math
 T_a(q):=(Ga\land Gq)\lor(a\land Fq)\lor(r\land q).
 \tag{7}
-$$
+```
 
-This is an admitted term. It is $\mathrm{Good}_\Delta$ by Boolean partition patching: the three output regions Ga,a,r form a partition of Top, and each branch is a qualified observer on its region. Boolean laws are calculated on the regions; fixed-guard distribution through the listed quantifiers gives their laws. C5 Functionality collects the resulting identities as the full composite identities required by $\mathrm{Good}_\Delta$. This is the same qualified interval-swap construction as in [finite relative generation](finite-relative-image-generation.md), §4, now with the supplied inverse F.
+This is an admitted term. It is $`\mathrm{Good}_\Delta`$ by Boolean partition patching: the three output regions Ga,a,r form a partition of Top, and each branch is a qualified observer on its region. Boolean laws are calculated on the regions; fixed-guard distribution through the listed quantifiers gives their laws. C5 Functionality collects the resulting identities as the full composite identities required by $`\mathrm{Good}_\Delta`$. This is the same qualified interval-swap construction as in [finite relative generation](finite-relative-image-generation.md), §4, now with the supplied inverse F.
 
 For completeness, the inverse check can be read on the three regions. Applying G or F to (7), the disjointness a∧Ga=0 and the inverse identities give
 
-$$
+```math
 Ga\land G(T_aq)=Ga\land q,
 \qquad a\land F(T_aq)=a\land q,
 \qquad r\land T_aq=r\land q.
 \tag{8}
-$$
+```
 
 For example Ga∧G²a=G(a∧Ga)=0 and Ga∧Gr=0, leaving only Ga∧q in the first expression. The second is its inverse counterpart. Hence T_a²q=q for every q, and Functionality gives T_a∘T_a=I. Thus T_a belongs to Aut_Δ, with itself as admitted qualified inverse.
 
 The operation is identity outside a∨Ga, and T_a(a)=Ga. It follows that
 
-$$
+```math
 q\mathbin\triangle T_aq\le a\lor Ga\quad\text{for every }q,
 \qquad
 a\mathbin\triangle T_a(a)=a\lor Ga.
-$$
+```
 
 Taking the admitted join proves the exact support equation
 
-$$
+```math
 m_{T_a}=a\lor Ga.
 \tag{9}
-$$
+```
 
 Since a≠0, this support is nonzero. Equation (6) now forces a∨Ga=1.
 
 Every nonidentity reversible observer supplies such a pair, after possibly replacing it by its inverse. Indeed choose p with Gp≠p, using Functionality. If p∧¬Gp≠0, take a=p∧¬Gp; then Ga=Gp∧¬G²p is disjoint from a. Otherwise Gp∧¬p≠0; use Gp as the proposition and F as the observer. Rename the resulting observer G and its inverse F. In either case (9) gives
 
-$$
+```math
 a\ne0,\qquad Ga\ne0,\qquad a\land Ga=0,
 \qquad a\lor Ga=1.
 \tag{10}
-$$
+```
 
 For any 0<b≤a, b and Gb are disjoint, so repeat the same construction at b. Equations (6) and (9) give b∨Gb=1. But Gb≤Ga, and intersecting with a yields
 
-$$
+```math
 a=a\land(b\lor Gb)=b.
 \tag{11}
-$$
+```
 
 Therefore a is an atom. The automorphism G makes Ga an atom too. They are complementary by (10), so every proposition q is one of 0,a,Ga,1: distribute q across the two atoms and use their defining minimality. This proves Four_t.
 
 If there is no nonidentity member of Aut_Δ, identity is the only central reversible observer. Separation itself then says that two propositions with the same truth value are identical, so every proposition is Bottom or Top. Four_t holds in this case as well. We have proved the local result
 
-$$
+```math
 \boxed{
 \mathrm{C5}+\mathrm{CentreRevSep}(t,\Delta)
 \ \vdash\ \mathrm{Four}_t
 \qquad(t\in\Delta).}
 \tag{12}
-$$
+```
 
 No Boolean Completeness, Zorn, Choice, or unadmitted partial automorphism appears. The argument uses finitely many explicit swaps and the admitted join (3).
 
@@ -153,14 +153,14 @@ The established C5+Atomicity_t theorem gives full End and hence full Rev. Moreov
 
 Consequently, for **every** finite list Δ, including lists without t, the entire group Aut_Δ is abelian. Every qualified reversible observer is therefore central in that same group. The separating reversible witnesses already supplied by End qualify at their original lists, and give full CentreRevSep. This proves
 
-$$
+```math
 \boxed{
 \mathrm H+\mathrm{CentreRevSep}
 \ \equiv\ \mathrm{C5}+\mathrm{Four}_t
 \ \equiv\ \mathrm H+\mathrm{Rev}+\mathrm{Four}_t
 \ \equiv\ \mathrm H+\mathrm{End}+\mathrm{Four}_t.}
 \tag{13}
-$$
+```
 
 The forward implication first recovers C5 from full Rev and then uses (12) at {t}. The displayed C5 retains its established type-schema meaning; (13) does not claim that it has become one finitary sentence over H.
 
@@ -168,12 +168,12 @@ An equivalent formulation is full Rev together with pairwise commutativity of **
 
 The result is also persistent at full scope:
 
-$$
+```math
 \boxed{\mathrm{CentreRevSep}
 \quad\longleftrightarrow\quad
 \Box\mathrm{CentreRevSep}.}
 \tag{14}
-$$
+```
 
 Here each fixed finite schema instance is boxed separately. To justify the forward implication, first note that C+BF_t proves Four_t→□Four_t. Given witnesses u₀,…,u₃ for (2), NI sends each true identity p=u_i to □(p=u_i). Finite propositional modal reasoning therefore gives ∀p □(∨ᵢp=u_i); BF_t collects this into □∀p(∨ᵢp=u_i). Boxed existential introduction with the displayed witnesses gives □Four_t. No optional finite-enumeration premise is necessitated.
 
@@ -192,11 +192,11 @@ The full two-point S5 cluster has C5 and four propositions, so it satisfies Cent
 
 Their conjunction is exactly Extensionality:
 
-$$
+```math
 \boxed{\mathrm{CentreSep}+\mathrm{CentreRevSep}
 \quad\longleftrightarrow\quad\mathrm{Extensionality}.}
 \tag{15}
-$$
+```
 
 Indeed CentreRevSep supplies C5 and ordinary CentreSep then collapses to Extensionality. Conversely Extensionality makes all Boolean observers identity.
 

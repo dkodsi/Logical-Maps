@@ -6,9 +6,9 @@ Ordinary mathematical research by OpenAI Codex, prompted by Daniel Kodsi, 24 Oct
 
 Take the category with objects r,l,h, identity arrows, and exactly two nonidentity arrows
 
-$$
+```math
 \alpha:r\longrightarrow l,\qquad \beta:r\longrightarrow h.
-$$
+```
 
 Both l and h are terminal along their respective branches: there are no further nonidentity arrows. Use singleton individuals at every object and the full action construction in the fixed relational type system. Evaluate at the identity of r.
 
@@ -16,9 +16,9 @@ This is the same general full action construction used by the recorded [two-obje
 
 At the root,
 
-$$
+```math
 D_t(r)=\mathcal P\{1_r,\alpha,\beta\},
-$$
+```
 
 and each leaf has the two-element proposition domain. Proposition transport takes the corresponding leaf bit. The full function-type domains consist of the natural families of functions between the recursively constructed domains; at a leaf these are ordinary full function spaces. This standard full action construction is a C model, hence an H model.
 
@@ -26,10 +26,10 @@ and each leaf has the two-element proposition domain. Proposition transport take
 
 For every admitted type τ, the paired map
 
-$$
+```math
 (\alpha_\tau,\beta_\tau):D_\tau(r)
  \longrightarrow D_\tau(l)\times D_\tau(h)
-$$
+```
 
 has an explicit section sτ.
 
@@ -37,17 +37,17 @@ At e, all three domains are singletons. At t, given two leaf truth values, set t
 
 For a function type σρ, suppose sρ is already defined. Given leaf functions f_l and f_h, retain them as the two leaf components and define the root component by
 
-$$
+```math
 f_r(x):=s_\rho\bigl(f_l(\alpha_\sigma x),
                          f_h(\beta_\sigma x)\bigr).
-$$
+```
 
 The section equations for sρ give
 
-$$
+```math
 \alpha_\rho(f_r(x))=f_l(\alpha_\sigma x),\qquad
 \beta_\rho(f_r(x))=f_h(\beta_\sigma x).
-$$
+```
 
 Thus these components form an admitted natural family in the full model, whose transports are the prescribed f_l,f_h. This defines sσρ. Induction on types proves the claim; it requires no choice of a family of arbitrary preimages.
 
@@ -61,10 +61,10 @@ Let F:σt be any admitted root family whose every root output equals Top or Bott
 
 For arbitrary leaf inputs u∈Dσ(l), v∈Dσ(h), joint surjectivity gives a root x with ασx=u and βσx=v. Since Fx is one of the two root endpoints, its two leaf bits agree. Naturality therefore gives
 
-$$
+```math
 f_l(u)=f_h(v)
 \qquad\text{for every independent pair }u,v.
-$$
+```
 
 Both leaf domains are nonempty, so f_l and f_h are the same constant c. Every root output Fx is an endpoint with leaf bit c, hence is that same endpoint. Thus F is constant.
 
@@ -76,9 +76,9 @@ Consequently BinaryRangeσ(B) from [Quantifier-generated lattices](quantifier-ge
 
 For clarity, there is also a general argument over C that avoids conflating the two definitions. Suppose an admitted F:tt is endpoint-valued, F(a)=Top and F(b)=Bottom, with no conditions on F(Top) or F(Bottom). Define
 
-$$
+```math
 B(p):=F\bigl((p\land a)\lor(\neg p\land b)\bigr).
-$$
+```
 
 C's Boolean identities give B(Top)=F(a)=Top and B(Bottom)=F(b)=Bottom. Every output remains an endpoint because F is endpoint-valued on every proposition input. Thus any such undesignated nonconstant F yields a designated endpoint selector. This proof uses the admitted witnesses a,b as parameters; it does not require F to preserve any logical operation.
 
@@ -88,11 +88,11 @@ The fork also fails modal .2 directly. The root proposition whose α bit is true
 
 Over C, the proved [meet/quantifier characterization](../meet-quantifier-separation.md), §4, gives for every finite external type list Δ:
 
-$$
+```math
 \mathrm{BF}_\Delta
 \ \leftrightarrow\ S[A\land Q_\Delta]
 \ \leftrightarrow\ S[A\land M\land Q_\Delta].
-$$
+```
 
 The qualifications use full composite operation identities; Top fixing may replace acceptance in that theorem. Section 2 therefore makes the fork satisfy every such universal-only separation instance, even the conjunction-preserving strengthening. Its Functionality also extends these to full typed separation using [the typed-separation theorem](typed-separation-and-classicism.md), §2.
 

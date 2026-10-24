@@ -6,10 +6,10 @@ This two-object model satisfies C5 and necessary full ordinary logical separatio
 
 The model proves
 
-$$
+```math
 \mathrm{C5}+\Box\mathrm{OS}\ \not\Longrightarrow\ \mathrm{SplitMono}.
 \tag{1}
-$$
+```
 
 All positive separation claims have full relational output scope, every finite external qualification list and full composite preservation identities. Section 9 identifies one precise finite-list propositional instance which fails.
 
@@ -17,21 +17,21 @@ All positive separation claims have full relational output scope, every finite e
 
 Let L be the rational line with its usual order. On another copy D of the same set put the circular-order relation induced by that linear order:
 
-$$
+```math
 C(x,y,z)\quad\Longleftrightarrow\quad
 x<y<z\ \lor\ y<z<x\ \lor\ z<x<y.
 \tag{2}
-$$
+```
 
 This is a countable dense circular order. Its open arcs between any two distinct points, with their induced linear orders, are countable dense linear orders without endpoints.
 
 Take the individual sets
 
-$$
+```math
 W=L\times\mathbb N,\qquad V=D\times\mathbb N.
-$$
+```
 
-The sets $B_q=\{q\}\times\mathbb N$ are the original fibres at either object. Define G at W to consist of all permutations inducing an order automorphism of L on the fibres and an arbitrary bijection within each fibre. Define H at V in the same way, with a circular-order automorphism of D on the fibres. In particular both groups contain every permutation of a single fibre, extended by identity outside it.
+The sets $`B_q=\{q\}\times\mathbb N`$ are the original fibres at either object. Define G at W to consist of all permutations inducing an order automorphism of L on the fibres and an arbitrary bijection within each fibre. Define H at V in the same way, with a circular-order automorphism of D on the fibres. In particular both groups contain every permutation of a single fibre, extended by identity outside it.
 
 Use W and V as the objects of the symmetric ideally-full action construction. Arrows between each ordered pair of objects are **all bijections**. At every relational type, the domain consists of exactly the symmetric intensions pinned by a finite subset of the source object. Individuals are the stated underlying sets, with the arrow action. Evaluation at either object is at its identity arrow. If a signature expansion is wanted, every nonlogical relational constant may denote the top element of its type.
 
@@ -43,11 +43,11 @@ We use the following explicit admission fact. At an object X with designated gro
 
 To construct it, at an arrow h:X→Y and tuple u at Y, declare its profile true exactly when
 
-$$
+```math
 Y=X,\quad h|_S=g|_S\text{ for some }g\in K,
 \quad R(\rho(g^{-1})u).
 \tag{3}
-$$
+```
 
 It is false outside this branch. If g′=gv is another witness, then v∈K_(S), so invariance of R makes the answer independent of the witness. The branch and answer are S-pinned. For μ∈K, replacing h,u,g by μh,ρ(μ)u,μg preserves the answer. At any other target it remains false. Thus the profile is symmetric and finitely pinned, so ideal fullness admits it. At the identity choose g=id, giving exactly R as current extension.
 
@@ -59,10 +59,10 @@ For an individual fibre B and b∈B, its current subset is invariant under K_({b
 
 There is a bijection j:W→V with
 
-$$
+```math
 jGj^{-1}\subseteq H.
 \tag{4}
-$$
+```
 
 Identify the two copies of the rational coordinate and use identity on each fibre. An increasing bijection of the line preserves (2), so (4) follows.
 
@@ -70,10 +70,10 @@ For the reverse comparison choose two distinct circular quotient points c₀,c�
 
 A member of H_(T) acts by an increasing bijection on each arc, keeps each exceptional fibre setwise and fixes the two pinned individuals. Its b-conjugate therefore preserves the linear order of all target fibres, fixes the fibre B₀ setwise and acts there by a permitted within-fibre permutation. Hence
 
-$$
+```math
 bH_{(T)}b^{-1}\subseteq G.
 \tag{5}
-$$
+```
 
 The packing of two infinite fibres into one is essential. Equations (4) and (5) are not global conjugate inclusions in both directions: the reverse one uses a nonempty finite stabilizer.
 
@@ -81,54 +81,54 @@ The packing of two infinite fibres into one is essential. Equations (4) and (5) 
 
 For completeness, here is the observer supplied by a local inclusion. Suppose c:X→Y and finite S⊆X satisfy
 
-$$
+```math
 cK_{X,(S)}c^{-1}\subseteq K_Y.
 \tag{6}
-$$
+```
 
 For h:X→Z and a proposition q at Z define E(h,q) by
 
-$$
+```math
 E(h,q)\quad\Longleftrightarrow\quad
 \begin{cases}
 cg^{-1}\in q,& Z=X\text{ and }h|_S=g|_S\text{ for some }g\in K_X,\\
 \mathrm{id}_Z\in q,&\text{otherwise}.
 \end{cases}
 \tag{7}
-$$
+```
 
 In the first branch, replacing g by gv with v∈K_{X,(S)} changes cg^{-1} by left multiplication with cv^{-1}c^{-1}∈K_Y. Proposition symmetry makes membership unchanged. Thus (7) is well defined. It is S-pinned. For target symmetry μ∈K_X, use the representative μg and the transport law
 
-$$
+```math
 k\in\rho_t(\mu)q\quad\Longleftrightarrow\quad k\mu\in q.
-$$
+```
 
 The first branch is invariant. Its complement is invariant as well; there the identity observation is unchanged in truth because q is symmetric under its target group. Ideal fullness therefore supplies an admitted E:tt. At the identity its truth profile is evaluation at c.
 
 Every branch observes at a bijective arrow; write a_h for that arrow, with representatives chosen only for the calculation. For an arbitrary future arrow r:X→Z, input q at Z and further coordinate l:Z→U, application and transport give
 
-$$
+```math
 l\in(\rho_{tt}(r)E)(q)
 \quad\Longleftrightarrow\quad a_{lr}l\in q.
 \tag{8}
-$$
+```
 
 Boolean operations are the corresponding set operations, so (8) preserves them and both endpoints. For a quantifier at any admitted type σ, compare the two sides of its commutation law at r and l. One quantifies over the whole σ-domain at the target of a_{lr}; the other quantifies over the images under ρ_σ(a_{lr}) of the σ-domain at U. They agree because this type action is onto, with the inverse arrow supplying its inverse. The existential calculation is the same. These checks hold at every future r and all inputs there, so they establish full composite identities, not only current truth commutation. The translated equality clauses follow from Boolean qualification over C; alternatively equality judgments are endpoints because all type actions are injective. Thus E is Good_Δ for every requested finite Δ.
 
 Now let d be any nonbottom proposition at X, pinned by finite P, and choose h:X→Y in d. For this ordered pair of objects choose the comparison c₀:X→Y supplied by identity, (4), or (5), with its finite stabilizer pin S₀. Extend the finite partial bijection (c₀^{-1}h)|P to a finite-support permutation π of X. Put c=c₀π and choose finite
 
-$$
+```math
 S\supseteq P\cup S_0\cup\mathrm{supp}(\pi).
-$$
+```
 
 Every member of K_{X,(S)} commutes with π. Consequently c still satisfies (6). It agrees with h on P, so c∈d. The admitted observer (7) therefore makes Ed true at X.
 
 Apply this to Boolean symmetric differences to separate any two distinct propositions. Functionality lifts separation to every relational output type. The construction works at W and V, for every finite qualification list. Each closed separation instance is therefore true at every future object, yielding the separately boxed schema
 
-$$
+```math
 \mathrm{OS}\quad\text{and}\quad\Box\mathrm{OS}
 \tag{9}
-$$
+```
 
 at both objects. No infinite qualification or common observer across all instances is asserted.
 
@@ -140,12 +140,12 @@ A symmetric S-pinned proposition is determined, at each of the two targets, by w
 
 By [Finite colour patterns](finite-pinning-dedekind-propositions.md), §2, application respects the union of pins: if P pins E and S⊇P pins p, then S pins E(p). Its proof checks that for h,h′ agreeing on S, the transported inputs ρ_t(h)p and ρ_t(h′)p agree at every further arrow l, since lh and lh′ agree on S. Thus any admitted injective E restricts to an injective self-map of each finite B_S once S contains its pin. This map is onto B_S. Taking S also to contain a pin for an arbitrary q proves the internal sentence
 
-$$
+```math
 \mathsf D_t:=\forall E^{tt}\left[
  (\forall p,q\,[Ep=Eq\to p=q])
  \to\forall q\,\exists p\,[Ep=q]\right].
 \tag{10}
-$$
+```
 
 Current Functionality and (10) turn every admitted whole left inverse F∘E=I into a whole right inverse E∘F=I. When E,F are Good_Δ, the same witnesses remain qualified. Therefore SplitMono_Δ and Rev_Δ coincide here for each finite Δ, and so do their separation sentences at each output type. This is the finite-pin theorem, not an appeal to internal Frege finiteness.
 
@@ -155,7 +155,7 @@ The proposition algebras are also atomless. Given nonbottom p pinned by S and co
 
 Use the exact Frege definitions from [Background](../../source/topics/classicism/background.md). Put ν=(et)t,
 
-$$
+```math
 \begin{aligned}
 \mathbf 0&:=\lambda X^{et}.\,\forall x^e\neg Xx,\\
 \mathrm{Suc}(Z)&:=\lambda X^{et}.\,
@@ -167,7 +167,7 @@ $$
  [\mathrm{FiniteCardinality}(Z)\land ZX].
 \end{aligned}
 \tag{11}
-$$
+```
 
 At either object, Fin(X) holds exactly when X has an externally finite current extension. Here is the admission justification for that claim. For each standard natural number n, the pure numeral term Suc^n(0) has current truth extension exactly the properties with n instances; this follows by finite external induction directly from the first two lines of (11), using the exact admitted deletion abstract. Let N be the external set of current ν-objects **object-equal** to one of those standard numeral terms.
 
@@ -175,35 +175,35 @@ N is invariant under the designated group because each numeral is a closed pure 
 
 For an admitted individual property X define
 
-$$
+```math
 \mathrm{Amor}(X):=
  \neg\mathrm{Fin}(X)\land
  \forall Y^{et}\bigl[Y\subseteq X\to
  (\mathrm{Fin}(Y)\lor
  \mathrm{Fin}(\lambda x.\,Xx\land\neg Yx))\bigr].
 \tag{12}
-$$
+```
 
 Thus X is infinite, and each admitted subset is finite or cofinite in it. The standardness just proved applies to every property in (12), including the displayed difference abstract.
 
 Let P be the following **closed pure sentence**. There is an admitted total preorder R:eet such that, writing
 
-$$
+```math
 x\sim_R y:\!\!\Longleftrightarrow R(x,y)\land R(y,x),
 \qquad
 x\prec_R y:\!\!\Longleftrightarrow R(x,y)\land\neg R(y,x),
-$$
+```
 
-every cell $\lambda y.\,x\sim_R y$ is Amor, and the quotient strict order is dense with no endpoints:
+every cell $`\lambda y.\,x\sim_R y`$ is Amor, and the quotient strict order is dense with no endpoints:
 
-$$
+```math
 \begin{aligned}
 &\forall x,y\,[x\prec_R y\to
  \exists z\,(x\prec_R z\land z\prec_R y)],\\
 &\forall x\,\exists y,z\,[y\prec_R x\land x\prec_R z].
 \end{aligned}
 \tag{13}
-$$
+```
 
 This uses only individual arguments and relational outputs. There is no quotient type or external family in P. A total preorder and (13) describe the order of its actual equivalence classes; (12) is imposed through their admitted lambda-defined properties.
 
@@ -211,11 +211,11 @@ This uses only individual arguments and relational outputs. There is no quotient
 
 The original fibre preorder, comparing rational coordinates by ≤, is G-invariant. Section 2 admits a relation having it as current extension. Its quotient is the rational line, so the required preorder and (13) hold.
 
-Each original fibre B is infinite and amorphous. Given any admitted individual property Y, choose a finite pin N for it. Its current extension is invariant under G_(N), which contains every permutation of $B\setminus N$. Thus Y is constant on $B\setminus N$. If Y⊆B, it is either finite or cofinite in B. By §6 these are exactly the internal finiteness assertions in (12). The actual cells of the admitted preorder have these same current extensions, so they are Amor. Hence P is true at W.
+Each original fibre B is infinite and amorphous. Given any admitted individual property Y, choose a finite pin N for it. Its current extension is invariant under G_(N), which contains every permutation of $`B\setminus N`$. Thus Y is constant on $`B\setminus N`$. If Y⊆B, it is either finite or cofinite in B. By §6 these are exactly the internal finiteness assertions in (12). The actual cells of the admitted preorder have these same current extensions, so they are Amor. Hence P is true at W.
 
 ## 8. P fails at the circular object
 
-Suppose an admitted R witnessed P at V. Choose a finite pin N for R and enlarge it to meet at least one original fibre. Its current preorder and equivalence relation are invariant under H_(N). For each original fibre B write $T_B=B\setminus N$. This is infinite, and H_(N) contains the full group Sym(T_B), acting identically outside T_B.
+Suppose an admitted R witnessed P at V. Choose a finite pin N for R and enlarge it to meet at least one original fibre. Its current preorder and equivalence relation are invariant under H_(N). For each original fibre B write $`T_B=B\setminus N`$. This is infinite, and H_(N) contains the full group Sym(T_B), acting identically outside T_B.
 
 **Each tail lies in one R-cell.** Choose x∈T_B and let D be its R-cell. D is infinite. If D contains a second point z of T_B, then for any y∈T_B a permutation of T_B fixing x and sending z to y shows x∼_R y. Thus T_B⊆D. If instead x is the only point of T_B in D, infinitude supplies z∈D outside T_B. A permutation of T_B sending x to an arbitrary y fixes z, so invariance gives y∼_R z. Again T_B⊆D, contrary to the assumed singleton intersection. This proves the assertion for every B; it also treats a cell initially meeting a tail in only one point.
 
@@ -235,10 +235,10 @@ The pure sentence P is true at W and false at V, and there are arrows in both di
 
 There is also a precise finite-list failure. Expanding (11)–(13), all bound types in P belong to
 
-$$
+```math
 \Delta_0=\{t,e,et,eet,(et)t,((et)t)t\}.
 \tag{14}
-$$
+```
 
 The harmless t entry includes the endpoint notation and permits the existing same-list inverse patch. In C5 the term-conjugation proof of No Pure Contingency shows that every Good_Δ₀ involution fixes P. At W, P and Top are distinct proposition objects but both are true; every such involution gives them the same current truth. At V use ¬P and Top. Thus propositional involutive separation fails at this list at both objects. The same-list equivalence of reversible and involutive separation over C5 then refutes the propositional Rev instance for Δ₀. Finally (10) and Functionality make the qualified SplitMono and Rev classes identical for this same list, so that precise SplitMono instance fails too.
 

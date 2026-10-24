@@ -4049,7 +4049,7 @@
       "name": "Infinitary Comprehension",
       "disposition": "infinitary extension; separate from finitary explorer principles",
       "statement": "Every infinitary formula defines a relation with the same truth conditions at every accessible point.",
-      "formal": "\\exists R^{\\sigma_1\\cdots\\sigma_n t}\\,\\Box\\forall x_1\\cdots x_n\\,\\bigl(R[\\bar x]\\leftrightarrow A\\bigr).",
+      "formal": "\\exists R^{\\sigma_1\\cdots\\sigma_n t}\\, .\\,\\Box\\forall x_1\\cdots x_n\\, .\\,\\bigl(R[\\bar x]\\leftrightarrow A\\bigr).",
       "scope": "A is any classical formula built using arbitrary set-sized well-founded conjunctions and disjunctions, with any set-sized family of typed parameters; R is not free in A. Each instance holds for every simultaneous parameter assignment. The argument tuple is finite and may be empty.",
       "rationale": "It extends the ordinary comprehension schema directly and characterizes full standard models with C5.",
       "connections": [
