@@ -11,9 +11,9 @@ The C5 premise matters. A full two-point chain has central separation at every p
 Fix a finite external qualification list Δ. Write $`\mathrm{Good}_\Delta`$ for the whole Boolean and listed quantifier identities in [Logical observer separation](../logical-observer-hierarchy.md), §1. Put I=λp.p, and define
 
 ```math
-\mathrm{Cent}_\Delta(E):=
+{\mathrm{Cent}_\Delta(E):=
 \mathrm{Good}_\Delta(E)\land
-\forall G^{tt}\,[\mathrm{Good}_\Delta(G)\to E\circ G=G\circ E].
+\forall G^{tt}\,[\mathrm{Good}_\Delta(G)\to E\circ G=G\circ E]}
 \tag{1}
 ```
 
@@ -24,7 +24,7 @@ Write CentreSep(τ,Δ) for separation at τ by the observers in (1), and CentreS
 Over C, whenever E and G are $`\mathrm{Good}_\Delta`$ and c is any admitted proposition, the term
 
 ```math
-P_c(E,G)(p):=(c\land Ep)\lor(\neg c\land Gp)
+{P_c(E,G)(p):=(c\land Ep)\lor(\neg c\land Gp)}
 \tag{2}
 ```
 
@@ -35,23 +35,23 @@ is $`\mathrm{Good}_\Delta`$. The two Boolean output regions prove the Boolean la
 Assume C and the Functionality needed to collect unary output identities. Every central observer E satisfies
 
 ```math
-E\circ E=E.
+{E\circ E=E}
 \tag{3}
 ```
 
 To prove this, fix p and form the admitted Good observer
 
 ```math
-F_p(r):=(Ep\land Er)\lor(\neg Ep\land r).
+{F_p(r):=(Ep\land Er)\lor(\neg Ep\land r)}
 \tag{4}
 ```
 
 Centrality gives $`E(F_p p)=F_p(Ep)`$. Boolean simplification gives the two sides explicitly:
 
 ```math
-E(F_pp)=E(Ep\lor p)=E^2p\lor Ep,
+{E(F_pp)=E(Ep\lor p)=E^2p\lor Ep,
 \qquad
-F_p(Ep)=Ep\land E^2p.
+F_p(Ep)=Ep\land E^2p}
 \tag{5}
 ```
 
@@ -64,8 +64,8 @@ Thus centrality already implies idempotence. The converse fails in general: the 
 Assume C5, t∈Δ, and ordinary propositional separation $`S_{t,\Delta}`$. Let E be central. The [canonical kernel theorem](surjective-logical-observers.md), §2, supplies an admitted greatest kernel element k with
 
 ```math
-Ek=0,
-\qquad Ep=0\ \longleftrightarrow\ p\le k.
+{Ek=0,
+\qquad Ep=0\ \longleftrightarrow\ p\le k}
 \tag{6}
 ```
 
@@ -76,8 +76,8 @@ Here and below 0,1 mean Bottom, Top. The kernel theorem requires t∈Δ; its equ
 **Proof.** For every $`\mathrm{Good}_\Delta`$ observer G, centrality and (6) give
 
 ```math
-E(Gk)=G(Ek)=0,
-\qquad Gk\le k.
+{E(Gk)=G(Ek)=0,
+\qquad Gk\le k}
 \tag{7}
 ```
 
@@ -86,14 +86,14 @@ Suppose first that k is currently false. Then every Gk is false, while G0=0. Ord
 Suppose instead that k is currently true. For an arbitrary Good G, the patch
 
 ```math
-F(r):=(k\land Gr)\lor(\neg k\land r)
+{F(r):=(k\land Gr)\lor(\neg k\land r)}
 \tag{8}
 ```
 
 is Good. Since Ek=0, Boolean preservation gives E(Fr)=Er. Centrality E∘F=F∘E then gives
 
 ```math
-k\land G(Er)=k\land Er.
+{k\land G(Er)=k\land Er}
 \tag{9}
 ```
 
@@ -122,7 +122,7 @@ For any v≤k, we have Ev=0. If v is false, I and E agree on v and 0, so central
 The established atom-observer correspondence over C5 gives the admitted principal endpoint observer
 
 ```math
-H(p):=\Box(k\to p),
+{H(p):=\Box(k\to p)}
 \tag{11}
 ```
 
@@ -149,7 +149,7 @@ Since Rev and End each imply C5, the full-theory conjunctions give two further e
 Take a full action model on a finite rooted poset P, with singleton individuals. The [finite coordinate theorem](idempotent-native-box-observers.md), §§3–4, identifies all Boolean observers at its root o with inflationary coordinate maps f:P→P:
 
 ```math
-x\le f(x),\qquad E_f(p)=f^{-1}[p].
+{x\le f(x),\qquad E_f(p)=f^{-1}[p]}
 \tag{13}
 ```
 
@@ -158,7 +158,7 @@ Every such coordinate observer is Good at every finite qualification list. Compo
 For x∈P, let $`g_x`$ move only o to x and fix every other point. It is inflationary. If a central f fixes o, commutation at o gives
 
 ```math
-f(x)=f(g_x(o))=g_x(f(o))=x.
+{f(x)=f(g_x(o))=g_x(f(o))=x}
 \tag{14}
 ```
 
