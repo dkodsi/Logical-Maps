@@ -269,41 +269,191 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <link rel="stylesheet" href="../math/katex.min.css">
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
-<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Relative Expectation, Mixture Independence and Stochastic Equivalence imply Uninteractive Sum Invariance</h1></header><p><strong>Proved implication:</strong> Rich Outcomes + Stochastic Equivalence + Mixture Independence + Relative Expectation imply Uninteractive Sum Invariance. Stochastic Dominance, Totality, Shift Invariance and every continuity principle are left out. Together with the converse <a href="uninteractive-sum-equivalence-imply-relative.html"><code>uninteractive-sum-equivalence-imply-relative</code></a>, Uninteractive Sum Invariance is equivalent to Relative Expectation under DU.</p>
-<p>Proof: Claude (Fable 5.1), 10–11 October 2026, in response to Zachary Goodsell’s request for a minimal set of principles entailing the principle he proposed on 6 October 2026. No independent check or Lean verification is claimed.</p>
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Relative Expectation, Mixture Independence and Stochastic Equivalence imply Uninteractive Sum Invariance</h1></header><p><strong>Proved implication:</strong> Rich Outcomes + Stochastic
+Equivalence + Mixture Independence + Relative Expectation imply
+Uninteractive Sum Invariance. Stochastic Dominance, Totality, Shift
+Invariance and every continuity principle are left out. Together with
+the converse <a
+href="uninteractive-sum-equivalence-imply-relative.html"><code>uninteractive-sum-equivalence-imply-relative</code></a>,
+Uninteractive Sum Invariance is equivalent to Relative Expectation under
+DU.</p>
+<p>Proof: Claude (Fable 5.1), 10–11 October 2026, in response to Zachary
+Goodsell’s request for a minimal set of principles entailing the
+principle he proposed on 6 October 2026. No independent check or Lean
+verification is claimed.</p>
 <h2 id="setting">Setting</h2>
-<p>Gambles are real-valued random variables on the standing atomless space, with identity utility; all joint laws are available. Write <span class="math inline">M(X,W)</span> for the fair mixture <span class="math inline">M_{1/2}(X,W)</span>, realized as <span class="math inline">X</span> on <span class="math inline">\{B=0\}</span> and <span class="math inline">W</span> on <span class="math inline">\{B=1\}</span> for a fair coin <span class="math inline">B</span> independent of the gambles mixed; the two mixtures compared in one application of Mixture Independence use the same coin. This is how the randomized-selection construction is used throughout the map.</p>
-<p>Two variables <span class="math inline">X,Z</span> are <strong>uninteractive</strong> when <span class="math inline">E\min(|X|,|Z|)&lt;\infty</span>. The principle to prove: if <span class="math inline">(X,Z)</span> and <span class="math inline">(Y,Z)</span> are uninteractive then <span class="math inline">X\succeq Y\iff X+Z\succeq Y+Z</span>.</p>
-<h2 id="step-1-integrable-common-summands-cancel">Step 1: integrable common summands cancel</h2>
-<p><strong>Lemma 1 (Relative Expectation + Mixture Independence).</strong> If <span class="math inline">E|Z|&lt;\infty</span> then, for every coupling of <span class="math inline">Z</span> with <span class="math inline">(X,Y)</span>, <span class="math inline">X\succeq Y\iff X+Z\succeq Y+Z</span>.</p>
-<p><em>Proof.</em> By Mixture Independence with the common component <span class="math inline">Y+Z</span>,</p>
-<p><span class="math display">X\succeq Y\iff M(X,\,Y+Z)\succeq M(Y,\,Y+Z).</span></p>
+<p>Gambles are real-valued random variables on the standing atomless
+space, with identity utility; all joint laws are available. Write <span
+class="math inline">M(X,W)</span> for the fair mixture <span
+class="math inline">M_{1/2}(X,W)</span>, realized as <span
+class="math inline">X</span> on <span class="math inline">\{B=0\}</span>
+and <span class="math inline">W</span> on <span
+class="math inline">\{B=1\}</span> for a fair coin <span
+class="math inline">B</span> independent of the gambles mixed; the two
+mixtures compared in one application of Mixture Independence use the
+same coin. This is how the randomized-selection construction is used
+throughout the map.</p>
+<p>Two variables <span class="math inline">X,Z</span> are
+<strong>uninteractive</strong> when <span
+class="math inline">E\min(|X|,|Z|)&lt;\infty</span>. The principle to
+prove: if <span class="math inline">(X,Z)</span> and <span
+class="math inline">(Y,Z)</span> are uninteractive then <span
+class="math inline">X\succeq Y\iff X+Z\succeq Y+Z</span>.</p>
+<h2 id="step-1-integrable-common-summands-cancel">Step 1: integrable
+common summands cancel</h2>
+<p><strong>Lemma 1 (Relative Expectation + Mixture
+Independence).</strong> If <span
+class="math inline">E|Z|&lt;\infty</span> then, for every coupling of
+<span class="math inline">Z</span> with <span
+class="math inline">(X,Y)</span>, <span class="math inline">X\succeq
+Y\iff X+Z\succeq Y+Z</span>.</p>
+<p><em>Proof.</em> By Mixture Independence with the common component
+<span class="math inline">Y+Z</span>,</p>
+<p><span class="math display">X\succeq Y\iff M(X,\,Y+Z)\succeq
+M(Y,\,Y+Z).</span></p>
 <p>On the same coin,</p>
-<p><span class="math display">M(X,Y+Z)-M(X+Z,Y)=(1-B)(X-X-Z)+B(Y+Z-Y)=Z(2B-1),</span></p>
-<p>which is integrable with <span class="math inline">E[Z(2B-1)]=E[Z]\,E[2B-1]=0</span> because <span class="math inline">B</span> is independent of <span class="math inline">Z</span>. Relative Expectation therefore gives <span class="math inline">M(X,Y+Z)\sim M(X+Z,Y)</span>. The same computation gives <span class="math inline">M(Y,Y+Z)\sim M(Y+Z,Y)</span>. Finally, Mixture Independence with the common component <span class="math inline">Y</span> gives <span class="math inline">M(X+Z,Y)\succeq M(Y+Z,Y)\iff X+Z\succeq Y+Z</span>. Chain the four statements by transitivity. <span class="math inline">\square</span></p>
-<p>With <span class="math inline">Z</span> constant this is Shift Invariance. Nothing about laws was used.</p>
-<h2 id="step-2-separability-over-an-event">Step 2: separability over an event</h2>
-<p><strong>Lemma 2 (Mixture Independence + Stochastic Equivalence).</strong> Let <span class="math inline">A</span> be an event with <span class="math inline">0&lt;P(A)&lt;1</span>. If <span class="math inline">X^\circ,Y^\circ</span> vanish on <span class="math inline">A</span> and <span class="math inline">Z</span> vanishes off <span class="math inline">A</span>, then <span class="math inline">X^\circ\succeq Y^\circ\iff X^\circ+Z\succeq Y^\circ+Z</span>.</p>
-<p><em>Proof.</em> The recorded result <a href="independence-to-sure-thing.html"><code>independence-to-sure-thing</code></a> gives Sure-Thing. The gambles <span class="math inline">X^\circ+Z</span> and <span class="math inline">Y^\circ+Z</span> both equal <span class="math inline">Z</span> on <span class="math inline">A</span>, so their restrictions to <span class="math inline">A</span> are identical, hence indifferent. Sure-Thing with the event <span class="math inline">A</span> says <span class="math inline">X^\circ+Z\succeq Y^\circ+Z</span> iff the restrictions to <span class="math inline">A^c</span> compare the same way, and those restrictions are <span class="math inline">X^\circ</span> and <span class="math inline">Y^\circ</span>. <span class="math inline">\square</span></p>
+<p><span
+class="math display">M(X,Y+Z)-M(X+Z,Y)=(1-B)(X-X-Z)+B(Y+Z-Y)=Z(2B-1),</span></p>
+<p>which is integrable with <span
+class="math inline">E[Z(2B-1)]=E[Z]\,E[2B-1]=0</span> because <span
+class="math inline">B</span> is independent of <span
+class="math inline">Z</span>. Relative Expectation therefore gives <span
+class="math inline">M(X,Y+Z)\sim M(X+Z,Y)</span>. The same computation
+gives <span class="math inline">M(Y,Y+Z)\sim M(Y+Z,Y)</span>. Finally,
+Mixture Independence with the common component <span
+class="math inline">Y</span> gives <span
+class="math inline">M(X+Z,Y)\succeq M(Y+Z,Y)\iff X+Z\succeq Y+Z</span>.
+Chain the four statements by transitivity. <span
+class="math inline">\square</span></p>
+<p>With <span class="math inline">Z</span> constant this is Shift
+Invariance. Nothing about laws was used.</p>
+<h2 id="step-2-separability-over-an-event">Step 2: separability over an
+event</h2>
+<p><strong>Lemma 2 (Mixture Independence + Stochastic
+Equivalence).</strong> Let <span class="math inline">A</span> be an
+event with <span class="math inline">0&lt;P(A)&lt;1</span>. If <span
+class="math inline">X^\circ,Y^\circ</span> vanish on <span
+class="math inline">A</span> and <span class="math inline">Z</span>
+vanishes off <span class="math inline">A</span>, then <span
+class="math inline">X^\circ\succeq Y^\circ\iff X^\circ+Z\succeq
+Y^\circ+Z</span>.</p>
+<p><em>Proof.</em> The recorded result <a
+href="independence-to-sure-thing.html"><code>independence-to-sure-thing</code></a>
+gives Sure-Thing. The gambles <span class="math inline">X^\circ+Z</span>
+and <span class="math inline">Y^\circ+Z</span> both equal <span
+class="math inline">Z</span> on <span class="math inline">A</span>, so
+their restrictions to <span class="math inline">A</span> are identical,
+hence indifferent. Sure-Thing with the event <span
+class="math inline">A</span> says <span
+class="math inline">X^\circ+Z\succeq Y^\circ+Z</span> iff the
+restrictions to <span class="math inline">A^c</span> compare the same
+way, and those restrictions are <span class="math inline">X^\circ</span>
+and <span class="math inline">Y^\circ</span>. <span
+class="math inline">\square</span></p>
 <p>This is the only place where Stochastic Equivalence is used.</p>
 <h2 id="step-3-the-reduction">Step 3: the reduction</h2>
-<p>Let <span class="math inline">(X,Z)</span> and <span class="math inline">(Y,Z)</span> be uninteractive, so <span class="math inline">m_X=\min(|X|,|Z|)</span> and <span class="math inline">m_Y=\min(|Y|,|Z|)</span> are integrable. Put</p>
-<p><span class="math display">A=\{|Z|&gt;|X|\}\cap\{|Z|&gt;|Y|\}.</span></p>
-<p>On <span class="math inline">A</span>, <span class="math inline">|X|=m_X</span> and <span class="math inline">|Y|=m_Y</span>, so <span class="math inline">X1_A</span> and <span class="math inline">Y1_A</span> are integrable. On <span class="math inline">A^c</span>, <span class="math inline">|Z|\le|X|</span> or <span class="math inline">|Z|\le|Y|</span>, so <span class="math inline">|Z|1_{A^c}\le m_X+m_Y</span> and <span class="math inline">Z_s=Z1_{A^c}</span> is integrable. Write <span class="math inline">Z_b=Z1_A</span>.</p>
-<p><em>If <span class="math inline">P(A)=1</span></em>, <span class="math inline">X</span> and <span class="math inline">Y</span> are integrable, so <span class="math inline">X-Y</span> and <span class="math inline">(X+Z)-(Y+Z)=X-Y</span> are integrable and Relative Expectation decides both comparisons by the sign of <span class="math inline">E[X-Y]</span>, with indifference at zero. <em>If <span class="math inline">P(A)=0</span></em>, <span class="math inline">Z=Z_s</span> is integrable and Lemma 1 finishes. Otherwise let <span class="math inline">p=P(A)\in(0,1)</span> and</p>
-<p><span class="math display">a=E[X1_A],\qquad b=E[Y1_A],\qquad \gamma=\frac{b-a}{1-p},\qquad
+<p>Let <span class="math inline">(X,Z)</span> and <span
+class="math inline">(Y,Z)</span> be uninteractive, so <span
+class="math inline">m_X=\min(|X|,|Z|)</span> and <span
+class="math inline">m_Y=\min(|Y|,|Z|)</span> are integrable. Put</p>
+<p><span
+class="math display">A=\{|Z|&gt;|X|\}\cap\{|Z|&gt;|Y|\}.</span></p>
+<p>On <span class="math inline">A</span>, <span
+class="math inline">|X|=m_X</span> and <span
+class="math inline">|Y|=m_Y</span>, so <span
+class="math inline">X1_A</span> and <span
+class="math inline">Y1_A</span> are integrable. On <span
+class="math inline">A^c</span>, <span
+class="math inline">|Z|\le|X|</span> or <span
+class="math inline">|Z|\le|Y|</span>, so <span
+class="math inline">|Z|1_{A^c}\le m_X+m_Y</span> and <span
+class="math inline">Z_s=Z1_{A^c}</span> is integrable. Write <span
+class="math inline">Z_b=Z1_A</span>.</p>
+<p><em>If <span class="math inline">P(A)=1</span></em>, <span
+class="math inline">X</span> and <span class="math inline">Y</span> are
+integrable, so <span class="math inline">X-Y</span> and <span
+class="math inline">(X+Z)-(Y+Z)=X-Y</span> are integrable and Relative
+Expectation decides both comparisons by the sign of <span
+class="math inline">E[X-Y]</span>, with indifference at zero. <em>If
+<span class="math inline">P(A)=0</span></em>, <span
+class="math inline">Z=Z_s</span> is integrable and Lemma 1 finishes.
+Otherwise let <span class="math inline">p=P(A)\in(0,1)</span> and</p>
+<p><span class="math display">a=E[X1_A],\qquad b=E[Y1_A],\qquad
+\gamma=\frac{b-a}{1-p},\qquad
 X^\circ=X1_{A^c},\qquad Y^\circ=(Y+\gamma)1_{A^c}.</span></p>
 <p>All these gambles exist in the real chart by Rich Outcomes.</p>
-<p><em>Left side.</em> <span class="math inline">X-(X^\circ+a)=X1_A-a</span> is integrable with mean zero, so <span class="math inline">X\sim X^\circ+a</span> by Relative Expectation. Likewise <span class="math inline">Y-(Y^\circ+a)=Y1_A-\gamma1_{A^c}-a</span> has mean <span class="math inline">b-\gamma(1-p)-a=0</span>, so <span class="math inline">Y\sim Y^\circ+a</span>. Hence <span class="math inline">X\succeq Y\iff X^\circ+a\succeq Y^\circ+a\iff X^\circ\succeq Y^\circ</span>, the last step by Lemma 1 with the constant <span class="math inline">-a</span>.</p>
-<p><em>Right side.</em> Lemma 1 removes the integrable <span class="math inline">Z_s</span>: <span class="math inline">X+Z\succeq Y+Z\iff X+Z_b\succeq Y+Z_b</span>. The same two replacements apply, since <span class="math inline">(X+Z_b)-(X^\circ+Z_b+a)=X1_A-a</span> and <span class="math inline">(Y+Z_b)-(Y^\circ+Z_b+a)=Y1_A-\gamma1_{A^c}-a</span>, so <span class="math inline">X+Z\succeq Y+Z\iff X^\circ+Z_b\succeq Y^\circ+Z_b</span>.</p>
-<p><em>Closing.</em> <span class="math inline">X^\circ,Y^\circ</span> vanish on <span class="math inline">A</span> and <span class="math inline">Z_b</span> vanishes off <span class="math inline">A</span>, so Lemma 2 gives <span class="math inline">X^\circ\succeq Y^\circ\iff X^\circ+Z_b\succeq Y^\circ+Z_b</span>. Combining the three displays, <span class="math inline">X\succeq Y\iff X+Z\succeq Y+Z</span>. <span class="math inline">\square</span></p>
+<p><em>Left side.</em> <span
+class="math inline">X-(X^\circ+a)=X1_A-a</span> is integrable with mean
+zero, so <span class="math inline">X\sim X^\circ+a</span> by Relative
+Expectation. Likewise <span
+class="math inline">Y-(Y^\circ+a)=Y1_A-\gamma1_{A^c}-a</span> has mean
+<span class="math inline">b-\gamma(1-p)-a=0</span>, so <span
+class="math inline">Y\sim Y^\circ+a</span>. Hence <span
+class="math inline">X\succeq Y\iff X^\circ+a\succeq Y^\circ+a\iff
+X^\circ\succeq Y^\circ</span>, the last step by Lemma 1 with the
+constant <span class="math inline">-a</span>.</p>
+<p><em>Right side.</em> Lemma 1 removes the integrable <span
+class="math inline">Z_s</span>: <span class="math inline">X+Z\succeq
+Y+Z\iff X+Z_b\succeq Y+Z_b</span>. The same two replacements apply,
+since <span class="math inline">(X+Z_b)-(X^\circ+Z_b+a)=X1_A-a</span>
+and <span
+class="math inline">(Y+Z_b)-(Y^\circ+Z_b+a)=Y1_A-\gamma1_{A^c}-a</span>,
+so <span class="math inline">X+Z\succeq Y+Z\iff X^\circ+Z_b\succeq
+Y^\circ+Z_b</span>.</p>
+<p><em>Closing.</em> <span class="math inline">X^\circ,Y^\circ</span>
+vanish on <span class="math inline">A</span> and <span
+class="math inline">Z_b</span> vanishes off <span
+class="math inline">A</span>, so Lemma 2 gives <span
+class="math inline">X^\circ\succeq Y^\circ\iff X^\circ+Z_b\succeq
+Y^\circ+Z_b</span>. Combining the three displays, <span
+class="math inline">X\succeq Y\iff X+Z\succeq Y+Z</span>. <span
+class="math inline">\square</span></p>
 <h2 id="which-premises-are-needed">Which premises are needed</h2>
 <ul>
-<li><strong>Mixture Independence.</strong> Extend the base area preorder <a href="cdf-area-preorder.html"><code>cdf-area-preorder</code></a> by declaring <span class="math inline">W\succeq V</span> whenever <span class="math inline">W\mathrel{R}C</span> and <span class="math inline">0\mathrel{R}V</span> for a standard Cauchy <span class="math inline">C</span>, where <span class="math inline">R</span> is the area comparison. This is a preorder satisfying CDF-Area Extension (every new pair has infinite positive area, so no finite-area comparison is added), hence Relative Expectation and Stochastic Equivalence, but <span class="math inline">C\succeq 0</span> while <span class="math inline">C+1\not\succeq 1</span>, so Shift Invariance fails and so does the conclusion. Mixture Independence fails there.</li>
-<li><strong>Some continuity.</strong> <a href="total-exact-ultrafilter.html"><code>total-exact-ultrafilter</code></a> satisfies DTU and fails Shift Invariance, so Mixture Independence and Stochastic Equivalence alone do not suffice.</li>
-<li><strong>Shift Invariance with Sure-Thing is not enough.</strong> <a href="finite-shift-total-extension.html"><code>finite-shift-total-extension</code></a> satisfies DTU and Shift Invariance but fails Shift Transfer. Uninteractive Sum Invariance implies Relative Expectation (the converse result), which gives Shift Transfer at once: <span class="math inline">M_p(X+b/p,Y)</span> and <span class="math inline">M_p(X,Y+b/(1-p))</span> differ by a bounded mean-zero variable. So that model fails the conclusion.</li>
-<li><strong>L¹ Continuity is not needed.</strong> <a href="lexicographic-folded-extension.html"><code>lexicographic-folded-extension</code></a> satisfies DTU and Relative Expectation but fails L¹ Continuity; the conclusion holds there by this result.</li>
+<li><strong>Mixture Independence.</strong> Extend the base area preorder
+<a href="cdf-area-preorder.html"><code>cdf-area-preorder</code></a> by
+declaring <span class="math inline">W\succeq V</span> whenever <span
+class="math inline">W\mathrel{R}C</span> and <span
+class="math inline">0\mathrel{R}V</span> for a standard Cauchy <span
+class="math inline">C</span>, where <span class="math inline">R</span>
+is the area comparison. This is a preorder satisfying CDF-Area Extension
+(every new pair has infinite positive area, so no finite-area comparison
+is added), hence Relative Expectation and Stochastic Equivalence, but
+<span class="math inline">C\succeq 0</span> while <span
+class="math inline">C+1\not\succeq 1</span>, so Shift Invariance fails
+and so does the conclusion. Mixture Independence fails there.</li>
+<li><strong>Some continuity.</strong> <a
+href="total-exact-ultrafilter.html"><code>total-exact-ultrafilter</code></a>
+satisfies DTU and fails Shift Invariance, so Mixture Independence and
+Stochastic Equivalence alone do not suffice.</li>
+<li><strong>Shift Invariance with Sure-Thing is not enough.</strong> <a
+href="finite-shift-total-extension.html"><code>finite-shift-total-extension</code></a>
+satisfies DTU and Shift Invariance but fails Shift Transfer.
+Uninteractive Sum Invariance implies Relative Expectation (the converse
+result), which gives Shift Transfer at once: <span
+class="math inline">M_p(X+b/p,Y)</span> and <span
+class="math inline">M_p(X,Y+b/(1-p))</span> differ by a bounded
+mean-zero variable. So that model fails the conclusion.</li>
+<li><strong>L¹ Continuity is not needed.</strong> <a
+href="lexicographic-folded-extension.html"><code>lexicographic-folded-extension</code></a>
+satisfies DTU and Relative Expectation but fails L¹ Continuity; the
+conclusion holds there by this result.</li>
 </ul>
-<h2 id="consequence-for-fixed-copulas">Consequence for fixed copulas</h2>
-<p>Call a copula corner-avoiding when it gives zero mass to <span class="math inline">([0,\delta)\cup(1-\delta,1])^2</span> for some <span class="math inline">\delta&gt;0</span>. If a pair <span class="math inline">(X,Z)</span> admits such a copula, it has the joint law of <span class="math inline">(Q_X(U),Q_Z(W))</span> with <span class="math inline">(U,W)</span> distributed as the copula, and on each of the two regions one quantile is evaluated inside <span class="math inline">[\delta,1-\delta]</span>, where it is bounded. So the pair is uninteractive, and Uninteractive Sum Invariance gives <span class="math inline">\operatorname{SC}(C)</span> for every corner-avoiding <span class="math inline">C</span>. The adjacent-quarter shuffle copula used in the clipped-expectation write-ups is corner-avoiding with <span class="math inline">\delta=1/4</span>; its direct verification there is now a special case of this result together with those models’ Relative Expectation.</p>
+<h2 id="consequence-for-fixed-copulas">Consequence for fixed
+copulas</h2>
+<p>Call a copula corner-avoiding when it gives zero mass to <span
+class="math inline">([0,\delta)\cup(1-\delta,1])^2</span> for some <span
+class="math inline">\delta&gt;0</span>. If a pair <span
+class="math inline">(X,Z)</span> admits such a copula, it has the joint
+law of <span class="math inline">(Q_X(U),Q_Z(W))</span> with <span
+class="math inline">(U,W)</span> distributed as the copula, and on each
+of the two regions one quantile is evaluated inside <span
+class="math inline">[\delta,1-\delta]</span>, where it is bounded. So
+the pair is uninteractive, and Uninteractive Sum Invariance gives <span
+class="math inline">\operatorname{SC}(C)</span> for every
+corner-avoiding <span class="math inline">C</span>. The adjacent-quarter
+shuffle copula used in the clipped-expectation write-ups is
+corner-avoiding with <span class="math inline">\delta=1/4</span>; its
+direct verification there is now a special case of this result together
+with those models’ Relative Expectation.</p>
 </body></html>

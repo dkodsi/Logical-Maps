@@ -270,28 +270,55 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
 <script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>CDF-Area Extension ⇒ Relative Expectation</h1></header><p class="cert">
-Result — Source: Misc.; produced by GPT-6 (Codex), prompted by Zachary Goodsell; recorded by GPT-6 (Codex), prompted by Zachary Goodsell, 2026-09-09; extraction and random-variable translation.
+Result — Source: Misc.; produced by GPT-6 (Codex), prompted by Zachary
+Goodsell; recorded by GPT-6 (Codex), prompted by Zachary Goodsell,
+2026-09-09; extraction and random-variable translation.
 </p>
 <h2 id="premises">Premises</h2>
 <ul>
-<li><strong>CDF-Area Extension.</strong> The normalized utility chart is total and measurable. Write <span class="math inline">S_X(t)=P(u(X)&gt;t), d=S_X- S_Y, A_{+}=\int \max (d,0)dt</span> and <span class="math inline">A_{-}=\int \max (- d,0)dt</span> over <span class="math inline">\mathbb{R}</span>. Whenever at least one of <span class="math inline">A_{+},A_{-}</span> is finite, <span class="math inline">X \succeq Y</span> iff <span class="math inline">A_{+}\ge A_{-}</span>. If both are infinite, this axiom imposes no comparison.</li>
+<li><strong>CDF-Area Extension.</strong> The normalized utility chart is
+total and measurable. Write <span
+class="math inline">S_X(t)=P(u(X)&gt;t), d=S_X- S_Y, A_{+}=\int \max
+(d,0)dt</span> and <span class="math inline">A_{-}=\int \max (-
+d,0)dt</span> over <span class="math inline">\mathbb{R}</span>. Whenever
+at least one of <span class="math inline">A_{+},A_{-}</span> is finite,
+<span class="math inline">X \succeq Y</span> iff <span
+class="math inline">A_{+}\ge A_{-}</span>. If both are infinite, this
+axiom imposes no comparison.</li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <ul>
-<li><strong>Relative Expectation.</strong> For real-utility variables X,Y on the same probability space, if <span class="math inline">E|u(X)- u(Y)|&lt;\infty</span>, then <span class="math inline">X \succeq Y</span> iff <span class="math inline">E[u(X)- u(Y)] \ge 0</span>. Their individual expectations may both be undefined.</li>
+<li><strong>Relative Expectation.</strong> For real-utility variables
+X,Y on the same probability space, if <span class="math inline">E|u(X)-
+u(Y)|&lt;\infty</span>, then <span class="math inline">X \succeq
+Y</span> iff <span class="math inline">E[u(X)- u(Y)] \ge 0</span>. Their
+individual expectations may both be undefined.</li>
 </ul>
 <h2 id="proof">Proof</h2>
-<p>For the actual coupling, <span class="math inline">\int |S_X- S_Y|dt \le E|u(X)- u(Y)|</span>. If the latter is finite, Fubini applied to <span class="math inline">1_{u(X)&gt;t}- 1_{u(Y)&gt;t}</span> gives <span class="math inline">\int (S_X- S_Y)dt=E[u(X)- u(Y)]</span>. Both areas are finite, so the CDF-area comparison is exactly the comparison of this expectation with zero.</p>
+<p>For the actual coupling, <span class="math inline">\int |S_X- S_Y|dt
+\le E|u(X)- u(Y)|</span>. If the latter is finite, Fubini applied to
+<span class="math inline">1_{u(X)&gt;t}- 1_{u(Y)&gt;t}</span> gives
+<span class="math inline">\int (S_X- S_Y)dt=E[u(X)- u(Y)]</span>. Both
+areas are finite, so the CDF-area comparison is exactly the comparison
+of this expectation with zero.</p>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><strong>GPT-6 generated 9 Sep</strong> — GPT-6 (Codex), prompted by Zachary Goodsell, original connecting proof recorded 9 September 2026 in this project</li>
-<li><strong>Unbounded Utility and Background Risk (unpublished)</strong> — Zachary Goodsell, Unbounded Utility and Background Risk, 5 June 2026, unpublished manuscript marked “do not cite” and erroneous; §3, pp. 7–8</li>
+<li><strong>GPT-6 generated 9 Sep</strong> — GPT-6 (Codex), prompted by
+Zachary Goodsell, original connecting proof recorded 9 September 2026 in
+this project</li>
+<li><strong>Unbounded Utility and Background Risk (unpublished)</strong>
+— Zachary Goodsell, Unbounded Utility and Background Risk, 5 June 2026,
+unpublished manuscript marked “do not cite” and erroneous; §3,
+pp. 7–8</li>
 </ul>
 <p class="cert">
-Record: <code>topics/unbounded-utility/results/cdf-area-implies-relative.yaml</code>
+Record:
+<code>topics/unbounded-utility/results/cdf-area-implies-relative.yaml</code>
 </p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Background: Unbounded Utility and Background Risk.</strong> Zachary Goodsell (5 June 2026). Unbounded Utility and Background Risk. Unpublished working manuscript. — §3, pp. 7–8</li>
+<li><strong>Background: Unbounded Utility and Background Risk.</strong>
+Zachary Goodsell (5 June 2026). Unbounded Utility and Background Risk.
+Unpublished working manuscript. — §3, pp. 7–8</li>
 </ul>
 </body></html>

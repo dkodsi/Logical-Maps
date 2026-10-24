@@ -269,38 +269,166 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <link rel="stylesheet" href="../math/katex.min.css">
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
-<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Clipped expectation: exact ultrafilter dominance</h1></header><p>Source: Goodsell, <em>Decision theory unbound</em>, Appendix B, Theorems 1, 3, and 10. Human model: Zachary Goodsell. Recorded and translated by GPT-6 (Codex), prompted by Zachary Goodsell; no transcription checker asserted.</p>
-<p>Take all real-valued random variables. Let U be an ultrafilter on positive truncation levels containing every tail <span class="math inline">(s,\infty )</span>. Define <span class="math inline">v_X(t)=E[c_t(X)]</span> as in the eventual-clipping write-up and set</p>
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Clipped expectation: exact ultrafilter dominance</h1></header><p>Source: Goodsell, <em>Decision theory unbound</em>, Appendix B,
+Theorems 1, 3, and 10. Human model: Zachary Goodsell. Recorded and
+translated by GPT-6 (Codex), prompted by Zachary Goodsell; no
+transcription checker asserted.</p>
+<p>Take all real-valued random variables. Let U be an ultrafilter on
+positive truncation levels containing every tail <span
+class="math inline">(s,\infty )</span>. Define <span
+class="math inline">v_X(t)=E[c_t(X)]</span> as in the eventual-clipping
+write-up and set</p>
 <p><span class="math display">X\succeq Y\quad\Longleftrightarrow\quad
 \{t:v_X(t)\ge v_Y(t)\}\in\mathcal U.</span></p>
-<p>Reflexivity holds because the entire domain is in U; finite intersections prove transitivity; the ultrafilter dichotomy proves Totality. The ordering extends eventual weak comparisons and eventual strictly positive gaps. Thus its law invariance, Simple EU, richness, and stochastic dominance follow from the calculations for clipped expectations. Common mixture components cancel pointwise before taking the ultrafilter, giving Independence. Reflection negates <span class="math inline">v_X</span> exactly, giving reflection anti-invariance. These properties give the DTU package in the topic’s random-variable language.</p>
-<p>The geometric N from the accompanying eventual model has expectation 2, but <span class="math inline">v_N(t)</span>&lt;2 for every finite t&gt;2. Therefore N is strictly worse than 2 on this total ordering as well. This establishes failure of EU, exactly as the source’s Theorem 3 notes. The Countable Sure-Thing and Archimedean Gambles violations follow from the recorded St Petersburg arguments.</p>
-<p><strong>Scale failure is a source theorem application.</strong> Goodsell’s Theorem 10 (pp. 693–695) states that every total ordering constructed in this way fails Scale Invariance. Its argument uses a pair of attainable clipped-expectation curves whose difference oscillates in log scale, reverses sign on a doubling of the truncation parameter, and cannot be neutralized simultaneously in both phases by an ultrafilter. Apply that theorem to the U just chosen. This does not assert that all total DTU models fail scale: the 2026 paper constructs models that satisfy it.</p>
-<p>The printed analytic witness has the notation/endpoint issues documented in <code>extraction.md</code>. This model record accepts the published theorem for the scale flag; it does not claim an independently checked correction of that entire witness. The explicit EU counterexample and elementary satisfied-axiom calculations above do not depend on those issues.</p>
-<h2 id="failure-of-comonotonic-sum-invariance">Failure of Comonotonic Sum Invariance</h2>
-<p><strong>Addition: Claude (Fable 5.1), 23 September 2026.</strong> This is a property of the recorded model, not a claim made in the source paper.</p>
-<p>Realize a standard Cauchy variable as <span class="math inline">C=Q_C(U)=\tan(\pi(U-\tfrac12))</span> and put <span class="math inline">X=0</span>, <span class="math inline">Y=C</span>, <span class="math inline">Z=C_+=\max(C,0)</span>. All three are nondecreasing functions of <span class="math inline">U</span>, so <span class="math inline">(X,Z)</span> and <span class="math inline">(Y,Z)</span> are comonotonic pairs. Oddness of <span class="math inline">c_t</span> and the symmetry of <span class="math inline">C</span> give <span class="math inline">v_C(t)=0=v_0(t)</span> for every <span class="math inline">t</span>, hence <span class="math inline">X\sim Y</span>.</p>
-<p><strong>Doubling-defect identity.</strong> For any nonnegative random variable <span class="math inline">V</span> and any <span class="math inline">F&gt;0</span>,</p>
-<p><span class="math display">2\,\mathbb E[\min(V,F)]-\mathbb E[\min(2V,F)]
- =2\int_{F/2}^{F}P(V&gt;x)\,dx,</span></p>
-<p>since <span class="math inline">\mathbb E[\min(V,F)]=\int_0^F P(V&gt;x)\,dx</span> and <span class="math inline">\mathbb E[\min(2V,F)]=2\int_0^{F/2}P(V&gt;x)\,dx</span>. For <span class="math inline">V=C_+=\max(C,0)</span> with <span class="math inline">C</span> standard Cauchy the right-hand side is <span class="math inline">\frac2\pi\int_{F/2}^{F}\arctan(1/x)\,dx</span>, which is positive for every <span class="math inline">F</span> and increases to <span class="math inline">\frac{2\ln2}{\pi}</span> as <span class="math inline">F\to\infty</span>.</p>
-<p>Now <span class="math inline">X+Z=C_+</span> and <span class="math inline">Y+Z=2C_+ + C_-</span> with <span class="math inline">C_-=\min(C,0)</span>. Since <span class="math inline">c_t(2C_++C_-)=\min(2C_+,t)</span> on <span class="math inline">\{C\ge0\}</span> and <span class="math inline">=\max(C_-,-t)</span> on <span class="math inline">\{C&lt;0\}</span>, and <span class="math inline">\mathbb E[\max(C_-,-t)]=-\mathbb E[\min(C_+,t)]</span> by symmetry,</p>
+<p>Reflexivity holds because the entire domain is in U; finite
+intersections prove transitivity; the ultrafilter dichotomy proves
+Totality. The ordering extends eventual weak comparisons and eventual
+strictly positive gaps. Thus its law invariance, Simple EU, richness,
+and stochastic dominance follow from the calculations for clipped
+expectations. Common mixture components cancel pointwise before taking
+the ultrafilter, giving Independence. Reflection negates <span
+class="math inline">v_X</span> exactly, giving reflection
+anti-invariance. These properties give the DTU package in the topic’s
+random-variable language.</p>
+<p>The geometric N from the accompanying eventual model has expectation
+2, but <span class="math inline">v_N(t)</span>&lt;2 for every finite
+t&gt;2. Therefore N is strictly worse than 2 on this total ordering as
+well. This establishes failure of EU, exactly as the source’s Theorem 3
+notes. The Countable Sure-Thing and Archimedean Gambles violations
+follow from the recorded St Petersburg arguments.</p>
+<p><strong>Scale failure is a source theorem application.</strong>
+Goodsell’s Theorem 10 (pp. 693–695) states that every total ordering
+constructed in this way fails Scale Invariance. Its argument uses a pair
+of attainable clipped-expectation curves whose difference oscillates in
+log scale, reverses sign on a doubling of the truncation parameter, and
+cannot be neutralized simultaneously in both phases by an ultrafilter.
+Apply that theorem to the U just chosen. This does not assert that all
+total DTU models fail scale: the 2026 paper constructs models that
+satisfy it.</p>
+<p>The printed analytic witness has the notation/endpoint issues
+documented in <code>extraction.md</code>. This model record accepts the
+published theorem for the scale flag; it does not claim an independently
+checked correction of that entire witness. The explicit EU
+counterexample and elementary satisfied-axiom calculations above do not
+depend on those issues.</p>
+<h2 id="failure-of-comonotonic-sum-invariance">Failure of Comonotonic
+Sum Invariance</h2>
+<p><strong>Addition: Claude (Fable 5.1), 23 September 2026.</strong>
+This is a property of the recorded model, not a claim made in the source
+paper.</p>
+<p>Realize a standard Cauchy variable as <span
+class="math inline">C=Q_C(U)=\tan(\pi(U-\tfrac12))</span> and put <span
+class="math inline">X=0</span>, <span class="math inline">Y=C</span>,
+<span class="math inline">Z=C_+=\max(C,0)</span>. All three are
+nondecreasing functions of <span class="math inline">U</span>, so <span
+class="math inline">(X,Z)</span> and <span
+class="math inline">(Y,Z)</span> are comonotonic pairs. Oddness of <span
+class="math inline">c_t</span> and the symmetry of <span
+class="math inline">C</span> give <span
+class="math inline">v_C(t)=0=v_0(t)</span> for every <span
+class="math inline">t</span>, hence <span class="math inline">X\sim
+Y</span>.</p>
+<p><strong>Doubling-defect identity.</strong> For any nonnegative random
+variable <span class="math inline">V</span> and any <span
+class="math inline">F&gt;0</span>,</p>
+<p><span class="math display">2\,\mathbb E[\min(V,F)]-\mathbb
+E[\min(2V,F)]
+=2\int_{F/2}^{F}P(V&gt;x)\,dx,</span></p>
+<p>since <span class="math inline">\mathbb E[\min(V,F)]=\int_0^F
+P(V&gt;x)\,dx</span> and <span class="math inline">\mathbb
+E[\min(2V,F)]=2\int_0^{F/2}P(V&gt;x)\,dx</span>. For <span
+class="math inline">V=C_+=\max(C,0)</span> with <span
+class="math inline">C</span> standard Cauchy the right-hand side is
+<span
+class="math inline">\frac2\pi\int_{F/2}^{F}\arctan(1/x)\,dx</span>,
+which is positive for every <span class="math inline">F</span> and
+increases to <span class="math inline">\frac{2\ln2}{\pi}</span> as <span
+class="math inline">F\to\infty</span>.</p>
+<p>Now <span class="math inline">X+Z=C_+</span> and <span
+class="math inline">Y+Z=2C_+ + C_-</span> with <span
+class="math inline">C_-=\min(C,0)</span>. Since <span
+class="math inline">c_t(2C_++C_-)=\min(2C_+,t)</span> on <span
+class="math inline">\{C\ge0\}</span> and <span
+class="math inline">=\max(C_-,-t)</span> on <span
+class="math inline">\{C&lt;0\}</span>, and <span
+class="math inline">\mathbb E[\max(C_-,-t)]=-\mathbb
+E[\min(C_+,t)]</span> by symmetry,</p>
 <p><span class="math display">v_{X+Z}(t)-v_{Y+Z}(t)
- =2\,\mathbb E[\min(C_+,t)]-\mathbb E[\min(2C_+,t)]
- =2\int_{t/2}^{t}P(C&gt;x)\,dx&gt;0\qquad\text{for every }t&gt;0.</span></p>
-<p>So <span class="math inline">\{t:v_{X+Z}(t)\ge v_{Y+Z}(t)\}</span> is the whole domain and its reverse is empty: <span class="math inline">X+Z\succ Y+Z</span> while <span class="math inline">X\sim Y</span>. Comonotonic Sum Invariance fails. The gap tends to <span class="math inline">(2\ln2)/\pi</span>. <code>checks/comonotonic_witnesses.py</code> verifies the closed forms, the identity on an exact finite law, and the limit.</p>
+=2\,\mathbb E[\min(C_+,t)]-\mathbb E[\min(2C_+,t)]
+=2\int_{t/2}^{t}P(C&gt;x)\,dx&gt;0\qquad\text{for every
+}t&gt;0.</span></p>
+<p>So <span class="math inline">\{t:v_{X+Z}(t)\ge v_{Y+Z}(t)\}</span> is
+the whole domain and its reverse is empty: <span
+class="math inline">X+Z\succ Y+Z</span> while <span
+class="math inline">X\sim Y</span>. Comonotonic Sum Invariance fails.
+The gap tends to <span class="math inline">(2\ln2)/\pi</span>.
+<code>checks/comonotonic_witnesses.py</code> verifies the closed forms,
+the identity on an exact finite law, and the limit.</p>
 <h2 id="rational-factors">Rational factors</h2>
-<p><strong>Addition: Claude (Fable 5.1), 24 September 2026.</strong> The source’s Theorem 10 (pp. 693–695) refutes Scale Invariance by comparing <span class="math inline">\mu</span> with <span class="math inline">\mu_2</span>, the law of <span class="math inline">2X</span>: the truncated expectations satisfy <span class="math inline">E_t\mu_2=E_{2t}\mu</span>, and the witness laws are chosen so that the two comparisons reverse under this doubling. The recorded scale failure is therefore at the rational factor <span class="math inline">2</span>, and the model also fails Rational Scale Invariance, with the same source attribution and audit caveats as the Scale Invariance flag. The same doubling refutes Integer Affine Preservation: <span class="math inline">\mu\succ\nu</span> is not carried to <span class="math inline">2\mu\succeq2\nu</span>, since the second set in the theorem’s proof ranks <span class="math inline">2\nu</span> strictly above <span class="math inline">2\mu</span>.</p>
+<p><strong>Addition: Claude (Fable 5.1), 24 September 2026.</strong> The
+source’s Theorem 10 (pp. 693–695) refutes Scale Invariance by comparing
+<span class="math inline">\mu</span> with <span
+class="math inline">\mu_2</span>, the law of <span
+class="math inline">2X</span>: the truncated expectations satisfy <span
+class="math inline">E_t\mu_2=E_{2t}\mu</span>, and the witness laws are
+chosen so that the two comparisons reverse under this doubling. The
+recorded scale failure is therefore at the rational factor <span
+class="math inline">2</span>, and the model also fails Rational Scale
+Invariance, with the same source attribution and audit caveats as the
+Scale Invariance flag. The same doubling refutes Integer Affine
+Preservation: <span class="math inline">\mu\succ\nu</span> is not
+carried to <span class="math inline">2\mu\succeq2\nu</span>, since the
+second set in the theorem’s proof ranks <span
+class="math inline">2\nu</span> strictly above <span
+class="math inline">2\mu</span>.</p>
 <h2 id="failure-of-shift-invariance">Failure of Shift Invariance</h2>
-<p><strong>Addition: Zachary Goodsell (argument) and Claude (Fable 5.1) (verification), 24 September 2026.</strong> A property of the recorded exact ordering; the source’s Theorem 8 claims Shift Invariance only for the continuous quotients.</p>
-<p>Let <span class="math inline">C</span> be the standard Cauchy variable above, so <span class="math inline">v_C(t)=0=v_0(t)</span> for every <span class="math inline">t</span> and <span class="math inline">C\sim0</span>. Compare <span class="math inline">C+1</span> with sure <span class="math inline">1</span>. For <span class="math inline">t\ge1</span>, <span class="math inline">c_t(C+1)=1+\operatorname{clip}(C,[-t-1,t-1])</span>, and removing the upper part of the symmetric window gives</p>
-<p><span class="math display">v_{C+1}(t)=1+\mathbb E\bigl[\operatorname{clip}(C,[-t-1,t+1])\bigr]
- -\int_{t-1}^{t+1}P(C&gt;x)\,dx
- =1-\int_{t-1}^{t+1}P(C&gt;x)\,dx&lt;1=v_1(t),</span></p>
-<p>the middle expectation vanishing by symmetry. For <span class="math inline">0&lt;t&lt;1</span>, <span class="math inline">v_1(t)=t</span> while <span class="math inline">v_{C+1}(t)\le t</span> with equality only if <span class="math inline">C+1\ge t</span> almost surely, which is false. So <span class="math inline">\{t:v_{C+1}(t)\ge v_1(t)\}</span> is empty and its complement is the whole domain: <span class="math inline">1\succ C+1</span> for every choice of the ultrafilter, although <span class="math inline">C\sim0</span>. Shift Invariance fails at <span class="math inline">X=C</span>, <span class="math inline">Y=0</span>, <span class="math inline">b=1</span>.</p>
-<p>The deficit <span class="math inline">\int_{t-1}^{t+1}P(C&gt;x)\,dx=\frac1\pi\int_{t-1}^{t+1}\arctan(1/x)\,dx</span> tends to <span class="math inline">0</span>, so in the continuous quotient, which allows an <span class="math inline">\varepsilon</span> of slack at every level, <span class="math inline">C+1\sim1</span> and Shift Invariance survives, as the source’s Theorem 8 states. The exact ordering has no slack: any balanced prospect with an unbounded upper tail, shifted by <span class="math inline">b&gt;0</span>, stays strictly behind sure <span class="math inline">b</span> at every truncation level. Since this model satisfies DTU, DTU does not imply Shift Invariance. <code>checks/exact_shift_witness.py</code> verifies the closed forms.</p>
+<p><strong>Addition: Zachary Goodsell (argument) and Claude (Fable 5.1)
+(verification), 24 September 2026.</strong> A property of the recorded
+exact ordering; the source’s Theorem 8 claims Shift Invariance only for
+the continuous quotients.</p>
+<p>Let <span class="math inline">C</span> be the standard Cauchy
+variable above, so <span class="math inline">v_C(t)=0=v_0(t)</span> for
+every <span class="math inline">t</span> and <span
+class="math inline">C\sim0</span>. Compare <span
+class="math inline">C+1</span> with sure <span
+class="math inline">1</span>. For <span
+class="math inline">t\ge1</span>, <span
+class="math inline">c_t(C+1)=1+\operatorname{clip}(C,[-t-1,t-1])</span>,
+and removing the upper part of the symmetric window gives</p>
+<p><span class="math display">v_{C+1}(t)=1+\mathbb
+E\bigl[\operatorname{clip}(C,[-t-1,t+1])\bigr]
+-\int_{t-1}^{t+1}P(C&gt;x)\,dx
+=1-\int_{t-1}^{t+1}P(C&gt;x)\,dx&lt;1=v_1(t),</span></p>
+<p>the middle expectation vanishing by symmetry. For <span
+class="math inline">0&lt;t&lt;1</span>, <span
+class="math inline">v_1(t)=t</span> while <span
+class="math inline">v_{C+1}(t)\le t</span> with equality only if <span
+class="math inline">C+1\ge t</span> almost surely, which is false. So
+<span class="math inline">\{t:v_{C+1}(t)\ge v_1(t)\}</span> is empty and
+its complement is the whole domain: <span class="math inline">1\succ
+C+1</span> for every choice of the ultrafilter, although <span
+class="math inline">C\sim0</span>. Shift Invariance fails at <span
+class="math inline">X=C</span>, <span class="math inline">Y=0</span>,
+<span class="math inline">b=1</span>.</p>
+<p>The deficit <span
+class="math inline">\int_{t-1}^{t+1}P(C&gt;x)\,dx=\frac1\pi\int_{t-1}^{t+1}\arctan(1/x)\,dx</span>
+tends to <span class="math inline">0</span>, so in the continuous
+quotient, which allows an <span class="math inline">\varepsilon</span>
+of slack at every level, <span class="math inline">C+1\sim1</span> and
+Shift Invariance survives, as the source’s Theorem 8 states. The exact
+ordering has no slack: any balanced prospect with an unbounded upper
+tail, shifted by <span class="math inline">b&gt;0</span>, stays strictly
+behind sure <span class="math inline">b</span> at every truncation
+level. Since this model satisfies DTU, DTU does not imply Shift
+Invariance. <code>checks/exact_shift_witness.py</code> verifies the
+closed forms.</p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Proof: <a href="https://doi.org/10.1111/nous.12473">Decision theory unbound</a>.</strong> (<a href="../sources/Nous%20-%202023%20-%20Goodsell%20-%20Decision%20theory%20unbound%20%281%29.pdf">PDF</a>) Zachary Goodsell (2024). Decision theory unbound. Noûs, 58, 669–695. First published online in 2023. — Appendix B, Theorem 1, pp. 690–691; Theorems 3 and 10, pp. 691, 693–695</li>
+<li><strong>Proof: <a href="https://doi.org/10.1111/nous.12473">Decision
+theory unbound</a>.</strong> (<a
+href="../sources/Nous%20-%202023%20-%20Goodsell%20-%20Decision%20theory%20unbound%20%281%29.pdf">PDF</a>)
+Zachary Goodsell (2024). Decision theory unbound. Noûs, 58, 669–695.
+First published online in 2023. — Appendix B, Theorem 1, pp. 690–691;
+Theorems 3 and 10, pp. 691, 693–695</li>
 </ul>
 </body></html>

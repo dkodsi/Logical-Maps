@@ -321,30 +321,55 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
 <script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>$\Diamond_\vee$ = Truth ⇒ □($\Diamond_\vee$ = Truth)</h1></header><p class="cert">
-Result — Source: Misc.; produced by Codex (GPT-6), prompted by Zachary Goodsell, connecting proof; recorded by Codex (GPT-6), prompted by Zachary Goodsell.
+Result — Source: Misc.; produced by Codex (GPT-6), prompted by Zachary
+Goodsell, connecting proof; recorded by Codex (GPT-6), prompted by
+Zachary Goodsell.
 </p>
 <h2 id="premises">Premises</h2>
 <ul>
-<li><strong><span class="math inline">\Diamond_\vee</span> = Truth.</strong> <span class="math inline">\Diamond_\vee</span> <span class="math inline">= (\lambda p:t. p)</span></li>
+<li><strong><span class="math inline">\Diamond_\vee</span> =
+Truth.</strong> <span class="math inline">\Diamond_\vee</span> <span
+class="math inline">= (\lambda p:t. p)</span></li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <ul>
-<li><strong>□(<span class="math inline">\Diamond_\vee</span> = Truth).</strong> <span class="math inline">\Box</span>(<span class="math inline">\Diamond_\vee</span> <span class="math inline">= (\lambda p:t. p)</span>)</li>
+<li><strong>□(<span class="math inline">\Diamond_\vee</span> =
+Truth).</strong> <span class="math inline">\Box</span>(<span
+class="math inline">\Diamond_\vee</span> <span class="math inline">=
+(\lambda p:t. p)</span>)</li>
 </ul>
 <h2 id="proof">Proof</h2>
-<p>For any same-typed terms a,b, assume <span class="math inline">a=b</span>. Leibniz substitution gives <span class="math inline">(a=b)=(b=b)</span>. Reflexivity is an assumption-free theorem, so standing propositional intensionality gives <span class="math inline">(b=b)=\top</span>. Therefore <span class="math inline">(a=b)=\top</span>, namely <span class="math inline">\Box (a=b)</span>. Instantiate a,b with the two operators in the selected identity. This proof applies at function types as well as at t.</p>
+<p>For any same-typed terms a,b, assume <span
+class="math inline">a=b</span>. Leibniz substitution gives <span
+class="math inline">(a=b)=(b=b)</span>. Reflexivity is an
+assumption-free theorem, so standing propositional intensionality gives
+<span class="math inline">(b=b)=\top</span>. Therefore <span
+class="math inline">(a=b)=\top</span>, namely <span
+class="math inline">\Box (a=b)</span>. Instantiate a,b with the two
+operators in the selected identity. This proof applies at function types
+as well as at t.</p>
 <h2 id="notes">Notes</h2>
-<p>Informal proof; no independent checker or Lean verification. Formula assumptions are not eligible for unrestricted necessitation.</p>
+<p>Informal proof; no independent checker or Lean verification. Formula
+assumptions are not eligible for unrestricted necessitation.</p>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><strong>Codex connecting proofs, 13 Sep 2026</strong> — Codex (GPT-6), connecting proof vee-equals-truth-is-self-necessitating, 2026-09-13.</li>
-<li><strong>Possibility in Intuitionistic Higher-Order Logic</strong> — Zachary Goodsell, Possibility in Intuitionistic Higher-Order Logic (21 August 2026), §2.2, pp. 5–6; §3.2, Theorem 1, p. 9 (same substitution method) (definitions/background).</li>
+<li><strong>Codex connecting proofs, 13 Sep 2026</strong> — Codex
+(GPT-6), connecting proof vee-equals-truth-is-self-necessitating,
+2026-09-13.</li>
+<li><strong>Possibility in Intuitionistic Higher-Order Logic</strong> —
+Zachary Goodsell, Possibility in Intuitionistic Higher-Order Logic (21
+August 2026), §2.2, pp. 5–6; §3.2, Theorem 1, p. 9 (same substitution
+method) (definitions/background).</li>
 </ul>
 <p class="cert">
-Record: <code>topics/intuitionisticism/results/vee-equals-truth-is-self-necessitating.yaml</code>
+Record:
+<code>topics/intuitionisticism/results/vee-equals-truth-is-self-necessitating.yaml</code>
 </p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Background: Possibility in Intuitionistic Higher-Order Logic.</strong> Zachary Goodsell (21 August 2026). Possibility in Intuitionistic Higher-Order Logic. Manuscript. — §2.2, pp. 5–6; §3.2, Theorem 1, p. 9 (same substitution method)</li>
+<li><strong>Background: Possibility in Intuitionistic Higher-Order
+Logic.</strong> Zachary Goodsell (21 August 2026). Possibility in
+Intuitionistic Higher-Order Logic. Manuscript. — §2.2, pp. 5–6; §3.2,
+Theorem 1, p. 9 (same substitution method)</li>
 </ul>
 </body></html>

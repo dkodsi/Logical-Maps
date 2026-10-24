@@ -269,19 +269,44 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <link rel="stylesheet" href="../math/katex.min.css">
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
-<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Shift Transfer recovers Simple Relative Expectation</h1></header><p><strong>Claim.</strong> Rich Outcomes + Stochastic Equivalence + Simple <span class="math inline">\operatorname{EU} +</span> Mixture Independence + Shift Transfer imply Simple Relative Expectation.</p>
-<p>Use numerical utility notation throughout. Suppose <span class="math inline">D=X-Y</span> has finitely many values. Ignore probability-zero values, and write its remaining values as <span class="math inline">d_1,\ldots,d_k</span>, with probabilities <span class="math inline">p_1,\ldots,p_k&gt;0</span>. Rich Outcomes supplies a sure outcome for each <span class="math inline">d_i</span> and the simple gamble with utility variable <span class="math inline">D</span>.</p>
-<p>For each <span class="math inline">i</span>, choose <span class="math inline">Y_i</span> with the conditional law of <span class="math inline">Y</span> given <span class="math inline">D=d_i</span>. Such real-valued laws can be realized on the standing atomless standard probability space. The corresponding conditional law of <span class="math inline">X</span> is that of <span class="math inline">Y_i+d_i</span>. In particular, by laws,</p>
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Shift Transfer recovers Simple Relative Expectation</h1></header><p><strong>Claim.</strong> Rich Outcomes + Stochastic Equivalence +
+Simple <span class="math inline">\operatorname{EU} +</span> Mixture
+Independence + Shift Transfer imply Simple Relative Expectation.</p>
+<p>Use numerical utility notation throughout. Suppose <span
+class="math inline">D=X-Y</span> has finitely many values. Ignore
+probability-zero values, and write its remaining values as <span
+class="math inline">d_1,\ldots,d_k</span>, with probabilities <span
+class="math inline">p_1,\ldots,p_k&gt;0</span>. Rich Outcomes supplies a
+sure outcome for each <span class="math inline">d_i</span> and the
+simple gamble with utility variable <span
+class="math inline">D</span>.</p>
+<p>For each <span class="math inline">i</span>, choose <span
+class="math inline">Y_i</span> with the conditional law of <span
+class="math inline">Y</span> given <span
+class="math inline">D=d_i</span>. Such real-valued laws can be realized
+on the standing atomless standard probability space. The corresponding
+conditional law of <span class="math inline">X</span> is that of <span
+class="math inline">Y_i+d_i</span>. In particular, by laws,</p>
 <p><span class="math display">\mathcal L\bigl(M_{1/2}(X,0)\bigr)
 =\sum_{i=1}^k p_i\,\mathcal L\bigl(M_{1/2}(Y_i+d_i,0)\bigr).</span></p>
-<p>Shift Transfer, with transfer parameter <span class="math inline">d_i/2</span>, gives</p>
-<p><span class="math display">M_{1/2}(Y_i+d_i,0)\sim M_{1/2}(Y_i,d_i).</span></p>
-<p>Mixture Independence propagates indifferences through a finite randomized mixture. To justify replacement in a second branch, first exchange branches using Stochastic Equivalence, apply Independence, and exchange back. Iterating over a binary realization of the finite mixture therefore gives</p>
-<p><span class="math display">M_{1/2}(X,0)\sim M_{1/2}(Y,D). \tag{1}</span></p>
+<p>Shift Transfer, with transfer parameter <span
+class="math inline">d_i/2</span>, gives</p>
+<p><span class="math display">M_{1/2}(Y_i+d_i,0)\sim
+M_{1/2}(Y_i,d_i).</span></p>
+<p>Mixture Independence propagates indifferences through a finite
+randomized mixture. To justify replacement in a second branch, first
+exchange branches using Stochastic Equivalence, apply Independence, and
+exchange back. Iterating over a binary realization of the finite mixture
+therefore gives</p>
+<p><span class="math display">M_{1/2}(X,0)\sim M_{1/2}(Y,D).
+\tag{1}</span></p>
 <p>Here the law of the mixture after all replacements is</p>
-<p><span class="math display">\sum_i p_i\left(\tfrac12\mathcal L(Y_i)+\tfrac12\delta_{d_i}\right)
+<p><span class="math display">\sum_i p_i\left(\tfrac12\mathcal
+L(Y_i)+\tfrac12\delta_{d_i}\right)
 =\tfrac12\mathcal L(Y)+\tfrac12\mathcal L(D),</span></p>
-<p>which is precisely the law on the right of (1). Stochastic Equivalence licenses both law identities, and so also disposes of the ignored null values.</p>
+<p>which is precisely the law on the right of (1). Stochastic
+Equivalence licenses both law identities, and so also disposes of the
+ignored null values.</p>
 <p>We can now cancel mixtures:</p>
 <p><span class="math display">\begin{aligned}
 X\succeq Y
@@ -290,12 +315,36 @@ X\succeq Y
 &amp;\iff D\succeq0\\
 &amp;\iff\mathbb E D\geq0.
 \end{aligned}</span></p>
-<p>The first equivalence is Independence. The second uses (1) and the preorder. The third exchanges branches by Stochastic Equivalence and applies Independence with common second argument <span class="math inline">Y</span>. The final equivalence is Simple EU applied to the simple gamble <span class="math inline">D</span> and sure zero.</p>
-<p>No Totality, Stochastic Dominance, reflection or scaling principle is needed. Conditional laws are only a proof construction: every preference replacement of a same-law variable is explicitly licensed by Stochastic Equivalence. Rich Outcomes ensures availability of the newly formed numerical outcomes and does not serve as a hidden total-chart assumption.</p>
-<p><strong>Original work: proof adaptation.</strong> This is Goodsell’s finite-shift redistribution argument from Theorem 4, reorganized to identify its actual sufficient premises. The source’s use of affine symmetry enters through Shift Transfer, which is now exposed as a separate input. No literature novelty is asserted.</p>
-<p><strong>Attribution.</strong> Original argument: Zachary Goodsell, <em>Symmetries of value</em>, Theorem 4, pp. 26–27. Reduced-premise formulation and random-variable audit: GPT-6 (Codex), 9 September 2026. No independent checker or Lean proof is claimed.</p>
+<p>The first equivalence is Independence. The second uses (1) and the
+preorder. The third exchanges branches by Stochastic Equivalence and
+applies Independence with common second argument <span
+class="math inline">Y</span>. The final equivalence is Simple EU applied
+to the simple gamble <span class="math inline">D</span> and sure
+zero.</p>
+<p>No Totality, Stochastic Dominance, reflection or scaling principle is
+needed. Conditional laws are only a proof construction: every preference
+replacement of a same-law variable is explicitly licensed by Stochastic
+Equivalence. Rich Outcomes ensures availability of the newly formed
+numerical outcomes and does not serve as a hidden total-chart
+assumption.</p>
+<p><strong>Original work: proof adaptation.</strong> This is Goodsell’s
+finite-shift redistribution argument from Theorem 4, reorganized to
+identify its actual sufficient premises. The source’s use of affine
+symmetry enters through Shift Transfer, which is now exposed as a
+separate input. No literature novelty is asserted.</p>
+<p><strong>Attribution.</strong> Original argument: Zachary Goodsell,
+<em>Symmetries of value</em>, Theorem 4, pp. 26–27. Reduced-premise
+formulation and random-variable audit: GPT-6 (Codex), 9 September 2026.
+No independent checker or Lean proof is claimed.</p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Background: <a href="https://doi.org/10.1111/nous.12549">Symmetries of value</a>.</strong> (<a href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>) Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. — Theorem 4, pp. 26–27. The cited argument is adapted with the explicitly listed sufficient premises; the reduced-premise claim is the present project contribution</li>
+<li><strong>Background: <a
+href="https://doi.org/10.1111/nous.12549">Symmetries of
+value</a>.</strong> (<a
+href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>)
+Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. — Theorem
+4, pp. 26–27. The cited argument is adapted with the explicitly listed
+sufficient premises; the reduced-premise claim is the present project
+contribution</li>
 </ul>
 </body></html>

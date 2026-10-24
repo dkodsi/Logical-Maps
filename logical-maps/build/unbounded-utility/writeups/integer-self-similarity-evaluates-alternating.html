@@ -270,33 +270,92 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
 <script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Rich Outcomes ∧ Stochastic Equivalence ∧ Simple Expected Utility ∧ Uniqueness of Negative Self-Similarity (integer ratios) ⇒ Alternating St Petersburg = −1/2</h1></header><p class="cert">
-Result — Source: Misc.; produced by Zachary Goodsell (source argument); GPT-6 (Codex) (adaptation through the uniqueness principle); Claude (Fable 5.1) (integer-ratio premise audit), 2026-09-24; recorded by Claude (Fable 5.1), prompted by Zachary Goodsell, 2026-09-24.
+Result — Source: Misc.; produced by Zachary Goodsell (source argument);
+GPT-6 (Codex) (adaptation through the uniqueness principle); Claude
+(Fable 5.1) (integer-ratio premise audit), 2026-09-24; recorded by
+Claude (Fable 5.1), prompted by Zachary Goodsell, 2026-09-24.
 </p>
 <h2 id="premises">Premises</h2>
 <ul>
-<li><strong>Rich Outcomes.</strong> Every real number r occurs as a utility level of a sure outcome: for each <span class="math inline">r \in \mathbb{R}</span> there is an outcome <span class="math inline">o_r</span> with <span class="math inline">u(o_r)=r</span>, with u defined by the normalized binary-mixture comparisons in the background. This does not assert that every outcome has a finite real level.</li>
-<li><strong>Stochastic Equivalence.</strong> If X and Y have the same probability law over outcomes, then <span class="math inline">X \sim Y</span>. The variables remain distinct objects; indifference is an additional axiom.</li>
-<li><strong>Simple Expected Utility.</strong> The normalized real utility chart u is defined on every outcome, is measurable, and ranks every pair of simple random variables exactly by finite expected utility: <span class="math inline">X \succeq Y</span> iff <span class="math inline">E[u(X)] \ge E[u(Y)]</span>. Surjectivity of u is not included here.</li>
-<li><strong>Uniqueness of Negative Self-Similarity (integer ratios).</strong> Fix <span class="math inline">0&lt;p&lt;1</span>, a positive integer <span class="math inline">a</span>, <span class="math inline">b\in \mathbb{R}</span> and Z. If <span class="math inline">X \sim M_p(- aX+b,Z)</span> and <span class="math inline">Y \sim M_p(- aY+b,Z)</span>, then <span class="math inline">X \sim Y</span>.</li>
+<li><strong>Rich Outcomes.</strong> Every real number r occurs as a
+utility level of a sure outcome: for each <span class="math inline">r
+\in \mathbb{R}</span> there is an outcome <span
+class="math inline">o_r</span> with <span
+class="math inline">u(o_r)=r</span>, with u defined by the normalized
+binary-mixture comparisons in the background. This does not assert that
+every outcome has a finite real level.</li>
+<li><strong>Stochastic Equivalence.</strong> If X and Y have the same
+probability law over outcomes, then <span class="math inline">X \sim
+Y</span>. The variables remain distinct objects; indifference is an
+additional axiom.</li>
+<li><strong>Simple Expected Utility.</strong> The normalized real
+utility chart u is defined on every outcome, is measurable, and ranks
+every pair of simple random variables exactly by finite expected
+utility: <span class="math inline">X \succeq Y</span> iff <span
+class="math inline">E[u(X)] \ge E[u(Y)]</span>. Surjectivity of u is not
+included here.</li>
+<li><strong>Uniqueness of Negative Self-Similarity (integer
+ratios).</strong> Fix <span class="math inline">0&lt;p&lt;1</span>, a
+positive integer <span class="math inline">a</span>, <span
+class="math inline">b\in \mathbb{R}</span> and Z. If <span
+class="math inline">X \sim M_p(- aX+b,Z)</span> and <span
+class="math inline">Y \sim M_p(- aY+b,Z)</span>, then <span
+class="math inline">X \sim Y</span>.</li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <ul>
-<li><strong>Alternating St Petersburg = −1/2.</strong> Every <span class="math inline">X</span> with <span class="math display">P(u(X)=(-2)^n)=2^{-n},\qquad n\ge 1</span> is indifferent to sure utility <span class="math inline">-\frac{1}{2}</span>.</li>
+<li><strong>Alternating St Petersburg = −1/2.</strong> Every <span
+class="math inline">X</span> with <span
+class="math display">P(u(X)=(-2)^n)=2^{-n},\qquad n\ge 1</span> is
+indifferent to sure utility <span
+class="math inline">-\frac{1}{2}</span>.</li>
 </ul>
 <h2 id="proof">Proof</h2>
-<p>The recorded proof of negative-self-similarity-evaluates-alternating (writeups/negative-self-similarity-evaluates-alternating.md) applies uniqueness once, at <span class="math inline">p=1/2, a=2, b=0</span> and Z sure −2: splitting off the first atom gives <span class="math inline">A\sim M_{1/2}(- 2A,- 2)</span> by Stochastic Equivalence, and Simple EU gives <span class="math inline">c\sim M_{1/2}(- 2c,- 2)</span> for the sure value <span class="math inline">c=- 1/2</span>, since <span class="math inline">M_{1/2}(1,- 2)</span> has expectation −1/2. The ratio is the integer 2, so the integer-ratio principle gives <span class="math inline">A\sim c</span>. Rich Outcomes supplies the outcomes used.</p>
+<p>The recorded proof of negative-self-similarity-evaluates-alternating
+(writeups/negative-self-similarity-evaluates-alternating.md) applies
+uniqueness once, at <span class="math inline">p=1/2, a=2, b=0</span> and
+Z sure −2: splitting off the first atom gives <span
+class="math inline">A\sim M_{1/2}(- 2A,- 2)</span> by Stochastic
+Equivalence, and Simple EU gives <span class="math inline">c\sim
+M_{1/2}(- 2c,- 2)</span> for the sure value <span
+class="math inline">c=- 1/2</span>, since <span
+class="math inline">M_{1/2}(1,- 2)</span> has expectation −1/2. The
+ratio is the integer 2, so the integer-ratio principle gives <span
+class="math inline">A\sim c</span>. Rich Outcomes supplies the outcomes
+used.</p>
 <h2 id="notes">Notes</h2>
-<p>Premise audit of negative-self-similarity-evaluates-alternating, which stays recorded with the real-ratio principle. With totality-independence-integer-affine-reflection-imply-integer-self-similarity and comonotonic-sum-implies-integer-affine-preservation, the alternating evaluation follows from Rich Outcomes, Totality, Stochastic Equivalence, Simple EU, Mixture Independence, Reflection Anti-Invariance and either Integer Affine Preservation or Comonotonic Sum Invariance; no scale invariance for real or rational factors is needed. No independent checker or Lean verification is claimed.</p>
+<p>Premise audit of negative-self-similarity-evaluates-alternating,
+which stays recorded with the real-ratio principle. With
+totality-independence-integer-affine-reflection-imply-integer-self-similarity
+and comonotonic-sum-implies-integer-affine-preservation, the alternating
+evaluation follows from Rich Outcomes, Totality, Stochastic Equivalence,
+Simple EU, Mixture Independence, Reflection Anti-Invariance and either
+Integer Affine Preservation or Comonotonic Sum Invariance; no scale
+invariance for real or rational factors is needed. No independent
+checker or Lean verification is claimed.</p>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><strong>GPT-6 adaptation 9 Sep, Claude audit 24 Sep</strong> — GPT-6 (Codex), prompted by Zachary Goodsell, 9 September 2026: the factorization through the uniqueness principle, in writeups/negative-self-similarity-evaluates-alternating.md; Claude (Fable 5.1), 24 September 2026: the observation that only the ratio 2 is used.</li>
-<li><strong>Symmetries of Value</strong> — Goodsell, Symmetries of value, Noûs 60 (2026), 16–37; DOI 10.1111/nous.12549, Theorems 9–10, pp. 30–31</li>
+<li><strong>GPT-6 adaptation 9 Sep, Claude audit 24 Sep</strong> — GPT-6
+(Codex), prompted by Zachary Goodsell, 9 September 2026: the
+factorization through the uniqueness principle, in
+writeups/negative-self-similarity-evaluates-alternating.md; Claude
+(Fable 5.1), 24 September 2026: the observation that only the ratio 2 is
+used.</li>
+<li><strong>Symmetries of Value</strong> — Goodsell, Symmetries of
+value, Noûs 60 (2026), 16–37; DOI 10.1111/nous.12549, Theorems 9–10,
+pp. 30–31</li>
 </ul>
 <p class="cert">
-Record: <code>topics/unbounded-utility/results/integer-self-similarity-evaluates-alternating.yaml</code>
+Record:
+<code>topics/unbounded-utility/results/integer-self-similarity-evaluates-alternating.yaml</code>
 </p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Background: <a href="https://doi.org/10.1111/nous.12549">Symmetries of value</a>.</strong> (<a href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>) Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. — Theorems 9–10, pp. 30–31</li>
+<li><strong>Background: <a
+href="https://doi.org/10.1111/nous.12549">Symmetries of
+value</a>.</strong> (<a
+href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>)
+Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. —
+Theorems 9–10, pp. 30–31</li>
 </ul>
 </body></html>

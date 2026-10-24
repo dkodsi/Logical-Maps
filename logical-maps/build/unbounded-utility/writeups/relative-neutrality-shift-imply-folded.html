@@ -269,35 +269,91 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <link rel="stylesheet" href="../math/katex.min.css">
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
-<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Relative Expectation, Neutrality and Shift Invariance imply Folded Expectation</h1></header><p><strong>Claim.</strong> Rich Outcomes + Stochastic Equivalence + Relative Expectation + Symmetric Neutrality + Shift Invariance imply Folded Expectation.</p>
-<p>Write the real utility variable of a gamble as <span class="math inline">X</span>. Put</p>
-<p><span class="math display">h_X(t)=\mathbb P(X&gt;t)-\mathbb P(X&lt;-t),\qquad
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Relative Expectation, Neutrality and Shift Invariance imply Folded Expectation</h1></header><p><strong>Claim.</strong> Rich Outcomes + Stochastic Equivalence +
+Relative Expectation + Symmetric Neutrality + Shift Invariance imply
+Folded Expectation.</p>
+<p>Write the real utility variable of a gamble as <span
+class="math inline">X</span>. Put</p>
+<p><span class="math display">h_X(t)=\mathbb P(X&gt;t)-\mathbb
+P(X&lt;-t),\qquad
 F(X)=\int_0^\infty h_X(t)\,dt,</span></p>
-<p>and suppose <span class="math inline">\int_0^\infty|h_X(t)|\,dt&lt;\infty</span>. Let <span class="math inline">S_X(t)=\mathbb P(X&gt;t)</span>, and set <span class="math inline">d(t)=S_X(t)-S_{-X}(t)</span>.</p>
-<p>For positive <span class="math inline">t</span>, <span class="math inline">d(t)=h_X(t)</span>. For negative <span class="math inline">t</span>, <span class="math inline">d(t)=h_X(-t)</span> except possibly when <span class="math inline">t</span> or <span class="math inline">-t</span> is an atom threshold. There are at most countably many such thresholds, so</p>
-<p><span class="math display">\int_{\mathbb R}|d(t)|\,dt=2\int_0^\infty|h_X(t)|\,dt&lt;\infty,
+<p>and suppose <span
+class="math inline">\int_0^\infty|h_X(t)|\,dt&lt;\infty</span>. Let
+<span class="math inline">S_X(t)=\mathbb P(X&gt;t)</span>, and set <span
+class="math inline">d(t)=S_X(t)-S_{-X}(t)</span>.</p>
+<p>For positive <span class="math inline">t</span>, <span
+class="math inline">d(t)=h_X(t)</span>. For negative <span
+class="math inline">t</span>, <span
+class="math inline">d(t)=h_X(-t)</span> except possibly when <span
+class="math inline">t</span> or <span class="math inline">-t</span> is
+an atom threshold. There are at most countably many such thresholds,
+so</p>
+<p><span class="math display">\int_{\mathbb
+R}|d(t)|\,dt=2\int_0^\infty|h_X(t)|\,dt&lt;\infty,
 \qquad \int_{\mathbb R}d(t)\,dt=2F(X). \tag{1}</span></p>
-<p>Let <span class="math inline">U</span> be uniform and <span class="math inline">Q_X</span> an increasing quantile for <span class="math inline">X</span>. Define</p>
+<p>Let <span class="math inline">U</span> be uniform and <span
+class="math inline">Q_X</span> an increasing quantile for <span
+class="math inline">X</span>. Define</p>
 <p><span class="math display">A=Q_X(U),\qquad B=-Q_X(1-U).</span></p>
-<p>Arbitrary finite values may be assigned at the null quantile endpoints. These have the laws of <span class="math inline">X</span> and <span class="math inline">-X</span>, and both are nondecreasing functions of <span class="math inline">U</span>. Their upper-threshold events are therefore nested for every threshold, up to null sets. Tonelli’s theorem and the elementary interval-length identity give</p>
+<p>Arbitrary finite values may be assigned at the null quantile
+endpoints. These have the laws of <span class="math inline">X</span> and
+<span class="math inline">-X</span>, and both are nondecreasing
+functions of <span class="math inline">U</span>. Their upper-threshold
+events are therefore nested for every threshold, up to null sets.
+Tonelli’s theorem and the elementary interval-length identity give</p>
 <p><span class="math display">\begin{aligned}
 \mathbb E|A-B|
-&amp;=\int_{\mathbb R}\mathbb E\left|\mathbf1_{\{A&gt;t\}}-\mathbf1_{\{B&gt;t\}}\right|\,dt\\
+&amp;=\int_{\mathbb R}\mathbb
+E\left|\mathbf1_{\{A&gt;t\}}-\mathbf1_{\{B&gt;t\}}\right|\,dt\\
 &amp;=\int_{\mathbb R}|S_X(t)-S_{-X}(t)|\,dt&lt;\infty.
 \end{aligned}</span></p>
-<p>Since this integral is finite, Fubini also gives <span class="math inline">\mathbb E(A-B)=\int d=2F(X)</span>.</p>
+<p>Since this integral is finite, Fubini also gives <span
+class="math inline">\mathbb E(A-B)=\int d=2F(X)</span>.</p>
 <p>Now set</p>
-<p><span class="math display">Z=\frac{A+B}{2}=\frac{Q_X(U)-Q_X(1-U)}2.</span></p>
-<p>Replacing <span class="math inline">U</span> by <span class="math inline">1-U</span> negates <span class="math inline">Z</span> without changing its law. Thus Symmetric Neutrality gives <span class="math inline">Z\sim0</span>. Moreover, <span class="math inline">A-Z=(A-B)/2</span> is integrable with mean <span class="math inline">F(X)</span>. Relative Expectation applied in both directions gives</p>
+<p><span
+class="math display">Z=\frac{A+B}{2}=\frac{Q_X(U)-Q_X(1-U)}2.</span></p>
+<p>Replacing <span class="math inline">U</span> by <span
+class="math inline">1-U</span> negates <span
+class="math inline">Z</span> without changing its law. Thus Symmetric
+Neutrality gives <span class="math inline">Z\sim0</span>. Moreover,
+<span class="math inline">A-Z=(A-B)/2</span> is integrable with mean
+<span class="math inline">F(X)</span>. Relative Expectation applied in
+both directions gives</p>
 <p><span class="math display">A\sim Z+F(X),</span></p>
-<p>because their actual difference has mean zero. Shift Invariance transports <span class="math inline">Z\sim0</span> to <span class="math inline">Z+F(X)\sim F(X)</span>, and Stochastic Equivalence gives <span class="math inline">X\sim A</span>. Consequently</p>
+<p>because their actual difference has mean zero. Shift Invariance
+transports <span class="math inline">Z\sim0</span> to <span
+class="math inline">Z+F(X)\sim F(X)</span>, and Stochastic Equivalence
+gives <span class="math inline">X\sim A</span>. Consequently</p>
 <p><span class="math display">X\sim F(X).</span></p>
-<p>The same argument applies to any other foldable <span class="math inline">Y</span>. The standing linear sure-outcome order then yields <span class="math inline">X\succeq Y</span> exactly when <span class="math inline">F(X)\geq F(Y)</span>.</p>
-<p>Rich Outcomes supplies the midpoint, shifted variables and sure folded values. All are finite-chart variables, even when their individual ordinary expectations are undefined. No conditional improper integral is used: the absolute integrability in (1) is what justifies both Tonelli/Fubini steps. Totality, Mixture Independence and full affine symmetry are absent from the proof.</p>
-<p><strong>Original work: proof adaptation.</strong> The source’s folded-expectation argument uses a comparison with a symmetric prospect. The present contribution expands that comparison as an explicit quantile coupling and audits which assumptions it needs. This is a reduced-premise connection for the database, not a literature-novelty claim.</p>
-<p><strong>Attribution.</strong> Source construction: Zachary Goodsell, <em>Symmetries of value</em>, Theorem 6, pp. 27–29. Explicit coupling proof and premise audit: GPT-6 (Codex), 9 September 2026. No independent checker or Lean proof is claimed.</p>
+<p>The same argument applies to any other foldable <span
+class="math inline">Y</span>. The standing linear sure-outcome order
+then yields <span class="math inline">X\succeq Y</span> exactly when
+<span class="math inline">F(X)\geq F(Y)</span>.</p>
+<p>Rich Outcomes supplies the midpoint, shifted variables and sure
+folded values. All are finite-chart variables, even when their
+individual ordinary expectations are undefined. No conditional improper
+integral is used: the absolute integrability in (1) is what justifies
+both Tonelli/Fubini steps. Totality, Mixture Independence and full
+affine symmetry are absent from the proof.</p>
+<p><strong>Original work: proof adaptation.</strong> The source’s
+folded-expectation argument uses a comparison with a symmetric prospect.
+The present contribution expands that comparison as an explicit quantile
+coupling and audits which assumptions it needs. This is a
+reduced-premise connection for the database, not a literature-novelty
+claim.</p>
+<p><strong>Attribution.</strong> Source construction: Zachary Goodsell,
+<em>Symmetries of value</em>, Theorem 6, pp. 27–29. Explicit coupling
+proof and premise audit: GPT-6 (Codex), 9 September 2026. No independent
+checker or Lean proof is claimed.</p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Background: <a href="https://doi.org/10.1111/nous.12549">Symmetries of value</a>.</strong> (<a href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>) Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. — Theorem 6, pp. 27–29. The cited argument is adapted with the explicitly listed sufficient premises; the reduced-premise claim is the present project contribution</li>
+<li><strong>Background: <a
+href="https://doi.org/10.1111/nous.12549">Symmetries of
+value</a>.</strong> (<a
+href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>)
+Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. — Theorem
+6, pp. 27–29. The cited argument is adapted with the explicitly listed
+sufficient premises; the reduced-premise claim is the present project
+contribution</li>
 </ul>
 </body></html>

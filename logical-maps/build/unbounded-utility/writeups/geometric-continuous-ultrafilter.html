@@ -269,79 +269,280 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <link rel="stylesheet" href="../math/katex.min.css">
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
-<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Clipped expectation: continuous ultrafilter dominance [−4ⁿ, 4ⁿ]</h1></header><p>Source: <strong>Misc.</strong> Construction by Zachary Goodsell; specialization and the additional proofs below by GPT-6 (Codex), prompted by Zachary Goodsell, 9 September 2026. No independent checker or Lean verification is asserted.</p>
-<p><strong>Original work: model adaptation and direct verification.</strong> We reuse the continuous ultrafilter construction from <em>Decision theory unbound</em>, Appendix B, Definition 3, Lemma 6 and Theorem 3. Choosing geometric cutoffs supplies an explicit alternating-game evaluation and scaling reversal. The CDF-area, <span class="math inline">L^{1}</span> and folded-expectation verifications below establish extra properties of this construction. This is an account of work done for the map, not a claim that these observations are new in the literature.</p>
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Clipped expectation: continuous ultrafilter dominance [−4ⁿ, 4ⁿ]</h1></header><p>Source: <strong>Misc.</strong> Construction by Zachary Goodsell;
+specialization and the additional proofs below by GPT-6 (Codex),
+prompted by Zachary Goodsell, 9 September 2026. No independent checker
+or Lean verification is asserted.</p>
+<p><strong>Original work: model adaptation and direct
+verification.</strong> We reuse the continuous ultrafilter construction
+from <em>Decision theory unbound</em>, Appendix B, Definition 3, Lemma 6
+and Theorem 3. Choosing geometric cutoffs supplies an explicit
+alternating-game evaluation and scaling reversal. The CDF-area, <span
+class="math inline">L^{1}</span> and folded-expectation verifications
+below establish extra properties of this construction. This is an
+account of work done for the map, not a claim that these observations
+are new in the literature.</p>
 <h2 id="construction-and-dtu">Construction and DTU</h2>
-<p>Outcomes are real utilities; all measurable random variables on the standing sample space are available. Choose a free ultrafilter <span class="math inline">\mathcal U</span> on the positive integers. Put <span class="math inline">t_n=4^n</span>, <span class="math inline">c_t(x)=\max(-t,\min(x,t))</span>, and</p>
+<p>Outcomes are real utilities; all measurable random variables on the
+standing sample space are available. Choose a free ultrafilter <span
+class="math inline">\mathcal U</span> on the positive integers. Put
+<span class="math inline">t_n=4^n</span>, <span
+class="math inline">c_t(x)=\max(-t,\min(x,t))</span>, and</p>
 <p><span class="math display">
 v_X(n)=E[c_{t_n}(X)],\qquad
 X\succeq Y\iff
 \forall\varepsilon&gt;0\quad
 \{n:v_X(n)-v_Y(n)\ge-\varepsilon\}\in\mathcal U.
 </span></p>
-<p>Changing a comparison sequence by a sequence tending to zero leaves this relation unchanged. A positive lower bound on an ultrafilter-large set gives strict preference. If a difference converges to a finite number, its comparison is exactly the sign of that number, including indifference at zero.</p>
-<p>Reflexivity is immediate. For transitivity, intersect the two sets corresponding to tolerance <span class="math inline">\varepsilon/2</span>. If <span class="math inline">X\not\succeq Y</span>, ultrafilter dichotomy gives an <span class="math inline">\varepsilon&gt;0</span> and an ultrafilter-large set where <span class="math inline">v_Y-v_X&gt;\varepsilon</span>. Thus <span class="math inline">Y\succ X</span>, establishing totality. These statements use addition and positive scalar multiplication of comparison sequences; no multiplication of arbitrary unbounded quotient classes is needed.</p>
-<p>Equal laws have identical clipped expectations. For bounded, hence simple, variables clipping eventually disappears; their comparisons are ordinary expectations. In particular the normalized chart is the identity and every real utility is realized. Randomized mixtures satisfy <span class="math inline">v_{M_p(X,Z)}=p v_X+(1-p)v_Z</span>, so cancelling the common term and rescaling <span class="math inline">\varepsilon</span> proves both directions of Mixture Independence.</p>
-<p>For survival functions <span class="math inline">S_X</span>, bounded layer integration gives</p>
+<p>Changing a comparison sequence by a sequence tending to zero leaves
+this relation unchanged. A positive lower bound on an ultrafilter-large
+set gives strict preference. If a difference converges to a finite
+number, its comparison is exactly the sign of that number, including
+indifference at zero.</p>
+<p>Reflexivity is immediate. For transitivity, intersect the two sets
+corresponding to tolerance <span
+class="math inline">\varepsilon/2</span>. If <span
+class="math inline">X\not\succeq Y</span>, ultrafilter dichotomy gives
+an <span class="math inline">\varepsilon&gt;0</span> and an
+ultrafilter-large set where <span
+class="math inline">v_Y-v_X&gt;\varepsilon</span>. Thus <span
+class="math inline">Y\succ X</span>, establishing totality. These
+statements use addition and positive scalar multiplication of comparison
+sequences; no multiplication of arbitrary unbounded quotient classes is
+needed.</p>
+<p>Equal laws have identical clipped expectations. For bounded, hence
+simple, variables clipping eventually disappears; their comparisons are
+ordinary expectations. In particular the normalized chart is the
+identity and every real utility is realized. Randomized mixtures satisfy
+<span class="math inline">v_{M_p(X,Z)}=p v_X+(1-p)v_Z</span>, so
+cancelling the common term and rescaling <span
+class="math inline">\varepsilon</span> proves both directions of Mixture
+Independence.</p>
+<p>For survival functions <span class="math inline">S_X</span>, bounded
+layer integration gives</p>
 <p><span class="math display">
 v_X(n)-v_Y(n)=\int_{-t_n}^{t_n}(S_X(s)-S_Y(s))\,ds.
 </span></p>
-<p>Stochastic dominance makes the integrand nonnegative. If it is strictly positive at one threshold, right-continuity gives a positive integral over some bounded interval. Every sufficiently large cutoff therefore has a fixed positive gap. This proves strict as well as weak Stochastic Dominance, and finishes DTU.</p>
-<h2 id="additional-expectation-and-continuity-properties">Additional expectation and continuity properties</h2>
-<p>Write <span class="math inline">d=S_X-S_Y</span> and <span class="math inline">A_\pm=\int d_\pm</span>. If at least one of these areas is finite, monotone convergence of the positive and negative parts over <span class="math inline">[-t_n,t_n]</span> shows that the clipped difference tends to the well-defined extended difference <span class="math inline">A_+-A_-</span>. The preceding sign criterion proves <strong>CDF-Area Extension</strong>, including the equality case and both possible infinite signs. Consequently the recorded CDF-area implications give Relative Expectation and Expected Utility.</p>
-<p>For <strong>L¹ Continuity</strong>, clipping is 1-Lipschitz, so for every cutoff</p>
+<p>Stochastic dominance makes the integrand nonnegative. If it is
+strictly positive at one threshold, right-continuity gives a positive
+integral over some bounded interval. Every sufficiently large cutoff
+therefore has a fixed positive gap. This proves strict as well as weak
+Stochastic Dominance, and finishes DTU.</p>
+<h2 id="additional-expectation-and-continuity-properties">Additional
+expectation and continuity properties</h2>
+<p>Write <span class="math inline">d=S_X-S_Y</span> and <span
+class="math inline">A_\pm=\int d_\pm</span>. If at least one of these
+areas is finite, monotone convergence of the positive and negative parts
+over <span class="math inline">[-t_n,t_n]</span> shows that the clipped
+difference tends to the well-defined extended difference <span
+class="math inline">A_+-A_-</span>. The preceding sign criterion proves
+<strong>CDF-Area Extension</strong>, including the equality case and
+both possible infinite signs. Consequently the recorded CDF-area
+implications give Relative Expectation and Expected Utility.</p>
+<p>For <strong>L¹ Continuity</strong>, clipping is 1-Lipschitz, so for
+every cutoff</p>
 <p><span class="math display">
 |v_{X_k}(n)-v_X(n)|\le E|X_k-X|.
 </span></p>
-<p>If this last quantity tends to zero and every <span class="math inline">X_k\succeq Y</span>, fix <span class="math inline">\varepsilon&gt;0</span> and choose one <span class="math inline">k</span> with error below <span class="math inline">\varepsilon/2</span>. On the ultrafilter-large set where <span class="math inline">v_{X_k}-v_Y\ge-\varepsilon/2</span>, we have <span class="math inline">v_X-v_Y\ge-\varepsilon</span>. This is exactly the required upper-section closure. It also applies when other distances in the domain are infinite.</p>
-<p>For <strong>Folded Expectation</strong>, put <span class="math inline">h_X(s)=P(X&gt;s)-P(X&lt;-s)</span>. Layer integration gives <span class="math inline">v_X(n)=\int_0^{t_n}h_X(s)\,ds</span>; boundary atoms change no integral. If <span class="math inline">h_X,h_Y</span> are absolutely integrable, these converge to their folded expectations. Their finite difference is therefore compared by its sign.</p>
-<p>Reflection negates every clipped expectation, proving <strong>Reflection Anti-Invariance</strong>. For a real constant <span class="math inline">b</span>, <span class="math inline">c_t(X+b)-c_t(X)\to b</span> pointwise with absolute value at most <span class="math inline">|b|</span>. Dominated convergence shows that shifting both compared variables changes the clipped difference by a sequence tending to zero. This proves <strong>Shift Invariance</strong>. No individual integrability of the variables is required.</p>
-<h2 id="explicit-failures-of-scale-alternating-evaluation-and-uniqueness">Explicit failures of scale, alternating evaluation and uniqueness</h2>
-<p>Let <span class="math inline">A</span> have <span class="math inline">P(A=(-2)^j)=2^{-j}</span>, <span class="math inline">j\ge1</span>. For <span class="math inline">2^k\le t\le2^{k+1}</span>, summing the finite prefix and the geometric tail gives</p>
+<p>If this last quantity tends to zero and every <span
+class="math inline">X_k\succeq Y</span>, fix <span
+class="math inline">\varepsilon&gt;0</span> and choose one <span
+class="math inline">k</span> with error below <span
+class="math inline">\varepsilon/2</span>. On the ultrafilter-large set
+where <span class="math inline">v_{X_k}-v_Y\ge-\varepsilon/2</span>, we
+have <span class="math inline">v_X-v_Y\ge-\varepsilon</span>. This is
+exactly the required upper-section closure. It also applies when other
+distances in the domain are infinite.</p>
+<p>For <strong>Folded Expectation</strong>, put <span
+class="math inline">h_X(s)=P(X&gt;s)-P(X&lt;-s)</span>. Layer
+integration gives <span
+class="math inline">v_X(n)=\int_0^{t_n}h_X(s)\,ds</span>; boundary atoms
+change no integral. If <span class="math inline">h_X,h_Y</span> are
+absolutely integrable, these converge to their folded expectations.
+Their finite difference is therefore compared by its sign.</p>
+<p>Reflection negates every clipped expectation, proving
+<strong>Reflection Anti-Invariance</strong>. For a real constant <span
+class="math inline">b</span>, <span
+class="math inline">c_t(X+b)-c_t(X)\to b</span> pointwise with absolute
+value at most <span class="math inline">|b|</span>. Dominated
+convergence shows that shifting both compared variables changes the
+clipped difference by a sequence tending to zero. This proves
+<strong>Shift Invariance</strong>. No individual integrability of the
+variables is required.</p>
+<h2
+id="explicit-failures-of-scale-alternating-evaluation-and-uniqueness">Explicit
+failures of scale, alternating evaluation and uniqueness</h2>
+<p>Let <span class="math inline">A</span> have <span
+class="math inline">P(A=(-2)^j)=2^{-j}</span>, <span
+class="math inline">j\ge1</span>. For <span class="math inline">2^k\le
+t\le2^{k+1}</span>, summing the finite prefix and the geometric tail
+gives</p>
 <p><span class="math display">
 E[c_t(A)]
 =\sum_{j=1}^k(-1)^j+
   \frac{(-1)^{k+1}t}{3\,2^k}.
 </span></p>
-<p>At <span class="math inline">t_n=4^n</span>, this equals <span class="math inline">-1/3</span>, whereas <span class="math inline">E[c_{t_n}(2A)]=2E[c_{t_n/2}(A)]=-4/3</span>. Hence</p>
+<p>At <span class="math inline">t_n=4^n</span>, this equals <span
+class="math inline">-1/3</span>, whereas <span
+class="math inline">E[c_{t_n}(2A)]=2E[c_{t_n/2}(A)]=-4/3</span>.
+Hence</p>
 <p><span class="math display">
 A\sim-1/3\succ-1/2,
 \qquad 2A\sim-4/3\prec-1.
 </span></p>
-<p>This is a concrete scaling reversal in every free-ultrafilter choice used here. It also directly violates the recorded Alternating St Petersburg Value principle.</p>
-<p>The law of <span class="math inline">A</span> is the half-mixture of <span class="math inline">-2A</span> and sure <span class="math inline">-2</span>: the sure branch supplies the first atom and the other branch supplies all subsequent atoms. Stochastic Equivalence gives <span class="math inline">A\sim M_{1/2}(-2A,-2)</span>. The sure gamble <span class="math inline">q=-1/2</span> satisfies the same fixed-value equation by Simple EU, since <span class="math inline">\frac12(-2q)+\frac12(-2)=q</span>. Nevertheless <span class="math inline">A\not\sim q</span>. With <span class="math inline">p=1/2,a=2,b=0,Z=-2</span>, these are two witnesses refuting <strong>Uniqueness of Negative Self-Similarity</strong>.</p>
+<p>This is a concrete scaling reversal in every free-ultrafilter choice
+used here. It also directly violates the recorded Alternating St
+Petersburg Value principle.</p>
+<p>The law of <span class="math inline">A</span> is the half-mixture of
+<span class="math inline">-2A</span> and sure <span
+class="math inline">-2</span>: the sure branch supplies the first atom
+and the other branch supplies all subsequent atoms. Stochastic
+Equivalence gives <span class="math inline">A\sim
+M_{1/2}(-2A,-2)</span>. The sure gamble <span
+class="math inline">q=-1/2</span> satisfies the same fixed-value
+equation by Simple EU, since <span
+class="math inline">\frac12(-2q)+\frac12(-2)=q</span>. Nevertheless
+<span class="math inline">A\not\sim q</span>. With <span
+class="math inline">p=1/2,a=2,b=0,Z=-2</span>, these are two witnesses
+refuting <strong>Uniqueness of Negative Self-Similarity</strong>.</p>
 <h2 id="scope-and-validation">Scope and validation</h2>
-<p>The model satisfies DTU together with CDF-Area Extension, <span class="math inline">L^{1}</span> Continuity, Folded Expectation, reflection and shift, yet fails scale and the two calculation/evaluation principles just exhibited. Further exclusions are derived by the map’s implication records, not asserted without evidence. The free ultrafilter remains nonconstructive.</p>
-<p><code>checks/geometric_clipping.py</code> checks the geometric-tail calculation against a separate finite-sum calculation with a rigorous residual bound, the scaling reversal, and the finite Lipschitz estimate. Those checks are diagnostics; the quantified claims rely on the proofs above.</p>
+<p>The model satisfies DTU together with CDF-Area Extension, <span
+class="math inline">L^{1}</span> Continuity, Folded Expectation,
+reflection and shift, yet fails scale and the two calculation/evaluation
+principles just exhibited. Further exclusions are derived by the map’s
+implication records, not asserted without evidence. The free ultrafilter
+remains nonconstructive.</p>
+<p><code>checks/geometric_clipping.py</code> checks the geometric-tail
+calculation against a separate finite-sum calculation with a rigorous
+residual bound, the scaling reversal, and the finite Lipschitz estimate.
+Those checks are diagnostics; the quantified claims rely on the proofs
+above.</p>
 <h2 id="references">References</h2>
 <ul>
-<li>Zachary Goodsell, <em>Decision theory unbound</em>, Noûs 58 (2024), 669–695, DOI 10.1111/nous.12473, Appendix B, pp. 691–695. Original construction and scale-failure strategy; the explicit witness above is a separate verification.</li>
-<li>GPT-6 (Codex), project research on 9 September 2026: this specialization, additional property proofs and explicit witnesses.</li>
+<li>Zachary Goodsell, <em>Decision theory unbound</em>, Noûs 58 (2024),
+669–695, DOI 10.1111/nous.12473, Appendix B, pp. 691–695. Original
+construction and scale-failure strategy; the explicit witness above is a
+separate verification.</li>
+<li>GPT-6 (Codex), project research on 9 September 2026: this
+specialization, additional property proofs and explicit witnesses.</li>
 </ul>
-<h2 id="failure-of-comonotonic-sum-invariance">Failure of Comonotonic Sum Invariance</h2>
-<p><strong>Addition: Claude (Fable 5.1), 23 September 2026.</strong> A property of the recorded model; not a claim of the source paper.</p>
-<p>Realize a standard Cauchy variable as <span class="math inline">C=Q_C(U)=\tan(\pi(U-\tfrac12))</span> and put <span class="math inline">X=0</span>, <span class="math inline">Y=C</span>, <span class="math inline">Z=C_+=\max(C,0)</span>, all nondecreasing in <span class="math inline">U</span>, so both pairs are comonotonic. The clipping <span class="math inline">\max(-4^n,\min(x,4^n))</span> is odd and <span class="math inline">C</span> is symmetric, so <span class="math inline">v_C(n)=0=v_0(n)</span> and <span class="math inline">X\sim Y</span>.</p>
-<p><strong>Doubling-defect identity.</strong> For any nonnegative random variable <span class="math inline">V</span> and any <span class="math inline">F&gt;0</span>,</p>
-<p><span class="math display">2\,\mathbb E[\min(V,F)]-\mathbb E[\min(2V,F)]
- =2\int_{F/2}^{F}P(V&gt;x)\,dx,</span></p>
-<p>since <span class="math inline">\mathbb E[\min(V,F)]=\int_0^F P(V&gt;x)\,dx</span> and <span class="math inline">\mathbb E[\min(2V,F)]=2\int_0^{F/2}P(V&gt;x)\,dx</span>. For <span class="math inline">V=C_+=\max(C,0)</span> with <span class="math inline">C</span> standard Cauchy the right-hand side is <span class="math inline">\frac2\pi\int_{F/2}^{F}\arctan(1/x)\,dx</span>, which is positive for every <span class="math inline">F</span> and increases to <span class="math inline">\frac{2\ln2}{\pi}</span> as <span class="math inline">F\to\infty</span>.</p>
-<p>With <span class="math inline">X+Z=C_+</span>, <span class="math inline">Y+Z=2C_++C_-</span>, <span class="math inline">C_-=\min(C,0)</span>, and <span class="math inline">\mathbb E[\max(C_-,-4^n)]=-\mathbb E[\min(C_+,4^n)]</span>,</p>
+<h2 id="failure-of-comonotonic-sum-invariance">Failure of Comonotonic
+Sum Invariance</h2>
+<p><strong>Addition: Claude (Fable 5.1), 23 September 2026.</strong> A
+property of the recorded model; not a claim of the source paper.</p>
+<p>Realize a standard Cauchy variable as <span
+class="math inline">C=Q_C(U)=\tan(\pi(U-\tfrac12))</span> and put <span
+class="math inline">X=0</span>, <span class="math inline">Y=C</span>,
+<span class="math inline">Z=C_+=\max(C,0)</span>, all nondecreasing in
+<span class="math inline">U</span>, so both pairs are comonotonic. The
+clipping <span class="math inline">\max(-4^n,\min(x,4^n))</span> is odd
+and <span class="math inline">C</span> is symmetric, so <span
+class="math inline">v_C(n)=0=v_0(n)</span> and <span
+class="math inline">X\sim Y</span>.</p>
+<p><strong>Doubling-defect identity.</strong> For any nonnegative random
+variable <span class="math inline">V</span> and any <span
+class="math inline">F&gt;0</span>,</p>
+<p><span class="math display">2\,\mathbb E[\min(V,F)]-\mathbb
+E[\min(2V,F)]
+=2\int_{F/2}^{F}P(V&gt;x)\,dx,</span></p>
+<p>since <span class="math inline">\mathbb E[\min(V,F)]=\int_0^F
+P(V&gt;x)\,dx</span> and <span class="math inline">\mathbb
+E[\min(2V,F)]=2\int_0^{F/2}P(V&gt;x)\,dx</span>. For <span
+class="math inline">V=C_+=\max(C,0)</span> with <span
+class="math inline">C</span> standard Cauchy the right-hand side is
+<span
+class="math inline">\frac2\pi\int_{F/2}^{F}\arctan(1/x)\,dx</span>,
+which is positive for every <span class="math inline">F</span> and
+increases to <span class="math inline">\frac{2\ln2}{\pi}</span> as <span
+class="math inline">F\to\infty</span>.</p>
+<p>With <span class="math inline">X+Z=C_+</span>, <span
+class="math inline">Y+Z=2C_++C_-</span>, <span
+class="math inline">C_-=\min(C,0)</span>, and <span
+class="math inline">\mathbb E[\max(C_-,-4^n)]=-\mathbb
+E[\min(C_+,4^n)]</span>,</p>
 <p><span class="math display">
 v_{X+Z}(n)-v_{Y+Z}(n)=2\int_{4^n/2}^{4^n}P(C&gt;x)\,dx\longrightarrow\frac{2\ln2}{\pi}&gt;0.
 </span></p>
-<p>With <span class="math inline">\varepsilon=(\ln2)/\pi</span>, the set <span class="math inline">\{n:v_{Y+Z}(n)\ge v_{X+Z}(n)-\varepsilon\}</span> is finite, hence outside the free ultrafilter, while <span class="math inline">v_{X+Z}\ge v_{Y+Z}</span> for every <span class="math inline">n</span>. So <span class="math inline">X+Z\succ Y+Z</span> although <span class="math inline">X\sim Y</span>: Comonotonic Sum Invariance fails, even though Shift Invariance, CDF-Area Extension, <span class="math inline">L^1</span> Continuity and Folded Expectation hold. <code>checks/comonotonic_witnesses.py</code> verifies the calculation.</p>
+<p>With <span class="math inline">\varepsilon=(\ln2)/\pi</span>, the set
+<span class="math inline">\{n:v_{Y+Z}(n)\ge
+v_{X+Z}(n)-\varepsilon\}</span> is finite, hence outside the free
+ultrafilter, while <span class="math inline">v_{X+Z}\ge v_{Y+Z}</span>
+for every <span class="math inline">n</span>. So <span
+class="math inline">X+Z\succ Y+Z</span> although <span
+class="math inline">X\sim Y</span>: Comonotonic Sum Invariance fails,
+even though Shift Invariance, CDF-Area Extension, <span
+class="math inline">L^1</span> Continuity and Folded Expectation hold.
+<code>checks/comonotonic_witnesses.py</code> verifies the
+calculation.</p>
 <h2 id="rational-factors">Rational factors</h2>
-<p><strong>Addition: Claude (Fable 5.1), 24 September 2026.</strong> The scaling reversal above is a doubling: <span class="math inline">A\sim-1/3\succ-1/2</span> while <span class="math inline">2A\sim-4/3\prec-1</span>, so the pair <span class="math inline">(A,-1/2)</span> fails invariance at the factor <span class="math inline">2</span>. The model therefore also fails Rational Scale Invariance, the restriction of Scale Invariance to rational factors. The same doubling refutes Integer Affine Preservation: <span class="math inline">A\succ-1/2</span> is not carried to <span class="math inline">2A\succeq-1</span>.</p>
-<h2 id="integer-ratio-self-similarity">Integer-ratio self-similarity</h2>
-<p><strong>Addition: Claude (Fable 5.1), 24 September 2026.</strong> The uniqueness witness above has ratio <span class="math inline">a=2</span>, so the model also fails Uniqueness of Negative Self-Similarity (integer ratios), the restriction of the principle to integer ratios.</p>
+<p><strong>Addition: Claude (Fable 5.1), 24 September 2026.</strong> The
+scaling reversal above is a doubling: <span
+class="math inline">A\sim-1/3\succ-1/2</span> while <span
+class="math inline">2A\sim-4/3\prec-1</span>, so the pair <span
+class="math inline">(A,-1/2)</span> fails invariance at the factor <span
+class="math inline">2</span>. The model therefore also fails Rational
+Scale Invariance, the restriction of Scale Invariance to rational
+factors. The same doubling refutes Integer Affine Preservation: <span
+class="math inline">A\succ-1/2</span> is not carried to <span
+class="math inline">2A\succeq-1</span>.</p>
+<h2 id="integer-ratio-self-similarity">Integer-ratio
+self-similarity</h2>
+<p><strong>Addition: Claude (Fable 5.1), 24 September 2026.</strong> The
+uniqueness witness above has ratio <span class="math inline">a=2</span>,
+so the model also fails Uniqueness of Negative Self-Similarity (integer
+ratios), the restriction of the principle to integer ratios.</p>
 <h2 id="a-fixed-shuffle-copula">A fixed shuffle copula</h2>
-<p><strong>Added 2 October 2026.</strong> The AI-generated report communicated by <strong>Branden Fitelson</strong>, <em>Unbounded Utility: Five Top-Ranked Open Conjectures Resolved</em> (30 September 2026), §4(b), supplies a new property of this construction. Its producers are identified as Claude agents, with model versions unspecified. GPT-6 (Codex) expanded and informally checked the argument.</p>
-<p>The <a href="calibrated-geometric-continuous-ultrafilter.html#shared-clipping-and-shuffle-copula-proof">fixed shuffle-copula proof</a> applies to this model’s cutoffs and tolerance-based ultrafilter comparison. It proves the fixed-copula invariance <span class="math inline">\operatorname{SC}(C_\sigma)</span> using one copula for all triples, including atomic marginals; the map recorded this as Existential Copula Sum Invariance until that principle was retired on 11 October 2026 in favour of Uninteractive Sum Invariance, which this model satisfies by Relative Expectation (<code>relative-independence-equivalence-imply-uninteractive-sum</code>). This does not change the model’s existing failure of Comonotonic Sum Invariance. The original construction and earlier results retain their original attribution. The expanded model has no Lean verification; its earlier record was marked stated.</p>
+<p><strong>Added 2 October 2026.</strong> The AI-generated report
+communicated by <strong>Branden Fitelson</strong>, <em>Unbounded
+Utility: Five Top-Ranked Open Conjectures Resolved</em> (30 September
+2026), §4(b), supplies a new property of this construction. Its
+producers are identified as Claude agents, with model versions
+unspecified. GPT-6 (Codex) expanded and informally checked the
+argument.</p>
+<p>The <a
+href="calibrated-geometric-continuous-ultrafilter.html#shared-clipping-and-shuffle-copula-proof">fixed
+shuffle-copula proof</a> applies to this model’s cutoffs and
+tolerance-based ultrafilter comparison. It proves the fixed-copula
+invariance <span class="math inline">\operatorname{SC}(C_\sigma)</span>
+using one copula for all triples, including atomic marginals; the map
+recorded this as Existential Copula Sum Invariance until that principle
+was retired on 11 October 2026 in favour of Uninteractive Sum
+Invariance, which this model satisfies by Relative Expectation
+(<code>relative-independence-equivalence-imply-uninteractive-sum</code>).
+This does not change the model’s existing failure of Comonotonic Sum
+Invariance. The original construction and earlier results retain their
+original attribution. The expanded model has no Lean verification; its
+earlier record was marked stated.</p>
 <h2 id="relative-expectation">Relative Expectation</h2>
-<p><strong>Added 11 October 2026.</strong> The flag follows from the shared clipping proof’s <a href="calibrated-geometric-continuous-ultrafilter.html#shared-clipping-and-shuffle-copula-proof">continuity section</a>: if <span class="math inline">E|X-Y|&lt;\infty</span> then the clipped difference is bounded by <span class="math inline">|X-Y|</span> and converges pointwise to <span class="math inline">X-Y</span>, so <span class="math inline">v_X-v_Y\to E[X-Y]</span> by dominated convergence and the tolerance-based comparison is decided by the sign of <span class="math inline">E[X-Y]</span>, with indifference at zero. With Mixture Independence and Stochastic Equivalence this gives Uninteractive Sum Invariance by the recorded result <code>relative-independence-equivalence-imply-uninteractive-sum</code>.</p>
+<p><strong>Added 11 October 2026.</strong> The flag follows from the
+shared clipping proof’s <a
+href="calibrated-geometric-continuous-ultrafilter.html#shared-clipping-and-shuffle-copula-proof">continuity
+section</a>: if <span class="math inline">E|X-Y|&lt;\infty</span> then
+the clipped difference is bounded by <span
+class="math inline">|X-Y|</span> and converges pointwise to <span
+class="math inline">X-Y</span>, so <span class="math inline">v_X-v_Y\to
+E[X-Y]</span> by dominated convergence and the tolerance-based
+comparison is decided by the sign of <span
+class="math inline">E[X-Y]</span>, with indifference at zero. With
+Mixture Independence and Stochastic Equivalence this gives Uninteractive
+Sum Invariance by the recorded result
+<code>relative-independence-equivalence-imply-uninteractive-sum</code>.</p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Background: <a href="https://doi.org/10.1111/nous.12473">Decision theory unbound</a>.</strong> (<a href="../sources/Nous%20-%202023%20-%20Goodsell%20-%20Decision%20theory%20unbound%20%281%29.pdf">PDF</a>) Zachary Goodsell (2024). Decision theory unbound. Noûs, 58, 669–695. First published online in 2023. — Appendix B, Definition 3, Lemma 6 and proof of Theorem 3, pp. 691–692; Theorems 7–10, pp. 693–695: underlying continuous clipping construction and original scale-failure strategy</li>
-<li><strong>Proof: Unbounded Utility: Five Top-Ranked Open Conjectures Resolved.</strong> AI-generated report, 30 September 2026, 4 pages; communicated by Branden Fitelson. The report attributes production to Claude agents without specifying model versions. Fitelson is the communicator, not the credited producer of the proofs. — §4(b), p. 3</li>
+<li><strong>Background: <a
+href="https://doi.org/10.1111/nous.12473">Decision theory
+unbound</a>.</strong> (<a
+href="../sources/Nous%20-%202023%20-%20Goodsell%20-%20Decision%20theory%20unbound%20%281%29.pdf">PDF</a>)
+Zachary Goodsell (2024). Decision theory unbound. Noûs, 58, 669–695.
+First published online in 2023. — Appendix B, Definition 3, Lemma 6 and
+proof of Theorem 3, pp. 691–692; Theorems 7–10, pp. 693–695: underlying
+continuous clipping construction and original scale-failure
+strategy</li>
+<li><strong>Proof: Unbounded Utility: Five Top-Ranked Open Conjectures
+Resolved.</strong> AI-generated report, 30 September 2026, 4 pages;
+communicated by Branden Fitelson. The report attributes production to
+Claude agents without specifying model versions. Fitelson is the
+communicator, not the credited producer of the proofs. — §4(b),
+p. 3</li>
 </ul>
 </body></html>

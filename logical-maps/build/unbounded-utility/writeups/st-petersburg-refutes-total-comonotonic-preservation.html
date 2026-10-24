@@ -269,18 +269,45 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <link rel="stylesheet" href="../math/katex.min.css">
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
-<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>St Petersburg gambles force comonotonic incompleteness</h1></header><p>Let <span class="math inline">S</span> be the ordinary St Petersburg game, <span class="math inline">\Pr(S=2^k)=2^{-k}</span> for <span class="math inline">k\ge1</span>. The simple witness is</p>
-<p><span class="math display">\mathcal L(X_1)=\tfrac15\delta_3+\tfrac45\mathcal L(3S),\qquad
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>St Petersburg gambles force comonotonic incompleteness</h1></header><p>Let <span class="math inline">S</span> be the ordinary St Petersburg
+game, <span class="math inline">\Pr(S=2^k)=2^{-k}</span> for <span
+class="math inline">k\ge1</span>. The simple witness is</p>
+<p><span class="math display">\mathcal
+L(X_1)=\tfrac15\delta_3+\tfrac45\mathcal L(3S),\qquad
 \mathcal L(Y_1)=\tfrac25\delta_4+\tfrac35\mathcal L(4S).</span></p>
-<p>Thus <span class="math inline">X_1</span> offers an 80% chance of playing <span class="math inline">3S</span>, otherwise 3; <span class="math inline">Y_1</span> offers a 60% chance of playing <span class="math inline">4S</span>, otherwise 4. The coefficients describe randomized selection, not pointwise sums.</p>
-<p><strong>Theorem.</strong> With Rich Outcomes, Simple EU, Stochastic Dominance and Mixture Independence:</p>
+<p>Thus <span class="math inline">X_1</span> offers an 80% chance of
+playing <span class="math inline">3S</span>, otherwise 3; <span
+class="math inline">Y_1</span> offers a 60% chance of playing <span
+class="math inline">4S</span>, otherwise 4. The coefficients describe
+randomized selection, not pointwise sums.</p>
+<p><strong>Theorem.</strong> With Rich Outcomes, Simple EU, Stochastic
+Dominance and Mixture Independence:</p>
 <ol type="1">
-<li>Comonotonic Sum Weak Preservation and Comonotonic Sum Cancellation force <span class="math inline">X_1</span> and <span class="math inline">Y_1</span> incomparable, without assuming Totality.</li>
-<li>Totality and Comonotonic Sum Preservation, including its <strong>strict</strong> clause, are inconsistent. Cancellation need not be separately assumed.</li>
+<li>Comonotonic Sum Weak Preservation and Comonotonic Sum Cancellation
+force <span class="math inline">X_1</span> and <span
+class="math inline">Y_1</span> incomparable, without assuming
+Totality.</li>
+<li>Totality and Comonotonic Sum Preservation, including its
+<strong>strict</strong> clause, are inconsistent. Cancellation need not
+be separately assumed.</li>
 </ol>
-<p>Stochastic Dominance includes its weak clause and hence supplies Stochastic Equivalence. Under DU, Simple EU is a derived consequence, so the second statement excludes comonotonic preservation under DTU. All random variables used here are finite almost surely; all displayed utility values are nonnegative. No expectations of unbounded gambles are subtracted.</p>
-<p><strong>Attribution.</strong> The original incompleteness theorem and two-pair mechanism come from <em>Comonotonic Sum Invariance Forces Incompleteness</em>, dated 2 October 2026, an AI-generated proof communicated by Branden Fitelson; the producing AI was not identified. Fitelson is credited as communicator, not producer or checker. GPT-6 (Codex) supplied this simpler witness and three-background identity on 2 October, and the exact preservation/cancellation audit and direct preservation proof on 3 October 2026. No independent checker, priority claim, or Lean verification is asserted.</p>
-<h2 id="the-two-pairs-in-quantile-coordinates">1. The two pairs in quantile coordinates</h2>
+<p>Stochastic Dominance includes its weak clause and hence supplies
+Stochastic Equivalence. Under DU, Simple EU is a derived consequence, so
+the second statement excludes comonotonic preservation under DTU. All
+random variables used here are finite almost surely; all displayed
+utility values are nonnegative. No expectations of unbounded gambles are
+subtracted.</p>
+<p><strong>Attribution.</strong> The original incompleteness theorem and
+two-pair mechanism come from <em>Comonotonic Sum Invariance Forces
+Incompleteness</em>, dated 2 October 2026, an AI-generated proof
+communicated by Branden Fitelson; the producing AI was not identified.
+Fitelson is credited as communicator, not producer or checker. GPT-6
+(Codex) supplied this simpler witness and three-background identity on 2
+October, and the exact preservation/cancellation audit and direct
+preservation proof on 3 October 2026. No independent checker, priority
+claim, or Lean verification is asserted.</p>
+<h2 id="the-two-pairs-in-quantile-coordinates">1. The two pairs in
+quantile coordinates</h2>
 <p>Besides the pair above, use</p>
 <p><span class="math display">\begin{aligned}
 \mathcal L(X_2)&amp;=\tfrac15\delta_0+\tfrac15\delta_5+
@@ -288,10 +315,17 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 \mathcal L(Y_2)&amp;=\tfrac15\delta_0+\tfrac25\delta_6+
                          \tfrac25\mathcal L(6S).
 \end{aligned}</span></p>
-<p>For <span class="math inline">s\in\{1,2\}</span> partition <span class="math inline">(0,1)</span>, in order, into <span class="math inline">O,H,P_1,N_1,P_2,N_2,\ldots</span>. The following table defines increasing quantile realizations of <span class="math inline">X_s,Y_s</span>. In a tail row put <span class="math inline">t=2^k</span>. For <span class="math inline">s=1</span>, the initial block <span class="math inline">O</span> is empty.</p>
+<p>For <span class="math inline">s\in\{1,2\}</span> partition <span
+class="math inline">(0,1)</span>, in order, into <span
+class="math inline">O,H,P_1,N_1,P_2,N_2,\ldots</span>. The following
+table defines increasing quantile realizations of <span
+class="math inline">X_s,Y_s</span>. In a tail row put <span
+class="math inline">t=2^k</span>. For <span
+class="math inline">s=1</span>, the initial block <span
+class="math inline">O</span> is empty.</p>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th>Block</th>
 <th>Length</th>
 <th><span class="math inline">X_s</span></th>
@@ -299,25 +333,25 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td><span class="math inline">O</span></td>
 <td><span class="math inline">(s-1)/5</span></td>
 <td><span class="math inline">0</span></td>
 <td><span class="math inline">0</span></td>
 </tr>
-<tr class="even">
+<tr>
 <td><span class="math inline">H</span></td>
 <td><span class="math inline">1/5</span></td>
 <td><span class="math inline">2s+1</span></td>
 <td><span class="math inline">2s+2</span></td>
 </tr>
-<tr class="odd">
+<tr>
 <td><span class="math inline">P_k</span></td>
 <td><span class="math inline">2/(5t)</span></td>
 <td><span class="math inline">(s+2)t</span></td>
 <td><span class="math inline">(s+1)t</span></td>
 </tr>
-<tr class="even">
+<tr>
 <td><span class="math inline">N_k</span></td>
 <td><span class="math inline">2/(5st)</span></td>
 <td><span class="math inline">(s+2)t</span></td>
@@ -325,15 +359,28 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 </tr>
 </tbody>
 </table>
-<p>The lengths sum to one in either case. Each quantile is nondecreasing; in particular the <span class="math inline">Y_s</span> value on <span class="math inline">N_k</span> equals its value on <span class="math inline">P_{k+1}</span>. The table gives the claimed marginal laws by</p>
+<p>The lengths sum to one in either case. Each quantile is
+nondecreasing; in particular the <span class="math inline">Y_s</span>
+value on <span class="math inline">N_k</span> equals its value on <span
+class="math inline">P_{k+1}</span>. The table gives the claimed marginal
+laws by</p>
 <p><span class="math display">\mathcal L(aS)=\tfrac12\delta_{2a}+
-                       \tfrac12\mathcal L(2aS),\qquad a&gt;0.\tag{1}</span></p>
-<p>Quantile representatives and all identities below are understood up to null endpoints. The standing atomless space realizes every required law.</p>
-<h2 id="one-three-background-obstruction-for-both-pairs">2. One three-background obstruction for both pairs</h2>
-<p>For each <span class="math inline">s</span>, define <span class="math inline">Z_0,Z_1,Z_2</span> on the same quantile blocks by the following table. An entry <span class="math inline">(a,b)</span> means <span class="math inline">a</span> on the first half of that block and <span class="math inline">b</span> on the second half. Single entries apply on the entire block.</p>
+                       \tfrac12\mathcal L(2aS),\qquad
+a&gt;0.\tag{1}</span></p>
+<p>Quantile representatives and all identities below are understood up
+to null endpoints. The standing atomless space realizes every required
+law.</p>
+<h2 id="one-three-background-obstruction-for-both-pairs">2. One
+three-background obstruction for both pairs</h2>
+<p>For each <span class="math inline">s</span>, define <span
+class="math inline">Z_0,Z_1,Z_2</span> on the same quantile blocks by
+the following table. An entry <span class="math inline">(a,b)</span>
+means <span class="math inline">a</span> on the first half of that block
+and <span class="math inline">b</span> on the second half. Single
+entries apply on the entire block.</p>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th>Block</th>
 <th><span class="math inline">Z_0</span></th>
 <th><span class="math inline">Z_1</span></th>
@@ -341,25 +388,25 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td><span class="math inline">O</span></td>
 <td><span class="math inline">0</span></td>
 <td><span class="math inline">0</span></td>
 <td><span class="math inline">0</span></td>
 </tr>
-<tr class="even">
+<tr>
 <td><span class="math inline">H</span></td>
 <td><span class="math inline">2s</span></td>
 <td><span class="math inline">(2s+1,2s+2)</span></td>
 <td><span class="math inline">(2s+1,2s+2)</span></td>
 </tr>
-<tr class="odd">
+<tr>
 <td><span class="math inline">P_k</span></td>
 <td><span class="math inline">st</span></td>
 <td><span class="math inline">((s+1)t,2st)</span></td>
 <td><span class="math inline">((2s+1)t,3st)</span></td>
 </tr>
-<tr class="even">
+<tr>
 <td><span class="math inline">N_k</span></td>
 <td><span class="math inline">st</span></td>
 <td><span class="math inline">2st</span></td>
@@ -367,46 +414,63 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 </tr>
 </tbody>
 </table>
-<p>All three columns are nondecreasing for <span class="math inline">s=1,2</span>. For example, in the last column the within-block inequalities are <span class="math inline">2s+1\le3s\le2s+2</span>; the last value on <span class="math inline">N_k</span> is at most the first on <span class="math inline">P_{k+1}</span> because <span class="math inline">2s+2\le2(2s+1)</span>. For <span class="math inline">Z_1</span>, use <span class="math inline">s+1\le2s\le2(s+1)</span>. The head-to-tail inequalities follow on setting <span class="math inline">t=2</span>; <span class="math inline">Z_0</span> is immediate. Consequently every background is comonotonic with both <span class="math inline">X_s</span> and <span class="math inline">Y_s</span>.</p>
+<p>All three columns are nondecreasing for <span
+class="math inline">s=1,2</span>. For example, in the last column the
+within-block inequalities are <span
+class="math inline">2s+1\le3s\le2s+2</span>; the last value on <span
+class="math inline">N_k</span> is at most the first on <span
+class="math inline">P_{k+1}</span> because <span
+class="math inline">2s+2\le2(2s+1)</span>. For <span
+class="math inline">Z_1</span>, use <span
+class="math inline">s+1\le2s\le2(s+1)</span>. The head-to-tail
+inequalities follow on setting <span class="math inline">t=2</span>;
+<span class="math inline">Z_0</span> is immediate. Consequently every
+background is comonotonic with both <span class="math inline">X_s</span>
+and <span class="math inline">Y_s</span>.</p>
 <p>The exact signed-law identity is</p>
-<p><span class="math display">\sum_{j=0}^2\bigl[\mathcal L(X_s+Z_j)-\mathcal L(Y_s+Z_j)\bigr]
+<p><span class="math display">\sum_{j=0}^2\bigl[\mathcal
+L(X_s+Z_j)-\mathcal L(Y_s+Z_j)\bigr]
    =\tfrac15(\delta_{4s+1}-\delta_{4s+2}).\tag{2}</span></p>
-<p>Here is a direct verification, without truncating any tail. The head blocks contribute <span class="math inline">(\delta_{4s+1}-\delta_{4s+4})/5</span>; the initial zero block cancels. Write <span class="math inline">\mu_a=\mathcal L(aS)</span>. The tail contributions before collecting are:</p>
+<p>Here is a direct verification, without truncating any tail. The head
+blocks contribute <span
+class="math inline">(\delta_{4s+1}-\delta_{4s+4})/5</span>; the initial
+zero block cancels. Write <span class="math inline">\mu_a=\mathcal
+L(aS)</span>. The tail contributions before collecting are:</p>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th><span class="math inline">s</span></th>
 <th>Background</th>
 <th>Tail signed measure</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>1</td>
 <td><span class="math inline">Z_0</span></td>
 <td><span class="math inline">(4\mu_4-2\mu_3-2\mu_5)/5</span></td>
 </tr>
-<tr class="even">
+<tr>
 <td>1</td>
 <td><span class="math inline">Z_1</span></td>
 <td><span class="math inline">(4\mu_5-2\mu_4-2\mu_6)/5</span></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>1</td>
 <td><span class="math inline">Z_2</span></td>
 <td><span class="math inline">(3\mu_6-2\mu_5-\mu_8)/5</span></td>
 </tr>
-<tr class="even">
+<tr>
 <td>2</td>
 <td><span class="math inline">Z_0</span></td>
 <td><span class="math inline">(3\mu_6-2\mu_5-\mu_8)/5</span></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>2</td>
 <td><span class="math inline">Z_1</span></td>
 <td><span class="math inline">(2\mu_8-\mu_6-\mu_{10})/5</span></td>
 </tr>
-<tr class="even">
+<tr>
 <td>2</td>
 <td><span class="math inline">Z_2</span></td>
 <td><span class="math inline">(2\mu_{10}-\mu_8-\mu_{12})/5</span></td>
@@ -415,17 +479,46 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 </table>
 <p>Their sum is, in either case,</p>
 <p><span class="math display">\tfrac25\mu_{2s+2}+\tfrac15\mu_{4s+2}
- -\tfrac25\mu_{2s+1}-\tfrac15\mu_{4s+4}
- =\tfrac15(\delta_{4s+4}-\delta_{4s+2}),</span></p>
-<p>where the equality is two applications of (1). Adding the head contribution proves (2). These are equalities of finite signed measures, regardless of the infinite expectations of the positive games.</p>
-<p>Suppose <span class="math inline">X_s\succeq Y_s</span>. <strong>Weak preservation</strong> gives <span class="math inline">X_s+Z_j\succeq Y_s+Z_j</span> for <span class="math inline">j=0,1,2</span>. Mixture Independence and transitivity preserve this comparison under equal mixtures of the three laws. Indeed, componentwise mixture monotonicity follows by replacing one branch at a time, using law invariance to interchange branches as needed. After division by three, (2) says that the <span class="math inline">Y</span> mixture raises mass <span class="math inline">1/15</span> from <span class="math inline">4s+1</span> to <span class="math inline">4s+2</span> relative to the <span class="math inline">X</span> mixture. Strict Stochastic Dominance gives the opposite strict comparison. Hence</p>
-<p><span class="math display">X_1\not\succeq Y_1,\qquad X_2\not\succeq Y_2.\tag{3}</span></p>
-<p><strong>No cancellation, strict preservation, Totality, or Simple EU was used in this obstruction.</strong></p>
-<h2 id="the-equal-mean-connection-can-be-made-by-preservation-alone">3. The equal-mean connection can be made by preservation alone</h2>
-<p>Use the same uniform coordinate for both pairs and put <span class="math inline">h_s=Q_{X_s}-Q_{Y_s}</span>. Their differences are:</p>
-<table>
+-\tfrac25\mu_{2s+1}-\tfrac15\mu_{4s+4}
+=\tfrac15(\delta_{4s+4}-\delta_{4s+2}),</span></p>
+<p>where the equality is two applications of (1). Adding the head
+contribution proves (2). These are equalities of finite signed measures,
+regardless of the infinite expectations of the positive games.</p>
+<p>Suppose <span class="math inline">X_s\succeq Y_s</span>. <strong>Weak
+preservation</strong> gives <span class="math inline">X_s+Z_j\succeq
+Y_s+Z_j</span> for <span class="math inline">j=0,1,2</span>. Mixture
+Independence and transitivity preserve this comparison under equal
+mixtures of the three laws. Indeed, componentwise mixture monotonicity
+follows by replacing one branch at a time, using law invariance to
+interchange branches as needed. After division by three, (2) says that
+the <span class="math inline">Y</span> mixture raises mass <span
+class="math inline">1/15</span> from <span
+class="math inline">4s+1</span> to <span class="math inline">4s+2</span>
+relative to the <span class="math inline">X</span> mixture. Strict
+Stochastic Dominance gives the opposite strict comparison. Hence</p>
+<p><span class="math display">X_1\not\succeq Y_1,\qquad X_2\not\succeq
+Y_2.\tag{3}</span></p>
+<p><strong>No cancellation, strict preservation, Totality, or Simple EU
+was used in this obstruction.</strong></p>
+<h2 id="the-equal-mean-connection-can-be-made-by-preservation-alone">3.
+The equal-mean connection can be made by preservation alone</h2>
+<p>Use the same uniform coordinate for both pairs and put <span
+class="math inline">h_s=Q_{X_s}-Q_{Y_s}</span>. Their differences
+are:</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th>Consecutive interval length</th>
 <th><span class="math inline">1/5</span></th>
 <th><span class="math inline">1/5</span></th>
@@ -438,7 +531,7 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td><span class="math inline">h_1</span></td>
 <td><span class="math inline">-1</span></td>
 <td><span class="math inline">2</span></td>
@@ -449,7 +542,7 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <td><span class="math inline">-8</span></td>
 <td><span class="math inline">\cdots</span></td>
 </tr>
-<tr class="even">
+<tr>
 <td><span class="math inline">h_2</span></td>
 <td><span class="math inline">0</span></td>
 <td><span class="math inline">-1</span></td>
@@ -462,28 +555,76 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 </tr>
 </tbody>
 </table>
-<p>After the first two intervals the tail differences cancel exactly. Define nondecreasing simple gambles on that coordinate by</p>
-<p><span class="math display">A(u)=\begin{cases}0&amp;u&lt;1/5,\\2&amp;u\ge1/5,\end{cases}
+<p>After the first two intervals the tail differences cancel exactly.
+Define nondecreasing simple gambles on that coordinate by</p>
+<p><span
+class="math display">A(u)=\begin{cases}0&amp;u&lt;1/5,\\2&amp;u\ge1/5,\end{cases}
 \qquad
 B(u)=\begin{cases}1&amp;u&lt;2/5,\\2&amp;u\ge2/5.\end{cases}</span></p>
-<p>Both means are <span class="math inline">8/5</span>, so Simple EU gives <span class="math inline">A\sim B</span>. The table says <span class="math inline">h_1+h_2=A-B</span>. More concretely, set</p>
-<p><span class="math display">R=Q_{X_1}+Q_{X_2}-A=Q_{Y_1}+Q_{Y_2}-B.</span></p>
-<p>This common remainder is <strong>nondecreasing</strong>. On the first three intervals of length <span class="math inline">1/5</span> its values are <span class="math inline">3,9,12</span>. Thereafter <span class="math inline">A=B=2</span> and both quantile sums are nondecreasing, with the next value of <span class="math inline">R</span> equal to 18. Thus weak preservation applied to <span class="math inline">A\sim B</span> gives directly</p>
-<p><span class="math display">X_1+X_2=R+A\sim R+B=Y_1+Y_2.\tag{4}</span></p>
-<p>All additions in (4) are comonotonic. This explicit increasing remainder avoids cancellation in the equal-mean connection itself.</p>
-<h2 id="exactly-where-cancellation-or-strict-preservation-enters">4. Exactly where cancellation or strict preservation enters</h2>
-<p><strong>Forced incomparability without Totality.</strong> Assume weak preservation and cancellation. If <span class="math inline">Y_1\succeq X_1</span>, adding <span class="math inline">X_2</span> gives</p>
-<p><span class="math display">Y_1+X_2\succeq X_1+X_2\sim Y_1+Y_2.</span></p>
-<p>Now <strong>cancel the common comonotonic summand <span class="math inline">Y_1</span></strong> to obtain <span class="math inline">X_2\succeq Y_2</span>, contrary to (3). Along with the first part of (3), this proves <span class="math inline">X_1,Y_1</span> incomparable. This proof needs cancellation only at this last comparison transfer, not in the finite-mixture certificates or (4).</p>
-<p><strong>Contradiction with Totality using preservation only.</strong> Suppose preservation includes both its weak and strict clauses. By (3) and Totality, <span class="math inline">Y_1\succ X_1</span> and <span class="math inline">Y_2\succ X_2</span>. Strict preservation for the first comparison and weak preservation for the second give</p>
-<p><span class="math display">Y_1+Y_2\succ X_1+Y_2\succeq X_1+X_2,</span></p>
+<p>Both means are <span class="math inline">8/5</span>, so Simple EU
+gives <span class="math inline">A\sim B</span>. The table says <span
+class="math inline">h_1+h_2=A-B</span>. More concretely, set</p>
+<p><span
+class="math display">R=Q_{X_1}+Q_{X_2}-A=Q_{Y_1}+Q_{Y_2}-B.</span></p>
+<p>This common remainder is <strong>nondecreasing</strong>. On the first
+three intervals of length <span class="math inline">1/5</span> its
+values are <span class="math inline">3,9,12</span>. Thereafter <span
+class="math inline">A=B=2</span> and both quantile sums are
+nondecreasing, with the next value of <span class="math inline">R</span>
+equal to 18. Thus weak preservation applied to <span
+class="math inline">A\sim B</span> gives directly</p>
+<p><span class="math display">X_1+X_2=R+A\sim
+R+B=Y_1+Y_2.\tag{4}</span></p>
+<p>All additions in (4) are comonotonic. This explicit increasing
+remainder avoids cancellation in the equal-mean connection itself.</p>
+<h2 id="exactly-where-cancellation-or-strict-preservation-enters">4.
+Exactly where cancellation or strict preservation enters</h2>
+<p><strong>Forced incomparability without Totality.</strong> Assume weak
+preservation and cancellation. If <span class="math inline">Y_1\succeq
+X_1</span>, adding <span class="math inline">X_2</span> gives</p>
+<p><span class="math display">Y_1+X_2\succeq X_1+X_2\sim
+Y_1+Y_2.</span></p>
+<p>Now <strong>cancel the common comonotonic summand <span
+class="math inline">Y_1</span></strong> to obtain <span
+class="math inline">X_2\succeq Y_2</span>, contrary to (3). Along with
+the first part of (3), this proves <span
+class="math inline">X_1,Y_1</span> incomparable. This proof needs
+cancellation only at this last comparison transfer, not in the
+finite-mixture certificates or (4).</p>
+<p><strong>Contradiction with Totality using preservation only.</strong>
+Suppose preservation includes both its weak and strict clauses. By (3)
+and Totality, <span class="math inline">Y_1\succ X_1</span> and <span
+class="math inline">Y_2\succ X_2</span>. Strict preservation for the
+first comparison and weak preservation for the second give</p>
+<p><span class="math display">Y_1+Y_2\succ X_1+Y_2\succeq
+X_1+X_2,</span></p>
 <p>contradicting (4). There is no cancellation step in this version.</p>
-<p>There is also a general order-theoretic explanation: under Totality, strict preservation supplies weak cancellation. If <span class="math inline">X+Z\succeq Y+Z</span> but <span class="math inline">X\not\succeq Y</span>, then <span class="math inline">Y\succ X</span>, so strict preservation gives <span class="math inline">Y+Z\succ X+Z</span>, a contradiction. This reasoning does not follow from weak preservation alone.</p>
-<p>The audit establishes sufficient assumptions and pinpoints their uses. It does <strong>not</strong> establish inconsistency of weak preservation alone or cancellation alone with DTU, nor assert that every ingredient is necessary for every possible proof. The result excludes the silver total comonotonic extension proposal without requiring its CDF-area clause.</p>
+<p>There is also a general order-theoretic explanation: under Totality,
+strict preservation supplies weak cancellation. If <span
+class="math inline">X+Z\succeq Y+Z</span> but <span
+class="math inline">X\not\succeq Y</span>, then <span
+class="math inline">Y\succ X</span>, so strict preservation gives <span
+class="math inline">Y+Z\succ X+Z</span>, a contradiction. This reasoning
+does not follow from weak preservation alone.</p>
+<p>The audit establishes sufficient assumptions and pinpoints their
+uses. It does <strong>not</strong> establish inconsistency of weak
+preservation alone or cancellation alone with DTU, nor assert that every
+ingredient is necessary for every possible proof. The result excludes
+the silver total comonotonic extension proposal without requiring its
+CDF-area clause.</p>
 <h2 id="exact-executable-check">5. Exact executable check</h2>
-<p><code>checks/st_petersburg_comonotonic.py</code> checks the infinite-law identity by symbolically reducing St Petersburg laws with (1), using rational coefficients. It also checks all background monotonicity inequalities and the exact dyadic pattern for the quantile differences. These are supporting calculations for the proof above, not a Lean certificate or an independent referee report.</p>
+<p><code>checks/st_petersburg_comonotonic.py</code> checks the
+infinite-law identity by symbolically reducing St Petersburg laws with
+(1), using rational coefficients. It also checks all background
+monotonicity inequalities and the exact dyadic pattern for the quantile
+differences. These are supporting calculations for the proof above, not
+a Lean certificate or an independent referee report.</p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Origin: Comonotonic Sum Invariance Forces Incompleteness.</strong> AI-generated report, 2 October 2026, 10 pages; communicated by Branden Fitelson. The producing AI was not identified. Fitelson is the communicator, not the credited producer or checker. — §§2–7</li>
+<li><strong>Origin: Comonotonic Sum Invariance Forces
+Incompleteness.</strong> AI-generated report, 2 October 2026, 10 pages;
+communicated by Branden Fitelson. The producing AI was not identified.
+Fitelson is the communicator, not the credited producer or checker. —
+§§2–7</li>
 </ul>
 </body></html>

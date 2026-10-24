@@ -269,33 +269,161 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <link rel="stylesheet" href="../math/katex.min.css">
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
-<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Uninteractive Sum Invariance and Stochastic Equivalence imply Relative Expectation</h1></header><p><strong>Proved implication:</strong> Rich Outcomes + Stochastic Equivalence + Uninteractive Sum Invariance imply Relative Expectation. Mixture Independence and Stochastic Dominance are not used. With <a href="relative-independence-equivalence-imply-uninteractive-sum.html"><code>relative-independence-equivalence-imply-uninteractive-sum</code></a>, Uninteractive Sum Invariance and Relative Expectation are equivalent under Mixture Independence, Stochastic Equivalence and Rich Outcomes, in particular under DU.</p>
-<p>Proof: Claude (Fable 5.1), 10–11 October 2026, in response to Zachary Goodsell’s question whether the two principles coincide under DU. No independent check or Lean verification is claimed.</p>
-<h2 id="stationary-realization-of-a-mean-zero-law">Stationary realization of a mean-zero law</h2>
-<p><strong>Lemma.</strong> For every law <span class="math inline">\mu</span> on <span class="math inline">\mathbb R</span> with <span class="math inline">\int|x|\,d\mu&lt;\infty</span> and <span class="math inline">\int x\,d\mu=0</span> there are real random variables <span class="math inline">D\sim\mu</span> and <span class="math inline">Z</span> with <span class="math inline">Z+D\overset{d}{=}Z</span>.</p>
-<p><em>Two-point case.</em> Let <span class="math inline">\rho</span> put mass <span class="math inline">q</span> on <span class="math inline">x&gt;0</span> and <span class="math inline">1-q</span> on <span class="math inline">y&lt;0</span> with mean zero, so <span class="math inline">q=|y|/(x+|y|)</span>. Let <span class="math inline">Z</span> be uniform on <span class="math inline">[-|y|,x)</span> and</p>
-<p><span class="math display">T(z)=\begin{cases}z+x,&amp;z\in[-|y|,0),\\ z-|y|,&amp;z\in[0,x).\end{cases}</span></p>
-<p><span class="math inline">T</span> translates <span class="math inline">[-|y|,0)</span> onto <span class="math inline">[x-|y|,x)</span> and <span class="math inline">[0,x)</span> onto <span class="math inline">[-|y|,x-|y|)</span>, so it is a measure-preserving bijection of <span class="math inline">[-|y|,x)</span> and <span class="math inline">T(Z)\overset{d}{=}Z</span>. Put <span class="math inline">D=T(Z)-Z</span>. Then <span class="math inline">D=x</span> exactly on <span class="math inline">[-|y|,0)</span>, an event of probability <span class="math inline">|y|/(x+|y|)=q</span>, and <span class="math inline">D=y</span> otherwise. So <span class="math inline">D\sim\rho</span> and <span class="math inline">Z+D=T(Z)\overset{d}{=}Z</span>.</p>
-<p><em>General case.</em> Let <span class="math inline">\mu^+,\mu^-</span> be the restrictions of <span class="math inline">\mu</span> to <span class="math inline">(0,\infty)</span> and <span class="math inline">(-\infty,0)</span> and <span class="math inline">m=\int x\,d\mu^+=\int|x|\,d\mu^-</span>, finite by integrability and positive unless <span class="math inline">\mu=\delta_0</span>. For <span class="math inline">x&gt;0&gt;y</span> let <span class="math inline">\rho_{x,y}</span> be the mean-zero two-point law on <span class="math inline">\{x,y\}</span> and define</p>
-<p><span class="math display">\pi(dx,dy)=\frac{x+|y|}{m}\,\mu^+(dx)\,\mu^-(dy).</span></p>
-<p>For a Borel set <span class="math inline">E\subset(0,\infty)</span>,</p>
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Uninteractive Sum Invariance and Stochastic Equivalence imply Relative Expectation</h1></header><p><strong>Proved implication:</strong> Rich Outcomes + Stochastic
+Equivalence + Uninteractive Sum Invariance imply Relative Expectation.
+Mixture Independence and Stochastic Dominance are not used. With <a
+href="relative-independence-equivalence-imply-uninteractive-sum.html"><code>relative-independence-equivalence-imply-uninteractive-sum</code></a>,
+Uninteractive Sum Invariance and Relative Expectation are equivalent
+under Mixture Independence, Stochastic Equivalence and Rich Outcomes, in
+particular under DU.</p>
+<p>Proof: Claude (Fable 5.1), 10–11 October 2026, in response to Zachary
+Goodsell’s question whether the two principles coincide under DU. No
+independent check or Lean verification is claimed.</p>
+<h2 id="stationary-realization-of-a-mean-zero-law">Stationary
+realization of a mean-zero law</h2>
+<p><strong>Lemma.</strong> For every law <span
+class="math inline">\mu</span> on <span class="math inline">\mathbb
+R</span> with <span class="math inline">\int|x|\,d\mu&lt;\infty</span>
+and <span class="math inline">\int x\,d\mu=0</span> there are real
+random variables <span class="math inline">D\sim\mu</span> and <span
+class="math inline">Z</span> with <span
+class="math inline">Z+D\overset{d}{=}Z</span>.</p>
+<p><em>Two-point case.</em> Let <span class="math inline">\rho</span>
+put mass <span class="math inline">q</span> on <span
+class="math inline">x&gt;0</span> and <span
+class="math inline">1-q</span> on <span
+class="math inline">y&lt;0</span> with mean zero, so <span
+class="math inline">q=|y|/(x+|y|)</span>. Let <span
+class="math inline">Z</span> be uniform on <span
+class="math inline">[-|y|,x)</span> and</p>
+<p><span class="math display">T(z)=\begin{cases}z+x,&amp;z\in[-|y|,0),\\
+z-|y|,&amp;z\in[0,x).\end{cases}</span></p>
+<p><span class="math inline">T</span> translates <span
+class="math inline">[-|y|,0)</span> onto <span
+class="math inline">[x-|y|,x)</span> and <span
+class="math inline">[0,x)</span> onto <span
+class="math inline">[-|y|,x-|y|)</span>, so it is a measure-preserving
+bijection of <span class="math inline">[-|y|,x)</span> and <span
+class="math inline">T(Z)\overset{d}{=}Z</span>. Put <span
+class="math inline">D=T(Z)-Z</span>. Then <span
+class="math inline">D=x</span> exactly on <span
+class="math inline">[-|y|,0)</span>, an event of probability <span
+class="math inline">|y|/(x+|y|)=q</span>, and <span
+class="math inline">D=y</span> otherwise. So <span
+class="math inline">D\sim\rho</span> and <span
+class="math inline">Z+D=T(Z)\overset{d}{=}Z</span>.</p>
+<p><em>General case.</em> Let <span
+class="math inline">\mu^+,\mu^-</span> be the restrictions of <span
+class="math inline">\mu</span> to <span
+class="math inline">(0,\infty)</span> and <span
+class="math inline">(-\infty,0)</span> and <span
+class="math inline">m=\int x\,d\mu^+=\int|x|\,d\mu^-</span>, finite by
+integrability and positive unless <span
+class="math inline">\mu=\delta_0</span>. For <span
+class="math inline">x&gt;0&gt;y</span> let <span
+class="math inline">\rho_{x,y}</span> be the mean-zero two-point law on
+<span class="math inline">\{x,y\}</span> and define</p>
+<p><span
+class="math display">\pi(dx,dy)=\frac{x+|y|}{m}\,\mu^+(dx)\,\mu^-(dy).</span></p>
+<p>For a Borel set <span
+class="math inline">E\subset(0,\infty)</span>,</p>
 <p><span class="math display">\int\rho_{x,y}(E)\,d\pi
 =\iint 1_E(x)\,\frac{|y|}{x+|y|}\cdot\frac{x+|y|}{m}\,\mu^+(dx)\mu^-(dy)
 =\frac{\mu^+(E)}{m}\int|y|\,d\mu^-=\mu^+(E),</span></p>
-<p>and symmetrically for <span class="math inline">E\subset(-\infty,0)</span> with the weight <span class="math inline">x/(x+|y|)</span>. The total mass of <span class="math inline">\pi</span> is <span class="math inline">(1/m)(m\,\mu^-(\mathbb R)+m\,\mu^+(\mathbb R))=1-\mu(\{0\})</span>. Hence <span class="math inline">\mu=\int\rho_{x,y}\,d\pi+\mu(\{0\})\,\delta_0</span>. Now draw <span class="math inline">(x,y)</span> from <span class="math inline">\pi</span> normalized, with probability <span class="math inline">\mu(\{0\})</span> instead set <span class="math inline">D=Z=0</span>, and otherwise take <span class="math inline">(D,Z)</span> for <span class="math inline">\rho_{x,y}</span> as above. Conditionally on <span class="math inline">(x,y)</span>, <span class="math inline">Z+D</span> has the law of <span class="math inline">Z</span>; integrating over <span class="math inline">(x,y)</span>, <span class="math inline">Z+D\overset{d}{=}Z</span> unconditionally, while <span class="math inline">D\sim\int\rho_{x,y}\,d\pi+\mu(\{0\})\delta_0=\mu</span>. <span class="math inline">\square</span></p>
-<p><em>Refinement.</em> The decomposition of <span class="math inline">\mu</span> into two-point laws is any coupling of the probability measures <span class="math inline">x\,\mu^+(dx)/m</span> and <span class="math inline">|y|\,\mu^-(dy)/m</span>. Choosing a coupling that pairs <span class="math inline">x&gt;C</span> only with <span class="math inline">|y|\le C</span> and <span class="math inline">|y|&gt;C</span> only with <span class="math inline">x\le C</span>, which is possible for large <span class="math inline">C</span>, and noting that in the two-point construction <span class="math inline">\min(|D|,|Z|)\le\min(x,|y|)</span>, one gets <span class="math inline">\min(|D|,|Z|)\le C</span>. This bounded version is not needed below.</p>
-<h2 id="step-1-integrable-mean-zero-gambles-are-indifferent-to-zero">Step 1: integrable mean-zero gambles are indifferent to zero</h2>
-<p>Let <span class="math inline">D</span> be integrable with <span class="math inline">E D=0</span> and law <span class="math inline">\mu</span>. Realize <span class="math inline">(D&#39;,Z)</span> on the standing space with the joint law of the lemma; all joint laws are available, and Rich Outcomes places the values in the chart. The compared pair <span class="math inline">(D&#39;,0)</span> and the summand <span class="math inline">Z</span> are uninteractive: <span class="math inline">E\min(|D&#39;|,|Z|)\le E|D&#39;|&lt;\infty</span> and <span class="math inline">\min(0,|Z|)=0</span>. Uninteractive Sum Invariance gives</p>
-<p><span class="math display">D&#39;\succeq 0\iff D&#39;+Z\succeq Z,\qquad 0\succeq D&#39;\iff Z\succeq D&#39;+Z.</span></p>
-<p>Both right-hand sides hold by Stochastic Equivalence, since <span class="math inline">D&#39;+Z</span> and <span class="math inline">Z</span> have the same law. So <span class="math inline">D&#39;\sim 0</span>, and <span class="math inline">D\sim D&#39;</span> by Stochastic Equivalence, whence <span class="math inline">D\sim 0</span>.</p>
+<p>and symmetrically for <span
+class="math inline">E\subset(-\infty,0)</span> with the weight <span
+class="math inline">x/(x+|y|)</span>. The total mass of <span
+class="math inline">\pi</span> is <span
+class="math inline">(1/m)(m\,\mu^-(\mathbb R)+m\,\mu^+(\mathbb
+R))=1-\mu(\{0\})</span>. Hence <span
+class="math inline">\mu=\int\rho_{x,y}\,d\pi+\mu(\{0\})\,\delta_0</span>.
+Now draw <span class="math inline">(x,y)</span> from <span
+class="math inline">\pi</span> normalized, with probability <span
+class="math inline">\mu(\{0\})</span> instead set <span
+class="math inline">D=Z=0</span>, and otherwise take <span
+class="math inline">(D,Z)</span> for <span
+class="math inline">\rho_{x,y}</span> as above. Conditionally on <span
+class="math inline">(x,y)</span>, <span class="math inline">Z+D</span>
+has the law of <span class="math inline">Z</span>; integrating over
+<span class="math inline">(x,y)</span>, <span
+class="math inline">Z+D\overset{d}{=}Z</span> unconditionally, while
+<span
+class="math inline">D\sim\int\rho_{x,y}\,d\pi+\mu(\{0\})\delta_0=\mu</span>.
+<span class="math inline">\square</span></p>
+<p><em>Refinement.</em> The decomposition of <span
+class="math inline">\mu</span> into two-point laws is any coupling of
+the probability measures <span class="math inline">x\,\mu^+(dx)/m</span>
+and <span class="math inline">|y|\,\mu^-(dy)/m</span>. Choosing a
+coupling that pairs <span class="math inline">x&gt;C</span> only with
+<span class="math inline">|y|\le C</span> and <span
+class="math inline">|y|&gt;C</span> only with <span
+class="math inline">x\le C</span>, which is possible for large <span
+class="math inline">C</span>, and noting that in the two-point
+construction <span
+class="math inline">\min(|D|,|Z|)\le\min(x,|y|)</span>, one gets <span
+class="math inline">\min(|D|,|Z|)\le C</span>. This bounded version is
+not needed below.</p>
+<h2
+id="step-1-integrable-mean-zero-gambles-are-indifferent-to-zero">Step 1:
+integrable mean-zero gambles are indifferent to zero</h2>
+<p>Let <span class="math inline">D</span> be integrable with <span
+class="math inline">E D=0</span> and law <span
+class="math inline">\mu</span>. Realize <span
+class="math inline">(D&#39;,Z)</span> on the standing space with the
+joint law of the lemma; all joint laws are available, and Rich Outcomes
+places the values in the chart. The compared pair <span
+class="math inline">(D&#39;,0)</span> and the summand <span
+class="math inline">Z</span> are uninteractive: <span
+class="math inline">E\min(|D&#39;|,|Z|)\le E|D&#39;|&lt;\infty</span>
+and <span class="math inline">\min(0,|Z|)=0</span>. Uninteractive Sum
+Invariance gives</p>
+<p><span class="math display">D&#39;\succeq 0\iff D&#39;+Z\succeq
+Z,\qquad 0\succeq D&#39;\iff Z\succeq D&#39;+Z.</span></p>
+<p>Both right-hand sides hold by Stochastic Equivalence, since <span
+class="math inline">D&#39;+Z</span> and <span
+class="math inline">Z</span> have the same law. So <span
+class="math inline">D&#39;\sim 0</span>, and <span
+class="math inline">D\sim D&#39;</span> by Stochastic Equivalence,
+whence <span class="math inline">D\sim 0</span>.</p>
 <h2 id="step-2-relative-expectation">Step 2: Relative Expectation</h2>
-<p>Let <span class="math inline">E|X-Y|&lt;\infty</span>, <span class="math inline">c=E[X-Y]</span> and <span class="math inline">D_0=X-Y-c</span>, so <span class="math inline">E D_0=0</span> and <span class="math inline">X=Y+c+D_0</span>. The compared pair <span class="math inline">(c+D_0,\,0)</span> with the summand <span class="math inline">Y</span> is uninteractive, because <span class="math inline">E\min(|c+D_0|,|Y|)\le|c|+E|D_0|&lt;\infty</span>. Hence</p>
-<p><span class="math display">X\succeq Y\iff c+D_0\succeq 0\iff D_0\succeq -c\iff 0\succeq -c\iff c\ge 0.</span></p>
-<p>The second equivalence is the principle with the constant summand <span class="math inline">-c</span>, the third is Step 1, and the fourth is the ordering of constants by utility. Symmetrically <span class="math inline">Y\succeq X\iff c\le 0</span>. This is Relative Expectation, including its strict and indifferent cases. <span class="math inline">\square</span></p>
+<p>Let <span class="math inline">E|X-Y|&lt;\infty</span>, <span
+class="math inline">c=E[X-Y]</span> and <span
+class="math inline">D_0=X-Y-c</span>, so <span class="math inline">E
+D_0=0</span> and <span class="math inline">X=Y+c+D_0</span>. The
+compared pair <span class="math inline">(c+D_0,\,0)</span> with the
+summand <span class="math inline">Y</span> is uninteractive, because
+<span
+class="math inline">E\min(|c+D_0|,|Y|)\le|c|+E|D_0|&lt;\infty</span>.
+Hence</p>
+<p><span class="math display">X\succeq Y\iff c+D_0\succeq 0\iff
+D_0\succeq -c\iff 0\succeq -c\iff c\ge 0.</span></p>
+<p>The second equivalence is the principle with the constant summand
+<span class="math inline">-c</span>, the third is Step 1, and the fourth
+is the ordering of constants by utility. Symmetrically <span
+class="math inline">Y\succeq X\iff c\le 0</span>. This is Relative
+Expectation, including its strict and indifferent cases. <span
+class="math inline">\square</span></p>
 <h2 id="remarks">Remarks</h2>
 <ul>
-<li>Only instances with an integrable compared pair and an arbitrary common summand were used. So, under Stochastic Equivalence and Rich Outcomes, that restricted principle, the full principle and Relative Expectation are equivalent given the forward result and Mixture Independence.</li>
-<li>The summand <span class="math inline">Z</span> of Step 1 need not be integrable: its mean is finite only when <span class="math inline">\mu</span> has a finite second moment on each side. Invariance under integrable common summands alone would therefore not run this argument.</li>
-<li>With the bounded-overlap variant of the principle, the refinement still gives Step 1, hence every integrable gamble indifferent to its mean, Shift Invariance, Shift Transfer, and Relative Expectation for bounded differences. Step 2 needs the integrable overlap, since <span class="math inline">\min(|c+D_0|,|Y|)</span> is unbounded when <span class="math inline">D_0</span> is. Whether the bounded variant implies Relative Expectation under DU is open; it reduces to <span class="math inline">Y+R\sim Y+E[R]</span> for integrable <span class="math inline">R\ge0</span> and arbitrary <span class="math inline">Y</span>.</li>
+<li>Only instances with an integrable compared pair and an arbitrary
+common summand were used. So, under Stochastic Equivalence and Rich
+Outcomes, that restricted principle, the full principle and Relative
+Expectation are equivalent given the forward result and Mixture
+Independence.</li>
+<li>The summand <span class="math inline">Z</span> of Step 1 need not be
+integrable: its mean is finite only when <span
+class="math inline">\mu</span> has a finite second moment on each side.
+Invariance under integrable common summands alone would therefore not
+run this argument.</li>
+<li>With the bounded-overlap variant of the principle, the refinement
+still gives Step 1, hence every integrable gamble indifferent to its
+mean, Shift Invariance, Shift Transfer, and Relative Expectation for
+bounded differences. Step 2 needs the integrable overlap, since <span
+class="math inline">\min(|c+D_0|,|Y|)</span> is unbounded when <span
+class="math inline">D_0</span> is. Whether the bounded variant implies
+Relative Expectation under DU is open; it reduces to <span
+class="math inline">Y+R\sim Y+E[R]</span> for integrable <span
+class="math inline">R\ge0</span> and arbitrary <span
+class="math inline">Y</span>.</li>
 </ul>
 </body></html>

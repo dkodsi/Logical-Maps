@@ -269,59 +269,183 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <link rel="stylesheet" href="../math/katex.min.css">
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
-<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Clipped expectation: continuous ultrafilter dominance [−7·4ⁿ/4, 2·4ⁿ]</h1></header><p><strong>Source:</strong> AI-generated results communicated by <strong>Branden Fitelson</strong>, <em>Unbounded Utility: Five Top-Ranked Open Conjectures Resolved</em>, 30 September 2026, §§1 and 4(b). The report names Claude agents but gives no model version. The specialization and shuffle-copula argument are attributed to those agents; the underlying continuous clipping method is Goodsell’s. GPT-6 (Codex) expanded and informally checked the proofs on 2 October 2026. No independent human check or Lean verification is claimed.</p>
-<h2 id="construction-and-positive-properties">Construction and positive properties</h2>
-<p>Use all real-valued gambles with identity utility, a free ultrafilter <span class="math inline">\mathcal U</span> on the positive integers, and</p>
-<p><span class="math display">a_n=\tfrac74\,4^n,\quad b_n=2\cdot4^n,\quad
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Clipped expectation: continuous ultrafilter dominance [−7·4ⁿ/4, 2·4ⁿ]</h1></header><p><strong>Source:</strong> AI-generated results communicated by
+<strong>Branden Fitelson</strong>, <em>Unbounded Utility: Five
+Top-Ranked Open Conjectures Resolved</em>, 30 September 2026, §§1 and
+4(b). The report names Claude agents but gives no model version. The
+specialization and shuffle-copula argument are attributed to those
+agents; the underlying continuous clipping method is Goodsell’s. GPT-6
+(Codex) expanded and informally checked the proofs on 2 October 2026. No
+independent human check or Lean verification is claimed.</p>
+<h2 id="construction-and-positive-properties">Construction and positive
+properties</h2>
+<p>Use all real-valued gambles with identity utility, a free ultrafilter
+<span class="math inline">\mathcal U</span> on the positive integers,
+and</p>
+<p><span class="math display">a_n=\tfrac74\,4^n,\quad
+b_n=2\cdot4^n,\quad
 v_X(n)=E[\max(-a_n,\min(X,b_n))].</span></p>
-<p>Put <span class="math inline">X\succeq Y</span> iff for every <span class="math inline">\epsilon&gt;0</span> the set <span class="math inline">\{n:v_X(n)-v_Y(n)\ge-\epsilon\}</span> belongs to <span class="math inline">\mathcal U</span>. The <a href="calibrated-geometric-continuous-ultrafilter.html#shared-clipping-and-shuffle-copula-proof">common clipping proof</a> establishes DTU, CDF-Area Extension, Relative Expectation, Expected Utility, L¹ Continuity, Shift Invariance, and the fixed-copula invariance <span class="math inline">\operatorname{SC}(C_\sigma)</span> for the quarter-shuffle copula below, with the copula chosen once rather than per triple. Uninteractive Sum Invariance follows from Relative Expectation by the recorded result <code>relative-independence-equivalence-imply-uninteractive-sum</code>.</p>
-<h2 id="exact-alternating-game-evaluation">Exact alternating-game evaluation</h2>
-<p>Let <span class="math inline">\Pr(A=(-2)^j)=2^{-j}</span> for <span class="math inline">j\ge1</span>. For each <span class="math inline">n\ge1</span>, the first <span class="math inline">2n</span> atoms contribute <span class="math inline">-n+n=0</span>. The remaining negative and positive probabilities are respectively <span class="math inline">(2/3)4^{-n}</span> and <span class="math inline">(1/3)4^{-n}</span>. They lie beyond the two cutoffs. Therefore</p>
+<p>Put <span class="math inline">X\succeq Y</span> iff for every <span
+class="math inline">\epsilon&gt;0</span> the set <span
+class="math inline">\{n:v_X(n)-v_Y(n)\ge-\epsilon\}</span> belongs to
+<span class="math inline">\mathcal U</span>. The <a
+href="calibrated-geometric-continuous-ultrafilter.html#shared-clipping-and-shuffle-copula-proof">common
+clipping proof</a> establishes DTU, CDF-Area Extension, Relative
+Expectation, Expected Utility, L¹ Continuity, Shift Invariance, and the
+fixed-copula invariance <span
+class="math inline">\operatorname{SC}(C_\sigma)</span> for the
+quarter-shuffle copula below, with the copula chosen once rather than
+per triple. Uninteractive Sum Invariance follows from Relative
+Expectation by the recorded result
+<code>relative-independence-equivalence-imply-uninteractive-sum</code>.</p>
+<h2 id="exact-alternating-game-evaluation">Exact alternating-game
+evaluation</h2>
+<p>Let <span class="math inline">\Pr(A=(-2)^j)=2^{-j}</span> for <span
+class="math inline">j\ge1</span>. For each <span
+class="math inline">n\ge1</span>, the first <span
+class="math inline">2n</span> atoms contribute <span
+class="math inline">-n+n=0</span>. The remaining negative and positive
+probabilities are respectively <span
+class="math inline">(2/3)4^{-n}</span> and <span
+class="math inline">(1/3)4^{-n}</span>. They lie beyond the two cutoffs.
+Therefore</p>
 <p><span class="math display">v_A(n)=-\tfrac74\,4^n\tfrac23\,4^{-n}
              +2\cdot4^n\tfrac13\,4^{-n}=-\tfrac12.</span></p>
-<p>The same first <span class="math inline">2n</span> atoms of <span class="math inline">2A</span> contribute zero, now with the largest positive atom at <span class="math inline">b_n</span>. The remaining atoms are beyond the cutoffs, with the same probabilities. Thus <span class="math inline">v_{2A}(n)=-1/2</span> too. Constants eventually escape clipping, so</p>
-<p><span class="math display">A\sim-\tfrac12,\qquad 2A\sim-\tfrac12\succ-1.</span></p>
-<p>The first equality verifies the alternating-game principle for every gamble of that law. Integer Affine Preservation fails: the true comparison <span class="math inline">-1/2\succeq A</span> would require <span class="math inline">-1\succeq2A</span> after doubling. Consequently this model need not have positive affine or scale invariance.</p>
-<h2 id="failure-of-folded-expectation-and-reflection">Failure of folded expectation and reflection</h2>
-<p>For a standard symmetric Cauchy variable <span class="math inline">C</span>, put</p>
+<p>The same first <span class="math inline">2n</span> atoms of <span
+class="math inline">2A</span> contribute zero, now with the largest
+positive atom at <span class="math inline">b_n</span>. The remaining
+atoms are beyond the cutoffs, with the same probabilities. Thus <span
+class="math inline">v_{2A}(n)=-1/2</span> too. Constants eventually
+escape clipping, so</p>
+<p><span class="math display">A\sim-\tfrac12,\qquad
+2A\sim-\tfrac12\succ-1.</span></p>
+<p>The first equality verifies the alternating-game principle for every
+gamble of that law. Integer Affine Preservation fails: the true
+comparison <span class="math inline">-1/2\succeq A</span> would require
+<span class="math inline">-1\succeq2A</span> after doubling.
+Consequently this model need not have positive affine or scale
+invariance.</p>
+<h2 id="failure-of-folded-expectation-and-reflection">Failure of folded
+expectation and reflection</h2>
+<p>For a standard symmetric Cauchy variable <span
+class="math inline">C</span>, put</p>
 <p><span class="math display">m(r)=E[\min(C_+,r)]
 =\frac{r\arctan(1/r)+\tfrac12\log(1+r^2)}{\pi}.</span></p>
-<p>Then <span class="math inline">v_C(n)=m(b_n)-m(a_n)</span> and <span class="math inline">m(r)=(\log r+1)/\pi+o(1)</span>. Hence</p>
-<p><span class="math display">v_C(n)\longrightarrow \kappa=\frac{\log(8/7)}{\pi}&gt;0.</span></p>
-<p>Thus <span class="math inline">C\sim\kappa\succ0</span>. Its symmetric folded-tail function is zero, so Folded Expectation and Symmetric Neutrality would instead require <span class="math inline">C\sim0</span>. Also <span class="math inline">-C</span> has the same law as <span class="math inline">C</span>, so Reflection Anti-Invariance would turn <span class="math inline">C\succeq0</span> into <span class="math inline">0\succeq-C</span>, which is false. Negative Affine Anti-Invariance fails at its reflection instance as well.</p>
-<p>This single model proves both the report’s first non-implication and the fourth consistency claim, including Totality. Its latter proof uses the shuffle copula, not the separate steered-conclosure proposal in §4(a).</p>
-<p><code>checks/fitelson_report.py</code> checks the exact atom sums and the Cauchy limit. Those diagnostics do not replace the quantified arguments or the ultrafilter existence assumption.</p>
+<p>Then <span class="math inline">v_C(n)=m(b_n)-m(a_n)</span> and <span
+class="math inline">m(r)=(\log r+1)/\pi+o(1)</span>. Hence</p>
+<p><span class="math display">v_C(n)\longrightarrow
+\kappa=\frac{\log(8/7)}{\pi}&gt;0.</span></p>
+<p>Thus <span class="math inline">C\sim\kappa\succ0</span>. Its
+symmetric folded-tail function is zero, so Folded Expectation and
+Symmetric Neutrality would instead require <span
+class="math inline">C\sim0</span>. Also <span
+class="math inline">-C</span> has the same law as <span
+class="math inline">C</span>, so Reflection Anti-Invariance would turn
+<span class="math inline">C\succeq0</span> into <span
+class="math inline">0\succeq-C</span>, which is false. Negative Affine
+Anti-Invariance fails at its reflection instance as well.</p>
+<p>This single model proves both the report’s first non-implication and
+the fourth consistency claim, including Totality. Its latter proof uses
+the shuffle copula, not the separate steered-conclosure proposal in
+§4(a).</p>
+<p><code>checks/fitelson_report.py</code> checks the exact atom sums and
+the Cauchy limit. Those diagnostics do not replace the quantified
+arguments or the ultrafilter existence assumption.</p>
 <p><a id="shared-clipping-and-shuffle-copula-proof"></a></p>
-<h2 id="shared-clipping-and-shuffle-copula-proof">Shared clipping and shuffle-copula proof</h2>
-<p>The shuffle-copula argument is from <em>Unbounded Utility: Five Top-Ranked Open Conjectures Resolved</em>, 30 September 2026, §4(b), communicated by <strong>Branden Fitelson</strong>. The report attributes its results to Claude agents without specifying their model versions. Fitelson is credited as communicator, not as the producer of the AI proofs. GPT-6 (Codex) expanded and informally checked the proof below on 2 October 2026. The report’s separate referee files were not supplied; their reported verdicts are not treated as independently inspected certificates.</p>
-<p>The underlying clipped-expectation construction is Goodsell’s; see <em>Decision theory unbound</em>, Appendix B, Definition 3, Lemma 6 and Remark 3. The shuffle copula is an additional property, separately attributed to the communicated report. No Lean verification is claimed.</p>
+<h2 id="shared-clipping-and-shuffle-copula-proof">Shared clipping and
+shuffle-copula proof</h2>
+<p>The shuffle-copula argument is from <em>Unbounded Utility: Five
+Top-Ranked Open Conjectures Resolved</em>, 30 September 2026, §4(b),
+communicated by <strong>Branden Fitelson</strong>. The report attributes
+its results to Claude agents without specifying their model versions.
+Fitelson is credited as communicator, not as the producer of the AI
+proofs. GPT-6 (Codex) expanded and informally checked the proof below on
+2 October 2026. The report’s separate referee files were not supplied;
+their reported verdicts are not treated as independently inspected
+certificates.</p>
+<p>The underlying clipped-expectation construction is Goodsell’s; see
+<em>Decision theory unbound</em>, Appendix B, Definition 3, Lemma 6 and
+Remark 3. The shuffle copula is an additional property, separately
+attributed to the communicated report. No Lean verification is
+claimed.</p>
 <h3 id="clipped-comparison-rules">Clipped comparison rules</h3>
-<p>Use all real-valued gambles, real outcomes and identity utility. Let</p>
-<p><span class="math display">q_i(x)=\max(-a_i,\min(x,b_i)),\qquad v_X(i)=E[q_i(X)],</span></p>
-<p>where both positive cutoffs tend to infinity. Each <span class="math inline">v_X(i)</span> is a finite real number even when <span class="math inline">X</span> has no expectation. We use either of these rules:</p>
+<p>Use all real-valued gambles, real outcomes and identity utility.
+Let</p>
+<p><span class="math display">q_i(x)=\max(-a_i,\min(x,b_i)),\qquad
+v_X(i)=E[q_i(X)],</span></p>
+<p>where both positive cutoffs tend to infinity. Each <span
+class="math inline">v_X(i)</span> is a finite real number even when
+<span class="math inline">X</span> has no expectation. We use either of
+these rules:</p>
 <ol type="1">
-<li>For a free ultrafilter on integer indices, or an ultrafilter on positive real indices containing every tail, <span class="math display">X\succeq Y\iff\forall\epsilon&gt;0\quad
+<li>For a free ultrafilter on integer indices, or an ultrafilter on
+positive real indices containing every tail, <span
+class="math display">X\succeq Y\iff\forall\epsilon&gt;0\quad
   \{i:v_X(i)-v_Y(i)\ge-\epsilon\}\in\mathcal U.</span></li>
-<li>For real <span class="math inline">t\to\infty</span>, <span class="math display">X\succeq Y\iff\liminf_{t\to\infty}(v_X(t)-v_Y(t))\ge0.</span> Equivalently, each positive tolerance is respected on some entire tail.</li>
+<li>For real <span class="math inline">t\to\infty</span>, <span
+class="math display">X\succeq
+Y\iff\liminf_{t\to\infty}(v_X(t)-v_Y(t))\ge0.</span> Equivalently, each
+positive tolerance is respected on some entire tail.</li>
 </ol>
-<p>Both rules ignore an error tending to zero. A comparison difference with a finite limit is ordered by that limit, with indifference at zero. Limits <span class="math inline">+\infty</span> and <span class="math inline">-\infty</span> give the corresponding strict preference.</p>
-<p>The positive comparisons are closed under addition and positive scaling: use tolerance <span class="math inline">\epsilon/2</span> in two summands and intersect the relevant sets or tails. This proves reflexivity and transitivity. Equal laws give identical comparison functions. Randomized mixtures satisfy</p>
-<p><span class="math display">v_{M_p(X,Z)}-v_{M_p(Y,Z)}=p(v_X-v_Y),</span></p>
-<p>so both directions of Mixture Independence hold. Simple gambles eventually escape clipping, and their comparisons are their ordinary expectations. Thus the normalized chart is the identity, Rich Outcomes and Archimedean Outcomes hold, and Simple Expected Utility holds.</p>
+<p>Both rules ignore an error tending to zero. A comparison difference
+with a finite limit is ordered by that limit, with indifference at zero.
+Limits <span class="math inline">+\infty</span> and <span
+class="math inline">-\infty</span> give the corresponding strict
+preference.</p>
+<p>The positive comparisons are closed under addition and positive
+scaling: use tolerance <span class="math inline">\epsilon/2</span> in
+two summands and intersect the relevant sets or tails. This proves
+reflexivity and transitivity. Equal laws give identical comparison
+functions. Randomized mixtures satisfy</p>
+<p><span
+class="math display">v_{M_p(X,Z)}-v_{M_p(Y,Z)}=p(v_X-v_Y),</span></p>
+<p>so both directions of Mixture Independence hold. Simple gambles
+eventually escape clipping, and their comparisons are their ordinary
+expectations. Thus the normalized chart is the identity, Rich Outcomes
+and Archimedean Outcomes hold, and Simple Expected Utility holds.</p>
 <p>The identity</p>
-<p><span class="math display">v_X(i)-v_Y(i)=\int_{-a_i}^{b_i}(S_X-S_Y)(s)\,ds \tag{1}</span></p>
-<p>shows weak Stochastic Dominance. Strict dominance at a threshold persists over an interval by right continuity, giving a fixed positive lower bound on every sufficiently late clipped difference. This proves strict dominance as well. Hence both rules satisfy DU. The ultrafilter rule is also total: failure of <span class="math inline">X\succeq Y</span> supplies a positive <span class="math inline">\epsilon</span> and an ultrafilter-large set where <span class="math inline">v_Y-v_X&gt;\epsilon</span>, proving <span class="math inline">Y\succ X</span>.</p>
-<h3 id="area-relative-expectation-continuity-and-shifts">Area, relative expectation, continuity and shifts</h3>
-<p>If at least one of <span class="math inline">\int(S_X-S_Y)_+</span> and <span class="math inline">\int(S_X-S_Y)_-</span> is finite, (1) converges to their well-defined extended difference. This follows from dominated convergence for a finite part and Fatou’s lemma for an infinite part; nested windows also permit monotone convergence. The sign criterion proves CDF-Area Extension. No difference of two infinite integrals is used.</p>
+<p><span
+class="math display">v_X(i)-v_Y(i)=\int_{-a_i}^{b_i}(S_X-S_Y)(s)\,ds
+\tag{1}</span></p>
+<p>shows weak Stochastic Dominance. Strict dominance at a threshold
+persists over an interval by right continuity, giving a fixed positive
+lower bound on every sufficiently late clipped difference. This proves
+strict dominance as well. Hence both rules satisfy DU. The ultrafilter
+rule is also total: failure of <span class="math inline">X\succeq
+Y</span> supplies a positive <span class="math inline">\epsilon</span>
+and an ultrafilter-large set where <span
+class="math inline">v_Y-v_X&gt;\epsilon</span>, proving <span
+class="math inline">Y\succ X</span>.</p>
+<h3 id="area-relative-expectation-continuity-and-shifts">Area, relative
+expectation, continuity and shifts</h3>
+<p>If at least one of <span class="math inline">\int(S_X-S_Y)_+</span>
+and <span class="math inline">\int(S_X-S_Y)_-</span> is finite, (1)
+converges to their well-defined extended difference. This follows from
+dominated convergence for a finite part and Fatou’s lemma for an
+infinite part; nested windows also permit monotone convergence. The sign
+criterion proves CDF-Area Extension. No difference of two infinite
+integrals is used.</p>
 <p>If <span class="math inline">E|X-Y|&lt;\infty</span>, then</p>
 <p><span class="math display">q_i(X)-q_i(Y)\longrightarrow X-Y,\qquad
- |q_i(X)-q_i(Y)|\le |X-Y|.</span></p>
-<p>Dominated convergence proves Relative Expectation and, in particular, Expected Utility on integrable gambles. The uniform bound</p>
+|q_i(X)-q_i(Y)|\le |X-Y|.</span></p>
+<p>Dominated convergence proves Relative Expectation and, in particular,
+Expected Utility on integrable gambles. The uniform bound</p>
 <p><span class="math display">|v_{X_n}(i)-v_X(i)|\le E|X_n-X|</span></p>
-<p>proves L¹ Continuity: for a specified tolerance choose one sufficiently close <span class="math inline">X_n</span>, then use its comparison with <span class="math inline">Y</span> at half that tolerance.</p>
-<p>For a fixed real <span class="math inline">b</span>, the difference <span class="math inline">q_i(X+b)-q_i(X)</span> tends pointwise to <span class="math inline">b</span> and is bounded by <span class="math inline">|b|</span>. Consequently <span class="math inline">v_{X+b}-v_X\to b</span>. Applying this to each of two compared gambles proves Shift Invariance. These statements hold without integrability of the individual gambles.</p>
-<h3 id="a-single-copula-that-works-for-all-marginals">A single copula that works for all marginals</h3>
-<p>Let <span class="math inline">\sigma</span> exchange adjacent quarters of the unit interval:</p>
+<p>proves L¹ Continuity: for a specified tolerance choose one
+sufficiently close <span class="math inline">X_n</span>, then use its
+comparison with <span class="math inline">Y</span> at half that
+tolerance.</p>
+<p>For a fixed real <span class="math inline">b</span>, the difference
+<span class="math inline">q_i(X+b)-q_i(X)</span> tends pointwise to
+<span class="math inline">b</span> and is bounded by <span
+class="math inline">|b|</span>. Consequently <span
+class="math inline">v_{X+b}-v_X\to b</span>. Applying this to each of
+two compared gambles proves Shift Invariance. These statements hold
+without integrability of the individual gambles.</p>
+<h3 id="a-single-copula-that-works-for-all-marginals">A single copula
+that works for all marginals</h3>
+<p>Let <span class="math inline">\sigma</span> exchange adjacent
+quarters of the unit interval:</p>
 <p><span class="math display">\sigma(u)=
 \begin{cases}
 u+1/4,&amp;0\le u&lt;1/4,\\
@@ -329,21 +453,74 @@ u-1/4,&amp;1/4\le u&lt;1/2,\\
 u+1/4,&amp;1/2\le u&lt;3/4,\\
 u-1/4,&amp;3/4\le u&lt;1.
 \end{cases}</span></p>
-<p>The distribution <span class="math inline">C_\sigma</span> of <span class="math inline">(U,\sigma(U))</span> is a copula, since <span class="math inline">\sigma</span> preserves Lebesgue measure. It is fixed independently of all gamble laws. It is nonindependent: <span class="math inline">H_{C_\sigma}(1/4,1/4)=0</span>, whereas the product copula gives <span class="math inline">1/16</span>. The map recorded the conclusion of this section as Existential Copula Sum Invariance and, from 3 October 2026, also as Existential Nonindependent Copula Sum Invariance. Both principles were removed on 11 October 2026 and replaced by Uninteractive Sum Invariance, which follows from Relative Expectation (<code>relative-independence-equivalence-imply-uninteractive-sum</code>) and implies <span class="math inline">\operatorname{SC}(C)</span> for every corner-avoiding copula, <span class="math inline">C_\sigma</span> included. This section is retained as the original direct verification, with its attribution. For any two real probability laws take</p>
-<p><span class="math display">A=Q_A(U),\qquad B=Q_B(\sigma(U)).</span></p>
-<p>On the first and last quarters, <span class="math inline">Q_B(\sigma(U))</span> ranges over an interior quarter and is bounded. On the middle two quarters, <span class="math inline">Q_A(U)</span> is bounded. Interior quantiles of any real probability law are finite. Thus on each quarter at least one summand has a fixed finite absolute bound.</p>
-<p>Clipping is 1-Lipschitz and fixes zero, so for all real <span class="math inline">x,z</span>,</p>
-<p><span class="math display">|q_i(x+z)-q_i(x)-q_i(z)|\le2\min(|x|,|z|).</span></p>
-<p>The left side tends pointwise to zero. The bounded-summand observation gives an integrable constant bound on each of the four pieces. Dominated convergence therefore proves</p>
-<p><span class="math display">v_{A+B}(i)-v_A(i)-v_B(i)\longrightarrow0. \tag{2}</span></p>
-<p>This is valid even for asymmetric windows and nonintegrable marginals. If a pair admits <span class="math inline">C_\sigma</span> in the graph’s compatibility definition, its joint CDF equals that of the displayed quantile pair. It has the same joint law, hence the same sum law. This observation also covers atomic marginals and does not presume a uniquely assigned copula.</p>
-<p>For every eligible triple <span class="math inline">(X,Y,Z)</span> whose two pairs admit this fixed copula, apply (2) to the two pairs separately and subtract:</p>
+<p>The distribution <span class="math inline">C_\sigma</span> of <span
+class="math inline">(U,\sigma(U))</span> is a copula, since <span
+class="math inline">\sigma</span> preserves Lebesgue measure. It is
+fixed independently of all gamble laws. It is nonindependent: <span
+class="math inline">H_{C_\sigma}(1/4,1/4)=0</span>, whereas the product
+copula gives <span class="math inline">1/16</span>. The map recorded the
+conclusion of this section as Existential Copula Sum Invariance and,
+from 3 October 2026, also as Existential Nonindependent Copula Sum
+Invariance. Both principles were removed on 11 October 2026 and replaced
+by Uninteractive Sum Invariance, which follows from Relative Expectation
+(<code>relative-independence-equivalence-imply-uninteractive-sum</code>)
+and implies <span class="math inline">\operatorname{SC}(C)</span> for
+every corner-avoiding copula, <span class="math inline">C_\sigma</span>
+included. This section is retained as the original direct verification,
+with its attribution. For any two real probability laws take</p>
+<p><span class="math display">A=Q_A(U),\qquad
+B=Q_B(\sigma(U)).</span></p>
+<p>On the first and last quarters, <span
+class="math inline">Q_B(\sigma(U))</span> ranges over an interior
+quarter and is bounded. On the middle two quarters, <span
+class="math inline">Q_A(U)</span> is bounded. Interior quantiles of any
+real probability law are finite. Thus on each quarter at least one
+summand has a fixed finite absolute bound.</p>
+<p>Clipping is 1-Lipschitz and fixes zero, so for all real <span
+class="math inline">x,z</span>,</p>
+<p><span
+class="math display">|q_i(x+z)-q_i(x)-q_i(z)|\le2\min(|x|,|z|).</span></p>
+<p>The left side tends pointwise to zero. The bounded-summand
+observation gives an integrable constant bound on each of the four
+pieces. Dominated convergence therefore proves</p>
+<p><span class="math display">v_{A+B}(i)-v_A(i)-v_B(i)\longrightarrow0.
+\tag{2}</span></p>
+<p>This is valid even for asymmetric windows and nonintegrable
+marginals. If a pair admits <span class="math inline">C_\sigma</span> in
+the graph’s compatibility definition, its joint CDF equals that of the
+displayed quantile pair. It has the same joint law, hence the same sum
+law. This observation also covers atomic marginals and does not presume
+a uniquely assigned copula.</p>
+<p>For every eligible triple <span class="math inline">(X,Y,Z)</span>
+whose two pairs admit this fixed copula, apply (2) to the two pairs
+separately and subtract:</p>
 <p><span class="math display">v_{X+Z}-v_{Y+Z}=v_X-v_Y+o(1).</span></p>
-<p>Both comparison rules ignore that error, in both directions. Thus <span class="math inline">\operatorname{SC}(C_\sigma)</span> holds. There is no additional requirement on the triple’s joint law. Strict comparisons are preserved because the equivalence holds in both ordered directions.</p>
-<p>This proof also adds the copula property to the map’s existing continuous ultrafilter models with windows <span class="math inline">[-t,t]</span>, <span class="math inline">[-t,2t]</span>, <span class="math inline">[-4^n,4^n]</span>, and <span class="math inline">[-4^n,4^{2n}]</span>. It makes no assertion about the exact, zero-tolerance ultrafilter or eventual-comparison rules.</p>
+<p>Both comparison rules ignore that error, in both directions. Thus
+<span class="math inline">\operatorname{SC}(C_\sigma)</span> holds.
+There is no additional requirement on the triple’s joint law. Strict
+comparisons are preserved because the equivalence holds in both ordered
+directions.</p>
+<p>This proof also adds the copula property to the map’s existing
+continuous ultrafilter models with windows <span
+class="math inline">[-t,t]</span>, <span
+class="math inline">[-t,2t]</span>, <span
+class="math inline">[-4^n,4^n]</span>, and <span
+class="math inline">[-4^n,4^{2n}]</span>. It makes no assertion about
+the exact, zero-tolerance ultrafilter or eventual-comparison rules.</p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Origin: Unbounded Utility: Five Top-Ranked Open Conjectures Resolved.</strong> AI-generated report, 30 September 2026, 4 pages; communicated by Branden Fitelson. The report attributes production to Claude agents without specifying model versions. Fitelson is the communicator, not the credited producer of the proofs. — §§1 and 4(b), pp. 1 and 3</li>
-<li><strong>Background: <a href="https://doi.org/10.1111/nous.12473">Decision theory unbound</a>.</strong> (<a href="../sources/Nous%20-%202023%20-%20Goodsell%20-%20Decision%20theory%20unbound%20%281%29.pdf">PDF</a>) Zachary Goodsell (2024). Decision theory unbound. Noûs, 58, 669–695. First published online in 2023. — Appendix B, Definition 3, Lemma 6 and Remark 3</li>
+<li><strong>Origin: Unbounded Utility: Five Top-Ranked Open Conjectures
+Resolved.</strong> AI-generated report, 30 September 2026, 4 pages;
+communicated by Branden Fitelson. The report attributes production to
+Claude agents without specifying model versions. Fitelson is the
+communicator, not the credited producer of the proofs. — §§1 and 4(b),
+pp. 1 and 3</li>
+<li><strong>Background: <a
+href="https://doi.org/10.1111/nous.12473">Decision theory
+unbound</a>.</strong> (<a
+href="../sources/Nous%20-%202023%20-%20Goodsell%20-%20Decision%20theory%20unbound%20%281%29.pdf">PDF</a>)
+Zachary Goodsell (2024). Decision theory unbound. Noûs, 58, 669–695.
+First published online in 2023. — Appendix B, Definition 3, Lemma 6 and
+Remark 3</li>
 </ul>
 </body></html>

@@ -269,33 +269,111 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <link rel="stylesheet" href="../math/katex.min.css">
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
-<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>L¹ continuity turns independent-sum cancellation into preservation</h1></header><p><strong>Proved implication:</strong> Rich Outcomes + Totality + Stochastic Dominance + <span class="math inline">L^{1}</span> Continuity + Independent Sum Cancellation implies Independent Sum Preservation.</p>
-<p>The proof concerns numerical gambles in the finite real chart. Rich Outcomes makes every real translation below available. Additional outcomes outside that chart are not used.</p>
-<h2 id="cancellation-already-preserves-strict-comparisons">1. Cancellation already preserves strict comparisons</h2>
-<p>Suppose <span class="math inline">X\succ Y</span> and <span class="math inline">Z</span> is independent of <span class="math inline">(X,Y)</span>. If <span class="math inline">X+Z\not\succ Y+Z</span>, Totality of the two sums implies <span class="math inline">Y+Z\succeq X+Z</span>. Cancellation, with the two compared variables exchanged, would give <span class="math inline">Y\succeq X</span>, contradicting <span class="math inline">X\succ Y</span>. Hence</p>
-<p><span class="math display">X\succ Y\quad\Longrightarrow\quad X+Z\succ Y+Z.</span></p>
-<p>This argument does not establish preservation of indifference. Cancellation can, as an abstract order property, prevent reversal of a strict order while allowing a map to break a tie. The next step closes precisely that gap.</p>
-<h2 id="constant-shifts-supply-strict-approximations">2. Constant shifts supply strict approximations</h2>
-<p>For every real-valued random variable <span class="math inline">X</span> and every <span class="math inline">\delta&gt;0</span>, the variable <span class="math inline">X+\delta</span> strictly stochastically dominates <span class="math inline">X</span>. All weak tail inequalities follow from <span class="math inline">X+\delta&gt;X</span> pointwise. To see that at least one is strict, partition <span class="math inline">\mathbb R</span> into the intervals <span class="math inline">(k\delta,(k+1)\delta]</span>, <span class="math inline">k\in\mathbb Z</span>. At least one has positive <span class="math inline">X</span>-probability, and at its upper endpoint <span class="math inline">t</span> we have</p>
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>L¹ continuity turns independent-sum cancellation into preservation</h1></header><p><strong>Proved implication:</strong> Rich Outcomes + Totality +
+Stochastic Dominance + <span class="math inline">L^{1}</span> Continuity
++ Independent Sum Cancellation implies Independent Sum Preservation.</p>
+<p>The proof concerns numerical gambles in the finite real chart. Rich
+Outcomes makes every real translation below available. Additional
+outcomes outside that chart are not used.</p>
+<h2 id="cancellation-already-preserves-strict-comparisons">1.
+Cancellation already preserves strict comparisons</h2>
+<p>Suppose <span class="math inline">X\succ Y</span> and <span
+class="math inline">Z</span> is independent of <span
+class="math inline">(X,Y)</span>. If <span
+class="math inline">X+Z\not\succ Y+Z</span>, Totality of the two sums
+implies <span class="math inline">Y+Z\succeq X+Z</span>. Cancellation,
+with the two compared variables exchanged, would give <span
+class="math inline">Y\succeq X</span>, contradicting <span
+class="math inline">X\succ Y</span>. Hence</p>
+<p><span class="math display">X\succ Y\quad\Longrightarrow\quad X+Z\succ
+Y+Z.</span></p>
+<p>This argument does not establish preservation of indifference.
+Cancellation can, as an abstract order property, prevent reversal of a
+strict order while allowing a map to break a tie. The next step closes
+precisely that gap.</p>
+<h2 id="constant-shifts-supply-strict-approximations">2. Constant shifts
+supply strict approximations</h2>
+<p>For every real-valued random variable <span
+class="math inline">X</span> and every <span
+class="math inline">\delta&gt;0</span>, the variable <span
+class="math inline">X+\delta</span> strictly stochastically dominates
+<span class="math inline">X</span>. All weak tail inequalities follow
+from <span class="math inline">X+\delta&gt;X</span> pointwise. To see
+that at least one is strict, partition <span class="math inline">\mathbb
+R</span> into the intervals <span
+class="math inline">(k\delta,(k+1)\delta]</span>, <span
+class="math inline">k\in\mathbb Z</span>. At least one has positive
+<span class="math inline">X</span>-probability, and at its upper
+endpoint <span class="math inline">t</span> we have</p>
 <p><span class="math display">\Pr(X+\delta&gt;t)-\Pr(X&gt;t)
   =\Pr(t-\delta&lt;X\le t)&gt;0.</span></p>
-<p>Stochastic Dominance therefore gives <span class="math inline">X+\delta\succ X</span>. For any outcomes outside the finite chart the weak comparison also follows pointwise from the outcome order; the displayed strict threshold lies in the chart.</p>
-<p>If <span class="math inline">X\succeq Y</span>, transitivity of the preorder gives <span class="math inline">X+\delta\succ Y</span>: the contrary comparison <span class="math inline">Y\succeq X+\delta</span> would contradict <span class="math inline">X+\delta\succ X</span>.</p>
-<p>Independence of <span class="math inline">Z</span> from <span class="math inline">(X,Y)</span> implies independence from <span class="math inline">(X+\delta,Y)</span>, since translation is a measurable transformation of the pair. Applying the first step now yields</p>
+<p>Stochastic Dominance therefore gives <span
+class="math inline">X+\delta\succ X</span>. For any outcomes outside the
+finite chart the weak comparison also follows pointwise from the outcome
+order; the displayed strict threshold lies in the chart.</p>
+<p>If <span class="math inline">X\succeq Y</span>, transitivity of the
+preorder gives <span class="math inline">X+\delta\succ Y</span>: the
+contrary comparison <span class="math inline">Y\succeq X+\delta</span>
+would contradict <span class="math inline">X+\delta\succ X</span>.</p>
+<p>Independence of <span class="math inline">Z</span> from <span
+class="math inline">(X,Y)</span> implies independence from <span
+class="math inline">(X+\delta,Y)</span>, since translation is a
+measurable transformation of the pair. Applying the first step now
+yields</p>
 <p><span class="math display">(X+Z)+\delta\succ Y+Z.</span></p>
-<h2 id="only-upper-section-continuity-is-needed">3. Only upper-section continuity is needed</h2>
-<p>Take <span class="math inline">\delta_n=1/n</span>. The actual, pointwise-coupled variables satisfy</p>
-<p><span class="math display">E\bigl|((X+Z)+\delta_n)-(X+Z)\bigr|=\delta_n\longrightarrow0.</span></p>
-<p>The upper-section clause in the project<span class="math inline">&#39;s L^{1}</span> Continuity principle applies to <span class="math inline">(X+Z)+\delta_n\succeq Y+Z</span> and gives <span class="math inline">X+Z\succeq Y+Z</span>. It does not require <span class="math inline">X</span>, <span class="math inline">Y</span>, <span class="math inline">Z</span>, or their sums to have finite expectations. Along with step 1, this proves both clauses of Independent Sum Preservation.</p>
-<p>No comparison of same-law copies, Mixture Independence, or lower-section continuity has been used.</p>
+<h2 id="only-upper-section-continuity-is-needed">3. Only upper-section
+continuity is needed</h2>
+<p>Take <span class="math inline">\delta_n=1/n</span>. The actual,
+pointwise-coupled variables satisfy</p>
+<p><span
+class="math display">E\bigl|((X+Z)+\delta_n)-(X+Z)\bigr|=\delta_n\longrightarrow0.</span></p>
+<p>The upper-section clause in the project<span
+class="math inline">&#39;s L^{1}</span> Continuity principle applies to
+<span class="math inline">(X+Z)+\delta_n\succeq Y+Z</span> and gives
+<span class="math inline">X+Z\succeq Y+Z</span>. It does not require
+<span class="math inline">X</span>, <span class="math inline">Y</span>,
+<span class="math inline">Z</span>, or their sums to have finite
+expectations. Along with step 1, this proves both clauses of Independent
+Sum Preservation.</p>
+<p>No comparison of same-law copies, Mixture Independence, or
+lower-section continuity has been used.</p>
 <h2 id="consequences-under-dtu">Consequences under DTU</h2>
-<p>Together with the already recorded decomposition, the result makes <strong>Cancellation, Preservation, and full Independent Sum Invariance equivalent under DTU + L¹ Continuity</strong>. Thus the existing Lévy obstruction also rules out Cancellation under DTU <span class="math inline">+ L^{1}</span> Continuity + Symmetric Neutrality. These consequences are left to the inference engine, rather than stored as duplicate arrows.</p>
-<p>Without <span class="math inline">L^{1}</span> Continuity, the argument stops at strict preservation. The map separately records the conjecture that DTU alone might close that gap.</p>
-<p><strong>Original work: connecting proof using a shift approximation.</strong> GPT-6 (Codex), 9 September 2026. Goodsell’s <em>Symmetries of value</em>, §3, p. 23, supplies the upper-section continuity definition; his <em>Unbounded Utility and Background Risk</em> (unpublished), Lemma 1, pp. 7–8, supplies the sum principles. Neither paper is being credited with this additional proof. Direct source: Misc. No independent checker or Lean verification is claimed.</p>
+<p>Together with the already recorded decomposition, the result makes
+<strong>Cancellation, Preservation, and full Independent Sum Invariance
+equivalent under DTU + L¹ Continuity</strong>. Thus the existing Lévy
+obstruction also rules out Cancellation under DTU <span
+class="math inline">+ L^{1}</span> Continuity + Symmetric Neutrality.
+These consequences are left to the inference engine, rather than stored
+as duplicate arrows.</p>
+<p>Without <span class="math inline">L^{1}</span> Continuity, the
+argument stops at strict preservation. The map separately records the
+conjecture that DTU alone might close that gap.</p>
+<p><strong>Original work: connecting proof using a shift
+approximation.</strong> GPT-6 (Codex), 9 September 2026. Goodsell’s
+<em>Symmetries of value</em>, §3, p. 23, supplies the upper-section
+continuity definition; his <em>Unbounded Utility and Background
+Risk</em> (unpublished), Lemma 1, pp. 7–8, supplies the sum principles.
+Neither paper is being credited with this additional proof. Direct
+source: Misc. No independent checker or Lean verification is
+claimed.</p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Background: <a href="https://doi.org/10.1111/nous.12549">Symmetries of value</a>.</strong> (<a href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>) Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. — §3, p. 23: source for the upper-section L1 Continuity axiom only</li>
-<li><strong>Background: Unbounded Utility and Background Risk.</strong> Zachary Goodsell (5 June 2026). Unbounded Utility and Background Risk. Unpublished working manuscript. — Lemma 1, pp. 7–8: source for the independent-sum principles only</li>
-<li><strong>Background: <a href="https://doi.org/10.1111/nous.12530">Flummoxing expectations</a>.</strong> Hayden Wilkinson (2025). Flummoxing expectations. Noûs, 59(3), 700–728. First published online in 2024. — §6.1. Source of Independent Sum Consistency; see the principle reference for the changed independence condition. The proof or conjecture recorded here retains its separate attribution.</li>
+<li><strong>Background: <a
+href="https://doi.org/10.1111/nous.12549">Symmetries of
+value</a>.</strong> (<a
+href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>)
+Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. — §3,
+p. 23: source for the upper-section L1 Continuity axiom only</li>
+<li><strong>Background: Unbounded Utility and Background Risk.</strong>
+Zachary Goodsell (5 June 2026). Unbounded Utility and Background Risk.
+Unpublished working manuscript. — Lemma 1, pp. 7–8: source for the
+independent-sum principles only</li>
+<li><strong>Background: <a
+href="https://doi.org/10.1111/nous.12530">Flummoxing
+expectations</a>.</strong> Hayden Wilkinson (2025). Flummoxing
+expectations. Noûs, 59(3), 700–728. First published online in 2024. —
+§6.1. Source of Independent Sum Consistency; see the principle reference
+for the changed independence condition. The proof or conjecture recorded
+here retains its separate attribution.</li>
 </ul>
 </body></html>

@@ -270,34 +270,95 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
 <script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Rich Outcomes ∧ Stochastic Equivalence ∧ Mixture Independence ∧ Relative Expectation ∧ Uniqueness of Negative Self-Similarity (integer ratios) ⇒ Pasadena = ln 2</h1></header><p class="cert">
-Result — Source: Misc.; produced by Zachary Goodsell (Highland Park and Q constructions); GPT-6 (Codex) (negative-self-similarity factorization and explicit couplings); Claude (Fable 5.1) (integer-ratio premise audit), 2026-09-24; recorded by Claude (Fable 5.1), prompted by Zachary Goodsell, 2026-09-24.
+Result — Source: Misc.; produced by Zachary Goodsell (Highland Park and
+Q constructions); GPT-6 (Codex) (negative-self-similarity factorization
+and explicit couplings); Claude (Fable 5.1) (integer-ratio premise
+audit), 2026-09-24; recorded by Claude (Fable 5.1), prompted by Zachary
+Goodsell, 2026-09-24.
 </p>
 <h2 id="premises">Premises</h2>
 <ul>
-<li><strong>Rich Outcomes.</strong> Every real number r occurs as a utility level of a sure outcome: for each <span class="math inline">r \in \mathbb{R}</span> there is an outcome <span class="math inline">o_r</span> with <span class="math inline">u(o_r)=r</span>, with u defined by the normalized binary-mixture comparisons in the background. This does not assert that every outcome has a finite real level.</li>
-<li><strong>Stochastic Equivalence.</strong> If X and Y have the same probability law over outcomes, then <span class="math inline">X \sim Y</span>. The variables remain distinct objects; indifference is an additional axiom.</li>
-<li><strong>Mixture Independence.</strong> For all X,Y,Z and <span class="math inline">0&lt;p&lt;1, X \succeq Y</span> iff <span class="math inline">M_p(X,Z) \succeq M_p(Y,Z)</span>, where M is the fixed randomized-selection construction described in the background.</li>
-<li><strong>Relative Expectation.</strong> For real-utility variables X,Y on the same probability space, if <span class="math inline">E|u(X)- u(Y)|&lt;\infty</span>, then <span class="math inline">X \succeq Y</span> iff <span class="math inline">E[u(X)- u(Y)] \ge 0</span>. Their individual expectations may both be undefined.</li>
-<li><strong>Uniqueness of Negative Self-Similarity (integer ratios).</strong> Fix <span class="math inline">0&lt;p&lt;1</span>, a positive integer <span class="math inline">a</span>, <span class="math inline">b\in \mathbb{R}</span> and Z. If <span class="math inline">X \sim M_p(- aX+b,Z)</span> and <span class="math inline">Y \sim M_p(- aY+b,Z)</span>, then <span class="math inline">X \sim Y</span>.</li>
+<li><strong>Rich Outcomes.</strong> Every real number r occurs as a
+utility level of a sure outcome: for each <span class="math inline">r
+\in \mathbb{R}</span> there is an outcome <span
+class="math inline">o_r</span> with <span
+class="math inline">u(o_r)=r</span>, with u defined by the normalized
+binary-mixture comparisons in the background. This does not assert that
+every outcome has a finite real level.</li>
+<li><strong>Stochastic Equivalence.</strong> If X and Y have the same
+probability law over outcomes, then <span class="math inline">X \sim
+Y</span>. The variables remain distinct objects; indifference is an
+additional axiom.</li>
+<li><strong>Mixture Independence.</strong> For all X,Y,Z and <span
+class="math inline">0&lt;p&lt;1, X \succeq Y</span> iff <span
+class="math inline">M_p(X,Z) \succeq M_p(Y,Z)</span>, where M is the
+fixed randomized-selection construction described in the
+background.</li>
+<li><strong>Relative Expectation.</strong> For real-utility variables
+X,Y on the same probability space, if <span class="math inline">E|u(X)-
+u(Y)|&lt;\infty</span>, then <span class="math inline">X \succeq
+Y</span> iff <span class="math inline">E[u(X)- u(Y)] \ge 0</span>. Their
+individual expectations may both be undefined.</li>
+<li><strong>Uniqueness of Negative Self-Similarity (integer
+ratios).</strong> Fix <span class="math inline">0&lt;p&lt;1</span>, a
+positive integer <span class="math inline">a</span>, <span
+class="math inline">b\in \mathbb{R}</span> and Z. If <span
+class="math inline">X \sim M_p(- aX+b,Z)</span> and <span
+class="math inline">Y \sim M_p(- aY+b,Z)</span>, then <span
+class="math inline">X \sim Y</span>.</li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <ul>
-<li><strong>Pasadena = ln 2.</strong> Every <span class="math inline">X</span> with <span class="math display">P(u(X)=-\frac{(-2)^n}{n})=2^{-n},\qquad n\ge 1</span> is indifferent to sure utility <span class="math inline">\ln 2</span>.</li>
+<li><strong>Pasadena = ln 2.</strong> Every <span
+class="math inline">X</span> with <span
+class="math display">P(u(X)=-\frac{(-2)^n}{n})=2^{-n},\qquad n\ge
+1</span> is indifferent to sure utility <span class="math inline">\ln
+2</span>.</li>
 </ul>
 <h2 id="proof">Proof</h2>
-<p>The recorded proof of relative-self-similarity-evaluates-pasadena (writeups/relative-self-similarity-evaluates-pasadena.md) applies uniqueness once, to Highland Park H and the sure value 0 as fixed values of <span class="math inline">X \mapsto M_{1/2}(- 2X,0)</span>, that is at <span class="math inline">p=1/2, a=2, b=0</span> and Z sure 0. The ratio is the integer 2, so the integer-ratio principle gives <span class="math inline">H\sim 0</span>; the remaining steps (the integrable difference P − H of mean ln 2, the auxiliary identity <span class="math inline">Q\sim M_{1/4}(4Q,0)</span> from Relative Expectation, and the shift transfer through a half-mixture) are unchanged and use only Rich Outcomes, Stochastic Equivalence, Mixture Independence and Relative Expectation.</p>
+<p>The recorded proof of relative-self-similarity-evaluates-pasadena
+(writeups/relative-self-similarity-evaluates-pasadena.md) applies
+uniqueness once, to Highland Park H and the sure value 0 as fixed values
+of <span class="math inline">X \mapsto M_{1/2}(- 2X,0)</span>, that is
+at <span class="math inline">p=1/2, a=2, b=0</span> and Z sure 0. The
+ratio is the integer 2, so the integer-ratio principle gives <span
+class="math inline">H\sim 0</span>; the remaining steps (the integrable
+difference P − H of mean ln 2, the auxiliary identity <span
+class="math inline">Q\sim M_{1/4}(4Q,0)</span> from Relative
+Expectation, and the shift transfer through a half-mixture) are
+unchanged and use only Rich Outcomes, Stochastic Equivalence, Mixture
+Independence and Relative Expectation.</p>
 <h2 id="notes">Notes</h2>
-<p>Premise audit of relative-self-similarity-evaluates-pasadena, which stays recorded with the real-ratio principle. Under DTU with L¹ Continuity, Relative Expectation is recorded (dtu-l1-implies-eu, eu-independence-l1-imply-relative), so Pasadena = ln 2 then follows from Reflection Anti-Invariance with either Integer Affine Preservation or Comonotonic Sum Invariance in place of the full symmetry package. No independent checker or Lean verification is claimed.</p>
+<p>Premise audit of relative-self-similarity-evaluates-pasadena, which
+stays recorded with the real-ratio principle. Under DTU with L¹
+Continuity, Relative Expectation is recorded (dtu-l1-implies-eu,
+eu-independence-l1-imply-relative), so Pasadena = ln 2 then follows from
+Reflection Anti-Invariance with either Integer Affine Preservation or
+Comonotonic Sum Invariance in place of the full symmetry package. No
+independent checker or Lean verification is claimed.</p>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><strong>GPT-6 adaptation 9 Sep, Claude audit 24 Sep</strong> — GPT-6 (Codex), prompted by Zachary Goodsell, 9 September 2026: the factorization through the uniqueness principle and the explicit couplings, in writeups/relative-self-similarity-evaluates-pasadena.md; Claude (Fable 5.1), 24 September 2026: the observation that only the ratio 2 is used.</li>
-<li><strong>Symmetries of Value</strong> — Goodsell, Symmetries of value, Noûs 60 (2026), 16–37; DOI 10.1111/nous.12549, Theorem 11, pp. 32–33</li>
+<li><strong>GPT-6 adaptation 9 Sep, Claude audit 24 Sep</strong> — GPT-6
+(Codex), prompted by Zachary Goodsell, 9 September 2026: the
+factorization through the uniqueness principle and the explicit
+couplings, in writeups/relative-self-similarity-evaluates-pasadena.md;
+Claude (Fable 5.1), 24 September 2026: the observation that only the
+ratio 2 is used.</li>
+<li><strong>Symmetries of Value</strong> — Goodsell, Symmetries of
+value, Noûs 60 (2026), 16–37; DOI 10.1111/nous.12549, Theorem 11,
+pp. 32–33</li>
 </ul>
 <p class="cert">
-Record: <code>topics/unbounded-utility/results/integer-self-similarity-relative-evaluates-pasadena.yaml</code>
+Record:
+<code>topics/unbounded-utility/results/integer-self-similarity-relative-evaluates-pasadena.yaml</code>
 </p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Background: <a href="https://doi.org/10.1111/nous.12549">Symmetries of value</a>.</strong> (<a href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>) Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. — Theorem 11, pp. 32–33</li>
+<li><strong>Background: <a
+href="https://doi.org/10.1111/nous.12549">Symmetries of
+value</a>.</strong> (<a
+href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>)
+Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. — Theorem
+11, pp. 32–33</li>
 </ul>
 </body></html>

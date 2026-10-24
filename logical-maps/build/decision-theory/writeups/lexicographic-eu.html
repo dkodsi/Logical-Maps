@@ -274,23 +274,67 @@ Model — Source: Misc.; produced by literature.
 </p>
 <h2 id="package">Package</h2>
 <ul>
-<li><strong>Completeness.</strong> For all <span class="math inline">p, q \in \Delta (X): p \succeq q</span> or <span class="math inline">q \succeq p</span>.</li>
-<li><strong>Transitivity.</strong> For all <span class="math inline">p, q, r \in \Delta (X)</span>: if <span class="math inline">p \succeq q</span> and <span class="math inline">q \succeq r</span> then <span class="math inline">p \succeq r</span>.</li>
-<li><strong>Independence.</strong> For all <span class="math inline">p, q, r \in \Delta (X)</span> and <span class="math inline">\lambda \in (0,1]: p \succeq q</span> if and only if <span class="math inline">\lambda p + (1- \lambda )r \succeq \lambda q + (1- \lambda )r</span>.</li>
-<li><strong>¬ Mixture continuity.</strong> For all <span class="math inline">p, q, r \in \Delta (X)</span> the sets <span class="math inline">\{\lambda \in [0,1] : \lambda p + (1- \lambda )q \succeq r\}</span> and <span class="math inline">\{\lambda \in [0,1] : r \succeq \lambda p + (1- \lambda )q\}</span> are closed.</li>
-<li><strong>¬ Archimedean.</strong> For all <span class="math inline">p, q, r \in \Delta (X)</span>: if <span class="math inline">p \succ q \succ r</span> then there are <span class="math inline">\alpha , \beta \in (0,1)</span> with <span class="math inline">\alpha p + (1- \alpha )r \succ q</span> and <span class="math inline">q \succ \beta p + (1- \beta )r</span>.</li>
+<li><strong>Completeness.</strong> For all <span class="math inline">p,
+q \in \Delta (X): p \succeq q</span> or <span class="math inline">q
+\succeq p</span>.</li>
+<li><strong>Transitivity.</strong> For all <span class="math inline">p,
+q, r \in \Delta (X)</span>: if <span class="math inline">p \succeq
+q</span> and <span class="math inline">q \succeq r</span> then <span
+class="math inline">p \succeq r</span>.</li>
+<li><strong>Independence.</strong> For all <span class="math inline">p,
+q, r \in \Delta (X)</span> and <span class="math inline">\lambda \in
+(0,1]: p \succeq q</span> if and only if <span
+class="math inline">\lambda p + (1- \lambda )r \succeq \lambda q + (1-
+\lambda )r</span>.</li>
+<li><strong>¬ Mixture continuity.</strong> For all <span
+class="math inline">p, q, r \in \Delta (X)</span> the sets <span
+class="math inline">\{\lambda \in [0,1] : \lambda p + (1- \lambda )q
+\succeq r\}</span> and <span class="math inline">\{\lambda \in [0,1] : r
+\succeq \lambda p + (1- \lambda )q\}</span> are closed.</li>
+<li><strong>¬ Archimedean.</strong> For all <span class="math inline">p,
+q, r \in \Delta (X)</span>: if <span class="math inline">p \succ q \succ
+r</span> then there are <span class="math inline">\alpha , \beta \in
+(0,1)</span> with <span class="math inline">\alpha p + (1- \alpha )r
+\succ q</span> and <span class="math inline">q \succ \beta p + (1- \beta
+)r</span>.</li>
 </ul>
 <h2 id="construction">Construction</h2>
-<p>Lexicographic expected utility. With <span class="math inline">X = \{a, b, c\}</span> let <span class="math inline">p \succeq q</span> iff <span class="math inline">p(a) &gt; q(a)</span>, or <span class="math inline">p(a) = q(a)</span> and <span class="math inline">p(b) \ge q(b)</span>. This is complete and transitive (a lexicographic order on <span class="math inline">\mathbb{R} ^{2}</span>), and satisfies independence because mixing with r multiplies the vector of differences by <span class="math inline">\lambda</span>, which preserves lexicographic sign. But <span class="math inline">\{\lambda : \lambda \delta _a + (1- \lambda )\delta _c \succeq \delta _b\} = (0, 1]</span>, which is not closed.</p>
-<p>The same lexicographic order <span class="math inline">(p \succeq q</span> iff <span class="math inline">p(a) &gt; q(a)</span>, or <span class="math inline">p(a) = q(a)</span> and <span class="math inline">p(b) \ge q(b)</span>). Here <span class="math inline">\delta _a \succ \delta _b \succ \delta _c</span>, but every mixture <span class="math inline">\beta \delta _a + (1- \beta )\delta _c</span> with <span class="math inline">\beta &gt; 0</span> puts positive weight on a and so is strictly preferred to <span class="math inline">\delta _b</span>; no <span class="math inline">\beta</span> with <span class="math inline">\delta _b \succ \beta \delta _a + (1- \beta )\delta _c</span> exists.</p>
+<p>Lexicographic expected utility. With <span class="math inline">X =
+\{a, b, c\}</span> let <span class="math inline">p \succeq q</span> iff
+<span class="math inline">p(a) &gt; q(a)</span>, or <span
+class="math inline">p(a) = q(a)</span> and <span
+class="math inline">p(b) \ge q(b)</span>. This is complete and
+transitive (a lexicographic order on <span
+class="math inline">\mathbb{R} ^{2}</span>), and satisfies independence
+because mixing with r multiplies the vector of differences by <span
+class="math inline">\lambda</span>, which preserves lexicographic sign.
+But <span class="math inline">\{\lambda : \lambda \delta _a + (1-
+\lambda )\delta _c \succeq \delta _b\} = (0, 1]</span>, which is not
+closed.</p>
+<p>The same lexicographic order <span class="math inline">(p \succeq
+q</span> iff <span class="math inline">p(a) &gt; q(a)</span>, or <span
+class="math inline">p(a) = q(a)</span> and <span
+class="math inline">p(b) \ge q(b)</span>). Here <span
+class="math inline">\delta _a \succ \delta _b \succ \delta _c</span>,
+but every mixture <span class="math inline">\beta \delta _a + (1- \beta
+)\delta _c</span> with <span class="math inline">\beta &gt; 0</span>
+puts positive weight on a and so is strictly preferred to <span
+class="math inline">\delta _b</span>; no <span
+class="math inline">\beta</span> with <span class="math inline">\delta
+_b \succ \beta \delta _a + (1- \beta )\delta _c</span> exists.</p>
 <h2 id="notes">Notes</h2>
-<p>Derivable from lexicographic-not-archimedean together with continuity-completeness-imply-archimedean (the validator reports it as redundant); kept because it is the form the literature states.</p>
+<p>Derivable from lexicographic-not-archimedean together with
+continuity-completeness-imply-archimedean (the validator reports it as
+redundant); kept because it is the form the literature states.</p>
 <h2 id="sources">Sources</h2>
 <ul>
-<li>Hausner (1954), Multidimensional utilities, in Decision Processes (Thrall, Coombs &amp; Davis eds.)</li>
-<li>Fishburn (1971), A study of lexicographic expected utility, Management Science 17</li>
+<li>Hausner (1954), Multidimensional utilities, in Decision Processes
+(Thrall, Coombs &amp; Davis eds.)</li>
+<li>Fishburn (1971), A study of lexicographic expected utility,
+Management Science 17</li>
 <li>Hausner (1954), Multidimensional utilities</li>
-<li>Fishburn (1971), A study of lexicographic expected utility, Management Science 17</li>
+<li>Fishburn (1971), A study of lexicographic expected utility,
+Management Science 17</li>
 </ul>
 <p class="cert">
 Record: <code>topics/decision-theory/models/lexicographic-eu.yaml</code>

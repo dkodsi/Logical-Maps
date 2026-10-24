@@ -269,28 +269,71 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <link rel="stylesheet" href="../math/katex.min.css">
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
-<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Folded Expectation and Mixture Independence imply Relative Expectation</h1></header><p><strong>Claim.</strong> Rich Outcomes + Mixture Independence + Folded Expectation imply Relative Expectation.</p>
-<p>Write the finite utility coordinates of the given variables as <span class="math inline">X,Y</span>, and suppose <span class="math inline">\mathbb E|X-Y|&lt;\infty</span> in their actual coupling. Put</p>
-<p><span class="math display">S_X(t)=\Pr(X&gt;t),\qquad d(t)=S_X(t)-S_Y(t).</span></p>
-<p>The indicator identity for the interval between two real numbers, followed by Tonelli and Fubini, gives</p>
-<p><span class="math display">\int_{\mathbb R}|d(t)|\,dt\le\mathbb E|X-Y|&lt;\infty,
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Folded Expectation and Mixture Independence imply Relative Expectation</h1></header><p><strong>Claim.</strong> Rich Outcomes + Mixture Independence + Folded
+Expectation imply Relative Expectation.</p>
+<p>Write the finite utility coordinates of the given variables as <span
+class="math inline">X,Y</span>, and suppose <span
+class="math inline">\mathbb E|X-Y|&lt;\infty</span> in their actual
+coupling. Put</p>
+<p><span class="math display">S_X(t)=\Pr(X&gt;t),\qquad
+d(t)=S_X(t)-S_Y(t).</span></p>
+<p>The indicator identity for the interval between two real numbers,
+followed by Tonelli and Fubini, gives</p>
+<p><span class="math display">\int_{\mathbb R}|d(t)|\,dt\le\mathbb
+E|X-Y|&lt;\infty,
 \qquad \int_{\mathbb R}d(t)\,dt=\mathbb E(X-Y). \tag{1}</span></p>
-<p>Rich Outcomes supplies the reflected variable <span class="math inline">-Y</span>. Form the actual fixed-lift mixtures</p>
-<p><span class="math display">A=M_{1/2}(X,-Y),\qquad B=M_{1/2}(Y,-Y).</span></p>
-<p>The second mixture has a symmetric law. For positive <span class="math inline">t</span>, put <span class="math inline">h_Z(t)=\Pr(Z&gt;t)-\Pr(Z&lt;-t)</span>. Probability-mixture linearity gives</p>
-<p><span class="math display">h_B(t)=0,\qquad h_A(t)=\tfrac12(h_X(t)-h_Y(t))
+<p>Rich Outcomes supplies the reflected variable <span
+class="math inline">-Y</span>. Form the actual fixed-lift mixtures</p>
+<p><span class="math display">A=M_{1/2}(X,-Y),\qquad
+B=M_{1/2}(Y,-Y).</span></p>
+<p>The second mixture has a symmetric law. For positive <span
+class="math inline">t</span>, put <span
+class="math inline">h_Z(t)=\Pr(Z&gt;t)-\Pr(Z&lt;-t)</span>.
+Probability-mixture linearity gives</p>
+<p><span class="math display">h_B(t)=0,\qquad
+h_A(t)=\tfrac12(h_X(t)-h_Y(t))
 =\tfrac12(d(t)+d(-t))\quad\text{a.e.} \tag{2}</span></p>
-<p>The last equality can fail only when <span class="math inline">t</span> or <span class="math inline">-t</span> is an atom threshold of one of the laws, a countable and hence Lebesgue-null set. Equations (1) and (2) show that both mixtures are foldable, with</p>
-<p><span class="math display">\int_0^\infty|h_A(t)|\,dt\le\tfrac12\int_{\mathbb R}|d(t)|\,dt&lt;\infty,
+<p>The last equality can fail only when <span
+class="math inline">t</span> or <span class="math inline">-t</span> is
+an atom threshold of one of the laws, a countable and hence
+Lebesgue-null set. Equations (1) and (2) show that both mixtures are
+foldable, with</p>
+<p><span
+class="math display">\int_0^\infty|h_A(t)|\,dt\le\tfrac12\int_{\mathbb
+R}|d(t)|\,dt&lt;\infty,
 \qquad F(A)=\tfrac12\mathbb E(X-Y),\qquad F(B)=0.</span></p>
 <p>Folded Expectation therefore gives</p>
-<p><span class="math display">A\succeq B\iff\mathbb E(X-Y)\ge0.</span></p>
-<p>Mixture Independence, applied to the common <span class="math inline">-Y</span> branch, gives <span class="math inline">A\succeq B\iff X\succeq Y</span>. This is exactly Relative Expectation, including indifference at zero and the failure of the weak comparison for negative mean.</p>
-<p>The proof uses identities of mixture laws to compute folded tails, but it does not replace one random variable with an equal-law variable in a preference. Folded Expectation itself licenses the two comparisons being used. Thus neither Stochastic Equivalence nor Totality is an omitted premise. No <span class="math inline">L^{1}</span> Continuity, reflection axiom or full affine symmetry is needed.</p>
-<p><strong>Original work: small connecting proof.</strong> The two expectation principles and the source’s forward implication are Zachary Goodsell’s. The common-reflected- mixture proof supplies a converse useful to the map, rather than importing a claim that the paper already proves that converse. The integrability bound is essential: conditional improper convergence is insufficient. This accounting is not a claim of literature novelty.</p>
-<p><strong>Sources.</strong> Zachary Goodsell, <em>Symmetries of value</em>, pp. 26–29, especially the definitions and Theorem 6. Connecting proof and premise audit: GPT-6 (Codex), 9 September 2026. No independent checker or Lean proof is claimed.</p>
+<p><span class="math display">A\succeq B\iff\mathbb
+E(X-Y)\ge0.</span></p>
+<p>Mixture Independence, applied to the common <span
+class="math inline">-Y</span> branch, gives <span
+class="math inline">A\succeq B\iff X\succeq Y</span>. This is exactly
+Relative Expectation, including indifference at zero and the failure of
+the weak comparison for negative mean.</p>
+<p>The proof uses identities of mixture laws to compute folded tails,
+but it does not replace one random variable with an equal-law variable
+in a preference. Folded Expectation itself licenses the two comparisons
+being used. Thus neither Stochastic Equivalence nor Totality is an
+omitted premise. No <span class="math inline">L^{1}</span> Continuity,
+reflection axiom or full affine symmetry is needed.</p>
+<p><strong>Original work: small connecting proof.</strong> The two
+expectation principles and the source’s forward implication are Zachary
+Goodsell’s. The common-reflected- mixture proof supplies a converse
+useful to the map, rather than importing a claim that the paper already
+proves that converse. The integrability bound is essential: conditional
+improper convergence is insufficient. This accounting is not a claim of
+literature novelty.</p>
+<p><strong>Sources.</strong> Zachary Goodsell, <em>Symmetries of
+value</em>, pp. 26–29, especially the definitions and Theorem 6.
+Connecting proof and premise audit: GPT-6 (Codex), 9 September 2026. No
+independent checker or Lean proof is claimed.</p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Background: <a href="https://doi.org/10.1111/nous.12549">Symmetries of value</a>.</strong> (<a href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>) Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. — Theorem 6, pp. 26–29</li>
+<li><strong>Background: <a
+href="https://doi.org/10.1111/nous.12549">Symmetries of
+value</a>.</strong> (<a
+href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>)
+Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. — Theorem
+6, pp. 26–29</li>
 </ul>
 </body></html>

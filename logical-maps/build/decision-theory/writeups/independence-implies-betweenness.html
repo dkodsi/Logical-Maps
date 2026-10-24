@@ -270,21 +270,50 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
 <script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Independence ⇒ Betweenness</h1></header><p class="cert">
-Result — Source: Misc.; produced by Claude Fable 5.1 (Cowork session), prompted by Zachary Goodsell.
+Result — Source: Misc.; produced by Claude Fable 5.1 (Cowork session),
+prompted by Zachary Goodsell.
 </p>
 <h2 id="premises">Premises</h2>
 <ul>
-<li><strong>Independence.</strong> For all <span class="math inline">p, q, r \in \Delta (X)</span> and <span class="math inline">\lambda \in (0,1]: p \succeq q</span> if and only if <span class="math inline">\lambda p + (1- \lambda )r \succeq \lambda q + (1- \lambda )r</span>.</li>
+<li><strong>Independence.</strong> For all <span class="math inline">p,
+q, r \in \Delta (X)</span> and <span class="math inline">\lambda \in
+(0,1]: p \succeq q</span> if and only if <span
+class="math inline">\lambda p + (1- \lambda )r \succeq \lambda q + (1-
+\lambda )r</span>.</li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <ul>
-<li><strong>Betweenness.</strong> For all <span class="math inline">p, q \in \Delta (X)</span> and <span class="math inline">\lambda \in (0,1)</span>: if <span class="math inline">p \succ q</span> then <span class="math inline">p \succ \lambda p + (1- \lambda )q \succ q</span>, and if <span class="math inline">p \sim q</span> then <span class="math inline">p \sim \lambda p + (1- \lambda )q</span>.</li>
+<li><strong>Betweenness.</strong> For all <span class="math inline">p, q
+\in \Delta (X)</span> and <span class="math inline">\lambda \in
+(0,1)</span>: if <span class="math inline">p \succ q</span> then <span
+class="math inline">p \succ \lambda p + (1- \lambda )q \succ q</span>,
+and if <span class="math inline">p \sim q</span> then <span
+class="math inline">p \sim \lambda p + (1- \lambda )q</span>.</li>
 </ul>
 <h2 id="proof">Proof</h2>
-<p>Fix <span class="math inline">\lambda \in (0,1)</span> and write <span class="math inline">m = \lambda p + (1- \lambda )q</span>. Independence with <span class="math inline">r = p</span> and mixing weight <span class="math inline">1- \lambda</span> gives <span class="math inline">p \succeq q \Longleftrightarrow (1- \lambda )p+\lambda p \succeq (1- \lambda )q+\lambda p, i.e. p \succeq q \Longleftrightarrow p \succeq m</span>, and likewise <span class="math inline">q \succeq p \Longleftrightarrow m \succeq p</span>. Hence <span class="math inline">p \succ q \Longleftrightarrow p \succ m</span> and <span class="math inline">p \sim q \Longleftrightarrow p \sim m</span>. Independence with <span class="math inline">r = q</span> and weight <span class="math inline">\lambda</span> gives <span class="math inline">p \succeq q \Longleftrightarrow m \succeq q</span> and <span class="math inline">q \succeq p \Longleftrightarrow q \succeq m</span>, so <span class="math inline">p \succ q \Longleftrightarrow m \succ q</span>. Together: <span class="math inline">p \succ q \Longrightarrow p \succ m \succ q</span> and <span class="math inline">p \sim q \Longrightarrow p \sim m</span>.</p>
+<p>Fix <span class="math inline">\lambda \in (0,1)</span> and write
+<span class="math inline">m = \lambda p + (1- \lambda )q</span>.
+Independence with <span class="math inline">r = p</span> and mixing
+weight <span class="math inline">1- \lambda</span> gives <span
+class="math inline">p \succeq q \Longleftrightarrow (1- \lambda
+)p+\lambda p \succeq (1- \lambda )q+\lambda p, i.e. p \succeq q
+\Longleftrightarrow p \succeq m</span>, and likewise <span
+class="math inline">q \succeq p \Longleftrightarrow m \succeq p</span>.
+Hence <span class="math inline">p \succ q \Longleftrightarrow p \succ
+m</span> and <span class="math inline">p \sim q \Longleftrightarrow p
+\sim m</span>. Independence with <span class="math inline">r = q</span>
+and weight <span class="math inline">\lambda</span> gives <span
+class="math inline">p \succeq q \Longleftrightarrow m \succeq q</span>
+and <span class="math inline">q \succeq p \Longleftrightarrow q \succeq
+m</span>, so <span class="math inline">p \succ q \Longleftrightarrow m
+\succ q</span>. Together: <span class="math inline">p \succ q
+\Longrightarrow p \succ m \succ q</span> and <span class="math inline">p
+\sim q \Longrightarrow p \sim m</span>.</p>
 <h2 id="notes">Notes</h2>
-<p>No ordering assumptions are needed because independence is taken in the biconditional form.</p>
+<p>No ordering assumptions are needed because independence is taken in
+the biconditional form.</p>
 <p class="cert">
-Record: <code>topics/decision-theory/results/independence-implies-betweenness.yaml</code>
+Record:
+<code>topics/decision-theory/results/independence-implies-betweenness.yaml</code>
 </p>
 </body></html>

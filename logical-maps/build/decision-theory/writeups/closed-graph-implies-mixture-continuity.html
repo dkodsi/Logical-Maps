@@ -270,19 +270,33 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
 <script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Closed-graph continuity ⇒ Mixture continuity</h1></header><p class="cert">
-Result — Source: Misc.; produced by Claude Fable 5.1 (Cowork session), prompted by Zachary Goodsell.
+Result — Source: Misc.; produced by Claude Fable 5.1 (Cowork session),
+prompted by Zachary Goodsell.
 </p>
 <h2 id="premises">Premises</h2>
 <ul>
-<li><strong>Closed-graph continuity.</strong> The set <span class="math inline">\{(p, q) \in \Delta (X) \times \Delta (X) : p \succeq q\}</span> is closed in the product topology.</li>
+<li><strong>Closed-graph continuity.</strong> The set <span
+class="math inline">\{(p, q) \in \Delta (X) \times \Delta (X) : p
+\succeq q\}</span> is closed in the product topology.</li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <ul>
-<li><strong>Mixture continuity.</strong> For all <span class="math inline">p, q, r \in \Delta (X)</span> the sets <span class="math inline">\{\lambda \in [0,1] : \lambda p + (1- \lambda )q \succeq r\}</span> and <span class="math inline">\{\lambda \in [0,1] : r \succeq \lambda p + (1- \lambda )q\}</span> are closed.</li>
+<li><strong>Mixture continuity.</strong> For all <span
+class="math inline">p, q, r \in \Delta (X)</span> the sets <span
+class="math inline">\{\lambda \in [0,1] : \lambda p + (1- \lambda )q
+\succeq r\}</span> and <span class="math inline">\{\lambda \in [0,1] : r
+\succeq \lambda p + (1- \lambda )q\}</span> are closed.</li>
 </ul>
 <h2 id="proof">Proof</h2>
-<p><span class="math inline">\lambda</span> ↦ <span class="math inline">(\lambda p+(1- \lambda )q, r)</span> and <span class="math inline">\lambda</span> ↦ <span class="math inline">(r, \lambda p+(1- \lambda )q)</span> are continuous maps <span class="math inline">[0,1] \to \Delta (X)\times \Delta (X)</span>; the two sections are their preimages of the closed graph of <span class="math inline">\succeq</span>.</p>
+<p><span class="math inline">\lambda</span> ↦ <span
+class="math inline">(\lambda p+(1- \lambda )q, r)</span> and <span
+class="math inline">\lambda</span> ↦ <span class="math inline">(r,
+\lambda p+(1- \lambda )q)</span> are continuous maps <span
+class="math inline">[0,1] \to \Delta (X)\times \Delta (X)</span>; the
+two sections are their preimages of the closed graph of <span
+class="math inline">\succeq</span>.</p>
 <p class="cert">
-Record: <code>topics/decision-theory/results/closed-graph-implies-mixture-continuity.yaml</code>
+Record:
+<code>topics/decision-theory/results/closed-graph-implies-mixture-continuity.yaml</code>
 </p>
 </body></html>

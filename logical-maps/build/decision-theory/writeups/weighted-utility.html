@@ -274,18 +274,51 @@ Model — Source: Misc.; produced by literature.
 </p>
 <h2 id="package">Package</h2>
 <ul>
-<li><strong>Completeness.</strong> For all <span class="math inline">p, q \in \Delta (X): p \succeq q</span> or <span class="math inline">q \succeq p</span>.</li>
-<li><strong>Transitivity.</strong> For all <span class="math inline">p, q, r \in \Delta (X)</span>: if <span class="math inline">p \succeq q</span> and <span class="math inline">q \succeq r</span> then <span class="math inline">p \succeq r</span>.</li>
-<li><strong>Closed-graph continuity.</strong> The set <span class="math inline">\{(p, q) \in \Delta (X) \times \Delta (X) : p \succeq q\}</span> is closed in the product topology.</li>
-<li><strong>Betweenness.</strong> For all <span class="math inline">p, q \in \Delta (X)</span> and <span class="math inline">\lambda \in (0,1)</span>: if <span class="math inline">p \succ q</span> then <span class="math inline">p \succ \lambda p + (1- \lambda )q \succ q</span>, and if <span class="math inline">p \sim q</span> then <span class="math inline">p \sim \lambda p + (1- \lambda )q</span>.</li>
-<li><strong>¬ Independence.</strong> For all <span class="math inline">p, q, r \in \Delta (X)</span> and <span class="math inline">\lambda \in (0,1]: p \succeq q</span> if and only if <span class="math inline">\lambda p + (1- \lambda )r \succeq \lambda q + (1- \lambda )r</span>.</li>
+<li><strong>Completeness.</strong> For all <span class="math inline">p,
+q \in \Delta (X): p \succeq q</span> or <span class="math inline">q
+\succeq p</span>.</li>
+<li><strong>Transitivity.</strong> For all <span class="math inline">p,
+q, r \in \Delta (X)</span>: if <span class="math inline">p \succeq
+q</span> and <span class="math inline">q \succeq r</span> then <span
+class="math inline">p \succeq r</span>.</li>
+<li><strong>Closed-graph continuity.</strong> The set <span
+class="math inline">\{(p, q) \in \Delta (X) \times \Delta (X) : p
+\succeq q\}</span> is closed in the product topology.</li>
+<li><strong>Betweenness.</strong> For all <span class="math inline">p, q
+\in \Delta (X)</span> and <span class="math inline">\lambda \in
+(0,1)</span>: if <span class="math inline">p \succ q</span> then <span
+class="math inline">p \succ \lambda p + (1- \lambda )q \succ q</span>,
+and if <span class="math inline">p \sim q</span> then <span
+class="math inline">p \sim \lambda p + (1- \lambda )q</span>.</li>
+<li><strong>¬ Independence.</strong> For all <span
+class="math inline">p, q, r \in \Delta (X)</span> and <span
+class="math inline">\lambda \in (0,1]: p \succeq q</span> if and only if
+<span class="math inline">\lambda p + (1- \lambda )r \succeq \lambda q +
+(1- \lambda )r</span>.</li>
 </ul>
 <h2 id="construction">Construction</h2>
-<p>Weighted utility. Fix <span class="math inline">u : X \to \mathbb{R}</span> and a weight <span class="math inline">w : X \to (0,\infty )</span> that is not constant, and let <span class="math inline">V(p) = \sum p(x)w(x)u(x) / \sum p(x)w(x)</span>; put <span class="math inline">p \succeq q</span> iff <span class="math inline">V(p) \ge V(q)</span>. V is continuous on <span class="math inline">\Delta (X)</span>, so <span class="math inline">\succeq</span> is a weak order with closed graph. Its indifference sets are the intersections of <span class="math inline">\Delta (X)</span> with hyperplanes <span class="math inline">\{p : \sum p(x)w(x)(u(x) - v) = 0\}</span>, which are straight, so betweenness holds. Since w is not constant these hyperplanes are not parallel, so <span class="math inline">\succeq</span> is not an expected-utility order and (being a continuous weak order) must violate independence.</p>
+<p>Weighted utility. Fix <span class="math inline">u : X \to
+\mathbb{R}</span> and a weight <span class="math inline">w : X \to
+(0,\infty )</span> that is not constant, and let <span
+class="math inline">V(p) = \sum p(x)w(x)u(x) / \sum p(x)w(x)</span>; put
+<span class="math inline">p \succeq q</span> iff <span
+class="math inline">V(p) \ge V(q)</span>. V is continuous on <span
+class="math inline">\Delta (X)</span>, so <span
+class="math inline">\succeq</span> is a weak order with closed graph.
+Its indifference sets are the intersections of <span
+class="math inline">\Delta (X)</span> with hyperplanes <span
+class="math inline">\{p : \sum p(x)w(x)(u(x) - v) = 0\}</span>, which
+are straight, so betweenness holds. Since w is not constant these
+hyperplanes are not parallel, so <span
+class="math inline">\succeq</span> is not an expected-utility order and
+(being a continuous weak order) must violate independence.</p>
 <h2 id="sources">Sources</h2>
 <ul>
-<li>Chew (1983), A generalization of the quasilinear mean with applications to the measurement of income inequality and decision theory resolving the Allais paradox, Econometrica 51</li>
-<li>Dekel (1986), An axiomatic characterization of preferences under uncertainty: weakening the independence axiom, JET 40</li>
+<li>Chew (1983), A generalization of the quasilinear mean with
+applications to the measurement of income inequality and decision theory
+resolving the Allais paradox, Econometrica 51</li>
+<li>Dekel (1986), An axiomatic characterization of preferences under
+uncertainty: weakening the independence axiom, JET 40</li>
 </ul>
 <p class="cert">
 Record: <code>topics/decision-theory/models/weighted-utility.yaml</code>

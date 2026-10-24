@@ -321,7 +321,9 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
 <script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>⊤ ⇒ Possibility₂ ⊆ $\mathrm{Possibility}_\vee$</h1></header><p class="cert">
-Result — Source: Misc.; produced by Codex (GPT-6), prompted by Zachary Goodsell, connecting proof; recorded by Codex (GPT-6), prompted by Zachary Goodsell.
+Result — Source: Misc.; produced by Codex (GPT-6), prompted by Zachary
+Goodsell, connecting proof; recorded by Codex (GPT-6), prompted by
+Zachary Goodsell.
 </p>
 <h2 id="premises">Premises</h2>
 <ul>
@@ -329,23 +331,57 @@ Result — Source: Misc.; produced by Codex (GPT-6), prompted by Zachary Goodsel
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <ul>
-<li><strong>Possibility₂ ⊆ <span class="math inline">\mathrm{Possibility}_\vee</span>.</strong> <span class="math inline">\forall P:tt. \operatorname{Possibility}_{2}(P) \to</span> <span class="math inline">\mathrm{Possibility}_\vee</span>(P)</li>
+<li><strong>Possibility₂ ⊆ <span
+class="math inline">\mathrm{Possibility}_\vee</span>.</strong> <span
+class="math inline">\forall P:tt. \operatorname{Possibility}_{2}(P)
+\to</span> <span
+class="math inline">\mathrm{Possibility}_\vee</span>(P)</li>
 </ul>
 <h2 id="proof">Proof</h2>
-<p>Fix P and assume <span class="math inline">\operatorname{Possibility}_{2}(P)</span>. Choose its spouse N, retaining <span class="math inline">\Box \operatorname{Normal}(N), \Box \operatorname{PSa}_{2}(N,P), \Box \operatorname{PSd}_{2}(N,P)</span>, and <span class="math inline">\Box (\operatorname{PSb}(P)\land \operatorname{PSc}(P))</span>. The closed substitution argument <span class="math inline">N\top \land \Box r\to Nr</span> holds for every r: if <span class="math inline">r=\top</span>, replace equals in <span class="math inline">N\top</span>. By closing and necessitating this argument, <span class="math inline">\Box N\top</span> gives the necessary version of <span class="math inline">\forall r.(\Box r\to Nr)</span>.</p>
-<p>Apply it to <span class="math inline">r=(p\to q)</span>, and combine with the necessary <span class="math inline">\operatorname{PSa}_{2}(N,P)</span> clause. Necessitated logical implication and K give <span class="math inline">\Box \operatorname{PSa}(P)</span>, now with the fixed necessity <span class="math inline">\Box</span>. The necessary PSb and PSc clauses are already present. Their necessary conjunction is exactly <span class="math inline">\mathrm{Possibility}_\vee</span>(P). Eliminate the spouse witness and discharge the candidate assumption; generalize P. Necessitation was used only on closed logical arguments, with boxed assumptions propagated by K.</p>
+<p>Fix P and assume <span
+class="math inline">\operatorname{Possibility}_{2}(P)</span>. Choose its
+spouse N, retaining <span class="math inline">\Box
+\operatorname{Normal}(N), \Box \operatorname{PSa}_{2}(N,P), \Box
+\operatorname{PSd}_{2}(N,P)</span>, and <span class="math inline">\Box
+(\operatorname{PSb}(P)\land \operatorname{PSc}(P))</span>. The closed
+substitution argument <span class="math inline">N\top \land \Box r\to
+Nr</span> holds for every r: if <span class="math inline">r=\top</span>,
+replace equals in <span class="math inline">N\top</span>. By closing and
+necessitating this argument, <span class="math inline">\Box N\top</span>
+gives the necessary version of <span class="math inline">\forall r.(\Box
+r\to Nr)</span>.</p>
+<p>Apply it to <span class="math inline">r=(p\to q)</span>, and combine
+with the necessary <span
+class="math inline">\operatorname{PSa}_{2}(N,P)</span> clause.
+Necessitated logical implication and K give <span
+class="math inline">\Box \operatorname{PSa}(P)</span>, now with the
+fixed necessity <span class="math inline">\Box</span>. The necessary PSb
+and PSc clauses are already present. Their necessary conjunction is
+exactly <span class="math inline">\mathrm{Possibility}_\vee</span>(P).
+Eliminate the spouse witness and discharge the candidate assumption;
+generalize P. Necessitation was used only on closed logical arguments,
+with boxed assumptions propagated by K.</p>
 <h2 id="notes">Notes</h2>
-<p>Informal proof; no independent checker or Lean verification. Formula assumptions are not eligible for unrestricted necessitation.</p>
+<p>Informal proof; no independent checker or Lean verification. Formula
+assumptions are not eligible for unrestricted necessitation.</p>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><strong>Codex connecting proofs, 13 Sep 2026</strong> — Codex (GPT-6), connecting proof ii-implies-paired-candidates-are-vee-candidates, 2026-09-13.</li>
-<li><strong>Possibility in Intuitionistic Higher-Order Logic</strong> — Zachary Goodsell, Possibility in Intuitionistic Higher-Order Logic (21 August 2026), §§4.2–4.5, pp. 18–27 (definitions/background).</li>
+<li><strong>Codex connecting proofs, 13 Sep 2026</strong> — Codex
+(GPT-6), connecting proof
+ii-implies-paired-candidates-are-vee-candidates, 2026-09-13.</li>
+<li><strong>Possibility in Intuitionistic Higher-Order Logic</strong> —
+Zachary Goodsell, Possibility in Intuitionistic Higher-Order Logic (21
+August 2026), §§4.2–4.5, pp. 18–27 (definitions/background).</li>
 </ul>
 <p class="cert">
-Record: <code>topics/intuitionisticism/results/ii-implies-paired-candidates-are-vee-candidates.yaml</code>
+Record:
+<code>topics/intuitionisticism/results/ii-implies-paired-candidates-are-vee-candidates.yaml</code>
 </p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Background: Possibility in Intuitionistic Higher-Order Logic.</strong> Zachary Goodsell (21 August 2026). Possibility in Intuitionistic Higher-Order Logic. Manuscript. — §§4.2–4.5, pp. 18–27</li>
+<li><strong>Background: Possibility in Intuitionistic Higher-Order
+Logic.</strong> Zachary Goodsell (21 August 2026). Possibility in
+Intuitionistic Higher-Order Logic. Manuscript. — §§4.2–4.5,
+pp. 18–27</li>
 </ul>
 </body></html>

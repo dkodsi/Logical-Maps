@@ -320,17 +320,48 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <link rel="stylesheet" href="../math/katex.min.css">
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
-<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Full frame: classical root over a chain</h1></header><p>Informally proved model; no independent checker or Lean verification.</p>
-<p><strong>Verified true at the root:</strong> LEM, Necessary nonfalsity without necessity.</p>
-<p><strong>Verified failures at the root:</strong> <span class="math inline">\Box</span>LEM.</p>
-<p>Take worlds a,b,c, rooted at a. Informational accessibility consists of the reflexive arrows and <span class="math inline">b\le _{i}c</span>. Metaphysical accessibility additionally has <span class="math inline">a\le _{m} b</span> and <span class="math inline">a\le _{m} c</span>. Use the full model from Definitions 8–9 and Theorem 22.</p>
-<p>Only a is informationally accessible from a, so every proposition is either true or false there and the universally quantified excluded-middle sentence holds. At b, the proposition {c} is neither true nor false, so the quantified excluded-middle sentence fails at b. Since b is metaphysically accessible from a, that sentence is not identical to <span class="math inline">\top</span> at a. This verifies the strict separation in §2.5 without treating selected excluded middle as a new necessitation rule.</p>
-<p>For Eq. (85), take <span class="math inline">p=\{a,c\}</span>. Its intuitionistic negation is empty and its double negation is all three worlds, so <span class="math inline">\Box \neg \neg p</span> holds at a. Its identity with <span class="math inline">\top</span> fails at a because p is false at the accessible world b. Since a has no proper informational extensions, the negation of that identity is true at <span class="math inline">a: p\ne \top</span>. Thus p witnesses the positive existential sentence <span class="math inline">\Box \neg \neg p\land p\ne \top</span> at the root.</p>
-<p>Informal model verification; no independent checker or Lean verification.</p>
-<p><strong>Source:</strong> Zachary Goodsell, Possibility in Intuitionistic Higher-Order Logic (21 August 2026), §2.5, p. 7; §6.4, Eq. (85), p. 45.</p>
-<p>Mathematical credit: Zachary Goodsell; construction transcribed and made explicit from the manuscript. Transcription: Codex (GPT-6), 13 September 2026.</p>
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Full frame: classical root over a chain</h1></header><p>Informally proved model; no independent checker or Lean
+verification.</p>
+<p><strong>Verified true at the root:</strong> LEM, Necessary nonfalsity
+without necessity.</p>
+<p><strong>Verified failures at the root:</strong> <span
+class="math inline">\Box</span>LEM.</p>
+<p>Take worlds a,b,c, rooted at a. Informational accessibility consists
+of the reflexive arrows and <span class="math inline">b\le _{i}c</span>.
+Metaphysical accessibility additionally has <span
+class="math inline">a\le _{m} b</span> and <span
+class="math inline">a\le _{m} c</span>. Use the full model from
+Definitions 8–9 and Theorem 22.</p>
+<p>Only a is informationally accessible from a, so every proposition is
+either true or false there and the universally quantified
+excluded-middle sentence holds. At b, the proposition {c} is neither
+true nor false, so the quantified excluded-middle sentence fails at b.
+Since b is metaphysically accessible from a, that sentence is not
+identical to <span class="math inline">\top</span> at a. This verifies
+the strict separation in §2.5 without treating selected excluded middle
+as a new necessitation rule.</p>
+<p>For Eq. (85), take <span class="math inline">p=\{a,c\}</span>. Its
+intuitionistic negation is empty and its double negation is all three
+worlds, so <span class="math inline">\Box \neg \neg p</span> holds at a.
+Its identity with <span class="math inline">\top</span> fails at a
+because p is false at the accessible world b. Since a has no proper
+informational extensions, the negation of that identity is true at <span
+class="math inline">a: p\ne \top</span>. Thus p witnesses the positive
+existential sentence <span class="math inline">\Box \neg \neg p\land
+p\ne \top</span> at the root.</p>
+<p>Informal model verification; no independent checker or Lean
+verification.</p>
+<p><strong>Source:</strong> Zachary Goodsell, Possibility in
+Intuitionistic Higher-Order Logic (21 August 2026), §2.5, p. 7; §6.4,
+Eq. (85), p. 45.</p>
+<p>Mathematical credit: Zachary Goodsell; construction transcribed and
+made explicit from the manuscript. Transcription: Codex (GPT-6), 13
+September 2026.</p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Proof: Possibility in Intuitionistic Higher-Order Logic.</strong> Zachary Goodsell (21 August 2026). Possibility in Intuitionistic Higher-Order Logic. Manuscript. — §2.5, p. 7; §6.4, Eq. (85), p. 45</li>
+<li><strong>Proof: Possibility in Intuitionistic Higher-Order
+Logic.</strong> Zachary Goodsell (21 August 2026). Possibility in
+Intuitionistic Higher-Order Logic. Manuscript. — §2.5, p. 7; §6.4, Eq.
+(85), p. 45</li>
 </ul>
 </body></html>

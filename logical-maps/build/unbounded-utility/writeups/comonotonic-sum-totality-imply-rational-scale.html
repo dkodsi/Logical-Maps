@@ -269,42 +269,200 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <link rel="stylesheet" href="../math/katex.min.css">
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
-<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Comonotonic Sum Invariance with Totality implies Rational Scale Invariance</h1></header><p><strong>Proved implication:</strong> Rich Outcomes + Totality + Stochastic Equivalence + Comonotonic Sum Invariance imply Rational Scale Invariance: for every rational <span class="math inline">a&gt;0</span>, <span class="math inline">X\succeq Y</span> iff <span class="math inline">aX\succeq aY</span>.</p>
-<p>With the recorded <a href="comonotonic-sum-implies-shift.html">Shift Invariance</a> consequence, the same package gives <span class="math inline">X\succeq Y</span> iff <span class="math inline">aX+b\succeq aY+b</span> for rational <span class="math inline">a&gt;0</span> and real <span class="math inline">b</span>. Real factors are not reached; see §6.</p>
-<p><strong>Source and work accounting.</strong> Zachary Goodsell, Logical Maps session, 24 September 2026, claimed that Comonotonic Sum Invariance implies Positive Affine Invariance and gave the doubling argument <span class="math inline">2A=A+A\succeq B+A\succeq B+B=2B</span> for the scale step. Claude (Fable 5.1), 24 September 2026, supplied the comonotonic-copy reduction, the strict chain, the cancellation step through Totality, the rational assembly, and the two models in §6 showing which premises are used. Recorded under Misc. No independent checker or Lean verification is claimed.</p>
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Comonotonic Sum Invariance with Totality implies Rational Scale Invariance</h1></header><p><strong>Proved implication:</strong> Rich Outcomes + Totality +
+Stochastic Equivalence + Comonotonic Sum Invariance imply Rational Scale
+Invariance: for every rational <span class="math inline">a&gt;0</span>,
+<span class="math inline">X\succeq Y</span> iff <span
+class="math inline">aX\succeq aY</span>.</p>
+<p>With the recorded <a href="comonotonic-sum-implies-shift.html">Shift
+Invariance</a> consequence, the same package gives <span
+class="math inline">X\succeq Y</span> iff <span
+class="math inline">aX+b\succeq aY+b</span> for rational <span
+class="math inline">a&gt;0</span> and real <span
+class="math inline">b</span>. Real factors are not reached; see §6.</p>
+<p><strong>Source and work accounting.</strong> Zachary Goodsell,
+Logical Maps session, 24 September 2026, claimed that Comonotonic Sum
+Invariance implies Positive Affine Invariance and gave the doubling
+argument <span class="math inline">2A=A+A\succeq B+A\succeq
+B+B=2B</span> for the scale step. Claude (Fable 5.1), 24 September 2026,
+supplied the comonotonic-copy reduction, the strict chain, the
+cancellation step through Totality, the rational assembly, and the two
+models in §6 showing which premises are used. Recorded under Misc. No
+independent checker or Lean verification is claimed.</p>
 <h2 id="setting">1. Setting</h2>
-<p>Work in the real utility chart and write <span class="math inline">X</span> for the utility variable of a finite-level gamble. Rich Outcomes supplies a gamble at every real level, so pointwise sums and rational multiples of finite-level variables are gambles under the standing realization conventions; the principles are applied wherever the displayed variables exist. <span class="math inline">Q_X</span> is the quantile function of <span class="math inline">X</span>, nondecreasing on <span class="math inline">(0,1)</span>, and <span class="math inline">U</span> denotes a uniform variable on the standing atomless standard space.</p>
+<p>Work in the real utility chart and write <span
+class="math inline">X</span> for the utility variable of a finite-level
+gamble. Rich Outcomes supplies a gamble at every real level, so
+pointwise sums and rational multiples of finite-level variables are
+gambles under the standing realization conventions; the principles are
+applied wherever the displayed variables exist. <span
+class="math inline">Q_X</span> is the quantile function of <span
+class="math inline">X</span>, nondecreasing on <span
+class="math inline">(0,1)</span>, and <span class="math inline">U</span>
+denotes a uniform variable on the standing atomless standard space.</p>
 <p>Two standard facts are used.</p>
 <ul>
-<li>(F1) For every <span class="math inline">X</span> there is a uniform <span class="math inline">U</span> with <span class="math inline">X=Q_X(U)</span> almost surely. On the complement of the atoms of the law of <span class="math inline">X</span> take <span class="math inline">U=F_X(X)</span>; on each atom <span class="math inline">\{X=x\}</span>, an event of positive probability on an atomless space, take a variable uniform on <span class="math inline">(F_X(x^-),F_X(x)]</span>.</li>
-<li>(F2) If <span class="math inline">f,g</span> are nondecreasing on <span class="math inline">(0,1)</span> then <span class="math inline">(f(U),g(U))</span> is a comonotonic pair in the sense of the principle, <span class="math inline">Q_{f(U)}=f</span> almost everywhere, and <span class="math inline">f(U)+g(U)=(f+g)(U)</span> with <span class="math inline">f+g</span> nondecreasing.</li>
+<li>(F1) For every <span class="math inline">X</span> there is a uniform
+<span class="math inline">U</span> with <span
+class="math inline">X=Q_X(U)</span> almost surely. On the complement of
+the atoms of the law of <span class="math inline">X</span> take <span
+class="math inline">U=F_X(X)</span>; on each atom <span
+class="math inline">\{X=x\}</span>, an event of positive probability on
+an atomless space, take a variable uniform on <span
+class="math inline">(F_X(x^-),F_X(x)]</span>.</li>
+<li>(F2) If <span class="math inline">f,g</span> are nondecreasing on
+<span class="math inline">(0,1)</span> then <span
+class="math inline">(f(U),g(U))</span> is a comonotonic pair in the
+sense of the principle, <span class="math inline">Q_{f(U)}=f</span>
+almost everywhere, and <span
+class="math inline">f(U)+g(U)=(f+g)(U)</span> with <span
+class="math inline">f+g</span> nondecreasing.</li>
 </ul>
 <h2 id="comonotonic-copies">2. Comonotonic copies</h2>
-<p>Given <span class="math inline">X,Y</span>, choose <span class="math inline">U</span> with <span class="math inline">X=Q_X(U)</span> by (F1) and put <span class="math inline">Y^\dagger=Q_Y(U)</span>. Then <span class="math inline">Y^\dagger</span> has the law of <span class="math inline">Y</span>, so Stochastic Equivalence gives <span class="math inline">Y\sim Y^\dagger</span>, and by transitivity <span class="math inline">X\succeq Y</span> iff <span class="math inline">X\succeq Y^\dagger</span>. For rational <span class="math inline">a&gt;0</span>, <span class="math inline">aY^\dagger=Q_{aY}(U)</span> has the law of <span class="math inline">aY</span>, so likewise <span class="math inline">aX\succeq aY</span> iff <span class="math inline">aX\succeq aY^\dagger</span>. It therefore suffices to prove the theorem for pairs <span class="math inline">X=f(U)</span>, <span class="math inline">Y=g(U)</span> with <span class="math inline">f,g</span> nondecreasing, and <span class="math inline">(aX,aY)=(af(U),ag(U))</span> is again such a pair.</p>
-<h2 id="integer-factors-preservation">3. Integer factors: preservation</h2>
-<p><strong>Lemma 1.</strong> Let <span class="math inline">X=f(U)</span>, <span class="math inline">Y=g(U)</span> with <span class="math inline">f,g</span> nondecreasing, and let <span class="math inline">k\ge1</span> be an integer. If <span class="math inline">X\succeq Y</span> then <span class="math inline">kX\succeq kY</span>; if <span class="math inline">X\succ Y</span> then <span class="math inline">kX\succ kY</span>. Only Rich Outcomes and Comonotonic Sum Invariance are used.</p>
-<p><em>Proof.</em> For <span class="math inline">0\le j\le k</span> put <span class="math inline">W_j=jX+(k-j)Y=(jf+(k-j)g)(U)</span>, a gamble by Rich Outcomes. For <span class="math inline">0\le j&lt;k</span> put <span class="math inline">Z_j=jX+(k-j-1)Y=(jf+(k-j-1)g)(U)</span>; it is a nondecreasing function of <span class="math inline">U</span>, so by (F2) both <span class="math inline">(X,Z_j)</span> and <span class="math inline">(Y,Z_j)</span> are comonotonic, and <span class="math inline">X+Z_j=W_{j+1}</span>, <span class="math inline">Y+Z_j=W_j</span>. Comonotonic Sum Invariance, applied to the pair <span class="math inline">(X,Y)</span> and to the pair <span class="math inline">(Y,X)</span>, gives</p>
-<p><span class="math display">W_{j+1}\succeq W_j\iff X\succeq Y,\qquad W_j\succeq W_{j+1}\iff Y\succeq X.
+<p>Given <span class="math inline">X,Y</span>, choose <span
+class="math inline">U</span> with <span
+class="math inline">X=Q_X(U)</span> by (F1) and put <span
+class="math inline">Y^\dagger=Q_Y(U)</span>. Then <span
+class="math inline">Y^\dagger</span> has the law of <span
+class="math inline">Y</span>, so Stochastic Equivalence gives <span
+class="math inline">Y\sim Y^\dagger</span>, and by transitivity <span
+class="math inline">X\succeq Y</span> iff <span
+class="math inline">X\succeq Y^\dagger</span>. For rational <span
+class="math inline">a&gt;0</span>, <span
+class="math inline">aY^\dagger=Q_{aY}(U)</span> has the law of <span
+class="math inline">aY</span>, so likewise <span
+class="math inline">aX\succeq aY</span> iff <span
+class="math inline">aX\succeq aY^\dagger</span>. It therefore suffices
+to prove the theorem for pairs <span class="math inline">X=f(U)</span>,
+<span class="math inline">Y=g(U)</span> with <span
+class="math inline">f,g</span> nondecreasing, and <span
+class="math inline">(aX,aY)=(af(U),ag(U))</span> is again such a
+pair.</p>
+<h2 id="integer-factors-preservation">3. Integer factors:
+preservation</h2>
+<p><strong>Lemma 1.</strong> Let <span
+class="math inline">X=f(U)</span>, <span
+class="math inline">Y=g(U)</span> with <span
+class="math inline">f,g</span> nondecreasing, and let <span
+class="math inline">k\ge1</span> be an integer. If <span
+class="math inline">X\succeq Y</span> then <span
+class="math inline">kX\succeq kY</span>; if <span
+class="math inline">X\succ Y</span> then <span
+class="math inline">kX\succ kY</span>. Only Rich Outcomes and
+Comonotonic Sum Invariance are used.</p>
+<p><em>Proof.</em> For <span class="math inline">0\le j\le k</span> put
+<span class="math inline">W_j=jX+(k-j)Y=(jf+(k-j)g)(U)</span>, a gamble
+by Rich Outcomes. For <span class="math inline">0\le j&lt;k</span> put
+<span class="math inline">Z_j=jX+(k-j-1)Y=(jf+(k-j-1)g)(U)</span>; it is
+a nondecreasing function of <span class="math inline">U</span>, so by
+(F2) both <span class="math inline">(X,Z_j)</span> and <span
+class="math inline">(Y,Z_j)</span> are comonotonic, and <span
+class="math inline">X+Z_j=W_{j+1}</span>, <span
+class="math inline">Y+Z_j=W_j</span>. Comonotonic Sum Invariance,
+applied to the pair <span class="math inline">(X,Y)</span> and to the
+pair <span class="math inline">(Y,X)</span>, gives</p>
+<p><span class="math display">W_{j+1}\succeq W_j\iff X\succeq Y,\qquad
+W_j\succeq W_{j+1}\iff Y\succeq X.
 \tag{$*$}</span></p>
-<p>If <span class="math inline">X\succeq Y</span>, then <span class="math inline">W_k\succeq W_{k-1}\succeq\cdots\succeq W_0</span> and transitivity gives <span class="math inline">kX=W_k\succeq W_0=kY</span>.</p>
-<p>If <span class="math inline">X\succ Y</span>, then also <span class="math inline">Y\not\succeq X</span>. Suppose <span class="math inline">kY\succeq kX</span>, that is <span class="math inline">W_0\succeq W_k</span>. For <span class="math inline">k=1</span> this is <span class="math inline">Y\succeq X</span>, excluded. For <span class="math inline">k\ge2</span> the chain <span class="math inline">W_k\succeq W_{k-1}\succeq\cdots\succeq W_1</span> gives <span class="math inline">W_k\succeq W_1</span>, hence <span class="math inline">W_0\succeq W_1</span> by transitivity, which by <span class="math inline">(*)</span> with <span class="math inline">j=0</span> is <span class="math inline">Y\succeq X</span>, excluded. So <span class="math inline">kX\succ kY</span>. <span class="math inline">\square</span></p>
-<p>Lemma 1, together with the shift step <span class="math inline">X\succeq Y</span> iff <span class="math inline">X+b\succeq Y+b</span> from the constant summand, is the recorded result <a href="comonotonic-sum-implies-integer-affine-preservation.html">comonotonic-sum-implies-integer-affine-preservation</a>.</p>
-<h2 id="integer-factors-cancellation">4. Integer factors: cancellation</h2>
-<p><strong>Lemma 2.</strong> Under Totality, for <span class="math inline">X,Y</span> as in Lemma 1: if <span class="math inline">kX\succeq kY</span> then <span class="math inline">X\succeq Y</span>.</p>
-<p><em>Proof.</em> Suppose <span class="math inline">X\not\succeq Y</span>. Totality gives <span class="math inline">Y\succeq X</span>, so <span class="math inline">Y\succ X</span>, and Lemma 1 gives <span class="math inline">kY\succ kX</span>, contradicting <span class="math inline">kX\succeq kY</span>. <span class="math inline">\square</span></p>
-<p>Totality enters only here. Without it the cancellation direction fails; see §6.</p>
+<p>If <span class="math inline">X\succeq Y</span>, then <span
+class="math inline">W_k\succeq W_{k-1}\succeq\cdots\succeq W_0</span>
+and transitivity gives <span class="math inline">kX=W_k\succeq
+W_0=kY</span>.</p>
+<p>If <span class="math inline">X\succ Y</span>, then also <span
+class="math inline">Y\not\succeq X</span>. Suppose <span
+class="math inline">kY\succeq kX</span>, that is <span
+class="math inline">W_0\succeq W_k</span>. For <span
+class="math inline">k=1</span> this is <span
+class="math inline">Y\succeq X</span>, excluded. For <span
+class="math inline">k\ge2</span> the chain <span
+class="math inline">W_k\succeq W_{k-1}\succeq\cdots\succeq W_1</span>
+gives <span class="math inline">W_k\succeq W_1</span>, hence <span
+class="math inline">W_0\succeq W_1</span> by transitivity, which by
+<span class="math inline">(*)</span> with <span
+class="math inline">j=0</span> is <span class="math inline">Y\succeq
+X</span>, excluded. So <span class="math inline">kX\succ kY</span>.
+<span class="math inline">\square</span></p>
+<p>Lemma 1, together with the shift step <span
+class="math inline">X\succeq Y</span> iff <span
+class="math inline">X+b\succeq Y+b</span> from the constant summand, is
+the recorded result <a
+href="comonotonic-sum-implies-integer-affine-preservation.html">comonotonic-sum-implies-integer-affine-preservation</a>.</p>
+<h2 id="integer-factors-cancellation">4. Integer factors:
+cancellation</h2>
+<p><strong>Lemma 2.</strong> Under Totality, for <span
+class="math inline">X,Y</span> as in Lemma 1: if <span
+class="math inline">kX\succeq kY</span> then <span
+class="math inline">X\succeq Y</span>.</p>
+<p><em>Proof.</em> Suppose <span class="math inline">X\not\succeq
+Y</span>. Totality gives <span class="math inline">Y\succeq X</span>, so
+<span class="math inline">Y\succ X</span>, and Lemma 1 gives <span
+class="math inline">kY\succ kX</span>, contradicting <span
+class="math inline">kX\succeq kY</span>. <span
+class="math inline">\square</span></p>
+<p>Totality enters only here. Without it the cancellation direction
+fails; see §6.</p>
 <h2 id="rational-factors">5. Rational factors</h2>
-<p><strong>Theorem.</strong> Under the four premises, for every rational <span class="math inline">a&gt;0</span> and all finite-level <span class="math inline">X,Y</span> for which <span class="math inline">aX,aY</span> exist: <span class="math inline">X\succeq Y</span> iff <span class="math inline">aX\succeq aY</span>.</p>
-<p><em>Proof.</em> By §2 assume <span class="math inline">X=f(U)</span>, <span class="math inline">Y=g(U)</span> with <span class="math inline">f,g</span> nondecreasing. Write <span class="math inline">a=m/n</span> with positive integers <span class="math inline">m,n</span>. Lemmas 1 and 2 with <span class="math inline">k=m</span> give <span class="math inline">X\succeq Y</span> iff <span class="math inline">mX\succeq mY</span>. The variables <span class="math inline">mX</span> and <span class="math inline">n(aX)</span> have the same utility function <span class="math inline">m\,u(X)</span>, so they are the same numeric variable, or indifferent by Stochastic Equivalence if realized by different gambles; likewise for <span class="math inline">Y</span>. Lemmas 1 and 2 with <span class="math inline">k=n</span>, applied to the comonotonic pair <span class="math inline">(aX,aY)</span>, give <span class="math inline">n(aX)\succeq n(aY)</span> iff <span class="math inline">aX\succeq aY</span>. Chaining the three equivalences proves the claim. <span class="math inline">\square</span></p>
+<p><strong>Theorem.</strong> Under the four premises, for every rational
+<span class="math inline">a&gt;0</span> and all finite-level <span
+class="math inline">X,Y</span> for which <span
+class="math inline">aX,aY</span> exist: <span
+class="math inline">X\succeq Y</span> iff <span
+class="math inline">aX\succeq aY</span>.</p>
+<p><em>Proof.</em> By §2 assume <span class="math inline">X=f(U)</span>,
+<span class="math inline">Y=g(U)</span> with <span
+class="math inline">f,g</span> nondecreasing. Write <span
+class="math inline">a=m/n</span> with positive integers <span
+class="math inline">m,n</span>. Lemmas 1 and 2 with <span
+class="math inline">k=m</span> give <span class="math inline">X\succeq
+Y</span> iff <span class="math inline">mX\succeq mY</span>. The
+variables <span class="math inline">mX</span> and <span
+class="math inline">n(aX)</span> have the same utility function <span
+class="math inline">m\,u(X)</span>, so they are the same numeric
+variable, or indifferent by Stochastic Equivalence if realized by
+different gambles; likewise for <span class="math inline">Y</span>.
+Lemmas 1 and 2 with <span class="math inline">k=n</span>, applied to the
+comonotonic pair <span class="math inline">(aX,aY)</span>, give <span
+class="math inline">n(aX)\succeq n(aY)</span> iff <span
+class="math inline">aX\succeq aY</span>. Chaining the three equivalences
+proves the claim. <span class="math inline">\square</span></p>
 <h2 id="the-premises-are-used">6. The premises are used</h2>
 <ul>
-<li><em>Rich Outcomes</em> supplies the mixed sums <span class="math inline">jX+(k-j)Y</span>; on a sparse chart they need not exist.</li>
-<li><em>Stochastic Equivalence</em> is needed for non-comonotonic pairs. For <span class="math inline">X=U</span> and <span class="math inline">Y=1-U</span>, no nonconstant <span class="math inline">Z</span> is comonotonic with both: a common uniform <span class="math inline">U&#39;</span> with <span class="math inline">X=f(U&#39;)</span> and <span class="math inline">1-X=g(U&#39;)</span>, both nondecreasing, forces <span class="math inline">X</span> to be almost surely constant. Comonotonic Sum Invariance alone says nothing about <span class="math inline">(2X,2Y)</span>, and the copies of §2 are what the doubling argument adds to <span class="math inline">A</span> on both sides.</li>
-<li><em>Totality</em> is used only in Lemma 2. The model <a href="cdf-area-unit-threshold.html">CDF-area dominance: simple floors or unit threshold</a> satisfies Rich Outcomes, Stochastic Equivalence and Comonotonic Sum Invariance, together with Simple EU and Stochastic Dominance, and has a pair with <span class="math inline">2X\succeq 2Y</span> and <span class="math inline">X\not\succeq Y</span>.</li>
-<li><em>Real factors</em> are not reached. The model <a href="lexicographic-hamel-tie-break.html">Lexicographic expectation: Hamel tie-break</a> satisfies all four premises, Archimedean Outcomes, Stochastic Dominance and Simple EU, is invariant under every rational factor, and has <span class="math inline">X\succ 0</span> with <span class="math inline">\sqrt2X\not\succeq0</span>. Iterated addition sees only rational multiples. Whether Mixture Independence closes the gap is <a href="conjectured-dtu-comonotonic-imply-scale.html">conjectured-dtu-comonotonic-imply-scale</a>.</li>
+<li><em>Rich Outcomes</em> supplies the mixed sums <span
+class="math inline">jX+(k-j)Y</span>; on a sparse chart they need not
+exist.</li>
+<li><em>Stochastic Equivalence</em> is needed for non-comonotonic pairs.
+For <span class="math inline">X=U</span> and <span
+class="math inline">Y=1-U</span>, no nonconstant <span
+class="math inline">Z</span> is comonotonic with both: a common uniform
+<span class="math inline">U&#39;</span> with <span
+class="math inline">X=f(U&#39;)</span> and <span
+class="math inline">1-X=g(U&#39;)</span>, both nondecreasing, forces
+<span class="math inline">X</span> to be almost surely constant.
+Comonotonic Sum Invariance alone says nothing about <span
+class="math inline">(2X,2Y)</span>, and the copies of §2 are what the
+doubling argument adds to <span class="math inline">A</span> on both
+sides.</li>
+<li><em>Totality</em> is used only in Lemma 2. The model <a
+href="cdf-area-unit-threshold.html">CDF-area dominance: simple floors or
+unit threshold</a> satisfies Rich Outcomes, Stochastic Equivalence and
+Comonotonic Sum Invariance, together with Simple EU and Stochastic
+Dominance, and has a pair with <span class="math inline">2X\succeq
+2Y</span> and <span class="math inline">X\not\succeq Y</span>.</li>
+<li><em>Real factors</em> are not reached. The model <a
+href="lexicographic-hamel-tie-break.html">Lexicographic expectation:
+Hamel tie-break</a> satisfies all four premises, Archimedean Outcomes,
+Stochastic Dominance and Simple EU, is invariant under every rational
+factor, and has <span class="math inline">X\succ 0</span> with <span
+class="math inline">\sqrt2X\not\succeq0</span>. Iterated addition sees
+only rational multiples. Whether Mixture Independence closes the gap is
+<a
+href="conjectured-dtu-comonotonic-imply-scale.html">conjectured-dtu-comonotonic-imply-scale</a>.</li>
 </ul>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Background: Unbounded Utility and Background Risk.</strong> Zachary Goodsell (5 June 2026). Unbounded Utility and Background Risk. Unpublished working manuscript. — §6.2, p. 18; definitions on pp. 3–4</li>
+<li><strong>Background: Unbounded Utility and Background Risk.</strong>
+Zachary Goodsell (5 June 2026). Unbounded Utility and Background Risk.
+Unpublished working manuscript. — §6.2, p. 18; definitions on
+pp. 3–4</li>
 </ul>
 </body></html>

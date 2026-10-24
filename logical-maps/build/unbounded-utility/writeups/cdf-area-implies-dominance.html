@@ -270,27 +270,55 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
 <script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>CDF-Area Extension ⇒ Stochastic Dominance</h1></header><p class="cert">
-Result — Source: Unbounded Utility and Background Risk (unpublished); produced by Zachary Goodsell (unpublished manuscript); recorded by GPT-6 (Codex), prompted by Zachary Goodsell, 2026-09-09; extraction and random-variable translation.
+Result — Source: Unbounded Utility and Background Risk (unpublished);
+produced by Zachary Goodsell (unpublished manuscript); recorded by GPT-6
+(Codex), prompted by Zachary Goodsell, 2026-09-09; extraction and
+random-variable translation.
 </p>
 <h2 id="premises">Premises</h2>
 <ul>
-<li><strong>CDF-Area Extension.</strong> The normalized utility chart is total and measurable. Write <span class="math inline">S_X(t)=P(u(X)&gt;t), d=S_X- S_Y, A_{+}=\int \max (d,0)dt</span> and <span class="math inline">A_{-}=\int \max (- d,0)dt</span> over <span class="math inline">\mathbb{R}</span>. Whenever at least one of <span class="math inline">A_{+},A_{-}</span> is finite, <span class="math inline">X \succeq Y</span> iff <span class="math inline">A_{+}\ge A_{-}</span>. If both are infinite, this axiom imposes no comparison.</li>
+<li><strong>CDF-Area Extension.</strong> The normalized utility chart is
+total and measurable. Write <span
+class="math inline">S_X(t)=P(u(X)&gt;t), d=S_X- S_Y, A_{+}=\int \max
+(d,0)dt</span> and <span class="math inline">A_{-}=\int \max (-
+d,0)dt</span> over <span class="math inline">\mathbb{R}</span>. Whenever
+at least one of <span class="math inline">A_{+},A_{-}</span> is finite,
+<span class="math inline">X \succeq Y</span> iff <span
+class="math inline">A_{+}\ge A_{-}</span>. If both are infinite, this
+axiom imposes no comparison.</li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <ul>
-<li><strong>Stochastic Dominance.</strong> If <span class="math inline">P(X&gt;o) \ge P(Y&gt;o)</span> for every outcome threshold o, then <span class="math inline">X \succeq Y</span>; if one threshold inequality is strict, <span class="math inline">X \succ Y</span>. Thresholds use the sure-outcome order.</li>
+<li><strong>Stochastic Dominance.</strong> If <span
+class="math inline">P(X&gt;o) \ge P(Y&gt;o)</span> for every outcome
+threshold o, then <span class="math inline">X \succeq Y</span>; if one
+threshold inequality is strict, <span class="math inline">X \succ
+Y</span>. Thresholds use the sure-outcome order.</li>
 </ul>
 <h2 id="proof">Proof</h2>
-<p>Under stochastic dominance, <span class="math inline">S_X\ge S_Y</span> pointwise, so <span class="math inline">A_{-}=0</span> and <span class="math inline">A_{+}\ge 0</span>. This forces <span class="math inline">X \succeq Y</span>. If some threshold is strictly improved, one-sided continuity makes d positive on an interval, giving <span class="math inline">A_{+}&gt;0</span>, possibly infinite; then <span class="math inline">Y \succeq X</span> is false. Equality of laws gives two zero areas.</p>
+<p>Under stochastic dominance, <span class="math inline">S_X\ge
+S_Y</span> pointwise, so <span class="math inline">A_{-}=0</span> and
+<span class="math inline">A_{+}\ge 0</span>. This forces <span
+class="math inline">X \succeq Y</span>. If some threshold is strictly
+improved, one-sided continuity makes d positive on an interval, giving
+<span class="math inline">A_{+}&gt;0</span>, possibly infinite; then
+<span class="math inline">Y \succeq X</span> is false. Equality of laws
+gives two zero areas.</p>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><strong>Unbounded Utility and Background Risk (unpublished)</strong> — Zachary Goodsell, Unbounded Utility and Background Risk, 5 June 2026, unpublished manuscript marked “do not cite” and erroneous; Lemma 1, p. 8</li>
+<li><strong>Unbounded Utility and Background Risk (unpublished)</strong>
+— Zachary Goodsell, Unbounded Utility and Background Risk, 5 June 2026,
+unpublished manuscript marked “do not cite” and erroneous; Lemma 1,
+p. 8</li>
 </ul>
 <p class="cert">
-Record: <code>topics/unbounded-utility/results/cdf-area-implies-dominance.yaml</code>
+Record:
+<code>topics/unbounded-utility/results/cdf-area-implies-dominance.yaml</code>
 </p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Proof: Unbounded Utility and Background Risk.</strong> Zachary Goodsell (5 June 2026). Unbounded Utility and Background Risk. Unpublished working manuscript. — Lemma 1, p. 8</li>
+<li><strong>Proof: Unbounded Utility and Background Risk.</strong>
+Zachary Goodsell (5 June 2026). Unbounded Utility and Background Risk.
+Unpublished working manuscript. — Lemma 1, p. 8</li>
 </ul>
 </body></html>

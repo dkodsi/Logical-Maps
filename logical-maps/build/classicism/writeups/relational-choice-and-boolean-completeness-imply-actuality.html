@@ -1,0 +1,644 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>relational-choice-and-boolean-completeness-imply-actuality</title><link rel="icon" type="image/png" href="../favicon.png">
+<style>/* Fixed forest palette, adapted from the supplied style example.
+   Semantic and source hues retain their meaning in both modes. */
+:root {
+  --bg: #f3f1e8;
+  --panel: #f8f7f0;
+  --panel-2: #e9ecdf;
+  --line: #d4d9c9;
+  --line-strong: #a2ae97;
+  --ink: #283c28;
+  --ink-2: #4f604b;
+  --ink-3: #5f6d58;
+  --accent: #356044;
+  --link-hover: #914b30;
+  --human: #3e7052;
+  --assisted: #746044;
+  --ai: #a35b36;
+  --derived: #7b8271;
+  --indep: #a0483a;
+  --open: #e2e5d9;
+  --open-ink: #65705f;
+  --conj: #896b27;
+  --node-fill: #f8f7f0;
+  --node-stroke: #98a68b;
+  --junction: #52634b;
+  --hl: #e0e7cd;
+  --focus: #914b30;
+  --badge-ink: #ffffff;
+  --warning-bg: #f4e6dc;
+  --source-forest: #3e7052;
+  --source-rust: #a25336;
+  --source-ochre: #896b27;
+  --source-slate: #4c7279;
+  --source-berry: #80556d;
+  --source-olive: #69753c;
+  --source-misc: #696d61;
+  --shadow: 0 4px 24px rgb(40 60 40 / 12%);
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --serif: var(--sans);
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  --bg: #0e1912;
+  --panel: #142018;
+  --panel-2: #1d2b20;
+  --line: #304332;
+  --line-strong: #596e51;
+  --ink: #d7dfca;
+  --ink-2: #b3c1a7;
+  --ink-3: #96aa8d;
+  --accent: #a6c699;
+  --link-hover: #dfab89;
+  --human: #94bc95;
+  --assisted: #c1ad8d;
+  --ai: #dca17b;
+  --derived: #83937c;
+  --indep: #e09b86;
+  --open: #243327;
+  --open-ink: #a2b398;
+  --conj: #d0b36b;
+  --node-fill: #19261c;
+  --node-stroke: #627957;
+  --junction: #b3c1a7;
+  --hl: #30422a;
+  --focus: #dfab89;
+  --badge-ink: #0e1912;
+  --warning-bg: #32251f;
+  --source-forest: #94bc95;
+  --source-rust: #dca17b;
+  --source-ochre: #d0b36b;
+  --source-slate: #95bcc1;
+  --source-berry: #c5a0b7;
+  --source-olive: #b6c383;
+  --source-misc: #a9b09c;
+  --shadow: 0 4px 24px rgb(0 0 0 / 25%);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { background: var(--bg); scrollbar-color: var(--line-strong) var(--bg); }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.6 var(--sans); }
+button, input, select { font: inherit; color: inherit; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--link-hover); text-decoration: underline; text-underline-offset: 3px; }
+input[type="checkbox"] { accent-color: var(--accent); }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+::selection { background: var(--hl); color: var(--ink); }
+.theme-toggle { border: 0; padding: 6px 0; background: transparent; color: var(--ink-2); cursor: pointer; font: 13px var(--sans); white-space: nowrap; }
+.theme-toggle:hover { color: var(--link-hover); }
+.display-toggles { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0 16px; }
+.theme-toggle[aria-pressed="true"] { color: var(--accent); }
+
+/* A prismatic name: one rainbow wheel around a point in the word, spinning;
+   --prism-x and --prism-y move that point off the middle.
+   Pure spectral stops, turned by a registered angle rather than a hue
+   filter, which would muddy them. */
+@property --prism { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
+.prismatic { font-weight: 600; color: transparent; background: conic-gradient(from var(--prism) at var(--prism-x, 50%) var(--prism-y, 50%), #ff1a1a, #ff8a00, #ffd000, #22c33a, #00a8f0, #3d4bff, #b026ff, #ff1a1a); -webkit-background-clip: text; background-clip: text; animation: prism-spin 6s linear infinite; }
+/* As a link it keeps the gradient on hover, under an accent underline. */
+a.prismatic, a.prismatic:hover { color: transparent; }
+a.prismatic:hover { text-decoration-color: var(--accent); }
+@keyframes prism-spin { to { --prism: 360deg; } }
+@media (prefers-reduced-motion: reduce) { .prismatic { animation: none; } }
+
+/* Standalone write-ups use the same quiet, ruled typography as the map. */
+html:has(body.writeup-page) { background: var(--bg); }
+body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; font: 16px/1.7 var(--sans); overflow-wrap: anywhere; }
+.writeup-nav { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 16px; border-bottom: 1px solid var(--line); padding-bottom: 12px; margin-bottom: 24px; font-size: 13px; }
+.writeup-page h1 { font-size: 1.4em; line-height: 1.4; margin: 0 0 20px; color: var(--ink); }
+.writeup-page h2 { font-size: 1.15em; line-height: 1.4; margin: 1.8em 0 .5em; padding-top: 14px; border-top: 1px solid var(--line); }
+.writeup-page h3 { font-size: 1em; }
+.writeup-page p { margin: 0 0 12px; }
+.writeup-page .cert { color: var(--ink-2); font-size: .85em; }
+.writeup-page code, .writeup-page pre { font: .85em/1.6 var(--mono); color: var(--ink); }
+.writeup-page pre { padding: 14px; background: var(--panel-2); overflow-x: auto; }
+.writeup-page blockquote { color: var(--ink-2); border-left: 2px solid var(--line-strong); margin-left: 0; padding-left: 20px; }
+.writeup-page math[display="block"] { display: block; overflow-x: auto; padding: 8px 0; }
+.writeup-page table { display: block; overflow-x: auto; border-collapse: collapse; }
+.writeup-page th, .writeup-page td { border-bottom: 1px solid var(--line); padding: 8px 12px; }
+@media (max-width: 600px) {
+  body.writeup-page { margin: 1.5em auto; padding: 0 1em 2em; }
+}
+@media print {
+  :root, :root[data-theme="dark"] { --bg: white; --ink: #283c28; --ink-2: #4f604b; --accent: #356044; --line: #d4d9c9; color-scheme: light; }
+  .writeup-nav { display: none; }
+  body.writeup-page { max-width: none; margin: 0; padding: 0; }
+}
+
+/* Teal-grey, muted rust, deep teal and warm stone. Screen-only overrides
+   preserve print styling. */
+@media screen {
+  :root {
+    --bg: #ebf1f1;
+    --panel: #e1eae9;
+    --panel-2: #d0dfde;
+    --line: #c0cecd;
+    --line-strong: #849997;
+    --ink: #303b3a;
+    --ink-2: #4a5a59;
+    --ink-3: #526160;
+    --accent: #884932;
+    --link-hover: #6f3827;
+    --derived: #6f8180;
+    --open: #d6e2e1;
+    --open-ink: #526160;
+    --node-fill: #f1f6f6;
+    --node-stroke: #7f9391;
+    --junction: #596b6a;
+    --human: #2f6b66;
+    --source-forest: #2f6b66;
+    --hl: #e6ddd0;
+    --focus: #884932;
+    --shadow: 0 4px 24px rgb(48 59 58 / 10%);
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #171e1d;
+    --panel: #202a29;
+    --panel-2: #2b3736;
+    --line: #3d4b4a;
+    --line-strong: #6b817f;
+    --ink: #dbe8e7;
+    --ink-2: #b9cbca;
+    --ink-3: #a6bdbb;
+    --accent: #e2ad92;
+    --link-hover: #f0c3aa;
+    --derived: #87a09e;
+    --open: #303d3c;
+    --open-ink: #aec6c4;
+    --node-fill: #263130;
+    --node-stroke: #738d8b;
+    --junction: #b3cbc9;
+    --human: #86c0b6;
+    --source-forest: #86c0b6;
+    --hl: #463f37;
+    --focus: #e2ad92;
+    --badge-ink: #171e1a;
+    --shadow: 0 4px 24px rgb(0 0 0 / 24%);
+  }
+}
+
+/* Shared Okabe–Ito palette: https://jfly.uni-koeln.de/color/#pallet
+   Loaded after topic themes. Sky blue and orange distinguish positive and
+   negative relations; darker inks keep small labels readable in light mode.
+   Neutral surfaces are identical across maps. Print uses the shared theme. */
+@media screen {
+  :root[data-palette="colourblind"] {
+    --bg: #f4f5f6;
+    --panel: #ffffff;
+    --panel-2: #e9edf0;
+    --line: #d0d6da;
+    --line-strong: #87949d;
+    --ink: #202930;
+    --ink-2: #45535d;
+    --ink-3: #586670;
+    --accent: #0072b2;
+    --link-hover: #925f00;
+    --human: #0072b2;
+    --assisted: #80506a;
+    --ai: #a44500;
+    --derived: #687780;
+    --indep: #925f00;
+    --open: #e9edf0;
+    --open-ink: #586670;
+    --conj: #80506a;
+    --node-fill: #ffffff;
+    --node-stroke: #7a8b96;
+    --junction: #45535d;
+    --hl: #dce4ea;
+    --focus: #0072b2;
+    --badge-ink: #ffffff;
+    --warning-bg: #fff0ce;
+    --source-forest: #56b4e9;
+    --source-rust: #e69f00;
+    --source-ochre: #d55e00;
+    --source-slate: #0072b2;
+    --source-berry: #cc79a7;
+    --source-olive: #009e73;
+    --source-misc: #687780;
+    --rel-positive: #56b4e9;
+    --rel-negative: #e69f00;
+    --shadow: 0 4px 24px rgb(32 41 48 / 12%);
+  }
+  :root[data-palette="colourblind"][data-theme="dark"] {
+    --bg: #111820;
+    --panel: #18222b;
+    --panel-2: #23303b;
+    --line: #354550;
+    --line-strong: #718492;
+    --ink: #edf2f5;
+    --ink-2: #c1ced7;
+    --ink-3: #a5b5c1;
+    --accent: #56b4e9;
+    --link-hover: #e69f00;
+    --human: #56b4e9;
+    --assisted: #cc79a7;
+    --ai: #e69f00;
+    --derived: #91a1ad;
+    --indep: #e69f00;
+    --open: #23303b;
+    --open-ink: #a5b5c1;
+    --conj: #cc79a7;
+    --node-fill: #1c2933;
+    --node-stroke: #8094a3;
+    --junction: #c1ced7;
+    --hl: #354654;
+    --focus: #56b4e9;
+    --badge-ink: #111820;
+    --warning-bg: #352b18;
+    --source-misc: #91a1ad;
+    --shadow: 0 4px 24px rgb(0 0 0 / 25%);
+  }
+  /* Source swatches use the unmodified palette; outlined badges allow their
+     text to keep the normal contrast on both light and dark surfaces. */
+  :root[data-palette="colourblind"] .badge.source {
+    background: var(--panel);
+    color: var(--ink);
+    border: 1px solid var(--source-color);
+    border-left-width: 4px;
+  }
+}
+</style>
+<script>/* Apply before paint; share the preference between every map and write-up. */
+(() => {
+  const key = 'pmap-theme';
+  const paletteKey = 'pmap-palette';
+  const system = window.matchMedia?.('(prefers-color-scheme: dark)');
+  let preference;
+  let palette;
+  try { preference = localStorage.getItem(key); } catch (_) {}
+  try { palette = localStorage.getItem(paletteKey); } catch (_) {}
+  if (!['light', 'dark'].includes(preference)) preference = null;
+  if (palette !== 'colourblind') palette = 'default';
+  function apply(theme) {
+    document.documentElement.dataset.theme = theme;
+    document.querySelectorAll('[data-theme-toggle]').forEach(button => {
+      button.textContent = theme === 'dark' ? '[Light mode]' : '[Dark mode]';
+      button.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);
+    });
+  }
+  function applyPalette() {
+    document.documentElement.dataset.palette = palette;
+    document.querySelectorAll('[data-colourblind-toggle]').forEach(button => {
+      button.setAttribute('aria-pressed', String(palette === 'colourblind'));
+      button.textContent = `[Colourblind mode: ${palette === 'colourblind' ? 'on' : 'off'}]`;
+    });
+  }
+  const initial = () => preference || (system?.matches ? 'dark' : 'light');
+  apply(initial());
+  applyPalette();
+  document.addEventListener('DOMContentLoaded', () => {
+    apply(initial());
+    applyPalette();
+    document.querySelectorAll('[data-theme-toggle]').forEach(button => {
+      button.addEventListener('click', () => {
+        preference = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+        apply(preference);
+        try { localStorage.setItem(key, preference); } catch (_) {}
+      });
+    });
+    document.querySelectorAll('[data-colourblind-toggle]').forEach(button => {
+      button.addEventListener('click', () => {
+        palette = palette === 'colourblind' ? 'default' : 'colourblind';
+        applyPalette();
+        try { localStorage.setItem(paletteKey, palette); } catch (_) {}
+      });
+    });
+  });
+  system?.addEventListener('change', () => { if (!preference) apply(initial()); });
+  window.addEventListener('storage', event => {
+    if (event.key === key || event.key === null) {
+      preference = ['light', 'dark'].includes(event.newValue) ? event.newValue : null;
+      apply(initial());
+    }
+    if (event.key === paletteKey || event.key === null) {
+      palette = event.newValue === 'colourblind' ? 'colourblind' : 'default';
+      applyPalette();
+    }
+  });
+})();
+</script>
+<link rel="stylesheet" href="../math/katex.min.css">
+<script defer src="../math/katex.min.js"></script>
+<script defer src="../math/contrib/auto-render.min.js"></script>
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>relational-choice-and-boolean-completeness-imply-actuality</h1></header><blockquote>
+<p>Integration note, 23 October 2026: source prose is preserved below.
+Draft-time status statements are historical; the completed certificate
+and its scope are indexed in the frozen submission and in the
+integration report. Original work by Codex (OpenAI), prompted by Daniel
+Kodsi; construction and literature credits in the source remain in
+force.</p>
+</blockquote>
+<h1
+id="relational-choice-and-boolean-completeness-imply-actuality">Relational
+Choice and Boolean Completeness imply Actuality</h1>
+<p>22 October 2026. Original ordinary mathematical argument by OpenAI
+Codex; direct source <code>misc</code>, this note. No human check,
+independent-agent check, formal verification, or literature-novelty
+claim. No database or frozen-archive edit.</p>
+<h2 id="exact-local-theorem">Exact local theorem</h2>
+<p>Over the original fixed C,</p>
+<pre><code>RC_(t,t) + BC_(tt)  ⇒  Actuality.</code></pre>
+<p>Here RC_(t,t) is relational selection from propositions to
+propositions, and BC_(tt) is Boolean Completeness of the algebra of
+properties of propositions. Both premises are <strong>actual and
+unboxed</strong>. In particular, unboxed all-type Relational Choice plus
+unboxed all-type Boolean Completeness implies Actuality. Section 7
+proves this sharpest local version. Sections 1–5 retain the
+independently useful guarded proof with RC_(tt,t), selection from
+proposition-properties to propositions.</p>
+<p>The short route is: BC_(tt) forces a true disjoint join to have a
+true member. RC_(t,t), with the resulting BC_t, gives a disjoint
+refinement of all actual falsehoods. If Actuality failed, those
+falsehoods would have join ⊤, yielding a true disjoint join with no true
+member.</p>
+<p>The proof uses no ND, BF, Plenitude, persistent selected edges,
+optional necessitation, or infinitary syntax. It does not use
+RC+BC⇒Transversal Choice; the direct proof below supplies an independent
+route. Its fixed-point input is the bare-C Bourbaki–Witt lemma already
+written out in
+<code>notes/relational-choice-boolean-completeness-transversal-proof.md</code>,
+§5, with the guarded-operation refinement in
+<code>notes/rc-guarded-progressive-operation.md</code>.</p>
+<p>A fresh proved-only engine query before this argument found no
+recorded derivation or separator for RC+BC⇒Actuality. That is the record
+status, not an objection to the new proof.</p>
+<h2 id="evaluation-and-the-proposed-meet-reduction">1. Evaluation and
+the proposed meet reduction</h2>
+<p>Write H_a:=λz(z=a), of type tt. Evaluation at any proposition x has
+right adjoint</p>
+<pre><code>r_x(b):=λz((z=x)→b).</code></pre>
+<p>Indeed X(x)≤b iff X≤r_x(b): after unpacking algebraic order, this is
+the necessary universal closure of the H theorem</p>
+<pre><code>∀z[Xz→((z=x)→b)]  ↔  (Xx→b).</code></pre>
+<p>Consequently evaluation preserves every represented algebraic join
+that exists. This does not identify algebraic joins with material
+unions.</p>
+<p>BC_(tt) implies BC_t. Given a represented family of propositions,
+take its family of constant properties c_p:=λz.p, form their join at tt,
+and evaluate it at ⊤. The result is the join of the original family.
+Boolean duality gives meets as well.</p>
+<p>Thus let m be the Boolean meet of the actual truths, represented by
+λp.p. Then</p>
+<pre><code>Actuality  ↔  m is true  ↔  m≠⊥.</code></pre>
+<p>If an actuality witness u exists, u≤m, so m is true. If m is true, it
+itself is a witness. If m is false, ¬m is an actual truth, so m≤¬m and
+therefore m=⊥. Conversely ⊥ is false. Dually, under failure of
+Actuality, the join of all actual falsehoods is ⊤.</p>
+<p>The additional argument needed is that relational selection forces
+enough disjoint refinement of those falsehoods. Algebraic completeness
+alone does not supply that refinement.</p>
+<h2 id="a-true-disjoint-join-has-a-true-member">2. A true disjoint join
+has a true member</h2>
+<p>This lemma uses <strong>only C+BC_(tt)</strong>. Call A:tt a false
+antichain when</p>
+<pre><code>∀a(Aa→¬a),
+∀a b(Aa∧Ab→[a=b ∨ a∧b=⊥]).</code></pre>
+<p>Zero members are harmless for this lemma. Suppose, toward
+contradiction, that the algebraic join j of A’s actual instances is
+<strong>true</strong>.</p>
+<p>Use BC_(tt) to form J, the join of the represented family of
+haecceities H_a with Aa. For every actual a∈A,</p>
+<pre><code>H_a≤J,             J(a)=⊤.</code></pre>
+<p>Define C(x,y):=(x=y ∨ x∧y=⊥). We first prove</p>
+<pre><code>J(x)∧J(y) ≤ C(x,y)                 for all actual x,y:t.       (1)</code></pre>
+<p>Fix actual a,b∈A. Either a=b or a∧b=⊥. Each alternative is a positive
+identity, so its truth is necessary by bare-C Necessity of Identity.
+Necessary substitution therefore gives</p>
+<pre><code>H_a(x)∧H_b(y) ≤ C(x,y).</code></pre>
+<p>For fixed a, move H_a(x) to the right by Boolean implication
+adjunction and use that J(y) is the join of the H_b(y)’s. Then move J(y)
+to the right and use that J(x) is the join of the H_a(x)’s. This proves
+(1). No inequality is necessitated, and no ND is used. J may include ⊥;
+(1) does not forbid that.</p>
+<p>Now put</p>
+<pre><code>v:=∀p(J(p)→¬p).</code></pre>
+<p>For every a∈A, necessary universal instantiation and J(a)=⊤ give
+v≤¬a. Hence every a∈A lies below ¬v, so j≤¬v. Since j is true, v is
+false. Classical quantifier duality therefore supplies an
+<strong>actual</strong> q with</p>
+<pre><code>J(q) ∧ q.</code></pre>
+<p>For every a∈A, q≠a because q is true and a is false. By (1), q∧a=⊥.
+Therefore every a∈A lies below ¬q, and j≤¬q. The truth of j contradicts
+the truth of q. This proves the lemma.</p>
+<p>Equivalently, for <strong>any</strong> represented pairwise-disjoint
+family, its algebraic join is actually true iff some member is actually
+true. The reverse implication is immediate from being an upper bound.
+This disjoint-join reflection theorem uses no Relational Choice.</p>
+<p>The essential combination is higher-type completeness and actual
+quantification: joining the haecceities forces an actual true member,
+while the stable antichain identities prohibit it.</p>
+<h2
+id="under-actuality-every-nonzero-proposition-has-a-nonzero-false-part">3.
+Under ¬Actuality, every nonzero proposition has a nonzero false
+part</h2>
+<p>Let b≠⊥. If b is false, use b itself. If b is true, failure of
+Actuality says b does not entail every actual truth. Choose true q with
+b≰q. Then</p>
+<pre><code>c:=b∧¬q</code></pre>
+<p>is false, nonzero, and below b. This is an ordinary actual argument;
+no choice principle is needed for this one existential conclusion.</p>
+<p>Consequently, if A is a represented nonzero false antichain and j is
+its Boolean join, section 2 gives j≠⊤. There is a nonzero false a≤¬j. It
+is disjoint from every A-member and is not itself an A-member. Thus
+every such antichain has a strict extension by one false
+proposition.</p>
+<h2 id="a-chain-complete-algebraic-poset-of-guarded-antichains">4. A
+chain-complete algebraic poset of guarded antichains</h2>
+<p>Put</p>
+<pre><code>D(p):=¬p ∧ p≠⊥,
+P(F):= [F≤D] ∧ ∀p q □(F(p)∧F(q)→C(p,q)),</code></pre>
+<p>where C is from (1). Order the P-members by the algebraic Boolean
+order at tt. This is an antisymmetric represented poset. Its actual
+members are nonzero false antichains.</p>
+<p>Every represented algebraically comparable family of P-members has
+its ambient join J by BC_(tt), and J still satisfies P. First J≤D
+because D upper-bounds the family. For fixed actual p,q and any two
+members F,G, comparability puts both below one of them. That member’s
+boxed antichain clause gives</p>
+<pre><code>F(p)∧G(q)≤C(p,q).</code></pre>
+<p>The same two Boolean-adjunction steps used in section 2, with
+evaluation preserving the joins, yield J(p)∧J(q)≤C(p,q). Thus P(J). The
+empty family has join bottom, which satisfies P. Therefore the poset has
+represented chain suprema and a least element. The quantifier over p,q
+in P is outside its box; no interchange of □ with ∀ is made.</p>
+<h2
+id="rc-supplies-an-everywhere-guarded-strictly-progressive-operation">5.
+RC supplies an everywhere-guarded strictly progressive operation</h2>
+<p>Continue to assume ¬Actuality. For every P-member F, section 3
+supplies a nonzero false a disjoint from every actual F-member.
+Otherwise permit any output. Thus the relation</p>
+<pre><code>U(F,a):= P(F) → [¬a ∧ a≠⊥ ∧ ∀q(F(q)→a∧q=⊥)]</code></pre>
+<p>is actually serial. RC_(tt,t) supplies an actually total functional
+S⊆U. Define</p>
+<pre><code>N(F,p):= S(F,p)
+         ∧ ∀r(S(F,r)→r=p)
+         ∧ D(p)
+         ∧ ∀q(F(q)→[C(p,q)∧C(q,p)]),
+g(F):=λp(F(p)∨N(F,p)).</code></pre>
+<p>This is an admitted operation (tt)→(tt). Its construction does not
+reify S as an operation selecting proposition entities.</p>
+<p>The H theorem F(p)→g(F)(p) gives F≤g(F). If P(F), then g(F)≤D because
+the new clause explicitly implies D. To preserve the boxed antichain
+clause, check the four old/new cases for two arguments. Two old members
+use P(F); two new members are identified by the uniqueness guard; and
+one old plus one new uses the appropriate direction of the safety guard.
+Necessitate only this unconditional H implication and combine it with
+P(F)’s existing boxes. Hence P(g(F)). No future functionality or
+containment of S is assumed.</p>
+<p>Actually, at a P-member F the unique S-output a is false, nonzero,
+and disjoint from every F-member. Boolean commutativity gives
+disjointness in both directions, so all guards hold. Moreover F(a) is
+false: otherwise a would be disjoint from itself and hence zero. Thus
+g(F)(a) holds while F(a) does not, proving</p>
+<pre><code>P(F) → F&lt;g(F).</code></pre>
+<p>The bare-C Bourbaki–Witt lemma now applies to this represented
+chain-complete antisymmetric poset and its progressive operation. It
+gives F with g(F)=F, contradicting strictness. Therefore ¬Actuality is
+impossible, completing the local theorem.</p>
+<h2 id="alternative-route-and-modal-scope">6. Alternative route and
+modal scope</h2>
+<p>As a cross-check, Transversal Choice gives the recorded preorder form
+of Zorn’s Lemma. Apply it to actual nonzero false antichains under
+inclusion: material unions bound comparable families. Under ¬Actuality,
+maximality and the density argument in section 3 force the maximal
+antichain to have join ⊤, contradicting section 2. Thus TC together with
+BC_(tt) also implies Actuality. This alternative uses the recorded
+TC⇒Zorn theorem; the direct proof above does not.</p>
+<p>The local implication, including its sharper form proved next, is a
+closed C theorem with its assumptions discharged. Necessitating that
+<strong>theorem</strong> gives</p>
+<pre><code>□RC_(t,t) + □BC_(tt) ⇒ □Actuality.</code></pre>
+<p>No boxed conclusion is inferred from the unboxed premises alone. This
+note supplies a mathematical proof, not an update to the conjecture
+records or any formal verification status.</p>
+<h2 id="sharpening-rc_tt-supplies-a-disjoint-refinement">7. Sharpening:
+RC_(t,t) supplies a disjoint refinement</h2>
+<p><strong>Disjoint-refinement lemma.</strong> Over C+BC_t+RC_(t,t),
+every represented family X:tt has a represented pairwise-disjoint
+nonzero refinement with the same Boolean join. Each refinement member
+lies below some actual X-member.</p>
+<p>Let j=∨X. Use RC_(t,t) to select x from the serial relation
+requiring</p>
+<pre><code>X(x) ∧ x≰b     if b&lt;j,
+x=⊥            otherwise.</code></pre>
+<p>Seriality when b&lt;j follows from j’s least-upper-bound property:
+not every X-member can lie below b. Let S(b,x) be the actual functional
+selector, and define the actual functional graph</p>
+<pre><code>f(b,c):=∃x(S(b,x) ∧ c=b∨x).</code></pre>
+<p>On the algebraic interval [⊥,j], f is progressive, stays in the
+interval, is strict below j, and fixes j. The interval has suprema for
+all represented chains by BC_t. Apply the canonical-chain part of the
+bare-C Bourbaki–Witt proof: the union A of its f-chains is an internally
+well-ordered chain with greatest member j, and each b∈A is the supremum
+of f-values at its strict predecessors. In particular, if b&lt;c in A
+then f(b)≤c. Function notation here abbreviates the uniquely specified
+actual graph value; no selecting operation is asserted.</p>
+<p>For b∈A with b&lt;j define its increment d_b=f(b)∧¬b. Its represented
+graph existentially binds the unique f-value. The increment is nonzero,
+and if x is S’s value at b, then</p>
+<pre><code>d_b=(b∨x)∧¬b=x∧¬b≤x,       X(x).</code></pre>
+<p>If b&lt;c are in A, then d_b≤c and d_c≤¬c, so their increments are
+disjoint. Let Δ be the represented image of these increments. It is a
+nonzero antichain refining X.</p>
+<p>We verify that j is its join, rather than assuming a transfinite
+telescoping rule. Every increment lies below j. If k upper-bounds Δ and
+some b∈A fails b≤k, take the least such b. For every c&lt;b in A, c≤k
+and d_c≤k, hence f(c)=c∨d_c≤k. The defining supremum condition at b
+gives b≤k, contradiction. Therefore every A-member lies below k,
+including j. This proves j=∨Δ.</p>
+<p>Now assume ¬Actuality. By section 1, the represented family X(p):=¬p
+of all actual falsehoods has join ⊤. Apply the lemma. Every member of
+its disjoint refinement Δ is false, since it lies below a false
+X-member; yet ∨Δ=⊤ is true. This contradicts the disjoint-join
+reflection theorem of section 2. Since BC_(tt) supplies BC_t, this
+proves</p>
+<pre><code>C + RC_(t,t) + BC_(tt) ⊢ Actuality.</code></pre>
+<p>The increment construction adapts the already audited
+disjoint-increment calculation in
+<code>notes/relational-choice-countable-completeness-ccc.md</code>, §3.
+Here no CCC or countability assertion is used; the additional spanning
+argument is the least-counterexample proof just given.</p>
+<h2 id="an-explicit-single-relation-witnessing-the-obstruction">8. An
+explicit single relation witnessing the obstruction</h2>
+<p>The required choice instance can be made parameter-free. Define</p>
+<pre><code>W(b,x):= [b≠⊤ ∧ ¬x ∧ x≰b] ∨ [b=⊤ ∧ x=⊥].</code></pre>
+<p>Bare C proves Serial(W) iff ¬Actuality. The forward obstruction is
+immediate from an actuality witness u: every false x lies below ¬u, so
+the row b=¬u≠⊤ is empty. Conversely, under ¬Actuality, section 3
+supplies a nonzero false part x of ¬b whenever b≠⊤; then x≰b. At b=⊤ use
+⊥.</p>
+<p>Under BC_(tt), W has <strong>no</strong> actually total functional
+subrelation. Such a subrelation would give the construction of section 7
+with j=⊤, producing a represented false antichain with join ⊤, contrary
+to section 2. Thus any C+BC_(tt)+¬Actuality model explicitly fails
+relational selection for this one W. No model-construction hypothesis is
+involved in this obstruction.</p>
+<p>Even a subrelation of W with nonempty <strong>internally
+finite</strong> output fibres is impossible under those assumptions. The
+Boolean join of each such fibre exists, is false, and stays outside the
+input b when b≠⊤; at ⊤ it is ⊥. These joins have an admitted actually
+functional graph by their unique algebraic characterization, so they
+would supply the forbidden functional subrelation. The finite-join
+assertion is proved by the map’s Frege induction: remove one member,
+take the induction hypothesis’s join, and adjoin that member by binary
+∨. It does not assume external standardness or a selecting
+operation.</p>
+<h2 id="consequences-and-limits">9. Consequences and limits</h2>
+<p>Under all-type BC, section 2 also makes the Boolean join of any
+represented <strong>algebraically disjoint</strong> family of relations
+actually coextensive with its material union. Fix an actual argument
+tuple. Evaluation takes the join to the join of the corresponding
+proposition values; those values form a represented antichain, so
+section 2 reflects its truth to one member. This is actual coextension,
+not identity of relation entities.</p>
+<p>With all-type RC as well, the disjoint-refinement construction works
+at any relational type τ, using RC_(τ,τ) and BC_τ. Each refinement
+member lies below an original member. The same argument therefore shows
+that <strong>every</strong> represented algebraic join is actually
+coextensive with its material union. This does not claim necessary
+coextension, transport of a current supremum to a future supremum, BF,
+or Plenitude.</p>
+<p>Combining the new Actuality conclusion with the recorded
+BC+Actuality⇒Weak Rigid Comprehension and RC+Weak Rigid Comprehension⇒TC
+yields another proof of the all-type RC+BC⇒TC result. The original
+<strong>RC alone ⇒ TC</strong> question remains unresolved. In
+particular, the proof here requires completeness at <strong>tt</strong>,
+not merely BC_t; the haecceity join is the decisive higher-type use.</p>
+<p>There is also a stronger locality consequence for the TC question:
+<strong>all-type RC plus BC_(tt) alone implies all-type TC</strong>,
+since Actuality gives the recorded Transversal principle and
+Transversal+RC gives TC. No completeness premise at the
+individual-property type et or at every higher type is needed for this
+consequence.</p>
+<p>Conversely, under C+RC_(t,t)+BC_t+¬Actuality, section 7 produces a
+specific represented nonzero false antichain Δ with join ⊤. The family
+{H_a:Δ(a)} then has <strong>no</strong> Boolean join at tt, by section
+2’s proof. This is a concrete missing-join obstruction, rather than just
+the negation of a completeness schema. The case RC+BC_t⇒Actuality is not
+settled here.</p>
+<p>Without BC_t there is a precise two-level alternative. Under
+RC_(t,t)+¬Actuality choose S for the explicit W and form f(b)=b∨S(b)
+relationally. The union A of all f-chains is still represented and
+internally well ordered: the comparison and union portions of the
+fixed-point proof require no completeness. If A has an algebraic
+supremum, the final fixed-point argument makes it ⊤ and places ⊤ in A;
+the increments then give the preceding Δ and its missing haecceity join.
+Hence either this particular internally well-ordered family A has no
+join at t, or its increment antichain has no haecceity join at tt. This
+is a statement about two explicit represented families, not arbitrary
+external transfinite iteration.</p>
+<h2 id="audit-status">Audit status</h2>
+<p>Both proofs are ordinary mathematical arguments by this agent, not
+independently checked new results. The final checks preserve the
+positive-identity use of NI, the exact type tt of the haecceity join,
+actual quantifier duality, represented internal well-ordering, and the
+restriction on necessitation. Temporarily adding the unboxed and boxed
+all-type conclusions to the proved-only engine in memory introduced no
+new conflicts with recorded proved models; this consistency check is not
+a proof. Database records remain untouched. The engine separately
+reports <code>full-boolean-valued-atom-and-atomless</code> as a
+separator from <strong>necessary</strong> Actuality for the unboxed
+premises, so that stronger unboxed-to-boxed claim is not made.</p>
+</body></html>

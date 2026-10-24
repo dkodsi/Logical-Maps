@@ -270,19 +270,34 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
 <script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Expected multi-utility representation ⇒ Closed-graph continuity</h1></header><p class="cert">
-Result — Source: Misc.; produced by Claude Fable 5.1 (Cowork session), prompted by Zachary Goodsell.
+Result — Source: Misc.; produced by Claude Fable 5.1 (Cowork session),
+prompted by Zachary Goodsell.
 </p>
 <h2 id="premises">Premises</h2>
 <ul>
-<li><strong>Expected multi-utility representation.</strong> There is a set U of functions <span class="math inline">u : X \to \mathbb{R}</span> such that for all <span class="math inline">p, q \in \Delta (X): p \succeq q</span> if and only if <span class="math inline">\operatorname{EU}_u(p) \ge \operatorname{EU}_u(q)</span> for every <span class="math inline">u \in U</span>.</li>
+<li><strong>Expected multi-utility representation.</strong> There is a
+set U of functions <span class="math inline">u : X \to \mathbb{R}</span>
+such that for all <span class="math inline">p, q \in \Delta (X): p
+\succeq q</span> if and only if <span
+class="math inline">\operatorname{EU}_u(p) \ge
+\operatorname{EU}_u(q)</span> for every <span class="math inline">u \in
+U</span>.</li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <ul>
-<li><strong>Closed-graph continuity.</strong> The set <span class="math inline">\{(p, q) \in \Delta (X) \times \Delta (X) : p \succeq q\}</span> is closed in the product topology.</li>
+<li><strong>Closed-graph continuity.</strong> The set <span
+class="math inline">\{(p, q) \in \Delta (X) \times \Delta (X) : p
+\succeq q\}</span> is closed in the product topology.</li>
 </ul>
 <h2 id="proof">Proof</h2>
-<p><span class="math inline">\{(p,q) : p \succeq q\} =</span> ⋂<span class="math inline">_{u\in U} \{(p,q) : \operatorname{EU}_u(p) - \operatorname{EU}_u(q) \ge 0\}</span>, an intersection of preimages of <span class="math inline">[0,\infty )</span> under continuous (indeed linear) maps on <span class="math inline">\Delta (X)\times \Delta (X)</span>.</p>
+<p><span class="math inline">\{(p,q) : p \succeq q\} =</span> ⋂<span
+class="math inline">_{u\in U} \{(p,q) : \operatorname{EU}_u(p) -
+\operatorname{EU}_u(q) \ge 0\}</span>, an intersection of preimages of
+<span class="math inline">[0,\infty )</span> under continuous (indeed
+linear) maps on <span class="math inline">\Delta (X)\times \Delta
+(X)</span>.</p>
 <p class="cert">
-Record: <code>topics/decision-theory/results/multi-utility-implies-closed-graph.yaml</code>
+Record:
+<code>topics/decision-theory/results/multi-utility-implies-closed-graph.yaml</code>
 </p>
 </body></html>

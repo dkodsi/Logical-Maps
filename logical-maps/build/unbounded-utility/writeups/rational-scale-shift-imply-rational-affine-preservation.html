@@ -270,32 +270,71 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
 <script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Rich Outcomes ∧ Rational Scale Invariance ∧ Shift Invariance ⇒ Rational Affine Preservation</h1></header><p class="cert">
-Result — Source: Misc.; produced by Claude (Fable 5.1), prompted by Zachary Goodsell, 2026-09-24; recorded by Claude (Fable 5.1), prompted by Zachary Goodsell, 2026-09-24.
+Result — Source: Misc.; produced by Claude (Fable 5.1), prompted by
+Zachary Goodsell, 2026-09-24; recorded by Claude (Fable 5.1), prompted
+by Zachary Goodsell, 2026-09-24.
 </p>
 <h2 id="premises">Premises</h2>
 <ul>
-<li><strong>Rich Outcomes.</strong> Every real number r occurs as a utility level of a sure outcome: for each <span class="math inline">r \in \mathbb{R}</span> there is an outcome <span class="math inline">o_r</span> with <span class="math inline">u(o_r)=r</span>, with u defined by the normalized binary-mixture comparisons in the background. This does not assert that every outcome has a finite real level.</li>
-<li><strong>Rational Scale Invariance.</strong> For every rational <span class="math inline">a&gt;0, X \succeq Y</span> iff <span class="math inline">aX \succeq aY</span>.</li>
-<li><strong>Shift Invariance.</strong> For every real <span class="math inline">b, X \succeq Y</span> iff <span class="math inline">X+b \succeq Y+b</span>.</li>
+<li><strong>Rich Outcomes.</strong> Every real number r occurs as a
+utility level of a sure outcome: for each <span class="math inline">r
+\in \mathbb{R}</span> there is an outcome <span
+class="math inline">o_r</span> with <span
+class="math inline">u(o_r)=r</span>, with u defined by the normalized
+binary-mixture comparisons in the background. This does not assert that
+every outcome has a finite real level.</li>
+<li><strong>Rational Scale Invariance.</strong> For every rational <span
+class="math inline">a&gt;0, X \succeq Y</span> iff <span
+class="math inline">aX \succeq aY</span>.</li>
+<li><strong>Shift Invariance.</strong> For every real <span
+class="math inline">b, X \succeq Y</span> iff <span
+class="math inline">X+b \succeq Y+b</span>.</li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <ul>
-<li><strong>Rational Affine Preservation.</strong> For every rational <span class="math inline">a&gt;0</span> and real <span class="math inline">b</span>: if <span class="math inline">X \succeq Y</span> then <span class="math inline">aX+b \succeq aY+b</span>, and if <span class="math inline">X \succ Y</span> then <span class="math inline">aX+b \succ aY+b</span>.</li>
+<li><strong>Rational Affine Preservation.</strong> For every rational
+<span class="math inline">a&gt;0</span> and real <span
+class="math inline">b</span>: if <span class="math inline">X \succeq
+Y</span> then <span class="math inline">aX+b \succeq aY+b</span>, and if
+<span class="math inline">X \succ Y</span> then <span
+class="math inline">aX+b \succ aY+b</span>.</li>
 </ul>
 <h2 id="proof">Proof</h2>
-<p>For rational <span class="math inline">a&gt;0</span> and real b, Rational Scale Invariance gives <span class="math inline">X \succeq Y</span> iff <span class="math inline">aX \succeq aY</span>, and Shift Invariance gives <span class="math inline">aX \succeq aY</span> iff <span class="math inline">aX+b \succeq aY+b</span>; Rich Outcomes supplies the intermediate gambles <span class="math inline">aX, aY</span>. Applying both biconditionals to <span class="math inline">X \succeq Y</span> and to <span class="math inline">Y \succeq X</span> preserves the weak comparison and, by reversing the second, the strict one.</p>
+<p>For rational <span class="math inline">a&gt;0</span> and real b,
+Rational Scale Invariance gives <span class="math inline">X \succeq
+Y</span> iff <span class="math inline">aX \succeq aY</span>, and Shift
+Invariance gives <span class="math inline">aX \succeq aY</span> iff
+<span class="math inline">aX+b \succeq aY+b</span>; Rich Outcomes
+supplies the intermediate gambles <span class="math inline">aX,
+aY</span>. Applying both biconditionals to <span class="math inline">X
+\succeq Y</span> and to <span class="math inline">Y \succeq X</span>
+preserves the weak comparison and, by reversing the second, the strict
+one.</p>
 <h2 id="notes">Notes</h2>
-<p>Immediate composition. Premises are sufficient; minimality is not claimed. No translation checker is asserted.</p>
+<p>Immediate composition. Premises are sufficient; minimality is not
+claimed. No translation checker is asserted.</p>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><strong>Claude generated 24 Sep</strong> — Claude (Fable 5.1), prompted by Zachary Goodsell, 2026-09-24: elementary composition recorded in topics/unbounded-utility/results/rational-scale-shift-imply-rational-affine-preservation.yaml (proof field), following the pattern of shift-scale-imply-positive-affine.</li>
-<li><strong>Symmetries of Value</strong> — Goodsell, Symmetries of value, Noûs 60 (2026), 16–37; DOI 10.1111/nous.12549, §3, p. 24</li>
+<li><strong>Claude generated 24 Sep</strong> — Claude (Fable 5.1),
+prompted by Zachary Goodsell, 2026-09-24: elementary composition
+recorded in
+topics/unbounded-utility/results/rational-scale-shift-imply-rational-affine-preservation.yaml
+(proof field), following the pattern of
+shift-scale-imply-positive-affine.</li>
+<li><strong>Symmetries of Value</strong> — Goodsell, Symmetries of
+value, Noûs 60 (2026), 16–37; DOI 10.1111/nous.12549, §3, p. 24</li>
 </ul>
 <p class="cert">
-Record: <code>topics/unbounded-utility/results/rational-scale-shift-imply-rational-affine-preservation.yaml</code>
+Record:
+<code>topics/unbounded-utility/results/rational-scale-shift-imply-rational-affine-preservation.yaml</code>
 </p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Background: <a href="https://doi.org/10.1111/nous.12549">Symmetries of value</a>.</strong> (<a href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>) Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. — §3, p. 24</li>
+<li><strong>Background: <a
+href="https://doi.org/10.1111/nous.12549">Symmetries of
+value</a>.</strong> (<a
+href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>)
+Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. — §3,
+p. 24</li>
 </ul>
 </body></html>

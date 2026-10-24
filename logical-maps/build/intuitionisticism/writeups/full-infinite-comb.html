@@ -320,19 +320,94 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <link rel="stylesheet" href="../math/katex.min.css">
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
-<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Full frame: infinite comb</h1></header><p>Informally proved model; no independent checker or Lean verification.</p>
-<p><strong>Verified true at the root:</strong> <span class="math inline">\operatorname{PSc} (\ne \bot )</span>, <span class="math inline">\Diamond_\vee</span> <span class="math inline">= \ne \bot</span>.</p>
-<p><strong>Verified failures at the root:</strong> A PSb–PSd operator exists, A PSb–PSc–PSd operator exists, Stability of <span class="math inline">=\bot</span>, Stability of <span class="math inline">\Box \neg , \operatorname{PSd}</span> (<span class="math inline">\Diamond_\vee</span>)<span class="math inline">, \operatorname{PSd} (\ne \bot )</span>, LEM.</p>
-<p>Let the worlds be <span class="math inline">a_{i},b_{i}</span> for <span class="math inline">i\in \mathbb{N}</span>, rooted at <span class="math inline">a_{0}</span>. Informational accessibility is <span class="math inline">a_{i}\le _{i}a_{j}</span> exactly when <span class="math inline">i\le j</span>, together with the reflexive arrows at the <span class="math inline">b_{i}</span>. Metaphysical accessibility additionally has <span class="math inline">a_{i}\le _{m} b_{j}</span> whenever <span class="math inline">i\le j</span>. Each <span class="math inline">b_{i}</span> sees only itself. Take the full model at all types, as in Definitions 8–9.</p>
-<p>For <span class="math inline">p_{i}=\{b_{i}\}</span>, the identity <span class="math inline">p_{i}=\bot</span> fails at <span class="math inline">a_{i}</span> and holds at every <span class="math inline">a_{j}</span> with <span class="math inline">j&gt;i</span>. Hence <span class="math inline">\neg \neg (p_{i}=\bot )</span> holds at <span class="math inline">a_{i}</span> while the identity itself fails. If f satisfies PSb at <span class="math inline">a_{i}</span>, then <span class="math inline">fp_{i}</span> cannot hold at any informational extension of <span class="math inline">a_{i}</span>: at a later spine world <span class="math inline">p_{i}=\bot</span>, and persistence and substitution would contradict PSb. Thus <span class="math inline">\neg fp_{i}</span> holds at <span class="math inline">a_{i}</span>, and <span class="math inline">\operatorname{PSd}(f)</span> would imply <span class="math inline">p_{i}=\bot</span>. The same argument works at every <span class="math inline">a_{j}</span> and for every function in its local domain. Consequently the root forces <span class="math inline">\neg \exists f.(\operatorname{PSb}(f)\land \operatorname{PSd}(f))</span>, exactly Eq. (26), not merely failure of that existential. This also refutes the three-clause existence principle and PSd for the two named operators with proved PSb. LEM fails at <span class="math inline">a_{0}</span> for the upset <span class="math inline">\{a_{j}:j\ge 1\}</span>.</p>
-<p>The operator <span class="math inline">\ne \bot</span> holds of X at <span class="math inline">a_{i}</span> exactly when every later metaphysical cone meets X. For an informational upset this means X contains a spine tail or infinitely many teeth <span class="math inline">b_{j}</span>. Finite unions have this property only if at least one summand does, by the ordinary classical reasoning used in the external model construction. At a tooth the operator is Truth. Thus its PSc formula holds at every world.</p>
-<p>Here is the verification of the part of Theorem 30 used in the map. The displayed cofinal truth function respects local congruence and satisfies PSa, PSb and PSc everywhere, so <span class="math inline">\ne \bot</span> is a <span class="math inline">\mathrm{Possibility}_\vee</span> in this full model. Conversely, any X without a spine tail or infinitely many teeth has only finitely many teeth. Each singleton tooth is impossible for any PSb candidate at <span class="math inline">a_{i}</span> by the persistence argument above; finite union distribution therefore makes X impossible for every <span class="math inline">\mathrm{Possibility}_\vee</span> candidate. At teeth, PSb forces bottom to be impossible and the Truth candidate supplies the other case. Thus <span class="math inline">\Diamond_\vee</span> and <span class="math inline">\ne \bot</span> agree at all worlds on all propositions, which is their function congruence at <span class="math inline">a_{0}</span> in the full structure. This verifies the operator identity, not merely a pointwise biconditional at <span class="math inline">a_{0}</span>.</p>
-<p>The claim in Theorem 30 that <span class="math inline">\Diamond_\infty</span> is Truth is tracked separately as pending; this model record does not assume a repair of the manuscript’s infinitary definition.</p>
-<p>Informal model verification; no independent checker or Lean verification.</p>
-<p><strong>Source:</strong> Zachary Goodsell, Possibility in Intuitionistic Higher-Order Logic (21 August 2026), §4.1, Theorem 5(i), Eq. (26), p. 17; §6.2, Eq. (81), pp. 42–44; Theorem 30, p. 44.</p>
-<p>Mathematical credit: Zachary Goodsell; construction transcribed and made explicit from the manuscript. Transcription: Codex (GPT-6), 13 September 2026.</p>
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Full frame: infinite comb</h1></header><p>Informally proved model; no independent checker or Lean
+verification.</p>
+<p><strong>Verified true at the root:</strong> <span
+class="math inline">\operatorname{PSc} (\ne \bot )</span>, <span
+class="math inline">\Diamond_\vee</span> <span class="math inline">= \ne
+\bot</span>.</p>
+<p><strong>Verified failures at the root:</strong> A PSb–PSd operator
+exists, A PSb–PSc–PSd operator exists, Stability of <span
+class="math inline">=\bot</span>, Stability of <span
+class="math inline">\Box \neg , \operatorname{PSd}</span> (<span
+class="math inline">\Diamond_\vee</span>)<span class="math inline">,
+\operatorname{PSd} (\ne \bot )</span>, LEM.</p>
+<p>Let the worlds be <span class="math inline">a_{i},b_{i}</span> for
+<span class="math inline">i\in \mathbb{N}</span>, rooted at <span
+class="math inline">a_{0}</span>. Informational accessibility is <span
+class="math inline">a_{i}\le _{i}a_{j}</span> exactly when <span
+class="math inline">i\le j</span>, together with the reflexive arrows at
+the <span class="math inline">b_{i}</span>. Metaphysical accessibility
+additionally has <span class="math inline">a_{i}\le _{m} b_{j}</span>
+whenever <span class="math inline">i\le j</span>. Each <span
+class="math inline">b_{i}</span> sees only itself. Take the full model
+at all types, as in Definitions 8–9.</p>
+<p>For <span class="math inline">p_{i}=\{b_{i}\}</span>, the identity
+<span class="math inline">p_{i}=\bot</span> fails at <span
+class="math inline">a_{i}</span> and holds at every <span
+class="math inline">a_{j}</span> with <span
+class="math inline">j&gt;i</span>. Hence <span class="math inline">\neg
+\neg (p_{i}=\bot )</span> holds at <span
+class="math inline">a_{i}</span> while the identity itself fails. If f
+satisfies PSb at <span class="math inline">a_{i}</span>, then <span
+class="math inline">fp_{i}</span> cannot hold at any informational
+extension of <span class="math inline">a_{i}</span>: at a later spine
+world <span class="math inline">p_{i}=\bot</span>, and persistence and
+substitution would contradict PSb. Thus <span class="math inline">\neg
+fp_{i}</span> holds at <span class="math inline">a_{i}</span>, and <span
+class="math inline">\operatorname{PSd}(f)</span> would imply <span
+class="math inline">p_{i}=\bot</span>. The same argument works at every
+<span class="math inline">a_{j}</span> and for every function in its
+local domain. Consequently the root forces <span
+class="math inline">\neg \exists f.(\operatorname{PSb}(f)\land
+\operatorname{PSd}(f))</span>, exactly Eq. (26), not merely failure of
+that existential. This also refutes the three-clause existence principle
+and PSd for the two named operators with proved PSb. LEM fails at <span
+class="math inline">a_{0}</span> for the upset <span
+class="math inline">\{a_{j}:j\ge 1\}</span>.</p>
+<p>The operator <span class="math inline">\ne \bot</span> holds of X at
+<span class="math inline">a_{i}</span> exactly when every later
+metaphysical cone meets X. For an informational upset this means X
+contains a spine tail or infinitely many teeth <span
+class="math inline">b_{j}</span>. Finite unions have this property only
+if at least one summand does, by the ordinary classical reasoning used
+in the external model construction. At a tooth the operator is Truth.
+Thus its PSc formula holds at every world.</p>
+<p>Here is the verification of the part of Theorem 30 used in the map.
+The displayed cofinal truth function respects local congruence and
+satisfies PSa, PSb and PSc everywhere, so <span class="math inline">\ne
+\bot</span> is a <span
+class="math inline">\mathrm{Possibility}_\vee</span> in this full model.
+Conversely, any X without a spine tail or infinitely many teeth has only
+finitely many teeth. Each singleton tooth is impossible for any PSb
+candidate at <span class="math inline">a_{i}</span> by the persistence
+argument above; finite union distribution therefore makes X impossible
+for every <span class="math inline">\mathrm{Possibility}_\vee</span>
+candidate. At teeth, PSb forces bottom to be impossible and the Truth
+candidate supplies the other case. Thus <span
+class="math inline">\Diamond_\vee</span> and <span
+class="math inline">\ne \bot</span> agree at all worlds on all
+propositions, which is their function congruence at <span
+class="math inline">a_{0}</span> in the full structure. This verifies
+the operator identity, not merely a pointwise biconditional at <span
+class="math inline">a_{0}</span>.</p>
+<p>The claim in Theorem 30 that <span
+class="math inline">\Diamond_\infty</span> is Truth is tracked
+separately as pending; this model record does not assume a repair of the
+manuscript’s infinitary definition.</p>
+<p>Informal model verification; no independent checker or Lean
+verification.</p>
+<p><strong>Source:</strong> Zachary Goodsell, Possibility in
+Intuitionistic Higher-Order Logic (21 August 2026), §4.1, Theorem 5(i),
+Eq. (26), p. 17; §6.2, Eq. (81), pp. 42–44; Theorem 30, p. 44.</p>
+<p>Mathematical credit: Zachary Goodsell; construction transcribed and
+made explicit from the manuscript. Transcription: Codex (GPT-6), 13
+September 2026.</p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Proof: Possibility in Intuitionistic Higher-Order Logic.</strong> Zachary Goodsell (21 August 2026). Possibility in Intuitionistic Higher-Order Logic. Manuscript. — §4.1, Theorem 5(i), Eq. (26), p. 17; §6.2, Eq. (81), pp. 42–44; Theorem 30, p. 44</li>
+<li><strong>Proof: Possibility in Intuitionistic Higher-Order
+Logic.</strong> Zachary Goodsell (21 August 2026). Possibility in
+Intuitionistic Higher-Order Logic. Manuscript. — §4.1, Theorem 5(i), Eq.
+(26), p. 17; §6.2, Eq. (81), pp. 42–44; Theorem 30, p. 44</li>
 </ul>
 </body></html>

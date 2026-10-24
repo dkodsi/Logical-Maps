@@ -321,7 +321,9 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
 <script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>⊤ ⇒ $\mathrm{Possibility}_\vee$ composition closure</h1></header><p class="cert">
-Result — Source: Possibility in Intuitionistic Higher-Order Logic; produced by Zachary Goodsell; proof transcribed and expanded from the manuscript; recorded by Codex (GPT-6), manuscript transcription.
+Result — Source: Possibility in Intuitionistic Higher-Order Logic;
+produced by Zachary Goodsell; proof transcribed and expanded from the
+manuscript; recorded by Codex (GPT-6), manuscript transcription.
 </p>
 <h2 id="premises">Premises</h2>
 <ul>
@@ -329,22 +331,63 @@ Result — Source: Possibility in Intuitionistic Higher-Order Logic; produced by
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <ul>
-<li><strong><span class="math inline">\mathrm{Possibility}_\vee</span> composition closure.</strong> <span class="math inline">\forall P,Q:tt</span>. (<span class="math inline">\mathrm{Possibility}_\vee</span><span class="math inline">(P) \land</span> <span class="math inline">\mathrm{Possibility}_\vee</span><span class="math inline">(Q)) \to</span> <span class="math inline">\mathrm{Possibility}_\vee</span><span class="math inline">(P \circ Q)</span></li>
+<li><strong><span class="math inline">\mathrm{Possibility}_\vee</span>
+composition closure.</strong> <span class="math inline">\forall
+P,Q:tt</span>. (<span
+class="math inline">\mathrm{Possibility}_\vee</span><span
+class="math inline">(P) \land</span> <span
+class="math inline">\mathrm{Possibility}_\vee</span><span
+class="math inline">(Q)) \to</span> <span
+class="math inline">\mathrm{Possibility}_\vee</span><span
+class="math inline">(P \circ Q)</span></li>
 </ul>
 <h2 id="proof">Proof</h2>
-<p>Assume <span class="math inline">\mathrm{Possibility}_\vee</span>(P) and <span class="math inline">\mathrm{Possibility}_\vee</span>(Q). Both premises are identities with <span class="math inline">\top</span>, so they imply their own <span class="math inline">\Box</span>-necessitations by 4. This permits modal reasoning with these necessary conditions; it does not permit unrestricted necessitation under assumptions.</p>
-<p>For <span class="math inline">\operatorname{PSa}, \Box (p\to q)</span> and the necessary PSa condition for Q give <span class="math inline">\Box (Qp\to Qq)</span>, by the necessitated universal-instantiation theorem and <span class="math inline">K. \operatorname{PSa}(P)</span> then takes <span class="math inline">P(Qp)</span> to <span class="math inline">P(Qq)</span>. For <span class="math inline">\operatorname{PSb}, \Box \neg Q\bot</span> gives <span class="math inline">Q\bot =\bot</span>, using <span class="math inline">\Box \neg r\leftrightarrow r=\bot</span>; substituting this into <span class="math inline">\Box \neg P\bot</span> yields the required necessary bottom clause. For PSc, the necessary disjunction clause for Q gives <span class="math inline">\Box (Q(p\lor q)\to (Qp\lor Qq))</span>; use <span class="math inline">\operatorname{PSa}(P)</span> and then <span class="math inline">\operatorname{PSc}(P)</span>. These same derivations can be performed inside <span class="math inline">\Box</span>, since the candidate premises imply their own <span class="math inline">\Box</span> forms. The closed logical deductions and K therefore give the necessary conjunction of PSa, PSb and PSc for <span class="math inline">P\circ Q</span>. Discharge the two candidate assumptions and generalize P,Q.</p>
+<p>Assume <span class="math inline">\mathrm{Possibility}_\vee</span>(P)
+and <span class="math inline">\mathrm{Possibility}_\vee</span>(Q). Both
+premises are identities with <span class="math inline">\top</span>, so
+they imply their own <span
+class="math inline">\Box</span>-necessitations by 4. This permits modal
+reasoning with these necessary conditions; it does not permit
+unrestricted necessitation under assumptions.</p>
+<p>For <span class="math inline">\operatorname{PSa}, \Box (p\to
+q)</span> and the necessary PSa condition for Q give <span
+class="math inline">\Box (Qp\to Qq)</span>, by the necessitated
+universal-instantiation theorem and <span class="math inline">K.
+\operatorname{PSa}(P)</span> then takes <span
+class="math inline">P(Qp)</span> to <span
+class="math inline">P(Qq)</span>. For <span
+class="math inline">\operatorname{PSb}, \Box \neg Q\bot</span> gives
+<span class="math inline">Q\bot =\bot</span>, using <span
+class="math inline">\Box \neg r\leftrightarrow r=\bot</span>;
+substituting this into <span class="math inline">\Box \neg P\bot</span>
+yields the required necessary bottom clause. For PSc, the necessary
+disjunction clause for Q gives <span class="math inline">\Box (Q(p\lor
+q)\to (Qp\lor Qq))</span>; use <span
+class="math inline">\operatorname{PSa}(P)</span> and then <span
+class="math inline">\operatorname{PSc}(P)</span>. These same derivations
+can be performed inside <span class="math inline">\Box</span>, since the
+candidate premises imply their own <span class="math inline">\Box</span>
+forms. The closed logical deductions and K therefore give the necessary
+conjunction of PSa, PSb and PSc for <span class="math inline">P\circ
+Q</span>. Discharge the two candidate assumptions and generalize
+P,Q.</p>
 <h2 id="notes">Notes</h2>
 <p>Informal proof; no independent checker or Lean verification.</p>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><strong>Possibility in Intuitionistic Higher-Order Logic</strong> — Zachary Goodsell, Possibility in Intuitionistic Higher-Order Logic (21 August 2026), §4.2, Theorem 9, Eq. (35), pp. 19–20.</li>
+<li><strong>Possibility in Intuitionistic Higher-Order Logic</strong> —
+Zachary Goodsell, Possibility in Intuitionistic Higher-Order Logic (21
+August 2026), §4.2, Theorem 9, Eq. (35), pp. 19–20.</li>
 </ul>
 <p class="cert">
-Record: <code>topics/intuitionisticism/results/ii-implies-vee-composition-closure.yaml</code>
+Record:
+<code>topics/intuitionisticism/results/ii-implies-vee-composition-closure.yaml</code>
 </p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Proof: Possibility in Intuitionistic Higher-Order Logic.</strong> Zachary Goodsell (21 August 2026). Possibility in Intuitionistic Higher-Order Logic. Manuscript. — §4.2, Theorem 9, Eq. (35), pp. 19–20</li>
+<li><strong>Proof: Possibility in Intuitionistic Higher-Order
+Logic.</strong> Zachary Goodsell (21 August 2026). Possibility in
+Intuitionistic Higher-Order Logic. Manuscript. — §4.2, Theorem 9, Eq.
+(35), pp. 19–20</li>
 </ul>
 </body></html>

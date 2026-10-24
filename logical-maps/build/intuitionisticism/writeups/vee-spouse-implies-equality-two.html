@@ -321,33 +321,92 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
 <script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Spouse ($\Diamond_\vee$) ⇒ $\Diamond_\vee$ = ◇₂</h1></header><p class="cert">
-Result — Source: Misc.; produced by User proposal; proof by Codex (GPT-6), prompted by Zachary Goodsell; recorded by Codex (GPT-6), prompted by Zachary Goodsell.
+Result — Source: Misc.; produced by User proposal; proof by Codex
+(GPT-6), prompted by Zachary Goodsell; recorded by Codex (GPT-6),
+prompted by Zachary Goodsell.
 </p>
 <h2 id="premises">Premises</h2>
 <ul>
-<li><strong>Spouse (<span class="math inline">\Diamond_\vee</span>).</strong> <span class="math inline">\exists N:tt. \operatorname{Necessity}_{2}(N) \land \operatorname{Married}(N</span>, <span class="math inline">\Diamond_\vee</span>)</li>
+<li><strong>Spouse (<span
+class="math inline">\Diamond_\vee</span>).</strong> <span
+class="math inline">\exists N:tt. \operatorname{Necessity}_{2}(N) \land
+\operatorname{Married}(N</span>, <span
+class="math inline">\Diamond_\vee</span>)</li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <ul>
-<li><strong><span class="math inline">\Diamond_\vee</span> = ◇₂.</strong> <span class="math inline">\Diamond_\vee</span> <span class="math inline">= \Diamond _{2}</span></li>
+<li><strong><span class="math inline">\Diamond_\vee</span> =
+◇₂.</strong> <span class="math inline">\Diamond_\vee</span> <span
+class="math inline">= \Diamond _{2}</span></li>
 </ul>
 <h2 id="proof">Proof</h2>
-<p>Write S for Spouse(<span class="math inline">\Diamond_\vee</span>). Given S, choose a qualified spouse N. Theorems 6 and 14–15’s definitions give the necessary PSb/PSc clauses for <span class="math inline">\Diamond_\vee</span> and the required marriage with N. Thus <span class="math inline">\Diamond_\vee</span> itself is <span class="math inline">a \operatorname{Possibility}_{2}</span> candidate, so <span class="math inline">\forall p</span>.(<span class="math inline">\Diamond_\vee</span><span class="math inline">p\to \Diamond _{2}p</span>). The reverse implication <span class="math inline">\forall p.(\Diamond _{2}p\to</span><span class="math inline">\Diamond_\vee</span>p) is an II theorem by candidate inclusion.</p>
-<p>For use below, the spouse sentence is self-necessitating. Each necessary candidate or marriage clause is a boxed sentence, hence implies its own box by 4. A conjunction of such clauses has the same property. Also, if <span class="math inline">B(x)\to \Box B(x)</span> is a closed theorem, then <span class="math inline">\exists x.B(x)\to \Box \exists x.B(x)</span>: choose the same witness x, obtain <span class="math inline">\Box B(x)</span>, and apply K to the necessitated existential-introduction theorem <span class="math inline">B(x)\to \exists y.B(y)</span>. This is the valid direction using an existing witness, not a converse Barcan assumption. Expanding <span class="math inline">\operatorname{Necessity}_{2}(N)</span> shows it is a conjunction and existential combination of boxed clauses. Therefore <span class="math inline">\exists N.(\operatorname{Necessity}_{2}(N)\land \operatorname{Married}(N,P))</span> implies its own <span class="math inline">\Box</span>, for each fixed P.</p>
-<p>The preceding pointwise proof, after discharging S, gives an assumption-free theorem <span class="math inline">S\to \forall p</span>.(<span class="math inline">\Diamond_\vee</span><span class="math inline">p\leftrightarrow \Diamond _{2}p</span>). Necessitate that closed implication and use <span class="math inline">\Box S</span> and K to get <span class="math inline">\Box \forall p</span>.(<span class="math inline">\Diamond_\vee</span><span class="math inline">p\leftrightarrow \Diamond _{2}p</span>). The predicate form of the proved modalized-functionality lemma then gives <span class="math inline">\Diamond_\vee</span><span class="math inline">=\Diamond _{2}</span>. This final step establishes identity of operators, not merely their material equivalence at the selected background.</p>
+<p>Write S for Spouse(<span class="math inline">\Diamond_\vee</span>).
+Given S, choose a qualified spouse N. Theorems 6 and 14–15’s definitions
+give the necessary PSb/PSc clauses for <span
+class="math inline">\Diamond_\vee</span> and the required marriage with
+N. Thus <span class="math inline">\Diamond_\vee</span> itself is <span
+class="math inline">a \operatorname{Possibility}_{2}</span> candidate,
+so <span class="math inline">\forall p</span>.(<span
+class="math inline">\Diamond_\vee</span><span class="math inline">p\to
+\Diamond _{2}p</span>). The reverse implication <span
+class="math inline">\forall p.(\Diamond _{2}p\to</span><span
+class="math inline">\Diamond_\vee</span>p) is an II theorem by candidate
+inclusion.</p>
+<p>For use below, the spouse sentence is self-necessitating. Each
+necessary candidate or marriage clause is a boxed sentence, hence
+implies its own box by 4. A conjunction of such clauses has the same
+property. Also, if <span class="math inline">B(x)\to \Box B(x)</span> is
+a closed theorem, then <span class="math inline">\exists x.B(x)\to \Box
+\exists x.B(x)</span>: choose the same witness x, obtain <span
+class="math inline">\Box B(x)</span>, and apply K to the necessitated
+existential-introduction theorem <span class="math inline">B(x)\to
+\exists y.B(y)</span>. This is the valid direction using an existing
+witness, not a converse Barcan assumption. Expanding <span
+class="math inline">\operatorname{Necessity}_{2}(N)</span> shows it is a
+conjunction and existential combination of boxed clauses. Therefore
+<span class="math inline">\exists
+N.(\operatorname{Necessity}_{2}(N)\land
+\operatorname{Married}(N,P))</span> implies its own <span
+class="math inline">\Box</span>, for each fixed P.</p>
+<p>The preceding pointwise proof, after discharging S, gives an
+assumption-free theorem <span class="math inline">S\to \forall
+p</span>.(<span class="math inline">\Diamond_\vee</span><span
+class="math inline">p\leftrightarrow \Diamond _{2}p</span>). Necessitate
+that closed implication and use <span class="math inline">\Box S</span>
+and K to get <span class="math inline">\Box \forall p</span>.(<span
+class="math inline">\Diamond_\vee</span><span
+class="math inline">p\leftrightarrow \Diamond _{2}p</span>). The
+predicate form of the proved modalized-functionality lemma then gives
+<span class="math inline">\Diamond_\vee</span><span
+class="math inline">=\Diamond _{2}</span>. This final step establishes
+identity of operators, not merely their material equivalence at the
+selected background.</p>
 <h2 id="notes">Notes</h2>
-<p>Informal proof; no independent checker or Lean verification. Formula assumptions are not eligible for unrestricted necessitation.</p>
+<p>Informal proof; no independent checker or Lean verification. Formula
+assumptions are not eligible for unrestricted necessitation.</p>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><strong>User proposal, 13 Sep 2026</strong> — User proposal in this conversation, 13 September 2026: <span class="math inline">\Diamond_\vee</span> <span class="math inline">= \Diamond _{2}</span> is equivalent to <span class="math inline">\Diamond_\vee</span> having a spouse.</li>
-<li><strong>Codex connecting proofs, 13 Sep 2026</strong> — Codex (GPT-6), connecting proof vee-spouse-implies-equality-two, 2026-09-13.</li>
-<li><strong>Possibility in Intuitionistic Higher-Order Logic</strong> — Zachary Goodsell, Possibility in Intuitionistic Higher-Order Logic (21 August 2026), §§4.2–4.5, pp. 18–27 (definitions/background).</li>
+<li><strong>User proposal, 13 Sep 2026</strong> — User proposal in this
+conversation, 13 September 2026: <span
+class="math inline">\Diamond_\vee</span> <span class="math inline">=
+\Diamond _{2}</span> is equivalent to <span
+class="math inline">\Diamond_\vee</span> having a spouse.</li>
+<li><strong>Codex connecting proofs, 13 Sep 2026</strong> — Codex
+(GPT-6), connecting proof vee-spouse-implies-equality-two,
+2026-09-13.</li>
+<li><strong>Possibility in Intuitionistic Higher-Order Logic</strong> —
+Zachary Goodsell, Possibility in Intuitionistic Higher-Order Logic (21
+August 2026), §§4.2–4.5, pp. 18–27 (definitions/background).</li>
 </ul>
 <p class="cert">
-Record: <code>topics/intuitionisticism/results/vee-spouse-implies-equality-two.yaml</code>
+Record:
+<code>topics/intuitionisticism/results/vee-spouse-implies-equality-two.yaml</code>
 </p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Background: Possibility in Intuitionistic Higher-Order Logic.</strong> Zachary Goodsell (21 August 2026). Possibility in Intuitionistic Higher-Order Logic. Manuscript. — §§4.2–4.5, pp. 18–27</li>
+<li><strong>Background: Possibility in Intuitionistic Higher-Order
+Logic.</strong> Zachary Goodsell (21 August 2026). Possibility in
+Intuitionistic Higher-Order Logic. Manuscript. — §§4.2–4.5,
+pp. 18–27</li>
 </ul>
 </body></html>

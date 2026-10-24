@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Relational Choice ∧ Boolean Completeness ⇒ Transversal Choice</title><link rel="icon" type="image/png" href="../favicon.png">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Relational Choice and Boolean Completeness imply Transversal Choice</title><link rel="icon" type="image/png" href="../favicon.png">
 <style>/* Fixed forest palette, adapted from the supplied style example.
    Semantic and source hues retain their meaning in both modes. */
 :root {
@@ -322,25 +322,811 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <link rel="stylesheet" href="../math/katex.min.css">
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
-<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Relational Choice ∧ Boolean Completeness ⇒ Transversal Choice</h1></header><p class="cert">
-Conjecture — Source: Misc.; produced by Zachary Goodsell, conjecture of 27 September 2026; recorded by Codex (OpenAI), 27 September 2026.
-</p>
-<h2 id="premises">Premises</h2>
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Relational Choice and Boolean Completeness imply Transversal Choice</h1></header><p>Integration and comparison by Codex (OpenAI), prompted by Daniel
+Kodsi, 23 October 2026. The conjecture is Zachary Goodsell’s,
+communicated on 27 September 2026. The direct proof and refinements
+reproduced below are independent Codex research, prompted by Daniel
+Kodsi, from 22 October 2026. Published background and the older
+components of the composition retain their own attribution.</p>
+<h2 id="the-settled-statement-and-the-two-proofs">1. The settled
+statement and the two proofs</h2>
+<p>In the fixed framework C, with the map’s relational type system,</p>
+<p><span class="math display">
+\mathrm{Relational\ Choice}+\mathrm{Boolean\ Completeness}
+\;\Longrightarrow\;\mathrm{Transversal\ Choice}.
+</span></p>
+<p>All three schemata are unboxed. Here <strong>RC means Relational
+Choice</strong>, not Rigid Comprehension. The stable conjecture ID and
+its original certificate date are retained.</p>
+<p>There are two useful proofs. The short database composition is</p>
+<p><span class="math display">
+\begin{aligned}
+\mathrm{RC}+\mathrm{BC}&amp;\Rightarrow\mathrm{Actuality},\\
+\mathrm{BC}+\mathrm{Actuality}&amp;\Rightarrow\mathrm{Weak\ Rigid\
+Comprehension},\\
+\mathrm{RC}+\mathrm{Weak\ Rigid\
+Comprehension}&amp;\Rightarrow\mathrm{TC}.
+\end{aligned}
+</span></p>
+<p>The first implication is the independent Codex research prompted by
+Daniel Kodsi, recorded in <a
+href="relational-choice-and-boolean-completeness-imply-actuality.html">RC+BC
+implies Actuality</a> and its <a
+href="relational-choice-and-boolean-completeness-imply-actuality.html">full
+proof</a>. The second is Cian Dorr’s Proposition 1, p. 2, in the draft
+of 30 July 2026, <a
+href="completeness-and-actuality-imply-weak-rigid-comprehension.html">recorded
+here</a>. The third is the proof recorded on 25 September 2026 by Claude
+Fable 5.1 (Anthropic), prompted by Zachary Goodsell following
+Christopher Sun’s observation, <a
+href="relational-choice-and-weak-rigid-comprehension-imply-transversal-choice.html">RC+Weak
+Rigid Comprehension implies TC</a>. BC and RC remain available for the
+second and third steps respectively; there is no claim that Actuality
+alone gives Weak Rigid Comprehension.</p>
+<p>The <strong>direct proof</strong> does not pass through either
+Actuality or Weak Rigid Comprehension. It builds a partially ordered
+collection of partial transversals, proves closure under the required
+algebraic joins, and obtains a fixed point of a guarded progressive
+construction. Its contribution is therefore retained in full below,
+together with its refinements. No proof of this new implication is
+attributed to Bacon or to a paper supplying only its definitions.</p>
+<h2 id="exact-local-strengths-retained-from-the-direct-proof">2. Exact
+local strengths retained from the direct proof</h2>
+<p>Fix an admitted type <span class="math inline">\sigma</span>,
+including <span class="math inline">e</span>, and put <span
+class="math inline">\rho=\sigma t</span>. Write <span
+class="math inline">\mathrm{RC}_{\alpha,\beta}</span> for relational
+selection with input type <span class="math inline">\alpha</span> and
+output type <span class="math inline">\beta</span>, and <span
+class="math inline">\mathrm{BC}_\tau</span> for Boolean Completeness at
+the relational type <span class="math inline">\tau</span>.</p>
+<p>A <strong>represented</strong> family means an admitted predicate in
+the language of C. Let <span
+class="math inline">\mathrm{ChainBC}_\tau</span> require joins of
+represented families totally ordered by the algebraic Boolean order; let
+<span class="math inline">\mathrm{WOChainBC}_\tau</span> require them
+only for represented families which that order internally well-orders.
+These are descriptions of local formulas, not new principle records or
+external set-theoretic completeness assumptions. The empty family has
+the already available bottom as its join.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Premises over C</th>
+<th>Conclusion</th>
+<th>Evidence retained below</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span
+class="math inline">\mathrm{RC}_{\rho,\sigma}+\mathrm{WOChainBC}_\rho</span></td>
+<td><span class="math inline">\mathrm{TC}_\sigma</span></td>
+<td>Direct argument plus guarded point-output refinement</td>
+</tr>
+<tr>
+<td><span
+class="math inline">\mathrm{RC}_{\rho,\rho}+\mathrm{WOChainBC}_\rho</span></td>
+<td><span class="math inline">\mathrm{TC}_\sigma</span></td>
+<td>Original functional-graph argument</td>
+</tr>
+<tr>
+<td><span
+class="math inline">\mathrm{RC}_{\tau,\tau}+\mathrm{WOChainBC}_\tau</span></td>
+<td><span class="math inline">\mathrm{BC}_\tau</span></td>
+<td>Cut and fixed-point argument</td>
+</tr>
+<tr>
+<td><span
+class="math inline">\mathrm{RC}_{\tau,\tau}+\mathrm{CBC}_{\kappa,\tau}+\mathrm{CCC}_{\kappa,\tau}</span></td>
+<td><span class="math inline">\mathrm{BC}_\tau</span></td>
+<td>Countable disjoint-increment argument</td>
+</tr>
+<tr>
+<td><span
+class="math inline">\mathrm{RC}_{\rho,\sigma}+\mathrm{CBC}_{\kappa,\rho}+\mathrm{CCC}_{\kappa,\rho}</span></td>
+<td><span class="math inline">\mathrm{TC}_\sigma</span></td>
+<td>The same disjoint-increment argument applied directly to the guarded
+operation</td>
+</tr>
+</tbody>
+</table>
+<p>In particular, the first two conclusions hold with ChainBC or BC in
+place of WOChainBC. The point-output choice premise is the useful later
+refinement of the original choice instance; the two displayed original
+proofs remain independently readable.</p>
+<p>Here <span class="math inline">\mathrm{CBC}_{\kappa,\tau}</span>
+means that every represented <span
+class="math inline">\kappa</span>-countable family of <span
+class="math inline">\tau</span>-entities has a Boolean join, and <span
+class="math inline">\mathrm{CCC}_{\kappa,\tau}</span> means that every
+represented disjoint family of nonbottom <span
+class="math inline">\tau</span>-entities is <span
+class="math inline">\kappa</span>-countable. Countability is the map’s
+Frege-countability notion: there is a represented relation to <span
+class="math inline">\mathbb N_\kappa</span> such that two family members
+share a numerical label exactly when they are identical. Labels have the
+appropriate Frege number type <span
+class="math inline">\nu_\kappa</span>; the construction does not assume
+a single-valued labeling, a selected enumeration, externally standard
+numbers, or Infinity.</p>
+<p>For clarity, the last row follows without upgrading the point-output
+choice premise to <span
+class="math inline">\mathrm{RC}_{\rho,\rho}</span>. Under failure of
+<span class="math inline">\mathrm{TC}_\sigma</span>, the guarded
+operation <span class="math inline">g</span> of Part B is strict on all
+partial transversals. Form the represented union <span
+class="math inline">A</span> of its internal <span
+class="math inline">g</span>-chains as in Part A. No completeness is
+needed to form <span class="math inline">A</span> or prove it internally
+well-ordered. For <span class="math inline">F\in A</span>, put</p>
+<p><span class="math display">
+d_F=g(F)\wedge_\rho\neg_\rho F.
+</span></p>
+<p>Strictness makes <span class="math inline">d_F</span> nonbottom. If
+<span class="math inline">F&lt;G</span> in <span
+class="math inline">A</span>, its defining predecessor condition gives
+<span class="math inline">g(F)\le G</span>, so <span
+class="math inline">d_F\wedge_\rho d_G=0</span>. Thus the represented
+image of the increments is disjoint and the increment map is injective.
+CCC supplies numerical labels for that image; composition with the
+represented increment graph labels <span class="math inline">A</span>.
+CBC therefore gives the one join of <span class="math inline">A</span>
+needed by the final step of the fixed-point proof. Evaluation’s
+adjunction, already proved in Part A, ensures that this join is a
+partial transversal. The fixed point contradicts strictness. This is the
+point-output refinement recorded in <a
+href="../../../../submissions/classicism-results-2026-10-23-v1/source/research/2026-10-22/notes/structural-lane-handoff.md">the
+structural handoff, §1</a>. Part C retains the full, separate BC-upgrade
+proof at arbitrary <span class="math inline">\tau</span>.</p>
+<p>The composition offers a different locality advantage. The Actuality
+result needs only <span
+class="math inline">\mathrm{RC}_{t,t}+\mathrm{BC}_{tt}</span>.
+Christopher Sun’s <a href="actuality-implies-transversal.html">Actuality
+implies Transversal</a> and <a
+href="transversal-and-relational-choice-imply-transversal-choice.html">Transversal
+plus RC implies TC</a> then give</p>
+<p><span class="math display">
+\mathrm{RC}_{t,t}+\mathrm{BC}_{tt}+\mathrm{RC}_{\sigma t,\sigma}
+\Rightarrow\mathrm{TC}_\sigma.
+</span></p>
+<p>Consequently all-type RC with BC at <span
+class="math inline">tt</span> alone suffices for all-type TC. This is
+complementary to the direct proof’s completeness premise at <span
+class="math inline">\sigma t</span>; it does not erase that proof or its
+chain/CBC+CCC refinements.</p>
+<h2 id="shared-limits-and-useful-consequences">3. Shared limits and
+useful consequences</h2>
+<p>The direct construction works for an equivalence relation that is an
+equivalence relation only actually. It uses no ND, BF, Plenitude, or
+identity of actually coextensive property entities. Its crucial
+partial-transversal predicate has <strong><span
+class="math inline">\forall x\,y\,\Box</span></strong> scope. A separate
+final purification, reproduced in Part A, gives a witness with
+<strong><span class="math inline">\Box\forall x\,y</span></strong>
+partiality. That normalization is not substituted into the chain-join
+argument.</p>
+<p>The internal fixed-point proof uses admitted predicates and
+represented graphs, not an external ordinal iteration. The guarded
+operation of Part B is a term built for this particular purpose; it is
+not a representation of arbitrary functional graphs and gives no
+Plenitude conclusion.</p>
+<p>With BC, the recorded TC⇒RC, TC⇒Zorn, Zorn⇒Well-Ordering and
+Well-Ordering⇒TC arrows make RC, TC, Zorn and Well-Ordering equivalent.
+Necessitating the discharged implication gives the boxed conditional
+<span
+class="math inline">\Box\mathrm{RC}+\Box\mathrm{BC}\Rightarrow\Box\mathrm{TC}</span>.
+Neither step permits necessitation of an optional unboxed premise. The
+RC-alone⇒TC question remains separate.</p>
+<h2 id="provenance-and-exact-verification-boundary">4. Provenance and
+exact verification boundary</h2>
+<p>The frozen submission’s <a
+href="../../../../submissions/classicism-results-2026-10-23-v1/CATALOG.md#rigidity.16">catalog
+entry rigidity.16</a> identifies the direct theorem. Its three source
+notes are reproduced below with their mathematical text preserved:</p>
 <ul>
-<li><strong>Relational Choice.</strong> Every serial binary relation has a functional subrelation.</li>
-<li><strong>Boolean Completeness.</strong> Every property of entities of a relational type has a greatest lower bound in that type.</li>
+<li><a
+href="../../../../submissions/classicism-results-2026-10-23-v1/source/research/2026-10-22/notes/relational-choice-boolean-completeness-transversal-proof.md">Original
+direct proof, §§1–9</a>.</li>
+<li><a
+href="../../../../submissions/classicism-results-2026-10-23-v1/source/research/2026-10-22/notes/rc-guarded-progressive-operation.md">Guarded
+operation, §§1–6</a>.</li>
+<li><a
+href="../../../../submissions/classicism-results-2026-10-23-v1/source/research/2026-10-22/notes/relational-choice-countable-completeness-ccc.md">Countable-completeness
+and CCC proof, §§1–4</a>.</li>
 </ul>
-<h2 id="conclusion">Conclusion</h2>
+<p>Their statements about no record edit, no formalization, or an
+unchanged map describe the drafts when written. They are retained as
+historical source text, not as current database-status assertions. The
+current exact status is: the three component implication records in §1
+have separate verified Lean certificates; the generated statement for
+<strong>this stable conjecture ID remains
+<code>lean: stated</code></strong>. No machine certificate for every
+local strengthening in §2 is asserted here. No human checker is
+claimed.</p>
+<p>The canonical record’s short proof is the composition; the following
+independent argument remains part of its mathematical documentation.</p>
+<hr />
+<h2 id="part-a.-preserved-original-direct-proof">Part A. Preserved
+original direct proof</h2>
+<p>Original title: Relational Choice and Boolean Completeness imply
+Transversal Choice</p>
+<p>22 October 2026. Original scratch proof by the OpenAI Codex research
+agents in the extension and quotient lanes, with a separate algebraic
+audit by the coordinating agent. No human check or Lean formalization is
+claimed. No map record has been edited. This addresses the existing
+conjecture
+<code>relational-choice-and-boolean-completeness-imply-transversal-choice</code>,
+attributed in the map to Zachary Goodsell, 27 September 2026. The proof
+below is new evidence, not a proof attributed to Goodsell or to a
+published source.</p>
+<h3 id="exact-claim-and-conventions">Exact claim and conventions</h3>
+<p>For any type σ, including e, the following instances suffice over
+C:</p>
 <ul>
-<li><strong>Transversal Choice.</strong> Every equivalence relation, at any type including e, has a transversal, that is, a property with exactly one instance in each of its cells.</li>
+<li>Boolean Completeness at the relational type ρ:=σt.</li>
+<li>Relational Choice with both input and output type ρ.</li>
 </ul>
-<h2 id="notes">Notes</h2>
-<p>Does adding Boolean Completeness to Relational Choice suffice for Transversal Choice in C? The question without Boolean Completeness is recorded separately. No proof was supplied. A proof of this implication, or a model of C satisfying both premises and failing Transversal Choice, would settle this conjecture.</p>
-<h2 id="sources">Sources</h2>
+<p>They imply Transversal Choice at σ. Consequently the full schemata
+satisfy</p>
+<pre><code>C ⊢ Relational Choice + Boolean Completeness → Transversal Choice.</code></pre>
+<p>All hypotheses and the conclusion are unboxed. No Necessity of
+Distinctness, Actuality, BF, Plenitude, Functionality, or extensional
+identification of coextensive properties is used. We use the LUB form of
+Boolean Completeness, equivalent in C to its recorded GLB form. Every
+set-like collection below is an admitted predicate, and every union or
+image is given by existential quantification. All order-theoretic
+reasoning takes place at the evaluation point.</p>
+<p>At relational type τ, ≤ is the algebraic Boolean order. For
+propositions p,q, p≤q is equivalent to □(p→q). At a property type σt,
+F≤G is equivalent to □∀x(Fx→Gx). The latter is used only when it follows
+from the algebraic order; no converse-Barcan interchange is made.</p>
+<h3 id="evaluation-preserves-represented-algebraic-joins">1. Evaluation
+preserves represented algebraic joins</h3>
+<p>Fix x^σ. Evaluation e_x(F):=Fx is an order map B_{σt}→B_t and has the
+C-definable right adjoint</p>
+<pre><code>r_x(p):=λz^σ.(z=x→p).</code></pre>
+<p>Indeed,</p>
+<pre><code>F≤r_x(p) iff Fx≤p.                                  (1)</code></pre>
+<p>The formulas ∀z(Fz→(z=x→p)) and Fx→p are logically equivalent by
+equality substitution and universal instantiation. Logical Equivalence
+and the definition of algebraic order give (1). This is a theorem of C,
+valid without ND or BF.</p>
+<p>Suppose Q is an algebraic LUB of a represented family C^{ρt}. Then Qx
+is a LUB in B_t of the represented evaluation image</p>
+<pre><code>V_x(p):=∃F(CF∧p=Fx).</code></pre>
+<p>It is an upper bound because F≤Q implies Fx≤Qx. If p bounds every Fx
+with CF, (1) makes r_x(p) an upper bound of C; hence Q≤r_x(p), and Qx≤p
+by (1). Thus evaluation preserves this join. This argument does not
+separately assume Boolean Completeness at t.</p>
+<h3 id="a-chain-complete-poset-of-partial-transversals">2. A
+chain-complete poset of partial transversals</h3>
+<p>Fix R^{σσt} which is an equivalence relation actually. It need not be
+necessarily an equivalence relation. Define the predicate P on property
+entities F^ρ by</p>
+<pre><code>P(F) := ∀x^σ y^σ. □(Fx∧Fy∧Rxy→x=y).                (2)</code></pre>
+<p>The boxes in (2) are <strong>inside</strong> the universal
+quantifiers. This exact scope is essential: we do not assert □∀xy(…),
+and BF is not needed. Since □ implies truth, a P-instance has at most
+one actual member in each actual R-cell. The bottom property 0_ρ
+satisfies P.</p>
+<p>Order the P-instances by the inherited Boolean order. It is an
+antisymmetric partial order on actual entities. We prove that every
+represented chain of P-instances has a LUB which is again a
+P-instance.</p>
+<p>Let C^{ρt} satisfy ∀F(CF→P(F)) and be totally ordered by ≤. Boolean
+Completeness at ρ gives its ambient LUB Q. Fix arbitrary actual x,y and
+write</p>
+<pre><code>k := (Rxy→x=y).</code></pre>
+<p>For every F,G in C,</p>
+<pre><code>Fx∧Gy ≤ k.                                         (3)</code></pre>
+<p>If F≤G, this follows from Fx≤Gx and P(G); if G≤F, it follows from
+Gy≤Fy and P(F). Fix F. Equation (3) says that every Gy lies below Fx→k.
+By §1, Qy is their LUB, so Fx∧Qy≤k. Now let F vary: every Fx lies below
+Qy→k, so §1 gives Qx∧Qy≤k. Equivalently,</p>
+<pre><code>□(Qx∧Qy∧Rxy→x=y).</code></pre>
+<p>Since x,y were arbitrary, P(Q). This uses the Boolean implication
+adjunction twice, not an unlicensed interchange of a box with
+quantification. Q is also the LUB within P. The empty chain has LUB 0_ρ.
+Therefore P is a represented chain-complete antisymmetric poset with
+least element.</p>
+<h3
+id="every-nonfull-partial-transversal-has-a-strict-extension-in-p">3.
+Every nonfull partial transversal has a strict extension in P</h3>
+<p>Say</p>
+<pre><code>Full(F):=∀x∃y(Rxy∧Fy).</code></pre>
+<p>Suppose P(F) and ¬Full(F). Choose x whose actual R-cell contains no
+F-instance. Put</p>
+<pre><code>q := ∀z(Fz∧(Rxz∨Rzx)→z=x),
+G := λy.(Fy∨(y=x∧q)).                              (4)</code></pre>
+<p>Actually q is true: actual symmetry of R makes either R-direction
+describe x’s cell, and that cell has no F-instance. Actual reflexivity
+gives ¬Fx. Hence Gx is true and Fx false, so G≠F. The defining formula
+gives F≤G by a theorem of C; thus F&lt;G.</p>
+<p>Also P(G). For arbitrary actual u,v, expand Gu∧Gv into four cases
+under the box. If both conjuncts come from F, the required implication
+follows from P(F) at u,v. If both come from the new summand, u=x=v. If
+exactly one comes from the new summand, q rules out a distinct old
+F-member related in either direction to x. These are logical
+implications using equality substitution and instantiation of q; they do
+not require R to be an equivalence relation at other worlds.
+Consequently □(Gu∧Gv∧Ruv→u=v), and universal generalization gives
+P(G).</p>
+<p>The two R-directions in q are deliberate. They avoid using necessary
+symmetry of R, which is not a premise.</p>
+<h3 id="relational-choice-supplies-a-progressive-functional-graph">4.
+Relational Choice supplies a progressive functional graph</h3>
+<p>On entities F,G of type ρ define a serial relation U by the following
+exhaustive cases:</p>
 <ul>
-<li><strong>Goodsell 27 Sep</strong> — Zachary Goodsell, conjecture communicated on 27 September 2026: Relational Choice + Boolean Completeness ⊢ Transversal Choice.</li>
+<li>If P(F) and ¬Full(F), require P(G) and F&lt;G.</li>
+<li>Otherwise require G=F.</li>
 </ul>
-<p class="cert">
-Record: <code>topics/classicism/results/relational-choice-and-boolean-completeness-imply-transversal-choice.yaml</code>
-</p>
+<p>Section 3 proves seriality in the first case; reflexivity supplies
+the second. Relational Choice at (ρ,ρ) gives an actual functional graph
+f⊆U. On P this graph is total, single-valued, stays in P, and is
+progressive: F≤f(F). Here and below f(F) is explanatory notation for the
+unique graph value, <strong>not</strong> an assumption that the graph is
+represented by an operation. Every use can be expanded with an
+existential variable and the graph relation.</p>
+<p>Moreover,</p>
+<pre><code>P(F)∧¬Full(F) → F&lt;f(F).                            (5)</code></pre>
+<p>It remains to obtain a fixed point of this progressive graph on P.
+The following lemma is available in C itself.</p>
+<h3 id="internal-bourbakiwitt-lemma-without-plenitude">5. Internal
+Bourbaki–Witt lemma, without Plenitude</h3>
+<p><strong>Lemma.</strong> Let P^{ρt} carry a represented antisymmetric
+partial order, have a least element 0, and have a LUB in P for every
+represented chain, including the empty chain. Let f be a represented
+total single-valued graph from P to P with x≤f(x) for every x∈P. Then f
+has a fixed point.</p>
+<p>The proof uses only predicate comprehension and ordinary
+quantification admitted in C. In particular it does not assume an
+external set of ordinals, standard finiteness, an operation representing
+f, or extensionality of property entities.</p>
+<p>Call a predicate C^{ρt} an <strong>f-chain</strong> when:</p>
+<ol type="1">
+<li><p>C⊆P and the inherited order well-orders C: every admitted
+nonempty subproperty of C has a least member.</p></li>
+<li><p>For each x∈C, x is the LUB in P of the graph image</p>
+<pre><code>{ f(y): y∈C and y&lt;x }.                          (6)</code></pre></li>
+</ol>
+<p>Condition 2 is a formula about being a LUB; it does not presume this
+image has a LUB before the condition is asserted. The singleton {0} is
+an f-chain. If x&lt;y lie in an f-chain, then f(x)≤y by (6).</p>
+<p><strong>Comparison.</strong> Any two f-chains C,D are comparable by
+initial segment. Define I to consist of those common members x for which
+the C- and D-predecessor properties below x are coextensive. I is an
+initial segment of both C and D: if x∈I and y&lt;x lies in either chain,
+then y lies in both, and the predecessor properties below y are equal in
+extension as subsets of their common predecessor property below x.</p>
+<p>If both Cand Dwere nonempty, let c,d be their respective least
+members. Their predecessor properties are each coextensive with I. The
+graph images in (6) are therefore coextensive. Since an antisymmetric
+poset has at most one LUB for a given actual family, c=d. This equality
+and equality of their predecessor extensions place c in I,
+contradiction. Hence C≡I or D≡I (actual coextension), proving comparison
+by initial segment. Notice that equality of predicate codes was never
+inferred from coextension; only uniqueness of their order-theoretic LUB
+was used.</p>
+<p><strong>Union.</strong> Define the admitted property</p>
+<pre><code>A(x):=∃C^{ρt}(C is an f-chain ∧ Cx).</code></pre>
+<p>Comparison makes A a chain. It is internally well-ordered: given any
+nonempty represented X⊆A, choose x∈X and an f-chain C containing x. Let
+m be the least member of X∩C. For any z∈X, choose an f-chain D
+containing z. If D is an initial segment of C, then z∈C and m≤z. If C is
+an initial segment of D, then either z∈C, giving the same conclusion, or
+z lies strictly above every member of C, including m. Thus m is least in
+X.</p>
+<p>For x∈A choose an f-chain C containing x. Comparison shows that A and
+C have the same predecessor extension below x. Condition (6) for C
+therefore gives it for A, again using only actual coextension of the
+represented images. Hence A is itself an f-chain, and it contains every
+f-chain by definition.</p>
+<p><strong>The supremum is a fixed point.</strong> Let u be the LUB of A
+in P. If u∉A, then A has no largest member. For every x∈A choose y∈A
+with x&lt;y; (6) gives f(x)≤y≤u. Conversely x≤f(x) for each x, so any
+upper bound of f[A] bounds A. Therefore u is the LUB of f[A]. Adjoining
+u at the end of A gives another f-chain: its new predecessor property is
+A, and the defining LUB condition is the one just proved. This
+contradicts the definition of A, which would then contain u. Thus
+u∈A.</p>
+<p>If u&lt;f(u), adjoining f(u) at the end of A again gives an f-chain.
+Its new LUB condition holds because f(u) is the greatest member of f[A]:
+for x&lt;u in A, (6) gives f(x)≤u≤f(u), and f(u) itself is in that
+image. Again the definition of A would put f(u) into A, contradicting u
+being an upper bound. Progressivity leaves f(u)=u. This proves the
+lemma.</p>
+<p><strong>Independent route through a recorded proof.</strong> The
+quotient lane also checked the lemma against the existing write-up
+<code>topics/classicism/writeups/transversal-choice-r-implies-zorn-r.md</code>.
+Under the assumption that f has no fixed point, the functional graph
+taking a chain C to f(sup_P C) is a strict-upper-bound selector and is
+invariant under actual coextension of C, because the supremum is unique
+as an entity. Restricting Lewin’s conforming-property argument there to
+P supplies the same contradiction. All four places marked (E) in that
+write-up are licensed by this LUB uniqueness; no Transversal Choice is
+used to construct the selector. The self-contained proof above avoids
+depending on that adaptation for the conclusion.</p>
+<h3 id="completion-of-the-conjectured-implication">6. Completion of the
+conjectured implication</h3>
+<p>Apply the lemma to the poset P of §2 and the functional graph f of
+§4. Obtain F∈P with f(F)=F. By (5), Full(F). Thus every actual R-cell
+has an F-instance. Since P(F) implies actual at-most-one membership in
+each R-cell, F is an actual transversal of R.</p>
+<p>R was any actual equivalence relation at any type σ. Therefore RC+BC
+implies TC in C, with the sharpened instance scope stated at the
+start.</p>
+<h3 id="audit-summary-and-limitations">7. Audit summary and
+limitations</h3>
+<p>The proof closes the actual-coextension gap by passing to unique
+<strong>algebraic supremum entities</strong>, not by equating
+coextensive property codes. The principal technical devices are
+evaluation’s right adjoint, pointwise boxes in the definition of partial
+transversals, and a fixed-point theorem for functional graphs.</p>
+<ul>
+<li>No optional assumption is necessitated. Every boxed formula is
+either part of P(F), follows from the algebraic order, or follows from a
+theorem of C using its rules.</li>
+<li>No box is moved across a universal quantifier. The distinction
+between ∀xy□ and □∀xy is preserved throughout.</li>
+<li>The selected graph need not be represented by an operation.
+Relational Choice, rather than Functional Choice or Plenitude,
+suffices.</li>
+<li>The f-chain construction quantifies only over admitted predicates
+and uses admitted unions, images, predecessor properties, and
+intersections. It invokes no externally arbitrary subset or ordinal
+sequence.</li>
+<li>R is assumed to be an equivalence relation only actually. The
+symmetric guard in (4) handles other-world failures of symmetry.</li>
+<li>This is a new ordinary mathematical proof, checked by other agents
+but not yet by a human or a proof assistant. The existing conjecture
+record and its formalization status have deliberately been
+preserved.</li>
+</ul>
+<h3 id="sharpening-to-boolean-chain-completeness">8. Sharpening to
+Boolean chain completeness</h3>
+<p>Define ChainBC_τ, within the existing language of C, to say that
+every represented family of τ-entities totally ordered by the algebraic
+Boolean order has an algebraic LUB. This is weaker on its face than
+BC_τ.</p>
+<p>The proof in §§1–6 only needs ChainBC_ρ: the family C in §2 is a
+chain, and no other Boolean join is assumed to exist. Therefore the
+exact stronger claim is</p>
+<pre><code>C ⊢ RC_{σt,σt} + ChainBC_{σt} → TC_σ.              (7)</code></pre>
+<p>At the full-schema level, RC+ChainBC is in fact equivalent to RC+BC.
+One route is (7), followed by the recorded TC⇒Zorn. Given any
+represented S⊆B_τ, its property of upper bounds is nonempty (it contains
+1), and every represented chain of upper bounds has an infimum by
+ChainBC and Boolean complementation. That infimum is still an upper
+bound of S. Apply Zorn to this property in the reverse Boolean order,
+using the standard invalid-code padding if the recorded whole-type
+formulation is required. Obtain a minimal upper bound u. For every other
+upper bound v, u∧v is another upper bound below u, so minimality gives
+u=u∧v, that is u≤v. Hence u is the required LUB.</p>
+<p>The quotient lane supplies an even more local argument, requiring
+only RC_{τ,τ}+ChainBC_τ. For a fixed represented S let</p>
+<pre><code>P(b):=∀u(UpperBound_S(u)→b≤u).</code></pre>
+<p>This cut contains 0 and is closed under represented chain joins. If
+b∈P is not an upper bound of S, choose x∈S with x≰b; then b∨x∈P and
+b&lt;b∨x. RC selects a progressive functional graph on P, strict unless
+its input is an upper bound. The fixed-point lemma yields b both below
+every upper bound and itself an upper bound, hence a LUB of S. Thus</p>
+<pre><code>C ⊢ RC_{τ,τ} + ChainBC_τ → BC_τ.                  (8)</code></pre>
+<p>This local upgrade uses no Boolean complements: the same argument
+works for an internally represented bounded join-semilattice with
+represented binary joins and joins of represented chains. It explains
+structurally why Relational Choice removes the apparent gap between
+Boolean chain completeness and Boolean completeness in the conjecture’s
+premise set.</p>
+<h4 id="technical-further-weakening">Technical further weakening</h4>
+<p>The self-contained fixed-point proof in §5 calls the completeness
+premise only for the union A of all f-chains, which it has already
+proved internally well-ordered, and for the empty chain/least element.
+The LUB assertions in the definition of an f-chain are hypotheses on
+that chain and are inherited by the union; their existence is not
+independently assumed for every possible predecessor family.
+Consequently all the preceding results remain valid if ChainBC_τ is
+weakened to the existence of LUBs only for represented families which
+the Boolean order itself internally well-orders. This is an internal
+well-order condition, not a schema ranging over externally standard
+ordinals. The chain-complete formulation remains the simpler main
+statement.</p>
+<h3 id="immediate-corollaries-and-scope-of-new-evidence">9. Immediate
+corollaries and scope of new evidence</h3>
+<p>The recorded implications TC⇒RC and TC⇒Zorn/Well-Ordering now show
+that, in the presence of BC, Relational Choice, Transversal Choice,
+Zorn, and Well-Ordering are equivalent. This is a new consequence of the
+proof, not something already present in the unchanged derived map.
+Necessitating the discharged C-implication also gives □RC+□BC⇒□TC, with
+no unboxed premise being necessitated.</p>
+<p>At the graph level, the ordinary Boolean homomorphism extension proof
+in <code>retraction-extension-lane.md</code>, §1, now needs only RC+BC:
+the new theorem supplies Zorn, and the maximal partial homomorphism is
+already a total single-valued relation. An <strong>operation</strong>
+representing that graph still requires Plenitude. No graph-to-operation
+upgrade is being silently inferred from RC+BC.</p>
+<p>The recorded <code>full-two-object-chain</code> supplies a concrete
+check on this distinction. It satisfies □Relational Choice and □Rigid
+Comprehension, hence □BC, but its root proposition {identity at W0} is
+distinct from bottom and becomes bottom after the arrow W0→W1. Thus ND_t
+fails at the root, and Plenitude fails by the recorded implication
+Plenitude⇒ND. RC+BC therefore does not supply the operation
+representation that the graph-level extension theorem lacks. This is
+existing model evidence, not a new countermodel construction.</p>
+<h4 id="final-witness-normalization-necessary-partiality">Final witness
+normalization: necessary partiality</h4>
+<p>There is a simple optional strengthening of the final witness. For
+arbitrary R and T define</p>
+<pre><code>Pur_R(T)(x):=T(x)∧∀y(T(y)∧Rxy→x=y).</code></pre>
+<p>C proves, as a logical theorem about this displayed term,</p>
+<pre><code>□∀xy(Pur_R(T)(x)∧Pur_R(T)(y)∧Rxy→x=y).</code></pre>
+<p>Indeed, at any point the first conjunct at x supplies the universal
+condition, while the first conjunct at y supplies T(y). If T is an
+actual partial transversal, its defining at-most-one condition also
+shows Pur_R(T) and T are actually coextensive. Therefore the actual
+transversal obtained in §6 can be replaced by a witness F which is
+necessarily partial under a full outer □∀, while still meeting every
+actual R-cell exactly once. No BF or additional choice/completeness
+instance is used.</p>
+<p>This is a FINAL witness normalization only. It does not strengthen P
+in §2: the algebraic chain-join argument there still establishes only
+pointwise boxed independence, and its quantifier-scope warnings remain
+essential. The same normalization shows directly that the all-type
+Transversal Choice schema is equivalent to its version requiring
+necessarily partial witnesses.</p>
+<h3 id="consolidated-handoff-and-subsequent-refinements">Consolidated
+handoff and subsequent refinements</h3>
+<p>The live exact-scope index for this research lane is
+<code>structural-lane-handoff.md</code> in the same directory. In
+particular, the independent audit sharpened the choice premise to
+RC_(σt,σ) by constructing an explicit guarded progressive operation; its
+proof is in <code>rc-guarded-progressive-operation.md</code>. The index
+also records the separately audited countable-completeness/CCC bridge
+and countable Boolean-type finiteness results. None of these scratch
+additions changes the repository’s records or generated state.</p>
+<hr />
+<h2 id="part-b.-preserved-guarded-point-output-refinement">Part B.
+Preserved guarded point-output refinement</h2>
+<p>Original title: RC supplies a guarded progressive operation on
+partial selectors</p>
+<p>OpenAI Codex research argument, 22 October 2026. Independently
+audited in outline by the coordinating agent. This sharpens the exact
+choice instance in the new RC+BC⇒TC proof. It is not a representation
+theorem for arbitrary functional graphs, and it uses no Plenitude.</p>
+<h3 id="exact-statement">Exact statement</h3>
+<p>For any admitted σ, including e, put ρ=σt. Over C, for every R^{σσt}
+which is an equivalence relation actually, Relational Choice at
+<strong>(ρ,σ)</strong> supplies an admitted operation g:ρ→ρ (depending
+on R) such that</p>
+<pre><code>F≤gF,
+P(F)→P(gF),
+P(F)∧¬Full(F)→F&lt;gF,</code></pre>
+<p>where</p>
+<pre><code>P(F):=∀u v □(Fu∧Fv∧Ruv→u=v),
+Full(F):=∀u∃v(Ruv∧Fv).</code></pre>
+<p>All hypotheses are actual and unboxed. Therefore BC at σt together
+with RC at (σt,σ) implies TC at σ by the already audited
+chain-completeness/fixed-point argument. RC at (σt,σt) remains an
+alternative sufficient premise because individual outputs can first be
+replaced by haecceity codes.</p>
+<h3 id="the-actual-selected-point">1. The actual selected point</h3>
+<p>Let</p>
+<pre><code>Miss(F,x):=¬∃z(Rxz∧Fz),
+U(F,x):=(¬Full(F)→Miss(F,x)).</code></pre>
+<p>This is serial. If ¬Full(F), classical quantifier duality supplies x
+with Miss(F,x); otherwise any individual of the inhabited σ-domain
+works. Apply RC at (ρ,σ) to get an actually functional S⊆U.</p>
+<p>No necessary functionality or necessary containment of S is asserted.
+It may have multiple outputs, no outputs, or unsuitable outputs
+elsewhere.</p>
+<h3 id="a-formula-that-protects-itself-at-every-world">2. A formula that
+protects itself at every world</h3>
+<p>Define</p>
+<pre><code>Unique_S(F,y):=∀z(S(F,z)→z=y),
+Safe_R(F,y):=∀z(Fz∧(Ryz∨Rzy)→z=y),
+N(F,y):=S(F,y)∧Unique_S(F,y)∧Safe_R(F,y),
+g:=λF^ρ y^σ [Fy∨N(F,y)].</code></pre>
+<p>This has the admitted type ρρ. The guard is evaluated wherever the
+output predicate is evaluated. If S loses functionality, all its
+conflicting outputs fail Unique_S, so no such pair is added. If an old
+F-member would conflict with y under either R-direction, Safe_R blocks
+y.</p>
+<p>The H theorem Fy→(Fy∨N(F,y)) gives F≤gF algebraically.</p>
+<h3 id="preservation-of-p">3. Preservation of P</h3>
+<p>Fix actual u,v. There is an H-theorem implication</p>
+<pre><code>(Fu∧Fv∧Ruv→u=v)
+      → ((gF)u∧(gF)v∧Ruv→u=v),</code></pre>
+<p>with g expanded as above. Check the four disjunctive cases:</p>
+<ul>
+<li>both points come from F: use the antecedent;</li>
+<li>both come from N: Unique_S(F,u), together with S(F,v), gives
+v=u;</li>
+<li>u comes from N and v from F: Safe_R(F,u), Ruv and Fv give v=u;</li>
+<li>u comes from F and v from N: Safe_R(F,v), Ruv and Fu give u=v.</li>
+</ul>
+<p>Necessitate only this H theorem and combine it with P(F)’s existing
+boxed pair-safety assertion. Then generalize over actual u,v. This
+proves P(F)→P(gF), without □∀uv, BF, ND, or necessary Equiv(R).</p>
+<h3 id="strict-progress-at-every-nonfull-input">4. Strict progress at
+every nonfull input</h3>
+<p>Suppose P(F) and ¬Full(F). Let x be S’s unique actual value at F. Its
+containment in U gives Miss(F,x). Therefore Fx is false, by actual
+reflexivity of R.</p>
+<p>Unique_S(F,x) holds by actual functionality. Safe_R(F,x) holds
+because actual symmetry makes either R-direction place an F-member in
+x’s missed cell, which has none. Thus N(F,x), so (gF)x while ¬Fx.
+Consequently F≠gF. Together with F≤gF this gives F&lt;gF.</p>
+<p>Actual truth of either guard is never necessitated. The uniform
+implication in §3 is the only new boxed reasoning.</p>
+<h3 id="why-this-does-not-imply-plenitude-or-actuality">5. Why this does
+not imply Plenitude or Actuality</h3>
+<p>The output gF is a property whose extension adds the selected point
+actually. It is <strong>not</strong> asserted to be the rigid haecceity
+of that point, or to be identical to a separately chosen output entity
+of a graph. Away from the evaluation point, the guards can delete its
+new summand. Thus g need not represent the original selected graph as an
+operation.</p>
+<p>Nor is g required to identify actually coextensive inputs or even
+send them to actually coextensive outputs. Different intensions of the
+same actual partial selector can receive different S-values. This is
+still the obstacle to a straightforward RC-alone transfinite
+construction using ordinary actual unions as limit stages.</p>
+<h3 id="resulting-location-of-the-rc-alone-obstruction">6. Resulting
+location of the RC-alone obstruction</h3>
+<p>A failed TC instance plus this RC instance would supply a represented
+algebraically progressive operation g on P which is strict everywhere on
+P. The union of all g-chains from the fixed-point construction is an
+internally well-ordered chain of P-members with no ambient algebraic
+supremum. The difficulty is therefore genuinely at coherent limit
+formation. It cannot be attributed merely to the absence of a selected
+operation.</p>
+<p>This also permits the BC proof’s abstract fixed-point lemma to be
+stated for operations if desired, though the stronger already checked
+functional-graph version remains correct.</p>
+<hr />
+<h2
+id="part-c.-preserved-countable-completeness-and-ccc-refinement">Part C.
+Preserved countable-completeness and CCC refinement</h2>
+<p>Original title: Relational Choice, countable completeness, and the
+countable chain condition</p>
+<p>22 October 2026. New ordinary mathematical argument by OpenAI Codex,
+independently checked by the quotient-lane agent. No human check, Lean
+formalization, or database edit is claimed. This is a further
+consequence of the graph Bourbaki–Witt argument in
+<code>relational-choice-boolean-completeness-transversal-proof.md</code>,
+§5; it is not attributed to a published source.</p>
+<h3 id="exact-statement-1">Exact statement</h3>
+<p>Fix a relational type τ and a counting type κ. All statements below
+are actual, unboxed, in the original language and fixed framework C.</p>
+<ul>
+<li>RC_(τ,τ): Relational Choice for relations whose input and output
+types are both τ.</li>
+<li>CBC_(κ,τ): every represented κ-countable family of τ-entities has an
+algebraic Boolean supremum.</li>
+<li>CCC_(κ,τ): every represented family of pairwise disjoint, nonbottom
+τ-entities is κ-countable.</li>
+</ul>
+<p>Here κ-countable has the existing Frege-countability definition: a
+represented label relation L(x,n) with n in N_κ such that, for members
+x,y of the family, they share an N_κ-label if and only if x=y. A point
+can have more than one label; no single-valued choice of labels is
+assumed.</p>
+<p><strong>Theorem.</strong> Over C,</p>
+<pre><code>RC_(τ,τ) + CBC_(κ,τ) + CCC_(κ,τ)  ⇒  BC_τ.</code></pre>
+<p>Consequently, with τ=σt, these premises imply Transversal Choice at σ
+by the separately proved BC_(σt)+RC_(σt,σt) theorem. This is type-local.
+No all-type CCC assumption is needed, and no necessity of distinctness,
+Actuality, BF, operation representing a chosen graph, or well-order on
+N_κ is used.</p>
+<h3 id="the-cut-and-the-strict-progressive-graph">1. The cut and the
+strict progressive graph</h3>
+<p>Fix a represented family X of τ-entities. For a Boolean element b
+put</p>
+<pre><code>P(b) := ∀u (UpperBound_X(u) → b≤u).</code></pre>
+<p>Bottom belongs to P. Any existing Boolean supremum of a represented
+family contained in P belongs to P: each upper bound u of X bounds the
+whole family, so its supremum is below u.</p>
+<p>Suppose, for contradiction, that X has no supremum. Then no b in P is
+an upper bound of X, since such a b would be below every upper bound and
+hence be the supremum. For each b in P there is x in X with x≰b. The
+element c=b∨x belongs to P and satisfies b&lt;c. Relational Choice gives
+an actual total single-valued graph f, taking each b in P to a strictly
+larger member of P; outside P use the input itself to make the relation
+on the whole type serial. The notation f(b) below denotes its unique
+graph value, not a represented operation.</p>
+<h3 id="the-union-of-all-f-chains-needs-no-completeness-premise">2. The
+union of all f-chains needs no completeness premise</h3>
+<p>Call C⊆P an f-chain if the inherited Boolean order internally
+well-orders C and every a in C is the supremum within P of the
+represented image</p>
+<pre><code>{ f(b) : b∈C and b&lt;a }.</code></pre>
+<p>This is a formula asserting the relevant supremum properties, not an
+assumption that every arbitrary family has a supremum. The singleton
+consisting of bottom is an f-chain. If a&lt;b in an f-chain, then
+f(a)≤b.</p>
+<p>The comparison argument in the cited §5 uses only these asserted
+supremum properties and their uniqueness as entities: any two f-chains
+agree on their common predecessor segment, and two least divergent
+elements would be suprema of coextensive predecessor images, hence
+equal. Thus the chains are comparable by initial segments. Their
+represented union</p>
+<pre><code>A(a) := ∃C (C is an f-chain and Ca)</code></pre>
+<p>is internally well-ordered and is itself an f-chain. To see the
+least-element assertion, intersect a nonempty represented subproperty of
+A with one f-chain containing one of its members; its least member is
+least in the whole subproperty by initial-segment comparison. For a∈A,
+comparison makes its predecessor extension the same as in any f-chain
+containing a, so the defining supremum condition transfers. None of this
+invokes chain completeness, countable completeness, choice on predicate
+codes, external ordinals, or equality of coextensive predicate
+entities.</p>
+<h3 id="disjoint-increments-make-a-countable">3. Disjoint increments
+make A countable</h3>
+<p>For a in A define the Boolean increment</p>
+<pre><code>d_a := f(a)∧¬a.</code></pre>
+<p>It is nonbottom because a&lt;f(a). Its graph is represented by
+existentially binding the unique f-value. If a&lt;b in A, the f-chain
+property gives f(a)≤b, while d_b≤¬b. Consequently d_a∧d_b=0. Since A is
+a chain, distinct members have disjoint increments; since increments are
+nonzero, a↦d_a is injective.</p>
+<p>The represented image D of these increments is therefore a pairwise
+disjoint nonbottom family. CCC gives a κ-countability label relation
+L_D(d,n) for D. Define</p>
+<pre><code>L_A(a,n) := ∃c (f(a,c) ∧ L_D(c∧¬a,n)).</code></pre>
+<p>For a,b in A, functionality of f and the countability property of L_D
+show that a,b share a label exactly when d_a=d_b, and injectivity makes
+this equivalent to a=b. Thus A is κ-countable. This is direct
+composition of represented relations; it uses no selected enumeration,
+arithmetic recursion, or externally countable family.</p>
+<h3 id="the-one-required-supremum-supplies-the-contradiction">4. The one
+required supremum supplies the contradiction</h3>
+<p>CBC gives an ambient Boolean supremum u of A. By §1, u∈P. It is also
+the supremum within P.</p>
+<p>If u∉A, A has no greatest member. For each a∈A choose some b∈A with
+a&lt;b; then f(a)≤b≤u. Conversely every upper bound of f[A] bounds A
+because a≤f(a). Hence u is the supremum of f[A]. Adjoining u at the end
+of A gives another f-chain, contrary to A’s definition as the union of
+all such chains. Therefore u∈A.</p>
+<p>But f(u)&gt;u. For each a&lt;u in A, f(a)≤u≤f(u), while f(u) itself
+is a member of f[A]. Thus f(u) is the greatest element of f[A], and
+adjoining f(u) at the end again gives an f-chain. Its membership in A
+contradicts u being an upper bound of A.</p>
+<p>The supposition that X lacks a supremum is false. X was arbitrary, so
+BC_τ holds.</p>
+<h3 id="scope-and-provenance">Scope and provenance</h3>
+<p>The only completeness invocation in this proof is the supremum of the
+represented f-chain A, whose countability has already been established
+by its disjoint increments. This explains why CBC+CCC can replace the
+chain-completeness premise in the earlier local upgrade under Relational
+Choice. The result does not identify algebraic joins with arbitrary
+pointwise infinitary disjunctions.</p>
+<p>Relevant local source conventions are
+<code>topics/classicism/background.md</code>, the Frege countability and
+Boolean-order definitions;
+<code>principles/relational-choice-r.yaml</code>; and
+<code>principles/countable-boolean-completeness-r.yaml</code>. The CCC
+definition also occurs in the concurrent infinity lane’s
+<code>/tmp/classicism-research/frege-infinity-20261022-1726.md</code>,
+§10.3. If recorded later, this new proof’s direct source is
+<code>misc</code>; source definitions and previously recorded theorems
+retain their own attribution.</p>
+<hr />
+<h2 id="paper-references">Paper references</h2>
+<ul>
+<li><strong>Proof: Boolean Completeness does not imply Rigid
+Comprehension.</strong> Dorr, Cian. Boolean Completeness does not imply
+Rigid Comprehension. Unpublished draft in progress, 30 July 2026, 27
+pages. All page, proposition and lemma locators for this source refer to
+that draft. Parts of the draft were drafted with AI assistance; its
+mathematical claims are attributed to the author. — Proposition 1, p. 2.
+Supplies only the BC+Actuality⇒Weak Rigid Comprehension step of the
+composition. The direct transversal proof and its refinements are
+independent research credited separately above.</li>
+</ul>
 </body></html>

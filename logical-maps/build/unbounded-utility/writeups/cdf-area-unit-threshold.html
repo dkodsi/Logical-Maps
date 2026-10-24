@@ -269,50 +269,245 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <link rel="stylesheet" href="../math/katex.min.css">
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
-<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>CDF-area dominance: simple floors or unit threshold</h1></header><p>A model of Rich Outcomes, Archimedean Outcomes, Stochastic Equivalence, Stochastic Dominance, Simple EU, Comonotonic Sum Invariance and Shift Invariance in which <strong>iterated comonotonic addition preserves comparisons but cannot be cancelled</strong>: there is a pair with <span class="math inline">2X\succeq2Y</span> and <span class="math inline">X\not\succeq Y</span>. So Totality cannot be dropped from <a href="comonotonic-sum-totality-imply-rational-scale.html">comonotonic-sum-totality-imply-rational-scale</a>. Totality, Mixture Independence, Rational Scale Invariance and Scale Invariance fail.</p>
-<p><strong>Source and work accounting.</strong> Claude (Fable 5.1), 24 September 2026, in response to Zachary Goodsell’s claim that Comonotonic Sum Invariance implies Positive Affine Invariance. The area rule modified here is Goodsell’s exact CDF-area preorder (<em>Unbounded Utility and Background Risk</em>, unpublished, §3); the floor clause, the threshold and the verification are new. No independent checker or Lean verification is claimed. <code>checks/rational_scale_witnesses.py</code> verifies the explicit witnesses.</p>
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>CDF-area dominance: simple floors or unit threshold</h1></header><p>A model of Rich Outcomes, Archimedean Outcomes, Stochastic
+Equivalence, Stochastic Dominance, Simple EU, Comonotonic Sum Invariance
+and Shift Invariance in which <strong>iterated comonotonic addition
+preserves comparisons but cannot be cancelled</strong>: there is a pair
+with <span class="math inline">2X\succeq2Y</span> and <span
+class="math inline">X\not\succeq Y</span>. So Totality cannot be dropped
+from <a
+href="comonotonic-sum-totality-imply-rational-scale.html">comonotonic-sum-totality-imply-rational-scale</a>.
+Totality, Mixture Independence, Rational Scale Invariance and Scale
+Invariance fail.</p>
+<p><strong>Source and work accounting.</strong> Claude (Fable 5.1), 24
+September 2026, in response to Zachary Goodsell’s claim that Comonotonic
+Sum Invariance implies Positive Affine Invariance. The area rule
+modified here is Goodsell’s exact CDF-area preorder (<em>Unbounded
+Utility and Background Risk</em>, unpublished, §3); the floor clause,
+the threshold and the verification are new. No independent checker or
+Lean verification is claimed.
+<code>checks/rational_scale_witnesses.py</code> verifies the explicit
+witnesses.</p>
 <h2 id="construction">Construction</h2>
-<p>Take real outcomes with identity utility and all real-valued random variables on the standing atomless standard space. For a pair <span class="math inline">X,Y</span> let</p>
+<p>Take real outcomes with identity utility and all real-valued random
+variables on the standing atomless standard space. For a pair <span
+class="math inline">X,Y</span> let</p>
 <p><span class="math display">h=Q_X-Q_Y\quad\text{on }(0,1),</span></p>
-<p>the <em>width</em> of the pair, a difference of nondecreasing functions defined up to almost-everywhere equality. A <em>step function</em> is one with finitely many values, each taken on an interval, so that finitely many intervals partition <span class="math inline">(0,1)</span>. Define <span class="math inline">X\succeq Y</span> iff</p>
+<p>the <em>width</em> of the pair, a difference of nondecreasing
+functions defined up to almost-everywhere equality. A <em>step
+function</em> is one with finitely many values, each taken on an
+interval, so that finitely many intervals partition <span
+class="math inline">(0,1)</span>. Define <span
+class="math inline">X\succeq Y</span> iff</p>
 <ul>
 <li><ol type="a">
-<li>there is a step function <span class="math inline">s\le h</span> a.e. with <span class="math inline">\int_0^1 s\ge0</span> (a <em>simple floor</em>), or</li>
+<li>there is a step function <span class="math inline">s\le h</span>
+a.e. with <span class="math inline">\int_0^1 s\ge0</span> (a <em>simple
+floor</em>), or</li>
 </ol></li>
-<li><ol start="2" type="a">
-<li><span class="math inline">\int_0^1 h_-&lt;\infty</span> and <span class="math inline">\int_0^1 h\ge1</span> (the <em>unit threshold</em>).</li>
-</ol></li>
+<li>(b) <span class="math inline">\int_0^1 h_-&lt;\infty</span> and
+<span class="math inline">\int_0^1 h\ge1</span> (the <em>unit
+threshold</em>).</li>
 </ul>
-<p>Write <span class="math inline">C</span> for the set of widths satisfying (a) or (b). In survival coordinates <span class="math inline">d=S_X-S_Y</span>, clause (b) reads <span class="math inline">A_-&lt;\infty</span> and <span class="math inline">A_+-A_-\ge1</span>, by the identities <span class="math inline">\int_0^1h_\pm=\int_{\mathbb R}d_\pm</span> of the <a href="cdf-area-preorder.html">exact CDF-area model</a>. The rule depends only on the laws of <span class="math inline">X</span> and <span class="math inline">Y</span>.</p>
+<p>Write <span class="math inline">C</span> for the set of widths
+satisfying (a) or (b). In survival coordinates <span
+class="math inline">d=S_X-S_Y</span>, clause (b) reads <span
+class="math inline">A_-&lt;\infty</span> and <span
+class="math inline">A_+-A_-\ge1</span>, by the identities <span
+class="math inline">\int_0^1h_\pm=\int_{\mathbb R}d_\pm</span> of the <a
+href="cdf-area-preorder.html">exact CDF-area model</a>. The rule depends
+only on the laws of <span class="math inline">X</span> and <span
+class="math inline">Y</span>.</p>
 <h2 id="preorder">Preorder</h2>
-<p>Reflexivity: <span class="math inline">s=0</span>. Transitivity: if <span class="math inline">h_1,h_2\in C</span> then <span class="math inline">h_1+h_2\in C</span>.</p>
+<p>Reflexivity: <span class="math inline">s=0</span>. Transitivity: if
+<span class="math inline">h_1,h_2\in C</span> then <span
+class="math inline">h_1+h_2\in C</span>.</p>
 <ul>
-<li>(a)+(a): <span class="math inline">s_1+s_2</span> is a step function, <span class="math inline">s_1+s_2\le h_1+h_2</span>, and its integral is nonnegative.</li>
-<li>(a)+(b): <span class="math inline">h_1+h_2\ge s_1+h_2</span>, so <span class="math inline">(h_1+h_2)_-\le(s_1)_-+(h_2)_-</span>, which is integrable because <span class="math inline">s_1</span> is bounded; and, the negative parts being integrable, <span class="math inline">\int(h_1+h_2)\ge\int s_1+\int h_2\ge1</span>.</li>
-<li>(b)+(b): negative parts add to an integrable function and the integral is at least <span class="math inline">2</span>.</li>
+<li>(a)+(a): <span class="math inline">s_1+s_2</span> is a step
+function, <span class="math inline">s_1+s_2\le h_1+h_2</span>, and its
+integral is nonnegative.</li>
+<li>(a)+(b): <span class="math inline">h_1+h_2\ge s_1+h_2</span>, so
+<span class="math inline">(h_1+h_2)_-\le(s_1)_-+(h_2)_-</span>, which is
+integrable because <span class="math inline">s_1</span> is bounded; and,
+the negative parts being integrable, <span
+class="math inline">\int(h_1+h_2)\ge\int s_1+\int h_2\ge1</span>.</li>
+<li>(b)+(b): negative parts add to an integrable function and the
+integral is at least <span class="math inline">2</span>.</li>
 </ul>
 <h2 id="verified-principles">Verified principles</h2>
-<p><strong>Rich Outcomes, Stochastic Equivalence.</strong> Immediate. Restricted Stochastic Equivalence follows.</p>
-<p><strong>Sure outcomes and the chart.</strong> The width of two constants is the constant <span class="math inline">x-y</span>. If <span class="math inline">x\ge y</span> it is its own floor; if <span class="math inline">x&lt;y</span> no step function below it has nonnegative integral and it is below the threshold. So sure outcomes are ordered as <span class="math inline">\mathbb R</span>, distinct outcomes are never indifferent, and the normalized chart is the identity: the widths in the calibration comparisons <span class="math inline">b</span> against <span class="math inline">M_p(1,0)</span>, and the outer branches, are step functions, handled by the next item.</p>
-<p><strong>Simple EU.</strong> For simple <span class="math inline">X,Y</span> the width is a step function. If <span class="math inline">\int h\ge0</span> take <span class="math inline">s=h</span>. If <span class="math inline">\int h&lt;0</span>, (a) fails because <span class="math inline">s\le h</span> forces <span class="math inline">\int h\ge\int s\ge0</span>, and (b) fails because <span class="math inline">\int h&lt;1</span>. So simple gambles are ranked exactly by expectation. Hence Restricted Totality, and Archimedean Outcomes: for <span class="math inline">a&gt;b&gt;c</span>, <span class="math inline">b\sim M_p(a,c)</span> at <span class="math inline">p=(b-c)/(a-c)</span>, the two having equal means.</p>
-<p><strong>Stochastic Dominance.</strong> <span class="math inline">S_X\ge S_Y</span> pointwise iff <span class="math inline">h\ge0</span> a.e., and then <span class="math inline">s=0</span> is a floor. If moreover some tail inequality is strict, the laws differ, so <span class="math inline">h&gt;0</span> on a set of positive measure, and <span class="math inline">-h\notin C</span>: a floor <span class="math inline">s\le-h\le0</span> with <span class="math inline">\int s\ge0</span> forces <span class="math inline">s=0</span> a.e., hence <span class="math inline">h\le0</span> a.e., a contradiction; and <span class="math inline">\int(-h)\le0&lt;1</span>. Statewise Dominance follows, since <span class="math inline">X\ge Y</span> a.s. gives <span class="math inline">S_X\ge S_Y</span>, and <span class="math inline">P(X&gt;Y)&gt;0</span> makes the laws differ.</p>
-<p><strong>Comonotonic Sum Invariance.</strong> If <span class="math inline">X=f(U)</span> and <span class="math inline">Z=g(U)</span> with <span class="math inline">f,g</span> nondecreasing, then <span class="math inline">Q_X=f</span>, <span class="math inline">Q_Z=g</span> and <span class="math inline">Q_{X+Z}=f+g</span> almost everywhere; the same holds for <span class="math inline">Y</span> and <span class="math inline">Z</span> with their own uniform. So the width of <span class="math inline">(X+Z,Y+Z)</span> is <span class="math inline">(Q_X+Q_Z)-(Q_Y+Q_Z)=h</span>, and membership in <span class="math inline">C</span> is unchanged.</p>
-<p><strong>Shift Invariance, Reflection Anti-Invariance.</strong> The width of <span class="math inline">(X+b,Y+b)</span> is <span class="math inline">h</span>. Since <span class="math inline">Q_{-X}(u)=-Q_X(1-u)</span> a.e., the width of <span class="math inline">(-Y,-X)</span> is <span class="math inline">u\mapsto h(1-u)</span>; floors reflect to floors with the same integral, and (b) is invariant.</p>
+<p><strong>Rich Outcomes, Stochastic Equivalence.</strong> Immediate.
+Restricted Stochastic Equivalence follows.</p>
+<p><strong>Sure outcomes and the chart.</strong> The width of two
+constants is the constant <span class="math inline">x-y</span>. If <span
+class="math inline">x\ge y</span> it is its own floor; if <span
+class="math inline">x&lt;y</span> no step function below it has
+nonnegative integral and it is below the threshold. So sure outcomes are
+ordered as <span class="math inline">\mathbb R</span>, distinct outcomes
+are never indifferent, and the normalized chart is the identity: the
+widths in the calibration comparisons <span class="math inline">b</span>
+against <span class="math inline">M_p(1,0)</span>, and the outer
+branches, are step functions, handled by the next item.</p>
+<p><strong>Simple EU.</strong> For simple <span
+class="math inline">X,Y</span> the width is a step function. If <span
+class="math inline">\int h\ge0</span> take <span
+class="math inline">s=h</span>. If <span class="math inline">\int
+h&lt;0</span>, (a) fails because <span class="math inline">s\le h</span>
+forces <span class="math inline">\int h\ge\int s\ge0</span>, and (b)
+fails because <span class="math inline">\int h&lt;1</span>. So simple
+gambles are ranked exactly by expectation. Hence Restricted Totality,
+and Archimedean Outcomes: for <span
+class="math inline">a&gt;b&gt;c</span>, <span class="math inline">b\sim
+M_p(a,c)</span> at <span class="math inline">p=(b-c)/(a-c)</span>, the
+two having equal means.</p>
+<p><strong>Stochastic Dominance.</strong> <span
+class="math inline">S_X\ge S_Y</span> pointwise iff <span
+class="math inline">h\ge0</span> a.e., and then <span
+class="math inline">s=0</span> is a floor. If moreover some tail
+inequality is strict, the laws differ, so <span
+class="math inline">h&gt;0</span> on a set of positive measure, and
+<span class="math inline">-h\notin C</span>: a floor <span
+class="math inline">s\le-h\le0</span> with <span
+class="math inline">\int s\ge0</span> forces <span
+class="math inline">s=0</span> a.e., hence <span
+class="math inline">h\le0</span> a.e., a contradiction; and <span
+class="math inline">\int(-h)\le0&lt;1</span>. Statewise Dominance
+follows, since <span class="math inline">X\ge Y</span> a.s. gives <span
+class="math inline">S_X\ge S_Y</span>, and <span
+class="math inline">P(X&gt;Y)&gt;0</span> makes the laws differ.</p>
+<p><strong>Comonotonic Sum Invariance.</strong> If <span
+class="math inline">X=f(U)</span> and <span
+class="math inline">Z=g(U)</span> with <span
+class="math inline">f,g</span> nondecreasing, then <span
+class="math inline">Q_X=f</span>, <span class="math inline">Q_Z=g</span>
+and <span class="math inline">Q_{X+Z}=f+g</span> almost everywhere; the
+same holds for <span class="math inline">Y</span> and <span
+class="math inline">Z</span> with their own uniform. So the width of
+<span class="math inline">(X+Z,Y+Z)</span> is <span
+class="math inline">(Q_X+Q_Z)-(Q_Y+Q_Z)=h</span>, and membership in
+<span class="math inline">C</span> is unchanged.</p>
+<p><strong>Shift Invariance, Reflection Anti-Invariance.</strong> The
+width of <span class="math inline">(X+b,Y+b)</span> is <span
+class="math inline">h</span>. Since <span
+class="math inline">Q_{-X}(u)=-Q_X(1-u)</span> a.e., the width of <span
+class="math inline">(-Y,-X)</span> is <span class="math inline">u\mapsto
+h(1-u)</span>; floors reflect to floors with the same integral, and (b)
+is invariant.</p>
 <h2 id="violations">Violations</h2>
-<p><strong>The witness.</strong> Let <span class="math inline">X^*=3-U^{-1/2}</span>, so <span class="math inline">Q_{X^*}(u)=3-u^{-1/2}</span>, with <span class="math inline">\int_0^1Q_{X^*}=3-2=1</span> and <span class="math inline">Q_{X^*}(u)\to-\infty</span> as <span class="math inline">u\to0</span>. Its width against <span class="math inline">0</span> is <span class="math inline">h^*=Q_{X^*}</span>.</p>
+<p><strong>The witness.</strong> Let <span
+class="math inline">X^*=3-U^{-1/2}</span>, so <span
+class="math inline">Q_{X^*}(u)=3-u^{-1/2}</span>, with <span
+class="math inline">\int_0^1Q_{X^*}=3-2=1</span> and <span
+class="math inline">Q_{X^*}(u)\to-\infty</span> as <span
+class="math inline">u\to0</span>. Its width against <span
+class="math inline">0</span> is <span
+class="math inline">h^*=Q_{X^*}</span>.</p>
 <ul>
-<li><span class="math inline">X^*\succeq0</span> by (b): <span class="math inline">h^*</span> is integrable and <span class="math inline">\int h^*=1</span>.</li>
-<li><span class="math inline">\tfrac12X^*\not\succeq0</span>: the width is <span class="math inline">\tfrac12h^*</span>, with integral <span class="math inline">\tfrac12&lt;1</span>; no step function lies below it, since a step function is bounded below and <span class="math inline">\tfrac12h^*</span> is not; and it is not nonnegative.</li>
+<li><span class="math inline">X^*\succeq0</span> by (b): <span
+class="math inline">h^*</span> is integrable and <span
+class="math inline">\int h^*=1</span>.</li>
+<li><span class="math inline">\tfrac12X^*\not\succeq0</span>: the width
+is <span class="math inline">\tfrac12h^*</span>, with integral <span
+class="math inline">\tfrac12&lt;1</span>; no step function lies below
+it, since a step function is bounded below and <span
+class="math inline">\tfrac12h^*</span> is not; and it is not
+nonnegative.</li>
 </ul>
-<p>With <span class="math inline">X=\tfrac12X^*</span> and <span class="math inline">Y=0</span> this is <span class="math inline">2X\succeq2Y</span> and <span class="math inline">X\not\succeq Y</span>: the cancellation direction fails, and Rational Scale Invariance, Scale Invariance and Positive Affine Invariance fail at <span class="math inline">a=\tfrac12</span>, <span class="math inline">b=0</span>. Negative Affine Anti-Invariance fails at the same <span class="math inline">a,b</span>: <span class="math inline">X^*\succeq0</span> but <span class="math inline">0\not\succeq-\tfrac12X^*</span>, whose width <span class="math inline">u\mapsto\tfrac12h^*(1-u)</span> is unbounded below with integral <span class="math inline">\tfrac12</span>.</p>
-<p><strong>Mixture Independence.</strong> <span class="math inline">X^*\succeq0</span>, but <span class="math inline">M=M_{1/2}(X^*,0)\not\succeq M_{1/2}(0,0)\sim0</span>. The law of <span class="math inline">M</span> is <span class="math inline">\tfrac12\mathcal L(X^*)+\tfrac12\delta_0</span>, so <span class="math inline">\int Q_M=\tfrac12</span>; and since <span class="math inline">P(X^*\le0)=P(U\le\tfrac19)=\tfrac19</span>, <span class="math inline">Q_M(u)=Q_{X^*}(2u)</span> for <span class="math inline">u&lt;\tfrac1{18}</span>, unbounded below, so there is no floor; and <span class="math inline">Q_M</span> is not nonnegative. The preservation half fails with <span class="math inline">Z</span> sure <span class="math inline">0</span> and <span class="math inline">p=\tfrac12</span>.</p>
-<p><strong>Totality, expectation rules, neutrality, continuity.</strong> Let <span class="math inline">X=U</span> and <span class="math inline">Y=\tfrac12</span>. The width is <span class="math inline">h(u)=u-\tfrac12</span>, continuous with <span class="math inline">\int h=0</span>. A floor <span class="math inline">s\le h</span> with <span class="math inline">\int s\ge0=\int h</span> would force <span class="math inline">s=h</span> a.e., impossible for a step function; and <span class="math inline">\int h&lt;1</span>. So <span class="math inline">U\not\succeq\tfrac12</span>, and by the same argument for <span class="math inline">\tfrac12-u</span>, <span class="math inline">\tfrac12\not\succeq U</span>. Hence Totality fails; Expected Utility and Relative Expectation fail, since <span class="math inline">E[U]=E[\tfrac12]</span>; CDF-Area Extension fails, since both areas are finite and equal (<span class="math inline">\tfrac18</span>); Symmetric Gambles Are Neutral fails for the symmetric <span class="math inline">U-\tfrac12</span>, whose width against <span class="math inline">0</span> is <span class="math inline">h</span>. For every <span class="math inline">\varepsilon&gt;0</span>, <span class="math inline">U+\varepsilon\succeq\tfrac12</span>: on <span class="math inline">n</span> equal intervals the lower step function of <span class="math inline">u-\tfrac12+\varepsilon</span> has integral <span class="math inline">\varepsilon-\tfrac1{2n}</span>, nonnegative once <span class="math inline">n\ge1/(2\varepsilon)</span>. So Continuity under Vanishing Shifts fails, and L¹ Continuity fails along <span class="math inline">X_n=U+\tfrac1n\to U</span>.</p>
+<p>With <span class="math inline">X=\tfrac12X^*</span> and <span
+class="math inline">Y=0</span> this is <span
+class="math inline">2X\succeq2Y</span> and <span
+class="math inline">X\not\succeq Y</span>: the cancellation direction
+fails, and Rational Scale Invariance, Scale Invariance and Positive
+Affine Invariance fail at <span class="math inline">a=\tfrac12</span>,
+<span class="math inline">b=0</span>. Negative Affine Anti-Invariance
+fails at the same <span class="math inline">a,b</span>: <span
+class="math inline">X^*\succeq0</span> but <span
+class="math inline">0\not\succeq-\tfrac12X^*</span>, whose width <span
+class="math inline">u\mapsto\tfrac12h^*(1-u)</span> is unbounded below
+with integral <span class="math inline">\tfrac12</span>.</p>
+<p><strong>Mixture Independence.</strong> <span
+class="math inline">X^*\succeq0</span>, but <span
+class="math inline">M=M_{1/2}(X^*,0)\not\succeq
+M_{1/2}(0,0)\sim0</span>. The law of <span class="math inline">M</span>
+is <span class="math inline">\tfrac12\mathcal
+L(X^*)+\tfrac12\delta_0</span>, so <span class="math inline">\int
+Q_M=\tfrac12</span>; and since <span
+class="math inline">P(X^*\le0)=P(U\le\tfrac19)=\tfrac19</span>, <span
+class="math inline">Q_M(u)=Q_{X^*}(2u)</span> for <span
+class="math inline">u&lt;\tfrac1{18}</span>, unbounded below, so there
+is no floor; and <span class="math inline">Q_M</span> is not
+nonnegative. The preservation half fails with <span
+class="math inline">Z</span> sure <span class="math inline">0</span> and
+<span class="math inline">p=\tfrac12</span>.</p>
+<p><strong>Totality, expectation rules, neutrality, continuity.</strong>
+Let <span class="math inline">X=U</span> and <span
+class="math inline">Y=\tfrac12</span>. The width is <span
+class="math inline">h(u)=u-\tfrac12</span>, continuous with <span
+class="math inline">\int h=0</span>. A floor <span
+class="math inline">s\le h</span> with <span class="math inline">\int
+s\ge0=\int h</span> would force <span class="math inline">s=h</span>
+a.e., impossible for a step function; and <span class="math inline">\int
+h&lt;1</span>. So <span class="math inline">U\not\succeq\tfrac12</span>,
+and by the same argument for <span
+class="math inline">\tfrac12-u</span>, <span
+class="math inline">\tfrac12\not\succeq U</span>. Hence Totality fails;
+Expected Utility and Relative Expectation fail, since <span
+class="math inline">E[U]=E[\tfrac12]</span>; CDF-Area Extension fails,
+since both areas are finite and equal (<span
+class="math inline">\tfrac18</span>); Symmetric Gambles Are Neutral
+fails for the symmetric <span class="math inline">U-\tfrac12</span>,
+whose width against <span class="math inline">0</span> is <span
+class="math inline">h</span>. For every <span
+class="math inline">\varepsilon&gt;0</span>, <span
+class="math inline">U+\varepsilon\succeq\tfrac12</span>: on <span
+class="math inline">n</span> equal intervals the lower step function of
+<span class="math inline">u-\tfrac12+\varepsilon</span> has integral
+<span class="math inline">\varepsilon-\tfrac1{2n}</span>, nonnegative
+once <span class="math inline">n\ge1/(2\varepsilon)</span>. So
+Continuity under Vanishing Shifts fails, and L¹ Continuity fails along
+<span class="math inline">X_n=U+\tfrac1n\to U</span>.</p>
 <h2 id="what-the-model-shows">What the model shows</h2>
-<p>Comonotonic Sum Invariance with Stochastic Equivalence and Rich Outcomes gives <span class="math inline">X\succeq Y\Rightarrow kX\succeq kY</span> by iterated addition, and here that holds. The converse needs Totality: without it the order can rank <span class="math inline">2X</span> above <span class="math inline">0</span> by a criterion that <span class="math inline">X</span> fails. Since Mixture Independence fails, the model does not decide whether DU with Comonotonic Sum Invariance gives Rational Scale Invariance.</p>
-<h2 id="integer-and-rational-preservation">Integer and rational preservation</h2>
-<p>Integer Affine Preservation holds. If <span class="math inline">h\in C</span> then <span class="math inline">kh\in C</span> for every positive integer <span class="math inline">k</span>: a floor <span class="math inline">s\le h</span> gives the floor <span class="math inline">ks\le kh</span> with <span class="math inline">\int ks\ge0</span>, and under (b) <span class="math inline">\int(kh)_-&lt;\infty</span> with <span class="math inline">\int kh\ge k\ge1</span>. The strict comparison is preserved too: every <span class="math inline">h\in C</span> has <span class="math inline">\int h\ge0</span>, since <span class="math inline">\int h\ge\int s\ge0</span> under (a) and <span class="math inline">\int h\ge1</span> under (b); so if <span class="math inline">-h\notin C</span>, then <span class="math inline">-kh\notin C</span>, because a floor <span class="math inline">s\le-kh</span> with <span class="math inline">\int s\ge0</span> would give the floor <span class="math inline">s/k\le-h</span>, and <span class="math inline">\int(-kh)\ge1</span> would give <span class="math inline">\int(-h)&gt;0</span>. Shifts leave <span class="math inline">h</span> unchanged. Rational Affine Preservation fails at <span class="math inline">a=\tfrac12</span>, <span class="math inline">b=0</span>: <span class="math inline">X^*\succeq0</span> but <span class="math inline">\tfrac12X^*\not\succeq0</span>. So the model separates the integer principle, which iterated comonotonic addition proves, from the fractional one.</p>
+<p>Comonotonic Sum Invariance with Stochastic Equivalence and Rich
+Outcomes gives <span class="math inline">X\succeq Y\Rightarrow kX\succeq
+kY</span> by iterated addition, and here that holds. The converse needs
+Totality: without it the order can rank <span
+class="math inline">2X</span> above <span class="math inline">0</span>
+by a criterion that <span class="math inline">X</span> fails. Since
+Mixture Independence fails, the model does not decide whether DU with
+Comonotonic Sum Invariance gives Rational Scale Invariance.</p>
+<h2 id="integer-and-rational-preservation">Integer and rational
+preservation</h2>
+<p>Integer Affine Preservation holds. If <span class="math inline">h\in
+C</span> then <span class="math inline">kh\in C</span> for every
+positive integer <span class="math inline">k</span>: a floor <span
+class="math inline">s\le h</span> gives the floor <span
+class="math inline">ks\le kh</span> with <span class="math inline">\int
+ks\ge0</span>, and under (b) <span
+class="math inline">\int(kh)_-&lt;\infty</span> with <span
+class="math inline">\int kh\ge k\ge1</span>. The strict comparison is
+preserved too: every <span class="math inline">h\in C</span> has <span
+class="math inline">\int h\ge0</span>, since <span
+class="math inline">\int h\ge\int s\ge0</span> under (a) and <span
+class="math inline">\int h\ge1</span> under (b); so if <span
+class="math inline">-h\notin C</span>, then <span
+class="math inline">-kh\notin C</span>, because a floor <span
+class="math inline">s\le-kh</span> with <span class="math inline">\int
+s\ge0</span> would give the floor <span
+class="math inline">s/k\le-h</span>, and <span
+class="math inline">\int(-kh)\ge1</span> would give <span
+class="math inline">\int(-h)&gt;0</span>. Shifts leave <span
+class="math inline">h</span> unchanged. Rational Affine Preservation
+fails at <span class="math inline">a=\tfrac12</span>, <span
+class="math inline">b=0</span>: <span
+class="math inline">X^*\succeq0</span> but <span
+class="math inline">\tfrac12X^*\not\succeq0</span>. So the model
+separates the integer principle, which iterated comonotonic addition
+proves, from the fractional one.</p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Background: Unbounded Utility and Background Risk.</strong> Zachary Goodsell (5 June 2026). Unbounded Utility and Background Risk. Unpublished working manuscript. — §3, pp. 7–8; Theorem 7, pp. 19–20. Source of the CDF-area rule; the floor and threshold clauses are new.</li>
+<li><strong>Background: Unbounded Utility and Background Risk.</strong>
+Zachary Goodsell (5 June 2026). Unbounded Utility and Background Risk.
+Unpublished working manuscript. — §3, pp. 7–8; Theorem 7, pp. 19–20.
+Source of the CDF-area rule; the floor and threshold clauses are
+new.</li>
 </ul>
 </body></html>

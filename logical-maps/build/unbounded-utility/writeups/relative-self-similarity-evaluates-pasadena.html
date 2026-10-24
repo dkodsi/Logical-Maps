@@ -269,36 +269,70 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <link rel="stylesheet" href="../math/katex.min.css">
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
-<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Pasadena from Relative Expectation and Negative Self-Similarity</h1></header><p><strong>Source and work accounting.</strong> Pasadena’s modification to Highland Park and the auxiliary prospect <span class="math inline">Q</span> are Zachary Goodsell’s constructions in <em>Symmetries of value</em>, Theorem 11, pp. 32–33. The new factorization below uses the recorded uniqueness principle in place of the source’s Totality and positive-affine argument. GPT-6 (Codex), 9 September 2026, supplied this moderate proof adaptation, the explicit couplings, and the remainder bounds. This describes work done for the map, not priority in the literature. No independent checker or Lean certification is asserted.</p>
-<p>Assume Rich Outcomes, Stochastic Equivalence, Mixture Independence, Relative Expectation and Uniqueness of Negative Self-Similarity. We do not assume Totality, Scale Invariance, reflection, or <span class="math inline">L^{1}</span> Continuity. All arithmetic below is within the real utility chart; Rich Outcomes supplies the required outcomes.</p>
-<h2 id="pasadena-and-highland-park-have-an-integrable-difference">1. Pasadena and Highland Park have an integrable difference</h2>
-<p>Couple Pasadena <span class="math inline">P</span> and Highland Park <span class="math inline">H</span> using the same integer <span class="math inline">N</span>, where <span class="math inline">\Pr(N=n)=2^{-n}</span>. For <span class="math inline">k\ge1</span>, put</p>
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Pasadena from Relative Expectation and Negative Self-Similarity</h1></header><p><strong>Source and work accounting.</strong> Pasadena’s modification
+to Highland Park and the auxiliary prospect <span
+class="math inline">Q</span> are Zachary Goodsell’s constructions in
+<em>Symmetries of value</em>, Theorem 11, pp. 32–33. The new
+factorization below uses the recorded uniqueness principle in place of
+the source’s Totality and positive-affine argument. GPT-6 (Codex), 9
+September 2026, supplied this moderate proof adaptation, the explicit
+couplings, and the remainder bounds. This describes work done for the
+map, not priority in the literature. No independent checker or Lean
+certification is asserted.</p>
+<p>Assume Rich Outcomes, Stochastic Equivalence, Mixture Independence,
+Relative Expectation and Uniqueness of Negative Self-Similarity. We do
+not assume Totality, Scale Invariance, reflection, or <span
+class="math inline">L^{1}</span> Continuity. All arithmetic below is
+within the real utility chart; Rich Outcomes supplies the required
+outcomes.</p>
+<h2 id="pasadena-and-highland-park-have-an-integrable-difference">1.
+Pasadena and Highland Park have an integrable difference</h2>
+<p>Couple Pasadena <span class="math inline">P</span> and Highland Park
+<span class="math inline">H</span> using the same integer <span
+class="math inline">N</span>, where <span
+class="math inline">\Pr(N=n)=2^{-n}</span>. For <span
+class="math inline">k\ge1</span>, put</p>
 <p><span class="math display">
 \begin{aligned}
 P(2k-1)=H(2k-1)&amp;=\frac{2^{2k-1}}{2k-1},\\
 P(2k)&amp;=-\frac{4^k}{2k},&amp;H(2k)&amp;=-\frac{4^k}{2k-1}.
 \end{aligned}
 </span></p>
-<p>The difference <span class="math inline">P-H</span> is nonnegative. Its expectation and absolute expectation are both</p>
+<p>The difference <span class="math inline">P-H</span> is nonnegative.
+Its expectation and absolute expectation are both</p>
 <p><span class="math display">
 \sum_{k=1}^{\infty}\frac1{2k(2k-1)}=\ln2. \tag{1}
 </span></p>
-<p>The equality follows by pairing the alternating harmonic series; the series in (1) itself is nonnegative and absolutely convergent. Relative Expectation therefore gives <span class="math inline">P\sim H+\ln2</span>, since the difference between these two actually coupled variables is integrable with mean zero.</p>
-<h2 id="the-auxiliary-relative-expectation-identity">2. The auxiliary relative-expectation identity</h2>
+<p>The equality follows by pairing the alternating harmonic series; the
+series in (1) itself is nonnegative and absolutely convergent. Relative
+Expectation therefore gives <span class="math inline">P\sim
+H+\ln2</span>, since the difference between these two actually coupled
+variables is integrable with mean zero.</p>
+<h2 id="the-auxiliary-relative-expectation-identity">2. The auxiliary
+relative-expectation identity</h2>
 <p>Let <span class="math inline">Q</span> take</p>
 <p><span class="math display">
 a_k=\frac{2^{2k-1}}{2k-1}
 \quad\text{with probability}\quad\frac3{4^k},\qquad k\ge1.
 </span></p>
-<p>The positive and negative masses in the preceding definition of <span class="math inline">H</span> give the identity of laws</p>
+<p>The positive and negative masses in the preceding definition of <span
+class="math inline">H</span> give the identity of laws</p>
 <p><span class="math display">
 H\overset d=M_{2/3}(Q,-2Q). \tag{2}
 </span></p>
-<p>For an explicit coupling of <span class="math inline">Q</span> with a variable <span class="math inline">S</span>, use the same index <span class="math inline">k</span>, put <span class="math inline">S=0</span> when <span class="math inline">k=1</span>, and put <span class="math inline">S=4a_{k-1}</span> when <span class="math inline">k\ge2</span>. Its law is</p>
+<p>For an explicit coupling of <span class="math inline">Q</span> with a
+variable <span class="math inline">S</span>, use the same index <span
+class="math inline">k</span>, put <span class="math inline">S=0</span>
+when <span class="math inline">k=1</span>, and put <span
+class="math inline">S=4a_{k-1}</span> when <span
+class="math inline">k\ge2</span>. Its law is</p>
 <p><span class="math display">
 S\overset d=M_{1/4}(4Q,0).
 </span></p>
-<p>At <span class="math inline">k=1</span> the expectation contribution from <span class="math inline">Q-S</span> is <span class="math inline">3/2</span>. For <span class="math inline">k\ge2</span>, the contribution is</p>
+<p>At <span class="math inline">k=1</span> the expectation contribution
+from <span class="math inline">Q-S</span> is <span
+class="math inline">3/2</span>. For <span
+class="math inline">k\ge2</span>, the contribution is</p>
 <p><span class="math display">
 \frac3{4^k}(a_k-4a_{k-1})
 =-\frac3{(2k-1)(2k-3)}.
@@ -308,12 +342,16 @@ S\overset d=M_{1/4}(4Q,0).
 \sum_{k=2}^{K}\frac3{(2k-1)(2k-3)}
 =\frac32\left(1-\frac1{2K-1}\right).
 </span></p>
-<p>Consequently <span class="math inline">E[Q-S]=0</span> and <span class="math inline">E|Q-S|=3</span>. Relative Expectation and Stochastic Equivalence give</p>
+<p>Consequently <span class="math inline">E[Q-S]=0</span> and <span
+class="math inline">E|Q-S|=3</span>. Relative Expectation and Stochastic
+Equivalence give</p>
 <p><span class="math display">
 Q\sim M_{1/4}(4Q,0). \tag{3}
 </span></p>
-<h2 id="highland-park-satisfies-a-negative-fixed-value-equation">3. Highland Park satisfies a negative fixed-value equation</h2>
-<p>Substitute (3) into the <span class="math inline">Q</span> branch of (2) by Mixture Independence. Regrouping laws gives</p>
+<h2 id="highland-park-satisfies-a-negative-fixed-value-equation">3.
+Highland Park satisfies a negative fixed-value equation</h2>
+<p>Substitute (3) into the <span class="math inline">Q</span> branch of
+(2) by Mixture Independence. Regrouping laws gives</p>
 <p><span class="math display">
 \begin{aligned}
 H
@@ -321,33 +359,65 @@ H
 &amp;\overset d=M_{1/2}(-2H,0).
 \end{aligned} \tag{4}
 </span></p>
-<p>In these two lines, scalar coefficients outside parentheses denote randomized-mixture weights, not pointwise averages of utilities. The last identity follows directly by pushing the law in (2) through <span class="math inline">x\mapsto-2x</span>. No affine transformation has been applied to a preference equality. Stochastic Equivalence licenses all distributional regrouping.</p>
+<p>In these two lines, scalar coefficients outside parentheses denote
+randomized-mixture weights, not pointwise averages of utilities. The
+last identity follows directly by pushing the law in (2) through <span
+class="math inline">x\mapsto-2x</span>. No affine transformation has
+been applied to a preference equality. Stochastic Equivalence licenses
+all distributional regrouping.</p>
 <p>The sure zero also satisfies</p>
 <p><span class="math display">
 0\sim M_{1/2}(-2\cdot0,0).
 </span></p>
-<p>Apply Uniqueness of Negative Self-Similarity with <span class="math inline">p=1/2,a=2,b=0,Z=0</span>. Equation (4) and the sure-zero equation yield</p>
+<p>Apply Uniqueness of Negative Self-Similarity with <span
+class="math inline">p=1/2,a=2,b=0,Z=0</span>. Equation (4) and the
+sure-zero equation yield</p>
 <p><span class="math display">
 H\sim0. \tag{5}
 </span></p>
-<p>This is the central factorization. It avoids extracting a square root of a positive scaling relation, the point at which the source proof uses Totality and Positive Affine Invariance.</p>
-<h2 id="transfer-the-finite-difference-to-a-sure-value">4. Transfer the finite difference to a sure value</h2>
-<p>For completeness, the limited shift consequence needed here follows from the listed assumptions. For any <span class="math inline">X</span> and real <span class="math inline">c</span>, the two variables</p>
+<p>This is the central factorization. It avoids extracting a square root
+of a positive scaling relation, the point at which the source proof uses
+Totality and Positive Affine Invariance.</p>
+<h2 id="transfer-the-finite-difference-to-a-sure-value">4. Transfer the
+finite difference to a sure value</h2>
+<p>For completeness, the limited shift consequence needed here follows
+from the listed assumptions. For any <span class="math inline">X</span>
+and real <span class="math inline">c</span>, the two variables</p>
 <p><span class="math display">
 M_{1/2}(X+c,0),\qquad M_{1/2}(X,c)
 </span></p>
-<p>under the fixed mixture lift have difference <span class="math inline">c</span> on the first half and <span class="math inline">-c</span> on the second half, apart from irrelevant endpoints. Relative Expectation makes them indifferent. If <span class="math inline">X\sim0</span>, Mixture Independence and Stochastic Equivalence also give</p>
+<p>under the fixed mixture lift have difference <span
+class="math inline">c</span> on the first half and <span
+class="math inline">-c</span> on the second half, apart from irrelevant
+endpoints. Relative Expectation makes them indifferent. If <span
+class="math inline">X\sim0</span>, Mixture Independence and Stochastic
+Equivalence also give</p>
 <p><span class="math display">
 M_{1/2}(X,c)\sim M_{1/2}(0,c)\sim M_{1/2}(c,0).
 </span></p>
-<p>Cancel the common zero branch to obtain <span class="math inline">X+c\sim c</span>. Apply this with <span class="math inline">X=H</span>, <span class="math inline">c=\ln2</span>, and (5). Together with the comparison from (1), it proves</p>
+<p>Cancel the common zero branch to obtain <span
+class="math inline">X+c\sim c</span>. Apply this with <span
+class="math inline">X=H</span>, <span class="math inline">c=\ln2</span>,
+and (5). Together with the comparison from (1), it proves</p>
 <p><span class="math display">
 P\sim H+\ln2\sim\ln2.
 </span></p>
-<p>Any variable with Pasadena’s law is indifferent to the constructed <span class="math inline">P</span> by Stochastic Equivalence, so the conclusion has the universal form of the recorded evaluation principle.</p>
-<p><code>checks/calculation_factorizations.py</code> verifies the telescoping coupling identities with exact fractions and explicit remaining-series bounds. Those diagnostics supplement this proof; they do not certify the preference axioms.</p>
+<p>Any variable with Pasadena’s law is indifferent to the constructed
+<span class="math inline">P</span> by Stochastic Equivalence, so the
+conclusion has the universal form of the recorded evaluation
+principle.</p>
+<p><code>checks/calculation_factorizations.py</code> verifies the
+telescoping coupling identities with exact fractions and explicit
+remaining-series bounds. Those diagnostics supplement this proof; they
+do not certify the preference axioms.</p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Background: <a href="https://doi.org/10.1111/nous.12549">Symmetries of value</a>.</strong> (<a href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>) Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. — Theorem 11, pp. 32–33: Pasadena, Highland Park, and Q constructions and relative-expectation identities</li>
+<li><strong>Background: <a
+href="https://doi.org/10.1111/nous.12549">Symmetries of
+value</a>.</strong> (<a
+href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>)
+Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. — Theorem
+11, pp. 32–33: Pasadena, Highland Park, and Q constructions and
+relative-expectation identities</li>
 </ul>
 </body></html>

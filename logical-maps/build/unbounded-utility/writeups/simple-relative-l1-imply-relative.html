@@ -269,23 +269,75 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <link rel="stylesheet" href="../math/katex.min.css">
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
-<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Simple Relative Expectation and L¹ Continuity imply Relative Expectation</h1></header><p><strong>Claim.</strong> Rich Outcomes + Simple Relative Expectation <span class="math inline">+ L^{1}</span> Continuity imply Relative Expectation.</p>
-<p>All variables in this proof are in the real utility chart; write their utilities as <span class="math inline">X,Y</span> to simplify notation. Fix <span class="math inline">D=X-Y</span> with <span class="math inline">\mathbb E|D|&lt;\infty</span>, and write <span class="math inline">m=\mathbb E D</span>. Simple functions are dense in <span class="math inline">L^1</span>, so choose simple <span class="math inline">q_n</span> with <span class="math inline">\mathbb E|q_n-D|\to0</span>. Define</p>
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Simple Relative Expectation and L¹ Continuity imply Relative Expectation</h1></header><p><strong>Claim.</strong> Rich Outcomes + Simple Relative Expectation
+<span class="math inline">+ L^{1}</span> Continuity imply Relative
+Expectation.</p>
+<p>All variables in this proof are in the real utility chart; write
+their utilities as <span class="math inline">X,Y</span> to simplify
+notation. Fix <span class="math inline">D=X-Y</span> with <span
+class="math inline">\mathbb E|D|&lt;\infty</span>, and write <span
+class="math inline">m=\mathbb E D</span>. Simple functions are dense in
+<span class="math inline">L^1</span>, so choose simple <span
+class="math inline">q_n</span> with <span class="math inline">\mathbb
+E|q_n-D|\to0</span>. Define</p>
 <p><span class="math display">d_n=q_n+m-\mathbb E q_n.</span></p>
-<p>These are still simple, satisfy <span class="math inline">\mathbb E d_n=m</span>, and obey</p>
-<p><span class="math display">\mathbb E|d_n-D|\leq \mathbb E|q_n-D|+|m-\mathbb E q_n|
+<p>These are still simple, satisfy <span class="math inline">\mathbb E
+d_n=m</span>, and obey</p>
+<p><span class="math display">\mathbb E|d_n-D|\leq \mathbb
+E|q_n-D|+|m-\mathbb E q_n|
 \leq 2\mathbb E|q_n-D|\longrightarrow0.</span></p>
-<p>Rich Outcomes supplies every finite level needed to form the measurable gambles <span class="math inline">X_n=Y+d_n</span>.</p>
-<p>First suppose <span class="math inline">m\geq0</span>. Because <span class="math inline">X_n-Y=d_n</span> is simple with mean <span class="math inline">m</span>, Simple Relative Expectation gives <span class="math inline">X_n\succeq Y</span> for every <span class="math inline">n</span>. The actual coupling satisfies <span class="math inline">\mathbb E|X_n-X|\to0</span>. The upper-section clause of <span class="math inline">L^{1}</span> Continuity therefore gives <span class="math inline">X\succeq Y</span>.</p>
-<p>This proves the nonnegative-mean direction for every integrable-difference pair. For the converse, suppose <span class="math inline">m&lt;0</span> and put <span class="math inline">c=-m/2&gt;0</span>. We have</p>
-<p><span class="math display">\mathbb E[Y-(X+c)]=-m-c=-m/2&gt;0.</span></p>
-<p>The direction just proved gives <span class="math inline">Y\succeq X+c</span>. Simple Relative Expectation, applied to the constant difference <span class="math inline">c</span>, gives <span class="math inline">X+c\succ X</span>: its forward weak comparison holds and its reverse weak comparison fails. If <span class="math inline">X\succeq Y</span>, transitivity would give <span class="math inline">X\succeq X+c</span>, a contradiction. Hence <span class="math inline">X\not\succeq Y</span> whenever <span class="math inline">m&lt;0</span>.</p>
-<p>Together these establish exactly <span class="math inline">X\succeq Y\iff\mathbb E(X-Y)\geq0</span>.</p>
-<p>The mean correction is essential for obtaining approximants on the required side when <span class="math inline">m=0</span>. The positive perturbation handles strictness without assuming lower-section closure. No Totality, Stochastic Equivalence, Mixture Independence, reflection or affine symmetry is used. Rich Outcomes supplies intermediate real utility levels; it is not silently used to exclude outcomes outside the chart.</p>
-<p><strong>Original work: proof adaptation.</strong> Goodsell’s Corollary 5 supplies the approximation idea in the full DTU+Sym context. The present work removes unused assumptions and spells out the mean correction and one-sided-continuity strictness argument. This describes the work for this entry, not literature novelty.</p>
-<p><strong>Attribution.</strong> Source idea: Zachary Goodsell, <em>Symmetries of value</em>, Corollary 5, p. 27. Reduced-premise proof: GPT-6 (Codex), 9 September 2026. No independent checker or Lean proof is claimed.</p>
+<p>Rich Outcomes supplies every finite level needed to form the
+measurable gambles <span class="math inline">X_n=Y+d_n</span>.</p>
+<p>First suppose <span class="math inline">m\geq0</span>. Because <span
+class="math inline">X_n-Y=d_n</span> is simple with mean <span
+class="math inline">m</span>, Simple Relative Expectation gives <span
+class="math inline">X_n\succeq Y</span> for every <span
+class="math inline">n</span>. The actual coupling satisfies <span
+class="math inline">\mathbb E|X_n-X|\to0</span>. The upper-section
+clause of <span class="math inline">L^{1}</span> Continuity therefore
+gives <span class="math inline">X\succeq Y</span>.</p>
+<p>This proves the nonnegative-mean direction for every
+integrable-difference pair. For the converse, suppose <span
+class="math inline">m&lt;0</span> and put <span
+class="math inline">c=-m/2&gt;0</span>. We have</p>
+<p><span class="math display">\mathbb
+E[Y-(X+c)]=-m-c=-m/2&gt;0.</span></p>
+<p>The direction just proved gives <span class="math inline">Y\succeq
+X+c</span>. Simple Relative Expectation, applied to the constant
+difference <span class="math inline">c</span>, gives <span
+class="math inline">X+c\succ X</span>: its forward weak comparison holds
+and its reverse weak comparison fails. If <span
+class="math inline">X\succeq Y</span>, transitivity would give <span
+class="math inline">X\succeq X+c</span>, a contradiction. Hence <span
+class="math inline">X\not\succeq Y</span> whenever <span
+class="math inline">m&lt;0</span>.</p>
+<p>Together these establish exactly <span class="math inline">X\succeq
+Y\iff\mathbb E(X-Y)\geq0</span>.</p>
+<p>The mean correction is essential for obtaining approximants on the
+required side when <span class="math inline">m=0</span>. The positive
+perturbation handles strictness without assuming lower-section closure.
+No Totality, Stochastic Equivalence, Mixture Independence, reflection or
+affine symmetry is used. Rich Outcomes supplies intermediate real
+utility levels; it is not silently used to exclude outcomes outside the
+chart.</p>
+<p><strong>Original work: proof adaptation.</strong> Goodsell’s
+Corollary 5 supplies the approximation idea in the full DTU+Sym context.
+The present work removes unused assumptions and spells out the mean
+correction and one-sided-continuity strictness argument. This describes
+the work for this entry, not literature novelty.</p>
+<p><strong>Attribution.</strong> Source idea: Zachary Goodsell,
+<em>Symmetries of value</em>, Corollary 5, p. 27. Reduced-premise proof:
+GPT-6 (Codex), 9 September 2026. No independent checker or Lean proof is
+claimed.</p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Background: <a href="https://doi.org/10.1111/nous.12549">Symmetries of value</a>.</strong> (<a href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>) Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. — p. 27. The cited argument is adapted with the explicitly listed sufficient premises; the reduced-premise claim is the present project contribution</li>
+<li><strong>Background: <a
+href="https://doi.org/10.1111/nous.12549">Symmetries of
+value</a>.</strong> (<a
+href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>)
+Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. — p. 27.
+The cited argument is adapted with the explicitly listed sufficient
+premises; the reduced-premise claim is the present project
+contribution</li>
 </ul>
 </body></html>

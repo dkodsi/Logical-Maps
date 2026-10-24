@@ -269,57 +269,285 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <link rel="stylesheet" href="../math/katex.min.css">
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
-<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Lexicographic expectation: Hamel tie-break</h1></header><p>A total, law-based model of Rich Outcomes, Archimedean Outcomes, Stochastic Equivalence, Stochastic Dominance, Simple EU, Comonotonic Sum Invariance, Shift Invariance and <strong>Rational Scale Invariance that is not Scale Invariant</strong>: <span class="math inline">X_1\succ0</span> and <span class="math inline">\sqrt2X_1\not\succeq0</span> for a uniform <span class="math inline">X_1</span>. It shows that the proof of <a href="comonotonic-sum-totality-imply-rational-scale.html">Rational Scale Invariance from Comonotonic Sum Invariance and Totality</a> cannot be pushed to real factors from those premises, even with dominance and Simple EU added. Mixture Independence is the DTU principle it fails.</p>
-<p>The construction is non-constructive: it uses a Hamel basis and Zorn’s lemma, as the continuous-ultrafilter models in this topic do.</p>
-<p><strong>Source and work accounting.</strong> Claude (Fable 5.1), 24 September 2026, in response to Zachary Goodsell’s session on whether Comonotonic Sum Invariance gives Positive Affine Invariance. The area rule on integrable widths is Goodsell’s (<em>Unbounded Utility and Background Risk</em>, unpublished, §3); the rational-linear tie-break, the cone completion and the verification are new. No independent checker or Lean verification is claimed. <code>checks/rational_scale_witnesses.py</code> verifies the named widths.</p>
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Lexicographic expectation: Hamel tie-break</h1></header><p>A total, law-based model of Rich Outcomes, Archimedean Outcomes,
+Stochastic Equivalence, Stochastic Dominance, Simple EU, Comonotonic Sum
+Invariance, Shift Invariance and <strong>Rational Scale Invariance that
+is not Scale Invariant</strong>: <span
+class="math inline">X_1\succ0</span> and <span
+class="math inline">\sqrt2X_1\not\succeq0</span> for a uniform <span
+class="math inline">X_1</span>. It shows that the proof of <a
+href="comonotonic-sum-totality-imply-rational-scale.html">Rational Scale
+Invariance from Comonotonic Sum Invariance and Totality</a> cannot be
+pushed to real factors from those premises, even with dominance and
+Simple EU added. Mixture Independence is the DTU principle it fails.</p>
+<p>The construction is non-constructive: it uses a Hamel basis and
+Zorn’s lemma, as the continuous-ultrafilter models in this topic do.</p>
+<p><strong>Source and work accounting.</strong> Claude (Fable 5.1), 24
+September 2026, in response to Zachary Goodsell’s session on whether
+Comonotonic Sum Invariance gives Positive Affine Invariance. The area
+rule on integrable widths is Goodsell’s (<em>Unbounded Utility and
+Background Risk</em>, unpublished, §3); the rational-linear tie-break,
+the cone completion and the verification are new. No independent checker
+or Lean verification is claimed.
+<code>checks/rational_scale_witnesses.py</code> verifies the named
+widths.</p>
 <h2 id="construction">Construction</h2>
-<p>Take real outcomes with identity utility and all real-valued random variables on the standing atomless standard space. The <em>width</em> of a pair is <span class="math inline">h=Q_X-Q_Y</span> on <span class="math inline">(0,1)</span>, up to a.e. equality. Let <span class="math inline">H</span> be the real vector space of differences of nondecreasing functions on <span class="math inline">(0,1)</span>; every element of <span class="math inline">H</span> is a width, since a nondecreasing <span class="math inline">f</span> is <span class="math inline">Q_{f(U)}</span> (Rich Outcomes), and every width lies in <span class="math inline">H</span>. Put</p>
-<p><span class="math display">H_{\mathrm{fin}}=\{h\in H:\textstyle\int_0^1|h|&lt;\infty\},\qquad
+<p>Take real outcomes with identity utility and all real-valued random
+variables on the standing atomless standard space. The <em>width</em> of
+a pair is <span class="math inline">h=Q_X-Q_Y</span> on <span
+class="math inline">(0,1)</span>, up to a.e. equality. Let <span
+class="math inline">H</span> be the real vector space of differences of
+nondecreasing functions on <span class="math inline">(0,1)</span>; every
+element of <span class="math inline">H</span> is a width, since a
+nondecreasing <span class="math inline">f</span> is <span
+class="math inline">Q_{f(U)}</span> (Rich Outcomes), and every width
+lies in <span class="math inline">H</span>. Put</p>
+<p><span class="math display">H_{\mathrm{fin}}=\{h\in
+H:\textstyle\int_0^1|h|&lt;\infty\},\qquad
 H_0=\{h\in H_{\mathrm{fin}}:\textstyle\int_0^1h=0\},</span></p>
-<p>and let <span class="math inline">S_0\subset H_0</span> be the step functions of integral <span class="math inline">0</span> (finitely many values on finitely many intervals). These are <span class="math inline">\mathbb Q</span>-subspaces.</p>
-<p><strong>Three named widths.</strong> Let <span class="math inline">X_1</span> be uniform on <span class="math inline">[-\tfrac12,\tfrac12]</span> and <span class="math inline">M=M_{1/2}(X_1,0)</span> its half-mixture with sure <span class="math inline">0</span>. Against <span class="math inline">0</span> their widths are</p>
+<p>and let <span class="math inline">S_0\subset H_0</span> be the step
+functions of integral <span class="math inline">0</span> (finitely many
+values on finitely many intervals). These are <span
+class="math inline">\mathbb Q</span>-subspaces.</p>
+<p><strong>Three named widths.</strong> Let <span
+class="math inline">X_1</span> be uniform on <span
+class="math inline">[-\tfrac12,\tfrac12]</span> and <span
+class="math inline">M=M_{1/2}(X_1,0)</span> its half-mixture with sure
+<span class="math inline">0</span>. Against <span
+class="math inline">0</span> their widths are</p>
 <p><span class="math display">h_1(u)=u-\tfrac12,\qquad
-h_2(u)=Q_M(u)=\begin{cases}2u-\tfrac12&amp;0&lt;u&lt;\tfrac14\\ 0&amp;\tfrac14\le u\le\tfrac34\\ 2u-\tfrac32&amp;\tfrac34&lt;u&lt;1,\end{cases}</span></p>
-<p>since <span class="math inline">F_M=\tfrac12F_{X_1}+\tfrac12\mathbf 1_{[0,\infty)}</span>. Both have integral <span class="math inline">0</span>: <span class="math inline">\int_0^{1/4}(2u-\tfrac12)=-\tfrac1{16}</span> and <span class="math inline">\int_{3/4}^1(2u-\tfrac32)=\tfrac1{16}</span>. The widths <span class="math inline">h_1,\sqrt2h_1,h_2</span> are <span class="math inline">\mathbb Q</span>-linearly independent modulo <span class="math inline">S_0</span>: if <span class="math inline">q_1h_1+q_2\sqrt2h_1+q_3h_2</span> is a step function, its derivative vanishes a.e.; on <span class="math inline">(\tfrac14,\tfrac34)</span> the slope is <span class="math inline">q_1+\sqrt2q_2</span>, so <span class="math inline">q_1=q_2=0</span> because <span class="math inline">\sqrt2</span> is irrational, and then on <span class="math inline">(0,\tfrac14)</span> the slope <span class="math inline">2q_3</span> gives <span class="math inline">q_3=0</span>.</p>
-<p><strong>The tie-break.</strong> Extend <span class="math inline">\{h_1,\sqrt2h_1,h_2\}</span> together with a <span class="math inline">\mathbb Q</span>-basis of <span class="math inline">S_0</span> to a Hamel basis of the <span class="math inline">\mathbb Q</span>-vector space <span class="math inline">H_0</span>, and let <span class="math inline">\psi:H_0\to\mathbb R</span> be the <span class="math inline">\mathbb Q</span>-linear map with</p>
-<p><span class="math display">\psi(h_1)=1,\qquad\psi(\sqrt2h_1)=-1,\qquad\psi(h_2)=-1,</span></p>
-<p>and <span class="math inline">\psi=0</span> on every other basis element, in particular on <span class="math inline">S_0</span>.</p>
-<p><strong>The infinite-width cone.</strong> Let <span class="math inline">W=H/H_{\mathrm{fin}}</span>, a <span class="math inline">\mathbb Q</span>-vector space, and <span class="math inline">\bar P=\{[h]:h\in H,\ h\ge0\text{ a.e.}\}</span>. Then <span class="math inline">\bar P</span> is closed under addition and positive rational scaling, and it is pointed: if <span class="math inline">[h]=-[h&#39;]</span> with <span class="math inline">h,h&#39;\ge0</span> then <span class="math inline">h+h&#39;\in H_{\mathrm{fin}}</span>, and <span class="math inline">0\le h\le h+h&#39;</span> gives <span class="math inline">h\in H_{\mathrm{fin}}</span>, so <span class="math inline">[h]=0</span>. By Zorn’s lemma choose a <span class="math inline">\mathbb Q</span>-cone <span class="math inline">K\subseteq W</span> containing <span class="math inline">\bar P</span>, with <span class="math inline">K\cap-K=\{0\}</span>, maximal among such cones. <span class="math inline">K</span> is total: if <span class="math inline">w\notin K\cup-K</span>, then <span class="math inline">K&#39;=K+\mathbb Q_{\ge0}w</span> is a strictly larger <span class="math inline">\mathbb Q</span>-cone, and it is pointed, since <span class="math inline">k+qw=-(k&#39;+q&#39;w)</span> with <span class="math inline">q+q&#39;&gt;0</span> would give <span class="math inline">w=-(k+k&#39;)/(q+q&#39;)\in-K</span>, while <span class="math inline">q=q&#39;=0</span> gives <span class="math inline">k=-k&#39;\in K\cap-K=\{0\}</span>; this contradicts maximality.</p>
-<p><strong>The order.</strong> With <span class="math inline">h=Q_X-Q_Y</span>, let <span class="math inline">X\succeq Y</span> iff</p>
+h_2(u)=Q_M(u)=\begin{cases}2u-\tfrac12&amp;0&lt;u&lt;\tfrac14\\
+0&amp;\tfrac14\le u\le\tfrac34\\
+2u-\tfrac32&amp;\tfrac34&lt;u&lt;1,\end{cases}</span></p>
+<p>since <span class="math inline">F_M=\tfrac12F_{X_1}+\tfrac12\mathbf
+1_{[0,\infty)}</span>. Both have integral <span
+class="math inline">0</span>: <span
+class="math inline">\int_0^{1/4}(2u-\tfrac12)=-\tfrac1{16}</span> and
+<span class="math inline">\int_{3/4}^1(2u-\tfrac32)=\tfrac1{16}</span>.
+The widths <span class="math inline">h_1,\sqrt2h_1,h_2</span> are <span
+class="math inline">\mathbb Q</span>-linearly independent modulo <span
+class="math inline">S_0</span>: if <span
+class="math inline">q_1h_1+q_2\sqrt2h_1+q_3h_2</span> is a step
+function, its derivative vanishes a.e.; on <span
+class="math inline">(\tfrac14,\tfrac34)</span> the slope is <span
+class="math inline">q_1+\sqrt2q_2</span>, so <span
+class="math inline">q_1=q_2=0</span> because <span
+class="math inline">\sqrt2</span> is irrational, and then on <span
+class="math inline">(0,\tfrac14)</span> the slope <span
+class="math inline">2q_3</span> gives <span
+class="math inline">q_3=0</span>.</p>
+<p><strong>The tie-break.</strong> Extend <span
+class="math inline">\{h_1,\sqrt2h_1,h_2\}</span> together with a <span
+class="math inline">\mathbb Q</span>-basis of <span
+class="math inline">S_0</span> to a Hamel basis of the <span
+class="math inline">\mathbb Q</span>-vector space <span
+class="math inline">H_0</span>, and let <span
+class="math inline">\psi:H_0\to\mathbb R</span> be the <span
+class="math inline">\mathbb Q</span>-linear map with</p>
+<p><span
+class="math display">\psi(h_1)=1,\qquad\psi(\sqrt2h_1)=-1,\qquad\psi(h_2)=-1,</span></p>
+<p>and <span class="math inline">\psi=0</span> on every other basis
+element, in particular on <span class="math inline">S_0</span>.</p>
+<p><strong>The infinite-width cone.</strong> Let <span
+class="math inline">W=H/H_{\mathrm{fin}}</span>, a <span
+class="math inline">\mathbb Q</span>-vector space, and <span
+class="math inline">\bar P=\{[h]:h\in H,\ h\ge0\text{ a.e.}\}</span>.
+Then <span class="math inline">\bar P</span> is closed under addition
+and positive rational scaling, and it is pointed: if <span
+class="math inline">[h]=-[h&#39;]</span> with <span
+class="math inline">h,h&#39;\ge0</span> then <span
+class="math inline">h+h&#39;\in H_{\mathrm{fin}}</span>, and <span
+class="math inline">0\le h\le h+h&#39;</span> gives <span
+class="math inline">h\in H_{\mathrm{fin}}</span>, so <span
+class="math inline">[h]=0</span>. By Zorn’s lemma choose a <span
+class="math inline">\mathbb Q</span>-cone <span
+class="math inline">K\subseteq W</span> containing <span
+class="math inline">\bar P</span>, with <span
+class="math inline">K\cap-K=\{0\}</span>, maximal among such cones.
+<span class="math inline">K</span> is total: if <span
+class="math inline">w\notin K\cup-K</span>, then <span
+class="math inline">K&#39;=K+\mathbb Q_{\ge0}w</span> is a strictly
+larger <span class="math inline">\mathbb Q</span>-cone, and it is
+pointed, since <span class="math inline">k+qw=-(k&#39;+q&#39;w)</span>
+with <span class="math inline">q+q&#39;&gt;0</span> would give <span
+class="math inline">w=-(k+k&#39;)/(q+q&#39;)\in-K</span>, while <span
+class="math inline">q=q&#39;=0</span> gives <span
+class="math inline">k=-k&#39;\in K\cap-K=\{0\}</span>; this contradicts
+maximality.</p>
+<p><strong>The order.</strong> With <span
+class="math inline">h=Q_X-Q_Y</span>, let <span
+class="math inline">X\succeq Y</span> iff</p>
 <ul>
 <li><ol type="i">
-<li><span class="math inline">h\notin H_{\mathrm{fin}}</span> and <span class="math inline">[h]\in K</span>; or</li>
+<li><span class="math inline">h\notin H_{\mathrm{fin}}</span> and <span
+class="math inline">[h]\in K</span>; or</li>
 </ol></li>
-<li><ol start="2" type="i">
-<li><span class="math inline">h\in H_{\mathrm{fin}}</span> and <span class="math inline">\int h&gt;0</span>; or</li>
-</ol></li>
-<li><ol start="3" type="i">
-<li><span class="math inline">h\in H_{\mathrm{fin}}</span>, <span class="math inline">\int h=0</span> and <span class="math inline">\psi(h)\ge0</span>.</li>
-</ol></li>
+<li>(ii) <span class="math inline">h\in H_{\mathrm{fin}}</span> and
+<span class="math inline">\int h&gt;0</span>; or</li>
+<li>(iii) <span class="math inline">h\in H_{\mathrm{fin}}</span>, <span
+class="math inline">\int h=0</span> and <span
+class="math inline">\psi(h)\ge0</span>.</li>
 </ul>
-<p>Write <span class="math inline">C</span> for the set of such widths. The rule depends only on the laws. On integrable widths it is the area rule of the <a href="cdf-area-preorder.html">exact CDF-area model</a> with <span class="math inline">\psi</span> breaking exact ties; <span class="math inline">K</span> orients every pair with both areas infinite.</p>
+<p>Write <span class="math inline">C</span> for the set of such widths.
+The rule depends only on the laws. On integrable widths it is the area
+rule of the <a href="cdf-area-preorder.html">exact CDF-area model</a>
+with <span class="math inline">\psi</span> breaking exact ties; <span
+class="math inline">K</span> orients every pair with both areas
+infinite.</p>
 <h2 id="preorder-and-totality">Preorder and Totality</h2>
-<p>Reflexivity: <span class="math inline">0\in H_0</span> and <span class="math inline">\psi(0)=0</span>. Transitivity: let <span class="math inline">h,h&#39;\in C</span>. If neither is in <span class="math inline">H_{\mathrm{fin}}</span>, then <span class="math inline">[h+h&#39;]=[h]+[h&#39;]\in K</span>, and <span class="math inline">h+h&#39;\notin H_{\mathrm{fin}}</span>, for otherwise <span class="math inline">[h]=-[h&#39;]\in K\cap-K=\{0\}</span>, contradicting <span class="math inline">h\notin H_{\mathrm{fin}}</span>. If exactly one is in <span class="math inline">H_{\mathrm{fin}}</span>, say <span class="math inline">h&#39;</span>, then <span class="math inline">[h+h&#39;]=[h]\in K</span> and <span class="math inline">h+h&#39;\notin H_{\mathrm{fin}}</span>. If both are in <span class="math inline">H_{\mathrm{fin}}</span>, integrals add, and when both vanish <span class="math inline">\psi</span> adds. Totality: for <span class="math inline">h\notin H_{\mathrm{fin}}</span>, <span class="math inline">[h]\in K</span> or <span class="math inline">[-h]\in K</span>; for <span class="math inline">h\in H_{\mathrm{fin}}</span>, one of <span class="math inline">\int h&gt;0</span>, <span class="math inline">\int(-h)&gt;0</span>, or <span class="math inline">\int h=0</span> with <span class="math inline">\psi(h)\ge0</span> or <span class="math inline">\psi(-h)=-\psi(h)\ge0</span>.</p>
+<p>Reflexivity: <span class="math inline">0\in H_0</span> and <span
+class="math inline">\psi(0)=0</span>. Transitivity: let <span
+class="math inline">h,h&#39;\in C</span>. If neither is in <span
+class="math inline">H_{\mathrm{fin}}</span>, then <span
+class="math inline">[h+h&#39;]=[h]+[h&#39;]\in K</span>, and <span
+class="math inline">h+h&#39;\notin H_{\mathrm{fin}}</span>, for
+otherwise <span class="math inline">[h]=-[h&#39;]\in
+K\cap-K=\{0\}</span>, contradicting <span class="math inline">h\notin
+H_{\mathrm{fin}}</span>. If exactly one is in <span
+class="math inline">H_{\mathrm{fin}}</span>, say <span
+class="math inline">h&#39;</span>, then <span
+class="math inline">[h+h&#39;]=[h]\in K</span> and <span
+class="math inline">h+h&#39;\notin H_{\mathrm{fin}}</span>. If both are
+in <span class="math inline">H_{\mathrm{fin}}</span>, integrals add, and
+when both vanish <span class="math inline">\psi</span> adds. Totality:
+for <span class="math inline">h\notin H_{\mathrm{fin}}</span>, <span
+class="math inline">[h]\in K</span> or <span class="math inline">[-h]\in
+K</span>; for <span class="math inline">h\in H_{\mathrm{fin}}</span>,
+one of <span class="math inline">\int h&gt;0</span>, <span
+class="math inline">\int(-h)&gt;0</span>, or <span
+class="math inline">\int h=0</span> with <span
+class="math inline">\psi(h)\ge0</span> or <span
+class="math inline">\psi(-h)=-\psi(h)\ge0</span>.</p>
 <h2 id="verified-principles">Verified principles</h2>
-<p><strong>Rich Outcomes, Stochastic Equivalence, the chart.</strong> Immediate. The width of two constants is <span class="math inline">x-y</span>, so sure outcomes are ordered as <span class="math inline">\mathbb R</span> and the normalized chart is the identity (the calibration widths are step functions, ranked by the next item).</p>
-<p><strong>Simple EU.</strong> For simple <span class="math inline">X,Y</span> the width is a step function, in <span class="math inline">H_{\mathrm{fin}}</span>. If <span class="math inline">\int h&gt;0</span>, (ii). If <span class="math inline">\int h&lt;0</span>, then <span class="math inline">-h</span> satisfies (ii) and <span class="math inline">h</span> satisfies none of (i)–(iii). If <span class="math inline">\int h=0</span>, then <span class="math inline">h\in S_0</span> and <span class="math inline">\psi(h)=\psi(-h)=0</span>, so <span class="math inline">X\sim Y</span>. Simple gambles are ranked exactly by expectation; Restricted Totality, Restricted Stochastic Equivalence and Archimedean Outcomes (<span class="math inline">b\sim M_p(a,c)</span> at <span class="math inline">p=(b-c)/(a-c)</span>) follow.</p>
-<p><strong>Stochastic Dominance.</strong> Let <span class="math inline">h\ge0</span> a.e. If <span class="math inline">h\in H_{\mathrm{fin}}</span> then <span class="math inline">\int h\ge0</span>, with equality only for <span class="math inline">h=0</span> a.e., covered by (iii). If <span class="math inline">h\notin H_{\mathrm{fin}}</span> then <span class="math inline">[h]\in\bar P\subseteq K</span>. For the strict clause let <span class="math inline">h\ge0</span> and not a.e. zero. If <span class="math inline">h\in H_{\mathrm{fin}}</span>, then <span class="math inline">\int(-h)&lt;0</span>, so <span class="math inline">-h\notin C</span>. If <span class="math inline">h\notin H_{\mathrm{fin}}</span>, then <span class="math inline">[h]\in\bar P\setminus\{0\}</span>, so <span class="math inline">[-h]\notin K</span> by pointedness, and <span class="math inline">-h\notin H_{\mathrm{fin}}</span>, so <span class="math inline">-h\notin C</span>. Statewise Dominance follows.</p>
-<p><strong>Comonotonic Sum Invariance, Shift Invariance.</strong> If <span class="math inline">X=f(U)</span> and <span class="math inline">Z=g(U)</span> with <span class="math inline">f,g</span> nondecreasing, then <span class="math inline">Q_X=f</span>, <span class="math inline">Q_Z=g</span> and <span class="math inline">Q_{X+Z}=f+g</span> a.e., and likewise for <span class="math inline">Y</span> and <span class="math inline">Z</span>; so the width of <span class="math inline">(X+Z,Y+Z)</span> is <span class="math inline">h</span>. The width of <span class="math inline">(X+b,Y+b)</span> is <span class="math inline">h</span>.</p>
-<p><strong>Rational Scale Invariance.</strong> The width of <span class="math inline">(aX,aY)</span> is <span class="math inline">ah</span>. For rational <span class="math inline">a&gt;0</span>: <span class="math inline">ah\in H_{\mathrm{fin}}</span> iff <span class="math inline">h\in H_{\mathrm{fin}}</span>; <span class="math inline">[ah]=a[h]\in K</span> iff <span class="math inline">[h]\in K</span>, as <span class="math inline">K</span> is a <span class="math inline">\mathbb Q</span>-cone (apply <span class="math inline">1/a</span> for the converse); <span class="math inline">\int ah=a\int h</span>; and <span class="math inline">\psi(ah)=a\psi(h)</span>. Each clause is invariant, so <span class="math inline">X\succeq Y</span> iff <span class="math inline">aX\succeq aY</span>.</p>
+<p><strong>Rich Outcomes, Stochastic Equivalence, the chart.</strong>
+Immediate. The width of two constants is <span
+class="math inline">x-y</span>, so sure outcomes are ordered as <span
+class="math inline">\mathbb R</span> and the normalized chart is the
+identity (the calibration widths are step functions, ranked by the next
+item).</p>
+<p><strong>Simple EU.</strong> For simple <span
+class="math inline">X,Y</span> the width is a step function, in <span
+class="math inline">H_{\mathrm{fin}}</span>. If <span
+class="math inline">\int h&gt;0</span>, (ii). If <span
+class="math inline">\int h&lt;0</span>, then <span
+class="math inline">-h</span> satisfies (ii) and <span
+class="math inline">h</span> satisfies none of (i)–(iii). If <span
+class="math inline">\int h=0</span>, then <span class="math inline">h\in
+S_0</span> and <span class="math inline">\psi(h)=\psi(-h)=0</span>, so
+<span class="math inline">X\sim Y</span>. Simple gambles are ranked
+exactly by expectation; Restricted Totality, Restricted Stochastic
+Equivalence and Archimedean Outcomes (<span class="math inline">b\sim
+M_p(a,c)</span> at <span class="math inline">p=(b-c)/(a-c)</span>)
+follow.</p>
+<p><strong>Stochastic Dominance.</strong> Let <span
+class="math inline">h\ge0</span> a.e. If <span class="math inline">h\in
+H_{\mathrm{fin}}</span> then <span class="math inline">\int
+h\ge0</span>, with equality only for <span
+class="math inline">h=0</span> a.e., covered by (iii). If <span
+class="math inline">h\notin H_{\mathrm{fin}}</span> then <span
+class="math inline">[h]\in\bar P\subseteq K</span>. For the strict
+clause let <span class="math inline">h\ge0</span> and not a.e. zero. If
+<span class="math inline">h\in H_{\mathrm{fin}}</span>, then <span
+class="math inline">\int(-h)&lt;0</span>, so <span
+class="math inline">-h\notin C</span>. If <span
+class="math inline">h\notin H_{\mathrm{fin}}</span>, then <span
+class="math inline">[h]\in\bar P\setminus\{0\}</span>, so <span
+class="math inline">[-h]\notin K</span> by pointedness, and <span
+class="math inline">-h\notin H_{\mathrm{fin}}</span>, so <span
+class="math inline">-h\notin C</span>. Statewise Dominance follows.</p>
+<p><strong>Comonotonic Sum Invariance, Shift Invariance.</strong> If
+<span class="math inline">X=f(U)</span> and <span
+class="math inline">Z=g(U)</span> with <span
+class="math inline">f,g</span> nondecreasing, then <span
+class="math inline">Q_X=f</span>, <span class="math inline">Q_Z=g</span>
+and <span class="math inline">Q_{X+Z}=f+g</span> a.e., and likewise for
+<span class="math inline">Y</span> and <span
+class="math inline">Z</span>; so the width of <span
+class="math inline">(X+Z,Y+Z)</span> is <span
+class="math inline">h</span>. The width of <span
+class="math inline">(X+b,Y+b)</span> is <span
+class="math inline">h</span>.</p>
+<p><strong>Rational Scale Invariance.</strong> The width of <span
+class="math inline">(aX,aY)</span> is <span
+class="math inline">ah</span>. For rational <span
+class="math inline">a&gt;0</span>: <span class="math inline">ah\in
+H_{\mathrm{fin}}</span> iff <span class="math inline">h\in
+H_{\mathrm{fin}}</span>; <span class="math inline">[ah]=a[h]\in K</span>
+iff <span class="math inline">[h]\in K</span>, as <span
+class="math inline">K</span> is a <span class="math inline">\mathbb
+Q</span>-cone (apply <span class="math inline">1/a</span> for the
+converse); <span class="math inline">\int ah=a\int h</span>; and <span
+class="math inline">\psi(ah)=a\psi(h)</span>. Each clause is invariant,
+so <span class="math inline">X\succeq Y</span> iff <span
+class="math inline">aX\succeq aY</span>.</p>
 <h2 id="violations">Violations</h2>
 <ul>
-<li><strong>Scale Invariance.</strong> <span class="math inline">X_1\succ0</span>: the width <span class="math inline">h_1</span> is in <span class="math inline">H_0</span> with <span class="math inline">\psi(h_1)=1&gt;0</span>, and <span class="math inline">\psi(-h_1)=-1&lt;0</span>. But <span class="math inline">\sqrt2X_1\not\succeq0</span>: the width is <span class="math inline">\sqrt2h_1\in H_0</span> with <span class="math inline">\psi(\sqrt2h_1)=-1</span>. Positive Affine Invariance fails at <span class="math inline">a=\sqrt2</span>, <span class="math inline">b=0</span>.</li>
-<li><strong>Mixture Independence.</strong> <span class="math inline">X_1\succ0</span>, but <span class="math inline">M_{1/2}(X_1,0)\not\succeq M_{1/2}(0,0)\sim0</span>: the width is <span class="math inline">h_2</span> with <span class="math inline">\psi(h_2)=-1</span>.</li>
-<li><strong>Expected Utility, Relative Expectation, CDF-Area Extension.</strong> <span class="math inline">X_1</span> and <span class="math inline">0</span> have equal means and equal finite areas, but <span class="math inline">X_1\succ0</span>.</li>
-<li><strong>Symmetric Gambles Are Neutral, Reflection Anti-Invariance, Negative Affine Anti-Invariance.</strong> <span class="math inline">X_1</span> has the law of <span class="math inline">-X_1</span> and <span class="math inline">X_1\succ0</span>. Reflection anti-invariance would turn <span class="math inline">X_1\succeq0</span> into <span class="math inline">0\succeq-X_1</span>, which by Stochastic Equivalence is <span class="math inline">0\succeq X_1</span>, false. The same pair refutes Negative Affine Anti-Invariance at <span class="math inline">a=1</span>, <span class="math inline">b=0</span>.</li>
-<li><strong>Continuity.</strong> For every <span class="math inline">\varepsilon&gt;0</span>, <span class="math inline">\sqrt2X_1+\varepsilon\succeq0</span> by (ii), the width <span class="math inline">\sqrt2h_1+\varepsilon</span> having integral <span class="math inline">\varepsilon</span>; but <span class="math inline">\sqrt2X_1\not\succeq0</span>. So Continuity under Vanishing Shifts fails, and L¹ Continuity fails along <span class="math inline">\sqrt2X_1+\tfrac1n</span>.</li>
+<li><strong>Scale Invariance.</strong> <span
+class="math inline">X_1\succ0</span>: the width <span
+class="math inline">h_1</span> is in <span
+class="math inline">H_0</span> with <span
+class="math inline">\psi(h_1)=1&gt;0</span>, and <span
+class="math inline">\psi(-h_1)=-1&lt;0</span>. But <span
+class="math inline">\sqrt2X_1\not\succeq0</span>: the width is <span
+class="math inline">\sqrt2h_1\in H_0</span> with <span
+class="math inline">\psi(\sqrt2h_1)=-1</span>. Positive Affine
+Invariance fails at <span class="math inline">a=\sqrt2</span>, <span
+class="math inline">b=0</span>.</li>
+<li><strong>Mixture Independence.</strong> <span
+class="math inline">X_1\succ0</span>, but <span
+class="math inline">M_{1/2}(X_1,0)\not\succeq M_{1/2}(0,0)\sim0</span>:
+the width is <span class="math inline">h_2</span> with <span
+class="math inline">\psi(h_2)=-1</span>.</li>
+<li><strong>Expected Utility, Relative Expectation, CDF-Area
+Extension.</strong> <span class="math inline">X_1</span> and <span
+class="math inline">0</span> have equal means and equal finite areas,
+but <span class="math inline">X_1\succ0</span>.</li>
+<li><strong>Symmetric Gambles Are Neutral, Reflection Anti-Invariance,
+Negative Affine Anti-Invariance.</strong> <span
+class="math inline">X_1</span> has the law of <span
+class="math inline">-X_1</span> and <span
+class="math inline">X_1\succ0</span>. Reflection anti-invariance would
+turn <span class="math inline">X_1\succeq0</span> into <span
+class="math inline">0\succeq-X_1</span>, which by Stochastic Equivalence
+is <span class="math inline">0\succeq X_1</span>, false. The same pair
+refutes Negative Affine Anti-Invariance at <span
+class="math inline">a=1</span>, <span
+class="math inline">b=0</span>.</li>
+<li><strong>Continuity.</strong> For every <span
+class="math inline">\varepsilon&gt;0</span>, <span
+class="math inline">\sqrt2X_1+\varepsilon\succeq0</span> by (ii), the
+width <span class="math inline">\sqrt2h_1+\varepsilon</span> having
+integral <span class="math inline">\varepsilon</span>; but <span
+class="math inline">\sqrt2X_1\not\succeq0</span>. So Continuity under
+Vanishing Shifts fails, and L¹ Continuity fails along <span
+class="math inline">\sqrt2X_1+\tfrac1n</span>.</li>
 </ul>
 <h2 id="what-the-model-shows">What the model shows</h2>
-<p>Iterated comonotonic addition reaches every rational multiple of a comparison and no other. A set of widths closed under addition and rational scaling need not be closed under real scaling, and Totality, dominance and Simple EU do not force it: on simple gambles the order is expectation, which is scale invariant, and the tie-break acts only on non-simple pairs with equal means. What the model lacks is Mixture Independence, whose linearity acts in survival coordinates, where dilation by a real factor is the substitution <span class="math inline">t\mapsto t/a</span>. Whether that structure forces real scale invariance is <a href="conjectured-dtu-comonotonic-imply-scale.html">conjectured-dtu-comonotonic-imply-scale</a>. The model also breaks Continuity under Vanishing Shifts; on bounded gambles that continuity closes the gap by a sandwich between nearby rational factors, as noted in the conjecture’s record, but unbounded gambles admit no such sandwich.</p>
+<p>Iterated comonotonic addition reaches every rational multiple of a
+comparison and no other. A set of widths closed under addition and
+rational scaling need not be closed under real scaling, and Totality,
+dominance and Simple EU do not force it: on simple gambles the order is
+expectation, which is scale invariant, and the tie-break acts only on
+non-simple pairs with equal means. What the model lacks is Mixture
+Independence, whose linearity acts in survival coordinates, where
+dilation by a real factor is the substitution <span
+class="math inline">t\mapsto t/a</span>. Whether that structure forces
+real scale invariance is <a
+href="conjectured-dtu-comonotonic-imply-scale.html">conjectured-dtu-comonotonic-imply-scale</a>.
+The model also breaks Continuity under Vanishing Shifts; on bounded
+gambles that continuity closes the gap by a sandwich between nearby
+rational factors, as noted in the conjecture’s record, but unbounded
+gambles admit no such sandwich.</p>
 <h2 id="preservation-principles">Preservation principles</h2>
-<p>Rational Scale Invariance with Shift Invariance gives Rational Affine Preservation, hence Integer Affine Preservation: the weak comparison passes through both biconditionals, and the strict one through their reverses.</p>
+<p>Rational Scale Invariance with Shift Invariance gives Rational Affine
+Preservation, hence Integer Affine Preservation: the weak comparison
+passes through both biconditionals, and the strict one through their
+reverses.</p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Background: Unbounded Utility and Background Risk.</strong> Zachary Goodsell (5 June 2026). Unbounded Utility and Background Risk. Unpublished working manuscript. — §3, pp. 7–8. Source of the area rule on integrable widths; the tie-break and cone completion are new.</li>
+<li><strong>Background: Unbounded Utility and Background Risk.</strong>
+Zachary Goodsell (5 June 2026). Unbounded Utility and Background Risk.
+Unpublished working manuscript. — §3, pp. 7–8. Source of the area rule
+on integrable widths; the tie-break and cone completion are new.</li>
 </ul>
 </body></html>

@@ -270,25 +270,50 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
 <script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>L¹ Continuity (random variables) ⇒ Continuity under Vanishing Shifts</h1></header><p class="cert">
-Result — Source: Misc., Lean <code>UnboundedUtility.Proofs.l1_implies_vanishing_shift_continuity</code>; produced by GPT-6 (Codex), prompted by Zachary Goodsell; recorded by GPT-6 (Codex), prompted by Zachary Goodsell, 2026-09-09.
+Result — Source: Misc., Lean
+<code>UnboundedUtility.Proofs.l1_implies_vanishing_shift_continuity</code>;
+produced by GPT-6 (Codex), prompted by Zachary Goodsell; recorded by
+GPT-6 (Codex), prompted by Zachary Goodsell, 2026-09-09.
 </p>
 <h2 id="premises">Premises</h2>
 <ul>
-<li><strong>L¹ Continuity (random variables).</strong> On variables with real utility levels, if <span class="math inline">E|u(X_n)- u(X)| \to 0</span> and <span class="math inline">X_n \succeq Y</span> for every n, then <span class="math inline">X \succeq Y</span>. Only the upper-section clause is imposed, matching the paper. Distance can be infinite between other pairs.</li>
+<li><strong>L¹ Continuity (random variables).</strong> On variables with
+real utility levels, if <span class="math inline">E|u(X_n)- u(X)| \to
+0</span> and <span class="math inline">X_n \succeq Y</span> for every n,
+then <span class="math inline">X \succeq Y</span>. Only the
+upper-section clause is imposed, matching the paper. Distance can be
+infinite between other pairs.</li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <ul>
-<li><strong>Continuity under Vanishing Shifts.</strong> For real-utility variables X,Y, if <span class="math inline">X+\epsilon \succeq Y</span> for every <span class="math inline">\epsilon &gt;0</span>, then <span class="math inline">X \succeq Y</span>. The shifts act on utility levels, and all the displayed variables must be available. Only this upper-section closure condition is imposed.</li>
+<li><strong>Continuity under Vanishing Shifts.</strong> For real-utility
+variables X,Y, if <span class="math inline">X+\epsilon \succeq Y</span>
+for every <span class="math inline">\epsilon &gt;0</span>, then <span
+class="math inline">X \succeq Y</span>. The shifts act on utility
+levels, and all the displayed variables must be available. Only this
+upper-section closure condition is imposed.</li>
 </ul>
 <h2 id="proof">Proof</h2>
-<p>Suppose all the eligible positive shifts <span class="math inline">X+\epsilon</span> satisfy <span class="math inline">X+\epsilon \succeq Y</span>. Use the actual coupling <span class="math inline">X_n=X+1/n</span>. Its expected absolute utility difference from X is exactly 1/n, tending to zero. Upper-section L1 Continuity therefore yields <span class="math inline">X \succeq Y</span>. No shift invariance, law replacement, or lower-section continuity is used.</p>
+<p>Suppose all the eligible positive shifts <span
+class="math inline">X+\epsilon</span> satisfy <span
+class="math inline">X+\epsilon \succeq Y</span>. Use the actual coupling
+<span class="math inline">X_n=X+1/n</span>. Its expected absolute
+utility difference from X is exactly 1/n, tending to zero. Upper-section
+L1 Continuity therefore yields <span class="math inline">X \succeq
+Y</span>. No shift invariance, law replacement, or lower-section
+continuity is used.</p>
 <h2 id="notes">Notes</h2>
-<p>Original work: immediate axiom restriction. This records the comparison between continuity conditions, not a claim of literature novelty.</p>
+<p>Original work: immediate axiom restriction. This records the
+comparison between continuity conditions, not a claim of literature
+novelty.</p>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><strong>GPT-6 direct deduction 9 Sep</strong> — GPT-6 (Codex), 9 September 2026, direct restriction of the recorded upper-section L1 Continuity axiom to constant-shift sequences in Logical Maps.</li>
+<li><strong>GPT-6 direct deduction 9 Sep</strong> — GPT-6 (Codex), 9
+September 2026, direct restriction of the recorded upper-section L1
+Continuity axiom to constant-shift sequences in Logical Maps.</li>
 </ul>
 <p class="cert">
-Record: <code>topics/unbounded-utility/results/l1-implies-vanishing-shift-continuity.yaml</code>
+Record:
+<code>topics/unbounded-utility/results/l1-implies-vanishing-shift-continuity.yaml</code>
 </p>
 </body></html>

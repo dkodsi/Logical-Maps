@@ -270,29 +270,95 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
 <script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Rich Outcomes ∧ Archimedean Outcomes ∧ Stochastic Equivalence ∧ Stochastic Dominance ∧ Mixture Independence ∧ Comonotonic Sum Invariance ⇒ Rational Affine Preservation</h1></header><p class="cert">
-Conjecture — Source: Misc.; produced by Zachary Goodsell (claim) and Claude (Fable 5.1) (reduction to cancellation and obstruction analysis), 2026-09-24; recorded by Claude (Fable 5.1), prompted by Zachary Goodsell, 2026-09-24.
+Conjecture — Source: Misc.; produced by Zachary Goodsell (claim) and
+Claude (Fable 5.1) (reduction to cancellation and obstruction analysis),
+2026-09-24; recorded by Claude (Fable 5.1), prompted by Zachary
+Goodsell, 2026-09-24.
 </p>
 <h2 id="premises">Premises</h2>
 <ul>
-<li><strong>Rich Outcomes.</strong> Every real number r occurs as a utility level of a sure outcome: for each <span class="math inline">r \in \mathbb{R}</span> there is an outcome <span class="math inline">o_r</span> with <span class="math inline">u(o_r)=r</span>, with u defined by the normalized binary-mixture comparisons in the background. This does not assert that every outcome has a finite real level.</li>
-<li><strong>Archimedean Outcomes.</strong> For any three sure outcomes <span class="math inline">a \succ b \succ c</span>, some nontrivial mixture of the outer two is equally good as the intermediate one: <span class="math inline">b \sim M_p(a,c)</span> for some <span class="math inline">p \in (0,1)</span>. Only the three inputs are sure outcomes. This is the no-infinite-ratios condition, not continuity of preferences over arbitrary gambles.</li>
-<li><strong>Stochastic Equivalence.</strong> If X and Y have the same probability law over outcomes, then <span class="math inline">X \sim Y</span>. The variables remain distinct objects; indifference is an additional axiom.</li>
-<li><strong>Stochastic Dominance.</strong> If <span class="math inline">P(X&gt;o) \ge P(Y&gt;o)</span> for every outcome threshold o, then <span class="math inline">X \succeq Y</span>; if one threshold inequality is strict, <span class="math inline">X \succ Y</span>. Thresholds use the sure-outcome order.</li>
-<li><strong>Mixture Independence.</strong> For all X,Y,Z and <span class="math inline">0&lt;p&lt;1, X \succeq Y</span> iff <span class="math inline">M_p(X,Z) \succeq M_p(Y,Z)</span>, where M is the fixed randomized-selection construction described in the background.</li>
-<li><strong>Comonotonic Sum Invariance.</strong> If X and Z are comonotonic, and Y and Z are comonotonic, then <span class="math inline">X \succeq Y</span> iff <span class="math inline">X+Z \succeq Y+Z</span>. A pair is comonotonic when its members admit nondecreasing representations in one common uniform random variable.</li>
+<li><strong>Rich Outcomes.</strong> Every real number r occurs as a
+utility level of a sure outcome: for each <span class="math inline">r
+\in \mathbb{R}</span> there is an outcome <span
+class="math inline">o_r</span> with <span
+class="math inline">u(o_r)=r</span>, with u defined by the normalized
+binary-mixture comparisons in the background. This does not assert that
+every outcome has a finite real level.</li>
+<li><strong>Archimedean Outcomes.</strong> For any three sure outcomes
+<span class="math inline">a \succ b \succ c</span>, some nontrivial
+mixture of the outer two is equally good as the intermediate one: <span
+class="math inline">b \sim M_p(a,c)</span> for some <span
+class="math inline">p \in (0,1)</span>. Only the three inputs are sure
+outcomes. This is the no-infinite-ratios condition, not continuity of
+preferences over arbitrary gambles.</li>
+<li><strong>Stochastic Equivalence.</strong> If X and Y have the same
+probability law over outcomes, then <span class="math inline">X \sim
+Y</span>. The variables remain distinct objects; indifference is an
+additional axiom.</li>
+<li><strong>Stochastic Dominance.</strong> If <span
+class="math inline">P(X&gt;o) \ge P(Y&gt;o)</span> for every outcome
+threshold o, then <span class="math inline">X \succeq Y</span>; if one
+threshold inequality is strict, <span class="math inline">X \succ
+Y</span>. Thresholds use the sure-outcome order.</li>
+<li><strong>Mixture Independence.</strong> For all X,Y,Z and <span
+class="math inline">0&lt;p&lt;1, X \succeq Y</span> iff <span
+class="math inline">M_p(X,Z) \succeq M_p(Y,Z)</span>, where M is the
+fixed randomized-selection construction described in the
+background.</li>
+<li><strong>Comonotonic Sum Invariance.</strong> If X and Z are
+comonotonic, and Y and Z are comonotonic, then <span
+class="math inline">X \succeq Y</span> iff <span class="math inline">X+Z
+\succeq Y+Z</span>. A pair is comonotonic when its members admit
+nondecreasing representations in one common uniform random
+variable.</li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <ul>
-<li><strong>Rational Affine Preservation.</strong> For every rational <span class="math inline">a&gt;0</span> and real <span class="math inline">b</span>: if <span class="math inline">X \succeq Y</span> then <span class="math inline">aX+b \succeq aY+b</span>, and if <span class="math inline">X \succ Y</span> then <span class="math inline">aX+b \succ aY+b</span>.</li>
+<li><strong>Rational Affine Preservation.</strong> For every rational
+<span class="math inline">a&gt;0</span> and real <span
+class="math inline">b</span>: if <span class="math inline">X \succeq
+Y</span> then <span class="math inline">aX+b \succeq aY+b</span>, and if
+<span class="math inline">X \succ Y</span> then <span
+class="math inline">aX+b \succ aY+b</span>.</li>
 </ul>
 <h2 id="notes">Notes</h2>
-<p>Does DU with Comonotonic Sum Invariance preserve weak and strict comparisons under every map aX + b with rational a &gt; 0? The integer factors are proved from Rich Outcomes, Stochastic Equivalence and Comonotonic Sum Invariance alone (comonotonic-sum-implies-integer-affine-preservation), so what is open is the factor 1/n, and X ≽ Y ⇒ X/n ≽ Y/n is the cancellation nX′ ≽ nY′ ⇒ X′ ≽ Y′. Cancellation holds with Totality (comonotonic-sum-totality-imply-rational-scale) and fails without Mixture Independence: cdf-area-unit-threshold satisfies Rich Outcomes, Archimedean Outcomes, Stochastic Equivalence, Stochastic Dominance, Simple EU and Comonotonic Sum Invariance, has X* ≽ 0 with X*/2 ⋡ 0, and satisfies Integer Affine Preservation. What would settle it: a proof, which must use Mixture Independence; or a DU model with Comonotonic Sum Invariance in which some nX ≽ nY holds with X ⋡ Y. Under DU with Stochastic Equivalence the order is determined by the width h = Q_X − Q_Y, every pair whose width is bounded below with positive integral is strictly ranked (a step function below the width with positive integral is the width of a simple comonotonic pair, and the shear is comonotonic), and every pair with a step-function width is ranked by its integral; a refuting pair must therefore have equal finite areas, a width unbounded below, or both areas infinite, and its closure under mixtures and comonotonic shears must stay consistent with strict dominance. Proposed tier: none; a human may set one.</p>
+<p>Does DU with Comonotonic Sum Invariance preserve weak and strict
+comparisons under every map aX + b with rational a &gt; 0? The integer
+factors are proved from Rich Outcomes, Stochastic Equivalence and
+Comonotonic Sum Invariance alone
+(comonotonic-sum-implies-integer-affine-preservation), so what is open
+is the factor 1/n, and X ≽ Y ⇒ X/n ≽ Y/n is the cancellation nX′ ≽ nY′ ⇒
+X′ ≽ Y′. Cancellation holds with Totality
+(comonotonic-sum-totality-imply-rational-scale) and fails without
+Mixture Independence: cdf-area-unit-threshold satisfies Rich Outcomes,
+Archimedean Outcomes, Stochastic Equivalence, Stochastic Dominance,
+Simple EU and Comonotonic Sum Invariance, has X* ≽ 0 with X*/2 ⋡ 0, and
+satisfies Integer Affine Preservation. What would settle it: a proof,
+which must use Mixture Independence; or a DU model with Comonotonic Sum
+Invariance in which some nX ≽ nY holds with X ⋡ Y. Under DU with
+Stochastic Equivalence the order is determined by the width h = Q_X −
+Q_Y, every pair whose width is bounded below with positive integral is
+strictly ranked (a step function below the width with positive integral
+is the width of a simple comonotonic pair, and the shear is
+comonotonic), and every pair with a step-function width is ranked by its
+integral; a refuting pair must therefore have equal finite areas, a
+width unbounded below, or both areas infinite, and its closure under
+mixtures and comonotonic shears must stay consistent with strict
+dominance. Proposed tier: none; a human may set one.</p>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><strong>Goodsell claim 24 Sep</strong> — Zachary Goodsell, Logical Maps session, 24 September 2026: claim that under DU Comonotonic Sum Invariance preserves weak and strict order under positive rational affine maps.</li>
-<li><strong>Claude reduction 24 Sep</strong> — Claude (Fable 5.1), prompted by Zachary Goodsell, Logical Maps, 24 September 2026: the integer case comonotonic-sum-implies-integer-affine-preservation and the reduction of the remainder to integer cancellation; the unit-threshold model shows Mixture Independence is needed.</li>
+<li><strong>Goodsell claim 24 Sep</strong> — Zachary Goodsell, Logical
+Maps session, 24 September 2026: claim that under DU Comonotonic Sum
+Invariance preserves weak and strict order under positive rational
+affine maps.</li>
+<li><strong>Claude reduction 24 Sep</strong> — Claude (Fable 5.1),
+prompted by Zachary Goodsell, Logical Maps, 24 September 2026: the
+integer case comonotonic-sum-implies-integer-affine-preservation and the
+reduction of the remainder to integer cancellation; the unit-threshold
+model shows Mixture Independence is needed.</li>
 </ul>
 <p class="cert">
-Record: <code>topics/unbounded-utility/results/conjectured-du-comonotonic-imply-rational-affine-preservation.yaml</code>
+Record:
+<code>topics/unbounded-utility/results/conjectured-du-comonotonic-imply-rational-affine-preservation.yaml</code>
 </p>
 </body></html>

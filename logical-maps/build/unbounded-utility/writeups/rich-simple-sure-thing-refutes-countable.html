@@ -270,34 +270,96 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
 <script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Rich Outcomes ∧ Simple Expected Utility ∧ Sure-Thing ∧ Countable Sure-Thing ⇒ ⊥</h1></header><p class="cert">
-Result — Source: Infinite Prospects; produced by Jeffrey Sanford Russell and Yoaav Isaacs (Countable Sure-Thing obstruction); Zachary Goodsell (strengthened version recorded here); recorded by GPT-6 (Codex), prompted by Zachary Goodsell, 2026-09-08; transcription and random-variable formulation.
+Result — Source: Infinite Prospects; produced by Jeffrey Sanford Russell
+and Yoaav Isaacs (Countable Sure-Thing obstruction); Zachary Goodsell
+(strengthened version recorded here); recorded by GPT-6 (Codex),
+prompted by Zachary Goodsell, 2026-09-08; transcription and
+random-variable formulation.
 </p>
 <h2 id="premises">Premises</h2>
 <ul>
-<li><strong>Rich Outcomes.</strong> Every real number r occurs as a utility level of a sure outcome: for each <span class="math inline">r \in \mathbb{R}</span> there is an outcome <span class="math inline">o_r</span> with <span class="math inline">u(o_r)=r</span>, with u defined by the normalized binary-mixture comparisons in the background. This does not assert that every outcome has a finite real level.</li>
-<li><strong>Simple Expected Utility.</strong> The normalized real utility chart u is defined on every outcome, is measurable, and ranks every pair of simple random variables exactly by finite expected utility: <span class="math inline">X \succeq Y</span> iff <span class="math inline">E[u(X)] \ge E[u(Y)]</span>. Surjectivity of u is not included here.</li>
-<li><strong>Sure-Thing.</strong> For an event E with <span class="math inline">0&lt;P(E)&lt;1</span>, if <span class="math inline">X|E \sim Y|E</span>, then <span class="math inline">X \succeq Y</span> iff <span class="math inline">X|E^{c} \succeq Y|E^{c}</span>. Here X|E equals X on E and sure 0 elsewhere; it is not a conditional expectation.</li>
-<li><strong>Countable Sure-Thing.</strong> For every countable measurable partition <span class="math inline">(E_n)</span> into events of positive probability, if <span class="math inline">X|E_n \succeq Y|E_n</span> for every n, then <span class="math inline">X \succeq Y</span>. If one conditional comparison is strict, <span class="math inline">X \succ Y</span>.</li>
+<li><strong>Rich Outcomes.</strong> Every real number r occurs as a
+utility level of a sure outcome: for each <span class="math inline">r
+\in \mathbb{R}</span> there is an outcome <span
+class="math inline">o_r</span> with <span
+class="math inline">u(o_r)=r</span>, with u defined by the normalized
+binary-mixture comparisons in the background. This does not assert that
+every outcome has a finite real level.</li>
+<li><strong>Simple Expected Utility.</strong> The normalized real
+utility chart u is defined on every outcome, is measurable, and ranks
+every pair of simple random variables exactly by finite expected
+utility: <span class="math inline">X \succeq Y</span> iff <span
+class="math inline">E[u(X)] \ge E[u(Y)]</span>. Surjectivity of u is not
+included here.</li>
+<li><strong>Sure-Thing.</strong> For an event E with <span
+class="math inline">0&lt;P(E)&lt;1</span>, if <span
+class="math inline">X|E \sim Y|E</span>, then <span
+class="math inline">X \succeq Y</span> iff <span
+class="math inline">X|E^{c} \succeq Y|E^{c}</span>. Here X|E equals X on
+E and sure 0 elsewhere; it is not a conditional expectation.</li>
+<li><strong>Countable Sure-Thing.</strong> For every countable
+measurable partition <span class="math inline">(E_n)</span> into events
+of positive probability, if <span class="math inline">X|E_n \succeq
+Y|E_n</span> for every n, then <span class="math inline">X \succeq
+Y</span>. If one conditional comparison is strict, <span
+class="math inline">X \succ Y</span>.</li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <ul>
 <li><strong>⊥.</strong> These premises cannot all hold together.</li>
 </ul>
 <h2 id="proof">Proof</h2>
-<p>Use the strengthened St Petersburg contradiction from §2.3. Simple EU supplies Restricted Totality, Restricted Stochastic Equivalence and finite conditional EU calculations. With independent sequences of fair tosses let A be first-toss St Petersburg, B the same starting at toss 2, and C an independent St Petersburg variable. Conditional on <span class="math inline">B=2^n, A</span> is a fair mixture of 2 and <span class="math inline">2^{n+1}</span>, so its conditional expected value exceeds B by 1; Countable Sure-Thing would give <span class="math inline">A\succ B</span>. Partition the A,C space by the maximum of their finite stopping times. On each cell they are simple and their restricted laws coincide, so Countable Sure-Thing would give <span class="math inline">A\sim C</span>. Repeat for B,C to get <span class="math inline">B\sim C</span>, contradicting Preordering. Null sets can be assigned a finite outcome without changing the simple-law comparisons.</p>
+<p>Use the strengthened St Petersburg contradiction from §2.3. Simple EU
+supplies Restricted Totality, Restricted Stochastic Equivalence and
+finite conditional EU calculations. With independent sequences of fair
+tosses let A be first-toss St Petersburg, B the same starting at toss 2,
+and C an independent St Petersburg variable. Conditional on <span
+class="math inline">B=2^n, A</span> is a fair mixture of 2 and <span
+class="math inline">2^{n+1}</span>, so its conditional expected value
+exceeds B by 1; Countable Sure-Thing would give <span
+class="math inline">A\succ B</span>. Partition the A,C space by the
+maximum of their finite stopping times. On each cell they are simple and
+their restricted laws coincide, so Countable Sure-Thing would give <span
+class="math inline">A\sim C</span>. Repeat for B,C to get <span
+class="math inline">B\sim C</span>, contradicting Preordering. Null sets
+can be assigned a finite outcome without changing the simple-law
+comparisons.</p>
 <h2 id="notes">Notes</h2>
-<p>Russell and Isaacs supply the Countable Sure-Thing principle and original St Petersburg obstruction. Goodsell, Decision theory unbound, §2.3, pp. 675–676 supplies the strengthened version and proof recorded here. The arrow is attributed to the original result, with the strengthening credited separately. Premises, proof and verification status are unchanged.</p>
+<p>Russell and Isaacs supply the Countable Sure-Thing principle and
+original St Petersburg obstruction. Goodsell, Decision theory unbound,
+§2.3, pp. 675–676 supplies the strengthened version and proof recorded
+here. The arrow is attributed to the original result, with the
+strengthening credited separately. Premises, proof and verification
+status are unchanged.</p>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><strong>Russell &amp; Isaacs (2021)</strong> — Russell, J. S., &amp; Isaacs, Y. (2021). Infinite prospects. Philosophy and Phenomenological Research, 103(1), 178–198. §2, author’s April 2020 manuscript pp. 6–8; §4, p. 15, footnote 17. https://doi.org/10.1111/phpr.12704</li>
-<li><strong>Decision Theory Unbound</strong> — Goodsell, Decision theory unbound, Noûs 58 (2024), 669–695; online 2023; DOI 10.1111/nous.12473, §2.3, pp. 675–676</li>
+<li><strong>Russell &amp; Isaacs (2021)</strong> — Russell, J. S., &amp;
+Isaacs, Y. (2021). Infinite prospects. Philosophy and Phenomenological
+Research, 103(1), 178–198. §2, author’s April 2020 manuscript pp. 6–8;
+§4, p. 15, footnote 17. https://doi.org/10.1111/phpr.12704</li>
+<li><strong>Decision Theory Unbound</strong> — Goodsell, Decision theory
+unbound, Noûs 58 (2024), 669–695; online 2023; DOI 10.1111/nous.12473,
+§2.3, pp. 675–676</li>
 </ul>
 <p class="cert">
-Record: <code>topics/unbounded-utility/results/rich-simple-sure-thing-refutes-countable.yaml</code>
+Record:
+<code>topics/unbounded-utility/results/rich-simple-sure-thing-refutes-countable.yaml</code>
 </p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Origin: <a href="https://doi.org/10.1111/phpr.12704">Infinite prospects</a>.</strong> Russell, J. S., &amp; Isaacs, Y. (2021). Infinite prospects. Philosophy and Phenomenological Research, 103(1), 178–198. — §2, author’s April 2020 manuscript pp. 6–8; §4, p. 15, footnote 17. Original St Petersburg obstruction to Countable Sure-Thing with unbounded real utilities. The sufficient premises and proof recorded here follow Goodsell’s strengthened version in Decision theory unbound, §2.3.</li>
-<li><strong>Proof: <a href="https://doi.org/10.1111/nous.12473">Decision theory unbound</a>.</strong> (<a href="../sources/Nous%20-%202023%20-%20Goodsell%20-%20Decision%20theory%20unbound%20%281%29.pdf">PDF</a>) Zachary Goodsell (2024). Decision theory unbound. Noûs, 58, 669–695. First published online in 2023. — §2.3, pp. 675–676</li>
+<li><strong>Origin: <a
+href="https://doi.org/10.1111/phpr.12704">Infinite
+prospects</a>.</strong> Russell, J. S., &amp; Isaacs, Y. (2021).
+Infinite prospects. Philosophy and Phenomenological Research, 103(1),
+178–198. — §2, author’s April 2020 manuscript pp. 6–8; §4, p. 15,
+footnote 17. Original St Petersburg obstruction to Countable Sure-Thing
+with unbounded real utilities. The sufficient premises and proof
+recorded here follow Goodsell’s strengthened version in Decision theory
+unbound, §2.3.</li>
+<li><strong>Proof: <a href="https://doi.org/10.1111/nous.12473">Decision
+theory unbound</a>.</strong> (<a
+href="../sources/Nous%20-%202023%20-%20Goodsell%20-%20Decision%20theory%20unbound%20%281%29.pdf">PDF</a>)
+Zachary Goodsell (2024). Decision theory unbound. Noûs, 58, 669–695.
+First published online in 2023. — §2.3, pp. 675–676</li>
 </ul>
 </body></html>

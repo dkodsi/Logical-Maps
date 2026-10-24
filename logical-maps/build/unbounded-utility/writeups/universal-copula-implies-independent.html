@@ -270,30 +270,63 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
 <script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Universal Copula Sum Invariance ⇒ Independent Sum Invariance</h1></header><p class="cert">
-Result — Source: Misc.; produced by GPT-6 (Codex), prompted by Zachary Goodsell; recorded by GPT-6 (Codex), prompted by Zachary Goodsell, 2026-09-09.
+Result — Source: Misc.; produced by GPT-6 (Codex), prompted by Zachary
+Goodsell; recorded by GPT-6 (Codex), prompted by Zachary Goodsell,
+2026-09-09.
 </p>
 <h2 id="premises">Premises</h2>
 <ul>
-<li><strong>Universal Copula Sum Invariance.</strong> For every copula <span class="math inline">C, \operatorname{SC}(C)</span> holds. A copula C is a Borel probability measure on <span class="math inline">[0,1]^{2}</span> with both marginals uniform. Write <span class="math inline">H_C(u,v)=C([0,u]\times [0,v])</span>. A real-utility pair (A,B) admits C when <span class="math inline">P(A\le a,B\le b)=H_C(F_A(a),F_B(b))</span> for every real a,b. Define <span class="math inline">\operatorname{SC}(C)</span>: for every eligible triple X,Y,Z for which both (X,Z) and (Y,Z) admit this same <span class="math inline">C, X \succeq Y</span> iff <span class="math inline">X+Z \succeq Y+Z</span>.</li>
+<li><strong>Universal Copula Sum Invariance.</strong> For every copula
+<span class="math inline">C, \operatorname{SC}(C)</span> holds. A copula
+C is a Borel probability measure on <span
+class="math inline">[0,1]^{2}</span> with both marginals uniform. Write
+<span class="math inline">H_C(u,v)=C([0,u]\times [0,v])</span>. A
+real-utility pair (A,B) admits C when <span class="math inline">P(A\le
+a,B\le b)=H_C(F_A(a),F_B(b))</span> for every real a,b. Define <span
+class="math inline">\operatorname{SC}(C)</span>: for every eligible
+triple X,Y,Z for which both (X,Z) and (Y,Z) admit this same <span
+class="math inline">C, X \succeq Y</span> iff <span
+class="math inline">X+Z \succeq Y+Z</span>.</li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <ul>
-<li><strong>Independent Sum Invariance.</strong> Whenever Z is independent of the pair <span class="math inline">(X,Y), X \succeq Y</span> iff <span class="math inline">X+Z \succeq Y+Z</span>.</li>
+<li><strong>Independent Sum Invariance.</strong> Whenever Z is
+independent of the pair <span class="math inline">(X,Y), X \succeq
+Y</span> iff <span class="math inline">X+Z \succeq Y+Z</span>.</li>
 </ul>
 <h2 id="proof">Proof</h2>
-<p>If Z is independent of (X,Y), it is independent of X and independent of Y. Hence the joint CDFs of (X,Z) and (Y,Z) both factor through the product copula <span class="math inline">H(u,v)=</span>uv. Instantiate Universal Copula Sum Consistency at that copula and apply it to the original triple.</p>
+<p>If Z is independent of (X,Y), it is independent of X and independent
+of Y. Hence the joint CDFs of (X,Z) and (Y,Z) both factor through the
+product copula <span class="math inline">H(u,v)=</span>uv. Instantiate
+Universal Copula Sum Consistency at that copula and apply it to the
+original triple.</p>
 <h2 id="notes">Notes</h2>
-<p>The converse construction needs care: the product-copula condition gives pairwise independence from Z, which need not be independence from the pair (X,Y).</p>
+<p>The converse construction needs care: the product-copula condition
+gives pairwise independence from Z, which need not be independence from
+the pair (X,Y).</p>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><strong>GPT-6 generated 9 Sep</strong> — GPT-6 (Codex), prompted by Zachary Goodsell, original copula sum consistency definitions and connecting proofs recorded in this project, 9 September 2026, implementing Zachary Goodsell’s proposal.</li>
-<li><strong>Zach Goodsell proposal 9 Sep</strong> — Zachary Goodsell, project TODO.md copula-sum proposal and request to add universal/existential variants, 9 September 2026; precise definitions recorded by GPT-6 (Codex).</li>
+<li><strong>GPT-6 generated 9 Sep</strong> — GPT-6 (Codex), prompted by
+Zachary Goodsell, original copula sum consistency definitions and
+connecting proofs recorded in this project, 9 September 2026,
+implementing Zachary Goodsell’s proposal.</li>
+<li><strong>Zach Goodsell proposal 9 Sep</strong> — Zachary Goodsell,
+project TODO.md copula-sum proposal and request to add
+universal/existential variants, 9 September 2026; precise definitions
+recorded by GPT-6 (Codex).</li>
 </ul>
 <p class="cert">
-Record: <code>topics/unbounded-utility/results/universal-copula-implies-independent.yaml</code>
+Record:
+<code>topics/unbounded-utility/results/universal-copula-implies-independent.yaml</code>
 </p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Background: <a href="https://doi.org/10.1111/nous.12530">Flummoxing expectations</a>.</strong> Hayden Wilkinson (2025). Flummoxing expectations. Noûs, 59(3), 700–728. First published online in 2024. — §6.1. Source of Independent Sum Consistency; see the principle reference for the changed independence condition. The proof or conjecture recorded here retains its separate attribution.</li>
+<li><strong>Background: <a
+href="https://doi.org/10.1111/nous.12530">Flummoxing
+expectations</a>.</strong> Hayden Wilkinson (2025). Flummoxing
+expectations. Noûs, 59(3), 700–728. First published online in 2024. —
+§6.1. Source of Independent Sum Consistency; see the principle reference
+for the changed independence condition. The proof or conjecture recorded
+here retains its separate attribution.</li>
 </ul>
 </body></html>

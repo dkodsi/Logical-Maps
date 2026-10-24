@@ -269,64 +269,237 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <link rel="stylesheet" href="../math/katex.min.css">
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
-<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>CDF-area conclosure</h1></header><p>This model satisfies <strong>DU</strong>, together with CDF-Area Extension, Independent Sum Invariance, Positive Affine Invariance, and Reflection Anti-Invariance. It fails Totality and Symmetric Gambles Are Neutral. Since DTU is DU plus Totality, this is a DU model but not a DTU model. Thus reflection anti-invariance remains compatible with independent sums when completeness is dropped.</p>
-<p><strong>Original work: construction-stage extraction and model adaptation/property audit.</strong> The CDF-area seed and conclosure construction belong to Zachary Goodsell, <em>Unbounded Utility and Background Risk</em> <strong>(unpublished)</strong>, 5 June 2026, sections 3–4, pp. 7–14. The supplied manuscript is marked “do not cite” and erroneous in its symmetric total-extension claim; this record does not reinstate that claim. This intermediate stage already appears in the <a href="conjectured-total-independent-sum-extension.html">recorded total-extension proof</a>. GPT-6 (Codex), 9 September 2026, supplied the separate model record, the conjugation checks for its affine/reflection symmetries, and the deduction of incompleteness from the completed Goodsell stable-law obstruction. Conclosure is not presented as an independently invented AI construction, and no literature-novelty claim is made. No independent checker or Lean verification is claimed.</p>
-<h2 id="construction-and-area-preservation">Construction and area preservation</h2>
-<p>Use real outcomes and identity utility. Let <span class="math inline">V</span> be the vector space of survival functions of finite signed Borel measures of total mass zero, identified almost everywhere. Each <span class="math inline">S_X-S_Y</span> belongs to <span class="math inline">V</span>. Define</p>
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>CDF-area conclosure</h1></header><p>This model satisfies <strong>DU</strong>, together with CDF-Area
+Extension, Independent Sum Invariance, Positive Affine Invariance, and
+Reflection Anti-Invariance. It fails Totality and Symmetric Gambles Are
+Neutral. Since DTU is DU plus Totality, this is a DU model but not a DTU
+model. Thus reflection anti-invariance remains compatible with
+independent sums when completeness is dropped.</p>
+<p><strong>Original work: construction-stage extraction and model
+adaptation/property audit.</strong> The CDF-area seed and conclosure
+construction belong to Zachary Goodsell, <em>Unbounded Utility and
+Background Risk</em> <strong>(unpublished)</strong>, 5 June 2026,
+sections 3–4, pp. 7–14. The supplied manuscript is marked “do not cite”
+and erroneous in its symmetric total-extension claim; this record does
+not reinstate that claim. This intermediate stage already appears in the
+<a href="conjectured-total-independent-sum-extension.html">recorded
+total-extension proof</a>. GPT-6 (Codex), 9 September 2026, supplied the
+separate model record, the conjugation checks for its affine/reflection
+symmetries, and the deduction of incompleteness from the completed
+Goodsell stable-law obstruction. Conclosure is not presented as an
+independently invented AI construction, and no literature-novelty claim
+is made. No independent checker or Lean verification is claimed.</p>
+<h2 id="construction-and-area-preservation">Construction and area
+preservation</h2>
+<p>Use real outcomes and identity utility. Let <span
+class="math inline">V</span> be the vector space of survival functions
+of finite signed Borel measures of total mass zero, identified almost
+everywhere. Each <span class="math inline">S_X-S_Y</span> belongs to
+<span class="math inline">V</span>. Define</p>
 <p><span class="math display">C=\left\{v\in V:\int v_-&lt;\infty,\quad
                      \int v_+\geq\int v_-\right\},</span></p>
 <p>and, for probability laws <span class="math inline">\xi</span>,</p>
 <p><span class="math display">T_\xi v(t)=\int v(t-z)\,d\xi(z),\qquad
- D=\operatorname{Sat}(C)=\{v:\exists\xi,\ T_\xi v\in C\}.</span></p>
-<p>Then set <span class="math inline">X\succeq_DY</span> precisely when <span class="math inline">S_X-S_Y\in D</span>. This is Goodsell’s conclosure of the area relation before taking any maximal total extension.</p>
-<p>Here are the closure details, also recorded in sections 1–3 of the <a href="conjectured-total-independent-sum-extension.html">total-extension construction</a>.</p>
+D=\operatorname{Sat}(C)=\{v:\exists\xi,\ T_\xi v\in C\}.</span></p>
+<p>Then set <span class="math inline">X\succeq_DY</span> precisely when
+<span class="math inline">S_X-S_Y\in D</span>. This is Goodsell’s
+conclosure of the area relation before taking any maximal total
+extension.</p>
+<p>Here are the closure details, also recorded in sections 1–3 of the <a
+href="conjectured-total-independent-sum-extension.html">total-extension
+construction</a>.</p>
 <ol type="1">
-<li><span class="math inline">C</span> is a cone, and forward convolution preserves all of its weak and strict comparisons. Indeed <span class="math inline">(T_\xi v)_-\leq T_\xi(v_-)</span>; Tonelli preserves the integrals of the separately convolved positive and negative parts. When the negative part is integrable, the signed integral is preserved, including a possible positive-infinite value.</li>
-<li>If <span class="math inline">T_\xi v,T_\eta w\in C</span>, then <span class="math inline">T_{\xi*\eta}(v+w)=T_\eta T_\xi v+T_\xi T_\eta w\in C</span>. Together with positive scalar closure, this makes <span class="math inline">D</span> a cone containing <span class="math inline">C</span>; hence it induces a reflexive transitive relation.</li>
-<li>For every <span class="math inline">\rho</span>, <span class="math inline">v\in D</span> iff <span class="math inline">T_\rho v\in D</span>. In the forward direction, convolve an existing witness by <span class="math inline">\rho</span> and use commutation. In the reverse direction, compose <span class="math inline">\rho</span> with a witnessing convolution.</li>
-<li>If <span class="math inline">v\in C\setminus(-C)</span> but <span class="math inline">-v\in D</span>, some <span class="math inline">\xi</span> would give <span class="math inline">-T_\xi v\in C</span>. Forward strict preservation simultaneously gives <span class="math inline">T_\xi v\in C\setminus(-C)</span>, a contradiction. Thus <span class="math inline">D</span> preserves every strict area comparison, as well as every weak one.</li>
+<li><span class="math inline">C</span> is a cone, and forward
+convolution preserves all of its weak and strict comparisons. Indeed
+<span class="math inline">(T_\xi v)_-\leq T_\xi(v_-)</span>; Tonelli
+preserves the integrals of the separately convolved positive and
+negative parts. When the negative part is integrable, the signed
+integral is preserved, including a possible positive-infinite
+value.</li>
+<li>If <span class="math inline">T_\xi v,T_\eta w\in C</span>, then
+<span class="math inline">T_{\xi*\eta}(v+w)=T_\eta T_\xi v+T_\xi T_\eta
+w\in C</span>. Together with positive scalar closure, this makes <span
+class="math inline">D</span> a cone containing <span
+class="math inline">C</span>; hence it induces a reflexive transitive
+relation.</li>
+<li>For every <span class="math inline">\rho</span>, <span
+class="math inline">v\in D</span> iff <span class="math inline">T_\rho
+v\in D</span>. In the forward direction, convolve an existing witness by
+<span class="math inline">\rho</span> and use commutation. In the
+reverse direction, compose <span class="math inline">\rho</span> with a
+witnessing convolution.</li>
+<li>If <span class="math inline">v\in C\setminus(-C)</span> but <span
+class="math inline">-v\in D</span>, some <span
+class="math inline">\xi</span> would give <span
+class="math inline">-T_\xi v\in C</span>. Forward strict preservation
+simultaneously gives <span class="math inline">T_\xi v\in
+C\setminus(-C)</span>, a contradiction. Thus <span
+class="math inline">D</span> preserves every strict area comparison, as
+well as every weak one.</li>
 </ol>
-<p>Consequently the model satisfies CDF-Area Extension. Expected Utility, Simple EU, Relative Expectation, and Stochastic Dominance follow by the recorded area arguments. Its sure-outcome chart is the identity, so Rich Outcomes and Archimedean Outcomes hold. Preferences depend only on laws, so Stochastic Equivalence holds.</p>
-<p>Mixtures with a common law multiply the survival difference by <span class="math inline">p&gt;0</span>. Cone membership is equivalent under positive scalar multiplication, proving Mixture Independence. Independent common summands apply <span class="math inline">T_\xi</span> to the survival difference. Property 3 proves Independent Sum Invariance, including cancellation and hence both weak and strict forward preservation.</p>
-<h2 id="the-inherited-outcome-symmetries">The inherited outcome symmetries</h2>
-<p>For reflection and reversal of the compared pair, the new survival difference is <span class="math inline">Rv(t)=v(-t)</span> almost everywhere. Both areas of <span class="math inline">v</span> are unchanged under <span class="math inline">R</span>, so <span class="math inline">RC=C</span>. If <span class="math inline">\check\xi</span> is the reflected law, then</p>
+<p>Consequently the model satisfies CDF-Area Extension. Expected
+Utility, Simple EU, Relative Expectation, and Stochastic Dominance
+follow by the recorded area arguments. Its sure-outcome chart is the
+identity, so Rich Outcomes and Archimedean Outcomes hold. Preferences
+depend only on laws, so Stochastic Equivalence holds.</p>
+<p>Mixtures with a common law multiply the survival difference by <span
+class="math inline">p&gt;0</span>. Cone membership is equivalent under
+positive scalar multiplication, proving Mixture Independence.
+Independent common summands apply <span class="math inline">T_\xi</span>
+to the survival difference. Property 3 proves Independent Sum
+Invariance, including cancellation and hence both weak and strict
+forward preservation.</p>
+<h2 id="the-inherited-outcome-symmetries">The inherited outcome
+symmetries</h2>
+<p>For reflection and reversal of the compared pair, the new survival
+difference is <span class="math inline">Rv(t)=v(-t)</span> almost
+everywhere. Both areas of <span class="math inline">v</span> are
+unchanged under <span class="math inline">R</span>, so <span
+class="math inline">RC=C</span>. If <span
+class="math inline">\check\xi</span> is the reflected law, then</p>
 <p><span class="math display">R T_\xi = T_{\check\xi}R.</span></p>
-<p>Reflecting a witness for <span class="math inline">v\in D</span> therefore supplies a witness for <span class="math inline">Rv\in D</span>. Applying reflection twice gives the converse. As <span class="math inline">Rv</span> is the survival difference for <span class="math inline">-Y</span> versus <span class="math inline">-X</span> when <span class="math inline">v=S_X-S_Y</span>, this is exactly Reflection Anti-Invariance:</p>
-<p><span class="math display">X\succeq_DY\quad\Longleftrightarrow\quad -Y\succeq_D-X.</span></p>
-<p>For <span class="math inline">a&gt;0</span> and <span class="math inline">b\in\mathbb R</span>, put <span class="math inline">A_{a,b}v(t)=v((t-b)/a)</span>. The two areas are each multiplied by <span class="math inline">a</span>, so <span class="math inline">A_{a,b}C=C</span>. If <span class="math inline">a\xi</span> denotes the pushforward of <span class="math inline">\xi</span> by <span class="math inline">z\mapsto az</span>, then</p>
+<p>Reflecting a witness for <span class="math inline">v\in D</span>
+therefore supplies a witness for <span class="math inline">Rv\in
+D</span>. Applying reflection twice gives the converse. As <span
+class="math inline">Rv</span> is the survival difference for <span
+class="math inline">-Y</span> versus <span class="math inline">-X</span>
+when <span class="math inline">v=S_X-S_Y</span>, this is exactly
+Reflection Anti-Invariance:</p>
+<p><span class="math display">X\succeq_DY\quad\Longleftrightarrow\quad
+-Y\succeq_D-X.</span></p>
+<p>For <span class="math inline">a&gt;0</span> and <span
+class="math inline">b\in\mathbb R</span>, put <span
+class="math inline">A_{a,b}v(t)=v((t-b)/a)</span>. The two areas are
+each multiplied by <span class="math inline">a</span>, so <span
+class="math inline">A_{a,b}C=C</span>. If <span
+class="math inline">a\xi</span> denotes the pushforward of <span
+class="math inline">\xi</span> by <span class="math inline">z\mapsto
+az</span>, then</p>
 <p><span class="math display">A_{a,b}T_\xi=T_{a\xi}A_{a,b}.</span></p>
-<p>Thus a witness for <span class="math inline">v\in D</span> supplies one for <span class="math inline">A_{a,b}v\in D</span>. Using the inverse affine transformation proves the converse, establishing Positive Affine Invariance. The kernel is scaled by <span class="math inline">a</span>; it is not also translated by <span class="math inline">b</span>, since <span class="math inline">b</span> already translates the compared gambles.</p>
+<p>Thus a witness for <span class="math inline">v\in D</span> supplies
+one for <span class="math inline">A_{a,b}v\in D</span>. Using the
+inverse affine transformation proves the converse, establishing Positive
+Affine Invariance. The kernel is scaled by <span
+class="math inline">a</span>; it is not also translated by <span
+class="math inline">b</span>, since <span class="math inline">b</span>
+already translates the compared gambles.</p>
 <h2 id="why-the-model-is-incomplete">Why the model is incomplete</h2>
-<p>The <a href="levy-refutes-neutral-independent-preservation.html">completed Lévy obstruction</a> shows that Rich Outcomes, Stochastic Dominance, Mixture Independence, and Independent Sum Preservation cannot coexist with Symmetric Gambles Are Neutral. The model has all four antecedent properties, so it fails the neutrality principle.</p>
-<p>The obstruction gives concrete candidate witnesses: for independent positive Lévy variables <span class="math inline">L_1,L_2</span> and an independent fair sign <span class="math inline">\varepsilon</span>, at least one of</p>
-<p><span class="math display">W=\varepsilon L_1\qquad\text{and}\qquad D_0=L_2-L_1</span></p>
-<p>is not indifferent to zero in this model. Both have symmetric laws. We do not claim to determine which candidate the existential convolution test leaves undecided.</p>
-<p>For any symmetric-law variable <span class="math inline">X</span>, Stochastic Equivalence gives <span class="math inline">X\sim-X</span>. If <span class="math inline">X\succeq_D0</span>, reflection gives <span class="math inline">0\succeq_D-X</span>, hence <span class="math inline">0\succeq_DX</span>. If <span class="math inline">0\succeq_DX</span>, the reversed argument gives <span class="math inline">X\succeq_D0</span>. Thus a symmetric variable comparable with zero must be indifferent to zero. The nonneutral candidate above is therefore <strong>incomparable</strong> with zero, proving failure of Totality. This also explains why the symmetry inherited by this incomplete model does not contradict the new impossibility result.</p>
-<p>The construction quantifies over arbitrary probability laws, so this is an existence model rather than an executable ranking algorithm. Its listed check, <code>checks/levy_obstruction.py</code>, only verifies finite numerical diagnostics for the analytic witness used to establish these failures. Comonotonic Sum Invariance and other unproved properties are left open; they are not inherited automatically merely because they hold in the unsaturated area preorder.</p>
-<h2 id="partial-self-similarity-analysis">Partial self-similarity analysis</h2>
-<p><strong>Added 25 September 2026; the self-similarity verdict remains open.</strong> DeepSeek (<code>deepseek-flash</code>) proposed this line of analysis in the theorem trawl. GPT-6 (Codex) checked the following restricted claims, supplied the explicit lower-tail bound, and removed the draft’s unsupported universal conclusion. This review concerns the addition, not a new audit of the original construction, and supplies no Lean verification.</p>
-<p>Let <span class="math inline">A</span> be alternating St Petersburg and <span class="math inline">c=-1/2</span>. As verified for the <a href="cdf-area-preorder.html">exact area model</a>, both satisfy <span class="math inline">V\sim F(V)</span> with <span class="math inline">F(V)=M_{1/2}(-2V,-2)</span>; those comparisons also hold in this conclosure. Negative Affine Anti-Invariance (from the two inherited symmetries) and Mixture Independence imply</p>
-<p><span class="math display">X\succ Y\quad\Longrightarrow\quad F(Y)\succ F(X).</span></p>
-<p>If two fixed points were strictly ordered, substituting their indifferences would give the opposite strict order, contradicting transitivity. Thus two fixed points are either indifferent or incomparable. In particular, with <span class="math inline">E=S_A-S_c</span>,</p>
+<p>The <a
+href="levy-refutes-neutral-independent-preservation.html">completed Lévy
+obstruction</a> shows that Rich Outcomes, Stochastic Dominance, Mixture
+Independence, and Independent Sum Preservation cannot coexist with
+Symmetric Gambles Are Neutral. The model has all four antecedent
+properties, so it fails the neutrality principle.</p>
+<p>The obstruction gives concrete candidate witnesses: for independent
+positive Lévy variables <span class="math inline">L_1,L_2</span> and an
+independent fair sign <span class="math inline">\varepsilon</span>, at
+least one of</p>
+<p><span class="math display">W=\varepsilon L_1\qquad\text{and}\qquad
+D_0=L_2-L_1</span></p>
+<p>is not indifferent to zero in this model. Both have symmetric laws.
+We do not claim to determine which candidate the existential convolution
+test leaves undecided.</p>
+<p>For any symmetric-law variable <span class="math inline">X</span>,
+Stochastic Equivalence gives <span class="math inline">X\sim-X</span>.
+If <span class="math inline">X\succeq_D0</span>, reflection gives <span
+class="math inline">0\succeq_D-X</span>, hence <span
+class="math inline">0\succeq_DX</span>. If <span
+class="math inline">0\succeq_DX</span>, the reversed argument gives
+<span class="math inline">X\succeq_D0</span>. Thus a symmetric variable
+comparable with zero must be indifferent to zero. The nonneutral
+candidate above is therefore <strong>incomparable</strong> with zero,
+proving failure of Totality. This also explains why the symmetry
+inherited by this incomplete model does not contradict the new
+impossibility result.</p>
+<p>The construction quantifies over arbitrary probability laws, so this
+is an existence model rather than an executable ranking algorithm. Its
+listed check, <code>checks/levy_obstruction.py</code>, only verifies
+finite numerical diagnostics for the analytic witness used to establish
+these failures. Comonotonic Sum Invariance and other unproved properties
+are left open; they are not inherited automatically merely because they
+hold in the unsaturated area preorder.</p>
+<h2 id="partial-self-similarity-analysis">Partial self-similarity
+analysis</h2>
+<p><strong>Added 25 September 2026; the self-similarity verdict remains
+open.</strong> DeepSeek (<code>deepseek-flash</code>) proposed this line
+of analysis in the theorem trawl. GPT-6 (Codex) checked the following
+restricted claims, supplied the explicit lower-tail bound, and removed
+the draft’s unsupported universal conclusion. This review concerns the
+addition, not a new audit of the original construction, and supplies no
+Lean verification.</p>
+<p>Let <span class="math inline">A</span> be alternating St Petersburg
+and <span class="math inline">c=-1/2</span>. As verified for the <a
+href="cdf-area-preorder.html">exact area model</a>, both satisfy <span
+class="math inline">V\sim F(V)</span> with <span
+class="math inline">F(V)=M_{1/2}(-2V,-2)</span>; those comparisons also
+hold in this conclosure. Negative Affine Anti-Invariance (from the two
+inherited symmetries) and Mixture Independence imply</p>
+<p><span class="math display">X\succ Y\quad\Longrightarrow\quad
+F(Y)\succ F(X).</span></p>
+<p>If two fixed points were strictly ordered, substituting their
+indifferences would give the opposite strict order, contradicting
+transitivity. Thus two fixed points are either indifferent or
+incomparable. In particular, with <span
+class="math inline">E=S_A-S_c</span>,</p>
 <p><span class="math display">A\sim_Dc\quad\Longleftrightarrow\quad
- E\in D\cap(-D)\quad\Longleftrightarrow\quad E\in D.</span></p>
-<p>The last equivalence uses the impossibility of a strict comparison for this pair. By the definition of conclosure, deciding it amounts to deciding whether some probability law <span class="math inline">\xi</span> satisfies <span class="math inline">T_\xi E\in C</span>. If <span class="math inline">Z</span> has law <span class="math inline">\xi</span> and is independent of <span class="math inline">A</span>, then</p>
+E\in D\cap(-D)\quad\Longleftrightarrow\quad E\in D.</span></p>
+<p>The last equivalence uses the impossibility of a strict comparison
+for this pair. By the definition of conclosure, deciding it amounts to
+deciding whether some probability law <span
+class="math inline">\xi</span> satisfies <span class="math inline">T_\xi
+E\in C</span>. If <span class="math inline">Z</span> has law <span
+class="math inline">\xi</span> and is independent of <span
+class="math inline">A</span>, then</p>
 <p><span class="math display">T_\xi E=S_{A+Z}-S_{Z-1/2}.</span></p>
-<p>Both requirements of the cone remain necessary: the negative part must have finite integral, and its integral must not exceed the positive area.</p>
-<h3 id="kernels-with-a-light-lower-tail-cannot-work">Kernels with a light lower tail cannot work</h3>
-<p>Suppose <span class="math inline">\Pr(Z\le-t)=o(1/t)</span> as <span class="math inline">t\to\infty</span>. Choose <span class="math inline">M\ge0</span> with <span class="math inline">q=\Pr(Z\le M)&gt;0</span>. For <span class="math inline">t\ge2</span>, choose the smallest negative-atom magnitude <span class="math inline">b=2^{2k+1}\ge t</span>. It satisfies <span class="math inline">b&lt;4t</span>, so</p>
-<p><span class="math display">\Pr(A\le-t)\ge\Pr(A=-b)=1/b\ge1/(4t).</span></p>
-<p>Independence therefore gives, for sufficiently large <span class="math inline">u\ge M</span>,</p>
+<p>Both requirements of the cone remain necessary: the negative part
+must have finite integral, and its integral must not exceed the positive
+area.</p>
+<h3 id="kernels-with-a-light-lower-tail-cannot-work">Kernels with a
+light lower tail cannot work</h3>
+<p>Suppose <span class="math inline">\Pr(Z\le-t)=o(1/t)</span> as <span
+class="math inline">t\to\infty</span>. Choose <span
+class="math inline">M\ge0</span> with <span
+class="math inline">q=\Pr(Z\le M)&gt;0</span>. For <span
+class="math inline">t\ge2</span>, choose the smallest negative-atom
+magnitude <span class="math inline">b=2^{2k+1}\ge t</span>. It satisfies
+<span class="math inline">b&lt;4t</span>, so</p>
+<p><span
+class="math display">\Pr(A\le-t)\ge\Pr(A=-b)=1/b\ge1/(4t).</span></p>
+<p>Independence therefore gives, for sufficiently large <span
+class="math inline">u\ge M</span>,</p>
 <p><span class="math display">\Pr(A+Z\le-u)\ge q\Pr(A\le-u-M)
   \ge\frac{q}{4(u+M)}\ge\frac{q}{8u}.</span></p>
 <p>Writing <span class="math inline">h=T_\xi E</span>, we have</p>
 <p><span class="math display">-h(-u)=\Pr(A+Z\le-u)-\Pr(Z\le-u+1/2)
   \ge\frac{q}{16u}</span></p>
-<p>for all sufficiently large <span class="math inline">u</span>, because the second probability is <span class="math inline">o(1/u)</span>. Hence <span class="math inline">\int h_-=\infty</span> and this kernel cannot witness <span class="math inline">E\in D</span>. This includes constants, kernels bounded below, and kernels with finite expected negative part. It does not exhaust arbitrary probability laws or impose a power-law form on the remaining kernels.</p>
-<p>Finding a successful kernel would settle <strong>this pair’s</strong> indifference and, by Stochastic Equivalence, the alternating St Petersburg evaluation in this model. It would not prove either universal self-similarity axiom or the Pasadena evaluation. Conversely, excluding every kernel would make this pair a counterexample to both self-similarity axioms. Neither of those global conclusions has been established; no model-property flag is added.</p>
-<p>The original proposal and its unfinished long response remain in quarantine, under <code>checkpoint-4efdb29afea94da583b8df9975e053e4</code> and <code>unfinished/trawl-8b97ab5120b042c4811b0d9f70fe0695.md</code>. They are not proofs of the remaining question. The YAML certificate retains the actual DeepSeek discovery metadata and the separately dated, scoped GPT-6 review and local admission record.</p>
+<p>for all sufficiently large <span class="math inline">u</span>,
+because the second probability is <span
+class="math inline">o(1/u)</span>. Hence <span class="math inline">\int
+h_-=\infty</span> and this kernel cannot witness <span
+class="math inline">E\in D</span>. This includes constants, kernels
+bounded below, and kernels with finite expected negative part. It does
+not exhaust arbitrary probability laws or impose a power-law form on the
+remaining kernels.</p>
+<p>Finding a successful kernel would settle <strong>this pair’s</strong>
+indifference and, by Stochastic Equivalence, the alternating St
+Petersburg evaluation in this model. It would not prove either universal
+self-similarity axiom or the Pasadena evaluation. Conversely, excluding
+every kernel would make this pair a counterexample to both
+self-similarity axioms. Neither of those global conclusions has been
+established; no model-property flag is added.</p>
+<p>The original proposal and its unfinished long response remain in
+quarantine, under
+<code>checkpoint-4efdb29afea94da583b8df9975e053e4</code> and
+<code>unfinished/trawl-8b97ab5120b042c4811b0d9f70fe0695.md</code>. They
+are not proofs of the remaining question. The YAML certificate retains
+the actual DeepSeek discovery metadata and the separately dated, scoped
+GPT-6 review and local admission record.</p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Proof: Unbounded Utility and Background Risk.</strong> Zachary Goodsell (5 June 2026). Unbounded Utility and Background Risk. Unpublished working manuscript. — sections 3-4, pages 7-14: CDF-area construction and conclosure. Supplied manuscript marked do not cite and erroneous in its symmetric total-extension claim</li>
+<li><strong>Proof: Unbounded Utility and Background Risk.</strong>
+Zachary Goodsell (5 June 2026). Unbounded Utility and Background Risk.
+Unpublished working manuscript. — sections 3-4, pages 7-14: CDF-area
+construction and conclosure. Supplied manuscript marked do not cite and
+erroneous in its symmetric total-extension claim</li>
 </ul>
 </body></html>

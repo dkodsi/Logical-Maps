@@ -269,15 +269,38 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <link rel="stylesheet" href="../math/katex.min.css">
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
-<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Simple Relative Expectation implies Shift Transfer</h1></header><p><strong>Claim.</strong> Simple Relative Expectation implies Transfer of a Shift Across a Mixture, without additional preference axioms.</p>
-<p>Fix an eligible pair of real-utility variables <span class="math inline">X,Y</span>, a real number <span class="math inline">b</span>, and <span class="math inline">0&lt;p&lt;1</span>. Here and below arithmetic acts on their normalized utility levels. Set</p>
-<p><span class="math display">A=M_p(X+b/p,Y),\qquad B=M_p(X,Y+b/(1-p)).</span></p>
-<p>The fixed mixture lift uses the same branch event and the same rescaled sample in both variables. Consequently</p>
-<p><span class="math display">u(A)-u(B)=\begin{cases}b/p,&amp;0\leq w&lt;p,\\-b/(1-p),&amp;p\leq w\leq1.\end{cases}</span></p>
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Simple Relative Expectation implies Shift Transfer</h1></header><p><strong>Claim.</strong> Simple Relative Expectation implies Transfer
+of a Shift Across a Mixture, without additional preference axioms.</p>
+<p>Fix an eligible pair of real-utility variables <span
+class="math inline">X,Y</span>, a real number <span
+class="math inline">b</span>, and <span
+class="math inline">0&lt;p&lt;1</span>. Here and below arithmetic acts
+on their normalized utility levels. Set</p>
+<p><span class="math display">A=M_p(X+b/p,Y),\qquad
+B=M_p(X,Y+b/(1-p)).</span></p>
+<p>The fixed mixture lift uses the same branch event and the same
+rescaled sample in both variables. Consequently</p>
+<p><span class="math display">u(A)-u(B)=\begin{cases}b/p,&amp;0\leq
+w&lt;p,\\-b/(1-p),&amp;p\leq w\leq1.\end{cases}</span></p>
 <p>Thus the difference is simple and its expectation is</p>
 <p><span class="math display">p\frac bp-(1-p)\frac b{1-p}=0.</span></p>
-<p>Simple Relative Expectation gives both <span class="math inline">A\succeq B</span> and <span class="math inline">B\succeq A</span>, as required. Any exceptional fixed endpoint convention affects only finitely many null sample points, so it neither destroys finiteness of the difference’s range nor changes its mean.</p>
-<p>The argument concerns the actual random variables. It does not replace them by equal-law copies, and it uses only the transformed outcomes already required to state Shift Transfer. In particular, neither Stochastic Equivalence nor Rich Outcomes is a hidden premise.</p>
-<p><strong>Original work: direct consequence.</strong> The work is identifying the two-valued difference and checking that the fixed random-variable mixture convention licenses its use. This is a database connection, with no claim of literature novelty.</p>
-<p><strong>Attribution.</strong> Connecting argument: GPT-6 (Codex), 9 September 2026. The principles themselves were extracted from Zachary Goodsell, <em>Symmetries of value</em>, Theorems 3–4. No independent checker or Lean proof is claimed.</p>
+<p>Simple Relative Expectation gives both <span
+class="math inline">A\succeq B</span> and <span
+class="math inline">B\succeq A</span>, as required. Any exceptional
+fixed endpoint convention affects only finitely many null sample points,
+so it neither destroys finiteness of the difference’s range nor changes
+its mean.</p>
+<p>The argument concerns the actual random variables. It does not
+replace them by equal-law copies, and it uses only the transformed
+outcomes already required to state Shift Transfer. In particular,
+neither Stochastic Equivalence nor Rich Outcomes is a hidden
+premise.</p>
+<p><strong>Original work: direct consequence.</strong> The work is
+identifying the two-valued difference and checking that the fixed
+random-variable mixture convention licenses its use. This is a database
+connection, with no claim of literature novelty.</p>
+<p><strong>Attribution.</strong> Connecting argument: GPT-6 (Codex), 9
+September 2026. The principles themselves were extracted from Zachary
+Goodsell, <em>Symmetries of value</em>, Theorems 3–4. No independent
+checker or Lean proof is claimed.</p>
 </body></html>

@@ -269,40 +269,171 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <link rel="stylesheet" href="../math/katex.min.css">
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
-<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Clipped expectation: continuous ultrafilter dominance</h1></header><p>Source: Goodsell, <em>Decision theory unbound</em>, Appendix B, Lemma 6 and proof of Theorem 3 (p. 691), Theorems 7, 8, and 10 (pp. 693–695). Human model: Zachary Goodsell. Recorded and translated by GPT-6 (Codex); no transcription checker asserted.</p>
-<p>With U and <span class="math inline">v_X</span> as in the exact-ultrafilter model, define</p>
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Clipped expectation: continuous ultrafilter dominance</h1></header><p>Source: Goodsell, <em>Decision theory unbound</em>, Appendix B, Lemma
+6 and proof of Theorem 3 (p. 691), Theorems 7, 8, and 10 (pp. 693–695).
+Human model: Zachary Goodsell. Recorded and translated by GPT-6 (Codex);
+no transcription checker asserted.</p>
+<p>With U and <span class="math inline">v_X</span> as in the
+exact-ultrafilter model, define</p>
 <p><span class="math display">X\succeq Y\quad\Longleftrightarrow\quad
 \text{for every }\varepsilon&gt;0,
 \{t:v_X(t)\ge v_Y(t)-\varepsilon\}\in\mathcal U.</span></p>
-<p>This quotients out infinitesimal errors in the ultrafilter comparison. Reflexivity and transitivity follow using <span class="math inline">\epsilon /2</span> in each premise and intersecting sets. If X is not at least as good as Y, some positive <span class="math inline">\epsilon</span> gives a U-large set where Y exceeds X by <span class="math inline">\epsilon</span>, which implies <span class="math inline">Y\succ X</span>. This proves Totality. The affine mixture formula for <span class="math inline">v_X</span> gives Independence after rescaling <span class="math inline">\epsilon</span>. Equal laws give equality. Constants and simple variables stabilize, giving Rich Outcomes and Simple EU. A strict stochastic dominance comparison gives a fixed positive gap for all sufficiently large t, and so remains strict after taking this quotient. Thus the model satisfies DTU.</p>
-<p>For integrable <span class="math inline">X, v_X(t)\to E[X]</span> by dominated convergence. Hence two integrable variables are compared exactly by their finite expectations, including indifference when those expectations agree. This proves EU, the purpose of the continuous quotient in the source’s Theorem 3.</p>
+<p>This quotients out infinitesimal errors in the ultrafilter
+comparison. Reflexivity and transitivity follow using <span
+class="math inline">\epsilon /2</span> in each premise and intersecting
+sets. If X is not at least as good as Y, some positive <span
+class="math inline">\epsilon</span> gives a U-large set where Y exceeds
+X by <span class="math inline">\epsilon</span>, which implies <span
+class="math inline">Y\succ X</span>. This proves Totality. The affine
+mixture formula for <span class="math inline">v_X</span> gives
+Independence after rescaling <span class="math inline">\epsilon</span>.
+Equal laws give equality. Constants and simple variables stabilize,
+giving Rich Outcomes and Simple EU. A strict stochastic dominance
+comparison gives a fixed positive gap for all sufficiently large t, and
+so remains strict after taking this quotient. Thus the model satisfies
+DTU.</p>
+<p>For integrable <span class="math inline">X, v_X(t)\to E[X]</span> by
+dominated convergence. Hence two integrable variables are compared
+exactly by their finite expectations, including indifference when those
+expectations agree. This proves EU, the purpose of the continuous
+quotient in the source’s Theorem 3.</p>
 <p>Reflection negates clipped expectation exactly. For any fixed b,</p>
 <p><span class="math display">c_t(X+b)-c_t(X)\longrightarrow b,\qquad
 |c_t(X+b)-c_t(X)|\le |b|.</span></p>
-<p>Dominated convergence gives <span class="math inline">v_{X+b}(t)-v_X(t)\to b</span>, even for nonintegrable X. Simultaneously shifting X and Y therefore changes their truncated comparison by a function tending to zero, which the quotient ignores. This proves Shift Invariance. Reflection and shift do <strong>not</strong> establish scale invariance.</p>
-<p>The failed scale flag applies the source’s Theorem 10 to this continuous ultrafilter construction. Its witness and proof-audit limitation are described in the exact-ultrafilter write-up and <code>extraction.md</code>. Thus this is a source-attributed witness that DTU <span class="math inline">+ \operatorname{EU} +</span> shift + reflection does not entail positive affine invariance. The two St Petersburg arguments establish failure of Countable Sure-Thing and Archimedean Gambles here as well.</p>
-<p>No <span class="math inline">L^{1}</span> Continuity or Relative Expectation flag is inferred from the name “continuous”: the quotient construction and the topic’s closure axiom are different mathematical claims.</p>
-<h2 id="failure-of-comonotonic-sum-invariance">Failure of Comonotonic Sum Invariance</h2>
-<p><strong>Addition: Claude (Fable 5.1), 23 September 2026.</strong> This is a property of the recorded model, not a claim made in the source paper.</p>
-<p>Realize a standard Cauchy variable as <span class="math inline">C=Q_C(U)=\tan(\pi(U-\tfrac12))</span> and put <span class="math inline">X=0</span>, <span class="math inline">Y=C</span>, <span class="math inline">Z=C_+=\max(C,0)</span>; all are nondecreasing in <span class="math inline">U</span>, so both pairs <span class="math inline">(X,Z)</span> and <span class="math inline">(Y,Z)</span> are comonotonic. Oddness of <span class="math inline">c_t</span> gives <span class="math inline">v_C(t)=0=v_0(t)</span> for every <span class="math inline">t</span>, so <span class="math inline">X\sim Y</span>.</p>
-<p><strong>Doubling-defect identity.</strong> For any nonnegative random variable <span class="math inline">V</span> and any <span class="math inline">F&gt;0</span>,</p>
-<p><span class="math display">2\,\mathbb E[\min(V,F)]-\mathbb E[\min(2V,F)]
- =2\int_{F/2}^{F}P(V&gt;x)\,dx,</span></p>
-<p>since <span class="math inline">\mathbb E[\min(V,F)]=\int_0^F P(V&gt;x)\,dx</span> and <span class="math inline">\mathbb E[\min(2V,F)]=2\int_0^{F/2}P(V&gt;x)\,dx</span>. For <span class="math inline">V=C_+=\max(C,0)</span> with <span class="math inline">C</span> standard Cauchy the right-hand side is <span class="math inline">\frac2\pi\int_{F/2}^{F}\arctan(1/x)\,dx</span>, which is positive for every <span class="math inline">F</span> and increases to <span class="math inline">\frac{2\ln2}{\pi}</span> as <span class="math inline">F\to\infty</span>.</p>
-<p>With <span class="math inline">X+Z=C_+</span> and <span class="math inline">Y+Z=2C_++C_-</span>, <span class="math inline">C_-=\min(C,0)</span>, symmetry gives <span class="math inline">\mathbb E[\max(C_-,-t)]=-\mathbb E[\min(C_+,t)]</span> and therefore</p>
-<p><span class="math display">v_{X+Z}(t)-v_{Y+Z}(t)=2\int_{t/2}^{t}P(C&gt;x)\,dx
- \longrightarrow\frac{2\ln2}{\pi}&gt;0.</span></p>
-<p>Take <span class="math inline">\varepsilon=(\ln2)/\pi</span>. The set <span class="math inline">\{t:v_{Y+Z}(t)\ge v_{X+Z}(t)-\varepsilon\}</span> is bounded, hence not in the cobounded ultrafilter, while <span class="math inline">v_{X+Z}\ge v_{Y+Z}</span> everywhere. Thus <span class="math inline">X+Z\succ Y+Z</span> although <span class="math inline">X\sim Y</span>: Comonotonic Sum Invariance fails. Shift Invariance holds in this model, so this is a genuinely new failure and not a consequence of the recorded implication from comonotonic invariance to shifts. <code>checks/comonotonic_witnesses.py</code> verifies the closed forms and the limit.</p>
+<p>Dominated convergence gives <span
+class="math inline">v_{X+b}(t)-v_X(t)\to b</span>, even for
+nonintegrable X. Simultaneously shifting X and Y therefore changes their
+truncated comparison by a function tending to zero, which the quotient
+ignores. This proves Shift Invariance. Reflection and shift do
+<strong>not</strong> establish scale invariance.</p>
+<p>The failed scale flag applies the source’s Theorem 10 to this
+continuous ultrafilter construction. Its witness and proof-audit
+limitation are described in the exact-ultrafilter write-up and
+<code>extraction.md</code>. Thus this is a source-attributed witness
+that DTU <span class="math inline">+ \operatorname{EU} +</span> shift +
+reflection does not entail positive affine invariance. The two St
+Petersburg arguments establish failure of Countable Sure-Thing and
+Archimedean Gambles here as well.</p>
+<p>No <span class="math inline">L^{1}</span> Continuity or Relative
+Expectation flag is inferred from the name “continuous”: the quotient
+construction and the topic’s closure axiom are different mathematical
+claims.</p>
+<h2 id="failure-of-comonotonic-sum-invariance">Failure of Comonotonic
+Sum Invariance</h2>
+<p><strong>Addition: Claude (Fable 5.1), 23 September 2026.</strong>
+This is a property of the recorded model, not a claim made in the source
+paper.</p>
+<p>Realize a standard Cauchy variable as <span
+class="math inline">C=Q_C(U)=\tan(\pi(U-\tfrac12))</span> and put <span
+class="math inline">X=0</span>, <span class="math inline">Y=C</span>,
+<span class="math inline">Z=C_+=\max(C,0)</span>; all are nondecreasing
+in <span class="math inline">U</span>, so both pairs <span
+class="math inline">(X,Z)</span> and <span
+class="math inline">(Y,Z)</span> are comonotonic. Oddness of <span
+class="math inline">c_t</span> gives <span
+class="math inline">v_C(t)=0=v_0(t)</span> for every <span
+class="math inline">t</span>, so <span class="math inline">X\sim
+Y</span>.</p>
+<p><strong>Doubling-defect identity.</strong> For any nonnegative random
+variable <span class="math inline">V</span> and any <span
+class="math inline">F&gt;0</span>,</p>
+<p><span class="math display">2\,\mathbb E[\min(V,F)]-\mathbb
+E[\min(2V,F)]
+=2\int_{F/2}^{F}P(V&gt;x)\,dx,</span></p>
+<p>since <span class="math inline">\mathbb E[\min(V,F)]=\int_0^F
+P(V&gt;x)\,dx</span> and <span class="math inline">\mathbb
+E[\min(2V,F)]=2\int_0^{F/2}P(V&gt;x)\,dx</span>. For <span
+class="math inline">V=C_+=\max(C,0)</span> with <span
+class="math inline">C</span> standard Cauchy the right-hand side is
+<span
+class="math inline">\frac2\pi\int_{F/2}^{F}\arctan(1/x)\,dx</span>,
+which is positive for every <span class="math inline">F</span> and
+increases to <span class="math inline">\frac{2\ln2}{\pi}</span> as <span
+class="math inline">F\to\infty</span>.</p>
+<p>With <span class="math inline">X+Z=C_+</span> and <span
+class="math inline">Y+Z=2C_++C_-</span>, <span
+class="math inline">C_-=\min(C,0)</span>, symmetry gives <span
+class="math inline">\mathbb E[\max(C_-,-t)]=-\mathbb
+E[\min(C_+,t)]</span> and therefore</p>
+<p><span
+class="math display">v_{X+Z}(t)-v_{Y+Z}(t)=2\int_{t/2}^{t}P(C&gt;x)\,dx
+\longrightarrow\frac{2\ln2}{\pi}&gt;0.</span></p>
+<p>Take <span class="math inline">\varepsilon=(\ln2)/\pi</span>. The set
+<span class="math inline">\{t:v_{Y+Z}(t)\ge
+v_{X+Z}(t)-\varepsilon\}</span> is bounded, hence not in the cobounded
+ultrafilter, while <span class="math inline">v_{X+Z}\ge v_{Y+Z}</span>
+everywhere. Thus <span class="math inline">X+Z\succ Y+Z</span> although
+<span class="math inline">X\sim Y</span>: Comonotonic Sum Invariance
+fails. Shift Invariance holds in this model, so this is a genuinely new
+failure and not a consequence of the recorded implication from
+comonotonic invariance to shifts.
+<code>checks/comonotonic_witnesses.py</code> verifies the closed forms
+and the limit.</p>
 <h2 id="rational-factors">Rational factors</h2>
-<p><strong>Addition: Claude (Fable 5.1), 24 September 2026.</strong> The scale failure recorded above applies the source’s Theorem 10 (pp. 693–695), whose witness compares <span class="math inline">\mu</span> with <span class="math inline">\mu_2</span>, the law of <span class="math inline">2X</span>, through <span class="math inline">E_t\mu_2=E_{2t}\mu</span>. The failure is at the rational factor <span class="math inline">2</span>, so the model also fails Rational Scale Invariance, with the same source attribution and audit caveats as the Scale Invariance flag. The same doubling refutes Integer Affine Preservation: <span class="math inline">\mu\succ\nu</span> is not carried to <span class="math inline">2\mu\succeq2\nu</span>, since the second set in the theorem’s proof ranks <span class="math inline">2\nu</span> strictly above <span class="math inline">2\mu</span>.</p>
+<p><strong>Addition: Claude (Fable 5.1), 24 September 2026.</strong> The
+scale failure recorded above applies the source’s Theorem 10
+(pp. 693–695), whose witness compares <span
+class="math inline">\mu</span> with <span
+class="math inline">\mu_2</span>, the law of <span
+class="math inline">2X</span>, through <span
+class="math inline">E_t\mu_2=E_{2t}\mu</span>. The failure is at the
+rational factor <span class="math inline">2</span>, so the model also
+fails Rational Scale Invariance, with the same source attribution and
+audit caveats as the Scale Invariance flag. The same doubling refutes
+Integer Affine Preservation: <span
+class="math inline">\mu\succ\nu</span> is not carried to <span
+class="math inline">2\mu\succeq2\nu</span>, since the second set in the
+theorem’s proof ranks <span class="math inline">2\nu</span> strictly
+above <span class="math inline">2\mu</span>.</p>
 <h2 id="a-fixed-shuffle-copula">A fixed shuffle copula</h2>
-<p><strong>Added 2 October 2026.</strong> The AI-generated report communicated by <strong>Branden Fitelson</strong>, <em>Unbounded Utility: Five Top-Ranked Open Conjectures Resolved</em> (30 September 2026), §4(b), supplies a new property of this construction. Its producers are identified as Claude agents, with model versions unspecified. GPT-6 (Codex) expanded and informally checked the argument.</p>
-<p>The <a href="calibrated-geometric-continuous-ultrafilter.html#shared-clipping-and-shuffle-copula-proof">fixed shuffle-copula proof</a> applies to this model’s cutoffs and tolerance-based ultrafilter comparison. It proves the fixed-copula invariance <span class="math inline">\operatorname{SC}(C_\sigma)</span> using one copula for all triples, including atomic marginals; the map recorded this as Existential Copula Sum Invariance until that principle was retired on 11 October 2026 in favour of Uninteractive Sum Invariance, which this model satisfies by Relative Expectation (<code>relative-independence-equivalence-imply-uninteractive-sum</code>). This does not change the model’s existing failure of Comonotonic Sum Invariance. The original construction and earlier results retain their original attribution. The expanded model has no Lean verification; its earlier record was marked stated.</p>
+<p><strong>Added 2 October 2026.</strong> The AI-generated report
+communicated by <strong>Branden Fitelson</strong>, <em>Unbounded
+Utility: Five Top-Ranked Open Conjectures Resolved</em> (30 September
+2026), §4(b), supplies a new property of this construction. Its
+producers are identified as Claude agents, with model versions
+unspecified. GPT-6 (Codex) expanded and informally checked the
+argument.</p>
+<p>The <a
+href="calibrated-geometric-continuous-ultrafilter.html#shared-clipping-and-shuffle-copula-proof">fixed
+shuffle-copula proof</a> applies to this model’s cutoffs and
+tolerance-based ultrafilter comparison. It proves the fixed-copula
+invariance <span class="math inline">\operatorname{SC}(C_\sigma)</span>
+using one copula for all triples, including atomic marginals; the map
+recorded this as Existential Copula Sum Invariance until that principle
+was retired on 11 October 2026 in favour of Uninteractive Sum
+Invariance, which this model satisfies by Relative Expectation
+(<code>relative-independence-equivalence-imply-uninteractive-sum</code>).
+This does not change the model’s existing failure of Comonotonic Sum
+Invariance. The original construction and earlier results retain their
+original attribution. The expanded model has no Lean verification; its
+earlier record was marked stated.</p>
 <h2 id="relative-expectation">Relative Expectation</h2>
-<p><strong>Added 11 October 2026.</strong> The flag follows from the shared clipping proof’s <a href="calibrated-geometric-continuous-ultrafilter.html#shared-clipping-and-shuffle-copula-proof">continuity section</a>: if <span class="math inline">E|X-Y|&lt;\infty</span> then the clipped difference is bounded by <span class="math inline">|X-Y|</span> and converges pointwise to <span class="math inline">X-Y</span>, so <span class="math inline">v_X-v_Y\to E[X-Y]</span> by dominated convergence and the tolerance-based comparison is decided by the sign of <span class="math inline">E[X-Y]</span>, with indifference at zero. With Mixture Independence and Stochastic Equivalence this gives Uninteractive Sum Invariance by the recorded result <code>relative-independence-equivalence-imply-uninteractive-sum</code>.</p>
+<p><strong>Added 11 October 2026.</strong> The flag follows from the
+shared clipping proof’s <a
+href="calibrated-geometric-continuous-ultrafilter.html#shared-clipping-and-shuffle-copula-proof">continuity
+section</a>: if <span class="math inline">E|X-Y|&lt;\infty</span> then
+the clipped difference is bounded by <span
+class="math inline">|X-Y|</span> and converges pointwise to <span
+class="math inline">X-Y</span>, so <span class="math inline">v_X-v_Y\to
+E[X-Y]</span> by dominated convergence and the tolerance-based
+comparison is decided by the sign of <span
+class="math inline">E[X-Y]</span>, with indifference at zero. With
+Mixture Independence and Stochastic Equivalence this gives Uninteractive
+Sum Invariance by the recorded result
+<code>relative-independence-equivalence-imply-uninteractive-sum</code>.</p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Proof: <a href="https://doi.org/10.1111/nous.12473">Decision theory unbound</a>.</strong> (<a href="../sources/Nous%20-%202023%20-%20Goodsell%20-%20Decision%20theory%20unbound%20%281%29.pdf">PDF</a>) Zachary Goodsell (2024). Decision theory unbound. Noûs, 58, 669–695. First published online in 2023. — Appendix B, Lemma 6 and proof of Theorem 3, p. 691; Theorems 7, 8 and 10, pp. 693–695</li>
-<li><strong>Proof: Unbounded Utility: Five Top-Ranked Open Conjectures Resolved.</strong> AI-generated report, 30 September 2026, 4 pages; communicated by Branden Fitelson. The report attributes production to Claude agents without specifying model versions. Fitelson is the communicator, not the credited producer of the proofs. — §4(b), p. 3</li>
+<li><strong>Proof: <a href="https://doi.org/10.1111/nous.12473">Decision
+theory unbound</a>.</strong> (<a
+href="../sources/Nous%20-%202023%20-%20Goodsell%20-%20Decision%20theory%20unbound%20%281%29.pdf">PDF</a>)
+Zachary Goodsell (2024). Decision theory unbound. Noûs, 58, 669–695.
+First published online in 2023. — Appendix B, Lemma 6 and proof of
+Theorem 3, p. 691; Theorems 7, 8 and 10, pp. 693–695</li>
+<li><strong>Proof: Unbounded Utility: Five Top-Ranked Open Conjectures
+Resolved.</strong> AI-generated report, 30 September 2026, 4 pages;
+communicated by Branden Fitelson. The report attributes production to
+Claude agents without specifying model versions. Fitelson is the
+communicator, not the credited producer of the proofs. — §4(b),
+p. 3</li>
 </ul>
 </body></html>

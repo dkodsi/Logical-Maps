@@ -269,10 +269,25 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <link rel="stylesheet" href="../math/katex.min.css">
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
-<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>A Lévy obstruction to neutral symmetric gambles and independent sums</h1></header><p><strong>Proved implication:</strong> Rich Outcomes + Stochastic Dominance + Mixture Independence + Symmetric Gambles Are Neutral + Independent Sum Preservation implies <strong>False</strong>.</p>
-<p><strong>Original work: proof adaptation and completion.</strong> Zachary Goodsell proposed the stable-law obstruction: neutral symmetric gambles can cease to be indifferent after adding independent background risk. GPT-6 (Codex), 9 September 2026, supplied the exact positive index-<span class="math inline">1/2</span> law below, the intermediate symmetric difference, the complete dominance comparison, and the reduced sufficient premises. This completes that proposed mechanism; it does not claim a new construction independent of Goodsell’s suggestion, or priority over the literature. The direct source for this completion is <strong>Misc.</strong>, with the proposal and analytic reference credited separately. No independent checker or Lean verification is claimed.</p>
-<h2 id="the-positive-stable-variable">1. The positive stable variable</h2>
-<p>Use the finite utility chart supplied by Rich Outcomes and let <span class="math inline">L</span> have density</p>
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>A Lévy obstruction to neutral symmetric gambles and independent sums</h1></header><p><strong>Proved implication:</strong> Rich Outcomes + Stochastic
+Dominance + Mixture Independence + Symmetric Gambles Are Neutral +
+Independent Sum Preservation implies <strong>False</strong>.</p>
+<p><strong>Original work: proof adaptation and completion.</strong>
+Zachary Goodsell proposed the stable-law obstruction: neutral symmetric
+gambles can cease to be indifferent after adding independent background
+risk. GPT-6 (Codex), 9 September 2026, supplied the exact positive
+index-<span class="math inline">1/2</span> law below, the intermediate
+symmetric difference, the complete dominance comparison, and the reduced
+sufficient premises. This completes that proposed mechanism; it does not
+claim a new construction independent of Goodsell’s suggestion, or
+priority over the literature. The direct source for this completion is
+<strong>Misc.</strong>, with the proposal and analytic reference
+credited separately. No independent checker or Lean verification is
+claimed.</p>
+<h2 id="the-positive-stable-variable">1. The positive stable
+variable</h2>
+<p>Use the finite utility chart supplied by Rich Outcomes and let <span
+class="math inline">L</span> have density</p>
 <p><span class="math display">
 f(t)=\frac{1}{2\sqrt{\pi}}t^{-3/2}e^{-1/(4t)},\qquad t&gt;0.
 </span></p>
@@ -286,46 +301,124 @@ S_L(t)=
 \qquad
 \operatorname{erf}(x)=\frac{2}{\sqrt\pi}\int_0^x e^{-u^2}\,du.
 </span></p>
-<p>Substitution <span class="math inline">u=1/(2\sqrt t)</span> gives normalization and this survival formula. The same substitution gives, for <span class="math inline">s&gt;0</span>,</p>
+<p>Substitution <span class="math inline">u=1/(2\sqrt t)</span> gives
+normalization and this survival formula. The same substitution gives,
+for <span class="math inline">s&gt;0</span>,</p>
 <p><span class="math display">
 E[e^{-sL}]
 =\frac{2}{\sqrt\pi}\int_0^\infty
- e^{-u^2-s/(4u^2)}\,du
+e^{-u^2-s/(4u^2)}\,du
 =e^{-\sqrt s}.
 </span></p>
-<p>For completeness, write <span class="math inline">I(a)=\int_0^\infty e^{-u^2-a^2/u^2}\,du</span>. For <span class="math inline">a&gt;0</span>, differentiation under the integral and substitution <span class="math inline">v=a/u</span> give <span class="math inline">I&#39;(a)=-2I(a)</span>. Dominated convergence gives <span class="math inline">I(0)=\sqrt\pi/2</span>, so <span class="math inline">I(a)=(\sqrt\pi/2)e^{-2a}</span>. The integral identity is also recorded in <a href="https://dlmf.nist.gov/7.7.E8">NIST DLMF, equation 7.7.8</a>.</p>
-<p>Consequently independent copies <span class="math inline">L_1,L_2</span> satisfy</p>
+<p>For completeness, write <span class="math inline">I(a)=\int_0^\infty
+e^{-u^2-a^2/u^2}\,du</span>. For <span
+class="math inline">a&gt;0</span>, differentiation under the integral
+and substitution <span class="math inline">v=a/u</span> give <span
+class="math inline">I&#39;(a)=-2I(a)</span>. Dominated convergence gives
+<span class="math inline">I(0)=\sqrt\pi/2</span>, so <span
+class="math inline">I(a)=(\sqrt\pi/2)e^{-2a}</span>. The integral
+identity is also recorded in <a href="https://dlmf.nist.gov/7.7.E8">NIST
+DLMF, equation 7.7.8</a>.</p>
+<p>Consequently independent copies <span
+class="math inline">L_1,L_2</span> satisfy</p>
 <p><span class="math display">L_1+L_2\overset d=4L,</span></p>
-<p>because both sides have Laplace transform <span class="math inline">e^{-2\sqrt s}</span>, and Laplace transforms determine probability laws on <span class="math inline">[0,\infty)</span>. Thus the stability index is explicitly <span class="math inline">1/2</span>; no ambiguous scale convention is needed.</p>
-<h2 id="what-the-preference-principles-force">2. What the preference principles force</h2>
-<p>Realize <span class="math inline">L_1,L_2</span> and a fair sign <span class="math inline">\varepsilon\in\{-1,1\}</span> independently on the standing atomless probability space. Set</p>
-<p><span class="math display">W=\varepsilon L_1,\qquad D=L_2-L_1.</span></p>
-<p>The laws of <span class="math inline">W</span> and <span class="math inline">D</span> are symmetric about zero: for <span class="math inline">D</span>, exchange the two independent identically distributed inputs. Symmetric Gambles Are Neutral therefore gives <span class="math inline">W\sim0</span> and <span class="math inline">D\sim0</span>.</p>
-<p>The variable <span class="math inline">L_2</span> is independent of <span class="math inline">(W,0)</span>. Applying the weak part of Independent Sum Preservation to each direction of <span class="math inline">W\sim0</span> yields</p>
+<p>because both sides have Laplace transform <span
+class="math inline">e^{-2\sqrt s}</span>, and Laplace transforms
+determine probability laws on <span
+class="math inline">[0,\infty)</span>. Thus the stability index is
+explicitly <span class="math inline">1/2</span>; no ambiguous scale
+convention is needed.</p>
+<h2 id="what-the-preference-principles-force">2. What the preference
+principles force</h2>
+<p>Realize <span class="math inline">L_1,L_2</span> and a fair sign
+<span class="math inline">\varepsilon\in\{-1,1\}</span> independently on
+the standing atomless probability space. Set</p>
+<p><span class="math display">W=\varepsilon L_1,\qquad
+D=L_2-L_1.</span></p>
+<p>The laws of <span class="math inline">W</span> and <span
+class="math inline">D</span> are symmetric about zero: for <span
+class="math inline">D</span>, exchange the two independent identically
+distributed inputs. Symmetric Gambles Are Neutral therefore gives <span
+class="math inline">W\sim0</span> and <span
+class="math inline">D\sim0</span>.</p>
+<p>The variable <span class="math inline">L_2</span> is independent of
+<span class="math inline">(W,0)</span>. Applying the weak part of
+Independent Sum Preservation to each direction of <span
+class="math inline">W\sim0</span> yields</p>
 <p><span class="math display">W+L_2\sim L_2.</span></p>
 <p>Conditioning on the independent fair sign shows</p>
 <p><span class="math display">
 W+L_2\overset d=M_{1/2}(L_1+L_2,D)
 \overset d=M_{1/2}(4L,D).
 </span></p>
-<p>These are identities of laws, not identities of the fixed random-variable mixture lift. Stochastic Dominance entails Stochastic Equivalence by applying its weak clause in both directions when all tails agree, so these law replacements are licensed. Mixture Independence applied to <span class="math inline">D\sim0</span> gives</p>
-<p><span class="math display">M_{1/2}(4L,D)\sim M_{1/2}(4L,0).</span></p>
-<p>To use the displayed form of Mixture Independence, first place <span class="math inline">D</span> and <span class="math inline">0</span> in the first mixture branch, with common second branch <span class="math inline">4L</span>, and then exchange the equal-weight branches by Stochastic Equivalence. Finally <span class="math inline">L_2\sim L</span> by that same principle. Transitivity now forces</p>
+<p>These are identities of laws, not identities of the fixed
+random-variable mixture lift. Stochastic Dominance entails Stochastic
+Equivalence by applying its weak clause in both directions when all
+tails agree, so these law replacements are licensed. Mixture
+Independence applied to <span class="math inline">D\sim0</span>
+gives</p>
+<p><span class="math display">M_{1/2}(4L,D)\sim
+M_{1/2}(4L,0).</span></p>
+<p>To use the displayed form of Mixture Independence, first place <span
+class="math inline">D</span> and <span class="math inline">0</span> in
+the first mixture branch, with common second branch <span
+class="math inline">4L</span>, and then exchange the equal-weight
+branches by Stochastic Equivalence. Finally <span
+class="math inline">L_2\sim L</span> by that same principle.
+Transitivity now forces</p>
 <p><span class="math display">\boxed{L\sim M_{1/2}(4L,0).}</span></p>
-<h2 id="strict-stochastic-dominance-contradicts-that-indifference">3. Strict stochastic dominance contradicts that indifference</h2>
-<p>Put <span class="math inline">B=M_{1/2}(4L,0)</span>. For <span class="math inline">t&gt;0</span>, setting <span class="math inline">x=1/(2\sqrt t)&gt;0</span> gives</p>
+<h2 id="strict-stochastic-dominance-contradicts-that-indifference">3.
+Strict stochastic dominance contradicts that indifference</h2>
+<p>Put <span class="math inline">B=M_{1/2}(4L,0)</span>. For <span
+class="math inline">t&gt;0</span>, setting <span
+class="math inline">x=1/(2\sqrt t)&gt;0</span> gives</p>
 <p><span class="math display">S_L(t)=\operatorname{erf}(x),\qquad
 S_B(t)=\tfrac12\operatorname{erf}(2x).</span></p>
-<p>The function <span class="math inline">\operatorname{erf}</span> vanishes at zero and is strictly concave on the positive half-line, because</p>
-<p><span class="math display">\operatorname{erf}&#39;&#39;(x)=-\frac{4x}{\sqrt\pi}e^{-x^2}&lt;0\quad(x&gt;0).</span></p>
-<p>Hence <span class="math inline">\operatorname{erf}(x)&gt;\tfrac12\operatorname{erf}(2x)</span> for every <span class="math inline">x&gt;0</span>. At <span class="math inline">t&lt;0</span> both survival functions are one; at <span class="math inline">t=0</span>, they are respectively one and one half. Thus <span class="math inline">L</span> weakly dominates <span class="math inline">B</span> at every threshold and strictly dominates at some threshold. Stochastic Dominance requires <span class="math inline">L\succ B</span>, contradicting <span class="math inline">L\sim B</span>.</p>
-<p>All variables used take finite utility levels. The ordered chart embeds all real levels by Rich Outcomes. If there are additional outcomes outside the chart, their thresholds cut the realized real levels into upper rays; the same real-threshold inequalities and their one-sided limits prove dominance at those thresholds as well. No claim about utility arithmetic outside the chart is used.</p>
+<p>The function <span class="math inline">\operatorname{erf}</span>
+vanishes at zero and is strictly concave on the positive half-line,
+because</p>
+<p><span
+class="math display">\operatorname{erf}&#39;&#39;(x)=-\frac{4x}{\sqrt\pi}e^{-x^2}&lt;0\quad(x&gt;0).</span></p>
+<p>Hence <span
+class="math inline">\operatorname{erf}(x)&gt;\tfrac12\operatorname{erf}(2x)</span>
+for every <span class="math inline">x&gt;0</span>. At <span
+class="math inline">t&lt;0</span> both survival functions are one; at
+<span class="math inline">t=0</span>, they are respectively one and one
+half. Thus <span class="math inline">L</span> weakly dominates <span
+class="math inline">B</span> at every threshold and strictly dominates
+at some threshold. Stochastic Dominance requires <span
+class="math inline">L\succ B</span>, contradicting <span
+class="math inline">L\sim B</span>.</p>
+<p>All variables used take finite utility levels. The ordered chart
+embeds all real levels by Rich Outcomes. If there are additional
+outcomes outside the chart, their thresholds cut the realized real
+levels into upper rays; the same real-threshold inequalities and their
+one-sided limits prove dominance at those thresholds as well. No claim
+about utility arithmetic outside the chart is used.</p>
 <h2 id="consequences-and-limits">Consequences and limits</h2>
-<p>The result rules out Independent Sum Preservation under DU plus Symmetric Gambles Are Neutral, and therefore rules out Independent Sum Invariance under that package. It settles the <a href="symmetric-dtu-refutes-independent-sum-candidate.html">earlier symmetric-DTU incompatibility candidate</a> through a new proof record, preserving the candidate’s original attribution.</p>
-<p>The proof needs no Totality, Simple Expected Utility, reflection principle, or independent-sum cancellation. Only weak forward sum preservation is used to preserve an indifference; the current preservation node also requires strict preservation, so it supplies more than is needed.</p>
-<p>The check <code>checks/levy_obstruction.py</code> verifies the chosen transform and tail formulas numerically at finitely many points. The analytic argument above, not those samples, establishes the universal dominance statement.</p>
+<p>The result rules out Independent Sum Preservation under DU plus
+Symmetric Gambles Are Neutral, and therefore rules out Independent Sum
+Invariance under that package. It settles the <a
+href="symmetric-dtu-refutes-independent-sum-candidate.html">earlier
+symmetric-DTU incompatibility candidate</a> through a new proof record,
+preserving the candidate’s original attribution.</p>
+<p>The proof needs no Totality, Simple Expected Utility, reflection
+principle, or independent-sum cancellation. Only weak forward sum
+preservation is used to preserve an indifference; the current
+preservation node also requires strict preservation, so it supplies more
+than is needed.</p>
+<p>The check <code>checks/levy_obstruction.py</code> verifies the chosen
+transform and tail formulas numerically at finitely many points. The
+analytic argument above, not those samples, establishes the universal
+dominance statement.</p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Background: <a href="https://doi.org/10.1111/nous.12530">Flummoxing expectations</a>.</strong> Hayden Wilkinson (2025). Flummoxing expectations. Noûs, 59(3), 700–728. First published online in 2024. — §6.1. Source of Independent Sum Consistency; see the principle reference for the changed independence condition. The proof or conjecture recorded here retains its separate attribution.</li>
+<li><strong>Background: <a
+href="https://doi.org/10.1111/nous.12530">Flummoxing
+expectations</a>.</strong> Hayden Wilkinson (2025). Flummoxing
+expectations. Noûs, 59(3), 700–728. First published online in 2024. —
+§6.1. Source of Independent Sum Consistency; see the principle reference
+for the changed independence condition. The proof or conjecture recorded
+here retains its separate attribution.</li>
 </ul>
 </body></html>

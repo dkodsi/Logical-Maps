@@ -269,45 +269,132 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <link rel="stylesheet" href="../math/katex.min.css">
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
-<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Expected Utility, Independence and L¹ Continuity yield Relative Expectation</h1></header><p><strong>Claim.</strong> Rich Outcomes + Expected Utility + Stochastic Equivalence + Mixture Independence + Stochastic Dominance <span class="math inline">+ L^{1}</span> Continuity imply Relative Expectation.</p>
-<p>In particular, the map’s existing DTU <span class="math inline">+ L^{1}</span> Continuity implication to Expected Utility shows that <strong>DTU + L¹ Continuity implies Relative Expectation without affine symmetry</strong>. Only the recorded upper-section continuity clause is used.</p>
-<p>Write the variables’ finite utility coordinates as <span class="math inline">X,Y</span>. Rich Outcomes and Expected Utility supply all real coordinates and the total measurable chart.</p>
-<h2 id="zero-mean-integrable-differences">Zero-mean integrable differences</h2>
-<p>Suppose <span class="math inline">D=X-Y</span> is integrable and <span class="math inline">\mathbb E D=0</span>. Define</p>
-<p><span class="math display">E_n=\{|X|\le n,\ |Y|\le n\},\qquad p_n=\Pr(E_n).</span></p>
-<p>These measurable events increase to the whole sample space, so <span class="math inline">p_n\to1</span>. Discard any initial terms with <span class="math inline">p_n=0</span>. Put</p>
-<p><span class="math display">c_n=\frac{\mathbb E[D\mathbf1_{E_n}]}{p_n},\qquad
-X_n=\begin{cases}X-c_n&amp;\text{on }E_n,\\Y&amp;\text{off }E_n.\end{cases} \tag{1}</span></p>
-<p>The conditional laws of <span class="math inline">X-c_n</span> and <span class="math inline">Y</span> on <span class="math inline">E_n</span> are bounded and have the same expectation, since</p>
-<p><span class="math display">\mathbb E[X-c_n\mid E_n]-\mathbb E[Y\mid E_n]
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Expected Utility, Independence and L¹ Continuity yield Relative Expectation</h1></header><p><strong>Claim.</strong> Rich Outcomes + Expected Utility + Stochastic
+Equivalence + Mixture Independence + Stochastic Dominance <span
+class="math inline">+ L^{1}</span> Continuity imply Relative
+Expectation.</p>
+<p>In particular, the map’s existing DTU <span class="math inline">+
+L^{1}</span> Continuity implication to Expected Utility shows that
+<strong>DTU + L¹ Continuity implies Relative Expectation without affine
+symmetry</strong>. Only the recorded upper-section continuity clause is
+used.</p>
+<p>Write the variables’ finite utility coordinates as <span
+class="math inline">X,Y</span>. Rich Outcomes and Expected Utility
+supply all real coordinates and the total measurable chart.</p>
+<h2 id="zero-mean-integrable-differences">Zero-mean integrable
+differences</h2>
+<p>Suppose <span class="math inline">D=X-Y</span> is integrable and
+<span class="math inline">\mathbb E D=0</span>. Define</p>
+<p><span class="math display">E_n=\{|X|\le n,\ |Y|\le n\},\qquad
+p_n=\Pr(E_n).</span></p>
+<p>These measurable events increase to the whole sample space, so <span
+class="math inline">p_n\to1</span>. Discard any initial terms with <span
+class="math inline">p_n=0</span>. Put</p>
+<p><span class="math display">c_n=\frac{\mathbb
+E[D\mathbf1_{E_n}]}{p_n},\qquad
+X_n=\begin{cases}X-c_n&amp;\text{on }E_n,\\Y&amp;\text{off
+}E_n.\end{cases} \tag{1}</span></p>
+<p>The conditional laws of <span class="math inline">X-c_n</span> and
+<span class="math inline">Y</span> on <span
+class="math inline">E_n</span> are bounded and have the same
+expectation, since</p>
+<p><span class="math display">\mathbb E[X-c_n\mid E_n]-\mathbb E[Y\mid
+E_n]
 =\frac{\mathbb E[D\mathbf1_{E_n}]}{p_n}-c_n=0.</span></p>
-<p>Realize those conditional laws as variables on the standing atomless space. Expected Utility makes them indifferent. If <span class="math inline">p_n&lt;1</span>, both <span class="math inline">X_n</span> and <span class="math inline">Y</span> have probability-mixture laws with these conditional variables in their <span class="math inline">E_n</span> branches and the same conditional law of <span class="math inline">Y</span> on <span class="math inline">E_n^c</span> in their other branches. Mixture Independence and Stochastic Equivalence therefore imply</p>
+<p>Realize those conditional laws as variables on the standing atomless
+space. Expected Utility makes them indifferent. If <span
+class="math inline">p_n&lt;1</span>, both <span
+class="math inline">X_n</span> and <span class="math inline">Y</span>
+have probability-mixture laws with these conditional variables in their
+<span class="math inline">E_n</span> branches and the same conditional
+law of <span class="math inline">Y</span> on <span
+class="math inline">E_n^c</span> in their other branches. Mixture
+Independence and Stochastic Equivalence therefore imply</p>
 <p><span class="math display">X_n\sim Y. \tag{2}</span></p>
-<p>If <span class="math inline">p_n=1</span>, <span class="math inline">c_n=\mathbb E D=0</span> and both original variables have bounded laws, hence finite expectations; Expected Utility gives (2) directly. Values on a null complement cause no integrability problem. This endpoint case does not apply Mixture Independence with a forbidden weight of one.</p>
+<p>If <span class="math inline">p_n=1</span>, <span
+class="math inline">c_n=\mathbb E D=0</span> and both original variables
+have bounded laws, hence finite expectations; Expected Utility gives (2)
+directly. Values on a null complement cause no integrability problem.
+This endpoint case does not apply Mixture Independence with a forbidden
+weight of one.</p>
 <p>The actual coupling in (1) obeys</p>
 <p><span class="math display">\begin{aligned}
 \mathbb E|X_n-X|
 &amp;\le \mathbb E[|D|\mathbf1_{E_n^c}]+p_n|c_n|\\
 &amp;=\mathbb E[|D|\mathbf1_{E_n^c}]
- +|\mathbb E[D\mathbf1_{E_n}]|\longrightarrow0.
++|\mathbb E[D\mathbf1_{E_n}]|\longrightarrow0.
 \end{aligned}</span></p>
-<p>Dominated convergence and <span class="math inline">\mathbb E D=0</span> justify the limit. The first weak comparison in (2), followed by upper-section <span class="math inline">L^{1}</span> Continuity with fixed <span class="math inline">Y</span>, gives <span class="math inline">X\succeq Y</span>. Repeat the same construction with <span class="math inline">X,Y</span> interchanged to obtain <span class="math inline">Y\succeq X</span>. We have therefore proved</p>
-<p><span class="math display">\mathbb E|X-Y|&lt;\infty,\quad \mathbb E(X-Y)=0
+<p>Dominated convergence and <span class="math inline">\mathbb E
+D=0</span> justify the limit. The first weak comparison in (2), followed
+by upper-section <span class="math inline">L^{1}</span> Continuity with
+fixed <span class="math inline">Y</span>, gives <span
+class="math inline">X\succeq Y</span>. Repeat the same construction with
+<span class="math inline">X,Y</span> interchanged to obtain <span
+class="math inline">Y\succeq X</span>. We have therefore proved</p>
+<p><span class="math display">\mathbb E|X-Y|&lt;\infty,\quad \mathbb
+E(X-Y)=0
 \quad\Longrightarrow\quad X\sim Y. \tag{3}</span></p>
-<p>The second comparison in (3) comes from a second <em>upper-section</em> limit. It does not infer closure of lower sections from the given axiom.</p>
-<h2 id="general-means-and-strict-comparison">General means and strict comparison</h2>
-<p>For an arbitrary integrable difference, put <span class="math inline">m=\mathbb E(X-Y)</span>. Rich Outcomes supplies <span class="math inline">Y+m</span>. Since <span class="math inline">X-(Y+m)</span> has zero mean and is integrable, (3) gives</p>
+<p>The second comparison in (3) comes from a second
+<em>upper-section</em> limit. It does not infer closure of lower
+sections from the given axiom.</p>
+<h2 id="general-means-and-strict-comparison">General means and strict
+comparison</h2>
+<p>For an arbitrary integrable difference, put <span
+class="math inline">m=\mathbb E(X-Y)</span>. Rich Outcomes supplies
+<span class="math inline">Y+m</span>. Since <span
+class="math inline">X-(Y+m)</span> has zero mean and is integrable, (3)
+gives</p>
 <p><span class="math display">X\sim Y+m. \tag{4}</span></p>
-<p>If <span class="math inline">m&gt;0</span>, the translated law <span class="math inline">Y+m</span> stochastically dominates <span class="math inline">Y</span>: its survival function is <span class="math inline">S_Y(t-m)\ge S_Y(t)</span>. At least one comparison is strict. Indeed the intervals <span class="math inline">(km,(k+1)m]</span>, <span class="math inline">k\in\mathbb Z</span>, cover the line, so some such interval has positive probability and its upper endpoint supplies a strict tail comparison. Rich Outcomes makes that threshold an available outcome. Thus Stochastic Dominance gives <span class="math inline">Y+m\succ Y</span>. If <span class="math inline">m&lt;0</span> the reverse argument gives <span class="math inline">Y\succ Y+m</span>; if <span class="math inline">m=0</span> the two variables are identical.</p>
+<p>If <span class="math inline">m&gt;0</span>, the translated law <span
+class="math inline">Y+m</span> stochastically dominates <span
+class="math inline">Y</span>: its survival function is <span
+class="math inline">S_Y(t-m)\ge S_Y(t)</span>. At least one comparison
+is strict. Indeed the intervals <span
+class="math inline">(km,(k+1)m]</span>, <span
+class="math inline">k\in\mathbb Z</span>, cover the line, so some such
+interval has positive probability and its upper endpoint supplies a
+strict tail comparison. Rich Outcomes makes that threshold an available
+outcome. Thus Stochastic Dominance gives <span
+class="math inline">Y+m\succ Y</span>. If <span
+class="math inline">m&lt;0</span> the reverse argument gives <span
+class="math inline">Y\succ Y+m</span>; if <span
+class="math inline">m=0</span> the two variables are identical.</p>
 <p>Together with (4) and transitivity these cases prove exactly</p>
-<p><span class="math display">X\succeq Y\iff\mathbb E(X-Y)\ge0.</span></p>
-<p>No Totality, symmetry, Shift Transfer or Shift Invariance is used. The shift in (4) is constructed as a random variable and compared by (3); it is not a transport of a preference by an unassumed invariance axiom. Stochastic Equivalence is written explicitly to license the conditional-law mixture replacements, even though this topic’s Stochastic Dominance implies it.</p>
+<p><span class="math display">X\succeq Y\iff\mathbb
+E(X-Y)\ge0.</span></p>
+<p>No Totality, symmetry, Shift Transfer or Shift Invariance is used.
+The shift in (4) is constructed as a random variable and compared by
+(3); it is not a transport of a preference by an unassumed invariance
+axiom. Stochastic Equivalence is written explicitly to license the
+conditional-law mixture replacements, even though this topic’s
+Stochastic Dominance implies it.</p>
 <h2 id="attribution-and-scope">Attribution and scope</h2>
-<p><strong>Original work: moderate connecting argument by truncation adaptation.</strong> Zachary Goodsell supplies the principles and Corollary 5’s implication in the full DTU+Sym context. The present proof uses bounded conditional pieces, mean corrections and two upper-section limits to remove the symmetry assumptions in the stated sufficient package. It is credited as a connecting proof, not as a theorem already attributed to the paper. This describes work performed for the map, not literature priority.</p>
-<p>Combined with the existing source-based DTU <span class="math inline">+ L^{1}</span> Continuity implication to Expected Utility, this yields the claimed DTU consequence. It does not claim the converse: the separate infinitesimal folded-tail model satisfies DTU, Relative Expectation and even Folded Expectation while violating <span class="math inline">L^{1}</span> Continuity.</p>
-<p><strong>Sources.</strong> Zachary Goodsell, <em>Symmetries of value</em>, §3, p. 23, and pp. 26–27 (Relative Expectation and Corollary 5). Connecting proof: GPT-6 (Codex), 9 September 2026. No independent checker or Lean proof is claimed.</p>
+<p><strong>Original work: moderate connecting argument by truncation
+adaptation.</strong> Zachary Goodsell supplies the principles and
+Corollary 5’s implication in the full DTU+Sym context. The present proof
+uses bounded conditional pieces, mean corrections and two upper-section
+limits to remove the symmetry assumptions in the stated sufficient
+package. It is credited as a connecting proof, not as a theorem already
+attributed to the paper. This describes work performed for the map, not
+literature priority.</p>
+<p>Combined with the existing source-based DTU <span
+class="math inline">+ L^{1}</span> Continuity implication to Expected
+Utility, this yields the claimed DTU consequence. It does not claim the
+converse: the separate infinitesimal folded-tail model satisfies DTU,
+Relative Expectation and even Folded Expectation while violating <span
+class="math inline">L^{1}</span> Continuity.</p>
+<p><strong>Sources.</strong> Zachary Goodsell, <em>Symmetries of
+value</em>, §3, p. 23, and pp. 26–27 (Relative Expectation and Corollary
+5). Connecting proof: GPT-6 (Codex), 9 September 2026. No independent
+checker or Lean proof is claimed.</p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Background: <a href="https://doi.org/10.1111/nous.12549">Symmetries of value</a>.</strong> (<a href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>) Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. — §3, p. 23; Relative Expectation and Corollary 5 in the full DTU+Sym context, pp. 26–27</li>
+<li><strong>Background: <a
+href="https://doi.org/10.1111/nous.12549">Symmetries of
+value</a>.</strong> (<a
+href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>)
+Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. — §3,
+p. 23; Relative Expectation and Corollary 5 in the full DTU+Sym context,
+pp. 26–27</li>
 </ul>
 </body></html>

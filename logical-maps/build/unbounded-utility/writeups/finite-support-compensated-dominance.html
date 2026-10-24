@@ -269,104 +269,405 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <link rel="stylesheet" href="../math/katex.min.css">
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
-<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Stochastic dominance: finite-support compensation</h1></header><p>This is a model of <strong>DU and Shift Invariance</strong> in which <strong>Shift Transfer fails</strong>. It also preserves Positive Affine Invariance and Reflection Anti-Invariance. Totality and the continuity principles fail. Thus the construction separates the question for DU from the stronger question for DTU, which includes Totality.</p>
-<p><strong>Source and work accounting.</strong> GPT-6 (Codex), 9 September 2026, constructed this ordering and supplied the proofs below in response to Zachary Goodsell’s question about CDF-area dominance, shifts and continuity. This is an original construction recorded under Misc.; the use of cones alone does not make a paper the source of this proof. The work is an elementary cone construction with a full axiom audit and explicit separating examples. No claim of literature priority, independent checking or Lean verification is made.</p>
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Stochastic dominance: finite-support compensation</h1></header><p>This is a model of <strong>DU and Shift Invariance</strong> in which
+<strong>Shift Transfer fails</strong>. It also preserves Positive Affine
+Invariance and Reflection Anti-Invariance. Totality and the continuity
+principles fail. Thus the construction separates the question for DU
+from the stronger question for DTU, which includes Totality.</p>
+<p><strong>Source and work accounting.</strong> GPT-6 (Codex), 9
+September 2026, constructed this ordering and supplied the proofs below
+in response to Zachary Goodsell’s question about CDF-area dominance,
+shifts and continuity. This is an original construction recorded under
+Misc.; the use of cones alone does not make a paper the source of this
+proof. The work is an elementary cone construction with a full axiom
+audit and explicit separating examples. No claim of literature priority,
+independent checking or Lean verification is made.</p>
 <h2 id="the-ordering">The ordering</h2>
-<p>Take all measurable real-valued random variables on the standing atomless space. The outcome order and normalized utility chart will both be the ordinary identity on the real line, as verified below.</p>
-<p>For a finite signed Borel measure <span class="math inline">\sigma</span> of total mass zero, write</p>
+<p>Take all measurable real-valued random variables on the standing
+atomless space. The outcome order and normalized utility chart will both
+be the ordinary identity on the real line, as verified below.</p>
+<p>For a finite signed Borel measure <span
+class="math inline">\sigma</span> of total mass zero, write</p>
 <p><span class="math display">S_\sigma(t)=\sigma((t,\infty)).</span></p>
-<p>Let <span class="math inline">V</span> be the real vector space of these profiles, with functions identified when they agree Lebesgue-almost everywhere. In particular, <span class="math inline">S_X-S_Y=S_{\mathcal L(X)-\mathcal L(Y)}</span> belongs to <span class="math inline">V</span> for every pair of gambles. Define</p>
-<p><span class="math display">P=\{v\in V:v\ge0\ \text{almost everywhere}\},</span></p>
-<p><span class="math display">N=\left\{n\in V:n\text{ is a compactly supported finite-step function},
+<p>Let <span class="math inline">V</span> be the real vector space of
+these profiles, with functions identified when they agree
+Lebesgue-almost everywhere. In particular, <span
+class="math inline">S_X-S_Y=S_{\mathcal L(X)-\mathcal L(Y)}</span>
+belongs to <span class="math inline">V</span> for every pair of gambles.
+Define</p>
+<p><span class="math display">P=\{v\in V:v\ge0\ \text{almost
+everywhere}\},</span></p>
+<p><span class="math display">N=\left\{n\in V:n\text{ is a compactly
+supported finite-step function},
                        \ \int_{\mathbb R}n=0\right\},
 \qquad C=P+N.</span></p>
-<p>Here a finite-step function has only finitely many steps. Such compact profiles correspond to finitely supported signed measures of mass zero; their integrals are the signed measures’ first moments. Endpoints of the steps do not affect the equivalence class or integrals. Thus <span class="math inline">N</span> allows exactly finite-support zero-mean compensations, including real scalar multiples of them.</p>
+<p>Here a finite-step function has only finitely many steps. Such
+compact profiles correspond to finitely supported signed measures of
+mass zero; their integrals are the signed measures’ first moments.
+Endpoints of the steps do not affect the equivalence class or integrals.
+Thus <span class="math inline">N</span> allows exactly finite-support
+zero-mean compensations, including real scalar multiples of them.</p>
 <p>Set</p>
-<p><span class="math display">X\succeq_C Y\quad\Longleftrightarrow\quad S_X-S_Y\in C. \tag{1}</span></p>
-<p>The set <span class="math inline">P</span> is an additive cone and <span class="math inline">N</span> is a linear subspace. Consequently <span class="math inline">C</span> contains zero, is closed under addition, and satisfies <span class="math inline">v\in C\Longleftrightarrow av\in C</span> for every <span class="math inline">a&gt;0</span>. Equation (1) is therefore reflexive and transitive. It depends only on laws, proving Stochastic Equivalence.</p>
-<h2 id="indifference-and-zero-integral-profiles">Indifference and zero-integral profiles</h2>
+<p><span class="math display">X\succeq_C Y\quad\Longleftrightarrow\quad
+S_X-S_Y\in C. \tag{1}</span></p>
+<p>The set <span class="math inline">P</span> is an additive cone and
+<span class="math inline">N</span> is a linear subspace. Consequently
+<span class="math inline">C</span> contains zero, is closed under
+addition, and satisfies <span class="math inline">v\in
+C\Longleftrightarrow av\in C</span> for every <span
+class="math inline">a&gt;0</span>. Equation (1) is therefore reflexive
+and transitive. It depends only on laws, proving Stochastic
+Equivalence.</p>
+<h2 id="indifference-and-zero-integral-profiles">Indifference and
+zero-integral profiles</h2>
 <p>The indifferent part of this cone is exactly</p>
 <p><span class="math display">C\cap(-C)=N. \tag{2}</span></p>
-<p>For if <span class="math inline">v=p+n</span> and <span class="math inline">-v=q+m</span>, with <span class="math inline">p,q\in P</span> and <span class="math inline">n,m\in N</span>, then</p>
+<p>For if <span class="math inline">v=p+n</span> and <span
+class="math inline">-v=q+m</span>, with <span class="math inline">p,q\in
+P</span> and <span class="math inline">n,m\in N</span>, then</p>
 <p><span class="math display">p+q=-(n+m)\ge0.</span></p>
-<p>The right side is integrable with integral zero. Nonnegativity therefore forces <span class="math inline">p=q=0</span> almost everywhere, so <span class="math inline">v=n\in N</span>. The converse follows because <span class="math inline">N</span> is a subspace contained in <span class="math inline">C</span>.</p>
+<p>The right side is integrable with integral zero. Nonnegativity
+therefore forces <span class="math inline">p=q=0</span> almost
+everywhere, so <span class="math inline">v=n\in N</span>. The converse
+follows because <span class="math inline">N</span> is a subspace
+contained in <span class="math inline">C</span>.</p>
 <p>A useful stronger observation for the examples is</p>
 <p><span class="math display">v\in L^1,\quad \int v=0
 \quad\Longrightarrow\quad
 \bigl(v\in C\Longleftrightarrow v\in N\bigr). \tag{3}</span></p>
-<p>Indeed, if <span class="math inline">v=p+n</span>, then <span class="math inline">p=v-n</span> is integrable, nonnegative, and has integral zero; hence <span class="math inline">p=0</span>. Applying the same observation to <span class="math inline">-v</span> shows that an integrable zero-integral profile outside <span class="math inline">N</span> is incomparable with zero in the cone ordering, rather than merely non-indifferent.</p>
-<h2 id="finite-expected-utility-and-the-du-axioms">Finite expected utility and the DU axioms</h2>
-<p>Let <span class="math inline">X,Y</span> have finite support and put <span class="math inline">d=S_X-S_Y</span>. This is a compact finite-step profile with</p>
+<p>Indeed, if <span class="math inline">v=p+n</span>, then <span
+class="math inline">p=v-n</span> is integrable, nonnegative, and has
+integral zero; hence <span class="math inline">p=0</span>. Applying the
+same observation to <span class="math inline">-v</span> shows that an
+integrable zero-integral profile outside <span
+class="math inline">N</span> is incomparable with zero in the cone
+ordering, rather than merely non-indifferent.</p>
+<h2 id="finite-expected-utility-and-the-du-axioms">Finite expected
+utility and the DU axioms</h2>
+<p>Let <span class="math inline">X,Y</span> have finite support and put
+<span class="math inline">d=S_X-S_Y</span>. This is a compact
+finite-step profile with</p>
 <p><span class="math display">m=\int d=E[X]-E[Y].</span></p>
-<p>Let <span class="math inline">h=S_1-S_0=\mathbf1_{[0,1)}</span> almost everywhere. If <span class="math inline">m\ge0</span>, then</p>
-<p><span class="math display">d=mh+(d-mh),\qquad mh\in P,\quad d-mh\in N,</span></p>
-<p>so <span class="math inline">X\succeq_CY</span>. Conversely, if <span class="math inline">d=p+n\in C</span>, then <span class="math inline">p=d-n</span> is compactly supported and integrable. Thus <span class="math inline">m=\int p\ge0</span>. This proves <strong>Simple Expected Utility</strong>, in both directions.</p>
-<p>In particular, sure outcomes have their ordinary real ordering and every binary calibration equation gives the identity utility chart. All real outcomes are available, so <strong>Rich Outcomes</strong> holds. For <span class="math inline">a&gt;b&gt;c</span>, the binary mixture with probability <span class="math inline">(b-c)/(a-c)</span> of <span class="math inline">a</span> and the remaining probability of <span class="math inline">c</span> has expectation <span class="math inline">b</span> and is indifferent to <span class="math inline">b</span>. Thus <strong>Archimedean Outcomes</strong> holds.</p>
-<p>For <strong>Stochastic Dominance</strong>, a dominating pair has <span class="math inline">d\ge0</span>, so <span class="math inline">d\in P</span>. If dominance is strict at a threshold, right continuity gives an interval where <span class="math inline">d&gt;0</span>, so <span class="math inline">d</span> is not zero almost everywhere. The reverse comparison would imply <span class="math inline">-d=p+n</span> and hence <span class="math inline">d+p=-n</span>. The same nonnegative-integral-zero argument used in (2) forces <span class="math inline">d=0</span>, a contradiction. Thus strict dominance remains strict.</p>
+<p>Let <span class="math inline">h=S_1-S_0=\mathbf1_{[0,1)}</span>
+almost everywhere. If <span class="math inline">m\ge0</span>, then</p>
+<p><span class="math display">d=mh+(d-mh),\qquad mh\in P,\quad d-mh\in
+N,</span></p>
+<p>so <span class="math inline">X\succeq_CY</span>. Conversely, if <span
+class="math inline">d=p+n\in C</span>, then <span
+class="math inline">p=d-n</span> is compactly supported and integrable.
+Thus <span class="math inline">m=\int p\ge0</span>. This proves
+<strong>Simple Expected Utility</strong>, in both directions.</p>
+<p>In particular, sure outcomes have their ordinary real ordering and
+every binary calibration equation gives the identity utility chart. All
+real outcomes are available, so <strong>Rich Outcomes</strong> holds.
+For <span class="math inline">a&gt;b&gt;c</span>, the binary mixture
+with probability <span class="math inline">(b-c)/(a-c)</span> of <span
+class="math inline">a</span> and the remaining probability of <span
+class="math inline">c</span> has expectation <span
+class="math inline">b</span> and is indifferent to <span
+class="math inline">b</span>. Thus <strong>Archimedean Outcomes</strong>
+holds.</p>
+<p>For <strong>Stochastic Dominance</strong>, a dominating pair has
+<span class="math inline">d\ge0</span>, so <span
+class="math inline">d\in P</span>. If dominance is strict at a
+threshold, right continuity gives an interval where <span
+class="math inline">d&gt;0</span>, so <span class="math inline">d</span>
+is not zero almost everywhere. The reverse comparison would imply <span
+class="math inline">-d=p+n</span> and hence <span
+class="math inline">d+p=-n</span>. The same nonnegative-integral-zero
+argument used in (2) forces <span class="math inline">d=0</span>, a
+contradiction. Thus strict dominance remains strict.</p>
 <p>Randomized selection with a common law gives</p>
-<p><span class="math display">S_{M_p(X,Z)}-S_{M_p(Y,Z)}=p(S_X-S_Y),\qquad 0&lt;p&lt;1.</span></p>
-<p>Positive scalar cancellation for <span class="math inline">C</span> proves the full <strong>Mixture Independence</strong> biconditional. These facts verify every assumption in the current DU preset, without assuming Totality.</p>
+<p><span
+class="math display">S_{M_p(X,Z)}-S_{M_p(Y,Z)}=p(S_X-S_Y),\qquad
+0&lt;p&lt;1.</span></p>
+<p>Positive scalar cancellation for <span class="math inline">C</span>
+proves the full <strong>Mixture Independence</strong> biconditional.
+These facts verify every assumption in the current DU preset, without
+assuming Totality.</p>
 <h2 id="the-least-du-preorder">The least DU preorder</h2>
-<p>On the common domain of real utility laws, <strong>every DU preorder preserves all the weak and strict comparisons of (1)</strong>. Thus this model is a least ordering for DU itself, before any continuity requirement is added. Simple EU is available in any DU preorder by the separately recorded <a href="rich-archimedean-dominance-independence-imply-simple-eu.html">derivation from the primitive DU assumptions</a>.</p>
-<p>To prove the claim, suppose <span class="math inline">S_X-S_Y=p+n\in C</span>. A nonzero <span class="math inline">p\in P</span> is the profile of a nonzero finite signed measure of mass zero. Its positive and negative Jordan parts have the same finite mass <span class="math inline">s&gt;0</span>. Normalize them to probability laws <span class="math inline">\mu_H,\mu_K</span>. Then</p>
+<p>On the common domain of real utility laws, <strong>every DU preorder
+preserves all the weak and strict comparisons of (1)</strong>. Thus this
+model is a least ordering for DU itself, before any continuity
+requirement is added. Simple EU is available in any DU preorder by the
+separately recorded <a
+href="rich-archimedean-dominance-independence-imply-simple-eu.html">derivation
+from the primitive DU assumptions</a>.</p>
+<p>To prove the claim, suppose <span class="math inline">S_X-S_Y=p+n\in
+C</span>. A nonzero <span class="math inline">p\in P</span> is the
+profile of a nonzero finite signed measure of mass zero. Its positive
+and negative Jordan parts have the same finite mass <span
+class="math inline">s&gt;0</span>. Normalize them to probability laws
+<span class="math inline">\mu_H,\mu_K</span>. Then</p>
 <p><span class="math display">p=s(S_H-S_K),\qquad H\succ K</span></p>
-<p>in every DU preorder by strict Stochastic Dominance. Nonnegativity of the profile almost everywhere gives dominance at every threshold by right continuity. Nonzero <span class="math inline">p</span> gives strictness. If <span class="math inline">p=0</span>, put <span class="math inline">s=0</span> and omit this pair of laws instead.</p>
-<p>Likewise, a nonzero <span class="math inline">n\in N</span> is the profile of a finitely supported signed measure of mass zero and first moment zero. Normalize its Jordan parts, of common mass <span class="math inline">t&gt;0</span>, to finite laws <span class="math inline">\mu_F,\mu_G</span>. Then</p>
-<p><span class="math display">n=t(S_F-S_G),\qquad E[F]=E[G],\qquad F\sim G</span></p>
-<p>in every DU preorder by Simple EU. If <span class="math inline">n=0</span>, put <span class="math inline">t=0</span> and omit these laws. Equality of survival profiles almost everywhere determines their signed measures, so the decomposition gives the exact measure identity</p>
-<p><span class="math display">\mu_X+s\mu_K+t\mu_G=\mu_Y+s\mu_H+t\mu_F. \tag{5}</span></p>
-<p>Divide by <span class="math inline">w=1+s+t</span> to obtain probability laws. Stochastic Equivalence identifies the two normalized mixtures in (5). Replacing <span class="math inline">F</span> with the indifferent <span class="math inline">G</span>, and replacing <span class="math inline">H</span> with the weakly worse <span class="math inline">K</span>, gives</p>
+<p>in every DU preorder by strict Stochastic Dominance. Nonnegativity of
+the profile almost everywhere gives dominance at every threshold by
+right continuity. Nonzero <span class="math inline">p</span> gives
+strictness. If <span class="math inline">p=0</span>, put <span
+class="math inline">s=0</span> and omit this pair of laws instead.</p>
+<p>Likewise, a nonzero <span class="math inline">n\in N</span> is the
+profile of a finitely supported signed measure of mass zero and first
+moment zero. Normalize its Jordan parts, of common mass <span
+class="math inline">t&gt;0</span>, to finite laws <span
+class="math inline">\mu_F,\mu_G</span>. Then</p>
+<p><span class="math display">n=t(S_F-S_G),\qquad E[F]=E[G],\qquad F\sim
+G</span></p>
+<p>in every DU preorder by Simple EU. If <span
+class="math inline">n=0</span>, put <span class="math inline">t=0</span>
+and omit these laws. Equality of survival profiles almost everywhere
+determines their signed measures, so the decomposition gives the exact
+measure identity</p>
+<p><span class="math display">\mu_X+s\mu_K+t\mu_G=\mu_Y+s\mu_H+t\mu_F.
+\tag{5}</span></p>
+<p>Divide by <span class="math inline">w=1+s+t</span> to obtain
+probability laws. Stochastic Equivalence identifies the two normalized
+mixtures in (5). Replacing <span class="math inline">F</span> with the
+indifferent <span class="math inline">G</span>, and replacing <span
+class="math inline">H</span> with the weakly worse <span
+class="math inline">K</span>, gives</p>
 <p><span class="math display">\frac{\mu_X+s\mu_K+t\mu_G}{w}
 \succeq
 \frac{\mu_Y+s\mu_K+t\mu_G}{w}. \tag{6}</span></p>
-<p>These are finite mixtures; Mixture Independence and Stochastic Equivalence license every branch replacement. When <span class="math inline">s&gt;0</span>, the replacement of <span class="math inline">H</span> by <span class="math inline">K</span> is strict, so (6) is strict too. Terms of zero weight were omitted; no use of the Independence axiom at a mixture weight of zero is needed.</p>
-<p>If <span class="math inline">s+t&gt;0</span>, the common mixture law is <span class="math inline">\lambda=(s\mu_K+t\mu_G)/(s+t)</span>, and the weight of <span class="math inline">X</span> or <span class="math inline">Y</span> in (6) is <span class="math inline">1/w\in(0,1)</span>. Cancel this common branch by Mixture Independence to obtain <span class="math inline">X\succeq Y</span>, strictly when <span class="math inline">s&gt;0</span>. If <span class="math inline">s=t=0</span>, (5) just says <span class="math inline">\mu_X=\mu_Y</span>, so Stochastic Equivalence gives indifference directly.</p>
-<p>Every strict comparison of (1) has <span class="math inline">p\ne0</span>: otherwise its profile lies in <span class="math inline">N</span> and (2) gives indifference. Thus the argument preserves every strict comparison as well as every weak one. Since (1) itself satisfies DU, the least-ordering claim follows. This characterization is part of the original proof recorded here; it is not attributed to a source theorem.</p>
-<h2 id="common-shifts-and-other-affine-transformations">Common shifts and other affine transformations</h2>
-<p>For <span class="math inline">a&gt;0</span> and real <span class="math inline">b</span>, the survival difference of <span class="math inline">aX+b</span> and <span class="math inline">aY+b</span> is</p>
+<p>These are finite mixtures; Mixture Independence and Stochastic
+Equivalence license every branch replacement. When <span
+class="math inline">s&gt;0</span>, the replacement of <span
+class="math inline">H</span> by <span class="math inline">K</span> is
+strict, so (6) is strict too. Terms of zero weight were omitted; no use
+of the Independence axiom at a mixture weight of zero is needed.</p>
+<p>If <span class="math inline">s+t&gt;0</span>, the common mixture law
+is <span class="math inline">\lambda=(s\mu_K+t\mu_G)/(s+t)</span>, and
+the weight of <span class="math inline">X</span> or <span
+class="math inline">Y</span> in (6) is <span
+class="math inline">1/w\in(0,1)</span>. Cancel this common branch by
+Mixture Independence to obtain <span class="math inline">X\succeq
+Y</span>, strictly when <span class="math inline">s&gt;0</span>. If
+<span class="math inline">s=t=0</span>, (5) just says <span
+class="math inline">\mu_X=\mu_Y</span>, so Stochastic Equivalence gives
+indifference directly.</p>
+<p>Every strict comparison of (1) has <span
+class="math inline">p\ne0</span>: otherwise its profile lies in <span
+class="math inline">N</span> and (2) gives indifference. Thus the
+argument preserves every strict comparison as well as every weak one.
+Since (1) itself satisfies DU, the least-ordering claim follows. This
+characterization is part of the original proof recorded here; it is not
+attributed to a source theorem.</p>
+<h2 id="common-shifts-and-other-affine-transformations">Common shifts
+and other affine transformations</h2>
+<p>For <span class="math inline">a&gt;0</span> and real <span
+class="math inline">b</span>, the survival difference of <span
+class="math inline">aX+b</span> and <span
+class="math inline">aY+b</span> is</p>
 <p><span class="math display">d_{a,b}(t)=d((t-b)/a).</span></p>
-<p>This invertible transformation preserves <span class="math inline">P</span>. It takes a compact finite-step function to another one and multiplies its integral by <span class="math inline">a</span>, so it also preserves <span class="math inline">N</span> in both directions. It therefore preserves membership in <span class="math inline">C</span>, proving <strong>Positive Affine Invariance</strong>, including <strong>Shift Invariance</strong>.</p>
-<p>Reflection together with comparison reversal sends the profile to <span class="math inline">d(-t)</span> almost everywhere: endpoint differences at atoms affect only a countable null set. This map also preserves <span class="math inline">P</span>, <span class="math inline">N</span>, and <span class="math inline">C</span> in both directions, proving <strong>Reflection Anti-Invariance</strong>. These are transformations of the fixed identity utility chart.</p>
-<h2 id="incompleteness-and-failure-of-full-expected-utility">Incompleteness and failure of full expected utility</h2>
-<p>Let <span class="math inline">U</span> be uniform on <span class="math inline">[0,1]</span> and compare it with the sure outcome <span class="math inline">1/2</span>. Their survival difference is, almost everywhere,</p>
+<p>This invertible transformation preserves <span
+class="math inline">P</span>. It takes a compact finite-step function to
+another one and multiplies its integral by <span
+class="math inline">a</span>, so it also preserves <span
+class="math inline">N</span> in both directions. It therefore preserves
+membership in <span class="math inline">C</span>, proving
+<strong>Positive Affine Invariance</strong>, including <strong>Shift
+Invariance</strong>.</p>
+<p>Reflection together with comparison reversal sends the profile to
+<span class="math inline">d(-t)</span> almost everywhere: endpoint
+differences at atoms affect only a countable null set. This map also
+preserves <span class="math inline">P</span>, <span
+class="math inline">N</span>, and <span class="math inline">C</span> in
+both directions, proving <strong>Reflection Anti-Invariance</strong>.
+These are transformations of the fixed identity utility chart.</p>
+<h2
+id="incompleteness-and-failure-of-full-expected-utility">Incompleteness
+and failure of full expected utility</h2>
+<p>Let <span class="math inline">U</span> be uniform on <span
+class="math inline">[0,1]</span> and compare it with the sure outcome
+<span class="math inline">1/2</span>. Their survival difference is,
+almost everywhere,</p>
 <p><span class="math display">d(t)=\begin{cases}
 -t,&amp;0&lt;t&lt;1/2,\\
 1-t,&amp;1/2&lt;t&lt;1,\\
 0,&amp;\text{otherwise}.
 \end{cases}</span></p>
-<p>This profile is integrable with integral zero, but is not a finite-step function, so (3) gives</p>
-<p><span class="math display">U\not\succeq_C1/2,\qquad 1/2\not\succeq_CU. \tag{4}</span></p>
-<p>Thus <strong>Totality</strong> fails. Both gambles have finite expectation <span class="math inline">1/2</span>, so <strong>Expected Utility</strong> and <strong>Relative Expectation</strong> fail. The two signed areas are finite and equal, so <strong>CDF-Area Extension</strong> fails too.</p>
-<p>By Shift Invariance, <span class="math inline">U-1/2</span> is likewise incomparable with zero. Its law is symmetric, giving an explicit failure of <strong>Symmetric Gambles Are Neutral</strong>. Reflection Anti-Invariance does not force neutrality in this incomplete ordering.</p>
-<h2 id="a-direct-shift-transfer-counterexample">A direct Shift Transfer counterexample</h2>
-<p>Take <span class="math inline">p=1/2</span>, transfer parameter <span class="math inline">b=1/2</span>, <span class="math inline">X=U</span>, and <span class="math inline">Y=0</span>. The two gambles required to be indifferent by Shift Transfer are</p>
-<p><span class="math display">A=M_{1/2}(U+1,0),\qquad B=M_{1/2}(U,1).</span></p>
-<p>Their common expectation is <span class="math inline">3/4</span>. Their survival difference is</p>
+<p>This profile is integrable with integral zero, but is not a
+finite-step function, so (3) gives</p>
+<p><span class="math display">U\not\succeq_C1/2,\qquad
+1/2\not\succeq_CU. \tag{4}</span></p>
+<p>Thus <strong>Totality</strong> fails. Both gambles have finite
+expectation <span class="math inline">1/2</span>, so <strong>Expected
+Utility</strong> and <strong>Relative Expectation</strong> fail. The two
+signed areas are finite and equal, so <strong>CDF-Area
+Extension</strong> fails too.</p>
+<p>By Shift Invariance, <span class="math inline">U-1/2</span> is
+likewise incomparable with zero. Its law is symmetric, giving an
+explicit failure of <strong>Symmetric Gambles Are Neutral</strong>.
+Reflection Anti-Invariance does not force neutrality in this incomplete
+ordering.</p>
+<h2 id="a-direct-shift-transfer-counterexample">A direct Shift Transfer
+counterexample</h2>
+<p>Take <span class="math inline">p=1/2</span>, transfer parameter <span
+class="math inline">b=1/2</span>, <span class="math inline">X=U</span>,
+and <span class="math inline">Y=0</span>. The two gambles required to be
+indifferent by Shift Transfer are</p>
+<p><span class="math display">A=M_{1/2}(U+1,0),\qquad
+B=M_{1/2}(U,1).</span></p>
+<p>Their common expectation is <span class="math inline">3/4</span>.
+Their survival difference is</p>
 <p><span class="math display">S_A(t)-S_B(t)=\begin{cases}
 (t-1)/2,&amp;0&lt;t&lt;1,\\
 (2-t)/2,&amp;1&lt;t&lt;2,\\
 0,&amp;\text{otherwise},
 \end{cases}</span></p>
-<p>almost everywhere. Its negative and positive integrals are each <span class="math inline">1/4</span>. It is not a finite-step function, so (3) shows that <span class="math inline">A</span> and <span class="math inline">B</span> are <strong>incomparable</strong>. In particular <strong>Shift Transfer fails</strong>, although common Shift Invariance holds.</p>
-<p>The same example directly refutes <strong>Simple Relative Expectation</strong>. Realize <span class="math inline">U</span> and an independent fair coin on the standing space, and use that same coin to define both gambles: on its first branch set <span class="math inline">A=U+1</span>, <span class="math inline">B=U</span>; on its second branch set <span class="math inline">A=0</span>, <span class="math inline">B=1</span>. Then the actual difference <span class="math inline">A-B</span> takes only the values <span class="math inline">+1</span> and <span class="math inline">-1</span>, with equal probabilities. Its mean is zero, while the law-based ordering still leaves <span class="math inline">A,B</span> incomparable.</p>
-<h2 id="continuity-under-vanishing-shifts-and-l-continuity-fail">Continuity under Vanishing Shifts and L¹ Continuity fail</h2>
-<p>For every <span class="math inline">\varepsilon&gt;0</span>, choose a positive integer <span class="math inline">n</span> with <span class="math inline">1/(2n)\le\varepsilon</span>, and define the simple gamble</p>
-<p><span class="math display">Q_n=\frac{\lfloor nU\rfloor}{n}+\varepsilon.</span></p>
-<p>It satisfies <span class="math inline">Q_n\le U+\varepsilon</span> pointwise and</p>
-<p><span class="math display">E[Q_n]=\frac12-\frac1{2n}+\varepsilon\ge\frac12.</span></p>
-<p>The probability-zero endpoint <span class="math inline">U=1</span> does not change this expectation or finite support. Stochastic Dominance and the already verified Simple EU give</p>
+<p>almost everywhere. Its negative and positive integrals are each <span
+class="math inline">1/4</span>. It is not a finite-step function, so (3)
+shows that <span class="math inline">A</span> and <span
+class="math inline">B</span> are <strong>incomparable</strong>. In
+particular <strong>Shift Transfer fails</strong>, although common Shift
+Invariance holds.</p>
+<p>The same example directly refutes <strong>Simple Relative
+Expectation</strong>. Realize <span class="math inline">U</span> and an
+independent fair coin on the standing space, and use that same coin to
+define both gambles: on its first branch set <span
+class="math inline">A=U+1</span>, <span class="math inline">B=U</span>;
+on its second branch set <span class="math inline">A=0</span>, <span
+class="math inline">B=1</span>. Then the actual difference <span
+class="math inline">A-B</span> takes only the values <span
+class="math inline">+1</span> and <span class="math inline">-1</span>,
+with equal probabilities. Its mean is zero, while the law-based ordering
+still leaves <span class="math inline">A,B</span> incomparable.</p>
+<h2
+id="continuity-under-vanishing-shifts-and-l¹-continuity-fail">Continuity
+under Vanishing Shifts and L¹ Continuity fail</h2>
+<p>For every <span class="math inline">\varepsilon&gt;0</span>, choose a
+positive integer <span class="math inline">n</span> with <span
+class="math inline">1/(2n)\le\varepsilon</span>, and define the simple
+gamble</p>
+<p><span class="math display">Q_n=\frac{\lfloor
+nU\rfloor}{n}+\varepsilon.</span></p>
+<p>It satisfies <span class="math inline">Q_n\le U+\varepsilon</span>
+pointwise and</p>
+<p><span
+class="math display">E[Q_n]=\frac12-\frac1{2n}+\varepsilon\ge\frac12.</span></p>
+<p>The probability-zero endpoint <span class="math inline">U=1</span>
+does not change this expectation or finite support. Stochastic Dominance
+and the already verified Simple EU give</p>
 <p><span class="math display">U+\varepsilon\succeq_C Q_n\succeq_C1/2
 \qquad\text{for every }\varepsilon&gt;0.</span></p>
-<p>But (4) says <span class="math inline">U\not\succeq_C1/2</span>. This is exactly a failure of <strong>Continuity under Vanishing Shifts</strong>. Taking <span class="math inline">X_k=U+1/k</span> also gives <span class="math inline">E|X_k-U|=1/k\to0</span> and <span class="math inline">X_k\succeq_C1/2</span> for every <span class="math inline">k</span>, while the limit comparison fails. Thus the recorded upper-section <strong>L¹ Continuity</strong> fails.</p>
-<p>The countermodel establishes that DU plus Shift Invariance alone is insufficient for Shift Transfer. This seed fails Totality. Its separately recorded <a href="finite-shift-total-extension.html">finite-shift total extension</a>, added on 13 September 2026, preserves a strict ranking of the transfer pair and supplies the separation with <strong>DTU</strong> as antecedent. The original seed and its properties remain unchanged. Its examples also identify the continuity condition that it lacks.</p>
+<p>But (4) says <span class="math inline">U\not\succeq_C1/2</span>. This
+is exactly a failure of <strong>Continuity under Vanishing
+Shifts</strong>. Taking <span class="math inline">X_k=U+1/k</span> also
+gives <span class="math inline">E|X_k-U|=1/k\to0</span> and <span
+class="math inline">X_k\succeq_C1/2</span> for every <span
+class="math inline">k</span>, while the limit comparison fails. Thus the
+recorded upper-section <strong>L¹ Continuity</strong> fails.</p>
+<p>The countermodel establishes that DU plus Shift Invariance alone is
+insufficient for Shift Transfer. This seed fails Totality. Its
+separately recorded <a
+href="finite-shift-total-extension.html">finite-shift total
+extension</a>, added on 13 September 2026, preserves a strict ranking of
+the transfer pair and supplies the separation with <strong>DTU</strong>
+as antecedent. The original seed and its properties remain unchanged.
+Its examples also identify the continuity condition that it lacks.</p>
 <h2 id="further-verified-failures">Further verified failures</h2>
-<p><strong>Addition: Claude (Fable 5.1), 15 September 2026</strong>, at Zachary Goodsell’s request for a complete picture of the DU + Sym package. The construction and everything above are unchanged. Criterion (3) is used throughout: an integrable zero-integral profile is comparable with zero only when it is a finite-step function, and any element of <span class="math inline">C</span> is nonnegative outside a compact set.</p>
-<p><strong>The three prospect evaluations fail.</strong> The alternating St Petersburg, Pasadena and Arroyo prospects each take arbitrarily large positive and negative utility values with positive probability. Let <span class="math inline">X</span> be one of them and <span class="math inline">c</span> its prescribed sure value. For <span class="math inline">t\ge c</span> the profile <span class="math inline">S_X-S_c</span> equals <span class="math inline">S_X(t)\ge0</span>, and for <span class="math inline">t&lt;c</span> it equals <span class="math inline">S_X(t)-1=-\Pr(X\le t)&lt;0</span> on an unbounded set of <span class="math inline">t</span>. So neither <span class="math inline">S_X-S_c</span> nor its negative is nonnegative outside a compact set, and neither lies in <span class="math inline">C</span>: <span class="math inline">X</span> and <span class="math inline">c</span> are incomparable. Alternating St Petersburg <span class="math inline">=-1/2</span>, Pasadena <span class="math inline">=\ln2</span> and Arroyo <span class="math inline">=\ln2</span> all demand indifference, so all three fail.</p>
-<p><strong>Uniqueness of Negative Self-Similarity fails.</strong> Let <span class="math inline">A</span> be the alternating St Petersburg gamble. Its law satisfies <span class="math inline">A\overset d=M_{1/2}(-2A,-2)</span>, so the two profiles coincide and <span class="math inline">A\sim_C M_{1/2}(-2A,-2)</span>. The sure outcome <span class="math inline">-1/2</span> satisfies <span class="math inline">-1/2\sim_C M_{1/2}(1,-2)=M_{1/2}(-2\cdot(-1/2),-2)</span> by Simple EU. Both solve the same self-similarity indifference with <span class="math inline">p=1/2</span>, <span class="math inline">a=2</span>, <span class="math inline">b=0</span>, <span class="math inline">Z=-2</span>, but <span class="math inline">A</span> and <span class="math inline">-1/2</span> are incomparable by the previous paragraph.</p>
-<p><strong>Comonotonic Sum Invariance fails.</strong> Let <span class="math inline">X=2\cdot\mathbf1\{U&gt;1/2\}</span>, <span class="math inline">Y=1</span> and <span class="math inline">Z=U</span>. All three are nondecreasing functions of <span class="math inline">U</span>, so both pairs are comonotonic. <span class="math inline">X\sim_CY</span> by Simple EU. The sum <span class="math inline">X+Z</span> is uniform on <span class="math inline">[0,1/2)\cup(5/2,3]</span> and <span class="math inline">Y+Z</span> is uniform on <span class="math inline">[1,2]</span>; both have mean <span class="math inline">3/2</span>. Their survival difference is <span class="math inline">-t</span> on <span class="math inline">(0,1/2)</span>, <span class="math inline">-1/2</span> on <span class="math inline">(1/2,1)</span>, <span class="math inline">t-3/2</span> on <span class="math inline">(1,2)</span>, <span class="math inline">1/2</span> on <span class="math inline">(2,5/2)</span> and <span class="math inline">3-t</span> on <span class="math inline">(5/2,3)</span>: integrable, integral zero, not finite-step. By (3), <span class="math inline">X+Z</span> and <span class="math inline">Y+Z</span> are incomparable, so the biconditional fails.</p>
-<p><strong>Independent Sum Preservation fails.</strong> Take the same <span class="math inline">X,Y</span> and an independent uniform <span class="math inline">Z</span>. Then <span class="math inline">X+Z</span> has the law of <span class="math inline">M_{1/2}(U,U+2)</span> and <span class="math inline">Y+Z</span> that of <span class="math inline">1+U</span>. The survival difference is again piecewise linear with sloped pieces and integral zero, so the sums are incomparable although <span class="math inline">X\sim_CY</span>. Weak preservation of indifference fails, hence Independent Sum Invariance fails as well.</p>
-<p><strong>Uninteractive Sum Invariance fails, and with it sum invariance for every copula</strong> (recorded as Existential Copula Sum Invariance until 11 October 2026). All three gambles below are bounded, so both pairs are uninteractive. Fix any copula <span class="math inline">\mathcal C</span> and realize <span class="math inline">(U,W)</span> with law <span class="math inline">\mathcal C</span>. Put <span class="math inline">X=2\cdot\mathbf1\{U&gt;1/2\}</span>, <span class="math inline">Z=W</span> and <span class="math inline">Y=1</span>. Since <span class="math inline">X</span> is a nondecreasing function of <span class="math inline">U</span>, the pair <span class="math inline">(X,Z)</span> admits <span class="math inline">\mathcal C</span>; a constant <span class="math inline">Y</span> admits every copula. For <span class="math inline">t\in[1,2)</span> we have <span class="math inline">S_{X+Z}(t)=\Pr(U&gt;1/2)=1/2</span> while <span class="math inline">S_{1+W}(t)=2-t</span>, so the survival difference is sloped on that interval, has integral zero and is not finite-step. Thus <span class="math inline">X+Z</span> and <span class="math inline">Y+Z</span> are incomparable while <span class="math inline">X\sim_CY</span>, and <span class="math inline">\mathrm{SC}(\mathcal C)</span> fails. As <span class="math inline">\mathcal C</span> was arbitrary, no copula satisfies sum invariance in this model.</p>
-<p>These are direct calculations in the recorded model; no independent checker or Lean verification is claimed.</p>
-<h2 id="integer-ratio-self-similarity">Integer-ratio self-similarity</h2>
-<p><strong>Addition: Claude (Fable 5.1), 24 September 2026.</strong> The uniqueness witness above has ratio <span class="math inline">a=2</span>, so the model also fails Uniqueness of Negative Self-Similarity (integer ratios), the restriction of the principle to integer ratios.</p>
+<p><strong>Addition: Claude (Fable 5.1), 15 September 2026</strong>, at
+Zachary Goodsell’s request for a complete picture of the DU + Sym
+package. The construction and everything above are unchanged. Criterion
+(3) is used throughout: an integrable zero-integral profile is
+comparable with zero only when it is a finite-step function, and any
+element of <span class="math inline">C</span> is nonnegative outside a
+compact set.</p>
+<p><strong>The three prospect evaluations fail.</strong> The alternating
+St Petersburg, Pasadena and Arroyo prospects each take arbitrarily large
+positive and negative utility values with positive probability. Let
+<span class="math inline">X</span> be one of them and <span
+class="math inline">c</span> its prescribed sure value. For <span
+class="math inline">t\ge c</span> the profile <span
+class="math inline">S_X-S_c</span> equals <span
+class="math inline">S_X(t)\ge0</span>, and for <span
+class="math inline">t&lt;c</span> it equals <span
+class="math inline">S_X(t)-1=-\Pr(X\le t)&lt;0</span> on an unbounded
+set of <span class="math inline">t</span>. So neither <span
+class="math inline">S_X-S_c</span> nor its negative is nonnegative
+outside a compact set, and neither lies in <span
+class="math inline">C</span>: <span class="math inline">X</span> and
+<span class="math inline">c</span> are incomparable. Alternating St
+Petersburg <span class="math inline">=-1/2</span>, Pasadena <span
+class="math inline">=\ln2</span> and Arroyo <span
+class="math inline">=\ln2</span> all demand indifference, so all three
+fail.</p>
+<p><strong>Uniqueness of Negative Self-Similarity fails.</strong> Let
+<span class="math inline">A</span> be the alternating St Petersburg
+gamble. Its law satisfies <span class="math inline">A\overset
+d=M_{1/2}(-2A,-2)</span>, so the two profiles coincide and <span
+class="math inline">A\sim_C M_{1/2}(-2A,-2)</span>. The sure outcome
+<span class="math inline">-1/2</span> satisfies <span
+class="math inline">-1/2\sim_C
+M_{1/2}(1,-2)=M_{1/2}(-2\cdot(-1/2),-2)</span> by Simple EU. Both solve
+the same self-similarity indifference with <span
+class="math inline">p=1/2</span>, <span class="math inline">a=2</span>,
+<span class="math inline">b=0</span>, <span
+class="math inline">Z=-2</span>, but <span class="math inline">A</span>
+and <span class="math inline">-1/2</span> are incomparable by the
+previous paragraph.</p>
+<p><strong>Comonotonic Sum Invariance fails.</strong> Let <span
+class="math inline">X=2\cdot\mathbf1\{U&gt;1/2\}</span>, <span
+class="math inline">Y=1</span> and <span class="math inline">Z=U</span>.
+All three are nondecreasing functions of <span
+class="math inline">U</span>, so both pairs are comonotonic. <span
+class="math inline">X\sim_CY</span> by Simple EU. The sum <span
+class="math inline">X+Z</span> is uniform on <span
+class="math inline">[0,1/2)\cup(5/2,3]</span> and <span
+class="math inline">Y+Z</span> is uniform on <span
+class="math inline">[1,2]</span>; both have mean <span
+class="math inline">3/2</span>. Their survival difference is <span
+class="math inline">-t</span> on <span
+class="math inline">(0,1/2)</span>, <span
+class="math inline">-1/2</span> on <span
+class="math inline">(1/2,1)</span>, <span
+class="math inline">t-3/2</span> on <span
+class="math inline">(1,2)</span>, <span class="math inline">1/2</span>
+on <span class="math inline">(2,5/2)</span> and <span
+class="math inline">3-t</span> on <span
+class="math inline">(5/2,3)</span>: integrable, integral zero, not
+finite-step. By (3), <span class="math inline">X+Z</span> and <span
+class="math inline">Y+Z</span> are incomparable, so the biconditional
+fails.</p>
+<p><strong>Independent Sum Preservation fails.</strong> Take the same
+<span class="math inline">X,Y</span> and an independent uniform <span
+class="math inline">Z</span>. Then <span class="math inline">X+Z</span>
+has the law of <span class="math inline">M_{1/2}(U,U+2)</span> and <span
+class="math inline">Y+Z</span> that of <span
+class="math inline">1+U</span>. The survival difference is again
+piecewise linear with sloped pieces and integral zero, so the sums are
+incomparable although <span class="math inline">X\sim_CY</span>. Weak
+preservation of indifference fails, hence Independent Sum Invariance
+fails as well.</p>
+<p><strong>Uninteractive Sum Invariance fails, and with it sum
+invariance for every copula</strong> (recorded as Existential Copula Sum
+Invariance until 11 October 2026). All three gambles below are bounded,
+so both pairs are uninteractive. Fix any copula <span
+class="math inline">\mathcal C</span> and realize <span
+class="math inline">(U,W)</span> with law <span
+class="math inline">\mathcal C</span>. Put <span
+class="math inline">X=2\cdot\mathbf1\{U&gt;1/2\}</span>, <span
+class="math inline">Z=W</span> and <span class="math inline">Y=1</span>.
+Since <span class="math inline">X</span> is a nondecreasing function of
+<span class="math inline">U</span>, the pair <span
+class="math inline">(X,Z)</span> admits <span
+class="math inline">\mathcal C</span>; a constant <span
+class="math inline">Y</span> admits every copula. For <span
+class="math inline">t\in[1,2)</span> we have <span
+class="math inline">S_{X+Z}(t)=\Pr(U&gt;1/2)=1/2</span> while <span
+class="math inline">S_{1+W}(t)=2-t</span>, so the survival difference is
+sloped on that interval, has integral zero and is not finite-step. Thus
+<span class="math inline">X+Z</span> and <span
+class="math inline">Y+Z</span> are incomparable while <span
+class="math inline">X\sim_CY</span>, and <span
+class="math inline">\mathrm{SC}(\mathcal C)</span> fails. As <span
+class="math inline">\mathcal C</span> was arbitrary, no copula satisfies
+sum invariance in this model.</p>
+<p>These are direct calculations in the recorded model; no independent
+checker or Lean verification is claimed.</p>
+<h2 id="integer-ratio-self-similarity">Integer-ratio
+self-similarity</h2>
+<p><strong>Addition: Claude (Fable 5.1), 24 September 2026.</strong> The
+uniqueness witness above has ratio <span class="math inline">a=2</span>,
+so the model also fails Uniqueness of Negative Self-Similarity (integer
+ratios), the restriction of the principle to integer ratios.</p>
 </body></html>

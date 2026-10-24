@@ -270,14 +270,79 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
 <script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Transitivity ∧ Independence ∧ Mixture continuity ⇒ Closed-graph continuity</h1></header><p class="cert">
-Result — ai; produced by Claude Fable 5.1 (Cowork session), prompted by Zachary Goodsell, 2026-09-08. Not yet checked.
+Result — ai; produced by Claude Fable 5.1 (Cowork session), prompted by
+Zachary Goodsell, 2026-09-08. Not yet checked.
 </p>
-<p><strong>Claim.</strong> If <span class="math inline">\succcurlyeq</span> is reflexive and transitive, satisfies independence, and has closed sections <span class="math inline">\{\lambda : \lambda p + (1-\lambda) q \succcurlyeq r\}</span> and <span class="math inline">\{\lambda : r \succcurlyeq \lambda p + (1-\lambda) q\}</span>, then <span class="math inline">\{(p,q) : p \succcurlyeq q\}</span> is closed in <span class="math inline">\Delta(X)^2</span>.</p>
-<p><strong>Proof.</strong> Let <span class="math inline">V = \{x \in \mathbb{R}^X : \sum_x x = 0\}</span> and <span class="math inline">D = \Delta(X) - \Delta(X) \subseteq V</span>, which is compact, convex, and contains <span class="math inline">0</span>. Put <span class="math display">K = \{\, q - p : q \succcurlyeq p \,\}.</span></p>
-<p><em>(i) <span class="math inline">K</span> depends only on differences.</em> If <span class="math inline">q - p = q&#39; - p&#39;</span> then <span class="math inline">\tfrac12 q + \tfrac12 p&#39; = \tfrac12 q&#39; + \tfrac12 p</span>. By independence with <span class="math inline">\lambda = \tfrac12</span>, <span class="math inline">q \succcurlyeq p \iff \tfrac12 q + \tfrac12 p&#39; \succcurlyeq \tfrac12 p + \tfrac12 p&#39;</span> and <span class="math inline">q&#39; \succcurlyeq p&#39; \iff \tfrac12 q&#39; + \tfrac12 p \succcurlyeq \tfrac12 p&#39; + \tfrac12 p</span>. The two right-hand sides are the same pair.</p>
-<p><em>(ii) <span class="math inline">K</span> is a cone in <span class="math inline">D</span>.</em> If <span class="math inline">x \in K</span>, <span class="math inline">t &gt; 0</span> and <span class="math inline">tx \in D</span>, then <span class="math inline">tx \in K</span>. For <span class="math inline">t &lt; 1</span>: from <span class="math inline">q \succcurlyeq p</span>, independence with <span class="math inline">r = p</span> gives <span class="math inline">tq + (1-t)p \succcurlyeq p</span>, whose difference is <span class="math inline">t(q-p)</span>. For <span class="math inline">t &gt; 1</span> apply the previous case to <span class="math inline">tx</span>.</p>
-<p><em>(iii) <span class="math inline">K</span> is convex.</em> For <span class="math inline">x = q - p</span> and <span class="math inline">y = q&#39; - p&#39;</span> in <span class="math inline">K</span>, independence gives <span class="math inline">\tfrac12 q + \tfrac12 q&#39; \succcurlyeq \tfrac12 p + \tfrac12 q&#39;</span> and <span class="math inline">\tfrac12 q&#39; + \tfrac12 p \succcurlyeq \tfrac12 p&#39; + \tfrac12 p</span>; transitivity gives <span class="math inline">\tfrac12 q + \tfrac12 q&#39; \succcurlyeq \tfrac12 p + \tfrac12 p&#39;</span>, with difference <span class="math inline">\tfrac12 x + \tfrac12 y</span>.</p>
-<p><em>(iv) <span class="math inline">K</span> is closed along every line.</em> Let <span class="math inline">[x_0, x_1] = \ell \cap D</span> and <span class="math inline">x(\lambda) = \lambda x_1 + (1-\lambda) x_0</span>. Choose <span class="math inline">\varepsilon &gt; 0</span> and the uniform lottery <span class="math inline">c</span> with <span class="math inline">c + \varepsilon x(\lambda) \in \Delta(X)</span> for all <span class="math inline">\lambda</span>. By (ii), <span class="math inline">x(\lambda) \in K \iff \varepsilon x(\lambda) \in K \iff c + \varepsilon x(\lambda) \succcurlyeq c</span>, and <span class="math inline">c + \varepsilon x(\lambda) = \lambda(c + \varepsilon x_1) + (1-\lambda)(c + \varepsilon x_0)</span>, so <span class="math inline">\{\lambda : x(\lambda) \in K\}</span> is a section, closed by mixture continuity.</p>
-<p><em>(v)</em> A convex subset of a finite-dimensional space meeting every line in a closed set is closed: for <span class="math inline">x \in \overline{K} \setminus K</span> and <span class="math inline">y</span> in the relative interior of <span class="math inline">K</span>, <span class="math inline">[y, x) \subseteq K</span> by the accessibility lemma, so <span class="math inline">K \cap \mathrm{line}(y,x)</span> is not closed. Hence <span class="math inline">K</span> is closed, and <span class="math inline">(p_n, q_n) \to (p, q)</span> with <span class="math inline">q_n \succcurlyeq p_n</span> gives <span class="math inline">q - p \in K</span>. ∎</p>
-<p><strong>Remark.</strong> This bridges the mixture-continuity axiom of the vNM literature and the closed-graph axiom of Dubra–Maccheroni–Ok. The map reaches the multi-utility representation from closed-graph continuity without it.</p>
+<p><strong>Claim.</strong> If <span
+class="math inline">\succcurlyeq</span> is reflexive and transitive,
+satisfies independence, and has closed sections <span
+class="math inline">\{\lambda : \lambda p + (1-\lambda) q \succcurlyeq
+r\}</span> and <span class="math inline">\{\lambda : r \succcurlyeq
+\lambda p + (1-\lambda) q\}</span>, then <span
+class="math inline">\{(p,q) : p \succcurlyeq q\}</span> is closed in
+<span class="math inline">\Delta(X)^2</span>.</p>
+<p><strong>Proof.</strong> Let <span class="math inline">V = \{x \in
+\mathbb{R}^X : \sum_x x = 0\}</span> and <span class="math inline">D =
+\Delta(X) - \Delta(X) \subseteq V</span>, which is compact, convex, and
+contains <span class="math inline">0</span>. Put <span
+class="math display">K = \{\, q - p : q \succcurlyeq p \,\}.</span></p>
+<p><em>(i) <span class="math inline">K</span> depends only on
+differences.</em> If <span class="math inline">q - p = q&#39; -
+p&#39;</span> then <span class="math inline">\tfrac12 q + \tfrac12
+p&#39; = \tfrac12 q&#39; + \tfrac12 p</span>. By independence with <span
+class="math inline">\lambda = \tfrac12</span>, <span
+class="math inline">q \succcurlyeq p \iff \tfrac12 q + \tfrac12 p&#39;
+\succcurlyeq \tfrac12 p + \tfrac12 p&#39;</span> and <span
+class="math inline">q&#39; \succcurlyeq p&#39; \iff \tfrac12 q&#39; +
+\tfrac12 p \succcurlyeq \tfrac12 p&#39; + \tfrac12 p</span>. The two
+right-hand sides are the same pair.</p>
+<p><em>(ii) <span class="math inline">K</span> is a cone in <span
+class="math inline">D</span>.</em> If <span class="math inline">x \in
+K</span>, <span class="math inline">t &gt; 0</span> and <span
+class="math inline">tx \in D</span>, then <span class="math inline">tx
+\in K</span>. For <span class="math inline">t &lt; 1</span>: from <span
+class="math inline">q \succcurlyeq p</span>, independence with <span
+class="math inline">r = p</span> gives <span class="math inline">tq +
+(1-t)p \succcurlyeq p</span>, whose difference is <span
+class="math inline">t(q-p)</span>. For <span class="math inline">t &gt;
+1</span> apply the previous case to <span
+class="math inline">tx</span>.</p>
+<p><em>(iii) <span class="math inline">K</span> is convex.</em> For
+<span class="math inline">x = q - p</span> and <span
+class="math inline">y = q&#39; - p&#39;</span> in <span
+class="math inline">K</span>, independence gives <span
+class="math inline">\tfrac12 q + \tfrac12 q&#39; \succcurlyeq \tfrac12 p
++ \tfrac12 q&#39;</span> and <span class="math inline">\tfrac12 q&#39; +
+\tfrac12 p \succcurlyeq \tfrac12 p&#39; + \tfrac12 p</span>;
+transitivity gives <span class="math inline">\tfrac12 q + \tfrac12
+q&#39; \succcurlyeq \tfrac12 p + \tfrac12 p&#39;</span>, with difference
+<span class="math inline">\tfrac12 x + \tfrac12 y</span>.</p>
+<p><em>(iv) <span class="math inline">K</span> is closed along every
+line.</em> Let <span class="math inline">[x_0, x_1] = \ell \cap D</span>
+and <span class="math inline">x(\lambda) = \lambda x_1 + (1-\lambda)
+x_0</span>. Choose <span class="math inline">\varepsilon &gt; 0</span>
+and the uniform lottery <span class="math inline">c</span> with <span
+class="math inline">c + \varepsilon x(\lambda) \in \Delta(X)</span> for
+all <span class="math inline">\lambda</span>. By (ii), <span
+class="math inline">x(\lambda) \in K \iff \varepsilon x(\lambda) \in K
+\iff c + \varepsilon x(\lambda) \succcurlyeq c</span>, and <span
+class="math inline">c + \varepsilon x(\lambda) = \lambda(c + \varepsilon
+x_1) + (1-\lambda)(c + \varepsilon x_0)</span>, so <span
+class="math inline">\{\lambda : x(\lambda) \in K\}</span> is a section,
+closed by mixture continuity.</p>
+<p><em>(v)</em> A convex subset of a finite-dimensional space meeting
+every line in a closed set is closed: for <span class="math inline">x
+\in \overline{K} \setminus K</span> and <span
+class="math inline">y</span> in the relative interior of <span
+class="math inline">K</span>, <span class="math inline">[y, x) \subseteq
+K</span> by the accessibility lemma, so <span class="math inline">K \cap
+\mathrm{line}(y,x)</span> is not closed. Hence <span
+class="math inline">K</span> is closed, and <span
+class="math inline">(p_n, q_n) \to (p, q)</span> with <span
+class="math inline">q_n \succcurlyeq p_n</span> gives <span
+class="math inline">q - p \in K</span>. ∎</p>
+<p><strong>Remark.</strong> This bridges the mixture-continuity axiom of
+the vNM literature and the closed-graph axiom of Dubra–Maccheroni–Ok.
+The map reaches the multi-utility representation from closed-graph
+continuity without it.</p>
 </body></html>

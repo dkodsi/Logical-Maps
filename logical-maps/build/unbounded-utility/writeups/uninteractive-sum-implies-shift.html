@@ -270,25 +270,47 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
 <script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Uninteractive Sum Invariance ⇒ Shift Invariance</h1></header><p class="cert">
-Result — Source: Misc.; produced by Claude (Opus 5.5), prompted by Zachary Goodsell; recorded by Claude (Fable 5.1), prompted by Zachary Goodsell, 2026-10-11.
+Result — Source: Misc.; produced by Claude (Opus 5.5), prompted by
+Zachary Goodsell; recorded by Claude (Fable 5.1), prompted by Zachary
+Goodsell, 2026-10-11.
 </p>
 <h2 id="premises">Premises</h2>
 <ul>
-<li><strong>Uninteractive Sum Invariance.</strong> Call real-utility variables X and Z uninteractive when <span class="math inline">E[\min(|X|,|Z|)]&lt;\infty</span>: their tails are jointly rare. Whenever (X,Z) and (Y,Z) are uninteractive, <span class="math inline">X \succeq Y</span> iff <span class="math inline">X+Z \succeq Y+Z</span>. The condition applies to each pair separately; nothing is assumed about the joint law of (X,Y,Z), and no law invariance is built in.</li>
+<li><strong>Uninteractive Sum Invariance.</strong> Call real-utility
+variables X and Z uninteractive when <span
+class="math inline">E[\min(|X|,|Z|)]&lt;\infty</span>: their tails are
+jointly rare. Whenever (X,Z) and (Y,Z) are uninteractive, <span
+class="math inline">X \succeq Y</span> iff <span class="math inline">X+Z
+\succeq Y+Z</span>. The condition applies to each pair separately;
+nothing is assumed about the joint law of (X,Y,Z), and no law invariance
+is built in.</li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <ul>
-<li><strong>Shift Invariance.</strong> For every real <span class="math inline">b, X \succeq Y</span> iff <span class="math inline">X+b \succeq Y+b</span>.</li>
+<li><strong>Shift Invariance.</strong> For every real <span
+class="math inline">b, X \succeq Y</span> iff <span
+class="math inline">X+b \succeq Y+b</span>.</li>
 </ul>
 <h2 id="proof">Proof</h2>
-<p>Take the common summand Z = b constant. Then <span class="math inline">E\min(|X|,|b|)\le |b|&lt;\infty</span> and likewise for Y, so the pairs are uninteractive and the principle gives <span class="math inline">X\succeq Y</span> iff <span class="math inline">X+b\succeq Y+b</span>, which is Shift Invariance. In particular the exact ultrafilter and eventual clipped-expectation models, which fail Shift Invariance, fail Uninteractive Sum Invariance.</p>
+<p>Take the common summand Z = b constant. Then <span
+class="math inline">E\min(|X|,|b|)\le |b|&lt;\infty</span> and likewise
+for Y, so the pairs are uninteractive and the principle gives <span
+class="math inline">X\succeq Y</span> iff <span
+class="math inline">X+b\succeq Y+b</span>, which is Shift Invariance. In
+particular the exact ultrafilter and eventual clipped-expectation
+models, which fail Shift Invariance, fail Uninteractive Sum
+Invariance.</p>
 <h2 id="notes">Notes</h2>
 <p>Immediate instance. Not Lean-checked.</p>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><strong>Claude constant-summand observation 6 Oct</strong> — Claude (Opus 5.5), Logical Maps session, 6 October 2026, while formulating the principle at Zachary Goodsell’s request; recorded by Claude (Fable 5.1), 11 October 2026.</li>
+<li><strong>Claude constant-summand observation 6 Oct</strong> — Claude
+(Opus 5.5), Logical Maps session, 6 October 2026, while formulating the
+principle at Zachary Goodsell’s request; recorded by Claude (Fable 5.1),
+11 October 2026.</li>
 </ul>
 <p class="cert">
-Record: <code>topics/unbounded-utility/results/uninteractive-sum-implies-shift.yaml</code>
+Record:
+<code>topics/unbounded-utility/results/uninteractive-sum-implies-shift.yaml</code>
 </p>
 </body></html>

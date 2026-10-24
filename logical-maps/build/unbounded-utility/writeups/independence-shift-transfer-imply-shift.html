@@ -269,18 +269,41 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <link rel="stylesheet" href="../math/katex.min.css">
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
-<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Mixture Independence and Shift Transfer imply Shift Invariance</h1></header><p><strong>Claim.</strong> Mixture Independence + Shift Transfer imply Shift Invariance.</p>
-<p>Fix real-utility variables <span class="math inline">X,Y</span> and <span class="math inline">b\in\mathbb R</span> such that <span class="math inline">X+b</span> and <span class="math inline">Y+b</span> are available. Apply Shift Transfer with mixture weight <span class="math inline">1/2</span> and transfer parameter <span class="math inline">b/2</span>, first to <span class="math inline">(X,X)</span> and then to <span class="math inline">(Y,X)</span>:</p>
-<p><span class="math display">M_{1/2}(X+b,X)\sim M_{1/2}(X,X+b),</span> <span class="math display">M_{1/2}(Y+b,X)\sim M_{1/2}(Y,X+b).</span></p>
-<p>Transitivity of the standing preorder lets an indifferent object replace either side of a weak comparison. Therefore</p>
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Mixture Independence and Shift Transfer imply Shift Invariance</h1></header><p><strong>Claim.</strong> Mixture Independence + Shift Transfer imply
+Shift Invariance.</p>
+<p>Fix real-utility variables <span class="math inline">X,Y</span> and
+<span class="math inline">b\in\mathbb R</span> such that <span
+class="math inline">X+b</span> and <span class="math inline">Y+b</span>
+are available. Apply Shift Transfer with mixture weight <span
+class="math inline">1/2</span> and transfer parameter <span
+class="math inline">b/2</span>, first to <span
+class="math inline">(X,X)</span> and then to <span
+class="math inline">(Y,X)</span>:</p>
+<p><span class="math display">M_{1/2}(X+b,X)\sim M_{1/2}(X,X+b),</span>
+<span class="math display">M_{1/2}(Y+b,X)\sim M_{1/2}(Y,X+b).</span></p>
+<p>Transitivity of the standing preorder lets an indifferent object
+replace either side of a weak comparison. Therefore</p>
 <p><span class="math display">\begin{aligned}
 X\succeq Y
 &amp;\iff M_{1/2}(X,X+b)\succeq M_{1/2}(Y,X+b)\\
 &amp;\iff M_{1/2}(X+b,X)\succeq M_{1/2}(Y+b,X)\\
 &amp;\iff X+b\succeq Y+b.
 \end{aligned}</span></p>
-<p>The first and last equivalences are exactly Mixture Independence, with common second arguments <span class="math inline">X+b</span> and <span class="math inline">X</span> respectively.</p>
-<p>No branch interchange, independent copy, totality assumption or law identity occurs. Using <span class="math inline">X</span> as the common gamble also avoids assuming the availability of a new sure outcome at utility <span class="math inline">b</span>: all transformations used were already stipulated to exist in this instance of Shift Invariance.</p>
-<p><strong>Original work: direct consequence.</strong> This is a two-application specialization followed by mixture cancellation. The choice of common gamble is the small domain check needed to avoid unnecessary outcome-richness assumptions. No literature novelty is asserted.</p>
-<p><strong>Attribution.</strong> GPT-6 (Codex), 9 September 2026, original connecting argument for this project. No independent checker or Lean proof is claimed.</p>
+<p>The first and last equivalences are exactly Mixture Independence,
+with common second arguments <span class="math inline">X+b</span> and
+<span class="math inline">X</span> respectively.</p>
+<p>No branch interchange, independent copy, totality assumption or law
+identity occurs. Using <span class="math inline">X</span> as the common
+gamble also avoids assuming the availability of a new sure outcome at
+utility <span class="math inline">b</span>: all transformations used
+were already stipulated to exist in this instance of Shift
+Invariance.</p>
+<p><strong>Original work: direct consequence.</strong> This is a
+two-application specialization followed by mixture cancellation. The
+choice of common gamble is the small domain check needed to avoid
+unnecessary outcome-richness assumptions. No literature novelty is
+asserted.</p>
+<p><strong>Attribution.</strong> GPT-6 (Codex), 9 September 2026,
+original connecting argument for this project. No independent checker or
+Lean proof is claimed.</p>
 </body></html>

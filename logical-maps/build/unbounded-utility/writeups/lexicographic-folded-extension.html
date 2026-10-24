@@ -269,91 +269,301 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <link rel="stylesheet" href="../math/katex.min.css">
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
-<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Folded-tail cone: lexicographic extension</h1></header><p><strong>Result.</strong> There exists a model of DTU + Folded Expectation + Relative Expectation + CDF-Area Extension + Reflection Anti-Invariance + Shift Invariance which fails <span class="math inline">L^{1}</span> Continuity. Scale Invariance, the alternating St Petersburg evaluation and Uniqueness of Negative Self-Similarity fail too.</p>
-<p>The construction assigns the alternating gamble a value <em>infinitesimally above</em> <span class="math inline">-1/2</span>: it is strictly better than <span class="math inline">-1/2</span> but strictly worse than <span class="math inline">-1/2+\varepsilon</span> for every real <span class="math inline">\varepsilon&gt;0</span>. The word “infinitesimal” describes comparisons in an ordered vector space; no hyperreal field is assumed.</p>
-<h2 id="folded-profiles-and-the-base-cone">1. Folded profiles and the base cone</h2>
-<p>Use all real-valued random variables on the standing sample space, with identity utility. For each <span class="math inline">X</span> define its folded-tail profile on <span class="math inline">(0,\infty)</span> by</p>
-<p><span class="math display">h_X(t)=\Pr(X&gt;t)-\Pr(X&lt;-t).</span></p>
-<p>Let <span class="math inline">W</span> be the real vector space spanned by these profiles, identifying functions that agree Lebesgue-almost everywhere. Define the linear subspace</p>
-<p><span class="math display">N=\left\{g\in W\cap L^1(0,\infty):\int_0^\infty g(t)\,dt=0\right\},
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Folded-tail cone: lexicographic extension</h1></header><p><strong>Result.</strong> There exists a model of DTU + Folded
+Expectation + Relative Expectation + CDF-Area Extension + Reflection
+Anti-Invariance + Shift Invariance which fails <span
+class="math inline">L^{1}</span> Continuity. Scale Invariance, the
+alternating St Petersburg evaluation and Uniqueness of Negative
+Self-Similarity fail too.</p>
+<p>The construction assigns the alternating gamble a value
+<em>infinitesimally above</em> <span class="math inline">-1/2</span>: it
+is strictly better than <span class="math inline">-1/2</span> but
+strictly worse than <span class="math inline">-1/2+\varepsilon</span>
+for every real <span class="math inline">\varepsilon&gt;0</span>. The
+word “infinitesimal” describes comparisons in an ordered vector space;
+no hyperreal field is assumed.</p>
+<h2 id="folded-profiles-and-the-base-cone">1. Folded profiles and the
+base cone</h2>
+<p>Use all real-valued random variables on the standing sample space,
+with identity utility. For each <span class="math inline">X</span>
+define its folded-tail profile on <span
+class="math inline">(0,\infty)</span> by</p>
+<p><span
+class="math display">h_X(t)=\Pr(X&gt;t)-\Pr(X&lt;-t).</span></p>
+<p>Let <span class="math inline">W</span> be the real vector space
+spanned by these profiles, identifying functions that agree
+Lebesgue-almost everywhere. Define the linear subspace</p>
+<p><span class="math display">N=\left\{g\in W\cap
+L^1(0,\infty):\int_0^\infty g(t)\,dt=0\right\},
 \qquad V=W/N.</span></p>
-<p>This quotient is part of the model’s construction, not a change to the topic’s standing random-variable objects. Preferences will still be defined on every actual random variable.</p>
+<p>This quotient is part of the model’s construction, not a change to
+the topic’s standing random-variable objects. Preferences will still be
+defined on every actual random variable.</p>
 <p>In <span class="math inline">W</span> put</p>
-<p><span class="math display">C=\left\{g:\int g_-&lt;\infty,\quad \int g_+\ge\int g_-\right\}.</span></p>
-<p>Here either sign area may initially be infinite; membership requires a finite negative area. Thus the signed integral is well-defined and nonnegative, with <span class="math inline">+\infty</span> allowed. Addition and nonnegative scalar multiplication make <span class="math inline">C</span> a convex cone. The inequality <span class="math inline">(g+k)_-\le g_-+k_-</span> and additivity of the one-sided signed integral prove addition closure. Moreover</p>
+<p><span class="math display">C=\left\{g:\int g_-&lt;\infty,\quad \int
+g_+\ge\int g_-\right\}.</span></p>
+<p>Here either sign area may initially be infinite; membership requires
+a finite negative area. Thus the signed integral is well-defined and
+nonnegative, with <span class="math inline">+\infty</span> allowed.
+Addition and nonnegative scalar multiplication make <span
+class="math inline">C</span> a convex cone. The inequality <span
+class="math inline">(g+k)_-\le g_-+k_-</span> and additivity of the
+one-sided signed integral prove addition closure. Moreover</p>
 <p><span class="math display">C\cap(-C)=N,\qquad C+N=C.</span></p>
-<p>Indeed membership in both signs makes both areas finite and equal; adding an integrable zero-integral profile preserves integrability of the negative part and the integral. Consequently the image <span class="math inline">K=C/N</span> is a <strong>pointed</strong> convex cone in <span class="math inline">V</span>: <span class="math inline">K\cap(-K)=\{0\}</span>.</p>
-<p>Write <span class="math inline">e=[h_1]</span>. Since <span class="math inline">h_1=\mathbf1_{(0,1)}</span> a.e., its integral is one and <span class="math inline">e\ne0</span>. Every integrable profile <span class="math inline">g</span> has</p>
-<p><span class="math display">[g]=\left(\int g\right)e. \tag{1}</span></p>
-<p>This identity will enforce both ordinary and folded expected-value comparisons in every pointed cone extending <span class="math inline">K</span>.</p>
-<h2 id="an-oscillating-profile-and-a-compatible-lexicographic-plane">2. An oscillating profile and a compatible lexicographic plane</h2>
-<p>Let <span class="math inline">A</span> be the alternating St Petersburg gamble</p>
-<p><span class="math display">\Pr(A=(-2)^j)=2^{-j},\qquad j\ge1,</span></p>
-<p>and let <span class="math inline">q=-1/2</span> be a sure outcome. Define <span class="math inline">f=[h_A-h_q]</span>. For every integer <span class="math inline">k\ge1</span> and every <span class="math inline">t\in(2^k,2^{k+1})</span>, direct summation of the geometric tail gives</p>
+<p>Indeed membership in both signs makes both areas finite and equal;
+adding an integrable zero-integral profile preserves integrability of
+the negative part and the integral. Consequently the image <span
+class="math inline">K=C/N</span> is a <strong>pointed</strong> convex
+cone in <span class="math inline">V</span>: <span
+class="math inline">K\cap(-K)=\{0\}</span>.</p>
+<p>Write <span class="math inline">e=[h_1]</span>. Since <span
+class="math inline">h_1=\mathbf1_{(0,1)}</span> a.e., its integral is
+one and <span class="math inline">e\ne0</span>. Every integrable profile
+<span class="math inline">g</span> has</p>
+<p><span class="math display">[g]=\left(\int g\right)e.
+\tag{1}</span></p>
+<p>This identity will enforce both ordinary and folded expected-value
+comparisons in every pointed cone extending <span
+class="math inline">K</span>.</p>
+<h2 id="an-oscillating-profile-and-a-compatible-lexicographic-plane">2.
+An oscillating profile and a compatible lexicographic plane</h2>
+<p>Let <span class="math inline">A</span> be the alternating St
+Petersburg gamble</p>
+<p><span class="math display">\Pr(A=(-2)^j)=2^{-j},\qquad
+j\ge1,</span></p>
+<p>and let <span class="math inline">q=-1/2</span> be a sure outcome.
+Define <span class="math inline">f=[h_A-h_q]</span>. For every integer
+<span class="math inline">k\ge1</span> and every <span
+class="math inline">t\in(2^k,2^{k+1})</span>, direct summation of the
+geometric tail gives</p>
 <p><span class="math display">h_A(t)=\sum_{j=k+1}^\infty(-1)^j2^{-j}
 =\frac{(-1)^{k+1}}{3\,2^k}. \tag{2}</span></p>
-<p>As <span class="math inline">h_q(t)=0</span> for <span class="math inline">t&gt;1/2</span>, each interval <span class="math inline">(2^k,2^{k+1})</span> contributes exactly <span class="math inline">1/3</span> to the absolute area of <span class="math inline">h_A-h_q</span>, with sign alternating between positive and negative intervals. Thus <strong>both sign areas are infinite</strong>. Adding any integrable function cannot change that fact, for either nonzero scalar multiple of this profile.</p>
-<p>It follows that <span class="math inline">e,f</span> are linearly independent in <span class="math inline">V</span>, and that</p>
-<p><span class="math display">K\cap\operatorname{span}\{e,f\}=\{a e:a\ge0\}. \tag{3}</span></p>
-<p>To check (3), a representative of <span class="math inline">ae+bf</span> is <span class="math inline">a h_1+b(h_A-h_q)+n</span> with <span class="math inline">n\in N</span>. If <span class="math inline">b\ne0</span>, both sign areas remain infinite, so it is not in <span class="math inline">C</span>. If <span class="math inline">b=0</span>, the profile is integrable with integral <span class="math inline">a</span>, so membership is equivalent to <span class="math inline">a\ge0</span>.</p>
+<p>As <span class="math inline">h_q(t)=0</span> for <span
+class="math inline">t&gt;1/2</span>, each interval <span
+class="math inline">(2^k,2^{k+1})</span> contributes exactly <span
+class="math inline">1/3</span> to the absolute area of <span
+class="math inline">h_A-h_q</span>, with sign alternating between
+positive and negative intervals. Thus <strong>both sign areas are
+infinite</strong>. Adding any integrable function cannot change that
+fact, for either nonzero scalar multiple of this profile.</p>
+<p>It follows that <span class="math inline">e,f</span> are linearly
+independent in <span class="math inline">V</span>, and that</p>
+<p><span class="math display">K\cap\operatorname{span}\{e,f\}=\{a
+e:a\ge0\}. \tag{3}</span></p>
+<p>To check (3), a representative of <span
+class="math inline">ae+bf</span> is <span class="math inline">a
+h_1+b(h_A-h_q)+n</span> with <span class="math inline">n\in N</span>. If
+<span class="math inline">b\ne0</span>, both sign areas remain infinite,
+so it is not in <span class="math inline">C</span>. If <span
+class="math inline">b=0</span>, the profile is integrable with integral
+<span class="math inline">a</span>, so membership is equivalent to <span
+class="math inline">a\ge0</span>.</p>
 <p>On this plane define the lexicographic cone</p>
-<p><span class="math display">D=\{ae+bf:a&gt;0\}\;\cup\;\{bf:b\ge0\}.</span></p>
+<p><span
+class="math display">D=\{ae+bf:a&gt;0\}\;\cup\;\{bf:b\ge0\}.</span></p>
 <p>This is a pointed convex cone, and</p>
-<p><span class="math display">0&lt;_D f&lt;_D\varepsilon e\qquad\text{for every }\varepsilon&gt;0. \tag{4}</span></p>
-<p>The sum <span class="math inline">K+D</span> is also pointed. If <span class="math inline">k_1+d_1=-(k_2+d_2)</span> with <span class="math inline">k_i\in K</span> and <span class="math inline">d_i\in D</span>, then</p>
-<p><span class="math display">k_1+k_2=-(d_1+d_2)\in K\cap\operatorname{span}\{e,f\}.</span></p>
-<p>By (3) the left side is <span class="math inline">ae</span> for <span class="math inline">a\ge0</span>, while <span class="math inline">-ae\in D</span> forces <span class="math inline">a=0</span>. Pointedness of the two original cones now gives <span class="math inline">k_1=k_2=d_1=d_2=0</span>. Thus adjoining (4) does not collapse any strictly positive comparison in <span class="math inline">K</span>.</p>
+<p><span class="math display">0&lt;_D f&lt;_D\varepsilon
+e\qquad\text{for every }\varepsilon&gt;0. \tag{4}</span></p>
+<p>The sum <span class="math inline">K+D</span> is also pointed. If
+<span class="math inline">k_1+d_1=-(k_2+d_2)</span> with <span
+class="math inline">k_i\in K</span> and <span class="math inline">d_i\in
+D</span>, then</p>
+<p><span class="math display">k_1+k_2=-(d_1+d_2)\in
+K\cap\operatorname{span}\{e,f\}.</span></p>
+<p>By (3) the left side is <span class="math inline">ae</span> for <span
+class="math inline">a\ge0</span>, while <span class="math inline">-ae\in
+D</span> forces <span class="math inline">a=0</span>. Pointedness of the
+two original cones now gives <span
+class="math inline">k_1=k_2=d_1=d_2=0</span>. Thus adjoining (4) does
+not collapse any strictly positive comparison in <span
+class="math inline">K</span>.</p>
 <h2 id="total-extension">3. Total extension</h2>
-<p>Partially order by inclusion the pointed convex cones containing <span class="math inline">K+D</span>. The union of a chain is still pointed and convex: each forbidden pair or finite closure operation would already occur in one member of the chain. Zorn’s lemma therefore gives a maximal such cone <span class="math inline">T</span>.</p>
-<p>It is total: <span class="math inline">T\cup(-T)=V</span>. Otherwise choose <span class="math inline">v</span> with neither <span class="math inline">v</span> nor <span class="math inline">-v</span> in <span class="math inline">T</span>. Then <span class="math inline">T+\mathbb R_{\ge0}v</span> remains pointed. Indeed a vector and its negative in this new cone would give</p>
-<p><span class="math display">0=t_1+t_2+(a+b)v,\qquad t_1,t_2\in T,\quad a,b\ge0.</span></p>
-<p>If <span class="math inline">a+b&gt;0</span>, this puts <span class="math inline">-v</span> in <span class="math inline">T</span>, a contradiction; if <span class="math inline">a+b=0</span>, pointedness of <span class="math inline">T</span> forces both terms to be zero. This would properly enlarge <span class="math inline">T</span>, also a contradiction. Every nonzero element of <span class="math inline">K+D</span> stays strictly positive because a pointed extension cannot also contain its negative.</p>
+<p>Partially order by inclusion the pointed convex cones containing
+<span class="math inline">K+D</span>. The union of a chain is still
+pointed and convex: each forbidden pair or finite closure operation
+would already occur in one member of the chain. Zorn’s lemma therefore
+gives a maximal such cone <span class="math inline">T</span>.</p>
+<p>It is total: <span class="math inline">T\cup(-T)=V</span>. Otherwise
+choose <span class="math inline">v</span> with neither <span
+class="math inline">v</span> nor <span class="math inline">-v</span> in
+<span class="math inline">T</span>. Then <span
+class="math inline">T+\mathbb R_{\ge0}v</span> remains pointed. Indeed a
+vector and its negative in this new cone would give</p>
+<p><span class="math display">0=t_1+t_2+(a+b)v,\qquad t_1,t_2\in T,\quad
+a,b\ge0.</span></p>
+<p>If <span class="math inline">a+b&gt;0</span>, this puts <span
+class="math inline">-v</span> in <span class="math inline">T</span>, a
+contradiction; if <span class="math inline">a+b=0</span>, pointedness of
+<span class="math inline">T</span> forces both terms to be zero. This
+would properly enlarge <span class="math inline">T</span>, also a
+contradiction. Every nonzero element of <span
+class="math inline">K+D</span> stays strictly positive because a pointed
+extension cannot also contain its negative.</p>
 <p>Define preferences by</p>
-<p><span class="math display">X\succeq Y\quad\Longleftrightarrow\quad[h_X-h_Y]\in T. \tag{5}</span></p>
-<p>The total cone is an existence construction; no comparison algorithm for arbitrary profiles is claimed.</p>
-<h2 id="verification-of-the-satisfied-principles">4. Verification of the satisfied principles</h2>
-<p><strong>Preordering, Totality and Stochastic Equivalence.</strong> Cone addition gives transitivity, zero gives reflexivity, and totality of <span class="math inline">T</span> compares every pair. Equal laws give identical profiles, so they are indifferent.</p>
-<p><strong>Rich Outcomes and Simple EU.</strong> All reals are outcomes. Simple variables have integrable folded profiles whose integrals are their ordinary expectations. Equation (1) compares them exactly by those expectations, including sure outcomes and all calibrating binary lotteries. Hence the normalized utility chart is the identity, and every real utility level is realized.</p>
-<p><strong>Mixture Independence.</strong> Probability-mixture linearity gives</p>
-<p><span class="math display">h_{M_p(X,Z)}-h_{M_p(Y,Z)}=p(h_X-h_Y).</span></p>
-<p>For <span class="math inline">p&gt;0</span>, cone membership is unchanged by this multiplication in either direction, proving the full biconditional.</p>
-<p><strong>Weak and strict Stochastic Dominance.</strong> Put <span class="math inline">d=S_X-S_Y</span>. Except at atom thresholds,</p>
-<p><span class="math display">h_X(t)-h_Y(t)=d(t)+d(-t)\qquad(t&gt;0). \tag{6}</span></p>
-<p>If <span class="math inline">d\ge0</span>, the profile in (6) is nonnegative and belongs to <span class="math inline">C</span>. If dominance is strict at some threshold, right-continuity of survival functions supplies a bounded interval of positive area. Thus (6) has strictly positive finite or infinite integral. Its class is a nonzero member of <span class="math inline">K</span>, so the comparison is strict in <span class="math inline">T</span> too.</p>
-<p><strong>CDF-Area Extension.</strong> Suppose first that <span class="math inline">\int_{\mathbb R}d_-&lt;\infty</span>. By (6),</p>
+<p><span class="math display">X\succeq
+Y\quad\Longleftrightarrow\quad[h_X-h_Y]\in T. \tag{5}</span></p>
+<p>The total cone is an existence construction; no comparison algorithm
+for arbitrary profiles is claimed.</p>
+<h2 id="verification-of-the-satisfied-principles">4. Verification of the
+satisfied principles</h2>
+<p><strong>Preordering, Totality and Stochastic Equivalence.</strong>
+Cone addition gives transitivity, zero gives reflexivity, and totality
+of <span class="math inline">T</span> compares every pair. Equal laws
+give identical profiles, so they are indifferent.</p>
+<p><strong>Rich Outcomes and Simple EU.</strong> All reals are outcomes.
+Simple variables have integrable folded profiles whose integrals are
+their ordinary expectations. Equation (1) compares them exactly by those
+expectations, including sure outcomes and all calibrating binary
+lotteries. Hence the normalized utility chart is the identity, and every
+real utility level is realized.</p>
+<p><strong>Mixture Independence.</strong> Probability-mixture linearity
+gives</p>
+<p><span
+class="math display">h_{M_p(X,Z)}-h_{M_p(Y,Z)}=p(h_X-h_Y).</span></p>
+<p>For <span class="math inline">p&gt;0</span>, cone membership is
+unchanged by this multiplication in either direction, proving the full
+biconditional.</p>
+<p><strong>Weak and strict Stochastic Dominance.</strong> Put <span
+class="math inline">d=S_X-S_Y</span>. Except at atom thresholds,</p>
+<p><span class="math display">h_X(t)-h_Y(t)=d(t)+d(-t)\qquad(t&gt;0).
+\tag{6}</span></p>
+<p>If <span class="math inline">d\ge0</span>, the profile in (6) is
+nonnegative and belongs to <span class="math inline">C</span>. If
+dominance is strict at some threshold, right-continuity of survival
+functions supplies a bounded interval of positive area. Thus (6) has
+strictly positive finite or infinite integral. Its class is a nonzero
+member of <span class="math inline">K</span>, so the comparison is
+strict in <span class="math inline">T</span> too.</p>
+<p><strong>CDF-Area Extension.</strong> Suppose first that <span
+class="math inline">\int_{\mathbb R}d_-&lt;\infty</span>. By (6),</p>
 <p><span class="math display">\int_0^\infty(h_X-h_Y)_-
 \le\int_{\mathbb R}d_-&lt;\infty.</span></p>
 <p>Change of variables in the well-defined one-sided integral gives</p>
-<p><span class="math display">\int_0^\infty(h_X-h_Y)=\int_{\mathbb R}d,</span></p>
-<p>including <span class="math inline">+\infty</span>. If the latter is positive the class is strictly positive in <span class="math inline">K</span>; if zero it vanishes in <span class="math inline">V</span>; if negative it is strictly negative. When only <span class="math inline">\int d_+</span> is finite, apply the same reasoning to <span class="math inline">-d</span>. These are exactly all comparisons required by CDF-Area Extension, with strictness and equality preserved. Both-infinite pairs remain unrestricted by that axiom.</p>
-<p><strong>Relative Expectation.</strong> If the actual difference <span class="math inline">X-Y</span> is integrable, the indicator and Fubini formulas give <span class="math inline">d\in L^1(\mathbb R)</span> and <span class="math inline">\int d=\mathbb E(X-Y)</span>. Equations (1) and (6) therefore give exactly the required sign comparison.</p>
-<p><strong>Folded Expectation.</strong> If <span class="math inline">h_X,h_Y</span> are both integrable, equation (1) gives <span class="math inline">[h_X-h_Y]=(F(X)-F(Y))e</span>. Definition (5) compares them exactly by their folded expectations.</p>
-<p><strong>Reflection Anti-Invariance.</strong> The exact identity <span class="math inline">h_{-X}=-h_X</span> gives <span class="math inline">h_{-Y}-h_{-X}=h_X-h_Y</span>. Thus reversing and reflecting a comparison leaves its class unchanged.</p>
-<p><strong>Shift Invariance.</strong> For every real <span class="math inline">b</span>, the pointwise difference <span class="math inline">(X+b)-X=b</span> is integrable. The Relative Expectation computation above gives</p>
+<p><span class="math display">\int_0^\infty(h_X-h_Y)=\int_{\mathbb
+R}d,</span></p>
+<p>including <span class="math inline">+\infty</span>. If the latter is
+positive the class is strictly positive in <span
+class="math inline">K</span>; if zero it vanishes in <span
+class="math inline">V</span>; if negative it is strictly negative. When
+only <span class="math inline">\int d_+</span> is finite, apply the same
+reasoning to <span class="math inline">-d</span>. These are exactly all
+comparisons required by CDF-Area Extension, with strictness and equality
+preserved. Both-infinite pairs remain unrestricted by that axiom.</p>
+<p><strong>Relative Expectation.</strong> If the actual difference <span
+class="math inline">X-Y</span> is integrable, the indicator and Fubini
+formulas give <span class="math inline">d\in L^1(\mathbb R)</span> and
+<span class="math inline">\int d=\mathbb E(X-Y)</span>. Equations (1)
+and (6) therefore give exactly the required sign comparison.</p>
+<p><strong>Folded Expectation.</strong> If <span
+class="math inline">h_X,h_Y</span> are both integrable, equation (1)
+gives <span class="math inline">[h_X-h_Y]=(F(X)-F(Y))e</span>.
+Definition (5) compares them exactly by their folded expectations.</p>
+<p><strong>Reflection Anti-Invariance.</strong> The exact identity <span
+class="math inline">h_{-X}=-h_X</span> gives <span
+class="math inline">h_{-Y}-h_{-X}=h_X-h_Y</span>. Thus reversing and
+reflecting a comparison leaves its class unchanged.</p>
+<p><strong>Shift Invariance.</strong> For every real <span
+class="math inline">b</span>, the pointwise difference <span
+class="math inline">(X+b)-X=b</span> is integrable. The Relative
+Expectation computation above gives</p>
 <p><span class="math display">[h_{X+b}-h_X]=be.</span></p>
-<p>Consequently shifting both compared variables leaves their difference class unchanged. This argument requires no individual integrability of <span class="math inline">X</span> or <span class="math inline">Y</span>.</p>
+<p>Consequently shifting both compared variables leaves their difference
+class unchanged. This argument requires no individual integrability of
+<span class="math inline">X</span> or <span
+class="math inline">Y</span>.</p>
 <h2 id="explicit-failures">5. Explicit failures</h2>
-<p>By (1), <span class="math inline">[h_q]=qe</span>, and by definition <span class="math inline">[h_A]=qe+f</span>. Equations (4) and (5) therefore give</p>
-<p><span class="math display">q\prec A\prec q+\varepsilon\qquad(\varepsilon&gt;0). \tag{7}</span></p>
-<p>For <strong>failure of the recorded upper-section L¹ Continuity</strong>, take <span class="math inline">X_n=q+1/n</span>, <span class="math inline">X=q</span>, and <span class="math inline">Y=A</span>. Their actual-coupling distances satisfy <span class="math inline">\mathbb E|X_n-X|=1/n\to0</span>, and every <span class="math inline">X_n\succeq Y</span>, but <span class="math inline">X\not\succeq Y</span>. No lower-section continuity is assumed or needed for this witness.</p>
+<p>By (1), <span class="math inline">[h_q]=qe</span>, and by definition
+<span class="math inline">[h_A]=qe+f</span>. Equations (4) and (5)
+therefore give</p>
+<p><span class="math display">q\prec A\prec
+q+\varepsilon\qquad(\varepsilon&gt;0). \tag{7}</span></p>
+<p>For <strong>failure of the recorded upper-section L¹
+Continuity</strong>, take <span class="math inline">X_n=q+1/n</span>,
+<span class="math inline">X=q</span>, and <span
+class="math inline">Y=A</span>. Their actual-coupling distances satisfy
+<span class="math inline">\mathbb E|X_n-X|=1/n\to0</span>, and every
+<span class="math inline">X_n\succeq Y</span>, but <span
+class="math inline">X\not\succeq Y</span>. No lower-section continuity
+is assumed or needed for this witness.</p>
 <p>For the <strong>scaling reversal</strong>, use the law identity</p>
 <p><span class="math display">A\overset d=M_{1/2}(-2A,-2).</span></p>
-<p>It gives <span class="math inline">[h_A]=-[h_{2A}]/2-e</span>, hence</p>
+<p>It gives <span class="math inline">[h_A]=-[h_{2A}]/2-e</span>,
+hence</p>
 <p><span class="math display">[h_{2A}]=-e-2f.</span></p>
-<p>Thus <span class="math inline">A\succ-1/2</span>, while <span class="math inline">2A\prec-1</span>. Scale Invariance fails at scale two. The first of these inequalities also directly refutes the specified alternating St Petersburg value.</p>
-<p>For <strong>failure of Uniqueness of Negative Self-Similarity</strong>, both <span class="math inline">A</span> and sure <span class="math inline">q=-1/2</span> satisfy <span class="math inline">X\sim M_{1/2}(-2X,-2)</span>. For <span class="math inline">A</span> this follows from the law recursion and Stochastic Equivalence; for <span class="math inline">q</span> it is Simple EU. Yet (7) says <span class="math inline">A\not\sim q</span>.</p>
-<h2 id="attribution-original-work-and-limits">Attribution, original work and limits</h2>
-<p><strong>Original work: substantial model adaptation and separation.</strong> Zachary Goodsell supplies the base area-preorder idea, the folded-tail evaluation principle, the alternating-gamble recursion and the use of total cone extensions. The present model changes the ordered space to folded profiles modulo all zero-integral <span class="math inline">L^{1}</span> profiles, adds the compatible infinitesimal plane, and proves the explicit continuity separation. Its direct source is <strong>Misc.</strong>, with GPT-6 (Codex) credited for that adaptation. This is an account of work performed for the map, not a claim of literature priority.</p>
-<p>The construction does <strong>not</strong> contradict <em>Symmetries of value</em>, Corollary 5: that result assumes full affine symmetry, including Scale Invariance, which fails here. The source’s unpublished erroneous symmetric-extension theorem is not invoked. The extension step in §3 is proved directly and imposes no additional convolution or scaling invariance.</p>
-<p>The diagnostic <code>checks/lexicographic_folded_extension.py</code> checks the exact dyadic tail formula, the repeated positive/negative area contributions, lexicographic witness inequalities and the distributional recursion. It does not simulate Zorn’s lemma or certify arbitrary infinite-dimensional claims. No independent checker or Lean proof is claimed.</p>
-<p><strong>References.</strong> Zachary Goodsell, <em>Symmetries of value</em>, pp. 27–31 and §5, pp. 33–37; <em>Unbounded Utility and Background Risk</em>, unpublished manuscript, §3, pp. 7–8 (the base area preorder only). Model adaptation and proofs: GPT-6 (Codex), 9 September 2026.</p>
+<p>Thus <span class="math inline">A\succ-1/2</span>, while <span
+class="math inline">2A\prec-1</span>. Scale Invariance fails at scale
+two. The first of these inequalities also directly refutes the specified
+alternating St Petersburg value.</p>
+<p>For <strong>failure of Uniqueness of Negative
+Self-Similarity</strong>, both <span class="math inline">A</span> and
+sure <span class="math inline">q=-1/2</span> satisfy <span
+class="math inline">X\sim M_{1/2}(-2X,-2)</span>. For <span
+class="math inline">A</span> this follows from the law recursion and
+Stochastic Equivalence; for <span class="math inline">q</span> it is
+Simple EU. Yet (7) says <span class="math inline">A\not\sim
+q</span>.</p>
+<h2 id="attribution-original-work-and-limits">Attribution, original work
+and limits</h2>
+<p><strong>Original work: substantial model adaptation and
+separation.</strong> Zachary Goodsell supplies the base area-preorder
+idea, the folded-tail evaluation principle, the alternating-gamble
+recursion and the use of total cone extensions. The present model
+changes the ordered space to folded profiles modulo all zero-integral
+<span class="math inline">L^{1}</span> profiles, adds the compatible
+infinitesimal plane, and proves the explicit continuity separation. Its
+direct source is <strong>Misc.</strong>, with GPT-6 (Codex) credited for
+that adaptation. This is an account of work performed for the map, not a
+claim of literature priority.</p>
+<p>The construction does <strong>not</strong> contradict <em>Symmetries
+of value</em>, Corollary 5: that result assumes full affine symmetry,
+including Scale Invariance, which fails here. The source’s unpublished
+erroneous symmetric-extension theorem is not invoked. The extension step
+in §3 is proved directly and imposes no additional convolution or
+scaling invariance.</p>
+<p>The diagnostic <code>checks/lexicographic_folded_extension.py</code>
+checks the exact dyadic tail formula, the repeated positive/negative
+area contributions, lexicographic witness inequalities and the
+distributional recursion. It does not simulate Zorn’s lemma or certify
+arbitrary infinite-dimensional claims. No independent checker or Lean
+proof is claimed.</p>
+<p><strong>References.</strong> Zachary Goodsell, <em>Symmetries of
+value</em>, pp. 27–31 and §5, pp. 33–37; <em>Unbounded Utility and
+Background Risk</em>, unpublished manuscript, §3, pp. 7–8 (the base area
+preorder only). Model adaptation and proofs: GPT-6 (Codex), 9 September
+2026.</p>
 <h2 id="rational-factors">Rational factors</h2>
-<p><strong>Addition: Claude (Fable 5.1), 24 September 2026.</strong> The scaling reversal in §5 is a doubling: <span class="math inline">A\succ-1/2</span> while <span class="math inline">2A\prec-1</span>, so the pair <span class="math inline">(A,-1/2)</span> fails invariance at the factor <span class="math inline">2</span>. The model therefore also fails Rational Scale Invariance, the restriction of Scale Invariance to rational factors. The same doubling refutes Integer Affine Preservation: <span class="math inline">A\succ-1/2</span> is not carried to <span class="math inline">2A\succeq-1</span>. Since the model satisfies Rich Outcomes and Stochastic Equivalence, the recorded implication <a href="comonotonic-sum-implies-integer-affine-preservation.html">comonotonic-sum-implies-integer-affine-preservation</a> shows that Comonotonic Sum Invariance fails here. The failure is derived; no explicit comonotonic witness is recorded.</p>
-<h2 id="integer-ratio-self-similarity">Integer-ratio self-similarity</h2>
-<p><strong>Addition: Claude (Fable 5.1), 24 September 2026.</strong> The uniqueness witness above has ratio <span class="math inline">a=2</span>, so the model also fails Uniqueness of Negative Self-Similarity (integer ratios), the restriction of the principle to integer ratios.</p>
+<p><strong>Addition: Claude (Fable 5.1), 24 September 2026.</strong> The
+scaling reversal in §5 is a doubling: <span
+class="math inline">A\succ-1/2</span> while <span
+class="math inline">2A\prec-1</span>, so the pair <span
+class="math inline">(A,-1/2)</span> fails invariance at the factor <span
+class="math inline">2</span>. The model therefore also fails Rational
+Scale Invariance, the restriction of Scale Invariance to rational
+factors. The same doubling refutes Integer Affine Preservation: <span
+class="math inline">A\succ-1/2</span> is not carried to <span
+class="math inline">2A\succeq-1</span>. Since the model satisfies Rich
+Outcomes and Stochastic Equivalence, the recorded implication <a
+href="comonotonic-sum-implies-integer-affine-preservation.html">comonotonic-sum-implies-integer-affine-preservation</a>
+shows that Comonotonic Sum Invariance fails here. The failure is
+derived; no explicit comonotonic witness is recorded.</p>
+<h2 id="integer-ratio-self-similarity">Integer-ratio
+self-similarity</h2>
+<p><strong>Addition: Claude (Fable 5.1), 24 September 2026.</strong> The
+uniqueness witness above has ratio <span class="math inline">a=2</span>,
+so the model also fails Uniqueness of Negative Self-Similarity (integer
+ratios), the restriction of the principle to integer ratios.</p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Background: <a href="https://doi.org/10.1111/nous.12549">Symmetries of value</a>.</strong> (<a href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>) Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. — pp. 27–29; alternating St Petersburg and negative self-similarity, pp. 29–31; cone-extension framework, §5, pp. 33–37</li>
-<li><strong>Background: Unbounded Utility and Background Risk.</strong> Zachary Goodsell (5 June 2026). Unbounded Utility and Background Risk. Unpublished working manuscript. — §3, pp. 7–8, the base area preorder. Its withdrawn symmetric-extension theorem is not used</li>
+<li><strong>Background: <a
+href="https://doi.org/10.1111/nous.12549">Symmetries of
+value</a>.</strong> (<a
+href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>)
+Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. —
+pp. 27–29; alternating St Petersburg and negative self-similarity,
+pp. 29–31; cone-extension framework, §5, pp. 33–37</li>
+<li><strong>Background: Unbounded Utility and Background Risk.</strong>
+Zachary Goodsell (5 June 2026). Unbounded Utility and Background Risk.
+Unpublished working manuscript. — §3, pp. 7–8, the base area preorder.
+Its withdrawn symmetric-extension theorem is not used</li>
 </ul>
 </body></html>

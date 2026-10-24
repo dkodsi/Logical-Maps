@@ -321,30 +321,59 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
 <script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Marriage is monogamous ⇒ Spouse uniqueness for □</h1></header><p class="cert">
-Result — Source: Misc.; produced by Codex (GPT-6), prompted by Zachary Goodsell, 13 September 2026; recorded by Codex (GPT-6), prompted by Zachary Goodsell, manuscript transcription.
+Result — Source: Misc.; produced by Codex (GPT-6), prompted by Zachary
+Goodsell, 13 September 2026; recorded by Codex (GPT-6), prompted by
+Zachary Goodsell, manuscript transcription.
 </p>
 <h2 id="premises">Premises</h2>
 <ul>
-<li><strong>Marriage is monogamous.</strong> <span class="math inline">\forall N,P,Q:tt. (\operatorname{Necessity}_{2}(N) \land \operatorname{Possibility}_{2}(P) \land \operatorname{Possibility}_{2}(Q) \land \operatorname{Married}(N,P) \land \operatorname{Married}(N,Q)) \to (P = Q)</span></li>
+<li><strong>Marriage is monogamous.</strong> <span
+class="math inline">\forall N,P,Q:tt. (\operatorname{Necessity}_{2}(N)
+\land \operatorname{Possibility}_{2}(P) \land
+\operatorname{Possibility}_{2}(Q) \land \operatorname{Married}(N,P)
+\land \operatorname{Married}(N,Q)) \to (P = Q)</span></li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <ul>
-<li><strong>Spouse uniqueness for □.</strong> <span class="math inline">\forall P,Q:tt. (\operatorname{Possibility}_{2}(P) \land \operatorname{Possibility}_{2}(Q) \land \operatorname{Married}((\lambda p:t. \Box p), P) \land \operatorname{Married}((\lambda p:t. \Box p), Q)) \to (P = Q)</span></li>
+<li><strong>Spouse uniqueness for □.</strong> <span
+class="math inline">\forall P,Q:tt. (\operatorname{Possibility}_{2}(P)
+\land \operatorname{Possibility}_{2}(Q) \land
+\operatorname{Married}((\lambda p:t. \Box p), P) \land
+\operatorname{Married}((\lambda p:t. \Box p), Q)) \to (P =
+Q)</span></li>
 </ul>
 <h2 id="proof">Proof</h2>
-<p>Given two qualified spouses P,Q of <span class="math inline">\Box</span>, the standing normality theorems for <span class="math inline">\Box</span> give <span class="math inline">\Box \operatorname{Normal}(\Box ). \operatorname{Possibility}_{2}(P)</span> supplies the necessary PSb/PSc clauses for P, so P together with <span class="math inline">\operatorname{Married}(\Box ,P)</span> witnesses <span class="math inline">\operatorname{Necessity}_{2}(\Box )</span>. Instantiate the selected monogamy sentence with <span class="math inline">N=\Box , P</span> and Q to get <span class="math inline">P=Q</span>; discharge and generalize.</p>
+<p>Given two qualified spouses P,Q of <span
+class="math inline">\Box</span>, the standing normality theorems for
+<span class="math inline">\Box</span> give <span
+class="math inline">\Box \operatorname{Normal}(\Box ).
+\operatorname{Possibility}_{2}(P)</span> supplies the necessary PSb/PSc
+clauses for P, so P together with <span
+class="math inline">\operatorname{Married}(\Box ,P)</span> witnesses
+<span class="math inline">\operatorname{Necessity}_{2}(\Box )</span>.
+Instantiate the selected monogamy sentence with <span
+class="math inline">N=\Box , P</span> and Q to get <span
+class="math inline">P=Q</span>; discharge and generalize.</p>
 <h2 id="notes">Notes</h2>
 <p>Informal proof; no independent checker or Lean verification.</p>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><strong>Codex connecting proof, 13 Sep 2026</strong> — Codex (GPT-6), connecting proof recorded 13 September 2026 in monogamy-implies-necessity-spouse-uniqueness.</li>
-<li><strong>Possibility in Intuitionistic Higher-Order Logic</strong> — Zachary Goodsell, Possibility in Intuitionistic Higher-Order Logic (21 August 2026), §7.1, Question 3, p. 46.</li>
+<li><strong>Codex connecting proof, 13 Sep 2026</strong> — Codex
+(GPT-6), connecting proof recorded 13 September 2026 in
+monogamy-implies-necessity-spouse-uniqueness.</li>
+<li><strong>Possibility in Intuitionistic Higher-Order Logic</strong> —
+Zachary Goodsell, Possibility in Intuitionistic Higher-Order Logic (21
+August 2026), §7.1, Question 3, p. 46.</li>
 </ul>
 <p class="cert">
-Record: <code>topics/intuitionisticism/results/monogamy-implies-necessity-spouse-uniqueness.yaml</code>
+Record:
+<code>topics/intuitionisticism/results/monogamy-implies-necessity-spouse-uniqueness.yaml</code>
 </p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Background: Possibility in Intuitionistic Higher-Order Logic.</strong> Zachary Goodsell (21 August 2026). Possibility in Intuitionistic Higher-Order Logic. Manuscript. — §7.1, Question 3, p. 46</li>
+<li><strong>Background: Possibility in Intuitionistic Higher-Order
+Logic.</strong> Zachary Goodsell (21 August 2026). Possibility in
+Intuitionistic Higher-Order Logic. Manuscript. — §7.1, Question 3,
+p. 46</li>
 </ul>
 </body></html>

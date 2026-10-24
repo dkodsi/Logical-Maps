@@ -269,47 +269,80 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <link rel="stylesheet" href="../math/katex.min.css">
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
-<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Symmetric neutrality and shifts suffice for transfer across mixtures</h1></header><p><strong>Source and work accounting.</strong> The paired-reflection argument is Zachary Goodsell’s <em>Symmetries of value</em>, Theorem 3, pp. 25–26. The contribution here is a small premise reduction and an explicit cancellation proof, recorded by GPT-6, prompted by Zachary Goodsell (Codex), 9 September 2026. No independent checker or Lean certification is asserted.</p>
-<p>Assume Rich Outcomes, Stochastic Equivalence, Simple EU, Mixture Independence, Symmetric Neutrality and Shift Invariance. Totality and Scale Invariance are not used. Work in the normalized real utility chart.</p>
-<p>For a gamble <span class="math inline">X</span> and real <span class="math inline">c</span>, the law of</p>
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Symmetric neutrality and shifts suffice for transfer across mixtures</h1></header><p><strong>Source and work accounting.</strong> The paired-reflection
+argument is Zachary Goodsell’s <em>Symmetries of value</em>, Theorem 3,
+pp. 25–26. The contribution here is a small premise reduction and an
+explicit cancellation proof, recorded by GPT-6, prompted by Zachary
+Goodsell (Codex), 9 September 2026. No independent checker or Lean
+certification is asserted.</p>
+<p>Assume Rich Outcomes, Stochastic Equivalence, Simple EU, Mixture
+Independence, Symmetric Neutrality and Shift Invariance. Totality and
+Scale Invariance are not used. Work in the normalized real utility
+chart.</p>
+<p>For a gamble <span class="math inline">X</span> and real <span
+class="math inline">c</span>, the law of</p>
 <p><span class="math display">
 M_{1/2}(X+c/2,-X-c/2)
 </span></p>
-<p>is symmetric. Neutrality makes this gamble indifferent to zero. Shift both outcomes by <span class="math inline">c/2</span>. Shift Invariance, followed by Stochastic Equivalence to identify the resulting fixed-lift realization, gives</p>
+<p>is symmetric. Neutrality makes this gamble indifferent to zero. Shift
+both outcomes by <span class="math inline">c/2</span>. Shift Invariance,
+followed by Stochastic Equivalence to identify the resulting fixed-lift
+realization, gives</p>
 <p><span class="math display">
 M_{1/2}(X+c,-X)\sim c/2. \tag{1}
 </span></p>
-<p>Fix <span class="math inline">0&lt;p&lt;1</span> and <span class="math inline">b\in\mathbb R</span>, and put</p>
+<p>Fix <span class="math inline">0&lt;p&lt;1</span> and <span
+class="math inline">b\in\mathbb R</span>, and put</p>
 <p><span class="math display">
 L=M_p(X+b/p,Y),\qquad R=M_p(X,Y+b/(1-p)).
 </span></p>
-<p>The law of <span class="math inline">M_{1/2}(L,-R)</span> can be regrouped as</p>
+<p>The law of <span class="math inline">M_{1/2}(L,-R)</span> can be
+regrouped as</p>
 <p><span class="math display">
 M_p\left(
- M_{1/2}(X+b/p,-X),
- M_{1/2}(Y,-Y-b/(1-p))
+M_{1/2}(X+b/p,-X),
+M_{1/2}(Y,-Y-b/(1-p))
 \right).
 </span></p>
-<p>By (1), the two inner mixtures are indifferent to <span class="math inline">b/(2p)</span> and</p>
+<p>By (1), the two inner mixtures are indifferent to <span
+class="math inline">b/(2p)</span> and</p>
 <p><span class="math display">
 -\frac{b}{2(1-p)},
 </span></p>
-<p>respectively. Mixture Independence propagates these indifferences; Simple EU makes their outer mixture indifferent to zero, since its expectation is</p>
+<p>respectively. Mixture Independence propagates these indifferences;
+Simple EU makes their outer mixture indifferent to zero, since its
+expectation is</p>
 <p><span class="math display">
 p\frac{b}{2p}+(1-p)\frac{-b}{2(1-p)}=0.
 </span></p>
-<p>Consequently <span class="math inline">M_{1/2}(L,-R)\sim0</span>. Symmetric Neutrality also gives</p>
+<p>Consequently <span class="math inline">M_{1/2}(L,-R)\sim0</span>.
+Symmetric Neutrality also gives</p>
 <p><span class="math display">
 M_{1/2}(R,-R)\sim0.
 </span></p>
-<p>Transitivity of indifference and Mixture Independence cancel the common</p>
+<p>Transitivity of indifference and Mixture Independence cancel the
+common</p>
 <p><span class="math display">
 -R
 </span></p>
-<p>branch and yield <span class="math inline">L\sim R</span>, which is Shift Transfer. Every regrouping above is an identity of laws and uses Stochastic Equivalence before being used as a preference identity. Rich Outcomes supplies the finite constants and all the displayed translations.</p>
-<p>Under DU this gives a useful sufficient route to Simple Relative Expectation: Symmetric Neutrality plus Shift Invariance suffice. The source theorem’s full negative-affine package already supplies them, but its scale component is not needed for this conclusion. This is an account of work performed for the map, not a claim of priority in the literature.</p>
+<p>branch and yield <span class="math inline">L\sim R</span>, which is
+Shift Transfer. Every regrouping above is an identity of laws and uses
+Stochastic Equivalence before being used as a preference identity. Rich
+Outcomes supplies the finite constants and all the displayed
+translations.</p>
+<p>Under DU this gives a useful sufficient route to Simple Relative
+Expectation: Symmetric Neutrality plus Shift Invariance suffice. The
+source theorem’s full negative-affine package already supplies them, but
+its scale component is not needed for this conclusion. This is an
+account of work performed for the map, not a claim of priority in the
+literature.</p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Background: <a href="https://doi.org/10.1111/nous.12549">Symmetries of value</a>.</strong> (<a href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>) Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. — Theorem 3, pp. 25–26: paired-reflection and centering argument</li>
+<li><strong>Background: <a
+href="https://doi.org/10.1111/nous.12549">Symmetries of
+value</a>.</strong> (<a
+href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>)
+Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. — Theorem
+3, pp. 25–26: paired-reflection and centering argument</li>
 </ul>
 </body></html>

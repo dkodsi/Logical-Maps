@@ -270,31 +270,72 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
 <script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Archimedean Outcomes ∧ Folded Expectation ⇒ Expected Utility</h1></header><p class="cert">
-Result — Source: Misc.; produced by GPT-6 (Codex), prompted by Zachary Goodsell, 2026-09-08; recorded by GPT-6 (Codex), prompted by Zachary Goodsell, 2026-09-08; transcription and random-variable formulation.
+Result — Source: Misc.; produced by GPT-6 (Codex), prompted by Zachary
+Goodsell, 2026-09-08; recorded by GPT-6 (Codex), prompted by Zachary
+Goodsell, 2026-09-08; transcription and random-variable formulation.
 </p>
 <h2 id="premises">Premises</h2>
 <ul>
-<li><strong>Archimedean Outcomes.</strong> For any three sure outcomes <span class="math inline">a \succ b \succ c</span>, some nontrivial mixture of the outer two is equally good as the intermediate one: <span class="math inline">b \sim M_p(a,c)</span> for some <span class="math inline">p \in (0,1)</span>. Only the three inputs are sure outcomes. This is the no-infinite-ratios condition, not continuity of preferences over arbitrary gambles.</li>
-<li><strong>Folded Expectation.</strong> Put <span class="math inline">h_X(t)=P(u(X)&gt;t)- P(u(X)&lt;- t)</span> for <span class="math inline">t\ge 0</span>. If <span class="math inline">\int _0^{\infty }|h_X(t)|dt</span> and <span class="math inline">\int _0^{\infty }|h_Y(t)|dt</span> are finite, compare X,Y exactly by <span class="math inline">F(X)=\int _0^{\infty }h_X(t)dt</span> and <span class="math inline">F(Y)</span>. Boundary atoms do not change these integrals.</li>
+<li><strong>Archimedean Outcomes.</strong> For any three sure outcomes
+<span class="math inline">a \succ b \succ c</span>, some nontrivial
+mixture of the outer two is equally good as the intermediate one: <span
+class="math inline">b \sim M_p(a,c)</span> for some <span
+class="math inline">p \in (0,1)</span>. Only the three inputs are sure
+outcomes. This is the no-infinite-ratios condition, not continuity of
+preferences over arbitrary gambles.</li>
+<li><strong>Folded Expectation.</strong> Put <span
+class="math inline">h_X(t)=P(u(X)&gt;t)- P(u(X)&lt;- t)</span> for <span
+class="math inline">t\ge 0</span>. If <span class="math inline">\int
+_0^{\infty }|h_X(t)|dt</span> and <span class="math inline">\int
+_0^{\infty }|h_Y(t)|dt</span> are finite, compare X,Y exactly by <span
+class="math inline">F(X)=\int _0^{\infty }h_X(t)dt</span> and <span
+class="math inline">F(Y)</span>. Boundary atoms do not change these
+integrals.</li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <ul>
-<li><strong>Expected Utility.</strong> The normalized chart u is defined on all outcomes and is measurable. Whenever <span class="math inline">u(X),u(Y)</span> are integrable, <span class="math inline">X \succeq Y</span> iff <span class="math inline">E[u(X)] \ge E[u(Y)]</span>. Expectations here are finite Lebesgue expectations; this says nothing about two <span class="math inline">+\infty</span> expectations or conditionally convergent sums.</li>
+<li><strong>Expected Utility.</strong> The normalized chart u is defined
+on all outcomes and is measurable. Whenever <span
+class="math inline">u(X),u(Y)</span> are integrable, <span
+class="math inline">X \succeq Y</span> iff <span
+class="math inline">E[u(X)] \ge E[u(Y)]</span>. Expectations here are
+finite Lebesgue expectations; this says nothing about two <span
+class="math inline">+\infty</span> expectations or conditionally
+convergent sums.</li>
 </ul>
 <h2 id="proof">Proof</h2>
-<p>For an integrable real utility variable, the integral of the absolute folded tail difference is bounded by <span class="math inline">E|u(X)|</span>, and the tail-integral formula gives <span class="math inline">F(X)=E[u(X)]</span>. Archimedean Outcomes makes the chart total. Restrict the Folded Expectation comparison to integrable X,Y.</p>
+<p>For an integrable real utility variable, the integral of the absolute
+folded tail difference is bounded by <span
+class="math inline">E|u(X)|</span>, and the tail-integral formula gives
+<span class="math inline">F(X)=E[u(X)]</span>. Archimedean Outcomes
+makes the chart total. Restrict the Folded Expectation comparison to
+integrable X,Y.</p>
 <h2 id="notes">Notes</h2>
-<p>Source-based result or immediate restriction/composition. Premises are sufficient; minimality is not claimed. The direct source is recorded separately from the transcription; no translation checker is asserted.</p>
+<p>Source-based result or immediate restriction/composition. Premises
+are sufficient; minimality is not claimed. The direct source is recorded
+separately from the transcription; no translation checker is
+asserted.</p>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><strong>Symmetries of Value</strong> — Goodsell, Symmetries of value, Noûs 60 (2026), 16–37; DOI 10.1111/nous.12549, §4, p. 27</li>
-<li><strong>GPT-6 generated 8 Sep</strong> — GPT-6 (Codex), prompted by Zachary Goodsell, 2026-09-08: elementary connecting proof in topics/unbounded-utility/results/folded-implies-eu.yaml (proof field), using the cited paper’s definitions; not a separately stated paper theorem.</li>
+<li><strong>Symmetries of Value</strong> — Goodsell, Symmetries of
+value, Noûs 60 (2026), 16–37; DOI 10.1111/nous.12549, §4, p. 27</li>
+<li><strong>GPT-6 generated 8 Sep</strong> — GPT-6 (Codex), prompted by
+Zachary Goodsell, 2026-09-08: elementary connecting proof in
+topics/unbounded-utility/results/folded-implies-eu.yaml (proof field),
+using the cited paper’s definitions; not a separately stated paper
+theorem.</li>
 </ul>
 <p class="cert">
-Record: <code>topics/unbounded-utility/results/folded-implies-eu.yaml</code>
+Record:
+<code>topics/unbounded-utility/results/folded-implies-eu.yaml</code>
 </p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Background: <a href="https://doi.org/10.1111/nous.12549">Symmetries of value</a>.</strong> (<a href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>) Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. — §4, p. 27</li>
+<li><strong>Background: <a
+href="https://doi.org/10.1111/nous.12549">Symmetries of
+value</a>.</strong> (<a
+href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>)
+Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. — §4,
+p. 27</li>
 </ul>
 </body></html>

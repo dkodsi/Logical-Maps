@@ -269,19 +269,57 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <link rel="stylesheet" href="../math/katex.min.css">
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
-<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>A smaller sufficient package for Negative Self-Similarity</h1></header><p><strong>Claim.</strong> Totality + Mixture Independence + Negative Affine Anti-Invariance imply Uniqueness of Negative Self-Similarity.</p>
-<p>Fix an eligible instance of the principle, with <span class="math inline">0&lt;p&lt;1</span>, <span class="math inline">a&gt;0</span>, <span class="math inline">b\in\mathbb R</span> and common gamble <span class="math inline">Z</span>. Define, for the variables under consideration,</p>
-<p><span class="math display">T(V)=-aV+b,\qquad F(V)=M_p(T(V),Z).</span></p>
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>A smaller sufficient package for Negative Self-Similarity</h1></header><p><strong>Claim.</strong> Totality + Mixture Independence + Negative
+Affine Anti-Invariance imply Uniqueness of Negative Self-Similarity.</p>
+<p>Fix an eligible instance of the principle, with <span
+class="math inline">0&lt;p&lt;1</span>, <span
+class="math inline">a&gt;0</span>, <span class="math inline">b\in\mathbb
+R</span> and common gamble <span class="math inline">Z</span>. Define,
+for the variables under consideration,</p>
+<p><span class="math display">T(V)=-aV+b,\qquad
+F(V)=M_p(T(V),Z).</span></p>
 <p>Negative Affine Anti-Invariance supplies</p>
-<p><span class="math display">V\succ W\ \Longrightarrow\ T(W)\succ T(V).</span></p>
-<p>Indeed, it supplies the weak comparison in this direction, while the opposite weak comparison would imply <span class="math inline">W\succeq V</span>, contradicting strictness. Mixture Independence likewise preserves strictness between first arguments with the same second argument: apply its biconditional to both weak comparison directions. Thus</p>
-<p><span class="math display">V\succ W\ \Longrightarrow\ F(W)\succ F(V).</span></p>
-<p>Suppose now that <span class="math inline">X\sim F(X)</span> and <span class="math inline">Y\sim F(Y)</span>. If <span class="math inline">X\succ Y</span>, the last implication and the fixed-point indifferences give <span class="math inline">Y\succ X</span>, contradicting the strict part of a preorder. The case <span class="math inline">Y\succ X</span> is identical. Under Totality, two variables which are not indifferent must be strictly ranked in one of these two directions. Therefore <span class="math inline">X\sim Y</span>.</p>
-<p>Only the affine transformations already required by the two fixed-point hypotheses are used. There is no replacement by a same-law variable, no need to construct any additional utility level, and no invocation of expected utility or dominance.</p>
-<p><strong>Original work: proof adaptation.</strong> The mathematical argument is Goodsell’s Theorem 10 argument. The new database work is its premise audit: four assumptions from the full source package are unnecessary here. This is not a claim that the uniqueness argument is original to the AI or new in the literature.</p>
-<p><strong>Attribution.</strong> Original uniqueness argument: Zachary Goodsell, <em>Symmetries of value</em>, Theorem 10, pp. 30–31. Reduced-premise statement and audit: GPT-6 (Codex), 9 September 2026. No independent checker or Lean proof is claimed.</p>
+<p><span class="math display">V\succ W\ \Longrightarrow\ T(W)\succ
+T(V).</span></p>
+<p>Indeed, it supplies the weak comparison in this direction, while the
+opposite weak comparison would imply <span class="math inline">W\succeq
+V</span>, contradicting strictness. Mixture Independence likewise
+preserves strictness between first arguments with the same second
+argument: apply its biconditional to both weak comparison directions.
+Thus</p>
+<p><span class="math display">V\succ W\ \Longrightarrow\ F(W)\succ
+F(V).</span></p>
+<p>Suppose now that <span class="math inline">X\sim F(X)</span> and
+<span class="math inline">Y\sim F(Y)</span>. If <span
+class="math inline">X\succ Y</span>, the last implication and the
+fixed-point indifferences give <span class="math inline">Y\succ
+X</span>, contradicting the strict part of a preorder. The case <span
+class="math inline">Y\succ X</span> is identical. Under Totality, two
+variables which are not indifferent must be strictly ranked in one of
+these two directions. Therefore <span class="math inline">X\sim
+Y</span>.</p>
+<p>Only the affine transformations already required by the two
+fixed-point hypotheses are used. There is no replacement by a same-law
+variable, no need to construct any additional utility level, and no
+invocation of expected utility or dominance.</p>
+<p><strong>Original work: proof adaptation.</strong> The mathematical
+argument is Goodsell’s Theorem 10 argument. The new database work is its
+premise audit: four assumptions from the full source package are
+unnecessary here. This is not a claim that the uniqueness argument is
+original to the AI or new in the literature.</p>
+<p><strong>Attribution.</strong> Original uniqueness argument: Zachary
+Goodsell, <em>Symmetries of value</em>, Theorem 10, pp. 30–31.
+Reduced-premise statement and audit: GPT-6 (Codex), 9 September 2026. No
+independent checker or Lean proof is claimed.</p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Background: <a href="https://doi.org/10.1111/nous.12549">Symmetries of value</a>.</strong> (<a href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>) Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. — Theorem 10, pp. 30–31. The cited argument is adapted with the explicitly listed sufficient premises; the reduced-premise claim is the present project contribution</li>
+<li><strong>Background: <a
+href="https://doi.org/10.1111/nous.12549">Symmetries of
+value</a>.</strong> (<a
+href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>)
+Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. — Theorem
+10, pp. 30–31. The cited argument is adapted with the explicitly listed
+sufficient premises; the reduced-premise claim is the present project
+contribution</li>
 </ul>
 </body></html>

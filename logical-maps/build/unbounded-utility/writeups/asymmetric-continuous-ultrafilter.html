@@ -269,98 +269,344 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <link rel="stylesheet" href="../math/katex.min.css">
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
-<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Clipped expectation: continuous ultrafilter dominance [−t, 2t]</h1></header><p><strong>Direct source: Symmetries of Value.</strong> Zachary Goodsell’s <em>Symmetries of value</em>, Theorem 1 (p. 24), already states that DTU does not imply the affine symmetry principles, including when <span class="math inline">L^{1}</span> Continuity and Relative Expectation are added. Its reflection countermodel explicitly invokes <em>Decision theory unbound</em>, Remark 3. Thus both the asymmetric construction and this stronger non-implication belong to Goodsell; they are not new AI results.</p>
-<p>The underlying continuous quotient appears in <em>Decision theory unbound</em>, Appendix B, Definition 3, Lemma 6 and proof of Theorem 3 (pp. 691–692). Remark 3 and Corollary 3 (pp. 692–693) supply separate increasing unbounded cutoffs and symmetric gambles with arbitrary real values, including nonzero ones.</p>
-<p><strong>Original work: source-model specialization and additional verification.</strong> GPT-6 (Codex), 9 September 2026, chose the explicit cutoffs <span class="math inline">f(t)=2t, g(t)=t</span> and recorded the detailed proofs below. The added work is the displayed CDF-area and shift-transfer verification, exact Cauchy and alternating-game values, and negative-self-similarity witness. The <span class="math inline">L^{1}/</span>Relative Expectation non-implication is already stated in the source; its proof here is an explicit verification, not a newly discovered separation. No literature-novelty claim, independent checker or Lean verification is asserted.</p>
-<h2 id="construction-and-the-dtu-axioms">Construction and the DTU axioms</h2>
-<p>Take <span class="math inline">O=\mathbb R</span> with its usual order, Borel structure and identity utility, and all measurable real random variables on the topic’s fixed probability space. Put</p>
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Clipped expectation: continuous ultrafilter dominance [−t, 2t]</h1></header><p><strong>Direct source: Symmetries of Value.</strong> Zachary
+Goodsell’s <em>Symmetries of value</em>, Theorem 1 (p. 24), already
+states that DTU does not imply the affine symmetry principles, including
+when <span class="math inline">L^{1}</span> Continuity and Relative
+Expectation are added. Its reflection countermodel explicitly invokes
+<em>Decision theory unbound</em>, Remark 3. Thus both the asymmetric
+construction and this stronger non-implication belong to Goodsell; they
+are not new AI results.</p>
+<p>The underlying continuous quotient appears in <em>Decision theory
+unbound</em>, Appendix B, Definition 3, Lemma 6 and proof of Theorem 3
+(pp. 691–692). Remark 3 and Corollary 3 (pp. 692–693) supply separate
+increasing unbounded cutoffs and symmetric gambles with arbitrary real
+values, including nonzero ones.</p>
+<p><strong>Original work: source-model specialization and additional
+verification.</strong> GPT-6 (Codex), 9 September 2026, chose the
+explicit cutoffs <span class="math inline">f(t)=2t, g(t)=t</span> and
+recorded the detailed proofs below. The added work is the displayed
+CDF-area and shift-transfer verification, exact Cauchy and
+alternating-game values, and negative-self-similarity witness. The <span
+class="math inline">L^{1}/</span>Relative Expectation non-implication is
+already stated in the source; its proof here is an explicit
+verification, not a newly discovered separation. No literature-novelty
+claim, independent checker or Lean verification is asserted.</p>
+<h2 id="construction-and-the-dtu-axioms">Construction and the DTU
+axioms</h2>
+<p>Take <span class="math inline">O=\mathbb R</span> with its usual
+order, Borel structure and identity utility, and all measurable real
+random variables on the topic’s fixed probability space. Put</p>
 <p><span class="math display">q_t(x)=\max(-t,\min(x,2t)),\qquad
 v_X(t)=E[q_t(X)],\qquad t&gt;0.</span></p>
-<p>Fix an ultrafilter <span class="math inline">\mathcal U</span> on <span class="math inline">(0,\infty)</span> containing every tail <span class="math inline">(s,\infty)</span>. Define</p>
+<p>Fix an ultrafilter <span class="math inline">\mathcal U</span> on
+<span class="math inline">(0,\infty)</span> containing every tail <span
+class="math inline">(s,\infty)</span>. Define</p>
 <p><span class="math display">X\succeq Y\quad\Longleftrightarrow\quad
 \forall\varepsilon&gt;0,\quad
 \{t:v_X(t)-v_Y(t)\ge-\varepsilon\}\in\mathcal U.\tag{1}</span></p>
-<p>Existence of this ultrafilter uses the usual ultrafilter lemma, as in the source construction; this is a mathematical existence model, not an implemented algorithm for arbitrary comparisons.</p>
-<p>Reflexivity is immediate. For transitivity, intersect the two large sets obtained with <span class="math inline">\varepsilon/2</span>. If <span class="math inline">X\not\succeq Y</span>, there is an <span class="math inline">\varepsilon&gt;0</span> such that <span class="math inline">v_Y-v_X&gt;\varepsilon</span> on a large set. Consequently <span class="math inline">Y\succeq X</span>, proving <strong>Totality</strong>.</p>
-<p>Equal laws have equal <span class="math inline">v</span>-functions, so <strong>Stochastic Equivalence</strong> holds. Constants and all values of each simple gamble eventually lie inside the clipping window. Their comparisons are therefore exactly their ordinary expectation comparisons. The normalized chart is the identity: the binary calibration equations give the usual real values. This proves <strong>Rich Outcomes</strong> and <strong>Simple Expected Utility</strong>, including all standing chart conventions.</p>
-<p>For the fixed randomized mixture, equality of its law with the mixture law gives</p>
+<p>Existence of this ultrafilter uses the usual ultrafilter lemma, as in
+the source construction; this is a mathematical existence model, not an
+implemented algorithm for arbitrary comparisons.</p>
+<p>Reflexivity is immediate. For transitivity, intersect the two large
+sets obtained with <span class="math inline">\varepsilon/2</span>. If
+<span class="math inline">X\not\succeq Y</span>, there is an <span
+class="math inline">\varepsilon&gt;0</span> such that <span
+class="math inline">v_Y-v_X&gt;\varepsilon</span> on a large set.
+Consequently <span class="math inline">Y\succeq X</span>, proving
+<strong>Totality</strong>.</p>
+<p>Equal laws have equal <span class="math inline">v</span>-functions,
+so <strong>Stochastic Equivalence</strong> holds. Constants and all
+values of each simple gamble eventually lie inside the clipping window.
+Their comparisons are therefore exactly their ordinary expectation
+comparisons. The normalized chart is the identity: the binary
+calibration equations give the usual real values. This proves
+<strong>Rich Outcomes</strong> and <strong>Simple Expected
+Utility</strong>, including all standing chart conventions.</p>
+<p>For the fixed randomized mixture, equality of its law with the
+mixture law gives</p>
 <p><span class="math display">v_{M_p(X,Z)}=p v_X+(1-p)v_Z.</span></p>
-<p>Subtracting the corresponding expression with <span class="math inline">Y</span> and rescaling <span class="math inline">\varepsilon</span> by <span class="math inline">p&gt;0</span> proves the full <strong>Mixture Independence</strong> biconditional.</p>
-<p>Write <span class="math inline">S_X(s)=\Pr(X&gt;s)</span>. The elementary clipped-tail identity gives</p>
-<p><span class="math display">v_X(t)-v_Y(t)=\int_{-t}^{2t}(S_X(s)-S_Y(s))\,ds.\tag{2}</span></p>
-<p>If <span class="math inline">S_X\ge S_Y</span> pointwise, this is nonnegative. If an inequality is strict at a threshold, right continuity supplies an interval where the difference is bounded below by a positive constant. All sufficiently large windows contain that interval, giving a fixed strictly positive gap in (2). Thus (1) preserves both weak and strict <strong>Stochastic Dominance</strong>. These verifications establish the entire DTU package.</p>
-<p>Two useful consequences of (1) will be used below. Adding a function tending to zero to <span class="math inline">v_X-v_Y</span> does not change the comparison, by an <span class="math inline">\varepsilon/2</span> argument. If <span class="math inline">v_X-v_Y</span> tends to a finite number <span class="math inline">r</span>, the comparison holds exactly when <span class="math inline">r\ge0</span>; when the limit is zero both directions hold. A limit of <span class="math inline">+\infty</span> or <span class="math inline">-\infty</span> yields the corresponding strict comparison.</p>
-<h2 id="expectation-cdf-area-and-continuity">Expectation, CDF area, and continuity</h2>
-<p>For integrable <span class="math inline">X</span>, <span class="math inline">q_t(X)\to X</span> pointwise and <span class="math inline">|q_t(X)|\le |X|</span>. Dominated convergence gives <span class="math inline">v_X(t)\to E[X]</span>. The preceding limit criterion proves <strong>Expected Utility</strong>.</p>
-<p>Clipping is 1-Lipschitz. Whenever <span class="math inline">E|X-Y|&lt;\infty</span>,</p>
+<p>Subtracting the corresponding expression with <span
+class="math inline">Y</span> and rescaling <span
+class="math inline">\varepsilon</span> by <span
+class="math inline">p&gt;0</span> proves the full <strong>Mixture
+Independence</strong> biconditional.</p>
+<p>Write <span class="math inline">S_X(s)=\Pr(X&gt;s)</span>. The
+elementary clipped-tail identity gives</p>
+<p><span
+class="math display">v_X(t)-v_Y(t)=\int_{-t}^{2t}(S_X(s)-S_Y(s))\,ds.\tag{2}</span></p>
+<p>If <span class="math inline">S_X\ge S_Y</span> pointwise, this is
+nonnegative. If an inequality is strict at a threshold, right continuity
+supplies an interval where the difference is bounded below by a positive
+constant. All sufficiently large windows contain that interval, giving a
+fixed strictly positive gap in (2). Thus (1) preserves both weak and
+strict <strong>Stochastic Dominance</strong>. These verifications
+establish the entire DTU package.</p>
+<p>Two useful consequences of (1) will be used below. Adding a function
+tending to zero to <span class="math inline">v_X-v_Y</span> does not
+change the comparison, by an <span
+class="math inline">\varepsilon/2</span> argument. If <span
+class="math inline">v_X-v_Y</span> tends to a finite number <span
+class="math inline">r</span>, the comparison holds exactly when <span
+class="math inline">r\ge0</span>; when the limit is zero both directions
+hold. A limit of <span class="math inline">+\infty</span> or <span
+class="math inline">-\infty</span> yields the corresponding strict
+comparison.</p>
+<h2 id="expectation-cdf-area-and-continuity">Expectation, CDF area, and
+continuity</h2>
+<p>For integrable <span class="math inline">X</span>, <span
+class="math inline">q_t(X)\to X</span> pointwise and <span
+class="math inline">|q_t(X)|\le |X|</span>. Dominated convergence gives
+<span class="math inline">v_X(t)\to E[X]</span>. The preceding limit
+criterion proves <strong>Expected Utility</strong>.</p>
+<p>Clipping is 1-Lipschitz. Whenever <span
+class="math inline">E|X-Y|&lt;\infty</span>,</p>
 <p><span class="math display">q_t(X)-q_t(Y)\longrightarrow X-Y,\qquad
 |q_t(X)-q_t(Y)|\le |X-Y|.</span></p>
-<p>Hence <span class="math inline">v_X-v_Y\to E[X-Y]</span>, even when the individual expectations do not exist. The limit criterion proves <strong>Relative Expectation</strong> for the variables’ actual coupling, without replacing that coupling by a more convenient one.</p>
-<p>For <strong>CDF-Area Extension</strong>, put <span class="math inline">d=S_X-S_Y</span> and <span class="math inline">A_\pm=\int_{\mathbb R}d_\pm</span>. The nested windows <span class="math inline">[-t,2t]</span> exhaust <span class="math inline">\mathbb R</span>, so their positive and negative integrals tend monotonically to <span class="math inline">A_+</span> and <span class="math inline">A_-</span>. If at least one area is finite, (2) tends to their well-defined difference in the extended reals. If both are finite and equal, the limit is zero; if the positive area is larger, including the case of a single positive infinity, the limit is positive; the reverse cases are negative. Thus <span class="math inline">X\succeq Y</span> holds exactly when <span class="math inline">A_+\ge A_-</span> in every case specified by the principle. Nothing here specifies the both-infinite pairs.</p>
-<p>For <strong>L¹ Continuity</strong>, suppose <span class="math inline">\delta_n=E|X_n-X|\to0</span> and <span class="math inline">X_n\succeq Y</span> for every <span class="math inline">n</span>. The Lipschitz property gives</p>
-<p><span class="math display">|v_{X_n}(t)-v_X(t)|\le\delta_n\quad\text{for every }t.</span></p>
-<p>Fix <span class="math inline">\varepsilon&gt;0</span>, and choose <span class="math inline">n</span> with <span class="math inline">\delta_n&lt;\varepsilon/2</span>. On a large set, <span class="math inline">v_{X_n}-v_Y\ge-\varepsilon/2</span>, hence <span class="math inline">v_X-v_Y\ge-\varepsilon</span>. This is precisely (1) for <span class="math inline">X\succeq Y</span>. The proof verifies the topic’s upper-section clause on the full domain, including nonintegrable <span class="math inline">X</span> and <span class="math inline">Y</span>.</p>
+<p>Hence <span class="math inline">v_X-v_Y\to E[X-Y]</span>, even when
+the individual expectations do not exist. The limit criterion proves
+<strong>Relative Expectation</strong> for the variables’ actual
+coupling, without replacing that coupling by a more convenient one.</p>
+<p>For <strong>CDF-Area Extension</strong>, put <span
+class="math inline">d=S_X-S_Y</span> and <span
+class="math inline">A_\pm=\int_{\mathbb R}d_\pm</span>. The nested
+windows <span class="math inline">[-t,2t]</span> exhaust <span
+class="math inline">\mathbb R</span>, so their positive and negative
+integrals tend monotonically to <span class="math inline">A_+</span> and
+<span class="math inline">A_-</span>. If at least one area is finite,
+(2) tends to their well-defined difference in the extended reals. If
+both are finite and equal, the limit is zero; if the positive area is
+larger, including the case of a single positive infinity, the limit is
+positive; the reverse cases are negative. Thus <span
+class="math inline">X\succeq Y</span> holds exactly when <span
+class="math inline">A_+\ge A_-</span> in every case specified by the
+principle. Nothing here specifies the both-infinite pairs.</p>
+<p>For <strong>L¹ Continuity</strong>, suppose <span
+class="math inline">\delta_n=E|X_n-X|\to0</span> and <span
+class="math inline">X_n\succeq Y</span> for every <span
+class="math inline">n</span>. The Lipschitz property gives</p>
+<p><span
+class="math display">|v_{X_n}(t)-v_X(t)|\le\delta_n\quad\text{for every
+}t.</span></p>
+<p>Fix <span class="math inline">\varepsilon&gt;0</span>, and choose
+<span class="math inline">n</span> with <span
+class="math inline">\delta_n&lt;\varepsilon/2</span>. On a large set,
+<span class="math inline">v_{X_n}-v_Y\ge-\varepsilon/2</span>, hence
+<span class="math inline">v_X-v_Y\ge-\varepsilon</span>. This is
+precisely (1) for <span class="math inline">X\succeq Y</span>. The proof
+verifies the topic’s upper-section clause on the full domain, including
+nonintegrable <span class="math inline">X</span> and <span
+class="math inline">Y</span>.</p>
 <h2 id="shifts">Shifts</h2>
-<p>For each fixed real <span class="math inline">b</span> and arbitrary <span class="math inline">X</span>,</p>
+<p>For each fixed real <span class="math inline">b</span> and arbitrary
+<span class="math inline">X</span>,</p>
 <p><span class="math display">q_t(X+b)-q_t(X)\longrightarrow b,\qquad
 |q_t(X+b)-q_t(X)|\le |b|.</span></p>
-<p>Dominated convergence gives <span class="math inline">v_{X+b}-v_X\to b</span>. Simultaneously shifting <span class="math inline">X,Y</span> therefore changes their comparison function by a function tending to zero. This proves <strong>Shift Invariance</strong>, in both directions.</p>
-<p>For <span class="math inline">0&lt;p&lt;1</span>, subtract the values of the two mixtures in <strong>Transfer of a Shift Across a Mixture</strong>:</p>
+<p>Dominated convergence gives <span class="math inline">v_{X+b}-v_X\to
+b</span>. Simultaneously shifting <span class="math inline">X,Y</span>
+therefore changes their comparison function by a function tending to
+zero. This proves <strong>Shift Invariance</strong>, in both
+directions.</p>
+<p>For <span class="math inline">0&lt;p&lt;1</span>, subtract the values
+of the two mixtures in <strong>Transfer of a Shift Across a
+Mixture</strong>:</p>
 <p><span class="math display">\begin{aligned}
 &amp;v_{M_p(X+b/p,Y)}-v_{M_p(X,Y+b/(1-p))}\\
 &amp;\qquad=p(v_{X+b/p}-v_X)
- -(1-p)(v_{Y+b/(1-p)}-v_Y)\longrightarrow b-b=0.
+-(1-p)(v_{Y+b/(1-p)}-v_Y)\longrightarrow b-b=0.
 \end{aligned}</span></p>
-<p>The mixtures are therefore indifferent. Neither shift conclusion has used reflection symmetry or finite individual expectations.</p>
-<h2 id="a-symmetric-cauchy-has-positive-value">A symmetric Cauchy has positive value</h2>
-<p>Let <span class="math inline">C_\sigma</span> have the symmetric Cauchy density <span class="math inline">\sigma/[\pi(\sigma^2+x^2)]</span>, where <span class="math inline">\sigma&gt;0</span>. Such a variable is available on the fixed atomless probability space. Direct integration over the window and its two clipped tails gives</p>
+<p>The mixtures are therefore indifferent. Neither shift conclusion has
+used reflection symmetry or finite individual expectations.</p>
+<h2 id="a-symmetric-cauchy-has-positive-value">A symmetric Cauchy has
+positive value</h2>
+<p>Let <span class="math inline">C_\sigma</span> have the symmetric
+Cauchy density <span
+class="math inline">\sigma/[\pi(\sigma^2+x^2)]</span>, where <span
+class="math inline">\sigma&gt;0</span>. Such a variable is available on
+the fixed atomless probability space. Direct integration over the window
+and its two clipped tails gives</p>
 <p><span class="math display">v_{C_\sigma}(t)=
 \frac{\sigma}{2\pi}\log\frac{\sigma^2+4t^2}{\sigma^2+t^2}
 +\frac{2t}{\pi}\arctan\frac{\sigma}{2t}
 -\frac{t}{\pi}\arctan\frac{\sigma}{t}
 \longrightarrow \frac{\sigma\log2}{\pi}.\tag{3}</span></p>
-<p>Indeed the logarithmic term tends to <span class="math inline">\sigma\log2/\pi</span>, while the last two terms each tend in magnitude to <span class="math inline">\sigma/\pi</span> and cancel. Put <span class="math inline">k=\log2/\pi&gt;0</span>. Equation (3) yields <span class="math inline">C_1\sim k\succ0</span>.</p>
+<p>Indeed the logarithmic term tends to <span
+class="math inline">\sigma\log2/\pi</span>, while the last two terms
+each tend in magnitude to <span class="math inline">\sigma/\pi</span>
+and cancel. Put <span class="math inline">k=\log2/\pi&gt;0</span>.
+Equation (3) yields <span class="math inline">C_1\sim
+k\succ0</span>.</p>
 <p>This one comparison proves three failures:</p>
 <ul>
-<li><strong>Symmetric Gambles Are Neutral</strong> fails: <span class="math inline">C_1</span> and <span class="math inline">-C_1</span> have the same law but <span class="math inline">C_1\not\sim0</span>.</li>
-<li><strong>Reflection Anti-Invariance</strong> fails: <span class="math inline">C_1\succeq0</span>, whereas <span class="math inline">0\not\succeq-C_1</span>. Its special case <span class="math inline">a=1,b=0</span> also directly refutes <strong>Negative Affine Anti-Invariance</strong>.</li>
-<li><strong>Folded Expectation</strong> fails: both <span class="math inline">C_1</span> and zero have identically zero combined symmetric tail difference, so that principle would require them to be indifferent.</li>
+<li><strong>Symmetric Gambles Are Neutral</strong> fails: <span
+class="math inline">C_1</span> and <span class="math inline">-C_1</span>
+have the same law but <span
+class="math inline">C_1\not\sim0</span>.</li>
+<li><strong>Reflection Anti-Invariance</strong> fails: <span
+class="math inline">C_1\succeq0</span>, whereas <span
+class="math inline">0\not\succeq-C_1</span>. Its special case <span
+class="math inline">a=1,b=0</span> also directly refutes
+<strong>Negative Affine Anti-Invariance</strong>.</li>
+<li><strong>Folded Expectation</strong> fails: both <span
+class="math inline">C_1</span> and zero have identically zero combined
+symmetric tail difference, so that principle would require them to be
+indifferent.</li>
 </ul>
-<p>For <strong>Uniqueness of Negative Self-Similarity</strong>, take <span class="math inline">p=1/2</span>, <span class="math inline">a=2</span>, <span class="math inline">b=0</span>, and <span class="math inline">Z=0</span>. The variables <span class="math inline">-2C_1</span> and <span class="math inline">C_2</span> have the same law. By (3) and mixture linearity,</p>
-<p><span class="math display">v_{M_{1/2}(-2C_1,0)}\longrightarrow\tfrac12(2k)=k,
+<p>For <strong>Uniqueness of Negative Self-Similarity</strong>, take
+<span class="math inline">p=1/2</span>, <span
+class="math inline">a=2</span>, <span class="math inline">b=0</span>,
+and <span class="math inline">Z=0</span>. The variables <span
+class="math inline">-2C_1</span> and <span
+class="math inline">C_2</span> have the same law. By (3) and mixture
+linearity,</p>
+<p><span
+class="math display">v_{M_{1/2}(-2C_1,0)}\longrightarrow\tfrac12(2k)=k,
 \qquad C_1\sim M_{1/2}(-2C_1,0).</span></p>
-<p>Zero also satisfies <span class="math inline">0\sim M_{1/2}(-2\cdot0,0)</span>. The two fixed values are distinct because <span class="math inline">C_1\succ0</span>. This refutes precisely the recorded uniqueness principle.</p>
-<h2 id="alternating-st-petersburg-is-zero">Alternating St Petersburg is zero</h2>
-<p>Let <span class="math inline">A</span> take <span class="math inline">(-2)^n</span> with probability <span class="math inline">2^{-n}</span>, <span class="math inline">n\ge1</span>. Group consecutive odd and even indices. Each pair has a negative outcome <span class="math inline">-a</span> of probability <span class="math inline">2r</span> and positive outcome <span class="math inline">2a</span> of probability <span class="math inline">r</span>, where <span class="math inline">a,r&gt;0</span>. For every <span class="math inline">t&gt;0</span>,</p>
-<p><span class="math display">q_t(-a)=-\min(a,t),\qquad q_t(2a)=2\min(a,t),</span></p>
-<p>so the pair contributes exactly zero. Clipping makes the expectation absolutely integrable, which licenses grouping the countably many pairs. Thus <span class="math inline">v_A(t)=0</span> for every <span class="math inline">t</span>, and <span class="math inline">A\sim0</span>. In particular <strong>Alternating St Petersburg = −1/2</strong> fails.</p>
+<p>Zero also satisfies <span class="math inline">0\sim
+M_{1/2}(-2\cdot0,0)</span>. The two fixed values are distinct because
+<span class="math inline">C_1\succ0</span>. This refutes precisely the
+recorded uniqueness principle.</p>
+<h2 id="alternating-st-petersburg-is-zero">Alternating St Petersburg is
+zero</h2>
+<p>Let <span class="math inline">A</span> take <span
+class="math inline">(-2)^n</span> with probability <span
+class="math inline">2^{-n}</span>, <span
+class="math inline">n\ge1</span>. Group consecutive odd and even
+indices. Each pair has a negative outcome <span
+class="math inline">-a</span> of probability <span
+class="math inline">2r</span> and positive outcome <span
+class="math inline">2a</span> of probability <span
+class="math inline">r</span>, where <span
+class="math inline">a,r&gt;0</span>. For every <span
+class="math inline">t&gt;0</span>,</p>
+<p><span class="math display">q_t(-a)=-\min(a,t),\qquad
+q_t(2a)=2\min(a,t),</span></p>
+<p>so the pair contributes exactly zero. Clipping makes the expectation
+absolutely integrable, which licenses grouping the countably many pairs.
+Thus <span class="math inline">v_A(t)=0</span> for every <span
+class="math inline">t</span>, and <span
+class="math inline">A\sim0</span>. In particular <strong>Alternating St
+Petersburg = −1/2</strong> fails.</p>
 <h2 id="scope-of-the-verification">Scope of the verification</h2>
-<p>This model establishes, among other separations, that DTU together with CDF-Area Extension, Relative Expectation, <span class="math inline">L^{1}</span> Continuity, and both shift principles still does not force symmetric neutrality or reflection. No scale or sum-invariance verdict has been inferred from this construction. The map can derive further failures from its separately proved incompatibility records.</p>
-<p><code>checks/asymmetric_continuous_ultrafilter.py</code> checks the paired-atom cancellations with exact rational arithmetic, finite-law clipped-tail and mixture identities, the Lipschitz bound, and the explicit Cauchy limits. Those checks are sanity checks of concrete calculations; the universal properties and ultrafilter comparisons are proved analytically above.</p>
-<h2 id="failure-of-comonotonic-sum-invariance">Failure of Comonotonic Sum Invariance</h2>
-<p><strong>Addition: Claude (Fable 5.1), 23 September 2026.</strong> A property of the recorded model; not a claim of the source papers.</p>
-<p>Realize a standard Cauchy variable as <span class="math inline">C=Q_C(U)=\tan(\pi(U-\tfrac12))</span> and put <span class="math inline">X=0</span>, <span class="math inline">Y=C-\ln(2)/\pi</span>, <span class="math inline">Z=C_+=\max(C,0)</span>; all are nondecreasing in <span class="math inline">U</span>, so both pairs <span class="math inline">(X,Z)</span>, <span class="math inline">(Y,Z)</span> are comonotonic. By the Cauchy calculation above, <span class="math inline">\mathbb E[q_t(C)]\to\ln(2)/\pi</span>, and <span class="math inline">q_t(C-v)-q_t(C)\to-v</span> boundedly, so <span class="math inline">\mathbb E[q_t(Y)]\to0</span> and <span class="math inline">X\sim Y</span>.</p>
-<p><strong>Doubling-defect identity.</strong> For any nonnegative random variable <span class="math inline">V</span> and any <span class="math inline">F&gt;0</span>,</p>
-<p><span class="math display">2\,\mathbb E[\min(V,F)]-\mathbb E[\min(2V,F)]
- =2\int_{F/2}^{F}P(V&gt;x)\,dx,</span></p>
-<p>since <span class="math inline">\mathbb E[\min(V,F)]=\int_0^F P(V&gt;x)\,dx</span> and <span class="math inline">\mathbb E[\min(2V,F)]=2\int_0^{F/2}P(V&gt;x)\,dx</span>. For <span class="math inline">V=C_+=\max(C,0)</span> with <span class="math inline">C</span> standard Cauchy the right-hand side is <span class="math inline">\frac2\pi\int_{F/2}^{F}\arctan(1/x)\,dx</span>, which is positive for every <span class="math inline">F</span> and increases to <span class="math inline">\frac{2\ln2}{\pi}</span> as <span class="math inline">F\to\infty</span>.</p>
-<p>Write <span class="math inline">m(F)=\mathbb E[\min(C_+,F)]</span> and <span class="math inline">C_-=\min(C,0)</span>. Then <span class="math inline">X+Z=C_+</span> and <span class="math inline">Y+Z=2C_++C_--\ln(2)/\pi</span>, and with the window <span class="math inline">[-t,2t]</span>,</p>
+<p>This model establishes, among other separations, that DTU together
+with CDF-Area Extension, Relative Expectation, <span
+class="math inline">L^{1}</span> Continuity, and both shift principles
+still does not force symmetric neutrality or reflection. No scale or
+sum-invariance verdict has been inferred from this construction. The map
+can derive further failures from its separately proved incompatibility
+records.</p>
+<p><code>checks/asymmetric_continuous_ultrafilter.py</code> checks the
+paired-atom cancellations with exact rational arithmetic, finite-law
+clipped-tail and mixture identities, the Lipschitz bound, and the
+explicit Cauchy limits. Those checks are sanity checks of concrete
+calculations; the universal properties and ultrafilter comparisons are
+proved analytically above.</p>
+<h2 id="failure-of-comonotonic-sum-invariance">Failure of Comonotonic
+Sum Invariance</h2>
+<p><strong>Addition: Claude (Fable 5.1), 23 September 2026.</strong> A
+property of the recorded model; not a claim of the source papers.</p>
+<p>Realize a standard Cauchy variable as <span
+class="math inline">C=Q_C(U)=\tan(\pi(U-\tfrac12))</span> and put <span
+class="math inline">X=0</span>, <span
+class="math inline">Y=C-\ln(2)/\pi</span>, <span
+class="math inline">Z=C_+=\max(C,0)</span>; all are nondecreasing in
+<span class="math inline">U</span>, so both pairs <span
+class="math inline">(X,Z)</span>, <span class="math inline">(Y,Z)</span>
+are comonotonic. By the Cauchy calculation above, <span
+class="math inline">\mathbb E[q_t(C)]\to\ln(2)/\pi</span>, and <span
+class="math inline">q_t(C-v)-q_t(C)\to-v</span> boundedly, so <span
+class="math inline">\mathbb E[q_t(Y)]\to0</span> and <span
+class="math inline">X\sim Y</span>.</p>
+<p><strong>Doubling-defect identity.</strong> For any nonnegative random
+variable <span class="math inline">V</span> and any <span
+class="math inline">F&gt;0</span>,</p>
+<p><span class="math display">2\,\mathbb E[\min(V,F)]-\mathbb
+E[\min(2V,F)]
+=2\int_{F/2}^{F}P(V&gt;x)\,dx,</span></p>
+<p>since <span class="math inline">\mathbb E[\min(V,F)]=\int_0^F
+P(V&gt;x)\,dx</span> and <span class="math inline">\mathbb
+E[\min(2V,F)]=2\int_0^{F/2}P(V&gt;x)\,dx</span>. For <span
+class="math inline">V=C_+=\max(C,0)</span> with <span
+class="math inline">C</span> standard Cauchy the right-hand side is
+<span
+class="math inline">\frac2\pi\int_{F/2}^{F}\arctan(1/x)\,dx</span>,
+which is positive for every <span class="math inline">F</span> and
+increases to <span class="math inline">\frac{2\ln2}{\pi}</span> as <span
+class="math inline">F\to\infty</span>.</p>
+<p>Write <span class="math inline">m(F)=\mathbb E[\min(C_+,F)]</span>
+and <span class="math inline">C_-=\min(C,0)</span>. Then <span
+class="math inline">X+Z=C_+</span> and <span
+class="math inline">Y+Z=2C_++C_--\ln(2)/\pi</span>, and with the window
+<span class="math inline">[-t,2t]</span>,</p>
 <p><span class="math display">\mathbb E[q_t(C_+)]=m(2t),\qquad
 \mathbb E[q_t(2C_++C_-)]=2m(t)-m(t)=m(t),\qquad
 \mathbb E[q_t(C)]=m(2t)-m(t).</span></p>
 <p>Hence, using the bounded shift once more,</p>
-<p><span class="math display">v_{X+Z}(t)-v_{Y+Z}(t)=m(2t)-m(t)+\frac{\ln2}{\pi}+o(1)
- =2\bigl(m(2t)-m(t)\bigr)+o(1)\longrightarrow\frac{2\ln2}{\pi}.</span></p>
-<p>With <span class="math inline">\varepsilon=(\ln2)/\pi</span> the set <span class="math inline">\{t:v_{Y+Z}(t)\ge v_{X+Z}(t)-\varepsilon\}</span> is bounded, so <span class="math inline">X+Z\succ Y+Z</span> although <span class="math inline">X\sim Y</span>: Comonotonic Sum Invariance fails, while both shift principles hold. <code>checks/comonotonic_witnesses.py</code> verifies the closed forms, the neutral constant and the limit.</p>
-<h2 id="integer-ratio-self-similarity">Integer-ratio self-similarity</h2>
-<p><strong>Addition: Claude (Fable 5.1), 24 September 2026.</strong> The uniqueness witness above has ratio <span class="math inline">a=2</span>, so the model also fails Uniqueness of Negative Self-Similarity (integer ratios), the restriction of the principle to integer ratios.</p>
+<p><span
+class="math display">v_{X+Z}(t)-v_{Y+Z}(t)=m(2t)-m(t)+\frac{\ln2}{\pi}+o(1)
+=2\bigl(m(2t)-m(t)\bigr)+o(1)\longrightarrow\frac{2\ln2}{\pi}.</span></p>
+<p>With <span class="math inline">\varepsilon=(\ln2)/\pi</span> the set
+<span class="math inline">\{t:v_{Y+Z}(t)\ge
+v_{X+Z}(t)-\varepsilon\}</span> is bounded, so <span
+class="math inline">X+Z\succ Y+Z</span> although <span
+class="math inline">X\sim Y</span>: Comonotonic Sum Invariance fails,
+while both shift principles hold.
+<code>checks/comonotonic_witnesses.py</code> verifies the closed forms,
+the neutral constant and the limit.</p>
+<h2 id="integer-ratio-self-similarity">Integer-ratio
+self-similarity</h2>
+<p><strong>Addition: Claude (Fable 5.1), 24 September 2026.</strong> The
+uniqueness witness above has ratio <span class="math inline">a=2</span>,
+so the model also fails Uniqueness of Negative Self-Similarity (integer
+ratios), the restriction of the principle to integer ratios.</p>
 <h2 id="a-fixed-shuffle-copula">A fixed shuffle copula</h2>
-<p><strong>Added 2 October 2026.</strong> The AI-generated report communicated by <strong>Branden Fitelson</strong>, <em>Unbounded Utility: Five Top-Ranked Open Conjectures Resolved</em> (30 September 2026), §4(b), supplies a new property of this construction. Its producers are identified as Claude agents, with model versions unspecified. GPT-6 (Codex) expanded and informally checked the argument.</p>
-<p>The <a href="calibrated-geometric-continuous-ultrafilter.html#shared-clipping-and-shuffle-copula-proof">fixed shuffle-copula proof</a> applies to this model’s cutoffs and tolerance-based ultrafilter comparison. It proves the fixed-copula invariance <span class="math inline">\operatorname{SC}(C_\sigma)</span> using one copula for all triples, including atomic marginals; the map recorded this as Existential Copula Sum Invariance until that principle was retired on 11 October 2026 in favour of Uninteractive Sum Invariance, which this model satisfies by Relative Expectation (<code>relative-independence-equivalence-imply-uninteractive-sum</code>). This does not change the model’s existing failure of Comonotonic Sum Invariance. The original construction and earlier results retain their original attribution. The expanded model has no Lean verification; its earlier record was marked stated.</p>
+<p><strong>Added 2 October 2026.</strong> The AI-generated report
+communicated by <strong>Branden Fitelson</strong>, <em>Unbounded
+Utility: Five Top-Ranked Open Conjectures Resolved</em> (30 September
+2026), §4(b), supplies a new property of this construction. Its
+producers are identified as Claude agents, with model versions
+unspecified. GPT-6 (Codex) expanded and informally checked the
+argument.</p>
+<p>The <a
+href="calibrated-geometric-continuous-ultrafilter.html#shared-clipping-and-shuffle-copula-proof">fixed
+shuffle-copula proof</a> applies to this model’s cutoffs and
+tolerance-based ultrafilter comparison. It proves the fixed-copula
+invariance <span class="math inline">\operatorname{SC}(C_\sigma)</span>
+using one copula for all triples, including atomic marginals; the map
+recorded this as Existential Copula Sum Invariance until that principle
+was retired on 11 October 2026 in favour of Uninteractive Sum
+Invariance, which this model satisfies by Relative Expectation
+(<code>relative-independence-equivalence-imply-uninteractive-sum</code>).
+This does not change the model’s existing failure of Comonotonic Sum
+Invariance. The original construction and earlier results retain their
+original attribution. The expanded model has no Lean verification; its
+earlier record was marked stated.</p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Proof: <a href="https://doi.org/10.1111/nous.12549">Symmetries of value</a>.</strong> (<a href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>) Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. — Theorem 1, p. 24. Already states the failure of affine-symmetry implications under DTU, including with L¹ Continuity and Relative Expectation, and cites Decision theory unbound, Remark 3, for the reflection countermodel</li>
-<li><strong>Background: <a href="https://doi.org/10.1111/nous.12473">Decision theory unbound</a>.</strong> (<a href="../sources/Nous%20-%202023%20-%20Goodsell%20-%20Decision%20theory%20unbound%20%281%29.pdf">PDF</a>) Zachary Goodsell (2024). Decision theory unbound. Noûs, 58, 669–695. First published online in 2023. — Appendix B, Definition 3, Lemma 6 and proof of Theorem 3, pp. 691–692; Remark 3 and Corollary 3, pp. 692–693. Source of the clipped-expectation ultrafilter, continuous quotient, and asymmetric-cutoff strategy, including the possibility of assigning nonzero values to symmetric gambles</li>
-<li><strong>Proof: Unbounded Utility: Five Top-Ranked Open Conjectures Resolved.</strong> AI-generated report, 30 September 2026, 4 pages; communicated by Branden Fitelson. The report attributes production to Claude agents without specifying model versions. Fitelson is the communicator, not the credited producer of the proofs. — §4(b), p. 3</li>
+<li><strong>Proof: <a
+href="https://doi.org/10.1111/nous.12549">Symmetries of
+value</a>.</strong> (<a
+href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>)
+Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. — Theorem
+1, p. 24. Already states the failure of affine-symmetry implications
+under DTU, including with L¹ Continuity and Relative Expectation, and
+cites Decision theory unbound, Remark 3, for the reflection
+countermodel</li>
+<li><strong>Background: <a
+href="https://doi.org/10.1111/nous.12473">Decision theory
+unbound</a>.</strong> (<a
+href="../sources/Nous%20-%202023%20-%20Goodsell%20-%20Decision%20theory%20unbound%20%281%29.pdf">PDF</a>)
+Zachary Goodsell (2024). Decision theory unbound. Noûs, 58, 669–695.
+First published online in 2023. — Appendix B, Definition 3, Lemma 6 and
+proof of Theorem 3, pp. 691–692; Remark 3 and Corollary 3, pp. 692–693.
+Source of the clipped-expectation ultrafilter, continuous quotient, and
+asymmetric-cutoff strategy, including the possibility of assigning
+nonzero values to symmetric gambles</li>
+<li><strong>Proof: Unbounded Utility: Five Top-Ranked Open Conjectures
+Resolved.</strong> AI-generated report, 30 September 2026, 4 pages;
+communicated by Branden Fitelson. The report attributes production to
+Claude agents without specifying model versions. Fitelson is the
+communicator, not the credited producer of the proofs. — §4(b),
+p. 3</li>
 </ul>
 </body></html>

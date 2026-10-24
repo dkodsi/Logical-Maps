@@ -270,33 +270,111 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
 <script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Rich Outcomes ∧ Stochastic Equivalence ∧ Comonotonic Sum Invariance ⇒ Integer Affine Preservation</h1></header><p class="cert">
-Result — Source: Misc.; produced by Zachary Goodsell (iterated-addition argument) and Claude (Fable 5.1) (comonotonic copies and strict chain), 2026-09-24; recorded by Claude (Fable 5.1), prompted by Zachary Goodsell, 2026-09-24.
+Result — Source: Misc.; produced by Zachary Goodsell (iterated-addition
+argument) and Claude (Fable 5.1) (comonotonic copies and strict chain),
+2026-09-24; recorded by Claude (Fable 5.1), prompted by Zachary
+Goodsell, 2026-09-24.
 </p>
 <h2 id="premises">Premises</h2>
 <ul>
-<li><strong>Rich Outcomes.</strong> Every real number r occurs as a utility level of a sure outcome: for each <span class="math inline">r \in \mathbb{R}</span> there is an outcome <span class="math inline">o_r</span> with <span class="math inline">u(o_r)=r</span>, with u defined by the normalized binary-mixture comparisons in the background. This does not assert that every outcome has a finite real level.</li>
-<li><strong>Stochastic Equivalence.</strong> If X and Y have the same probability law over outcomes, then <span class="math inline">X \sim Y</span>. The variables remain distinct objects; indifference is an additional axiom.</li>
-<li><strong>Comonotonic Sum Invariance.</strong> If X and Z are comonotonic, and Y and Z are comonotonic, then <span class="math inline">X \succeq Y</span> iff <span class="math inline">X+Z \succeq Y+Z</span>. A pair is comonotonic when its members admit nondecreasing representations in one common uniform random variable.</li>
+<li><strong>Rich Outcomes.</strong> Every real number r occurs as a
+utility level of a sure outcome: for each <span class="math inline">r
+\in \mathbb{R}</span> there is an outcome <span
+class="math inline">o_r</span> with <span
+class="math inline">u(o_r)=r</span>, with u defined by the normalized
+binary-mixture comparisons in the background. This does not assert that
+every outcome has a finite real level.</li>
+<li><strong>Stochastic Equivalence.</strong> If X and Y have the same
+probability law over outcomes, then <span class="math inline">X \sim
+Y</span>. The variables remain distinct objects; indifference is an
+additional axiom.</li>
+<li><strong>Comonotonic Sum Invariance.</strong> If X and Z are
+comonotonic, and Y and Z are comonotonic, then <span
+class="math inline">X \succeq Y</span> iff <span class="math inline">X+Z
+\succeq Y+Z</span>. A pair is comonotonic when its members admit
+nondecreasing representations in one common uniform random
+variable.</li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <ul>
-<li><strong>Integer Affine Preservation.</strong> For every positive integer <span class="math inline">k</span> and real <span class="math inline">b</span>: if <span class="math inline">X \succeq Y</span> then <span class="math inline">kX+b \succeq kY+b</span>, and if <span class="math inline">X \succ Y</span> then <span class="math inline">kX+b \succ kY+b</span>.</li>
+<li><strong>Integer Affine Preservation.</strong> For every positive
+integer <span class="math inline">k</span> and real <span
+class="math inline">b</span>: if <span class="math inline">X \succeq
+Y</span> then <span class="math inline">kX+b \succeq kY+b</span>, and if
+<span class="math inline">X \succ Y</span> then <span
+class="math inline">kX+b \succ kY+b</span>.</li>
 </ul>
 <h2 id="proof">Proof</h2>
-<p>Shifts: with the constant <span class="math inline">Z=b</span>, comonotonic with everything, Comonotonic Sum Invariance gives <span class="math inline">X \succeq Y</span> iff <span class="math inline">X+b \succeq Y+b</span>, so weak and strict comparisons pass to shifts; it remains to treat <span class="math inline">kX</span> against <span class="math inline">kY</span>. By Stochastic Equivalence replace Y by its comonotonic copy <span class="math inline">Y^\dagger=Q_Y(U)</span> on a uniform U with <span class="math inline">X=Q_X(U)</span>; the comparisons <span class="math inline">X \succeq Y</span>, <span class="math inline">Y \succeq X</span>, <span class="math inline">kX \succeq kY</span> and <span class="math inline">kY \succeq kX</span> are unchanged. Put <span class="math inline">W_j=jX+(k-j)Y^\dagger</span> for <span class="math inline">0\le j\le k</span> (Rich Outcomes). Since <span class="math inline">W_{j+1}=X+Z_j</span> and <span class="math inline">W_j=Y^\dagger+Z_j</span> with <span class="math inline">Z_j=jX+(k-j-1)Y^\dagger</span> a nondecreasing function of U, comonotonic with both, the invariance gives <span class="math inline">W_{j+1}\succeq W_j</span> iff <span class="math inline">X\succeq Y</span>, and <span class="math inline">W_j\succeq W_{j+1}</span> iff <span class="math inline">Y\succeq X</span>. If <span class="math inline">X\succeq Y</span>, chaining <span class="math inline">W_k\succeq W_{k-1}\succeq\dots\succeq W_0</span> gives <span class="math inline">kX\succeq kY</span>. If moreover <span class="math inline">Y\not\succeq X</span> and <span class="math inline">kY\succeq kX</span> held, then <span class="math inline">W_0\succeq W_k\succeq W_1</span> would give <span class="math inline">W_0\succeq W_1</span>, that is <span class="math inline">Y\succeq X</span>, a contradiction; so <span class="math inline">kX\succ kY</span>. This is Lemma 1 of writeups/comonotonic-sum-totality-imply-rational-scale.md, which also records the two standard facts used: every X is <span class="math inline">Q_X(U)</span> for some uniform U on the atomless space, and sums of nondecreasing functions of U are comonotonic with their summands.</p>
+<p>Shifts: with the constant <span class="math inline">Z=b</span>,
+comonotonic with everything, Comonotonic Sum Invariance gives <span
+class="math inline">X \succeq Y</span> iff <span class="math inline">X+b
+\succeq Y+b</span>, so weak and strict comparisons pass to shifts; it
+remains to treat <span class="math inline">kX</span> against <span
+class="math inline">kY</span>. By Stochastic Equivalence replace Y by
+its comonotonic copy <span class="math inline">Y^\dagger=Q_Y(U)</span>
+on a uniform U with <span class="math inline">X=Q_X(U)</span>; the
+comparisons <span class="math inline">X \succeq Y</span>, <span
+class="math inline">Y \succeq X</span>, <span class="math inline">kX
+\succeq kY</span> and <span class="math inline">kY \succeq kX</span> are
+unchanged. Put <span class="math inline">W_j=jX+(k-j)Y^\dagger</span>
+for <span class="math inline">0\le j\le k</span> (Rich Outcomes). Since
+<span class="math inline">W_{j+1}=X+Z_j</span> and <span
+class="math inline">W_j=Y^\dagger+Z_j</span> with <span
+class="math inline">Z_j=jX+(k-j-1)Y^\dagger</span> a nondecreasing
+function of U, comonotonic with both, the invariance gives <span
+class="math inline">W_{j+1}\succeq W_j</span> iff <span
+class="math inline">X\succeq Y</span>, and <span
+class="math inline">W_j\succeq W_{j+1}</span> iff <span
+class="math inline">Y\succeq X</span>. If <span
+class="math inline">X\succeq Y</span>, chaining <span
+class="math inline">W_k\succeq W_{k-1}\succeq\dots\succeq W_0</span>
+gives <span class="math inline">kX\succeq kY</span>. If moreover <span
+class="math inline">Y\not\succeq X</span> and <span
+class="math inline">kY\succeq kX</span> held, then <span
+class="math inline">W_0\succeq W_k\succeq W_1</span> would give <span
+class="math inline">W_0\succeq W_1</span>, that is <span
+class="math inline">Y\succeq X</span>, a contradiction; so <span
+class="math inline">kX\succ kY</span>. This is Lemma 1 of
+writeups/comonotonic-sum-totality-imply-rational-scale.md, which also
+records the two standard facts used: every X is <span
+class="math inline">Q_X(U)</span> for some uniform U on the atomless
+space, and sums of nondecreasing functions of U are comonotonic with
+their summands.</p>
 <h2 id="notes">Notes</h2>
-<p>Original connecting proof; neither Totality nor Mixture Independence is used, so the result holds under DU and under any background with these three premises. Cancellation is not claimed: kX ≽ kY does not give X ≽ Y here (cdf-area-unit-threshold), which is why fractional factors, Rational Affine Preservation, need more. The recorded models that fail Scale Invariance all do so by a doubling that reverses a strict comparison, so each fails this principle, and with Rich Outcomes and Stochastic Equivalence the contrapositive shows each fails Comonotonic Sum Invariance. No independent checker or Lean verification is claimed.</p>
+<p>Original connecting proof; neither Totality nor Mixture Independence
+is used, so the result holds under DU and under any background with
+these three premises. Cancellation is not claimed: kX ≽ kY does not give
+X ≽ Y here (cdf-area-unit-threshold), which is why fractional factors,
+Rational Affine Preservation, need more. The recorded models that fail
+Scale Invariance all do so by a doubling that reverses a strict
+comparison, so each fails this principle, and with Rich Outcomes and
+Stochastic Equivalence the contrapositive shows each fails Comonotonic
+Sum Invariance. No independent checker or Lean verification is
+claimed.</p>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><strong>Goodsell argument 24 Sep</strong> — Zachary Goodsell, Logical Maps session, 24 September 2026: the doubling argument 2A = A + A ≽ B + A ≽ B + B = 2B and the request to record preservation of weak and strict order under positive rational affine maps.</li>
-<li><strong>Claude proof 24 Sep</strong> — Claude (Fable 5.1), prompted by Zachary Goodsell, Logical Maps, 24 September 2026: comonotonic-copy reduction and strict chain, §§2–3 of writeups/comonotonic-sum-totality-imply-rational-scale.md.</li>
-<li><strong>Unbounded Utility and Background Risk (unpublished)</strong> — Zachary Goodsell, Unbounded Utility and Background Risk, 5 June 2026, unpublished manuscript marked “do not cite” and erroneous; §6.2, p. 18; definitions on pp. 3–4</li>
+<li><strong>Goodsell argument 24 Sep</strong> — Zachary Goodsell,
+Logical Maps session, 24 September 2026: the doubling argument 2A = A +
+A ≽ B + A ≽ B + B = 2B and the request to record preservation of weak
+and strict order under positive rational affine maps.</li>
+<li><strong>Claude proof 24 Sep</strong> — Claude (Fable 5.1), prompted
+by Zachary Goodsell, Logical Maps, 24 September 2026: comonotonic-copy
+reduction and strict chain, §§2–3 of
+writeups/comonotonic-sum-totality-imply-rational-scale.md.</li>
+<li><strong>Unbounded Utility and Background Risk (unpublished)</strong>
+— Zachary Goodsell, Unbounded Utility and Background Risk, 5 June 2026,
+unpublished manuscript marked “do not cite” and erroneous; §6.2, p. 18;
+definitions on pp. 3–4</li>
 </ul>
 <p class="cert">
-Record: <code>topics/unbounded-utility/results/comonotonic-sum-implies-integer-affine-preservation.yaml</code>
+Record:
+<code>topics/unbounded-utility/results/comonotonic-sum-implies-integer-affine-preservation.yaml</code>
 </p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Background: Unbounded Utility and Background Risk.</strong> Zachary Goodsell (5 June 2026). Unbounded Utility and Background Risk. Unpublished working manuscript. — §6.2, p. 18; definitions on pp. 3–4</li>
+<li><strong>Background: Unbounded Utility and Background Risk.</strong>
+Zachary Goodsell (5 June 2026). Unbounded Utility and Background Risk.
+Unpublished working manuscript. — §6.2, p. 18; definitions on
+pp. 3–4</li>
 </ul>
 </body></html>

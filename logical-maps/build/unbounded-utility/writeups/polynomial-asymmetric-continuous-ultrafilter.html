@@ -269,59 +269,135 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <link rel="stylesheet" href="../math/katex.min.css">
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
-<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Clipped expectation: continuous ultrafilter dominance [−4ⁿ, 4²ⁿ]</h1></header><p><strong>Source and work accounting.</strong> This uses Zachary Goodsell’s asymmetric continuous clipping construction from <em>Decision theory unbound</em>, Appendix B, Definition 3, Lemma 6, Remark 3 and Corollary 3, pp. 691–693. Its compatibility with DTU, Relative Expectation and <span class="math inline">L^{1}</span> Continuity while failing reflection is already recorded in <em>Symmetries of value</em>, Theorem 1, p. 24. The work supplied by GPT-6 (Codex), prompted by Zachary Goodsell, 9 September 2026, is the cutoff choice and the explicit Pasadena/Arroyo evaluations below, with verification of inherited properties. This is a model specialization, not a new invention of asymmetric clipping or a claim of priority in the literature. No independent checker or Lean certification is asserted.</p>
-<h2 id="the-source-construction-with-upper-cutoff-equal-to-the-square-of-the-lower">1. The source construction with upper cutoff equal to the square of the lower</h2>
-<p>Use all real-valued random variables on the standing sample space. Let</p>
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Clipped expectation: continuous ultrafilter dominance [−4ⁿ, 4²ⁿ]</h1></header><p><strong>Source and work accounting.</strong> This uses Zachary
+Goodsell’s asymmetric continuous clipping construction from <em>Decision
+theory unbound</em>, Appendix B, Definition 3, Lemma 6, Remark 3 and
+Corollary 3, pp. 691–693. Its compatibility with DTU, Relative
+Expectation and <span class="math inline">L^{1}</span> Continuity while
+failing reflection is already recorded in <em>Symmetries of value</em>,
+Theorem 1, p. 24. The work supplied by GPT-6 (Codex), prompted by
+Zachary Goodsell, 9 September 2026, is the cutoff choice and the
+explicit Pasadena/Arroyo evaluations below, with verification of
+inherited properties. This is a model specialization, not a new
+invention of asymmetric clipping or a claim of priority in the
+literature. No independent checker or Lean certification is
+asserted.</p>
+<h2
+id="the-source-construction-with-upper-cutoff-equal-to-the-square-of-the-lower">1.
+The source construction with upper cutoff equal to the square of the
+lower</h2>
+<p>Use all real-valued random variables on the standing sample space.
+Let</p>
 <p><span class="math display">
 L_n=4^n,\quad U_n=4^{2n},\quad
 q_n(x)=\max(-L_n,\min(x,U_n)),\quad v_X(n)=E[q_n(X)].
 </span></p>
-<p>Choose a free ultrafilter <span class="math inline">\mathcal U</span> on the positive integers and set</p>
+<p>Choose a free ultrafilter <span class="math inline">\mathcal U</span>
+on the positive integers and set</p>
 <p><span class="math display">
 X\succeq Y\quad\Longleftrightarrow\quad
-\forall\varepsilon&gt;0\ \{n:v_X(n)-v_Y(n)\ge-\varepsilon\}\in\mathcal U.
+\forall\varepsilon&gt;0\ \{n:v_X(n)-v_Y(n)\ge-\varepsilon\}\in\mathcal
+U.
 \tag{1}
 </span></p>
-<p>A comparison difference converging to a finite number is ranked by its sign, with indifference at zero. If <span class="math inline">v_X(n)\to+\infty</span>, then <span class="math inline">X</span> is strictly better than every sure real outcome; this does not assign a real certainty equivalent to <span class="math inline">X</span>.</p>
-<p>Reflexivity follows directly from (1). To prove transitivity, intersect the two ultrafilter-large comparison sets for tolerance <span class="math inline">\varepsilon/2</span>. If <span class="math inline">X\not\succeq Y</span>, some positive tolerance is violated on an ultrafilter-large set, making <span class="math inline">Y\succ X</span>. Thus the relation is total. Changing any comparison sequence by an ordinary sequence tending to zero does not affect it.</p>
-<p>The clipped expectations depend only on laws. Bounded, in particular simple, variables are eventually unchanged by clipping, so the utility chart is the identity and simple gambles have ordinary expected utility comparisons. All real sure outcomes are available. Moreover,</p>
+<p>A comparison difference converging to a finite number is ranked by
+its sign, with indifference at zero. If <span
+class="math inline">v_X(n)\to+\infty</span>, then <span
+class="math inline">X</span> is strictly better than every sure real
+outcome; this does not assign a real certainty equivalent to <span
+class="math inline">X</span>.</p>
+<p>Reflexivity follows directly from (1). To prove transitivity,
+intersect the two ultrafilter-large comparison sets for tolerance <span
+class="math inline">\varepsilon/2</span>. If <span
+class="math inline">X\not\succeq Y</span>, some positive tolerance is
+violated on an ultrafilter-large set, making <span
+class="math inline">Y\succ X</span>. Thus the relation is total.
+Changing any comparison sequence by an ordinary sequence tending to zero
+does not affect it.</p>
+<p>The clipped expectations depend only on laws. Bounded, in particular
+simple, variables are eventually unchanged by clipping, so the utility
+chart is the identity and simple gambles have ordinary expected utility
+comparisons. All real sure outcomes are available. Moreover,</p>
 <p><span class="math display">
 v_{M_p(X,Z)}=p v_X+(1-p)v_Z,
 </span></p>
-<p>so cancellation and rescaling tolerances prove both directions of Mixture Independence. These facts establish all DTU clauses except dominance.</p>
-<p>For survival functions <span class="math inline">S_X</span>, bounded layer integration gives</p>
+<p>so cancellation and rescaling tolerances prove both directions of
+Mixture Independence. These facts establish all DTU clauses except
+dominance.</p>
+<p>For survival functions <span class="math inline">S_X</span>, bounded
+layer integration gives</p>
 <p><span class="math display">
 v_X(n)-v_Y(n)=\int_{-L_n}^{U_n}(S_X(t)-S_Y(t))\,dt. \tag{2}
 </span></p>
-<p>Dominance makes this integrand nonnegative. If it is positive at one threshold, right-continuity makes its integral positive on some bounded interval. Once that interval is inside the cutoffs, there is a fixed positive comparison gap. This establishes weak and strict Stochastic Dominance and completes DTU.</p>
-<h2 id="the-stronger-expectation-continuity-and-shift-properties">2. The stronger expectation, continuity and shift properties</h2>
-<p>The intervals in (2) increase to all of <span class="math inline">\mathbb R</span>. If at least one of the positive and negative areas of <span class="math inline">S_X-S_Y</span> is finite, monotone convergence of the two nonnegative areas makes the clipped differences tend to their well-defined extended difference. Equation (1) therefore gives exactly <strong>CDF-Area Extension</strong>, including strict infinite-area cases and the zero case.</p>
-<p>For any actually coupled <span class="math inline">X,Y</span>, clipping is 1-Lipschitz and tends pointwise to the identity. If <span class="math inline">E|X-Y|&lt;\infty</span>, then</p>
+<p>Dominance makes this integrand nonnegative. If it is positive at one
+threshold, right-continuity makes its integral positive on some bounded
+interval. Once that interval is inside the cutoffs, there is a fixed
+positive comparison gap. This establishes weak and strict Stochastic
+Dominance and completes DTU.</p>
+<h2 id="the-stronger-expectation-continuity-and-shift-properties">2. The
+stronger expectation, continuity and shift properties</h2>
+<p>The intervals in (2) increase to all of <span
+class="math inline">\mathbb R</span>. If at least one of the positive
+and negative areas of <span class="math inline">S_X-S_Y</span> is
+finite, monotone convergence of the two nonnegative areas makes the
+clipped differences tend to their well-defined extended difference.
+Equation (1) therefore gives exactly <strong>CDF-Area
+Extension</strong>, including strict infinite-area cases and the zero
+case.</p>
+<p>For any actually coupled <span class="math inline">X,Y</span>,
+clipping is 1-Lipschitz and tends pointwise to the identity. If <span
+class="math inline">E|X-Y|&lt;\infty</span>, then</p>
 <p><span class="math display">
 |q_n(X)-q_n(Y)|\le|X-Y|,
 \qquad v_X(n)-v_Y(n)\longrightarrow E[X-Y].
 </span></p>
-<p>Dominated convergence and (1) prove <strong>Relative Expectation</strong> directly. Likewise, if <span class="math inline">E|X_k-X|\to0</span>, then for every cutoff</p>
+<p>Dominated convergence and (1) prove <strong>Relative
+Expectation</strong> directly. Likewise, if <span
+class="math inline">E|X_k-X|\to0</span>, then for every cutoff</p>
 <p><span class="math display">
 |v_{X_k}(n)-v_X(n)|\le E|X_k-X|.
 </span></p>
-<p>If every <span class="math inline">X_k\succeq Y</span>, choose one <span class="math inline">k</span> with this error below <span class="math inline">\varepsilon/2</span>, and use its ultrafilter-large comparison set with tolerance <span class="math inline">\varepsilon/2</span>. This proves <span class="math inline">X\succeq Y</span> and hence the recorded upper-section <strong>L¹ Continuity</strong>.</p>
-<p>For any constant <span class="math inline">b</span>, dominated convergence applied to <span class="math inline">q_n(X+b)-q_n(X)</span> gives limit <span class="math inline">b</span>, since this difference is bounded in absolute value by <span class="math inline">|b|</span>. The two shifts cancel in a comparison, proving <strong>Shift Invariance</strong>. The fixed-lift variables in <strong>Shift Transfer</strong> have integrable difference <span class="math inline">b/p</span> on a set of probability <span class="math inline">p</span> and <span class="math inline">-b/(1-p)</span> on its complement; its mean is zero. Relative Expectation proves their indifference.</p>
-<h2 id="pasadena-has-value-32ln2">3. Pasadena has value <span class="math inline">(3/2)\ln2</span></h2>
-<p>For Pasadena <span class="math inline">P</span>, separate its odd and even indices:</p>
+<p>If every <span class="math inline">X_k\succeq Y</span>, choose one
+<span class="math inline">k</span> with this error below <span
+class="math inline">\varepsilon/2</span>, and use its ultrafilter-large
+comparison set with tolerance <span
+class="math inline">\varepsilon/2</span>. This proves <span
+class="math inline">X\succeq Y</span> and hence the recorded
+upper-section <strong>L¹ Continuity</strong>.</p>
+<p>For any constant <span class="math inline">b</span>, dominated
+convergence applied to <span class="math inline">q_n(X+b)-q_n(X)</span>
+gives limit <span class="math inline">b</span>, since this difference is
+bounded in absolute value by <span class="math inline">|b|</span>. The
+two shifts cancel in a comparison, proving <strong>Shift
+Invariance</strong>. The fixed-lift variables in <strong>Shift
+Transfer</strong> have integrable difference <span
+class="math inline">b/p</span> on a set of probability <span
+class="math inline">p</span> and <span
+class="math inline">-b/(1-p)</span> on its complement; its mean is zero.
+Relative Expectation proves their indifference.</p>
+<h2 id="pasadena-has-value-32ln2">3. Pasadena has value <span
+class="math inline">(3/2)\ln2</span></h2>
+<p>For Pasadena <span class="math inline">P</span>, separate its odd and
+even indices:</p>
 <p><span class="math display">
 \begin{array}{c|c|c}
- &amp;\text{payoff}&amp;\text{probability}\\\hline
+&amp;\text{payoff}&amp;\text{probability}\\\hline
 \text{positive branch }k&amp;4^k/[2(2k-1)]&amp;2/4^k\\
 \text{negative branch }k&amp;-4^k/(2k)&amp;1/4^k
 \end{array}
 </span></p>
-<p>Let <span class="math inline">K_+(n)</span> be the largest positive index whose payoff does not exceed <span class="math inline">U_n</span>, and <span class="math inline">K_-(n)</span> the largest negative index whose magnitude does not exceed <span class="math inline">L_n</span>. The defining inequalities show</p>
+<p>Let <span class="math inline">K_+(n)</span> be the largest positive
+index whose payoff does not exceed <span class="math inline">U_n</span>,
+and <span class="math inline">K_-(n)</span> the largest negative index
+whose magnitude does not exceed <span class="math inline">L_n</span>.
+The defining inequalities show</p>
 <p><span class="math display">
 K_+(n)=2n+O(\log n),\qquad K_-(n)=n+O(\log n).
 \tag{3}
 </span></p>
-<p>For example, take logarithms of <span class="math inline">4^{K_+}/[2(2K_+-1)]\le4^{2n}&lt;4^{K_++1}/[2(2K_++1)]</span>; the corresponding negative-branch inequalities work identically.</p>
+<p>For example, take logarithms of <span
+class="math inline">4^{K_+}/[2(2K_+-1)]\le4^{2n}&lt;4^{K_++1}/[2(2K_++1)]</span>;
+the corresponding negative-branch inequalities work identically.</p>
 <p>Summing the clipped geometric tails exactly yields</p>
 <p><span class="math display">
 v_P(n)=
@@ -330,7 +406,13 @@ v_P(n)=
 +\frac{2U_n}{3\,4^{K_+(n)}}
 -\frac{L_n}{3\,4^{K_-(n)}}. \tag{4}
 </span></p>
-<p>The two clipped-tail terms tend to zero: the next positive-payoff inequality bounds the positive term by <span class="math inline">4/[3(2K_++1)]</span>, and the next negative-payoff inequality bounds the negative term’s magnitude by <span class="math inline">2/[3(K_-+1)]</span>. Writing <span class="math inline">H_j=\sum_{k=1}^j1/k=\log j+\gamma+o(1)</span>, the finite part of (4) is</p>
+<p>The two clipped-tail terms tend to zero: the next positive-payoff
+inequality bounds the positive term by <span
+class="math inline">4/[3(2K_++1)]</span>, and the next negative-payoff
+inequality bounds the negative term’s magnitude by <span
+class="math inline">2/[3(K_-+1)]</span>. Writing <span
+class="math inline">H_j=\sum_{k=1}^j1/k=\log j+\gamma+o(1)</span>, the
+finite part of (4) is</p>
 <p><span class="math display">
 H_{2K_+}-\tfrac12H_{K_+}-\tfrac12H_{K_-}
 =\ln2+\tfrac12\log(K_+/K_-)+o(1).
@@ -340,9 +422,18 @@ H_{2K_+}-\tfrac12H_{K_+}-\tfrac12H_{K_-}
 v_P(n)\longrightarrow\frac32\ln2,
 \qquad P\sim\frac32\ln2\succ\ln2.
 </span></p>
-<p>This disproves the recorded Pasadena evaluation in this model. The argument uses convergent clipped expectations, not an ordinary expectation of Pasadena.</p>
-<h2 id="arroyo-lies-strictly-above-every-sure-outcome">4. Arroyo lies strictly above every sure outcome</h2>
-<p>For Arroyo <span class="math inline">A</span>, the positive branch indexed by <span class="math inline">k</span> has payoff <span class="math inline">2k</span> and probability <span class="math inline">1/[(2k-1)2k]</span>. The negative branch has payoff <span class="math inline">-(2k+1)</span> and probability <span class="math inline">1/[2k(2k+1)]</span>. The last unclipped indices are</p>
+<p>This disproves the recorded Pasadena evaluation in this model. The
+argument uses convergent clipped expectations, not an ordinary
+expectation of Pasadena.</p>
+<h2 id="arroyo-lies-strictly-above-every-sure-outcome">4. Arroyo lies
+strictly above every sure outcome</h2>
+<p>For Arroyo <span class="math inline">A</span>, the positive branch
+indexed by <span class="math inline">k</span> has payoff <span
+class="math inline">2k</span> and probability <span
+class="math inline">1/[(2k-1)2k]</span>. The negative branch has payoff
+<span class="math inline">-(2k+1)</span> and probability <span
+class="math inline">1/[2k(2k+1)]</span>. The last unclipped indices
+are</p>
 <p><span class="math display">
 J_+=U_n/2,\qquad J_-=L_n/2-1.
 </span></p>
@@ -353,50 +444,157 @@ J_+=U_n/2,\qquad J_-=L_n/2-1.
 +U_n\sum_{k&gt;J_+}\frac1{(2k-1)2k}
 -L_n\sum_{k&gt;J_-}\frac1{2k(2k+1)}. \tag{5}
 </span></p>
-<p>Each probability-tail summand is asymptotic to <span class="math inline">1/(4k^2)</span>, and the corresponding tail sum is asymptotic to <span class="math inline">1/(4J)</span>, by comparison with the integral of <span class="math inline">k^{-2}</span>. Each of the last two magnitudes in (5) therefore tends to <span class="math inline">1/2</span>, so their difference tends to zero. The harmonic prefix has asymptotic value</p>
+<p>Each probability-tail summand is asymptotic to <span
+class="math inline">1/(4k^2)</span>, and the corresponding tail sum is
+asymptotic to <span class="math inline">1/(4J)</span>, by comparison
+with the integral of <span class="math inline">k^{-2}</span>. Each of
+the last two magnitudes in (5) therefore tends to <span
+class="math inline">1/2</span>, so their difference tends to zero. The
+harmonic prefix has asymptotic value</p>
 <p><span class="math display">
 \ln2+\tfrac12\log(J_+/J_-)+o(1)
 =\ln2+\tfrac12\log(U_n/L_n)+o(1)
 =(n+1)\ln2+o(1).
 </span></p>
-<p>Consequently <span class="math inline">v_A(n)\to+\infty</span>. In (1), this yields <span class="math inline">A\succ c</span> for every real sure outcome <span class="math inline">c</span>, and in particular <span class="math inline">A\not\sim\ln2</span>. Although Arroyo’s folded expectation is <span class="math inline">\ln2</span>, this model does not obey Folded Expectation.</p>
-<h2 id="a-symmetric-neutrality-witness">5. A symmetric-neutrality witness</h2>
-<p>Let <span class="math inline">C</span> have the standard symmetric Cauchy law. Symmetry cancels its clipped tails up to <span class="math inline">L_n</span>, leaving</p>
+<p>Consequently <span class="math inline">v_A(n)\to+\infty</span>. In
+(1), this yields <span class="math inline">A\succ c</span> for every
+real sure outcome <span class="math inline">c</span>, and in particular
+<span class="math inline">A\not\sim\ln2</span>. Although Arroyo’s folded
+expectation is <span class="math inline">\ln2</span>, this model does
+not obey Folded Expectation.</p>
+<h2 id="a-symmetric-neutrality-witness">5. A symmetric-neutrality
+witness</h2>
+<p>Let <span class="math inline">C</span> have the standard symmetric
+Cauchy law. Symmetry cancels its clipped tails up to <span
+class="math inline">L_n</span>, leaving</p>
 <p><span class="math display">
 v_C(n)=\int_{L_n}^{U_n}\left(\frac12-\frac{\arctan t}{\pi}\right)dt
 =\frac1\pi\log(U_n/L_n)+o(1)
 =\frac{n\log4}{\pi}+o(1).
 </span></p>
-<p>The asymptotic follows from the integrand <span class="math inline">1/(\pi t)+O(t^{-3})</span>; its integrated error tends to zero. Thus the symmetric gamble <span class="math inline">C</span> is strictly above every sure outcome, and Symmetric Neutrality fails. This mechanism belongs to Goodsell’s general asymmetric construction; only these chosen cutoff rates and calculations are additions here.</p>
+<p>The asymptotic follows from the integrand <span
+class="math inline">1/(\pi t)+O(t^{-3})</span>; its integrated error
+tends to zero. Thus the symmetric gamble <span
+class="math inline">C</span> is strictly above every sure outcome, and
+Symmetric Neutrality fails. This mechanism belongs to Goodsell’s general
+asymmetric construction; only these chosen cutoff rates and calculations
+are additions here.</p>
 <h2 id="scope-and-diagnostics">Scope and diagnostics</h2>
-<p>The model satisfies DTU, Relative Expectation, <span class="math inline">L^{1}</span> Continuity, CDF-Area Extension, and the shift properties, yet fails both named game evaluations. Its failure of Negative Self-Similarity follows from the new Pasadena implication; further exclusions are left to the map’s inference engine rather than separately asserted without evidence. No Scale Invariance or sum-invariance verdict is claimed here.</p>
-<p><code>checks/calculation_factorizations.py</code> verifies the exact Pasadena clipping formula against direct finite atom sums with bounded remainders, tests the displayed cutoff asymptotic, and checks finite Arroyo sums. It also verifies the exact coupling identities in the accompanying Pasadena proof. These are diagnostics supporting quantified arguments, not simulations of a free ultrafilter or proofs of all universal axioms.</p>
-<h2 id="failure-of-comonotonic-sum-invariance">6. Failure of Comonotonic Sum Invariance</h2>
-<p><strong>Addition: Claude (Fable 5.1), 23 September 2026.</strong> A property of the recorded model; not a claim of the source paper.</p>
-<p>Realize a standard Cauchy variable as <span class="math inline">C=Q_C(U)=\tan(\pi(U-\tfrac12))</span>, let <span class="math inline">C_+=\max(C,0)</span>, <span class="math inline">C_-=\min(C,0)</span>, and put <span class="math inline">X=0</span>, <span class="math inline">Y=C_++2C_--v</span> with <span class="math inline">v=(2\ln2-1)/\pi</span>, and <span class="math inline">Z=C_+</span>. All are nondecreasing in <span class="math inline">U</span>, so both pairs are comonotonic. With <span class="math inline">m(F)=\mathbb E[\min(C_+,F)]=\frac1{2\pi}\ln(1+F^2)+\frac F\pi\arctan(1/F) =\frac1\pi\ln F+\frac1\pi+o(1)</span> and the window <span class="math inline">[-4^n,4^{2n}]</span>,</p>
+<p>The model satisfies DTU, Relative Expectation, <span
+class="math inline">L^{1}</span> Continuity, CDF-Area Extension, and the
+shift properties, yet fails both named game evaluations. Its failure of
+Negative Self-Similarity follows from the new Pasadena implication;
+further exclusions are left to the map’s inference engine rather than
+separately asserted without evidence. No Scale Invariance or
+sum-invariance verdict is claimed here.</p>
+<p><code>checks/calculation_factorizations.py</code> verifies the exact
+Pasadena clipping formula against direct finite atom sums with bounded
+remainders, tests the displayed cutoff asymptotic, and checks finite
+Arroyo sums. It also verifies the exact coupling identities in the
+accompanying Pasadena proof. These are diagnostics supporting quantified
+arguments, not simulations of a free ultrafilter or proofs of all
+universal axioms.</p>
+<h2 id="failure-of-comonotonic-sum-invariance">6. Failure of Comonotonic
+Sum Invariance</h2>
+<p><strong>Addition: Claude (Fable 5.1), 23 September 2026.</strong> A
+property of the recorded model; not a claim of the source paper.</p>
+<p>Realize a standard Cauchy variable as <span
+class="math inline">C=Q_C(U)=\tan(\pi(U-\tfrac12))</span>, let <span
+class="math inline">C_+=\max(C,0)</span>, <span
+class="math inline">C_-=\min(C,0)</span>, and put <span
+class="math inline">X=0</span>, <span
+class="math inline">Y=C_++2C_--v</span> with <span
+class="math inline">v=(2\ln2-1)/\pi</span>, and <span
+class="math inline">Z=C_+</span>. All are nondecreasing in <span
+class="math inline">U</span>, so both pairs are comonotonic. With <span
+class="math inline">m(F)=\mathbb
+E[\min(C_+,F)]=\frac1{2\pi}\ln(1+F^2)+\frac F\pi\arctan(1/F)
+=\frac1\pi\ln F+\frac1\pi+o(1)</span> and the window <span
+class="math inline">[-4^n,4^{2n}]</span>,</p>
 <p><span class="math display">
 \mathbb E[q_n(C_++2C_-)]=m(4^{2n})-2m(4^n/2)\longrightarrow
 \frac{2\ln2-1}{\pi}=v,
 </span></p>
-<p>and <span class="math inline">q_n(Y)-q_n(C_++2C_-)\to-v</span> boundedly, so <span class="math inline">\mathbb E[q_n(Y)]\to0</span> and <span class="math inline">X\sim Y</span>.</p>
-<p><strong>Doubling-defect identity.</strong> For any nonnegative random variable <span class="math inline">V</span> and any <span class="math inline">F&gt;0</span>,</p>
-<p><span class="math display">2\,\mathbb E[\min(V,F)]-\mathbb E[\min(2V,F)]
- =2\int_{F/2}^{F}P(V&gt;x)\,dx,</span></p>
-<p>since <span class="math inline">\mathbb E[\min(V,F)]=\int_0^F P(V&gt;x)\,dx</span> and <span class="math inline">\mathbb E[\min(2V,F)]=2\int_0^{F/2}P(V&gt;x)\,dx</span>. For <span class="math inline">V=C_+=\max(C,0)</span> with <span class="math inline">C</span> standard Cauchy the right-hand side is <span class="math inline">\frac2\pi\int_{F/2}^{F}\arctan(1/x)\,dx</span>, which is positive for every <span class="math inline">F</span> and increases to <span class="math inline">\frac{2\ln2}{\pi}</span> as <span class="math inline">F\to\infty</span>.</p>
-<p>Now <span class="math inline">X+Z=C_+</span> and <span class="math inline">Y+Z=2C_++2C_--v</span>, so</p>
+<p>and <span class="math inline">q_n(Y)-q_n(C_++2C_-)\to-v</span>
+boundedly, so <span class="math inline">\mathbb E[q_n(Y)]\to0</span> and
+<span class="math inline">X\sim Y</span>.</p>
+<p><strong>Doubling-defect identity.</strong> For any nonnegative random
+variable <span class="math inline">V</span> and any <span
+class="math inline">F&gt;0</span>,</p>
+<p><span class="math display">2\,\mathbb E[\min(V,F)]-\mathbb
+E[\min(2V,F)]
+=2\int_{F/2}^{F}P(V&gt;x)\,dx,</span></p>
+<p>since <span class="math inline">\mathbb E[\min(V,F)]=\int_0^F
+P(V&gt;x)\,dx</span> and <span class="math inline">\mathbb
+E[\min(2V,F)]=2\int_0^{F/2}P(V&gt;x)\,dx</span>. For <span
+class="math inline">V=C_+=\max(C,0)</span> with <span
+class="math inline">C</span> standard Cauchy the right-hand side is
+<span
+class="math inline">\frac2\pi\int_{F/2}^{F}\arctan(1/x)\,dx</span>,
+which is positive for every <span class="math inline">F</span> and
+increases to <span class="math inline">\frac{2\ln2}{\pi}</span> as <span
+class="math inline">F\to\infty</span>.</p>
+<p>Now <span class="math inline">X+Z=C_+</span> and <span
+class="math inline">Y+Z=2C_++2C_--v</span>, so</p>
 <p><span class="math display">
 v_{X+Z}(n)-v_{Y+Z}(n)
- =m(4^{2n})-2m(4^{2n}/2)+2m(4^n/2)+v+o(1)
- =2\bigl(m(4^{2n})-m(4^{2n}/2)\bigr)+o(1)\longrightarrow\frac{2\ln2}{\pi},
+=m(4^{2n})-2m(4^{2n}/2)+2m(4^n/2)+v+o(1)
+=2\bigl(m(4^{2n})-m(4^{2n}/2)\bigr)+o(1)\longrightarrow\frac{2\ln2}{\pi},
 </span></p>
-<p>the lower-cutoff terms cancelling against <span class="math inline">v</span>. With <span class="math inline">\varepsilon=(\ln2)/\pi</span> the set <span class="math inline">\{n:v_{Y+Z}(n)\ge v_{X+Z}(n)-\varepsilon\}</span> is finite, so <span class="math inline">X+Z\succ Y+Z</span> although <span class="math inline">X\sim Y</span>: Comonotonic Sum Invariance fails, while Shift Invariance and Transfer of a Shift hold. <code>checks/comonotonic_witnesses.py</code> verifies the closed forms, the neutral constant and the limit.</p>
+<p>the lower-cutoff terms cancelling against <span
+class="math inline">v</span>. With <span
+class="math inline">\varepsilon=(\ln2)/\pi</span> the set <span
+class="math inline">\{n:v_{Y+Z}(n)\ge v_{X+Z}(n)-\varepsilon\}</span> is
+finite, so <span class="math inline">X+Z\succ Y+Z</span> although <span
+class="math inline">X\sim Y</span>: Comonotonic Sum Invariance fails,
+while Shift Invariance and Transfer of a Shift hold.
+<code>checks/comonotonic_witnesses.py</code> verifies the closed forms,
+the neutral constant and the limit.</p>
 <h2 id="a-fixed-shuffle-copula">A fixed shuffle copula</h2>
-<p><strong>Added 2 October 2026.</strong> The AI-generated report communicated by <strong>Branden Fitelson</strong>, <em>Unbounded Utility: Five Top-Ranked Open Conjectures Resolved</em> (30 September 2026), §4(b), supplies a new property of this construction. Its producers are identified as Claude agents, with model versions unspecified. GPT-6 (Codex) expanded and informally checked the argument.</p>
-<p>The <a href="calibrated-geometric-continuous-ultrafilter.html#shared-clipping-and-shuffle-copula-proof">fixed shuffle-copula proof</a> applies to this model’s cutoffs and tolerance-based ultrafilter comparison. It proves the fixed-copula invariance <span class="math inline">\operatorname{SC}(C_\sigma)</span> using one copula for all triples, including atomic marginals; the map recorded this as Existential Copula Sum Invariance until that principle was retired on 11 October 2026 in favour of Uninteractive Sum Invariance, which this model satisfies by Relative Expectation (<code>relative-independence-equivalence-imply-uninteractive-sum</code>). This does not change the model’s existing failure of Comonotonic Sum Invariance. The original construction and earlier results retain their original attribution. The expanded model has no Lean verification; its earlier record was marked stated.</p>
+<p><strong>Added 2 October 2026.</strong> The AI-generated report
+communicated by <strong>Branden Fitelson</strong>, <em>Unbounded
+Utility: Five Top-Ranked Open Conjectures Resolved</em> (30 September
+2026), §4(b), supplies a new property of this construction. Its
+producers are identified as Claude agents, with model versions
+unspecified. GPT-6 (Codex) expanded and informally checked the
+argument.</p>
+<p>The <a
+href="calibrated-geometric-continuous-ultrafilter.html#shared-clipping-and-shuffle-copula-proof">fixed
+shuffle-copula proof</a> applies to this model’s cutoffs and
+tolerance-based ultrafilter comparison. It proves the fixed-copula
+invariance <span class="math inline">\operatorname{SC}(C_\sigma)</span>
+using one copula for all triples, including atomic marginals; the map
+recorded this as Existential Copula Sum Invariance until that principle
+was retired on 11 October 2026 in favour of Uninteractive Sum
+Invariance, which this model satisfies by Relative Expectation
+(<code>relative-independence-equivalence-imply-uninteractive-sum</code>).
+This does not change the model’s existing failure of Comonotonic Sum
+Invariance. The original construction and earlier results retain their
+original attribution. The expanded model has no Lean verification; its
+earlier record was marked stated.</p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Background: <a href="https://doi.org/10.1111/nous.12473">Decision theory unbound</a>.</strong> (<a href="../sources/Nous%20-%202023%20-%20Goodsell%20-%20Decision%20theory%20unbound%20%281%29.pdf">PDF</a>) Zachary Goodsell (2024). Decision theory unbound. Noûs, 58, 669–695. First published online in 2023. — Appendix B, Definition 3, Lemma 6, Remark 3 and Corollary 3, pp. 691–693: continuous clipped-expectation quotient and separate cutoff functions</li>
-<li><strong>Background: <a href="https://doi.org/10.1111/nous.12549">Symmetries of value</a>.</strong> (<a href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>) Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. — Theorem 1, p. 24: asymmetric source model and failure of reflection even with DTU, L1 Continuity and Relative Expectation; pp. 28–33 for the named prospects</li>
-<li><strong>Proof: Unbounded Utility: Five Top-Ranked Open Conjectures Resolved.</strong> AI-generated report, 30 September 2026, 4 pages; communicated by Branden Fitelson. The report attributes production to Claude agents without specifying model versions. Fitelson is the communicator, not the credited producer of the proofs. — §4(b), p. 3</li>
+<li><strong>Background: <a
+href="https://doi.org/10.1111/nous.12473">Decision theory
+unbound</a>.</strong> (<a
+href="../sources/Nous%20-%202023%20-%20Goodsell%20-%20Decision%20theory%20unbound%20%281%29.pdf">PDF</a>)
+Zachary Goodsell (2024). Decision theory unbound. Noûs, 58, 669–695.
+First published online in 2023. — Appendix B, Definition 3, Lemma 6,
+Remark 3 and Corollary 3, pp. 691–693: continuous clipped-expectation
+quotient and separate cutoff functions</li>
+<li><strong>Background: <a
+href="https://doi.org/10.1111/nous.12549">Symmetries of
+value</a>.</strong> (<a
+href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>)
+Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. — Theorem
+1, p. 24: asymmetric source model and failure of reflection even with
+DTU, L1 Continuity and Relative Expectation; pp. 28–33 for the named
+prospects</li>
+<li><strong>Proof: Unbounded Utility: Five Top-Ranked Open Conjectures
+Resolved.</strong> AI-generated report, 30 September 2026, 4 pages;
+communicated by Branden Fitelson. The report attributes production to
+Claude agents without specifying model versions. Fitelson is the
+communicator, not the credited producer of the proofs. — §4(b),
+p. 3</li>
 </ul>
 </body></html>

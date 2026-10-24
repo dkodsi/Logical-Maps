@@ -270,35 +270,106 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
 <script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Rich Outcomes ∧ Totality ∧ Mixture Independence ∧ Integer Affine Preservation ∧ Reflection Anti-Invariance ⇒ Uniqueness of Negative Self-Similarity (integer ratios)</h1></header><p class="cert">
-Result — Source: Misc.; produced by Zachary Goodsell (observation that integer preservation with a negation anti-invariance suffices) and Claude (Fable 5.1) (proof), 2026-09-24; recorded by Claude (Fable 5.1), prompted by Zachary Goodsell, 2026-09-24.
+Result — Source: Misc.; produced by Zachary Goodsell (observation that
+integer preservation with a negation anti-invariance suffices) and
+Claude (Fable 5.1) (proof), 2026-09-24; recorded by Claude (Fable 5.1),
+prompted by Zachary Goodsell, 2026-09-24.
 </p>
 <h2 id="premises">Premises</h2>
 <ul>
-<li><strong>Rich Outcomes.</strong> Every real number r occurs as a utility level of a sure outcome: for each <span class="math inline">r \in \mathbb{R}</span> there is an outcome <span class="math inline">o_r</span> with <span class="math inline">u(o_r)=r</span>, with u defined by the normalized binary-mixture comparisons in the background. This does not assert that every outcome has a finite real level.</li>
-<li><strong>Totality.</strong> For all gambles X,Y, either <span class="math inline">X \succeq Y</span> or <span class="math inline">Y \succeq X</span>.</li>
-<li><strong>Mixture Independence.</strong> For all X,Y,Z and <span class="math inline">0&lt;p&lt;1, X \succeq Y</span> iff <span class="math inline">M_p(X,Z) \succeq M_p(Y,Z)</span>, where M is the fixed randomized-selection construction described in the background.</li>
-<li><strong>Integer Affine Preservation.</strong> For every positive integer <span class="math inline">k</span> and real <span class="math inline">b</span>: if <span class="math inline">X \succeq Y</span> then <span class="math inline">kX+b \succeq kY+b</span>, and if <span class="math inline">X \succ Y</span> then <span class="math inline">kX+b \succ kY+b</span>.</li>
-<li><strong>Reflection Anti-Invariance.</strong> <span class="math inline">X \succeq Y</span> iff <span class="math inline">- Y \succeq - X</span>, using the one fixed normalized origin 0.</li>
+<li><strong>Rich Outcomes.</strong> Every real number r occurs as a
+utility level of a sure outcome: for each <span class="math inline">r
+\in \mathbb{R}</span> there is an outcome <span
+class="math inline">o_r</span> with <span
+class="math inline">u(o_r)=r</span>, with u defined by the normalized
+binary-mixture comparisons in the background. This does not assert that
+every outcome has a finite real level.</li>
+<li><strong>Totality.</strong> For all gambles X,Y, either <span
+class="math inline">X \succeq Y</span> or <span class="math inline">Y
+\succeq X</span>.</li>
+<li><strong>Mixture Independence.</strong> For all X,Y,Z and <span
+class="math inline">0&lt;p&lt;1, X \succeq Y</span> iff <span
+class="math inline">M_p(X,Z) \succeq M_p(Y,Z)</span>, where M is the
+fixed randomized-selection construction described in the
+background.</li>
+<li><strong>Integer Affine Preservation.</strong> For every positive
+integer <span class="math inline">k</span> and real <span
+class="math inline">b</span>: if <span class="math inline">X \succeq
+Y</span> then <span class="math inline">kX+b \succeq kY+b</span>, and if
+<span class="math inline">X \succ Y</span> then <span
+class="math inline">kX+b \succ kY+b</span>.</li>
+<li><strong>Reflection Anti-Invariance.</strong> <span
+class="math inline">X \succeq Y</span> iff <span class="math inline">- Y
+\succeq - X</span>, using the one fixed normalized origin 0.</li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <ul>
-<li><strong>Uniqueness of Negative Self-Similarity (integer ratios).</strong> Fix <span class="math inline">0&lt;p&lt;1</span>, a positive integer <span class="math inline">a</span>, <span class="math inline">b\in \mathbb{R}</span> and Z. If <span class="math inline">X \sim M_p(- aX+b,Z)</span> and <span class="math inline">Y \sim M_p(- aY+b,Z)</span>, then <span class="math inline">X \sim Y</span>.</li>
+<li><strong>Uniqueness of Negative Self-Similarity (integer
+ratios).</strong> Fix <span class="math inline">0&lt;p&lt;1</span>, a
+positive integer <span class="math inline">a</span>, <span
+class="math inline">b\in \mathbb{R}</span> and Z. If <span
+class="math inline">X \sim M_p(- aX+b,Z)</span> and <span
+class="math inline">Y \sim M_p(- aY+b,Z)</span>, then <span
+class="math inline">X \sim Y</span>.</li>
 </ul>
 <h2 id="proof">Proof</h2>
-<p>Fix p, a positive integer a, b and Z, and write <span class="math inline">T(V)=- aV+b</span> and <span class="math inline">F(V)=M_p(T(V),Z)</span>; Rich Outcomes supplies the intermediate gambles aV and <span class="math inline">- aV</span>. If <span class="math inline">V\succ W</span>, Integer Affine Preservation gives <span class="math inline">aV\succ aW</span>, Reflection Anti-Invariance (applied to both weak directions) gives <span class="math inline">- aW\succ - aV</span>, and Integer Affine Preservation with factor 1 gives <span class="math inline">T(W)\succ T(V)</span>; Mixture Independence, applied to both weak directions with the common Z, gives <span class="math inline">F(W)\succ F(V)</span>. So F reverses strict preference. If <span class="math inline">X\sim F(X)</span>, <span class="math inline">Y\sim F(Y)</span> and <span class="math inline">X\succ Y</span>, then <span class="math inline">F(Y)\succ F(X)</span> and the two indifferences give <span class="math inline">Y\succ X</span>, a contradiction; the case <span class="math inline">Y\succ X</span> is symmetric. Totality leaves <span class="math inline">X\sim Y</span>. This is the recorded argument of totality-independence-negative-affine-imply-self-similarity with its one use of Negative Affine Anti-Invariance replaced by preservation at the integer factor followed by reflection.</p>
+<p>Fix p, a positive integer a, b and Z, and write <span
+class="math inline">T(V)=- aV+b</span> and <span
+class="math inline">F(V)=M_p(T(V),Z)</span>; Rich Outcomes supplies the
+intermediate gambles aV and <span class="math inline">- aV</span>. If
+<span class="math inline">V\succ W</span>, Integer Affine Preservation
+gives <span class="math inline">aV\succ aW</span>, Reflection
+Anti-Invariance (applied to both weak directions) gives <span
+class="math inline">- aW\succ - aV</span>, and Integer Affine
+Preservation with factor 1 gives <span class="math inline">T(W)\succ
+T(V)</span>; Mixture Independence, applied to both weak directions with
+the common Z, gives <span class="math inline">F(W)\succ F(V)</span>. So
+F reverses strict preference. If <span class="math inline">X\sim
+F(X)</span>, <span class="math inline">Y\sim F(Y)</span> and <span
+class="math inline">X\succ Y</span>, then <span
+class="math inline">F(Y)\succ F(X)</span> and the two indifferences give
+<span class="math inline">Y\succ X</span>, a contradiction; the case
+<span class="math inline">Y\succ X</span> is symmetric. Totality leaves
+<span class="math inline">X\sim Y</span>. This is the recorded argument
+of totality-independence-negative-affine-imply-self-similarity with its
+one use of Negative Affine Anti-Invariance replaced by preservation at
+the integer factor followed by reflection.</p>
 <h2 id="notes">Notes</h2>
-<p>Original connecting proof, a premise refinement of totality-independence-negative-affine-imply-self-similarity: the negative affine map is only ever applied at the ratio a of the fixed-point equation, and for integer a it factors as a positive integer map followed by the reflection, each of which need only preserve strict comparisons. With comonotonic-sum-implies-integer-affine-preservation, Comonotonic Sum Invariance can stand in for Integer Affine Preservation. Rich Outcomes is listed for the intermediate gambles aV and −aV, which the fixed-point hypotheses alone need not supply. No independent checker or Lean verification is claimed.</p>
+<p>Original connecting proof, a premise refinement of
+totality-independence-negative-affine-imply-self-similarity: the
+negative affine map is only ever applied at the ratio a of the
+fixed-point equation, and for integer a it factors as a positive integer
+map followed by the reflection, each of which need only preserve strict
+comparisons. With comonotonic-sum-implies-integer-affine-preservation,
+Comonotonic Sum Invariance can stand in for Integer Affine Preservation.
+Rich Outcomes is listed for the intermediate gambles aV and −aV, which
+the fixed-point hypotheses alone need not supply. No independent checker
+or Lean verification is claimed.</p>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><strong>Goodsell observation 24 Sep</strong> — Zachary Goodsell, Logical Maps session, 24 September 2026: the observation that Integer Affine Preservation with a negation anti-invariance already gives the alternating St Petersburg evaluation and related results.</li>
-<li><strong>Claude proof 24 Sep</strong> — Claude (Fable 5.1), prompted by Zachary Goodsell, Logical Maps, 24 September 2026: proof in topics/unbounded-utility/results/totality-independence-integer-affine-reflection-imply-integer-self-similarity.yaml (proof field), adapting the recorded reduced-premise argument.</li>
-<li><strong>Symmetries of Value</strong> — Goodsell, Symmetries of value, Noûs 60 (2026), 16–37; DOI 10.1111/nous.12549, Theorem 10, pp. 30–31</li>
+<li><strong>Goodsell observation 24 Sep</strong> — Zachary Goodsell,
+Logical Maps session, 24 September 2026: the observation that Integer
+Affine Preservation with a negation anti-invariance already gives the
+alternating St Petersburg evaluation and related results.</li>
+<li><strong>Claude proof 24 Sep</strong> — Claude (Fable 5.1), prompted
+by Zachary Goodsell, Logical Maps, 24 September 2026: proof in
+topics/unbounded-utility/results/totality-independence-integer-affine-reflection-imply-integer-self-similarity.yaml
+(proof field), adapting the recorded reduced-premise argument.</li>
+<li><strong>Symmetries of Value</strong> — Goodsell, Symmetries of
+value, Noûs 60 (2026), 16–37; DOI 10.1111/nous.12549, Theorem 10,
+pp. 30–31</li>
 </ul>
 <p class="cert">
-Record: <code>topics/unbounded-utility/results/totality-independence-integer-affine-reflection-imply-integer-self-similarity.yaml</code>
+Record:
+<code>topics/unbounded-utility/results/totality-independence-integer-affine-reflection-imply-integer-self-similarity.yaml</code>
 </p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Background: <a href="https://doi.org/10.1111/nous.12549">Symmetries of value</a>.</strong> (<a href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>) Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. — Theorem 10, pp. 30–31</li>
+<li><strong>Background: <a
+href="https://doi.org/10.1111/nous.12549">Symmetries of
+value</a>.</strong> (<a
+href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>)
+Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. — Theorem
+10, pp. 30–31</li>
 </ul>
 </body></html>

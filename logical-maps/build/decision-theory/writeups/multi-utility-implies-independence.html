@@ -270,19 +270,39 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
 <script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Expected multi-utility representation ⇒ Independence</h1></header><p class="cert">
-Result — Source: Misc.; produced by Claude Fable 5.1 (Cowork session), prompted by Zachary Goodsell.
+Result — Source: Misc.; produced by Claude Fable 5.1 (Cowork session),
+prompted by Zachary Goodsell.
 </p>
 <h2 id="premises">Premises</h2>
 <ul>
-<li><strong>Expected multi-utility representation.</strong> There is a set U of functions <span class="math inline">u : X \to \mathbb{R}</span> such that for all <span class="math inline">p, q \in \Delta (X): p \succeq q</span> if and only if <span class="math inline">\operatorname{EU}_u(p) \ge \operatorname{EU}_u(q)</span> for every <span class="math inline">u \in U</span>.</li>
+<li><strong>Expected multi-utility representation.</strong> There is a
+set U of functions <span class="math inline">u : X \to \mathbb{R}</span>
+such that for all <span class="math inline">p, q \in \Delta (X): p
+\succeq q</span> if and only if <span
+class="math inline">\operatorname{EU}_u(p) \ge
+\operatorname{EU}_u(q)</span> for every <span class="math inline">u \in
+U</span>.</li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <ul>
-<li><strong>Independence.</strong> For all <span class="math inline">p, q, r \in \Delta (X)</span> and <span class="math inline">\lambda \in (0,1]: p \succeq q</span> if and only if <span class="math inline">\lambda p + (1- \lambda )r \succeq \lambda q + (1- \lambda )r</span>.</li>
+<li><strong>Independence.</strong> For all <span class="math inline">p,
+q, r \in \Delta (X)</span> and <span class="math inline">\lambda \in
+(0,1]: p \succeq q</span> if and only if <span
+class="math inline">\lambda p + (1- \lambda )r \succeq \lambda q + (1-
+\lambda )r</span>.</li>
 </ul>
 <h2 id="proof">Proof</h2>
-<p><span class="math inline">\operatorname{EU}_u</span> is affine in mixtures, so for <span class="math inline">\lambda \in (0,1]</span>: <span class="math inline">\operatorname{EU}_u(\lambda p+(1- \lambda )r) - \operatorname{EU}_u(\lambda q+(1- \lambda )r) = \lambda (\operatorname{EU}_u(p) - \operatorname{EU}_u(q))</span>, which is <span class="math inline">\ge 0</span> iff <span class="math inline">\operatorname{EU}_u(p) \ge \operatorname{EU}_u(q)</span>. Quantify over <span class="math inline">u \in U</span>.</p>
+<p><span class="math inline">\operatorname{EU}_u</span> is affine in
+mixtures, so for <span class="math inline">\lambda \in (0,1]</span>:
+<span class="math inline">\operatorname{EU}_u(\lambda p+(1- \lambda )r)
+- \operatorname{EU}_u(\lambda q+(1- \lambda )r) = \lambda
+(\operatorname{EU}_u(p) - \operatorname{EU}_u(q))</span>, which is <span
+class="math inline">\ge 0</span> iff <span
+class="math inline">\operatorname{EU}_u(p) \ge
+\operatorname{EU}_u(q)</span>. Quantify over <span class="math inline">u
+\in U</span>.</p>
 <p class="cert">
-Record: <code>topics/decision-theory/results/multi-utility-implies-independence.yaml</code>
+Record:
+<code>topics/decision-theory/results/multi-utility-implies-independence.yaml</code>
 </p>
 </body></html>

@@ -270,30 +270,65 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
 <script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Full Sum Invariance ⇒ Universal Copula Sum Invariance</h1></header><p class="cert">
-Result — Source: Misc., Lean <code>UnboundedUtility.Proofs.full_sum_implies_universal_copula</code>; produced by GPT-6 (Codex), prompted by Zachary Goodsell; recorded by GPT-6 (Codex), prompted by Zachary Goodsell, 2026-09-09.
+Result — Source: Misc., Lean
+<code>UnboundedUtility.Proofs.full_sum_implies_universal_copula</code>;
+produced by GPT-6 (Codex), prompted by Zachary Goodsell; recorded by
+GPT-6 (Codex), prompted by Zachary Goodsell, 2026-09-09.
 </p>
 <h2 id="premises">Premises</h2>
 <ul>
-<li><strong>Full Sum Invariance.</strong> For all X,Y,Z, with arbitrary dependence, <span class="math inline">X \succeq Y</span> iff <span class="math inline">X+Z \succeq Y+Z</span>.</li>
+<li><strong>Full Sum Invariance.</strong> For all X,Y,Z, with arbitrary
+dependence, <span class="math inline">X \succeq Y</span> iff <span
+class="math inline">X+Z \succeq Y+Z</span>.</li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <ul>
-<li><strong>Universal Copula Sum Invariance.</strong> For every copula <span class="math inline">C, \operatorname{SC}(C)</span> holds. A copula C is a Borel probability measure on <span class="math inline">[0,1]^{2}</span> with both marginals uniform. Write <span class="math inline">H_C(u,v)=C([0,u]\times [0,v])</span>. A real-utility pair (A,B) admits C when <span class="math inline">P(A\le a,B\le b)=H_C(F_A(a),F_B(b))</span> for every real a,b. Define <span class="math inline">\operatorname{SC}(C)</span>: for every eligible triple X,Y,Z for which both (X,Z) and (Y,Z) admit this same <span class="math inline">C, X \succeq Y</span> iff <span class="math inline">X+Z \succeq Y+Z</span>.</li>
+<li><strong>Universal Copula Sum Invariance.</strong> For every copula
+<span class="math inline">C, \operatorname{SC}(C)</span> holds. A copula
+C is a Borel probability measure on <span
+class="math inline">[0,1]^{2}</span> with both marginals uniform. Write
+<span class="math inline">H_C(u,v)=C([0,u]\times [0,v])</span>. A
+real-utility pair (A,B) admits C when <span class="math inline">P(A\le
+a,B\le b)=H_C(F_A(a),F_B(b))</span> for every real a,b. Define <span
+class="math inline">\operatorname{SC}(C)</span>: for every eligible
+triple X,Y,Z for which both (X,Z) and (Y,Z) admit this same <span
+class="math inline">C, X \succeq Y</span> iff <span
+class="math inline">X+Z \succeq Y+Z</span>.</li>
 </ul>
 <h2 id="proof">Proof</h2>
-<p>Fix any copula C and any eligible triple whose two pairs admit C. Full Sum Invariance applies to this triple regardless of dependence and supplies the required biconditional. Since C was arbitrary, <span class="math inline">\operatorname{SC}(C)</span> holds for every copula.</p>
+<p>Fix any copula C and any eligible triple whose two pairs admit C.
+Full Sum Invariance applies to this triple regardless of dependence and
+supplies the required biconditional. Since C was arbitrary, <span
+class="math inline">\operatorname{SC}(C)</span> holds for every
+copula.</p>
 <h2 id="notes">Notes</h2>
-<p>No converse is asserted: Universal Copula Sum Invariance only constrains triples for which the two pairs admit a common copula; Full Sum Invariance constrains all eligible triples.</p>
+<p>No converse is asserted: Universal Copula Sum Invariance only
+constrains triples for which the two pairs admit a common copula; Full
+Sum Invariance constrains all eligible triples.</p>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><strong>GPT-6 generated 9 Sep</strong> — GPT-6 (Codex), prompted by Zachary Goodsell, original copula sum consistency definitions and connecting proofs recorded in this project, 9 September 2026, implementing Zachary Goodsell’s proposal.</li>
-<li><strong>Zach Goodsell proposal 9 Sep</strong> — Zachary Goodsell, project TODO.md copula-sum proposal and request to add universal/existential variants, 9 September 2026; precise definitions recorded by GPT-6 (Codex).</li>
+<li><strong>GPT-6 generated 9 Sep</strong> — GPT-6 (Codex), prompted by
+Zachary Goodsell, original copula sum consistency definitions and
+connecting proofs recorded in this project, 9 September 2026,
+implementing Zachary Goodsell’s proposal.</li>
+<li><strong>Zach Goodsell proposal 9 Sep</strong> — Zachary Goodsell,
+project TODO.md copula-sum proposal and request to add
+universal/existential variants, 9 September 2026; precise definitions
+recorded by GPT-6 (Codex).</li>
 </ul>
 <p class="cert">
-Record: <code>topics/unbounded-utility/results/full-sum-implies-universal-copula.yaml</code>
+Record:
+<code>topics/unbounded-utility/results/full-sum-implies-universal-copula.yaml</code>
 </p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Related: <a href="https://doi.org/10.1016/j.jmateco.2008.12.002">Preference for equivalent random variables: A price for unbounded utilities</a>.</strong> Seidenfeld, T., Schervish, M., &amp; Kadane, J. (2009). Preference for equivalent random variables: A price for unbounded utilities. Journal of Mathematical Economics, 45, 329–340. — §1. Related coherence treatment of unbounded random variables; this is not an attribution of the recorded implication to the paper.</li>
+<li><strong>Related: <a
+href="https://doi.org/10.1016/j.jmateco.2008.12.002">Preference for
+equivalent random variables: A price for unbounded
+utilities</a>.</strong> Seidenfeld, T., Schervish, M., &amp; Kadane, J.
+(2009). Preference for equivalent random variables: A price for
+unbounded utilities. Journal of Mathematical Economics, 45, 329–340. —
+§1. Related coherence treatment of unbounded random variables; this is
+not an attribution of the recorded implication to the paper.</li>
 </ul>
 </body></html>

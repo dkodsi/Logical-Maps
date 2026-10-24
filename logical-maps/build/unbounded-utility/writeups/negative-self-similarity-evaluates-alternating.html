@@ -269,23 +269,64 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <link rel="stylesheet" href="../math/katex.min.css">
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
-<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Negative Self-Similarity evaluates Alternating St Petersburg</h1></header><p><strong>Claim.</strong> Rich Outcomes + Stochastic Equivalence + Simple <span class="math inline">\operatorname{EU} +</span> Uniqueness of Negative Self-Similarity imply Alternating St Petersburg <span class="math inline">=-1/2</span>.</p>
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Negative Self-Similarity evaluates Alternating St Petersburg</h1></header><p><strong>Claim.</strong> Rich Outcomes + Stochastic Equivalence +
+Simple <span class="math inline">\operatorname{EU} +</span> Uniqueness
+of Negative Self-Similarity imply Alternating St Petersburg <span
+class="math inline">=-1/2</span>.</p>
 <p>Let <span class="math inline">A</span> be any gamble with</p>
-<p><span class="math display">\mathbb P\bigl(u(A)=(-2)^n\bigr)=2^{-n},\qquad n\geq1.</span></p>
-<p>Use numerical utility notation. Multiplication by <span class="math inline">-2</span> moves the <span class="math inline">n</span>th atom to the <span class="math inline">(n+1)</span>st value. Consequently</p>
-<p><span class="math display">\mathcal L(A)=\mathcal L\bigl(M_{1/2}(-2A,-2)\bigr).</span></p>
-<p>Indeed, the sure branch gives the first atom <span class="math inline">-2</span> probability <span class="math inline">1/2</span>, and the transformed branch gives each value <span class="math inline">(-2)^m</span>, <span class="math inline">m\geq2</span>, probability <span class="math inline">\frac12\,2^{-(m-1)}=2^{-m}</span>. Stochastic Equivalence therefore yields</p>
+<p><span class="math display">\mathbb
+P\bigl(u(A)=(-2)^n\bigr)=2^{-n},\qquad n\geq1.</span></p>
+<p>Use numerical utility notation. Multiplication by <span
+class="math inline">-2</span> moves the <span
+class="math inline">n</span>th atom to the <span
+class="math inline">(n+1)</span>st value. Consequently</p>
+<p><span class="math display">\mathcal L(A)=\mathcal
+L\bigl(M_{1/2}(-2A,-2)\bigr).</span></p>
+<p>Indeed, the sure branch gives the first atom <span
+class="math inline">-2</span> probability <span
+class="math inline">1/2</span>, and the transformed branch gives each
+value <span class="math inline">(-2)^m</span>, <span
+class="math inline">m\geq2</span>, probability <span
+class="math inline">\frac12\,2^{-(m-1)}=2^{-m}</span>. Stochastic
+Equivalence therefore yields</p>
 <p><span class="math display">A\sim M_{1/2}(-2A,-2). \tag{1}</span></p>
-<p>Let <span class="math inline">c</span> be sure utility <span class="math inline">-1/2</span>. Its corresponding mixture is</p>
+<p>Let <span class="math inline">c</span> be sure utility <span
+class="math inline">-1/2</span>. Its corresponding mixture is</p>
 <p><span class="math display">M_{1/2}(-2c,-2)=M_{1/2}(1,-2),</span></p>
-<p>which is simple and has expected utility <span class="math inline">-1/2</span>. Simple EU gives</p>
+<p>which is simple and has expected utility <span
+class="math inline">-1/2</span>. Simple EU gives</p>
 <p><span class="math display">c\sim M_{1/2}(-2c,-2). \tag{2}</span></p>
-<p>Equations (1) and (2) are two instances of the same fixed-point equation with <span class="math inline">p=1/2</span>, <span class="math inline">a=2</span>, <span class="math inline">b=0</span> and <span class="math inline">Z</span> sure <span class="math inline">-2</span>. Uniqueness of Negative Self-Similarity therefore implies <span class="math inline">A\sim c</span>, which is the desired evaluation.</p>
-<p>Rich Outcomes ensures the availability of the sure values and transformed variables. The proof uses no finite expectation for <span class="math inline">A</span>, and it does not need Totality, Mixture Independence, Stochastic Dominance or affine invariance as additional assumptions.</p>
-<p><strong>Original work: proof adaptation.</strong> The new connection factors the source’s alternating-prospect evaluation through its separately recorded uniqueness principle. The only calculation is the displayed one-step distributional recursion and the simple fixed point. No literature novelty is asserted.</p>
-<p><strong>Attribution.</strong> The evaluation and uniqueness principles are from Zachary Goodsell, <em>Symmetries of value</em>, Theorems 9–10, pp. 30–31. Their reduced-premise connection was recorded by GPT-6 (Codex), 9 September 2026. No independent checker or Lean proof is claimed.</p>
+<p>Equations (1) and (2) are two instances of the same fixed-point
+equation with <span class="math inline">p=1/2</span>, <span
+class="math inline">a=2</span>, <span class="math inline">b=0</span> and
+<span class="math inline">Z</span> sure <span
+class="math inline">-2</span>. Uniqueness of Negative Self-Similarity
+therefore implies <span class="math inline">A\sim c</span>, which is the
+desired evaluation.</p>
+<p>Rich Outcomes ensures the availability of the sure values and
+transformed variables. The proof uses no finite expectation for <span
+class="math inline">A</span>, and it does not need Totality, Mixture
+Independence, Stochastic Dominance or affine invariance as additional
+assumptions.</p>
+<p><strong>Original work: proof adaptation.</strong> The new connection
+factors the source’s alternating-prospect evaluation through its
+separately recorded uniqueness principle. The only calculation is the
+displayed one-step distributional recursion and the simple fixed point.
+No literature novelty is asserted.</p>
+<p><strong>Attribution.</strong> The evaluation and uniqueness
+principles are from Zachary Goodsell, <em>Symmetries of value</em>,
+Theorems 9–10, pp. 30–31. Their reduced-premise connection was recorded
+by GPT-6 (Codex), 9 September 2026. No independent checker or Lean proof
+is claimed.</p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Background: <a href="https://doi.org/10.1111/nous.12549">Symmetries of value</a>.</strong> (<a href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>) Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. — Theorems 9–10, pp. 30–31. The cited argument is adapted with the explicitly listed sufficient premises; the reduced-premise claim is the present project contribution</li>
+<li><strong>Background: <a
+href="https://doi.org/10.1111/nous.12549">Symmetries of
+value</a>.</strong> (<a
+href="../sources/Goodsell%20-%202026%20-%20Symmetries%20of%20value.pdf">PDF</a>)
+Zachary Goodsell (2026). Symmetries of value. Noûs, 60, 16–37. —
+Theorems 9–10, pp. 30–31. The cited argument is adapted with the
+explicitly listed sufficient premises; the reduced-premise claim is the
+present project contribution</li>
 </ul>
 </body></html>

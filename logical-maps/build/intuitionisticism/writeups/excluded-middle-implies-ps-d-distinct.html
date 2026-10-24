@@ -321,30 +321,56 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
 <script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>LEM ⇒ PSd (≠⊥)</h1></header><p class="cert">
-Result — Source: Misc.; produced by Codex (GPT-6), prompted by Zachary Goodsell, 13 September 2026; recorded by Codex (GPT-6), prompted by Zachary Goodsell, manuscript transcription.
+Result — Source: Misc.; produced by Codex (GPT-6), prompted by Zachary
+Goodsell, 13 September 2026; recorded by Codex (GPT-6), prompted by
+Zachary Goodsell, manuscript transcription.
 </p>
 <h2 id="premises">Premises</h2>
 <ul>
-<li><strong>LEM.</strong> Every proposition is true or has an intuitionistic negation that is true.</li>
+<li><strong>LEM.</strong> Every proposition is true or has an
+intuitionistic negation that is true.</li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <ul>
-<li><strong>PSd (≠⊥).</strong> For every p and q, if <span class="math inline">p \ne \bot</span> implies <span class="math inline">\Box q</span>, then <span class="math inline">\Box (p \to q)</span>, with <span class="math inline">\Box p</span> defined as <span class="math inline">p = \top</span>.</li>
+<li><strong>PSd (≠⊥).</strong> For every p and q, if <span
+class="math inline">p \ne \bot</span> implies <span
+class="math inline">\Box q</span>, then <span class="math inline">\Box
+(p \to q)</span>, with <span class="math inline">\Box p</span> defined
+as <span class="math inline">p = \top</span>.</li>
 </ul>
 <h2 id="proof">Proof</h2>
-<p>Fix p,q and assume <span class="math inline">(p\ne \bot )\to \Box q</span>. Instantiate excluded middle at <span class="math inline">p=\bot</span>. If <span class="math inline">p=\bot</span>, substitution and the closed identity <span class="math inline">(\bot \to q)=\top</span> give <span class="math inline">\Box (p\to q)</span>. Otherwise <span class="math inline">p\ne \bot</span>, so <span class="math inline">\Box q</span>; the necessitated intuitionistic theorem <span class="math inline">q\to (p\to q)</span>, with K, gives <span class="math inline">\Box (p\to q)</span>. Discharge and generalize p,q. Only the closed intuitionistic theorem is necessitated, never excluded middle.</p>
+<p>Fix p,q and assume <span class="math inline">(p\ne \bot )\to \Box
+q</span>. Instantiate excluded middle at <span
+class="math inline">p=\bot</span>. If <span
+class="math inline">p=\bot</span>, substitution and the closed identity
+<span class="math inline">(\bot \to q)=\top</span> give <span
+class="math inline">\Box (p\to q)</span>. Otherwise <span
+class="math inline">p\ne \bot</span>, so <span class="math inline">\Box
+q</span>; the necessitated intuitionistic theorem <span
+class="math inline">q\to (p\to q)</span>, with K, gives <span
+class="math inline">\Box (p\to q)</span>. Discharge and generalize p,q.
+Only the closed intuitionistic theorem is necessitated, never excluded
+middle.</p>
 <h2 id="notes">Notes</h2>
 <p>Informal proof; no independent checker or Lean verification.</p>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><strong>Codex connecting proof, 13 Sep 2026</strong> — Codex (GPT-6), connecting proof recorded 13 September 2026 in excluded-middle-implies-ps-d-distinct.</li>
-<li><strong>Possibility in Intuitionistic Higher-Order Logic</strong> — Zachary Goodsell, Possibility in Intuitionistic Higher-Order Logic (21 August 2026), §6.2, Eqs. (82)–(83), p. 43.</li>
+<li><strong>Codex connecting proof, 13 Sep 2026</strong> — Codex
+(GPT-6), connecting proof recorded 13 September 2026 in
+excluded-middle-implies-ps-d-distinct.</li>
+<li><strong>Possibility in Intuitionistic Higher-Order Logic</strong> —
+Zachary Goodsell, Possibility in Intuitionistic Higher-Order Logic (21
+August 2026), §6.2, Eqs. (82)–(83), p. 43.</li>
 </ul>
 <p class="cert">
-Record: <code>topics/intuitionisticism/results/excluded-middle-implies-ps-d-distinct.yaml</code>
+Record:
+<code>topics/intuitionisticism/results/excluded-middle-implies-ps-d-distinct.yaml</code>
 </p>
 <h2 id="paper-references">Paper references</h2>
 <ul>
-<li><strong>Background: Possibility in Intuitionistic Higher-Order Logic.</strong> Zachary Goodsell (21 August 2026). Possibility in Intuitionistic Higher-Order Logic. Manuscript. — §6.2, Eqs. (82)–(83), p. 43</li>
+<li><strong>Background: Possibility in Intuitionistic Higher-Order
+Logic.</strong> Zachary Goodsell (21 August 2026). Possibility in
+Intuitionistic Higher-Order Logic. Manuscript. — §6.2, Eqs. (82)–(83),
+p. 43</li>
 </ul>
 </body></html>
