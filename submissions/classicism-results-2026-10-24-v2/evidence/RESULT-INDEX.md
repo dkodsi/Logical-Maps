@@ -6,18 +6,14 @@ Full statements, supporting results, proofs and certificates.
 
 ## Browse by category
 
-### Headline results
+### Maximalism and Strong Possibility
 
 - [Max + Atomicity (type t) ⇒ ⊥](#max-atomicity)
-- [Choice and completeness produce Actuality and transversals](#choice-completeness)
 - [Signature SP entails pure SP exactly when signature SP is inconsistent](#sp-signature-conflict)
-- [☐Functional Choice and ☐Plenitude have the same ordinary arithmetic](#arithmetic-comparison)
-- [Pure SP proves true Π₂ arithmetic, with a sharp conditional boundary](#sp-arithmetic-reflection)
-- [Classicism can be reconstructed without primitive lambda](#lambda-free-translation) · [Beta identity plus a theorem rule yields contextual beta eta](#beta-eta-conversion)
-- [Logical observer separation: a strict hierarchy from BF to Extensionality](#logical-observers)
-- [Infinitary Comprehension and C5 characterize full standard models](#infinitary-comprehension)
+- [Finite-signature SP refutes BF and Functionality at every input type](#sp-barcan-functionality)
 
 <a id="supplement-central-results"></a>
+<a id="supplement-maximalism-and-possibility"></a>
 **Supplemental results**
 
 - [Atomicity under C5 removes pure contingency](#npc-atomicity)
@@ -25,10 +21,8 @@ Full statements, supporting results, proofs and certificates.
 
 ### Choice and rigidity
 
-- [Choice and Plenitude decompose into Actuality and inverse maps](#sections-retractions) · [Complete Boolean retractions characterize ☐Functional Choice](#boolean-retractions-choice) · [C5 is exactly strong retractions of actual injections](#c5-strong-retractions)
-- [Countable completeness forces Frege finiteness at countable Boolean types](#countable-boolean-finiteness)
+- [Choice and completeness produce Actuality and transversals](#choice-completeness)
 - [Logical Necessity and strong selection laws do not force Actuality](#logical-necessity-separation)
-- [Functional Choice and ☐Functional Choice have no finite fixed-type basis](#choice-no-finite-basis)
 - [Four rigidity principles coincide over ND and Boolean Completeness](#rigidity-nd-bc) · [ND and Boolean Completeness do not give Rigid Comprehension](#oldnew-separation)
 - [Strong Leibniz Biconditionals and Rigid Comprehension force modal stability](#modal-propagation)
 - [Rigidity has exact power, uniformization and algebraic descriptions](#rigidity-classifications) · [TR + RP does not imply WRP](#finite-compression-separation)
@@ -41,19 +35,12 @@ Full statements, supporting results, proofs and certificates.
 - [Canonical operations on coextension classes require Actuality](#coextension-operations)
 - [Finite cell ambiguity is the exact remaining coherence condition](#choice-coherence)
 
-### Arithmetic and analysis
+### Infinity
 
-- [Proposed exact arithmetic strength of pure Maximalism](#max-arithmetic-equality)
-- [Maximalism forbids a numerical predecessor operation](#max-predecessor)
-- [Rigid Comprehension stabilizes a possible real structure](#analytic-rigidification)
 - [Finiteness is classified by the base types occurring in a type](#finite-type-propagation)
 - [Infinity schemata do not imply their quantified axioms, even with necessary Choice](#infinity-schema-separation)
 
-<a id="supplement-arithmetic-and-evaluation"></a>
-**Supplemental results**
-
-- [Frege number structure and transfer can be separated from stronger model claims](#arithmetic-foundations)
-
+<a id="supplement-infinity-connections"></a>
 ### Continuum Hypothesis and forcing
 
 - [CH can vary despite boxed structural principles](#ch-coalesced)
@@ -62,6 +49,55 @@ Full statements, supporting results, proofs and certificates.
 - [Strict-smallness Forcing Possibilism is independent of necessary Choice and Infinity](#forcing-possibilism)
 
 <a id="supplement-continuum-hypothesis-and-forcing"></a>
+### Choice and completeness
+
+- [Choice and Plenitude decompose into Actuality and inverse maps](#sections-retractions) · [Complete Boolean retractions characterize ☐Functional Choice](#boolean-retractions-choice) · [C5 is exactly strong retractions of actual injections](#c5-strong-retractions)
+- [Countable completeness forces Frege finiteness at countable Boolean types](#countable-boolean-finiteness)
+- [Functional Choice and ☐Functional Choice have no finite fixed-type basis](#choice-no-finite-basis)
+
+<a id="supplement-choice-and-completeness"></a>
+### Arithmetic and analysis
+
+- [☐Functional Choice and ☐Plenitude have the same ordinary arithmetic](#arithmetic-comparison)
+- [Pure SP proves true Π₂ arithmetic, with a sharp conditional boundary](#sp-arithmetic-reflection)
+- [Proposed exact arithmetic strength of pure Maximalism](#max-arithmetic-equality)
+- [Maximalism forbids a numerical predecessor operation](#max-predecessor)
+- [Rigid Comprehension stabilizes a possible real structure](#analytic-rigidification)
+
+<a id="supplement-arithmetic-and-evaluation"></a>
+**Supplemental results**
+
+- [Frege number structure and transfer can be separated from stronger model claims](#arithmetic-foundations)
+
+### Strong Possibility and language
+
+- [Strong Possibility is an exact universal-identity theory](#sp-criteria)
+- [SP fixes the actual domain from the number of individual names](#sp-individual-cardinality)
+- [An exact boundary for finite signature extensions](#signature-finite-boundary) · [An infinite reserve of names restores conservativity](#signature-infinite-reservoir)
+- [Pointed theories determine the finite Boolean intervals forced by SP](#sp-finite-profile-rank)
+
+<a id="supplement-possibility-and-language"></a>
+**Supplemental results**
+
+- [A pure SP embedding must omit a whole numerical cut](#pure-sp-bounded-image)
+- [One Henkin witness stage suffices for signature SP consistency](#signature-sp-survival)
+
+### Model theory and computational complexity
+
+- [Theoremhood and model construction have successive jump thresholds](#computability-comparison)
+- [A complete theory has a model of exactly its computational degree](#exact-model-degrees)
+- [Standard natural numbers impose a much stronger computational barrier](#standard-number-models)
+- [Finite descriptions distinguish the completion spaces](#completion-spaces)
+
+<a id="supplement-model-theory-and-computational-complexity"></a>
+### Abstraction and infinitary extensions
+
+- [Classicism can be reconstructed without primitive lambda](#lambda-free-translation) · [Beta identity plus a theorem rule yields contextual beta eta](#beta-eta-conversion)
+- [Infinitary Comprehension and C5 characterize full standard models](#infinitary-comprehension)
+- [External atomic joins characterize full Gallin hierarchies](#full-standard-gallin)
+- [Infinitary formation changes exhaustion and arithmetic](#infinitary-resources)
+
+<a id="supplement-abstraction-and-infinitary-extensions"></a>
 ### Evaluation and separating operators
 
 - [Actual-truth evaluators and current extensional cores](#evaluators-cores)
@@ -74,42 +110,19 @@ Full statements, supporting results, proofs and certificates.
 
 - [An actual evaluator commuting with modality forces Extensionality](#evaluator-modal-commutation)
 
-### Observer separation over H
+### Logical observers
 
+- [Logical observer separation: a strict hierarchy from BF to Extensionality](#logical-observers)
 - [Observer separation over H: primitive packages, representation and higher types](#h-observer-space)
 
 <a id="supplement-h-observer-separation"></a>
-### Worlds and model structure
+### Worlds, profiles and probability
 
 - [Profile Realization and the Boolean structure of worlds](#profile-world-algebra)
 - [World orbits determine propositional Dedekind infinity](#nominal-orbits)
 - [Faithful probability has an exact finite-fibre condition and type ceiling](#probability)
-- [External atomic joins characterize full Gallin hierarchies](#full-standard-gallin)
 
 <a id="supplement-worlds-and-probability"></a>
-### Model theory and computational complexity
-
-- [Theoremhood and model construction have successive jump thresholds](#computability-comparison)
-- [A complete theory has a model of exactly its computational degree](#exact-model-degrees)
-- [Standard natural numbers impose a much stronger computational barrier](#standard-number-models)
-- [Finite descriptions distinguish the completion spaces](#completion-spaces)
-
-<a id="supplement-model-theory-and-computational-complexity"></a>
-### Strong Possibility and language
-
-- [Strong Possibility is an exact universal-identity theory](#sp-criteria)
-- [SP fixes the actual domain from the number of individual names](#sp-individual-cardinality)
-- [An exact boundary for finite signature extensions](#signature-finite-boundary) · [An infinite reserve of names restores conservativity](#signature-infinite-reservoir)
-- [Pointed theories determine the finite Boolean intervals forced by SP](#sp-finite-profile-rank)
-- [Finite-signature SP refutes BF and Functionality at every input type](#sp-barcan-functionality)
-- [Infinitary formation changes exhaustion and arithmetic](#infinitary-resources)
-
-<a id="supplement-possibility-and-language"></a>
-**Supplemental results**
-
-- [A pure SP embedding must omit a whole numerical cut](#pure-sp-bounded-image)
-- [One Henkin witness stage suffices for signature SP consistency](#signature-sp-survival)
-
 <a id="max-atomicity"></a>
 ## Max + Atomicity (type t) ⇒ ⊥
 

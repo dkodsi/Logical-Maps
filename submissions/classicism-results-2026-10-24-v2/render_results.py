@@ -176,22 +176,57 @@ def render(root):
             text += ['$$', formula, '$$', '']
         text += ['**Sources:** ' + proposal_sources(r) + '.', '', proposal_status(r), '']
     out['CANDIDATES_DK.md'] = done(text)
+    def established_formalizations():
+        established = main['established_formalizations']
+        lines = [anchor('previously-known-results-formalized'), '### ' + established['title'], '', established['intro'], '']
+        for item in established['entries']:
+            rid = item['result_ref']
+            r = rows[rid]
+            assert r.get('certified_scope'), 'Prior-result formalization needs a certificate'
+            proof_idea = item.get('proof_idea', r.get('proof_idea'))
+            assert proof_idea and r.get('proof_length'), 'Prior-result formalization needs a proof description and length'
+            lines += ['#### ' + item['name'], '', '**Source:** ' + item['attribution'], '',
+                      proof_idea, '', '**Lean certified:** ' + item['scope'], '']
+            if item.get('note'):
+                lines += [item['note'], '']
+            lines += ['[Proof length](#proof-length): ' + r['proof_length']['rating'] + '. ' +
+                      resultlink(rid, label='Proofs and certificates') + '.', '']
+        return lines
+
+    parts = {p['id']: p for p in overview['parts']}
+    assert len(parts) == 3 and all(s['part'] in parts for s in overview['sections'])
+    assert list(dict.fromkeys(s['part'] for s in overview['sections'])) == list(parts), 'Unordered presentation parts'
+    groups_by_id = {g['id']: g for g in overview_groups}
+    assert len(groups_by_id) == len(overview_groups)
+    assert len({h['group_ref'] for h in overview['headlines']}) == len(overview['headlines'])
     text = ['# Main results — 24 October 2026 (v2)', '',
-        'Draft. The principal implications, countermodels, characterizations and strength comparisons, grouped by subject. The background is finitary relational **Classicism C** unless stated otherwise.', '',
-        '[Full statements, proofs and certificates](evidence/RESULT-INDEX.md) · [Previously known results formalized](#previously-known-results-formalized) · [Questions and negative results](CONJECTURES.md) · [Notation](#notation)', '']
-    text += [anchor('categories'), '## Results by category', '',
-             '| Category | Headline results |', '|---|---|']
-    for section in overview['sections']:
-        text += ['| [' + section['title'] + '](#' + section['id'] + ') | '
-                 + section['headline'] + ' |']
+        'Draft. The background is finitary relational **Classicism C** unless stated otherwise.', '',
+        '[Full statements, proofs and certificates](evidence/RESULT-INDEX.md) · [Previously known results formalized](#previously-known-results-formalized) · [Questions and negative results](CONJECTURES.md) · [Notation](#notation)', '',
+        anchor('central-results'), '## Headline results', '']
+    for item in overview['headlines']:
+        group = groups_by_id[item['group_ref']]
+        text += ['- [' + item['label'] + '](#' + group['result_refs'][0].lower() + ')' +
+                 ('. **' + item['certification'] + '**' if item.get('certification') else '.')]
+    text += ['', anchor('categories'), '## Contents', '', '| Part | Sections |', '|---|---|']
+    for pid, part in parts.items():
+        entries = ['[' + section['title'] + '](#' + section['id'] + ')' for section in overview['sections'] if section['part'] == pid]
+        if pid == 'database-connections':
+            entries += ['[Previously known results formalized](#previously-known-results-formalized)']
+        text += ['| [' + part['title'] + '](#' + pid + ') | ' + '; '.join(entries) + '. |']
     text += ['']
+    current_part = None
     for section in overview['sections']:
-        text += [anchor(section['id']), '## ' + section['title'], '']
+        if section['part'] != current_part:
+            if current_part == 'database-connections':
+                text += established_formalizations()
+            current_part = section['part']
+            text += [anchor(current_part), '## ' + parts[current_part]['title'], '']
+        text += [anchor(section['id']), '### ' + section['title'], '']
         for group in section['groups']:
             refs = group['result_refs']
             text += [anchor(alias) for alias in group.get('anchor_aliases', [])]
             text += [anchor(rid) for rid in refs]
-            text += ['### ' + group['title'], '']
+            text += ['#### ' + group['title'], '']
             if group.get('principle_ref') or group.get('principle'):
                 principle = group.get('principle') or candidates_by_id[group['principle_ref']]
                 text += [principle['statement'], '', '$$', principle['formal'], '$$', '', principle['scope'], '']
@@ -214,23 +249,9 @@ def render(root):
             text += [' · '.join(resultlink(rid, label=label) for rid, label in zip(refs, labels)) + '.', '']
         if section['supplemental_results']:
             text += [anchor(r['result_ref']) for r in section['supplemental_results']]
-            text += ['[Supplemental results in this category](evidence/RESULT-INDEX.md#supplement-' + section['id'] + ') · [Back to categories](#categories)', '']
+            text += ['[Supplemental results in this category](evidence/RESULT-INDEX.md#supplement-' + section['id'] + ') · [Back to contents](#categories)', '']
         else:
-            text += ['[Back to categories](#categories)', '']
-    established = main['established_formalizations']
-    text += [anchor('previously-known-results-formalized'), '## ' + established['title'], '', established['intro'], '']
-    for item in established['entries']:
-        rid = item['result_ref']
-        r = rows[rid]
-        assert r.get('certified_scope'), 'Prior-result formalization needs a certificate'
-        proof_idea = item.get('proof_idea', r.get('proof_idea'))
-        assert proof_idea and r.get('proof_length'), 'Prior-result formalization needs a proof description and length'
-        text += ['### ' + item['name'], '', '**Source:** ' + item['attribution'], '',
-                 proof_idea, '', '**Lean certified:** ' + item['scope'], '']
-        if item.get('note'):
-            text += [item['note'], '']
-        text += ['[Proof length](#proof-length): ' + r['proof_length']['rating'] + '. ' +
-                 resultlink(rid, label='Proofs and certificates') + '.', '']
+            text += ['[Back to contents](#categories)', '']
     text += ['', '## Remaining central questions', '']
     for qid in overview['open_question_refs']:
         q = question_rows[qid]
@@ -260,6 +281,7 @@ def render(root):
         for group in section['groups']:
             text += ['- ' + ' · '.join('[' + rows[rid]['title'] + '](#' + rid.lower() + ')' for rid in group['result_refs'])]
         text += ['']
+        text += [anchor('supplement-' + alias) for alias in section.get('supplement_anchor_aliases', [])]
         text += [anchor('supplement-' + section['id'])]
         if section['supplemental_results']:
             text += ['**Supplemental results**', '']

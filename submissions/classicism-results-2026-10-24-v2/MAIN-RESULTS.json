@@ -2978,8 +2978,10 @@
     "selection_basis": "Emphasize substantial implications, countermodels, characterizations and strength comparisons. Combine related statements; retain foundational lemmas, narrower variants, construction details and unresolved proof strategies in the full result index. Selection is independent of chat emphasis and Lean completion.",
     "sections": [
       {
-        "id": "central-results",
-        "title": "Headline results",
+        "id": "maximalism-and-possibility",
+        "title": "Maximalism and Strong Possibility",
+        "part": "database-connections",
+        "headline": "Max and Atomicity; pure/signature SP; failures of BF and Functionality.",
         "groups": [
           {
             "id": "max-atomicity",
@@ -2990,19 +2992,6 @@
             "proof_length": {
               "rating": "long",
               "words": 5069
-            }
-          },
-          {
-            "id": "choice-completeness",
-            "title": "Choice and completeness produce Actuality and transversals",
-            "result_refs": [
-              "CHOICE-COMPLETENESS"
-            ],
-            "summary": "Relational Choice from t to t plus Boolean Completeness (type tt) implies Actuality. Relational Choice plus Boolean Completeness implies Transversal Choice. Relational Choice alone implying Transversal Choice remains unresolved.",
-            "certified_summary": "The stated Actuality and RC + BC ⇒ TC implications.",
-            "proof_length": {
-              "rating": "long",
-              "words": 4051
             }
           },
           {
@@ -3019,81 +3008,16 @@
             }
           },
           {
-            "id": "arithmetic-comparison",
-            "title": "☐Functional Choice and ☐Plenitude have the same ordinary arithmetic",
+            "id": "sp-barcan-functionality",
+            "title": "Finite-signature SP refutes BF and Functionality at every input type",
             "result_refs": [
-              "ARITHMETIC-COMPARISON"
+              "SP-BARCAN-FUNCTIONALITY"
             ],
-            "summary": "Over C with Axiom of Infinity (types e and t), replacing ☐Plenitude by ☐Functional Choice adds no ordinary first-order arithmetic theorems. Both have the arithmetic consequences of C plus numerical noncollapse at e, and this remains true after adding ☐Axiom of Infinity (type σ) at every admitted σ. This establishes arithmetic conservation, not higher-order or modal conservation.",
+            "summary": "For every finite signature Σ, including the empty signature, SP(Σ) refutes BF (type α) at every admitted α and every Functionality instance with input α and relational output β. Explicit counterpredicates and pairs of operations witness the failures. The extension to infinite relational signatures covers individual inputs only.",
             "proof_length": {
               "rating": "long",
-              "words": 4600
+              "words": 3465
             }
-          },
-          {
-            "id": "sp-arithmetic-reflection",
-            "title": "Pure SP proves true Π₂ arithmetic, with a sharp conditional boundary",
-            "result_refs": [
-              "SP-ARITHMETIC-REFLECTION"
-            ],
-            "summary": "Under the specified pure Frege translation, pure SP proves every standard-true Π₂ arithmetic sentence. More generally, proofs in C plus numerical noncollapse of every standard numeral instance of P yield the universal numerical closure of P in SP. If SP is consistent, some true Π₃ sentence remains unprovable. This is a one-step reflection principle, not an iterated ω-rule for SP.",
-            "proof_length": {
-              "rating": "medium",
-              "words": 1587
-            }
-          },
-          {
-            "id": "lambda-free-translation",
-            "title": "Lambda-free reconstruction and contextual beta eta conversion",
-            "result_refs": [
-              "LAMBDA-FREE-TRANSLATION",
-              "BETA-ETA-CONVERSION"
-            ],
-            "summary": "An explicit classical applicative calculus with equality, quantifier binders, primitive ☐, K, theorem-only necessitation, all-relational Intensionality and uniform strong comprehension has exactly C’s consequences in its original language, including open contexts and assumptions. A conservative named extension reconstructs arbitrary C terms. No Choice, BF or Infinity premise is added.\n\nSeparately, on raw typed lambda syntax, beta identity at every relational output type plus application congruence and the theorem-only fresh-variable rule derives eta, lambda congruence and all contextual beta eta conversion. Positive-arity Intensionality supplies that rule; nullary Intensionality is unnecessary for this separate conversion theorem.",
-            "evidence_labels": [
-              "Lambda-free reconstruction",
-              "Beta eta conversion"
-            ],
-            "proof_length": {
-              "rating": "long",
-              "words": 10067
-            },
-            "anchor_aliases": [
-              "syntax-and-translation"
-            ]
-          },
-          {
-            "id": "logical-observers",
-            "title": "Logical observer separation: a branching implication map",
-            "result_refs": [
-              "LOGICAL-OBSERVERS"
-            ],
-            "summary": "Requiring separation by **logical observers → endpoint observers → a unique observer** leads respectively to C + BF, C5 + Atomicity (type t), and Extensionality over H. Under Extensionality, truth is itself an endpoint-valued observer. Over C, every arrow below is strict:\n\n$$\n\\small\\text{Extensionality}\\ \\Rightarrow\\ \\mathrm{C5}+\\mathrm{Atomicity}_t\\ \\Rightarrow\\ \\Box\\mathrm{OS}\\ \\Rightarrow\\ \\mathrm{OS}\\ \\Rightarrow\\ \\mathrm{BF}.\n$$\n\nReversible logical separation implies No Pure Contingency without atoms or Actuality. The [observer section](#h-observer-separation) and [full map](proofs/h-observer-space/GRAPH.md) give the other branches and separating models.",
-            "evidence_labels": [
-              "Proofs and certificates"
-            ],
-            "proof_length": {
-              "rating": "long",
-              "words": 114518
-            },
-            "certified_summary": "H + OS ⇒ C + BF in the equivalent formulation with explicit endpoint identities"
-          },
-          {
-            "id": "infinitary-comprehension",
-            "title": "Infinitary Comprehension and C5 characterize full standard models",
-            "result_refs": [
-              "INFINITARY-COMPREHENSION"
-            ],
-            "principle_ref": "infinitary-comprehension-r",
-            "summary": "With C5, this schema characterizes the full standard relational hierarchies; Atomicity follows from the infinitary resources. In ZFC it also gives ☐Functional Choice, while leaving the sizes of the individual and world domains unrestricted.\n\nFor every infinite regular κ, a one-world model satisfies C5, Atomicity and every instance with fewer than κ parameters, regardless of formula size, but fails the unrestricted schema. At κ = ω its individual predicates are exactly the finite and cofinite subsets.\n\nFor the related algebraic characterization, see [Arbitrary Atomic Joins](#full-standard-gallin).",
-            "proof_length": {
-              "rating": "long",
-              "words": 8194
-            },
-            "evidence_labels": [
-              "Proofs and certificates"
-            ],
-            "certified_summary": "For universe-0 categorical premodels, term-denotation closure + unrestricted original-closed-type Infinitary Comprehension + ☐ND (type t) imply faithful full-standard representation; full standard models satisfy the corresponding infinitary axioms."
           }
         ],
         "supplemental_results": [
@@ -3106,42 +3030,27 @@
             "label": "One-signature Independence models"
           }
         ],
-        "headline": "Max–Atomicity and SP’s signature dependence; RC + BC ⇒ Actuality and TC; arithmetic conservation and reflection; λ-free reconstruction; logical observers; Infinitary Comprehension."
+        "supplement_anchor_aliases": [
+          "central-results"
+        ]
       },
       {
         "id": "choice-and-rigidity",
         "title": "Choice and rigidity",
+        "part": "database-connections",
+        "headline": "Actuality and transversals; rigidity equivalences, modal stability and countermodels.",
         "groups": [
           {
-            "id": "sections-retractions",
-            "title": "Choice and Plenitude through sections and retractions",
+            "id": "choice-completeness",
+            "title": "Choice and completeness produce Actuality and transversals",
             "result_refs": [
-              "SECTIONS-RETRACTIONS",
-              "BOOLEAN-RETRACTIONS-CHOICE",
-              "C5-STRONG-RETRACTIONS"
+              "CHOICE-COMPLETENESS"
             ],
-            "summary": "Functional Choice is equivalent to Actuality plus pointwise sections of actual surjections; Plenitude is equivalent to Actuality plus pointwise retractions of actual injections. ☐Functional Choice is also equivalent to ☐Actuality plus the strong-section schema.\n\nBy contrast, requiring every actual injection between relational types to have a necessarily correct left inverse characterizes C5, without Actuality or Choice.\n\nOver ☐Plenitude, ☐Functional Choice has an algebraic characterization: every admitted rigid Boolean subalgebra at every relational type, complete for families admitted by the model, has a [complete Boolean retraction](CANDIDATES_DK.md#complete-boolean-retractions). The necessary strong-section equivalence uses the Goodsell–Yli-Vakkuri No Pure Contingency theorem.",
-            "evidence_labels": [
-              "Sections and retractions",
-              "Boolean retractions",
-              "Strong retractions and C5"
-            ],
-            "certified_summary": "The Functional Choice, Plenitude and ☐Functional Choice decompositions; the constituent directions of the C5/strong-retraction characterization.",
+            "summary": "Relational Choice from t to t plus Boolean Completeness (type tt) implies Actuality. Relational Choice plus Boolean Completeness implies Transversal Choice. Relational Choice alone implying Transversal Choice remains unresolved.",
+            "certified_summary": "The stated Actuality and RC + BC ⇒ TC implications.",
             "proof_length": {
               "rating": "long",
-              "words": 8534
-            }
-          },
-          {
-            "id": "countable-boolean-finiteness",
-            "title": "Countable completeness forces Frege finiteness at countable Boolean types",
-            "result_refs": [
-              "COUNTABLE-BOOLEAN-FINITENESS"
-            ],
-            "summary": "In C, a relational Boolean type that is countable in the model is countably complete exactly when it is Frege-finite. Countability in the model plus the matching Countable Boolean Completeness therefore implies Actuality, without Choice, Infinity, BF, ND or Plenitude.",
-            "proof_length": {
-              "rating": "medium",
-              "words": 2512
+              "words": 4051
             }
           },
           {
@@ -3154,18 +3063,6 @@
             "proof_length": {
               "rating": "medium",
               "words": 1900
-            }
-          },
-          {
-            "id": "choice-no-finite-basis",
-            "title": "Functional Choice and ☐Functional Choice have no finite fixed-type basis",
-            "result_refs": [
-              "CHOICE-NO-FINITE-BASIS"
-            ],
-            "summary": "Neither Functional Choice nor ☐Functional Choice is equivalent over C to any finite list of pure fixed-type sentences. Selector strength forms a strict hierarchy as the available types increase. The proposed axioms may be arbitrary pure sentences, not merely Choice instances. This does not exclude finite stronger theories or finitely many unbounded type schemata.",
-            "proof_length": {
-              "rating": "long",
-              "words": 3741
             }
           },
           {
@@ -3243,49 +3140,14 @@
             "result_ref": "CHOICE-COHERENCE",
             "label": "Coherence criteria for RC to TC"
           }
-        ],
-        "headline": "Choice and Plenitude characterizations; limits of selection; no finite fixed-type Choice basis; rigidity equivalences and modal stability."
+        ]
       },
       {
-        "id": "arithmetic-and-evaluation",
-        "title": "Arithmetic and analysis",
+        "id": "infinity-connections",
+        "title": "Infinity",
+        "part": "database-connections",
+        "headline": "Quantified Infinity reduces to two base types; Infinity schemata do not imply their quantified axioms.",
         "groups": [
-          {
-            "id": "max-arithmetic-equality",
-            "title": "Proposed exact arithmetic strength of pure Maximalism",
-            "result_refs": [
-              "MAX-ARITHMETIC-EQUALITY"
-            ],
-            "summary": "The proposed equality says that pure Maximalism proves exactly the ordinary first-order arithmetic consequences of the positive packages’ common arithmetic theory together with all standard-true Π₁ sentences.\n\n$$\n\\operatorname{Th}_{\\mathrm{arith}}(\\operatorname{Max}(C))=\\operatorname{Cn}\\bigl(T_{\\mathrm{arith}}\\cup\\mathrm{True}_{\\Pi_1}\\bigr).\n$$\n\nHere $T_{\\mathrm{arith}}$ is the [common arithmetic theory](#arithmetic-comparison), $\\mathrm{True}_{\\Pi_1}$ means standard-true Π₁ sentences, and $\\operatorname{Cn}$ is first-order deductive closure. The upper inclusion still awaits independent review.",
-            "proof_length": {
-              "rating": "long",
-              "words": 7849
-            }
-          },
-          {
-            "id": "max-predecessor",
-            "title": "Maximalism forbids a numerical predecessor operation",
-            "result_refs": [
-              "MAX-PREDECESSOR"
-            ],
-            "summary": "At every admitted counting type, pure Maximalism refutes an operation sending each Frege successor back to its predecessor, without an Infinity or consistency premise. Yet a total single-valued predecessor graph is available: a functional arithmetic relation need not be representable by an intensional operation.",
-            "proof_length": {
-              "rating": "short",
-              "words": 636
-            }
-          },
-          {
-            "id": "analytic-rigidification",
-            "title": "Rigid Comprehension stabilizes a possible real structure",
-            "result_refs": [
-              "ANALYTIC-RIGIDIFICATION"
-            ],
-            "summary": "Over C5 plus ☐Rigid Comprehension, a possible real structure at a fixed type has a rigid representative that is necessarily a real structure. Represented powers can be supplied at any prescribed finite list of arities. The initial possibility premise is retained; completeness ranges over subproperties admitted by the model.",
-            "proof_length": {
-              "rating": "short",
-              "words": 486
-            }
-          },
           {
             "id": "finite-type-classification",
             "title": "Quantified Infinity at all types reduces to two base types",
@@ -3313,18 +3175,13 @@
             }
           }
         ],
-        "supplemental_results": [
-          {
-            "result_ref": "ARITHMETIC-FOUNDATIONS",
-            "label": "Frege arithmetic foundations and transfer"
-          }
-        ],
-        "headline": "Quantified Infinity reduces to two base types; Max’s predecessor obstruction and proposed arithmetic equality; rigid real structures. Infinity-schema separations."
+        "supplemental_results": []
       },
       {
         "id": "continuum-hypothesis-and-forcing",
         "title": "Continuum Hypothesis and forcing",
-        "headline": "CH variation under structural principles; the Maximalism incompatibility; forcing transfer; Forcing Possibilism and its cardinal criterion.",
+        "part": "database-connections",
+        "headline": "CH variation, Maximalism, forcing transfer and Forcing Possibilism.",
         "groups": [
           {
             "id": "coalesced-ch",
@@ -3387,158 +3244,208 @@
         "supplemental_results": []
       },
       {
-        "id": "operators-and-evaluation",
-        "title": "Evaluation and separating operators",
+        "id": "choice-and-completeness",
+        "title": "Choice and completeness",
+        "part": "established-principles",
+        "headline": "Choice and Plenitude characterizations; countable completeness; no finite fixed-type Choice basis.",
         "groups": [
           {
-            "id": "evaluators-cores",
-            "title": "Six strictly different strengths of actual-truth evaluation",
+            "id": "sections-retractions",
+            "title": "Choice and Plenitude through sections and retractions",
             "result_refs": [
-              "EVALUATORS-CORES"
+              "SECTIONS-RETRACTIONS",
+              "BOOLEAN-RETRACTIONS-CHOICE",
+              "C5-STRONG-RETRACTIONS"
             ],
-            "summary": "For $E^{tt}$, correct evaluation means\n\n$$\n\\operatorname{Eval}(E):=\\forall p^t\\, .\\,(p\\to Ep=\\top)\\land(\\neg p\\to Ep=\\bot).\n$$\n\nThe following requirements form a strict hierarchy over C, with each row stronger than the preceding one.\n\n| Requirement | Equivalent principle |\n|---|---|\n| $\\exists f^{tt}\\, .\\,\\forall p^t\\, .\\,p\\leftrightarrow fp=f\\top$ | Actuality |\n| $\\exists E^{tt}\\, .\\,\\operatorname{Eval}(E)$ | ND + Actuality |\n| $\\exists E^{tt}\\, .\\,\\operatorname{Eval}(E)\\land\\bigl(\\Box\\forall p^t\\, .\\,Ep=\\top\\lor Ep=\\bot\\bigr)$ | Gallin Extensional Comprehension; equivalently ND + Strong Actuality |\n| $\\exists!E^{tt}\\, .\\,\\operatorname{Eval}(E)$ | C5 + Actuality |\n| $\\Box\\exists E^{tt}\\, .\\,\\operatorname{Eval}(E)$, equivalently $\\Box\\exists!E^{tt}\\, .\\,\\operatorname{Eval}(E)$ | ☐Plenitude |\n| $\\exists E^{tt}\\, .\\,\\Box\\operatorname{Eval}(E)$ | Extensionality |\n\nThe last two rows separate an evaluator available at each world from one fixed evaluator correct at every world. Uniqueness in the fourth row is among all evaluators correct at the current world. The third row already gives Boolean and quantifier identities for current predicates; the stronger ☐∀F law remains unresolved.\n\nActuality alone also interprets extensional Henkin higher-order logic over all current individuals. Represented relations and quantified Infinity transfer exactly, and Relational Choice supplies ordinary Choice in this interpretation. The construction makes no claim that its domains persist at other worlds.",
+            "summary": "Functional Choice is equivalent to Actuality plus pointwise sections of actual surjections; Plenitude is equivalent to Actuality plus pointwise retractions of actual injections. ☐Functional Choice is also equivalent to ☐Actuality plus the strong-section schema.\n\nBy contrast, requiring every actual injection between relational types to have a necessarily correct left inverse characterizes C5, without Actuality or Choice.\n\nOver ☐Plenitude, ☐Functional Choice has an algebraic characterization: every admitted rigid Boolean subalgebra at every relational type, complete for families admitted by the model, has a [complete Boolean retraction](CANDIDATES_DK.md#complete-boolean-retractions). The necessary strong-section equivalence uses the Goodsell–Yli-Vakkuri No Pure Contingency theorem.",
+            "evidence_labels": [
+              "Sections and retractions",
+              "Boolean retractions",
+              "Strong retractions and C5"
+            ],
+            "certified_summary": "The Functional Choice, Plenitude and ☐Functional Choice decompositions; the constituent directions of the C5/strong-retraction characterization.",
             "proof_length": {
               "rating": "long",
-              "words": 5834
+              "words": 8534
             }
           },
           {
-            "id": "uniform-complete-evaluators",
-            "title": "Uniform evaluator selection measures well-orderability and Choice",
+            "id": "countable-boolean-finiteness",
+            "title": "Countable completeness forces Frege finiteness at countable Boolean types",
             "result_refs": [
-              "UNIFORM-COMPLETE-EVALUATORS"
+              "COUNTABLE-BOOLEAN-FINITENESS"
             ],
-            "evidence_labels": [
-              "Proofs"
-            ],
-            "proof_length": {
-              "rating": "long",
-              "words": 4683
-            },
-            "summary": "Over C + ☐Plenitude, one admitted operator choosing, for each nonzero proposition p, a complete bivalent evaluator sending p to ⊤ exists exactly when the world atoms admit a represented well-order. Requiring such selectors at every relational type is equivalent to ☐Functional Choice. The propositional requirement and all-type Intensional Choice are independent over C + ☐Plenitude. Here completeness means preservation of all admitted rigid meets; these evaluators take only ⊥ and ⊤ as values."
-          },
-          {
-            "id": "barcan-observers",
-            "title": "Diagonal characters characterize ND + Atomicity at type t",
-            "result_refs": [
-              "DIAGONAL-CHARACTERS"
-            ],
-            "summary": "A diagonal character preserves ⊥ and negation, takes only ⊤/⊥ values, and accepts\n\n$$\nw_E:=\\forall p^t\\, .\\,Ep\\to p.\n$$\n\nSeparation by such characters is equivalent to ND (type t) + Atomicity (type t); neither BF nor Choice is needed.\n\nFor the stronger logical-observer schema, see [Logical Observer Separation](#logical-observers).",
+            "summary": "In C, a relational Boolean type that is countable in the model is countably complete exactly when it is Frege-finite. Countability in the model plus the matching Countable Boolean Completeness therefore implies Actuality, without Choice, Infinity, BF, ND or Plenitude.",
             "proof_length": {
               "rating": "medium",
-              "words": 1030
+              "words": 2512
             }
           },
           {
-            "id": "full-identity-observers",
-            "title": "Symmetry controls the representation of observers",
+            "id": "choice-no-finite-basis",
+            "title": "Functional Choice and ☐Functional Choice have no finite fixed-type basis",
             "result_refs": [
-              "FULL-IDENTITY-OBSERVERS"
+              "CHOICE-NO-FINITE-BASIS"
             ],
-            "summary": "Over C + ☐ND (type t) + Actuality, propositional separation by observers preserving Boolean operations and quantification at t as composite operation identities is equivalent to Atomicity (type t). Atomicity supplies the corresponding observers at each fixed quantifier type.\n\nIn the specified symmetric ideally-full models with closed target symmetry groups, an arrow’s truth-evaluation map is representable exactly when the transported stabilizer of some finite set is contained in the target symmetry group. A representing observer can preserve Boolean operations and both quantifiers as operation identities.\n\nThe ordered symmetry construction separates these demands: Boolean observer separation holds at every world, and ☐BF holds, while quantifier separation fails at type e. This gives a route to studying observers through permutation groups, beyond the atomic sufficient conditions.",
-            "certified_summary": "The propositional Atomicity characterization at t; simultaneous separation for every finite list of quantifier types under C5 + Atomicity (type t), with the converse under C5 + Actuality.",
+            "summary": "Neither Functional Choice nor ☐Functional Choice is equivalent over C to any finite list of pure fixed-type sentences. Selector strength forms a strict hierarchy as the available types increase. The proposed axioms may be arbitrary pure sentences, not merely Choice instances. This does not exclude finite stronger theories or finitely many unbounded type schemata.",
             "proof_length": {
               "rating": "long",
-              "words": 6452
-            }
-          }
-        ],
-        "supplemental_results": [
-          {
-            "result_ref": "EVALUATOR-MODAL-COMMUTATION",
-            "label": "Modal commutation and Extensionality"
-          }
-        ],
-        "headline": "Six evaluator strengths; BF and Atomicity characterizations; symmetry and observer representation. Uniform evaluator selection and Choice."
-      },
-      {
-        "id": "h-observer-separation",
-        "title": "Observer separation over H",
-        "headline": "Primitive-package order; representation, admission and normalization; strict inverse hierarchy; noncontingency and separating models.",
-        "groups": [
-          {
-            "id": "h-observer-space",
-            "title": "Preservation, representation and logical observers",
-            "result_refs": [
-              "H-OBSERVER-SPACE"
-            ],
-            "summary": "The [dedicated page](proofs/h-observer-space/GRAPH.md) develops the map from H, with exact premises, diagrams, proofs and countermodels. Its main results are:\n\n- **Preservation and higher types.** For the finite family of independent primitive clauses, implication between separation principles is exactly reverse inclusion of clauses. Full typed separation factors into propositional separation plus Functionality.\n- **Reversibility.** Separation by reversible logical observers (Rev) implies C5 + ☐OS + No Pure Contingency. Both chains Rev ⇒ SurjSep ⇒ OS and Rev ⇒ SplitMono ⇒ OS are strict; SurjSep and SplitMono require surjective observers and admitted qualified left inverses, respectively, and are incomparable. Over C5, SurjSep is Rev.\n- **The endpoint boundary.** OS + Plenitude at (t,t) is equivalent over H to endpoint separation, hence to C5 + Atomicity (type t). Reversibility can hold in atomless models; one atom raises it to endpoint separation.\n- **Canonical adjoints.** Over C5, every logical observer qualified at t has admitted order adjoints. These characterize injection, surjection and reversibility. A Boolean observer commutes with necessity exactly when it is injective.\n- **Limits of combination and persistence.** Separate preservation requirements need not combine. SurjSep entails neither ☐OS nor ☐BF, even though an individual observer’s surjectivity persists over C + BF (type t).\n- **Exact characterizations.** Over C5, Rev is characterized by its fixed propositions. Laws on the whole reversible group give sharp finite bounds; internally finite observer families give exact finiteness characterizations. [Statements and proofs](proofs/h-observer-space/GRAPH.md#reversibility-and-the-invariant-proposition-algebra).\n\nThe [detailed map and research frontier](proofs/h-observer-space/MAP.md) also cover weaker connective fragments, normalization, character extension and atomless order models.\n\n**Main unresolved question:** does injective logical separation imply separation by logical observers with logical left inverses? The converse holds; this direction remains open over H and over C5. [Exact question and positive cases](CONJECTURES.md#observer-strength).",
-            "evidence_labels": [
-              "Map and proofs"
-            ],
-            "proof_length": {
-              "rating": "long",
-              "words": 143871
+              "words": 3741
             }
           }
         ],
         "supplemental_results": []
       },
       {
-        "id": "worlds-and-probability",
-        "title": "Worlds and model structure",
+        "id": "arithmetic-and-evaluation",
+        "title": "Arithmetic and analysis",
+        "part": "established-principles",
+        "headline": "Arithmetic conservation and reflection; Max’s proposed arithmetic equality and predecessor obstruction; rigid real structures.",
         "groups": [
           {
-            "id": "profile-world-algebra",
-            "title": "Profile richness and Functional Choice are separate requirements",
+            "id": "arithmetic-comparison",
+            "title": "☐Functional Choice and ☐Plenitude have the same ordinary arithmetic",
             "result_refs": [
-              "PROFILE-WORLD-ALGEBRA"
+              "ARITHMETIC-COMPARISON"
             ],
-            "summary": "Over ☐Plenitude, the world-representation results support consistent individual profile-realization strengthenings. Nominal models realize every finite supported richness rank while failing Functional Choice. Unrestricted relational-input realization instead meets a diagonal obstruction; it must not be identified with individual or finitely supported realization.",
+            "summary": "Over C with Axiom of Infinity (types e and t), replacing ☐Plenitude by ☐Functional Choice adds no ordinary first-order arithmetic theorems. Both have the arithmetic consequences of C plus numerical noncollapse at e, and this remains true after adding ☐Axiom of Infinity (type σ) at every admitted σ. This establishes arithmetic conservation, not higher-order or modal conservation.",
             "proof_length": {
               "rating": "long",
-              "words": 8772
+              "words": 4600
             }
           },
           {
-            "id": "nominal-orbits",
-            "title": "World orbits determine propositional Dedekind infinity",
+            "id": "sp-arithmetic-reflection",
+            "title": "Pure SP proves true Π₂ arithmetic, with a sharp conditional boundary",
             "result_refs": [
-              "NOMINAL-ORBITS"
+              "SP-ARITHMETIC-REFLECTION"
             ],
-            "summary": "In the specified finite-support permutation models, propositions admit an injective nonsurjective operation exactly when there are infinitely many world orbits. Even infinitely many worlds can form just one orbit.\n\nOn atom worlds, ☐Intensional Choice at every admitted type coexists with the necessary failure of this operational Dedekind infinity. This concerns operations on propositions, not the quantified Frege Axiom of Infinity.",
+            "summary": "Under the specified pure Frege translation, pure SP proves every standard-true Π₂ arithmetic sentence. More generally, proofs in C plus numerical noncollapse of every standard numeral instance of P yield the universal numerical closure of P in SP. If SP is consistent, some true Π₃ sentence remains unprovable. This is a one-step reflection principle, not an iterated ω-rule for SP.",
             "proof_length": {
               "rating": "medium",
-              "words": 1091
+              "words": 1587
             }
           },
           {
-            "id": "probability",
-            "title": "Faithful probability has an exact finite-fibre condition and type ceiling",
+            "id": "max-arithmetic-equality",
+            "title": "Proposed exact arithmetic strength of pure Maximalism",
             "result_refs": [
-              "PROBABILITY"
+              "MAX-ARITHMETIC-EQUALITY"
             ],
-            "summary": "Over C + ☐Plenitude + Axiom of Infinity (type e), faithful probability is equivalent to admitted finite-fibre numerical labelling of world atoms. Countable Choice for finite fields strengthens this to countability in the model. Higher-type probability faces a finiteness obstruction.",
+            "summary": "The proposed equality says that pure Maximalism proves exactly the ordinary first-order arithmetic consequences of the positive packages’ common arithmetic theory together with all standard-true Π₁ sentences.\n\n$$\n\\operatorname{Th}_{\\mathrm{arith}}(\\operatorname{Max}(C))=\\operatorname{Cn}\\bigl(T_{\\mathrm{arith}}\\cup\\mathrm{True}_{\\Pi_1}\\bigr).\n$$\n\nHere $T_{\\mathrm{arith}}$ is the [common arithmetic theory](#arithmetic-comparison), $\\mathrm{True}_{\\Pi_1}$ means standard-true Π₁ sentences, and $\\operatorname{Cn}$ is first-order deductive closure. The upper inclusion still awaits independent review.",
             "proof_length": {
               "rating": "long",
-              "words": 4289
+              "words": 7849
             }
           },
           {
-            "id": "full-standard-gallin",
-            "title": "Arbitrary Atomic Joins characterize full Gallin hierarchies",
+            "id": "max-predecessor",
+            "title": "Maximalism forbids a numerical predecessor operation",
             "result_refs": [
-              "FULL-STANDARD-GALLIN"
+              "MAX-PREDECESSOR"
             ],
-            "summary": "Over C + C5 + Atomicity (type t), Arbitrary Atomic Joins is equivalent to fullness of the canonical standard hierarchy, or to representation of every subset of each typed domain. No Infinity premise is needed. Boolean Completeness covers only families already represented by properties. No fixed bound on family size forces fullness across arbitrary model sizes.\n\n[Infinitary Comprehension](#infinitary-comprehension) gives the corresponding characterization without a separate Atomicity premise.",
+            "summary": "At every admitted counting type, pure Maximalism refutes an operation sending each Frege successor back to its predecessor, without an Infinity or consistency premise. Yet a total single-valued predecessor graph is available: a functional arithmetic relation need not be representable by an intensional operation.",
             "proof_length": {
-              "rating": "long",
-              "words": 3902
-            },
-            "principle": {
-              "statement": "At every relational type, every family of atoms has a least upper bound, whether or not a property in the model collects that family. For each relational type $\\tau$ and set $I$, take the instance",
-              "formal": "\\small\\textstyle \\forall(a_i^\\tau)_{i\\in I}\\, .\\, (\\bigwedge_{i\\in I}\\operatorname{Atom}_\\tau(a_i)) \\to\\exists b^\\tau\\, . [ (\\bigwedge_{i\\in I}a_i\\le_\\tau b)\\land \\forall c^\\tau\\, .\\, ((\\bigwedge_{i\\in I}a_i\\le_\\tau c)\\to b\\le_\\tau c) ].",
-              "scope": "The type $\\tau$ and set $I$ index the schema. Each instance uses the existing definitions of atoms and algebraic order, with set-indexed conjunctions and a block of quantifiers over all the $a_i$. These are sentences of an infinitary extension of the original language; assignments range over all families, not just named or property-coded ones."
+              "rating": "short",
+              "words": 636
+            }
+          },
+          {
+            "id": "analytic-rigidification",
+            "title": "Rigid Comprehension stabilizes a possible real structure",
+            "result_refs": [
+              "ANALYTIC-RIGIDIFICATION"
+            ],
+            "summary": "Over C5 plus ☐Rigid Comprehension, a possible real structure at a fixed type has a rigid representative that is necessarily a real structure. Represented powers can be supplied at any prescribed finite list of arities. The initial possibility premise is retained; completeness ranges over subproperties admitted by the model.",
+            "proof_length": {
+              "rating": "short",
+              "words": 486
             }
           }
         ],
-        "supplemental_results": [],
-        "headline": "Profile richness; world orbits and Intensional Choice; probability bounds; full models."
+        "supplemental_results": [
+          {
+            "result_ref": "ARITHMETIC-FOUNDATIONS",
+            "label": "Frege arithmetic foundations and transfer"
+          }
+        ]
+      },
+      {
+        "id": "possibility-and-language",
+        "title": "Strong Possibility and language",
+        "part": "established-principles",
+        "headline": "Universal identities, named domains, signature extensions and finite Boolean ranks.",
+        "groups": [
+          {
+            "id": "sp-criteria",
+            "title": "Strong Possibility is an exact universal-identity theory",
+            "result_refs": [
+              "SP-CRITERIA"
+            ],
+            "summary": "Pure Strong Possibility is equivalent over C to all closed pure universal finite-Boolean-identity sentences individually consistent with Max. Assuming Max is consistent, SP is consistent exactly when Max has the specified restricted finite-disjunction property for existential finite-Boolean-identity sentences. The criterion is proved; the required disjunction property remains unresolved.",
+            "proof_length": {
+              "rating": "medium",
+              "words": 1175
+            }
+          },
+          {
+            "id": "sp-individual-cardinality",
+            "title": "SP fixes the actual domain from the number of individual names",
+            "result_refs": [
+              "SP-INDIVIDUAL-CARDINALITY"
+            ],
+            "summary": "If Σ has exactly u < ∞ individual constant symbols, SP(Σ) entails exactly max(1,u) actual individuals; when u is positive, the names enumerate the domain bijectively. SP(pure) therefore entails one actual individual. This does not assert necessary exhaustion or exhaustion by infinitely many names.",
+            "proof_length": {
+              "rating": "medium",
+              "words": 1894
+            }
+          },
+          {
+            "id": "signature-finite-boundary",
+            "title": "An exact finite-signature boundary and an infinite-reserve contrast",
+            "result_refs": [
+              "SIGNATURE-FINITE-BOUNDARY",
+              "SIGNATURE-INFINITE-RESERVOIR"
+            ],
+            "evidence_labels": [
+              "Finite extension classification",
+              "Infinite-reserve conservativity"
+            ],
+            "summary": "For a proper extension of finite signatures Σ ⊊ Σ′, Max(Σ′) preserves every Max(Σ)-consistent old-language condition exactly when Σ has no individual names and the extension adds one individual name and no relational constants.\n\nIf Σ already has infinitely many constants at every type where Σ′ adds them, both Max(Σ′) and SP(Σ′) are conservative over the old-language theories. The fresh-name supply changes the answer; this does not assert that every old model admits an expansion.",
+            "proof_length": {
+              "rating": "long",
+              "words": 3149
+            }
+          },
+          {
+            "id": "sp-finite-profile-rank",
+            "title": "Pointed logical possibilities determine finite Boolean ranks",
+            "result_refs": [
+              "SP-FINITE-PROFILE-RANK"
+            ],
+            "summary": "For a closed pure proposition A, consider the complete consistent theories extending C(a)+A, with one fresh individual name a. Max is consistent with “there are no k+1 disjoint nonzero subpropositions of A” exactly when there are at most k such theories. If there are exactly k, SP(pure) forces the Boolean interval below A to have k atoms and 2ᵏ elements.\n\nThis extends the atom classification to every finite rank. Here k is a fixed finite number; the result does not establish consistency of SP.",
+            "proof_length": {
+              "rating": "medium",
+              "words": 2311
+            }
+          }
+        ],
+        "supplemental_results": [
+          {
+            "result_ref": "PURE-SP-BOUNDED-IMAGE",
+            "label": "Numerical-cut obstruction to pure SP embeddings"
+          },
+          {
+            "result_ref": "SIGNATURE-SP-SURVIVAL",
+            "label": "Signature SP witness-stage reduction"
+          }
+        ]
       },
       {
         "id": "model-theory-and-computational-complexity",
         "title": "Model theory and computational complexity",
-        "headline": "Successive computational thresholds; exact model degrees; standard-number bounds; finite descriptions and completion spaces.",
+        "part": "established-principles",
+        "headline": "Computational thresholds, exact model degrees, standard numbers and completion spaces.",
         "groups": [
           {
             "id": "computability-comparison",
@@ -3602,72 +3509,63 @@
         "supplemental_results": []
       },
       {
-        "id": "possibility-and-language",
-        "title": "Strong Possibility and language",
+        "id": "abstraction-and-infinitary-extensions",
+        "title": "Abstraction and infinitary extensions",
+        "part": "extensions-and-new-directions",
+        "headline": "Lambda-free reconstruction, beta eta conversion, Infinitary Comprehension and full standard models.",
         "groups": [
           {
-            "id": "sp-criteria",
-            "title": "Strong Possibility is an exact universal-identity theory",
+            "id": "lambda-free-translation",
+            "title": "Lambda-free reconstruction and contextual beta eta conversion",
             "result_refs": [
-              "SP-CRITERIA"
+              "LAMBDA-FREE-TRANSLATION",
+              "BETA-ETA-CONVERSION"
             ],
-            "summary": "Pure Strong Possibility is equivalent over C to all closed pure universal finite-Boolean-identity sentences individually consistent with Max. Assuming Max is consistent, SP is consistent exactly when Max has the specified restricted finite-disjunction property for existential finite-Boolean-identity sentences. The criterion is proved; the required disjunction property remains unresolved.",
-            "proof_length": {
-              "rating": "medium",
-              "words": 1175
-            }
-          },
-          {
-            "id": "sp-individual-cardinality",
-            "title": "SP fixes the actual domain from the number of individual names",
-            "result_refs": [
-              "SP-INDIVIDUAL-CARDINALITY"
-            ],
-            "summary": "If Σ has exactly u < ∞ individual constant symbols, SP(Σ) entails exactly max(1,u) actual individuals; when u is positive, the names enumerate the domain bijectively. SP(pure) therefore entails one actual individual. This does not assert necessary exhaustion or exhaustion by infinitely many names.",
-            "proof_length": {
-              "rating": "medium",
-              "words": 1894
-            }
-          },
-          {
-            "id": "signature-finite-boundary",
-            "title": "An exact finite-signature boundary and an infinite-reserve contrast",
-            "result_refs": [
-              "SIGNATURE-FINITE-BOUNDARY",
-              "SIGNATURE-INFINITE-RESERVOIR"
-            ],
+            "summary": "An explicit classical applicative calculus with equality, quantifier binders, primitive ☐, K, theorem-only necessitation, all-relational Intensionality and uniform strong comprehension has exactly C’s consequences in its original language, including open contexts and assumptions. A conservative named extension reconstructs arbitrary C terms. No Choice, BF or Infinity premise is added.\n\nSeparately, on raw typed lambda syntax, beta identity at every relational output type plus application congruence and the theorem-only fresh-variable rule derives eta, lambda congruence and all contextual beta eta conversion. Positive-arity Intensionality supplies that rule; nullary Intensionality is unnecessary for this separate conversion theorem.",
             "evidence_labels": [
-              "Finite extension classification",
-              "Infinite-reserve conservativity"
+              "Lambda-free reconstruction",
+              "Beta eta conversion"
             ],
-            "summary": "For a proper extension of finite signatures Σ ⊊ Σ′, Max(Σ′) preserves every Max(Σ)-consistent old-language condition exactly when Σ has no individual names and the extension adds one individual name and no relational constants.\n\nIf Σ already has infinitely many constants at every type where Σ′ adds them, both Max(Σ′) and SP(Σ′) are conservative over the old-language theories. The fresh-name supply changes the answer; this does not assert that every old model admits an expansion.",
             "proof_length": {
               "rating": "long",
-              "words": 3149
-            }
+              "words": 10067
+            },
+            "anchor_aliases": [
+              "syntax-and-translation"
+            ]
           },
           {
-            "id": "sp-finite-profile-rank",
-            "title": "Pointed logical possibilities determine finite Boolean ranks",
+            "id": "infinitary-comprehension",
+            "title": "Infinitary Comprehension and C5 characterize full standard models",
             "result_refs": [
-              "SP-FINITE-PROFILE-RANK"
+              "INFINITARY-COMPREHENSION"
             ],
-            "summary": "For a closed pure proposition A, consider the complete consistent theories extending C(a)+A, with one fresh individual name a. Max is consistent with “there are no k+1 disjoint nonzero subpropositions of A” exactly when there are at most k such theories. If there are exactly k, SP(pure) forces the Boolean interval below A to have k atoms and 2ᵏ elements.\n\nThis extends the atom classification to every finite rank. Here k is a fixed finite number; the result does not establish consistency of SP.",
-            "proof_length": {
-              "rating": "medium",
-              "words": 2311
-            }
-          },
-          {
-            "id": "sp-barcan-functionality",
-            "title": "Finite-signature SP refutes BF and Functionality at every input type",
-            "result_refs": [
-              "SP-BARCAN-FUNCTIONALITY"
-            ],
-            "summary": "For every finite signature Σ, including the empty signature, SP(Σ) refutes BF (type α) at every admitted α and every Functionality instance with input α and relational output β. Explicit counterpredicates and pairs of operations witness the failures. The extension to infinite relational signatures covers individual inputs only.",
+            "principle_ref": "infinitary-comprehension-r",
+            "summary": "With C5, this schema characterizes the full standard relational hierarchies; Atomicity follows from the infinitary resources. In ZFC it also gives ☐Functional Choice, while leaving the sizes of the individual and world domains unrestricted.\n\nFor every infinite regular κ, a one-world model satisfies C5, Atomicity and every instance with fewer than κ parameters, regardless of formula size, but fails the unrestricted schema. At κ = ω its individual predicates are exactly the finite and cofinite subsets.\n\nFor the related algebraic characterization, see [Arbitrary Atomic Joins](#full-standard-gallin).",
             "proof_length": {
               "rating": "long",
-              "words": 3465
+              "words": 8194
+            },
+            "evidence_labels": [
+              "Proofs and certificates"
+            ],
+            "certified_summary": "For universe-0 categorical premodels, term-denotation closure + unrestricted original-closed-type Infinitary Comprehension + ☐ND (type t) imply faithful full-standard representation; full standard models satisfy the corresponding infinitary axioms."
+          },
+          {
+            "id": "full-standard-gallin",
+            "title": "Arbitrary Atomic Joins characterize full Gallin hierarchies",
+            "result_refs": [
+              "FULL-STANDARD-GALLIN"
+            ],
+            "summary": "Over C + C5 + Atomicity (type t), Arbitrary Atomic Joins is equivalent to fullness of the canonical standard hierarchy, or to representation of every subset of each typed domain. No Infinity premise is needed. Boolean Completeness covers only families already represented by properties. No fixed bound on family size forces fullness across arbitrary model sizes.\n\n[Infinitary Comprehension](#infinitary-comprehension) gives the corresponding characterization without a separate Atomicity premise.",
+            "proof_length": {
+              "rating": "long",
+              "words": 3902
+            },
+            "principle": {
+              "statement": "At every relational type, every family of atoms has a least upper bound, whether or not a property in the model collects that family. For each relational type $\\tau$ and set $I$, take the instance",
+              "formal": "\\small\\textstyle \\forall(a_i^\\tau)_{i\\in I}\\, .\\, (\\bigwedge_{i\\in I}\\operatorname{Atom}_\\tau(a_i)) \\to\\exists b^\\tau\\, . [ (\\bigwedge_{i\\in I}a_i\\le_\\tau b)\\land \\forall c^\\tau\\, .\\, ((\\bigwedge_{i\\in I}a_i\\le_\\tau c)\\to b\\le_\\tau c) ].",
+              "scope": "The type $\\tau$ and set $I$ index the schema. Each instance uses the existing definitions of atoms and algebraic order, with set-indexed conjunctions and a block of quantifiers over all the $a_i$. These are sentences of an infinitary extension of the original language; assignments range over all families, not just named or property-coded ones."
             }
           },
           {
@@ -3683,17 +3581,158 @@
             }
           }
         ],
-        "supplemental_results": [
+        "supplemental_results": []
+      },
+      {
+        "id": "operators-and-evaluation",
+        "title": "Evaluation and separating operators",
+        "part": "extensions-and-new-directions",
+        "headline": "Evaluator strengths, uniform selection, diagonal characters and symmetry.",
+        "groups": [
           {
-            "result_ref": "PURE-SP-BOUNDED-IMAGE",
-            "label": "Numerical-cut obstruction to pure SP embeddings"
+            "id": "evaluators-cores",
+            "title": "Six strictly different strengths of actual-truth evaluation",
+            "result_refs": [
+              "EVALUATORS-CORES"
+            ],
+            "summary": "For $E^{tt}$, correct evaluation means\n\n$$\n\\operatorname{Eval}(E):=\\forall p^t\\, .\\,(p\\to Ep=\\top)\\land(\\neg p\\to Ep=\\bot).\n$$\n\nThe following requirements form a strict hierarchy over C, with each row stronger than the preceding one.\n\n| Requirement | Equivalent principle |\n|---|---|\n| $\\exists f^{tt}\\, .\\,\\forall p^t\\, .\\,p\\leftrightarrow fp=f\\top$ | Actuality |\n| $\\exists E^{tt}\\, .\\,\\operatorname{Eval}(E)$ | ND + Actuality |\n| $\\exists E^{tt}\\, .\\,\\operatorname{Eval}(E)\\land\\bigl(\\Box\\forall p^t\\, .\\,Ep=\\top\\lor Ep=\\bot\\bigr)$ | Gallin Extensional Comprehension; equivalently ND + Strong Actuality |\n| $\\exists!E^{tt}\\, .\\,\\operatorname{Eval}(E)$ | C5 + Actuality |\n| $\\Box\\exists E^{tt}\\, .\\,\\operatorname{Eval}(E)$, equivalently $\\Box\\exists!E^{tt}\\, .\\,\\operatorname{Eval}(E)$ | ☐Plenitude |\n| $\\exists E^{tt}\\, .\\,\\Box\\operatorname{Eval}(E)$ | Extensionality |\n\nThe last two rows separate an evaluator available at each world from one fixed evaluator correct at every world. Uniqueness in the fourth row is among all evaluators correct at the current world. The third row already gives Boolean and quantifier identities for current predicates; the stronger ☐∀F law remains unresolved.\n\nActuality alone also interprets extensional Henkin higher-order logic over all current individuals. Represented relations and quantified Infinity transfer exactly, and Relational Choice supplies ordinary Choice in this interpretation. The construction makes no claim that its domains persist at other worlds.",
+            "proof_length": {
+              "rating": "long",
+              "words": 5834
+            }
           },
           {
-            "result_ref": "SIGNATURE-SP-SURVIVAL",
-            "label": "Signature SP witness-stage reduction"
+            "id": "uniform-complete-evaluators",
+            "title": "Uniform evaluator selection measures well-orderability and Choice",
+            "result_refs": [
+              "UNIFORM-COMPLETE-EVALUATORS"
+            ],
+            "evidence_labels": [
+              "Proofs"
+            ],
+            "proof_length": {
+              "rating": "long",
+              "words": 4683
+            },
+            "summary": "Over C + ☐Plenitude, one admitted operator choosing, for each nonzero proposition p, a complete bivalent evaluator sending p to ⊤ exists exactly when the world atoms admit a represented well-order. Requiring such selectors at every relational type is equivalent to ☐Functional Choice. The propositional requirement and all-type Intensional Choice are independent over C + ☐Plenitude. Here completeness means preservation of all admitted rigid meets; these evaluators take only ⊥ and ⊤ as values."
+          },
+          {
+            "id": "barcan-observers",
+            "title": "Diagonal characters characterize ND + Atomicity at type t",
+            "result_refs": [
+              "DIAGONAL-CHARACTERS"
+            ],
+            "summary": "A diagonal character preserves ⊥ and negation, takes only ⊤/⊥ values, and accepts\n\n$$\nw_E:=\\forall p^t\\, .\\,Ep\\to p.\n$$\n\nSeparation by such characters is equivalent to ND (type t) + Atomicity (type t); neither BF nor Choice is needed.\n\nFor the stronger logical-observer schema, see [Logical Observer Separation](#logical-observers).",
+            "proof_length": {
+              "rating": "medium",
+              "words": 1030
+            }
+          },
+          {
+            "id": "full-identity-observers",
+            "title": "Symmetry controls the representation of observers",
+            "result_refs": [
+              "FULL-IDENTITY-OBSERVERS"
+            ],
+            "summary": "Over C + ☐ND (type t) + Actuality, propositional separation by observers preserving Boolean operations and quantification at t as composite operation identities is equivalent to Atomicity (type t). Atomicity supplies the corresponding observers at each fixed quantifier type.\n\nIn the specified symmetric ideally-full models with closed target symmetry groups, an arrow’s truth-evaluation map is representable exactly when the transported stabilizer of some finite set is contained in the target symmetry group. A representing observer can preserve Boolean operations and both quantifiers as operation identities.\n\nThe ordered symmetry construction separates these demands: Boolean observer separation holds at every world, and ☐BF holds, while quantifier separation fails at type e. This gives a route to studying observers through permutation groups, beyond the atomic sufficient conditions.",
+            "certified_summary": "The propositional Atomicity characterization at t; simultaneous separation for every finite list of quantifier types under C5 + Atomicity (type t), with the converse under C5 + Actuality.",
+            "proof_length": {
+              "rating": "long",
+              "words": 6452
+            }
           }
         ],
-        "headline": "Named domains, signature-extension boundaries, finite Boolean ranks and infinitary resources."
+        "supplemental_results": [
+          {
+            "result_ref": "EVALUATOR-MODAL-COMMUTATION",
+            "label": "Modal commutation and Extensionality"
+          }
+        ]
+      },
+      {
+        "id": "h-observer-separation",
+        "title": "Logical observers",
+        "part": "extensions-and-new-directions",
+        "headline": "The hierarchy over H; representation, adjoints, reversibility and separating models.",
+        "groups": [
+          {
+            "id": "logical-observers",
+            "title": "Logical observer separation: a branching implication map",
+            "result_refs": [
+              "LOGICAL-OBSERVERS"
+            ],
+            "summary": "Requiring separation by **logical observers → endpoint observers → a unique observer** leads respectively to C + BF, C5 + Atomicity (type t), and Extensionality over H. Under Extensionality, truth is itself an endpoint-valued observer. Over C, every arrow below is strict:\n\n$$\n\\small\\text{Extensionality}\\ \\Rightarrow\\ \\mathrm{C5}+\\mathrm{Atomicity}_t\\ \\Rightarrow\\ \\Box\\mathrm{OS}\\ \\Rightarrow\\ \\mathrm{OS}\\ \\Rightarrow\\ \\mathrm{BF}.\n$$\n\nReversible logical separation implies No Pure Contingency without atoms or Actuality. The [observer section](#h-observer-separation) and [full map](proofs/h-observer-space/GRAPH.md) give the other branches and separating models.",
+            "evidence_labels": [
+              "Proofs and certificates"
+            ],
+            "proof_length": {
+              "rating": "long",
+              "words": 114518
+            },
+            "certified_summary": "H + OS ⇒ C + BF in the equivalent formulation with explicit endpoint identities"
+          },
+          {
+            "id": "h-observer-space",
+            "title": "Preservation, representation and logical observers",
+            "result_refs": [
+              "H-OBSERVER-SPACE"
+            ],
+            "summary": "The [dedicated page](proofs/h-observer-space/GRAPH.md) develops the map from H, with exact premises, diagrams, proofs and countermodels. Its main results are:\n\n- **Preservation and higher types.** For the finite family of independent primitive clauses, implication between separation principles is exactly reverse inclusion of clauses. Full typed separation factors into propositional separation plus Functionality.\n- **Reversibility.** Separation by reversible logical observers (Rev) implies C5 + ☐OS + No Pure Contingency. Both chains Rev ⇒ SurjSep ⇒ OS and Rev ⇒ SplitMono ⇒ OS are strict; SurjSep and SplitMono require surjective observers and admitted qualified left inverses, respectively, and are incomparable. Over C5, SurjSep is Rev.\n- **The endpoint boundary.** OS + Plenitude at (t,t) is equivalent over H to endpoint separation, hence to C5 + Atomicity (type t). Reversibility can hold in atomless models; one atom raises it to endpoint separation.\n- **Canonical adjoints.** Over C5, every logical observer qualified at t has admitted order adjoints. These characterize injection, surjection and reversibility. A Boolean observer commutes with necessity exactly when it is injective.\n- **Limits of combination and persistence.** Separate preservation requirements need not combine. SurjSep entails neither ☐OS nor ☐BF, even though an individual observer’s surjectivity persists over C + BF (type t).\n- **Exact characterizations.** Over C5, Rev is characterized by its fixed propositions. Laws on the whole reversible group give sharp finite bounds; internally finite observer families give exact finiteness characterizations. [Statements and proofs](proofs/h-observer-space/GRAPH.md#reversibility-and-the-invariant-proposition-algebra).\n\nThe [detailed map and research frontier](proofs/h-observer-space/MAP.md) also cover weaker connective fragments, normalization, character extension and atomless order models.\n\n**Main unresolved question:** does injective logical separation imply separation by logical observers with logical left inverses? The converse holds; this direction remains open over H and over C5. [Exact question and positive cases](CONJECTURES.md#observer-strength).",
+            "evidence_labels": [
+              "Map and proofs"
+            ],
+            "proof_length": {
+              "rating": "long",
+              "words": 143871
+            }
+          }
+        ],
+        "supplemental_results": []
+      },
+      {
+        "id": "worlds-and-probability",
+        "title": "Worlds, profiles and probability",
+        "part": "extensions-and-new-directions",
+        "headline": "Profile realization, world orbits, faithful probability and its type ceiling.",
+        "groups": [
+          {
+            "id": "profile-world-algebra",
+            "title": "Profile richness and Functional Choice are separate requirements",
+            "result_refs": [
+              "PROFILE-WORLD-ALGEBRA"
+            ],
+            "summary": "Over ☐Plenitude, the world-representation results support consistent individual profile-realization strengthenings. Nominal models realize every finite supported richness rank while failing Functional Choice. Unrestricted relational-input realization instead meets a diagonal obstruction; it must not be identified with individual or finitely supported realization.",
+            "proof_length": {
+              "rating": "long",
+              "words": 8772
+            }
+          },
+          {
+            "id": "nominal-orbits",
+            "title": "World orbits determine propositional Dedekind infinity",
+            "result_refs": [
+              "NOMINAL-ORBITS"
+            ],
+            "summary": "In the specified finite-support permutation models, propositions admit an injective nonsurjective operation exactly when there are infinitely many world orbits. Even infinitely many worlds can form just one orbit.\n\nOn atom worlds, ☐Intensional Choice at every admitted type coexists with the necessary failure of this operational Dedekind infinity. This concerns operations on propositions, not the quantified Frege Axiom of Infinity.",
+            "proof_length": {
+              "rating": "medium",
+              "words": 1091
+            }
+          },
+          {
+            "id": "probability",
+            "title": "Faithful probability has an exact finite-fibre condition and type ceiling",
+            "result_refs": [
+              "PROBABILITY"
+            ],
+            "summary": "Over C + ☐Plenitude + Axiom of Infinity (type e), faithful probability is equivalent to admitted finite-fibre numerical labelling of world atoms. Countable Choice for finite fields strengthens this to countability in the model. Higher-type probability faces a finiteness obstruction.",
+            "proof_length": {
+              "rating": "long",
+              "words": 4289
+            }
+          }
+        ],
+        "supplemental_results": []
       }
     ],
     "open_question_refs": [
@@ -3701,6 +3740,59 @@
       "PURE-SP",
       "SIGNATURE-SP",
       "OBSERVER-STRENGTH"
+    ],
+    "parts": [
+      {
+        "id": "database-connections",
+        "title": "I. Resolved database questions and connections"
+      },
+      {
+        "id": "established-principles",
+        "title": "II. Further results about established principles"
+      },
+      {
+        "id": "extensions-and-new-directions",
+        "title": "III. Extensions and new directions"
+      }
+    ],
+    "headlines": [
+      {
+        "group_ref": "max-atomicity",
+        "label": "Max + Atomicity (type t) ⇒ ⊥",
+        "certification": "Lean certified."
+      },
+      {
+        "group_ref": "choice-completeness",
+        "label": "Relational Choice + Boolean Completeness ⇒ Actuality and Transversal Choice",
+        "certification": "Lean certified."
+      },
+      {
+        "group_ref": "sp-signature-conflict",
+        "label": "SP(Σ) entails SP(pure) exactly when SP(Σ) is inconsistent",
+        "certification": "Lean certified signature-splitting lemma."
+      },
+      {
+        "group_ref": "arithmetic-comparison",
+        "label": "☐Functional Choice and ☐Plenitude have the same ordinary arithmetic"
+      },
+      {
+        "group_ref": "sp-arithmetic-reflection",
+        "label": "Pure SP proves true Π₂ arithmetic, with a conditional Π₃ boundary"
+      },
+      {
+        "group_ref": "lambda-free-translation",
+        "label": "Lambda-free reconstruction and contextual beta eta conversion",
+        "certification": "Lean certified."
+      },
+      {
+        "group_ref": "logical-observers",
+        "label": "Logical observer separation and its strict hierarchy",
+        "certification": "Lean certified H + OS ⇒ C + BF step."
+      },
+      {
+        "group_ref": "infinitary-comprehension",
+        "label": "Infinitary Comprehension + C5 characterizes full standard models"
+      }
     ]
   },
   "work_remaining": [
