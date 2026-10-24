@@ -22,11 +22,11 @@ Put I:=λp.p and use the admitted lambda term for composition. An admitted predi
 1. GI is true, and GE and GF imply G(E∘F).
 2. Every E with GE satisfies
 
-   ```math
-   M(E):=(\lambda p,q.E(p\land q))
-         =(\lambda p,q.Ep\land Eq).
-   \tag{2}
-   ```
+```math
+M(E):=(\lambda p,q.E(p\land q))
+      =(\lambda p,q.Ep\land Eq).
+\tag{2}
+```
 
 3. Every E with GE has an admitted F with GF and E∘F=I=F∘E.
 

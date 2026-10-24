@@ -23,29 +23,36 @@ def anchor(name):
 def protect_markdown_math(body):
     """Keep LaTeX out of Markdown's escape and emphasis processing on GitHub.
 
-    Display/inline choices and all formula contents are preserved. Existing code
-    fences, code spans and protected formulas are left alone.
+    Display/inline choices and all formula contents are preserved. Math fences
+    must be unindented for GitHub to render them. Other code stays unchanged.
     """
     lines = body.splitlines(keepends=True)
     out = []
     fence = None
+    math_indent = ''
     display = False
     inline = re.compile(r'\$`[^`\n]*`\$|`[^`\n]*`|(?<![\\$])\$([^$\n]+)\$(?!\$)')
     for line in lines:
         marker = re.match(r'^\s*(`{3,}|~{3,})', line)
         if fence:
-            out.append(line)
+            out.append(line[len(math_indent):] if math_indent and line.startswith(math_indent) else line)
             if marker and marker[1][0] == fence[0] and len(marker[1]) >= len(fence):
                 fence = None
+                math_indent = ''
             continue
         if not display and marker:
             fence = marker[1]
-            out.append(line)
+            math_indent = re.match(r'^[ \t]*', line)[0] if line.strip() == '```math' else ''
+            out.append(line[len(math_indent):])
         elif line.strip() == '$$':
-            out.append(line.replace('$$', '```' if display else '```math', 1))
+            if not display:
+                math_indent = re.match(r'^[ \t]*', line)[0]
+            out.append(line.lstrip().replace('$$', '```' if display else '```math', 1))
             display = not display
+            if not display:
+                math_indent = ''
         elif display:
-            out.append(line)
+            out.append(line[len(math_indent):] if math_indent and line.startswith(math_indent) else line)
         else:
             out.append(inline.sub(lambda m: '$`' + m[1] + '`$' if m[1] is not None else m[0], line))
     assert not display, 'Unclosed display math'

@@ -113,9 +113,9 @@ Here
 - Over C: Plenitude ⇔ Actuality + Retractions of Injections.
 - Requiring a necessarily correct inverse gives exactly C5 over C:
 
-  ```math
-  \forall f^{\sigma\tau}\, .\,\mathrm{Inj}(f)\to\exists g^{\tau\sigma}\, .\,\Box\forall x^\sigma\, .\,g(fx)=x\qquad(\sigma,\tau\ne e).
-  ```
+```math
+\forall f^{\sigma\tau}\, .\,\mathrm{Inj}(f)\to\exists g^{\tau\sigma}\, .\,\Box\forall x^\sigma\, .\,g(fx)=x\qquad(\sigma,\tau\ne e).
+```
 
 **Sources:** [functional-choice-by-sections.md](source/research/2026-10-22/notes/functional-choice-by-sections.md) (§§1–6) · [choice-uniformization.md](source/research/2026-10-22/notes/choice-uniformization.md) (§§11–20).
 

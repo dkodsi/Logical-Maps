@@ -14,9 +14,9 @@ A logical observer is an admitted operation on propositions preserving Boolean o
 - **Logical separation recovers Classicism.** H + OS entails C + BF. **Lean certified** for the formulation with explicit endpoint identities; [the reduction](../logical-observer-endpoint-reduction.md) removes them. Atomicity (type t) + BF suffices for OS over C, but OS also has atomless models. [Proof and certificate scope](../../evidence/RESULT-INDEX.md#logical-observers).
 - **Endpoint and unique observers locate familiar theories.** Requiring endpoint-valued observers gives exactly C5 + Atomicity (type t) over H; requiring OS and a unique qualified observer gives Extensionality. Under Extensionality, truth is itself endpoint-valued. Over C, every arrow in the following chain is strict:
 
-  ```math
-  \small\text{Extensionality}\Rightarrow\mathrm{C5}+\mathrm{Atomicity}_t\Rightarrow\Box\mathrm{OS}\Rightarrow\mathrm{OS}\Rightarrow\mathrm{BF}.
-  ```
+```math
+\small\text{Extensionality}\Rightarrow\mathrm{C5}+\mathrm{Atomicity}_t\Rightarrow\Box\mathrm{OS}\Rightarrow\mathrm{OS}\Rightarrow\mathrm{BF}.
+```
 
   OS + Plenitude at (t,t) already gives endpoint separation. Over C5, ☐OS plus possible Actuality gives ☐Plenitude. [Hierarchy](../logical-observer-hierarchy.md) · [Plenitude bridge](plenitude-endpoint-bridge.md) · [Necessary OS](../logical-observers.md#8-necessary-os-and-possible-actuality).
 - **Reversibility gives No Pure Contingency without atoms.** Separation by observers with qualified two-sided inverses (**Rev**) entails C5 + ☐OS + No Pure Contingency. It can hold in atomless models. One atom, Actuality, or one qualified finite-image observer raises Rev to endpoint separation. Over C5, Rev is exactly the claim that only ⊤ and ⊥ are fixed by every reversible logical observer. [Pure contingency](reversible-separation-and-pure-truth.md) · [Invariant propositions](#reversibility-and-the-invariant-proposition-algebra).
@@ -85,9 +85,9 @@ Boolean preservation makes $`E\top`$ true and $`E\bot`$ false over H; over C it 
 - Over C5, ☐OS + ◇Actuality entails ☐Plenitude; replacing ☐OS by OS does not suffice.
 - Over C, the variants below extend the strict hierarchy:
 
-  ```math
-  \small\text{Extensionality}\ \Rightarrow\ \mathrm{C5}+\mathrm{Atomicity}_t\ \Rightarrow\ \Box\mathrm{OS}\ \Rightarrow\ \mathrm{OS}\ \Rightarrow\ \mathrm{BF}.
-  ```
+```math
+\small\text{Extensionality}\ \Rightarrow\ \mathrm{C5}+\mathrm{Atomicity}_t\ \Rightarrow\ \Box\mathrm{OS}\ \Rightarrow\ \mathrm{OS}\ \Rightarrow\ \mathrm{BF}.
+```
 
 - Over C, $`\mathrm{Good}_\Delta(E)\leftrightarrow\Box\mathrm{Good}_\Delta(E)`$; requiring the qualification necessarily does not strengthen separation.
 - Over H, OS plus uniqueness of the qualified logical observer at one fixed finite list is equivalent to Extensionality; no endpoint restriction is needed.
