@@ -1,0 +1,9 @@
+Classicism/Results/Research/ExtFullFregeCounting.lean:34:39: warning: `Set.mem_diff` has been deprecated: Use `Set.mem_sdiff` instead
+Classicism/Results/Research/ExtFullFregeCounting.lean:55:19: warning: `Set.mem_diff` has been deprecated: Use `Set.mem_sdiff` instead
+'Classicism.Meta.Research.ExtFullFregeCounting.Frame.isNumber_iff_numeral' does not depend on any axioms
+'Classicism.Meta.Research.ExtFullFregeCounting.Frame.internallyFinite_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.ExtFullFregeCounting.Frame.universe_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

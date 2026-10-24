@@ -1,0 +1,218 @@
+id: finite-support-monotone-surjections
+name: 'Finite-support action model: monotone surjections of N'
+certificate:
+  source_id: bacon-dorr-classicism
+  produced_by: Andrew Bacon and Cian Dorr
+  recorded_by: OpenAI Codex (GPT-6), 17 September 2026
+  checked_by: []
+  date: '2026-09-17'
+  lean: stated
+  # migration: the `trawl` block moves to
+  # provenance/admission-c0a37bbe6b6c45cc985428b174812564.yaml, which holds the blocks of the eight
+  # records admitted together: this record's discovery and evidence in its entry, and the
+  # checkpoint, review and admission they share once.
+sources:
+- Andrew Bacon and Cian Dorr, Classicism, draft of 16 May 2023, Appendix D, Proposition D.5, part 2, pp.
+  74, 76–77; p. 79 (No Pure Contingency).
+- DeepSeek (deepseek-flash), Classicism theorem trawl, 25 September 2026; mathematically reviewed and
+  corrected by OpenAI Codex (GPT-6), 25 September 2026. Accepted additions only; original construction
+  attribution is unchanged. writeups/finite-support-monotone-surjections.md; Classicism, Definition D.3,
+  footnote 92 and Proposition D.5, pp. 73–79.
+source_names:
+- Classicism
+- DeepSeek trawl; GPT-6 review 25 Sep
+references:
+- paper: bacon-dorr-classicism
+  role: proof
+  locator: Appendix D, Proposition D.5(2), pp. 74–75; construction pp. 76–77; p. 79 (No Pure Contingency)
+
+# migration: the definition is the old description without its verdict clauses, then the notes'
+# interpretation of Σ.
+group: finite-support-one-object
+# migration: the definition is the group's, completed by these settings: `monoid` is the
+# sentence before "In every part", verbatim; Σ is one of the group's two interpretations.
+settings:
+  monoid: >-
+    Proposition D.5, part 2 (pp. 76–77): the one-object category whose arrows are the monotone
+    surjections of $\mathbb N$ (the source first considers all surjections, which gives the same
+    package, and restricts to the monotone ones to make the failure of Boolean Completeness easier
+    to exhibit).
+  sigma: top
+
+meets:
+  factorizable-arrows: >-
+    Given $h$, $N\subseteq[0,n]$ and $S\subseteq[0,s]$, take $N^{\prime\prime}:=[0,n^{\prime\prime}]$ with
+    $n^{\prime\prime}\ge s$ and $h(n^{\prime\prime})\ge n$. For $k^{\prime}$ agreeing with $kh$ there and
+    $M\subseteq[0,m]$, $m\ge n^{\prime\prime}$: let $k^{\prime\prime}$ be $h$ on $[0,n^{\prime\prime}]$ and then
+    rise by one at each step, and let $j$ be $k$ on $[0,h(n^{\prime\prime})]$, send
+    $h(n^{\prime\prime})+i$ to $k^{\prime}(n^{\prime\prime}+i)$ for $0<i\le m-n^{\prime\prime}$, and then rise
+    by one. Both are monotone surjections, since the steps of $k^{\prime}$ are $0$ or $1$; $j$ agrees
+    with $k$ on $N$; and $jk^{\prime\prime}$ agrees with $k^{\prime}$ on $[0,m]$, on $[0,n^{\prime\prime}]$
+    because $k^{\prime}$ agrees with $kh$ there.
+  evens-avoidable: >-
+    With $N_0\subseteq[0,M_0]$: $i$ the monotone surjection that is the identity on $[0,M_0+1]$,
+    sends $M_0+2$ to $M_0+1$ and $x$ to $x-1$ for $x\ge M_0+2$; an even $b\ge M_0+2$, whose only
+    preimage under $i$ is the odd $b+1$; and $N^{\prime}:=[0,b+2]$: a monotone map agreeing with $i$
+    there has the same preimages of $b$ within $[0,b+2]$ and takes values at least $i(b+2)=b+1$
+    beyond it.
+  d6-surjective: >-
+    The arrows are the monotone surjections of $\mathbb N$.
+    So each arrow acts surjectively on the pinning sets, the finite subsets of $\mathbb N$, and on the individuals, whether these are the natural numbers or a single one that every arrow fixes.
+  unbounded-haecceities: >-
+    With $A$ the even numbers: the strongest persistent property containing them and pinned down by
+    $\{0,\ldots,n\}$ becomes strictly stronger as $n$ grows.
+  no-least-pinned-cover: >-
+    Let $F$ be the family of propositions $A_m$ ($m\ge1$), each pinned down by $\{2m-1,2m\}$, that
+    the arrow sends $2m-1$ to $0$ and $2m$ to $1$, so that its first step is at the even position
+    $2m$. The least superset of $\bigcup F$ pinned down by $\{0,\ldots,N\}$ consists of the arrows
+    whose first step is at an even position or beyond $N$, and it strictly shrinks as $N$ grows.
+
+arguments:
+
+# Rewritten at Cian Dorr's direction on 2 October 2026 (Claude Opus 5.5): every argument this
+# record shared in substance with another member is now a shared argument of the group
+# finite-support-one-object, with this record's witness under `meets`; second arguments for a
+# verdict already argued (the trawl's, among them) were dropped. What follows is this record's own.
+# Only the verdicts the engine needs to derive the rest are recorded, the source's first. Lead-ins
+# naming the verdict, and attribution sentences, are dropped from the texts, their content being in
+# holds, fails, by and date.
+
+- fails: [distinctness-necessary-r]
+  when: {individuals: naturals}
+  source: {paper: bacon-dorr-classicism, locator: 'Proposition D.5(2), pp. 76–77'}
+  text: >-
+    At the non-injective arrows.
+
+- holds: [atomlessness]
+  source: {paper: bacon-dorr-classicism, locator: 'Proposition D.5(2), pp. 76–77'}
+  text: >-
+    As in part 1.
+
+- holds: [distinctness-preserving-collapse]
+  by: Claude Fable 5.1 (Anthropic)
+  date: '2026-09-23'
+  text: >-
+    For a true proposition $p$ pinned down by a finite set take as the witness $q$ the proposition
+    that the arrow fixes $0,\ldots,N$ for $N$ beyond the pinning set. An arrow fixing $0,\ldots,N$
+    agrees with the identity on that set and so is in $p$. An arrow $h$ that does not, with least
+    moved point $m\le N$, has $hm<m$ by monotone surjectivity and so collapses $m-1$ and $m$; then
+    no $k\circ h$ can fix both, so $\Diamond q$ fails at $h$. Hence $\Box(\Diamond q\to p)$.
+
+notes: >-
+  The cited construction is a model of the map’s relational-type framework. The description
+  identifies its evaluation point; construction and verification are given at the PDF locations in
+  References. Everything that implies these fails with them.
+
+was_conjectured: true
+
+# The old `changes` log, verbatim and frozen.
+history:
+- date: '2026-09-17'
+  by: OpenAI Codex (GPT-6)
+  summary: Adopted the source’s relational type system at the user’s request. The cited construction now
+    directly supplies the recorded model; the former type-extension obligation is removed.
+  satisfies:
+  - barcan-r
+  - no-pure-contingency-r
+  - necessary-barcan-r
+  - atomlessness
+  violates:
+  - distinctness-necessary-r
+  - atomicity-r
+  - actuality
+  - boolean-completeness-r
+  - rigid-comprehension-r
+- date: '2026-09-20'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Added both Axioms of Infinity at Cian Dorr's direction. The individuals are the natural numbers
+    and identity at the evaluation arrow is literal, so no numeral counts them. The propositions that
+    a given individual is fixed by the arrow, one for each individual, are pairwise distinct and each
+    has that individual as finite support, so there are infinitely many propositions. The set of numerals
+    at each type is invariant under every arrow, hence has empty support and lies in the domain, so finite
+    cardinality is standard and no finite cardinality holds of the universal property at either type.
+  satisfies:
+  - axiom-of-infinity-e
+  - axiom-of-infinity-t
+- date: '2026-09-22'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Fixed an interpretation of Σ (relational constants as top, individual constants as one fixed
+    individual) and recorded the signature schemata it refutes, at Cian Dorr’s request.
+  violates:
+  - witnessed-possibility-r
+  - separated-structure-r
+  - independence-signature-r
+  - distinctness-signature-r
+- date: '2026-09-23'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Expanded the description from Appendix D, naming Proposition D.5 and its part; added the failure
+    of Countable Boolean Completeness at type e→t; settled the Distinctness-preserving collapse.
+  satisfies:
+  - distinctness-preserving-collapse
+  violates:
+  - countable-boolean-completeness-r
+- date: '2026-09-23'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: 'Added Relational Choice and its necessitation at Cian Dorr’s direction: ideally full models
+    are extensionally full at every object, and choice in the metatheory supplies the functional subrelation;
+    see the notes.'
+  satisfies:
+  - relational-choice-r
+  - necessary-relational-choice-r
+- date: '2026-09-25'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: 'Added Transversal Choice, by the argument recorded for Relational Choice: the model is extensionally
+    full at every object, so for an equivalence relation at the evaluation point a transversal of its
+    extension there, chosen in the metatheory, is the extension of an element pinned down by the empty
+    set; the equivalence and transversal conditions are unboxed. Recorded on a question of Zachary Goodsell,
+    after an observation of Christopher Sun.'
+  satisfies:
+  - transversal-choice-r
+- date: '2026-09-25'
+  by: OpenAI Codex (GPT-6)
+  summary: 'Confirmed the trawl''s BC-t conclusion with a replacement proof: alternating differences of
+    finite agreement classes have no least upper bound. The original missing-intersection argument is
+    invalid. Used source extensional fullness for domain membership.'
+  violates:
+  - boolean-completeness-t
+- date: '2026-09-23'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Recorded the failure of Inextensible Comprehension at type e→t for the property of being even,
+    sharpening the failure of Actuality; argument in the notes.
+  violates:
+  - inextensible-comprehension-r
+- date: '2026-09-25'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Added the failure of Boolean Completeness (type t) and of Inextensible Comprehension, with
+    the arguments in the notes.
+  violates:
+  - boolean-completeness-t
+  - inextensible-comprehension-r
+- date: '2026-09-25'
+  by: Claude Opus 5.5 (Anthropic)
+  summary: Merged the two sets of arguments recorded on 23 and 25 September into one, keeping the 23 September
+    argument for Inextensible Comprehension, which already refutes the weak form.
+  violates:
+  - weakly-inextensible-comprehension-r
+- date: '2026-09-27'
+  by: Claude Opus 5.5 (Anthropic), at Cian Dorr's request
+  summary: Recorded the failure of Vicinity; argument in the notes.
+  violates:
+  - vicinity
+
+# The model in Lean, and its verdicts proved there (Classicism/MapModels.lean); statuses are written by
+# lean-check --update. The verdicts the map's general arguments give it are certified from the
+# arguments' (MapDerived.lean), with the proofs under `meets` that it meets their conditions.
+lean:
+  param: Classicism.Meta.Intensional.Monoids.monoSurj
+  meets:
+    d6-surjective: Classicism.Meta.Intensional.MonoidModel.d6Surjective_of_surjective _ fun k => k.2.2
+  verdicts:
+  - holds: atomlessness
+    ref: Classicism.Map.Models.finite_support_monotone_surjections.atomlessness
+    status: verified
+  - fails: distinctness-necessary-r
+    ref: Classicism.Map.Models.finite_support_monotone_surjections.distinctness_necessary_r
+    status: verified
+  - fails: boolean-completeness-r
+    ref: Classicism.Map.Models.finite_support_monotone_surjections.boolean_completeness_r
+    status: verified

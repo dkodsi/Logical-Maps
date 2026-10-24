@@ -1,0 +1,9 @@
+import Classicism.Results.Research.WorldRepresentation
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Translate
+
+#classicism_check Classicism.Research.WorldRepresentation.encode_join
+#classicism_types Classicism.Research.WorldRepresentation.encode_join
+#classicism_derive Classicism.Research.WorldRepresentation.encode_join
+#print axioms Classicism.Research.WorldRepresentation.encode_join.derivable

@@ -1,0 +1,27 @@
+import Classicism.Results.Research.AtomicProbabilitySignedRationals
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Schema
+
+#classicism_audit Classicism.Results.Research.AtomicProbabilitySignedRationals
+#classicism_types_audit Classicism.Results.Research.AtomicProbabilitySignedRationals
+
+#classicism_derive Classicism.Research.ProbabilityRationals.difference_refl
+  Classicism.Research.ProbabilityRationals.difference_symm
+  Classicism.Research.ProbabilityRationals.difference_trans
+  Classicism.Research.ProbabilityRationals.signedCode_supported
+  Classicism.Research.ProbabilityRationals.rationalField_supported
+  Classicism.Research.ProbabilityRationals.signedCode_self
+  Classicism.Research.ProbabilityRationals.signedCode_identity_iff
+  Classicism.Research.ProbabilityRationals.signedCode_in_field
+  Classicism.Research.ProbabilityRationals.rational_code_supported
+  Classicism.Research.ProbabilityRationals.embed_in_field
+  Classicism.Research.ProbabilityRationals.embed_injective
+  Classicism.Research.ProbabilityRationals.rzero_in_field
+  Classicism.Research.ProbabilityRationals.rone_in_field
+  Classicism.Research.ProbabilityRationals.rone_ne_zero
+  Classicism.Research.ProbabilityRationals.signedCode_zero_iff
+  Classicism.Research.ProbabilityRationals.difference_add
+  Classicism.Research.ProbabilityRationals.difference_neg
+
+#print axioms Classicism.Research.ProbabilityRationals.difference_neg.derivable

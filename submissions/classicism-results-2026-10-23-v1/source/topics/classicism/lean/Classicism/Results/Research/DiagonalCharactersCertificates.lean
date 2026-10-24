@@ -1,0 +1,16 @@
+import Classicism.Results.Research.DiagonalCharacters
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Schema
+
+#classicism_audit Classicism.Results.Research.DiagonalCharacters
+#classicism_types_audit Classicism.Results.Research.DiagonalCharacters
+#classicism_derive Classicism.Research.DiagonalCharacters.diagonal_stable_atom
+  Classicism.Research.DiagonalCharacters.diagonal_pointwise
+  Classicism.Research.DiagonalCharacters.canonical_kernel
+  Classicism.Research.DiagonalCharacters.canonical_diagonal
+  Classicism.Research.DiagonalCharacters.full_character_iff_diagonal
+  Classicism.Research.DiagonalCharacters.separation_iff_nd_atomicity
+
+#print axioms Classicism.Research.DiagonalCharacters.diagonal_stable_atom.derivable
+#print axioms Classicism.Research.DiagonalCharacters.separation_iff_nd_atomicity.derivable

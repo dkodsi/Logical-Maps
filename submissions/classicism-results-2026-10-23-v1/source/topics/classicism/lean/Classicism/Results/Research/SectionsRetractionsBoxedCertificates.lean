@@ -1,0 +1,32 @@
+import Classicism.Results.Research.SectionsRetractionsCharacterizationsCertificates
+import Classicism.Results.Research.SectionsRetractionsBoxed
+
+#classicism_audit Classicism.Results.Research.SectionsRetractionsBoxed
+#classicism_types_audit Classicism.Results.Research.SectionsRetractionsBoxed
+set_option maxHeartbeats 0 in
+#classicism_derive_audit Classicism.Results.Research.SectionsRetractionsBoxed
+#classicism_schema Classicism.Research.Splitting.NecRightSplitting
+  Classicism.Research.Splitting.NecLeftSplitting
+#classicism_certify Classicism.Research.Splitting.necessary_choice_actuality
+  Classicism.Research.Splitting.necessary_plenitude_actuality
+  Classicism.Research.Splitting.necessary_choice_sections
+  Classicism.Research.Splitting.necessary_plenitude_retractions
+  Classicism.Research.Splitting.necessary_actuality_sections_choice
+  Classicism.Research.Splitting.necessary_actuality_retractions_plenitude
+  Classicism.Research.Splitting.choice_distinctness
+  Classicism.Research.Splitting.necessary_choice_c5
+  Classicism.Research.Splitting.necessary_choice_strong_sections
+  Classicism.Research.Splitting.c5_necessary_retractions
+  Classicism.Research.Splitting.c5_necessary_retractions_t
+  Classicism.Research.Splitting.necessary_truth_retractions_c5
+#classicism_entails Classicism.Research.Splitting.necessary_choice_actuality
+  Classicism.Research.Splitting.necessary_plenitude_actuality
+  Classicism.Research.Splitting.necessary_choice_sections
+  Classicism.Research.Splitting.necessary_plenitude_retractions
+  Classicism.Research.Splitting.necessary_actuality_sections_choice
+  Classicism.Research.Splitting.necessary_actuality_retractions_plenitude
+  Classicism.Research.Splitting.necessary_choice_strong_sections
+#check Classicism.Research.Splitting.necessary_actuality_sections_choice.listRule
+#check Classicism.Research.Splitting.necessary_actuality_retractions_plenitude.listRule
+#check Classicism.Research.Splitting.c5_necessary_retractions.listRule
+#print axioms Classicism.Research.Splitting.necessary_actuality_sections_choice.listRule

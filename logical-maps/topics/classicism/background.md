@@ -138,7 +138,7 @@ $\mathfrak R=(X^{\sigma t},\le^{\sigma\sigma t},+^{\sigma\sigma\sigma t},
 \times^{\sigma\sigma\sigma t},0^\sigma,1^\sigma,N^{\sigma t})$ such that
 $\le$, $+$ and $\times$ hold only of instances of $X$, $X$ with them and
 with $0$ and $1$ is a complete ordered field, $+$ and $\times$ being
-functional on $X$ and every subproperty of $X$ with an upper bound in $X$
+functional on $X$ and every nonempty subproperty of $X$ with an upper bound in $X$
 having a least upper bound in $X$, and $N$ is the least subproperty of $X$
 containing $0$ and closed under adding $1$; write
 $\operatorname{Real}_\sigma(\mathfrak R)$. Any two real number structures,

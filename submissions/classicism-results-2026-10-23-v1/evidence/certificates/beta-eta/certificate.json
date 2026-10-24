@@ -1,0 +1,82 @@
+{
+  "id": "beta-eta",
+  "source_manifest_origin": "research/2026-10-22/lean-formalization/checks/20261023T172229914704Z-c7a202e6.json",
+  "source_manifest_sha256": "3b72e98a99ff7862e92a4770d524d64773323e046164cfeb917f0df1ec7e9e40",
+  "run_id": "20261023T172229914704Z-c7a202e6",
+  "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "compiler_sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554",
+  "precompiled_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "selected_targets": [
+    "Classicism.Results.Research.BetaIdentityContextualClosure",
+    "Classicism.Results.Research.BetaIdentityIntensionalityBridge"
+  ],
+  "selected_targets_exit_code": 0,
+  "original_run_state": "failed",
+  "original_run_exit_code": 1,
+  "sources": [
+    {
+      "module": "Classicism.Syntax.Types",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Types.lean",
+      "sha256": "567828e8f9a707cf635e3b4fb30bc868a419967307613d0686d795d195606eac",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Types.lean",
+      "fingerprint": "f920c6417fb0d73d4b6cb333a5de66a5647023a45396e3a09a0b7e943245c8cf",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Syntax.Term",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Term.lean",
+      "sha256": "ad5172acbb74eaab9307662408928b80e6ffab62e14df16f2f41c7205de13f69",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Term.lean",
+      "fingerprint": "19fcc526fbf7a5f30c841e2fb11bd4cc6c4c8c77eddfb46e22a81b795035e2d5",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.BetaIdentityContextualClosure",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/BetaIdentityContextualClosure.lean",
+      "sha256": "40fbbc8f6a997b21e0a3983e2ae79563561fa6f08d82dfa85ce80759a109bdb6",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/BetaIdentityContextualClosure.lean",
+      "fingerprint": "1ce4698bdff44bea726c374f1d317aa612b91d6b721d8428e929fc2b46207b6a",
+      "module_exit_code": 0,
+      "reused_at_run": false
+    },
+    {
+      "module": "Classicism.Results.Research.BetaIdentityIntensionalityBridge",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/BetaIdentityIntensionalityBridge.lean",
+      "sha256": "b4456a3501eb98beec2a81a48c7a937753c09a65e22aa4089325572d3af982c5",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/BetaIdentityIntensionalityBridge.lean",
+      "fingerprint": "3ff259f1373a11c3762297aab676280dc61284f76dd7608440dc888556778c88",
+      "module_exit_code": 0,
+      "reused_at_run": false
+    }
+  ],
+  "logs": [
+    {
+      "module": "Classicism.Results.Research.BetaIdentityContextualClosure",
+      "path": "evidence/certificates/beta-eta/Classicism_Results_Research_BetaIdentityContextualClosure.log",
+      "sha256": "ffdec29f689d91c811bb9a4e55dd77a68d25348b5f08e28f4a30cf51d04c3b68"
+    },
+    {
+      "module": "Classicism.Results.Research.BetaIdentityIntensionalityBridge",
+      "path": "evidence/certificates/beta-eta/Classicism_Results_Research_BetaIdentityIntensionalityBridge.log",
+      "sha256": "176e010d27e0f0741eb239f1be94e3d29cb035d9cb1a0a3186a33d5237ab3b7a"
+    }
+  ],
+  "axiom_report_lines": [
+    "'Classicism.Meta.Research.BetaIdentity.lam_congr' depends on axioms: [propext, Quot.sound]",
+    "'Classicism.Meta.Research.BetaIdentity.eta' depends on axioms: [propext, Quot.sound]",
+    "'Classicism.Meta.Research.BetaIdentity.contextual_conversion_sound' depends on axioms: [propext, Quot.sound]",
+    "'Classicism.Meta.Research.BetaIdentity.ModalBridge.equality_coextension' does not depend on any axioms",
+    "'Classicism.Meta.Research.BetaIdentity.ModalBridge.zeta_eq' does not depend on any axioms",
+    "'Classicism.Meta.Research.BetaIdentity.ModalBridge.of_eqProof' does not depend on any axioms",
+    "'Classicism.Meta.Research.BetaIdentity.ModalBridge.contextual_conversion' depends on axioms: [propext, Quot.sound]"
+  ],
+  "result_entries": [
+    "BETA-ETA-CONVERSION"
+  ],
+  "verification": "Saved successful module records and exact source hashes checked during collection. No new Lean invocation.",
+  "source_manifest_path": "evidence/certificates/beta-eta/original-manifest.json",
+  "source_manifest_original_sha256": "f0b8765d31a3c4f693bfb9a27c567b3804beaac4fce12856e22444349aa3f598",
+  "source_manifest_normalization": "Portable paths and omission of research coordination metadata; theorem/source hashes and check verdicts preserved."
+}

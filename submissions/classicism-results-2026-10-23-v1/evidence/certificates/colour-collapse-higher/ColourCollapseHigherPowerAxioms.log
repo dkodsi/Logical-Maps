@@ -1,0 +1,36 @@
+Classicism.Meta.Intensional.ColourCollapse.not_rigid_power_ett :
+  ¬Classicism.Meta.Intensional.ColourCollapse.model.HoldsSentence
+      (Classicism.P.RigidPower.quoted Classicism.Meta.Intensional.ColourCollapse.ett)
+Classicism.Meta.Intensional.ColourCollapse.higher_countermodel :
+  Classicism.Meta.Intensional.ColourCollapse.model.IsModel ∧
+    Classicism.Meta.Intensional.ColourCollapse.model.HoldsAx Classicism.P.TameRigidity.schema ∧
+      Classicism.Meta.Intensional.ColourCollapse.model.HoldsAx Classicism.P.NecBarcan.schema ∧
+        Classicism.Meta.Intensional.ColourCollapse.model.HoldsSentence
+            (Classicism.P.NecRigidPower.quoted Classicism.Meta.Intensional.ColourCollapse.et) ∧
+          ¬Classicism.Meta.Intensional.ColourCollapse.model.HoldsSentence
+                (Classicism.P.WeaklyRigidPower.quoted Classicism.Meta.Intensional.ColourCollapse.et) ∧
+            ¬Classicism.Meta.Intensional.ColourCollapse.model.HoldsSentence
+                (Classicism.P.RigidPower.quoted Classicism.Meta.Intensional.ColourCollapse.ett)
+'Classicism.Meta.Intensional.ColourCollapse.label_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.Intensional.ColourCollapse.labels_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.Intensional.ColourCollapse.labels_rigid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.Intensional.ColourCollapse.evacuate_return' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.Intensional.ColourCollapse.label_in_image_of_pin' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Intensional.ColourCollapse.no_weak_lift_labels' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Intensional.ColourCollapse.topFamily_rigid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.Intensional.ColourCollapse.higher_power_not_weak' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Intensional.ColourCollapse.not_rigid_power_ett' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Intensional.ColourCollapse.not_holds_rigid_power_schema' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Intensional.ColourCollapse.higher_countermodel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

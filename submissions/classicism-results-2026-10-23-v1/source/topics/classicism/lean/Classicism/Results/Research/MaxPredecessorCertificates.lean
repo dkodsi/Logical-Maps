@@ -1,0 +1,18 @@
+import Classicism.Results.Research.MaxPredecessor
+import Classicism.Results.Research.FregeNoncollapseCertificates
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Translate
+import Classicism.Tools.QuoteTerm
+
+#classicism_audit Classicism.Results.Research.MaxPredecessor
+#classicism_types_audit Classicism.Results.Research.MaxPredecessor
+#classicism_derive_audit Classicism.Results.Research.MaxPredecessor
+
+#classicism_quote_term Classicism.Research.MaxPredecessor.PredOp
+  Classicism.Research.MaxPredecessor.Collision
+
+#print axioms Classicism.Research.MaxPredecessor.collision_excludes_predecessor.derivable
+#print axioms Classicism.Research.MaxPredecessor.possible_collision_excludes_predecessor.derivable
+#print axioms Classicism.Research.MaxPredecessor.graph_functional.derivable
+#print axioms Classicism.Research.MaxPredecessor.plenitude_supplies_predecessor.derivable

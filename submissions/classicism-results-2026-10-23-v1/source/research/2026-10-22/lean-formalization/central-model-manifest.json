@@ -1,0 +1,75 @@
+{
+  "author_thread": "[research task]",
+  "integration_owner": "[research task]",
+  "scope": "Concrete supported-product model over Sigma={c:et}; countable support on P(Nat); actual typed model and exact object-language nonentailment draft",
+  "status": "READY FOR INTEGRATION",
+  "lean_executed_by_author": false,
+  "repository_validation": "132 principles, 447 results, 162 models — OK",
+  "source": "research/2026-10-22/followup/central-map.md, sections 1–3 and 6; original argument, direct source misc",
+  "files": [
+    {
+      "path": "topics/classicism/lean/Classicism/Semantics/Research/CentralSupport.lean",
+      "sha256": "9eb20343785c4def394cd74290c8f98906c87f5a82b9e4ee25027a45f5cff283",
+      "module": "Classicism.Semantics.Research.CentralSupport",
+      "status": "READY FOR INTEGRATION; uncompiled; frozen",
+      "lines": 302
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Semantics/Research/CentralSupportedProduct.lean",
+      "sha256": "09a38a68dd34f43a6279fd1e1c70780866c699d66330fb12956583f568c2947e",
+      "module": "Classicism.Semantics.Research.CentralSupportedProduct",
+      "status": "READY FOR INTEGRATION; uncompiled; frozen",
+      "lines": 156
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Semantics/Research/CentralSupportedProductNegative.lean",
+      "sha256": "9c2bbe5c1d74686d202a45565d86edd5a733678240edc4dde0dc9c5d358e6bf3",
+      "module": "Classicism.Semantics.Research.CentralSupportedProductNegative",
+      "status": "READY FOR INTEGRATION; uncompiled; frozen",
+      "lines": 116
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Semantics/Research/CentralSupportedProductGluing.lean",
+      "sha256": "40c79bf21110edf5feddc412f2d7dd8dd9c10fae46117f4c070d60643acf854f",
+      "module": "Classicism.Semantics.Research.CentralSupportedProductGluing",
+      "status": "READY FOR INTEGRATION; uncompiled; frozen",
+      "lines": 89
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Semantics/Research/CentralSyntaxCountable.lean",
+      "sha256": "4f18afa567585fd8a45c4f5a3e2f5dc6e6d5be86f7c70912c30808fdb4ae9f4c",
+      "module": "Classicism.Semantics.Research.CentralSyntaxCountable",
+      "status": "READY FOR INTEGRATION; uncompiled; frozen",
+      "lines": 83
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Semantics/Research/CentralLogicalNecessity.lean",
+      "sha256": "0384c94521290c663a5baa97982fac718db0ae9cb10d9173dcbebccc2e651405",
+      "module": "Classicism.Semantics.Research.CentralLogicalNecessity",
+      "status": "READY FOR INTEGRATION; uncompiled; frozen",
+      "lines": 181
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Semantics/Research/CentralSupportedProductChoice.lean",
+      "sha256": "08567073941c984e27c265a9e9ada5fbbfc33e7bd9a3e77c21e9494e3849d0e7",
+      "module": "Classicism.Semantics.Research.CentralSupportedProductChoice",
+      "status": "READY FOR INTEGRATION; uncompiled; frozen",
+      "lines": 76
+    }
+  ],
+  "primary_targets": [
+    "Classicism.Meta.Intensional.Central.OneConstant.B_isModel",
+    "Classicism.Meta.Intensional.Central.OneConstant.holds_logicalNecessity",
+    "Classicism.Meta.Intensional.Central.OneConstant.holds_package",
+    "Classicism.Meta.Intensional.Central.OneConstant.package_not_entails_actuality",
+    "Classicism.Meta.Intensional.Central.OneConstant.package_consistent"
+  ],
+  "remaining": [
+    "Compile and repair/elaborate these drafts serially; audit final kernel axiom footprint.",
+    "Exact boxed Tame Rigidity satisfaction.",
+    "Internal Countable Boolean Completeness, including finite-cardinality successor-orbit bridge.",
+    "Exact Vicinity formula bridge, although the permanent killing witness is already drafted.",
+    "Separate symmetric-surjection model and full BC/WRP/failure of choice.",
+    "Arbitrary fixed set-sized signatures and moving-individual infinity variants."
+  ]
+}

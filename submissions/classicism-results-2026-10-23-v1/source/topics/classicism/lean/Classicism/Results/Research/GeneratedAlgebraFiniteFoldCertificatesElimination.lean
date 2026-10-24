@@ -1,0 +1,5 @@
+import Classicism.Results.Research.GeneratedAlgebraFiniteFoldCertificatesBase
+
+#classicism_derive Classicism.Research.GeneratedAlgebraFiniteFold.source_fold0
+#classicism_derive Classicism.Research.GeneratedAlgebraFiniteFold.source_fold1
+#classicism_derive Classicism.Research.GeneratedAlgebraFiniteFold.source_fold2

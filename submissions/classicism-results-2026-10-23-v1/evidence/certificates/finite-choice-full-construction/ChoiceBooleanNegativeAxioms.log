@@ -1,0 +1,67 @@
+Classicism.Meta.ChoiceBoolean.ChoiceModel.isModel (m : ℕ) : (ChoiceModel.model m).IsModel
+Classicism.Meta.ChoiceBoolean.FiniteChoice.holds_boxed_functionalChoice (m : ℕ) (σ : Classicism.Meta.Ty)
+  (ρ : Classicism.Meta.RTy) (hρ : ProtectedCoverage.Protected (ChoiceCutoff.cutoff m) ℕ (Classicism.Meta.Ty.rel ρ)) :
+  (ChoiceModel.model m).HoldsSentence (Classicism.P.NecFunctionalChoice.quoted σ ρ)
+Classicism.Meta.ChoiceBoolean.FiniteChoice.fails_boxed_selector (m : ℕ) :
+  ¬(ChoiceModel.model m).HoldsSentence
+      (Classicism.ChoiceHierarchy.NecSelector.quoted (Classicism.Meta.ChoiceHierarchy.tower (m + 1)))
+Classicism.Meta.ChoiceBoolean.FiniteChoice.finite_boxed_countermodel
+  (L : List (Classicism.Meta.Sentence Classicism.Meta.Signature.pure))
+  (hL : ∀ p ∈ L, Classicism.P.NecFunctionalChoice.schema p) :
+  ∃ m,
+    (ChoiceModel.model m).IsModel ∧
+      (ChoiceModel.model m).HoldsAx (Classicism.Meta.FiniteChoiceBasis.ofList L) ∧
+        ¬(ChoiceModel.model m).HoldsSentence (FiniteChoice.missingBoxedChoice m)
+Classicism.Meta.ChoiceBoolean.FiniteChoice.finite_unboxed_countermodel
+  (L : List (Classicism.Meta.Sentence Classicism.Meta.Signature.pure))
+  (hL : ∀ p ∈ L, Classicism.P.FunctionalChoice.schema p) :
+  ∃ m,
+    (ChoiceModel.model m).IsModel ∧
+      (ChoiceModel.model m).HoldsAx (Classicism.Meta.FiniteChoiceBasis.ofList L) ∧
+        ¬(ChoiceModel.model m).HoldsSentence (FiniteChoice.missingChoice m)
+Classicism.Meta.ChoiceBoolean.FiniteChoice.boxed_finite_fragment_gap :
+  Classicism.Meta.FiniteChoiceBasis.FiniteFragmentGap Classicism.P.NecFunctionalChoice.schema
+Classicism.Meta.ChoiceBoolean.FiniteChoice.unboxed_finite_fragment_gap :
+  Classicism.Meta.FiniteChoiceBasis.FiniteFragmentGap Classicism.P.FunctionalChoice.schema
+Classicism.Meta.ChoiceBoolean.FiniteChoice.boxed_not_finitely_axiomatizable :
+  ¬Classicism.Meta.FiniteChoiceBasis.FinitelyAxiomatizable Classicism.P.NecFunctionalChoice.schema
+Classicism.Meta.ChoiceBoolean.FiniteChoice.unboxed_not_finitely_axiomatizable :
+  ¬Classicism.Meta.FiniteChoiceBasis.FinitelyAxiomatizable Classicism.P.FunctionalChoice.schema
+Classicism.Meta.ChoiceBoolean.FiniteChoice.selector_stage_strict (m : ℕ) :
+  ¬Classicism.Meta.ChoiceHierarchy.selectorStage m ⟹ Classicism.Meta.ChoiceHierarchy.selectorStage (m + 1)
+Classicism.Meta.ChoiceBoolean.FiniteChoice.adjacent_selector_countermodel (m : ℕ) :
+  (ChoiceModel.model m).IsModel ∧
+    (ChoiceModel.model m).HoldsAx (Classicism.Meta.ChoiceHierarchy.selectorStage m) ∧
+      ¬(ChoiceModel.model m).HoldsSentence
+          (Classicism.ChoiceHierarchy.NecSelector.quoted (Classicism.Meta.ChoiceHierarchy.tower (m + 1)))
+'Classicism.Meta.ChoiceBoolean.ChoiceModel.isModel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.ChoiceBoolean.FiniteChoice.holds_boxed_functionalChoice' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceBoolean.FiniteChoice.fails_boxed_selector' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceBoolean.FiniteChoice.finite_boxed_countermodel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceBoolean.FiniteChoice.finite_unboxed_countermodel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceBoolean.FiniteChoice.boxed_finite_fragment_gap' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceBoolean.FiniteChoice.unboxed_finite_fragment_gap' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceBoolean.FiniteChoice.boxed_not_finitely_axiomatizable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceBoolean.FiniteChoice.unboxed_not_finitely_axiomatizable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceBoolean.FiniteChoice.selector_stage_strict' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceBoolean.FiniteChoice.adjacent_selector_countermodel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

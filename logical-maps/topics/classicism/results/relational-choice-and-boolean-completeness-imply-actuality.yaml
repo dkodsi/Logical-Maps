@@ -1,0 +1,26 @@
+id: relational-choice-and-boolean-completeness-imply-actuality
+premises:
+- relational-choice-r
+- boolean-completeness-r
+conclusion: actuality
+status: proved
+certificate:
+  source_id: misc
+  produced_by: Codex (OpenAI), prompted by Daniel Kodsi
+  recorded_by: Codex (OpenAI), prompted by Daniel Kodsi
+  checked_by: []
+  date: '2026-10-23'
+  lean: stated
+  lean_ref: Classicism.Integration.Map.relational_choice_and_boolean_completeness_imply_actuality
+sources:
+- Codex (OpenAI), prompted by Daniel Kodsi, Relational Choice and Boolean Completeness imply Actuality,
+  22 October 2026, §§1–7 (unpaginated); frozen submission F01.
+source_names:
+- Kodsi research, 22–23 Oct 2026
+proof: BC_tt makes evaluation preserve represented joins and ensures that a true disjoint join has a true
+  member. RC_(t,t) gives a progressive operation selecting a nonzero false part of any nonzero remainder
+  under failure of Actuality. The bare-C fixed-point argument produces a disjoint refinement of the falsehoods
+  with join top, contradicting disjoint-join reflection. The write-up proves the guarded fixed-point step
+  and the sharp local reduction.
+notes: The sharp certificate needs only unboxed RC_(t,t) and BC_tt. The map edge states the all-type consequence.
+  Neither ND nor BF nor Plenitude nor future choice/completeness is assumed.

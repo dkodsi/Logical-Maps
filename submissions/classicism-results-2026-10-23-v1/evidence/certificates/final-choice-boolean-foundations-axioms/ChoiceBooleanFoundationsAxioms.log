@@ -1,0 +1,68 @@
+Classicism.Meta.ChoiceBoolean.EqualitySpace.{u, v} (B : Type u) [CompleteBooleanAlgebra B] : Type (max u (v + 1))
+Classicism.Meta.ChoiceBoolean.predicateSpace.{u, v} {B : Type u} [CompleteBooleanAlgebra B] (X : EqualitySpace B) :
+  EqualitySpace B
+Classicism.Meta.ChoiceBoolean.eval_subst.{u, v} {B : Type u} [CompleteBooleanAlgebra B] {X : EqualitySpace B}
+  (f g : Predicate X) (x y : X.Carrier) : (predicateSpace X).eqv f g ⊓ X.eqv x y ⊓ f.toFun x ≤ g.toFun y
+Classicism.Meta.ChoiceBoolean.Predicate.forallRight.{u, v, w} {B : Type u} [CompleteBooleanAlgebra B]
+  {X : EqualitySpace B} {Y : EqualitySpace B} (f : Predicate (prod X Y)) : Predicate X
+Classicism.Meta.ChoiceBoolean.Predicate.existsRight.{u, v, w} {B : Type u} [CompleteBooleanAlgebra B]
+  {X : EqualitySpace B} {Y : EqualitySpace B} (f : Predicate (prod X Y)) : Predicate X
+Classicism.Meta.ChoiceBoolean.ConditionCompletion.regularCompleteBooleanAlgebra.{u} (A : Type u) [Order.Frame A] :
+  CompleteBooleanAlgebra (Heyting.Regular A)
+Classicism.Meta.ChoiceBoolean.ConditionCompletion.dense_cone.{u} (P : Type u) [Preorder P]
+  (b : ConditionCompletion.Algebra P) (hb : b ≠ ⊥) : ∃ p, ConditionCompletion.cone P p ≤ b
+Classicism.Meta.ChoiceBoolean.ConditionCompletion.cone_compatible_iff.{u} (P : Type u) [Preorder P] (p q : P) :
+  ConditionCompletion.cone P p ⊓ ConditionCompletion.cone P q ≠ ⊥ ↔ ∃ r ≤ p, r ≤ q
+Classicism.Meta.ChoiceBoolean.ConditionCompletion.map_cone.{u, v} {P : Type u} {Q : Type v} [Preorder P] [Preorder Q]
+  (f : P ≃o Q) (p : P) : (ConditionCompletion.map f) (ConditionCompletion.cone P p) = ConditionCompletion.cone Q (f p)
+Classicism.Meta.ChoiceBoolean.ColumnConditions.Condition.{u} (κ : Cardinal.{u}) : Type u
+Classicism.Meta.ChoiceBoolean.ColumnConditions.permutationOrderIso.{u} {κ : Cardinal.{u}}
+  (σ : Equiv.Perm (Quotient.out κ)) : ColumnConditions.Condition κ ≃o ColumnConditions.Condition κ
+Classicism.Meta.ChoiceBoolean.ColumnConditions.fresh_amalgam_avoiding.{u} {κ : Cardinal.{u}} (hκ : Cardinal.aleph0 ≤ κ)
+  (p : ColumnConditions.Condition κ) (s : Set (Quotient.out κ)) (hs : Cardinal.mk ↑s < κ) (i : Quotient.out κ) :
+  ∃ j ∉ s, j ≠ i ∧ ∃ q ≤ p, q ≤ ColumnConditions.transpose i j p
+Classicism.Meta.ChoiceBoolean.supportedPredicateSpace.{u, z, u_1} {K : Type z} {B : Type u} [CompleteBooleanAlgebra B]
+  {a : BooleanAction K B} (X : ActionSpace a) : ActionSpace a
+Classicism.Meta.ChoiceBoolean.supportedSectionLeft_congr.{u, z, u_1, u_2} {K : Type z} {B : Type u}
+  [CompleteBooleanAlgebra B] {a : BooleanAction K B} (X : ActionSpace a) (Y : ActionSpace a)
+  (f g : SupportedPredicate (X.product Y)) (x y : X.space.Carrier) (hx : X.action.FinitelySupported x)
+  (hy : X.action.FinitelySupported y) :
+  (supportedPredicateSpace (X.product Y)).space.eqv f g ⊓ X.space.eqv x y ≤
+    (supportedPredicateSpace Y).space.eqv (supportedSectionLeft X Y f x hx) (supportedSectionLeft X Y g y hy)
+Classicism.Meta.ChoiceBoolean.supportedEvaluation.{u, z, u_1} {K : Type z} {B : Type u} [CompleteBooleanAlgebra B]
+  {a : BooleanAction K B} (X : ActionSpace a) : SupportedPredicate ((supportedPredicateSpace X).product X)
+Classicism.Meta.ChoiceBoolean.FirstOrderSemantics.value_congr.{u, v, uL, vL, uA} {B : Type u} [CompleteBooleanAlgebra B]
+  {X : EqualitySpace B} {L : FirstOrder.Language} [L.IsRelational] (M : FirstOrderSemantics.Structure X L) {α : Type uA}
+  {n : ℕ} (φ : L.BoundedFormula α n) (v w : α → X.Carrier) (xs ys : Fin n → X.Carrier) (q : B) :
+  (∀ (a : α), q ≤ X.eqv (v a) (w a)) →
+    (∀ (i : Fin n), q ≤ X.eqv (xs i) (ys i)) →
+      q ≤ iffValue (FirstOrderSemantics.value M φ v xs) (FirstOrderSemantics.value M φ w ys)
+Classicism.Meta.ChoiceBoolean.FirstOrderSemantics.exists_positive_witness.{u, v, uL, vL, uA} {B : Type u}
+  [CompleteBooleanAlgebra B] {X : EqualitySpace B} {L : FirstOrder.Language} [L.IsRelational]
+  (M : FirstOrderSemantics.Structure X L) {α : Type uA} {n : ℕ} (φ : L.BoundedFormula α (n + 1)) (v : α → X.Carrier)
+  (xs : Fin n → X.Carrier) {p : B} (h : p ⊓ FirstOrderSemantics.value M φ.ex v xs ≠ ⊥) :
+  ∃ x, p ⊓ FirstOrderSemantics.value M φ v (Fin.snoc xs x) ≠ ⊥
+'Classicism.Meta.ChoiceBoolean.predicateSpace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.ChoiceBoolean.eval_subst' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.ChoiceBoolean.ConditionCompletion.dense_cone' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceBoolean.ConditionCompletion.cone_compatible_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceBoolean.ConditionCompletion.map_cone' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.ChoiceBoolean.ColumnConditions.permutationOrderIso' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceBoolean.ColumnConditions.fresh_amalgam_avoiding' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceBoolean.supportedPredicateSpace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.ChoiceBoolean.supportedSectionLeft_congr' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.ChoiceBoolean.supportedEvaluation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.ChoiceBoolean.FirstOrderSemantics.value_congr' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceBoolean.FirstOrderSemantics.exists_positive_witness' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

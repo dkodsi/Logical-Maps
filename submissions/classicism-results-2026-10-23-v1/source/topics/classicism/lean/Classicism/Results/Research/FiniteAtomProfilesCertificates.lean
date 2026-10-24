@@ -1,0 +1,12 @@
+import Classicism.Results.Research.FiniteAtomProfiles
+import Classicism.Results.Research.FiniteProfilesCertificates
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Translate
+
+#classicism_audit Classicism.Results.Research.FiniteAtomProfiles
+#classicism_types_audit Classicism.Results.Research.FiniteAtomProfiles
+#classicism_derive_audit Classicism.Results.Research.FiniteAtomProfiles
+
+#print axioms Classicism.Research.FiniteAtomProfiles.finite_atoms_iff_propositions.derivable
+#print axioms Classicism.Research.FiniteAtomProfiles.raw_uwr_infinity_base_iff_propositions.derivable

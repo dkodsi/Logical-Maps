@@ -1,0 +1,60 @@
+Classicism.Research.Analytic.agree_on_one_iff: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Analytic.agree_on_three_iff: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Analytic.agree_on_two_iff: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Analytic.analytic_necessitism_three: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.Analytic.domain2_persistent: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Analytic.domain2_weakly_persistent: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Analytic.domain3_persistent: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Analytic.domain3_weakly_persistent: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Analytic.power_family_persistent: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Analytic.power_family_represents: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.Analytic.power_family_rigid: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.Analytic.power_family_weakly_persistent: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.Analytic.represented_power: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.Analytic.restricted_coext_agrees: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.Analytic.supported_rigid_necessary: Classicism ✓ [C⁻] (axioms: [])
+#classicism_audit Classicism.Results.Research.AnalyticRepresentedPowers: 15/15 theorems pass; 15 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.AnalyticRepresentedPowers: 15/15 inside R
+Classicism.Research.Analytic.agree_on_one_iff ⟶ Classicism.Research.Analytic.agree_on_one_iff.derivable : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axiomsMinus
+    (Classicism.Meta.Term.forall' (Classicism.Meta.Term.forall' (Classicism.Meta.Term.forall' ⋯)))
+derived ✓ in C⁻
+Classicism.Research.Analytic.agree_on_two_iff ⟶ Classicism.Research.Analytic.agree_on_two_iff.derivable : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axiomsMinus
+    (Classicism.Meta.Term.forall' (Classicism.Meta.Term.forall' (Classicism.Meta.Term.forall' ⋯)))
+derived ✓ in C⁻
+Classicism.Research.Analytic.agree_on_three_iff ⟶ Classicism.Research.Analytic.agree_on_three_iff.derivable : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axiomsMinus
+    (Classicism.Meta.Term.forall' (Classicism.Meta.Term.forall' (Classicism.Meta.Term.forall' ⋯)))
+derived ✓ in C⁻
+Classicism.Research.Analytic.represented_power ⟶ Classicism.Research.Analytic.represented_power.derivable : ∀
+  (ρ' : Classicism.Meta.RTy),
+  Classicism.Meta.Theorem Classicism.Meta.C.axiomsMinus
+    (Classicism.Meta.Term.imp (Classicism.Meta.Term.box (Classicism.Meta.Term.forall' ⋯))
+      (Classicism.Meta.Term.imp (Classicism.Meta.Term.box ⋯) (Classicism.Meta.Term.forall' ⋯)))
+derived ✓ in C⁻
+Classicism.Research.Analytic.domain2_persistent ⟶ Classicism.Research.Analytic.domain2_persistent.derivable : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axiomsMinus
+    (Classicism.Meta.Term.forall' (Classicism.Meta.Term.imp ⋯.box ⋯.box))
+derived ✓ in C⁻
+Classicism.Research.Analytic.domain3_persistent ⟶ Classicism.Research.Analytic.domain3_persistent.derivable : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axiomsMinus
+    (Classicism.Meta.Term.forall' (Classicism.Meta.Term.imp ⋯.box ⋯.box))
+derived ✓ in C⁻
+Classicism.Research.Analytic.analytic_necessitism_three ⟶ Classicism.Research.Analytic.analytic_necessitism_three.derivable : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axiomsMinus
+    (Classicism.Meta.Term.imp (Classicism.Meta.Term.box (Classicism.Meta.Term.forall' ⋯))
+      (Classicism.Meta.Term.imp (Classicism.Meta.Term.box ⋯) (Classicism.Meta.Term.imp ⋯ ⋯)))
+derived ✓ in C⁻
+'Classicism.Research.Analytic.represented_power.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.Analytic.domain2_persistent.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.Analytic.domain3_persistent.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.Analytic.analytic_necessitism_three.derivable' depends on axioms: [propext, Quot.sound]

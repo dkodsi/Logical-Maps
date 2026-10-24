@@ -1,0 +1,105 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "group.schema.json",
+ "title": "Model group",
+ "description": "What a family of models written as arguments would otherwise copy: a definition with {{parameter}} slots that each member fills, named conditions stated in prose, and shared arguments, arguments that apply to every member whose settings match `when` and that meets every condition in `requires`. Kept in topics/<topic>/groups/<id>.yaml. Members stay in their own files and name the group. Nothing is inherited by default, and the engine never sees a group: the build expands each member's shared arguments into its arguments before flattening.",
+ "type": "object",
+ "additionalProperties": false,
+ "required": ["id", "name", "definition", "parameters", "arguments"],
+ "properties": {
+  "id": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "description": "Equals the file stem."},
+  "name": {"type": "string", "minLength": 1},
+  "definition": {"type": "string", "minLength": 1, "description": "The construction the members share. {{name}} marks where a parameter's setting goes; a member may add text of its own after it."},
+  "parameters": {
+   "type": "object",
+   "description": "The ways members differ. A parameter with named values is set to one of them, or to {text: ...} for prose of the member's own, which no `when` matches; a parameter without is a prose slot.",
+   "propertyNames": {"pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"},
+   "additionalProperties": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["text"],
+    "properties": {
+     "text": {"type": "string", "minLength": 1, "description": "What the parameter is."},
+     "generate": {"type": "boolean", "description": "Each member also gives a variant, a model of its own, for every other value whose requires it meets."},
+     "default": {"type": "string", "description": "A generated parameter's value for a member that sets none."},
+     "values": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {"pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"},
+      "additionalProperties": {"oneOf": [
+       {"type": "string", "minLength": 1, "description": "The prose this value puts in the definition."},
+       {"type": "object", "additionalProperties": false, "required": ["text"], "properties": {
+        "text": {"type": "string", "minLength": 1, "description": "The prose this value puts in the definition."},
+        "label": {"type": "string", "minLength": 1, "description": "A few words naming the value in a variant's name."},
+        "requires": {"type": "array", "items": {"type": "string"}, "uniqueItems": true, "description": "Conditions a member must meet to take this value."},
+        "choiceless": {"type": "boolean", "description": "The value reads the construction in a metatheory without the axiom of choice: a model or variant at it gets only the arguments marked choice: free, and no Lean certificates."},
+        "meets": {"type": "object", "additionalProperties": {"type": "string", "minLength": 1}, "description": "Conditions (the group's or the topic's) every model at this value meets, with the reason."}
+       }}
+      ]}
+     }
+    }
+   }
+  },
+  "conditions": {
+   "type": "array",
+   "description": "Named properties a member may have, stated in prose. A member claims one under `meets`, with its reason.",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["id", "text"],
+    "properties": {
+     "id": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"},
+     "text": {"type": "string", "minLength": 1},
+     "lean": {"type": "string", "pattern": "\\S", "description": "The condition in Lean: a predicate on what the group's lean.binder binds, applied as `<lean> <var>`."}
+    }
+   }
+  },
+  "lean": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": ["binder", "var", "model", "is_model"],
+   "description": "The group's construction in Lean, for its shared arguments and its members' verdicts: a member is the Lean model at a value of `var`.",
+   "properties": {
+    "binder": {"type": "string", "description": "What a statement about every member binds, e.g. `(M : Type) [Monoid M]`."},
+    "var": {"type": "string", "description": "The bound variable that a member's lean.param fills."},
+    "model": {"type": "string", "description": "The Lean model, with {param} for the variable."},
+    "is_model": {"type": "string", "description": "A proof that it is a model, with {param}."},
+    "settings": {"type": "object", "additionalProperties": {"type": "string"}, "description": "The parameter values the Lean construction is at: members and shared arguments at other values are not covered."},
+    "meets": {"type": "object", "additionalProperties": {"type": "string"}, "description": "Conditions of the topic every member meets, each with a proof of its predicate for the model, with {param}."}
+   }
+  },
+  "meets": {"type": "object", "additionalProperties": {"oneOf": [
+   {"type": "string", "minLength": 1},
+   {"type": "object", "additionalProperties": false, "required": ["text", "requires"], "properties": {
+    "text": {"type": "string", "minLength": 1},
+    "requires": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true}}}
+  ]}, "description": "Conditions of the topic (conditions.yaml) every member meets, with the reason; or, given as {text, requires}, those that the members meeting `requires` meet."},
+  "arguments": {"type": "array", "items": {"$ref": "#/$defs/shared_argument"}},
+  "notes": {"type": "string", "description": "Text that supports no verdict."},
+  "references": {}
+ },
+ "$defs": {
+  "applies": {
+   "properties": {
+    "lean": {"type": "array", "minItems": 1, "description": "The argument's verdicts proved in Lean: each a theorem that every model meeting the argument's conditions (and holding its `given` principles) has the verdict, stated from the topic's lean.argument templates, or for a group's argument over its lean.binder.", "items": {"type": "object", "additionalProperties": false, "required": ["ref"], "oneOf": [{"required": ["holds"]}, {"required": ["fails"]}], "properties": {"holds": {"type": "string"}, "fails": {"type": "string"}, "ref": {"type": "string", "pattern": "\\S", "description": "The certificate, a declaration whose type is the generated statement."}}}},
+    "when": {
+     "type": "object",
+     "description": "A conjunction over parameters with named values; a list of values within one means any of them.",
+     "additionalProperties": {
+      "oneOf": [
+       {"type": "string"},
+       {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true}
+      ]
+     }
+    },
+    "requires": {
+     "type": "array",
+     "items": {"type": "string"},
+     "uniqueItems": true,
+     "description": "Conditions every member it applies to meets."
+    }
+   }
+  },
+  "shared_argument": {}
+ }
+}

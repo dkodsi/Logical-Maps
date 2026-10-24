@@ -1,0 +1,84 @@
+import Classicism.Results.Research.InfinitaryComprehensionCardinalClosure
+import Classicism.Results.Research.InfinitaryComprehensionCountermodels
+import Classicism.Results.Research.InfinitaryComprehensionFiniteBridge
+import Classicism.Results.Research.InfinitaryComprehensionNominalStrictness
+import Classicism.Results.Research.InfinitaryComprehensionObserversCertificates
+import Classicism.Results.Research.InfinitaryComprehensionOriginalRepresentation
+import Classicism.Results.Research.InfinitaryComprehensionStrictnessModel
+
+/-! Consolidated principal axiom audit for the existing infinitary package.
+This file adds no theorem, premise, model or derivation. The exact semantic
+scope and parameter/universe boundaries are recorded in the companion checklist.
+A successful import does not by itself establish absence of sorryAx; compare
+all 56 printed reports with the checklist and require the expected axiom sets. -/
+
+set_option pp.maxSteps 100
+set_option stderrAsMessages false
+set_option Elab.async false
+
+#eval (do
+  let out ← IO.getStderr
+  out.putStrLn "Infinitary principal audit: seven leaves imported; begin 56 reports"
+  out.flush : IO Unit)
+
+#print axioms Classicism.Research.InfinitaryComprehension.CardinalClosure.short_family_bounded
+#print axioms Classicism.Research.InfinitaryComprehension.CardinalClosure.exists_closed_elementarySubstructure
+#print axioms Classicism.Research.InfinitaryComprehension.CardinalClosure.exists_short_sequence_closed_elementarySubstructure
+#print axioms Classicism.Research.InfinitaryComprehension.Countermodels.surjection_comprehension_barcan_not_nd
+#print axioms Classicism.Research.InfinitaryComprehension.Countermodels.idempotent_comprehension_not_barcan
+#print axioms Classicism.Research.InfinitaryComprehension.Countermodels.idempotent_comprehension_not_nd
+#print axioms Classicism.Research.InfinitaryComprehension.FiniteBridge.embed_rename
+#print axioms Classicism.Research.InfinitaryComprehension.FiniteBridge.embed_subst
+#print axioms Classicism.Research.InfinitaryComprehension.FiniteBridge.embed_inst
+#print axioms Classicism.Research.InfinitaryComprehension.FiniteBridge.eval_embed
+#print axioms Classicism.Research.InfinitaryComprehension.FiniteBridge.finite_comprehension
+#print axioms Classicism.Research.InfinitaryComprehension.FiniteBridge.sequent_at_iff
+#print axioms Classicism.Research.InfinitaryComprehension.Nominal.RegularBound.assignment_supported
+#print axioms Classicism.Research.InfinitaryComprehension.Nominal.RegularBound.bounded_comprehension
+#print axioms Classicism.Research.InfinitaryComprehension.Nominal.RegularBound.colour_not_supported
+#print axioms Classicism.Research.InfinitaryComprehension.Nominal.RegularBound.colour_comprehension_false
+#print axioms Classicism.Research.InfinitaryComprehension.Nominal.RegularBound.fixed_bound_strictness
+#print axioms Classicism.Research.InfinitaryComprehension.Nominal.RegularBound.comprehension_of_occurrence_bound
+#print axioms Classicism.Research.InfinitaryComprehension.Nominal.RegularBound.finite_occurrence_comprehension
+#print axioms Classicism.Research.InfinitaryComprehension.Nominal.RegularBound.finite_branching_comprehension
+#print axioms Classicism.Research.InfinitaryComprehension.Nominal.RegularBound.occurrence_fixed_bound_strictness
+#print axioms Classicism.Research.InfinitaryComprehensionObservers.equality_separation_c5.derivable
+#print axioms Classicism.Research.InfinitaryComprehensionObservers.atomicity_equality_separation_iff_c5.derivable
+#print axioms Classicism.Research.InfinitaryComprehensionObservers.atomicity_logical_separation_nd_iff_c5.derivable
+#print axioms Classicism.Research.InfinitaryComprehension.Canonical.originalModel_domain
+#print axioms Classicism.Research.InfinitaryComprehension.Canonical.originalModel_truth
+#print axioms Classicism.Research.InfinitaryComprehension.Canonical.original_full_standard_representation
+#print axioms Classicism.Research.InfinitaryComprehension.Canonical.originalModel_full_functions
+#print axioms Classicism.Research.InfinitaryComprehension.Canonical.originalModel_full_propositions
+#print axioms Classicism.Research.InfinitaryComprehension.Strictness.Expansion.model
+#print axioms Classicism.Research.InfinitaryComprehension.Strictness.Expansion.faithful
+#print axioms Classicism.Research.InfinitaryComprehension.Strictness.Expansion.relation_atomicity
+#print axioms Classicism.Research.InfinitaryComprehension.Strictness.Expansion.profile_atomic
+#print axioms Classicism.Research.InfinitaryComprehension.Strictness.Expansion.c_theorem_holds
+#print axioms Classicism.Research.InfinitaryComprehension.Strictness.Expansion.not_comp
+#print axioms Classicism.Research.InfinitaryComprehension.Strictness.reduct_certificate
+#print axioms Classicism.Research.InfinitaryComprehension.Strictness.exists_strictness_certificate
+#print axioms Classicism.Research.InfinitaryComprehension.Strictness.exists_atomic_modal_collapse_not_comp
+#print axioms Classicism.Research.InfinitaryComprehension.Term.full_comprehension
+#print axioms Classicism.Research.InfinitaryComprehension.full_coext_intensionality
+#print axioms Classicism.Research.InfinitaryComprehension.Term.eval_C5
+#print axioms Classicism.Research.InfinitaryComprehension.Canonical.closed_proposition_atomicity
+#print axioms Classicism.Research.InfinitaryComprehension.Canonical.closed_proposition_actuality
+#print axioms Classicism.Research.InfinitaryComprehension.Canonical.action_holds_atomicity
+#print axioms Classicism.Research.InfinitaryComprehension.Canonical.action_holds_rigid_comprehension
+#print axioms Classicism.Research.InfinitaryComprehension.Nominal.eval_parameter_congr
+#print axioms Classicism.Research.InfinitaryComprehension.Nominal.Hierarchy.comprehension_of_supported_evaluation
+#print axioms Classicism.Research.InfinitaryComprehensionObservers.logical_separation_barcan.derivable
+#print axioms Classicism.Research.InfinitaryComprehensionObservers.equality_separation_logical.derivable
+#print axioms Classicism.Research.InfinitaryComprehensionObservers.equality_separation_barcan.derivable
+#print axioms Classicism.Research.InfinitaryComprehensionObservers.equality_separation_nd.derivable
+#print axioms Classicism.Research.InfinitaryComprehensionObservers.logical_separation_nd_c5.derivable
+#print axioms Classicism.Research.InfinitaryComprehensionObservers.logical_separation_nd_necessary_nd.derivable
+#print axioms Classicism.Research.InfinitaryComprehensionObservers.equality_separation_necessary_nd.derivable
+#print axioms Classicism.Research.InfinitaryComprehensionObservers.c5_atomicity_equality_separation.derivable
+#print axioms Classicism.Research.InfinitaryComprehensionObservers.c5_atomicity_logical_separation.derivable
+
+#eval (do
+  let out ← IO.getStderr
+  out.putStrLn "Infinitary principal audit: 56 reports complete"
+  out.flush : IO Unit)

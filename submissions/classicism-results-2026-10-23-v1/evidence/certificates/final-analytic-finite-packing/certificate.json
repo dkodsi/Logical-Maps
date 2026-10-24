@@ -1,0 +1,115 @@
+{
+  "id": "final-analytic-finite-packing",
+  "source_manifest_origin": "research/2026-10-22/lean-formalization/checks/20261023T230529323631Z-5671f948.json",
+  "source_manifest_path": "evidence/certificates/final-analytic-finite-packing/original-manifest.json",
+  "source_manifest_sha256": "5a9a7f44f30274e1e19a9b11ed0a3a8c556b87f0c0592ad58537b6ce0cfd3eb7",
+  "run_id": "20261023T230529323631Z-5671f948",
+  "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "compiler_sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554",
+  "precompiled_sha256": "2d246141fa46907725d81838f7c3a7150742ef9bb592d2baf1d0c9aa6167a1ab",
+  "selected_targets": [
+    "Classicism.Results.Research.AnalyticFinitePacking"
+  ],
+  "selected_targets_exit_code": 0,
+  "original_run_state": "failed",
+  "original_run_exit_code": 1,
+  "sources": [
+    {
+      "module": "Classicism.Syntax.Types",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Types.lean",
+      "sha256": "567828e8f9a707cf635e3b4fb30bc868a419967307613d0686d795d195606eac",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Types.lean",
+      "fingerprint": "f920c6417fb0d73d4b6cb333a5de66a5647023a45396e3a09a0b7e943245c8cf",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Syntax.Term",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Term.lean",
+      "sha256": "ad5172acbb74eaab9307662408928b80e6ffab62e14df16f2f41c7205de13f69",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Term.lean",
+      "fingerprint": "19fcc526fbf7a5f30c841e2fb11bd4cc6c4c8c77eddfb46e22a81b795035e2d5",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Syntax.Conversion",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Conversion.lean",
+      "sha256": "c22fe48399811fcb0d71b37206c633749a7285291c62c2e7d786475ea6ae339e",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Conversion.lean",
+      "fingerprint": "98d38a7cbaf85616553560abf68733b885806aebd405d33965c1dc960da57f67",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Syntax.Derivation",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Derivation.lean",
+      "sha256": "7cc2fd01542014d55e5a4c4a411724db7cdc076462d0de724c3530b0a8a3fc6b",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Derivation.lean",
+      "fingerprint": "061b31ce6eb4dec06fa11b50e1a6c035783c2a4995cd0969cc86efba8ddcaddc",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Syntax.Blocks",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Blocks.lean",
+      "sha256": "77b4ef8fadb3646edd15d25854bac994a6eabb8bb1f51347c9dd00fce3a6ac5d",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Blocks.lean",
+      "fingerprint": "8f619648c1c389b21f3ef2a40567f20862d30330a0620404a743ae921b4637a2",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.AnalyticFinitePacking",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AnalyticFinitePacking.lean",
+      "sha256": "c67b8bc35f87a60403e19c1057d3f6e438783654aa88c5acc9b2af6666798b15",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/AnalyticFinitePacking.lean",
+      "fingerprint": "05d1ef2659d904ca0cf246eebfe76832a3455aa15ece35c8b3c466431b3d5179",
+      "module_exit_code": 0,
+      "reused_at_run": false
+    }
+  ],
+  "logs": [
+    {
+      "module": "Classicism.Results.Research.AnalyticFinitePacking",
+      "path": "evidence/certificates/final-analytic-finite-packing/Classicism_Results_Research_AnalyticFinitePacking.log",
+      "sha256": "e3403852effdbb07704312f50956de4bb7c22232f7ecac81a46892745f463a13",
+      "audit_run_id": "20261023T230529323631Z-5671f948"
+    }
+  ],
+  "axiom_report_lines": [
+    "'Classicism.Meta.Analytic.Predicates.pack_of_exists' depends on axioms: [propext, Quot.sound]",
+    "'Classicism.Meta.Analytic.existsBlock_conj_left' depends on axioms: [propext, Quot.sound]"
+  ],
+  "result_entries": [
+    "ANALYTIC-RIGIDIFICATION"
+  ],
+  "scope": "Accepted analytic vocabulary, quotation, tuple-domain, packing or power-existence components. The arbitrary finite-arity schema has its separate final certificate.",
+  "verification": "Exact captured dependency sources, successful target records and saved principal logs checked. An accepted component without a printed principal axiom list is recorded only at that scope. No compiler invocation or database verification-flag change.",
+  "endpoint_assessments": [
+    {
+      "module": "Classicism.Results.Research.AnalyticFinitePacking",
+      "explicit_principal_axiom_audit": true,
+      "principal_axiom_audit": [
+        {
+          "declaration": "Classicism.Meta.Analytic.Predicates.pack_of_exists",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Classicism.Meta.Analytic.existsBlock_conj_left",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "translation_audits": [],
+      "gate_and_type_audits": []
+    }
+  ],
+  "source_manifest_original_sha256": "cd81d7c67c34f3f411f8da0a2a68f8b6703737ec0ef1cd5f12d01b7764ae975b",
+  "source_manifest_normalization": "Portable paths and omission of research coordination metadata; theorem/source hashes and check verdicts preserved."
+}

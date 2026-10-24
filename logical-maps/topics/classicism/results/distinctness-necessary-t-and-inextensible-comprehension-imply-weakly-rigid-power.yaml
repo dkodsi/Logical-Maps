@@ -1,0 +1,47 @@
+id: distinctness-necessary-t-and-inextensible-comprehension-imply-weakly-rigid-power
+premises:
+- distinctness-necessary-t
+- inextensible-comprehension-r
+conclusion: weakly-rigid-power-r
+status: proved
+certificate:
+  source_id: misc
+  produced_by: Codex (OpenAI), prompted by Daniel Kodsi, original derivation of 22 October 2026
+  recorded_by: Codex (OpenAI), prompted by Daniel Kodsi, 23 October 2026
+  checked_by: []
+  date: '2026-10-23'
+  lean: none
+sources:
+- Codex (OpenAI), prompted by Daniel Kodsi, Necessary distinctness and Inextensible
+  Comprehension imply Weakly Rigid Power, research note of 22 October 2026, §§1–6,
+  unpaginated; retained in submissions/classicism-results-2026-10-23-v1/source/research/2026-10-22/notes/nd-inextensible-comprehension-implies-weak-power.md.
+source_names:
+- Codex, prompted by Daniel Kodsi, 22 Oct
+references:
+- paper: bacon-dorr-classicism
+  role: background
+  locator: Proposition 2.2, p. 22; §2.3, n. 38, p. 29
+  note: Definitions of propositional ND and Inextensible Comprehension, not a source
+    for the present implication.
+proof: >-
+  See the matching write-up,
+  writeups/distinctness-necessary-t-and-inextensible-comprehension-imply-weakly-rigid-power.md.
+  Under current ND at type $t$, a persistent relation whose members are necessarily
+  internally separated equals any current inextensible coextension. A product argument
+  supplies the required separation for weakly rigid relations. Inextensible Comprehension
+  at $\tau t$ descends to $\tau$ by taking unions of inextensible coextensions of
+  singleton families, and therefore makes current weakly rigid $F^\tau$ rigid.
+  The same higher comprehension instance makes the family of rigid subrelations of $F$
+  rigid. Bounded propagation within $F$ shows at every reached world that its weakly
+  rigid subrelations are rigid. The weak-power family is consequently identical to
+  the rigid-power family and is rigid, hence weakly rigid.
+notes: >-
+  For each relational $\tau$, the sharper implication uses only ND at $t$ and
+  Inextensible Comprehension at $\tau t$ to obtain Weakly Rigid Power at $\tau$.
+  IC in the source note means Inextensible Comprehension, not Intensional Choice.
+  No BF, Atomicity, Boolean Completeness, Rigid Comprehension, or boxed optional premise
+  is assumed. The proof supplies the necessary separation and bounded future tameness
+  explicitly; it does not assume that unboxed Tame Rigidity and Rigid Power alone
+  suffice. The submission catalog, rigidity.09, separately records the research check
+  of InextensibleWeakPowerCertificates under manifest 20261023T022700791873Z.
+  No generated-statement certificate is claimed for this new database record.

@@ -1,0 +1,59 @@
+Probability NumericAddition [mono_ms=16477094]: imports complete
+Probability NumericAddition [mono_ms=16477102]: begin gate audit
+Probability NumericAddition [mono_ms=16477492]: gate audit returned
+Probability NumericAddition [mono_ms=16477499]: begin type-system audit
+Probability NumericAddition [mono_ms=16477781]: type-system audit returned
+Probability NumericAddition [mono_ms=16477789]: begin derive Classicism.Research.ProbabilityNumericOperations.plus_zero_left
+Probability NumericAddition [mono_ms=16488058]: derive returned Classicism.Research.ProbabilityNumericOperations.plus_zero_left
+Probability NumericAddition [mono_ms=16488067]: begin derive Classicism.Research.ProbabilityNumericOperations.plus_suc_left
+Probability NumericAddition [mono_ms=16528121]: derive returned Classicism.Research.ProbabilityNumericOperations.plus_suc_left
+Probability NumericAddition [mono_ms=16528137]: begin derive Classicism.Research.ProbabilityNumericOperations.plus_comm
+Probability NumericAddition [mono_ms=16550464]: derive returned Classicism.Research.ProbabilityNumericOperations.plus_comm
+Probability NumericAddition Basic [mono_ms=16550475]: all commands complete; frontend finalization remains
+Classicism.Research.ProbabilityNumericOperations.plus_assoc: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.ProbabilityNumericOperations.plus_cancel_left: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.ProbabilityNumericOperations.plus_cancel_right: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.ProbabilityNumericOperations.plus_comm: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.ProbabilityNumericOperations.plus_eq_zero: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.ProbabilityNumericOperations.plus_left_comm: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.ProbabilityNumericOperations.plus_suc_left: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.ProbabilityNumericOperations.plus_zero_left: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+#classicism_audit Classicism.Results.Research.AtomicProbabilityNumericAddition: 8/8 theorems pass; 8 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.AtomicProbabilityNumericAddition: 8/8 inside R
+Classicism.Research.ProbabilityNumericOperations.plus_zero_left ⟶ Classicism.Research.ProbabilityNumericOperations.plus_zero_left.derivable : ∀
+  (σ' : ⋯),
+  Classicism.Meta.Theorem Classicism.Meta.C.axiomsMinus
+    (Classicism.Meta.Term.forall'
+      (Classicism.Meta.Term.imp
+        ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).conj (Classicism.Meta.Term.forall' (⋯.imp ⋯))) ⋯))
+derived ✓ in C⁻
+Classicism.Research.ProbabilityNumericOperations.plus_suc_left ⟶ Classicism.Research.ProbabilityNumericOperations.plus_suc_left.derivable : ∀
+  (σ' : ⋯),
+  Classicism.Meta.Theorem Classicism.Meta.C.axiomsMinus
+    (Classicism.Meta.Term.forall'
+      (Classicism.Meta.Term.imp
+        ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).conj (Classicism.Meta.Term.forall' (⋯.imp ⋯))) ⋯))
+derived ✓ in C⁻
+Classicism.Research.ProbabilityNumericOperations.plus_comm ⟶ Classicism.Research.ProbabilityNumericOperations.plus_comm.derivable : ∀
+  (σ' : ⋯),
+  Classicism.Meta.Theorem Classicism.Meta.C.axiomsMinus
+    (Classicism.Meta.Term.forall'
+      (Classicism.Meta.Term.imp
+        ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).conj (Classicism.Meta.Term.forall' (⋯.imp ⋯))) ⋯))
+derived ✓ in C⁻

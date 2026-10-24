@@ -1,0 +1,14 @@
+'Classicism.Meta.Research.FiniteTypeDescent.finite_arrow_implies_finite_input' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.Research.FiniteTypeDescent.finite_arrow_implies_finite_output' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.Research.FiniteTypeDescent.finiteness_implies_base_requirements' depends on axioms: [propext,
+ Quot.sound]
+'Classicism.Meta.Research.FiniteTypeDescent.functionality_base_requirements_imply_finiteness' depends on axioms: [propext,
+ Quot.sound]
+'Classicism.Meta.Research.FiniteTypeDescent.finite_e_free_type_implies_finite_t' depends on axioms: [propext,
+ Quot.sound]
+'Classicism.Meta.Research.FiniteTypeDescent.functionality_finite_t_implies_finite_e_free_type' depends on axioms: [propext,
+ Quot.sound]
+'Classicism.Meta.Research.FiniteTypeDescent.finite_e_containing_type_implies_finite_bases' depends on axioms: [propext,
+ Quot.sound]
+'Classicism.Meta.Research.FiniteTypeDescent.functionality_finite_bases_imply_finite_e_containing_type' depends on axioms: [propext,
+ Quot.sound]

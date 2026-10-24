@@ -1,0 +1,175 @@
+{
+  "id": "final-coalesced-base",
+  "source_manifest_origin": "research/2026-10-22/lean-formalization/checks/20261024T011635617504Z-ab0bd282.json",
+  "source_manifest_path": "evidence/certificates/final-coalesced-base/original-manifest.json",
+  "source_manifest_sha256": "4367910842434ab477e15d3c2f3086bbda8eeda96cb8783c7ea7ed3af155f10c",
+  "run_id": "20261024T011635617504Z-ab0bd282",
+  "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "compiler_sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554",
+  "precompiled_sha256": "2d246141fa46907725d81838f7c3a7150742ef9bb592d2baf1d0c9aa6167a1ab",
+  "selected_targets": [
+    "Classicism.Models.CoalescedBase"
+  ],
+  "selected_targets_exit_code": 0,
+  "original_run_state": "failed",
+  "original_run_exit_code": 124,
+  "sources": [
+    {
+      "module": "Classicism.Syntax.Types",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Types.lean",
+      "sha256": "567828e8f9a707cf635e3b4fb30bc868a419967307613d0686d795d195606eac",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Types.lean",
+      "fingerprint": "f920c6417fb0d73d4b6cb333a5de66a5647023a45396e3a09a0b7e943245c8cf",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Syntax.Term",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Term.lean",
+      "sha256": "ad5172acbb74eaab9307662408928b80e6ffab62e14df16f2f41c7205de13f69",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Term.lean",
+      "fingerprint": "19fcc526fbf7a5f30c841e2fb11bd4cc6c4c8c77eddfb46e22a81b795035e2d5",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Syntax.Conversion",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Conversion.lean",
+      "sha256": "c22fe48399811fcb0d71b37206c633749a7285291c62c2e7d786475ea6ae339e",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Conversion.lean",
+      "fingerprint": "98d38a7cbaf85616553560abf68733b885806aebd405d33965c1dc960da57f67",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Syntax.Derivation",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Derivation.lean",
+      "sha256": "7cc2fd01542014d55e5a4c4a411724db7cdc076462d0de724c3530b0a8a3fc6b",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Derivation.lean",
+      "fingerprint": "061b31ce6eb4dec06fa11b50e1a6c035783c2a4995cd0969cc86efba8ddcaddc",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Syntax.Axioms",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Axioms.lean",
+      "sha256": "f3dd3b51ef834f46f22e09fe34026f47120a8bc171afb190b5053c443f4a82a7",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Axioms.lean",
+      "fingerprint": "ddbcb4cf3a000255234e36d2ee2916e31b5fdb7a72f348dcefbd8c9d3ca7684a",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Syntax.Entailment",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Entailment.lean",
+      "sha256": "13f758dbf41a84dda7c2ae7adf6bcb9605ee114ce04dbda0efc5f1c4fbeabb1e",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Entailment.lean",
+      "fingerprint": "f670afd73a6fd66b3870be6129d27860b6752cbea6867b77f897d6c298a0bb17",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Semantics.Env",
+      "path": "source/topics/classicism/lean/Classicism/Semantics/Env.lean",
+      "sha256": "ca6f223a2bfe71396b3e21de852057e432cd7b289005cdacc1cc24935358e09d",
+      "original_path": "topics/classicism/lean/Classicism/Semantics/Env.lean",
+      "fingerprint": "7f3e4ffe9d4d890917cec6dec7d2aaf714d1012d59ca370044660890a5a783a3",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Semantics.Intensional",
+      "path": "source/topics/classicism/lean/Classicism/Semantics/Intensional.lean",
+      "sha256": "9a58b1dd47b1b527209d1994ed2b9252c85dc012d019d9878c2cbcc58b6019af",
+      "original_path": "topics/classicism/lean/Classicism/Semantics/Intensional.lean",
+      "fingerprint": "9d77eb883c8b635b5d6121dffea77de109a7b5f6d16ce917871a07d23795e942",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Models.CoalescedBase",
+      "path": "source/topics/classicism/lean/Classicism/Models/CoalescedBase.lean",
+      "sha256": "ad95516b1b2ac7e8c8433cce7bb6e5aa7f698707d2e6dd4a75b1f8d39f088773",
+      "original_path": "topics/classicism/lean/Classicism/Models/CoalescedBase.lean",
+      "fingerprint": "6b0e48ac94f67ade01b7b5498bf7b28c575c707798a34c80ac744a8585712903",
+      "module_exit_code": 0,
+      "reused_at_run": false
+    }
+  ],
+  "logs": [
+    {
+      "module": "Classicism.Models.CoalescedBase",
+      "path": "evidence/certificates/final-coalesced-base/Classicism_Models_CoalescedBase.log",
+      "sha256": "37ee80a0c77f9d52fb312e25833058f6461d5489402fb7d7aab8a0e851d7717b",
+      "audit_run_id": "20261024T011635617504Z-ab0bd282"
+    }
+  ],
+  "axiom_report_lines": [
+    "'Classicism.Meta.Intensional.Coalesced.model' depends on axioms: [propext, Quot.sound]",
+    "'Classicism.Meta.Intensional.Coalesced.incl_map' depends on axioms: [propext, Quot.sound]",
+    "'Classicism.Meta.Intensional.Coalesced.incl_injective' depends on axioms: [propext, Quot.sound]",
+    "'Classicism.Meta.Intensional.Coalesced.map_surjective' depends on axioms: [propext, Quot.sound]",
+    "'Classicism.Meta.Intensional.Coalesced.leftOuter_Incl' depends on axioms: [propext, Quot.sound]",
+    "'Classicism.Meta.Intensional.Coalesced.rightOuter_Incl' depends on axioms: [propext, Quot.sound]"
+  ],
+  "result_entries": [
+    "CH-COALESCED",
+    "MAX-CH"
+  ],
+  "scope": "Coalesced premodel and its displayed maps only; C-modelhood, leaf transfer, boxed structural and CH endpoints remain unaccepted.",
+  "verification": "Exact captured dependency sources, successful target records and saved principal logs checked. An accepted component without a printed principal axiom list is recorded only at that scope. No compiler invocation or database verification-flag change.",
+  "endpoint_assessments": [
+    {
+      "module": "Classicism.Models.CoalescedBase",
+      "explicit_principal_axiom_audit": true,
+      "principal_axiom_audit": [
+        {
+          "declaration": "Classicism.Meta.Intensional.Coalesced.model",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Classicism.Meta.Intensional.Coalesced.incl_map",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Classicism.Meta.Intensional.Coalesced.incl_injective",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Classicism.Meta.Intensional.Coalesced.map_surjective",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Classicism.Meta.Intensional.Coalesced.leftOuter_Incl",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Classicism.Meta.Intensional.Coalesced.rightOuter_Incl",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "translation_audits": [],
+      "gate_and_type_audits": []
+    }
+  ],
+  "source_manifest_original_sha256": "4060a98fdfa8e99f998b52949fb6581d33ec4e3eacadfefbabbc8456d8ad29e6",
+  "source_manifest_normalization": "Portable paths and omission of research coordination metadata; theorem/source hashes and check verdicts preserved."
+}

@@ -2964,16 +2964,32 @@ def render_writeups(topic_id: str, data: dict, outdir: Path) -> dict:
     named = {a["writeup"]: {"id": a["writeup"]} for s in data.get("model_sources", []) for _, a in _arguments(s)
              if isinstance(a, dict) and a.get("writeup")}
     records = {x["id"] for x in data["results"] + data["models"]}
-    for item in data["results"] + data["models"] + [x for i, x in named.items() if i not in records]:
+    pending = data["results"] + data["models"] + [x for i, x in named.items() if i not in records]
+    scheduled = {x["id"] for x in pending}
+    for item in pending:
         iid = item["id"]
         hand = src / f"{iid}.md"
         md = hand.read_text(encoding="utf-8") if hand.exists() else generate_writeup(item, data)
+        # Include linked supporting proofs, including chains and cycles of notes.
+        for name in _re.findall(r"\]\((?:\./)?([^/():#\s]+)\.md(?:#[^)]*)?\)", md):
+            if name not in scheduled and (src / f"{name}.md").is_file():
+                pending.append({"id": name})
+                scheduled.add(name)
+        # Record YAML is in the source bundle; the website has its rendered proof.
+        def record_link(match):
+            name, fragment = match.group(1), match.group(2) or ""
+            return f"]({name}.md{fragment})" if name in records else match.group(0)
+        md = _re.sub(r"\]\(\.\./(?:results|models)/([^/():#\s]+)\.yaml(#[^)]*)?\)", record_link, md)
         refs = paper_references_md(item, data, "../")
         if refs:
             md = md.rstrip() + "\n\n## Paper references\n\n" + refs + "\n"
         title = md.splitlines()[0].lstrip("# ").strip() if md.startswith("#") else iid
         (wdir / f"{iid}.md").write_text(md, encoding="utf-8")
-        body = _md_to_html(md.split("\n", 1)[1] if md.startswith("#") else md)   # heading stripped; the page header carries the title
+        def html_link(match):
+            name, fragment = match.group(1), match.group(2) or ""
+            return f"]({name}.html{fragment})" if name in scheduled else match.group(0)
+        html_md = _re.sub(r"\]\((?:\./)?([^/():#\s]+)\.md(#[^)]*)?\)", html_link, md)
+        body = _md_to_html(html_md.split("\n", 1)[1] if html_md.startswith("#") else html_md)   # heading stripped; the page header carries the title
         (wdir / f"{iid}.html").write_text(
             f'<!doctype html><html lang="en"><head><meta charset="utf-8">'
             f'<meta name="viewport" content="width=device-width, initial-scale=1">'
@@ -3901,8 +3917,14 @@ def zip_tree(root: Path, base: str, dest: Path) -> Path:
 
 def _relink(md: str, topic_id: str) -> str:
     """Rewrite topic-relative links for a file that will sit at the bundle root."""
-    return (md.replace("](sources/", f"](topics/{topic_id}/sources/")
-              .replace("](writeups/", f"](topics/{topic_id}/writeups/"))
+    md = (md.replace("](sources/", f"](topics/{topic_id}/sources/")
+            .replace("](writeups/", f"](topics/{topic_id}/writeups/"))
+    def writeup_link(match):
+        name, fragment = match.group(1), match.group(2) or ""
+        if (TOPICS / topic_id / "writeups" / name).is_file():
+            return f"](topics/{topic_id}/writeups/{name}{fragment})"
+        return match.group(0)
+    return _re.sub(r"\]\(([^/():#\s]+\.md)(#[^)]*)?\)", writeup_link, md)
 
 
 def _demote(md: str, levels: int) -> str:

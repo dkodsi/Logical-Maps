@@ -1,0 +1,6 @@
+import FixedPointEntranceSeparationAxioms
+import Classicism.Models.FixedPointEntranceComplete
+
+#print axioms Classicism.Meta.Intensional.FixedPointEntrance.Qualitative.Leibniz.not_strongLeibniz
+#print axioms Classicism.Meta.Intensional.FixedPointEntrance.Qualitative.Leibniz.not_strongLeibniz_t
+#print axioms Classicism.Meta.Intensional.FixedPointEntrance.Qualitative.full_countermodel

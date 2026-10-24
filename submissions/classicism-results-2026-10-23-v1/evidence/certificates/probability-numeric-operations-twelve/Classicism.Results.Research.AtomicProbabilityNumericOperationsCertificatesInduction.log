@@ -1,0 +1,77 @@
+Probability NumericOperations Induction: begin classicism_derive: number_induction
+Probability NumericOperations Induction: begin classicism_derive: number_cases
+Classicism.Research.ProbabilityNumericOperations.number_induction ⟶ Classicism.Research.ProbabilityNumericOperations.number_induction.derivable : ∀
+  (σ' : ⋯),
+  Classicism.Meta.Theorem Classicism.Meta.C.axiomsMinus
+    (Classicism.Meta.Term.forall'
+      (Classicism.Meta.Term.imp
+        ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).conj
+          (Classicism.Meta.Term.forall'
+            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).imp
+              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).eq'
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).disj
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))))
+        (Classicism.Meta.Term.forall'
+          (((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app
+                (((Classicism.Meta.Term.lam
+                              (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).conj
+                                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))).lam.lam.app
+                      (Classicism.Meta.Term.lam
+                        ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).conj
+                          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ.succ).lam.eq'
+                            (((Classicism.Meta.Term.lam
+                                          (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                                (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).disj
+                                            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                              (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))).lam.lam.app
+                                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).app
+                              (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ.succ).lam))))).app
+                  (Classicism.Meta.Term.lam
+                    (Classicism.Meta.Term.forall'
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).neg)))).imp
+            (Classicism.Meta.Term.imp
+              (Classicism.Meta.Term.forall'
+                (Classicism.Meta.Term.imp (Classicism.Meta.Term.conj ((Classicism.Meta.Term.var ⋯).conj ⋯) ⋯) ⋯))
+              ⋯)))))
+derived ✓ in C⁻
+Classicism.Research.ProbabilityNumericOperations.number_cases ⟶ Classicism.Research.ProbabilityNumericOperations.number_cases.derivable : ∀
+  (σ' : ⋯),
+  Classicism.Meta.Theorem Classicism.Meta.C.axiomsMinus
+    (Classicism.Meta.Term.forall'
+      (Classicism.Meta.Term.imp
+        ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).conj
+          (Classicism.Meta.Term.forall'
+            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).imp
+              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).eq'
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).disj
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))))
+        (Classicism.Meta.Term.forall'
+          (Classicism.Meta.Term.imp
+            (Classicism.Meta.Term.conj
+              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).conj
+                ((Classicism.Meta.Term.lam
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).conj
+                        ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ.succ).lam.eq'
+                          (((Classicism.Meta.Term.lam
+                                        (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                              (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).disj
+                                          ((ClassiProbability NumericOperations Induction: complete
+cism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))).lam.lam.app
+                                (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).app
+                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ.succ).lam)))).eq'
+                  (((Classicism.Meta.Term.lam
+                                (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).disj
+                                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))).lam.lam.app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).app
+                    (Classicism.Meta.Term.lam
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).conj
+                        ((Classicism.Meta.Term.var ⋯.succ).lam.eq' ⋯))))))
+              ⋯)
+            ⋯))))
+derived ✓ in C⁻

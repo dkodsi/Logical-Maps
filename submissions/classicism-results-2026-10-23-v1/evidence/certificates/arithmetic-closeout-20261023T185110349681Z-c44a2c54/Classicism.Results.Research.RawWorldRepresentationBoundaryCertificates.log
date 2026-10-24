@@ -1,0 +1,64 @@
+Classicism.Research.RawWorldRepresentationBoundary.existence_implies_no_raw_wr_unary: Classicism ✓ [C⁻] (axioms: [propext,
+ Quot.sound])
+#classicism_audit Classicism.Results.Research.RawWorldRepresentationBoundary: 1/1 theorems pass; 1 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.RawWorldRepresentationBoundary: 1/1 inside R
+Classicism.Research.RawWorldRepresentationBoundary.NoRawWRRelational ⟶ Classicism.Research.RawWorldRepresentationBoundary.NoRawWRRelational.schema:
+  fun τ' =>
+    Classicism.Meta.Term.forall'
+      (Classicism.Meta.Term.neg
+        (Classicism.Meta.Term.forall'
+          (Classicism.Meta.Term.exists'
+            (Classicism.Meta.Term.conj
+              (Classicism.Meta.Term.forall'
+                (Classicism.Meta.Term.iff
+                  (Classicism.Meta.Term.conj
+                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).eq'
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).disj
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)))
+                    (Classicism.Meta.Term.neg
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).eq'
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ))))
+                  (Classicism.Meta.Term.eq' (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg
+                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).disj
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg))))
+              (Classicism.Meta.Term.forall'
+                (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).iff
+                  (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ.succ).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).eq'
+                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).disj
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ.succ).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))))))))
+Classicism.Research.RawWorldRepresentationBoundary.existence_implies_no_raw_wr_unary ⟶ Classicism.Research.RawWorldRepresentationBoundary.existence_implies_no_raw_wr_unary.rule : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.Existence.quoted σ')
+      (Classicism.Research.RawWorldRepresentationBoundary.NoRawWRRelational.quoted (σ' ⇒ Classicism.Meta.RTy.t)))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.RawWorldRepresentationBoundary.existence_implies_no_raw_wr_unary ⟶ Classicism.Research.RawWorldRepresentationBoundary.existence_implies_no_raw_wr_unary.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.Existence.listQuoted σs)
+      (Classicism.Research.RawWorldRepresentationBoundary.NoRawWRRelational.quoted (σs ⇒* Classicism.Meta.RTy.t)))
+Classicism.Research.RawWorldRepresentationBoundary.existence_implies_no_raw_wr_unary ⟶ Classicism.Research.RawWorldRepresentationBoundary.existence_implies_no_raw_wr_unary.entails : Classicism.P.Existence.schema ⟹
+  fun a =>
+  ∃ σ',
+    σ'.Closed ∧
+      a = Classicism.Research.RawWorldRepresentationBoundary.NoRawWRRelational.quoted (σ' ⇒ Classicism.Meta.RTy.t)
+Classicism.Research.RawWorldRepresentationBoundary.existence_implies_no_raw_wr_unary ⟶ Classicism.Research.RawWorldRepresentationBoundary.existence_implies_no_raw_wr_unary.listEntails : Classicism.P.Existence.listSchema ⟹
+  fun a =>
+  ∃ σs,
+    Classicism.Meta.Ty.AllClosed σs ∧
+      a = Classicism.Research.RawWorldRepresentationBoundary.NoRawWRRelational.quoted (σs ⇒* Classicism.Meta.RTy.t)
+Classicism.Research.RawWorldRepresentationBoundary.existence_implies_no_raw_wr_unary.listRule
+  (σs : List Classicism.Meta.Ty) :
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.Existence.listQuoted σs)
+      (Classicism.Research.RawWorldRepresentationBoundary.NoRawWRRelational.quoted (σs ⇒* Classicism.Meta.RTy.t)))
+Classicism.Research.RawWorldRepresentationBoundary.existence_implies_no_raw_wr_unary.listEntails :
+  Classicism.P.Existence.listSchema ⟹ fun a =>
+    ∃ σs,
+      Classicism.Meta.Ty.AllClosed σs ∧
+        a = Classicism.Research.RawWorldRepresentationBoundary.NoRawWRRelational.quoted (σs ⇒* Classicism.Meta.RTy.t)
+'Classicism.Research.RawWorldRepresentationBoundary.existence_implies_no_raw_wr_unary.listRule' depends on axioms: [propext,
+ Quot.sound]

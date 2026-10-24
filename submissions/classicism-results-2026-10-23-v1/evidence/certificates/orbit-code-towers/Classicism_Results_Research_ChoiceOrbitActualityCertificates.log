@@ -1,0 +1,28 @@
+Classicism.Research.OrbitActuality.actuality_iff_propertyGenerator: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.OrbitActuality.actuality_iff_truthGenerator: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.OrbitActuality.actuality_propertyGenerator: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.OrbitActuality.actuality_truthGenerator: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.OrbitActuality.canonicalizer_truth_test: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.OrbitActuality.propertyGenerator_actuality: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.OrbitActuality.truthCanonicalizer_actuality: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.OrbitActuality.truthGenerator_actuality: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+#classicism_audit Classicism.Results.Research.ChoiceOrbitActuality: 8/8 theorems pass; 8 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.ChoiceOrbitActuality: 8/8 inside R
+Classicism.Results.Research.ChoiceOrbitActuality: 8 of 8 theorems derived
+
+[1/8] Classicism.Research.OrbitActuality.actuality_iff_propertyGenerator ✓ 701 ms
+[2/8] Classicism.Research.OrbitActuality.actuality_iff_truthGenerator ✓ 249 ms
+[3/8] Classicism.Research.OrbitActuality.actuality_propertyGenerator ✓ 0 ms
+[4/8] Classicism.Research.OrbitActuality.actuality_truthGenerator ✓ 0 ms
+[5/8] Classicism.Research.OrbitActuality.canonicalizer_truth_test ✓ 0 ms
+[6/8] Classicism.Research.OrbitActuality.propertyGenerator_actuality ✓ 0 ms
+[7/8] Classicism.Research.OrbitActuality.truthCanonicalizer_actuality ✓ 0 ms
+[8/8] Classicism.Research.OrbitActuality.truthGenerator_actuality ✓ 0 ms
+'Classicism.Research.OrbitActuality.actuality_iff_truthGenerator.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.OrbitActuality.actuality_iff_propertyGenerator.derivable' depends on axioms: [propext, Quot.sound]

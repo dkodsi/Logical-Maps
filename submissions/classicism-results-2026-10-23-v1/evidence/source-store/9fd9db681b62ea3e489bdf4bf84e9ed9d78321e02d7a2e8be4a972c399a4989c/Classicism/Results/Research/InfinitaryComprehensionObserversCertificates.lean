@@ -1,0 +1,27 @@
+import Classicism.Results.Research.InfinitaryComprehensionObservers
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Schema
+
+/-! These commands audit the actual shallow C proofs and create object-language
+certificates. Mere presence of this file is not a successful compiler result. -/
+#classicism_audit Classicism.Results.Research.InfinitaryComprehensionObservers
+#classicism_types_audit Classicism.Results.Research.InfinitaryComprehensionObservers
+
+#classicism_derive
+  Classicism.Research.InfinitaryComprehensionObservers.logical_separation_barcan
+  Classicism.Research.InfinitaryComprehensionObservers.equality_separation_logical
+  Classicism.Research.InfinitaryComprehensionObservers.equality_separation_barcan
+  Classicism.Research.InfinitaryComprehensionObservers.equality_separation_nd
+  Classicism.Research.InfinitaryComprehensionObservers.logical_separation_nd_c5
+  Classicism.Research.InfinitaryComprehensionObservers.equality_separation_c5
+  Classicism.Research.InfinitaryComprehensionObservers.logical_separation_nd_necessary_nd
+  Classicism.Research.InfinitaryComprehensionObservers.equality_separation_necessary_nd
+  Classicism.Research.InfinitaryComprehensionObservers.c5_atomicity_equality_separation
+  Classicism.Research.InfinitaryComprehensionObservers.c5_atomicity_logical_separation
+  Classicism.Research.InfinitaryComprehensionObservers.atomicity_equality_separation_iff_c5
+  Classicism.Research.InfinitaryComprehensionObservers.atomicity_logical_separation_nd_iff_c5
+
+#print axioms Classicism.Research.InfinitaryComprehensionObservers.equality_separation_c5.derivable
+#print axioms Classicism.Research.InfinitaryComprehensionObservers.atomicity_equality_separation_iff_c5.derivable
+#print axioms Classicism.Research.InfinitaryComprehensionObservers.atomicity_logical_separation_nd_iff_c5.derivable

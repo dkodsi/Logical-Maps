@@ -1,0 +1,59 @@
+id: necessary-rigid-comprehension-intensional-choice-and-forcing-possibilism-incompatible-with-non-contingency-of-ch
+premises:
+- necessary-rigid-comprehension-r
+- intensional-choice-r
+- forcing-possibilism
+- non-contingency-of-ch
+conclusion: false
+status: conjectured
+certificate:
+  source_id: bacon-mathematical-contingency
+  produced_by: Andrew Bacon (Theorem 6.1, stated with its proof to be presented elsewhere)
+  recorded_by: Claude Fable 5.1 (Anthropic), prompted by Zachary Goodsell, 23 October 2026
+  checked_by: []
+  date: '2026-10-23'
+  lean: none
+sources:
+- Andrew Bacon, Could the truths of mathematics have been different?, draft of 9 October 2025, §6,
+  Theorem 6.1, p. 27.
+- OpenAI Codex, prompted by Daniel Kodsi, strict-smallness formulation audit, 23 October 2026,
+  matching write-up §§1–5 (unpaginated); comparison of the existing full-action model arguments.
+source_names:
+- Could mathematics have been different?
+- Strict-smallness audit, 23 Oct
+references:
+- paper: bacon-mathematical-contingency
+  role: origin
+  locator: §6, Theorem 6.1, p. 27
+  note: □Rigid Comprehension, Intensional Choice and Mathematical Possibilism (the map's Forcing
+    Possibilism) entail structural contingency about the continuum hypothesis, $\Diamond\exists X(\operatorname{Real}X\land\operatorname{CH}(X))\land\Diamond\exists X(\operatorname{Real}X\land\neg\operatorname{CH}(X))$,
+    which contradicts both disjuncts of the Non-contingency of the Continuum Hypothesis at that type.
+proof: ''
+notes: >-
+  Stated by Bacon as a theorem, with the proof deferred to another venue; his handout of 19 October 2026
+  on the lottery-algebra model and the draft Modalized Domains on Possibility Frames do not reproduce it
+  (the lottery record notes a transfer argument not given there). The expected proof: Forcing Possibilism
+  supplies a proposition whose entailment algebra is a complete Boolean algebra forcing CH, and one
+  forcing its negation; under □Rigid Comprehension and Intensional Choice the real number structures at
+  the worlds below each are those of the corresponding generic extensions. Recorded as conjectured until
+  a proof is supplied; a written proof, or a model of the three premises deciding CH one way necessarily,
+  would settle it.
+  Update, 23 October 2026: the current proved records already supply countermodels to this exact
+  database formulation, including [[full-free-monoid-glued-constants-singleton]]. The shared arguments
+  [[full-rigid-comprehension]], [[intensional-choice-well-ordering]],
+  [[forcing-possibilism-countably-many-arrows]] and [[second-order-analysis-extensionally-full]]
+  give all four premises, with metatheoretic Choice for the choice and cardinality steps. For a
+  countable arrow set, there are continuum many propositions, so strict-smallness Forcing Possibilism
+  requests only finite complete Boolean algebras. It does not supply an algebra forcing either side
+  of CH. The attributed source statement is preserved: the source main text uses strict smallness,
+  whereas Appendix A.3 uses a non-strict bound, and its background language also needs comparison.
+  See the matching write-up. This is not a claim that Bacon's theorem under its intended formulation
+  has been refuted. The record remains conjectured; its refutation under the current encoding is
+  computed from the existing models, not stored as a new proof status.
+changes:
+- date: '2026-10-23'
+  by: OpenAI Codex, prompted by Daniel Kodsi
+  summary: >-
+    Added the existing full-action countermodel chain and a strict-versus-non-strict smallness
+    audit. Preserved the conjecture's statement, source attribution, original certificate date
+    and unverified Lean status; distinguished the encoded claim from the source theorem.

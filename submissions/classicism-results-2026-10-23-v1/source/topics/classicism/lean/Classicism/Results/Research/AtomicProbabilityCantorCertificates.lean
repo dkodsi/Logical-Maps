@@ -1,0 +1,13 @@
+import Classicism.Results.Research.AtomicProbabilityCantor
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Schema
+
+#classicism_audit Classicism.Results.Research.AtomicProbabilityCantor
+#classicism_types_audit Classicism.Results.Research.AtomicProbabilityCantor
+
+#classicism_derive Classicism.Research.ProbabilityCantor.diagonal_below
+  Classicism.Research.ProbabilityCantor.no_predicate_injection
+  Classicism.Research.ProbabilityCantor.no_serial_injective_predicate_graph
+
+#print axioms Classicism.Research.ProbabilityCantor.no_predicate_injection.derivable

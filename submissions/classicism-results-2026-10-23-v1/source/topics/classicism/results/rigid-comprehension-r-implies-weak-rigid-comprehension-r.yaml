@@ -1,0 +1,41 @@
+id: rigid-comprehension-r-implies-weak-rigid-comprehension-r
+premises:
+- rigid-comprehension-r
+conclusion: weak-rigid-comprehension-r
+status: proved
+certificate:
+  source_id: misc
+  produced_by: Claude Opus 5 (Anthropic), 19 September 2026
+  recorded_by: Claude Opus 5 (Anthropic), 19 September 2026
+  checked_by: []
+  date: '2026-09-19'
+  lean: verified
+  lean_ref: Classicism.Map.rigid_comprehension_r_implies_weak_rigid_comprehension_r
+sources:
+- Cian Dorr, Boolean Completeness does not imply Rigid Comprehension, draft of 30 July 2026, pp. 2 and
+  12, for the definitions; connecting argument original to this record.
+source_names:
+- BC does not imply RC
+proof: >-
+  A rigid $Y$ is persistent by definition, and so, by T, weakly persistent. Its other conjunct, $\operatorname{Inextensible}(Y)$, is a
+  necessitated conditional, so T strips the leading box and yields $\operatorname{WeaklyInextensible}(Y)$.
+  Hence every rigid relation is weakly rigid, and the rigid coextension supplied by Rigid Comprehension
+  already witnesses Weak Rigid Comprehension at the same type.
+references:
+- paper: dorr-bc-not-rc
+  role: background
+  locator: pp. 2 and 12
+  note: Supplies the weak rigidity conditions; the draft records the slogan that rigidity is necessary
+    weak rigidity.
+- paper: bacon-dorr-classicism
+  role: background
+  locator: §1.5, p. 17
+  note: T for the fixed background modality.
+notes: ''
+changes:
+- date: '2026-10-08'
+  by: Claude Opus 5.5 (Anthropic), at Cian Dorr's direction
+  summary: >-
+    "Weakly rigid" now means weakly persistent and weakly inextensible (until then, persistent and
+    weakly inextensible; Very Weak Rigid Comprehension retired); the proof's wording is adjusted to match.
+    A weakly rigid relation is still persistent, so the mathematical content is unchanged.

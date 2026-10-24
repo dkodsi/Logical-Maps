@@ -1,0 +1,8 @@
+'Classicism.Meta.Research.IntensionalArithmeticReflection.term_reflect' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.Research.IntensionalArithmeticReflection.term_admitted' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.Research.IntensionalArithmeticReflection.formula_reflect' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.IntensionalArithmeticReflection.sentence_reflect' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-23",
+  "status": "READY FOR INTEGRATION",
+  "build_owner": "[research task]",
+  "source_ownership": "Frozen to designated serial compiler; no author edits without ownership returned.",
+  "full_inconsistency_verified": false,
+  "compiler_state_observed": "Designated compiler reports paused; clarification requested from human before any compiler invocation or cross-chat resume.",
+  "modules": [
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityJechShelahEnumeration",
+      "path": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahEnumeration.lean",
+      "sha256": "412a62c28acc4ba1bb1fdafa872108845972cb4d5985326f18079f7c14845751",
+      "imports": [
+        "Classicism.Results.Research.MaxAtomicityJechShelahTrees",
+        "Mathlib.Order.Monotone.Basic"
+      ],
+      "compiled_by_author": false,
+      "command": "python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.MaxAtomicityJechShelahEnumeration --precompiled-root .reproduction/classicism-mathlib/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/LeanSearchClient/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/Qq/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/aesop/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/batteries/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/importGraph/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/plausible/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/proofwidgets/.lake/build/lib/lean --timeout 180"
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityJechShelahAmalgamation",
+      "path": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahAmalgamation.lean",
+      "sha256": "f86f70c4f12a5a9802bd87d321fc81aa8dc7694eec5cd56f7ec986e3dd0df54c",
+      "imports": [
+        "Classicism.Results.Research.MaxAtomicityJechShelahEnumeration",
+        "Classicism.Results.Research.MaxAtomicityJechShelahFusion",
+        "Classicism.Results.Research.MaxAtomicityJechShelahCylinders",
+        "Classicism.Results.Research.MaxAtomicitySlalomInvariance",
+        "Mathlib.Data.Fintype.OfMap",
+        "Mathlib.Logic.Function.Basic"
+      ],
+      "compiled_by_author": false,
+      "command": "python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.MaxAtomicityJechShelahAmalgamation --precompiled-root .reproduction/classicism-mathlib/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/LeanSearchClient/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/Qq/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/aesop/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/batteries/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/importGraph/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/plausible/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/proofwidgets/.lake/build/lib/lean --timeout 180"
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityJechShelahRigidityCriterion",
+      "path": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahRigidityCriterion.lean",
+      "sha256": "5613af29e9b309028c55226f8bcd8fbd62d83d5b26344178e5f5b4514be889b0",
+      "imports": [
+        "Classicism.Results.Research.MaxAtomicityJechShelahCylinders",
+        "Classicism.Results.Research.MaxAtomicitySlalomInvariance",
+        "Classicism.Results.Research.MaxAtomicityRigidTransport"
+      ],
+      "compiled_by_author": false,
+      "command": "python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.MaxAtomicityJechShelahRigidityCriterion --precompiled-root .reproduction/classicism-mathlib/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/LeanSearchClient/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/Qq/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/aesop/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/batteries/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/importGraph/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/plausible/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/proofwidgets/.lake/build/lib/lean --timeout 180"
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityJechShelahBranch",
+      "path": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahBranch.lean",
+      "sha256": "4cdcac034257bc60ff1d79dd2d811a175bc20e5597343af68eb11403be0c977e",
+      "imports": [
+        "Classicism.Results.Research.MaxAtomicityJechShelahEnumeration",
+        "Classicism.Results.Research.MaxAtomicityJechShelahRigidityCriterion",
+        "Mathlib.Data.Fintype.Card"
+      ],
+      "compiled_by_author": false,
+      "command": "python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.MaxAtomicityJechShelahBranch --precompiled-root .reproduction/classicism-mathlib/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/LeanSearchClient/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/Qq/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/aesop/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/batteries/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/importGraph/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/plausible/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/proofwidgets/.lake/build/lib/lean --timeout 180"
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityConcreteModel",
+      "path": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityConcreteModel.lean",
+      "sha256": "add757857c725086c264330ffd2991f95817e1bf65264bf1a8b565fcbf5fc580",
+      "imports": [
+        "Classicism.Results.Research.MaxAtomicityJechShelahCylinders",
+        "Classicism.Results.Research.MaxAtomicityHCodeExistence",
+        "Classicism.Semantics.BooleanValuedSoundness",
+        "Mathlib.Order.Monotone.Basic",
+        "Mathlib.Data.Fintype.EquivFin"
+      ],
+      "compiled_by_author": false,
+      "command": "python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.MaxAtomicityConcreteModel --precompiled-root .reproduction/classicism-mathlib/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/LeanSearchClient/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/Qq/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/aesop/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/batteries/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/importGraph/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/plausible/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/proofwidgets/.lake/build/lib/lean --timeout 180"
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityHCodeCharacterization",
+      "path": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHCodeCharacterization.lean",
+      "sha256": "ceece44b87be66e139d65f60631e9372a3c7c211000aa5e83f29b69e7704e847",
+      "imports": [
+        "Classicism.Results.Research.MaxAtomicityHCodeExistence",
+        "Classicism.Results.Research.MaxAtomicitySetFormulaTools"
+      ],
+      "compiled_by_author": false,
+      "command": "python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.MaxAtomicityHCodeCharacterization --precompiled-root .reproduction/classicism-mathlib/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/LeanSearchClient/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/Qq/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/aesop/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/batteries/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/importGraph/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/plausible/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/proofwidgets/.lake/build/lib/lean --timeout 180"
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityRegularOpenCode",
+      "path": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityRegularOpenCode.lean",
+      "sha256": "7f66a08ea198026dc521bc7153ed465ddc914cc028ccea0c6114ab1ac237800c",
+      "imports": [
+        "Classicism.Results.Research.MaxAtomicitySetFormulaTools",
+        "Classicism.Results.Research.MaxAtomicityRegularCompletion"
+      ],
+      "compiled_by_author": false,
+      "command": "python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.MaxAtomicityRegularOpenCode --precompiled-root .reproduction/classicism-mathlib/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/LeanSearchClient/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/Qq/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/aesop/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/batteries/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/importGraph/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/plausible/.lake/build/lib/lean --precompiled-root .reproduction/classicism-mathlib/.lake/packages/proofwidgets/.lake/build/lib/lean --timeout 180"
+    }
+  ],
+  "remaining": [
+    "Actual local slalom-capture recursion and consequent rigid completion theorem",
+    "Finite canonical JSCode definition with hereditary-universe adequacy",
+    "Concrete closed pure selector, semantic identity and final unconditional inconsistency"
+  ]
+}

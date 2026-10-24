@@ -1,0 +1,13 @@
+import Classicism.Results.Research.FiniteRigidPowers
+import Classicism.Results.Research.FregeFiniteSetsCertificates
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Translate
+
+#classicism_audit Classicism.Results.Research.FiniteRigidPowers
+#classicism_types_audit Classicism.Results.Research.FiniteRigidPowers
+#classicism_derive_audit Classicism.Results.Research.FiniteRigidPowers
+
+#print axioms Classicism.Research.FiniteRigidPowers.finite_rigid_power_iff.derivable
+#print axioms Classicism.Research.FiniteRigidPowers.finite_binary_rigid_field_iff.derivable
+#print axioms Classicism.Research.FiniteRigidPowers.finite_rigid_propositions.derivable

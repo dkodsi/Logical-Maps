@@ -1,0 +1,19 @@
+import Classicism.Results.Research.SectionsRetractionsStableGraphsCertificates
+import Classicism.Results.Research.SectionsRetractionsModalWitness
+
+#classicism_audit Classicism.Results.Research.SectionsRetractionsModalWitness
+#classicism_types_audit Classicism.Results.Research.SectionsRetractionsModalWitness
+set_option maxHeartbeats 0 in
+#classicism_derive_audit Classicism.Results.Research.SectionsRetractionsModalWitness
+#classicism_schema Classicism.Research.Splitting.ModalPlenitude
+  Classicism.Research.Splitting.ModalFunctionalChoice
+#classicism_certify Classicism.Research.Splitting.unique_witness_extensionality
+  Classicism.Research.Splitting.extensionality_unique_witness
+  Classicism.Research.Splitting.modal_plenitude_extensionality
+  Classicism.Research.Splitting.extensionality_modal_plenitude
+  Classicism.Research.Splitting.modal_functional_choice_plenitude
+  Classicism.Research.Splitting.functional_choice_modal_of_extensionality
+  Classicism.Research.Splitting.modal_choice_ordinary_of_extensionality
+#check Classicism.Research.Splitting.extensionality_modal_plenitude.listRule
+#print axioms Classicism.Research.Splitting.extensionality_modal_plenitude.listRule
+#print axioms Classicism.Research.Splitting.necessary_unique_witness_iff_extensionality.derivable

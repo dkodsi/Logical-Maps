@@ -1,0 +1,13 @@
+import Classicism.Results.Research.ChoiceOrbitActuality
+import Classicism.Results.Research.ChoiceOrbitAveragingCertificates
+import Classicism.Results.Research.ActualityCoreCertificates
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Schema
+
+#classicism_audit Classicism.Results.Research.ChoiceOrbitActuality
+#classicism_types_audit Classicism.Results.Research.ChoiceOrbitActuality
+#classicism_derive_audit Classicism.Results.Research.ChoiceOrbitActuality
+
+#print axioms Classicism.Research.OrbitActuality.actuality_iff_truthGenerator.derivable
+#print axioms Classicism.Research.OrbitActuality.actuality_iff_propertyGenerator.derivable

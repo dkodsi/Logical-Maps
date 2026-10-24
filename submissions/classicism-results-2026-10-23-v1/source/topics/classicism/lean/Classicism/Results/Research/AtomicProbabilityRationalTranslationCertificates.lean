@@ -1,0 +1,20 @@
+import Classicism.Results.Research.AtomicProbabilityRationalTranslation
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Schema
+
+#classicism_audit Classicism.Results.Research.AtomicProbabilityRationalTranslation
+#classicism_types_audit Classicism.Results.Research.AtomicProbabilityRationalTranslation
+
+#classicism_derive Classicism.Research.ProbabilityRationals.rsub_in_field
+  Classicism.Research.ProbabilityRationals.radd_sub_cancel
+  Classicism.Research.ProbabilityRationals.rsub_add_cancel
+  Classicism.Research.ProbabilityRationals.radd_sub_cancel_left
+  Classicism.Research.ProbabilityRationals.rlt_add_right
+  Classicism.Research.ProbabilityRationals.rlt_add_left
+  Classicism.Research.ProbabilityRationals.rlt_add_both
+  Classicism.Research.ProbabilityRationals.rsub_lt_zero
+  Classicism.Research.ProbabilityRationals.rationalSumGraph_comm
+  Classicism.Research.ProbabilityRationals.rationalSumGraph_associative
+
+#print axioms Classicism.Research.ProbabilityRationals.rationalSumGraph_associative.derivable

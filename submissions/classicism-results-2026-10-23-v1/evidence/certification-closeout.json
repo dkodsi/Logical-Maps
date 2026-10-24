@@ -1,0 +1,901 @@
+{
+  "captured_at_utc": "2026-10-24T02:20:15.596764+00:00",
+  "origin": "research/2026-10-23/synthesis-certification-receipts.json",
+  "origin_sha256": "db5b86c6fc74c81b284e775f76d6765292f0738a1fe52644c3aa7ffabe6cb992",
+  "independent_result_count": false,
+  "verification": "Accepted dependency source bytes recovered by exact SHA-256 and saved manifest/log hashes independently checked. Previously recorded output-artifact checks remain in the originating receipt; no compiler run or new output-artifact certification during packaging.",
+  "compiler_invoked": false,
+  "source_only_holds": [
+    "Infinitary Comprehension",
+    "Expanded opposite-CH components"
+  ],
+  "receipts": [
+    {
+      "module": "Classicism.Results.Research.ChoiceOrbitAveragingCertificates",
+      "lane": "choice",
+      "certificate": "evidence/certificates/orbit-code-towers/certificate.json",
+      "source_sha256": "497ee881e655b8955f138ef251915669b25a79fb026421b404c44da07281a258",
+      "run_id": "20261023T222323295103Z-208348fc",
+      "explicit_principal_axiom_audit": true,
+      "scope": "Existing packaged certificate; exact scope retained.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Results.Research.ChoiceOrbitActualityCertificates",
+      "lane": "choice",
+      "certificate": "evidence/certificates/orbit-code-towers/certificate.json",
+      "source_sha256": "6d533bcda43a8a7e3673dceb6a87abafb8b607e1c9198bbe5f199f944965b4d7",
+      "run_id": "20261023T222323295103Z-208348fc",
+      "explicit_principal_axiom_audit": true,
+      "scope": "Existing packaged certificate; exact scope retained.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Results.Research.ChoiceCodeTowersCertificates",
+      "lane": "choice",
+      "certificate": "evidence/certificates/orbit-code-towers/certificate.json",
+      "source_sha256": "fa34e6918098283ccd44ad463480bb544bc9d357ef3d1829d8667c1d0983fc2c",
+      "run_id": "20261023T222323295103Z-208348fc",
+      "explicit_principal_axiom_audit": true,
+      "scope": "Existing packaged certificate; exact scope retained.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "FiniteCompressionAxioms",
+      "lane": "finite_compression",
+      "certificate": "evidence/certificates/finite-compression/certificate.json",
+      "source_sha256": "6c79282894d8de99b58c9b756e45f2f68b3e1ce825c14246495f782bc87d2336",
+      "run_id": "20261023T215007878426Z-a1858554",
+      "explicit_principal_axiom_audit": true,
+      "scope": "Existing packaged certificate; exact scope retained.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Results.Research.FullLogicalObserversAtomicCertificates",
+      "lane": "operators",
+      "certificate": "evidence/certificates/full-observers-propositional/certificate.json",
+      "source_sha256": "db5a9dee7565f7742e069d0214121885381ede40455932e9f536604c9fdb4ed9",
+      "run_id": "20261023T221034167067Z-f6f7ad05",
+      "explicit_principal_axiom_audit": true,
+      "scope": "Accepted typed-observer proof components at the exact listed declarations. The actual-C endpoint is covered by the separate full-typed-logical-separation-actual-c certificate.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Results.Research.FullLogicalObserversCharacterizationCertificates",
+      "lane": "operators",
+      "certificate": "evidence/certificates/full-observers-propositional/certificate.json",
+      "source_sha256": "46206c62b9a8d8786f4d26f34955d4c6f34bada0c5a2340f9ff3fc987a8c78f3",
+      "run_id": "20261023T221034167067Z-f6f7ad05",
+      "explicit_principal_axiom_audit": true,
+      "scope": "Accepted typed-observer proof components at the exact listed declarations. The actual-C endpoint is covered by the separate full-typed-logical-separation-actual-c certificate.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Results.Research.GeneratedAlgebraFiniteFoldCertificatesBase",
+      "lane": "arithmetic",
+      "certificate": "evidence/certificates/final-generated-algebra-finite-fold-certificates-base/certificate.json",
+      "source_sha256": "106fa07e9ab5eb8e03b71469390023589d72cdadc0342968e26090f8e12cf9d6",
+      "run_id": "20261023T222904018859Z-891ab13b",
+      "explicit_principal_axiom_audit": false,
+      "scope": "Accepted generated-algebra component translations. Original conclusions and helpers are counted separately; the remaining family and its final principal audit remain incomplete.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Results.Research.GeneratedAlgebraFiniteFoldCertificatesElimination",
+      "lane": "arithmetic",
+      "certificate": "evidence/certificates/final-generated-algebra-finite-fold-certificates-base/certificate.json",
+      "source_sha256": "86fc4e3869c922b54d9daf81117188107890b5883aad67c8356e713eac68f5b9",
+      "run_id": "20261023T222904018859Z-891ab13b",
+      "explicit_principal_axiom_audit": false,
+      "scope": "Accepted generated-algebra component translations. Original conclusions and helpers are counted separately; the remaining family and its final principal audit remain incomplete.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Results.Research.GeneratedAlgebraFiniteFactoredCertificatesLeftInverse0",
+      "lane": "arithmetic",
+      "certificate": "evidence/certificates/generated-algebra-left-inverse-zero/certificate.json",
+      "source_sha256": "67395bea1c3cbcfcaab50199d031e83a66bcfdf0788bb493f4cd9a31a0572374",
+      "run_id": "20261023T223357858464Z-23fb39f5",
+      "explicit_principal_axiom_audit": false,
+      "scope": "Accepted generated-algebra component translations. Original conclusions and helpers are counted separately; the remaining family and its final principal audit remain incomplete.",
+      "original_statement_mapping": {
+        "accepted_declaration": "Classicism.Research.GeneratedAlgebraFiniteFactored.left_inverse0",
+        "original_declaration": "Classicism.Research.GeneratedAlgebraFinite.left_inverse0",
+        "original_source": "topics/classicism/lean/Classicism/Results/Research/GeneratedAlgebraFinite.lean",
+        "original_source_sha256": "b4911c128403a5c245e384369aeb01cc340b4b4e9f72cb1de46b842fae176f1d",
+        "alternative_source": "topics/classicism/lean/Classicism/Results/Research/GeneratedAlgebraFiniteFactored.lean",
+        "alternative_source_sha256": "b7e35d5d9f9869e81a3a73d576dee8a3172848eb90c2ee5b2c5a36df16c04a78",
+        "literal_statement_text_equal": true,
+        "statement_text_sha256": "edac16c91bc88a9c0c742cdb5629051409f15968372eab12d5cfe6874e800d63",
+        "implicit_type_and_class_binders_equal": true,
+        "original_G_definitions_imported_unchanged": true,
+        "scope": "Same statement and implicit binders, alternate proof namespace; not an additional mathematical result."
+      }
+    },
+    {
+      "module": "FixedPointEntrancePairAxioms",
+      "lane": "fixed_point_entrance",
+      "certificate": "evidence/certificates/final-fixed-point-entrance-pair-axioms/certificate.json",
+      "source_sha256": "a3a56226b1c62378889758130f830c4046fa78c6519c482388879fe4db86c760",
+      "run_id": "20261023T190004354916Z-b9423c09",
+      "explicit_principal_axiom_audit": true,
+      "scope": "Supporting component of the fully accepted fixed-point entrance model; full scope is recorded in the complete certificate.",
+      "original_statement_mapping": null,
+      "complete_certificate": "evidence/certificates/fixed-point-entrance-complete/certificate.json"
+    },
+    {
+      "module": "ChoiceBooleanFoundationsAxioms",
+      "lane": "models",
+      "certificate": "evidence/certificates/final-choice-boolean-foundations-axioms/certificate.json",
+      "source_sha256": "d70331a1bdda654bb4c883a3893ae3db3b9fb1298dc73a906ce5d0824cc7204c",
+      "run_id": "20261023T223622023631Z-4db8c47b",
+      "explicit_principal_axiom_audit": true,
+      "scope": "Accepted model-construction components only; no full finite-Choice negative-model or entrance-countermodel endpoint is inferred. Principal axiom reports are distinguished from source compilation.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationHTransport",
+      "lane": "operators",
+      "certificate": "evidence/certificates/final-full-typed-logical-separation-h-transport/certificate.json",
+      "source_sha256": "300514208513fb9f0787669e5eb9d1d6dcbde5e4eaa886f018c10805d689b622",
+      "run_id": "20261023T225050638103Z-46206698",
+      "explicit_principal_axiom_audit": false,
+      "scope": "Accepted typed-observer proof components at the exact listed declarations. The actual-C endpoint is covered by the separate full-typed-logical-separation-actual-c certificate.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationHBridge",
+      "lane": "operators",
+      "certificate": "evidence/certificates/final-full-typed-logical-separation-h-bridge/certificate.json",
+      "source_sha256": "ac2962e184bea2d19cf5607370db811e223662e0949c2f4ec8f7c0ec8d70867f",
+      "run_id": "20261023T225455875293Z-4a483f3c",
+      "explicit_principal_axiom_audit": false,
+      "scope": "Accepted typed-observer proof components at the exact listed declarations. The actual-C endpoint is covered by the separate full-typed-logical-separation-actual-c certificate.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationIdentity",
+      "lane": "operators",
+      "certificate": "evidence/certificates/final-full-typed-logical-separation-h-bridge/certificate.json",
+      "source_sha256": "e1eb202a6ac932cbdd7004d3f68cecabfcf8eb127a5556cc5178e465341c02d3",
+      "run_id": "20261023T225455875293Z-4a483f3c",
+      "explicit_principal_axiom_audit": true,
+      "scope": "Accepted typed-observer proof components at the exact listed declarations. The actual-C endpoint is covered by the separate full-typed-logical-separation-actual-c certificate.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Results.Research.AnalyticReuseQuotation",
+      "lane": "analytic",
+      "certificate": "evidence/certificates/final-analytic-reuse-quotation/certificate.json",
+      "source_sha256": "cdf945c2a1f4c5c18dbda5aa84424effc57fe1993cfbb5608117e333729b1145",
+      "run_id": "20261023T230120413245Z-af398afd",
+      "explicit_principal_axiom_audit": true,
+      "scope": "Accepted analytic vocabulary, quotation, tuple-domain, packing or power-existence components. The arbitrary finite-arity schema has its separate final certificate.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Results.Research.AnalyticVocabulary",
+      "lane": "analytic",
+      "certificate": "evidence/certificates/final-analytic-reuse-quotation/certificate.json",
+      "source_sha256": "b6d7e1c94ed0dd49ad4b47514044470d5d1995fdd4118196e650815963364365",
+      "run_id": "20261023T230120413245Z-af398afd",
+      "explicit_principal_axiom_audit": false,
+      "scope": "Accepted analytic vocabulary, quotation, tuple-domain, packing or power-existence components. The arbitrary finite-arity schema has its separate final certificate.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Results.Research.AnalyticFinitePacking",
+      "lane": "analytic",
+      "certificate": "evidence/certificates/final-analytic-finite-packing/certificate.json",
+      "source_sha256": "c67b8bc35f87a60403e19c1057d3f6e438783654aa88c5acc9b2af6666798b15",
+      "run_id": "20261023T230529323631Z-5671f948",
+      "explicit_principal_axiom_audit": true,
+      "scope": "Accepted analytic vocabulary, quotation, tuple-domain, packing or power-existence components. The arbitrary finite-arity schema has its separate final certificate.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Results.Research.AnalyticPowerExistenceCertificates",
+      "lane": "analytic",
+      "certificate": "evidence/certificates/final-analytic-power-existence-certificates/certificate.json",
+      "source_sha256": "46fc03f18acc68f44ca48e845c4bebc7affdcf4eff4ebf5a3ed8e2434c14d6f6",
+      "run_id": "20261023T231043383800Z-cdfa60f4",
+      "explicit_principal_axiom_audit": true,
+      "scope": "Accepted analytic vocabulary, quotation, tuple-domain, packing or power-existence components. The arbitrary finite-arity schema has its separate final certificate.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Results.Research.AnalyticTupleDomainsMeta",
+      "lane": "analytic",
+      "certificate": "evidence/certificates/final-analytic-power-existence-certificates/certificate.json",
+      "source_sha256": "99778797eff002ac94079d97b8f184d933eae5d552d6525e0e2b8e46f19c39b3",
+      "run_id": "20261023T231043383800Z-cdfa60f4",
+      "explicit_principal_axiom_audit": true,
+      "scope": "Accepted analytic vocabulary, quotation, tuple-domain, packing or power-existence components. The arbitrary finite-arity schema has its separate final certificate.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Results.Research.GeneratedAlgebraFiniteFactoredCertificatesLeftInverse1",
+      "lane": "arithmetic",
+      "certificate": "evidence/certificates/final-generated-algebra-finite-factored-certificates-left-inverse1/certificate.json",
+      "source_sha256": "1fe00ee7994566351597a932212952e5223dfade95615a3cb5d78cfed8664f04",
+      "run_id": "20261023T231428330545Z-d63746c1",
+      "explicit_principal_axiom_audit": false,
+      "scope": "Accepted generated-algebra component translations. Original conclusions and helpers are counted separately; the remaining family and its final principal audit remain incomplete.",
+      "original_statement_mapping": {
+        "accepted_declaration": "Classicism.Research.GeneratedAlgebraFiniteFactored.injective0",
+        "original_declaration": "Classicism.Research.GeneratedAlgebraFinite.injective0",
+        "original_source": "topics/classicism/lean/Classicism/Results/Research/GeneratedAlgebraFinite.lean",
+        "original_source_sha256": "b4911c128403a5c245e384369aeb01cc340b4b4e9f72cb1de46b842fae176f1d",
+        "alternative_source": "topics/classicism/lean/Classicism/Results/Research/GeneratedAlgebraFiniteFactored.lean",
+        "alternative_source_sha256": "b7e35d5d9f9869e81a3a73d576dee8a3172848eb90c2ee5b2c5a36df16c04a78",
+        "literal_statement_text_equal": true,
+        "statement_text_sha256": "9559fbf10844f1c3ec83defd0209dc755682cda50e18d53c825fc7b01ca812d7",
+        "implicit_type_and_class_binders_equal": true,
+        "original_G_definitions_imported_unchanged": true,
+        "scope": "Same statement and implicit binders, alternate proof namespace; not an additional mathematical result."
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.IntensionalArithmeticReflection",
+      "lane": "arithmetic_new_semantics",
+      "certificate": "evidence/certificates/final-intensional-arithmetic-reflection/certificate.json",
+      "source_sha256": "d4abbf2fcaac0261aaa1c1033edcd3205a6e6a71f2cf3187dd0486cf82e618bf",
+      "run_id": "20261023T231938586568Z-538690d0",
+      "explicit_principal_axiom_audit": true,
+      "scope": "Inner-domain semantic arithmetic reflection, not a uniform C proof builder.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Results.Research.FregeModelRules",
+      "lane": "arithmetic_existing_theorem_wrappers",
+      "certificate": "evidence/certificates/final-intensional-arithmetic-reflection/certificate.json",
+      "source_sha256": "af88ec16dadd34217c28d557e645a3be59ea942c04b644c2d4e94eeeb2915c6d",
+      "run_id": "20261023T231938586568Z-538690d0",
+      "explicit_principal_axiom_audit": true,
+      "scope": "Rule certificates for existing implications from quantified Infinity to Peano noncollapse, from Peano noncollapse to ArithmeticI, and from ArithmeticI to infinitude of the number field.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Results.Research.FourC5FinitenessModels",
+      "lane": "arithmetic_new_semantics",
+      "certificate": "evidence/certificates/final-intensional-arithmetic-reflection/certificate.json",
+      "source_sha256": "ec14a2f904190693c4de87ac61dec87b04f82e07e7f46f4990a42b4baa9fe634",
+      "run_id": "20261023T231938586568Z-538690d0",
+      "explicit_principal_axiom_audit": true,
+      "scope": "C-modelhood, all-type necessary distinctness and all four quantified Infinity_e/Infinity_t combinations.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Results.Research.ExtFullFregeCounting",
+      "lane": "arithmetic_new_semantics",
+      "certificate": "evidence/certificates/final-intensional-arithmetic-reflection/certificate.json",
+      "source_sha256": "6fb007de9e758d48bd37a743764c6d2013be1fdbe49d36da2f3e75ea53b23018",
+      "run_id": "20261023T231938586568Z-538690d0",
+      "explicit_principal_axiom_audit": true,
+      "scope": "Conditional frame counting lemmas only; the extensionally-full-model orbit application remains unaccepted.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Results.Research.TwoStageArithmeticModel",
+      "lane": "arithmetic_new_semantics",
+      "certificate": "evidence/certificates/final-two-stage-arithmetic-model/certificate.json",
+      "source_sha256": "a955d35f19fa14e0f7edc0083a11778e777eb5a59884e297b97e43ada0acab0b",
+      "run_id": "20261023T232301293573Z-ee4b5537",
+      "explicit_principal_axiom_audit": true,
+      "scope": "The six audited two-stage model/finiteness/Functionality endpoints; the separate number-field bridge remains unaccepted.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Models.FixedPointEntranceChoice",
+      "lane": "models_entrance",
+      "certificate": "evidence/certificates/final-fixed-point-entrance-choice/certificate.json",
+      "source_sha256": "4a7d752562271580a803db2e35d5cb3cff9bb321c0d23dafc36870075d1d5a6a",
+      "run_id": "20261023T232653305296Z-97e2af10",
+      "explicit_principal_axiom_audit": false,
+      "scope": "Supporting component of the fully accepted fixed-point entrance model; full scope is recorded in the complete certificate.",
+      "original_statement_mapping": null,
+      "complete_certificate": "evidence/certificates/fixed-point-entrance-complete/certificate.json"
+    },
+    {
+      "module": "Classicism.Models.FixedPointEntranceRelationalBarcan",
+      "lane": "models_entrance",
+      "certificate": "evidence/certificates/final-fixed-point-entrance-choice/certificate.json",
+      "source_sha256": "c9ae4b1f01c5fb5011007cbf3a9e504b048723b034af0b962d270424f603c12a",
+      "run_id": "20261023T232653305296Z-97e2af10",
+      "explicit_principal_axiom_audit": false,
+      "scope": "Supporting component of the fully accepted fixed-point entrance model; full scope is recorded in the complete certificate.",
+      "original_statement_mapping": null,
+      "complete_certificate": "evidence/certificates/fixed-point-entrance-complete/certificate.json"
+    },
+    {
+      "module": "Classicism.Models.ChoiceFirstOrderRecovery",
+      "lane": "models_choice",
+      "certificate": "evidence/certificates/final-choice-first-order-recovery/certificate.json",
+      "source_sha256": "075c8440d3e810da09b0f2e9a6dc3494a80ba6d29798b07a1adde47d37cd0dac",
+      "run_id": "20261023T233456901120Z-abfe59d4",
+      "explicit_principal_axiom_audit": false,
+      "scope": "Accepted model-construction components only; no full finite-Choice negative-model or entrance-countermodel endpoint is inferred. Principal axiom reports are distinguished from source compilation.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Models.BooleanGroundChecks",
+      "lane": "models_choice",
+      "certificate": "evidence/certificates/final-choice-first-order-recovery/certificate.json",
+      "source_sha256": "538336b7b6b2344658eccca4042be336e9ed31016fc35a8cc59e980a5a4155c3",
+      "run_id": "20261023T233456901120Z-abfe59d4",
+      "explicit_principal_axiom_audit": false,
+      "scope": "Accepted model-construction components only; no full finite-Choice negative-model or entrance-countermodel endpoint is inferred. Principal axiom reports are distinguished from source compilation.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Models.BooleanTypedTermSemantics",
+      "lane": "models_choice",
+      "certificate": "evidence/certificates/final-choice-first-order-recovery/certificate.json",
+      "source_sha256": "19b05614d76dc6d4f46cff89b04e5f31864a0ddda29198d650994ca39a5890c0",
+      "run_id": "20261023T233456901120Z-abfe59d4",
+      "explicit_principal_axiom_audit": false,
+      "scope": "Accepted model-construction components only; no full finite-Choice negative-model or entrance-countermodel endpoint is inferred. Principal axiom reports are distinguished from source compilation.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Models.BooleanModelExtraction",
+      "lane": "models_choice",
+      "certificate": "evidence/certificates/final-choice-first-order-recovery/certificate.json",
+      "source_sha256": "e371e5d118bb24751ea5eb0739f64e935fb9b8d6e42da1a39fd54041679f8576",
+      "run_id": "20261023T233456901120Z-abfe59d4",
+      "explicit_principal_axiom_audit": false,
+      "scope": "Accepted model-construction components only; no full finite-Choice negative-model or entrance-countermodel endpoint is inferred. Principal axiom reports are distinguished from source compilation.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationHClosure",
+      "lane": "operators",
+      "certificate": "evidence/certificates/final-full-typed-logical-separation-h-closure/certificate.json",
+      "source_sha256": "5187f252e77f6280c1a03c252b37f68191959b942cc78f6ed98cffbe0fa59230",
+      "run_id": "20261023T234307503691Z-142ab023",
+      "explicit_principal_axiom_audit": true,
+      "scope": "Accepted typed-observer proof components at the exact listed declarations. The actual-C endpoint is covered by the separate full-typed-logical-separation-actual-c certificate.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationHConsequences",
+      "lane": "operators",
+      "certificate": "evidence/certificates/final-full-typed-logical-separation-h-consequences/certificate.json",
+      "source_sha256": "ea1d05c28cde792d9e068d802d7396ca237521a56cf01dc4da49baee299a7b5d",
+      "run_id": "20261023T234716612195Z-69d2dc80",
+      "explicit_principal_axiom_audit": true,
+      "scope": "Accepted typed-observer proof components at the exact listed declarations. The actual-C endpoint is covered by the separate full-typed-logical-separation-actual-c certificate.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityConcreteRealAddition",
+      "lane": "probability_source",
+      "certificate": "evidence/certificates/final-atomic-probability-concrete-real-addition/certificate.json",
+      "source_sha256": "950d16e4458a11db46b887392233ad8169f79854523065f03ce9b0207f2242e2",
+      "run_id": "20261023T234829772850Z-94041e71",
+      "explicit_principal_axiom_audit": false,
+      "scope": "Source compilation through concrete real addition. No principal axiom audit, object-C translation certificate, full probability interpretation or type-ceiling theorem is inferred.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Results.Research.AnalyticPowerVocabulary",
+      "lane": "analytic",
+      "certificate": "evidence/certificates/final-analytic-power-vocabulary/certificate.json",
+      "source_sha256": "3745c07da72e4a03f4b24e67e8d88d4064b59b7e71324b41f59b29bbb37188b3",
+      "run_id": "20261024T000309475283Z-9d88dde4",
+      "explicit_principal_axiom_audit": true,
+      "scope": "Accepted analytic vocabulary, quotation, tuple-domain, packing or power-existence components. The arbitrary finite-arity schema has its separate final certificate.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Results.Research.AnalyticFiniteSchema",
+      "lane": "analytic",
+      "certificate": "evidence/certificates/final-analytic-finite-schema/certificate.json",
+      "source_sha256": "8e87995e6491ccf0333d5e6d2f698e14bd0fc12bac2204280c3539025a2aa76c",
+      "run_id": "20261024T000719741983Z-11915183",
+      "explicit_principal_axiom_audit": true,
+      "scope": "For every closed admitted type and every finite metalinguistic n ≥ 1, C5 + ☐Rigid Comprehension and possible Real yield a rigid necessarily real representative with represented powers of all arities 1 through n, also in arbitrary signatures. Nonempty bounded completeness is retained.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Results.Research.GeneratedAlgebraFiniteFactoredCertificatesLeftInverse2",
+      "lane": "arithmetic",
+      "certificate": "evidence/certificates/final-generated-algebra-finite-factored-certificates-left-inverse2/certificate.json",
+      "source_sha256": "b7b3bb2280194e2aa5c9bf724ccb26bf3454e97fd9d0c4bf6e1d451a5c6b1579",
+      "run_id": "20261024T001258988037Z-a4b53fb9",
+      "explicit_principal_axiom_audit": false,
+      "scope": "Accepted generated-algebra component translations. Original conclusions and helpers are counted separately; the remaining family and its final principal audit remain incomplete.",
+      "original_statement_mapping": {
+        "accepted_declaration": "Classicism.Research.GeneratedAlgebraFiniteFactored.left_inverse1",
+        "original_declaration": "Classicism.Research.GeneratedAlgebraFinite.left_inverse1",
+        "original_source": "topics/classicism/lean/Classicism/Results/Research/GeneratedAlgebraFinite.lean",
+        "original_source_sha256": "b4911c128403a5c245e384369aeb01cc340b4b4e9f72cb1de46b842fae176f1d",
+        "alternative_source": "topics/classicism/lean/Classicism/Results/Research/GeneratedAlgebraFiniteFactored.lean",
+        "alternative_source_sha256": "b7e35d5d9f9869e81a3a73d576dee8a3172848eb90c2ee5b2c5a36df16c04a78",
+        "literal_statement_text_equal": true,
+        "statement_text_sha256": "44cf18ff78d4a3bf13bb6907277e316868035e0798c8bc243c8182d239e59ff4",
+        "implicit_type_and_class_binders_equal": true,
+        "original_G_definitions_imported_unchanged": true,
+        "scope": "Same statement and implicit binders, alternate proof namespace; not an additional mathematical result."
+      }
+    },
+    {
+      "module": "Classicism.Models.BooleanProtectedCoverage",
+      "lane": "models_first_order",
+      "certificate": "evidence/certificates/final-boolean-protected-coverage/certificate.json",
+      "source_sha256": "429282f7911478445ee0acc7683926071d9fa5474650b2c5ada938dfff33b3c6",
+      "run_id": "20261024T002813685447Z-31090638",
+      "explicit_principal_axiom_audit": false,
+      "scope": "Accepted model-construction components only; no full finite-Choice negative-model or entrance-countermodel endpoint is inferred. Principal axiom reports are distinguished from source compilation.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Models.BooleanIndexedProfiles",
+      "lane": "models_first_order",
+      "certificate": "evidence/certificates/final-boolean-protected-coverage/certificate.json",
+      "source_sha256": "9be62c1036de625c12763330de10890b276bb20d199ff6beeb6a28da62880924",
+      "run_id": "20261024T002813685447Z-31090638",
+      "explicit_principal_axiom_audit": false,
+      "scope": "Accepted model-construction components only; no full finite-Choice negative-model or entrance-countermodel endpoint is inferred. Principal axiom reports are distinguished from source compilation.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Models.BooleanSmallFormulaSemantics",
+      "lane": "models_first_order",
+      "certificate": "evidence/certificates/final-boolean-protected-coverage/certificate.json",
+      "source_sha256": "cb533fc1a8272b6e3d98173348fc9474d98d50a82c309f47c0dc41ade3a0e1c1",
+      "run_id": "20261024T002813685447Z-31090638",
+      "explicit_principal_axiom_audit": false,
+      "scope": "Accepted model-construction components only; no full finite-Choice negative-model or entrance-countermodel endpoint is inferred. Principal axiom reports are distinguished from source compilation.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationCHoles",
+      "lane": "operator_actual_C",
+      "certificate": "evidence/certificates/final-full-typed-logical-separation-c-holes/certificate.json",
+      "source_sha256": "1890232f9e587cac81cd6e5ccb14821398c81641c8ea70934b01bee8e75a96fe",
+      "run_id": "20261024T005138400855Z-30db2230",
+      "explicit_principal_axiom_audit": true,
+      "scope": "Accepted typed-observer proof components at the exact listed declarations. The actual-C endpoint is covered by the separate full-typed-logical-separation-actual-c certificate.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationCSupport",
+      "lane": "operator_actual_C",
+      "certificate": "evidence/certificates/final-full-typed-logical-separation-c-holes/certificate.json",
+      "source_sha256": "aeb1bb579d04b77d4af983eb09e8f327f208c0b778208d4211aaeb353b059c51",
+      "run_id": "20261024T005138400855Z-30db2230",
+      "explicit_principal_axiom_audit": true,
+      "scope": "Accepted typed-observer proof components at the exact listed declarations. The actual-C endpoint is covered by the separate full-typed-logical-separation-actual-c certificate.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationCTransport",
+      "lane": "operator_actual_C",
+      "certificate": "evidence/certificates/final-full-typed-logical-separation-c-transport/certificate.json",
+      "source_sha256": "0a7b39a2897a72bc8986dd9f27e134ebd318c0cfe2ccd08998221d64edda5c32",
+      "run_id": "20261024T005923934420Z-0f1a01c8",
+      "explicit_principal_axiom_audit": true,
+      "scope": "Accepted typed-observer proof components at the exact listed declarations. The actual-C endpoint is covered by the separate full-typed-logical-separation-actual-c certificate.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationClosedTypes",
+      "lane": "operator_actual_C",
+      "certificate": "evidence/certificates/final-full-typed-logical-separation-c-transport/certificate.json",
+      "source_sha256": "a5f0e56e58708ae0c9f2bfe52cc6eb5b2ae6586d269471b8087930f1e8d69403",
+      "run_id": "20261024T005923934420Z-0f1a01c8",
+      "explicit_principal_axiom_audit": true,
+      "scope": "Accepted typed-observer proof components at the exact listed declarations. The actual-C endpoint is covered by the separate full-typed-logical-separation-actual-c certificate.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Models.CoalescedBase",
+      "lane": "ch_conditional_components",
+      "certificate": "evidence/certificates/final-coalesced-base/certificate.json",
+      "source_sha256": "ad95516b1b2ac7e8c8433cce7bb6e5aa7f698707d2e6dd4a75b1f8d39f088773",
+      "run_id": "20261024T011635617504Z-ab0bd282",
+      "explicit_principal_axiom_audit": true,
+      "scope": "Coalesced premodel and its displayed maps only; C-modelhood, leaf transfer, boxed structural and CH endpoints remain unaccepted.",
+      "original_statement_mapping": null
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationCClosure",
+      "certificate": "evidence/certificates/full-typed-logical-separation-actual-c/certificate.json",
+      "scope": "Same-signature, same-sequent translation from actual repository C to independent H plus full typed logical separation, for closed constant, context and boundary types; direct admitted Barcan and Functionality consequences. Local hypotheses remain local.",
+      "principal_reports": [
+        {
+          "declaration": "Classicism.Meta.Research.FullTypedLogicalSeparation.actual_c_sequent",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Classicism.Meta.Research.FullTypedLogicalSeparation.actual_c_theorem",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Classicism.Meta.Research.FullTypedLogicalSeparation.h_full_logical_separation_actual_c",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        }
+      ]
+    }
+  ],
+  "certificate_index": "evidence/CERTIFICATES.json",
+  "ch_certificate": "evidence/certificates/coalesced-ch-conditional/certificate.json",
+  "fixed_point_entrance_certificate": "evidence/certificates/fixed-point-entrance-complete/certificate.json",
+  "actual_c_observer_certificate": "evidence/certificates/full-typed-logical-separation-actual-c/certificate.json",
+  "supplemental_certificates": [
+    {
+      "certificate": "evidence/certificates/infinitary-cardinal-closure/certificate.json",
+      "result_entries": [
+        "INFINITARY-COMPREHENSION"
+      ],
+      "scope": {
+        "theorems": [
+          "Regularity bounds every external family of stages of cardinality below kappa.",
+          "Given regular kappa <= lambda, lambda^(<kappa) <= lambda, language size <= lambda <= ambient carrier size, at most lambda code operations of arities below kappa, and a seed of size <= lambda, construct an elementary substructure of size exactly lambda containing the seed and closed under all supplied code operations.",
+          "Specialize to one supplied sequence-code operation for each ordinal length below kappa, with lambda^(<kappa) = lambda."
+        ],
+        "limitations": [
+          "The code operations are explicit inputs and must be instantiated by actual sequence-as-set codes for an H_theta application.",
+          "No H_theta construction, infinitary-formula coding, satisfaction absoluteness, typed Henkin reduct, or whole infinitary packet is certified here.",
+          "The imported first-order Skolem theorem is existing Mathlib infrastructure, not a new discovery.",
+          "Three principal reports are audit coverage, not three independent new model constructions."
+        ]
+      }
+    },
+    {
+      "certificate": "evidence/certificates/probability-source-principal-audit/certificate.json",
+      "result_entries": [
+        "PROBABILITY"
+      ],
+      "scope": {
+        "theorems": [
+          "Compiled shallow Lean source development of represented finite crossing and arbitrarily small cut gaps.",
+          "Compiled rational negation identities used by the supported-cut inverse construction.",
+          "Compiled concrete supported-real negation and subtraction, negation involution, additive inverses and cancellation, and the guarded additive-order/subtraction equivalence.",
+          "The substantive arithmetic/cut theorems retain their displayed ActualWorld w and quantified AxiomOfInfinity sigma assumptions and their internal-domain guards. Individual helper lemmas may need fewer assumptions.",
+          "All statements are current/local as written; necessary propagation, replacement by actual e-to-e operations, or external full real fields is not inferred."
+        ],
+        "limitations": [
+          "Real multiplication, ordered multiplicative laws and positive division/normalization.",
+          "Represented internal finite-family operations, faithful threshold/finite-fibre equivalences, and finite-block/rank reduction for the type ceiling.",
+          "Full global/local probability interpretation must retain its exact assumptions and original-number transfer obligations."
+        ]
+      }
+    },
+    {
+      "certificate": "evidence/certificates/probability-numeric-operations-twelve/certificate.json",
+      "result_entries": [
+        "PROBABILITY"
+      ],
+      "scope": {
+        "theorems": [
+          "Certifies the original twelve object-language C-minus derivations: uniqueness equations, concrete CoreAdd/CoreMul graphs, closure in Numbers, number induction/cases, and right-zero/right-successor recursion laws for plus and times.",
+          "The operations are the actual supported-union lambda terms at relational number type ((sigma -> Prop) -> Prop), not selected function parameters.",
+          "The operation laws retain ActualWorld w, quantified AxiomOfInfinity sigma, and their displayed internal Numbers/CoreAdd/CoreMul guards. Number induction and number cases need ActualWorld w but not the quantified Infinity premise.",
+          "No Choice or Plenitude premise is added, and no e-to-e operation is introduced.",
+          "The four generic basis helpers are kernel-checked dependencies with explicit clean axiom reports; their promotion to canonical module names is now checked in this successful closure."
+        ],
+        "limitations": [
+          "Current statements do not automatically propagate to necessary counterparts.",
+          "This is not acceptance of the later NumericAddition, NumericMultiplication, or ConcreteRealAddition certificate targets.",
+          "No full probability interpretation, real multiplication/division, faithful threshold equivalence, finite-block/type-ceiling reduction, or unrestricted arithmetic conservativity is certified here.",
+          "No generated database statement or Lean badge is promoted.",
+          "Twelve principal conclusions plus four helpers is certificate coverage, not sixteen new discoveries."
+        ]
+      }
+    },
+    {
+      "certificate": "evidence/arithmetic-closeout-references.json",
+      "result_entries": [
+        "ARITHMETIC-FOUNDATIONS"
+      ],
+      "scope": "Completed bounded arithmetic package: the seven specified semantic target modules, all 36 conclusions of the saved three-sort generated-algebra instance, and the selected 117-principal audit, with the expanded 129-report union. No database verification badge was edited."
+    },
+    {
+      "certificate": "evidence/certificates/full-observers-simultaneous-finite-schema/certificate.json",
+      "result_entries": [
+        "FULL-IDENTITY-OBSERVERS"
+      ],
+      "scope": {
+        "theorems": {
+          "language": "Actual object-language derivability in C for the pure signature; finite lists of closed types are metalinguistic.",
+          "observer_qualification": "One shared observer satisfies all listed quantifier qualifications simultaneously, together with full composite Boolean identities; every listed quantifier qualification includes universal and existential commutation.",
+          "forward": "C5 plus propositional Atomicity entails both FullFiniteSchema and NecessaryFullFiniteSchema.",
+          "reverse": "Background is explicitly C5 plus Actuality. Adding either finite separation schema entails propositional Atomicity.",
+          "interderivability": "The current and necessary finite separation schemas are interderivable over C5 plus Actuality.",
+          "atomic_observers": "Under C5, each atomic observer satisfies the entire finite conjunction, currently and necessarily."
+        },
+        "limitations": [
+          "An object-language quantifier over types or a single infinite conjunction of every type qualification.",
+          "A certified Atomicity equivalence for the full typed relational B/Q/R/L logical-separation schema.",
+          "Removal of Actuality from the converse/interderivability background.",
+          "Automatic database statement certification or Lean badge promotion."
+        ]
+      }
+    },
+    {
+      "certificate": "evidence/certificates/finite-choice-full-construction/certificate.json",
+      "result_entries": [
+        "CHOICE-NO-FINITE-BASIS"
+      ],
+      "scope": {
+        "theorems": [
+          "The full boxed Functional Choice schema has no equivalent finite list of original pure fixed-closed-type sentences over C.",
+          "The same nonfinite-equivalent-basis result holds for unboxed Functional Choice.",
+          "For every finite fragment of either schema, an actual constructed C-model satisfies that fragment and fails an explicitly quoted higher Choice instance.",
+          "Adjacent selector tower stages are strictly increasing; explicit separating models are provided.",
+          "Existing equivalences transfer the no-finite-basis conclusion to the tower-stage union, all-type diagonal Choice, and full boxed-selector schemas."
+        ],
+        "qualifications": [
+          "Final boxed/unboxed nonfinite-basis declarations have no model-existence, countermodel, extraction, or finite-fragment-gap hypothesis. Such inputs are discharged by the construction and finitary derivation-support argument.",
+          "Equivalent bases may consist of arbitrary finite lists of sentences in the original pure language at fixed closed object types, not merely finite subsets of the Choice schema.",
+          "No additional object-language Infinity axiom or preservation of Infinity is asserted. The use of Nat in the ambient construction does not establish object-language Infinity after extraction.",
+          "This does not rule out finite strictly stronger sufficient packages implying full Choice, nor count an all-type axiom schema as one fixed-type sentence.",
+          "The proof uses ordinary classical semantic metatheory; the accepted axiom reports are propext, Quot.sound, and Classical.choice as individually listed. These are not additional object-language assumptions.",
+          "The recovered one-world general model need not retain the Boolean hierarchy carriers or their external cardinalities."
+        ]
+      }
+    },
+    {
+      "certificate": "evidence/certificates/infinitary-support-and-finite-syntax/certificate.json",
+      "result_entries": [
+        "INFINITARY-COMPREHENSION"
+      ],
+      "scope": {
+        "coverage": {
+          "finite_bridge": 6,
+          "regular_nominal_strictness": 9,
+          "nominal_occurrence_helpers": 2,
+          "countable_strictness_construction": 9
+        },
+        "limits": [
+          "Nominal strictness uses universe 0, regular infinite kappa and fewer than kappa distinct typed parameter symbols actually occurring in each matrix. Arbitrary unused ambient parameters and arbitrary universe-small Boolean branching remain allowed.",
+          "Nominal Atomicity means explicit semantic profile-order Atomicity. C5 and Intensionality use actual syntax. This is not a native Meta.Model transport certificate or a quoted native P.Atomicity theorem.",
+          "The countable strictness construction includes an actual finite C reduct, infinite individuals, faithful profiles and modal collapse, but its profile Atomicity and its infinitary comprehension failure retain the defined Henkin language scope.",
+          "The finite bridge embeds the actual finite lambda-free syntax and preserves substitution/evaluation; it is not a proof-calculus soundness theorem for arbitrary C5 Premodels.",
+          "Ordinary Classical.choice/propext/Quot.sound are semantic metatheory, not added object-language assumptions.",
+          "ActionConsequences and ActionFull are outside this target dependency closure. Their acceptance, and any quoted-native-Atomicity transport there, are not claimed by this receipt.",
+          "No claim of completion of OriginalRepresentation or the full infinitary audit."
+        ]
+      }
+    },
+    {
+      "certificate": "evidence/certificates/probability-addition-basic/certificate.json",
+      "result_entries": [
+        "PROBABILITY"
+      ],
+      "scope": {
+        "type": "Admitted relational type σ; numerical objects have type ν = ((σ → t) → t).",
+        "premises": [
+          "A given proposition w satisfying ActualWorld w.",
+          "Quantified AxiomOfInfinity σ.",
+          "Each argument a or b satisfies the internal predicate Numbers w."
+        ],
+        "definitions": [
+          {
+            "path": "topics/classicism/lean/Classicism/Lattice.lean",
+            "line": 46,
+            "meaning": "ActualWorld w is w ∧ ∀q, q → w ≤ q; Actuality supplies such a w."
+          },
+          {
+            "path": "topics/classicism/lean/Classicism/Principles/Infinity.lean",
+            "line": 19,
+            "meaning": "Quantified Infinity states that no finite cardinality applies to the universal σ-property."
+          },
+          {
+            "path": "topics/classicism/lean/Classicism/Results/Research/ActualityCoreNumbers.lean",
+            "line": 41,
+            "meaning": "Numbers w is the actual supported cardinal field restricted by the Frege induction predicate over admitted supported predicates."
+          },
+          {
+            "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericOperations.lean",
+            "line": 28,
+            "meaning": "plus is the explicit Realize term for CoreAdd, not an assumed semiring operation or chosen operation parameter."
+          }
+        ],
+        "conclusions": [
+          {
+            "principal": "Classicism.Research.ProbabilityNumericOperations.plus_zero_left.derivable",
+            "formula": "Numbers w b → plus w (coreZero w) b = b"
+          },
+          {
+            "principal": "Classicism.Research.ProbabilityNumericOperations.plus_suc_left.derivable",
+            "formula": "Numbers w a → Numbers w b → plus w (coreSuc w a) b = coreSuc w (plus w a b)"
+          },
+          {
+            "principal": "Classicism.Research.ProbabilityNumericOperations.plus_comm.derivable",
+            "formula": "Numbers w a → Numbers w b → plus w a b = plus w b a"
+          }
+        ],
+        "object_calculus": "Generated Meta.Theorem C.axiomsMinus certificates; all ActualWorld, quantified Infinity, and Numbers guards remain in the quoted statements.",
+        "scope_limits": [
+          "Current-world internal supported numerical laws, not unconditional laws without ActualWorld or quantified Infinity.",
+          "No external identification of Numbers with standard natural numbers, no unguarded law on all objects of ν.",
+          "No Choice, Plenitude, semiring instance, or e-to-e function premise is added.",
+          "No acceptance of the other five Addition translations, fourteen Multiplication translations, ten ConcreteRealAddition translations, full eight-Addition audit, remaining32 audit, or full probability programme.",
+          "Three original Addition declarations, not three extra discoveries beyond their existing source proofs; imported earlier Operations certificates are not recounted.",
+          "No compiler invoked by this independent auditor."
+        ]
+      }
+    },
+    {
+      "certificate": "evidence/certificates/infinitary-action-countermodels/certificate.json",
+      "result_entries": [
+        "INFINITARY-COMPREHENSION"
+      ],
+      "scope": {
+        "language": "Actual inductive infinitary Term syntax at universe0 in the canonical action interpretation: finite typed bound contexts, arbitrary Type0-indexed Boolean conjunction/disjunction, application, equality, modal operation and quantifiers; arbitrary Type0 root parameter families. The grammar has no primitive lambda-abstraction constructor.",
+        "interpretation": "The original intensional categorical action premodels, with parameters assigned at the root and transported along arrows; quantifiers range over the domain at the evaluation world. No constant-domain or invertibility assumption is added.",
+        "schema": "Canonical.Comprehension: under every root parameter assignment and every actual infinitary matrix A, the concrete formula exists R, box(forall xs, R[xs] iff A) holds. Canonical.Closed separately witnesses admitted denotations for all infinitary terms.",
+        "principals": [
+          {
+            "declaration": "Classicism.Research.InfinitaryComprehension.Countermodels.surjection_comprehension_barcan_not_nd",
+            "construction": "Full action model on the monoid of all surjections of the natural numbers, with the existing unit individual action.",
+            "conclusion": [
+              "Canonical.Closed",
+              "Canonical.Comprehension",
+              "Necessary Barcan for every original closed type sigma",
+              "Failure of ND at propositional type t"
+            ]
+          },
+          {
+            "declaration": "Classicism.Research.InfinitaryComprehension.Countermodels.idempotent_comprehension_not_barcan",
+            "construction": "Existing full action model on the two-element idempotent monoid Idem.",
+            "conclusion": [
+              "Canonical.Closed",
+              "Canonical.Comprehension",
+              "Failure of propositional Barcan"
+            ]
+          },
+          {
+            "declaration": "Classicism.Research.InfinitaryComprehension.Countermodels.idempotent_comprehension_not_nd",
+            "construction": "The same two-element idempotent full action model.",
+            "conclusion": [
+              "Canonical.Closed",
+              "Canonical.Comprehension",
+              "Failure of propositional ND"
+            ]
+          }
+        ],
+        "meaning": "The same concrete full action countermodels extend to the actual infinitary syntax and comprehension schema while retaining their already proved original finite-sentence failures. These are semantic countermodel theorems in Lean, not quoted object-C derivations.",
+        "sources": [
+          {
+            "path": "topics/classicism/lean/Classicism/Results/Research/InfinitaryComprehensionCountermodels.lean",
+            "declarations": [
+              "surjection_comprehension_barcan_not_nd",
+              "idempotent_comprehension_not_barcan",
+              "idempotent_comprehension_not_nd"
+            ]
+          },
+          {
+            "path": "topics/classicism/lean/Classicism/Results/Research/InfinitaryComprehensionActionFull.lean",
+            "declarations": [
+              "full_closed",
+              "full_comprehension",
+              "full_countermodel_expands"
+            ]
+          },
+          {
+            "path": "topics/classicism/lean/Classicism/Results/Research/InfinitaryComprehensionCanonical.lean",
+            "declarations": [
+              "sem",
+              "Closed",
+              "Comprehension"
+            ]
+          },
+          {
+            "path": "topics/classicism/lean/Classicism/Results/Research/InfinitaryComprehensionSyntax.lean",
+            "declarations": [
+              "Term",
+              "Term.comprehension"
+            ]
+          },
+          {
+            "path": "topics/classicism/lean/Classicism/Models/FullActionModels.lean",
+            "declarations": [
+              "surj",
+              "surj_not_nd_t",
+              "surj_epic"
+            ]
+          },
+          {
+            "path": "topics/classicism/lean/Classicism/Semantics/IntensionalExamples.lean",
+            "declarations": [
+              "Idem",
+              "Idem.not_bf_t",
+              "Idem.not_nd_t"
+            ]
+          }
+        ],
+        "limitations": [
+          "Three principal theorem reports describe two concrete model constructions, not three newly constructed models.",
+          "No abstract C5 representation or full standard-Gallin completeness theorem is accepted here.",
+          "No claim that infinitary comprehension forces C5, ND, Barcan, or constant domains; the accepted counterexamples show the specified failures.",
+          "The surjection theorem uses original closed types; no assertion at arbitrary auxiliary type variables is added.",
+          "No original-language representation bridge, lambda-free canonical bridge, grounded-model endpoint, original representation endpoint, or full infinitary audit acceptance.",
+          "propext, Classical.choice and Quot.sound are ordinary Lean metatheory; no sorryAx is present in the three audited dependency reports.",
+          "No compiler invoked by this independent auditor."
+        ]
+      }
+    },
+    {
+      "certificate": "evidence/certificates/coalesced-ch-expanded/certificate.json",
+      "result_entries": [
+        "CH-COALESCED",
+        "MAX-CH"
+      ],
+      "scope": {
+        "ambient_construction": "OppositeCHComponents constructs actual one-world pure-signature C components with inhabited domains and the original opposite structural-CH witnesses at type e. Its coalesced countermodel satisfies boxed Barcan at every type and fails the original CH-noncontingency sentence at e.",
+        "ambient_metatheory": "The external Flypitch forcing/completeness development is used in Lean ambient universe metatheory. Its ordinary-model endpoints have no explicit Con(ZFC) premise. No finitistic proof of a relative-consistency implication has been supplied; adding an unused Con(ZFC) premise would not supply one.",
+        "conditional_transfer": "FirstOrderTransfer assumes models or satisfiability of its explicitly defined witnessTheory, namely AxiomTheory.theory plus the translated pure sentence. The opposite-CH countermodel and Max applications there retain both such hypotheses. It does not by itself establish that these theories are satisfiable from Con(ZFC).",
+        "maximalism": "Every listed inconsistency conclusion includes Maximalism together with the specified CH-noncontingency instance or schema. None concludes that Maximalism alone is inconsistent.",
+        "typing": "The ambient component endpoints specialize to type e. Conditional FirstOrderTransfer is parameterized by sigma; its Max conclusions additionally require sigma.Closed.",
+        "models": "No external standardness, well-foundedness or transitivity of extracted arbitrary first-order membership models is claimed. Internal leastness, admitted subsets and actual internal graphs supply the relevant semantics.",
+        "metalogic": "Lean classical axioms used by the external construction are metatheoretic dependencies, not additional object-language principles of C."
+      }
+    },
+    {
+      "certificate": "evidence/certificates/infinitary-full-representation/certificate.json",
+      "result_entries": [
+        "INFINITARY-COMPREHENSION"
+      ],
+      "scope": {
+        "main_result": {
+          "statement": "Universe-0 categorical action Premodels with actual original-closed-type infinitary term-denotation closure, unrestricted original-closed-type Infinitary Comprehension, and actual boxed ND_t have a faithful full-standard representation. Original closed root-domain carriers are retained; observationally equivalent reachable worlds are quotiented; infinitary truth is preserved through the displayed grounding maps. All proposition profiles and external functions at admitted relational-output types are represented.",
+          "explicit_premises": [
+            "GroundClosed A: actual term-denotation closure at reachable worlds for formed original-closed-type matrices and finite contexts",
+            "GroundComp A: actual existential/boxed infinitary Comprehension for formed original-closed-type matrices",
+            "LambdaFreeC5 A: actual boxed propositional ND_t",
+            "Existing Premodel structure, including coherent injective inclusions into intensions; universe 0"
+          ],
+          "not_assumed": [
+            "fullness",
+            "constant domains",
+            "Barcan",
+            "A.IsModel",
+            "object-language Functional Choice",
+            "Infinity"
+          ],
+          "principal_endpoints": [
+            "Classicism.Research.InfinitaryComprehension.Canonical.original_full_standard_representation",
+            "Classicism.Research.InfinitaryComprehension.Canonical.originalModel_domain",
+            "Classicism.Research.InfinitaryComprehension.Canonical.originalModel_truth",
+            "Classicism.Research.InfinitaryComprehension.Canonical.originalModel_full_functions",
+            "Classicism.Research.InfinitaryComprehension.Canonical.originalModel_full_propositions"
+          ],
+          "converse_note": "Separate audited full-standard validity reports give the converse semantic validity direction for the displayed infinitary axioms; no proof calculus is introduced."
+        },
+        "supporting_results": [
+          "Full standard soundness concerns the explicit lambda-free infinitary syntax, arbitrary parameter assignments and allowed full relational functions. It does not establish effective finite axiomatizability.",
+          "Nominal strictness uses universe 0, regular infinite kappa and fewer than kappa distinct typed parameter symbols actually occurring in each matrix. Arbitrary unused ambient parameters and arbitrary universe-small Boolean branching remain allowed.",
+          "Nominal Atomicity means explicit semantic profile-order Atomicity. C5 and Intensionality use actual syntax. This is not a native Meta.Model transport certificate or a quoted native P.Atomicity theorem.",
+          "The countable strictness construction includes an actual finite C reduct, infinite individuals, faithful profiles and modal collapse, but its profile Atomicity and its infinitary comprehension failure retain the defined Henkin language scope.",
+          "CardinalClosure gives externally coded short-operation closure in an elementary first-order substructure under explicit regularity, cardinal arithmetic, language size and ambient-size assumptions. It does not implement H-theta, formula coding, satisfaction absoluteness or the typed Henkin reduct needed for the full H-theta argument.",
+          "General action Atomicity/RC endpoints are at the root and retain their source closure/comprehension/modelhood premises. No automatic boxed upgrade is certified.",
+          "The finite bridge embeds the actual finite lambda-free syntax and preserves substitution/evaluation; it is not a proof-calculus soundness theorem for arbitrary C5 Premodels.",
+          "Observer helpers are C-side object-derivation certificates for their exact stated premises. They do not certify the separate general finite-list or lambda-free observer bootstrap.",
+          "Countermodels retain actual expanded full action semantics: surjection comprehension plus necessary Barcan at each original closed type fails ND_t; idempotent comprehension fails BF_t and ND_t."
+        ],
+        "not_claimed": [
+          "Recursive infinitary proof-calculus completeness",
+          "Equivalence with finitary Choice Classicism",
+          "Arbitrary-universe forward representation",
+          "A quoted native Meta.Model Atomicity certificate for the separate nominal strictness construction",
+          "Automatic boxed upgrades for general action Atomicity/RC endpoints",
+          "Completion of the H-theta formula-coding, absoluteness or typed-Henkin-reduct programme",
+          "A canonical database lean: verified badge; none were manually changed"
+        ]
+      }
+    }
+  ]
+}

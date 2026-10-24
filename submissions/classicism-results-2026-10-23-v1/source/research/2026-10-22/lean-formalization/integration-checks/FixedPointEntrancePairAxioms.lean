@@ -1,0 +1,5 @@
+import Classicism.Models.FixedPointEntrancePairs
+
+#print axioms Classicism.Meta.Intensional.FixedPointEntrance.exists_pairRaw
+#print axioms Classicism.Meta.Intensional.FixedPointEntrance.pairRaw_admitted_iff
+#print axioms Classicism.Meta.Intensional.FixedPointEntrance.exactImage_admitted

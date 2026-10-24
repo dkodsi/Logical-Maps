@@ -1,0 +1,24 @@
+import Classicism.Results.Research.FiniteTypePropagation
+import Classicism.Results.Research.FiniteFunctionFieldsCertificates
+import Classicism.Results.Research.C5FregeCertificates
+import Classicism.Certified.Schemas
+import Classicism.Tools.Schema
+
+#classicism_audit Classicism.Results.Research.FiniteTypePropagation
+#classicism_types_audit Classicism.Results.Research.FiniteTypePropagation
+#classicism_schema Classicism.Research.FiniteTypePropagation.FiniteDomain
+  Classicism.Research.FiniteTypePropagation.FiniteRelDomain
+  Classicism.Research.FiniteTypePropagation.NecessaryFiniteDomain
+#classicism_certify Classicism.Research.FiniteTypePropagation.finite_arrow_of_functionality
+  Classicism.Research.FiniteTypePropagation.finite_arrow_of_barcan
+  Classicism.Research.FiniteTypePropagation.finite_arrow_of_c5
+  Classicism.Research.FiniteTypePropagation.finite_base_of_finite_predicates
+  Classicism.Research.FiniteTypePropagation.finite_rel_domain
+  Classicism.Research.FiniteTypePropagation.finite_domain_of_rel
+  Classicism.Research.FiniteTypePropagation.finite_domain_necessary_c5
+  Classicism.Research.FiniteTypePropagation.finite_domain_of_necessary
+#print axioms Classicism.Research.FiniteTypePropagation.finite_arrow_of_functionality.rule
+#print axioms Classicism.Research.FiniteTypePropagation.finite_arrow_of_barcan.rule
+#print axioms Classicism.Research.FiniteTypePropagation.finite_arrow_of_c5.rule
+#print axioms Classicism.Research.FiniteTypePropagation.finite_base_of_finite_predicates.rule
+#print axioms Classicism.Research.FiniteTypePropagation.finite_domain_necessary_c5.rule

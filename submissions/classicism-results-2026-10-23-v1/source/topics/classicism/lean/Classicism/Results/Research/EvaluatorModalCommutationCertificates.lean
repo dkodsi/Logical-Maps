@@ -1,0 +1,36 @@
+import Classicism.Results.Research.EvaluatorModalCommutation
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Certified.Schemas
+
+/-! Exact C gate, relational-type, translated-derivation and schema certificates.
+Direct source: gallin-bivalent-evaluator, section 9, Proposition 8 (misc,
+unpaginated original research). No database verification status is assigned here. -/
+
+#classicism_audit Classicism.Results.Research.EvaluatorModalCommutation
+#classicism_types_audit Classicism.Results.Research.EvaluatorModalCommutation
+set_option maxHeartbeats 0 in
+#classicism_derive_audit Classicism.Results.Research.EvaluatorModalCommutation
+#classicism_schema Classicism.Research.EvaluatorModalCommutation.HasBoxCommutingEvaluator
+  Classicism.Research.EvaluatorModalCommutation.HasDiamondCommutingEvaluator
+#classicism_certify Classicism.Research.EvaluatorModalCommutation.box_evaluator_fregean
+  Classicism.Research.EvaluatorModalCommutation.fregean_box_evaluator
+  Classicism.Research.EvaluatorModalCommutation.box_evaluator_extensionality
+  Classicism.Research.EvaluatorModalCommutation.extensionality_box_evaluator
+  Classicism.Research.EvaluatorModalCommutation.diamond_evaluator_fregean
+  Classicism.Research.EvaluatorModalCommutation.fregean_diamond_evaluator
+  Classicism.Research.EvaluatorModalCommutation.diamond_evaluator_extensionality
+  Classicism.Research.EvaluatorModalCommutation.extensionality_diamond_evaluator
+#classicism_entails Classicism.Research.EvaluatorModalCommutation.box_evaluator_fregean
+  Classicism.Research.EvaluatorModalCommutation.fregean_box_evaluator
+  Classicism.Research.EvaluatorModalCommutation.box_evaluator_extensionality
+  Classicism.Research.EvaluatorModalCommutation.extensionality_box_evaluator
+  Classicism.Research.EvaluatorModalCommutation.diamond_evaluator_fregean
+  Classicism.Research.EvaluatorModalCommutation.fregean_diamond_evaluator
+  Classicism.Research.EvaluatorModalCommutation.diamond_evaluator_extensionality
+  Classicism.Research.EvaluatorModalCommutation.extensionality_diamond_evaluator
+
+#print axioms Classicism.Research.EvaluatorModalCommutation.box_evaluator_iff_fregean.derivable
+#print axioms Classicism.Research.EvaluatorModalCommutation.diamond_evaluator_iff_fregean.derivable
+#print axioms Classicism.Research.EvaluatorModalCommutation.box_evaluator_extensionality.entails
+#print axioms Classicism.Research.EvaluatorModalCommutation.diamond_evaluator_extensionality.entails

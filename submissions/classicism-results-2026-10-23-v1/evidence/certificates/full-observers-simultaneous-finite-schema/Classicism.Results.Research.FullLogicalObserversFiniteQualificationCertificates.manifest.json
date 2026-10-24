@@ -1,0 +1,43 @@
+{
+  "schema_version": 2,
+  "run_id": "20261024T025642051890Z-4cb0774f",
+  "modules": [
+    "Classicism.Results.Research.FullLogicalObserversFiniteQualificationCertificates"
+  ],
+  "state": "failed",
+  "complete": false,
+  "checked": [
+    {
+      "module": "Classicism.Results.Research.FullLogicalObserversFiniteQualificationCertificates",
+      "fingerprint": "fb97fdb58988eca12b318cf749a7cde0cb7c9a2d383b6b75d6c6399aa70b926b",
+      "source_sha256": "2e7a209fb8f69d4ddb980b261e4c80a5fddc4d323216e5ee7a062033588e2faf",
+      "artifacts": {
+        ".olean": "3f46640765c5a46d731576a4ee372a804fa084f88113ea497f09771f9502f9f8"
+      },
+      "seconds": 2.97,
+      "exit_code": 0,
+      "log": "logs/runs/20261024T025642051890Z-4cb0774f/Classicism_Results_Research_FullLogicalObserversFiniteQualificationCertificates.log"
+    }
+  ],
+  "sources": {
+    "Classicism.Results.Research.FullLogicalObserversFiniteQualificationCertificates": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FullLogicalObserversFiniteQualificationCertificates.lean",
+      "sha256": "2e7a209fb8f69d4ddb980b261e4c80a5fddc4d323216e5ee7a062033588e2faf"
+    }
+  },
+  "precompiled_roots": [
+    ".local-runtime/mathlib/.lake/build/lib/lean",
+    ".local-runtime/mathlib/.lake/packages/plausible/.lake/build/lib/lean",
+    ".local-runtime/mathlib/.lake/packages/proofwidgets/.lake/build/lib/lean",
+    ".local-runtime/mathlib/.lake/packages/batteries/.lake/build/lib/lean",
+    ".local-runtime/mathlib/.lake/packages/aesop/.lake/build/lib/lean",
+    ".local-runtime/mathlib/.lake/packages/importGraph/.lake/build/lib/lean",
+    ".local-runtime/mathlib/.lake/packages/LeanSearchClient/.lake/build/lib/lean",
+    ".local-runtime/mathlib/.lake/packages/Qq/.lake/build/lib/lean"
+  ],
+  "precompiled_sha256": "675f46a345caf1daf1bbc81b42696e5a518c6d01fd9c8a8d02c8a158f8475a3e",
+  "compiler_sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554",
+  "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "source_snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources",
+  "exit_code": 1
+}

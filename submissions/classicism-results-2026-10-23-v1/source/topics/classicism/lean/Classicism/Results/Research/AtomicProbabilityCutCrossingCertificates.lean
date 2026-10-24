@@ -1,0 +1,18 @@
+import Classicism.Results.Research.AtomicProbabilityCutCrossing
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Schema
+
+#classicism_audit Classicism.Results.Research.AtomicProbabilityCutCrossing
+#classicism_types_audit Classicism.Results.Research.AtomicProbabilityCutCrossing
+
+#classicism_derive Classicism.Research.ProbabilityCutCrossing.represented_adjacent_exit
+  Classicism.Research.ProbabilityCutCrossing.natural_multiple_exceeds_fraction
+  Classicism.Research.ProbabilityCutCrossing.stepTerm_in_field
+  Classicism.Research.ProbabilityCutCrossing.stepTerm_zero
+  Classicism.Research.ProbabilityCutCrossing.stepTerm_suc
+  Classicism.Research.ProbabilityCutCrossing.cut_step_eventually_outside
+  Classicism.Research.ProbabilityCutCrossing.cut_has_adjacent_step
+  Classicism.Research.ProbabilityCutCrossing.cut_has_small_gap
+
+#print axioms Classicism.Research.ProbabilityCutCrossing.cut_has_small_gap.derivable

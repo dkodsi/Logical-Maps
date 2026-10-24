@@ -1,0 +1,3 @@
+import Classicism.Results.Research.GeneratedAlgebraFiniteFactoredCertificatesLeftInverse1
+
+#classicism_derive Classicism.Research.GeneratedAlgebraFiniteFactored.left_inverse1

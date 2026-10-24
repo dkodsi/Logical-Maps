@@ -1,0 +1,897 @@
+{
+  "schema_version": 1,
+  "status": "coverage_inventory_only_no_new_Lean_acceptance",
+  "audited_at_utc": "2026-10-24T05:37:52.816238+00:00",
+  "scope": "One probability development, with separate ordinary-source and object-language certificate status. The three-target closeout queue is not exhaustive of prepared certificates.",
+  "method": {
+    "compiler_invoked": false,
+    "research_or_new_proofs_performed": false,
+    "source_edits_performed": false,
+    "read_only_success_search": "All saved check manifests containing AtomicProbability and Certificates; checked entries ending Certificates require exit_code=0.",
+    "matching_source_files": 28,
+    "matching_check_manifests_examined": 20,
+    "matching_check_manifest_hashes": [
+      {
+        "path": "research/2026-10-22/lean-formalization/checks/20261023T021915054282Z.json",
+        "sha256": "0355a36c1a26fe1c9b5b122fe4536e089d21a03bb74cc2b6beda0ceae410b0ba"
+      },
+      {
+        "path": "research/2026-10-22/lean-formalization/checks/20261023T022130038754Z.json",
+        "sha256": "9db7cdc6c2247e9dfd91550bcb9a1a888ccb03f0f78f01d2b50564a4a657377c"
+      },
+      {
+        "path": "research/2026-10-22/lean-formalization/checks/20261023T022507811192Z.json",
+        "sha256": "ba0651705e92031026bd0bbdb260180dc21108b370996d8ae449d26cffd34380"
+      },
+      {
+        "path": "research/2026-10-22/lean-formalization/checks/20261023T022700791873Z.json",
+        "sha256": "6558c3bc00f2ec0bc507294b98226a90cf73762868dfd87ad89ab25439c06e84"
+      },
+      {
+        "path": "research/2026-10-22/lean-formalization/checks/20261023T045450258074Z-06eb766b.json",
+        "sha256": "af6a671119f6280225276b2724b532d179d58b0567ba80dc77acba11ecb40399"
+      },
+      {
+        "path": "research/2026-10-22/lean-formalization/checks/20261023T045810263373Z-aef77557.json",
+        "sha256": "dff2db86456cc1bdadeba3ddeefa0cb467b4ea2c725acdf3288c78b31783fcfe"
+      },
+      {
+        "path": "research/2026-10-22/lean-formalization/checks/20261023T050536758600Z-1ae6daf2.json",
+        "sha256": "38ceaee3536c796432e8565f495f5e25beb8849337210fa8ceb8b97469a37571"
+      },
+      {
+        "path": "research/2026-10-22/lean-formalization/checks/20261023T051735278101Z-c2f76f0d.json",
+        "sha256": "825fc53cad32b3540df1aa633f7e7fb87c95d2c5e6a7279d2c0e5e68dcc84d34"
+      },
+      {
+        "path": "research/2026-10-22/lean-formalization/checks/20261023T052005207226Z-a0a1f31d.json",
+        "sha256": "92c91a5461f16ae44a10cb724254ee5db1d465f87e79a0cc28a408631f5456a3"
+      },
+      {
+        "path": "research/2026-10-22/lean-formalization/checks/20261023T184023901665Z-9db2c26b.json",
+        "sha256": "45bea42188ac86098cfab74122cb253b965343a77b93fa025c608abf3b339be9"
+      },
+      {
+        "path": "research/2026-10-22/lean-formalization/checks/20261023T190515914723Z-af3b0f46.json",
+        "sha256": "8a99df9b8175b84e178d0181a73f70c0b1567f74df2620a26053383b08e7dd4c"
+      },
+      {
+        "path": "research/2026-10-22/lean-formalization/checks/20261024T034324697650Z-752dd75e.json",
+        "sha256": "c59b1fbe543cdaec72115673fcf83b9557ef5f0a0c85ed77b89d6eef4801c603"
+      },
+      {
+        "path": "research/2026-10-22/lean-formalization/checks/20261024T035242687704Z-dbf668d0.json",
+        "sha256": "e5b0f4421b5701b3bd4bbd008686a7d3984eca8518c05d4b3c745b257250d991"
+      },
+      {
+        "path": "research/2026-10-22/lean-formalization/checks/20261024T040225041542Z-27c039a5.json",
+        "sha256": "b373ba6a30b09724641e7ee64625561a05c1d885eccf71fee86e670f4d3870cd"
+      },
+      {
+        "path": "research/2026-10-22/lean-formalization/checks/20261024T041357823183Z-612ad618.json",
+        "sha256": "7fdc833c55e74893f2018af6303a9efc1e42889b2efa791db4457f5938cd435d"
+      },
+      {
+        "path": "research/2026-10-22/lean-formalization/checks/20261024T042127682219Z-84e917b0.json",
+        "sha256": "a9e203cda04cb7b284a44642830d0a395bbc4bbe3972aee873b3feb83ef46f71"
+      },
+      {
+        "path": "research/2026-10-22/lean-formalization/checks/20261024T042703278674Z-ded17a78.json",
+        "sha256": "54f7511117d887743d8626f56f1ac0f5b5a2585e5e7d5f75ce5bf4a9e5335213"
+      },
+      {
+        "path": "research/2026-10-22/lean-formalization/checks/20261024T043144635514Z-dceea066.json",
+        "sha256": "9d748bc169981360939385374bfb0763cbe36f4090bdab3405a1e0880d2ef77c"
+      },
+      {
+        "path": "research/2026-10-22/lean-formalization/checks/20261024T045154834004Z-9600848f.json",
+        "sha256": "5f780d6f8631dcad7e0ed60a6d6e98fbbef46c8ce26bbc3d1d2cf997d0e6efdf"
+      },
+      {
+        "path": "research/2026-10-22/lean-formalization/checks/20261024T052626839049Z-e88ff519.json",
+        "sha256": "e66fbcbd46016dd2314c83619241b5d7ddef4474e9825508a96faf87683e9b16"
+      }
+    ],
+    "current_source_check": "For each of the three accepted module roots, recursively followed current local imports and compared current files plus permanent run snapshots with that successful manifest. No compiler or artifact revalidation."
+  },
+  "counts": {
+    "accepted_certificate_modules": 3,
+    "accepted_requested_translations": 45,
+    "queued_certificate_modules": 3,
+    "queued_requested_translations": 32,
+    "additional_prepared_unverified_modules": 22,
+    "additional_prepared_distinct_requested_translations": 246,
+    "discoveries_count": null,
+    "counting_note": "These are certification commands/declarations, not counts of mathematical discoveries. Some are helper lemmas or formalizations of prior mathematics. NumericOperations count uses its accepted twelve-name axiom receipt because its facade delegates to leaves; the other counts are explicit requested names in existing certificate files."
+  },
+  "accepted": [
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilitySupportedRealsCertificates",
+      "source": {
+        "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilitySupportedRealsCertificates.lean",
+        "sha256": "c5dd4555d8e5d7d08f6f2fea5f478cd29045da1ad174d1219261d2404e4fa211"
+      },
+      "translation_count": 14,
+      "translations": [
+        "Classicism.Research.ProbabilitySupportedReals.reals_supported",
+        "Classicism.Research.ProbabilitySupportedReals.reals_current",
+        "Classicism.Research.ProbabilitySupportedReals.baseSupport_supported",
+        "Classicism.Research.ProbabilitySupportedReals.realCode_supported",
+        "Classicism.Research.ProbabilitySupportedReals.realCode_extensional",
+        "Classicism.Research.ProbabilitySupportedReals.supremum_below",
+        "Classicism.Research.ProbabilitySupportedReals.supremum_current",
+        "Classicism.Research.ProbabilitySupportedReals.supremum_is_real",
+        "Classicism.Research.ProbabilitySupportedReals.supremum_is_lub",
+        "Classicism.Research.ProbabilitySupportedReals.real_lub_unique",
+        "Classicism.Research.ProbabilitySupportedReals.represented_real_supremum",
+        "Classicism.Research.ProbabilitySupportedReals.supGraph_supported",
+        "Classicism.Research.ProbabilitySupportedReals.supGraph_total_unique",
+        "Classicism.Research.ProbabilitySupportedReals.real_order_iff"
+      ],
+      "primary_successful_run": "20261023T045450258074Z-06eb766b",
+      "historical_or_current_successful_runs": [
+        "20261023T045450258074Z-06eb766b"
+      ],
+      "run_manifest": {
+        "path": "research/2026-10-22/lean-formalization/checks/20261023T045450258074Z-06eb766b.json",
+        "sha256": "af6a671119f6280225276b2724b532d179d58b0567ba80dc77acba11ecb40399"
+      },
+      "target_exit_code": 0,
+      "target_log": {
+        "path": "research/2026-10-22/lean-formalization/logs/runs/20261023T045450258074Z-06eb766b/Classicism_Results_Research_AtomicProbabilitySupportedRealsCertificates.log",
+        "sha256": "b6b1920c3fbd70fcd6561308123b10e92cba3e270945c4c5363d1afcb9a54211"
+      },
+      "current_source_check": {
+        "transitive_local_module_count": 58,
+        "manifest_entries_missing": [],
+        "current_source_hash_mismatches": [],
+        "snapshot_files_missing": [],
+        "snapshot_hash_mismatches": [],
+        "all_current_closure_and_snapshot_hashes_match": true
+      },
+      "current_permanent_artifact_metadata_present": false,
+      "cache_caveat": "Presence/absence is inventory only. This audit does not reverify cache artifacts or rerun Lean. Historical successful logs and saved source snapshots remain evidence even when old temporary cache is unavailable."
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNaturalOrderCertificates",
+      "source": {
+        "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNaturalOrderCertificates.lean",
+        "sha256": "61454c0b9f23fff44f146341345787d190c070e091691f8a8417bbd7621240e1"
+      },
+      "translation_count": 19,
+      "translations": [
+        "Classicism.Research.ProbabilityNaturalOrder.add_zero_left",
+        "Classicism.Research.ProbabilityNaturalOrder.add_suc_left",
+        "Classicism.Research.ProbabilityNaturalOrder.add_comm",
+        "Classicism.Research.ProbabilityNaturalOrder.add_assoc_forward",
+        "Classicism.Research.ProbabilityNaturalOrder.add_assoc_reverse",
+        "Classicism.Research.ProbabilityNaturalOrder.add_cancel_right",
+        "Classicism.Research.ProbabilityNaturalOrder.add_cancel_left",
+        "Classicism.Research.ProbabilityNaturalOrder.add_eq_zero",
+        "Classicism.Research.ProbabilityNaturalOrder.number_cases",
+        "Classicism.Research.ProbabilityNaturalOrder.le_refl",
+        "Classicism.Research.ProbabilityNaturalOrder.zero_le",
+        "Classicism.Research.ProbabilityNaturalOrder.le_fields",
+        "Classicism.Research.ProbabilityNaturalOrder.le_zero",
+        "Classicism.Research.ProbabilityNaturalOrder.le_suc",
+        "Classicism.Research.ProbabilityNaturalOrder.le_of_suc_le",
+        "Classicism.Research.ProbabilityNaturalOrder.le_trans",
+        "Classicism.Research.ProbabilityNaturalOrder.le_total",
+        "Classicism.Research.ProbabilityNaturalOrder.le_antisymm",
+        "Classicism.Research.ProbabilityNaturalOrder.not_suc_le_self"
+      ],
+      "primary_successful_run": "20261023T051735278101Z-c2f76f0d",
+      "historical_or_current_successful_runs": [
+        "20261023T051735278101Z-c2f76f0d",
+        "20261023T184023901665Z-9db2c26b",
+        "20261023T190515914723Z-af3b0f46"
+      ],
+      "run_manifest": {
+        "path": "research/2026-10-22/lean-formalization/checks/20261023T051735278101Z-c2f76f0d.json",
+        "sha256": "825fc53cad32b3540df1aa633f7e7fb87c95d2c5e6a7279d2c0e5e68dcc84d34"
+      },
+      "target_exit_code": 0,
+      "target_log": {
+        "path": "research/2026-10-22/lean-formalization/logs/runs/20261023T051735278101Z-c2f76f0d/Classicism_Results_Research_AtomicProbabilityNaturalOrderCertificates.log",
+        "sha256": "9342d9576c74c024fcc4ac845f5c9f58082682d6d995d27c153ba5994933b133"
+      },
+      "current_source_check": {
+        "transitive_local_module_count": 42,
+        "manifest_entries_missing": [],
+        "current_source_hash_mismatches": [],
+        "snapshot_files_missing": [],
+        "snapshot_hash_mismatches": [],
+        "all_current_closure_and_snapshot_hashes_match": true
+      },
+      "current_permanent_artifact_metadata_present": false,
+      "cache_caveat": "Presence/absence is inventory only. This audit does not reverify cache artifacts or rerun Lean. Historical successful logs and saved source snapshots remain evidence even when old temporary cache is unavailable."
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericOperationsCertificates",
+      "source": {
+        "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericOperationsCertificates.lean",
+        "sha256": "cc144c823acbd2c4f849f4553ca1956e8ff07f10b98b5e2bb98b3b4e0cfbb11f"
+      },
+      "translation_count": 12,
+      "translations": [
+        "Classicism.Research.ProbabilityNumericOperations.plus_eq",
+        "Classicism.Research.ProbabilityNumericOperations.times_eq",
+        "Classicism.Research.ProbabilityNumericOperations.plus_graph",
+        "Classicism.Research.ProbabilityNumericOperations.times_graph",
+        "Classicism.Research.ProbabilityNumericOperations.plus_numbers",
+        "Classicism.Research.ProbabilityNumericOperations.times_numbers",
+        "Classicism.Research.ProbabilityNumericOperations.number_induction",
+        "Classicism.Research.ProbabilityNumericOperations.number_cases",
+        "Classicism.Research.ProbabilityNumericOperations.plus_zero_right",
+        "Classicism.Research.ProbabilityNumericOperations.plus_suc_right",
+        "Classicism.Research.ProbabilityNumericOperations.times_zero_right",
+        "Classicism.Research.ProbabilityNumericOperations.times_suc_right"
+      ],
+      "primary_successful_run": "20261024T045154834004Z-9600848f",
+      "historical_or_current_successful_runs": [
+        "20261024T045154834004Z-9600848f"
+      ],
+      "run_manifest": {
+        "path": "research/2026-10-22/lean-formalization/checks/20261024T045154834004Z-9600848f.json",
+        "sha256": "5f780d6f8631dcad7e0ed60a6d6e98fbbef46c8ce26bbc3d1d2cf997d0e6efdf"
+      },
+      "target_exit_code": 0,
+      "target_log": {
+        "path": "research/2026-10-22/lean-formalization/logs/runs/20261024T045154834004Z-9600848f/Classicism_Results_Research_AtomicProbabilityNumericOperationsCertificates.log",
+        "sha256": "cbde9a0bdcb769e2b3aee370ad3ab5433f9cd7d92ef028dc086c0828c77467a9"
+      },
+      "current_source_check": {
+        "transitive_local_module_count": 77,
+        "manifest_entries_missing": [],
+        "current_source_hash_mismatches": [],
+        "snapshot_files_missing": [],
+        "snapshot_hash_mismatches": [],
+        "all_current_closure_and_snapshot_hashes_match": true
+      },
+      "current_permanent_artifact_metadata_present": true,
+      "cache_caveat": "Presence/absence is inventory only. This audit does not reverify cache artifacts or rerun Lean. Historical successful logs and saved source snapshots remain evidence even when old temporary cache is unavailable.",
+      "independent_acceptance_receipt": {
+        "path": "research/2026-10-23/probability-numeric-operations-twelve-final-acceptance.json",
+        "sha256": "d9337dc3e3da323d29312fbf5340a62702f001921c2b7b67c0d847889561f0eb"
+      }
+    }
+  ],
+  "queued": [
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityConcreteRealAdditionCertificates",
+      "source": {
+        "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityConcreteRealAdditionCertificates.lean",
+        "sha256": "91d497bfce1623c534e8ba55c4109a949b906bd68b9c9aedf4e9318f7551069f"
+      },
+      "translation_count": 10,
+      "translations": [
+        "Classicism.Research.ProbabilityConcreteReals.realAdd_below",
+        "Classicism.Research.ProbabilityConcreteReals.realAdd_supported",
+        "Classicism.Research.ProbabilityConcreteReals.member_below_nonmember",
+        "Classicism.Research.ProbabilityConcreteReals.realAdd_in_field",
+        "Classicism.Research.ProbabilityConcreteReals.realAdd_comm",
+        "Classicism.Research.ProbabilityConcreteReals.realAdd_assoc",
+        "Classicism.Research.ProbabilityConcreteReals.realAdd_mono",
+        "Classicism.Research.ProbabilityConcreteReals.realAdd_zero_right",
+        "Classicism.Research.ProbabilityConcreteReals.realAdd_zero_left",
+        "Classicism.Research.ProbabilityConcreteReals.realAdd_sup_left"
+      ],
+      "successful_certificate_run_found": false,
+      "status": "queued_for_bounded_closeout_not_accepted_by_this_audit"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericAdditionCertificates",
+      "source": {
+        "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericAdditionCertificates.lean",
+        "sha256": "691901f64367372c5df0ff7dc234fb08a792957013a30e06e44326981b2cb47f"
+      },
+      "translation_count": 8,
+      "translations": [
+        "Classicism.Research.ProbabilityNumericOperations.plus_zero_left",
+        "Classicism.Research.ProbabilityNumericOperations.plus_suc_left",
+        "Classicism.Research.ProbabilityNumericOperations.plus_comm",
+        "Classicism.Research.ProbabilityNumericOperations.plus_assoc",
+        "Classicism.Research.ProbabilityNumericOperations.plus_left_comm",
+        "Classicism.Research.ProbabilityNumericOperations.plus_cancel_left",
+        "Classicism.Research.ProbabilityNumericOperations.plus_cancel_right",
+        "Classicism.Research.ProbabilityNumericOperations.plus_eq_zero"
+      ],
+      "successful_certificate_run_found": false,
+      "status": "queued_for_bounded_closeout_not_accepted_by_this_audit"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericMultiplicationCertificates",
+      "source": {
+        "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericMultiplicationCertificates.lean",
+        "sha256": "12aa71b27b36272aec7af2f731c451e8ac7520f51910709b65a5d4b04f14a75a"
+      },
+      "translation_count": 14,
+      "translations": [
+        "Classicism.Research.ProbabilityNumericOperations.times_zero_left",
+        "Classicism.Research.ProbabilityNumericOperations.times_suc_left",
+        "Classicism.Research.ProbabilityNumericOperations.times_comm",
+        "Classicism.Research.ProbabilityNumericOperations.times_add",
+        "Classicism.Research.ProbabilityNumericOperations.add_times",
+        "Classicism.Research.ProbabilityNumericOperations.times_assoc",
+        "Classicism.Research.ProbabilityNumericOperations.one_numbers",
+        "Classicism.Research.ProbabilityNumericOperations.one_ne_zero",
+        "Classicism.Research.ProbabilityNumericOperations.times_one_right",
+        "Classicism.Research.ProbabilityNumericOperations.times_one_left",
+        "Classicism.Research.ProbabilityNumericOperations.times_eq_zero",
+        "Classicism.Research.ProbabilityNumericOperations.times_ne_zero",
+        "Classicism.Research.ProbabilityNumericOperations.times_cancel_left",
+        "Classicism.Research.ProbabilityNumericOperations.times_cancel_right"
+      ],
+      "successful_certificate_run_found": false,
+      "status": "queued_for_bounded_closeout_not_accepted_by_this_audit"
+    }
+  ],
+  "prepared_unverified": [
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityCantorCertificates",
+      "source": {
+        "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCantorCertificates.lean",
+        "sha256": "d9241952bb57239b49639de68201a21293c3efdbd67d693eae7c20c088360df1"
+      },
+      "translation_count": 3,
+      "translations": [
+        "Classicism.Research.ProbabilityCantor.diagonal_below",
+        "Classicism.Research.ProbabilityCantor.no_predicate_injection",
+        "Classicism.Research.ProbabilityCantor.no_serial_injective_predicate_graph"
+      ],
+      "successful_certificate_run_found": false,
+      "status": "prepared_unverified_outside_current_bounded_queue"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityConcreteRealInverseCertificates",
+      "source": {
+        "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityConcreteRealInverseCertificates.lean",
+        "sha256": "b5233eedc35ead2ee60b869f268f5643c93342a6b73093b6b3d2bd02cdc027d4"
+      },
+      "translation_count": 11,
+      "translations": [
+        "Classicism.Research.ProbabilityConcreteReals.realNeg_below",
+        "Classicism.Research.ProbabilityConcreteReals.realNeg_supported",
+        "Classicism.Research.ProbabilityConcreteReals.negative_member_not_neg",
+        "Classicism.Research.ProbabilityConcreteReals.realNeg_in_field",
+        "Classicism.Research.ProbabilityConcreteReals.realNeg_antitone",
+        "Classicism.Research.ProbabilityConcreteReals.realNeg_involution",
+        "Classicism.Research.ProbabilityConcreteReals.realAdd_neg",
+        "Classicism.Research.ProbabilityConcreteReals.realSub_in_field",
+        "Classicism.Research.ProbabilityConcreteReals.realSub_self",
+        "Classicism.Research.ProbabilityConcreteReals.realAdd_cancel_right",
+        "Classicism.Research.ProbabilityConcreteReals.realAdd_le_iff_le_sub"
+      ],
+      "successful_certificate_run_found": false,
+      "status": "prepared_unverified_outside_current_bounded_queue"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityConcreteRealsCertificates",
+      "source": {
+        "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityConcreteRealsCertificates.lean",
+        "sha256": "8db89003fe8451e12a0d9325b2742b57f26fdc22dd0b339ef4bfb7e6924ca6e9"
+      },
+      "translation_count": 9,
+      "translations": [
+        "Classicism.Research.ProbabilityConcreteReals.principal_below",
+        "Classicism.Research.ProbabilityConcreteReals.principal_real",
+        "Classicism.Research.ProbabilityConcreteReals.principal_in_field",
+        "Classicism.Research.ProbabilityConcreteReals.principal_order_iff",
+        "Classicism.Research.ProbabilityConcreteReals.principal_injective",
+        "Classicism.Research.ProbabilityConcreteReals.real_field_inhabited",
+        "Classicism.Research.ProbabilityConcreteReals.real_field_nontrivial",
+        "Classicism.Research.ProbabilityConcreteReals.real_order_total",
+        "Classicism.Research.ProbabilityConcreteReals.concrete_real_supremum"
+      ],
+      "successful_certificate_run_found": false,
+      "status": "prepared_unverified_outside_current_bounded_queue"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityCutArithmeticCertificates",
+      "source": {
+        "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCutArithmeticCertificates.lean",
+        "sha256": "eec6075570b4bc158927e4f242d752fa087e59247d74b9532f002e85995c3ae6"
+      },
+      "translation_count": 10,
+      "translations": [
+        "Classicism.Research.ProbabilityCuts.principal_is_cut",
+        "Classicism.Research.ProbabilityCuts.cut_member_below_nonmember",
+        "Classicism.Research.ProbabilityCuts.cut_principal_upper_bound",
+        "Classicism.Research.ProbabilityCuts.cuts_comparable",
+        "Classicism.Research.ProbabilityCuts.principal_injective_coextension",
+        "Classicism.Research.ProbabilityCuts.codeAdd_strict_both",
+        "Classicism.Research.ProbabilityCuts.cutAdd_is_cut",
+        "Classicism.Research.ProbabilityCuts.codeAdd_below_split",
+        "Classicism.Research.ProbabilityCuts.principalCut_add",
+        "Classicism.Research.ProbabilityCuts.cutAdd_zero"
+      ],
+      "successful_certificate_run_found": false,
+      "status": "prepared_unverified_outside_current_bounded_queue"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityCutCertificates",
+      "source": {
+        "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCutCertificates.lean",
+        "sha256": "dd2012bb88b6cce12157d1bddb945a741c753b9532f236689cbff068c67a6858"
+      },
+      "translation_count": 15,
+      "translations": [
+        "Classicism.Research.ProbabilityCuts.union_is_lub",
+        "Classicism.Research.ProbabilityCuts.union_is_cut",
+        "Classicism.Research.ProbabilityCuts.cut_sup_exists",
+        "Classicism.Research.ProbabilityCuts.lub_unique_coextension",
+        "Classicism.Research.ProbabilityCuts.lowerCut_transport",
+        "Classicism.Research.ProbabilityCuts.lub_transport",
+        "Classicism.Research.ProbabilityCuts.coded_sup_unique",
+        "Classicism.Research.ProbabilityCuts.coded_sup_exists",
+        "Classicism.Research.ProbabilityCuts.coded_sup_graph_total_functional",
+        "Classicism.Research.ProbabilityCuts.cutAdd_mono",
+        "Classicism.Research.ProbabilityCuts.cutAdd_transport",
+        "Classicism.Research.ProbabilityCuts.cutAdd_union_left",
+        "Classicism.Research.ProbabilityCuts.cutAdd_union_right",
+        "Classicism.Research.ProbabilityCuts.cutAdd_comm",
+        "Classicism.Research.ProbabilityCuts.cutAdd_assoc"
+      ],
+      "successful_certificate_run_found": false,
+      "status": "prepared_unverified_outside_current_bounded_queue"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityCutCrossingCertificates",
+      "source": {
+        "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCutCrossingCertificates.lean",
+        "sha256": "a7bf5dd9b45e69b9b6f472f8ea6fb3a057ac3df82b9f0f23fb9b93c0056f34f4"
+      },
+      "translation_count": 8,
+      "translations": [
+        "Classicism.Research.ProbabilityCutCrossing.represented_adjacent_exit",
+        "Classicism.Research.ProbabilityCutCrossing.natural_multiple_exceeds_fraction",
+        "Classicism.Research.ProbabilityCutCrossing.stepTerm_in_field",
+        "Classicism.Research.ProbabilityCutCrossing.stepTerm_zero",
+        "Classicism.Research.ProbabilityCutCrossing.stepTerm_suc",
+        "Classicism.Research.ProbabilityCutCrossing.cut_step_eventually_outside",
+        "Classicism.Research.ProbabilityCutCrossing.cut_has_adjacent_step",
+        "Classicism.Research.ProbabilityCutCrossing.cut_has_small_gap"
+      ],
+      "successful_certificate_run_found": false,
+      "status": "prepared_unverified_outside_current_bounded_queue"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityCutNegationCertificates",
+      "source": {
+        "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCutNegationCertificates.lean",
+        "sha256": "e5e28c8ceda8a3ffbf92a92aab46b203aeabd0721b0d92cedbe05de3e2668f5d"
+      },
+      "translation_count": 4,
+      "translations": [
+        "Classicism.Research.ProbabilityCuts.cutNeg_is_cut",
+        "Classicism.Research.ProbabilityCuts.cutNeg_antitone",
+        "Classicism.Research.ProbabilityCuts.cutNeg_involutive",
+        "Classicism.Research.ProbabilityCuts.cutAdd_neg_below_zero"
+      ],
+      "successful_certificate_run_found": false,
+      "status": "prepared_unverified_outside_current_bounded_queue"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionAdditiveCertificates",
+      "source": {
+        "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionAdditiveCertificates.lean",
+        "sha256": "db3cb9790b14e751ae71148e01a5d71f64a4f3a5b4191504b1b8ddec06c40123"
+      },
+      "translation_count": 18,
+      "translations": [
+        "Classicism.Research.ProbabilityFractions.fractionCode_scale",
+        "Classicism.Research.ProbabilityFractions.fractionCode_same_denominator",
+        "Classicism.Research.ProbabilityFractions.common_denominator_two",
+        "Classicism.Research.ProbabilityFractions.common_denominator_three",
+        "Classicism.Research.ProbabilityFractions.qplus_common_denominator",
+        "Classicism.Research.ProbabilityFractions.qzero_in_field",
+        "Classicism.Research.ProbabilityFractions.qone_in_field",
+        "Classicism.Research.ProbabilityFractions.qone_ne_zero",
+        "Classicism.Research.ProbabilityFractions.qplus_comm",
+        "Classicism.Research.ProbabilityFractions.qplus_assoc",
+        "Classicism.Research.ProbabilityFractions.qplus_zero_right",
+        "Classicism.Research.ProbabilityFractions.qplus_zero_left",
+        "Classicism.Research.ProbabilityFractions.qplus_cancel_right",
+        "Classicism.Research.ProbabilityFractions.qplus_cancel_left",
+        "Classicism.Research.ProbabilityFractions.qplus_eq_zero",
+        "Classicism.Research.ProbabilityFractions.qplus_right_comm",
+        "Classicism.Research.ProbabilityFractions.qplus_left_comm",
+        "Classicism.Research.ProbabilityFractions.qplus_four"
+      ],
+      "successful_certificate_run_found": false,
+      "status": "prepared_unverified_outside_current_bounded_queue"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionArchimedeanCertificates",
+      "source": {
+        "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionArchimedeanCertificates.lean",
+        "sha256": "4107ecafbc18798fc239d2c9936c81c7880198efc15d2e37f12d35071d9894f1"
+      },
+      "translation_count": 9,
+      "translations": [
+        "Classicism.Research.ProbabilityFractions.naturalCode_in_field",
+        "Classicism.Research.ProbabilityFractions.naturalCode_add",
+        "Classicism.Research.ProbabilityFractions.naturalCode_mul",
+        "Classicism.Research.ProbabilityFractions.naturalCode_suc",
+        "Classicism.Research.ProbabilityFractions.naturalCode_lt_suc",
+        "Classicism.Research.ProbabilityFractions.fraction_below_numerator",
+        "Classicism.Research.ProbabilityFractions.fraction_has_natural_bound",
+        "Classicism.Research.ProbabilityFractions.reciprocal_natural_small",
+        "Classicism.Research.ProbabilityFractions.natural_multiple_exceeds_one"
+      ],
+      "successful_certificate_run_found": false,
+      "status": "prepared_unverified_outside_current_bounded_queue"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionArithmeticCertificates",
+      "source": {
+        "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionArithmeticCertificates.lean",
+        "sha256": "a186648755c6d9da7f8ded36dd53e9c16967dec21f69b373bd4fe2bb7c95eb6c"
+      },
+      "translation_count": 16,
+      "translations": [
+        "Classicism.Research.ProbabilityFractions.sum_valid",
+        "Classicism.Research.ProbabilityFractions.product_valid",
+        "Classicism.Research.ProbabilityFractions.product_respects",
+        "Classicism.Research.ProbabilityFractions.sum_respects",
+        "Classicism.Research.ProbabilityFractions.fractionAdd_total",
+        "Classicism.Research.ProbabilityFractions.fractionMul_total",
+        "Classicism.Research.ProbabilityFractions.fractionAdd_unique",
+        "Classicism.Research.ProbabilityFractions.fractionMul_unique",
+        "Classicism.Research.ProbabilityFractions.qplus_supported",
+        "Classicism.Research.ProbabilityFractions.qtimes_supported",
+        "Classicism.Research.ProbabilityFractions.qplus_selected",
+        "Classicism.Research.ProbabilityFractions.qtimes_selected",
+        "Classicism.Research.ProbabilityFractions.qplus_in_field",
+        "Classicism.Research.ProbabilityFractions.qtimes_in_field",
+        "Classicism.Research.ProbabilityFractions.qplus_codes",
+        "Classicism.Research.ProbabilityFractions.qtimes_codes"
+      ],
+      "successful_certificate_run_found": false,
+      "status": "prepared_unverified_outside_current_bounded_queue"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionDensityCertificates",
+      "source": {
+        "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionDensityCertificates.lean",
+        "sha256": "a756eef2ffaa60438fb837ff35058f09e59d1f594dd4390c2bb6bd45d1cc9621"
+      },
+      "translation_count": 8,
+      "translations": [
+        "Classicism.Research.ProbabilityFractions.qtwo_in_field",
+        "Classicism.Research.ProbabilityFractions.qtwo_ne_zero",
+        "Classicism.Research.ProbabilityFractions.qtimes_two",
+        "Classicism.Research.ProbabilityFractions.qhalf_in_field",
+        "Classicism.Research.ProbabilityFractions.qhalf_ne_zero",
+        "Classicism.Research.ProbabilityFractions.qhalf_add_half",
+        "Classicism.Research.ProbabilityFractions.qlt_add_nonzero",
+        "Classicism.Research.ProbabilityFractions.fraction_order_dense"
+      ],
+      "successful_certificate_run_found": false,
+      "status": "prepared_unverified_outside_current_bounded_queue"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionInverseCertificates",
+      "source": {
+        "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionInverseCertificates.lean",
+        "sha256": "afba3aa59e9250ecd9257afa605d92a5d7aa08d8306c50b6d2d60cbe7778d5cc"
+      },
+      "translation_count": 9,
+      "translations": [
+        "Classicism.Research.ProbabilityFractions.fraction_reciprocal_product",
+        "Classicism.Research.ProbabilityFractions.fractionInv_total",
+        "Classicism.Research.ProbabilityFractions.fractionInv_unique",
+        "Classicism.Research.ProbabilityFractions.qinverse_supported",
+        "Classicism.Research.ProbabilityFractions.qinverse_selected",
+        "Classicism.Research.ProbabilityFractions.qinverse_in_field",
+        "Classicism.Research.ProbabilityFractions.qtimes_inverse",
+        "Classicism.Research.ProbabilityFractions.qinverse_ne_zero",
+        "Classicism.Research.ProbabilityFractions.qinverse_involution"
+      ],
+      "successful_certificate_run_found": false,
+      "status": "prepared_unverified_outside_current_bounded_queue"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionMultiplicativeCertificates",
+      "source": {
+        "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionMultiplicativeCertificates.lean",
+        "sha256": "2d740c12018fadc9efc156f0377061d0ef2a98cb32550e207f00e158bbf9c752"
+      },
+      "translation_count": 11,
+      "translations": [
+        "Classicism.Research.ProbabilityFractions.qtimes_comm",
+        "Classicism.Research.ProbabilityFractions.qtimes_assoc",
+        "Classicism.Research.ProbabilityFractions.qtimes_one_right",
+        "Classicism.Research.ProbabilityFractions.qtimes_one_left",
+        "Classicism.Research.ProbabilityFractions.qtimes_zero_right",
+        "Classicism.Research.ProbabilityFractions.qtimes_zero_left",
+        "Classicism.Research.ProbabilityFractions.qtimes_add",
+        "Classicism.Research.ProbabilityFractions.qadd_times",
+        "Classicism.Research.ProbabilityFractions.qtimes_eq_zero",
+        "Classicism.Research.ProbabilityFractions.qtimes_cancel_right",
+        "Classicism.Research.ProbabilityFractions.qtimes_cancel_left"
+      ],
+      "successful_certificate_run_found": false,
+      "status": "prepared_unverified_outside_current_bounded_queue"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionOrderCertificates",
+      "source": {
+        "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionOrderCertificates.lean",
+        "sha256": "5d80f53f6db4fd3e93f8d76f55a0bcff48b69101694f0aec323d0e8a501d0705"
+      },
+      "translation_count": 12,
+      "translations": [
+        "Classicism.Research.ProbabilityFractions.qle_refl",
+        "Classicism.Research.ProbabilityFractions.qle_zero",
+        "Classicism.Research.ProbabilityFractions.qle_total",
+        "Classicism.Research.ProbabilityFractions.qle_trans",
+        "Classicism.Research.ProbabilityFractions.qle_antisymm",
+        "Classicism.Research.ProbabilityFractions.qle_add_right",
+        "Classicism.Research.ProbabilityFractions.qle_mul_right",
+        "Classicism.Research.ProbabilityFractions.qlt_mul_right",
+        "Classicism.Research.ProbabilityFractions.qlt_of_le_of_lt",
+        "Classicism.Research.ProbabilityFractions.qtimes_right_comm",
+        "Classicism.Research.ProbabilityFractions.qinverse_antitone",
+        "Classicism.Research.ProbabilityFractions.qinverse_strict_antitone"
+      ],
+      "successful_certificate_run_found": false,
+      "status": "prepared_unverified_outside_current_bounded_queue"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionsCertificates",
+      "source": {
+        "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionsCertificates.lean",
+        "sha256": "e53db87c9cbfb50e497d045aeb95a37349cc3093f7c72337cc32008fd0ad7313"
+      },
+      "translation_count": 15,
+      "translations": [
+        "Classicism.Research.ProbabilityFractions.times_right_comm",
+        "Classicism.Research.ProbabilityFractions.times_left_comm",
+        "Classicism.Research.ProbabilityFractions.times_four",
+        "Classicism.Research.ProbabilityFractions.times_four_cross",
+        "Classicism.Research.ProbabilityFractions.cross_refl",
+        "Classicism.Research.ProbabilityFractions.cross_symm",
+        "Classicism.Research.ProbabilityFractions.cross_trans",
+        "Classicism.Research.ProbabilityFractions.fractionCode_supported",
+        "Classicism.Research.ProbabilityFractions.fractionField_supported",
+        "Classicism.Research.ProbabilityFractions.fractionCode_self",
+        "Classicism.Research.ProbabilityFractions.fractionCode_identity_iff",
+        "Classicism.Research.ProbabilityFractions.fractionCode_in_field",
+        "Classicism.Research.ProbabilityFractions.field_code_supported",
+        "Classicism.Research.ProbabilityFractions.naturalCode_injective",
+        "Classicism.Research.ProbabilityFractions.fractionCode_zero_iff"
+      ],
+      "successful_certificate_run_found": false,
+      "status": "prepared_unverified_outside_current_bounded_queue"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityLeastNumberCertificates",
+      "source": {
+        "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityLeastNumberCertificates.lean",
+        "sha256": "62ed8450b219b638888b81bb92728f9c028576fc2ab88b31ecde0327ee11b842"
+      },
+      "translation_count": 9,
+      "translations": [
+        "Classicism.Research.ProbabilityNaturalOrder.le_suc_self",
+        "Classicism.Research.ProbabilityNaturalOrder.le_eq_or_lt",
+        "Classicism.Research.ProbabilityNaturalOrder.lt_implies_le",
+        "Classicism.Research.ProbabilityNaturalOrder.lt_irrefl",
+        "Classicism.Research.ProbabilityNaturalOrder.le_suc_cases",
+        "Classicism.Research.ProbabilityNaturalOrder.bounded_field_has_least",
+        "Classicism.Research.ProbabilityNaturalOrder.represented_field_has_least",
+        "Classicism.Research.ProbabilityNaturalOrder.leastNumber_unique",
+        "Classicism.Research.ProbabilityNaturalOrder.least_index_graph"
+      ],
+      "successful_certificate_run_found": false,
+      "status": "prepared_unverified_outside_current_bounded_queue"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericComparisonCertificates",
+      "source": {
+        "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericComparisonCertificates.lean",
+        "sha256": "90fb15550ecc9d6760b99c90686fe147b9d4e3957f105a0bc970e8a45ccbc380"
+      },
+      "translation_count": 8,
+      "translations": [
+        "Classicism.Research.ProbabilityNumericOperations.nle_refl",
+        "Classicism.Research.ProbabilityNumericOperations.nle_zero",
+        "Classicism.Research.ProbabilityNumericOperations.nle_total",
+        "Classicism.Research.ProbabilityNumericOperations.nle_trans",
+        "Classicism.Research.ProbabilityNumericOperations.nle_antisymm",
+        "Classicism.Research.ProbabilityNumericOperations.one_le_nonzero",
+        "Classicism.Research.ProbabilityNumericOperations.plus_one",
+        "Classicism.Research.ProbabilityNumericOperations.number_ne_successor"
+      ],
+      "successful_certificate_run_found": false,
+      "status": "prepared_unverified_outside_current_bounded_queue"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityRationalAdditiveCertificates",
+      "source": {
+        "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalAdditiveCertificates.lean",
+        "sha256": "7f8b1bdb31f395b11d67804cb236297f221d14a40b0c3efd5dd4e4d80467a0ed"
+      },
+      "translation_count": 18,
+      "translations": [
+        "Classicism.Research.ProbabilityRationals.rationalAdd_total",
+        "Classicism.Research.ProbabilityRationals.rationalAdd_unique",
+        "Classicism.Research.ProbabilityRationals.rplus_supported",
+        "Classicism.Research.ProbabilityRationals.rneg_supported",
+        "Classicism.Research.ProbabilityRationals.rplus_selected",
+        "Classicism.Research.ProbabilityRationals.rplus_in_field",
+        "Classicism.Research.ProbabilityRationals.rplus_codes",
+        "Classicism.Research.ProbabilityRationals.rneg_codes",
+        "Classicism.Research.ProbabilityRationals.rneg_in_field",
+        "Classicism.Research.ProbabilityRationals.rneg_involution",
+        "Classicism.Research.ProbabilityRationals.rplus_comm",
+        "Classicism.Research.ProbabilityRationals.rplus_assoc",
+        "Classicism.Research.ProbabilityRationals.rplus_zero_right",
+        "Classicism.Research.ProbabilityRationals.rplus_zero_left",
+        "Classicism.Research.ProbabilityRationals.rplus_neg",
+        "Classicism.Research.ProbabilityRationals.rneg_add",
+        "Classicism.Research.ProbabilityRationals.rplus_cancel_right",
+        "Classicism.Research.ProbabilityRationals.embed_add"
+      ],
+      "successful_certificate_run_found": false,
+      "status": "prepared_unverified_outside_current_bounded_queue"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityRationalNegationCertificates",
+      "source": {
+        "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalNegationCertificates.lean",
+        "sha256": "3f3be7b86b5ed0dd807430304142ff8b13f3390833ae943d90bb493bb0c85489"
+      },
+      "translation_count": 4,
+      "translations": [
+        "Classicism.Research.ProbabilityRationals.rneg_zero",
+        "Classicism.Research.ProbabilityRationals.rneg_reverses",
+        "Classicism.Research.ProbabilityRationals.rneg_sub",
+        "Classicism.Research.ProbabilityRationals.rsub_sub_self"
+      ],
+      "successful_certificate_run_found": false,
+      "status": "prepared_unverified_outside_current_bounded_queue"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityRationalOrderCertificates",
+      "source": {
+        "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalOrderCertificates.lean",
+        "sha256": "d76d367610844ebf23ce43c50ba9f2b61441e77c795e56c5e61a5f5255e5c3e8"
+      },
+      "translation_count": 22,
+      "translations": [
+        "Classicism.Research.ProbabilityRationals.rplus_right_comm",
+        "Classicism.Research.ProbabilityRationals.rplus_cancel_left",
+        "Classicism.Research.ProbabilityRationals.rle_codes_iff",
+        "Classicism.Research.ProbabilityRationals.rle_refl",
+        "Classicism.Research.ProbabilityRationals.rle_total",
+        "Classicism.Research.ProbabilityRationals.rle_antisymm",
+        "Classicism.Research.ProbabilityRationals.rle_trans",
+        "Classicism.Research.ProbabilityRationals.rlt_of_le_of_lt",
+        "Classicism.Research.ProbabilityRationals.rlt_trans",
+        "Classicism.Research.ProbabilityRationals.rlt_of_lt_of_le",
+        "Classicism.Research.ProbabilityRationals.rlt_irrefl",
+        "Classicism.Research.ProbabilityRationals.rle_add_right",
+        "Classicism.Research.ProbabilityRationals.embed_order",
+        "Classicism.Research.ProbabilityRationals.embed_strict_order",
+        "Classicism.Research.ProbabilityRationals.rlt_add_positive",
+        "Classicism.Research.ProbabilityRationals.rational_order_dense",
+        "Classicism.Research.ProbabilityRationals.signedCode_le_positive_part",
+        "Classicism.Research.ProbabilityRationals.rational_has_natural_bound",
+        "Classicism.Research.ProbabilityRationals.rational_positive_representation",
+        "Classicism.Research.ProbabilityRationals.positive_rational_small_reciprocal",
+        "Classicism.Research.ProbabilityRationals.rational_no_upper_endpoint",
+        "Classicism.Research.ProbabilityRationals.rational_no_lower_endpoint"
+      ],
+      "successful_certificate_run_found": false,
+      "status": "prepared_unverified_outside_current_bounded_queue"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityRationalTranslationCertificates",
+      "source": {
+        "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalTranslationCertificates.lean",
+        "sha256": "379ea994dea939dbf01320a98be66bd243c77ffa69734f4afee67cfc123bc483"
+      },
+      "translation_count": 10,
+      "translations": [
+        "Classicism.Research.ProbabilityRationals.rsub_in_field",
+        "Classicism.Research.ProbabilityRationals.radd_sub_cancel",
+        "Classicism.Research.ProbabilityRationals.rsub_add_cancel",
+        "Classicism.Research.ProbabilityRationals.radd_sub_cancel_left",
+        "Classicism.Research.ProbabilityRationals.rlt_add_right",
+        "Classicism.Research.ProbabilityRationals.rlt_add_left",
+        "Classicism.Research.ProbabilityRationals.rlt_add_both",
+        "Classicism.Research.ProbabilityRationals.rsub_lt_zero",
+        "Classicism.Research.ProbabilityRationals.rationalSumGraph_comm",
+        "Classicism.Research.ProbabilityRationals.rationalSumGraph_associative"
+      ],
+      "successful_certificate_run_found": false,
+      "status": "prepared_unverified_outside_current_bounded_queue"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilitySignedRationalsCertificates",
+      "source": {
+        "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilitySignedRationalsCertificates.lean",
+        "sha256": "59f17bea500ad192419669673db9b34ad8fbda06a54152ca7ccacf24dd4c2c4a"
+      },
+      "translation_count": 17,
+      "translations": [
+        "Classicism.Research.ProbabilityRationals.difference_refl",
+        "Classicism.Research.ProbabilityRationals.difference_symm",
+        "Classicism.Research.ProbabilityRationals.difference_trans",
+        "Classicism.Research.ProbabilityRationals.signedCode_supported",
+        "Classicism.Research.ProbabilityRationals.rationalField_supported",
+        "Classicism.Research.ProbabilityRationals.signedCode_self",
+        "Classicism.Research.ProbabilityRationals.signedCode_identity_iff",
+        "Classicism.Research.ProbabilityRationals.signedCode_in_field",
+        "Classicism.Research.ProbabilityRationals.rational_code_supported",
+        "Classicism.Research.ProbabilityRationals.embed_in_field",
+        "Classicism.Research.ProbabilityRationals.embed_injective",
+        "Classicism.Research.ProbabilityRationals.rzero_in_field",
+        "Classicism.Research.ProbabilityRationals.rone_in_field",
+        "Classicism.Research.ProbabilityRationals.rone_ne_zero",
+        "Classicism.Research.ProbabilityRationals.signedCode_zero_iff",
+        "Classicism.Research.ProbabilityRationals.difference_add",
+        "Classicism.Research.ProbabilityRationals.difference_neg"
+      ],
+      "successful_certificate_run_found": false,
+      "status": "prepared_unverified_outside_current_bounded_queue"
+    }
+  ],
+  "references": [
+    {
+      "path": "research/2026-10-22/lean-formalization/verification-updates/probability_internal_constructions.json",
+      "sha256": "08b6c0ce342b28c8b140fc56cc13b7ae1582681043b09b95ff103197dea1e78e"
+    },
+    {
+      "path": "research/2026-10-22/lean-formalization/probability-verification-manifest.json",
+      "sha256": "d17afbebe184944c3e33e88b3a386da272078e456eb7577bd93da3a3fdc057e1"
+    },
+    {
+      "path": "research/2026-10-23/probability-source-final-acceptance.json",
+      "sha256": "730835f9aa6cdb8ee6e0e3507f2424ee97cdf021d7274799e82fbd56f0d52628"
+    },
+    {
+      "path": "research/2026-10-23/probability-source-principal-axiom-acceptance.json",
+      "sha256": "1bf9ffffad232949f97b56ceb5a2701ca1f30a118d834cb2726bc5e3f8dbfb4d"
+    },
+    {
+      "path": "research/2026-10-23/closeout-diagnostics/probability-numeric-import-reuse-preparation.json",
+      "sha256": "f4ca167d3871ccea8aefc983ddb26429e999710c43be70365c6c8776fff20c2c"
+    }
+  ],
+  "reuse_assessment": {
+    "ConcreteRealsCertificates": {
+      "recorded_success": false,
+      "requested_translations": 9,
+      "adding_import_would_add_unverified_certificate_dependency": true
+    },
+    "RationalTranslationCertificates": {
+      "recorded_success": false,
+      "requested_translations": 10,
+      "adding_import_would_add_unverified_certificate_dependency": true
+    },
+    "SupportedRealsCertificates": {
+      "recorded_success": true,
+      "relevant_named_translations": [
+        "Classicism.Research.ProbabilitySupportedReals.baseSupport_supported",
+        "Classicism.Research.ProbabilitySupportedReals.realCode_supported",
+        "Classicism.Research.ProbabilitySupportedReals.supremum_below"
+      ],
+      "limited_reuse": "Could supply accepted translated helpers to ConcreteRealAddition. Does not eliminate rational arithmetic or the initial realAdd_below derivation. No import change authorized or made by this audit."
+    },
+    "translation_lookup_source": {
+      "path": "topics/classicism/lean/Classicism/Tools/Translate.lean",
+      "lines": "1628-1644",
+      "caveat": "Imported .derivable/.derivableC names can be reused, but induction-hypothesis specialization can precede generic named reuse. No runtime benefit has been measured here."
+    }
+  },
+  "limitations": [
+    "This receipt records existing verification evidence; it adds no compiler acceptance, database badge, new theorem, or discovery count.",
+    "Ordinary shallow Lean source acceptance and its axiom reports do not themselves certify the corresponding object-language C-minus translations.",
+    "The owner manifest contains older pending source statuses superseded by the cited supplemental source receipts; its unverified certificate scope remains informative.",
+    "The 22 additional prepared certificate modules are outside the current bounded compilation queue. They must remain explicitly uncertified unless a later successful check supplies evidence.",
+    "No negative inference about mathematical truth follows from an unverified certificate or absent cache artifact.",
+    "This fixed audit snapshot does not supersede later acceptance receipts for any queued target."
+  ]
+}

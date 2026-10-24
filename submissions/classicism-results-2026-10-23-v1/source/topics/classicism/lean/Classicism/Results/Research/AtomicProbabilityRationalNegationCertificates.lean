@@ -1,0 +1,14 @@
+import Classicism.Results.Research.AtomicProbabilityRationalNegation
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Schema
+
+#classicism_audit Classicism.Results.Research.AtomicProbabilityRationalNegation
+#classicism_types_audit Classicism.Results.Research.AtomicProbabilityRationalNegation
+
+#classicism_derive Classicism.Research.ProbabilityRationals.rneg_zero
+  Classicism.Research.ProbabilityRationals.rneg_reverses
+  Classicism.Research.ProbabilityRationals.rneg_sub
+  Classicism.Research.ProbabilityRationals.rsub_sub_self
+
+#print axioms Classicism.Research.ProbabilityRationals.rsub_sub_self.derivable

@@ -1,0 +1,41 @@
+import Classicism.Models.ChoiceFirstOrderAxiomTheory
+
+/- Separate second-batch audit. The first seven-module driver remains frozen. -/
+
+#check Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.raw_translate_correct
+#check Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.raw_sentence_correct
+#check Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.rawRealize_recoverStructure
+#check Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.sentence_correct
+#check Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.axiomSentence
+#check Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.theory_countable
+#check Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.nonempty_sentence_correct
+#check Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.extensionality_sentence_correct
+#check Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.comprehension_sentence_correct
+#check Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.recovered_smallComprehension
+#check Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.recovered_isModel
+#check Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.recovered_sentence_correct
+#check Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.recovered_c_theorem_holds
+
+#print axioms Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.profile_correct
+#print axioms Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.variable_correct
+#print axioms Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.guardedAll_correct
+#print axioms Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.guardedEx_correct
+#print axioms Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.allArgs_correct
+#print axioms Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.exArgs_correct
+#print axioms Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.raw_translate_correct
+#print axioms Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.raw_sentence_correct
+#print axioms Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.rawRealize_recoverStructure
+#print axioms Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.sentence_correct
+#print axioms Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.raw_rename_correct
+#print axioms Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.raw_insertWitness_correct
+#print axioms Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.axiomIndex_countable
+#print axioms Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.theory_countable
+#print axioms Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.nonempty_sentence_correct
+#print axioms Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.extensionality_sentence_correct
+#print axioms Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.comprehension_sentence_correct
+#print axioms Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.model_nonempty
+#print axioms Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.model_extensional
+#print axioms Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.recovered_smallComprehension
+#print axioms Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.recovered_isModel
+#print axioms Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.recovered_sentence_correct
+#print axioms Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.recovered_c_theorem_holds

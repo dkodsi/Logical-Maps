@@ -1,0 +1,528 @@
+#!/usr/bin/env python3
+"""Render local research views from canonical JSON; never runs Lean or changes verdicts.
+
+Default/--check is read-only. --write refreshes the generated Markdown.
+--refresh-checksums requires --write and explicitly refreshes SHA256SUMS.
+"""
+import argparse
+import hashlib
+import json
+import posixpath
+from pathlib import Path
+
+
+def load(root, name):
+    return json.loads((root / name).read_text())
+
+
+def anchor(name):
+    return '<a id="' + name.lower() + '"></a>'
+
+
+def render(root):
+    main = load(root, 'MAIN-RESULTS.json')
+    catalog = load(root, 'CATALOG.json')
+    questions = load(root, 'CONJECTURES.json')
+    integration = load(root, 'DATABASE-INTEGRATION.json')
+    proposals = load(root, 'CANDIDATES_DK.json')
+    coverage = load(root, 'evidence/COVERAGE.json')
+    rows = {r['id']: r for r in main['results']}
+    integration_claims = {r.get('claim_id', r['catalog_id']): r for r in integration.get('supplementary_entries', [])}
+    assert len(rows) == len(main['results']), 'Duplicate result ID'
+    keys = {r['id'] for r in catalog['entries']}
+    assert len(keys) == len(catalog['entries']), 'Duplicate catalog key'
+    assert set(coverage['original_catalog_keys_retained']) <= keys, 'Original key lost'
+    section_ids = [x for section in main['sections'] for x in section['results']]
+    assert len(section_ids) == len(set(section_ids)), 'Repeated result in sections'
+    assert set(section_ids) == set(rows), 'Section coverage is incomplete'
+    assert coverage['result_entries'] == len(rows), 'Stale coverage result count'
+    assert coverage['questions'] == len(questions['questions']), 'Stale coverage question count'
+    assert coverage['subject_coverage'] == main['sections'], 'Stale subject coverage'
+    overview = main['overview']
+    overview_groups = [g for s in overview['sections'] for g in s['groups']]
+    lengths = load(root, 'evidence/proof-lengths.json')
+    result_lengths = {r['result_ref']: r for r in lengths['results']}
+    group_lengths = {g['group_ref']: g for g in lengths['groups']}
+    assert len(result_lengths) == len(lengths['results']) == len(rows), 'Incomplete proof-length coverage'
+    assert len(group_lengths) == len(lengths['groups']) == len(overview_groups), 'Incomplete group proof-length coverage'
+    for row in rows.values():
+        assessment = result_lengths[row['id']]
+        assert row['proof_length'] == {'rating': assessment['rating'], 'words': assessment['word_count']}, 'Stale result proof length'
+    for group in overview_groups:
+        assessment = group_lengths[group['id']]
+        assert group['result_refs'] == assessment['result_refs'], 'Stale group source selection'
+        assert group['proof_length'] == {'rating': assessment['rating'], 'words': assessment['word_count']}, 'Stale group proof length'
+    overview_refs = [rid for g in overview_groups for rid in g['result_refs']]
+    supplemental_refs = [r['result_ref'] for s in overview['sections'] for r in s['supplemental_results']]
+    assert len(overview_refs) == len(set(overview_refs)), 'Repeated overview result'
+    assert len(supplemental_refs) == len(set(supplemental_refs)), 'Repeated supplemental result'
+    assert not set(overview_refs) & set(supplemental_refs), 'Overlapping presentation roles'
+    assert set(overview_refs + supplemental_refs) == set(rows), 'Presentation omits a result'
+    assert coverage['presentation'] == {
+        'overview_groups': len(overview_groups), 'overview_result_refs': overview_refs,
+        'supplemental_result_refs': supplemental_refs, 'complete_result_entries': len(rows)
+    }, 'Stale presentation coverage'
+    question_rows = {r['id']: r for r in questions['questions']}
+    assert set(overview['open_question_refs']) <= set(question_rows), 'Missing open question'
+    assert {r['result_id'] for r in integration['entries']} == set(rows), 'Integration coverage'
+    assert len(integration['entries']) == len(rows), 'Duplicate integration entry'
+    links = load(root, 'evidence/source-links.json')
+    redirects = {}
+    for item in load(root, 'ARCHIVED-ARTIFACTS.json')['artifacts']:
+        dest = item.get('retained_copy') or item.get('retained_path')
+        if dest:
+            redirects[item['path']] = dest
+
+    def resolve(origin):
+        if origin in links:
+            return links[origin]
+        rel = origin if origin.startswith(('source/', 'proofs/', 'evidence/')) else 'source/' + origin
+        return rel if (root / rel).is_file() else redirects.get(rel, rel)
+
+    def filelink(origin, base='.', label=None):
+        path = resolve(origin)
+        assert (root / path).is_file(), 'Missing evidence: ' + path
+        return '[' + (label or Path(path).name) + '](' + posixpath.relpath(path, base) + ')'
+
+    def prooflinks(origins, base='.'):
+        return ' · '.join(filelink(x, base) for x in dict.fromkeys(resolve(x) for x in origins))
+
+    def resultlink(rid, base='.', label=None):
+        assert rid in rows, 'Unknown result: ' + rid
+        return '[' + (label or '`' + rid + '`') + '](' + posixpath.relpath('evidence/RESULT-INDEX.md', base) + '#' + rid.lower() + ')'
+
+    def statusrefs(ids):
+        return ' '.join(resultlink(rid) + ('.' if rows[rid]['certified_scope'] is True else ': ' + rows[rid]['certified_scope'].rstrip('.') + '.') for rid in ids if rows[rid].get('certified_scope'))
+
+    def certified_line(row):
+        scope = row.get('certified_scope')
+        if scope is True:
+            return '**Lean certified.**'
+        return '**Lean certified:** ' + scope.rstrip('.') + '.' if scope else ''
+
+    def done(lines):
+        return '\n'.join(lines).rstrip() + '\n'
+
+    def bullet(claim):
+        # Indent continuation blocks so displayed mathematics stays in its list item.
+        lines = claim.split('\n')
+        return '- ' + lines[0] + ''.join('\n' + ('  ' + line if line else '') for line in lines[1:])
+
+    out = {}
+    proposed = proposals['principles']
+    infinitary = proposals.get('infinitary_principles', [])
+    candidate_rows = [item for r in proposed for item in [r, *r.get('variants', [])]] + infinitary
+    proposed_ids = [item['id'] for item in candidate_rows]
+    candidates_by_id = {item['id']: item for item in candidate_rows}
+    proposal_sections = proposals['presentation_sections']
+    listed_ids = [pid for section in proposal_sections for pid in section['principles']]
+    assert len(listed_ids) == len(set(listed_ids)), 'Repeated proposal in presentation'
+    assert set(listed_ids) == {r['id'] for r in proposed + infinitary}, 'Proposal list omits an entry'
+    assert len(proposed_ids) == len(set(proposed_ids)), 'Duplicate proposed principle'
+    assert set(proposals['first_batch']) == {r['id'] for r in proposed if r['batch'] == 'first'}, 'Proposal priority mismatch'
+    assert all(r['batch'] in ('first', 'further', 'exploratory') for r in proposed), 'Unknown proposal batch'
+    def proposal_sources(item):
+        assert item['sources'], 'Proposal needs a direct source'
+        return ' · '.join(filelink(s['path']) + ' (' + s['locator'] + ')' for s in item['sources'])
+    def proposal_status(item):
+        refs = item.get('result_refs', [])
+        return ('**Evidence:** ' + ' · '.join(resultlink(rid, label=rows[rid]['title'] if len(refs) > 1 else 'Proofs and certificates') for rid in refs) + '.') if refs else ''
+    text = ['# ' + proposals['title'], '',
+        proposals['scope'], '',
+        '[Main results](MAIN-RESULTS.md) · [Integration review](DATABASE-INTEGRATION.md) · [Structured proposals](CANDIDATES_DK.json) · [Evaluation principles](#evaluation-principles) · [Infinitary extension](#infinitary-extension)', '',
+        '## Proposed principles', '',
+        '| Subject | Principle | Reason for inclusion |', '|---|---|---|']
+    for section in proposal_sections:
+        for pid in section['principles']:
+            r = candidates_by_id[pid]
+            assert r.get('rationale'), 'Candidate needs a substantive reason for inclusion'
+            text += ['| ' + section['title'] + ' | [' + r['name'] + '](#' + r['id'] + ') | ' + r['rationale'].replace('|', '\\|') + ' |']
+    for section in proposal_sections:
+        text += ['', anchor(section['id']), '## ' + section['title'], '']
+        for pid in section['principles']:
+            r = candidates_by_id[pid]
+            text += [anchor(r['id']), '### ' + r['name'], '', r['statement'], '', '$$', r['formal'], '$$', '']
+            if r.get('scope'):
+                text += [r['scope'], '']
+            for definition in r.get('definitions', []):
+                text += [definition, '']
+            text += [bullet(claim) for claim in r['connections']]
+            for variant in r.get('variants', []):
+                # These variants share the parent's evidence; keep their stable anchors.
+                assert variant['sources'] == r['sources'], 'Variant needs separate source rendering'
+                assert variant['result_refs'] == r['result_refs'], 'Variant needs separate status rendering'
+                text += ['', anchor(variant['id']), '#### ' + variant['name'], '', variant['statement'], '', '$$', variant['formal'], '$$', '']
+                for definition in variant['definitions']:
+                    text += [definition, '']
+                text += [bullet(claim) for claim in variant['connections']]
+            text += ['', '**Sources:** ' + proposal_sources(r) + '.', '', proposal_status(r), '']
+            text += r.get('questions', []) + ([''] if r.get('questions') else [])
+    evaluation = proposals['evaluation']
+    text += [anchor('evaluation-principles'), '## Evaluation principles', '', evaluation['purpose'], '',
+             'For $E^{tt}$, define', '', '$$', evaluation['definition'], '$$', '']
+    for r in evaluation['entries']:
+        text += ['### ' + r['name'], '', '$$', r['formal'], '$$', '', '**Equivalent over C:** ' + r['equivalent_to'] + '.', '']
+    text += ['- ' + note for note in evaluation['notes']]
+    text += ['', '**Sources:** ' + proposal_sources(evaluation) + '.', '', proposal_status(evaluation), '']
+    text += ['## Further equivalent formulations', '']
+    for r in proposals['alternative_formulations']:
+        text += ['### ' + r['name'], '', r['statement'], '']
+        for i, formula in enumerate(r.get('formulas', [])):
+            if i and r.get('between_formulas'):
+                text += [r['between_formulas'], '']
+            text += ['$$', formula, '$$', '']
+        text += ['**Sources:** ' + proposal_sources(r) + '.', '', proposal_status(r), '']
+    out['CANDIDATES_DK.md'] = done(text)
+    text = ['# Main results', '',
+        'Draft. The principal implications, countermodels, characterizations and strength comparisons, grouped by subject. The background is finitary relational **Classicism C** unless stated otherwise.', '',
+        '[Full statements, proofs and certificates](evidence/RESULT-INDEX.md) · [Previously known results formalized](#previously-known-results-formalized) · [Questions and negative results](CONJECTURES.md) · [Notation](#notation)', '']
+    text += [anchor('categories'), '## Results by category', '',
+             '| Category | Headline results |', '|---|---|']
+    for section in overview['sections']:
+        text += ['| [' + section['title'] + '](#' + section['id'] + ') | '
+                 + section['headline'] + ' |']
+    text += ['']
+    for section in overview['sections']:
+        text += [anchor(section['id']), '## ' + section['title'], '']
+        for group in section['groups']:
+            refs = group['result_refs']
+            text += [anchor(alias) for alias in group.get('anchor_aliases', [])]
+            text += [anchor(rid) for rid in refs]
+            text += ['### ' + group['title'], '']
+            if group.get('principle_ref') or group.get('principle'):
+                principle = group.get('principle') or candidates_by_id[group['principle_ref']]
+                text += [principle['statement'], '', '$$', principle['formal'], '$$', '', principle['scope'], '']
+            text += [group.get('summary', rows[refs[0]]['statement']), '']
+            for rid in refs:
+                if rows[rid].get('proof_idea'):
+                    text += [rows[rid]['proof_idea'], '']
+            certification = ''
+            if all(rows[rid].get('certified_scope') is True for rid in refs):
+                certification = '**Lean certified.**'
+            elif any(rows[rid].get('certified_scope') for rid in refs):
+                scopes = [rows[rid]['title'] if rows[rid]['certified_scope'] is True else rows[rid]['certified_scope'].rstrip('.') for rid in refs if rows[rid].get('certified_scope')]
+                certification = '**Lean certified:** ' + group.get('certified_summary', '; '.join(scopes)).rstrip('.') + '.'
+            rating = group['proof_length']['rating']
+            certification += (' · ' if certification else '') + '[Proof length](#proof-length): ' + rating + '.'
+            if certification:
+                text += [certification, '']
+            labels = group.get('evidence_labels', ['Proofs and certificates'] if len(refs) == 1 else [rows[rid]['title'] for rid in refs])
+            assert len(labels) == len(refs), 'Wrong evidence label count'
+            text += [' · '.join(resultlink(rid, label=label) for rid, label in zip(refs, labels)) + '.', '']
+        if section['supplemental_results']:
+            text += [anchor(r['result_ref']) for r in section['supplemental_results']]
+            text += ['[Supplemental results in this category](evidence/RESULT-INDEX.md#supplement-' + section['id'] + ') · [Back to categories](#categories)', '']
+        else:
+            text += ['[Back to categories](#categories)', '']
+    established = main['established_formalizations']
+    text += [anchor('previously-known-results-formalized'), '## ' + established['title'], '', established['intro'], '']
+    for item in established['entries']:
+        rid = item['result_ref']
+        r = rows[rid]
+        assert r.get('certified_scope'), 'Prior-result formalization needs a certificate'
+        proof_idea = item.get('proof_idea', r.get('proof_idea'))
+        assert proof_idea and r.get('proof_length'), 'Prior-result formalization needs a proof description and length'
+        text += ['### ' + item['name'], '', '**Source:** ' + item['attribution'], '',
+                 proof_idea, '', '**Lean certified:** ' + item['scope'], '']
+        if item.get('note'):
+            text += [item['note'], '']
+        text += ['[Proof length](#proof-length): ' + r['proof_length']['rating'] + '. ' +
+                 resultlink(rid, label='Proofs and certificates') + '.', '']
+    text += ['', '## Remaining central questions', '']
+    for qid in overview['open_question_refs']:
+        q = question_rows[qid]
+        text += ['- [' + q['question'] + '](CONJECTURES.md#' + qid.lower() + ') — ' + q['status'].rstrip('.') + '.']
+    text += ['', 'Further reductions, failed constructions and incomplete formalizations are recorded in the [question register](CONJECTURES.md).', '']
+    text += [anchor('proof-length'), '## Proof length', '',
+        '**Short:** under 1,000 words. **Medium:** 1,000–3,000. **Long:** over 3,000. Every entry is rated by the selected mathematical exposition, including substantive supporting arguments. Grouped entries combine their source passages, counting overlapping lines once. Alternative proofs, Lean code and compiler logs are excluded; published background is cited rather than expanded. These are measures of exposition length, not difficulty or importance. [Source selections and counts](evidence/proof-lengths.json).', '']
+    text += [anchor('notation'), '## Notation and scope', '',
+        '| Notation | Meaning |', '|---|---|',
+        '| C; C5 | Fixed Classicism; C + ☐ND. |',
+        '| e; t; et; tt | Individuals; propositions; unary properties of individuals; unary properties of propositions. The fixed grammar admits no individual-valued function types. |',
+        '| ☐; ◇ | Necessarily; possibly. |',
+        '| ND; BF; BC | Necessity of Distinctness; Barcan; Boolean Completeness. |',
+        '| FC; RC; TC | Functional, Relational and Transversal Choice. Rigid Comprehension is written out. |',
+        '| TR; RP; WRP | Tame Rigidity; Rigid Power; Weakly Rigid Power. |',
+        '| Max; SP; Σ | Maximalism; Strong Possibility; the specified nonlogical signature. Eligibility depends on the stated reference theory. |',
+        '| PR | Profile Realization, a research proposal distinct from the database’s Actual Profile principle. |', '',
+        'Axiom of Infinity is distinct from the Infinity schema. Quantification over properties ranges over those admitted by the model; the fullness result explicitly asks for more. The original C remains finitary.', '']
+    out['MAIN-RESULTS.md'] = done(text)
+
+    text = ['# Full results, supplements and certificates', '',
+        '[Main results](../MAIN-RESULTS.md) · [Questions](../CONJECTURES.md) · [Catalog](../CATALOG.md) · [Database integration](../DATABASE-INTEGRATION.md)', '',
+        'Full statements, supporting results, proofs and certificates.', '',
+        '## Browse by category', '']
+    for section in overview['sections']:
+        text += ['### ' + section['title'], '']
+        for group in section['groups']:
+            text += ['- ' + ' · '.join('[' + rows[rid]['title'] + '](#' + rid.lower() + ')' for rid in group['result_refs'])]
+        text += ['']
+        text += [anchor('supplement-' + section['id'])]
+        if section['supplemental_results']:
+            text += ['**Supplemental results**', '']
+            text += ['- [' + rows[r['result_ref']]['title'] + '](#' + r['result_ref'].lower() + ')' for r in section['supplemental_results']]
+            text += ['']
+    for r in main['results']:
+        text += [anchor(r['id']), '## ' + r['title'], '', '**ID:** `' + r['id'] + '`. Tracked keys: ' + ', '.join('`' + k + '`' for k in r['registry_ids']) + '.', '',
+                 r['statement'], '', '**Scope:** ' + r['scope'], '', '**Significance:** ' + r['significance'], '',
+                 certified_line(r), '']
+        for field, title in [('notes', 'Notes'), ('attribution', 'Attribution')]:
+            if r.get(field):
+                text += ['**' + title + ':** ' + r[field], '']
+        if r.get('proof_idea'):
+            text += [r['proof_idea'], '']
+        if r.get('proof_length'):
+            length = r['proof_length']
+            text += ['**Proof length:** ' + length['rating'] + ' (' + format(length['words'], ',') + ' words in the [selected exposition](proof-lengths.json)).', '']
+        if r.get('proof_locators'):
+            text += ['**Proof locators:** ' + '; '.join(r['proof_locators']), '']
+        for field, title in [('proofs', 'Proofs'), ('lean_sources', 'Earlier Lean sources'), ('manifests', 'Earlier saved manifests'), ('evidence', 'Scope evidence'), ('certificates', 'Selected exact certificates')]:
+            if r.get(field):
+                text += ['**' + title + ':** ' + prooflinks(r[field], 'evidence'), '']
+        if r.get('declarations'):
+            text += ['**Principal declarations:**', '']
+            text += ['- `' + x + '`' for x in r['declarations']] + ['']
+    out['evidence/RESULT-INDEX.md'] = done(text)
+
+    text = ['# Detailed result catalog', '',
+        f'All {len(keys)} stable keys, including the original {len(coverage["original_catalog_keys_retained"])}, are retained. Keys may group several claims. Exact aliases resolve to MAIN-RESULTS.json; linked aggregate keys retain narrower evidence boundaries. Supporting module metadata remains in [CATALOG.json](CATALOG.json).', '',
+        '[Main guide](MAIN-RESULTS.md) · [Questions](CONJECTURES.md) · [Integration review](DATABASE-INTEGRATION.md)', '']
+    for item in catalog['entries']:
+        r = dict(item)
+        if 'result_ref' in r:
+            assert set(('statement', 'proofs', 'lean_status', 'certificate_scope')).isdisjoint(r), 'Duplicated alias fields'
+            source = rows[r['result_ref']]
+            r.update(statement=source['statement'], proofs=source['proofs'], lean_status=source['lean_status'], certified_scope=source.get('certified_scope'))
+        if r.get('lean_status_ref'):
+            assert 'lean_status' not in r and 'lean_status_refs' not in r, 'Duplicated exact status reference'
+            r['lean_status'] = rows[r['lean_status_ref']]['lean_status']
+            r['certified_scope'] = rows[r['lean_status_ref']].get('certified_scope')
+        text += [anchor(r['id']), '## ' + r['id'], '', r['statement'], '']
+        if r.get('integration_status_refs') and not r.get('lean_status_ref') and not r.get('result_ref'):
+            refs = r['integration_status_refs']
+            assert all(ref in integration_claims for ref in refs), 'Missing claim-level assessment'
+            text += ['**Evidence:** ' + ' · '.join('[' + integration_claims[ref].get('subclaim_id', ref) + '](DATABASE-INTEGRATION.md#' + ref.lower() + ')' for ref in refs) + '.', '']
+        elif r.get('lean_status_refs'):
+            assert 'lean_status' not in r, 'Duplicated aggregate status'
+            for rid in r['lean_status_refs']:
+                assert rid in rows
+        if certified_line(r):
+            text += [certified_line(r), '']
+        if r.get('reconciliation_receipts'):
+            text += ['**Exact reconciliation scope:** ' + r.get('certificate_scope', ''), '',
+                     '**Scope assessment:** ' + prooflinks(r['reconciliation_receipts']), '']
+        if r.get('proofs'):
+            text += ['**Proofs:** ' + prooflinks(r['proofs']), '']
+        if r.get('result_entries'):
+            text += ['**Scoped evidence:** ' + ' · '.join(resultlink(x) for x in r['result_entries']), '']
+        if r.get('integration_status_refs') and (r.get('lean_status_ref') or r.get('result_ref')):
+            text += ['**Integration assessment:** ' + ' · '.join('[' + integration_claims[ref].get('subclaim_id', ref) + '](DATABASE-INTEGRATION.md#' + ref.lower() + ')' for ref in r['integration_status_refs']), '']
+    out['CATALOG.md'] = done(text)
+
+    text = ['# Questions, progress and negative results', '',
+        'Established answers, unresolved questions and mathematical obstructions.', '',
+        '[Main results](MAIN-RESULTS.md) · [Catalog](CATALOG.md) · [Evidence](evidence/RESULT-INDEX.md)', '']
+    for r in questions['questions']:
+        assert 'lean_status' not in r, 'Duplicated question formalization status'
+        text += [anchor(r['id']), '## ' + r['question'], '', '**Position:** ' + r['status'] + '.', '', r['established'], '']
+        if r.get('remaining'):
+            text += [r['remaining'], '']
+        if statusrefs(r['formalization_result_refs']):
+            text += ['**Lean certified:** ' + statusrefs(r['formalization_result_refs']), '']
+        for rid in r['result_entries']:
+            assert rid in rows
+    out['CONJECTURES.md'] = done(text)
+
+    records = integration['records']
+    for rec in records.values():
+        file = root / rec['snapshot_path']
+        assert hashlib.sha256(file.read_bytes()).hexdigest() == rec['sha256'], 'Changed database snapshot'
+    by_result = {r['result_id']: r for r in integration['entries']}
+    text = ['# Database integration review', '',
+        'Unpublished review plan; no database verdicts are changed by this file. Every detailed result entry is matched to existing records or a proposed form of integration. A related principle is context, not a claim that the research theorem is already recorded. The displayed database states are captured snapshots, not live status.', '',
+        'The research proof and Lean status come from [the evidence index](evidence/RESULT-INDEX.md). Record snapshots and hashes are preserved in [DATABASE-INTEGRATION.json](DATABASE-INTEGRATION.json). Official verified flags require the database’s generated-statement checking workflow. Independence belongs in model records.', '',
+        '**Record review:** ' + integration['reviewed_at_utc'] + '. Later capture times and hashes are recorded per snapshot.', '',
+        '**Latest reconciliation:** ' + integration.get('reconciled_at_utc', integration['reviewed_at_utc']) + '.', '',
+        '[CANDIDATES_DK](CANDIDATES_DK.md) isolate new explorer entries from alternative presentations of existing strengths. The source is [CANDIDATES_DK.json](CANDIDATES_DK.json); proposed entries are not active database assumptions.', '']
+    for section in main['sections']:
+        text += ['## ' + section['title'], '', '| Research result and evidence | Existing record or context | Proposed action |', '|---|---|---|']
+        for rid in section['results']:
+            entry = by_result[rid]
+            contexts = []
+            for target in entry['records']:
+                rec = records[target['record']]
+                status = rec.get('status_at_review')
+                lean = rec.get('lean_at_review')
+                if isinstance(lean, dict):
+                    if 'status' in lean:
+                        lean = lean['status']
+                    elif 'verdicts' in lean:
+                        counts = {}
+                        for verdict in lean['verdicts']:
+                            state = verdict.get('status', 'unspecified')
+                            counts[state] = counts.get(state, 0) + 1
+                        lean = ', '.join(str(n) + ' ' + state + ' verdicts' for state, n in sorted(counts.items()))
+                    else:
+                        lean = 'see captured record for scope'
+                detail = target['role']
+                if status:
+                    detail += '; ' + str(status)
+                if lean:
+                    detail += '; Lean ' + str(lean)
+                contexts.append(filelink(rec['snapshot_path'], label='`' + rec['id'] + '`') + ' (' + detail + ')')
+            context = '<br>'.join(contexts) if contexts else 'New metatheorem; no exact existing record matched.'
+            cells = [resultlink(rid, label=rows[rid]['title']), context, '**' + entry['action'] + '.** ' + entry['proposal']]
+            text += ['| ' + ' | '.join(x.replace('|', '\\|').replace('\n', ' ') for x in cells) + ' |']
+        text += ['']
+    if integration.get('closure_cross_references'):
+        text += ['## Existing closure consequences', '',
+                 'These routes use already proved database records. They are cross-references, not new result registrations or new combined Lean certificates.', '']
+        if integration.get('closure_evidence'):
+            receipt = integration['closure_evidence']
+            receipt_bytes = (root / receipt['path']).read_bytes()
+            assert hashlib.sha256(receipt_bytes).hexdigest() == receipt['sha256']
+            used_sources = json.loads(receipt_bytes)['used_result_sha256']
+            assert set(receipt['result_sources']) == set(used_sources), 'Incomplete closure source map'
+            for source, sha in used_sources.items():
+                saved = receipt['result_sources'][source]
+                assert saved['sha256'] == sha, 'Closure source hash differs from receipt'
+                assert hashlib.sha256((root / saved['path']).read_bytes()).hexdigest() == sha, 'Changed closure source'
+            text += ['**Saved proved-only closure checks:** ' + filelink(receipt['path']) + '.', '']
+            text += [receipt['scope_note'] + ' Exact paths and hashes are in [the source map](DATABASE-INTEGRATION.json).', '']
+        for item in integration['closure_cross_references']:
+            text += [anchor(item['id']), '### ' + item['title'], '', item['summary'], '', item['scope'], '',
+                     '**Recorded route:** ' + ' · '.join(filelink(records[key]['snapshot_path'], label='`' + records[key]['id'] + '`') for key in item['records']), '',
+                     '**Research connections:** ' + ' · '.join(resultlink(rid) for rid in item['result_entries']), '']
+    if integration.get('scope_receipts'):
+        text += ['## Exact scope assessments', '',
+                 'These saved assessments reconcile accepted evidence with the catalog claims. They do not run Lean or turn supporting components into complete principal certificates.', '']
+        for receipt in integration['scope_receipts']:
+            assert hashlib.sha256((root / receipt['path']).read_bytes()).hexdigest() == receipt['sha256']
+            text += ['- ' + filelink(receipt['path'])]
+        text += ['']
+    if integration.get('formulation_audits'):
+        text += ['## Formulation audits', '']
+        for item in integration['formulation_audits']:
+            assert hashlib.sha256((root / item['proof_path']).read_bytes()).hexdigest() == item['source_sha256']
+            text += [anchor(item['id']), '### ' + item['title'], '', '**Position:** ' + item['status'], '',
+                     item['summary'], '', item['scope'], '', item['completeness'], '',
+                     '**Lean:** ' + item['lean_status'], '',
+                     '**Proof and source comparison:** ' + filelink(item['proof_path']) + '.', '',
+                     '**Existing records:** ' + ' · '.join(filelink(records[key]['snapshot_path'], label='`' + records[key]['id'] + '`') for key in item['records']), '']
+    if integration.get('registered_supplementary_results'):
+        text += ['## Newly registered results matched in this review', '',
+                 'These ordinary proved records preserve the original typed arguments. Their generated-record Lean status remains separate from the research certificates.', '']
+        for item in integration['registered_supplementary_results']:
+            rec = records[item['record']]
+            writeup = ' · ' + filelink(item['writeup_path'], label='Proof and exact type scope') if item.get('writeup_path') else ''
+            text += ['- ' + filelink(rec['snapshot_path'], label='`' + item['id'] + '`') + writeup + '. Database status: ' + item['status'] + '; Lean: ' + item['lean_at_receipt'] + '.']
+        text += ['']
+    supplementary = integration['coverage']['supplementary_review_keys']
+    assert {r['id'] for r in catalog['entries'] if not r.get('result_entries')} <= set(supplementary)
+    reconciled = integration.get('supplementary_entries', [])
+    reconciled_keys = {r['catalog_id'] for r in reconciled}
+    claim_ids = [r.get('claim_id', r['catalog_id']) for r in reconciled]
+    assert len(set(claim_ids)) == len(claim_ids), 'Repeated supplementary claim'
+    assert reconciled_keys <= set(supplementary), 'Unexpected supplementary key'
+    pending = [k for k in supplementary if k not in reconciled_keys]
+    text += ['## Supplementary catalog reconciliation', '',
+        f'{len(reconciled_keys)} of the {len(supplementary)} supplementary review keys are covered below, in {len(reconciled)} claim-level rows. This is matching and scope review; a matched record, derived consequence or supporting certificate does not establish every stronger claim in the same family. Rows split compound claims for accuracy and are not a count of new theorems.', '']
+    if integration.get('supplementary_intake'):
+        receipt = integration['supplementary_intake']
+        assert hashlib.sha256((root / receipt['path']).read_bytes()).hexdigest() == receipt['sha256']
+        text += ['**Source assessment:** ' + filelink(receipt['path']) + '. Exact claims, source locators and remaining gaps are retained in the structured table.', '']
+    unresolved = [r for r in reconciled if r.get('relationship') == 'unresolved']
+    if unresolved:
+        text += ['**Unresolved assessment rows:** ' + ' · '.join('[`' + r['catalog_id'] + '` — ' + r.get('subclaim_id', '') + '](#' + r.get('claim_id', r['catalog_id']).lower() + ')' for r in unresolved) + '. Registration and certificate follow-ups on other rows are separate from these unresolved assessments.', '']
+    unresolved = [r for r in reconciled if r.get('relationship') == 'unresolved']
+    if unresolved:
+        text += ['**Unresolved assessment rows:** ' + ' · '.join('[`' + r['catalog_id'] + '` — ' + r.get('subclaim_id', '') + '](#' + r.get('claim_id', r['catalog_id']).lower() + ')' for r in unresolved) + '. Registration and certificate follow-ups on other rows are separate from these unresolved assessments.', '']
+    unresolved = [r for r in reconciled if r.get('relationship') == 'unresolved']
+    if unresolved:
+        text += ['**Unresolved assessment rows:** ' + ' · '.join('[`' + r['catalog_id'] + '` — ' + r.get('subclaim_id', '') + '](#' + r.get('claim_id', r['catalog_id']).lower() + ')' for r in unresolved) + '. Registration and certificate follow-ups on other rows are separate from these unresolved assessments.', '']
+    family = None
+    for item in reconciled:
+        current_family = item['catalog_id'].split('.')[0]
+        if current_family != family:
+            family = current_family
+            text += ['### ' + family, '', '| Catalog key and scope | Existing match | Action and remaining limits | Proof and Lean scope |', '|---|---|---|---|']
+        matches = []
+        for match in item.get('matched_records', []):
+            rec = records[match['record']]
+            matches.append(filelink(rec['snapshot_path'], label='`' + rec['id'] + '`') + ' (' + match['relationship'] + ')')
+        for rid in item.get('result_entries', []):
+            matches.append(resultlink(rid))
+        evidence = []
+        for source in item.get('proofs', []):
+            label = source.get('label') or Path(source.get('path', source.get('origin', 'source'))).name
+            if source.get('path'):
+                evidence.append(filelink(source['path'], label=label) + (' — ' + source['locator'] if source.get('locator') else ''))
+            else:
+                evidence.append(label + (' — ' + source['locator'] if source.get('locator') else '') + ' (source locator; bytes not retained)')
+        status = rows[item['lean_status_ref']]['lean_status'] if item.get('lean_status_ref') else item['lean_status']
+        action = item['action']
+        if item.get('blockers'):
+            action += ' **Remaining:** ' + ' '.join(item['blockers'])
+        if item.get('follow_up'):
+            action += ' **Follow-up:** ' + item['follow_up']
+        claim_name = (' · `' + item['subclaim_id'] + '`') if item.get('subclaim_id') else ''
+        claim_anchor = anchor(item.get('claim_id', item['catalog_id']))
+        cells = [claim_anchor + '[`' + item['catalog_id'] + '`](CATALOG.md#' + item['catalog_id'].lower() + ')' + claim_name + '<br>' + item['scope'],
+                 '<br>'.join(matches) or 'No exact existing record matched; see the proposed action.',
+                 action, status.rstrip('.') + '.' + ('<br>' + '<br>'.join(evidence) if evidence else '')]
+        text += ['| ' + ' | '.join(x.replace('|', '\\|').replace('\n', ' ') for x in cells) + ' |']
+    if pending:
+        text += ['', '**Awaiting individual reconciliation:** ' + ', '.join('[`' + k + '`](CATALOG.md#' + k.lower() + ')' for k in pending) + '.', '']
+    else:
+        text += ['', 'All supplementary review keys are reconciled. Any remaining mathematical, source or formalization obligations are stated in their rows; reconciliation does not mark them proved or fully formalized.', '']
+    out['DATABASE-INTEGRATION.md'] = done(text)
+    text = ['# Results and certificate scope', '',
+        'Research submission: results, proofs and exact certificate scope.', '',
+        '[Main guide](MAIN-RESULTS.md) · [Exact evidence](evidence/RESULT-INDEX.md) · [Database reconciliation](DATABASE-INTEGRATION.md) · [Questions](CONJECTURES.md)', '',
+        '## Certified results', '']
+    for rid in ['MAX-ATOMICITY', 'OLDNEW-SEPARATION', 'SECTIONS-RETRACTIONS', 'NPC-ATOMICITY', 'CH-COALESCED', 'MAX-CH', 'ANALYTIC-RIGIDIFICATION', 'ARITHMETIC-COMPARISON', 'LAMBDA-FREE-TRANSLATION', 'BETA-ETA-CONVERSION']:
+        r = rows[rid]
+        if r.get('certified_scope'):
+            text += ['- **' + r['title'] + '.** ' + ('Lean certified.' if r['certified_scope'] is True else 'Lean certified: ' + r['certified_scope']) + ' ' + resultlink(rid, label='Proof and certificate') + '.']
+    text += ['',
+        '## Sources and reproduction', '',
+        'Source proofs and accepted certificate evidence are linked in [SOURCE-MANIFEST.json](SOURCE-MANIFEST.json) and [the certificate index](evidence/CERTIFICATES.json).', '',
+        'The summaries and this scope note are generated from the canonical records. Follow [REPRODUCING.md](REPRODUCING.md) for drift checks, exact-source verification and intentional checksum refreshes.', '']
+    out['RELEASE-NOTES.md'] = done(text)
+    return out
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument('--check', action='store_true')
+    mode.add_argument('--write', action='store_true')
+    parser.add_argument('--refresh-checksums', action='store_true')
+    parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parent)
+    args = parser.parse_args()
+    if args.refresh_checksums and not args.write:
+        parser.error('--refresh-checksums requires --write')
+    root = args.root.resolve()
+    expected = render(root)
+    changed = []
+    for name, body in expected.items():
+        path = root / name
+        if not path.is_file() or path.read_text() != body:
+            changed.append(name)
+            if args.write:
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text(body)
+    if args.refresh_checksums:
+        inventory = []
+        for path in sorted(root.rglob('*')):
+            if path.is_file() and path != root / 'SHA256SUMS':
+                inventory.append(hashlib.sha256(path.read_bytes()).hexdigest() + '  ' + path.relative_to(root).as_posix())
+        (root / 'SHA256SUMS').write_text('\n'.join(inventory) + '\n')
+    print(json.dumps({'mode': 'write' if args.write else 'check', 'generated_files': len(expected),
+                      'changed_or_stale': changed, 'checksums_refreshed': args.refresh_checksums,
+                      'lean_invoked': False}))
+    return 0 if args.write or not changed else 1
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())

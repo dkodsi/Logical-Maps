@@ -1,0 +1,21 @@
+import Classicism.Models.BooleanChoiceSchemaConsequences
+
+/-! Exact type and axiom audit for the positive-equivalence corollaries.
+This source is not a certificate: the driver must compile and its printed
+axiom dependencies must exclude sorryAx before verification is claimed. -/
+
+open Classicism.Meta.ChoiceBoolean
+
+#check SchemaConsequences.not_finitely_axiomatizable_of_equiv
+#check SchemaConsequences.allStages_not_finitely_axiomatizable
+#check SchemaConsequences.diagonalChoice_not_finitely_axiomatizable
+#check SchemaConsequences.fullChoice_entails_boxedSelector
+#check SchemaConsequences.boxedSelector_entails_fullChoice
+#check SchemaConsequences.boxedSelector_not_finitely_axiomatizable
+
+#print axioms SchemaConsequences.not_finitely_axiomatizable_of_equiv
+#print axioms SchemaConsequences.allStages_not_finitely_axiomatizable
+#print axioms SchemaConsequences.diagonalChoice_not_finitely_axiomatizable
+#print axioms SchemaConsequences.fullChoice_entails_boxedSelector
+#print axioms SchemaConsequences.boxedSelector_entails_fullChoice
+#print axioms SchemaConsequences.boxedSelector_not_finitely_axiomatizable

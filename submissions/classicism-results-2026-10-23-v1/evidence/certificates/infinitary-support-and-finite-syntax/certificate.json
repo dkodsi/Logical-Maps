@@ -1,0 +1,590 @@
+{
+  "id": "infinitary-support-and-finite-syntax",
+  "source_manifest_origin": "research/2026-10-22/lean-formalization/checks/20261024T061631589724Z-9e1f922d.json",
+  "source_manifest_path": "evidence/certificates/infinitary-support-and-finite-syntax/selected-manifest.json",
+  "source_manifest_sha256": "c7f2165d69a5cdf3d97c845044467fcef5bc45ae34a7a9be7f72b3b4d7e57808",
+  "source_manifest_original_sha256": "97dfff2f7fe90e31c98c6533d9a3a960141e21852dd81923d4382c1d06669dc1",
+  "source_manifest_normalization": "Portable paths and the successful target dependency closure. Original failed whole-run verdict retained; unrelated targets omitted.",
+  "run_id": "20261024T061631589724Z-9e1f922d",
+  "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "compiler_sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554",
+  "precompiled_sha256": "675f46a345caf1daf1bbc81b42696e5a518c6d01fd9c8a8d02c8a158f8475a3e",
+  "selected_targets": [
+    "InfinitaryComprehensionIndependentAxioms"
+  ],
+  "selected_targets_exit_code": 0,
+  "original_run_state": "failed",
+  "original_run_exit_code": 1,
+  "sources": [
+    {
+      "module": "Classicism.Syntax.Types",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Types.lean",
+      "sha256": "567828e8f9a707cf635e3b4fb30bc868a419967307613d0686d795d195606eac",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Types.lean",
+      "fingerprint": "f920c6417fb0d73d4b6cb333a5de66a5647023a45396e3a09a0b7e943245c8cf",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Term",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Term.lean",
+      "sha256": "ad5172acbb74eaab9307662408928b80e6ffab62e14df16f2f41c7205de13f69",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Term.lean",
+      "fingerprint": "19fcc526fbf7a5f30c841e2fb11bd4cc6c4c8c77eddfb46e22a81b795035e2d5",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionSyntax",
+      "path": "evidence/source-store/15f92831d56f98b604ed6e8fbbae202e419ca21d849b5f6f50551052e21179da/Classicism/Results/Research/InfinitaryComprehensionSyntax.lean",
+      "sha256": "15f92831d56f98b604ed6e8fbbae202e419ca21d849b5f6f50551052e21179da",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/InfinitaryComprehensionSyntax.lean",
+      "fingerprint": "55fe095d3d802253983333c2c190d6a6483a78a8c36960f6ca49e9ea15c3af15",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionAtomicity",
+      "path": "evidence/source-store/3409edcef011e42983e4dbc6ec1b7951a8360fcccb014c8a514143d56e599652/Classicism/Results/Research/InfinitaryComprehensionAtomicity.lean",
+      "sha256": "3409edcef011e42983e4dbc6ec1b7951a8360fcccb014c8a514143d56e599652",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/InfinitaryComprehensionAtomicity.lean",
+      "fingerprint": "6b250c274a5621be412e8d10628bdaf49fc0de53a3e0e92648177497d2f1286d",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionSupport",
+      "path": "evidence/source-store/d80670ce0723d6aea41b1314adee884defcbc70c2806411a8217f7b878a5a284/Classicism/Results/Research/InfinitaryComprehensionSupport.lean",
+      "sha256": "d80670ce0723d6aea41b1314adee884defcbc70c2806411a8217f7b878a5a284",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/InfinitaryComprehensionSupport.lean",
+      "fingerprint": "0a7fc1daa9cc39d43285850cc1b0119bad73e8df154e5e96567ec2c9f96632f3",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionConsequences",
+      "path": "evidence/source-store/0deddd700c66bf11b0a31c454ca4ce5f0d84b8949b9c080ff521e99df5a69064/Classicism/Results/Research/InfinitaryComprehensionConsequences.lean",
+      "sha256": "0deddd700c66bf11b0a31c454ca4ce5f0d84b8949b9c080ff521e99df5a69064",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/InfinitaryComprehensionConsequences.lean",
+      "fingerprint": "08ecc66187a27449f8c377cfac2e6405ec829a113d73300c131174fad2011b80",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.ModalComprehensionRepresentation",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalComprehensionRepresentation.lean",
+      "sha256": "894fbd7e5fc2a63e5a970555c36c3a5637bb6910d647fcfbee00211e5dab42d0",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalComprehensionRepresentation.lean",
+      "fingerprint": "2e1e08cf20151d056fd2f55f8963118f9d819fa67b83eaf7f39fc717d3fd8ba4",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.ModalComprehensionConcreteSyntax",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalComprehensionConcreteSyntax.lean",
+      "sha256": "48cd4676d8be1f49d9cc13a507530b2cc4c1900af4aa894e58ae59d8bfe105d0",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalComprehensionConcreteSyntax.lean",
+      "fingerprint": "acbd73e7e3c2e6f7b45ab6c5dbadd82aaf0ed6557362fac6ca7db06ab92dc69f",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Conversion",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Conversion.lean",
+      "sha256": "c22fe48399811fcb0d71b37206c633749a7285291c62c2e7d786475ea6ae339e",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Conversion.lean",
+      "fingerprint": "98d38a7cbaf85616553560abf68733b885806aebd405d33965c1dc960da57f67",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.ModalConcreteToCSyntax",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalConcreteToCSyntax.lean",
+      "sha256": "dcfa1f6e6ba984fb1c101790ca4d863d1d428663e5c80b0a580dbb7cd40c8a64",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalConcreteToCSyntax.lean",
+      "fingerprint": "e77263971496e739350cb09588f4f423b75a5ff31df12b5a86baa7936e7a95be",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionFiniteBridge",
+      "path": "evidence/source-store/40d5de7995e3c95ea5a3908ca5a9789f5f440dafaf0d780bb02632ffe2a4d6b6/Classicism/Results/Research/InfinitaryComprehensionFiniteBridge.lean",
+      "sha256": "40d5de7995e3c95ea5a3908ca5a9789f5f440dafaf0d780bb02632ffe2a4d6b6",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/InfinitaryComprehensionFiniteBridge.lean",
+      "fingerprint": "705d2501ceedf3a71225db953e061a0f33e936f9379a1c6435359eca3cddec5e",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.NominalSupportCore",
+      "path": "source/topics/classicism/lean/Classicism/Models/NominalSupportCore.lean",
+      "sha256": "0ab2960c2db9128fa0c10ad8a7013b03d1328011dad69fdfe3e5213bae9806a9",
+      "original_path": "topics/classicism/lean/Classicism/Models/NominalSupportCore.lean",
+      "fingerprint": "4b0aca7b60be760af75b9cc7acfdcf66936194059264b067a5f8354645625fbc",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionFull",
+      "path": "evidence/source-store/9590f18aeb98070ea31b1345640bebd4b103f9bb96d292459a10d53e3d00b0e0/Classicism/Results/Research/InfinitaryComprehensionFull.lean",
+      "sha256": "9590f18aeb98070ea31b1345640bebd4b103f9bb96d292459a10d53e3d00b0e0",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/InfinitaryComprehensionFull.lean",
+      "fingerprint": "5b66ea931035669592af96a806a80d69bd8334d75ea747828d5143898b561908",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionStandardLaws",
+      "path": "evidence/source-store/faa18cf2e40a701973ac3ee01d0cd96bfc1312f290547575dbbc9dc3d98cb303/Classicism/Results/Research/InfinitaryComprehensionStandardLaws.lean",
+      "sha256": "faa18cf2e40a701973ac3ee01d0cd96bfc1312f290547575dbbc9dc3d98cb303",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/InfinitaryComprehensionStandardLaws.lean",
+      "fingerprint": "2d1086215bd1924f8143e30f401a34d835c4cd11725387af6be995d8dd62e80d",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionNominal",
+      "path": "evidence/source-store/dda0ac3bb3914391e52a14ca05c0342396cd6dd9d0c0a8dc45ec99e9ffa32dd4/Classicism/Results/Research/InfinitaryComprehensionNominal.lean",
+      "sha256": "dda0ac3bb3914391e52a14ca05c0342396cd6dd9d0c0a8dc45ec99e9ffa32dd4",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/InfinitaryComprehensionNominal.lean",
+      "fingerprint": "c94c86e1e02f012e9f56e3963ec78c53670c852692f4ff56db305fa121cc35c6",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionNominalOccurrences",
+      "path": "evidence/source-store/3424632c12c83e47cc208286cb8ca8f261ae85d99fc7a7cf1f3d787c43b0d02c/Classicism/Results/Research/InfinitaryComprehensionNominalOccurrences.lean",
+      "sha256": "3424632c12c83e47cc208286cb8ca8f261ae85d99fc7a7cf1f3d787c43b0d02c",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/InfinitaryComprehensionNominalOccurrences.lean",
+      "fingerprint": "6f200d99ba0e35312d1845fc05591842555e31e47a3c87a84d518598c6da9525",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Mathlib.SetTheory.Cardinal.Arithmetic",
+      "path": "dependencies/sources/43505f6d6434b811/Mathlib/SetTheory/Cardinal/Arithmetic.lean",
+      "sha256": "43505f6d6434b8111c787fe51602b111b6a935def35227bcd2bdcab7d867692a",
+      "original_path": ".local-runtime/choice-mathlib-source-subset/Mathlib/SetTheory/Cardinal/Arithmetic.lean",
+      "fingerprint": "8037881cd7521793962cb4e6f2fb16e6e617c1e3604de510878a9c636e5ca7e9",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Mathlib.SetTheory.Cardinal.Ordinal",
+      "path": "source/topics/classicism/lean/Mathlib/SetTheory/Cardinal/Ordinal.lean",
+      "sha256": "fa85f3ecd2f6db665d09080c576976bae4f93064077a4636d829b1161d261e81",
+      "original_path": ".local-runtime/choice-mathlib-source-subset/Mathlib/SetTheory/Cardinal/Ordinal.lean",
+      "fingerprint": "8cc55fd577de848bfcbcd1041f0468d546d93bf14677a2dd06fd759ff7711b87",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Mathlib.SetTheory.Ordinal.FundamentalSequence",
+      "path": "source/topics/classicism/lean/Mathlib/SetTheory/Ordinal/FundamentalSequence.lean",
+      "sha256": "dc9e619e54991ae2afd27a0bdb04eeb45934057040b0435106bdc64d5a7f99a8",
+      "original_path": ".local-runtime/choice-mathlib-source-subset/Mathlib/SetTheory/Ordinal/FundamentalSequence.lean",
+      "fingerprint": "1d3e0092e3378c71e0a2a5611593b4939d9a1a1b40c4464e3127f0499370160f",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Mathlib.SetTheory.Cardinal.Regular",
+      "path": "source/topics/classicism/lean/Mathlib/SetTheory/Cardinal/Regular.lean",
+      "sha256": "90f58bc8df074d6e17470d85290b23e1c6d7711d1bc3d56284869272fc350f37",
+      "original_path": ".local-runtime/choice-mathlib-source-subset/Mathlib/SetTheory/Cardinal/Regular.lean",
+      "fingerprint": "2f618e8849155c9e0d8c7ac7ee5a17ee7898466c4762665a323596585af56c31",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionNominalStrictness",
+      "path": "evidence/source-store/faa632a31ce296457e4a6d1ed9f22dbacd369dc3702d3e4384e19a06feb99d59/Classicism/Results/Research/InfinitaryComprehensionNominalStrictness.lean",
+      "sha256": "faa632a31ce296457e4a6d1ed9f22dbacd369dc3702d3e4384e19a06feb99d59",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/InfinitaryComprehensionNominalStrictness.lean",
+      "fingerprint": "fb24ccc5f25cb0f47a6eb2c70947d3e570ea5b2414c257afa549719053894386",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Derivation",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Derivation.lean",
+      "sha256": "7cc2fd01542014d55e5a4c4a411724db7cdc076462d0de724c3530b0a8a3fc6b",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Derivation.lean",
+      "fingerprint": "061b31ce6eb4dec06fa11b50e1a6c035783c2a4995cd0969cc86efba8ddcaddc",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Axioms",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Axioms.lean",
+      "sha256": "f3dd3b51ef834f46f22e09fe34026f47120a8bc171afb190b5053c443f4a82a7",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Axioms.lean",
+      "fingerprint": "ddbcb4cf3a000255234e36d2ee2916e31b5fdb7a72f348dcefbd8c9d3ca7684a",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Entailment",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Entailment.lean",
+      "sha256": "13f758dbf41a84dda7c2ae7adf6bcb9605ee114ce04dbda0efc5f1c4fbeabb1e",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Entailment.lean",
+      "fingerprint": "f670afd73a6fd66b3870be6129d27860b6752cbea6867b77f897d6c298a0bb17",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.Env",
+      "path": "source/topics/classicism/lean/Classicism/Semantics/Env.lean",
+      "sha256": "ca6f223a2bfe71396b3e21de852057e432cd7b289005cdacc1cc24935358e09d",
+      "original_path": "topics/classicism/lean/Classicism/Semantics/Env.lean",
+      "fingerprint": "7f3e4ffe9d4d890917cec6dec7d2aaf714d1012d59ca370044660890a5a783a3",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.Intensional",
+      "path": "source/topics/classicism/lean/Classicism/Semantics/Intensional.lean",
+      "sha256": "9a58b1dd47b1b527209d1994ed2b9252c85dc012d019d9878c2cbcc58b6019af",
+      "original_path": "topics/classicism/lean/Classicism/Semantics/Intensional.lean",
+      "fingerprint": "8593cbb6df804ccf0133be66641346c848dcdf696fe19f193ac1f2540b3aab12",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.IntensionalSoundness",
+      "path": "source/topics/classicism/lean/Classicism/Semantics/IntensionalSoundness.lean",
+      "sha256": "dc34e26e6baaaf9270c067fb43303dc9a00dbc885b8da02ba1eb7432fe008143",
+      "original_path": "topics/classicism/lean/Classicism/Semantics/IntensionalSoundness.lean",
+      "fingerprint": "c24f4e10110727850d6197c8c7a0914185e630aa68842aab2171a5f7e7f94b5b",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.ChoiceFirstOrder",
+      "path": "source/topics/classicism/lean/Classicism/Models/ChoiceFirstOrder.lean",
+      "sha256": "065c45e11c76add239fb40a601fb4c608aa78d8cad962d9b746e6e73a4334e02",
+      "original_path": "topics/classicism/lean/Classicism/Models/ChoiceFirstOrder.lean",
+      "fingerprint": "0efe31944ef3d085901edb28e1874b841395bcf8fcf42f5c55bc63463477c72a",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.ChoiceFirstOrderTerms",
+      "path": "source/topics/classicism/lean/Classicism/Models/ChoiceFirstOrderTerms.lean",
+      "sha256": "9f0abab17dc77426103c5c49051d9896d315096521441ae822ac9d60d26fc433",
+      "original_path": "topics/classicism/lean/Classicism/Models/ChoiceFirstOrderTerms.lean",
+      "fingerprint": "f0133405f724c5cba93da2ece026b8afc08d51d8119e27324212634732135d87",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.ChoiceFirstOrderSmall",
+      "path": "source/topics/classicism/lean/Classicism/Models/ChoiceFirstOrderSmall.lean",
+      "sha256": "b135aeb7c5f2c82609d58a5209f86754ad01f93c5b651d069b416b70afba8e33",
+      "original_path": "topics/classicism/lean/Classicism/Models/ChoiceFirstOrderSmall.lean",
+      "fingerprint": "2d7b322e14f2a15c442c25044e654d680300b5fb1d34b8fbaea1a8ba98959349",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Mathlib.Tactic.DeriveCountable",
+      "path": "source/topics/classicism/lean/Mathlib/Tactic/DeriveCountable.lean",
+      "sha256": "ca4a1000c05921123a87b79f8986282b9ec9de65abd10b205b5e2eb1f02ed660",
+      "original_path": ".local-runtime/choice-mathlib-source-subset/Mathlib/Tactic/DeriveCountable.lean",
+      "fingerprint": "56305cd377d03092004d49b5220c76f80d251f8c182ccf9679ac0b03d70e061c",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.ChoiceFirstOrderCountable",
+      "path": "source/topics/classicism/lean/Classicism/Models/ChoiceFirstOrderCountable.lean",
+      "sha256": "dcc93732849ee65565fd421ffbbae5607bd1bef715d54d64f84886635b63b18d",
+      "original_path": "topics/classicism/lean/Classicism/Models/ChoiceFirstOrderCountable.lean",
+      "fingerprint": "c1427b120d7ca9c4a108aa373828b3ae8331c0ec42607a47d60bca6fba3783e9",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Mathlib.ModelTheory.Semantics",
+      "path": "source/topics/classicism/lean/Mathlib/ModelTheory/Semantics.lean",
+      "sha256": "a156d9f6fad66edb030e9a176947c2df6d7c4d489c6ab3a823bea871e2be88e2",
+      "original_path": ".local-runtime/choice-mathlib-source-subset/Mathlib/ModelTheory/Semantics.lean",
+      "fingerprint": "3473060facaef99cd779eb42df1f6b4b442194cb2a2966d0326964cb10f0131c",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.ChoiceFirstOrderMathlib",
+      "path": "source/topics/classicism/lean/Classicism/Models/ChoiceFirstOrderMathlib.lean",
+      "sha256": "885b5ddf7c9681ea74f36d8423b91d9f777afec223314d8ae721c9bdd76c94af",
+      "original_path": "topics/classicism/lean/Classicism/Models/ChoiceFirstOrderMathlib.lean",
+      "fingerprint": "3f61de4da403dba7a032e51fa5912a2c2da6be9fd40518cd49313fac24f5e26f",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.ChoiceFirstOrderRecovery",
+      "path": "source/topics/classicism/lean/Classicism/Models/ChoiceFirstOrderRecovery.lean",
+      "sha256": "075c8440d3e810da09b0f2e9a6dc3494a80ba6d29798b07a1adde47d37cd0dac",
+      "original_path": "topics/classicism/lean/Classicism/Models/ChoiceFirstOrderRecovery.lean",
+      "fingerprint": "f14934f5308a096b2591770e9a4366bcf456de0e69c8ab286abba77e476caedf",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.ChoiceFirstOrderAxiomTheory",
+      "path": "evidence/source-store/d917a0a0bf845c254b8abbe7831bb07f02e23579ac131160dec9f8472f5abaf9/Classicism/Models/ChoiceFirstOrderAxiomTheory.lean",
+      "sha256": "d917a0a0bf845c254b8abbe7831bb07f02e23579ac131160dec9f8472f5abaf9",
+      "original_path": "topics/classicism/lean/Classicism/Models/ChoiceFirstOrderAxiomTheory.lean",
+      "fingerprint": "287a47830e8f94ac595a04d02410fd3866e8f581feb29ce9bd0d9df8e9248972",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.ChoiceFirstOrderFull",
+      "path": "source/topics/classicism/lean/Classicism/Models/ChoiceFirstOrderFull.lean",
+      "sha256": "a8adf9353e2f0d3833ae3b1a5f89b408aa452dd925f56461ba8ccd32694b75b9",
+      "original_path": "topics/classicism/lean/Classicism/Models/ChoiceFirstOrderFull.lean",
+      "fingerprint": "4b73fa218840a81b60f2c7bbaa040c239eb59cded26d657f9bfa38e866a20a39",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionStrictness",
+      "path": "evidence/source-store/a954ece529ac3565dd09a40f291e67aed462c14b1f7cfe58a0c41ff2afcb6894/Classicism/Results/Research/InfinitaryComprehensionStrictness.lean",
+      "sha256": "a954ece529ac3565dd09a40f291e67aed462c14b1f7cfe58a0c41ff2afcb6894",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/InfinitaryComprehensionStrictness.lean",
+      "fingerprint": "3ba5d1187178c86fddb555a82845d29633b78934822d539899411d663da17b32",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionStrictnessTheory",
+      "path": "evidence/source-store/a5bee0232c9b8a637730eb5ba994568f80642cd4fd0ead23a04d225bc324d7b2/Classicism/Results/Research/InfinitaryComprehensionStrictnessTheory.lean",
+      "sha256": "a5bee0232c9b8a637730eb5ba994568f80642cd4fd0ead23a04d225bc324d7b2",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/InfinitaryComprehensionStrictnessTheory.lean",
+      "fingerprint": "dc3516e3c07cea5b1b0831e770da3d737ab2db7b1fe947eaf902837f6cb94fb5",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionDiagonal",
+      "path": "evidence/source-store/0b65e92c3f587b64c7f0516d2166538850e7c1f3359a006ccca4f47a182353c4/Classicism/Results/Research/InfinitaryComprehensionDiagonal.lean",
+      "sha256": "0b65e92c3f587b64c7f0516d2166538850e7c1f3359a006ccca4f47a182353c4",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/InfinitaryComprehensionDiagonal.lean",
+      "fingerprint": "d928ac7bc71140e8d1816770c24184a32725b4e821964868f93bcdc2940d9589",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionStrictnessModel",
+      "path": "evidence/source-store/51225afb95d6ee706195090767dd07906f001c7aad01841a5fb1459bb12efb79/Classicism/Results/Research/InfinitaryComprehensionStrictnessModel.lean",
+      "sha256": "51225afb95d6ee706195090767dd07906f001c7aad01841a5fb1459bb12efb79",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/InfinitaryComprehensionStrictnessModel.lean",
+      "fingerprint": "959a682f47b0c75416da8e148e8f26c23d370b05cfe2a6b52e7722b010d955e4",
+      "module_exit_code": 0
+    },
+    {
+      "module": "InfinitaryComprehensionIndependentAxioms",
+      "path": "evidence/source-store/d805c74b7b4a01df389bdb03a66c7e6bf9984db616135f29641d3e9b039f5f1e/InfinitaryComprehensionIndependentAxioms.lean",
+      "sha256": "d805c74b7b4a01df389bdb03a66c7e6bf9984db616135f29641d3e9b039f5f1e",
+      "original_path": "research/2026-10-22/lean-formalization/integration-checks/InfinitaryComprehensionIndependentAxioms.lean",
+      "fingerprint": "3a4dab7079843fa177d37ef3932e7a63fb31a6b9fd4fa82b86635869feac3e69",
+      "module_exit_code": 0
+    }
+  ],
+  "logs": [
+    {
+      "module": "InfinitaryComprehensionIndependentAxioms",
+      "path": "evidence/certificates/infinitary-support-and-finite-syntax/InfinitaryComprehensionIndependentAxioms.log",
+      "sha256": "c88ef55222cedfea456d380ed1c857f07336fc9a6dec1983b9cecd0beb10996a",
+      "origin": "research/2026-10-22/lean-formalization/logs/runs/20261024T061631589724Z-9e1f922d/InfinitaryComprehensionIndependentAxioms.log"
+    }
+  ],
+  "principal_reports": [
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.FiniteBridge.embed_rename",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.FiniteBridge.embed_subst",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.FiniteBridge.embed_inst",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.FiniteBridge.eval_embed",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.FiniteBridge.finite_comprehension",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.FiniteBridge.sequent_at_iff",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.Nominal.RegularBound.assignment_supported",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.Nominal.RegularBound.bounded_comprehension",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.Nominal.RegularBound.colour_not_supported",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.Nominal.RegularBound.colour_comprehension_false",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.Nominal.RegularBound.fixed_bound_strictness",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.Nominal.RegularBound.comprehension_of_occurrence_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.Nominal.RegularBound.finite_occurrence_comprehension",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.Nominal.RegularBound.finite_branching_comprehension",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.Nominal.RegularBound.occurrence_fixed_bound_strictness",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.Strictness.Expansion.model",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.Strictness.Expansion.faithful",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.Strictness.Expansion.relation_atomicity",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.Strictness.Expansion.profile_atomic",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.Strictness.Expansion.c_theorem_holds",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.Strictness.Expansion.not_comp",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.Strictness.reduct_certificate",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.Strictness.exists_strictness_certificate",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.Strictness.exists_atomic_modal_collapse_not_comp",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.Nominal.eval_parameter_congr",
+      "axioms": [
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.Nominal.Hierarchy.comprehension_of_supported_evaluation",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "result_entries": [
+    "INFINITARY-COMPREHENSION"
+  ],
+  "scope": {
+    "coverage": {
+      "finite_bridge": 6,
+      "regular_nominal_strictness": 9,
+      "nominal_occurrence_helpers": 2,
+      "countable_strictness_construction": 9
+    },
+    "limits": [
+      "Nominal strictness uses universe 0, regular infinite kappa and fewer than kappa distinct typed parameter symbols actually occurring in each matrix. Arbitrary unused ambient parameters and arbitrary universe-small Boolean branching remain allowed.",
+      "Nominal Atomicity means explicit semantic profile-order Atomicity. C5 and Intensionality use actual syntax. This is not a native Meta.Model transport certificate or a quoted native P.Atomicity theorem.",
+      "The countable strictness construction includes an actual finite C reduct, infinite individuals, faithful profiles and modal collapse, but its profile Atomicity and its infinitary comprehension failure retain the defined Henkin language scope.",
+      "The finite bridge embeds the actual finite lambda-free syntax and preserves substitution/evaluation; it is not a proof-calculus soundness theorem for arbitrary C5 Premodels.",
+      "Ordinary Classical.choice/propext/Quot.sound are semantic metatheory, not added object-language assumptions.",
+      "ActionConsequences and ActionFull are outside this target dependency closure. Their acceptance, and any quoted-native-Atomicity transport there, are not claimed by this receipt.",
+      "No claim of completion of OriginalRepresentation or the full infinitary audit."
+    ]
+  },
+  "acceptance_path": "evidence/certificates/infinitary-support-and-finite-syntax/acceptance.json",
+  "acceptance_sha256": "d7d469af41f294a578cadd6847e5b117ee4b490287b8d664678f45e8a48333b0",
+  "acceptance_original_sha256": "a15c15dea642586b6ccbdc84339046d8649f6abda2e06ef1c807dcf3d278bb25",
+  "acceptance_normalization": "Portable paths; machine locations, temporary validation log and unrelated failure list omitted. Whole-run versus target distinction and all mathematical qualifications retained.",
+  "verification": "Exact source snapshots, successful selected records and principal axiom reports authenticated without invoking Lean. The independent receipt separately verified artifacts and dependency fingerprints. No acceptance of the later representation branch is inferred."
+}

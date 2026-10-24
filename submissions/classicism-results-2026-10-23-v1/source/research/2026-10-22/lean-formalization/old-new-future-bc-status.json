@@ -1,0 +1,63 @@
+{
+  "task": "Old/new future Boolean Completeness failure",
+  "updated_at_utc": "2026-10-23 03:30:26 UTC",
+  "state": "READY FOR INTEGRATION",
+  "module": "Classicism.Models.OldNewFutureBC",
+  "path": "topics/classicism/lean/Classicism/Models/OldNewFutureBC.lean",
+  "sha256": "1a7482f9e9742646319a73faf0a70be4c5aa08e9105c8e772013ad1b0bac618e",
+  "direct_import": "Classicism.Models.OldNewPredicates",
+  "source": {
+    "source_id": "misc",
+    "path": "research/2026-10-22/notes/old-new-boolean-completeness-and-rigidity-separation.md",
+    "sections": [
+      "Failure of BC at O",
+      "No least upper bound"
+    ],
+    "pages": "Unpaginated research note"
+  },
+  "implementation": [
+    "Exact admitted complements-of-old-haecceities family, supplied by OldNewPredicates.oldAvoidFamily.",
+    "Finite prescription extends to an actual allowed return arrow O to E.",
+    "Fresh new haecceity is a lower bound of every old anti-haecceity.",
+    "Finite pinning forces an alleged greatest lower bound to violate an old anti-haecceity after the modified return arrow.",
+    "Exact quoted BC_et failure at O, positive semantic negation, and failure of boxed BC_et at the original root."
+  ],
+  "main_declarations": [
+    "Classicism.Meta.Intensional.OldNew.future_return_hit",
+    "Classicism.Meta.Intensional.OldNew.future_old_antihaecceities_no_glb",
+    "Classicism.Meta.Intensional.OldNew.future_not_bc_et",
+    "Classicism.Meta.Intensional.OldNew.future_holds_not_bc_et",
+    "Classicism.Meta.Intensional.OldNew.root_not_box_bc_et"
+  ],
+  "verification": {
+    "lean_status": "UNCHECKED SOURCE",
+    "compiled": false,
+    "no_assumed_admission_or_glb_witness": true,
+    "no_sorry_or_new_axioms": true,
+    "database_validation": "Passed",
+    "validation_log": "research/2026-10-22/lean-formalization/old-new-future-bc-validation.log",
+    "planned_serial_command": "python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Models.OldNewFutureBC"
+  },
+  "dependency_api": [
+    "OldNewPredicates.oldAvoidFamily",
+    "OldNewPredicates.incl_oldAvoid",
+    "OldNewPredicates.pointEntity",
+    "OldNewPredicates.avoidEntity",
+    "OldNewPredicates.point_below_avoid",
+    "OldNewPredicates.profile_point",
+    "OldNewPredicates.profile_avoid",
+    "OldNewPredicates.pinned_profile_at",
+    "OldNewBase.extend_finite",
+    "OldNewBase.back",
+    "Semantics.Symmetric.symIdeal_inner_finPinned",
+    "Premodel.holds_bc_iff",
+    "Premodel.holds_neg",
+    "Premodel.holds_box"
+  ],
+  "boundaries": [
+    "No existing Lean file, source proof or database record edited.",
+    "No compiler, Lake, installation or graphical display run.",
+    "The root C+ND+BC versus RC assembly remains owned by the hierarchy author.",
+    "Source-level construction is not a kernel certification; dependency compilation remains required."
+  ]
+}

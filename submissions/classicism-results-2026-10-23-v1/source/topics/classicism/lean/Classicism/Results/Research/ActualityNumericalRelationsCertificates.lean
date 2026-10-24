@@ -1,0 +1,14 @@
+import Classicism.Results.Research.ActualityNumericalRelations
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Translate
+
+#classicism_audit Classicism.Results.Research.ActualityNumericalRelations
+#classicism_types_audit Classicism.Results.Research.ActualityNumericalRelations
+#classicism_derive_audit Classicism.Results.Research.ActualityNumericalRelations
+
+#print axioms Classicism.Research.ActualityNumericalRelations.subsetPush_numbers_admitted.derivable
+#print axioms Classicism.Research.ActualityNumericalRelations.subset_roundtrip.derivable
+#print axioms Classicism.Research.ActualityNumericalRelations.binary_roundtrip.derivable
+#print axioms Classicism.Research.ActualityNumericalRelations.core_number_induction.derivable
+#print axioms Classicism.Research.ActualityNumericalRelations.core_suc_injective.derivable

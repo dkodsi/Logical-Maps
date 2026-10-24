@@ -1,0 +1,56 @@
+Classicism.Research.FiniteTypeDescent.finite_delete_output_argument: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.FiniteTypeDescent.finite_input_of_predicate: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.FiniteTypeDescent.finite_output_of_arrow: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+#classicism_audit Classicism.Results.Research.FiniteTypeDescent: 3/3 theorems pass; 3 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.FiniteTypeDescent: 3/3 inside R
+Classicism.Research.FiniteTypeDescent.finite_output_of_arrow ⟶ Classicism.Research.FiniteTypeDescent.finite_output_of_arrow.rule : ∀
+  (σ' : Classicism.Meta.Ty) (ρ' : Classicism.Meta.RTy),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.Existence.quoted σ')
+      (Classicism.Meta.Term.imp
+        (Classicism.Research.FiniteTypePropagation.FiniteDomain.quoted (Classicism.Meta.Ty.rel (σ' ⇒ ρ')))
+        (Classicism.Research.FiniteTypePropagation.FiniteDomain.quoted (Classicism.Meta.Ty.rel ρ'))))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.FiniteTypeDescent.finite_output_of_arrow ⟶ Classicism.Research.FiniteTypeDescent.finite_output_of_arrow.listRule : ∀
+  (σs : List Classicism.Meta.Ty) (ρ1 : Classicism.Meta.RTy),
+  ρ1.Closed →
+    Classicism.Meta.Theorem Classicism.Meta.C.axioms
+      (Classicism.Meta.Term.imp (Classicism.P.Existence.listQuoted σs)
+        (Classicism.Meta.Term.imp
+          (Classicism.Research.FiniteTypePropagation.FiniteDomain.quoted (Classicism.Meta.Ty.rel (σs ⇒* ρ1)))
+          (Classicism.Research.FiniteTypePropagation.FiniteDomain.quoted (Classicism.Meta.Ty.rel ρ1))))
+Classicism.Research.FiniteTypeDescent.finite_input_of_predicate ⟶ Classicism.Research.FiniteTypeDescent.finite_input_of_predicate.rule : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp
+      (Classicism.Research.FiniteTypePropagation.FiniteDomain.quoted
+        (Classicism.Meta.Ty.rel (σ' ⇒ Classicism.Meta.RTy.t)))
+      (Classicism.Research.FiniteTypePropagation.FiniteDomain.quoted σ'))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.FiniteTypeDescent.finite_input_of_predicate ⟶ Classicism.Research.FiniteTypeDescent.finite_input_of_predicate.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp
+      (Classicism.Research.FiniteTypePropagation.FiniteDomain.quoted
+        (Classicism.Meta.Ty.rel (σs ⇒* Classicism.Meta.RTy.t)))
+      (Classicism.Research.FiniteTypePropagation.FiniteDomain.listQuoted σs))
+Classicism.Research.FiniteTypeDescent.finite_delete_output_argument ⟶ Classicism.Research.FiniteTypeDescent.finite_delete_output_argument.rule : ∀
+  (σ' τ' : Classicism.Meta.Ty) (ρ' : Classicism.Meta.RTy),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.Existence.quoted τ')
+      (Classicism.Meta.Term.imp
+        (Classicism.Research.FiniteTypePropagation.FiniteDomain.quoted (Classicism.Meta.Ty.rel (σ' ⇒ τ' ⇒ ρ')))
+        (Classicism.Research.FiniteTypePropagation.FiniteDomain.quoted (Classicism.Meta.Ty.rel (σ' ⇒ ρ')))))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.FiniteTypeDescent.finite_delete_output_argument ⟶ Classicism.Research.FiniteTypeDescent.finite_delete_output_argument.listRule : ∀
+  (σs : List Classicism.Meta.Ty) (τ1 : Classicism.Meta.Ty) (ρ2 : Classicism.Meta.RTy),
+  τ1.Closed →
+    ρ2.Closed →
+      Classicism.Meta.Theorem Classicism.Meta.C.axioms
+        (Classicism.Meta.Term.imp (Classicism.P.Existence.quoted τ1)
+          (Classicism.Meta.Term.imp
+            (Classicism.Research.FiniteTypePropagation.FiniteDomain.quoted (Classicism.Meta.Ty.rel (σs ⇒* τ1 ⇒ ρ2)))
+            (Classicism.Research.FiniteTypePropagation.FiniteDomain.quoted (Classicism.Meta.Ty.rel (σs ⇒* ρ2)))))
+'Classicism.Research.FiniteTypeDescent.finite_output_of_arrow.rule' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.FiniteTypeDescent.finite_input_of_predicate.rule' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.FiniteTypeDescent.finite_delete_output_argument.rule' depends on axioms: [propext, Quot.sound]

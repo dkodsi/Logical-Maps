@@ -1,0 +1,939 @@
+Classicism.Research.FullLogicalObservers.boolFull_and: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.FullLogicalObservers.boolFull_bot: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.FullLogicalObservers.boolFull_iff: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.FullLogicalObservers.boolFull_not: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.FullLogicalObservers.boolFull_or: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.FullLogicalObservers.boolFull_top: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.FullLogicalObservers.iff_boolean_eq: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.FullLogicalObservers.quantifierFull_exists: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.FullLogicalObservers.quantifierFull_forall: Classicism ✓ [C⁻] (axioms: [])
+#classicism_audit Classicism.Results.Research.FullLogicalObservers: 9/9 theorems pass; 9 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.FullLogicalObservers: 9/9 inside R
+Classicism.Research.FullLogicalObservers.atom_possible: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.FullLogicalObservers.atomicity_full_separation: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FullLogicalObservers.atomicity_separation_by: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.FullLogicalObservers.c5_atomicity_full_separation: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FullLogicalObservers.c5_atomicity_necessary_atomicity: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FullLogicalObservers.c5_atomicity_necessary_full_separation: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FullLogicalObservers.exists_as_neg_forall: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.FullLogicalObservers.forall_full_to_exists_full: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FullLogicalObservers.imp_neg_as_not_meet: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.FullLogicalObservers.join_as_neg_meet: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.FullLogicalObservers.meet_eq_of_le: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.FullLogicalObservers.patch_bot_eq: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.FullLogicalObservers.patch_meet_eq: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.FullLogicalObservers.patch_not_eq: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.FullLogicalObservers.patch_top_eq: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.FullLogicalObservers.patched_and: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.FullLogicalObservers.patched_atom_truth: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.FullLogicalObservers.patched_boolFull: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FullLogicalObservers.patched_bot: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.FullLogicalObservers.patched_forall_full: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FullLogicalObservers.patched_forall_material: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.FullLogicalObservers.patched_identity_truth: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.FullLogicalObservers.patched_not: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.FullLogicalObservers.patched_or: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.FullLogicalObservers.patched_principal_imp: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FullLogicalObservers.patched_quantifierFull: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FullLogicalObservers.patched_top: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.FullLogicalObservers.patched_truth: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.FullLogicalObservers.principal_neg_guard: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.FullLogicalObservers.principal_neg_of_le: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.FullLogicalObservers.self_iff_top: Classicism ✓ [C⁻] (axioms: [propext])
+#classicism_audit Classicism.Results.Research.FullLogicalObserversAtomic: 31/31 theorems pass; 31 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.FullLogicalObserversAtomic: 31/31 inside R
+Classicism.Research.FullLogicalObservers.patched_principal_imp ⟶ Classicism.Research.FullLogicalObservers.patched_principal_imp.derivable : Classicism.Meta.Theorem
+  Classicism.Meta.C.axiomsMinus
+  (Classicism.Meta.Term.forall'
+    ((Classicism.Meta.Term.lam
+          (Classicism.Meta.Term.disj
+            (Classicism.Meta.Term.conj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).dia
+              (Classicism.Meta.Term.box
+                (Classicism.Meta.Term.disj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).neg
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))
+            (Classicism.Meta.Term.conj
+              (Classicism.Meta.Term.neg (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).dia)
+              (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))).eq'
+      (Classicism.Meta.Term.lam
+        (Classicism.Meta.Term.disj
+          (Classicism.Meta.Term.conj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).dia
+            (Classicism.Meta.Term.box
+              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).imp
+                (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))
+          (Classicism.Meta.Term.conj
+            (Classicism.Meta.Term.neg (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).dia)
+            (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))))
+derived ✓ in C⁻
+Classicism.Research.FullLogicalObservers.patched_boolFull ⟶ Classicism.Research.FullLogicalObservers.patched_boolFull.derivable : Classicism.Meta.Theorem
+  Classicism.Meta.C.axiomsMinus
+  (Classicism.Meta.Term.forall'
+    (Classicism.Meta.Term.imp
+      (Classicism.Meta.Term.forall'
+        (Classicism.Meta.Term.imp
+          (Classicism.Meta.Term.forall'
+            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).box)
+          (Classicism.Meta.Term.box
+            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).forall')))
+      (Classicism.Meta.Term.imp
+        (Classicism.Meta.Term.forall'
+          (Classicism.Meta.Term.iff
+            (Classicism.Meta.Term.conj
+              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).eq'
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).disj
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)))
+              (Classicism.Meta.Term.neg
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).eq'
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ))))
+            (Classicism.Meta.Term.eq' (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg
+              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).disj
+                (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg))))
+        (Classicism.Meta.Term.conj
+          (Classicism.Meta.Term.eq'
+            (Classicism.Meta.Term.disj
+              (Classicism.Meta.Term.conj (Classicism.Meta.Term.var Classicism.Meta.Var.zero).dia
+                (Classicism.Meta.Term.box
+                  (Classicism.Meta.Term.disj (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg
+                    Classicism.Meta.Term.top)))
+              (Classicism.Meta.Term.conj
+                (Classicism.Meta.Term.neg (Classicism.Meta.Term.var Classicism.Meta.Var.zero).dia)
+                Classicism.Meta.Term.top))
+            Classicism.Meta.Term.top)
+          (Classicism.Meta.Term.conj
+            (Classicism.Meta.Term.eq'
+              (Classicism.Meta.Term.disj
+                (Classicism.Meta.Term.conj (Classicism.Meta.Term.var Classicism.Meta.Var.zero).dia
+                  (Classicism.Meta.Term.box
+                    (Classicism.Meta.Term.disj (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg
+                      Classicism.Meta.Term.bot)))
+                (Classicism.Meta.Term.conj
+                  (Classicism.Meta.Term.neg (Classicism.Meta.Term.var Classicism.Meta.Var.zero).dia)
+                  Classicism.Meta.Term.bot))
+              Classicism.Meta.Term.bot)
+            (Classicism.Meta.Term.conj
+              ((Classicism.Meta.Term.lam
+                    (Classicism.Meta.Term.disj
+                      (Classicism.Meta.Term.conj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).dia
+                        (Classicism.Meta.Term.box
+                          (Classicism.Meta.Term.disj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).neg
+                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg)))
+                      (Classicism.Meta.Term.conj
+                        (Classicism.Meta.Term.neg (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).dia)
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg))).eq'
+                (Classicism.Meta.Term.lam
+                  (Classicism.Meta.Term.neg
+                    (Classicism.Meta.Term.disj
+                      (Classicism.Meta.Term.conj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).dia
+                        (Classicism.Meta.Term.box
+                          (Classicism.Meta.Term.disj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).neg
+                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))
+                      (Classicism.Meta.Term.conj
+                        (Classicism.Meta.Term.neg (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).dia)
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))))
+              (Classicism.Meta.Term.conj
+                ((Classicism.Meta.Term.lam
+                        (Classicism.Meta.Term.disj
+                          (Classicism.Meta.Term.conj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia
+                            (Classicism.Meta.Term.box
+                              (Classicism.Meta.Term.disj
+                                (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).neg
+                                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).conj
+                                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))))
+                          (Classicism.Meta.Term.conj
+                            (Classicism.Meta.Term.neg (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia)
+                            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).conj
+                              (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))).lam.eq'
+                  (Classicism.Meta.Term.lam
+                      (Classicism.Meta.Term.conj
+                        (Classicism.Meta.Term.disj
+                          (Classicism.Meta.Term.conj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia
+                            (Classicism.Meta.Term.box
+                              (Classicism.Meta.Term.disj
+                                (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).neg
+                                (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ))))
+                          (Classicism.Meta.Term.conj
+                            (Classicism.Meta.Term.neg (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia)
+                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)))
+                        (Classicism.Meta.Term.disj
+                          (Classicism.Meta.Term.conj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia
+                            (Classicism.Meta.Term.box
+                              (Classicism.Meta.Term.disj
+                                (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).neg
+                                (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))
+                          (Classicism.Meta.Term.conj
+                            (Classicism.Meta.Term.neg (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia)
+                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))).lam)
+                ((Classicism.Meta.Term.lam
+                        (Classicism.Meta.Term.disj
+                          (Classicism.Meta.Term.conj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia
+                            (Classicism.Meta.Term.box
+                              (Classicism.Meta.Term.disj
+                                (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).neg
+                                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).disj
+                                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))))
+                          (Classicism.Meta.Term.conj
+                            (Classicism.Meta.Term.neg (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia)
+                            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).disj
+                              (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))).lam.eq'
+                  (Classicism.Meta.Term.lam
+                      (Classicism.Meta.Term.disj
+                        (Classicism.Meta.Term.disj
+                          (Classicism.Meta.Term.conj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia
+                            (Classicism.Meta.Term.box
+                              (Classicism.Meta.Term.disj
+                                (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).neg
+                                (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ))))
+                          (Classicism.Meta.Term.conj
+                            (Classicism.Meta.Term.neg (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia)
+                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)))
+                        (Classicism.Meta.Term.disj
+                          (Classicism.Meta.Term.conj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia
+                            (Classicism.Meta.Term.box
+                              (Classicism.Meta.Term.disj
+                                (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).neg
+                                (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))
+                          (Classicism.Meta.Term.conj
+                            (Classicism.Meta.Term.neg (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia)
+                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))).lam))))))))
+derived ✓ in C⁻
+Classicism.Research.FullLogicalObservers.patched_forall_full ⟶ Classicism.Research.FullLogicalObservers.patched_forall_full.derivable : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axiomsMinus
+    (Classicism.Meta.Term.forall'
+      (Classicism.Meta.Term.imp
+        (Classicism.Meta.Term.box
+          (Classicism.Meta.Term.forall'
+            (Classicism.Meta.Term.imp
+              (Classicism.Meta.Term.forall'
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).box)
+              (Classicism.Meta.Term.box
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).forall'))))
+        ((Classicism.Meta.Term.lam
+              (Classicism.Meta.Term.disj
+                (Classicism.Meta.Term.conj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).dia
+                  (Classicism.Meta.Term.box
+                    (Classicism.Meta.Term.disj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).neg
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).forall')))
+                (Classicism.Meta.Term.conj
+                  (Classicism.Meta.Term.neg (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).dia)
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).forall'))).eq'
+          (Classicism.Meta.Term.lam
+            (Classicism.Meta.Term.forall'
+              (Classicism.Meta.Term.disj
+                (Classicism.Meta.Term.conj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia
+                  (Classicism.Meta.Term.box
+                    (Classicism.Meta.Term.disj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).neg
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))))
+                (Classicism.Meta.Term.conj
+                  (Classicism.Meta.Term.neg (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia)
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))))))))
+derived ✓ in C⁻
+Classicism.Research.FullLogicalObservers.patched_quantifierFull ⟶ Classicism.Research.FullLogicalObservers.patched_quantifierFull.derivable : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axiomsMinus
+    (Classicism.Meta.Term.forall'
+      (Classicism.Meta.Term.imp
+        (Classicism.Meta.Term.conj
+          (Classicism.Meta.Term.eq'
+            (Classicism.Meta.Term.disj
+              (Classicism.Meta.Term.conj (Classicism.Meta.Term.var Classicism.Meta.Var.zero).dia
+                (Classicism.Meta.Term.box
+                  (Classicism.Meta.Term.disj (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg
+                    Classicism.Meta.Term.top)))
+              (Classicism.Meta.Term.conj
+                (Classicism.Meta.Term.neg (Classicism.Meta.Term.var Classicism.Meta.Var.zero).dia)
+                Classicism.Meta.Term.top))
+            Classicism.Meta.Term.top)
+          (Classicism.Meta.Term.conj
+            (Classicism.Meta.Term.eq'
+              (Classicism.Meta.Term.disj
+                (Classicism.Meta.Term.conj (Classicism.Meta.Term.var Classicism.Meta.Var.zero).dia
+                  (Classicism.Meta.Term.box
+                    (Classicism.Meta.Term.disj (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg
+                      Classicism.Meta.Term.bot)))
+                (Classicism.Meta.Term.conj
+                  (Classicism.Meta.Term.neg (Classicism.Meta.Term.var Classicism.Meta.Var.zero).dia)
+                  Classicism.Meta.Term.bot))
+              Classicism.Meta.Term.bot)
+            (Classicism.Meta.Term.conj
+              ((Classicism.Meta.Term.lam
+                    (Classicism.Meta.Term.disj
+                      (Classicism.Meta.Term.conj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).dia
+                        (Classicism.Meta.Term.box
+                          (Classicism.Meta.Term.disj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).neg
+                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg)))
+                      (Classicism.Meta.Term.conj
+                        (Classicism.Meta.Term.neg (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).dia)
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg))).eq'
+                (Classicism.Meta.Term.lam
+                  (Classicism.Meta.Term.neg
+                    (Classicism.Meta.Term.disj
+                      (Classicism.Meta.Term.conj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).dia
+                        (Classicism.Meta.Term.box
+                          (Classicism.Meta.Term.disj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).neg
+                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))
+                      (Classicism.Meta.Term.conj
+                        (Classicism.Meta.Term.neg (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).dia)
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))))
+              (Classicism.Meta.Term.conj
+                ((Classicism.Meta.Term.lam
+                        (Classicism.Meta.Term.disj
+                          (Classicism.Meta.Term.conj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia
+                            (Classicism.Meta.Term.box
+                              (Classicism.Meta.Term.disj
+                                (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).neg
+                                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).conj
+                                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))))
+                          (Classicism.Meta.Term.conj
+                            (Classicism.Meta.Term.neg (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia)
+                            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).conj
+                              (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))).lam.eq'
+                  (Classicism.Meta.Term.lam
+                      (Classicism.Meta.Term.conj
+                        (Classicism.Meta.Term.disj
+                          (Classicism.Meta.Term.conj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia
+                            (Classicism.Meta.Term.box
+                              (Classicism.Meta.Term.disj
+                                (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).neg
+                                (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ))))
+                          (Classicism.Meta.Term.conj
+                            (Classicism.Meta.Term.neg (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia)
+                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)))
+                        (Classicism.Meta.Term.disj
+                          (Classicism.Meta.Term.conj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia
+                            (Classicism.Meta.Term.box
+                              (Classicism.Meta.Term.disj
+                                (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).neg
+                                (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))
+                          (Classicism.Meta.Term.conj
+                            (Classicism.Meta.Term.neg (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia)
+                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))).lam)
+                ((Classicism.Meta.Term.lam
+                        (Classicism.Meta.Term.disj
+                          (Classicism.Meta.Term.conj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia
+                            (Classicism.Meta.Term.box
+                              (Classicism.Meta.Term.disj
+                                (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).neg
+                                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).disj
+                                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))))
+                          (Classicism.Meta.Term.conj
+                            (Classicism.Meta.Term.neg (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia)
+                            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).disj
+                              (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))).lam.eq'
+                  (Classicism.Meta.Term.lam
+                      (Classicism.Meta.Term.disj
+                        (Classicism.Meta.Term.disj
+                          (Classicism.Meta.Term.conj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia
+                            (Classicism.Meta.Term.box
+                              (Classicism.Meta.Term.disj
+                                (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).neg
+                                (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ))))
+                          (Classicism.Meta.Term.conj
+                            (Classicism.Meta.Term.neg (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia)
+                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)))
+                        (Classicism.Meta.Term.disj
+                          (Classicism.Meta.Term.conj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia
+                            (Classicism.Meta.Term.box
+                              (Classicism.Meta.Term.disj
+                                (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).neg
+                                (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))
+                          (Classicism.Meta.Term.conj
+                            (Classicism.Meta.Term.neg (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia)
+                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))).lam)))))
+        (Classicism.Meta.Term.imp
+          (Classicism.Meta.Term.box
+            (Classicism.Meta.Term.forall'
+              (Classicism.Meta.Term.imp
+                (Classicism.Meta.Term.forall'
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).box)
+                (Classicism.Meta.Term.box
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).forall'))))
+          (Classicism.Meta.Term.conj
+            ((Classicism.Meta.Term.lam
+                  (Classicism.Meta.Term.disj
+                    (Classicism.Meta.Term.conj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).dia
+                      (Classicism.Meta.Term.box
+                        (Classicism.Meta.Term.disj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).neg
+                          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                              (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).forall')))
+                    (Classicism.Meta.Term.conj
+                      (Classicism.Meta.Term.neg (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).dia)
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).forall'))).eq'
+              (Classicism.Meta.Term.lam
+                (Classicism.Meta.Term.forall'
+                  (Classicism.Meta.Term.disj
+                    (Classicism.Meta.Term.conj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia
+                      (Classicism.Meta.Term.box
+                        (Classicism.Meta.Term.disj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).neg
+                          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))))
+                    (Classicism.Meta.Term.conj
+                      (Classicism.Meta.Term.neg (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia)
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))))))
+            ((Classicism.Meta.Term.lam
+                  (Classicism.Meta.Term.disj
+                    (Classicism.Meta.Term.conj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).dia
+                      (Classicism.Meta.Term.box
+                        (Classicism.Meta.Term.disj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).neg
+                          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                              (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).exists')))
+                    (Classicism.Meta.Term.conj
+                      (Classicism.Meta.Term.neg (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).dia)
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).exists'))).eq'
+              (Classicism.Meta.Term.lam
+                (Classicism.Meta.Term.exists'
+                  (Classicism.Meta.Term.disj
+                    (Classicism.Meta.Term.conj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia
+                      (Classicism.Meta.Term.box
+                        (Classicism.Meta.Term.disj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).neg
+                          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))))
+                    (Classicism.Meta.Term.conj
+                      (Classicism.Meta.Term.neg (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia)
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))))))))))
+derived ✓ in C⁻
+Classicism.Research.FullLogicalObservers.atomicity_separation_by ⟶ Classicism.Research.FullLogicalObservers.atomicity_separation_by.derivable : Classicism.Meta.Theorem
+  Classicism.Meta.C.axiomsMinus
+  (Classicism.Meta.Term.forall'
+    (Classicism.Meta.Term.imp
+      (Classicism.Meta.Term.forall'
+        (Classicism.Meta.Term.disj
+          (Classicism.Meta.Term.eq' (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg
+            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).disj
+              (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg))
+          (Classicism.Meta.Term.exists'
+            (Classicism.Meta.Term.conj
+              (Classicism.Meta.Term.forall'
+                (Classicism.Meta.Term.iff
+                  (Classicism.Meta.Term.conj
+                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).eq'
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).disj
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)))
+                    (Classicism.Meta.Term.neg
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).eq'
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ))))
+                  (Classicism.Meta.Term.eq' (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg
+                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).disj
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg))))
+              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).eq'
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).disj
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)))))))
+      (Classicism.Meta.Term.imp
+        (Classicism.Meta.Term.forall'
+          (Classicism.Meta.Term.imp
+            (Classicism.Meta.Term.forall'
+              (Classicism.Meta.Term.iff
+                (Classicism.Meta.Term.conj
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).eq'
+                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).disj
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)))
+                  (Classicism.Meta.Term.neg
+                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).eq'
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ))))
+                (Classicism.Meta.Term.eq' (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).disj
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg))))
+            (Classicism.Meta.Term.conj
+              (Classicism.Meta.Term.conj
+                (Classicism.Meta.Term.eq'
+                  (Classicism.Meta.Term.disj
+                    (Classicism.Meta.Term.conj (Classicism.Meta.Term.var Classicism.Meta.Var.zero).dia
+                      (Classicism.Meta.Term.box
+                        (Classicism.Meta.Term.disj (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg
+                          Classicism.Meta.Term.top)))
+                    (Classicism.Meta.Term.conj
+                      (Classicism.Meta.Term.neg (Classicism.Meta.Term.var Classicism.Meta.Var.zero).dia)
+                      Classicism.Meta.Term.top))
+                  Classicism.Meta.Term.top)
+                (Classicism.Meta.Term.conj
+                  (Classicism.Meta.Term.eq'
+                    (Classicism.Meta.Term.disj
+                      (Classicism.Meta.Term.conj (Classicism.Meta.Term.var Classicism.Meta.Var.zero).dia
+                        (Classicism.Meta.Term.box
+                          (Classicism.Meta.Term.disj (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg
+                            Classicism.Meta.Term.bot)))
+                      (Classicism.Meta.Term.conj
+                        (Classicism.Meta.Term.neg (Classicism.Meta.Term.var Classicism.Meta.Var.zero).dia)
+                        Classicism.Meta.Term.bot))
+                    Classicism.Meta.Term.bot)
+                  (Classicism.Meta.Term.conj
+                    ((Classicism.Meta.Term.lam
+                          (Classicism.Meta.Term.disj
+                            (Classicism.Meta.Term.conj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).dia
+                              (Classicism.Meta.Term.box
+                                (Classicism.Meta.Term.disj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).neg
+                                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg)))
+                            (Classicism.Meta.Term.conj
+                              (Classicism.Meta.Term.neg (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).dia)
+                              (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg))).eq'
+                      (Classicism.Meta.Term.lam
+                        (Classicism.Meta.Term.neg
+                          (Classicism.Meta.Term.disj
+                            (Classicism.Meta.Term.conj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).dia
+                              (Classicism.Meta.Term.box
+                                (Classicism.Meta.Term.disj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).neg
+                                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))
+                            (Classicism.Meta.Term.conj
+                              (Classicism.Meta.Term.neg (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).dia)
+                              (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))))
+                    (Classicism.Meta.Term.conj
+                      ((Classicism.Meta.Term.lam
+                              (Classicism.Meta.Term.disj
+                                (Classicism.Meta.Term.conj
+                                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia
+                                  (Classicism.Meta.Term.box
+                                    (Classicism.Meta.Term.disj
+                                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).neg
+                                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).conj
+                                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))))
+                                (Classicism.Meta.Term.conj
+                                  (Classicism.Meta.Term.neg
+                                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia)
+                                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).conj
+                                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))).lam.eq'
+                        (Classicism.Meta.Term.lam
+                            (Classicism.Meta.Term.conj
+                              (Classicism.Meta.Term.disj
+                                (Classicism.Meta.Term.conj
+                                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia
+                                  (Classicism.Meta.Term.box
+                                    (Classicism.Meta.Term.disj
+                                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).neg
+                                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ))))
+                                (Classicism.Meta.Term.conj
+                                  (Classicism.Meta.Term.neg
+                                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia)
+                                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)))
+                              (Classicism.Meta.Term.disj
+                                (Classicism.Meta.Term.conj
+                                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia
+                                  (Classicism.Meta.Term.box
+                                    (Classicism.Meta.Term.disj
+                                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).neg
+                                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))
+                                (Classicism.Meta.Term.conj
+                                  (Classicism.Meta.Term.neg
+                                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia)
+                                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))).lam)
+                      ((Classicism.Meta.Term.lam
+                              (Classicism.Meta.Term.disj
+                                (Classicism.Meta.Term.conj
+                                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia
+                                  (Classicism.Meta.Term.box
+                                    (Classicism.Meta.Term.disj
+                                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).neg
+                                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).disj
+                                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))))
+                                (Classicism.Meta.Term.conj
+                                  (Classicism.Meta.Term.neg
+                                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia)
+                                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).disj
+                                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))).lam.eq'
+                        (Classicism.Meta.Term.lam
+                            (Classicism.Meta.Term.disj
+                              (Classicism.Meta.Term.disj
+                                (Classicism.Meta.Term.conj
+                                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia
+                                  (Classicism.Meta.Term.box
+                                    (Classicism.Meta.Term.disj
+                                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).neg
+                                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ))))
+                                (Classicism.Meta.Term.conj
+                                  (Classicism.Meta.Term.neg
+                                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia)
+                                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)))
+                              (Classicism.Meta.Term.disj
+                                (Classicism.Meta.Term.conj
+                                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia
+                                  (Classicism.Meta.Term.box
+                                    (Classicism.Meta.Term.disj
+                                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).neg
+                                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))
+                                (Classicism.Meta.Term.conj
+                                  (Classicism.Meta.Term.neg
+                                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).dia)
+                                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))).lam)))))
+              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                (Classicism.Meta.Term.lam
+                  (Classicism.Meta.Term.disj
+                    (Classicism.Meta.Term.conj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).dia
+                      (Classicism.Meta.Term.box
+                        (Classicism.Meta.Term.disj (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).neg
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))
+                    (Classicism.Meta.Term.conj
+                      (Classicism.Meta.Term.neg (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).dia)
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))))))
+        (Classicism.Meta.Term.forall'
+          (Classicism.Meta.Term.forall'
+            (Classicism.Meta.Term.iff
+              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).eq'
+                (Classicism.Meta.Term.var Classicism.Meta.Var.zero))
+              (Classicism.Meta.Term.forall'
+                (Classicism.Meta.Term.imp
+                  (Classicism.Meta.Term.conj
+                    (Classicism.Meta.Term.conj
+                      (((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app Classicism.Meta.Term.top).eq'
+                        Classicism.Meta.Term.top)
+                      (Classicism.Meta.Term.conj
+                        (((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app Classicism.Meta.Term.bot).eq'
+                          Classicism.Meta.Term.bot)
+                        (Classicism.Meta.Term.conj
+                          (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg).lam.eq'
+                            (Classicism.Meta.Term.lam
+                              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).neg))
+                          (Classicism.Meta.Term.conj
+                            (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).conj
+                                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).lam.lam.eq'
+                              (Classicism.Meta.Term.lam
+                                  (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)).conj
+                                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))).lam)
+                            (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).disj
+                                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).lam.lam.eq'
+                              (Classicism.Meta.Term.lam
+                                  (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)).disj
+                                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))).lam)))))
+                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ.succ).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app
+                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).iff
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)))))))))))
+derived ✓ in C⁻
+Classicism.Research.FullLogicalObservers.atomicity_full_separation ⟶ Classicism.Research.FullLogicalObservers.atomicity_full_separation.derivable : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axiomsMinus
+    (Classicism.Meta.Term.imp
+      (Classicism.Meta.Term.forall'
+        (Classicism.Meta.Term.disj
+          (Classicism.Meta.Term.eq' (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg
+            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).disj
+              (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg))
+          (Classicism.Meta.Term.exists'
+            (Classicism.Meta.Term.conj
+              (Classicism.Meta.Term.forall'
+                (Classicism.Meta.Term.iff
+                  (Classicism.Meta.Term.conj
+                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).eq'
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).disj
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)))
+                    (Classicism.Meta.Term.neg
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).eq'
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ))))
+                  (Classicism.Meta.Term.eq' (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg
+                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).disj
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg))))
+              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).eq'
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).disj
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)))))))
+      (Classicism.Meta.Term.imp
+        (Classicism.Meta.Term.forall'
+          (Classicism.Meta.Term.imp
+            (Classicism.Meta.Term.forall'
+              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).box)
+            (Classicism.Meta.Term.box
+              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).forall')))
+        (Classicism.Meta.Term.imp
+          (Classicism.Meta.Term.box
+            (Classicism.Meta.Term.forall'
+              (Classicism.Meta.Term.imp
+                (Classicism.Meta.Term.forall'
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).box)
+                (Classicism.Meta.Term.box
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).forall'))))
+          (Classicism.Meta.Term.forall'
+            (Classicism.Meta.Term.forall'
+              (Classicism.Meta.Term.iff
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).eq'
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero))
+                (Classicism.Meta.Term.forall'
+                  (Classicism.Meta.Term.imp
+                    (Classicism.Meta.Term.conj
+                      (Classicism.Meta.Term.conj
+                        (((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app Classicism.Meta.Term.top).eq'
+                          Classicism.Meta.Term.top)
+                        (Classicism.Meta.Term.conj
+                          (((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app Classicism.Meta.Term.bot).eq'
+                            Classicism.Meta.Term.bot)
+                          (Classicism.Meta.Term.conj
+                            (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg).lam.eq'
+                              (Classicism.Meta.Term.lam
+                                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).neg))
+                            (Classicism.Meta.Term.conj
+                              (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                        ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).conj
+                                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).lam.lam.eq'
+                                (Classicism.Meta.Term.lam
+                                    (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)).conj
+                                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))).lam)
+                              (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                        ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).disj
+                                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).lam.lam.eq'
+                                (Classicism.Meta.Term.lam
+                                    (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)).disj
+                                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))).lam)))))
+                      (Classicism.Meta.Term.conj
+                        (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).forall').lam.eq'
+                          (Classicism.Meta.Term.lam
+                            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).forall'))
+                        (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).exists').lam.eq'
+                          (Classicism.Meta.Term.lam
+                            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).exists'))))
+                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).iff
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)))))))))))
+derived ✓ in C⁻
+Classicism.Research.FullLogicalObservers.c5_atomicity_full_separation ⟶ Classicism.Research.FullLogicalObservers.c5_atomicity_full_separation.derivable : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axiomsMinus
+    (Classicism.Meta.Term.imp
+      (Classicism.Meta.Term.forall'
+        (Classicism.Meta.Term.disj
+          (Classicism.Meta.Term.eq' (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg
+            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).disj
+              (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg))
+          (Classicism.Meta.Term.exists'
+            (Classicism.Meta.Term.conj
+              (Classicism.Meta.Term.forall'
+                (Classicism.Meta.Term.iff
+                  (Classicism.Meta.Term.conj
+                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).eq'
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).disj
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)))
+                    (Classicism.Meta.Term.neg
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).eq'
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ))))
+                  (Classicism.Meta.Term.eq' (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg
+                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).disj
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg))))
+              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).eq'
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).disj
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)))))))
+      (Classicism.Meta.Term.imp
+        (Classicism.Meta.Term.box
+          (Classicism.Meta.Term.forall'
+            (Classicism.Meta.Term.forall'
+              (Classicism.Meta.Term.imp
+                (Classicism.Meta.Term.neg
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).eq'
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))
+                (Classicism.Meta.Term.box
+                  (Classicism.Meta.Term.neg
+                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).eq'
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))))))
+        (Classicism.Meta.Term.forall'
+          (Classicism.Meta.Term.forall'
+            (Classicism.Meta.Term.iff
+              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).eq'
+                (Classicism.Meta.Term.var Classicism.Meta.Var.zero))
+              (Classicism.Meta.Term.forall'
+                (Classicism.Meta.Term.imp
+                  (Classicism.Meta.Term.conj
+                    (Classicism.Meta.Term.conj
+                      (((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app Classicism.Meta.Term.top).eq'
+                        Classicism.Meta.Term.top)
+                      (Classicism.Meta.Term.conj
+                        (((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app Classicism.Meta.Term.bot).eq'
+                          Classicism.Meta.Term.bot)
+                        (Classicism.Meta.Term.conj
+                          (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg).lam.eq'
+                            (Classicism.Meta.Term.lam
+                              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).neg))
+                          (Classicism.Meta.Term.conj
+                            (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).conj
+                                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).lam.lam.eq'
+                              (Classicism.Meta.Term.lam
+                                  (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)).conj
+                                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))).lam)
+                            (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).disj
+                                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).lam.lam.eq'
+                              (Classicism.Meta.Term.lam
+                                  (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)).disj
+                                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))).lam)))))
+                    (Classicism.Meta.Term.conj
+                      (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).forall').lam.eq'
+                        (Classicism.Meta.Term.lam
+                          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).forall'))
+                      (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).exists').lam.eq'
+                        (Classicism.Meta.Term.lam
+                          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).exists'))))
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app
+                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).iff
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ))))))))))
+derived ✓ in C⁻
+Classicism.Research.FullLogicalObservers.c5_atomicity_necessary_full_separation ⟶ Classicism.Research.FullLogicalObservers.c5_atomicity_necessary_full_separation.derivable : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axiomsMinus
+    (Classicism.Meta.Term.imp
+      (Classicism.Meta.Term.forall'
+        (Classicism.Meta.Term.disj
+          (Classicism.Meta.Term.eq' (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg
+            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).disj
+              (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg))
+          (Classicism.Meta.Term.exists'
+            (Classicism.Meta.Term.conj
+              (Classicism.Meta.Term.forall'
+                (Classicism.Meta.Term.iff
+                  (Classicism.Meta.Term.conj
+                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).eq'
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).disj
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)))
+                    (Classicism.Meta.Term.neg
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).eq'
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ))))
+                  (Classicism.Meta.Term.eq' (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg
+                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).disj
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg))))
+              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).eq'
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).disj
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)))))))
+      (Classicism.Meta.Term.imp
+        (Classicism.Meta.Term.box
+          (Classicism.Meta.Term.forall'
+            (Classicism.Meta.Term.forall'
+              (Classicism.Meta.Term.imp
+                (Classicism.Meta.Term.neg
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).eq'
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))
+                (Classicism.Meta.Term.box
+                  (Classicism.Meta.Term.neg
+                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).eq'
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))))))
+        (Classicism.Meta.Term.box
+          (Classicism.Meta.Term.forall'
+            (Classicism.Meta.Term.forall'
+              (Classicism.Meta.Term.iff
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).eq'
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero))
+                (Classicism.Meta.Term.forall'
+                  (Classicism.Meta.Term.imp
+                    (Classicism.Meta.Term.conj
+                      (Classicism.Meta.Term.conj
+                        (((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app Classicism.Meta.Term.top).eq'
+                          Classicism.Meta.Term.top)
+                        (Classicism.Meta.Term.conj
+                          (((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app Classicism.Meta.Term.bot).eq'
+                            Classicism.Meta.Term.bot)
+                          (Classicism.Meta.Term.conj
+                            (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero).neg).lam.eq'
+                              (Classicism.Meta.Term.lam
+                                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).neg))
+                            (Classicism.Meta.Term.conj
+                              (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                        ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).conj
+                                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).lam.lam.eq'
+                                (Classicism.Meta.Term.lam
+                                    (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)).conj
+                                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))).lam)
+                              (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                        ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).disj
+                                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).lam.lam.eq'
+                                (Classicism.Meta.Term.lam
+                                    (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)).disj
+                                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))).lam)))))
+                      (Classicism.Meta.Term.conj
+                        (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).forall').lam.eq'
+                          (Classicism.Meta.Term.lam
+                            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).forall'))
+                        (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).exists').lam.eq'
+                          (Classicism.Meta.Term.lam
+                            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).exists'))))
+                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).iff
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)))))))))))
+derived ✓ in C⁻
+'Classicism.Research.FullLogicalObservers.patched_principal_imp.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.FullLogicalObservers.patched_boolFull.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.FullLogicalObservers.patched_forall_full.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.FullLogicalObservers.patched_quantifierFull.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.FullLogicalObservers.atomicity_separation_by.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.FullLogicalObservers.atomicity_full_separation.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.FullLogicalObservers.c5_atomicity_full_separation.derivable' depends on axioms: [propext,
+ Quot.sound]
+'Classicism.Research.FullLogicalObservers.c5_atomicity_necessary_full_separation.derivable' depends on axioms: [propext,
+ Quot.sound]

@@ -1,0 +1,879 @@
+{
+  "captured_at_utc": "2026-10-24T01:58:54.591956+00:00",
+  "certificates": [
+    {
+      "id": "npc",
+      "path": "evidence/certificates/npc/certificate.json",
+      "source_count": 91,
+      "targets": [
+        "Classicism.Results.Research.NPCC5Atomicity"
+      ],
+      "result_entries": [
+        "NPC-ATOMICITY"
+      ]
+    },
+    {
+      "id": "strong-sections",
+      "path": "evidence/certificates/strong-sections/certificate.json",
+      "source_count": 117,
+      "targets": [
+        "Classicism.Results.Research.SectionsRetractionsNPCSchemas"
+      ],
+      "result_entries": [
+        "SECTIONS-RETRACTIONS"
+      ]
+    },
+    {
+      "id": "evaluator-modal",
+      "path": "evidence/certificates/evaluator-modal/certificate.json",
+      "source_count": 73,
+      "targets": [
+        "Classicism.Results.Research.EvaluatorModalCommutationSchemas"
+      ],
+      "result_entries": [
+        "EVALUATOR-MODAL-COMMUTATION"
+      ]
+    },
+    {
+      "id": "colour-collapse",
+      "path": "evidence/certificates/colour-collapse/certificate.json",
+      "source_count": 92,
+      "targets": [
+        "ColourCollapseAxioms"
+      ],
+      "result_entries": [
+        "COLOUR-COLLAPSE-SCOPE"
+      ]
+    },
+    {
+      "id": "colour-collapse-higher",
+      "path": "evidence/certificates/colour-collapse-higher/certificate.json",
+      "source_count": 96,
+      "targets": [
+        "ColourCollapseHigherPowerAxioms"
+      ],
+      "result_entries": [
+        "COLOUR-COLLAPSE-SCOPE"
+      ]
+    },
+    {
+      "id": "analytic-rigidification",
+      "path": "evidence/certificates/analytic-rigidification/certificate.json",
+      "source_count": 60,
+      "targets": [
+        "Classicism.Results.Research.AnalyticRepresentedPowersCertificates"
+      ],
+      "result_entries": [
+        "ANALYTIC-RIGIDIFICATION"
+      ]
+    },
+    {
+      "id": "diagonal-characters",
+      "path": "evidence/certificates/diagonal-characters/certificate.json",
+      "source_count": 59,
+      "targets": [
+        "Classicism.Results.Research.DiagonalCharactersCertificates"
+      ],
+      "result_entries": [
+        "DIAGONAL-CHARACTERS"
+      ]
+    },
+    {
+      "id": "max-predecessor",
+      "path": "evidence/certificates/max-predecessor/certificate.json",
+      "source_count": 84,
+      "targets": [
+        "Classicism.Results.Research.MaxPredecessorSchema"
+      ],
+      "result_entries": [
+        "MAX-PREDECESSOR"
+      ]
+    },
+    {
+      "id": "beta-eta",
+      "path": "evidence/certificates/beta-eta/certificate.json",
+      "source_count": 4,
+      "targets": [
+        "Classicism.Results.Research.BetaIdentityContextualClosure",
+        "Classicism.Results.Research.BetaIdentityIntensionalityBridge"
+      ],
+      "result_entries": [
+        "BETA-ETA-CONVERSION"
+      ]
+    },
+    {
+      "id": "finite-profiles",
+      "path": "evidence/certificates/finite-profiles/certificate.json",
+      "source_count": 72,
+      "targets": [
+        "Classicism.Results.Research.FiniteProfilesCertificates",
+        "Classicism.Results.Research.FiniteAtomProfilesCertificates"
+      ],
+      "result_entries": [
+        "PROFILE-WORLD-ALGEBRA"
+      ]
+    },
+    {
+      "id": "beta-positive-arity",
+      "path": "evidence/certificates/beta-positive-arity/certificate.json",
+      "source_count": 72,
+      "targets": [
+        "Classicism.Results.Research.PositiveArityIntensionalityBridge"
+      ],
+      "result_entries": [
+        "BETA-ETA-CONVERSION"
+      ]
+    },
+    {
+      "id": "stable-naming",
+      "path": "evidence/certificates/stable-naming/certificate.json",
+      "source_count": 76,
+      "targets": [
+        "Classicism.Results.Research.ModalNamingConservativity"
+      ],
+      "result_entries": [
+        "LAMBDA-FREE-TRANSLATION"
+      ]
+    },
+    {
+      "id": "representation-core",
+      "path": "evidence/certificates/representation-core/certificate.json",
+      "source_count": 77,
+      "targets": [
+        "Classicism.Results.Research.ModalComprehensionRepresentation"
+      ],
+      "result_entries": [
+        "LAMBDA-FREE-TRANSLATION"
+      ]
+    },
+    {
+      "id": "barcan-observers",
+      "path": "evidence/certificates/barcan-observers/certificate.json",
+      "source_count": 76,
+      "targets": [
+        "Classicism.Results.Research.QuantifierObserversSchemas"
+      ],
+      "result_entries": [
+        "BARCAN-OBSERVERS"
+      ]
+    },
+    {
+      "id": "lambda-free-reconstruction",
+      "path": "evidence/certificates/lambda-free-reconstruction/certificate.json",
+      "source_count": 59,
+      "targets": [
+        "Classicism.Results.Research.ModalLambdaFreeEquivalence",
+        "Classicism.Results.Research.ModalNamedCProofTransport"
+      ],
+      "result_entries": [
+        "LAMBDA-FREE-TRANSLATION"
+      ]
+    },
+    {
+      "id": "finite-compression",
+      "path": "evidence/certificates/finite-compression/certificate.json",
+      "source_count": 94,
+      "targets": [
+        "FiniteCompressionAxioms"
+      ],
+      "result_entries": [
+        "FINITE-COMPRESSION-SEPARATION"
+      ]
+    },
+    {
+      "id": "full-observers-propositional",
+      "path": "evidence/certificates/full-observers-propositional/certificate.json",
+      "source_count": 67,
+      "targets": [
+        "Classicism.Results.Research.FullLogicalObserversAtomicCertificates",
+        "Classicism.Results.Research.FullLogicalObserversAtomicConverseCertificates",
+        "Classicism.Results.Research.FullLogicalObserversCharacterizationCertificates"
+      ],
+      "result_entries": [
+        "FULL-IDENTITY-OBSERVERS"
+      ]
+    },
+    {
+      "id": "orbit-code-towers",
+      "path": "evidence/certificates/orbit-code-towers/certificate.json",
+      "source_count": 61,
+      "targets": [
+        "Classicism.Results.Research.ChoiceOrbitAveragingCertificates",
+        "Classicism.Results.Research.ChoiceOrbitActualityCertificates",
+        "Classicism.Results.Research.ChoiceCodeTowersCertificates"
+      ],
+      "result_entries": [
+        "COEXTENSION-OPERATIONS"
+      ]
+    },
+    {
+      "id": "finite-type-classification",
+      "path": "evidence/certificates/finite-type-classification/certificate.json",
+      "source_count": 87,
+      "targets": [
+        "Classicism.Results.Research.FiniteTypePropagationSchemas",
+        "Classicism.Results.Research.FiniteTypeDescentSchemas"
+      ],
+      "result_entries": [
+        "FINITE-TYPE-PROPAGATION"
+      ]
+    },
+    {
+      "id": "max-predecessor-graph",
+      "path": "evidence/certificates/max-predecessor-graph/certificate.json",
+      "source_count": 84,
+      "targets": [
+        "Classicism.Results.Research.MaxPredecessorGraphModel"
+      ],
+      "result_entries": [
+        "MAX-PREDECESSOR"
+      ]
+    },
+    {
+      "id": "nominal-orbit-classification",
+      "path": "evidence/certificates/nominal-orbit-classification/certificate.json",
+      "source_count": 85,
+      "targets": [
+        "Classicism.Models.NominalClassificationChecks"
+      ],
+      "result_entries": [
+        "NOMINAL-ORBITS"
+      ]
+    },
+    {
+      "id": "generated-algebra-source",
+      "path": "evidence/certificates/generated-algebra-source/certificate.json",
+      "source_count": 53,
+      "targets": [
+        "Classicism.Results.Research.GeneratedAlgebraFiniteCertificatesSource"
+      ],
+      "result_entries": [
+        "ARITHMETIC-FOUNDATIONS"
+      ]
+    },
+    {
+      "id": "generated-algebra-target",
+      "path": "evidence/certificates/generated-algebra-target/certificate.json",
+      "source_count": 54,
+      "targets": [
+        "Classicism.Results.Research.GeneratedAlgebraFiniteCertificatesTarget"
+      ],
+      "result_entries": [
+        "ARITHMETIC-FOUNDATIONS"
+      ]
+    },
+    {
+      "id": "generated-algebra-left-inverse-zero",
+      "path": "evidence/certificates/generated-algebra-left-inverse-zero/certificate.json",
+      "source_count": 57,
+      "targets": [
+        "Classicism.Results.Research.GeneratedAlgebraFiniteFactoredCertificatesLeftInverse0"
+      ],
+      "result_entries": [
+        "ARITHMETIC-FOUNDATIONS"
+      ]
+    },
+    {
+      "id": "final-generated-algebra-finite-fold-certificates-base",
+      "path": "evidence/certificates/final-generated-algebra-finite-fold-certificates-base/certificate.json",
+      "source_count": 66,
+      "targets": [
+        "Classicism.Results.Research.GeneratedAlgebraFiniteFoldCertificatesBase",
+        "Classicism.Results.Research.GeneratedAlgebraFiniteFoldCertificatesElimination"
+      ],
+      "result_entries": [
+        "ARITHMETIC-FOUNDATIONS"
+      ]
+    },
+    {
+      "id": "final-fixed-point-entrance-pair-axioms",
+      "path": "evidence/certificates/final-fixed-point-entrance-pair-axioms/certificate.json",
+      "source_count": 71,
+      "targets": [
+        "FixedPointEntrancePairAxioms"
+      ],
+      "result_entries": []
+    },
+    {
+      "id": "final-choice-boolean-foundations-axioms",
+      "path": "evidence/certificates/final-choice-boolean-foundations-axioms/certificate.json",
+      "source_count": 37,
+      "targets": [
+        "ChoiceBooleanFoundationsAxioms"
+      ],
+      "result_entries": [
+        "CHOICE-NO-FINITE-BASIS"
+      ]
+    },
+    {
+      "id": "final-full-typed-logical-separation-h-transport",
+      "path": "evidence/certificates/final-full-typed-logical-separation-h-transport/certificate.json",
+      "source_count": 7,
+      "targets": [
+        "Classicism.Results.Research.FullTypedLogicalSeparationHTransport"
+      ],
+      "result_entries": [
+        "LOGICAL-OBSERVERS"
+      ]
+    },
+    {
+      "id": "final-full-typed-logical-separation-h-bridge",
+      "path": "evidence/certificates/final-full-typed-logical-separation-h-bridge/certificate.json",
+      "source_count": 15,
+      "targets": [
+        "Classicism.Results.Research.FullTypedLogicalSeparationHBridge",
+        "Classicism.Results.Research.FullTypedLogicalSeparationIdentity"
+      ],
+      "result_entries": [
+        "LOGICAL-OBSERVERS"
+      ]
+    },
+    {
+      "id": "final-analytic-reuse-quotation",
+      "path": "evidence/certificates/final-analytic-reuse-quotation/certificate.json",
+      "source_count": 61,
+      "targets": [
+        "Classicism.Results.Research.AnalyticReuseQuotation",
+        "Classicism.Results.Research.AnalyticVocabulary"
+      ],
+      "result_entries": [
+        "ANALYTIC-RIGIDIFICATION"
+      ]
+    },
+    {
+      "id": "final-analytic-finite-packing",
+      "path": "evidence/certificates/final-analytic-finite-packing/certificate.json",
+      "source_count": 6,
+      "targets": [
+        "Classicism.Results.Research.AnalyticFinitePacking"
+      ],
+      "result_entries": [
+        "ANALYTIC-RIGIDIFICATION"
+      ]
+    },
+    {
+      "id": "final-analytic-power-existence-certificates",
+      "path": "evidence/certificates/final-analytic-power-existence-certificates/certificate.json",
+      "source_count": 68,
+      "targets": [
+        "Classicism.Results.Research.AnalyticPowerExistenceCertificates",
+        "Classicism.Results.Research.AnalyticTupleDomainsMeta"
+      ],
+      "result_entries": [
+        "ANALYTIC-RIGIDIFICATION"
+      ]
+    },
+    {
+      "id": "final-generated-algebra-finite-factored-certificates-left-inverse1",
+      "path": "evidence/certificates/final-generated-algebra-finite-factored-certificates-left-inverse1/certificate.json",
+      "source_count": 58,
+      "targets": [
+        "Classicism.Results.Research.GeneratedAlgebraFiniteFactoredCertificatesLeftInverse1"
+      ],
+      "result_entries": [
+        "ARITHMETIC-FOUNDATIONS"
+      ]
+    },
+    {
+      "id": "final-intensional-arithmetic-reflection",
+      "path": "evidence/certificates/final-intensional-arithmetic-reflection/certificate.json",
+      "source_count": 93,
+      "targets": [
+        "Classicism.Results.Research.IntensionalArithmeticReflection",
+        "Classicism.Results.Research.FregeModelRules",
+        "Classicism.Results.Research.FourC5FinitenessModels",
+        "Classicism.Results.Research.ExtFullFregeCounting"
+      ],
+      "result_entries": [
+        "ARITHMETIC-FOUNDATIONS",
+        "FINITE-TYPE-PROPAGATION"
+      ]
+    },
+    {
+      "id": "final-two-stage-arithmetic-model",
+      "path": "evidence/certificates/final-two-stage-arithmetic-model/certificate.json",
+      "source_count": 78,
+      "targets": [
+        "Classicism.Results.Research.TwoStageArithmeticModel"
+      ],
+      "result_entries": [
+        "ARITHMETIC-FOUNDATIONS",
+        "FINITE-TYPE-PROPAGATION"
+      ]
+    },
+    {
+      "id": "final-fixed-point-entrance-choice",
+      "path": "evidence/certificates/final-fixed-point-entrance-choice/certificate.json",
+      "source_count": 91,
+      "targets": [
+        "Classicism.Models.FixedPointEntranceChoice",
+        "Classicism.Models.FixedPointEntranceRelationalBarcan"
+      ],
+      "result_entries": []
+    },
+    {
+      "id": "final-choice-first-order-recovery",
+      "path": "evidence/certificates/final-choice-first-order-recovery/certificate.json",
+      "source_count": 62,
+      "targets": [
+        "Classicism.Models.ChoiceFirstOrderRecovery",
+        "Classicism.Models.BooleanGroundChecks",
+        "Classicism.Models.BooleanTypedTermSemantics",
+        "Classicism.Models.BooleanModelExtraction"
+      ],
+      "result_entries": [
+        "CHOICE-NO-FINITE-BASIS"
+      ]
+    },
+    {
+      "id": "final-full-typed-logical-separation-h-closure",
+      "path": "evidence/certificates/final-full-typed-logical-separation-h-closure/certificate.json",
+      "source_count": 15,
+      "targets": [
+        "Classicism.Results.Research.FullTypedLogicalSeparationHClosure"
+      ],
+      "result_entries": [
+        "LOGICAL-OBSERVERS"
+      ]
+    },
+    {
+      "id": "final-full-typed-logical-separation-h-consequences",
+      "path": "evidence/certificates/final-full-typed-logical-separation-h-consequences/certificate.json",
+      "source_count": 16,
+      "targets": [
+        "Classicism.Results.Research.FullTypedLogicalSeparationHConsequences"
+      ],
+      "result_entries": [
+        "LOGICAL-OBSERVERS"
+      ]
+    },
+    {
+      "id": "final-atomic-probability-concrete-real-addition",
+      "path": "evidence/certificates/final-atomic-probability-concrete-real-addition/certificate.json",
+      "source_count": 83,
+      "targets": [
+        "Classicism.Results.Research.AtomicProbabilityConcreteRealAddition"
+      ],
+      "result_entries": [
+        "PROBABILITY"
+      ]
+    },
+    {
+      "id": "final-analytic-power-vocabulary",
+      "path": "evidence/certificates/final-analytic-power-vocabulary/certificate.json",
+      "source_count": 78,
+      "targets": [
+        "Classicism.Results.Research.AnalyticPowerVocabulary"
+      ],
+      "result_entries": [
+        "ANALYTIC-RIGIDIFICATION"
+      ]
+    },
+    {
+      "id": "final-analytic-finite-schema",
+      "path": "evidence/certificates/final-analytic-finite-schema/certificate.json",
+      "source_count": 81,
+      "targets": [
+        "Classicism.Results.Research.AnalyticFiniteSchema"
+      ],
+      "result_entries": [
+        "ANALYTIC-RIGIDIFICATION"
+      ]
+    },
+    {
+      "id": "final-generated-algebra-finite-factored-certificates-left-inverse2",
+      "path": "evidence/certificates/final-generated-algebra-finite-factored-certificates-left-inverse2/certificate.json",
+      "source_count": 59,
+      "targets": [
+        "Classicism.Results.Research.GeneratedAlgebraFiniteFactoredCertificatesLeftInverse2"
+      ],
+      "result_entries": [
+        "ARITHMETIC-FOUNDATIONS"
+      ]
+    },
+    {
+      "id": "final-boolean-protected-coverage",
+      "path": "evidence/certificates/final-boolean-protected-coverage/certificate.json",
+      "source_count": 64,
+      "targets": [
+        "Classicism.Models.BooleanProtectedCoverage",
+        "Classicism.Models.BooleanIndexedProfiles",
+        "Classicism.Models.BooleanSmallFormulaSemantics"
+      ],
+      "result_entries": [
+        "CHOICE-NO-FINITE-BASIS"
+      ]
+    },
+    {
+      "id": "final-full-typed-logical-separation-c-holes",
+      "path": "evidence/certificates/final-full-typed-logical-separation-c-holes/certificate.json",
+      "source_count": 18,
+      "targets": [
+        "Classicism.Results.Research.FullTypedLogicalSeparationCHoles",
+        "Classicism.Results.Research.FullTypedLogicalSeparationCSupport"
+      ],
+      "result_entries": [
+        "LOGICAL-OBSERVERS"
+      ]
+    },
+    {
+      "id": "final-full-typed-logical-separation-c-transport",
+      "path": "evidence/certificates/final-full-typed-logical-separation-c-transport/certificate.json",
+      "source_count": 22,
+      "targets": [
+        "Classicism.Results.Research.FullTypedLogicalSeparationCTransport",
+        "Classicism.Results.Research.FullTypedLogicalSeparationClosedTypes"
+      ],
+      "result_entries": [
+        "LOGICAL-OBSERVERS"
+      ]
+    },
+    {
+      "id": "final-coalesced-base",
+      "path": "evidence/certificates/final-coalesced-base/certificate.json",
+      "source_count": 9,
+      "targets": [
+        "Classicism.Models.CoalescedBase"
+      ],
+      "result_entries": [
+        "CH-COALESCED",
+        "MAX-CH"
+      ]
+    },
+    {
+      "id": "coalesced-ch-conditional",
+      "path": "evidence/certificates/coalesced-ch-conditional/certificate.json",
+      "source_count": 84,
+      "targets": [
+        "CoalescedCHOriginalAudit"
+      ],
+      "result_entries": [
+        "CH-COALESCED",
+        "MAX-CH"
+      ]
+    },
+    {
+      "id": "fixed-point-entrance-complete",
+      "path": "evidence/certificates/fixed-point-entrance-complete/certificate.json",
+      "source_count": 144,
+      "targets": [
+        "FixedPointEntranceAxioms",
+        "FixedPointEntranceRootAxioms",
+        "FixedPointEntranceSeparationAxioms",
+        "FixedPointEntranceCompleteAxioms"
+      ],
+      "result_entries": [
+        "FIXED-POINT-ENTRANCE"
+      ]
+    },
+    {
+      "id": "full-typed-logical-separation-actual-c",
+      "path": "evidence/certificates/full-typed-logical-separation-actual-c/certificate.json",
+      "source_count": 23,
+      "targets": [
+        "Classicism.Results.Research.FullTypedLogicalSeparationCClosure"
+      ],
+      "result_entries": [
+        "LOGICAL-OBSERVERS"
+      ]
+    },
+    {
+      "id": "infinitary-cardinal-closure",
+      "path": "evidence/certificates/infinitary-cardinal-closure/certificate.json",
+      "source_count": 5,
+      "targets": [
+        "Classicism.Results.Research.InfinitaryComprehensionCardinalClosure"
+      ],
+      "result_entries": [
+        "INFINITARY-COMPREHENSION"
+      ]
+    },
+    {
+      "id": "probability-source-principal-audit",
+      "path": "evidence/certificates/probability-source-principal-audit/certificate.json",
+      "source_count": 87,
+      "targets": [
+        "ProbabilitySourceAxioms"
+      ],
+      "result_entries": [
+        "PROBABILITY"
+      ]
+    },
+    {
+      "id": "probability-numeric-operations-twelve",
+      "path": "evidence/certificates/probability-numeric-operations-twelve/certificate.json",
+      "source_count": 78,
+      "targets": [
+        "AtomicProbabilityNumericOperationsFullAxioms",
+        "Classicism.Results.Research.AtomicProbabilityNumericRealizationBasis",
+        "Classicism.Results.Research.AtomicProbabilityNumericAdditionBasis",
+        "Classicism.Results.Research.AtomicProbabilityNumericMultiplicationBasis",
+        "Classicism.Results.Research.AtomicProbabilityNumericOperationsCertificatesEquations",
+        "Classicism.Results.Research.AtomicProbabilityNumericOperationsCertificatesGraphs",
+        "Classicism.Results.Research.AtomicProbabilityNumericOperationsCertificatesInduction",
+        "Classicism.Results.Research.AtomicProbabilityNumericOperationsCertificatesNumbers",
+        "Classicism.Results.Research.AtomicProbabilityNumericOperationsCertificatesRecursion",
+        "Classicism.Results.Research.AtomicProbabilityNumericOperationsCertificatesTimesSuccessor",
+        "Classicism.Results.Research.AtomicProbabilityNumericOperationsCertificatesGate"
+      ],
+      "result_entries": [
+        "PROBABILITY"
+      ]
+    },
+    {
+      "id": "arithmetic-closeout-20261023T043014649782Z-ffe74996",
+      "path": "evidence/certificates/arithmetic-closeout-20261023T043014649782Z-ffe74996/certificate.json",
+      "source_count": 38,
+      "targets": [
+        "Classicism.Results.Research.FregeFiniteSetsCertificates"
+      ],
+      "result_entries": [
+        "ARITHMETIC-FOUNDATIONS"
+      ]
+    },
+    {
+      "id": "arithmetic-closeout-20261023T044223622850Z-528e6bf0",
+      "path": "evidence/certificates/arithmetic-closeout-20261023T044223622850Z-528e6bf0/certificate.json",
+      "source_count": 40,
+      "targets": [
+        "Classicism.Results.Research.FregeNoncollapseCertificates"
+      ],
+      "result_entries": [
+        "ARITHMETIC-FOUNDATIONS"
+      ]
+    },
+    {
+      "id": "arithmetic-closeout-20261023T045108444380Z-b3474a59",
+      "path": "evidence/certificates/arithmetic-closeout-20261023T045108444380Z-b3474a59/certificate.json",
+      "source_count": 83,
+      "targets": [
+        "Classicism.Results.Research.CrossBaseArithmeticCertificates",
+        "Classicism.Results.Research.FregeArithmeticVocabularyCertificates"
+      ],
+      "result_entries": [
+        "ARITHMETIC-FOUNDATIONS"
+      ]
+    },
+    {
+      "id": "arithmetic-closeout-20261023T045914763270Z-feef3c75",
+      "path": "evidence/certificates/arithmetic-closeout-20261023T045914763270Z-feef3c75/certificate.json",
+      "source_count": 78,
+      "targets": [
+        "Classicism.Results.Research.CrossBaseFirstOrderChecks"
+      ],
+      "result_entries": [
+        "ARITHMETIC-FOUNDATIONS"
+      ]
+    },
+    {
+      "id": "arithmetic-closeout-20261023T050602611952Z-deea884a",
+      "path": "evidence/certificates/arithmetic-closeout-20261023T050602611952Z-deea884a/certificate.json",
+      "source_count": 74,
+      "targets": [
+        "Classicism.Results.Research.FregeArithmeticQuotation"
+      ],
+      "result_entries": [
+        "ARITHMETIC-FOUNDATIONS"
+      ]
+    },
+    {
+      "id": "arithmetic-closeout-20261023T051905510453Z-639b9e47",
+      "path": "evidence/certificates/arithmetic-closeout-20261023T051905510453Z-639b9e47/certificate.json",
+      "source_count": 84,
+      "targets": [
+        "Classicism.Results.Research.C5FregeCertificates",
+        "Classicism.Results.Research.FregeArithmeticReflection"
+      ],
+      "result_entries": [
+        "ARITHMETIC-FOUNDATIONS"
+      ]
+    },
+    {
+      "id": "arithmetic-closeout-20261023T052411006203Z-90a4d7dd",
+      "path": "evidence/certificates/arithmetic-closeout-20261023T052411006203Z-90a4d7dd/certificate.json",
+      "source_count": 74,
+      "targets": [
+        "Classicism.Results.Research.C5ActualityNumbersCertificates",
+        "Classicism.Results.Research.FregeHumeClassesCertificates"
+      ],
+      "result_entries": [
+        "ARITHMETIC-FOUNDATIONS"
+      ]
+    },
+    {
+      "id": "arithmetic-closeout-20261023T185110349681Z-c44a2c54",
+      "path": "evidence/certificates/arithmetic-closeout-20261023T185110349681Z-c44a2c54/certificate.json",
+      "source_count": 69,
+      "targets": [
+        "Classicism.Results.Research.RawWorldRepresentationBoundaryCertificates",
+        "Classicism.Results.Research.RawWorldRepresentationBoundarySchemas"
+      ],
+      "result_entries": [
+        "ARITHMETIC-FOUNDATIONS"
+      ]
+    },
+    {
+      "id": "arithmetic-closeout-20261023T185735332118Z-2764542a",
+      "path": "evidence/certificates/arithmetic-closeout-20261023T185735332118Z-2764542a/certificate.json",
+      "source_count": 66,
+      "targets": [
+        "Classicism.Results.Research.FiniteRigidPowersCertificates",
+        "Classicism.Results.Research.FiniteFunctionFieldsCertificates"
+      ],
+      "result_entries": [
+        "ARITHMETIC-FOUNDATIONS"
+      ]
+    },
+    {
+      "id": "arithmetic-closeout-20261023T191915639937Z-d2ccb091",
+      "path": "evidence/certificates/arithmetic-closeout-20261023T191915639937Z-d2ccb091/certificate.json",
+      "source_count": 84,
+      "targets": [
+        "Classicism.Results.Research.FiniteTypePropagationCertificates",
+        "Classicism.Results.Research.FiniteTupleLawsCertificates"
+      ],
+      "result_entries": [
+        "ARITHMETIC-FOUNDATIONS"
+      ]
+    },
+    {
+      "id": "arithmetic-closeout-20261023T200932923438Z-43e4bd03",
+      "path": "evidence/certificates/arithmetic-closeout-20261023T200932923438Z-43e4bd03/certificate.json",
+      "source_count": 84,
+      "targets": [
+        "Classicism.Results.Research.FiniteTypeDescentCertificates"
+      ],
+      "result_entries": [
+        "ARITHMETIC-FOUNDATIONS"
+      ]
+    },
+    {
+      "id": "arithmetic-closeout-20261024T022609307928Z-123e4fa6",
+      "path": "evidence/certificates/arithmetic-closeout-20261024T022609307928Z-123e4fa6/certificate.json",
+      "source_count": 91,
+      "targets": [
+        "ArithmeticOriginal36Audit"
+      ],
+      "result_entries": [
+        "ARITHMETIC-FOUNDATIONS"
+      ]
+    },
+    {
+      "id": "arithmetic-closeout-20261024T024202505795Z-196c65f3",
+      "path": "evidence/certificates/arithmetic-closeout-20261024T024202505795Z-196c65f3/certificate.json",
+      "source_count": 122,
+      "targets": [
+        "ArithmeticCoreResidualAudit",
+        "Classicism.Results.Research.IntensionalArithmeticReflection",
+        "Classicism.Results.Research.FourC5FinitenessModels"
+      ],
+      "result_entries": [
+        "ARITHMETIC-FOUNDATIONS"
+      ]
+    },
+    {
+      "id": "arithmetic-closeout-20261024T022027443032Z-16979b8f",
+      "path": "evidence/certificates/arithmetic-closeout-20261024T022027443032Z-16979b8f/certificate.json",
+      "source_count": 97,
+      "targets": [
+        "Classicism.Results.Research.TwoStageArithmeticNumbers",
+        "Classicism.Results.Research.ExtFullFregeCounting",
+        "Classicism.Results.Research.ExtFullFregeOrbit"
+      ],
+      "result_entries": [
+        "ARITHMETIC-FOUNDATIONS"
+      ]
+    },
+    {
+      "id": "full-observers-simultaneous-finite-schema",
+      "path": "evidence/certificates/full-observers-simultaneous-finite-schema/certificate.json",
+      "source_count": 81,
+      "targets": [
+        "Classicism.Results.Research.FullLogicalObserversFiniteSchemas",
+        "Classicism.Results.Research.FullLogicalObserversFiniteSchemasConsRule",
+        "Classicism.Results.Research.FullLogicalObserversFiniteSchemasSeparationRule",
+        "Classicism.Results.Research.FullLogicalObserversFiniteSchemasNecessaryConsRule",
+        "Classicism.Results.Research.FullLogicalObserversFiniteSchemasNecessarySeparationRule",
+        "Classicism.Results.Research.FullLogicalObserversFiniteQualificationDerivations",
+        "Classicism.Results.Research.FullLogicalObserversFiniteQualificationCertificates"
+      ],
+      "result_entries": [
+        "FULL-IDENTITY-OBSERVERS"
+      ]
+    },
+    {
+      "id": "finite-choice-full-construction",
+      "path": "evidence/certificates/finite-choice-full-construction/certificate.json",
+      "source_count": 138,
+      "targets": [
+        "ChoiceFirstOrderAxioms",
+        "ChoiceFirstOrderRecoveryAxioms",
+        "ChoiceBooleanConstructionAxioms",
+        "ChoiceBooleanNegativeAxioms",
+        "ChoiceBooleanSchemaConsequencesAxioms"
+      ],
+      "result_entries": [
+        "CHOICE-NO-FINITE-BASIS"
+      ]
+    },
+    {
+      "id": "infinitary-support-and-finite-syntax",
+      "path": "evidence/certificates/infinitary-support-and-finite-syntax/certificate.json",
+      "source_count": 42,
+      "targets": [
+        "InfinitaryComprehensionIndependentAxioms"
+      ],
+      "result_entries": [
+        "INFINITARY-COMPREHENSION"
+      ]
+    },
+    {
+      "id": "probability-addition-basic",
+      "path": "evidence/certificates/probability-addition-basic/certificate.json",
+      "source_count": 80,
+      "targets": [
+        "AtomicProbabilityNumericAdditionBasicAxioms",
+        "Classicism.Results.Research.AtomicProbabilityNumericAdditionCertificatesBasic"
+      ],
+      "result_entries": [
+        "PROBABILITY"
+      ]
+    },
+    {
+      "id": "infinitary-action-countermodels",
+      "path": "evidence/certificates/infinitary-action-countermodels/certificate.json",
+      "source_count": 93,
+      "targets": [
+        "Classicism.Results.Research.InfinitaryComprehensionCountermodels"
+      ],
+      "result_entries": [
+        "INFINITARY-COMPREHENSION"
+      ]
+    },
+    {
+      "id": "coalesced-ch-expanded",
+      "path": "evidence/certificates/coalesced-ch-expanded/certificate.json",
+      "source_count": 175,
+      "targets": [
+        "CoalescedCHExpandedFinalAudit"
+      ],
+      "result_entries": [
+        "CH-COALESCED",
+        "MAX-CH"
+      ]
+    },
+    {
+      "id": "infinitary-full-representation",
+      "path": "evidence/certificates/infinitary-full-representation/certificate.json",
+      "source_count": 137,
+      "targets": [
+        "InfinitaryComprehensionFullAxioms"
+      ],
+      "result_entries": [
+        "INFINITARY-COMPREHENSION"
+      ]
+    }
+  ],
+  "compiler_rerun": false,
+  "updated_at_utc": "2026-10-24T02:20:15.596764+00:00"
+}

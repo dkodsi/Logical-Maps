@@ -1,0 +1,105 @@
+Classicism/Results/Research/FullTypedLogicalSeparationHBridge.lean:61:8: warning: This simp argument is unused:
+  Term.instantiate
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Term.subst_rename, Term.subst_id] at h₁
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/FullTypedLogicalSeparationHBridge.lean:70:8: warning: This simp argument is unused:
+  Term.instantiate
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Term.subst_rename, Term.subst_id] at h₁
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/FullTypedLogicalSeparationHBridge.lean:104:8: warning: This simp argument is unused:
+  Term.instantiate
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Term.subst_rename, Term.subst_id] at h₁
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/FullTypedLogicalSeparationHBridge.lean:106:31: warning: This simp argument is unused:
+  forall'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Term.instantiate, imp, disj, neg, eq', Term.subst_lam, Term.subst_app, subst_weaken_lift] at h₂
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/FullTypedLogicalSeparationHBridge.lean:106:40: warning: This simp argument is unused:
+  imp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Term.instantiate, forall', disj, neg, eq', Term.subst_lam, Term.subst_app, subst_weaken_lift] at h₂
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/FullTypedLogicalSeparationHBridge.lean:106:45: warning: This simp argument is unused:
+  disj
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Term.instantiate, forall', imp, neg, eq', Term.subst_lam, Term.subst_app, subst_weaken_lift] at h₂
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/FullTypedLogicalSeparationHBridge.lean:106:51: warning: This simp argument is unused:
+  neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Term.instantiate, forall', imp, disj, eq', Term.subst_lam, Term.subst_app, subst_weaken_lift] at h₂
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/FullTypedLogicalSeparationHBridge.lean:106:56: warning: This simp argument is unused:
+  eq'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Term.instantiate, forall', imp, disj, neg, Term.subst_lam, Term.subst_app, subst_weaken_lift] at h₂
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/FullTypedLogicalSeparationHBridge.lean:108:8: warning: This simp argument is unused:
+  Term.instantiate
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Term.subst_rename, Term.subst_id] at h₂
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/FullTypedLogicalSeparationHBridge.lean:117:9: warning: Variable name `E` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _E
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Classicism/Results/Research/FullTypedLogicalSeparationHBridge.lean:118:8: warning: Variable name `E` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _E
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Classicism/Results/Research/FullTypedLogicalSeparationHBridge.lean:119:9: warning: Variable name `E` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _E
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Classicism/Results/Research/FullTypedLogicalSeparationHBridge.lean:120:12: warning: Variable name `E` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _E
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Classicism/Results/Research/FullTypedLogicalSeparationHBridge.lean:122:11: warning: Variable name `E` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _E
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Classicism/Results/Research/FullTypedLogicalSeparationHBridge.lean:124:12: warning: Variable name `E` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _E
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Classicism/Results/Research/FullTypedLogicalSeparationHBridge.lean:125:16: warning: Variable name `E` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _E
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

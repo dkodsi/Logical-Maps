@@ -1,0 +1,23 @@
+Classicism/Results/Research/MaxAtomicityJechShelahLocalStage.lean:87:12: warning: Variable name `a` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _a
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Classicism/Results/Research/MaxAtomicityJechShelahLocalStage.lean:140:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+'Classicism.Meta.Research.MaxAtomicityJechShelahLocalStage.growthP_mono' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahLocalStage.future_front_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityJechShelahLocalStage.advance' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

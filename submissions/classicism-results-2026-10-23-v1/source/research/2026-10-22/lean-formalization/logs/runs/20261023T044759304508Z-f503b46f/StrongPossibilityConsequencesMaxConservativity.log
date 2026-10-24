@@ -1,0 +1,12 @@
+Classicism.Research.StrongPossibilityConsequences.Conservativity.reflected_neg_box: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em])
+Classicism.Research.StrongPossibilityConsequences.Conservativity.reflected_neg_box: type system ✓
+Classicism.Research.StrongPossibilityConsequences.Conservativity.reflected_neg_box ⟶ Classicism.Research.StrongPossibilityConsequences.Conservativity.reflected_neg_box.derivable : Meta.Theorem
+  Meta.C.axiomsMinus
+  (Meta.Term.forall'
+    (Meta.Term.imp (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia (Meta.Term.var Meta.Var.zero))
+      (Meta.Term.imp (Meta.Term.var Meta.Var.zero).neg (Meta.Term.box (Meta.Term.var Meta.Var.zero).neg))))
+derived ✓ in C⁻
+'Classicism.Meta.Research.StrongPossibilityConsequences.MaxConservativity.identity_conservative_iff_max_consistent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

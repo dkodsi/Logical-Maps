@@ -1,0 +1,1668 @@
+{
+  "id": "coalesced-ch-expanded",
+  "source_manifest_origin": "research/2026-10-22/lean-formalization/checks/20261024T065137766782Z-70acb329.json",
+  "source_manifest_path": "evidence/certificates/coalesced-ch-expanded/selected-manifest.json",
+  "source_manifest_sha256": "c89935b3cd1d9a89e6f3725aaba815434600c871403f824cd36831985a3768dd",
+  "source_manifest_original_sha256": "1aeb9b311842a2f0da87711ae158c9cfb9a164766aa6deed90b341ced9718083",
+  "source_manifest_normalization": "Portable paths; machine-specific cache and compiler locations omitted. All 175 successful module records retained.",
+  "run_id": "20261024T065137766782Z-70acb329",
+  "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "compiler_sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554",
+  "precompiled_sha256": "675f46a345caf1daf1bbc81b42696e5a518c6d01fd9c8a8d02c8a158f8475a3e",
+  "selected_targets": [
+    "CoalescedCHExpandedFinalAudit"
+  ],
+  "selected_targets_exit_code": 0,
+  "original_run_state": "complete",
+  "original_run_exit_code": 0,
+  "sources": [
+    {
+      "module": "Flypitch4.ToMathlib",
+      "path": "evidence/source-store/d1d12f1ee05b102da6b7a360b22508c70b6ee30f1ffd47dc7c066b34837a14fe/Flypitch4/ToMathlib.lean",
+      "sha256": "d1d12f1ee05b102da6b7a360b22508c70b6ee30f1ffd47dc7c066b34837a14fe",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/ToMathlib.lean",
+      "fingerprint": "e79068c44696ee436873763fee4f8da01b114516e97d212795b8d3873b3302fc",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.Fol",
+      "path": "evidence/source-store/7dea07d1365abb488fb4fb88e198af435539c5a6bdcf4f913daa0dbe33af66ab/Flypitch4/Fol.lean",
+      "sha256": "7dea07d1365abb488fb4fb88e198af435539c5a6bdcf4f913daa0dbe33af66ab",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/Fol.lean",
+      "fingerprint": "4a660570403ff93c12c4206dff40dd629c387fc51980c4dcd0262e3014708328",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.Bfol",
+      "path": "evidence/source-store/4794c8f399c1ae680d866e518e1aa9cdddf41cbddb3ba0f4fb4cb11f108c0698/Flypitch4/Bfol.lean",
+      "sha256": "4794c8f399c1ae680d866e518e1aa9cdddf41cbddb3ba0f4fb4cb11f108c0698",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/Bfol.lean",
+      "fingerprint": "f423a469bf512762223bbbf432fcab7bb847eae00c33e8ef224741c05adab82a",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.PSetOrdinal",
+      "path": "evidence/source-store/a0c7eb60edba25f170e7a4b371687f38fafd05bef8e22eb5f31bf763a918dd88/Flypitch4/PSetOrdinal.lean",
+      "sha256": "a0c7eb60edba25f170e7a4b371687f38fafd05bef8e22eb5f31bf763a918dd88",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/PSetOrdinal.lean",
+      "fingerprint": "0b7c943fc80b383a797a3b9048055b1474d29eed7ab2f607c33419234a5bd26a",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.BvTauto",
+      "path": "evidence/source-store/47577d8ceed2f78fd2d66f6c3f5309c8378b9b927f57d9bc759f85d2dd1ec401/Flypitch4/BvTauto.lean",
+      "sha256": "47577d8ceed2f78fd2d66f6c3f5309c8378b9b927f57d9bc759f85d2dd1ec401",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/BvTauto.lean",
+      "fingerprint": "9998da9a3cae90ca0fa3e2f21f855e56435fa30b7ad292dd9e523f30f68ff20c",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.Bvm",
+      "path": "evidence/source-store/3ed8c3885f3d7f1443cec5d911db1393079163c30732101eb32b52b511d14f16/Flypitch4/Bvm.lean",
+      "sha256": "3ed8c3885f3d7f1443cec5d911db1393079163c30732101eb32b52b511d14f16",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/Bvm.lean",
+      "fingerprint": "2671ba70b2ec74e9f95947bfd15d2dc120978bd610414ee21fdf8942a7f479ec",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.BvmExtras",
+      "path": "evidence/source-store/938c107dbd4b6087540b5043d5a5440bda2b7e607f148d7fd68bfa447e2bdb5a/Flypitch4/BvmExtras.lean",
+      "sha256": "938c107dbd4b6087540b5043d5a5440bda2b7e607f148d7fd68bfa447e2bdb5a",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/BvmExtras.lean",
+      "fingerprint": "b2255df37bbeb3ff25b69ad4f3b53e910b5ec6dcb79db3a238408332eca88e69",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.SetTheoryExt",
+      "path": "evidence/source-store/9eff29160bcafbedc4da45487d386b2baee4d03883897fb82edbc9c0a0697c96/Flypitch4/SetTheoryExt.lean",
+      "sha256": "9eff29160bcafbedc4da45487d386b2baee4d03883897fb82edbc9c0a0697c96",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/SetTheoryExt.lean",
+      "fingerprint": "c4305045d88bb8502d5657e9c5ad4daae37cd2142b93d73f43822f56e291f37c",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.RegularOpenAlgebra",
+      "path": "evidence/source-store/13d017c05a73e53a3f3b2d245501846e9745a460e5845eb661f556b602e5c5c0/Flypitch4/RegularOpenAlgebra.lean",
+      "sha256": "13d017c05a73e53a3f3b2d245501846e9745a460e5845eb661f556b602e5c5c0",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/RegularOpenAlgebra.lean",
+      "fingerprint": "12584d9a2059a65b8181f8e58642ef81dbc60ee9c20e7790ff7cae28bf87b0df",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.CantorSpace",
+      "path": "evidence/source-store/49d752e68ee9ddae905638c306fa0fb9a200cf7d3c9e08c0600e6b1b80c0f700/Flypitch4/CantorSpace.lean",
+      "sha256": "49d752e68ee9ddae905638c306fa0fb9a200cf7d3c9e08c0600e6b1b80c0f700",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/CantorSpace.lean",
+      "fingerprint": "33844f2e3c6172a9626eadbad4a7bb99b97505c63e7e93bbe0fd6ad4f62f49f8",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.Forcing",
+      "path": "evidence/source-store/3c2b192f10e29bb395cc23b79b941fbaa0ec9864760c056a6b57bf77c1c5dc0e/Flypitch4/Forcing.lean",
+      "sha256": "3c2b192f10e29bb395cc23b79b941fbaa0ec9864760c056a6b57bf77c1c5dc0e",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/Forcing.lean",
+      "fingerprint": "ed6cf74019f10bbe568bf0bc1df28898367165fe0ab0ab15a25eca2a3303206b",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.Collapse",
+      "path": "evidence/source-store/5a73cc8b61597b0662f998812e460c71fd828ceed338168290d8d80629aa36aa/Flypitch4/Collapse.lean",
+      "sha256": "5a73cc8b61597b0662f998812e460c71fd828ceed338168290d8d80629aa36aa",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/Collapse.lean",
+      "fingerprint": "1f39c8c00f53d1366187644b1afa21e430de9d3a7d3c49e435704dbbaf19127a",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.BvmExtras2",
+      "path": "evidence/source-store/c3cd8e2c8f6722eb39a55bc0e4e4ae0c46bb08cbd3d13d85a3442a52e4f403b8/Flypitch4/BvmExtras2.lean",
+      "sha256": "c3cd8e2c8f6722eb39a55bc0e4e4ae0c46bb08cbd3d13d85a3442a52e4f403b8",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/BvmExtras2.lean",
+      "fingerprint": "61db3116db9a7c723c9aefeb6c2076b0a435486cc9ecee3c2d58405d3928afdd",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.AlephOne",
+      "path": "evidence/source-store/bf643915267e0c9780eb22cca8f7b65b2191a2e28bc606d1b60f9fe0c7859e7b/Flypitch4/AlephOne.lean",
+      "sha256": "bf643915267e0c9780eb22cca8f7b65b2191a2e28bc606d1b60f9fe0c7859e7b",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/AlephOne.lean",
+      "fingerprint": "613cdb65ecd281bee2b7feec73bf0b51ae6d93464b9608ed0e1e255330ae7e5b",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.ForcingCH",
+      "path": "evidence/source-store/7fb18fe059725ab43ee9bd5ee75baf154182320fe2a8bf8401a2858a89f004bd/Flypitch4/ForcingCH.lean",
+      "sha256": "7fb18fe059725ab43ee9bd5ee75baf154182320fe2a8bf8401a2858a89f004bd",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/ForcingCH.lean",
+      "fingerprint": "774e70e8491cf22dcfb1c39e25ce5679c8b89190914d2c67047edeca1e432298",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.Zfc",
+      "path": "evidence/source-store/069c57da10185097225819cbc962ba9b670536fa535d7a42f776683388880050/Flypitch4/Zfc.lean",
+      "sha256": "069c57da10185097225819cbc962ba9b670536fa535d7a42f776683388880050",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/Zfc.lean",
+      "fingerprint": "0238d8516b86d91fa876c65dbdec5024016b9011dad37881943bf945fd32ab3c",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.Erdos501.Sentence",
+      "path": "evidence/source-store/8122a4a537ad08635cb7b8cdaefc9fe9e9f1a553b98a513b0cb4e08af0387601/Flypitch4/Erdos501/Sentence.lean",
+      "sha256": "8122a4a537ad08635cb7b8cdaefc9fe9e9f1a553b98a513b0cb4e08af0387601",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/Erdos501/Sentence.lean",
+      "fingerprint": "cbd0153a25b1da2d349bc4ef8b1ab0d8ecea409960695c63d6fe3c736089a788",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.Erdos501.Semantics",
+      "path": "evidence/source-store/eaa0da67b36fbc977975ab5ea1e831c202b657d8234618578a86d2515c2d3c7a/Flypitch4/Erdos501/Semantics.lean",
+      "sha256": "eaa0da67b36fbc977975ab5ea1e831c202b657d8234618578a86d2515c2d3c7a",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/Erdos501/Semantics.lean",
+      "fingerprint": "08a9dae4e6e880df32efcb3a7c834be2769da7e7870e0d68f41c3594e628ec6c",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.Erdos501.InternalField",
+      "path": "evidence/source-store/1bb95a0eca9bbdac1b1448ccab1f01ebdd6a93eddd9f7d93f73d77de38072b7a/Flypitch4/Erdos501/InternalField.lean",
+      "sha256": "1bb95a0eca9bbdac1b1448ccab1f01ebdd6a93eddd9f7d93f73d77de38072b7a",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/Erdos501/InternalField.lean",
+      "fingerprint": "8e36cb38a442992527f8d331d86389aee0abfdd7dd886357b2d14c5c7d4870e1",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.BooleanNaturals",
+      "path": "evidence/source-store/a79561ad6600448bd0b39270095945e18c4707950a45104315dbd8bc73368b0e/ClassicismZFC/BooleanNaturals.lean",
+      "sha256": "a79561ad6600448bd0b39270095945e18c4707950a45104315dbd8bc73368b0e",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/BooleanNaturals.lean",
+      "fingerprint": "d808e275d4a26a666fba1a1635bd29413560caae07ed1ff12ac406463553b17f",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.Compactness",
+      "path": "evidence/source-store/fc761959df1fbbbd49856d203b16217485cb2a3f749abd0c3a60e13c6ede3dc4/Flypitch4/Compactness.lean",
+      "sha256": "fc761959df1fbbbd49856d203b16217485cb2a3f749abd0c3a60e13c6ede3dc4",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/Compactness.lean",
+      "fingerprint": "3722e9b7bd210d353b1fb27761c31a0fba1bb0fb3caf3484190ff0233ed29c8e",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.Completion",
+      "path": "evidence/source-store/ad123c4d51d7a962787d93d8552088d186e9b9b5fc435c00ecc710c73f785410/Flypitch4/Completion.lean",
+      "sha256": "ad123c4d51d7a962787d93d8552088d186e9b9b5fc435c00ecc710c73f785410",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/Completion.lean",
+      "fingerprint": "d0ce4f52bd76b8d360714187fa1ab49dc4871ed00ed2a4248b3d3a41c2aab9d1",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.LanguageExtension",
+      "path": "evidence/source-store/08d938aac851c00821a8d64a99a5236e2922dec2bcf5b476688ef045c8939c07/Flypitch4/LanguageExtension.lean",
+      "sha256": "08d938aac851c00821a8d64a99a5236e2922dec2bcf5b476688ef045c8939c07",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/LanguageExtension.lean",
+      "fingerprint": "50c2d4188e379385c6ef6ae0706738a8af04b808d5331ad1515ba845fa80388d",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.Colimit",
+      "path": "evidence/source-store/8b35967d3571ec198b5077cd9bee3053a88358c45830342d1f09fc8299d7c9b3/Flypitch4/Colimit.lean",
+      "sha256": "8b35967d3571ec198b5077cd9bee3053a88358c45830342d1f09fc8299d7c9b3",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/Colimit.lean",
+      "fingerprint": "bc5e46265e2242d23aa655497bb674e891091939381e3a83e8989dbb38e558a0",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.Henkin",
+      "path": "evidence/source-store/a2908ff296a9df2297e5a56a7e0e749cc6ff9dcc5c0229ea40617d9a90701fc9/Flypitch4/Henkin.lean",
+      "sha256": "a2908ff296a9df2297e5a56a7e0e749cc6ff9dcc5c0229ea40617d9a90701fc9",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/Henkin.lean",
+      "fingerprint": "d14446d6a90620781edd3056940fe4729c78b97714f3124f32527e9dd96201b9",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.Completeness",
+      "path": "evidence/source-store/23825b1d91fdb0b817773847a2af461f1eb7c78464e60ee43bb9f7c6c65b5708/Flypitch4/Completeness.lean",
+      "sha256": "23825b1d91fdb0b817773847a2af461f1eb7c78464e60ee43bb9f7c6c65b5708",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/Completeness.lean",
+      "fingerprint": "267a39efe52c09772ccef3b389111ecf0c0369649af92ec5252420e9794d3cf4",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.OppositeCH",
+      "path": "evidence/source-store/0f79bdc87cf2d5128b084bcbac97bf8e169c62940cf547dc6544913cfa06c967/ClassicismZFC/OppositeCH.lean",
+      "sha256": "0f79bdc87cf2d5128b084bcbac97bf8e169c62940cf547dc6544913cfa06c967",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/OppositeCH.lean",
+      "fingerprint": "65ba9e4615b5c589f9e4030462bc19865fbe397b612bf956f4fee6594afb5781",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Erdos501.FOL.Statement",
+      "path": "evidence/source-store/b407727086ce800407b08af7b01d3db07bbfe2f1f859055bfe2432bbbca531c6/Erdos501/FOL/Statement.lean",
+      "sha256": "b407727086ce800407b08af7b01d3db07bbfe2f1f859055bfe2432bbbca531c6",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Erdos501/FOL/Statement.lean",
+      "fingerprint": "dcb840de9b95e1001be7afd552f7c2d84b25742985e07cc0229977451dbecb8b",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Erdos501.FOL.Translate",
+      "path": "evidence/source-store/fbdc11e277266a4a526c7cfae0d280e6bbb1e57f170bc249bf4a158254789fec/Erdos501/FOL/Translate.lean",
+      "sha256": "fbdc11e277266a4a526c7cfae0d280e6bbb1e57f170bc249bf4a158254789fec",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Erdos501/FOL/Translate.lean",
+      "fingerprint": "0c3f4cf9c6ce35f1f654b04e6e130ffca421bfb4ac3280e42dbee132003614da",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Erdos501.FOL.FolLemmas",
+      "path": "evidence/source-store/31f3aac7d8f94f8598f193489f072d5672f710946080cb48d5abe5a72695758c/Erdos501/FOL/FolLemmas.lean",
+      "sha256": "31f3aac7d8f94f8598f193489f072d5672f710946080cb48d5abe5a72695758c",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Erdos501/FOL/FolLemmas.lean",
+      "fingerprint": "e2ff4762044863e61b4d2fb1cb714055a92ae441073dbeee16c7d015795a4f44",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Erdos501.FOL.Collection",
+      "path": "evidence/source-store/3cc5423a07052d407c29b970066c261ea6dd11767000ae52e9269ff6a5f3312a/Erdos501/FOL/Collection.lean",
+      "sha256": "3cc5423a07052d407c29b970066c261ea6dd11767000ae52e9269ff6a5f3312a",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Erdos501/FOL/Collection.lean",
+      "fingerprint": "5afc35af39b3b9d98b4255df793dfac57a54739257f0b14ef38875278ca6d4bd",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Erdos501.FOL.Axioms",
+      "path": "evidence/source-store/1a360601e06b7a0cb2dff05401afca918d16fd3ebbe59fa26368eeb7e2d4f838/Erdos501/FOL/Axioms.lean",
+      "sha256": "1a360601e06b7a0cb2dff05401afca918d16fd3ebbe59fa26368eeb7e2d4f838",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Erdos501/FOL/Axioms.lean",
+      "fingerprint": "77ba59b3cc31cdd945d39911a45ccb02c2f70abfa8ee3e269e57d3294a4d6cc9",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.CHTranslation",
+      "path": "evidence/source-store/0be34613341b9964f8e4b925fd1d71be1d4658d06cb3c63198dcee519485726f/ClassicismZFC/CHTranslation.lean",
+      "sha256": "0be34613341b9964f8e4b925fd1d71be1d4658d06cb3c63198dcee519485726f",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/CHTranslation.lean",
+      "fingerprint": "4693fa67a5c572b6d20c990be1b178e413858a34f559a076690575bdd6d8a79b",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.RealFieldSentence",
+      "path": "evidence/source-store/49ffff2fce770eba2acdb0cc1cce53da7d2316b6a2d77a90f67cdbcaa380d034/ClassicismZFC/RealFieldSentence.lean",
+      "sha256": "49ffff2fce770eba2acdb0cc1cce53da7d2316b6a2d77a90f67cdbcaa380d034",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/RealFieldSentence.lean",
+      "fingerprint": "87b106e5e0dd69f7ed54b7438e82d9559172fd9cc66d8a78be5d4a0c20750cce",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.SetLaws",
+      "path": "evidence/source-store/fc0bad2bd6973c08d53b9feec965bc6242cc1b2d87b721392ea04c8b33e4736e/ClassicismZFC/SetLaws.lean",
+      "sha256": "fc0bad2bd6973c08d53b9feec965bc6242cc1b2d87b721392ea04c8b33e4736e",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/SetLaws.lean",
+      "fingerprint": "a60e9b25267ed9efff9287ce852ca90d3a3fc1a170f521670339c994b76d833a",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.RealFieldLaws",
+      "path": "evidence/source-store/2363e3140fd69e60bc1c1a915473457791d679b91a1c654c31f7ad445dd10f34/ClassicismZFC/RealFieldLaws.lean",
+      "sha256": "2363e3140fd69e60bc1c1a915473457791d679b91a1c654c31f7ad445dd10f34",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/RealFieldLaws.lean",
+      "fingerprint": "dd82eed98e435bbba649e97d867bb3546334de5d3b707e6280bab3b1cc6cf86a",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.Separation",
+      "path": "evidence/source-store/94fbae623c70c0af8058e2e67f26392a5996dde67a42828b56a5e6c3763200db/ClassicismZFC/Separation.lean",
+      "sha256": "94fbae623c70c0af8058e2e67f26392a5996dde67a42828b56a5e6c3763200db",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/Separation.lean",
+      "fingerprint": "135646d729697012a2bc2a5752d1f5e0e9ad619a34ab8d8b5e98ee62c64612de",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.LeastInductive",
+      "path": "evidence/source-store/a6c9a2d2b04c96209805325cd512d974650a32c33e1a4383400b553b47716681/ClassicismZFC/LeastInductive.lean",
+      "sha256": "a6c9a2d2b04c96209805325cd512d974650a32c33e1a4383400b553b47716681",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/LeastInductive.lean",
+      "fingerprint": "36a585d8bb1c80cfbc127668bfa84674f304c61a7ed852e3a4c30a10c5cf84e7",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.Product",
+      "path": "evidence/source-store/58e331e1953b457d73066874fb70d52e42d2733397e96cf97979d36cbc08686b/ClassicismZFC/Product.lean",
+      "sha256": "58e331e1953b457d73066874fb70d52e42d2733397e96cf97979d36cbc08686b",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/Product.lean",
+      "fingerprint": "8a6b540a635c3b2c3392374dc22323b24aec76d02b72338218edad831e33d61e",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.CHCardinality",
+      "path": "evidence/source-store/fc4c9848f9e11266878344da5dee5da15ed64b9adf0c97416d73d40a12ae78f8/ClassicismZFC/CHCardinality.lean",
+      "sha256": "fc4c9848f9e11266878344da5dee5da15ed64b9adf0c97416d73d40a12ae78f8",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/CHCardinality.lean",
+      "fingerprint": "5f445d944caeaab563a79fcda03bdabfd00b79acd6c1a5c4f24d70e3cdb93890",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.CHCardinalitySchroederBernstein",
+      "path": "evidence/source-store/f51d097f5a475e5a7def07d98f618f4154f66d87cab51dde3633f67d1bdf63ff/ClassicismZFC/CHCardinalitySchroederBernstein.lean",
+      "sha256": "f51d097f5a475e5a7def07d98f618f4154f66d87cab51dde3633f67d1bdf63ff",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/CHCardinalitySchroederBernstein.lean",
+      "fingerprint": "a9f52f16b795cd81b3f60b00df3036196b6894b6a8990bbd6a90fd4ff187d2a0",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.CHCardinalityChoice",
+      "path": "evidence/source-store/6b5bdd3a24471c975eaec158750b16131dfd3f86be61e366d6be9720091be0dc/ClassicismZFC/CHCardinalityChoice.lean",
+      "sha256": "6b5bdd3a24471c975eaec158750b16131dfd3f86be61e366d6be9720091be0dc",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/CHCardinalityChoice.lean",
+      "fingerprint": "d49136bde662b63cc8ce429899380b60e19f315fac7a2c535378885bf06c88db",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.CHFieldTransport",
+      "path": "evidence/source-store/aea27f878e2fa1fa3cbd7c67205f79a1fbbd039680820a52ece92ce969435374/ClassicismZFC/CHFieldTransport.lean",
+      "sha256": "aea27f878e2fa1fa3cbd7c67205f79a1fbbd039680820a52ece92ce969435374",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/CHFieldTransport.lean",
+      "fingerprint": "3fb929f7e3e50bd18fc1ba6bf81f6cf15277d4d9323f31d757a304d2e1e27d93",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.CodedFieldSentence",
+      "path": "evidence/source-store/ce5851f313e5ba80efe96d6cf6db7391a6532c588b4c9386ca0cf2a7776efa6e/ClassicismZFC/CodedFieldSentence.lean",
+      "sha256": "ce5851f313e5ba80efe96d6cf6db7391a6532c588b4c9386ca0cf2a7776efa6e",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/CodedFieldSentence.lean",
+      "fingerprint": "1d31b5d750cb0684c639dbdc722fee9f87b2610fbe234c0d0d4f0b19b37e0a65",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.BooleanWitnesses",
+      "path": "evidence/source-store/783a68a31f10c6032332de8c963c2d704cea808e4c3bd6443bd804c62a1a95fd/ClassicismZFC/BooleanWitnesses.lean",
+      "sha256": "783a68a31f10c6032332de8c963c2d704cea808e4c3bd6443bd804c62a1a95fd",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/BooleanWitnesses.lean",
+      "fingerprint": "1f1d05d1e600c6e4832624ac115003b756bd16b7f5ae70ec25cd2a5715b87c0c",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.Erdos501.OmegaClosed",
+      "path": "evidence/source-store/f4027e1b4f3caafe244bb9409522a066171f5f370829a30898bb707a123d8267/Flypitch4/Erdos501/OmegaClosed.lean",
+      "sha256": "f4027e1b4f3caafe244bb9409522a066171f5f370829a30898bb707a123d8267",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/Erdos501/OmegaClosed.lean",
+      "fingerprint": "6faebac55c9ef0b2a27d02305fb3832df977b5ab289cb11486c4426c03c50e68",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.Erdos501.StdSemantics",
+      "path": "evidence/source-store/2fc5505941ac5e3ead291b3fee8c3868994c104bc52dc4c4599ddabdcc8cb282/Flypitch4/Erdos501/StdSemantics.lean",
+      "sha256": "2fc5505941ac5e3ead291b3fee8c3868994c104bc52dc4c4599ddabdcc8cb282",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/Erdos501/StdSemantics.lean",
+      "fingerprint": "82de97bc5398518ccba39822a8186a545ada40d2697126d34e478776f89f195d",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.Erdos501.RealsInZFSet",
+      "path": "evidence/source-store/7149857542edf7a43283a65c74b449c985624fcf6cb7c9e135ec5ff3a4130391/Flypitch4/Erdos501/RealsInZFSet.lean",
+      "sha256": "7149857542edf7a43283a65c74b449c985624fcf6cb7c9e135ec5ff3a4130391",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/Erdos501/RealsInZFSet.lean",
+      "fingerprint": "cd7c42e6f5c7466e35ba6e4362cae6d2a0cd8feca200e929831d8ab82c9665f6",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.Erdos501.CheckReals",
+      "path": "evidence/source-store/cdd224ab034ea5194a6685b1b74017c2edcba783a96f712dc1b49a89c000af85/Flypitch4/Erdos501/CheckReals.lean",
+      "sha256": "cdd224ab034ea5194a6685b1b74017c2edcba783a96f712dc1b49a89c000af85",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/Erdos501/CheckReals.lean",
+      "fingerprint": "1260db86a29553bedcf8bda87ff193119afafc05a68e29ba2fb6e6cd8229d1f4",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.MeasureAlgebra",
+      "path": "evidence/source-store/1f4111c2b192218a90b9f0c8816942e049e87bb7787e1e4842414810e45ce542/Flypitch4/MeasureAlgebra.lean",
+      "sha256": "1f4111c2b192218a90b9f0c8816942e049e87bb7787e1e4842414810e45ce542",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/MeasureAlgebra.lean",
+      "fingerprint": "7b25669024b556e4a4d2625b3b4056655cdbdb764366b9ddecf4782379419a72",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.RandomAlgebra",
+      "path": "evidence/source-store/11560ef9db171c1f3db5ad7b7914952ae12befe0f582c57b37512d56204ac0c1/Flypitch4/RandomAlgebra.lean",
+      "sha256": "11560ef9db171c1f3db5ad7b7914952ae12befe0f582c57b37512d56204ac0c1",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/RandomAlgebra.lean",
+      "fingerprint": "e6597e4b9e3c56ce429a8c2b296bd3fff452c5b0dfa530370541ceceeff8c513",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.ForcingRandom",
+      "path": "evidence/source-store/ed0aa65c7615c499b00f74c921c6b4bdb745ed7bc101f10072d62cb8c610d725/Flypitch4/ForcingRandom.lean",
+      "sha256": "ed0aa65c7615c499b00f74c921c6b4bdb745ed7bc101f10072d62cb8c610d725",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/ForcingRandom.lean",
+      "fingerprint": "d5ac8621174cd3aa20bde456a42af8b6373175713a1200e8a1457fb8720d0466",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.Erdos501.RandomForcing",
+      "path": "evidence/source-store/357220aaf4c4b95a516b64d12787ef415bf379d02a726f3c05d2a0e0abc09ed8/Flypitch4/Erdos501/RandomForcing.lean",
+      "sha256": "357220aaf4c4b95a516b64d12787ef415bf379d02a726f3c05d2a0e0abc09ed8",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/Erdos501/RandomForcing.lean",
+      "fingerprint": "1aee4c3af5bfff2d326eb698f511d9d5f5ca3e269765c4cc807564591e7dab05",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.Erdos501.BorelNames",
+      "path": "evidence/source-store/612bf2d8b7a94444a3719369e0bef5c79a0a0097655c6e901f6f5b73fd9f41c7/Flypitch4/Erdos501/BorelNames.lean",
+      "sha256": "612bf2d8b7a94444a3719369e0bef5c79a0a0097655c6e901f6f5b73fd9f41c7",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/Erdos501/BorelNames.lean",
+      "fingerprint": "6779ceb3411a6cc556022bc35e8c9799510e0ab65bb55a79dc402c694b9e5632",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Flypitch4.Erdos501.InternalReals",
+      "path": "evidence/source-store/c89cae5e56bd191bfb342f1a2f707357a8d45577e9f4f641d10225d74b8b31e7/Flypitch4/Erdos501/InternalReals.lean",
+      "sha256": "c89cae5e56bd191bfb342f1a2f707357a8d45577e9f4f641d10225d74b8b31e7",
+      "original_path": "research/2026-10-23/coalesced-ch/external/erdos501-218d1c1/Flypitch4/Erdos501/InternalReals.lean",
+      "fingerprint": "8138ca450a7a4c53137e96fe6ab85a121aee5bb297693c02877ca486cdc4dbfc",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.RealFieldForcing",
+      "path": "evidence/source-store/61027ef3b8bf7c84da805deae37f73f15f7ddfe524f17d1bb592713638dd1204/ClassicismZFC/RealFieldForcing.lean",
+      "sha256": "61027ef3b8bf7c84da805deae37f73f15f7ddfe524f17d1bb592713638dd1204",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/RealFieldForcing.lean",
+      "fingerprint": "545cfc20c0cc4b2483a2d4b93662869ccc19d99fd09c734d3d30563bbaeed3ba",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.RealFieldCardinalCoding",
+      "path": "evidence/source-store/20401e1081f1c9b615c148c2f9f2ebe6bfc08161c0030952f4aa2570485bbd4b/ClassicismZFC/RealFieldCardinalCoding.lean",
+      "sha256": "20401e1081f1c9b615c148c2f9f2ebe6bfc08161c0030952f4aa2570485bbd4b",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/RealFieldCardinalCoding.lean",
+      "fingerprint": "16df3e03a50ab14cd3d408949481bba80cb1f5f351295d62c2719f9f76c66c9d",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.CodedFieldForcing",
+      "path": "evidence/source-store/68d492de8a059dd0a1483f6e642fe4ef6c7144e41374100dfad77e9c6cd2dd9e/ClassicismZFC/CodedFieldForcing.lean",
+      "sha256": "68d492de8a059dd0a1483f6e642fe4ef6c7144e41374100dfad77e9c6cd2dd9e",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/CodedFieldForcing.lean",
+      "fingerprint": "942dec816815203568b6bf334fde7c24687d3dabee9773566aa25234164af0e8",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.CHOrdinalDirection",
+      "path": "evidence/source-store/036f1083c3c32fa12b208e13dddf14da8574eb838784c2257a4d982de799a1e9/ClassicismZFC/CHOrdinalDirection.lean",
+      "sha256": "036f1083c3c32fa12b208e13dddf14da8574eb838784c2257a4d982de799a1e9",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/CHOrdinalDirection.lean",
+      "fingerprint": "cd82bd080fd5923976c7d32f579179c5fff5703d42ecc8bf0ab9d7fa15f6c664",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Types",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Types.lean",
+      "sha256": "567828e8f9a707cf635e3b4fb30bc868a419967307613d0686d795d195606eac",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Types.lean",
+      "fingerprint": "f920c6417fb0d73d4b6cb333a5de66a5647023a45396e3a09a0b7e943245c8cf",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Term",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Term.lean",
+      "sha256": "ad5172acbb74eaab9307662408928b80e6ffab62e14df16f2f41c7205de13f69",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Term.lean",
+      "fingerprint": "19fcc526fbf7a5f30c841e2fb11bd4cc6c4c8c77eddfb46e22a81b795035e2d5",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Conversion",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Conversion.lean",
+      "sha256": "c22fe48399811fcb0d71b37206c633749a7285291c62c2e7d786475ea6ae339e",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Conversion.lean",
+      "fingerprint": "98d38a7cbaf85616553560abf68733b885806aebd405d33965c1dc960da57f67",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Derivation",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Derivation.lean",
+      "sha256": "7cc2fd01542014d55e5a4c4a411724db7cdc076462d0de724c3530b0a8a3fc6b",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Derivation.lean",
+      "fingerprint": "061b31ce6eb4dec06fa11b50e1a6c035783c2a4995cd0969cc86efba8ddcaddc",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Axioms",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Axioms.lean",
+      "sha256": "f3dd3b51ef834f46f22e09fe34026f47120a8bc171afb190b5053c443f4a82a7",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Axioms.lean",
+      "fingerprint": "ddbcb4cf3a000255234e36d2ee2916e31b5fdb7a72f348dcefbd8c9d3ca7684a",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Entailment",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Entailment.lean",
+      "sha256": "13f758dbf41a84dda7c2ae7adf6bcb9605ee114ce04dbda0efc5f1c4fbeabb1e",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Entailment.lean",
+      "fingerprint": "f670afd73a6fd66b3870be6129d27860b6752cbea6867b77f897d6c298a0bb17",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.Env",
+      "path": "source/topics/classicism/lean/Classicism/Semantics/Env.lean",
+      "sha256": "ca6f223a2bfe71396b3e21de852057e432cd7b289005cdacc1cc24935358e09d",
+      "original_path": "topics/classicism/lean/Classicism/Semantics/Env.lean",
+      "fingerprint": "7f3e4ffe9d4d890917cec6dec7d2aaf714d1012d59ca370044660890a5a783a3",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.Intensional",
+      "path": "source/topics/classicism/lean/Classicism/Semantics/Intensional.lean",
+      "sha256": "9a58b1dd47b1b527209d1994ed2b9252c85dc012d019d9878c2cbcc58b6019af",
+      "original_path": "topics/classicism/lean/Classicism/Semantics/Intensional.lean",
+      "fingerprint": "8593cbb6df804ccf0133be66641346c848dcdf696fe19f193ac1f2540b3aab12",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.IntensionalSoundness",
+      "path": "source/topics/classicism/lean/Classicism/Semantics/IntensionalSoundness.lean",
+      "sha256": "dc34e26e6baaaf9270c067fb43303dc9a00dbc885b8da02ba1eb7432fe008143",
+      "original_path": "topics/classicism/lean/Classicism/Semantics/IntensionalSoundness.lean",
+      "fingerprint": "c24f4e10110727850d6197c8c7a0914185e630aa68842aab2171a5f7e7f94b5b",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.ChoiceFirstOrder",
+      "path": "source/topics/classicism/lean/Classicism/Models/ChoiceFirstOrder.lean",
+      "sha256": "065c45e11c76add239fb40a601fb4c608aa78d8cad962d9b746e6e73a4334e02",
+      "original_path": "topics/classicism/lean/Classicism/Models/ChoiceFirstOrder.lean",
+      "fingerprint": "0efe31944ef3d085901edb28e1874b841395bcf8fcf42f5c55bc63463477c72a",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.ChoiceFirstOrderTerms",
+      "path": "source/topics/classicism/lean/Classicism/Models/ChoiceFirstOrderTerms.lean",
+      "sha256": "9f0abab17dc77426103c5c49051d9896d315096521441ae822ac9d60d26fc433",
+      "original_path": "topics/classicism/lean/Classicism/Models/ChoiceFirstOrderTerms.lean",
+      "fingerprint": "f0133405f724c5cba93da2ece026b8afc08d51d8119e27324212634732135d87",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.ChoiceFirstOrderSmall",
+      "path": "source/topics/classicism/lean/Classicism/Models/ChoiceFirstOrderSmall.lean",
+      "sha256": "b135aeb7c5f2c82609d58a5209f86754ad01f93c5b651d069b416b70afba8e33",
+      "original_path": "topics/classicism/lean/Classicism/Models/ChoiceFirstOrderSmall.lean",
+      "fingerprint": "2d7b322e14f2a15c442c25044e654d680300b5fb1d34b8fbaea1a8ba98959349",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.TypedRealVocabulary",
+      "path": "evidence/source-store/7231ef03e82bd2287137e03f8c0ce251e6ae02dead101d3b67cf70ea6f212c34/ClassicismZFC/TypedRealVocabulary.lean",
+      "sha256": "7231ef03e82bd2287137e03f8c0ce251e6ae02dead101d3b67cf70ea6f212c34",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/TypedRealVocabulary.lean",
+      "fingerprint": "20f1c7a995f4079ec2cf300e1f395bc81e95da431110d7ace88e8f7db5f2848e",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.SourceFieldSemantics",
+      "path": "evidence/source-store/28287b66aeb3c2d999fb547545bbee1817590167bb6f2b692084bc5586e82b25/ClassicismZFC/SourceFieldSemantics.lean",
+      "sha256": "28287b66aeb3c2d999fb547545bbee1817590167bb6f2b692084bc5586e82b25",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/SourceFieldSemantics.lean",
+      "fingerprint": "2ce10c659015141e4d42d6013c82497d1fb8deb32541d176fc9836100f94d75e",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.SourceFieldAlgebra",
+      "path": "evidence/source-store/c4fdc5ea3f962e3a16874c3bc3fadb5d3f3a6cffd01a58f78ca562112b92f26c/ClassicismZFC/SourceFieldAlgebra.lean",
+      "sha256": "c4fdc5ea3f962e3a16874c3bc3fadb5d3f3a6cffd01a58f78ca562112b92f26c",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/SourceFieldAlgebra.lean",
+      "fingerprint": "2f835e1d28ced943591a7db187893522d716ebc3a9f19d08be0e515d1b73fd42",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.CoalescedInternalSyntax",
+      "path": "evidence/source-store/13cfe22d7aae55e4a0e2cb9269aeae64a800abcd5070e356e544acd5b834b3f4/Classicism/Models/CoalescedInternalSyntax.lean",
+      "sha256": "13cfe22d7aae55e4a0e2cb9269aeae64a800abcd5070e356e544acd5b834b3f4",
+      "original_path": "topics/classicism/lean/Classicism/Models/CoalescedInternalSyntax.lean",
+      "fingerprint": "5411df1a17e8ce04c12663731681f734977c7f58ef596529cad4040857ffe820",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.RawTranslation",
+      "path": "evidence/source-store/db5a2a5d0a2e5b1d0d7a096a37ca5ace3d027d8500761f910efd6b5a703b89e6/ClassicismZFC/RawTranslation.lean",
+      "sha256": "db5a2a5d0a2e5b1d0d7a096a37ca5ace3d027d8500761f910efd6b5a703b89e6",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/RawTranslation.lean",
+      "fingerprint": "5feea721d4b485476c5bbd4d6ff3b83ccecf4deebbd3bbf4cfdbd528a0371b2c",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.CoalescedInternalHierarchy",
+      "path": "evidence/source-store/3ec8d31627c54ab41adc4b15aa981c0dc113b1f77e1267c5292621744ba6ebd0/Classicism/Models/CoalescedInternalHierarchy.lean",
+      "sha256": "3ec8d31627c54ab41adc4b15aa981c0dc113b1f77e1267c5292621744ba6ebd0",
+      "original_path": "topics/classicism/lean/Classicism/Models/CoalescedInternalHierarchy.lean",
+      "fingerprint": "7a5d805bb3f36e25c7d7aaa665a4af483e324bcde64c6067e760539df9b53d6c",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.CoalescedBase",
+      "path": "source/topics/classicism/lean/Classicism/Models/CoalescedBase.lean",
+      "sha256": "ad95516b1b2ac7e8c8433cce7bb6e5aa7f698707d2e6dd4a75b1f8d39f088773",
+      "original_path": "topics/classicism/lean/Classicism/Models/CoalescedBase.lean",
+      "fingerprint": "daa641d083350d094bdf9842cc49ff6dab6dd4cd95db15731e4174909fb5e641",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.CoalescedFirstOrder",
+      "path": "evidence/source-store/a3bdfe0299326d1c4342b1bf470562b06691d0e0fa50ea7a9caa04849a38184e/Classicism/Models/CoalescedFirstOrder.lean",
+      "sha256": "a3bdfe0299326d1c4342b1bf470562b06691d0e0fa50ea7a9caa04849a38184e",
+      "original_path": "topics/classicism/lean/Classicism/Models/CoalescedFirstOrder.lean",
+      "fingerprint": "6b3a60bfb1edcf9dd83dfedc4832cfb3ea057455700b2fd1f433fd5bcb12febc",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.InternalHierarchy",
+      "path": "evidence/source-store/f8204ce697fd171dc5eb207994e0e1293ce5e1a2a9068d705b59a98928fbabe2/ClassicismZFC/InternalHierarchy.lean",
+      "sha256": "f8204ce697fd171dc5eb207994e0e1293ce5e1a2a9068d705b59a98928fbabe2",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/InternalHierarchy.lean",
+      "fingerprint": "e11f7aa7a7378da326633ca36ae28b2170c465dc2e9292092d23af5628b41d66",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.CoalescedInternalRelations",
+      "path": "evidence/source-store/fd2f42e15e18a0ed82e9e5b17dfe284f8e9938c5f2e289f8c10ee78f698497ed/Classicism/Models/CoalescedInternalRelations.lean",
+      "sha256": "fd2f42e15e18a0ed82e9e5b17dfe284f8e9938c5f2e289f8c10ee78f698497ed",
+      "original_path": "topics/classicism/lean/Classicism/Models/CoalescedInternalRelations.lean",
+      "fingerprint": "1cb3c6209a03d23215e1c16dfdbc2d6adfc84f34c3c04597b61046059ea8370f",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.TupleRecoding",
+      "path": "evidence/source-store/596a189dfec7173fa162a632d96da7016a7d03d8024ad268d2eb59e35151a270/ClassicismZFC/TupleRecoding.lean",
+      "sha256": "596a189dfec7173fa162a632d96da7016a7d03d8024ad268d2eb59e35151a270",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/TupleRecoding.lean",
+      "fingerprint": "b60c13d27f1ad614759fec394c1ceaa34d11aa45709d987125d41ab101e46e55",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.TypedReal",
+      "path": "evidence/source-store/68b69a8710037692c83dd62a325c4205fa284705d09086e5e593f01da730897a/ClassicismZFC/TypedReal.lean",
+      "sha256": "68b69a8710037692c83dd62a325c4205fa284705d09086e5e593f01da730897a",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/TypedReal.lean",
+      "fingerprint": "04fea42a8ad421068a6ad7bf9b409f939f7b6ad80f72dc37535120f92b305431",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Core",
+      "path": "source/topics/classicism/lean/Classicism/Core.lean",
+      "sha256": "ed0b1189f3fe3f02ce7011058273c0915bb511e5fd30ae33340e7ae0c4afb81d",
+      "original_path": "topics/classicism/lean/Classicism/Core.lean",
+      "fingerprint": "106263f603fbfb12c1dbffa3c2cf0eea76f524ef90107bbd8cb3da5bc12c1ff6",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Paper",
+      "path": "source/topics/classicism/lean/Classicism/Paper.lean",
+      "sha256": "3348a9c2bf786ef15a9a2a0341dce82e9a419e81a4c7b7486d8c8cba8fbdc895",
+      "original_path": "topics/classicism/lean/Classicism/Paper.lean",
+      "fingerprint": "aaa8b005d16eaf5430deb1709123bd2580dad38978e3ce7d05aa6d7620b865ee",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Equivalence",
+      "path": "source/topics/classicism/lean/Classicism/Equivalence.lean",
+      "sha256": "257006775f36a2eacca652360f7ff8fb9dc403b2b0f4d71ff6a5543e5a939a76",
+      "original_path": "topics/classicism/lean/Classicism/Equivalence.lean",
+      "fingerprint": "c15347e4764c0cd4c37fb83dc17821c459c2f019c71ff77b7dd5418f14ca25fa",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Booleanism",
+      "path": "source/topics/classicism/lean/Classicism/Booleanism.lean",
+      "sha256": "0537132563704170d7ec4dc14755690639a9a784428650fa7bf04067acc0628f",
+      "original_path": "topics/classicism/lean/Classicism/Booleanism.lean",
+      "fingerprint": "f911cf2a5fb044ae79d2a327477c43cb9a7123862daf4f0a13de28cb9b114b0a",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Modal",
+      "path": "source/topics/classicism/lean/Classicism/Modal.lean",
+      "sha256": "7706449a7246e0be0772a33dcda61ab010686bf5bd64c45017425bf39ed0cf42",
+      "original_path": "topics/classicism/lean/Classicism/Modal.lean",
+      "fingerprint": "aeb651c0d0142f7a25017873ee1f4be90965b19e415ec41b66e58440c7c19d55",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Order",
+      "path": "source/topics/classicism/lean/Classicism/Order.lean",
+      "sha256": "4755de0b5eb272e541ce89e84078c4d80c3ae9a332a6910b395c73b78a2b4730",
+      "original_path": "topics/classicism/lean/Classicism/Order.lean",
+      "fingerprint": "9edb507c8661fe6508eaaebb576f8bdc6977fb69bf17a2bf85a5a820dd6dbaa9",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Pointwise",
+      "path": "source/topics/classicism/lean/Classicism/Pointwise.lean",
+      "sha256": "78b858a9d33feb587976879190bdf739afdc0e564c4e6dae5508f8f2c5e15a16",
+      "original_path": "topics/classicism/lean/Classicism/Pointwise.lean",
+      "fingerprint": "729e1d6e9b2ee057cf9887f1f9c08f1b7a8df301e2ab21f010105588f37e548c",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Comprehension",
+      "path": "source/topics/classicism/lean/Classicism/Comprehension.lean",
+      "sha256": "570435f620ec40a8c0f359ce546c26933cf3acfc6e7c8da81fa805170f9ab844",
+      "original_path": "topics/classicism/lean/Classicism/Comprehension.lean",
+      "fingerprint": "a9852412a839671a35e9e0896f46b99a2bde4b234ad60eb3fc2c83031307c89d",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Lattice",
+      "path": "source/topics/classicism/lean/Classicism/Lattice.lean",
+      "sha256": "43231f5d30bab05bc0d11927e1ce09f17ec384875e0aeb1cb72335e36f046070",
+      "original_path": "topics/classicism/lean/Classicism/Lattice.lean",
+      "fingerprint": "c368689dd8447ea18e0e6f2ec1e4b7ad2c3c7edda0966c048821360eb1c8a18a",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Principles.Base",
+      "path": "source/topics/classicism/lean/Classicism/Principles/Base.lean",
+      "sha256": "d0c930dafb5decf6e747b5a05215cbff099d4efd9e69c607f01a54d5c5a7b96a",
+      "original_path": "topics/classicism/lean/Classicism/Principles/Base.lean",
+      "fingerprint": "ab4f732bc7258e157d3fc29f141f434ac9ab5938638881f7155a997f80a7f0e8",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Principles.Coarse",
+      "path": "source/topics/classicism/lean/Classicism/Principles/Coarse.lean",
+      "sha256": "5c3aedc0a4117e7c214d186b384c42b8da6a17906fb7a76a75cb625f85b0a9b2",
+      "original_path": "topics/classicism/lean/Classicism/Principles/Coarse.lean",
+      "fingerprint": "76eab9f7358a051bbdddec8ad1a302e1345c81f4ab97286478089a63d093bcb6",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Principles.Extensionality",
+      "path": "source/topics/classicism/lean/Classicism/Principles/Extensionality.lean",
+      "sha256": "aa1929fee457845f79c2511b4df86462660ed1c68c3f85b5af8636a88a8f15e8",
+      "original_path": "topics/classicism/lean/Classicism/Principles/Extensionality.lean",
+      "fingerprint": "9025e1c4813cf45bef21ac78a21d16336be645f0884d4d1649bd254136f00691",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Cardinality",
+      "path": "source/topics/classicism/lean/Classicism/Cardinality.lean",
+      "sha256": "5e627927356fc561dfd5bfacd9935c558c7760678df56c0158820a7e8626703f",
+      "original_path": "topics/classicism/lean/Classicism/Cardinality.lean",
+      "fingerprint": "d354798138ba7b815909ac80ca8a657201589e1a2eb24574d3b10fa89800aad0",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Principles.Lattice",
+      "path": "source/topics/classicism/lean/Classicism/Principles/Lattice.lean",
+      "sha256": "95a7c96bd3f2c0b131b59412ee36c288b9f12a772075e8f6ec83d8177f6ffd60",
+      "original_path": "topics/classicism/lean/Classicism/Principles/Lattice.lean",
+      "fingerprint": "3d83865391146079266ebe776437ddc36702b3cb58e6696f765f58d1d6251481",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Principles.Instances",
+      "path": "source/topics/classicism/lean/Classicism/Principles/Instances.lean",
+      "sha256": "53835a72c249e8f75246e6b42331d205b8bec73a8c03bc2d1ad48db37a88e47e",
+      "original_path": "topics/classicism/lean/Classicism/Principles/Instances.lean",
+      "fingerprint": "dfc5c55bc0561b807cb84a4071560636c26decf4c17c1ebe1a0dea22de341f72",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Principles.Comprehension",
+      "path": "source/topics/classicism/lean/Classicism/Principles/Comprehension.lean",
+      "sha256": "7d47cbb2fcbf444bd1e708ceeb9d007c1be955b41346b2adf14f5613ec7e2537",
+      "original_path": "topics/classicism/lean/Classicism/Principles/Comprehension.lean",
+      "fingerprint": "0806ac413a479f8402a50834da9de38bd9d240531e2f4939100d2c6c36522648",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Principles.Choice",
+      "path": "source/topics/classicism/lean/Classicism/Principles/Choice.lean",
+      "sha256": "a8f7e35f1a11805edc2b116b6af002bd5b1d0708b93aaea16781cff519687319",
+      "original_path": "topics/classicism/lean/Classicism/Principles/Choice.lean",
+      "fingerprint": "878f21beb4ceff306504037b182cbc9f7550e03d97906b3a0944faf0a5feda3a",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Principles.Infinity",
+      "path": "source/topics/classicism/lean/Classicism/Principles/Infinity.lean",
+      "sha256": "9c901565490f92a5a6b18ac1cf690c756bb5984e105e885614b87dcc00db027f",
+      "original_path": "topics/classicism/lean/Classicism/Principles/Infinity.lean",
+      "fingerprint": "23a54de0b017227984238e63c2e0f9dbcf161c882b26c0b5b3dc96df6b80cf05",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Principles.Schematic",
+      "path": "source/topics/classicism/lean/Classicism/Principles/Schematic.lean",
+      "sha256": "f6e0fe85d4c7f95deb80b98e19cf10e292ac98d87a5c2caec2ddcb9920e677ee",
+      "original_path": "topics/classicism/lean/Classicism/Principles/Schematic.lean",
+      "fingerprint": "d27de11d8d474df8c930f8cd67247ee53d91a5a5e599871db5fee77a22faab75",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Principles",
+      "path": "source/topics/classicism/lean/Classicism/Principles.lean",
+      "sha256": "747fc5fbde92a7dd1432aaaafee00437398594ae06dbc8ec2040690fae443049",
+      "original_path": "topics/classicism/lean/Classicism/Principles.lean",
+      "fingerprint": "90ac24ea6a08c605e49932af32624ff01f216ad7e7d49d18939526b521630593",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Records.Coarse",
+      "path": "source/topics/classicism/lean/Classicism/Results/Records/Coarse.lean",
+      "sha256": "a3a6e0bc0120eecda1097efc51cd29c0d95daa15b81535f36d7dc6dd1d434882",
+      "original_path": "topics/classicism/lean/Classicism/Results/Records/Coarse.lean",
+      "fingerprint": "e503d7f7fb5c97d55b42b9373b4ca421a21053cb14bf9476e0461e2517861b3a",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Records.Extensionality",
+      "path": "source/topics/classicism/lean/Classicism/Results/Records/Extensionality.lean",
+      "sha256": "0a1d58485d6e8b0b84d68d973027dd621394ee0c4d1579f08746f10558f0a34a",
+      "original_path": "topics/classicism/lean/Classicism/Results/Records/Extensionality.lean",
+      "fingerprint": "5278848a501c9d394d348e1f8e2a7c67647e2d7517c11a61cfcec6c8cd945595",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Records.Comprehension",
+      "path": "source/topics/classicism/lean/Classicism/Results/Records/Comprehension.lean",
+      "sha256": "552f1c10d3b02f5cae87392141616f5de2200655837e07ba9b367e7bacfd77d7",
+      "original_path": "topics/classicism/lean/Classicism/Results/Records/Comprehension.lean",
+      "fingerprint": "bf24680b17f62ba015aced980ce9229c0f35e07fded08e07d507318d0eb7541f",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Records.Lattice",
+      "path": "source/topics/classicism/lean/Classicism/Results/Records/Lattice.lean",
+      "sha256": "e5adae1ce94a42f477aa629e4f5b739aa78bf1f7a3abf785d591f4d3a62690f4",
+      "original_path": "topics/classicism/lean/Classicism/Results/Records/Lattice.lean",
+      "fingerprint": "72ccff7b7955700d02d2036f14c48af1c8a09aabed9290c029cbb8e4211ac2f0",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Records.Choice",
+      "path": "source/topics/classicism/lean/Classicism/Results/Records/Choice.lean",
+      "sha256": "28a17b666e917900329a015b2bf9cf3a6848a811762a6c862f6ef58135bf77ca",
+      "original_path": "topics/classicism/lean/Classicism/Results/Records/Choice.lean",
+      "fingerprint": "4dff099fffd7658cf1c6336160d3987ad42ad255fdc890012a3c6bbd7a4f57b4",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Records.C5",
+      "path": "source/topics/classicism/lean/Classicism/Results/Records/C5.lean",
+      "sha256": "670269847531e12553369ae4105b0926f8613883f8f709b94cdc88917eb49b7c",
+      "original_path": "topics/classicism/lean/Classicism/Results/Records/C5.lean",
+      "fingerprint": "d72b91823c9c4110b92ff5a60a905501ea3c6c8f0444ef454251c50aa2ddbc05",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.AnalyticStructures",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AnalyticStructures.lean",
+      "sha256": "3e5835420d0d0f501af362c8b52225a94574492b06596dbf6e7301478709394c",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/AnalyticStructures.lean",
+      "fingerprint": "8a98048ca4caf658de3938f4e9e9fc0e8f367730165e8180abb7cb7d4a137aea",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.AnalyticRigidification",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AnalyticRigidification.lean",
+      "sha256": "d2d3dac8cd0b0a6796d1cc619e9147a783faf6d76dd75170a7d2f66df3ace815",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/AnalyticRigidification.lean",
+      "fingerprint": "765aa0ebd7353b926b53a0d73ddc2adbf0d3e62c82f6a76b3b6df8bf6ed228e7",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Tools.Check",
+      "path": "source/topics/classicism/lean/Classicism/Tools/Check.lean",
+      "sha256": "20fdb6525e533a835b5d561bce9529e553de2a3fc1b4f6416235da7f52da6cdf",
+      "original_path": "topics/classicism/lean/Classicism/Tools/Check.lean",
+      "fingerprint": "776b3300da237e0e891286dca86ac835286aa01dbcafb42feeb627614b644a1e",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Tools.TypeSystem",
+      "path": "source/topics/classicism/lean/Classicism/Tools/TypeSystem.lean",
+      "sha256": "3db785bca90f4e2961bce8e7bde2d6bbd418e9e4c67ec99acae2251cb89e88e1",
+      "original_path": "topics/classicism/lean/Classicism/Tools/TypeSystem.lean",
+      "fingerprint": "7d43a0f804e634b04dfb5d6048b2d32c7608b6aedab9feebbc25cdb158a9a6a8",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.Denotation",
+      "path": "source/topics/classicism/lean/Classicism/Semantics/Denotation.lean",
+      "sha256": "2103000e1da2b0ce5413fa71820b7cd579bf562b7dd50d704e058b5cda0c7925",
+      "original_path": "topics/classicism/lean/Classicism/Semantics/Denotation.lean",
+      "fingerprint": "47123ccfe2c8a40639f380eaad25c1f45203bef28fc73689bea70efe1e17a4aa",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Identities",
+      "path": "source/topics/classicism/lean/Classicism/Identities.lean",
+      "sha256": "3629e17eb7ebf28d47f0d1a2450886bec05b39bf73ff52eff99a88a12579c3b3",
+      "original_path": "topics/classicism/lean/Classicism/Identities.lean",
+      "fingerprint": "bd7da817f31150b2fce200b73d4dc1c0f233449954575d6c092805356a7c39e3",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Strict.Axiomatization",
+      "path": "source/topics/classicism/lean/Classicism/Strict/Axiomatization.lean",
+      "sha256": "fa26c38979d08d22db2c14d999bd3c5454170e00e72f2781cf2cfa28910ed533",
+      "original_path": "topics/classicism/lean/Classicism/Strict/Axiomatization.lean",
+      "fingerprint": "75d10f5cda5e4490d3c071b0df90ab6e993e1f8b49ef44c23385bbf4384cd1e4",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Strict.Algebra",
+      "path": "source/topics/classicism/lean/Classicism/Strict/Algebra.lean",
+      "sha256": "d4cb80885b688ee323e6f59b084568746247f751986fe2ea7efd53cb4e6969a9",
+      "original_path": "topics/classicism/lean/Classicism/Strict/Algebra.lean",
+      "fingerprint": "3b91a9c00818b2ab297ac98f7f9ef7d1297ea71c3211927256dde821960cec74",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Strict.Vocabulary",
+      "path": "source/topics/classicism/lean/Classicism/Strict/Vocabulary.lean",
+      "sha256": "29fad160fd838d15256273fae84dce3cb5381cbd876e7c6ed882874da295b747",
+      "original_path": "topics/classicism/lean/Classicism/Strict/Vocabulary.lean",
+      "fingerprint": "dbfb4eade20ad9ccca5971fbbf339a69ddfd38ba620005e9fda008b18a4769b3",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Strict.Tautology",
+      "path": "source/topics/classicism/lean/Classicism/Strict/Tautology.lean",
+      "sha256": "edc88bb68c00443a3c309ad01da9c31e1325bc8d63bf0a2ba9392c43eebbadfe",
+      "original_path": "topics/classicism/lean/Classicism/Strict/Tautology.lean",
+      "fingerprint": "e6416ae6f402e7a857dd4e72529ee86528267661adc73dffcc1d3c113beba1b6",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Strict.Quantifier",
+      "path": "source/topics/classicism/lean/Classicism/Strict/Quantifier.lean",
+      "sha256": "688f1a0f560a30f12fd4b4b6663fb7583fac374d9bd7591a55943bbb1b4695fa",
+      "original_path": "topics/classicism/lean/Classicism/Strict/Quantifier.lean",
+      "fingerprint": "1d77e224df5545bebf5ee4b686f7320a1a7e4b0d8133a9a477beb402f41ba4a8",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Strict.Rules",
+      "path": "source/topics/classicism/lean/Classicism/Strict/Rules.lean",
+      "sha256": "496f3272610ad5dac44de1f90bd394d38098d44f5c8e51fcc30e835e415a8609",
+      "original_path": "topics/classicism/lean/Classicism/Strict/Rules.lean",
+      "fingerprint": "210698fe0c53557f2ce0d2191ea61a830703dd894f4a23317c286200b9d22c06",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Strict.Primitives",
+      "path": "source/topics/classicism/lean/Classicism/Strict/Primitives.lean",
+      "sha256": "b0875be460cec24411c21b6f5929f9c4f68485e6600317f1530adb0a20abd69b",
+      "original_path": "topics/classicism/lean/Classicism/Strict/Primitives.lean",
+      "fingerprint": "b838d093e66eb7e33b71039ae15168a069ca3b6899d9e9628ed698b19207208d",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Strict.Transform",
+      "path": "source/topics/classicism/lean/Classicism/Strict/Transform.lean",
+      "sha256": "477d7ea0d6a8c0e438bdf1fdb29c68e79512216094ae8c8c5851b47133afe3ae",
+      "original_path": "topics/classicism/lean/Classicism/Strict/Transform.lean",
+      "fingerprint": "edbee0763bf36f5f496a5401c2abd79e18f009a8126625af55c6274a919abce8",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Strict.Mirror",
+      "path": "source/topics/classicism/lean/Classicism/Strict/Mirror.lean",
+      "sha256": "c9aa802c99fbaea769cb8a88af075fc434b3a9073bd9187f9d00b0e6e82451fe",
+      "original_path": "topics/classicism/lean/Classicism/Strict/Mirror.lean",
+      "fingerprint": "2fea6fdaa69890ff9f271ec775a3965a463fca7420bb45b3651ff573593a701c",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.Relational",
+      "path": "source/topics/classicism/lean/Classicism/Semantics/Relational.lean",
+      "sha256": "b9424788860fff653c01277d1d1e1e2aa257b0905ac02b0879bb6029a1c5c32a",
+      "original_path": "topics/classicism/lean/Classicism/Semantics/Relational.lean",
+      "fingerprint": "2c859cefe02fed00fabd827c711476aa72983f9b0a67ae3404a315e8d3578f4b",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Tools.Quote",
+      "path": "source/topics/classicism/lean/Classicism/Tools/Quote.lean",
+      "sha256": "9539d77cb6894442171628c10fd8f4e1142fa8f7f99e80fac7dc1681c7eb96fe",
+      "original_path": "topics/classicism/lean/Classicism/Tools/Quote.lean",
+      "fingerprint": "d4220ad0869558cc8b1912a64517dfa6def53f00ff6a4c8a6975e86b062c8a6f",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Normalize",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Normalize.lean",
+      "sha256": "1ba19ae01872f7d4357876e2e4c47e4f675cf6b733be98c1947838a1f0c94c1b",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Normalize.lean",
+      "fingerprint": "fbf0db0b6d9b8b4ab8a2144e85b96ccb9e7913e2c49e0cdd37ddd06fd80ff5bc",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Tools.Translate",
+      "path": "source/topics/classicism/lean/Classicism/Tools/Translate.lean",
+      "sha256": "471e8a2a7ab42f306e986af1320f0bd7f4d77dd073241e3f77234bf0fc5d6ba7",
+      "original_path": "topics/classicism/lean/Classicism/Tools/Translate.lean",
+      "fingerprint": "85864cdb936fb71e2851a6bbcd0ce58b9bc1ef8bc76041dcf6b1cf70f2585f94",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.AnalyticStructuresCertificates",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AnalyticStructuresCertificates.lean",
+      "sha256": "1b2b7ff1f3bf0ab18f2a7d0b275ac6cbfc2625ad48435d5184310604d07d4085",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/AnalyticStructuresCertificates.lean",
+      "fingerprint": "6a057bb974379e2e00ef3a38349914bda1f07fc8fa7ceaf71fa1be4e1ef2d47f",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.AnalyticSettlementCertificates",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AnalyticSettlementCertificates.lean",
+      "sha256": "29e6babff66d64c1d46ee12f6d057db372a0e6e4826c7f8735452756bf4a6757",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/AnalyticSettlementCertificates.lean",
+      "fingerprint": "5011750909c0f5653082e8bb7ee9d0b960878ac2557dc487da71c48b9a6d09fb",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.AnalyticTransportCertificates",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AnalyticTransportCertificates.lean",
+      "sha256": "964f4956ec7f874866c7bba6efdc96fdd55e93e2c92fce2840686422e6d527d9",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/AnalyticTransportCertificates.lean",
+      "fingerprint": "b6071bcdfc81c06960baf672583ceee8dc9f09cfeb0a422d3b1e60aad9c0506d",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.AnalyticFieldCertificates",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AnalyticFieldCertificates.lean",
+      "sha256": "8781ef3eca7efb232d6708c6107ba7aefb4c8f1ca14a3a3e1e4aaea0a840c9da",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/AnalyticFieldCertificates.lean",
+      "fingerprint": "242443909b655d3c4d3f006815720b62e8265cfbe38d3bbe57dc82400be52194",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.AnalyticRealCertificates",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AnalyticRealCertificates.lean",
+      "sha256": "a394691028a52352ac36a52a27f5f593155887a46f8afb62277202ad6683d714",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/AnalyticRealCertificates.lean",
+      "fingerprint": "b8e7aa05fa032de94555a1467540ca3ba554df645b2e742ac7ce86d0456a89af",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.AnalyticPossibleCertificates",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AnalyticPossibleCertificates.lean",
+      "sha256": "adeefcd2618c175962684397089dbead055ffe605516f8d0138357ef6a575e26",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/AnalyticPossibleCertificates.lean",
+      "fingerprint": "34c30687fc7293a9ddac7b024abe4884ef51affb20156860d607b6203538eacb",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.AnalyticRigidificationCertificates",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AnalyticRigidificationCertificates.lean",
+      "sha256": "eba6f6f2bab47b4268a4210fb1304c5a6db8eb3f6968b362087da5fe6f7e0169",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/AnalyticRigidificationCertificates.lean",
+      "fingerprint": "9231ac337726534ce6e098ba06c5c18cfe32c4744a4eda7dd37d5f091329aac0",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.AnalyticReuseQuotation",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AnalyticReuseQuotation.lean",
+      "sha256": "cdf945c2a1f4c5c18dbda5aa84424effc57fe1993cfbb5608117e333729b1145",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/AnalyticReuseQuotation.lean",
+      "fingerprint": "086a0d5d24f2ffafff66f66eacef6f9f5a9d489f069bc47a89001a857058387c",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.AnalyticHasRealTerm",
+      "path": "evidence/source-store/7ac5663107859cdcdbbc4d5ccd06dcb790715094d45d13fd55330a3ce3acf2d2/Classicism/Results/Research/AnalyticHasRealTerm.lean",
+      "sha256": "7ac5663107859cdcdbbc4d5ccd06dcb790715094d45d13fd55330a3ce3acf2d2",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/AnalyticHasRealTerm.lean",
+      "fingerprint": "60ae82df52a3c5a509ccedefa2f41bafc86f987440aecdf52355bf2125213acc",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Blocks",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Blocks.lean",
+      "sha256": "77b4ef8fadb3646edd15d25854bac994a6eabb8bb1f51347c9dd00fce3a6ac5d",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Blocks.lean",
+      "fingerprint": "8f619648c1c389b21f3ef2a40567f20862d30330a0620404a743ae921b4637a2",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Vectorize",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Vectorize.lean",
+      "sha256": "b57548b87b70c0e9df1c0fd48a1f7b7d67d4828ab4d4286e164e7f32c4716817",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Vectorize.lean",
+      "fingerprint": "c57e9e1a546872e4dd5521dde4e9e8200b4a7493a6908e4ba2bacd5c6ba6d27a",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.VectorizeDerivable",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/VectorizeDerivable.lean",
+      "sha256": "17508c58aef3e3ad7b121f20349045d76c5e238a164cdaf96c2400255c492824",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/VectorizeDerivable.lean",
+      "fingerprint": "bd67d51fc6c088c18eaad5508eb23b8f2044a69e4884d6a45bdd37a678e66df0",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Tools.Schema",
+      "path": "source/topics/classicism/lean/Classicism/Tools/Schema.lean",
+      "sha256": "809bf8692601598451770b6422375de71cddf6e3d4cacc651b3905119fe40d2c",
+      "original_path": "topics/classicism/lean/Classicism/Tools/Schema.lean",
+      "fingerprint": "25ff9dc1de7945d2755a9b5a2c698f54770a56ca5ccf8640229f3aa88244ca3e",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Records.Base",
+      "path": "source/topics/classicism/lean/Classicism/Results/Records/Base.lean",
+      "sha256": "43794a516d90505e3c5b48267ddfe110b8e482b881cc1300f2e2ee182c2fc2db",
+      "original_path": "topics/classicism/lean/Classicism/Results/Records/Base.lean",
+      "fingerprint": "a89655f6db873d5961080ab8978b6aa6901afd05866b4d1c8fe1ad5f87f5b98a",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Records.Infinity",
+      "path": "source/topics/classicism/lean/Classicism/Results/Records/Infinity.lean",
+      "sha256": "dd622a8252d4bc861a68bf939b25198d39db51c119e89911e096b0523a3a1ba0",
+      "original_path": "topics/classicism/lean/Classicism/Results/Records/Infinity.lean",
+      "fingerprint": "401d152fd3baf0e0d0be4bcaa09a9535076c062e05496362922d7409a9388684",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Records",
+      "path": "source/topics/classicism/lean/Classicism/Results/Records.lean",
+      "sha256": "6d6d399aab1e7f30eff9a5d385635ae311228e4faf03ce36ad39d5a1d22eede6",
+      "original_path": "topics/classicism/lean/Classicism/Results/Records.lean",
+      "fingerprint": "f7561c09837d9f950ff8fccdefe6ad21a6605a9596f3f113c23466b1f9b42d7a",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Certified.Quoted",
+      "path": "source/topics/classicism/lean/Classicism/Certified/Quoted.lean",
+      "sha256": "4f5e539a45bf30cf758effcd38c59330b95160a09aa57b08130226c491896447",
+      "original_path": "topics/classicism/lean/Classicism/Certified/Quoted.lean",
+      "fingerprint": "1e283621c0adaf00cb814e51025789426076fdd410e904743f932dbf91b558d1",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.ClosedTypes",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/ClosedTypes.lean",
+      "sha256": "07ea7d86a0ec8faf8da218c04b9ab46c0b3b941c5772729340de705750227968",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/ClosedTypes.lean",
+      "fingerprint": "7c976b5b1656d60de70508fea43275956cf95917fab784ef3eb9d627e6c2c7fa",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Certified.Schemas",
+      "path": "source/topics/classicism/lean/Classicism/Certified/Schemas.lean",
+      "sha256": "5473826bbece5136406e9aca792c6eb38e93117d142bce275d5a084803ad4a38",
+      "original_path": "topics/classicism/lean/Classicism/Certified/Schemas.lean",
+      "fingerprint": "3ae397512adfb86dd4ad499f6383c4a85ad1cfa2a97adbfeb6d27ad2b63e1bfc",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.SentenceSchemas",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/SentenceSchemas.lean",
+      "sha256": "4956cc5f79d94287bab644bff62b9eade4401a602a61e469ed0260a0007c9541",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/SentenceSchemas.lean",
+      "fingerprint": "f29a7f058ee358e87f7c7844f03852c780119c0f21e999cc1d95af231702d159",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Pure",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Pure.lean",
+      "sha256": "34937a7fc2d4c62a99863e9a0a161f56dfe2ca06b5f5d304ea8d2ad13f7c41a2",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Pure.lean",
+      "fingerprint": "b3ed039a88f2c75849fe66eba343cc1eff7adfe692c2bb4643481e01f5de899d",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.SentenceSchemas.PossibilityDistinctness",
+      "path": "source/topics/classicism/lean/Classicism/Results/SentenceSchemas/PossibilityDistinctness.lean",
+      "sha256": "03ac113c45b4540b10050dba68e9dbd24e1df14dbe09e9021084486b5a4b6f00",
+      "original_path": "topics/classicism/lean/Classicism/Results/SentenceSchemas/PossibilityDistinctness.lean",
+      "fingerprint": "f30a0f460eaf71b1731d46506fe245b002afea6da893b717d5baf11397233e38",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Sentences",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Sentences.lean",
+      "sha256": "9d1511399b998922713f3d2bccea49249aaeba3a9de7f0f0b0b8153161adbd52",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Sentences.lean",
+      "fingerprint": "0145edf7be709542a1ad29e003cbe6162672ba9cc3611a2e64dd1fc6442fe1e6",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.IntensionalFacts",
+      "path": "source/topics/classicism/lean/Classicism/Semantics/IntensionalFacts.lean",
+      "sha256": "6ef820a85da8854668976cab35fb79bccb5cb0f729fe42f94e55bb472bbbc5c1",
+      "original_path": "topics/classicism/lean/Classicism/Semantics/IntensionalFacts.lean",
+      "fingerprint": "23c7b85d0ef7eecef9517406492e8aa8ad6193a79e8a2003acdc89ed3a031be1",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.CoalescedCHModal",
+      "path": "evidence/source-store/09f85a4f6f6b159952810e39f6f99382c41b27098937e4a038d0926e3bbb60e1/Classicism/Results/Research/CoalescedCHModal.lean",
+      "sha256": "09f85a4f6f6b159952810e39f6f99382c41b27098937e4a038d0926e3bbb60e1",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/CoalescedCHModal.lean",
+      "fingerprint": "e65dca09902a8ddcbcf86e6249b00c23b41c198f77fc7ff69e16054f757ee09a",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.CoalescedCHVocabulary",
+      "path": "evidence/source-store/94050c245e43f94c27ce72f24a92e91cfaa504b90b0fdf764900a8c8476e5d21/Classicism/Results/Research/CoalescedCHVocabulary.lean",
+      "sha256": "94050c245e43f94c27ce72f24a92e91cfaa504b90b0fdf764900a8c8476e5d21",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/CoalescedCHVocabulary.lean",
+      "fingerprint": "364aeb1febf83930a1ffa8a319237be2afdf019c6e7a55cb6c8d4a6d9b7a0c3b",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.CoalescedCHVocabularyCertificates",
+      "path": "evidence/source-store/2d7665db74fc26cca05fb1d5572340ef09c0c5845c7148aa2e3802e290c4580c/Classicism/Results/Research/CoalescedCHVocabularyCertificates.lean",
+      "sha256": "2d7665db74fc26cca05fb1d5572340ef09c0c5845c7148aa2e3802e290c4580c",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/CoalescedCHVocabularyCertificates.lean",
+      "fingerprint": "2fe1f7c4538a2abdf7efda46c4efde3d49607a81b9be7ba70676360957336d99",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.CoalescedCHMaximalism",
+      "path": "evidence/source-store/25fe7996370299a950edb1f9cbfeb438ee1ab0bcc0eb17850772cb94b7615585/Classicism/Results/Research/CoalescedCHMaximalism.lean",
+      "sha256": "25fe7996370299a950edb1f9cbfeb438ee1ab0bcc0eb17850772cb94b7615585",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/CoalescedCHMaximalism.lean",
+      "fingerprint": "049720522246ff65549b2eb2899069d236bd59ac12452b608dba008830244314",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.TypedRealQuotation",
+      "path": "evidence/source-store/3c5af8231268676ae3e55ccb3d83d3c0e17b71ccde42b1ff33602f7f57f5eb2b/ClassicismZFC/TypedRealQuotation.lean",
+      "sha256": "3c5af8231268676ae3e55ccb3d83d3c0e17b71ccde42b1ff33602f7f57f5eb2b",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/TypedRealQuotation.lean",
+      "fingerprint": "d5e1990ce8a18b58fa3f8b50e405c009a55ee81a1107225ce33811e97528f949",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.TypedRealEndpoint",
+      "path": "evidence/source-store/cfd611f8e68d94944bf78339db9911a87dcb6de702234d14e4998ab5e89d0263/ClassicismZFC/TypedRealEndpoint.lean",
+      "sha256": "cfd611f8e68d94944bf78339db9911a87dcb6de702234d14e4998ab5e89d0263",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/TypedRealEndpoint.lean",
+      "fingerprint": "fb4f09ea9df1825c97ad78983c273c8b5026f580716b9a36d7416985a7eee664",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.BinaryRecoding",
+      "path": "evidence/source-store/5f70e8978dc2bbb5697d872849d2dab1d820e4ceb6587f31ff8343dbe022b022/ClassicismZFC/BinaryRecoding.lean",
+      "sha256": "5f70e8978dc2bbb5697d872849d2dab1d820e4ceb6587f31ff8343dbe022b022",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/BinaryRecoding.lean",
+      "fingerprint": "8e0ba4d9538297fdc0d62b6d6149b8da4c73240dbe21bc5d6f59f67e5ab461da",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.TypedCHTransport",
+      "path": "evidence/source-store/5131169e4fe74df6c5fa7a7bced927b4c0b584389acb879e05fd72a27d82bfcd/ClassicismZFC/TypedCHTransport.lean",
+      "sha256": "5131169e4fe74df6c5fa7a7bced927b4c0b584389acb879e05fd72a27d82bfcd",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/TypedCHTransport.lean",
+      "fingerprint": "cf248f6cd94898d89ff9d611bdbe75a2b942a4aab84a5c662e375de6a40f0425",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.CountableOrdinalForcing",
+      "path": "evidence/source-store/06bd5d3dbc58237ff8c2aadd5317241f9e15304c4fc8c5b5dcf3de91360cbc05/ClassicismZFC/CountableOrdinalForcing.lean",
+      "sha256": "06bd5d3dbc58237ff8c2aadd5317241f9e15304c4fc8c5b5dcf3de91360cbc05",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/CountableOrdinalForcing.lean",
+      "fingerprint": "f2ee53c2c984e05aaa5abc8b1987c0eeba8b41a4bb3c54e8bc3ad00132c6e2af",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.CountableInitialSegments",
+      "path": "evidence/source-store/65034739d5d1da2b48179ba01c716c5e335742ad8cf4475331f03df8c73c39f5/ClassicismZFC/CountableInitialSegments.lean",
+      "sha256": "65034739d5d1da2b48179ba01c716c5e335742ad8cf4475331f03df8c73c39f5",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/CountableInitialSegments.lean",
+      "fingerprint": "ec9d473e18b43d98d241699ff1eb70898d0566735b4cd5f7b3ebd39f4d0050c5",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.OrdinalInitialSegments",
+      "path": "evidence/source-store/ea13434926327438c27b457208009b49bf0562f0e6797f4261f3379ceae05141/ClassicismZFC/OrdinalInitialSegments.lean",
+      "sha256": "ea13434926327438c27b457208009b49bf0562f0e6797f4261f3379ceae05141",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/OrdinalInitialSegments.lean",
+      "fingerprint": "c5347f62d2b3fb3ff924f4e6d929fb010fe769856d9713dae3728c9f3f8ef6a9",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.SelectedFieldForcing",
+      "path": "evidence/source-store/6c368402496a3589c86de49ec2da146a36cf01a58669eddfa25c717b6e58bf05/ClassicismZFC/SelectedFieldForcing.lean",
+      "sha256": "6c368402496a3589c86de49ec2da146a36cf01a58669eddfa25c717b6e58bf05",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/SelectedFieldForcing.lean",
+      "fingerprint": "ff22a401f5e02037cab984981abfd384dd01615c50c4a6a2cb7824d8db073c2a",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.CoalescedLeaf",
+      "path": "evidence/source-store/01edcc7d90ffc1bd5918419614551f24179958c3d845ad59beb538bafb8b5336/Classicism/Models/CoalescedLeaf.lean",
+      "sha256": "01edcc7d90ffc1bd5918419614551f24179958c3d845ad59beb538bafb8b5336",
+      "original_path": "topics/classicism/lean/Classicism/Models/CoalescedLeaf.lean",
+      "fingerprint": "da4d1bae0a47ed4f7b34068e38e4f44695b4fe7efafe1ee77871852521104ed8",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.CoalescedModel",
+      "path": "evidence/source-store/39b7ae616ebd2edc45a0f349dc3963e38fbe6c4712a9a040fabad37632679901/Classicism/Models/CoalescedModel.lean",
+      "sha256": "39b7ae616ebd2edc45a0f349dc3963e38fbe6c4712a9a040fabad37632679901",
+      "original_path": "topics/classicism/lean/Classicism/Models/CoalescedModel.lean",
+      "fingerprint": "c70ae890b11d8ddabfd8752e4b9661d1bc7a570816cdb473563d33a83196179d",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.CoalescedCHModel",
+      "path": "evidence/source-store/fc3406e48ef453b723d224a73b7792b7c76c5cb31ee0c643554255d1f6d6b855/Classicism/Results/Research/CoalescedCHModel.lean",
+      "sha256": "fc3406e48ef453b723d224a73b7792b7c76c5cb31ee0c643554255d1f6d6b855",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/CoalescedCHModel.lean",
+      "fingerprint": "5551720811b525d2a8e812c331a9c4f2b7e8ea246ffa207b13cd18c1b172a5c8",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC.OppositeCHComponents",
+      "path": "evidence/source-store/c7714f6dc4ca108b82e91b395dc9e76c79d43a98dbf0905054afd2c672ab4642/ClassicismZFC/OppositeCHComponents.lean",
+      "sha256": "c7714f6dc4ca108b82e91b395dc9e76c79d43a98dbf0905054afd2c672ab4642",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC/OppositeCHComponents.lean",
+      "fingerprint": "58c26030465cf44896b53fe5851fa05b76067f6a3209259521fec026b5d66cd8",
+      "module_exit_code": 0
+    },
+    {
+      "module": "ClassicismZFC",
+      "path": "evidence/source-store/eaabbb29ffc90679eedb4b3396144abe44d349f66a2cd8fb90cc498607e3b749/ClassicismZFC.lean",
+      "sha256": "eaabbb29ffc90679eedb4b3396144abe44d349f66a2cd8fb90cc498607e3b749",
+      "original_path": "research/2026-10-23/coalesced-ch/zfc-bridge/ClassicismZFC.lean",
+      "fingerprint": "9a7c7e0a3dbb27cbb9474f781ec9b4c911cdeb1ba12c16517b4a9a0949bab30c",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.ChoiceFirstOrderCountable",
+      "path": "source/topics/classicism/lean/Classicism/Models/ChoiceFirstOrderCountable.lean",
+      "sha256": "dcc93732849ee65565fd421ffbbae5607bd1bef715d54d64f84886635b63b18d",
+      "original_path": "topics/classicism/lean/Classicism/Models/ChoiceFirstOrderCountable.lean",
+      "fingerprint": "65888db0f204e3c9353d579985bf4b5e5b9d54fedff912f5cb76f72449bd6194",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.ChoiceFirstOrderMathlib",
+      "path": "source/topics/classicism/lean/Classicism/Models/ChoiceFirstOrderMathlib.lean",
+      "sha256": "885b5ddf7c9681ea74f36d8423b91d9f777afec223314d8ae721c9bdd76c94af",
+      "original_path": "topics/classicism/lean/Classicism/Models/ChoiceFirstOrderMathlib.lean",
+      "fingerprint": "ee3844f784d85c1eee1aa0629d434a87ab15be0bc4d971ea7975c5bee7b7c64b",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.ChoiceFirstOrderRecovery",
+      "path": "source/topics/classicism/lean/Classicism/Models/ChoiceFirstOrderRecovery.lean",
+      "sha256": "075c8440d3e810da09b0f2e9a6dc3494a80ba6d29798b07a1adde47d37cd0dac",
+      "original_path": "topics/classicism/lean/Classicism/Models/ChoiceFirstOrderRecovery.lean",
+      "fingerprint": "e4a2601cf461286626629431b414e14f1bdc1790ce06fc36a739ff8c1134b3b9",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.ChoiceFirstOrderAxiomTheory",
+      "path": "evidence/source-store/d917a0a0bf845c254b8abbe7831bb07f02e23579ac131160dec9f8472f5abaf9/Classicism/Models/ChoiceFirstOrderAxiomTheory.lean",
+      "sha256": "d917a0a0bf845c254b8abbe7831bb07f02e23579ac131160dec9f8472f5abaf9",
+      "original_path": "topics/classicism/lean/Classicism/Models/ChoiceFirstOrderAxiomTheory.lean",
+      "fingerprint": "c3d0532ec9b048f008ab0a9b2a6269160492f7e8eb188730de4e6fb5fbca834d",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.CoalescedCHFirstOrder",
+      "path": "evidence/source-store/d2f74468b4e1a453f5f47267d55b864c422a7273c4c8661098bf0f4666fc2cf6/Classicism/Results/Research/CoalescedCHFirstOrder.lean",
+      "sha256": "d2f74468b4e1a453f5f47267d55b864c422a7273c4c8661098bf0f4666fc2cf6",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/CoalescedCHFirstOrder.lean",
+      "fingerprint": "44d26b40931834a7b4fdbfb9a20aeaf5a422a56c23a053c8fabe316b832d645d",
+      "module_exit_code": 0
+    },
+    {
+      "module": "CoalescedCHExpandedFinalAudit",
+      "path": "evidence/source-store/e1005ff2d97e1454e4965a1f1b9c2f784c3cf04fc55fd896036b8382de15bd24/CoalescedCHExpandedFinalAudit.lean",
+      "sha256": "e1005ff2d97e1454e4965a1f1b9c2f784c3cf04fc55fd896036b8382de15bd24",
+      "original_path": "research/2026-10-22/lean-formalization/integration-checks/CoalescedCHExpandedFinalAudit.lean",
+      "fingerprint": "a8744aacbeb63229a08d812782657eaed842e941ae9ee69a7fb5df3653544280",
+      "module_exit_code": 0
+    }
+  ],
+  "logs": [
+    {
+      "module": "CoalescedCHExpandedFinalAudit",
+      "path": "evidence/certificates/coalesced-ch-expanded/CoalescedCHExpandedFinalAudit.log",
+      "sha256": "c61a3b6188026cbd66eb27b8aee42e9e8e50911294dc4ae3a7ed65ad78380c2e",
+      "origin": "research/2026-10-22/lean-formalization/logs/runs/20261024T065137766782Z-70acb329/CoalescedCHExpandedFinalAudit.log"
+    }
+  ],
+  "principal_reports": [
+    {
+      "declaration": "ClassicismZFC.OppositeCHComponents.positive_component",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ClassicismZFC.OppositeCHComponents.negative_component",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ClassicismZFC.OppositeCHComponents.opposite_components",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ClassicismZFC.OppositeCHComponents.coalesced_countermodel",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ClassicismZFC.OppositeCHComponents.consistent_opposite_witnesses",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ClassicismZFC.OppositeCHComponents.maximalism_with_CH_noncontingency_inconsistent",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ClassicismZFC.OppositeCHComponents.maximalism_with_CH_noncontingency_schema_inconsistent",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Meta.Research.CoalescedCH.FirstOrderTransfer.component_of_model",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Meta.Research.CoalescedCH.FirstOrderTransfer.component_of_satisfiable",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Meta.Research.CoalescedCH.FirstOrderTransfer.consistent_of_model",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Meta.Research.CoalescedCH.FirstOrderTransfer.consistent_of_satisfiable",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Meta.Research.CoalescedCH.FirstOrderTransfer.countermodel_of_models",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Meta.Research.CoalescedCH.FirstOrderTransfer.countermodel_of_satisfiable",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Meta.Research.CoalescedCH.FirstOrderTransfer.maximalism_inconsistent_of_models",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Meta.Research.CoalescedCH.FirstOrderTransfer.maximalism_inconsistent_of_satisfiable",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Meta.Research.CoalescedCH.FirstOrderTransfer.maximalism_schema_inconsistent_of_satisfiable",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ClassicismZFC.SelectedFieldForcing.positive_real_witnesses",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ClassicismZFC.CodedFieldForcing.negative_cardinal_witnesses",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ClassicismZFC.InternalHierarchy.component_isModel",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ClassicismZFC.TypedReal.component_hasReal",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ClassicismZFC.TypedCHTransport.naturalCode_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ClassicismZFC.TypedCHTransport.structuralCH_iff",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ClassicismZFC.TypedCHTransport.component_hasRealCH",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ClassicismZFC.TypedCHTransport.component_hasRealNotCH",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "result_entries": [
+    "CH-COALESCED",
+    "MAX-CH"
+  ],
+  "scope": {
+    "ambient_construction": "OppositeCHComponents constructs actual one-world pure-signature C components with inhabited domains and the original opposite structural-CH witnesses at type e. Its coalesced countermodel satisfies boxed Barcan at every type and fails the original CH-noncontingency sentence at e.",
+    "ambient_metatheory": "The external Flypitch forcing/completeness development is used in Lean ambient universe metatheory. Its ordinary-model endpoints have no explicit Con(ZFC) premise. No finitistic proof of a relative-consistency implication has been supplied; adding an unused Con(ZFC) premise would not supply one.",
+    "conditional_transfer": "FirstOrderTransfer assumes models or satisfiability of its explicitly defined witnessTheory, namely AxiomTheory.theory plus the translated pure sentence. The opposite-CH countermodel and Max applications there retain both such hypotheses. It does not by itself establish that these theories are satisfiable from Con(ZFC).",
+    "maximalism": "Every listed inconsistency conclusion includes Maximalism together with the specified CH-noncontingency instance or schema. None concludes that Maximalism alone is inconsistent.",
+    "typing": "The ambient component endpoints specialize to type e. Conditional FirstOrderTransfer is parameterized by sigma; its Max conclusions additionally require sigma.Closed.",
+    "models": "No external standardness, well-foundedness or transitivity of extracted arbitrary first-order membership models is claimed. Internal leastness, admitted subsets and actual internal graphs supply the relevant semantics.",
+    "metalogic": "Lean classical axioms used by the external construction are metatheoretic dependencies, not additional object-language principles of C."
+  },
+  "scope_clarifications": [
+    "The ambient construction discharges the opposite-component existence premises: actual inhabited one-world pure C models satisfy the original quoted real-structure CH and not-CH sentences at type e.",
+    "The constructed coalesced model satisfies C and boxed Barcan at every type and fails the original type-e CH-noncontingency sentence. This receipt does not silently add all further rigidity/well-ordering verdicts from ordinary prose.",
+    "Actual internal field, natural-code and structural-CH correspondence are proved bridge checkpoints, not assumed interfaces.",
+    "The first-order models are ordinary membership models; no transitivity, external well-foundedness or omega-standardness is assumed or concluded.",
+    "The ambient Lean universe metatheory supplies the imported forcing/completeness constructions. This is not a finitistic reduction of Con(ZFC) and has no explicit Con(ZFC) premise.",
+    "Both inconsistency endpoints include pure Maximalism together with CH noncontingency; no inconsistency of Maximalism alone.",
+    "The conditional FirstOrderTransfer endpoints retain their explicit witness-theory model/satisfiability hypotheses, and closed-type guards on Max conclusions.",
+    "All reported axioms are ordinary Lean metatheory, not added object-language Choice or Extensionality assumptions.",
+    "No database verification badges were changed and no publication checkout was edited."
+  ],
+  "acceptance_path": "evidence/certificates/coalesced-ch-expanded/acceptance.json",
+  "acceptance_sha256": "0fb2f406792b734247bdd558f259d559091465b3e59ede02a9c45dbf1f8454be",
+  "acceptance_original_sha256": "ab0f46e52f986fe84c45a513354470d2b7cbddf65d7154a0a4cd98b33554f805",
+  "supporting_manifests": [
+    {
+      "path": "evidence/certificates/coalesced-ch-expanded/shared-cache-provenance-manifest.json",
+      "sha256": "4ee83c0da142eb33e59ffec89486a13c735a16124215e1933b6e779cc1786dfb",
+      "original_sha256": "e2701d2e93a9b3b7c1a069fbd2da05aa58b31f9bbe8e0c769d179d54504c4771",
+      "origin": "research/2026-10-22/lean-formalization/checks/20261024T065603293997Z-39c0801b.json"
+    }
+  ],
+  "third_party_notices": [
+    {
+      "path": "evidence/licenses/erdos501-218d1c1/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "evidence/licenses/erdos501-218d1c1/NOTICE",
+      "sha256": "5cf8aefedc9f7ba28d0cdd753cd9e9e444a46404ee21485c838307ceca0e45ad"
+    }
+  ],
+  "verification": "Exact captured sources, successful module records, 24 principal reports, and four byte-identical later cache replacements authenticated without invoking Lean. The independent acceptance separately verifies artifacts and dependency fingerprints. No acceptance of the later failed whole run is inferred."
+}

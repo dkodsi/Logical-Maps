@@ -1,0 +1,11 @@
+import Classicism.Results.Research.FullLogicalObserversFiniteQualification
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Translate
+
+#classicism_audit Classicism.Results.Research.FullLogicalObserversFiniteQualification
+#classicism_types_audit Classicism.Results.Research.FullLogicalObserversFiniteQualification
+#classicism_derive_audit Classicism.Results.Research.FullLogicalObserversFiniteQualification
+
+#print axioms Classicism.Research.FullLogicalObservers.FiniteQualification.qualified_necessary_separation.derivable
+#print axioms Classicism.Research.FullLogicalObservers.FiniteQualification.c5_actuality_necessary_singleton_atomicity.derivable

@@ -1,0 +1,1407 @@
+{
+  "schema_version": 1,
+  "audited_at_utc": "2026-10-24T03:00:17.063642+00:00",
+  "status": "original_conditional_CH_target_accepted_with_clean_principal_reports",
+  "audit_method": "Independent read-only SHA256 check of the requested target import closure only, matched against current sources, immutable source snapshots, cache artifacts and saved successful target checks. Exact audit namespace resolution compared to all 25 log declarations. No compiler invocation.",
+  "batch": {
+    "run_id": "20261024T025642051890Z-4cb0774f",
+    "manifest": "research/2026-10-22/lean-formalization/checks/20261024T025642051890Z-4cb0774f.json",
+    "manifest_sha256": "b36526769a6ba5f23f4d552c6e580691dca3fed4373b2a0761f96f872693d433",
+    "overall_state": "failed",
+    "overall_complete": false,
+    "overall_exit_code": 1,
+    "runner_reported_current_sources_match": null,
+    "failed_targets": [
+      {
+        "module": "Classicism.Results.Research.FullLogicalObserversFiniteSchemas",
+        "exit_code": 1,
+        "log": "logs/runs/20261024T025642051890Z-4cb0774f/Classicism_Results_Research_FullLogicalObserversFiniteSchemas.log"
+      }
+    ],
+    "note": "The whole requested batch failed because a later, separate operator target failed. No whole-run PASS is claimed. The CH audit and its complete import closure each have exit zero and are independently current."
+  },
+  "accepted_target": {
+    "module": "CoalescedCHOriginalAudit",
+    "source": "research/2026-10-22/lean-formalization/integration-checks/CoalescedCHOriginalAudit.lean",
+    "source_sha256": "ed622b9d68ac27a4c62d9c3afdb1cafe59a41daafb987747e5a50d53ddbad54f",
+    "exit_code": 0,
+    "log": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/CoalescedCHOriginalAudit.log",
+    "log_sha256": "17abb5f1746ab898231bf80a480459d65f4903116fbdf984b65d7069c3d1b048",
+    "artifact_sha256": "bb6fc6485702d828cc00a806926b9b037127d7813c2fe6f1fd494eab39717769",
+    "principal_reports": [
+      {
+        "declaration": "Classicism.Meta.Intensional.Coalesced.left_sem",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Intensional.Coalesced.right_sem",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Intensional.Coalesced.holds_left",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Intensional.Coalesced.holds_right",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Intensional.Coalesced.isModel",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Intensional.Coalesced.holds_bf",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Intensional.Coalesced.holds_box_bf",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Intensional.Coalesced.one_hasSingletons",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Intensional.Coalesced.hasSingletons",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Intensional.Coalesced.holds_atomicity",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Intensional.Coalesced.holds_box_atomicity",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Intensional.Premodel.holds_atomicity_of_singletons",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Intensional.Premodel.holds_box_atomicity_of_singletons",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Intensional.CoalescedProjection.weakInextensible_iff_images",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Intensional.CoalescedProjection.weakRigid_iff_images",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Intensional.CoalescedProjection.exists_weakRigid_iff_internal_images",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Intensional.CoalescedProjection.left_cylinder_admissible",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Intensional.CoalescedProjection.right_cylinder_admissible",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Intensional.CoalescedProjection.exists_weakRigid_left",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Intensional.CoalescedProjection.exists_weakRigid_right",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Research.CoalescedCH.consistent_witnesses_of_components",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Research.CoalescedCH.coalesced_countermodel",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Research.CoalescedCH.maximalism_inconsistent_of_components",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Research.CoalescedCH.maximalism_schema_inconsistent_of_components",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "Classicism.Meta.Research.CoalescedCH.coalesced_box_barcan_countermodel",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "expected_principals": 25,
+    "present_principals": 25,
+    "sorryAx": false
+  },
+  "target_closure": {
+    "total_local_modules_including_audit": 84,
+    "dependency_modules_excluding_audit": 83,
+    "all_exit_zero": true,
+    "current_sources_match_snapshots_and_manifest": true,
+    "all_artifacts_match": true,
+    "sources": [
+      {
+        "module": "CoalescedCHOriginalAudit",
+        "path": "research/2026-10-22/lean-formalization/integration-checks/CoalescedCHOriginalAudit.lean",
+        "sha256": "ed622b9d68ac27a4c62d9c3afdb1cafe59a41daafb987747e5a50d53ddbad54f",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/CoalescedCHOriginalAudit.lean",
+        "snapshot_sha256": "ed622b9d68ac27a4c62d9c3afdb1cafe59a41daafb987747e5a50d53ddbad54f"
+      },
+      {
+        "module": "Classicism.Models.CoalescedSingletons",
+        "path": "topics/classicism/lean/Classicism/Models/CoalescedSingletons.lean",
+        "sha256": "a6c7c15071c5e582c2768e214f4783a824a7e43ceb9267ff4815b77f41b067db",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Models/CoalescedSingletons.lean",
+        "snapshot_sha256": "a6c7c15071c5e582c2768e214f4783a824a7e43ceb9267ff4815b77f41b067db"
+      },
+      {
+        "module": "Classicism.Models.CoalescedModel",
+        "path": "topics/classicism/lean/Classicism/Models/CoalescedModel.lean",
+        "sha256": "39b7ae616ebd2edc45a0f349dc3963e38fbe6c4712a9a040fabad37632679901",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Models/CoalescedModel.lean",
+        "snapshot_sha256": "39b7ae616ebd2edc45a0f349dc3963e38fbe6c4712a9a040fabad37632679901"
+      },
+      {
+        "module": "Classicism.Models.CoalescedLeaf",
+        "path": "topics/classicism/lean/Classicism/Models/CoalescedLeaf.lean",
+        "sha256": "01edcc7d90ffc1bd5918419614551f24179958c3d845ad59beb538bafb8b5336",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Models/CoalescedLeaf.lean",
+        "snapshot_sha256": "01edcc7d90ffc1bd5918419614551f24179958c3d845ad59beb538bafb8b5336"
+      },
+      {
+        "module": "Classicism.Models.CoalescedBase",
+        "path": "topics/classicism/lean/Classicism/Models/CoalescedBase.lean",
+        "sha256": "ad95516b1b2ac7e8c8433cce7bb6e5aa7f698707d2e6dd4a75b1f8d39f088773",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Models/CoalescedBase.lean",
+        "snapshot_sha256": "ad95516b1b2ac7e8c8433cce7bb6e5aa7f698707d2e6dd4a75b1f8d39f088773"
+      },
+      {
+        "module": "Classicism.Semantics.Intensional",
+        "path": "topics/classicism/lean/Classicism/Semantics/Intensional.lean",
+        "sha256": "9a58b1dd47b1b527209d1994ed2b9252c85dc012d019d9878c2cbcc58b6019af",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Semantics/Intensional.lean",
+        "snapshot_sha256": "9a58b1dd47b1b527209d1994ed2b9252c85dc012d019d9878c2cbcc58b6019af"
+      },
+      {
+        "module": "Classicism.Syntax.Entailment",
+        "path": "topics/classicism/lean/Classicism/Syntax/Entailment.lean",
+        "sha256": "13f758dbf41a84dda7c2ae7adf6bcb9605ee114ce04dbda0efc5f1c4fbeabb1e",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Syntax/Entailment.lean",
+        "snapshot_sha256": "13f758dbf41a84dda7c2ae7adf6bcb9605ee114ce04dbda0efc5f1c4fbeabb1e"
+      },
+      {
+        "module": "Classicism.Syntax.Axioms",
+        "path": "topics/classicism/lean/Classicism/Syntax/Axioms.lean",
+        "sha256": "f3dd3b51ef834f46f22e09fe34026f47120a8bc171afb190b5053c443f4a82a7",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Syntax/Axioms.lean",
+        "snapshot_sha256": "f3dd3b51ef834f46f22e09fe34026f47120a8bc171afb190b5053c443f4a82a7"
+      },
+      {
+        "module": "Classicism.Syntax.Derivation",
+        "path": "topics/classicism/lean/Classicism/Syntax/Derivation.lean",
+        "sha256": "7cc2fd01542014d55e5a4c4a411724db7cdc076462d0de724c3530b0a8a3fc6b",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Syntax/Derivation.lean",
+        "snapshot_sha256": "7cc2fd01542014d55e5a4c4a411724db7cdc076462d0de724c3530b0a8a3fc6b"
+      },
+      {
+        "module": "Classicism.Syntax.Conversion",
+        "path": "topics/classicism/lean/Classicism/Syntax/Conversion.lean",
+        "sha256": "c22fe48399811fcb0d71b37206c633749a7285291c62c2e7d786475ea6ae339e",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Syntax/Conversion.lean",
+        "snapshot_sha256": "c22fe48399811fcb0d71b37206c633749a7285291c62c2e7d786475ea6ae339e"
+      },
+      {
+        "module": "Classicism.Syntax.Term",
+        "path": "topics/classicism/lean/Classicism/Syntax/Term.lean",
+        "sha256": "ad5172acbb74eaab9307662408928b80e6ffab62e14df16f2f41c7205de13f69",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Syntax/Term.lean",
+        "snapshot_sha256": "ad5172acbb74eaab9307662408928b80e6ffab62e14df16f2f41c7205de13f69"
+      },
+      {
+        "module": "Classicism.Syntax.Types",
+        "path": "topics/classicism/lean/Classicism/Syntax/Types.lean",
+        "sha256": "567828e8f9a707cf635e3b4fb30bc868a419967307613d0686d795d195606eac",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Syntax/Types.lean",
+        "snapshot_sha256": "567828e8f9a707cf635e3b4fb30bc868a419967307613d0686d795d195606eac"
+      },
+      {
+        "module": "Classicism.Semantics.Env",
+        "path": "topics/classicism/lean/Classicism/Semantics/Env.lean",
+        "sha256": "ca6f223a2bfe71396b3e21de852057e432cd7b289005cdacc1cc24935358e09d",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Semantics/Env.lean",
+        "snapshot_sha256": "ca6f223a2bfe71396b3e21de852057e432cd7b289005cdacc1cc24935358e09d"
+      },
+      {
+        "module": "Classicism.Semantics.IntensionalSoundness",
+        "path": "topics/classicism/lean/Classicism/Semantics/IntensionalSoundness.lean",
+        "sha256": "dc34e26e6baaaf9270c067fb43303dc9a00dbc885b8da02ba1eb7432fe008143",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Semantics/IntensionalSoundness.lean",
+        "snapshot_sha256": "dc34e26e6baaaf9270c067fb43303dc9a00dbc885b8da02ba1eb7432fe008143"
+      },
+      {
+        "module": "Classicism.Semantics.IntensionalFacts",
+        "path": "topics/classicism/lean/Classicism/Semantics/IntensionalFacts.lean",
+        "sha256": "6ef820a85da8854668976cab35fb79bccb5cb0f729fe42f94e55bb472bbbc5c1",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Semantics/IntensionalFacts.lean",
+        "snapshot_sha256": "6ef820a85da8854668976cab35fb79bccb5cb0f729fe42f94e55bb472bbbc5c1"
+      },
+      {
+        "module": "Classicism.Syntax.Sentences",
+        "path": "topics/classicism/lean/Classicism/Syntax/Sentences.lean",
+        "sha256": "9d1511399b998922713f3d2bccea49249aaeba3a9de7f0f0b0b8153161adbd52",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Syntax/Sentences.lean",
+        "snapshot_sha256": "9d1511399b998922713f3d2bccea49249aaeba3a9de7f0f0b0b8153161adbd52"
+      },
+      {
+        "module": "Classicism.Semantics.SingletonAtomicity",
+        "path": "topics/classicism/lean/Classicism/Semantics/SingletonAtomicity.lean",
+        "sha256": "51347681e5278c3728964efb31c5d905999be294286f26bc4ae0a09407095839",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Semantics/SingletonAtomicity.lean",
+        "snapshot_sha256": "51347681e5278c3728964efb31c5d905999be294286f26bc4ae0a09407095839"
+      },
+      {
+        "module": "Classicism.Semantics.FullModels",
+        "path": "topics/classicism/lean/Classicism/Semantics/FullModels.lean",
+        "sha256": "4d2d82d33d3a72e196cc4fd0ff0ef4c6675154dd334d23dd97edeba8563c6a74",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Semantics/FullModels.lean",
+        "snapshot_sha256": "4d2d82d33d3a72e196cc4fd0ff0ef4c6675154dd334d23dd97edeba8563c6a74"
+      },
+      {
+        "module": "Classicism.Semantics.IntensionalTheory",
+        "path": "topics/classicism/lean/Classicism/Semantics/IntensionalTheory.lean",
+        "sha256": "99bec918ee24851e7a1beb3482e53f1362c262e0928a670c1f7c30cde5135988",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Semantics/IntensionalTheory.lean",
+        "snapshot_sha256": "99bec918ee24851e7a1beb3482e53f1362c262e0928a670c1f7c30cde5135988"
+      },
+      {
+        "module": "Classicism.Syntax.ClosedTypes",
+        "path": "topics/classicism/lean/Classicism/Syntax/ClosedTypes.lean",
+        "sha256": "07ea7d86a0ec8faf8da218c04b9ab46c0b3b941c5772729340de705750227968",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Syntax/ClosedTypes.lean",
+        "snapshot_sha256": "07ea7d86a0ec8faf8da218c04b9ab46c0b3b941c5772729340de705750227968"
+      },
+      {
+        "module": "Classicism.Syntax.Pure",
+        "path": "topics/classicism/lean/Classicism/Syntax/Pure.lean",
+        "sha256": "34937a7fc2d4c62a99863e9a0a161f56dfe2ca06b5f5d304ea8d2ad13f7c41a2",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Syntax/Pure.lean",
+        "snapshot_sha256": "34937a7fc2d4c62a99863e9a0a161f56dfe2ca06b5f5d304ea8d2ad13f7c41a2"
+      },
+      {
+        "module": "Classicism.Syntax.Conservativity",
+        "path": "topics/classicism/lean/Classicism/Syntax/Conservativity.lean",
+        "sha256": "9f5aba4cb5b54944a6486b4f4b50f37328245c0e3d246c401859b1d7eb5ff4bc",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Syntax/Conservativity.lean",
+        "snapshot_sha256": "9f5aba4cb5b54944a6486b4f4b50f37328245c0e3d246c401859b1d7eb5ff4bc"
+      },
+      {
+        "module": "Classicism.Syntax.SentenceSchemas",
+        "path": "topics/classicism/lean/Classicism/Syntax/SentenceSchemas.lean",
+        "sha256": "4956cc5f79d94287bab644bff62b9eade4401a602a61e469ed0260a0007c9541",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Syntax/SentenceSchemas.lean",
+        "snapshot_sha256": "4956cc5f79d94287bab644bff62b9eade4401a602a61e469ed0260a0007c9541"
+      },
+      {
+        "module": "Classicism.Semantics.IntensionalProperties",
+        "path": "topics/classicism/lean/Classicism/Semantics/IntensionalProperties.lean",
+        "sha256": "d19b0a0eae6b030dd7371406d3ff601f029cce89f959238a356cb0f0ec92f81a",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Semantics/IntensionalProperties.lean",
+        "snapshot_sha256": "d19b0a0eae6b030dd7371406d3ff601f029cce89f959238a356cb0f0ec92f81a"
+      },
+      {
+        "module": "Classicism.Certified.Schemas",
+        "path": "topics/classicism/lean/Classicism/Certified/Schemas.lean",
+        "sha256": "5473826bbece5136406e9aca792c6eb38e93117d142bce275d5a084803ad4a38",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Certified/Schemas.lean",
+        "snapshot_sha256": "5473826bbece5136406e9aca792c6eb38e93117d142bce275d5a084803ad4a38"
+      },
+      {
+        "module": "Classicism.Tools.Schema",
+        "path": "topics/classicism/lean/Classicism/Tools/Schema.lean",
+        "sha256": "809bf8692601598451770b6422375de71cddf6e3d4cacc651b3905119fe40d2c",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Tools/Schema.lean",
+        "snapshot_sha256": "809bf8692601598451770b6422375de71cddf6e3d4cacc651b3905119fe40d2c"
+      },
+      {
+        "module": "Classicism.Tools.Translate",
+        "path": "topics/classicism/lean/Classicism/Tools/Translate.lean",
+        "sha256": "471e8a2a7ab42f306e986af1320f0bd7f4d77dd073241e3f77234bf0fc5d6ba7",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Tools/Translate.lean",
+        "snapshot_sha256": "471e8a2a7ab42f306e986af1320f0bd7f4d77dd073241e3f77234bf0fc5d6ba7"
+      },
+      {
+        "module": "Classicism.Tools.Quote",
+        "path": "topics/classicism/lean/Classicism/Tools/Quote.lean",
+        "sha256": "9539d77cb6894442171628c10fd8f4e1142fa8f7f99e80fac7dc1681c7eb96fe",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Tools/Quote.lean",
+        "snapshot_sha256": "9539d77cb6894442171628c10fd8f4e1142fa8f7f99e80fac7dc1681c7eb96fe"
+      },
+      {
+        "module": "Classicism.Semantics.Relational",
+        "path": "topics/classicism/lean/Classicism/Semantics/Relational.lean",
+        "sha256": "b9424788860fff653c01277d1d1e1e2aa257b0905ac02b0879bb6029a1c5c32a",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Semantics/Relational.lean",
+        "snapshot_sha256": "b9424788860fff653c01277d1d1e1e2aa257b0905ac02b0879bb6029a1c5c32a"
+      },
+      {
+        "module": "Classicism.Semantics.Denotation",
+        "path": "topics/classicism/lean/Classicism/Semantics/Denotation.lean",
+        "sha256": "2103000e1da2b0ce5413fa71820b7cd579bf562b7dd50d704e058b5cda0c7925",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Semantics/Denotation.lean",
+        "snapshot_sha256": "2103000e1da2b0ce5413fa71820b7cd579bf562b7dd50d704e058b5cda0c7925"
+      },
+      {
+        "module": "Classicism.Strict.Mirror",
+        "path": "topics/classicism/lean/Classicism/Strict/Mirror.lean",
+        "sha256": "c9aa802c99fbaea769cb8a88af075fc434b3a9073bd9187f9d00b0e6e82451fe",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Strict/Mirror.lean",
+        "snapshot_sha256": "c9aa802c99fbaea769cb8a88af075fc434b3a9073bd9187f9d00b0e6e82451fe"
+      },
+      {
+        "module": "Classicism.Strict.Transform",
+        "path": "topics/classicism/lean/Classicism/Strict/Transform.lean",
+        "sha256": "477d7ea0d6a8c0e438bdf1fdb29c68e79512216094ae8c8c5851b47133afe3ae",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Strict/Transform.lean",
+        "snapshot_sha256": "477d7ea0d6a8c0e438bdf1fdb29c68e79512216094ae8c8c5851b47133afe3ae"
+      },
+      {
+        "module": "Classicism.Strict.Primitives",
+        "path": "topics/classicism/lean/Classicism/Strict/Primitives.lean",
+        "sha256": "b0875be460cec24411c21b6f5929f9c4f68485e6600317f1530adb0a20abd69b",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Strict/Primitives.lean",
+        "snapshot_sha256": "b0875be460cec24411c21b6f5929f9c4f68485e6600317f1530adb0a20abd69b"
+      },
+      {
+        "module": "Classicism.Strict.Rules",
+        "path": "topics/classicism/lean/Classicism/Strict/Rules.lean",
+        "sha256": "496f3272610ad5dac44de1f90bd394d38098d44f5c8e51fcc30e835e415a8609",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Strict/Rules.lean",
+        "snapshot_sha256": "496f3272610ad5dac44de1f90bd394d38098d44f5c8e51fcc30e835e415a8609"
+      },
+      {
+        "module": "Classicism.Strict.Quantifier",
+        "path": "topics/classicism/lean/Classicism/Strict/Quantifier.lean",
+        "sha256": "688f1a0f560a30f12fd4b4b6663fb7583fac374d9bd7591a55943bbb1b4695fa",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Strict/Quantifier.lean",
+        "snapshot_sha256": "688f1a0f560a30f12fd4b4b6663fb7583fac374d9bd7591a55943bbb1b4695fa"
+      },
+      {
+        "module": "Classicism.Strict.Tautology",
+        "path": "topics/classicism/lean/Classicism/Strict/Tautology.lean",
+        "sha256": "edc88bb68c00443a3c309ad01da9c31e1325bc8d63bf0a2ba9392c43eebbadfe",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Strict/Tautology.lean",
+        "snapshot_sha256": "edc88bb68c00443a3c309ad01da9c31e1325bc8d63bf0a2ba9392c43eebbadfe"
+      },
+      {
+        "module": "Classicism.Strict.Vocabulary",
+        "path": "topics/classicism/lean/Classicism/Strict/Vocabulary.lean",
+        "sha256": "29fad160fd838d15256273fae84dce3cb5381cbd876e7c6ed882874da295b747",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Strict/Vocabulary.lean",
+        "snapshot_sha256": "29fad160fd838d15256273fae84dce3cb5381cbd876e7c6ed882874da295b747"
+      },
+      {
+        "module": "Classicism.Strict.Algebra",
+        "path": "topics/classicism/lean/Classicism/Strict/Algebra.lean",
+        "sha256": "d4cb80885b688ee323e6f59b084568746247f751986fe2ea7efd53cb4e6969a9",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Strict/Algebra.lean",
+        "snapshot_sha256": "d4cb80885b688ee323e6f59b084568746247f751986fe2ea7efd53cb4e6969a9"
+      },
+      {
+        "module": "Classicism.Strict.Axiomatization",
+        "path": "topics/classicism/lean/Classicism/Strict/Axiomatization.lean",
+        "sha256": "fa26c38979d08d22db2c14d999bd3c5454170e00e72f2781cf2cfa28910ed533",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Strict/Axiomatization.lean",
+        "snapshot_sha256": "fa26c38979d08d22db2c14d999bd3c5454170e00e72f2781cf2cfa28910ed533"
+      },
+      {
+        "module": "Classicism.Identities",
+        "path": "topics/classicism/lean/Classicism/Identities.lean",
+        "sha256": "3629e17eb7ebf28d47f0d1a2450886bec05b39bf73ff52eff99a88a12579c3b3",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Identities.lean",
+        "snapshot_sha256": "3629e17eb7ebf28d47f0d1a2450886bec05b39bf73ff52eff99a88a12579c3b3"
+      },
+      {
+        "module": "Classicism.Booleanism",
+        "path": "topics/classicism/lean/Classicism/Booleanism.lean",
+        "sha256": "0537132563704170d7ec4dc14755690639a9a784428650fa7bf04067acc0628f",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Booleanism.lean",
+        "snapshot_sha256": "0537132563704170d7ec4dc14755690639a9a784428650fa7bf04067acc0628f"
+      },
+      {
+        "module": "Classicism.Equivalence",
+        "path": "topics/classicism/lean/Classicism/Equivalence.lean",
+        "sha256": "257006775f36a2eacca652360f7ff8fb9dc403b2b0f4d71ff6a5543e5a939a76",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Equivalence.lean",
+        "snapshot_sha256": "257006775f36a2eacca652360f7ff8fb9dc403b2b0f4d71ff6a5543e5a939a76"
+      },
+      {
+        "module": "Classicism.Core",
+        "path": "topics/classicism/lean/Classicism/Core.lean",
+        "sha256": "ed0b1189f3fe3f02ce7011058273c0915bb511e5fd30ae33340e7ae0c4afb81d",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Core.lean",
+        "snapshot_sha256": "ed0b1189f3fe3f02ce7011058273c0915bb511e5fd30ae33340e7ae0c4afb81d"
+      },
+      {
+        "module": "Classicism.Tools.Check",
+        "path": "topics/classicism/lean/Classicism/Tools/Check.lean",
+        "sha256": "20fdb6525e533a835b5d561bce9529e553de2a3fc1b4f6416235da7f52da6cdf",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Tools/Check.lean",
+        "snapshot_sha256": "20fdb6525e533a835b5d561bce9529e553de2a3fc1b4f6416235da7f52da6cdf"
+      },
+      {
+        "module": "Classicism.Order",
+        "path": "topics/classicism/lean/Classicism/Order.lean",
+        "sha256": "4755de0b5eb272e541ce89e84078c4d80c3ae9a332a6910b395c73b78a2b4730",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Order.lean",
+        "snapshot_sha256": "4755de0b5eb272e541ce89e84078c4d80c3ae9a332a6910b395c73b78a2b4730"
+      },
+      {
+        "module": "Classicism.Paper",
+        "path": "topics/classicism/lean/Classicism/Paper.lean",
+        "sha256": "3348a9c2bf786ef15a9a2a0341dce82e9a419e81a4c7b7486d8c8cba8fbdc895",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Paper.lean",
+        "snapshot_sha256": "3348a9c2bf786ef15a9a2a0341dce82e9a419e81a4c7b7486d8c8cba8fbdc895"
+      },
+      {
+        "module": "Classicism.Modal",
+        "path": "topics/classicism/lean/Classicism/Modal.lean",
+        "sha256": "7706449a7246e0be0772a33dcda61ab010686bf5bd64c45017425bf39ed0cf42",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Modal.lean",
+        "snapshot_sha256": "7706449a7246e0be0772a33dcda61ab010686bf5bd64c45017425bf39ed0cf42"
+      },
+      {
+        "module": "Classicism.Pointwise",
+        "path": "topics/classicism/lean/Classicism/Pointwise.lean",
+        "sha256": "78b858a9d33feb587976879190bdf739afdc0e564c4e6dae5508f8f2c5e15a16",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Pointwise.lean",
+        "snapshot_sha256": "78b858a9d33feb587976879190bdf739afdc0e564c4e6dae5508f8f2c5e15a16"
+      },
+      {
+        "module": "Classicism.Syntax.Normalize",
+        "path": "topics/classicism/lean/Classicism/Syntax/Normalize.lean",
+        "sha256": "1ba19ae01872f7d4357876e2e4c47e4f675cf6b733be98c1947838a1f0c94c1b",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Syntax/Normalize.lean",
+        "snapshot_sha256": "1ba19ae01872f7d4357876e2e4c47e4f675cf6b733be98c1947838a1f0c94c1b"
+      },
+      {
+        "module": "Classicism.Syntax.VectorizeDerivable",
+        "path": "topics/classicism/lean/Classicism/Syntax/VectorizeDerivable.lean",
+        "sha256": "17508c58aef3e3ad7b121f20349045d76c5e238a164cdaf96c2400255c492824",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Syntax/VectorizeDerivable.lean",
+        "snapshot_sha256": "17508c58aef3e3ad7b121f20349045d76c5e238a164cdaf96c2400255c492824"
+      },
+      {
+        "module": "Classicism.Syntax.Vectorize",
+        "path": "topics/classicism/lean/Classicism/Syntax/Vectorize.lean",
+        "sha256": "b57548b87b70c0e9df1c0fd48a1f7b7d67d4828ab4d4286e164e7f32c4716817",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Syntax/Vectorize.lean",
+        "snapshot_sha256": "b57548b87b70c0e9df1c0fd48a1f7b7d67d4828ab4d4286e164e7f32c4716817"
+      },
+      {
+        "module": "Classicism.Syntax.Blocks",
+        "path": "topics/classicism/lean/Classicism/Syntax/Blocks.lean",
+        "sha256": "77b4ef8fadb3646edd15d25854bac994a6eabb8bb1f51347c9dd00fce3a6ac5d",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Syntax/Blocks.lean",
+        "snapshot_sha256": "77b4ef8fadb3646edd15d25854bac994a6eabb8bb1f51347c9dd00fce3a6ac5d"
+      },
+      {
+        "module": "Classicism.Certified.Quoted",
+        "path": "topics/classicism/lean/Classicism/Certified/Quoted.lean",
+        "sha256": "4f5e539a45bf30cf758effcd38c59330b95160a09aa57b08130226c491896447",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Certified/Quoted.lean",
+        "snapshot_sha256": "4f5e539a45bf30cf758effcd38c59330b95160a09aa57b08130226c491896447"
+      },
+      {
+        "module": "Classicism.Results.Records",
+        "path": "topics/classicism/lean/Classicism/Results/Records.lean",
+        "sha256": "6d6d399aab1e7f30eff9a5d385635ae311228e4faf03ce36ad39d5a1d22eede6",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Results/Records.lean",
+        "snapshot_sha256": "6d6d399aab1e7f30eff9a5d385635ae311228e4faf03ce36ad39d5a1d22eede6"
+      },
+      {
+        "module": "Classicism.Results.Records.Base",
+        "path": "topics/classicism/lean/Classicism/Results/Records/Base.lean",
+        "sha256": "43794a516d90505e3c5b48267ddfe110b8e482b881cc1300f2e2ee182c2fc2db",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Results/Records/Base.lean",
+        "snapshot_sha256": "43794a516d90505e3c5b48267ddfe110b8e482b881cc1300f2e2ee182c2fc2db"
+      },
+      {
+        "module": "Classicism.Principles",
+        "path": "topics/classicism/lean/Classicism/Principles.lean",
+        "sha256": "747fc5fbde92a7dd1432aaaafee00437398594ae06dbc8ec2040690fae443049",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Principles.lean",
+        "snapshot_sha256": "747fc5fbde92a7dd1432aaaafee00437398594ae06dbc8ec2040690fae443049"
+      },
+      {
+        "module": "Classicism.Principles.Base",
+        "path": "topics/classicism/lean/Classicism/Principles/Base.lean",
+        "sha256": "d0c930dafb5decf6e747b5a05215cbff099d4efd9e69c607f01a54d5c5a7b96a",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Principles/Base.lean",
+        "snapshot_sha256": "d0c930dafb5decf6e747b5a05215cbff099d4efd9e69c607f01a54d5c5a7b96a"
+      },
+      {
+        "module": "Classicism.Comprehension",
+        "path": "topics/classicism/lean/Classicism/Comprehension.lean",
+        "sha256": "570435f620ec40a8c0f359ce546c26933cf3acfc6e7c8da81fa805170f9ab844",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Comprehension.lean",
+        "snapshot_sha256": "570435f620ec40a8c0f359ce546c26933cf3acfc6e7c8da81fa805170f9ab844"
+      },
+      {
+        "module": "Classicism.Lattice",
+        "path": "topics/classicism/lean/Classicism/Lattice.lean",
+        "sha256": "43231f5d30bab05bc0d11927e1ce09f17ec384875e0aeb1cb72335e36f046070",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Lattice.lean",
+        "snapshot_sha256": "43231f5d30bab05bc0d11927e1ce09f17ec384875e0aeb1cb72335e36f046070"
+      },
+      {
+        "module": "Classicism.Principles.Coarse",
+        "path": "topics/classicism/lean/Classicism/Principles/Coarse.lean",
+        "sha256": "5c3aedc0a4117e7c214d186b384c42b8da6a17906fb7a76a75cb625f85b0a9b2",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Principles/Coarse.lean",
+        "snapshot_sha256": "5c3aedc0a4117e7c214d186b384c42b8da6a17906fb7a76a75cb625f85b0a9b2"
+      },
+      {
+        "module": "Classicism.Principles.Extensionality",
+        "path": "topics/classicism/lean/Classicism/Principles/Extensionality.lean",
+        "sha256": "aa1929fee457845f79c2511b4df86462660ed1c68c3f85b5af8636a88a8f15e8",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Principles/Extensionality.lean",
+        "snapshot_sha256": "aa1929fee457845f79c2511b4df86462660ed1c68c3f85b5af8636a88a8f15e8"
+      },
+      {
+        "module": "Classicism.Principles.Lattice",
+        "path": "topics/classicism/lean/Classicism/Principles/Lattice.lean",
+        "sha256": "95a7c96bd3f2c0b131b59412ee36c288b9f12a772075e8f6ec83d8177f6ffd60",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Principles/Lattice.lean",
+        "snapshot_sha256": "95a7c96bd3f2c0b131b59412ee36c288b9f12a772075e8f6ec83d8177f6ffd60"
+      },
+      {
+        "module": "Classicism.Cardinality",
+        "path": "topics/classicism/lean/Classicism/Cardinality.lean",
+        "sha256": "5e627927356fc561dfd5bfacd9935c558c7760678df56c0158820a7e8626703f",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Cardinality.lean",
+        "snapshot_sha256": "5e627927356fc561dfd5bfacd9935c558c7760678df56c0158820a7e8626703f"
+      },
+      {
+        "module": "Classicism.Principles.Instances",
+        "path": "topics/classicism/lean/Classicism/Principles/Instances.lean",
+        "sha256": "53835a72c249e8f75246e6b42331d205b8bec73a8c03bc2d1ad48db37a88e47e",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Principles/Instances.lean",
+        "snapshot_sha256": "53835a72c249e8f75246e6b42331d205b8bec73a8c03bc2d1ad48db37a88e47e"
+      },
+      {
+        "module": "Classicism.Principles.Comprehension",
+        "path": "topics/classicism/lean/Classicism/Principles/Comprehension.lean",
+        "sha256": "7d47cbb2fcbf444bd1e708ceeb9d007c1be955b41346b2adf14f5613ec7e2537",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Principles/Comprehension.lean",
+        "snapshot_sha256": "7d47cbb2fcbf444bd1e708ceeb9d007c1be955b41346b2adf14f5613ec7e2537"
+      },
+      {
+        "module": "Classicism.Principles.Choice",
+        "path": "topics/classicism/lean/Classicism/Principles/Choice.lean",
+        "sha256": "a8f7e35f1a11805edc2b116b6af002bd5b1d0708b93aaea16781cff519687319",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Principles/Choice.lean",
+        "snapshot_sha256": "a8f7e35f1a11805edc2b116b6af002bd5b1d0708b93aaea16781cff519687319"
+      },
+      {
+        "module": "Classicism.Principles.Infinity",
+        "path": "topics/classicism/lean/Classicism/Principles/Infinity.lean",
+        "sha256": "9c901565490f92a5a6b18ac1cf690c756bb5984e105e885614b87dcc00db027f",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Principles/Infinity.lean",
+        "snapshot_sha256": "9c901565490f92a5a6b18ac1cf690c756bb5984e105e885614b87dcc00db027f"
+      },
+      {
+        "module": "Classicism.Principles.Schematic",
+        "path": "topics/classicism/lean/Classicism/Principles/Schematic.lean",
+        "sha256": "f6e0fe85d4c7f95deb80b98e19cf10e292ac98d87a5c2caec2ddcb9920e677ee",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Principles/Schematic.lean",
+        "snapshot_sha256": "f6e0fe85d4c7f95deb80b98e19cf10e292ac98d87a5c2caec2ddcb9920e677ee"
+      },
+      {
+        "module": "Classicism.Results.Records.Coarse",
+        "path": "topics/classicism/lean/Classicism/Results/Records/Coarse.lean",
+        "sha256": "a3a6e0bc0120eecda1097efc51cd29c0d95daa15b81535f36d7dc6dd1d434882",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Results/Records/Coarse.lean",
+        "snapshot_sha256": "a3a6e0bc0120eecda1097efc51cd29c0d95daa15b81535f36d7dc6dd1d434882"
+      },
+      {
+        "module": "Classicism.Results.Records.Extensionality",
+        "path": "topics/classicism/lean/Classicism/Results/Records/Extensionality.lean",
+        "sha256": "0a1d58485d6e8b0b84d68d973027dd621394ee0c4d1579f08746f10558f0a34a",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Results/Records/Extensionality.lean",
+        "snapshot_sha256": "0a1d58485d6e8b0b84d68d973027dd621394ee0c4d1579f08746f10558f0a34a"
+      },
+      {
+        "module": "Classicism.Results.Records.Comprehension",
+        "path": "topics/classicism/lean/Classicism/Results/Records/Comprehension.lean",
+        "sha256": "552f1c10d3b02f5cae87392141616f5de2200655837e07ba9b367e7bacfd77d7",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Results/Records/Comprehension.lean",
+        "snapshot_sha256": "552f1c10d3b02f5cae87392141616f5de2200655837e07ba9b367e7bacfd77d7"
+      },
+      {
+        "module": "Classicism.Results.Records.Lattice",
+        "path": "topics/classicism/lean/Classicism/Results/Records/Lattice.lean",
+        "sha256": "e5adae1ce94a42f477aa629e4f5b739aa78bf1f7a3abf785d591f4d3a62690f4",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Results/Records/Lattice.lean",
+        "snapshot_sha256": "e5adae1ce94a42f477aa629e4f5b739aa78bf1f7a3abf785d591f4d3a62690f4"
+      },
+      {
+        "module": "Classicism.Results.Records.Choice",
+        "path": "topics/classicism/lean/Classicism/Results/Records/Choice.lean",
+        "sha256": "28a17b666e917900329a015b2bf9cf3a6848a811762a6c862f6ef58135bf77ca",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Results/Records/Choice.lean",
+        "snapshot_sha256": "28a17b666e917900329a015b2bf9cf3a6848a811762a6c862f6ef58135bf77ca"
+      },
+      {
+        "module": "Classicism.Results.Records.C5",
+        "path": "topics/classicism/lean/Classicism/Results/Records/C5.lean",
+        "sha256": "670269847531e12553369ae4105b0926f8613883f8f709b94cdc88917eb49b7c",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Results/Records/C5.lean",
+        "snapshot_sha256": "670269847531e12553369ae4105b0926f8613883f8f709b94cdc88917eb49b7c"
+      },
+      {
+        "module": "Classicism.Results.Records.Infinity",
+        "path": "topics/classicism/lean/Classicism/Results/Records/Infinity.lean",
+        "sha256": "dd622a8252d4bc861a68bf939b25198d39db51c119e89911e096b0523a3a1ba0",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Results/Records/Infinity.lean",
+        "snapshot_sha256": "dd622a8252d4bc861a68bf939b25198d39db51c119e89911e096b0523a3a1ba0"
+      },
+      {
+        "module": "Classicism.Models.CoalescedProjection",
+        "path": "topics/classicism/lean/Classicism/Models/CoalescedProjection.lean",
+        "sha256": "db1d6951c591ae0d238d0968ed26b4120359e2c18ff87568bd0bf242b5cbfea4",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Models/CoalescedProjection.lean",
+        "snapshot_sha256": "db1d6951c591ae0d238d0968ed26b4120359e2c18ff87568bd0bf242b5cbfea4"
+      },
+      {
+        "module": "Classicism.Results.Research.CoalescedCHModel",
+        "path": "topics/classicism/lean/Classicism/Results/Research/CoalescedCHModel.lean",
+        "sha256": "fc3406e48ef453b723d224a73b7792b7c76c5cb31ee0c643554255d1f6d6b855",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Results/Research/CoalescedCHModel.lean",
+        "snapshot_sha256": "fc3406e48ef453b723d224a73b7792b7c76c5cb31ee0c643554255d1f6d6b855"
+      },
+      {
+        "module": "Classicism.Results.Research.CoalescedCHMaximalism",
+        "path": "topics/classicism/lean/Classicism/Results/Research/CoalescedCHMaximalism.lean",
+        "sha256": "25fe7996370299a950edb1f9cbfeb438ee1ab0bcc0eb17850772cb94b7615585",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Results/Research/CoalescedCHMaximalism.lean",
+        "snapshot_sha256": "25fe7996370299a950edb1f9cbfeb438ee1ab0bcc0eb17850772cb94b7615585"
+      },
+      {
+        "module": "Classicism.Results.Research.CoalescedCHModal",
+        "path": "topics/classicism/lean/Classicism/Results/Research/CoalescedCHModal.lean",
+        "sha256": "09f85a4f6f6b159952810e39f6f99382c41b27098937e4a038d0926e3bbb60e1",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Results/Research/CoalescedCHModal.lean",
+        "snapshot_sha256": "09f85a4f6f6b159952810e39f6f99382c41b27098937e4a038d0926e3bbb60e1"
+      },
+      {
+        "module": "Classicism.Results.SentenceSchemas.PossibilityDistinctness",
+        "path": "topics/classicism/lean/Classicism/Results/SentenceSchemas/PossibilityDistinctness.lean",
+        "sha256": "03ac113c45b4540b10050dba68e9dbd24e1df14dbe09e9021084486b5a4b6f00",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Results/SentenceSchemas/PossibilityDistinctness.lean",
+        "snapshot_sha256": "03ac113c45b4540b10050dba68e9dbd24e1df14dbe09e9021084486b5a4b6f00"
+      },
+      {
+        "module": "Classicism.Results.Research.CoalescedCHVocabularyCertificates",
+        "path": "topics/classicism/lean/Classicism/Results/Research/CoalescedCHVocabularyCertificates.lean",
+        "sha256": "2d7665db74fc26cca05fb1d5572340ef09c0c5845c7148aa2e3802e290c4580c",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Results/Research/CoalescedCHVocabularyCertificates.lean",
+        "snapshot_sha256": "2d7665db74fc26cca05fb1d5572340ef09c0c5845c7148aa2e3802e290c4580c"
+      },
+      {
+        "module": "Classicism.Results.Research.CoalescedCHVocabulary",
+        "path": "topics/classicism/lean/Classicism/Results/Research/CoalescedCHVocabulary.lean",
+        "sha256": "94050c245e43f94c27ce72f24a92e91cfaa504b90b0fdf764900a8c8476e5d21",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Results/Research/CoalescedCHVocabulary.lean",
+        "snapshot_sha256": "94050c245e43f94c27ce72f24a92e91cfaa504b90b0fdf764900a8c8476e5d21"
+      },
+      {
+        "module": "Classicism.Results.Research.AnalyticStructures",
+        "path": "topics/classicism/lean/Classicism/Results/Research/AnalyticStructures.lean",
+        "sha256": "3e5835420d0d0f501af362c8b52225a94574492b06596dbf6e7301478709394c",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Results/Research/AnalyticStructures.lean",
+        "snapshot_sha256": "3e5835420d0d0f501af362c8b52225a94574492b06596dbf6e7301478709394c"
+      },
+      {
+        "module": "Classicism.Tools.TypeSystem",
+        "path": "topics/classicism/lean/Classicism/Tools/TypeSystem.lean",
+        "sha256": "3db785bca90f4e2961bce8e7bde2d6bbd418e9e4c67ec99acae2251cb89e88e1",
+        "snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/sources/Classicism/Tools/TypeSystem.lean",
+        "snapshot_sha256": "3db785bca90f4e2961bce8e7bde2d6bbd418e9e4c67ec99acae2251cb89e88e1"
+      }
+    ],
+    "artifacts": [
+      {
+        "module": "CoalescedCHOriginalAudit",
+        "path": ".local-runtime/lean-cert-cache/CoalescedCHOriginalAudit.olean",
+        "sha256": "bb6fc6485702d828cc00a806926b9b037127d7813c2fe6f1fd494eab39717769"
+      },
+      {
+        "module": "Classicism.Models.CoalescedSingletons",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Models/CoalescedSingletons.olean",
+        "sha256": "c1509429515b74aad379f21c252493a1007b8b4dfd1ca74152c3f97469ddbe81"
+      },
+      {
+        "module": "Classicism.Models.CoalescedModel",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Models/CoalescedModel.olean",
+        "sha256": "9db314bb104084b2b807272c51b3a260b5ff880d55d4315bf5ddab1ba131e3b8"
+      },
+      {
+        "module": "Classicism.Models.CoalescedLeaf",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Models/CoalescedLeaf.olean",
+        "sha256": "4271756356fc729f8ee044952df805867c0de347972430ff22553c8938961c98"
+      },
+      {
+        "module": "Classicism.Models.CoalescedBase",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Models/CoalescedBase.olean",
+        "sha256": "6e3d25bd80a6073eabb1c5d78447d2ca621aa6b59b6ccd5f2167f1ec68bd7da9"
+      },
+      {
+        "module": "Classicism.Semantics.Intensional",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Semantics/Intensional.olean",
+        "sha256": "7c02c5fec7552f79ebd9c5d4edb23b0894161f4370be906f057f8d9c746fae55"
+      },
+      {
+        "module": "Classicism.Syntax.Entailment",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Syntax/Entailment.olean",
+        "sha256": "c561b23650a51895b766f0aaea9b30a8748f94111ded0220acc3ae1db4882b41"
+      },
+      {
+        "module": "Classicism.Syntax.Axioms",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Syntax/Axioms.olean",
+        "sha256": "9119e12775e212ad694373b4138c67f18f8d297a1b655703f033e65072ccf154"
+      },
+      {
+        "module": "Classicism.Syntax.Derivation",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Syntax/Derivation.olean",
+        "sha256": "4f72cefd18595b0c00c8587ec3ece9b1d63cff25da1e72eae28d18701c32da3f"
+      },
+      {
+        "module": "Classicism.Syntax.Conversion",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Syntax/Conversion.olean",
+        "sha256": "21dce520e2a4e2eb679fbf609ca34a6244daa22842f43fd08eaa4b9797224f6d"
+      },
+      {
+        "module": "Classicism.Syntax.Term",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Syntax/Term.olean",
+        "sha256": "4f77c921708f52a8d1c646e52072b7a63daab23afc54007f41eb669fc9d057bc"
+      },
+      {
+        "module": "Classicism.Syntax.Types",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Syntax/Types.olean",
+        "sha256": "06ab8b44ce7d7b6c90c25d4cc9e58b72ad316cb1c73e67e82c214ebc3117b126"
+      },
+      {
+        "module": "Classicism.Semantics.Env",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Semantics/Env.olean",
+        "sha256": "df18221319cd753b2acdbf634c4f6aa9fdba66f43eb4fa9e4f721d6ebdbd0e81"
+      },
+      {
+        "module": "Classicism.Semantics.IntensionalSoundness",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Semantics/IntensionalSoundness.olean",
+        "sha256": "1e1a46c54e1297352a9abe49ec593385dc93305217e4637fc98b9b2d59574e25"
+      },
+      {
+        "module": "Classicism.Semantics.IntensionalFacts",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Semantics/IntensionalFacts.olean",
+        "sha256": "4d46898012e808594ff0515085849109982d7958636e8015a4679a6bd58a6231"
+      },
+      {
+        "module": "Classicism.Syntax.Sentences",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Syntax/Sentences.olean",
+        "sha256": "06d13e4d91e245613f1e6b3b5e813e6118f868cb372c4f20df86a50ad67b11c3"
+      },
+      {
+        "module": "Classicism.Semantics.SingletonAtomicity",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Semantics/SingletonAtomicity.olean",
+        "sha256": "8ab6dcf3245e5f8ac9a4ad574dff884ff9dc0aeb25904d41f217d27bcfc996a8"
+      },
+      {
+        "module": "Classicism.Semantics.FullModels",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Semantics/FullModels.olean",
+        "sha256": "2253109dafd750c349f9d81a045e18fb3f4719263672ca0dbd257bff86782d9a"
+      },
+      {
+        "module": "Classicism.Semantics.IntensionalTheory",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Semantics/IntensionalTheory.olean",
+        "sha256": "5511a7eac6fcc081a4a10feba6f64939ef4c2c2b18903e37c71d749436684523"
+      },
+      {
+        "module": "Classicism.Syntax.ClosedTypes",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Syntax/ClosedTypes.olean",
+        "sha256": "5fd0f066f66ccc53e9729b71b99a088d18df0eb101e505eeaa60a3d77fb77440"
+      },
+      {
+        "module": "Classicism.Syntax.Pure",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Syntax/Pure.olean",
+        "sha256": "fd7d2e72f794a6fcf351c9e4d740434170b7852cdb11a88028d9e7267637d314"
+      },
+      {
+        "module": "Classicism.Syntax.Conservativity",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Syntax/Conservativity.olean",
+        "sha256": "fd897f797e6a3cbe47d439760e4a913d512e3d80c05b84002b8fddf6aa7e0e4a"
+      },
+      {
+        "module": "Classicism.Syntax.SentenceSchemas",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Syntax/SentenceSchemas.olean",
+        "sha256": "794e5a1f6c3b899f35d600ab080c13356ce0ecbbd7c29bf7886fe2c53368d5d5"
+      },
+      {
+        "module": "Classicism.Semantics.IntensionalProperties",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Semantics/IntensionalProperties.olean",
+        "sha256": "fe551e671bcc7845cc35ef2f0799cfc5621d4ef9026bc6941cb2f593c1b9aa67"
+      },
+      {
+        "module": "Classicism.Certified.Schemas",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Certified/Schemas.olean",
+        "sha256": "937b8eb4acc2838db7337aebadc31af21960fa92440d0c3d75bc84918112f8e7"
+      },
+      {
+        "module": "Classicism.Tools.Schema",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Tools/Schema.olean",
+        "sha256": "255d53a068494804cda144c2eefdf3cea1597f1d8abfbd3828c2199e1be5d9b8"
+      },
+      {
+        "module": "Classicism.Tools.Translate",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Tools/Translate.olean",
+        "sha256": "e1f7c98b7f2c40a7ce40f5fe54a313881050dab1a04f491613f7d8f3961cc69b"
+      },
+      {
+        "module": "Classicism.Tools.Quote",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Tools/Quote.olean",
+        "sha256": "df567d6aa7ef8710b8fb037cd2ae85f69f48f9a182d41f80c43d498afeae3362"
+      },
+      {
+        "module": "Classicism.Semantics.Relational",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Semantics/Relational.olean",
+        "sha256": "10b1ebce4afc1b45e57ad6dae5e191615874ad7ad743568c9efd8a7c77c35a65"
+      },
+      {
+        "module": "Classicism.Semantics.Denotation",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Semantics/Denotation.olean",
+        "sha256": "8943e49d76dab4523282e63d6b3871f5b027aa79b606a885b7f39b6c48a5152c"
+      },
+      {
+        "module": "Classicism.Strict.Mirror",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Strict/Mirror.olean",
+        "sha256": "dd97c6c376b273d72d75a452b0f3bffd065ea9714b74d47c300a67075748fabd"
+      },
+      {
+        "module": "Classicism.Strict.Transform",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Strict/Transform.olean",
+        "sha256": "d50f145784bdaa4c9cf53102f0da3ea2728ac28414017dc76510601e5defc1c4"
+      },
+      {
+        "module": "Classicism.Strict.Primitives",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Strict/Primitives.olean",
+        "sha256": "17cadc09c128c7d3a4bda4e889639534a90944380bf44524d9ebaccc9df74c79"
+      },
+      {
+        "module": "Classicism.Strict.Rules",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Strict/Rules.olean",
+        "sha256": "50b34fb97ae0d75ae892b240a4d2cf030de5e8e6dafffc4177c1a1aec4d272e1"
+      },
+      {
+        "module": "Classicism.Strict.Quantifier",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Strict/Quantifier.olean",
+        "sha256": "12fb1d4603c8a65ac9dcfcf5593512cc77c05019c9daf612b7a36c5a2e6bb2c7"
+      },
+      {
+        "module": "Classicism.Strict.Tautology",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Strict/Tautology.olean",
+        "sha256": "f4f1dd7c74fcfed307820e209bf59a9776a0a053ee909946d491b1d9f25352ae"
+      },
+      {
+        "module": "Classicism.Strict.Vocabulary",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Strict/Vocabulary.olean",
+        "sha256": "6ece3edca732b902bec9189727c0453f0d07537edf454651cf470280d1117ba2"
+      },
+      {
+        "module": "Classicism.Strict.Algebra",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Strict/Algebra.olean",
+        "sha256": "4fbef3b460d57f020ed3fdc74f992f1f1dc25707acf9e2ce0da3d4922bfeae6e"
+      },
+      {
+        "module": "Classicism.Strict.Axiomatization",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Strict/Axiomatization.olean",
+        "sha256": "e8e720586d8c63bf6e3d86e62ed138d0d883cc61ce1b65fddf4ec82e9fc98321"
+      },
+      {
+        "module": "Classicism.Identities",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Identities.olean",
+        "sha256": "4aa11b19a80924f3a86578537e0f8438ac21feb4d1c04c69a311204131a331db"
+      },
+      {
+        "module": "Classicism.Booleanism",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Booleanism.olean",
+        "sha256": "98b8c05a117cc308217d8f9fe40833975b46c80582f0309f291f99ca031efefd"
+      },
+      {
+        "module": "Classicism.Equivalence",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Equivalence.olean",
+        "sha256": "0d1bb97d26f635a7dbcd19fa367c8d9a7048ca8942cc8b7ac06afb80ab88023d"
+      },
+      {
+        "module": "Classicism.Core",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Core.olean",
+        "sha256": "4096b1bd17dd536827fe51c1c73322fc9aab46bb526e2a52047b47aff305efcd"
+      },
+      {
+        "module": "Classicism.Tools.Check",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Tools/Check.olean",
+        "sha256": "9e6827329bb5bf88147f2bdbddb4b944bf721ea1538eb3a42f5e7d36c3921ee1"
+      },
+      {
+        "module": "Classicism.Order",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Order.olean",
+        "sha256": "4c7788e753989740fdb5f59938f8013bb629477369196586e15efab2d1ff5ce8"
+      },
+      {
+        "module": "Classicism.Paper",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Paper.olean",
+        "sha256": "4e19b4faa931dfd3ccfce2cd899744dabf84bd9200738e628b5bf3b7fce52f25"
+      },
+      {
+        "module": "Classicism.Modal",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Modal.olean",
+        "sha256": "57d01043696149874d7a869f019589434bf50ba324cd70d1507348306a8bd22a"
+      },
+      {
+        "module": "Classicism.Pointwise",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Pointwise.olean",
+        "sha256": "03d01c38b61701d9f193fe0abd174ebc08a63a60213701a0ccbb3823b3f3cbc0"
+      },
+      {
+        "module": "Classicism.Syntax.Normalize",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Syntax/Normalize.olean",
+        "sha256": "466cabd2038839e898f9d083889e601f02dac99cec2e0816d94d88dae013ea80"
+      },
+      {
+        "module": "Classicism.Syntax.VectorizeDerivable",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Syntax/VectorizeDerivable.olean",
+        "sha256": "2cadee08cbe83be4eb007873437b03c95690ef5b51babe5c034e0bc3dc4ec7e8"
+      },
+      {
+        "module": "Classicism.Syntax.Vectorize",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Syntax/Vectorize.olean",
+        "sha256": "54676fc9c944d5a3d3790924422e2f96b91f632e553468b388bc76e0126e0735"
+      },
+      {
+        "module": "Classicism.Syntax.Blocks",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Syntax/Blocks.olean",
+        "sha256": "311996802ea136c940f6231659fdd0256a3267f5a4f5ad2ad7817d75af70d32a"
+      },
+      {
+        "module": "Classicism.Certified.Quoted",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Certified/Quoted.olean",
+        "sha256": "9cdcdd2343f85a6c3084b26261040c661852e82bea2d9af52e64895494de5bab"
+      },
+      {
+        "module": "Classicism.Results.Records",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Results/Records.olean",
+        "sha256": "2101e40096f46091682c9bffccb7eee7a6cc06961c165a0d5c15e6197b9e42e8"
+      },
+      {
+        "module": "Classicism.Results.Records.Base",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Results/Records/Base.olean",
+        "sha256": "80585bfa7a293e518eb831134da927589abfb25fb335471a4cb0fc9a47be1d68"
+      },
+      {
+        "module": "Classicism.Principles",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Principles.olean",
+        "sha256": "c8fb4965d740ffdbf260a245b9c1e59e7beff90e5a42191aff31828c6661d4a1"
+      },
+      {
+        "module": "Classicism.Principles.Base",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Principles/Base.olean",
+        "sha256": "20e49d1a2b8376812d19aefbe611bad129d3d08459df5944869bce4ccd6701f1"
+      },
+      {
+        "module": "Classicism.Comprehension",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Comprehension.olean",
+        "sha256": "813cf9f39a4e486f9906dd6970d8415f635930a982f8e01a96d08ca29cca9275"
+      },
+      {
+        "module": "Classicism.Lattice",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Lattice.olean",
+        "sha256": "277da454f009ca7f6353f6463dfcf355a405b20c70a33a27b0717ba0771abeb9"
+      },
+      {
+        "module": "Classicism.Principles.Coarse",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Principles/Coarse.olean",
+        "sha256": "c3458dd19b42db171953accc7786ccff05b7f4b526f911d0b95d68ce2d7409a2"
+      },
+      {
+        "module": "Classicism.Principles.Extensionality",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Principles/Extensionality.olean",
+        "sha256": "a0e9e70fef6b3fc46f7f2e60d8f4e2885acb0f75e7932c4f4bda4b94a0c2a1e4"
+      },
+      {
+        "module": "Classicism.Principles.Lattice",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Principles/Lattice.olean",
+        "sha256": "6bb64bf3b5e1623438e4a54aa99e7d8113e81f314ee929e518622bdedaba1d14"
+      },
+      {
+        "module": "Classicism.Cardinality",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Cardinality.olean",
+        "sha256": "8cf1865ab3aa041a124ca962c33e049fa16b0ef84b346833bf2ba918b388a515"
+      },
+      {
+        "module": "Classicism.Principles.Instances",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Principles/Instances.olean",
+        "sha256": "e6d465b99bcace775f20593aab1452224ed141f7354dec32581a28d5a602bbfc"
+      },
+      {
+        "module": "Classicism.Principles.Comprehension",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Principles/Comprehension.olean",
+        "sha256": "500bbefccaf9aefc0f12194986abf67df699eac76bda2f96e823fd6382e36230"
+      },
+      {
+        "module": "Classicism.Principles.Choice",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Principles/Choice.olean",
+        "sha256": "f1b45329aa59ba7c22d957cac5caf99a0ffb30a126e54ebd05a6d52e1a689b0f"
+      },
+      {
+        "module": "Classicism.Principles.Infinity",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Principles/Infinity.olean",
+        "sha256": "04665c2ef5c822fdedeb15d1a219af3c744d4845d1a3ad8de78e3b347293e015"
+      },
+      {
+        "module": "Classicism.Principles.Schematic",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Principles/Schematic.olean",
+        "sha256": "61804af833b257357059659da4954fc4b710aeb3c04cbc527c1b114c7fbb6f3f"
+      },
+      {
+        "module": "Classicism.Results.Records.Coarse",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Results/Records/Coarse.olean",
+        "sha256": "ec6e4254a53cbc4d3ac84814238493d6b25b2854ef97ca47427f8bfec276863b"
+      },
+      {
+        "module": "Classicism.Results.Records.Extensionality",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Results/Records/Extensionality.olean",
+        "sha256": "2be66ae68300e8c156d0e8028e922913b1650a9fca182aa2a34ff45ca3ffc836"
+      },
+      {
+        "module": "Classicism.Results.Records.Comprehension",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Results/Records/Comprehension.olean",
+        "sha256": "162be8608efc02a35b68531d97c48518b3bfd4900c1bc779de0c0ead0bb77324"
+      },
+      {
+        "module": "Classicism.Results.Records.Lattice",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Results/Records/Lattice.olean",
+        "sha256": "ce145b63eddc8c7249d52c201ef10f17d39e8330f4ae4563a8405248813ea755"
+      },
+      {
+        "module": "Classicism.Results.Records.Choice",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Results/Records/Choice.olean",
+        "sha256": "ed470c8e7d4f5d705cff4a3d632ae7740176da5f5d764f1fc0ba7859224306ee"
+      },
+      {
+        "module": "Classicism.Results.Records.C5",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Results/Records/C5.olean",
+        "sha256": "7a42a73a1394a5622b3bbf734f3e2733ee52ff9714a665cb26203332906aae66"
+      },
+      {
+        "module": "Classicism.Results.Records.Infinity",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Results/Records/Infinity.olean",
+        "sha256": "4599c4caad09c95a5cb4872aacbd0085b876994c2e54b7690e91d27e559c4a74"
+      },
+      {
+        "module": "Classicism.Models.CoalescedProjection",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Models/CoalescedProjection.olean",
+        "sha256": "692f545b0996aa396a9b88f503ceb66ac76bf3ed3d4d83f9c429f90122ffbaeb"
+      },
+      {
+        "module": "Classicism.Results.Research.CoalescedCHModel",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Results/Research/CoalescedCHModel.olean",
+        "sha256": "81f65512d61a05df67164a0ee50dba74f5e42a034ef55064a1b697b3fb452bb6"
+      },
+      {
+        "module": "Classicism.Results.Research.CoalescedCHMaximalism",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Results/Research/CoalescedCHMaximalism.olean",
+        "sha256": "a32fba611d175f44d7a0792056471c349afa43c19c038ccb7a730166a9a33d1a"
+      },
+      {
+        "module": "Classicism.Results.Research.CoalescedCHModal",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Results/Research/CoalescedCHModal.olean",
+        "sha256": "e616fffeecaffe00fc509b899bf8753d7197c9a4a1ab6f3a2d648be74c869628"
+      },
+      {
+        "module": "Classicism.Results.SentenceSchemas.PossibilityDistinctness",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Results/SentenceSchemas/PossibilityDistinctness.olean",
+        "sha256": "18608178193acd5b8382791080a2c733ebf1f6946cbd1f080da1e07c5e350a86"
+      },
+      {
+        "module": "Classicism.Results.Research.CoalescedCHVocabularyCertificates",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Results/Research/CoalescedCHVocabularyCertificates.olean",
+        "sha256": "99f1a1abc1eb5760433d38b6e95432e62976f1759d4e79d152cd6319108908fd"
+      },
+      {
+        "module": "Classicism.Results.Research.CoalescedCHVocabulary",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Results/Research/CoalescedCHVocabulary.olean",
+        "sha256": "ec8cc87d8cef87d0ceee5f8b85c14a1fe6ad6271706a4afb230480b7b3e7f0cd"
+      },
+      {
+        "module": "Classicism.Results.Research.AnalyticStructures",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Results/Research/AnalyticStructures.olean",
+        "sha256": "b6d1e70c4a81263bb917efc22cc843857d7d9ce18f8facffb8f29e10075b4d08"
+      },
+      {
+        "module": "Classicism.Tools.TypeSystem",
+        "path": ".local-runtime/lean-cert-cache/Classicism/Tools/TypeSystem.olean",
+        "sha256": "39ffc333d68335ca334761d681010072b46a3fbb0e1ce383e1bfcbb6f61e37be"
+      }
+    ],
+    "fresh_logs": [
+      {
+        "module": "CoalescedCHOriginalAudit",
+        "path": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/CoalescedCHOriginalAudit.log",
+        "sha256": "17abb5f1746ab898231bf80a480459d65f4903116fbdf984b65d7069c3d1b048",
+        "exit_code": 0
+      },
+      {
+        "module": "Classicism.Results.Research.CoalescedCHModel",
+        "path": "research/2026-10-22/lean-formalization/logs/runs/20261024T025642051890Z-4cb0774f/Classicism_Results_Research_CoalescedCHModel.log",
+        "sha256": "d2fb0ec7f3b337f1fc99386d6bdf5b46362285f53e92748d28af32dd53183436",
+        "exit_code": 0
+      }
+    ]
+  },
+  "compiler": {
+    "path": ".local-runtime/lean-toolchain/lean-4.33.1-darwin_aarch64/bin/lean",
+    "sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554",
+    "description": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+    "precompiled_roots_recorded": [
+      ".local-runtime/mathlib/.lake/build/lib/lean",
+      ".local-runtime/mathlib/.lake/packages/plausible/.lake/build/lib/lean",
+      ".local-runtime/mathlib/.lake/packages/proofwidgets/.lake/build/lib/lean",
+      ".local-runtime/mathlib/.lake/packages/batteries/.lake/build/lib/lean",
+      ".local-runtime/mathlib/.lake/packages/aesop/.lake/build/lib/lean",
+      ".local-runtime/mathlib/.lake/packages/importGraph/.lake/build/lib/lean",
+      ".local-runtime/mathlib/.lake/packages/LeanSearchClient/.lake/build/lib/lean",
+      ".local-runtime/mathlib/.lake/packages/Qq/.lake/build/lib/lean"
+    ],
+    "precompiled_sha256_recorded": "675f46a345caf1daf1bbc81b42696e5a518c6d01fd9c8a8d02c8a158f8475a3e"
+  },
+  "supplemental_repair_hashes": [
+    {
+      "module": "Classicism.Models.CoalescedBase",
+      "path": "topics/classicism/lean/Classicism/Models/CoalescedBase.lean",
+      "accepted_current_sha256": "ad95516b1b2ac7e8c8433cce7bb6e5aa7f698707d2e6dd4a75b1f8d39f088773",
+      "frozen_submission_sha256": "d888e1d79899c3bbc1b96e4821157cbd84557b58a5daca8d1b81b0cf11d8ca5f",
+      "previous_repair_sha256": "ad95516b1b2ac7e8c8433cce7bb6e5aa7f698707d2e6dd4a75b1f8d39f088773",
+      "changed_since_submission": true,
+      "changed_since_previous_repair_receipt": false
+    },
+    {
+      "module": "Classicism.Models.CoalescedLeaf",
+      "path": "topics/classicism/lean/Classicism/Models/CoalescedLeaf.lean",
+      "accepted_current_sha256": "01edcc7d90ffc1bd5918419614551f24179958c3d845ad59beb538bafb8b5336",
+      "frozen_submission_sha256": "16cde99ea1326fda6b2655f553b870332189de39c6494e4096334143d2af2620",
+      "previous_repair_sha256": "bf52d0aa7cd7cadf9171540c3fb35f819d408e55af04acbafa4fb16b6680613f",
+      "changed_since_submission": true,
+      "changed_since_previous_repair_receipt": true
+    },
+    {
+      "module": "Classicism.Models.CoalescedModel",
+      "path": "topics/classicism/lean/Classicism/Models/CoalescedModel.lean",
+      "accepted_current_sha256": "39b7ae616ebd2edc45a0f349dc3963e38fbe6c4712a9a040fabad37632679901",
+      "frozen_submission_sha256": "39b7ae616ebd2edc45a0f349dc3963e38fbe6c4712a9a040fabad37632679901",
+      "previous_repair_sha256": "39b7ae616ebd2edc45a0f349dc3963e38fbe6c4712a9a040fabad37632679901",
+      "changed_since_submission": false,
+      "changed_since_previous_repair_receipt": false
+    },
+    {
+      "module": "Classicism.Models.CoalescedProjection",
+      "path": "topics/classicism/lean/Classicism/Models/CoalescedProjection.lean",
+      "accepted_current_sha256": "db1d6951c591ae0d238d0968ed26b4120359e2c18ff87568bd0bf242b5cbfea4",
+      "frozen_submission_sha256": "d953829ca96709a5f9ba6aab49b97378d6d03bddd7311cebd2a545ce10ed9a9e",
+      "previous_repair_sha256": "d953829ca96709a5f9ba6aab49b97378d6d03bddd7311cebd2a545ce10ed9a9e",
+      "changed_since_submission": true,
+      "changed_since_previous_repair_receipt": true
+    },
+    {
+      "module": "Classicism.Models.CoalescedSingletons",
+      "path": "topics/classicism/lean/Classicism/Models/CoalescedSingletons.lean",
+      "accepted_current_sha256": "a6c7c15071c5e582c2768e214f4783a824a7e43ceb9267ff4815b77f41b067db",
+      "frozen_submission_sha256": "fed27a21265b5f424c561d09653795b4909f94e055bb163c293bf9791ae280b3",
+      "previous_repair_sha256": "f395d3052bdf32842c3ef3ca816f23da45f747ad4c50e53854bc645c080d9823",
+      "changed_since_submission": true,
+      "changed_since_previous_repair_receipt": true
+    },
+    {
+      "module": "Classicism.Results.Research.CoalescedCHMaximalism",
+      "path": "topics/classicism/lean/Classicism/Results/Research/CoalescedCHMaximalism.lean",
+      "accepted_current_sha256": "25fe7996370299a950edb1f9cbfeb438ee1ab0bcc0eb17850772cb94b7615585",
+      "frozen_submission_sha256": "2e350017260200e6d840f615ee473916b549afe484012ea2b4b50ea61b652167",
+      "previous_repair_sha256": "2e350017260200e6d840f615ee473916b549afe484012ea2b4b50ea61b652167",
+      "changed_since_submission": true,
+      "changed_since_previous_repair_receipt": true
+    },
+    {
+      "module": "Classicism.Results.Research.CoalescedCHModal",
+      "path": "topics/classicism/lean/Classicism/Results/Research/CoalescedCHModal.lean",
+      "accepted_current_sha256": "09f85a4f6f6b159952810e39f6f99382c41b27098937e4a038d0926e3bbb60e1",
+      "frozen_submission_sha256": "09f85a4f6f6b159952810e39f6f99382c41b27098937e4a038d0926e3bbb60e1",
+      "previous_repair_sha256": "09f85a4f6f6b159952810e39f6f99382c41b27098937e4a038d0926e3bbb60e1",
+      "changed_since_submission": false,
+      "changed_since_previous_repair_receipt": false
+    },
+    {
+      "module": "Classicism.Results.Research.CoalescedCHModel",
+      "path": "topics/classicism/lean/Classicism/Results/Research/CoalescedCHModel.lean",
+      "accepted_current_sha256": "fc3406e48ef453b723d224a73b7792b7c76c5cb31ee0c643554255d1f6d6b855",
+      "frozen_submission_sha256": "0322f56046a63733f558c213618597eb6827fd66542cd930aa62bbeab74ca70a",
+      "previous_repair_sha256": "0322f56046a63733f558c213618597eb6827fd66542cd930aa62bbeab74ca70a",
+      "changed_since_submission": true,
+      "changed_since_previous_repair_receipt": true
+    },
+    {
+      "module": "Classicism.Results.Research.CoalescedCHVocabulary",
+      "path": "topics/classicism/lean/Classicism/Results/Research/CoalescedCHVocabulary.lean",
+      "accepted_current_sha256": "94050c245e43f94c27ce72f24a92e91cfaa504b90b0fdf764900a8c8476e5d21",
+      "frozen_submission_sha256": "94050c245e43f94c27ce72f24a92e91cfaa504b90b0fdf764900a8c8476e5d21",
+      "previous_repair_sha256": "94050c245e43f94c27ce72f24a92e91cfaa504b90b0fdf764900a8c8476e5d21",
+      "changed_since_submission": false,
+      "changed_since_previous_repair_receipt": false
+    },
+    {
+      "module": "Classicism.Results.Research.CoalescedCHVocabularyCertificates",
+      "path": "topics/classicism/lean/Classicism/Results/Research/CoalescedCHVocabularyCertificates.lean",
+      "accepted_current_sha256": "2d7665db74fc26cca05fb1d5572340ef09c0c5845c7148aa2e3802e290c4580c",
+      "frozen_submission_sha256": "05abafcc9cbad8b2dc55ae3ef4ccb9c49a1bf15b95ebb52742985bd9ebedd382",
+      "previous_repair_sha256": "05abafcc9cbad8b2dc55ae3ef4ccb9c49a1bf15b95ebb52742985bd9ebedd382",
+      "changed_since_submission": true,
+      "changed_since_previous_repair_receipt": true
+    },
+    {
+      "module": "Classicism.Semantics.SingletonAtomicity",
+      "path": "topics/classicism/lean/Classicism/Semantics/SingletonAtomicity.lean",
+      "accepted_current_sha256": "51347681e5278c3728964efb31c5d905999be294286f26bc4ae0a09407095839",
+      "frozen_submission_sha256": "51347681e5278c3728964efb31c5d905999be294286f26bc4ae0a09407095839",
+      "previous_repair_sha256": "51347681e5278c3728964efb31c5d905999be294286f26bc4ae0a09407095839",
+      "changed_since_submission": false,
+      "changed_since_previous_repair_receipt": false
+    }
+  ],
+  "frozen_receipts_preserved": [
+    {
+      "path": "research/2026-10-23/coalesced-ch/source-manifest.json",
+      "sha256": "17ecfc9bdcd9e44e7c23aa8e672f76781cc21cbf57b7a8f226dc4bde6c03a699"
+    },
+    {
+      "path": "research/2026-10-23/coalesced-ch/original-repair-manifest.json",
+      "sha256": "887a73443474a28bf8acd4980521ce8dd09c2fdac2453e2f4cad89082e4c17f4"
+    }
+  ],
+  "exact_scope": {
+    "components": "Two actual pure-signature one-world Henkin component models with opposite quoted structural-CH witnesses are explicit hypotheses. Their existence is not established by this target. Component relational domains are preserved rather than replaced by external powersets.",
+    "countermodel": "Conditional on those components, their coalesced model fails the specified CH noncontingency sentence. The boxed-Barcan variant additionally assumes inhabited component domains at every type.",
+    "maximalism": "For a closed indicated type, the component hypotheses yield inconsistency of pure Maximalism together with that CH-noncontingency sentence, and likewise with its schema. This does not establish inconsistency of Maximalism alone.",
+    "atomicity": "The audit includes admitted singleton intensions in each one-world component and their coalescence, plus Atomicity and boxed Atomicity at every relational type under the stated model hypotheses. No external full-domain premise is substituted.",
+    "projection": "Projection/image characterizations and cylinder lifts are certified set-level lemmas. Their full object-language rigidity bridge is a separate obligation."
+  },
+  "limits": [
+    "The separate expanded ZFC/forcing construction of opposite-CH components is not certified by this receipt and remains outside its checked closure.",
+    "No finitistic Con(ZFC) reduction, unconditional Maximalism refutation, or extra choice/rigidity/completeness verdict is asserted.",
+    "Some semantic proofs use Classical.choice in Lean metatheory; this is recorded explicitly, not hidden as an object-language premise.",
+    "External precompiled package fingerprints are retained from the runner; the full Mathlib tree was not independently rehashed here.",
+    "No database Lean status or frozen source/repair manifest was changed."
+  ],
+  "issues": []
+}

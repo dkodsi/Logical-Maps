@@ -176,7 +176,7 @@ lean:
   index:
     script: scripts/MapIndex.lean
     file: map/index.json
-  source_url: https://github.com/zwlgzwlg/Logical-Maps/blob/{commit}/logical-maps/topics/classicism/lean/{file}#L{start}-L{end}
+  source_url: https://github.com/dkodsi/Logical-Maps/blob/{commit}/logical-maps/topics/classicism/lean/{file}#L{start}-L{end}
   imports:
   - Classicism.Certified.Signatures
   - Classicism.Certified.Arithmetic

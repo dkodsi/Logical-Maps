@@ -1,0 +1,4 @@
+import Classicism.Results.Research.GeneratedAlgebraFiniteFoldCertificatesForward1
+
+set_option Classicism.Meta.Translate.profile true in
+#classicism_derive Classicism.Research.GeneratedAlgebraFiniteFold.forward2

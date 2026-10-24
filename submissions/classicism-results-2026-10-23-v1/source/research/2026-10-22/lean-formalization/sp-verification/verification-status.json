@@ -1,0 +1,293 @@
+{
+  "reported_at_utc": "2026-10-23T04:51:22.336418+00:00",
+  "source_scope": "twelve SP/Max source modules; not the full repository",
+  "passed_count": 12,
+  "module_count": 12,
+  "core_thread_id": "[research task]",
+  "modules": [
+    {
+      "module": "StrongPossibilityConsequencesAlgebra",
+      "short_name": "Algebra",
+      "status": "passed",
+      "source_sha256_at_report": "674145023a1a0a5340d05173bf7ccbbb1c70f08a9372869a7444f9353630aee9",
+      "current_fingerprint_matches_check": true,
+      "check": {
+        "module": "StrongPossibilityConsequencesAlgebra",
+        "seconds": 4.86,
+        "exit_code": 0,
+        "fingerprint": "a78a427965733d44e4fdca43a475d108c56c7e43738f4afecb36a62baec70fdc",
+        "log": "logs/runs/20261023T040940460714Z/StrongPossibilityConsequencesAlgebra.log",
+        "manifest": "sp-verification/checks/20261023T040940460714Z.json",
+        "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+        "archived_log": "sp-verification/logs/runs/20261023T040940460714Z/StrongPossibilityConsequencesAlgebra.log",
+        "manifest_schema_version": 1
+      },
+      "kind": "ordinary metatheory; not an object-language C certificate"
+    },
+    {
+      "module": "StrongPossibilityConsequencesC",
+      "short_name": "C",
+      "status": "passed",
+      "source_sha256_at_report": "d2c7c82da467d8436c9ba4dd02e5f4c815094dd2cab8dc702adc00a706edba6d",
+      "current_fingerprint_matches_check": true,
+      "check": {
+        "module": "StrongPossibilityConsequencesC",
+        "fingerprint": "8c738a09b131cde6a142ff587cffcc1d8cf352d9ba738a0110fde23ff945722b",
+        "source_sha256": "d2c7c82da467d8436c9ba4dd02e5f4c815094dd2cab8dc702adc00a706edba6d",
+        "artifacts": {
+          ".olean": "b48dd46879a28741e670f582245b46f6815bb796de8ca1f018394258feb3b128"
+        },
+        "seconds": 5.8,
+        "exit_code": 0,
+        "log": "logs/runs/20261023T044759304508Z-f503b46f/StrongPossibilityConsequencesC.log",
+        "manifest": "checks/20261023T044759304508Z-f503b46f.json",
+        "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+        "archived_log": "logs/runs/20261023T044759304508Z-f503b46f/StrongPossibilityConsequencesC.log",
+        "manifest_schema_version": 2
+      },
+      "kind": "C certificates or metatheory concluding actual C derivations"
+    },
+    {
+      "module": "StrongPossibilityConsequencesComputability",
+      "short_name": "Computability",
+      "status": "passed",
+      "source_sha256_at_report": "ca3edd76569f8b9e2370e1343a23574f84251f76a9c81f2be0b7701f924b24fb",
+      "current_fingerprint_matches_check": true,
+      "check": {
+        "module": "StrongPossibilityConsequencesComputability",
+        "seconds": 11.66,
+        "exit_code": 0,
+        "fingerprint": "c85fcb74b70be1fd3d97e93f48ec7c153ec03704246d39e71881577ed2cac227",
+        "log": "logs/runs/20261023T041012326835Z/StrongPossibilityConsequencesComputability.log",
+        "manifest": "sp-verification/checks/20261023T041012326835Z.json",
+        "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+        "archived_log": "sp-verification/logs/runs/20261023T041012326835Z/StrongPossibilityConsequencesComputability.log",
+        "manifest_schema_version": 1
+      },
+      "kind": "ordinary metatheory; not an object-language C certificate"
+    },
+    {
+      "module": "StrongPossibilityConsequencesDisjunction",
+      "short_name": "Disjunction",
+      "status": "passed",
+      "source_sha256_at_report": "df4c167dd99accceb555f9a8aaa89d0a8b5e9beac6d86c1cdc8c4fbf20fa566e",
+      "current_fingerprint_matches_check": true,
+      "check": {
+        "module": "StrongPossibilityConsequencesDisjunction",
+        "fingerprint": "938ab76bb19794e13ba94aa7f7c448dbe13430e2843141dfe82acace3007b23e",
+        "source_sha256": "df4c167dd99accceb555f9a8aaa89d0a8b5e9beac6d86c1cdc8c4fbf20fa566e",
+        "artifacts": {
+          ".olean": "950d1183941e279ce61716c3fe0e3bdc2621eb35bc3785d8a9fa4513850253e6"
+        },
+        "seconds": 0.75,
+        "exit_code": 0,
+        "log": "logs/runs/20261023T044336274999Z-6b5c1cb4/StrongPossibilityConsequencesDisjunction.log",
+        "manifest": "sp-universal-verification/checks/20261023T044336274999Z-6b5c1cb4.json",
+        "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+        "archived_log": "sp-universal-verification/logs/runs/20261023T044336274999Z-6b5c1cb4/StrongPossibilityConsequencesDisjunction.log",
+        "manifest_schema_version": 2
+      },
+      "kind": "C certificates or metatheory concluding actual C derivations"
+    },
+    {
+      "module": "StrongPossibilityConsequencesInfinitaryNumerals",
+      "short_name": "InfinitaryNumerals",
+      "status": "passed",
+      "source_sha256_at_report": "f27b7d8a5e6ca67996cd2c4d9bc531f21e2481ca75988dcf942b7550f5ecedc9",
+      "current_fingerprint_matches_check": true,
+      "check": {
+        "module": "StrongPossibilityConsequencesInfinitaryNumerals",
+        "seconds": 1.77,
+        "exit_code": 0,
+        "fingerprint": "7b900e6e282114ed9b1fc75da94a6e7f38095211393b59902a72f9d53558e9ad",
+        "log": "logs/runs/20261023T040821574277Z/StrongPossibilityConsequencesInfinitaryNumerals.log",
+        "manifest": "sp-verification/checks/20261023T040821574277Z.json",
+        "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+        "archived_log": "sp-verification/logs/runs/20261023T040821574277Z/StrongPossibilityConsequencesInfinitaryNumerals.log",
+        "manifest_schema_version": 1
+      },
+      "kind": "ordinary metatheory; not an object-language C certificate"
+    },
+    {
+      "module": "StrongPossibilityConsequencesMaxConservativity",
+      "short_name": "MaxConservativity",
+      "status": "passed",
+      "source_sha256_at_report": "42f87ab0c6b3fe3e70801fd5761d17f4a9e1ec5a9f55802782f1420067b773fe",
+      "current_fingerprint_matches_check": true,
+      "check": {
+        "module": "StrongPossibilityConsequencesMaxConservativity",
+        "fingerprint": "e8b04eebcf355964bfacb4c633e9a5296d1e7e182ad203f8124c7448b1042af1",
+        "source_sha256": "42f87ab0c6b3fe3e70801fd5761d17f4a9e1ec5a9f55802782f1420067b773fe",
+        "artifacts": {
+          ".olean": "f279364f13793a205e3e957b74a20e9ff32872e563d4ee193ec796090c66439d"
+        },
+        "seconds": 0.75,
+        "exit_code": 0,
+        "log": "logs/runs/20261023T044759304508Z-f503b46f/StrongPossibilityConsequencesMaxConservativity.log",
+        "manifest": "checks/20261023T044759304508Z-f503b46f.json",
+        "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+        "archived_log": "logs/runs/20261023T044759304508Z-f503b46f/StrongPossibilityConsequencesMaxConservativity.log",
+        "manifest_schema_version": 2
+      },
+      "kind": "C certificates or metatheory concluding actual C derivations"
+    },
+    {
+      "module": "StrongPossibilityConsequencesMaxDiagram",
+      "short_name": "MaxDiagram",
+      "status": "passed",
+      "source_sha256_at_report": "9191956fb75c184a2f095201ec14c9f758451092b13b52899d0cb56b25866f6d",
+      "current_fingerprint_matches_check": true,
+      "check": {
+        "module": "StrongPossibilityConsequencesMaxDiagram",
+        "fingerprint": "ba73eefbd93debffdcb992d22d03d696ddaffe951d3bc2f7d978c9331d0af103",
+        "source_sha256": "9191956fb75c184a2f095201ec14c9f758451092b13b52899d0cb56b25866f6d",
+        "artifacts": {
+          ".olean": "e922ce8fd278493768c67a6ff67da0ada87b78eb4170c76eed8a0aa8a14707f1"
+        },
+        "seconds": 0.36,
+        "exit_code": 0,
+        "log": "logs/runs/20261023T044759304508Z-f503b46f/StrongPossibilityConsequencesMaxDiagram.log",
+        "manifest": "checks/20261023T044759304508Z-f503b46f.json",
+        "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+        "archived_log": "logs/runs/20261023T044759304508Z-f503b46f/StrongPossibilityConsequencesMaxDiagram.log",
+        "manifest_schema_version": 2
+      },
+      "kind": "C certificates or metatheory concluding actual C derivations"
+    },
+    {
+      "module": "StrongPossibilityConsequencesReflection",
+      "short_name": "Reflection",
+      "status": "passed",
+      "source_sha256_at_report": "cb7bf2b33a80da79332d692451e08fa478cb6257f072453b6d3adddf88fc4355",
+      "current_fingerprint_matches_check": true,
+      "check": {
+        "module": "StrongPossibilityConsequencesReflection",
+        "fingerprint": "260500c1bc57f095295c6c6020d7db9c12eb8d185946e1dcb5f16561211e1d28",
+        "source_sha256": "cb7bf2b33a80da79332d692451e08fa478cb6257f072453b6d3adddf88fc4355",
+        "artifacts": {
+          ".olean": "b1cc8d80f5822897a441488d410378bf150d4b946bea2c730930a2f36d7e9c79"
+        },
+        "seconds": 1.58,
+        "exit_code": 0,
+        "log": "logs/runs/20261023T044759304508Z-f503b46f/StrongPossibilityConsequencesReflection.log",
+        "manifest": "checks/20261023T044759304508Z-f503b46f.json",
+        "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+        "archived_log": "logs/runs/20261023T044759304508Z-f503b46f/StrongPossibilityConsequencesReflection.log",
+        "manifest_schema_version": 2
+      },
+      "kind": "C certificates or metatheory concluding actual C derivations"
+    },
+    {
+      "module": "StrongPossibilityConsequencesSchemas",
+      "short_name": "Schemas",
+      "status": "passed",
+      "source_sha256_at_report": "4450f37bc4e730f7e9e096a495dbd902c3d94fb30f44c292db03a83eedf1b78b",
+      "current_fingerprint_matches_check": true,
+      "check": {
+        "module": "StrongPossibilityConsequencesSchemas",
+        "seconds": 7.84,
+        "exit_code": 0,
+        "fingerprint": "48954d49e0bc2c1c48ca8e406bd5e87bd842f53c61baa8ef71ea1fe2a3e22ba9",
+        "log": "logs/runs/20261023T040926613001Z/StrongPossibilityConsequencesSchemas.log",
+        "manifest": "checks/20261023T040926613001Z.json",
+        "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+        "archived_log": "logs/runs/20261023T040926613001Z/StrongPossibilityConsequencesSchemas.log",
+        "manifest_schema_version": 1
+      },
+      "kind": "C certificates or metatheory concluding actual C derivations"
+    },
+    {
+      "module": "StrongPossibilityConsequencesSignatureSplit",
+      "short_name": "SignatureSplit",
+      "status": "passed",
+      "source_sha256_at_report": "1c95fc88dffdc5809ea02b43b498ddf4dac4e2b861f17647e242d978702096e9",
+      "current_fingerprint_matches_check": true,
+      "check": {
+        "module": "StrongPossibilityConsequencesSignatureSplit",
+        "fingerprint": "79e8d2d42ac656f316223ccbcff9118420b5dee6b6f78eaa0dea58ae61d37e89",
+        "source_sha256": "1c95fc88dffdc5809ea02b43b498ddf4dac4e2b861f17647e242d978702096e9",
+        "artifacts": {
+          ".olean": "d7ec9badd6f8ae8abded616dba438f22ccb98be4a6ed454a2812530c4050fe56"
+        },
+        "seconds": 1.09,
+        "exit_code": 0,
+        "log": "logs/runs/20261023T044759304508Z-f503b46f/StrongPossibilityConsequencesSignatureSplit.log",
+        "manifest": "checks/20261023T044759304508Z-f503b46f.json",
+        "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+        "archived_log": "logs/runs/20261023T044759304508Z-f503b46f/StrongPossibilityConsequencesSignatureSplit.log",
+        "manifest_schema_version": 2
+      },
+      "kind": "C certificates or metatheory concluding actual C derivations"
+    },
+    {
+      "module": "StrongPossibilityConsequencesStability",
+      "short_name": "Stability",
+      "status": "passed",
+      "source_sha256_at_report": "da0b6017c78b6e541c6e818f075572cdba6dcc4daa9e25972c530943a8ee5fbe",
+      "current_fingerprint_matches_check": true,
+      "check": {
+        "module": "StrongPossibilityConsequencesStability",
+        "fingerprint": "5b2f7ef28465701a32418b2c9058f2e170ba978b9463df15d04d3ea225e1bd9d",
+        "source_sha256": "da0b6017c78b6e541c6e818f075572cdba6dcc4daa9e25972c530943a8ee5fbe",
+        "artifacts": {
+          ".olean": "d59cb2d656a41fa62fd27aa65b45fb07bc126f0cb928435e8cb059cad93379d3"
+        },
+        "seconds": 4.71,
+        "exit_code": 0,
+        "log": "logs/runs/20261023T044759304508Z-f503b46f/StrongPossibilityConsequencesStability.log",
+        "manifest": "checks/20261023T044759304508Z-f503b46f.json",
+        "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+        "archived_log": "logs/runs/20261023T044759304508Z-f503b46f/StrongPossibilityConsequencesStability.log",
+        "manifest_schema_version": 2
+      },
+      "kind": "C certificates or metatheory concluding actual C derivations"
+    },
+    {
+      "module": "StrongPossibilityConsequencesUniversalCore",
+      "short_name": "UniversalCore",
+      "status": "passed",
+      "source_sha256_at_report": "b986bf950f38d0b359c22c9cde1b0ab02dbb6b8b8f8db79ac41996671a566288",
+      "current_fingerprint_matches_check": true,
+      "check": {
+        "module": "StrongPossibilityConsequencesUniversalCore",
+        "fingerprint": "5899be473914d817c9abe704c42e978307e4bf979fb3c81c165610cc6a0ecd25",
+        "source_sha256": "b986bf950f38d0b359c22c9cde1b0ab02dbb6b8b8f8db79ac41996671a566288",
+        "artifacts": {
+          ".olean": "5861e9d27c76898ec491c1521b91bebeff786eda5c49d2800b451222f2c525c8"
+        },
+        "reused": true,
+        "exit_code": 0,
+        "manifest": "sp-universal-verification/checks/20261023T044336274999Z-6b5c1cb4.json",
+        "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+        "manifest_schema_version": 2,
+        "archived_log": "sp-universal-verification/logs/runs/20261023T043010003441Z-33fa960f/StrongPossibilityConsequencesUniversalCore.log"
+      },
+      "kind": "C certificates or metatheory concluding actual C derivations"
+    }
+  ],
+  "additional_modules": [
+    {
+      "module": "StrongPossibilityConsequencesCoreAxioms",
+      "short_name": "CoreAxioms",
+      "status": "passed",
+      "source_sha256_at_report": "de2f752e87be1da1f43e1e794ed610790536b7897ea1b7db5a28975d06c73ff3",
+      "current_fingerprint_matches_check": true,
+      "check": {
+        "module": "StrongPossibilityConsequencesCoreAxioms",
+        "fingerprint": "a1d105ebcae2414a4711996c2215a47015ae3edae0cb84d3a2987bbcb9606e2a",
+        "source_sha256": "de2f752e87be1da1f43e1e794ed610790536b7897ea1b7db5a28975d06c73ff3",
+        "artifacts": {
+          ".olean": "a7fc6e8cfeae179dda79a3524f9f2ff9068a7ec47db6644e828b02b47300bd69"
+        },
+        "seconds": 0.71,
+        "exit_code": 0,
+        "log": "logs/runs/20261023T044759304508Z-f503b46f/StrongPossibilityConsequencesCoreAxioms.log",
+        "manifest": "checks/20261023T044759304508Z-f503b46f.json",
+        "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+        "archived_log": "logs/runs/20261023T044759304508Z-f503b46f/StrongPossibilityConsequencesCoreAxioms.log",
+        "manifest_schema_version": 2
+      },
+      "kind": "C certificates or metatheory concluding actual C derivations"
+    }
+  ]
+}

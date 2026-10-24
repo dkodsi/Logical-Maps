@@ -1,0 +1,44 @@
+Classicism.Research.C5ActualityNumbers.add_reflect_c5: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.C5ActualityNumbers.addition_iff_c5: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.C5ActualityNumbers.binary_push_pull_c5: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.C5ActualityNumbers.mul_reflect_c5: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.C5ActualityNumbers.multiplication_iff_c5: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.C5ActualityNumbers.numberMap_identity_iff_c5: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.C5ActualityNumbers.numberMap_injective_c5: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.C5ActualityNumbers.numberMap_inverse_graph_c5: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.C5ActualityNumbers.numberMap_successor_iff_c5: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.C5ActualityNumbers.order_iff_c5: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.C5ActualityNumbers.subset_push_pull_c5: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+#classicism_audit Classicism.Results.Research.C5ActualityNumbers: 11/11 theorems pass; 11 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.C5ActualityNumbers: 11/11 inside R
+Classicism.Results.Research.C5ActualityNumbers: 11 of 11 theorems derived
+
+[1/11] Classicism.Research.C5ActualityNumbers.add_reflect_c5 ✓ 4322 ms
+[2/11] Classicism.Research.C5ActualityNumbers.addition_iff_c5 ✓ 1685 ms
+[3/11] Classicism.Research.C5ActualityNumbers.binary_push_pull_c5 ✓ 0 ms
+[4/11] Classicism.Research.C5ActualityNumbers.mul_reflect_c5 ✓ 10180 ms
+[5/11] Classicism.Research.C5ActualityNumbers.multiplication_iff_c5 ✓ 5378 ms
+[6/11] Classicism.Research.C5ActualityNumbers.numberMap_identity_iff_c5 ✓ 75 ms
+[7/11] Classicism.Research.C5ActualityNumbers.numberMap_injective_c5 ✓ 0 ms
+[8/11] Classicism.Research.C5ActualityNumbers.numberMap_inverse_graph_c5 ✓ 555 ms
+[9/11] Classicism.Research.C5ActualityNumbers.numberMap_successor_iff_c5 ✓ 165 ms
+[10/11] Classicism.Research.C5ActualityNumbers.order_iff_c5 ✓ 4537 ms
+[11/11] Classicism.Research.C5ActualityNumbers.subset_push_pull_c5 ✓ 190 ms
+'Classicism.Research.C5ActualityNumbers.numberMap_injective_c5.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.C5ActualityNumbers.numberMap_inverse_graph_c5.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.C5ActualityNumbers.addition_iff_c5.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.C5ActualityNumbers.multiplication_iff_c5.derivable' depends on axioms: [propext, Quot.sound]

@@ -1,0 +1,336 @@
+{
+  "schema_version": 2,
+  "run_id": "20261023T234716612195Z-69d2dc80",
+  "modules": [
+    "Classicism.Results.Research.FullTypedLogicalSeparationCClosure"
+  ],
+  "cache": ".reproduction/classicism-lean-cert-cache",
+  "state": "failed",
+  "complete": false,
+  "checked": [
+    {
+      "module": "Classicism.Syntax.Types",
+      "fingerprint": "f920c6417fb0d73d4b6cb333a5de66a5647023a45396e3a09a0b7e943245c8cf",
+      "source_sha256": "567828e8f9a707cf635e3b4fb30bc868a419967307613d0686d795d195606eac",
+      "artifacts": {
+        ".olean": "06ab8b44ce7d7b6c90c25d4cc9e58b72ad316cb1c73e67e82c214ebc3117b126"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Term",
+      "fingerprint": "19fcc526fbf7a5f30c841e2fb11bd4cc6c4c8c77eddfb46e22a81b795035e2d5",
+      "source_sha256": "ad5172acbb74eaab9307662408928b80e6ffab62e14df16f2f41c7205de13f69",
+      "artifacts": {
+        ".olean": "4f77c921708f52a8d1c646e52072b7a63daab23afc54007f41eb669fc9d057bc"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Conversion",
+      "fingerprint": "98d38a7cbaf85616553560abf68733b885806aebd405d33965c1dc960da57f67",
+      "source_sha256": "c22fe48399811fcb0d71b37206c633749a7285291c62c2e7d786475ea6ae339e",
+      "artifacts": {
+        ".olean": "21dce520e2a4e2eb679fbf609ca34a6244daa22842f43fd08eaa4b9797224f6d"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Derivation",
+      "fingerprint": "061b31ce6eb4dec06fa11b50e1a6c035783c2a4995cd0969cc86efba8ddcaddc",
+      "source_sha256": "7cc2fd01542014d55e5a4c4a411724db7cdc076462d0de724c3530b0a8a3fc6b",
+      "artifacts": {
+        ".olean": "4f72cefd18595b0c00c8587ec3ece9b1d63cff25da1e72eae28d18701c32da3f"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationHCalculus",
+      "fingerprint": "5e9a434e8ea72c6fbc695b4eed91d50fe98621c11a84d76c84c93495a9d18b2e",
+      "source_sha256": "d667c1f80233191e44784c75f66c4836a5c8dbf2e8cf83c2b94654fd50fa45b9",
+      "artifacts": {
+        ".olean": "f6b2d52a66c56ea9fec98a9a995bd7f11b70fe9c4edf64ce2b44c1d197c14605"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationHSupport",
+      "fingerprint": "dafe60e676da7552ffacbeca351437e1b1437704013c1d5cb9a38a25cfd2e6d0",
+      "source_sha256": "4ba93e1652e2b9e29493759bebad93f4e3d000955b0f3d77ae525c52ae69fa1d",
+      "artifacts": {
+        ".olean": "38e42f0b23ff31f88dfeffd23d5b29b24cd47a6f985460f1a0bf68eb3216493c"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationHTransport",
+      "fingerprint": "ee49b5395d4a4f3a578697574e2af5b244d715818f1ecdba23a0ca2afc8a146b",
+      "source_sha256": "300514208513fb9f0787669e5eb9d1d6dcbde5e4eaa886f018c10805d689b622",
+      "artifacts": {
+        ".olean": "9aedaa20b9b4d0758347bb0f0823096638a285806a004c848dd4e5cebca356ef"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Axioms",
+      "fingerprint": "ddbcb4cf3a000255234e36d2ee2916e31b5fdb7a72f348dcefbd8c9d3ca7684a",
+      "source_sha256": "f3dd3b51ef834f46f22e09fe34026f47120a8bc171afb190b5053c443f4a82a7",
+      "artifacts": {
+        ".olean": "9119e12775e212ad694373b4138c67f18f8d297a1b655703f033e65072ccf154"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Entailment",
+      "fingerprint": "f670afd73a6fd66b3870be6129d27860b6752cbea6867b77f897d6c298a0bb17",
+      "source_sha256": "13f758dbf41a84dda7c2ae7adf6bcb9605ee114ce04dbda0efc5f1c4fbeabb1e",
+      "artifacts": {
+        ".olean": "c561b23650a51895b766f0aaea9b30a8748f94111ded0220acc3ae1db4882b41"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.ClosedTypes",
+      "fingerprint": "7c976b5b1656d60de70508fea43275956cf95917fab784ef3eb9d627e6c2c7fa",
+      "source_sha256": "07ea7d86a0ec8faf8da218c04b9ab46c0b3b941c5772729340de705750227968",
+      "artifacts": {
+        ".olean": "5fd0f066f66ccc53e9729b71b99a088d18df0eb101e505eeaa60a3d77fb77440"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Blocks",
+      "fingerprint": "8f619648c1c389b21f3ef2a40567f20862d30330a0620404a743ae921b4637a2",
+      "source_sha256": "77b4ef8fadb3646edd15d25854bac994a6eabb8bb1f51347c9dd00fce3a6ac5d",
+      "artifacts": {
+        ".olean": "311996802ea136c940f6231659fdd0256a3267f5a4f5ad2ad7817d75af70d32a"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Vectorize",
+      "fingerprint": "c57e9e1a546872e4dd5521dde4e9e8200b4a7493a6908e4ba2bacd5c6ba6d27a",
+      "source_sha256": "b57548b87b70c0e9df1c0fd48a1f7b7d67d4828ab4d4286e164e7f32c4716817",
+      "artifacts": {
+        ".olean": "54676fc9c944d5a3d3790924422e2f96b91f632e553468b388bc76e0126e0735"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationSyntax",
+      "fingerprint": "1146cfb4ba9594aa4257d320595c775aea46c75044b998d0c1ea7dcce96026e9",
+      "source_sha256": "fafb4b22de58e342222a6039c3757dd8e61549febd85c4d8ddd6cf6402ee42e1",
+      "artifacts": {
+        ".olean": "7be14fc260754d5250fa2b2f420db0cbd619381ab47c84e96feae35e70e2c811"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationHBridge",
+      "fingerprint": "011dcd337611a0f9600c422040e5c56141e7fffdf432a30405b756b0386d6769",
+      "source_sha256": "ac2962e184bea2d19cf5607370db811e223662e0949c2f4ec8f7c0ec8d70867f",
+      "artifacts": {
+        ".olean": "4b98fda4e2a132cf030d37862de8c6f1faa1649d7f9b7f94e2ca82322b549417"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationHClosure",
+      "fingerprint": "84fb9ac515c35ef76777e674bf5b36667899bf83afd8ae8de4586aaf8946e3ed",
+      "source_sha256": "5187f252e77f6280c1a03c252b37f68191959b942cc78f6ed98cffbe0fa59230",
+      "artifacts": {
+        ".olean": "fcb0c0017b15299d221a3889144a250febe22b4134fa9e3ad8153bab5561d70e"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationHConsequences",
+      "fingerprint": "667f925b44547b56777029c365d6c36ad7a6e2757d9ed98c09db705db0b33758",
+      "source_sha256": "ea1d05c28cde792d9e068d802d7396ca237521a56cf01dc4da49baee299a7b5d",
+      "artifacts": {
+        ".olean": "9b3e931471ac14afba603c215cde3db1aa4e6f873daff6bdbe42f918b1be0908"
+      },
+      "seconds": 17.84,
+      "exit_code": 0,
+      "log": "logs/runs/20261023T234716612195Z-69d2dc80/Classicism_Results_Research_FullTypedLogicalSeparationHConsequences.log"
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationCHoles",
+      "fingerprint": "1d1a17e715cf9358d8550aa1c9648318c0e81a2db440c06870c7e733cb65d6de",
+      "source_sha256": "84d86fdd90d705e6e99a7819b214bbde37c1b65c86d67f5cd7e704b905452711",
+      "seconds": 2.44,
+      "exit_code": 1,
+      "log": "logs/runs/20261023T234716612195Z-69d2dc80/Classicism_Results_Research_FullTypedLogicalSeparationCHoles.log"
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationCSupport",
+      "fingerprint": "33bdb9b50dc8980d0da38492bb8b1cacd73573b17040840db092ecfb11c2d156",
+      "source_sha256": "aeb1bb579d04b77d4af983eb09e8f327f208c0b778208d4211aaeb353b059c51",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationIdentity",
+      "fingerprint": "eb4596c766718162d779bf37cca1c72fb17f160b67216400f9de14321fea847e",
+      "source_sha256": "e1eb202a6ac932cbdd7004d3f68cecabfcf8eb127a5556cc5178e465341c02d3",
+      "artifacts": {
+        ".olean": "0c8b080c282b8ee94045dd675d342dac9522c8b09acc2022bacad564dd04e5dd"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationCTransport",
+      "fingerprint": "5371183182c38bb10bceaec9d0ac60768ef6d92a7fac51f9dc38dbc5a5f815d7",
+      "source_sha256": "32ae24dbd48ed8bde61437b21e0fcc9c636b334f93e3299e60fcd9e78ef2d165",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Syntax.VectorizeDerivable",
+      "fingerprint": "bd67d51fc6c088c18eaad5508eb23b8f2044a69e4884d6a45bdd37a678e66df0",
+      "source_sha256": "17508c58aef3e3ad7b121f20349045d76c5e238a164cdaf96c2400255c492824",
+      "artifacts": {
+        ".olean": "2cadee08cbe83be4eb007873437b03c95690ef5b51babe5c034e0bc3dc4ec7e8"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationClosedTypes",
+      "fingerprint": "aa372cd4d2c46e2dad8ebaa3f7dc981d51014e9cdcbf5cd83735b15080e7a5ec",
+      "source_sha256": "3039042ee7f330cca3401bc1be7fb6069f59519a251fdea744a24956f46f1a45",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationCClosure",
+      "fingerprint": "d446f085c05f70962cba451442f6be88194877a4c55a1c88f2b70714f7993871",
+      "source_sha256": "21deae99cb88241b6de1504cbadcfa5cdea7b668447262790c24b9c7c76a3940",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    }
+  ],
+  "sources": {
+    "Classicism.Syntax.Types": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Types.lean",
+      "sha256": "567828e8f9a707cf635e3b4fb30bc868a419967307613d0686d795d195606eac"
+    },
+    "Classicism.Syntax.Term": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Term.lean",
+      "sha256": "ad5172acbb74eaab9307662408928b80e6ffab62e14df16f2f41c7205de13f69"
+    },
+    "Classicism.Syntax.Conversion": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Conversion.lean",
+      "sha256": "c22fe48399811fcb0d71b37206c633749a7285291c62c2e7d786475ea6ae339e"
+    },
+    "Classicism.Syntax.Derivation": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Derivation.lean",
+      "sha256": "7cc2fd01542014d55e5a4c4a411724db7cdc076462d0de724c3530b0a8a3fc6b"
+    },
+    "Classicism.Results.Research.FullTypedLogicalSeparationHCalculus": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FullTypedLogicalSeparationHCalculus.lean",
+      "sha256": "d667c1f80233191e44784c75f66c4836a5c8dbf2e8cf83c2b94654fd50fa45b9"
+    },
+    "Classicism.Results.Research.FullTypedLogicalSeparationHSupport": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FullTypedLogicalSeparationHSupport.lean",
+      "sha256": "4ba93e1652e2b9e29493759bebad93f4e3d000955b0f3d77ae525c52ae69fa1d"
+    },
+    "Classicism.Results.Research.FullTypedLogicalSeparationHTransport": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FullTypedLogicalSeparationHTransport.lean",
+      "sha256": "300514208513fb9f0787669e5eb9d1d6dcbde5e4eaa886f018c10805d689b622"
+    },
+    "Classicism.Syntax.Axioms": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Axioms.lean",
+      "sha256": "f3dd3b51ef834f46f22e09fe34026f47120a8bc171afb190b5053c443f4a82a7"
+    },
+    "Classicism.Syntax.Entailment": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Entailment.lean",
+      "sha256": "13f758dbf41a84dda7c2ae7adf6bcb9605ee114ce04dbda0efc5f1c4fbeabb1e"
+    },
+    "Classicism.Syntax.ClosedTypes": {
+      "path": "topics/classicism/lean/Classicism/Syntax/ClosedTypes.lean",
+      "sha256": "07ea7d86a0ec8faf8da218c04b9ab46c0b3b941c5772729340de705750227968"
+    },
+    "Classicism.Syntax.Blocks": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Blocks.lean",
+      "sha256": "77b4ef8fadb3646edd15d25854bac994a6eabb8bb1f51347c9dd00fce3a6ac5d"
+    },
+    "Classicism.Syntax.Vectorize": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Vectorize.lean",
+      "sha256": "b57548b87b70c0e9df1c0fd48a1f7b7d67d4828ab4d4286e164e7f32c4716817"
+    },
+    "Classicism.Results.Research.FullTypedLogicalSeparationSyntax": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FullTypedLogicalSeparationSyntax.lean",
+      "sha256": "fafb4b22de58e342222a6039c3757dd8e61549febd85c4d8ddd6cf6402ee42e1"
+    },
+    "Classicism.Results.Research.FullTypedLogicalSeparationHBridge": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FullTypedLogicalSeparationHBridge.lean",
+      "sha256": "ac2962e184bea2d19cf5607370db811e223662e0949c2f4ec8f7c0ec8d70867f"
+    },
+    "Classicism.Results.Research.FullTypedLogicalSeparationHClosure": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FullTypedLogicalSeparationHClosure.lean",
+      "sha256": "5187f252e77f6280c1a03c252b37f68191959b942cc78f6ed98cffbe0fa59230"
+    },
+    "Classicism.Results.Research.FullTypedLogicalSeparationHConsequences": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FullTypedLogicalSeparationHConsequences.lean",
+      "sha256": "ea1d05c28cde792d9e068d802d7396ca237521a56cf01dc4da49baee299a7b5d"
+    },
+    "Classicism.Results.Research.FullTypedLogicalSeparationCHoles": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FullTypedLogicalSeparationCHoles.lean",
+      "sha256": "84d86fdd90d705e6e99a7819b214bbde37c1b65c86d67f5cd7e704b905452711"
+    },
+    "Classicism.Results.Research.FullTypedLogicalSeparationCSupport": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FullTypedLogicalSeparationCSupport.lean",
+      "sha256": "aeb1bb579d04b77d4af983eb09e8f327f208c0b778208d4211aaeb353b059c51"
+    },
+    "Classicism.Results.Research.FullTypedLogicalSeparationIdentity": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FullTypedLogicalSeparationIdentity.lean",
+      "sha256": "e1eb202a6ac932cbdd7004d3f68cecabfcf8eb127a5556cc5178e465341c02d3"
+    },
+    "Classicism.Results.Research.FullTypedLogicalSeparationCTransport": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FullTypedLogicalSeparationCTransport.lean",
+      "sha256": "32ae24dbd48ed8bde61437b21e0fcc9c636b334f93e3299e60fcd9e78ef2d165"
+    },
+    "Classicism.Syntax.VectorizeDerivable": {
+      "path": "topics/classicism/lean/Classicism/Syntax/VectorizeDerivable.lean",
+      "sha256": "17508c58aef3e3ad7b121f20349045d76c5e238a164cdaf96c2400255c492824"
+    },
+    "Classicism.Results.Research.FullTypedLogicalSeparationClosedTypes": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FullTypedLogicalSeparationClosedTypes.lean",
+      "sha256": "3039042ee7f330cca3401bc1be7fb6069f59519a251fdea744a24956f46f1a45"
+    },
+    "Classicism.Results.Research.FullTypedLogicalSeparationCClosure": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/FullTypedLogicalSeparationCClosure.lean",
+      "sha256": "21deae99cb88241b6de1504cbadcfa5cdea7b668447262790c24b9c7c76a3940"
+    }
+  },
+  "precompiled_roots": [],
+  "precompiled_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "compiler_path": ".reproduction/classicism-lean-toolchain/lean-4.33.1-darwin_aarch64/bin/lean",
+  "compiler_sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554",
+  "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "source_snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261023T234716612195Z-69d2dc80/sources",
+  "source_drift": [],
+  "current_sources_match": true,
+  "exit_code": 1,
+  "publication_normalization": {
+    "original_sha256": "bd5c385c63249b94c96707f09e47dac511a8e279f1a147664166c61f93703cb8",
+    "changes": "Machine-specific paths and compiler-coordination fields removed; source hashes, recorded check outcomes and compiler fingerprints retained."
+  }
+}

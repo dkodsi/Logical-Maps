@@ -1,0 +1,27 @@
+import Classicism.Results.Research.GeneratedAlgebraFinite
+import Classicism.Results.Research.GeneratedAlgebraTransferCertificates
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Translate
+
+/-! Translation checkpoint generated from the finite typed signature.
+The final certificate driver audits every theorem in the source module. -/
+
+#classicism_audit Classicism.Results.Research.GeneratedAlgebraFinite
+#classicism_types_audit Classicism.Results.Research.GeneratedAlgebraFinite
+
+#classicism_derive Classicism.Research.GeneratedAlgebraFinite.source_op0
+#classicism_derive Classicism.Research.GeneratedAlgebraFinite.source_op1
+#classicism_derive Classicism.Research.GeneratedAlgebraFinite.source_op2
+#classicism_derive Classicism.Research.GeneratedAlgebraFinite.source_op3
+#classicism_derive Classicism.Research.GeneratedAlgebraFinite.source_op4
+#classicism_derive Classicism.Research.GeneratedAlgebraFinite.source_op5
+#classicism_derive Classicism.Research.GeneratedAlgebraFinite.point_persistent0
+#classicism_derive Classicism.Research.GeneratedAlgebraFinite.persistent0
+#classicism_derive Classicism.Research.GeneratedAlgebraFinite.rigid0
+#classicism_derive Classicism.Research.GeneratedAlgebraFinite.point_persistent1
+#classicism_derive Classicism.Research.GeneratedAlgebraFinite.persistent1
+#classicism_derive Classicism.Research.GeneratedAlgebraFinite.rigid1
+#classicism_derive Classicism.Research.GeneratedAlgebraFinite.point_persistent2
+#classicism_derive Classicism.Research.GeneratedAlgebraFinite.persistent2
+#classicism_derive Classicism.Research.GeneratedAlgebraFinite.rigid2

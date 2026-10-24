@@ -1,0 +1,169 @@
+{
+  "status": "checked_main_target",
+  "checked_at_utc": "2026-10-23T05:12:46.094600+00:00",
+  "target": "Classicism.Models.SinglePredicateCountermodelChecks",
+  "manifest": "research/2026-10-22/lean-formalization/checks/20261023T051126488606Z-b00090cd.json",
+  "axiom_audit_log": "research/2026-10-22/lean-formalization/logs/runs/20261023T051126488606Z-b00090cd/Classicism_Models_SinglePredicateCountermodelChecks.log",
+  "scope": "Exact admitted signature {c:e→t}; full one-world Bool/Nat individuals and singleton predicate. Main consistency and nonentailment statements are signature-specific countermodels to signature-uniform claims. Ordinary classical metatheory, no shallow-C certificate or database promotion.",
+  "axiom_dependencies": {
+    "Classicism.Meta.FullPure.denote_pure_move": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Classicism.Meta.FullPure.closed_pure_fixed": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Classicism.Meta.SinglePredicateFull.bool_independence": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Classicism.Meta.SinglePredicateFull.nat_independence": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Classicism.Meta.FullExtensional.holds_atomicity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Classicism.Meta.FullExtensional.holds_extensionality": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Classicism.Meta.FullExtensional.holds_C5": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Classicism.Meta.FullExtensional.holds_boxedFunctionalChoice": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Classicism.Meta.FullExtensional.bool_not_quantifiedInfinity_e": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Classicism.Meta.FullExtensional.not_quantifiedInfinity_t": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Classicism.Meta.FullExtensional.nat_quantifiedInfinity_e": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Classicism.Meta.FullExtensional.nat_infinitySchema_e": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Classicism.Meta.SinglePredicateFull.c5_independence_boxedChoice_consistent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Classicism.Meta.SinglePredicateFull.c5_independence_choice_consistent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Classicism.Meta.SinglePredicateFull.c5_atomic_independence_collapse_consistent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Classicism.Meta.SinglePredicateFull.c5_atomic_independence_noContingency_not_schemaInfinity_t": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Classicism.Meta.SinglePredicateFull.c5_atomic_independence_intensionalChoice_not_schemaInfinity_t": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Classicism.Meta.SinglePredicateFull.c5_atomic_independence_modalFreedom_not_schemaInfinity_t": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Classicism.Meta.SinglePredicateFull.c5_atomic_independence_noContingency_not_quantifiedInfinity_t": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Classicism.Meta.SinglePredicateFull.extensional_independence_infinity_consistent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Classicism.Meta.SinglePredicateFull.extensional_independence_schemaInfinity_consistent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Classicism.Meta.SinglePredicateFull.extensional_independence_choice_consistent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Classicism.Meta.SinglePredicateFull.extensional_independence_not_infinity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Classicism.Meta.SinglePredicateFull.extensional_independence_choice_not_infinity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Classicism.Meta.SinglePredicateFull.bool_complete_countermodel": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Classicism.Meta.SinglePredicateFull.nat_complete_countermodel": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Classicism.Meta.SinglePredicateFull.signature_admitted": []
+  },
+  "sources": {
+    "Classicism.Semantics.FullExtensionalProperties": {
+      "path": "topics/classicism/lean/Classicism/Semantics/FullExtensionalProperties.lean",
+      "sha256": "9c9a4d0e0c543f0d26af1e37f7118100d707af91d635d93a6295a279fc13daa3"
+    },
+    "Classicism.Semantics.FullPureEquivariance": {
+      "path": "topics/classicism/lean/Classicism/Semantics/FullPureEquivariance.lean",
+      "sha256": "341ab38c2d78ef1ad2f3dd47ab364c28cf895e4b8a6ff180a771b33e0eedb17b"
+    },
+    "Classicism.Models.SinglePredicateFull": {
+      "path": "topics/classicism/lean/Classicism/Models/SinglePredicateFull.lean",
+      "sha256": "7132dc1d759f05fd8903cd915bf61f176ac950a24494615722f7544832273fdb"
+    },
+    "Classicism.Semantics.FullExtensionalInfinity": {
+      "path": "topics/classicism/lean/Classicism/Semantics/FullExtensionalInfinity.lean",
+      "sha256": "8754857d4a375823de58a0e1d0fe251a8955c425a89a0ebb174f8ec61d8a1f8a"
+    },
+    "Classicism.Semantics.FullExtensionalCounting": {
+      "path": "topics/classicism/lean/Classicism/Semantics/FullExtensionalCounting.lean",
+      "sha256": "0fa2ff032f09b078403eacc346427575b6632f9ca821ae44feefc655f8c4db29"
+    },
+    "Classicism.Models.SinglePredicateCountermodels": {
+      "path": "topics/classicism/lean/Classicism/Models/SinglePredicateCountermodels.lean",
+      "sha256": "8cc762691ea01682ae31a1807d8a63ef8bb27113f0060de88f3c502f802a9cb3"
+    },
+    "Classicism.Models.SinglePredicateCountermodelChecks": {
+      "path": "topics/classicism/lean/Classicism/Models/SinglePredicateCountermodelChecks.lean",
+      "sha256": "6fa0aec4bacb555cbc879c0e457f2434af31a433d3c9af353a4cca554309eef7"
+    }
+  },
+  "prose_proof": "research/2026-10-22/central-questions-audit.md",
+  "contribution_summary": "research/2026-10-22/lean-formalization/model-foundations-delivery.md"
+}

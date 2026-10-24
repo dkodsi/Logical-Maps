@@ -1,0 +1,10 @@
+Probability NumericAddition Basic [mono_ms=17007930]: begin axiom report Classicism.Research.ProbabilityNumericOperations.plus_zero_left.derivable
+Probability NumericAddition Basic [mono_ms=17007940]: axiom report returned Classicism.Research.ProbabilityNumericOperations.plus_zero_left.derivable
+Probability NumericAddition Basic [mono_ms=17007946]: begin axiom report Classicism.Research.ProbabilityNumericOperations.plus_suc_left.derivable
+Probability NumericAddition Basic [mono_ms=17007952]: axiom report returned Classicism.Research.ProbabilityNumericOperations.plus_suc_left.derivable
+Probability NumericAddition Basic [mono_ms=17007958]: begin axiom report Classicism.Research.ProbabilityNumericOperations.plus_comm.derivable
+Probability NumericAddition Basic [mono_ms=17007965]: axiom report returned Classicism.Research.ProbabilityNumericOperations.plus_comm.derivable
+Probability NumericAddition Basic audit [mono_ms=17007971]: all three reports complete; frontend finalization remains
+'Classicism.Research.ProbabilityNumericOperations.plus_zero_left.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.ProbabilityNumericOperations.plus_suc_left.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.ProbabilityNumericOperations.plus_comm.derivable' depends on axioms: [propext, Quot.sound]

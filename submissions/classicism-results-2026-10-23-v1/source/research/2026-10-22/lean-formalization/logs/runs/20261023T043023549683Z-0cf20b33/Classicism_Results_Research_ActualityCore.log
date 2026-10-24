@@ -1,0 +1,25 @@
+Classicism/Results/Research/ActualityCore.lean:48:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.ActualityCore.local_order_step`:
+  [Order τ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Order τ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/ActualityCore.lean:70:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.ActualityCore.domain_supported`:
+  [Order τ]
+  [Pointwise τ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Order τ] [Pointwise τ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/ActualityCore.lean:239:9: warning: Variable name `x` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _x
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Classicism/Results/Research/ActualityCore.lean:256:0: warning: automatically included section variable(s) unused in theorem `Classicism.Research.ActualityCore.current_pin_injective`:
+  [Ty σ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Ty σ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

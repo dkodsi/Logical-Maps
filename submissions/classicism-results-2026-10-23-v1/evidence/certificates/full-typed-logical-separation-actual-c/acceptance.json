@@ -1,0 +1,215 @@
+{
+  "status": "accepted",
+  "kind": "current-source module and principal axiom audit",
+  "verified_at_utc": "2026-10-24T02:00:34.186055+00:00",
+  "manifest": "research/2026-10-22/lean-formalization/checks/20261024T015828557306Z-0588f502.json",
+  "manifest_sha256": "6979b1e2afbc61344c3dda97ee761d074a77c7126d2c20ecd65514a90656a20b",
+  "log": "research/2026-10-22/lean-formalization/logs/runs/20261024T015828557306Z-0588f502/Classicism_Results_Research_FullTypedLogicalSeparationCClosure.log",
+  "log_sha256": "af71cdd9ea6cf7d9f20948ba83e676df903dd4edc86aa00bb1292f2efb5f8a01",
+  "compiler_sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554",
+  "module": "Classicism.Results.Research.FullTypedLogicalSeparationCClosure",
+  "source_sha256": "33aee2097d0c661335d51404205e4117e70d603e5a4cf13d4a11e3bd3284e291",
+  "principal_declarations": [
+    "Classicism.Meta.Research.FullTypedLogicalSeparation.actual_c_sequent",
+    "Classicism.Meta.Research.FullTypedLogicalSeparation.actual_c_theorem",
+    "Classicism.Meta.Research.FullTypedLogicalSeparation.h_full_logical_separation_actual_c"
+  ],
+  "principal_axioms": [
+    "propext",
+    "Quot.sound"
+  ],
+  "sorryAx": false,
+  "scope": "Same-signature, same-sequent translation from actual repository C to independent H plus full typed logical separation, for closed constant, context and boundary types; direct admitted Barcan and Functionality consequences. Local hypotheses remain local.",
+  "not_claimed": [
+    "Simultaneous finite-list observer schema certification",
+    "Automatic database statement certification",
+    "Minimum-basis theorem"
+  ],
+  "current_transitive_closure": [
+    {
+      "module": "Classicism.Syntax.Types",
+      "path": "topics/classicism/lean/Classicism/Syntax/Types.lean",
+      "sha256": "567828e8f9a707cf635e3b4fb30bc868a419967307613d0686d795d195606eac",
+      "artifacts": {
+        ".olean": "06ab8b44ce7d7b6c90c25d4cc9e58b72ad316cb1c73e67e82c214ebc3117b126"
+      }
+    },
+    {
+      "module": "Classicism.Syntax.Term",
+      "path": "topics/classicism/lean/Classicism/Syntax/Term.lean",
+      "sha256": "ad5172acbb74eaab9307662408928b80e6ffab62e14df16f2f41c7205de13f69",
+      "artifacts": {
+        ".olean": "4f77c921708f52a8d1c646e52072b7a63daab23afc54007f41eb669fc9d057bc"
+      }
+    },
+    {
+      "module": "Classicism.Syntax.Conversion",
+      "path": "topics/classicism/lean/Classicism/Syntax/Conversion.lean",
+      "sha256": "c22fe48399811fcb0d71b37206c633749a7285291c62c2e7d786475ea6ae339e",
+      "artifacts": {
+        ".olean": "21dce520e2a4e2eb679fbf609ca34a6244daa22842f43fd08eaa4b9797224f6d"
+      }
+    },
+    {
+      "module": "Classicism.Syntax.Derivation",
+      "path": "topics/classicism/lean/Classicism/Syntax/Derivation.lean",
+      "sha256": "7cc2fd01542014d55e5a4c4a411724db7cdc076462d0de724c3530b0a8a3fc6b",
+      "artifacts": {
+        ".olean": "4f72cefd18595b0c00c8587ec3ece9b1d63cff25da1e72eae28d18701c32da3f"
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationHCalculus",
+      "path": "topics/classicism/lean/Classicism/Results/Research/FullTypedLogicalSeparationHCalculus.lean",
+      "sha256": "d667c1f80233191e44784c75f66c4836a5c8dbf2e8cf83c2b94654fd50fa45b9",
+      "artifacts": {
+        ".olean": "f6b2d52a66c56ea9fec98a9a995bd7f11b70fe9c4edf64ce2b44c1d197c14605"
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationHSupport",
+      "path": "topics/classicism/lean/Classicism/Results/Research/FullTypedLogicalSeparationHSupport.lean",
+      "sha256": "4ba93e1652e2b9e29493759bebad93f4e3d000955b0f3d77ae525c52ae69fa1d",
+      "artifacts": {
+        ".olean": "38e42f0b23ff31f88dfeffd23d5b29b24cd47a6f985460f1a0bf68eb3216493c"
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationHTransport",
+      "path": "topics/classicism/lean/Classicism/Results/Research/FullTypedLogicalSeparationHTransport.lean",
+      "sha256": "300514208513fb9f0787669e5eb9d1d6dcbde5e4eaa886f018c10805d689b622",
+      "artifacts": {
+        ".olean": "9aedaa20b9b4d0758347bb0f0823096638a285806a004c848dd4e5cebca356ef"
+      }
+    },
+    {
+      "module": "Classicism.Syntax.Axioms",
+      "path": "topics/classicism/lean/Classicism/Syntax/Axioms.lean",
+      "sha256": "f3dd3b51ef834f46f22e09fe34026f47120a8bc171afb190b5053c443f4a82a7",
+      "artifacts": {
+        ".olean": "9119e12775e212ad694373b4138c67f18f8d297a1b655703f033e65072ccf154"
+      }
+    },
+    {
+      "module": "Classicism.Syntax.Entailment",
+      "path": "topics/classicism/lean/Classicism/Syntax/Entailment.lean",
+      "sha256": "13f758dbf41a84dda7c2ae7adf6bcb9605ee114ce04dbda0efc5f1c4fbeabb1e",
+      "artifacts": {
+        ".olean": "c561b23650a51895b766f0aaea9b30a8748f94111ded0220acc3ae1db4882b41"
+      }
+    },
+    {
+      "module": "Classicism.Syntax.ClosedTypes",
+      "path": "topics/classicism/lean/Classicism/Syntax/ClosedTypes.lean",
+      "sha256": "07ea7d86a0ec8faf8da218c04b9ab46c0b3b941c5772729340de705750227968",
+      "artifacts": {
+        ".olean": "5fd0f066f66ccc53e9729b71b99a088d18df0eb101e505eeaa60a3d77fb77440"
+      }
+    },
+    {
+      "module": "Classicism.Syntax.Blocks",
+      "path": "topics/classicism/lean/Classicism/Syntax/Blocks.lean",
+      "sha256": "77b4ef8fadb3646edd15d25854bac994a6eabb8bb1f51347c9dd00fce3a6ac5d",
+      "artifacts": {
+        ".olean": "311996802ea136c940f6231659fdd0256a3267f5a4f5ad2ad7817d75af70d32a"
+      }
+    },
+    {
+      "module": "Classicism.Syntax.Vectorize",
+      "path": "topics/classicism/lean/Classicism/Syntax/Vectorize.lean",
+      "sha256": "b57548b87b70c0e9df1c0fd48a1f7b7d67d4828ab4d4286e164e7f32c4716817",
+      "artifacts": {
+        ".olean": "54676fc9c944d5a3d3790924422e2f96b91f632e553468b388bc76e0126e0735"
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationSyntax",
+      "path": "topics/classicism/lean/Classicism/Results/Research/FullTypedLogicalSeparationSyntax.lean",
+      "sha256": "fafb4b22de58e342222a6039c3757dd8e61549febd85c4d8ddd6cf6402ee42e1",
+      "artifacts": {
+        ".olean": "7be14fc260754d5250fa2b2f420db0cbd619381ab47c84e96feae35e70e2c811"
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationHBridge",
+      "path": "topics/classicism/lean/Classicism/Results/Research/FullTypedLogicalSeparationHBridge.lean",
+      "sha256": "ac2962e184bea2d19cf5607370db811e223662e0949c2f4ec8f7c0ec8d70867f",
+      "artifacts": {
+        ".olean": "4b98fda4e2a132cf030d37862de8c6f1faa1649d7f9b7f94e2ca82322b549417"
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationHClosure",
+      "path": "topics/classicism/lean/Classicism/Results/Research/FullTypedLogicalSeparationHClosure.lean",
+      "sha256": "5187f252e77f6280c1a03c252b37f68191959b942cc78f6ed98cffbe0fa59230",
+      "artifacts": {
+        ".olean": "fcb0c0017b15299d221a3889144a250febe22b4134fa9e3ad8153bab5561d70e"
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationHConsequences",
+      "path": "topics/classicism/lean/Classicism/Results/Research/FullTypedLogicalSeparationHConsequences.lean",
+      "sha256": "ea1d05c28cde792d9e068d802d7396ca237521a56cf01dc4da49baee299a7b5d",
+      "artifacts": {
+        ".olean": "9b3e931471ac14afba603c215cde3db1aa4e6f873daff6bdbe42f918b1be0908"
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationCHoles",
+      "path": "topics/classicism/lean/Classicism/Results/Research/FullTypedLogicalSeparationCHoles.lean",
+      "sha256": "1890232f9e587cac81cd6e5ccb14821398c81641c8ea70934b01bee8e75a96fe",
+      "artifacts": {
+        ".olean": "893230c32103c17aa292ed908087de40a1532d9c704a27c1c6d8c21995f5cb6d"
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationCSupport",
+      "path": "topics/classicism/lean/Classicism/Results/Research/FullTypedLogicalSeparationCSupport.lean",
+      "sha256": "aeb1bb579d04b77d4af983eb09e8f327f208c0b778208d4211aaeb353b059c51",
+      "artifacts": {
+        ".olean": "b709ff6d0f022981f37a98055c51befa9532e61f783633191cddf8e27009cf40"
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationIdentity",
+      "path": "topics/classicism/lean/Classicism/Results/Research/FullTypedLogicalSeparationIdentity.lean",
+      "sha256": "e1eb202a6ac932cbdd7004d3f68cecabfcf8eb127a5556cc5178e465341c02d3",
+      "artifacts": {
+        ".olean": "0c8b080c282b8ee94045dd675d342dac9522c8b09acc2022bacad564dd04e5dd"
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationCTransport",
+      "path": "topics/classicism/lean/Classicism/Results/Research/FullTypedLogicalSeparationCTransport.lean",
+      "sha256": "0a7b39a2897a72bc8986dd9f27e134ebd318c0cfe2ccd08998221d64edda5c32",
+      "artifacts": {
+        ".olean": "294b55def24b67d7ca5473df4cfc3c6197328a06300fab5f730be48147216cca"
+      }
+    },
+    {
+      "module": "Classicism.Syntax.VectorizeDerivable",
+      "path": "topics/classicism/lean/Classicism/Syntax/VectorizeDerivable.lean",
+      "sha256": "17508c58aef3e3ad7b121f20349045d76c5e238a164cdaf96c2400255c492824",
+      "artifacts": {
+        ".olean": "2cadee08cbe83be4eb007873437b03c95690ef5b51babe5c034e0bc3dc4ec7e8"
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationClosedTypes",
+      "path": "topics/classicism/lean/Classicism/Results/Research/FullTypedLogicalSeparationClosedTypes.lean",
+      "sha256": "a5f0e56e58708ae0c9f2bfe52cc6eb5b2ae6586d269471b8087930f1e8d69403",
+      "artifacts": {
+        ".olean": "711e5905712916ba63db1348b9a49d740486a8db37419f83456e2e1edf10fad1"
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationCClosure",
+      "path": "topics/classicism/lean/Classicism/Results/Research/FullTypedLogicalSeparationCClosure.lean",
+      "sha256": "33aee2097d0c661335d51404205e4117e70d603e5a4cf13d4a11e3bd3284e291",
+      "artifacts": {
+        ".olean": "9b4fde1f8d2d55f9abb349e5dab0c2a0d24b6800fe7dcb9275a10fc216753d17"
+      }
+    }
+  ],
+  "current_sources_snapshots_and_artifacts_match": true
+}

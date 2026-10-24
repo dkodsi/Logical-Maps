@@ -1,0 +1,387 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{natbib}
+\setlength{\parindent}{1.25em}
+\setlength{\parskip}{0.2em}
+\setlength{\emergencystretch}{2em}
+\newcommand{\C}{\mathsf C}
+\newcommand{\CC}{\mathsf{CC}}
+\newcommand{\Max}{\mathsf{Max}}
+\newcommand{\FC}{\mathsf{FC}}
+\newcommand{\RC}{\mathsf{RCh}}
+\newcommand{\BC}{\mathsf{BC}}
+\newcommand{\ND}{\mathsf{ND}}
+\newcommand{\At}{\mathsf{Atomicity}}
+\newcommand{\Act}{\mathsf{Actuality}}
+\newcommand{\Infq}{\mathsf{Inf}^{q}}
+\newcommand{\Real}{\operatorname{Real}}
+\newtheorem{proposition}{Proposition}
+\title{Choice, Possibility, and the Justification\\of Higher-Order Logic}
+\author{}
+\date{Draft for substantive review\\23 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Substantive higher-order logics make competing claims about the identity, existence and modal behaviour of propositions and relations. Their assessment requires an account of what those claims explain. I compare Choice Classicism and pure Maximalist Classicism as proposals about logical determination, using mathematical reasoning, the treatment of intensional entities and the representation of possibilities as tests. The interpretation of the defined modal operators is part of the comparison: neither theory receives an identification with metaphysical modality for free. Choice Classicism offers an integrated account of operations, persistent distinctions and stable mathematical structures. Maximalism gives a principled alternative that preserves broad possibilities and can recover substantial mathematics relationally. Intermediate theories and possibility-frame models show that several successes attributed to Choice are shared. The resulting abductive case favours substantial structural constraints for an integrated foundation of mathematics and modality, while leaving the further preference for unrestricted Functional Choice dependent on its general selection policy. Formal consequences discipline this assessment; they do not supply its evaluative premises.
+\end{abstract}
+
+\section{The problem of choosing a higher-order logic}\label{sec:problem}
+
+Higher-order logic is often used as a framework within which philosophical theories are formulated. Yet its treatment of propositions and relations can itself make substantive claims about reality. Principles governing their identity and existence affect what mathematics can be represented, which distinctions persist across possibilities, and how possibilities can be described. Choosing such principles requires an assessment of the accounts they provide of reasoning and its subject matter. Consistency is a constraint on that assessment, but a consistent theory may still describe the wrong entities or explain too little.
+
+Choice Classicism and Maximalist Classicism provide a particularly demanding comparison. They share classical reasoning and the underlying higher-order theory called Classicism. One supplements that theory with a general selection principle; the other asserts that every pure identity not required by the base theory is false. Their disagreement concerns how much further structure higher-order reality has and what warrants attributing it. It cannot be resolved by contrasting the merits of classical and nonclassical propositional logic.
+
+The central methodological question is how evidence supports a foundational theory that is more abstract than the reasoning it helps organize. A treatment of numbers, for example, may be assessed through familiar mathematical arguments even though its higher-order primitives do not occur in the informal statements of those arguments. A theory of propositions may be assessed through the role of propositional identity in reasoning even though competent reasoners rarely state a general criterion of identity. The evidential relation need not be one of transparent conceptual analysis.
+
+Williamson's abductive methodology provides an appropriate starting point. A foundational proposal should fit what we know while combining simplicity, strength and explanatory unity. Established mathematics can support its less evident first principles, and the comparison may concern theories together with the auxiliary assumptions needed for their applications \citep[p.~266 and pp.~270--273]{williamson2016}. The virtue of this approach is that it allows theoretical organization to matter without making each proposed axiom self-evident. Its difficulty is that the evidence and the alleged explanation must be identified carefully. An attractive consequence is not automatically an independently established truth.
+
+Three ambitions must be kept in view. A higher-order theory may aim to describe propositions and relations, to provide a foundation for mathematics, and to characterize a space of possibilities. A single theory could serve all three ambitions. Whether it does so successfully is part of the inquiry. A calculus that conveniently represents mathematics has not thereby identified the nature of propositions. A semantics with a rich collection of possibilities has not thereby shown that its possibility operator expresses the modality relevant to a particular metaphysical argument.
+
+These distinctions impose a symmetrical requirement on the present comparison. Classicism defines a box through identity with the true proposition. Calling it necessity does not determine its application. A maximalist can understand the corresponding diamond as especially broad possibility, while a defender of Choice can seek a closer connection with the modality used in mathematical and metaphysical reasoning. Each must explain the proposed connection. We should neither reject broad possibility for differing from metaphysical possibility nor count a structurally regular semantics as an account of metaphysical possibility merely because it is familiar.
+
+The argument below evaluates these interpretive commitments together with the formal principles. It first presents the rivals' positive motivations, then identifies applications that can constrain the comparison. Selected mathematical results reveal how the proposals behave in those applications. Intermediate theories and developed alternatives help determine which successes support which principles. The conclusion is a comparative judgment about a foundational programme, with a sharper distinction between the case for substantial structural constraints and the further case for full Choice.
+
+\section{Two proposals about logical determination}\label{sec:theories}
+
+The shared background is Bacon and Dorr's finitary relational Classicism, $\C$ \citep[\S\S1.1,1.3]{bacondorr}. Its types begin with $e$, for individuals, and $t$, for propositions. An arrow $\sigma\to\tau$ is admitted only when $\tau\ne e$. Thus relations may take individuals as arguments, but the language has no operation type $e\to e$. This restriction matters whenever a mathematical construction is said to provide an operation. A relation can describe a function whose operation type the language does not admit.
+
+Classicism is the smallest H-theory containing Logical Equivalence: lambda abstractions of H-equivalent formulas are identical. The theoremhood condition is essential. An equivalence proved with an additional assumption does not automatically meet it. Define
+\[
+ \Box p:=(p=\top),\qquad \Diamond p:=(p\ne\bot).
+\]
+Propositions can agree in truth value without being identical. Their Boolean order is $p\le q$ iff $\Box(p\to q)$, which is stronger than the material conditional. These features give the competing extensions substantive work to do.
+
+Functional Choice says that a serial relation has a selecting operation:
+\[
+ \forall U^{\sigma\to\tau\to t}
+ \left[(\forall x^\sigma\exists y^\tau\,(Ux)y)
+ \to\exists f^{\sigma\to\tau}\forall x^\sigma\,(Ux)(fx)\right],
+ \qquad \tau\ne e.
+\]
+Here and throughout, type indices specify external schemata. Choice Classicism, as compared in this paper, is
+\[
+ \CC=\C+\Box\FC+\Infq_e+\Infq_t.
+\]
+The box governs the entire closed Choice instance at every admitted pair of types. Each $\Infq_\sigma$ is the quantified assertion that no Frege finite cardinality counts the whole domain at $\sigma$. These are two quantified axioms, not just the external list of lower bounds for standard finite sizes. Appendix~\ref{app:definitions} fixes the definition.
+
+The positive idea behind the selection principle is familiar: when every input has an eligible output, one operation can select outputs throughout the input range. Its intensional formulation is a substantial generalization of ordinary extensional choice. The selected values are higher-order entities, with identities that can constrain their modal behaviour. A defence of the principle can appeal to the economy and reach of one selection policy. It must also explain why the generalization from mathematical use to these entities is sound. The existence of a useful external set-theoretic model supplies no shortcut to that explanation.
+
+Two weaker demands clarify the commitment. Relational Choice asks for a total single-valued subrelation of a serial relation. Plenitude asks that a total single-valued relation with relational output have a representing operation. Functional Choice combines selection and operation representation. The intermediate package
+\[
+ T=\C+\Box\operatorname{Plenitude}+\Infq_e+\Infq_t
+\]
+will therefore be considered from the outset. A benefit of operation representation need not favour unrestricted selection over $T$. Equally, if one general selection principle explains several desirable capacities, its greater strength can be a source of simplicity rather than a defect.
+
+Pure Maximalist Classicism is
+\[
+ \Max=\C+\{A\ne B:
+ A=B\text{ is closed and pure, and }\C\nvdash A=B\}.
+\]
+Purity excludes nonlogical constants. The reference theory is the fixed $\C$; it is not whichever stronger theory is currently under discussion. In Classicism this is equivalent to adding $\Diamond P$ for each closed pure $P$ consistent with $\C$ \citep[\S2.4]{bacondorr}. This paper concerns that pure theory, not signature Maximalism or Strong Possibility.
+
+Max's positive motivation is a proposal about logical determination. The identities forced by the base have a logical explanation. Further pure identities might seem to require an unexplained restriction on the distinctions available to higher-order thought. Max settles the issue uniformly by denying them. Its possibility formulation correspondingly treats consistency with the base as a sufficient condition for pure possibility. This is a substantive account of the logical space, not a refusal to take a position where Choice does.
+
+The comparison consequently places demands on both proposals. Choice must justify selection and the structural constraints it brings. Max must justify the authority assigned to the particular boundary of provability in $\C$. The fact that two parties share a base does not establish that the base exhausts logical determination. Conversely, the availability of a stronger mathematical theory does not establish that the alternatives it excludes are impossible. These are competing philosophical judgments about the role of further principles.
+
+There are developed alternatives to both. Possibility-frame constructions can retain rigidification, Actuality and completeness while allowing distinctions and possibilities that CC excludes; they can also fail Max \citep{modalized}. Their significance is already methodological: the comparison is not exhausted by choosing between maximum formal possibility and the whole Choice package. Section~\ref{sec:alternatives} uses such alternatives to test how much the applications actually establish.
+
+\section{The evidence from mathematical and modal reasoning}\label{sec:evidence}
+
+An abductive comparison needs a starting point that is neither restricted to observations nor filled with the preferred theory's consequences. Mathematical knowledge, successful inferential methods and well-supported modal judgments can all matter. Their evidential standing differs from that of a proposed general account of propositions. Moreover, interpretations of the evidence can themselves be revised. Williamson's methodology allows that breadth while distinguishing explanatory assessment from coarse measures of deductive strength \citep[\S\S13.2--13.3, pp.~334--338]{williamson2017}.
+
+The first application is the joint treatment of mathematics and its contingent applications. Mathematical arguments are reused across different systems that satisfy the same structural conditions. A theorem about an ordered field does not become a different theorem whenever a different physical magnitude is represented by that field. This gives a foundation reason to distinguish a change in an application from a change in the mathematical structure. It also motivates asking how much of a higher-order structure must be fixed to preserve its truths.
+
+That starting point falls short of the unrestricted necessity of every mathematical truth. In particular, it does not decide whether different higher-order ranges can support different analytical structures, or whether every structure that the formal language calls a real-number structure captures the intended reals. The evidential demand is for an intelligible account of mathematical reasoning and its reuse. A theory can meet it through a stable mathematical domain, a general structural interpretation, or a distinction between kinds of possibility. The adequacy and cost of those proposals must be assessed together.
+
+The second application concerns propositions and relations as objects of reasoning. We distinguish predicating a relation of some arguments from asserting the identity of two relations. We also build complex constructions from simpler ones and use established identities within them. An intensional foundation needs to explain both the distinctions it preserves and the substitutions it permits. A rule that identifies too much can erase relevant distinctions; an account that admits too few operations can require different means of representing familiar constructions.
+
+It would beg the question to turn this practice immediately into full Functional Choice. Mathematical functions can be represented by graphs, and graphical representation supports composition and repeated use. Nevertheless, the distinction between a graph and an admitted operation can matter when the language itself permits quantification over operations and treats their values as entities. A complete foundation should make that distinction systematic. The appropriate evidence is the role of the constructions in reasoning, rather than a blanket requirement that every informal function notation name an intensional operation.
+
+The third application concerns possibilities and their representation. Modal reasoning describes situations incompletely, combines claims about them and distinguishes incompatible alternatives. There is a natural attraction in connecting those descriptions with complete ways things could be. But completeness of a situation and existence of one proposition representing its complete determination are different claims. An external semantic point can settle every proposition even when no proposition within the theory singles that point out.
+
+Thus familiar modal reasoning motivates questions about compatibility, determination and representation without directly establishing propositional Atomicity. The stronger demand for internal complete possibilities earns support if it makes a useful explanatory connection: possibilities can then be discussed through the same quantified entities used in reasoning about propositions generally. It loses support if that connection imposes misleading identity conditions or obstructs a better account of partial possibilities. The assessment must concern the work done by the representation.
+
+Across these applications, theoretical virtues have a legitimate but disciplined role. A general principle can be favoured because it explains why the same construction is available across many cases, predicts further connections and reduces reliance on independent auxiliaries. Those virtues are not consequences of short notation or of the number of axioms. Several apparently different successes can also express one underlying fact and should not be counted as independent confirmations. Williamson's distinction between simplicity of principles and economy of ontology is useful here \citep[\S1.2, pp.~8--9]{williamson2013}.
+
+These considerations give a reason to seek an integrated theory. Mathematical reasoning about propositions, modal reasoning about mathematical structures and ordinary reasoning about relations are not sealed activities. A foundation that explains their connections can illuminate why a construction valid in one application remains usable in another. This is an advantage when the connections are correct. It is a liability when integration exports a restriction from one application into another without justification. A division of explanatory labour can therefore be principled too.
+
+The comparison should ask of each complete proposal: what does it explain, what interpretive assumptions make the explanation work, and what restrictions or auxiliary principles are required elsewhere? That standard is demanding enough to make surprising formal consequences relevant, without treating surprise as refutation. It also leaves room for a positive verdict when one package explains more through simpler general principles, even though its rivals remain consistent and some of its fundamental claims are contestable.
+
+\section{How the competing theories explain the applications}\label{sec:comparison}
+
+\subsection{Operations and the persistence of distinctions}
+
+An elementary construction shows why representation has modal consequences. Suppose $x\ne y$. A total single-valued relation can assign $\top$ to $x$ and $\bot$ to every other input. Plenitude supplies an operation $f$ with $fx=\top$ and $fy=\bot$. Necessity of Identity preserves these equations. Since the outputs are necessarily distinct, the inputs cannot become identical. Operation representation therefore implies that actual distinctions persist; its boxed form gives the principle of necessary distinctness used in $\C5$ \citep[\S2.3, Proposition~2.13]{bacondorr}.
+
+The explanation is informative because it identifies what prevents coalescence. A discriminating operation retains its output identities. A graph that is functional at the actual situation need not supply an entity with that additional behaviour. A proponent of Choice can therefore explain persistent distinctions through a general representational resource. A maximalist can instead regard the possible loss of distinctions as a reason to reject that resource. Neither can treat the two commitments as independent once the connection is understood.
+
+The numerical predecessor provides a concrete test. Pure Max excludes an admitted operation satisfying $f(Sn)=n$ for all native Frege numbers, at every closed counting type. At individual counting, it nevertheless permits the corresponding total single-valued predecessor graph \citep{predecessor}. In that case the obstruction can already be seen from a possible finite collapse: two successor cardinalities can coincide while their predecessors differ. A single operation cannot preserve the required output identities through that collapse.
+
+This establishes a specific representational limitation. It does not show that the maximalist cannot subtract or reason in Peano arithmetic. An existing quotient construction interprets current extensional relational mathematics in $\C$ with numerical noncollapse, including impredicative second-order arithmetic and each fixed finite-order relational hierarchy; Max supplies the noncollapse \citep[\S29]{coding}. The maximalist consequently has a substantial positive account of ordinary mathematical reasoning. Its relation to the ambient operations is part of the theory, rather than an automatic identity of the two frameworks.
+
+The advantage claimed for CC is that the same quantified framework provides operations for the relevant functional relations and explains their persistent identities. This can simplify reasoning that combines mathematical constructions with claims about higher-order entities. The maximalist alternative is attractive when graphs and quotients provide a faithful and economical interpretation while the excluded operations would impose unwanted modal constraints. The relevant test is the quality of those accounts across applications. The familiar name of the predecessor construction does not decide it.
+
+\subsection{Possibilities within the theory}
+
+A second short construction connects representation with Actuality. Represent the functional relation assigning $\top$ to each actual truth and $\bot$ to each actual falsehood by an operation $a:t\to t$. The proposition $w:=\forall p\,(ap\to p)$ is true and entails every actual truth, because the relevant identities $ap=\top$ persist. This yields
+\[
+ \exists w\,[w\land\forall p(p\to\Box(w\to p))].
+\]
+The construction uses Plenitude. It explains how a proposition representing the whole actual situation can emerge from a general principle about operations, rather than being postulated separately \citep[\S2.3]{bacondorr}.
+
+CC supplies a wider structural package:
+\[
+ \Box\FC\ \Longrightarrow\ \Box\operatorname{Plenitude}
+ \ \Longrightarrow\ \C5+\At
+ \ \Longrightarrow\ \Box\operatorname{RigidComprehension}+\Box\BC.
+\]
+These are established connections over $\C$. Boolean Completeness concerns represented families, not every external subset of a model. Rigid Comprehension provides rigid representatives for current extensions. Atomicity says that every non-bottom proposition has an atom below it, where an atom is a nonzero proposition with no nonzero proper part in the Boolean order. Atoms decide propositions by entailment and can serve as internal complete possibilities.
+
+These connections support the integrative case for CC: operations, persistent distinctions and internal possibilities participate in one theory. But their shared origin also limits the evidential accounting. Listing each consequence as a separate confirmation would exaggerate the support. Moreover, the intended applications must warrant the resulting representation of complete possibilities. The theorem establishes that the commitments travel together; it does not establish that all of them are true.
+
+The contrast with Max is exact. Pure Max is inconsistent with unboxed Atomicity at type $t$ \citep{maxatomicity}. The proof constructs a pure closed operation that can split every nonzero part of a possible proposition; an atom below that proposition would be unsplittable. The pure definability construction is substantial, and the proof is supplied in the cited research note. The result means that a maximalist cannot simply add propositional Atomicity while retaining the original theory.
+
+Max still has an intelligible conception of modality. Its proposition algebra can represent compatibility and entailment without internally representing every complete possibility. External semantic points or an algebraic treatment of partial possibilities can do explanatory work. Failure of Atomicity does not imply absence of all atoms, and it does not imply failure of Boolean Completeness. The philosophical question is whether the internal representation demanded by CC improves the account of possibilities, or imposes a substantive restriction that the application does not warrant.
+
+There is a reason to prefer internal representation when the foundation is intended to support general reasoning about propositions and possibilities together: the represented possibilities become available to the same quantifiers and relational constructions. That avoids an unexplained division between entities used in modal explanation and those acknowledged by the theory. This is a defeasible reason, however. A well-motivated account of partial possibility may explain why such a division, or a different kind of representation, is appropriate. Its adequacy should be assessed directly rather than dismissed as a failure to imitate a world semantics.
+
+\subsection{Mathematics across possibilities}
+
+CC's treatment of mathematical stability extends the same pattern. It entails No Pure Contingency: every closed pure sentence $P$ satisfies $P\to\Box P$ \citep{npc}. This is a sentence schema, not the claim that every proposition is necessary if true. Propositions need not be denoted by closed pure sentences, so the result leaves room for contingency.
+
+The underlying symmetry explains the restriction. Under $\C5$ and propositional Atomicity, exchanging atoms can be extended through the relational types while preserving the logical apparatus. A closed pure sentence cannot distinguish the exchanged possibilities. The theorem thus connects stability with the structural resources already at issue. It does not make a general appeal to the intuitive necessity of everything that might be called logical or mathematical.
+
+A related argument handles analysis. A structure's elements and field operations alone do not fix all its higher-order truths: its relation ranges matter too. The existing rigidification arguments show how $\C5$ and boxed Rigid Comprehension provide stable representatives of possible real structures, together with the represented powers required for each fixed finite collection of relation arities. The resulting Necessity of Second-Order Analysis settles the modal truth value of an analytical sentence uniformly across the relevant real structures \citep{analysisconnections}. The existence of an appropriate possible structure is a separate condition; universal agreement alone would be vacuous without one.
+
+This explains a substantive part of mathematical reuse. The stability of an analytical truth follows from control of the whole interpreted structure, including its higher-order ranges. A different contingent system can instantiate such a structure without altering the theorem about it. The associated consequence for the continuum hypothesis is non-contingency, not a proof of CH or its negation. Modal invariance does not remove mathematical ignorance or decide every mathematical question.
+
+Pure Max conflicts with the recorded Necessity of Analysis principle, already in the first-order analytical language containing its natural-number predicate \citep{analysisconnections}. It permits appropriately described mathematical alternatives to disagree. The examples can involve nonstandard arithmetic, and they do not show that an ordinary finite calculation changes its answer. A maximalist can distinguish those alternatives from intended mathematics or give the defined box a broader interpretation than metaphysical necessity.
+
+That response deserves the same standard applied to CC. A narrower mathematical interpretation should have an independently motivated criterion; CC's attribution of metaphysical significance to its stable structures needs justification too. The difference is that CC offers general internal resources for stability, whereas the maximalist must explain how the relevant stability is related to the broader possibilities it admits. A simple general account of that relationship could be an achievement. A collection of exceptions introduced solely to reproduce desired conclusions would diminish the proposal's explanatory unity.
+
+The comparison therefore yields a substantive advantage for CC in an integrated foundation: its conditions on operations and identity help explain both internal possibilities and stable mathematics. The weight of that advantage depends on the interpretations and applications just examined. These arguments place pressure on unrestricted Max; they also show why proving several incompatibilities with Max is insufficient to establish that every component of CC is the best explanation.
+
+\section{Alternative packages and auxiliary assumptions}\label{sec:alternatives}
+
+The intermediate theory $T$ is the first control on the argument. Boxed Plenitude already yields the representational and modal resources used in the preceding section, including the predecessor operation and the structural route to analytical invariance. Consequently those successes support a family of theories that includes $T$ and CC. A defence of full Choice needs a further reason to admit selection from arbitrary represented ranges.
+
+That reason can appeal to the generality of the selection policy and its explanatory connections. One completed characterization identifies boxed Functional Choice with necessary Actuality plus strong right inverses for actual surjections between relational types \citep[\S\S1--4]{sections}. This recasts the commitment as a general policy for reversing surjections. It can make the principle easier to assess, but an equivalent formulation is not additional evidence for its truth. The question remains whether unrestricted selection is a well-motivated feature of the intended entities.
+
+Mathematical abundance by itself leaves that question unsettled. A nominal model can have a full ordinary individual-based core satisfying extensional Choice while ambient intensional Functional Choice fails \citep[\S\S12.1,17]{gallincore}. Moreover, a source-based conservativity result gives, for ordinary first-order arithmetic sentences $A$ in the fixed Frege interpretation,
+\[
+ \CC\vdash A^e\quad\Longleftrightarrow\quad
+ T\vdash A^e\quad\Longleftrightarrow\quad\C+I_e\vdash A^e,
+\]
+where $I_e$ is numerical noncollapse \citep[\S36]{fregechoice}\citep[Theorem~5]{uniformitynote}. The proof uses McLarty's number-preserving interpretation in higher-order arithmetic \citep[\S\S2--5]{mclarty}. Its scope is finitary first-order arithmetic, not arbitrary higher-order or modal consequences. It prevents an appeal to extra arithmetic theorems in choosing CC over $T$, while leaving the wider selection question intact.
+
+Developed possibility-frame theories provide a different control. The Cohen-cloud construction supports boxed Rigid Comprehension, boxed Intensional Choice and boxed Barcan, as well as Actuality and Boolean Completeness, while failing propositional Atomicity and necessary distinctness \citep[Corollary~4.5 and Remark~4.6, p.~21]{modalized}. Intensional Choice here is a distinct principle about necessarily instantiated properties; it is not Functional Choice. These models reject CC, and their boxed Rigid Comprehension also excludes pure Max. They demonstrate that important forms of mathematical and modal organization survive outside both packages.
+
+These alternatives are especially significant for the internal-world argument. Actuality, completeness and rigidification do not uniquely recommend atomic propositions representing all complete possibilities. A defender of CC must identify the further explanatory work supplied by Atomicity and the unrestricted operation representation that helps enforce it. Conversely, a possibility-frame account must explain how its internal and external representations serve the proposed applications. The existence of a model establishes a coherent combination of principles; the philosophical interpretation still requires defence.
+
+Infinity introduces another independent assessment. Propositional infinity permits indefinitely extensible distinctions between possibilities without imposing a finite ceiling on the proposition algebra. That is a plausible abundance policy for a general modal foundation. It is stronger than what any finite stock of examples establishes, and the quantified axiom is stronger than the external schema of standard finite lower bounds. Its acceptance is an abductive generalization, not a disguised observation.
+
+Individual infinity has a different motivation. It permits mathematics to be developed directly over an ample individual domain. That can simplify a foundation that includes abstract individuals. If the intended domain contains only concrete objects, an infinity axiom may instead impose a substantial condition on the world. The merits of Choice do not settle that interpretation. Nor should failure of individual infinity in one interpretation automatically count as failure of higher-order mathematical reasoning: abundance can be located at relational types. The two infinity axioms in CC are therefore explicit commitments whose justification must accompany the package.
+
+A familiar full construction gives relative consistency evidence for CC. In classical set theory with Choice, use infinite individuals and worlds, propositions as sets of worlds, and full admitted function spaces; choosing both base sets to be $\mathbb N$ suffices for the two quantified infinity axioms \citep[\S\S2--4,6]{gallinnotes}. This illustrates how the commitments fit together. It does not establish that every external set-theoretic function corresponds to an intended higher-order entity. That interpretive step is precisely one of the matters under comparison.
+
+The complete packages should therefore be assessed with their auxiliaries visible. For CC these include an interpretation of the higher-order domains, an account of the defined modality and the rationale for abundance. For Max they include the significance of the fixed logical base and whatever account connects its broad possibilities with intended mathematics and modal applications. Neither side is disqualified merely because it needs such an account. What matters is whether the added commitments are independently plausible, simple and explanatorily connected, or merely reproduce the desired applications while leaving the central theory idle.
+
+This is also why restricting the debate to axiom counts would be misleading. A stronger principle can replace several independent assumptions and explain their connection. A weaker package can avoid a mistaken commitment while giving an equally systematic account of the relevant phenomena. The research on weaker principles identifies dependencies; the abductive comparison determines what to make of them. Williamson's treatment of auxiliary recovery is useful as a test of the whole theory, rather than a standing presumption against any restricted interpretation \citep[\S13.4, pp.~339--342]{williamson2017}.
+
+\section{The comparative verdict}\label{sec:verdict}
+
+The case for strengthening Classicism does not depend on declaring an unfamiliar mathematical model metaphysically impossible by inspection. It rests on explanatory connections. Operation representation constrains the persistence of identity; those constraints contribute to internal possibilities and rigidification; control of mathematical structures and their higher-order ranges explains forms of invariance. The resulting account covers activities whose connection is independently significant: reasoning with relations, reasoning about possibilities, and applying mathematics across contingent situations.
+
+This gives a reason to prefer substantial structural constraints to unrestricted pure Max when the goal is an integrated foundation for those activities. The reason goes beyond liking Atomicity or disliking a missing predecessor operation. The constrained theory explains why resources used across applications are jointly available and why their interaction preserves the relevant reasoning. Max retains substantial current mathematics, but its broader possibilities exclude some of the same internal connections. Its positive motivation must therefore justify the resulting separation of representational and modal roles.
+
+The comparative force remains defeasible. A systematic maximalist account of intended mathematics and a narrower modality could explain that separation through an independently motivated general distinction. Such an account would be a serious competitor, not a concession to be dismissed as a repair. Likewise, evidence that the relevant propositions or relations admit the coalescence excluded by CC would count against its integration. CC's generality is valuable only insofar as the generalization is correct.
+
+The present evidence supports CC more securely against unrestricted Max for the integrated foundational task than it supports full CC against every alternative. In particular, $T$ already explains much of the same pattern. Full Choice offers a general policy for selection beyond unique outputs, with recognizable connections to ordinary mathematical methods and to sections of surjections. Its intensional scope nevertheless adds a commitment requiring its own defence. Neither the shared modal consequences nor the arithmetic-conservativity theorem settles that further choice.
+
+Possibility-frame alternatives also prevent an exclusive inference from the value of rigidification and completeness to CC. Their presence improves the argument by locating its remaining burdens. The positive case for CC concerns the additional reach and organization of its operations and complete possibilities, together with a defensible interpretation of the domains. It is not a claim that every coherent alternative loses ordinary mathematics or lacks an account of actuality.
+
+The conclusion is therefore a differentiated abductive judgment. For a joint theory of higher-order entities, mathematics and modality, CC supplies a powerful and intelligible proposal, and the connections developed here give substantive reason to favour its structural orientation over pure Max. The case for its full selection and abundance package is more provisional. That distinction identifies what the evidence explains and where further philosophical work must occur. A successful justification of higher-order logic should make those dependencies explicit rather than treating formal strength, familiar semantics or a sequence of surprising theorems as a verdict in themselves.
+
+\appendix
+\section{Definitions and source scope}\label{app:definitions}
+
+For each counting type $\sigma$, let
+\begin{align*}
+ \nu_\sigma&=(\sigma\to t)\to t,\\
+ 0_\sigma&=\lambda X^{\sigma\to t}.\forall u^\sigma\,\neg Xu,\\
+ S_\sigma(Z)&=\lambda X^{\sigma\to t}.\exists y^\sigma
+ \bigl(Xy\land Z(\lambda u^\sigma.(Xu\land u\ne y))\bigr),\\
+ N_\sigma Z&=\forall W^{\nu_\sigma\to t}
+ \left[\left(W0_\sigma\land
+ \forall Y^{\nu_\sigma}(WY\to W(S_\sigma Y))\right)\to WZ\right],\\
+ \Infq_\sigma&=\neg\exists Z^{\nu_\sigma}
+ \bigl(N_\sigma Z\land Z(\lambda u^\sigma.\top)\bigr).
+\end{align*}
+All these types are admitted, and the definitions introduce no individual-valued operation. Numerical noncollapse $I_\sigma$ is the established condition supporting the current Peano structure in the cited arithmetic notes. It is not identified without further premises with the quantified infinity axiom.
+
+For a relation $Y$, possibly with an empty argument tuple, the rigidity convention is
+\begin{align*}
+ \operatorname{Persistent}(Y)&:=Y\le\lambda\bar x.\Box Y[\bar x],\\
+ \operatorname{Inextensible}(Y)&:=\Box\forall X\,
+ \bigl[(\forall\bar x\,(Y[\bar x]\to\Box X[\bar x]))\to Y\le X\bigr],\\
+ \operatorname{Rigid}(Y)&:=\operatorname{Persistent}(Y)\land
+ \operatorname{Inextensible}(Y).
+\end{align*}
+Here $Y\le X$ denotes necessary universal pointwise implication. Rigid Comprehension provides a rigid relation currently coextensive with each relation. This is the full rigidity convention, not weak rigidity. Boolean Completeness throughout concerns families represented in the fixed language.
+
+The mathematical dependencies and their attribution are preserved in the companion \texttt{source-and-claim-ledger.json}. The main distinctions relevant to this paper are as follows.
+
+\begin{enumerate}[leftmargin=*,itemsep=0.45em]
+\item Bacon and Dorr supply the framework and the principal Choice connections. The map cites their 16 May 2023 draft. The accessible source inspected for the original manuscript was the 1 July 2022 draft; the unavailable 2023 pagination is retained as record-derived attribution, not claimed as a fresh inspection. The methodological articles by Williamson were read in full. The \emph{Modal Logic as Metaphysics} material inspected was an excerpt including Chapter~1, not the absent Methodological Afterword.
+
+\item The pure Max/Atomicity obstruction has a detailed research proof and saved formal evidence \citep{maxatomicity}. Its construction uses the separately attributed Jech--Shelah algebra \citep[p.~749]{jechshelah}. The predecessor source distinguishes the all-closed-counting-type no-operation theorem from the individual-counting graph-without-operation certificate \citep{predecessor}. Full proofs, declaration names and saved audit scopes remain in the referenced evidence. No new mathematical proof or certificate is claimed by this rewrite.
+
+\item The No Pure Contingency theorem is attributed to Goodsell and Yli-Vakkuri; the written proof follows Dorr's atom-exchange argument. The saved exact certificate covers $\C5$ plus propositional Atomicity \citep{npc,npcverification}. The analytical connections used here have ordinary written proofs with the exact scopes recorded in the ledger \citep{analysisconnections}. Their attribution includes the connection proposed by Zachary Goodsell and the recorded connecting proofs by Claude Fable 5.1, prompted by Goodsell. Those proofs cite Bacon's mathematical-contingency work and Barton--Goodsell's continuum-contingency work; this manuscript uses those dependencies through the inspected records. The CH consequence used is non-contingency, not CH contingency.
+
+\item The ordinary current-quotient interpretation and the source-based CC/$T$ arithmetic-conservativity theorem are distinct results. The latter relies on McLarty's interpretation theorem and preservation of the original numbers, including nonstandard ones. Its detailed application and separate ordinary AI review are saved as \texttt{full-choice-arithmetic-audit.txt} and \texttt{full-choice-arithmetic-review.txt}. This is neither human peer review nor a new Lean certificate. The exact arithmetic theory of Max is outside the present argument.
+
+\item The possibility-frame alternative is used at the ordinary proof status of its cited construction \citep{modalized}. No separate forcing-to-CH-contingency transfer, or unproved equivalence of model presentations, is used. A model's existence and its philosophical suitability remain separate questions.
+\end{enumerate}
+
+The companion \texttt{uniformity-results.tex} retains the detailed finite-table, recovery and numerical-selection arguments as well as the arithmetic-conservativity proof. Their reduced prominence here reflects the organization of the philosophical argument, not a withdrawal of those results. The ledger distinguishes present claims from material retained only in that companion or the archived earlier draft, and separates mathematical source evidence from the author's comparative judgments.
+
+\begin{thebibliography}{99}
+\bibitem[Bacon and Dorr(2024)]{bacondorr}
+Bacon, Andrew, and Cian Dorr. 2024.
+\emph{Classicism}. In \emph{Higher-Order Metaphysics}, edited by Peter Fritz
+and Nicholas K. Jones, 109--190. Oxford University Press.
+The research map cites the draft of 16 May 2023.
+An earlier author-hosted draft, dated 1 July 2022, is available at
+\url{https://andrew-bacon.github.io/papers/Classicism.pdf}.
+
+\bibitem[Bacon and Claude Opus 5.5(2026)]{modalized}
+Bacon, Andrew, and Claude Opus 5.5 (Anthropic). 2026.
+\emph{Modalized Domains on Possibility Frames}. Draft of 20 October 2026.
+\url{https://andrew-bacon.github.io/techdoc/modalized-domains.pdf}.
+The source's attribution note distinguishes Bacon's constructions and suggestions
+from Claude Opus 5.5's written exposition and verification.
+
+\bibitem[Jech and Shelah(1996)]{jechshelah}
+Jech, Thomas, and Saharon Shelah. 1996.
+\emph{A Complete Boolean Algebra That Has No Proper Atomless Complete
+Subalgebra}. \emph{Journal of Algebra} 182: 748--755.
+\url{https://shelah.logic.at/files/95558/566.pdf}.
+Used through the explicitly attributed construction in \citet{maxatomicity}.
+
+\bibitem[Research notes(2026a)]{maxatomicity}
+\emph{Pure Maximalism and unboxed Atomicity: the canonical countable-generator
+proof}. Research note, 22--23 October 2026.
+Original coding and deduction recorded as OpenAI Codex research; Jech--Shelah
+construction separately attributed. Preserved submission,
+\path{source/research/2026-10-22/lean-formalization/max-atomicity-canonical-code-proof.md},
+with \path{max-certificate-audit.json}.
+
+\bibitem[Research notes(2026c)]{gallinnotes}
+\emph{Gallin, Henkin, full semantics, and relative complexity}.
+Research note, 22 October 2026, especially \S\S2--6 and 10.
+Preserved submission,
+\path{source/research/2026-10-22/notes/gallin-comparison.md}.
+
+\bibitem[Research map(2026a)]{npc}
+\emph{C5 and Atomicity imply No Pure Contingency}.
+Classicism map write-up, following Cian Dorr's sketch of
+23 September 2026, with permission from Zachary Goodsell.
+Originating theorem attributed to Goodsell and Yli-Vakkuri.
+\path{topics/classicism/writeups/c5-and-atomicity-imply-no-pure-contingency.md}.
+
+\bibitem[NPC verification(2026)]{npcverification}
+\emph{C5 and propositional Atomicity imply No Pure Contingency}.
+Formalization status and final verification, 23 October 2026.
+Original working bundle,
+\path{research/2026-10-22/lean-formalization/npc-formalization-status.md}
+and \path{npc-final-verification.json}; final compiler manifest
+\path{checks/20261023T143847443032Z-e65d9095.json}.
+These certify the existing attributed theorem rather than replacing its proof attribution.
+
+\bibitem[Research map(2026b)]{analysisconnections}
+Classicism map. 23 October 2026.
+Records and write-ups on Second-Order Analytic Necessitism and Necessity of
+Analysis, including
+\path{c5-and-necessary-rigid-comprehension-imply-second-order-analytic-necessitism},
+\path{second-order-analytic-necessitism-implies-necessity-of-second-order-analysis},
+\path{no-pure-contingency-implies-necessity-of-second-order-analysis},
+\path{necessity-of-second-order-analysis-implies-non-contingency-of-ch},
+and \path{maximalism-incompatible-with-necessity-of-analysis}.
+Direct attributions and source dependencies are specified in the companion ledger.
+These connecting proofs draw on Andrew Bacon,
+\emph{Could the truths of mathematics have been different?},
+draft of 9 October 2025, \S5 and Appendix C.2, and Neil Barton and
+Zachary Goodsell, \emph{Continuum Contingency}, draft of 14 October 2026,
+\S\S5.6--5.9; those drafts are cited here through the inspected records.
+
+\bibitem[Predecessor research(2026)]{predecessor}
+\emph{Pure Maximalism forbids numerical predecessor operations}.
+Research proof and saved verification status, 23 October 2026.
+Original working bundle,
+\path{research/2026-10-23/maximalist-mathematical-failures/predecessor-proof.md}
+and \path{status.json}; exact scopes distinguished in the appendix.
+
+\bibitem[Relational coding notes(2026)]{coding}
+\emph{Relational coding and recursion}. Research notes, 22--23 October 2026,
+especially \S\S13,29,32--33,38.
+\path{research/2026-10-22/notes/relational-coding-recursion-20261022.md}.
+Unpaginated; ordinary proofs.
+
+\bibitem[Uniformity research(2026)]{uniformitynote}
+OpenAI Codex. 2026. \emph{Uniformity, Arithmetic and Recovery of a Mathematical Core}.
+Companion research note, 23 October 2026, \path{uniformity-results.tex}.
+Ordinary deductions with existing source results separately identified.
+
+\bibitem[Frege research(2026)]{fregechoice}
+\emph{Frege infinity research notes}. Research notes, 22--23 October 2026,
+\S\S35--36.
+\path{research/2026-10-22/notes/frege-infinity-20261022-1726.md}.
+Unpaginated; ordinary conservativity argument using McLarty's interpretation.
+
+\bibitem[McLarty(2013)]{mclarty}
+McLarty, Colin. 2013.
+\emph{Interpreting set theory in higher order arithmetic}.
+arXiv:1207.6357v5, 15 February 2013, \S\S2--5, pp.~2--6.
+\url{https://arxiv.org/pdf/1207.6357v5}.
+
+\bibitem[Sections research(2026)]{sections}
+\emph{Functional Choice is Actuality plus sections of surjections}.
+Research proof, 22 October 2026, \S\S1--4.
+\path{research/2026-10-22/notes/functional-choice-by-sections.md}.
+Unpaginated; ordinary proof.
+
+\bibitem[Ordinary-core research(2026)]{gallincore}
+\emph{Gallin, Henkin, full semantics, and relative complexity},
+current working-bundle version, \S\S12.1,17.
+\path{research/2026-10-22/notes/gallin-comparison.md}.
+The later core results are distinguished from the earlier preserved version
+cited as \citet{gallinnotes}; ordinary proofs.
+
+\bibitem[Williamson(2013)]{williamson2013}
+Williamson, Timothy. 2013. \emph{Modal Logic as Metaphysics}.
+Oxford University Press.
+\url{https://doi.org/10.1093/acprof:oso/9780199552078.001.0001}.
+Consulted excerpt: preface and Chapter~1.
+
+\bibitem[Williamson(2016)]{williamson2016}
+Williamson, Timothy. 2016. \emph{Abductive Philosophy}.
+\emph{The Philosophical Forum} 47: 263--280.
+\url{https://doi.org/10.1111/phil.12122}.
+
+\bibitem[Williamson(2017)]{williamson2017}
+Williamson, Timothy. 2017.
+\emph{Semantic Paradoxes and Abductive Methodology}.
+In \emph{Reflections on the Liar}, edited by Bradley Armour-Garb,
+325--346. Oxford University Press.
+\url{https://doi.org/10.1093/oso/9780199896042.003.0013}.
+The archive retains the volume's earlier working title,
+\emph{The Relevance of the Liar}; the final publisher title is used here.
+\end{thebibliography}
+\end{document}

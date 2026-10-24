@@ -1,0 +1,7 @@
+Classicism/Results/Research/FullTypedLogicalSeparationCHoles.lean:65:7: warning: Variable name `hClosed` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hClosed
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'Classicism.Meta.Research.FullTypedLogicalSeparation.hole_congruence_os' depends on axioms: [propext, Quot.sound]

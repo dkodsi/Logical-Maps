@@ -1,0 +1,474 @@
+{
+  "updated_at_utc": "2026-10-23T05:50:27.985396+00:00",
+  "scope": "Current owned Central sources and audit drivers. These certify only the exact statements described in modal-central-delivery.md; stronger unimplemented variants remain separate. External dependency/toolchain evidence remains in the original manifests.",
+  "files": [
+    {
+      "path": "topics/classicism/lean/Classicism/Semantics/Research/CentralChoice.lean",
+      "sha256": "7ce65ab9fd150c314aa2afdace7f4513a2ee5fedb9d7054010a4de9eeb636479",
+      "passing_matching_checks": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T051518714412Z-101d064e.json",
+          "module": "Classicism.Semantics.Research.CentralChoice",
+          "current_local_source_closure_mismatches": [],
+          "log": "logs/runs/20261023T051518714412Z-101d064e/Classicism_Semantics_Research_CentralChoice.log"
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T051908385235Z-283c50a1.json",
+          "module": "Classicism.Semantics.Research.CentralChoice",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T052853207752Z-1a114737.json",
+          "module": "Classicism.Semantics.Research.CentralChoice",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T053715003577Z-373ddacd.json",
+          "module": "Classicism.Semantics.Research.CentralChoice",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054120203114Z-4a90260b.json",
+          "module": "Classicism.Semantics.Research.CentralChoice",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054410104697Z-48120445.json",
+          "module": "Classicism.Semantics.Research.CentralChoice",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054809252922Z-5177013d.json",
+          "module": "Classicism.Semantics.Research.CentralChoice",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        }
+      ],
+      "status": "checked"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Semantics/Research/CentralLogicalNecessity.lean",
+      "sha256": "42593aa11e699c70754d1444379583f578019e5bdc506fbe00ca9212ae37b8d4",
+      "passing_matching_checks": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054410104697Z-48120445.json",
+          "module": "Classicism.Semantics.Research.CentralLogicalNecessity",
+          "current_local_source_closure_mismatches": [],
+          "log": "logs/runs/20261023T054410104697Z-48120445/Classicism_Semantics_Research_CentralLogicalNecessity.log"
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054809252922Z-5177013d.json",
+          "module": "Classicism.Semantics.Research.CentralLogicalNecessity",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        }
+      ],
+      "status": "checked"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Semantics/Research/CentralProductChoice.lean",
+      "sha256": "b0c1264f1733b40dbc382103b0387cc130c474e898a9d553b8316ad0c3bdfcf2",
+      "passing_matching_checks": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T053715003577Z-373ddacd.json",
+          "module": "Classicism.Semantics.Research.CentralProductChoice",
+          "current_local_source_closure_mismatches": [],
+          "log": "logs/runs/20261023T053715003577Z-373ddacd/Classicism_Semantics_Research_CentralProductChoice.log"
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054120203114Z-4a90260b.json",
+          "module": "Classicism.Semantics.Research.CentralProductChoice",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054410104697Z-48120445.json",
+          "module": "Classicism.Semantics.Research.CentralProductChoice",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054809252922Z-5177013d.json",
+          "module": "Classicism.Semantics.Research.CentralProductChoice",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        }
+      ],
+      "status": "checked"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Semantics/Research/CentralSupport.lean",
+      "sha256": "17eda64616dcbc5c2c2b826c3e7dcbe72db4cec0369c42a03af1791bc24d413e",
+      "passing_matching_checks": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T045626742657Z-9d33ccca.json",
+          "module": "Classicism.Semantics.Research.CentralSupport",
+          "current_local_source_closure_mismatches": [],
+          "log": "logs/runs/20261023T045626742657Z-9d33ccca/Classicism_Semantics_Research_CentralSupport.log"
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T051518714412Z-101d064e.json",
+          "module": "Classicism.Semantics.Research.CentralSupport",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T051908385235Z-283c50a1.json",
+          "module": "Classicism.Semantics.Research.CentralSupport",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T052853207752Z-1a114737.json",
+          "module": "Classicism.Semantics.Research.CentralSupport",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T053715003577Z-373ddacd.json",
+          "module": "Classicism.Semantics.Research.CentralSupport",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054120203114Z-4a90260b.json",
+          "module": "Classicism.Semantics.Research.CentralSupport",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054410104697Z-48120445.json",
+          "module": "Classicism.Semantics.Research.CentralSupport",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054809252922Z-5177013d.json",
+          "module": "Classicism.Semantics.Research.CentralSupport",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        }
+      ],
+      "status": "checked"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Semantics/Research/CentralSupportedProduct.lean",
+      "sha256": "4b7a47fff7ce34ae4c64453c74443c6df9c5d7e88bcb65124af6efbb1379bd36",
+      "passing_matching_checks": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T051908385235Z-283c50a1.json",
+          "module": "Classicism.Semantics.Research.CentralSupportedProduct",
+          "current_local_source_closure_mismatches": [],
+          "log": "logs/runs/20261023T051908385235Z-283c50a1/Classicism_Semantics_Research_CentralSupportedProduct.log"
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T052853207752Z-1a114737.json",
+          "module": "Classicism.Semantics.Research.CentralSupportedProduct",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T053715003577Z-373ddacd.json",
+          "module": "Classicism.Semantics.Research.CentralSupportedProduct",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054120203114Z-4a90260b.json",
+          "module": "Classicism.Semantics.Research.CentralSupportedProduct",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054410104697Z-48120445.json",
+          "module": "Classicism.Semantics.Research.CentralSupportedProduct",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054809252922Z-5177013d.json",
+          "module": "Classicism.Semantics.Research.CentralSupportedProduct",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        }
+      ],
+      "status": "checked"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Semantics/Research/CentralSupportedProductChoice.lean",
+      "sha256": "4a4b67057b8874fc212898bbc414b0e7835f340f4abf0414c3fa6d9164bc0fdd",
+      "passing_matching_checks": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054410104697Z-48120445.json",
+          "module": "Classicism.Semantics.Research.CentralSupportedProductChoice",
+          "current_local_source_closure_mismatches": [],
+          "log": "logs/runs/20261023T054410104697Z-48120445/Classicism_Semantics_Research_CentralSupportedProductChoice.log"
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054809252922Z-5177013d.json",
+          "module": "Classicism.Semantics.Research.CentralSupportedProductChoice",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        }
+      ],
+      "status": "checked"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Semantics/Research/CentralSupportedProductCountableJoins.lean",
+      "sha256": "b07320324c36eaa564d3b739945f17cc20933a2f1d8112fcf54bda2811f82531",
+      "passing_matching_checks": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T052853207752Z-1a114737.json",
+          "module": "Classicism.Semantics.Research.CentralSupportedProductCountableJoins",
+          "current_local_source_closure_mismatches": [],
+          "log": "logs/runs/20261023T052853207752Z-1a114737/Classicism_Semantics_Research_CentralSupportedProductCountableJoins.log"
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T053715003577Z-373ddacd.json",
+          "module": "Classicism.Semantics.Research.CentralSupportedProductCountableJoins",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054120203114Z-4a90260b.json",
+          "module": "Classicism.Semantics.Research.CentralSupportedProductCountableJoins",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        }
+      ],
+      "status": "checked"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Semantics/Research/CentralSupportedProductFactorization.lean",
+      "sha256": "e025ca39492a636cd25112bc2cf17dc5d241ca1e3f0fb0273203ab19a0ed7fca",
+      "passing_matching_checks": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054120203114Z-4a90260b.json",
+          "module": "Classicism.Semantics.Research.CentralSupportedProductFactorization",
+          "current_local_source_closure_mismatches": [],
+          "log": "logs/runs/20261023T054120203114Z-4a90260b/Classicism_Semantics_Research_CentralSupportedProductFactorization.log"
+        }
+      ],
+      "status": "checked"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Semantics/Research/CentralSupportedProductGluing.lean",
+      "sha256": "d78f4cab636bcdfa022ea9ca09265550b0fdc08361350fd05ffd83d5a677b2bf",
+      "passing_matching_checks": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054120203114Z-4a90260b.json",
+          "module": "Classicism.Semantics.Research.CentralSupportedProductGluing",
+          "current_local_source_closure_mismatches": [],
+          "log": "logs/runs/20261023T054120203114Z-4a90260b/Classicism_Semantics_Research_CentralSupportedProductGluing.log"
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054410104697Z-48120445.json",
+          "module": "Classicism.Semantics.Research.CentralSupportedProductGluing",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054809252922Z-5177013d.json",
+          "module": "Classicism.Semantics.Research.CentralSupportedProductGluing",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        }
+      ],
+      "status": "checked"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Semantics/Research/CentralSupportedProductNegative.lean",
+      "sha256": "48c39fc80386988fe23a232d90a5d3b498d41596e8fb0acd32119e04d7e3e49b",
+      "passing_matching_checks": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T053715003577Z-373ddacd.json",
+          "module": "Classicism.Semantics.Research.CentralSupportedProductNegative",
+          "current_local_source_closure_mismatches": [],
+          "log": "logs/runs/20261023T053715003577Z-373ddacd/Classicism_Semantics_Research_CentralSupportedProductNegative.log"
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054120203114Z-4a90260b.json",
+          "module": "Classicism.Semantics.Research.CentralSupportedProductNegative",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054410104697Z-48120445.json",
+          "module": "Classicism.Semantics.Research.CentralSupportedProductNegative",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054809252922Z-5177013d.json",
+          "module": "Classicism.Semantics.Research.CentralSupportedProductNegative",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        }
+      ],
+      "status": "checked"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Semantics/Research/CentralSupportedProductVicinity.lean",
+      "sha256": "1d97745c25f345aed11529575a146df30dd623b6d9ec8072d07773a77867ab25",
+      "passing_matching_checks": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054809252922Z-5177013d.json",
+          "module": "Classicism.Semantics.Research.CentralSupportedProductVicinity",
+          "current_local_source_closure_mismatches": [],
+          "log": "logs/runs/20261023T054809252922Z-5177013d/Classicism_Semantics_Research_CentralSupportedProductVicinity.log"
+        }
+      ],
+      "status": "checked"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Semantics/Research/CentralSyntaxCountable.lean",
+      "sha256": "3ce00b9466d45be7f568049b2810e20c788f8e48246a9dd892790a0dee22fbfa",
+      "passing_matching_checks": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T053715003577Z-373ddacd.json",
+          "module": "Classicism.Semantics.Research.CentralSyntaxCountable",
+          "current_local_source_closure_mismatches": [],
+          "log": "logs/runs/20261023T053715003577Z-373ddacd/Classicism_Semantics_Research_CentralSyntaxCountable.log"
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054120203114Z-4a90260b.json",
+          "module": "Classicism.Semantics.Research.CentralSyntaxCountable",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054410104697Z-48120445.json",
+          "module": "Classicism.Semantics.Research.CentralSyntaxCountable",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054809252922Z-5177013d.json",
+          "module": "Classicism.Semantics.Research.CentralSyntaxCountable",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        }
+      ],
+      "status": "checked"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Semantics/Research/CentralWords.lean",
+      "sha256": "fa52f3d517ba5b8ab3c260141ffeb17b197809bac3949d4b41dd56961fa46292",
+      "passing_matching_checks": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T051518714412Z-101d064e.json",
+          "module": "Classicism.Semantics.Research.CentralWords",
+          "current_local_source_closure_mismatches": [],
+          "log": "logs/runs/20261023T051518714412Z-101d064e/Classicism_Semantics_Research_CentralWords.log"
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T051908385235Z-283c50a1.json",
+          "module": "Classicism.Semantics.Research.CentralWords",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T052853207752Z-1a114737.json",
+          "module": "Classicism.Semantics.Research.CentralWords",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T053715003577Z-373ddacd.json",
+          "module": "Classicism.Semantics.Research.CentralWords",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054120203114Z-4a90260b.json",
+          "module": "Classicism.Semantics.Research.CentralWords",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054410104697Z-48120445.json",
+          "module": "Classicism.Semantics.Research.CentralWords",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054809252922Z-5177013d.json",
+          "module": "Classicism.Semantics.Research.CentralWords",
+          "current_local_source_closure_mismatches": [],
+          "log": null
+        }
+      ],
+      "status": "checked"
+    },
+    {
+      "path": "research/2026-10-22/lean-formalization/central-checks/CentralFoundationAxioms.lean",
+      "sha256": "f8e4b001c07d34de5236a760f6e3632dd982cd9e29f3e5e23ef63cd686991575",
+      "passing_matching_checks": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T051518714412Z-101d064e.json",
+          "module": "CentralFoundationAxioms",
+          "current_local_source_closure_mismatches": [],
+          "log": "logs/runs/20261023T051518714412Z-101d064e/CentralFoundationAxioms.log"
+        }
+      ],
+      "status": "checked"
+    },
+    {
+      "path": "research/2026-10-22/lean-formalization/central-checks/CentralGeometryAxioms.lean",
+      "sha256": "1b5218067b70c1979b4b83bc91b82a0be88f62fa63e4fa47185613339816034f",
+      "passing_matching_checks": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054120203114Z-4a90260b.json",
+          "module": "CentralGeometryAxioms",
+          "current_local_source_closure_mismatches": [],
+          "log": "logs/runs/20261023T054120203114Z-4a90260b/CentralGeometryAxioms.log"
+        }
+      ],
+      "status": "checked"
+    },
+    {
+      "path": "research/2026-10-22/lean-formalization/central-checks/CentralModelAxioms.lean",
+      "sha256": "b31d835d1c7a1a70ed10be5a8f3f0304de81ac388f502128e834155c63929645",
+      "passing_matching_checks": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054410104697Z-48120445.json",
+          "module": "CentralModelAxioms",
+          "current_local_source_closure_mismatches": [],
+          "log": "logs/runs/20261023T054410104697Z-48120445/CentralModelAxioms.log"
+        }
+      ],
+      "status": "checked"
+    },
+    {
+      "path": "research/2026-10-22/lean-formalization/central-checks/CentralProductAxioms.lean",
+      "sha256": "8e5ff2ccb7d37bc4df6e158325726cc4cda116aabd8a74555dd89134526cbc87",
+      "passing_matching_checks": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T053715003577Z-373ddacd.json",
+          "module": "CentralProductAxioms",
+          "current_local_source_closure_mismatches": [],
+          "log": "logs/runs/20261023T053715003577Z-373ddacd/CentralProductAxioms.log"
+        }
+      ],
+      "status": "checked"
+    },
+    {
+      "path": "research/2026-10-22/lean-formalization/central-checks/CentralVicinityAxioms.lean",
+      "sha256": "ac05e7478d15f9e09fdd65e786bea7543bd30982eded88eb028fa3b49ee527d8",
+      "passing_matching_checks": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054809252922Z-5177013d.json",
+          "module": "CentralVicinityAxioms",
+          "current_local_source_closure_mismatches": [],
+          "log": "logs/runs/20261023T054809252922Z-5177013d/CentralVicinityAxioms.log"
+        }
+      ],
+      "status": "checked"
+    }
+  ]
+}

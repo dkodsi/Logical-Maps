@@ -1,0 +1,54 @@
+Uncompiled reference for the delegated future-BC author. Removed from OldNewFailures before handoff to avoid duplicate declarations. Uses OldNewPredicates.
+
+theorem future_not_bc_et : ¬ model.Holds (canon O) (P.BooleanCompleteness.quoted et) .nil := by
+  classical
+  intro hbc
+  change model.Holds (canon O) (Sentence.bc et) .nil at hbc
+  obtain ⟨L, hL⟩ := (model.holds_bc_iff isModel et (canon O)).1 hbc (oldAvoidFamily O)
+  obtain ⟨S, hS, hpL⟩ := symIdeal_inner_finPinned
+    (De := cat.De) (G := syms) (J := PinIdeal.fin cat.De)
+    (W₀ := E) (nonempty_e := base.ne) (I := model.I) (.rel et) O L
+  have hSf : S.Finite := hS
+  let foldIndex : X O → Nat := Sum.elim id id
+  obtain ⟨n, hn⟩ := (hSf.image foldIndex).exists_notMem
+  let a : X O := Sum.inl n
+  let b : X O := Sum.inr n
+  have haS : a ∉ S := fun h => hn ⟨a, h, rfl⟩
+  have hbS : b ∉ S := fun h => hn ⟨b, h, rfl⟩
+  have haold : old O a := trivial
+  have hbold : ¬ old O b := id
+  have hmember (x : X O) (hx : old O x) :
+      (⟨O, (avoidEntity O x, PUnit.unit), 𝟙 O⟩ : Tuple model.inner (.arr (.rel et) .t) O) ∈
+        model.incl _ O (oldAvoidFamily O) := by
+    rw [incl_oldAvoid]
+    exact ⟨x, hx, rfl⟩
+  have hbelow : model.incl et O L ⊆ model.incl et O (avoidEntity O a) :=
+    ((hL L).2 (Set.Subset.refl _)) (avoidEntity O a) (hmember a haold)
+  have hpoint : model.incl et O (pointEntity O b) ⊆ model.incl et O L := by
+    apply (hL (pointEntity O b)).1
+    intro F hF
+    rw [incl_oldAvoid] at hF
+    obtain ⟨x, hx, rfl⟩ := hF
+    exact point_below_avoid (fun he => hbold (he ▸ hx))
+  let h' : O ⟶ E := FunCat.arr (FunCat.fn back ∘ Equiv.swap a b)
+    ⟨back.2.1.comp (Equiv.swap a b).injective, trivial⟩
+  have hag : AgreeOn cat.De S h' back := by
+    intro x hx
+    change FunCat.fn back (Equiv.swap a b x) = FunCat.fn back x
+    rw [Equiv.swap_apply_of_ne_of_ne (fun he => haS (he ▸ hx)) (fun he => hbS (he ▸ hx))]
+  have hL' : profile L h' (FunCat.fn back a, PUnit.unit) := by
+    apply hpoint
+    change profile (pointEntity O b) h' (FunCat.fn back a, PUnit.unit)
+    rw [profile_point]
+    change FunCat.fn back a = FunCat.fn back (Equiv.swap a b b)
+    simp
+  have hLback := (pinned_profile_at hpL hag (FunCat.fn back a, PUnit.unit)).1 hL'
+  have hbad : profile (avoidEntity O a) back (FunCat.fn back a, PUnit.unit) := hbelow hLback
+  exact ((profile_avoid a back _).1 hbad) rfl
+
+theorem not_box_bc_et : ¬ model.HoldsSentence (P.NecBooleanCompleteness.quoted et) := by
+  intro h
+  change model.Holds (𝟙 E) (Term.box (P.BooleanCompleteness.quoted et)) .nil at h
+  rw [model.holds_box isModel] at h
+  exact future_not_bc_et (by simpa using h (canon O))
+

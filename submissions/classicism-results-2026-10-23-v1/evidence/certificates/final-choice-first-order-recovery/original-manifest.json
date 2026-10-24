@@ -1,0 +1,2566 @@
+{
+  "schema_version": 2,
+  "run_id": "20261023T233456901120Z-abfe59d4",
+  "modules": [
+    "ChoiceBooleanFoundationsAxioms",
+    "ChoiceFirstOrderRecoveryAxioms",
+    "ChoiceBooleanNegativeAxioms",
+    "ChoiceBooleanSchemaConsequencesAxioms"
+  ],
+  "cache": ".reproduction/classicism-lean-cert-cache",
+  "state": "failed",
+  "complete": false,
+  "checked": [
+    {
+      "module": "Mathlib.Order.Heyting.Regular",
+      "fingerprint": "424d16324271c7a0f9d02f7291e846be7d3d52e1ea22f67aeab67444525d8556",
+      "source_sha256": "dc7a83c1eb70da8d3ca703a602b6a96706f55b88f4b16cc5437746f0ac16014e",
+      "artifacts": {
+        ".olean": "e93fdcacc7ff5761d2c9fa5c443ba7f5db8fd49a889c5abd6a75fbdc87ece247",
+        ".olean.private": "7b0f9daf6b48fcfa0768d93682ddf22f25265a0467445278bab7b6f366b799b6",
+        ".olean.server": "9c48626464e26918bbf50f8aa418e07af03f80bf35eb19f5a4ec165f25127cf6",
+        ".ir": "28e2a98fcd24079646fd3db9a134995598c0fa170652ce3511167b43b6ac2573",
+        ".ir.sig": "e1be984b2b39b8b24723791f3b51e900f236755b7dd788e0c2634eb5f3bdd3b2"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.Order.UpperLower.CompleteLattice",
+      "fingerprint": "cf0fe914d4150da61a4dd6bbc47654e0df7de43555368ae53569b021ffb358f6",
+      "source_sha256": "f94347fc1d73cc7b5002195c794cde8bb984e90d3f9ce49a1852fca93baf4c67",
+      "artifacts": {
+        ".olean": "ed9e27aa87dd7785a005ca7d107b65aa874559aee3d51656b06f3dcdd1f3f1a7",
+        ".olean.private": "209de3241221d8d7cd4fe7fdf6699fa2b5422222cc43ef4571acbe5fc1e7f767",
+        ".olean.server": "c34224b7e54c7aec6f1a14e4daa8ce3430e76e66fe6ccb2fea438c4dc4ed3986",
+        ".ir": "b72e5a94d5eb3d3136ea2946f19bd03a7cbb797374db5d6075362011d370ceaa",
+        ".ir.sig": "aeee33fa0570918c8e15b09fb106acfdedc8d4470902615a64e785fd133e100e"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.BooleanConditionCompletion",
+      "fingerprint": "d4c13583f0846580a2b238973d0b30f98af938a33a54037941b19addeea790b8",
+      "source_sha256": "5e1bf85af787fa8300c24322923561ec182dd80dc7959a7fa3d91f23a65ea2bd",
+      "artifacts": {
+        ".olean": "1e1874d2d383ea128529bea5b6b3b87419907a78ebb47b8113083272e0509990"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.Order.Heyting.Hom",
+      "fingerprint": "63cb73c97eca8e541118f2cbfcc715f2b78ff638bf43c666108c5842dc4715aa",
+      "source_sha256": "554524b5a9af2e4b62f0d83e3222b642d629dcdc418afd3afc6a8cda3e670128",
+      "artifacts": {
+        ".olean": "e7ed3298c8b92e626b822cad1923871126624b5eb412e2adafe26fdd490d9106",
+        ".olean.private": "1bcc532145f6c63527c129efc9208f233896066b0a3009525c8562f0465f9d62",
+        ".olean.server": "75fa51b127e6a9016830e62b9b2d4766dcde9ebdaf1bbd0359b0c3daba95bf68",
+        ".ir": "1c5ec71ee919ff8e88c6a1ba96aeb8606473dab93721327b4acd2947c82b62d6",
+        ".ir.sig": "ec0fbf1a9ac6b3840cb7d484121e85e5b5a44db8a17c14fed28de56fb0c527a6"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.Order.Hom.CompleteLattice",
+      "fingerprint": "69f9459032ae837b667deb94d90c8df659181583f3bb5820003864f4ad18e2b9",
+      "source_sha256": "cd68deac3a42149809b14d66991b1689911786dfb4fb67f103477f47c89da36b",
+      "artifacts": {
+        ".olean": "f4bbce89102bcdfdd6d2b12b08f83448ad699c03fd192cff5ee27749189df6d7",
+        ".olean.private": "4c44d362dc736ad01a828ec479b416714786142a8fc1626e75f2a105f0234224",
+        ".olean.server": "a04e97b8f225b46befed78e7c2881e86e59923f6ebdb8aa7afd0169bf7ea6124",
+        ".ir": "8e1f0d011fb1ece25f65998088c47cb19bed4a6166e8fbfeb704ced0cbcc8274",
+        ".ir.sig": "b468f27c1855b3239b7e3906f244651e3c6c8ea8e13dfa5f86df89fbaa718da7"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.BooleanConditionAutomorphisms",
+      "fingerprint": "8710d6713b7954ae0eecb7f0eb6bc089313adf51c1b4ffa83a144ca7b4b5e001",
+      "source_sha256": "88ca5d56da79e79b3f9a4ba69bd26b2d6cda52808a8fc7e7b1ace9422894adf7",
+      "artifacts": {
+        ".olean": "3c403f2a58b2a9faca4c5a38eae648d4ebb42592e16ec652c13b7dc67c8e69e2"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.ChoiceFreshColumns",
+      "fingerprint": "7f46203f3e072297b0c6dcb07c956c9d4d2d73054797974e113173a00f751d21",
+      "source_sha256": "ba14ec913280392062d3eea54e2499357ecbf54a66081de8c0fc51725fc1862c",
+      "artifacts": {
+        ".olean": "cefbd662fbdd44e8de8b8318973189301d6550410b7eca8c901276f7607c8cc8"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Monoid.Basic",
+      "fingerprint": "49242aaa590aa14665a235006d4beb03ba4ecbeae8b6faf509c2af2c8320db3e",
+      "source_sha256": "0ac62cf4b13a404e4fc6f998bfe43bbab836e7f4c780161a27cb8cce3eb7e0d9",
+      "artifacts": {
+        ".olean": "47926adb7897d2cf7df6a9e85737effb8359ea17703c143aca9627608ed06db6",
+        ".olean.private": "c5e3ddfaeff7c61d8aa6532402f1882c67724db7603dfca22c836b83fe4e22e3",
+        ".olean.server": "9a6161c13d7ef37c5aae5b7af0f1a673e550ea9546a06063970c8bdf44c62aca",
+        ".ir": "247d1aa5bb7eedf0db408ecb04660f457eb120884fed225a9a492444b3426f74",
+        ".ir.sig": "3ce29405e4701b052d1fdfc010c8e053fcefc6e76d0f820138640152555cfec1"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.Order.Cofinal",
+      "fingerprint": "4ebb00e60665bde1cc592a83bee12e5d5ace6e8c4a67b99cbd4d19f5b2c4a215",
+      "source_sha256": "cfba7b78a76259d0154e66b40f410a29bc55aa4b3c24fe325add457a6a880da7",
+      "artifacts": {
+        ".olean": "61e21f6f582d465544390ef39a4260c290f0dcccd248751c5d11b8f7226291c6",
+        ".olean.private": "dd1f57b4e8af4be4683017674d1d956d482fbf1bdbc3e674dff1a53b6cc2d531",
+        ".olean.server": "ac71f93aabadbc581688383e34d0e086e6705bee1ec49147321c55f388faa4eb",
+        ".ir": "0e7e2aa3dce3217757923ed87c4e9bc2a8db5c2992c19a63677bd2cf1cf267c9",
+        ".ir.sig": "c7394624921983a55a5566e623a0908080a967aada9a1c7bb246d964bf9d0dbd"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.SetTheory.Cardinal.Cofinality.Basic",
+      "fingerprint": "546a7d4923bbace46da8b805620222cfb36476b2726834de3c0afa3957f4aaf5",
+      "source_sha256": "5dbb0d46f2ee666dda99d9bf0269aa9deca91cfd110e51fffcf7fe578942d254",
+      "artifacts": {
+        ".olean": "4f24606530b7be3518ba4023b79b1afd57eb2f8acc2208336f04de05de8f1cc2",
+        ".olean.private": "29563250f67cb6f043b9f4da0c4865025652a8c837913855910ad25b6054ad07",
+        ".olean.server": "efa1e81915681a820299bbdd578e3c7a96315144589c0447562699713201962d",
+        ".ir": "48bb9b4a09cc2437c12bf80962b0a41d5d7019140766a4626f065ba8e2776fb6",
+        ".ir.sig": "d08a08a829d83a78e19ab18a3f10a8a59657fb991a8d23b17a290a66dd08d087"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.Order.SuccPred.InitialSeg",
+      "fingerprint": "11c34727676858822cc3c5a553301b23e7cb302522b01505d183632649f85359",
+      "source_sha256": "76e4c09e3083c0265cb44dfefc660cb743b17821457730e1e20834675610a979",
+      "artifacts": {
+        ".olean": "7d47e010cf59ff22d6b1886dfb0365a638c17d1e25bebb151dfea3533376dd09",
+        ".olean.private": "e5495ea85dc08c815d1a4f7268a75130b121c5f7bd4e264f0d77a15d5d6fa2a5",
+        ".olean.server": "83929b846ed65c08ea0232223b0a3ea6a143e1401bb83d7239baa2a47075946d",
+        ".ir": "460cc1be517e8c9d087ee229c8c468be063b7032eedb8069ceeec96e80c9945a",
+        ".ir.sig": "c76be13b983eea4fab813b4cffc5dbc0994ba2b5eb69fcd98c97cc6b41e78b71"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.Order.DirSupClosed",
+      "fingerprint": "193afcf98be70540642d13de9b784e145eb6e3557d54ce222601d9cbcb44b07e",
+      "source_sha256": "4a20209370b04628c475df4b6d1a36b8ea132afffb84a8e6cb0db611a3c8d8c3",
+      "artifacts": {
+        ".olean": "9ee4128dea01b5a69ef027a1400a51e391c1e5027aa701f2d69e67e22cd2b691",
+        ".olean.private": "7cded77fa1f6e8d64ad6ccf5f704b28c0821bc11a746d61cb61e2a4da18decb0",
+        ".olean.server": "58295bd400ca4e60170f2e39360006f0014bed2f7b2616c3a3268ffa4564280e",
+        ".ir": "2defa03beeebf5486e3b547494807766cef17776be2ba2af8fb3cdc9c0706a97",
+        ".ir.sig": "9a58961cf6f4e342681e6bde3a55b5f67935129f3ba0420c6c3231c76eafdc9d"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.Order.IsNormal",
+      "fingerprint": "f049d32eb5c8932998e14584de9b18088ac19aa330159bd1108c1db68f46254f",
+      "source_sha256": "441d4d47a684d141d2b59321a5b6c717b79f3a4984d75453d3407ba12712d68b",
+      "artifacts": {
+        ".olean": "a5a9842018d88d34ffdaae0bbe264d4c2e86682480901508c2bc9b364664ae99",
+        ".olean.private": "51fb967aea239bf42071cefdd7770d569fbd4262fc3510ec25d8476f623f2ec2",
+        ".olean.server": "662be973fadd0bf1f498289aeaef4618130504ad0f3e5123d4e15e52dd7fe40d",
+        ".ir": "f11462bdf03b5678f5841c3cb15a7ba0b7dd5463af29f6d9f160b05d88c3ab74",
+        ".ir.sig": "d2b6bbfb3c093b5ce8559bd7303f1990e8366c0b6f42f127966c0917aa4e5967"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.SetTheory.Ordinal.Basic",
+      "fingerprint": "b88a09c689b111ce0623812df5ed14154c82614841908883f7f53e60aab4cce6",
+      "source_sha256": "ebf02f5adbbf30960418a820f8f1df4503e9ccb88dc8c236db72050d757d43bb",
+      "artifacts": {
+        ".olean": "65b5df3ccb704f6ef66b5d55ea04c5434dff5dc143959a49be7af4ce96c4d383",
+        ".olean.private": "cfefee2f2cd6d90f1c80f37ef6c0244ccd1aea66ec3b19ebadbc6442e59a84ae",
+        ".olean.server": "bc69908be399ab4d01dee5973a9326aef4af45f26a855b5f0bcda249da918db5",
+        ".ir": "1e717fa07f70096916b903b84afb2cfb773e37a638fe95b7e6119a9484583bc3",
+        ".ir.sig": "5fad611f2257f21e6d836dbd4036bc22be2e8cda1730f1832e9225e063282abe"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.SetTheory.Ordinal.Arithmetic",
+      "fingerprint": "7ccc5881e6f32a0809771eb1ae7a835ecb9362644de3772b607a5a3507da4940",
+      "source_sha256": "24c6859f3b75df90b5277035d052a0eb76dec2d56ef0248a9202017fc46701f9",
+      "artifacts": {
+        ".olean": "0f63e9f8791bc049e38a4ec0c79962145f7e924743c2338f4c55485357420dcf",
+        ".olean.private": "1f1ad92acf570b9b65516f2b80a89d1803909e5ba6b614b96f60958d974f4ebb",
+        ".olean.server": "2c65460908059b385fe5852bae61e1351ab72e12eb98d632a1e053dd7f6ce865",
+        ".ir": "9bd1091e089163f94283d5d46f87f999828fe7d690ae8cd5021d2009082b1223",
+        ".ir.sig": "eec828791d135580a2a27b5d64f8cb51d3927752305e481c28d71fa4521386ab"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.SetTheory.Ordinal.Family",
+      "fingerprint": "8bd371026be2be591ee4d80b0396aef743eba63b67913407215fd7e9fc20e794",
+      "source_sha256": "250c1a2226584f3a052f667eab6f9d792f13375703ea13548148051a81f034fb",
+      "artifacts": {
+        ".olean": "88faf1fc5d2a5afb4871ba28eec72c32350004ab995b0ea3b8c9a355c94c1313",
+        ".olean.private": "4e15676ce201118a22813ec8c9142923c35c2f24f931484d4267895dfe41d94b",
+        ".olean.server": "47e66ee1e0c80136a5f936934d05728356aeee419cc44e86707a037f6c1ac54c",
+        ".ir": "5380f6acacf5d1a59671b202bf6b25cf978272e5a9d50f50221893b4812cfea1",
+        ".ir.sig": "3201db56d946a736c830934e04bd43900060dd9b15f12d1c68dc743184c1ef7d"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.SetTheory.Ordinal.Univ",
+      "fingerprint": "fcce950695a70c13082abb6136ac32894586c44a5f0b183aa473985b4a174ed4",
+      "source_sha256": "48268bbdb6ac0ed8feac298bfb5dba2a2fb8a1586cf73886e5768762375d5d75",
+      "artifacts": {
+        ".olean": "bd878b64d0e78e6a39bdcc9f411592c43760367ad7ecd9a60cba1ed50e2ce931",
+        ".olean.private": "a972bd68db850c86a05918b47d8e1ec09fd7451902fb93c47e5d3d8d47d9e059",
+        ".olean.server": "9e7feae854d8d1c6f604de02a30da919cf122af4b1c498b77b61b7c154048ca8",
+        ".ir": "78f8ed25ab7041ecee9317de561f7cd7804d02cf480a8e8ec1ec97b7e4fe5802",
+        ".ir.sig": "6037b99a0964e1069ee4386950f73f672a07b754c5c5d86b455ab978f425996c"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.SetTheory.Cardinal.Cofinality.Enum",
+      "fingerprint": "9c2ff7da36a5fa00728d4dd4a12681f16f969175e594491bf821a51b3460dbde",
+      "source_sha256": "d47f0ad5c49873fb3908b5831d75fe4aa23e6e235b5233a04dbb1492bcb8ca83",
+      "artifacts": {
+        ".olean": "5e589020ce5ecc50cd8d87ee77cd91b5d331b80d1e3aff40cfb056c104b43c6e",
+        ".olean.private": "e82c6ec07ad1ee1a0ecf9492ba72b1370c23211eccf2afda233e89659b07cbcc",
+        ".olean.server": "10af487dee3f409606071bb10ca6934f5d31588045c08b224425f31a8469c48c",
+        ".ir": "f4dc6d51b914b326e9c01b7eea35dbfbdea9f2477342a7b069b718764ddf254e",
+        ".ir.sig": "095b550109e3e5169050fc56527af2476caa4b4e35b2518f5b6ef47749af2152"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.SetTheory.Ordinal.Enum",
+      "fingerprint": "063e9f9e13fc7594fca3495472263bbc5179cba0ef2c4e179185c37c27e6e79d",
+      "source_sha256": "f6cf789b90ef749f359a89e2d1fe3990d4c0f08f7feb7a7fd5ba64d2a208a4d0",
+      "artifacts": {
+        ".olean": "bd08e21e8cc8a89776ca93784b8d54053f494e154cd5b0a53ad35cd432c3dde4",
+        ".olean.private": "df724ddac5c8662d8cedbc01a5891a4a715075e6b4190d0eaef86df99cb4585f",
+        ".olean.server": "dd9029416ded2121ec3febc5c7f28dce911e76553e8117b39a0756bb8070e62d",
+        ".ir": "2d3f21a8502175e0048da30e05367fd4b1ffb2885ae6b2c3b0c8b6511ed70a22",
+        ".ir.sig": "9dfa01f56d98e3d92d3914f52abb09883eff5bf2dbd43228dcdb8ed5c3ab638b"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.Logic.Small.List",
+      "fingerprint": "4025e595b684fd9ee83ea4a5bf5b61ae174127df8ad92a28e44845be1576d348",
+      "source_sha256": "74999dd980e900a7146c4a1a1a8b526de4b2c38c05f8b83c3d44ac078a8dabf3",
+      "artifacts": {
+        ".olean": "c6b901685e95eb423117a85321154021a9e1f444ff14e0e96e02e27e4540c583",
+        ".olean.private": "4079e139fcef421637d52340defa2d168c2eebe805b54665ad67bad8bf85f964",
+        ".olean.server": "8f1837ad3b60411caed0daf45dbbb935899c79c89e82cea64aab5162d4c3f32c",
+        ".ir": "230ddae128edeea3811d4b02366b59bea3e2492af991fd0eab4a73e8c53dfa86",
+        ".ir.sig": "c281117df6358657ebe80e9d5c564907f4f0a988714a2514d55f7a7753da2fae"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.Data.Nat.Log",
+      "fingerprint": "eadf2aa4407eef9ab873aa42ae47d53e64bfcf00f7134347e64e73144fcae94e",
+      "source_sha256": "9800e6942155e28138ed981a06340d7333aacccfafcd1aa35147147ae57d8e3f",
+      "artifacts": {
+        ".olean": "2e3062ca7dfe28601e873441f3ca0d7eeb1626913a41e97ecf846e505e018be8",
+        ".olean.private": "0a1a6978942f0c92ee9129c9ad03088e239ae153b12b8b00354dddfa49b1b0e9",
+        ".olean.server": "cb4a10f01ff97939b88659edc400ff9bbb77184f2c04c3dfafcb53d25f654f52",
+        ".ir": "50a20e3b20bc91f06e4e140fbb99f60381fb9c6acd1c6239ca7bfe66ab36f680",
+        ".ir.sig": "bc8303f24dfb1e00be50f13de83873063296ff42e004efd36efd5e77a615eed8"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.SetTheory.Ordinal.Exponential",
+      "fingerprint": "190c90a7b2181786dd3aba7f6f583a65576bd4d870b648880e134ca429512ee4",
+      "source_sha256": "797197b278e623619803cfb522c88d04309269589d35addaf6cb9bac654b14cb",
+      "artifacts": {
+        ".olean": "52cbfcc1e3d9cf10078ef3afa1f4915a1eea0e06ccaae82a85f9a08527da64b4",
+        ".olean.private": "deb15983ccc288a80f0868cfd747fbf86c09636d0785ee4358899f5aa21848bf",
+        ".olean.server": "7a418e29634b538e4ec2d6d1e2ddf904fcf354db20357d6e35a442300a079c2f",
+        ".ir": "a4bbc299b150a7230be200d72c9513dd6a88d5a506ee8d62ed13cf593e10783b",
+        ".ir.sig": "7dc5f6f84c5a54aaa4df529b6150c9a9c2175d29fe87624ca95f2e2537be9b44"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.SetTheory.Ordinal.FixedPoint",
+      "fingerprint": "66d67ec0af8e31e6623c94d18d5c7909844220f5e5990f6d7c4ee3daf0964a09",
+      "source_sha256": "baa08012cdff8a088ad1c76416d66e69427796c4fe5e5fce6d07e0f48a0f273d",
+      "artifacts": {
+        ".olean": "619a4fb4025d72e7ab13ecb2303bd03990420c86ff60dfb585e06652b8fa8ad0",
+        ".olean.private": "e7d10102fb0f9cf7b821d1bcfb927b5ce1dfe442dd123778028a8e8ec228a9bd",
+        ".olean.server": "165d536477881f3681f3d71676d70082a959ed9ffd50a7453c30f6be0f458f82",
+        ".ir": "ecd97095f2a55453224090daa0a3b32932881e1fb01e1f0bd9072991adff20dd",
+        ".ir.sig": "347a0dc56f007459378359a00a9710a2c43c957b343d9b96455cfd5008353370"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.SetTheory.Ordinal.Principal",
+      "fingerprint": "e71b7a9e0272e2c843780262b8007a196f2be576bdd8236e2e69c37baf0afefa",
+      "source_sha256": "7f9cd58ef01d4ebcbbf5f7d1ed6d725c6e9c01d9e3888d340e38856f225cbbb7",
+      "artifacts": {
+        ".olean": "2b69d9ddb3ed2ee34ee5c390c72bca65f18237b598e4db148d3fca2247bf13dd",
+        ".olean.private": "2f08ecace7f50b9d423b86b85d2473d8d14532f5676aeadd3e2a88b4d56322da",
+        ".olean.server": "42e151ccca72ccdb4864ed6f367f8f4f1416593fbdf2abc283cb1ecfccb2da77",
+        ".ir": "cdf7dbbe382b787c969e67a5d34f392c6ece38bca37a52fe00fd577f8f50ccfa",
+        ".ir.sig": "aa962cfd0459cb16d7a246c86184067b720b51798792f4fae36ed50ed44def42"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.SetTheory.Cardinal.Aleph",
+      "fingerprint": "d5b2e714f814c20a39476c66d76bddee28e1401a544c4994eda754cd5733f726",
+      "source_sha256": "6cde9290d3aef7b64fd70f9ee4644f8fac0822b905c1dee64c4a46a48cf03853",
+      "artifacts": {
+        ".olean": "eba1bfbf451fe78ef3b784bb22b23d9c1d50cce94857c444ca31ad72a44bd871",
+        ".olean.private": "92ad7e590c8461e907fdadfe91126f3f8b917962499ae98f6108237a8b0e31e2",
+        ".olean.server": "c7502dc044b7667fea35e0a64ef9632e13e7c0b4b533265d2681442cb019be83",
+        ".ir": "2096cabc3aacfa2b80ba76cb7561d3eea51caecbb6325fa001248774a9125c14",
+        ".ir.sig": "378c442ede35a649e55086df199f2e069d43ac7326dc9abba7c4ebccba97f426"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.SetTheory.Cardinal.Arithmetic",
+      "fingerprint": "4db9ebbb683c4ec40ea0a8365a716a8d78825adf921bf07870d8032f2adb9564",
+      "source_sha256": "43505f6d6434b8111c787fe51602b111b6a935def35227bcd2bdcab7d867692a",
+      "artifacts": {
+        ".olean": "0945e6bcdbb1acb1697ca86e30d69fe6b829b38ae4bc2bc3623cc2c0867d88fc",
+        ".olean.private": "154d89d343d149c98604191b23eee97a376d6960f1ccffdf9d5ca8729f933dc6",
+        ".olean.server": "3dc27184171dad3cecd3bde00bad25d41a882437368937e4af38e3d31f4b70ea",
+        ".ir": "5e6d34769a4f25202268c7e4a9484cca06d094a2f0284cdd35d1e972f405da67",
+        ".ir.sig": "f84e2c67ea46999ebf05c7ea66e1ab569a1160e9d6e8eb516a7e02baae48b1cf"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.BooleanColumnConditions",
+      "fingerprint": "c0e6026100b74f9d2ae04822902171af3280bcba353e3df7eebfd0e4b09184fb",
+      "source_sha256": "aa7a68246a3607a5222c7a8513c055467403c991fe4bdc670ede815b0a347487",
+      "artifacts": {
+        ".olean": "e14d9455bb199c025936d2b31f08a42f7c9fe0ba56b7135ddd17ee80f7fa1657"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.BooleanValuedEquality",
+      "fingerprint": "a0ad3a950efd7abf4652da621d12e41a2f8f80f4c0ef812717e3d679ac44881c",
+      "source_sha256": "40c88707931e5a3eb755dada26644d7c5c489550884a0c248401b5c621301354",
+      "artifacts": {
+        ".olean": "e309a5742909c803e6fce4bc03594fbdda317c26251322bc3607236cf7ef0fef"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.BooleanSupportedPredicates",
+      "fingerprint": "3a526c4724cb0cda4ea8d572ea546dfd4c7fe42d1b4c9820aa44de4cd35e12bc",
+      "source_sha256": "2bf15f69ac26014e98fbe25750d3965877a13612aba7cf4a8116ddbc41ef173c",
+      "artifacts": {
+        ".olean": "9260367a2fb358af0fc505afc6abd7f68476601ae23043b281692cc8977817ad"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.Data.Fin.VecNotation",
+      "fingerprint": "3d1ee91dcd36b3d77bba1641ccf68472bf5e9e371354e361a4434b3e4f6e33a7",
+      "source_sha256": "08b3449fd3135bb1b4123e74445bad9317b2aa7515a0464aaddc0d656971568e",
+      "artifacts": {
+        ".olean": "99c60a58f124b0ec5cd66bbac06f4149cc88f02da776219cf82cfa76b38059b5",
+        ".olean.private": "8d0166febcc3fd298bd8b207c26b45e7fdd114bf6b7e64f15c75303ae7a66202",
+        ".olean.server": "6c3f8b369b2b19d28a0cbaa0a9d751d73504f7722f1721f457591a3c846ce5ff",
+        ".ir": "5dfcd1300759e104d1f8db56aaf37618309ca929f64ac61ce872f0683edcd77f",
+        ".ir.sig": "2d4b01a5ffc1d743a513cd3f47adc3c4c4272571c374bc7072046582a420fd71"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.Logic.Equiv.Fin.Basic",
+      "fingerprint": "e3353289c9abea0e93bfe2f1450422c08c8de32cae890114ab3b8040e8fe55ea",
+      "source_sha256": "c3470797814c2d81c32c21bfeb6e7ce503e28231a7d38aad665931f3f377bc12",
+      "artifacts": {
+        ".olean": "a8a957e09160704037123901237649aecc95fca4448d7e63238822669f8df61b",
+        ".olean.private": "cec37e40b387e97b5c1afd31d1a5229dd6852344f3a5076f53ce5fd8a7c31e20",
+        ".olean.server": "a39a07899dbc21a2a8b215ca75912293f6e7dfdd37600cd2ae63781ee9541e39",
+        ".ir": "f7ce103ba67913c59956ae0cac493482e340a776b68048c67277bf83ea0840dd",
+        ".ir.sig": "2d1d6bed5b9c31a6429198aa0fe796572d456406d9682c0e6a64c50fff5be2ab"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.ModelTheory.Basic",
+      "fingerprint": "32880a60c54fa4d917d72ef52a07749444f3e4a7c2d4e3cc203beeeccd42cefd",
+      "source_sha256": "ffc8f7914a8af8c306ed253f40bf82d375fc2ee7ced8deff22cc27a24e4da9b8",
+      "artifacts": {
+        ".olean": "faec6a643d2f8c2352fd0642093a596c85b29c34a724441a486966638527d6d2",
+        ".olean.private": "5309bc8f2219ad732ab781d22ffc4dbf8b35b4f70ba293595eec941aceafb045",
+        ".olean.server": "c2fe6b5ff1015f941655b31addb2932dff59735003caea404fc797ce91c9b10f",
+        ".ir": "7ebd4a05a5cac7195fb716b2952cdef36aebd011605575be5accb7b0d07c067c",
+        ".ir.sig": "84e8097b670959e2f8fd2e205e70dbbc393489500f752ae41c4ecee4e69e7d89"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.ModelTheory.LanguageMap",
+      "fingerprint": "0c52b815873de1d50b8a377fde3e98cbc13811a6f5dcab7dab492e07043fd14e",
+      "source_sha256": "16d45b9f2fc98e39feaddacb7dbf81c43f2b521cf55d1362da276aa934ffab7a",
+      "artifacts": {
+        ".olean": "0da038c8fe4cf25c789582ef9498510802a880229690ffbcc3da39eb305b400f",
+        ".olean.private": "3c76ba9582a06b9e43ad1941fd811601847bef301186516388c5d7c79b8d52d5",
+        ".olean.server": "666de7408f6ec0e155657b84b8f70c3459918883d2505b175b35d58f55fd99d7",
+        ".ir": "8efffa0966b4a756247a32b15aeb6c1c1af57fefd5fd173521313e9748a8fc8c",
+        ".ir.sig": "bec15c9c347cb375387c31a46f40a372943fb8f0d01f7634891a4c98b82b7a68"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.ModelTheory.Syntax",
+      "fingerprint": "3766af42185a21013e839815847d1ac2203352cc2a970b8b7a1b531fa955010d",
+      "source_sha256": "51243cb24e590183e33871afaa39ad18c535210dff6bd0b39e483dbab1b8e7e9",
+      "artifacts": {
+        ".olean": "3670148327692880177361512763aa4c9c03104c69432faa7b6b1f79752bf94b",
+        ".olean.private": "c56be1c9793177734ef656052492d1e12053269e0df47637bd31ee7b2a76e643",
+        ".olean.server": "1c97c12b6a4dcddd8080915f17ea05c3f27e472505ff769fe936584e1fee2a20",
+        ".ir": "f803083e1ea240182aaefc71da3040cb4a63212ec232937dc2b12277cb248878",
+        ".ir.sig": "4bb192b61280ec603feafb6df90be3354dd61e4b17eb46ebb2804a29d6287b86"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.ModelTheory.Semantics",
+      "fingerprint": "1f013dac84f1309d299cee3931e8b0b4365846fa024641b1562493f726e2118c",
+      "source_sha256": "a156d9f6fad66edb030e9a176947c2df6d7c4d489c6ab3a823bea871e2be88e2",
+      "artifacts": {
+        ".olean": "b696ebf6df6f0210003aa52cc8ea68e648f34d6dc1e9ccd6aed75ec22387ec12",
+        ".olean.private": "d705d0d575da87094e5a41c2b0ed15775acaea6d8538cb4afa16e9519e9dc1c6",
+        ".olean.server": "75072ebc65ec1dff9c6ad06a34f501899d4f213895a817c18b9e57d3a63f0b7f",
+        ".ir": "4b943af9a3ef092de7c53af1fa19ceaaf54034ac72fd6e24d4c8b3e6b4d68bb3",
+        ".ir.sig": "83cffaa37e10ede0c2be2e756ff22989e357dde8e5b07d4d9e6c60f0683a694a"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.BooleanFirstOrderSemantics",
+      "fingerprint": "2dc1c5b66bb3430926a923bd187bd5f0961f8ec18682b2c8c73005ca306737d1",
+      "source_sha256": "9c36a954cdca5fd44f45c797dfbeebb9178dcfa8647f3876e2f6de1b4b24676a",
+      "artifacts": {
+        ".olean": "0ab3686b434b1c74bcad508320c9b90785989b2d1e7413dfda1e19424b51eb20"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "ChoiceBooleanFoundationsAxioms",
+      "fingerprint": "d0bb2d0e496eef38af12b1e0155dc45c449d49f50caeae4e0eb59bb75ed9620a",
+      "source_sha256": "d70331a1bdda654bb4c883a3893ae3db3b9fb1298dc73a906ce5d0824cc7204c",
+      "artifacts": {
+        ".olean": "563aa64387504b5e1dd97e311892a73bf103c42abaccb7085054de2285045e4c"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Types",
+      "fingerprint": "f920c6417fb0d73d4b6cb333a5de66a5647023a45396e3a09a0b7e943245c8cf",
+      "source_sha256": "567828e8f9a707cf635e3b4fb30bc868a419967307613d0686d795d195606eac",
+      "artifacts": {
+        ".olean": "06ab8b44ce7d7b6c90c25d4cc9e58b72ad316cb1c73e67e82c214ebc3117b126"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Term",
+      "fingerprint": "19fcc526fbf7a5f30c841e2fb11bd4cc6c4c8c77eddfb46e22a81b795035e2d5",
+      "source_sha256": "ad5172acbb74eaab9307662408928b80e6ffab62e14df16f2f41c7205de13f69",
+      "artifacts": {
+        ".olean": "4f77c921708f52a8d1c646e52072b7a63daab23afc54007f41eb669fc9d057bc"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Conversion",
+      "fingerprint": "98d38a7cbaf85616553560abf68733b885806aebd405d33965c1dc960da57f67",
+      "source_sha256": "c22fe48399811fcb0d71b37206c633749a7285291c62c2e7d786475ea6ae339e",
+      "artifacts": {
+        ".olean": "21dce520e2a4e2eb679fbf609ca34a6244daa22842f43fd08eaa4b9797224f6d"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Derivation",
+      "fingerprint": "061b31ce6eb4dec06fa11b50e1a6c035783c2a4995cd0969cc86efba8ddcaddc",
+      "source_sha256": "7cc2fd01542014d55e5a4c4a411724db7cdc076462d0de724c3530b0a8a3fc6b",
+      "artifacts": {
+        ".olean": "4f72cefd18595b0c00c8587ec3ece9b1d63cff25da1e72eae28d18701c32da3f"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Axioms",
+      "fingerprint": "ddbcb4cf3a000255234e36d2ee2916e31b5fdb7a72f348dcefbd8c9d3ca7684a",
+      "source_sha256": "f3dd3b51ef834f46f22e09fe34026f47120a8bc171afb190b5053c443f4a82a7",
+      "artifacts": {
+        ".olean": "9119e12775e212ad694373b4138c67f18f8d297a1b655703f033e65072ccf154"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Entailment",
+      "fingerprint": "f670afd73a6fd66b3870be6129d27860b6752cbea6867b77f897d6c298a0bb17",
+      "source_sha256": "13f758dbf41a84dda7c2ae7adf6bcb9605ee114ce04dbda0efc5f1c4fbeabb1e",
+      "artifacts": {
+        ".olean": "c561b23650a51895b766f0aaea9b30a8748f94111ded0220acc3ae1db4882b41"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.Env",
+      "fingerprint": "7f3e4ffe9d4d890917cec6dec7d2aaf714d1012d59ca370044660890a5a783a3",
+      "source_sha256": "ca6f223a2bfe71396b3e21de852057e432cd7b289005cdacc1cc24935358e09d",
+      "artifacts": {
+        ".olean": "df18221319cd753b2acdbf634c4f6aa9fdba66f43eb4fa9e4f721d6ebdbd0e81"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.Intensional",
+      "fingerprint": "9d77eb883c8b635b5d6121dffea77de109a7b5f6d16ce917871a07d23795e942",
+      "source_sha256": "9a58b1dd47b1b527209d1994ed2b9252c85dc012d019d9878c2cbcc58b6019af",
+      "artifacts": {
+        ".olean": "7c02c5fec7552f79ebd9c5d4edb23b0894161f4370be906f057f8d9c746fae55"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.IntensionalSoundness",
+      "fingerprint": "a7e4c8efed9df1832eed378acb451e6177765b511b38a2f2739330abe954cfe7",
+      "source_sha256": "dc34e26e6baaaf9270c067fb43303dc9a00dbc885b8da02ba1eb7432fe008143",
+      "artifacts": {
+        ".olean": "1e1a46c54e1297352a9abe49ec593385dc93305217e4637fc98b9b2d59574e25"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.ChoiceFirstOrder",
+      "fingerprint": "790174a3b763ae93b67ac31c8eaccd19e56829cf9239b0504343b14dca319c68",
+      "source_sha256": "065c45e11c76add239fb40a601fb4c608aa78d8cad962d9b746e6e73a4334e02",
+      "artifacts": {
+        ".olean": "0acc1305b1c933bfa7def4af39bda8303e7c6913c0af99ed6682e0ff6a9c2221"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.ChoiceFirstOrderTerms",
+      "fingerprint": "4d6125986d68d341e27f5c9d889dce6f54396e68f4ffeb69d01f0f29503dbf25",
+      "source_sha256": "9f0abab17dc77426103c5c49051d9896d315096521441ae822ac9d60d26fc433",
+      "artifacts": {
+        ".olean": "77f5b807efb43e88d0d123705460bbd5852b3582f7cbb49a3ce1f06dd3d1a6f2"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.ChoiceFirstOrderSmall",
+      "fingerprint": "af9d3338aaee3bf3e9a3f574911dd151cc5a5db8a18c240dfd630863ca970455",
+      "source_sha256": "b135aeb7c5f2c82609d58a5209f86754ad01f93c5b651d069b416b70afba8e33",
+      "artifacts": {
+        ".olean": "ff749cfa9ab1976daada96ef41751f41460f634e0ef970e4a2f0738ea9a109fa"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.Tactic.DeriveCountable",
+      "fingerprint": "0a52b8e6edf4af8cc59ffa2db265d7cbe2bdbf356cd9c7a28af30dada5e61cbc",
+      "source_sha256": "ca4a1000c05921123a87b79f8986282b9ec9de65abd10b205b5e2eb1f02ed660",
+      "artifacts": {
+        ".olean": "cde7ba72114c8c89f602f048a8330edb3a8a0e7cad97f10ff8a5cd4fb7972fbb",
+        ".olean.private": "50665bbb7d7e9b45208630f8f188bc436744ad97b2b5e13e90ff296cf5201d06",
+        ".olean.server": "df88792001a036e3ef05dd37bb9a353c9a827b2fefd4d648b617939cb617d8d2",
+        ".ir": "9e52557348ddff29e8cf37d4eb82d86c1b330677d14096578c52f5fefda5c940",
+        ".ir.sig": "d4a0ddeb721027c42309a0e9ab1dc625c948c2b7d77d39dadb997df1cc7758b8"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.ChoiceFirstOrderCountable",
+      "fingerprint": "be10c4cc66d2fd0a61f7525ca7c2d7b3b05101c33e7b02a3ab1e096998bd6771",
+      "source_sha256": "dcc93732849ee65565fd421ffbbae5607bd1bef715d54d64f84886635b63b18d",
+      "artifacts": {
+        ".olean": "7d774fdf779f3263bec5d53079d9f3f4cc309c09813c676f39fd84727ebe0ad8"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.ChoiceFirstOrderMathlib",
+      "fingerprint": "b662c51bd528fe3e1e34f91d4fc868a48ad9e7d1a008ba4143980abce2426e14",
+      "source_sha256": "885b5ddf7c9681ea74f36d8423b91d9f777afec223314d8ae721c9bdd76c94af",
+      "artifacts": {
+        ".olean": "ee38ab324f83cfd2be50515fc5472985b250e8cff89405e234be00313b811385"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.ChoiceFirstOrderRecovery",
+      "fingerprint": "97368898b085894e05f5ac4f045e8bf5751d649f44ec7689195c2a01f73ba733",
+      "source_sha256": "075c8440d3e810da09b0f2e9a6dc3494a80ba6d29798b07a1adde47d37cd0dac",
+      "artifacts": {
+        ".olean": "8e648b77699805f3b64a6e1c98f7012c59dc89c10b5dd2fce13c037727c82845"
+      },
+      "seconds": 59.37,
+      "exit_code": 0,
+      "log": "logs/runs/20261023T233456901120Z-abfe59d4/Classicism_Models_ChoiceFirstOrderRecovery.log"
+    },
+    {
+      "module": "Classicism.Models.ChoiceFirstOrderAxiomTheory",
+      "fingerprint": "b5da4b4f6b4212b4d074ada9d6af9c6e7fa22ce8b9032741fd6dbd9f7ecfe1c8",
+      "source_sha256": "694dd1870dcd0ea1bbb30ceae66b2cdae63cf8619b1261356552fb25b630c93c",
+      "seconds": 38.95,
+      "exit_code": 1,
+      "log": "logs/runs/20261023T233456901120Z-abfe59d4/Classicism_Models_ChoiceFirstOrderAxiomTheory.log"
+    },
+    {
+      "module": "ChoiceFirstOrderRecoveryAxioms",
+      "fingerprint": "0489b905d6ce1902f805bef6084d007741c4231c8c1d7778af26efa95d14f391",
+      "source_sha256": "6a2038d7faf3c6bac667399a8756face0edcc749e3c30b1887be9ac9c23771b1",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Models.BooleanColumnAlgebra",
+      "fingerprint": "14bdfd0a914679ddff8f5641891394cedfb7ed1cbc113cde9608f140b230d18a",
+      "source_sha256": "4961b7363a8c59a8a283261fc8a959d8a04f0eb8d37f8490c2fdf355ee7e102f",
+      "artifacts": {
+        ".olean": "cf1ce7e4defd8a9c97773a5afe3cc29f6bf3ebd14a533e313860ce949276a59b"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.SetTheory.Cardinal.Cofinality.Ordinal",
+      "fingerprint": "9046a27548a551b0efb150c21e8b14f3652194ab45e6f0d8243837af66485ece",
+      "source_sha256": "6866146c4a439446074da826156ca4f4d22edeae0e1506b1ac3a4dc2c20537d6",
+      "artifacts": {
+        ".olean": "030b81e8ab6310a8949f28d643629cdf742f9d05b247b97bc12ed37f954ae780",
+        ".olean.private": "c27474432799a20e61f3ba149b37283353f9c769db9a113b4b3263753852efcf",
+        ".olean.server": "159bcf4318e75c61d181bba691e6a84e90db5850b746530ae8e87317b9451383",
+        ".ir": "239bded7c58d94e07ed213023ba416854140df259c8bfc342e452bf834172205",
+        ".ir.sig": "c1699417ccac1f23abb8c201e097753766af6494b95086827dcea3a14ee696d3"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.SetTheory.Cardinal.Ordinal",
+      "fingerprint": "f20c4f2152f01f31c87f2e0c71a7268a22b26979c4b00f8f62d045a8630c2a4a",
+      "source_sha256": "fa85f3ecd2f6db665d09080c576976bae4f93064077a4636d829b1161d261e81",
+      "artifacts": {
+        ".olean": "8ecf82a0fd7918630807e6f7f45cc5d6698aff6f4809ce8b92f942fcd2d6e800",
+        ".olean.private": "458aa461706700276e9025df47336fd99af4e8d2184d98f2268fc9aaad0b4ff0",
+        ".olean.server": "5185ad43041ecdf133e01399238bb97b124343a5fcd0ddb972a78c8ed61d26a0",
+        ".ir": "2d4f398987c6c17ec99af5b918a009a8d9974a0fb355ed180cc3566d3d730148",
+        ".ir.sig": "68f56eb115d4d53263ac001630aadd445ba3dff02d57feb5b0a0e42501387179"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.SetTheory.Ordinal.FundamentalSequence",
+      "fingerprint": "89167ec84bd4ff00232dc21a6a6f19394dbadec89f6631c89367ed38cb6c2c0e",
+      "source_sha256": "dc9e619e54991ae2afd27a0bdb04eeb45934057040b0435106bdc64d5a7f99a8",
+      "artifacts": {
+        ".olean": "c4b8265ad27201489aaeabdbaee5d371fb0044ae9836aba393c7976b851cb0e0",
+        ".olean.private": "3b5388557217202284c7978b0992e92927b36957193d16e34c6961a82cde9998",
+        ".olean.server": "1257e2ecc9f45e1fa1026c2d5b6bba2b1195f86ac5359070e71e1639c60e7d2f",
+        ".ir": "de061539de160257f1a05cbbd2f994fe45fb204b56d8176659117cede25cce4a",
+        ".ir.sig": "4426fd3dcbb826cc4877cc71f3360508d595b5ebb0c8dc33c4bc64c0eb5a397e"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.SetTheory.Cardinal.Regular",
+      "fingerprint": "5a5995880f162afb770a1f22fa9cfffe74f358462929d22ed3dd120e581a0d41",
+      "source_sha256": "90f58bc8df074d6e17470d85290b23e1c6d7711d1bc3d56284869272fc350f37",
+      "artifacts": {
+        ".olean": "416d65409f703aafae6a4fd558555a058c6a8294bc39d98fe4cac066cc0230b9",
+        ".olean.private": "a9e8745614085b1035ab4ab1f9e7b5a1c45c396c5d90ced3091c478cfbe0ce72",
+        ".olean.server": "77c17d339341ed6ce2d8a9727439a9ccacebbbfebc7711b5c630ab01bbfddc14",
+        ".ir": "2ea2215a3aeb0a6276ab4e50ad6edd804a7da8a9cf2df466209a004681fcc3e3",
+        ".ir.sig": "5132c34156587ffc48dbf15cb062aae1f4b350358a8e2e1f30eef7f7150b0808"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.BooleanColumnClosure",
+      "fingerprint": "716fb3446567b354cf4b4111bef935b46ba9dc6599ffaa70e6b93c53ca5503bc",
+      "source_sha256": "3d398ee79c2c0f8ca0bcc4b25192fdc88b9ae9d65c8a550a27156ff2d693357e",
+      "artifacts": {
+        ".olean": "a70f711c58725bfb4055085fe5a25872e4301405fdb280a94fa6073cb47005a0"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.BooleanColumnDistributivity",
+      "fingerprint": "bef67dcdece05879385d34bb5f9e551e5d217dd39dadedc0e2c3d4010054a125",
+      "source_sha256": "a0843b0ab9de38b252203fea4d892640567176e0a12f89d91bc45690d661d54f",
+      "artifacts": {
+        ".olean": "ebff5b1bb59596c04c876c85305d755c7100d526fff99c85c19227ce22d0b208"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.BooleanTypedHierarchy",
+      "fingerprint": "770988a98510055e48a641b94a6bb1ca5aa94527fc8fc0eb805bfabcb29067f7",
+      "source_sha256": "d74a58299c1be71aca8e3e71e7d7b4d931aed9551bbb8978c8a54e870ef07142",
+      "artifacts": {
+        ".olean": "5181a718073974b4bd128507ec0a88b02d4cf5692b23cea75806ce491a3f04a7"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.ChoiceFirstOrderFull",
+      "fingerprint": "39899436b4677dd197a9d3249527931a181b518c1df9601fa4a6998ab53cc762",
+      "source_sha256": "a8adf9353e2f0d3833ae3b1a5f89b408aa452dd925f56461ba8ccd32694b75b9",
+      "artifacts": {
+        ".olean": "4ac1865f1621da60224bda22ab5c25380e13814bebad7f300139df0233816906"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.BooleanGroundChecks",
+      "fingerprint": "30f23b2cf0187e19ae9f356bf8a3a25d4039696035d33294951a84e3ebfcb8fa",
+      "source_sha256": "538336b7b6b2344658eccca4042be336e9ed31016fc35a8cc59e980a5a4155c3",
+      "artifacts": {
+        ".olean": "bf8da35d10c1e393c2bc3d7e4d8c4541dc597c645df89f05f865d08f9fa541e7"
+      },
+      "seconds": 43.17,
+      "exit_code": 0,
+      "log": "logs/runs/20261023T233456901120Z-abfe59d4/Classicism_Models_BooleanGroundChecks.log"
+    },
+    {
+      "module": "Classicism.Models.BooleanGroundCoverage",
+      "fingerprint": "d670cc004862e5a54142acbe19282e2446b2b5cf84ce93d08dbf13f9abe65507",
+      "source_sha256": "41e3d2efe1b7d92d209274dbc3fb21d9c9420f1f2b3ac16179beeb862eee9d56",
+      "seconds": 30.66,
+      "exit_code": 1,
+      "log": "logs/runs/20261023T233456901120Z-abfe59d4/Classicism_Models_BooleanGroundCoverage.log"
+    },
+    {
+      "module": "Classicism.Models.BooleanProtectedCoverage",
+      "fingerprint": "452774a77680cc4c84643aa890f24a70e27f8d7ec32387ac391c061efd5d0b74",
+      "source_sha256": "429282f7911478445ee0acc7683926071d9fa5474650b2c5ada938dfff33b3c6",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Syntax.ChoiceHierarchyTypes",
+      "fingerprint": "3f012ef8860b14615b274894bc0e5c70f4ed4a7ef3379d504370c853475c9e79",
+      "source_sha256": "8d12b0c2e6ae16ec0be6602aa1dbf28306a41cb1a45098d00fa2f884dafd5742",
+      "artifacts": {
+        ".olean": "e6ad39723200f080d58a4580369133e22812817501752242cdee23c6a37455a9"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.BooleanChoiceCutoff",
+      "fingerprint": "29f3fd4f814f17e9f7a0842991b50c55f828ab6a7c43f4a1baa7e0cab277dd31",
+      "source_sha256": "4e98b56f6190ea27bfc0c47371565821b7a27c0c87bf3e4c10ea476aac81f289",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Models.BooleanColumnCoordinates",
+      "fingerprint": "03f7c097d0e969e2d321d9bc70881aba872874ff84dad732b5f08bfe4130200a",
+      "source_sha256": "249cfbc320c8664a05adf757c2afa549b31b78e37b05d9c9d7195bfa29402be8",
+      "artifacts": {
+        ".olean": "34977ee0468672ba828b2fb700749cde025c39c76130f316af7554686000f10a"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.BooleanIndexedProfiles",
+      "fingerprint": "555a4913caa751dc2dd1ff9a6b67c62400015a0590ee480b9389d859c47bcf6b",
+      "source_sha256": "450d6f134598c108a08a4a65867641ee8fb5b9e064da63fcd6d150f482a0827d",
+      "seconds": 32.64,
+      "exit_code": 1,
+      "log": "logs/runs/20261023T233456901120Z-abfe59d4/Classicism_Models_BooleanIndexedProfiles.log"
+    },
+    {
+      "module": "Classicism.Models.BooleanSelectorObstruction",
+      "fingerprint": "1f4e7e0924a906a693d0035be7ea0e918fadf9d6e327801e066c8e25853b6abb",
+      "source_sha256": "5c891a7d2d618c16b5487d0e141ddddf1cbac3589fd813cddcc7da9027d775ed",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Models.BooleanChoiceFamily",
+      "fingerprint": "1f873be5da19d7c1ff5e35a91173396baaa84c11a5da674e2204b7a2ec7a7313",
+      "source_sha256": "5b176c3056389e3ce8e26afc1111e17029130cbf7b480d0d16997f5ccfd6b32d",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Models.BooleanTypedTermSemantics",
+      "fingerprint": "afa30ea7ba04e4ba114d321bcb3a8f9e35b50d146754f34215810fb133f3019d",
+      "source_sha256": "19b05614d76dc6d4f46cff89b04e5f31864a0ddda29198d650994ca39a5890c0",
+      "artifacts": {
+        ".olean": "c6883fb3a09762d7494986fd4efa0d265c2412f13aeaee467c11b2fcf5bfa83f"
+      },
+      "seconds": 72.98,
+      "exit_code": 0,
+      "log": "logs/runs/20261023T233456901120Z-abfe59d4/Classicism_Models_BooleanTypedTermSemantics.log"
+    },
+    {
+      "module": "Classicism.Models.BooleanSmallFormulaSemantics",
+      "fingerprint": "c8ea30a7d4a549c166615f193a6bd11790e8a361ac1c96199b3c7878dc33abfc",
+      "source_sha256": "5e1e95100862898fd6538f24562e073a9d8665ca28be2a75b8d0e59800e0e61e",
+      "seconds": 50.66,
+      "exit_code": 1,
+      "log": "logs/runs/20261023T233456901120Z-abfe59d4/Classicism_Models_BooleanSmallFormulaSemantics.log"
+    },
+    {
+      "module": "Classicism.Models.BooleanTaggedFirstOrder",
+      "fingerprint": "6152a76b7a857e5d903850a74c50cc1316bf5563ca8ea4748f73906dd8c0adbe",
+      "source_sha256": "9cc5c36b5017b96f3b0f8bfbcb98be1db6ba0d822c516568ffad2ea93fbdd2a7",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Batteries.Data.Nat.Bitwise.Lemmas",
+      "fingerprint": "7d4bd6d78a7669dc83517c37df9de5a5824883f974a481f4ac3eeca66b889eeb",
+      "source_sha256": "c16c1d6b828c7056722eeb251686a205ca7010f6e5b3dfd080fc5b97436ce9a6",
+      "artifacts": {
+        ".olean": "6636d6d5b773370c3b1f772aa5ea59da4d46dae73a6aebac80bc935d7aa524fc",
+        ".olean.private": "2336a3c8b13b99a64b59b5bdf04f913789aae355d20dfdd8e8ecd90529fdcd7e",
+        ".olean.server": "36d3db7826161de4060b4c6de48360fa77ef3ada5e90bf564958d25adc0eeeee",
+        ".ir": "5bf19773b8f7954cc126fb9515314a6c56a32878b7cb574bcbc05a0fbf44c60b",
+        ".ir.sig": "8d6c5cbb689c02dc6204682f63a2496ec946078f4b5f54ecf253efb8df64c90f"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Batteries.Data.Nat.Bitwise",
+      "fingerprint": "177082b868319048ea87e5da4eb5056a0a24891ea75fc9df9db2accd47f6151c",
+      "source_sha256": "f60bf96abd97759c1ae659d08f32d5d6822710d0bd7dcb415b4744858abcd883",
+      "artifacts": {
+        ".olean": "8af463d4c6212860efb16c3a5e7f0f05fd74b05115bbc84e67d29dcddda5167c",
+        ".olean.private": "3a71bf868f872494cf9dc1158beb9e9988867ff2df09e23c0fe072e5702455d6",
+        ".olean.server": "6b6c74f4ed1c6ff3fe05ceb064ed152754694c8234a036b265e4374c83cc4b72",
+        ".ir": "5c34b331c46984a75125a29189a0968489d5d4613d67c26d1a791e617403058c",
+        ".ir.sig": "5fefb36e98cd3a7009e92c0431bccaff46452ea4a66c4e06273adeba7f3ea158"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.Data.Nat.Bitwise",
+      "fingerprint": "53bb8746c431fa2e5b5b3977eabd8ff008fdeb4d8cf49670504d4242209e80e3",
+      "source_sha256": "370fca0d9640cf428f7acb11a001801e47fdcb1073510ee4b3f8b4f60911d207",
+      "artifacts": {
+        ".olean": "4a7cc3b54d8e90372ed014b8e05f20d73604ad476638a83a32a5c7456a55ba98",
+        ".olean.private": "c034f58ed1e49b471a08d164ad153f147c3c27678a4ade4718312614b4d2a108",
+        ".olean.server": "d0784cf297756ca19a609193c094af377aca4b8121f443c68bb4c813871a7573",
+        ".ir": "f2972335fce3466064ec7e369c0c28921a5bdba166f354b17999f1c8f5817264",
+        ".ir.sig": "de3e0f42bd2407f77bb2e0e4402df10ca1ddd399674257cb7a651bd0577ac282"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.Data.Nat.PSub",
+      "fingerprint": "5e505bfbd30f4adfecf232edf748de5bea3673100efb9d755ff90e88e6cb529a",
+      "source_sha256": "ac4e439afc60cbf763a934e516ba5b4ffaaad559e13d1e0e147c9c98d903dd4d",
+      "artifacts": {
+        ".olean": "c4b12215225b7a5c36d0fe149a63b2b53aa614de63d260ca12dc3788fde8e85c",
+        ".olean.private": "5232418a7a4901dc0e408138886452494dfd27d2e96cd3667a590cfe04ac59b4",
+        ".olean.server": "03680fe8e79ee221c202fa40f2471e8d32a14bae43d8598dc5ea88dabce17250",
+        ".ir": "8d4e61bd8060e364346781e71d087455c84821f8994a9723417ac6acca281eff",
+        ".ir.sig": "e2bd8f4851418d0c1945f2eade7a67b62e7fba9bf471c320cc3c062ee9e445e7"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.Data.Nat.Size",
+      "fingerprint": "b51cbdcae77ae0d8386ca0e1604355cfa624f6899f0759999be83069d6535b89",
+      "source_sha256": "237015baa16ee6a6a13a36d5fa6677ff0761fd3820abef6637fef945f86f72ce",
+      "artifacts": {
+        ".olean": "9c93b1703272c1e0870a91cf972fd8bf9b5829003653f783a8526d80281c1473",
+        ".olean.private": "e90d866ed0c0347c092c969aab30e21e3e67c4ffe01b8cb2a735308bb4ce746c",
+        ".olean.server": "a875d91b92922aa1edab5152016a5d1fd91d29786d90555b8bd85543e09e5747",
+        ".ir": "10d8ba1eb5680571a066b9fc611965e93b6378bc3e6a133ace143ba30f1cdb40",
+        ".ir.sig": "96a8689b95efbd9edc5d77f2ea26468b91a46b9344aaaa8984c87a629ecb5866"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.Data.Num.Basic",
+      "fingerprint": "250f32f893747c9eb8436ced1dde7f9fef64e65faa2833e76008693cffef7767",
+      "source_sha256": "58190dbf939cb2fc16b26b667236a5370a42c0acafdff71d75dddf672cbc6916",
+      "artifacts": {
+        ".olean": "e301e12add02ce37db5f7fd2f6b3ae764f8c6c99badf35c3b9ba8adcff246ced",
+        ".olean.private": "b64f8dd1ef7a13fac086b6b6df601fd8714f6b0a049966df609374c4bfdba077",
+        ".olean.server": "eb4ccf81cc349e1ed871019493758357b44396c5975684b14997d8bbb15ebe0f",
+        ".ir": "4cba775e5132b07a7530f854879841a131fbda24fa167e825ae00606ecc712b8",
+        ".ir.sig": "15e474904d9e339b701e03175a9f851d52484d6f902425bf1d2a9828c26b3e0f"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.Data.Num.Bitwise",
+      "fingerprint": "984323fc7383e8d486b74dc6bead8275106d792824ffd1975f84dad15eb4da3b",
+      "source_sha256": "4cb3211534b51a3430b9ab964dc29855b1e3e83c27af4dd47dd4fc165a717d1d",
+      "artifacts": {
+        ".olean": "65f92be790666d146bc7ef4a7c4e6fe56286b4227c07fdda18eab4aad5b2f4ba",
+        ".olean.private": "ee07ad34404e5d2f326cb77d649ee5ce8cf18a9faeee674dbfcc8a147bd07bf6",
+        ".olean.server": "731b977f9aba37f9db0c2e0d2e0f163f76b2ad6caedd94344598ce16d46b1d78",
+        ".ir": "4de3e3e385a4d972db12295ba543e6a76e3b8f0a4cd1305d2be0ae33fb6f2259",
+        ".ir.sig": "dd13a87d1270d8cb9c1a508d55ca3b0fe78f147812cf038770bd004268a00475"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.Data.Num.Lemmas",
+      "fingerprint": "e7ea3415d0ad5a7952704f2cc486036faa9d05673c72cb750620fe829f50e9f0",
+      "source_sha256": "5206f01a67ab6fdd9186da03eb8799d1c66541e18751623caee2cdcd708c2bb2",
+      "artifacts": {
+        ".olean": "3173c50dc3ed7299099d0c39bb13517534f07de6ee8a35e0d9b8efedd715709d",
+        ".olean.private": "a1fd36b86b4847aa683b2259eb0b5418af6b8cff1f62e952c6c00dda2e19ba37",
+        ".olean.server": "091a721e0f1c1a6e15fb85db93029bf315118b4c7c383e714b646c128e8ea105",
+        ".ir": "dba68c435245eb92ffe8fb1dc7171947fbfcd8ad0f6a77a85c6a7c6c0b6d6ada",
+        ".ir.sig": "28b4c48decce02da92aa8a15d7b65714cc40652eb40234dc1a890375a96be96f"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.Tactic.ProxyType",
+      "fingerprint": "81955d4873036136a288c9f513609380042209f4955b6cdd455e52dcee119c73",
+      "source_sha256": "f4d8c5e618d4f479327065b4b0a39a40f4c1f63025c8f434b4e20d8ae519cae3",
+      "artifacts": {
+        ".olean": "580d442cd177acb93fbd1e5b257f9049cbaa7cff2e9d84a017585058b27f3761",
+        ".olean.private": "24d5e2d57f425ff11eddb8bab21a5db770d740180c18a4ad96d926595f0e5f5d",
+        ".olean.server": "a16396a258259d942dfe81db05d6f0112ca8399b11aa5cd9493bbd8d627765a6",
+        ".ir": "ee908539cd50cfb049b58f8e7b484f5c429771cc5fb3de1dc2c27ea4b2f5948b",
+        ".ir.sig": "0a01e4532e707c2960dff82a829cf019d757de516dd70a965ad77e0d44a7eadd"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.Tactic.DeriveFintype",
+      "fingerprint": "a1aded777be697a9148d484822a1dfd586febed41b81016dad7650f3a7a283cc",
+      "source_sha256": "df785752c158adcdc464e3370114f05fe16cd9ccde82e710d0630d15a89282fc",
+      "artifacts": {
+        ".olean": "b60bc8920e09b0881d09267e1f28e9bc06ed220ed9f2ae9990e25ab88a6817a1",
+        ".olean.private": "e3b0b8671be758097868fa6638792e3ced3f527f093c16b430dcfdef9f0edaed",
+        ".olean.server": "dd1e9e6e86e4ef1745628a301607bd6e3fdec0ea8990a3fa60b3cd39bb82701e",
+        ".ir": "05164bcdb65b72700afb239dfd72627cae9bafb47bab05aee99bfdaa11abdd13",
+        ".ir.sig": "cfbea7b248a49797356e2a64c82660de60946c14875619178e822e7779b3ecbb"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.Computability.Encoding",
+      "fingerprint": "81636a80cf6d633fc3ec1e2c3b283ad78e0db908d9276f1903fdb7f5130eed9b",
+      "source_sha256": "9c0c23bb942f2af3d003705adaa519d0af14fda21a92fcfbc71af028bcf7ebb9",
+      "artifacts": {
+        ".olean": "183b5aad4f17210262e5f429820d8e7125a0b4926e19fae12ec1e8cfdffa9917",
+        ".olean.private": "0dbffc30c09242913ff3c76de6560a6a0b6ca0efee17c6e0caa23f89aec399ee",
+        ".olean.server": "0b43e60a8cc2e4d55fb303d58a84bb4de46a8cdb9fa8143cff5356287dddc3e9",
+        ".ir": "c0babf3bde2c5d24c619b8c795d0711056614049eb06c6812c5385b25dfc8cf8",
+        ".ir.sig": "67dccdd98880be94e5644b9cb926bbc1208550db6e7202e591fe2595ef162276"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Mathlib.ModelTheory.Encoding",
+      "fingerprint": "2f12c4eb3684e1c0b0df3172a1fd3649a0511a96ea630f1c27b8e223067c94f7",
+      "source_sha256": "54cfc3f1d7ec6d3e0c1ffb6df2b641e0c998bdc0f51bbcdd04ad6c0529bed249",
+      "artifacts": {
+        ".olean": "f6973f3ece3e04693aafa1f36f96bd6658f1dcbee335d512b958207838580e50",
+        ".olean.private": "4bb90785f92704b50ff8c03f6c65cd2843cb60ff790f8bfe807fa6d3a9f2ad3d",
+        ".olean.server": "d10895a8d932214bfd6f66acacdbbbca2e3a1dd70497dd5b62ba6f130aef7fe4",
+        ".ir": "ceab388e5c0eaab5a38d0f6bbbd2d794b38ca8973afc9eb8f4aeee30c0f6e6ea",
+        ".ir.sig": "616a3f526fb1c4232252da0bc80321dbba982714aa01123b2bfc203d83b670bf"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.BooleanWitnessChain",
+      "fingerprint": "c5c54beef44059b9b792a93e2fd4d9f5ae67328ffdff4ef15967659d82d73889",
+      "source_sha256": "32acf27ba81fa4c716fcb5f53a4c6a54fac8d16d79eea85a4c091279a5bdec57",
+      "artifacts": {
+        ".olean": "38ba3e7ef0335633195d18d2f69cee106a273ac6bec7e9ec024f22807fee5090"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.BooleanModelExtraction",
+      "fingerprint": "dccd4592f64c2dbaf0b510e1a204f4d80b4a5224453bc8377fa59f5db49d6a3e",
+      "source_sha256": "e371e5d118bb24751ea5eb0739f64e935fb9b8d6e42da1a39fd54041679f8576",
+      "artifacts": {
+        ".olean": "7fd4210ba90cf93ffaeae9557d451224b8eec1d43213abb98012508bc4d40fdb"
+      },
+      "seconds": 73.16,
+      "exit_code": 0,
+      "log": "logs/runs/20261023T233456901120Z-abfe59d4/Classicism_Models_BooleanModelExtraction.log"
+    },
+    {
+      "module": "Classicism.Models.BooleanAxiomTheory",
+      "fingerprint": "d1514ce82ced705b1dd1c69a90cf7d1de98a15e82142f858e8b3119df3022fa0",
+      "source_sha256": "a7ac4bf4c78843000a3298b138d18d74c7e2a66bf30113674220c9acefdc689e",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Models.BooleanRecoveredModel",
+      "fingerprint": "c2a7e18bfd9accb1864e81490001c79d30b8db1b1301ca7fec2ebca722d5ee20",
+      "source_sha256": "102c046972af396f61bf4628ee4677ae90c56f601a1aec7bbcdc7d6784907eb7",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Models.BooleanChoiceModel",
+      "fingerprint": "55d5bd08f1be28e713e3dfac4216fe975363739dbb951513bd44f4c74a0261e6",
+      "source_sha256": "9189c514c6a4c24e07116a5b4ac292e1914865e8d4626bb1e8c8c9b53a6bb572",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Core",
+      "fingerprint": "106263f603fbfb12c1dbffa3c2cf0eea76f524ef90107bbd8cb3da5bc12c1ff6",
+      "source_sha256": "ed0b1189f3fe3f02ce7011058273c0915bb511e5fd30ae33340e7ae0c4afb81d",
+      "artifacts": {
+        ".olean": "4096b1bd17dd536827fe51c1c73322fc9aab46bb526e2a52047b47aff305efcd"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Paper",
+      "fingerprint": "aaa8b005d16eaf5430deb1709123bd2580dad38978e3ce7d05aa6d7620b865ee",
+      "source_sha256": "3348a9c2bf786ef15a9a2a0341dce82e9a419e81a4c7b7486d8c8cba8fbdc895",
+      "artifacts": {
+        ".olean": "4e19b4faa931dfd3ccfce2cd899744dabf84bd9200738e628b5bf3b7fce52f25"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Equivalence",
+      "fingerprint": "c15347e4764c0cd4c37fb83dc17821c459c2f019c71ff77b7dd5418f14ca25fa",
+      "source_sha256": "257006775f36a2eacca652360f7ff8fb9dc403b2b0f4d71ff6a5543e5a939a76",
+      "artifacts": {
+        ".olean": "0d1bb97d26f635a7dbcd19fa367c8d9a7048ca8942cc8b7ac06afb80ab88023d"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Booleanism",
+      "fingerprint": "f911cf2a5fb044ae79d2a327477c43cb9a7123862daf4f0a13de28cb9b114b0a",
+      "source_sha256": "0537132563704170d7ec4dc14755690639a9a784428650fa7bf04067acc0628f",
+      "artifacts": {
+        ".olean": "98b8c05a117cc308217d8f9fe40833975b46c80582f0309f291f99ca031efefd"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Modal",
+      "fingerprint": "aeb651c0d0142f7a25017873ee1f4be90965b19e415ec41b66e58440c7c19d55",
+      "source_sha256": "7706449a7246e0be0772a33dcda61ab010686bf5bd64c45017425bf39ed0cf42",
+      "artifacts": {
+        ".olean": "57d01043696149874d7a869f019589434bf50ba324cd70d1507348306a8bd22a"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Order",
+      "fingerprint": "9edb507c8661fe6508eaaebb576f8bdc6977fb69bf17a2bf85a5a820dd6dbaa9",
+      "source_sha256": "4755de0b5eb272e541ce89e84078c4d80c3ae9a332a6910b395c73b78a2b4730",
+      "artifacts": {
+        ".olean": "4c7788e753989740fdb5f59938f8013bb629477369196586e15efab2d1ff5ce8"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Pointwise",
+      "fingerprint": "729e1d6e9b2ee057cf9887f1f9c08f1b7a8df301e2ab21f010105588f37e548c",
+      "source_sha256": "78b858a9d33feb587976879190bdf739afdc0e564c4e6dae5508f8f2c5e15a16",
+      "artifacts": {
+        ".olean": "03d01c38b61701d9f193fe0abd174ebc08a63a60213701a0ccbb3823b3f3cbc0"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Comprehension",
+      "fingerprint": "a9852412a839671a35e9e0896f46b99a2bde4b234ad60eb3fc2c83031307c89d",
+      "source_sha256": "570435f620ec40a8c0f359ce546c26933cf3acfc6e7c8da81fa805170f9ab844",
+      "artifacts": {
+        ".olean": "813cf9f39a4e486f9906dd6970d8415f635930a982f8e01a96d08ca29cca9275"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Lattice",
+      "fingerprint": "c368689dd8447ea18e0e6f2ec1e4b7ad2c3c7edda0966c048821360eb1c8a18a",
+      "source_sha256": "43231f5d30bab05bc0d11927e1ce09f17ec384875e0aeb1cb72335e36f046070",
+      "artifacts": {
+        ".olean": "277da454f009ca7f6353f6463dfcf355a405b20c70a33a27b0717ba0771abeb9"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Principles.Choice",
+      "fingerprint": "878f21beb4ceff306504037b182cbc9f7550e03d97906b3a0944faf0a5feda3a",
+      "source_sha256": "a8f7e35f1a11805edc2b116b6af002bd5b1d0708b93aaea16781cff519687319",
+      "artifacts": {
+        ".olean": "f1b45329aa59ba7c22d957cac5caf99a0ffb30a126e54ebd05a6d52e1a689b0f"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Tools.Check",
+      "fingerprint": "776b3300da237e0e891286dca86ac835286aa01dbcafb42feeb627614b644a1e",
+      "source_sha256": "20fdb6525e533a835b5d561bce9529e553de2a3fc1b4f6416235da7f52da6cdf",
+      "artifacts": {
+        ".olean": "9e6827329bb5bf88147f2bdbddb4b944bf721ea1538eb3a42f5e7d36c3921ee1"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Tools.TypeSystem",
+      "fingerprint": "7d43a0f804e634b04dfb5d6048b2d32c7608b6aedab9feebbc25cdb158a9a6a8",
+      "source_sha256": "3db785bca90f4e2961bce8e7bde2d6bbd418e9e4c67ec99acae2251cb89e88e1",
+      "artifacts": {
+        ".olean": "39ffc333d68335ca334761d681010072b46a3fbb0e1ce383e1bfcbb6f61e37be"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.Denotation",
+      "fingerprint": "47123ccfe2c8a40639f380eaad25c1f45203bef28fc73689bea70efe1e17a4aa",
+      "source_sha256": "2103000e1da2b0ce5413fa71820b7cd579bf562b7dd50d704e058b5cda0c7925",
+      "artifacts": {
+        ".olean": "8943e49d76dab4523282e63d6b3871f5b027aa79b606a885b7f39b6c48a5152c"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Identities",
+      "fingerprint": "bd7da817f31150b2fce200b73d4dc1c0f233449954575d6c092805356a7c39e3",
+      "source_sha256": "3629e17eb7ebf28d47f0d1a2450886bec05b39bf73ff52eff99a88a12579c3b3",
+      "artifacts": {
+        ".olean": "4aa11b19a80924f3a86578537e0f8438ac21feb4d1c04c69a311204131a331db"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Strict.Axiomatization",
+      "fingerprint": "75d10f5cda5e4490d3c071b0df90ab6e993e1f8b49ef44c23385bbf4384cd1e4",
+      "source_sha256": "fa26c38979d08d22db2c14d999bd3c5454170e00e72f2781cf2cfa28910ed533",
+      "artifacts": {
+        ".olean": "e8e720586d8c63bf6e3d86e62ed138d0d883cc61ce1b65fddf4ec82e9fc98321"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Strict.Algebra",
+      "fingerprint": "3b91a9c00818b2ab297ac98f7f9ef7d1297ea71c3211927256dde821960cec74",
+      "source_sha256": "d4cb80885b688ee323e6f59b084568746247f751986fe2ea7efd53cb4e6969a9",
+      "artifacts": {
+        ".olean": "4fbef3b460d57f020ed3fdc74f992f1f1dc25707acf9e2ce0da3d4922bfeae6e"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Strict.Vocabulary",
+      "fingerprint": "dbfb4eade20ad9ccca5971fbbf339a69ddfd38ba620005e9fda008b18a4769b3",
+      "source_sha256": "29fad160fd838d15256273fae84dce3cb5381cbd876e7c6ed882874da295b747",
+      "artifacts": {
+        ".olean": "6ece3edca732b902bec9189727c0453f0d07537edf454651cf470280d1117ba2"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Strict.Tautology",
+      "fingerprint": "e6416ae6f402e7a857dd4e72529ee86528267661adc73dffcc1d3c113beba1b6",
+      "source_sha256": "edc88bb68c00443a3c309ad01da9c31e1325bc8d63bf0a2ba9392c43eebbadfe",
+      "artifacts": {
+        ".olean": "f4f1dd7c74fcfed307820e209bf59a9776a0a053ee909946d491b1d9f25352ae"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Strict.Quantifier",
+      "fingerprint": "1d77e224df5545bebf5ee4b686f7320a1a7e4b0d8133a9a477beb402f41ba4a8",
+      "source_sha256": "688f1a0f560a30f12fd4b4b6663fb7583fac374d9bd7591a55943bbb1b4695fa",
+      "artifacts": {
+        ".olean": "12fb1d4603c8a65ac9dcfcf5593512cc77c05019c9daf612b7a36c5a2e6bb2c7"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Strict.Rules",
+      "fingerprint": "210698fe0c53557f2ce0d2191ea61a830703dd894f4a23317c286200b9d22c06",
+      "source_sha256": "496f3272610ad5dac44de1f90bd394d38098d44f5c8e51fcc30e835e415a8609",
+      "artifacts": {
+        ".olean": "50b34fb97ae0d75ae892b240a4d2cf030de5e8e6dafffc4177c1a1aec4d272e1"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Strict.Primitives",
+      "fingerprint": "b838d093e66eb7e33b71039ae15168a069ca3b6899d9e9628ed698b19207208d",
+      "source_sha256": "b0875be460cec24411c21b6f5929f9c4f68485e6600317f1530adb0a20abd69b",
+      "artifacts": {
+        ".olean": "17cadc09c128c7d3a4bda4e889639534a90944380bf44524d9ebaccc9df74c79"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Strict.Transform",
+      "fingerprint": "edbee0763bf36f5f496a5401c2abd79e18f009a8126625af55c6274a919abce8",
+      "source_sha256": "477d7ea0d6a8c0e438bdf1fdb29c68e79512216094ae8c8c5851b47133afe3ae",
+      "artifacts": {
+        ".olean": "d50f145784bdaa4c9cf53102f0da3ea2728ac28414017dc76510601e5defc1c4"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Strict.Mirror",
+      "fingerprint": "2fea6fdaa69890ff9f271ec775a3965a463fca7420bb45b3651ff573593a701c",
+      "source_sha256": "c9aa802c99fbaea769cb8a88af075fc434b3a9073bd9187f9d00b0e6e82451fe",
+      "artifacts": {
+        ".olean": "dd97c6c376b273d72d75a452b0f3bffd065ea9714b74d47c300a67075748fabd"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.Relational",
+      "fingerprint": "2c859cefe02fed00fabd827c711476aa72983f9b0a67ae3404a315e8d3578f4b",
+      "source_sha256": "b9424788860fff653c01277d1d1e1e2aa257b0905ac02b0879bb6029a1c5c32a",
+      "artifacts": {
+        ".olean": "10b1ebce4afc1b45e57ad6dae5e191615874ad7ad743568c9efd8a7c77c35a65"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Tools.Quote",
+      "fingerprint": "d4220ad0869558cc8b1912a64517dfa6def53f00ff6a4c8a6975e86b062c8a6f",
+      "source_sha256": "9539d77cb6894442171628c10fd8f4e1142fa8f7f99e80fac7dc1681c7eb96fe",
+      "artifacts": {
+        ".olean": "df567d6aa7ef8710b8fb037cd2ae85f69f48f9a182d41f80c43d498afeae3362"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Normalize",
+      "fingerprint": "fbf0db0b6d9b8b4ab8a2144e85b96ccb9e7913e2c49e0cdd37ddd06fd80ff5bc",
+      "source_sha256": "1ba19ae01872f7d4357876e2e4c47e4f675cf6b733be98c1947838a1f0c94c1b",
+      "artifacts": {
+        ".olean": "466cabd2038839e898f9d083889e601f02dac99cec2e0816d94d88dae013ea80"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Tools.Translate",
+      "fingerprint": "85864cdb936fb71e2851a6bbcd0ce58b9bc1ef8bc76041dcf6b1cf70f2585f94",
+      "source_sha256": "471e8a2a7ab42f306e986af1320f0bd7f4d77dd073241e3f77234bf0fc5d6ba7",
+      "artifacts": {
+        ".olean": "e1f7c98b7f2c40a7ce40f5fe54a313881050dab1a04f491613f7d8f3961cc69b"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.ChoiceHierarchy",
+      "fingerprint": "3361d03b16ea9af1b6accae73ab49eb43674c7f5682eb407848b4453f50bf1e8",
+      "source_sha256": "2bb73d4338f5bb2357f4d694cbe2d1a7a37b85ce51e3291043aa49ee053fa6e2",
+      "artifacts": {
+        ".olean": "90c702afbf512f80577e47b5bcccd4fe95eae0c8b180b8f361bef4a78cdd3632"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Blocks",
+      "fingerprint": "8f619648c1c389b21f3ef2a40567f20862d30330a0620404a743ae921b4637a2",
+      "source_sha256": "77b4ef8fadb3646edd15d25854bac994a6eabb8bb1f51347c9dd00fce3a6ac5d",
+      "artifacts": {
+        ".olean": "311996802ea136c940f6231659fdd0256a3267f5a4f5ad2ad7817d75af70d32a"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Vectorize",
+      "fingerprint": "c57e9e1a546872e4dd5521dde4e9e8200b4a7493a6908e4ba2bacd5c6ba6d27a",
+      "source_sha256": "b57548b87b70c0e9df1c0fd48a1f7b7d67d4828ab4d4286e164e7f32c4716817",
+      "artifacts": {
+        ".olean": "54676fc9c944d5a3d3790924422e2f96b91f632e553468b388bc76e0126e0735"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.VectorizeDerivable",
+      "fingerprint": "bd67d51fc6c088c18eaad5508eb23b8f2044a69e4884d6a45bdd37a678e66df0",
+      "source_sha256": "17508c58aef3e3ad7b121f20349045d76c5e238a164cdaf96c2400255c492824",
+      "artifacts": {
+        ".olean": "2cadee08cbe83be4eb007873437b03c95690ef5b51babe5c034e0bc3dc4ec7e8"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Tools.Schema",
+      "fingerprint": "25ff9dc1de7945d2755a9b5a2c698f54770a56ca5ccf8640229f3aa88244ca3e",
+      "source_sha256": "809bf8692601598451770b6422375de71cddf6e3d4cacc651b3905119fe40d2c",
+      "artifacts": {
+        ".olean": "255d53a068494804cda144c2eefdf3cea1597f1d8abfbd3828c2199e1be5d9b8"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Principles.Base",
+      "fingerprint": "ab4f732bc7258e157d3fc29f141f434ac9ab5938638881f7155a997f80a7f0e8",
+      "source_sha256": "d0c930dafb5decf6e747b5a05215cbff099d4efd9e69c607f01a54d5c5a7b96a",
+      "artifacts": {
+        ".olean": "20e49d1a2b8376812d19aefbe611bad129d3d08459df5944869bce4ccd6701f1"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Principles.Coarse",
+      "fingerprint": "76eab9f7358a051bbdddec8ad1a302e1345c81f4ab97286478089a63d093bcb6",
+      "source_sha256": "5c3aedc0a4117e7c214d186b384c42b8da6a17906fb7a76a75cb625f85b0a9b2",
+      "artifacts": {
+        ".olean": "c3458dd19b42db171953accc7786ccff05b7f4b526f911d0b95d68ce2d7409a2"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Principles.Extensionality",
+      "fingerprint": "9025e1c4813cf45bef21ac78a21d16336be645f0884d4d1649bd254136f00691",
+      "source_sha256": "aa1929fee457845f79c2511b4df86462660ed1c68c3f85b5af8636a88a8f15e8",
+      "artifacts": {
+        ".olean": "a0e9e70fef6b3fc46f7f2e60d8f4e2885acb0f75e7932c4f4bda4b94a0c2a1e4"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Cardinality",
+      "fingerprint": "d354798138ba7b815909ac80ca8a657201589e1a2eb24574d3b10fa89800aad0",
+      "source_sha256": "5e627927356fc561dfd5bfacd9935c558c7760678df56c0158820a7e8626703f",
+      "artifacts": {
+        ".olean": "8cf1865ab3aa041a124ca962c33e049fa16b0ef84b346833bf2ba918b388a515"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Principles.Lattice",
+      "fingerprint": "3d83865391146079266ebe776437ddc36702b3cb58e6696f765f58d1d6251481",
+      "source_sha256": "95a7c96bd3f2c0b131b59412ee36c288b9f12a772075e8f6ec83d8177f6ffd60",
+      "artifacts": {
+        ".olean": "6bb64bf3b5e1623438e4a54aa99e7d8113e81f314ee929e518622bdedaba1d14"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Principles.Instances",
+      "fingerprint": "dfc5c55bc0561b807cb84a4071560636c26decf4c17c1ebe1a0dea22de341f72",
+      "source_sha256": "53835a72c249e8f75246e6b42331d205b8bec73a8c03bc2d1ad48db37a88e47e",
+      "artifacts": {
+        ".olean": "e6d465b99bcace775f20593aab1452224ed141f7354dec32581a28d5a602bbfc"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Principles.Comprehension",
+      "fingerprint": "0806ac413a479f8402a50834da9de38bd9d240531e2f4939100d2c6c36522648",
+      "source_sha256": "7d47cbb2fcbf444bd1e708ceeb9d007c1be955b41346b2adf14f5613ec7e2537",
+      "artifacts": {
+        ".olean": "500bbefccaf9aefc0f12194986abf67df699eac76bda2f96e823fd6382e36230"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Principles.Infinity",
+      "fingerprint": "23a54de0b017227984238e63c2e0f9dbcf161c882b26c0b5b3dc96df6b80cf05",
+      "source_sha256": "9c901565490f92a5a6b18ac1cf690c756bb5984e105e885614b87dcc00db027f",
+      "artifacts": {
+        ".olean": "04665c2ef5c822fdedeb15d1a219af3c744d4845d1a3ad8de78e3b347293e015"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Principles.Schematic",
+      "fingerprint": "d27de11d8d474df8c930f8cd67247ee53d91a5a5e599871db5fee77a22faab75",
+      "source_sha256": "f6e0fe85d4c7f95deb80b98e19cf10e292ac98d87a5c2caec2ddcb9920e677ee",
+      "artifacts": {
+        ".olean": "61804af833b257357059659da4954fc4b710aeb3c04cbc527c1b114c7fbb6f3f"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Principles",
+      "fingerprint": "90ac24ea6a08c605e49932af32624ff01f216ad7e7d49d18939526b521630593",
+      "source_sha256": "747fc5fbde92a7dd1432aaaafee00437398594ae06dbc8ec2040690fae443049",
+      "artifacts": {
+        ".olean": "c8fb4965d740ffdbf260a245b9c1e59e7beff90e5a42191aff31828c6661d4a1"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Records.Base",
+      "fingerprint": "a89655f6db873d5961080ab8978b6aa6901afd05866b4d1c8fe1ad5f87f5b98a",
+      "source_sha256": "43794a516d90505e3c5b48267ddfe110b8e482b881cc1300f2e2ee182c2fc2db",
+      "artifacts": {
+        ".olean": "80585bfa7a293e518eb831134da927589abfb25fb335471a4cb0fc9a47be1d68"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Records.Coarse",
+      "fingerprint": "e503d7f7fb5c97d55b42b9373b4ca421a21053cb14bf9476e0461e2517861b3a",
+      "source_sha256": "a3a6e0bc0120eecda1097efc51cd29c0d95daa15b81535f36d7dc6dd1d434882",
+      "artifacts": {
+        ".olean": "ec6e4254a53cbc4d3ac84814238493d6b25b2854ef97ca47427f8bfec276863b"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Records.Extensionality",
+      "fingerprint": "5278848a501c9d394d348e1f8e2a7c67647e2d7517c11a61cfcec6c8cd945595",
+      "source_sha256": "0a1d58485d6e8b0b84d68d973027dd621394ee0c4d1579f08746f10558f0a34a",
+      "artifacts": {
+        ".olean": "2be66ae68300e8c156d0e8028e922913b1650a9fca182aa2a34ff45ca3ffc836"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Records.Comprehension",
+      "fingerprint": "bf24680b17f62ba015aced980ce9229c0f35e07fded08e07d507318d0eb7541f",
+      "source_sha256": "552f1c10d3b02f5cae87392141616f5de2200655837e07ba9b367e7bacfd77d7",
+      "artifacts": {
+        ".olean": "162be8608efc02a35b68531d97c48518b3bfd4900c1bc779de0c0ead0bb77324"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Records.Lattice",
+      "fingerprint": "72ccff7b7955700d02d2036f14c48af1c8a09aabed9290c029cbb8e4211ac2f0",
+      "source_sha256": "e5adae1ce94a42f477aa629e4f5b739aa78bf1f7a3abf785d591f4d3a62690f4",
+      "artifacts": {
+        ".olean": "ce145b63eddc8c7249d52c201ef10f17d39e8330f4ae4563a8405248813ea755"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Records.Choice",
+      "fingerprint": "4dff099fffd7658cf1c6336160d3987ad42ad255fdc890012a3c6bbd7a4f57b4",
+      "source_sha256": "28a17b666e917900329a015b2bf9cf3a6848a811762a6c862f6ef58135bf77ca",
+      "artifacts": {
+        ".olean": "ed470c8e7d4f5d705cff4a3d632ae7740176da5f5d764f1fc0ba7859224306ee"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Records.C5",
+      "fingerprint": "d72b91823c9c4110b92ff5a60a905501ea3c6c8f0444ef454251c50aa2ddbc05",
+      "source_sha256": "670269847531e12553369ae4105b0926f8613883f8f709b94cdc88917eb49b7c",
+      "artifacts": {
+        ".olean": "7a42a73a1394a5622b3bbf734f3e2733ee52ff9714a665cb26203332906aae66"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Records.Infinity",
+      "fingerprint": "401d152fd3baf0e0d0be4bcaa09a9535076c062e05496362922d7409a9388684",
+      "source_sha256": "dd622a8252d4bc861a68bf939b25198d39db51c119e89911e096b0523a3a1ba0",
+      "artifacts": {
+        ".olean": "4599c4caad09c95a5cb4872aacbd0085b876994c2e54b7690e91d27e559c4a74"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Records",
+      "fingerprint": "f7561c09837d9f950ff8fccdefe6ad21a6605a9596f3f113c23466b1f9b42d7a",
+      "source_sha256": "6d6d399aab1e7f30eff9a5d385635ae311228e4faf03ce36ad39d5a1d22eede6",
+      "artifacts": {
+        ".olean": "2101e40096f46091682c9bffccb7eee7a6cc06961c165a0d5c15e6197b9e42e8"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Certified.Quoted",
+      "fingerprint": "1e283621c0adaf00cb814e51025789426076fdd410e904743f932dbf91b558d1",
+      "source_sha256": "4f5e539a45bf30cf758effcd38c59330b95160a09aa57b08130226c491896447",
+      "artifacts": {
+        ".olean": "9cdcdd2343f85a6c3084b26261040c661852e82bea2d9af52e64895494de5bab"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.ClosedTypes",
+      "fingerprint": "7c976b5b1656d60de70508fea43275956cf95917fab784ef3eb9d627e6c2c7fa",
+      "source_sha256": "07ea7d86a0ec8faf8da218c04b9ab46c0b3b941c5772729340de705750227968",
+      "artifacts": {
+        ".olean": "5fd0f066f66ccc53e9729b71b99a088d18df0eb101e505eeaa60a3d77fb77440"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Certified.Schemas",
+      "fingerprint": "3ae397512adfb86dd4ad499f6383c4a85ad1cfa2a97adbfeb6d27ad2b63e1bfc",
+      "source_sha256": "5473826bbece5136406e9aca792c6eb38e93117d142bce275d5a084803ad4a38",
+      "artifacts": {
+        ".olean": "937b8eb4acc2838db7337aebadc31af21960fa92440d0c3d75bc84918112f8e7"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.FiniteChoiceBasis",
+      "fingerprint": "0b3df2649c97e38552dfd7cd1c19f375bd3bbadb5d609baee44af21673b7c6f4",
+      "source_sha256": "bab32caca509fdffb7af226af4507be1072f04afc9967d4711753fce48d99dc8",
+      "artifacts": {
+        ".olean": "facd4cbedffc17b2652b1cb8146629c65a0de98a63af77791a24d49ecb047182"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.ChoiceHierarchySchemas",
+      "fingerprint": "db2dfb445133c7c23e16dcee4384e3665ff01fdd26364d70f257d39ef6c5c499",
+      "source_sha256": "20b5e4e4e7fd451a89132d0cff3649b2a158af0aaf8afcdc03006852b41579fe",
+      "artifacts": {
+        ".olean": "6cceb7fdd99c540b96e500efc7821c74b5155c5e228c080d3e4abebf40abfc84"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.BooleanChoiceFragments",
+      "fingerprint": "e4a845231a026d91245a6dcf817644fc5ef39613f2dbdde8bd8d569379e4f307",
+      "source_sha256": "f9ed850f33f424a5dabc4b5347364dae015a4dd05ab6ffadcdaa05ec7e3cf05a",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Models.BooleanSelectingWeights",
+      "fingerprint": "c6ef432b568717642e88e72418098686ef02a91e0a7b4ac850ce70a7ff0c0498",
+      "source_sha256": "a73bb13dc4ae5442d7a13c53c722894e4e5cb250aa8788dae4a8681a1dd3b4b3",
+      "artifacts": {
+        ".olean": "fbd82d1c18bcf15f44b4f9604d0b2848df7d5dee7f6327c891938955fea551aa"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.BooleanSupportedSelection",
+      "fingerprint": "a3c114756c9efdb59b8ba15c5a0155006ba279421ec89af96a9d772d726b5d5f",
+      "source_sha256": "a5faee6d0255cb243081d38970e7f067a0f41db1c40f2d3a3ea6dce2125816fb",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Syntax.Sentences",
+      "fingerprint": "0145edf7be709542a1ad29e003cbe6162672ba9cc3611a2e64dd1fc6442fe1e6",
+      "source_sha256": "9d1511399b998922713f3d2bccea49249aaeba3a9de7f0f0b0b8153161adbd52",
+      "artifacts": {
+        ".olean": "06d13e4d91e245613f1e6b3b5e813e6118f868cb372c4f20df86a50ad67b11c3"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.IntensionalFacts",
+      "fingerprint": "ecd13cca404b5f6cc23d1836e5c2e7bc61e749794ee8592a839ef7ec0a8dc682",
+      "source_sha256": "6ef820a85da8854668976cab35fb79bccb5cb0f729fe42f94e55bb472bbbc5c1",
+      "artifacts": {
+        ".olean": "4d46898012e808594ff0515085849109982d7958636e8015a4679a6bd58a6231"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Pure",
+      "fingerprint": "b3ed039a88f2c75849fe66eba343cc1eff7adfe692c2bb4643481e01f5de899d",
+      "source_sha256": "34937a7fc2d4c62a99863e9a0a161f56dfe2ca06b5f5d304ea8d2ad13f7c41a2",
+      "artifacts": {
+        ".olean": "fd7d2e72f794a6fcf351c9e4d740434170b7852cdb11a88028d9e7267637d314"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.SentenceSchemas",
+      "fingerprint": "f29a7f058ee358e87f7c7844f03852c780119c0f21e999cc1d95af231702d159",
+      "source_sha256": "4956cc5f79d94287bab644bff62b9eade4401a602a61e469ed0260a0007c9541",
+      "artifacts": {
+        ".olean": "794e5a1f6c3b899f35d600ab080c13356ce0ecbbd7c29bf7886fe2c53368d5d5"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Conservativity",
+      "fingerprint": "ac6b0e5092453e726e3052d86201794e00fa3165e242c24ead72f335e7a6106a",
+      "source_sha256": "9f5aba4cb5b54944a6486b4f4b50f37328245c0e3d246c401859b1d7eb5ff4bc",
+      "artifacts": {
+        ".olean": "fd897f797e6a3cbe47d439760e4a913d512e3d80c05b84002b8fddf6aa7e0e4a"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.IntensionalTheory",
+      "fingerprint": "f24a5aa3e8ba0e5286f883a3011a69548a75c91393e9ae1277c8d2efc7463709",
+      "source_sha256": "99bec918ee24851e7a1beb3482e53f1362c262e0928a670c1f7c30cde5135988",
+      "artifacts": {
+        ".olean": "5511a7eac6fcc081a4a10feba6f64939ef4c2c2b18903e37c71d749436684523"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.IntensionalProperties",
+      "fingerprint": "0b936ecf7453c8898ba28ef619b4aba10587402b09162f630a3bfb8db8da9086",
+      "source_sha256": "d19b0a0eae6b030dd7371406d3ff601f029cce89f959238a356cb0f0ec92f81a",
+      "artifacts": {
+        ".olean": "fe551e671bcc7845cc35ef2f0799cfc5621d4ef9026bc6941cb2f593c1b9aa67"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.FullModels",
+      "fingerprint": "c9a32a2aa0e3459b4e8daf4d12c9be8b4c6a78e754f03bbbdccedb6118a0c26a",
+      "source_sha256": "4d2d82d33d3a72e196cc4fd0ff0ef4c6675154dd334d23dd97edeba8563c6a74",
+      "artifacts": {
+        ".olean": "2253109dafd750c349f9d81a045e18fb3f4719263672ca0dbd257bff86782d9a"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.BooleanFunctionalChoice",
+      "fingerprint": "f2b3c5c5ed489c8a33d833bb15b689a06d0d021820bf429dc79fb3cc6e0e87c7",
+      "source_sha256": "613e4d0b2208f07bcc07b6f471925d937bebef08f02e65f48fabc5a5538238de",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Models.BooleanSelectorFailure",
+      "fingerprint": "c8f3bc318bf9e030b4043c751294c0687e3679026c173e1d63a3226474fbcd86",
+      "source_sha256": "fee3212afaf3a7cbdd274a1be5277ce9247d1c2e4165ad983f9438b5862c81f2",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Models.BooleanFiniteChoice",
+      "fingerprint": "29e4944b8ed5071701f928d3a65cccae82c0f9e35a3453143819c6ace9a7a9ff",
+      "source_sha256": "e2e19f0493fcbcc39f855d1c871d2988e6dc20cd06b13be199b45d582f3647ed",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "ChoiceBooleanNegativeAxioms",
+      "fingerprint": "54bc25a2e6672ae2c1f08b74d8887100dd2c6c3712e20df97ab631621d92dfc0",
+      "source_sha256": "8db2ed89122494171c9e5c0157873558095ab7e66b76820094c0a0a6ac7cbdad",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.ChoiceHierarchyEncoding",
+      "fingerprint": "a728bc63035d03b1941fdedb2594563c8f5789293e314832a976dcf6b8937c7e",
+      "source_sha256": "02b2eff3c594c35c1be0cdbf2f008b56791bee671a725918f901331f6aef7571",
+      "artifacts": {
+        ".olean": "dd38705c0205153524c36bfccb7acdeb1eefba4603ca0b7156f95fe65340f0ae"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.ChoiceHierarchyPlenitude",
+      "fingerprint": "6574d1b11daa156830dcd555c18be5f3102c0333859597b5807414d73b8fce9f",
+      "source_sha256": "82fd94c62e1a37c3e229d68913cf81c6da2334bfd5d441f1478f60e5be3e552d",
+      "artifacts": {
+        ".olean": "73437eb8274edbac1952096f9e8ecc325f063ef19bf0988e4c52ea3a0ff1b5a1"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.ChoiceHierarchyRealizationSteps",
+      "fingerprint": "6cf2ffe4c7abae346de648ba8489c2eb2b398d0256828adea10248adc08a1ecc",
+      "source_sha256": "f5bdc620a2af8d9fe08522a72e2c07cdfe7b1b981dada52b051b75591c6cf46a",
+      "artifacts": {
+        ".olean": "6ded7c9fefa59039183984ef062588688c6eb0473f72104e47006344d84715a7"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.ChoiceHierarchyRealization",
+      "fingerprint": "03fece641ce91300f7c3dd25df9117d01cb26b788026792d72d17a4245fd517d",
+      "source_sha256": "b4d2a2ab5d085a0be50aefd39efae26a63862213769b7073baf9435684e19132",
+      "artifacts": {
+        ".olean": "9eb3fd91ad2b6c745a53abdee56a35c1500efa7020ce56401e0fe6e628dde5cc"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.ChoiceHierarchyDiagonal",
+      "fingerprint": "302962af7d682a3fc19a6cc3f070ba8f7d2eb39274e907370e03cb57ddd3c348",
+      "source_sha256": "df22b2b6267d6cde808bc3f4c042ee77b73d473e09c7ce45f2d8cac49affb08d",
+      "artifacts": {
+        ".olean": "308efd0b47c701ca8bb47caab23913373f18309ae7ddc91a17dbea6d97b44fd5"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.BooleanChoiceSchemaConsequences",
+      "fingerprint": "2487d2d5592c9866647d5e30e20102d26b9dc6fdcb8730dd26b6f3f7a890f81a",
+      "source_sha256": "64eb07fff2b7b36f1717baa2c45276f5cc64e4a33c19f27e9c2c5be036cde172",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "ChoiceBooleanSchemaConsequencesAxioms",
+      "fingerprint": "78c11217aace87edc452dce7c9557f10e3a37fe58304c5627ea7075e9f50265f",
+      "source_sha256": "b28096c005c9e3e7ca68902df08b6a03f8643d4f1eb4e5cdafdf903257c371df",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    }
+  ],
+  "sources": {
+    "Mathlib.Order.Heyting.Regular": {
+      "path": "dependencies/Mathlib/Order/Heyting/Regular.lean",
+      "sha256": "dc7a83c1eb70da8d3ca703a602b6a96706f55b88f4b16cc5437746f0ac16014e"
+    },
+    "Mathlib.Order.UpperLower.CompleteLattice": {
+      "path": "dependencies/Mathlib/Order/UpperLower/CompleteLattice.lean",
+      "sha256": "f94347fc1d73cc7b5002195c794cde8bb984e90d3f9ce49a1852fca93baf4c67"
+    },
+    "Classicism.Models.BooleanConditionCompletion": {
+      "path": "topics/classicism/lean/Classicism/Models/BooleanConditionCompletion.lean",
+      "sha256": "5e1bf85af787fa8300c24322923561ec182dd80dc7959a7fa3d91f23a65ea2bd"
+    },
+    "Mathlib.Order.Heyting.Hom": {
+      "path": "dependencies/Mathlib/Order/Heyting/Hom.lean",
+      "sha256": "554524b5a9af2e4b62f0d83e3222b642d629dcdc418afd3afc6a8cda3e670128"
+    },
+    "Mathlib.Order.Hom.CompleteLattice": {
+      "path": "dependencies/Mathlib/Order/Hom/CompleteLattice.lean",
+      "sha256": "cd68deac3a42149809b14d66991b1689911786dfb4fb67f103477f47c89da36b"
+    },
+    "Classicism.Models.BooleanConditionAutomorphisms": {
+      "path": "topics/classicism/lean/Classicism/Models/BooleanConditionAutomorphisms.lean",
+      "sha256": "88ca5d56da79e79b3f9a4ba69bd26b2d6cda52808a8fc7e7b1ace9422894adf7"
+    },
+    "Classicism.Models.ChoiceFreshColumns": {
+      "path": "topics/classicism/lean/Classicism/Models/ChoiceFreshColumns.lean",
+      "sha256": "ba14ec913280392062d3eea54e2499357ecbf54a66081de8c0fc51725fc1862c"
+    },
+    "Mathlib.Algebra.Order.Monoid.Basic": {
+      "path": "dependencies/Mathlib/Algebra/Order/Monoid/Basic.lean",
+      "sha256": "0ac62cf4b13a404e4fc6f998bfe43bbab836e7f4c780161a27cb8cce3eb7e0d9"
+    },
+    "Mathlib.Order.Cofinal": {
+      "path": "dependencies/Mathlib/Order/Cofinal.lean",
+      "sha256": "cfba7b78a76259d0154e66b40f410a29bc55aa4b3c24fe325add457a6a880da7"
+    },
+    "Mathlib.SetTheory.Cardinal.Cofinality.Basic": {
+      "path": "dependencies/Mathlib/SetTheory/Cardinal/Cofinality/Basic.lean",
+      "sha256": "5dbb0d46f2ee666dda99d9bf0269aa9deca91cfd110e51fffcf7fe578942d254"
+    },
+    "Mathlib.Order.SuccPred.InitialSeg": {
+      "path": "dependencies/Mathlib/Order/SuccPred/InitialSeg.lean",
+      "sha256": "76e4c09e3083c0265cb44dfefc660cb743b17821457730e1e20834675610a979"
+    },
+    "Mathlib.Order.DirSupClosed": {
+      "path": "dependencies/Mathlib/Order/DirSupClosed.lean",
+      "sha256": "4a20209370b04628c475df4b6d1a36b8ea132afffb84a8e6cb0db611a3c8d8c3"
+    },
+    "Mathlib.Order.IsNormal": {
+      "path": "dependencies/Mathlib/Order/IsNormal.lean",
+      "sha256": "441d4d47a684d141d2b59321a5b6c717b79f3a4984d75453d3407ba12712d68b"
+    },
+    "Mathlib.SetTheory.Ordinal.Basic": {
+      "path": "dependencies/Mathlib/SetTheory/Ordinal/Basic.lean",
+      "sha256": "ebf02f5adbbf30960418a820f8f1df4503e9ccb88dc8c236db72050d757d43bb"
+    },
+    "Mathlib.SetTheory.Ordinal.Arithmetic": {
+      "path": "dependencies/Mathlib/SetTheory/Ordinal/Arithmetic.lean",
+      "sha256": "24c6859f3b75df90b5277035d052a0eb76dec2d56ef0248a9202017fc46701f9"
+    },
+    "Mathlib.SetTheory.Ordinal.Family": {
+      "path": "dependencies/Mathlib/SetTheory/Ordinal/Family.lean",
+      "sha256": "250c1a2226584f3a052f667eab6f9d792f13375703ea13548148051a81f034fb"
+    },
+    "Mathlib.SetTheory.Ordinal.Univ": {
+      "path": "dependencies/Mathlib/SetTheory/Ordinal/Univ.lean",
+      "sha256": "48268bbdb6ac0ed8feac298bfb5dba2a2fb8a1586cf73886e5768762375d5d75"
+    },
+    "Mathlib.SetTheory.Cardinal.Cofinality.Enum": {
+      "path": "dependencies/Mathlib/SetTheory/Cardinal/Cofinality/Enum.lean",
+      "sha256": "d47f0ad5c49873fb3908b5831d75fe4aa23e6e235b5233a04dbb1492bcb8ca83"
+    },
+    "Mathlib.SetTheory.Ordinal.Enum": {
+      "path": "dependencies/Mathlib/SetTheory/Ordinal/Enum.lean",
+      "sha256": "f6cf789b90ef749f359a89e2d1fe3990d4c0f08f7feb7a7fd5ba64d2a208a4d0"
+    },
+    "Mathlib.Logic.Small.List": {
+      "path": "dependencies/Mathlib/Logic/Small/List.lean",
+      "sha256": "74999dd980e900a7146c4a1a1a8b526de4b2c38c05f8b83c3d44ac078a8dabf3"
+    },
+    "Mathlib.Data.Nat.Log": {
+      "path": "dependencies/Mathlib/Data/Nat/Log.lean",
+      "sha256": "9800e6942155e28138ed981a06340d7333aacccfafcd1aa35147147ae57d8e3f"
+    },
+    "Mathlib.SetTheory.Ordinal.Exponential": {
+      "path": "dependencies/Mathlib/SetTheory/Ordinal/Exponential.lean",
+      "sha256": "797197b278e623619803cfb522c88d04309269589d35addaf6cb9bac654b14cb"
+    },
+    "Mathlib.SetTheory.Ordinal.FixedPoint": {
+      "path": "dependencies/Mathlib/SetTheory/Ordinal/FixedPoint.lean",
+      "sha256": "baa08012cdff8a088ad1c76416d66e69427796c4fe5e5fce6d07e0f48a0f273d"
+    },
+    "Mathlib.SetTheory.Ordinal.Principal": {
+      "path": "dependencies/Mathlib/SetTheory/Ordinal/Principal.lean",
+      "sha256": "7f9cd58ef01d4ebcbbf5f7d1ed6d725c6e9c01d9e3888d340e38856f225cbbb7"
+    },
+    "Mathlib.SetTheory.Cardinal.Aleph": {
+      "path": "dependencies/Mathlib/SetTheory/Cardinal/Aleph.lean",
+      "sha256": "6cde9290d3aef7b64fd70f9ee4644f8fac0822b905c1dee64c4a46a48cf03853"
+    },
+    "Mathlib.SetTheory.Cardinal.Arithmetic": {
+      "path": "dependencies/Mathlib/SetTheory/Cardinal/Arithmetic.lean",
+      "sha256": "43505f6d6434b8111c787fe51602b111b6a935def35227bcd2bdcab7d867692a"
+    },
+    "Classicism.Models.BooleanColumnConditions": {
+      "path": "topics/classicism/lean/Classicism/Models/BooleanColumnConditions.lean",
+      "sha256": "aa7a68246a3607a5222c7a8513c055467403c991fe4bdc670ede815b0a347487"
+    },
+    "Classicism.Models.BooleanValuedEquality": {
+      "path": "topics/classicism/lean/Classicism/Models/BooleanValuedEquality.lean",
+      "sha256": "40c88707931e5a3eb755dada26644d7c5c489550884a0c248401b5c621301354"
+    },
+    "Classicism.Models.BooleanSupportedPredicates": {
+      "path": "topics/classicism/lean/Classicism/Models/BooleanSupportedPredicates.lean",
+      "sha256": "2bf15f69ac26014e98fbe25750d3965877a13612aba7cf4a8116ddbc41ef173c"
+    },
+    "Mathlib.Data.Fin.VecNotation": {
+      "path": "dependencies/Mathlib/Data/Fin/VecNotation.lean",
+      "sha256": "08b3449fd3135bb1b4123e74445bad9317b2aa7515a0464aaddc0d656971568e"
+    },
+    "Mathlib.Logic.Equiv.Fin.Basic": {
+      "path": "dependencies/Mathlib/Logic/Equiv/Fin/Basic.lean",
+      "sha256": "c3470797814c2d81c32c21bfeb6e7ce503e28231a7d38aad665931f3f377bc12"
+    },
+    "Mathlib.ModelTheory.Basic": {
+      "path": "dependencies/Mathlib/ModelTheory/Basic.lean",
+      "sha256": "ffc8f7914a8af8c306ed253f40bf82d375fc2ee7ced8deff22cc27a24e4da9b8"
+    },
+    "Mathlib.ModelTheory.LanguageMap": {
+      "path": "dependencies/Mathlib/ModelTheory/LanguageMap.lean",
+      "sha256": "16d45b9f2fc98e39feaddacb7dbf81c43f2b521cf55d1362da276aa934ffab7a"
+    },
+    "Mathlib.ModelTheory.Syntax": {
+      "path": "dependencies/Mathlib/ModelTheory/Syntax.lean",
+      "sha256": "51243cb24e590183e33871afaa39ad18c535210dff6bd0b39e483dbab1b8e7e9"
+    },
+    "Mathlib.ModelTheory.Semantics": {
+      "path": "dependencies/Mathlib/ModelTheory/Semantics.lean",
+      "sha256": "a156d9f6fad66edb030e9a176947c2df6d7c4d489c6ab3a823bea871e2be88e2"
+    },
+    "Classicism.Models.BooleanFirstOrderSemantics": {
+      "path": "topics/classicism/lean/Classicism/Models/BooleanFirstOrderSemantics.lean",
+      "sha256": "9c36a954cdca5fd44f45c797dfbeebb9178dcfa8647f3876e2f6de1b4b24676a"
+    },
+    "ChoiceBooleanFoundationsAxioms": {
+      "path": "research/2026-10-22/lean-formalization/integration-checks/ChoiceBooleanFoundationsAxioms.lean",
+      "sha256": "d70331a1bdda654bb4c883a3893ae3db3b9fb1298dc73a906ce5d0824cc7204c"
+    },
+    "Classicism.Syntax.Types": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Types.lean",
+      "sha256": "567828e8f9a707cf635e3b4fb30bc868a419967307613d0686d795d195606eac"
+    },
+    "Classicism.Syntax.Term": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Term.lean",
+      "sha256": "ad5172acbb74eaab9307662408928b80e6ffab62e14df16f2f41c7205de13f69"
+    },
+    "Classicism.Syntax.Conversion": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Conversion.lean",
+      "sha256": "c22fe48399811fcb0d71b37206c633749a7285291c62c2e7d786475ea6ae339e"
+    },
+    "Classicism.Syntax.Derivation": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Derivation.lean",
+      "sha256": "7cc2fd01542014d55e5a4c4a411724db7cdc076462d0de724c3530b0a8a3fc6b"
+    },
+    "Classicism.Syntax.Axioms": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Axioms.lean",
+      "sha256": "f3dd3b51ef834f46f22e09fe34026f47120a8bc171afb190b5053c443f4a82a7"
+    },
+    "Classicism.Syntax.Entailment": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Entailment.lean",
+      "sha256": "13f758dbf41a84dda7c2ae7adf6bcb9605ee114ce04dbda0efc5f1c4fbeabb1e"
+    },
+    "Classicism.Semantics.Env": {
+      "path": "topics/classicism/lean/Classicism/Semantics/Env.lean",
+      "sha256": "ca6f223a2bfe71396b3e21de852057e432cd7b289005cdacc1cc24935358e09d"
+    },
+    "Classicism.Semantics.Intensional": {
+      "path": "topics/classicism/lean/Classicism/Semantics/Intensional.lean",
+      "sha256": "9a58b1dd47b1b527209d1994ed2b9252c85dc012d019d9878c2cbcc58b6019af"
+    },
+    "Classicism.Semantics.IntensionalSoundness": {
+      "path": "topics/classicism/lean/Classicism/Semantics/IntensionalSoundness.lean",
+      "sha256": "dc34e26e6baaaf9270c067fb43303dc9a00dbc885b8da02ba1eb7432fe008143"
+    },
+    "Classicism.Models.ChoiceFirstOrder": {
+      "path": "topics/classicism/lean/Classicism/Models/ChoiceFirstOrder.lean",
+      "sha256": "065c45e11c76add239fb40a601fb4c608aa78d8cad962d9b746e6e73a4334e02"
+    },
+    "Classicism.Models.ChoiceFirstOrderTerms": {
+      "path": "topics/classicism/lean/Classicism/Models/ChoiceFirstOrderTerms.lean",
+      "sha256": "9f0abab17dc77426103c5c49051d9896d315096521441ae822ac9d60d26fc433"
+    },
+    "Classicism.Models.ChoiceFirstOrderSmall": {
+      "path": "topics/classicism/lean/Classicism/Models/ChoiceFirstOrderSmall.lean",
+      "sha256": "b135aeb7c5f2c82609d58a5209f86754ad01f93c5b651d069b416b70afba8e33"
+    },
+    "Mathlib.Tactic.DeriveCountable": {
+      "path": "dependencies/Mathlib/Tactic/DeriveCountable.lean",
+      "sha256": "ca4a1000c05921123a87b79f8986282b9ec9de65abd10b205b5e2eb1f02ed660"
+    },
+    "Classicism.Models.ChoiceFirstOrderCountable": {
+      "path": "topics/classicism/lean/Classicism/Models/ChoiceFirstOrderCountable.lean",
+      "sha256": "dcc93732849ee65565fd421ffbbae5607bd1bef715d54d64f84886635b63b18d"
+    },
+    "Classicism.Models.ChoiceFirstOrderMathlib": {
+      "path": "topics/classicism/lean/Classicism/Models/ChoiceFirstOrderMathlib.lean",
+      "sha256": "885b5ddf7c9681ea74f36d8423b91d9f777afec223314d8ae721c9bdd76c94af"
+    },
+    "Classicism.Models.ChoiceFirstOrderRecovery": {
+      "path": "topics/classicism/lean/Classicism/Models/ChoiceFirstOrderRecovery.lean",
+      "sha256": "075c8440d3e810da09b0f2e9a6dc3494a80ba6d29798b07a1adde47d37cd0dac"
+    },
+    "Classicism.Models.ChoiceFirstOrderAxiomTheory": {
+      "path": "topics/classicism/lean/Classicism/Models/ChoiceFirstOrderAxiomTheory.lean",
+      "sha256": "694dd1870dcd0ea1bbb30ceae66b2cdae63cf8619b1261356552fb25b630c93c"
+    },
+    "ChoiceFirstOrderRecoveryAxioms": {
+      "path": "research/2026-10-22/lean-formalization/integration-checks/ChoiceFirstOrderRecoveryAxioms.lean",
+      "sha256": "6a2038d7faf3c6bac667399a8756face0edcc749e3c30b1887be9ac9c23771b1"
+    },
+    "Classicism.Models.BooleanColumnAlgebra": {
+      "path": "topics/classicism/lean/Classicism/Models/BooleanColumnAlgebra.lean",
+      "sha256": "4961b7363a8c59a8a283261fc8a959d8a04f0eb8d37f8490c2fdf355ee7e102f"
+    },
+    "Mathlib.SetTheory.Cardinal.Cofinality.Ordinal": {
+      "path": "dependencies/Mathlib/SetTheory/Cardinal/Cofinality/Ordinal.lean",
+      "sha256": "6866146c4a439446074da826156ca4f4d22edeae0e1506b1ac3a4dc2c20537d6"
+    },
+    "Mathlib.SetTheory.Cardinal.Ordinal": {
+      "path": "dependencies/Mathlib/SetTheory/Cardinal/Ordinal.lean",
+      "sha256": "fa85f3ecd2f6db665d09080c576976bae4f93064077a4636d829b1161d261e81"
+    },
+    "Mathlib.SetTheory.Ordinal.FundamentalSequence": {
+      "path": "dependencies/Mathlib/SetTheory/Ordinal/FundamentalSequence.lean",
+      "sha256": "dc9e619e54991ae2afd27a0bdb04eeb45934057040b0435106bdc64d5a7f99a8"
+    },
+    "Mathlib.SetTheory.Cardinal.Regular": {
+      "path": "dependencies/Mathlib/SetTheory/Cardinal/Regular.lean",
+      "sha256": "90f58bc8df074d6e17470d85290b23e1c6d7711d1bc3d56284869272fc350f37"
+    },
+    "Classicism.Models.BooleanColumnClosure": {
+      "path": "topics/classicism/lean/Classicism/Models/BooleanColumnClosure.lean",
+      "sha256": "3d398ee79c2c0f8ca0bcc4b25192fdc88b9ae9d65c8a550a27156ff2d693357e"
+    },
+    "Classicism.Models.BooleanColumnDistributivity": {
+      "path": "topics/classicism/lean/Classicism/Models/BooleanColumnDistributivity.lean",
+      "sha256": "a0843b0ab9de38b252203fea4d892640567176e0a12f89d91bc45690d661d54f"
+    },
+    "Classicism.Models.BooleanTypedHierarchy": {
+      "path": "topics/classicism/lean/Classicism/Models/BooleanTypedHierarchy.lean",
+      "sha256": "d74a58299c1be71aca8e3e71e7d7b4d931aed9551bbb8978c8a54e870ef07142"
+    },
+    "Classicism.Models.ChoiceFirstOrderFull": {
+      "path": "topics/classicism/lean/Classicism/Models/ChoiceFirstOrderFull.lean",
+      "sha256": "a8adf9353e2f0d3833ae3b1a5f89b408aa452dd925f56461ba8ccd32694b75b9"
+    },
+    "Classicism.Models.BooleanGroundChecks": {
+      "path": "topics/classicism/lean/Classicism/Models/BooleanGroundChecks.lean",
+      "sha256": "538336b7b6b2344658eccca4042be336e9ed31016fc35a8cc59e980a5a4155c3"
+    },
+    "Classicism.Models.BooleanGroundCoverage": {
+      "path": "topics/classicism/lean/Classicism/Models/BooleanGroundCoverage.lean",
+      "sha256": "41e3d2efe1b7d92d209274dbc3fb21d9c9420f1f2b3ac16179beeb862eee9d56"
+    },
+    "Classicism.Models.BooleanProtectedCoverage": {
+      "path": "topics/classicism/lean/Classicism/Models/BooleanProtectedCoverage.lean",
+      "sha256": "429282f7911478445ee0acc7683926071d9fa5474650b2c5ada938dfff33b3c6"
+    },
+    "Classicism.Syntax.ChoiceHierarchyTypes": {
+      "path": "topics/classicism/lean/Classicism/Syntax/ChoiceHierarchyTypes.lean",
+      "sha256": "8d12b0c2e6ae16ec0be6602aa1dbf28306a41cb1a45098d00fa2f884dafd5742"
+    },
+    "Classicism.Models.BooleanChoiceCutoff": {
+      "path": "topics/classicism/lean/Classicism/Models/BooleanChoiceCutoff.lean",
+      "sha256": "4e98b56f6190ea27bfc0c47371565821b7a27c0c87bf3e4c10ea476aac81f289"
+    },
+    "Classicism.Models.BooleanColumnCoordinates": {
+      "path": "topics/classicism/lean/Classicism/Models/BooleanColumnCoordinates.lean",
+      "sha256": "249cfbc320c8664a05adf757c2afa549b31b78e37b05d9c9d7195bfa29402be8"
+    },
+    "Classicism.Models.BooleanIndexedProfiles": {
+      "path": "topics/classicism/lean/Classicism/Models/BooleanIndexedProfiles.lean",
+      "sha256": "450d6f134598c108a08a4a65867641ee8fb5b9e064da63fcd6d150f482a0827d"
+    },
+    "Classicism.Models.BooleanSelectorObstruction": {
+      "path": "topics/classicism/lean/Classicism/Models/BooleanSelectorObstruction.lean",
+      "sha256": "5c891a7d2d618c16b5487d0e141ddddf1cbac3589fd813cddcc7da9027d775ed"
+    },
+    "Classicism.Models.BooleanChoiceFamily": {
+      "path": "topics/classicism/lean/Classicism/Models/BooleanChoiceFamily.lean",
+      "sha256": "5b176c3056389e3ce8e26afc1111e17029130cbf7b480d0d16997f5ccfd6b32d"
+    },
+    "Classicism.Models.BooleanTypedTermSemantics": {
+      "path": "topics/classicism/lean/Classicism/Models/BooleanTypedTermSemantics.lean",
+      "sha256": "19b05614d76dc6d4f46cff89b04e5f31864a0ddda29198d650994ca39a5890c0"
+    },
+    "Classicism.Models.BooleanSmallFormulaSemantics": {
+      "path": "topics/classicism/lean/Classicism/Models/BooleanSmallFormulaSemantics.lean",
+      "sha256": "5e1e95100862898fd6538f24562e073a9d8665ca28be2a75b8d0e59800e0e61e"
+    },
+    "Classicism.Models.BooleanTaggedFirstOrder": {
+      "path": "topics/classicism/lean/Classicism/Models/BooleanTaggedFirstOrder.lean",
+      "sha256": "9cc5c36b5017b96f3b0f8bfbcb98be1db6ba0d822c516568ffad2ea93fbdd2a7"
+    },
+    "Batteries.Data.Nat.Bitwise.Lemmas": {
+      "path": "dependencies/Batteries/Data/Nat/Bitwise/Lemmas.lean",
+      "sha256": "c16c1d6b828c7056722eeb251686a205ca7010f6e5b3dfd080fc5b97436ce9a6"
+    },
+    "Batteries.Data.Nat.Bitwise": {
+      "path": "dependencies/Batteries/Data/Nat/Bitwise.lean",
+      "sha256": "f60bf96abd97759c1ae659d08f32d5d6822710d0bd7dcb415b4744858abcd883"
+    },
+    "Mathlib.Data.Nat.Bitwise": {
+      "path": "dependencies/Mathlib/Data/Nat/Bitwise.lean",
+      "sha256": "370fca0d9640cf428f7acb11a001801e47fdcb1073510ee4b3f8b4f60911d207"
+    },
+    "Mathlib.Data.Nat.PSub": {
+      "path": "dependencies/Mathlib/Data/Nat/PSub.lean",
+      "sha256": "ac4e439afc60cbf763a934e516ba5b4ffaaad559e13d1e0e147c9c98d903dd4d"
+    },
+    "Mathlib.Data.Nat.Size": {
+      "path": "dependencies/Mathlib/Data/Nat/Size.lean",
+      "sha256": "237015baa16ee6a6a13a36d5fa6677ff0761fd3820abef6637fef945f86f72ce"
+    },
+    "Mathlib.Data.Num.Basic": {
+      "path": "dependencies/Mathlib/Data/Num/Basic.lean",
+      "sha256": "58190dbf939cb2fc16b26b667236a5370a42c0acafdff71d75dddf672cbc6916"
+    },
+    "Mathlib.Data.Num.Bitwise": {
+      "path": "dependencies/Mathlib/Data/Num/Bitwise.lean",
+      "sha256": "4cb3211534b51a3430b9ab964dc29855b1e3e83c27af4dd47dd4fc165a717d1d"
+    },
+    "Mathlib.Data.Num.Lemmas": {
+      "path": "dependencies/Mathlib/Data/Num/Lemmas.lean",
+      "sha256": "5206f01a67ab6fdd9186da03eb8799d1c66541e18751623caee2cdcd708c2bb2"
+    },
+    "Mathlib.Tactic.ProxyType": {
+      "path": "dependencies/Mathlib/Tactic/ProxyType.lean",
+      "sha256": "f4d8c5e618d4f479327065b4b0a39a40f4c1f63025c8f434b4e20d8ae519cae3"
+    },
+    "Mathlib.Tactic.DeriveFintype": {
+      "path": "dependencies/Mathlib/Tactic/DeriveFintype.lean",
+      "sha256": "df785752c158adcdc464e3370114f05fe16cd9ccde82e710d0630d15a89282fc"
+    },
+    "Mathlib.Computability.Encoding": {
+      "path": "dependencies/Mathlib/Computability/Encoding.lean",
+      "sha256": "9c0c23bb942f2af3d003705adaa519d0af14fda21a92fcfbc71af028bcf7ebb9"
+    },
+    "Mathlib.ModelTheory.Encoding": {
+      "path": "dependencies/Mathlib/ModelTheory/Encoding.lean",
+      "sha256": "54cfc3f1d7ec6d3e0c1ffb6df2b641e0c998bdc0f51bbcdd04ad6c0529bed249"
+    },
+    "Classicism.Models.BooleanWitnessChain": {
+      "path": "topics/classicism/lean/Classicism/Models/BooleanWitnessChain.lean",
+      "sha256": "32acf27ba81fa4c716fcb5f53a4c6a54fac8d16d79eea85a4c091279a5bdec57"
+    },
+    "Classicism.Models.BooleanModelExtraction": {
+      "path": "topics/classicism/lean/Classicism/Models/BooleanModelExtraction.lean",
+      "sha256": "e371e5d118bb24751ea5eb0739f64e935fb9b8d6e42da1a39fd54041679f8576"
+    },
+    "Classicism.Models.BooleanAxiomTheory": {
+      "path": "topics/classicism/lean/Classicism/Models/BooleanAxiomTheory.lean",
+      "sha256": "a7ac4bf4c78843000a3298b138d18d74c7e2a66bf30113674220c9acefdc689e"
+    },
+    "Classicism.Models.BooleanRecoveredModel": {
+      "path": "topics/classicism/lean/Classicism/Models/BooleanRecoveredModel.lean",
+      "sha256": "102c046972af396f61bf4628ee4677ae90c56f601a1aec7bbcdc7d6784907eb7"
+    },
+    "Classicism.Models.BooleanChoiceModel": {
+      "path": "topics/classicism/lean/Classicism/Models/BooleanChoiceModel.lean",
+      "sha256": "9189c514c6a4c24e07116a5b4ac292e1914865e8d4626bb1e8c8c9b53a6bb572"
+    },
+    "Classicism.Core": {
+      "path": "topics/classicism/lean/Classicism/Core.lean",
+      "sha256": "ed0b1189f3fe3f02ce7011058273c0915bb511e5fd30ae33340e7ae0c4afb81d"
+    },
+    "Classicism.Paper": {
+      "path": "topics/classicism/lean/Classicism/Paper.lean",
+      "sha256": "3348a9c2bf786ef15a9a2a0341dce82e9a419e81a4c7b7486d8c8cba8fbdc895"
+    },
+    "Classicism.Equivalence": {
+      "path": "topics/classicism/lean/Classicism/Equivalence.lean",
+      "sha256": "257006775f36a2eacca652360f7ff8fb9dc403b2b0f4d71ff6a5543e5a939a76"
+    },
+    "Classicism.Booleanism": {
+      "path": "topics/classicism/lean/Classicism/Booleanism.lean",
+      "sha256": "0537132563704170d7ec4dc14755690639a9a784428650fa7bf04067acc0628f"
+    },
+    "Classicism.Modal": {
+      "path": "topics/classicism/lean/Classicism/Modal.lean",
+      "sha256": "7706449a7246e0be0772a33dcda61ab010686bf5bd64c45017425bf39ed0cf42"
+    },
+    "Classicism.Order": {
+      "path": "topics/classicism/lean/Classicism/Order.lean",
+      "sha256": "4755de0b5eb272e541ce89e84078c4d80c3ae9a332a6910b395c73b78a2b4730"
+    },
+    "Classicism.Pointwise": {
+      "path": "topics/classicism/lean/Classicism/Pointwise.lean",
+      "sha256": "78b858a9d33feb587976879190bdf739afdc0e564c4e6dae5508f8f2c5e15a16"
+    },
+    "Classicism.Comprehension": {
+      "path": "topics/classicism/lean/Classicism/Comprehension.lean",
+      "sha256": "570435f620ec40a8c0f359ce546c26933cf3acfc6e7c8da81fa805170f9ab844"
+    },
+    "Classicism.Lattice": {
+      "path": "topics/classicism/lean/Classicism/Lattice.lean",
+      "sha256": "43231f5d30bab05bc0d11927e1ce09f17ec384875e0aeb1cb72335e36f046070"
+    },
+    "Classicism.Principles.Choice": {
+      "path": "topics/classicism/lean/Classicism/Principles/Choice.lean",
+      "sha256": "a8f7e35f1a11805edc2b116b6af002bd5b1d0708b93aaea16781cff519687319"
+    },
+    "Classicism.Tools.Check": {
+      "path": "topics/classicism/lean/Classicism/Tools/Check.lean",
+      "sha256": "20fdb6525e533a835b5d561bce9529e553de2a3fc1b4f6416235da7f52da6cdf"
+    },
+    "Classicism.Tools.TypeSystem": {
+      "path": "topics/classicism/lean/Classicism/Tools/TypeSystem.lean",
+      "sha256": "3db785bca90f4e2961bce8e7bde2d6bbd418e9e4c67ec99acae2251cb89e88e1"
+    },
+    "Classicism.Semantics.Denotation": {
+      "path": "topics/classicism/lean/Classicism/Semantics/Denotation.lean",
+      "sha256": "2103000e1da2b0ce5413fa71820b7cd579bf562b7dd50d704e058b5cda0c7925"
+    },
+    "Classicism.Identities": {
+      "path": "topics/classicism/lean/Classicism/Identities.lean",
+      "sha256": "3629e17eb7ebf28d47f0d1a2450886bec05b39bf73ff52eff99a88a12579c3b3"
+    },
+    "Classicism.Strict.Axiomatization": {
+      "path": "topics/classicism/lean/Classicism/Strict/Axiomatization.lean",
+      "sha256": "fa26c38979d08d22db2c14d999bd3c5454170e00e72f2781cf2cfa28910ed533"
+    },
+    "Classicism.Strict.Algebra": {
+      "path": "topics/classicism/lean/Classicism/Strict/Algebra.lean",
+      "sha256": "d4cb80885b688ee323e6f59b084568746247f751986fe2ea7efd53cb4e6969a9"
+    },
+    "Classicism.Strict.Vocabulary": {
+      "path": "topics/classicism/lean/Classicism/Strict/Vocabulary.lean",
+      "sha256": "29fad160fd838d15256273fae84dce3cb5381cbd876e7c6ed882874da295b747"
+    },
+    "Classicism.Strict.Tautology": {
+      "path": "topics/classicism/lean/Classicism/Strict/Tautology.lean",
+      "sha256": "edc88bb68c00443a3c309ad01da9c31e1325bc8d63bf0a2ba9392c43eebbadfe"
+    },
+    "Classicism.Strict.Quantifier": {
+      "path": "topics/classicism/lean/Classicism/Strict/Quantifier.lean",
+      "sha256": "688f1a0f560a30f12fd4b4b6663fb7583fac374d9bd7591a55943bbb1b4695fa"
+    },
+    "Classicism.Strict.Rules": {
+      "path": "topics/classicism/lean/Classicism/Strict/Rules.lean",
+      "sha256": "496f3272610ad5dac44de1f90bd394d38098d44f5c8e51fcc30e835e415a8609"
+    },
+    "Classicism.Strict.Primitives": {
+      "path": "topics/classicism/lean/Classicism/Strict/Primitives.lean",
+      "sha256": "b0875be460cec24411c21b6f5929f9c4f68485e6600317f1530adb0a20abd69b"
+    },
+    "Classicism.Strict.Transform": {
+      "path": "topics/classicism/lean/Classicism/Strict/Transform.lean",
+      "sha256": "477d7ea0d6a8c0e438bdf1fdb29c68e79512216094ae8c8c5851b47133afe3ae"
+    },
+    "Classicism.Strict.Mirror": {
+      "path": "topics/classicism/lean/Classicism/Strict/Mirror.lean",
+      "sha256": "c9aa802c99fbaea769cb8a88af075fc434b3a9073bd9187f9d00b0e6e82451fe"
+    },
+    "Classicism.Semantics.Relational": {
+      "path": "topics/classicism/lean/Classicism/Semantics/Relational.lean",
+      "sha256": "b9424788860fff653c01277d1d1e1e2aa257b0905ac02b0879bb6029a1c5c32a"
+    },
+    "Classicism.Tools.Quote": {
+      "path": "topics/classicism/lean/Classicism/Tools/Quote.lean",
+      "sha256": "9539d77cb6894442171628c10fd8f4e1142fa8f7f99e80fac7dc1681c7eb96fe"
+    },
+    "Classicism.Syntax.Normalize": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Normalize.lean",
+      "sha256": "1ba19ae01872f7d4357876e2e4c47e4f675cf6b733be98c1947838a1f0c94c1b"
+    },
+    "Classicism.Tools.Translate": {
+      "path": "topics/classicism/lean/Classicism/Tools/Translate.lean",
+      "sha256": "471e8a2a7ab42f306e986af1320f0bd7f4d77dd073241e3f77234bf0fc5d6ba7"
+    },
+    "Classicism.ChoiceHierarchy": {
+      "path": "topics/classicism/lean/Classicism/ChoiceHierarchy.lean",
+      "sha256": "2bb73d4338f5bb2357f4d694cbe2d1a7a37b85ce51e3291043aa49ee053fa6e2"
+    },
+    "Classicism.Syntax.Blocks": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Blocks.lean",
+      "sha256": "77b4ef8fadb3646edd15d25854bac994a6eabb8bb1f51347c9dd00fce3a6ac5d"
+    },
+    "Classicism.Syntax.Vectorize": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Vectorize.lean",
+      "sha256": "b57548b87b70c0e9df1c0fd48a1f7b7d67d4828ab4d4286e164e7f32c4716817"
+    },
+    "Classicism.Syntax.VectorizeDerivable": {
+      "path": "topics/classicism/lean/Classicism/Syntax/VectorizeDerivable.lean",
+      "sha256": "17508c58aef3e3ad7b121f20349045d76c5e238a164cdaf96c2400255c492824"
+    },
+    "Classicism.Tools.Schema": {
+      "path": "topics/classicism/lean/Classicism/Tools/Schema.lean",
+      "sha256": "809bf8692601598451770b6422375de71cddf6e3d4cacc651b3905119fe40d2c"
+    },
+    "Classicism.Principles.Base": {
+      "path": "topics/classicism/lean/Classicism/Principles/Base.lean",
+      "sha256": "d0c930dafb5decf6e747b5a05215cbff099d4efd9e69c607f01a54d5c5a7b96a"
+    },
+    "Classicism.Principles.Coarse": {
+      "path": "topics/classicism/lean/Classicism/Principles/Coarse.lean",
+      "sha256": "5c3aedc0a4117e7c214d186b384c42b8da6a17906fb7a76a75cb625f85b0a9b2"
+    },
+    "Classicism.Principles.Extensionality": {
+      "path": "topics/classicism/lean/Classicism/Principles/Extensionality.lean",
+      "sha256": "aa1929fee457845f79c2511b4df86462660ed1c68c3f85b5af8636a88a8f15e8"
+    },
+    "Classicism.Cardinality": {
+      "path": "topics/classicism/lean/Classicism/Cardinality.lean",
+      "sha256": "5e627927356fc561dfd5bfacd9935c558c7760678df56c0158820a7e8626703f"
+    },
+    "Classicism.Principles.Lattice": {
+      "path": "topics/classicism/lean/Classicism/Principles/Lattice.lean",
+      "sha256": "95a7c96bd3f2c0b131b59412ee36c288b9f12a772075e8f6ec83d8177f6ffd60"
+    },
+    "Classicism.Principles.Instances": {
+      "path": "topics/classicism/lean/Classicism/Principles/Instances.lean",
+      "sha256": "53835a72c249e8f75246e6b42331d205b8bec73a8c03bc2d1ad48db37a88e47e"
+    },
+    "Classicism.Principles.Comprehension": {
+      "path": "topics/classicism/lean/Classicism/Principles/Comprehension.lean",
+      "sha256": "7d47cbb2fcbf444bd1e708ceeb9d007c1be955b41346b2adf14f5613ec7e2537"
+    },
+    "Classicism.Principles.Infinity": {
+      "path": "topics/classicism/lean/Classicism/Principles/Infinity.lean",
+      "sha256": "9c901565490f92a5a6b18ac1cf690c756bb5984e105e885614b87dcc00db027f"
+    },
+    "Classicism.Principles.Schematic": {
+      "path": "topics/classicism/lean/Classicism/Principles/Schematic.lean",
+      "sha256": "f6e0fe85d4c7f95deb80b98e19cf10e292ac98d87a5c2caec2ddcb9920e677ee"
+    },
+    "Classicism.Principles": {
+      "path": "topics/classicism/lean/Classicism/Principles.lean",
+      "sha256": "747fc5fbde92a7dd1432aaaafee00437398594ae06dbc8ec2040690fae443049"
+    },
+    "Classicism.Results.Records.Base": {
+      "path": "topics/classicism/lean/Classicism/Results/Records/Base.lean",
+      "sha256": "43794a516d90505e3c5b48267ddfe110b8e482b881cc1300f2e2ee182c2fc2db"
+    },
+    "Classicism.Results.Records.Coarse": {
+      "path": "topics/classicism/lean/Classicism/Results/Records/Coarse.lean",
+      "sha256": "a3a6e0bc0120eecda1097efc51cd29c0d95daa15b81535f36d7dc6dd1d434882"
+    },
+    "Classicism.Results.Records.Extensionality": {
+      "path": "topics/classicism/lean/Classicism/Results/Records/Extensionality.lean",
+      "sha256": "0a1d58485d6e8b0b84d68d973027dd621394ee0c4d1579f08746f10558f0a34a"
+    },
+    "Classicism.Results.Records.Comprehension": {
+      "path": "topics/classicism/lean/Classicism/Results/Records/Comprehension.lean",
+      "sha256": "552f1c10d3b02f5cae87392141616f5de2200655837e07ba9b367e7bacfd77d7"
+    },
+    "Classicism.Results.Records.Lattice": {
+      "path": "topics/classicism/lean/Classicism/Results/Records/Lattice.lean",
+      "sha256": "e5adae1ce94a42f477aa629e4f5b739aa78bf1f7a3abf785d591f4d3a62690f4"
+    },
+    "Classicism.Results.Records.Choice": {
+      "path": "topics/classicism/lean/Classicism/Results/Records/Choice.lean",
+      "sha256": "28a17b666e917900329a015b2bf9cf3a6848a811762a6c862f6ef58135bf77ca"
+    },
+    "Classicism.Results.Records.C5": {
+      "path": "topics/classicism/lean/Classicism/Results/Records/C5.lean",
+      "sha256": "670269847531e12553369ae4105b0926f8613883f8f709b94cdc88917eb49b7c"
+    },
+    "Classicism.Results.Records.Infinity": {
+      "path": "topics/classicism/lean/Classicism/Results/Records/Infinity.lean",
+      "sha256": "dd622a8252d4bc861a68bf939b25198d39db51c119e89911e096b0523a3a1ba0"
+    },
+    "Classicism.Results.Records": {
+      "path": "topics/classicism/lean/Classicism/Results/Records.lean",
+      "sha256": "6d6d399aab1e7f30eff9a5d385635ae311228e4faf03ce36ad39d5a1d22eede6"
+    },
+    "Classicism.Certified.Quoted": {
+      "path": "topics/classicism/lean/Classicism/Certified/Quoted.lean",
+      "sha256": "4f5e539a45bf30cf758effcd38c59330b95160a09aa57b08130226c491896447"
+    },
+    "Classicism.Syntax.ClosedTypes": {
+      "path": "topics/classicism/lean/Classicism/Syntax/ClosedTypes.lean",
+      "sha256": "07ea7d86a0ec8faf8da218c04b9ab46c0b3b941c5772729340de705750227968"
+    },
+    "Classicism.Certified.Schemas": {
+      "path": "topics/classicism/lean/Classicism/Certified/Schemas.lean",
+      "sha256": "5473826bbece5136406e9aca792c6eb38e93117d142bce275d5a084803ad4a38"
+    },
+    "Classicism.Syntax.FiniteChoiceBasis": {
+      "path": "topics/classicism/lean/Classicism/Syntax/FiniteChoiceBasis.lean",
+      "sha256": "bab32caca509fdffb7af226af4507be1072f04afc9967d4711753fce48d99dc8"
+    },
+    "Classicism.Results.ChoiceHierarchySchemas": {
+      "path": "topics/classicism/lean/Classicism/Results/ChoiceHierarchySchemas.lean",
+      "sha256": "20b5e4e4e7fd451a89132d0cff3649b2a158af0aaf8afcdc03006852b41579fe"
+    },
+    "Classicism.Models.BooleanChoiceFragments": {
+      "path": "topics/classicism/lean/Classicism/Models/BooleanChoiceFragments.lean",
+      "sha256": "f9ed850f33f424a5dabc4b5347364dae015a4dd05ab6ffadcdaa05ec7e3cf05a"
+    },
+    "Classicism.Models.BooleanSelectingWeights": {
+      "path": "topics/classicism/lean/Classicism/Models/BooleanSelectingWeights.lean",
+      "sha256": "a73bb13dc4ae5442d7a13c53c722894e4e5cb250aa8788dae4a8681a1dd3b4b3"
+    },
+    "Classicism.Models.BooleanSupportedSelection": {
+      "path": "topics/classicism/lean/Classicism/Models/BooleanSupportedSelection.lean",
+      "sha256": "a5faee6d0255cb243081d38970e7f067a0f41db1c40f2d3a3ea6dce2125816fb"
+    },
+    "Classicism.Syntax.Sentences": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Sentences.lean",
+      "sha256": "9d1511399b998922713f3d2bccea49249aaeba3a9de7f0f0b0b8153161adbd52"
+    },
+    "Classicism.Semantics.IntensionalFacts": {
+      "path": "topics/classicism/lean/Classicism/Semantics/IntensionalFacts.lean",
+      "sha256": "6ef820a85da8854668976cab35fb79bccb5cb0f729fe42f94e55bb472bbbc5c1"
+    },
+    "Classicism.Syntax.Pure": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Pure.lean",
+      "sha256": "34937a7fc2d4c62a99863e9a0a161f56dfe2ca06b5f5d304ea8d2ad13f7c41a2"
+    },
+    "Classicism.Syntax.SentenceSchemas": {
+      "path": "topics/classicism/lean/Classicism/Syntax/SentenceSchemas.lean",
+      "sha256": "4956cc5f79d94287bab644bff62b9eade4401a602a61e469ed0260a0007c9541"
+    },
+    "Classicism.Syntax.Conservativity": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Conservativity.lean",
+      "sha256": "9f5aba4cb5b54944a6486b4f4b50f37328245c0e3d246c401859b1d7eb5ff4bc"
+    },
+    "Classicism.Semantics.IntensionalTheory": {
+      "path": "topics/classicism/lean/Classicism/Semantics/IntensionalTheory.lean",
+      "sha256": "99bec918ee24851e7a1beb3482e53f1362c262e0928a670c1f7c30cde5135988"
+    },
+    "Classicism.Semantics.IntensionalProperties": {
+      "path": "topics/classicism/lean/Classicism/Semantics/IntensionalProperties.lean",
+      "sha256": "d19b0a0eae6b030dd7371406d3ff601f029cce89f959238a356cb0f0ec92f81a"
+    },
+    "Classicism.Semantics.FullModels": {
+      "path": "topics/classicism/lean/Classicism/Semantics/FullModels.lean",
+      "sha256": "4d2d82d33d3a72e196cc4fd0ff0ef4c6675154dd334d23dd97edeba8563c6a74"
+    },
+    "Classicism.Models.BooleanFunctionalChoice": {
+      "path": "topics/classicism/lean/Classicism/Models/BooleanFunctionalChoice.lean",
+      "sha256": "613e4d0b2208f07bcc07b6f471925d937bebef08f02e65f48fabc5a5538238de"
+    },
+    "Classicism.Models.BooleanSelectorFailure": {
+      "path": "topics/classicism/lean/Classicism/Models/BooleanSelectorFailure.lean",
+      "sha256": "fee3212afaf3a7cbdd274a1be5277ce9247d1c2e4165ad983f9438b5862c81f2"
+    },
+    "Classicism.Models.BooleanFiniteChoice": {
+      "path": "topics/classicism/lean/Classicism/Models/BooleanFiniteChoice.lean",
+      "sha256": "e2e19f0493fcbcc39f855d1c871d2988e6dc20cd06b13be199b45d582f3647ed"
+    },
+    "ChoiceBooleanNegativeAxioms": {
+      "path": "research/2026-10-22/lean-formalization/integration-checks/ChoiceBooleanNegativeAxioms.lean",
+      "sha256": "8db2ed89122494171c9e5c0157873558095ab7e66b76820094c0a0a6ac7cbdad"
+    },
+    "Classicism.ChoiceHierarchyEncoding": {
+      "path": "topics/classicism/lean/Classicism/ChoiceHierarchyEncoding.lean",
+      "sha256": "02b2eff3c594c35c1be0cdbf2f008b56791bee671a725918f901331f6aef7571"
+    },
+    "Classicism.ChoiceHierarchyPlenitude": {
+      "path": "topics/classicism/lean/Classicism/ChoiceHierarchyPlenitude.lean",
+      "sha256": "82fd94c62e1a37c3e229d68913cf81c6da2334bfd5d441f1478f60e5be3e552d"
+    },
+    "Classicism.ChoiceHierarchyRealizationSteps": {
+      "path": "topics/classicism/lean/Classicism/ChoiceHierarchyRealizationSteps.lean",
+      "sha256": "f5bdc620a2af8d9fe08522a72e2c07cdfe7b1b981dada52b051b75591c6cf46a"
+    },
+    "Classicism.Results.ChoiceHierarchyRealization": {
+      "path": "topics/classicism/lean/Classicism/Results/ChoiceHierarchyRealization.lean",
+      "sha256": "b4d2a2ab5d085a0be50aefd39efae26a63862213769b7073baf9435684e19132"
+    },
+    "Classicism.Results.ChoiceHierarchyDiagonal": {
+      "path": "topics/classicism/lean/Classicism/Results/ChoiceHierarchyDiagonal.lean",
+      "sha256": "df22b2b6267d6cde808bc3f4c042ee77b73d473e09c7ce45f2d8cac49affb08d"
+    },
+    "Classicism.Models.BooleanChoiceSchemaConsequences": {
+      "path": "topics/classicism/lean/Classicism/Models/BooleanChoiceSchemaConsequences.lean",
+      "sha256": "64eb07fff2b7b36f1717baa2c45276f5cc64e4a33c19f27e9c2c5be036cde172"
+    },
+    "ChoiceBooleanSchemaConsequencesAxioms": {
+      "path": "research/2026-10-22/lean-formalization/integration-checks/ChoiceBooleanSchemaConsequencesAxioms.lean",
+      "sha256": "b28096c005c9e3e7ca68902df08b6a03f8643d4f1eb4e5cdafdf903257c371df"
+    }
+  },
+  "precompiled_roots": [
+    ".reproduction/classicism-mathlib/.lake/build/lib/lean",
+    ".reproduction/classicism-mathlib/.lake/packages/plausible/.lake/build/lib/lean",
+    ".reproduction/classicism-mathlib/.lake/packages/proofwidgets/.lake/build/lib/lean",
+    ".reproduction/classicism-mathlib/.lake/packages/batteries/.lake/build/lib/lean",
+    ".reproduction/classicism-mathlib/.lake/packages/aesop/.lake/build/lib/lean",
+    ".reproduction/classicism-mathlib/.lake/packages/importGraph/.lake/build/lib/lean",
+    ".reproduction/classicism-mathlib/.lake/packages/LeanSearchClient/.lake/build/lib/lean",
+    ".reproduction/classicism-mathlib/.lake/packages/Qq/.lake/build/lib/lean"
+  ],
+  "precompiled_sha256": "2d246141fa46907725d81838f7c3a7150742ef9bb592d2baf1d0c9aa6167a1ab",
+  "compiler_path": ".reproduction/classicism-lean-toolchain/lean-4.33.1-darwin_aarch64/bin/lean",
+  "compiler_sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554",
+  "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "source_snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261023T233456901120Z-abfe59d4/sources",
+  "source_drift": [
+    "Classicism.Models.ChoiceFirstOrderAxiomTheory",
+    "Classicism.Models.BooleanGroundCoverage",
+    "Classicism.Models.BooleanIndexedProfiles"
+  ],
+  "current_sources_match": false,
+  "exit_code": 1,
+  "publication_normalization": {
+    "original_sha256": "cf5aa050b88de449e0ecb43ef896d7a59e5cd49ddf94a43c8777787303c587cf",
+    "changes": "Machine-specific paths and compiler-coordination fields removed; source hashes, recorded check outcomes and compiler fingerprints retained."
+  }
+}

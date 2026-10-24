@@ -1,0 +1,135 @@
+Classicism.Meta.ChoiceBoolean.ColumnConditions.small_chain_lower_bound.{u} {κ : Cardinal.{u}} {I : Type u}
+  (hκ : κ.IsRegular) (hI : Cardinal.mk I < κ) (p : I → ColumnConditions.Condition κ)
+  (hp : ∀ (i j : I), p i ≤ p j ∨ p j ≤ p i) : ∃ q, ∀ (i : I), q ≤ p i
+Classicism.Meta.ChoiceBoolean.ColumnDistributivity.binary_distributivity.{u} {κ : Cardinal.{u}} {I : Type u}
+  (hκ : κ.IsRegular) (hI : Cardinal.mk I < κ) (b : I → ColumnAlgebra.Values κ) :
+  ⨆ η, ⨅ i, ColumnDistributivity.bitValue (b i) (η i) = ⊤
+Classicism.Meta.ChoiceBoolean.TypedHierarchy.app_eqv {K B : Type} [CompleteBooleanAlgebra B] (a : BooleanAction K B)
+  (E : Type) (σ : Classicism.Meta.Ty) (ρ : Classicism.Meta.RTy)
+  (F G : TypedHierarchy.Dom a E (Classicism.Meta.Ty.rel (σ ⇒ ρ))) :
+  (TypedHierarchy.DomSpace a E (Classicism.Meta.Ty.rel (σ ⇒ ρ))).space.eqv F G =
+    ⨅ x,
+      (TypedHierarchy.DomSpace a E (Classicism.Meta.Ty.rel ρ)).space.eqv (TypedHierarchy.app a E σ ρ F x)
+        (TypedHierarchy.app a E σ ρ G x)
+Classicism.Meta.ChoiceBoolean.TypedTermSemantics.term_comprehension.{u_1} {K B : Type} [CompleteBooleanAlgebra B]
+  (a : BooleanAction K B) (E : Type) {Γ : Classicism.Meta.Ctx} {σ : Classicism.Meta.Ty}
+  (p : Classicism.Meta.Formula Classicism.Meta.Signature.pure (σ :: Γ)) (g : TypedTermSemantics.Env a E Γ) :
+  ∃ F, ∀ (x : TypedHierarchy.Dom a E σ), (↑F).toFun (x, PUnit.unit) = TypedTermSemantics.value a E p (x, g)
+Classicism.Meta.ChoiceBoolean.SmallFormulaSemantics.small_comprehension {K B : Type} [CompleteBooleanAlgebra B]
+  (a : BooleanAction K B) (E : Type) (Γ : Classicism.Meta.Ctx) (ρ : Classicism.Meta.RTy)
+  (φ : Classicism.Meta.ChoiceFirstOrder.SmallFormula (ρ.args ++ Γ))
+  (g : Classicism.Meta.IEnv (TypedHierarchy.Dom a E) Γ) :
+  ∃ F,
+    ∀ (xs : Classicism.Meta.ChoiceFirstOrder.Args (TypedHierarchy.Dom a E) ρ),
+      TypedHierarchy.profile a E ρ F xs =
+        SmallFormulaSemantics.smallValue a E φ
+          (Classicism.Meta.ChoiceFirstOrder.appendEnv (Classicism.Meta.ChoiceFirstOrder.argsEnv ρ xs) g)
+Classicism.Meta.ChoiceBoolean.GroundChecks.check_eqv {K B : Type} [CompleteBooleanAlgebra B] (a : BooleanAction K B)
+  (E : Type) (σ : Classicism.Meta.Ty) (x y : Classicism.Meta.ChoiceFirstOrder.Full.Dom E σ) :
+  (TypedHierarchy.DomSpace a E σ).space.eqv (GroundChecks.check a E σ x) (GroundChecks.check a E σ y) =
+    (crispSpace (Classicism.Meta.ChoiceFirstOrder.Full.Dom E σ)).eqv x y
+Classicism.Meta.ChoiceBoolean.ProtectedCoverage.ground_coverage (κ : Cardinal.{0}) (E : Type) (hκ : κ.IsRegular)
+  (σ : Classicism.Meta.Ty) (hσ : ProtectedCoverage.Protected κ E σ)
+  (x : TypedHierarchy.Dom (ColumnAlgebra.action κ) E σ) :
+  ⨆ g,
+      (TypedHierarchy.DomSpace (ColumnAlgebra.action κ) E σ).space.eqv x
+        (GroundChecks.check (ColumnAlgebra.action κ) E σ g) =
+    ⊤
+Classicism.Meta.ChoiceBoolean.ChoiceCutoff.exists_regular_cutoff (Ω : Finset Classicism.Meta.Ty) :
+  ∃ κ,
+    κ.IsRegular ∧
+      (∀ σ ∈ Ω, ProtectedCoverage.Protected κ ℕ σ) ∧
+        ∃ ν,
+          ν.Closed ∧
+            ProtectedCoverage.Protected κ ℕ (Classicism.Meta.Ty.rel ν) ∧
+              Nonempty (Quotient.out κ ↪ Classicism.Meta.ChoiceFirstOrder.Full.Dom ℕ (Classicism.Meta.Ty.rel ν))
+Classicism.Meta.ChoiceBoolean.SupportedSelection.row_equation.{u_1, u_2} {K B : Type} [CompleteBooleanAlgebra B]
+  {a : BooleanAction K B} {X : ActionSpace a} {A : ActionSpace a} {G : Type} [LinearOrder G]
+  (c : GroundChecks.GroundMap (supportedPredicateSpace A) G)
+  (R : SupportedPredicate (X.product (supportedPredicateSpace A))) [WellFoundedLT G] (hc : GroundChecks.Covers c)
+  (g₀ : G) (x : X.space.Carrier) (hx : X.action.FinitelySupported x) :
+  (↑R).toFun (x, SupportedSelection.output c R g₀ x hx) = ⨆ y, (↑R).toFun (x, y)
+Classicism.Meta.ChoiceBoolean.IndexedProfiles.columns_eqv_zero.{u_1} {κ : Cardinal.{0}} (hκ : Cardinal.aleph0 ≤ κ)
+  {X : ActionSpace (ColumnAlgebra.action κ)} {G : Type} (c : GroundChecks.GroundMap X G) (f : Quotient.out κ → G)
+  (hf : Function.Injective f) (i j : Quotient.out κ) (hij : i ≠ j) :
+  (supportedPredicateSpace X).space.eqv (IndexedProfiles.supportedColumn hκ c f i)
+      (IndexedProfiles.supportedColumn hκ c f j) =
+    ⊥
+Classicism.Meta.ChoiceBoolean.SelectorObstruction.selector_existence_value_zero.{u_1, u_2} {κ : Cardinal.{u_1}}
+  {X : ActionSpace (ColumnAlgebra.action κ)} (columns : SelectorObstruction.ColumnFamily (supportedPredicateSpace X))
+  (hκ : Cardinal.aleph0 ≤ κ) : ⨆ F, SelectorObstruction.selectorValue F = ⊥
+Classicism.Meta.ChoiceBoolean.TaggedFirstOrder.sentence_value {K B : Type} [CompleteBooleanAlgebra B]
+  (a : BooleanAction K B) (E : Type) (hE : Nonempty E) (φ : Classicism.Meta.ChoiceFirstOrder.SmallFormula []) :
+  FirstOrderSemantics.sentenceValue (TaggedFirstOrder.booleanStructure a E hE)
+      (Classicism.Meta.ChoiceFirstOrder.MathlibBridge.translate φ) =
+    SmallFormulaSemantics.smallValue a E φ Classicism.Meta.IEnv.nil
+Classicism.Meta.ChoiceBoolean.ModelExtraction.realize_iff_secured.{u, v, uL, vL} {B : Type u} [CompleteBooleanAlgebra B]
+  {X : EqualitySpace B} {L : FirstOrder.Language} [L.IsRelational] [Countable L.Symbols]
+  (M : FirstOrderSemantics.Structure X L) (p₀ : B) (hp₀ : p₀ ≠ ⊥) {n : ℕ} (φ : L.BoundedFormula Empty n)
+  (i : Fin n → ℕ) :
+  (φ.Realize Empty.elim fun k => ModelExtraction.classOf M p₀ hp₀ (i k)) ↔
+    WitnessChain.Secured M p₀ hp₀ (FirstOrderSemantics.value M φ Empty.elim fun k => WitnessChain.name M p₀ hp₀ (i k))
+Classicism.Meta.ChoiceBoolean.BooleanAxiomTheory.axioms_value_one {K B : Type} [CompleteBooleanAlgebra B]
+  (a : BooleanAction K B) (E : Type) (hE : Nonempty E)
+  (i : Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.AxiomIndex) :
+  FirstOrderSemantics.sentenceValue (TaggedFirstOrder.booleanStructure a E hE)
+      (Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.axiomSentence i) =
+    ⊤
+Classicism.Meta.ChoiceBoolean.RecoveredModel.isModel {B : Type} [CompleteBooleanAlgebra B] {K : Type}
+  (a : BooleanAction K B) (E : Type) (hE : Nonempty E) (p₀ : B) (hp₀ : p₀ ≠ ⊥) :
+  (RecoveredModel.typedStructure a E hE p₀ hp₀).model.IsModel
+Classicism.Meta.ChoiceBoolean.RecoveredModel.small_transfer_one {B : Type} [CompleteBooleanAlgebra B] {K : Type}
+  (a : BooleanAction K B) (E : Type) (hE : Nonempty E) (p₀ : B) (hp₀ : p₀ ≠ ⊥)
+  (φ : Classicism.Meta.ChoiceFirstOrder.SmallFormula [])
+  (hφ : SmallFormulaSemantics.smallValue a E φ Classicism.Meta.IEnv.nil = ⊤) :
+  Classicism.Meta.ChoiceFirstOrder.SmallFormula.Realize (RecoveredModel.typedStructure a E hE p₀ hp₀) φ
+    Classicism.Meta.IEnv.nil
+Classicism.Meta.ChoiceBoolean.RecoveredModel.small_failure_zero {B : Type} [CompleteBooleanAlgebra B] {K : Type}
+  (a : BooleanAction K B) (E : Type) (hE : Nonempty E) (p₀ : B) (hp₀ : p₀ ≠ ⊥)
+  (φ : Classicism.Meta.ChoiceFirstOrder.SmallFormula [])
+  (hφ : SmallFormulaSemantics.smallValue a E φ Classicism.Meta.IEnv.nil = ⊥) :
+  ¬Classicism.Meta.ChoiceFirstOrder.SmallFormula.Realize (RecoveredModel.typedStructure a E hE p₀ hp₀) φ
+      Classicism.Meta.IEnv.nil
+'Classicism.Meta.ChoiceBoolean.ColumnConditions.small_chain_lower_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceBoolean.ColumnDistributivity.binary_distributivity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceBoolean.TypedTermSemantics.term_comprehension' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceBoolean.SmallFormulaSemantics.small_comprehension' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceBoolean.ProtectedCoverage.ground_coverage' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceBoolean.ChoiceCutoff.exists_regular_cutoff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceBoolean.SupportedSelection.row_equation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceBoolean.IndexedProfiles.columns_eqv_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceBoolean.SelectorObstruction.selector_existence_value_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceBoolean.TaggedFirstOrder.sentence_value' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceBoolean.ModelExtraction.realize_iff_secured' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceBoolean.BooleanAxiomTheory.axioms_value_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceBoolean.RecoveredModel.isModel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.ChoiceBoolean.RecoveredModel.small_transfer_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceBoolean.RecoveredModel.small_failure_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

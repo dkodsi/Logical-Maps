@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "run_id": "20261023T172229914704Z-c7a202e6",
+  "modules": [
+    "Classicism.Results.Research.BetaIdentityIntensionalityBridge",
+    "Classicism.Results.Research.ModalNamingConservativity"
+  ],
+  "cache": ".reproduction/classicism-lean-cert-cache",
+  "state": "failed",
+  "complete": false,
+  "checked": [
+    {
+      "module": "Classicism.Syntax.Types",
+      "fingerprint": "f920c6417fb0d73d4b6cb333a5de66a5647023a45396e3a09a0b7e943245c8cf",
+      "source_sha256": "567828e8f9a707cf635e3b4fb30bc868a419967307613d0686d795d195606eac",
+      "artifacts": {
+        ".olean": "06ab8b44ce7d7b6c90c25d4cc9e58b72ad316cb1c73e67e82c214ebc3117b126"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Term",
+      "fingerprint": "19fcc526fbf7a5f30c841e2fb11bd4cc6c4c8c77eddfb46e22a81b795035e2d5",
+      "source_sha256": "ad5172acbb74eaab9307662408928b80e6ffab62e14df16f2f41c7205de13f69",
+      "artifacts": {
+        ".olean": "4f77c921708f52a8d1c646e52072b7a63daab23afc54007f41eb669fc9d057bc"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.BetaIdentityContextualClosure",
+      "fingerprint": "1ce4698bdff44bea726c374f1d317aa612b91d6b721d8428e929fc2b46207b6a",
+      "source_sha256": "40fbbc8f6a997b21e0a3983e2ae79563561fa6f08d82dfa85ce80759a109bdb6",
+      "artifacts": {
+        ".olean": "2a1fb75d7c8ef0eca4a94508defb968862fd2efefcdcdef13d39f846d86cc23c"
+      },
+      "seconds": 48.95,
+      "exit_code": 0,
+      "log": "logs/runs/20261023T172229914704Z-c7a202e6/Classicism_Results_Research_BetaIdentityContextualClosure.log"
+    },
+    {
+      "module": "Classicism.Results.Research.BetaIdentityIntensionalityBridge",
+      "fingerprint": "3ff259f1373a11c3762297aab676280dc61284f76dd7608440dc888556778c88",
+      "source_sha256": "b4456a3501eb98beec2a81a48c7a937753c09a65e22aa4089325572d3af982c5",
+      "artifacts": {
+        ".olean": "2d549b9a3b5de8db3052b56fd05fda1d5fc2689abda6d6121de65ce510969a45"
+      },
+      "seconds": 64.76,
+      "exit_code": 0,
+      "log": "logs/runs/20261023T172229914704Z-c7a202e6/Classicism_Results_Research_BetaIdentityIntensionalityBridge.log"
+    },
+    {
+      "module": "Classicism.Results.Research.ModalStableNaming",
+      "fingerprint": "10cc042d458962729f643e4afe59321aa6e6ed3df17e28dce357ed70559279c0",
+      "source_sha256": "9cb5577f1ee248759d532679b3ecaaf785cd2db06b17488c923b858ee99da1ee",
+      "seconds": 16.56,
+      "exit_code": 1,
+      "log": "logs/runs/20261023T172229914704Z-c7a202e6/Classicism_Results_Research_ModalStableNaming.log"
+    }
+  ],
+  "sources": {
+    "Classicism.Syntax.Types": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Types.lean",
+      "sha256": "567828e8f9a707cf635e3b4fb30bc868a419967307613d0686d795d195606eac"
+    },
+    "Classicism.Syntax.Term": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Term.lean",
+      "sha256": "ad5172acbb74eaab9307662408928b80e6ffab62e14df16f2f41c7205de13f69"
+    },
+    "Classicism.Results.Research.BetaIdentityContextualClosure": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/BetaIdentityContextualClosure.lean",
+      "sha256": "40fbbc8f6a997b21e0a3983e2ae79563561fa6f08d82dfa85ce80759a109bdb6"
+    },
+    "Classicism.Results.Research.BetaIdentityIntensionalityBridge": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/BetaIdentityIntensionalityBridge.lean",
+      "sha256": "b4456a3501eb98beec2a81a48c7a937753c09a65e22aa4089325572d3af982c5"
+    },
+    "Classicism.Results.Research.ModalStableNaming": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/ModalStableNaming.lean",
+      "sha256": "9cb5577f1ee248759d532679b3ecaaf785cd2db06b17488c923b858ee99da1ee"
+    },
+    "Classicism.Results.Research.ModalNamingConservativity": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/ModalNamingConservativity.lean",
+      "sha256": "32586cd97ba1b28c63ec03fd384da6808a64d1f710bafaca456eaf7c3c7074b2"
+    }
+  },
+  "precompiled_roots": [],
+  "precompiled_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "compiler_path": ".reproduction/classicism-lean-toolchain/lean-4.33.1-darwin_aarch64/bin/lean",
+  "compiler_sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554",
+  "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "source_snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261023T172229914704Z-c7a202e6/sources",
+  "exit_code": 1,
+  "publication_normalization": {
+    "original_sha256": "f0b8765d31a3c4f693bfb9a27c567b3804beaac4fce12856e22444349aa3f598",
+    "changes": "Machine-specific paths and compiler-coordination fields removed; source hashes, recorded check outcomes and compiler fingerprints retained."
+  }
+}

@@ -1,0 +1,613 @@
+Classicism.Research.StrongPossibilityConsequences.box_compose: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.StrongPossibilityConsequences.dia_and_left: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.StrongPossibilityConsequences.dia_and_right: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.StrongPossibilityConsequences.boxNe_elim: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.StrongPossibilityConsequences.diaNe_intro: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.StrongPossibilityConsequences.boxNe_of_box: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.StrongPossibilityConsequences.boxNe_mono: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.StrongPossibilityConsequences.diaNe_mono: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.StrongPossibilityConsequences.boxNe_and: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.StrongPossibilityConsequences.diaNe_forall: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.StrongPossibilityConsequences.ne_boxNe: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.StrongPossibilityConsequences.diaNe_eq: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.StrongPossibilityConsequences.decidesNe_eq: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.StrongPossibilityConsequences.decidesNe_neg: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.StrongPossibilityConsequences.decidesNe_and: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.StrongPossibilityConsequences.decidesNe_or: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.StrongPossibilityConsequences.decidesNe_imp: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.StrongPossibilityConsequences.diaNe_reflect: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.StrongPossibilityConsequences.boxNe_exists: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.StrongPossibilityConsequences.diaNe_forall_reflect: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.StrongPossibilityConsequences.diaNe_forall_decides: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em])
+Classicism.Research.StrongPossibilityConsequences.diaNe_monism: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.StrongPossibilityConsequences.diaNe_one_name: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.StrongPossibilityConsequences.diaNe_two_names: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.StrongPossibilityConsequences.diaNe_forall_identity: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em])
+Classicism.Research.StrongPossibilityConsequences.diamond_idempotent_eq: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em])
+Classicism.Research.StrongPossibilityConsequences.boxNe_fixed_iff: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.StrongPossibilityConsequences.imp_not_eq_not_and: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.StrongPossibilityConsequences.box_imp_not_eq_and_bot: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em])
+Classicism.Research.StrongPossibilityConsequences.diaNe_fixed_iff: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.StrongPossibilityConsequences.diaNe_monism_not_two: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em])
+Classicism.Research.StrongPossibilityConsequences.box_compose: type system ✓
+Classicism.Research.StrongPossibilityConsequences.dia_and_left: type system ✓
+Classicism.Research.StrongPossibilityConsequences.dia_and_right: type system ✓
+Classicism.Research.StrongPossibilityConsequences.boxNe_elim: type system ✓
+Classicism.Research.StrongPossibilityConsequences.diaNe_intro: type system ✓
+Classicism.Research.StrongPossibilityConsequences.boxNe_of_box: type system ✓
+Classicism.Research.StrongPossibilityConsequences.boxNe_mono: type system ✓
+Classicism.Research.StrongPossibilityConsequences.diaNe_mono: type system ✓
+Classicism.Research.StrongPossibilityConsequences.boxNe_and: type system ✓
+Classicism.Research.StrongPossibilityConsequences.diaNe_forall: type system ✓
+Classicism.Research.StrongPossibilityConsequences.ne_boxNe: type system ✓
+Classicism.Research.StrongPossibilityConsequences.diaNe_eq: type system ✓
+Classicism.Research.StrongPossibilityConsequences.decidesNe_eq: type system ✓
+Classicism.Research.StrongPossibilityConsequences.decidesNe_neg: type system ✓
+Classicism.Research.StrongPossibilityConsequences.decidesNe_and: type system ✓
+Classicism.Research.StrongPossibilityConsequences.decidesNe_or: type system ✓
+Classicism.Research.StrongPossibilityConsequences.decidesNe_imp: type system ✓
+Classicism.Research.StrongPossibilityConsequences.diaNe_reflect: type system ✓
+Classicism.Research.StrongPossibilityConsequences.boxNe_exists: type system ✓
+Classicism.Research.StrongPossibilityConsequences.diaNe_forall_reflect: type system ✓
+Classicism.Research.StrongPossibilityConsequences.diaNe_forall_decides: type system ✓
+Classicism.Research.StrongPossibilityConsequences.diaNe_monism: type system ✓
+Classicism.Research.StrongPossibilityConsequences.diaNe_one_name: type system ✓
+Classicism.Research.StrongPossibilityConsequences.diaNe_two_names: type system ✓
+Classicism.Research.StrongPossibilityConsequences.diaNe_forall_identity: type system ✓
+Classicism.Research.StrongPossibilityConsequences.diamond_idempotent_eq: type system ✓
+Classicism.Research.StrongPossibilityConsequences.boxNe_fixed_iff: type system ✓
+Classicism.Research.StrongPossibilityConsequences.imp_not_eq_not_and: type system ✓
+Classicism.Research.StrongPossibilityConsequences.box_imp_not_eq_and_bot: type system ✓
+Classicism.Research.StrongPossibilityConsequences.diaNe_fixed_iff: type system ✓
+Classicism.Research.StrongPossibilityConsequences.diaNe_monism_not_two: type system ✓
+Classicism.Research.StrongPossibilityConsequences.box_compose ⟶ Classicism.Research.StrongPossibilityConsequences.box_compose.derivable : Meta.Theorem
+  Meta.C.axiomsMinus
+  (Meta.Term.forall'
+    (Meta.Term.forall'
+      (Meta.Term.forall'
+        (Meta.Term.imp (Meta.Term.box ((Meta.Term.var Meta.Var.zero.succ.succ).imp (Meta.Term.var Meta.Var.zero.succ)))
+          (Meta.Term.imp (Meta.Term.box ((Meta.Term.var Meta.Var.zero.succ).imp (Meta.Term.var Meta.Var.zero)))
+            (Meta.Term.box ((Meta.Term.var Meta.Var.zero.succ.succ).imp (Meta.Term.var Meta.Var.zero))))))))
+derived ✓ in C⁻
+Classicism.Research.StrongPossibilityConsequences.dia_and_left ⟶ Classicism.Research.StrongPossibilityConsequences.dia_and_left.derivable : Meta.Theorem
+  Meta.C.axiomsMinus
+  (Meta.Term.forall'
+    (Meta.Term.forall'
+      (Meta.Term.imp (Meta.Term.dia ((Meta.Term.var Meta.Var.zero.succ).conj (Meta.Term.var Meta.Var.zero)))
+        (Meta.Term.var Meta.Var.zero.succ).dia)))
+derived ✓ in C⁻
+Classicism.Research.StrongPossibilityConsequences.dia_and_right ⟶ Classicism.Research.StrongPossibilityConsequences.dia_and_right.derivable : Meta.Theorem
+  Meta.C.axiomsMinus
+  (Meta.Term.forall'
+    (Meta.Term.forall'
+      (Meta.Term.imp (Meta.Term.dia ((Meta.Term.var Meta.Var.zero.succ).conj (Meta.Term.var Meta.Var.zero)))
+        (Meta.Term.var Meta.Var.zero).dia)))
+derived ✓ in C⁻
+Classicism.Research.StrongPossibilityConsequences.boxNe_elim ⟶ Classicism.Research.StrongPossibilityConsequences.boxNe_elim.derivable : Meta.Theorem
+  Meta.C.axiomsMinus
+  (Meta.Term.forall'
+    (Meta.Term.imp
+      (Meta.Term.exists'
+        ((Meta.Term.var Meta.Var.zero).conj
+          (Meta.Term.box (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia (Meta.Term.var Meta.Var.zero.succ)))))
+      (Meta.Term.var Meta.Var.zero)))
+derived ✓ in C⁻
+Classicism.Research.StrongPossibilityConsequences.diaNe_intro ⟶ Classicism.Research.StrongPossibilityConsequences.diaNe_intro.derivable : Meta.Theorem
+  Meta.C.axiomsMinus
+  (Meta.Term.forall'
+    ((Meta.Term.var Meta.Var.zero).imp
+      (Meta.Term.neg
+        (Meta.Term.exists'
+          ((Meta.Term.var Meta.Var.zero).conj
+            (Meta.Term.box
+              (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia (Meta.Term.var Meta.Var.zero.succ).neg)))))))
+derived ✓ in C⁻
+Classicism.Research.StrongPossibilityConsequences.boxNe_of_box ⟶ Classicism.Research.StrongPossibilityConsequences.boxNe_of_box.derivable : Meta.Theorem
+  Meta.C.axiomsMinus
+  (Meta.Term.forall'
+    (Meta.Term.imp (Meta.Term.var Meta.Var.zero).box
+      (Meta.Term.exists'
+        ((Meta.Term.var Meta.Var.zero).conj
+          (Meta.Term.box (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia (Meta.Term.var Meta.Var.zero.succ)))))))
+derived ✓ in C⁻
+Classicism.Research.StrongPossibilityConsequences.boxNe_mono ⟶ Classicism.Research.StrongPossibilityConsequences.boxNe_mono.derivable : Meta.Theorem
+  Meta.C.axiomsMinus
+  (Meta.Term.forall'
+    (Meta.Term.forall'
+      (Meta.Term.imp (Meta.Term.box ((Meta.Term.var Meta.Var.zero.succ).imp (Meta.Term.var Meta.Var.zero)))
+        (Meta.Term.imp
+          (Meta.Term.exists'
+            ((Meta.Term.var Meta.Var.zero).conj
+              (Meta.Term.box
+                (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia (Meta.Term.var Meta.Var.zero.succ.succ)))))
+          (Meta.Term.exists'
+            ((Meta.Term.var Meta.Var.zero).conj
+              (Meta.Term.box (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia (Meta.Term.var Meta.Var.zero.succ)))))))))
+derived ✓ in C⁻
+Classicism.Research.StrongPossibilityConsequences.diaNe_mono ⟶ Classicism.Research.StrongPossibilityConsequences.diaNe_mono.derivable : Meta.Theorem
+  Meta.C.axiomsMinus
+  (Meta.Term.forall'
+    (Meta.Term.forall'
+      (Meta.Term.imp (Meta.Term.box ((Meta.Term.var Meta.Var.zero.succ).imp (Meta.Term.var Meta.Var.zero)))
+        (Meta.Term.imp
+          (Meta.Term.neg
+            (Meta.Term.exists'
+              ((Meta.Term.var Meta.Var.zero).conj
+                (Meta.Term.box
+                  (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia (Meta.Term.var Meta.Var.zero.succ.succ).neg)))))
+          (Meta.Term.neg
+            (Meta.Term.exists'
+              ((Meta.Term.var Meta.Var.zero).conj
+                (Meta.Term.box
+                  (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia (Meta.Term.var Meta.Var.zero.succ).neg)))))))))
+derived ✓ in C⁻
+Classicism.Research.StrongPossibilityConsequences.boxNe_and ⟶ Classicism.Research.StrongPossibilityConsequences.boxNe_and.derivable : Meta.Theorem
+  Meta.C.axiomsMinus
+  (Meta.Term.forall'
+    (Meta.Term.forall'
+      (Meta.Term.imp
+        (Meta.Term.exists'
+          ((Meta.Term.var Meta.Var.zero).conj
+            (Meta.Term.box (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia (Meta.Term.var Meta.Var.zero.succ.succ)))))
+        (Meta.Term.imp
+          (Meta.Term.exists'
+            ((Meta.Term.var Meta.Var.zero).conj
+              (Meta.Term.box (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia (Meta.Term.var Meta.Var.zero.succ)))))
+          (Meta.Term.exists'
+            ((Meta.Term.var Meta.Var.zero).conj
+              (Meta.Term.box
+                (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia
+                  ((Meta.Term.var Meta.Var.zero.succ.succ).conj (Meta.Term.var Meta.Var.zero.succ))))))))))
+derived ✓ in C⁻
+Classicism.Research.StrongPossibilityConsequences.diaNe_forall ⟶ Classicism.Research.StrongPossibilityConsequences.diaNe_forall.derivable : ∀
+  (σ' : Meta.Ty),
+  Meta.Theorem Meta.C.axiomsMinus
+    (Meta.Term.forall'
+      (Meta.Term.imp
+        (Meta.Term.neg
+          (Meta.Term.exists'
+            ((Meta.Term.var Meta.Var.zero).conj
+              (Meta.Term.box
+                (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia
+                  (Meta.Term.neg
+                    ((Meta.Term.var Meta.Var.zero.succ.succ).app (Meta.Term.var Meta.Var.zero)).forall'))))))
+        (Meta.Term.forall'
+          (Meta.Term.neg
+            (Meta.Term.exists'
+              ((Meta.Term.var Meta.Var.zero).conj
+                (Meta.Term.box
+                  (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia
+                    ((Meta.Term.var Meta.Var.zero.succ.succ).app (Meta.Term.var Meta.Var.zero.succ)).neg))))))))
+derived ✓ in C⁻
+Classicism.Research.StrongPossibilityConsequences.ne_boxNe ⟶ Classicism.Research.StrongPossibilityConsequences.ne_boxNe.derivable : ∀
+  (σ' : Meta.Ty),
+  Meta.Theorem Meta.C.axiomsMinus
+    (Meta.Term.forall'
+      (Meta.Term.forall'
+        (Meta.Term.imp (Meta.Term.neg ((Meta.Term.var Meta.Var.zero.succ).eq' (Meta.Term.var Meta.Var.zero)))
+          (Meta.Term.exists'
+            ((Meta.Term.var Meta.Var.zero).conj
+              (Meta.Term.box
+                (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia
+                  (Meta.Term.neg
+                    ((Meta.Term.var Meta.Var.zero.succ.succ).eq' (Meta.Term.var Meta.Var.zero.succ))))))))))
+derived ✓ in C⁻
+Classicism.Research.StrongPossibilityConsequences.diaNe_eq ⟶ Classicism.Research.StrongPossibilityConsequences.diaNe_eq.derivable : ∀
+  (σ' : Meta.Ty),
+  Meta.Theorem Meta.C.axiomsMinus
+    (Meta.Term.forall'
+      (Meta.Term.forall'
+        (Meta.Term.imp
+          (Meta.Term.neg
+            (Meta.Term.exists'
+              ((Meta.Term.var Meta.Var.zero).conj
+                (Meta.Term.box
+                  (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia
+                    (Meta.Term.neg
+                      ((Meta.Term.var Meta.Var.zero.succ.succ).eq' (Meta.Term.var Meta.Var.zero.succ))))))))
+          ((Meta.Term.var Meta.Var.zero.succ).eq' (Meta.Term.var Meta.Var.zero)))))
+derived ✓ in C⁻
+Classicism.Research.StrongPossibilityConsequences.decidesNe_eq ⟶ Classicism.Research.StrongPossibilityConsequences.decidesNe_eq.derivable : ∀
+  (σ' : Meta.Ty),
+  Meta.Theorem Meta.C.axiomsMinus
+    (Meta.Term.forall'
+      (Meta.Term.forall'
+        (Meta.Term.conj
+          (Meta.Term.imp ((Meta.Term.var Meta.Var.zero.succ).eq' (Meta.Term.var Meta.Var.zero))
+            (Meta.Term.exists'
+              ((Meta.Term.var Meta.Var.zero).conj
+                (Meta.Term.box
+                  (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia
+                    ((Meta.Term.var Meta.Var.zero.succ.succ).eq' (Meta.Term.var Meta.Var.zero.succ)))))))
+          (Meta.Term.imp (Meta.Term.neg ((Meta.Term.var Meta.Var.zero.succ).eq' (Meta.Term.var Meta.Var.zero)))
+            (Meta.Term.exists'
+              ((Meta.Term.var Meta.Var.zero).conj
+                (Meta.Term.box
+                  (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia
+                    (Meta.Term.neg
+                      ((Meta.Term.var Meta.Var.zero.succ.succ).eq' (Meta.Term.var Meta.Var.zero.succ)))))))))))
+derived ✓ in C⁻
+Classicism.Research.StrongPossibilityConsequences.decidesNe_neg ⟶ Classicism.Research.StrongPossibilityConsequences.decidesNe_neg.derivable : Meta.Theorem
+  Meta.C.axiomsMinus
+  (Meta.Term.forall'
+    (Meta.Term.imp
+      (Meta.Term.conj
+        ((Meta.Term.var Meta.Var.zero).imp
+          (Meta.Term.exists'
+            ((Meta.Term.var Meta.Var.zero).conj
+              (Meta.Term.box (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia (Meta.Term.var Meta.Var.zero.succ))))))
+        (Meta.Term.imp (Meta.Term.var Meta.Var.zero).neg
+          (Meta.Term.exists'
+            ((Meta.Term.var Meta.Var.zero).conj
+              (Meta.Term.box
+                (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia (Meta.Term.var Meta.Var.zero.succ).neg))))))
+      (Meta.Term.conj
+        (Meta.Term.imp (Meta.Term.var Meta.Var.zero).neg
+          (Meta.Term.exists'
+            ((Meta.Term.var Meta.Var.zero).conj
+              (Meta.Term.box
+                (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia (Meta.Term.var Meta.Var.zero.succ).neg)))))
+        (Meta.Term.imp (Meta.Term.neg (Meta.Term.var Meta.Var.zero).neg)
+          (Meta.Term.exists'
+            ((Meta.Term.var Meta.Var.zero).conj
+              (Meta.Term.box
+                (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia
+                  (Meta.Term.neg (Meta.Term.var Meta.Var.zero.succ).neg)))))))))
+derived ✓ in C⁻
+Classicism.Research.StrongPossibilityConsequences.decidesNe_and ⟶ Classicism.Research.StrongPossibilityConsequences.decidesNe_and.derivable : Meta.Theorem
+  Meta.C.axiomsMinus
+  (Meta.Term.forall'
+    (Meta.Term.forall'
+      (Meta.Term.imp
+        (Meta.Term.conj
+          ((Meta.Term.var Meta.Var.zero.succ).imp
+            (Meta.Term.exists'
+              ((Meta.Term.var Meta.Var.zero).conj
+                (Meta.Term.box
+                  (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia (Meta.Term.var Meta.Var.zero.succ.succ))))))
+          (Meta.Term.imp (Meta.Term.var Meta.Var.zero.succ).neg
+            (Meta.Term.exists'
+              ((Meta.Term.var Meta.Var.zero).conj
+                (Meta.Term.box
+                  (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia (Meta.Term.var Meta.Var.zero.succ.succ).neg))))))
+        (Meta.Term.imp
+          (Meta.Term.conj
+            ((Meta.Term.var Meta.Var.zero).imp
+              (Meta.Term.exists'
+                ((Meta.Term.var Meta.Var.zero).conj
+                  (Meta.Term.box
+                    (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia (Meta.Term.var Meta.Var.zero.succ))))))
+            (Meta.Term.imp (Meta.Term.var Meta.Var.zero).neg
+              (Meta.Term.exists'
+                ((Meta.Term.var Meta.Var.zero).conj
+                  (Meta.Term.box
+                    (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia (Meta.Term.var Meta.Var.zero.succ).neg))))))
+          (Meta.Term.conj
+            (Meta.Term.imp ((Meta.Term.var Meta.Var.zero.succ).conj (Meta.Term.var Meta.Var.zero))
+              (Meta.Term.exists'
+                ((Meta.Term.var Meta.Var.zero).conj
+                  (Meta.Term.box
+                    (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia
+                      ((Meta.Term.var Meta.Var.zero.succ.succ).conj (Meta.Term.var Meta.Var.zero.succ)))))))
+            (Meta.Term.imp (Meta.Term.neg ((Meta.Term.var Meta.Var.zero.succ).conj (Meta.Term.var Meta.Var.zero)))
+              (Meta.Term.exists'
+                ((Meta.Term.var Meta.Var.zero).conj
+                  (Meta.Term.box
+                    (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia
+                      (Meta.Term.neg
+                        ((Meta.Term.var Meta.Var.zero.succ.succ).conj (Meta.Term.var Meta.Var.zero.succ)))))))))))))
+derived ✓ in C⁻
+Classicism.Research.StrongPossibilityConsequences.decidesNe_or ⟶ Classicism.Research.StrongPossibilityConsequences.decidesNe_or.derivable : Meta.Theorem
+  Meta.C.axiomsMinus
+  (Meta.Term.forall'
+    (Meta.Term.forall'
+      (Meta.Term.imp
+        (Meta.Term.conj
+          ((Meta.Term.var Meta.Var.zero.succ).imp
+            (Meta.Term.exists'
+              ((Meta.Term.var Meta.Var.zero).conj
+                (Meta.Term.box
+                  (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia (Meta.Term.var Meta.Var.zero.succ.succ))))))
+          (Meta.Term.imp (Meta.Term.var Meta.Var.zero.succ).neg
+            (Meta.Term.exists'
+              ((Meta.Term.var Meta.Var.zero).conj
+                (Meta.Term.box
+                  (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia (Meta.Term.var Meta.Var.zero.succ.succ).neg))))))
+        (Meta.Term.imp
+          (Meta.Term.conj
+            ((Meta.Term.var Meta.Var.zero).imp
+              (Meta.Term.exists'
+                ((Meta.Term.var Meta.Var.zero).conj
+                  (Meta.Term.box
+                    (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia (Meta.Term.var Meta.Var.zero.succ))))))
+            (Meta.Term.imp (Meta.Term.var Meta.Var.zero).neg
+              (Meta.Term.exists'
+                ((Meta.Term.var Meta.Var.zero).conj
+                  (Meta.Term.box
+                    (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia (Meta.Term.var Meta.Var.zero.succ).neg))))))
+          (Meta.Term.conj
+            (Meta.Term.imp ((Meta.Term.var Meta.Var.zero.succ).disj (Meta.Term.var Meta.Var.zero))
+              (Meta.Term.exists'
+                ((Meta.Term.var Meta.Var.zero).conj
+                  (Meta.Term.box
+                    (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia
+                      ((Meta.Term.var Meta.Var.zero.succ.succ).disj (Meta.Term.var Meta.Var.zero.succ)))))))
+            (Meta.Term.imp (Meta.Term.neg ((Meta.Term.var Meta.Var.zero.succ).disj (Meta.Term.var Meta.Var.zero)))
+              (Meta.Term.exists'
+                ((Meta.Term.var Meta.Var.zero).conj
+                  (Meta.Term.box
+                    (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia
+                      (Meta.Term.neg
+                        ((Meta.Term.var Meta.Var.zero.succ.succ).disj (Meta.Term.var Meta.Var.zero.succ)))))))))))))
+derived ✓ in C⁻
+Classicism.Research.StrongPossibilityConsequences.decidesNe_imp ⟶ Classicism.Research.StrongPossibilityConsequences.decidesNe_imp.derivable : Meta.Theorem
+  Meta.C.axiomsMinus
+  (Meta.Term.forall'
+    (Meta.Term.forall'
+      (Meta.Term.imp
+        (Meta.Term.conj
+          ((Meta.Term.var Meta.Var.zero.succ).imp
+            (Meta.Term.exists'
+              ((Meta.Term.var Meta.Var.zero).conj
+                (Meta.Term.box
+                  (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia (Meta.Term.var Meta.Var.zero.succ.succ))))))
+          (Meta.Term.imp (Meta.Term.var Meta.Var.zero.succ).neg
+            (Meta.Term.exists'
+              ((Meta.Term.var Meta.Var.zero).conj
+                (Meta.Term.box
+                  (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia (Meta.Term.var Meta.Var.zero.succ.succ).neg))))))
+        (Meta.Term.imp
+          (Meta.Term.conj
+            ((Meta.Term.var Meta.Var.zero).imp
+              (Meta.Term.exists'
+                ((Meta.Term.var Meta.Var.zero).conj
+                  (Meta.Term.box
+                    (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia (Meta.Term.var Meta.Var.zero.succ))))))
+            (Meta.Term.imp (Meta.Term.var Meta.Var.zero).neg
+              (Meta.Term.exists'
+                ((Meta.Term.var Meta.Var.zero).conj
+                  (Meta.Term.box
+                    (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia (Meta.Term.var Meta.Var.zero.succ).neg))))))
+          (Meta.Term.conj
+            (Meta.Term.imp ((Meta.Term.var Meta.Var.zero.succ).imp (Meta.Term.var Meta.Var.zero))
+              (Meta.Term.exists'
+                ((Meta.Term.var Meta.Var.zero).conj
+                  (Meta.Term.box
+                    (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia
+                      ((Meta.Term.var Meta.Var.zero.succ.succ).imp (Meta.Term.var Meta.Var.zero.succ)))))))
+            (Meta.Term.imp (Meta.Term.neg ((Meta.Term.var Meta.Var.zero.succ).imp (Meta.Term.var Meta.Var.zero)))
+              (Meta.Term.exists'
+                ((Meta.Term.var Meta.Var.zero).conj
+                  (Meta.Term.box
+                    (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia
+                      (Meta.Term.neg
+                        ((Meta.Term.var Meta.Var.zero.succ.succ).imp (Meta.Term.var Meta.Var.zero.succ)))))))))))))
+derived ✓ in C⁻
+Classicism.Research.StrongPossibilityConsequences.diaNe_reflect ⟶ Classicism.Research.StrongPossibilityConsequences.diaNe_reflect.derivable : Meta.Theorem
+  Meta.C.axiomsMinus
+  (Meta.Term.forall'
+    (Meta.Term.imp
+      (Meta.Term.conj
+        ((Meta.Term.var Meta.Var.zero).imp
+          (Meta.Term.exists'
+            ((Meta.Term.var Meta.Var.zero).conj
+              (Meta.Term.box (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia (Meta.Term.var Meta.Var.zero.succ))))))
+        (Meta.Term.imp (Meta.Term.var Meta.Var.zero).neg
+          (Meta.Term.exists'
+            ((Meta.Term.var Meta.Var.zero).conj
+              (Meta.Term.box
+                (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia (Meta.Term.var Meta.Var.zero.succ).neg))))))
+      (Meta.Term.imp
+        (Meta.Term.neg
+          (Meta.Term.exists'
+            ((Meta.Term.var Meta.Var.zero).conj
+              (Meta.Term.box
+                (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia (Meta.Term.var Meta.Var.zero.succ).neg)))))
+        (Meta.Term.var Meta.Var.zero))))
+derived ✓ in C⁻
+Classicism.Research.StrongPossibilityConsequences.boxNe_exists ⟶ Classicism.Research.StrongPossibilityConsequences.boxNe_exists.derivable : ∀
+  (σ' : Meta.Ty),
+  Meta.Theorem Meta.C.axiomsMinus
+    (Meta.Term.forall'
+      (Meta.Term.imp
+        (Meta.Term.forall'
+          (((Meta.Term.var Meta.Var.zero.succ).app (Meta.Term.var Meta.Var.zero)).imp
+            (Meta.Term.exists'
+              ((Meta.Term.var Meta.Var.zero).conj
+                (Meta.Term.box
+                  (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia
+                    ((Meta.Term.var Meta.Var.zero.succ.succ).app (Meta.Term.var Meta.Var.zero.succ))))))))
+        (Meta.Term.imp ((Meta.Term.var Meta.Var.zero.succ).app (Meta.Term.var Meta.Var.zero)).exists'
+          (Meta.Term.exists'
+            ((Meta.Term.var Meta.Var.zero).conj
+              (Meta.Term.box
+                (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia
+                  ((Meta.Term.var Meta.Var.zero.succ.succ).app (Meta.Term.var Meta.Var.zero)).exists')))))))
+derived ✓ in C⁻
+Classicism.Research.StrongPossibilityConsequences.diaNe_forall_reflect ⟶ Classicism.Research.StrongPossibilityConsequences.diaNe_forall_reflect.derivable : ∀
+  (σ' : Meta.Ty),
+  Meta.Theorem Meta.C.axiomsMinus
+    (Meta.Term.forall'
+      (Meta.Term.imp
+        (Meta.Term.forall'
+          (Meta.Term.imp
+            (Meta.Term.neg
+              (Meta.Term.exists'
+                ((Meta.Term.var Meta.Var.zero).conj
+                  (Meta.Term.box
+                    (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia
+                      ((Meta.Term.var Meta.Var.zero.succ.succ).app (Meta.Term.var Meta.Var.zero.succ)).neg)))))
+            ((Meta.Term.var Meta.Var.zero.succ).app (Meta.Term.var Meta.Var.zero))))
+        (Meta.Term.imp
+          (Meta.Term.neg
+            (Meta.Term.exists'
+              ((Meta.Term.var Meta.Var.zero).conj
+                (Meta.Term.box
+                  (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia
+                    (Meta.Term.neg
+                      ((Meta.Term.var Meta.Var.zero.succ.succ).app (Meta.Term.var Meta.Var.zero)).forall'))))))
+          ((Meta.Term.var Meta.Var.zero.succ).app (Meta.Term.var Meta.Var.zero)).forall')))
+derived ✓ in C⁻
+Classicism.Research.StrongPossibilityConsequences.diaNe_forall_decides ⟶ Classicism.Research.StrongPossibilityConsequences.diaNe_forall_decides.derivable : ∀
+  (σ' : Meta.Ty),
+  Meta.Theorem Meta.C.axiomsMinus
+    (Meta.Term.forall'
+      (Meta.Term.imp
+        (Meta.Term.forall'
+          (Meta.Term.conj
+            (((Meta.Term.var Meta.Var.zero.succ).app (Meta.Term.var Meta.Var.zero)).imp
+              (Meta.Term.exists'
+                ((Meta.Term.var Meta.Var.zero).conj
+                  (Meta.Term.box
+                    (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia
+                      ((Meta.Term.var Meta.Var.zero.succ.succ).app (Meta.Term.var Meta.Var.zero.succ)))))))
+            (Meta.Term.imp ((Meta.Term.var Meta.Var.zero.succ).app (Meta.Term.var Meta.Var.zero)).neg
+              (Meta.Term.exists'
+                ((Meta.Term.var Meta.Var.zero).conj
+                  (Meta.Term.box
+                    (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia
+                      ((Meta.Term.var Meta.Var.zero.succ.succ).app (Meta.Term.var Meta.Var.zero.succ)).neg)))))))
+        (Meta.Term.imp
+          (Meta.Term.neg
+            (Meta.Term.exists'
+              ((Meta.Term.var Meta.Var.zero).conj
+                (Meta.Term.box
+                  (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia
+                    (Meta.Term.neg
+                      ((Meta.Term.var Meta.Var.zero.succ.succ).app (Meta.Term.var Meta.Var.zero)).forall'))))))
+          ((Meta.Term.var Meta.Var.zero.succ).app (Meta.Term.var Meta.Var.zero)).forall')))
+derived ✓ in C⁻
+Classicism.Research.StrongPossibilityConsequences.diaNe_monism ⟶ Classicism.Research.StrongPossibilityConsequences.diaNe_monism.derivable : ∀
+  (σ' : Meta.Ty),
+  Meta.Theorem Meta.C.axiomsMinus
+    (Meta.Term.imp
+      (Meta.Term.neg
+        (Meta.Term.exists'
+          ((Meta.Term.var Meta.Var.zero).conj
+            (Meta.Term.box
+              (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia
+                (Meta.Term.neg
+                  (Meta.Term.forall'
+                    (Meta.Term.forall' ((Meta.Term.var Meta.Var.zero.succ).eq' (Meta.Term.var Meta.Var.zero))))))))))
+      (Meta.Term.forall' (Meta.Term.forall' ((Meta.Term.var Meta.Var.zero.succ).eq' (Meta.Term.var Meta.Var.zero)))))
+derived ✓ in C⁻
+Classicism.Research.StrongPossibilityConsequences.diaNe_one_name ⟶ Classicism.Research.StrongPossibilityConsequences.diaNe_one_name.derivable : ∀
+  (σ' : Meta.Ty),
+  Meta.Theorem Meta.C.axiomsMinus
+    (Meta.Term.forall'
+      (Meta.Term.imp
+        (Meta.Term.neg
+          (Meta.Term.exists'
+            ((Meta.Term.var Meta.Var.zero).conj
+              (Meta.Term.box
+                (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia
+                  (Meta.Term.neg
+                    (Meta.Term.forall'
+                      ((Meta.Term.var Meta.Var.zero).eq' (Meta.Term.var Meta.Var.zero.succ.succ)))))))))
+        (Meta.Term.forall' ((Meta.Term.var Meta.Var.zero).eq' (Meta.Term.var Meta.Var.zero.succ)))))
+derived ✓ in C⁻
+Classicism.Research.StrongPossibilityConsequences.diaNe_two_names ⟶ Classicism.Research.StrongPossibilityConsequences.diaNe_two_names.derivable : ∀
+  (σ' : Meta.Ty),
+  Meta.Theorem Meta.C.axiomsMinus
+    (Meta.Term.forall'
+      (Meta.Term.forall'
+        (Meta.Term.imp
+          (Meta.Term.neg
+            (Meta.Term.exists'
+              ((Meta.Term.var Meta.Var.zero).conj
+                (Meta.Term.box
+                  (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia
+                    (Meta.Term.neg
+                      (Meta.Term.forall'
+                        (Meta.Term.disj ((Meta.Term.var Meta.Var.zero).eq' (Meta.Term.var Meta.Var.zero.succ.succ.succ))
+                          ((Meta.Term.var Meta.Var.zero).eq' (Meta.Term.var Meta.Var.zero.succ.succ))))))))))
+          (Meta.Term.forall'
+            (Meta.Term.disj ((Meta.Term.var Meta.Var.zero).eq' (Meta.Term.var Meta.Var.zero.succ.succ))
+              ((Meta.Term.var Meta.Var.zero).eq' (Meta.Term.var Meta.Var.zero.succ)))))))
+derived ✓ in C⁻
+Classicism.Research.StrongPossibilityConsequences.diaNe_forall_identity ⟶ Classicism.Research.StrongPossibilityConsequences.diaNe_forall_identity.derivable : ∀
+  (σ' : Meta.Ty) (τ' : Meta.RTy),
+  Meta.Theorem Meta.C.axiomsMinus
+    (Meta.Term.forall'
+      (Meta.Term.forall'
+        (Meta.Term.imp
+          (Meta.Term.neg
+            (Meta.Term.exists'
+              ((Meta.Term.var Meta.Var.zero).conj
+                (Meta.Term.box
+                  (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia
+                    (Meta.Term.neg
+                      (Meta.Term.forall'
+                        (((Meta.Term.var Meta.Var.zero.succ.succ.succ).app (Meta.Term.var Meta.Var.zero)).eq'
+                          ((Meta.Term.var Meta.Var.zero.succ.succ).app (Meta.Term.var Meta.Var.zero))))))))))
+          (Meta.Term.forall'
+            (((Meta.Term.var Meta.Var.zero.succ.succ).app (Meta.Term.var Meta.Var.zero)).eq'
+              ((Meta.Term.var Meta.Var.zero.succ).app (Meta.Term.var Meta.Var.zero)))))))
+derived ✓ in C⁻
+Classicism.Research.StrongPossibilityConsequences.diamond_idempotent_eq ⟶ Classicism.Research.StrongPossibilityConsequences.diamond_idempotent_eq.derivable : Meta.Theorem
+  Meta.C.axiomsMinus
+  (Meta.Term.forall'
+    (Meta.Term.eq' (Meta.Term.var Meta.Var.zero).dia (Meta.Term.dia (Meta.Term.var Meta.Var.zero).dia)))
+derived ✓ in C⁻
+Classicism.Research.StrongPossibilityConsequences.boxNe_fixed_iff ⟶ Classicism.Research.StrongPossibilityConsequences.boxNe_fixed_iff.derivable : Meta.Theorem
+  Meta.C.axiomsMinus
+  (Meta.Term.forall'
+    (Meta.Term.iff
+      (Meta.Term.exists'
+        ((Meta.Term.var Meta.Var.zero).conj
+          (Meta.Term.box (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia (Meta.Term.var Meta.Var.zero.succ)))))
+      (Meta.Term.exists'
+        (Meta.Term.conj (Meta.Term.neg ((Meta.Term.var Meta.Var.zero).eq' Meta.Term.bot))
+          (Meta.Term.conj ((Meta.Term.var Meta.Var.zero).eq' (Meta.Term.var Meta.Var.zero).dia)
+            (Meta.Term.box ((Meta.Term.var Meta.Var.zero).imp (Meta.Term.var Meta.Var.zero.succ))))))))
+derived ✓ in C⁻
+Classicism.Research.StrongPossibilityConsequences.imp_not_eq_not_and ⟶ Classicism.Research.StrongPossibilityConsequences.imp_not_eq_not_and.derivable : Meta.Theorem
+  Meta.C.axiomsMinus
+  (Meta.Term.forall'
+    (Meta.Term.forall'
+      (Meta.Term.eq' ((Meta.Term.var Meta.Var.zero.succ).imp (Meta.Term.var Meta.Var.zero).neg)
+        (Meta.Term.neg ((Meta.Term.var Meta.Var.zero.succ).conj (Meta.Term.var Meta.Var.zero))))))
+derived ✓ in C⁻
+Classicism.Research.StrongPossibilityConsequences.box_imp_not_eq_and_bot ⟶ Classicism.Research.StrongPossibilityConsequences.box_imp_not_eq_and_bot.derivable : Meta.Theorem
+  Meta.C.axiomsMinus
+  (Meta.Term.forall'
+    (Meta.Term.forall'
+      (Meta.Term.eq' (Meta.Term.box ((Meta.Term.var Meta.Var.zero.succ).imp (Meta.Term.var Meta.Var.zero).neg))
+        (Meta.Term.eq' ((Meta.Term.var Meta.Var.zero.succ).conj (Meta.Term.var Meta.Var.zero)) Meta.Term.bot))))
+derived ✓ in C⁻
+Classicism.Research.StrongPossibilityConsequences.diaNe_fixed_iff ⟶ Classicism.Research.StrongPossibilityConsequences.diaNe_fixed_iff.derivable : Meta.Theorem
+  Meta.C.axiomsMinus
+  (Meta.Term.forall'
+    (Meta.Term.iff
+      (Meta.Term.neg
+        (Meta.Term.exists'
+          ((Meta.Term.var Meta.Var.zero).conj
+            (Meta.Term.box (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia (Meta.Term.var Meta.Var.zero.succ).neg)))))
+      (Meta.Term.forall'
+        (Meta.Term.imp ((Meta.Term.var Meta.Var.zero).eq' (Meta.Term.var Meta.Var.zero).dia)
+          (Meta.Term.imp (Meta.Term.neg ((Meta.Term.var Meta.Var.zero).eq' Meta.Term.bot))
+            (Meta.Term.neg
+              (Meta.Term.eq' ((Meta.Term.var Meta.Var.zero).conj (Meta.Term.var Meta.Var.zero.succ))
+                Meta.Term.bot)))))))
+derived ✓ in C⁻
+Classicism.Research.StrongPossibilityConsequences.diaNe_monism_not_two ⟶ Classicism.Research.StrongPossibilityConsequences.diaNe_monism_not_two.derivable : ∀
+  (σ' : Meta.Ty),
+  Meta.Theorem Meta.C.axiomsMinus
+    (Meta.Term.imp
+      (Meta.Term.neg
+        (Meta.Term.exists'
+          ((Meta.Term.var Meta.Var.zero).conj
+            (Meta.Term.box
+              (Meta.Term.imp (Meta.Term.var Meta.Var.zero).dia
+                (Meta.Term.neg
+                  (Meta.Term.forall'
+                    (Meta.Term.forall' ((Meta.Term.var Meta.Var.zero.succ).eq' (Meta.Term.var Meta.Var.zero))))))))))
+      (Meta.Term.neg
+        (Meta.Term.exists'
+          (Meta.Term.exists' (Meta.Term.neg ((Meta.Term.var Meta.Var.zero.succ).eq' (Meta.Term.var Meta.Var.zero)))))))
+derived ✓ in C⁻

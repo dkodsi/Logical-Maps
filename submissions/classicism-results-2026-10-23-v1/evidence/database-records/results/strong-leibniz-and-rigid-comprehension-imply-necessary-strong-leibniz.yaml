@@ -1,0 +1,29 @@
+id: strong-leibniz-and-rigid-comprehension-imply-necessary-strong-leibniz
+premises:
+- strong-leibniz-r
+- rigid-comprehension-r
+conclusion: necessary-strong-leibniz-r
+status: proved
+certificate:
+  source_id: misc
+  produced_by: Codex (OpenAI), prompted by Daniel Kodsi
+  recorded_by: Codex (OpenAI), prompted by Daniel Kodsi
+  checked_by: []
+  date: '2026-10-23'
+  lean: stated
+  lean_ref: Classicism.Integration.Map.strong_leibniz_and_rigid_comprehension_imply_necessary_strong_leibniz
+sources:
+- Codex (OpenAI), prompted by Daniel Kodsi, Strong Leibniz and Rigid Comprehension imply BF at relational
+  types, §§1–6, and Strong Leibniz and Rigid Comprehension propagate, §§1–4, 22 October 2026 (unpaginated);
+  frozen submission F05.
+source_names:
+- Kodsi research, 22–23 Oct 2026
+proof: Choose a rigid cover of the strong worlds together with bottom. Including bottom makes every cut
+  by entailment rigid, even when an entity later collapses to bottom. The cuts necessarily represent every
+  relation by their joins. This yields necessary Strong Leibniz and, using the derived rigid power of
+  the cover, necessary relational BF. Haecceity coding then supplies necessary Rigid Comprehension at
+  every finite tuple, including tuples with individual arguments; the necessitated C theorem RC⇒BC gives
+  necessary BC. See the two integration write-ups for the full proofs.
+notes: 'Both premises are unboxed. The BF conclusion is restricted to relational types: BF_e is not claimed.
+  Finite and mixed argument tuples, including the empty tuple, are included for comprehension. No future
+  comprehension premise is assumed.'

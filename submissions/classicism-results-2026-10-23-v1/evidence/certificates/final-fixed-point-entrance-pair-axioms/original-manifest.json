@@ -1,0 +1,2018 @@
+{
+  "schema_version": 2,
+  "run_id": "20261023T190004354916Z-b9423c09",
+  "modules": [
+    "FixedPointEntranceCompleteAxioms",
+    "FixedPointEntrancePairAxioms"
+  ],
+  "cache": ".reproduction/classicism-lean-cert-cache",
+  "state": "failed",
+  "complete": false,
+  "checked": [
+    {
+      "module": "Classicism.Syntax.Types",
+      "fingerprint": "f920c6417fb0d73d4b6cb333a5de66a5647023a45396e3a09a0b7e943245c8cf",
+      "source_sha256": "567828e8f9a707cf635e3b4fb30bc868a419967307613d0686d795d195606eac",
+      "artifacts": {
+        ".olean": "06ab8b44ce7d7b6c90c25d4cc9e58b72ad316cb1c73e67e82c214ebc3117b126"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Term",
+      "fingerprint": "19fcc526fbf7a5f30c841e2fb11bd4cc6c4c8c77eddfb46e22a81b795035e2d5",
+      "source_sha256": "ad5172acbb74eaab9307662408928b80e6ffab62e14df16f2f41c7205de13f69",
+      "artifacts": {
+        ".olean": "4f77c921708f52a8d1c646e52072b7a63daab23afc54007f41eb669fc9d057bc"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Conversion",
+      "fingerprint": "98d38a7cbaf85616553560abf68733b885806aebd405d33965c1dc960da57f67",
+      "source_sha256": "c22fe48399811fcb0d71b37206c633749a7285291c62c2e7d786475ea6ae339e",
+      "artifacts": {
+        ".olean": "21dce520e2a4e2eb679fbf609ca34a6244daa22842f43fd08eaa4b9797224f6d"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Derivation",
+      "fingerprint": "061b31ce6eb4dec06fa11b50e1a6c035783c2a4995cd0969cc86efba8ddcaddc",
+      "source_sha256": "7cc2fd01542014d55e5a4c4a411724db7cdc076462d0de724c3530b0a8a3fc6b",
+      "artifacts": {
+        ".olean": "4f72cefd18595b0c00c8587ec3ece9b1d63cff25da1e72eae28d18701c32da3f"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Axioms",
+      "fingerprint": "ddbcb4cf3a000255234e36d2ee2916e31b5fdb7a72f348dcefbd8c9d3ca7684a",
+      "source_sha256": "f3dd3b51ef834f46f22e09fe34026f47120a8bc171afb190b5053c443f4a82a7",
+      "artifacts": {
+        ".olean": "9119e12775e212ad694373b4138c67f18f8d297a1b655703f033e65072ccf154"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Entailment",
+      "fingerprint": "f670afd73a6fd66b3870be6129d27860b6752cbea6867b77f897d6c298a0bb17",
+      "source_sha256": "13f758dbf41a84dda7c2ae7adf6bcb9605ee114ce04dbda0efc5f1c4fbeabb1e",
+      "artifacts": {
+        ".olean": "c561b23650a51895b766f0aaea9b30a8748f94111ded0220acc3ae1db4882b41"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.Env",
+      "fingerprint": "7f3e4ffe9d4d890917cec6dec7d2aaf714d1012d59ca370044660890a5a783a3",
+      "source_sha256": "ca6f223a2bfe71396b3e21de852057e432cd7b289005cdacc1cc24935358e09d",
+      "artifacts": {
+        ".olean": "df18221319cd753b2acdbf634c4f6aa9fdba66f43eb4fa9e4f721d6ebdbd0e81"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.Intensional",
+      "fingerprint": "9d77eb883c8b635b5d6121dffea77de109a7b5f6d16ce917871a07d23795e942",
+      "source_sha256": "9a58b1dd47b1b527209d1994ed2b9252c85dc012d019d9878c2cbcc58b6019af",
+      "artifacts": {
+        ".olean": "7c02c5fec7552f79ebd9c5d4edb23b0894161f4370be906f057f8d9c746fae55"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.IntensionalSoundness",
+      "fingerprint": "a7e4c8efed9df1832eed378acb451e6177765b511b38a2f2739330abe954cfe7",
+      "source_sha256": "dc34e26e6baaaf9270c067fb43303dc9a00dbc885b8da02ba1eb7432fe008143",
+      "artifacts": {
+        ".olean": "1e1a46c54e1297352a9abe49ec593385dc93305217e4637fc98b9b2d59574e25"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Sentences",
+      "fingerprint": "0145edf7be709542a1ad29e003cbe6162672ba9cc3611a2e64dd1fc6442fe1e6",
+      "source_sha256": "9d1511399b998922713f3d2bccea49249aaeba3a9de7f0f0b0b8153161adbd52",
+      "artifacts": {
+        ".olean": "06d13e4d91e245613f1e6b3b5e813e6118f868cb372c4f20df86a50ad67b11c3"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.IntensionalFacts",
+      "fingerprint": "ecd13cca404b5f6cc23d1836e5c2e7bc61e749794ee8592a839ef7ec0a8dc682",
+      "source_sha256": "6ef820a85da8854668976cab35fb79bccb5cb0f729fe42f94e55bb472bbbc5c1",
+      "artifacts": {
+        ".olean": "4d46898012e808594ff0515085849109982d7958636e8015a4679a6bd58a6231"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.IntensionalFull",
+      "fingerprint": "6dfa4c6d7952be30c2fb0cd69e9171b76fbc5791794f9386432ad39349eeca32",
+      "source_sha256": "96fce6e2a1e5266d2da663c7cac5f3b69822b70b524f6e0dc0c9d17f4ac74660",
+      "artifacts": {
+        ".olean": "3f9b7cfef37a34573598a63592439cb1dfb81adc39be215643e59db535152c4f"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Constants",
+      "fingerprint": "f75b3cf9693416f4db55cfe2411729e0846a4c088788e2381777b7d7250a14b5",
+      "source_sha256": "065903e72913a7f804276e59b801722bd078e447a1a637d1dc9940a56eb7b719",
+      "artifacts": {
+        ".olean": "b69a45832fb23b356cd9390cc55f4f6a578988c469254acb62d7d63e1be7e4ff"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.IdeallyFull",
+      "fingerprint": "98d24060848f09cf2841a9c3c3927626b32f15a7d170182c7e991c41dcb3e87f",
+      "source_sha256": "602eeb59dbc4b6f76b25e0cd0cbb3bed4ce58a68b1f062ac86ca251d24e38d66",
+      "artifacts": {
+        ".olean": "77d4cc6e1c5d739bd8ea5daf003360091429b0df58ec7bba1daac0aba97883c6"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.Denotation",
+      "fingerprint": "47123ccfe2c8a40639f380eaad25c1f45203bef28fc73689bea70efe1e17a4aa",
+      "source_sha256": "2103000e1da2b0ce5413fa71820b7cd579bf562b7dd50d704e058b5cda0c7925",
+      "artifacts": {
+        ".olean": "8943e49d76dab4523282e63d6b3871f5b027aa79b606a885b7f39b6c48a5152c"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Core",
+      "fingerprint": "106263f603fbfb12c1dbffa3c2cf0eea76f524ef90107bbd8cb3da5bc12c1ff6",
+      "source_sha256": "ed0b1189f3fe3f02ce7011058273c0915bb511e5fd30ae33340e7ae0c4afb81d",
+      "artifacts": {
+        ".olean": "4096b1bd17dd536827fe51c1c73322fc9aab46bb526e2a52047b47aff305efcd"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Equivalence",
+      "fingerprint": "c15347e4764c0cd4c37fb83dc17821c459c2f019c71ff77b7dd5418f14ca25fa",
+      "source_sha256": "257006775f36a2eacca652360f7ff8fb9dc403b2b0f4d71ff6a5543e5a939a76",
+      "artifacts": {
+        ".olean": "0d1bb97d26f635a7dbcd19fa367c8d9a7048ca8942cc8b7ac06afb80ab88023d"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Booleanism",
+      "fingerprint": "f911cf2a5fb044ae79d2a327477c43cb9a7123862daf4f0a13de28cb9b114b0a",
+      "source_sha256": "0537132563704170d7ec4dc14755690639a9a784428650fa7bf04067acc0628f",
+      "artifacts": {
+        ".olean": "98b8c05a117cc308217d8f9fe40833975b46c80582f0309f291f99ca031efefd"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Identities",
+      "fingerprint": "bd7da817f31150b2fce200b73d4dc1c0f233449954575d6c092805356a7c39e3",
+      "source_sha256": "3629e17eb7ebf28d47f0d1a2450886bec05b39bf73ff52eff99a88a12579c3b3",
+      "artifacts": {
+        ".olean": "4aa11b19a80924f3a86578537e0f8438ac21feb4d1c04c69a311204131a331db"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Strict.Axiomatization",
+      "fingerprint": "75d10f5cda5e4490d3c071b0df90ab6e993e1f8b49ef44c23385bbf4384cd1e4",
+      "source_sha256": "fa26c38979d08d22db2c14d999bd3c5454170e00e72f2781cf2cfa28910ed533",
+      "artifacts": {
+        ".olean": "e8e720586d8c63bf6e3d86e62ed138d0d883cc61ce1b65fddf4ec82e9fc98321"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Strict.Algebra",
+      "fingerprint": "3b91a9c00818b2ab297ac98f7f9ef7d1297ea71c3211927256dde821960cec74",
+      "source_sha256": "d4cb80885b688ee323e6f59b084568746247f751986fe2ea7efd53cb4e6969a9",
+      "artifacts": {
+        ".olean": "4fbef3b460d57f020ed3fdc74f992f1f1dc25707acf9e2ce0da3d4922bfeae6e"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Strict.Vocabulary",
+      "fingerprint": "dbfb4eade20ad9ccca5971fbbf339a69ddfd38ba620005e9fda008b18a4769b3",
+      "source_sha256": "29fad160fd838d15256273fae84dce3cb5381cbd876e7c6ed882874da295b747",
+      "artifacts": {
+        ".olean": "6ece3edca732b902bec9189727c0453f0d07537edf454651cf470280d1117ba2"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Strict.Tautology",
+      "fingerprint": "e6416ae6f402e7a857dd4e72529ee86528267661adc73dffcc1d3c113beba1b6",
+      "source_sha256": "edc88bb68c00443a3c309ad01da9c31e1325bc8d63bf0a2ba9392c43eebbadfe",
+      "artifacts": {
+        ".olean": "f4f1dd7c74fcfed307820e209bf59a9776a0a053ee909946d491b1d9f25352ae"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Strict.Quantifier",
+      "fingerprint": "1d77e224df5545bebf5ee4b686f7320a1a7e4b0d8133a9a477beb402f41ba4a8",
+      "source_sha256": "688f1a0f560a30f12fd4b4b6663fb7583fac374d9bd7591a55943bbb1b4695fa",
+      "artifacts": {
+        ".olean": "12fb1d4603c8a65ac9dcfcf5593512cc77c05019c9daf612b7a36c5a2e6bb2c7"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Strict.Rules",
+      "fingerprint": "210698fe0c53557f2ce0d2191ea61a830703dd894f4a23317c286200b9d22c06",
+      "source_sha256": "496f3272610ad5dac44de1f90bd394d38098d44f5c8e51fcc30e835e415a8609",
+      "artifacts": {
+        ".olean": "50b34fb97ae0d75ae892b240a4d2cf030de5e8e6dafffc4177c1a1aec4d272e1"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Strict.Primitives",
+      "fingerprint": "b838d093e66eb7e33b71039ae15168a069ca3b6899d9e9628ed698b19207208d",
+      "source_sha256": "b0875be460cec24411c21b6f5929f9c4f68485e6600317f1530adb0a20abd69b",
+      "artifacts": {
+        ".olean": "17cadc09c128c7d3a4bda4e889639534a90944380bf44524d9ebaccc9df74c79"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Tools.Check",
+      "fingerprint": "776b3300da237e0e891286dca86ac835286aa01dbcafb42feeb627614b644a1e",
+      "source_sha256": "20fdb6525e533a835b5d561bce9529e553de2a3fc1b4f6416235da7f52da6cdf",
+      "artifacts": {
+        ".olean": "9e6827329bb5bf88147f2bdbddb4b944bf721ea1538eb3a42f5e7d36c3921ee1"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Strict.Transform",
+      "fingerprint": "edbee0763bf36f5f496a5401c2abd79e18f009a8126625af55c6274a919abce8",
+      "source_sha256": "477d7ea0d6a8c0e438bdf1fdb29c68e79512216094ae8c8c5851b47133afe3ae",
+      "artifacts": {
+        ".olean": "d50f145784bdaa4c9cf53102f0da3ea2728ac28414017dc76510601e5defc1c4"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Paper",
+      "fingerprint": "aaa8b005d16eaf5430deb1709123bd2580dad38978e3ce7d05aa6d7620b865ee",
+      "source_sha256": "3348a9c2bf786ef15a9a2a0341dce82e9a419e81a4c7b7486d8c8cba8fbdc895",
+      "artifacts": {
+        ".olean": "4e19b4faa931dfd3ccfce2cd899744dabf84bd9200738e628b5bf3b7fce52f25"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Modal",
+      "fingerprint": "aeb651c0d0142f7a25017873ee1f4be90965b19e415ec41b66e58440c7c19d55",
+      "source_sha256": "7706449a7246e0be0772a33dcda61ab010686bf5bd64c45017425bf39ed0cf42",
+      "artifacts": {
+        ".olean": "57d01043696149874d7a869f019589434bf50ba324cd70d1507348306a8bd22a"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Order",
+      "fingerprint": "9edb507c8661fe6508eaaebb576f8bdc6977fb69bf17a2bf85a5a820dd6dbaa9",
+      "source_sha256": "4755de0b5eb272e541ce89e84078c4d80c3ae9a332a6910b395c73b78a2b4730",
+      "artifacts": {
+        ".olean": "4c7788e753989740fdb5f59938f8013bb629477369196586e15efab2d1ff5ce8"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Pointwise",
+      "fingerprint": "729e1d6e9b2ee057cf9887f1f9c08f1b7a8df301e2ab21f010105588f37e548c",
+      "source_sha256": "78b858a9d33feb587976879190bdf739afdc0e564c4e6dae5508f8f2c5e15a16",
+      "artifacts": {
+        ".olean": "03d01c38b61701d9f193fe0abd174ebc08a63a60213701a0ccbb3823b3f3cbc0"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Strict.Mirror",
+      "fingerprint": "2fea6fdaa69890ff9f271ec775a3965a463fca7420bb45b3651ff573593a701c",
+      "source_sha256": "c9aa802c99fbaea769cb8a88af075fc434b3a9073bd9187f9d00b0e6e82451fe",
+      "artifacts": {
+        ".olean": "dd97c6c376b273d72d75a452b0f3bffd065ea9714b74d47c300a67075748fabd"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.Relational",
+      "fingerprint": "2c859cefe02fed00fabd827c711476aa72983f9b0a67ae3404a315e8d3578f4b",
+      "source_sha256": "b9424788860fff653c01277d1d1e1e2aa257b0905ac02b0879bb6029a1c5c32a",
+      "artifacts": {
+        ".olean": "10b1ebce4afc1b45e57ad6dae5e191615874ad7ad743568c9efd8a7c77c35a65"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Tools.Quote",
+      "fingerprint": "d4220ad0869558cc8b1912a64517dfa6def53f00ff6a4c8a6975e86b062c8a6f",
+      "source_sha256": "9539d77cb6894442171628c10fd8f4e1142fa8f7f99e80fac7dc1681c7eb96fe",
+      "artifacts": {
+        ".olean": "df567d6aa7ef8710b8fb037cd2ae85f69f48f9a182d41f80c43d498afeae3362"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Normalize",
+      "fingerprint": "fbf0db0b6d9b8b4ab8a2144e85b96ccb9e7913e2c49e0cdd37ddd06fd80ff5bc",
+      "source_sha256": "1ba19ae01872f7d4357876e2e4c47e4f675cf6b733be98c1947838a1f0c94c1b",
+      "artifacts": {
+        ".olean": "466cabd2038839e898f9d083889e601f02dac99cec2e0816d94d88dae013ea80"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Tools.Translate",
+      "fingerprint": "85864cdb936fb71e2851a6bbcd0ce58b9bc1ef8bc76041dcf6b1cf70f2585f94",
+      "source_sha256": "471e8a2a7ab42f306e986af1320f0bd7f4d77dd073241e3f77234bf0fc5d6ba7",
+      "artifacts": {
+        ".olean": "e1f7c98b7f2c40a7ce40f5fe54a313881050dab1a04f491613f7d8f3961cc69b"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Blocks",
+      "fingerprint": "8f619648c1c389b21f3ef2a40567f20862d30330a0620404a743ae921b4637a2",
+      "source_sha256": "77b4ef8fadb3646edd15d25854bac994a6eabb8bb1f51347c9dd00fce3a6ac5d",
+      "artifacts": {
+        ".olean": "311996802ea136c940f6231659fdd0256a3267f5a4f5ad2ad7817d75af70d32a"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Vectorize",
+      "fingerprint": "c57e9e1a546872e4dd5521dde4e9e8200b4a7493a6908e4ba2bacd5c6ba6d27a",
+      "source_sha256": "b57548b87b70c0e9df1c0fd48a1f7b7d67d4828ab4d4286e164e7f32c4716817",
+      "artifacts": {
+        ".olean": "54676fc9c944d5a3d3790924422e2f96b91f632e553468b388bc76e0126e0735"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.VectorizeDerivable",
+      "fingerprint": "bd67d51fc6c088c18eaad5508eb23b8f2044a69e4884d6a45bdd37a678e66df0",
+      "source_sha256": "17508c58aef3e3ad7b121f20349045d76c5e238a164cdaf96c2400255c492824",
+      "artifacts": {
+        ".olean": "2cadee08cbe83be4eb007873437b03c95690ef5b51babe5c034e0bc3dc4ec7e8"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Tools.Schema",
+      "fingerprint": "25ff9dc1de7945d2755a9b5a2c698f54770a56ca5ccf8640229f3aa88244ca3e",
+      "source_sha256": "809bf8692601598451770b6422375de71cddf6e3d4cacc651b3905119fe40d2c",
+      "artifacts": {
+        ".olean": "255d53a068494804cda144c2eefdf3cea1597f1d8abfbd3828c2199e1be5d9b8"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Comprehension",
+      "fingerprint": "a9852412a839671a35e9e0896f46b99a2bde4b234ad60eb3fc2c83031307c89d",
+      "source_sha256": "570435f620ec40a8c0f359ce546c26933cf3acfc6e7c8da81fa805170f9ab844",
+      "artifacts": {
+        ".olean": "813cf9f39a4e486f9906dd6970d8415f635930a982f8e01a96d08ca29cca9275"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Lattice",
+      "fingerprint": "c368689dd8447ea18e0e6f2ec1e4b7ad2c3c7edda0966c048821360eb1c8a18a",
+      "source_sha256": "43231f5d30bab05bc0d11927e1ce09f17ec384875e0aeb1cb72335e36f046070",
+      "artifacts": {
+        ".olean": "277da454f009ca7f6353f6463dfcf355a405b20c70a33a27b0717ba0771abeb9"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Principles.Base",
+      "fingerprint": "ab4f732bc7258e157d3fc29f141f434ac9ab5938638881f7155a997f80a7f0e8",
+      "source_sha256": "d0c930dafb5decf6e747b5a05215cbff099d4efd9e69c607f01a54d5c5a7b96a",
+      "artifacts": {
+        ".olean": "20e49d1a2b8376812d19aefbe611bad129d3d08459df5944869bce4ccd6701f1"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Principles.Coarse",
+      "fingerprint": "76eab9f7358a051bbdddec8ad1a302e1345c81f4ab97286478089a63d093bcb6",
+      "source_sha256": "5c3aedc0a4117e7c214d186b384c42b8da6a17906fb7a76a75cb625f85b0a9b2",
+      "artifacts": {
+        ".olean": "c3458dd19b42db171953accc7786ccff05b7f4b526f911d0b95d68ce2d7409a2"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Principles.Extensionality",
+      "fingerprint": "9025e1c4813cf45bef21ac78a21d16336be645f0884d4d1649bd254136f00691",
+      "source_sha256": "aa1929fee457845f79c2511b4df86462660ed1c68c3f85b5af8636a88a8f15e8",
+      "artifacts": {
+        ".olean": "a0e9e70fef6b3fc46f7f2e60d8f4e2885acb0f75e7932c4f4bda4b94a0c2a1e4"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Cardinality",
+      "fingerprint": "d354798138ba7b815909ac80ca8a657201589e1a2eb24574d3b10fa89800aad0",
+      "source_sha256": "5e627927356fc561dfd5bfacd9935c558c7760678df56c0158820a7e8626703f",
+      "artifacts": {
+        ".olean": "8cf1865ab3aa041a124ca962c33e049fa16b0ef84b346833bf2ba918b388a515"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Principles.Lattice",
+      "fingerprint": "3d83865391146079266ebe776437ddc36702b3cb58e6696f765f58d1d6251481",
+      "source_sha256": "95a7c96bd3f2c0b131b59412ee36c288b9f12a772075e8f6ec83d8177f6ffd60",
+      "artifacts": {
+        ".olean": "6bb64bf3b5e1623438e4a54aa99e7d8113e81f314ee929e518622bdedaba1d14"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Principles.Instances",
+      "fingerprint": "dfc5c55bc0561b807cb84a4071560636c26decf4c17c1ebe1a0dea22de341f72",
+      "source_sha256": "53835a72c249e8f75246e6b42331d205b8bec73a8c03bc2d1ad48db37a88e47e",
+      "artifacts": {
+        ".olean": "e6d465b99bcace775f20593aab1452224ed141f7354dec32581a28d5a602bbfc"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Principles.Comprehension",
+      "fingerprint": "0806ac413a479f8402a50834da9de38bd9d240531e2f4939100d2c6c36522648",
+      "source_sha256": "7d47cbb2fcbf444bd1e708ceeb9d007c1be955b41346b2adf14f5613ec7e2537",
+      "artifacts": {
+        ".olean": "500bbefccaf9aefc0f12194986abf67df699eac76bda2f96e823fd6382e36230"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Principles.Choice",
+      "fingerprint": "878f21beb4ceff306504037b182cbc9f7550e03d97906b3a0944faf0a5feda3a",
+      "source_sha256": "a8f7e35f1a11805edc2b116b6af002bd5b1d0708b93aaea16781cff519687319",
+      "artifacts": {
+        ".olean": "f1b45329aa59ba7c22d957cac5caf99a0ffb30a126e54ebd05a6d52e1a689b0f"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Principles.Infinity",
+      "fingerprint": "23a54de0b017227984238e63c2e0f9dbcf161c882b26c0b5b3dc96df6b80cf05",
+      "source_sha256": "9c901565490f92a5a6b18ac1cf690c756bb5984e105e885614b87dcc00db027f",
+      "artifacts": {
+        ".olean": "04665c2ef5c822fdedeb15d1a219af3c744d4845d1a3ad8de78e3b347293e015"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Principles.Schematic",
+      "fingerprint": "d27de11d8d474df8c930f8cd67247ee53d91a5a5e599871db5fee77a22faab75",
+      "source_sha256": "f6e0fe85d4c7f95deb80b98e19cf10e292ac98d87a5c2caec2ddcb9920e677ee",
+      "artifacts": {
+        ".olean": "61804af833b257357059659da4954fc4b710aeb3c04cbc527c1b114c7fbb6f3f"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Principles",
+      "fingerprint": "90ac24ea6a08c605e49932af32624ff01f216ad7e7d49d18939526b521630593",
+      "source_sha256": "747fc5fbde92a7dd1432aaaafee00437398594ae06dbc8ec2040690fae443049",
+      "artifacts": {
+        ".olean": "c8fb4965d740ffdbf260a245b9c1e59e7beff90e5a42191aff31828c6661d4a1"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Records.Base",
+      "fingerprint": "a89655f6db873d5961080ab8978b6aa6901afd05866b4d1c8fe1ad5f87f5b98a",
+      "source_sha256": "43794a516d90505e3c5b48267ddfe110b8e482b881cc1300f2e2ee182c2fc2db",
+      "artifacts": {
+        ".olean": "80585bfa7a293e518eb831134da927589abfb25fb335471a4cb0fc9a47be1d68"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Records.Coarse",
+      "fingerprint": "e503d7f7fb5c97d55b42b9373b4ca421a21053cb14bf9476e0461e2517861b3a",
+      "source_sha256": "a3a6e0bc0120eecda1097efc51cd29c0d95daa15b81535f36d7dc6dd1d434882",
+      "artifacts": {
+        ".olean": "ec6e4254a53cbc4d3ac84814238493d6b25b2854ef97ca47427f8bfec276863b"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Records.Extensionality",
+      "fingerprint": "5278848a501c9d394d348e1f8e2a7c67647e2d7517c11a61cfcec6c8cd945595",
+      "source_sha256": "0a1d58485d6e8b0b84d68d973027dd621394ee0c4d1579f08746f10558f0a34a",
+      "artifacts": {
+        ".olean": "2be66ae68300e8c156d0e8028e922913b1650a9fca182aa2a34ff45ca3ffc836"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Records.Comprehension",
+      "fingerprint": "bf24680b17f62ba015aced980ce9229c0f35e07fded08e07d507318d0eb7541f",
+      "source_sha256": "552f1c10d3b02f5cae87392141616f5de2200655837e07ba9b367e7bacfd77d7",
+      "artifacts": {
+        ".olean": "162be8608efc02a35b68531d97c48518b3bfd4900c1bc779de0c0ead0bb77324"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Records.Lattice",
+      "fingerprint": "72ccff7b7955700d02d2036f14c48af1c8a09aabed9290c029cbb8e4211ac2f0",
+      "source_sha256": "e5adae1ce94a42f477aa629e4f5b739aa78bf1f7a3abf785d591f4d3a62690f4",
+      "artifacts": {
+        ".olean": "ce145b63eddc8c7249d52c201ef10f17d39e8330f4ae4563a8405248813ea755"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Records.Choice",
+      "fingerprint": "4dff099fffd7658cf1c6336160d3987ad42ad255fdc890012a3c6bbd7a4f57b4",
+      "source_sha256": "28a17b666e917900329a015b2bf9cf3a6848a811762a6c862f6ef58135bf77ca",
+      "artifacts": {
+        ".olean": "ed470c8e7d4f5d705cff4a3d632ae7740176da5f5d764f1fc0ba7859224306ee"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Records.C5",
+      "fingerprint": "d72b91823c9c4110b92ff5a60a905501ea3c6c8f0444ef454251c50aa2ddbc05",
+      "source_sha256": "670269847531e12553369ae4105b0926f8613883f8f709b94cdc88917eb49b7c",
+      "artifacts": {
+        ".olean": "7a42a73a1394a5622b3bbf734f3e2733ee52ff9714a665cb26203332906aae66"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Records.Infinity",
+      "fingerprint": "401d152fd3baf0e0d0be4bcaa09a9535076c062e05496362922d7409a9388684",
+      "source_sha256": "dd622a8252d4bc861a68bf939b25198d39db51c119e89911e096b0523a3a1ba0",
+      "artifacts": {
+        ".olean": "4599c4caad09c95a5cb4872aacbd0085b876994c2e54b7690e91d27e559c4a74"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Records",
+      "fingerprint": "f7561c09837d9f950ff8fccdefe6ad21a6605a9596f3f113c23466b1f9b42d7a",
+      "source_sha256": "6d6d399aab1e7f30eff9a5d385635ae311228e4faf03ce36ad39d5a1d22eede6",
+      "artifacts": {
+        ".olean": "2101e40096f46091682c9bffccb7eee7a6cc06961c165a0d5c15e6197b9e42e8"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Certified.Quoted",
+      "fingerprint": "1e283621c0adaf00cb814e51025789426076fdd410e904743f932dbf91b558d1",
+      "source_sha256": "4f5e539a45bf30cf758effcd38c59330b95160a09aa57b08130226c491896447",
+      "artifacts": {
+        ".olean": "9cdcdd2343f85a6c3084b26261040c661852e82bea2d9af52e64895494de5bab"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.ClosedTypes",
+      "fingerprint": "7c976b5b1656d60de70508fea43275956cf95917fab784ef3eb9d627e6c2c7fa",
+      "source_sha256": "07ea7d86a0ec8faf8da218c04b9ab46c0b3b941c5772729340de705750227968",
+      "artifacts": {
+        ".olean": "5fd0f066f66ccc53e9729b71b99a088d18df0eb101e505eeaa60a3d77fb77440"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Certified.Schemas",
+      "fingerprint": "3ae397512adfb86dd4ad499f6383c4a85ad1cfa2a97adbfeb6d27ad2b63e1bfc",
+      "source_sha256": "5473826bbece5136406e9aca792c6eb38e93117d142bce275d5a084803ad4a38",
+      "artifacts": {
+        ".olean": "937b8eb4acc2838db7337aebadc31af21960fa92440d0c3d75bc84918112f8e7"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.Functions",
+      "fingerprint": "4cdffbde5035e2b031e0804d30490b4aeb406de20342f16db6151a5308e58f93",
+      "source_sha256": "634ee93c9d402f301943c84f38f3f26766be2a267de09f6a24263c3d050e48cb",
+      "artifacts": {
+        ".olean": "94330bc9d9c42deea350168b66bf126306e86fb9b795bfd4ea107a53389e12e6"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.Symmetric",
+      "fingerprint": "0109ddc9ba670b0f74c5ff90965ca98fe64e14cc1c50860f80b363bb1b73af9a",
+      "source_sha256": "f05e1d25c639d79c7722a097ca766939c7d77734e326bd834c7f29ac56056141",
+      "artifacts": {
+        ".olean": "6a9723166316098afb6f2c9b8ce81dd1c1ecf75c48182914fea762be29517056"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.FixedPointEntranceBase",
+      "fingerprint": "fe25882508c649e7cc1cf7dbaeabe13e6da6cf91f14f095c9de753aedbedb4e2",
+      "source_sha256": "ff810802fe0f3dfd0ace450a444e3acf9dd08f6c290a06b16c756153cfa45b81",
+      "artifacts": {
+        ".olean": "7daaf01091672927ceb734661015d44b2da40fa19e7f52addb4306c7f4787492"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.MonoidModel",
+      "fingerprint": "2ddb799def2b0815c7fa0dc14a31b5cf187832cb5623f8335db459889fdf32ab",
+      "source_sha256": "abde7489bb751a3e38ad666f896ddd8d5304ccca32d6118b68cf8d91cc4f6e3a",
+      "artifacts": {
+        ".olean": "6fc374206c933a8c9f6d3a5961de9dc308236bf9f599d617f502ab56324fbdb9"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Pure",
+      "fingerprint": "b3ed039a88f2c75849fe66eba343cc1eff7adfe692c2bb4643481e01f5de899d",
+      "source_sha256": "34937a7fc2d4c62a99863e9a0a161f56dfe2ca06b5f5d304ea8d2ad13f7c41a2",
+      "artifacts": {
+        ".olean": "fd7d2e72f794a6fcf351c9e4d740434170b7852cdb11a88028d9e7267637d314"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.SentenceSchemas",
+      "fingerprint": "f29a7f058ee358e87f7c7844f03852c780119c0f21e999cc1d95af231702d159",
+      "source_sha256": "4956cc5f79d94287bab644bff62b9eade4401a602a61e469ed0260a0007c9541",
+      "artifacts": {
+        ".olean": "794e5a1f6c3b899f35d600ab080c13356ce0ecbbd7c29bf7886fe2c53368d5d5"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Conservativity",
+      "fingerprint": "ac6b0e5092453e726e3052d86201794e00fa3165e242c24ead72f335e7a6106a",
+      "source_sha256": "9f5aba4cb5b54944a6486b4f4b50f37328245c0e3d246c401859b1d7eb5ff4bc",
+      "artifacts": {
+        ".olean": "fd897f797e6a3cbe47d439760e4a913d512e3d80c05b84002b8fddf6aa7e0e4a"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.IntensionalTheory",
+      "fingerprint": "f24a5aa3e8ba0e5286f883a3011a69548a75c91393e9ae1277c8d2efc7463709",
+      "source_sha256": "99bec918ee24851e7a1beb3482e53f1362c262e0928a670c1f7c30cde5135988",
+      "artifacts": {
+        ".olean": "5511a7eac6fcc081a4a10feba6f64939ef4c2c2b18903e37c71d749436684523"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.IntensionalProperties",
+      "fingerprint": "0b936ecf7453c8898ba28ef619b4aba10587402b09162f630a3bfb8db8da9086",
+      "source_sha256": "d19b0a0eae6b030dd7371406d3ff601f029cce89f959238a356cb0f0ec92f81a",
+      "artifacts": {
+        ".olean": "fe551e671bcc7845cc35ef2f0799cfc5621d4ef9026bc6941cb2f593c1b9aa67"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.FullModels",
+      "fingerprint": "c9a32a2aa0e3459b4e8daf4d12c9be8b4c6a78e754f03bbbdccedb6118a0c26a",
+      "source_sha256": "4d2d82d33d3a72e196cc4fd0ff0ef4c6675154dd334d23dd97edeba8563c6a74",
+      "artifacts": {
+        ".olean": "2253109dafd750c349f9d81a045e18fb3f4719263672ca0dbd257bff86782d9a"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.PossibilityPlus",
+      "fingerprint": "898838aa45fadf35863c0dcd7f0be4e3be9c292a5d4bdcca640342aaf0ad2807",
+      "source_sha256": "7ada6db1f3c90342fefd03a122dd72c8fba769615c423bada74e16df5d98b936",
+      "artifacts": {
+        ".olean": "68573b452462c1c088920fe9379843df89f33003cc5537ecefd4fe7b3ca493f5"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Syntax.Infinity",
+      "fingerprint": "4afceaa28586c72245f243b0dec892835b1c2793b5dd6c68a816aa38d2fe0951",
+      "source_sha256": "e0aa1264bf6de20dc159cd14baec4e9878e21708f70744f32c32a59df38f8489",
+      "artifacts": {
+        ".olean": "bfead00771f5e6234f8ab84d762b720111d552b9d18964f994c955a6fd669294"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.Counting",
+      "fingerprint": "f23e79e38f770535b0aece4ad717612d955bf0bedb05d38fdd658e8838058b81",
+      "source_sha256": "da2faa6d9a09342a662bf42a53e95e9e3f22e5d2688c2b2a8243b5f31fae0b1d",
+      "artifacts": {
+        ".olean": "919086fea71a3f7183831cf45d27886a1ff383a4c89680b28f826fe035a48108"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.IntensionalExamples",
+      "fingerprint": "61e5fb569137cbd6996a31a869008721b37bb333a0aeefa238837d3e2f3c2667",
+      "source_sha256": "6a412c5a5fcb6fdc0fb565f19e91279aa45627cf8c517e113ab4d7d5589516cb",
+      "artifacts": {
+        ".olean": "a681122f4dfb5b6d875c36d376e2730810686eb67de40bcbbe4f67c9edc410f2"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.Arrows",
+      "fingerprint": "d5d9716bd009b92b442b2d70fb903e47fdc3212e006bc6543d26129aa948ba69",
+      "source_sha256": "aad3ca007c13ffe2f5a131466d34ddc20abea55cfa7465447de07411cf1c6422",
+      "artifacts": {
+        ".olean": "6b24de2ffb78ef768905225487e0d914e935ddc0875607391c4f11678b4444bb"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.Numerals",
+      "fingerprint": "4a7493983dba6ad2b2b8d37d1dfebb52603e5666578805c5421461ec07d002b0",
+      "source_sha256": "0a4c795603531348c29281b060674eab0757ed576c0e3dbe507590fd7cc2978f",
+      "artifacts": {
+        ".olean": "cd6b1eb4001bc29909c559fdca76fb6bc2eb7c3e6233b733dfbc62975d213534"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.Conditions",
+      "fingerprint": "6b78d4e2b55fcdc6a2788c79db879e49f145708b8ae02ae35218a353a4863ae6",
+      "source_sha256": "6e612b4893e719f02ef33cfecac4899ecbdff8b50a20f67db500499fe5af2929",
+      "artifacts": {
+        ".olean": "13f9f3035a0be19b747f81b1d99d39efb463aadf3aa7bcd0a101e9a78b7367b1"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.SymBase",
+      "fingerprint": "7a91b70f8d167f2d1391fe85b06f940d790e43d37b388c1c3f8ac6d4d92dc39c",
+      "source_sha256": "69feeee9a106ecfd2d8d1a1987376156fb543223d2ebbf60c003081fdeccd7c3",
+      "artifacts": {
+        ".olean": "136e2b3614420182727c79f4d46582d822c2db738c6f4f4dbf3582afdc013955"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.QualitativeLinksBase",
+      "fingerprint": "9c006502c958adbbea8708a35cb80141e66cedfd60c6d983d9d2788378a102e9",
+      "source_sha256": "09c0514c75c851c0ad852c0993a28618712b0d8ca4c8a91a1da94a3750bd6e5a",
+      "artifacts": {
+        ".olean": "d73921310cdfd3ee88903c5f7edaca1496d2b3b8535fea30ed35ece5c55cdc70"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.ExternalPinning",
+      "fingerprint": "c1c81cb4a7894c050f81bdde239caa892a97c0668609c1535b367e3aa9fd7bc1",
+      "source_sha256": "8bf8d060b7971ecf9cbbf34e3d86b307b51fe1a4aeaef6bd86665840d0760132",
+      "artifacts": {
+        ".olean": "b0fee714815ecc591b94aee0c99ea631ea6d8d00cb8444f38e19950ef5670823"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Semantics.SymmetricExternal",
+      "fingerprint": "090410afb71406f207bb1fab6680ed4080562642915fe5ffa023c8bc13b49f9f",
+      "source_sha256": "9424f8acf7925d57e50993b75067d93954180e3a3076d591bfe5ccf270248a93",
+      "artifacts": {
+        ".olean": "b7c3d7bcd23a3142e1859ab903f8fab85e48e636e35c02fec405e639892c8c4f"
+      },
+      "seconds": 41.98,
+      "exit_code": 0,
+      "log": "logs/runs/20261023T190004354916Z-b9423c09/Classicism_Semantics_SymmetricExternal.log"
+    },
+    {
+      "module": "Classicism.Models.FixedPointEntranceModel",
+      "fingerprint": "fe264987bc3ca226c608bcf162ee003082c59a0f92c79524734cbc3b1ce9754a",
+      "source_sha256": "09fff17b1a5a2ff014e3b711cf97f7391146192ce71450d2e3ab4b5549ca731d",
+      "seconds": 88.23,
+      "exit_code": 1,
+      "log": "logs/runs/20261023T190004354916Z-b9423c09/Classicism_Models_FixedPointEntranceModel.log"
+    },
+    {
+      "module": "Classicism.Models.FixedPointEntranceRigidity",
+      "fingerprint": "1eab131f6dab74ad9834a67a54adff28e531d70700c0a64520c30949413a294e",
+      "source_sha256": "e4f57d9ca84baac6784eeed54d2c98365d6eae8711b5d82e4a154f72a5260e6c",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Models.FixedPointEntranceCompleteness",
+      "fingerprint": "8b46b76de7fc8d462879ad7bea3e105082694c611a6d874b0a9f648ec44222e8",
+      "source_sha256": "c702edb465f9e08e3975fc0c3a868b480182bd8b1726d52e6b3fc92a51f65965",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Models.FixedPointEntranceComprehension",
+      "fingerprint": "b2c8ceea7857df718af71f3dc5c18d69ddf4e6500ba60af328e6a889ec83b524",
+      "source_sha256": "540915dee7cefc54249732b9e4f0309ce57ba93a91f27e9bb9e5d7f83e9d09a7",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Models.FixedPointEntranceDistinctness",
+      "fingerprint": "4c8a26c10451991d9f147c644dbb26e929a72b7db7dc4c080d87bbae25451007",
+      "source_sha256": "c3369f5908f43381dce9724cc5a6c8e2c792ee2c5a2646370d5fba17fbcf2a9b",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Models.FixedPointEntrance",
+      "fingerprint": "df6687a060e1607b21dbf05d3ed5cb7dcea0852e4eb259099ba1ff0888b711e5",
+      "source_sha256": "89f3710986492299fa04a7efb3ad2a5a97e1c833ba39bb9e8dc6c617e733f787",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "FixedPointEntranceAxioms",
+      "fingerprint": "920422b548e2ec030c981ebaaab096304969bb11ddfd3e778f3fd44133834ae3",
+      "source_sha256": "99e2bf45550dd01410e02a4b427d6c5eba42e876f6401fcfe81286eea5e7c337",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Models.FixedPointEntranceChoice",
+      "fingerprint": "7c7db719f15514d4bbd8c1aeccdb09972781d956fe17401d8f8fbcc1b171c434",
+      "source_sha256": "7553cf2a45136c2df4d178ce384a022c5cb2827135394c58a6f858377705ab2a",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Models.FixedPointEntranceBarcan",
+      "fingerprint": "27e180de1e6694bee2aedfa33ed836235ccb080034fc97b2f1e6a4781cc7c03c",
+      "source_sha256": "a5b2cd4c0befef450185bdff63d2bd0d4c4d4a4ccde98d7a995fd47db66354f9",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Models.FixedPointEntranceAtomicity",
+      "fingerprint": "7b0682ebc3f47a8d0828312728822854b9a555851b2182773ed47a9be53699d5",
+      "source_sha256": "30d83e4951ccc76d9c63ca7018d5ce9c0e27221fb8ebf3683cd8498dd642d412",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Results.Research.InextensiblePower",
+      "fingerprint": "1d37458cb6da8aa68448ddcab5e7f01e9e529d4e207c2b95445706b9f1fbca7f",
+      "source_sha256": "4217d104bf9723242cb0523c486a89100741f4f3ccd6449f072b0be01e037bb0",
+      "artifacts": {
+        ".olean": "c968de546859080b55f6346d260d0d80d48b95ad3bb76b2c04e165d40e747782"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Tools.TypeSystem",
+      "fingerprint": "7d43a0f804e634b04dfb5d6048b2d32c7608b6aedab9feebbc25cdb158a9a6a8",
+      "source_sha256": "3db785bca90f4e2961bce8e7bde2d6bbd418e9e4c67ec99acae2251cb89e88e1",
+      "artifacts": {
+        ".olean": "39ffc333d68335ca334761d681010072b46a3fbb0e1ce383e1bfcbb6f61e37be"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.SealedWorldCover",
+      "fingerprint": "6b293e4f4340bc4e24cdd0347e2bf676c1507305d790046a77a4168b8b8c8fc9",
+      "source_sha256": "828a016b24f4e56f5c3de9367ceebc11c0d602c9a803c61dad857ea0316c725d",
+      "artifacts": {
+        ".olean": "d129576be8e6ecfdbb97e796975e91d74d742ce560f65415278b147030227cf6"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.ModalPropagation",
+      "fingerprint": "ca3f15d42c2b8e2ad3bea553dfc650f1afb4f2136cdb669bd3e741ce5a1f09e9",
+      "source_sha256": "23bd129112da003c511b2b7b8c88d2d8b54a21b1976445007d7c950ff86419b7",
+      "artifacts": {
+        ".olean": "e4d34118ac6ed576f7f298c80cc71cf9528bc6a45036d92a2ebd826fb288c813"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.InextensibleDescent",
+      "fingerprint": "7df8e0eb732f555d2246f565ee38cf7a4d1fbab81c3b6db1a77883283f257404",
+      "source_sha256": "e845f9a4bb714b5c0588abfc2c37918acdd8523b19584a3061017459467aed2d",
+      "artifacts": {
+        ".olean": "c4122b11665f073811c63c7aa81b3d1267c6673e91b88fd79bdf3129971b03ba"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.InextensibleRigidPower",
+      "fingerprint": "09c68cf49b79fab3bacdae9e89b68ff7dcc7f7aa9fa3f75d26484d50b77fc1da",
+      "source_sha256": "b4117f7bfff4da567394d0f225e8f8d7fc71d98c9e0ae81d8da7dd06a273506d",
+      "artifacts": {
+        ".olean": "4f0c458383dba1708ddfd230f10db4c6fdab274b29017ece2da22cb7a9da5e6a"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.InextensibleWeakPower",
+      "fingerprint": "fb79cec46ef0f063e3e038b489a5006b0fed762f0566fcf4c8dcc85ef1392619",
+      "source_sha256": "f284f253c3b4740fddf6933d56a9902948b9ae6efee13841e8d06574541bc7e3",
+      "artifacts": {
+        ".olean": "895bc9774738eed845a1393feb548d1d18ac608f60051d6d1797fbf51e2275c8"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.ModalRigidityDescent",
+      "fingerprint": "98fd25af2dd0b8bdc4bd669f0f41b2988874d91b658ec040a3e2aa3c11427434",
+      "source_sha256": "e5f3a4c9ee6aff754ed84553f1736196112a2dd5d6bd683a2885b7435dc92270",
+      "artifacts": {
+        ".olean": "fc0f15d8e6e19aea9fbb2556f4639e6fc11bb7bc8f41a39ad389dbb87060f1fc"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.RigidityClosureResearchFinite",
+      "fingerprint": "4e193498f42b8f8f7b29387e54556b9fbe85cf326941abbb574ea2447dde116d",
+      "source_sha256": "8d1bf44fa65e1fde5a1a8ba9dd2aec780011520e4c1abe0af51215fac39bc490",
+      "artifacts": {
+        ".olean": "0e55e49b468f630d65d18794d5ddc37eb33ae63e067672f0f05047a5cde93f0f"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.RigidityClosureResearchFiniteCertificates",
+      "fingerprint": "4638e27a802828aa4e3d7194bb1f2addab65ede84e32f26ef49b230b938c6a66",
+      "source_sha256": "530d9484d3d363572716e0174f2bdf9e2d7cc055ffe9a686c66e046bbca039a5",
+      "artifacts": {
+        ".olean": "32ce44e1d0ea64fa090ef5b5bb15a9dce1e50528fc1351bddbf0a8a22736cd91"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.RigidityClosureResearchJoins",
+      "fingerprint": "ea670c242fb6dc06a39249939b90618769da55128b8c4e16140b131e37df78e8",
+      "source_sha256": "e76ebcc0b34a0d2d9f1854e2cd05526628345010bd25d3337bd0d041faad066c",
+      "artifacts": {
+        ".olean": "7e24a541e808a407e8eadea2224f950cb1798a88ef3c1a0fd706548565ac5ec8"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.RigidityClosureResearchJoinsCertificates",
+      "fingerprint": "d3b0e867ec9826c4dca4d9b57126a51938902966b0ef45df709e4b92858611fb",
+      "source_sha256": "36a9f94701246f11ae71c9aa7ee286686c26649493947fb9b18a37a3d70dc6c1",
+      "artifacts": {
+        ".olean": "d1f7c8801d298634ba726384765cd2247b51003bca0e552b38505e4f55d547f3"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.RigidityClosureResearchClassification",
+      "fingerprint": "ea3b3350a6c5d342fc1af763b6fa1aede6ed10e77256a39ea07d0d95907ce7dc",
+      "source_sha256": "668fe461733ce9bc64e063c5e5551fde1a6671c3c1167f7ce2282cbbb1b19625",
+      "artifacts": {
+        ".olean": "89e62fb63d12f37c003a1e699d89d71988fcc9a655fdc8a8b019a63739743324"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.RigidityClosureResearchClassificationCertificates",
+      "fingerprint": "b1ed938eb8e2d070e9cc2eb68c5ed63cdbd3a638f908d61e446b6435117d08e7",
+      "source_sha256": "8adb65aa75552cedb7dab845881e01ac68652b241293a002bc7ad61aa97075a7",
+      "artifacts": {
+        ".olean": "728441dea6896a1c17a0e05e4e6d6940ab4ede23c714d0864b7e9f2b11afb3ab"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.RigidityClosureResearchSchemas",
+      "fingerprint": "1f04a75e0d95528fbe458cceb8e06adf9d6e99bdfb3d730ad574e2a72866c427",
+      "source_sha256": "65aafd12759579186d8fa5fbb481970486fc6c7c4d9ba8aac0000f0d4b50f6f7",
+      "artifacts": {
+        ".olean": "96cbc5cf548ccfee5e501a1bc71d7aebeea6102d144d186f8eb924091f80416b"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.RigidityClosureResearchTupleLaws",
+      "fingerprint": "14a1cd122c8d0d6873c219d763a5079f88ceaa97ebd44220e59ae4392f40cc7e",
+      "source_sha256": "3a5a3aff5db6e339088e76cf71138774d568aa397a9cf0b887d11497eeb67597",
+      "artifacts": {
+        ".olean": "5081621b9455764abedd214e996842f3a3feb35c6747c2139473af4b268f9519"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.RigidityClosureResearchTupleLawsCertificates",
+      "fingerprint": "6ebc0dc79c829850d699d246d2060dd4b58493ab8c76236f85244ad96cc5512e",
+      "source_sha256": "61aeef1fbef668db056c51d7a1c28c715a63be3dd2ec4e222c72c9d9400e722e",
+      "artifacts": {
+        ".olean": "b9af4002ce060b4309163cb7e486e97fc36568d39c6f5d7b390a0e0c7f1a3099"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.RigidityClosureResearchNullary",
+      "fingerprint": "9664d5a83f9110a0b0e0da3e573697b10da9859653e21e3fc1a83f8c399fbfe3",
+      "source_sha256": "8822eaf9af35376fcf8a8c178442174c69f9fc02dac9f57be776cff2485252ab",
+      "artifacts": {
+        ".olean": "470e5d026ca00be2fab381eefda8aa85041e957557b52e4808272a6777980a7e"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.RigidityClosureResearchNullaryCertificates",
+      "fingerprint": "03ef7fa249e768764e324dcc2de1627c151ec823b2d40615ae224ee6fbea7add",
+      "source_sha256": "d69ae7225edf4402ed3c59a53fc395bbabe8ad92d35b77d78a22c273e07e843f",
+      "artifacts": {
+        ".olean": "ae6dae1cdd3069b5824e50e91a286c43b7a17352ce10777b181b2f1f1ed718a3"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.RigidityClosureResearchBounded",
+      "fingerprint": "d7a64a4828d4ba77c1b129ac9893592f846404ef4e3a52ae8321663ecc729982",
+      "source_sha256": "65a1109a5213f8456937a2c344d98e2e94074c0c1ffaff6a02b14b9f1349b628",
+      "artifacts": {
+        ".olean": "e1703fd68c891bda4b10a48003d00d88d2e58a737f49f1b89a65f2dd8149f60b"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.RigidityClosureResearchBoundedCertificates",
+      "fingerprint": "f30af90e649e8c8c71372256f54b8df903c299699a91f8381b8dcb91a948d090",
+      "source_sha256": "c6ab51e9f6feed79a9615ec9557b496713fc1a91df92029a63cc68c77960e644",
+      "artifacts": {
+        ".olean": "d65fece701787831f2b3fef912f7e65fcb928f1543214f735b4dcc6d093ff90d"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.RigidityClosureResearchAtomicPower",
+      "fingerprint": "8c8c727e47848269290e2d9f45b7b5c75e688b5a149e68bcf0ea76162c6fcd18",
+      "source_sha256": "ce12ed0b3753ba2f2aa71e7b47ee555eecfb6c2146508bdfeec91a04027a9b16",
+      "artifacts": {
+        ".olean": "699667a4896f832de4dd7daf00a5f23b1a82f3695e5aad44f9bf52f4df4d715b"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.RigidityClosureResearchAtomicPowerCertificates",
+      "fingerprint": "bf55b95d4030221a5a8eff72a53e79fe84e8bd601c92c22f2395ed1395d01e10",
+      "source_sha256": "b8f8aa4045d5dd104b4fcb7de23a7619c2e59a627290b76d2ab6162b5c05491c",
+      "artifacts": {
+        ".olean": "6e231235ecc02d8b8f1a5a841d5233d849c08f2f4cf3f03e8d69295687851773"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.Evaluator",
+      "fingerprint": "ddf57307d3e908ce18edc4a343ac8953dba0fdf9e5aa033847981bdb7e642581",
+      "source_sha256": "f3d46077cf22bb251a8f2f790ea717f3e3777b2cc8700f90da42f257eeb00671",
+      "artifacts": {
+        ".olean": "42df43c909e7fa9d1335f2f6b38f8a906d7171d24379c4931a752d07071493ce"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.RigidityClosureResearchUniform",
+      "fingerprint": "ad436adcec78ffbf7e6504a80e046addf3260e9c09901866a47844754ba2723d",
+      "source_sha256": "45edb0d226292e20cc7c23b8b00a5638f4276a9271821bba0eca91269bc411d8",
+      "artifacts": {
+        ".olean": "3862eae238b769d0ac180ad08151368657020dc34268688b9e2a1d740b73e2b2"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.RigidityClosureResearchUniformCertificates",
+      "fingerprint": "b288175f47e2adbf4d1b5fc5ac84a35630ed5d992cbc32d31f9569700a17281e",
+      "source_sha256": "fbb691fb9ac91cc5c54c36fa887e86c17dd915351950d10e65884fab6861030b",
+      "artifacts": {
+        ".olean": "1957b2b7d7b886a5a55f6118751fb49e85ffce3185bd19a19e69b57c1e29cba2"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.ChoiceCompleteness",
+      "fingerprint": "2af9fe3c5ef8ea62ad0a1c1bbbbbc558d4f432dcad69b3b110f5ea1409404357",
+      "source_sha256": "0633f3eccc9508477291bb4a3486ce09cde3dc12c2c404424c5619d1bf752f57",
+      "artifacts": {
+        ".olean": "fb18f2494ce38d204f194efddc822afa77665a4d5cc2d23c7b6c84a92aa5e396"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.AtomCoordinates",
+      "fingerprint": "5de13bd4784d6d36b7529d304a86877640ddf9392387441ee7d36c08ebb2d492",
+      "source_sha256": "9ad8c19c7282b8e6709fa384856c8d34198b437a0d9f11f3b803cac82d1b05ce",
+      "artifacts": {
+        ".olean": "b863c828601df0e85f013c876dcf9f35dd9cde49e859d3c1b9b159d84c3e68e5"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.ActualityCore",
+      "fingerprint": "94f47411b4b02df1c27d2adbfb50a03ca97969416bd7ebefc6ea4cfda4334a79",
+      "source_sha256": "4cbf4b0d3d7c28b966015d752d8076d50aae0ecde71f9337dee8ff01c148ac4e",
+      "artifacts": {
+        ".olean": "a8172bb7fb0711ed49e0871c0ec711f3edaf290c42108f15d034578e221c312d"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.RigidityClosureResearchRetractions",
+      "fingerprint": "3882ff16655e454de91fea51db68432e1c943b1a8186f78ca51de207d9456e81",
+      "source_sha256": "a316e5405520c1f97791c0dc1bc917fab5b98fc36083a4ed04824c255f385416",
+      "artifacts": {
+        ".olean": "ebf46af934c7efd410a87dfc47a702c9afb9040850dada690cc51ed7f13b07c4"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.RigidityClosureResearchRetractionsCertificates",
+      "fingerprint": "1ff6f2cf0de49d416b89f8064194cc53fc941ce4b563624e6899018b42562bf9",
+      "source_sha256": "26a2c693945a4117483e595ebc9b66b276ca89a7e9c4a208238f836eb7ecdd87",
+      "artifacts": {
+        ".olean": "120d84d8414e0b7a9952f71d27aaa6282274bd9bc0149fb440da582c64a99f5c"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.RigidityClosureResearchContinuationSchemas",
+      "fingerprint": "9232fbc10b71322ddf5ca417fa21d04c7ec8bbfdc77810cf4e1e06f907a14b21",
+      "source_sha256": "8797ae790b2015ed511d1b695641b2eb983648b632722c9c43cf19bf65351896",
+      "artifacts": {
+        ".olean": "fc9cc392451d0b47dc43aa7b488b16c72a2150313b11f5a6648a7f49c89ce84c"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.FixedPointEntrancePowers",
+      "fingerprint": "38be9e1b0ae4f8c877374c782aafa15aed42bf135b5c861f106b3681a15ed77f",
+      "source_sha256": "ae130508b7eda1b116396a80f9cd137e340606a17d63b37ae7f6ec6d610e8c75",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Models.FixedPointEntranceRoot",
+      "fingerprint": "8e71e64c1d54e66ebc4243fd2da6c2440e942fda253832361ccea22f7f142f2e",
+      "source_sha256": "3a74fb346dc6a9a7c36e61441ebc5be2ccd660deb1fcc018715ca9c66a5b15da",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Models.QualitativeLinksPrescriptions",
+      "fingerprint": "b0a85d9c500587fd93bba8a945f371f36b979ae6fa306f11e5b8e6746df6bf24",
+      "source_sha256": "0eea9ae3c1832996171d0a54e17c545573bab5b4365fce89b1b032f49caff859",
+      "artifacts": {
+        ".olean": "56fde3017816cfa9a7212a9369cb36758c1254b633a811c43b17056604175a1d"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "FixedPointEntranceRootAxioms",
+      "fingerprint": "ef0a4d58b415271f614900043cb4d93906a3c186f97a7eddc15ff768e6684ba7",
+      "source_sha256": "1c100b9378e1c4823b256495f337db731621eda77b7d0956065a33e60e1584b9",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Models.FixedPointEntranceActuality",
+      "fingerprint": "b82f695b1a877bd808e60c2984e8756d5a5e8459a6c0f10fdb326cc4961d58b4",
+      "source_sha256": "9966c8ba477928bd051c2fec7763084117c50885969c14750917b5f7a19700fc",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Models.FixedPointEntranceRelationalBarcan",
+      "fingerprint": "f553e3ce5059c25edeec52569c801aadba334da0242a37c757807c838f29886c",
+      "source_sha256": "2865ae21f52a16802610d1336d7d0382940aa57397fa4ec9955684757f699296",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Models.QualitativeLinksCodes",
+      "fingerprint": "f51f6829af3d3beaca1f1041eb08944563bd37ec3ce1496d563bc1bd56978e22",
+      "source_sha256": "acb0d6c486173cd138b89704ca9a6844d307b8443dbb6bc1068a5f9d67110ace",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Models.QualitativeLinksFibreExtension",
+      "fingerprint": "5f1180807aa366f622435c701d48091ff7c76df15c9395e4819e0703e36b7233",
+      "source_sha256": "f4b03692b72ac015e2c21afd0742269d619799d7d7393530815c2179664c0051",
+      "artifacts": {
+        ".olean": "7bb8e734981e2010d71c696093ad83fa2380293073517c164b1b0933b1b32196"
+      },
+      "reused": true,
+      "exit_code": 0
+    },
+    {
+      "module": "Classicism.Models.QualitativeLinksCodeInjectivity",
+      "fingerprint": "ed7402d722b9eb669e21a1b072fe8fd83e0e0abdd6283e4a43dea746e36099d7",
+      "source_sha256": "7b8941858b042062b1054cb51c5e7eb2d8c090f16aa8abda9ee8e9ed221bfc50",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Models.QualitativeLinksTameWitness",
+      "fingerprint": "3d12c50f7cc2f47d9b1241ef909e1d55a6af40ae91f7492100fc9bc8d4f52837",
+      "source_sha256": "db9080469d35f548c4ef3e0388f51a8d9dbd8a15ae46caf25912a2d6150e4544",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Models.FixedPointEntranceSeparation",
+      "fingerprint": "f68c760783feaf570cb7b5d3a48b1e1d74f00988bc44bc0d7cbff47d26d03ad1",
+      "source_sha256": "0c963dd1ff65035d2feb5ecad4bb1061c4536ea98d101c1ce9952229200c3557",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "FixedPointEntranceSeparationAxioms",
+      "fingerprint": "955ec83f676ca908453feb5b3da36975837d88f49f319c392ade6d1f98cb3469",
+      "source_sha256": "a4ee1a37135fe92cd3b39a47a5cd9ac29d333468e156407f1fb2d5d34e210315",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Models.FixedPointEntranceLeibniz",
+      "fingerprint": "fab5ea015f42ad6f16f96743e85a3f264659c5735d83105284441484522158da",
+      "source_sha256": "c3ce5e8784b0be8c440bc8c94982c40f79abae9136be04d6dce93212643d6fb2",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Models.FixedPointEntranceComplete",
+      "fingerprint": "c798a35a1c822d5cacc5432795f1820c55f204553dbf6e4536f7395ce320ad81",
+      "source_sha256": "bb33b15274ee0561087455abf0303aa6e1e5ade72f6b24f26bb7e11f5580e3ae",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "FixedPointEntranceCompleteAxioms",
+      "fingerprint": "77cc4edafa13469fe9ca72827ac98a1829ec58a0031affec2b082253ea4fd39f",
+      "source_sha256": "d623b74a366d1e703f21da98d1405f580f274258d790c3a4e926288096606ff6",
+      "skipped": "dependency failed",
+      "exit_code": 125
+    },
+    {
+      "module": "Classicism.Models.FixedPointEntrancePairs",
+      "fingerprint": "32296d2118f25e5869a24decf590fc5f3eaa9cda3d22e8b0f65fa41880acdd39",
+      "source_sha256": "8f612788200373e1c1fd69569db76a21e7c37de7ffef065043b7831ad5217e6d",
+      "artifacts": {
+        ".olean": "8c10e1dfd5ae60fadea1799335e5f1db0f975ba0a6db7f3b86bf3f64feba1371"
+      },
+      "seconds": 84.54,
+      "exit_code": 0,
+      "log": "logs/runs/20261023T190004354916Z-b9423c09/Classicism_Models_FixedPointEntrancePairs.log"
+    },
+    {
+      "module": "FixedPointEntrancePairAxioms",
+      "fingerprint": "e43081660c0d1d713031e3ec506e1faed366c8a66f61a8affb411fb399455dc2",
+      "source_sha256": "a3a56226b1c62378889758130f830c4046fa78c6519c482388879fe4db86c760",
+      "artifacts": {
+        ".olean": "5a6eabe57c23ebc7475b8fe42a6f944c06eeae614c832b3ea57ef796d0959269"
+      },
+      "seconds": 51.23,
+      "exit_code": 0,
+      "log": "logs/runs/20261023T190004354916Z-b9423c09/FixedPointEntrancePairAxioms.log"
+    }
+  ],
+  "sources": {
+    "Classicism.Syntax.Types": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Types.lean",
+      "sha256": "567828e8f9a707cf635e3b4fb30bc868a419967307613d0686d795d195606eac"
+    },
+    "Classicism.Syntax.Term": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Term.lean",
+      "sha256": "ad5172acbb74eaab9307662408928b80e6ffab62e14df16f2f41c7205de13f69"
+    },
+    "Classicism.Syntax.Conversion": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Conversion.lean",
+      "sha256": "c22fe48399811fcb0d71b37206c633749a7285291c62c2e7d786475ea6ae339e"
+    },
+    "Classicism.Syntax.Derivation": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Derivation.lean",
+      "sha256": "7cc2fd01542014d55e5a4c4a411724db7cdc076462d0de724c3530b0a8a3fc6b"
+    },
+    "Classicism.Syntax.Axioms": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Axioms.lean",
+      "sha256": "f3dd3b51ef834f46f22e09fe34026f47120a8bc171afb190b5053c443f4a82a7"
+    },
+    "Classicism.Syntax.Entailment": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Entailment.lean",
+      "sha256": "13f758dbf41a84dda7c2ae7adf6bcb9605ee114ce04dbda0efc5f1c4fbeabb1e"
+    },
+    "Classicism.Semantics.Env": {
+      "path": "topics/classicism/lean/Classicism/Semantics/Env.lean",
+      "sha256": "ca6f223a2bfe71396b3e21de852057e432cd7b289005cdacc1cc24935358e09d"
+    },
+    "Classicism.Semantics.Intensional": {
+      "path": "topics/classicism/lean/Classicism/Semantics/Intensional.lean",
+      "sha256": "9a58b1dd47b1b527209d1994ed2b9252c85dc012d019d9878c2cbcc58b6019af"
+    },
+    "Classicism.Semantics.IntensionalSoundness": {
+      "path": "topics/classicism/lean/Classicism/Semantics/IntensionalSoundness.lean",
+      "sha256": "dc34e26e6baaaf9270c067fb43303dc9a00dbc885b8da02ba1eb7432fe008143"
+    },
+    "Classicism.Syntax.Sentences": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Sentences.lean",
+      "sha256": "9d1511399b998922713f3d2bccea49249aaeba3a9de7f0f0b0b8153161adbd52"
+    },
+    "Classicism.Semantics.IntensionalFacts": {
+      "path": "topics/classicism/lean/Classicism/Semantics/IntensionalFacts.lean",
+      "sha256": "6ef820a85da8854668976cab35fb79bccb5cb0f729fe42f94e55bb472bbbc5c1"
+    },
+    "Classicism.Semantics.IntensionalFull": {
+      "path": "topics/classicism/lean/Classicism/Semantics/IntensionalFull.lean",
+      "sha256": "96fce6e2a1e5266d2da663c7cac5f3b69822b70b524f6e0dc0c9d17f4ac74660"
+    },
+    "Classicism.Syntax.Constants": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Constants.lean",
+      "sha256": "065903e72913a7f804276e59b801722bd078e447a1a637d1dc9940a56eb7b719"
+    },
+    "Classicism.Semantics.IdeallyFull": {
+      "path": "topics/classicism/lean/Classicism/Semantics/IdeallyFull.lean",
+      "sha256": "602eeb59dbc4b6f76b25e0cd0cbb3bed4ce58a68b1f062ac86ca251d24e38d66"
+    },
+    "Classicism.Semantics.Denotation": {
+      "path": "topics/classicism/lean/Classicism/Semantics/Denotation.lean",
+      "sha256": "2103000e1da2b0ce5413fa71820b7cd579bf562b7dd50d704e058b5cda0c7925"
+    },
+    "Classicism.Core": {
+      "path": "topics/classicism/lean/Classicism/Core.lean",
+      "sha256": "ed0b1189f3fe3f02ce7011058273c0915bb511e5fd30ae33340e7ae0c4afb81d"
+    },
+    "Classicism.Equivalence": {
+      "path": "topics/classicism/lean/Classicism/Equivalence.lean",
+      "sha256": "257006775f36a2eacca652360f7ff8fb9dc403b2b0f4d71ff6a5543e5a939a76"
+    },
+    "Classicism.Booleanism": {
+      "path": "topics/classicism/lean/Classicism/Booleanism.lean",
+      "sha256": "0537132563704170d7ec4dc14755690639a9a784428650fa7bf04067acc0628f"
+    },
+    "Classicism.Identities": {
+      "path": "topics/classicism/lean/Classicism/Identities.lean",
+      "sha256": "3629e17eb7ebf28d47f0d1a2450886bec05b39bf73ff52eff99a88a12579c3b3"
+    },
+    "Classicism.Strict.Axiomatization": {
+      "path": "topics/classicism/lean/Classicism/Strict/Axiomatization.lean",
+      "sha256": "fa26c38979d08d22db2c14d999bd3c5454170e00e72f2781cf2cfa28910ed533"
+    },
+    "Classicism.Strict.Algebra": {
+      "path": "topics/classicism/lean/Classicism/Strict/Algebra.lean",
+      "sha256": "d4cb80885b688ee323e6f59b084568746247f751986fe2ea7efd53cb4e6969a9"
+    },
+    "Classicism.Strict.Vocabulary": {
+      "path": "topics/classicism/lean/Classicism/Strict/Vocabulary.lean",
+      "sha256": "29fad160fd838d15256273fae84dce3cb5381cbd876e7c6ed882874da295b747"
+    },
+    "Classicism.Strict.Tautology": {
+      "path": "topics/classicism/lean/Classicism/Strict/Tautology.lean",
+      "sha256": "edc88bb68c00443a3c309ad01da9c31e1325bc8d63bf0a2ba9392c43eebbadfe"
+    },
+    "Classicism.Strict.Quantifier": {
+      "path": "topics/classicism/lean/Classicism/Strict/Quantifier.lean",
+      "sha256": "688f1a0f560a30f12fd4b4b6663fb7583fac374d9bd7591a55943bbb1b4695fa"
+    },
+    "Classicism.Strict.Rules": {
+      "path": "topics/classicism/lean/Classicism/Strict/Rules.lean",
+      "sha256": "496f3272610ad5dac44de1f90bd394d38098d44f5c8e51fcc30e835e415a8609"
+    },
+    "Classicism.Strict.Primitives": {
+      "path": "topics/classicism/lean/Classicism/Strict/Primitives.lean",
+      "sha256": "b0875be460cec24411c21b6f5929f9c4f68485e6600317f1530adb0a20abd69b"
+    },
+    "Classicism.Tools.Check": {
+      "path": "topics/classicism/lean/Classicism/Tools/Check.lean",
+      "sha256": "20fdb6525e533a835b5d561bce9529e553de2a3fc1b4f6416235da7f52da6cdf"
+    },
+    "Classicism.Strict.Transform": {
+      "path": "topics/classicism/lean/Classicism/Strict/Transform.lean",
+      "sha256": "477d7ea0d6a8c0e438bdf1fdb29c68e79512216094ae8c8c5851b47133afe3ae"
+    },
+    "Classicism.Paper": {
+      "path": "topics/classicism/lean/Classicism/Paper.lean",
+      "sha256": "3348a9c2bf786ef15a9a2a0341dce82e9a419e81a4c7b7486d8c8cba8fbdc895"
+    },
+    "Classicism.Modal": {
+      "path": "topics/classicism/lean/Classicism/Modal.lean",
+      "sha256": "7706449a7246e0be0772a33dcda61ab010686bf5bd64c45017425bf39ed0cf42"
+    },
+    "Classicism.Order": {
+      "path": "topics/classicism/lean/Classicism/Order.lean",
+      "sha256": "4755de0b5eb272e541ce89e84078c4d80c3ae9a332a6910b395c73b78a2b4730"
+    },
+    "Classicism.Pointwise": {
+      "path": "topics/classicism/lean/Classicism/Pointwise.lean",
+      "sha256": "78b858a9d33feb587976879190bdf739afdc0e564c4e6dae5508f8f2c5e15a16"
+    },
+    "Classicism.Strict.Mirror": {
+      "path": "topics/classicism/lean/Classicism/Strict/Mirror.lean",
+      "sha256": "c9aa802c99fbaea769cb8a88af075fc434b3a9073bd9187f9d00b0e6e82451fe"
+    },
+    "Classicism.Semantics.Relational": {
+      "path": "topics/classicism/lean/Classicism/Semantics/Relational.lean",
+      "sha256": "b9424788860fff653c01277d1d1e1e2aa257b0905ac02b0879bb6029a1c5c32a"
+    },
+    "Classicism.Tools.Quote": {
+      "path": "topics/classicism/lean/Classicism/Tools/Quote.lean",
+      "sha256": "9539d77cb6894442171628c10fd8f4e1142fa8f7f99e80fac7dc1681c7eb96fe"
+    },
+    "Classicism.Syntax.Normalize": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Normalize.lean",
+      "sha256": "1ba19ae01872f7d4357876e2e4c47e4f675cf6b733be98c1947838a1f0c94c1b"
+    },
+    "Classicism.Tools.Translate": {
+      "path": "topics/classicism/lean/Classicism/Tools/Translate.lean",
+      "sha256": "471e8a2a7ab42f306e986af1320f0bd7f4d77dd073241e3f77234bf0fc5d6ba7"
+    },
+    "Classicism.Syntax.Blocks": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Blocks.lean",
+      "sha256": "77b4ef8fadb3646edd15d25854bac994a6eabb8bb1f51347c9dd00fce3a6ac5d"
+    },
+    "Classicism.Syntax.Vectorize": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Vectorize.lean",
+      "sha256": "b57548b87b70c0e9df1c0fd48a1f7b7d67d4828ab4d4286e164e7f32c4716817"
+    },
+    "Classicism.Syntax.VectorizeDerivable": {
+      "path": "topics/classicism/lean/Classicism/Syntax/VectorizeDerivable.lean",
+      "sha256": "17508c58aef3e3ad7b121f20349045d76c5e238a164cdaf96c2400255c492824"
+    },
+    "Classicism.Tools.Schema": {
+      "path": "topics/classicism/lean/Classicism/Tools/Schema.lean",
+      "sha256": "809bf8692601598451770b6422375de71cddf6e3d4cacc651b3905119fe40d2c"
+    },
+    "Classicism.Comprehension": {
+      "path": "topics/classicism/lean/Classicism/Comprehension.lean",
+      "sha256": "570435f620ec40a8c0f359ce546c26933cf3acfc6e7c8da81fa805170f9ab844"
+    },
+    "Classicism.Lattice": {
+      "path": "topics/classicism/lean/Classicism/Lattice.lean",
+      "sha256": "43231f5d30bab05bc0d11927e1ce09f17ec384875e0aeb1cb72335e36f046070"
+    },
+    "Classicism.Principles.Base": {
+      "path": "topics/classicism/lean/Classicism/Principles/Base.lean",
+      "sha256": "d0c930dafb5decf6e747b5a05215cbff099d4efd9e69c607f01a54d5c5a7b96a"
+    },
+    "Classicism.Principles.Coarse": {
+      "path": "topics/classicism/lean/Classicism/Principles/Coarse.lean",
+      "sha256": "5c3aedc0a4117e7c214d186b384c42b8da6a17906fb7a76a75cb625f85b0a9b2"
+    },
+    "Classicism.Principles.Extensionality": {
+      "path": "topics/classicism/lean/Classicism/Principles/Extensionality.lean",
+      "sha256": "aa1929fee457845f79c2511b4df86462660ed1c68c3f85b5af8636a88a8f15e8"
+    },
+    "Classicism.Cardinality": {
+      "path": "topics/classicism/lean/Classicism/Cardinality.lean",
+      "sha256": "5e627927356fc561dfd5bfacd9935c558c7760678df56c0158820a7e8626703f"
+    },
+    "Classicism.Principles.Lattice": {
+      "path": "topics/classicism/lean/Classicism/Principles/Lattice.lean",
+      "sha256": "95a7c96bd3f2c0b131b59412ee36c288b9f12a772075e8f6ec83d8177f6ffd60"
+    },
+    "Classicism.Principles.Instances": {
+      "path": "topics/classicism/lean/Classicism/Principles/Instances.lean",
+      "sha256": "53835a72c249e8f75246e6b42331d205b8bec73a8c03bc2d1ad48db37a88e47e"
+    },
+    "Classicism.Principles.Comprehension": {
+      "path": "topics/classicism/lean/Classicism/Principles/Comprehension.lean",
+      "sha256": "7d47cbb2fcbf444bd1e708ceeb9d007c1be955b41346b2adf14f5613ec7e2537"
+    },
+    "Classicism.Principles.Choice": {
+      "path": "topics/classicism/lean/Classicism/Principles/Choice.lean",
+      "sha256": "a8f7e35f1a11805edc2b116b6af002bd5b1d0708b93aaea16781cff519687319"
+    },
+    "Classicism.Principles.Infinity": {
+      "path": "topics/classicism/lean/Classicism/Principles/Infinity.lean",
+      "sha256": "9c901565490f92a5a6b18ac1cf690c756bb5984e105e885614b87dcc00db027f"
+    },
+    "Classicism.Principles.Schematic": {
+      "path": "topics/classicism/lean/Classicism/Principles/Schematic.lean",
+      "sha256": "f6e0fe85d4c7f95deb80b98e19cf10e292ac98d87a5c2caec2ddcb9920e677ee"
+    },
+    "Classicism.Principles": {
+      "path": "topics/classicism/lean/Classicism/Principles.lean",
+      "sha256": "747fc5fbde92a7dd1432aaaafee00437398594ae06dbc8ec2040690fae443049"
+    },
+    "Classicism.Results.Records.Base": {
+      "path": "topics/classicism/lean/Classicism/Results/Records/Base.lean",
+      "sha256": "43794a516d90505e3c5b48267ddfe110b8e482b881cc1300f2e2ee182c2fc2db"
+    },
+    "Classicism.Results.Records.Coarse": {
+      "path": "topics/classicism/lean/Classicism/Results/Records/Coarse.lean",
+      "sha256": "a3a6e0bc0120eecda1097efc51cd29c0d95daa15b81535f36d7dc6dd1d434882"
+    },
+    "Classicism.Results.Records.Extensionality": {
+      "path": "topics/classicism/lean/Classicism/Results/Records/Extensionality.lean",
+      "sha256": "0a1d58485d6e8b0b84d68d973027dd621394ee0c4d1579f08746f10558f0a34a"
+    },
+    "Classicism.Results.Records.Comprehension": {
+      "path": "topics/classicism/lean/Classicism/Results/Records/Comprehension.lean",
+      "sha256": "552f1c10d3b02f5cae87392141616f5de2200655837e07ba9b367e7bacfd77d7"
+    },
+    "Classicism.Results.Records.Lattice": {
+      "path": "topics/classicism/lean/Classicism/Results/Records/Lattice.lean",
+      "sha256": "e5adae1ce94a42f477aa629e4f5b739aa78bf1f7a3abf785d591f4d3a62690f4"
+    },
+    "Classicism.Results.Records.Choice": {
+      "path": "topics/classicism/lean/Classicism/Results/Records/Choice.lean",
+      "sha256": "28a17b666e917900329a015b2bf9cf3a6848a811762a6c862f6ef58135bf77ca"
+    },
+    "Classicism.Results.Records.C5": {
+      "path": "topics/classicism/lean/Classicism/Results/Records/C5.lean",
+      "sha256": "670269847531e12553369ae4105b0926f8613883f8f709b94cdc88917eb49b7c"
+    },
+    "Classicism.Results.Records.Infinity": {
+      "path": "topics/classicism/lean/Classicism/Results/Records/Infinity.lean",
+      "sha256": "dd622a8252d4bc861a68bf939b25198d39db51c119e89911e096b0523a3a1ba0"
+    },
+    "Classicism.Results.Records": {
+      "path": "topics/classicism/lean/Classicism/Results/Records.lean",
+      "sha256": "6d6d399aab1e7f30eff9a5d385635ae311228e4faf03ce36ad39d5a1d22eede6"
+    },
+    "Classicism.Certified.Quoted": {
+      "path": "topics/classicism/lean/Classicism/Certified/Quoted.lean",
+      "sha256": "4f5e539a45bf30cf758effcd38c59330b95160a09aa57b08130226c491896447"
+    },
+    "Classicism.Syntax.ClosedTypes": {
+      "path": "topics/classicism/lean/Classicism/Syntax/ClosedTypes.lean",
+      "sha256": "07ea7d86a0ec8faf8da218c04b9ab46c0b3b941c5772729340de705750227968"
+    },
+    "Classicism.Certified.Schemas": {
+      "path": "topics/classicism/lean/Classicism/Certified/Schemas.lean",
+      "sha256": "5473826bbece5136406e9aca792c6eb38e93117d142bce275d5a084803ad4a38"
+    },
+    "Classicism.Models.Functions": {
+      "path": "topics/classicism/lean/Classicism/Models/Functions.lean",
+      "sha256": "634ee93c9d402f301943c84f38f3f26766be2a267de09f6a24263c3d050e48cb"
+    },
+    "Classicism.Semantics.Symmetric": {
+      "path": "topics/classicism/lean/Classicism/Semantics/Symmetric.lean",
+      "sha256": "f05e1d25c639d79c7722a097ca766939c7d77734e326bd834c7f29ac56056141"
+    },
+    "Classicism.Models.FixedPointEntranceBase": {
+      "path": "topics/classicism/lean/Classicism/Models/FixedPointEntranceBase.lean",
+      "sha256": "ff810802fe0f3dfd0ace450a444e3acf9dd08f6c290a06b16c756153cfa45b81"
+    },
+    "Classicism.Models.MonoidModel": {
+      "path": "topics/classicism/lean/Classicism/Models/MonoidModel.lean",
+      "sha256": "abde7489bb751a3e38ad666f896ddd8d5304ccca32d6118b68cf8d91cc4f6e3a"
+    },
+    "Classicism.Syntax.Pure": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Pure.lean",
+      "sha256": "34937a7fc2d4c62a99863e9a0a161f56dfe2ca06b5f5d304ea8d2ad13f7c41a2"
+    },
+    "Classicism.Syntax.SentenceSchemas": {
+      "path": "topics/classicism/lean/Classicism/Syntax/SentenceSchemas.lean",
+      "sha256": "4956cc5f79d94287bab644bff62b9eade4401a602a61e469ed0260a0007c9541"
+    },
+    "Classicism.Syntax.Conservativity": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Conservativity.lean",
+      "sha256": "9f5aba4cb5b54944a6486b4f4b50f37328245c0e3d246c401859b1d7eb5ff4bc"
+    },
+    "Classicism.Semantics.IntensionalTheory": {
+      "path": "topics/classicism/lean/Classicism/Semantics/IntensionalTheory.lean",
+      "sha256": "99bec918ee24851e7a1beb3482e53f1362c262e0928a670c1f7c30cde5135988"
+    },
+    "Classicism.Semantics.IntensionalProperties": {
+      "path": "topics/classicism/lean/Classicism/Semantics/IntensionalProperties.lean",
+      "sha256": "d19b0a0eae6b030dd7371406d3ff601f029cce89f959238a356cb0f0ec92f81a"
+    },
+    "Classicism.Semantics.FullModels": {
+      "path": "topics/classicism/lean/Classicism/Semantics/FullModels.lean",
+      "sha256": "4d2d82d33d3a72e196cc4fd0ff0ef4c6675154dd334d23dd97edeba8563c6a74"
+    },
+    "Classicism.Syntax.PossibilityPlus": {
+      "path": "topics/classicism/lean/Classicism/Syntax/PossibilityPlus.lean",
+      "sha256": "7ada6db1f3c90342fefd03a122dd72c8fba769615c423bada74e16df5d98b936"
+    },
+    "Classicism.Syntax.Infinity": {
+      "path": "topics/classicism/lean/Classicism/Syntax/Infinity.lean",
+      "sha256": "e0aa1264bf6de20dc159cd14baec4e9878e21708f70744f32c32a59df38f8489"
+    },
+    "Classicism.Semantics.Counting": {
+      "path": "topics/classicism/lean/Classicism/Semantics/Counting.lean",
+      "sha256": "da2faa6d9a09342a662bf42a53e95e9e3f22e5d2688c2b2a8243b5f31fae0b1d"
+    },
+    "Classicism.Semantics.IntensionalExamples": {
+      "path": "topics/classicism/lean/Classicism/Semantics/IntensionalExamples.lean",
+      "sha256": "6a412c5a5fcb6fdc0fb565f19e91279aa45627cf8c517e113ab4d7d5589516cb"
+    },
+    "Classicism.Semantics.Arrows": {
+      "path": "topics/classicism/lean/Classicism/Semantics/Arrows.lean",
+      "sha256": "aad3ca007c13ffe2f5a131466d34ddc20abea55cfa7465447de07411cf1c6422"
+    },
+    "Classicism.Semantics.Numerals": {
+      "path": "topics/classicism/lean/Classicism/Semantics/Numerals.lean",
+      "sha256": "0a4c795603531348c29281b060674eab0757ed576c0e3dbe507590fd7cc2978f"
+    },
+    "Classicism.Models.Conditions": {
+      "path": "topics/classicism/lean/Classicism/Models/Conditions.lean",
+      "sha256": "6e612b4893e719f02ef33cfecac4899ecbdff8b50a20f67db500499fe5af2929"
+    },
+    "Classicism.Models.SymBase": {
+      "path": "topics/classicism/lean/Classicism/Models/SymBase.lean",
+      "sha256": "69feeee9a106ecfd2d8d1a1987376156fb543223d2ebbf60c003081fdeccd7c3"
+    },
+    "Classicism.Models.QualitativeLinksBase": {
+      "path": "topics/classicism/lean/Classicism/Models/QualitativeLinksBase.lean",
+      "sha256": "09c0514c75c851c0ad852c0993a28618712b0d8ca4c8a91a1da94a3750bd6e5a"
+    },
+    "Classicism.Semantics.ExternalPinning": {
+      "path": "topics/classicism/lean/Classicism/Semantics/ExternalPinning.lean",
+      "sha256": "8bf8d060b7971ecf9cbbf34e3d86b307b51fe1a4aeaef6bd86665840d0760132"
+    },
+    "Classicism.Semantics.SymmetricExternal": {
+      "path": "topics/classicism/lean/Classicism/Semantics/SymmetricExternal.lean",
+      "sha256": "9424f8acf7925d57e50993b75067d93954180e3a3076d591bfe5ccf270248a93"
+    },
+    "Classicism.Models.FixedPointEntranceModel": {
+      "path": "topics/classicism/lean/Classicism/Models/FixedPointEntranceModel.lean",
+      "sha256": "09fff17b1a5a2ff014e3b711cf97f7391146192ce71450d2e3ab4b5549ca731d"
+    },
+    "Classicism.Models.FixedPointEntranceRigidity": {
+      "path": "topics/classicism/lean/Classicism/Models/FixedPointEntranceRigidity.lean",
+      "sha256": "e4f57d9ca84baac6784eeed54d2c98365d6eae8711b5d82e4a154f72a5260e6c"
+    },
+    "Classicism.Models.FixedPointEntranceCompleteness": {
+      "path": "topics/classicism/lean/Classicism/Models/FixedPointEntranceCompleteness.lean",
+      "sha256": "c702edb465f9e08e3975fc0c3a868b480182bd8b1726d52e6b3fc92a51f65965"
+    },
+    "Classicism.Models.FixedPointEntranceComprehension": {
+      "path": "topics/classicism/lean/Classicism/Models/FixedPointEntranceComprehension.lean",
+      "sha256": "540915dee7cefc54249732b9e4f0309ce57ba93a91f27e9bb9e5d7f83e9d09a7"
+    },
+    "Classicism.Models.FixedPointEntranceDistinctness": {
+      "path": "topics/classicism/lean/Classicism/Models/FixedPointEntranceDistinctness.lean",
+      "sha256": "c3369f5908f43381dce9724cc5a6c8e2c792ee2c5a2646370d5fba17fbcf2a9b"
+    },
+    "Classicism.Models.FixedPointEntrance": {
+      "path": "topics/classicism/lean/Classicism/Models/FixedPointEntrance.lean",
+      "sha256": "89f3710986492299fa04a7efb3ad2a5a97e1c833ba39bb9e8dc6c617e733f787"
+    },
+    "FixedPointEntranceAxioms": {
+      "path": "research/2026-10-22/lean-formalization/integration-checks/FixedPointEntranceAxioms.lean",
+      "sha256": "99e2bf45550dd01410e02a4b427d6c5eba42e876f6401fcfe81286eea5e7c337"
+    },
+    "Classicism.Models.FixedPointEntranceChoice": {
+      "path": "topics/classicism/lean/Classicism/Models/FixedPointEntranceChoice.lean",
+      "sha256": "7553cf2a45136c2df4d178ce384a022c5cb2827135394c58a6f858377705ab2a"
+    },
+    "Classicism.Models.FixedPointEntranceBarcan": {
+      "path": "topics/classicism/lean/Classicism/Models/FixedPointEntranceBarcan.lean",
+      "sha256": "a5b2cd4c0befef450185bdff63d2bd0d4c4d4a4ccde98d7a995fd47db66354f9"
+    },
+    "Classicism.Models.FixedPointEntranceAtomicity": {
+      "path": "topics/classicism/lean/Classicism/Models/FixedPointEntranceAtomicity.lean",
+      "sha256": "30d83e4951ccc76d9c63ca7018d5ce9c0e27221fb8ebf3683cd8498dd642d412"
+    },
+    "Classicism.Results.Research.InextensiblePower": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/InextensiblePower.lean",
+      "sha256": "4217d104bf9723242cb0523c486a89100741f4f3ccd6449f072b0be01e037bb0"
+    },
+    "Classicism.Tools.TypeSystem": {
+      "path": "topics/classicism/lean/Classicism/Tools/TypeSystem.lean",
+      "sha256": "3db785bca90f4e2961bce8e7bde2d6bbd418e9e4c67ec99acae2251cb89e88e1"
+    },
+    "Classicism.Results.Research.SealedWorldCover": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/SealedWorldCover.lean",
+      "sha256": "828a016b24f4e56f5c3de9367ceebc11c0d602c9a803c61dad857ea0316c725d"
+    },
+    "Classicism.Results.Research.ModalPropagation": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/ModalPropagation.lean",
+      "sha256": "23bd129112da003c511b2b7b8c88d2d8b54a21b1976445007d7c950ff86419b7"
+    },
+    "Classicism.Results.Research.InextensibleDescent": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/InextensibleDescent.lean",
+      "sha256": "e845f9a4bb714b5c0588abfc2c37918acdd8523b19584a3061017459467aed2d"
+    },
+    "Classicism.Results.Research.InextensibleRigidPower": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/InextensibleRigidPower.lean",
+      "sha256": "b4117f7bfff4da567394d0f225e8f8d7fc71d98c9e0ae81d8da7dd06a273506d"
+    },
+    "Classicism.Results.Research.InextensibleWeakPower": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/InextensibleWeakPower.lean",
+      "sha256": "f284f253c3b4740fddf6933d56a9902948b9ae6efee13841e8d06574541bc7e3"
+    },
+    "Classicism.Results.Research.ModalRigidityDescent": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/ModalRigidityDescent.lean",
+      "sha256": "e5f3a4c9ee6aff754ed84553f1736196112a2dd5d6bd683a2885b7435dc92270"
+    },
+    "Classicism.Results.Research.RigidityClosureResearchFinite": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchFinite.lean",
+      "sha256": "8d1bf44fa65e1fde5a1a8ba9dd2aec780011520e4c1abe0af51215fac39bc490"
+    },
+    "Classicism.Results.Research.RigidityClosureResearchFiniteCertificates": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchFiniteCertificates.lean",
+      "sha256": "530d9484d3d363572716e0174f2bdf9e2d7cc055ffe9a686c66e046bbca039a5"
+    },
+    "Classicism.Results.Research.RigidityClosureResearchJoins": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchJoins.lean",
+      "sha256": "e76ebcc0b34a0d2d9f1854e2cd05526628345010bd25d3337bd0d041faad066c"
+    },
+    "Classicism.Results.Research.RigidityClosureResearchJoinsCertificates": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchJoinsCertificates.lean",
+      "sha256": "36a9f94701246f11ae71c9aa7ee286686c26649493947fb9b18a37a3d70dc6c1"
+    },
+    "Classicism.Results.Research.RigidityClosureResearchClassification": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchClassification.lean",
+      "sha256": "668fe461733ce9bc64e063c5e5551fde1a6671c3c1167f7ce2282cbbb1b19625"
+    },
+    "Classicism.Results.Research.RigidityClosureResearchClassificationCertificates": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchClassificationCertificates.lean",
+      "sha256": "8adb65aa75552cedb7dab845881e01ac68652b241293a002bc7ad61aa97075a7"
+    },
+    "Classicism.Results.Research.RigidityClosureResearchSchemas": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchSchemas.lean",
+      "sha256": "65aafd12759579186d8fa5fbb481970486fc6c7c4d9ba8aac0000f0d4b50f6f7"
+    },
+    "Classicism.Results.Research.RigidityClosureResearchTupleLaws": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchTupleLaws.lean",
+      "sha256": "3a5a3aff5db6e339088e76cf71138774d568aa397a9cf0b887d11497eeb67597"
+    },
+    "Classicism.Results.Research.RigidityClosureResearchTupleLawsCertificates": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchTupleLawsCertificates.lean",
+      "sha256": "61aeef1fbef668db056c51d7a1c28c715a63be3dd2ec4e222c72c9d9400e722e"
+    },
+    "Classicism.Results.Research.RigidityClosureResearchNullary": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchNullary.lean",
+      "sha256": "8822eaf9af35376fcf8a8c178442174c69f9fc02dac9f57be776cff2485252ab"
+    },
+    "Classicism.Results.Research.RigidityClosureResearchNullaryCertificates": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchNullaryCertificates.lean",
+      "sha256": "d69ae7225edf4402ed3c59a53fc395bbabe8ad92d35b77d78a22c273e07e843f"
+    },
+    "Classicism.Results.Research.RigidityClosureResearchBounded": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchBounded.lean",
+      "sha256": "65a1109a5213f8456937a2c344d98e2e94074c0c1ffaff6a02b14b9f1349b628"
+    },
+    "Classicism.Results.Research.RigidityClosureResearchBoundedCertificates": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchBoundedCertificates.lean",
+      "sha256": "c6ab51e9f6feed79a9615ec9557b496713fc1a91df92029a63cc68c77960e644"
+    },
+    "Classicism.Results.Research.RigidityClosureResearchAtomicPower": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchAtomicPower.lean",
+      "sha256": "ce12ed0b3753ba2f2aa71e7b47ee555eecfb6c2146508bdfeec91a04027a9b16"
+    },
+    "Classicism.Results.Research.RigidityClosureResearchAtomicPowerCertificates": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchAtomicPowerCertificates.lean",
+      "sha256": "b8f8aa4045d5dd104b4fcb7de23a7619c2e59a627290b76d2ab6162b5c05491c"
+    },
+    "Classicism.Results.Research.Evaluator": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/Evaluator.lean",
+      "sha256": "f3d46077cf22bb251a8f2f790ea717f3e3777b2cc8700f90da42f257eeb00671"
+    },
+    "Classicism.Results.Research.RigidityClosureResearchUniform": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchUniform.lean",
+      "sha256": "45edb0d226292e20cc7c23b8b00a5638f4276a9271821bba0eca91269bc411d8"
+    },
+    "Classicism.Results.Research.RigidityClosureResearchUniformCertificates": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchUniformCertificates.lean",
+      "sha256": "fbb691fb9ac91cc5c54c36fa887e86c17dd915351950d10e65884fab6861030b"
+    },
+    "Classicism.Results.Research.ChoiceCompleteness": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/ChoiceCompleteness.lean",
+      "sha256": "0633f3eccc9508477291bb4a3486ce09cde3dc12c2c404424c5619d1bf752f57"
+    },
+    "Classicism.Results.Research.AtomCoordinates": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomCoordinates.lean",
+      "sha256": "9ad8c19c7282b8e6709fa384856c8d34198b437a0d9f11f3b803cac82d1b05ce"
+    },
+    "Classicism.Results.Research.ActualityCore": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/ActualityCore.lean",
+      "sha256": "4cbf4b0d3d7c28b966015d752d8076d50aae0ecde71f9337dee8ff01c148ac4e"
+    },
+    "Classicism.Results.Research.RigidityClosureResearchRetractions": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchRetractions.lean",
+      "sha256": "a316e5405520c1f97791c0dc1bc917fab5b98fc36083a4ed04824c255f385416"
+    },
+    "Classicism.Results.Research.RigidityClosureResearchRetractionsCertificates": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchRetractionsCertificates.lean",
+      "sha256": "26a2c693945a4117483e595ebc9b66b276ca89a7e9c4a208238f836eb7ecdd87"
+    },
+    "Classicism.Results.Research.RigidityClosureResearchContinuationSchemas": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/RigidityClosureResearchContinuationSchemas.lean",
+      "sha256": "8797ae790b2015ed511d1b695641b2eb983648b632722c9c43cf19bf65351896"
+    },
+    "Classicism.Models.FixedPointEntrancePowers": {
+      "path": "topics/classicism/lean/Classicism/Models/FixedPointEntrancePowers.lean",
+      "sha256": "ae130508b7eda1b116396a80f9cd137e340606a17d63b37ae7f6ec6d610e8c75"
+    },
+    "Classicism.Models.FixedPointEntranceRoot": {
+      "path": "topics/classicism/lean/Classicism/Models/FixedPointEntranceRoot.lean",
+      "sha256": "3a74fb346dc6a9a7c36e61441ebc5be2ccd660deb1fcc018715ca9c66a5b15da"
+    },
+    "Classicism.Models.QualitativeLinksPrescriptions": {
+      "path": "topics/classicism/lean/Classicism/Models/QualitativeLinksPrescriptions.lean",
+      "sha256": "0eea9ae3c1832996171d0a54e17c545573bab5b4365fce89b1b032f49caff859"
+    },
+    "FixedPointEntranceRootAxioms": {
+      "path": "research/2026-10-22/lean-formalization/integration-checks/FixedPointEntranceRootAxioms.lean",
+      "sha256": "1c100b9378e1c4823b256495f337db731621eda77b7d0956065a33e60e1584b9"
+    },
+    "Classicism.Models.FixedPointEntranceActuality": {
+      "path": "topics/classicism/lean/Classicism/Models/FixedPointEntranceActuality.lean",
+      "sha256": "9966c8ba477928bd051c2fec7763084117c50885969c14750917b5f7a19700fc"
+    },
+    "Classicism.Models.FixedPointEntranceRelationalBarcan": {
+      "path": "topics/classicism/lean/Classicism/Models/FixedPointEntranceRelationalBarcan.lean",
+      "sha256": "2865ae21f52a16802610d1336d7d0382940aa57397fa4ec9955684757f699296"
+    },
+    "Classicism.Models.QualitativeLinksCodes": {
+      "path": "topics/classicism/lean/Classicism/Models/QualitativeLinksCodes.lean",
+      "sha256": "acb0d6c486173cd138b89704ca9a6844d307b8443dbb6bc1068a5f9d67110ace"
+    },
+    "Classicism.Models.QualitativeLinksFibreExtension": {
+      "path": "topics/classicism/lean/Classicism/Models/QualitativeLinksFibreExtension.lean",
+      "sha256": "f4b03692b72ac015e2c21afd0742269d619799d7d7393530815c2179664c0051"
+    },
+    "Classicism.Models.QualitativeLinksCodeInjectivity": {
+      "path": "topics/classicism/lean/Classicism/Models/QualitativeLinksCodeInjectivity.lean",
+      "sha256": "7b8941858b042062b1054cb51c5e7eb2d8c090f16aa8abda9ee8e9ed221bfc50"
+    },
+    "Classicism.Models.QualitativeLinksTameWitness": {
+      "path": "topics/classicism/lean/Classicism/Models/QualitativeLinksTameWitness.lean",
+      "sha256": "db9080469d35f548c4ef3e0388f51a8d9dbd8a15ae46caf25912a2d6150e4544"
+    },
+    "Classicism.Models.FixedPointEntranceSeparation": {
+      "path": "topics/classicism/lean/Classicism/Models/FixedPointEntranceSeparation.lean",
+      "sha256": "0c963dd1ff65035d2feb5ecad4bb1061c4536ea98d101c1ce9952229200c3557"
+    },
+    "FixedPointEntranceSeparationAxioms": {
+      "path": "research/2026-10-22/lean-formalization/integration-checks/FixedPointEntranceSeparationAxioms.lean",
+      "sha256": "a4ee1a37135fe92cd3b39a47a5cd9ac29d333468e156407f1fb2d5d34e210315"
+    },
+    "Classicism.Models.FixedPointEntranceLeibniz": {
+      "path": "topics/classicism/lean/Classicism/Models/FixedPointEntranceLeibniz.lean",
+      "sha256": "c3ce5e8784b0be8c440bc8c94982c40f79abae9136be04d6dce93212643d6fb2"
+    },
+    "Classicism.Models.FixedPointEntranceComplete": {
+      "path": "topics/classicism/lean/Classicism/Models/FixedPointEntranceComplete.lean",
+      "sha256": "bb33b15274ee0561087455abf0303aa6e1e5ade72f6b24f26bb7e11f5580e3ae"
+    },
+    "FixedPointEntranceCompleteAxioms": {
+      "path": "research/2026-10-22/lean-formalization/integration-checks/FixedPointEntranceCompleteAxioms.lean",
+      "sha256": "d623b74a366d1e703f21da98d1405f580f274258d790c3a4e926288096606ff6"
+    },
+    "Classicism.Models.FixedPointEntrancePairs": {
+      "path": "topics/classicism/lean/Classicism/Models/FixedPointEntrancePairs.lean",
+      "sha256": "8f612788200373e1c1fd69569db76a21e7c37de7ffef065043b7831ad5217e6d"
+    },
+    "FixedPointEntrancePairAxioms": {
+      "path": "research/2026-10-22/lean-formalization/integration-checks/FixedPointEntrancePairAxioms.lean",
+      "sha256": "a3a56226b1c62378889758130f830c4046fa78c6519c482388879fe4db86c760"
+    }
+  },
+  "precompiled_roots": [
+    ".reproduction/classicism-mathlib/.lake/build/lib/lean",
+    ".reproduction/classicism-mathlib/.lake/packages/plausible/.lake/build/lib/lean",
+    ".reproduction/classicism-mathlib/.lake/packages/proofwidgets/.lake/build/lib/lean",
+    ".reproduction/classicism-mathlib/.lake/packages/batteries/.lake/build/lib/lean",
+    ".reproduction/classicism-mathlib/.lake/packages/aesop/.lake/build/lib/lean",
+    ".reproduction/classicism-mathlib/.lake/packages/importGraph/.lake/build/lib/lean",
+    ".reproduction/classicism-mathlib/.lake/packages/LeanSearchClient/.lake/build/lib/lean",
+    ".reproduction/classicism-mathlib/.lake/packages/Qq/.lake/build/lib/lean"
+  ],
+  "precompiled_sha256": "2d246141fa46907725d81838f7c3a7150742ef9bb592d2baf1d0c9aa6167a1ab",
+  "compiler_path": ".reproduction/classicism-lean-toolchain/lean-4.33.1-darwin_aarch64/bin/lean",
+  "compiler_sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554",
+  "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "source_snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261023T190004354916Z-b9423c09/sources",
+  "source_drift": [
+    "Classicism.Models.FixedPointEntranceModel"
+  ],
+  "current_sources_match": false,
+  "exit_code": 1,
+  "publication_normalization": {
+    "original_sha256": "392d05598f28cb6cb66abb9559b27aab3a6a3adbfed2e14d117720b6c1a19068",
+    "changes": "Machine-specific paths and compiler-coordination fields removed; source hashes, recorded check outcomes and compiler fingerprints retained."
+  }
+}

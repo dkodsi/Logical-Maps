@@ -1,0 +1,326 @@
+{
+  "audit_id": "old-new-independent-semantic-route",
+  "audited_at_utc": "2026-10-23 03:17:33 UTC",
+  "audit_kind": "Ordinary independent agent mathematical and Lean API audit; not Lean certification",
+  "auditor": "Independent Codex audit agent /root/old_new_audit",
+  "scope": {
+    "target": "C + full unboxed ND + full unboxed Boolean Completeness does not entail Rigid Comprehension; failure already at et",
+    "stronger_witness": "The same root also fails Inextensible Comprehension at et",
+    "framework": "The fixed relational type system of C; no external fullness of higher-type domains and no boxing of optional assumptions",
+    "action_taken": "Read-only inspection of existing mathematical sources and Lean interfaces, followed by saving this audit only"
+  },
+  "conclusion": {
+    "mathematical_verdict": "No new mathematical gap found in the corrected separation argument against the literal symmetric-ideal domain definition.",
+    "confidence": "High for the audited ordinary mathematical route and stated scope.",
+    "lean_status": "Not certified by this audit. No compiler run, source fingerprint validation, or inspection of a completed OldNew implementation was performed.",
+    "database_caveat": "The original model YAML and writeup retain an invalid external even-haecceity-family argument for BC failure. The corrected research note supplies the positive root BC proof. This audit does not edit or certify those original records."
+  },
+  "sources": [
+    {
+      "path": "research/2026-10-22/notes/old-new-boolean-completeness-and-rigidity-separation.md",
+      "sections": [
+        {
+          "heading": "Exact construction and owning sources",
+          "line": 14,
+          "role": "Literal two-object construction and provenance"
+        },
+        {
+          "heading": "Full Boolean Completeness at E",
+          "line": 24,
+          "role": "All-type pair classification, converse admission, order, action on pairs, represented joins"
+        },
+        {
+          "heading": "Consequence: ND + BC does not imply RC or IC",
+          "line": 69,
+          "role": "Finite-invertibility ND proof and exact et inextensibility contradiction"
+        },
+        {
+          "heading": "Failure of BC at O / No least upper bound",
+          "line": 87,
+          "role": "Corrected admitted old-haecceity family at future object"
+        },
+        {
+          "heading": "Checks, exact scope, and the positive boundary",
+          "line": 115,
+          "role": "Scope and separation from optional stronger verdicts"
+        }
+      ]
+    },
+    {
+      "path": "topics/classicism/writeups/symmetric-old-new-individuals.md",
+      "sections": [
+        {
+          "heading": "The model",
+          "line": 15,
+          "role": "Arrows, symmetry groups, finite pinning and symmetric domain conditions"
+        },
+        {
+          "heading": "ND at every type at E",
+          "line": 127,
+          "role": "Original finite-invertibility argument"
+        },
+        {
+          "heading": "Inextensible Comprehension fails (corrected)",
+          "line": 243,
+          "role": "Original corrected IC_et failure"
+        },
+        {
+          "heading": "Boolean Completeness fails at e to t",
+          "line": 284,
+          "role": "Rejected external-family argument; not evidence for this audit"
+        }
+      ]
+    },
+    {
+      "path": "topics/classicism/models/symmetric-old-new-individuals.yaml",
+      "sections": [
+        {
+          "heading": "settings.construction",
+          "role": "Owning construction"
+        },
+        {
+          "heading": "arguments: ND and Inextensible Comprehension",
+          "role": "Recorded premises and negative witness"
+        },
+        {
+          "heading": "arguments: Boolean Completeness failure",
+          "role": "Known invalid even-haecceity-family verdict retained in original record"
+        }
+      ]
+    },
+    {
+      "path": "topics/classicism/topic.yaml",
+      "sections": [
+        {
+          "heading": "framework",
+          "role": "Fixed C and theoremhood restriction"
+        }
+      ]
+    },
+    {
+      "path": "topics/classicism/background.md",
+      "sections": [
+        {
+          "heading": "Framework / Notation",
+          "role": "Relational type system, algebraic order and official GLB definition"
+        }
+      ]
+    },
+    {
+      "path": "topics/classicism/principles/boolean-completeness-r.yaml",
+      "sections": [
+        {
+          "heading": "formal / definitions",
+          "role": "Exact full relational-type BC schema"
+        }
+      ]
+    },
+    {
+      "path": "topics/classicism/principles/distinctness-necessary-r.yaml",
+      "sections": [
+        {
+          "heading": "formal",
+          "role": "Exact unboxed all-type ND schema"
+        }
+      ]
+    },
+    {
+      "path": "topics/classicism/principles/rigid-comprehension-r.yaml",
+      "sections": [
+        {
+          "heading": "formal",
+          "role": "Exact RC schema"
+        }
+      ]
+    },
+    {
+      "path": "topics/classicism/principles/inextensible-comprehension-r.yaml",
+      "sections": [
+        {
+          "heading": "formal / definitions",
+          "role": "Exact IC schema and boxed inextensibility"
+        }
+      ]
+    }
+  ],
+  "dependency_plan": [
+    {
+      "step": 1,
+      "name": "Concrete symmetric-ideal C model",
+      "obligations": [
+        "Instantiate FunCat for E and O with the four specified arrow classes; prove identity and composition closure.",
+        "Instantiate the root and old/new-preserving symmetry groups, inverses, and the finite pinning ideal.",
+        "Prove finite injection prescription and finite permutation extension lemmas for the relevant source-target cases.",
+        "Apply SymBase.model_isModel; no new model-soundness axiom is needed."
+      ]
+    },
+    {
+      "step": 2,
+      "name": "Uniform all-type pair classification",
+      "obligations": [
+        "For arbitrary rho : RTy, use Args model.inner rho at E and O without adding fullness of the recursive argument domains.",
+        "An admitted root entity pinned by finite S is determined by its profiles at identity_E and old inclusion.",
+        "Extend each root outgoing arrow restricted to S to an appropriate target symmetry.",
+        "Use symmetry and pinning to recover every profile; inverse symmetries act bijectively on arbitrary higher-type argument tuples."
+      ]
+    },
+    {
+      "step": 3,
+      "name": "Converse admission and order",
+      "obligations": [
+        "Given two component subsets invariant under Fix_E(S) and Fix_O(iS), reconstruct an intension.",
+        "An existential definition over all extending symmetries avoids selecting a particular extension.",
+        "Stabilizer invariance makes the definition independent of the extension; symmetry follows by target composition.",
+        "Local profile pinning upgrades to equality of transported intensions because further postcomposition preserves agreement on S.",
+        "Apply SymBase.mem_range_iff.",
+        "Show algebraic order is componentwise subset inclusion using one common finite support."
+      ]
+    },
+    {
+      "step": 4,
+      "name": "Full represented Boolean completeness",
+      "obligations": [
+        "The actual extension of any admitted family is invariant under root symmetries fixing its finite support.",
+        "Take componentwise intersections of that actual family to obtain official GLBs directly; the note's componentwise unions equally supply LUBs.",
+        "Invariance under old-coordinate permutations follows from root-family invariance; invariance under new-coordinate permutations follows separately for every component.",
+        "Reconstruct and admit the meet pair, then use the pair-order equivalence.",
+        "Finish with Premodel.holds_bc_iff. P.BooleanCompleteness.quoted rho = Sentence.bc rho is definitionally true.",
+        "Empty families and rho = t are included."
+      ]
+    },
+    {
+      "step": 5,
+      "name": "Full ND",
+      "obligations": [
+        "Every root outgoing arrow f is finitely invertible: for each root h and finite S, an allowed k satisfies k composed with f agrees with h on S.",
+        "Two distinct root relations remain distinct after f, using a common support and a separating tuple at h.",
+        "Individual transport is injective by definition of every arrow.",
+        "Finish with Premodel.holds_nd_iff at every admitted type."
+      ]
+    },
+    {
+      "step": 6,
+      "name": "IC_et and RC_et failure",
+      "obligations": [
+        "A candidate Y coextensive with universal individuals has universal profiles at all arrows into E, by finite extension, symmetry and pinning.",
+        "Admit the empty-pinned old predicate U: all individuals at E-targets, precisely old individuals at O-targets.",
+        "Every current root individual necessarily satisfies U; inextensibility at E implies Y is below U, so Y at the old inclusion contains only old individuals.",
+        "Fix a new b at O. All current Y-members are necessarily unequal to b because every arrow on individuals is injective.",
+        "Inextensibility at the inclusion implies the transported Y is below the admitted predicate lambda x, x unequal b.",
+        "Any return arrow O to E yields the contradiction at the image of b, since the root-to-E profile is universal.",
+        "RC_et failure follows from its inextensibility conjunct or the certified RC to IC implication."
+      ]
+    },
+    {
+      "step": 7,
+      "name": "Exact non-entailments",
+      "obligations": [
+        "Assemble model.HoldsAx for the full unboxed ND and BC schemas.",
+        "Apply Premodel.not_theorem_of_model with the failed et instance.",
+        "Derive non-entailment of the IC and RC schemas without replacing the target by an informal proxy."
+      ]
+    }
+  ],
+  "reusable_lean_api": [
+    {
+      "path": "topics/classicism/lean/Classicism/Models/Functions.lean",
+      "names": [
+        "FunCat",
+        "FunCat.arr",
+        "FunCat.fn",
+        "FunCat.fn_comp",
+        "FunCat.hom_ext",
+        "FunCat.De"
+      ]
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Models/SymBase.lean",
+      "names": [
+        "SymBase",
+        "SymBase.model",
+        "SymBase.model_isModel",
+        "SymBase.finPinned",
+        "SymBase.mem_range_iff",
+        "SymBase.model_domSym",
+        "SymBase.mem_of_pinned",
+        "SymBase.orbit_ext",
+        "SymBase.HasLUBs",
+        "SymBase.holds_bc_lub_at"
+      ]
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Models/PairInjCollapse.lean",
+      "line": 81,
+      "names": [
+        "Classicism.Meta.Intensional.Monoids.PairInjCol.exists_perm_extend"
+      ]
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Semantics/Symmetric.lean",
+      "names": [
+        "PinIdeal.fin",
+        "Premodel.Sym.iff",
+        "Premodel.Sym.at_id_iff",
+        "Premodel.map_map_inv",
+        "Premodel.args_map_map_inv",
+        "Premodel.mem_incl_map_id",
+        "mem_range_symIncl",
+        "symIdeal_isModel"
+      ]
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Semantics/IntensionalFacts.lean",
+      "names": [
+        "Premodel.holds_nd_iff",
+        "Premodel.holds_bc_iff",
+        "Premodel.holds_leR",
+        "Premodel.holdsAx_union",
+        "Premodel.not_theorem_of_model"
+      ]
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Models/MonoidModel.lean",
+      "line": 468,
+      "names": [
+        "bc_quoted_eq"
+      ],
+      "note": "Its equality is rfl; importing the whole model module is unnecessary merely to obtain it."
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Records/Comprehension.lean",
+      "line": 25,
+      "names": [
+        "Classicism.Proofs.rigid_comprehension_r_implies_inextensible_comprehension_r"
+      ],
+      "note": "Alternatively refute RC directly from its semantic inextensibility conjunct."
+    }
+  ],
+  "pitfalls": [
+    {
+      "issue": "Pointwise unions of current intensions need not be admitted",
+      "explanation": "For the family of all root individual haecceities, the pointwise union at h:E to E is range(h). This may fail finite pinning. The correct join reconstructed from the component pair has profile all E at every E-target.",
+      "remedy": "Reconstruct from componentwise pair unions or intersections; do not assert that the raw union of all intensions is the join."
+    },
+    {
+      "issue": "SymBase.HullConditions is not an available shortcut",
+      "explanation": "Its arbitrary finite arrow-splicing requirement can fail for injections because prescribed image values collide outside the shared finite support.",
+      "remedy": "Use an independent pair proof and Premodel.holds_bc_iff, or SymBase.HasLUBs followed by holds_bc_lub_at."
+    },
+    {
+      "issue": "External even-haecceity family is not admitted",
+      "explanation": "That family is not invariant under all root permutations fixing any finite set.",
+      "remedy": "Do not formalize it as an object-domain family or use the original BC-failure verdict."
+    },
+    {
+      "issue": "Boxing changes the theorem",
+      "explanation": "Full BC holds at E, but the corrected future old-haecceity family shows BC_et fails at O; root ND also need not persist.",
+      "remedy": "Keep ND and BC unboxed in the final premise schema."
+    }
+  ],
+  "unverified_extensions": [
+    "This audit does not certify the separately recorded boxed Rigid Power argument.",
+    "This audit does not certify every historical atomicity, arithmetic, or schema verdict for this model.",
+    "The future BC_et failure was checked at the ordinary argument level but is not necessary for the requested root non-entailment.",
+    "Lean integration remains necessary; this JSON is not a formal proof certificate."
+  ]
+}

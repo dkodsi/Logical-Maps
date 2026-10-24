@@ -1,0 +1,51 @@
+'Classicism.Meta.Intensional.Coalesced.left_sem' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.Intensional.Coalesced.right_sem' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.Intensional.Coalesced.holds_left' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.Intensional.Coalesced.holds_right' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.Intensional.Coalesced.isModel' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.Intensional.Coalesced.holds_bf' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.Intensional.Coalesced.holds_box_bf' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.Intensional.Coalesced.one_hasSingletons' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.Intensional.Coalesced.hasSingletons' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.Intensional.Coalesced.holds_atomicity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.Intensional.Coalesced.holds_box_atomicity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.Intensional.Premodel.holds_atomicity_of_singletons' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Intensional.Premodel.holds_box_atomicity_of_singletons' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Intensional.CoalescedProjection.weakInextensible_iff_images' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Intensional.CoalescedProjection.weakRigid_iff_images' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Intensional.CoalescedProjection.exists_weakRigid_iff_internal_images' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Intensional.CoalescedProjection.left_cylinder_admissible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Intensional.CoalescedProjection.right_cylinder_admissible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Intensional.CoalescedProjection.exists_weakRigid_left' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Intensional.CoalescedProjection.exists_weakRigid_right' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.CoalescedCH.consistent_witnesses_of_components' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.CoalescedCH.coalesced_countermodel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.Research.CoalescedCH.maximalism_inconsistent_of_components' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.CoalescedCH.maximalism_schema_inconsistent_of_components' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.CoalescedCH.coalesced_box_barcan_countermodel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

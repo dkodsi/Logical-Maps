@@ -1,0 +1,66 @@
+{
+  "kind": "ordinary mathematical review; not a Lean certificate",
+  "review_date": "2026-10-23",
+  "captured_at_utc": "2026-10-24T02:15:33.250397+00:00",
+  "result_id": "ARITHMETIC-COMPARISON",
+  "catalog_id": "principles.03",
+  "status": "Existing source-based ordinary proof accepted at the stated first-order scope; full formalization absent.",
+  "exact_comparison": "For each ordinary first-order arithmetic sentence A: CC proves A^e iff T proves A^e iff C+I_e proves A^e. CC=C+boxed Functional Choice+quantified Infinity_e+quantified Infinity_t; T replaces boxed Functional Choice by boxed Plenitude.",
+  "stronger_infinity_scope": "The same ordinary arithmetic theory is obtained after adding all-type boxed quantified Infinity, with external type indices and finitary derivations.",
+  "proof": {
+    "path": "proofs/full-choice-arithmetic-conservativity.md",
+    "sha256": "40f276622c90b77509130ab748e99f461c45eace443c1c8dfd5f529e8846d96a"
+  },
+  "sources": [
+    {
+      "origin": "research/2026-10-23/abductive-comparison/full-choice-arithmetic-audit.txt",
+      "sha256": "de73230abb3cf57734e53bf6d4e855059970d7b0934d6eb3ae5cb07ae7632cc8",
+      "locator": "Sections 1–6; unpaginated",
+      "role": "Detailed proof audit; mathematical body retained in the linked extract"
+    },
+    {
+      "origin": "research/2026-10-23/abductive-comparison/full-choice-arithmetic-review.txt",
+      "sha256": "1e7d18e2e050a1e118604d48121c31748379cfec0ddfc064460b5adc8c25df38",
+      "locator": "Exact endorsed scope and checks 1–4; unpaginated",
+      "role": "Separate ordinary AI review; original retained in the research workspace"
+    },
+    {
+      "path": "source/research/2026-10-22/notes/frege-infinity-20261022-1726.md",
+      "sha256": "795dcb0ecb0982aa0aa77398422446d23cbc5cf110be0c06a00d8d9afabcd8c6",
+      "locator": "§§35–36.5 and §36.7; unpaginated",
+      "role": "Existing source-based argument",
+      "original_sha256": "87f3141a5f47d4c195d6257f87cd94c389877bbd125d5f89f556de6927f41b57"
+    },
+    {
+      "path": "source/research/2026-10-22/notes/relational-coding-recursion-20261022.md",
+      "sha256": "23b59e366767967638ebac31aeacbcba8f046af387ef2d1ea5c9f4cc8bd8fcc9",
+      "locator": "§§29, 32.1, 33; unpaginated",
+      "role": "Current quotient, coding and arithmetic comparison"
+    }
+  ],
+  "external_dependency": {
+    "author": "Colin McLarty",
+    "title": "Interpreting set theory in higher order arithmetic",
+    "version": "arXiv:1207.6357v5",
+    "url": "https://arxiv.org/pdf/1207.6357v5",
+    "locator": "§§2–5, pp. 2–6; Theorems 3.2, 3.4, 4.3, 5.2 and 5.3",
+    "role": "Finite-order set-theoretic interpretation and its number coding; used as an external theorem, not independently reproved here"
+  },
+  "review_scope": [
+    "Number preservation including nonstandard indices",
+    "Finite type and powerset bounds chosen for each finite proof",
+    "Full internal Functional Choice and H-theoremhood side condition",
+    "Represented Frege-number surjectivity and quantified Infinity"
+  ],
+  "excluded_claims": [
+    "Higher-order or modal conservation",
+    "Parameterized conservation or preservation of original model domains and frames",
+    "Choice derivability from Plenitude",
+    "Separate exact Max arithmetic equality",
+    "Historical or independent novelty",
+    "Lean verification"
+  ],
+  "pending_artifacts": [
+    "Final handoff of the updated abductive-comparison paper and uniformity note"
+  ]
+}

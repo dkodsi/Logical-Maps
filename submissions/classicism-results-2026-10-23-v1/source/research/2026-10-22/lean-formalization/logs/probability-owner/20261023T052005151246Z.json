@@ -1,0 +1,30 @@
+{
+  "modules": [
+    "Classicism.Results.Research.AtomicProbabilityNumericOperationsCertificates",
+    "Classicism.Results.Research.AtomicProbabilityNumericAdditionCertificates",
+    "Classicism.Results.Research.AtomicProbabilityNumericMultiplicationCertificates",
+    "Classicism.Results.Research.AtomicProbabilityFractions"
+  ],
+  "stop_at": "2026-10-23T05:55:00+00:00",
+  "wall_budget_seconds": 600,
+  "command": [
+    "python3",
+    "research/2026-10-22/lean-formalization/check_module.py",
+    "Classicism.Results.Research.AtomicProbabilityNumericOperationsCertificates",
+    "Classicism.Results.Research.AtomicProbabilityNumericAdditionCertificates",
+    "Classicism.Results.Research.AtomicProbabilityNumericMultiplicationCertificates",
+    "Classicism.Results.Research.AtomicProbabilityFractions",
+    "--timeout",
+    "180",
+    "--lock-wait",
+    "300",
+    "--keep-going"
+  ],
+  "output": "research/2026-10-22/lean-formalization/logs/probability-owner/20261023T052005151246Z.out",
+  "state": "stopped_by_owner_after_certificate_timeout",
+  "pid": 49283,
+  "process_group": 49283,
+  "exit_code": -15,
+  "stopped_at_utc": "2026-10-23T05:28:37.610666+00:00",
+  "note": "The owner stopped this exact group with approved signal permission. Wrapper finalization hit sandbox PermissionError; group nonexistence independently checked."
+}

@@ -1,0 +1,35 @@
+Classicism/Results/Research/MaxPredecessorSchema.lean:93:6: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+Classicism/Results/Research/MaxPredecessorSchema.lean:94:6: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+Classicism/Results/Research/MaxPredecessorSchema.lean:114:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+'Classicism.Meta.Research.MaxPredecessorSchema.finite_orbit_collision' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxPredecessorSchema.numeral_is_number' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.Research.MaxPredecessorSchema.collision_rule' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.Research.MaxPredecessorSchema.maximalism_no_predecessor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Classicism.Meta.Research.MaxPredecessorSchema.maximalism_no_predecessor (σ : Classicism.Meta.Ty) (hσ : σ.Closed) :
+  Classicism.Meta.Theorem (Classicism.Meta.C.axioms ∪ Classicism.Meta.AxiomSet.maximalist)
+    (Classicism.Research.MaxPredecessor.PredOp.term σ).neg

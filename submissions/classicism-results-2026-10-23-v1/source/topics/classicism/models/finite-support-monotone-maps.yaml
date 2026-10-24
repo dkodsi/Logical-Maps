@@ -1,0 +1,231 @@
+id: finite-support-monotone-maps
+name: 'Finite-support action model: monotone maps of N'
+certificate:
+  source_id: bacon-dorr-classicism
+  produced_by: Andrew Bacon and Cian Dorr
+  recorded_by: OpenAI Codex (GPT-6), 17 September 2026
+  checked_by: []
+  date: '2026-09-17'
+  lean: stated
+sources:
+- Andrew Bacon and Cian Dorr, Classicism, draft of 16 May 2023, Appendix D, Proposition D.5, part 3, pp.
+  74, 77; n. 96; p. 79 (No Pure Contingency).
+source_names:
+- Classicism
+references:
+- paper: bacon-dorr-classicism
+  role: proof
+  locator: Appendix D, Proposition D.5(3), pp. 74–75; construction p. 77; p. 79 (No Pure Contingency)
+group: finite-support-one-object
+settings:
+  monoid: 'Proposition D.5, part 3 (p. 77): the one-object category whose arrows are all the monotone
+    maps of $\mathbb N$.'
+  sigma:
+    text: 'Interpretation of Σ, fixed for this record: one designated relational constant $c$ of type
+      $\tau=\bar\sigma t$ denotes $\lambda\bar x\, .\,p_0$, where $p_0$ is the proposition that the arrow
+      fixes $0$, pinned down by $\{0\}$; every other constant of Σ is relational and denotes the top element
+      of its type.'
+meets:
+  uniformly-pinned-rigidity: 'Let $Y$ be weakly rigid, pinned down by $S=[0,s]$, with extension $E$ at
+    the identity. Pinning and weak persistence give $Y(k)\supseteq k_2\cdot E$ for every $k_2$ agreeing
+    with $k$ on $S$, and weak inextensibility, tested on the intension $k\mapsto\bigcup\{k_2\cdot E:k_2\text{
+    agrees with }k\text{ on }N\}$, pinned down by $N$, gives the reverse inclusion; so $\bigcup\{k_2\cdot
+    E:k_2\text{ agrees with }k\text{ on }N\}=Y(k)$ for every finite $N\supseteq S$. If some $p\in E$ were
+    pinned minimally at $T$ with $t:=\max T>s$, take $s''\ge t$ and the jump map $k$, the identity on
+    $[0,s'']$ and adding $100$ beyond: an arrow agreeing with $k$ on $S$ and sending $t$ to $s''+1$ puts
+    into the $S$-union an element pinned at $s''+1$, while every element of the $[0,s''+1]$-union is pinned
+    inside $k([0,s''])\cup[s''+100,\infty)$. So $E\subseteq\operatorname{Pin}(S)$, and then $k_2\cdot
+    p=k\cdot p$ whenever $k_2$ agrees with $k$ on $S$, so $Y(k)=k\cdot E$.'
+  evens-avoidable: 'With $N_0\subseteq[0,M_0]$: $i$ the monotone map that is the identity on $[0,M_0]$
+    and adds one beyond it; an even $b>M_0+1$, whose only preimage under $i$ is the odd $b-1$; and $N^{\prime}:=[0,b]$:
+    a monotone map agreeing with $i$ there has the same preimages of $b$ within $[0,b]$ and takes values
+    at least $i(b)=b+1$ beyond it.'
+  positive-preserving: Every arrow is monotone, and the constant map to $1$ sends $0$ to a positive number.
+  transport-gap: 'Take $N=\{0\}$, $i$ any monotone map with $i0=2$, so that every $i^{\prime}$ agreeing
+    with it on $N$ has range within $[2,\infty)$, and $q:=\{k : k1=1\}$, pinned down by $\{1\}$: two monotone
+    maps agreeing on $[2,\infty)$ with $k2\ge1$ may take the values $1$ and $0$ at $1$. The model is a
+    one-object finite-support model, and the intension the argument uses is pinned down by $N$.'
+  unbounded-haecceities: As in part 2, with $A$ the even numbers.
+  no-least-pinned-cover: Let $F$ be the family of propositions $A_m$ ($m\ge1$), each pinned down by $\{0,2m-1,2m\}$,
+    that the arrow is constant on $\{0,\ldots,2m-1\}$ and first changes value at $2m$. The least superset
+    of $\bigcup F$ pinned down by $\{0,\ldots,N\}$ consists of the arrows whose first change of value
+    is at an even position or beyond $N$, and it strictly shrinks as $N$ grows.
+arguments:
+- holds:
+  - atomlessness
+  source:
+    paper: bacon-dorr-classicism
+    locator: Proposition D.5(3), p. 77
+  text: As in part 2.
+- id: sigma-contingent
+  when:
+    sigma: own
+  fails:
+  - witnessed-possibility-r
+  - no-contingency-signature-r
+  by: Claude Fable 5.1 (Anthropic), at Cian Dorr’s request
+  date: '2026-09-22'
+  text: 'No Contingency (signature Σ) fails, since $\forall\bar x\, .\,c\bar x$ denotes $p_0$, true and
+    false at the constant map to $1$. Witnessed Possibility fails for the pure formula $x=\top_\tau$,
+    witnessed by $\top_\tau$: $\Diamond(c=\top_\tau)$ is $\Diamond\Box p_0$, and $\Box p_0$ holds at no
+    arrow $h$, since the constant map to $1$ composed after $h$ moves $0$. Separated Structure fails with
+    it, being equivalent to Possibly Witnessed Possibility. Distinctness Maximalism (signature Σ) fails
+    by derivation, since Possibility Maximalism (pure) fails here. Whether $c$ denotes what some closed
+    pure term denotes is not settled, so Independence (signature Σ) is left unknown. The choice of a contingent
+    rather than a pure denotation is deliberate: this is the only recorded model of Atomlessness in which
+    No Contingency (signature Σ) is refuted, the others being one-object models with pure interpretations
+    of the constants.'
+  revisions:
+  - date: '2026-09-23'
+    by: Claude Fable 5.1 (Anthropic)
+    note: Re-fixed the interpretation of Σ so that the designated constant denotes a contingent proposition,
+      refuting No Contingency (signature Σ) and settling the open question whether Atomlessness implies
+      it; Independence (signature Σ) is no longer claimed for this model.
+- fails:
+  - distinctness-preserving-collapse
+  by: Claude Fable 5.1 (Anthropic)
+  date: '2026-09-23'
+  text: The shift $h$ that fixes $0,\ldots,m-1$ and adds one to everything from $m$ on is a monotone injection,
+    so for any true $q$ pinned down by a finite $Y$ a monotone $k$ with $k(hy)=y$ on $Y$ exists and $k\circ
+    h\in q$; thus $\Diamond q$ holds at $h$, while the true proposition that $m$ is fixed is false there.
+- fails:
+  - vicinity
+  by: Claude Opus 5.5 (Anthropic), at Cian Dorr's request
+  date: '2026-09-27'
+  text: 'A true $w$ pinned down by a finite set $S$ contains every arrow agreeing with the identity on
+    $S$, among them the monotone map equal to the identity up to $M$ and constant at $M+1$ beyond it,
+    for $S\subseteq[0,M]$, one that collapses two numbers $a\ne b$ outside $S$. The proposition $\{k :
+    ka\ne kb\}$ (with the natural numbers as individuals, that $a$ and $b$ are distinct) is true, and
+    it is possible at no arrow that collapses them, since a collapse persists under composition, so $w$
+    does not entail its possibility.'
+  revisions:
+  - date: '2026-10-02'
+    by: Claude Opus 5.5 (Anthropic), at Cian Dorr's direction
+    note: The proposition that $a$ and $b$ are distinct is named as the set of arrows that keep them apart,
+      so that the argument covers the variant with a single individual.
+- id: nd-necessity-not-two-hat
+  holds:
+  - truth-implies-two-hat-necessity
+  by: Claude Fable 5.1 (Anthropic), at Cian Dorr's direction
+  date: '2026-10-14'
+  text: 'Write $\mathrm{fix}_N$ for the arrows agreeing with the identity on the finite set $N$, the least
+    true proposition pinned by $N$, and $\delta_N$ for the arrows injective on $N$. An arrow $v$ is in
+    $\Diamond\,\mathrm{fix}_{[n]}$ iff some monotone $x$ has $x\circ v$ fixing $[n]$, iff $v$ is injective
+    on $[n]$; and $\Diamond\delta_{[n]}=\delta_{[n]}$. So $\Box_{\ne}p$ holds iff $p\supseteq\delta_{[n]}$
+    for some $n$, and the true proposition $\{h:h(0)=0\}$ is not ND-necessary, since the shift $m\mapsto
+    m+1$ is injective. Two-hat necessity, however, is truth: $u\in\hat\Diamond\,\mathrm{fix}_{[n]}$ requires,
+    for every $m$, a monotone $v$ injective on $[m]$ with $v\circ u$ fixing $[n]$; injectivity of $v$
+    on $[m]$ gives $v(j)\ge j$ for $j\le m$, so $i=v(u(i))\ge u(i)\ge i$ and $u$ fixes $[n]$. Thus $\hat\Diamond\,\mathrm{fix}_{[n]}=\mathrm{fix}_{[n]}$,
+    every truth is two-hat necessary, and $\{h:h(0)=0\}$ is two-hat necessary but not ND-necessary. (The
+    verdicts this argument also establishes but does not record are derived by the engine.)'
+notes: The cited construction is a model of the map’s relational-type framework. The description identifies
+  its evaluation point; construction and verification are given at the PDF locations in References. The
+  source notes that with all maps BF would still hold, since every map agrees on any finite set with a
+  surjection; monotonicity is what makes it fail.
+was_conjectured: true
+history:
+- date: '2026-09-17'
+  by: OpenAI Codex (GPT-6)
+  summary: Adopted the source’s relational type system at the user’s request. The cited construction now
+    directly supplies the recorded model; the former type-extension obligation is removed.
+  satisfies:
+  - no-pure-contingency-r
+  - atomlessness
+  violates:
+  - distinctness-necessary-r
+  - atomicity-r
+  - actuality
+  - barcan-r
+  - boolean-completeness-r
+  - rigid-comprehension-r
+- date: '2026-09-20'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Added both Axioms of Infinity at Cian Dorr's direction. The individuals are the natural numbers
+    and identity at the evaluation arrow is literal, so no numeral counts them. The propositions that
+    a given individual is fixed by the arrow, one for each individual, are pairwise distinct and each
+    has that individual as finite support, so there are infinitely many propositions. The set of numerals
+    at each type is invariant under every arrow, hence has empty support and lies in the domain, so finite
+    cardinality is standard and no finite cardinality holds of the universal property at either type.
+  satisfies:
+  - axiom-of-infinity-e
+  - axiom-of-infinity-t
+- date: '2026-09-22'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Fixed an interpretation of Σ (relational constants as top, individual constants as one fixed
+    individual) and recorded the signature schemata it refutes, at Cian Dorr’s request.
+  violates:
+  - witnessed-possibility-r
+  - separated-structure-r
+  - distinctness-signature-r
+- date: '2026-09-23'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Expanded the description from Appendix D, naming Proposition D.5 and its part; added the failure
+    of Countable Boolean Completeness at type e→t; settled the Distinctness-preserving collapse.
+  violates:
+  - countable-boolean-completeness-r
+  - distinctness-preserving-collapse
+- date: '2026-09-23'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Re-fixed the interpretation of Σ so that the designated constant denotes a contingent proposition,
+    refuting No Contingency (signature Σ) and settling the open question whether Atomlessness implies
+    it; Independence (signature Σ) is no longer claimed for this model.
+  violates:
+  - no-contingency-signature-r
+- date: '2026-09-23'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: 'Added Relational Choice and its necessitation at Cian Dorr’s direction: ideally full models
+    are extensionally full at every object, and choice in the metatheory supplies the functional subrelation;
+    see the notes.'
+  satisfies:
+  - relational-choice-r
+  - necessary-relational-choice-r
+- date: '2026-09-25'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: 'Added Transversal Choice, by the argument recorded for Relational Choice: the model is extensionally
+    full at every object, so for an equivalence relation at the evaluation point a transversal of its
+    extension there, chosen in the metatheory, is the extension of an element pinned down by the empty
+    set; the equivalence and transversal conditions are unboxed. Recorded on a question of Zachary Goodsell,
+    after an observation of Christopher Sun.'
+  satisfies:
+  - transversal-choice-r
+- date: '2026-09-23'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Recorded the failure of Inextensible Comprehension at type e→t for the property of being even,
+    sharpening the failure of Actuality; argument in the notes.
+  violates:
+  - inextensible-comprehension-r
+- date: '2026-09-23'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Recorded the failure of BF at type t, sharpening the failure of BF; argument in the notes.
+  violates:
+  - barcan-t
+- date: '2026-09-25'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Added the failure of BF (type t), of Boolean Completeness (type t) and of Inextensible Comprehension,
+    with the arguments in the notes.
+  violates:
+  - barcan-t
+  - boolean-completeness-t
+  - inextensible-comprehension-r
+- date: '2026-09-25'
+  by: Claude Opus 5.5 (Anthropic)
+  summary: Merged the two sets of arguments recorded on 23 and 25 September into one, keeping the 23 September
+    arguments for Inextensible Comprehension and BF (type t); the former already refutes the weak form.
+  violates:
+  - weakly-inextensible-comprehension-r
+- date: '2026-09-27'
+  by: Claude Opus 5.5 (Anthropic), at Cian Dorr's request
+  summary: Recorded the failure of Vicinity; argument in the notes.
+  violates:
+  - vicinity
+lean:
+  param: Classicism.Meta.Intensional.Monoids.mono
+  meets:
+    positive-preserving: Classicism.Map.Meets.finite_support_monotone_maps.positive_preserving
+  verdicts:
+  - holds: atomlessness
+    ref: Classicism.Map.Models.finite_support_monotone_maps.atomlessness
+    status: verified
+  - fails: boolean-completeness-r
+    ref: Classicism.Map.Models.finite_support_monotone_maps.boolean_completeness_r
+    status: verified

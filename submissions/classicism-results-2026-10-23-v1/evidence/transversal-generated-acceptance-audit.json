@@ -1,0 +1,1555 @@
+{
+  "audited_at_utc": "2026-10-23T20:34:32.490015+00:00",
+  "manifest": "logical-maps/research/2026-10-23/integration/checks/20261023T202920061671Z-e5e1f9d7.json",
+  "run_id": "20261023T202920061671Z-e5e1f9d7",
+  "state": "complete",
+  "compiler_sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554",
+  "exact_record": "logical-maps/topics/classicism/results/relational-choice-and-boolean-completeness-imply-transversal-choice.yaml",
+  "record_lean_verified": true,
+  "checker_result": "PASS: 1 exact generated propositions; allowed axioms only. Selected metadata updated.",
+  "current_source_or_ephemeral_snapshot_accepted": true,
+  "artifacts_current": true,
+  "sources": [
+    {
+      "module": "Mathlib.Lean.Expr.Rat",
+      "source_sha256": "eee815f267e8c72f5735fb973b5a910ac143f58d0dd40eddf3f65169ad3b6e91",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "4cd8f4e5a5aaad542430ed3e948a646372fd3dc59ea3a989c76e8eab0f01009a",
+        ".olean.private": "b7d0e4c6801569741c25cde0a634afc8215f4b1c5754978f53db6f3298651d96",
+        ".olean.server": "e0724dd2781b653234bdeee38d8b058dea948a5d04dd759ed05d0050ea385c02",
+        ".ir": "edd03a00785e67eafcaf2e79f650a2410e1cf81034f191808db50df07c390441",
+        ".ir.sig": "d0c939a9c01d128fd650961f1f9217e32ab72eda3fc9841b62e3c6e299c3b763"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Batteries.Classes.RatCast",
+      "source_sha256": "2d2f0265802ab69e891924f62d1ddca1b82c303027dfa0ef3453bea37577e7b9",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "4cc2c7c1b459486f454f7423c4767670bebb656f01192d4b28315cafe55926d5",
+        ".olean.private": "968ca5fd2db073364e01a5a91d75eccda9926479be3c357f92024e5e97e6e27e",
+        ".olean.server": "b57e23d5adce6d0925f4806d093f98f21718c2d4fbf2968dbb9f83b81d2c6132",
+        ".ir": "5fdcb4d2ee00dc20aff6e64164f75f7dafb46bfea7f29520d89223b60a9b430d",
+        ".ir.sig": "c567c09d767ce0b4ae862de77425065294dad8650ec9dcb17b0eabe2544926f4"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Data.Rat.Init",
+      "source_sha256": "8bf4701007955ed168463dde3a8a30fe19d3ea979aec1dfd128d4ef8858aa1a2",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "1a7ddd0a0359df0049b715e005a61234cf49cbe96e0b19d9dadc6694add95ecd",
+        ".olean.private": "b86747b64ba8384cdd187f39875a3fa25c6fde74afadea9f1c790602e2397252",
+        ".olean.server": "3ca6d41a9d448bb29757ba829250b0377d34ed32ef93f85685b0eb0f46ea1ad8",
+        ".ir": "81081f8dd6386ed1db0527189e5a37f3dca3d782e38c2130977ccdb2a0c5ff67",
+        ".ir.sig": "02173e912b78a80ea1fd7d8555667b4a8b889fda9f20d4a5dd681b09c4dfb365"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Data.Rat.Defs",
+      "source_sha256": "e644776b8813e3764493563b13beac92092a98854d017081f496c329078d2c1f",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "8e1ca135abb7a95abe23e9b0a0e58d215a840b2a904c8313ddbc04df28657f4b",
+        ".olean.private": "d04f299a13ffc393058d3110652c72a435f92b7ee07ded4d0ab521a5cddf9a9a",
+        ".olean.server": "ec88fb314a211bfb00d634e1cc19bb62fda0a531d4d2aa47055229c6c5188bca",
+        ".ir": "ca3b6793c514e2e1a326ce6b84b65ebc6e3290327bab8fed9fa0841fd9fca067",
+        ".ir.sig": "10182cbf543c8e19e35bae7bb3642bfda7bc9d054492433bd5ec8a338ad62470"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Ring.Unbundled.Rat",
+      "source_sha256": "742678627ed95430c10e6aa66ab24eab6d6853f8fa268604dcc5cc62e9974b38",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "3b4ad4a4bac5c55976644932e220c9f5df445efcc1ba89b7de3cf3eec5790606",
+        ".olean.private": "2a884034cb81f65485228f5294966fbb372c1cc7d0d14ccc002791d866713e55",
+        ".olean.server": "f8d1608a45d433d90da10f03158fc87db195e3aa585c78a16b041e6ddb4cdba6",
+        ".ir": "2600d0a84fc0f536302e3a48436f527cab4f0c247298d1fcfbcae0c537d76936",
+        ".ir.sig": "1a60864433e03c899a73d566e2746aac5f0a2492ffff3a1b948f7ac58dd74177"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Algebra.GroupWithZero.Units.Lemmas",
+      "source_sha256": "5896e7e015b3d69eecc8e580c28f0dd1473ad71dd752a3cb352c8427822410b2",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "c12d11dffcaf605d19d9f8afa00d6c699fa1dd373d49492abbb66f00e417bba8",
+        ".olean.private": "94bbd816438b3b3955663b97de1cd558e95bc296d34fc12d817907b2a463308f",
+        ".olean.server": "ba2ff142acf36a179870ead04615c42c0d8219929269acd9f7738b77bee6600c",
+        ".ir": "aeba696be03f594c94323cf01f78fa3aa089096e642829dea175e3f6f7f7a508",
+        ".ir.sig": "e58ea3da3e129850a5bdd19473386fd061058978bb36c8716d82d2d31b6f289d"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Algebra.Field.Defs",
+      "source_sha256": "dd76629c3d0e73c19ace31701313aa093d43e709c853f4384568588e9548e1a0",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "449c8fea74988146bc824af317cbce43b433db4d2da99263a569b7b9c0b2be12",
+        ".olean.private": "6157b7efb26e28fdeadb09503846ed566e16ae9611318b3323ae999dc24850a3",
+        ".olean.server": "c8e5a3c02fc8fc9f171f949a4f8237a1413c8f446cda85498d70d2a72fc020a0",
+        ".ir": "1d0e0be367e2aee809e8fb7fb302568e4f42907f7a4ee7fe7cd398b10685e5e5",
+        ".ir.sig": "b13ddabccc885742e212ef842fd048e3879ece3bf847dea56510718247b90949"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Algebra.GroupWithZero.Invertible",
+      "source_sha256": "0346f2341701522ed100549af08842381741bb3171eba7576133b08378fdef9d",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "9d233abac229b45ed9105dee76ebd79fe976b6b42d8fdd4a6e95a6cf41a2cc8b",
+        ".olean.private": "62caf93d70bcafa88c7a028ff9672ece83162115c9367f96e193ee911f64e710",
+        ".olean.server": "10d973ef562e67d3a74dc7c4e107a111cf750b712a88f06c40faa7dfb262cc0c",
+        ".ir": "2e991fa48392e04f4d4bb45e4740362abb97eac085259c08939b56beefa809c5",
+        ".ir.sig": "c4b2df5b80a7fd076790e4180bddf4c2c68f1037145ca5834a204cfbeaf5c71b"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Algebra.Ring.Invertible",
+      "source_sha256": "dbdda924dfbd616ca02f6fa317784faaf45c2d063cdccd41cef7a725c5a86ea7",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "bbd03833706b53388c9e5a47e243c7c4375eafa68985c0a77a694dc2c22ea26e",
+        ".olean.private": "c39a067859a7626a96b1b73ae3f1d55957a8e369cfd5071fc77e110df88231d9",
+        ".olean.server": "a87ae17e5bfc68ca27fc1518fc3465ab5796c187834f5b887df0f9186ad95184",
+        ".ir": "a2e097c5fa3bfe1d14a69d55269d18c2e3e9903b5398c7bc8f067a012b678be2",
+        ".ir.sig": "9866ac24e8285b61bf6e0e20142f39d6e7c3efd1f7a3717142e3828e655d3065"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Ring.Synonym",
+      "source_sha256": "d8848c2263e9c91419b45f43b262cd3f7e2e5d04b14dab51953adecc15066a4e",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "42d2058a0398f56400fb6672cafd371e2ec6ecb5af9fc70e00869fd0a8fb6856",
+        ".olean.private": "04e541005470a344b87593bee3e4a0cc7c8fd03ffb6757fd71dcbb2b4cdd5fc1",
+        ".olean.server": "1883df9ec67c52409e973b7055b68b711c151d033785b1d7cb5b387834938c22",
+        ".ir": "f4ad79b51c75ede98b78b4e8954abdb8cc46f5117811ab5fa2bb0abd7ffa5bcd",
+        ".ir.sig": "902af5249c398a312eccab070b0e9ba216a01a685ead56b24c6a8da255c2724c"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Algebra.Field.Basic",
+      "source_sha256": "4aa5c7c0a9a17d356d084bfabe5a2a54c0fa108ef3a90282e23961710cf06643",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "58117f1146518b37d334af6f87e604af14f81f59ddbfbf66401ad894388e74d9",
+        ".olean.private": "e6248000372ed9efc24ca0dfa109993945ae4e5c3f13aff356fc6f9f0845dca2",
+        ".olean.server": "cc63a9924a7195a33860ec5f3dbabe25259722660dc51d40008a12e90386c578",
+        ".ir": "72cf80c73ccc7ad55c0875c2a1352b217d37f9c46c4a325c217f820bcb005e0b",
+        ".ir.sig": "b9d7cfa43eda42fa3442ba15b7c4774c93ed7ca99cbcef969cc60e5f41efeb4b"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Nonneg.Basic",
+      "source_sha256": "a77216411155ea27c12e19c45ca8f655fca771cf3044f862c4c37241a35416be",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "3343b2652c9772ddd83888668b3b3418ed29d79f63ff08e1d81cd672288c2ad8",
+        ".olean.private": "d2c52c78219626b764b4447782cd6d7c695a0645d72c84ae324b043598717d37",
+        ".olean.server": "68c2b46fd4e29a2d0572bf7e306677767441a469c7bfaa13a251dd5ed7201d02",
+        ".ir": "e3c532b9fccd246b3b2edf6d210215495fddd638cd6ca50a84cd7ed6c18d6c31",
+        ".ir.sig": "9d9f568d2ec944cbe0c71bc8b56c78a08fe1c2198d404fc69d414c4afc3e5c02"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Algebra.Ring.Rat",
+      "source_sha256": "79f6035d695e48393153602fb2bbd2c858621816a9bc3b0b82453b69ca7db6ea",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "cd1e7568e2253fa15767d911382c98195cd5c4a9a4d8aa06555c336986f59fa7",
+        ".olean.private": "61e0336ceb803b73ce0b8b0f7f8ee8d71b6282c1608c665e0a8031b423a7ab26",
+        ".olean.server": "3527a8b73fffdf64a70aa5010ea87de2bcb2de8af7ffb656e052814bc2a9156e",
+        ".ir": "034d1550a8e20790acc7bc128d543b6dce836c8bfb1158a19cc0f8206b2a6e54",
+        ".ir.sig": "cf2699ad5d5b6602f2d75b125734562eb0f79fd7e11209cfca8b94e915214424"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Data.NNRat.Defs",
+      "source_sha256": "dd6bb82cc9f41b4dc737f683b0451d5a989be8ea7769cce9df13804a15fd498f",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "cae3d47d44e8efab121275c63bf2b6c225d74de6f5d747b08914b6cca1f6d99c",
+        ".olean.private": "e39c01570f2552e8f58e5d470ebaeef065a7a64604bb7d2718f238f07d146986",
+        ".olean.server": "705b79827003f28c3183ef1625c40a489e2096046a500280fb23105aeeac7496",
+        ".ir": "341537d90db40783df0b1c28a706f885391ceea847c36a3ab08a778a8153db76",
+        ".ir.sig": "49d1d2668bf149c44b42a7587cc590a8de95c377a2efb4232ae1fbbeaed57b15"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Algebra.Field.Rat",
+      "source_sha256": "4ce45b3b3bd7ddbab18b511e748778d8aca6b70ecca6078a0feee29ac2e9114f",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "19b1fd02a59cd9810309533372b935aad7835396d5b4b4d345429c20237b9852",
+        ".olean.private": "e4d303c2723fe375c2676bfe236b0d5b0f1d3cf6b997c9131d89b19c48b3ec38",
+        ".olean.server": "4c0738ad65143a7a8320da6cfad24b5f8e2d762098861b3a783327b240b7ed2a",
+        ".ir": "53328953a34371bede0f3435f03261919845661fb269c1609fd992006e31bd86",
+        ".ir.sig": "a6041743af534bb4719ef8d4ec2b20c061c1ec81b2f975b6d5791fde1d4663e3"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Algebra.Group.Semiconj.Basic",
+      "source_sha256": "06f1af57cc0109141f9aacb5f71de610db070f10de3187675345d4c12f71065c",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "359aaf64d454f8c665e02e0b388fed591723fd09726b1d95d56cde633c8ab6b2",
+        ".olean.private": "b8e1ce1346f8616e801164dbc89c63c3d945af697d0eaae8973c3b181da13991",
+        ".olean.server": "c062037ac6effc48e490e1283aea2bd3c7d066935c5117a660a9840e14d34d7b",
+        ".ir": "4de75d494f39b3352b57a4d7dd55aa02cdf23accc01b993650ea064088b138f8",
+        ".ir.sig": "f6f48512a26bb29ab11de43711e4e581a2b83590da5259ec6559d678c9b27442"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Algebra.Group.Commute.Basic",
+      "source_sha256": "25164de3ccbb6554365e45fb0bc04dcfa7cff307d8dc2fa7327b1fa137ae45b1",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "89e9f2513be0b096e82131e2ec3b840334452ba7050dc6ef04d0a42dfa38b9f3",
+        ".olean.private": "8a7b4b8179be328ef2af8d2833bcb5dc50361b81a369c804ca288fca79842cd7",
+        ".olean.server": "88c13098d09825e1eafed57f54eda9dfb86ea5b9196d9b90e29e89c6d4e9dede",
+        ".ir": "48580cc35fca03daeb781535e96993bb35d911a6a73669a9fdabb5211b1fc498",
+        ".ir.sig": "ea9355dec87d3b4c46e1f1e46a6daf7d5ad2b07b6758ab15a7bad88b8d0d1815"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Data.Int.Cast.Lemmas",
+      "source_sha256": "f7c3f9f1d28bd9e40b51f5c6dbf5a2735cce02d91f1b93ad8b2789e17ea26bf2",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "e7e0e05bdd6c19c49e92cf7e1cd18b296492e148370c89411e00f5f32365654f",
+        ".olean.private": "611acfc0fae00b8ad357cc51fd2c0c2ec8a5ab1dfabfbcc3f98d282b5b9be5d7",
+        ".olean.server": "7ba5db9f1d7dc8cb13b6b39532008e573e5393924651d60d044f3c77f8584388",
+        ".ir": "7ac6ffb224f3e13cbd4efd80bbcc3671cbc3c1b56288407a422b5cbdefc08e15",
+        ".ir.sig": "3764e1584e100d9ffef7eea91a79e98d36fa07ad560487c93feca13811d0778f"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Algebra.Ring.Int.Parity",
+      "source_sha256": "667d592d3c92514ece0c60f45f82b3f7f9382c75a72a086b00710f7e2847db16",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "9377a2f253f848b532aa3e1574ac94c954c7a5952ebf038b0253a9b48835120e",
+        ".olean.private": "4a8a7b2b4f3d927785368c5d27555dafa60e4c6dce9297918ac5927c7cd4d506",
+        ".olean.server": "5e86f29d576e64dc1a7a738be9ab88ccc3ba0c2198d4a104803c4836de88fc62",
+        ".ir": "d6c923025403b2a7238e4d74f954bbc50c01e78d777c2a31527baaa2899a49ef",
+        ".ir.sig": "10bca0f7f12f46b08c4a85debd04dd00ecd14bd572eee316af39f55f92a839bc"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Data.Rat.Lemmas",
+      "source_sha256": "7708278a1b4f28c587dd3c8710e191ee4c692b0b32f43ae8ee339bd0615cfa92",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "99f7fc73a2e1bc6610ee1c3c6c743b06ed6165b4ede9cbf61eead45b279a1ec4",
+        ".olean.private": "5b3c59c43c424795f3bccd2c11ec4f1278d46bb532fe8f74397686f7d713c94f",
+        ".olean.server": "fd98fd78002744afb45441f66f4f2fd821d978ba3d46d3d8e26e14314bff7844",
+        ".ir": "77dc0c7018bb11f340f9771b775b7da2c4e0a5774720b584396df89404f648a3",
+        ".ir.sig": "a1999254f025ca31a552ec53f38223fe81d802f9ce0505cd275b12fb11610d0d"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Data.Rat.Cast.Defs",
+      "source_sha256": "0e71257b1ee1db6fb243f76c916f39332288323ca8ae00c85ac1271fd2deb0eb",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "91a90f954b9c1a8165fadac63b5680d09e716fe0323abd6d0051a13e35ddcf8e",
+        ".olean.private": "d2cec175094824e52b688ab4cc2d476940c9369e09c53ba87c62f1a7d45bbbf7",
+        ".olean.server": "ba7546297e37e1018ed828fa1fe8eb5e5758a4b3f8e406de98400344eedb3453",
+        ".ir": "e4b95a0a27dca9674564ac023d5b1b99bc84fed917a05d01515c71b6ac639396",
+        ".ir.sig": "2fa7e040ba33ef7ebb09292047b958921c2911fe632f7eec6c4a3e3492b467a6"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Data.Rat.Cast.CharZero",
+      "source_sha256": "39c30fd995f1c9f0b8e74b8d494ee14295763c6d290c46b81af97a15d6bc3764",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "e35d4a250585e71a77840e47c66a3b89f94ae49b550a6bf635ee7f7bc2772fad",
+        ".olean.private": "fb00fe753218e8cfbcc97e3abb1a9cd4508383e7690bc1a19ae802912f0a4065",
+        ".olean.server": "fef1f60de917d916848f82016eed17068e673b96f0e07c75892ad225b4baed8e",
+        ".ir": "59ebe82b231d1666f344efe025f4ab9394026b9e8980f71c1704d6d253f68e41",
+        ".ir.sig": "5bdee3a3ceb9941d5e0fe177faaf14310bf8550e8e9d10a049722749e883309d"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Tactic.HaveI",
+      "source_sha256": "0c3c94c1eb65d523e91ce2dcc93efc9f3aade8040329ca0f4de920aed0213ca4",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "ca4c07f5b6b8869d24a031938ec9f13f0c3feb0175134b3e02f9aee59c243bab",
+        ".olean.private": "4bedcaad21e5f12f86d9b15987f8e6dc644feb5560cc1737061f3ca1cf14340b",
+        ".olean.server": "73e589ba39fe7a05be7e3971c30b65d024f5659d851f06818b7d937fed9dd349",
+        ".ir": "7a61accb3b01743126ebab89c2f1563fa867fe342770d4b1f9dd03207655a959",
+        ".ir.sig": "2080c1ba806eee560520c6969773653759d1fb5b9bb63f38939d23f6f3a4902d"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Tactic.NormNum.Result",
+      "source_sha256": "9cf9896928ade9cf3e5b7264750d5256374ba37b24b73f0c28919a284717da65",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "f84b97a0241ec09f209586c497e72860b4fbe767b407f53ab13a2a6830c929c3",
+        ".olean.private": "cd10af23dd681a71cc7ccde00dfa76285414cb4949d571b477d99113b1e0496b",
+        ".olean.server": "11669b30ef031c64af56b3f2a88d22ce0cc249c0a5e59fabdf206198646cf819",
+        ".ir": "0e932dd7219eb7c1854d2f940603f91170dbb3a3d65c083f8e76248c94abee7f",
+        ".ir.sig": "480797f690b31767a67de5baa793945fa33ef26c7add3cc1911fb05922e94781"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Tactic.NormNum.Core",
+      "source_sha256": "60010da4c961753d1895171471f7816ca40dd71c1444462f9f66264213fb76da",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "eb3ed63d1d3843f74340a5bc782e0f77da3da468e95a1759b588903a0f82e98b",
+        ".olean.private": "21ad3e5169a124998133bd5413b7be7a8e203c2faf3f9f6eea9e149618d3ff0a",
+        ".olean.server": "42c20459036a3aed332c7d2511354309aadc6ffa16ee361155ca978be29754e3",
+        ".ir": "7b0812ce9fd0513b6f283f5ec22979ceff7ab6ff4055da03d90ace6a4be27f44",
+        ".ir.sig": "85464692984cc23619ec6521cdccc79a5cd790196f3588fb46b0a363adf27f75"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Tactic.NormNum.Basic",
+      "source_sha256": "c41f553c80eb65c5730d3fcaef800ba9bba5bcb3c8433132e6c59cea890f58d4",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "ab487586c4166fb85f8d0880a0c88297e47150be827d7cf1e13cf3911b72dddb",
+        ".olean.private": "c357fd4987734165df41ec775ccf20de650efa9f49975826ac02f9567d866cdf",
+        ".olean.server": "57321aeaa65d446bea6a35861359f768ad453542d1549a7f7403a3cf562424fe",
+        ".ir": "e59facdaf45e224397e4e43ecdece5807fe73a2e30262f2bd9f98a7ee76f3fe7",
+        ".ir.sig": "7b23b4f768c730e3bf39976d1bd77c6b3d7ff320d66125b727205c5235186032"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Tactic.NormNum.Inv",
+      "source_sha256": "8c1834cbc470868957d2c382f59c5cbb2b41442470cd514155de91f952bc7a9f",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "738dccd6dca00740ca3490993030d1a4aad04528aabcb8dfac00d43a8ec2ad30",
+        ".olean.private": "5aaa0bc57254ee7fc06a7b0a0d5f8fcf2cd839a41ea69fd0ab2e7534e1121949",
+        ".olean.server": "af0871d775f5b9a08d2635bb104bfc1150559e1d32a06800710326e118e62d4d",
+        ".ir": "160e1ade5d1cb372539b4541f8f824f71e13f0f48c0eb512cfdad594e6d28d75",
+        ".ir.sig": "265d31858c1455c37bdca789cdf4ba26d74cb63804833c0cbe7a063c80ff092e"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Tactic.NormNum.Pow",
+      "source_sha256": "902ad19cab3ba33e794d9ecce78cc36b0557c70330ea0a3b24acc21b2d92d1b1",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "250890c3c5c7eee317464aff329abcc302fc1bf45d4377dd89ec4f4ef65afa9b",
+        ".olean.private": "2eb459e92a5f6bf589090d612e6bab5edaa2cc1da58694370adf4428ccff16ba",
+        ".olean.server": "6bae552d7a3c5c3c2d23c0430b11dd9058dfefd3e001b76571f4d62f1b355a6c",
+        ".ir": "e8557f00bc100884f5bbc6731c63660f8d01abb3fcc2b5ea609caacb93934d3b",
+        ".ir.sig": "eb2f0efc981ae4b538f8aae69ed9db97a9abd5089338d3e77a5068e94db984ea"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Tactic.Ring.Common",
+      "source_sha256": "75f07cf27cf4b5c7f4b74de36d99ed29766f3e7a7d915581376d3780845eec5b",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "70b079333d4902ba0fbc694a4ea6dfa7ebd33cbb66730e040949fbe8ca0cd2ba",
+        ".olean.private": "f05a5591b26c618d8f5b13c362ead127174fbb2c629619606e62273326a929be",
+        ".olean.server": "8f82d5cd7e93bcfd495aa77c088dbf6557e4f36fc37f9c79fd557b4d26d4734b",
+        ".ir": "23dc33db80f636be49dd7771d5ca53eaa22022f29dfffedfda968fbe39afb72d",
+        ".ir.sig": "f441f8a3d17106545e12939531d37abccb3d952253986579b13e1e0ac13a4b69"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Tactic.Ring.Basic",
+      "source_sha256": "dc40cdf7146c4ec77b3e71c776ddc50911f71426f639070e5b17546460b01eaf",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "3c7ee7063263a2c53daf25d5f1c16236ce39b6087979e908ed7f1b26905ab123",
+        ".olean.private": "8fe5d9803f647627834a132f7da372d28791c88fd1be740e028f993e5b2926e2",
+        ".olean.server": "108c1f344b47fc0242582de17285936065fba4a15289527b63f79492a911110d",
+        ".ir": "c1dbe38c8ebe34a936fdd31e42be03e84d7d032a670f6e8adfebcb5e1b06a80a",
+        ".ir.sig": "4175914b0ee2082042ddb6031db219ed939ba27868702169304bf325114a48d1"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Positive.Ring",
+      "source_sha256": "75c9b2b9237331374d5ad1defd16cecec7840ec07d109f9a12d9f483abf427b2",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "6f77fa76f4bb4460e9a746b5975f1e4542e9aa3ed1a9e68fac80178f5fe07a12",
+        ".olean.private": "115f8549a458698143849bdd7c36a7a78996c6645750fbd6d835e981647c60f5",
+        ".olean.server": "c9731d1c009fcbb979cd73c08cea85978093d576fbe1c0e843f61cfdb9c0f8ca",
+        ".ir": "40eb908b7306e037a31df25e89a2163a5e14b8014c361f2746f19f2969f14f00",
+        ".ir.sig": "db47f5e25a9dc16bd0669a837098029d861b49377b3e1e4716d27d0a8eedd7d8"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Data.PNat.Basic",
+      "source_sha256": "9cac947dfc03c2ed6a73f32ba95422122c3c286812f501e49229fe43917f354e",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "f5614d336d69b198239a9514d1151d7628b3284f3a1e1e1ba3229596be33cfd9",
+        ".olean.private": "3cdc89bf64ebb0cfa5c06a6503b72a3576347720179cfafb52752f719285cc4c",
+        ".olean.server": "d7133e5300cf443c28b9a7f909b44059396546a4702cfa201c786ff4ae02a5c1",
+        ".ir": "95848407853aa5b085470b49ae53aee4761370fafe22dc7987b45b39321bbe90",
+        ".ir.sig": "a2140965ff28b444f1b7edb33fcf4ff02d56238aef8c4ac2f4095660146b124b"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Util.AtomM.Recurse",
+      "source_sha256": "8dbef9ac01a4cd2caa8612a580431d6f1cfa493d1e46a500e911e9c912112ce8",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "5268e07a3a82d0e522a943a402d8c16f5260e1b350d3934eac79dad2c8d3f328",
+        ".olean.private": "5762e980b81b58aa726bbb65823294c2c841428854f53c6f4050073382655693",
+        ".olean.server": "0575230b3454910270f6563ac76813677c7da67c933c792242b489641e72d2ff",
+        ".ir": "608e039b3c3c36c129b3368580cbf5a30ce00436971a92c37f6fc8b1a8fa05b4",
+        ".ir.sig": "746dbd6e21da2ace9c60d98fbdc3f022766ebcf358922400ac429687a72876f5"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Syntax.Types",
+      "source_sha256": "567828e8f9a707cf635e3b4fb30bc868a419967307613d0686d795d195606eac",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "06ab8b44ce7d7b6c90c25d4cc9e58b72ad316cb1c73e67e82c214ebc3117b126"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Syntax.Term",
+      "source_sha256": "ad5172acbb74eaab9307662408928b80e6ffab62e14df16f2f41c7205de13f69",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "4f77c921708f52a8d1c646e52072b7a63daab23afc54007f41eb669fc9d057bc"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Syntax.Conversion",
+      "source_sha256": "c22fe48399811fcb0d71b37206c633749a7285291c62c2e7d786475ea6ae339e",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "21dce520e2a4e2eb679fbf609ca34a6244daa22842f43fd08eaa4b9797224f6d"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Syntax.Derivation",
+      "source_sha256": "7cc2fd01542014d55e5a4c4a411724db7cdc076462d0de724c3530b0a8a3fc6b",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "4f72cefd18595b0c00c8587ec3ece9b1d63cff25da1e72eae28d18701c32da3f"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Syntax.Axioms",
+      "source_sha256": "f3dd3b51ef834f46f22e09fe34026f47120a8bc171afb190b5053c443f4a82a7",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "9119e12775e212ad694373b4138c67f18f8d297a1b655703f033e65072ccf154"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Syntax.Entailment",
+      "source_sha256": "13f758dbf41a84dda7c2ae7adf6bcb9605ee114ce04dbda0efc5f1c4fbeabb1e",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "c561b23650a51895b766f0aaea9b30a8748f94111ded0220acc3ae1db4882b41"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Semantics.Denotation",
+      "source_sha256": "2103000e1da2b0ce5413fa71820b7cd579bf562b7dd50d704e058b5cda0c7925",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "8943e49d76dab4523282e63d6b3871f5b027aa79b606a885b7f39b6c48a5152c"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Core",
+      "source_sha256": "ed0b1189f3fe3f02ce7011058273c0915bb511e5fd30ae33340e7ae0c4afb81d",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "4096b1bd17dd536827fe51c1c73322fc9aab46bb526e2a52047b47aff305efcd"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Equivalence",
+      "source_sha256": "257006775f36a2eacca652360f7ff8fb9dc403b2b0f4d71ff6a5543e5a939a76",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "0d1bb97d26f635a7dbcd19fa367c8d9a7048ca8942cc8b7ac06afb80ab88023d"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Booleanism",
+      "source_sha256": "0537132563704170d7ec4dc14755690639a9a784428650fa7bf04067acc0628f",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "98b8c05a117cc308217d8f9fe40833975b46c80582f0309f291f99ca031efefd"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Identities",
+      "source_sha256": "3629e17eb7ebf28d47f0d1a2450886bec05b39bf73ff52eff99a88a12579c3b3",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "4aa11b19a80924f3a86578537e0f8438ac21feb4d1c04c69a311204131a331db"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Strict.Axiomatization",
+      "source_sha256": "fa26c38979d08d22db2c14d999bd3c5454170e00e72f2781cf2cfa28910ed533",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "e8e720586d8c63bf6e3d86e62ed138d0d883cc61ce1b65fddf4ec82e9fc98321"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Strict.Algebra",
+      "source_sha256": "d4cb80885b688ee323e6f59b084568746247f751986fe2ea7efd53cb4e6969a9",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "4fbef3b460d57f020ed3fdc74f992f1f1dc25707acf9e2ce0da3d4922bfeae6e"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Strict.Vocabulary",
+      "source_sha256": "29fad160fd838d15256273fae84dce3cb5381cbd876e7c6ed882874da295b747",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "6ece3edca732b902bec9189727c0453f0d07537edf454651cf470280d1117ba2"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Strict.Tautology",
+      "source_sha256": "edc88bb68c00443a3c309ad01da9c31e1325bc8d63bf0a2ba9392c43eebbadfe",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "f4f1dd7c74fcfed307820e209bf59a9776a0a053ee909946d491b1d9f25352ae"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Strict.Quantifier",
+      "source_sha256": "688f1a0f560a30f12fd4b4b6663fb7583fac374d9bd7591a55943bbb1b4695fa",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "12fb1d4603c8a65ac9dcfcf5593512cc77c05019c9daf612b7a36c5a2e6bb2c7"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Strict.Rules",
+      "source_sha256": "496f3272610ad5dac44de1f90bd394d38098d44f5c8e51fcc30e835e415a8609",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "50b34fb97ae0d75ae892b240a4d2cf030de5e8e6dafffc4177c1a1aec4d272e1"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Strict.Primitives",
+      "source_sha256": "b0875be460cec24411c21b6f5929f9c4f68485e6600317f1530adb0a20abd69b",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "17cadc09c128c7d3a4bda4e889639534a90944380bf44524d9ebaccc9df74c79"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Tools.Check",
+      "source_sha256": "20fdb6525e533a835b5d561bce9529e553de2a3fc1b4f6416235da7f52da6cdf",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "9e6827329bb5bf88147f2bdbddb4b944bf721ea1538eb3a42f5e7d36c3921ee1"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Strict.Transform",
+      "source_sha256": "477d7ea0d6a8c0e438bdf1fdb29c68e79512216094ae8c8c5851b47133afe3ae",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "d50f145784bdaa4c9cf53102f0da3ea2728ac28414017dc76510601e5defc1c4"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Paper",
+      "source_sha256": "3348a9c2bf786ef15a9a2a0341dce82e9a419e81a4c7b7486d8c8cba8fbdc895",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "4e19b4faa931dfd3ccfce2cd899744dabf84bd9200738e628b5bf3b7fce52f25"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Modal",
+      "source_sha256": "7706449a7246e0be0772a33dcda61ab010686bf5bd64c45017425bf39ed0cf42",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "57d01043696149874d7a869f019589434bf50ba324cd70d1507348306a8bd22a"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Order",
+      "source_sha256": "4755de0b5eb272e541ce89e84078c4d80c3ae9a332a6910b395c73b78a2b4730",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "4c7788e753989740fdb5f59938f8013bb629477369196586e15efab2d1ff5ce8"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Pointwise",
+      "source_sha256": "78b858a9d33feb587976879190bdf739afdc0e564c4e6dae5508f8f2c5e15a16",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "03d01c38b61701d9f193fe0abd174ebc08a63a60213701a0ccbb3823b3f3cbc0"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Strict.Mirror",
+      "source_sha256": "c9aa802c99fbaea769cb8a88af075fc434b3a9073bd9187f9d00b0e6e82451fe",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "dd97c6c376b273d72d75a452b0f3bffd065ea9714b74d47c300a67075748fabd"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Semantics.Relational",
+      "source_sha256": "b9424788860fff653c01277d1d1e1e2aa257b0905ac02b0879bb6029a1c5c32a",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "10b1ebce4afc1b45e57ad6dae5e191615874ad7ad743568c9efd8a7c77c35a65"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Tools.Quote",
+      "source_sha256": "9539d77cb6894442171628c10fd8f4e1142fa8f7f99e80fac7dc1681c7eb96fe",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "df567d6aa7ef8710b8fb037cd2ae85f69f48f9a182d41f80c43d498afeae3362"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Syntax.Normalize",
+      "source_sha256": "1ba19ae01872f7d4357876e2e4c47e4f675cf6b733be98c1947838a1f0c94c1b",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "466cabd2038839e898f9d083889e601f02dac99cec2e0816d94d88dae013ea80"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Tools.Translate",
+      "source_sha256": "471e8a2a7ab42f306e986af1320f0bd7f4d77dd073241e3f77234bf0fc5d6ba7",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "e1f7c98b7f2c40a7ce40f5fe54a313881050dab1a04f491613f7d8f3961cc69b"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Syntax.Blocks",
+      "source_sha256": "77b4ef8fadb3646edd15d25854bac994a6eabb8bb1f51347c9dd00fce3a6ac5d",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "311996802ea136c940f6231659fdd0256a3267f5a4f5ad2ad7817d75af70d32a"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Syntax.Vectorize",
+      "source_sha256": "b57548b87b70c0e9df1c0fd48a1f7b7d67d4828ab4d4286e164e7f32c4716817",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "54676fc9c944d5a3d3790924422e2f96b91f632e553468b388bc76e0126e0735"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Syntax.VectorizeDerivable",
+      "source_sha256": "17508c58aef3e3ad7b121f20349045d76c5e238a164cdaf96c2400255c492824",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "2cadee08cbe83be4eb007873437b03c95690ef5b51babe5c034e0bc3dc4ec7e8"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Tools.Schema",
+      "source_sha256": "809bf8692601598451770b6422375de71cddf6e3d4cacc651b3905119fe40d2c",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "255d53a068494804cda144c2eefdf3cea1597f1d8abfbd3828c2199e1be5d9b8"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Comprehension",
+      "source_sha256": "570435f620ec40a8c0f359ce546c26933cf3acfc6e7c8da81fa805170f9ab844",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "813cf9f39a4e486f9906dd6970d8415f635930a982f8e01a96d08ca29cca9275"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Lattice",
+      "source_sha256": "43231f5d30bab05bc0d11927e1ce09f17ec384875e0aeb1cb72335e36f046070",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "277da454f009ca7f6353f6463dfcf355a405b20c70a33a27b0717ba0771abeb9"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Principles.Base",
+      "source_sha256": "d0c930dafb5decf6e747b5a05215cbff099d4efd9e69c607f01a54d5c5a7b96a",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "20e49d1a2b8376812d19aefbe611bad129d3d08459df5944869bce4ccd6701f1"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Principles.Coarse",
+      "source_sha256": "5c3aedc0a4117e7c214d186b384c42b8da6a17906fb7a76a75cb625f85b0a9b2",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "c3458dd19b42db171953accc7786ccff05b7f4b526f911d0b95d68ce2d7409a2"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Principles.Extensionality",
+      "source_sha256": "aa1929fee457845f79c2511b4df86462660ed1c68c3f85b5af8636a88a8f15e8",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "a0e9e70fef6b3fc46f7f2e60d8f4e2885acb0f75e7932c4f4bda4b94a0c2a1e4"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Cardinality",
+      "source_sha256": "5e627927356fc561dfd5bfacd9935c558c7760678df56c0158820a7e8626703f",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "8cf1865ab3aa041a124ca962c33e049fa16b0ef84b346833bf2ba918b388a515"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Principles.Lattice",
+      "source_sha256": "95a7c96bd3f2c0b131b59412ee36c288b9f12a772075e8f6ec83d8177f6ffd60",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "6bb64bf3b5e1623438e4a54aa99e7d8113e81f314ee929e518622bdedaba1d14"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Principles.Instances",
+      "source_sha256": "53835a72c249e8f75246e6b42331d205b8bec73a8c03bc2d1ad48db37a88e47e",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "e6d465b99bcace775f20593aab1452224ed141f7354dec32581a28d5a602bbfc"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Principles.Comprehension",
+      "source_sha256": "7d47cbb2fcbf444bd1e708ceeb9d007c1be955b41346b2adf14f5613ec7e2537",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "500bbefccaf9aefc0f12194986abf67df699eac76bda2f96e823fd6382e36230"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Principles.Choice",
+      "source_sha256": "a8f7e35f1a11805edc2b116b6af002bd5b1d0708b93aaea16781cff519687319",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "f1b45329aa59ba7c22d957cac5caf99a0ffb30a126e54ebd05a6d52e1a689b0f"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Principles.Infinity",
+      "source_sha256": "9c901565490f92a5a6b18ac1cf690c756bb5984e105e885614b87dcc00db027f",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "04665c2ef5c822fdedeb15d1a219af3c744d4845d1a3ad8de78e3b347293e015"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Principles.Schematic",
+      "source_sha256": "f6e0fe85d4c7f95deb80b98e19cf10e292ac98d87a5c2caec2ddcb9920e677ee",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "61804af833b257357059659da4954fc4b710aeb3c04cbc527c1b114c7fbb6f3f"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Principles",
+      "source_sha256": "747fc5fbde92a7dd1432aaaafee00437398594ae06dbc8ec2040690fae443049",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "c8fb4965d740ffdbf260a245b9c1e59e7beff90e5a42191aff31828c6661d4a1"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Records.Base",
+      "source_sha256": "43794a516d90505e3c5b48267ddfe110b8e482b881cc1300f2e2ee182c2fc2db",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "80585bfa7a293e518eb831134da927589abfb25fb335471a4cb0fc9a47be1d68"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Records.Coarse",
+      "source_sha256": "a3a6e0bc0120eecda1097efc51cd29c0d95daa15b81535f36d7dc6dd1d434882",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "ec6e4254a53cbc4d3ac84814238493d6b25b2854ef97ca47427f8bfec276863b"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Records.Extensionality",
+      "source_sha256": "0a1d58485d6e8b0b84d68d973027dd621394ee0c4d1579f08746f10558f0a34a",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "2be66ae68300e8c156d0e8028e922913b1650a9fca182aa2a34ff45ca3ffc836"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Records.Comprehension",
+      "source_sha256": "552f1c10d3b02f5cae87392141616f5de2200655837e07ba9b367e7bacfd77d7",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "162be8608efc02a35b68531d97c48518b3bfd4900c1bc779de0c0ead0bb77324"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Records.Lattice",
+      "source_sha256": "e5adae1ce94a42f477aa629e4f5b739aa78bf1f7a3abf785d591f4d3a62690f4",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "ce145b63eddc8c7249d52c201ef10f17d39e8330f4ae4563a8405248813ea755"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Records.Choice",
+      "source_sha256": "28a17b666e917900329a015b2bf9cf3a6848a811762a6c862f6ef58135bf77ca",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "ed470c8e7d4f5d705cff4a3d632ae7740176da5f5d764f1fc0ba7859224306ee"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Records.C5",
+      "source_sha256": "670269847531e12553369ae4105b0926f8613883f8f709b94cdc88917eb49b7c",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "7a42a73a1394a5622b3bbf734f3e2733ee52ff9714a665cb26203332906aae66"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Records.Infinity",
+      "source_sha256": "dd622a8252d4bc861a68bf939b25198d39db51c119e89911e096b0523a3a1ba0",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "4599c4caad09c95a5cb4872aacbd0085b876994c2e54b7690e91d27e559c4a74"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Records",
+      "source_sha256": "6d6d399aab1e7f30eff9a5d385635ae311228e4faf03ce36ad39d5a1d22eede6",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "2101e40096f46091682c9bffccb7eee7a6cc06961c165a0d5c15e6197b9e42e8"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Certified.Quoted",
+      "source_sha256": "4f5e539a45bf30cf758effcd38c59330b95160a09aa57b08130226c491896447",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "9cdcdd2343f85a6c3084b26261040c661852e82bea2d9af52e64895494de5bab"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Syntax.ClosedTypes",
+      "source_sha256": "07ea7d86a0ec8faf8da218c04b9ab46c0b3b941c5772729340de705750227968",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "5fd0f066f66ccc53e9729b71b99a088d18df0eb101e505eeaa60a3d77fb77440"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Certified.Schemas",
+      "source_sha256": "5473826bbece5136406e9aca792c6eb38e93117d142bce275d5a084803ad4a38",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "937b8eb4acc2838db7337aebadc31af21960fa92440d0c3d75bc84918112f8e7"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Syntax.SentenceSchemas",
+      "source_sha256": "4956cc5f79d94287bab644bff62b9eade4401a602a61e469ed0260a0007c9541",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "794e5a1f6c3b899f35d600ab080c13356ce0ecbbd7c29bf7886fe2c53368d5d5"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Syntax.Pure",
+      "source_sha256": "34937a7fc2d4c62a99863e9a0a161f56dfe2ca06b5f5d304ea8d2ad13f7c41a2",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "fd7d2e72f794a6fcf351c9e4d740434170b7852cdb11a88028d9e7267637d314"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Syntax.Conservativity",
+      "source_sha256": "9f5aba4cb5b54944a6486b4f4b50f37328245c0e3d246c401859b1d7eb5ff4bc",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "fd897f797e6a3cbe47d439760e4a913d512e3d80c05b84002b8fddf6aa7e0e4a"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Syntax.Constants",
+      "source_sha256": "065903e72913a7f804276e59b801722bd078e447a1a637d1dc9940a56eb7b719",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "b69a45832fb23b356cd9390cc55f4f6a578988c469254acb62d7d63e1be7e4ff"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Syntax.WitnessedPossibility",
+      "source_sha256": "34951185081a5084b5911119a08d3161c7ed329bd2f7b06d7dbfdf9dd3e63da6",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "5e8b778b53e0ed1f13fbc9008a40b97f6fc391e04fdf696584efc5d5f92896d5"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Syntax.PossibilityPlus",
+      "source_sha256": "7ada6db1f3c90342fefd03a122dd72c8fba769615c423bada74e16df5d98b936",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "68573b452462c1c088920fe9379843df89f33003cc5537ecefd4fe7b3ca493f5"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Syntax.Infinity",
+      "source_sha256": "e0aa1264bf6de20dc159cd14baec4e9878e21708f70744f32c32a59df38f8489",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "bfead00771f5e6234f8ab84d762b720111d552b9d18964f994c955a6fd669294"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Syntax.StrongPossibility",
+      "source_sha256": "07b80d97d6dd1bed4bfd61e390601902a41072740399023c2018f651dbf7a03e",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "e8a0e59818b9ec0752d1f49850b1fdf5e18789f070a5ecdf46c0267200c69d06"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Syntax.OrdinaryComprehension",
+      "source_sha256": "e0ad5c0f2f9979d09bb7fc859ce2409a541fbb193b46779a66aab5c1bee869b5",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "23e69b5908645c9c2a99a06a6174fdb68dfa8c99a97c49b2c7bf4be48a420f18"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Certified.Signatures",
+      "source_sha256": "c9832a55c145032ee3316033e9b26b1e4abb002b3554601b542f1336ef61d745",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "d91bd1d75513f9c46e287b28eab8ab93bdc6c80ea1777854e33583be40c9757e"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Tools.QuoteTerm",
+      "source_sha256": "725591a936f84cb2e1fefd8e4eb510d6278ddda382e2a4350f6d717eb01e5f61",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "0e97b18d336ecb7524142a5db3571058a408bd5d887d496dbe3a09647d4a651a"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Certified.Arithmetic",
+      "source_sha256": "a290a7eaf810846c59a0ae514f13849981ddcc3b8b54eb2f9f7fdedaca271391",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "83134488127da0a36061e672b1f3589c98142586d404d7e0ef1075bb35c2a746"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.SentenceSchemas.Arithmetic",
+      "source_sha256": "dbba1d76eff07b0e512eb4b0f9a236b33fb515910918a886d592d0e7189fad2c",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "58fe63a2ea206cf77923535206f807c34dc1edb4eae72003b588aa1f4b85ca98"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Integration.ArithmeticNecessitismProof",
+      "source_sha256": "d253e820a332e67ae43d8eeda41858c80244fcc939603c34eef0274cf32b42fc",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "64e2d85fb25dc91c5d9bc89e43584b9920511f8777c37a8cd917288e045e27df"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Tools.TypeSystem",
+      "source_sha256": "3db785bca90f4e2961bce8e7bde2d6bbd418e9e4c67ec99acae2251cb89e88e1",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "39ffc333d68335ca334761d681010072b46a3fbb0e1ce383e1bfcbb6f61e37be"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Integration.ArithmeticNecessitism",
+      "source_sha256": "f5e06f658953f38d1a9ca9bd895e042101efd86d9dbb01b65c36ca289b320323",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "6443075b4c810df0fc617435559aa485c064b9ab6bf9e41bfd42ab57e3ab0a7f"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Statements",
+      "source_sha256": "de4173a837ab890040266a0801f0b0a1e0441d48640be1ff464fa865f9e84901",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "b6bf9c2828cf9682f6a81ea4ee0ce99ee944de542fd6b2a3dfeedb90e3bcb31b"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.ChoiceCompleteness",
+      "source_sha256": "0633f3eccc9508477291bb4a3486ce09cde3dc12c2c404424c5619d1bf752f57",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "fb18f2494ce38d204f194efddc822afa77665a4d5cc2d23c7b6c84a92aa5e396"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.ChoiceFixedPoint",
+      "source_sha256": "b1260db321e998c8deb5acd1799301871c58448222e7d6fcacdffbba44acd883",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "f2d2a371cdf0313eb7c4d0e45cb5d536d7db999c818e513dcb4eccbcd3dec714"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.ChoiceActuality",
+      "source_sha256": "e63bba0e1e0a490bb8f1c4b3564e3041c3721e18a1eb223d5f4532b59370a3c9",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "f1f518ed99d466348ac18dec1d34a0706258a2c3a877951383313dd19c1a5e02"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.ChoiceActualityCertificates",
+      "source_sha256": "9e4193ed4d140973dffe07dfba7d87c786d8776fd6edf6d640e37b08a731e209",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "904587ecabda2e22620ac1b89e76aa78177ae8ad07c04fd21fc5d2662b5e1757"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Integration.ChoiceTransversalMap",
+      "source_sha256": "bb9b52d1ed8f39e04acfffc4fea362bb2b42f4b0124bbfe476e449ebb1f0725f",
+      "current_matches": true,
+      "temporary_focus_source_removed": false,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "219afe98928d1495c363fcb1a62e8e1ee380a31b6af06923802a4ae6a7104c55"
+      },
+      "artifacts_match": true
+    },
+    {
+      "module": "_pmap_audit_focus_5100df8f6f9a4cff90646d8d8b032dfb",
+      "source_sha256": "4e747dbb9c0c80a0149b1c7fdece60f0690efd9e3cefa3d5b40cf3e539422408",
+      "current_matches": null,
+      "temporary_focus_source_removed": true,
+      "snapshot_matches": true,
+      "accepted": true,
+      "artifact_hashes": {
+        ".olean": "832a17a69135b465833df6ad914d6e5ebc28ae9bcb94ba0b9eb72ea44d785745"
+      },
+      "artifacts_match": true
+    }
+  ],
+  "logs": [
+    {
+      "module": "Classicism.Results.Integration.ChoiceTransversalMap",
+      "path": "logical-maps/research/2026-10-23/integration/logs/runs/20261023T202920061671Z-e5e1f9d7/Classicism_Results_Integration_ChoiceTransversalMap.log",
+      "sha256": "459c4af552d2f5b9e67210c98ab6978f46269066137fe0b361f578e90d2451d9",
+      "principal_axiom_audit": [
+        {
+          "declaration": "Classicism.Integration.Map.relational_choice_and_boolean_completeness_imply_transversal_choice",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "sorryAx_in_log": false,
+      "source_sha256": "bb9b52d1ed8f39e04acfffc4fea362bb2b42f4b0124bbfe476e449ebb1f0725f",
+      "artifacts": {
+        ".olean": "219afe98928d1495c363fcb1a62e8e1ee380a31b6af06923802a4ae6a7104c55"
+      }
+    },
+    {
+      "module": "_pmap_audit_focus_5100df8f6f9a4cff90646d8d8b032dfb",
+      "path": "logical-maps/research/2026-10-23/integration/logs/runs/20261023T202920061671Z-e5e1f9d7/_pmap_audit_focus_5100df8f6f9a4cff90646d8d8b032dfb.log",
+      "sha256": "0b7026415fffefbb809aa156216eadfbe76be59b7e26e486d5364ee6b23375b3",
+      "principal_axiom_audit": [
+        {
+          "declaration": "PmapFocused5100df8f6f9a4cff90646d8d8b032dfb.result_0",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "sorryAx_in_log": false,
+      "source_sha256": "4e747dbb9c0c80a0149b1c7fdece60f0690efd9e3cefa3d5b40cf3e539422408",
+      "artifacts": {
+        ".olean": "832a17a69135b465833df6ad914d6e5ebc28ae9bcb94ba0b9eb72ea44d785745"
+      }
+    }
+  ],
+  "scope": "Exact arbitrary-signature generated database proposition RC+BC entails TC; typed Actuality-to-Transversal composition. Does not certify every sharper direct/chain-only/CBC+CCC variant."
+}

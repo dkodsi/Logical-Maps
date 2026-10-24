@@ -1,0 +1,25 @@
+import Classicism.Results.Research.AtomicProbabilityFractions
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Schema
+
+#classicism_audit Classicism.Results.Research.AtomicProbabilityFractions
+#classicism_types_audit Classicism.Results.Research.AtomicProbabilityFractions
+
+#classicism_derive Classicism.Research.ProbabilityFractions.times_right_comm
+  Classicism.Research.ProbabilityFractions.times_left_comm
+  Classicism.Research.ProbabilityFractions.times_four
+  Classicism.Research.ProbabilityFractions.times_four_cross
+  Classicism.Research.ProbabilityFractions.cross_refl
+  Classicism.Research.ProbabilityFractions.cross_symm
+  Classicism.Research.ProbabilityFractions.cross_trans
+  Classicism.Research.ProbabilityFractions.fractionCode_supported
+  Classicism.Research.ProbabilityFractions.fractionField_supported
+  Classicism.Research.ProbabilityFractions.fractionCode_self
+  Classicism.Research.ProbabilityFractions.fractionCode_identity_iff
+  Classicism.Research.ProbabilityFractions.fractionCode_in_field
+  Classicism.Research.ProbabilityFractions.field_code_supported
+  Classicism.Research.ProbabilityFractions.naturalCode_injective
+  Classicism.Research.ProbabilityFractions.fractionCode_zero_iff
+
+#print axioms Classicism.Research.ProbabilityFractions.fractionCode_zero_iff.derivable

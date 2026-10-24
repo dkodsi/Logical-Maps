@@ -1,0 +1,106 @@
+{
+  "id": "final-full-typed-logical-separation-h-transport",
+  "source_manifest_origin": "research/2026-10-22/lean-formalization/checks/20261023T225050638103Z-46206698.json",
+  "source_manifest_path": "evidence/certificates/final-full-typed-logical-separation-h-transport/original-manifest.json",
+  "source_manifest_sha256": "d5a7fd930451be5c54bc6036b475bb58fc159580a527f8cdafc40918c18bcf5a",
+  "run_id": "20261023T225050638103Z-46206698",
+  "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "compiler_sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554",
+  "precompiled_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "selected_targets": [
+    "Classicism.Results.Research.FullTypedLogicalSeparationHTransport"
+  ],
+  "selected_targets_exit_code": 0,
+  "original_run_state": "failed",
+  "original_run_exit_code": 1,
+  "sources": [
+    {
+      "module": "Classicism.Syntax.Types",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Types.lean",
+      "sha256": "567828e8f9a707cf635e3b4fb30bc868a419967307613d0686d795d195606eac",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Types.lean",
+      "fingerprint": "f920c6417fb0d73d4b6cb333a5de66a5647023a45396e3a09a0b7e943245c8cf",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Syntax.Term",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Term.lean",
+      "sha256": "ad5172acbb74eaab9307662408928b80e6ffab62e14df16f2f41c7205de13f69",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Term.lean",
+      "fingerprint": "19fcc526fbf7a5f30c841e2fb11bd4cc6c4c8c77eddfb46e22a81b795035e2d5",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Syntax.Conversion",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Conversion.lean",
+      "sha256": "c22fe48399811fcb0d71b37206c633749a7285291c62c2e7d786475ea6ae339e",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Conversion.lean",
+      "fingerprint": "98d38a7cbaf85616553560abf68733b885806aebd405d33965c1dc960da57f67",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Syntax.Derivation",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Derivation.lean",
+      "sha256": "7cc2fd01542014d55e5a4c4a411724db7cdc076462d0de724c3530b0a8a3fc6b",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Derivation.lean",
+      "fingerprint": "061b31ce6eb4dec06fa11b50e1a6c035783c2a4995cd0969cc86efba8ddcaddc",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationHCalculus",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/FullTypedLogicalSeparationHCalculus.lean",
+      "sha256": "d667c1f80233191e44784c75f66c4836a5c8dbf2e8cf83c2b94654fd50fa45b9",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/FullTypedLogicalSeparationHCalculus.lean",
+      "fingerprint": "5e9a434e8ea72c6fbc695b4eed91d50fe98621c11a84d76c84c93495a9d18b2e",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationHSupport",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/FullTypedLogicalSeparationHSupport.lean",
+      "sha256": "4ba93e1652e2b9e29493759bebad93f4e3d000955b0f3d77ae525c52ae69fa1d",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/FullTypedLogicalSeparationHSupport.lean",
+      "fingerprint": "dafe60e676da7552ffacbeca351437e1b1437704013c1d5cb9a38a25cfd2e6d0",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationHTransport",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/FullTypedLogicalSeparationHTransport.lean",
+      "sha256": "300514208513fb9f0787669e5eb9d1d6dcbde5e4eaa886f018c10805d689b622",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/FullTypedLogicalSeparationHTransport.lean",
+      "fingerprint": "ee49b5395d4a4f3a578697574e2af5b244d715818f1ecdba23a0ca2afc8a146b",
+      "module_exit_code": 0,
+      "reused_at_run": false
+    }
+  ],
+  "logs": [
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationHTransport",
+      "path": "evidence/certificates/final-full-typed-logical-separation-h-transport/Classicism_Results_Research_FullTypedLogicalSeparationHTransport.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "audit_run_id": "20261023T225050638103Z-46206698"
+    }
+  ],
+  "axiom_report_lines": [],
+  "result_entries": [
+    "LOGICAL-OBSERVERS"
+  ],
+  "scope": "Accepted typed-observer proof components at the exact listed declarations. The actual-C endpoint is covered by the separate full-typed-logical-separation-actual-c certificate.",
+  "verification": "Exact captured dependency sources, successful target records and saved principal logs checked. An accepted component without a printed principal axiom list is recorded only at that scope. No compiler invocation or database verification-flag change.",
+  "endpoint_assessments": [
+    {
+      "module": "Classicism.Results.Research.FullTypedLogicalSeparationHTransport",
+      "explicit_principal_axiom_audit": false,
+      "principal_axiom_audit": [],
+      "translation_audits": [],
+      "gate_and_type_audits": []
+    }
+  ],
+  "source_manifest_original_sha256": "1bcd09199f61cf35651302f87134c9333d30fe61252e6b533ba94686172023ba",
+  "source_manifest_normalization": "Portable paths and omission of research coordination metadata; theorem/source hashes and check verdicts preserved."
+}

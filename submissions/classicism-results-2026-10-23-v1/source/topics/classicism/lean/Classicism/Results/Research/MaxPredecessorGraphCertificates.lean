@@ -1,0 +1,13 @@
+import Classicism.Results.Research.MaxPredecessorGraph
+import Classicism.Results.Research.MaxPredecessorCertificates
+
+#classicism_audit Classicism.Results.Research.MaxPredecessorGraph
+#classicism_types_audit Classicism.Results.Research.MaxPredecessorGraph
+#classicism_derive_audit Classicism.Results.Research.MaxPredecessorGraph
+
+#classicism_quote_term Classicism.Research.MaxPredecessorGraph.Peano
+  Classicism.Research.MaxPredecessorGraph.GraphClaim
+
+#print axioms Classicism.Research.MaxPredecessorGraph.infinity_to_peano.derivable
+#print axioms Classicism.Research.MaxPredecessorGraph.possible_peano_gives_graph.derivable
+#print axioms Classicism.Research.MaxPredecessorGraph.possible_peano_refutes_plenitude.derivable

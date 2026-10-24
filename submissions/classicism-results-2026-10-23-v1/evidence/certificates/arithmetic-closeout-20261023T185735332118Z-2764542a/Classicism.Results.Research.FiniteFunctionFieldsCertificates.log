@@ -1,0 +1,32 @@
+Classicism.Research.FiniteFunctionFields.finite_function_family: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.FiniteFunctionFields.finite_functions_of_barcan: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FiniteFunctionFields.finite_functions_of_finite_domains: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.FiniteFunctionFields.finite_input_of_finite_predicates: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.FiniteFunctionFields.finite_output_of_finite_functions: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.FiniteFunctionFields.finite_predicates_iff: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FiniteFunctionFields.infinity_functions_of_infinity_output: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.FiniteFunctionFields.infinity_predicates_iff: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FiniteFunctionFields.infinity_predicates_of_infinity_input: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+#classicism_audit Classicism.Results.Research.FiniteFunctionFields: 9/9 theorems pass; 9 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.FiniteFunctionFields: 9/9 inside R
+Classicism.Results.Research.FiniteFunctionFields: 9 of 9 theorems derived
+
+[1/9] Classicism.Research.FiniteFunctionFields.finite_function_family ✓ 627 ms
+[2/9] Classicism.Research.FiniteFunctionFields.finite_functions_of_barcan ✓ 283 ms
+[3/9] Classicism.Research.FiniteFunctionFields.finite_functions_of_finite_domains ✓ 0 ms
+[4/9] Classicism.Research.FiniteFunctionFields.finite_input_of_finite_predicates ✓ 173 ms
+[5/9] Classicism.Research.FiniteFunctionFields.finite_output_of_finite_functions ✓ 162 ms
+[6/9] Classicism.Research.FiniteFunctionFields.finite_predicates_iff ✓ 59 ms
+[7/9] Classicism.Research.FiniteFunctionFields.infinity_functions_of_infinity_output ✓ 35 ms
+[8/9] Classicism.Research.FiniteFunctionFields.infinity_predicates_iff ✓ 69 ms
+[9/9] Classicism.Research.FiniteFunctionFields.infinity_predicates_of_infinity_input ✓ 0 ms
+'Classicism.Research.FiniteFunctionFields.finite_functions_of_finite_domains.derivable' depends on axioms: [propext,
+ Quot.sound]
+'Classicism.Research.FiniteFunctionFields.finite_predicates_iff.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.FiniteFunctionFields.infinity_predicates_iff.derivable' depends on axioms: [propext, Quot.sound]

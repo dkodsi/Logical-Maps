@@ -1,0 +1,44 @@
+{
+  "status": "READY FOR INTEGRATION",
+  "worker_compiled": false,
+  "source_modules": [
+    "topics/classicism/lean/Classicism/Results/Research/ActualityCore.lean",
+    "topics/classicism/lean/Classicism/Results/Research/ActualityCoreCertificates.lean"
+  ],
+  "certificate_drivers": [
+    "research/2026-10-22/lean-formalization/world-core-checks/ActualityCore_localized_le.lean",
+    "research/2026-10-22/lean-formalization/world-core-checks/ActualityCore_section_in_domain.lean",
+    "research/2026-10-22/lean-formalization/world-core-checks/ActualityCore_supported_beta.lean",
+    "research/2026-10-22/lean-formalization/world-core-checks/ActualityCore_truth_eq_iff.lean",
+    "research/2026-10-22/lean-formalization/world-core-checks/ActualityCore_truth_values.lean",
+    "research/2026-10-22/lean-formalization/world-core-checks/ActualityCore_truth_meet.lean",
+    "research/2026-10-22/lean-formalization/world-core-checks/ActualityCore_truth_join.lean",
+    "research/2026-10-22/lean-formalization/world-core-checks/ActualityCore_truth_neg.lean",
+    "research/2026-10-22/lean-formalization/world-core-checks/ActualityCore_equality_current.lean",
+    "research/2026-10-22/lean-formalization/world-core-checks/ActualityCore_universal_supported.lean",
+    "research/2026-10-22/lean-formalization/world-core-checks/ActualityCore_universal_current.lean",
+    "research/2026-10-22/lean-formalization/world-core-checks/ActualityCore_intervalJoin_lub.lean",
+    "research/2026-10-22/lean-formalization/world-core-checks/ActualityCore_cut_kernel.lean",
+    "research/2026-10-22/lean-formalization/world-core-checks/ActualityCore_supported_atom_coordinates.lean",
+    "research/2026-10-22/lean-formalization/world-core-checks/ActualityCore_current_pin_injective.lean"
+  ],
+  "sha256": {
+    "topics/classicism/lean/Classicism/Results/Research/ActualityCore.lean": "4cbf4b0d3d7c28b966015d752d8076d50aae0ecde71f9337dee8ff01c148ac4e",
+    "topics/classicism/lean/Classicism/Results/Research/ActualityCoreCertificates.lean": "cdd86bce5541c51feb8e7704609b6dd18b47e331d2b787ed3bf3310406d5ce1c",
+    "research/2026-10-22/lean-formalization/world-core-checks/ActualityCore_localized_le.lean": "2866fc1823f7b5d63128c7f49b5c4e8a71ebb7ce44e7d130324358d37a5859c2",
+    "research/2026-10-22/lean-formalization/world-core-checks/ActualityCore_section_in_domain.lean": "f8b42bab2284bd19991b1e0e71deac4c114ac3bfbb6621418964fde2fefb966b",
+    "research/2026-10-22/lean-formalization/world-core-checks/ActualityCore_supported_beta.lean": "3696fce95f80f427d06dc624f32fdc1892f50dd9a7f433fdb9f3f348347dd280",
+    "research/2026-10-22/lean-formalization/world-core-checks/ActualityCore_truth_eq_iff.lean": "739fc5bb2e42484b150f7999e7ce12ff4548a02874ef794b4ee8d5b273b44a0d",
+    "research/2026-10-22/lean-formalization/world-core-checks/ActualityCore_truth_values.lean": "dc2203cb4252bc805df6a1d72bb914d189711b012098bae7b39576c66944ab89",
+    "research/2026-10-22/lean-formalization/world-core-checks/ActualityCore_truth_meet.lean": "f631187696032f0cf4a89b82eb2d806e3ceff97f69db877c4e49e2864e707351",
+    "research/2026-10-22/lean-formalization/world-core-checks/ActualityCore_truth_join.lean": "ed33ce4031de2b112dd260f1a9b5f3b813f71684ad0c3d59fac412ba160e7bd7",
+    "research/2026-10-22/lean-formalization/world-core-checks/ActualityCore_truth_neg.lean": "9a115ad52d485815510db14f76505109bfbde4d58a6b18d4fff76379930d6104",
+    "research/2026-10-22/lean-formalization/world-core-checks/ActualityCore_equality_current.lean": "09402c85a27214e09c699b9b47e13db4dc77c25421ba7567ec2d363904e0be4c",
+    "research/2026-10-22/lean-formalization/world-core-checks/ActualityCore_universal_supported.lean": "f5b3649f4dd1994f5e4501e6470a8740b6c6cd3b90c67b38f26ed32d65a9c750",
+    "research/2026-10-22/lean-formalization/world-core-checks/ActualityCore_universal_current.lean": "d627cfd5564f8646a881b26a2f476ed5e2629e288b508af1b6d31bd5bebd2984",
+    "research/2026-10-22/lean-formalization/world-core-checks/ActualityCore_intervalJoin_lub.lean": "cdb3c4a9918329e8828485994c8ec72e784dc8be59aa7fad6c542668a6d11589",
+    "research/2026-10-22/lean-formalization/world-core-checks/ActualityCore_cut_kernel.lean": "65e265084e0dc0cce93d18c0ac33e7b514bf2b2cbdcf45f13a8d75d5a7c4c1e2",
+    "research/2026-10-22/lean-formalization/world-core-checks/ActualityCore_supported_atom_coordinates.lean": "3dcf4a70b50f1042c21fadfa0efaf907676662bb9cdc7f821de9050eb2850337",
+    "research/2026-10-22/lean-formalization/world-core-checks/ActualityCore_current_pin_injective.lean": "cdbd889c52abfb8c3a22f788a5eb2c1efa74941d0ec1f2165107242056483e20"
+  }
+}

@@ -1,0 +1,3 @@
+import Classicism.Results.Research.GeneratedAlgebraFiniteFactoredCertificatesImages
+
+#classicism_derive Classicism.Research.GeneratedAlgebraFiniteFactored.onto0

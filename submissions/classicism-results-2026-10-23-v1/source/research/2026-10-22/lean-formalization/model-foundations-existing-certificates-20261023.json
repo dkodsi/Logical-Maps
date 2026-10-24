@@ -1,0 +1,183 @@
+{
+  "checked_at_utc": "2026-10-23T05:14:06.325192+00:00",
+  "manifest": "research/2026-10-22/lean-formalization/checks/20261023T051245030376Z-c1fd79a4.json",
+  "note": "These two independent targets passed in a batch whose nominal target failed. Their current sources matched at check completion.",
+  "targets": {
+    "Classicism.Results.Research.FiniteSortStructureCertificates": {
+      "result": {
+        "module": "Classicism.Results.Research.FiniteSortStructureCertificates",
+        "fingerprint": "68d3bcf5e0a75dfeeebe96d61ce1f25ea7af57826271df27bace31f2638a40e8",
+        "source_sha256": "7650ae11e6f6e04b457a5931a34163ae8a3582049d32da5186a701e9a09e4a61",
+        "artifacts": {
+          ".olean": "17a69a1e7e3ad205436d01dbf5f0d28c723cd560707a94f9ddc089eb5a614c85"
+        },
+        "seconds": 5.66,
+        "exit_code": 0,
+        "log": "logs/runs/20261023T051245030376Z-c1fd79a4/Classicism_Results_Research_FiniteSortStructureCertificates.log"
+      },
+      "axiom_dependencies": {
+        "Classicism.Research.FiniteSortStructure.atMost1_atomicity.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FiniteSortStructure.atMost1_booleanCompleteness.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FiniteSortStructure.atMost1_actuality.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FiniteSortStructure.atMost1_relationalChoice.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FiniteSortStructure.atMost2_atomicity.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FiniteSortStructure.atMost2_booleanCompleteness.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FiniteSortStructure.atMost2_actuality.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FiniteSortStructure.atMost2_relationalChoice.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FiniteSortStructure.atMost3_atomicity.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FiniteSortStructure.atMost3_booleanCompleteness.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FiniteSortStructure.atMost3_actuality.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FiniteSortStructure.atMost3_relationalChoice.derivable": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      "audit_summaries": [
+        "#classicism_audit Classicism.Results.Research.FiniteSortStructure: 13/13 theorems pass; 13 in C⁻, 0 needing e_exists",
+        "#classicism_types_audit Classicism.Results.Research.FiniteSortStructure: 13/13 inside R",
+        "#classicism_audit Classicism.Results.Research.FiniteSortStructureBounds: 12/12 theorems pass; 12 in C⁻, 0 needing e_exists",
+        "#classicism_types_audit Classicism.Results.Research.FiniteSortStructureBounds: 12/12 inside R"
+      ],
+      "sources": {
+        "Classicism.Results.Research.FiniteSortStructure": {
+          "path": "topics/classicism/lean/Classicism/Results/Research/FiniteSortStructure.lean",
+          "sha256": "fe2613bc8800aa1b74d7e1c9e9b6dbf63cf89ec90ba9104c4670ab75904e7f31"
+        },
+        "Classicism.Results.Research.FiniteSortStructureBounds": {
+          "path": "topics/classicism/lean/Classicism/Results/Research/FiniteSortStructureBounds.lean",
+          "sha256": "9a4ab90ea3dc0ca0ba654234bd4c6c41083dc74a87010a74b40eeaed4d248728"
+        },
+        "Classicism.Results.Research.FiniteSortStructureCertificates": {
+          "path": "topics/classicism/lean/Classicism/Results/Research/FiniteSortStructureCertificates.lean",
+          "sha256": "7650ae11e6f6e04b457a5931a34163ae8a3582049d32da5186a701e9a09e4a61"
+        }
+      }
+    },
+    "Classicism.Semantics.BooleanValuedChecks": {
+      "result": {
+        "module": "Classicism.Semantics.BooleanValuedChecks",
+        "fingerprint": "6f535b58d638ec8eaa41762c1d2b3502e633ce435e9429c22ce9e7816a12def6",
+        "source_sha256": "9b78513f4500b731581a114b53976ac89a6b751ab42e7b3228119574b308dd9a",
+        "artifacts": {
+          ".olean": "35578d61708eb137c437f36ac8606d6171a78365c9153a870d90bd3f3584e642"
+        },
+        "seconds": 0.6,
+        "exit_code": 0,
+        "log": "logs/runs/20261023T051245030376Z-c1fd79a4/Classicism_Semantics_BooleanValuedChecks.log"
+      },
+      "axiom_dependencies": {
+        "Classicism.Meta.BooleanValued.eval_rename": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.BooleanValued.eval_subst": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.BooleanValued.conv_value": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.BooleanValued.sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.BooleanValued.C_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.BooleanValued.unequal_values_not_identity": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.BooleanValued.atom_iSup": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.BooleanValued.sound_at": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.BooleanValued.distinctness_value": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.BooleanValued.barcan_value": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.BooleanValued.boxed_barcan_value": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "audit_summaries": [],
+      "sources": {
+        "Classicism.Semantics.BooleanValued": {
+          "path": "topics/classicism/lean/Classicism/Semantics/BooleanValued.lean",
+          "sha256": "f61196a8bd6e29ff34ad5e4e2038121cd15f273228fa130d024a6371568a69a0"
+        },
+        "Classicism.Semantics.BooleanValuedSoundness": {
+          "path": "topics/classicism/lean/Classicism/Semantics/BooleanValuedSoundness.lean",
+          "sha256": "3ffde61f91e9bcbb9aa804cf46621466c89b8829a816f48db0fa7f3cfe75cdf7"
+        },
+        "Classicism.Semantics.BooleanValuedPoint": {
+          "path": "topics/classicism/lean/Classicism/Semantics/BooleanValuedPoint.lean",
+          "sha256": "93dffb20af747be98e67b778ca4070f5fa8e313b2f3e6f625afdf21c2f6194f5"
+        },
+        "Classicism.Semantics.BooleanValuedModal": {
+          "path": "topics/classicism/lean/Classicism/Semantics/BooleanValuedModal.lean",
+          "sha256": "6cf664b9e6bcf11adec5e42db71a950464d2a4b24539a5111de468564dea8914"
+        },
+        "Classicism.Semantics.BooleanValuedChecks": {
+          "path": "topics/classicism/lean/Classicism/Semantics/BooleanValuedChecks.lean",
+          "sha256": "9b78513f4500b731581a114b53976ac89a6b751ab42e7b3228119574b308dd9a"
+        }
+      }
+    }
+  }
+}

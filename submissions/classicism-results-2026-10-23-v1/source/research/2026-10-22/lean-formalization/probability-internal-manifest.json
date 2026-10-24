@@ -1,0 +1,561 @@
+{
+  "format": 1,
+  "date": "2026-10-22",
+  "modules": [
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilitySupportedReals",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilitySupportedReals.lean",
+      "handoff_sha256": "acee83f5bb11608e9f6d6ac220c56c344568e069ab85a3aff1d658f19a86b4a3",
+      "imports": [
+        "Classicism.Results.Research.ActualityCoreGraphs",
+        "Classicism.Results.Research.AtomicProbabilityCuts"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilitySupportedRealsCertificates",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilitySupportedRealsCertificates.lean",
+      "handoff_sha256": "c5dd4555d8e5d7d08f6f2fea5f478cd29045da1ad174d1219261d2404e4fa211",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilitySupportedReals",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNaturalOrder",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNaturalOrder.lean",
+      "handoff_sha256": "4603ae02e1e2e9d9bb04b2e912c5d0b8cd5b95aa8f1b4570bd4f616b7c9f5c13",
+      "imports": [
+        "Classicism.Results.Research.FregeArithmeticGraphs"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNaturalOrderCertificates",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNaturalOrderCertificates.lean",
+      "handoff_sha256": "61454c0b9f23fff44f146341345787d190c070e091691f8a8417bbd7621240e1",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityNaturalOrder",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityLeastNumber",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityLeastNumber.lean",
+      "handoff_sha256": "8d3a9183b8edb6986652134e286d31ed6a3f0280c6b527f9da819276331289e6",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityNaturalOrder"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityLeastNumberCertificates",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityLeastNumberCertificates.lean",
+      "handoff_sha256": "62ed8450b219b638888b81bb92728f9c028576fc2ab88b31ecde0327ee11b842",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityLeastNumber",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityCantor",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCantor.lean",
+      "handoff_sha256": "6ba316b1b04f5b4aee06ae004073a46618ebe383c6d7a23a157764055be1e2ae",
+      "imports": [
+        "Classicism.Results.Research.ActualityCoreGraphs"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityCantorCertificates",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCantorCertificates.lean",
+      "handoff_sha256": "d9241952bb57239b49639de68201a21293c3efdbd67d693eae7c20c088360df1",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityCantor",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericOperations",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericOperations.lean",
+      "handoff_sha256": "18b095e415da6a775c8779118ead5240fe2ac8830adc7196d905a0a9ffe23d23",
+      "imports": [
+        "Classicism.Results.Research.ActualityCoreGraphs",
+        "Classicism.Results.Research.ActualityNumericalRelations",
+        "Classicism.Results.Research.AtomicProbabilityNaturalOrder"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericOperationsCertificates",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericOperationsCertificates.lean",
+      "handoff_sha256": "f3b4a80180877320b96cb9a2fd76f8d4d3c158324e2ba071a4927a2311a4a638",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityNumericOperations",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericAddition",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericAddition.lean",
+      "handoff_sha256": "a96dd900647ee5f2712fb845b9bd3ecac1b8b345931ccb313e9da2d77630db7e",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityNumericOperations"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericAdditionCertificates",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericAdditionCertificates.lean",
+      "handoff_sha256": "15e19d71c47b1e0a26fee877963535a64120800946acec1a7acf255125663c67",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityNumericAddition",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericMultiplication",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericMultiplication.lean",
+      "handoff_sha256": "b72a4498153e8eed300ebb75573d6722652807c93ae0edc8ccb1390fe312dcf1",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityNumericAddition"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericMultiplicationCertificates",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericMultiplicationCertificates.lean",
+      "handoff_sha256": "f75244b33d9355bb27fc2815eff0137e3756d6c5c228ccf0f1274ccf67e68023",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityNumericMultiplication",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractions",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractions.lean",
+      "handoff_sha256": "64503e1ab36083caed6c0aa13888537bea50d4ac0f95383a4967e871080b8f95",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityNumericMultiplication"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionsCertificates",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionsCertificates.lean",
+      "handoff_sha256": "e53db87c9cbfb50e497d045aeb95a37349cc3093f7c72337cc32008fd0ad7313",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityFractions",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionArithmetic",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionArithmetic.lean",
+      "handoff_sha256": "aef4d6f31a568edaa0a6f672274dd6be36309d71290b2d366e8a4a5c42ef9610",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityFractions"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionArithmeticCertificates",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionArithmeticCertificates.lean",
+      "handoff_sha256": "a186648755c6d9da7f8ded36dd53e9c16967dec21f69b373bd4fe2bb7c95eb6c",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityFractionArithmetic",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionAdditive",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionAdditive.lean",
+      "handoff_sha256": "3bd62f03e43597a8700b13a9def5112bd355d58aaabcc790733c96cfa784231b",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityFractionArithmetic"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionAdditiveCertificates",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionAdditiveCertificates.lean",
+      "handoff_sha256": "db3cb9790b14e751ae71148e01a5d71f64a4f3a5b4191504b1b8ddec06c40123",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityFractionAdditive",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionMultiplicative",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionMultiplicative.lean",
+      "handoff_sha256": "29e9a17aa0afbd862436cebe9347c07b2abaf7ffa40cc250dee4c3dd1a6bcbbc",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityFractionAdditive"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionMultiplicativeCertificates",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionMultiplicativeCertificates.lean",
+      "handoff_sha256": "2d740c12018fadc9efc156f0377061d0ef2a98cb32550e207f00e158bbf9c752",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityFractionMultiplicative",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionInverse",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionInverse.lean",
+      "handoff_sha256": "e170955b8d10f7f00fa8eb15fa03cbc80b9278d38c6a922cbc338c8288547701",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityFractionMultiplicative"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionInverseCertificates",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionInverseCertificates.lean",
+      "handoff_sha256": "afba3aa59e9250ecd9257afa605d92a5d7aa08d8306c50b6d2d60cbe7778d5cc",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityFractionInverse",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilitySignedRationals",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilitySignedRationals.lean",
+      "handoff_sha256": "61cd636b546389ff011ad511cf01ea0df5bc3b6579f76869042a5e885b62ba32",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityFractionInverse"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilitySignedRationalsCertificates",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilitySignedRationalsCertificates.lean",
+      "handoff_sha256": "59f17bea500ad192419669673db9b34ad8fbda06a54152ca7ccacf24dd4c2c4a",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilitySignedRationals",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityRationalAdditive",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalAdditive.lean",
+      "handoff_sha256": "b2fd32fbc7472ec7a334de5c06fd786dfb642e98b2a297eb5b307202e2384f93",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilitySignedRationals"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityRationalAdditiveCertificates",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalAdditiveCertificates.lean",
+      "handoff_sha256": "7f8b1bdb31f395b11d67804cb236297f221d14a40b0c3efd5dd4e4d80467a0ed",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityRationalAdditive",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericComparison",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericComparison.lean",
+      "handoff_sha256": "8ba029eca1fb986678de54247256448e14deafbea97e4e2bccd0720de272f434",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityNumericMultiplication"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run",
+      "handoff_date": "2026-10-23"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericComparisonCertificates",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericComparisonCertificates.lean",
+      "handoff_sha256": "90fb15550ecc9d6760b99c90686fe147b9d4e3957f105a0bc970e8a45ccbc380",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityNumericComparison",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run",
+      "handoff_date": "2026-10-23"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionOrder",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionOrder.lean",
+      "handoff_sha256": "82d5c8a8063f5d32230d2ad4a4f5273f1c7a1dc47120dc6ead4ba13f369250eb",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityFractionInverse",
+        "Classicism.Results.Research.AtomicProbabilityNumericComparison"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run",
+      "handoff_date": "2026-10-23"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionOrderCertificates",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionOrderCertificates.lean",
+      "handoff_sha256": "5d80f53f6db4fd3e93f8d76f55a0bcff48b69101694f0aec323d0e8a501d0705",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityFractionOrder",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run",
+      "handoff_date": "2026-10-23"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionArchimedean",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionArchimedean.lean",
+      "handoff_sha256": "aeff0231aeea06739dbdeea3acb42dca8b176d0cacd2ea1bacca3ec3608aecfa",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityFractionOrder"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run",
+      "handoff_date": "2026-10-23"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionArchimedeanCertificates",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionArchimedeanCertificates.lean",
+      "handoff_sha256": "4107ecafbc18798fc239d2c9936c81c7880198efc15d2e37f12d35071d9894f1",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityFractionArchimedean",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run",
+      "handoff_date": "2026-10-23"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionDensity",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionDensity.lean",
+      "handoff_sha256": "acceb1aa2aa30af485d4aebd9ad4de75eeb0e4fe0a6bab1987323fe06f8cccf2",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityFractionArchimedean"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run",
+      "handoff_date": "2026-10-23"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionDensityCertificates",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionDensityCertificates.lean",
+      "handoff_sha256": "a756eef2ffaa60438fb837ff35058f09e59d1f594dd4390c2bb6bd45d1cc9621",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityFractionDensity",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run",
+      "handoff_date": "2026-10-23"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityRationalOrder",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalOrder.lean",
+      "handoff_sha256": "69b8c85f052e793e4e8bbd9de15e29a1888f86e5fbffc607b398f4125ba3f660",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityRationalAdditive",
+        "Classicism.Results.Research.AtomicProbabilityFractionDensity"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run",
+      "handoff_date": "2026-10-23"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityRationalOrderCertificates",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalOrderCertificates.lean",
+      "handoff_sha256": "d76d367610844ebf23ce43c50ba9f2b61441e77c795e56c5e61a5f5255e5c3e8",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityRationalOrder",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run",
+      "handoff_date": "2026-10-23"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityConcreteReals",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityConcreteReals.lean",
+      "handoff_sha256": "5414ccf3c1e62c0294dc72f2daeb03ed5e11e5b76d894e0ee587405c5306550f",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityRationalOrder",
+        "Classicism.Results.Research.AtomicProbabilitySupportedReals"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run",
+      "handoff_date": "2026-10-23"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityConcreteRealsCertificates",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityConcreteRealsCertificates.lean",
+      "handoff_sha256": "8db89003fe8451e12a0d9325b2742b57f26fdc22dd0b339ef4bfb7e6924ca6e9",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityConcreteReals",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run",
+      "handoff_date": "2026-10-23"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityRationalTranslation",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalTranslation.lean",
+      "handoff_sha256": "98a479af83b8b6a1729a918c96dcc989e68517bea7a4a1d7de4264c716727e9b",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityRationalOrder",
+        "Classicism.Results.Research.AtomicProbabilityCutAddition"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run",
+      "handoff_date": "2026-10-23"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityRationalTranslationCertificates",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalTranslationCertificates.lean",
+      "handoff_sha256": "379ea994dea939dbf01320a98be66bd243c77ffa69734f4afee67cfc123bc483",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityRationalTranslation",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run",
+      "handoff_date": "2026-10-23"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityConcreteRealAddition",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityConcreteRealAddition.lean",
+      "handoff_sha256": "4e7135726462c48915ea7a6564d6e96cd114ca13c3b518a3f7bc3676b6f88f15",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityConcreteReals",
+        "Classicism.Results.Research.AtomicProbabilityRationalTranslation"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run",
+      "handoff_date": "2026-10-23"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityConcreteRealAdditionCertificates",
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityConcreteRealAdditionCertificates.lean",
+      "handoff_sha256": "abc545de7d85f89dcfbfdadc4184b22d16ad0ccea9fe82a27a87710c40a05b40",
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityConcreteRealAddition",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "status": "READY FOR INTEGRATION; frozen to serial integrator",
+      "verification": "author draft; no compiler run",
+      "handoff_date": "2026-10-23"
+    }
+  ],
+  "serial_commands": [
+    "python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.AtomicProbabilitySupportedRealsCertificates --timeout 180",
+    "python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.AtomicProbabilityNaturalOrderCertificates --timeout 180",
+    "python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.AtomicProbabilityLeastNumberCertificates --timeout 180",
+    "python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.AtomicProbabilityCantorCertificates --timeout 180",
+    "python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.AtomicProbabilityNumericOperationsCertificates --timeout 180",
+    "python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.AtomicProbabilityNumericAdditionCertificates --timeout 180",
+    "python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.AtomicProbabilityNumericMultiplicationCertificates --timeout 180",
+    "python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.AtomicProbabilityFractionsCertificates --timeout 180",
+    "python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.AtomicProbabilityFractionArithmeticCertificates --timeout 180",
+    "python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.AtomicProbabilityFractionAdditiveCertificates --timeout 180",
+    "python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.AtomicProbabilityFractionMultiplicativeCertificates --timeout 180",
+    "python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.AtomicProbabilityFractionInverseCertificates --timeout 180",
+    "python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.AtomicProbabilitySignedRationalsCertificates --timeout 180",
+    "python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.AtomicProbabilityRationalAdditiveCertificates --timeout 180",
+    "python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.AtomicProbabilityNumericComparisonCertificates --timeout 180",
+    "python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.AtomicProbabilityFractionOrderCertificates --timeout 180",
+    "python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.AtomicProbabilityFractionArchimedeanCertificates --timeout 180",
+    "python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.AtomicProbabilityFractionDensityCertificates --timeout 180",
+    "python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.AtomicProbabilityRationalOrderCertificates --timeout 180",
+    "python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.AtomicProbabilityConcreteRealsCertificates --timeout 180",
+    "python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.AtomicProbabilityRationalTranslationCertificates --timeout 180",
+    "python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.AtomicProbabilityConcreteRealAdditionCertificates --timeout 180"
+  ],
+  "latest_handoff_date": "2026-10-23"
+}

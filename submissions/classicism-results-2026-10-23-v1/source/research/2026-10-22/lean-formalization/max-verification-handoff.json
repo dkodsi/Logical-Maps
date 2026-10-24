@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-22",
+  "status": "READY FOR INTEGRATION",
+  "full_inconsistency_verified": false,
+  "build_owner": "[research task]",
+  "modules": [
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityHCodeSyntax",
+      "path": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHCodeSyntax.lean",
+      "sha256": "ddb243141435b8936629de3646132a0926e4c013659469091bfda7bae6862cbf",
+      "command": "python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.MaxAtomicityHCodeSyntax --timeout 180",
+      "compiled_by_author": false
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicitySplitCertificate",
+      "path": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySplitCertificate.lean",
+      "sha256": "1b3073449ce0d8fd45ea234cc71f06ab4a3523bb1c1cab43785a016f79298553",
+      "command": "python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.MaxAtomicitySplitCertificate --timeout 180",
+      "compiled_by_author": false
+    }
+  ],
+  "exact_unconditional_target": "¬ Classicism.Meta.AxiomSet.Consistent (Classicism.Meta.AxiomSet.maximalist ∪ Classicism.P.AtomicityT.schema)",
+  "remaining": [
+    "Concrete closed selector and finite constructible-order formula",
+    "Checked non-theorem certificate for the exact split identity",
+    "Rigid complete atomless Boolean algebra existence",
+    "Universe-code collapse, cardinality and order interpretation",
+    "L-internal semantics and finite-proof absoluteness, or the alternative ambient Jech-Shelah route",
+    "Boolean-valued semantics and soundness await serial compilation; the compiler has now obtained the pinned Mathlib source at .reproduction/classicism-mathlib"
+  ]
+}

@@ -3,22 +3,67 @@ premises:
 - relational-choice-r
 - boolean-completeness-r
 conclusion: transversal-choice-r
-status: conjectured
+status: proved
+was_conjectured: true
 certificate:
   source_id: misc
-  produced_by: Zachary Goodsell, conjecture of 27 September 2026
-  recorded_by: Codex (OpenAI), 27 September 2026
+  produced_by: Zachary Goodsell (conjecture, 27 September 2026); Codex (OpenAI), prompted by Daniel Kodsi
+    (direct proof and refinements, 22 October 2026; composition recorded 23 October 2026)
+  recorded_by: Codex (OpenAI), prompted by Daniel Kodsi, 23 October 2026; original conjecture recorded
+    by Codex (OpenAI), prompted by Zachary Goodsell, 27 September 2026
   checked_by: []
   date: '2026-09-27'
   lean: stated
 sources:
 - 'Zachary Goodsell, conjecture communicated on 27 September 2026: Relational Choice + Boolean Completeness ⊢ Transversal Choice.'
+- Codex (OpenAI), prompted by Daniel Kodsi, Relational Choice and Boolean Completeness imply Transversal
+  Choice, 22 October 2026, §§1–9 (unpaginated); frozen submission catalog rigidity.16.
+- Codex (OpenAI), prompted by Daniel Kodsi, RC supplies a guarded progressive operation on partial
+  selectors, 22 October 2026, §§1–6 (unpaginated); sharper choice instance for rigidity.16.
+- Codex (OpenAI), prompted by Daniel Kodsi, Relational Choice, countable completeness, and the countable
+  chain condition, 22 October 2026, §§1–4 (unpaginated); and structural-lane-handoff.md, §1, for the
+  point-output-choice refinement of its transversal corollary.
+- 'Composition: Codex (OpenAI), prompted by Daniel Kodsi, RC+BC⇒Actuality, 22 October 2026, §§1–7;
+  Cian Dorr, Boolean Completeness does not imply Rigid Comprehension, draft of 30 July 2026, Proposition
+  1, p. 2; and the recorded RC+Weak Rigid Comprehension⇒Transversal Choice proof by Claude Fable 5.1
+  (Anthropic), prompted by Zachary Goodsell after Christopher Sun’s observation, 25 September 2026.'
 source_names:
 - Goodsell 27 Sep
-proof: ''
-references: []
+- Kodsi research, direct proof
+- Kodsi research, guarded progression
+- Kodsi research, CBC and CCC
+- Recorded three-step composition
+proof: >-
+  Relational Choice and Boolean Completeness imply Actuality by
+  [[relational-choice-and-boolean-completeness-imply-actuality]]. Boolean Completeness together with
+  this Actuality witness gives Weak Rigid Comprehension by
+  [[completeness-and-actuality-imply-weak-rigid-comprehension]]. Retaining Relational Choice,
+  [[relational-choice-and-weak-rigid-comprehension-imply-transversal-choice]] then gives Transversal
+  Choice. These are implications over the same fixed C framework, with all premises and conclusions
+  unboxed. The matching write-up also preserves the independent direct proof: for each admitted
+  type σ, including e, RC_(σt,σ) and represented well-ordered Boolean-chain joins at σt suffice for
+  TC_σ. It retains the original functional-graph variant, the guarded-operation refinement, and the
+  chain-completeness and CBC+CCC corollaries with their exact type scopes.
+references:
+- paper: dorr-bc-not-rc
+  role: proof
+  locator: Proposition 1, p. 2
+  note: Supplies only the BC+Actuality⇒Weak Rigid Comprehension step of the composition. The direct
+    transversal proof and its refinements are independent research credited separately above.
 notes: >-
-  Does adding Boolean Completeness to Relational Choice suffice for Transversal Choice in C?
-  The question without Boolean Completeness is recorded separately. No proof was supplied.
-  A proof of this implication, or a model of C satisfying both premises and failing Transversal
-  Choice, would settle this conjecture.
+  Settles the unchanged conjecture of 27 September 2026; the certificate date records that origin.
+  RC abbreviates Relational Choice here, not Rigid Comprehension. The direct proof does not pass
+  through Actuality or Weak Rigid Comprehension. Its lower-type premises and represented-chain
+  refinements are retained in the write-up rather than being replaced by the all-type composition.
+  No ND, BF, Plenitude, or extensional identification of coextensive properties is assumed. The three
+  component records of the composition have separate verified Lean certificates; this result's own
+  generated statement remains lean: stated, and those certificates do not certify every refinement.
+  The question whether Relational Choice alone implies Transversal Choice remains separate.
+changes:
+- date: '2026-10-23'
+  by: Codex (OpenAI), prompted by Daniel Kodsi
+  summary: >-
+    Settled the existing conjecture by the recorded RC+BC⇒Actuality⇒Weak Rigid Comprehension route
+    (retaining BC and RC where required). Preserved the independent direct proof, sharper
+    property-to-point choice instance, chain and CBC+CCC refinements, and source provenance in a
+    comparative write-up. Kept the original certificate date and the separate stated Lean status.

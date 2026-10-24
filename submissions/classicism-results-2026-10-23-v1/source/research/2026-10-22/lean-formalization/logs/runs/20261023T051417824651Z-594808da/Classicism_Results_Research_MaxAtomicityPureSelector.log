@@ -1,0 +1,369 @@
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:38:37: warning: Local variable 'e' resembles constructor 'Classicism.Meta.Ty.e' - write '.e' (with a dot) or 'Classicism.Meta.Ty.e' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:40:37: warning: Local variable 'e' resembles constructor 'Classicism.Meta.Ty.e' - write '.e' (with a dot) or 'Classicism.Meta.Ty.e' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:130:27: warning: This simp argument is unused:
+  Term.closedTypes_forall'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hCode, rows, cover, crispRelation, extensional, MaxAtomicitySyntax.wellFounded, fill,
+    MaxAtomicitySyntax.crisp, small, Term.closedTypes_conj, Term.closedTypes_exists', Term.closedTypes_imp,
+    Term.closedTypes_iff, Term.closedTypes_neg, Term.closedTypes_eq', Term.closedTypes_disj, Term.closedTypes_bot,
+    Term.closedTypes_top, member, Term.closedTypes, Term.weaken, Term.closedTypes_rename, hE, Bool.true_and,
+    Bool.and_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:130:53: warning: This simp argument is unused:
+  Term.closedTypes_exists'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hCode, rows, cover, crispRelation, extensional, MaxAtomicitySyntax.wellFounded, fill,
+    MaxAtomicitySyntax.crisp, small, Term.closedTypes_conj, Term.closedTypes_forall', Term.closedTypes_imp,
+    Term.closedTypes_iff, Term.closedTypes_neg, Term.closedTypes_eq', Term.closedTypes_disj, Term.closedTypes_bot,
+    Term.closedTypes_top, member, Term.closedTypes, Term.weaken, Term.closedTypes_rename, hE, Bool.true_and,
+    Bool.and_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:131:4: warning: This simp argument is unused:
+  Term.closedTypes_imp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hCode, rows, cover, crispRelation, extensional, MaxAtomicitySyntax.wellFounded, fill,
+    MaxAtomicitySyntax.crisp, small, Term.closedTypes_conj, Term.closedTypes_forall', Term.closedTypes_exists',
+    Term.closedTypes_iff, Term.closedTypes_neg, Term.closedTypes_eq', Term.closedTypes_disj, Term.closedTypes_bot,
+    Term.closedTypes_top, member, Term.closedTypes, Term.weaken, Term.closedTypes_rename, hE, Bool.true_and,
+    Bool.and_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:131:26: warning: This simp argument is unused:
+  Term.closedTypes_iff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hCode, rows, cover, crispRelation, extensional, MaxAtomicitySyntax.wellFounded, fill,
+    MaxAtomicitySyntax.crisp, small, Term.closedTypes_conj, Term.closedTypes_forall', Term.closedTypes_exists',
+    Term.closedTypes_imp, Term.closedTypes_neg, Term.closedTypes_eq', Term.closedTypes_disj, Term.closedTypes_bot,
+    Term.closedTypes_top, member, Term.closedTypes, Term.weaken, Term.closedTypes_rename, hE, Bool.true_and,
+    Bool.and_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:131:48: warning: This simp argument is unused:
+  Term.closedTypes_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hCode, rows, cover, crispRelation, extensional, MaxAtomicitySyntax.wellFounded, fill,
+    MaxAtomicitySyntax.crisp, small, Term.closedTypes_conj, Term.closedTypes_forall', Term.closedTypes_exists',
+    Term.closedTypes_imp, Term.closedTypes_iff, Term.closedTypes_eq', Term.closedTypes_disj, Term.closedTypes_bot,
+    Term.closedTypes_top, member, Term.closedTypes, Term.weaken, Term.closedTypes_rename, hE, Bool.true_and,
+    Bool.and_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:132:4: warning: This simp argument is unused:
+  Term.closedTypes_eq'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hCode, rows, cover, crispRelation, extensional, MaxAtomicitySyntax.wellFounded, fill,
+    MaxAtomicitySyntax.crisp, small, Term.closedTypes_conj, Term.closedTypes_forall', Term.closedTypes_exists',
+    Term.closedTypes_imp, Term.closedTypes_iff, Term.closedTypes_neg, Term.closedTypes_disj, Term.closedTypes_bot,
+    Term.closedTypes_top, member, Term.closedTypes, Term.weaken, Term.closedTypes_rename, hE, Bool.true_and,
+    Bool.and_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:132:26: warning: This simp argument is unused:
+  Term.closedTypes_disj
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hCode, rows, cover, crispRelation, extensional, MaxAtomicitySyntax.wellFounded, fill,
+    MaxAtomicitySyntax.crisp, small, Term.closedTypes_conj, Term.closedTypes_forall', Term.closedTypes_exists',
+    Term.closedTypes_imp, Term.closedTypes_iff, Term.closedTypes_neg, Term.closedTypes_eq', Term.closedTypes_bot,
+    Term.closedTypes_top, member, Term.closedTypes, Term.weaken, Term.closedTypes_rename, hE, Bool.true_and,
+    Bool.and_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:132:49: warning: This simp argument is unused:
+  Term.closedTypes_bot
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hCode, rows, cover, crispRelation, extensional, MaxAtomicitySyntax.wellFounded, fill,
+    MaxAtomicitySyntax.crisp, small, Term.closedTypes_conj, Term.closedTypes_forall', Term.closedTypes_exists',
+    Term.closedTypes_imp, Term.closedTypes_iff, Term.closedTypes_neg, Term.closedTypes_eq', Term.closedTypes_disj,
+    Term.closedTypes_top, member, Term.closedTypes, Term.weaken, Term.closedTypes_rename, hE, Bool.true_and,
+    Bool.and_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:133:4: warning: This simp argument is unused:
+  Term.closedTypes_top
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hCode, rows, cover, crispRelation, extensional, MaxAtomicitySyntax.wellFounded, fill,
+    MaxAtomicitySyntax.crisp, small, Term.closedTypes_conj, Term.closedTypes_forall', Term.closedTypes_exists',
+    Term.closedTypes_imp, Term.closedTypes_iff, Term.closedTypes_neg, Term.closedTypes_eq', Term.closedTypes_disj,
+    Term.closedTypes_bot, member, Term.closedTypes, Term.weaken, Term.closedTypes_rename, hE, Bool.true_and,
+    Bool.and_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:134:48: warning: This simp argument is unused:
+  Bool.and_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hCode, rows, cover, crispRelation, extensional, MaxAtomicitySyntax.wellFounded, fill,
+    MaxAtomicitySyntax.crisp, small, Term.closedTypes_conj, Term.closedTypes_forall', Term.closedTypes_exists',
+    Term.closedTypes_imp, Term.closedTypes_iff, Term.closedTypes_neg, Term.closedTypes_eq', Term.closedTypes_disj,
+    Term.closedTypes_bot, Term.closedTypes_top, member, Term.closedTypes, Term.weaken, Term.closedTypes_rename, hE,
+    Bool.true_and]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:134:63: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:140:4: warning: This simp argument is unused:
+  Term.closedTypes_forall'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [isIso, sub, leProp, Term.closedTypes_conj, Term.closedTypes_exists', Term.closedTypes_imp,
+    Term.closedTypes_iff, Term.closedTypes_eq', member, Term.closedTypes, Term.weaken, Term.closedTypes_rename, hE, hc,
+    hh, Bool.true_and, Bool.and_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:140:30: warning: This simp argument is unused:
+  Term.closedTypes_exists'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [isIso, sub, leProp, Term.closedTypes_conj, Term.closedTypes_forall', Term.closedTypes_imp,
+    Term.closedTypes_iff, Term.closedTypes_eq', member, Term.closedTypes, Term.weaken, Term.closedTypes_rename, hE, hc,
+    hh, Bool.true_and, Bool.and_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:140:56: warning: This simp argument is unused:
+  Term.closedTypes_imp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [isIso, sub, leProp, Term.closedTypes_conj, Term.closedTypes_forall', Term.closedTypes_exists',
+    Term.closedTypes_iff, Term.closedTypes_eq', member, Term.closedTypes, Term.weaken, Term.closedTypes_rename, hE, hc,
+    hh, Bool.true_and, Bool.and_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:141:4: warning: This simp argument is unused:
+  Term.closedTypes_iff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [isIso, sub, leProp, Term.closedTypes_conj, Term.closedTypes_forall', Term.closedTypes_exists',
+    Term.closedTypes_imp, Term.closedTypes_eq', member, Term.closedTypes, Term.weaken, Term.closedTypes_rename, hE, hc,
+    hh, Bool.true_and, Bool.and_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:141:26: warning: This simp argument is unused:
+  Term.closedTypes_eq'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [isIso, sub, leProp, Term.closedTypes_conj, Term.closedTypes_forall', Term.closedTypes_exists',
+    Term.closedTypes_imp, Term.closedTypes_iff, member, Term.closedTypes, Term.weaken, Term.closedTypes_rename, hE, hc,
+    hh, Bool.true_and, Bool.and_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:142:84: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:148:26: warning: This simp argument is unused:
+  Term.closedTypes_bot
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [splits, Term.closedTypes_conj, Term.closedTypes_neg, Term.closedTypes_eq',
+    Term.closedTypes_forall', Term.closedTypes_var, hp, hq, Bool.true_and]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:149:49: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:177:2: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:169:54: warning: This simp argument is unused:
+  Term.closedTypes_imp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [earlierFail, Term.closedTypes_forall', Term.closedTypes_neg, splits, Term.closedTypes_conj,
+    Term.closedTypes_eq', Term.closedTypes_bot, member, Term.closedTypes, Term.weaken, Term.closedTypes_rename, hE, hn,
+    hp, he, Bool.true_and, Bool.and_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:170:6: warning: This simp argument is unused:
+  Term.closedTypes_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [earlierFail, Term.closedTypes_forall', Term.closedTypes_imp, splits, Term.closedTypes_conj,
+    Term.closedTypes_eq', Term.closedTypes_bot, member, Term.closedTypes, Term.weaken, Term.closedTypes_rename, hE, hn,
+    hp, he, Bool.true_and, Bool.and_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:170:36: warning: This simp argument is unused:
+  Term.closedTypes_conj
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [earlierFail, Term.closedTypes_forall', Term.closedTypes_imp, Term.closedTypes_neg, splits,
+    Term.closedTypes_eq', Term.closedTypes_bot, member, Term.closedTypes, Term.weaken, Term.closedTypes_rename, hE, hn,
+    hp, he, Bool.true_and, Bool.and_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:170:59: warning: This simp argument is unused:
+  Term.closedTypes_eq'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [earlierFail, Term.closedTypes_forall', Term.closedTypes_imp, Term.closedTypes_neg, splits,
+    Term.closedTypes_conj, Term.closedTypes_bot, member, Term.closedTypes, Term.weaken, Term.closedTypes_rename, hE, hn,
+    hp, he, Bool.true_and, Bool.and_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:171:6: warning: This simp argument is unused:
+  Term.closedTypes_bot
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [earlierFail, Term.closedTypes_forall', Term.closedTypes_imp, Term.closedTypes_neg, splits,
+    Term.closedTypes_conj, Term.closedTypes_eq', member, Term.closedTypes, Term.weaken, Term.closedTypes_rename, hE, hn,
+    hp, he, Bool.true_and, Bool.and_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:190:59: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:282:26: warning: This simp argument is unused:
+  ev_imp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [sub, ev_all, ev_member, eval_weaken, eval, IEnv.get, hE, imp_truth, iInf_truth, Ordinary.Subset]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:298:20: warning: This simp argument is unused:
+  ev_conj
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [isIso, ev_all, ev_imp, ev_ex, ev_eq, ev_iff, leProp, ev_conj, ev_eq, sub, ev_all, ev_imp,
+    ev_member, ev_app, eval_weaken, eval, IEnv.get, hE, crisp_eq_truth, inf_eq_left, iSup_truth, imp_truth, iInf_truth,
+    iff_truth, inf_truth, OrdinarySelector.Iso, Ordinary.Subset, iff_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:298:29: warning: This simp argument is unused:
+  ev_all
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [isIso, ev_conj, ev_imp, ev_ex, ev_eq, ev_iff, leProp, ev_conj, ev_eq, sub, ev_all, ev_imp,
+    ev_member, ev_app, eval_weaken, eval, IEnv.get, hE, crisp_eq_truth, inf_eq_left, iSup_truth, imp_truth, iInf_truth,
+    iff_truth, inf_truth, OrdinarySelector.Iso, Ordinary.Subset, iff_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:298:37: warning: This simp argument is unused:
+  ev_imp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [isIso, ev_conj, ev_all, ev_ex, ev_eq, ev_iff, leProp, ev_conj, ev_eq, sub, ev_all, ev_imp,
+    ev_member, ev_app, eval_weaken, eval, IEnv.get, hE, crisp_eq_truth, inf_eq_left, iSup_truth, imp_truth, iInf_truth,
+    iff_truth, inf_truth, OrdinarySelector.Iso, Ordinary.Subset, iff_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:298:45: warning: This simp argument is unused:
+  ev_ex
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [isIso, ev_conj, ev_all, ev_imp, ev_eq, ev_iff, leProp, ev_conj, ev_eq, sub, ev_all, ev_imp,
+    ev_member, ev_app, eval_weaken, eval, IEnv.get, hE, crisp_eq_truth, inf_eq_left, iSup_truth, imp_truth, iInf_truth,
+    iff_truth, inf_truth, OrdinarySelector.Iso, Ordinary.Subset, iff_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:298:52: warning: This simp argument is unused:
+  ev_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [isIso, ev_conj, ev_all, ev_imp, ev_ex, ev_iff, leProp, ev_conj, ev_eq, sub, ev_all, ev_imp,
+    ev_member, ev_app, eval_weaken, eval, IEnv.get, hE, crisp_eq_truth, inf_eq_left, iSup_truth, imp_truth, iInf_truth,
+    iff_truth, inf_truth, OrdinarySelector.Iso, Ordinary.Subset, iff_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:298:59: warning: This simp argument is unused:
+  ev_iff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [isIso, ev_conj, ev_all, ev_imp, ev_ex, ev_eq, leProp, ev_conj, ev_eq, sub, ev_all, ev_imp,
+    ev_member, ev_app, eval_weaken, eval, IEnv.get, hE, crisp_eq_truth, inf_eq_left, iSup_truth, imp_truth, iInf_truth,
+    iff_truth, inf_truth, OrdinarySelector.Iso, Ordinary.Subset, iff_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:299:12: warning: This simp argument is unused:
+  ev_conj
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [isIso, ev_conj, ev_all, ev_imp, ev_ex, ev_eq, ev_iff, leProp, ev_eq, sub, ev_all, ev_imp,
+    ev_member, ev_app, eval_weaken, eval, IEnv.get, hE, crisp_eq_truth, inf_eq_left, iSup_truth, imp_truth, iInf_truth,
+    iff_truth, inf_truth, OrdinarySelector.Iso, Ordinary.Subset, iff_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:299:21: warning: This simp argument is unused:
+  ev_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [isIso, ev_conj, ev_all, ev_imp, ev_ex, ev_eq, ev_iff, leProp, ev_conj, sub, ev_all, ev_imp,
+    ev_member, ev_app, eval_weaken, eval, IEnv.get, hE, crisp_eq_truth, inf_eq_left, iSup_truth, imp_truth, iInf_truth,
+    iff_truth, inf_truth, OrdinarySelector.Iso, Ordinary.Subset, iff_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:299:33: warning: This simp argument is unused:
+  ev_all
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [isIso, ev_conj, ev_all, ev_imp, ev_ex, ev_eq, ev_iff, leProp, ev_conj, ev_eq, sub, ev_imp,
+    ev_member, ev_app, eval_weaken, eval, IEnv.get, hE, crisp_eq_truth, inf_eq_left, iSup_truth, imp_truth, iInf_truth,
+    iff_truth, inf_truth, OrdinarySelector.Iso, Ordinary.Subset, iff_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:299:41: warning: This simp argument is unused:
+  ev_imp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [isIso, ev_conj, ev_all, ev_imp, ev_ex, ev_eq, ev_iff, leProp, ev_conj, ev_eq, sub, ev_all,
+    ev_member, ev_app, eval_weaken, eval, IEnv.get, hE, crisp_eq_truth, inf_eq_left, iSup_truth, imp_truth, iInf_truth,
+    iff_truth, inf_truth, OrdinarySelector.Iso, Ordinary.Subset, iff_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:301:39: warning: This simp argument is unused:
+  iff_truth
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [isIso, ev_conj, ev_all, ev_imp, ev_ex, ev_eq, ev_iff, leProp, ev_conj, ev_eq, sub, ev_all, ev_imp,
+    ev_member, ev_app, eval_weaken, eval, IEnv.get, hE, crisp_eq_truth, inf_eq_left, iSup_truth, imp_truth, iInf_truth,
+    inf_truth, OrdinarySelector.Iso, Ordinary.Subset, iff_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Classicism/Results/Research/MaxAtomicityPureSelector.lean:315:41: warning: This simp argument is unused:
+  ev_app
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hg, eval_splits, ev_member, eval_weaken, eval, IEnv.get, hE, compl_truth, sup_truth, iInf_truth,
+    OrdinarySelector.EarlierFail, imp_iff_not_or]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Classicism.Meta.Research.MaxAtomicityPureSelector.selector_pure' depends on axioms: [propext]
+'Classicism.Meta.Research.MaxAtomicityPureSelector.selector_closedTypes' depends on axioms: [propext]
+'Classicism.Meta.Research.MaxAtomicityPureSelector.eval_witnessGuard' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityPureSelector.eval_selects' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityPureSelector.eval_selector' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityPureSelector.Presentation.iso_eq_carrier' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityPureSelector.selected_least' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityPureSelector.least_selected' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityPureSelector.eval_selector_eq_least' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityPureSelector.eval_selector_splits' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

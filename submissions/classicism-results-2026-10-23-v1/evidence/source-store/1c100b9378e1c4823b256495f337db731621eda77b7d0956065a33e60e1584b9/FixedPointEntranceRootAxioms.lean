@@ -1,0 +1,14 @@
+import FixedPointEntranceAxioms
+import Classicism.Models.FixedPointEntranceRoot
+import Classicism.Models.QualitativeLinksPrescriptions
+
+#print axioms Classicism.Meta.Intensional.FixedPointEntrance.Qualitative.Atomicity.holds_atomicity_schema
+#print axioms Classicism.Meta.Intensional.FixedPointEntrance.Qualitative.RelationalChoice.holds_relational_choice_schema
+#print axioms Classicism.Meta.Intensional.FixedPointEntrance.Qualitative.Powers.holds_weak_power_schema
+#print axioms Classicism.Meta.Intensional.FixedPointEntrance.Qualitative.Powers.holds_rigid_power_schema
+#print axioms Classicism.Meta.Intensional.FixedPointEntrance.Qualitative.Barcan.externalEquality_mem
+#print axioms Classicism.Meta.Intensional.FixedPointEntrance.Qualitative.Barcan.witness_changed
+#print axioms Classicism.Meta.Intensional.FixedPointEntrance.Qualitative.Barcan.not_barcan_t
+#print axioms Classicism.Meta.Intensional.FixedPointEntrance.Qualitative.root_package
+#print axioms Classicism.Meta.Intensional.QualitativeLinks.Prescriptions.finite_prescription
+#print axioms Classicism.Meta.Intensional.QualitativeLinks.Prescriptions.finite_prescription_arrow

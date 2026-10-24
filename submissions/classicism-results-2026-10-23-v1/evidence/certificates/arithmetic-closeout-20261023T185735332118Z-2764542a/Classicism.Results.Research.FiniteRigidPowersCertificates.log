@@ -1,0 +1,51 @@
+Classicism.Research.FiniteRigidPowers.finite_base_of_finite_rigid_power: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FiniteRigidPowers.finite_binary_rigid_field: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FiniteRigidPowers.finite_binary_rigid_field_iff: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FiniteRigidPowers.finite_double_rigid_power: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FiniteRigidPowers.finite_left_of_binary_rigid_field: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FiniteRigidPowers.finite_pairCodes: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.FiniteRigidPowers.finite_right_of_binary_rigid_field: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FiniteRigidPowers.finite_rigid_power: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FiniteRigidPowers.finite_rigid_power_iff: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FiniteRigidPowers.finite_rigid_propositions: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.FiniteRigidPowers.pairCode_injective: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.FiniteRigidPowers.pairCode_rigid: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.FiniteRigidPowers.pairCode_weaklyRigid: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.FiniteRigidPowers.pairRead_value: Classicism ✓ [C⁻] (axioms: [])
+#classicism_audit Classicism.Results.Research.FiniteRigidPowers: 14/14 theorems pass; 14 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.FiniteRigidPowers: 14/14 inside R
+Classicism.Results.Research.FiniteRigidPowers: 14 of 14 theorems derived
+
+[1/14] Classicism.Research.FiniteRigidPowers.finite_base_of_finite_rigid_power ✓ 486 ms
+[2/14] Classicism.Research.FiniteRigidPowers.finite_binary_rigid_field ✓ 3256 ms
+[3/14] Classicism.Research.FiniteRigidPowers.finite_binary_rigid_field_iff ✓ 2811 ms
+[4/14] Classicism.Research.FiniteRigidPowers.finite_double_rigid_power ✓ 2144 ms
+[5/14] Classicism.Research.FiniteRigidPowers.finite_left_of_binary_rigid_field ✓ 0 ms
+[6/14] Classicism.Research.FiniteRigidPowers.finite_pairCodes ✓ 0 ms
+[7/14] Classicism.Research.FiniteRigidPowers.finite_right_of_binary_rigid_field ✓ 0 ms
+[8/14] Classicism.Research.FiniteRigidPowers.finite_rigid_power ✓ 0 ms
+[9/14] Classicism.Research.FiniteRigidPowers.finite_rigid_power_iff ✓ 0 ms
+[10/14] Classicism.Research.FiniteRigidPowers.finite_rigid_propositions ✓ 485 ms
+[11/14] Classicism.Research.FiniteRigidPowers.pairCode_injective ✓ 0 ms
+[12/14] Classicism.Research.FiniteRigidPowers.pairCode_rigid ✓ 0 ms
+[13/14] Classicism.Research.FiniteRigidPowers.pairCode_weaklyRigid ✓ 0 ms
+[14/14] Classicism.Research.FiniteRigidPowers.pairRead_value ✓ 0 ms
+'Classicism.Research.FiniteRigidPowers.finite_rigid_power_iff.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.FiniteRigidPowers.finite_binary_rigid_field_iff.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.FiniteRigidPowers.finite_rigid_propositions.derivable' depends on axioms: [propext, Quot.sound]

@@ -295,7 +295,7 @@ are displayed under Misc. until attributed. Lean fields remain optional.
 An optional `certificate.trawl` preserves structured discovery, evidence, reviewer,
 and admission history for accepted trawl contributions. It does not change the
 meaning of `source_id`, proof status, or Lean verification. See the
-[trawl provenance workflow](trawl/README.md#evidence-storage). A model written as
+[trawl provenance workflow](trawl/README.md#evidence-and-review). A model written as
 arguments keeps it in `provenance/<admission id>.yaml` instead, one file per
 admission: what the admitted records share (checkpoint, source, reviews, admission)
 under `trawl`, and each record's own `discovery` and `evidence` under `records`.

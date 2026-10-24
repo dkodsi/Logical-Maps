@@ -1,0 +1,16 @@
+import FixedPointEntranceRootAxioms
+import Classicism.Models.FixedPointEntranceSeparation
+
+#print axioms Classicism.Meta.Intensional.FixedPointEntrance.Qualitative.RelationalBarcan.not_barcan_relational
+#print axioms Classicism.Meta.Intensional.FixedPointEntrance.Qualitative.Actuality.necessary_strongActuality
+#print axioms Classicism.Meta.Intensional.QualitativeLinks.FibreExtension.fibre_cover
+#print axioms Classicism.Meta.Intensional.FixedPointEntrance.Qualitative.Codes.code_rigid
+#print axioms Classicism.Meta.Intensional.FixedPointEntrance.Qualitative.Codes.CodeInjectivity.code_injective_nonpoint
+#print axioms Classicism.Meta.Intensional.FixedPointEntrance.Qualitative.TameWitness.weak
+#print axioms Classicism.Meta.Intensional.FixedPointEntrance.Qualitative.TameWitness.not_rigid
+#print axioms Classicism.Meta.Intensional.FixedPointEntrance.Qualitative.TameWitness.not_tail_tame
+#print axioms Classicism.Meta.Intensional.FixedPointEntrance.Qualitative.holds_background
+#print axioms Classicism.Meta.Intensional.FixedPointEntrance.Qualitative.background_consistent
+#print axioms Classicism.Meta.Intensional.FixedPointEntrance.Qualitative.root_not_box_tame
+#print axioms Classicism.Meta.Intensional.FixedPointEntrance.Qualitative.not_entails_box_tame
+#print axioms Classicism.Meta.Intensional.FixedPointEntrance.Qualitative.complete_countermodel

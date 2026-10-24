@@ -1,0 +1,23 @@
+Classicism.Research.FregeHumeClasses.bijection_adjoin: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.FregeHumeClasses.count_iff_equinumerous: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.FregeHumeClasses.count_of_bijection: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.FregeHumeClasses.equinumerous_of_common_count: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.FregeHumeClasses.hume_eq_number_c5: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+Classicism.Research.FregeHumeClasses.hume_identity_iff_c5: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FregeHumeClasses.hume_is_number_c5: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+#classicism_audit Classicism.Results.Research.FregeHumeClasses: 7/7 theorems pass; 7 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.FregeHumeClasses: 7/7 inside R
+Classicism.Results.Research.FregeHumeClasses: 7 of 7 theorems derived
+
+[1/7] Classicism.Research.FregeHumeClasses.bijection_adjoin ✓ 226 ms
+[2/7] Classicism.Research.FregeHumeClasses.count_iff_equinumerous ✓ 1173 ms
+[3/7] Classicism.Research.FregeHumeClasses.count_of_bijection ✓ 0 ms
+[4/7] Classicism.Research.FregeHumeClasses.equinumerous_of_common_count ✓ 0 ms
+[5/7] Classicism.Research.FregeHumeClasses.hume_eq_number_c5 ✓ 303 ms
+[6/7] Classicism.Research.FregeHumeClasses.hume_identity_iff_c5 ✓ 309 ms
+[7/7] Classicism.Research.FregeHumeClasses.hume_is_number_c5 ✓ 97 ms
+'Classicism.Research.FregeHumeClasses.count_iff_equinumerous.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.FregeHumeClasses.hume_eq_number_c5.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.FregeHumeClasses.hume_identity_iff_c5.derivable' depends on axioms: [propext, Quot.sound]

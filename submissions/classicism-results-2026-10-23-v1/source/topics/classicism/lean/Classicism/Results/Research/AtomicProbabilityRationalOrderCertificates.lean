@@ -1,0 +1,32 @@
+import Classicism.Results.Research.AtomicProbabilityRationalOrder
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Schema
+
+#classicism_audit Classicism.Results.Research.AtomicProbabilityRationalOrder
+#classicism_types_audit Classicism.Results.Research.AtomicProbabilityRationalOrder
+
+#classicism_derive Classicism.Research.ProbabilityRationals.rplus_right_comm
+  Classicism.Research.ProbabilityRationals.rplus_cancel_left
+  Classicism.Research.ProbabilityRationals.rle_codes_iff
+  Classicism.Research.ProbabilityRationals.rle_refl
+  Classicism.Research.ProbabilityRationals.rle_total
+  Classicism.Research.ProbabilityRationals.rle_antisymm
+  Classicism.Research.ProbabilityRationals.rle_trans
+  Classicism.Research.ProbabilityRationals.rlt_of_le_of_lt
+  Classicism.Research.ProbabilityRationals.rlt_trans
+  Classicism.Research.ProbabilityRationals.rlt_of_lt_of_le
+  Classicism.Research.ProbabilityRationals.rlt_irrefl
+  Classicism.Research.ProbabilityRationals.rle_add_right
+  Classicism.Research.ProbabilityRationals.embed_order
+  Classicism.Research.ProbabilityRationals.embed_strict_order
+  Classicism.Research.ProbabilityRationals.rlt_add_positive
+  Classicism.Research.ProbabilityRationals.rational_order_dense
+  Classicism.Research.ProbabilityRationals.signedCode_le_positive_part
+  Classicism.Research.ProbabilityRationals.rational_has_natural_bound
+  Classicism.Research.ProbabilityRationals.rational_positive_representation
+  Classicism.Research.ProbabilityRationals.positive_rational_small_reciprocal
+  Classicism.Research.ProbabilityRationals.rational_no_upper_endpoint
+  Classicism.Research.ProbabilityRationals.rational_no_lower_endpoint
+
+#print axioms Classicism.Research.ProbabilityRationals.rational_no_lower_endpoint.derivable

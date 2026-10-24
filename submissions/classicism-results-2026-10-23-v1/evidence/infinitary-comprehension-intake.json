@@ -1,0 +1,102 @@
+{
+  "received_on": "2026-10-23",
+  "mathematical_sources": [
+    {
+      "origin": "research/2026-10-23/infinitary-comprehension/infinitary-comprehension.md",
+      "sha256": "a300f7c823bbed214856a174eaf02067713e62273520db198847b1a1015d11e7",
+      "selected_lines": [
+        [
+          1,
+          290
+        ],
+        [
+          356,
+          428
+        ],
+        [
+          434,
+          447
+        ]
+      ],
+      "packaged": "proofs/infinitary-comprehension.md"
+    },
+    {
+      "origin": "research/2026-10-23/arbitrary-atomic-joins/positive-results.md",
+      "sha256": "d6b5d271bdca259bd8fda4b9adc5b8e117ac592f273b6cfcd973c75fe5ac7bfb",
+      "selected_lines": [
+        [
+          231,
+          410
+        ]
+      ],
+      "packaged": "proofs/infinitary-canonical-representation.md"
+    }
+  ],
+  "formatting": "Converted math delimiters and source links for the repository; omitted alternate strictness proofs and research-process notes.",
+  "formalization": "Lean certified: for universe-0 categorical premodels, closure under actual infinitary term denotations, unrestricted original-closed-type Infinitary Comprehension and ☐ND at type t imply faithful full-standard representation. The representation retains the original closed root-domain carriers, quotients observationally equivalent reachable worlds, preserves infinitary truth through grounding, and represents every proposition profile and every external function at an admitted relational-output type. Separate full-standard validity reports give the converse semantic direction. Supporting certificates cover regular-cardinal parameter-bound strictness, the countable finite-C reduct, the finite syntax bridge, cardinal closure, and the two infinitary action countermodels. Nominal Atomicity is semantic profile-order Atomicity; general action Atomicity and Rigid Comprehension retain their root-level premises. The result is neither recursive proof-calculus completeness nor equivalence with finitary Choice Classicism; arbitrary-universe forward representation and the full H-theta application are not certified.",
+  "pending": "The full H-theta application, including formula coding, satisfaction absoluteness and its typed Henkin reduct, remains outside the accepted cardinal-closure theorem. Arbitrary-universe forward representation is not certified.",
+  "cardinal_closure_certificate": "evidence/certificates/infinitary-cardinal-closure/certificate.json",
+  "supporting_certificates": [
+    "evidence/certificates/infinitary-support-and-finite-syntax/certificate.json",
+    "evidence/certificates/infinitary-action-countermodels/certificate.json"
+  ],
+  "accepted_certificate": "evidence/certificates/infinitary-full-representation/certificate.json",
+  "accepted_scope": {
+    "main_result": {
+      "statement": "Universe-0 categorical action Premodels with actual original-closed-type infinitary term-denotation closure, unrestricted original-closed-type Infinitary Comprehension, and actual boxed ND_t have a faithful full-standard representation. Original closed root-domain carriers are retained; observationally equivalent reachable worlds are quotiented; infinitary truth is preserved through the displayed grounding maps. All proposition profiles and external functions at admitted relational-output types are represented.",
+      "explicit_premises": [
+        "GroundClosed A: actual term-denotation closure at reachable worlds for formed original-closed-type matrices and finite contexts",
+        "GroundComp A: actual existential/boxed infinitary Comprehension for formed original-closed-type matrices",
+        "LambdaFreeC5 A: actual boxed propositional ND_t",
+        "Existing Premodel structure, including coherent injective inclusions into intensions; universe 0"
+      ],
+      "not_assumed": [
+        "fullness",
+        "constant domains",
+        "Barcan",
+        "A.IsModel",
+        "object-language Functional Choice",
+        "Infinity"
+      ],
+      "principal_endpoints": [
+        "Classicism.Research.InfinitaryComprehension.Canonical.original_full_standard_representation",
+        "Classicism.Research.InfinitaryComprehension.Canonical.originalModel_domain",
+        "Classicism.Research.InfinitaryComprehension.Canonical.originalModel_truth",
+        "Classicism.Research.InfinitaryComprehension.Canonical.originalModel_full_functions",
+        "Classicism.Research.InfinitaryComprehension.Canonical.originalModel_full_propositions"
+      ],
+      "converse_note": "Separate audited full-standard validity reports give the converse semantic validity direction for the displayed infinitary axioms; no proof calculus is introduced."
+    },
+    "supporting_results": [
+      "Full standard soundness concerns the explicit lambda-free infinitary syntax, arbitrary parameter assignments and allowed full relational functions. It does not establish effective finite axiomatizability.",
+      "Nominal strictness uses universe 0, regular infinite kappa and fewer than kappa distinct typed parameter symbols actually occurring in each matrix. Arbitrary unused ambient parameters and arbitrary universe-small Boolean branching remain allowed.",
+      "Nominal Atomicity means explicit semantic profile-order Atomicity. C5 and Intensionality use actual syntax. This is not a native Meta.Model transport certificate or a quoted native P.Atomicity theorem.",
+      "The countable strictness construction includes an actual finite C reduct, infinite individuals, faithful profiles and modal collapse, but its profile Atomicity and its infinitary comprehension failure retain the defined Henkin language scope.",
+      "CardinalClosure gives externally coded short-operation closure in an elementary first-order substructure under explicit regularity, cardinal arithmetic, language size and ambient-size assumptions. It does not implement H-theta, formula coding, satisfaction absoluteness or the typed Henkin reduct needed for the full H-theta argument.",
+      "General action Atomicity/RC endpoints are at the root and retain their source closure/comprehension/modelhood premises. No automatic boxed upgrade is certified.",
+      "The finite bridge embeds the actual finite lambda-free syntax and preserves substitution/evaluation; it is not a proof-calculus soundness theorem for arbitrary C5 Premodels.",
+      "Observer helpers are C-side object-derivation certificates for their exact stated premises. They do not certify the separate general finite-list or lambda-free observer bootstrap.",
+      "Countermodels retain actual expanded full action semantics: surjection comprehension plus necessary Barcan at each original closed type fails ND_t; idempotent comprehension fails BF_t and ND_t."
+    ],
+    "not_claimed": [
+      "Recursive infinitary proof-calculus completeness",
+      "Equivalence with finitary Choice Classicism",
+      "Arbitrary-universe forward representation",
+      "A quoted native Meta.Model Atomicity certificate for the separate nominal strictness construction",
+      "Automatic boxed upgrades for general action Atomicity/RC endpoints",
+      "Completion of the H-theta formula-coding, absoluteness or typed-Henkin-reduct programme",
+      "A canonical database lean: verified badge; none were manually changed"
+    ]
+  },
+  "source_packet_provenance": {
+    "origin": "research/2026-10-23/infinitary-comprehension/source-handoff.json",
+    "sha256": "60727d5b78ead09ae9ed647e12a5cc4aaefbd33db171fa956a21486690c98c2a",
+    "source_archive": {
+      "path": "research/2026-10-23/infinitary-comprehension/source-snapshot.tar.gz",
+      "sha256": "3618e1791934b64a281955fa17a9296d44a39d747a8630a98e1cdf835f56783b",
+      "bytes": 456221
+    },
+    "packet_modules": 30,
+    "local_dependency_modules": 130
+  }
+}

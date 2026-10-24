@@ -1,0 +1,4891 @@
+{
+  "method": {
+    "short": "under 1,000 words",
+    "medium": "1,000–3,000 words",
+    "long": "over 3,000 words",
+    "description": "Ratings measure the length of selected mathematical exposition, including substantive supporting arguments, rather than intrinsic difficulty or discovery effort. Every detailed result and overview group is rated. Group counts combine their selected passages, counting overlapping source lines once. Alternative proofs, Lean code and compiler logs are excluded; published background is cited rather than expanded. Compressed exposition remains compressed in this measure.",
+    "evidence": "evidence/proof-lengths.json"
+  },
+  "counting": "Whitespace-delimited words in the inclusive source-line ranges listed below, including displayed formulas and the definitions and scope qualifications in those ranges. Counts describe the selected exposition, not a formal proof-size measure. Each source is identified by its SHA-256 digest. Group selections are the union of their result selections, with overlapping lines counted once.",
+  "results": [
+    {
+      "result_ref": "MAX-ATOMICITY",
+      "rating": "long",
+      "word_count": 5069,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/lean-formalization/max-atomicity-canonical-code-proof.md",
+          "line_spans": [
+            [
+              23,
+              608
+            ]
+          ],
+          "sha256": "5948415de363d3f609d40646ba4442f7f1d65fbb4c0ff790e29a15c4f9133fbe",
+          "word_count": 5069
+        }
+      ]
+    },
+    {
+      "result_ref": "CHOICE-COMPLETENESS",
+      "rating": "long",
+      "word_count": 4051,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/followup/choice-completeness-actuality.md",
+          "line_spans": [
+            [
+              5,
+              191
+            ]
+          ],
+          "sha256": "e748639725bbf007f35bffae51c9296c01ed848f6d45a3ff84656424a9247203",
+          "word_count": 2361
+        },
+        {
+          "path": "source/research/2026-10-22/notes/relational-choice-boolean-completeness-transversal-proof.md",
+          "line_spans": [
+            [
+              5,
+              132
+            ]
+          ],
+          "sha256": "6c74fd1204484084b43bdba8ff9a2db06db710783373546e5f9f66d7eb6963e6",
+          "word_count": 1690
+        }
+      ]
+    },
+    {
+      "result_ref": "MODAL-PROPAGATION",
+      "rating": "medium",
+      "word_count": 2286,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/followup/modal-propagation.md",
+          "line_spans": [
+            [
+              5,
+              133
+            ]
+          ],
+          "sha256": "307d66f361a2a9367ab4e81432a27311b1094de630f064bbf4e543cd557e54e2",
+          "word_count": 1158
+        },
+        {
+          "path": "source/research/2026-10-22/strong-leibniz-rigid-bottom-cut.md",
+          "line_spans": [
+            [
+              5,
+              65
+            ],
+            [
+              93,
+              115
+            ]
+          ],
+          "sha256": "229e937971a1fabde6794ff6468d88e8b3faa1fb6532eaf4d9e643e3f5a42fbf",
+          "word_count": 1128
+        }
+      ]
+    },
+    {
+      "result_ref": "RIGIDITY-ND-BC",
+      "rating": "medium",
+      "word_count": 1024,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/nd-inextensible-comprehension-implies-weak-power.md",
+          "line_spans": [
+            [
+              5,
+              90
+            ],
+            [
+              107,
+              111
+            ]
+          ],
+          "sha256": "f3c330db9bea2e417b0f2f68da676ac4ab397fb88a0fe2a9c20039cdc68ea7f7",
+          "word_count": 1024
+        }
+      ]
+    },
+    {
+      "result_ref": "OLDNEW-SEPARATION",
+      "rating": "medium",
+      "word_count": 1894,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/old-new-boolean-completeness-and-rigidity-separation.md",
+          "line_spans": [
+            [
+              5,
+              114
+            ]
+          ],
+          "sha256": "3c44935bd275708d721750a3a5dfe6939b871ef9b224a9c1db7e10ab2b50ee09",
+          "word_count": 1894
+        }
+      ]
+    },
+    {
+      "result_ref": "LOGICAL-NECESSITY-SEPARATION",
+      "rating": "medium",
+      "word_count": 1900,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/followup/central-map.md",
+          "line_spans": [
+            [
+              5,
+              111
+            ],
+            [
+              131,
+              138
+            ]
+          ],
+          "sha256": "85da2ac943a0a5e30436bbd3d7a5821526a99d088d2d0884fe4134e51b870b80",
+          "word_count": 1900
+        }
+      ]
+    },
+    {
+      "result_ref": "SIGNATURE-INDEPENDENCE",
+      "rating": "short",
+      "word_count": 730,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/central-questions-audit.md",
+          "line_spans": [
+            [
+              7,
+              53
+            ],
+            [
+              77,
+              81
+            ]
+          ],
+          "sha256": "a38f8bf4a586f068cf7191ea6e2ca5bd68579843fef327f23a8134b0ec28cb21",
+          "word_count": 730
+        }
+      ]
+    },
+    {
+      "result_ref": "SECTIONS-RETRACTIONS",
+      "rating": "medium",
+      "word_count": 2876,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/choice-uniformization.md",
+          "line_spans": [
+            [
+              287,
+              352
+            ]
+          ],
+          "sha256": "dc789edc59e4f169f47c99f06c6c44a9880939ac6527ef376894c7941f71e87a",
+          "word_count": 724
+        },
+        {
+          "path": "source/research/2026-10-22/notes/functional-choice-by-sections.md",
+          "line_spans": [
+            [
+              5,
+              103
+            ]
+          ],
+          "sha256": "d73d8ff08e2d4d306a7e7ea87b8fce8f91750ce38dc01d6dbdb6f051ba283526",
+          "word_count": 1006
+        },
+        {
+          "path": "source/topics/classicism/writeups/c5-and-atomicity-imply-no-pure-contingency.md",
+          "line_spans": [
+            [
+              26,
+              200
+            ]
+          ],
+          "sha256": "8065ee3ffbe72679c7203c8985f8b0f1cec07daee0125ec0a46c3b4864829116",
+          "word_count": 1146
+        }
+      ]
+    },
+    {
+      "result_ref": "RIGIDITY-CLASSIFICATIONS",
+      "rating": "medium",
+      "word_count": 1806,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/maximalism-modal.md",
+          "line_spans": [
+            [
+              360,
+              382
+            ],
+            [
+              396,
+              414
+            ],
+            [
+              430,
+              457
+            ],
+            [
+              521,
+              552
+            ]
+          ],
+          "sha256": "dca3a358650b69d4c664a8d62fcebb5b22658026d59537a0fdb630dde360554e",
+          "word_count": 1806
+        }
+      ]
+    },
+    {
+      "result_ref": "BOOLEAN-RETRACTIONS-CHOICE",
+      "rating": "long",
+      "word_count": 4578,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/structural-algebraic-core.md",
+          "line_spans": [
+            [
+              22,
+              73
+            ],
+            [
+              92,
+              151
+            ],
+            [
+              247,
+              299
+            ],
+            [
+              481,
+              524
+            ],
+            [
+              1176,
+              1190
+            ]
+          ],
+          "sha256": "50caeb89d0ff620df0da3272244289f79353225f09554ba62bf060cf41096795",
+          "word_count": 3337
+        },
+        {
+          "path": "source/research/2026-10-22/notes/structural-world-representation.md",
+          "line_spans": [
+            [
+              5,
+              94
+            ]
+          ],
+          "sha256": "2d880f14d4f65260f3fc7a95d59cae00680f1089b18b9bfef6d94d80240098b7",
+          "word_count": 1241
+        }
+      ]
+    },
+    {
+      "result_ref": "COUNTABLE-BOOLEAN-FINITENESS",
+      "rating": "medium",
+      "word_count": 2512,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/frege-infinity-20261022-1726.md",
+          "line_spans": [
+            [
+              939,
+              960
+            ],
+            [
+              984,
+              1014
+            ],
+            [
+              1040,
+              1044
+            ]
+          ],
+          "sha256": "795dcb0ecb0982aa0aa77398422446d23cbc5cf110be0c06a00d8d9afabcd8c6",
+          "word_count": 809
+        },
+        {
+          "path": "source/research/2026-10-22/notes/quotient-abstraction-lane.md",
+          "line_spans": [
+            [
+              620,
+              636
+            ],
+            [
+              649,
+              655
+            ],
+            [
+              717,
+              786
+            ]
+          ],
+          "sha256": "ff9fae7ff96707767f4b8743489dc813e7376af9c270e860db118df46a8d68e1",
+          "word_count": 1703
+        }
+      ],
+      "selection_note": "Includes graph recursion, the finite-index case and the null-ideal argument for Actuality."
+    },
+    {
+      "result_ref": "CHOICE-NO-FINITE-BASIS",
+      "rating": "long",
+      "word_count": 3741,
+      "sources": [
+        {
+          "path": "proofs/boolean-finite-choice.md",
+          "line_spans": [
+            [
+              5,
+              527
+            ]
+          ],
+          "sha256": "db140de9d37fc02377cc762e7c60d512347232b69f87ba9510dc22dfc19740e3",
+          "word_count": 3741
+        }
+      ]
+    },
+    {
+      "result_ref": "ARITHMETIC-FOUNDATIONS",
+      "rating": "long",
+      "word_count": 7433,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/actuality-world-slice-core.md",
+          "line_spans": [
+            [
+              5,
+              90
+            ]
+          ],
+          "sha256": "8e9b51f6130c1f8472b44149448c0ca44ce85415435c0efac3f1f7354265a99f",
+          "word_count": 1286
+        },
+        {
+          "path": "source/research/2026-10-22/notes/frege-infinity-20261022-1726.md",
+          "line_spans": [
+            [
+              21,
+              42
+            ],
+            [
+              147,
+              184
+            ],
+            [
+              307,
+              338
+            ],
+            [
+              491,
+              508
+            ],
+            [
+              658,
+              697
+            ],
+            [
+              883,
+              966
+            ],
+            [
+              984,
+              1028
+            ]
+          ],
+          "sha256": "795dcb0ecb0982aa0aa77398422446d23cbc5cf110be0c06a00d8d9afabcd8c6",
+          "word_count": 4161
+        },
+        {
+          "path": "source/research/2026-10-22/notes/relational-coding-recursion-20261022.md",
+          "line_spans": [
+            [
+              495,
+              573
+            ]
+          ],
+          "sha256": "23b59e366767967638ebac31aeacbcba8f046af387ef2d1ea5c9f4cc8bd8fcc9",
+          "word_count": 1191
+        },
+        {
+          "path": "source/research/2026-10-22/proof-refinements/infinity-core-number-isomorphism.md",
+          "line_spans": [
+            [
+              5,
+              61
+            ]
+          ],
+          "sha256": "761c1ce685cb9283d74ac8d150c46fcd70144d55ea5bf0aa990eb4fb418e9de2",
+          "word_count": 795
+        }
+      ],
+      "selection_note": "Includes the finite-number arguments and the C5 core and Actuality-slice constructions used by the number maps."
+    },
+    {
+      "result_ref": "EVALUATORS-CORES",
+      "rating": "long",
+      "word_count": 5834,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/actual-truth-evaluator-ladder.md",
+          "line_spans": [
+            [
+              5,
+              34
+            ],
+            [
+              40,
+              73
+            ]
+          ],
+          "sha256": "b5d5e732527d7462d48636928f4ae3af8119e700c804f14d2e2c97460ebc2afe",
+          "word_count": 840
+        },
+        {
+          "path": "source/research/2026-10-22/notes/actuality-world-slice-core.md",
+          "line_spans": [
+            [
+              5,
+              144
+            ]
+          ],
+          "sha256": "8e9b51f6130c1f8472b44149448c0ca44ce85415435c0efac3f1f7354265a99f",
+          "word_count": 2380
+        },
+        {
+          "path": "source/research/2026-10-22/notes/gallin-bivalent-evaluator.md",
+          "line_spans": [
+            [
+              5,
+              78
+            ],
+            [
+              109,
+              131
+            ]
+          ],
+          "sha256": "43b9bd748fde8268b270332e8b318006fab05f11518fac04bdb3c81a119e869b",
+          "word_count": 1419
+        },
+        {
+          "path": "source/research/2026-10-22/proof-refinements/canonical-actual-evaluator.md",
+          "line_spans": [
+            [
+              5,
+              101
+            ]
+          ],
+          "sha256": "b57f2b7827a6dc3b4610d11424d0aaaf421855f56b9000e6c23775475fa48443",
+          "word_count": 1195
+        }
+      ]
+    },
+    {
+      "result_ref": "MAX-PREDECESSOR",
+      "rating": "short",
+      "word_count": 636,
+      "sources": [
+        {
+          "path": "proofs/predecessor.md",
+          "line_spans": [
+            [
+              5,
+              103
+            ]
+          ],
+          "sha256": "c5aae1a9a576ced083798ab3fa8255b3a0c8ce375edf2e938e0618753877d734",
+          "word_count": 636
+        }
+      ]
+    },
+    {
+      "result_ref": "ARITHMETIC-COMPARISON",
+      "rating": "long",
+      "word_count": 4600,
+      "sources": [
+        {
+          "path": "proofs/full-choice-arithmetic-conservativity.md",
+          "line_spans": [
+            [
+              9,
+              225
+            ]
+          ],
+          "sha256": "40f276622c90b77509130ab748e99f461c45eace443c1c8dfd5f529e8846d96a",
+          "word_count": 1851
+        },
+        {
+          "path": "source/research/2026-10-22/notes/relational-coding-recursion-20261022.md",
+          "line_spans": [
+            [
+              1180,
+              1236
+            ],
+            [
+              1367,
+              1465
+            ]
+          ],
+          "sha256": "23b59e366767967638ebac31aeacbcba8f046af387ef2d1ea5c9f4cc8bd8fcc9",
+          "word_count": 2749
+        }
+      ]
+    },
+    {
+      "result_ref": "MAX-ARITHMETIC-EQUALITY",
+      "rating": "long",
+      "word_count": 7849,
+      "sources": [
+        {
+          "path": "proofs/full-choice-arithmetic-conservativity.md",
+          "line_spans": [
+            [
+              9,
+              225
+            ]
+          ],
+          "sha256": "40f276622c90b77509130ab748e99f461c45eace443c1c8dfd5f529e8846d96a",
+          "word_count": 1851
+        },
+        {
+          "path": "proofs/max-arithmetic-equality.md",
+          "line_spans": [
+            [
+              31,
+              147
+            ]
+          ],
+          "sha256": "0dfcf26493ed43904100d601b2529f532978cb03785335d2b28fb5230829b78b",
+          "word_count": 2883
+        },
+        {
+          "path": "source/research/2026-10-22/followup/strong-possibility.md",
+          "line_spans": [
+            [
+              422,
+              432
+            ]
+          ],
+          "sha256": "3913a1622b4c73de30e58dd55c92ca10880eac8c5d95633e513b97f0f01ff216",
+          "word_count": 366
+        },
+        {
+          "path": "source/research/2026-10-22/notes/relational-coding-recursion-20261022.md",
+          "line_spans": [
+            [
+              1180,
+              1236
+            ],
+            [
+              1367,
+              1465
+            ]
+          ],
+          "sha256": "23b59e366767967638ebac31aeacbcba8f046af387ef2d1ea5c9f4cc8bd8fcc9",
+          "word_count": 2749
+        }
+      ],
+      "selection_note": "Includes the shared arithmetic comparison identifying T_arith and the true-Pi_1 lower inclusion. This measures the supplied ordinary argument; it does not change its stated status."
+    },
+    {
+      "result_ref": "PROFILE-WORLD-ALGEBRA",
+      "rating": "long",
+      "word_count": 8772,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/structural-algebraic-core.md",
+          "line_spans": [
+            [
+              614,
+              662
+            ]
+          ],
+          "sha256": "50caeb89d0ff620df0da3272244289f79353225f09554ba62bf060cf41096795",
+          "word_count": 703
+        },
+        {
+          "path": "source/research/2026-10-22/notes/structural-world-representation.md",
+          "line_spans": [
+            [
+              5,
+              94
+            ]
+          ],
+          "sha256": "2d880f14d4f65260f3fc7a95d59cae00680f1089b18b9bfef6d94d80240098b7",
+          "word_count": 1241
+        },
+        {
+          "path": "source/research/2026-10-22/notes/world-cardinality-ucp-20261022.md",
+          "line_spans": [
+            [
+              26,
+              161
+            ],
+            [
+              182,
+              324
+            ],
+            [
+              394,
+              469
+            ],
+            [
+              481,
+              517
+            ],
+            [
+              867,
+              936
+            ]
+          ],
+          "sha256": "eb73e0eca4174dabbcb2dac49bcf2eb278aabf2ab9b8a0339079cbee10285faf",
+          "word_count": 6828
+        }
+      ]
+    },
+    {
+      "result_ref": "PROBABILITY",
+      "rating": "long",
+      "word_count": 4289,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/proof-refinements/choice-free-faithful-probability.md",
+          "line_spans": [
+            [
+              5,
+              101
+            ]
+          ],
+          "sha256": "7aab51fc359b0eeb781b1513d00f701c994a550f8f77ea1a55c44b1a0737a5cc",
+          "word_count": 1667
+        },
+        {
+          "path": "source/research/2026-10-22/proof-refinements/choice-free-probability-type-ceiling.md",
+          "line_spans": [
+            [
+              5,
+              88
+            ]
+          ],
+          "sha256": "8bc5c96e7a0845098c8e8e527499ded99c60a1cfe1430be36479712045b48069",
+          "word_count": 1102
+        },
+        {
+          "path": "source/research/2026-10-22/proof-refinements/local-propositional-probability.md",
+          "line_spans": [
+            [
+              5,
+              102
+            ]
+          ],
+          "sha256": "79626565163df8057b4fa0f2d15e02779b2d1ccc79c321810284958abad3ceaa",
+          "word_count": 1520
+        }
+      ]
+    },
+    {
+      "result_ref": "SP-CRITERIA",
+      "rating": "medium",
+      "word_count": 1175,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/lean-formalization/sp-verification/proof-summary.md",
+          "line_spans": [
+            [
+              49,
+              74
+            ]
+          ],
+          "sha256": "f5ac1e4d20669b66b045f0b5fb023d5298116067814dc250c0bf64655bf571e0",
+          "word_count": 207
+        },
+        {
+          "path": "source/research/2026-10-22/notes/reflection-universal-core-20261022.md",
+          "line_spans": [
+            [
+              5,
+              83
+            ]
+          ],
+          "sha256": "c3e27eb28ec21f3ec92c3002b2f0f0931aed2a2bf669f2bae4fb16ec5b212d02",
+          "word_count": 968
+        }
+      ]
+    },
+    {
+      "result_ref": "SP-SIGNATURE-CONFLICT",
+      "rating": "medium",
+      "word_count": 2053,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/audit-signature-to-pure-sp-20261022.md",
+          "line_spans": [
+            [
+              7,
+              80
+            ],
+            [
+              107,
+              128
+            ]
+          ],
+          "sha256": "d0c92cacbdedaa08da0758140f9e81f8c38f2362b01c46f7c3a68bec18305b45",
+          "word_count": 801
+        },
+        {
+          "path": "source/research/2026-10-22/notes/profile-root-construction-20261022.md",
+          "line_spans": [
+            [
+              5,
+              42
+            ]
+          ],
+          "sha256": "2f0e6a737486a06dffcab0011a8fe08e2e3aa05bd249d0cc6f92753ba292724c",
+          "word_count": 902
+        },
+        {
+          "path": "source/research/2026-10-22/notes/reflection-universal-core-20261022.md",
+          "line_spans": [
+            [
+              43,
+              65
+            ]
+          ],
+          "sha256": "c3e27eb28ec21f3ec92c3002b2f0f0931aed2a2bf669f2bae4fb16ec5b212d02",
+          "word_count": 350
+        }
+      ]
+    },
+    {
+      "result_ref": "SIGNATURE-FINITE-BOUNDARY",
+      "rating": "medium",
+      "word_count": 2684,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/audit-signature-to-pure-sp-20261022.md",
+          "line_spans": [
+            [
+              43,
+              79
+            ],
+            [
+              129,
+              160
+            ],
+            [
+              190,
+              242
+            ]
+          ],
+          "sha256": "d0c92cacbdedaa08da0758140f9e81f8c38f2362b01c46f7c3a68bec18305b45",
+          "word_count": 1432
+        },
+        {
+          "path": "source/research/2026-10-22/notes/profile-root-construction-20261022.md",
+          "line_spans": [
+            [
+              5,
+              42
+            ]
+          ],
+          "sha256": "2f0e6a737486a06dffcab0011a8fe08e2e3aa05bd249d0cc6f92753ba292724c",
+          "word_count": 902
+        },
+        {
+          "path": "source/research/2026-10-22/notes/reflection-universal-core-20261022.md",
+          "line_spans": [
+            [
+              43,
+              65
+            ]
+          ],
+          "sha256": "c3e27eb28ec21f3ec92c3002b2f0f0931aed2a2bf669f2bae4fb16ec5b212d02",
+          "word_count": 350
+        }
+      ]
+    },
+    {
+      "result_ref": "SIGNATURE-INFINITE-RESERVOIR",
+      "rating": "short",
+      "word_count": 465,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/audit-signature-to-pure-sp-20261022.md",
+          "line_spans": [
+            [
+              167,
+              189
+            ]
+          ],
+          "sha256": "d0c92cacbdedaa08da0758140f9e81f8c38f2362b01c46f7c3a68bec18305b45",
+          "word_count": 465
+        }
+      ]
+    },
+    {
+      "result_ref": "SP-INDIVIDUAL-CARDINALITY",
+      "rating": "medium",
+      "word_count": 1894,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/audit-signature-to-pure-sp-20261022.md",
+          "line_spans": [
+            [
+              129,
+              160
+            ],
+            [
+              243,
+              259
+            ]
+          ],
+          "sha256": "d0c92cacbdedaa08da0758140f9e81f8c38f2362b01c46f7c3a68bec18305b45",
+          "word_count": 642
+        },
+        {
+          "path": "source/research/2026-10-22/notes/profile-root-construction-20261022.md",
+          "line_spans": [
+            [
+              5,
+              42
+            ]
+          ],
+          "sha256": "2f0e6a737486a06dffcab0011a8fe08e2e3aa05bd249d0cc6f92753ba292724c",
+          "word_count": 902
+        },
+        {
+          "path": "source/research/2026-10-22/notes/reflection-universal-core-20261022.md",
+          "line_spans": [
+            [
+              43,
+              65
+            ]
+          ],
+          "sha256": "c3e27eb28ec21f3ec92c3002b2f0f0931aed2a2bf669f2bae4fb16ec5b212d02",
+          "word_count": 350
+        }
+      ]
+    },
+    {
+      "result_ref": "SP-FINITE-PROFILE-RANK",
+      "rating": "medium",
+      "word_count": 2311,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/profile-root-construction-20261022.md",
+          "line_spans": [
+            [
+              5,
+              42
+            ]
+          ],
+          "sha256": "2f0e6a737486a06dffcab0011a8fe08e2e3aa05bd249d0cc6f92753ba292724c",
+          "word_count": 902
+        },
+        {
+          "path": "source/research/2026-10-22/notes/reflection-universal-core-20261022.md",
+          "line_spans": [
+            [
+              43,
+              65
+            ]
+          ],
+          "sha256": "c3e27eb28ec21f3ec92c3002b2f0f0931aed2a2bf669f2bae4fb16ec5b212d02",
+          "word_count": 350
+        },
+        {
+          "path": "source/research/2026-10-22/notes/sp-finite-profile-rank-20261022.md",
+          "line_spans": [
+            [
+              5,
+              61
+            ]
+          ],
+          "sha256": "46356944435b3f58d9a62cc070d1793c55275f99901988d72d621c9b5c2b0d35",
+          "word_count": 1059
+        }
+      ]
+    },
+    {
+      "result_ref": "SP-BARCAN-FUNCTIONALITY",
+      "rating": "long",
+      "word_count": 3465,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/finite-c5-profile-cells-20261022.md",
+          "line_spans": [
+            [
+              5,
+              93
+            ]
+          ],
+          "sha256": "a95b3bbced64d38a1ad65c418266566ad6fe8b4a929091123e3590a1690001e0",
+          "word_count": 1159
+        },
+        {
+          "path": "source/research/2026-10-22/notes/profile-root-construction-20261022.md",
+          "line_spans": [
+            [
+              5,
+              42
+            ]
+          ],
+          "sha256": "2f0e6a737486a06dffcab0011a8fe08e2e3aa05bd249d0cc6f92753ba292724c",
+          "word_count": 902
+        },
+        {
+          "path": "source/research/2026-10-22/notes/reflection-universal-core-20261022.md",
+          "line_spans": [
+            [
+              43,
+              65
+            ]
+          ],
+          "sha256": "c3e27eb28ec21f3ec92c3002b2f0f0931aed2a2bf669f2bae4fb16ec5b212d02",
+          "word_count": 350
+        },
+        {
+          "path": "source/research/2026-10-22/notes/signature-sp-barcan-20261022.md",
+          "line_spans": [
+            [
+              5,
+              118
+            ]
+          ],
+          "sha256": "c979df7ea63a348cd6d365ad2ad4ef1ea95ee5e18582fa2f39fb11d1fdfeec73",
+          "word_count": 1054
+        }
+      ]
+    },
+    {
+      "result_ref": "SP-ARITHMETIC-REFLECTION",
+      "rating": "medium",
+      "word_count": 1587,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/followup/strong-possibility.md",
+          "line_spans": [
+            [
+              327,
+              354
+            ],
+            [
+              440,
+              446
+            ]
+          ],
+          "sha256": "3913a1622b4c73de30e58dd55c92ca10880eac8c5d95633e513b97f0f01ff216",
+          "word_count": 850
+        },
+        {
+          "path": "source/research/2026-10-22/notes/max-degree.md",
+          "line_spans": [
+            [
+              232,
+              270
+            ]
+          ],
+          "sha256": "5c936de3902ab09dc95916d1e0dc2956601c6103a6d224f8ed432f6268c32ce0",
+          "word_count": 387
+        },
+        {
+          "path": "source/research/2026-10-22/notes/reflection-universal-core-20261022.md",
+          "line_spans": [
+            [
+              43,
+              65
+            ]
+          ],
+          "sha256": "c3e27eb28ec21f3ec92c3002b2f0f0931aed2a2bf669f2bae4fb16ec5b212d02",
+          "word_count": 350
+        }
+      ]
+    },
+    {
+      "result_ref": "NPC-ATOMICITY",
+      "rating": "medium",
+      "word_count": 1146,
+      "sources": [
+        {
+          "path": "source/topics/classicism/writeups/c5-and-atomicity-imply-no-pure-contingency.md",
+          "line_spans": [
+            [
+              26,
+              200
+            ]
+          ],
+          "sha256": "8065ee3ffbe72679c7203c8985f8b0f1cec07daee0125ec0a46c3b4864829116",
+          "word_count": 1146
+        }
+      ],
+      "selection_note": "The selected exposition compresses the invariance argument. Its word count is not a measure of the Lean development or discovery effort."
+    },
+    {
+      "result_ref": "COLOUR-COLLAPSE-SCOPE",
+      "rating": "medium",
+      "word_count": 2995,
+      "sources": [
+        {
+          "path": "proofs/colour-collapse.md",
+          "line_spans": [
+            [
+              5,
+              169
+            ]
+          ],
+          "sha256": "62ef5fa508912920e8aff2d9ee51421511d72d00bafb2fe0a209ed3caffbe0cc",
+          "word_count": 1325
+        },
+        {
+          "path": "source/research/2026-10-22/notes/colour-collapse-entrance.md",
+          "line_spans": [
+            [
+              5,
+              101
+            ]
+          ],
+          "sha256": "89bd83f9718e00dd378cb4c7054dfa782fd483f4e23238b0aea91474b598022b",
+          "word_count": 1670
+        }
+      ]
+    },
+    {
+      "result_ref": "DIAGONAL-CHARACTERS",
+      "rating": "medium",
+      "word_count": 1030,
+      "sources": [
+        {
+          "path": "proofs/diagonal-characters.md",
+          "line_spans": [
+            [
+              5,
+              157
+            ]
+          ],
+          "sha256": "7413d1f49b4996eb555e8919298f514651fef292c93dfa7c7c661609f24f5db4",
+          "word_count": 1030
+        }
+      ]
+    },
+    {
+      "result_ref": "EVALUATOR-MODAL-COMMUTATION",
+      "rating": "short",
+      "word_count": 309,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/gallin-bivalent-evaluator.md",
+          "line_spans": [
+            [
+              5,
+              28
+            ],
+            [
+              132,
+              141
+            ]
+          ],
+          "sha256": "43b9bd748fde8268b270332e8b318006fab05f11518fac04bdb3c81a119e869b",
+          "word_count": 309
+        }
+      ]
+    },
+    {
+      "result_ref": "COEXTENSION-OPERATIONS",
+      "rating": "medium",
+      "word_count": 1118,
+      "sources": [
+        {
+          "path": "proofs/coextension-operations.md",
+          "line_spans": [
+            [
+              5,
+              116
+            ]
+          ],
+          "sha256": "ce2021fe54a8c10ce4c64957ad6dfe58c88b64ebe953039ed5853745c2ea8b54",
+          "word_count": 1118
+        }
+      ]
+    },
+    {
+      "result_ref": "LOGICAL-OBSERVERS",
+      "rating": "long",
+      "word_count": 31522,
+      "sources": [
+        {
+          "path": "proofs/full-identity-observers.md",
+          "line_spans": [
+            [
+              5,
+              108
+            ]
+          ],
+          "sha256": "f7a90e33f44c7eba3b99e87368b761d9c96118bf8836b7c12dfe488591b5682a",
+          "word_count": 715
+        },
+        {
+          "path": "proofs/local-observers.md",
+          "line_spans": [
+            [
+              5,
+              201
+            ]
+          ],
+          "sha256": "069ee00d6fb4535576a65a677983775f298155641973516d5ade636d70746d3e",
+          "word_count": 1465
+        },
+        {
+          "path": "proofs/logical-observers.md",
+          "line_spans": [
+            [
+              5,
+              169
+            ],
+            [
+              180,
+              184
+            ]
+          ],
+          "sha256": "90404a64d39eabdc65a11bfabebcd3be9e5bb262cd8af183ce4b21b7fc5c5aa8",
+          "word_count": 1601
+        },
+        {
+          "path": "proofs/observer-countermodel.md",
+          "line_spans": [
+            [
+              5,
+              195
+            ]
+          ],
+          "sha256": "542569bc00f285c847d506f219f6ae48ed5619c828b5c5a11086cb4de58a3594",
+          "word_count": 1455
+        },
+        {
+          "path": "proofs/observer-models.md",
+          "line_spans": [
+            [
+              5,
+              287
+            ]
+          ],
+          "sha256": "9d36bb143287a300728ca261eca8ed8e59f3667257415c3695a2550941d80de9",
+          "word_count": 2037
+        },
+        {
+          "path": "proofs/operator-representation.md",
+          "line_spans": [
+            [
+              5,
+              222
+            ]
+          ],
+          "sha256": "1b8632b054d00a5b6fce7cc5e2eb7ce59fcb1b159d59c165b600572e4e588cde",
+          "word_count": 1682
+        },
+        {
+          "path": "proofs/logical-observer-hierarchy.md",
+          "line_spans": [
+            [
+              95,
+              457
+            ]
+          ],
+          "sha256": "edc596ac7b08399b53547a23ea17d188aa1ba9bddbb51eb6a3c20b79a0931fad",
+          "word_count": 3598
+        },
+        {
+          "path": "proofs/logical-observer-endpoint-reduction.md",
+          "line_spans": [
+            [
+              5,
+              59
+            ]
+          ],
+          "sha256": "e929be114a48201e67ee808e5095031d35eb79dadc85b14a8d1992cfba59b20d",
+          "word_count": 704
+        },
+        {
+          "path": "proofs/meet-quantifier-separation.md",
+          "line_spans": [
+            [
+              9,
+              234
+            ]
+          ],
+          "sha256": "ae39052285b9b57674953f16658547c70c9154432fd4c237c0de7aba2cd504a1",
+          "word_count": 2237
+        },
+        {
+          "path": "proofs/observer-lattice.md",
+          "line_spans": [
+            [
+              9,
+              313
+            ]
+          ],
+          "sha256": "c73e2c219d5dfd9a59657735988a56bd71a858fc60bbab57ea1c332a36d4faa9",
+          "word_count": 3083
+        },
+        {
+          "path": "proofs/observer-lattice-models.md",
+          "line_spans": [
+            [
+              18,
+              175
+            ]
+          ],
+          "sha256": "73ca682e6fcde36e649982ad442241a39c9e7af227ebdd5dd1a575db596c33ce",
+          "word_count": 1663
+        },
+        {
+          "path": "proofs/modal-selectors-and-quantifier-reduction.md",
+          "line_spans": [
+            [
+              7,
+              170
+            ]
+          ],
+          "sha256": "28b79d3244586249032a0a801c2a3d75d87aefe5f4c9905ae9b37a8b6b98a337",
+          "word_count": 1648
+        },
+        {
+          "path": "proofs/h-observer-space/logical-separation-with-contingent-barcan.md",
+          "sha256": "c9fa069ac04e198c7ae21aa2cb7c4905d29877e6b94e49621513569f7b752381",
+          "line_spans": [
+            [
+              9,
+              141
+            ]
+          ],
+          "word_count": 1583
+        },
+        {
+          "path": "proofs/h-observer-space/necessary-separation-and-atoms.md",
+          "sha256": "1fa440167d82140ecee44fd235d3b481c0e8d2d866fa66f584ae403b23a4037b",
+          "line_spans": [
+            [
+              7,
+              138
+            ]
+          ],
+          "word_count": 1174
+        },
+        {
+          "path": "proofs/h-observer-space/reversible-separation-and-pure-truth.md",
+          "sha256": "5d12bedc5e90b91fcfa6ff6df35c54235f67037e8ba9d22ffceda33a8715b4ef",
+          "line_spans": [
+            [
+              14,
+              144
+            ]
+          ],
+          "word_count": 1307
+        },
+        {
+          "path": "proofs/h-observer-space/finite-block-symmetry-reversible-gap.md",
+          "sha256": "edbfb27be37357d0c661b6d118660c5332606da8210638ffbf6856825b21d3ac",
+          "line_spans": [
+            [
+              18,
+              191
+            ]
+          ],
+          "word_count": 2458
+        },
+        {
+          "path": "proofs/h-observer-space/reversible-quantifier-observers.md",
+          "sha256": "20f52ddf725d823daed53e62320ece22baa9774f20035a8d3342f67e9805acc5",
+          "line_spans": [
+            [
+              7,
+              165
+            ]
+          ],
+          "word_count": 1339
+        },
+        {
+          "path": "proofs/h-observer-space/local-conjugacy-and-reversible-observers.md",
+          "sha256": "cb899ddd57b80377f1ba479a7bb7e21f925624ddbf3842b2e8637ede94fa6ac1",
+          "line_spans": [
+            [
+              9,
+              188
+            ]
+          ],
+          "word_count": 1773
+        }
+      ]
+    },
+    {
+      "result_ref": "ANALYTIC-RIGIDIFICATION",
+      "rating": "short",
+      "word_count": 486,
+      "sources": [
+        {
+          "path": "proofs/analytic-rigidification.md",
+          "line_spans": [
+            [
+              5,
+              62
+            ]
+          ],
+          "sha256": "67ddcf1200dbd8c3709a21d78e5000abfded575e65ebce1a3b5a05acd0b3153f",
+          "word_count": 486
+        }
+      ],
+      "selection_note": "The selected exposition is concise; this rating does not expand the cited background or measure the separate Lean development."
+    },
+    {
+      "result_ref": "FULL-STANDARD-GALLIN",
+      "rating": "long",
+      "word_count": 3902,
+      "sources": [
+        {
+          "path": "proofs/atomic-join-calculus.md",
+          "line_spans": [
+            [
+              5,
+              40
+            ]
+          ],
+          "sha256": "3d8372e9b2a7ff82e80be6c64907375ab62f092946d6624df234762892a9c47b",
+          "word_count": 349
+        },
+        {
+          "path": "proofs/full-gallin.md",
+          "line_spans": [
+            [
+              295,
+              392
+            ]
+          ],
+          "sha256": "5e0a6d3a25276b62757b61a78d55008e479baf996221b754aad8b40d9c7617ad",
+          "word_count": 1094
+        },
+        {
+          "path": "proofs/infinitary-canonical-representation.md",
+          "line_spans": [
+            [
+              5,
+              183
+            ]
+          ],
+          "sha256": "df045c97390493cdebccac9e840cff936de901a65ed70dfcc19035c85a84a315",
+          "word_count": 1218,
+          "original_sha256": "ab6c722e0486ad3e79700a20ec097cd3f6e46a44997e0db6f30f39d1b7cf2805"
+        },
+        {
+          "path": "source/research/2026-10-22/notes/structural-world-representation.md",
+          "line_spans": [
+            [
+              5,
+              94
+            ]
+          ],
+          "sha256": "2d880f14d4f65260f3fc7a95d59cae00680f1089b18b9bfef6d94d80240098b7",
+          "word_count": 1241
+        }
+      ]
+    },
+    {
+      "result_ref": "FORCING-TRANSFER",
+      "rating": "long",
+      "word_count": 5756,
+      "sources": [
+        {
+          "path": "proofs/forcing-reals.md",
+          "line_spans": [
+            [
+              5,
+              489
+            ]
+          ],
+          "sha256": "e0086302ed51f74b6536598941af6fe5963d7f5effe526abb82ac4e04babdfef",
+          "word_count": 3100
+        },
+        {
+          "path": "proofs/forcing-transfer.md",
+          "line_spans": [
+            [
+              5,
+              429
+            ]
+          ],
+          "sha256": "61b0f836847b20329a7c0a38d4dcc16be5fb4d759fad067ec5c35a72fb99c635",
+          "word_count": 2656
+        }
+      ]
+    },
+    {
+      "result_ref": "FINITE-COMPRESSION-SEPARATION",
+      "rating": "long",
+      "word_count": 3131,
+      "sources": [
+        {
+          "path": "proofs/finite-compression.md",
+          "line_spans": [
+            [
+              5,
+              237
+            ]
+          ],
+          "sha256": "2c021ab95cf346bbfc72f5a4b6a29ac58a7c6e7e3e2bf4c3c41eb1daeea08231",
+          "word_count": 3131
+        }
+      ]
+    },
+    {
+      "result_ref": "LAMBDA-FREE-TRANSLATION",
+      "rating": "long",
+      "word_count": 9373,
+      "sources": [
+        {
+          "path": "proofs/bracket-abstraction.md",
+          "line_spans": [
+            [
+              5,
+              80
+            ]
+          ],
+          "sha256": "5709f06ed8a51a08722ce33a3620c7e9eff5a6cefe64ed0bfc085393d61323e6",
+          "word_count": 643
+        },
+        {
+          "path": "proofs/lambda-finite-name-erasure.md",
+          "line_spans": [
+            [
+              5,
+              290
+            ]
+          ],
+          "sha256": "7975dc4c6b1d65e86dec8114438bca5684a4d693aecb2b0ebb994e366e719bb4",
+          "word_count": 2324
+        },
+        {
+          "path": "proofs/lambda-free-reconstruction.md",
+          "line_spans": [
+            [
+              5,
+              438
+            ]
+          ],
+          "sha256": "f5058487fc23e4d0cd45526ff1fbeb4fdfc8740c7b1cd52705f92fc2f040d7ef",
+          "word_count": 3322
+        },
+        {
+          "path": "proofs/lambda-logical-operators.md",
+          "line_spans": [
+            [
+              5,
+              433
+            ]
+          ],
+          "sha256": "a1d875c37a35de61d26184eabfc8b440089b1f4ae4750a5469bc2c637dd71e69",
+          "word_count": 3084
+        }
+      ]
+    },
+    {
+      "result_ref": "BETA-ETA-CONVERSION",
+      "rating": "short",
+      "word_count": 694,
+      "sources": [
+        {
+          "path": "proofs/beta-eta.md",
+          "line_spans": [
+            [
+              5,
+              46
+            ]
+          ],
+          "sha256": "a2032c75775e37999553428a58abc173c2159e8aada28cb1305a8487908b7954",
+          "word_count": 298
+        },
+        {
+          "path": "proofs/beta-reduced-bases.md",
+          "line_spans": [
+            [
+              19,
+              67
+            ],
+            [
+              105,
+              113
+            ]
+          ],
+          "sha256": "cd043b5f0c5911fbe5ff84a7cd2609e6c69ce8ef76a95649c8bc5be60e9a3647",
+          "word_count": 396
+        }
+      ]
+    },
+    {
+      "result_ref": "FINITE-TYPE-PROPAGATION",
+      "rating": "medium",
+      "word_count": 1185,
+      "sources": [
+        {
+          "path": "proofs/finite-type-classification.md",
+          "line_spans": [
+            [
+              5,
+              58
+            ],
+            [
+              73,
+              83
+            ]
+          ],
+          "sha256": "d6b91046a1baf55f4c7469807651a044e0a3193350f0a5562fe5cb8c67307707",
+          "word_count": 460
+        },
+        {
+          "path": "proofs/finite-types.md",
+          "line_spans": [
+            [
+              5,
+              91
+            ]
+          ],
+          "sha256": "714cebfafb433b4360ce599639aa7cd02d2663d8fa83cf83c0fd377e3f6d5174",
+          "word_count": 725
+        }
+      ]
+    },
+    {
+      "result_ref": "CHOICE-COHERENCE",
+      "rating": "long",
+      "word_count": 5090,
+      "sources": [
+        {
+          "path": "proofs/choice-coherence.md",
+          "line_spans": [
+            [
+              13,
+              70
+            ]
+          ],
+          "sha256": "df60031be8be8876d567c546599aa93af797d80ccb83ec940b0cca2e449a7f05",
+          "word_count": 1043
+        },
+        {
+          "path": "source/research/2026-10-22/followup/choice-compatible-history-limits.md",
+          "line_spans": [
+            [
+              5,
+              124
+            ]
+          ],
+          "sha256": "572f4a83d2f74f179f5f77d90b408116c4b2f0cfa8c4b7ae105dcbe1c0d3ef94",
+          "word_count": 1918
+        },
+        {
+          "path": "source/research/2026-10-22/followup/choice-transversal.md",
+          "line_spans": [
+            [
+              93,
+              112
+            ],
+            [
+              151,
+              200
+            ]
+          ],
+          "sha256": "d0ab75c47c9e26d2bc0d6732de71888480054f5a40f57e4f701c174fad3b0404",
+          "word_count": 1004
+        },
+        {
+          "path": "source/research/2026-10-22/notes/quotient-abstraction-lane.md",
+          "line_spans": [
+            [
+              403,
+              436
+            ]
+          ],
+          "sha256": "ff9fae7ff96707767f4b8743489dc813e7376af9c270e860db118df46a8d68e1",
+          "word_count": 473
+        },
+        {
+          "path": "source/research/2026-10-22/notes/rc-alone-fixedpoint-obstruction.md",
+          "line_spans": [
+            [
+              99,
+              142
+            ]
+          ],
+          "sha256": "2b1aa9ab1091ec1e31cb3a41bb39e01a3b0696e7f624cbb7f7bdb2b44977db95",
+          "word_count": 652
+        }
+      ],
+      "selection_note": "Includes the canonical-chain argument, compatible history limits, quotient-compatible Bourbaki-Witt and finite rigidification."
+    },
+    {
+      "result_ref": "FULL-IDENTITY-OBSERVERS",
+      "rating": "long",
+      "word_count": 6455,
+      "sources": [
+        {
+          "path": "proofs/atomic-observers.md",
+          "line_spans": [
+            [
+              5,
+              95
+            ]
+          ],
+          "sha256": "079233da6de61a5250258460772d8b98876c5c42c286565377c4cbdc1488b8e7",
+          "word_count": 629
+        },
+        {
+          "path": "proofs/full-identity-observers.md",
+          "line_spans": [
+            [
+              5,
+              108
+            ]
+          ],
+          "sha256": "f7a90e33f44c7eba3b99e87368b761d9c96118bf8836b7c12dfe488591b5682a",
+          "word_count": 715
+        },
+        {
+          "path": "proofs/observer-countermodel.md",
+          "line_spans": [
+            [
+              5,
+              195
+            ]
+          ],
+          "sha256": "542569bc00f285c847d506f219f6ae48ed5619c828b5c5a11086cb4de58a3594",
+          "word_count": 1455
+        },
+        {
+          "path": "proofs/operator-representation.md",
+          "line_spans": [
+            [
+              5,
+              222
+            ]
+          ],
+          "sha256": "1b8632b054d00a5b6fce7cc5e2eb7ce59fcb1b159d59c165b600572e4e588cde",
+          "word_count": 1682
+        },
+        {
+          "path": "proofs/ordered-observers.md",
+          "line_spans": [
+            [
+              5,
+              237
+            ]
+          ],
+          "sha256": "69f4e3fb9b1dd036aeacd71587bfc710ea4df814b8ee61bc0bd327510b890f66",
+          "word_count": 1734
+        },
+        {
+          "path": "proofs/observer-lattice.md",
+          "line_spans": [
+            [
+              198,
+              224
+            ]
+          ],
+          "sha256": "c73e2c219d5dfd9a59657735988a56bd71a858fc60bbab57ea1c332a36d4faa9",
+          "word_count": 240
+        }
+      ],
+      "selection_note": "Includes atomic observers, the reverse Atomicity argument, stabilizer representation and the ordered-symmetry separation."
+    },
+    {
+      "result_ref": "PURE-SP-BOUNDED-IMAGE",
+      "rating": "medium",
+      "word_count": 1857,
+      "sources": [
+        {
+          "path": "proofs/pure-sp-bounded-image.md",
+          "line_spans": [
+            [
+              5,
+              158
+            ]
+          ],
+          "sha256": "02649037010edf4c398f8d8e24b994c9282756ca774556295ac709f85465f4c4",
+          "word_count": 1075
+        },
+        {
+          "path": "proofs/pure-sp-omitted-cut.md",
+          "line_spans": [
+            [
+              89,
+              151
+            ]
+          ],
+          "sha256": "c9acf0fb0cf57046f097bf90a0e6e298951fb5d3e053c86f4b694027cecbc581",
+          "word_count": 416
+        },
+        {
+          "path": "source/research/2026-10-22/followup/strong-possibility.md",
+          "line_spans": [
+            [
+              422,
+              432
+            ]
+          ],
+          "sha256": "3913a1622b4c73de30e58dd55c92ca10880eac8c5d95633e513b97f0f01ff216",
+          "word_count": 366
+        }
+      ]
+    },
+    {
+      "result_ref": "SIGNATURE-SP-SURVIVAL",
+      "rating": "long",
+      "word_count": 6123,
+      "sources": [
+        {
+          "path": "proofs/signature-sp-derivative.md",
+          "line_spans": [
+            [
+              60,
+              218
+            ]
+          ],
+          "sha256": "e72dabe447cb430673469c4ae3e30803afceaab9a0da845506ca9e9303994461",
+          "word_count": 1329
+        },
+        {
+          "path": "proofs/signature-sp-effective.md",
+          "line_spans": [
+            [
+              5,
+              399
+            ]
+          ],
+          "sha256": "0a8a48bfb1b59b9a1c1594f554edbfd513a67b219b5fe7d0b580b4bd7a8c6457",
+          "word_count": 2497
+        },
+        {
+          "path": "proofs/signature-sp-first-stage.md",
+          "line_spans": [
+            [
+              5,
+              220
+            ]
+          ],
+          "sha256": "a939d216c9bf918c33800daecf5289a8d2e4b5aba9c11582a0517297882b2f6a",
+          "word_count": 1008
+        },
+        {
+          "path": "source/research/2026-10-22/notes/profile-root-construction-20261022.md",
+          "line_spans": [
+            [
+              5,
+              42
+            ]
+          ],
+          "sha256": "2f0e6a737486a06dffcab0011a8fe08e2e3aa05bd249d0cc6f92753ba292724c",
+          "word_count": 902
+        },
+        {
+          "path": "source/research/2026-10-22/notes/reflection-universal-core-20261022.md",
+          "line_spans": [
+            [
+              5,
+              41
+            ]
+          ],
+          "sha256": "c3e27eb28ec21f3ec92c3002b2f0f0931aed2a2bf669f2bae4fb16ec5b212d02",
+          "word_count": 387
+        }
+      ],
+      "selection_note": "Includes first-stage survival, the common term algebra, numeral canonicity and the conditional effective boundary. No existence of a survivor is inferred."
+    },
+    {
+      "result_ref": "INFINITARY-RESOURCES",
+      "rating": "long",
+      "word_count": 4650,
+      "sources": [
+        {
+          "path": "proofs/infinitary-resources.md",
+          "line_spans": [
+            [
+              5,
+              409
+            ]
+          ],
+          "sha256": "35ccb96c97e5cb07515acfcde1146988fba64931b1a83a35b1039cc1c34ad7b5",
+          "word_count": 2846
+        },
+        {
+          "path": "source/research/2026-10-22/notes/quotient-abstraction-lane.md",
+          "line_spans": [
+            [
+              253,
+              264
+            ],
+            [
+              289,
+              349
+            ]
+          ],
+          "sha256": "ff9fae7ff96707767f4b8743489dc813e7376af9c270e860db118df46a8d68e1",
+          "word_count": 1804
+        }
+      ]
+    },
+    {
+      "result_ref": "NOMINAL-ORBITS",
+      "rating": "medium",
+      "word_count": 1091,
+      "sources": [
+        {
+          "path": "proofs/nominal-orbit-classification.md",
+          "line_spans": [
+            [
+              5,
+              157
+            ]
+          ],
+          "sha256": "07e2a8d201b5e127806c41c8584e8021c0f5fb50b33ca9f97e94630acd01a943",
+          "word_count": 1091
+        }
+      ]
+    },
+    {
+      "result_ref": "CH-COALESCED",
+      "rating": "medium",
+      "word_count": 2614,
+      "sources": [
+        {
+          "path": "proofs/coalesced-ch.md",
+          "line_spans": [
+            [
+              28,
+              69
+            ]
+          ],
+          "sha256": "563f2e7b68873591b4c279f4df67b4456f949b08021794689e2e337507f2e3e0",
+          "word_count": 806
+        },
+        {
+          "path": "proofs/opposite-ch-components.md",
+          "line_spans": [
+            [
+              14,
+              264
+            ]
+          ],
+          "sha256": "c4b74598b6d0d3ec192387fdfe58a961ba13f8428d321c3a3fa067a53d0ff0ee",
+          "word_count": 1808
+        }
+      ],
+      "selection_note": "Includes the detailed opposite-CH component existence and truth-correspondence proof. The shorter earlier component sketch and selected-ordinal alternative are not counted again."
+    },
+    {
+      "result_ref": "MAX-CH",
+      "rating": "medium",
+      "word_count": 1927,
+      "sources": [
+        {
+          "path": "proofs/coalesced-ch.md",
+          "line_spans": [
+            [
+              70,
+              79
+            ]
+          ],
+          "sha256": "563f2e7b68873591b4c279f4df67b4456f949b08021794689e2e337507f2e3e0",
+          "word_count": 119
+        },
+        {
+          "path": "proofs/opposite-ch-components.md",
+          "line_spans": [
+            [
+              14,
+              264
+            ]
+          ],
+          "sha256": "c4b74598b6d0d3ec192387fdfe58a961ba13f8428d321c3a3fa067a53d0ff0ee",
+          "word_count": 1808
+        }
+      ],
+      "selection_note": "Includes the detailed opposite-CH component existence and truth-correspondence proof. The shorter earlier component sketch and selected-ordinal alternative are not counted again."
+    },
+    {
+      "result_ref": "INFINITARY-COMPREHENSION",
+      "rating": "long",
+      "word_count": 8194,
+      "sources": [
+        {
+          "path": "proofs/infinitary-canonical-representation.md",
+          "line_spans": [
+            [
+              5,
+              183
+            ]
+          ],
+          "sha256": "df045c97390493cdebccac9e840cff936de901a65ed70dfcc19035c85a84a315",
+          "word_count": 1218,
+          "original_sha256": "ab6c722e0486ad3e79700a20ec097cd3f6e46a44997e0db6f30f39d1b7cf2805"
+        },
+        {
+          "path": "proofs/infinitary-comprehension.md",
+          "line_spans": [
+            [
+              20,
+              378
+            ]
+          ],
+          "sha256": "26f8bb64807499d5a88ea7c364f2e736694d24ed8df36e9ba9c55a88a02125a2",
+          "word_count": 2413
+        },
+        {
+          "path": "proofs/lambda-free-reconstruction.md",
+          "line_spans": [
+            [
+              5,
+              438
+            ]
+          ],
+          "sha256": "f5058487fc23e4d0cd45526ff1fbeb4fdfc8740c7b1cd52705f92fc2f040d7ef",
+          "word_count": 3322
+        },
+        {
+          "path": "source/research/2026-10-22/notes/structural-world-representation.md",
+          "line_spans": [
+            [
+              5,
+              94
+            ]
+          ],
+          "sha256": "2d880f14d4f65260f3fc7a95d59cae00680f1089b18b9bfef6d94d80240098b7",
+          "word_count": 1241
+        }
+      ]
+    },
+    {
+      "result_ref": "COMPUTABILITY-COMPARISON",
+      "rating": "long",
+      "word_count": 13702,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/max-degree.md",
+          "line_spans": [
+            [
+              5,
+              119
+            ],
+            [
+              150,
+              337
+            ]
+          ],
+          "sha256": "5c936de3902ab09dc95916d1e0dc2956601c6103a6d224f8ed432f6268c32ce0",
+          "word_count": 4733
+        },
+        {
+          "path": "source/research/2026-10-22/notes/positive-effective.md",
+          "line_spans": [
+            [
+              5,
+              188
+            ],
+            [
+              289,
+              521
+            ]
+          ],
+          "sha256": "533dd141193c45af8af9bbadf31b62c18aaa190e1188fab4c4ceecdf74e02d3f",
+          "word_count": 7102
+        },
+        {
+          "path": "source/research/2026-10-22/notes/strong-possibility-degree.md",
+          "line_spans": [
+            [
+              5,
+              164
+            ]
+          ],
+          "sha256": "350087e8251de660d046296b4199a21289766fcbb40ee8cc4b8df9cb9574cf5d",
+          "word_count": 1867
+        }
+      ]
+    },
+    {
+      "result_ref": "EXACT-MODEL-DEGREES",
+      "rating": "long",
+      "word_count": 5509,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/exact-completion-model-spectra-20261022.md",
+          "line_spans": [
+            [
+              5,
+              135
+            ]
+          ],
+          "sha256": "ca1c1de340394039dde706c5c7137d558feab3b68e6eae40c61568300b0bb260",
+          "word_count": 2297
+        },
+        {
+          "path": "source/research/2026-10-22/notes/max-degree.md",
+          "line_spans": [
+            [
+              150,
+              231
+            ]
+          ],
+          "sha256": "5c936de3902ab09dc95916d1e0dc2956601c6103a6d224f8ed432f6268c32ce0",
+          "word_count": 1421
+        },
+        {
+          "path": "source/research/2026-10-22/notes/positive-effective.md",
+          "line_spans": [
+            [
+              435,
+              521
+            ]
+          ],
+          "sha256": "533dd141193c45af8af9bbadf31b62c18aaa190e1188fab4c4ceecdf74e02d3f",
+          "word_count": 1791
+        }
+      ]
+    },
+    {
+      "result_ref": "STANDARD-NUMBER-MODELS",
+      "rating": "long",
+      "word_count": 6474,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/max-degree.md",
+          "line_spans": [
+            [
+              232,
+              270
+            ],
+            [
+              344,
+              405
+            ]
+          ],
+          "sha256": "5c936de3902ab09dc95916d1e0dc2956601c6103a6d224f8ed432f6268c32ce0",
+          "word_count": 1290
+        },
+        {
+          "path": "source/research/2026-10-22/notes/positive-effective.md",
+          "line_spans": [
+            [
+              578,
+              828
+            ]
+          ],
+          "sha256": "533dd141193c45af8af9bbadf31b62c18aaa190e1188fab4c4ceecdf74e02d3f",
+          "word_count": 5184
+        }
+      ]
+    },
+    {
+      "result_ref": "COMPLETION-SPACES",
+      "rating": "long",
+      "word_count": 7030,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/effective-refinements.md",
+          "line_spans": [
+            [
+              230,
+              275
+            ]
+          ],
+          "sha256": "9300bc8c4d5c4c29c18b48025c7d0f3885fd4f6b53a310ccc6b1038264f46feb",
+          "word_count": 1088
+        },
+        {
+          "path": "source/research/2026-10-22/notes/gallin-comparison.md",
+          "line_spans": [
+            [
+              386,
+              443
+            ]
+          ],
+          "sha256": "fb4e83456299f5352fdb21bc3d556cf7640a53ad6e1f8be3844d926ce0b07b93",
+          "word_count": 1403
+        },
+        {
+          "path": "source/research/2026-10-22/notes/max-degree.md",
+          "line_spans": [
+            [
+              150,
+              231
+            ]
+          ],
+          "sha256": "5c936de3902ab09dc95916d1e0dc2956601c6103a6d224f8ed432f6268c32ce0",
+          "word_count": 1421
+        },
+        {
+          "path": "source/research/2026-10-22/notes/positive-effective.md",
+          "line_spans": [
+            [
+              435,
+              521
+            ]
+          ],
+          "sha256": "533dd141193c45af8af9bbadf31b62c18aaa190e1188fab4c4ceecdf74e02d3f",
+          "word_count": 1791
+        },
+        {
+          "path": "source/research/2026-10-22/notes/theory-space-comparison.md",
+          "line_spans": [
+            [
+              5,
+              81
+            ],
+            [
+              119,
+              132
+            ]
+          ],
+          "sha256": "15ddb38d615e9edda920006473f52207fc12d3ad9c23602fbdc4639f3070ba9e",
+          "word_count": 1327
+        }
+      ]
+    },
+    {
+      "result_ref": "UNIFORM-COMPLETE-EVALUATORS",
+      "rating": "long",
+      "word_count": 4683,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/structural-algebraic-core.md",
+          "line_spans": [
+            [
+              5,
+              20
+            ],
+            [
+              22,
+              73
+            ],
+            [
+              92,
+              151
+            ],
+            [
+              247,
+              299
+            ],
+            [
+              1342,
+              1384
+            ]
+          ],
+          "sha256": "50caeb89d0ff620df0da3272244289f79353225f09554ba62bf060cf41096795",
+          "word_count": 3442
+        },
+        {
+          "path": "source/research/2026-10-22/notes/structural-world-representation.md",
+          "line_spans": [
+            [
+              5,
+              94
+            ]
+          ],
+          "sha256": "2d880f14d4f65260f3fc7a95d59cae00680f1089b18b9bfef6d94d80240098b7",
+          "word_count": 1241
+        }
+      ]
+    },
+    {
+      "result_ref": "C5-STRONG-RETRACTIONS",
+      "rating": "medium",
+      "word_count": 1080,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/choice-uniformization.md",
+          "line_spans": [
+            [
+              39,
+              57
+            ],
+            [
+              164,
+              178
+            ],
+            [
+              189,
+              223
+            ]
+          ],
+          "sha256": "dc789edc59e4f169f47c99f06c6c44a9880939ac6527ef376894c7941f71e87a",
+          "word_count": 1080
+        }
+      ]
+    },
+    {
+      "result_ref": "FORCING-POSSIBILISM",
+      "rating": "medium",
+      "word_count": 1673,
+      "sources": [
+        {
+          "path": "proofs/forcing-possibilism.md",
+          "line_spans": [
+            [
+              5,
+              69
+            ],
+            [
+              82,
+              89
+            ]
+          ],
+          "sha256": "e44a2091625bb82c1162f5cb8a942d84e205380270339584a7b9eaf130ba2896",
+          "word_count": 1673
+        }
+      ]
+    },
+    {
+      "result_ref": "INFINITY-SCHEMA-SEPARATION",
+      "rating": "short",
+      "word_count": 651,
+      "sources": [
+        {
+          "path": "proofs/forcing-possibilism.md",
+          "line_spans": [
+            [
+              16,
+              33
+            ],
+            [
+              70,
+              81
+            ]
+          ],
+          "sha256": "e44a2091625bb82c1162f5cb8a942d84e205380270339584a7b9eaf130ba2896",
+          "word_count": 651
+        }
+      ]
+    },
+    {
+      "result_ref": "FIXED-POINT-ENTRANCE",
+      "rating": "medium",
+      "word_count": 1771,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/fixed-point-entrance-cone.md",
+          "line_spans": [
+            [
+              5,
+              76
+            ]
+          ],
+          "sha256": "02e3203d7a615d4f50dbaa27deef9f8a878f7f09ccdfc58ab98a48cb62ecfa7a",
+          "word_count": 1425
+        },
+        {
+          "path": "source/topics/classicism/models/symmetric-qualitative-links.yaml",
+          "line_spans": [
+            [
+              172,
+              192
+            ]
+          ],
+          "sha256": "4955f1491f28e73c2945d2b57daa65d0941b8e639a481369666ff0c2997ced7a",
+          "word_count": 225
+        },
+        {
+          "path": "source/topics/classicism/arguments/tame-rigidity-factorizable.yaml",
+          "line_spans": [
+            [
+              8,
+              15
+            ]
+          ],
+          "sha256": "96c4cbb2e4b5bdc612c3fcb46ce847e393c839ba6bd519e47ef46d6d89253109",
+          "word_count": 121
+        }
+      ]
+    },
+    {
+      "result_ref": "H-OBSERVER-SPACE",
+      "rating": "long",
+      "word_count": 41381,
+      "sources": [
+        {
+          "path": "proofs/h-observer-space/finite-affine-separation.md",
+          "line_spans": [
+            [
+              5,
+              152
+            ]
+          ],
+          "sha256": "82dc2d7d5b4b52aa0e14dfb866cda2c4c5f079fec3e1e145c7fb2bd0814fdec8",
+          "word_count": 1449
+        },
+        {
+          "path": "proofs/h-observer-space/fork-without-binary-families.md",
+          "line_spans": [
+            [
+              5,
+              93
+            ]
+          ],
+          "sha256": "47513929283870a7e9e05a0a5040dcabcf9cf32399c1844d5875b61906b5bebd",
+          "word_count": 979
+        },
+        {
+          "path": "proofs/h-observer-space/identity-collapse.md",
+          "line_spans": [
+            [
+              7,
+              265
+            ]
+          ],
+          "sha256": "24176755f3a173eeb58fefc5d7cee84907c316e00fce828d3ca336f55c041f6a",
+          "word_count": 1938
+        },
+        {
+          "path": "proofs/h-observer-space/local-tiers-and-models.md",
+          "line_spans": [
+            [
+              9,
+              192
+            ]
+          ],
+          "sha256": "2d358b8432f10783e73cab551f05a0747d7a3daace9a1c0e0c376d1f97baef68",
+          "word_count": 1915
+        },
+        {
+          "path": "proofs/h-observer-space/observer-restrictions.md",
+          "line_spans": [
+            [
+              7,
+              262
+            ]
+          ],
+          "sha256": "6f481c88b13dc3470584885e417a00ce34630559b44ba04c3074975c4011edaa",
+          "word_count": 2024
+        },
+        {
+          "path": "proofs/h-observer-space/primitive-package-classification.md",
+          "line_spans": [
+            [
+              5,
+              85
+            ]
+          ],
+          "sha256": "b4f8e29e40f17e69d62323fc075944b05d5bb5ca49d7dd41a89abe67252079df",
+          "word_count": 933
+        },
+        {
+          "path": "proofs/h-observer-space/quantifier-generated-lattices.md",
+          "line_spans": [
+            [
+              5,
+              167
+            ]
+          ],
+          "sha256": "c8b6258c4cdb8f60c561abf63dff35a1db31e8f5a095ed27b93e4397d643a99f",
+          "word_count": 1628
+        },
+        {
+          "path": "proofs/h-observer-space/relational-clone-model.md",
+          "line_spans": [
+            [
+              7,
+              165
+            ]
+          ],
+          "sha256": "5cb736a5a930bdf0bf9e2896b6692e51d9314cf322ff23ab1c71eaf26bc91f0b",
+          "word_count": 1401
+        },
+        {
+          "path": "proofs/h-observer-space/representation-under-identity-bivalence.md",
+          "line_spans": [
+            [
+              7,
+              247
+            ]
+          ],
+          "sha256": "d15149b5dc960a93160826eea917630c890d0d399fa8ef58831a68af08028dc8",
+          "word_count": 1829
+        },
+        {
+          "path": "proofs/h-observer-space/reversible-meet-atomicity.md",
+          "line_spans": [
+            [
+              7,
+              228
+            ]
+          ],
+          "sha256": "94751a26fec524f18b12243724eeef536a43e3b6b99f11e1097095f6b39f00eb",
+          "word_count": 1770
+        },
+        {
+          "path": "proofs/h-observer-space/term-closure-and-affine-branches.md",
+          "line_spans": [
+            [
+              5,
+              212
+            ]
+          ],
+          "sha256": "ae98479bcaf357e2b24539f86fc3825d8cd42f8e4815125a3cf15d61bb245996",
+          "word_count": 1858
+        },
+        {
+          "path": "proofs/h-observer-space/truth-profiles-and-connective-reducts.md",
+          "line_spans": [
+            [
+              5,
+              265
+            ]
+          ],
+          "sha256": "87e4387f5d1ee67b4861261fd4f4ead69cb8d1e52c2ef6ab303b539c27a80416",
+          "word_count": 2608
+        },
+        {
+          "path": "proofs/h-observer-space/two-orders-model.md",
+          "line_spans": [
+            [
+              7,
+              81
+            ]
+          ],
+          "sha256": "d2efa7ded21b874a8973a7065040047be22c81eba63ff07878034225a047a40e",
+          "word_count": 903
+        },
+        {
+          "path": "proofs/h-observer-space/typed-separation-and-classicism.md",
+          "line_spans": [
+            [
+              12,
+              212
+            ]
+          ],
+          "sha256": "67d079e3d33c6c476627bf6bf0851db1f114cd45efd190c5db89295e6714df4f",
+          "word_count": 2451
+        },
+        {
+          "path": "proofs/h-observer-space/reversible-meet-characterization.md",
+          "sha256": "0504be610da1f3611d209fc4c2e40bcf1ca8d8bf070e9ae94124cd3a692a54df",
+          "line_spans": [
+            [
+              9,
+              277
+            ]
+          ],
+          "word_count": 2134
+        },
+        {
+          "path": "proofs/h-observer-space/finite-semilattice-normalization.md",
+          "sha256": "daedb9d6a84d1e8667bb1ac4780eb63b9d353c1362f9d6262785f0e94ddccb16",
+          "line_spans": [
+            [
+              5,
+              182
+            ]
+          ],
+          "word_count": 1616
+        },
+        {
+          "path": "proofs/h-observer-space/composition-closed-characterization.md",
+          "sha256": "92de5b7202d0070659d0b82181f46055836f473275902b5255ce4bb2b3984a6c",
+          "line_spans": [
+            [
+              7,
+              136
+            ]
+          ],
+          "word_count": 1116
+        },
+        {
+          "path": "proofs/h-observer-space/finite-image-material-normalization.md",
+          "sha256": "00be389bc5f7ac28e6d2e39afe08c4953553570091b96f126d6aae46f7d8b3fe",
+          "line_spans": [
+            [
+              7,
+              155
+            ]
+          ],
+          "word_count": 1386
+        },
+        {
+          "path": "proofs/h-observer-space/logical-separation-with-contingent-barcan.md",
+          "sha256": "c9fa069ac04e198c7ae21aa2cb7c4905d29877e6b94e49621513569f7b752381",
+          "line_spans": [
+            [
+              9,
+              141
+            ]
+          ],
+          "word_count": 1583
+        },
+        {
+          "path": "proofs/h-observer-space/necessary-separation-and-atoms.md",
+          "sha256": "1fa440167d82140ecee44fd235d3b481c0e8d2d866fa66f584ae403b23a4037b",
+          "line_spans": [
+            [
+              7,
+              138
+            ]
+          ],
+          "word_count": 1174
+        },
+        {
+          "path": "proofs/h-observer-space/reversible-separation-and-pure-truth.md",
+          "sha256": "5d12bedc5e90b91fcfa6ff6df35c54235f67037e8ba9d22ffceda33a8715b4ef",
+          "line_spans": [
+            [
+              14,
+              144
+            ]
+          ],
+          "word_count": 1307
+        },
+        {
+          "path": "proofs/h-observer-space/finite-block-symmetry-reversible-gap.md",
+          "sha256": "edbfb27be37357d0c661b6d118660c5332606da8210638ffbf6856825b21d3ac",
+          "line_spans": [
+            [
+              18,
+              191
+            ]
+          ],
+          "word_count": 2458
+        },
+        {
+          "path": "proofs/h-observer-space/necessity-of-distinctness-representation.md",
+          "sha256": "0579a545d512527f1acebdb6d0dd3f9781a4273ab2fe058c3da57a5157a4ede4",
+          "line_spans": [
+            [
+              7,
+              209
+            ]
+          ],
+          "word_count": 1809
+        },
+        {
+          "path": "proofs/h-observer-space/reversible-quantifier-observers.md",
+          "sha256": "20f52ddf725d823daed53e62320ece22baa9774f20035a8d3342f67e9805acc5",
+          "line_spans": [
+            [
+              7,
+              165
+            ]
+          ],
+          "word_count": 1339
+        },
+        {
+          "path": "proofs/h-observer-space/local-conjugacy-and-reversible-observers.md",
+          "sha256": "cb899ddd57b80377f1ba479a7bb7e21f925624ddbf3842b2e8637ede94fa6ac1",
+          "line_spans": [
+            [
+              9,
+              188
+            ]
+          ],
+          "word_count": 1773
+        }
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "group_ref": "max-atomicity",
+      "result_refs": [
+        "MAX-ATOMICITY"
+      ],
+      "rating": "long",
+      "word_count": 5069,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/lean-formalization/max-atomicity-canonical-code-proof.md",
+          "line_spans": [
+            [
+              23,
+              608
+            ]
+          ],
+          "sha256": "5948415de363d3f609d40646ba4442f7f1d65fbb4c0ff790e29a15c4f9133fbe",
+          "word_count": 5069
+        }
+      ]
+    },
+    {
+      "group_ref": "choice-completeness",
+      "result_refs": [
+        "CHOICE-COMPLETENESS"
+      ],
+      "rating": "long",
+      "word_count": 4051,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/followup/choice-completeness-actuality.md",
+          "line_spans": [
+            [
+              5,
+              191
+            ]
+          ],
+          "sha256": "e748639725bbf007f35bffae51c9296c01ed848f6d45a3ff84656424a9247203",
+          "word_count": 2361
+        },
+        {
+          "path": "source/research/2026-10-22/notes/relational-choice-boolean-completeness-transversal-proof.md",
+          "line_spans": [
+            [
+              5,
+              132
+            ]
+          ],
+          "sha256": "6c74fd1204484084b43bdba8ff9a2db06db710783373546e5f9f66d7eb6963e6",
+          "word_count": 1690
+        }
+      ]
+    },
+    {
+      "group_ref": "sp-signature-conflict",
+      "result_refs": [
+        "SP-SIGNATURE-CONFLICT"
+      ],
+      "rating": "medium",
+      "word_count": 2053,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/audit-signature-to-pure-sp-20261022.md",
+          "line_spans": [
+            [
+              7,
+              80
+            ],
+            [
+              107,
+              128
+            ]
+          ],
+          "sha256": "d0c92cacbdedaa08da0758140f9e81f8c38f2362b01c46f7c3a68bec18305b45",
+          "word_count": 801
+        },
+        {
+          "path": "source/research/2026-10-22/notes/profile-root-construction-20261022.md",
+          "line_spans": [
+            [
+              5,
+              42
+            ]
+          ],
+          "sha256": "2f0e6a737486a06dffcab0011a8fe08e2e3aa05bd249d0cc6f92753ba292724c",
+          "word_count": 902
+        },
+        {
+          "path": "source/research/2026-10-22/notes/reflection-universal-core-20261022.md",
+          "line_spans": [
+            [
+              43,
+              65
+            ]
+          ],
+          "sha256": "c3e27eb28ec21f3ec92c3002b2f0f0931aed2a2bf669f2bae4fb16ec5b212d02",
+          "word_count": 350
+        }
+      ]
+    },
+    {
+      "group_ref": "arithmetic-comparison",
+      "result_refs": [
+        "ARITHMETIC-COMPARISON"
+      ],
+      "rating": "long",
+      "word_count": 4600,
+      "sources": [
+        {
+          "path": "proofs/full-choice-arithmetic-conservativity.md",
+          "line_spans": [
+            [
+              9,
+              225
+            ]
+          ],
+          "sha256": "40f276622c90b77509130ab748e99f461c45eace443c1c8dfd5f529e8846d96a",
+          "word_count": 1851
+        },
+        {
+          "path": "source/research/2026-10-22/notes/relational-coding-recursion-20261022.md",
+          "line_spans": [
+            [
+              1180,
+              1236
+            ],
+            [
+              1367,
+              1465
+            ]
+          ],
+          "sha256": "23b59e366767967638ebac31aeacbcba8f046af387ef2d1ea5c9f4cc8bd8fcc9",
+          "word_count": 2749
+        }
+      ]
+    },
+    {
+      "group_ref": "sp-arithmetic-reflection",
+      "result_refs": [
+        "SP-ARITHMETIC-REFLECTION"
+      ],
+      "rating": "medium",
+      "word_count": 1587,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/followup/strong-possibility.md",
+          "line_spans": [
+            [
+              327,
+              354
+            ],
+            [
+              440,
+              446
+            ]
+          ],
+          "sha256": "3913a1622b4c73de30e58dd55c92ca10880eac8c5d95633e513b97f0f01ff216",
+          "word_count": 850
+        },
+        {
+          "path": "source/research/2026-10-22/notes/max-degree.md",
+          "line_spans": [
+            [
+              232,
+              270
+            ]
+          ],
+          "sha256": "5c936de3902ab09dc95916d1e0dc2956601c6103a6d224f8ed432f6268c32ce0",
+          "word_count": 387
+        },
+        {
+          "path": "source/research/2026-10-22/notes/reflection-universal-core-20261022.md",
+          "line_spans": [
+            [
+              43,
+              65
+            ]
+          ],
+          "sha256": "c3e27eb28ec21f3ec92c3002b2f0f0931aed2a2bf669f2bae4fb16ec5b212d02",
+          "word_count": 350
+        }
+      ]
+    },
+    {
+      "group_ref": "lambda-free-translation",
+      "result_refs": [
+        "LAMBDA-FREE-TRANSLATION",
+        "BETA-ETA-CONVERSION"
+      ],
+      "rating": "long",
+      "word_count": 10067,
+      "sources": [
+        {
+          "path": "proofs/beta-eta.md",
+          "line_spans": [
+            [
+              5,
+              46
+            ]
+          ],
+          "sha256": "a2032c75775e37999553428a58abc173c2159e8aada28cb1305a8487908b7954",
+          "word_count": 298
+        },
+        {
+          "path": "proofs/beta-reduced-bases.md",
+          "line_spans": [
+            [
+              19,
+              67
+            ],
+            [
+              105,
+              113
+            ]
+          ],
+          "sha256": "cd043b5f0c5911fbe5ff84a7cd2609e6c69ce8ef76a95649c8bc5be60e9a3647",
+          "word_count": 396
+        },
+        {
+          "path": "proofs/bracket-abstraction.md",
+          "line_spans": [
+            [
+              5,
+              80
+            ]
+          ],
+          "sha256": "5709f06ed8a51a08722ce33a3620c7e9eff5a6cefe64ed0bfc085393d61323e6",
+          "word_count": 643
+        },
+        {
+          "path": "proofs/lambda-finite-name-erasure.md",
+          "line_spans": [
+            [
+              5,
+              290
+            ]
+          ],
+          "sha256": "7975dc4c6b1d65e86dec8114438bca5684a4d693aecb2b0ebb994e366e719bb4",
+          "word_count": 2324
+        },
+        {
+          "path": "proofs/lambda-free-reconstruction.md",
+          "line_spans": [
+            [
+              5,
+              438
+            ]
+          ],
+          "sha256": "f5058487fc23e4d0cd45526ff1fbeb4fdfc8740c7b1cd52705f92fc2f040d7ef",
+          "word_count": 3322
+        },
+        {
+          "path": "proofs/lambda-logical-operators.md",
+          "line_spans": [
+            [
+              5,
+              433
+            ]
+          ],
+          "sha256": "a1d875c37a35de61d26184eabfc8b440089b1f4ae4750a5469bc2c637dd71e69",
+          "word_count": 3084
+        }
+      ]
+    },
+    {
+      "group_ref": "logical-observers",
+      "result_refs": [
+        "LOGICAL-OBSERVERS"
+      ],
+      "rating": "long",
+      "word_count": 31522,
+      "sources": [
+        {
+          "path": "proofs/full-identity-observers.md",
+          "line_spans": [
+            [
+              5,
+              108
+            ]
+          ],
+          "sha256": "f7a90e33f44c7eba3b99e87368b761d9c96118bf8836b7c12dfe488591b5682a",
+          "word_count": 715
+        },
+        {
+          "path": "proofs/local-observers.md",
+          "line_spans": [
+            [
+              5,
+              201
+            ]
+          ],
+          "sha256": "069ee00d6fb4535576a65a677983775f298155641973516d5ade636d70746d3e",
+          "word_count": 1465
+        },
+        {
+          "path": "proofs/logical-observers.md",
+          "line_spans": [
+            [
+              5,
+              169
+            ],
+            [
+              180,
+              184
+            ]
+          ],
+          "sha256": "90404a64d39eabdc65a11bfabebcd3be9e5bb262cd8af183ce4b21b7fc5c5aa8",
+          "word_count": 1601
+        },
+        {
+          "path": "proofs/observer-countermodel.md",
+          "line_spans": [
+            [
+              5,
+              195
+            ]
+          ],
+          "sha256": "542569bc00f285c847d506f219f6ae48ed5619c828b5c5a11086cb4de58a3594",
+          "word_count": 1455
+        },
+        {
+          "path": "proofs/observer-models.md",
+          "line_spans": [
+            [
+              5,
+              287
+            ]
+          ],
+          "sha256": "9d36bb143287a300728ca261eca8ed8e59f3667257415c3695a2550941d80de9",
+          "word_count": 2037
+        },
+        {
+          "path": "proofs/operator-representation.md",
+          "line_spans": [
+            [
+              5,
+              222
+            ]
+          ],
+          "sha256": "1b8632b054d00a5b6fce7cc5e2eb7ce59fcb1b159d59c165b600572e4e588cde",
+          "word_count": 1682
+        },
+        {
+          "path": "proofs/logical-observer-hierarchy.md",
+          "line_spans": [
+            [
+              95,
+              457
+            ]
+          ],
+          "sha256": "edc596ac7b08399b53547a23ea17d188aa1ba9bddbb51eb6a3c20b79a0931fad",
+          "word_count": 3598
+        },
+        {
+          "path": "proofs/logical-observer-endpoint-reduction.md",
+          "line_spans": [
+            [
+              5,
+              59
+            ]
+          ],
+          "sha256": "e929be114a48201e67ee808e5095031d35eb79dadc85b14a8d1992cfba59b20d",
+          "word_count": 704
+        },
+        {
+          "path": "proofs/meet-quantifier-separation.md",
+          "line_spans": [
+            [
+              9,
+              234
+            ]
+          ],
+          "sha256": "ae39052285b9b57674953f16658547c70c9154432fd4c237c0de7aba2cd504a1",
+          "word_count": 2237
+        },
+        {
+          "path": "proofs/observer-lattice.md",
+          "line_spans": [
+            [
+              9,
+              313
+            ]
+          ],
+          "sha256": "c73e2c219d5dfd9a59657735988a56bd71a858fc60bbab57ea1c332a36d4faa9",
+          "word_count": 3083
+        },
+        {
+          "path": "proofs/observer-lattice-models.md",
+          "line_spans": [
+            [
+              18,
+              175
+            ]
+          ],
+          "sha256": "73ca682e6fcde36e649982ad442241a39c9e7af227ebdd5dd1a575db596c33ce",
+          "word_count": 1663
+        },
+        {
+          "path": "proofs/modal-selectors-and-quantifier-reduction.md",
+          "line_spans": [
+            [
+              7,
+              170
+            ]
+          ],
+          "sha256": "28b79d3244586249032a0a801c2a3d75d87aefe5f4c9905ae9b37a8b6b98a337",
+          "word_count": 1648
+        },
+        {
+          "path": "proofs/h-observer-space/logical-separation-with-contingent-barcan.md",
+          "sha256": "c9fa069ac04e198c7ae21aa2cb7c4905d29877e6b94e49621513569f7b752381",
+          "line_spans": [
+            [
+              9,
+              141
+            ]
+          ],
+          "word_count": 1583
+        },
+        {
+          "path": "proofs/h-observer-space/necessary-separation-and-atoms.md",
+          "sha256": "1fa440167d82140ecee44fd235d3b481c0e8d2d866fa66f584ae403b23a4037b",
+          "line_spans": [
+            [
+              7,
+              138
+            ]
+          ],
+          "word_count": 1174
+        },
+        {
+          "path": "proofs/h-observer-space/reversible-separation-and-pure-truth.md",
+          "sha256": "5d12bedc5e90b91fcfa6ff6df35c54235f67037e8ba9d22ffceda33a8715b4ef",
+          "line_spans": [
+            [
+              14,
+              144
+            ]
+          ],
+          "word_count": 1307
+        },
+        {
+          "path": "proofs/h-observer-space/finite-block-symmetry-reversible-gap.md",
+          "sha256": "edbfb27be37357d0c661b6d118660c5332606da8210638ffbf6856825b21d3ac",
+          "line_spans": [
+            [
+              18,
+              191
+            ]
+          ],
+          "word_count": 2458
+        },
+        {
+          "path": "proofs/h-observer-space/reversible-quantifier-observers.md",
+          "sha256": "20f52ddf725d823daed53e62320ece22baa9774f20035a8d3342f67e9805acc5",
+          "line_spans": [
+            [
+              7,
+              165
+            ]
+          ],
+          "word_count": 1339
+        },
+        {
+          "path": "proofs/h-observer-space/local-conjugacy-and-reversible-observers.md",
+          "sha256": "cb899ddd57b80377f1ba479a7bb7e21f925624ddbf3842b2e8637ede94fa6ac1",
+          "line_spans": [
+            [
+              9,
+              188
+            ]
+          ],
+          "word_count": 1773
+        }
+      ]
+    },
+    {
+      "group_ref": "infinitary-comprehension",
+      "result_refs": [
+        "INFINITARY-COMPREHENSION"
+      ],
+      "rating": "long",
+      "word_count": 8194,
+      "sources": [
+        {
+          "path": "proofs/infinitary-canonical-representation.md",
+          "line_spans": [
+            [
+              5,
+              183
+            ]
+          ],
+          "sha256": "df045c97390493cdebccac9e840cff936de901a65ed70dfcc19035c85a84a315",
+          "word_count": 1218,
+          "original_sha256": "ab6c722e0486ad3e79700a20ec097cd3f6e46a44997e0db6f30f39d1b7cf2805"
+        },
+        {
+          "path": "proofs/infinitary-comprehension.md",
+          "line_spans": [
+            [
+              20,
+              378
+            ]
+          ],
+          "sha256": "26f8bb64807499d5a88ea7c364f2e736694d24ed8df36e9ba9c55a88a02125a2",
+          "word_count": 2413
+        },
+        {
+          "path": "proofs/lambda-free-reconstruction.md",
+          "line_spans": [
+            [
+              5,
+              438
+            ]
+          ],
+          "sha256": "f5058487fc23e4d0cd45526ff1fbeb4fdfc8740c7b1cd52705f92fc2f040d7ef",
+          "word_count": 3322
+        },
+        {
+          "path": "source/research/2026-10-22/notes/structural-world-representation.md",
+          "line_spans": [
+            [
+              5,
+              94
+            ]
+          ],
+          "sha256": "2d880f14d4f65260f3fc7a95d59cae00680f1089b18b9bfef6d94d80240098b7",
+          "word_count": 1241
+        }
+      ]
+    },
+    {
+      "group_ref": "sections-retractions",
+      "result_refs": [
+        "SECTIONS-RETRACTIONS",
+        "BOOLEAN-RETRACTIONS-CHOICE",
+        "C5-STRONG-RETRACTIONS"
+      ],
+      "rating": "long",
+      "word_count": 8534,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/choice-uniformization.md",
+          "line_spans": [
+            [
+              39,
+              57
+            ],
+            [
+              164,
+              178
+            ],
+            [
+              189,
+              223
+            ],
+            [
+              287,
+              352
+            ]
+          ],
+          "sha256": "dc789edc59e4f169f47c99f06c6c44a9880939ac6527ef376894c7941f71e87a",
+          "word_count": 1804
+        },
+        {
+          "path": "source/research/2026-10-22/notes/functional-choice-by-sections.md",
+          "line_spans": [
+            [
+              5,
+              103
+            ]
+          ],
+          "sha256": "d73d8ff08e2d4d306a7e7ea87b8fce8f91750ce38dc01d6dbdb6f051ba283526",
+          "word_count": 1006
+        },
+        {
+          "path": "source/research/2026-10-22/notes/structural-algebraic-core.md",
+          "line_spans": [
+            [
+              22,
+              73
+            ],
+            [
+              92,
+              151
+            ],
+            [
+              247,
+              299
+            ],
+            [
+              481,
+              524
+            ],
+            [
+              1176,
+              1190
+            ]
+          ],
+          "sha256": "50caeb89d0ff620df0da3272244289f79353225f09554ba62bf060cf41096795",
+          "word_count": 3337
+        },
+        {
+          "path": "source/research/2026-10-22/notes/structural-world-representation.md",
+          "line_spans": [
+            [
+              5,
+              94
+            ]
+          ],
+          "sha256": "2d880f14d4f65260f3fc7a95d59cae00680f1089b18b9bfef6d94d80240098b7",
+          "word_count": 1241
+        },
+        {
+          "path": "source/topics/classicism/writeups/c5-and-atomicity-imply-no-pure-contingency.md",
+          "line_spans": [
+            [
+              26,
+              200
+            ]
+          ],
+          "sha256": "8065ee3ffbe72679c7203c8985f8b0f1cec07daee0125ec0a46c3b4864829116",
+          "word_count": 1146
+        }
+      ]
+    },
+    {
+      "group_ref": "countable-boolean-finiteness",
+      "result_refs": [
+        "COUNTABLE-BOOLEAN-FINITENESS"
+      ],
+      "rating": "medium",
+      "word_count": 2512,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/frege-infinity-20261022-1726.md",
+          "line_spans": [
+            [
+              939,
+              960
+            ],
+            [
+              984,
+              1014
+            ],
+            [
+              1040,
+              1044
+            ]
+          ],
+          "sha256": "795dcb0ecb0982aa0aa77398422446d23cbc5cf110be0c06a00d8d9afabcd8c6",
+          "word_count": 809
+        },
+        {
+          "path": "source/research/2026-10-22/notes/quotient-abstraction-lane.md",
+          "line_spans": [
+            [
+              620,
+              636
+            ],
+            [
+              649,
+              655
+            ],
+            [
+              717,
+              786
+            ]
+          ],
+          "sha256": "ff9fae7ff96707767f4b8743489dc813e7376af9c270e860db118df46a8d68e1",
+          "word_count": 1703
+        }
+      ]
+    },
+    {
+      "group_ref": "logical-necessity-separation",
+      "result_refs": [
+        "LOGICAL-NECESSITY-SEPARATION"
+      ],
+      "rating": "medium",
+      "word_count": 1900,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/followup/central-map.md",
+          "line_spans": [
+            [
+              5,
+              111
+            ],
+            [
+              131,
+              138
+            ]
+          ],
+          "sha256": "85da2ac943a0a5e30436bbd3d7a5821526a99d088d2d0884fe4134e51b870b80",
+          "word_count": 1900
+        }
+      ]
+    },
+    {
+      "group_ref": "choice-no-finite-basis",
+      "result_refs": [
+        "CHOICE-NO-FINITE-BASIS"
+      ],
+      "rating": "long",
+      "word_count": 3741,
+      "sources": [
+        {
+          "path": "proofs/boolean-finite-choice.md",
+          "line_spans": [
+            [
+              5,
+              527
+            ]
+          ],
+          "sha256": "db140de9d37fc02377cc762e7c60d512347232b69f87ba9510dc22dfc19740e3",
+          "word_count": 3741
+        }
+      ]
+    },
+    {
+      "group_ref": "rigidity-nd-bc",
+      "result_refs": [
+        "RIGIDITY-ND-BC",
+        "OLDNEW-SEPARATION"
+      ],
+      "rating": "medium",
+      "word_count": 2918,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/nd-inextensible-comprehension-implies-weak-power.md",
+          "line_spans": [
+            [
+              5,
+              90
+            ],
+            [
+              107,
+              111
+            ]
+          ],
+          "sha256": "f3c330db9bea2e417b0f2f68da676ac4ab397fb88a0fe2a9c20039cdc68ea7f7",
+          "word_count": 1024
+        },
+        {
+          "path": "source/research/2026-10-22/notes/old-new-boolean-completeness-and-rigidity-separation.md",
+          "line_spans": [
+            [
+              5,
+              114
+            ]
+          ],
+          "sha256": "3c44935bd275708d721750a3a5dfe6939b871ef9b224a9c1db7e10ab2b50ee09",
+          "word_count": 1894
+        }
+      ]
+    },
+    {
+      "group_ref": "modal-propagation",
+      "result_refs": [
+        "MODAL-PROPAGATION"
+      ],
+      "rating": "medium",
+      "word_count": 2286,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/followup/modal-propagation.md",
+          "line_spans": [
+            [
+              5,
+              133
+            ]
+          ],
+          "sha256": "307d66f361a2a9367ab4e81432a27311b1094de630f064bbf4e543cd557e54e2",
+          "word_count": 1158
+        },
+        {
+          "path": "source/research/2026-10-22/strong-leibniz-rigid-bottom-cut.md",
+          "line_spans": [
+            [
+              5,
+              65
+            ],
+            [
+              93,
+              115
+            ]
+          ],
+          "sha256": "229e937971a1fabde6794ff6468d88e8b3faa1fb6532eaf4d9e643e3f5a42fbf",
+          "word_count": 1128
+        }
+      ]
+    },
+    {
+      "group_ref": "rigidity-classifications",
+      "result_refs": [
+        "RIGIDITY-CLASSIFICATIONS",
+        "FINITE-COMPRESSION-SEPARATION"
+      ],
+      "rating": "long",
+      "word_count": 4937,
+      "sources": [
+        {
+          "path": "proofs/finite-compression.md",
+          "line_spans": [
+            [
+              5,
+              237
+            ]
+          ],
+          "sha256": "2c021ab95cf346bbfc72f5a4b6a29ac58a7c6e7e3e2bf4c3c41eb1daeea08231",
+          "word_count": 3131
+        },
+        {
+          "path": "source/research/2026-10-22/notes/maximalism-modal.md",
+          "line_spans": [
+            [
+              360,
+              382
+            ],
+            [
+              396,
+              414
+            ],
+            [
+              430,
+              457
+            ],
+            [
+              521,
+              552
+            ]
+          ],
+          "sha256": "dca3a358650b69d4c664a8d62fcebb5b22658026d59537a0fdb630dde360554e",
+          "word_count": 1806
+        }
+      ]
+    },
+    {
+      "group_ref": "max-arithmetic-equality",
+      "result_refs": [
+        "MAX-ARITHMETIC-EQUALITY"
+      ],
+      "rating": "long",
+      "word_count": 7849,
+      "sources": [
+        {
+          "path": "proofs/full-choice-arithmetic-conservativity.md",
+          "line_spans": [
+            [
+              9,
+              225
+            ]
+          ],
+          "sha256": "40f276622c90b77509130ab748e99f461c45eace443c1c8dfd5f529e8846d96a",
+          "word_count": 1851
+        },
+        {
+          "path": "proofs/max-arithmetic-equality.md",
+          "line_spans": [
+            [
+              31,
+              147
+            ]
+          ],
+          "sha256": "0dfcf26493ed43904100d601b2529f532978cb03785335d2b28fb5230829b78b",
+          "word_count": 2883
+        },
+        {
+          "path": "source/research/2026-10-22/followup/strong-possibility.md",
+          "line_spans": [
+            [
+              422,
+              432
+            ]
+          ],
+          "sha256": "3913a1622b4c73de30e58dd55c92ca10880eac8c5d95633e513b97f0f01ff216",
+          "word_count": 366
+        },
+        {
+          "path": "source/research/2026-10-22/notes/relational-coding-recursion-20261022.md",
+          "line_spans": [
+            [
+              1180,
+              1236
+            ],
+            [
+              1367,
+              1465
+            ]
+          ],
+          "sha256": "23b59e366767967638ebac31aeacbcba8f046af387ef2d1ea5c9f4cc8bd8fcc9",
+          "word_count": 2749
+        }
+      ]
+    },
+    {
+      "group_ref": "max-predecessor",
+      "result_refs": [
+        "MAX-PREDECESSOR"
+      ],
+      "rating": "short",
+      "word_count": 636,
+      "sources": [
+        {
+          "path": "proofs/predecessor.md",
+          "line_spans": [
+            [
+              5,
+              103
+            ]
+          ],
+          "sha256": "c5aae1a9a576ced083798ab3fa8255b3a0c8ce375edf2e938e0618753877d734",
+          "word_count": 636
+        }
+      ]
+    },
+    {
+      "group_ref": "analytic-rigidification",
+      "result_refs": [
+        "ANALYTIC-RIGIDIFICATION"
+      ],
+      "rating": "short",
+      "word_count": 486,
+      "sources": [
+        {
+          "path": "proofs/analytic-rigidification.md",
+          "line_spans": [
+            [
+              5,
+              62
+            ]
+          ],
+          "sha256": "67ddcf1200dbd8c3709a21d78e5000abfded575e65ebce1a3b5a05acd0b3153f",
+          "word_count": 486
+        }
+      ]
+    },
+    {
+      "group_ref": "finite-type-classification",
+      "result_refs": [
+        "FINITE-TYPE-PROPAGATION"
+      ],
+      "rating": "medium",
+      "word_count": 1185,
+      "sources": [
+        {
+          "path": "proofs/finite-type-classification.md",
+          "line_spans": [
+            [
+              5,
+              58
+            ],
+            [
+              73,
+              83
+            ]
+          ],
+          "sha256": "d6b91046a1baf55f4c7469807651a044e0a3193350f0a5562fe5cb8c67307707",
+          "word_count": 460
+        },
+        {
+          "path": "proofs/finite-types.md",
+          "line_spans": [
+            [
+              5,
+              91
+            ]
+          ],
+          "sha256": "714cebfafb433b4360ce599639aa7cd02d2663d8fa83cf83c0fd377e3f6d5174",
+          "word_count": 725
+        }
+      ]
+    },
+    {
+      "group_ref": "infinity-schema-separation",
+      "result_refs": [
+        "INFINITY-SCHEMA-SEPARATION"
+      ],
+      "rating": "short",
+      "word_count": 651,
+      "sources": [
+        {
+          "path": "proofs/forcing-possibilism.md",
+          "line_spans": [
+            [
+              16,
+              33
+            ],
+            [
+              70,
+              81
+            ]
+          ],
+          "sha256": "e44a2091625bb82c1162f5cb8a942d84e205380270339584a7b9eaf130ba2896",
+          "word_count": 651
+        }
+      ]
+    },
+    {
+      "group_ref": "coalesced-ch",
+      "result_refs": [
+        "CH-COALESCED"
+      ],
+      "rating": "medium",
+      "word_count": 2614,
+      "sources": [
+        {
+          "path": "proofs/coalesced-ch.md",
+          "line_spans": [
+            [
+              28,
+              69
+            ]
+          ],
+          "sha256": "563f2e7b68873591b4c279f4df67b4456f949b08021794689e2e337507f2e3e0",
+          "word_count": 806
+        },
+        {
+          "path": "proofs/opposite-ch-components.md",
+          "line_spans": [
+            [
+              14,
+              264
+            ]
+          ],
+          "sha256": "c4b74598b6d0d3ec192387fdfe58a961ba13f8428d321c3a3fa067a53d0ff0ee",
+          "word_count": 1808
+        }
+      ]
+    },
+    {
+      "rating": "medium",
+      "word_count": 1927,
+      "sources": [
+        {
+          "path": "proofs/coalesced-ch.md",
+          "line_spans": [
+            [
+              70,
+              79
+            ]
+          ],
+          "sha256": "563f2e7b68873591b4c279f4df67b4456f949b08021794689e2e337507f2e3e0",
+          "word_count": 119
+        },
+        {
+          "path": "proofs/opposite-ch-components.md",
+          "line_spans": [
+            [
+              14,
+              264
+            ]
+          ],
+          "sha256": "c4b74598b6d0d3ec192387fdfe58a961ba13f8428d321c3a3fa067a53d0ff0ee",
+          "word_count": 1808
+        }
+      ],
+      "selection_note": "Includes the detailed opposite-CH component existence and truth-correspondence proof. The shorter earlier component sketch and selected-ordinal alternative are not counted again.",
+      "group_ref": "max-ch",
+      "result_refs": [
+        "MAX-CH"
+      ]
+    },
+    {
+      "group_ref": "forcing-transfer",
+      "result_refs": [
+        "FORCING-TRANSFER"
+      ],
+      "rating": "long",
+      "word_count": 5756,
+      "sources": [
+        {
+          "path": "proofs/forcing-reals.md",
+          "line_spans": [
+            [
+              5,
+              489
+            ]
+          ],
+          "sha256": "e0086302ed51f74b6536598941af6fe5963d7f5effe526abb82ac4e04babdfef",
+          "word_count": 3100
+        },
+        {
+          "path": "proofs/forcing-transfer.md",
+          "line_spans": [
+            [
+              5,
+              429
+            ]
+          ],
+          "sha256": "61b0f836847b20329a7c0a38d4dcc16be5fb4d759fad067ec5c35a72fb99c635",
+          "word_count": 2656
+        }
+      ]
+    },
+    {
+      "group_ref": "forcing-possibilism",
+      "result_refs": [
+        "FORCING-POSSIBILISM"
+      ],
+      "rating": "medium",
+      "word_count": 1673,
+      "sources": [
+        {
+          "path": "proofs/forcing-possibilism.md",
+          "line_spans": [
+            [
+              5,
+              69
+            ],
+            [
+              82,
+              89
+            ]
+          ],
+          "sha256": "e44a2091625bb82c1162f5cb8a942d84e205380270339584a7b9eaf130ba2896",
+          "word_count": 1673
+        }
+      ]
+    },
+    {
+      "group_ref": "evaluators-cores",
+      "result_refs": [
+        "EVALUATORS-CORES"
+      ],
+      "rating": "long",
+      "word_count": 5834,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/actual-truth-evaluator-ladder.md",
+          "line_spans": [
+            [
+              5,
+              34
+            ],
+            [
+              40,
+              73
+            ]
+          ],
+          "sha256": "b5d5e732527d7462d48636928f4ae3af8119e700c804f14d2e2c97460ebc2afe",
+          "word_count": 840
+        },
+        {
+          "path": "source/research/2026-10-22/notes/actuality-world-slice-core.md",
+          "line_spans": [
+            [
+              5,
+              144
+            ]
+          ],
+          "sha256": "8e9b51f6130c1f8472b44149448c0ca44ce85415435c0efac3f1f7354265a99f",
+          "word_count": 2380
+        },
+        {
+          "path": "source/research/2026-10-22/notes/gallin-bivalent-evaluator.md",
+          "line_spans": [
+            [
+              5,
+              78
+            ],
+            [
+              109,
+              131
+            ]
+          ],
+          "sha256": "43b9bd748fde8268b270332e8b318006fab05f11518fac04bdb3c81a119e869b",
+          "word_count": 1419
+        },
+        {
+          "path": "source/research/2026-10-22/proof-refinements/canonical-actual-evaluator.md",
+          "line_spans": [
+            [
+              5,
+              101
+            ]
+          ],
+          "sha256": "b57f2b7827a6dc3b4610d11424d0aaaf421855f56b9000e6c23775475fa48443",
+          "word_count": 1195
+        }
+      ]
+    },
+    {
+      "group_ref": "uniform-complete-evaluators",
+      "result_refs": [
+        "UNIFORM-COMPLETE-EVALUATORS"
+      ],
+      "rating": "long",
+      "word_count": 4683,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/structural-algebraic-core.md",
+          "line_spans": [
+            [
+              5,
+              20
+            ],
+            [
+              22,
+              73
+            ],
+            [
+              92,
+              151
+            ],
+            [
+              247,
+              299
+            ],
+            [
+              1342,
+              1384
+            ]
+          ],
+          "sha256": "50caeb89d0ff620df0da3272244289f79353225f09554ba62bf060cf41096795",
+          "word_count": 3442
+        },
+        {
+          "path": "source/research/2026-10-22/notes/structural-world-representation.md",
+          "line_spans": [
+            [
+              5,
+              94
+            ]
+          ],
+          "sha256": "2d880f14d4f65260f3fc7a95d59cae00680f1089b18b9bfef6d94d80240098b7",
+          "word_count": 1241
+        }
+      ]
+    },
+    {
+      "group_ref": "barcan-observers",
+      "result_refs": [
+        "DIAGONAL-CHARACTERS"
+      ],
+      "rating": "medium",
+      "word_count": 1030,
+      "sources": [
+        {
+          "path": "proofs/diagonal-characters.md",
+          "line_spans": [
+            [
+              5,
+              157
+            ]
+          ],
+          "sha256": "7413d1f49b4996eb555e8919298f514651fef292c93dfa7c7c661609f24f5db4",
+          "word_count": 1030
+        }
+      ]
+    },
+    {
+      "group_ref": "full-identity-observers",
+      "result_refs": [
+        "FULL-IDENTITY-OBSERVERS"
+      ],
+      "rating": "long",
+      "word_count": 6455,
+      "sources": [
+        {
+          "path": "proofs/atomic-observers.md",
+          "line_spans": [
+            [
+              5,
+              95
+            ]
+          ],
+          "sha256": "079233da6de61a5250258460772d8b98876c5c42c286565377c4cbdc1488b8e7",
+          "word_count": 629
+        },
+        {
+          "path": "proofs/full-identity-observers.md",
+          "line_spans": [
+            [
+              5,
+              108
+            ]
+          ],
+          "sha256": "f7a90e33f44c7eba3b99e87368b761d9c96118bf8836b7c12dfe488591b5682a",
+          "word_count": 715
+        },
+        {
+          "path": "proofs/observer-countermodel.md",
+          "line_spans": [
+            [
+              5,
+              195
+            ]
+          ],
+          "sha256": "542569bc00f285c847d506f219f6ae48ed5619c828b5c5a11086cb4de58a3594",
+          "word_count": 1455
+        },
+        {
+          "path": "proofs/operator-representation.md",
+          "line_spans": [
+            [
+              5,
+              222
+            ]
+          ],
+          "sha256": "1b8632b054d00a5b6fce7cc5e2eb7ce59fcb1b159d59c165b600572e4e588cde",
+          "word_count": 1682
+        },
+        {
+          "path": "proofs/ordered-observers.md",
+          "line_spans": [
+            [
+              5,
+              237
+            ]
+          ],
+          "sha256": "69f4e3fb9b1dd036aeacd71587bfc710ea4df814b8ee61bc0bd327510b890f66",
+          "word_count": 1734
+        },
+        {
+          "path": "proofs/observer-lattice.md",
+          "line_spans": [
+            [
+              198,
+              224
+            ]
+          ],
+          "sha256": "c73e2c219d5dfd9a59657735988a56bd71a858fc60bbab57ea1c332a36d4faa9",
+          "word_count": 240
+        }
+      ]
+    },
+    {
+      "group_ref": "profile-world-algebra",
+      "result_refs": [
+        "PROFILE-WORLD-ALGEBRA"
+      ],
+      "rating": "long",
+      "word_count": 8772,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/structural-algebraic-core.md",
+          "line_spans": [
+            [
+              614,
+              662
+            ]
+          ],
+          "sha256": "50caeb89d0ff620df0da3272244289f79353225f09554ba62bf060cf41096795",
+          "word_count": 703
+        },
+        {
+          "path": "source/research/2026-10-22/notes/structural-world-representation.md",
+          "line_spans": [
+            [
+              5,
+              94
+            ]
+          ],
+          "sha256": "2d880f14d4f65260f3fc7a95d59cae00680f1089b18b9bfef6d94d80240098b7",
+          "word_count": 1241
+        },
+        {
+          "path": "source/research/2026-10-22/notes/world-cardinality-ucp-20261022.md",
+          "line_spans": [
+            [
+              26,
+              161
+            ],
+            [
+              182,
+              324
+            ],
+            [
+              394,
+              469
+            ],
+            [
+              481,
+              517
+            ],
+            [
+              867,
+              936
+            ]
+          ],
+          "sha256": "eb73e0eca4174dabbcb2dac49bcf2eb278aabf2ab9b8a0339079cbee10285faf",
+          "word_count": 6828
+        }
+      ]
+    },
+    {
+      "group_ref": "nominal-orbits",
+      "result_refs": [
+        "NOMINAL-ORBITS"
+      ],
+      "rating": "medium",
+      "word_count": 1091,
+      "sources": [
+        {
+          "path": "proofs/nominal-orbit-classification.md",
+          "line_spans": [
+            [
+              5,
+              157
+            ]
+          ],
+          "sha256": "07e2a8d201b5e127806c41c8584e8021c0f5fb50b33ca9f97e94630acd01a943",
+          "word_count": 1091
+        }
+      ]
+    },
+    {
+      "group_ref": "probability",
+      "result_refs": [
+        "PROBABILITY"
+      ],
+      "rating": "long",
+      "word_count": 4289,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/proof-refinements/choice-free-faithful-probability.md",
+          "line_spans": [
+            [
+              5,
+              101
+            ]
+          ],
+          "sha256": "7aab51fc359b0eeb781b1513d00f701c994a550f8f77ea1a55c44b1a0737a5cc",
+          "word_count": 1667
+        },
+        {
+          "path": "source/research/2026-10-22/proof-refinements/choice-free-probability-type-ceiling.md",
+          "line_spans": [
+            [
+              5,
+              88
+            ]
+          ],
+          "sha256": "8bc5c96e7a0845098c8e8e527499ded99c60a1cfe1430be36479712045b48069",
+          "word_count": 1102
+        },
+        {
+          "path": "source/research/2026-10-22/proof-refinements/local-propositional-probability.md",
+          "line_spans": [
+            [
+              5,
+              102
+            ]
+          ],
+          "sha256": "79626565163df8057b4fa0f2d15e02779b2d1ccc79c321810284958abad3ceaa",
+          "word_count": 1520
+        }
+      ]
+    },
+    {
+      "group_ref": "full-standard-gallin",
+      "result_refs": [
+        "FULL-STANDARD-GALLIN"
+      ],
+      "rating": "long",
+      "word_count": 3902,
+      "sources": [
+        {
+          "path": "proofs/atomic-join-calculus.md",
+          "line_spans": [
+            [
+              5,
+              40
+            ]
+          ],
+          "sha256": "3d8372e9b2a7ff82e80be6c64907375ab62f092946d6624df234762892a9c47b",
+          "word_count": 349
+        },
+        {
+          "path": "proofs/full-gallin.md",
+          "line_spans": [
+            [
+              295,
+              392
+            ]
+          ],
+          "sha256": "5e0a6d3a25276b62757b61a78d55008e479baf996221b754aad8b40d9c7617ad",
+          "word_count": 1094
+        },
+        {
+          "path": "proofs/infinitary-canonical-representation.md",
+          "line_spans": [
+            [
+              5,
+              183
+            ]
+          ],
+          "sha256": "df045c97390493cdebccac9e840cff936de901a65ed70dfcc19035c85a84a315",
+          "word_count": 1218,
+          "original_sha256": "ab6c722e0486ad3e79700a20ec097cd3f6e46a44997e0db6f30f39d1b7cf2805"
+        },
+        {
+          "path": "source/research/2026-10-22/notes/structural-world-representation.md",
+          "line_spans": [
+            [
+              5,
+              94
+            ]
+          ],
+          "sha256": "2d880f14d4f65260f3fc7a95d59cae00680f1089b18b9bfef6d94d80240098b7",
+          "word_count": 1241
+        }
+      ]
+    },
+    {
+      "group_ref": "computability-comparison",
+      "result_refs": [
+        "COMPUTABILITY-COMPARISON"
+      ],
+      "rating": "long",
+      "word_count": 13702,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/max-degree.md",
+          "line_spans": [
+            [
+              5,
+              119
+            ],
+            [
+              150,
+              337
+            ]
+          ],
+          "sha256": "5c936de3902ab09dc95916d1e0dc2956601c6103a6d224f8ed432f6268c32ce0",
+          "word_count": 4733
+        },
+        {
+          "path": "source/research/2026-10-22/notes/positive-effective.md",
+          "line_spans": [
+            [
+              5,
+              188
+            ],
+            [
+              289,
+              521
+            ]
+          ],
+          "sha256": "533dd141193c45af8af9bbadf31b62c18aaa190e1188fab4c4ceecdf74e02d3f",
+          "word_count": 7102
+        },
+        {
+          "path": "source/research/2026-10-22/notes/strong-possibility-degree.md",
+          "line_spans": [
+            [
+              5,
+              164
+            ]
+          ],
+          "sha256": "350087e8251de660d046296b4199a21289766fcbb40ee8cc4b8df9cb9574cf5d",
+          "word_count": 1867
+        }
+      ]
+    },
+    {
+      "group_ref": "exact-model-degrees",
+      "result_refs": [
+        "EXACT-MODEL-DEGREES"
+      ],
+      "rating": "long",
+      "word_count": 5509,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/exact-completion-model-spectra-20261022.md",
+          "line_spans": [
+            [
+              5,
+              135
+            ]
+          ],
+          "sha256": "ca1c1de340394039dde706c5c7137d558feab3b68e6eae40c61568300b0bb260",
+          "word_count": 2297
+        },
+        {
+          "path": "source/research/2026-10-22/notes/max-degree.md",
+          "line_spans": [
+            [
+              150,
+              231
+            ]
+          ],
+          "sha256": "5c936de3902ab09dc95916d1e0dc2956601c6103a6d224f8ed432f6268c32ce0",
+          "word_count": 1421
+        },
+        {
+          "path": "source/research/2026-10-22/notes/positive-effective.md",
+          "line_spans": [
+            [
+              435,
+              521
+            ]
+          ],
+          "sha256": "533dd141193c45af8af9bbadf31b62c18aaa190e1188fab4c4ceecdf74e02d3f",
+          "word_count": 1791
+        }
+      ]
+    },
+    {
+      "group_ref": "standard-number-models",
+      "result_refs": [
+        "STANDARD-NUMBER-MODELS"
+      ],
+      "rating": "long",
+      "word_count": 6474,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/max-degree.md",
+          "line_spans": [
+            [
+              232,
+              270
+            ],
+            [
+              344,
+              405
+            ]
+          ],
+          "sha256": "5c936de3902ab09dc95916d1e0dc2956601c6103a6d224f8ed432f6268c32ce0",
+          "word_count": 1290
+        },
+        {
+          "path": "source/research/2026-10-22/notes/positive-effective.md",
+          "line_spans": [
+            [
+              578,
+              828
+            ]
+          ],
+          "sha256": "533dd141193c45af8af9bbadf31b62c18aaa190e1188fab4c4ceecdf74e02d3f",
+          "word_count": 5184
+        }
+      ]
+    },
+    {
+      "group_ref": "completion-spaces",
+      "result_refs": [
+        "COMPLETION-SPACES"
+      ],
+      "rating": "long",
+      "word_count": 7030,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/effective-refinements.md",
+          "line_spans": [
+            [
+              230,
+              275
+            ]
+          ],
+          "sha256": "9300bc8c4d5c4c29c18b48025c7d0f3885fd4f6b53a310ccc6b1038264f46feb",
+          "word_count": 1088
+        },
+        {
+          "path": "source/research/2026-10-22/notes/gallin-comparison.md",
+          "line_spans": [
+            [
+              386,
+              443
+            ]
+          ],
+          "sha256": "fb4e83456299f5352fdb21bc3d556cf7640a53ad6e1f8be3844d926ce0b07b93",
+          "word_count": 1403
+        },
+        {
+          "path": "source/research/2026-10-22/notes/max-degree.md",
+          "line_spans": [
+            [
+              150,
+              231
+            ]
+          ],
+          "sha256": "5c936de3902ab09dc95916d1e0dc2956601c6103a6d224f8ed432f6268c32ce0",
+          "word_count": 1421
+        },
+        {
+          "path": "source/research/2026-10-22/notes/positive-effective.md",
+          "line_spans": [
+            [
+              435,
+              521
+            ]
+          ],
+          "sha256": "533dd141193c45af8af9bbadf31b62c18aaa190e1188fab4c4ceecdf74e02d3f",
+          "word_count": 1791
+        },
+        {
+          "path": "source/research/2026-10-22/notes/theory-space-comparison.md",
+          "line_spans": [
+            [
+              5,
+              81
+            ],
+            [
+              119,
+              132
+            ]
+          ],
+          "sha256": "15ddb38d615e9edda920006473f52207fc12d3ad9c23602fbdc4639f3070ba9e",
+          "word_count": 1327
+        }
+      ]
+    },
+    {
+      "group_ref": "sp-criteria",
+      "result_refs": [
+        "SP-CRITERIA"
+      ],
+      "rating": "medium",
+      "word_count": 1175,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/lean-formalization/sp-verification/proof-summary.md",
+          "line_spans": [
+            [
+              49,
+              74
+            ]
+          ],
+          "sha256": "f5ac1e4d20669b66b045f0b5fb023d5298116067814dc250c0bf64655bf571e0",
+          "word_count": 207
+        },
+        {
+          "path": "source/research/2026-10-22/notes/reflection-universal-core-20261022.md",
+          "line_spans": [
+            [
+              5,
+              83
+            ]
+          ],
+          "sha256": "c3e27eb28ec21f3ec92c3002b2f0f0931aed2a2bf669f2bae4fb16ec5b212d02",
+          "word_count": 968
+        }
+      ]
+    },
+    {
+      "group_ref": "sp-individual-cardinality",
+      "result_refs": [
+        "SP-INDIVIDUAL-CARDINALITY"
+      ],
+      "rating": "medium",
+      "word_count": 1894,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/audit-signature-to-pure-sp-20261022.md",
+          "line_spans": [
+            [
+              129,
+              160
+            ],
+            [
+              243,
+              259
+            ]
+          ],
+          "sha256": "d0c92cacbdedaa08da0758140f9e81f8c38f2362b01c46f7c3a68bec18305b45",
+          "word_count": 642
+        },
+        {
+          "path": "source/research/2026-10-22/notes/profile-root-construction-20261022.md",
+          "line_spans": [
+            [
+              5,
+              42
+            ]
+          ],
+          "sha256": "2f0e6a737486a06dffcab0011a8fe08e2e3aa05bd249d0cc6f92753ba292724c",
+          "word_count": 902
+        },
+        {
+          "path": "source/research/2026-10-22/notes/reflection-universal-core-20261022.md",
+          "line_spans": [
+            [
+              43,
+              65
+            ]
+          ],
+          "sha256": "c3e27eb28ec21f3ec92c3002b2f0f0931aed2a2bf669f2bae4fb16ec5b212d02",
+          "word_count": 350
+        }
+      ]
+    },
+    {
+      "group_ref": "signature-finite-boundary",
+      "result_refs": [
+        "SIGNATURE-FINITE-BOUNDARY",
+        "SIGNATURE-INFINITE-RESERVOIR"
+      ],
+      "rating": "long",
+      "word_count": 3149,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/audit-signature-to-pure-sp-20261022.md",
+          "line_spans": [
+            [
+              43,
+              79
+            ],
+            [
+              129,
+              160
+            ],
+            [
+              167,
+              242
+            ]
+          ],
+          "sha256": "d0c92cacbdedaa08da0758140f9e81f8c38f2362b01c46f7c3a68bec18305b45",
+          "word_count": 1897
+        },
+        {
+          "path": "source/research/2026-10-22/notes/profile-root-construction-20261022.md",
+          "line_spans": [
+            [
+              5,
+              42
+            ]
+          ],
+          "sha256": "2f0e6a737486a06dffcab0011a8fe08e2e3aa05bd249d0cc6f92753ba292724c",
+          "word_count": 902
+        },
+        {
+          "path": "source/research/2026-10-22/notes/reflection-universal-core-20261022.md",
+          "line_spans": [
+            [
+              43,
+              65
+            ]
+          ],
+          "sha256": "c3e27eb28ec21f3ec92c3002b2f0f0931aed2a2bf669f2bae4fb16ec5b212d02",
+          "word_count": 350
+        }
+      ]
+    },
+    {
+      "group_ref": "sp-finite-profile-rank",
+      "result_refs": [
+        "SP-FINITE-PROFILE-RANK"
+      ],
+      "rating": "medium",
+      "word_count": 2311,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/profile-root-construction-20261022.md",
+          "line_spans": [
+            [
+              5,
+              42
+            ]
+          ],
+          "sha256": "2f0e6a737486a06dffcab0011a8fe08e2e3aa05bd249d0cc6f92753ba292724c",
+          "word_count": 902
+        },
+        {
+          "path": "source/research/2026-10-22/notes/reflection-universal-core-20261022.md",
+          "line_spans": [
+            [
+              43,
+              65
+            ]
+          ],
+          "sha256": "c3e27eb28ec21f3ec92c3002b2f0f0931aed2a2bf669f2bae4fb16ec5b212d02",
+          "word_count": 350
+        },
+        {
+          "path": "source/research/2026-10-22/notes/sp-finite-profile-rank-20261022.md",
+          "line_spans": [
+            [
+              5,
+              61
+            ]
+          ],
+          "sha256": "46356944435b3f58d9a62cc070d1793c55275f99901988d72d621c9b5c2b0d35",
+          "word_count": 1059
+        }
+      ]
+    },
+    {
+      "group_ref": "sp-barcan-functionality",
+      "result_refs": [
+        "SP-BARCAN-FUNCTIONALITY"
+      ],
+      "rating": "long",
+      "word_count": 3465,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/finite-c5-profile-cells-20261022.md",
+          "line_spans": [
+            [
+              5,
+              93
+            ]
+          ],
+          "sha256": "a95b3bbced64d38a1ad65c418266566ad6fe8b4a929091123e3590a1690001e0",
+          "word_count": 1159
+        },
+        {
+          "path": "source/research/2026-10-22/notes/profile-root-construction-20261022.md",
+          "line_spans": [
+            [
+              5,
+              42
+            ]
+          ],
+          "sha256": "2f0e6a737486a06dffcab0011a8fe08e2e3aa05bd249d0cc6f92753ba292724c",
+          "word_count": 902
+        },
+        {
+          "path": "source/research/2026-10-22/notes/reflection-universal-core-20261022.md",
+          "line_spans": [
+            [
+              43,
+              65
+            ]
+          ],
+          "sha256": "c3e27eb28ec21f3ec92c3002b2f0f0931aed2a2bf669f2bae4fb16ec5b212d02",
+          "word_count": 350
+        },
+        {
+          "path": "source/research/2026-10-22/notes/signature-sp-barcan-20261022.md",
+          "line_spans": [
+            [
+              5,
+              118
+            ]
+          ],
+          "sha256": "c979df7ea63a348cd6d365ad2ad4ef1ea95ee5e18582fa2f39fb11d1fdfeec73",
+          "word_count": 1054
+        }
+      ]
+    },
+    {
+      "group_ref": "infinitary-resources",
+      "result_refs": [
+        "INFINITARY-RESOURCES"
+      ],
+      "rating": "long",
+      "word_count": 4650,
+      "sources": [
+        {
+          "path": "proofs/infinitary-resources.md",
+          "line_spans": [
+            [
+              5,
+              409
+            ]
+          ],
+          "sha256": "35ccb96c97e5cb07515acfcde1146988fba64931b1a83a35b1039cc1c34ad7b5",
+          "word_count": 2846
+        },
+        {
+          "path": "source/research/2026-10-22/notes/quotient-abstraction-lane.md",
+          "line_spans": [
+            [
+              253,
+              264
+            ],
+            [
+              289,
+              349
+            ]
+          ],
+          "sha256": "ff9fae7ff96707767f4b8743489dc813e7376af9c270e860db118df46a8d68e1",
+          "word_count": 1804
+        }
+      ]
+    },
+    {
+      "group_ref": "fixed-point-entrance",
+      "result_refs": [
+        "FIXED-POINT-ENTRANCE"
+      ],
+      "rating": "medium",
+      "word_count": 1771,
+      "sources": [
+        {
+          "path": "source/research/2026-10-22/notes/fixed-point-entrance-cone.md",
+          "line_spans": [
+            [
+              5,
+              76
+            ]
+          ],
+          "sha256": "02e3203d7a615d4f50dbaa27deef9f8a878f7f09ccdfc58ab98a48cb62ecfa7a",
+          "word_count": 1425
+        },
+        {
+          "path": "source/topics/classicism/models/symmetric-qualitative-links.yaml",
+          "line_spans": [
+            [
+              172,
+              192
+            ]
+          ],
+          "sha256": "4955f1491f28e73c2945d2b57daa65d0941b8e639a481369666ff0c2997ced7a",
+          "word_count": 225
+        },
+        {
+          "path": "source/topics/classicism/arguments/tame-rigidity-factorizable.yaml",
+          "line_spans": [
+            [
+              8,
+              15
+            ]
+          ],
+          "sha256": "96c4cbb2e4b5bdc612c3fcb46ce847e393c839ba6bd519e47ef46d6d89253109",
+          "word_count": 121
+        }
+      ]
+    },
+    {
+      "group_ref": "h-observer-space",
+      "result_refs": [
+        "H-OBSERVER-SPACE"
+      ],
+      "rating": "long",
+      "word_count": 41381,
+      "sources": [
+        {
+          "path": "proofs/h-observer-space/finite-affine-separation.md",
+          "line_spans": [
+            [
+              5,
+              152
+            ]
+          ],
+          "sha256": "82dc2d7d5b4b52aa0e14dfb866cda2c4c5f079fec3e1e145c7fb2bd0814fdec8",
+          "word_count": 1449
+        },
+        {
+          "path": "proofs/h-observer-space/fork-without-binary-families.md",
+          "line_spans": [
+            [
+              5,
+              93
+            ]
+          ],
+          "sha256": "47513929283870a7e9e05a0a5040dcabcf9cf32399c1844d5875b61906b5bebd",
+          "word_count": 979
+        },
+        {
+          "path": "proofs/h-observer-space/identity-collapse.md",
+          "line_spans": [
+            [
+              7,
+              265
+            ]
+          ],
+          "sha256": "24176755f3a173eeb58fefc5d7cee84907c316e00fce828d3ca336f55c041f6a",
+          "word_count": 1938
+        },
+        {
+          "path": "proofs/h-observer-space/local-tiers-and-models.md",
+          "line_spans": [
+            [
+              9,
+              192
+            ]
+          ],
+          "sha256": "2d358b8432f10783e73cab551f05a0747d7a3daace9a1c0e0c376d1f97baef68",
+          "word_count": 1915
+        },
+        {
+          "path": "proofs/h-observer-space/observer-restrictions.md",
+          "line_spans": [
+            [
+              7,
+              262
+            ]
+          ],
+          "sha256": "6f481c88b13dc3470584885e417a00ce34630559b44ba04c3074975c4011edaa",
+          "word_count": 2024
+        },
+        {
+          "path": "proofs/h-observer-space/primitive-package-classification.md",
+          "line_spans": [
+            [
+              5,
+              85
+            ]
+          ],
+          "sha256": "b4f8e29e40f17e69d62323fc075944b05d5bb5ca49d7dd41a89abe67252079df",
+          "word_count": 933
+        },
+        {
+          "path": "proofs/h-observer-space/quantifier-generated-lattices.md",
+          "line_spans": [
+            [
+              5,
+              167
+            ]
+          ],
+          "sha256": "c8b6258c4cdb8f60c561abf63dff35a1db31e8f5a095ed27b93e4397d643a99f",
+          "word_count": 1628
+        },
+        {
+          "path": "proofs/h-observer-space/relational-clone-model.md",
+          "line_spans": [
+            [
+              7,
+              165
+            ]
+          ],
+          "sha256": "5cb736a5a930bdf0bf9e2896b6692e51d9314cf322ff23ab1c71eaf26bc91f0b",
+          "word_count": 1401
+        },
+        {
+          "path": "proofs/h-observer-space/representation-under-identity-bivalence.md",
+          "line_spans": [
+            [
+              7,
+              247
+            ]
+          ],
+          "sha256": "d15149b5dc960a93160826eea917630c890d0d399fa8ef58831a68af08028dc8",
+          "word_count": 1829
+        },
+        {
+          "path": "proofs/h-observer-space/reversible-meet-atomicity.md",
+          "line_spans": [
+            [
+              7,
+              228
+            ]
+          ],
+          "sha256": "94751a26fec524f18b12243724eeef536a43e3b6b99f11e1097095f6b39f00eb",
+          "word_count": 1770
+        },
+        {
+          "path": "proofs/h-observer-space/term-closure-and-affine-branches.md",
+          "line_spans": [
+            [
+              5,
+              212
+            ]
+          ],
+          "sha256": "ae98479bcaf357e2b24539f86fc3825d8cd42f8e4815125a3cf15d61bb245996",
+          "word_count": 1858
+        },
+        {
+          "path": "proofs/h-observer-space/truth-profiles-and-connective-reducts.md",
+          "line_spans": [
+            [
+              5,
+              265
+            ]
+          ],
+          "sha256": "87e4387f5d1ee67b4861261fd4f4ead69cb8d1e52c2ef6ab303b539c27a80416",
+          "word_count": 2608
+        },
+        {
+          "path": "proofs/h-observer-space/two-orders-model.md",
+          "line_spans": [
+            [
+              7,
+              81
+            ]
+          ],
+          "sha256": "d2efa7ded21b874a8973a7065040047be22c81eba63ff07878034225a047a40e",
+          "word_count": 903
+        },
+        {
+          "path": "proofs/h-observer-space/typed-separation-and-classicism.md",
+          "line_spans": [
+            [
+              12,
+              212
+            ]
+          ],
+          "sha256": "67d079e3d33c6c476627bf6bf0851db1f114cd45efd190c5db89295e6714df4f",
+          "word_count": 2451
+        },
+        {
+          "path": "proofs/h-observer-space/reversible-meet-characterization.md",
+          "sha256": "0504be610da1f3611d209fc4c2e40bcf1ca8d8bf070e9ae94124cd3a692a54df",
+          "line_spans": [
+            [
+              9,
+              277
+            ]
+          ],
+          "word_count": 2134
+        },
+        {
+          "path": "proofs/h-observer-space/finite-semilattice-normalization.md",
+          "sha256": "daedb9d6a84d1e8667bb1ac4780eb63b9d353c1362f9d6262785f0e94ddccb16",
+          "line_spans": [
+            [
+              5,
+              182
+            ]
+          ],
+          "word_count": 1616
+        },
+        {
+          "path": "proofs/h-observer-space/composition-closed-characterization.md",
+          "sha256": "92de5b7202d0070659d0b82181f46055836f473275902b5255ce4bb2b3984a6c",
+          "line_spans": [
+            [
+              7,
+              136
+            ]
+          ],
+          "word_count": 1116
+        },
+        {
+          "path": "proofs/h-observer-space/finite-image-material-normalization.md",
+          "sha256": "00be389bc5f7ac28e6d2e39afe08c4953553570091b96f126d6aae46f7d8b3fe",
+          "line_spans": [
+            [
+              7,
+              155
+            ]
+          ],
+          "word_count": 1386
+        },
+        {
+          "path": "proofs/h-observer-space/logical-separation-with-contingent-barcan.md",
+          "sha256": "c9fa069ac04e198c7ae21aa2cb7c4905d29877e6b94e49621513569f7b752381",
+          "line_spans": [
+            [
+              9,
+              141
+            ]
+          ],
+          "word_count": 1583
+        },
+        {
+          "path": "proofs/h-observer-space/necessary-separation-and-atoms.md",
+          "sha256": "1fa440167d82140ecee44fd235d3b481c0e8d2d866fa66f584ae403b23a4037b",
+          "line_spans": [
+            [
+              7,
+              138
+            ]
+          ],
+          "word_count": 1174
+        },
+        {
+          "path": "proofs/h-observer-space/reversible-separation-and-pure-truth.md",
+          "sha256": "5d12bedc5e90b91fcfa6ff6df35c54235f67037e8ba9d22ffceda33a8715b4ef",
+          "line_spans": [
+            [
+              14,
+              144
+            ]
+          ],
+          "word_count": 1307
+        },
+        {
+          "path": "proofs/h-observer-space/finite-block-symmetry-reversible-gap.md",
+          "sha256": "edbfb27be37357d0c661b6d118660c5332606da8210638ffbf6856825b21d3ac",
+          "line_spans": [
+            [
+              18,
+              191
+            ]
+          ],
+          "word_count": 2458
+        },
+        {
+          "path": "proofs/h-observer-space/necessity-of-distinctness-representation.md",
+          "sha256": "0579a545d512527f1acebdb6d0dd3f9781a4273ab2fe058c3da57a5157a4ede4",
+          "line_spans": [
+            [
+              7,
+              209
+            ]
+          ],
+          "word_count": 1809
+        },
+        {
+          "path": "proofs/h-observer-space/reversible-quantifier-observers.md",
+          "sha256": "20f52ddf725d823daed53e62320ece22baa9774f20035a8d3342f67e9805acc5",
+          "line_spans": [
+            [
+              7,
+              165
+            ]
+          ],
+          "word_count": 1339
+        },
+        {
+          "path": "proofs/h-observer-space/local-conjugacy-and-reversible-observers.md",
+          "sha256": "cb899ddd57b80377f1ba479a7bb7e21f925624ddbf3842b2e8637ede94fa6ac1",
+          "line_spans": [
+            [
+              9,
+              188
+            ]
+          ],
+          "word_count": 1773
+        }
+      ]
+    }
+  ]
+}

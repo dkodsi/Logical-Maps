@@ -1,0 +1,214 @@
+{
+  "as_of_utc": "2026-10-24T02:20:15.596764+00:00",
+  "description": "Questions, established answers, obstructions, conditional reductions and separate formalization obligations. Unresolved here does not assert literature openness.",
+  "questions": [
+    {
+      "id": "TR-RP-WRP",
+      "question": "Does TR + RP entail WRP?",
+      "status": "Refuted by a certified full C countermodel",
+      "established": "The finite compression model has full root TR and RP but fails WRP_et. The older colour-collapse example is independently certified, but fails RP at the next property type.",
+      "remaining": "",
+      "result_entries": [
+        "FINITE-COMPRESSION-SEPARATION",
+        "COLOUR-COLLAPSE-SCOPE",
+        "RIGIDITY-CLASSIFICATIONS"
+      ],
+      "formalization_result_refs": [
+        "FINITE-COMPRESSION-SEPARATION",
+        "COLOUR-COLLAPSE-SCOPE",
+        "RIGIDITY-CLASSIFICATIONS"
+      ]
+    },
+    {
+      "id": "RC-TC",
+      "question": "Does Relational Choice entail Transversal Choice?",
+      "status": "Unresolved; sharper positive and negative criteria",
+      "established": "RC plus completeness gives Actuality and TC. The history construction reduces local TC to finite ambiguity in at least one missed cell. Finite code orbits obstruct symmetry-based countermodels. Class-code iteration preserves ambiguity, and orbit exhaustion is exactly Actuality.",
+      "remaining": "Derive a suitable coherent chooser from RC alone, or construct a genuine full RC countermodel meeting the closure and code-orbit restrictions.",
+      "result_entries": [
+        "CHOICE-COMPLETENESS",
+        "CHOICE-COHERENCE",
+        "COEXTENSION-OPERATIONS"
+      ],
+      "formalization_result_refs": [
+        "CHOICE-COMPLETENESS",
+        "CHOICE-COHERENCE",
+        "COEXTENSION-OPERATIONS"
+      ]
+    },
+    {
+      "id": "FC-FINITE-BASIS",
+      "question": "Can Functional Choice or ☐Functional Choice have a finite equivalent fixed-type basis?",
+      "status": "Negative ordinary results established",
+      "established": "Neither full Functional Choice nor its boxed form has an equivalent finite list of arbitrary pure fixed-type sentences over C. The Boolean-valued construction supplies ordinary separating models. The previously stated fixed-input and selector hierarchies remain in the supporting proofs.",
+      "remaining": "",
+      "result_entries": [
+        "CHOICE-NO-FINITE-BASIS"
+      ],
+      "formalization_result_refs": [
+        "CHOICE-NO-FINITE-BASIS"
+      ]
+    },
+    {
+      "id": "MAX-ATOMICITY",
+      "question": "Can pure Maximalism coexist with Atomicity (type t)?",
+      "status": "Refuted and certified",
+      "established": "The inconsistency theorem has no additional non-theoremhood or model-existence premise.",
+      "remaining": "",
+      "result_entries": [
+        "MAX-ATOMICITY"
+      ],
+      "formalization_result_refs": [
+        "MAX-ATOMICITY"
+      ]
+    },
+    {
+      "id": "PURE-SP",
+      "question": "Is pure Strong Possibility consistent?",
+      "status": "Unresolved; exact criteria and construction obstructions",
+      "established": "Universal-identity and restricted-disjunction criteria are established. In the specified two-axiom test any required full-term embedding must leave every target arithmetic counterexample above its entire source number image.",
+      "remaining": "Construct the genuine endpoint embedding or otherwise settle joint consistency. A noncofinal omitted-cut requirement rules out routes, not the theory.",
+      "result_entries": [
+        "SP-CRITERIA",
+        "PURE-SP-BOUNDED-IMAGE",
+        "SP-ARITHMETIC-REFLECTION"
+      ],
+      "formalization_result_refs": [
+        "SP-CRITERIA",
+        "PURE-SP-BOUNDED-IMAGE",
+        "SP-ARITHMETIC-REFLECTION"
+      ]
+    },
+    {
+      "id": "SIGNATURE-SP",
+      "question": "Is SP consistent for one unary predicate constant and no individual names?",
+      "status": "Unresolved; first-stage sufficient criterion",
+      "established": "Nonempty K₁ already implies full signature SP consistency and is equivalent to weak named existence for the marked Max theory. Finite Herbrand extraction fails; the singleton-profile root is deleted. A successful fixed-domain kernel must be perfect and nonhyperarithmetic, with exact stabilization ordinal ω₁CK.",
+      "remaining": "Prove weak named existence or give a globally empty witness open. Failure of K₁ or the stronger fixed-domain construction would not alone refute SP.",
+      "result_entries": [
+        "SIGNATURE-SP-SURVIVAL",
+        "SP-SIGNATURE-CONFLICT"
+      ],
+      "formalization_result_refs": [
+        "SIGNATURE-SP-SURVIVAL",
+        "SP-SIGNATURE-CONFLICT"
+      ]
+    },
+    {
+      "id": "LAMBDA-EQUIVALENCE",
+      "question": "Can fixed C be reconstructed without primitive lambda?",
+      "status": "Exact open-sequent equivalence established and certified",
+      "established": "An explicit classical lambda-free applicative calculus has exactly C’s consequences in its original language, including open contexts and finite lists of assumptions. A conservative named extension reconstructs arbitrary C terms and full contextual beta eta delta conversion.",
+      "remaining": "",
+      "result_entries": [
+        "LAMBDA-FREE-TRANSLATION",
+        "BETA-ETA-CONVERSION"
+      ],
+      "formalization_result_refs": [
+        "LAMBDA-FREE-TRANSLATION",
+        "BETA-ETA-CONVERSION"
+      ]
+    },
+    {
+      "id": "OBSERVER-STRENGTH",
+      "question": "What relationships between observer separation and the established principles have been proved?",
+      "status": "Strict hierarchy and exact characterizations",
+      "established": "Over H, OS entails C + BF; full typed endpoint separation is equivalent to C5 + Atomicity (type t), and full typed factive separation is equivalent to Extensionality. Over C, the strict hierarchy is Extensionality ⇒ C5 + Atomicity (type t) ⇒ ☐OS ⇒ OS ⇒ BF. Atomicity (type t) + ☐BF implies OS. Over C5 + Actuality, OS, ☐OS and Atomicity (type t) are equivalent. Over C5, ☐OS + ◇Actuality entails ☐Plenitude; replacing ☐OS by OS does not suffice. Over C, necessary qualification is equivalent to qualification. ☐Boolean separation + ☐BF still fails to imply quantifier separation. No conjunction of the audited 132 catalog conditions characterizes OS. Given OS, uniqueness of the qualified logical observer is equivalent to Extensionality. OS does not entail ☐BF or ☐Functionality, witnessed by the finite-support natural-numbers/singleton model. Endpoint separation is equivalent to C5 + ☐OS + one atom. Reversible separation entails No Pure Contingency without atoms. Reversible separation is strictly stronger than C5 + ☐OS even among atomless models, witnessed by the finite-block symmetry construction and its contingent pure MC6 sentence.",
+      "remaining": "The remaining H comparisons concern infinite/nonprincipal material-versus-pointwise separation outside the proved sufficient regions, infinite affine admission, and unrestricted mixed quantifier separation without .2.",
+      "result_entries": [
+        "LOGICAL-OBSERVERS",
+        "FULL-IDENTITY-OBSERVERS",
+        "DIAGONAL-CHARACTERS"
+      ],
+      "formalization_result_refs": [
+        "LOGICAL-OBSERVERS",
+        "FULL-IDENTITY-OBSERVERS",
+        "DIAGONAL-CHARACTERS"
+      ]
+    },
+    {
+      "id": "FULL-GALLIN",
+      "question": "Do internal completeness or bounded infinitary joins recover full standard models?",
+      "status": "Negative bounds and exact semantic characterization",
+      "established": "C5 plus propositional Atomicity and Arbitrary Atomic Joins characterizes full standard hierarchies. Infinitary Comprehension gives the same characterization with C5 and no separate Atomicity premise. A support construction separates every fixed parameter bound even with unrestricted formula size. The specified uniformly Σ₁-admissible set-coded calculus cannot be complete.",
+      "remaining": "This is not an unrestricted impossibility theorem for every calculus. Full second-order validity remains the identified semantic benchmark.",
+      "result_entries": [
+        "FULL-STANDARD-GALLIN",
+        "INFINITARY-COMPREHENSION"
+      ],
+      "formalization_result_refs": [
+        "FULL-STANDARD-GALLIN",
+        "INFINITARY-COMPREHENSION"
+      ]
+    },
+    {
+      "id": "INFINITARY-SP",
+      "question": "Does countable named exhaustion follow from SP with infinitary resources?",
+      "status": "Proved for a specified semantic reference; conditional otherwise",
+      "established": "A single admitted non-name predicate gives reflection. The profile construction supplies Max(Td)-eligibility, so SP(Td) entails countable actual exhaustion. A numeral abstraction conflicts with Max referenced to original finitary C.",
+      "remaining": "For a proposed syntactic C∞, supply the closed-identity separation bridge. Consistency of SP(Td) is not proved.",
+      "result_entries": [
+        "INFINITARY-RESOURCES",
+        "SP-INDIVIDUAL-CARDINALITY"
+      ],
+      "formalization_result_refs": [
+        "INFINITARY-RESOURCES",
+        "SP-INDIVIDUAL-CARDINALITY"
+      ]
+    },
+    {
+      "id": "ABSTRACT-FORCING",
+      "question": "Do the proposed abstract modal axioms alone give the forcing CH alternatives?",
+      "status": "Strict-smallness database formulation refuted by existing models; source correspondence unresolved",
+      "established": "The explicit full modalized cloud has the stated model-specific forcing-transfer argument. Separately, under metatheoretic Choice, existing countable-arrow full-action models satisfy the three abstract modal premises with strict-smallness Forcing Possibilism and CH non-contingency. The strict size condition demands only finite Boolean algebras in those models. The exact strict FP principle is independent over C + ☐Functional Choice with both quantified Infinity axioms; the full-S5 cardinal classification and FP-without-Intensional-Choice model are supplied separately.",
+      "remaining": "Fix the exact source size convention and background type language, and establish the relevant transfer or extra forcing-algebra availability. The stronger non-strict formulation is not settled by this audit. Equivalence of the two lottery presentations remains under review.",
+      "result_entries": [
+        "FORCING-TRANSFER",
+        "FORCING-POSSIBILISM"
+      ],
+      "formalization_result_refs": [
+        "FORCING-TRANSFER"
+      ]
+    },
+    {
+      "id": "PR-CHOICE",
+      "question": "Does strong profile richness force full Functional Choice?",
+      "status": "Negative ordinary constructions supplied",
+      "established": "Supported nominal models realize exact individual profiles and arbitrarily high finite supported ranks while failing FC. Raw profile representation and rigid-profile PR have different boundaries.",
+      "remaining": "",
+      "result_entries": [
+        "PROFILE-WORLD-ALGEBRA"
+      ],
+      "formalization_result_refs": [
+        "PROFILE-WORLD-ALGEBRA"
+      ]
+    },
+    {
+      "id": "FULL-CHOICE-ARITHMETIC",
+      "question": "Does ☐Functional Choice add ordinary arithmetic over ☐Plenitude?",
+      "status": "Resolved by an existing source-based ordinary proof; full Lean formalization absent",
+      "established": "Over C with quantified Infinity at e and t, replacing boxed Plenitude by full boxed Functional Choice adds no ordinary first-order arithmetic theorems. Both have the arithmetic consequences of C plus numerical noncollapse at e, and this remains true after adding boxed quantified Infinity at every admitted type.",
+      "remaining": "The proof uses McLarty’s number-preserving interpretation.",
+      "result_entries": [
+        "ARITHMETIC-COMPARISON"
+      ],
+      "formalization_result_refs": [
+        "ARITHMETIC-COMPARISON"
+      ]
+    },
+    {
+      "id": "MAX-ARITHMETIC-EQUALITY",
+      "question": "What exactly is the ordinary arithmetic theory of pure Maximalism?",
+      "status": "Exact equality has an ordinary written proof; full Lean certificate absent",
+      "established": "The source proves both inclusions in\n\n$$\n\\operatorname{Th}_{\\mathrm{arith}}(\\operatorname{Max}(C))=\\operatorname{Cn}\\bigl(T_{\\mathrm{arith}}\\cup\\mathrm{True}_{\\Pi_1}\\bigr).\n$$\n\nIt also states the specified extensions by current graph-choice principles and quantified Infinity at their separate scopes.",
+      "remaining": "Independent review of the upper inclusion.",
+      "result_entries": [
+        "MAX-ARITHMETIC-EQUALITY"
+      ],
+      "formalization_result_refs": [
+        "MAX-ARITHMETIC-EQUALITY"
+      ]
+    }
+  ],
+  "formalization_status_source": "MAIN-RESULTS.json; question statuses describe mathematical progress, independently of formalization."
+}

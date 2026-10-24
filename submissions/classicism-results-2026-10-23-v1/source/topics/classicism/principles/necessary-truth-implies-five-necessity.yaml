@@ -1,0 +1,26 @@
+id: necessary-truth-implies-five-necessity
+name: □Truth implies 5-necessity
+category: necessity-varieties
+statement: 'Necessarily, every truth is 5-necessary: necessary under every S5 operator. In C this is the
+  identity $\Box_5=\lambda p\, .\,p$.'
+formal: $\Box\,\forall p\, .\,p\to\Box_5 p$
+date: '2026-10-14'
+sources:
+- Cian Dorr, John Hawthorne, and Juhani Yli-Vakkuri, The Bounds of Possibility, Appendix D, pp. 400–409
+  (definitions of the hat operation and of the 5-necessity operator; the principles themselves are not
+  stated there).
+source_names:
+- Bounds of Possibility
+references:
+- paper: bounds-of-possibility
+  role: background
+  locator: Appendix D, pp. 400–409
+notes: The necessitated form of [[truth-implies-five-necessity]]. Added at the suggestion of Christopher
+  Sun, 14 October 2026. Since identity of operators in C is necessary coextensiveness, this is the identity
+  $\Box_5=\lambda p\, .\,p$.
+changes:
+- date: '2026-10-19'
+  by: Claude Opus 5.5 (Anthropic)
+  summary: 'At Cian Dorr’s request: the notes now name the base principle with a link, without the boilerplate
+    about closed instances and the box.'
+lean_def: Classicism.P.NecTruthImpliesFiveNecessity.schemaIn

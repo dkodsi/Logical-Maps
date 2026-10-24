@@ -1,0 +1,84 @@
+Classicism.Research.ActualityCoreArithmetic.add_forward: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.ActualityCoreArithmetic.add_reflect: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.ActualityCoreArithmetic.addition_iff: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.ActualityCoreArithmetic.binaryPush_admitted: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.ActualityCoreArithmetic.binary_pull_push: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.ActualityCoreArithmetic.binary_push_pull: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.ActualityCoreArithmetic.coreAdd_admitted: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.ActualityCoreArithmetic.coreLe_admitted: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.ActualityCoreArithmetic.coreMul_admitted: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.ActualityCoreArithmetic.core_add_functional: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.ActualityCoreArithmetic.core_add_suc: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.ActualityCoreArithmetic.core_add_total: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.ActualityCoreArithmetic.core_add_zero: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.ActualityCoreArithmetic.core_mul_functional: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.ActualityCoreArithmetic.core_mul_suc: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.ActualityCoreArithmetic.core_mul_total: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.ActualityCoreArithmetic.core_mul_zero: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.ActualityCoreArithmetic.mul_forward: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.ActualityCoreArithmetic.mul_reflect: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.ActualityCoreArithmetic.multiplication_iff: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.ActualityCoreArithmetic.order_iff: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+#classicism_audit Classicism.Results.Research.ActualityCoreArithmetic: 21/21 theorems pass; 21 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.ActualityCoreArithmetic: 21/21 inside R
+Classicism.Results.Research.ActualityCoreArithmetic: 20 of 21 theorems derived
+Classicism.Research.ActualityCoreArithmetic.core_mul_functional: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+[1/21] Classicism.Research.ActualityCoreArithmetic.add_forward ✓ 2765 ms
+[2/21] Classicism.Research.ActualityCoreArithmetic.add_reflect ✓ 6930 ms
+[3/21] Classicism.Research.ActualityCoreArithmetic.addition_iff ✓ 997 ms
+[4/21] Classicism.Research.ActualityCoreArithmetic.binaryPush_admitted ✓ 0 ms
+[5/21] Classicism.Research.ActualityCoreArithmetic.binary_pull_push ✓ 1346 ms
+[6/21] Classicism.Research.ActualityCoreArithmetic.binary_push_pull ✓ 0 ms
+[7/21] Classicism.Research.ActualityCoreArithmetic.coreAdd_admitted ✓ 1091 ms
+[8/21] Classicism.Research.ActualityCoreArithmetic.coreLe_admitted ✓ 1432 ms
+[9/21] Classicism.Research.ActualityCoreArithmetic.coreMul_admitted ✓ 2168 ms
+[10/21] Classicism.Research.ActualityCoreArithmetic.core_add_functional ✓ 6577 ms
+[11/21] Classicism.Research.ActualityCoreArithmetic.core_add_suc ✓ 423 ms
+[12/21] Classicism.Research.ActualityCoreArithmetic.core_add_total ✓ 2693 ms
+[13/21] Classicism.Research.ActualityCoreArithmetic.core_add_zero ✓ 67 ms
+[14/21] Classicism.Research.ActualityCoreArithmetic.core_mul_functional ✗ 20170 ms
+[15/21] Classicism.Research.ActualityCoreArithmetic.core_mul_suc ✓ 1042 ms
+[16/21] Classicism.Research.ActualityCoreArithmetic.core_mul_total ✓ 8167 ms
+[17/21] Classicism.Research.ActualityCoreArithmetic.core_mul_zero ✓ 145 ms
+[18/21] Classicism.Research.ActualityCoreArithmetic.mul_forward ✓ 0 ms
+[19/21] Classicism.Research.ActualityCoreArithmetic.mul_reflect ✓ 0 ms
+[20/21] Classicism.Research.ActualityCoreArithmetic.multiplication_iff ✓ 3106 ms
+[21/21] Classicism.Research.ActualityCoreArithmetic.order_iff ✓ 4867 ms
+'Classicism.Research.ActualityCoreArithmetic.binaryPush_admitted.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.ActualityCoreArithmetic.addition_iff.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.ActualityCoreArithmetic.multiplication_iff.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.ActualityCoreArithmetic.core_add_functional.derivable' depends on axioms: [propext, Quot.sound]
+Classicism/Results/Research/ActualityCoreArithmeticCertificates.lean:14:14: error(lean.unknownIdentifier): Unknown constant `Classicism.Research.ActualityCoreArithmetic.core_mul_functional.derivable`
+'Classicism.Research.ActualityCoreArithmetic.order_iff.derivable' depends on axioms: [propext, Quot.sound]

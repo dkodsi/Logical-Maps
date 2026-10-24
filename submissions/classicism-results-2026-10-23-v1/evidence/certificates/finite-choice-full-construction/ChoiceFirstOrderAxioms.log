@@ -1,0 +1,105 @@
+Classicism.Meta.ChoiceFirstOrder.admit_definable (S : Classicism.Meta.ChoiceFirstOrder.Structure)
+  (hC : Classicism.Meta.ChoiceFirstOrder.Comprehension S) {V : Classicism.Meta.Ty → Type} (ρ : Classicism.Meta.RTy)
+  (φ : Classicism.Meta.ChoiceFirstOrder.Formula (Classicism.Meta.ChoiceFirstOrder.Extend V ρ))
+  (η : (σ : Classicism.Meta.Ty) → V σ → S.D σ)
+  (X :
+    Classicism.Meta.Intensional.Intension (Classicism.Meta.ChoiceFirstOrder.inner S.D) ρ
+      Classicism.Meta.ChoiceFirstOrder.World.star)
+  (hX :
+    ∀ (a : Classicism.Meta.ChoiceFirstOrder.Args S.D ρ),
+      ⟨Classicism.Meta.ChoiceFirstOrder.World.star,
+            (a, CategoryTheory.CategoryStruct.id Classicism.Meta.ChoiceFirstOrder.World.star)⟩ ∈
+          X ↔
+        Classicism.Meta.ChoiceFirstOrder.Formula.Realize S φ (Classicism.Meta.ChoiceFirstOrder.extendEnv η ρ a)) :
+  X ∈ Set.range (S.model.incl ρ Classicism.Meta.ChoiceFirstOrder.World.star)
+Classicism.Meta.ChoiceFirstOrder.translate_correct (S : Classicism.Meta.ChoiceFirstOrder.Structure)
+  {Γ : Classicism.Meta.Ctx} {σ : Classicism.Meta.Ty} (t : Classicism.Meta.Term Classicism.Meta.Signature.pure Γ σ) :
+  Classicism.Meta.ChoiceFirstOrder.CodeCorrect S t (Classicism.Meta.ChoiceFirstOrder.translate t)
+Classicism.Meta.ChoiceFirstOrder.isModel (S : Classicism.Meta.ChoiceFirstOrder.Structure)
+  (hC : Classicism.Meta.ChoiceFirstOrder.Comprehension S) : S.model.IsModel
+Classicism.Meta.ChoiceFirstOrder.isModel_of_small_comprehension (S : Classicism.Meta.ChoiceFirstOrder.Structure)
+  (hC : Classicism.Meta.ChoiceFirstOrder.SmallComprehension S) : S.model.IsModel
+Classicism.Meta.ChoiceFirstOrder.smallSentenceTranslation_correct (S : Classicism.Meta.ChoiceFirstOrder.Structure)
+  (p : Classicism.Meta.Sentence Classicism.Meta.Signature.pure) :
+  Classicism.Meta.ChoiceFirstOrder.SmallFormula.Realize S (Classicism.Meta.ChoiceFirstOrder.smallSentenceTranslation p)
+      Classicism.Meta.IEnv.nil ↔
+    S.model.HoldsSentence p
+Classicism.Meta.ChoiceFirstOrder.small_c_theorem_holds (S : Classicism.Meta.ChoiceFirstOrder.Structure)
+  (hC : Classicism.Meta.ChoiceFirstOrder.SmallComprehension S)
+  {p : Classicism.Meta.Sentence Classicism.Meta.Signature.pure} (hp : Classicism.Meta.C.Theorem p) :
+  S.model.HoldsSentence p
+Classicism.Meta.ChoiceFirstOrder.Full.isModel (E : Type) (hne : Nonempty E) :
+  (Classicism.Meta.ChoiceFirstOrder.Full.fullStructure E hne).model.IsModel
+Classicism.Meta.ChoiceFirstOrder.smallFormula_countable (Γ : Classicism.Meta.Ctx) :
+  Countable (Classicism.Meta.ChoiceFirstOrder.SmallFormula Γ)
+Classicism.Meta.ChoiceFirstOrder.contextFormula_countable :
+  Countable ((Γ : Classicism.Meta.Ctx) × Classicism.Meta.ChoiceFirstOrder.SmallFormula Γ)
+Classicism.Meta.ChoiceFirstOrder.smallComprehensionIndex_countable :
+  Countable Classicism.Meta.ChoiceFirstOrder.SmallComprehensionIndex
+Classicism.Meta.ChoiceFirstOrder.smallSentenceEmbedding : Classicism.Meta.ChoiceFirstOrder.SmallFormula [] ↪ ℕ
+Classicism.Meta.ChoiceFirstOrder.smallSentenceCode_correct (S : Classicism.Meta.ChoiceFirstOrder.Structure)
+  (p : Classicism.Meta.Sentence Classicism.Meta.Signature.pure) :
+  Classicism.Meta.ChoiceFirstOrder.realizeSmallSentenceCode S (Classicism.Meta.ChoiceFirstOrder.smallSentenceCode p) ↔
+    S.model.HoldsSentence p
+Classicism.Meta.ChoiceFirstOrder.MathlibBridge.language_countable :
+  Countable Classicism.Meta.ChoiceFirstOrder.MathlibBridge.language.Symbols
+Classicism.Meta.ChoiceFirstOrder.MathlibBridge.translate_correct (S : Classicism.Meta.ChoiceFirstOrder.Structure)
+  {Γ : Classicism.Meta.Ctx} (φ : Classicism.Meta.ChoiceFirstOrder.SmallFormula Γ) (g : Classicism.Meta.IEnv S.D Γ) :
+  Classicism.Meta.ChoiceFirstOrder.MathlibBridge.realizeAt S
+      (Classicism.Meta.ChoiceFirstOrder.MathlibBridge.translate φ) g ↔
+    Classicism.Meta.ChoiceFirstOrder.SmallFormula.Realize S φ g
+Classicism.Meta.ChoiceFirstOrder.MathlibBridge.sentence_correct (S : Classicism.Meta.ChoiceFirstOrder.Structure)
+  (p : Classicism.Meta.Sentence Classicism.Meta.Signature.pure) :
+  Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Carrier S ⊨ Classicism.Meta.ChoiceFirstOrder.MathlibBridge.sentence p ↔
+    S.model.HoldsSentence p
+'Classicism.Meta.ChoiceFirstOrder.Structure.model' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.admit_definable' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.valueCode_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.translate_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.isModel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.c_theorem_holds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.sentenceTranslation_correct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.Formula.realize_agree' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.Formula.reify_correct' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.smallSentenceTranslation_correct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.isModel_of_small_comprehension' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.small_c_theorem_holds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.Full.comprehension' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.Full.isModel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.Full.serial_has_operation' depends on axioms: [Classical.choice]
+'Classicism.Meta.ChoiceFirstOrder.smallFormula_countable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.contextFormula_countable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.smallComprehensionIndex_countable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.SmallFormula.decode_code' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.SmallFormula.code_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.smallSentenceEmbedding' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.smallSentenceCode_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.MathlibBridge.language_countable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.MathlibBridge.profile_correct' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.MathlibBridge.variable_correct' depends on axioms: [propext]
+'Classicism.Meta.ChoiceFirstOrder.MathlibBridge.guardedAll_correct' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.MathlibBridge.guardedEx_correct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.MathlibBridge.allArgs_correct' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.MathlibBridge.exArgs_correct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.MathlibBridge.translate_correct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.MathlibBridge.sentence_correct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

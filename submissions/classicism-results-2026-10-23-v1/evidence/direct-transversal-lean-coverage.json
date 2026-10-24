@@ -1,0 +1,171 @@
+{
+  "title": "Direct Relational Choice + Boolean Completeness => Transversal Choice: exact Lean coverage",
+  "checked_at_utc": "2026-10-23T19:53:48.438222+00:00",
+  "mode": "Read-only source and accepted-evidence audit; no compiler, Lean-source, core, table, YAML, or generated-statement edits. This receipt is the sole new file.",
+  "research_root": ".",
+  "canonical_root": "logical-maps",
+  "accepted_research_manifest": {
+    "path": "research/2026-10-22/lean-formalization/checks/20261023T053945495916Z-2d579847.json",
+    "sha256": "ccbec42cecabead6a6957020fec9693f82635248f0700f95243d39f38d635bc7",
+    "run_id": "20261023T053945495916Z-2d579847",
+    "state": "complete",
+    "complete": true,
+    "exit_code": 0,
+    "all_aggregate_sources_live_matching": 120,
+    "direct_certificate_dependency_sources_live_matching": 58,
+    "mismatches": [],
+    "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)"
+  },
+  "certified_statements": [
+    {
+      "declaration": "Classicism.Research.Choice.local_choice_completeness_transversal.derivable",
+      "source": "ChoiceTransversal.lean:102",
+      "scope": "For any admitted type sigma, including e: unboxed RC_(sigma t,sigma t) + BC_(sigma t) => TC_sigma. Actual equivalence relations; no Actuality, BC_tt, ND, BF, or Plenitude premise. All shallow theorem, relational-type, and object-language translation checks passed; gate reports C-minus."
+    },
+    {
+      "declaration": "Classicism.Research.Choice.local_choice_countable_ccc_transversal.derivable",
+      "source": "ChoiceTransversal.lean:142",
+      "scope": "For admitted sigma,kappa: unboxed RC_(sigma t,sigma t) + CBC_(kappa,sigma t) + BooleanCCC_(kappa,sigma t) => TC_sigma. CBC and CCC use represented Frege-label countability, not external countability. This retains property-output RC, not the sharper point-output premise."
+    },
+    {
+      "declaration": "Classicism.Research.Choice.choice_countable_ccc_completeness.derivable",
+      "source": "ChoiceCountable.lean:129",
+      "scope": "For admitted counting type kappa and relational type tau: unboxed RC_(tau,tau) + CBC_(kappa,tau) + BooleanCCC_(kappa,tau) => BC_tau. Generic Rel/Order/Pointwise interfaces implement the relational type system."
+    },
+    {
+      "declaration": "Classicism.Research.Choice.canonical_fixedpoint_of_supremum.derivable",
+      "source": "ChoiceChains.lean:183",
+      "scope": "A represented progressive, total, single-valued graph on a represented antisymmetric poset has a fixed point whenever its represented canonical union has the supplied DomainLUB. This is certified support for one-supremum/chain refinements, not a certificate for every resulting choice theorem."
+    },
+    {
+      "declaration": "Classicism.Research.Choice.choice_completeness_actuality_sharp.derivable",
+      "source": "ChoiceActuality.lean:198",
+      "scope": "Unboxed RC_(t,t) + BC_tt => Actuality."
+    },
+    {
+      "declaration": "Classicism.Research.Choice.choice_completeness_transversal_sharp.derivable",
+      "source": "ChoiceActuality.lean:243",
+      "scope": "For any admitted sigma: unboxed RC_(t,t) + BC_tt + RC_(sigma t,sigma) => TC_sigma. This uses Actuality and Transversal; it is not the direct RC_(sigma t,sigma)+BC_(sigma t) theorem."
+    }
+  ],
+  "audit_evidence": {
+    "direct_log": "research/2026-10-22/lean-formalization/logs/runs/20261023T052925263849Z-33a41f2b/Classicism_Results_Research_ChoiceTransversalCertificates.log",
+    "direct_log_summary": "9/9 gate checks, 9/9 inside R, all 9 object-language translations passed. The parent run later timed out on Actuality; final accepted aggregate 2d579847 reused the accepted direct modules and completed successfully.",
+    "countable_log": "research/2026-10-22/lean-formalization/logs/runs/20261023T052925263849Z-33a41f2b/Classicism_Results_Research_ChoiceCountableCertificates.log",
+    "aggregate_axiom_log": "research/2026-10-22/lean-formalization/logs/runs/20261023T053945495916Z-2d579847/Classicism_Results_Research_ChoiceSectionsRetractionsChecks.log",
+    "translated_declaration_axioms": "The displayed .derivable declarations report [propext, Quot.sound], with no sorryAx or Classical.choice. These are metalogical proof-object dependencies; they do not add Fregean/Functionality axioms to the object theory.",
+    "stale_note": "research/2026-10-22/lean-formalization/choice-status.md:209ff still calls these prepared. It is superseded by the successful aggregate and matching hashes."
+  },
+  "research_source_hashes": [
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/ChoiceTransversal.lean",
+      "sha256": "61750169b60a567a55745cc597dcb51c6e706d2678c8783df938042d45a40cae",
+      "accepted_exit_code": 0,
+      "canonical_live_source_present": false
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/ChoiceTransversalCertificates.lean",
+      "sha256": "4abfdecc34c4d558ef0b281ac3f5e244132b6ac18d91ba344b8d07dd1693ed5c",
+      "accepted_exit_code": 0,
+      "canonical_live_source_present": false
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/ChoiceCountable.lean",
+      "sha256": "a89c78f4c95df600629e04a7a8332c161a2cc06705865d0e25b53a99788d4a63",
+      "accepted_exit_code": 0,
+      "canonical_live_source_present": false
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/ChoiceCountableCertificates.lean",
+      "sha256": "6d40f6f12591727e18041d407bcb60b44b8b87b00b3ee6f749695e58dfbc5b5f",
+      "accepted_exit_code": 0,
+      "canonical_live_source_present": false
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/ChoiceChains.lean",
+      "sha256": "78f9778093b019e3effbfb93f0aa468cbbf3373b16aa4e46f372443170caaf14",
+      "accepted_exit_code": 0,
+      "canonical_live_source_present": false
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/ChoiceChainsCertificates.lean",
+      "sha256": "146157b141c575c69a9849f9e57601bf4d408cff1ab16d98b6ff77764dfb6014",
+      "accepted_exit_code": 0,
+      "canonical_live_source_present": false
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/ChoiceFixedPoint.lean",
+      "sha256": "b1260db321e998c8deb5acd1799301871c58448222e7d6fcacdffbba44acd883",
+      "accepted_exit_code": 0,
+      "canonical_live_source_present": true
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/ChoiceFixedPointCertificates.lean",
+      "sha256": "2040e89953d7c1338d8e38dbf20c53beb6cabcef1f10edca5b5f2f3dc4cbabcc",
+      "accepted_exit_code": 0,
+      "canonical_live_source_present": false
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/ChoiceActuality.lean",
+      "sha256": "e63bba0e1e0a490bb8f1c4b3564e3041c3721e18a1eb223d5f4532b59370a3c9",
+      "accepted_exit_code": 0,
+      "canonical_live_source_present": true
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/ChoiceActualityCertificates.lean",
+      "sha256": "9e4193ed4d140973dffe07dfba7d87c786d8776fd6edf6d640e37b08a731e209",
+      "accepted_exit_code": 0,
+      "canonical_live_source_present": true
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/ChoiceSectionsRetractionsChecks.lean",
+      "sha256": "02c634fe46f4f69da1427b383cae0331edd65ae7a61e3b9f6f338f478d58c94f",
+      "accepted_exit_code": 0,
+      "canonical_live_source_present": false
+    }
+  ],
+  "not_yet_exactly_certified": [
+    "Direct point-output strengthening RC_(sigma t,sigma)+BC_(sigma t)=>TC_sigma: no matching general guarded-transversal declaration located.",
+    "Direct ChainBC or internally well-ordered-chain-completeness premise variants: supporting canonical-chain and supremum lemmas pass, but no exact end theorem located.",
+    "Point-output RC_(sigma t,sigma)+CBC_(kappa,sigma t)+CCC_(kappa,sigma t)=>TC_sigma: not covered by the certified property-output countable corollary.",
+    "Final necessary-partiality purification: no matching exact certificate located in the choice sources."
+  ],
+  "canonical_generated_record": {
+    "name": "Classicism.Statements.relational_choice_and_boolean_completeness_imply_transversal_choice",
+    "statement": "For every admitted signature Sig and object-theory axiom set Ax: (Ax entails P.RelationalChoice.schemaIn) -> (Ax entails P.BooleanCompleteness.schemaIn) -> (Ax entails P.TransversalChoice.schemaIn).",
+    "current_status": "Ordinary record proved; certificate lean: stated. Search of canonical and research Lean sources finds the generated definition but no theorem inhabiting this exact generated record.",
+    "canonical_direct_source_gap": "ChoiceTransversal/Certificates, ChoiceCountable/Certificates, and ChoiceChains/Certificates are absent from canonical live Results/Research. They are retained in the frozen submission; direct certificate source agrees with current research source.",
+    "simplest_missing_bridge": "Add a generated-record wrapper composing Integration.Map.relational_choice_and_boolean_completeness_imply_actuality, Map.completeness_and_actuality_imply_weak_rigid_comprehension, and Map.relational_choice_and_weak_rigid_comprehension_imply_transversal_choice, retaining the original hc and hb arguments. This is statement plumbing, not a new mathematical gap; the wrapper still requires compilation and the exact-record audit.",
+    "candidate_body_not_compiled": "by\n  intro Sig hSig Ax hc hb\n  exact Classicism.Map.relational_choice_and_weak_rigid_comprehension_imply_transversal_choice hSig Ax hc\n    (Classicism.Map.completeness_and_actuality_imply_weak_rigid_comprehension hSig Ax hb\n      (Classicism.Integration.Map.relational_choice_and_boolean_completeness_imply_actuality hSig Ax hc hb))",
+    "direct_route_alternative": "Import the preserved direct dependency closure, assemble #classicism_entails local_choice_completeness_transversal, lift the pure entailment to schemaIn for arbitrary signatures, and inhabit the same generated statement. This preserves a direct exact-record certificate but is more integration work than the composition wrapper."
+  },
+  "accepted_canonical_actuality_integration": {
+    "manifest": "logical-maps/research/2026-10-23/integration/checks/20261023T144548834911Z-b83f34de.json",
+    "sha256": "ddacf38aac3b267d5c1856889b26c1c45bbebf168e953152797659b81393c8ee",
+    "run_id": "20261023T144548834911Z-b83f34de",
+    "state": "complete",
+    "exit_code": 0,
+    "scope": "Focused audit passed 13 generated propositions (7 results and 6 model verdicts), including the RC+BC=>Actuality map wrapper. It does not include RC+BC=>TC.",
+    "current_relevant_hashes": [
+      {
+        "path": "topics/classicism/lean/Classicism/Results/Integration/ChoiceActualitySchemas.lean",
+        "sha256": "f3ebd395b325892216ffd7ac49be15718ad584a518a679984333a0b29e6466dd"
+      },
+      {
+        "path": "topics/classicism/lean/Classicism/Results/Integration/Map.lean",
+        "sha256": "bb8268d04be5959699d6cfc7cc0818de9a292e224df6febf50e340c89aea957e"
+      },
+      {
+        "path": "topics/classicism/lean/Classicism/Statements.lean",
+        "sha256": "e4571dba06d2377d7396f727ba9b843925094538eb0681ec14c1c48f691eae27"
+      }
+    ],
+    "scope_caveat": "Classicism.Map is not in this focused manifest; its older component records have their own verified metadata. This receipt does not pretend that this focused run re-audited every old component."
+  },
+  "validation": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 scripts/pmap.py validate",
+    "log": "/tmp/direct-transversal-coverage-validation.log",
+    "outcome": "Passed after receipt creation; 132 principles, 448 results, 162 models. Final receipt revalidated below.",
+    "compiler_run": false
+  }
+}

@@ -1,0 +1,129 @@
+Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.raw_translate_correct (M : Type)
+  [Classicism.Meta.ChoiceFirstOrder.MathlibBridge.language.Structure M] {Γ : Classicism.Meta.Ctx}
+  (φ : Classicism.Meta.ChoiceFirstOrder.SmallFormula Γ)
+  (g : Classicism.Meta.IEnv (Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.D M) Γ) :
+  Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.realizeAt M
+      (Classicism.Meta.ChoiceFirstOrder.MathlibBridge.translate φ) g ↔
+    Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.RawRealize M φ g
+Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.raw_sentence_correct (M : Type)
+  [Classicism.Meta.ChoiceFirstOrder.MathlibBridge.language.Structure M]
+  (φ : Classicism.Meta.ChoiceFirstOrder.SmallFormula []) :
+  M ⊨ Classicism.Meta.ChoiceFirstOrder.MathlibBridge.translate φ ↔
+    Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.RawRealize M φ Classicism.Meta.IEnv.nil
+Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.rawRealize_recoverStructure (M : Type)
+  [Classicism.Meta.ChoiceFirstOrder.MathlibBridge.language.Structure M]
+  (he : Nonempty (Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.D M Classicism.Meta.Ty.e))
+  (hx :
+    ∀ (ρ : Classicism.Meta.RTy), Function.Injective (Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.rel M ρ))
+  {Γ : Classicism.Meta.Ctx} (φ : Classicism.Meta.ChoiceFirstOrder.SmallFormula Γ)
+  (g : Classicism.Meta.IEnv (Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.D M) Γ) :
+  Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.RawRealize M φ g ↔
+    Classicism.Meta.ChoiceFirstOrder.SmallFormula.Realize
+      (Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.recoverStructure M he hx) φ g
+Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.sentence_correct (M : Type)
+  [Classicism.Meta.ChoiceFirstOrder.MathlibBridge.language.Structure M]
+  (he : Nonempty (Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.D M Classicism.Meta.Ty.e))
+  (hx :
+    ∀ (ρ : Classicism.Meta.RTy), Function.Injective (Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.rel M ρ))
+  (p : Classicism.Meta.Sentence Classicism.Meta.Signature.pure) :
+  M ⊨ Classicism.Meta.ChoiceFirstOrder.MathlibBridge.sentence p ↔
+    (Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.recoverStructure M he hx).model.HoldsSentence p
+Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.axiomSentence
+  (i : Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.AxiomIndex) :
+  Classicism.Meta.ChoiceFirstOrder.MathlibBridge.language.Sentence
+Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.theory_countable :
+  Set.Countable Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.theory
+Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.nonempty_sentence_correct (M : Type)
+  [Classicism.Meta.ChoiceFirstOrder.MathlibBridge.language.Structure M] :
+  M ⊨ Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.axiomSentence (Sum.inl ()) ↔
+    Nonempty (Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.D M Classicism.Meta.Ty.e)
+Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.extensionality_sentence_correct (M : Type)
+  [Classicism.Meta.ChoiceFirstOrder.MathlibBridge.language.Structure M] (ρ : Classicism.Meta.RTy) :
+  M ⊨ Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.axiomSentence (Sum.inr (Sum.inl ρ)) ↔
+    Function.Injective (Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.rel M ρ)
+Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.comprehension_sentence_correct (M : Type)
+  [Classicism.Meta.ChoiceFirstOrder.MathlibBridge.language.Structure M] (Γ : Classicism.Meta.Ctx)
+  (ρ : Classicism.Meta.RTy) (φ : Classicism.Meta.ChoiceFirstOrder.SmallFormula (ρ.args ++ Γ)) :
+  M ⊨ Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.axiomSentence (Sum.inr (Sum.inr ⟨Γ, ⟨ρ, φ⟩⟩)) ↔
+    ∀ (g : Classicism.Meta.IEnv (Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.D M) Γ),
+      ∃ X,
+        ∀ (a : Classicism.Meta.ChoiceFirstOrder.Args (Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.D M) ρ),
+          Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.rel M ρ X a ↔
+            Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.RawRealize M φ
+              (Classicism.Meta.ChoiceFirstOrder.appendEnv (Classicism.Meta.ChoiceFirstOrder.argsEnv ρ a) g)
+Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.recovered_smallComprehension (M : Type)
+  [Classicism.Meta.ChoiceFirstOrder.MathlibBridge.language.Structure M]
+  (hT : M ⊨ Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.theory) :
+  Classicism.Meta.ChoiceFirstOrder.SmallComprehension
+    (Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.recoveredStructure M hT)
+Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.recovered_isModel (M : Type)
+  [Classicism.Meta.ChoiceFirstOrder.MathlibBridge.language.Structure M]
+  (hT : M ⊨ Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.theory) :
+  (Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.recoveredStructure M hT).model.IsModel
+Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.recovered_sentence_correct (M : Type)
+  [Classicism.Meta.ChoiceFirstOrder.MathlibBridge.language.Structure M]
+  (hT : M ⊨ Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.theory)
+  (p : Classicism.Meta.Sentence Classicism.Meta.Signature.pure) :
+  M ⊨ Classicism.Meta.ChoiceFirstOrder.MathlibBridge.sentence p ↔
+    (Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.recoveredStructure M hT).model.HoldsSentence p
+Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.recovered_c_theorem_holds (M : Type)
+  [Classicism.Meta.ChoiceFirstOrder.MathlibBridge.language.Structure M]
+  (hT : M ⊨ Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.theory)
+  {p : Classicism.Meta.Sentence Classicism.Meta.Signature.pure} (hp : Classicism.Meta.C.Theorem p) :
+  (Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.recoveredStructure M hT).model.HoldsSentence p
+'Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.profile_correct' depends on axioms: [propext]
+'Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.variable_correct' depends on axioms: [propext]
+'Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.guardedAll_correct' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.guardedEx_correct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.allArgs_correct' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.exArgs_correct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.raw_translate_correct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.raw_sentence_correct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.rawRealize_recoverStructure' depends on axioms: [propext]
+'Classicism.Meta.ChoiceFirstOrder.MathlibBridge.Recovery.sentence_correct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.raw_rename_correct' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.raw_insertWitness_correct' depends on axioms: [propext,
+ Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.axiomIndex_countable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.theory_countable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.nonempty_sentence_correct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.extensionality_sentence_correct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.comprehension_sentence_correct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.model_nonempty' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.model_extensional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.recovered_smallComprehension' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.recovered_isModel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.recovered_sentence_correct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.ChoiceFirstOrder.MathlibBridge.AxiomTheory.recovered_c_theorem_holds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,17 @@
+import Classicism.Results.Research.FregeArithmeticGraphsCertificates
+import Classicism.Results.Research.ActualityCoreArithmetic
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Translate
+
+#classicism_audit Classicism.Results.Research.ActualityCoreArithmetic
+#classicism_types_audit Classicism.Results.Research.ActualityCoreArithmetic
+set_option maxHeartbeats 0 in
+#classicism_derive_audit Classicism.Results.Research.ActualityCoreArithmetic
+
+#print axioms Classicism.Research.ActualityCoreArithmetic.binaryPush_admitted.derivable
+#print axioms Classicism.Research.ActualityCoreArithmetic.addition_iff.derivable
+#print axioms Classicism.Research.ActualityCoreArithmetic.multiplication_iff.derivable
+#print axioms Classicism.Research.ActualityCoreArithmetic.core_add_functional.derivable
+#print axioms Classicism.Research.ActualityCoreArithmetic.core_mul_functional.derivable
+#print axioms Classicism.Research.ActualityCoreArithmetic.order_iff.derivable

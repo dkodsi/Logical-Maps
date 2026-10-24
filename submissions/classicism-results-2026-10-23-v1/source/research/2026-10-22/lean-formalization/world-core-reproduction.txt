@@ -1,0 +1,10 @@
+# Run from the bundle root. Use the common globally locked runner only.
+python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.ActualityCoreGraphsCertificates Classicism.Results.Research.ActualityCoreBridgeCertificates --timeout 180 --lock-wait 300
+python3 research/2026-10-22/lean-formalization/check_module.py research/2026-10-22/lean-formalization/world-core-checks/ActualityCoreGraphsDerivations.lean research/2026-10-22/lean-formalization/world-core-checks/ActualityCoreBridgeDerivations.lean --timeout 180 --lock-wait 300
+python3 research/2026-10-22/lean-formalization/check_module.py Classicism.Results.Research.ActualityCoreApplication Classicism.Results.Research.ActualityCoreSubstitution --timeout 180 --lock-wait 300
+python3 scripts/pmap.py validate
+
+# Exit 75 means the shared compiler is busy; it is not a proof failure.
+# Exit 3 means the captured and live sources differ; recheck the changed source.
+# The ordinary syntactic metatheorems in the recursive files are distinguished
+# from the generated C derivations in ActualityCoreInterpretationRules.

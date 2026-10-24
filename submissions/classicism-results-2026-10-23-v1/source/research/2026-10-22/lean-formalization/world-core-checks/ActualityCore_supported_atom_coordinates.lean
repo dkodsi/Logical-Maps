@@ -1,0 +1,9 @@
+import Classicism.Results.Research.ActualityCore
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Translate
+
+#classicism_check Classicism.Research.ActualityCore.supported_atom_coordinates
+#classicism_types Classicism.Research.ActualityCore.supported_atom_coordinates
+#classicism_derive Classicism.Research.ActualityCore.supported_atom_coordinates
+#print axioms Classicism.Research.ActualityCore.supported_atom_coordinates.derivable

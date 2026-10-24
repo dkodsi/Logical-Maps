@@ -1,0 +1,1048 @@
+{
+  "status": "prepared-source-preservation-only; no new certificate acceptance",
+  "scope": "One partially certified probability development. Preserve the current sources for the remaining 29 of 32 translations and the additional prepared unverified modules. Source presence is not successful translation or compiler evidence.",
+  "pending_translations": {
+    "Classicism.Results.Research.AtomicProbabilityConcreteRealAdditionCertificates": [
+      "Classicism.Research.ProbabilityConcreteReals.realAdd_below",
+      "Classicism.Research.ProbabilityConcreteReals.realAdd_supported",
+      "Classicism.Research.ProbabilityConcreteReals.member_below_nonmember",
+      "Classicism.Research.ProbabilityConcreteReals.realAdd_in_field",
+      "Classicism.Research.ProbabilityConcreteReals.realAdd_comm",
+      "Classicism.Research.ProbabilityConcreteReals.realAdd_assoc",
+      "Classicism.Research.ProbabilityConcreteReals.realAdd_mono",
+      "Classicism.Research.ProbabilityConcreteReals.realAdd_zero_right",
+      "Classicism.Research.ProbabilityConcreteReals.realAdd_zero_left",
+      "Classicism.Research.ProbabilityConcreteReals.realAdd_sup_left"
+    ],
+    "Classicism.Results.Research.AtomicProbabilityNumericAdditionCertificates": [
+      "Classicism.Research.ProbabilityNumericOperations.plus_assoc",
+      "Classicism.Research.ProbabilityNumericOperations.plus_left_comm",
+      "Classicism.Research.ProbabilityNumericOperations.plus_cancel_left",
+      "Classicism.Research.ProbabilityNumericOperations.plus_cancel_right",
+      "Classicism.Research.ProbabilityNumericOperations.plus_eq_zero"
+    ],
+    "Classicism.Results.Research.AtomicProbabilityNumericMultiplicationCertificates": [
+      "Classicism.Research.ProbabilityNumericOperations.times_zero_left",
+      "Classicism.Research.ProbabilityNumericOperations.times_suc_left",
+      "Classicism.Research.ProbabilityNumericOperations.times_comm",
+      "Classicism.Research.ProbabilityNumericOperations.times_add",
+      "Classicism.Research.ProbabilityNumericOperations.add_times",
+      "Classicism.Research.ProbabilityNumericOperations.times_assoc",
+      "Classicism.Research.ProbabilityNumericOperations.one_numbers",
+      "Classicism.Research.ProbabilityNumericOperations.one_ne_zero",
+      "Classicism.Research.ProbabilityNumericOperations.times_one_right",
+      "Classicism.Research.ProbabilityNumericOperations.times_one_left",
+      "Classicism.Research.ProbabilityNumericOperations.times_eq_zero",
+      "Classicism.Research.ProbabilityNumericOperations.times_ne_zero",
+      "Classicism.Research.ProbabilityNumericOperations.times_cancel_left",
+      "Classicism.Research.ProbabilityNumericOperations.times_cancel_right"
+    ]
+  },
+  "additional_prepared_unverified_modules": [
+    "Classicism.Results.Research.AtomicProbabilityCantorCertificates",
+    "Classicism.Results.Research.AtomicProbabilityConcreteRealInverseCertificates",
+    "Classicism.Results.Research.AtomicProbabilityConcreteRealsCertificates",
+    "Classicism.Results.Research.AtomicProbabilityCutArithmeticCertificates",
+    "Classicism.Results.Research.AtomicProbabilityCutCertificates",
+    "Classicism.Results.Research.AtomicProbabilityCutCrossingCertificates",
+    "Classicism.Results.Research.AtomicProbabilityCutNegationCertificates",
+    "Classicism.Results.Research.AtomicProbabilityFractionAdditiveCertificates",
+    "Classicism.Results.Research.AtomicProbabilityFractionArchimedeanCertificates",
+    "Classicism.Results.Research.AtomicProbabilityFractionArithmeticCertificates",
+    "Classicism.Results.Research.AtomicProbabilityFractionDensityCertificates",
+    "Classicism.Results.Research.AtomicProbabilityFractionInverseCertificates",
+    "Classicism.Results.Research.AtomicProbabilityFractionMultiplicativeCertificates",
+    "Classicism.Results.Research.AtomicProbabilityFractionOrderCertificates",
+    "Classicism.Results.Research.AtomicProbabilityFractionsCertificates",
+    "Classicism.Results.Research.AtomicProbabilityLeastNumberCertificates",
+    "Classicism.Results.Research.AtomicProbabilityNumericComparisonCertificates",
+    "Classicism.Results.Research.AtomicProbabilityRationalAdditiveCertificates",
+    "Classicism.Results.Research.AtomicProbabilityRationalNegationCertificates",
+    "Classicism.Results.Research.AtomicProbabilityRationalOrderCertificates",
+    "Classicism.Results.Research.AtomicProbabilityRationalTranslationCertificates",
+    "Classicism.Results.Research.AtomicProbabilitySignedRationalsCertificates"
+  ],
+  "targets": [
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityConcreteRealAdditionCertificates",
+      "inventory_source_sha256": "91d497bfce1623c534e8ba55c4109a949b906bd68b9c9aedf4e9318f7551069f",
+      "preserved_source": "evidence/source-store/91d497bfce1623c534e8ba55c4109a949b906bd68b9c9aedf4e9318f7551069f/Classicism/Results/Research/AtomicProbabilityConcreteRealAdditionCertificates.lean",
+      "preserved_source_sha256": "91d497bfce1623c534e8ba55c4109a949b906bd68b9c9aedf4e9318f7551069f",
+      "status": "prepared; use separate exact receipts for any accepted subtargets"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericAdditionCertificates",
+      "inventory_source_sha256": "691901f64367372c5df0ff7dc234fb08a792957013a30e06e44326981b2cb47f",
+      "preserved_source": "evidence/source-store/3cb4cf64dda94ba8c88437c18785d198554f01f8c1f8178c72387f2a6191b378/Classicism/Results/Research/AtomicProbabilityNumericAdditionCertificates.lean",
+      "preserved_source_sha256": "3cb4cf64dda94ba8c88437c18785d198554f01f8c1f8178c72387f2a6191b378",
+      "status": "prepared; use separate exact receipts for any accepted subtargets"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericMultiplicationCertificates",
+      "inventory_source_sha256": "12aa71b27b36272aec7af2f731c451e8ac7520f51910709b65a5d4b04f14a75a",
+      "preserved_source": "evidence/source-store/12aa71b27b36272aec7af2f731c451e8ac7520f51910709b65a5d4b04f14a75a/Classicism/Results/Research/AtomicProbabilityNumericMultiplicationCertificates.lean",
+      "preserved_source_sha256": "12aa71b27b36272aec7af2f731c451e8ac7520f51910709b65a5d4b04f14a75a",
+      "status": "prepared; use separate exact receipts for any accepted subtargets"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityCantorCertificates",
+      "inventory_source_sha256": "d9241952bb57239b49639de68201a21293c3efdbd67d693eae7c20c088360df1",
+      "preserved_source": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCantorCertificates.lean",
+      "preserved_source_sha256": "d9241952bb57239b49639de68201a21293c3efdbd67d693eae7c20c088360df1",
+      "status": "prepared; use separate exact receipts for any accepted subtargets"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityConcreteRealInverseCertificates",
+      "inventory_source_sha256": "b5233eedc35ead2ee60b869f268f5643c93342a6b73093b6b3d2bd02cdc027d4",
+      "preserved_source": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityConcreteRealInverseCertificates.lean",
+      "preserved_source_sha256": "b5233eedc35ead2ee60b869f268f5643c93342a6b73093b6b3d2bd02cdc027d4",
+      "status": "prepared; use separate exact receipts for any accepted subtargets"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityConcreteRealsCertificates",
+      "inventory_source_sha256": "8db89003fe8451e12a0d9325b2742b57f26fdc22dd0b339ef4bfb7e6924ca6e9",
+      "preserved_source": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityConcreteRealsCertificates.lean",
+      "preserved_source_sha256": "8db89003fe8451e12a0d9325b2742b57f26fdc22dd0b339ef4bfb7e6924ca6e9",
+      "status": "prepared; use separate exact receipts for any accepted subtargets"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityCutArithmeticCertificates",
+      "inventory_source_sha256": "eec6075570b4bc158927e4f242d752fa087e59247d74b9532f002e85995c3ae6",
+      "preserved_source": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCutArithmeticCertificates.lean",
+      "preserved_source_sha256": "eec6075570b4bc158927e4f242d752fa087e59247d74b9532f002e85995c3ae6",
+      "status": "prepared; use separate exact receipts for any accepted subtargets"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityCutCertificates",
+      "inventory_source_sha256": "dd2012bb88b6cce12157d1bddb945a741c753b9532f236689cbff068c67a6858",
+      "preserved_source": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCutCertificates.lean",
+      "preserved_source_sha256": "dd2012bb88b6cce12157d1bddb945a741c753b9532f236689cbff068c67a6858",
+      "status": "prepared; use separate exact receipts for any accepted subtargets"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityCutCrossingCertificates",
+      "inventory_source_sha256": "a7bf5dd9b45e69b9b6f472f8ea6fb3a057ac3df82b9f0f23fb9b93c0056f34f4",
+      "preserved_source": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCutCrossingCertificates.lean",
+      "preserved_source_sha256": "a7bf5dd9b45e69b9b6f472f8ea6fb3a057ac3df82b9f0f23fb9b93c0056f34f4",
+      "status": "prepared; use separate exact receipts for any accepted subtargets"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityCutNegationCertificates",
+      "inventory_source_sha256": "e5e28c8ceda8a3ffbf92a92aab46b203aeabd0721b0d92cedbe05de3e2668f5d",
+      "preserved_source": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCutNegationCertificates.lean",
+      "preserved_source_sha256": "e5e28c8ceda8a3ffbf92a92aab46b203aeabd0721b0d92cedbe05de3e2668f5d",
+      "status": "prepared; use separate exact receipts for any accepted subtargets"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionAdditiveCertificates",
+      "inventory_source_sha256": "db3cb9790b14e751ae71148e01a5d71f64a4f3a5b4191504b1b8ddec06c40123",
+      "preserved_source": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionAdditiveCertificates.lean",
+      "preserved_source_sha256": "db3cb9790b14e751ae71148e01a5d71f64a4f3a5b4191504b1b8ddec06c40123",
+      "status": "prepared; use separate exact receipts for any accepted subtargets"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionArchimedeanCertificates",
+      "inventory_source_sha256": "4107ecafbc18798fc239d2c9936c81c7880198efc15d2e37f12d35071d9894f1",
+      "preserved_source": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionArchimedeanCertificates.lean",
+      "preserved_source_sha256": "4107ecafbc18798fc239d2c9936c81c7880198efc15d2e37f12d35071d9894f1",
+      "status": "prepared; use separate exact receipts for any accepted subtargets"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionArithmeticCertificates",
+      "inventory_source_sha256": "a186648755c6d9da7f8ded36dd53e9c16967dec21f69b373bd4fe2bb7c95eb6c",
+      "preserved_source": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionArithmeticCertificates.lean",
+      "preserved_source_sha256": "a186648755c6d9da7f8ded36dd53e9c16967dec21f69b373bd4fe2bb7c95eb6c",
+      "status": "prepared; use separate exact receipts for any accepted subtargets"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionDensityCertificates",
+      "inventory_source_sha256": "a756eef2ffaa60438fb837ff35058f09e59d1f594dd4390c2bb6bd45d1cc9621",
+      "preserved_source": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionDensityCertificates.lean",
+      "preserved_source_sha256": "a756eef2ffaa60438fb837ff35058f09e59d1f594dd4390c2bb6bd45d1cc9621",
+      "status": "prepared; use separate exact receipts for any accepted subtargets"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionInverseCertificates",
+      "inventory_source_sha256": "afba3aa59e9250ecd9257afa605d92a5d7aa08d8306c50b6d2d60cbe7778d5cc",
+      "preserved_source": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionInverseCertificates.lean",
+      "preserved_source_sha256": "afba3aa59e9250ecd9257afa605d92a5d7aa08d8306c50b6d2d60cbe7778d5cc",
+      "status": "prepared; use separate exact receipts for any accepted subtargets"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionMultiplicativeCertificates",
+      "inventory_source_sha256": "2d740c12018fadc9efc156f0377061d0ef2a98cb32550e207f00e158bbf9c752",
+      "preserved_source": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionMultiplicativeCertificates.lean",
+      "preserved_source_sha256": "2d740c12018fadc9efc156f0377061d0ef2a98cb32550e207f00e158bbf9c752",
+      "status": "prepared; use separate exact receipts for any accepted subtargets"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionOrderCertificates",
+      "inventory_source_sha256": "5d80f53f6db4fd3e93f8d76f55a0bcff48b69101694f0aec323d0e8a501d0705",
+      "preserved_source": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionOrderCertificates.lean",
+      "preserved_source_sha256": "5d80f53f6db4fd3e93f8d76f55a0bcff48b69101694f0aec323d0e8a501d0705",
+      "status": "prepared; use separate exact receipts for any accepted subtargets"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionsCertificates",
+      "inventory_source_sha256": "e53db87c9cbfb50e497d045aeb95a37349cc3093f7c72337cc32008fd0ad7313",
+      "preserved_source": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionsCertificates.lean",
+      "preserved_source_sha256": "e53db87c9cbfb50e497d045aeb95a37349cc3093f7c72337cc32008fd0ad7313",
+      "status": "prepared; use separate exact receipts for any accepted subtargets"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityLeastNumberCertificates",
+      "inventory_source_sha256": "62ed8450b219b638888b81bb92728f9c028576fc2ab88b31ecde0327ee11b842",
+      "preserved_source": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityLeastNumberCertificates.lean",
+      "preserved_source_sha256": "62ed8450b219b638888b81bb92728f9c028576fc2ab88b31ecde0327ee11b842",
+      "status": "prepared; use separate exact receipts for any accepted subtargets"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericComparisonCertificates",
+      "inventory_source_sha256": "90fb15550ecc9d6760b99c90686fe147b9d4e3957f105a0bc970e8a45ccbc380",
+      "preserved_source": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericComparisonCertificates.lean",
+      "preserved_source_sha256": "90fb15550ecc9d6760b99c90686fe147b9d4e3957f105a0bc970e8a45ccbc380",
+      "status": "prepared; use separate exact receipts for any accepted subtargets"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityRationalAdditiveCertificates",
+      "inventory_source_sha256": "7f8b1bdb31f395b11d67804cb236297f221d14a40b0c3efd5dd4e4d80467a0ed",
+      "preserved_source": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalAdditiveCertificates.lean",
+      "preserved_source_sha256": "7f8b1bdb31f395b11d67804cb236297f221d14a40b0c3efd5dd4e4d80467a0ed",
+      "status": "prepared; use separate exact receipts for any accepted subtargets"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityRationalNegationCertificates",
+      "inventory_source_sha256": "3f3be7b86b5ed0dd807430304142ff8b13f3390833ae943d90bb493bb0c85489",
+      "preserved_source": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalNegationCertificates.lean",
+      "preserved_source_sha256": "3f3be7b86b5ed0dd807430304142ff8b13f3390833ae943d90bb493bb0c85489",
+      "status": "prepared; use separate exact receipts for any accepted subtargets"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityRationalOrderCertificates",
+      "inventory_source_sha256": "d76d367610844ebf23ce43c50ba9f2b61441e77c795e56c5e61a5f5255e5c3e8",
+      "preserved_source": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalOrderCertificates.lean",
+      "preserved_source_sha256": "d76d367610844ebf23ce43c50ba9f2b61441e77c795e56c5e61a5f5255e5c3e8",
+      "status": "prepared; use separate exact receipts for any accepted subtargets"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityRationalTranslationCertificates",
+      "inventory_source_sha256": "379ea994dea939dbf01320a98be66bd243c77ffa69734f4afee67cfc123bc483",
+      "preserved_source": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalTranslationCertificates.lean",
+      "preserved_source_sha256": "379ea994dea939dbf01320a98be66bd243c77ffa69734f4afee67cfc123bc483",
+      "status": "prepared; use separate exact receipts for any accepted subtargets"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilitySignedRationalsCertificates",
+      "inventory_source_sha256": "59f17bea500ad192419669673db9b34ad8fbda06a54152ca7ccacf24dd4c2c4a",
+      "preserved_source": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilitySignedRationalsCertificates.lean",
+      "preserved_source_sha256": "59f17bea500ad192419669673db9b34ad8fbda06a54152ca7ccacf24dd4c2c4a",
+      "status": "prepared; use separate exact receipts for any accepted subtargets"
+    }
+  ],
+  "local_source_closure": [
+    {
+      "module": "Classicism.Booleanism",
+      "path": "source/topics/classicism/lean/Classicism/Booleanism.lean",
+      "sha256": "0537132563704170d7ec4dc14755690639a9a784428650fa7bf04067acc0628f",
+      "origin": "topics/classicism/lean/Classicism/Booleanism.lean"
+    },
+    {
+      "module": "Classicism.Cardinality",
+      "path": "source/topics/classicism/lean/Classicism/Cardinality.lean",
+      "sha256": "5e627927356fc561dfd5bfacd9935c558c7760678df56c0158820a7e8626703f",
+      "origin": "topics/classicism/lean/Classicism/Cardinality.lean"
+    },
+    {
+      "module": "Classicism.Comprehension",
+      "path": "source/topics/classicism/lean/Classicism/Comprehension.lean",
+      "sha256": "570435f620ec40a8c0f359ce546c26933cf3acfc6e7c8da81fa805170f9ab844",
+      "origin": "topics/classicism/lean/Classicism/Comprehension.lean"
+    },
+    {
+      "module": "Classicism.Core",
+      "path": "source/topics/classicism/lean/Classicism/Core.lean",
+      "sha256": "ed0b1189f3fe3f02ce7011058273c0915bb511e5fd30ae33340e7ae0c4afb81d",
+      "origin": "topics/classicism/lean/Classicism/Core.lean"
+    },
+    {
+      "module": "Classicism.Equivalence",
+      "path": "source/topics/classicism/lean/Classicism/Equivalence.lean",
+      "sha256": "257006775f36a2eacca652360f7ff8fb9dc403b2b0f4d71ff6a5543e5a939a76",
+      "origin": "topics/classicism/lean/Classicism/Equivalence.lean"
+    },
+    {
+      "module": "Classicism.Identities",
+      "path": "source/topics/classicism/lean/Classicism/Identities.lean",
+      "sha256": "3629e17eb7ebf28d47f0d1a2450886bec05b39bf73ff52eff99a88a12579c3b3",
+      "origin": "topics/classicism/lean/Classicism/Identities.lean"
+    },
+    {
+      "module": "Classicism.Lattice",
+      "path": "source/topics/classicism/lean/Classicism/Lattice.lean",
+      "sha256": "43231f5d30bab05bc0d11927e1ce09f17ec384875e0aeb1cb72335e36f046070",
+      "origin": "topics/classicism/lean/Classicism/Lattice.lean"
+    },
+    {
+      "module": "Classicism.Modal",
+      "path": "source/topics/classicism/lean/Classicism/Modal.lean",
+      "sha256": "7706449a7246e0be0772a33dcda61ab010686bf5bd64c45017425bf39ed0cf42",
+      "origin": "topics/classicism/lean/Classicism/Modal.lean"
+    },
+    {
+      "module": "Classicism.Order",
+      "path": "source/topics/classicism/lean/Classicism/Order.lean",
+      "sha256": "4755de0b5eb272e541ce89e84078c4d80c3ae9a332a6910b395c73b78a2b4730",
+      "origin": "topics/classicism/lean/Classicism/Order.lean"
+    },
+    {
+      "module": "Classicism.Paper",
+      "path": "source/topics/classicism/lean/Classicism/Paper.lean",
+      "sha256": "3348a9c2bf786ef15a9a2a0341dce82e9a419e81a4c7b7486d8c8cba8fbdc895",
+      "origin": "topics/classicism/lean/Classicism/Paper.lean"
+    },
+    {
+      "module": "Classicism.Pointwise",
+      "path": "source/topics/classicism/lean/Classicism/Pointwise.lean",
+      "sha256": "78b858a9d33feb587976879190bdf739afdc0e564c4e6dae5508f8f2c5e15a16",
+      "origin": "topics/classicism/lean/Classicism/Pointwise.lean"
+    },
+    {
+      "module": "Classicism.Principles",
+      "path": "source/topics/classicism/lean/Classicism/Principles.lean",
+      "sha256": "747fc5fbde92a7dd1432aaaafee00437398594ae06dbc8ec2040690fae443049",
+      "origin": "topics/classicism/lean/Classicism/Principles.lean"
+    },
+    {
+      "module": "Classicism.Principles.Base",
+      "path": "source/topics/classicism/lean/Classicism/Principles/Base.lean",
+      "sha256": "d0c930dafb5decf6e747b5a05215cbff099d4efd9e69c607f01a54d5c5a7b96a",
+      "origin": "topics/classicism/lean/Classicism/Principles/Base.lean"
+    },
+    {
+      "module": "Classicism.Principles.Choice",
+      "path": "source/topics/classicism/lean/Classicism/Principles/Choice.lean",
+      "sha256": "a8f7e35f1a11805edc2b116b6af002bd5b1d0708b93aaea16781cff519687319",
+      "origin": "topics/classicism/lean/Classicism/Principles/Choice.lean"
+    },
+    {
+      "module": "Classicism.Principles.Coarse",
+      "path": "source/topics/classicism/lean/Classicism/Principles/Coarse.lean",
+      "sha256": "5c3aedc0a4117e7c214d186b384c42b8da6a17906fb7a76a75cb625f85b0a9b2",
+      "origin": "topics/classicism/lean/Classicism/Principles/Coarse.lean"
+    },
+    {
+      "module": "Classicism.Principles.Comprehension",
+      "path": "source/topics/classicism/lean/Classicism/Principles/Comprehension.lean",
+      "sha256": "7d47cbb2fcbf444bd1e708ceeb9d007c1be955b41346b2adf14f5613ec7e2537",
+      "origin": "topics/classicism/lean/Classicism/Principles/Comprehension.lean"
+    },
+    {
+      "module": "Classicism.Principles.Extensionality",
+      "path": "source/topics/classicism/lean/Classicism/Principles/Extensionality.lean",
+      "sha256": "aa1929fee457845f79c2511b4df86462660ed1c68c3f85b5af8636a88a8f15e8",
+      "origin": "topics/classicism/lean/Classicism/Principles/Extensionality.lean"
+    },
+    {
+      "module": "Classicism.Principles.Infinity",
+      "path": "source/topics/classicism/lean/Classicism/Principles/Infinity.lean",
+      "sha256": "9c901565490f92a5a6b18ac1cf690c756bb5984e105e885614b87dcc00db027f",
+      "origin": "topics/classicism/lean/Classicism/Principles/Infinity.lean"
+    },
+    {
+      "module": "Classicism.Principles.Instances",
+      "path": "source/topics/classicism/lean/Classicism/Principles/Instances.lean",
+      "sha256": "53835a72c249e8f75246e6b42331d205b8bec73a8c03bc2d1ad48db37a88e47e",
+      "origin": "topics/classicism/lean/Classicism/Principles/Instances.lean"
+    },
+    {
+      "module": "Classicism.Principles.Lattice",
+      "path": "source/topics/classicism/lean/Classicism/Principles/Lattice.lean",
+      "sha256": "95a7c96bd3f2c0b131b59412ee36c288b9f12a772075e8f6ec83d8177f6ffd60",
+      "origin": "topics/classicism/lean/Classicism/Principles/Lattice.lean"
+    },
+    {
+      "module": "Classicism.Principles.Schematic",
+      "path": "source/topics/classicism/lean/Classicism/Principles/Schematic.lean",
+      "sha256": "f6e0fe85d4c7f95deb80b98e19cf10e292ac98d87a5c2caec2ddcb9920e677ee",
+      "origin": "topics/classicism/lean/Classicism/Principles/Schematic.lean"
+    },
+    {
+      "module": "Classicism.Results.Records.Coarse",
+      "path": "source/topics/classicism/lean/Classicism/Results/Records/Coarse.lean",
+      "sha256": "a3a6e0bc0120eecda1097efc51cd29c0d95daa15b81535f36d7dc6dd1d434882",
+      "origin": "topics/classicism/lean/Classicism/Results/Records/Coarse.lean"
+    },
+    {
+      "module": "Classicism.Results.Records.Comprehension",
+      "path": "source/topics/classicism/lean/Classicism/Results/Records/Comprehension.lean",
+      "sha256": "552f1c10d3b02f5cae87392141616f5de2200655837e07ba9b367e7bacfd77d7",
+      "origin": "topics/classicism/lean/Classicism/Results/Records/Comprehension.lean"
+    },
+    {
+      "module": "Classicism.Results.Records.Extensionality",
+      "path": "source/topics/classicism/lean/Classicism/Results/Records/Extensionality.lean",
+      "sha256": "0a1d58485d6e8b0b84d68d973027dd621394ee0c4d1579f08746f10558f0a34a",
+      "origin": "topics/classicism/lean/Classicism/Results/Records/Extensionality.lean"
+    },
+    {
+      "module": "Classicism.Results.Records.Lattice",
+      "path": "source/topics/classicism/lean/Classicism/Results/Records/Lattice.lean",
+      "sha256": "e5adae1ce94a42f477aa629e4f5b739aa78bf1f7a3abf785d591f4d3a62690f4",
+      "origin": "topics/classicism/lean/Classicism/Results/Records/Lattice.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.ActualityCore",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ActualityCore.lean",
+      "sha256": "4cbf4b0d3d7c28b966015d752d8076d50aae0ecde71f9337dee8ff01c148ac4e",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/ActualityCore.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.ActualityCoreArithmetic",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ActualityCoreArithmetic.lean",
+      "sha256": "915e0846eb10c5d7adf9bd46ab6e5021c82885a9dfe5995ffe510fbe5dceb0ad",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/ActualityCoreArithmetic.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.ActualityCoreGraphs",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ActualityCoreGraphs.lean",
+      "sha256": "72cd36928026da84423ae6a70145c75736ab2924e49b8ed036a5112a6b79b3e9",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/ActualityCoreGraphs.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.ActualityCoreNumbers",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ActualityCoreNumbers.lean",
+      "sha256": "d27975e179f732034febf810fc97b1a5f77441c95e392d8ae8c6bcc7328eba07",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/ActualityCoreNumbers.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.ActualityNumericalRelations",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ActualityNumericalRelations.lean",
+      "sha256": "cf8a004cfad81f3f16af4f653869e5162c8da461a61617204498f850d3439c1d",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/ActualityNumericalRelations.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomCoordinates",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomCoordinates.lean",
+      "sha256": "9ad8c19c7282b8e6709fa384856c8d34198b437a0d9f11f3b803cac82d1b05ce",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomCoordinates.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityCantor",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCantor.lean",
+      "sha256": "6ba316b1b04f5b4aee06ae004073a46618ebe383c6d7a23a157764055be1e2ae",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCantor.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityCantorCertificates",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCantorCertificates.lean",
+      "sha256": "d9241952bb57239b49639de68201a21293c3efdbd67d693eae7c20c088360df1",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCantorCertificates.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityConcreteRealAddition",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityConcreteRealAddition.lean",
+      "sha256": "950d16e4458a11db46b887392233ad8169f79854523065f03ce9b0207f2242e2",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityConcreteRealAddition.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityConcreteRealAdditionCertificates",
+      "path": "evidence/source-store/91d497bfce1623c534e8ba55c4109a949b906bd68b9c9aedf4e9318f7551069f/Classicism/Results/Research/AtomicProbabilityConcreteRealAdditionCertificates.lean",
+      "sha256": "91d497bfce1623c534e8ba55c4109a949b906bd68b9c9aedf4e9318f7551069f",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityConcreteRealAdditionCertificates.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityConcreteRealInverse",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityConcreteRealInverse.lean",
+      "sha256": "4a9b6e63fe206c85247122311bc7f4c405432bcb4e0843dbafa3e215f915222f",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityConcreteRealInverse.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityConcreteRealInverseCertificates",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityConcreteRealInverseCertificates.lean",
+      "sha256": "b5233eedc35ead2ee60b869f268f5643c93342a6b73093b6b3d2bd02cdc027d4",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityConcreteRealInverseCertificates.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityConcreteReals",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityConcreteReals.lean",
+      "sha256": "df333af4fef4591e70fb86e39a08d1652743f8e01ced28377739bdae4d194d77",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityConcreteReals.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityConcreteRealsCertificates",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityConcreteRealsCertificates.lean",
+      "sha256": "8db89003fe8451e12a0d9325b2742b57f26fdc22dd0b339ef4bfb7e6924ca6e9",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityConcreteRealsCertificates.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityCutAddition",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCutAddition.lean",
+      "sha256": "af8bc192df7058fcc6d8079ae3f10501bcc09c433e26303bf97bb697e20a04fd",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCutAddition.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityCutArithmetic",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCutArithmetic.lean",
+      "sha256": "1d1a2a78fbfbe1e9fe28c65f306a9b2758b8b784e7a8ffbe4eb2b20c783f970a",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCutArithmetic.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityCutArithmeticCertificates",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCutArithmeticCertificates.lean",
+      "sha256": "eec6075570b4bc158927e4f242d752fa087e59247d74b9532f002e85995c3ae6",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCutArithmeticCertificates.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityCutCertificates",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCutCertificates.lean",
+      "sha256": "dd2012bb88b6cce12157d1bddb945a741c753b9532f236689cbff068c67a6858",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCutCertificates.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityCutCrossing",
+      "path": "evidence/source-store/6248b2f50539609f75e047d093a9da12895106f50435839b263859e2928c9001/Classicism/Results/Research/AtomicProbabilityCutCrossing.lean",
+      "sha256": "6248b2f50539609f75e047d093a9da12895106f50435839b263859e2928c9001",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCutCrossing.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityCutCrossingCertificates",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCutCrossingCertificates.lean",
+      "sha256": "a7bf5dd9b45e69b9b6f472f8ea6fb3a057ac3df82b9f0f23fb9b93c0056f34f4",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCutCrossingCertificates.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityCutNegation",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCutNegation.lean",
+      "sha256": "6b474af72c4d83e0e51b2b206b49961a49ee98aff928b791cc72756703898b18",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCutNegation.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityCutNegationCertificates",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCutNegationCertificates.lean",
+      "sha256": "e5e28c8ceda8a3ffbf92a92aab46b203aeabd0721b0d92cedbe05de3e2668f5d",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCutNegationCertificates.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityCuts",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCuts.lean",
+      "sha256": "4ff09558d1573e1a1c934ebb61c0bf92ce30bf9e4aaf11cf6e35d6a4539222dd",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCuts.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionAdditive",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionAdditive.lean",
+      "sha256": "8ddca2d661329c559c438625fe1bc5083351e39d6a01098f5068196b503b6308",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionAdditive.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionAdditiveCertificates",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionAdditiveCertificates.lean",
+      "sha256": "db3cb9790b14e751ae71148e01a5d71f64a4f3a5b4191504b1b8ddec06c40123",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionAdditiveCertificates.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionArchimedean",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionArchimedean.lean",
+      "sha256": "53eb9a7ef700e97ccd46290f53eb3aaf4b267b96c82588c3eb8fd13d448af41c",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionArchimedean.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionArchimedeanCertificates",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionArchimedeanCertificates.lean",
+      "sha256": "4107ecafbc18798fc239d2c9936c81c7880198efc15d2e37f12d35071d9894f1",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionArchimedeanCertificates.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionArithmetic",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionArithmetic.lean",
+      "sha256": "e242d9a4f3a7d4952c204c95bcc24724b10b03dc1db469816a480b5acf243621",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionArithmetic.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionArithmeticCertificates",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionArithmeticCertificates.lean",
+      "sha256": "a186648755c6d9da7f8ded36dd53e9c16967dec21f69b373bd4fe2bb7c95eb6c",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionArithmeticCertificates.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionDensity",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionDensity.lean",
+      "sha256": "a715e4c8f616c821433d9e6e1ca82f0074a8ee3591f62b8eea3975a15e60e5ed",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionDensity.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionDensityCertificates",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionDensityCertificates.lean",
+      "sha256": "a756eef2ffaa60438fb837ff35058f09e59d1f594dd4390c2bb6bd45d1cc9621",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionDensityCertificates.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionInverse",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionInverse.lean",
+      "sha256": "b4f9414210f63cf6eebf2d1b8e9247a7bbd0428b68a46718d5a8b1bad6466588",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionInverse.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionInverseCertificates",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionInverseCertificates.lean",
+      "sha256": "afba3aa59e9250ecd9257afa605d92a5d7aa08d8306c50b6d2d60cbe7778d5cc",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionInverseCertificates.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionMultiplicative",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionMultiplicative.lean",
+      "sha256": "228fc355cd314b7c46c3383b25508013abc28b8c7b65971918ed8705ca1b46fc",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionMultiplicative.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionMultiplicativeCertificates",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionMultiplicativeCertificates.lean",
+      "sha256": "2d740c12018fadc9efc156f0377061d0ef2a98cb32550e207f00e158bbf9c752",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionMultiplicativeCertificates.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionOrder",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionOrder.lean",
+      "sha256": "baafe5490f8ca81138d90b1be038c4634ddeddcfa22a5abacb993bc8a5995f9c",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionOrder.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionOrderCertificates",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionOrderCertificates.lean",
+      "sha256": "5d80f53f6db4fd3e93f8d76f55a0bcff48b69101694f0aec323d0e8a501d0705",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionOrderCertificates.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractions",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractions.lean",
+      "sha256": "a2be200d447d37307430f8066e07ac6ebcfa4e4b9782337567b1629c2fcf29c1",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractions.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionsCertificates",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionsCertificates.lean",
+      "sha256": "e53db87c9cbfb50e497d045aeb95a37349cc3093f7c72337cc32008fd0ad7313",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionsCertificates.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityLeastNumber",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityLeastNumber.lean",
+      "sha256": "8d3a9183b8edb6986652134e286d31ed6a3f0280c6b527f9da819276331289e6",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityLeastNumber.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityLeastNumberCertificates",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityLeastNumberCertificates.lean",
+      "sha256": "62ed8450b219b638888b81bb92728f9c028576fc2ab88b31ecde0327ee11b842",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityLeastNumberCertificates.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNaturalOrder",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNaturalOrder.lean",
+      "sha256": "fcf9ebff94d6294ddc1abc7376532875643747ed768c1073e09abe2c37381b6f",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNaturalOrder.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericAddition",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericAddition.lean",
+      "sha256": "2e9de92337072c4f1dcf4fe04b82cd0bd83ee8aeaa04ffc5311104d90d286620",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericAddition.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericAdditionBasis",
+      "path": "evidence/source-store/05bebd06198170660899efa555c4e3d08b21cff66d8a11c54eee834c2e1e0e8a/Classicism/Results/Research/AtomicProbabilityNumericAdditionBasis.lean",
+      "sha256": "05bebd06198170660899efa555c4e3d08b21cff66d8a11c54eee834c2e1e0e8a",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericAdditionBasis.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericAdditionCertificates",
+      "path": "evidence/source-store/3cb4cf64dda94ba8c88437c18785d198554f01f8c1f8178c72387f2a6191b378/Classicism/Results/Research/AtomicProbabilityNumericAdditionCertificates.lean",
+      "sha256": "3cb4cf64dda94ba8c88437c18785d198554f01f8c1f8178c72387f2a6191b378",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericAdditionCertificates.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericAdditionCertificatesAssociativity",
+      "path": "evidence/source-store/ce09453c02920f0b0c3e848d4b0552505f280946873f06043f099acbb3d862d5/Classicism/Results/Research/AtomicProbabilityNumericAdditionCertificatesAssociativity.lean",
+      "sha256": "ce09453c02920f0b0c3e848d4b0552505f280946873f06043f099acbb3d862d5",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericAdditionCertificatesAssociativity.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericAdditionCertificatesBasic",
+      "path": "evidence/source-store/0ad6526c720cab7b57efc98735dbee61a210630b03c0cca9c0c6d336ffe2817d/Classicism/Results/Research/AtomicProbabilityNumericAdditionCertificatesBasic.lean",
+      "sha256": "0ad6526c720cab7b57efc98735dbee61a210630b03c0cca9c0c6d336ffe2817d",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericAdditionCertificatesBasic.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericAdditionCertificatesLeftCancellation",
+      "path": "evidence/source-store/461595b9373284e4b4f091cddee82192773df5e671a18e4d8b18cee63b1cd63a/Classicism/Results/Research/AtomicProbabilityNumericAdditionCertificatesLeftCancellation.lean",
+      "sha256": "461595b9373284e4b4f091cddee82192773df5e671a18e4d8b18cee63b1cd63a",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericAdditionCertificatesLeftCancellation.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericAdditionCertificatesRightCancellationAndZero",
+      "path": "evidence/source-store/545312ae53d80e5a3190115d9fff16ccafa52c58836af389ae96c04187364490/Classicism/Results/Research/AtomicProbabilityNumericAdditionCertificatesRightCancellationAndZero.lean",
+      "sha256": "545312ae53d80e5a3190115d9fff16ccafa52c58836af389ae96c04187364490",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericAdditionCertificatesRightCancellationAndZero.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericArithmeticBasis",
+      "path": "evidence/source-store/f5ea4a916152ae22e5af5b0d16278d97e8bc8025f754ce4537e7aa749890af17/Classicism/Results/Research/AtomicProbabilityNumericArithmeticBasis.lean",
+      "sha256": "f5ea4a916152ae22e5af5b0d16278d97e8bc8025f754ce4537e7aa749890af17",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericArithmeticBasis.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericCertificateSupport",
+      "path": "evidence/source-store/b6cbed12ccb048eeab98000741605481a15dc9568fd176c94ddeb842216f821b/Classicism/Results/Research/AtomicProbabilityNumericCertificateSupport.lean",
+      "sha256": "b6cbed12ccb048eeab98000741605481a15dc9568fd176c94ddeb842216f821b",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericCertificateSupport.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericComparison",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericComparison.lean",
+      "sha256": "c3148f5ab5b46ed82b3db8ef7519f1eb40526aba68e993dae429c00634ccf704",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericComparison.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericComparisonCertificates",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericComparisonCertificates.lean",
+      "sha256": "90fb15550ecc9d6760b99c90686fe147b9d4e3957f105a0bc970e8a45ccbc380",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericComparisonCertificates.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericEquationsFromBasis",
+      "path": "evidence/source-store/0e6448d9b228ef2c26ee5fde8a9e7282284cdb46979adc413f233530fb13a7af/Classicism/Results/Research/AtomicProbabilityNumericEquationsFromBasis.lean",
+      "sha256": "0e6448d9b228ef2c26ee5fde8a9e7282284cdb46979adc413f233530fb13a7af",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericEquationsFromBasis.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericMultiplication",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericMultiplication.lean",
+      "sha256": "4a4219771dafa9a14170c90b1451e904ca2ee485ca492148638df52c10d748a3",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericMultiplication.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericMultiplicationBasis",
+      "path": "evidence/source-store/007ac70d16d3652bea9f6e81b911232900d68c5d3718cfefee3b5450796ec47a/Classicism/Results/Research/AtomicProbabilityNumericMultiplicationBasis.lean",
+      "sha256": "007ac70d16d3652bea9f6e81b911232900d68c5d3718cfefee3b5450796ec47a",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericMultiplicationBasis.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericMultiplicationCertificates",
+      "path": "evidence/source-store/12aa71b27b36272aec7af2f731c451e8ac7520f51910709b65a5d4b04f14a75a/Classicism/Results/Research/AtomicProbabilityNumericMultiplicationCertificates.lean",
+      "sha256": "12aa71b27b36272aec7af2f731c451e8ac7520f51910709b65a5d4b04f14a75a",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericMultiplicationCertificates.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericOperations",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericOperations.lean",
+      "sha256": "33090ce0414070679c2d302141ec3fb16711239c4869f5bd6156253f5da67dbf",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericOperations.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericOperationsCertificates",
+      "path": "evidence/source-store/cc144c823acbd2c4f849f4553ca1956e8ff07f10b98b5e2bb98b3b4e0cfbb11f/Classicism/Results/Research/AtomicProbabilityNumericOperationsCertificates.lean",
+      "sha256": "cc144c823acbd2c4f849f4553ca1956e8ff07f10b98b5e2bb98b3b4e0cfbb11f",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericOperationsCertificates.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericOperationsCertificatesEquations",
+      "path": "evidence/source-store/0f9dbb6d681149c03ffd69afc9e78d99d231be24be4fa31017da7fa898c166c3/Classicism/Results/Research/AtomicProbabilityNumericOperationsCertificatesEquations.lean",
+      "sha256": "0f9dbb6d681149c03ffd69afc9e78d99d231be24be4fa31017da7fa898c166c3",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericOperationsCertificatesEquations.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericOperationsCertificatesGate",
+      "path": "evidence/source-store/9909df603d3622c8aa86063f2865c13202e6b7325d70bec6f18a89b3238c9be5/Classicism/Results/Research/AtomicProbabilityNumericOperationsCertificatesGate.lean",
+      "sha256": "9909df603d3622c8aa86063f2865c13202e6b7325d70bec6f18a89b3238c9be5",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericOperationsCertificatesGate.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericOperationsCertificatesGraphs",
+      "path": "evidence/source-store/a3bfee344e29423d670754d547b39aee95b08b2a6c4e5425893eddb7950ed29a/Classicism/Results/Research/AtomicProbabilityNumericOperationsCertificatesGraphs.lean",
+      "sha256": "a3bfee344e29423d670754d547b39aee95b08b2a6c4e5425893eddb7950ed29a",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericOperationsCertificatesGraphs.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericOperationsCertificatesInduction",
+      "path": "evidence/source-store/f8257593696346b9f49092075154102cbe6d5f4004cfb7a585b37b8ae5d99610/Classicism/Results/Research/AtomicProbabilityNumericOperationsCertificatesInduction.lean",
+      "sha256": "f8257593696346b9f49092075154102cbe6d5f4004cfb7a585b37b8ae5d99610",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericOperationsCertificatesInduction.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericOperationsCertificatesNumbers",
+      "path": "evidence/source-store/317268d917b0293a944e10b517cd7fcf1f826d11ce474c82f50e714789007a54/Classicism/Results/Research/AtomicProbabilityNumericOperationsCertificatesNumbers.lean",
+      "sha256": "317268d917b0293a944e10b517cd7fcf1f826d11ce474c82f50e714789007a54",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericOperationsCertificatesNumbers.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericOperationsCertificatesRecursion",
+      "path": "evidence/source-store/7be6522961e819fb7c7b5a11ff7721599fae975969ac296762021b920d5de8f0/Classicism/Results/Research/AtomicProbabilityNumericOperationsCertificatesRecursion.lean",
+      "sha256": "7be6522961e819fb7c7b5a11ff7721599fae975969ac296762021b920d5de8f0",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericOperationsCertificatesRecursion.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericOperationsCertificatesTimesSuccessor",
+      "path": "evidence/source-store/d7feb087ce1c8e3efef0d8e79ffdbb36b81855f7812f0a6789d42db6571c1028/Classicism/Results/Research/AtomicProbabilityNumericOperationsCertificatesTimesSuccessor.lean",
+      "sha256": "d7feb087ce1c8e3efef0d8e79ffdbb36b81855f7812f0a6789d42db6571c1028",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericOperationsCertificatesTimesSuccessor.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericRealizationBasis",
+      "path": "evidence/source-store/dca60cbb59433c0805ffd6791e054be645a80025b59f88282c1a6c474cbd64f3/Classicism/Results/Research/AtomicProbabilityNumericRealizationBasis.lean",
+      "sha256": "dca60cbb59433c0805ffd6791e054be645a80025b59f88282c1a6c474cbd64f3",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericRealizationBasis.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityRationalAdditive",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalAdditive.lean",
+      "sha256": "b4fe18797a429362fa8308ad1771d500e3e6f1070f4f2707b7f5e8bbabbbc2ca",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalAdditive.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityRationalAdditiveCertificates",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalAdditiveCertificates.lean",
+      "sha256": "7f8b1bdb31f395b11d67804cb236297f221d14a40b0c3efd5dd4e4d80467a0ed",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalAdditiveCertificates.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityRationalNegation",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalNegation.lean",
+      "sha256": "e0a36d1512328c58285926699b50bb3da3afeda6243b4394fc74c3cb3c304464",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalNegation.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityRationalNegationCertificates",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalNegationCertificates.lean",
+      "sha256": "3f3be7b86b5ed0dd807430304142ff8b13f3390833ae943d90bb493bb0c85489",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalNegationCertificates.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityRationalOrder",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalOrder.lean",
+      "sha256": "e667b76663d19e5212881f5fb9213bd3cf456393db70aa8d5faa1d1f9ae57d0f",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalOrder.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityRationalOrderCertificates",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalOrderCertificates.lean",
+      "sha256": "d76d367610844ebf23ce43c50ba9f2b61441e77c795e56c5e61a5f5255e5c3e8",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalOrderCertificates.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityRationalTranslation",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalTranslation.lean",
+      "sha256": "3e471e533737a636186588277982d9132f86c45db6013ba4739a2b9200879c58",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalTranslation.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityRationalTranslationCertificates",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalTranslationCertificates.lean",
+      "sha256": "379ea994dea939dbf01320a98be66bd243c77ffa69734f4afee67cfc123bc483",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalTranslationCertificates.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilitySignedRationals",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilitySignedRationals.lean",
+      "sha256": "a736f5efd65413f8733428c8303c983bd0e6d33a1410814d32f5678cfb6e4222",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilitySignedRationals.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilitySignedRationalsCertificates",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilitySignedRationalsCertificates.lean",
+      "sha256": "59f17bea500ad192419669673db9b34ad8fbda06a54152ca7ccacf24dd4c2c4a",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilitySignedRationalsCertificates.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilitySupportedReals",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/AtomicProbabilitySupportedReals.lean",
+      "sha256": "acee83f5bb11608e9f6d6ac220c56c344568e069ab85a3aff1d658f19a86b4a3",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilitySupportedReals.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.CoreNumberIsomorphism",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/CoreNumberIsomorphism.lean",
+      "sha256": "c1d44eb1f1b3c5f5f02107ddcecfe54a6b6bf888f8294e0a72f34d65749200d4",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/CoreNumberIsomorphism.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.Evaluator",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/Evaluator.lean",
+      "sha256": "f3d46077cf22bb251a8f2f790ea717f3e3777b2cc8700f90da42f257eeb00671",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/Evaluator.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.FregeArithmeticGraphs",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/FregeArithmeticGraphs.lean",
+      "sha256": "d0448a51f720730ab5a6932a819d8250f4a5f71fe0b890999fa496b433f33bf4",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/FregeArithmeticGraphs.lean"
+    },
+    {
+      "module": "Classicism.Results.Research.FregeInfinity",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/FregeInfinity.lean",
+      "sha256": "b0007e4dad8fdcf52a01e8ef77bbce988fa3f6aa06570c89c4f2397ea138c759",
+      "origin": "topics/classicism/lean/Classicism/Results/Research/FregeInfinity.lean"
+    },
+    {
+      "module": "Classicism.Semantics.Denotation",
+      "path": "source/topics/classicism/lean/Classicism/Semantics/Denotation.lean",
+      "sha256": "2103000e1da2b0ce5413fa71820b7cd579bf562b7dd50d704e058b5cda0c7925",
+      "origin": "topics/classicism/lean/Classicism/Semantics/Denotation.lean"
+    },
+    {
+      "module": "Classicism.Semantics.Relational",
+      "path": "source/topics/classicism/lean/Classicism/Semantics/Relational.lean",
+      "sha256": "b9424788860fff653c01277d1d1e1e2aa257b0905ac02b0879bb6029a1c5c32a",
+      "origin": "topics/classicism/lean/Classicism/Semantics/Relational.lean"
+    },
+    {
+      "module": "Classicism.Strict.Algebra",
+      "path": "source/topics/classicism/lean/Classicism/Strict/Algebra.lean",
+      "sha256": "d4cb80885b688ee323e6f59b084568746247f751986fe2ea7efd53cb4e6969a9",
+      "origin": "topics/classicism/lean/Classicism/Strict/Algebra.lean"
+    },
+    {
+      "module": "Classicism.Strict.Axiomatization",
+      "path": "source/topics/classicism/lean/Classicism/Strict/Axiomatization.lean",
+      "sha256": "fa26c38979d08d22db2c14d999bd3c5454170e00e72f2781cf2cfa28910ed533",
+      "origin": "topics/classicism/lean/Classicism/Strict/Axiomatization.lean"
+    },
+    {
+      "module": "Classicism.Strict.Mirror",
+      "path": "source/topics/classicism/lean/Classicism/Strict/Mirror.lean",
+      "sha256": "c9aa802c99fbaea769cb8a88af075fc434b3a9073bd9187f9d00b0e6e82451fe",
+      "origin": "topics/classicism/lean/Classicism/Strict/Mirror.lean"
+    },
+    {
+      "module": "Classicism.Strict.Primitives",
+      "path": "source/topics/classicism/lean/Classicism/Strict/Primitives.lean",
+      "sha256": "b0875be460cec24411c21b6f5929f9c4f68485e6600317f1530adb0a20abd69b",
+      "origin": "topics/classicism/lean/Classicism/Strict/Primitives.lean"
+    },
+    {
+      "module": "Classicism.Strict.Quantifier",
+      "path": "source/topics/classicism/lean/Classicism/Strict/Quantifier.lean",
+      "sha256": "688f1a0f560a30f12fd4b4b6663fb7583fac374d9bd7591a55943bbb1b4695fa",
+      "origin": "topics/classicism/lean/Classicism/Strict/Quantifier.lean"
+    },
+    {
+      "module": "Classicism.Strict.Rules",
+      "path": "source/topics/classicism/lean/Classicism/Strict/Rules.lean",
+      "sha256": "496f3272610ad5dac44de1f90bd394d38098d44f5c8e51fcc30e835e415a8609",
+      "origin": "topics/classicism/lean/Classicism/Strict/Rules.lean"
+    },
+    {
+      "module": "Classicism.Strict.Tautology",
+      "path": "source/topics/classicism/lean/Classicism/Strict/Tautology.lean",
+      "sha256": "edc88bb68c00443a3c309ad01da9c31e1325bc8d63bf0a2ba9392c43eebbadfe",
+      "origin": "topics/classicism/lean/Classicism/Strict/Tautology.lean"
+    },
+    {
+      "module": "Classicism.Strict.Transform",
+      "path": "source/topics/classicism/lean/Classicism/Strict/Transform.lean",
+      "sha256": "477d7ea0d6a8c0e438bdf1fdb29c68e79512216094ae8c8c5851b47133afe3ae",
+      "origin": "topics/classicism/lean/Classicism/Strict/Transform.lean"
+    },
+    {
+      "module": "Classicism.Strict.Vocabulary",
+      "path": "source/topics/classicism/lean/Classicism/Strict/Vocabulary.lean",
+      "sha256": "29fad160fd838d15256273fae84dce3cb5381cbd876e7c6ed882874da295b747",
+      "origin": "topics/classicism/lean/Classicism/Strict/Vocabulary.lean"
+    },
+    {
+      "module": "Classicism.Syntax.Axioms",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Axioms.lean",
+      "sha256": "f3dd3b51ef834f46f22e09fe34026f47120a8bc171afb190b5053c443f4a82a7",
+      "origin": "topics/classicism/lean/Classicism/Syntax/Axioms.lean"
+    },
+    {
+      "module": "Classicism.Syntax.Blocks",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Blocks.lean",
+      "sha256": "77b4ef8fadb3646edd15d25854bac994a6eabb8bb1f51347c9dd00fce3a6ac5d",
+      "origin": "topics/classicism/lean/Classicism/Syntax/Blocks.lean"
+    },
+    {
+      "module": "Classicism.Syntax.Conversion",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Conversion.lean",
+      "sha256": "c22fe48399811fcb0d71b37206c633749a7285291c62c2e7d786475ea6ae339e",
+      "origin": "topics/classicism/lean/Classicism/Syntax/Conversion.lean"
+    },
+    {
+      "module": "Classicism.Syntax.Derivation",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Derivation.lean",
+      "sha256": "7cc2fd01542014d55e5a4c4a411724db7cdc076462d0de724c3530b0a8a3fc6b",
+      "origin": "topics/classicism/lean/Classicism/Syntax/Derivation.lean"
+    },
+    {
+      "module": "Classicism.Syntax.Entailment",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Entailment.lean",
+      "sha256": "13f758dbf41a84dda7c2ae7adf6bcb9605ee114ce04dbda0efc5f1c4fbeabb1e",
+      "origin": "topics/classicism/lean/Classicism/Syntax/Entailment.lean"
+    },
+    {
+      "module": "Classicism.Syntax.Normalize",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Normalize.lean",
+      "sha256": "1ba19ae01872f7d4357876e2e4c47e4f675cf6b733be98c1947838a1f0c94c1b",
+      "origin": "topics/classicism/lean/Classicism/Syntax/Normalize.lean"
+    },
+    {
+      "module": "Classicism.Syntax.Term",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Term.lean",
+      "sha256": "ad5172acbb74eaab9307662408928b80e6ffab62e14df16f2f41c7205de13f69",
+      "origin": "topics/classicism/lean/Classicism/Syntax/Term.lean"
+    },
+    {
+      "module": "Classicism.Syntax.Types",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Types.lean",
+      "sha256": "567828e8f9a707cf635e3b4fb30bc868a419967307613d0686d795d195606eac",
+      "origin": "topics/classicism/lean/Classicism/Syntax/Types.lean"
+    },
+    {
+      "module": "Classicism.Syntax.Vectorize",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Vectorize.lean",
+      "sha256": "b57548b87b70c0e9df1c0fd48a1f7b7d67d4828ab4d4286e164e7f32c4716817",
+      "origin": "topics/classicism/lean/Classicism/Syntax/Vectorize.lean"
+    },
+    {
+      "module": "Classicism.Syntax.VectorizeDerivable",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/VectorizeDerivable.lean",
+      "sha256": "17508c58aef3e3ad7b121f20349045d76c5e238a164cdaf96c2400255c492824",
+      "origin": "topics/classicism/lean/Classicism/Syntax/VectorizeDerivable.lean"
+    },
+    {
+      "module": "Classicism.Tools.Check",
+      "path": "source/topics/classicism/lean/Classicism/Tools/Check.lean",
+      "sha256": "20fdb6525e533a835b5d561bce9529e553de2a3fc1b4f6416235da7f52da6cdf",
+      "origin": "topics/classicism/lean/Classicism/Tools/Check.lean"
+    },
+    {
+      "module": "Classicism.Tools.Quote",
+      "path": "source/topics/classicism/lean/Classicism/Tools/Quote.lean",
+      "sha256": "9539d77cb6894442171628c10fd8f4e1142fa8f7f99e80fac7dc1681c7eb96fe",
+      "origin": "topics/classicism/lean/Classicism/Tools/Quote.lean"
+    },
+    {
+      "module": "Classicism.Tools.Schema",
+      "path": "source/topics/classicism/lean/Classicism/Tools/Schema.lean",
+      "sha256": "809bf8692601598451770b6422375de71cddf6e3d4cacc651b3905119fe40d2c",
+      "origin": "topics/classicism/lean/Classicism/Tools/Schema.lean"
+    },
+    {
+      "module": "Classicism.Tools.Translate",
+      "path": "source/topics/classicism/lean/Classicism/Tools/Translate.lean",
+      "sha256": "471e8a2a7ab42f306e986af1320f0bd7f4d77dd073241e3f77234bf0fc5d6ba7",
+      "origin": "topics/classicism/lean/Classicism/Tools/Translate.lean"
+    },
+    {
+      "module": "Classicism.Tools.TypeSystem",
+      "path": "source/topics/classicism/lean/Classicism/Tools/TypeSystem.lean",
+      "sha256": "3db785bca90f4e2961bce8e7bde2d6bbd418e9e4c67ec99acae2251cb89e88e1",
+      "origin": "topics/classicism/lean/Classicism/Tools/TypeSystem.lean"
+    }
+  ],
+  "external_imports": [
+    "Lean"
+  ],
+  "accepted_addition_receipt": "evidence/certificates/probability-addition-basic/certificate.json",
+  "inventory": "evidence/probability-certificate-coverage.json",
+  "compiler_invoked": false
+}

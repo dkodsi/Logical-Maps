@@ -1,0 +1,475 @@
+{
+  "schema_version": 1,
+  "display_date": "2026-10-22",
+  "display_timezone": "America/New_York",
+  "coverage_source": "coverage-and-ownership.json",
+  "scope": "All currently SP-assigned historical and follow-up families, including principles.24; no family removed by priority.",
+  "family_count": 32,
+  "families": [
+    {
+      "queue_id": "principles.03",
+      "origin": "historical",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_entry": "Common first-order arithmetic theory of the positive packages, including the stated Functional Choice additions — `infinity-world-richness-consolidation-20261022.md` §2.",
+      "source_paths": [
+        "research/2026-10-22/notes/infinity-world-richness-consolidation-20261022.md"
+      ],
+      "owner_lane": "sp",
+      "status": "incomplete_main_family",
+      "implemented_portion": "Existing arithmetic syntax only",
+      "remaining_exact_main_obligation": "A1 and the converse model realization proving the exact common first-order arithmetic theory of the specified positive packages and Choice additions.",
+      "qualification": "New source submissions require serial compiler acceptance; supporting lemmas do not close the entire family."
+    },
+    {
+      "queue_id": "principles.04",
+      "origin": "historical",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_entry": "Exact Max arithmetic theory Cn(T+TrueΠ₁), including specified current graph-choice strengthenings — same §2; relational report §§36–37.",
+      "source_paths": [
+        "research/2026-10-22/notes/relational-coding-recursion-20261022.md"
+      ],
+      "owner_lane": "sp",
+      "status": "incomplete_main_family",
+      "implemented_portion": "MaxDiagram supports the identity fragment only",
+      "remaining_exact_main_obligation": "A1, M1/M2, and both arithmetic-theory inclusions for Cn(T+TruePi1), retaining the specified graph-choice package.",
+      "qualification": "New source submissions require serial compiler acceptance; supporting lemmas do not close the entire family."
+    },
+    {
+      "queue_id": "principles.12",
+      "origin": "historical",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_entry": "Exact finite-signature boundary for Max consistency preservation, including the one-individual-name exception — `audit-signature-to-pure-sp-20261022.md` §§6,9.",
+      "source_paths": [
+        "research/2026-10-22/notes/audit-signature-to-pure-sp-20261022.md"
+      ],
+      "owner_lane": "sp",
+      "status": "incomplete_main_family",
+      "implemented_portion": "SignatureSplit constructs both relational-constant witnesses",
+      "remaining_exact_main_obligation": "M2; the empty/one-individual-name preservation proofs; the two-individual-name obstruction; exact finite-signature classification.",
+      "qualification": "New source submissions require serial compiler acceptance; supporting lemmas do not close the entire family."
+    },
+    {
+      "queue_id": "principles.13",
+      "origin": "historical",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_entry": "Conservative signature extension with an infinite reservoir of fresh names — same §8.",
+      "source_paths": [
+        "research/2026-10-22/notes/audit-signature-to-pure-sp-20261022.md"
+      ],
+      "owner_lane": "sp",
+      "status": "incomplete_main_family",
+      "implemented_portion": "Existing finitary proof support can be reused",
+      "remaining_exact_main_obligation": "Formal signature renaming/substitution with an infinite type-correct fresh-name reservoir; conservativity of the stated theory, not merely C.",
+      "qualification": "New source submissions require serial compiler acceptance; supporting lemmas do not close the entire family."
+    },
+    {
+      "queue_id": "principles.14",
+      "origin": "historical",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_entry": "Σ₁-completeness of the pure identity problem and Max's fixed pure diagram — `max-degree.md` §§1–2.",
+      "source_paths": [
+        "research/2026-10-22/notes/max-degree.md"
+      ],
+      "owner_lane": "sp",
+      "status": "incomplete_main_family",
+      "implemented_portion": "MaxDiagram gives the exact finite Boolean identity fragment",
+      "remaining_exact_main_obligation": "E1 and the actual computable Sigma1-hardness reduction to pure C identities; M1/M2 for unconditional Max existence.",
+      "qualification": "New source submissions require serial compiler acceptance; supporting lemmas do not close the entire family."
+    },
+    {
+      "queue_id": "principles.15",
+      "origin": "historical",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_entry": "Stronger effective-axiomatization obstruction and exact oracle cone for consistent Max strengthenings — same §§3,11; `theory-space-comparison.md` §6. This counts the strengthening, not the published Max non-r.e. baseline.",
+      "source_paths": [
+        "research/2026-10-22/notes/theory-space-comparison.md"
+      ],
+      "owner_lane": "sp",
+      "status": "incomplete_main_family",
+      "implemented_portion": "MaxConservativity implements both logical directions with Con(Max)",
+      "remaining_exact_main_obligation": "E1, E2 and the two oracle-cone reductions; effective hidden-variable interpretation obstruction.",
+      "qualification": "New source submissions require serial compiler acceptance; supporting lemmas do not close the entire family."
+    },
+    {
+      "queue_id": "principles.16",
+      "origin": "historical",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_entry": "Robust Σ₂-completeness of Max theoremhood — `max-degree.md` §10.",
+      "source_paths": [
+        "research/2026-10-22/notes/max-degree.md"
+      ],
+      "owner_lane": "sp",
+      "status": "incomplete_main_family",
+      "implemented_portion": "Computability gives concrete unrelativized diagonal programs",
+      "remaining_exact_main_obligation": "A1, E1, E3: definable correct halting bits, uniform oracle recursion/inseparability for every consistent 0'-c.e. strengthening, and matching upper bound.",
+      "qualification": "New source submissions require serial compiler acceptance; supporting lemmas do not close the entire family."
+    },
+    {
+      "queue_id": "principles.17",
+      "origin": "historical",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_entry": "Exact adequate-Max-model capacity: PA over 0′, uniform DNR equivalence, low solutions and common information — `max-degree.md` §9; `effective-refinements.md` §§3,8.",
+      "source_paths": [
+        "research/2026-10-22/notes/max-degree.md",
+        "research/2026-10-22/notes/effective-refinements.md"
+      ],
+      "owner_lane": "sp",
+      "status": "incomplete_main_family",
+      "implemented_portion": "No actual adequate-code/degree implementation yet",
+      "remaining_exact_main_obligation": "E2/E3: both PA-over-0' capacity reductions, uniform DNR equivalence, relative-low models, common information and no least solution degree.",
+      "qualification": "New source submissions require serial compiler acceptance; supporting lemmas do not close the entire family."
+    },
+    {
+      "queue_id": "principles.18",
+      "origin": "historical",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_entry": "Positive-package Σ₁ theoremhood/ordinary-PA model capacity, including the stronger bare-code lower bound from possible weak Infinity — `positive-effective.md` §§13–17,22.",
+      "source_paths": [
+        "research/2026-10-22/notes/positive-effective.md"
+      ],
+      "owner_lane": "sp",
+      "status": "incomplete_main_family",
+      "implemented_portion": "Computability supplies the base diagonal obstruction",
+      "remaining_exact_main_obligation": "Explicit C finite trace compiler under possible weak Infinity; A1/E1/E2/E3; bare-code nonbottom extraction without assuming Actuality/valuation.",
+      "qualification": "New source submissions require serial compiler acceptance; supporting lemmas do not close the entire family."
+    },
+    {
+      "queue_id": "principles.19",
+      "origin": "historical",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_entry": "Standard-number code bounds: HYP lower information, sub-Kleene-O solutions, exact common information — same §§18–20. Standard-model existence hypotheses remain explicit.",
+      "source_paths": [
+        "research/2026-10-22/notes/positive-effective.md"
+      ],
+      "owner_lane": "sp",
+      "status": "incomplete_main_family",
+      "implemented_portion": "No HYP/basis implementation yet",
+      "remaining_exact_main_obligation": "A1/E2/E3/E4: full standard arithmetic comprehension, fixed-point obstruction, sub-O basis construction and exact common information; retain standard-model existence for each theory.",
+      "qualification": "New source submissions require serial compiler acceptance; supporting lemmas do not close the entire family."
+    },
+    {
+      "queue_id": "principles.20",
+      "origin": "historical",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_entry": "Analytic complexity of standard-model finite-condition problems — same §21; `max-degree.md` §13.",
+      "source_paths": [
+        "research/2026-10-22/notes/max-degree.md"
+      ],
+      "owner_lane": "sp",
+      "status": "incomplete_main_family",
+      "implemented_portion": "MaxDiagram supplies only the fixed identity-fragment distinction",
+      "remaining_exact_main_obligation": "E2/E4: actual recursive-tree graph realization and both analytic reductions for standard B/F and Max, with the different identity-fragment bounds.",
+      "qualification": "New source submissions require serial compiler acceptance; supporting lemmas do not close the entire family."
+    },
+    {
+      "queue_id": "principles.21",
+      "origin": "historical",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_entry": "Effective pure-complete theories have recursive finite domain bounds and unique computably presentable actual structures — `effective-refinements.md` §§9.3–9.6.",
+      "source_paths": [
+        "research/2026-10-22/notes/effective-refinements.md"
+      ],
+      "owner_lane": "sp",
+      "status": "incomplete_main_family",
+      "implemented_portion": "No effective finite-bound/structure implementation yet",
+      "remaining_exact_main_obligation": "Finite-trace obstruction plus effective extraction of exact/necessary sort sizes, actual typed-structure uniqueness, computable Henkin copy and pointed-transitivity criterion.",
+      "qualification": "New source submissions require serial compiler acceptance; supporting lemmas do not close the entire family."
+    },
+    {
+      "queue_id": "principles.22",
+      "origin": "historical",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_entry": "Completion-space classifications: Max nowhere dense; positive isolated completions/perfect derivatives; exact effective-Borel distinctions — `theory-space-comparison.md`; `effective-refinements.md` §§2–5.",
+      "source_paths": [
+        "research/2026-10-22/notes/theory-space-comparison.md",
+        "research/2026-10-22/notes/effective-refinements.md"
+      ],
+      "owner_lane": "sp",
+      "status": "incomplete_main_family",
+      "implemented_portion": "No completion-space implementation yet",
+      "remaining_exact_main_obligation": "E2/E3/E4: nowhere density, positive isolated completions/perfect derivative, dense low solutions and exact effective-Borel assertions, each in the fixed coding.",
+      "qualification": "New source submissions require serial compiler acceptance; supporting lemmas do not close the entire family."
+    },
+    {
+      "queue_id": "principles.23",
+      "origin": "historical",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_entry": "Equational conservativity and idempotence of relative distinctness maximalization above Max — `theory-space-comparison.md` §9.",
+      "source_paths": [
+        "research/2026-10-22/notes/theory-space-comparison.md"
+      ],
+      "owner_lane": "sp",
+      "status": "incomplete_main_family",
+      "implemented_portion": "MaxDiagram proves stabilization; MaxConservativity proves the converse test with Con(Max)",
+      "remaining_exact_main_obligation": "Compiler acceptance and M1/M2 to discharge Con(Max) in an unconditional library corollary. Recomputed distinctness is not the optional hat hierarchy.",
+      "qualification": "New source submissions require serial compiler acceptance; supporting lemmas do not close the entire family."
+    },
+    {
+      "queue_id": "principles.24",
+      "origin": "historical",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_entry": "Genuine infinitary comprehension boundary, including standardness transfer and incompatibility with original Max — `comparison-handoff-20261022.md` §7; `structural-lane-handoff.md`. This explicitly changes the object-language resources.",
+      "source_paths": [
+        "research/2026-10-22/notes/comparison-handoff-20261022.md",
+        "research/2026-10-22/notes/structural-lane-handoff.md"
+      ],
+      "owner_lane": "sp",
+      "status": "incomplete_main_family",
+      "implemented_portion": "InfinitaryNumerals explicitly defines enlarged syntax and proves local exhaustion/unique names",
+      "remaining_exact_main_obligation": "I1; global accessible-world nonstandardness forced by old Max and the incompatibility conclusion. No finitary inconsistency is claimed.",
+      "qualification": "New source submissions require serial compiler acceptance; supporting lemmas do not close the entire family."
+    },
+    {
+      "queue_id": "principles.25",
+      "origin": "historical",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_entry": "Conditional SP Σ₃-completeness and PA-over-0″ model capacity — `strong-possibility-degree.md` §§2–6.",
+      "source_paths": [
+        "research/2026-10-22/notes/strong-possibility-degree.md"
+      ],
+      "owner_lane": "sp",
+      "status": "incomplete_main_family",
+      "implemented_portion": "Reflection proves finite-support persistence and exact conditional BoxNe diagrams",
+      "remaining_exact_main_obligation": "A1/E1/E2/E3: full Sigma3-completeness and PA-over-0'' reductions, retaining Con(SP); no standard-SP existence inferred.",
+      "qualification": "New source submissions require serial compiler acceptance; supporting lemmas do not close the entire family."
+    },
+    {
+      "queue_id": "principles.27",
+      "origin": "historical",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_entry": "Pure/signature SP incompatibility and exact finite individual-name bounds — `audit-signature-to-pure-sp-20261022.md` §§1–7,10.",
+      "source_paths": [
+        "research/2026-10-22/notes/audit-signature-to-pure-sp-20261022.md"
+      ],
+      "owner_lane": "sp",
+      "status": "incomplete_main_family",
+      "implemented_portion": "SignatureSplit gives signature Max's pure-cell refutation; UniversalCore gives reflection",
+      "remaining_exact_main_obligation": "M1/M2, unconditional pure-SP atom theorem, joint incompatibility, arrow iff antecedent inconsistency, and exact finite individual-name bounds.",
+      "qualification": "New source submissions require serial compiler acceptance; supporting lemmas do not close the entire family."
+    },
+    {
+      "queue_id": "principles.29",
+      "origin": "historical",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_entry": "Explicit all-input-type Barcan and Functionality failures under pure SP and the stated finite-signature SP hypotheses — `finite-c5-profile-cells-20261022.md` §9; `signature-sp-barcan-20261022.md`.",
+      "source_paths": [
+        "research/2026-10-22/notes/finite-c5-profile-cells-20261022.md",
+        "research/2026-10-22/notes/signature-sp-barcan-20261022.md"
+      ],
+      "owner_lane": "sp",
+      "status": "incomplete_main_family",
+      "implemented_portion": "Atom reflection/splitting C certificates only",
+      "remaining_exact_main_obligation": "Pure/profile and finite-signature atom laws, exact all-input-type BF/Functionality failure terms and all stated finite-signature hypotheses.",
+      "qualification": "New source submissions require serial compiler acceptance; supporting lemmas do not close the entire family."
+    },
+    {
+      "queue_id": "principles.30",
+      "origin": "historical",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_entry": "Conditional finite possibility iterations: successive jumps and strict finite-hat consequences — `iterated-possibility-degrees.md`.",
+      "source_paths": [
+        "research/2026-10-22/notes/iterated-possibility-degrees.md"
+      ],
+      "owner_lane": "sp",
+      "status": "incomplete_main_family",
+      "implemented_portion": "Max finite-proof reflection mechanism available",
+      "remaining_exact_main_obligation": "Define optional finite hat stages; full modal induction, arithmetic jump compilers and relative PA capacity/strictness, each conditional on the specified stage consistency.",
+      "qualification": "New source submissions require serial compiler acceptance; supporting lemmas do not close the entire family."
+    },
+    {
+      "queue_id": "principles.31",
+      "origin": "historical",
+      "source_index": "research/2026-10-22/counting/principles-counting-audit.md",
+      "source_entry": "Conditional omega iteration: omega-jump model capacity and theoremhood/completion complexity — `limit-possibility-degree.md`.",
+      "source_paths": [
+        "research/2026-10-22/notes/limit-possibility-degree.md"
+      ],
+      "owner_lane": "sp",
+      "status": "incomplete_main_family",
+      "implemented_portion": "Existing finiteStage/theorem_at_stage supplies the finitary union mechanism",
+      "remaining_exact_main_obligation": "Actual self-consistent uniform compiler, least-closure omega-jump predicate, exact omega-stage capacity/theoremhood and absolute Pi2 completion description. Preserve all-stage consistency.",
+      "qualification": "New source submissions require serial compiler acceptance; supporting lemmas do not close the entire family."
+    },
+    {
+      "queue_id": "sp_supplement.01",
+      "origin": "historical",
+      "source_index": "research/2026-10-22/counting/sp-supplement-counting-audit.md",
+      "source_entry": "**Exact algebraic consistency/embedding criteria for SP.** SP equals Max plus the individually Max-consistent universal finite-Boolean-identity sentences; consistency is equivalent to the restricted existential-identity disjunction property. The normalized H-disjunction criterion and the criterion using embeddings into elementary extensions of every genuine Max model belong to this same family. Include the proved H-clopen embedding-invariance lemma here, not as another count. Routes: `notes/reflection-universal-core-20261022.md` §§2–7; `notes/sp-failed-disjunction-20261022.md` §§17,18.2. The required joint-embedding theorem/classification of H-clopen sentences is NOT proved and is not counted. The published Max-reflection baseline is not counted again.",
+      "source_paths": [
+        "research/2026-10-22/notes/reflection-universal-core-20261022.md",
+        "research/2026-10-22/sp-structural-proof-package/reflection-universal-core-20261022.md",
+        "research/2026-10-22/notes/sp-failed-disjunction-20261022.md"
+      ],
+      "owner_lane": "sp",
+      "status": "incomplete_main_family",
+      "implemented_portion": "UniversalCore and Disjunction implement syntactic core/equivalence and restricted disjunction criterion",
+      "remaining_exact_main_obligation": "Compile exact statements; normalized H-disjunction version, H-clopen embedding invariance and the genuine-model elementary-extension embedding criterion. No joint-embedding theorem is supplied.",
+      "qualification": "New source submissions require serial compiler acceptance; supporting lemmas do not close the entire family."
+    },
+    {
+      "queue_id": "sp_supplement.02",
+      "origin": "historical",
+      "source_index": "research/2026-10-22/counting/sp-supplement-counting-audit.md",
+      "source_entry": "**Essential common-term algebra criterion.** Essentiality for the full pure term-operation signature is equivalent to the stated modal-ideal/density condition and is sufficient for a genuine Max model to satisfy SP; such an essential genuine model would fail Vicinity and Actuality. Route: `notes/sp-essential-extension-20261022.md` §§1–6,8. Exact status correction: essentiality has **not been shown necessary** for SP. There is no proved nonnecessity result and no essential genuine SP model is supplied.",
+      "source_paths": [
+        "research/2026-10-22/notes/sp-essential-extension-20261022.md"
+      ],
+      "owner_lane": "sp",
+      "status": "incomplete_main_family",
+      "implemented_portion": "Algebra has conditional modal-ideal calculations",
+      "remaining_exact_main_obligation": "Full operation-signature essentiality/density equivalence and sufficiency for genuine SP models; failures of Vicinity/Actuality. Necessity of essentiality remains unproved.",
+      "qualification": "New source submissions require serial compiler acceptance; supporting lemmas do not close the entire family."
+    },
+    {
+      "queue_id": "sp_supplement.03",
+      "origin": "historical",
+      "source_index": "research/2026-10-22/counting/sp-supplement-counting-audit.md",
+      "source_entry": "**Maximal B-preserving quotients and permanent-survival criterion.** Such maximal quotients exist and are essential; correct-B-truth ultrafilters give literal identity correctness, and the resulting complete operation/truth diagram embeds in a genuine Max Henkin completion. A specified disequality survives every maximal B-preserving quotient exactly when its principal congruence already collapses distinct B-elements, with a finite polynomial-chain certificate. Routes: `notes/sp-essential-extension-20261022.md` §§4,7,9; `notes/sp-henkin-minimal-20261022.md` §§16–21; `notes/sp-failed-disjunction-20261022.md` §§15–16. This is an algebraic quotient/completion theorem, not an SP model: Henkin witnesses can still lose truth in later quotients.",
+      "source_paths": [
+        "research/2026-10-22/notes/sp-essential-extension-20261022.md",
+        "research/2026-10-22/notes/sp-henkin-minimal-20261022.md",
+        "research/2026-10-22/notes/sp-failed-disjunction-20261022.md"
+      ],
+      "owner_lane": "sp",
+      "status": "incomplete_main_family",
+      "implemented_portion": "Algebra proves a specified quotient excludes new fixed points",
+      "remaining_exact_main_obligation": "Actual maximal B-preserving quotient, Zorn/essentiality proof, finite polynomial-chain survival criterion, correct-truth ultrafilter and genuine Henkin completion; no SP model conclusion.",
+      "qualification": "New source submissions require serial compiler acceptance; supporting lemmas do not close the entire family."
+    },
+    {
+      "queue_id": "sp_supplement.04",
+      "origin": "historical",
+      "source_index": "research/2026-10-22/counting/sp-supplement-counting-audit.md",
+      "source_entry": "**Guarded old-witness extraction and finite interpolation.** Positive existential equations admit old pure-term witnesses; under the explicit guards, finite truth observations, finite direct identities/disequalities, and finite entity-valued input/output tables admit permanent old witnesses/interpolants, including avoidance of finitely many forbidden functions. All these related finite replacement lemmas count once. Routes: `notes/sp-henkin-minimal-20261022.md` §§19–23; `notes/sp-existential-products-20261022.md` §§23–24; `notes/sp-failed-disjunction-20261022.md` §10. Arbitrary incoming higher-type operators, unbounded observations and unrestricted quantified dependence remain outside the theorem.",
+      "source_paths": [
+        "research/2026-10-22/notes/sp-henkin-minimal-20261022.md",
+        "research/2026-10-22/notes/sp-existential-products-20261022.md",
+        "research/2026-10-22/notes/sp-failed-disjunction-20261022.md"
+      ],
+      "owner_lane": "sp",
+      "status": "incomplete_main_family",
+      "implemented_portion": "No guarded interpolation implementation yet",
+      "remaining_exact_main_obligation": "Actual finite old-term witness/interpolant construction for each stated guard and finite table, including forbidden-function avoidance; no unrestricted incoming higher operators.",
+      "qualification": "New source submissions require serial compiler acceptance; supporting lemmas do not close the entire family."
+    },
+    {
+      "queue_id": "sp_supplement.05",
+      "origin": "historical",
+      "source_index": "research/2026-10-22/counting/sp-supplement-counting-audit.md",
+      "source_entry": "**Product embeddings admit injective ultraproduct quotients.** Any embedding of a genuine C full-term algebra into a product has a finite-intersection family of pair-separation coordinates and therefore an injective ultraproduct quotient. For finite products an injective coordinate already exists. Route: `notes/sp-existential-products-20261022.md` §14. This is not ordinary published Max reflection and was not in the original35.",
+      "source_paths": [
+        "research/2026-10-22/notes/sp-existential-products-20261022.md"
+      ],
+      "owner_lane": "sp",
+      "status": "incomplete_main_family",
+      "implemented_portion": "No product/ultraproduct implementation yet",
+      "remaining_exact_main_obligation": "Typed full-term product embeddings, finite-intersection pair-separation family, ultrafilter construction and injective quotient; finite-product injective coordinate corollary.",
+      "qualification": "New source submissions require serial compiler acceptance; supporting lemmas do not close the entire family."
+    },
+    {
+      "queue_id": "sp_supplement.07",
+      "origin": "historical",
+      "source_index": "research/2026-10-22/counting/sp-supplement-counting-audit.md",
+      "source_entry": "**SP excludes strong worlds and allows atomless splitting of finite current diagrams.** SP rules out arbitrary strong worlds at every relational type, and yields the stated distinctness-preserving atomlessness possibilities preserving any fixed finite current diagram. Routes: `notes/sp-existential-products-20261022.md` §§5–6; `sp-structural-proof-package/reflection-universal-core-20261022.md` §§9–12. This does not refute weak atoms or establish SP inconsistency, and it does not say SP refutes unboxed Actuality.",
+      "source_paths": [
+        "research/2026-10-22/notes/sp-existential-products-20261022.md",
+        "research/2026-10-22/notes/reflection-universal-core-20261022.md",
+        "research/2026-10-22/sp-structural-proof-package/reflection-universal-core-20261022.md"
+      ],
+      "owner_lane": "sp",
+      "status": "incomplete_main_family",
+      "implemented_portion": "C atom/split lemmas only",
+      "remaining_exact_main_obligation": "Actual SP strong-world exclusion at every relational type and the stated possibilities preserving finite current diagrams; do not refute weak atoms or unboxed Actuality.",
+      "qualification": "New source submissions require serial compiler acceptance; supporting lemmas do not close the entire family."
+    },
+    {
+      "queue_id": "sp_supplement.08",
+      "origin": "historical",
+      "source_index": "research/2026-10-22/counting/sp-supplement-counting-audit.md",
+      "source_entry": "**Restricted pure persistent ghosts and finite multiplicity.** At every relational input/output type there are explicit closed-pure C-provably persistent operators nonzero under Max but with bottom entity-values on all current inputs under SP; every current operator has arbitrarily many distinct entity-coextensive operators, for each external finite bound. The contrasting closed-pure single-individual-input result is included. Route: `notes/sp-existential-products-20261022.md` §§18–20,25. This strengthens original item29's unqualified BF/Functionality failures by a substantive purity/persistence restriction; it is counted once, not once per type, arity or finite bound. No internally infinite sequence of such operators is claimed.",
+      "source_paths": [
+        "research/2026-10-22/notes/sp-existential-products-20261022.md"
+      ],
+      "owner_lane": "sp",
+      "status": "incomplete_main_family",
+      "implemented_portion": "No closed-pure persistent-ghost construction yet",
+      "remaining_exact_main_obligation": "Explicit pure persistent operators, Max nonzeroness, SP bottom entity-values, finite coextensive multiplicity and the contrasting single-individual-input theorem.",
+      "qualification": "New source submissions require serial compiler acceptance; supporting lemmas do not close the entire family."
+    },
+    {
+      "queue_id": "model_interpretation.04",
+      "origin": "historical",
+      "source_index": "research/2026-10-22/counting/model-interpretation-counting-audit.md",
+      "source_entry": "**Effective Gallin representation of every positive model.** Original positive models and the specified relational Henkin presentations have explicit effective reconstructions, with exact degree preservation for the stated canonical type/operation coding. The treatment of truth and arbitrary signature constants retains its qualifications. Count the coding refinements and biinterpretation once. Proofs: [representation audit](../notes/effective-gallin-representation-audit-20261022.md); [biinterpretation](../notes/gallin-biinterpretation-20261022.md). The computational content is additional to the semantic world-indexed representation counted in the algebra list.",
+      "source_paths": [
+        "research/2026-10-22/notes/effective-gallin-representation-audit-20261022.md",
+        "research/2026-10-22/notes/gallin-biinterpretation-20261022.md"
+      ],
+      "owner_lane": "sp",
+      "status": "incomplete_main_family",
+      "implemented_portion": "Semantic representation infrastructure belongs to the model lane",
+      "remaining_exact_main_obligation": "E2 and exact degree-preserving effective Gallin reconstructions in both directions; preserve truth and signature qualifications.",
+      "qualification": "New source submissions require serial compiler acceptance; supporting lemmas do not close the entire family."
+    },
+    {
+      "queue_id": "model_interpretation.05",
+      "origin": "historical",
+      "source_index": "research/2026-10-22/counting/model-interpretation-counting-audit.md",
+      "source_entry": "**Exact degree realization preserving a supplied complete theory.** Every complete consistent pure theory extending C has a uniformly constructed adequate model of exactly its degree and with that exact pure theory. Group the resulting exact degree spectra and the stronger oracle needed to parametrize the entire completion space in this one family. Proofs: [exact spectra](../notes/exact-completion-model-spectra-20261022.md), §§3–6; [parametrization boundary](../notes/completion-space-parametrization-audit-20261022.md), §§1–4. This strengthens, and is not a recount of, the oracle-capacity results. Conditional SP applications retain their consistency hypotheses.",
+      "source_paths": [
+        "research/2026-10-22/notes/exact-completion-model-spectra-20261022.md",
+        "research/2026-10-22/notes/completion-space-parametrization-audit-20261022.md"
+      ],
+      "owner_lane": "sp",
+      "status": "incomplete_main_family",
+      "implemented_portion": "No exact-degree model construction yet",
+      "remaining_exact_main_obligation": "E2/E3: uniformly construct a model of precisely the supplied complete pure theory and its exact degree; prove full-space parametrization needs the stronger oracle.",
+      "qualification": "New source submissions require serial compiler acceptance; supporting lemmas do not close the entire family."
+    },
+    {
+      "queue_id": "F13",
+      "origin": "followup",
+      "source_index": "research/2026-10-22/lean-formalization/INVENTORY.md",
+      "source_entry": "Truth-preserving Boolean absorption/elementarity over the common term algebra, arbitrary finite Boolean alternations and several fixed evaluations; guarded numerical disjunction/witness preservation.",
+      "source_paths": [
+        "research/2026-10-22/followup/strong-possibility.md"
+      ],
+      "owner_lane": "sp",
+      "status": "incomplete_main_family",
+      "implemented_portion": "Algebra proves only restricted Boolean/map kernels",
+      "remaining_exact_main_obligation": "Truth-preserving Boolean absorption/elementarity for arbitrary finite alternations and fixed evaluations, plus guarded numerical witnesses; actual full C algebra bridge.",
+      "qualification": "New source submissions require serial compiler acceptance; supporting lemmas do not close the entire family."
+    },
+    {
+      "queue_id": "F14",
+      "origin": "followup",
+      "source_index": "research/2026-10-22/lean-formalization/INVENTORY.md",
+      "source_entry": "Pure SP one-step C+I omega-rule and true Pi02 arithmetic; sharp correctness boundary if consistent; explicit numerical H-Barcan obstruction.",
+      "source_paths": [
+        "research/2026-10-22/followup/strong-possibility.md"
+      ],
+      "owner_lane": "sp",
+      "status": "incomplete_main_family",
+      "implemented_portion": "Reflection supplies Max/SP BoxNe diagram, not arithmetic correctness",
+      "remaining_exact_main_obligation": "A1, one-step C+I omega-rule, true Pi02 consequences, conditional sharp boundary and the explicit numerical H-Barcan obstruction.",
+      "qualification": "New source submissions require serial compiler acceptance; supporting lemmas do not close the entire family."
+    },
+    {
+      "queue_id": "F15",
+      "origin": "followup",
+      "source_index": "research/2026-10-22/lean-formalization/INVENTORY.md",
+      "source_entry": "Full-term homomorphisms embed actual number fields; retractions force arithmetic isomorphism. D(P) at Max model M iff a one-way full-term embedding into a Max+P model. Exact target-kernel quotient, algebraic removal of H(G), and no-go for generic term/numerical profiles.",
+      "source_paths": [
+        "research/2026-10-22/followup/strong-possibility-one-way.md"
+      ],
+      "owner_lane": "sp",
+      "status": "incomplete_main_family",
+      "implemented_portion": "Algebra supplies conditional numerical-retraction/quotient lemmas",
+      "remaining_exact_main_obligation": "A1 numerical preservation/injectivity from genuine full-term maps; M1 for local embedding iff D; actual target-kernel characterization and generic profile canonicity/no-go. Henkin completion for the desired SP model remains unresolved.",
+      "qualification": "New source submissions require serial compiler acceptance; supporting lemmas do not close the entire family."
+    }
+  ],
+  "handoff_file": "sp-status.md",
+  "dependency_detail_file": "sp-family-status.md",
+  "no_main_complexity_family_claimed_complete": true
+}

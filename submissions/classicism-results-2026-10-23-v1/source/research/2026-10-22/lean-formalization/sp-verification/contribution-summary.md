@@ -1,0 +1,11 @@
+# SP/Max verification contribution
+
+The [live ledger](verification-status.md) and [machine-readable evidence](verification-status.json) distinguish accepted current proofs, source changes requiring rechecks, and failed checks. The [prose proofs](proof-summary.md) explain the substantive statements, and the [reproduction instructions](reproduction.md) give the pinned local environment and locked check commands. The [AI scope audit](semantic-audit.md) records an independent review; it is not a human checked_by entry.
+
+The author personally repaired and verified Algebra, Computability, InfinitaryNumerals and MaxDiagram. The algebra repair changed an incorrect distributivity lemma name; the computability import was narrowed and its missing pinned dependencies built; the MaxDiagram repair replaced unavailable tactic syntax with explicit proofs of the same statements. No mathematical premise or conclusion changed. InfinitaryNumerals passed unchanged.
+
+The core integration task repaired and verified Schemas, Reflection, SignatureSplit and MaxConservativity, and completed the additional 21-declaration public axiom audit. A dedicated local agent `/root/sp_semantic_audit` repaired and verified UniversalCore and Disjunction. Its proof-repair role is separate from its earlier scope review. Together with C and Stability, all twelve submitted result modules now have successful checks matching current source and dependency fingerprints. No check remains pending in that exact scope.
+
+The already checked C and Stability modules provide 39 gate/type/object-derivation certificates. MaxDiagram, Schemas, Reflection and the remaining syntactic modules prove metatheorems about actual C derivations. Algebra, Computability and InfinitaryNumerals are explicitly ordinary metatheory. Full family completion, a genuine Henkin quotient, standard arithmetic models, and SP consistency are not inferred from these supporting results.
+
+All source edits in this verification run are isolated to the authorized research modules and reports. No generated Statements.lean, frozen research note, human-authored proof, YAML mathematical status or Lean certificate flag was edited. Repository validation remains separate from Lean acceptance.

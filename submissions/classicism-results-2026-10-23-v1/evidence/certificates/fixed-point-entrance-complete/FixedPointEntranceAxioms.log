@@ -1,0 +1,37 @@
+'Classicism.Meta.Intensional.ExternalPinning.isModel_of_pinned_sym' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Intensional.SymmetricExternal.singleton_fin_isModel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Intensional.QualitativeLinks.reflects' does not depend on any axioms
+'Classicism.Meta.Intensional.QualitativeLinks.syms_inv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.Intensional.QualitativeLinks.collapse_collapses' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Intensional.FixedPointEntrance.syms_inv' depends on axioms: [Quot.sound]
+'Classicism.Meta.Intensional.FixedPointEntrance.transport_fixed' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.Intensional.FixedPointEntrance.Qualitative.isModel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Intensional.FixedPointEntrance.Qualitative.collapse_not_sym' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Intensional.FixedPointEntrance.Qualitative.Rigidity.holds_tame_schema' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Intensional.FixedPointEntrance.Qualitative.Completeness.holds_bc_schema' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Intensional.FixedPointEntrance.Qualitative.Comprehension.holds_rigid_comprehension_schema' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Intensional.FixedPointEntrance.Qualitative.Distinctness.not_nd_t' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Intensional.FixedPointEntrance.Qualitative.Distinctness.bf_e_at' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Intensional.FixedPointEntrance.Qualitative.root_profile' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,223 @@
+{
+  "checked_at_utc": "2026-10-24T02:08:35.780077+00:00",
+  "database_root": "deliverables/Logical-Maps/logical-maps",
+  "head": "7bd6bf42173cbac66dec425f933d693830e57c78",
+  "working_tree": true,
+  "method": "load_topic plus Engine with proved-only results/models; optional premises only in query, no rankings or compiler",
+  "queries": [
+    {
+      "premises": [
+        "necessary-distinctness-necessary-r",
+        "atomicity-t"
+      ],
+      "target": "no-pure-contingency-r",
+      "query": "entails",
+      "premise_conflict": null,
+      "answer": [
+        true,
+        [
+          "c5-and-atomicity-t-imply-no-pure-contingency"
+        ]
+      ]
+    },
+    {
+      "premises": [
+        "necessary-distinctness-necessary-r",
+        "atomicity-t"
+      ],
+      "target": "necessity-of-second-order-analysis",
+      "query": "entails",
+      "premise_conflict": null,
+      "answer": [
+        true,
+        [
+          "c5-and-atomicity-t-imply-no-pure-contingency",
+          "no-pure-contingency-implies-necessity-of-second-order-analysis"
+        ]
+      ]
+    },
+    {
+      "premises": [
+        "necessary-distinctness-necessary-r",
+        "atomicity-t"
+      ],
+      "target": "non-contingency-of-ch",
+      "query": "entails",
+      "premise_conflict": null,
+      "answer": [
+        true,
+        [
+          "c5-and-atomicity-t-imply-no-pure-contingency",
+          "no-pure-contingency-implies-necessity-of-second-order-analysis",
+          "necessity-of-second-order-analysis-implies-non-contingency-of-ch"
+        ]
+      ]
+    },
+    {
+      "premises": [
+        "strong-leibniz-r",
+        "rigid-comprehension-r"
+      ],
+      "target": "necessary-rigid-comprehension-r",
+      "query": "entails",
+      "premise_conflict": null,
+      "answer": [
+        true,
+        [
+          "strong-leibniz-and-rigid-comprehension-imply-necessary-rigid-comprehension"
+        ]
+      ]
+    },
+    {
+      "premises": [
+        "strong-leibniz-r",
+        "rigid-comprehension-r"
+      ],
+      "target": "necessity-of-second-order-analysis",
+      "query": "entails",
+      "premise_conflict": null,
+      "answer": [
+        true,
+        [
+          "strong-leibniz-r-implies-atomicity-r",
+          "strong-leibniz-and-rigid-comprehension-imply-necessary-rigid-comprehension",
+          "atomicity-and-necessary-rigid-comprehension-imply-necessity-of-second-order-analysis"
+        ]
+      ]
+    },
+    {
+      "premises": [
+        "strong-leibniz-r",
+        "rigid-comprehension-r"
+      ],
+      "target": "arithmetic-necessitism",
+      "query": "entails",
+      "premise_conflict": null,
+      "answer": [
+        true,
+        [
+          "strong-leibniz-and-rigid-comprehension-imply-necessary-rigid-comprehension",
+          "necessary-rigid-comprehension-implies-arithmetic-necessitism"
+        ]
+      ]
+    },
+    {
+      "premises": [
+        "necessary-functional-choice-r"
+      ],
+      "target": "second-order-analytic-necessitism",
+      "query": "entails",
+      "premise_conflict": null,
+      "answer": [
+        true,
+        [
+          "necessary-functional-choice-r-implies-necessary-plenitude-r",
+          "necessary-plenitude-r-implies-necessary-distinctness-necessary-r",
+          "necessary-plenitude-r-implies-atomicity-r",
+          "c5-and-atomicity-imply-necessary-rigid-comprehension",
+          "c5-and-necessary-rigid-comprehension-imply-second-order-analytic-necessitism"
+        ]
+      ]
+    },
+    {
+      "premises": [
+        "extensionality-r"
+      ],
+      "target": "second-order-analytic-necessitism",
+      "query": "entails",
+      "premise_conflict": null,
+      "answer": [
+        true,
+        [
+          "extensionality-r-implies-fregean-axiom",
+          "fregean-axiom-implies-necessary-distinctness-necessary-r",
+          "fregean-axiom-implies-no-pure-contingency-r",
+          "extensionality-r-implies-rigid-comprehension-r",
+          "no-pure-contingency-and-rigid-comprehension-imply-necessary-rigid-comprehension",
+          "c5-and-necessary-rigid-comprehension-imply-second-order-analytic-necessitism"
+        ]
+      ]
+    },
+    {
+      "premises": [
+        "distinctness-schema-r"
+      ],
+      "target": "necessity-of-analysis",
+      "query": "excludes",
+      "premise_conflict": null,
+      "answer": {
+        "target": "false",
+        "via": [
+          "maximalism-incompatible-with-necessity-of-analysis"
+        ]
+      }
+    },
+    {
+      "premises": [
+        "strong-possibility-r"
+      ],
+      "target": "analytic-necessitism",
+      "query": "excludes",
+      "premise_conflict": null,
+      "answer": {
+        "target": "false",
+        "via": [
+          "strong-possibility-r-implies-possibility-schema-r",
+          "analytic-necessitism-implies-necessity-of-analysis",
+          "maximalism-incompatible-with-necessity-of-analysis"
+        ]
+      }
+    },
+    {
+      "premises": [
+        "relational-choice-r",
+        "boolean-completeness-r"
+      ],
+      "target": "transversal-choice-r",
+      "query": "entails",
+      "premise_conflict": null,
+      "answer": [
+        true,
+        [
+          "relational-choice-and-boolean-completeness-imply-transversal-choice"
+        ]
+      ]
+    }
+  ],
+  "strict_forcing_ch": {
+    "premises": [
+      "forcing-possibilism",
+      "intensional-choice-r",
+      "necessary-rigid-comprehension-r",
+      "non-contingency-of-ch"
+    ],
+    "premise_conflict": null,
+    "model_witnesses": [
+      "full-double-retraction-glued-constants",
+      "full-free-monoid-glued-constants-singleton",
+      "full-free-monoid-glued-constants",
+      "full-free-product-glued-constants"
+    ]
+  },
+  "used_result_sha256": {
+    "topics/classicism/results/c5-and-atomicity-t-imply-no-pure-contingency.yaml": "ed457544da476fe9f9fbbc00fd3eced81730e8fa5c0398d3fc1dbd1de75965db",
+    "topics/classicism/results/no-pure-contingency-implies-necessity-of-second-order-analysis.yaml": "24d41d423aa5eaed2e066ce077cd76268d1f0971ac609023d0a36348df2dbee2",
+    "topics/classicism/results/necessity-of-second-order-analysis-implies-non-contingency-of-ch.yaml": "dfd4dfb9b34787b6e8454febb1f3831a11756fd27c42adb0e2c3fe207e172918",
+    "topics/classicism/results/strong-leibniz-and-rigid-comprehension-imply-necessary-rigid-comprehension.yaml": "20073381e33a23fc3817918deb908d68519a1d7d528673b5ef892846711f6d86",
+    "topics/classicism/results/strong-leibniz-r-implies-atomicity-r.yaml": "952779d9dd4431608ccf5565dc98d2c8a8250c465479811c2f9fc8b8c09c110c",
+    "topics/classicism/results/atomicity-and-necessary-rigid-comprehension-imply-necessity-of-second-order-analysis.yaml": "84b6c3a5ff0bad0350f6807dfe182c2e659584b002f6524ca7ee8df375b06be4",
+    "topics/classicism/results/necessary-rigid-comprehension-implies-arithmetic-necessitism.yaml": "1166e39c79a611f3672ec944c7646e741d8a8e0996f29f75821c1e9c5052507f",
+    "topics/classicism/results/necessary-functional-choice-r-implies-necessary-plenitude-r.yaml": "006b5440cdb3ecf38e2e871ecb342e8eeea39e9bdebb44a627faf44aa1d036ef",
+    "topics/classicism/results/necessary-plenitude-r-implies-necessary-distinctness-necessary-r.yaml": "9253d07f3c708f568833b7afaebcb6fec1bd4f85b95916bf50d46a93c9bd380c",
+    "topics/classicism/results/necessary-plenitude-r-implies-atomicity-r.yaml": "5a53a050b8362a35c15bc2e10510adaa4655c68cc83a1e852d7ab1431f1008a5",
+    "topics/classicism/results/c5-and-atomicity-imply-necessary-rigid-comprehension.yaml": "8c05531e940352069f29affdef8c0c59cc6b154422586420715c4b43035b8349",
+    "topics/classicism/results/c5-and-necessary-rigid-comprehension-imply-second-order-analytic-necessitism.yaml": "953d9b5af0a191ada8d2ee6efeb65848a834aa3f493827d544e2910a14eb2a83",
+    "topics/classicism/results/extensionality-r-implies-fregean-axiom.yaml": "996eca2795dcd4e97853f71800f6e9bbdce43e446247a4edb9476c098207b06d",
+    "topics/classicism/results/fregean-axiom-implies-necessary-distinctness-necessary-r.yaml": "fd21fb1ee6c152295d71b1f7551baba11303c3ca65ef0ab3e1b2cbfbdf085617",
+    "topics/classicism/results/fregean-axiom-implies-no-pure-contingency-r.yaml": "42262314ce50f7d5a403bae1b913f533ae680302d183a3ec62cbb53a3b92a905",
+    "topics/classicism/results/extensionality-r-implies-rigid-comprehension-r.yaml": "0e2f92c0e23b403f49cd87f4c5caf57fcb8de0438947cb4c965ed9fbd0069743",
+    "topics/classicism/results/no-pure-contingency-and-rigid-comprehension-imply-necessary-rigid-comprehension.yaml": "7712a211091fa690f28b1ec1e553545b74f254bfc0bd8ac408475fd4286ef3df",
+    "topics/classicism/results/relational-choice-and-boolean-completeness-imply-transversal-choice.yaml": "d81eba6f894d864eb464f5a25f39524d986e74ebfeb8ad0b4cd34f84c40c7243"
+  },
+  "scope": "Current recorded consequences, not independent audits of every constituent proof and not new theorem discoveries. Direct transversal research proof and its sharper premises must be retained separately."
+}

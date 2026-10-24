@@ -1,0 +1,17 @@
+import Classicism.Models.FiniteCompressionSeparation
+
+#check Classicism.Meta.Intensional.FiniteCompression.central_countermodel
+#check Classicism.Meta.Intensional.FiniteCompression.not_entails_weakly_rigid_power
+#print axioms Classicism.Meta.Intensional.FiniteCompression.isModel
+#print axioms Classicism.Meta.Intensional.FiniteCompression.weak_exact
+#print axioms Classicism.Meta.Intensional.FiniteCompression.compress_return
+#print axioms Classicism.Meta.Intensional.FiniteCompression.finite_label_exact
+#print axioms Classicism.Meta.Intensional.FiniteCompression.rigid_subobject_descent
+#print axioms Classicism.Meta.FiniteApproximation.exists_approximation
+#print axioms Classicism.Meta.Intensional.FiniteCompression.approximate_lift
+#print axioms Classicism.Meta.Intensional.FiniteCompression.rigid_power_at_root
+#print axioms Classicism.Meta.Intensional.FiniteCompression.block_weak
+#print axioms Classicism.Meta.Intensional.FiniteCompression.block_not_rigid
+#print axioms Classicism.Meta.Intensional.FiniteCompression.not_weakly_rigid_power_et
+#print axioms Classicism.Meta.Intensional.FiniteCompression.central_countermodel
+#print axioms Classicism.Meta.Intensional.FiniteCompression.not_entails_weakly_rigid_power

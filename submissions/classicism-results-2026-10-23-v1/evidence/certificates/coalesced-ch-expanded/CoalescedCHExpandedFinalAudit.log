@@ -1,0 +1,48 @@
+'ClassicismZFC.OppositeCHComponents.positive_component' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ClassicismZFC.OppositeCHComponents.negative_component' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ClassicismZFC.OppositeCHComponents.opposite_components' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ClassicismZFC.OppositeCHComponents.coalesced_countermodel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ClassicismZFC.OppositeCHComponents.consistent_opposite_witnesses' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ClassicismZFC.OppositeCHComponents.maximalism_with_CH_noncontingency_inconsistent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ClassicismZFC.OppositeCHComponents.maximalism_with_CH_noncontingency_schema_inconsistent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.CoalescedCH.FirstOrderTransfer.component_of_model' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.CoalescedCH.FirstOrderTransfer.component_of_satisfiable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.CoalescedCH.FirstOrderTransfer.consistent_of_model' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.CoalescedCH.FirstOrderTransfer.consistent_of_satisfiable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.CoalescedCH.FirstOrderTransfer.countermodel_of_models' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.CoalescedCH.FirstOrderTransfer.countermodel_of_satisfiable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.CoalescedCH.FirstOrderTransfer.maximalism_inconsistent_of_models' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.CoalescedCH.FirstOrderTransfer.maximalism_inconsistent_of_satisfiable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.CoalescedCH.FirstOrderTransfer.maximalism_schema_inconsistent_of_satisfiable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ClassicismZFC.SelectedFieldForcing.positive_real_witnesses' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ClassicismZFC.CodedFieldForcing.negative_cardinal_witnesses' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ClassicismZFC.InternalHierarchy.component_isModel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ClassicismZFC.TypedReal.component_hasReal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ClassicismZFC.TypedCHTransport.naturalCode_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ClassicismZFC.TypedCHTransport.structuralCH_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ClassicismZFC.TypedCHTransport.component_hasRealCH' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ClassicismZFC.TypedCHTransport.component_hasRealNotCH' depends on axioms: [propext, Classical.choice, Quot.sound]

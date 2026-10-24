@@ -1,0 +1,10 @@
+Classicism/Results/Research/FullTypedLogicalSeparationHClosure.lean:40:30: warning: Variable name `Γ` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _Γ
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'Classicism.Meta.Research.FullTypedLogicalSeparation.supported_agreement' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.Research.FullTypedLogicalSeparation.logical_equivalence' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.Research.FullTypedLogicalSeparation.classicism_from_full_separation' depends on axioms: [propext,
+ Quot.sound]

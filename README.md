@@ -30,6 +30,10 @@ Open <http://localhost:8000/> to preview. Pandoc is optional; see the project
 documentation for Lean checks.
 Formalization is incomplete; individual certificates record verification status.
 
+## Research submissions
+
+- [Classicism results and Lean certificate evidence, 23 October 2026](submissions/README.md)
+
 ## Contributing
 
 See the map's Contribute tab and [the editing rules](logical-maps/CLAUDE.md).

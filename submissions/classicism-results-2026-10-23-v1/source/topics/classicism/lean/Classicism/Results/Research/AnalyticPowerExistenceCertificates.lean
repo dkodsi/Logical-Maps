@@ -1,0 +1,10 @@
+import Classicism.Results.Research.AnalyticPowerExistence
+import Classicism.Results.Research.AnalyticRepresentedPowersCertificates
+
+set_option pp.deepTerms false
+set_option pp.deepTerms.threshold 4
+
+#classicism_audit Classicism.Results.Research.AnalyticPowerExistence
+#classicism_types_audit Classicism.Results.Research.AnalyticPowerExistence
+#classicism_derive Classicism.Research.Analytic.exists_represented_power
+#print axioms Classicism.Research.Analytic.exists_represented_power.derivable

@@ -1,0 +1,3 @@
+import Classicism.Results.Research.ModalRigidityDescentCertificates.IndexedUnion
+
+#classicism_derive Classicism.Research.ModalRigidityDescent.direct_image_rigid

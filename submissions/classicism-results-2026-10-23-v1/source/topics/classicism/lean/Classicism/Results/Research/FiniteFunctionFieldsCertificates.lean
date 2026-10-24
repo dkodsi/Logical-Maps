@@ -1,0 +1,13 @@
+import Classicism.Results.Research.FiniteFunctionFields
+import Classicism.Results.Research.FiniteRigidPowersCertificates
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Translate
+
+#classicism_audit Classicism.Results.Research.FiniteFunctionFields
+#classicism_types_audit Classicism.Results.Research.FiniteFunctionFields
+#classicism_derive_audit Classicism.Results.Research.FiniteFunctionFields
+
+#print axioms Classicism.Research.FiniteFunctionFields.finite_functions_of_finite_domains.derivable
+#print axioms Classicism.Research.FiniteFunctionFields.finite_predicates_iff.derivable
+#print axioms Classicism.Research.FiniteFunctionFields.infinity_predicates_iff.derivable

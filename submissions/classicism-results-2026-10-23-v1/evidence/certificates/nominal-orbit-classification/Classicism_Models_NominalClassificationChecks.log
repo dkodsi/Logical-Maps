@@ -1,0 +1,39 @@
+'Classicism.Meta.Nominal.finite_orbit_representatives' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.Nominal.infinite_orbit_quotient_dedekind' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.Nominal.FiniteSupportOrbits.extend_finite_pattern' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Nominal.FiniteSupportOrbits.finite_representatives_in_orbit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Nominal.finite_stabilizer_orbits_of_global_representatives' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Nominal.finite_proposition_strata_of_finite_orbit_quotient' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Nominal.dedekind_iff_infinite_orbit_quotient' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Nominal.Hierarchy.dedInfT_iff_infinite_orbit_quotient' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Nominal.Hierarchy.not_dedInfT_iff_finite_orbit_quotient' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Nominal.Hierarchy.boxed_dedInfT_iff_infinite_orbit_quotient' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Nominal.Hierarchy.boxed_not_dedInfT_iff_finite_orbit_quotient' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Nominal.Examples.finite_atoms_ic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.Nominal.Examples.finite_atoms_intensionalChoice_quoted' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Nominal.Examples.finite_atoms_boxed_intensionalChoice_quoted' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Nominal.Examples.finite_atoms_boxed_ic_and_not_dedInfT' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

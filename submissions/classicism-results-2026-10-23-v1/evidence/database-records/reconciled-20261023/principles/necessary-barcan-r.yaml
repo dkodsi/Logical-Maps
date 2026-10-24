@@ -1,0 +1,64 @@
+id: necessary-barcan-r
+name: □BF
+category: coarse
+statement: "Necessarily, the Barcan Formula holds at every type. The predicate formulation closes the formula schema using lambda abstraction."
+formal: $\Box\forall X^{\sigma t}\, .\,(\forall x^\sigma\, .\,\Box Xx)\to\Box(\forall x^\sigma\, .\,Xx)$
+date: '2026-09-17'
+sources:
+- Andrew Bacon and Cian Dorr, Classicism, draft of 16 May 2023, §2.1, pp. 21–23; §§2.2–2.3, pp. 25–34.
+source_names:
+- Classicism
+references:
+- paper: bacon-dorr-classicism
+  role: formulation
+  locator: §2.1, pp. 21–23; §§2.2–2.3, pp. 25–34
+notes: The necessitated form of [[barcan-r]].
+changes:
+- date: '2026-10-03'
+  by: Claude Opus 5.5 (Anthropic), prompted by Zachary Goodsell
+  summary: Restated the statement as the necessitation of the base principle's statement, in place of
+    a generic description of necessitation; the formal statement is unchanged.
+- date: '2026-10-19'
+  by: Claude Opus 5.5 (Anthropic), prompted by Cian Dorr
+  summary: 'At Cian Dorr’s request: the formal statement now displays the boxed formula (and so do the
+    equivalent forms); the notes now name the base principle with a link, without the boilerplate about
+    closed instances and the box; the equivalent forms are stated as necessitations of the base forms.'
+variants:
+- id: polyadic
+  lean:
+    ref: Classicism.P.NecBarcan.listSchemaIn
+    equivalence_ref: Classicism.Map.necessary_barcan_r.polyadic
+    status: verified
+  name: Polyadic form
+  statement: Necessarily, BF holds for relations with any finite number of arguments.
+  formal: $\Box\forall X^{\bar\sigma t}\, .\,(\forall\bar x^{\bar\sigma}\, .\,\Box X[\bar x])\to\Box(\forall\bar
+    x^{\bar\sigma}\, .\,X[\bar x])$
+  equivalence: Each instance of the polyadic form of BF is derivable in C from finitely many instances
+    of the original form, and conversely; the derivations are on the page of the unboxed principle. Necessitating
+    them and applying K carries the equivalence to the boxed forms.
+- id: dual
+  lean:
+    ref: Classicism.P.NecBarcanDual.schemaIn
+    equivalence_ref: Classicism.Map.necessary_barcan_r.dual
+    status: verified
+  name: Dual form
+  statement: Necessarily, if possibly something has a property, then something possibly has it.
+  formal: $\Box\forall X^{\sigma t}\, .\,\Diamond(\exists x^\sigma\, .\,Xx)\to\exists x^\sigma\, .\,\Diamond
+    Xx$
+  equivalence: Each instance of the dual form of BF is derivable in C from finitely many instances of
+    the official form, and conversely; the derivation is on the page of BF. Necessitating it and applying
+    K carries the equivalence to the boxed forms.
+- id: dual-polyadic
+  lean:
+    ref: Classicism.P.NecBarcanDual.listSchemaIn
+    equivalence_ref: Classicism.Map.necessary_barcan_r.dual_polyadic
+    status: verified
+  name: Dual polyadic form
+  statement: Necessarily, if possibly some tuple stands in a relation, then some tuple possibly stands
+    in it.
+  formal: $\Box\forall X^{\bar\sigma t}\, .\,\Diamond(\exists\bar x^{\bar\sigma}\, .\,X[\bar x])\to\exists\bar
+    x^{\bar\sigma}\, .\,\Diamond X[\bar x]$
+  equivalence: Each instance of the dual polyadic form of BF is derivable in C from finitely many instances
+    of the official form, and conversely; the derivation is on the page of BF. Necessitating it and applying
+    K carries the equivalence to the boxed forms.
+lean_def: Classicism.P.NecBarcan.schemaIn

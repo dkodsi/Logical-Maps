@@ -1,0 +1,39 @@
+Classicism.Research.FullLogicalObservers.FiniteQualification.c5_actuality_necessary_singleton_atomicity: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em])
+Classicism.Research.FullLogicalObservers.FiniteQualification.c5_actuality_singleton_atomicity: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em])
+Classicism.Research.FullLogicalObservers.FiniteQualification.c5_necessary_qualified_cons: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FullLogicalObservers.FiniteQualification.c5_necessary_qualified_nil: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FullLogicalObservers.FiniteQualification.c5_qualified_cons: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FullLogicalObservers.FiniteQualification.c5_qualified_nil: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FullLogicalObservers.FiniteQualification.qualified_necessary_separation: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FullLogicalObservers.FiniteQualification.qualified_separation: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em])
+Classicism.Research.FullLogicalObservers.FiniteQualification.singleton_separation: Classicism ✓ [C⁻] (axioms: [])
+#classicism_audit Classicism.Results.Research.FullLogicalObserversFiniteQualification: 9/9 theorems pass; 9 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.FullLogicalObserversFiniteQualification: 9/9 inside R
+Classicism.Results.Research.FullLogicalObserversFiniteQualification: 9 of 9 theorems derived
+
+[1/9] Classicism.Research.FullLogicalObservers.FiniteQualification.c5_actuality_necessary_singleton_atomicity ✓ 1139 ms
+[2/9] Classicism.Research.FullLogicalObservers.FiniteQualification.c5_actuality_singleton_atomicity ✓ 0 ms
+[3/9] Classicism.Research.FullLogicalObservers.FiniteQualification.c5_necessary_qualified_cons ✓ 797 ms
+[4/9] Classicism.Research.FullLogicalObservers.FiniteQualification.c5_necessary_qualified_nil ✓ 598 ms
+[5/9] Classicism.Research.FullLogicalObservers.FiniteQualification.c5_qualified_cons ✓ 0 ms
+[6/9] Classicism.Research.FullLogicalObservers.FiniteQualification.c5_qualified_nil ✓ 0 ms
+[7/9] Classicism.Research.FullLogicalObservers.FiniteQualification.qualified_necessary_separation ✓ 1223 ms
+[8/9] Classicism.Research.FullLogicalObservers.FiniteQualification.qualified_separation ✓ 0 ms
+[9/9] Classicism.Research.FullLogicalObservers.FiniteQualification.singleton_separation ✓ 0 ms
+'Classicism.Research.FullLogicalObservers.FiniteQualification.qualified_necessary_separation.derivable' depends on axioms: [propext,
+ Quot.sound]
+'Classicism.Research.FullLogicalObservers.FiniteQualification.c5_actuality_necessary_singleton_atomicity.derivable' depends on axioms: [propext,
+ Quot.sound]

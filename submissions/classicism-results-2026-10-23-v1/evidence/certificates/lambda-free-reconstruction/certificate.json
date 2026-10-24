@@ -1,0 +1,583 @@
+{
+  "id": "lambda-free-reconstruction",
+  "source_manifest_origin": "research/2026-10-22/lean-formalization/checks/20261023T220419627357Z-81c98662.json",
+  "source_manifest_path": "evidence/certificates/lambda-free-reconstruction/original-manifest.json",
+  "source_manifest_sha256": "4975afc0b34e7edc90e501a0823e0f768126e9b377a81eb2359280f8554edc80",
+  "run_id": "20261023T220419627357Z-81c98662",
+  "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "compiler_sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554",
+  "precompiled_sha256": "2d246141fa46907725d81838f7c3a7150742ef9bb592d2baf1d0c9aa6167a1ab",
+  "selected_targets": [
+    "Classicism.Results.Research.ModalLambdaFreeEquivalence",
+    "Classicism.Results.Research.ModalNamedCProofTransport"
+  ],
+  "selected_targets_exit_code": 0,
+  "original_run_state": "complete",
+  "original_run_exit_code": 0,
+  "sources": [
+    {
+      "module": "Classicism.Syntax.Types",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Types.lean",
+      "sha256": "567828e8f9a707cf635e3b4fb30bc868a419967307613d0686d795d195606eac",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Types.lean",
+      "fingerprint": "f920c6417fb0d73d4b6cb333a5de66a5647023a45396e3a09a0b7e943245c8cf",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Syntax.Term",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Term.lean",
+      "sha256": "ad5172acbb74eaab9307662408928b80e6ffab62e14df16f2f41c7205de13f69",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Term.lean",
+      "fingerprint": "19fcc526fbf7a5f30c841e2fb11bd4cc6c4c8c77eddfb46e22a81b795035e2d5",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.RelationalBracketAbstraction",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/RelationalBracketAbstraction.lean",
+      "sha256": "61e41f025ad75f43ab42d91f869648ae2ddcd316cfcc2d41496f4eb0d6117a8d",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/RelationalBracketAbstraction.lean",
+      "fingerprint": "d1a46ca90da4465df7954a6d338a567f9485183a2d385ada86d9a4c7dc892db8",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.RelationalBracketRenaming",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/RelationalBracketRenaming.lean",
+      "sha256": "7ff50690e7045caf5740a27a48bc3cb03446cad5d1f120cd48761b747ab98947",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/RelationalBracketRenaming.lean",
+      "fingerprint": "20bcac5a52787dcdcf7f9a1eaf30b6e20ae5faa5292528e9c093f19f3d9db535",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalComprehensionRepresentation",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalComprehensionRepresentation.lean",
+      "sha256": "894fbd7e5fc2a63e5a970555c36c3a5637bb6910d647fcfbee00211e5dab42d0",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalComprehensionRepresentation.lean",
+      "fingerprint": "2e1e08cf20151d056fd2f55f8963118f9d819fa67b83eaf7f39fc717d3fd8ba4",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalComprehensionConcreteSyntax",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalComprehensionConcreteSyntax.lean",
+      "sha256": "48cd4676d8be1f49d9cc13a507530b2cc4c1900af4aa894e58ae59d8bfe105d0",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalComprehensionConcreteSyntax.lean",
+      "fingerprint": "acbd73e7e3c2e6f7b45ab6c5dbadd82aaf0ed6557362fac6ca7db06ab92dc69f",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalComprehensionConcreteBodies",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalComprehensionConcreteBodies.lean",
+      "sha256": "4c66845577562a8c648f3b24832586698fc7105910a6df2d073f936c22dc14dc",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalComprehensionConcreteBodies.lean",
+      "fingerprint": "76de4a104fd8f1e0c75cf2979947cb8ad0a13b0d11145659c8ac3c8c649b0d9c",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalComprehensionConcreteCalculus",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalComprehensionConcreteCalculus.lean",
+      "sha256": "c07186ce49fa3e8252d7a290cfb802bda888cdd753624089edb2ec53347623cd",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalComprehensionConcreteCalculus.lean",
+      "fingerprint": "ae413d185df9a3c9192cd82c2e068686a1cde399a4b2ff6ec8989f4362886eaa",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalUniformApplication",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalUniformApplication.lean",
+      "sha256": "38437efec8ebce8c0ff3a15900e2d503c4f6a16f7b57da8d564be6095264b815",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalUniformApplication.lean",
+      "fingerprint": "f96a9984197b41467de56cc1575efd4adb6d90c1beb508c3c8606ad82ecd5976",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalUniformCombinators",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalUniformCombinators.lean",
+      "sha256": "10ccbefdd7582ea050469402a330e198b94953c92a1b36e29bf88ae84f1444fc",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalUniformCombinators.lean",
+      "fingerprint": "edcc12573ebd8f7969aedfed672bf6869e8ee88d4534c5dbd1b489912c08901e",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.RelationalBracketInterpretation",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/RelationalBracketInterpretation.lean",
+      "sha256": "fb0de899227845eb19e3f6b4219563eb12f36618e97fa8c1e014b7865d7db793",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/RelationalBracketInterpretation.lean",
+      "fingerprint": "fab1043fb8212293bd4833dae534284ed51d9beece35e4a0666c6c949593d394",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.RelationalBracketCoherence",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/RelationalBracketCoherence.lean",
+      "sha256": "f1a1057676eee800fd0fe759870d2a35689c189cca08e0525323a7de43622b97",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/RelationalBracketCoherence.lean",
+      "fingerprint": "61e7dd1365014c8b2295ca0a45c471b79d26cb4e8d8629abc9da3a7b2f35ee7d",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.RelationalBracketSubstitution",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/RelationalBracketSubstitution.lean",
+      "sha256": "04ac60678393646e7610025548ff957761f18691e2691a7b4b3605fe4b9affa1",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/RelationalBracketSubstitution.lean",
+      "fingerprint": "56cae74b6d2d51a391c7de33ee51432e03b1f265482199f42f41d82c1c1a094f",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.BetaIdentityContextualClosure",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/BetaIdentityContextualClosure.lean",
+      "sha256": "40fbbc8f6a997b21e0a3983e2ae79563561fa6f08d82dfa85ce80759a109bdb6",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/BetaIdentityContextualClosure.lean",
+      "fingerprint": "1ce4698bdff44bea726c374f1d317aa612b91d6b721d8428e929fc2b46207b6a",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.RelationalLambdaCompilation",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/RelationalLambdaCompilation.lean",
+      "sha256": "74d2645616d18c702ca88aa3d1a2ed253edb462ff03529bc81fd83c52fdcf2b9",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/RelationalLambdaCompilation.lean",
+      "fingerprint": "1e5791228a75e7fe7c0599e85cd2fc01b304285a08a99530cbe7c5a485c7620b",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Syntax.Conversion",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Conversion.lean",
+      "sha256": "c22fe48399811fcb0d71b37206c633749a7285291c62c2e7d786475ea6ae339e",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Conversion.lean",
+      "fingerprint": "98d38a7cbaf85616553560abf68733b885806aebd405d33965c1dc960da57f67",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Syntax.Derivation",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Derivation.lean",
+      "sha256": "7cc2fd01542014d55e5a4c4a411724db7cdc076462d0de724c3530b0a8a3fc6b",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Derivation.lean",
+      "fingerprint": "061b31ce6eb4dec06fa11b50e1a6c035783c2a4995cd0969cc86efba8ddcaddc",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalComprehensionClassicalExtension",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalComprehensionClassicalExtension.lean",
+      "sha256": "5700755d8f2e9eb8e047e67b4d9091749fe2a8534895f85f93eb4f66731fa8b9",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalComprehensionClassicalExtension.lean",
+      "fingerprint": "a19abd09812cfe92b1bdbcd9c38b0d57ec763584b4bd7ab39d8e1546ed0639ea",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalClassicalRules",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalClassicalRules.lean",
+      "sha256": "1f16f58ae769ec6adc6fc00af96cde63c92386714ac8a9e88db83631e6b4dc60",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalClassicalRules.lean",
+      "fingerprint": "059d183c0d432eb6a6352f2f657a391da228d97daf8a66c8c93b7a5703df9f0a",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalFreshConstantSyntax",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalFreshConstantSyntax.lean",
+      "sha256": "6d5f64803a70cf59255c362b82cefb89b286f2fe3937ba03f50fe9399babc5e8",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalFreshConstantSyntax.lean",
+      "fingerprint": "2bc6597d58f7f434f1f23894feb14333b8fbeb7e2aa651b56570f5584a12a616",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalConcreteProofTransport",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalConcreteProofTransport.lean",
+      "sha256": "a62d99243609138046588e135e7eb7c895b7b7f34ee45b4467dffa7d7331b642",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalConcreteProofTransport.lean",
+      "fingerprint": "70635183aea52f8bda117b26e34b01eaab39114dc1a91c89006d253cc1988b5f",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalConcreteNamingConservativity",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalConcreteNamingConservativity.lean",
+      "sha256": "522c5647fac7c34d91e1c88d292288e01de602d99a9da928b58a1a8f950d3ff7",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalConcreteNamingConservativity.lean",
+      "fingerprint": "9316db51800c1f525a7933d151834f5040d67d047a82b38e0efdf2d46f99e1e3",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalFiniteDefinitions",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalFiniteDefinitions.lean",
+      "sha256": "d198258886efe1a913b715b5ba2f40656152452ad6502a87371de49add3887b1",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalFiniteDefinitions.lean",
+      "fingerprint": "6a70d248b3ff20f6a341d6aa30a6310e9a2476310c8f1d3476c21a722f98509c",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalFiniteClassicalDefinitions",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalFiniteClassicalDefinitions.lean",
+      "sha256": "e9da9de9bd6572041a1e4fb740269ebc09c55df87c5562f2c1efb829439070de",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalFiniteClassicalDefinitions.lean",
+      "fingerprint": "7fc028aeb0d29b70ce0eb604a7a5a9a08fc4049fb9c9233e580e40c056d29c7c",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.RelationalCompiledContexts",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/RelationalCompiledContexts.lean",
+      "sha256": "9c1d857255cc8546ffba46eb449bc781860cc81c75438cb9d82adbbbb8a49780",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/RelationalCompiledContexts.lean",
+      "fingerprint": "33e226170444931a22cacf1746b4da116aa908c9a1f8e4d66ac5031ff7d0d93a",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalLogicalOperatorBodies",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalLogicalOperatorBodies.lean",
+      "sha256": "5f695bd3dc21d92a19539ace1c54d049a8768bcef3379d1e4f6df188fda4d132",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalLogicalOperatorBodies.lean",
+      "fingerprint": "0e6487b76bb8a0f346ab29c1d9763c8f14dab3cb655d1f618ad970bfa1f7c208",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalLogicalOperatorLaws",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalLogicalOperatorLaws.lean",
+      "sha256": "14a939aa4383f4e7b57a44881433cd7ead289f9ebf13cfc0a5b61ffcdde59b45",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalLogicalOperatorLaws.lean",
+      "fingerprint": "0ec689c6b79e9ee6b7e12c680affb573981129b8ea0e5c55d335bb7ad7fb501d",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.RelationalCProofTransport",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/RelationalCProofTransport.lean",
+      "sha256": "961a3c6ae9456f8b0548ce60f90e8952f029eca1e8dcb2ab567b62416c0c9774",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/RelationalCProofTransport.lean",
+      "fingerprint": "34692a81039860a5f3363b1f3ff5d5121e1cc9af115de62f8976dec5b390f386",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalLogicalOperatorDelta",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalLogicalOperatorDelta.lean",
+      "sha256": "09590c38fa882f1d089aa2a35e6f5e1e11defd913ea62b4ae5e53091c4ec7826",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalLogicalOperatorDelta.lean",
+      "fingerprint": "622c7deb88a7c75a5cf941e1da7844db31da02a3152cf9ad4fe1e40b21e21f82",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalConcreteToCSyntax",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalConcreteToCSyntax.lean",
+      "sha256": "dcfa1f6e6ba984fb1c101790ca4d863d1d428663e5c80b0a580dbb7cd40c8a64",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalConcreteToCSyntax.lean",
+      "fingerprint": "e77263971496e739350cb09588f4f423b75a5ff31df12b5a86baa7936e7a95be",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalNativeCongruence",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalNativeCongruence.lean",
+      "sha256": "8abcf495c5999e0e0f6692dbe9d347ec657c7f086086979474290f9d8f385bb3",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalNativeCongruence.lean",
+      "fingerprint": "690c1f2e7670d745fcd86ed8a392f005287fa3d405a6d4d5022807d29c9b2670",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalTheoremReplacement",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalTheoremReplacement.lean",
+      "sha256": "306def1506cb9b088f5148109d8ffa5895a0346148fc7e5d2f6e24d1ffedad6d",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalTheoremReplacement.lean",
+      "fingerprint": "101ef22c1b5042230364948424469df2413984490c2f6c40210fd585e06272bf",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalContextClosure",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalContextClosure.lean",
+      "sha256": "6ad035ee68112fe9e5fb30cc7ffc0401e47bfb9a127cbea1eadee4e4b69d1263",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalContextClosure.lean",
+      "fingerprint": "adb0394368faca6c90a382eb444a1332a67dd7bc5bad625cc975a725cd9dc4b2",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalSequentClosure",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalSequentClosure.lean",
+      "sha256": "52cfbf16670ae61333f5be7a2f9aee799a4f6aa245a868c3f7bbbd7753c90c7c",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalSequentClosure.lean",
+      "fingerprint": "80e92fb6286043ed1b01f13226217035224c68b519325dc294021a3b1641140f",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalOldLanguageRoundTrip",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalOldLanguageRoundTrip.lean",
+      "sha256": "2dc83ad5019376afd00746a53082585267a9fba3b36125e6e24e671b14c4fd4d",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalOldLanguageRoundTrip.lean",
+      "fingerprint": "bda545486db5e301905e147252e66ebf107a8352ee4b6b5a136d7ab20133c6a9",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalLogicalOperatorTransport",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalLogicalOperatorTransport.lean",
+      "sha256": "0480ae5cd57c19224c09222e1a9a559380a3a9428f087e7b7e813a429a86c185",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalLogicalOperatorTransport.lean",
+      "fingerprint": "a0af58c1cec552316ab06a32fb1944543ae79ab50e43b99b7349f9280df33a39",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalClassicalSequentClosure",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalClassicalSequentClosure.lean",
+      "sha256": "15fd80e5e1e809094b7e4cb73d1916ef02bb194bee08ad34003ec3532b30571b",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalClassicalSequentClosure.lean",
+      "fingerprint": "957fbde22511ae5cd625589c617da158ed050ed4005de99524ab5bd92b7d3f8b",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalFiniteNameSupport",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalFiniteNameSupport.lean",
+      "sha256": "9bcc4b1ab5cffeb98b4eb71d57d03a792a9ef2f525df43e669aa2b358ef15ffe",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalFiniteNameSupport.lean",
+      "fingerprint": "d2c58bd5a7b3e021b5b91c8bd46a1b46782bd4931d875adb1eea98737c23b209",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalReconstructionNames",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalReconstructionNames.lean",
+      "sha256": "1bcfde09db7b32bc317647ab79a984150dd0a3c57e2aafb72e615faa0c43f7d2",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalReconstructionNames.lean",
+      "fingerprint": "9ccda0d5f4dc0a5064223b8e4ad56fefdc5546ee79e09bd88c2aa2ff9d4bff50",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalConstantMapDerivation",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalConstantMapDerivation.lean",
+      "sha256": "9c502cb3f94af36f30be169cff5d865401a5b1f3053bd949471f3daa1f505712",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalConstantMapDerivation.lean",
+      "fingerprint": "f8134fa38905efe22d223ed94d67ffba0277b63681d5f6c525cc20c079131802",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalFiniteDerivationSupport",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalFiniteDerivationSupport.lean",
+      "sha256": "4ff3b129019ba8648f0e71b8d655b43c825d69632bf849568f47c8a327d36ea2",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalFiniteDerivationSupport.lean",
+      "fingerprint": "26b1db4c3cc0bfa9267f6f2aea13730865599523e59f03e0e777f3aa661f4c1d",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalIndependentNamedAxioms",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalIndependentNamedAxioms.lean",
+      "sha256": "f7f0877526624e153935eded0895ebb425049eaba8569badf2c28e7288dd6b0d",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalIndependentNamedAxioms.lean",
+      "fingerprint": "0bb24bd1122862f17697b045094b52f05f01fdb9329bb9cdee36defcb3012131",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalReconstructionNameAdapter",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalReconstructionNameAdapter.lean",
+      "sha256": "bf32cb33a343cd88c3db68de95fbd93d7e7052069513af793bfb25c61b79cd0d",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalReconstructionNameAdapter.lean",
+      "fingerprint": "79a18a4327798ea41aedb931af203bd1ecfc2d08a7184b87df5afb3af8bbed11",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalFiniteNameErasure",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalFiniteNameErasure.lean",
+      "sha256": "66db731f08329b12e8cc6fe30fee61ba52127613bb22fdbdf9b8df13ee2439cb",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalFiniteNameErasure.lean",
+      "fingerprint": "e6c6181053f13e31f0bf916007601a74bc5863cf85e2e09cf4682ec59985395b",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Syntax.Axioms",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Axioms.lean",
+      "sha256": "f3dd3b51ef834f46f22e09fe34026f47120a8bc171afb190b5053c443f4a82a7",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Axioms.lean",
+      "fingerprint": "ddbcb4cf3a000255234e36d2ee2916e31b5fdb7a72f348dcefbd8c9d3ca7684a",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Syntax.Entailment",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Entailment.lean",
+      "sha256": "13f758dbf41a84dda7c2ae7adf6bcb9605ee114ce04dbda0efc5f1c4fbeabb1e",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Entailment.lean",
+      "fingerprint": "f670afd73a6fd66b3870be6129d27860b6752cbea6867b77f897d6c298a0bb17",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalConcreteToCModal",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalConcreteToCModal.lean",
+      "sha256": "531041196364eba2b3645b746883095e66193f0bdce91c8735b2b369161f8e32",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalConcreteToCModal.lean",
+      "fingerprint": "371a243b9448045db59ab8cdaaa3e058c794494329d71476ede687798c0c3262",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalConcreteToCDerivation",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalConcreteToCDerivation.lean",
+      "sha256": "084f436a30bb35f7edef11a7a7a30e656eaf1dfa8ccb8fc5071a402674fbded6",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalConcreteToCDerivation.lean",
+      "fingerprint": "8b4869e20bc8d3d57b24ef30f4bd1c3875296a03baadd8e5e485d5ead31f27a3",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalConcreteToCClassical",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalConcreteToCClassical.lean",
+      "sha256": "7555855f4a2025f40bf62c0e33cf50304edcf617546d4d32dd0f54b121c3f6e9",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalConcreteToCClassical.lean",
+      "fingerprint": "6b7ca20c4ad97caee5dfc5ba6a5ee5cc63f3d2026ff18764a4c5d65438f873ea",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalLambdaFreeEquivalence",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalLambdaFreeEquivalence.lean",
+      "sha256": "fd35c250ccb2bb3234a4f7f4475f9ea56a7c305b25035081aa4ce5b41774c172",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalLambdaFreeEquivalence.lean",
+      "fingerprint": "d6c5487add56ebbdc248707238cf6a0dd8e73d7108cdeeee1be49a1c5c03afe3",
+      "module_exit_code": 0,
+      "reused_at_run": false
+    },
+    {
+      "module": "Classicism.Results.Research.RelationalLambdaDecoding",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/RelationalLambdaDecoding.lean",
+      "sha256": "f664811cfabb3f8e0f00558ac31df2ade51f2eb38e1369be595c7c47d51b1d77",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/RelationalLambdaDecoding.lean",
+      "fingerprint": "ebe1e8f1d80602dd437b93c0264ff3f29e5a3610388122ec32dd1f175e5d2439",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.RelationalLambdaDecodingLaws",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/RelationalLambdaDecodingLaws.lean",
+      "sha256": "d72e91ce3ff92b320117f3bc0216f39666d3ef79fbaa5d9b7a382cfc393971dd",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/RelationalLambdaDecodingLaws.lean",
+      "fingerprint": "4a6beb3baed2f4a8212e1f33d45a5817839c92b58f44df58955eef05eb9f0ef5",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.RelationalLambdaRoundtrip",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/RelationalLambdaRoundtrip.lean",
+      "sha256": "ac5330c8e1856d9f907ba6c7ec24f832c83398abf96df4a17c74616c8e6b92a0",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/RelationalLambdaRoundtrip.lean",
+      "fingerprint": "0c533555e68531fb155676d631c28ec46bf3d44e377bf594811b299ef889c46b",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalNamedToCSyntax",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalNamedToCSyntax.lean",
+      "sha256": "f057317aa7a81872fbc85ea0f2a8440abc276111f2ce80386c35500501f8441a",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalNamedToCSyntax.lean",
+      "fingerprint": "396fba1df6d27e99d437ac0195cbc629b4a750cfd68aaff1c9d43552d9e1c497",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalCombinatorCDefinitions",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalCombinatorCDefinitions.lean",
+      "sha256": "0151058f70103c036ef242efe8b3b69a16f5f2b40a1235e6c5cc3e3f5d998bab",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalCombinatorCDefinitions.lean",
+      "fingerprint": "250622e5c34c09152028643264361f45c12dcf064c1d02b40a11d930e04385ea",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Syntax.Blocks",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Blocks.lean",
+      "sha256": "77b4ef8fadb3646edd15d25854bac994a6eabb8bb1f51347c9dd00fce3a6ac5d",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Blocks.lean",
+      "fingerprint": "8f619648c1c389b21f3ef2a40567f20862d30330a0620404a743ae921b4637a2",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalLogicalCDefinitions",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalLogicalCDefinitions.lean",
+      "sha256": "4630a8842253ee0e8b95215520be2cd18d3d028156d271ccd0e4b989564eac19",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalLogicalCDefinitions.lean",
+      "fingerprint": "ad092932a969f0dd4056402aec378e512974789c14d7e8726e67ca52e831dd0a",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalNamedCDefinitions",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalNamedCDefinitions.lean",
+      "sha256": "2014d054ae0c28552e3f8065690dc972bc47de11d034cd4820fc75f2f7c8eb68",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalNamedCDefinitions.lean",
+      "fingerprint": "8098d051f118836e04ffc0a34cec94058e714950a57f2d994679d6b6c198f35a",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Results.Research.ModalNamedCProofTransport",
+      "path": "source/topics/classicism/lean/Classicism/Results/Research/ModalNamedCProofTransport.lean",
+      "sha256": "39ab603e5d709700be85a33cfda09083ce0c6825b3bb261da5777c4fc0ae98c1",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/ModalNamedCProofTransport.lean",
+      "fingerprint": "65be2ad57890c2a812cc0ba50d2806275b6d5a6076fac7d8fc3cc034a4a9c64b",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    }
+  ],
+  "logs": [
+    {
+      "module": "Classicism.Results.Research.ModalLambdaFreeEquivalence",
+      "path": "evidence/certificates/lambda-free-reconstruction/Classicism_Results_Research_ModalLambdaFreeEquivalence.log",
+      "sha256": "c491bdc84d12d943268184eb5dc1f031cf75ccdf79d173310c495fc3dc43eac7",
+      "audit_run_id": "20261023T220419627357Z-81c98662"
+    },
+    {
+      "module": "Classicism.Results.Research.ModalNamedCProofTransport",
+      "path": "evidence/certificates/lambda-free-reconstruction/Classicism_Results_Research_ModalNamedCProofTransport.log",
+      "sha256": "b3b79a9adae8b3c04e3e8d15c41eb3d1b8641817e2a5381470b734e44e1a1d2d",
+      "audit_run_id": "20261023T215920420064Z-cfbed785"
+    }
+  ],
+  "axiom_report_lines": [
+    "'Classicism.Research.ModalLambdaFreeEquivalence.from_C' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Classicism.Research.ModalLambdaFreeEquivalence.classical_lambda_free_iff_C' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Classicism.Research.ModalLambdaFreeEquivalence.classical_lambda_free_theorem_iff_C' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Classicism.Research.ModalNamedToC.constantValue_subst' depends on axioms: [propext]",
+    "'Classicism.Research.ModalNamedToC.jPlus_subst' depends on axioms: [propext, Quot.sound]",
+    "'Classicism.Research.ModalNamedToC.jPlus_inst' depends on axioms: [propext, Quot.sound]",
+    "'Classicism.Research.ModalNamedToC.jPlus_coext' depends on axioms: [propext, Quot.sound]",
+    "'Classicism.Research.ModalNamedToC.c_named_comprehension' depends on axioms: [propext, Quot.sound]",
+    "'Classicism.Research.ModalNamedToC.derives_jPlus' depends on axioms: [propext, Quot.sound]",
+    "'Classicism.Research.ModalNamedToC.named_derives_toC' depends on axioms: [propext, Quot.sound]"
+  ],
+  "result_entries": [
+    "LAMBDA-FREE-TRANSLATION"
+  ],
+  "scope": "Exact open-sequent equivalence with actual Classicism.Meta.C.Derivable in the original lambda-free language; concrete named-extension translation into C. Includes contextual substitution, logical operators, round trips and finite-name erasure. Quantifier binders retained; no minimality or automatic Max/SP schema transfer.",
+  "verification": "Exact captured dependency sources and successful target records checked against the original manifest; matching packaged bytes reused. Principal logs checked for axiom reports and absence of sorryAx. The original whole-run outcome is retained. No compiler invocation or database verification-flag change during intake.",
+  "source_manifest_original_sha256": "55402afa9caa00dc0d945e2a3e6e9f71093706a55dfc5ebeb1ac3478d0157c31",
+  "source_manifest_normalization": "Portable paths and omission of research coordination metadata; theorem/source hashes and check verdicts preserved."
+}

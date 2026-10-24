@@ -1,0 +1,3 @@
+import Classicism.Results.Research.GeneratedAlgebraFiniteFactoredCertificatesPullback1
+
+#classicism_derive Classicism.Research.GeneratedAlgebraFiniteFactored.pullback_op2

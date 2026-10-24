@@ -1,0 +1,28 @@
+import Classicism.Results.Research.AtomicProbabilityFractionAdditive
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Schema
+
+#classicism_audit Classicism.Results.Research.AtomicProbabilityFractionAdditive
+#classicism_types_audit Classicism.Results.Research.AtomicProbabilityFractionAdditive
+
+#classicism_derive Classicism.Research.ProbabilityFractions.fractionCode_scale
+  Classicism.Research.ProbabilityFractions.fractionCode_same_denominator
+  Classicism.Research.ProbabilityFractions.common_denominator_two
+  Classicism.Research.ProbabilityFractions.common_denominator_three
+  Classicism.Research.ProbabilityFractions.qplus_common_denominator
+  Classicism.Research.ProbabilityFractions.qzero_in_field
+  Classicism.Research.ProbabilityFractions.qone_in_field
+  Classicism.Research.ProbabilityFractions.qone_ne_zero
+  Classicism.Research.ProbabilityFractions.qplus_comm
+  Classicism.Research.ProbabilityFractions.qplus_assoc
+  Classicism.Research.ProbabilityFractions.qplus_zero_right
+  Classicism.Research.ProbabilityFractions.qplus_zero_left
+  Classicism.Research.ProbabilityFractions.qplus_cancel_right
+  Classicism.Research.ProbabilityFractions.qplus_cancel_left
+  Classicism.Research.ProbabilityFractions.qplus_eq_zero
+  Classicism.Research.ProbabilityFractions.qplus_right_comm
+  Classicism.Research.ProbabilityFractions.qplus_left_comm
+  Classicism.Research.ProbabilityFractions.qplus_four
+
+#print axioms Classicism.Research.ProbabilityFractions.qplus_four.derivable

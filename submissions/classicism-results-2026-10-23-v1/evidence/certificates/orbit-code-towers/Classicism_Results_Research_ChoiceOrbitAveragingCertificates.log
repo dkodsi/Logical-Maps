@@ -1,0 +1,38 @@
+Classicism.Research.OrbitAveraging.averageT_coext_of_fiber: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.OrbitAveraging.averageT_coext_of_preserves: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.OrbitAveraging.averageT_eq_of_orbit: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.OrbitAveraging.averageT_step_eq: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.OrbitAveraging.average_coext_of_fiber: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.OrbitAveraging.average_coext_of_preserves: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.OrbitAveraging.average_eq_of_orbit: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.OrbitAveraging.average_step_eq: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.OrbitAveraging.orbit_closed: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.OrbitAveraging.orbit_coext_of_fiber: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.OrbitAveraging.orbit_refl: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.OrbitAveraging.orbit_step_eq: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.OrbitAveraging.orbit_step_iff: Classicism ✓ [C⁻] (axioms: [])
+#classicism_audit Classicism.Results.Research.ChoiceOrbitAveraging: 13/13 theorems pass; 13 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.ChoiceOrbitAveraging: 13/13 inside R
+Classicism.Results.Research.ChoiceOrbitAveraging: 13 of 13 theorems derived
+
+[1/13] Classicism.Research.OrbitAveraging.averageT_coext_of_fiber ✓ 217 ms
+[2/13] Classicism.Research.OrbitAveraging.averageT_coext_of_preserves ✓ 27 ms
+[3/13] Classicism.Research.OrbitAveraging.averageT_eq_of_orbit ✓ 237 ms
+[4/13] Classicism.Research.OrbitAveraging.averageT_step_eq ✓ 0 ms
+[5/13] Classicism.Research.OrbitAveraging.average_coext_of_fiber ✓ 207 ms
+[6/13] Classicism.Research.OrbitAveraging.average_coext_of_preserves ✓ 87 ms
+[7/13] Classicism.Research.OrbitAveraging.average_eq_of_orbit ✓ 446 ms
+[8/13] Classicism.Research.OrbitAveraging.average_step_eq ✓ 0 ms
+[9/13] Classicism.Research.OrbitAveraging.orbit_closed ✓ 13 ms
+[10/13] Classicism.Research.OrbitAveraging.orbit_coext_of_fiber ✓ 0 ms
+[11/13] Classicism.Research.OrbitAveraging.orbit_refl ✓ 0 ms
+[12/13] Classicism.Research.OrbitAveraging.orbit_step_eq ✓ 0 ms
+[13/13] Classicism.Research.OrbitAveraging.orbit_step_iff ✓ 0 ms
+'Classicism.Research.OrbitAveraging.orbit_step_eq.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.OrbitAveraging.average_step_eq.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.OrbitAveraging.average_eq_of_orbit.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.OrbitAveraging.average_coext_of_fiber.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.OrbitAveraging.averageT_step_eq.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.OrbitAveraging.averageT_eq_of_orbit.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.OrbitAveraging.averageT_coext_of_fiber.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.OrbitAveraging.averageT_coext_of_preserves.derivable' depends on axioms: [propext, Quot.sound]

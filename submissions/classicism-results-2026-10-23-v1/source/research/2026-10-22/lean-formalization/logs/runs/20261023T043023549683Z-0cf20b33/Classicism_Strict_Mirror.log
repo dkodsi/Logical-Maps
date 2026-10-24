@@ -1,0 +1,255 @@
+Classicism.le_iff_prop ⟶ Classicism.le_iff_prop.strict : ∀ (p q : Prop),
+  Classicism.iff (Classicism.Strict.SRel.le p q) (Classicism.Strict.Box (Classicism.Strict.SRel.incl p q))
+strict ✓ (axioms: [Classicism.Axiomatic.absorption_or_forall,
+ Classicism.Axiomatic.commutativity_and,
+ Classicism.Axiomatic.commutativity_or,
+ Classicism.Axiomatic.dissolution_and_or,
+ Classicism.Axiomatic.dissolution_or_and,
+ Classicism.Axiomatic.distribution_and_or,
+ Classicism.Axiomatic.distribution_or_and,
+ Classicism.Axiomatic.distribution_or_forall,
+ Classicism.Axiomatic.identity_identity])
+Classicism.le_iff_arrow ⟶ Classicism.le_iff_arrow.strict : ∀ {σ τ : Type} [inst : Classicism.Ty σ]
+  [inst_1 : Classicism.Strict.SRel τ] [Classicism.Strict.SOrder τ] (X Y : σ → τ),
+  Classicism.iff (Classicism.Strict.SRel.le X Y) (Classicism.Strict.Box (Classicism.Strict.SRel.incl X Y))
+strict ✓ (axioms: [Classicism.Axiomatic.absorption_or_forall,
+ Classicism.Axiomatic.commutativity_and,
+ Classicism.Axiomatic.commutativity_or,
+ Classicism.Axiomatic.dissolution_and_or,
+ Classicism.Axiomatic.dissolution_or_and,
+ Classicism.Axiomatic.distribution_and_or,
+ Classicism.Axiomatic.distribution_or_and,
+ Classicism.Axiomatic.distribution_or_forall,
+ Classicism.Axiomatic.identity_identity])
+Classicism.incl_refl_prop ⟶ Classicism.incl_refl_prop.strict : ∀ (X : Prop), Classicism.Strict.SRel.incl X X
+strict ✓ (axioms: [Classicism.Axiomatic.commutativity_and,
+ Classicism.Axiomatic.commutativity_or,
+ Classicism.Axiomatic.dissolution_and_or,
+ Classicism.Axiomatic.dissolution_or_and,
+ Classicism.Axiomatic.distribution_and_or,
+ Classicism.Axiomatic.distribution_or_and,
+ Classicism.Axiomatic.distribution_or_forall])
+Classicism.incl_trans_prop ⟶ Classicism.incl_trans_prop.strict : ∀ (X Y Z : Prop),
+  Classicism.imp (Classicism.Strict.SRel.incl X Y)
+    (Classicism.imp (Classicism.Strict.SRel.incl Y Z) (Classicism.Strict.SRel.incl X Z))
+strict ✓ (axioms: [Classicism.Axiomatic.commutativity_and,
+ Classicism.Axiomatic.commutativity_or,
+ Classicism.Axiomatic.dissolution_and_or,
+ Classicism.Axiomatic.dissolution_or_and,
+ Classicism.Axiomatic.distribution_and_or,
+ Classicism.Axiomatic.distribution_or_and,
+ Classicism.Axiomatic.distribution_or_forall])
+Classicism.incl_and_prop ⟶ Classicism.incl_and_prop.strict : ∀ (X Y Z : Prop),
+  Classicism.imp (Classicism.Strict.SRel.incl Z X)
+    (Classicism.imp (Classicism.Strict.SRel.incl Z Y) (Classicism.Strict.SRel.incl Z (Classicism.Strict.SRel.and X Y)))
+strict ✓ (axioms: [Classicism.Axiomatic.absorption_or_forall,
+ Classicism.Axiomatic.commutativity_and,
+ Classicism.Axiomatic.commutativity_or,
+ Classicism.Axiomatic.dissolution_and_or,
+ Classicism.Axiomatic.dissolution_or_and,
+ Classicism.Axiomatic.distribution_and_or,
+ Classicism.Axiomatic.distribution_or_and,
+ Classicism.Axiomatic.distribution_or_forall])
+Classicism.incl_and_left_prop ⟶ Classicism.incl_and_left_prop.strict : ∀ (X Y : Prop),
+  Classicism.Strict.SRel.incl (Classicism.Strict.SRel.and X Y) X
+strict ✓ (axioms: [Classicism.Axiomatic.absorption_or_forall,
+ Classicism.Axiomatic.commutativity_and,
+ Classicism.Axiomatic.commutativity_or,
+ Classicism.Axiomatic.dissolution_and_or,
+ Classicism.Axiomatic.dissolution_or_and,
+ Classicism.Axiomatic.distribution_and_or,
+ Classicism.Axiomatic.distribution_or_and,
+ Classicism.Axiomatic.distribution_or_forall])
+Classicism.incl_and_right_prop ⟶ Classicism.incl_and_right_prop.strict : ∀ (X Y : Prop),
+  Classicism.Strict.SRel.incl (Classicism.Strict.SRel.and X Y) Y
+strict ✓ (axioms: [Classicism.Axiomatic.absorption_or_forall,
+ Classicism.Axiomatic.commutativity_and,
+ Classicism.Axiomatic.commutativity_or,
+ Classicism.Axiomatic.dissolution_and_or,
+ Classicism.Axiomatic.dissolution_or_and,
+ Classicism.Axiomatic.distribution_and_or,
+ Classicism.Axiomatic.distribution_or_and,
+ Classicism.Axiomatic.distribution_or_forall])
+Classicism.incl_and_neg_prop ⟶ Classicism.incl_and_neg_prop.strict : ∀ (X Y : Prop),
+  Classicism.Strict.SRel.incl (Classicism.Strict.SRel.and X (Classicism.Strict.SRel.neg X)) Y
+strict ✓ (axioms: [Classicism.Axiomatic.absorption_or_forall,
+ Classicism.Axiomatic.commutativity_and,
+ Classicism.Axiomatic.commutativity_or,
+ Classicism.Axiomatic.dissolution_and_or,
+ Classicism.Axiomatic.dissolution_or_and,
+ Classicism.Axiomatic.distribution_and_or,
+ Classicism.Axiomatic.distribution_or_and,
+ Classicism.Axiomatic.distribution_or_forall])
+Classicism.incl_constP_prop ⟶ Classicism.incl_constP_prop.strict : ∀ (X p : Prop),
+  Classicism.imp p (Classicism.Strict.SRel.incl X (Classicism.Strict.SRel.constP p))
+strict ✓ (axioms: [Classicism.Axiomatic.commutativity_and,
+ Classicism.Axiomatic.commutativity_or,
+ Classicism.Axiomatic.dissolution_and_or,
+ Classicism.Axiomatic.dissolution_or_and,
+ Classicism.Axiomatic.distribution_and_or,
+ Classicism.Axiomatic.distribution_or_and,
+ Classicism.Axiomatic.distribution_or_forall])
+Classicism.incl_of_constP_prop ⟶ Classicism.incl_of_constP_prop.strict : ∀ (X p : Prop),
+  Classicism.imp (¬p) (Classicism.Strict.SRel.incl (Classicism.Strict.SRel.constP p) X)
+strict ✓ (axioms: [Classicism.Axiomatic.absorption_or_forall,
+ Classicism.Axiomatic.commutativity_and,
+ Classicism.Axiomatic.commutativity_or,
+ Classicism.Axiomatic.dissolution_and_or,
+ Classicism.Axiomatic.dissolution_or_and,
+ Classicism.Axiomatic.distribution_and_or,
+ Classicism.Axiomatic.distribution_or_and,
+ Classicism.Axiomatic.distribution_or_forall])
+Classicism.coext_of_incl_prop ⟶ Classicism.coext_of_incl_prop.strict : ∀ (X Y : Prop),
+  Classicism.imp (Classicism.Strict.SRel.incl X Y)
+    (Classicism.imp (Classicism.Strict.SRel.incl Y X) (Classicism.Strict.SRel.coext X Y))
+strict ✓ (axioms: [Classicism.Axiomatic.absorption_or_forall,
+ Classicism.Axiomatic.commutativity_and,
+ Classicism.Axiomatic.commutativity_or,
+ Classicism.Axiomatic.dissolution_and_or,
+ Classicism.Axiomatic.dissolution_or_and,
+ Classicism.Axiomatic.distribution_and_or,
+ Classicism.Axiomatic.distribution_or_and,
+ Classicism.Axiomatic.distribution_or_forall])
+Classicism.incl_of_coext_prop ⟶ Classicism.incl_of_coext_prop.strict : ∀ (X Y : Prop),
+  Classicism.imp (Classicism.Strict.SRel.coext X Y) (Classicism.Strict.SRel.incl X Y)
+strict ✓ (axioms: [Classicism.Axiomatic.absorption_or_forall,
+ Classicism.Axiomatic.commutativity_and,
+ Classicism.Axiomatic.commutativity_or,
+ Classicism.Axiomatic.dissolution_and_or,
+ Classicism.Axiomatic.dissolution_or_and,
+ Classicism.Axiomatic.distribution_and_or,
+ Classicism.Axiomatic.distribution_or_and,
+ Classicism.Axiomatic.distribution_or_forall])
+Classicism.incl_of_coext'_prop ⟶ Classicism.incl_of_coext'_prop.strict : ∀ (X Y : Prop),
+  Classicism.imp (Classicism.Strict.SRel.coext X Y) (Classicism.Strict.SRel.incl Y X)
+strict ✓ (axioms: [Classicism.Axiomatic.absorption_or_forall,
+ Classicism.Axiomatic.commutativity_and,
+ Classicism.Axiomatic.commutativity_or,
+ Classicism.Axiomatic.dissolution_and_or,
+ Classicism.Axiomatic.dissolution_or_and,
+ Classicism.Axiomatic.distribution_and_or,
+ Classicism.Axiomatic.distribution_or_and,
+ Classicism.Axiomatic.distribution_or_forall])
+Classicism.incl_refl_arrow ⟶ Classicism.incl_refl_arrow.strict : ∀ {σ τ : Type} [inst : Classicism.Ty σ]
+  [inst_1 : Classicism.Strict.SRel τ] [Classicism.Strict.SPointwise τ] (X : σ → τ), Classicism.Strict.SRel.incl X X
+strict ✓ (axioms: [Classicism.Axiomatic.absorption_or_forall,
+ Classicism.Axiomatic.commutativity_and,
+ Classicism.Axiomatic.commutativity_or,
+ Classicism.Axiomatic.dissolution_and_or,
+ Classicism.Axiomatic.dissolution_or_and,
+ Classicism.Axiomatic.distribution_and_or,
+ Classicism.Axiomatic.distribution_or_and,
+ Classicism.Axiomatic.distribution_or_forall])
+Classicism.incl_trans_arrow ⟶ Classicism.incl_trans_arrow.strict : ∀ {σ τ : Type} [inst : Classicism.Ty σ]
+  [inst_1 : Classicism.Strict.SRel τ] [Classicism.Strict.SPointwise τ] (X Y Z : σ → τ),
+  Classicism.imp (Classicism.Strict.SRel.incl X Y)
+    (Classicism.imp (Classicism.Strict.SRel.incl Y Z) (Classicism.Strict.SRel.incl X Z))
+strict ✓ (axioms: [Classicism.Axiomatic.absorption_or_forall,
+ Classicism.Axiomatic.commutativity_and,
+ Classicism.Axiomatic.commutativity_or,
+ Classicism.Axiomatic.dissolution_and_or,
+ Classicism.Axiomatic.dissolution_or_and,
+ Classicism.Axiomatic.distribution_and_or,
+ Classicism.Axiomatic.distribution_or_and,
+ Classicism.Axiomatic.distribution_or_forall])
+Classicism.incl_and_arrow ⟶ Classicism.incl_and_arrow.strict : ∀ {σ τ : Type} [inst : Classicism.Ty σ]
+  [inst_1 : Classicism.Strict.SRel τ] [Classicism.Strict.SPointwise τ] (X Y Z : σ → τ),
+  Classicism.imp (Classicism.Strict.SRel.incl Z X)
+    (Classicism.imp (Classicism.Strict.SRel.incl Z Y) (Classicism.Strict.SRel.incl Z (Classicism.Strict.SRel.and X Y)))
+strict ✓ (axioms: [Classicism.Axiomatic.absorption_or_forall,
+ Classicism.Axiomatic.commutativity_and,
+ Classicism.Axiomatic.commutativity_or,
+ Classicism.Axiomatic.dissolution_and_or,
+ Classicism.Axiomatic.dissolution_or_and,
+ Classicism.Axiomatic.distribution_and_or,
+ Classicism.Axiomatic.distribution_or_and,
+ Classicism.Axiomatic.distribution_or_forall])
+Classicism.incl_and_left_arrow ⟶ Classicism.incl_and_left_arrow.strict : ∀ {σ τ : Type} [inst : Classicism.Ty σ]
+  [inst_1 : Classicism.Strict.SRel τ] [Classicism.Strict.SPointwise τ] (X Y : σ → τ),
+  Classicism.Strict.SRel.incl (Classicism.Strict.SRel.and X Y) X
+strict ✓ (axioms: [Classicism.Axiomatic.absorption_or_forall,
+ Classicism.Axiomatic.commutativity_and,
+ Classicism.Axiomatic.commutativity_or,
+ Classicism.Axiomatic.dissolution_and_or,
+ Classicism.Axiomatic.dissolution_or_and,
+ Classicism.Axiomatic.distribution_and_or,
+ Classicism.Axiomatic.distribution_or_and,
+ Classicism.Axiomatic.distribution_or_forall])
+Classicism.incl_and_right_arrow ⟶ Classicism.incl_and_right_arrow.strict : ∀ {σ τ : Type} [inst : Classicism.Ty σ]
+  [inst_1 : Classicism.Strict.SRel τ] [Classicism.Strict.SPointwise τ] (X Y : σ → τ),
+  Classicism.Strict.SRel.incl (Classicism.Strict.SRel.and X Y) Y
+strict ✓ (axioms: [Classicism.Axiomatic.absorption_or_forall,
+ Classicism.Axiomatic.commutativity_and,
+ Classicism.Axiomatic.commutativity_or,
+ Classicism.Axiomatic.dissolution_and_or,
+ Classicism.Axiomatic.dissolution_or_and,
+ Classicism.Axiomatic.distribution_and_or,
+ Classicism.Axiomatic.distribution_or_and,
+ Classicism.Axiomatic.distribution_or_forall])
+Classicism.incl_and_neg_arrow ⟶ Classicism.incl_and_neg_arrow.strict : ∀ {σ τ : Type} [inst : Classicism.Ty σ]
+  [inst_1 : Classicism.Strict.SRel τ] [Classicism.Strict.SPointwise τ] (X Y : σ → τ),
+  Classicism.Strict.SRel.incl (Classicism.Strict.SRel.and X (Classicism.Strict.SRel.neg X)) Y
+strict ✓ (axioms: [Classicism.Axiomatic.absorption_or_forall,
+ Classicism.Axiomatic.commutativity_and,
+ Classicism.Axiomatic.commutativity_or,
+ Classicism.Axiomatic.dissolution_and_or,
+ Classicism.Axiomatic.dissolution_or_and,
+ Classicism.Axiomatic.distribution_and_or,
+ Classicism.Axiomatic.distribution_or_and,
+ Classicism.Axiomatic.distribution_or_forall])
+Classicism.incl_constP_arrow ⟶ Classicism.incl_constP_arrow.strict : ∀ {σ τ : Type} [inst : Classicism.Ty σ]
+  [inst_1 : Classicism.Strict.SRel τ] [Classicism.Strict.SPointwise τ] (X : σ → τ) (p : Prop),
+  Classicism.imp p (Classicism.Strict.SRel.incl X (Classicism.Strict.SRel.constP p))
+strict ✓ (axioms: [Classicism.Axiomatic.absorption_or_forall,
+ Classicism.Axiomatic.commutativity_and,
+ Classicism.Axiomatic.commutativity_or,
+ Classicism.Axiomatic.dissolution_and_or,
+ Classicism.Axiomatic.dissolution_or_and,
+ Classicism.Axiomatic.distribution_and_or,
+ Classicism.Axiomatic.distribution_or_and,
+ Classicism.Axiomatic.distribution_or_forall])
+Classicism.incl_of_constP_arrow ⟶ Classicism.incl_of_constP_arrow.strict : ∀ {σ τ : Type} [inst : Classicism.Ty σ]
+  [inst_1 : Classicism.Strict.SRel τ] [Classicism.Strict.SPointwise τ] (X : σ → τ) (p : Prop),
+  Classicism.imp (¬p) (Classicism.Strict.SRel.incl (Classicism.Strict.SRel.constP p) X)
+strict ✓ (axioms: [Classicism.Axiomatic.absorption_or_forall,
+ Classicism.Axiomatic.commutativity_and,
+ Classicism.Axiomatic.commutativity_or,
+ Classicism.Axiomatic.dissolution_and_or,
+ Classicism.Axiomatic.dissolution_or_and,
+ Classicism.Axiomatic.distribution_and_or,
+ Classicism.Axiomatic.distribution_or_and,
+ Classicism.Axiomatic.distribution_or_forall])
+Classicism.coext_of_incl_arrow ⟶ Classicism.coext_of_incl_arrow.strict : ∀ {σ τ : Type} [inst : Classicism.Ty σ]
+  [inst_1 : Classicism.Strict.SRel τ] [Classicism.Strict.SPointwise τ] (X Y : σ → τ),
+  Classicism.imp (Classicism.Strict.SRel.incl X Y)
+    (Classicism.imp (Classicism.Strict.SRel.incl Y X) (Classicism.Strict.SRel.coext X Y))
+strict ✓ (axioms: [Classicism.Axiomatic.absorption_or_forall,
+ Classicism.Axiomatic.commutativity_and,
+ Classicism.Axiomatic.commutativity_or,
+ Classicism.Axiomatic.dissolution_and_or,
+ Classicism.Axiomatic.dissolution_or_and,
+ Classicism.Axiomatic.distribution_and_or,
+ Classicism.Axiomatic.distribution_or_and,
+ Classicism.Axiomatic.distribution_or_forall])
+Classicism.incl_of_coext_arrow ⟶ Classicism.incl_of_coext_arrow.strict : ∀ {σ τ : Type} [inst : Classicism.Ty σ]
+  [inst_1 : Classicism.Strict.SRel τ] [Classicism.Strict.SPointwise τ] (X Y : σ → τ),
+  Classicism.imp (Classicism.Strict.SRel.coext X Y) (Classicism.Strict.SRel.incl X Y)
+strict ✓ (axioms: [Classicism.Axiomatic.absorption_or_forall,
+ Classicism.Axiomatic.commutativity_and,
+ Classicism.Axiomatic.commutativity_or,
+ Classicism.Axiomatic.dissolution_and_or,
+ Classicism.Axiomatic.dissolution_or_and,
+ Classicism.Axiomatic.distribution_and_or,
+ Classicism.Axiomatic.distribution_or_and,
+ Classicism.Axiomatic.distribution_or_forall])
+Classicism.incl_of_coext'_arrow ⟶ Classicism.incl_of_coext'_arrow.strict : ∀ {σ τ : Type} [inst : Classicism.Ty σ]
+  [inst_1 : Classicism.Strict.SRel τ] [Classicism.Strict.SPointwise τ] (X Y : σ → τ),
+  Classicism.imp (Classicism.Strict.SRel.coext X Y) (Classicism.Strict.SRel.incl Y X)
+strict ✓ (axioms: [Classicism.Axiomatic.absorption_or_forall,
+ Classicism.Axiomatic.commutativity_and,
+ Classicism.Axiomatic.commutativity_or,
+ Classicism.Axiomatic.dissolution_and_or,
+ Classicism.Axiomatic.dissolution_or_and,
+ Classicism.Axiomatic.distribution_and_or,
+ Classicism.Axiomatic.distribution_or_and,
+ Classicism.Axiomatic.distribution_or_forall])

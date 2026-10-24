@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "status": "accepted-cardinal-closure-target-only",
+  "audit_utc": "2026-10-24T04:27:24.174058+00:00",
+  "run_id": "20261024T042017467959Z-6fea80d5",
+  "run_manifest": "research/2026-10-22/lean-formalization/checks/20261024T042017467959Z-6fea80d5.json",
+  "run_manifest_sha256": "1f7ccc704d13e488c5c97f267ac8f44c59767496075685616d3933f4ec637899",
+  "whole_run": {
+    "state": "failed",
+    "complete": false,
+    "exit_code": 1,
+    "later_failed_module": "Classicism.Results.Research.InfinitaryComprehensionSupport",
+    "distinction": "The requested CardinalClosure target and its captured local dependency closure succeeded before a separate later target failed. This receipt does not accept the whole run."
+  },
+  "target": "Classicism.Results.Research.InfinitaryComprehensionCardinalClosure",
+  "target_seconds": 10.63,
+  "checks": {
+    "compiler_binary_matches": true,
+    "precompiled_dependency_tree_matches": true,
+    "sources_all_match": true,
+    "closure_exits_all_successful": true,
+    "fingerprints_all_match": true,
+    "metadata_sources_all_match": true,
+    "artifacts_all_match": true,
+    "exact_three_clean_principal_reports": true
+  },
+  "compiler": {
+    "path": ".local-runtime/lean-toolchain/lean-4.33.1-darwin_aarch64/bin/lean",
+    "version_recorded_without_execution": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+    "current_sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554"
+  },
+  "precompiled": {
+    "roots": [
+      ".local-runtime/mathlib/.lake/build/lib/lean",
+      ".local-runtime/mathlib/.lake/packages/plausible/.lake/build/lib/lean",
+      ".local-runtime/mathlib/.lake/packages/proofwidgets/.lake/build/lib/lean",
+      ".local-runtime/mathlib/.lake/packages/batteries/.lake/build/lib/lean",
+      ".local-runtime/mathlib/.lake/packages/aesop/.lake/build/lib/lean",
+      ".local-runtime/mathlib/.lake/packages/importGraph/.lake/build/lib/lean",
+      ".local-runtime/mathlib/.lake/packages/LeanSearchClient/.lake/build/lib/lean",
+      ".local-runtime/mathlib/.lake/packages/Qq/.lake/build/lib/lean"
+    ],
+    "current_tree_sha256": "675f46a345caf1daf1bbc81b42696e5a518c6d01fd9c8a8d02c8a158f8475a3e",
+    "recorded_tree_sha256": "675f46a345caf1daf1bbc81b42696e5a518c6d01fd9c8a8d02c8a158f8475a3e",
+    "hashed_files": 21546,
+    "hashed_bytes": 2406685802,
+    "method": "Recomputed exactly the runner root/path/content digest, streaming files. No compiler or toolchain command executed.",
+    "direct_external_imports_of_local_closure": [
+      "Mathlib.ModelTheory.Skolem",
+      "Mathlib.SetTheory.Cardinal.Aleph",
+      "Mathlib.SetTheory.Cardinal.Cofinality.Ordinal",
+      "Mathlib.SetTheory.Ordinal.FixedPoint",
+      "Mathlib.SetTheory.Ordinal.Principal"
+    ]
+  },
+  "local_closure_count": 5,
+  "local_closure": [
+    {
+      "module": "Mathlib.SetTheory.Cardinal.Arithmetic",
+      "path": ".local-runtime/choice-mathlib-source-subset/Mathlib/SetTheory/Cardinal/Arithmetic.lean",
+      "source_sha256": "43505f6d6434b8111c787fe51602b111b6a935def35227bcd2bdcab7d867692a",
+      "source_matches_record_and_snapshot": true,
+      "successful_exit": true,
+      "fingerprint": "8037881cd7521793962cb4e6f2fb16e6e617c1e3604de510878a9c636e5ca7e9",
+      "fingerprint_matches_record_metadata_stamp": true,
+      "metadata_source_matches": true,
+      "artifact_hashes": {
+        ".olean": "0945e6bcdbb1acb1697ca86e30d69fe6b829b38ae4bc2bc3623cc2c0867d88fc",
+        ".olean.private": "154d89d343d149c98604191b23eee97a376d6960f1ccffdf9d5ca8729f933dc6",
+        ".olean.server": "3dc27184171dad3cecd3bde00bad25d41a882437368937e4af38e3d31f4b70ea",
+        ".ir": "5e6d34769a4f25202268c7e4a9484cca06d094a2f0284cdd35d1e972f405da67",
+        ".ir.sig": "f84e2c67ea46999ebf05c7ea66e1ab569a1160e9d6e8eb516a7e02baae48b1cf"
+      },
+      "artifacts_match_record_and_metadata": true
+    },
+    {
+      "module": "Mathlib.SetTheory.Cardinal.Ordinal",
+      "path": ".local-runtime/choice-mathlib-source-subset/Mathlib/SetTheory/Cardinal/Ordinal.lean",
+      "source_sha256": "fa85f3ecd2f6db665d09080c576976bae4f93064077a4636d829b1161d261e81",
+      "source_matches_record_and_snapshot": true,
+      "successful_exit": true,
+      "fingerprint": "8cc55fd577de848bfcbcd1041f0468d546d93bf14677a2dd06fd759ff7711b87",
+      "fingerprint_matches_record_metadata_stamp": true,
+      "metadata_source_matches": true,
+      "artifact_hashes": {
+        ".olean": "8ecf82a0fd7918630807e6f7f45cc5d6698aff6f4809ce8b92f942fcd2d6e800",
+        ".olean.private": "458aa461706700276e9025df47336fd99af4e8d2184d98f2268fc9aaad0b4ff0",
+        ".olean.server": "5185ad43041ecdf133e01399238bb97b124343a5fcd0ddb972a78c8ed61d26a0",
+        ".ir": "2d4f398987c6c17ec99af5b918a009a8d9974a0fb355ed180cc3566d3d730148",
+        ".ir.sig": "68f56eb115d4d53263ac001630aadd445ba3dff02d57feb5b0a0e42501387179"
+      },
+      "artifacts_match_record_and_metadata": true
+    },
+    {
+      "module": "Mathlib.SetTheory.Ordinal.FundamentalSequence",
+      "path": ".local-runtime/choice-mathlib-source-subset/Mathlib/SetTheory/Ordinal/FundamentalSequence.lean",
+      "source_sha256": "dc9e619e54991ae2afd27a0bdb04eeb45934057040b0435106bdc64d5a7f99a8",
+      "source_matches_record_and_snapshot": true,
+      "successful_exit": true,
+      "fingerprint": "1d3e0092e3378c71e0a2a5611593b4939d9a1a1b40c4464e3127f0499370160f",
+      "fingerprint_matches_record_metadata_stamp": true,
+      "metadata_source_matches": true,
+      "artifact_hashes": {
+        ".olean": "c4b8265ad27201489aaeabdbaee5d371fb0044ae9836aba393c7976b851cb0e0",
+        ".olean.private": "3b5388557217202284c7978b0992e92927b36957193d16e34c6961a82cde9998",
+        ".olean.server": "1257e2ecc9f45e1fa1026c2d5b6bba2b1195f86ac5359070e71e1639c60e7d2f",
+        ".ir": "de061539de160257f1a05cbbd2f994fe45fb204b56d8176659117cede25cce4a",
+        ".ir.sig": "4426fd3dcbb826cc4877cc71f3360508d595b5ebb0c8dc33c4bc64c0eb5a397e"
+      },
+      "artifacts_match_record_and_metadata": true
+    },
+    {
+      "module": "Mathlib.SetTheory.Cardinal.Regular",
+      "path": ".local-runtime/choice-mathlib-source-subset/Mathlib/SetTheory/Cardinal/Regular.lean",
+      "source_sha256": "90f58bc8df074d6e17470d85290b23e1c6d7711d1bc3d56284869272fc350f37",
+      "source_matches_record_and_snapshot": true,
+      "successful_exit": true,
+      "fingerprint": "2f618e8849155c9e0d8c7ac7ee5a17ee7898466c4762665a323596585af56c31",
+      "fingerprint_matches_record_metadata_stamp": true,
+      "metadata_source_matches": true,
+      "artifact_hashes": {
+        ".olean": "416d65409f703aafae6a4fd558555a058c6a8294bc39d98fe4cac066cc0230b9",
+        ".olean.private": "a9e8745614085b1035ab4ab1f9e7b5a1c45c396c5d90ced3091c478cfbe0ce72",
+        ".olean.server": "77c17d339341ed6ce2d8a9727439a9ccacebbbfebc7711b5c630ab01bbfddc14",
+        ".ir": "2ea2215a3aeb0a6276ab4e50ad6edd804a7da8a9cf2df466209a004681fcc3e3",
+        ".ir.sig": "5132c34156587ffc48dbf15cb062aae1f4b350358a8e2e1f30eef7f7150b0808"
+      },
+      "artifacts_match_record_and_metadata": true
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionCardinalClosure",
+      "path": "topics/classicism/lean/Classicism/Results/Research/InfinitaryComprehensionCardinalClosure.lean",
+      "source_sha256": "fc47fd673433fca08d751554e840892b87cbe1d023467618510c50638f955107",
+      "source_matches_record_and_snapshot": true,
+      "successful_exit": true,
+      "fingerprint": "807cac14c32b1fab381ea03c4289ec9c42c21b52c1aaf74973bc973b06b338cd",
+      "fingerprint_matches_record_metadata_stamp": true,
+      "metadata_source_matches": true,
+      "artifact_hashes": {
+        ".olean": "3974bc816c90bb5cdb26c4b7987623c8fc5b98842a8424e6f378292bc1400d1e"
+      },
+      "artifacts_match_record_and_metadata": true
+    }
+  ],
+  "principal_log": {
+    "path": "research/2026-10-22/lean-formalization/logs/runs/20261024T042017467959Z-6fea80d5/Classicism_Results_Research_InfinitaryComprehensionCardinalClosure.log",
+    "sha256": "c5ef95236a8e951e1027802706884e2b7caffb9a8cf312eb439f30c98580648e",
+    "reports": {
+      "Classicism.Research.InfinitaryComprehension.CardinalClosure.short_family_bounded": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Classicism.Research.InfinitaryComprehension.CardinalClosure.exists_closed_elementarySubstructure": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Classicism.Research.InfinitaryComprehension.CardinalClosure.exists_short_sequence_closed_elementarySubstructure": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "contains_sorryAx": false,
+    "warnings": "Two style-only letI warnings."
+  },
+  "scope": {
+    "theorems": [
+      "Regularity bounds every external family of stages of cardinality below kappa.",
+      "Given regular kappa <= lambda, lambda^(<kappa) <= lambda, language size <= lambda <= ambient carrier size, at most lambda code operations of arities below kappa, and a seed of size <= lambda, construct an elementary substructure of size exactly lambda containing the seed and closed under all supplied code operations.",
+      "Specialize to one supplied sequence-code operation for each ordinal length below kappa, with lambda^(<kappa) = lambda."
+    ],
+    "limitations": [
+      "The code operations are explicit inputs and must be instantiated by actual sequence-as-set codes for an H_theta application.",
+      "No H_theta construction, infinitary-formula coding, satisfaction absoluteness, typed Henkin reduct, or whole infinitary packet is certified here.",
+      "The imported first-order Skolem theorem is existing Mathlib infrastructure, not a new discovery.",
+      "Three principal reports are audit coverage, not three independent new model constructions."
+    ]
+  },
+  "frozen_handoff": "Unmodified; this is supplemental evidence."
+}

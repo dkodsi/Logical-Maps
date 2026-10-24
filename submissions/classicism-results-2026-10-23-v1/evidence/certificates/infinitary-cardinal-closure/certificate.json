@@ -1,0 +1,119 @@
+{
+  "id": "infinitary-cardinal-closure",
+  "source_manifest_origin": "research/2026-10-22/lean-formalization/checks/20261024T042017467959Z-6fea80d5.json",
+  "source_manifest_path": "evidence/certificates/infinitary-cardinal-closure/selected-manifest.json",
+  "source_manifest_sha256": "c33b18b312562affa60cce33bd1fdb43cc2bbdd5edb4e23cee54bfc4f6a98d39",
+  "source_manifest_original_sha256": "1f7ccc704d13e488c5c97f267ac8f44c59767496075685616d3933f4ec637899",
+  "source_manifest_normalization": "Portable paths and selected successful dependency closure. Original whole-run verdict retained; unrelated target records omitted.",
+  "run_id": "20261024T042017467959Z-6fea80d5",
+  "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "compiler_sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554",
+  "precompiled_sha256": "675f46a345caf1daf1bbc81b42696e5a518c6d01fd9c8a8d02c8a158f8475a3e",
+  "selected_targets": [
+    "Classicism.Results.Research.InfinitaryComprehensionCardinalClosure"
+  ],
+  "selected_targets_exit_code": 0,
+  "original_run_state": "failed",
+  "original_run_exit_code": 1,
+  "sources": [
+    {
+      "module": "Mathlib.SetTheory.Cardinal.Arithmetic",
+      "path": "dependencies/sources/43505f6d6434b811/Mathlib/SetTheory/Cardinal/Arithmetic.lean",
+      "sha256": "43505f6d6434b8111c787fe51602b111b6a935def35227bcd2bdcab7d867692a",
+      "original_path": ".local-runtime/choice-mathlib-source-subset/Mathlib/SetTheory/Cardinal/Arithmetic.lean",
+      "fingerprint": "8037881cd7521793962cb4e6f2fb16e6e617c1e3604de510878a9c636e5ca7e9",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Mathlib.SetTheory.Cardinal.Ordinal",
+      "path": "source/topics/classicism/lean/Mathlib/SetTheory/Cardinal/Ordinal.lean",
+      "sha256": "fa85f3ecd2f6db665d09080c576976bae4f93064077a4636d829b1161d261e81",
+      "original_path": ".local-runtime/choice-mathlib-source-subset/Mathlib/SetTheory/Cardinal/Ordinal.lean",
+      "fingerprint": "8cc55fd577de848bfcbcd1041f0468d546d93bf14677a2dd06fd759ff7711b87",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Mathlib.SetTheory.Ordinal.FundamentalSequence",
+      "path": "source/topics/classicism/lean/Mathlib/SetTheory/Ordinal/FundamentalSequence.lean",
+      "sha256": "dc9e619e54991ae2afd27a0bdb04eeb45934057040b0435106bdc64d5a7f99a8",
+      "original_path": ".local-runtime/choice-mathlib-source-subset/Mathlib/SetTheory/Ordinal/FundamentalSequence.lean",
+      "fingerprint": "1d3e0092e3378c71e0a2a5611593b4939d9a1a1b40c4464e3127f0499370160f",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Mathlib.SetTheory.Cardinal.Regular",
+      "path": "source/topics/classicism/lean/Mathlib/SetTheory/Cardinal/Regular.lean",
+      "sha256": "90f58bc8df074d6e17470d85290b23e1c6d7711d1bc3d56284869272fc350f37",
+      "original_path": ".local-runtime/choice-mathlib-source-subset/Mathlib/SetTheory/Cardinal/Regular.lean",
+      "fingerprint": "2f618e8849155c9e0d8c7ac7ee5a17ee7898466c4762665a323596585af56c31",
+      "module_exit_code": 0
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionCardinalClosure",
+      "path": "evidence/source-store/fc47fd673433fca08d751554e840892b87cbe1d023467618510c50638f955107/Classicism/Results/Research/InfinitaryComprehensionCardinalClosure.lean",
+      "sha256": "fc47fd673433fca08d751554e840892b87cbe1d023467618510c50638f955107",
+      "original_path": "topics/classicism/lean/Classicism/Results/Research/InfinitaryComprehensionCardinalClosure.lean",
+      "fingerprint": "807cac14c32b1fab381ea03c4289ec9c42c21b52c1aaf74973bc973b06b338cd",
+      "module_exit_code": 0
+    }
+  ],
+  "logs": [
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionCardinalClosure",
+      "path": "evidence/certificates/infinitary-cardinal-closure/Classicism_Results_Research_InfinitaryComprehensionCardinalClosure.log",
+      "sha256": "c5ef95236a8e951e1027802706884e2b7caffb9a8cf312eb439f30c98580648e",
+      "origin": "research/2026-10-22/lean-formalization/logs/runs/20261024T042017467959Z-6fea80d5/Classicism_Results_Research_InfinitaryComprehensionCardinalClosure.log"
+    }
+  ],
+  "principal_reports": [
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.CardinalClosure.short_family_bounded",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.CardinalClosure.exists_closed_elementarySubstructure",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.CardinalClosure.exists_short_sequence_closed_elementarySubstructure",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "axiom_report_lines": [
+    "'Classicism.Research.InfinitaryComprehension.CardinalClosure.short_family_bounded' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Classicism.Research.InfinitaryComprehension.CardinalClosure.exists_closed_elementarySubstructure' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Classicism.Research.InfinitaryComprehension.CardinalClosure.exists_short_sequence_closed_elementarySubstructure' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "result_entries": [
+    "INFINITARY-COMPREHENSION"
+  ],
+  "scope": {
+    "theorems": [
+      "Regularity bounds every external family of stages of cardinality below kappa.",
+      "Given regular kappa <= lambda, lambda^(<kappa) <= lambda, language size <= lambda <= ambient carrier size, at most lambda code operations of arities below kappa, and a seed of size <= lambda, construct an elementary substructure of size exactly lambda containing the seed and closed under all supplied code operations.",
+      "Specialize to one supplied sequence-code operation for each ordinal length below kappa, with lambda^(<kappa) = lambda."
+    ],
+    "limitations": [
+      "The code operations are explicit inputs and must be instantiated by actual sequence-as-set codes for an H_theta application.",
+      "No H_theta construction, infinitary-formula coding, satisfaction absoluteness, typed Henkin reduct, or whole infinitary packet is certified here.",
+      "The imported first-order Skolem theorem is existing Mathlib infrastructure, not a new discovery.",
+      "Three principal reports are audit coverage, not three independent new model constructions."
+    ]
+  },
+  "acceptance_path": "evidence/certificates/infinitary-cardinal-closure/acceptance.json",
+  "acceptance_sha256": "d4b9937ae4b9c6a3f13ef93f35ac16c2de9f4e7e9e404a92c391e0217bf69725",
+  "acceptance_original_sha256": "d10ac48831ad12a6cc4aaf274d8c0a1dacfd3259453d294c03653eedba1163d8",
+  "verification": "Exact source snapshots, successful selected dependency records and principal reports matched to the independent acceptance audit. Its compiler/cache/external-dependency audit is retained; no compiler was invoked during packaging."
+}

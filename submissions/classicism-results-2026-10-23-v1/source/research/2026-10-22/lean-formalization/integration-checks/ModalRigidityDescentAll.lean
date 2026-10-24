@@ -1,0 +1,9 @@
+import Classicism.Results.Research.ModalPropagationSchemas
+import Classicism.Results.Research.ModalRigidityDescent
+
+set_option maxHeartbeats 0 in
+#classicism_derive_audit Classicism.Results.Research.ModalRigidityDescent
+
+#print axioms Classicism.Research.ModalRigidityDescent.indexed_union_rigid.derivable
+#print axioms Classicism.Research.ModalRigidityDescent.inverse_image_rigid.derivable
+#print axioms Classicism.Research.ModalRigidityDescent.rigid_comprehension_descent.derivable

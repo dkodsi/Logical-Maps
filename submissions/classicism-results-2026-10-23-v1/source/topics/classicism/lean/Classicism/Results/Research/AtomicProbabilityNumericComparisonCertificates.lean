@@ -1,0 +1,18 @@
+import Classicism.Results.Research.AtomicProbabilityNumericComparison
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Schema
+
+#classicism_audit Classicism.Results.Research.AtomicProbabilityNumericComparison
+#classicism_types_audit Classicism.Results.Research.AtomicProbabilityNumericComparison
+
+#classicism_derive Classicism.Research.ProbabilityNumericOperations.nle_refl
+  Classicism.Research.ProbabilityNumericOperations.nle_zero
+  Classicism.Research.ProbabilityNumericOperations.nle_total
+  Classicism.Research.ProbabilityNumericOperations.nle_trans
+  Classicism.Research.ProbabilityNumericOperations.nle_antisymm
+  Classicism.Research.ProbabilityNumericOperations.one_le_nonzero
+  Classicism.Research.ProbabilityNumericOperations.plus_one
+  Classicism.Research.ProbabilityNumericOperations.number_ne_successor
+
+#print axioms Classicism.Research.ProbabilityNumericOperations.number_ne_successor.derivable

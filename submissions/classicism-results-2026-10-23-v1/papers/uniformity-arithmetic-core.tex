@@ -1,0 +1,216 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,microtype}
+\usepackage[margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{2em}
+\newcommand{\C}{\mathsf C}
+\newcommand{\Max}{\mathsf{Max}}
+\newcommand{\CC}{\mathsf{CC}}
+\newcommand{\Infq}{\mathsf{Inf}^{q}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}[proposition]{Corollary}
+\newtheorem{theorem}[proposition]{Theorem}
+\title{Uniformity, Arithmetic and Recovery of a Mathematical Core}
+\author{OpenAI Codex research note}
+\date{23 October 2026}
+\begin{document}
+\maketitle
+
+This note develops the uniformity argument in the companion abductive comparison. Its new contributions are deductions from existing results: a pure-Max finite-table test, an obstruction to recovery through encoding and decoding operations, a numerical selection lemma, and an exact arithmetic-conservativity reduction. Theorem~\ref{fullconservation} incorporates the source-based full Choice conservativity proof already developed in the Frege research notes; its application has now received a separate ordinary AI review. These are ordinary mathematical arguments, not new formal certificates, human verification or claims of priority in the literature. Existing results are identified separately. No database record, published proof or Lean source is changed.
+
+The fixed theory is finitary relational Classicism $\C$, with types $e,t$ and $\alpha\to\beta$ only when $\beta\ne e$. Max means pure $\Max(\C)$. All type indices below are external schema indices. For a counting type $\sigma$, write $\nu_\sigma=(\sigma\to t)\to t$, and use the existing pure Frege terms $0_\sigma,S_\sigma,N_\sigma$. Write $I_\sigma$ for the established numerical noncollapse principle, which gives the usual current Peano arithmetic on $N_\sigma$. Application is parenthesized where needed. Optional assumptions are never supplied to Logical Equivalence or silently necessitated.
+
+\section{What was already established}
+
+The relational-coding note \cite[\S13]{coding} proves in bare $\C$ that, for every fixed positive external integer $k$, every input type $\alpha$ and relational output type $\beta$,
+\begin{equation}\label{finite}
+ \exists f^{\alpha\to\beta}\bigwedge_{i=1}^{k}fx_i=y_i
+ \quad\longleftrightarrow\quad
+ \Box\bigwedge_{i,j=1}^{k}(x_i=x_j\to y_i=y_j).
+\end{equation}
+This is a finite interpolation theorem, not a general Choice principle. Necessity of Identity preserves the prescribed output identities, and congruence yields the right side. Conversely, writing $\beta=\rho_1\cdots\rho_m t$, the explicit operation
+\[
+ (fz)[\bar u]=\bigvee_{i=1}^{k}\bigl((z=x_i)\land y_i[\bar u]\bigr)
+\]
+has each prescribed value by boxed compatibility and Intensionality. At $\beta=t$ the final tuple is empty. The construction is a finite term in the original language.
+
+The predecessor result \cite{predecessor} proves, at every closed counting type,
+\begin{equation}\label{nopred}
+ \Max\vdash\neg\exists f^{\nu_\sigma\to\nu_\sigma}
+       \forall n\,(N_\sigma n\to f(S_\sigma n)=n).
+\end{equation}
+No condition on $f0_\sigma$ is imposed. There is no extra Infinity, noncollapse or Barcan premise. Its saved formal evidence covers the all-type statement. At $\sigma=e$ the saved certificate also proves that the familiar predecessor graph, defaulting to zero at zero and nonnumbers, is total and unique but has no representing operation. The all-type graph claim has an ordinary argument using the separately established all-type $\Max\to I_\sigma$; it must not be attributed to the narrower graph certificate.
+
+The current quotient construction \cite[\S29]{coding} interprets ordinary extensional relational mathematics over any inhabited represented base. With $I_\sigma$ and base $N_\sigma$, it includes full impredicative second-order arithmetic and the fixed finite-order relational hierarchy. Equality at the number base is literal identity; higher relation sorts are quotiented by current extensional equivalence. The interpretation does not supply arbitrary ambient operations realizing numerical graphs, Choice, or modal stability. Thus it is available under Max and is compatible with \eqref{nopred}.
+
+\section{An exact finite-table test for pure Max}
+
+\begin{proposition}\label{maxtable}
+Fix closed pure terms $a_1,\ldots,a_k$ of type $\alpha$ and $b_1,\ldots,b_k$ of relational type $\beta$. Let
+\[
+ K:=\bigwedge_{i,j=1}^{k}(a_i=a_j\to b_i=b_j),\qquad
+ F:=\exists f^{\alpha\to\beta}\bigwedge_{i=1}^{k}fa_i=b_i.
+\]
+If $\C\vdash K$, then $\C\vdash F$. If $\C\nvdash K$, then $\Max\vdash\neg F$.
+\end{proposition}
+\begin{proof}
+In the first case, theorem necessitation gives $\C\vdash\Box K$, and \eqref{finite} gives $F$. This uses a theorem of the fixed base, not a conditional proof from optional axioms. In the second case $\C+\neg K$ is consistent by classical deduction: otherwise $\C\vdash K$. Since $\neg K$ is closed and pure, the possibility formulation of Max supplies $\Diamond\neg K$, equivalently $\neg\Box K$. The other direction of \eqref{finite} gives $\neg F$.
+\end{proof}
+
+The proposition is a metalinguistic case distinction, not an effective decision procedure for theoremhood in $\C$. It makes no unconditional consistency claim about Max. Assuming Max consistent, it yields the exact criterion $\Max\vdash F$ iff $\C\vdash K$. In particular, Max cannot add a new pure finite table whose modal compatibility is not already guaranteed by $\C$.
+
+For the individual-counting numerals, the singleton one-world model has $2_e=3_e$ but $1_e\ne2_e$. It therefore refutes the compatibility of the two assignments $f2_e=1_e$, $f3_e=2_e$. Proposition~\ref{maxtable} yields their joint impossibility under Max. This is the finite mechanism behind the individual predecessor obstruction, not a claim that Max's actual number structure has $2_e=3_e$.
+
+The finiteness restriction matters. An infinite list of compatible finite assignments need not have a realizing operation in the given model. Compactness, where applicable to a suitable first-order presentation, supplies an extension or another model; it does not insert an operation into the original admitted domain or identify all of its internal numbers with standard numerals. Conversely the test only covers closed pure tables when invoking Max. Parameters remain allowed in \eqref{finite}, but do not acquire pure-Max instances merely by being named.
+
+\section{How operational recovery of a core would transfer predecessor}
+
+\begin{proposition}\label{recovery}
+Fix a counting type $\sigma$ and a relational type $\kappa$. Pure Max rules out admitted operations
+\[
+ j:\nu_\sigma\to\kappa,\quad r:\kappa\to\nu_\sigma,
+ \quad s,p:\kappa\to\kappa
+\]
+satisfying, for every $n$ with $N_\sigma n$,
+\begin{align*}
+ r(jn)&=n,\\
+ j(S_\sigma n)&=s(jn),\\
+ p(s(jn))&=jn.
+\end{align*}
+All these equations are actual equations. Neither boxed equations nor an additional closure principle are required.
+\end{proposition}
+\begin{proof}
+The relational type system admits the abstraction
+$f:=\lambda x^{\nu_\sigma}.r(p(jx))$.
+For numerical $n$, the second and third equations give
+$f(S_\sigma n)=r(p(s(jn)))=r(jn)$, and the first gives $f(S_\sigma n)=n$.
+This contradicts \eqref{nopred}. The reasoning uses application, abstraction and identity substitution already in $\C$. No assumption is necessitated.
+\end{proof}
+
+These premises describe a particularly natural kind of recovery: $j$ encodes the native numbers in a core, $s$ represents successor there, $p$ cancels it, and $r$ decodes the original numbers. The decoding equation itself implies injectivity of $j$ on numbers, so a separate injection assumption is unnecessary. The result applies even if the operations are required to obey these laws only on the encoded numerical range. Parameters and the choice of relational $\kappa$ are unrestricted.
+
+The result does not rule out every interpretation of arithmetic. A core can use graphs in place of operations, equivalence classes in place of literal identities, an external encoding, or no admitted decoder. The current quotient interpretation above is a concrete positive example; it is not refuted by this proposition. Nor does the proposition introduce inadmissible operations into a core whose base type is $e$. If such a core is represented by relational codes and satisfies the displayed equations, the theorem applies to those codes; otherwise a separate graph argument would be needed.
+
+The philosophical consequence is correspondingly precise. A maximalist appeal to an ordinary core must say which representation and recovery maps are available. Mere existence of some mathematical interpretation cannot establish a uniform return to operations on the original Frege entities. Whether that return matters is an explanatory issue, not another mathematical inconsistency theorem.
+
+\section{Numerical selection already follows from Plenitude}
+
+\begin{proposition}\label{numericchoice}
+Fix an input type $\alpha$ and counting type $\sigma$, and put $\nu=\nu_\sigma$. Over $\C+I_\sigma+\operatorname{Plenitude}_{\alpha,\nu}$, every admitted relation $R^{\alpha\to\nu\to t}$ satisfies
+\[
+ \forall x\exists n\bigl(N_\sigma n\land (Rx)n\bigr)
+ \ \longrightarrow\
+ \exists f^{\alpha\to\nu}\forall x
+          \bigl(N_\sigma(fx)\land(Rx)(fx)\bigr).
+\]
+The statement allows arbitrary parameters and higher-order or modal formulas in the definition of $R$.
+\end{proposition}
+\begin{proof}
+Under $I_\sigma$, the current number structure has its usual strict order, represented by the arithmetic graphs. Its induction applies to every admitted predicate, including those defined using $R$ and an input parameter $x$ \cite[\S\S29,32.1]{coding}. Hence every nonempty represented numerical property has a least member.
+
+For completeness, the least-member argument only uses internal induction: for each number $k$, if a member exists at or below $k$, there is a least such member. At zero this is immediate. At the successor of $k$, either a member already occurs at or below $k$, so the induction hypothesis applies, or the successor itself is the first member. An arbitrary witness supplies a suitable bound. Linearity of the numerical order makes the least member unique. This reasoning applies also to nonstandard numerical domains.
+
+Comprehension supplies the graph
+\[
+ U(x,n):=N_\sigma n\land(Rx)n\land
+   \forall m\bigl((N_\sigma m\land m<n)\to\neg(Rx)m\bigr).
+\]
+By the preceding argument, $\forall x\exists!n\,U(x,n)$. The indicated single Plenitude instance supplies an operation $f$ realizing this graph. It has the required numerical outputs and satisfies $R$. No arbitrary selection from non-well-ordered ranges has been assumed.
+\end{proof}
+
+The same proof works for any represented relational output range equipped with a represented strict linear order for which every admitted nonempty subproperty has a least member. This is an internal least-member hypothesis, not an external well-order imposed on a Henkin domain. The numerical case has that hypothesis from induction.
+
+Thus a serial relation with natural-number outputs cannot separate full Functional Choice from full Plenitude in a noncollapsed arithmetic setting. This is a useful restriction on the search for applications: the extra selection commitment must concern other ranges or stronger recovery properties. It does not prove arithmetic conservativity. Higher-type choices might still enable proofs of new first-order arithmetic sentences.
+
+\section{Arithmetic conservativity of full Choice}
+
+Put
+\[
+ T=\C+\Box\operatorname{Plenitude}+\Infq_e+\Infq_t,
+ \qquad
+ \CC=\C+\Box\operatorname{FC}+\Infq_e+\Infq_t.
+\]
+The existing arithmetic-shadow theorem \cite[\S33]{coding} proves that, for each fixed counting type $\sigma$, the following theories have exactly the same first-order arithmetic consequences in their Frege interpretations:
+\[
+ \C+I_\sigma,\quad \C+\Infq_\sigma,\quad
+ \C5+\Infq_\sigma,\quad
+ \C+\Box\operatorname{Plenitude}+\Infq_\sigma,
+ \quad\C+\Box\operatorname{Plenitude}+\{\Infq_\rho:\rho\text{ admitted}\}.
+\]
+The common arithmetic theory is independent of the counting type. This is an ordinary written proof, not a result newly proved here and not a general conservativity theorem for higher-order sentences.
+
+Its substantive step starts with the current extensional quotient arithmetic of a $\C+I_\sigma$ structure and uses its number domain as the world sort of an internal S5 construction. Unique outputs can be pooled extensionally, yielding boxed Plenitude without arbitrary Choice. An internal graph-bijection argument identifies the new Frege numbers with the original arithmetic, including nonstandard elements, and supplies every quantified infinity axiom. The original proof checks the definable translations; it does not appeal to full categorical second-order semantics.
+
+\begin{corollary}\label{conservationreduction}
+For an ordinary arithmetic sentence $A$, writing $A^e$ for its fixed individual-counting Frege interpretation,
+\[
+ T\vdash A^e\quad\longleftrightarrow\quad\C+I_e\vdash A^e.
+\]
+Consequently $\CC$ is conservative over $T$ for these sentences iff every theorem $\CC\vdash A^e$ already satisfies $\C+I_e\vdash A^e$.
+\end{corollary}
+\begin{proof}
+The lower theory $\C+\Box\operatorname{Plenitude}+\Infq_e$ is contained in $T$, and $T$ is contained in the all-type-infinity upper theory of the existing theorem. Their arithmetic consequences coincide, so the intermediate theory has exactly the same consequences. Substitution gives the final equivalence.
+\end{proof}
+
+The missing Choice step is supplied by the Frege notes \cite[\S36]{fregechoice}, using an external interpretation theorem. The following application supersedes the unresolved wording in the earlier version of this note. Its detailed audit and separate ordinary AI review are saved alongside it \cite{choiceaudit}.
+
+\begin{theorem}[Source-based arithmetic conservativity]\label{fullconservation}
+For every ordinary first-order arithmetic sentence $A$,
+\[
+ \CC\vdash A^e\quad\longleftrightarrow\quad
+ T\vdash A^e\quad\longleftrightarrow\quad
+ \C+I_e\vdash A^e.
+\]
+The same arithmetic theory results at any fixed counting type. It is unchanged by strengthening $\CC$ to $\C+\Box\operatorname{FC}+\{\Box\Infq_\tau:\tau\text{ admitted}\}$.
+\end{theorem}
+\begin{proof}
+The external input is McLarty's interpretation of $\mathsf{ZFG}[n^+]$ with $V=L$ in sufficiently high finite-order arithmetic $Z_{n+2}$ \cite[\S\S2--5, pp.~2--6]{mclarty}. It supplies Replacement, global well-ordering and the required finite powersets. Its canonical descending-sequence tree for $\omega$, retained by the constructible restriction, preserves the original number structure. This preservation, not equiconsistency alone, is essential. We use the interpretation theorem as a source dependency; the proof below does not reprove its underlying constructibility lemmas.
+
+Over $\C+I_\sigma$, take the existing current extensional quotient with numerical base $B=N_\sigma$ \cite[\S\S29,32.1,33.1]{coding}. Its unary powerset chain supplies every fixed finite-order $Z_m$: guarded comprehension gives full comprehension, quotient equality gives extensionality, and numerical induction applies to predicates with arbitrary fixed higher-type parameters. Numeric operations are represented by graphs where the original language has no individual-valued operations. Its arithmetic is the original Frege arithmetic, including nonstandard elements. The source interpretation therefore gives a set-theoretic interpretation $S$ with the same first-order arithmetic and as many finite powerset levels as required.
+
+Fix a proposed finite proof $\pi$ of $A^\rho$ in the strongest displayed theory. Expand definitions, include subtypes, and include the finite H proofs certifying its Logical Equivalence instances. Add the finitely many auxiliary types needed for the arithmetic bridge below. Only this finite list needs interpretation. To see that finitely many powersets suffice, code individuals at level zero and propositions at level one. If two carriers have element codes in a common level $m$, their ordered pairs have codes two powerset levels higher and function graphs three levels higher. Separation forms the carrier of such graphs. Singleton lifting aligns levels, so the generous recurrence
+\[
+ b(e)=0,\qquad b(t)=1,\qquad
+ b(\alpha\to\beta)=\max\{b(\alpha),b(\beta)\}+3
+\]
+with a finite additional margin handles the whole proof. There is no set containing an infinite type hierarchy and no uniform finite rank bound on all proofs.
+
+Inside $S$, take individuals and worlds both equal to $\omega$, propositions $\mathcal P(\omega)$, and the full internal function carriers at the required types. Evaluate $p$ at $w$ by membership. Connectives and quantifiers act pointwise; identity is ordinary set identity. The defined box is universal necessity over the world domain. Replacement supplies lambda graphs. H equivalences hold at every world and assignment and hence identify their full lambda denotations, validating the actual Logical Equivalence rule. Optional assumptions are never treated as H theorems.
+
+At a fixed world, each input of a serial relation has a nonempty set of candidate output objects. The global well-order chooses its least candidate and Replacement supplies the selecting function. It belongs to the appropriate internal function carrier, with the original relational output restriction respected. Applying this at every world proves each required boxed Functional Choice instance. The outputs are whole intensional objects, not only current extensions.
+
+For every required type $\tau$, there is an internally represented injection $j_\tau:\omega\to D_\tau$: use the identity graph at $e$, singleton-world propositions at $t$, and constant functions recursively at arrows. Define $q_\tau(n)(X)(w)$ to say that the current extension of $X$ at $w$ bijects with $[0,n)$. This is represented in the internal hierarchy; the map $q_\tau$ is an admitted operation of type $e\to\nu_\tau$. The deletion and adjunction arguments give
+\[
+ q_\tau(0)=0_\tau,\qquad
+ q_\tau(n+1)=\operatorname{Suc}_\tau(q_\tau(n))
+\]
+as identities of complete intensions. Internal induction implies that every $q_\tau(n)$ is a Frege number. Conversely, the admitted predicate $P(z):=\exists n^e\,(z=q_\tau(n))$ is successor-closed and contains zero. Frege induction implies that every Frege number is in its image. Thus no unrepresented external standard cut is used.
+
+The property $j_\tau[[0,n)]$ witnesses a current extension counted by $q_\tau(n)$. Equality $q_\tau(n)=q_\tau(m)$ therefore gives a bijection of the two initial segments, and internal finite pigeonhole gives $n=m$. Hence $q_\tau$ is a bijection onto the whole internal numerical domain. It preserves addition and multiplication by their recursive graph characterizations and induction. A bijection from $D_\tau$ to any $[0,n)$ would contradict pigeonhole after restricting $j_\tau$ to the first $n+1$ numbers. This verifies the quantified Infinity axiom at every world, including its boxed form.
+
+We have interpreted every axiom and rule of $\pi$ while preserving its arithmetic conclusion. Composing the definable current quotient, source interpretation and finite S5 interpretation therefore transfers $A^\rho$ to $\C+I_\sigma$. Equivalently, an arbitrary arithmetic counterexample survives all these steps. Internal full carriers suffice; external full semantics and arithmetic categoricity are not assumed. The converse arithmetic inclusion follows from $\Infq_\rho\to I_\rho$ and the previously proved independence of counting base. Finally $T$ and $\CC$ lie between the indicated weak and strong theories, and Corollary~\ref{conservationreduction} gives the displayed equivalence.
+\end{proof}
+
+The result is conservation for ordinary first-order arithmetic sentences under the fixed Frege translation. It does not preserve arbitrary higher-order parameters, the original domains or accessible worlds, or modal and higher-order consequences. Nor does it derive Functional Choice from Plenitude. The nominal ordinary-core separation \cite[\S17]{gallin} remains a distinct result, concerning particular structures. The exact arithmetic theory of pure Max is outside this theorem and the accompanying review.
+
+\section{Consequences for the abductive comparison}
+
+The evidence supports two comparisons. Against pure Max, even $T$ delivers uniform operation representation and the associated modal structure; full arbitrary Choice is not required for those advantages. Between $T$ and $\CC$, the extra issue is uniform selection from general represented ranges. Proposition~\ref{numericchoice} prevents numerical selection from being counted twice as evidence for that upgrade.
+
+The completed sections characterization gives a useful positive formulation: boxed Functional Choice is equivalent over $\C$ to necessary Actuality together with strong right inverses for actual surjections between relational types \cite[\S\S1--4]{sections}. It supplies one systematic selection policy. The nonfinite-basis results show that this policy cannot be replaced by a finite equivalent list of typed assertions, even beside boxed Plenitude and the two boxed quantified infinities \cite[\S\S7--8]{finitechoice}. This is an argument about the reach of a schema, not a proof that it is true, uniquely simple, or finitely axiomatized in disguise.
+
+The main manuscript should therefore make a conditional case for the full package: the shared representation benefits establish pressure against Max, while the further choice commitment requires a rationale for uniform treatment across ranges and types. Theorem~\ref{fullconservation} now excludes an appeal to additional ordinary first-order arithmetic theorems in that second comparison. It makes the further rationale concern selection and consequences outside that fragment. Neither conservativity nor the number of axioms by itself establishes an abductive preference.
+
+\begin{thebibliography}{9}
+\bibitem{coding}\emph{Relational coding and recursion}. Research notes, 22--23 October 2026, \S\S10,13,29,32--33,38. \path{research/2026-10-22/notes/relational-coding-recursion-20261022.md}. Unpaginated; ordinary proofs.
+\bibitem{predecessor}\emph{Pure Maximalism forbids numerical predecessor operations}. Research proof and saved certificate status, 23 October 2026. \path{research/2026-10-23/maximalist-mathematical-failures/predecessor-proof.md} and \path{status.json}. Final saved manifest: \path{20261023T181239411800Z-45f9e05a.json}. Certificate scopes are distinguished in the text.
+\bibitem{gallin}\emph{Gallin, Henkin, full semantics, and relative complexity}. Research notes, \S\S12.1,17. \path{research/2026-10-22/notes/gallin-comparison.md}. Unpaginated; ordinary proofs.
+\bibitem{sections}\emph{Functional Choice is Actuality plus sections of surjections}. Research proof, 22 October 2026, \S\S1--4. \path{research/2026-10-22/notes/functional-choice-by-sections.md}. Unpaginated; ordinary proof.
+\bibitem{finitechoice}\emph{Finite Functional Choice and ground model extraction}. Research review, 23 October 2026, especially \S\S7--8. \path{research/2026-10-23/finite-choice-forcing-extraction-review.md}. Unpaginated; ordinary ZFC argument, not an end-to-end formal certificate.
+\bibitem{fregechoice}\emph{Frege infinity research notes}. Research notes, 22--23 October 2026, \S\S35--36. \path{research/2026-10-22/notes/frege-infinity-20261022-1726.md}. Unpaginated; existing ordinary argument, dependent on the external interpretation theorem.
+\bibitem{mclarty}Colin McLarty. \emph{Interpreting set theory in higher order arithmetic}. arXiv:1207.6357v5, 15 February 2013, \S\S2--5, pp.~2--6. \url{https://arxiv.org/pdf/1207.6357v5}.
+\bibitem{choiceaudit}\emph{Full Choice and boxed Plenitude have the same ordinary arithmetic}. Application audit, 23 October 2026, \path{full-choice-arithmetic-audit.txt}, with separate ordinary AI review \path{full-choice-arithmetic-review.txt}. Neither human verification nor a Lean certificate.
+\end{thebibliography}
+\end{document}

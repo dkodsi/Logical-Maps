@@ -1,0 +1,59 @@
+id: relational-choice-r-implies-transversal-choice-r
+premises:
+- relational-choice-r
+conclusion: transversal-choice-r
+status: conjectured
+certificate:
+  source_id: misc
+  produced_by: Christopher Sun, observation that the implication is claimed without proof, communicated
+    by Zachary Goodsell on 25 September 2026; analysis by Claude Fable 5.1 (Anthropic), prompted by Zachary
+    Goodsell, 25 September 2026
+  recorded_by: Claude Fable 5.1 (Anthropic), prompted by Zachary Goodsell, 25 September 2026
+  checked_by: []
+  date: '2026-09-25'
+  lean: stated
+sources:
+- Christopher Sun, observation communicated by Zachary Goodsell on 25 September 2026, that the transversal
+  formulation of choice is claimed in the literature without a proof from Relational Choice.
+- Original research by Codex (OpenAI), prompted by Daniel Kodsi, 22 October 2026, followup/choice-transversal.md,
+  “Current boundary” and “Subsequent adjacent result”; followup/choice-transversal-symmetry.md, §§2–4
+  (unpaginated), in the preserved research submission.
+source_names:
+- Sun via Goodsell 25 Sep
+- Kodsi research handoff 23 Oct
+proof: ''
+references: []
+notes: 'Does Relational Choice alone give a transversal for every equivalence relation? Christopher Sun
+  observed that the literature claims this without proof. The converse is recorded. The quotient argument
+  chooses from each cell $\lambda z\, .\,(Rx)z$ and needs the cells of two members of one class to be
+  the same property; in C that is necessary coextension, and the hypothesis gives actual coextension only.
+  No definable substitute for the cell helps, since an operation definable from $R$ identifies $x$ with
+  $x''$ only when they are necessarily indiscernible with respect to $R$. A Zermelo-style well-ordering
+  argument breaks at the same point: coextensive but distinct stages receive different chosen elements.
+  The expectation is that the implication fails. What would settle it: a proof that uses the chosen relation
+  to break the symmetry between coextensive cells, or a model of C with Relational Choice that is not
+  extensionally full at its evaluation point. Every recorded model of Relational Choice is extensionally
+  full there, in that every set of tuples from the domains is the extension of a rigid element, and that
+  fullness verifies Transversal Choice by the same metatheoretic choice, so none separates the two. Symmetric
+  Henkin models in the Fraenkel–Mostowski style cannot separate them either; see the write-up.
+
+  Update of 28 September 2026: Christopher Sun showed on 26 September that Transversal Choice is equivalent
+  to Relational Choice together with Transversal (transversal-and-relational-choice-imply-transversal-choice),
+  so this question is equivalent to whether Relational Choice implies Transversal. Anything that implies
+  Transversal, such as Actuality, closes the gap.
+
+
+  Research update of 23 October 2026: the exact question is unboxed all-type Relational Choice ⇒ unboxed
+  all-type Transversal Choice, including the individual type e. Selector improvement, deterministic-history
+  limits and upper bounds for compatible represented chains have been supplied, but compatibility between
+  different history codes reaching coextensive terminal states remains unresolved. Neither necessary functionality
+  nor local candidate selection supplies it. A separator must fail Actuality and BC_tt, since the sharp
+  proved RC_(t,t)+BC_tt⇒Actuality theorem and the recorded Actuality/Transversal bridges yield TC. Finite-orbit
+  and conditional bounded-support arguments are constraints, not C+RC countermodels: the required finite-fragment
+  factors remain unconstructed. These are new misc research notes, with the Sun/Goodsell provenance above
+  retained. See the dated section of the matching write-up and the four-question conjecture handoff.'
+changes:
+- date: '2026-10-23'
+  by: Codex (OpenAI), prompted by Daniel Kodsi
+  summary: Recorded the unresolved compatibility between histories and the sharper necessary failures
+    of Actuality and BC_tt for a separator; no theorem or model promotion.

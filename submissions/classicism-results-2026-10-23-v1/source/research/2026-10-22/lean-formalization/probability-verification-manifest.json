@@ -1,0 +1,2115 @@
+{
+  "date": "2026-10-23",
+  "owner_scope": [
+    "AtomicProbability*",
+    "ProbabilitySymmetry*"
+  ],
+  "state": "checkpointed_incomplete",
+  "authoritative_handback": "research/2026-10-22/lean-formalization/core-handback-status.md",
+  "runner": "research/2026-10-22/lean-formalization/check_module.py",
+  "first_targets": [
+    "Classicism.Results.Research.AtomicProbabilityFiniteConstructive",
+    "Classicism.Results.Research.AtomicProbabilityAlgebraChecks",
+    "Classicism.Results.Research.AtomicProbabilityComplete"
+  ],
+  "files": [
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityAlgebraChecks.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityAlgebraChecks",
+      "source_sha256": "1b5a60efc0c47b129da89f8f0c66f007551147db4541281fdb7cd9f9c1e3d09b",
+      "declared_names": [],
+      "namespace_blocks": [],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityFiniteFibres",
+        "Classicism.Results.Research.ProbabilitySymmetryFinite"
+      ],
+      "verification": "PASS for current source and local dependency sources",
+      "current_evidence": {
+        "manifest": "research/2026-10-22/lean-formalization/checks/20261023T044808207981Z-288d5942.json",
+        "exit_code": 0,
+        "log": "logs/runs/20261023T044808207981Z-288d5942/Classicism_Results_Research_AtomicProbabilityAlgebraChecks.log",
+        "source_matches": true,
+        "dependency_sources_match": true,
+        "complete_run": true
+      },
+      "previous_evidence": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T021915054282Z.json",
+          "exit_code": 125,
+          "log": null,
+          "source_matches": false,
+          "dependency_sources_match": false,
+          "complete_run": false
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T022130038754Z.json",
+          "exit_code": 125,
+          "log": null,
+          "source_matches": false,
+          "dependency_sources_match": false,
+          "complete_run": false
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T022507811192Z.json",
+          "exit_code": 125,
+          "log": null,
+          "source_matches": false,
+          "dependency_sources_match": false,
+          "complete_run": false
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T022700791873Z.json",
+          "exit_code": 0,
+          "log": "logs/runs/20261023T022700791873Z/Classicism_Results_Research_AtomicProbabilityAlgebraChecks.log",
+          "source_matches": false,
+          "dependency_sources_match": false,
+          "complete_run": false
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T044808207981Z-288d5942.json",
+          "exit_code": 0,
+          "log": "logs/runs/20261023T044808207981Z-288d5942/Classicism_Results_Research_AtomicProbabilityAlgebraChecks.log",
+          "source_matches": true,
+          "dependency_sources_match": true,
+          "complete_run": true
+        }
+      ]
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCantor.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityCantor",
+      "source_sha256": "6ba316b1b04f5b4aee06ae004073a46618ebe383c6d7a23a157764055be1e2ae",
+      "declared_names": [
+        "diagonal",
+        "diagonal_below",
+        "no_predicate_injection",
+        "no_serial_injective_predicate_graph"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.ProbabilityCantor"
+      ],
+      "imports": [
+        "Classicism.Results.Research.ActualityCoreGraphs"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCantorCertificates.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityCantorCertificates",
+      "source_sha256": "d9241952bb57239b49639de68201a21293c3efdbd67d693eae7c20c088360df1",
+      "declared_names": [],
+      "namespace_blocks": [],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityCantor",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityComplete.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityComplete",
+      "source_sha256": "1612cad433c07f6c94c42ca90b6988ecccf87dc16e6c3585677bd314e1e7c0e3",
+      "declared_names": [
+        "joinList",
+        "JoinCompatible",
+        "value_joinList",
+        "completely_additive_graph",
+        "atomSum_mono",
+        "atomSum_unique"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.Probability",
+        "FiniteSupportSystem"
+      ],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityEnvelope"
+      ],
+      "verification": "PASS for current source and local dependency sources",
+      "current_evidence": {
+        "manifest": "research/2026-10-22/lean-formalization/checks/20261023T045228583932Z-34e30f68.json",
+        "exit_code": 0,
+        "log": "logs/runs/20261023T045228583932Z-34e30f68/Classicism_Results_Research_AtomicProbabilityComplete.log",
+        "source_matches": true,
+        "dependency_sources_match": true,
+        "complete_run": true
+      },
+      "previous_evidence": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T045228583932Z-34e30f68.json",
+          "exit_code": 0,
+          "log": "logs/runs/20261023T045228583932Z-34e30f68/Classicism_Results_Research_AtomicProbabilityComplete.log",
+          "source_matches": true,
+          "dependency_sources_match": true,
+          "complete_run": true
+        }
+      ]
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityConcreteRealAddition.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityConcreteRealAddition",
+      "source_sha256": "950d16e4458a11db46b887392233ad8169f79854523065f03ce9b0207f2242e2",
+      "declared_names": [
+        "realAdd",
+        "realAddFamily",
+        "realAdd_below",
+        "realAdd_supported",
+        "member_below_nonmember",
+        "realAdd_in_field",
+        "realAdd_comm",
+        "realAdd_assoc",
+        "realAdd_mono",
+        "realAdd_zero_right",
+        "realAdd_zero_left",
+        "realAdd_sup_left"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.ProbabilityConcreteReals"
+      ],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityConcreteReals",
+        "Classicism.Results.Research.AtomicProbabilityRationalTranslation"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityConcreteRealAdditionCertificates.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityConcreteRealAdditionCertificates",
+      "source_sha256": "abc545de7d85f89dcfbfdadc4184b22d16ad0ccea9fe82a27a87710c40a05b40",
+      "declared_names": [],
+      "namespace_blocks": [],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityConcreteRealAddition",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityConcreteRealInverse.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityConcreteRealInverse",
+      "source_sha256": "4a9b6e63fe206c85247122311bc7f4c405432bcb4e0843dbafa3e215f915222f",
+      "declared_names": [
+        "realNeg",
+        "realSub",
+        "realNeg_below",
+        "realNeg_supported",
+        "negative_member_not_neg",
+        "realNeg_in_field",
+        "realNeg_antitone",
+        "realNeg_involution",
+        "realAdd_neg",
+        "realSub_in_field",
+        "realSub_self",
+        "realAdd_cancel_right",
+        "realAdd_le_iff_le_sub"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.ProbabilityConcreteReals"
+      ],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityCutCrossing",
+        "Classicism.Results.Research.AtomicProbabilityRationalNegation"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityConcreteRealInverseCertificates.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityConcreteRealInverseCertificates",
+      "source_sha256": "b5233eedc35ead2ee60b869f268f5643c93342a6b73093b6b3d2bd02cdc027d4",
+      "declared_names": [],
+      "namespace_blocks": [],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityConcreteRealInverse",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityConcreteReals.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityConcreteReals",
+      "source_sha256": "df333af4fef4591e70fb86e39a08d1652743f8e01ced28377739bdae4d194d77",
+      "declared_names": [
+        "principal",
+        "RealField",
+        "RealBounded",
+        "realSup",
+        "principal_below",
+        "principal_real",
+        "principal_in_field",
+        "principal_order_iff",
+        "principal_injective",
+        "real_field_inhabited",
+        "real_field_nontrivial",
+        "real_order_total",
+        "concrete_real_supremum"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.ProbabilityConcreteReals"
+      ],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityRationalOrder",
+        "Classicism.Results.Research.AtomicProbabilitySupportedReals"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityConcreteRealsCertificates.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityConcreteRealsCertificates",
+      "source_sha256": "8db89003fe8451e12a0d9325b2742b57f26fdc22dd0b339ef4bfb7e6924ca6e9",
+      "declared_names": [],
+      "namespace_blocks": [],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityConcreteReals",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCutAddition.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityCutAddition",
+      "source_sha256": "af8bc192df7058fcc6d8079ae3f10501bcc09c433e26303bf97bb697e20a04fd",
+      "declared_names": [
+        "cutAdd",
+        "cutAdd_mono",
+        "cutAdd_transport",
+        "cutAdd_union_left",
+        "cutAdd_union_right",
+        "cutAdd_comm",
+        "GraphAssociative",
+        "cutAdd_assoc"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.ProbabilityCuts"
+      ],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityCuts"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCutArithmetic.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityCutArithmetic",
+      "source_sha256": "1d1a2a78fbfbe1e9fe28c65f306a9b2758b8b784e7a8ffbe4eb2b20c783f970a",
+      "declared_names": [
+        "StrictCodeOrder",
+        "CodeDense",
+        "principalCut",
+        "principal_is_cut",
+        "cut_member_below_nonmember",
+        "cut_principal_upper_bound",
+        "cuts_comparable",
+        "principal_injective_coextension",
+        "CodeAddTotal",
+        "CodeAddComm",
+        "CodeAddRightStrict",
+        "CodeAddLowerSolve",
+        "codeAdd_strict_both",
+        "cutAdd_is_cut",
+        "codeAdd_below_split",
+        "principalCut_add",
+        "cutAdd_zero"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.ProbabilityCuts"
+      ],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityCutAddition"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCutArithmeticCertificates.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityCutArithmeticCertificates",
+      "source_sha256": "eec6075570b4bc158927e4f242d752fa087e59247d74b9532f002e85995c3ae6",
+      "declared_names": [],
+      "namespace_blocks": [],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityCutArithmetic",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCutCertificates.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityCutCertificates",
+      "source_sha256": "dd2012bb88b6cce12157d1bddb945a741c753b9532f236689cbff068c67a6858",
+      "declared_names": [],
+      "namespace_blocks": [],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityCutAddition",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCutCrossing.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityCutCrossing",
+      "source_sha256": "255553706c7169a255fc50da89ae947f25fa8361494c6f5481457e28f68b3425",
+      "declared_names": [
+        "stepTerm",
+        "represented_adjacent_exit",
+        "natural_multiple_exceeds_fraction",
+        "stepTerm_in_field",
+        "stepTerm_zero",
+        "stepTerm_suc",
+        "cut_step_eventually_outside",
+        "cut_has_adjacent_step",
+        "cut_has_small_gap"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.ProbabilityCutCrossing"
+      ],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityConcreteRealAddition"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCutCrossingCertificates.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityCutCrossingCertificates",
+      "source_sha256": "a7bf5dd9b45e69b9b6f472f8ea6fb3a057ac3df82b9f0f23fb9b93c0056f34f4",
+      "declared_names": [],
+      "namespace_blocks": [],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityCutCrossing",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCutNegation.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityCutNegation",
+      "source_sha256": "6b474af72c4d83e0e51b2b206b49961a49ee98aff928b791cc72756703898b18",
+      "declared_names": [
+        "CodeNegTotal",
+        "CodeNegInvolutive",
+        "CodeNegReverses",
+        "cutNeg",
+        "cutNeg_is_cut",
+        "cutNeg_antitone",
+        "cutNeg_involutive",
+        "cutAdd_neg_below_zero"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.ProbabilityCuts"
+      ],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityCutArithmetic"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCutNegationCertificates.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityCutNegationCertificates",
+      "source_sha256": "e5e28c8ceda8a3ffbf92a92aab46b203aeabd0721b0d92cedbe05de3e2668f5d",
+      "declared_names": [],
+      "namespace_blocks": [],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityCutNegation",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityCuts.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityCuts",
+      "source_sha256": "4ff09558d1573e1a1c934ebb61c0bf92ce30bf9e4aaf11cf6e35d6a4539222dd",
+      "declared_names": [
+        "Included",
+        "SameCut",
+        "LowerCut",
+        "unionCut",
+        "BoundedCutFamily",
+        "CutLub",
+        "union_is_lub",
+        "union_is_cut",
+        "cut_sup_exists",
+        "lub_unique_coextension",
+        "lowerCut_transport",
+        "lub_transport",
+        "ExtensionalCutCodes",
+        "CodedCutSup",
+        "coded_sup_unique",
+        "coded_sup_exists",
+        "coded_sup_graph_total_functional"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.ProbabilityCuts"
+      ],
+      "imports": [
+        "Classicism.Core"
+      ],
+      "verification": "PASS for current source and local dependency sources",
+      "current_evidence": {
+        "manifest": "research/2026-10-22/lean-formalization/checks/20261023T045228583932Z-34e30f68.json",
+        "exit_code": 0,
+        "log": "logs/runs/20261023T045228583932Z-34e30f68/Classicism_Results_Research_AtomicProbabilityCuts.log",
+        "source_matches": true,
+        "dependency_sources_match": true,
+        "complete_run": true
+      },
+      "previous_evidence": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T045228583932Z-34e30f68.json",
+          "exit_code": 0,
+          "log": "logs/runs/20261023T045228583932Z-34e30f68/Classicism_Results_Research_AtomicProbabilityCuts.log",
+          "source_matches": true,
+          "dependency_sources_match": true,
+          "complete_run": true
+        }
+      ]
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityDeliveryChecks.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityDeliveryChecks",
+      "source_sha256": "93f685731bbdd55208bb32b44822f5bbc4f5c0524e17adaac8fb744277a4714d",
+      "declared_names": [],
+      "namespace_blocks": [],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityAlgebraChecks",
+        "Classicism.Results.Research.AtomicProbabilityComplete",
+        "Classicism.Results.Research.AtomicProbabilityNormalization"
+      ],
+      "verification": "PASS for current source and local dependency sources",
+      "current_evidence": {
+        "manifest": "research/2026-10-22/lean-formalization/checks/20261023T045228583932Z-34e30f68.json",
+        "exit_code": 0,
+        "log": "logs/runs/20261023T045228583932Z-34e30f68/Classicism_Results_Research_AtomicProbabilityDeliveryChecks.log",
+        "source_matches": true,
+        "dependency_sources_match": true,
+        "complete_run": true
+      },
+      "previous_evidence": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T045228583932Z-34e30f68.json",
+          "exit_code": 0,
+          "log": "logs/runs/20261023T045228583932Z-34e30f68/Classicism_Results_Research_AtomicProbabilityDeliveryChecks.log",
+          "source_matches": true,
+          "dependency_sources_match": true,
+          "complete_run": true
+        }
+      ]
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityEnvelope.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityEnvelope",
+      "source_sha256": "ccff97610e11b0f8ceb9c9c865300a8e7f1af6632692ff48bbd14bd978da5739",
+      "declared_names": [
+        "IsMassSup",
+        "massSup_unique",
+        "HasBoundedMassSuprema",
+        "FiniteSupportSystem",
+        "Values",
+        "Value",
+        "upper",
+        "least",
+        "value_unique",
+        "value_exists",
+        "graph_total_functional",
+        "value_bottom",
+        "value_nonnegative",
+        "value_le_bound",
+        "value_mono",
+        "value_add",
+        "value_at_atom",
+        "value_positive",
+        "residual_nonnegative",
+        "residual_add",
+        "residual_atom_zero",
+        "massSup_le_of_cofinal",
+        "massSup_eq_of_mutually_cofinal"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.Probability",
+        "FiniteSupportSystem"
+      ],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityScalar"
+      ],
+      "verification": "PASS for current source and local dependency sources",
+      "current_evidence": {
+        "manifest": "research/2026-10-22/lean-formalization/checks/20261023T044808207981Z-288d5942.json",
+        "exit_code": 0,
+        "log": "logs/runs/20261023T044808207981Z-288d5942/Classicism_Results_Research_AtomicProbabilityEnvelope.log",
+        "source_matches": true,
+        "dependency_sources_match": true,
+        "complete_run": true
+      },
+      "previous_evidence": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T021915054282Z.json",
+          "exit_code": 125,
+          "log": null,
+          "source_matches": false,
+          "dependency_sources_match": false,
+          "complete_run": false
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T022130038754Z.json",
+          "exit_code": 125,
+          "log": null,
+          "source_matches": false,
+          "dependency_sources_match": false,
+          "complete_run": false
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T022507811192Z.json",
+          "exit_code": 0,
+          "log": "logs/runs/20261023T022507811192Z/Classicism_Results_Research_AtomicProbabilityEnvelope.log",
+          "source_matches": false,
+          "dependency_sources_match": false,
+          "complete_run": false
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T044808207981Z-288d5942.json",
+          "exit_code": 0,
+          "log": "logs/runs/20261023T044808207981Z-288d5942/Classicism_Results_Research_AtomicProbabilityEnvelope.log",
+          "source_matches": true,
+          "dependency_sources_match": true,
+          "complete_run": true
+        }
+      ]
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFiniteConstructive.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityFiniteConstructive",
+      "source_sha256": "9c0003ad129a9e750ec7d80a50594782a48fe106192d623ec5efb8efa33fad3a",
+      "declared_names": [
+        "mem_cons_cases",
+        "nodup_cons_parts",
+        "perm_refl",
+        "perm_symm",
+        "perm_length",
+        "remove_one",
+        "enumeration_perm",
+        "enumeration_subset_length"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.ProbabilityFinite"
+      ],
+      "imports": [
+        "Init.Data.List.Basic",
+        "Init.Data.Nat.Basic"
+      ],
+      "verification": "PASS for current source and local dependency sources",
+      "current_evidence": {
+        "manifest": "research/2026-10-22/lean-formalization/checks/20261023T043010164526Z-9af95bd5.json",
+        "exit_code": 0,
+        "log": "logs/runs/20261023T043010164526Z-9af95bd5/Classicism_Results_Research_AtomicProbabilityFiniteConstructive.log",
+        "source_matches": true,
+        "dependency_sources_match": true,
+        "complete_run": true
+      },
+      "previous_evidence": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T043010164526Z-9af95bd5.json",
+          "exit_code": 0,
+          "log": "logs/runs/20261023T043010164526Z-9af95bd5/Classicism_Results_Research_AtomicProbabilityFiniteConstructive.log",
+          "source_matches": true,
+          "dependency_sources_match": true,
+          "complete_run": true
+        }
+      ]
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFiniteFibres.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityFiniteFibres",
+      "source_sha256": "d8251bfe661561d3824aadb2d204a8cf38cccddd1fb7c30bd746136cc6da1ada",
+      "declared_names": [
+        "sum_zero",
+        "sum_add_pointwise",
+        "sum_swap",
+        "sum_single_label",
+        "sum_partition_by_labels",
+        "finite_labels_exist",
+        "enumeration_subset_length",
+        "FibreEnumeration",
+        "FiniteFibres",
+        "FibreWeightGraph",
+        "fibreWeight_unique",
+        "fibreWeight_total_functional",
+        "fibreWeight_positive",
+        "partialFibre_budget",
+        "fibreSlice",
+        "sum_fibreSlice",
+        "finiteFibre_finite_budget"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.Probability",
+        "MassScalar"
+      ],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityEnvelope"
+      ],
+      "verification": "PASS for current source and local dependency sources",
+      "current_evidence": {
+        "manifest": "research/2026-10-22/lean-formalization/checks/20261023T044808207981Z-288d5942.json",
+        "exit_code": 0,
+        "log": "logs/runs/20261023T044808207981Z-288d5942/Classicism_Results_Research_AtomicProbabilityFiniteFibres.log",
+        "source_matches": true,
+        "dependency_sources_match": true,
+        "complete_run": true
+      },
+      "previous_evidence": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T021915054282Z.json",
+          "exit_code": 125,
+          "log": null,
+          "source_matches": false,
+          "dependency_sources_match": false,
+          "complete_run": false
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T022130038754Z.json",
+          "exit_code": 125,
+          "log": null,
+          "source_matches": false,
+          "dependency_sources_match": false,
+          "complete_run": false
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T022507811192Z.json",
+          "exit_code": 1,
+          "log": "logs/runs/20261023T022507811192Z/Classicism_Results_Research_AtomicProbabilityFiniteFibres.log",
+          "source_matches": false,
+          "dependency_sources_match": false,
+          "complete_run": false
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T022700791873Z.json",
+          "exit_code": 0,
+          "log": "logs/runs/20261023T022700791873Z/Classicism_Results_Research_AtomicProbabilityFiniteFibres.log",
+          "source_matches": false,
+          "dependency_sources_match": false,
+          "complete_run": false
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T044808207981Z-288d5942.json",
+          "exit_code": 0,
+          "log": "logs/runs/20261023T044808207981Z-288d5942/Classicism_Results_Research_AtomicProbabilityFiniteFibres.log",
+          "source_matches": true,
+          "dependency_sources_match": true,
+          "complete_run": true
+        }
+      ]
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionAdditive.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionAdditive",
+      "source_sha256": "8ddca2d661329c559c438625fe1bc5083351e39d6a01098f5068196b503b6308",
+      "declared_names": [
+        "fractionCode_scale",
+        "fractionCode_same_denominator",
+        "common_denominator_two",
+        "common_denominator_three",
+        "qplus_common_denominator",
+        "qzero",
+        "qone",
+        "qzero_in_field",
+        "qone_in_field",
+        "qone_ne_zero",
+        "qplus_comm",
+        "qplus_assoc",
+        "qplus_zero_right",
+        "qplus_zero_left",
+        "qplus_cancel_right",
+        "qplus_cancel_left",
+        "qplus_eq_zero",
+        "qplus_right_comm",
+        "qplus_left_comm",
+        "qplus_four"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.ProbabilityFractions"
+      ],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityFractionArithmetic"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionAdditiveCertificates.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionAdditiveCertificates",
+      "source_sha256": "db3cb9790b14e751ae71148e01a5d71f64a4f3a5b4191504b1b8ddec06c40123",
+      "declared_names": [],
+      "namespace_blocks": [],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityFractionAdditive",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionArchimedean.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionArchimedean",
+      "source_sha256": "53eb9a7ef700e97ccd46290f53eb3aaf4b267b96c82588c3eb8fd13d448af41c",
+      "declared_names": [
+        "naturalCode_in_field",
+        "naturalCode_add",
+        "naturalCode_mul",
+        "naturalCode_suc",
+        "naturalCode_lt_suc",
+        "fraction_below_numerator",
+        "fraction_has_natural_bound",
+        "reciprocal_natural_small",
+        "natural_multiple_exceeds_one"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.ProbabilityFractions"
+      ],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityFractionOrder"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionArchimedeanCertificates.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionArchimedeanCertificates",
+      "source_sha256": "4107ecafbc18798fc239d2c9936c81c7880198efc15d2e37f12d35071d9894f1",
+      "declared_names": [],
+      "namespace_blocks": [],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityFractionArchimedean",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionArithmetic.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionArithmetic",
+      "source_sha256": "e242d9a4f3a7d4952c204c95bcc24724b10b03dc1db469816a480b5acf243621",
+      "declared_names": [
+        "sumNumerator",
+        "productDenominator",
+        "sum_valid",
+        "product_valid",
+        "product_respects",
+        "sum_respects",
+        "FractionAdd",
+        "FractionMul",
+        "fractionAdd_total",
+        "fractionMul_total",
+        "fractionAdd_unique",
+        "fractionMul_unique",
+        "qplus",
+        "qtimes",
+        "qplus_supported",
+        "qtimes_supported",
+        "qplus_selected",
+        "qtimes_selected",
+        "qplus_in_field",
+        "qtimes_in_field",
+        "qplus_codes",
+        "qtimes_codes"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.ProbabilityFractions"
+      ],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityFractions"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionArithmeticCertificates.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionArithmeticCertificates",
+      "source_sha256": "a186648755c6d9da7f8ded36dd53e9c16967dec21f69b373bd4fe2bb7c95eb6c",
+      "declared_names": [],
+      "namespace_blocks": [],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityFractionArithmetic",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionDensity.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionDensity",
+      "source_sha256": "a715e4c8f616c821433d9e6e1ca82f0074a8ee3591f62b8eea3975a15e60e5ed",
+      "declared_names": [
+        "qtwo",
+        "qhalf",
+        "qtwo_in_field",
+        "qtwo_ne_zero",
+        "qtimes_two",
+        "qhalf_in_field",
+        "qhalf_ne_zero",
+        "qhalf_add_half",
+        "qlt_add_nonzero",
+        "fraction_order_dense"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.ProbabilityFractions"
+      ],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityFractionArchimedean"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionDensityCertificates.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionDensityCertificates",
+      "source_sha256": "a756eef2ffaa60438fb837ff35058f09e59d1f594dd4390c2bb6bd45d1cc9621",
+      "declared_names": [],
+      "namespace_blocks": [],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityFractionDensity",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionInverse.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionInverse",
+      "source_sha256": "b4f9414210f63cf6eebf2d1b8e9247a7bbd0428b68a46718d5a8b1bad6466588",
+      "declared_names": [
+        "FractionInv",
+        "qinverse",
+        "fraction_reciprocal_product",
+        "fractionInv_total",
+        "fractionInv_unique",
+        "qinverse_supported",
+        "qinverse_selected",
+        "qinverse_in_field",
+        "qtimes_inverse",
+        "qinverse_ne_zero",
+        "qinverse_involution"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.ProbabilityFractions"
+      ],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityFractionMultiplicative"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionInverseCertificates.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionInverseCertificates",
+      "source_sha256": "afba3aa59e9250ecd9257afa605d92a5d7aa08d8306c50b6d2d60cbe7778d5cc",
+      "declared_names": [],
+      "namespace_blocks": [],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityFractionInverse",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionMultiplicative.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionMultiplicative",
+      "source_sha256": "228fc355cd314b7c46c3383b25508013abc28b8c7b65971918ed8705ca1b46fc",
+      "declared_names": [
+        "qtimes_comm",
+        "qtimes_assoc",
+        "qtimes_one_right",
+        "qtimes_one_left",
+        "qtimes_zero_right",
+        "qtimes_zero_left",
+        "qtimes_add",
+        "qadd_times",
+        "qtimes_eq_zero",
+        "qtimes_cancel_right",
+        "qtimes_cancel_left"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.ProbabilityFractions"
+      ],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityFractionAdditive"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionMultiplicativeCertificates.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionMultiplicativeCertificates",
+      "source_sha256": "2d740c12018fadc9efc156f0377061d0ef2a98cb32550e207f00e158bbf9c752",
+      "declared_names": [],
+      "namespace_blocks": [],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityFractionMultiplicative",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionOrder.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionOrder",
+      "source_sha256": "baafe5490f8ca81138d90b1be038c4634ddeddcfa22a5abacb993bc8a5995f9c",
+      "declared_names": [
+        "QLe",
+        "QLt",
+        "qle_refl",
+        "qle_zero",
+        "qle_total",
+        "qle_trans",
+        "qle_antisymm",
+        "qle_add_right",
+        "qle_mul_right",
+        "qlt_mul_right",
+        "qlt_of_le_of_lt",
+        "qtimes_right_comm",
+        "qinverse_antitone",
+        "qinverse_strict_antitone"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.ProbabilityFractions"
+      ],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityFractionInverse",
+        "Classicism.Results.Research.AtomicProbabilityNumericComparison"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionOrderCertificates.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionOrderCertificates",
+      "source_sha256": "5d80f53f6db4fd3e93f8d76f55a0bcff48b69101694f0aec323d0e8a501d0705",
+      "declared_names": [],
+      "namespace_blocks": [],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityFractionOrder",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractions.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityFractions",
+      "source_sha256": "a2be200d447d37307430f8066e07ac6ebcfa4e4b9782337567b1629c2fcf29c1",
+      "declared_names": [
+        "Valid",
+        "CrossEq",
+        "fractionCode",
+        "FractionField",
+        "times_right_comm",
+        "times_left_comm",
+        "times_four",
+        "times_four_cross",
+        "cross_refl",
+        "cross_symm",
+        "cross_trans",
+        "fractionCode_supported",
+        "fractionField_supported",
+        "fractionCode_self",
+        "fractionCode_identity_iff",
+        "fractionCode_in_field",
+        "field_code_supported",
+        "naturalCode",
+        "naturalCode_injective",
+        "fractionCode_zero_iff"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.ProbabilityFractions"
+      ],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityNumericMultiplication"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFractionsCertificates.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityFractionsCertificates",
+      "source_sha256": "e53db87c9cbfb50e497d045aeb95a37349cc3093f7c72337cc32008fd0ad7313",
+      "declared_names": [],
+      "namespace_blocks": [],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityFractions",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityLeastNumber.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityLeastNumber",
+      "source_sha256": "8d3a9183b8edb6986652134e286d31ed6a3f0280c6b527f9da819276331289e6",
+      "declared_names": [
+        "le_suc_self",
+        "le_eq_or_lt",
+        "lt_implies_le",
+        "lt_irrefl",
+        "le_suc_cases",
+        "LeastNumber",
+        "bounded_field_has_least",
+        "represented_field_has_least",
+        "leastNumber_unique",
+        "LeastIndex",
+        "least_index_graph"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.ProbabilityNaturalOrder"
+      ],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityNaturalOrder"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityLeastNumberCertificates.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityLeastNumberCertificates",
+      "source_sha256": "62ed8450b219b638888b81bb92728f9c028576fc2ab88b31ecde0327ee11b842",
+      "declared_names": [],
+      "namespace_blocks": [],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityLeastNumber",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNaturalOrder.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityNaturalOrder",
+      "source_sha256": "fcf9ebff94d6294ddc1abc7376532875643747ed768c1073e09abe2c37381b6f",
+      "declared_names": [
+        "add_zero_left",
+        "add_suc_left",
+        "add_comm",
+        "add_assoc_forward",
+        "add_assoc_reverse",
+        "add_cancel_right",
+        "add_cancel_left",
+        "add_eq_zero",
+        "number_cases",
+        "LE",
+        "LT",
+        "le_refl",
+        "zero_le",
+        "le_fields",
+        "le_zero",
+        "le_suc",
+        "le_of_suc_le",
+        "le_trans",
+        "le_total",
+        "le_antisymm",
+        "not_suc_le_self"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.ProbabilityNaturalOrder"
+      ],
+      "imports": [
+        "Classicism.Results.Research.FregeArithmeticGraphs"
+      ],
+      "verification": "PASS for current source and local dependency sources",
+      "current_evidence": {
+        "manifest": "research/2026-10-22/lean-formalization/checks/20261023T051735278101Z-c2f76f0d.json",
+        "exit_code": 0,
+        "log": "logs/runs/20261023T051735278101Z-c2f76f0d/Classicism_Results_Research_AtomicProbabilityNaturalOrder.log",
+        "source_matches": true,
+        "dependency_sources_match": true,
+        "complete_run": true
+      },
+      "previous_evidence": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T045450258074Z-06eb766b.json",
+          "exit_code": 0,
+          "log": "logs/runs/20261023T045450258074Z-06eb766b/Classicism_Results_Research_AtomicProbabilityNaturalOrder.log",
+          "source_matches": false,
+          "dependency_sources_match": false,
+          "complete_run": true
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T050536758600Z-1ae6daf2.json",
+          "exit_code": 0,
+          "log": "logs/runs/20261023T050536758600Z-1ae6daf2/Classicism_Results_Research_AtomicProbabilityNaturalOrder.log",
+          "source_matches": false,
+          "dependency_sources_match": false,
+          "complete_run": false
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T051735278101Z-c2f76f0d.json",
+          "exit_code": 0,
+          "log": "logs/runs/20261023T051735278101Z-c2f76f0d/Classicism_Results_Research_AtomicProbabilityNaturalOrder.log",
+          "source_matches": true,
+          "dependency_sources_match": true,
+          "complete_run": true
+        }
+      ]
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNaturalOrderCertificates.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityNaturalOrderCertificates",
+      "source_sha256": "61454c0b9f23fff44f146341345787d190c070e091691f8a8417bbd7621240e1",
+      "declared_names": [],
+      "namespace_blocks": [],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityNaturalOrder",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "verification": "PASS for current source and local dependency sources",
+      "current_evidence": {
+        "manifest": "research/2026-10-22/lean-formalization/checks/20261023T051735278101Z-c2f76f0d.json",
+        "exit_code": 0,
+        "log": "logs/runs/20261023T051735278101Z-c2f76f0d/Classicism_Results_Research_AtomicProbabilityNaturalOrderCertificates.log",
+        "source_matches": true,
+        "dependency_sources_match": true,
+        "complete_run": true
+      },
+      "previous_evidence": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T045810263373Z-aef77557.json",
+          "exit_code": 1,
+          "log": "logs/runs/20261023T045810263373Z-aef77557/Classicism_Results_Research_AtomicProbabilityNaturalOrderCertificates.log",
+          "source_matches": true,
+          "dependency_sources_match": false,
+          "complete_run": false
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T050536758600Z-1ae6daf2.json",
+          "exit_code": 1,
+          "log": "logs/runs/20261023T050536758600Z-1ae6daf2/Classicism_Results_Research_AtomicProbabilityNaturalOrderCertificates.log",
+          "source_matches": true,
+          "dependency_sources_match": false,
+          "complete_run": false
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T051735278101Z-c2f76f0d.json",
+          "exit_code": 0,
+          "log": "logs/runs/20261023T051735278101Z-c2f76f0d/Classicism_Results_Research_AtomicProbabilityNaturalOrderCertificates.log",
+          "source_matches": true,
+          "dependency_sources_match": true,
+          "complete_run": true
+        }
+      ]
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNormalization.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityNormalization",
+      "source_sha256": "218be72a478fe14507e8790f5d760211360de28c79fdd15c25038122f51e5a97",
+      "declared_names": [
+        "PositiveScale",
+        "monotone",
+        "injective",
+        "positive",
+        "map_sup",
+        "scaled",
+        "scaled_value",
+        "normalize_atomic_state"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.Probability",
+        "PositiveScale",
+        "FiniteSupportSystem"
+      ],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityEnvelope"
+      ],
+      "verification": "PASS for current source and local dependency sources",
+      "current_evidence": {
+        "manifest": "research/2026-10-22/lean-formalization/checks/20261023T045228583932Z-34e30f68.json",
+        "exit_code": 0,
+        "log": "logs/runs/20261023T045228583932Z-34e30f68/Classicism_Results_Research_AtomicProbabilityNormalization.log",
+        "source_matches": true,
+        "dependency_sources_match": true,
+        "complete_run": true
+      },
+      "previous_evidence": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T045228583932Z-34e30f68.json",
+          "exit_code": 0,
+          "log": "logs/runs/20261023T045228583932Z-34e30f68/Classicism_Results_Research_AtomicProbabilityNormalization.log",
+          "source_matches": true,
+          "dependency_sources_match": true,
+          "complete_run": true
+        }
+      ]
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericAddition.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericAddition",
+      "source_sha256": "2e9de92337072c4f1dcf4fe04b82cd0bd83ee8aeaa04ffc5311104d90d286620",
+      "declared_names": [
+        "plus_zero_left",
+        "plus_suc_left",
+        "plus_comm",
+        "plus_assoc",
+        "plus_left_comm",
+        "plus_cancel_left",
+        "plus_cancel_right",
+        "plus_eq_zero"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.ProbabilityNumericOperations"
+      ],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityNumericOperations"
+      ],
+      "verification": "PASS for current source and local dependency sources",
+      "current_evidence": {
+        "manifest": "research/2026-10-22/lean-formalization/checks/20261023T051735278101Z-c2f76f0d.json",
+        "exit_code": 0,
+        "log": "logs/runs/20261023T051735278101Z-c2f76f0d/Classicism_Results_Research_AtomicProbabilityNumericAddition.log",
+        "source_matches": true,
+        "dependency_sources_match": true,
+        "complete_run": true
+      },
+      "previous_evidence": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T045810263373Z-aef77557.json",
+          "exit_code": 125,
+          "log": null,
+          "source_matches": false,
+          "dependency_sources_match": false,
+          "complete_run": false
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T050536758600Z-1ae6daf2.json",
+          "exit_code": 125,
+          "log": null,
+          "source_matches": false,
+          "dependency_sources_match": false,
+          "complete_run": false
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T051735278101Z-c2f76f0d.json",
+          "exit_code": 0,
+          "log": "logs/runs/20261023T051735278101Z-c2f76f0d/Classicism_Results_Research_AtomicProbabilityNumericAddition.log",
+          "source_matches": true,
+          "dependency_sources_match": true,
+          "complete_run": true
+        }
+      ]
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericAdditionCertificates.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericAdditionCertificates",
+      "source_sha256": "15e19d71c47b1e0a26fee877963535a64120800946acec1a7acf255125663c67",
+      "declared_names": [],
+      "namespace_blocks": [],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityNumericAddition",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericComparison.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericComparison",
+      "source_sha256": "c3148f5ab5b46ed82b3db8ef7519f1eb40526aba68e993dae429c00634ccf704",
+      "declared_names": [
+        "NLe",
+        "nle_refl",
+        "nle_zero",
+        "nle_total",
+        "nle_trans",
+        "nle_antisymm",
+        "one_le_nonzero",
+        "plus_one",
+        "number_ne_successor"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.ProbabilityNumericOperations"
+      ],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityNumericMultiplication"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericComparisonCertificates.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericComparisonCertificates",
+      "source_sha256": "90fb15550ecc9d6760b99c90686fe147b9d4e3957f105a0bc970e8a45ccbc380",
+      "declared_names": [],
+      "namespace_blocks": [],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityNumericComparison",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericMultiplication.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericMultiplication",
+      "source_sha256": "4a4219771dafa9a14170c90b1451e904ca2ee485ca492148638df52c10d748a3",
+      "declared_names": [
+        "times_zero_left",
+        "times_suc_left",
+        "times_comm",
+        "times_add",
+        "add_times",
+        "times_assoc",
+        "one",
+        "one_numbers",
+        "one_ne_zero",
+        "times_one_right",
+        "times_one_left",
+        "times_eq_zero",
+        "times_ne_zero",
+        "times_cancel_left",
+        "times_cancel_right"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.ProbabilityNumericOperations"
+      ],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityNumericAddition"
+      ],
+      "verification": "PASS for current source and local dependency sources",
+      "current_evidence": {
+        "manifest": "research/2026-10-22/lean-formalization/checks/20261023T051735278101Z-c2f76f0d.json",
+        "exit_code": 0,
+        "log": "logs/runs/20261023T051735278101Z-c2f76f0d/Classicism_Results_Research_AtomicProbabilityNumericMultiplication.log",
+        "source_matches": true,
+        "dependency_sources_match": true,
+        "complete_run": true
+      },
+      "previous_evidence": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T045810263373Z-aef77557.json",
+          "exit_code": 125,
+          "log": null,
+          "source_matches": false,
+          "dependency_sources_match": false,
+          "complete_run": false
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T050536758600Z-1ae6daf2.json",
+          "exit_code": 125,
+          "log": null,
+          "source_matches": false,
+          "dependency_sources_match": false,
+          "complete_run": false
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T051735278101Z-c2f76f0d.json",
+          "exit_code": 0,
+          "log": "logs/runs/20261023T051735278101Z-c2f76f0d/Classicism_Results_Research_AtomicProbabilityNumericMultiplication.log",
+          "source_matches": true,
+          "dependency_sources_match": true,
+          "complete_run": true
+        }
+      ]
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericMultiplicationCertificates.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericMultiplicationCertificates",
+      "source_sha256": "f75244b33d9355bb27fc2815eff0137e3756d6c5c228ccf0f1274ccf67e68023",
+      "declared_names": [],
+      "namespace_blocks": [],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityNumericMultiplication",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericOperations.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericOperations",
+      "source_sha256": "33090ce0414070679c2d302141ec3fb16711239c4869f5bd6156253f5da67dbf",
+      "declared_names": [
+        "plus",
+        "times",
+        "plus_eq",
+        "times_eq",
+        "plus_graph",
+        "times_graph",
+        "plus_numbers",
+        "times_numbers",
+        "number_induction",
+        "number_cases",
+        "plus_zero_right",
+        "plus_suc_right",
+        "times_zero_right",
+        "times_suc_right"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.ProbabilityNumericOperations"
+      ],
+      "imports": [
+        "Classicism.Results.Research.ActualityCoreGraphs",
+        "Classicism.Results.Research.ActualityNumericalRelations",
+        "Classicism.Results.Research.AtomicProbabilityNaturalOrder"
+      ],
+      "verification": "PASS for current source and local dependency sources",
+      "current_evidence": {
+        "manifest": "research/2026-10-22/lean-formalization/checks/20261023T051735278101Z-c2f76f0d.json",
+        "exit_code": 0,
+        "log": "logs/runs/20261023T051735278101Z-c2f76f0d/Classicism_Results_Research_AtomicProbabilityNumericOperations.log",
+        "source_matches": true,
+        "dependency_sources_match": true,
+        "complete_run": true
+      },
+      "previous_evidence": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T045810263373Z-aef77557.json",
+          "exit_code": 1,
+          "log": "logs/runs/20261023T045810263373Z-aef77557/Classicism_Results_Research_AtomicProbabilityNumericOperations.log",
+          "source_matches": false,
+          "dependency_sources_match": false,
+          "complete_run": false
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T050536758600Z-1ae6daf2.json",
+          "exit_code": 1,
+          "log": "logs/runs/20261023T050536758600Z-1ae6daf2/Classicism_Results_Research_AtomicProbabilityNumericOperations.log",
+          "source_matches": false,
+          "dependency_sources_match": false,
+          "complete_run": false
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T051735278101Z-c2f76f0d.json",
+          "exit_code": 0,
+          "log": "logs/runs/20261023T051735278101Z-c2f76f0d/Classicism_Results_Research_AtomicProbabilityNumericOperations.log",
+          "source_matches": true,
+          "dependency_sources_match": true,
+          "complete_run": true
+        }
+      ]
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericOperationsCertificates.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericOperationsCertificates",
+      "source_sha256": "f3b4a80180877320b96cb9a2fd76f8d4d3c158324e2ba071a4927a2311a4a638",
+      "declared_names": [],
+      "namespace_blocks": [],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityNumericOperations",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "verification": "INCOMPLETE verification for current source and local dependency sources (timeout, interruption or blocked dependency)",
+      "current_evidence": {
+        "manifest": "research/2026-10-22/lean-formalization/checks/20261023T052005207226Z-a0a1f31d.json",
+        "exit_code": 124,
+        "log": "logs/runs/20261023T052005207226Z-a0a1f31d/Classicism_Results_Research_AtomicProbabilityNumericOperationsCertificates.log",
+        "source_matches": true,
+        "dependency_sources_match": true,
+        "complete_run": false
+      },
+      "previous_evidence": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T052005207226Z-a0a1f31d.json",
+          "exit_code": 124,
+          "log": "logs/runs/20261023T052005207226Z-a0a1f31d/Classicism_Results_Research_AtomicProbabilityNumericOperationsCertificates.log",
+          "source_matches": true,
+          "dependency_sources_match": true,
+          "complete_run": false
+        }
+      ]
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalAdditive.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityRationalAdditive",
+      "source_sha256": "b4fe18797a429362fa8308ad1771d500e3e6f1070f4f2707b7f5e8bbabbbc2ca",
+      "declared_names": [
+        "RationalAdd",
+        "rplus",
+        "rneg",
+        "rationalAdd_total",
+        "rationalAdd_unique",
+        "rplus_supported",
+        "rneg_supported",
+        "rplus_selected",
+        "rplus_in_field",
+        "rplus_codes",
+        "rneg_codes",
+        "rneg_in_field",
+        "rneg_involution",
+        "rplus_comm",
+        "rplus_assoc",
+        "rplus_zero_right",
+        "rplus_zero_left",
+        "rplus_neg",
+        "rneg_add",
+        "rplus_cancel_right",
+        "embed_add"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.ProbabilityRationals"
+      ],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilitySignedRationals"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalAdditiveCertificates.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityRationalAdditiveCertificates",
+      "source_sha256": "7f8b1bdb31f395b11d67804cb236297f221d14a40b0c3efd5dd4e4d80467a0ed",
+      "declared_names": [],
+      "namespace_blocks": [],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityRationalAdditive",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalNegation.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityRationalNegation",
+      "source_sha256": "e0a36d1512328c58285926699b50bb3da3afeda6243b4394fc74c3cb3c304464",
+      "declared_names": [
+        "rneg_zero",
+        "rneg_reverses",
+        "rneg_sub",
+        "rsub_sub_self"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.ProbabilityRationals"
+      ],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityRationalTranslation"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalNegationCertificates.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityRationalNegationCertificates",
+      "source_sha256": "3f3be7b86b5ed0dd807430304142ff8b13f3390833ae943d90bb493bb0c85489",
+      "declared_names": [],
+      "namespace_blocks": [],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityRationalNegation",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalOrder.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityRationalOrder",
+      "source_sha256": "e667b76663d19e5212881f5fb9213bd3cf456393db70aa8d5faa1d1f9ae57d0f",
+      "declared_names": [
+        "RLe",
+        "RLt",
+        "rplus_right_comm",
+        "rplus_cancel_left",
+        "rle_codes_iff",
+        "rle_refl",
+        "rle_total",
+        "rle_antisymm",
+        "rle_trans",
+        "rlt_of_le_of_lt",
+        "rlt_trans",
+        "rlt_of_lt_of_le",
+        "rlt_irrefl",
+        "rle_add_right",
+        "embed_order",
+        "embed_strict_order",
+        "rlt_add_positive",
+        "rational_order_dense",
+        "signedCode_le_positive_part",
+        "rational_has_natural_bound",
+        "rational_positive_representation",
+        "positive_rational_small_reciprocal",
+        "rational_no_upper_endpoint",
+        "rational_no_lower_endpoint"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.ProbabilityRationals"
+      ],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityRationalAdditive",
+        "Classicism.Results.Research.AtomicProbabilityFractionDensity"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalOrderCertificates.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityRationalOrderCertificates",
+      "source_sha256": "d76d367610844ebf23ce43c50ba9f2b61441e77c795e56c5e61a5f5255e5c3e8",
+      "declared_names": [],
+      "namespace_blocks": [],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityRationalOrder",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalTranslation.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityRationalTranslation",
+      "source_sha256": "3e471e533737a636186588277982d9132f86c45db6013ba4739a2b9200879c58",
+      "declared_names": [
+        "rsub",
+        "RationalSumGraph",
+        "rsub_in_field",
+        "radd_sub_cancel",
+        "rsub_add_cancel",
+        "radd_sub_cancel_left",
+        "rlt_add_right",
+        "rlt_add_left",
+        "rlt_add_both",
+        "rsub_lt_zero",
+        "rationalSumGraph_comm",
+        "rationalSumGraph_associative"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.ProbabilityRationals"
+      ],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityRationalOrder",
+        "Classicism.Results.Research.AtomicProbabilityCutAddition"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityRationalTranslationCertificates.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityRationalTranslationCertificates",
+      "source_sha256": "379ea994dea939dbf01320a98be66bd243c77ffa69734f4afee67cfc123bc483",
+      "declared_names": [],
+      "namespace_blocks": [],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityRationalTranslation",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityScalar.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilityScalar",
+      "source_sha256": "16549e55101d8f69270764d6b5732cb2ab2a1486da023f01b727400435a766ba",
+      "declared_names": [
+        "MassScalar",
+        "add_zero",
+        "add_left_comm",
+        "Nonnegative",
+        "Positive",
+        "add_nonnegative",
+        "le_add_of_nonnegative_right",
+        "le_add_of_nonnegative_left",
+        "positive_of_positive_le",
+        "sub_nonnegative",
+        "sum",
+        "sum_nil",
+        "sum_cons",
+        "sum_congr",
+        "sum_nonnegative",
+        "sum_mono",
+        "sum_append",
+        "sum_perm",
+        "member_le_sum",
+        "sum_positive_of_member",
+        "nsmul",
+        "sum_const",
+        "nsmul_nonnegative",
+        "nsmul_mono_index",
+        "FiniteDivision",
+        "enumeration_perm"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.Probability",
+        "MassScalar"
+      ],
+      "imports": [
+        "Init.Data.List.Perm",
+        "Classicism.Results.Research.AtomicProbabilityFiniteConstructive"
+      ],
+      "verification": "PASS for current source and local dependency sources",
+      "current_evidence": {
+        "manifest": "research/2026-10-22/lean-formalization/checks/20261023T044808207981Z-288d5942.json",
+        "exit_code": 0,
+        "log": "logs/runs/20261023T044808207981Z-288d5942/Classicism_Results_Research_AtomicProbabilityScalar.log",
+        "source_matches": true,
+        "dependency_sources_match": true,
+        "complete_run": true
+      },
+      "previous_evidence": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T021915054282Z.json",
+          "exit_code": 1,
+          "log": "logs/runs/20261023T021915054282Z/Classicism_Results_Research_AtomicProbabilityScalar.log",
+          "source_matches": false,
+          "dependency_sources_match": false,
+          "complete_run": false
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T022130038754Z.json",
+          "exit_code": 1,
+          "log": "logs/runs/20261023T022130038754Z/Classicism_Results_Research_AtomicProbabilityScalar.log",
+          "source_matches": false,
+          "dependency_sources_match": false,
+          "complete_run": false
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T022507811192Z.json",
+          "exit_code": 0,
+          "log": "logs/runs/20261023T022507811192Z/Classicism_Results_Research_AtomicProbabilityScalar.log",
+          "source_matches": false,
+          "dependency_sources_match": false,
+          "complete_run": false
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T044808207981Z-288d5942.json",
+          "exit_code": 0,
+          "log": "logs/runs/20261023T044808207981Z-288d5942/Classicism_Results_Research_AtomicProbabilityScalar.log",
+          "source_matches": true,
+          "dependency_sources_match": true,
+          "complete_run": true
+        }
+      ]
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilitySignedRationals.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilitySignedRationals",
+      "source_sha256": "a736f5efd65413f8733428c8303c983bd0e6d33a1410814d32f5678cfb6e4222",
+      "declared_names": [
+        "DifferenceEq",
+        "signedCode",
+        "RationalField",
+        "embed",
+        "rzero",
+        "rone",
+        "difference_refl",
+        "difference_symm",
+        "difference_trans",
+        "signedCode_supported",
+        "rationalField_supported",
+        "signedCode_self",
+        "signedCode_identity_iff",
+        "signedCode_in_field",
+        "rational_code_supported",
+        "embed_in_field",
+        "embed_injective",
+        "rzero_in_field",
+        "rone_in_field",
+        "rone_ne_zero",
+        "signedCode_zero_iff",
+        "difference_add",
+        "difference_neg"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.ProbabilityRationals"
+      ],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityFractionInverse"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilitySignedRationalsCertificates.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilitySignedRationalsCertificates",
+      "source_sha256": "59f17bea500ad192419669673db9b34ad8fbda06a54152ca7ccacf24dd4c2c4a",
+      "declared_names": [],
+      "namespace_blocks": [],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilitySignedRationals",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "verification": "Pending verification for current source and dependency sources",
+      "current_evidence": null,
+      "previous_evidence": []
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilitySupportedReals.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilitySupportedReals",
+      "source_sha256": "acee83f5bb11608e9f6d6ac220c56c344568e069ab85a3aff1d658f19a86b4a3",
+      "declared_names": [
+        "FieldCut",
+        "RealCode",
+        "Reals",
+        "reals_supported",
+        "reals_current",
+        "BoundedFamily",
+        "supremum",
+        "baseSupport_supported",
+        "realCode_supported",
+        "realCode_extensional",
+        "supremum_below",
+        "supremum_current",
+        "supremum_is_real",
+        "supremum_is_lub",
+        "real_lub_unique",
+        "represented_real_supremum",
+        "SupGraph",
+        "supGraph_supported",
+        "supGraph_total_unique",
+        "real_order_iff"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.ProbabilitySupportedReals"
+      ],
+      "imports": [
+        "Classicism.Results.Research.ActualityCoreGraphs",
+        "Classicism.Results.Research.AtomicProbabilityCuts"
+      ],
+      "verification": "PASS for current source and local dependency sources",
+      "current_evidence": {
+        "manifest": "research/2026-10-22/lean-formalization/checks/20261023T045228583932Z-34e30f68.json",
+        "exit_code": 0,
+        "log": "logs/runs/20261023T045228583932Z-34e30f68/Classicism_Results_Research_AtomicProbabilitySupportedReals.log",
+        "source_matches": true,
+        "dependency_sources_match": true,
+        "complete_run": true
+      },
+      "previous_evidence": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T045228583932Z-34e30f68.json",
+          "exit_code": 0,
+          "log": "logs/runs/20261023T045228583932Z-34e30f68/Classicism_Results_Research_AtomicProbabilitySupportedReals.log",
+          "source_matches": true,
+          "dependency_sources_match": true,
+          "complete_run": true
+        }
+      ]
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilitySupportedRealsCertificates.lean",
+      "module": "Classicism.Results.Research.AtomicProbabilitySupportedRealsCertificates",
+      "source_sha256": "c5dd4555d8e5d7d08f6f2fea5f478cd29045da1ad174d1219261d2404e4fa211",
+      "declared_names": [],
+      "namespace_blocks": [],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilitySupportedReals",
+        "Classicism.Tools.Check",
+        "Classicism.Tools.TypeSystem",
+        "Classicism.Tools.Schema"
+      ],
+      "verification": "PASS for current source and local dependency sources",
+      "current_evidence": {
+        "manifest": "research/2026-10-22/lean-formalization/checks/20261023T045450258074Z-06eb766b.json",
+        "exit_code": 0,
+        "log": "logs/runs/20261023T045450258074Z-06eb766b/Classicism_Results_Research_AtomicProbabilitySupportedRealsCertificates.log",
+        "source_matches": true,
+        "dependency_sources_match": true,
+        "complete_run": true
+      },
+      "previous_evidence": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T045450258074Z-06eb766b.json",
+          "exit_code": 0,
+          "log": "logs/runs/20261023T045450258074Z-06eb766b/Classicism_Results_Research_AtomicProbabilitySupportedRealsCertificates.log",
+          "source_matches": true,
+          "dependency_sources_match": true,
+          "complete_run": true
+        }
+      ]
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/ProbabilitySymmetryFinite.lean",
+      "module": "Classicism.Results.Research.ProbabilitySymmetryFinite",
+      "source_sha256": "2fac90db528fdf13fc4f386e85e459c3535c9e4ada1084ab4870f8e655364598",
+      "declared_names": [
+        "ClassEnumeration",
+        "FiniteClasses",
+        "ClassAverageGraph",
+        "classEnumeration_perm",
+        "classAverage_unique",
+        "classAverage_total",
+        "classAverage_total_functional",
+        "class_rel_iff",
+        "classEnumeration_transfer",
+        "classAverage_transfer",
+        "classAverage_constant",
+        "classAverage_map_invariant",
+        "classAverage_positive",
+        "classAverage_preserves_class_sum",
+        "classAverage_of_constant",
+        "classAverage_idempotent",
+        "classAverage_unique_from_class_mass",
+        "FiniteMassValues",
+        "saturated_envelopes_equal"
+      ],
+      "namespace_blocks": [
+        "Classicism.Research.Probability"
+      ],
+      "imports": [
+        "Classicism.Results.Research.AtomicProbabilityEnvelope"
+      ],
+      "verification": "PASS for current source and local dependency sources",
+      "current_evidence": {
+        "manifest": "research/2026-10-22/lean-formalization/checks/20261023T044808207981Z-288d5942.json",
+        "exit_code": 0,
+        "log": "logs/runs/20261023T044808207981Z-288d5942/Classicism_Results_Research_ProbabilitySymmetryFinite.log",
+        "source_matches": true,
+        "dependency_sources_match": true,
+        "complete_run": true
+      },
+      "previous_evidence": [
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T021915054282Z.json",
+          "exit_code": 125,
+          "log": null,
+          "source_matches": false,
+          "dependency_sources_match": false,
+          "complete_run": false
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T022130038754Z.json",
+          "exit_code": 125,
+          "log": null,
+          "source_matches": false,
+          "dependency_sources_match": false,
+          "complete_run": false
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T022507811192Z.json",
+          "exit_code": 0,
+          "log": "logs/runs/20261023T022507811192Z/Classicism_Results_Research_ProbabilitySymmetryFinite.log",
+          "source_matches": false,
+          "dependency_sources_match": false,
+          "complete_run": false
+        },
+        {
+          "manifest": "research/2026-10-22/lean-formalization/checks/20261023T044808207981Z-288d5942.json",
+          "exit_code": 0,
+          "log": "logs/runs/20261023T044808207981Z-288d5942/Classicism_Results_Research_ProbabilitySymmetryFinite.log",
+          "source_matches": true,
+          "dependency_sources_match": true,
+          "complete_run": true
+        }
+      ]
+    }
+  ],
+  "runs": [
+    "research/2026-10-22/lean-formalization/checks/20261023T021915054282Z.json",
+    "research/2026-10-22/lean-formalization/checks/20261023T022130038754Z.json",
+    "research/2026-10-22/lean-formalization/checks/20261023T022507811192Z.json",
+    "research/2026-10-22/lean-formalization/checks/20261023T022700791873Z.json",
+    "research/2026-10-22/lean-formalization/checks/20261023T043010164526Z-9af95bd5.json",
+    "research/2026-10-22/lean-formalization/checks/20261023T044808207981Z-288d5942.json",
+    "research/2026-10-22/lean-formalization/checks/20261023T045228583932Z-34e30f68.json",
+    "research/2026-10-22/lean-formalization/checks/20261023T045450258074Z-06eb766b.json",
+    "research/2026-10-22/lean-formalization/checks/20261023T045810263373Z-aef77557.json",
+    "research/2026-10-22/lean-formalization/checks/20261023T050536758600Z-1ae6daf2.json",
+    "research/2026-10-22/lean-formalization/checks/20261023T051735278101Z-c2f76f0d.json",
+    "research/2026-10-22/lean-formalization/checks/20261023T052005207226Z-a0a1f31d.json"
+  ],
+  "updated_at_utc": "2026-10-23T05:37:00.278573+00:00",
+  "evidence_policy": "Current verification requires matching captured source and all transitive local source hashes. PASS means module compilation; C certificates additionally require their diagnostic log. Reused cache entries do not replace direct logged evidence here.",
+  "stopped_at_utc": "2026-10-23T05:37:00.278573+00:00"
+}

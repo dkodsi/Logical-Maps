@@ -1,0 +1,12 @@
+Numbers endpoint: before root_arithmetic
+Numbers endpoint: before root_infinite_number_field
+Numbers endpoint: before finite_individuals_arithmetic_infinite_numbers
+'Classicism.Meta.Research.TwoStageArithmeticNumbers.root_arithmetic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.TwoStageArithmeticNumbers.root_infinite_number_field' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.TwoStageArithmeticNumbers.finite_individuals_arithmetic_infinite_numbers' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

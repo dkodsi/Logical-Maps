@@ -1,0 +1,117 @@
+Classicism.Research.QuantifierObservers.Separation ⟶ Classicism.Research.QuantifierObservers.Separation.schema:
+  fun σ' =>
+    Classicism.Meta.Term.forall'
+      (Classicism.Meta.Term.forall'
+        (Classicism.Meta.Term.iff
+          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).eq'
+            (Classicism.Meta.Term.var Classicism.Meta.Var.zero))
+          (Classicism.Meta.Term.forall'
+            (Classicism.Meta.Term.imp
+              (Classicism.Meta.Term.conj
+                (((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app Classicism.Meta.Term.top).eq'
+                  Classicism.Meta.Term.top)
+                (Classicism.Meta.Term.conj
+                  (Classicism.Meta.Term.forall'
+                    (Classicism.Meta.Term.forall'
+                      (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).conj
+                              (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).eq'
+                        (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                              (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)).conj
+                          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))))
+                  (Classicism.Meta.Term.forall'
+                    (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                              (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).forall').iff
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).forall'))))
+              (((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ)).iff
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)))))))
+Classicism.Research.QuantifierObservers.WeakSeparation ⟶ Classicism.Research.QuantifierObservers.WeakSeparation.schema:
+  fun σ' =>
+    Classicism.Meta.Term.forall'
+      (Classicism.Meta.Term.forall'
+        (Classicism.Meta.Term.iff
+          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).eq'
+            (Classicism.Meta.Term.var Classicism.Meta.Var.zero))
+          (Classicism.Meta.Term.forall'
+            (Classicism.Meta.Term.imp
+              (((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app Classicism.Meta.Term.top).conj
+                (Classicism.Meta.Term.forall'
+                  (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                        ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).forall').iff
+                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                        ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero))).forall')))
+              (((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ)).iff
+                ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)))))))
+#classicism_schema: 2 of 2 principles with a Ty-parameter have list forms
+Classicism.Research.QuantifierObservers.barcan_separation ⟶ Classicism.Research.QuantifierObservers.barcan_separation.rule : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.Barcan.quoted σ')
+      (Classicism.Research.QuantifierObservers.Separation.quoted σ'))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.QuantifierObservers.barcan_separation ⟶ Classicism.Research.QuantifierObservers.barcan_separation.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.Barcan.listQuoted σs)
+      (Classicism.Research.QuantifierObservers.Separation.listQuoted σs))
+Classicism.Research.QuantifierObservers.separation_barcan ⟶ Classicism.Research.QuantifierObservers.separation_barcan.rule : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.Research.QuantifierObservers.Separation.quoted σ')
+      (Classicism.P.Barcan.quoted σ'))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.QuantifierObservers.separation_barcan ⟶ Classicism.Research.QuantifierObservers.separation_barcan.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.Research.QuantifierObservers.Separation.listQuoted σs)
+      (Classicism.P.Barcan.listQuoted σs))
+Classicism.Research.QuantifierObservers.barcan_weak_separation ⟶ Classicism.Research.QuantifierObservers.barcan_weak_separation.rule : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.Barcan.quoted σ')
+      (Classicism.Research.QuantifierObservers.WeakSeparation.quoted σ'))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.QuantifierObservers.barcan_weak_separation ⟶ Classicism.Research.QuantifierObservers.barcan_weak_separation.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.Barcan.listQuoted σs)
+      (Classicism.Research.QuantifierObservers.WeakSeparation.listQuoted σs))
+Classicism.Research.QuantifierObservers.weak_separation_barcan ⟶ Classicism.Research.QuantifierObservers.weak_separation_barcan.rule : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.Research.QuantifierObservers.WeakSeparation.quoted σ')
+      (Classicism.P.Barcan.quoted σ'))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.QuantifierObservers.weak_separation_barcan ⟶ Classicism.Research.QuantifierObservers.weak_separation_barcan.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.Research.QuantifierObservers.WeakSeparation.listQuoted σs)
+      (Classicism.P.Barcan.listQuoted σs))
+Classicism.Research.QuantifierObservers.barcan_separation ⟶ Classicism.Research.QuantifierObservers.barcan_separation.entails : Classicism.P.Barcan.schema ⟹
+  Classicism.Research.QuantifierObservers.Separation.schema
+Classicism.Research.QuantifierObservers.barcan_separation ⟶ Classicism.Research.QuantifierObservers.barcan_separation.listEntails : Classicism.P.Barcan.listSchema ⟹
+  Classicism.Research.QuantifierObservers.Separation.listSchema
+Classicism.Research.QuantifierObservers.separation_barcan ⟶ Classicism.Research.QuantifierObservers.separation_barcan.entails : Classicism.Research.QuantifierObservers.Separation.schema ⟹
+  Classicism.P.Barcan.schema
+Classicism.Research.QuantifierObservers.separation_barcan ⟶ Classicism.Research.QuantifierObservers.separation_barcan.listEntails : Classicism.Research.QuantifierObservers.Separation.listSchema ⟹
+  Classicism.P.Barcan.listSchema
+Classicism.Research.QuantifierObservers.barcan_weak_separation ⟶ Classicism.Research.QuantifierObservers.barcan_weak_separation.entails : Classicism.P.Barcan.schema ⟹
+  Classicism.Research.QuantifierObservers.WeakSeparation.schema
+Classicism.Research.QuantifierObservers.barcan_weak_separation ⟶ Classicism.Research.QuantifierObservers.barcan_weak_separation.listEntails : Classicism.P.Barcan.listSchema ⟹
+  Classicism.Research.QuantifierObservers.WeakSeparation.listSchema
+Classicism.Research.QuantifierObservers.weak_separation_barcan ⟶ Classicism.Research.QuantifierObservers.weak_separation_barcan.entails : Classicism.Research.QuantifierObservers.WeakSeparation.schema ⟹
+  Classicism.P.Barcan.schema
+Classicism.Research.QuantifierObservers.weak_separation_barcan ⟶ Classicism.Research.QuantifierObservers.weak_separation_barcan.listEntails : Classicism.Research.QuantifierObservers.WeakSeparation.listSchema ⟹
+  Classicism.P.Barcan.listSchema
+'Classicism.Meta.Research.QuantifierObservers.separation_iff_barcan_in' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.Research.QuantifierObservers.weak_separation_iff_barcan_in' depends on axioms: [propext, Quot.sound]

@@ -1,0 +1,875 @@
+{
+  "acceptance": "evidence/arithmetic-closeout.json",
+  "acceptance_original_sha256": "0aa662acda76ff20f2987035fabe75f5cbcab280aab1d697eaa88a556a9adb96",
+  "coverage": {
+    "selected_principal_reports": 117,
+    "selected_reports_present": 117,
+    "selected_reports_missing": 0,
+    "existing_reports": 82,
+    "new_original36_reports_within_selected117": 24,
+    "residual_reports_within_selected117": 11,
+    "distinct_reports_in_combined_union": 129,
+    "extra_original_conclusion_reports_outside_old_selected117": 12,
+    "original_generated_algebra_conclusions": 36,
+    "original_generated_algebra_total": 36,
+    "semantic_original_targets": 7,
+    "semantic_original_target_total": 7,
+    "compiled_auxiliary_translations_separate_from_original36": 15,
+    "previously_selected_auxiliary_reports_now_present": 9,
+    "note": "The union 129 counts principal reports, not 129 independent results. Original36 contains 21 original, 12 factored and three Fold proofs. Six image helpers compiled as prerequisites are outside the old 117-report selection; the nine selected pullback/fold helpers are part of Residual11."
+  },
+  "targets": [
+    {
+      "module": "Classicism.Results.Research.FregeFiniteSetsCertificates",
+      "origin_manifest": "research/2026-10-22/lean-formalization/checks/20261023T043014649782Z-ffe74996.json",
+      "certificate": "evidence/certificates/arithmetic-closeout-20261023T043014649782Z-ffe74996/certificate.json",
+      "reports": {
+        "Classicism.Research.FregeFiniteSets.finite_fibre_union.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FregeFiniteSets.finite_separated_family.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FregeFiniteSets.infinity_iff_realizes.derivable": [
+          "propext",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.FregeNoncollapseCertificates",
+      "origin_manifest": "research/2026-10-22/lean-formalization/checks/20261023T044223622850Z-528e6bf0.json",
+      "certificate": "evidence/certificates/arithmetic-closeout-20261023T044223622850Z-528e6bf0/certificate.json",
+      "reports": {
+        "Classicism.Research.FregeNoncollapse.noncollapse_iff_bottom_not_number.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FregeNoncollapse.arithmeticI_iff_istar.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FregeNoncollapse.finite_numbers_iff_bottom_number.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FregeNoncollapse.infinite_numbers_iff_dedekind.derivable": [
+          "propext",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.CrossBaseArithmeticCertificates",
+      "origin_manifest": "research/2026-10-22/lean-formalization/checks/20261023T045108444380Z-b3474a59.json",
+      "certificate": "evidence/certificates/arithmetic-closeout-20261023T045108444380Z-b3474a59/certificate.json",
+      "reports": {
+        "Classicism.Research.CrossBaseArithmetic.synch_bijection.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.CrossBaseArithmetic.addition_iff.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.CrossBaseArithmetic.multiplication_iff.derivable": [
+          "propext",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.FregeArithmeticVocabularyCertificates",
+      "origin_manifest": "research/2026-10-22/lean-formalization/checks/20261023T045108444380Z-b3474a59.json",
+      "certificate": "evidence/certificates/arithmetic-closeout-20261023T045108444380Z-b3474a59/certificate.json",
+      "reports": {
+        "Classicism.Research.FregeArithmeticVocabulary.sum_cross_base.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FregeArithmeticVocabulary.prod_cross_base.derivable": [
+          "propext",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.CrossBaseFirstOrderChecks",
+      "origin_manifest": "research/2026-10-22/lean-formalization/checks/20261023T045914763270Z-feef3c75.json",
+      "certificate": "evidence/certificates/arithmetic-closeout-20261023T045914763270Z-feef3c75/certificate.json",
+      "reports": {
+        "Classicism.Research.CrossBaseFirstOrder.formula_transfer": [
+          "propext"
+        ],
+        "Classicism.Research.CrossBaseFirstOrder.sentence_transfer_of_arithmeticI": [
+          "propext",
+          "Classicism.em",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.FregeArithmeticQuotation",
+      "origin_manifest": "research/2026-10-22/lean-formalization/checks/20261023T050602611952Z-deea884a.json",
+      "certificate": "evidence/certificates/arithmetic-closeout-20261023T050602611952Z-deea884a/certificate.json",
+      "reports": {
+        "Classicism.Meta.Research.FregeArithmeticQuotation.arithmeticI_conversion": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FregeArithmeticQuotation.ArithmeticCondition.reflect": [
+          "propext",
+          "Classical.choice",
+          "Classicism.e",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.C5FregeCertificates",
+      "origin_manifest": "research/2026-10-22/lean-formalization/checks/20261023T051905510453Z-639b9e47.json",
+      "certificate": "evidence/certificates/arithmetic-closeout-20261023T051905510453Z-639b9e47/certificate.json",
+      "reports": {
+        "Classicism.Research.C5Frege.realized_or_bottom.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.C5Frege.numerical_extensionality.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.C5Frege.infinity_iff_arithmeticI.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.C5Frege.finite_base_iff_numbers.derivable": [
+          "propext",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.FregeArithmeticReflection",
+      "origin_manifest": "research/2026-10-22/lean-formalization/checks/20261023T051905510453Z-639b9e47.json",
+      "certificate": "evidence/certificates/arithmetic-closeout-20261023T051905510453Z-639b9e47/certificate.json",
+      "reports": {
+        "Classicism.Meta.Research.FregeArithmeticReflection.formula_reflect": [
+          "propext",
+          "Classical.choice",
+          "Classicism.e",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.FregeArithmeticReflection.sentence_reflect": [
+          "propext",
+          "Classical.choice",
+          "Classicism.e",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.C5ActualityNumbersCertificates",
+      "origin_manifest": "research/2026-10-22/lean-formalization/checks/20261023T052411006203Z-90a4d7dd.json",
+      "certificate": "evidence/certificates/arithmetic-closeout-20261023T052411006203Z-90a4d7dd/certificate.json",
+      "reports": {
+        "Classicism.Research.C5ActualityNumbers.numberMap_inverse_graph_c5.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.C5ActualityNumbers.addition_iff_c5.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.C5ActualityNumbers.multiplication_iff_c5.derivable": [
+          "propext",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.FregeHumeClassesCertificates",
+      "origin_manifest": "research/2026-10-22/lean-formalization/checks/20261023T052411006203Z-90a4d7dd.json",
+      "certificate": "evidence/certificates/arithmetic-closeout-20261023T052411006203Z-90a4d7dd/certificate.json",
+      "reports": {
+        "Classicism.Research.FregeHumeClasses.count_iff_equinumerous.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FregeHumeClasses.hume_eq_number_c5.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FregeHumeClasses.hume_identity_iff_c5.derivable": [
+          "propext",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.FiniteProfilesCertificates",
+      "origin_manifest": "research/2026-10-22/lean-formalization/checks/20261023T173922673909Z-8968ae86.json",
+      "certificate": "evidence/certificates/finite-profiles/certificate.json",
+      "reports": {
+        "Classicism.Research.FiniteProfiles.profiles_no_injection.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FiniteProfiles.raw_uwr_finite_atoms_iff.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FiniteProfiles.raw_uwr_infinity_iff.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FiniteProfiles.no_raw_wr_unary.derivable": [
+          "propext",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.FiniteAtomProfilesCertificates",
+      "origin_manifest": "research/2026-10-22/lean-formalization/checks/20261023T173922673909Z-8968ae86.json",
+      "certificate": "evidence/certificates/finite-profiles/certificate.json",
+      "reports": {
+        "Classicism.Research.FiniteAtomProfiles.finite_atoms_iff_propositions.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FiniteAtomProfiles.raw_uwr_infinity_base_iff_propositions.derivable": [
+          "propext",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.RawWorldRepresentationBoundaryCertificates",
+      "origin_manifest": "research/2026-10-22/lean-formalization/checks/20261023T185110349681Z-c44a2c54.json",
+      "certificate": "evidence/certificates/arithmetic-closeout-20261023T185110349681Z-c44a2c54/certificate.json",
+      "reports": {
+        "Classicism.Research.RawWorldRepresentationBoundary.existence_implies_no_raw_wr_unary.listRule": [
+          "propext",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.RawWorldRepresentationBoundarySchemas",
+      "origin_manifest": "research/2026-10-22/lean-formalization/checks/20261023T185110349681Z-c44a2c54.json",
+      "certificate": "evidence/certificates/arithmetic-closeout-20261023T185110349681Z-c44a2c54/certificate.json",
+      "reports": {
+        "Classicism.Meta.Research.RawWorldRepresentationBoundary.no_raw_wr_all_relational": [
+          "propext",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.FiniteRigidPowersCertificates",
+      "origin_manifest": "research/2026-10-22/lean-formalization/checks/20261023T185735332118Z-2764542a.json",
+      "certificate": "evidence/certificates/arithmetic-closeout-20261023T185735332118Z-2764542a/certificate.json",
+      "reports": {
+        "Classicism.Research.FiniteRigidPowers.finite_rigid_power_iff.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FiniteRigidPowers.finite_binary_rigid_field_iff.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FiniteRigidPowers.finite_rigid_propositions.derivable": [
+          "propext",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.FiniteFunctionFieldsCertificates",
+      "origin_manifest": "research/2026-10-22/lean-formalization/checks/20261023T185735332118Z-2764542a.json",
+      "certificate": "evidence/certificates/arithmetic-closeout-20261023T185735332118Z-2764542a/certificate.json",
+      "reports": {
+        "Classicism.Research.FiniteFunctionFields.finite_functions_of_finite_domains.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FiniteFunctionFields.finite_predicates_iff.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FiniteFunctionFields.infinity_predicates_iff.derivable": [
+          "propext",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.FiniteTypePropagationCertificates",
+      "origin_manifest": "research/2026-10-22/lean-formalization/checks/20261023T191915639937Z-d2ccb091.json",
+      "certificate": "evidence/certificates/arithmetic-closeout-20261023T191915639937Z-d2ccb091/certificate.json",
+      "reports": {
+        "Classicism.Research.FiniteTypePropagation.finite_arrow_of_functionality.rule": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FiniteTypePropagation.finite_arrow_of_c5.rule": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FiniteTypePropagation.finite_domain_necessary_c5.rule": [
+          "propext",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.FiniteTupleLawsCertificates",
+      "origin_manifest": "research/2026-10-22/lean-formalization/checks/20261023T191915639937Z-d2ccb091.json",
+      "certificate": "evidence/certificates/arithmetic-closeout-20261023T191915639937Z-d2ccb091/certificate.json",
+      "reports": {
+        "Classicism.Research.FiniteTupleLaws.finite_rigid_power_law.listRule": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FiniteTupleLaws.finite_separation_law.listRule": [
+          "propext",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.FiniteTypeDescentCertificates",
+      "origin_manifest": "research/2026-10-22/lean-formalization/checks/20261023T200932923438Z-43e4bd03.json",
+      "certificate": "evidence/certificates/arithmetic-closeout-20261023T200932923438Z-43e4bd03/certificate.json",
+      "reports": {
+        "Classicism.Research.FiniteTypeDescent.finite_output_of_arrow.rule": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FiniteTypeDescent.finite_input_of_predicate.rule": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FiniteTypeDescent.finite_delete_output_argument.rule": [
+          "propext",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.FiniteTypePropagationSchemas",
+      "origin_manifest": "research/2026-10-22/lean-formalization/checks/20261023T201558902470Z-f921a568.json",
+      "certificate": "evidence/certificates/finite-type-classification/certificate.json",
+      "reports": {
+        "Classicism.Meta.Research.FiniteTypePropagation.functionality_finite_bases_imply_all_finite": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.FiniteTypePropagation.c5_finite_bases_imply_necessary_all_finite": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.FiniteTypePropagation.all_and_relational_finiteness_equivalent": [
+          "propext",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.FiniteTypeDescentSchemas",
+      "origin_manifest": "research/2026-10-22/lean-formalization/checks/20261023T201558902470Z-f921a568.json",
+      "certificate": "evidence/certificates/finite-type-classification/certificate.json",
+      "reports": {
+        "Classicism.Meta.Research.FiniteTypeDescent.finite_arrow_implies_finite_input": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.FiniteTypeDescent.finite_arrow_implies_finite_output": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.FiniteTypeDescent.finiteness_implies_base_requirements": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.FiniteTypeDescent.functionality_base_requirements_imply_finiteness": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.FiniteTypeDescent.finite_e_free_type_implies_finite_t": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.FiniteTypeDescent.functionality_finite_t_implies_finite_e_free_type": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.FiniteTypeDescent.finite_e_containing_type_implies_finite_bases": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.FiniteTypeDescent.functionality_finite_bases_imply_finite_e_containing_type": [
+          "propext",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.IntensionalArithmeticReflection",
+      "origin_manifest": "research/2026-10-22/lean-formalization/checks/20261023T231938586568Z-538690d0.json",
+      "certificate": "evidence/certificates/final-intensional-arithmetic-reflection/certificate.json",
+      "reports": {
+        "Classicism.Meta.Research.IntensionalArithmeticReflection.term_reflect": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.IntensionalArithmeticReflection.term_admitted": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.IntensionalArithmeticReflection.formula_reflect": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.IntensionalArithmeticReflection.sentence_reflect": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.FregeModelRules",
+      "origin_manifest": "research/2026-10-22/lean-formalization/checks/20261023T231938586568Z-538690d0.json",
+      "certificate": "evidence/certificates/final-intensional-arithmetic-reflection/certificate.json",
+      "reports": {
+        "Classicism.Research.FregeModelRules.infinity_implies_peano.rule": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.FregeModelRules.arithmetic_implies_infinite_numbers.rule": [
+          "propext",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.FourC5FinitenessModels",
+      "origin_manifest": "research/2026-10-22/lean-formalization/checks/20261023T231938586568Z-538690d0.json",
+      "certificate": "evidence/certificates/final-intensional-arithmetic-reflection/certificate.json",
+      "reports": {
+        "Classicism.Meta.Research.FourC5FinitenessModels.isModel": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.FourC5FinitenessModels.necessary_distinctness": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.FourC5FinitenessModels.finite_finite_verdicts": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.FourC5FinitenessModels.infinite_finite_verdicts": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.FourC5FinitenessModels.finite_infinite_verdicts": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.FourC5FinitenessModels.infinite_infinite_verdicts": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.ExtFullFregeCounting",
+      "origin_manifest": "research/2026-10-22/lean-formalization/checks/20261023T231938586568Z-538690d0.json",
+      "certificate": "evidence/certificates/final-intensional-arithmetic-reflection/certificate.json",
+      "reports": {
+        "Classicism.Meta.Research.ExtFullFregeCounting.Frame.isNumber_iff_numeral": [],
+        "Classicism.Meta.Research.ExtFullFregeCounting.Frame.internallyFinite_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.ExtFullFregeCounting.Frame.universe_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.TwoStageArithmeticModel",
+      "origin_manifest": "research/2026-10-22/lean-formalization/checks/20261023T232301293573Z-ee4b5537.json",
+      "certificate": "evidence/certificates/final-two-stage-arithmetic-model/certificate.json",
+      "reports": {
+        "Classicism.Meta.Research.TwoStageArithmeticModel.infiniteModel_isModel": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.TwoStageArithmeticModel.infiniteModel_finite_bases_infinite_predicates": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.TwoStageArithmeticModel.finiteModel_all_domains_finite": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.TwoStageArithmeticModel.infiniteModel_internal_verdicts": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.TwoStageArithmeticModel.finiteModel_internal_finiteness": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.TwoStageArithmeticModel.finiteModel_not_functionality": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "ArithmeticOriginal36Audit",
+      "origin_manifest": "research/2026-10-22/lean-formalization/checks/20261024T022609307928Z-123e4fa6.json",
+      "certificate": "evidence/certificates/arithmetic-closeout-20261024T022609307928Z-123e4fa6/certificate.json",
+      "reports": {
+        "Classicism.Research.GeneratedAlgebraFinite.source_op0.derivable": [
+          "propext"
+        ],
+        "Classicism.Research.GeneratedAlgebraFinite.source_op1.derivable": [
+          "propext"
+        ],
+        "Classicism.Research.GeneratedAlgebraFinite.source_op2.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFinite.source_op3.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFinite.source_op4.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFinite.source_op5.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFinite.point_persistent0.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFinite.persistent0.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFinite.rigid0.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFinite.point_persistent1.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFinite.persistent1.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFinite.rigid1.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFinite.point_persistent2.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFinite.persistent2.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFinite.rigid2.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFinite.target_op0.derivable": [
+          "propext"
+        ],
+        "Classicism.Research.GeneratedAlgebraFinite.target_op1.derivable": [
+          "propext"
+        ],
+        "Classicism.Research.GeneratedAlgebraFinite.target_op2.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFinite.target_op3.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFinite.target_op4.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFinite.target_op5.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFiniteFold.forward0.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFiniteFold.forward1.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFiniteFold.forward2.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFiniteFactored.onto0.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFiniteFactored.onto1.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFiniteFactored.onto2.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFiniteFactored.left_inverse0.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFiniteFactored.injective0.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFiniteFactored.right_inverse0.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFiniteFactored.left_inverse1.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFiniteFactored.injective1.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFiniteFactored.right_inverse1.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFiniteFactored.left_inverse2.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFiniteFactored.injective2.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFiniteFactored.right_inverse2.derivable": [
+          "propext",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "ArithmeticCoreResidualAudit",
+      "origin_manifest": "research/2026-10-22/lean-formalization/checks/20261024T024202505795Z-196c65f3.json",
+      "certificate": "evidence/certificates/arithmetic-closeout-20261024T024202505795Z-196c65f3/certificate.json",
+      "reports": {
+        "Classicism.Research.FregeFiniteSets.finite_self_injection_surjective.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.C5ActualityNumbers.order_iff_c5.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFiniteFactored.pullback_op0.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFiniteFactored.pullback_op1.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFiniteFactored.pullback_op2.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFiniteFactored.pullback_op3.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFiniteFactored.pullback_op4.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFiniteFactored.pullback_op5.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFiniteFold.source_fold0.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFiniteFold.source_fold1.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Research.GeneratedAlgebraFiniteFold.source_fold2.derivable": [
+          "propext",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.IntensionalArithmeticReflection",
+      "origin_manifest": "research/2026-10-22/lean-formalization/checks/20261024T024202505795Z-196c65f3.json",
+      "certificate": "evidence/certificates/arithmetic-closeout-20261024T024202505795Z-196c65f3/certificate.json",
+      "reports": {
+        "Classicism.Meta.Research.IntensionalArithmeticReflection.term_reflect": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.IntensionalArithmeticReflection.term_admitted": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.IntensionalArithmeticReflection.formula_reflect": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.IntensionalArithmeticReflection.sentence_reflect": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.FourC5FinitenessModels",
+      "origin_manifest": "research/2026-10-22/lean-formalization/checks/20261024T024202505795Z-196c65f3.json",
+      "certificate": "evidence/certificates/arithmetic-closeout-20261024T024202505795Z-196c65f3/certificate.json",
+      "reports": {
+        "Classicism.Meta.Research.FourC5FinitenessModels.isModel": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.FourC5FinitenessModels.necessary_distinctness": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.FourC5FinitenessModels.finite_finite_verdicts": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.FourC5FinitenessModels.infinite_finite_verdicts": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.FourC5FinitenessModels.finite_infinite_verdicts": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.FourC5FinitenessModels.infinite_infinite_verdicts": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.TwoStageArithmeticNumbers",
+      "origin_manifest": "research/2026-10-22/lean-formalization/checks/20261024T022027443032Z-16979b8f.json",
+      "certificate": "evidence/certificates/arithmetic-closeout-20261024T022027443032Z-16979b8f/certificate.json",
+      "reports": {
+        "Classicism.Meta.Research.TwoStageArithmeticNumbers.root_arithmetic": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.TwoStageArithmeticNumbers.root_infinite_number_field": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.TwoStageArithmeticNumbers.finite_individuals_arithmetic_infinite_numbers": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.ExtFullFregeCounting",
+      "origin_manifest": "research/2026-10-22/lean-formalization/checks/20261024T022027443032Z-16979b8f.json",
+      "certificate": "evidence/certificates/arithmetic-closeout-20261024T022027443032Z-16979b8f/certificate.json",
+      "reports": {
+        "Classicism.Meta.Research.ExtFullFregeCounting.Frame.internallyFinite_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.ExtFullFregeCounting.Frame.universe_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.ExtFullFregeOrbit",
+      "origin_manifest": "research/2026-10-22/lean-formalization/checks/20261024T022027443032Z-16979b8f.json",
+      "certificate": "evidence/certificates/arithmetic-closeout-20261024T022027443032Z-16979b8f/certificate.json",
+      "reports": {
+        "Classicism.Meta.Research.ExtFullFregeOrbit.number_conversion": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.ExtFullFregeOrbit.quoted_number_iff_numeral": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    }
+  ],
+  "scope": "Completed bounded arithmetic package: the seven specified semantic target modules, all 36 conclusions of the saved three-sort generated-algebra instance, and the selected 117-principal audit, with the expanded 129-report union. No database verification badge was edited.",
+  "remaining_obligations": [
+    "A Lean certificate for full Choice arithmetic conservativity over boxed Plenitude is not supplied by this bounded package.",
+    "Uniform interpretation for arbitrary generated signatures remains separate from the concrete three-sort development.",
+    "A uniform object-C derivation builder from formula codes and recursive higher-type interpretation remain separate.",
+    "The complete cross-base Synch semantic-library instantiation remains distinct from the certified arbitrary-model formula reflection.",
+    "No standardness claim for arbitrary Henkin models or injectivity of the numeral map follows from the extensionally full orbit result."
+  ],
+  "verification": "All 129 expected reports and all seven semantic targets trace to authenticated source closures and saved logs. Counts include supporting lemmas, not separate discoveries."
+}

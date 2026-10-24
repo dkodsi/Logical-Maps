@@ -1,0 +1,193 @@
+id: finite-support-identity-or-collapse-surjections
+name: 'Finite-support action model: identity-or-collapse monotone surjections'
+certificate:
+  source_id: bacon-dorr-classicism
+  produced_by: Andrew Bacon and Cian Dorr
+  recorded_by: OpenAI Codex (GPT-6), 17 September 2026
+  checked_by: []
+  date: '2026-09-17'
+  lean: stated
+  # migration: the `trawl` block moves to
+  # provenance/admission-c0a37bbe6b6c45cc985428b174812564.yaml, which holds the blocks of the eight
+  # records admitted together: this record's discovery and evidence in its entry, and the
+  # checkpoint, review and admission they share once.
+sources:
+- Andrew Bacon and Cian Dorr, Classicism, draft of 16 May 2023, Appendix D, Proposition D.5, part 5, pp.
+  74, 78; p. 79 (No Pure Contingency).
+- DeepSeek (deepseek-flash), Classicism theorem trawl, 25 September 2026; mathematically reviewed and
+  corrected by OpenAI Codex (GPT-6), 25 September 2026. Accepted additions only; original construction
+  attribution is unchanged. writeups/finite-support-identity-or-collapse-surjections.md; Classicism, Definition
+  D.3, footnote 92 and Proposition D.5, pp. 73–79.
+source_names:
+- Classicism
+- DeepSeek trawl; GPT-6 review 25 Sep
+references:
+- paper: bacon-dorr-classicism
+  role: proof
+  locator: Appendix D, Proposition D.5(5), pp. 74–75; construction p. 78, Part 5; p. 79 (No Pure Contingency)
+
+# migration: the definition is the old description without its verdict clauses, then the notes'
+# interpretation of Σ, in which "$\{1_{\mathbb N}\}$" replaces "described above", since nothing
+# above described the actual-world proposition.
+group: finite-support-one-object
+# migration: the definition is the group's, completed by these settings: `monoid` is the
+# sentence before "In every part", verbatim; Σ is one of the group's two interpretations.
+# Its text named the actual-world proposition by the identity arrow; the group describes it.
+# migration (3 October): recorded at Σ top, as every member whose interpretation is one of the
+# group's values now is; Σ true atom, until then the record's, is now a variant.
+settings:
+  monoid: >-
+    Proposition D.5, part 5 (p. 78): the arrows are the monotone surjections $h$ of $\mathbb N$ with
+    $h0=h1$, together with the identity.
+  sigma: top
+
+meets:
+  factorizable-arrows: >-
+    If $h$ is the identity, take $N^{\prime\prime}:=N\cup S$, $k^{\prime\prime}:=1$ and $j:=k^{\prime}$.
+    Otherwise $h$ collapses $0$ and $1$; take $N^{\prime\prime}$ as for the monotone surjections, with
+    $0,1\in N$. If $k$ is the identity, $k^{\prime}$ agrees with $h$ on $\{0,1\}$, so it is a collapse;
+    take $k^{\prime\prime}:=k^{\prime}$ and $j:=1$. If $k$ is a collapse, the construction for the
+    monotone surjections gives $k^{\prime\prime}$ and $j$ that collapse $0$ and $1$, as $h$ and $k$
+    do.
+  actual-world-pinned: >-
+    As in part 4: the identity is the only arrow that does not collapse $0$ and $1$, so
+    $\{1_{\mathbb N}\}$ is pinned down by $\{0,1\}$.
+  non-identity-non-injective: >-
+    Every other arrow collapses $0$ and $1$.
+  collapse-unpinned: >-
+    The other arrows are those that collapse $0$ and $1$, pinned down by $\{0,1\}$, and a
+    collapsing monotone surjection is not determined by its values on a finite set.
+  d6-surjective: >-
+    Restricting part 4 to surjections, every arrow is a surjection of $\mathbb N$.
+    So each arrow acts surjectively on the pinning sets, the finite subsets of $\mathbb N$, and on the individuals, whether these are the natural numbers or a single one that every arrow fixes.
+  unbounded-haecceities: >-
+    As in parts 2–4, with $A$ the even numbers.
+  no-least-pinned-cover: >-
+    Let $F$ be the family of propositions $A_m$ ($m\ge1$), each pinned down by $\{2m,2m+1\}$, that
+    the arrow sends $2m$ to $0$ and $2m+1$ to $1$, so that its first step is at the odd position
+    $2m+1$; the identity belongs to no $A_m$. The least superset of $\bigcup F$ pinned down by
+    $\{0,\ldots,N\}$ consists of the non-identity arrows whose first step is at an odd position or
+    beyond $N$, and it strictly shrinks as $N$ grows.
+
+# Rewritten at Cian Dorr's direction on 2 October 2026 (Claude Opus 5.5): every argument this
+# record shared in substance with another member is now a shared argument of the group
+# finite-support-one-object, with this record's witness under `meets`; second arguments for a
+# verdict already argued (the trawl's, among them) were dropped. No argument of its own is left:
+# every verdict recorded for it comes from the group.
+# Only the verdicts the engine needs to derive the rest are recorded, the source's first. Lead-ins
+# naming the verdict, and attribution sentences, are dropped from the texts, their content being in
+# holds, fails, by and date.
+arguments: []
+
+notes: >-
+  The cited construction is a model of the map’s relational-type framework. The description
+  identifies its evaluation point; construction and verification are given at the PDF locations in
+  References. Everything that implies these fails with them.
+
+was_conjectured: true
+
+# The old `changes` log, verbatim and frozen.
+history:
+- date: '2026-09-17'
+  by: OpenAI Codex (GPT-6)
+  summary: Adopted the source’s relational type system at the user’s request. The cited construction now
+    directly supplies the recorded model; the former type-extension obligation is removed.
+  satisfies:
+  - actuality
+  - barcan-r
+  - no-pure-contingency-r
+  - necessary-actuality
+  - necessary-barcan-r
+  violates:
+  - distinctness-necessary-r
+  - atomicity-r
+  - boolean-completeness-r
+  - rigid-comprehension-r
+- date: '2026-09-20'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Added both Axioms of Infinity at Cian Dorr's direction. The individuals are the natural numbers
+    and identity at the evaluation arrow is literal, so no numeral counts them. The propositions that
+    a given individual is fixed by the arrow, one for each individual, are pairwise distinct and each
+    has that individual as finite support, so there are infinitely many propositions. The set of numerals
+    at each type is invariant under every arrow, hence has empty support and lies in the domain, so finite
+    cardinality is standard and no finite cardinality holds of the universal property at either type.
+  satisfies:
+  - axiom-of-infinity-e
+  - axiom-of-infinity-t
+- date: '2026-09-22'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Fixed an interpretation of Σ (relational constants as top, individual constants as one fixed
+    individual) and recorded the signature schemata it refutes, at Cian Dorr’s request.
+  violates:
+  - witnessed-possibility-r
+  - separated-structure-r
+  - independence-signature-r
+  - distinctness-signature-r
+- date: '2026-09-23'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Expanded the description from Appendix D, naming Proposition D.5 and its part; added the failure
+    of Countable Boolean Completeness at type e→t; settled the Distinctness-preserving collapse.
+  satisfies:
+  - distinctness-preserving-collapse
+  violates:
+  - countable-boolean-completeness-r
+- date: '2026-09-23'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Re-fixed the interpretation of Σ so as to settle No Contingency (signature Σ) and B for sentences
+    of Σ, at Cian Dorr’s request; see the notes.
+  violates:
+  - no-contingency-signature-r
+  - signature-b-r
+- date: '2026-09-23'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: 'Corrected the reason given for the failures of Independence (signature Σ) and Distinctness
+    (signature Σ): the true atom is denoted by no closed pure term, since such terms denote entities fixed
+    by every arrow; the failures come from the other relational constants, which denote top. No verdict
+    changes.'
+- date: '2026-09-23'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: 'Added Relational Choice and its necessitation at Cian Dorr’s direction: ideally full models
+    are extensionally full at every object, and choice in the metatheory supplies the functional subrelation;
+    see the notes.'
+  satisfies:
+  - relational-choice-r
+  - necessary-relational-choice-r
+- date: '2026-09-25'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: 'Added Transversal Choice, by the argument recorded for Relational Choice: the model is extensionally
+    full at every object, so for an equivalence relation at the evaluation point a transversal of its
+    extension there, chosen in the metatheory, is the extension of an element pinned down by the empty
+    set; the equivalence and transversal conditions are unboxed. Recorded on a question of Zachary Goodsell,
+    after an observation of Christopher Sun.'
+  satisfies:
+  - transversal-choice-r
+- date: '2026-09-25'
+  by: OpenAI Codex (GPT-6)
+  summary: 'Confirmed the trawl''s BC-t conclusion with a replacement proof: alternating differences of
+    finite agreement classes have no least upper bound. The original missing-intersection argument is
+    invalid. Used source extensional fullness for domain membership. Also localized the source-reported
+    Atomicity failure to t (footnote 92), with a corrected direct splitting proof.'
+  violates:
+  - boolean-completeness-t
+  - atomicity-t
+- date: '2026-09-25'
+  by: Claude Fable 5.1 (Anthropic)
+  summary: Added the failure of Atomicity (type t) and of Boolean Completeness (type t), with the arguments
+    in the notes.
+  violates:
+  - atomicity-t
+  - boolean-completeness-t
+
+# The model in Lean, and its verdicts proved there (Classicism/MapModels.lean); statuses are written by
+# lean-check --update. The verdicts the map's general arguments give it are certified from the
+# arguments' (MapDerived.lean), with the proofs under `meets` that it meets their conditions.
+lean:
+  param: Classicism.Meta.Intensional.Monoids.monoSurj01
+  meets:
+    actual-world-pinned: Classicism.Meta.Intensional.MonoidModel.actualWorldPinned_of_onePinned _ Classicism.Meta.Intensional.Monoids.MonoSurj01.onePinned
+    collapse-unpinned: Classicism.Map.Meets.finite_support_identity_or_collapse_surjections.collapse_unpinned
+    d6-surjective: Classicism.Meta.Intensional.MonoidModel.d6Surjective_of_surjective _ fun k => k.2.2.1
+  verdicts:
+  - fails: boolean-completeness-r
+    ref: Classicism.Map.Models.finite_support_identity_or_collapse_surjections.boolean_completeness_r
+    status: verified

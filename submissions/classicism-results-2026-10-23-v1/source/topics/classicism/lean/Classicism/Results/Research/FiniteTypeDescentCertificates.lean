@@ -1,0 +1,11 @@
+import Classicism.Results.Research.FiniteTypeDescent
+import Classicism.Results.Research.FiniteTypePropagationCertificates
+
+#classicism_audit Classicism.Results.Research.FiniteTypeDescent
+#classicism_types_audit Classicism.Results.Research.FiniteTypeDescent
+#classicism_certify Classicism.Research.FiniteTypeDescent.finite_output_of_arrow
+  Classicism.Research.FiniteTypeDescent.finite_input_of_predicate
+  Classicism.Research.FiniteTypeDescent.finite_delete_output_argument
+#print axioms Classicism.Research.FiniteTypeDescent.finite_output_of_arrow.rule
+#print axioms Classicism.Research.FiniteTypeDescent.finite_input_of_predicate.rule
+#print axioms Classicism.Research.FiniteTypeDescent.finite_delete_output_argument.rule

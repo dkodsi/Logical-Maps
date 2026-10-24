@@ -1,0 +1,84 @@
+{
+  "lane": "world_actuality_gallin",
+  "updated_at_utc": "2026-10-23T05:02:28.301107+00:00",
+  "state": "waiting_for_compiler",
+  "checked_target": [
+    "Classicism.Results.Research.ActualityCoreGraphsCertificates",
+    "Classicism.Results.Research.ActualityCoreBridgeCertificates",
+    "ActualityCoreGraphsDerivations",
+    "ActualityCoreBridgeDerivations",
+    "Classicism.Results.Research.ActualityCoreSyntax",
+    "Classicism.Results.Research.ActualityCoreInterpretationRules",
+    "Classicism.Results.Research.ActualityCoreMembership",
+    "Classicism.Results.Research.ActualityCoreSubstitution",
+    "Classicism.Results.Research.ActualityCoreApplication"
+  ],
+  "submitted_targets": [
+    "Classicism.Results.Research.ActualityCoreGraphsCertificates",
+    "Classicism.Results.Research.ActualityCoreBridgeCertificates"
+  ],
+  "manifest": "research/2026-10-22/lean-formalization/checks/20261023T043023549683Z-0cf20b33.json",
+  "principal_declarations": [
+    "Classicism.Research.ActualityCore.graph_normalization_law",
+    "Classicism.Research.ActualityCore.graph_realization_law",
+    "Classicism.Research.ActualityCore.predicate_transfer_law",
+    "Classicism.Research.ActualityCore.canonical_truth_bridge",
+    "Classicism.Meta.ActualityCoreSyntax.translate_rename",
+    "Classicism.Meta.ActualityCoreSyntax.translate_member",
+    "Classicism.Meta.ActualityCoreSyntax.translate_application"
+  ],
+  "source_hashes": {
+    "topics/classicism/lean/Classicism/Results/Research/ActualityCoreGraphs.lean": "72cd36928026da84423ae6a70145c75736ab2924e49b8ed036a5112a6b79b3e9",
+    "topics/classicism/lean/Classicism/Results/Research/ActualityCoreGraphsCertificates.lean": "e5c00d817fab20981aea02fcd44e5eab229feefa2d369e9f9c6e3f8ac370a8a0",
+    "topics/classicism/lean/Classicism/Results/Research/ActualityCoreBridge.lean": "f12a7c6fd89d8afe03888ea91e246b490812d880ced3019c35b9e93a98b144e2",
+    "topics/classicism/lean/Classicism/Results/Research/ActualityCoreBridgeCertificates.lean": "2972eae6c82f81dfd4db5c28a4a5c87c573a9f1a0dff60a9d49a5e5c3ef9c5ee",
+    "topics/classicism/lean/Classicism/Results/Research/ActualityCoreSyntax.lean": "58c554bde4bc3b2ed5b1095b97e67fd4f3de21502730767b3dac60e3088b7a69",
+    "topics/classicism/lean/Classicism/Results/Research/ActualityCoreInterpretationRules.lean": "8c02136465294bc550d752a3ee7df7cc6c27d4a3e7e598e2104c2cf8acaa8df1",
+    "topics/classicism/lean/Classicism/Results/Research/ActualityCoreMembership.lean": "74d2397a90a0f64998b59f5e1a7b85c3843eb4079b0aaebf513a4dcda786f708",
+    "topics/classicism/lean/Classicism/Results/Research/ActualityCoreSubstitution.lean": "ac7c76cab6c8a9cb2cbd03a6652acb1f3347adab49f607f25842883c31360428",
+    "topics/classicism/lean/Classicism/Results/Research/ActualityCoreApplication.lean": "3ae93e7ab5a054c5e03ee372fb63b86282d60470416cd72de033d421c720a7da",
+    "topics/classicism/lean/Classicism/Results/Research/ActualityCoreConversion.lean": "8521055a88bafe7c41d6184f579f1a73a25142ef1cb2c564ab0c23249c98e964",
+    "topics/classicism/lean/Classicism/Results/Research/ActualityCoreAdmittedValues.lean": "52e286cbc4549a894c39d255d1c19489d6bd2709c37bb081713c7a0cebf848cd"
+  },
+  "mathematical_gaps": [
+    "The finite-context typing, literal application, core eta, and arbitrary-Henkin admitted-value statements are prepared. Membership and domain/support substitution pass; the further declarations still await their actual checks.",
+    "Membership does not itself prove application preservation, beta/eta/delta conversion, substitution of interpreted terms or the full Henkin truth induction.",
+    "Gallin normalizer with exact global bivalence and the higher-type comparison remain a separate dependency/interpretation obligation.",
+    "All 26 original world-algebra families remain individually tracked; no general-helper certification is substituted for their main declarations."
+  ],
+  "prose_proof_links": [
+    "research/2026-10-22/notes/actuality-world-slice-core.md",
+    "research/2026-10-22/notes/gallin-extensional-core.md",
+    "research/2026-10-22/notes/structural-world-representation.md",
+    "research/2026-10-22/notes/structural-algebraic-core.md"
+  ],
+  "contribution_summary": "research/2026-10-22/lean-formalization/world-core-delivery.md",
+  "coverage_queue": "research/2026-10-22/lean-formalization/world-core-coverage-queue.json",
+  "compiler_log": "research/2026-10-22/lean-formalization/world-core-current-check.log",
+  "certificate_scope": "Graph normalization, relational-output graph realization and extension-invariant predicate quantifier transfer, with tuple rules; canonical current truth-sort bridge. Whole graph/bridge helper audits are next.",
+  "additional_prepared_checks": [
+    "research/2026-10-22/lean-formalization/world-core-checks/ActualityCoreGraphsDerivations.lean",
+    "research/2026-10-22/lean-formalization/world-core-checks/ActualityCoreBridgeDerivations.lean"
+  ],
+  "helper_audit_manifest": "research/2026-10-22/lean-formalization/checks/20261023T044036874157Z-c349c7c2.json",
+  "corrections": [
+    "Membership first check needed explicit derivation hypotheses and the existing conjunction rule name; actual-world quotation now uses the primitive propositional disjunction, matching the certified shallow rule exactly. Repair submitted, not yet passed.",
+    "Membership now passes. Application needed explicit delta conversion from the primitive arrow-level relational disjunction to its pointwise lambda expansion; that repair is submitted with the finite-context typing and core eta checks.",
+    "Application now passes after an explicit delta conversion. The conversion module needed unfolding of domain/member in the base-type cases; repaired and rechecking. Its core_eta declaration had a clean axiom report, but the module was not yet successful."
+  ],
+  "reproduction_instructions": "research/2026-10-22/lean-formalization/world-core-reproduction.txt",
+  "scheduling": "The last conversion check exited 75 before compilation. The pinned-Mathlib wrapper is now waiting to check admitted values and its application/conversion dependencies under the same global lock.",
+  "recursive_membership_manifest": "research/2026-10-22/lean-formalization/checks/20261023T044913680057Z-4fb5a9be.json",
+  "next_main_declarations": [
+    "Classicism.Meta.ActualityCoreSyntax.translate_typing",
+    "Classicism.Meta.ActualityCoreSyntax.translate_application",
+    "Classicism.Meta.ActualityCoreSyntax.core_eta",
+    "Classicism.Meta.Intensional.ActualityCore.translated_value"
+  ],
+  "wrap_up_target": "2026-10-23T01:57:00-04:00",
+  "delivered_scope": "Exact graph, represented predicate and current truth-sort bridge results with object C and tuple certificates; checked recursive syntax and domain membership continuation, with later layers separately pending.",
+  "hard_stop_utc": "2026-10-23T05:57:00Z",
+  "checkpoint_by_utc": "2026-10-23T05:40:00Z",
+  "end_turn_by_utc": "2026-10-23T05:55:00Z",
+  "application_manifest": "research/2026-10-22/lean-formalization/checks/20261023T050134026509Z-232612d9.json"
+}

@@ -1,0 +1,12 @@
+import Classicism.Results.Research.FullLogicalObserversCharacterization
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Schema
+
+#classicism_audit Classicism.Results.Research.FullLogicalObserversCharacterization
+#classicism_types_audit Classicism.Results.Research.FullLogicalObserversCharacterization
+#classicism_derive_audit Classicism.Results.Research.FullLogicalObserversCharacterization
+
+#print axioms Classicism.Research.FullLogicalObservers.c5_actuality_atomicity_iff_full_separation.derivable
+#print axioms Classicism.Research.FullLogicalObservers.c5_actuality_atomicity_iff_necessary_full_separation.derivable
+#print axioms Classicism.Research.FullLogicalObservers.c5_actuality_necessary_full_separation_at.derivable

@@ -1,0 +1,21 @@
+import Classicism.Results.Research.AtomicProbabilityFractionMultiplicative
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Schema
+
+#classicism_audit Classicism.Results.Research.AtomicProbabilityFractionMultiplicative
+#classicism_types_audit Classicism.Results.Research.AtomicProbabilityFractionMultiplicative
+
+#classicism_derive Classicism.Research.ProbabilityFractions.qtimes_comm
+  Classicism.Research.ProbabilityFractions.qtimes_assoc
+  Classicism.Research.ProbabilityFractions.qtimes_one_right
+  Classicism.Research.ProbabilityFractions.qtimes_one_left
+  Classicism.Research.ProbabilityFractions.qtimes_zero_right
+  Classicism.Research.ProbabilityFractions.qtimes_zero_left
+  Classicism.Research.ProbabilityFractions.qtimes_add
+  Classicism.Research.ProbabilityFractions.qadd_times
+  Classicism.Research.ProbabilityFractions.qtimes_eq_zero
+  Classicism.Research.ProbabilityFractions.qtimes_cancel_right
+  Classicism.Research.ProbabilityFractions.qtimes_cancel_left
+
+#print axioms Classicism.Research.ProbabilityFractions.qtimes_cancel_left.derivable

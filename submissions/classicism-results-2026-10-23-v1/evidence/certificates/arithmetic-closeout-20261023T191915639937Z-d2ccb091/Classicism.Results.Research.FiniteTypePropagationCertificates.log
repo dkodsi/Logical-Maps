@@ -1,0 +1,218 @@
+Classicism.Research.FiniteTypePropagation.finite_arrow_of_barcan: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FiniteTypePropagation.finite_arrow_of_c5: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FiniteTypePropagation.finite_arrow_of_functionality: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.FiniteTypePropagation.finite_base_of_finite_predicates: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FiniteTypePropagation.finite_domain_necessary_c5: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FiniteTypePropagation.finite_domain_of_necessary: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.FiniteTypePropagation.finite_domain_of_rel: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.FiniteTypePropagation.finite_rel_domain: Classicism ✓ [C⁻] (axioms: [])
+#classicism_audit Classicism.Results.Research.FiniteTypePropagation: 8/8 theorems pass; 8 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.FiniteTypePropagation: 8/8 inside R
+Classicism.Research.FiniteTypePropagation.FiniteDomain ⟶ Classicism.Research.FiniteTypePropagation.FiniteDomain.schema:
+  fun σ' =>
+    Classicism.Meta.Term.exists'
+      (Classicism.Meta.Term.conj
+        (Classicism.Meta.Term.forall'
+          (Classicism.Meta.Term.imp
+            (((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app
+                  (Classicism.Meta.Term.lam
+                    (Classicism.Meta.Term.forall'
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).neg))).conj
+              (Classicism.Meta.Term.forall'
+                (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                    (Classicism.Meta.Term.lam
+                      (Classicism.Meta.Term.exists'
+                        (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                              (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).conj
+                          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                            (Classicism.Meta.Term.lam
+                              (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).conj
+                                (Classicism.Meta.Term.neg
+                                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).eq'
+                                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)))))))))))))
+            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app
+              (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ))))
+        ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app (Classicism.Meta.Term.lam Classicism.Meta.Term.top)))
+Classicism.Research.FiniteTypePropagation.FiniteRelDomain ⟶ Classicism.Research.FiniteTypePropagation.FiniteRelDomain.schema:
+  fun ρ' =>
+    Classicism.Meta.Term.exists'
+      (Classicism.Meta.Term.conj
+        (Classicism.Meta.Term.forall'
+          (Classicism.Meta.Term.imp
+            (((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app
+                  (Classicism.Meta.Term.lam
+                    (Classicism.Meta.Term.forall'
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).neg))).conj
+              (Classicism.Meta.Term.forall'
+                (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                    (Classicism.Meta.Term.lam
+                      (Classicism.Meta.Term.exists'
+                        (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                              (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).conj
+                          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                            (Classicism.Meta.Term.lam
+                              (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).conj
+                                (Classicism.Meta.Term.neg
+                                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).eq'
+                                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)))))))))))))
+            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app
+              (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ))))
+        ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app (Classicism.Meta.Term.lam Classicism.Meta.Term.top)))
+Classicism.Research.FiniteTypePropagation.NecessaryFiniteDomain ⟶ Classicism.Research.FiniteTypePropagation.NecessaryFiniteDomain.schema:
+  fun σ' =>
+    Classicism.Meta.Term.box
+      (Classicism.Meta.Term.exists'
+        (Classicism.Meta.Term.conj
+          (Classicism.Meta.Term.forall'
+            (Classicism.Meta.Term.imp
+              (((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app
+                    (Classicism.Meta.Term.lam
+                      (Classicism.Meta.Term.forall'
+                        ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).neg))).conj
+                (Classicism.Meta.Term.forall'
+                  (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).imp
+                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                      (Classicism.Meta.Term.lam
+                        (Classicism.Meta.Term.exists'
+                          (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                                (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).conj
+                            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                              (Classicism.Meta.Term.lam
+                                (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).conj
+                                  (Classicism.Meta.Term.neg
+                                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).eq'
+                                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)))))))))))))
+              ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app
+                (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ))))
+          ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app
+            (Classicism.Meta.Term.lam Classicism.Meta.Term.top))))
+#classicism_schema: 2 of 2 principles with a Ty-parameter have list forms
+Classicism.Research.FiniteTypePropagation.finite_arrow_of_functionality ⟶ Classicism.Research.FiniteTypePropagation.finite_arrow_of_functionality.rule : ∀
+  (σ' : Classicism.Meta.Ty) (ρ' : Classicism.Meta.RTy),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.Functionality.quoted σ' ρ')
+      (Classicism.Meta.Term.imp (Classicism.Research.FiniteTypePropagation.FiniteDomain.quoted σ')
+        (Classicism.Meta.Term.imp
+          (Classicism.Research.FiniteTypePropagation.FiniteDomain.quoted (Classicism.Meta.Ty.rel ρ'))
+          (Classicism.Research.FiniteTypePropagation.FiniteDomain.quoted (Classicism.Meta.Ty.rel (σ' ⇒ ρ'))))))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.FiniteTypePropagation.finite_arrow_of_functionality ⟶ Classicism.Research.FiniteTypePropagation.finite_arrow_of_functionality.listRule : ∀
+  (σs : List Classicism.Meta.Ty) (ρ1 : Classicism.Meta.RTy),
+  ρ1.Closed →
+    Classicism.Meta.Theorem Classicism.Meta.C.axioms
+      (Classicism.Meta.Term.imp (Classicism.P.Functionality.listQuoted σs ρ1)
+        (Classicism.Meta.Term.imp (Classicism.Research.FiniteTypePropagation.FiniteDomain.listQuoted σs)
+          (Classicism.Meta.Term.imp
+            (Classicism.Research.FiniteTypePropagation.FiniteDomain.quoted (Classicism.Meta.Ty.rel ρ1))
+            (Classicism.Research.FiniteTypePropagation.FiniteDomain.quoted (Classicism.Meta.Ty.rel (σs ⇒* ρ1))))))
+Classicism.Research.FiniteTypePropagation.finite_arrow_of_barcan ⟶ Classicism.Research.FiniteTypePropagation.finite_arrow_of_barcan.rule : ∀
+  (σ' : Classicism.Meta.Ty) (ρ' : Classicism.Meta.RTy),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.P.Barcan.quoted σ')
+      (Classicism.Meta.Term.imp (Classicism.Research.FiniteTypePropagation.FiniteDomain.quoted σ')
+        (Classicism.Meta.Term.imp
+          (Classicism.Research.FiniteTypePropagation.FiniteDomain.quoted (Classicism.Meta.Ty.rel ρ'))
+          (Classicism.Research.FiniteTypePropagation.FiniteDomain.quoted (Classicism.Meta.Ty.rel (σ' ⇒ ρ'))))))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.FiniteTypePropagation.finite_arrow_of_barcan ⟶ Classicism.Research.FiniteTypePropagation.finite_arrow_of_barcan.listRule : ∀
+  (σs : List Classicism.Meta.Ty) (ρ1 : Classicism.Meta.RTy),
+  ρ1.Closed →
+    Classicism.Meta.Theorem Classicism.Meta.C.axioms
+      (Classicism.Meta.Term.imp (Classicism.P.Barcan.listQuoted σs)
+        (Classicism.Meta.Term.imp (Classicism.Research.FiniteTypePropagation.FiniteDomain.listQuoted σs)
+          (Classicism.Meta.Term.imp
+            (Classicism.Research.FiniteTypePropagation.FiniteDomain.quoted (Classicism.Meta.Ty.rel ρ1))
+            (Classicism.Research.FiniteTypePropagation.FiniteDomain.quoted (Classicism.Meta.Ty.rel (σs ⇒* ρ1))))))
+Classicism.Research.FiniteTypePropagation.finite_arrow_of_c5 ⟶ Classicism.Research.FiniteTypePropagation.finite_arrow_of_c5.rule : ∀
+  (σ' : Classicism.Meta.Ty) (ρ' : Classicism.Meta.RTy),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp Classicism.P.NecNecessityOfDistinctnessT.quoted
+      (Classicism.Meta.Term.imp (Classicism.Research.FiniteTypePropagation.FiniteDomain.quoted σ')
+        (Classicism.Meta.Term.imp
+          (Classicism.Research.FiniteTypePropagation.FiniteDomain.quoted (Classicism.Meta.Ty.rel ρ'))
+          (Classicism.Research.FiniteTypePropagation.FiniteDomain.quoted (Classicism.Meta.Ty.rel (σ' ⇒ ρ'))))))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.FiniteTypePropagation.finite_arrow_of_c5 ⟶ Classicism.Research.FiniteTypePropagation.finite_arrow_of_c5.listRule : ∀
+  (σs : List Classicism.Meta.Ty) (ρ1 : Classicism.Meta.RTy),
+  ρ1.Closed →
+    Classicism.Meta.Theorem Classicism.Meta.C.axioms
+      (Classicism.Meta.Term.imp Classicism.P.NecNecessityOfDistinctnessT.quoted
+        (Classicism.Meta.Term.imp (Classicism.Research.FiniteTypePropagation.FiniteDomain.listQuoted σs)
+          (Classicism.Meta.Term.imp
+            (Classicism.Research.FiniteTypePropagation.FiniteDomain.quoted (Classicism.Meta.Ty.rel ρ1))
+            (Classicism.Research.FiniteTypePropagation.FiniteDomain.quoted (Classicism.Meta.Ty.rel (σs ⇒* ρ1))))))
+Classicism.Research.FiniteTypePropagation.finite_base_of_finite_predicates ⟶ Classicism.Research.FiniteTypePropagation.finite_base_of_finite_predicates.rule : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp
+      (Classicism.Research.FiniteTypePropagation.FiniteRelDomain.quoted (σ' ⇒ Classicism.Meta.RTy.t))
+      (Classicism.Research.FiniteTypePropagation.FiniteDomain.quoted σ'))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.FiniteTypePropagation.finite_base_of_finite_predicates ⟶ Classicism.Research.FiniteTypePropagation.finite_base_of_finite_predicates.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp
+      (Classicism.Research.FiniteTypePropagation.FiniteRelDomain.quoted (σs ⇒* Classicism.Meta.RTy.t))
+      (Classicism.Research.FiniteTypePropagation.FiniteDomain.listQuoted σs))
+Classicism.Research.FiniteTypePropagation.finite_rel_domain ⟶ Classicism.Research.FiniteTypePropagation.finite_rel_domain.rule : ∀
+  (ρ' : Classicism.Meta.RTy),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp
+      (Classicism.Research.FiniteTypePropagation.FiniteDomain.quoted (Classicism.Meta.Ty.rel ρ'))
+      (Classicism.Research.FiniteTypePropagation.FiniteRelDomain.quoted ρ'))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.FiniteTypePropagation.finite_domain_of_rel ⟶ Classicism.Research.FiniteTypePropagation.finite_domain_of_rel.rule : ∀
+  (ρ' : Classicism.Meta.RTy),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.Research.FiniteTypePropagation.FiniteRelDomain.quoted ρ')
+      (Classicism.Research.FiniteTypePropagation.FiniteDomain.quoted (Classicism.Meta.Ty.rel ρ')))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.FiniteTypePropagation.finite_domain_necessary_c5 ⟶ Classicism.Research.FiniteTypePropagation.finite_domain_necessary_c5.rule : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp Classicism.P.NecNecessityOfDistinctnessT.quoted
+      (Classicism.Meta.Term.imp (Classicism.Research.FiniteTypePropagation.FiniteDomain.quoted σ')
+        (Classicism.Research.FiniteTypePropagation.NecessaryFiniteDomain.quoted σ')))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.FiniteTypePropagation.finite_domain_necessary_c5 ⟶ Classicism.Research.FiniteTypePropagation.finite_domain_necessary_c5.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp Classicism.P.NecNecessityOfDistinctnessT.quoted
+      (Classicism.Meta.Term.imp (Classicism.Research.FiniteTypePropagation.FiniteDomain.listQuoted σs)
+        (Classicism.Research.FiniteTypePropagation.NecessaryFiniteDomain.listQuoted σs)))
+Classicism.Research.FiniteTypePropagation.finite_domain_of_necessary ⟶ Classicism.Research.FiniteTypePropagation.finite_domain_of_necessary.rule : ∀
+  (σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.Research.FiniteTypePropagation.NecessaryFiniteDomain.quoted σ')
+      (Classicism.Research.FiniteTypePropagation.FiniteDomain.quoted σ'))
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.FiniteTypePropagation.finite_domain_of_necessary ⟶ Classicism.Research.FiniteTypePropagation.finite_domain_of_necessary.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Meta.Term.imp (Classicism.Research.FiniteTypePropagation.NecessaryFiniteDomain.listQuoted σs)
+      (Classicism.Research.FiniteTypePropagation.FiniteDomain.listQuoted σs))
+'Classicism.Research.FiniteTypePropagation.finite_arrow_of_functionality.rule' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.FiniteTypePropagation.finite_arrow_of_barcan.rule' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.FiniteTypePropagation.finite_arrow_of_c5.rule' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.FiniteTypePropagation.finite_base_of_finite_predicates.rule' depends on axioms: [propext,
+ Quot.sound]
+'Classicism.Research.FiniteTypePropagation.finite_domain_necessary_c5.rule' depends on axioms: [propext, Quot.sound]

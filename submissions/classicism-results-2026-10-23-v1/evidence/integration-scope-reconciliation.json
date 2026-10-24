@@ -1,0 +1,443 @@
+{
+  "kind": "bounded integration scope reconciliation receipt",
+  "created_at_utc": "2026-10-23T19:47:17.831418+00:00",
+  "roots": {
+    "downloads": ".",
+    "canonical_submission": "submissions/classicism-results-2026-10-23-v1"
+  },
+  "limits": [
+    "No compiler invoked, no research proof attempted, no YAML/table/catalog edited.",
+    "Selected source bytes and saved manifest acceptance were compared. Compiler/dependency recursive fingerprints and all repository files were not recertified.",
+    "This is a one-off receipt for synthesis integration, not a new catalog or a count of new theorems."
+  ],
+  "items": [
+    {
+      "item": "necessary_actuality_and_unboxed_strong_sections",
+      "decision": "Exact equivalence completed; supersedes the older choice_sections_retractions lane residual for this consumer only.",
+      "statement": "Over fixed C, for every admitted signature and axiom set Ax: Ax entails necessary Functional Choice iff Ax entails necessary Actuality and all unboxed strong-right-splitting instances between relational types.",
+      "scope": [
+        "StrongRightSplitting(A,B): forall f:A→B, actual Surj(f) implies exists g:B→A, box forall b, f(g b)=b. The outer splitting schema is unboxed; only the inverse equation is boxed.",
+        "Splitting A and B are relational, including t. The resulting Functional Choice schema allows every admitted input type, including e, and every relational output type. No categorical-epimorphism substitution.",
+        "The proof uses the checked C5+Atomicity_t-to-NPC theorem to box pure Functional Choice instances; optional hypotheses are not necessitated."
+      ],
+      "proof": "research/2026-10-22/notes/functional-choice-by-sections.md §4",
+      "principal_declaration": "Classicism.Meta.Research.Splitting.necessary_choice_iff_necessary_actuality_strong_sections",
+      "source": "topics/classicism/lean/Classicism/Results/Research/SectionsRetractionsNPCSchemas.lean",
+      "lane": "research/2026-10-22/lean-formalization/verification-updates/strong_sections_npc.json",
+      "evidence": {
+        "submission_certificate": "evidence/certificates/strong-sections/certificate.json",
+        "certificate_sha256": "1d5bcdbb5b0354e4f0a00accd63a1b355c111cf8881b470d266c09e0dbfda266",
+        "manifest": "research/2026-10-22/lean-formalization/checks/20261023T153642777238Z-9a6fd664.json",
+        "submission_manifest": "evidence/certificates/strong-sections/original-manifest.json",
+        "recorded_run_id": "20261023T153642777238Z-9a6fd664",
+        "recorded_run_exit_code": 0,
+        "recorded_selected_targets_exit_code": 0,
+        "manifest_copies_match_recorded_hash": true,
+        "selected_source_checks": [
+          {
+            "path": "topics/classicism/lean/Classicism/Results/Research/SectionsRetractionsNPC.lean",
+            "downloads_sha256": "6ed58c68b7deb8f2e9b465883404abd95381fbd79c612bf1907f390606cf760f",
+            "submission_source_sha256": "6ed58c68b7deb8f2e9b465883404abd95381fbd79c612bf1907f390606cf760f",
+            "copies_equal": true,
+            "recorded_sha256": "6ed58c68b7deb8f2e9b465883404abd95381fbd79c612bf1907f390606cf760f",
+            "downloads_matches_recorded": true,
+            "submission_matches_recorded": true
+          },
+          {
+            "path": "topics/classicism/lean/Classicism/Results/Research/SectionsRetractionsNPCCertificates.lean",
+            "downloads_sha256": "f9a4cd0d93312818f7891a90174d6584dd057613112d7ebfb7672069cce52e96",
+            "submission_source_sha256": "f9a4cd0d93312818f7891a90174d6584dd057613112d7ebfb7672069cce52e96",
+            "copies_equal": true,
+            "recorded_sha256": "f9a4cd0d93312818f7891a90174d6584dd057613112d7ebfb7672069cce52e96",
+            "downloads_matches_recorded": true,
+            "submission_matches_recorded": true
+          },
+          {
+            "path": "topics/classicism/lean/Classicism/Results/Research/SectionsRetractionsNPCSchemas.lean",
+            "downloads_sha256": "6dcc752b624a4074c51c0f41809e40026d57d71cec9b82b95265a5d5ceb9e824",
+            "submission_source_sha256": "6dcc752b624a4074c51c0f41809e40026d57d71cec9b82b95265a5d5ceb9e824",
+            "copies_equal": true,
+            "recorded_sha256": "6dcc752b624a4074c51c0f41809e40026d57d71cec9b82b95265a5d5ceb9e824",
+            "downloads_matches_recorded": true,
+            "submission_matches_recorded": true
+          }
+        ],
+        "saved_axiom_reports": [
+          "'Classicism.Meta.Research.Splitting.necessary_actuality_strong_sections_imply_necessary_plenitude' depends on axioms: [propext, Quot.sound]",
+          "'Classicism.Meta.Research.Splitting.npc_boxes_functional_choice' depends on axioms: [propext, Quot.sound]",
+          "'Classicism.Meta.Research.Splitting.necessary_choice_iff_necessary_actuality_strong_sections' depends on axioms: [propext, Quot.sound]"
+        ]
+      },
+      "unresolved_conditions": []
+    },
+    {
+      "item": "choice.04",
+      "decision": "Old infrastructure-only classification is stale. Exact object-C forward rules and low-type converses are certified; no separately named full all-type equivalence assembly located.",
+      "statement": "C5 iff persistence of actual injectivity iff strong left splittings of actual injections, as relational-type schemata. The two tests t→tt and tt→tt suffice for either converse.",
+      "scope": [
+        "StrongLeftSplitting(A,B): forall f:A→B, actual Inj(f) implies exists g:B→A, box forall a, g(f a)=a. Ordinary pointwise retractions are weaker and must not receive this C5 equivalence.",
+        "c5_injectivity_persists.rule covers arbitrary admitted A (including e) and relational B. Strong retractions restrict A to relational because g must return A.",
+        "c5_strong_retractions.listRule ranges over finite argument lists, including the empty list, so its relational source is not restricted to unary types; B is arbitrary closed relational. The separate _t declaration also states the nullary source explicitly.",
+        "The converses conclude boxed ND_t; the existing all-type collapse of boxed ND_t supplies C5. The fixed low-type tests are sufficient, not the total scope of the forward theorem.",
+        "Per-map necessary injectivity iff existence of a strong retraction is separately checked. No choice, Atomicity or Actuality premise is introduced."
+      ],
+      "proof": "research/2026-10-22/notes/choice-uniformization.md §§7–9 (especially Theorems 11–13); SectionsRetractionsStrong.lean:27–96; SectionsRetractionsMasks.lean:88–103",
+      "principal_declarations": [
+        "Classicism.Research.Splitting.c5_injectivity_persists.rule",
+        "Classicism.Research.Splitting.c5_strong_retractions.listRule",
+        "Classicism.Research.Splitting.c5_strong_retractions_t.derivable",
+        "Classicism.Research.Splitting.low_strong_retractions_c5.rule",
+        "Classicism.Research.Splitting.low_persistent_injections_c5.rule",
+        "Classicism.Research.Splitting.necessary_injection_splitting.listRule",
+        "Classicism.Research.Splitting.necessary_injection_iff_retraction.derivable",
+        "Classicism.Research.Splitting.necessary_injection_iff_retraction_t.derivable"
+      ],
+      "evidence": {
+        "manifest": "research/2026-10-22/lean-formalization/checks/20261023T053945495916Z-2d579847.json",
+        "manifest_sha256": "ccbec42cecabead6a6957020fec9693f82635248f0700f95243d39f38d635bc7",
+        "recorded_run_exit_code": 0,
+        "selected_source_checks": [
+          {
+            "path": "topics/classicism/lean/Classicism/Results/Research/SectionsRetractionsStrong.lean",
+            "downloads_sha256": "2b10c6b7c23a751f5720727f34a3e5726073b34729d5614ce2759229ae314dcc",
+            "submission_source_sha256": "2b10c6b7c23a751f5720727f34a3e5726073b34729d5614ce2759229ae314dcc",
+            "copies_equal": true,
+            "recorded_sha256": "2b10c6b7c23a751f5720727f34a3e5726073b34729d5614ce2759229ae314dcc",
+            "downloads_matches_recorded": true,
+            "submission_matches_recorded": true,
+            "module": "Classicism.Results.Research.SectionsRetractionsStrong",
+            "recorded_module_exit_code": 0
+          },
+          {
+            "path": "topics/classicism/lean/Classicism/Results/Research/SectionsRetractionsStrongCertificates.lean",
+            "downloads_sha256": "93f232236bd51dd236a6b70765fe8b086fd84b064f5a45ee37851aa20d8359e1",
+            "submission_source_sha256": "93f232236bd51dd236a6b70765fe8b086fd84b064f5a45ee37851aa20d8359e1",
+            "copies_equal": true,
+            "recorded_sha256": "93f232236bd51dd236a6b70765fe8b086fd84b064f5a45ee37851aa20d8359e1",
+            "downloads_matches_recorded": true,
+            "submission_matches_recorded": true,
+            "module": "Classicism.Results.Research.SectionsRetractionsStrongCertificates",
+            "recorded_module_exit_code": 0
+          },
+          {
+            "path": "topics/classicism/lean/Classicism/Results/Research/SectionsRetractionsMasks.lean",
+            "downloads_sha256": "7d6a8e9b24db4e7e7e777824e13bd7ce6f10da2606cc7717265d5abaae437004",
+            "submission_source_sha256": "7d6a8e9b24db4e7e7e777824e13bd7ce6f10da2606cc7717265d5abaae437004",
+            "copies_equal": true,
+            "recorded_sha256": "7d6a8e9b24db4e7e7e777824e13bd7ce6f10da2606cc7717265d5abaae437004",
+            "downloads_matches_recorded": true,
+            "submission_matches_recorded": true,
+            "module": "Classicism.Results.Research.SectionsRetractionsMasks",
+            "recorded_module_exit_code": 0
+          },
+          {
+            "path": "topics/classicism/lean/Classicism/Results/Research/SectionsRetractionsMasksCertificates.lean",
+            "downloads_sha256": "a736a94601f0d2e4b8a140c0898c67ed0ffb1ec18c6ecaeb52d6c4c07b850fa8",
+            "submission_source_sha256": "a736a94601f0d2e4b8a140c0898c67ed0ffb1ec18c6ecaeb52d6c4c07b850fa8",
+            "copies_equal": true,
+            "recorded_sha256": "a736a94601f0d2e4b8a140c0898c67ed0ffb1ec18c6ecaeb52d6c4c07b850fa8",
+            "downloads_matches_recorded": true,
+            "submission_matches_recorded": true,
+            "module": "Classicism.Results.Research.SectionsRetractionsMasksCertificates",
+            "recorded_module_exit_code": 0
+          }
+        ]
+      },
+      "direct_logs": [
+        "research/2026-10-22/lean-formalization/logs/runs/20261023T044838756253Z-50e18a7f/Classicism_Results_Research_SectionsRetractionsStrongCertificates.log",
+        "research/2026-10-22/lean-formalization/logs/runs/20261023T045033435576Z-060a44c8/Classicism_Results_Research_SectionsRetractionsMasksCertificates.log"
+      ],
+      "audit_scope": "Strong 17/17 and Masks 14/14 passed gate/type/derivation audits in saved logs; printed selected rule audits contain propext and Quot.sound only. These are historical saved results with matching selected source hashes, not a new check.",
+      "unresolved_conditions": [
+        "If delivery requires one named any-signature schema-equivalence theorem for choice.04, its assembly is not located here. The checked constituent directions and vectorized scope are stronger than infrastructure-only; do not describe the mathematics as still open."
+      ]
+    },
+    {
+      "item": "choice.11",
+      "decision": "Duplicate of the completed evaluator-modal family; cross-reference it instead of counting a new result or inheriting the broader core-transfer gap.",
+      "statement": "Existence of an actual bivalent evaluator commuting pointwise with box iff full Extensionality; likewise diamond.",
+      "scope": [
+        "ActualEvaluator(E): forall p, (p implies E p=top) and (not p implies E p=bottom).",
+        "Commutation is the unboxed pointwise identity forall p, E(box p)=box(E p), or its diamond counterpart.",
+        "Full Extensionality is the schema at every closed relational type, including t; the certificate transports to every signature and any axiom set. No Gallin comprehension, Choice, Infinity or BF hypothesis."
+      ],
+      "proof": "research/2026-10-22/notes/gallin-bivalent-evaluator.md §9 Proposition 8",
+      "principal_declarations": [
+        "Classicism.Meta.Research.EvaluatorModalCommutation.box_evaluator_iff_extensionality_in",
+        "Classicism.Meta.Research.EvaluatorModalCommutation.diamond_evaluator_iff_extensionality_in"
+      ],
+      "lane": "research/2026-10-22/lean-formalization/verification-updates/evaluator_modal_commutation.json",
+      "evidence": {
+        "submission_certificate": "evidence/certificates/evaluator-modal/certificate.json",
+        "certificate_sha256": "7b43bce5bfc0787dc305541d75940b0b4857fc2271863e636b62340bacf5183a",
+        "manifest": "research/2026-10-22/lean-formalization/checks/20261023T161438820966Z-f256e782.json",
+        "submission_manifest": "evidence/certificates/evaluator-modal/original-manifest.json",
+        "recorded_run_id": "20261023T161438820966Z-f256e782",
+        "recorded_run_exit_code": 0,
+        "recorded_selected_targets_exit_code": 0,
+        "manifest_copies_match_recorded_hash": true,
+        "selected_source_checks": [
+          {
+            "path": "topics/classicism/lean/Classicism/Results/Research/EvaluatorModalCommutation.lean",
+            "downloads_sha256": "49c5420d587908a3bdcdcb298b0d73dfb32f280ff4383642a3987e3fa14b3167",
+            "submission_source_sha256": "49c5420d587908a3bdcdcb298b0d73dfb32f280ff4383642a3987e3fa14b3167",
+            "copies_equal": true,
+            "recorded_sha256": "49c5420d587908a3bdcdcb298b0d73dfb32f280ff4383642a3987e3fa14b3167",
+            "downloads_matches_recorded": true,
+            "submission_matches_recorded": true
+          },
+          {
+            "path": "topics/classicism/lean/Classicism/Results/Research/EvaluatorModalCommutationCertificates.lean",
+            "downloads_sha256": "bc304f13b7baa9384b2109cd1f5f054c5ede1b10ce5d3ad050e186909a2e47f6",
+            "submission_source_sha256": "bc304f13b7baa9384b2109cd1f5f054c5ede1b10ce5d3ad050e186909a2e47f6",
+            "copies_equal": true,
+            "recorded_sha256": "bc304f13b7baa9384b2109cd1f5f054c5ede1b10ce5d3ad050e186909a2e47f6",
+            "downloads_matches_recorded": true,
+            "submission_matches_recorded": true
+          },
+          {
+            "path": "topics/classicism/lean/Classicism/Results/Research/EvaluatorModalCommutationSchemas.lean",
+            "downloads_sha256": "a441ee3c8e8b03570679f94038e713591ac15e61fc8aad421ba2cb3b55018e39",
+            "submission_source_sha256": "a441ee3c8e8b03570679f94038e713591ac15e61fc8aad421ba2cb3b55018e39",
+            "copies_equal": true,
+            "recorded_sha256": "a441ee3c8e8b03570679f94038e713591ac15e61fc8aad421ba2cb3b55018e39",
+            "downloads_matches_recorded": true,
+            "submission_matches_recorded": true
+          }
+        ],
+        "saved_axiom_reports": [
+          "'Classicism.Meta.Research.EvaluatorModalCommutation.box_evaluator_iff_extensionality' depends on axioms: [propext, Quot.sound]",
+          "'Classicism.Meta.Research.EvaluatorModalCommutation.diamond_evaluator_iff_extensionality' depends on axioms: [propext, Quot.sound]",
+          "'Classicism.Meta.Research.EvaluatorModalCommutation.box_evaluator_iff_extensionality_in' depends on axioms: [propext, Quot.sound]",
+          "'Classicism.Meta.Research.EvaluatorModalCommutation.diamond_evaluator_iff_extensionality_in' depends on axioms: [propext, Quot.sound]"
+        ]
+      },
+      "duplicate_target": "Submission EVALUATOR-MODAL-COMMUTATION, currently indexed as synthesis.evaluator-modal-commutation; choice.11 is the same box/diamond result.",
+      "unresolved_conditions": [
+        "Separate evaluator classification/normal forms, higher-type Gallin comparison, and full extensional-Henkin interpretation/truth induction remain outside this certificate.",
+        "The old world_actuality_gallin lane says waiting_for_compiler at 05:02; that is an old checkpoint, not a current live-work assertion. Published EVALUATORS-CORES scope still marks the full hierarchy/core interpretation incomplete."
+      ]
+    },
+    {
+      "item": "probability_R05_R06_R07_R09",
+      "decision": "Preserve as internal probability/cardinality results; not absorbed by analytic stability. Ordinary proofs supplied, main exact internal equivalences not Lean-certified.",
+      "statements": {
+        "R05": "Over C+necessary Plenitude+quantified Infinity_e, existence of faithful finitely additive, countably additive, or represented-completely-additive real probability is equivalent to an admitted finite-fibre labelling of world atoms by N_e. Countable Choice for finite fields separately upgrades this to an injection into N_e.",
+        "R06": "Over the same background, a faithful invariant state under represented permutations preserving each class exists iff the world field has a finite-fibre numerical labelling and every class of the represented rigid equivalence is internally finite. Canonical finite-class averaging produces a completely additive invariant state, with uniqueness for the specified normalized class masses and idempotence.",
+        "R07": "In the admitted interpreted mathematics, finite-fibre labelling of P(X) iff internal finiteness of X. The probability type ceiling follows by the specified atom/type factorization; powersets and finite sets are internal, not all external subsets or standard finite sets.",
+        "R09": "Over C+Actuality+Atomicity_t+BC_t+quantified Infinity_e, the same propositional probability/finite-fibre equivalence holds for graph-valued states in the current-world core. No ND, BF, all-type atomicity/completeness, Plenitude or Choice is assumed."
+      },
+      "scope": [
+        "Finite fibres need not be singletons. The countability upgrade needs its separate choice resource; the exact finite-fibre statement does not.",
+        "The countably/completely additive state is a constructed replacement; an arbitrary original finitely additive state is not thereby countably additive.",
+        "R09 supplies current graph-valued probabilities, not automatically ambient C operations or a future-stable globally rigid real-code domain. It does not lower the stronger assumptions of higher-type or lifted world-symmetry theorems.",
+        "Ordinary arithmetic or analysis-stability theorems do not provide the required internal number/core interpretation, represented-family operations, finite-fibre criterion, or type-ceiling argument."
+      ],
+      "proofs": [
+        "research/2026-10-22/proof-refinements/choice-free-faithful-probability.md §§1–6",
+        "research/2026-10-22/proof-refinements/canonical-finite-class-symmetrization.md §§1–3",
+        "research/2026-10-22/proof-refinements/choice-free-probability-type-ceiling.md §§1–3",
+        "research/2026-10-22/proof-refinements/local-propositional-probability.md §§1–3"
+      ],
+      "lane": "research/2026-10-22/lean-formalization/verification-updates/probability_internal_constructions.json",
+      "published_scope": "evidence/RESULT-INDEX.md, PROBABILITY, lines 492–506",
+      "component_evidence": {
+        "manifest": "research/2026-10-22/lean-formalization/checks/20261023T051735278101Z-c2f76f0d.json",
+        "manifest_sha256": "825fc53cad32b3540df1aa633f7e7fb87c95d2c5e6a7279d2c0e5e68dcc84d34",
+        "recorded_run_exit_code": 0,
+        "selected_source_checks": [
+          {
+            "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNaturalOrder.lean",
+            "downloads_sha256": "fcf9ebff94d6294ddc1abc7376532875643747ed768c1073e09abe2c37381b6f",
+            "submission_source_sha256": "fcf9ebff94d6294ddc1abc7376532875643747ed768c1073e09abe2c37381b6f",
+            "copies_equal": true,
+            "recorded_sha256": "fcf9ebff94d6294ddc1abc7376532875643747ed768c1073e09abe2c37381b6f",
+            "downloads_matches_recorded": true,
+            "submission_matches_recorded": true,
+            "module": "Classicism.Results.Research.AtomicProbabilityNaturalOrder",
+            "recorded_module_exit_code": 0
+          },
+          {
+            "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNaturalOrderCertificates.lean",
+            "downloads_sha256": "61454c0b9f23fff44f146341345787d190c070e091691f8a8417bbd7621240e1",
+            "submission_source_sha256": "61454c0b9f23fff44f146341345787d190c070e091691f8a8417bbd7621240e1",
+            "copies_equal": true,
+            "recorded_sha256": "61454c0b9f23fff44f146341345787d190c070e091691f8a8417bbd7621240e1",
+            "downloads_matches_recorded": true,
+            "submission_matches_recorded": true,
+            "module": "Classicism.Results.Research.AtomicProbabilityNaturalOrderCertificates",
+            "recorded_module_exit_code": 0
+          },
+          {
+            "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericOperations.lean",
+            "downloads_sha256": "33090ce0414070679c2d302141ec3fb16711239c4869f5bd6156253f5da67dbf",
+            "submission_source_sha256": "33090ce0414070679c2d302141ec3fb16711239c4869f5bd6156253f5da67dbf",
+            "copies_equal": true,
+            "recorded_sha256": "33090ce0414070679c2d302141ec3fb16711239c4869f5bd6156253f5da67dbf",
+            "downloads_matches_recorded": true,
+            "submission_matches_recorded": true,
+            "module": "Classicism.Results.Research.AtomicProbabilityNumericOperations",
+            "recorded_module_exit_code": 0
+          },
+          {
+            "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericAddition.lean",
+            "downloads_sha256": "2e9de92337072c4f1dcf4fe04b82cd0bd83ee8aeaa04ffc5311104d90d286620",
+            "submission_source_sha256": "2e9de92337072c4f1dcf4fe04b82cd0bd83ee8aeaa04ffc5311104d90d286620",
+            "copies_equal": true,
+            "recorded_sha256": "2e9de92337072c4f1dcf4fe04b82cd0bd83ee8aeaa04ffc5311104d90d286620",
+            "downloads_matches_recorded": true,
+            "submission_matches_recorded": true,
+            "module": "Classicism.Results.Research.AtomicProbabilityNumericAddition",
+            "recorded_module_exit_code": 0
+          },
+          {
+            "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericMultiplication.lean",
+            "downloads_sha256": "4a4219771dafa9a14170c90b1451e904ca2ee485ca492148638df52c10d748a3",
+            "submission_source_sha256": "4a4219771dafa9a14170c90b1451e904ca2ee485ca492148638df52c10d748a3",
+            "copies_equal": true,
+            "recorded_sha256": "4a4219771dafa9a14170c90b1451e904ca2ee485ca492148638df52c10d748a3",
+            "downloads_matches_recorded": true,
+            "submission_matches_recorded": true,
+            "module": "Classicism.Results.Research.AtomicProbabilityNumericMultiplication",
+            "recorded_module_exit_code": 0
+          }
+        ]
+      },
+      "component_limits": "Accepted object-language certificates cover supported-real suprema, natural-number order and basic numeric operations. Checked ordinary source proofs provide further supporting constructions. Neither establishes a complete object-language certificate for the main R05–R09 probability equivalences.",
+      "unresolved_conditions": [
+        "Internal real multiplication, ordered laws and positive normalization/division; full represented finite-family and atom-sum operations.",
+        "Exact threshold/finite-fibre iff, finite-block/rank type-ceiling proof, and local/global interpretation with original N_e transfer.",
+        "The bounded addition/multiplication checks cover only part of the remaining prepared translations. The broader staged modules remain uncertified and deferred; the coverage inventory is evidence of status, not new compiler acceptance."
+      ],
+      "numeric_operation_certificate": "evidence/certificates/probability-numeric-operations-twelve/certificate.json",
+      "coverage_inventory": "evidence/probability-certificate-coverage.json"
+    },
+    {
+      "item": "world_algebra.24",
+      "decision": "Retain the exact numerical world-cardinality classification as its own ordinary result family. No main certificate located; it is not an analysis-stability corollary.",
+      "statement": "Over BP=C+necessary Plenitude and quantified Infinity_kappa, existence of an internally N_kappa-independent propositional family iff an admitted surjection Atoms(t)→N_kappa iff an N_kappa-indexed nonzero partition of top iff the specified numerical lottery. Universal internal countable finite-intersection compactness is exactly the negation of these equivalent existence conditions.",
+      "scope": [
+        "Under F=C+necessary Functional Choice, quantified Infinity_t iff N_t-independent family. With a separately infinite counting base, universal countable compactness iff propositional finiteness.",
+        "Independence is for every internally finite pattern; N_kappa and finite sets can be externally nonstandard. Infinity_e cannot be silently obtained from Infinity_t or the counting bases exchanged.",
+        "Without Choice do not replace atom surjection onto N by an injection N→Atoms.",
+        "Full admitted N-profile realization is strictly stronger than finite-pattern independence: the indicated full N-world/P(N)-world models separate them. Universal compactness quantifies over all admitted families, not one selected coordinate system.",
+        "The nominal model in §34 adds a verdict to an already counted construction; it is not a new model count."
+      ],
+      "proofs": [
+        "research/2026-10-22/notes/world-cardinality-ucp-20261022.md §§23–27,34",
+        "research/2026-10-22/notes/infinity-world-richness-consolidation-20261022.md §6"
+      ],
+      "principal_declarations": [],
+      "matching_main_manifest": null,
+      "catalog_evidence": "research/2026-10-22/lean-formalization/coverage-and-ownership.json, world_algebra.24: no_main_implementation_located",
+      "unresolved_conditions": [
+        "A main internal-C certificate for this classification has not been located. Numerical recursion/finite-pattern arithmetic, admitted joins and atom-join transport, least-index/enumeration construction, rigid-number lottery translation and exact compactness converses must be connected; foundational arithmetic or finite-profile certificates alone do not establish this family."
+      ],
+      "integration_note": "The published PROFILE-WORLD-ALGEBRA selection tracks .01/.05/.12/.25, not .24; preserving .24 requires an explicit retained cross-reference, not silently treating it as covered by that selected certificate or upstream analytic stability."
+    }
+  ],
+  "proof_source_checks": [
+    {
+      "path": "research/2026-10-22/notes/functional-choice-by-sections.md",
+      "downloads_sha256": "bc20800cad707331000615fa4ca5a7f711de29d8befb4d48596fee784f84c8a1",
+      "submission_source_sha256": "bc20800cad707331000615fa4ca5a7f711de29d8befb4d48596fee784f84c8a1",
+      "copies_equal": true
+    },
+    {
+      "path": "research/2026-10-22/notes/choice-uniformization.md",
+      "downloads_sha256": "1582aa23aeeb86e7d3a1dd33d0eb77c06fe2311dfcc1bf7de421b7341b5cf366",
+      "submission_source_sha256": "1582aa23aeeb86e7d3a1dd33d0eb77c06fe2311dfcc1bf7de421b7341b5cf366",
+      "copies_equal": true
+    },
+    {
+      "path": "research/2026-10-22/notes/gallin-bivalent-evaluator.md",
+      "downloads_sha256": "678a452f4dd6362d881d84bb0ee1fc5f0ab7333a1a2eeb8a8ae939f390508835",
+      "submission_source_sha256": "678a452f4dd6362d881d84bb0ee1fc5f0ab7333a1a2eeb8a8ae939f390508835",
+      "copies_equal": true
+    },
+    {
+      "path": "research/2026-10-22/proof-refinements/choice-free-faithful-probability.md",
+      "downloads_sha256": "7aab51fc359b0eeb781b1513d00f701c994a550f8f77ea1a55c44b1a0737a5cc",
+      "submission_source_sha256": "7aab51fc359b0eeb781b1513d00f701c994a550f8f77ea1a55c44b1a0737a5cc",
+      "copies_equal": true
+    },
+    {
+      "path": "research/2026-10-22/proof-refinements/canonical-finite-class-symmetrization.md",
+      "downloads_sha256": "5cf7ef927d043a42d8ff9a84cbf3ae805b54aa3976fec5f1610cce703a6c7045",
+      "submission_source_sha256": "5cf7ef927d043a42d8ff9a84cbf3ae805b54aa3976fec5f1610cce703a6c7045",
+      "copies_equal": true
+    },
+    {
+      "path": "research/2026-10-22/proof-refinements/choice-free-probability-type-ceiling.md",
+      "downloads_sha256": "8bc5c96e7a0845098c8e8e527499ded99c60a1cfe1430be36479712045b48069",
+      "submission_source_sha256": "8bc5c96e7a0845098c8e8e527499ded99c60a1cfe1430be36479712045b48069",
+      "copies_equal": true
+    },
+    {
+      "path": "research/2026-10-22/proof-refinements/local-propositional-probability.md",
+      "downloads_sha256": "79626565163df8057b4fa0f2d15e02779b2d1ccc79c321810284958abad3ceaa",
+      "submission_source_sha256": "79626565163df8057b4fa0f2d15e02779b2d1ccc79c321810284958abad3ceaa",
+      "copies_equal": true
+    },
+    {
+      "path": "research/2026-10-22/notes/world-cardinality-ucp-20261022.md",
+      "downloads_sha256": "1692db9eff56ed0bd4f6ca32af20d4029c0a203680c5a9084f0cfc8a725b1def",
+      "submission_source_sha256": "1692db9eff56ed0bd4f6ca32af20d4029c0a203680c5a9084f0cfc8a725b1def",
+      "copies_equal": true
+    },
+    {
+      "path": "research/2026-10-22/notes/infinity-world-richness-consolidation-20261022.md",
+      "downloads_sha256": "7f65f7cbbfbe8cbe7344c423c01b9b35dedd19a482fd769c5b2ea51dae35f66d",
+      "submission_source_sha256": "7f65f7cbbfbe8cbe7344c423c01b9b35dedd19a482fd769c5b2ea51dae35f66d",
+      "copies_equal": true
+    }
+  ],
+  "status_file_checks": [
+    {
+      "path": "research/2026-10-22/lean-formalization/verification-updates/strong_sections_npc.json",
+      "downloads_sha256": "7de84a32eefe1f50173bcdd1956c016013bff0ad726f9c9a0cb21f36bd665450",
+      "submission_source_sha256": null,
+      "copies_equal": false,
+      "submission_presence": "not included in submission source snapshot; the published exact certificate is included separately"
+    },
+    {
+      "path": "research/2026-10-22/lean-formalization/verification-updates/choice_sections_retractions.json",
+      "downloads_sha256": "a25619b0d40ded9fb94edb3fe3e6c41f75a4c841ceecbfba3617a41ede2bd4f7",
+      "submission_source_sha256": "a25619b0d40ded9fb94edb3fe3e6c41f75a4c841ceecbfba3617a41ede2bd4f7",
+      "copies_equal": true,
+      "submission_presence": "included"
+    },
+    {
+      "path": "research/2026-10-22/lean-formalization/verification-updates/evaluator_modal_commutation.json",
+      "downloads_sha256": "ebd0cf8e163a84014c23cf9ac4135a80b4403f481b2466e8454ccf1f10fdbd7a",
+      "submission_source_sha256": null,
+      "copies_equal": false,
+      "submission_presence": "not included in submission source snapshot; the published exact certificate is included separately"
+    },
+    {
+      "path": "research/2026-10-22/lean-formalization/verification-updates/probability_internal_constructions.json",
+      "downloads_sha256": "bfeb9a30ee3bf0c1f8217316384ce3ca9fbb9b2d2a4af9371a9192270a13f0c1",
+      "submission_source_sha256": "bfeb9a30ee3bf0c1f8217316384ce3ca9fbb9b2d2a4af9371a9192270a13f0c1",
+      "copies_equal": true,
+      "submission_presence": "included"
+    },
+    {
+      "path": "research/2026-10-22/lean-formalization/verification-updates/world_actuality_gallin.json",
+      "downloads_sha256": "5b6e7a6c93616e6d82a3c5647d66e29385e5b3a936668b4385c5b5b520f8be90",
+      "submission_source_sha256": "5b6e7a6c93616e6d82a3c5647d66e29385e5b3a936668b4385c5b5b520f8be90",
+      "copies_equal": true,
+      "submission_presence": "included"
+    }
+  ],
+  "recommended_table_actions": [
+    "Replace the residual necessary-Actuality+unboxed-strong-sections gap with the exact completed equivalence.",
+    "Upgrade choice.04 from infrastructure-only to checked constituent directions, including full vectorized forward scope and two low-type converses; name any remaining schema-assembly packaging separately.",
+    "Cross-reference choice.11 to EVALUATOR-MODAL-COMMUTATION without double counting; leave separate evaluator/core-transfer obligations explicit.",
+    "Retain R05–R07/R09 and world_algebra.24 with their stated internal scope and incomplete main formalization status; do not call them absorbed by analytic stability."
+  ],
+  "validation": {
+    "command": ".reproduction/classicism-followup-venv/bin/python scripts/pmap.py validate",
+    "exit_code": 0,
+    "summary": "classicism: 132 principles, 448 results, 162 models — OK"
+  }
+}

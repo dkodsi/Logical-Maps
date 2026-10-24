@@ -1,0 +1,34 @@
+{
+  "schema_version": 2,
+  "run_id": "20261024T040225041542Z-27c039a5",
+  "modules": [
+    "Classicism.Results.Research.AtomicProbabilityNumericOperationsCertificatesGate"
+  ],
+  "state": "failed",
+  "complete": false,
+  "checked": [
+    {
+      "module": "Classicism.Results.Research.AtomicProbabilityNumericOperationsCertificatesGate",
+      "fingerprint": "91eac4bfcdbc965d71417a4d7870c71d5444742e7fb48fd0a8a3a3fe5df3a3e3",
+      "source_sha256": "9909df603d3622c8aa86063f2865c13202e6b7325d70bec6f18a89b3238c9be5",
+      "artifacts": {
+        ".olean": "875ab295fb492d7e93836c5a6d64a49ba7794909fe97ecba8fb439f0f8d38d0a"
+      },
+      "seconds": 9.24,
+      "exit_code": 0,
+      "log": "logs/runs/20261024T040225041542Z-27c039a5/Classicism_Results_Research_AtomicProbabilityNumericOperationsCertificatesGate.log"
+    }
+  ],
+  "sources": {
+    "Classicism.Results.Research.AtomicProbabilityNumericOperationsCertificatesGate": {
+      "path": "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityNumericOperationsCertificatesGate.lean",
+      "sha256": "9909df603d3622c8aa86063f2865c13202e6b7325d70bec6f18a89b3238c9be5"
+    }
+  },
+  "precompiled_roots": [],
+  "precompiled_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "compiler_sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554",
+  "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "source_snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T040225041542Z-27c039a5/sources",
+  "exit_code": 124
+}

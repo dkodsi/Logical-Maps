@@ -1,0 +1,39 @@
+{
+  "results": [
+    "CH-COALESCED",
+    "MAX-CH"
+  ],
+  "proofs": [
+    "proofs/coalesced-ch.md",
+    "proofs/opposite-ch-components.md"
+  ],
+  "remaining": "Further object-language rigidity and well-ordering verdicts; no finitistic Con(ZFC) reduction is certified.",
+  "compiler_invoked_during_packaging": false,
+  "conditional_certificate": "evidence/certificates/coalesced-ch-conditional/certificate.json",
+  "conditional_scope": {
+    "components": "Two actual pure-signature one-world Henkin component models with opposite quoted structural-CH witnesses are explicit hypotheses. Their existence is not established by this target. Component relational domains are preserved rather than replaced by external powersets.",
+    "countermodel": "Conditional on those components, their coalesced model fails the specified CH noncontingency sentence. The boxed-Barcan variant additionally assumes inhabited component domains at every type.",
+    "maximalism": "For a closed indicated type, the component hypotheses yield inconsistency of pure Maximalism together with that CH-noncontingency sentence, and likewise with its schema. This does not establish inconsistency of Maximalism alone.",
+    "atomicity": "The audit includes admitted singleton intensions in each one-world component and their coalescence, plus Atomicity and boxed Atomicity at every relational type under the stated model hypotheses. No external full-domain premise is substituted.",
+    "projection": "Projection/image characterizations and cylinder lifts are certified set-level lemmas. Their full object-language rigidity bridge is a separate obligation."
+  },
+  "accepted_certificate": "evidence/certificates/coalesced-ch-expanded/certificate.json",
+  "accepted_scope": {
+    "ambient_construction": "OppositeCHComponents constructs actual one-world pure-signature C components with inhabited domains and the original opposite structural-CH witnesses at type e. Its coalesced countermodel satisfies boxed Barcan at every type and fails the original CH-noncontingency sentence at e.",
+    "ambient_metatheory": "The external Flypitch forcing/completeness development is used in Lean ambient universe metatheory. Its ordinary-model endpoints have no explicit Con(ZFC) premise. No finitistic proof of a relative-consistency implication has been supplied; adding an unused Con(ZFC) premise would not supply one.",
+    "conditional_transfer": "FirstOrderTransfer assumes models or satisfiability of its explicitly defined witnessTheory, namely AxiomTheory.theory plus the translated pure sentence. The opposite-CH countermodel and Max applications there retain both such hypotheses. It does not by itself establish that these theories are satisfiable from Con(ZFC).",
+    "maximalism": "Every listed inconsistency conclusion includes Maximalism together with the specified CH-noncontingency instance or schema. None concludes that Maximalism alone is inconsistent.",
+    "typing": "The ambient component endpoints specialize to type e. Conditional FirstOrderTransfer is parameterized by sigma; its Max conclusions additionally require sigma.Closed.",
+    "models": "No external standardness, well-foundedness or transitivity of extracted arbitrary first-order membership models is claimed. Internal leastness, admitted subsets and actual internal graphs supply the relevant semantics.",
+    "metalogic": "Lean classical axioms used by the external construction are metatheoretic dependencies, not additional object-language principles of C."
+  },
+  "conditional_principal_declarations": 25,
+  "conditional_local_modules": 84,
+  "principal_declarations": 24,
+  "local_modules": 175,
+  "coverage": {
+    "ambient_component_endpoints": 7,
+    "conditional_first_order_endpoints": 9,
+    "semantic_bridge_checkpoints": 8
+  }
+}

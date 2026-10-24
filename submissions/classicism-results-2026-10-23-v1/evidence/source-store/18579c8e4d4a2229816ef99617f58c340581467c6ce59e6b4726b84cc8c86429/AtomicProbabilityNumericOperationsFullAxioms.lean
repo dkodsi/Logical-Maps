@@ -1,0 +1,16 @@
+import Classicism.Results.Research.AtomicProbabilityNumericOperationsCertificates
+
+-- Principal axiom reports for all twelve original numeric-operation translations.
+
+#print axioms Classicism.Research.ProbabilityNumericOperations.plus_eq.derivable
+#print axioms Classicism.Research.ProbabilityNumericOperations.times_eq.derivable
+#print axioms Classicism.Research.ProbabilityNumericOperations.plus_graph.derivable
+#print axioms Classicism.Research.ProbabilityNumericOperations.times_graph.derivable
+#print axioms Classicism.Research.ProbabilityNumericOperations.plus_numbers.derivable
+#print axioms Classicism.Research.ProbabilityNumericOperations.times_numbers.derivable
+#print axioms Classicism.Research.ProbabilityNumericOperations.number_induction.derivable
+#print axioms Classicism.Research.ProbabilityNumericOperations.number_cases.derivable
+#print axioms Classicism.Research.ProbabilityNumericOperations.plus_zero_right.derivable
+#print axioms Classicism.Research.ProbabilityNumericOperations.plus_suc_right.derivable
+#print axioms Classicism.Research.ProbabilityNumericOperations.times_zero_right.derivable
+#print axioms Classicism.Research.ProbabilityNumericOperations.times_suc_right.derivable

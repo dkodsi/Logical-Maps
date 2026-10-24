@@ -1,0 +1,33 @@
+id: barcan-t
+name: BF (type t)
+category: coarse
+statement: If every proposition necessarily has a property, then necessarily every proposition has it.
+formal: $\forall X^{tt}\, .\,(\forall p\, .\,\Box Xp)\to\Box(\forall p\, .\,Xp)$
+date: '2026-09-17'
+sources:
+- Andrew Bacon and Cian Dorr, Classicism, draft of 16 May 2023, §3.5, p. 59.
+source_names:
+- Classicism
+references:
+- paper: bacon-dorr-classicism
+  role: formulation
+  locator: §3.5, p. 59
+notes: The type $t$ instance of [[barcan-r]].
+changes:
+- date: '2026-10-19'
+  by: Claude Opus 5.5 (Anthropic), prompted by Cian Dorr
+  summary: 'At Cian Dorr’s request: the statement now says what the principle says; the notes link to
+    the unrestricted form.'
+variants:
+- id: dual
+  lean:
+    ref: Classicism.P.BarcanTDual.schemaIn
+    equivalence_ref: Classicism.Map.barcan_t.dual
+    status: verified
+  name: Dual form
+  statement: If possibly some proposition has a property, then some proposition possibly has it.
+  formal: $\forall X^{tt}\, .\,\Diamond(\exists p\, .\,Xp)\to\exists p\, .\,\Diamond Xp$
+  equivalence: Instantiate either form at the negations of its propositional or relational variables,
+    contrapose, and rewrite with $\Diamond=\neg\Box\neg$ and $q\le r\leftrightarrow\neg r\le\neg q$. This
+    yields the other form, and the same steps lead back.
+lean_def: Classicism.P.BarcanT.schemaIn

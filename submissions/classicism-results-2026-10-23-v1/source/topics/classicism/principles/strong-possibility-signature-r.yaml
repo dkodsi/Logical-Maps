@@ -1,0 +1,30 @@
+id: strong-possibility-signature-r
+name: Strong Possibility (signature Σ)
+category: signature
+statement: Every closed sentence of the fixed signature consistent with its Maximalist Classicism is possible
+  under the distinctness-preserving modality.
+formal: $\Diamond_{\ne}P\quad(P\in\mathcal L(\Sigma)\text{ closed; }\operatorname{Max}(C(\Sigma))+P\text{
+  consistent})$
+definitions: where $\Box_{\ne}p:=\exists q\, .\,q\land\Box(\Diamond q\to p)$ and $\Diamond_{\ne}p:=\neg\Box_{\ne}\neg
+  p$.
+date: '2026-09-17'
+sources:
+- Andrew Bacon and Cian Dorr, Classicism, draft of 16 May 2023, §2.5, pp. 37–39; §2.6, p. 42.
+source_names:
+- Classicism
+references:
+- paper: bacon-dorr-classicism
+  role: formulation
+  locator: §2.5, pp. 37–39; §2.6, p. 42
+notes: This keeps the signature-expanded reference theory throughout the consistency side condition. The
+  separate pure-language variant uses Max(C). No conservativity between these two maximalizations is assumed.
+  Consistency of Strong Possibility is left open in the source. Whatever is consistent with Max(C(Σ))
+  is already possible by Possibility Maximalism (signature Σ), which this principle implies; what it adds is possibility
+  under the distinctness-preserving modality. Incompatibilities of the form Strong Possibility (signature
+  Σ) + □Y are inherited through Possibility Maximalism (signature Σ) and Possibility Maximalism (pure); the collapse is refuted
+  directly.
+changes:
+- date: '2026-10-19'
+  by: Claude Opus 5.5 (Anthropic)
+  summary: 'At Cian Dorr’s request: definitions of its technical terms added.'
+lean_def: (Classicism.Meta.AxiomSet.strongPossibility _)

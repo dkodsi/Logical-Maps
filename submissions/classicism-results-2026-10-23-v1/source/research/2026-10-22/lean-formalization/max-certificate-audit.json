@@ -1,0 +1,1886 @@
+{
+  "generated_at_utc": "2026-10-23T05:48:12.446698+00:00",
+  "method": "Successful serial compiler entry plus current local source closure hash match; this script performs no Lean compilation.",
+  "external_dependencies": "Pinned compiler and precompiled binary hashes are recorded in the linked manifests; this audit does not rehash those external roots.",
+  "exact_target": "\u00ac Classicism.Meta.AxiomSet.Consistent (Classicism.Meta.AxiomSet.maximalist \u222a Classicism.P.AtomicityT.schema)",
+  "final_module_checked": true,
+  "checked_module_count": 48,
+  "module_count": 48,
+  "entries": [
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityCanonicalCompletion",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityCanonicalCompletion.lean",
+      "source_sha256": "350f475dec1799c308a06780a52160ffa546319137b1c2d9c8f5c4db0ffeb986",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "d9030cf85d6ff535a72f70cf9ee530881a21a5b7f3cd5a054bd8e5097b870c5d",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T054110843342Z-8be037f2/Classicism_Results_Research_MaxAtomicityCanonicalCompletion.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityCanonicalCompletion.posetCoding": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityCanonicalCompletion.posetCoding_full": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityCanonicalCompletion.regular_iff_carrier": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityCanonicalCompletion.canonical_algebraCarrier": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityCanonicalCompletion.algebraCarrier_unique": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityCodedFunctions",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityCodedFunctions.lean",
+      "source_sha256": "bcce6b14505bcc5c5b9025eb4f75c1bcf6f904aa503431896b1d57ce5e8b4f15",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "3d5f4f5ef8b36bf83ce058a44b41ba9e50c1195a2bb7c56779a69e7b036d89e8",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T053534142668Z-b0a0c6da/Classicism_Results_Research_MaxAtomicityCodedFunctions.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityCodedFunctions.functionCode_app": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityCodedFunctions.functionCode_function": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityCodedFunctions.functionCode_domain": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityCodedFunctions.functionCode_injective": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityConcreteModel",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityConcreteModel.lean",
+      "source_sha256": "add757857c725086c264330ffd2991f95817e1bf65264bf1a8b565fcbf5fc580",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "c8e0cedd96847ac1e950399168c8477de854d04154d092b7ad21fb1160b3fc26",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T050626811631Z-7bdcce28/Classicism_Results_Research_MaxAtomicityConcreteModel.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityConcreteModel.completionInfinite": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityConcreteModel.interpretation_C_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityConcreteModel.interpretation_hasHCode": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityConcreteModel.interpretation_external_splitter": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityCountableGenerator",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityCountableGenerator.lean",
+      "source_sha256": "ba85552f62386e3f13d36fca45eb897ad03bad69d7ddbf0c14e4ffca62dc781e",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "05323b8c282adcfec09413b536ba25db491b0cf93678dd65d92cb4ec2b32b90d",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T044931008757Z-62784d6f/Classicism_Results_Research_MaxAtomicityCountableGenerator.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityCountableGenerator.nonSplit_completeClosed": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityCountableGenerator.nonSplit_iInf": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityCountableGenerator.exists_generator_splits": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityCountableGenerator.leastIndex_spec": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityCountableGenerator.leastIndex_min": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityCountableGenerator.splitter_splits": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityEvalTools",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityEvalTools.lean",
+      "source_sha256": "a56ccb6777ba92c8a2138dab628d2e860d202a9ad4dbb1f4d1935995434067d9",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "3ebbae2b5e6ff6fc74c0d63f929f1d05bdec8c3110cf5edb4b1b0c6c2cfd2efe",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T044202659356Z-94ef85a2/Classicism_Results_Research_MaxAtomicityEvalTools.log",
+      "printed_axiom_reports": {},
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityHCodeCharacterization",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHCodeCharacterization.lean",
+      "source_sha256": "ceece44b87be66e139d65f60631e9372a3c7c211000aa5e83f29b69e7704e847",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "8a0c5bebca1df519ea3e3f3b0bbd913617f3b2010bf9306e8374b6f1a5530428",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T045523774389Z-b6960aa2/Classicism_Results_Research_MaxAtomicityHCodeCharacterization.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityHCodeCharacterization.good_collapseRange": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHCodeCharacterization.collapseIntoUniverse_bijective": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHCodeCharacterization.canonicalChange_membership": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHCodeCharacterization.satisfies_equiv": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHCodeCharacterization.eval_translate_canonical": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityHCodeExistence",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHCodeExistence.lean",
+      "source_sha256": "1409648333d50e37faa932e0f5a7c25ff3c4ec3c90c49466ecefaa7086a75e13",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "9cfb42bee6ac458f60051cf1cd46f387677e8b81bdb794ae329a960b2be60170",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T045523774389Z-b6960aa2/Classicism_Results_Research_MaxAtomicityHCodeExistence.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityHCodeExistence.codeRelation_good": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHCodeExistence.hasHCode_pure": [
+          "propext"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHCodeExistence.eval_witness_hCode": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHCodeExistence.eval_hasHCode": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityHCodeSemantics",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean",
+      "source_sha256": "29da54dbdb35b8376e26cdc9fdc9e9d5047ed2c1d24f8aae6f42c71022e4556b",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "86fd51ba76ebd57f6c58b7bbb6ec707a92d1e7dc2acbac1085c4fa103111805f",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T044931008757Z-62784d6f/Classicism_Results_Research_MaxAtomicityHCodeSemantics.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityHCodeSemantics.small_iff_embedding": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHCodeSemantics.eval_crisp": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHCodeSemantics.eval_crispRelation": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHCodeSemantics.eval_small": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHCodeSemantics.eval_small_eq_top_iff_embedding": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHCodeSemantics.eval_extensional": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHCodeSemantics.eval_rows": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHCodeSemantics.minimalSubset_iff_wellFounded": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHCodeSemantics.wellFoundedValue_eq_truth": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHCodeSemantics.eval_wellFounded": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHCodeSemantics.fillValue_eq_truth": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHCodeSemantics.eval_fill": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHCodeSemantics.eval_hCode": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHCodeSemantics.eval_hCode_noncrisp": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHCodeSemantics.eval_hCode_exact": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityHCodeSyntax",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHCodeSyntax.lean",
+      "source_sha256": "ddb243141435b8936629de3646132a0926e4c013659469091bfda7bae6862cbf",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "faa8c8a8e577c4a30b55b60aaa641c555b173d074de2f24d0813f01bb55b7997",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T042947565669Z-a7427a13/Classicism_Results_Research_MaxAtomicityHCodeSyntax.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityHCodeSyntax.hCodeTerm_pure": [
+          "propext"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityHereditaryCover",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHereditaryCover.lean",
+      "source_sha256": "5f00f5da64578cd3a6d064c05891c6a3b56210d4565886a208908c1e22a673fc",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "3bcf837bc9941ca25ae26888314c190aa25b87e174b5eac85a48ae2dafb861c9",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T044202659356Z-94ef85a2/Classicism_Results_Research_MaxAtomicityHereditaryCover.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityHereditaryCover.membersSmall_collapse": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHereditaryCover.collapse_hereditarilySmall": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHereditaryCover.hereditarilySmall_mem_range": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHereditaryCover.mem_range_iff_hereditarilySmall": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHereditaryCover.collapseRange_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityHereditaryGraphs",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHereditaryGraphs.lean",
+      "source_sha256": "8643ea32c9a282da19b7d57a6823076a47ca627eda915fbb7907de4c25f3caba",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "e9805836cbae5dcf40bd74897663d1e3410b52101ff23090fa007d16936c1de4",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T052556133859Z-c359be20/Classicism_Results_Research_MaxAtomicityHereditaryGraphs.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityHereditaryGraphs.hereditary_pair": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHereditaryGraphs.productEmbedding": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHereditaryGraphs.mem_orderGraph": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHereditaryGraphs.orderGraph_mem_universe": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHereditaryGraphs.mem_generatorGraph": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHereditaryGraphs.generatorGraph_mem_universe": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityHereditaryUniverse",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHereditaryUniverse.lean",
+      "source_sha256": "a7981e76d445a0fb9c03337a37e1420c321488a45ffdf53b1316d0d355efa9d4",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "56c769b390b53a9e4efe2f44a301e7f477c78ca5fa90f894eebe8ca58c037d88",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T044202659356Z-94ef85a2/Classicism_Results_Research_MaxAtomicityHereditaryUniverse.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityHereditaryUniverse.hereditary_has_tree": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHereditaryUniverse.mem_universeSet": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHereditaryUniverse.smallTree_card_le": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHereditaryUniverse.universeSet_card": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHereditaryUniverse.codeEquiv": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHereditaryUniverse.codeRelation_wellFounded": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHereditaryUniverse.codeRelation_extensional": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHereditaryUniverse.codeRelation_rows": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityHereditaryUniverse.codeRelation_fills": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityInconsistency",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityInconsistency.lean",
+      "source_sha256": "0d1d69dcf21694761c401ce90e3de8e5c9c1b65b2746a296b80d0b322430f671",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "b69014a410a239b8d96b0a2a0d14ed582eca556b715ac9bae3f3cfbb647fc0a1",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T054730505817Z-9a834f08/Classicism_Results_Research_MaxAtomicityInconsistency.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityInconsistency.canonical_adequacy": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityInconsistency.F_closedTypes": [
+          "propext"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityInconsistency.F_pure": [
+          "propext"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityInconsistency.F_splits": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityInconsistency.split_identity_not_C_theorem": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityInconsistency.maximalism_atomicity_inconsistent": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityJechShelahAmalgamation",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahAmalgamation.lean",
+      "source_sha256": "0f0682708a2f91a97197d7a034776ac84f8f4719d6597ec5b50603929a50735a",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "d3dbba739fdc304f3320779113944b54dc0798f0e470604d247bf5758d1cc561",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T051417824651Z-594808da/Classicism_Results_Research_MaxAtomicityJechShelahAmalgamation.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityJechShelahAmalgamation.union": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahAmalgamation.frontFintype": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahAmalgamation.amalgam_agree_level": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahAmalgamation.amalgam_restrict_le_member": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahAmalgamation.condition_amalgam_eq_iSup": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahAmalgamation.decide_coordinate": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahAmalgamation.decide_prefix": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityJechShelahArithmeticExistence",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahArithmeticExistence.lean",
+      "source_sha256": "c317de4d9baa6317c5b7471bae819b765c26f03ae38a030be486905c7a2356a9",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "ef8966c021a7837c9be6b57ea8bd994d7b700eb5ffeff9f17be8526a695cea53",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T054627454428Z-7a9dd757/Classicism_Results_Research_MaxAtomicityJechShelahArithmeticExistence.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityJechShelahArithmeticExistence.unary_on": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahArithmeticExistence.binary_on": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahArithmeticExistence.relation_on": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahArithmeticExistence.add_recursion": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahArithmeticExistence.mul_recursion": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahArithmeticExistence.pow_recursion": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahArithmeticExistence.growth_recursion": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahArithmeticExistence.ancestor_recursion_code": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahArithmeticExistence.canonical_arithmetic": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahArithmeticExistence.canonical_arithmetic_exists": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityJechShelahArithmeticSemantics",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahArithmeticSemantics.lean",
+      "source_sha256": "0be73fb4055d33aaba7fb458ac296814e337fac0b6cc628e5d897501dbc78d89",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "de68534f18d452dc44c271c912a56017d07db4743c23e0c278df26a530c0bb69",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T054333343375Z-85343c9c/Classicism_Results_Research_MaxAtomicityJechShelahArithmeticSemantics.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityJechShelahArithmeticSemantics.omega_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahArithmeticSemantics.graphApp\u2082_unique": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahArithmeticSemantics.unary_decodable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahArithmeticSemantics.arithmetic_decoded": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityJechShelahBranch",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahBranch.lean",
+      "source_sha256": "4f09088861c8cf56ca3aea6d186e04763c1edf74e587f13c157550638208faac",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "22279d05e593d71c9b9b748f20628baf6eca4d80e382106a8bb80ede633f77cd",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T051652660156Z-72daa52e/Classicism_Results_Research_MaxAtomicityJechShelahBranch.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityJechShelahBranch.children_cover": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahBranch.branchName": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahBranch.escape_slalom": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahBranch.branch_inf_capture": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahBranch.condition_le_marker": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityJechShelahConditionSemantics",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahConditionSemantics.lean",
+      "source_sha256": "64b6eb083fb2e7dcca966513869d77b7daf603e03821fa319047303e9ea9e5b2",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "50755a7ff7f1c90bcc51a8082af9e1df0d54271f7c0c710f8679757c062784e4",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T054627454428Z-7a9dd757/Classicism_Results_Research_MaxAtomicityJechShelahConditionSemantics.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityJechShelahConditionSemantics.manyChildren_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahConditionSemantics.conditionCode_iff_tree": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahConditionSemantics.canonical_generatorGraph": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahConditionSemantics.canonical_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahConditionSemantics.canonical_exists_of_arithmetic": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityJechShelahCylinders",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahCylinders.lean",
+      "source_sha256": "42025f166bb2c80378dd13b96e168152a5554a0376323eeb407d4f1b87afcec7",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "2c2df01d5954514202b87650846a7010734da979cc1addc6530fcbb1547cf27d",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T050626811631Z-7bdcce28/Classicism_Results_Research_MaxAtomicityJechShelahCylinders.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityJechShelahCylinders.condition_eq_iInf_levelJoin": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahCylinders.cylinders_completely_generate": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahCylinders.generator_completely_generates": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahCylinders.branchSplitter_splits": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityJechShelahEnumeration",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahEnumeration.lean",
+      "source_sha256": "412a62c28acc4ba1bb1fdafa872108845972cb4d5985326f18079f7c14845751",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "46a83b30aebc0124ff8e30578020ec09c62192f20666cd04bfdf63ab9c390efd",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T045523774389Z-b6960aa2/Classicism_Results_Research_MaxAtomicityJechShelahEnumeration.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityJechShelahEnumeration.index_lt_of_length_lt": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahEnumeration.index_injective": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahEnumeration.index_surjective": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahEnumeration.masterIndexEquiv": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityJechShelahFiniteRefinement",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahFiniteRefinement.lean",
+      "source_sha256": "e2c567beffd0d93008bcc4085ce7282d33beace717fb1f424beac62216a3cd4a",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "193b31e566040f607ed0ec405c83faa4011b064cd5dfe68f2898d8df4eb4bd54",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T051652660156Z-72daa52e/Classicism_Results_Research_MaxAtomicityJechShelahFiniteRefinement.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityJechShelahFiniteRefinement.selectedFrontEquiv": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahFiniteRefinement.selected_front_card": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahFiniteRefinement.selected_preserves_level": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahFiniteRefinement.selected_restrict_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahFiniteRefinement.selected_union_value": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahFiniteRefinement.decision_unique": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahFiniteRefinement.decision_preserved": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahFiniteRefinement.decide_selected": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityJechShelahFusion",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahFusion.lean",
+      "source_sha256": "9c020e86efde329ca1ad6b753aac8fbfe2f7675b559117f43a5a1266d5213163",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "864702f91e441cc2e5fce2b217efeee269bf81d9b62654b511677efcec88250c",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T050528283445Z-e13f0a58/Classicism_Results_Research_MaxAtomicityJechShelahFusion.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityJechShelahFusion.extension_at_level": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahFusion.FusionSequence.agree_below": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahFusion.FusionSequence.survives_later": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahFusion.FusionSequence.fuse": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahFusion.FusionSequence.fuse_le": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityJechShelahIndexCoding",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahIndexCoding.lean",
+      "source_sha256": "c2c50f09dace289dd2fb09988743939136ef07c4b5d7cf8bbd1a0d19355155c2",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "10143a23e5040ff6a3e042e2065e5e2f46dd358645afb86b2cf6942c698310c8",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T051652660156Z-72daa52e/Classicism_Results_Research_MaxAtomicityJechShelahIndexCoding.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityJechShelahIndexCoding.ancestor_unique": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahIndexCoding.indexCondition_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahIndexCoding.mem_indexedGenerator_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahIndexCoding.add_relation_unique": [
+          "propext"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahIndexCoding.growth_unique": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityJechShelahIndexedGenerators",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahIndexedGenerators.lean",
+      "source_sha256": "461eda817eabd9745369d15665fa2b847fdac0be77a9ccb991ab2b226d4e2ccf",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "76319df30d52c9f434cdb68f1cc0553bc56ffc3e800c9be032e52a96fe8bcc3f",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T051417824651Z-594808da/Classicism_Results_Research_MaxAtomicityJechShelahIndexedGenerators.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityJechShelahIndexedGenerators.indexedNode_index": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahIndexedGenerators.indexedGenerator_completely_generates": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahIndexedGenerators.indexedSplitter_splits": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityJechShelahLocalFusion",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahLocalFusion.lean",
+      "source_sha256": "3707fecc7829f38c86998c3324c411a6542dac8d1152fe5d8b8242a1ffecf035",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "f824933c5524066e50fc5d2a0860625c5f58cd0522a8b4bf03d2bb7989916c34",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T053534142668Z-b0a0c6da/Classicism_Results_Research_MaxAtomicityJechShelahLocalFusion.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityJechShelahLocalFusion.initial_stage": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahLocalFusion.next_exists": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahLocalFusion.localFusion": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahLocalFusion.localReadout": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahLocalFusion.exists_local_capture": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahLocalFusion.local_separation": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahLocalFusion.actual_slalomSeparation": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahLocalFusion.actual_rigid": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityJechShelahLocalStage",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahLocalStage.lean",
+      "source_sha256": "8ccecf4cbe5509e5c6d29aa26f50fde1fb617755284d1829fd7d4bfec77f3c75",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "bc098ec79cf2950c7302ede0638439e4eee71cb31ba74a9e743f95668b7d5745",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T053534142668Z-b0a0c6da/Classicism_Results_Research_MaxAtomicityJechShelahLocalStage.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityJechShelahLocalStage.growthP_mono": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahLocalStage.future_front_bound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahLocalStage.advance": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityJechShelahRigidityCriterion",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahRigidityCriterion.lean",
+      "source_sha256": "22861b973e08c473b2cbe4ab03c22213c7dbae96e0a384a14f4c04d4de2cb63a",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "12ba2679049765cb08a9bcdaa1065335c0e5fb11253880179330c4a792d7537e",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T051417824651Z-594808da/Classicism_Results_Research_MaxAtomicityJechShelahRigidityCriterion.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityJechShelahRigidityCriterion.marker_fixed": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahRigidityCriterion.marker_eq_condition": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahRigidityCriterion.rigid_of_slalomSeparation": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityJechShelahSetCodes",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahSetCodes.lean",
+      "source_sha256": "f44b09d6ca050f259a25d6832e479f2fc2e504259025e611fbef336346f49f09",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "a506bc94429ce0e28f3d37f8d4b927b53fb7e231617732a7c60fd8ebafbedf9d",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T051652660156Z-72daa52e/Classicism_Results_Research_MaxAtomicityJechShelahSetCodes.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityJechShelahSetCodes.natural_injective": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahSetCodes.natural_mem_natural": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahSetCodes.natural_hereditary": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahSetCodes.realCode_injective": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahSetCodes.treeCode_subset_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahSetCodes.conditionEmbedding": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahSetCodes.posetCode_hereditary": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahSetCodes.codeOpen_injective": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahSetCodes.algebraCode_hereditary": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahSetCodes.algebraCode_mem_universeSet": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityJechShelahSyntax",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean",
+      "source_sha256": "f510e45d873b7c94f9ae4c59490490aaba3b20748183d4c993817546d8237508",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "9965cc9687142cc1fd1c7560eb5e835ae48d5a6f924ca394d19b5f7f2bf7fc34",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T051417824651Z-594808da/Classicism_Results_Research_MaxAtomicityJechShelahSyntax.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityJechShelahSyntax.satisfies_binaryOn": [
+          "propext"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahSyntax.satisfies_growthRecursion": [
+          "propext"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahSyntax.satisfies_conditionCode": [
+          "propext"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahSyntax.satisfies_JSCode": [
+          "propext"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityJechShelahTrees",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahTrees.lean",
+      "source_sha256": "372ab28d11ade4e66a5ac96e2e21e312502cc4e3dbff63cc30503e8b9b4fb48b",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "dbfdf3362f288838450ae9ec37c1abb30ead16f53991d575efe16a06fe0eadff",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T045523774389Z-b6960aa2/Classicism_Results_Research_MaxAtomicityJechShelahTrees.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityJechShelahTrees.power_growth_bound": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahTrees.masterCondition": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahTrees.Condition.restrict": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahTrees.forcing_splitting": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahTrees.forcing_separative": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityJechShelahTrees.forcing_completion_atomless": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityMostowski",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityMostowski.lean",
+      "source_sha256": "8125ce5f52abf4e83b36ec7eb8ba051cc1baf201a32fdf641bd986cd74816c1c",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "4f2959bbdda026947f193bebfdc77fc7ee337c239bd1fdda890af6b60cd17b61",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T044202659356Z-94ef85a2/Classicism_Results_Research_MaxAtomicityMostowski.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityMostowski.collapse_injective": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityMostowski.collapse_mem_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityMostowski.collapseRange_transitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityMostowski.collapse_unique": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityMostowski.predecessorMap_bijective": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityMostowski.exists_transitive_collapse": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityPureSelector",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityPureSelector.lean",
+      "source_sha256": "b2de299c0717bf1b7d5f94442f8dfcc947421f1d9f7f9b29f98412a1ec17cffb",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "ea8e6d6d6e6037fa29bae9e364064cd2f1d5fd8de128e4ed2ea22db41aa08596",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T051417824651Z-594808da/Classicism_Results_Research_MaxAtomicityPureSelector.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityPureSelector.selector_pure": [
+          "propext"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityPureSelector.selector_closedTypes": [
+          "propext"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityPureSelector.eval_witnessGuard": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityPureSelector.eval_selects": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityPureSelector.eval_selector": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityPureSelector.Presentation.iso_eq_carrier": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityPureSelector.selected_least": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityPureSelector.least_selected": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityPureSelector.eval_selector_eq_least": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityPureSelector.eval_selector_splits": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityReduction",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityReduction.lean",
+      "source_sha256": "57343a60a522eea406621bbfeaa7897b88716c115de0bd18d05bde6764a1165e",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "48b6c3b1077d52918b5314e75019f819e0a8abd97fd595604d67dce0d919100c",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T043512624964Z-73db32d1/Classicism_Results_Research_MaxAtomicityReduction.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityReduction.maximalist_has_nonidentity": [
+          "propext"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityReduction.inconsistent_of_forced_identity": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityReduction.atomicityT_inconsistent_of_separator": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityReduction.AtomicitySeparator.inconsistent": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityRegularCompletion",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityRegularCompletion.lean",
+      "source_sha256": "c5016583a1f01724023cb1ec2099379fe2a365b4e306647c13bab5ee6f2a9de0",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "1ab01c39b135c79f29086079b4b73e97173b74574b3f5a3a1e3b9baa7fd76000",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T044202659356Z-94ef85a2/Classicism_Results_Research_MaxAtomicityRegularCompletion.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityRegularCompletion.regularCompleteBooleanAlgebra": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityRegularCompletion.regularize_eq_bot_iff": [
+          "propext"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityRegularCompletion.condition_ne_bot": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityRegularCompletion.condition_dense": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityRegularCompletion.condition_inf_ne_bot_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityRegularCompletion.condition_le_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityRegularCompletion.completion_atomless": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityRegularOpenCode",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityRegularOpenCode.lean",
+      "source_sha256": "63b377d92316c1e87f6d97838cac6f383a04a993e5a07cae17e230ba8d71cfd1",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "a51cb58795cfc8b80261b442259edacb7d39aad6450a9ccf451644728902034f",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T050111756968Z-5163557c/Classicism_Results_Research_MaxAtomicityRegularOpenCode.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityRegularOpenCode.satisfies_regular": [
+          "propext"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityRegularOpenCode.satisfies_algebraCarrier": [
+          "propext"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityRegularOpenCode.satisfies_complementGraph": [
+          "propext"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityRegularOpenCode.satisfies_meetGraph": [
+          "propext"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityRegularOpenCode.pseudoLower_eq_compl": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityRegularOpenCode.PosetCoding.regular_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityRegularOpenCode.PosetCoding.regular_meet_iff_rep": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityRegularOpenCode.PosetCoding.regular_compl_iff_rep": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityRegularOpenCode.PosetCoding.regularEquiv": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityRigidTransport",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityRigidTransport.lean",
+      "source_sha256": "bc0586cb57ba140534543960ba358971eecb7b6acd4efb809da6256b596671a0",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "984cf6e9740be9784faae72e8e0160fa5d4b2918077e4b40647316ea1f77fbb9",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T044931008757Z-62784d6f/Classicism_Results_Research_MaxAtomicityRigidTransport.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityRigidTransport.map_compl": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityRigidTransport.iso_unique": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityRigidTransport.rigid_copy": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityRigidTransport.presentation_change": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityRigidTransport.pullback_isWellOrder": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityRigidTransport.pullback_independent": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityRigidTransport.pullback_presentation_invariant": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicitySelectorTransport",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySelectorTransport.lean",
+      "source_sha256": "74f0e62fb193dc2b93159c35d518580382dc1002d83bb9d61d49a15d54a24863",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "8e3b085ca401001e01b303e03ea1453860eac4c33c83a07b417022c02cbcd0c6",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T054110843342Z-8be037f2/Classicism_Results_Research_MaxAtomicitySelectorTransport.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicitySelectorTransport.subset_equiv": [
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySelectorTransport.graphApp_equiv": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySelectorTransport.pullbackPresentation": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySelectorTransport.adequate_of_canonical": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySelectorTransport.adequate_of_canonical_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicitySetCodeAbsoluteness",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySetCodeAbsoluteness.lean",
+      "source_sha256": "56958ca950b1c3e1dd2c487936105df2b8e5f68b130e32592f7001f84027312c",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "e8cd671ef2ff56824199b700bc8fefe588571212ba9c90012f4ff5473b7768d2",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T053534142668Z-b0a0c6da/Classicism_Results_Research_MaxAtomicitySetCodeAbsoluteness.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicitySetCodeAbsoluteness.present_encode": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySetCodeAbsoluteness.subset_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySetCodeAbsoluteness.singleton_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySetCodeAbsoluteness.unorderedPair_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySetCodeAbsoluteness.orderedPair_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySetCodeAbsoluteness.graphApp_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySetCodeAbsoluteness.canonicalPresentation": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicitySetFormulaTools",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySetFormulaTools.lean",
+      "source_sha256": "75af9b5df11012ce755a9a25bc0dabc699bba89094bbe96e218003691b766908",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "e42e9f8de6242417995cda5cce366d94a8de8fd00be095af714af4bf652d8e93",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T045523774389Z-b6960aa2/Classicism_Results_Research_MaxAtomicitySetFormulaTools.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicitySetFormulaTools.satisfies_rename": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySetFormulaTools.satisfies_lift": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySetFormulaTools.satisfies_orderedPair": [
+          "propext"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySetFormulaTools.satisfies_graphApp": [
+          "propext"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySetFormulaTools.satisfies_functionGraph": [
+          "propext"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySetFormulaTools.satisfies_graphDomain": [
+          "propext"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySetFormulaTools.satisfies_graphRange": [
+          "propext"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySetFormulaTools.Ordinary.orderedPair_zfSet": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySetFormulaTools.Ordinary.graphApp_zfSet": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySetFormulaTools.Ordinary.functionGraph_zfSet": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySetFormulaTools.Ordinary.powerSet_zfSet": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicitySetSemantics",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySetSemantics.lean",
+      "source_sha256": "15f3a9c609f9329557edab897848d0117f768e931b667b59e336d12331a6fb2a",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "b2e400038302cabd944bfe3d2ed4d79a5ef43a855068e5af25bef1269d2c55f8",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T044202659356Z-94ef85a2/Classicism_Results_Research_MaxAtomicitySetSemantics.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicitySetSemantics.iInf_truth": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySetSemantics.iSup_truth": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySetSemantics.eval_liftEnv": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySetSemantics.eval_translate": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySetSemantics.eval_translate_eq_top_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicitySetSyntax",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySetSyntax.lean",
+      "source_sha256": "9474cc11539a655beffd489fc40c1e0939f54d63fa8c87aadd427d8891a57c32",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "e2cb9cd6ef1ede58688895db65c7a81bd84140884647f56176f2c0ec3cc7cdb7",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T042947565669Z-a7427a13/Classicism_Results_Research_MaxAtomicitySetSyntax.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicitySetSyntax.translate_closedTypes": [
+          "propext"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySetSyntax.quoteBinary_closedTypes": [
+          "propext"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySetSyntax.quoteBinary_pure": [
+          "propext"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicitySlalomInvariance",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySlalomInvariance.lean",
+      "source_sha256": "94115d4f32cc457940b64df679fd4d79bce4827f35c89eb19ca854d30b7d9582",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "bd25e3f1323fdf6f479c05ebde7041792c0b0749045ba67806d6f262019fa8d4",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T044931008757Z-62784d6f/Classicism_Results_Research_MaxAtomicitySlalomInvariance.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicitySlalomInvariance.map_compl": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySlalomInvariance.mapNameEquiv": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySlalomInvariance.map_capture": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySlalomInvariance.map_cover": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySlalomInvariance.map_invariant": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySlalomInvariance.automorphism_fixes_invariant": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicitySlalomLimit",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySlalomLimit.lean",
+      "source_sha256": "e321806b1bc268bcfd98b1bf406abed775673aefcd0478a5d066f5bb8baa2745",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "c040109b3d0bf8a68c866d6f24616b060a5147fbc2d40d1c0c3b127a51741519",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T051652660156Z-72daa52e/Classicism_Results_Research_MaxAtomicitySlalomLimit.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicitySlalomLimit.condition_eq_iSup_restrictions": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySlalomLimit.FusionReadout.stage_spec": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySlalomLimit.FusionReadout.slalom": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySlalomLimit.FusionReadout.fuse_le_capture": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySlalomLimit.FusionReadout.fuse_le_cover": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicitySlalomThinning",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySlalomThinning.lean",
+      "source_sha256": "22e77ba07eaee37ca622586767c4d4ade97b5966a9769e3554184f4e6d8dd4c0",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "cde61ea5af3a00e8eb4f6b04046f5fa259a9d87da3dfd058ad4c8ac1690dd8cc",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T045523774389Z-b6960aa2/Classicism_Results_Research_MaxAtomicitySlalomThinning.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicitySlalomThinning.monochromatic_embedding": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySlalomThinning.thin_power": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySlalomThinning.prod_growthN": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySlalomThinning.card_color": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySlalomThinning.thin_growth": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySlalomThinning.thin_growth_coordinates": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicitySplitCertificate",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySplitCertificate.lean",
+      "source_sha256": "1b3073449ce0d8fd45ea234cc71f06ab4a3523bb1c1cab43785a016f79298553",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "260d8e474bcf756ece02ec5739b0dec7edc4c6b0654af1ea27a0f4a96af34668",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T043512624964Z-73db32d1/Classicism_Results_Research_MaxAtomicitySplitCertificate.log",
+      "printed_axiom_reports": {
+        "Classicism.Research.MaxAtomicitySplitCertificate.guard_eq_split.derivable": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySplitCertificate.split_closedTypes": [
+          "propext"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySplitCertificate.split_pure": [
+          "propext"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySplitCertificate.split_zero_under_atomicity": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySplitCertificate.separatorOfNonTheorem": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySplitCertificate.inconsistent_of_split_not_zero_theorem": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicitySplitSemantics",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySplitSemantics.lean",
+      "source_sha256": "8da9c6a0ce53f77d72a5007c91eb1f9ebb9ba94b7f0216ebc90162f65f5f4b3e",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "7c3de8c7dee67653b0558c4980add5fe88936e0f11e8c11f15b702071974a7f5",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T050111756968Z-5163557c/Classicism_Results_Research_MaxAtomicitySplitSemantics.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicitySplitSemantics.guardedSup_eq_unique": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySplitSemantics.splitValue_eq_top": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySplitSemantics.guardedLeastPart_eq_selector": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySplitSemantics.guardedLeastPart_splits": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySplitSemantics.guardedLeastPart_splitValue": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySplitSemantics.eval_split": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicitySplitSemantics.split_identity_not_C_theorem": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicitySyntax",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySyntax.lean",
+      "source_sha256": "531f3acdbafd1e6d58476ffa2f4df93325774122c04240943b88e4c7abb121f5",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "0318cb540d99ed092bb2762fc2cafc03ad19f75ed20081983110acc2a20116ad",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T042947565669Z-a7427a13/Classicism_Results_Research_MaxAtomicitySyntax.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicitySyntax.coverCode_pure": [
+          "propext"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityWellOrder",
+      "source": "topics/classicism/lean/Classicism/Results/Research/MaxAtomicityWellOrder.lean",
+      "source_sha256": "3035a223f88cf90e263b3b115cc70b12d8a850d59cf80cffd252044f7df86110",
+      "status": "checked_current_source_closure",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json",
+      "fingerprint": "001c4c492d1a7d713fac0e9c64cfbaabbe5c7ce21e4a36f13c2b82c967869c09",
+      "log": "research/2026-10-22/lean-formalization/logs/runs/20261023T044202659356Z-94ef85a2/Classicism_Results_Research_MaxAtomicityWellOrder.log",
+      "printed_axiom_reports": {
+        "Classicism.Meta.Research.MaxAtomicityWellOrder.exists_unique_leastPart": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityWellOrder.properPart_splits": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityWellOrder.leastPart_spec": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityWellOrder.selector_splits": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityWellOrder.exists_unique_selector": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Classicism.Meta.Research.MaxAtomicityWellOrder.exists_splitter": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "reported_nonstandard_axioms": []
+    }
+  ]
+}

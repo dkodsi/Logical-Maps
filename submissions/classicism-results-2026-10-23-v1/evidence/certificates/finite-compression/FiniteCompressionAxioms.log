@@ -1,0 +1,39 @@
+Classicism.Meta.Intensional.FiniteCompression.central_countermodel :
+  Classicism.Meta.Intensional.FiniteCompression.model.IsModel ∧
+    Classicism.Meta.Intensional.FiniteCompression.model.HoldsAx Classicism.P.TameRigidity.schema ∧
+      Classicism.Meta.Intensional.FiniteCompression.model.HoldsAx Classicism.P.RigidPower.schema ∧
+        ¬Classicism.Meta.Intensional.FiniteCompression.model.HoldsSentence
+            (Classicism.P.WeaklyRigidPower.quoted Classicism.Meta.Intensional.FiniteCompression.et)
+Classicism.Meta.Intensional.FiniteCompression.not_entails_weakly_rigid_power :
+  ¬Classicism.Meta.Intensional.FiniteCompression.Background ⟹ Classicism.P.WeaklyRigidPower.schema
+'Classicism.Meta.Intensional.FiniteCompression.isModel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.Intensional.FiniteCompression.weak_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.Intensional.FiniteCompression.compress_return' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Intensional.FiniteCompression.finite_label_exact' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Intensional.FiniteCompression.rigid_subobject_descent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.FiniteApproximation.exists_approximation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.Intensional.FiniteCompression.approximate_lift' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Intensional.FiniteCompression.rigid_power_at_root' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Intensional.FiniteCompression.block_weak' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Classicism.Meta.Intensional.FiniteCompression.block_not_rigid' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Intensional.FiniteCompression.not_weakly_rigid_power_et' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Intensional.FiniteCompression.central_countermodel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Intensional.FiniteCompression.not_entails_weakly_rigid_power' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

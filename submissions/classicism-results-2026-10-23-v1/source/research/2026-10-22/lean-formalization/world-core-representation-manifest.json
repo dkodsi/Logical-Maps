@@ -1,0 +1,46 @@
+{
+  "status": "READY FOR INTEGRATION",
+  "worker_compiled": false,
+  "source_modules": [
+    "topics/classicism/lean/Classicism/Results/Research/WorldRepresentation.lean",
+    "topics/classicism/lean/Classicism/Results/Research/WorldRepresentationCertificates.lean"
+  ],
+  "certificate_drivers": [
+    "research/2026-10-22/lean-formalization/world-core-checks/WorldRepresentation_at_and.lean",
+    "research/2026-10-22/lean-formalization/world-core-checks/WorldRepresentation_at_neg.lean",
+    "research/2026-10-22/lean-formalization/world-core-checks/WorldRepresentation_at_or.lean",
+    "research/2026-10-22/lean-formalization/world-core-checks/WorldRepresentation_at_all.lean",
+    "research/2026-10-22/lean-formalization/world-core-checks/WorldRepresentation_at_identity.lean",
+    "research/2026-10-22/lean-formalization/world-core-checks/WorldRepresentation_at_box.lean",
+    "research/2026-10-22/lean-formalization/world-core-checks/WorldRepresentation_atom_necessary.lean",
+    "research/2026-10-22/lean-formalization/world-core-checks/WorldRepresentation_encode_admissible.lean",
+    "research/2026-10-22/lean-formalization/world-core-checks/WorldRepresentation_decode_encode.lean",
+    "research/2026-10-22/lean-formalization/world-core-checks/WorldRepresentation_encode_decode.lean",
+    "research/2026-10-22/lean-formalization/world-core-checks/WorldRepresentation_encode_injective.lean",
+    "research/2026-10-22/lean-formalization/world-core-checks/WorldRepresentation_encode_meet.lean",
+    "research/2026-10-22/lean-formalization/world-core-checks/WorldRepresentation_encode_join.lean",
+    "research/2026-10-22/lean-formalization/world-core-checks/WorldRepresentation_encode_neg.lean",
+    "research/2026-10-22/lean-formalization/world-core-checks/WorldRepresentation_encode_bottom.lean",
+    "research/2026-10-22/lean-formalization/world-core-checks/WorldRepresentation_encode_top.lean"
+  ],
+  "sha256": {
+    "topics/classicism/lean/Classicism/Results/Research/WorldRepresentation.lean": "1f003c527c1161ee8b2be9101de3dd20cd60b05974f4e17c9d95ceaa339c179e",
+    "topics/classicism/lean/Classicism/Results/Research/WorldRepresentationCertificates.lean": "007b06bd8f6cd62a9a3a7fe35e95ace25738b5a9cc0b0c9f6375a0a35e584fa6",
+    "research/2026-10-22/lean-formalization/world-core-checks/WorldRepresentation_at_and.lean": "44f1432e43867d922748253e1740251d02d855ebf80eaa392a1d274ec502e0e4",
+    "research/2026-10-22/lean-formalization/world-core-checks/WorldRepresentation_at_neg.lean": "950edea36169e8207f6b60a7f62f496c83259a4627421fbebc1239deca3ddb52",
+    "research/2026-10-22/lean-formalization/world-core-checks/WorldRepresentation_at_or.lean": "0fb18c6cb3eb6089a41bdb1786e06540d226d82355e27c2002706cd2e008e206",
+    "research/2026-10-22/lean-formalization/world-core-checks/WorldRepresentation_at_all.lean": "70cae4a0955abef7c3338e1e9a76fcf6fa8c0db35afbb26895109d8b54d3c7dd",
+    "research/2026-10-22/lean-formalization/world-core-checks/WorldRepresentation_at_identity.lean": "3dba7743ad727f368b3fa5997b29118a21da8fec4c149e2d373ab2e384d21879",
+    "research/2026-10-22/lean-formalization/world-core-checks/WorldRepresentation_at_box.lean": "6ef1077a68214029a326c3628d5297a85b8849b97f64af797448eff2a6c1943e",
+    "research/2026-10-22/lean-formalization/world-core-checks/WorldRepresentation_atom_necessary.lean": "493783482b2b023929f3412057572aaea0a97527c2f290fff1a51e89416a2da3",
+    "research/2026-10-22/lean-formalization/world-core-checks/WorldRepresentation_encode_admissible.lean": "73f5ac966811d8049a0376996d1ce97f8dc391baa41a23471b11fede0b1de547",
+    "research/2026-10-22/lean-formalization/world-core-checks/WorldRepresentation_decode_encode.lean": "89e7795e433dc7bbd69a40b5e9795d0cfe03945f2e395cab99e8db3c8b99ccce",
+    "research/2026-10-22/lean-formalization/world-core-checks/WorldRepresentation_encode_decode.lean": "335c13f6424c838cb7b8e1b6acb0322cd3fd71da9111ac237e4c9b56b4268fcb",
+    "research/2026-10-22/lean-formalization/world-core-checks/WorldRepresentation_encode_injective.lean": "5074c3794f60d18d251bae3a11cac73f1dda64c01b034997a39b10ff255d973f",
+    "research/2026-10-22/lean-formalization/world-core-checks/WorldRepresentation_encode_meet.lean": "a8673bbf1d2ed85cb0b7439d4def62bea7cbbd9df098eb5d67f6ddf72a379582",
+    "research/2026-10-22/lean-formalization/world-core-checks/WorldRepresentation_encode_join.lean": "854c38e555873f1a5dbd6b73ba56d9db8e6aca80d8af4586b0f0f8160822c559",
+    "research/2026-10-22/lean-formalization/world-core-checks/WorldRepresentation_encode_neg.lean": "0e660f280c67631e05ce3332a4d98730e6d89e76d6c53b8097b0d22d32aed2d6",
+    "research/2026-10-22/lean-formalization/world-core-checks/WorldRepresentation_encode_bottom.lean": "d9e0656a86ce5110bf76ac53167c35bdb82bb476acc7e8f0117f1d091d905ff2",
+    "research/2026-10-22/lean-formalization/world-core-checks/WorldRepresentation_encode_top.lean": "bd916675e2d407ff2ac483e2547ac98a94de9c85e4f6e914ffce440461996f1d"
+  }
+}

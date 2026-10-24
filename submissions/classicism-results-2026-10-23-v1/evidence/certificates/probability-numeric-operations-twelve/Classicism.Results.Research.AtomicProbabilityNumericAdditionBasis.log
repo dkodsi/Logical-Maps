@@ -1,0 +1,9 @@
+Probability dependency checkpoint [mono_ms=10770541]: Additive uniqueness checkpoint: imports complete
+Probability dependency checkpoint [mono_ms=10770541; elapsed_ms=0]: begin derive Classicism.Research.ActualityCoreArithmetic.core_add_functional
+Probability dependency checkpoint [mono_ms=10790815; elapsed_ms=20274]: derive returned Classicism.Research.ActualityCoreArithmetic.core_add_functional.derivable; theory=C-minus
+Probability dependency checkpoint [mono_ms=10790816; elapsed_ms=20275]: begin kernel environment barrier Classicism.Research.ActualityCoreArithmetic.core_add_functional.derivable
+Probability dependency checkpoint [mono_ms=10790823; elapsed_ms=20282]: kernel environment theorem present Classicism.Research.ActualityCoreArithmetic.core_add_functional.derivable
+Probability dependency checkpoint [mono_ms=10791517]: begin axiom report Classicism.Research.ActualityCoreArithmetic.core_add_functional.derivable
+Probability dependency checkpoint [mono_ms=10802575]: axiom report returned Classicism.Research.ActualityCoreArithmetic.core_add_functional.derivable
+Probability dependency checkpoint [mono_ms=10802591]: Additive uniqueness checkpoint: commands complete; frontend finalization remains
+'Classicism.Research.ActualityCoreArithmetic.core_add_functional.derivable' depends on axioms: [propext, Quot.sound]

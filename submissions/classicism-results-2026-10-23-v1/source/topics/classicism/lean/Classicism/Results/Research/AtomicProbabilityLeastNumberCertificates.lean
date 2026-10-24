@@ -1,0 +1,20 @@
+import Classicism.Results.Research.AtomicProbabilityLeastNumber
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Schema
+
+#classicism_audit Classicism.Results.Research.AtomicProbabilityLeastNumber
+#classicism_types_audit Classicism.Results.Research.AtomicProbabilityLeastNumber
+
+#classicism_derive Classicism.Research.ProbabilityNaturalOrder.le_suc_self
+  Classicism.Research.ProbabilityNaturalOrder.le_eq_or_lt
+  Classicism.Research.ProbabilityNaturalOrder.lt_implies_le
+  Classicism.Research.ProbabilityNaturalOrder.lt_irrefl
+  Classicism.Research.ProbabilityNaturalOrder.le_suc_cases
+  Classicism.Research.ProbabilityNaturalOrder.bounded_field_has_least
+  Classicism.Research.ProbabilityNaturalOrder.represented_field_has_least
+  Classicism.Research.ProbabilityNaturalOrder.leastNumber_unique
+  Classicism.Research.ProbabilityNaturalOrder.least_index_graph
+
+#print axioms Classicism.Research.ProbabilityNaturalOrder.represented_field_has_least.derivable
+#print axioms Classicism.Research.ProbabilityNaturalOrder.least_index_graph.derivable

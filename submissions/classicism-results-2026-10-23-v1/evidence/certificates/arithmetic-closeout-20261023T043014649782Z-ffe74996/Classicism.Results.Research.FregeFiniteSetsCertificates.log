@@ -1,0 +1,43 @@
+Classicism.Research.FregeFiniteSets.equal_count_inclusion: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.FregeFiniteSets.finite_adjoin: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.FregeFiniteSets.finite_at_most_one: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.FregeFiniteSets.finite_coext: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.FregeFiniteSets.finite_empty: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.FregeFiniteSets.finite_fibre_union: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.FregeFiniteSets.finite_functional_image: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.FregeFiniteSets.finite_injection_domain: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.FregeFiniteSets.finite_of_empty: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.FregeFiniteSets.finite_self_injection_surjective: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.FregeFiniteSets.finite_separated_family: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.FregeFiniteSets.finite_singleton: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.FregeFiniteSets.finite_subset: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.FregeFiniteSets.finite_union: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.FregeFiniteSets.finite_upper_bound: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.FregeFiniteSets.infinity_iff_outsiders: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.FregeFiniteSets.infinity_iff_realizes: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.FregeFiniteSets.injective_image_count: Classicism ✓ [C⁻] (axioms: [])
+#classicism_audit Classicism.Results.Research.FregeFiniteSets: 18/18 theorems pass; 18 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.FregeFiniteSets: 18/18 inside R
+Classicism.Results.Research.FregeFiniteSets: 18 of 18 theorems derived
+
+[1/18] Classicism.Research.FregeFiniteSets.equal_count_inclusion ✓ 346 ms
+[2/18] Classicism.Research.FregeFiniteSets.finite_adjoin ✓ 100 ms
+[3/18] Classicism.Research.FregeFiniteSets.finite_at_most_one ✓ 219 ms
+[4/18] Classicism.Research.FregeFiniteSets.finite_coext ✓ 0 ms
+[5/18] Classicism.Research.FregeFiniteSets.finite_empty ✓ 0 ms
+[6/18] Classicism.Research.FregeFiniteSets.finite_fibre_union ✓ 785 ms
+[7/18] Classicism.Research.FregeFiniteSets.finite_functional_image ✓ 75 ms
+[8/18] Classicism.Research.FregeFiniteSets.finite_injection_domain ✓ 188 ms
+[9/18] Classicism.Research.FregeFiniteSets.finite_of_empty ✓ 0 ms
+[10/18] Classicism.Research.FregeFiniteSets.finite_self_injection_surjective ✓ 644 ms
+[11/18] Classicism.Research.FregeFiniteSets.finite_separated_family ✓ 730 ms
+[12/18] Classicism.Research.FregeFiniteSets.finite_singleton ✓ 0 ms
+[13/18] Classicism.Research.FregeFiniteSets.finite_subset ✓ 375 ms
+[14/18] Classicism.Research.FregeFiniteSets.finite_union ✓ 0 ms
+[15/18] Classicism.Research.FregeFiniteSets.finite_upper_bound ✓ 63 ms
+[16/18] Classicism.Research.FregeFiniteSets.infinity_iff_outsiders ✓ 52 ms
+[17/18] Classicism.Research.FregeFiniteSets.infinity_iff_realizes ✓ 98 ms
+[18/18] Classicism.Research.FregeFiniteSets.injective_image_count ✓ 0 ms
+'Classicism.Research.FregeFiniteSets.finite_fibre_union.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.FregeFiniteSets.finite_separated_family.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.FregeFiniteSets.infinity_iff_realizes.derivable' depends on axioms: [propext, Quot.sound]

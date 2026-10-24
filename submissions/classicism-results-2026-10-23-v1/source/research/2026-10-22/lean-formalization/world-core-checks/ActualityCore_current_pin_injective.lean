@@ -1,0 +1,9 @@
+import Classicism.Results.Research.ActualityCore
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Translate
+
+#classicism_check Classicism.Research.ActualityCore.current_pin_injective
+#classicism_types Classicism.Research.ActualityCore.current_pin_injective
+#classicism_derive Classicism.Research.ActualityCore.current_pin_injective
+#print axioms Classicism.Research.ActualityCore.current_pin_injective.derivable

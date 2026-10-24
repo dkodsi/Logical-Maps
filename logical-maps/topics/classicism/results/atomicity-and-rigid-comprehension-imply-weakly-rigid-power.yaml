@@ -1,0 +1,48 @@
+id: atomicity-and-rigid-comprehension-imply-weakly-rigid-power
+premises:
+- atomicity-r
+- rigid-comprehension-r
+conclusion: weakly-rigid-power-r
+status: proved
+certificate:
+  source_id: misc
+  produced_by: Codex (OpenAI), prompted by Daniel Kodsi, original adaptation of 22 October 2026
+  recorded_by: Codex (OpenAI), prompted by Daniel Kodsi, 23 October 2026
+  checked_by: []
+  date: '2026-10-23'
+  lean: none
+sources:
+- Codex (OpenAI), prompted by Daniel Kodsi, Modal principles in Maximalist Classicism,
+  research note of 22 October 2026, §16, Atomicity and Rigid Comprehension imply Weakly Rigid
+  Power, unpaginated; retained in submissions/classicism-results-2026-10-23-v1/source/research/2026-10-22/notes/maximalism-modal.md.
+source_names:
+- Codex, prompted by Daniel Kodsi, 22 Oct
+references:
+- paper: bacon-mathematical-contingency
+  role: background
+  locator: Appendix C.2, Lemma C.6, pp. 15–16 of the separately paginated appendix
+  note: The atom-pullback method adapted in the original research note. The present W,W,W
+    strengthening is not attributed to the paper.
+- paper: sun-possible-worlds-without-atomicity
+  role: background
+  note: Coextensive weakly rigid relations are identical; the elementary proof is reproduced
+    in the write-up.
+proof: >-
+  See the matching write-up, writeups/atomicity-and-rigid-comprehension-imply-weakly-rigid-power.md.
+  Fix a relational type $\tau$ and weakly rigid $F^\tau$. Rigid Comprehension at $\tau$
+  makes every current weakly rigid relation rigid, so the weak-power property
+  $P_F:=\lambda Y^\tau\,.\,\operatorname{WeaklyRigid}(Y)\land Y\le F$ is weakly persistent.
+  The atom-pullback argument uses Rigid Comprehension at $\tau$ to show that every atom
+  $W\le P_F$ entails identity with one current member of $P_F$. Atomicity at $\tau t$
+  then prevents a nonbottom part of $P_F$ from escaping any necessary cover of its
+  current members. Thus $P_F$ is weakly inextensible and hence weakly rigid.
+notes: >-
+  The sharper typed implication is Rigid Comprehension at $\tau$ plus Atomicity at $\tau t$
+  implies Weakly Rigid Power at $\tau$, including $\tau=t$. No BF, boxed optional
+  premise, or comprehension at $\tau t$ is used. This is the W,W,W principle, not merely
+  the W,R,W refinement noted in [[atomicity-and-rigid-comprehension-imply-rigid-power]].
+  The existing all-schema implication [[weakly-rigid-power-implies-rigid-power]] uses
+  the higher power-property type; no same-type replacement of that argument is claimed.
+  The submission catalog, rigidity.02, separately records successful research-module
+  checks under manifest 20261023T044252100669Z-9b8e2beb. Those checks have not been
+  promoted to a generated-statement certificate for this new database record.

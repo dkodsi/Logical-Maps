@@ -1,0 +1,43 @@
+Probability source axioms [mono_ms=9515225]: begin Classicism.Results.Research.AtomicProbabilityCutCrossing
+Probability source axioms [mono_ms=9515236]: begin Classicism.Results.Research.AtomicProbabilityRationalNegation
+Probability source axioms [mono_ms=9515247]: begin Classicism.Results.Research.AtomicProbabilityConcreteRealInverse
+Probability source axioms [mono_ms=9515262]: all 23 print commands complete
+'Classicism.Research.ProbabilityCutCrossing.represented_adjacent_exit' depends on axioms: [propext,
+ Classicism.em,
+ Quot.sound]
+'Classicism.Research.ProbabilityCutCrossing.natural_multiple_exceeds_fraction' depends on axioms: [propext,
+ Classicism.em,
+ Quot.sound]
+'Classicism.Research.ProbabilityCutCrossing.stepTerm_in_field' depends on axioms: [propext, Classicism.em, Quot.sound]
+'Classicism.Research.ProbabilityCutCrossing.stepTerm_zero' depends on axioms: [propext, Classicism.em, Quot.sound]
+'Classicism.Research.ProbabilityCutCrossing.stepTerm_suc' depends on axioms: [propext, Classicism.em, Quot.sound]
+'Classicism.Research.ProbabilityCutCrossing.cut_step_eventually_outside' depends on axioms: [propext,
+ Classicism.em,
+ Quot.sound]
+'Classicism.Research.ProbabilityCutCrossing.cut_has_adjacent_step' depends on axioms: [propext,
+ Classicism.em,
+ Quot.sound]
+'Classicism.Research.ProbabilityCutCrossing.cut_has_small_gap' depends on axioms: [propext, Classicism.em, Quot.sound]
+'Classicism.Research.ProbabilityRationals.rneg_zero' depends on axioms: [propext, Classicism.em, Quot.sound]
+'Classicism.Research.ProbabilityRationals.rneg_reverses' depends on axioms: [propext, Classicism.em, Quot.sound]
+'Classicism.Research.ProbabilityRationals.rneg_sub' depends on axioms: [propext, Classicism.em, Quot.sound]
+'Classicism.Research.ProbabilityRationals.rsub_sub_self' depends on axioms: [propext, Classicism.em, Quot.sound]
+'Classicism.Research.ProbabilityConcreteReals.realNeg_below' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.ProbabilityConcreteReals.realNeg_supported' depends on axioms: [propext, Classicism.em, Quot.sound]
+'Classicism.Research.ProbabilityConcreteReals.negative_member_not_neg' depends on axioms: [propext,
+ Classicism.em,
+ Quot.sound]
+'Classicism.Research.ProbabilityConcreteReals.realNeg_in_field' depends on axioms: [propext, Classicism.em, Quot.sound]
+'Classicism.Research.ProbabilityConcreteReals.realNeg_antitone' depends on axioms: [propext, Classicism.em, Quot.sound]
+'Classicism.Research.ProbabilityConcreteReals.realNeg_involution' depends on axioms: [propext,
+ Classicism.em,
+ Quot.sound]
+'Classicism.Research.ProbabilityConcreteReals.realAdd_neg' depends on axioms: [propext, Classicism.em, Quot.sound]
+'Classicism.Research.ProbabilityConcreteReals.realSub_in_field' depends on axioms: [propext, Classicism.em, Quot.sound]
+'Classicism.Research.ProbabilityConcreteReals.realSub_self' depends on axioms: [propext, Classicism.em, Quot.sound]
+'Classicism.Research.ProbabilityConcreteReals.realAdd_cancel_right' depends on axioms: [propext,
+ Classicism.em,
+ Quot.sound]
+'Classicism.Research.ProbabilityConcreteReals.realAdd_le_iff_le_sub' depends on axioms: [propext,
+ Classicism.em,
+ Quot.sound]

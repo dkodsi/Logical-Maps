@@ -1,0 +1,30 @@
+Classicism.Research.FullLogicalObservers.c5_actuality_atomicity_iff_full_separation: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FullLogicalObservers.c5_actuality_atomicity_iff_necessary_full_separation: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FullLogicalObservers.c5_actuality_full_separation_at: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FullLogicalObservers.c5_actuality_full_separation_iff_necessary: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+Classicism.Research.FullLogicalObservers.c5_actuality_necessary_full_separation_at: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em,
+ Quot.sound])
+#classicism_audit Classicism.Results.Research.FullLogicalObserversCharacterization: 5/5 theorems pass; 5 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.FullLogicalObserversCharacterization: 5/5 inside R
+Classicism.Results.Research.FullLogicalObserversCharacterization: 5 of 5 theorems derived
+
+[1/5] Classicism.Research.FullLogicalObservers.c5_actuality_atomicity_iff_full_separation ✓ 3644 ms
+[2/5] Classicism.Research.FullLogicalObservers.c5_actuality_atomicity_iff_necessary_full_separation ✓ 807 ms
+[3/5] Classicism.Research.FullLogicalObservers.c5_actuality_full_separation_at ✓ 32 ms
+[4/5] Classicism.Research.FullLogicalObservers.c5_actuality_full_separation_iff_necessary ✓ 33 ms
+[5/5] Classicism.Research.FullLogicalObservers.c5_actuality_necessary_full_separation_at ✓ 26 ms
+'Classicism.Research.FullLogicalObservers.c5_actuality_atomicity_iff_full_separation.derivable' depends on axioms: [propext,
+ Quot.sound]
+'Classicism.Research.FullLogicalObservers.c5_actuality_atomicity_iff_necessary_full_separation.derivable' depends on axioms: [propext,
+ Quot.sound]
+'Classicism.Research.FullLogicalObservers.c5_actuality_necessary_full_separation_at.derivable' depends on axioms: [propext,
+ Quot.sound]

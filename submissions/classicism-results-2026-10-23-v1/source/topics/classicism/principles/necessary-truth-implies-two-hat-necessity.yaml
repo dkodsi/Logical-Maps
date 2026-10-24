@@ -1,0 +1,29 @@
+id: necessary-truth-implies-two-hat-necessity
+name: □Truth implies two-hat necessity
+category: necessity-varieties
+statement: Necessarily, every truth is two-hat necessary. In C this is the identity $\hat{\hat\Box}=\lambda
+  p\, .\,p$.
+formal: $\Box\,\forall p\, .\,p\to\hat{\hat\Box}p$
+definitions: where $\Box_{\ne}p:=\exists q\, .\,q\land\Box(\Diamond q\to p)$ and $\Diamond_{\ne}p:=\neg\Box_{\ne}\neg
+  p$; and $\hat{\hat\Box}$ is the hat of $\Box_{\ne}$, where $\hat X:=\lambda p\, .\,\exists q\, .\,q\land\Box(\neg
+  X\neg q\to p)$.
+date: '2026-10-14'
+sources:
+- Cian Dorr, John Hawthorne, and Juhani Yli-Vakkuri, The Bounds of Possibility, Appendix D, pp. 400–409
+  (definitions of the hat operation and of the 5-necessity operator; the principles themselves are not
+  stated there).
+source_names:
+- Bounds of Possibility
+references:
+- paper: bounds-of-possibility
+  role: background
+  locator: Appendix D, pp. 400–409
+notes: The necessitated form of [[truth-implies-two-hat-necessity]]. Added at the suggestion of Christopher
+  Sun, 14 October 2026. Since identity of operators in C is necessary coextensiveness, this is the identity
+  $\hat{\hat\Box}=\lambda p\, .\,p$.
+changes:
+- date: '2026-10-19'
+  by: Claude Opus 5.5 (Anthropic)
+  summary: 'At Cian Dorr’s request: the notes now name the base principle with a link, without the boilerplate
+    about closed instances and the box; definitions of its technical terms added.'
+lean_def: Classicism.P.NecTruthImpliesTwoHatNecessity.schemaIn

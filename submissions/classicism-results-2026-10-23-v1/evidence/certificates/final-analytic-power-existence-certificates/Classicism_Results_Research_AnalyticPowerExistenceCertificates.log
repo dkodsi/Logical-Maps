@@ -1,0 +1,10 @@
+Classicism.Research.Analytic.exists_represented_power: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em, Quot.sound])
+#classicism_audit Classicism.Results.Research.AnalyticPowerExistence: 1/1 theorems pass; 1 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.AnalyticPowerExistence: 1/1 inside R
+Classicism.Research.Analytic.exists_represented_power ⟶ Classicism.Research.Analytic.exists_represented_power.derivable : ∀
+  (ρ' : Classicism.Meta.RTy),
+  Classicism.Meta.Theorem Classicism.Meta.C.axiomsMinus
+    (Classicism.Meta.Term.imp (Classicism.Meta.Term.box (Classicism.Meta.Term.forall' ⋯))
+      (Classicism.Meta.Term.imp (Classicism.Meta.Term.box ⋯) (Classicism.Meta.Term.forall' ⋯)))
+derived ✓ in C⁻
+'Classicism.Research.Analytic.exists_represented_power.derivable' depends on axioms: [propext, Quot.sound]

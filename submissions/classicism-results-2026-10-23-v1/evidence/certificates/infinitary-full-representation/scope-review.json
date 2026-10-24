@@ -1,0 +1,60 @@
+{
+  "reviewed_at": "2026-10-24T06:52:01.881541+00:00",
+  "review_type": "independent AI mathematical scope review; not Lean acceptance or human review",
+  "review_agent": "closeout_scope_review",
+  "sources": [
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/InfinitaryComprehensionOriginalLanguage.lean",
+      "sha256": "d2fc81363df86e62e9d7beb6933d79d96528548242928920f82d0ab7b4ec945c"
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/InfinitaryComprehensionOriginalRepresentation.lean",
+      "sha256": "fbb81573bfd832acac78755b9801c61ccf13f19f56e72ed5b7c901e69ae01a2f"
+    },
+    {
+      "path": "research/2026-10-22/lean-formalization/integration-checks/InfinitaryComprehensionFullAxioms.lean",
+      "sha256": "5b7647e041bde57e9a9270e371042f69c6da9aa1c29db1e02706146556c5203c"
+    }
+  ],
+  "scope": "Universe-0 categorical premodels; actual infinitary term-denotation closure, unrestricted original-closed-type Comprehension, and boxed ND_t imply faithful full-standard representation, retaining original root-domain carriers, quotienting observationally equivalent reachable worlds, preserving infinitary truth through grounding and representing all proposition profiles and external functions at admitted relational-output types.",
+  "explicit_premise_warning": "Term-denotation closure is an explicit premise alongside Comprehension and boxed ND_t. Premodel includes coherent injective inclusions into intensions.",
+  "not_assumed": [
+    "fullness",
+    "constant domains",
+    "Barcan",
+    "A.IsModel",
+    "object Choice",
+    "Infinity"
+  ],
+  "not_claimed": [
+    "recursive proof-calculus completeness",
+    "equivalence with finitary Choice Classicism",
+    "arbitrary-universe forward representation"
+  ],
+  "converse": "Separate standard-model validity reports supply the converse semantic direction for the displayed infinitary axioms.",
+  "source_review_sha256": "ce495e88f4525ac2582a0ae7344c9f7af1bfec203f0d0e0929049f5882fa4307",
+  "accepted_source_comparison": [
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/InfinitaryComprehensionOriginalLanguage.lean",
+      "sha256": "d2fc81363df86e62e9d7beb6933d79d96528548242928920f82d0ab7b4ec945c",
+      "current_sha256": "d2fc81363df86e62e9d7beb6933d79d96528548242928920f82d0ab7b4ec945c",
+      "exact_source_match": true
+    },
+    {
+      "path": "topics/classicism/lean/Classicism/Results/Research/InfinitaryComprehensionOriginalRepresentation.lean",
+      "sha256": "fbb81573bfd832acac78755b9801c61ccf13f19f56e72ed5b7c901e69ae01a2f",
+      "current_sha256": "b5bfeceaf44eeae8a480e02dcefe9f4b54ac34cfd1751e48c600b41fc6692dcb",
+      "exact_source_match": false,
+      "reviewed_snapshot": "research/2026-10-22/lean-formalization/logs/runs/20261024T064745263144Z-0355fcbe/sources/Classicism/Results/Research/InfinitaryComprehensionOriginalRepresentation.lean",
+      "current_delta": "--- \n+++ \n@@ -89,10 +89,10 @@\n     (w : Tuple (Canonical.groundedPremodel A).inner .t A.W₀) :\n     ((Canonical.originalModel A) hc hC5).truth (Henkin.eval _ η p xs) (Quotient.mk _ w) ↔\n       Holds A (Canonical.selfAssignment A) w.2.2\n-        (groundTerm (Canonical.selfAssignment (Canonical.groundedPremodel A)) (groundTerm η p))\n+        (groundTerm (Param := (Canonical.groundedPremodel A).Dom A.W₀) (Param' := A.Dom A.W₀) (Canonical.selfAssignment (Canonical.groundedPremodel A)) (groundTerm (Param := Param) (Param' := (Canonical.groundedPremodel A).Dom A.W₀) η p))\n         (Grounding.groundEnv\n           ((Canonical.groundedPremodel A).push w.2.2 ((Canonical.groundEnv (Canonical.groundedPremodel A)) xs))) := by\n-  let hc' := (Canonical.grounded_closed A) hc\n+  let hc' : Closed (Canonical.groundedPremodel A) := (Canonical.grounded_closed A) hc\n   let hC5' := (Canonical.grounded_c5 A) hC5\n   let hinj := (Canonical.lambdaFree_rootInjective (Canonical.groundedPremodel A)) hc' hC5'\n   let hepi := (Canonical.lambdaFree_rootSurjective (Canonical.groundedPremodel A)) hc'\n@@ -100,9 +100,12 @@\n   change ((Canonical.rawModelOfInjections (Canonical.groundedPremodel A)) hc' hinj).truth\n     (Henkin.eval (quotientModel ((Canonical.rawModelOfInjections (Canonical.groundedPremodel A)) hc' hinj))\n       η p xs) w ↔ _\n-  rw [quotient_eval]\n+  refine (Iff.of_eq (congrArg\n+    (fun q => ((Canonical.rawModelOfInjections (Canonical.groundedPremodel A)) hc' hinj).truth q w)\n+    (quotient_eval ((Canonical.rawModelOfInjections (Canonical.groundedPremodel A)) hc' hinj)\n+      (Param := Param) η p xs))).trans ?_\n   exact ((Canonical.raw_truth_spec_of_surjections (Canonical.groundedPremodel A)) hc' hinj hepi η p xs w).trans\n-    ((Canonical.grounded_holds A) (Canonical.selfAssignment (Canonical.groundedPremodel A)) w.2.2 (groundTerm η p)\n+    ((Canonical.grounded_holds A) (Canonical.selfAssignment (Canonical.groundedPremodel A)) w.2.2 (groundTerm (Param := Param) (Param' := (Canonical.groundedPremodel A).Dom A.W₀) η p)\n       ((Canonical.groundedPremodel A).push w.2.2 ((Canonical.groundEnv (Canonical.groundedPremodel A)) xs)))\n \n /-- The complete intended forward representation endpoint from the original\n",
+      "scope_preserved": true,
+      "delta_assessment": "Only explicit groundTerm parameter-family annotations, a type annotation on the existing closure proof, and explicit congrArg/Iff transport of the existing quotient_eval equality. No change to logical premises, grounding operation, conclusion or representation construction."
+    },
+    {
+      "path": "research/2026-10-22/lean-formalization/integration-checks/InfinitaryComprehensionFullAxioms.lean",
+      "sha256": "5b7647e041bde57e9a9270e371042f69c6da9aa1c29db1e02706146556c5203c",
+      "current_sha256": "5b7647e041bde57e9a9270e371042f69c6da9aa1c29db1e02706146556c5203c",
+      "exact_source_match": true
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+Classicism.Research.FiniteProfiles.finite_coordinates_of_finite_profiles: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.FiniteProfiles.finite_profiles_iff_coordinates: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.FiniteProfiles.finite_profiles_of_finite_coordinates: Classicism ✓ [C⁻] (axioms: [Classicism.em])
+Classicism.Research.FiniteProfiles.no_raw_wr_propositions: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.FiniteProfiles.no_raw_wr_unary: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.FiniteProfiles.profiles_no_injection: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.FiniteProfiles.raw_uwr_finite_atoms_iff: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.FiniteProfiles.raw_uwr_iff: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.FiniteProfiles.raw_uwr_infinity_iff: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.FiniteProfiles.raw_wr_no_injection: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.FiniteProfiles.unique_profiles_iff: Classicism ✓ [C⁻] (axioms: [])
+#classicism_audit Classicism.Results.Research.FiniteProfiles: 11/11 theorems pass; 11 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.FiniteProfiles: 11/11 inside R
+Classicism.Results.Research.FiniteProfiles: 11 of 11 theorems derived
+
+[1/11] Classicism.Research.FiniteProfiles.finite_coordinates_of_finite_profiles ✓ 402 ms
+[2/11] Classicism.Research.FiniteProfiles.finite_profiles_iff_coordinates ✓ 616 ms
+[3/11] Classicism.Research.FiniteProfiles.finite_profiles_of_finite_coordinates ✓ 0 ms
+[4/11] Classicism.Research.FiniteProfiles.no_raw_wr_propositions ✓ 439 ms
+[5/11] Classicism.Research.FiniteProfiles.no_raw_wr_unary ✓ 116 ms
+[6/11] Classicism.Research.FiniteProfiles.profiles_no_injection ✓ 0 ms
+[7/11] Classicism.Research.FiniteProfiles.raw_uwr_finite_atoms_iff ✓ 174 ms
+[8/11] Classicism.Research.FiniteProfiles.raw_uwr_iff ✓ 536 ms
+[9/11] Classicism.Research.FiniteProfiles.raw_uwr_infinity_iff ✓ 105 ms
+[10/11] Classicism.Research.FiniteProfiles.raw_wr_no_injection ✓ 0 ms
+[11/11] Classicism.Research.FiniteProfiles.unique_profiles_iff ✓ 0 ms
+'Classicism.Research.FiniteProfiles.profiles_no_injection.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.FiniteProfiles.raw_uwr_finite_atoms_iff.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.FiniteProfiles.raw_uwr_infinity_iff.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.FiniteProfiles.no_raw_wr_unary.derivable' depends on axioms: [propext, Quot.sound]

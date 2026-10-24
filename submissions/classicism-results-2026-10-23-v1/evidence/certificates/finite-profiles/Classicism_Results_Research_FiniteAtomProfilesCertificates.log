@@ -1,0 +1,25 @@
+Classicism.Research.FiniteAtomProfiles.atoms_separate_propositions: Classicism ✓ [C⁻] (axioms: [propext, Classicism.em])
+Classicism.Research.FiniteAtomProfiles.finite_atoms_iff_propositions: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em])
+Classicism.Research.FiniteAtomProfiles.finite_atoms_of_finite_propositions: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em])
+Classicism.Research.FiniteAtomProfiles.finite_propositions_of_finite_atoms: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em])
+Classicism.Research.FiniteAtomProfiles.raw_uwr_finite_base_iff_propositions: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em])
+Classicism.Research.FiniteAtomProfiles.raw_uwr_infinity_base_iff_propositions: Classicism ✓ [C⁻] (axioms: [propext,
+ Classicism.em])
+#classicism_audit Classicism.Results.Research.FiniteAtomProfiles: 6/6 theorems pass; 6 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.FiniteAtomProfiles: 6/6 inside R
+Classicism.Results.Research.FiniteAtomProfiles: 6 of 6 theorems derived
+
+[1/6] Classicism.Research.FiniteAtomProfiles.atoms_separate_propositions ✓ 956 ms
+[2/6] Classicism.Research.FiniteAtomProfiles.finite_atoms_iff_propositions ✓ 450 ms
+[3/6] Classicism.Research.FiniteAtomProfiles.finite_atoms_of_finite_propositions ✓ 0 ms
+[4/6] Classicism.Research.FiniteAtomProfiles.finite_propositions_of_finite_atoms ✓ 0 ms
+[5/6] Classicism.Research.FiniteAtomProfiles.raw_uwr_finite_base_iff_propositions ✓ 131 ms
+[6/6] Classicism.Research.FiniteAtomProfiles.raw_uwr_infinity_base_iff_propositions ✓ 132 ms
+'Classicism.Research.FiniteAtomProfiles.finite_atoms_iff_propositions.derivable' depends on axioms: [propext,
+ Quot.sound]
+'Classicism.Research.FiniteAtomProfiles.raw_uwr_infinity_base_iff_propositions.derivable' depends on axioms: [propext,
+ Quot.sound]

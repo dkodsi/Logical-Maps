@@ -1,0 +1,70 @@
+{
+  "kind": "Final manuscript delivery receipt; not a mathematical or Lean certificate",
+  "received_at_utc": "2026-10-24T02:15:34.422914+00:00",
+  "original_handoff": {
+    "origin": "research/2026-10-23/abductive-comparison/conservativity-handoff.json",
+    "sha256": "d0791318f2aa6c57169751fac36252b17d35e662b8edb414a2bd21cc0f4c2f26"
+  },
+  "files": [
+    {
+      "origin": "research/2026-10-23/abductive-comparison/paper.tex",
+      "sha256": "412740a8dbe90d2a5830279112a1f96ad0cc6c6bee17a7b1098c70cc1e6864ac",
+      "path": "papers/choice-and-possibility.tex"
+    },
+    {
+      "origin": "research/2026-10-23/abductive-comparison/uniformity-results.tex",
+      "sha256": "c36b004fcb2f6927b92e9eb30ead5747b2c4acebb6b9e4f9155747ea6a544e46",
+      "path": "papers/uniformity-arithmetic-core.tex"
+    },
+    {
+      "origin": "research/2026-10-23/abductive-comparison/source-and-claim-ledger.json",
+      "sha256": "73970e569a524e821f27fe01b171f21b59f696753599cf542db08a6b026a2ec9",
+      "retention": "Original retained in the research workspace. Process reports are excluded from the package; mathematical audit sections and scoped review provenance are already retained in the linked proof and review receipt."
+    },
+    {
+      "origin": "research/2026-10-23/abductive-comparison/completion.txt",
+      "sha256": "ec8fb2d832761633ac741de9c050698a335445a6e8b5d4624a256d92cddbd14c",
+      "retention": "Original retained in the research workspace. Process reports are excluded from the package; mathematical audit sections and scoped review provenance are already retained in the linked proof and review receipt."
+    },
+    {
+      "origin": "research/2026-10-23/abductive-comparison/full-choice-arithmetic-audit.txt",
+      "sha256": "de73230abb3cf57734e53bf6d4e855059970d7b0934d6eb3ae5cb07ae7632cc8",
+      "retention": "Original retained in the research workspace. Process reports are excluded from the package; mathematical audit sections and scoped review provenance are already retained in the linked proof and review receipt."
+    },
+    {
+      "origin": "research/2026-10-23/abductive-comparison/full-choice-arithmetic-review.txt",
+      "sha256": "1e7d18e2e050a1e118604d48121c31748379cfec0ddfc064460b5adc8c25df38",
+      "retention": "Original retained in the research workspace. Process reports are excluded from the package; mathematical audit sections and scoped review provenance are already retained in the linked proof and review receipt."
+    }
+  ],
+  "all_six_origin_hashes_verified": true,
+  "result_id": "ARITHMETIC-COMPARISON",
+  "catalog_id": "principles.03",
+  "statement": "For ordinary first-order arithmetic A under the fixed Frege interpretation, CC proves A^e iff T proves A^e iff C+I_e proves A^e.",
+  "external_dependency": "McLarty arXiv:1207.6357v5, sections2-5, especially Theorems4.3 and5.3 with canonical omega preservation.",
+  "proof_locators": [
+    "papers/choice-and-possibility.tex §10",
+    "papers/uniformity-arithmetic-core.tex Theorem 5",
+    "proofs/full-choice-arithmetic-conservativity.md §§1–6"
+  ],
+  "review_receipt": "evidence/full-choice-arithmetic-review.json",
+  "supersedes": "The pending paper/companion handoff in the earlier review receipt is now complete. The receipt’s mathematical scope and limits remain unchanged.",
+  "compilation": {
+    "origin_report": {
+      "paper.tex": "success: built-in desktop compiler",
+      "uniformity-results.tex": "success: built-in desktop compiler",
+      "viewer_opened": false,
+      "pdf_exported": false,
+      "visual_inspection": false
+    },
+    "verification": "Delivered source hashes match the handoff reporting successful desktop compilation. No compilation, PDF export or visual inspection performed by this intake."
+  },
+  "limits": [
+    "No higher-order or modal conservation claimed.",
+    "No derivation of Choice from Plenitude.",
+    "No new Lean certification, human verification or literature-priority claim.",
+    "Exact Max arithmetic theorem in section37 not reviewed or used.",
+    "No canonical map/presentation edits, publication or push."
+  ],
+  "package_finalization": "Other pending project handoffs remain open; this intake does not publish or push."
+}

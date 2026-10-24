@@ -1,0 +1,14 @@
+{
+  "scope": "Static source checks only; not Lean or C verification",
+  "updated_at_utc": "2026-10-23T05:32:38.771331+00:00",
+  "files": 66,
+  "explicit_declarations": 507,
+  "duplicate_explicit_names": {},
+  "source_holes_or_choice_calls": [],
+  "missing_local_imports": [],
+  "comment_only_keyword_matches": [
+    "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityAlgebraChecks.lean:7:No new axiom, `sorry`, or unsafe proof completion is permitted in these sources.",
+    "topics/classicism/lean/Classicism/Results/Research/AtomicProbabilityFiniteConstructive.lean:7:The first integration report found Classical.choice in the standard-library"
+  ],
+  "comment_handling": "Nested Lean block comments and line comments removed before hole/choice scan."
+}

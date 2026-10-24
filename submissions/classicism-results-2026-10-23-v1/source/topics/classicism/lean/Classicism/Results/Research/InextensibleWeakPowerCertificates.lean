@@ -1,0 +1,11 @@
+import Classicism.Results.Research.InextensibleWeakPower
+import Classicism.Results.Research.InextensiblePowerCertificates
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Schema
+
+#classicism_audit Classicism.Results.Research.InextensibleWeakPower
+#classicism_types_audit Classicism.Results.Research.InextensibleWeakPower
+#classicism_derive Classicism.Research.InextensiblePower.bounded_tame
+#classicism_certify Classicism.Research.InextensiblePower.nd_ic_weaklyRigidPower
+#print axioms Classicism.Research.InextensiblePower.nd_ic_weaklyRigidPower.rule

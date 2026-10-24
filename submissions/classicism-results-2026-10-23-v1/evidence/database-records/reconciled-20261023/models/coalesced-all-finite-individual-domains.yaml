@@ -1,0 +1,214 @@
+id: coalesced-all-finite-individual-domains
+name: 'Coalesced sum: root over all finite individual domains'
+certificate:
+  source_id: misc
+  produced_by: Claude Fable 5.1 (Anthropic), prompted by Cian Dorr, 20 September 2026
+  recorded_by: Claude Fable 5.1 (Anthropic), prompted by Cian Dorr, 20 September 2026
+  checked_by: []
+  date: '2026-09-20'
+  lean: stated
+sources:
+- Claude Fable 5.1 (Anthropic), prompted by Cian Dorr, construction and verification of 20 September 2026 (see the write-up).
+- Andrew Bacon and Cian Dorr, Classicism, draft of 16 May 2023, §3.2, Definition 3.6 and Proposition 3.7,
+  pp. 47–48 (the summands); Appendix E, pp. 80–83 (coalesced sums).
+- DeepSeek (deepseek-flash), Classicism theorem trawl, 25 September 2026; mathematically reviewed and
+  corrected by OpenAI Codex (GPT-6), 25 September 2026. Accepted additions only; original construction
+  attribution is unchanged. writeups/coalesced-all-finite-individual-domains.md, final section; Classicism,
+  Definition E.2, pp. 80–83.
+source_names:
+- Fable 20 Sep
+- Classicism
+- DeepSeek trawl; GPT-6 review 25 Sep
+references:
+- paper: bacon-dorr-classicism
+  role: related
+  locator: §3.2, pp. 47–48; Appendix E, pp. 80–83
+  note: The summands are the source's full Henkin models. The root construction is in the manner of the
+    source's coalesced sums, but is spelled out and verified in the write-up rather than taken from Definition
+    E.2.
+group: coalesced-sums
+settings:
+  root-arrows: distinguished
+  construction: 'Take the full Henkin models $M_n$ with individual domain $\{1,\ldots,n\}$ for every $n\ge1$,
+    and add a root world. Individuals are threads $(a_n)_n$ with $a_n\in\{1,\ldots,n\}$. Application is
+    componentwise, identity at world $n$ is the identity of $M_n$ and at the root is identity of elements.
+    Every theorem of C holds at every world. Evaluation point: the root.'
+  domains:
+    text: Propositions are sets of worlds; an entity of a function type is a family of $M_n$-entities
+      together with an arbitrary root component defined on whole threads.
+definition: 'Interpretation of Σ, fixed for this record: every constant of Σ is relational, and each denotes
+  the top element of its type.'
+meets:
+  free-root-component: An entity of a function type has an arbitrary root component defined on whole threads.
+  sigma-top: This is the interpretation the definition fixes.
+arguments:
+- holds:
+  - axiom-of-infinity-e
+  - axiom-of-infinity-t
+  text: At the root the finite cardinalities are the numerals, the $k$-th numeral's successor holds of
+    the universal property at world $k+1$, and $\Diamond$ at the root is truth at some world, so the sentence
+    that there could be any positive number of individuals, used in pure-possibility-implies-axiom-of-infinity-t,
+    holds there. The root has uncountably many individuals and infinitely many propositions, so both Axioms
+    of Infinity hold there.
+- fails:
+  - distinctness-necessary-r
+  text: Two threads that agree at some world are distinct but possibly identical, so ND fails at type
+    $e$.
+- holds:
+  - barcan-r
+  by: Claude Fable 5.1 (Anthropic), prompted by Cian Dorr
+  date: '2026-09-22'
+  text: An entity of a relational type there is a family of component entities with a free root component,
+    every component entity is the component of some root entity, so if $\forall y\, .\,\Box Xy$ holds
+    at the root then every component of $X$ is universal and so is its root component, whence $\Box\forall
+    y\, .\,Xy$; BF holds at the one-world components trivially, so $\Box$BF holds.
+- holds:
+  - necessary-strong-leibniz-t
+  by: Claude Fable 5.1 (Anthropic), prompted by Cian Dorr
+  date: '2026-09-22'
+  text: At the root, the singleton of the arrow to component $n$ becomes that component’s identity under
+    it and empty under every other arrow, and the root proposition becomes empty under every non-identity
+    arrow, so every singleton is a strong world; the components are one-world models.
+- id: free-root-component
+  holds:
+  - atomicity-t
+  - boolean-completeness-t
+  by: Cian Dorr, recorded by Claude Fable 5.1 (Anthropic)
+  date: '2026-09-22'
+  text: 'Here the components are full Henkin models, so every set of arrows is a root proposition: the
+    root propositions form a complete atomic algebra, giving Atomicity and Boolean Completeness at type
+    t.'
+  revisions:
+  - date: '2026-10-02'
+    by: Claude Opus 5.5 (Anthropic), at Cian Dorr's direction
+    note: Its closing clause, that Relational Choice holds at the root by a functional choice in the free
+      root component, is now the group's shared argument relational-choice-free-root.
+- holds:
+  - necessary-relational-choice-r
+  by: Claude Fable 5.1 (Anthropic), prompted by Cian Dorr
+  date: '2026-09-22'
+  text: Relational Choice holds at the root by the free root component and at every component, each being
+    a full Henkin model.
+- holds:
+  - necessary-rigid-comprehension-r
+  by: Claude Fable 5.1 (Anthropic), prompted by Cian Dorr
+  date: '2026-09-25'
+  text: 'At a type $\sigma\to t$ a root entity is a pair $(G_0,(G_n)_n)$ with $G_0$ any function on the
+    root domain and $G_n$ in the full domain of $M_n$; entailment is componentwise. Atomicity: below a
+    nonzero $G$ lies the atom that is true at the root of one argument $a$ with $G_0(a)=1$ and bottom
+    in every component, or, if $G_0=0$, the atom that is bottom at the root and in all but one component
+    $M_n$, where it is an atom of that full model below $G_n$. Both kinds of atom are strong worlds: at
+    the root they entail every entity or its negation, being singletons in one coordinate and bottom elsewhere,
+    and their shifts to the components are bottom or atoms of a one-world full model. So the Strong Leibniz
+    Biconditionals hold at every type. Boolean Completeness: the componentwise meet of any set of root
+    entities is a root entity and is the greatest lower bound. Rigid Comprehension: given $X$ with root
+    extension $E$, let $Y$ have root component $X_0$ and, in $M_n$, the projection of $E$ to the $n$-th
+    coordinates; $Y$ is persistent, since a root instance has its projection in every component, and inextensible,
+    since a relation necessary of every root instance contains those projections, while in the one-world
+    components persistence and inextensibility are automatic. Each component is a full Henkin model, in
+    which all of these hold, so the boxed forms hold at the root; Countable Boolean Completeness, the
+    weak rigid comprehension principles and Necessity of Arithmetic follow by the recorded results.'
+- fails:
+  - pure-b-r
+  by: Claude Fable 5.1 (Anthropic), prompted by Cian Dorr
+  date: '2026-09-25'
+  text: The pure sentence that there are two individuals is true at the root and false at the first component,
+    from which no arrow returns.
+- holds:
+  - necessary-intensional-choice-r
+  by: Claude Fable 5.1 (Anthropic), prompted by Cian Dorr, at Cian Dorr's suggestion
+  date: '2026-10-03'
+  text: Intensional Choice holds at the root, as the map derives from this record's other verdicts. Every
+    other world is a world of one of the full Henkin components, where a necessarily instantiated $F$
+    has an instance $a$ and $G:=\lambda x\, .\,x=a$ is in the domain, entails $F$ and is necessarily uniquely
+    instantiated. So Intensional Choice holds at every world.
+- id: five-necessity-is-truth
+  holds:
+  - necessary-truth-implies-five-necessity
+  text: At the root every truth is ND-necessary (recorded), so every truth is 5-necessary there. Every
+    other world is a one-world Henkin model $M_n$, in which $\Box$ is the identity operator, hence so
+    is every operator in the tower from $\Box$ to $\Box_5$, and every truth is 5-necessary. So the principle
+    holds at every world.
+  by: Claude Fable 5.1 (Anthropic), at Cian Dorr's direction
+  date: '2026-10-14'
+notes: Recorded to witness the consistency with C of the sentence through which Possibility Maximalism
+  (pure) reaches the Axiom of Infinity at type $t$, and of that Axiom itself. The construction and its
+  verification are in the write-up; no independent check is claimed. Everything that implies these fails
+  with them.
+history:
+- date: '2026-09-22'
+  by: Claude Fable 5.1 (Anthropic), prompted by Cian Dorr
+  summary: Fixed an interpretation of Σ (relational constants as top, individual constants as one fixed
+    individual) and recorded the signature schemata it refutes, at Cian Dorr’s request.
+  violates:
+  - witnessed-possibility-r
+  - separated-structure-r
+  - independence-signature-r
+  - distinctness-signature-r
+- date: '2026-09-22'
+  by: Claude Fable 5.1 (Anthropic), prompted by Cian Dorr
+  summary: Added Actuality, BF and □BF, and the failure of No Pure Contingency and Possibility (pure),
+    with the arguments in the notes.
+  satisfies:
+  - actuality
+  - barcan-r
+  - necessary-barcan-r
+  violates:
+  - no-pure-contingency-r
+  - distinctness-schema-r
+- date: '2026-09-22'
+  by: Claude Fable 5.1 (Anthropic), prompted by Cian Dorr
+  summary: Added □Strong Leibniz Biconditionals (type t); see the notes.
+  satisfies:
+  - necessary-strong-leibniz-t
+- date: '2026-09-22'
+  by: Cian Dorr, recorded by Claude Fable 5.1 (Anthropic)
+  summary: Added Atomicity (type t), Boolean Completeness (type t) and Relational Choice, and the failure
+    of Possibility+ (pure), with the arguments in the notes.
+  satisfies:
+  - atomicity-t
+  - boolean-completeness-t
+  - relational-choice-r
+  violates:
+  - possibility-plus-r
+- date: '2026-09-22'
+  by: Claude Fable 5.1 (Anthropic), prompted by Cian Dorr
+  summary: Boxed the Relational Choice claim.
+  satisfies:
+  - necessary-relational-choice-r
+- date: '2026-09-23'
+  by: Claude Fable 5.1 (Anthropic), prompted by Cian Dorr
+  summary: Recorded the Distinctness-preserving collapse; see the notes.
+  satisfies:
+  - distinctness-preserving-collapse
+- date: '2026-09-25'
+  by: Claude Fable 5.1 (Anthropic), prompted by Zachary Goodsell
+  summary: 'Added Transversal Choice at the root, by the argument recorded for Relational Choice: a root
+    entity has an arbitrary root component, so take the property whose root component is a transversal,
+    chosen in the metatheory, of the root component of an equivalence relation at the root, with empty
+    component parts; the equivalence and transversal conditions are all evaluated at the root''s identity
+    arrow. Recorded on a question of Zachary Goodsell, after an observation of Christopher Sun.'
+  satisfies:
+  - transversal-choice-r
+- date: '2026-09-25'
+  by: OpenAI Codex (GPT-6), prompted by Zachary Goodsell
+  summary: 'Accepted all-type product-algebra additions from the DeepSeek trawl after correcting the proof:
+    Atomicity, Boolean Completeness and Rigid Comprehension hold at every world. Root atoms remain atoms
+    or bottom in the components, so the Strong Leibniz schemata hold too. The projected-extension RC proof
+    is supplied by this review; boxed claims are checked at every world, not obtained by necessitating
+    a hypothesis.'
+  satisfies:
+  - necessary-atomicity-r
+  - necessary-boolean-completeness-r
+  - necessary-rigid-comprehension-r
+- date: '2026-09-25'
+  by: Claude Fable 5.1 (Anthropic), prompted by Cian Dorr
+  summary: Added □Atomicity, □Boolean Completeness, □Rigid Comprehension and □Strong Leibniz Biconditionals
+    at the root, and the failure of B for pure sentences, with the arguments in the notes.
+  satisfies:
+  - necessary-atomicity-r
+  - necessary-boolean-completeness-r
+  - necessary-rigid-comprehension-r
+  - necessary-strong-leibniz-r
+  violates:
+  - pure-b-r

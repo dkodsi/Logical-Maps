@@ -1,0 +1,49 @@
+# Focused proof refinements
+
+22 October 2026. Focused passes by OpenAI Codex on existing argument families outside the active assignments. These are alternative ordinary mathematical proofs and strengthened formulations, not literature-novelty claims. No independent checker or Lean verification is claimed. Existing research notes, database records, generated maps and Lean files are preserved.
+
+For the latest evaluator argument, start with [the actual-world kernel](canonical-actual-evaluator.md). For probability, start with [the choice-free finite-fibre theorem](choice-free-faithful-probability.md), then its [higher-type ceiling](choice-free-probability-type-ceiling.md) or [canonical symmetrization](canonical-finite-class-symmetrization.md). These retain boxed Plenitude. The further [local propositional version](local-propositional-probability.md) has weaker modal assumptions but expressly uses current graph-valued real codes; it does not lower the assumptions of the higher-type or lifted-symmetry theorems. The initial atomic-sum lemma remains their shared algebraic proof.
+
+| Original argument | Before | After and improvement | Dependencies and proof |
+|---|---|---|---|
+| [World representation, §4, Theorem 2](../notes/structural-world-representation.md#4-atomic-normal-form-and-the-internal-truth-lemma) | Under C + □Plenitude, relational atoms are uniquely world–tuple pairs. | Existential projection preserves atoms in C. Coordinate existence is exactly having a nonzero current value; local polyadic BF supplies it. The exact collision relation is w=v and w≤(ā=b̄); tuple ND supplies uniqueness. With Atomicity_t, uniqueness conversely implies tuple ND. | No Atomicity, Actuality, BC, or Plenitude is needed to classify the atoms under local BF + tuple ND. [Complete proof](atom-normal-form.md). The larger representation theorem is not weakened. |
+| [Faithful probability, §§3–4](../notes/faithful-probability-countable-worlds.md) | A faithful finite-additive charge implies atom countability; a chosen enumeration then gives a new countably additive state. | Finite atom subsums directly give the canonical completely additive atomic part below the charge, its zero-on-atoms remainder, and a faithful normalized replacement. One finite-budget lemma handles summation and symmetry. | For C applications retain F + quantified Infinity_e and the graph-coded internal reals. No enumeration or Choice is used by the atomic-part construction once that mathematics is supplied. Countability uses a specified countable family of finite choices. [Proof and dependency audit](canonical-atomic-probability.md). |
+| [World symmetry, §§1–2](../notes/probability-and-world-symmetry.md) | Full permutation invariance of a faithful state forces finite worlds; finite propositional-parameter terms give the same obstruction. | For any represented world equivalence R, a faithful invariant state exists iff W is internally countable and every R-class is internally finite. An explicit completely additive invariant state exists; a given state with equal class atom weights has a canonical invariant replacement. | Same F + quantified Infinity_e. Represented R, admitted permutations, internal finite counting and fixed-core real outputs are explicit. The original two results follow by universal R and finite pattern cells. [Complete proof](probability-under-world-partitions.md). |
+
+The three rows describe the first-pass refinements, not an addition of every lemma or equivalent condition to the result count. Later refinements are below. No excluded active proof was refined.
+
+## Continuation: stronger results with less Choice
+
+These additions preserve the first-pass notes. The probability and symmetry rows below strengthen the same earlier families; they are not counted as unrelated new discoveries.
+
+| Original argument | Exact improvement | Retained dependencies and proof |
+|---|---|---|
+| Actuality/GC core's numerical surjection and Infinity transfer | With quantified Infinity_e, the number map is injective as well as surjective. It preserves literal number identity and the represented arithmetic/subset structure. | Actuality + quantified Infinity_e suffices for the slice; GC + quantified Infinity_e for the Gallin core. No Choice or BF. [Proof](infinity-core-number-isomorphism.md). |
+| Faithful probability versus countable worlds | Over **C+□Plenitude+quantified Infinity_e**, faithful finite/countable/complete additivity is exactly a numerical labelling of W with internally finite fibres. Countable Choice for finite fields alone upgrades this to the original injection criterion. | Full boxed Functional Choice is removed. The graph-coded core, exact N_e comparison, internal Dedekind suprema, and represented joins remain explicit. [Proof](choice-free-faithful-probability.md). |
+| Probability invariant on world classes | Average a given state's atom masses within each finite class, then take its canonical atomic sum. This gives a unique completely additive invariant state with the prescribed normalized class masses; the construction is idempotent. | Same weaker background, with no Choice. The invariant-state criterion is finite-fibre labelling of W plus finite R-classes. No enumeration is used. [Proof](canonical-finite-class-symmetrization.md). |
+| Higher-type probability ceiling | The admitted powerset P(X) has a finite-fibre numerical labelling iff X is internally finite. Finite blocks replace a Choice-selected sequence of atoms. The tt ceiling survives without Choice, and the single event type (et)t is already incompatible with quantified Infinity_e. | C+□Plenitude+quantified Infinity_e; internal powersets and finite recursion. The factorization and exact type scopes are retained. [Proof](choice-free-probability-type-ceiling.md). |
+| Gallin evaluator uniqueness and current quantifier laws | One actual-world kernel yields a canonical quantifier-preserving evaluator already from ordinary Eval, equivalent to ND+Actuality. Global bivalence identifies the original witness with this replacement, giving shorter uniqueness and Boolean-law proofs too. | C; ordinary Eval for the canonical replacement, Global₂ only for equality with an arbitrary original witness. No BF or Choice. A recorded model verifies the strict gap from GC. [Proof](canonical-actual-evaluator.md). No boxed future-predicate law is claimed. |
+| Propositional probability's modal background | The same finite-fibre criterion holds for local graph-valued states under **Actuality + Atomicity_t + BC_t + quantified Infinity_e**. A multi-base actual-world graph core carries all current propositions as events and the correct N_e arithmetic. | C fixed; no ND, BF, Plenitude or Choice. The graph-valued witness convention and current-only scope are essential. Higher-type and lifted-symmetry results retain their stronger backgrounds. [Closure proof and theorem](local-propositional-probability.md). |
+
+The finite-fibre note also gives a [conditional full model](choice-free-faithful-probability.md#6-full-gallin-model-with-finite-pair-worlds): from a supplied countable family of pairs without a choice function, its worlds have a faithful explicit probability but no injection into N. No new consistency proof for that choiceless metatheory is claimed. The local probability note's weaker modal package is separately witnessed by a **recorded** fixed-infinite-individual two-object chain failing ND.
+
+## Database evidence checked
+
+Used `scripts.pmap.load_topic('classicism')` and `Engine` with only `status: proved` results, no models needed for these entailment queries, and an empty engine background. Optional premises were supplied to each query. No ranking calculation was run.
+
+* `necessary-plenitude-r` entails `barcan-r`, `distinctness-necessary-r`, and `atomicity-t`. Direct chains use `necessary-plenitude-r-implies-necessary-distinctness-necessary-r` → `necessary-nd-implies-bf`; `necessary-plenitude-r-implies-plenitude-r` → `plenitude-r-implies-distinctness-necessary-r`; and `necessary-plenitude-r-implies-atomicity-r` → `atomicity-r-implies-atomicity-t`.
+* `necessary-functional-choice-r` together with `axiom-of-infinity-e` entails `necessary-plenitude-r`, `boolean-completeness-r`, and `relational-choice-r`. Infinity was included as a queried premise of the probability package; these three closure consequences do not need it. The real/number interpretation is a separate research-note dependency, not something the Engine certifies.
+
+Continuation checks, again with optional premises in the query and no engine background:
+
+* `necessary-plenitude-r` + `axiom-of-infinity-e` entails GC, Actuality, Atomicity_t and BC_t in the proved records. None of these four closure consequences uses Infinity.
+* A `separates` query for ND + Actuality against GC returns the proved `full-two-object-double-retraction` model.
+* A `separates` query for Actuality + Atomicity_t + BC_t + quantified Infinity_e against ND includes the proved `full-two-object-chain-individuals-fixed-infinite` model.
+
+The last two are countermodels to implications, not claims that their premise theories exclude GC or ND. Only the selected proved model families were loaded into those Engines. The conditional finite-pair construction is a separate new mathematical model argument, not Engine evidence.
+
+These checks establish the old packages' recorded background consequences. The Engine does not certify the new proofs, the local BF/ND reductions, or the probability interpretation. Those arguments are supplied in the linked notes.
+
+## Verification
+
+The system `python3` lacks the repository's YAML/schema dependencies. Use the already available `python3 scripts/pmap.py validate`; no environment installation is needed. Validation and saved-note/link checks are recorded in `validation.txt` after completion. Validation checks the repository records, not mathematical correctness of these notes.

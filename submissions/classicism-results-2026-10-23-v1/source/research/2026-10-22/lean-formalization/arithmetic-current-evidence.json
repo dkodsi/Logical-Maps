@@ -1,0 +1,160 @@
+{
+  "audited_at_utc": "2026-10-23T05:38:00.096666+00:00",
+  "scope": "Read-only source and captured-snapshot fingerprint comparison for recorded passing targets. Does not substitute for compiler/gate/translation checks. External binary fingerprints remain in each compiler manifest.",
+  "reports": [
+    {
+      "target": "Classicism.Results.Research.FregeFiniteSetsCertificates",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T043014649782Z-ffe74996.json",
+      "result": "PASS source, gate/type audits and full C-derivation audit",
+      "target_passed": true,
+      "target_fingerprint": "a8c4a457e1d82b708561d283109fa292eb7fa8b130dfc647bf91a31baabac63d",
+      "local_dependency_count_including_target": 38,
+      "external_imports": [
+        "Lean"
+      ],
+      "current_dependency_sources_match": true,
+      "changed_since_check": [],
+      "captured_source_bytes_match_manifest": true,
+      "captured_source_mismatches": []
+    },
+    {
+      "target": "Classicism.Results.Research.FregeNoncollapseCertificates",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T044223622850Z-528e6bf0.json",
+      "result": "PASS source, gate/type audits and full C-derivation audit",
+      "target_passed": true,
+      "target_fingerprint": "0653c41305fa8fb409ef18777e1bb1856622a4704b6d57d63ad15a3af7fbc54d",
+      "local_dependency_count_including_target": 40,
+      "external_imports": [
+        "Lean"
+      ],
+      "current_dependency_sources_match": true,
+      "changed_since_check": [],
+      "captured_source_bytes_match_manifest": true,
+      "captured_source_mismatches": []
+    },
+    {
+      "target": "Classicism.Results.Research.CrossBaseArithmeticCertificates",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T045108444380Z-b3474a59.json",
+      "result": "PASS source, gate/type and full C-derivation audit; later independent metatheory module in this batch failed",
+      "target_passed": true,
+      "target_fingerprint": "dcf3892a1121f8a2b714526a1b1598b4feae74f2807b1a58260b40bab5cce962",
+      "local_dependency_count_including_target": 44,
+      "external_imports": [
+        "Lean"
+      ],
+      "current_dependency_sources_match": true,
+      "changed_since_check": [],
+      "captured_source_bytes_match_manifest": true,
+      "captured_source_mismatches": []
+    },
+    {
+      "target": "Classicism.Results.Research.FregeArithmeticVocabularyCertificates",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T045108444380Z-b3474a59.json",
+      "result": "PASS source, gate/type and full C-derivation audit; later independent metatheory module in this batch failed",
+      "target_passed": true,
+      "target_fingerprint": "78d880467af65cec2f10904a2d8ac576c2f423e4b3ca6aaafb41a026d6934c18",
+      "local_dependency_count_including_target": 83,
+      "external_imports": [
+        "Lean",
+        "Mathlib.Data.Set.Finite.Basic"
+      ],
+      "current_dependency_sources_match": true,
+      "changed_since_check": [],
+      "captured_source_bytes_match_manifest": true,
+      "captured_source_mismatches": []
+    },
+    {
+      "target": "Classicism.Results.Research.CrossBaseFirstOrderChecks",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T045914763270Z-feef3c75.json",
+      "result": "PASS ordinary metatheory source and axiom audit only; not a universal object-C derivation certificate",
+      "target_passed": true,
+      "target_fingerprint": "e8b4dcaaa1db04d44daed330acb92d0fc938deffb3a2000a1ecc2abb9fa49f7f",
+      "local_dependency_count_including_target": 78,
+      "external_imports": [
+        "Lean",
+        "Mathlib.Data.Set.Finite.Basic"
+      ],
+      "current_dependency_sources_match": true,
+      "changed_since_check": [],
+      "captured_source_bytes_match_manifest": true,
+      "captured_source_mismatches": []
+    },
+    {
+      "target": "Classicism.Results.Research.FregeArithmeticQuotation",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T050602611952Z-deea884a.json",
+      "result": "PASS exact syntax conversion and ordinary standard-denotation reflection, not a new object-C implication",
+      "target_passed": true,
+      "target_fingerprint": "053b5e913bb6cd9719c1861f146d6c142607b81bc7283763163f33e34857761d",
+      "local_dependency_count_including_target": 74,
+      "external_imports": [
+        "Lean",
+        "Mathlib.Data.Set.Finite.Basic"
+      ],
+      "current_dependency_sources_match": true,
+      "changed_since_check": [],
+      "captured_source_bytes_match_manifest": true,
+      "captured_source_mismatches": []
+    },
+    {
+      "target": "Classicism.Results.Research.C5FregeCertificates",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T051905510453Z-639b9e47.json",
+      "result": "PASS source, gate/type and full C-derivation audit",
+      "target_passed": true,
+      "target_fingerprint": "6c6039e540bde2b4c944e5c55d709db52cd1fb1ef3fed4e7d822ebcf7c38dee0",
+      "local_dependency_count_including_target": 57,
+      "external_imports": [
+        "Lean"
+      ],
+      "current_dependency_sources_match": true,
+      "changed_since_check": [],
+      "captured_source_bytes_match_manifest": true,
+      "captured_source_mismatches": []
+    },
+    {
+      "target": "Classicism.Results.Research.FregeArithmeticReflection",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T051905510453Z-639b9e47.json",
+      "result": "PASS ordinary standard-denotation reflection; not a C-derivation builder",
+      "target_passed": true,
+      "target_fingerprint": "ee0ed206ca1913a71aff99f32f97a27971ee236e4986a0b9425bf44098374c06",
+      "local_dependency_count_including_target": 78,
+      "external_imports": [
+        "Lean",
+        "Mathlib.Data.Set.Finite.Basic"
+      ],
+      "current_dependency_sources_match": true,
+      "changed_since_check": [],
+      "captured_source_bytes_match_manifest": true,
+      "captured_source_mismatches": []
+    },
+    {
+      "target": "Classicism.Results.Research.C5ActualityNumbersCertificates",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T052411006203Z-90a4d7dd.json",
+      "result": "PASS source, gate/type and full C-derivation audit",
+      "target_passed": true,
+      "target_fingerprint": "055e4d77db5be404b42312f7ed7794ffec446fe5e53e7692838f06e0ec3f1153",
+      "local_dependency_count_including_target": 72,
+      "external_imports": [
+        "Lean"
+      ],
+      "current_dependency_sources_match": true,
+      "changed_since_check": [],
+      "captured_source_bytes_match_manifest": true,
+      "captured_source_mismatches": []
+    },
+    {
+      "target": "Classicism.Results.Research.FregeHumeClassesCertificates",
+      "manifest": "research/2026-10-22/lean-formalization/checks/20261023T052411006203Z-90a4d7dd.json",
+      "result": "PASS source, gate/type and full C-derivation audit",
+      "target_passed": true,
+      "target_fingerprint": "e80007f09b66bf85fe9c0716762ceb942468fd0ff884daacdf0554d1a07af085",
+      "local_dependency_count_including_target": 59,
+      "external_imports": [
+        "Lean"
+      ],
+      "current_dependency_sources_match": true,
+      "changed_since_check": [],
+      "captured_source_bytes_match_manifest": true,
+      "captured_source_mismatches": []
+    }
+  ]
+}

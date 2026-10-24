@@ -1,0 +1,19 @@
+import Classicism.Results.Research.AtomicProbabilityFractionArchimedean
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Schema
+
+#classicism_audit Classicism.Results.Research.AtomicProbabilityFractionArchimedean
+#classicism_types_audit Classicism.Results.Research.AtomicProbabilityFractionArchimedean
+
+#classicism_derive Classicism.Research.ProbabilityFractions.naturalCode_in_field
+  Classicism.Research.ProbabilityFractions.naturalCode_add
+  Classicism.Research.ProbabilityFractions.naturalCode_mul
+  Classicism.Research.ProbabilityFractions.naturalCode_suc
+  Classicism.Research.ProbabilityFractions.naturalCode_lt_suc
+  Classicism.Research.ProbabilityFractions.fraction_below_numerator
+  Classicism.Research.ProbabilityFractions.fraction_has_natural_bound
+  Classicism.Research.ProbabilityFractions.reciprocal_natural_small
+  Classicism.Research.ProbabilityFractions.natural_multiple_exceeds_one
+
+#print axioms Classicism.Research.ProbabilityFractions.natural_multiple_exceeds_one.derivable

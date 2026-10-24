@@ -1,0 +1,174 @@
+Classicism.Research.ChoiceCodeTowers.classCodeT_injective: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.ChoiceCodeTowers.classCodeT_preserves_coext: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.ChoiceCodeTowers.classCode_coext_iff: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.ChoiceCodeTowers.classCode_double_split: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.ChoiceCodeTowers.classCode_injective: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.ChoiceCodeTowers.classCode_preserves_coext: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.ChoiceCodeTowers.classCode_pullback_identity: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.ChoiceCodeTowers.class_code_ambiguity: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.ChoiceCodeTowers.class_code_ambiguity_t: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.ChoiceCodeTowers.class_code_split: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.ChoiceCodeTowers.class_code_split_t: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.ChoiceCodeTowers.codeSplit_ambiguity: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.ChoiceCodeTowers.codeSplit_comp: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.ChoiceCodeTowers.codeSplit_id: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.ChoiceCodeTowers.codeSplit_injective: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.ChoiceCodeTowers.codeSplit_pullback: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.ChoiceCodeTowers.codeSplit_reflects_coext: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.ChoiceCodeTowers.codeSplit_selector_pullback: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.ChoiceCodeTowers.liftChooser_contained: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.ChoiceCodeTowers.liftChooser_functional: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.ChoiceCodeTowers.liftChooser_serial: Classicism ✓ [C⁻] (axioms: [])
+Classicism.Research.ChoiceCodeTowers.materialUnionT_classCodeT: Classicism ✓ [C⁻] (axioms: [propext])
+Classicism.Research.ChoiceCodeTowers.materialUnionT_preserves_coext: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.ChoiceCodeTowers.materialUnion_classCode: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+Classicism.Research.ChoiceCodeTowers.materialUnion_preserves_coext: Classicism ✓ [C⁻] (axioms: [propext, Quot.sound])
+#classicism_audit Classicism.Results.Research.ChoiceCodeTowers: 25/25 theorems pass; 25 in C⁻, 0 needing e_exists
+#classicism_types_audit Classicism.Results.Research.ChoiceCodeTowers: 25/25 inside R
+Classicism.Results.Research.ChoiceCodeTowers: 25 of 25 theorems derived
+
+[1/25] Classicism.Research.ChoiceCodeTowers.classCodeT_injective ✓ 351 ms
+[2/25] Classicism.Research.ChoiceCodeTowers.classCodeT_preserves_coext ✓ 0 ms
+[3/25] Classicism.Research.ChoiceCodeTowers.classCode_coext_iff ✓ 488 ms
+[4/25] Classicism.Research.ChoiceCodeTowers.classCode_double_split ✓ 1615 ms
+[5/25] Classicism.Research.ChoiceCodeTowers.classCode_injective ✓ 329 ms
+[6/25] Classicism.Research.ChoiceCodeTowers.classCode_preserves_coext ✓ 0 ms
+[7/25] Classicism.Research.ChoiceCodeTowers.classCode_pullback_identity ✓ 69 ms
+[8/25] Classicism.Research.ChoiceCodeTowers.class_code_ambiguity ✓ 594 ms
+[9/25] Classicism.Research.ChoiceCodeTowers.class_code_ambiguity_t ✓ 345 ms
+[10/25] Classicism.Research.ChoiceCodeTowers.class_code_split ✓ 0 ms
+[11/25] Classicism.Research.ChoiceCodeTowers.class_code_split_t ✓ 0 ms
+[12/25] Classicism.Research.ChoiceCodeTowers.codeSplit_ambiguity ✓ 0 ms
+[13/25] Classicism.Research.ChoiceCodeTowers.codeSplit_comp ✓ 0 ms
+[14/25] Classicism.Research.ChoiceCodeTowers.codeSplit_id ✓ 3 ms
+[15/25] Classicism.Research.ChoiceCodeTowers.codeSplit_injective ✓ 0 ms
+[16/25] Classicism.Research.ChoiceCodeTowers.codeSplit_pullback ✓ 16 ms
+[17/25] Classicism.Research.ChoiceCodeTowers.codeSplit_reflects_coext ✓ 0 ms
+[18/25] Classicism.Research.ChoiceCodeTowers.codeSplit_selector_pullback ✓ 43 ms
+[19/25] Classicism.Research.ChoiceCodeTowers.liftChooser_contained ✓ 9 ms
+[20/25] Classicism.Research.ChoiceCodeTowers.liftChooser_functional ✓ 9 ms
+[21/25] Classicism.Research.ChoiceCodeTowers.liftChooser_serial ✓ 7 ms
+[22/25] Classicism.Research.ChoiceCodeTowers.materialUnionT_classCodeT ✓ 0 ms
+[23/25] Classicism.Research.ChoiceCodeTowers.materialUnionT_preserves_coext ✓ 1 ms
+[24/25] Classicism.Research.ChoiceCodeTowers.materialUnion_classCode ✓ 0 ms
+[25/25] Classicism.Research.ChoiceCodeTowers.materialUnion_preserves_coext ✓ 0 ms
+Classicism.Research.ChoiceCodeTowers.ClassCodeSplit ⟶ Classicism.Research.ChoiceCodeTowers.ClassCodeSplit.schema:
+  fun ν' =>
+    Classicism.Meta.Term.conj
+      (Classicism.Meta.Term.forall'
+        ((Classicism.Meta.Term.lam
+              (Classicism.Meta.Term.exists'
+                (Classicism.Meta.Term.conj
+                  (Classicism.Meta.Term.forall'
+                    (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).iff
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ.succ).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ))))).eq'
+          (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))
+      (Classicism.Meta.Term.conj
+        (Classicism.Meta.Term.forall'
+          (Classicism.Meta.Term.forall'
+            (Classicism.Meta.Term.imp
+              (Classicism.Meta.Term.forall'
+                (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).iff
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))
+              (Classicism.Meta.Term.forall'
+                (Classicism.Meta.Term.iff
+                  (Classicism.Meta.Term.forall'
+                    (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).iff
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ.succ).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))
+                  (Classicism.Meta.Term.forall'
+                    (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).iff
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero)))))))))
+        (Classicism.Meta.Term.forall'
+          (Classicism.Meta.Term.forall'
+            (Classicism.Meta.Term.imp
+              (Classicism.Meta.Term.forall'
+                (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).iff
+                  ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                    (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))
+              (Classicism.Meta.Term.forall'
+                (Classicism.Meta.Term.iff
+                  (Classicism.Meta.Term.exists'
+                    (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ.succ).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).conj
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ))))
+                  (Classicism.Meta.Term.exists'
+                    (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).conj
+                      ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ))))))))))
+Classicism.Research.ChoiceCodeTowers.ClassCodeAmbiguity ⟶ Classicism.Research.ChoiceCodeTowers.ClassCodeAmbiguity.schema:
+  fun ν' σ' =>
+    Classicism.Meta.Term.forall'
+      (Classicism.Meta.Term.forall'
+        (Classicism.Meta.Term.forall'
+          (Classicism.Meta.Term.iff
+            (Classicism.Meta.Term.exists'
+              (Classicism.Meta.Term.conj
+                (Classicism.Meta.Term.forall'
+                  (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).iff
+                    (Classicism.Meta.Term.forall'
+                      (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                            (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).iff
+                        ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ.succ.succ).app
+                          (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))))
+                (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ.succ).app
+                      (Classicism.Meta.Term.lam
+                        (Classicism.Meta.Term.exists'
+                          (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ).app
+                                (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).conj
+                            ((Classicism.Meta.Term.var Classicism.Meta.Var.zero).app
+                              (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)))))).app
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ))))
+            (Classicism.Meta.Term.exists'
+              (Classicism.Meta.Term.conj
+                (Classicism.Meta.Term.forall'
+                  (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ).app
+                        (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).iff
+                    ((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ.succ).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero))))
+                (((Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ.succ.succ).app
+                      (Classicism.Meta.Term.var Classicism.Meta.Var.zero)).app
+                  (Classicism.Meta.Term.var Classicism.Meta.Var.zero.succ)))))))
+#classicism_schema: 2 of 2 principles with a Ty-parameter have list forms
+Classicism.Research.ChoiceCodeTowers.class_code_split ⟶ Classicism.Research.ChoiceCodeTowers.class_code_split.rule : ∀
+  (ν' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms (Classicism.Research.ChoiceCodeTowers.ClassCodeSplit.quoted ν')
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.ChoiceCodeTowers.class_code_split ⟶ Classicism.Research.ChoiceCodeTowers.class_code_split.listRule : ∀
+  (σs : List Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms (Classicism.Research.ChoiceCodeTowers.ClassCodeSplit.listQuoted σs)
+Classicism.Research.ChoiceCodeTowers.class_code_ambiguity ⟶ Classicism.Research.ChoiceCodeTowers.class_code_ambiguity.rule : ∀
+  (ν' σ' : Classicism.Meta.Ty),
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Research.ChoiceCodeTowers.ClassCodeAmbiguity.quoted ν' σ')
+certified ✓ (axioms: [propext, Quot.sound])
+Classicism.Research.ChoiceCodeTowers.class_code_ambiguity ⟶ Classicism.Research.ChoiceCodeTowers.class_code_ambiguity.listRule : ∀
+  (σs : List Classicism.Meta.Ty) (τ1 : Classicism.Meta.Ty),
+  τ1.Closed →
+    Classicism.Meta.Theorem Classicism.Meta.C.axioms
+      (Classicism.Research.ChoiceCodeTowers.ClassCodeAmbiguity.listQuoted σs τ1)
+Classicism.Research.ChoiceCodeTowers.class_code_split.listRule (σs : List Classicism.Meta.Ty) :
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms (Classicism.Research.ChoiceCodeTowers.ClassCodeSplit.listQuoted σs)
+Classicism.Research.ChoiceCodeTowers.class_code_ambiguity.listRule (σs : List Classicism.Meta.Ty)
+  (τ1 : Classicism.Meta.Ty) (h1 : τ1.Closed) :
+  Classicism.Meta.Theorem Classicism.Meta.C.axioms
+    (Classicism.Research.ChoiceCodeTowers.ClassCodeAmbiguity.listQuoted σs τ1)
+'Classicism.Research.ChoiceCodeTowers.class_code_split.listRule' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.ChoiceCodeTowers.class_code_ambiguity.listRule' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.ChoiceCodeTowers.codeSplit_comp.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.ChoiceCodeTowers.codeSplit_ambiguity.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.ChoiceCodeTowers.class_code_split_t.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.ChoiceCodeTowers.class_code_ambiguity_t.derivable' depends on axioms: [propext, Quot.sound]

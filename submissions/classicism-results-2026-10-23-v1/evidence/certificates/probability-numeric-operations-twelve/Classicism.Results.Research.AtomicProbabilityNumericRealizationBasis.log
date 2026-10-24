@@ -1,0 +1,16 @@
+Probability dependency checkpoint [mono_ms=10768502]: Shared realization basis: imports complete
+Probability dependency checkpoint [mono_ms=10768504; elapsed_ms=1]: begin derive Classicism.Research.ActualityCore.realize_selected
+Probability dependency checkpoint [mono_ms=10769278; elapsed_ms=775]: derive returned Classicism.Research.ActualityCore.realize_selected.derivable; theory=C-minus
+Probability dependency checkpoint [mono_ms=10769278; elapsed_ms=775]: begin kernel environment barrier Classicism.Research.ActualityCore.realize_selected.derivable
+Probability dependency checkpoint [mono_ms=10769278; elapsed_ms=775]: kernel environment theorem present Classicism.Research.ActualityCore.realize_selected.derivable
+Probability dependency checkpoint [mono_ms=10769278; elapsed_ms=775]: begin derive Classicism.Research.ActualityCore.domain_supported
+Probability dependency checkpoint [mono_ms=10769315; elapsed_ms=812]: derive returned Classicism.Research.ActualityCore.domain_supported.derivable; theory=C-minus
+Probability dependency checkpoint [mono_ms=10769315; elapsed_ms=812]: begin kernel environment barrier Classicism.Research.ActualityCore.domain_supported.derivable
+Probability dependency checkpoint [mono_ms=10769315; elapsed_ms=812]: kernel environment theorem present Classicism.Research.ActualityCore.domain_supported.derivable
+Probability dependency checkpoint [mono_ms=10769326]: begin axiom report Classicism.Research.ActualityCore.realize_selected.derivable
+Probability dependency checkpoint [mono_ms=10769371]: axiom report returned Classicism.Research.ActualityCore.realize_selected.derivable
+Probability dependency checkpoint [mono_ms=10769380]: begin axiom report Classicism.Research.ActualityCore.domain_supported.derivable
+Probability dependency checkpoint [mono_ms=10769392]: axiom report returned Classicism.Research.ActualityCore.domain_supported.derivable
+Probability dependency checkpoint [mono_ms=10769401]: Shared realization basis: commands complete; frontend finalization remains
+'Classicism.Research.ActualityCore.realize_selected.derivable' depends on axioms: [propext, Quot.sound]
+'Classicism.Research.ActualityCore.domain_supported.derivable' depends on axioms: [propext, Quot.sound]

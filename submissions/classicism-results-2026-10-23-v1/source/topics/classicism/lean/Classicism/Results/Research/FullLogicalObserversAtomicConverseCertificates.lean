@@ -1,0 +1,17 @@
+import Classicism.Results.Research.FullLogicalObserversAtomicConverse
+import Classicism.Tools.Check
+import Classicism.Tools.TypeSystem
+import Classicism.Tools.Schema
+
+#classicism_audit Classicism.Results.Research.FullLogicalObserversAtomicConverse
+#classicism_types_audit Classicism.Results.Research.FullLogicalObserversAtomicConverse
+
+#classicism_derive Classicism.Research.FullLogicalObservers.normalize_diagonal
+  Classicism.Research.FullLogicalObservers.evaluator_full_separation_atomicity
+  Classicism.Research.FullLogicalObservers.nd_actuality_full_separation_atomicity
+  Classicism.Research.FullLogicalObservers.c5_actuality_full_separation_atomicity
+
+#print axioms Classicism.Research.FullLogicalObservers.normalize_diagonal.derivable
+#print axioms Classicism.Research.FullLogicalObservers.evaluator_full_separation_atomicity.derivable
+#print axioms Classicism.Research.FullLogicalObservers.nd_actuality_full_separation_atomicity.derivable
+#print axioms Classicism.Research.FullLogicalObservers.c5_actuality_full_separation_atomicity.derivable

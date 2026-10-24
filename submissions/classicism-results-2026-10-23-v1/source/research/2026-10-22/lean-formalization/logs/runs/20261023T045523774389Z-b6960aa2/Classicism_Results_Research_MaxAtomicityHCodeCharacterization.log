@@ -1,0 +1,27 @@
+Classicism/Results/Research/MaxAtomicityHCodeCharacterization.lean:30:8: warning: automatically included section variable(s) unused in theorem `_private.Classicism.Results.Research.MaxAtomicityHCodeCharacterization.0.Classicism.Meta.Research.MaxAtomicityHCodeCharacterization.good_rows`:
+  [Nontrivial B]
+  [Infinite B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial B] [Infinite B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Classicism/Results/Research/MaxAtomicityHCodeCharacterization.lean:34:8: warning: automatically included section variable(s) unused in theorem `_private.Classicism.Results.Research.MaxAtomicityHCodeCharacterization.0.Classicism.Meta.Research.MaxAtomicityHCodeCharacterization.good_fills`:
+  [Nontrivial B]
+  [Infinite B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial B] [Infinite B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'Classicism.Meta.Research.MaxAtomicityHCodeCharacterization.good_collapseRange' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeCharacterization.collapseIntoUniverse_bijective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeCharacterization.canonicalChange_membership' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeCharacterization.satisfies_equiv' depends on axioms: [propext, Quot.sound]
+'Classicism.Meta.Research.MaxAtomicityHCodeCharacterization.eval_translate_canonical' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

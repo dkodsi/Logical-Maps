@@ -1,0 +1,643 @@
+{
+  "id": "final-choice-first-order-recovery",
+  "source_manifest_origin": "research/2026-10-22/lean-formalization/checks/20261023T233456901120Z-abfe59d4.json",
+  "source_manifest_path": "evidence/certificates/final-choice-first-order-recovery/original-manifest.json",
+  "source_manifest_sha256": "bc14ea114f75ccbe90779fb84af23cf2aba8e8fe9f3e052b5bc37c39a15f8c1b",
+  "run_id": "20261023T233456901120Z-abfe59d4",
+  "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "compiler_sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554",
+  "precompiled_sha256": "2d246141fa46907725d81838f7c3a7150742ef9bb592d2baf1d0c9aa6167a1ab",
+  "selected_targets": [
+    "Classicism.Models.ChoiceFirstOrderRecovery",
+    "Classicism.Models.BooleanGroundChecks",
+    "Classicism.Models.BooleanTypedTermSemantics",
+    "Classicism.Models.BooleanModelExtraction"
+  ],
+  "selected_targets_exit_code": 0,
+  "original_run_state": "failed",
+  "original_run_exit_code": 1,
+  "sources": [
+    {
+      "module": "Mathlib.Algebra.Order.Monoid.Basic",
+      "path": "dependencies/sources/0ac62cf4b13a404e/Mathlib/Algebra/Order/Monoid/Basic.lean",
+      "sha256": "0ac62cf4b13a404e4fc6f998bfe43bbab836e7f4c780161a27cb8cce3eb7e0d9",
+      "original_path": "topics/classicism/lean/Mathlib/Algebra/Order/Monoid/Basic.lean",
+      "fingerprint": "49242aaa590aa14665a235006d4beb03ba4ecbeae8b6faf509c2af2c8320db3e",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.Order.Cofinal",
+      "path": "dependencies/sources/cfba7b78a76259d0/Mathlib/Order/Cofinal.lean",
+      "sha256": "cfba7b78a76259d0154e66b40f410a29bc55aa4b3c24fe325add457a6a880da7",
+      "original_path": "topics/classicism/lean/Mathlib/Order/Cofinal.lean",
+      "fingerprint": "4ebb00e60665bde1cc592a83bee12e5d5ace6e8c4a67b99cbd4d19f5b2c4a215",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.SetTheory.Cardinal.Cofinality.Basic",
+      "path": "dependencies/sources/5dbb0d46f2ee666d/Mathlib/SetTheory/Cardinal/Cofinality/Basic.lean",
+      "sha256": "5dbb0d46f2ee666dda99d9bf0269aa9deca91cfd110e51fffcf7fe578942d254",
+      "original_path": "topics/classicism/lean/Mathlib/SetTheory/Cardinal/Cofinality/Basic.lean",
+      "fingerprint": "546a7d4923bbace46da8b805620222cfb36476b2726834de3c0afa3957f4aaf5",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.Order.SuccPred.InitialSeg",
+      "path": "dependencies/sources/76e4c09e3083c026/Mathlib/Order/SuccPred/InitialSeg.lean",
+      "sha256": "76e4c09e3083c0265cb44dfefc660cb743b17821457730e1e20834675610a979",
+      "original_path": "topics/classicism/lean/Mathlib/Order/SuccPred/InitialSeg.lean",
+      "fingerprint": "11c34727676858822cc3c5a553301b23e7cb302522b01505d183632649f85359",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.Order.DirSupClosed",
+      "path": "dependencies/sources/4a20209370b04628/Mathlib/Order/DirSupClosed.lean",
+      "sha256": "4a20209370b04628c475df4b6d1a36b8ea132afffb84a8e6cb0db611a3c8d8c3",
+      "original_path": "topics/classicism/lean/Mathlib/Order/DirSupClosed.lean",
+      "fingerprint": "193afcf98be70540642d13de9b784e145eb6e3557d54ce222601d9cbcb44b07e",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.Order.IsNormal",
+      "path": "dependencies/sources/441d4d47a684d141/Mathlib/Order/IsNormal.lean",
+      "sha256": "441d4d47a684d141d2b59321a5b6c717b79f3a4984d75453d3407ba12712d68b",
+      "original_path": "topics/classicism/lean/Mathlib/Order/IsNormal.lean",
+      "fingerprint": "f049d32eb5c8932998e14584de9b18088ac19aa330159bd1108c1db68f46254f",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.SetTheory.Ordinal.Basic",
+      "path": "dependencies/sources/ebf02f5adbbf3096/Mathlib/SetTheory/Ordinal/Basic.lean",
+      "sha256": "ebf02f5adbbf30960418a820f8f1df4503e9ccb88dc8c236db72050d757d43bb",
+      "original_path": "topics/classicism/lean/Mathlib/SetTheory/Ordinal/Basic.lean",
+      "fingerprint": "b88a09c689b111ce0623812df5ed14154c82614841908883f7f53e60aab4cce6",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.SetTheory.Ordinal.Arithmetic",
+      "path": "dependencies/sources/24c6859f3b75df90/Mathlib/SetTheory/Ordinal/Arithmetic.lean",
+      "sha256": "24c6859f3b75df90b5277035d052a0eb76dec2d56ef0248a9202017fc46701f9",
+      "original_path": "topics/classicism/lean/Mathlib/SetTheory/Ordinal/Arithmetic.lean",
+      "fingerprint": "7ccc5881e6f32a0809771eb1ae7a835ecb9362644de3772b607a5a3507da4940",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.SetTheory.Ordinal.Family",
+      "path": "dependencies/sources/250c1a2226584f3a/Mathlib/SetTheory/Ordinal/Family.lean",
+      "sha256": "250c1a2226584f3a052f667eab6f9d792f13375703ea13548148051a81f034fb",
+      "original_path": "topics/classicism/lean/Mathlib/SetTheory/Ordinal/Family.lean",
+      "fingerprint": "8bd371026be2be591ee4d80b0396aef743eba63b67913407215fd7e9fc20e794",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.SetTheory.Ordinal.Univ",
+      "path": "dependencies/sources/48268bbdb6ac0ed8/Mathlib/SetTheory/Ordinal/Univ.lean",
+      "sha256": "48268bbdb6ac0ed8feac298bfb5dba2a2fb8a1586cf73886e5768762375d5d75",
+      "original_path": "topics/classicism/lean/Mathlib/SetTheory/Ordinal/Univ.lean",
+      "fingerprint": "fcce950695a70c13082abb6136ac32894586c44a5f0b183aa473985b4a174ed4",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.SetTheory.Cardinal.Cofinality.Enum",
+      "path": "dependencies/sources/d47f0ad5c49873fb/Mathlib/SetTheory/Cardinal/Cofinality/Enum.lean",
+      "sha256": "d47f0ad5c49873fb3908b5831d75fe4aa23e6e235b5233a04dbb1492bcb8ca83",
+      "original_path": "topics/classicism/lean/Mathlib/SetTheory/Cardinal/Cofinality/Enum.lean",
+      "fingerprint": "9c2ff7da36a5fa00728d4dd4a12681f16f969175e594491bf821a51b3460dbde",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.SetTheory.Ordinal.Enum",
+      "path": "dependencies/sources/f6cf789b90ef749f/Mathlib/SetTheory/Ordinal/Enum.lean",
+      "sha256": "f6cf789b90ef749f359a89e2d1fe3990d4c0f08f7feb7a7fd5ba64d2a208a4d0",
+      "original_path": "topics/classicism/lean/Mathlib/SetTheory/Ordinal/Enum.lean",
+      "fingerprint": "063e9f9e13fc7594fca3495472263bbc5179cba0ef2c4e179185c37c27e6e79d",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.Logic.Small.List",
+      "path": "dependencies/sources/74999dd980e900a7/Mathlib/Logic/Small/List.lean",
+      "sha256": "74999dd980e900a7146c4a1a1a8b526de4b2c38c05f8b83c3d44ac078a8dabf3",
+      "original_path": "topics/classicism/lean/Mathlib/Logic/Small/List.lean",
+      "fingerprint": "4025e595b684fd9ee83ea4a5bf5b61ae174127df8ad92a28e44845be1576d348",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.Data.Nat.Log",
+      "path": "dependencies/sources/9800e6942155e281/Mathlib/Data/Nat/Log.lean",
+      "sha256": "9800e6942155e28138ed981a06340d7333aacccfafcd1aa35147147ae57d8e3f",
+      "original_path": "topics/classicism/lean/Mathlib/Data/Nat/Log.lean",
+      "fingerprint": "eadf2aa4407eef9ab873aa42ae47d53e64bfcf00f7134347e64e73144fcae94e",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.SetTheory.Ordinal.Exponential",
+      "path": "dependencies/sources/797197b278e62361/Mathlib/SetTheory/Ordinal/Exponential.lean",
+      "sha256": "797197b278e623619803cfb522c88d04309269589d35addaf6cb9bac654b14cb",
+      "original_path": "topics/classicism/lean/Mathlib/SetTheory/Ordinal/Exponential.lean",
+      "fingerprint": "190c90a7b2181786dd3aba7f6f583a65576bd4d870b648880e134ca429512ee4",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.SetTheory.Ordinal.FixedPoint",
+      "path": "dependencies/sources/baa08012cdff8a08/Mathlib/SetTheory/Ordinal/FixedPoint.lean",
+      "sha256": "baa08012cdff8a088ad1c76416d66e69427796c4fe5e5fce6d07e0f48a0f273d",
+      "original_path": "topics/classicism/lean/Mathlib/SetTheory/Ordinal/FixedPoint.lean",
+      "fingerprint": "66d67ec0af8e31e6623c94d18d5c7909844220f5e5990f6d7c4ee3daf0964a09",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.SetTheory.Ordinal.Principal",
+      "path": "dependencies/sources/7f9cd58ef01d4ebc/Mathlib/SetTheory/Ordinal/Principal.lean",
+      "sha256": "7f9cd58ef01d4ebcbbf5f7d1ed6d725c6e9c01d9e3888d340e38856f225cbbb7",
+      "original_path": "topics/classicism/lean/Mathlib/SetTheory/Ordinal/Principal.lean",
+      "fingerprint": "e71b7a9e0272e2c843780262b8007a196f2be576bdd8236e2e69c37baf0afefa",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.SetTheory.Cardinal.Aleph",
+      "path": "dependencies/sources/6cde9290d3aef7b6/Mathlib/SetTheory/Cardinal/Aleph.lean",
+      "sha256": "6cde9290d3aef7b64fd70f9ee4644f8fac0822b905c1dee64c4a46a48cf03853",
+      "original_path": "topics/classicism/lean/Mathlib/SetTheory/Cardinal/Aleph.lean",
+      "fingerprint": "d5b2e714f814c20a39476c66d76bddee28e1401a544c4994eda754cd5733f726",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.SetTheory.Cardinal.Arithmetic",
+      "path": "dependencies/sources/43505f6d6434b811/Mathlib/SetTheory/Cardinal/Arithmetic.lean",
+      "sha256": "43505f6d6434b8111c787fe51602b111b6a935def35227bcd2bdcab7d867692a",
+      "original_path": "topics/classicism/lean/Mathlib/SetTheory/Cardinal/Arithmetic.lean",
+      "fingerprint": "4db9ebbb683c4ec40ea0a8365a716a8d78825adf921bf07870d8032f2adb9564",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Models.BooleanValuedEquality",
+      "path": "source/topics/classicism/lean/Classicism/Models/BooleanValuedEquality.lean",
+      "sha256": "40c88707931e5a3eb755dada26644d7c5c489550884a0c248401b5c621301354",
+      "original_path": "topics/classicism/lean/Classicism/Models/BooleanValuedEquality.lean",
+      "fingerprint": "a0ad3a950efd7abf4652da621d12e41a2f8f80f4c0ef812717e3d679ac44881c",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Models.BooleanSupportedPredicates",
+      "path": "source/topics/classicism/lean/Classicism/Models/BooleanSupportedPredicates.lean",
+      "sha256": "2bf15f69ac26014e98fbe25750d3965877a13612aba7cf4a8116ddbc41ef173c",
+      "original_path": "topics/classicism/lean/Classicism/Models/BooleanSupportedPredicates.lean",
+      "fingerprint": "3a526c4724cb0cda4ea8d572ea546dfd4c7fe42d1b4c9820aa44de4cd35e12bc",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.Data.Fin.VecNotation",
+      "path": "dependencies/sources/08b3449fd3135bb1/Mathlib/Data/Fin/VecNotation.lean",
+      "sha256": "08b3449fd3135bb1b4123e74445bad9317b2aa7515a0464aaddc0d656971568e",
+      "original_path": "topics/classicism/lean/Mathlib/Data/Fin/VecNotation.lean",
+      "fingerprint": "3d1ee91dcd36b3d77bba1641ccf68472bf5e9e371354e361a4434b3e4f6e33a7",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.Logic.Equiv.Fin.Basic",
+      "path": "source/topics/classicism/lean/Mathlib/Logic/Equiv/Fin/Basic.lean",
+      "sha256": "c3470797814c2d81c32c21bfeb6e7ce503e28231a7d38aad665931f3f377bc12",
+      "original_path": "topics/classicism/lean/Mathlib/Logic/Equiv/Fin/Basic.lean",
+      "fingerprint": "e3353289c9abea0e93bfe2f1450422c08c8de32cae890114ab3b8040e8fe55ea",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.ModelTheory.Basic",
+      "path": "source/topics/classicism/lean/Mathlib/ModelTheory/Basic.lean",
+      "sha256": "ffc8f7914a8af8c306ed253f40bf82d375fc2ee7ced8deff22cc27a24e4da9b8",
+      "original_path": "topics/classicism/lean/Mathlib/ModelTheory/Basic.lean",
+      "fingerprint": "32880a60c54fa4d917d72ef52a07749444f3e4a7c2d4e3cc203beeeccd42cefd",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.ModelTheory.LanguageMap",
+      "path": "source/topics/classicism/lean/Mathlib/ModelTheory/LanguageMap.lean",
+      "sha256": "16d45b9f2fc98e39feaddacb7dbf81c43f2b521cf55d1362da276aa934ffab7a",
+      "original_path": "topics/classicism/lean/Mathlib/ModelTheory/LanguageMap.lean",
+      "fingerprint": "0c52b815873de1d50b8a377fde3e98cbc13811a6f5dcab7dab492e07043fd14e",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.ModelTheory.Syntax",
+      "path": "source/topics/classicism/lean/Mathlib/ModelTheory/Syntax.lean",
+      "sha256": "51243cb24e590183e33871afaa39ad18c535210dff6bd0b39e483dbab1b8e7e9",
+      "original_path": "topics/classicism/lean/Mathlib/ModelTheory/Syntax.lean",
+      "fingerprint": "3766af42185a21013e839815847d1ac2203352cc2a970b8b7a1b531fa955010d",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.ModelTheory.Semantics",
+      "path": "source/topics/classicism/lean/Mathlib/ModelTheory/Semantics.lean",
+      "sha256": "a156d9f6fad66edb030e9a176947c2df6d7c4d489c6ab3a823bea871e2be88e2",
+      "original_path": "topics/classicism/lean/Mathlib/ModelTheory/Semantics.lean",
+      "fingerprint": "1f013dac84f1309d299cee3931e8b0b4365846fa024641b1562493f726e2118c",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Models.BooleanFirstOrderSemantics",
+      "path": "source/topics/classicism/lean/Classicism/Models/BooleanFirstOrderSemantics.lean",
+      "sha256": "9c36a954cdca5fd44f45c797dfbeebb9178dcfa8647f3876e2f6de1b4b24676a",
+      "original_path": "topics/classicism/lean/Classicism/Models/BooleanFirstOrderSemantics.lean",
+      "fingerprint": "2dc1c5b66bb3430926a923bd187bd5f0961f8ec18682b2c8c73005ca306737d1",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Syntax.Types",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Types.lean",
+      "sha256": "567828e8f9a707cf635e3b4fb30bc868a419967307613d0686d795d195606eac",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Types.lean",
+      "fingerprint": "f920c6417fb0d73d4b6cb333a5de66a5647023a45396e3a09a0b7e943245c8cf",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Syntax.Term",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Term.lean",
+      "sha256": "ad5172acbb74eaab9307662408928b80e6ffab62e14df16f2f41c7205de13f69",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Term.lean",
+      "fingerprint": "19fcc526fbf7a5f30c841e2fb11bd4cc6c4c8c77eddfb46e22a81b795035e2d5",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Syntax.Conversion",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Conversion.lean",
+      "sha256": "c22fe48399811fcb0d71b37206c633749a7285291c62c2e7d786475ea6ae339e",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Conversion.lean",
+      "fingerprint": "98d38a7cbaf85616553560abf68733b885806aebd405d33965c1dc960da57f67",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Syntax.Derivation",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Derivation.lean",
+      "sha256": "7cc2fd01542014d55e5a4c4a411724db7cdc076462d0de724c3530b0a8a3fc6b",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Derivation.lean",
+      "fingerprint": "061b31ce6eb4dec06fa11b50e1a6c035783c2a4995cd0969cc86efba8ddcaddc",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Syntax.Axioms",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Axioms.lean",
+      "sha256": "f3dd3b51ef834f46f22e09fe34026f47120a8bc171afb190b5053c443f4a82a7",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Axioms.lean",
+      "fingerprint": "ddbcb4cf3a000255234e36d2ee2916e31b5fdb7a72f348dcefbd8c9d3ca7684a",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Syntax.Entailment",
+      "path": "source/topics/classicism/lean/Classicism/Syntax/Entailment.lean",
+      "sha256": "13f758dbf41a84dda7c2ae7adf6bcb9605ee114ce04dbda0efc5f1c4fbeabb1e",
+      "original_path": "topics/classicism/lean/Classicism/Syntax/Entailment.lean",
+      "fingerprint": "f670afd73a6fd66b3870be6129d27860b6752cbea6867b77f897d6c298a0bb17",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Semantics.Env",
+      "path": "source/topics/classicism/lean/Classicism/Semantics/Env.lean",
+      "sha256": "ca6f223a2bfe71396b3e21de852057e432cd7b289005cdacc1cc24935358e09d",
+      "original_path": "topics/classicism/lean/Classicism/Semantics/Env.lean",
+      "fingerprint": "7f3e4ffe9d4d890917cec6dec7d2aaf714d1012d59ca370044660890a5a783a3",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Semantics.Intensional",
+      "path": "source/topics/classicism/lean/Classicism/Semantics/Intensional.lean",
+      "sha256": "9a58b1dd47b1b527209d1994ed2b9252c85dc012d019d9878c2cbcc58b6019af",
+      "original_path": "topics/classicism/lean/Classicism/Semantics/Intensional.lean",
+      "fingerprint": "9d77eb883c8b635b5d6121dffea77de109a7b5f6d16ce917871a07d23795e942",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Semantics.IntensionalSoundness",
+      "path": "source/topics/classicism/lean/Classicism/Semantics/IntensionalSoundness.lean",
+      "sha256": "dc34e26e6baaaf9270c067fb43303dc9a00dbc885b8da02ba1eb7432fe008143",
+      "original_path": "topics/classicism/lean/Classicism/Semantics/IntensionalSoundness.lean",
+      "fingerprint": "a7e4c8efed9df1832eed378acb451e6177765b511b38a2f2739330abe954cfe7",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Models.ChoiceFirstOrder",
+      "path": "source/topics/classicism/lean/Classicism/Models/ChoiceFirstOrder.lean",
+      "sha256": "065c45e11c76add239fb40a601fb4c608aa78d8cad962d9b746e6e73a4334e02",
+      "original_path": "topics/classicism/lean/Classicism/Models/ChoiceFirstOrder.lean",
+      "fingerprint": "790174a3b763ae93b67ac31c8eaccd19e56829cf9239b0504343b14dca319c68",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Models.ChoiceFirstOrderTerms",
+      "path": "source/topics/classicism/lean/Classicism/Models/ChoiceFirstOrderTerms.lean",
+      "sha256": "9f0abab17dc77426103c5c49051d9896d315096521441ae822ac9d60d26fc433",
+      "original_path": "topics/classicism/lean/Classicism/Models/ChoiceFirstOrderTerms.lean",
+      "fingerprint": "4d6125986d68d341e27f5c9d889dce6f54396e68f4ffeb69d01f0f29503dbf25",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Models.ChoiceFirstOrderSmall",
+      "path": "source/topics/classicism/lean/Classicism/Models/ChoiceFirstOrderSmall.lean",
+      "sha256": "b135aeb7c5f2c82609d58a5209f86754ad01f93c5b651d069b416b70afba8e33",
+      "original_path": "topics/classicism/lean/Classicism/Models/ChoiceFirstOrderSmall.lean",
+      "fingerprint": "af9d3338aaee3bf3e9a3f574911dd151cc5a5db8a18c240dfd630863ca970455",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.Tactic.DeriveCountable",
+      "path": "source/topics/classicism/lean/Mathlib/Tactic/DeriveCountable.lean",
+      "sha256": "ca4a1000c05921123a87b79f8986282b9ec9de65abd10b205b5e2eb1f02ed660",
+      "original_path": "topics/classicism/lean/Mathlib/Tactic/DeriveCountable.lean",
+      "fingerprint": "0a52b8e6edf4af8cc59ffa2db265d7cbe2bdbf356cd9c7a28af30dada5e61cbc",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Models.ChoiceFirstOrderCountable",
+      "path": "source/topics/classicism/lean/Classicism/Models/ChoiceFirstOrderCountable.lean",
+      "sha256": "dcc93732849ee65565fd421ffbbae5607bd1bef715d54d64f84886635b63b18d",
+      "original_path": "topics/classicism/lean/Classicism/Models/ChoiceFirstOrderCountable.lean",
+      "fingerprint": "be10c4cc66d2fd0a61f7525ca7c2d7b3b05101c33e7b02a3ab1e096998bd6771",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Models.ChoiceFirstOrderMathlib",
+      "path": "source/topics/classicism/lean/Classicism/Models/ChoiceFirstOrderMathlib.lean",
+      "sha256": "885b5ddf7c9681ea74f36d8423b91d9f777afec223314d8ae721c9bdd76c94af",
+      "original_path": "topics/classicism/lean/Classicism/Models/ChoiceFirstOrderMathlib.lean",
+      "fingerprint": "b662c51bd528fe3e1e34f91d4fc868a48ad9e7d1a008ba4143980abce2426e14",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Models.ChoiceFirstOrderRecovery",
+      "path": "source/topics/classicism/lean/Classicism/Models/ChoiceFirstOrderRecovery.lean",
+      "sha256": "075c8440d3e810da09b0f2e9a6dc3494a80ba6d29798b07a1adde47d37cd0dac",
+      "original_path": "topics/classicism/lean/Classicism/Models/ChoiceFirstOrderRecovery.lean",
+      "fingerprint": "97368898b085894e05f5ac4f045e8bf5751d649f44ec7689195c2a01f73ba733",
+      "module_exit_code": 0,
+      "reused_at_run": false
+    },
+    {
+      "module": "Classicism.Models.BooleanTypedHierarchy",
+      "path": "source/topics/classicism/lean/Classicism/Models/BooleanTypedHierarchy.lean",
+      "sha256": "d74a58299c1be71aca8e3e71e7d7b4d931aed9551bbb8978c8a54e870ef07142",
+      "original_path": "topics/classicism/lean/Classicism/Models/BooleanTypedHierarchy.lean",
+      "fingerprint": "770988a98510055e48a641b94a6bb1ca5aa94527fc8fc0eb805bfabcb29067f7",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Models.ChoiceFirstOrderFull",
+      "path": "source/topics/classicism/lean/Classicism/Models/ChoiceFirstOrderFull.lean",
+      "sha256": "a8adf9353e2f0d3833ae3b1a5f89b408aa452dd925f56461ba8ccd32694b75b9",
+      "original_path": "topics/classicism/lean/Classicism/Models/ChoiceFirstOrderFull.lean",
+      "fingerprint": "39899436b4677dd197a9d3249527931a181b518c1df9601fa4a6998ab53cc762",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Models.BooleanGroundChecks",
+      "path": "source/topics/classicism/lean/Classicism/Models/BooleanGroundChecks.lean",
+      "sha256": "538336b7b6b2344658eccca4042be336e9ed31016fc35a8cc59e980a5a4155c3",
+      "original_path": "topics/classicism/lean/Classicism/Models/BooleanGroundChecks.lean",
+      "fingerprint": "30f23b2cf0187e19ae9f356bf8a3a25d4039696035d33294951a84e3ebfcb8fa",
+      "module_exit_code": 0,
+      "reused_at_run": false
+    },
+    {
+      "module": "Classicism.Models.BooleanTypedTermSemantics",
+      "path": "source/topics/classicism/lean/Classicism/Models/BooleanTypedTermSemantics.lean",
+      "sha256": "19b05614d76dc6d4f46cff89b04e5f31864a0ddda29198d650994ca39a5890c0",
+      "original_path": "topics/classicism/lean/Classicism/Models/BooleanTypedTermSemantics.lean",
+      "fingerprint": "afa30ea7ba04e4ba114d321bcb3a8f9e35b50d146754f34215810fb133f3019d",
+      "module_exit_code": 0,
+      "reused_at_run": false
+    },
+    {
+      "module": "Batteries.Data.Nat.Bitwise.Lemmas",
+      "path": "source/topics/classicism/lean/Batteries/Data/Nat/Bitwise/Lemmas.lean",
+      "sha256": "c16c1d6b828c7056722eeb251686a205ca7010f6e5b3dfd080fc5b97436ce9a6",
+      "original_path": "topics/classicism/lean/Batteries/Data/Nat/Bitwise/Lemmas.lean",
+      "fingerprint": "7d4bd6d78a7669dc83517c37df9de5a5824883f974a481f4ac3eeca66b889eeb",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Batteries.Data.Nat.Bitwise",
+      "path": "source/topics/classicism/lean/Batteries/Data/Nat/Bitwise.lean",
+      "sha256": "f60bf96abd97759c1ae659d08f32d5d6822710d0bd7dcb415b4744858abcd883",
+      "original_path": "topics/classicism/lean/Batteries/Data/Nat/Bitwise.lean",
+      "fingerprint": "177082b868319048ea87e5da4eb5056a0a24891ea75fc9df9db2accd47f6151c",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.Data.Nat.Bitwise",
+      "path": "source/topics/classicism/lean/Mathlib/Data/Nat/Bitwise.lean",
+      "sha256": "370fca0d9640cf428f7acb11a001801e47fdcb1073510ee4b3f8b4f60911d207",
+      "original_path": "topics/classicism/lean/Mathlib/Data/Nat/Bitwise.lean",
+      "fingerprint": "53bb8746c431fa2e5b5b3977eabd8ff008fdeb4d8cf49670504d4242209e80e3",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.Data.Nat.PSub",
+      "path": "source/topics/classicism/lean/Mathlib/Data/Nat/PSub.lean",
+      "sha256": "ac4e439afc60cbf763a934e516ba5b4ffaaad559e13d1e0e147c9c98d903dd4d",
+      "original_path": "topics/classicism/lean/Mathlib/Data/Nat/PSub.lean",
+      "fingerprint": "5e505bfbd30f4adfecf232edf748de5bea3673100efb9d755ff90e88e6cb529a",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.Data.Nat.Size",
+      "path": "source/topics/classicism/lean/Mathlib/Data/Nat/Size.lean",
+      "sha256": "237015baa16ee6a6a13a36d5fa6677ff0761fd3820abef6637fef945f86f72ce",
+      "original_path": "topics/classicism/lean/Mathlib/Data/Nat/Size.lean",
+      "fingerprint": "b51cbdcae77ae0d8386ca0e1604355cfa624f6899f0759999be83069d6535b89",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.Data.Num.Basic",
+      "path": "source/topics/classicism/lean/Mathlib/Data/Num/Basic.lean",
+      "sha256": "58190dbf939cb2fc16b26b667236a5370a42c0acafdff71d75dddf672cbc6916",
+      "original_path": "topics/classicism/lean/Mathlib/Data/Num/Basic.lean",
+      "fingerprint": "250f32f893747c9eb8436ced1dde7f9fef64e65faa2833e76008693cffef7767",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.Data.Num.Bitwise",
+      "path": "source/topics/classicism/lean/Mathlib/Data/Num/Bitwise.lean",
+      "sha256": "4cb3211534b51a3430b9ab964dc29855b1e3e83c27af4dd47dd4fc165a717d1d",
+      "original_path": "topics/classicism/lean/Mathlib/Data/Num/Bitwise.lean",
+      "fingerprint": "984323fc7383e8d486b74dc6bead8275106d792824ffd1975f84dad15eb4da3b",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.Data.Num.Lemmas",
+      "path": "source/topics/classicism/lean/Mathlib/Data/Num/Lemmas.lean",
+      "sha256": "5206f01a67ab6fdd9186da03eb8799d1c66541e18751623caee2cdcd708c2bb2",
+      "original_path": "topics/classicism/lean/Mathlib/Data/Num/Lemmas.lean",
+      "fingerprint": "e7ea3415d0ad5a7952704f2cc486036faa9d05673c72cb750620fe829f50e9f0",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.Tactic.ProxyType",
+      "path": "source/topics/classicism/lean/Mathlib/Tactic/ProxyType.lean",
+      "sha256": "f4d8c5e618d4f479327065b4b0a39a40f4c1f63025c8f434b4e20d8ae519cae3",
+      "original_path": "topics/classicism/lean/Mathlib/Tactic/ProxyType.lean",
+      "fingerprint": "81955d4873036136a288c9f513609380042209f4955b6cdd455e52dcee119c73",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.Tactic.DeriveFintype",
+      "path": "source/topics/classicism/lean/Mathlib/Tactic/DeriveFintype.lean",
+      "sha256": "df785752c158adcdc464e3370114f05fe16cd9ccde82e710d0630d15a89282fc",
+      "original_path": "topics/classicism/lean/Mathlib/Tactic/DeriveFintype.lean",
+      "fingerprint": "a1aded777be697a9148d484822a1dfd586febed41b81016dad7650f3a7a283cc",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.Computability.Encoding",
+      "path": "source/topics/classicism/lean/Mathlib/Computability/Encoding.lean",
+      "sha256": "9c0c23bb942f2af3d003705adaa519d0af14fda21a92fcfbc71af028bcf7ebb9",
+      "original_path": "topics/classicism/lean/Mathlib/Computability/Encoding.lean",
+      "fingerprint": "81636a80cf6d633fc3ec1e2c3b283ad78e0db908d9276f1903fdb7f5130eed9b",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Mathlib.ModelTheory.Encoding",
+      "path": "source/topics/classicism/lean/Mathlib/ModelTheory/Encoding.lean",
+      "sha256": "54cfc3f1d7ec6d3e0c1ffb6df2b641e0c998bdc0f51bbcdd04ad6c0529bed249",
+      "original_path": "topics/classicism/lean/Mathlib/ModelTheory/Encoding.lean",
+      "fingerprint": "2f12c4eb3684e1c0b0df3172a1fd3649a0511a96ea630f1c27b8e223067c94f7",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Models.BooleanWitnessChain",
+      "path": "source/topics/classicism/lean/Classicism/Models/BooleanWitnessChain.lean",
+      "sha256": "32acf27ba81fa4c716fcb5f53a4c6a54fac8d16d79eea85a4c091279a5bdec57",
+      "original_path": "topics/classicism/lean/Classicism/Models/BooleanWitnessChain.lean",
+      "fingerprint": "c5c54beef44059b9b792a93e2fd4d9f5ae67328ffdff4ef15967659d82d73889",
+      "module_exit_code": 0,
+      "reused_at_run": true
+    },
+    {
+      "module": "Classicism.Models.BooleanModelExtraction",
+      "path": "source/topics/classicism/lean/Classicism/Models/BooleanModelExtraction.lean",
+      "sha256": "e371e5d118bb24751ea5eb0739f64e935fb9b8d6e42da1a39fd54041679f8576",
+      "original_path": "topics/classicism/lean/Classicism/Models/BooleanModelExtraction.lean",
+      "fingerprint": "dccd4592f64c2dbaf0b510e1a204f4d80b4a5224453bc8377fa59f5db49d6a3e",
+      "module_exit_code": 0,
+      "reused_at_run": false
+    }
+  ],
+  "logs": [
+    {
+      "module": "Classicism.Models.ChoiceFirstOrderRecovery",
+      "path": "evidence/certificates/final-choice-first-order-recovery/Classicism_Models_ChoiceFirstOrderRecovery.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "audit_run_id": "20261023T233456901120Z-abfe59d4"
+    },
+    {
+      "module": "Classicism.Models.BooleanGroundChecks",
+      "path": "evidence/certificates/final-choice-first-order-recovery/Classicism_Models_BooleanGroundChecks.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "audit_run_id": "20261023T233456901120Z-abfe59d4"
+    },
+    {
+      "module": "Classicism.Models.BooleanTypedTermSemantics",
+      "path": "evidence/certificates/final-choice-first-order-recovery/Classicism_Models_BooleanTypedTermSemantics.log",
+      "sha256": "ac3e0a105bb85c3c09a814e12c264f264cd0a4406206ca200c0737e317d7936c",
+      "audit_run_id": "20261023T233456901120Z-abfe59d4"
+    },
+    {
+      "module": "Classicism.Models.BooleanModelExtraction",
+      "path": "evidence/certificates/final-choice-first-order-recovery/Classicism_Models_BooleanModelExtraction.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "audit_run_id": "20261023T233456901120Z-abfe59d4"
+    }
+  ],
+  "axiom_report_lines": [],
+  "result_entries": [
+    "CHOICE-NO-FINITE-BASIS"
+  ],
+  "scope": "Accepted model-construction components only; no full finite-Choice negative-model or entrance-countermodel endpoint is inferred. Principal axiom reports are distinguished from source compilation.",
+  "verification": "Exact captured dependency sources, successful target records and saved principal logs checked. An accepted component without a printed principal axiom list is recorded only at that scope. No compiler invocation or database verification-flag change.",
+  "endpoint_assessments": [
+    {
+      "module": "Classicism.Models.ChoiceFirstOrderRecovery",
+      "explicit_principal_axiom_audit": false,
+      "principal_axiom_audit": [],
+      "translation_audits": [],
+      "gate_and_type_audits": []
+    },
+    {
+      "module": "Classicism.Models.BooleanGroundChecks",
+      "explicit_principal_axiom_audit": false,
+      "principal_axiom_audit": [],
+      "translation_audits": [],
+      "gate_and_type_audits": []
+    },
+    {
+      "module": "Classicism.Models.BooleanTypedTermSemantics",
+      "explicit_principal_axiom_audit": false,
+      "principal_axiom_audit": [],
+      "translation_audits": [],
+      "gate_and_type_audits": []
+    },
+    {
+      "module": "Classicism.Models.BooleanModelExtraction",
+      "explicit_principal_axiom_audit": false,
+      "principal_axiom_audit": [],
+      "translation_audits": [],
+      "gate_and_type_audits": []
+    }
+  ],
+  "source_manifest_original_sha256": "cf5aa050b88de449e0ecb43ef896d7a59e5cd49ddf94a43c8777787303c587cf",
+  "source_manifest_normalization": "Portable paths and omission of research coordination metadata; theorem/source hashes and check verdicts preserved."
+}
