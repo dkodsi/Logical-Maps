@@ -131,16 +131,20 @@ Here logical constants of curried type have their full curried graph constrained
 
 For explicit term translation, define a first-order formula
 $\mathrm{Den}_a(\bar x,u)$ recursively for each subterm $a$. A variable uses identity with its assigned value; a constant uses its constrained interpretation. Application existentially combines the two subterm denotations with the appropriate application graph. A lambda term $\lambda x^\sigma.b^\tau$ uses
+
 $$
 \forall x\in U_\sigma\,\forall v\in U_\tau\,
  [\mathrm{App}_{\sigma\tau}(u,x,v)
    \leftrightarrow \mathrm{Den}_b(\bar x,x,v)].
 $$
+
 Structural induction proves existence and uniqueness of every denotation: totality handles application, graph-fullness handles lambda abstraction, and the defining clauses plus (2.1)–(2.2) give all the logical constants. Extensionality proves uniqueness in the function cases. For a sentence $A:t$, take
+
 $$
 A^*(w):=\exists p\in U_t\,
   (\mathrm{Den}_A(p)\land\mathrm{Ev}(p,w)).
 $$
+
 All these formulas are finite and first-order in the auxiliary sorted presentation. Thus no table of truths of arbitrary formulas is added to the translation.
 
 Let
@@ -189,13 +193,16 @@ $N=\{z_n:n<\omega\}$, an external set of objects of type $\nu$.
 Fullness at $\nu t$ supplies its rigid characteristic predicate, with value $W$ on $N$ and $\varnothing$ elsewhere. This predicate contains zero and is successor-closed, so the impredicative definition of $\mathrm{FiniteCardinality}_e$ excludes every object outside $N$. Conversely, at any world, external finite induction puts each $z_n$ in every predicate locally containing zero and closed under successor. Thus the local extension of numberhood is exactly $N$.
 
 A second induction proves
+
 $$
 w\in z_n(X)\quad\Longleftrightarrow\quad
 |\{a\in E:w\in X(a)\}|=n.
 $$
+
 The zero clause says the extension is empty. The successor clause removes a member using literal individual inequality; an $(n+1)$-element extension has such a removal, and a removal leaving $n$ members makes the original size $n+1$. Combining the two inductions proves the lemma. The same proof works at any counting type, with its actual domain in place of $E$. $\square$
 
 Now put
+
 $$
 \Gamma=\{\mathrm{Fin}(P)\}\cup\{L_n(P):1\le n<\omega\}.
 $$
@@ -215,12 +222,15 @@ It also follows that no ordinary first-order theory in added sorts or symbols ha
 ### 4.1 An explicit arithmetic reduction
 
 For a first- or second-order arithmetic sentence $\psi$, use relational second-order Peano arithmetic on
+
 $$
 z^e,\quad S^{eet},\quad A^{eeet},\quad M^{eeet}.
 $$
+
 Its finite sentence $PA_2(z,S,A,M)$ asserts a total single-valued injective successor with zero outside its range, induction over every $et$-property, and total single-valued addition/multiplication graphs satisfying the usual recursion equations.
 
 Put
+
 $$
 V_\psi:=
 \forall z,S,A,M\,
@@ -252,19 +262,23 @@ The second-order version gives more. The set of all true second-order arithmetic
 **Theorem 4.3.** Suppose proofs are countable well-founded rooted trees, coded by reals, with arithmetically specified local correctness, natural-number-coded conclusions, and no nonprojective oracle hidden in the axiom/rule conditions. Such a system cannot be both sound and weakly complete for the target.
 
 **Proof.** Its theorem predicate has the form
+
 $$
 \exists T\,
  [\mathrm{Root}(T,n)\land
   \mathrm{LocalCorrect}(T)\land\mathrm{WF}(T)].
 $$
+
 Local correctness is arithmetical and well-foundedness is $\Pi^1_1$, so this is $\Sigma^1_2$. It is projective, contradicting §4.1 if it equals full validity. Uniformly hyperarithmetical local data give the same projective obstruction. $\square$
 
 For a standard presentation with number-indexed rule instances and arithmetical axiom and premise relations, a sharper bound comes from the least rule-closed set:
+
 $$
 n\in D\quad\Longleftrightarrow\quad
 \forall X\subseteq\omega\,
   [X\text{ contains the axioms and is rule-closed}\to n\in X].
 $$
+
 The bracketed condition is arithmetical in $X$, giving a $\Pi^1_1$ upper bound. Transfinite generation ranks yield well-founded derivation trees; induction on trees gives the converse. The broader $\Sigma^1_2$ bound suffices here.
 
 These are precise restrictions on proof formats. They do not exclude arbitrary non-effective calculi, uncountable set-labelled certificates, or more complex side conditions. Such resources would have to be stated openly and justified.
@@ -297,6 +311,7 @@ This example proves that standard arithmetic plus internal choice/comprehension 
 Consider a general Gallin hierarchy with literal identity, extensional application, pointwise logic, and lambda closure. Assume its represented worlds are **principal**: each $w\in W$ has the singleton proposition $\delta_w$. This follows in the auxiliary Gallin presentation from world equality and comprehension. In CC's reconstructed presentation the worlds are propositional atoms; the representation and boxed Actuality supply the same condition.
 
 For $\tau=\sigma_1\cdots\sigma_n t$, including $n=0$, let
+
 $$
 X_\tau=W\times D_{\sigma_1}\times\cdots\times D_{\sigma_n},
 \qquad
@@ -306,9 +321,11 @@ $$
 
 Repeated extensionality identifies $D_\tau$ with a Boolean subalgebra
 $B_\tau\subseteq\mathcal P(X_\tau)$. Its order is C's algebraic order, and its Boolean operations are the set operations on these supports. For every point $(w,\bar a)$, lambda and literal identity supply
+
 $$
 \lambda\bar x.\ \delta_w\land\bigwedge_i x_i=a_i.
 $$
+
 Its support is that singleton. Hence the atoms of $B_\tau$ are precisely the singleton points.
 
 **Theorem 6.1.** Under these hypotheses, the following are equivalent:
@@ -374,10 +391,12 @@ $\lambda^{<\kappa}=\lambda$. Form the full hierarchy $F$ on
 $E=W=\lambda$. Choose regular $\theta$ large enough that the entire coded hierarchy, its domains and structural operations belong to $H_\theta$.
 
 There is $M\prec H_\theta$ with
+
 $$
 |M|=\lambda,\quad \lambda\subseteq M,\quad
 \lambda,F\in M,\quad M^{<\kappa}\subseteq M.
 $$
+
 For completeness, construct an elementary chain of length $\kappa$. At each successor stage add every sequence of length less than $\kappa$ from the preceding stage and take a Skolem hull. The size remains $\lambda$ by $\lambda^{<\kappa}=\lambda$. Regularity of $\kappa$ puts every short sequence from the final union inside some stage, so it is added at the next. The union is elementary. Include the finitely tagged base sorts and all countably many type-domain objects in the initial hull.
 
 Intersect each applicative sort of $F$ with $M$. This is an elementary substructure in the ordinary many-sorted presentation, by the Tarski–Vaught criterion with $F$ as parameter. **Recursively restrict and transport** arrow objects to the reduced argument domains; do not regard an old function with its old domain as already a function on the new domain. This representation is injective: elementarity supplies a distinguishing argument in $M$ for any two distinct old functions in $M$. Application and all logical operations transport correctly. Both base domains remain $\lambda$.
@@ -397,6 +416,7 @@ This includes closure under all countable joins by taking $\kappa=\omega_1$. It 
 Let $\mathcal F$ consist of formulas built from individual equality, individual constants, relational constants $R:e\cdots et$ applied only to individuals, Boolean connectives, individual quantifiers, and $\Box$. Propositional constants are allowed as nullary relations. There is **no quantification over relations**, no comparison of arbitrary relational intensions by identity, and no higher-type arguments.
 
 Introduce ordinary first-order sorts $E,W$, a distinguished $w_0$, and a relation $R^*(w,\bar x)$ for each original $R$. Define the standard translation:
+
 $$
 \begin{aligned}
 \mathrm{ST}_w(R[\bar x])&=R^*(w,\bar x),\\
@@ -405,9 +425,11 @@ $$
 \mathrm{ST}_w(\Box B)&=\forall v^W\,\mathrm{ST}_v(B),
 \end{aligned}
 $$
+
 commuting with Boolean connectives. Let $T_\infty$ contain all ordinary first-order finite lower bounds on both sorts.
 
 **Theorem 8.1.** For any $\Gamma\cup\{A\}\subseteq\mathcal F$,
+
 $$
 \Gamma\models_{\mathrm{full},\infty}^{V,\Sigma} A
 \quad\Longleftrightarrow\quad
@@ -426,12 +448,14 @@ For validity alone, a finite leading universal block of relation variables may a
 Fix one full hierarchy $G$, its signature interpretation, and a point $w$. In its many-sorted relational presentation name every domain element, including all worlds and higher-type objects. Supply the **atomic diagram**, namely the primitive application, membership/evaluation and equality facts about these named elements, together with their true negations. Logical constructors and lambda can be eliminated by their defining relational formulas as in §2.2; an oracle for arbitrary sentence truth is not an initial axiom.
 
 In addition to the usual Boolean rules and existential witness introduction, allow at every sort $s$ the rule $U_s^G$:
+
 $$
 \frac{\{B(c_a):a\in D_s^G\}}{\forall x^s B(x)}.
 \tag{8.2}
 $$
 
 **Theorem 8.2.** For each finitary sentence $A$ in this presentation,
+
 $$
 G\models A\quad\Longleftrightarrow\quad
 A\text{ has a well-founded set-sized proof from its atomic diagram}.

@@ -9,61 +9,77 @@ The restriction concerns the entire admitted reversible group. Requiring only th
 ## 1. The finite exponent sentence
 
 Work first over C5. Write 0,1 for Bottom, Top and I=λp.p. Let A(G) be the finite predicate saying that G is $\mathrm{Good}_{\{t\}}$ and has an admitted same-qualified whole inverse:
+
 $$
 A(G):=B(G)\land\exists H^{tt}
 [B(H)\land G\circ H=I\land H\circ G=I].
 \tag{1}
 $$
+
 B is the conjunction of whole Boolean and type-t quantifier identities. As in [Reversible fixed propositions](reversible-fixed-proposition-characterization.md), §1, it is equivalent to $\mathrm{Good}_{\{t\}}$ over C; the translated equality clauses are redundant here. C5 makes A(G) endpoint-valued and upgrades every qualified G and inverse to every requested finite list of quantifier types.
 
 For a fixed external integer n≥1 define the single finite sentence
+
 $$
 \mathrm{Exp}_n:=\forall G^{tt}[A(G)\to G^n=I].
 \tag{2}
 $$
+
 Gⁿ is the displayed n-fold composite; Gⁿ=I is identity of complete unary operations. The quantifier ranges over every admitted member of the qualified group, not a selected separating family. Define the external integer
+
 $$
 k(n):=\max\{j\ge1:\text{ every integer }1\le m\le j
                          \text{ divides }n\}.
 \tag{3}
 $$
+
 The maximum exists: 1 divides n and n+1 does not. In particular k(n)+1 does not divide n. For fixed external N≥1 write the finite proposition-domain bound
+
 $$
 \mathrm{AtMost}_N(t):=
 \exists u_1\cdots u_N\ \forall p\
 (p=u_1\lor\cdots\lor p=u_N).
 \tag{4}
 $$
+
 Repeated witnesses are permitted. This bounds proposition objects, not current truth values, the number of observers, or an internally variable finite cardinality.
 
 ## 2. A finite common-refinement theorem
 
 Assume full Rev, and hence C5. The [orbit-join theorem](reversible-fixed-proposition-characterization.md), §§2–3, gives
+
 $$
 O(d):=\exists G^{tt}[A(G)\land Gd]=1
 \qquad(d\ne0).
 \tag{5}
 $$
+
 For any nonzero d,b there is therefore an admitted A-member G such that
+
 $$
 Gd\land b\ne0.
 \tag{6}
 $$
+
 Here is the extraction, including the case in which b is currently false. Meet b into (5). The admitted quantified join becomes the join of A(G)∧Gd∧b. If every qualified intersection were zero, every joinand would be zero, since ineligible guards are Bottom under C5. The join would then be zero, contradicting b≠0. Classical quantified reasoning yields (6). No current truth of b or of the intersection is inferred.
 
 **Finite refinement lemma.** Given any fixed finite family b₁,…,b_m of pairwise disjoint nonzero propositions, there are a nonzero d and admitted A-members G₁,…,G_m such that
+
 $$
 c_i:=G_i d\ne0,\qquad c_i\le b_i
 \quad(1\le i\le m).
 \tag{7}
 $$
+
 The c_i are disjoint, and their principal intervals are isomorphic by the admitted restrictions of G_j∘G_i⁻¹.
 
 Start with d=b₁ and G₁=I. Suppose (7) holds for the first j members. Use (6) with the current d and b_{j+1} to choose G, and choose an admitted qualified inverse H. Replace d by
+
 $$
 d':=d\land H(b_{j+1}).
 \tag{8}
 $$
+
 Then Gd′=Gd∧b_{j+1}≠0, so d′≠0. Each earlier G_i d′ remains nonzero by injectivity and lies below G_i d≤b_i. Keep the earlier G_i and take G_{j+1}=G. This proves the lemma by ordinary external finite induction.
 
 Only finitely many witnesses are selected, each by existential elimination in the current proof. No Choice, atom or atomlessness assumption, Boolean Completeness or Zorn principle is used. Every map is already an admitted global logical automorphism; no external interval isomorphism is presumed to extend to one.
@@ -71,36 +87,46 @@ Only finitely many witnesses are selected, each by existential elimination in th
 ## 3. An admitted cycle of exactly m steps
 
 Keep the c_i,G_i from (7), choose admitted qualified inverses H_i, and read indices cyclically modulo m. Put r=¬∨ᵢc_i and define
+
 $$
 T(p):=(r\land p)\lor
 \bigvee_{i=1}^{m}
 [c_{i+1}\land(G_{i+1}\circ H_i)(p)].
 \tag{9}
 $$
+
 Every composite G_{i+1}∘H_i is Good at every requested finite list. The output regions r,c₁,…,c_m partition Top. Finite Boolean patching therefore makes T Good at every such list: Boolean identities are checked on the regions, while fixed-region distribution through admitted quantifier meets and joins gives the quantifier laws. C5 Functionality collects the output equations into the required whole-operation identities. These are the admitted patching laws used for interval swaps in [Finite relative image generation](finite-relative-image-generation.md), §4.
 
 The transitions satisfy
+
 $$
 (G_{i+1}\circ H_i)(c_i)=c_{i+1}.
 \tag{10}
 $$
+
 Their inverses carry c_{i+1} back to c_i. Masking an input with c_i therefore leaves only its prescribed next branch in (9); every other region contributes zero. The complement r is fixed. Expanding successive composites gives, for each fixed external s≥0,
+
 $$
 T^s(p)=(r\land p)\lor
 \bigvee_{i=1}^{m}
 [c_{i+s}\land(G_{i+s}\circ H_i)(p)].
 \tag{11}
 $$
+
 For s=0 this is the partition of p. The successor step follows because only consecutive regions overlap, and the maps telescope using H_i∘G_i=I. At s=m every map in (11) is identity, so Tᵐp=p for every p. Functionality gives
+
 $$
 T^m=I.
 \tag{12}
 $$
+
 Thus T is reversible with admitted qualified inverse T^{m−1}. Moreover Tˢc₁=c_{1+s}. For 0<s<m these are distinct nonzero disjoint propositions, so Tˢ≠I. Ordinary external division of n by m and (12) give
+
 $$
 \boxed{T^n=I\quad\longleftrightarrow\quad m\mid n.}
 \tag{13}
 $$
+
 Every power identity here is a whole-operation identity. Equation (11) computes the operation on every proposition, including the complement of the pieces; the argument does not infer a whole identity merely from a permutation of finitely many selected objects.
 
 ## 4. Exact exponent classification
@@ -112,6 +138,7 @@ For the forward direction, start with the partition {1}. If a member is not an a
 Conversely, k+1 disjoint nonzero elements yield 2^{k+1} distinct finite joins. Intersecting with a piece in the symmetric difference of two subfamilies proves distinctness. The ordinary finite pigeonhole argument contradicts an enumeration of at most 2^k objects. This is not an external enumeration of an arbitrary internally finite domain.
 
 **Theorem.** For each fixed external n≥1, with k=k(n),
+
 $$
 \boxed{
 \mathrm H+\mathrm{Rev}+\mathrm{Exp}_n
@@ -121,6 +148,7 @@ $$
 \mathrm H+\mathrm{End}+\mathrm{AtMost}_{2^k}(t).}
 \tag{14}
 $$
+
 **Forward.** Rev supplies C5. If k+1 disjoint nonzero propositions existed, §§2–3 would give an admitted A-member T of exact order k+1. Exp_n would give Tⁿ=I, contradicting k+1∤n. The Boolean bound therefore gives AtMost_{2^k}(t).
 
 **Converse.** Under C5, AtMost_{2^k}(t) gives a partition of Top into j≤k atoms by the preceding argument. In particular Atomicity_t holds. The established C5+Atomicity_t theorem gives full End and hence full Rev.

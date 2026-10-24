@@ -17,6 +17,7 @@ L_E\dashv E\dashv R_E,
 \qquad L_EE=I=R_EE.
 \tag{1}
 $$
+
 Put j_E:=ER_E and C_E:=EL_E. The [adjoint theorem](canonical-adjoints-and-image-factorization.md), §§2–4, gives
 
 $$
@@ -24,12 +25,14 @@ j_Eq\le q\le C_Eq,
 \qquad C_Eq=\neg j_E(\neg q),
 \tag{2}
 $$
+
 and the Frobenius identity
 
 $$
 L_E(q\land Ep)=L_Eq\land p.
 \tag{3}
 $$
+
 L_E preserves every admitted existential quantifier and binary join; R_E preserves every admitted universal quantifier and binary meet. These are order adjoints, not assumed Boolean observers. All identities between operations below are collected using the Functionality available over C5.
 
 Define
@@ -43,6 +46,7 @@ J_\Delta:=\exists E^{tt}c^t\,[
 \end{aligned}
 \tag{4}
 $$
+
 Thus c is currently true, but no nonzero proposition has its E-image below c. By adjunction, the last condition is equivalently R_Ec=0. It does not say that every proposition below c is zero, or that c itself is an image value. No separation premise, inverse or selector occurs in (4).
 
 The main theorem is
@@ -57,6 +61,7 @@ S_{\tau,\Delta}[\mathrm{Rev}]
 }
 \tag{5}
 $$
+
 Both disjuncts refer to the same fixed output type and finite qualification list. C5 remains an explicit background throughout.
 
 ## 2. One witness normalizes every ordinary truth profile
@@ -67,6 +72,7 @@ $$
 E_G(p):=(c\land Gp)\lor(\neg c\land Ep).
 \tag{6}
 $$
+
 Boolean partition patching makes E_G Good_Δ with full composite identities. The fixed coefficient c adds no quantifier type. To prove current injectivity, suppose E_Gp=E_Gq. Restriction to ¬c gives
 
 $$
@@ -74,6 +80,7 @@ $$
 \qquad E(p\mathbin\triangle q)\le c.
 \tag{7}
 $$
+
 Condition (4) gives p△q=0 and therefore p=q. This proves Inj(E_G). Equivalently, (7) gives p△q≤R_Ec=0.
 
 Since c is currently true, the entire current truth profile is preserved:
@@ -82,6 +89,7 @@ $$
 \forall p\,(E_Gp\leftrightarrow Gp).
 \tag{8}
 $$
+
 The same E,c work for every G. No choice of a family of replacement observers is assumed: (6) is an admitted term in E,c,G. Hence J_Δ plus ordinary separation gives injective separation at every requested relational output type for that same list.
 
 ## 3. The canonical local alternative
@@ -92,6 +100,7 @@ $$
 u:=\forall q^t\,(jq\leftrightarrow q).
 \tag{9}
 $$
+
 An unconditional universal-instantiation theorem, followed by C's Boolean identities, gives
 
 $$
@@ -99,18 +108,21 @@ u\land jq=u\land q
 \qquad\text{for every }q.
 \tag{10}
 $$
+
 This is an output identity even when u is false. It is the same discharged logical argument used for the local equalizer in the [left-inverse decomposition](left-inverse-separation-decomposition.md), §3. It does not apply Logical Equivalence to a theorem depending on an optional hypothesis. Applying (10) to ¬q and taking the relative complement inside u gives
 
 $$
 u\land C_Eq=u\land q.
 \tag{11}
 $$
+
 If u is currently false, classical quantifier reasoning supplies q for which jq and q differ in truth. Since jq≤q, q is true and jq false. Put
 
 $$
 c:=q\land\neg jq.
 \tag{12}
 $$
+
 Then c is true. Since j=ER, Boolean preservation by E and RE=I yield
 
 $$
@@ -122,6 +134,7 @@ Rc
 \end{aligned}
 \tag{13}
 $$
+
 Thus this very E and c witness J_Δ.
 
 Conversely, any true c with Rc=0 has jc=0, so (9) is false. Therefore J_Δ is equivalently the assertion that **some injective Good_Δ observer's canonical image floor loses the truth of a currently true proposition**. This is a condition on the auxiliary image interior j, not a claim about the language's original necessity operator.
@@ -132,6 +145,7 @@ $$
 v\land C_E(v\land q)=v\land q.
 \tag{14}
 $$
+
 Indeed, the left side is at most v∧C_E(u∧q)=v∧q by (11), and the reverse inequality follows from x≤C_Ex. There is no coverage condition C_Ev=1. Thus v need not be a global Boolean transversal of the kind classifying qualified left inverses.
 
 ## 4. A true local interval gives a distinguishing involution
@@ -144,6 +158,7 @@ v:=u\land Ed\land\neg d,
 \qquad r:=\neg(v\lor a).
 \tag{15}
 $$
+
 The proposition v is true. Since v≤Ed, adjunction gives a≤d. Hence v∧a=0 and v,a,r form a Boolean partition.
 
 Define α(p):=v∧Ep. On the interval below a, α is an admitted relative Boolean isomorphism onto the interval below v, with inverse L restricted to that interval. Here intervals are guarded ranges in the original proposition type, not new object-language types. To verify the assertion, (3) gives
@@ -152,24 +167,28 @@ $$
 L(v\land Ep)=a\land p,
 \tag{16}
 $$
+
 while (14) gives
 
 $$
 v\land E(L(v\land q))=v\land q.
 \tag{17}
 $$
+
 For p≤a, (16) is p; every q≤v is recovered by (17). Also v≤C_Ev=Ea, so αa=v. Boolean preservation of E gives all relative Boolean laws for α, including its relative complement law. They transfer to its inverse L on [0,v]. In particular the ambient term q↦L(v∧q) has top a, bottom 0 and satisfies
 
 $$
 L(v\land\neg q)=a\land\neg L(v\land q).
 \tag{18}
 $$
+
 Now patch the two inverse interval maps with identity:
 
 $$
 T(p):=(v\land Ep)\lor L(v\land p)\lor(r\land p).
 \tag{19}
 $$
+
 The three output regions are v,a,r. Their relative Boolean laws prove that T preserves all Boolean operations, fixes 0 and 1, and is an admitted term. This argument uses L only on the local interval; L is not asserted globally Good.
 
 For every σ in the requested list and every admitted H:σt, its middle branch preserves existential quantification:
@@ -182,6 +201,7 @@ L(v\land\exists x^\sigma Hx)
 \end{aligned}
 \tag{20}
 $$
+
 The first branch has the same law by E's qualification and fixed-guard distributivity; the identity branch does as well. Distributing the finite outer join through ∃ gives the existential law for T. Its established negation law and quantifier duality give every listed universal law. C5 Functionality collects these output identities into the full composite identities, and the translated equality clauses follow from Boolean qualification over C. Thus T is Good_Δ without adding a type to Δ.
 
 It remains to check the whole inverse equation. Since v≤Ed and v≤¬d,
@@ -190,6 +210,7 @@ $$
 v\land Ev=0.
 \tag{21}
 $$
+
 Also v≤Ea and r≤¬a give v∧Er=0. Expanding (19) therefore gives
 
 $$
@@ -200,6 +221,7 @@ r\land Tp&=r\land p.
 \end{aligned}
 \tag{22}
 $$
+
 Equations (19) and (22) yield T(Tp)=p for every p. Functionality gives T∘T=I as a whole-operation identity. Finally, v is true and v≤Ed, so Td is true. T is a qualified involution detecting the originally false d.
 
 Together §§3–4 prove the local alternative: a distinguishing injective observer either yields a distinguishing involution, or supplies the one-observer witness J_Δ. It need not itself have any qualified inverse.
@@ -214,6 +236,7 @@ $$
 d:=(X\bar a)\mathbin\triangle(Y\bar a).
 \tag{23}
 $$
+
 Then Ed is true by Boolean preservation. Identity is qualified reversible, so the assumed reversible agreement makes d currently false. Form u as in (9). If u were true, §4 would produce a qualified involution T with Td true. Its Boolean laws would distinguish X,Y at the same tuple, a contradiction. Hence u is false, and §3 proves J_Δ. This gives the second disjunct of (5).
 
 Conversely, reversible separation implies injective separation. The other disjunct supplies injective separation by §2. This proves (5).
@@ -226,6 +249,7 @@ $$
 \leftrightarrow S_{\tau,\Delta}[\mathrm{Rev}]\bigr).
 \tag{24}
 $$
+
 One natural sufficient premise for ¬J_Δ is that every injective Good_Δ observer's image floor preserves current truth. By §3 this premise is also equivalent to ¬J_Δ. Equation (24) concerns separating power, not an identification of the individual injective and reversible classes.
 
 ## 6. Comparison with qualified left inverses and full scope
@@ -236,6 +260,7 @@ $$
 K_\Delta\ \longrightarrow\ J_\Delta.
 \tag{25}
 $$
+
 Indeed E is injective, and Ep≤c implies p=F(Ep)≤Fc=0. Thus the same E,c witness (4).
 
 Combining (5) with the earlier [left-inverse decomposition](left-inverse-separation-decomposition.md), §§1–5, gives the following exact comparison over C5 at each fixed τ,Δ:
@@ -253,6 +278,7 @@ S_{\tau,\Delta}[\mathrm{Rev}]
 \end{array}
 \tag{26}
 $$
+
 Consequently the remaining injective-to-left-inverse implication is confined to the J_Δ branch: does ordinary separation together with J_Δ force reversible separation or K_Δ? Neither that implication nor J_Δ⇒K_Δ is proved here. The regular-open countermodel in [Boolean transversals](injective-observers-and-boolean-transversals.md), §§4–6, refutes individual qualified splitting but fails OS, so it does not answer this question.
 
 **Update, 24 October 2026, OpenAI Codex.** [A true image gap without a true split kernel](injective-gap-without-split-kernel.md), §§1–5, now refutes J_Δ⇒K_Δ in that same C5 full-function model, using a different observer which even has a qualified left inverse. The model still fails OS, so the separation-level question above remains unresolved. [Finite generation over an observer’s image](finite-relative-image-generation.md), §§3–6, proves the positive finite-relative-generation case and gives exact additional characterizations; the original decomposition proof is unchanged.
@@ -266,6 +292,7 @@ S_{t,\{t\}}[\text{that qualification}]
 \qquad\text{over C5}.
 \tag{27}
 $$
+
 In particular J_Δ↔$J_{\{t\}}$ and K_Δ↔$K_{\{t\}}$ whenever t∈Δ. One witness qualified at t supplies each requested finite qualification; there is no quantifier over types or infinitely long qualification formula.
 
 Thus the full classifications can be written as genuine finite disjunctions:
@@ -286,6 +313,7 @@ $$
 }
 \tag{28}
 $$
+
 Each full-schema expression in (28) is represented by its single closed propositional formula from (27), so no infinitary disjunction is being formed. The current C5 background is essential to this compression. The earlier decomposition over C+BF alone retains its finite-list schema formulation; InjSep itself does not in general imply C5.
 
 ## 7. Sources

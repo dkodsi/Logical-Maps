@@ -50,6 +50,7 @@ identity values recursively by
 $$
  \delta_e(n,m)=[n=m],\qquad \delta_t(b,c)=(b\leftrightarrow c),
 $$
+
 $$
  \delta_{\sigma\to\rho}(f,g)
  =\bigwedge_{a,c\in U_\sigma}
@@ -344,6 +345,7 @@ U^B_sigma and L_sigma:U^B_sigma -> U^C_sigma recursively:
 $$
  R_e=L_e=\mathrm{id},\qquad R_t=\pi,\quad L_t=j,
 $$
+
 $$
  (R_{\sigma\to\rho}F)(x)=R_\rho\bigl(F(L_\sigma x)\bigr),
  \qquad

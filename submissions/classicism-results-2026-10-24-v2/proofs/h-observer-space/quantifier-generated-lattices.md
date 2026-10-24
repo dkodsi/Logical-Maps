@@ -14,6 +14,7 @@ $$
  \land\exists x^\sigma(B[p,q,x]=q)].
 \end{aligned}
 $$
+
 Thus B[p,q,−] has exactly the values p and q as proposition objects, not merely their truth values. When p=q the two attainment conditions can have the same witness.
 
 This is a uniform admitted constructor. The weaker assertion ∀p,q∃F:σt with this exact range does give binary bounds by the order argument below, one pair at a time. It is not silently replaced by an admitted operation selecting F for every pair. The present theorem retains B as a parameter, or existentially quantifies B in its premise; no choice of a family of witnesses is inferred.
@@ -25,6 +26,7 @@ $$
 \qquad
 \nu_B(p,q):=\exists x^\sigma B[p,q,x].
 $$
+
 These are initially new operations. They are not stipulated to be the primitive conjunction and disjunction.
 
 ## 2. Separation generates the meet or join
@@ -35,6 +37,7 @@ $$
 E\mu_B(p,q)\ \leftrightarrow\ Ep\land Eq.
 \tag{1}
 $$
+
 Indeed EμB(p,q)=∀x E(B[p,q,x]) by the Qσ identity. Every term inside that universal equals Ep or Eq, and both values occur. Its H truth condition is therefore the conjunction of their truth values.
 
 Under S[R], (1) makes μB the meet for the observer order:
@@ -44,6 +47,7 @@ u\preceq_R\mu_B(p,q)
 \ \leftrightarrow\ (u\preceq_Rp\land u\preceq_Rq).
 \tag{2}
 $$
+
 In particular μB is associative, commutative and idempotent as a proposition-valued operation. Also p≼R q iff μB(p,q)=p. Any other exact binary-range constructor at a listed universal type gives the same values as μB, by uniqueness of meets or directly by separation and (1). No whole-operation identity between the constructors or their resulting meet operations is asserted without a further lifting argument.
 
 Dually, if R implies Pσ, then
@@ -51,6 +55,7 @@ Dually, if R implies Pσ, then
 $$
 E\nu_B(p,q)\ \leftrightarrow\ Ep\lor Eq,
 $$
+
 and S[R] makes νB the observer-order join. These statements need neither composition closure nor Functionality.
 
 The conclusion is relative to the common class R, but not circular: ≼R is the explicit formula ∀E(R(E)→(Ep→Eq)), and μB and νB are terms fixed independently of that order. Separation proves that this previously specified formula is a partial order and that those previously specified terms supply its bounds.
@@ -64,12 +69,14 @@ R(E)\land R(F)\ \longrightarrow\
 R(\lambda p.F(Ep)).
 \tag{3}
 $$
+
 Then S[R], R⇒Qσ and BinaryRangeσ(B) prove, for every R-observer E,
 
 $$
 E\mu_B(p,q)=\mu_B(Ep,Eq).
 \tag{4}
 $$
+
 To prove (4), test its two sides with an arbitrary R-observer F. Equation (1), applied to F∘E using (3), says the first side is accepted exactly when both F(Ep) and F(Eq) are true. Applying (1) directly to F and the inputs Ep,Eq gives the same condition for the second side. S[R] identifies the two proposition objects.
 
 The existential dual gives EνB(p,q)=νB(Ep,Eq). This upgrade is an equality of outputs. It does not yet identify the two complete binary operations.
@@ -80,6 +87,7 @@ $$
 F(t(p_1,\ldots,p_n))\leftrightarrow
 f(Fp_1,\ldots,Fp_n)
 $$
+
 for every R-observer F, with f a fixed ordinary Boolean truth function. Composition closure and separation then give E(t(p̄))=t(Ep̄). The binary quantifier construction is a useful instance because its profile law follows solely from exact range and one quantifier law.
 
 ### Classes for which closure is available over H
@@ -104,6 +112,7 @@ $$
 (\lambda p,q.E\mu_B(p,q))
  =(\lambda p,q.\mu_B(Ep,Eq)).
 $$
+
 Functionality at the two stages t→t and t→tt lifts (4) to Mμ(E): first identify the unary q-functions for each p, then identify the outer p-functions. No C or necessity principle is involved. The analogous lift gives Vν(E) for νB.
 
 Full typed separation for a fixed class R itself supplies the Functionality schema, by [Typed separation and Classicism](typed-separation-and-classicism.md), §2. Consequently, under BinaryRangeσ(B) and R⇒Qσ, there is an exact equivalence over H:
@@ -114,6 +123,7 @@ $$
 \mathrm{FullSep}[R\land M_\mu].
 \tag{5}
 $$
+
 Forward, the left side proves that every Qσ-observer already has Mμ, by the composition-closed core argument in §3 and the Functionality lift; this includes every R-observer. Reverse, separating by the smaller class implies separation by the larger class. The existential dual replaces Qσ,Mμ with Pσ,Vν. If R implies both quantifier laws, both derived preservation clauses can be added simultaneously with no change of full typed separation theory. No closure of R itself is needed.
 
 At the propositional level, the exact same equivalence holds with the two needed Functionality instances explicitly assumed. Without them, the established redundancy concerns the pointwise-output preservation law (4), not necessarily the whole-operation law.
@@ -132,10 +142,12 @@ $$
 \mu_B(p,\exists x^\tau Fx)
  =\exists x^\tau\mu_B(p,Fx)\qquad(P_\tau),
 $$
+
 $$
 \nu_B(p,\forall x^\tau Fx)
  =\forall x^\tau\nu_B(p,Fx)\qquad(Q_\tau).
 $$
+
 These identities use an admitted lambda family on the right. They assert neither existence of arbitrary external suprema nor an internal choice-of-witnesses principle. Finite type lists remain external schema indices.
 
 Separate Q-separation and P-separation assertions can give different observer orders. The conclusion here requires one common qualified class, one common separation assertion and the resulting common profiles.
@@ -149,6 +161,7 @@ $$
 \quad\exists x(bx=\mathrm{Top}),
 \quad\exists x(bx=\mathrm{Bottom}).
 $$
+
 Also assume the following two **output identities** for the displayed Boolean conditional term C(r,p,q):=(r∧p)∨(¬r∧q):
 
 $$
@@ -156,6 +169,7 @@ C(\mathrm{Top},p,q)=p,
 \qquad C(\mathrm{Bottom},p,q)=q.
 \tag{6}
 $$
+
 Then the admitted term B[p,q,x]:=C(bx,p,q) has exactly the required binary range, by substitution in the endpoint cases and their attainment witnesses. For example, the ordinary pointwise Boolean-algebra equations for the original primitives and fixed endpoints imply (6). No whole-operation identity or observer preservation of those primitives is needed merely to construct B.
 
 This is a conditional H result. Mere material Boolean truth conditions do not prove (6), and an operator with only truth-valued endpoint behavior is not a endpoint selector. No claim that H or all-type Q-separation alone supplies such a selector or such a constructor is made.

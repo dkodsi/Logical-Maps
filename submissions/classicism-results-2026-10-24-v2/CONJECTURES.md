@@ -1,20 +1,30 @@
-# Questions, connections and resolved conjectures
+# Unresolved questions and resolved conjectures
 
-Open questions and established answers, grouped by mathematical family. The background is C unless stated otherwise. “Unresolved” refers to the cited evidence, not necessarily to the literature.
+The background is C unless stated otherwise. “Unresolved” refers to the cited evidence, not necessarily to the literature.
 
 [Main results](MAIN-RESULTS.md) · [Catalog](CATALOG.md) · [Evidence](evidence/RESULT-INDEX.md)
 
-Open questions come first. Established answers follow the three parts of Main Results: database connections, further results about established principles, and extensions.
+The four central open questions are listed below. Claims awaiting review are separate; resolved questions and established connections are grouped in expandable sections at the end.
 
-- [Open questions and claims awaiting review](#open-questions)
+| Unresolved question | Scope |
+|---|---|
+| [Does Relational Choice entail Transversal Choice?](#rc-tc) | Over C |
+| [Is Strong Possibility consistent?](#pure-sp) | Pure finitary language |
+| [Is signature Strong Possibility consistent?](#signature-sp) | One unary predicate constant; no individual names |
+| [Does injective logical separation entail logical left-inverse separation?](#observer-strength) | Over H and over C5 |
+
+Further observer comparisons are listed in the [dedicated research frontier](proofs/h-observer-space/MAP.md#10-explicit-frontier).
+
+- [Unresolved questions](#open-questions)
+- [Claims and source questions awaiting review](#claims-awaiting-review)
 - [I. Resolved database questions and connections](#database-connections)
 - [II. Further results about established principles](#established-principles)
 - [III. Extensions and new directions](#extensions-and-new-directions)
 
 <a id="open-questions"></a>
-## Open questions and claims awaiting review
+## Unresolved questions
 
-[Remaining central questions](#remaining-questions) · [Arithmetic equality awaiting review](#arithmetic-review)
+[Remaining central questions](#remaining-questions)
 
 <a id="remaining-questions"></a>
 ### Remaining central questions
@@ -28,7 +38,7 @@ Relational Choice plus Boolean Completeness gives Actuality and TC. The history 
 
 Derive a suitable coherent chooser from RC alone, or construct a genuine full RC countermodel meeting the closure and code-orbit restrictions.
 
-**Lean certified:** [`CHOICE-COMPLETENESS`](evidence/RESULT-INDEX.md#choice-completeness): RC + BC ⇒ TC; the sharp Actuality theorem, Actuality-based TC, and the same-type RC + BC and CBC + CCC consequences. [`COEXTENSION-OPERATIONS`](evidence/RESULT-INDEX.md#coextension-operations): Orbit averaging and finite code towers; orbit/Actuality equivalence at t and inhabited unary types.
+**Lean-certified related results:** [`CHOICE-COMPLETENESS`](evidence/RESULT-INDEX.md#choice-completeness): RC + BC ⇒ TC; the sharp Actuality theorem, Actuality-based TC, and the same-type RC + BC and CBC + CCC consequences. [`COEXTENSION-OPERATIONS`](evidence/RESULT-INDEX.md#coextension-operations): Orbit averaging and finite code towers; orbit/Actuality equivalence at t and inhabited unary types.
 
 <a id="pure-sp"></a>
 #### Is pure Strong Possibility consistent?
@@ -39,7 +49,7 @@ Universal-identity and restricted-disjunction criteria are established. In the s
 
 Construct the genuine endpoint embedding or otherwise settle joint consistency. A noncofinal omitted-cut requirement rules out routes, not the theory.
 
-**Lean certified:** [`SP-CRITERIA`](evidence/RESULT-INDEX.md#sp-criteria): The universal-core equivalence and the stated conditional disjunction criterion.
+**Lean-certified related results:** [`SP-CRITERIA`](evidence/RESULT-INDEX.md#sp-criteria): The universal-core equivalence and the stated conditional disjunction criterion.
 
 <a id="signature-sp"></a>
 #### Is SP consistent for one unary predicate constant and no individual names?
@@ -50,7 +60,7 @@ Nonempty K₁ already implies full signature SP consistency and is equivalent to
 
 Prove weak named existence or give a globally empty witness open. Failure of K₁ or the stronger fixed-domain construction would not alone refute SP.
 
-**Lean certified:** [`SP-SIGNATURE-CONFLICT`](evidence/RESULT-INDEX.md#sp-signature-conflict): The signature-splitting lemma.
+**Lean-certified related results:** [`SP-SIGNATURE-CONFLICT`](evidence/RESULT-INDEX.md#sp-signature-conflict): The signature-splitting lemma.
 
 <a id="observer-strength"></a>
 #### Does injective logical separation imply logical left-inverse separation?
@@ -82,7 +92,14 @@ Over H the corresponding question is InjSep ⇒ SplitMono. A countermodel must s
 
 Other unresolved comparisons are collected in the [research frontier](proofs/h-observer-space/MAP.md#10-explicit-frontier): the joint effect of $\mathrm{BC}_t$ and $\mathrm{Zorn}_t$ with OS; the remaining infinite connective and affine admission questions; the general atomless meet classification; the endpoint-parameter noncontingency converse for Rev; further inverse/necessity comparisons; and removing Actuality from the C-based FinBox theorem for empty or individual-only qualification lists.
 
-**Lean certified:** [`LOGICAL-OBSERVERS`](evidence/RESULT-INDEX.md#logical-observers): H + OS ⇒ C + BF with explicit endpoint identities. Their omission is justified by the linked ordinary reduction proof. [`FULL-IDENTITY-OBSERVERS`](evidence/RESULT-INDEX.md#full-identity-observers): Simultaneous propositional separation for every finite list of closed quantifier types under C5 + Atomicity (type t), including its necessary schema; the converses and equivalence of the two schemas under C5 + Actuality. [`DIAGONAL-CHARACTERS`](evidence/RESULT-INDEX.md#diagonal-characters).
+**Lean-certified related results:** [`LOGICAL-OBSERVERS`](evidence/RESULT-INDEX.md#logical-observers): H + OS ⇒ C + BF with explicit endpoint identities. Their omission is justified by the linked ordinary reduction proof. [`FULL-IDENTITY-OBSERVERS`](evidence/RESULT-INDEX.md#full-identity-observers): Simultaneous propositional separation for every finite list of closed quantifier types under C5 + Atomicity (type t), including its necessary schema; the converses and equivalence of the two schemas under C5 + Actuality. [`DIAGONAL-CHARACTERS`](evidence/RESULT-INDEX.md#diagonal-characters).
+
+<a id="claims-awaiting-review"></a>
+## Claims and source questions awaiting review
+
+[Arithmetic equality awaiting review](#arithmetic-review)
+
+The [forcing formulation](#abstract-forcing) has a separate source-comparison question: the database’s strict-smallness statement is refuted, but its correspondence with the attributed source theorem remains unresolved.
 
 <a id="arithmetic-review"></a>
 ### Arithmetic equality awaiting review
@@ -100,8 +117,15 @@ $$
 
 An ordinary proof is supplied for both inclusions, but the difficult upper inclusion still awaits independent review. Here $T_{\mathrm{arith}}$ is the common arithmetic theory of the positive Choice and Plenitude packages. See the [statement and proof](evidence/RESULT-INDEX.md#max-arithmetic-equality).
 
+---
+
+## Resolved questions and established connections
+
+New proofs and countermodels are distinguished from formalizations of earlier results. Existing database answers retained for context are credited to their sources.
+
 <a id="database-connections"></a>
-## I. Resolved database questions and connections
+<details>
+<summary><strong>I. Resolved database questions and connections</strong></summary>
 
 [Choice and comprehension](#choice-and-comprehension) · [Rigidity](#rigidity) · [Modal stability and noncontingency](#modal-stability) · [Maximalism and Strong Possibility](#maximalism-and-possibility) · [Infinity and forcing](#infinity-arithmetic-forcing)
 
@@ -115,6 +139,8 @@ Yes. BF need not be strengthened to ☐BF.
 
 [Proof](https://github.com/dkodsi/Logical-Maps/blob/12297812d21ed02a7d87cd4c642ba9adb8b4f7ff/logical-maps/topics/classicism/writeups/actuality-and-bf-imply-inextensible-comprehension.md).
 
+**Existing database result:** Christopher Sun’s argument, written out by Claude Opus 5.5 at Cian Dorr’s prompting. The database already supplies the Lean formalization.
+
 **Lean certified.**
 
 <a id="relational-choice-and-boolean-completeness-imply-transversal-choice"></a>
@@ -123,6 +149,8 @@ Yes. BF need not be strengthened to ☐BF.
 Yes. The same premises also imply Actuality; Relational Choice alone remains open.
 
 [Proofs and certificates](evidence/RESULT-INDEX.md#choice-completeness).
+
+**Contribution:** the RC + BC ⇒ Actuality proof and a direct proof of RC + BC ⇒ TC, with Lean formalization.
 
 **Lean certified:** [`CHOICE-COMPLETENESS`](evidence/RESULT-INDEX.md#choice-completeness): RC + BC ⇒ TC; the sharp Actuality theorem, Actuality-based TC, and the same-type RC + BC and CBC + CCC consequences.
 
@@ -173,12 +201,16 @@ No. The ultralimit-fork model satisfies even ☐Boolean Completeness, ☐BF and 
 
 [Countermodel](https://github.com/dkodsi/Logical-Maps/blob/12297812d21ed02a7d87cd4c642ba9adb8b4f7ff/logical-maps/topics/classicism/models/ultralimit-fork.yaml).
 
+**Existing countermodel:** Branden Fitelson and collaborators, in Cian Dorr’s intensional action-model presentation. Included as a recorded resolution.
+
 <a id="rigid-rigidity-implies-rigid-power"></a>
 #### Does Rigid Rigidity imply Rigid Power?
 
 No. A coalesced sum of two extensional models disagreeing about arithmetic satisfies Rigid Rigidity and refutes Rigid Power.
 
 [Countermodel](https://github.com/dkodsi/Logical-Maps/blob/12297812d21ed02a7d87cd4c642ba9adb8b4f7ff/logical-maps/topics/classicism/models/coalesced-two-extensional-arithmetics-root.yaml).
+
+**Existing countermodel:** Cian Dorr’s coalesced construction, with verification by Claude Opus 5.5 and the rigidity verdicts by Claude Fable 5.1 at Dorr’s prompting.
 
 <a id="tr-rp-wrp"></a>
 #### Does Tame Rigidity + Rigid Power entail Weakly Rigid Power?
@@ -193,6 +225,8 @@ No. The finite compression model satisfies Tame Rigidity and Rigid Power but fai
 #### The rigidity equivalence under ND and completeness
 
 Over C + ND + Boolean Completeness, Inextensible Comprehension, Rigid Comprehension, Tame Rigidity and Weakly Rigid Power are equivalent. ND and Boolean Completeness alone do not imply them: the old/new model also refutes ☐Boolean Completeness at type et.
+
+**Contribution:** the rigidity equivalences and the corrected all-type Boolean Completeness verification for the existing old/new construction; both are Lean certified.
 
 **Evidence:** [Four rigidity principles coincide over ND and Boolean Completeness](evidence/RESULT-INDEX.md#rigidity-nd-bc) · [ND and Boolean Completeness do not give Rigid Comprehension](evidence/RESULT-INDEX.md#oldnew-separation).
 
@@ -248,6 +282,8 @@ Yes. Atomicity at type t already suffices. The atom-swapping argument extends th
 
 [Proof and certificate](evidence/RESULT-INDEX.md#npc-atomicity).
 
+**Contribution: Lean formalization** of the Goodsell–Yli-Vakkuri theorem, following Cian Dorr’s proof sketch.
+
 **Lean certified:** [`NPC-ATOMICITY`](evidence/RESULT-INDEX.md#npc-atomicity).
 
 <a id="necessary-strong-leibniz-and-rigid-comprehension-imply-necessary-bf-relational"></a>
@@ -257,6 +293,8 @@ Yes, and Strong Leibniz Biconditionals need not be boxed. The unboxed premises a
 
 [Proofs and certificates](evidence/RESULT-INDEX.md#modal-propagation).
 
+**Contribution:** proof and Lean formalization of the stronger theorem with unboxed Strong Leibniz Biconditionals.
+
 **Lean certified:** [`MODAL-PROPAGATION`](evidence/RESULT-INDEX.md#modal-propagation).
 
 <a id="vicinity-implies-five-implies-two-hat"></a>
@@ -265,6 +303,8 @@ Yes, and Strong Leibniz Biconditionals need not be boxed. The unboxed premises a
 Yes. Sun’s argument derives the implication from a strongest 5-necessary proposition, without assuming BF or Actuality.
 
 [Proof](https://github.com/dkodsi/Logical-Maps/blob/12297812d21ed02a7d87cd4c642ba9adb8b4f7ff/logical-maps/topics/classicism/writeups/vicinity-implies-five-implies-two-hat.md).
+
+**Existing database result:** Christopher Sun’s argument, with the reduction from Vicinity written out by Claude Opus 5.5 at Cian Dorr’s prompting.
 
 <a id="logical-necessity-boundaries"></a>
 #### Logical Necessity does not force Actuality or Vicinity
@@ -291,6 +331,8 @@ The stitched middle-world model has ☐Strong Leibniz Biconditionals at t, Rigid
 No. Rigid Comprehension entails Countable Boolean Completeness and hence the Necessity of Arithmetic, which is incompatible with pure Maximalism.
 
 [Proof](https://github.com/dkodsi/Logical-Maps/blob/12297812d21ed02a7d87cd4c642ba9adb8b4f7ff/logical-maps/topics/classicism/results/maximalist-distinctness-incompatible-with-rigid-comprehension.yaml).
+
+**Existing result:** Zachary Goodsell, *Arithmetic is Necessary*, §6, Theorem 11 and the following remark (p. 25).
 
 <a id="max-atomicity"></a>
 #### Can pure Maximalism coexist with Atomicity (type t)?
@@ -363,6 +405,8 @@ No, at either e or t. A singleton-individual coalesced root refutes the type-e i
 
 [Type-e countermodel](https://github.com/dkodsi/Logical-Maps/blob/12297812d21ed02a7d87cd4c642ba9adb8b4f7ff/logical-maps/topics/classicism/models/coalesced-single-individual-root.yaml) · [Type-t countermodel](https://github.com/dkodsi/Logical-Maps/blob/12297812d21ed02a7d87cd4c642ba9adb8b4f7ff/logical-maps/topics/classicism/models/full-two-object-chain-free-loop.yaml) · [Further Infinity separations](evidence/RESULT-INDEX.md#infinity-schema-separation).
 
+**Existing countermodels:** Bacon and Dorr’s singleton-individual coalesced root; Claude Fable 5.1’s free-loop construction, prompted by Zachary Goodsell. The linked additional Infinity separations are contributions of this collection.
+
 <a id="abstract-forcing"></a>
 #### Do ☐Rigid Comprehension, Intensional Choice and Forcing Possibilism force CH contingency?
 
@@ -413,12 +457,14 @@ Assuming Con(ZFC), pure Maximalism + Non-contingency of CH is inconsistent. The 
 
 Strict-smallness Forcing Possibilism is independent over C + ☐Functional Choice + Axiom of Infinity (types e and t). A free-root model also satisfies Forcing Possibilism and both quantified Infinity axioms while failing Intensional Choice. In full S5 on an infinite world set W, the exact criterion is $2^{|W|}=2^{\aleph_0}$, in external ZFC.
 
+**Contribution:** the positive model, exact full-S5 cardinal criterion and separation from Intensional Choice. The negative independence direction was already recorded.
+
 **Evidence:** [Strict-smallness Forcing Possibilism is independent of necessary Choice and Infinity](evidence/RESULT-INDEX.md#forcing-possibilism).
 
 <a id="resolved-model-questions"></a>
 ### Resolved model-construction questions
 
-The database also settles existence questions for these nineteen constructions. The summaries describe the base models; signature, individual-domain and metatheoretic variants are grouped with their construction, whose linked record gives the exact scope.
+These nineteen constructions and their recorded existence verdicts are existing database results, included for reference rather than claimed as new models or formalizations. Signature, individual-domain and metatheoretic variants are grouped with their construction; the linked records give the attribution and exact scope.
 
 <a id="coalesced-models"></a>
 #### Coalesced roots
@@ -460,13 +506,16 @@ The database also settles existence questions for these nineteen constructions. 
 
 [Original attribution and certified scope](MAIN-RESULTS.md#previously-known-results-formalized).
 
-- [C5 + Atomicity (type t) ⇒ No Pure Contingency](evidence/RESULT-INDEX.md#npc-atomicity)
-- [C5 + ☐Rigid Comprehension ⇒ Second-Order Analytic Necessitism](evidence/RESULT-INDEX.md#analytic-rigidification)
-- [Symmetric ideally-full model: old and new individuals](evidence/RESULT-INDEX.md#oldnew-separation)
+- [C5 + Atomicity (type t) ⇒ No Pure Contingency](evidence/RESULT-INDEX.md#npc-atomicity). **Contribution: Lean formalization.** Existing mathematics: Zachary Goodsell and Juhani Yli-Vakkuri; proof following Cian Dorr’s sketch.
+- <a id="analytic-rigidification-answer"></a>[C5 + ☐Rigid Comprehension ⇒ Second-Order Analytic Necessitism](evidence/RESULT-INDEX.md#analytic-rigidification). **Contribution: Lean formalization.** Existing mathematics: Zachary Goodsell and Claude Fable 5.1, prompted by Goodsell, following Bacon’s Corollary 5.1 and Appendix C.2.
+- [Symmetric ideally-full model: old and new individuals](evidence/RESULT-INDEX.md#oldnew-separation). **Contribution: Lean formalization.** Existing mathematics: Claude Fable 5.1 and Claude Opus 5.5, prompted by Cian Dorr; Dorr’s symmetric ideally-full semantics. The all-type Boolean Completeness verdict is a separate correction and strengthening, presented above.
+
+</details>
 
 <a id="further-questions"></a>
 <a id="established-principles"></a>
-## II. Further results about established principles
+<details>
+<summary><strong>II. Further results about established principles</strong></summary>
 
 [Choice and completeness](#choice-and-completeness) · [Arithmetic and analysis](#arithmetic-and-analysis) · [Language, computation and construction limits](#further-negative-results)
 
@@ -510,15 +559,6 @@ Over C with quantified Infinity at e and t, replacing ☐Plenitude by ☐Functio
 
 The proof uses McLarty’s number-preserving interpretation.
 
-<a id="analytic-rigidification-answer"></a>
-#### Rigid Comprehension stabilizes possible real structures
-
-C5 + ☐Rigid Comprehension gives a rigid representative of any possible real structure at a fixed type, necessarily satisfying the real-number axioms. The represented-power construction works simultaneously at each prescribed finite list of arities.
-
-**Evidence:** [Rigid Comprehension stabilizes a possible real structure](evidence/RESULT-INDEX.md#analytic-rigidification).
-
-**Lean certified:** [`ANALYTIC-RIGIDIFICATION`](evidence/RESULT-INDEX.md#analytic-rigidification): Rigidification and simultaneous represented powers of every prescribed finite list of positive arities, at every closed admitted type and in arbitrary signatures.
-
 <a id="max-arithmetic-obstructions"></a>
 #### Maximalism and SP have different arithmetic obstructions
 
@@ -552,8 +592,11 @@ The rational-shear and full rational-linear selector constructions fail after th
 
 **Evidence:** [rigidity.29](CATALOG.md#rigidity.29) · [rigidity.30](CATALOG.md#rigidity.30) · [F04](CATALOG.md#f04) · [F10](CATALOG.md#f10).
 
+</details>
+
 <a id="extensions-and-new-directions"></a>
-## III. Extensions and new directions
+<details>
+<summary><strong>III. Extensions and new directions</strong></summary>
 
 [Abstraction and full standard models](#language-and-models) · [New characterizations and separation questions](#new-characterizations)
 
@@ -625,3 +668,5 @@ Profile realization, complete Boolean maps and admitted world maps have exact re
 **Evidence:** [Profile Realization and the Boolean structure of worlds](evidence/RESULT-INDEX.md#profile-world-algebra) · [Faithful probability has an exact finite-fibre condition and type ceiling](evidence/RESULT-INDEX.md#probability).
 
 **Lean certified:** [`PROFILE-WORLD-ALGEBRA`](evidence/RESULT-INDEX.md#profile-world-algebra): The finite-profile and atomic-profile results. [`PROBABILITY`](evidence/RESULT-INDEX.md#probability): Supported-real suprema, natural-number order and basic numeric operations; cut crossing and supported-real negation, subtraction and inverses. Numeric-operation laws retain ActualWorld, quantified Infinity and domain guards; induction and cases require ActualWorld alone.
+
+</details>

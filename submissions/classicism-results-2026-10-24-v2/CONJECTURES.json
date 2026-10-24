@@ -241,7 +241,7 @@
     }
   ],
   "formalization_status_source": "MAIN-RESULTS.json; question statuses describe mathematical progress, independently of formalization.",
-  "title": "Questions, connections and resolved conjectures",
+  "title": "Unresolved questions and resolved conjectures",
   "database_questions": [
     {
       "id": "actuality-and-bf-imply-inextensible-comprehension",
@@ -255,7 +255,8 @@
       },
       "evidence": "[Proof](https://github.com/dkodsi/Logical-Maps/blob/12297812d21ed02a7d87cd4c642ba9adb8b4f7ff/logical-maps/topics/classicism/writeups/actuality-and-bf-imply-inextensible-comprehension.md)",
       "formalization_result_refs": [],
-      "lean_certified": true
+      "lean_certified": true,
+      "contribution": "**Existing database result:** Christopher Sun’s argument, written out by Claude Opus 5.5 at Cian Dorr’s prompting. The database already supplies the Lean formalization."
     },
     {
       "id": "relational-choice-and-boolean-completeness-imply-transversal-choice",
@@ -271,7 +272,8 @@
       "formalization_result_refs": [
         "CHOICE-COMPLETENESS"
       ],
-      "lean_certified": false
+      "lean_certified": false,
+      "contribution": "**Contribution:** the RC + BC ⇒ Actuality proof and a direct proof of RC + BC ⇒ TC, with Lean formalization."
     },
     {
       "id": "necessary-atomicity-completeness-bf-imply-rigid-comprehension",
@@ -285,7 +287,8 @@
       },
       "evidence": "[Countermodel](https://github.com/dkodsi/Logical-Maps/blob/12297812d21ed02a7d87cd4c642ba9adb8b4f7ff/logical-maps/topics/classicism/models/ultralimit-fork.yaml)",
       "formalization_result_refs": [],
-      "lean_certified": false
+      "lean_certified": false,
+      "contribution": "**Existing countermodel:** Branden Fitelson and collaborators, in Cian Dorr’s intensional action-model presentation. Included as a recorded resolution."
     },
     {
       "id": "rigid-rigidity-implies-rigid-power",
@@ -299,7 +302,8 @@
       },
       "evidence": "[Countermodel](https://github.com/dkodsi/Logical-Maps/blob/12297812d21ed02a7d87cd4c642ba9adb8b4f7ff/logical-maps/topics/classicism/models/coalesced-two-extensional-arithmetics-root.yaml)",
       "formalization_result_refs": [],
-      "lean_certified": false
+      "lean_certified": false,
+      "contribution": "**Existing countermodel:** Cian Dorr’s coalesced construction, with verification by Claude Opus 5.5 and the rigidity verdicts by Claude Fable 5.1 at Dorr’s prompting."
     },
     {
       "id": "c5-and-atomicity-imply-no-pure-contingency",
@@ -315,7 +319,8 @@
       "formalization_result_refs": [
         "NPC-ATOMICITY"
       ],
-      "lean_certified": false
+      "lean_certified": false,
+      "contribution": "**Contribution: Lean formalization** of the Goodsell–Yli-Vakkuri theorem, following Cian Dorr’s proof sketch."
     },
     {
       "id": "necessary-strong-leibniz-and-rigid-comprehension-imply-necessary-bf-relational",
@@ -331,7 +336,8 @@
       "formalization_result_refs": [
         "MODAL-PROPAGATION"
       ],
-      "lean_certified": false
+      "lean_certified": false,
+      "contribution": "**Contribution:** proof and Lean formalization of the stronger theorem with unboxed Strong Leibniz Biconditionals."
     },
     {
       "id": "vicinity-implies-five-implies-two-hat",
@@ -345,7 +351,8 @@
       },
       "evidence": "[Proof](https://github.com/dkodsi/Logical-Maps/blob/12297812d21ed02a7d87cd4c642ba9adb8b4f7ff/logical-maps/topics/classicism/writeups/vicinity-implies-five-implies-two-hat.md)",
       "formalization_result_refs": [],
-      "lean_certified": false
+      "lean_certified": false,
+      "contribution": "**Existing database result:** Christopher Sun’s argument, with the reduction from Vicinity written out by Claude Opus 5.5 at Cian Dorr’s prompting."
     },
     {
       "id": "maximalist-distinctness-incompatible-with-rigid-comprehension",
@@ -359,7 +366,8 @@
       },
       "evidence": "[Proof](https://github.com/dkodsi/Logical-Maps/blob/12297812d21ed02a7d87cd4c642ba9adb8b4f7ff/logical-maps/topics/classicism/results/maximalist-distinctness-incompatible-with-rigid-comprehension.yaml)",
       "formalization_result_refs": [],
-      "lean_certified": false
+      "lean_certified": false,
+      "contribution": "**Existing result:** Zachary Goodsell, *Arithmetic is Necessary*, §6, Theorem 11 and the following remark (p. 25)."
     },
     {
       "id": "possible-infinity-implies-axiom-of-infinity",
@@ -375,7 +383,8 @@
       },
       "evidence": "[Type-e countermodel](https://github.com/dkodsi/Logical-Maps/blob/12297812d21ed02a7d87cd4c642ba9adb8b4f7ff/logical-maps/topics/classicism/models/coalesced-single-individual-root.yaml) · [Type-t countermodel](https://github.com/dkodsi/Logical-Maps/blob/12297812d21ed02a7d87cd4c642ba9adb8b4f7ff/logical-maps/topics/classicism/models/full-two-object-chain-free-loop.yaml) · [Further Infinity separations](evidence/RESULT-INDEX.md#infinity-schema-separation)",
       "formalization_result_refs": [],
-      "lean_certified": false
+      "lean_certified": false,
+      "contribution": "**Existing countermodels:** Bacon and Dorr’s singleton-individual coalesced root; Claude Fable 5.1’s free-loop construction, prompted by Zachary Goodsell. The linked additional Infinity separations are contributions of this collection."
     }
   ],
   "sections": [
@@ -400,7 +409,7 @@
       ],
       "database_questions": [],
       "connections": [],
-      "part": "open"
+      "part": "review"
     },
     {
       "id": "choice-and-comprehension",
@@ -487,7 +496,8 @@
             "RIGIDITY-ND-BC",
             "OLDNEW-SEPARATION"
           ],
-          "catalog_refs": []
+          "catalog_refs": [],
+          "contribution": "**Contribution:** the rigidity equivalences and the corrected all-type Boolean Completeness verification for the existing old/new construction; both are Lean certified."
         },
         {
           "id": "weak-power-positive",
@@ -671,7 +681,8 @@
           "result_refs": [
             "FORCING-POSSIBILISM"
           ],
-          "catalog_refs": []
+          "catalog_refs": [],
+          "contribution": "**Contribution:** the positive model, exact full-S5 cardinal criterion and separation from Intensional Choice. The negative independence direction was already recorded."
         }
       ],
       "part": "database"
@@ -718,15 +729,6 @@
       ],
       "database_questions": [],
       "connections": [
-        {
-          "id": "analytic-rigidification-answer",
-          "title": "Rigid Comprehension stabilizes possible real structures",
-          "text": "C5 + ☐Rigid Comprehension gives a rigid representative of any possible real structure at a fixed type, necessarily satisfying the real-number axioms. The represented-power construction works simultaneously at each prescribed finite list of arities.",
-          "result_refs": [
-            "ANALYTIC-RIGIDIFICATION"
-          ],
-          "catalog_refs": []
-        },
         {
           "id": "max-arithmetic-obstructions",
           "title": "Maximalism and SP have different arithmetic obstructions",
@@ -1111,7 +1113,12 @@
   "parts": [
     {
       "id": "open-questions",
-      "title": "Open questions and claims awaiting review"
+      "title": "Unresolved questions"
+    },
+    {
+      "id": "claims-awaiting-review",
+      "title": "Claims and source questions awaiting review",
+      "kind": "review"
     },
     {
       "id": "database-connections",
@@ -1131,5 +1138,30 @@
       "title": "III. Extensions and new directions",
       "kind": "extensions"
     }
+  ],
+  "open_overview": [
+    {
+      "question_ref": "RC-TC",
+      "scope": "Over C",
+      "summary": "Does Relational Choice entail Transversal Choice?"
+    },
+    {
+      "question_ref": "PURE-SP",
+      "scope": "Pure finitary language",
+      "summary": "Is Strong Possibility consistent?"
+    },
+    {
+      "question_ref": "SIGNATURE-SP",
+      "scope": "One unary predicate constant; no individual names",
+      "summary": "Is signature Strong Possibility consistent?"
+    },
+    {
+      "question_ref": "OBSERVER-STRENGTH",
+      "scope": "Over H and over C5",
+      "summary": "Does injective logical separation entail logical left-inverse separation?"
+    }
+  ],
+  "review_notes": [
+    "The [forcing formulation](#abstract-forcing) has a separate source-comparison question: the database’s strict-smallness statement is refuted, but its correspondence with the attributed source theorem remains unresolved."
   ]
 }

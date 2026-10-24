@@ -17,6 +17,7 @@ $$
 \end{aligned}
 \tag{1}
 $$
+
 This is a single closed formula in the fixed relational language. Its premise is current total single-valuedness of an admitted relation; its conclusion is an admitted operation representing that relation. Neither Functionality nor a whole-operation identity is built into it. No individual-valued output or quantification over types is introduced.
 
 The principle is sourced to Bacon and Dorr, *Classicism*, draft of 16 May 2023, §2.3, pp. 31–33. Here its displayed formula is an explicit additional premise over H. The fixed C background of the database is not silently imported with the record.
@@ -29,6 +30,7 @@ $$
 U(p,y):=(p\land y=b_1)\lor(\neg p\land y=b_0)
 \tag{2}
 $$
+
 is total and single-valued by ordinary H truth reasoning: in the true case its unique output is b₁, and in the false case its unique output is b₀. Apply (1). It gives an admitted χ:tt satisfying
 
 $$
@@ -36,6 +38,7 @@ $$
 \land(\neg p\to\chi p=b_0)\right].
 \tag{3}
 $$
+
 Consequently χ has at most two outputs, χp↔p for every p, χb₁=b₁, and χb₀=b₀. It is pointwise idempotent. These are output equations; no whole idempotence identity is inferred without Functionality.
 
 For any admitted E define the admitted composite
@@ -44,6 +47,7 @@ $$
 E^\chi(p):=\chi(Ep).
 \tag{4}
 $$
+
 This single χ works for every E at once. Every composite (4) retains E's entire current truth profile and takes values in {b₀,b₁}. In particular A, Z and any restriction depending only on that profile are retained. Arbitrary identity-based restrictions such as endpoint fixing, invertibility, or an identity involving E are not claimed to survive.
 
 ## 3. The truth-table subalgebra lemma
@@ -56,6 +60,7 @@ f(b_{\epsilon_1},\ldots,b_{\epsilon_n})
 \qquad(\epsilon_i\in\{0,1\}).
 \tag{5}
 $$
+
 The list and the zeros/ones in (5) are external finite notation. They do not introduce a type of truth values into H. No material truth-table agreement is substituted for these output identities.
 
 **Normalization lemma.** Under H+Plen_{t,t} and (5), every materially Σ-preserving E has a two-output pointwise Σ-preserving replacement E^χ with exactly its truth profile.
@@ -72,6 +77,7 @@ S[O\land\mathrm{Mat}_\Sigma]
 S[O\land\mathrm{Two}\land\mathrm{Pt}_\Sigma],
 \tag{6}
 $$
+
 where O is none, A, Z or A∧Z. Forward, normalize each separating observer; reverse, a pointwise observer is material. The use of material separation to obtain the pair is essential in the applications below.
 
 ## 4. All nonempty primitive connective signatures

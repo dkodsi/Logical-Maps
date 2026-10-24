@@ -33,6 +33,7 @@ To prove it, choose such a g for the given distinct p,q. Let
 $$
 U_g:=\{r\in D_t(W):g_t(r)\text{ is true at }V\}.
 $$
+
 Extensional fullness gives an admitted observer O_g with exactly this **current truth extension**:
 
 $$
@@ -41,6 +42,7 @@ O_g(r)\text{ is true at }W
 g_t(r)\text{ is true at }V.
 \tag{1}
 $$
+
 Equation (1) specifies truth, not the output proposition object. It does not assert any equation for the transported observer g(O_g), or for O_g at other arrows.
 
 The ordinary Boolean truth clauses at V show that O_g materially preserves negation, conjunction and disjunction at W. For a listed σ and any F∈D_{σt}(W), its universal law is the following calculation:
@@ -58,6 +60,7 @@ O_g(\forall_\sigma F)\text{ is true at }W
 \end{aligned}
 \tag{2}
 $$
+
 The middle equivalence uses exactly the surjectivity of g_σ. The final step uses naturality of application and (1). Replacing every universal quantifier by an existential gives the corresponding existential law. Thus O_g satisfies the finite material Boolean/quantifier qualification K_Δ at W, and it distinguishes p,q there.
 
 ### The guard supplies the full composite identities
@@ -70,6 +73,7 @@ O_g^\#(r):=
 \lor(\neg K_\Delta(O_g)\land r)
 \tag{3}
 $$
+
 satisfies the requested full composite laws in C. For an arbitrary observer variable O, H proves each material preservation law for the term O^# unconditionally: if K_Δ(O), use O's corresponding law; otherwise O^# agrees in truth with identity. The qualification is closed over each law's inputs, so it remains constant throughout the relevant input quantifiers. C's Logical Equivalence applied to this unconditional H equivalence, abstracting O and all law inputs, identifies the complete composite operations. Application to O_g gives their required identities. This is the finite guard theorem in [Typed separation and Classicism](typed-separation-and-classicism.md), §4, and [Observer lattice](../observer-lattice.md), §1.
 
 Translated equality qualification then follows from C and Boolean preservation. The same unconditional truth calculation gives endpoint fixing if it is retained in the definition of Good.
@@ -85,6 +89,7 @@ Suppose an arrow g:W→V has a section s:V→W with g∘s=id_V. Functoriality at
 $$
 g_\sigma\circ s_\sigma=\mathrm{id}_{D_\sigma(V)}.
 $$
+
 Therefore g_σ is onto at every admitted type. This includes all higher relation types, not just individuals. No induction asserting surjectivity of arbitrary function-space maps is needed.
 
 At W₀=ℕ, every surjection g:ℕ→ℕ has a section in the all-maps category. For example, choose the least preimage of each natural number. The unique arrow c:ℕ→{0} also has a section, any arrow i_n:{0}→ℕ selecting n. Thus both kinds of arrow supply all the surjectivities required in §2.
@@ -102,6 +107,7 @@ p\text{ has the same truth at }g\text{ and }h,
 \qquad
 q\text{ has the same truth at }g\text{ and }h.
 $$
+
 Thus g still distinguishes p,q, and §3 makes every g_σ onto.
 
 The criterion of §2 therefore applies for every finite Δ. For each pair and list it constructs an admitted full Good_Δ observer with the required disagreement. Consequently **full typed OS holds at W₀**.
@@ -113,10 +119,7 @@ As a separate consistency check, the existing record already gives BF at W₀, a
 ## 5. Necessary BF fails at the same point
 
 The singleton W₁ is accessible from W₀ by c. At W₁ let x be its only individual and set F(y):=(y=x). Since every current y equals x, each current F(y) is Top, so
-
-$$
-\forall y^e\,\Box F(y)
-$$
+$\forall y^e\,\Box F(y)$
 is true there. But after any arrow i_n:W₁→W₀, the transported predicate is equality to n, which is not true of every natural number. Thus the proposition ∀y F(y) is not Top at W₁, and BF_e fails there. Therefore necessary BF_e, and hence the necessary all-type BF schema, fails at W₀.
 
 The model record also establishes failure of necessary BF_t. Its witness at W₁ uses the admitted profile that is true at the identity, and at an arrow h exactly of the propositions in the image of h_t. Every current proposition necessarily satisfies this profile, but some proposition at the future ℕ object lies outside that transport image. The record gives the explicit image calculation and finite pin for this witness. This stronger recorded failure is retained without changing its attribution.
@@ -130,6 +133,7 @@ $$
        +\neg\Box\mathrm{BF}_e+\neg\Box\mathrm{BF}_t
        +\neg\Box\mathrm{Fun}_{e,t}.}
 $$
+
 In particular ordinary OS does not imply necessary OS, necessary BF, necessary BF_t, or necessary Functionality. The new separations concern necessary BF and Functionality; failure of necessary OS already had other witnesses.
 
 ## 6. Evidence and limits

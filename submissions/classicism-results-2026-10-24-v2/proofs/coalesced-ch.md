@@ -30,11 +30,7 @@ The witnesses use the same admitted type e. Each component also satisfies Well-O
 ## 2. Coalescence and CH variation
 
 Apply the coalesced-sum construction of *Classicism*, Appendix E, with one new root and a distinguished arrow to each component. Root individuals are pairs of component individuals. At a relational type, a root entity has an arbitrary current extension and one entity from each component. Write it as
-
-$$
-Y=(E,Y_+,Y_-).
-$$
-
+$Y=(E,Y_+,Y_-).$
 Transport to component i sends Y to its i-component, and sends individual pairs to their i-coordinate. Every root-to-component transport is surjective at every admitted type. Moreover, any pair of component entities has a common root preimage. These statements also hold coordinatewise for finite tuples. The cited construction validates C and leaves both component models intact.
 
 At the root, both displayed existential sentences from §1 are possible. Hence the type-e instance of Non-contingency of CH fails: its first boxed alternative is refuted at the negative component, and its second at the positive component. Necessity of Second-Order Analysis fails as a consequence.

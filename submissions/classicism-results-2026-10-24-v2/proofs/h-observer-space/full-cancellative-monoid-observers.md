@@ -11,6 +11,7 @@ $$
 \ \not\Longrightarrow\ \mathrm{Rev},
 \tag{1}
 $$
+
 even with C and necessary BF as additional premises. The inverse equations below hold at all future inputs as identities of whole admitted operations. The proof never turns current surjectivity into an admitted section.
 
 ## 1. The full action model and the separation conventions
@@ -23,12 +24,14 @@ ab=ac\ \Longrightarrow\ b=c,
 ba=ca\ \Longrightarrow\ b=c.
 \tag{2}
 $$
+
 Give the sole object one individual and use the full relational action-model domains. Thus every intension at every admitted relational type is present. A relational intension R of type σ₁⋯σₖt is specified by its truth profile R(h,x₁,…,xₖ), for every h∈M and every argument tuple at the sole object. Its transport is
 
 $$
 (\rho_r R)(h,\bar x)=R(hr,\bar x).
 \tag{3}
 $$
+
 Arguments are transported when an intension is applied. In particular, propositions are exactly subsets of M, current truth is membership of 1, and
 
 $$
@@ -37,6 +40,7 @@ $$
 \top=M,\quad\bot=\varnothing.
 \tag{4}
 $$
+
 The full action construction supplies C in the fixed relational type system. The monoid elements are semantic arrows, not terms of an additional individual-to-individual function type.
 
 Right cancellation makes every type transport onto. At a relational type, given a desired profile Y, prescribe the preimage profile X by $X(hr,\bar x)=Y(h,\bar x)$, and assign arbitrary truth values at coordinates outside M r. Right cancellation makes this prescription unambiguous; fullness admits X. At type e the unique map on the singleton is onto. Hence the full-model Barcan criterion gives BF and Functionality at the sole object, and necessary BF and necessary Functionality as well.
@@ -53,12 +57,14 @@ $$
 E_a(m,q)\quad\Longleftrightarrow\quad a(m)\in q.
 \tag{5}
 $$
+
 Here q is an arbitrary proposition at the target of m, which is again the sole object. Application and (4) give
 
 $$
 E_a(p)=\{m:a(m)m\in p\}.
 \tag{6}
 $$
+
 More generally, transport E_a along r and apply it to an arbitrary future input q. At a further coordinate h the resulting proposition has truth value
 
 $$
@@ -67,6 +73,7 @@ h\in (\rho_r E_a)(q)
 a(hr)h\in q.
 \tag{7}
 $$
+
 The distinction between (5), (6) and (7) matters: (5) defines the whole admitted observer, and (7) controls its action on inputs not necessarily transported from an earlier stage.
 
 Every E_a is Good_Δ for every finite Δ. Boolean preservation follows because every individual truth test in (5) is evaluation at an arrow and Boolean operations are pointwise. For the universal law, fix any future coordinate m and any admitted F of type σt there. Write b=a(m). The truth of E_a(∀_σF) at that coordinate is
@@ -75,6 +82,7 @@ $$
 \forall y\in D_\sigma\quad F(b,y)\text{ is true}.
 \tag{8}
 $$
+
 The truth of ∀_σ(λx.E_a(Fx)) there is
 
 $$
@@ -82,6 +90,7 @@ $$
 F\bigl(b,\rho_\sigma(b)x\bigr)\text{ is true}.
 \tag{9}
 $$
+
 These agree because ρ_σ(b) is onto. Replacing both universal quantifiers by existential ones proves the existential law. The same comparison applies after arbitrary transport r, using a(mr) in place of a(m). Thus the comparisons cover every future coordinate and every input there: they prove the full identities between the composite λF operations. The Boolean laws have the same full-profile scope. The translated equality qualification then follows from the stated C theorem.
 
 No injectivity of ρ_σ(b) is required. In particular this argument does not presume C5, and does not assert that E_a preserves or reflects actual equality.
@@ -94,6 +103,7 @@ $$
 S_b(p)=\{m:bm\in p\}.
 \tag{10}
 $$
+
 Given q⊆M, define p=bq:={bm:m∈q}. Left cancellation gives S_b(p)=q. This proves the current internal surjectivity sentence for S_b. The argument selects an admitted proposition p for each q; it does not select an admitted inverse operation.
 
 The profile (5) of S_b is constant in its arrow coordinate, so ρ_r S_b=S_b for every r. Its surjectivity therefore also holds after every transport. Section 2 gives its full Good_Δ qualification for every requested finite list.
@@ -108,12 +118,14 @@ $$
 u_0=1,u_1,u_2,\ldots.
 \tag{11}
 $$
+
 This is a hypothesis about the model construction. It is not an internally admitted enumeration or an invocation of object-language Choice. Put
 
 $$
 \alpha_n=u_{n+1}u_n^{-1}.
 \tag{12}
 $$
+
 For each b∈M define an observation assignment a_b, and define a single assignment c independent of b, as follows:
 
 $$
@@ -131,6 +143,7 @@ c(z)=
 \end{cases}
 \tag{13}
 $$
+
 The cases are disjoint because the units are pairwise distinct. Let E_b:=E_{a_b} and F:=E_c. Fullness admits both profiles, including their countably many cases. Section 2 makes both observers Good_Δ for the same arbitrary finite list Δ.
 
 For every z∈M,
@@ -139,6 +152,7 @@ $$
 a_b\bigl(c(z)z\bigr)c(z)=1.
 \tag{14}
 $$
+
 If z=u_n, then c(z)z=α_nu_n=u_{n+1}, so the left side is α_n^{-1}α_n. If z lies outside the displayed sequence, both factors are 1. The exceptional observation b at u_0 is never encountered in this composition.
 
 Equation (14) proves an identity of whole operations. To check this without restricting to current inputs, transport E_b and F along arbitrary r, take an arbitrary q at that future stage, and inspect a further coordinate h. Applying (7) twice gives
@@ -154,6 +168,7 @@ a_b\bigl(c(hr)hr\bigr)c(hr)h\in q\\
 \end{aligned}
 \tag{15}
 $$
+
 The last step is (14) at z=hr. Thus F∘E_b=I as a full admitted-operation identity. No commutativity has been used. No necessity assertion has been inferred merely from a current pointwise equation.
 
 At the actual coordinate, a_b(1)=b, so E_b p is true exactly when b∈p. Consequently the E_b separate all propositions, using this same qualified left inverse F. Functionality again lifts the conclusion to every relational output type. The full SplitMono schema holds.
@@ -172,6 +187,7 @@ M=\mathbb Z\times\mathbb N,
 \qquad u_n=(n,0).
 \tag{16}
 $$
+
 Its units are the pairs (z,0), so (11) holds and α_n=(1,0). The constructions above establish C, necessary BF, separately necessary full SurjSep and separately necessary full SplitMono.
 
 Let w={(0,0)} and let v=(0,1). The admitted proposition w differs from Bottom but
@@ -180,6 +196,7 @@ $$
 \rho_v w=\varnothing.
 \tag{17}
 $$
+
 Thus distinct propositions become identical, so ND_t fails and C5 fails. The established full-H theorem Rev⇒C5 now gives failure of Rev. This proves (1), in the stronger model profile
 
 $$
@@ -190,6 +207,7 @@ $$
 }
 \tag{18}
 $$
+
 The same conclusion holds for any cancellative monoid satisfying (11) and containing a nonunit v. A nonunit in a cancellative monoid has no left inverse: if av=1, then (va)v=v=1v and right cancellation gives va=1 as well. Hence no h satisfies hv=1, and ρ_v{1}=Bottom. The explicit monoid (16) is a concrete instance of this family.
 
 ## 6. The exact comparison settled
@@ -207,6 +225,7 @@ $$
 \ \Longrightarrow\ \mathrm{SurjSep},\ \mathrm{SplitMono}.
 \tag{19}
 $$
+
 The last two principles remain incomparable. This determines the conjunction comparison; it does not claim that the displayed conjunction is a least stronger observer qualification or that every upper comparison has been classified.
 
 ## 7. Sources

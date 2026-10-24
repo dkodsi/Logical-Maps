@@ -40,9 +40,11 @@ Now take full S5 with W=P(N), D_e=N. Its proposition algebra is P(W), of cardina
 Together with §2, this establishes relative independence of FP over C+□FC+I_e+I_t. The negative half was ALREADY in the inspected upstream database: full-permutation-group-infinite-set-individuals-fixed-infinite and its Σ-true-atom variant satisfy the package and refute FP via forcing-possibilism-continuum-arrows. The new positive countable-S5 specialization supplies the missing half.
 
 More generally, for infinite W in ZFC:
+
 $$
 \mathrm{FullS5}(W)\models\mathrm{FP}\quad\Longleftrightarrow\quad 2^{|W|}=2^{\aleph_0}.
 $$
+
 If equality holds, the finite-only argument applies. If the cardinal is larger, the Cohen algebra qualifies and atomicity refutes FP. This is not equivalent to “W is countable”: the continuum function can have a plateau. Individual cardinality and the specified Σ interpretations do not affect this pure FP classification. Do not attach a uniform FP verdict to the existing arbitrary-infinite-W family.
 
 ## 4. A new ordinary countermodel: FP does not imply IC, even with both infinity axioms.

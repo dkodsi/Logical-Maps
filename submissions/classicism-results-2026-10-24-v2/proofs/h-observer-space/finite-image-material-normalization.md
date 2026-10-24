@@ -11,10 +11,12 @@ For an admitted E:tt define its admitted image predicate by
 $$
 \mathrm{Im}(E)(y):=\exists p\,[Ep=y],
 $$
+
 $$
 \mathrm{FinIm}(E):=
 \exists Z\,[\mathrm{FiniteCardinality}_t(Z)\land Z(\mathrm{Im}(E))].
 $$
+
 FiniteCardinality is the internal Frege induction predicate from the [background](../../source/topics/classicism/background.md), also displayed in [Finite semilattice normalization](finite-semilattice-normalization.md), §2. No standard finite bound or external enumeration is implicit in FinIm.
 
 Write
@@ -22,6 +24,7 @@ Write
 $$
 \mathrm{Two}(E):=\exists b,c\,\forall p\,[Ep=b\lor Ep=c].
 $$
+
 This is an at-most-two-output condition. Its two witnesses need not be the fixed Top and Bottom. Let O be any of no condition, A, Z or A∧Z, where A(E):=ETop and Z(E):=¬EBottom. Then over H,
 
 $$
@@ -31,6 +34,7 @@ $$
 \mathrm{Sep}_t[O\land\mathrm{Two}\land M_{\rm pt}].}
 \tag{1}
 $$
+
 The same result holds with V in place of M. Both equivalences hold at full typed scope, where the pointwise qualification can also be replaced by its whole-operation version.
 
 The proposition domain is not assumed internally finite. In particular (1) is not obtained by first applying the preceding note's global finiteness theorem.
@@ -43,12 +47,14 @@ $$
 \forall x\,[Cx\to fx],\qquad\exists x\,[Ux\land Cx].
 \tag{2}
 $$
+
 Then there is a true proposition u such that
 
 $$
 \forall x\,[(Ux\land Cx)\to u\land fx=u].
 \tag{3}
 $$
+
 Here U indexes the finite family, C selects its relevant indices, and f supplies its true values. Neither the selected subset nor f's image has to be proved internally finite separately.
 
 To prove this, use Frege induction with the admitted property
@@ -60,6 +66,7 @@ W(Z):=\forall V\left[ZV\to
 \forall x((Vx\land Cx)\to u\land fx=u)\right]\right)\right].
 \tag{4}
 $$
+
 Zero is vacuous. At a successor, choose its witness y and use the exact deletion predicate V⁻:=λx.Vx∧x≠y. If V⁻∩C is empty, nonemptiness of V∩C gives Cy, and fy is a true lower bound of all selected values. If V⁻∩C is nonempty, obtain a true lower bound b by the induction hypothesis. Use b when Cy is false, and b∧fy when Cy is true. The semilattice equations verify the bound, and its truth follows from (2). Thus W is successor-closed, and the witness to Fin_t(U) gives (3).
 
 This is the same exact-deletion proof as the finite-closure lemma, now folding an indexed family. Only single existential witnesses are used; no function choosing witnesses or finite enumeration is required. The predicate W is an explicit admitted comprehension term.
@@ -74,27 +81,32 @@ $$
 Ep\ \Longrightarrow\ u\land Ep=u.
 \tag{5}
 $$
+
 Apply §2 a second time to the same internally finite U, now with
 
 $$
 C(x):=\neg x,\qquad f(x):=\neg(u\land x).
 $$
+
 For every selected x, u∧x is false, so f(x) is true. There is a selected index because E has a false output. Obtain a true v satisfying
 
 $$
 \neg Ep\ \Longrightarrow\ v\land\neg(u\land Ep)=v.
 \tag{6}
 $$
+
 Define the admitted terms
 
 $$
 d:=v\land\neg u,
 \qquad h(p):=v\land\neg(u\land Ep),
 $$
+
 $$
 F(p):=\neg h(p)\land\neg d.
 \tag{7}
 $$
+
 Since v,u are true, d is false. If Ep is true, (5) gives h(p)=d, hence F(p)=¬d by idempotence. If Ep is false, (6) gives h(p)=v, hence F(p)=¬v∧¬d. Thus F has exactly E's truth profile, and its output pair is
 
 $$
@@ -102,6 +114,7 @@ t:=\neg d\quad\text{(true)},\qquad
 b:=\neg v\land\neg d\quad\text{(false)}.
 \tag{8}
 $$
+
 This pair is a meet chain: b≤t, and their meet table is the ordinary two-valued conjunction table. Consequently, **if E is materially meet-preserving, F is pointwise meet-preserving**. Indeed material preservation determines which of b,t is F(p∧q), and the same two truth values determine Fp∧Fq by that meet table.
 
 If E has only true outputs or only false outputs, use a constant true or constant false observer respectively. Its truth profile is E's, it has at most one output, and semilattice idempotence makes it pointwise meet-preserving. This also handles those cases without selecting a nonempty subfamily in either fold.
@@ -115,9 +128,11 @@ Assume the disjunction semilattice equations and FinIm(E), again first with both
 $$
 \neg Ep\ \Longrightarrow\ v\lor Ep=v,
 $$
+
 $$
 Ep\ \Longrightarrow\ w\lor\neg(v\lor Ep)=w.
 $$
+
 Put
 
 $$
@@ -126,12 +141,14 @@ t:=w\lor\neg v,
 \qquad F(p):=\neg h(p)\lor\neg t.
 \tag{9}
 $$
+
 The proposition t is true. When Ep is false, h(p)=t and F(p)=¬t. When Ep is true, h(p)=w and F(p)=¬w∨¬t. These outputs form the join chain
 
 $$
 b:=\neg t\quad\text{(false)},\qquad
 u:=\neg w\lor\neg t\quad\text{(true)},\qquad b\le u.
 $$
+
 Hence F has E's truth profile, and material V for E gives pointwise V for F. Constant truth profiles are handled by constant observers as in §3. All A/Z orientations survive.
 
 ## 5. Proof of the separation equivalences and the tier qualification

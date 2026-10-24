@@ -18,6 +18,7 @@ $$
 \mathrm{Onto}(S):=\forall q^t\,\exists p^t\,[Sp=q].
 \tag{1}
 $$
+
 It ranges over admitted proposition objects and asserts output identities. It is not external surjectivity on some larger collection of possible values. We assume (1), not an admitted choice of its witnesses. All constructions below are lambda terms in S.
 
 C5 supplies the Barcan and Functionality instances used to collect output identities into whole-operation identities. It also makes every equality judgment an endpoint: a true equality is Top, and a false equality is Bottom. Thus S fixes every equality judgment occurring below, because its Boolean laws fix the endpoints. No extra equality-fixing qualification is imposed on S.
@@ -32,6 +33,7 @@ $$
 k_S:=\exists p^t\,[(Sp=\bot)\land p].
 \tag{2}
 $$
+
 Since t∈Δ, existential preservation and equality-judgment fixing give
 
 $$
@@ -43,6 +45,7 @@ Sk_S
 \end{aligned}
 \tag{3}
 $$
+
 The last equality is an unconditional C logical identity: each displayed conjunction is contradictory by equality substitution. It is not obtained by necessitating the optional qualification of S.
 
 If Sp=Bottom, its equality judgment is Top. The p-instance in (2) is then p itself, so p≤k_S. Conversely p≤k_S implies Sp≤Sk_S=Bottom. Therefore
@@ -51,6 +54,7 @@ $$
 Sp=\bot\quad\longleftrightarrow\quad p\le k_S.
 \tag{4}
 $$
+
 Thus the entire kernel is the principal ideal below the explicitly admitted k_S. Surjectivity has not yet been used.
 
 Put a:=¬k_S. S is injective on the interval [Bottom,a]. Indeed, if x,y≤a and Sx=Sy, Boolean preservation gives S(x△y)=Bottom. By (4), x△y≤k_S, whereas x△y≤a. Hence x=y. Here △ is the Boolean symmetric difference available in C.
@@ -65,12 +69,14 @@ j_S(q):=\exists p^t\,[(Sp=q)\land p],
 r_S(q):=a\land j_S(q).
 \tag{5}
 $$
+
 These are admitted tt terms. Applying S to j_S(q) gives
 
 $$
 S(j_S(q))=\exists p\,[(Sp=q)\land Sp]=q.
 \tag{6}
 $$
+
 For the last identity, every joinand is below q by equality substitution. Surjectivity supplies an admitted p₀ with Sp₀=q; its equality judgment is Top, so its joinand is q. The two inequalities prove equality. This uses a witness only in the proof for the given q; the term in (5) was defined before choosing any witness.
 
 Since Sa=Top by (3), equations (5)–(6) give
@@ -79,12 +85,14 @@ $$
 r_S(q)\le a,\qquad S(r_S(q))=q.
 \tag{7}
 $$
+
 The injectivity on [Bottom,a] proved in §2 shows that r_S(q) is the unique representative in that interval having S-image q. In particular,
 
 $$
 r_S(\bot)=\bot,\qquad r_S(\top)=a.
 \tag{8}
 $$
+
 Uniqueness and Boolean preservation by S give the relative Boolean laws
 
 $$
@@ -95,6 +103,7 @@ r_S(\neg p)&=a\land\neg r_Sp.
 \end{aligned}
 \tag{9}
 $$
+
 For each equation, both candidates lie below a and applying S gives the same proposition. The complement in (9) is explicitly the relative complement below a. We do not treat r_S itself as an endpoint-fixing observer of the original Boolean algebra.
 
 ## 4. Quantifiers and the qualified right inverse
@@ -106,18 +115,21 @@ r_S(\forall x^\sigma Gx)
 \quad\text{and}\quad
 \forall x^\sigma r_S(Gx)
 $$
+
 lie below a. For the second, choose an admitted σ-object and use universal instantiation; the type domains are inhabited in the fixed framework. Applying S to either expression gives ∀x Gx, using S's full Q_σ law and (7). The uniqueness from §3 therefore proves
 
 $$
 r_S(\forall x^\sigma Gx)=\forall x^\sigma r_S(Gx).
 \tag{10}
 $$
+
 For the existential version, every r_S(Gx) lies below a, so its admitted join also lies below a. Apply S's P_σ law and the same uniqueness argument to obtain
 
 $$
 r_S(\exists x^\sigma Gx)=\exists x^\sigma r_S(Gx).
 \tag{11}
 $$
+
 The pointwise identities S(r_S(Gx))=Gx are collected into the required predicate identity using C5 Functionality. Likewise the identities in (9)–(11), universally over their admitted inputs, can be collected into their whole composite forms. No optional current-surjectivity premise is necessitated.
 
 Now fill the complementary region with identity:
@@ -126,6 +138,7 @@ $$
 E_S(q):=r_S(q)\lor(k_S\land q).
 \tag{12}
 $$
+
 This is an admitted tt term. The relative Boolean laws (8)–(9) and the partition a,k_S give the ordinary Boolean laws for E_S, including E_S(Top)=Top and E_S(Bottom)=Bottom.
 
 For a listed quantifier, rewrite the right side of (12) as
@@ -133,6 +146,7 @@ For a listed quantifier, rewrite the right side of (12) as
 $$
 (a\land r_S(q))\lor(k_S\land q).
 $$
+
 The fixed-guard universal distribution identity gives
 
 $$
@@ -146,6 +160,7 @@ $$
 \end{aligned}
 \tag{13}
 $$
+
 The existential calculation uses the corresponding distribution identity and (11). These are the C identities for fixed propositional guards, not arbitrary exchanges of external infima. C5 Functionality collects the resulting preservation equations into the full composite operation identities. The translated equality clauses then follow from Boolean qualification over C. Hence E_S is Good_Δ for the original list.
 
 Finally, (3) and (7) give
@@ -154,12 +169,14 @@ $$
 S(E_Sq)=S(r_Sq)\lor(Sk_S\land Sq)=q.
 \tag{14}
 $$
+
 Functionality at tt yields the whole-operation identity
 
 $$
 S\circ E_S=I.
 \tag{15}
 $$
+
 This is the promised qualified right inverse. The use of Q_t/P_t in the construction explains the requirement t∈Δ. Each other σ∈Δ is preserved by its own calculation; no further observer quantifier type is introduced.
 
 ## 5. Surjective separation and reversible separation
@@ -172,6 +189,7 @@ $$
 \mathrm{SplitEpi}_\Delta(S).}
 \tag{16}
 $$
+
 This time it is an equality of the individual qualified classes, not merely their separating power. The right inverse is admitted and qualified; current injectivity of S is not assumed.
 
 The existing same-list right-inverse patching theorem over C+BF identifies SplitEpi separation with reversible separation. Combining it with (16), for every relational output type τ,
@@ -185,6 +203,7 @@ S_{\tau,\Delta}[\mathrm{Rev}]
 }
 \tag{17}
 $$
+
 For the full schema, enlarge each requested finite list by t and weaken back as needed. Therefore full surjective-logical separation together with C5 is exactly full Rev over H. The explicit C5 premise is retained in this formulation. This argument does not claim that surjective-logical separation alone recovers C5, or that current surjectivity over bare C supplies the same qualified section.
 
 The section need not be a left inverse of S. Equation (4) shows that S is injective exactly when k_S=Bottom; in that special case a=Top and the relative inverse already gives both whole inverse equations. A kernel proposition that is currently false may nevertheless be nonbottom. Current falsity of k_S must not be confused with injectivity.
@@ -198,6 +217,7 @@ K_\Delta:=\exists E,F,c\,[
 \mathrm{Good}_\Delta(E)\land\mathrm{Good}_\Delta(F)
 \land F\circ E=I\land c\land Fc=\bot].
 $$
+
 Over C5, for finite Δ containing t, it has the equivalent formulations
 
 $$
@@ -213,6 +233,7 @@ K_\Delta
 \end{aligned}}
 \tag{18}
 $$
+
 For the forward direction set S=F. The given right inverse makes S onto, and (4) gives c≤k_S, so k_S is true. Conversely, use E_S from (12) and c=k_S; equations (3) and (15) witness K_Δ. The last equivalence is again (3)–(4). Thus k_S depends only on the surjective observer, not on a chosen section.
 
 Since Sc=Bottom is equivalent over C to □¬Sc, one may also read the last line of (18) as the existence of a surjective qualified observer and a currently true c for which Sc is necessarily false. Equivalently, ¬K_Δ says that every such S satisfies ∀c(c→◇Sc). This is a modal characterization using only admitted observers and proposition parameters, with no quantified inverse witness.

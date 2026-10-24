@@ -14,6 +14,7 @@ $$
 p\land T=p,\qquad p\land B=B.
 \tag{1}
 $$
+
 Write p≤q for p∧q=p and p<q for p≤q and p≠q. These are identities of proposition objects. Truth is an upper set: if p≤q and p is true, then the H truth clause for conjunction makes q true.
 
 Put I:=λp.p and use the admitted lambda term for composition. An admitted predicate G of type (tt)t is a **whole-meet automorphism group** here when:
@@ -26,6 +27,7 @@ Put I:=λp.p and use the admitted lambda term for composition. An admitted predi
          =(\lambda p,q.Ep\land Eq).
    \tag{2}
    $$
+
 3. Every E with GE has an admitted F with GF and E∘F=I=F∘E.
 
 Both inverse equations are whole-operation identities. Members of G are order isomorphisms and fix T and B. This follows from meet preservation, the admitted inverse, and uniqueness of the bounds; see [the invariant-congruence and order-action theorem](reversible-semilattice-order-actions.md), §1.
@@ -38,6 +40,7 @@ p=q\leftrightarrow
 \forall E^{tt}(GE\to(Ep\leftrightarrow Eq))\right].
 \tag{3}
 $$
+
 For an admitted invariant predicate U of propositions and an admitted subgroup K, write **Sep(K,U)** for the same formula with p,q restricted to U. No new type for U is introduced. Group closure and inverse existence are always assertions about admitted operations, not about external permutations which might fail to belong to a Henkin domain.
 
 ## 2. Exact reduction along convex blocks
@@ -48,6 +51,7 @@ $$
 J(p):=B<p<T.
 \tag{4}
 $$
+
 Let $\mathcal B^{ttt}$ be an admitted relation whose current extension is an equivalence relation on J. Assume its classes are convex, it is invariant under G, and each class has neither a first nor a last member. Explicitly, the latter two assumptions are
 
 $$
@@ -55,11 +59,13 @@ $$
  (\mathcal B(p,q)\leftrightarrow\mathcal B(Ep,Eq))],
 \tag{5}
 $$
+
 $$
 \forall p\in J\;\exists u,v\in J\;
 [\mathcal B(p,u)\land\mathcal B(p,v)\land u<p<v].
 \tag{6}
 $$
+
 All relations here are evaluated materially. Coextension is not identified with equality of the relation objects. Density and convexity make every block a dense chain, and (6) gives its lack of endpoints.
 
 For a proposition c∈J define the admitted predicates
@@ -70,6 +76,7 @@ C_c(p):=J(p)\land\mathcal B(c,p),
 G_c(E):=GE\land\mathcal B(c,Ec).
 \tag{7}
 $$
+
 The second is the setwise stabilizer of the first. Indeed (5) shows that E sends the block of c onto the block of Ec. It follows that G_c contains I, is closed under composition, and contains an admitted inverse of each of its members. These statements use only the displayed admitted predicates and the original group assumptions.
 
 Say that the block of c **crosses the truth cut** when
@@ -79,6 +86,7 @@ $$
 \exists a,b\,[C_c(a)\land C_c(b)\land\neg a\land b].
 \tag{8}
 $$
+
 Necessarily a<b. Say that G is **transitive on blocks** when
 
 $$
@@ -86,6 +94,7 @@ $$
 \forall p,q\in J\;\exists E\,[GE\land\mathcal B(Ep,q)].
 \tag{9}
 $$
+
 This is an ordinary formula about proposition and observer variables. It does not quantify over a quotient domain of blocks.
 
 **Lemma 1: uniqueness of a crossed block.** At most one block crosses the truth cut. If C_c does, every block below C_c is entirely false and every block above C_c is entirely true.
@@ -106,6 +115,7 @@ S[G]\ \longleftrightarrow\
 \mathrm{Sep}(G_c,C_c)].}
 \tag{10}
 $$
+
 Equivalently, for any specified c whose block crosses the truth cut, S[G] is equivalent to the last two conditions in (10).
 
 **Proof, forward.** Pick two distinct points in one block; these exist by (6). A global separator sends them to different truth values, so their image block crosses the cut. Fix c in that block C.
@@ -134,6 +144,7 @@ $$
 \land\exists c\in J\,\mathrm{Cross}(c).}
 \tag{11}
 $$
+
 **Proof.** Necessity is Theorem 3. For sufficiency choose a crossed block C_c and define the admitted relation on it
 
 $$
@@ -141,6 +152,7 @@ R_c(p,q):=C_c(p)\land C_c(q)\land
 \forall E\,[G_c(E)\to(Ep\leftrightarrow Eq)].
 \tag{12}
 $$
+
 The argument of [the order-action theorem](reversible-semilattice-order-actions.md), §§2–3, relativizes to C_c: this is an invariant convex equivalence. Invariance uses admitted compositions and inverses, and convexity uses order preservation and upward closure of truth. It is not universal, because I distinguishes the two witnesses to Cross(c). Primitivity makes it equality on C_c, giving local separation. Apply Theorem 3. ∎
 
 The assumption that every stabilizer is primitive can be weakened to primitivity of the crossed block's stabilizer. The displayed version keeps the structural action premise independent of which block currently crosses the truth cut.
@@ -152,6 +164,7 @@ L=\{B,T\}\ \cup\
 \bigl((\mathbb Q\times\mathbb Q)\setminus\{(0,0)\}\bigr),
 \tag{13}
 $$
+
 with B least, T greatest, and the interior ordered lexicographically. Declare an interior point true exactly when it is lexicographically greater than (0,0); let T be true and B false. Interpret conjunction and disjunction by minimum and maximum. Negation exchanges B,T and sends (i,j) to (−i,−j). Removing (0,0) makes this negation truth-correct.
 
 At every allowed arrow type take the full set of functions. Interpret each quantifier by T when its ordinary truth condition holds and by B otherwise; equality returns T for actual equality and B otherwise. Application and abstraction are ordinary application and abstraction. Thus the H truth rules, equality rules and contextual beta/eta hold, and Functionality holds at every type. This is the full-domain interpretation described in [Local tiers and models](local-tiers-and-models.md), §1. The fixed abbreviation a=∀p p has value B, so a∨¬a and a∧¬a give the displayed T,B.
@@ -175,6 +188,7 @@ V(E):=(\lambda p,q.E(p\lor q))
        =(\lambda p,q.Ep\lor Eq).
 \tag{14}
 $$
+
 Fix an **external finite list** e₁,…,eₙ, where n≥1, satisfying
 
 $$
@@ -182,6 +196,7 @@ e_i\ne B,\qquad e_i\land e_j=B\ (i\ne j),\qquad
 e_1\lor\cdots\lor e_n=T.
 \tag{15}
 $$
+
 This is a finite central partition in the sense used here: each e_i has complement the join of the other entries. For n=1 the complementary join is B. Assume G preserves this finite set of factor units. For every GE and every i there is j with E(e_i)=e_j. Its inverse shows that these images permute the units. One can name the set by the admitted predicate $P(x):=\bigvee_{i=1}^{n}(x=e_i)$; no finite-set object or internal natural-number quantifier is required.
 
 There is **exactly one true factor unit** w. The finite join in (15) is true, so at least one e_i is true by the H disjunction truth clause. Two true units would have a true meet, contradicting their meet's identity with B. Choosing the true unit is a finite case distinction in this fixed theorem instance, not an admitted selection operation over arbitrary partitions.
@@ -192,18 +207,21 @@ $$
 z\leftrightarrow z\land w.
 \tag{16}
 $$
+
 This is a material truth equivalence because w is true; it is not the identity z=z∧w. Distributivity and (15) separately give the output identity
 
 $$
 p=(p\land e_1)\lor\cdots\lor(p\land e_n).
 \tag{17}
 $$
+
 Let $U_w(p):=p\le w$, the interval [B,w], and define its admitted stabilizer
 
 $$
 G_w(E):=GE\land Ew=w.
 \tag{18}
 $$
+
 It is a group of admitted whole lattice automorphisms of that interval. Define **FactorTrans** by the finite family of formulas
 
 $$
@@ -211,6 +229,7 @@ $$
 \exists E\,[GE\land E(e_i)=e_j].
 \tag{19}
 $$
+
 **Theorem 5: finite-factor reduction.** Under these assumptions,
 
 $$
@@ -218,6 +237,7 @@ $$
 \mathrm{FactorTrans}\land\mathrm{Sep}(G_w,U_w).}
 \tag{20}
 $$
+
 **Proof, forward.** Separate e_i from B. Every group member fixes B, so the separator sends e_i to a true unit, necessarily w. Thus every factor unit can be sent to w. Composing these witnesses with admitted inverses gives (19).
 
 Suppose x,y≤w are distinct, and let E globally separate them. Both outputs are below Ew, which is some factor unit. If Ew were false, both outputs would be false by upward closure of truth, contradicting separation. Therefore Ew=w and E belongs to G_w. This proves local separation on [B,w].
@@ -228,6 +248,7 @@ $$
 Ep\land w\ne Eq\land w.
 \tag{21}
 $$
+
 These are in [B,w], so a member H of G_w locally separates them. Its meet preservation and Hw=w identify their images with HEp∧w and HEq∧w. By (16), these have the same respective truth values as HEp and HEq. Thus H∘E is a global separator. ∎
 
 The transitivity in (19) is on the finite **factors**, not on proposition atoms. The factors may be infinite and atomless. In the special case that each interval [B,e_i] has only B,e_i, local separation is automatic, and the theorem specializes to the familiar finite atomic case. That special case is not being assumed here.
@@ -242,6 +263,7 @@ $$
 \exists b,a\,[B<b<w\land B<a<w\land\neg b\land a].
 \tag{22}
 $$
+
 For sufficiency use the bounded dense-chain order-primitivity theorem from [the order-action note](reversible-semilattice-order-actions.md), §§3–4, with upper bound w. Its proof uses only that the interval's bounds are fixed and have opposite truth values. It does not require w to be the global abbreviation T. For necessity, choose distinct interior points. Their local separator keeps both outputs interior and gives the required truth contrast. Density guarantees such points exist.
 
 Combining (20) and (22) gives an exact criterion using factor transitivity and an interior truth contrast in the true factor. One can assume the structural density and primitivity conditions for every factor, so that these premises do not depend on the current choice of w.
@@ -253,6 +275,7 @@ L_0=(\mathbb Q\cap[0,1])\setminus\{1/2\},
 \qquad D_t=L_0^n.
 \tag{23}
 $$
+
 A vector is true exactly when its first coordinate exceeds 1/2. Interpret ∧ and ∨ coordinatewise by minimum and maximum, and negation coordinatewise by x↦1−x. Let B=(0,…,0) and T=(1,…,1). Take singleton individuals and full function domains at all allowed arrow types. Quantifiers return T or B according to their ordinary truth conditions, and equality returns T or B according to actual equality. As in §3, this gives H and all Functionality, with the displayed fixed abbreviations for the bounds.
 
 Let e_i have value 1 in coordinate i and 0 elsewhere. These form the partition (15), and e₁ is its unique true unit. Let G consist of coordinate permutations composed with independent order automorphisms of the coordinate chains. It is an admitted group in this full-function model, preserves both primitive operations as whole operations, and acts transitively on the factor units. The stabilizer of e₁ includes all order automorphisms of the first factor, acting identically on the others. Its action on (B,e₁) is order 2-homogeneous and hence primitive. The vectors
@@ -261,6 +284,7 @@ $$
 (1/4,0,\ldots,0),\qquad(3/4,0,\ldots,0)
 \tag{24}
 $$
+
 give its interior truth contrast. Theorems (20)–(22) supply joint reversible M+V separation; full Functionality supplies the full relational version.
 
 This is a distributive lattice of higher rank than a chain: e₁ and e₂ are incomparable. It has no proposition atoms. For any nonzero vector choose a positive coordinate and a strictly smaller positive rational in that coordinate, setting the others to zero. This gives a nonzero strict lower bound of the original vector. No infinite selection is used for this individual witness.

@@ -1,7 +1,7 @@
 {
   "reviewed_at_utc": "2026-10-24T02:04:04.314648+00:00",
   "database_snapshot_origin": "logical-maps",
-  "purpose": "Local review plan only. Related records identify context, not a claim that the research result is already present. No official verdict or Lean status is changed.",
+  "purpose": "Result-to-database comparison, with exact matches distinguished from related records and research certificates distinguished from database verification status.",
   "coverage": {
     "main_entries": 61,
     "catalog_keys": 186,
@@ -2449,8 +2449,8 @@
     },
     {
       "result_id": "NPC-ATOMICITY",
-      "action": "Synthesis-owned official generated-statement integration pending",
-      "proposal": "Preserve Goodsell/Yli-Vakkuri attribution and the accepted exact theorem receipt. This synthesis owns completing the official generated-statement workflow for both canonical records; both remain stated. Coordinate the required checker through the existing serialized dispatcher before changing any verified flag.",
+      "action": "Attach the formalization to the existing theorem",
+      "proposal": "The mathematical theorem is due to Goodsell and Yli-Vakkuri, following Dorr’s proof sketch. The contribution is the accepted exact Lean formalization. Its certificate is separate from the generated-statement status of the two database records.",
       "records": [
         {
           "record": "results/c5-and-atomicity-t-imply-no-pure-contingency",
@@ -2782,7 +2782,7 @@
     {
       "result_id": "CH-COALESCED",
       "action": "Register a distinct coalesced CH model",
-      "proposal": "Mathematical integration owner: Explore classicism map results. Add a new coalesced sum with the CH/¬CH components and only its verified verdicts. Preserve the arithmetic-disagreement record. The synthesis supplies the ordinary proof and waits for the new record ID.",
+      "proposal": "The CH/¬CH coalesced sum is distinct from the existing arithmetic-disagreement construction. Its component premises and verified structural verdicts are stated in the result index.",
       "records": [
         {
           "record": "models/coalesced-two-extensional-arithmetics-root",
@@ -2859,7 +2859,7 @@
     {
       "result_id": "COMPUTABILITY-COMPARISON",
       "action": "Retain as a scoped research comparison",
-      "proposal": "Restored from the retained catalogue into the synthesis. Preserve the cited premises, model coding and conditional hypotheses; no database verdict or certificate is changed.",
+      "proposal": "The linked proof gives the exact premises, model coding and conditional hypotheses. This is a research comparison rather than a change to the matched database records.",
       "records": [
         {
           "record": "principles/distinctness-schema-r",
@@ -2870,7 +2870,7 @@
     {
       "result_id": "EXACT-MODEL-DEGREES",
       "action": "Retain as a scoped research comparison",
-      "proposal": "Restored from the retained catalogue into the synthesis. Preserve the cited premises, model coding and conditional hypotheses; no database verdict or certificate is changed.",
+      "proposal": "The linked proof gives the exact premises, model coding and conditional hypotheses. This is a research comparison rather than a change to the matched database records.",
       "records": [
         {
           "record": "principles/distinctness-schema-r",
@@ -2889,7 +2889,7 @@
     {
       "result_id": "STANDARD-NUMBER-MODELS",
       "action": "Retain as a scoped research comparison",
-      "proposal": "Restored from the retained catalogue into the synthesis. Preserve the cited premises, model coding and conditional hypotheses; no database verdict or certificate is changed.",
+      "proposal": "The linked proof gives the exact premises, model coding and conditional hypotheses. This is a research comparison rather than a change to the matched database records.",
       "records": [
         {
           "record": "principles/necessity-of-arithmetic",
@@ -2904,7 +2904,7 @@
     {
       "result_id": "COMPLETION-SPACES",
       "action": "Retain as a scoped research comparison",
-      "proposal": "Restored from the retained catalogue into the synthesis. Preserve the cited premises, model coding and conditional hypotheses; no database verdict or certificate is changed.",
+      "proposal": "The linked proof gives the exact premises, model coding and conditional hypotheses. This is a research comparison rather than a change to the matched database records.",
       "records": [
         {
           "record": "principles/distinctness-schema-r",
@@ -2923,7 +2923,7 @@
     {
       "result_id": "UNIFORM-COMPLETE-EVALUATORS",
       "action": "Retain as a scoped research comparison",
-      "proposal": "Restored from the retained catalogue into the synthesis. Preserve the cited premises, model coding and conditional hypotheses; no database verdict or certificate is changed.",
+      "proposal": "The linked proof gives the exact premises, model coding and conditional hypotheses. This is a research comparison rather than a change to the matched database records.",
       "records": [
         {
           "record": "principles/necessary-plenitude-r",
@@ -2942,7 +2942,7 @@
     {
       "result_id": "C5-STRONG-RETRACTIONS",
       "action": "Retain as a scoped research comparison",
-      "proposal": "Restored from the retained catalogue into the synthesis. Preserve the cited premises, model coding and conditional hypotheses; no database verdict or certificate is changed.",
+      "proposal": "The linked proof gives the exact premises, model coding and conditional hypotheses. This is a research comparison rather than a change to the matched database records.",
       "records": [
         {
           "record": "principles/necessary-distinctness-necessary-r",
@@ -3157,15 +3157,15 @@
     },
     {
       "path": "evidence/full-choice-arithmetic-delivery.json",
-      "sha256": "2dc4145d8aac98d89c1c0ae11ee2d1a8bf7e40cb7911df9666e70039350c89d2",
+      "sha256": "050018380f04a66a0cf55bf32b9baae2a25cbc81d909e70aac3b241668ff44f2",
       "scope": "Final paper and companion source delivery; prior mathematical and formalization scope unchanged",
       "additional_source_evidence": [
         {
-          "path": "papers/choice-and-possibility.tex",
+          "path": "source/research/2026-10-23/abductive-comparison/paper.tex",
           "sha256": "412740a8dbe90d2a5830279112a1f96ad0cc6c6bee17a7b1098c70cc1e6864ac"
         },
         {
-          "path": "papers/uniformity-arithmetic-core.tex",
+          "path": "source/research/2026-10-23/abductive-comparison/uniformity-results.tex",
           "sha256": "c36b004fcb2f6927b92e9eb30ead5747b2c4acebb6b9e4f9155747ea6a544e46"
         }
       ]

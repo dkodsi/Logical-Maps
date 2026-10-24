@@ -3632,7 +3632,73 @@
           "by": "OpenAI Codex, prompted by Daniel Kodsi",
           "summary": "Added the endpoint-separation and Infinitary Comprehension characterization over the specified λ-free base, with equality clauses derived after reconstruction."
         }
-      ]
+      ],
+      "presentation": {
+        "definitions": "The schema ranges over finite argument tuples $\\bar\\sigma$ and finite lists $\\Delta$ of tested types. $\\mathrm{Good}_\\Delta(E)$ requires preservation of Boolean operations and the listed quantifiers as identities of whole operations, together with the translated equality laws. [Exact qualification and variants](proofs/h-observer-space/GRAPH.md#logical-observer-separation-r).",
+        "connections": [
+          "H + OS entails C + BF. **Lean certified** with explicit endpoint identities; [omitting them](proofs/logical-observer-endpoint-reduction.md) uses the ordinary reduction proof.",
+          "Over C: Atomicity (type t) + BF ⇒ OS ⇒ BF, with neither converse valid.",
+          "Endpoint separation is equivalent over H to C5 + Atomicity (type t). Given OS, uniqueness of the qualified observer is equivalent to Extensionality."
+        ],
+        "variants": [
+          {
+            "id": "endpoint-logical-observer-separation-r",
+            "label": "Endpoint",
+            "qualification": "Only ⊤ and ⊥ as outputs",
+            "consequence": "Exactly C5 + Atomicity (type t) over H."
+          },
+          {
+            "id": "reversible-logical-observer-separation-r",
+            "label": "Reversible",
+            "qualification": "A qualified two-sided inverse",
+            "consequence": "Gives C5 + ☐OS + No Pure Contingency, including in atomless models."
+          },
+          {
+            "id": "injective-logical-observer-separation-r",
+            "label": "Injective",
+            "qualification": "Currently injective",
+            "consequence": "Whether it gives logical left-inverse separation remains open."
+          },
+          {
+            "id": "native-necessity-logical-observer-separation-r",
+            "label": "☐-preserving",
+            "qualification": "Preserves native necessity",
+            "consequence": "Gives ☐BF and .2; equivalent to injective separation over C5."
+          },
+          {
+            "id": "finite-image-logical-observer-separation-r",
+            "label": "Finite-image",
+            "qualification": "Internally finite image",
+            "consequence": "Strictly between OS and endpoint separation."
+          },
+          {
+            "id": "idempotent-native-necessity-logical-observer-separation-r",
+            "label": "Idempotent ☐-preserving",
+            "qualification": "Also $E\\circ E=E$",
+            "consequence": "Strictly stronger than ☐-preserving separation; with C5, exactly Extensionality."
+          },
+          {
+            "id": "bounded-stabilization-native-necessity-logical-observer-separation-r",
+            "label": "Bounded stabilization",
+            "qualification": "$E^{r+1}=E^r$ for fixed $r\\ge1$",
+            "consequence": "An unbounded strict hierarchy of ☐-preserving separation principles."
+          },
+          {
+            "id": "factive-logical-observer-separation-r",
+            "label": "Factive",
+            "qualification": "Ep implies p",
+            "consequence": "Exactly Extensionality at full scope over H."
+          },
+          {
+            "id": "central-logical-observer-separation-r",
+            "label": "Central",
+            "qualification": "Commutes with every qualified observer",
+            "consequence": "Exactly Extensionality over C5."
+          }
+        ],
+        "reference": "proofs/h-observer-space/GRAPH.md",
+        "reference_intro": "The [headline guide](proofs/h-observer-space/GRAPH.md#headline-results) explains the main distinctions; the [definitions and consequences](proofs/h-observer-space/GRAPH.md#logical-observer-principles) retain the full proposal family and proof references."
+      }
     },
     {
       "id": "sections-of-surjections-r",

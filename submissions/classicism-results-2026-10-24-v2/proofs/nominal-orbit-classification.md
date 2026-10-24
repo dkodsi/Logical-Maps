@@ -128,11 +128,7 @@ witness is fixed by the relevant stabilizer and the checked selector criterion
 applies. Assume otherwise and choose a0∉S. Choose an F-witness x0 at a0 and
 a finite support K for x0. For every a∈S choose an F-witness xa at a and a
 finite support Ka for xa. The set
-
-$$
-T=S\cup\{a_0\}\cup K\cup\bigcup_{a\in S}K_a
-$$
-
+$T=S\cup\{a_0\}\cup K\cup\bigcup_{a\in S}K_a$
 is finite and supports F. At w∈S use xw. At w∉S use
 x=(a0 w)·x0, where (a0 w) is the swap, interpreted as the identity when
 w=a0. This swap fixes S, so covariance of F makes x an F-witness at w.

@@ -11,6 +11,7 @@ C5\Rightarrow BF_{\rm all},\qquad
 \mathrm{Atomicity}_t+BF_{\rm all}
  \Rightarrow\mathrm{Atomicity}_{\rm all},
 $$
+
 $$
 C5+\mathrm{Atomicity}_{\rm all}
  \Rightarrow\Box\mathrm{Plenitude}_{\rm all}.

@@ -19,11 +19,7 @@ Use the symmetric ideally-full category semantics recorded in [symmetric ideally
 For an arrow `h`, write `h*a` for transport of an entity or tuple. For a relation `X` at its source, write `X_h` for its extension at `h`; thus `(h*X)_k = X_(kh)`. A finite pin `P` of an entity means that arrows with the same target agreeing on `P` transport it identically. One can check admission of a relational profile by showing that its extensions agree on arrows agreeing on a fixed finite pin and that it respects postcomposition by target symmetries. Agreement after further postcomposition then gives equality of transported entities, not just current coextension. Transport carries a pin `P` to its finite image `hP`.
 
 We use two elementary facts about rigidity in C. First, coextensive weakly rigid relations are identical: apply each relation's weak inextensibility to the other, using weak persistence, and then use mutual entailment. Second, an admitted relation with the exact-image profile
-
-$$
- X_h=h[D]
-$$
-
+$X_h=h[D]$
 for its actual tuple set `D` is rigid. At any future arrow `h`, every subsequent extension is the direct image of `h[D]`. This gives persistence. Any test necessarily true of every member of `h[D]` is true of its image at every further arrow, giving weak inextensibility there. The argument works for tuples of any types.
 
 The definitions of weak persistence, weak inextensibility and rigidity are those in [Background](../source/topics/classicism/background.md): rigidity is necessary weak rigidity. The power properties are
@@ -108,11 +104,7 @@ It is pinned by `{q}` and respects tail symmetries, so it is admitted. Transport
 Fix an infinite block label `q_i`. Condition (1) gives weak persistence of `U_(q_i)`. We prove weak inextensibility directly.
 
 Let `Z` be an admitted unary test which is necessarily true of each current member of `B_i`. Let `P` be a finite pin of `Z`, enlarged to contain `q_i` and all points in every finite fibre whose label is in `P`. Fix an arbitrary tail arrow `h=(f,g)` and `y in R(g(q_i))`. Choose
-
-$$
- n\in B_i
-$$
-
+$n\in B_i$
 outside the finitely many pinned individual points. In particular `n` lies in no finite fibre whose label is pinned. There is a tail arrow `j` agreeing with `h` on `P` and sending `n` to `y`, as follows.
 
 Retain `g` on the pinned labels and send every unpinned label to `q_top`. On each pinned block retain `f`, except that `n` is sent to `y` in block `B_i`. Retain `f` on all pinned individual points. This preserves (1) on each pinned block and each pinned finite fibre. Since only finitely many blocks have pinned labels, choose a different infinite block; on its unpinned points supply all missing `N` targets to make the individual map surjective. Elsewhere choose arbitrary values in `N`. Every unpinned label has target fibre `N`, so its condition imposes no further restriction.
@@ -216,11 +208,7 @@ The approximate lifting step adapts parts (c)–(d) of [the recorded surjection 
 ## 8. Weakly Rigid Power fails
 
 Use the rigid unary root bound `F` from §3 and its weak power `W_F`. Root TR says that every current member of `W_F` is rigid. Since rigidity is necessary, the admitted test
-
-$$
- Z(X):=\mathrm{Rigid}(X)
-$$
-
+$Z(X):=\mathrm{Rigid}(X)$
 is necessarily true of every current member of `W_F`.
 
 At the identity entrance `i`, however, §4 supplies `U_(q_i)`, which is weakly rigid, entails `iF`, and is not rigid. It belongs to `(W_F)_i` and fails `Z` there. Hence `W_F` does not entail `Z`, violating weak inextensibility. The bound `F` is itself rigid, and therefore weakly rigid. This refutes WRP at relation type `et`.

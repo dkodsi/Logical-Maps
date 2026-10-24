@@ -47,6 +47,7 @@ $$
 $$
 
 Here $L_n(P)$ says that $P$ has at least $n$ distinct instances at the current world, and
+
 $$
 \mathrm{Fin}(P):=\exists Z^\nu\,
   (\mathrm{FiniteCardinality}_e(Z)\land Z(P)).
@@ -55,15 +56,19 @@ $$
 The following gives an infinitary deduction from these premises, rather than appealing to the full-model cardinality lemma to assert that they are inconsistent.
 
 In the auxiliary presentation choose a fresh $q=\delta_w$, using singleton-world existence and existential elimination. Its defining axiom is
+
 $$
 \forall v\,[\mathrm{Eval}(q,v)\leftrightarrow v=w].
 $$
+
 Thus current truth $\chi(w)$ gives the global algebraic inequality $q\le_t\chi$. This step is essential. A direct presentation in C would have to supply the corresponding actual-atom condition, including $\forall p(p\to q\le_t p)$, from CC's principal-world reconstruction. Atomicity alone is not being used as an unexplained substitute.
 
 Define
+
 $$
 a_n:=\lambda Z^\nu.\ q\land Z=z_n.
 $$
+
 Each $a_n$ is an atom at $\nu t$: its support consists exactly of $(w,z_n)$. The rigid predicate $\lambda Z.Z=z_n$ without $q$ would not be an atom when there is more than one world.
 
 The atom premises have finitary derivations. For $R\le a_n$, split on the truth of $R(z_n)$ at $w$. In the true case the singleton-world axiom and literal identity give $a_n\le R$, hence $R=a_n$; in the false case they give $R=\bot$. Also $a_n(z_n)$ holds at $w$, so $a_n\ne\bot$. These are ordinary equality, quantifier and extensionality deductions; no semantic completeness principle is invoked.
@@ -71,23 +76,31 @@ The atom premises have finitary derivations. For $R\le a_n$, split on the truth 
 Apply AJ to the countable family $(a_n)_{n<\omega}$. In the fresh-witness subderivation assume $J_\omega^{\nu t}(b;\bar a)$.
 
 First, $a_0\le b$ gives $b(z_0)$ at $w$. Define
+
 $$
 c_s:=\lambda Z.\ q\land b(\mathrm{Suc}Z).
 $$
+
 For each $n$, $a_{n+1}\le b$, together with the defining numeral identity $\mathrm{Suc}z_n=z_{n+1}$, gives $a_n\le c_s$. Infinitary conjunction introduction collects these inequalities. Join leastness yields $b\le c_s$. At $w$, therefore, $b$ contains zero and is closed under successor. Applying the defining impredicative induction condition for Frege numberhood gives
+
 $$
 \mathrm{FiniteCardinality}_e(Z)\to b(Z)
 $$
+
 at $w$.
 
 Second, the finite counting argument for each fixed $n$ gives
+
 $$
 L_{n+1}(P)\to\neg z_n(P).
 $$
+
 It is the ordinary induction on the finite numeral from the earlier cardinality calculation, and does not assume an externally full number domain. Let
+
 $$
 c_P:=\lambda Z.\ q\land\neg Z(P).
 $$
+
 For each $n$, the local premise $L_{n+1}(P)$ and the singleton-world axiom give $a_n\le c_P$. Collect these inequalities and apply join leastness: $b\le c_P$.
 
 Finally $\mathrm{Fin}(P)$ supplies a $Z$ with numberhood and $Z(P)$. The first part gives $b(Z)$, and the second gives $\neg Z(P)$. Discharge the fresh join witness using AJ and the singleton-world witness by existential elimination. This derives contradiction from $\Gamma$.
@@ -107,9 +120,11 @@ The hierarchy in this section is the **set-theoretic Lévy hierarchy**, not the 
 Then its theorem predicate on finite conclusion codes is $\Sigma_1$, with no cardinal bound on proof size or branching.
 
 **Proof.** First suppose the local checks are bounded. Supply a set $T$ coding a proof, an ordinal $\alpha$, and a rank function
+
 $$
 r:\mathrm{Nodes}(T)\longrightarrow\alpha
 $$
+
 strictly decreasing from each conclusion node to each of its premise nodes. Such a rank exists for every set-sized well-founded relation by well-founded recursion and Replacement. Conversely, rank descent certifies well-foundedness. The condition that $\alpha$ is an ordinal and the function, edge and rank conditions are all bounded once the indicated sets have been supplied.
 
 The local checks quantify only over the supplied nodes, edges, labels and index sets. Well-founded formula codes are treated by an additional syntax rank and the associated finite collection of decoding tables. Thus proof existence has an existential set quantifier block followed by a bounded matrix.
@@ -129,20 +144,26 @@ The preceding note proves computable many-one equivalence between pure full Gall
 **Theorem 4.1.** A calculus satisfying Theorem 3.1 cannot be both sound and weakly complete for pure full Gallin validity in the fixed ambient universe $V$.
 
 **Proof.** Let $U(e,n)$ be a universal parameter-free $\Sigma_1$ predicate of set theory on natural-number codes: every parameter-free $\Sigma_1$ number predicate is defined by $U(e,\cdot)$ for some finite formula code $e$. Uniform satisfaction for bounded formulas, followed by existential witness quantification, supplies this universal predicate. Put
+
 $$
 B(n):=\neg U(n,n).
 $$
+
 Then $B$ is $\Pi_1$, hence $\Pi_2$, but not $\Sigma_1$ in this same $V$. If code $e$ defined it as a $\Sigma_1$ predicate, evaluating at $e$ would give $B(e)\leftrightarrow\neg B(e)$.
 
 By the cited $\Pi_2$-completeness result and the earlier computable reduction to Gallin validity, there is a computable function $f$ such that
+
 $$
 B(n)\quad\longleftrightarrow\quad
 \mathrm{FullVal}_\infty(f(n)).
 $$
+
 If $D$ were the sound and complete theorem predicate of the proposed calculus, then
+
 $$
 B(n)\quad\longleftrightarrow\quad D(f(n)).
 $$
+
 Theorem 3.1 makes $D$ a $\Sigma_1$ predicate. Composition with a total computable function preserves that class, contradicting the diagonal argument. $\square$
 
 This rules out equality in the specified $V$; it is stronger than a statement that ZFC cannot prove uniform completeness. The parameter restriction matters: allowing the validity set itself as a fixed set parameter would trivialize theoremhood. No claim excluding arbitrary semantic or set-theoretic parameters is made.
@@ -150,17 +171,21 @@ This rules out equality in the specified $V$; it is stronger than a statement th
 When working internally to an inner model $M$, the same argument compares its proof predicate with **its own internally full validity**. It does not identify internally full domains with all powersets and functions of the surrounding universe.
 
 **Corollary 4.2.** Given an explicit parameter-free $\Sigma_1$ formula $D(x)$ for theoremhood, one can effectively produce a finite C sentence code $A$ such that
+
 $$
 \mathrm{FullVal}_\infty(A)\quad\longleftrightarrow\quad\neg D(A).
 $$
+
 If the calculus is sound, this sentence is valid and underivable.
 
 **Proof.** Fix the universal $U$ and reduction $f$ from Theorem 4.1. Effectively compile an index $e$ for the $\Sigma_1$ predicate $n\mapsto D(f(n))$, so $U(e,n)\leftrightarrow D(f(n))$. Set $A=f(e)$. Then
+
 $$
 \mathrm{FullVal}_\infty(f(e))
 \leftrightarrow\neg U(e,e)
 \leftrightarrow\neg D(f(e)).
 $$
+
 Soundness makes $D(A)$ imply validity, and hence $\neg D(A)$, a contradiction. Thus $\neg D(A)$, and the displayed equivalence gives validity. No recursion theorem is needed. $\square$
 
 Effectiveness here means a procedure on the supplied defining formula's code. It does not decide soundness, recover a definition from an opaque predicate, or promise a short or illuminating expanded C sentence. The translation procedure is specified mathematically; no executable implementation or numeral for a particular missing sentence is claimed.

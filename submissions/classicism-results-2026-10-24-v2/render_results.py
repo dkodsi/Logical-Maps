@@ -20,6 +20,41 @@ def anchor(name):
     return '<a id="' + name.lower() + '"></a>'
 
 
+def math_layout_issues(name, body):
+    """Check editable pages; source snapshots retain their original formatting."""
+    issues = []
+    lines = body.splitlines()
+    fence = None
+    opening = None
+    for i, line in enumerate(lines):
+        marker = re.match(r'^\s*(`{3,}|~{3,})', line)
+        if marker:
+            if fence is None:
+                fence = marker[1][0]
+            elif marker[1][0] == fence:
+                fence = None
+            continue
+        if fence:
+            continue
+        visible = re.sub(r'`[^`]*`', '', line)
+        if '$$' not in visible:
+            continue
+        location = name + ':' + str(i + 1)
+        if visible.strip() != '$$':
+            issues.append(location + ': use single dollars in prose or a separate display block')
+        elif opening is None:
+            opening = i
+            if i and lines[i - 1].strip():
+                issues.append(location + ': missing blank line before display')
+        else:
+            opening = None
+            if i + 1 < len(lines) and lines[i + 1].strip():
+                issues.append(location + ': missing blank line after display')
+    if opening is not None:
+        issues.append(name + ':' + str(opening + 1) + ': unclosed display')
+    return issues
+
+
 def render(root):
     main = load(root, 'MAIN-RESULTS.json')
     catalog = load(root, 'CATALOG.json')
@@ -108,7 +143,8 @@ def render(root):
     def bullet(claim):
         # Indent continuation blocks so displayed mathematics stays in its list item.
         lines = claim.split('\n')
-        return '- ' + lines[0] + ''.join('\n' + ('  ' + line if line else '') for line in lines[1:])
+        body = '- ' + lines[0] + ''.join('\n' + ('  ' + line if line else '') for line in lines[1:])
+        return body + ('\n' if lines[-1].strip() == '$$' else '')
 
     out = {}
     proposed = proposals['principles']
@@ -130,6 +166,26 @@ def render(root):
         refs = item.get('result_refs', [])
         evidence = ('**Evidence:** ' + ' · '.join(resultlink(rid, label=rows[rid]['title'] if len(refs) > 1 else 'Proofs and certificates') for rid in refs) + '.') if refs else ''
         return '\n\n'.join(x for x in [certified_line(item), evidence] if x)
+    def full_proposal(r):
+        lines = [anchor(r['id']), '### ' + r['name'], '', r['statement'], '', '$$', r['formal'], '$$', '']
+        if r.get('scope'):
+            lines += [r['scope'], '']
+        for definition in r.get('definitions', []):
+            lines += [definition, '']
+        lines += [bullet(claim) for claim in r['connections']]
+        for variant in r.get('variants', []):
+            lines += ['', anchor(variant['id']), '#### ' + variant['name'], '', variant['statement'], '', '$$', variant['formal'], '$$', '']
+            for definition in variant['definitions']:
+                lines += [definition, '']
+            lines += [bullet(claim) for claim in variant['connections']]
+            extra_sources = [s for s in variant['sources'] if s not in r['sources']]
+            if extra_sources:
+                lines += ['', '**Additional sources:** ' + proposal_sources({'sources': extra_sources}) + '.']
+            if variant['result_refs'] != r['result_refs']:
+                lines += ['', proposal_status(variant)]
+        lines += ['', '**Sources:** ' + proposal_sources(r) + '.', '', proposal_status(r), '']
+        lines += r.get('questions', []) + ([''] if r.get('questions') else [])
+        return lines
     text = ['# ' + proposals['title'], '',
         proposals['scope'], '',
         '[Main results](MAIN-RESULTS.md) · [Integration review](DATABASE-INTEGRATION.md) · [Structured proposals](CANDIDATES_DK.json) · [Evaluation principles](#evaluation-principles) · [Infinitary extension](#infinitary-extension)', '',
@@ -144,25 +200,33 @@ def render(root):
         text += ['', anchor(section['id']), '## ' + section['title'], '']
         for pid in section['principles']:
             r = candidates_by_id[pid]
+            compact = r.get('presentation')
+            if not compact:
+                text += full_proposal(r)
+                continue
             text += [anchor(r['id']), '### ' + r['name'], '', r['statement'], '', '$$', r['formal'], '$$', '']
-            if r.get('scope'):
-                text += [r['scope'], '']
-            for definition in r.get('definitions', []):
-                text += [definition, '']
-            text += [bullet(claim) for claim in r['connections']]
-            for variant in r.get('variants', []):
-                # Shared evidence is listed once; variant-specific additions stay here.
-                text += ['', anchor(variant['id']), '#### ' + variant['name'], '', variant['statement'], '', '$$', variant['formal'], '$$', '']
-                for definition in variant['definitions']:
-                    text += [definition, '']
-                text += [bullet(claim) for claim in variant['connections']]
-                extra_sources = [s for s in variant['sources'] if s not in r['sources']]
-                if extra_sources:
-                    text += ['', '**Additional sources:** ' + proposal_sources({'sources': extra_sources}) + '.']
-                if variant['result_refs'] != r['result_refs']:
-                    text += ['', proposal_status(variant)]
-            text += ['', '**Sources:** ' + proposal_sources(r) + '.', '', proposal_status(r), '']
-            text += r.get('questions', []) + ([''] if r.get('questions') else [])
+            text += [compact['definitions'], ''] + [bullet(claim) for claim in compact['connections']]
+            text += ['', '#### Observer restrictions', '', '| Variant | Additional qualification | Main consequence |', '|---|---|---|']
+            assert {v['id'] for v in compact['variants']} == {v['id'] for v in r['variants']}, 'Missing observer variant'
+            for variant in compact['variants']:
+                label = anchor(variant['id']) + '[' + variant['label'] + '](' + compact['reference'] + '#' + variant['id'] + ')'
+                text += ['| ' + label + ' | ' + variant['qualification'] + ' | ' + variant['consequence'] + ' |']
+            text += ['', compact['reference_intro'], '', proposal_status(r), '']
+
+            reference_path = compact['reference']
+            reference = (root / reference_path).read_text()
+            begin, end = '<!-- BEGIN OBSERVER PRINCIPLE REFERENCE -->', '<!-- END OBSERVER PRINCIPLE REFERENCE -->'
+            assert reference.count(begin) == reference.count(end) == 1, 'Observer reference markers missing'
+            body = done(full_proposal(r))
+            def rebase_link(match):
+                target = match.group(1)
+                if target.startswith(('#', 'https://', 'http://')):
+                    return match.group(0)
+                path, sep, fragment = target.partition('#')
+                return '](' + posixpath.relpath(path, posixpath.dirname(reference_path)) + sep + fragment + ')'
+            body = re.sub(r'\]\(([^)\s]+)\)', rebase_link, body)
+            block = '\n\n' + anchor('logical-observer-principles') + '\n<details>\n<summary><strong>Logical-observer principles: definitions and established consequences</strong></summary>\n\n' + body + '\n</details>\n\n'
+            out[reference_path] = reference.split(begin)[0] + begin + block + end + reference.split(end)[1]
     evaluation = proposals['evaluation']
     text += [anchor('evaluation-principles'), '## Evaluation principles', '', evaluation['purpose'], '',
              'For $E^{tt}$, define', '', '$$', evaluation['definition'], '$$', '']
@@ -296,11 +360,18 @@ def render(root):
             lines += ['| [' + part['title'] + '](' + target + '#' + pid + ') | ' + '; '.join(links) + '. |']
         return lines + ['']
 
-    def known_formalizations(base='.', level=3):
+    def known_formalizations(base='.', level=3, attribution=False):
         target = posixpath.relpath('MAIN-RESULTS.md', base)
         lines = [anchor('previously-known-results-formalized'), '#' * level + ' Previously known results formalized', '',
                  '[Original attribution and certified scope](' + target + '#previously-known-results-formalized).', '']
-        lines += ['- ' + resultlink(item['result_ref'], base=base, label=item['name']) for item in main['established_formalizations']['entries']]
+        for item in main['established_formalizations']['entries']:
+            retained_anchor = anchor('analytic-rigidification-answer') if attribution and item['result_ref'] == 'ANALYTIC-RIGIDIFICATION' else ''
+            line = '- ' + retained_anchor + resultlink(item['result_ref'], base=base, label=item['name'])
+            if attribution:
+                line += '. **Contribution: Lean formalization.** Existing mathematics: ' + item['attribution']
+                if item.get('note'):
+                    line += ' ' + item['note']
+            lines += [line]
         return lines + ['']
 
     def full_result(r):
@@ -399,9 +470,13 @@ def render(root):
                     for qid in r.get('database_question_ids', [])]
     assert len(database_ids) == len(set(database_ids)) == questions['database_coverage']['recorded_questions'], 'Database question coverage'
     text = ['# ' + questions['title'], '',
-        'Open questions and established answers, grouped by mathematical family. The background is C unless stated otherwise. “Unresolved” refers to the cited evidence, not necessarily to the literature.', '',
+        'The background is C unless stated otherwise. “Unresolved” refers to the cited evidence, not necessarily to the literature.', '',
         '[Main results](MAIN-RESULTS.md) · [Catalog](CATALOG.md) · [Evidence](evidence/RESULT-INDEX.md)', '',
-        'Open questions come first. Established answers follow the three parts of Main Results: database connections, further results about established principles, and extensions.', '']
+        'The four central open questions are listed below. Claims awaiting review are separate; resolved questions and established connections are grouped in expandable sections at the end.', '',
+        '| Unresolved question | Scope |', '|---|---|']
+    assert {r['question_ref'] for r in questions['open_overview']} == set(next(s for s in questions['sections'] if s['id'] == 'remaining-questions')['questions'])
+    text += ['| [' + r['summary'] + '](#' + r['question_ref'].lower() + ') | ' + r['scope'] + ' |' for r in questions['open_overview']]
+    text += ['', 'Further observer comparisons are listed in the [dedicated research frontier](proofs/h-observer-space/MAP.md#10-explicit-frontier).', '']
     text += ['- [' + part['title'] + '](#' + part['id'] + ')' for part in questions['parts']]
     text += ['']
     catalog_rows = {r['id']: r for r in catalog['entries']}
@@ -413,6 +488,8 @@ def render(root):
             text += [anchor(r['id'])]
             text += [anchor(qid) for qid in r['database_question_ids'] if qid != r['id']]
             text += ['#### ' + r['question'], '', r['answer'], '', r['evidence'] + '.', '']
+            if r.get('contribution'):
+                text += [r['contribution'], '']
             if r.get('lean_certified'):
                 text += ['**Lean certified.**', '']
             elif statusrefs(r['formalization_result_refs']):
@@ -421,14 +498,19 @@ def render(root):
             r = question_rows[qid]
             assert 'lean_status' not in r, 'Duplicated question formalization status'
             text += [anchor(r['id']), '#### ' + r['question'], '', '**Position:** ' + r['status'] + '.', '', r['established'], '']
+            if r.get('contribution'):
+                text += [r['contribution'], '']
             if r.get('remaining'):
                 text += [r['remaining'], '']
             if statusrefs(r['formalization_result_refs']):
-                text += ['**Lean certified:** ' + statusrefs(r['formalization_result_refs']), '']
+                label = '**Lean-certified related results:** ' if section['part'] in ('open', 'review') else '**Lean certified:** '
+                text += [label + statusrefs(r['formalization_result_refs']), '']
             for rid in r['result_entries']:
                 assert rid in rows
         for r in section['connections']:
             text += [anchor(r['id']), '#### ' + r['title'], '', r['text'], '']
+            if r.get('contribution'):
+                text += [r['contribution'], '']
             refs = r['result_refs']
             evidence = [resultlink(rid, label=rows[rid]['title']) for rid in refs]
             for cid in r['catalog_refs']:
@@ -444,23 +526,37 @@ def render(root):
                     text += ['**Lean certified:** [' + cid + '](CATALOG.md#' + cid.lower() + ')' + scope + '.', '']
         return text
 
+    resolved_started = False
     for part in questions['parts']:
         kind = part.get('kind', 'open')
         selected = [s for s in questions['sections'] if s['part'] == kind]
+        resolved = kind not in ('open', 'review')
+        if resolved and not resolved_started:
+            text += ['---', '', '## Resolved questions and established connections', '',
+                     'New proofs and countermodels are distinguished from formalizations of earlier results. Existing database answers retained for context are credited to their sources.', '']
+            resolved_started = True
         text += [anchor(alias) for alias in part.get('anchor_aliases', [])]
-        text += [anchor(part['id']), '## ' + part['title'], '']
+        text += [anchor(part['id'])]
+        if resolved:
+            text += ['<details>', '<summary><strong>' + part['title'] + '</strong></summary>', '']
+        else:
+            text += ['## ' + part['title'], '']
         text += [' · '.join('[' + s['title'] + '](#' + s['id'] + ')' for s in selected), '']
+        if kind == 'review':
+            text += questions.get('review_notes', []) + ['']
         for section in selected:
             text += question_section(section)
         if kind == 'database':
             text += [anchor('resolved-model-questions'), '### Resolved model-construction questions', '',
-                'The database also settles existence questions for these nineteen constructions. The summaries describe the base models; signature, individual-domain and metatheoretic variants are grouped with their construction, whose linked record gives the exact scope.', '']
+                'These nineteen constructions and their recorded existence verdicts are existing database results, included for reference rather than claimed as new models or formalizations. Signature, individual-domain and metatheoretic variants are grouped with their construction; the linked records give the attribution and exact scope.', '']
             for family in questions['model_families']:
                 text += [anchor(family['id']), '#### ' + family['title'], '']
                 for r in family['models']:
                     text += ['- **' + r['name'] + '.** ' + r['answer'] + ' ' + r['evidence'] + '.']
                 text += ['']
-            text += known_formalizations()
+            text += known_formalizations(attribution=True)
+        if resolved:
+            text += ['</details>', '']
     out['CONJECTURES.md'] = done(text)
 
     records = integration['records']
@@ -469,7 +565,7 @@ def render(root):
         assert hashlib.sha256(file.read_bytes()).hexdigest() == rec['sha256'], 'Changed database snapshot'
     by_result = {r['result_id']: r for r in integration['entries']}
     text = ['# Database integration review', '',
-        'Unpublished review plan; no database verdicts are changed by this file. Every detailed result entry is matched to existing records or a proposed form of integration. A related principle is context, not a claim that the research theorem is already recorded. The displayed database states are captured snapshots, not live status.', '',
+        'Each detailed result is matched to existing database records or proposed additions. Related principles supply context; exact matches are identified separately. The displayed database states are captured snapshots, with research-certificate scope recorded separately.', '',
         'The research proof and Lean status come from [the evidence index](evidence/RESULT-INDEX.md). Record snapshots and hashes are preserved in [DATABASE-INTEGRATION.json](DATABASE-INTEGRATION.json). Official verified flags require the database’s generated-statement checking workflow. Independence belongs in model records.', '',
         '**Record review:** ' + integration['reviewed_at_utc'] + '. Later capture times and hashes are recorded per snapshot.', '',
         '**Latest reconciliation:** ' + integration.get('reconciled_at_utc', integration['reviewed_at_utc']) + '.', '',
@@ -653,6 +749,13 @@ def main():
         parser.error('--refresh-checksums requires --write')
     root = args.root.resolve()
     expected = render(root)
+    layout_issues = []
+    pages = sorted(set(root.glob('*.md')) | set((root / 'proofs').rglob('*.md')))
+    for path in pages:
+        name = path.relative_to(root).as_posix()
+        layout_issues += math_layout_issues(name, expected.get(name, path.read_text()))
+    if layout_issues:
+        raise SystemExit('\n'.join(layout_issues))
     changed = []
     for name, body in expected.items():
         path = root / name

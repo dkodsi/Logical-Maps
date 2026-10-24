@@ -14,6 +14,7 @@ $$
 p\le q\quad\Longleftrightarrow\quad p\land q=p.
 \tag{1}
 $$
+
 As always, the semilattice laws and bound laws are identities of proposition objects. Truth is an upper segment: if p≤q and p is true, then p∧q=p is true, so q is true by the conjunction truth clause.
 
 Let G:(tt)t be an admitted predicate containing identity and closed under composition. Every E with GE must preserve conjunction as a whole composite operation and have an admitted F with GF and both whole inverse equations E∘F=I and F∘E=I. These are the exact admitted-group assumptions of [Reversible semilattice order actions](reversible-semilattice-order-actions.md), §1. They make every G-member an order isomorphism fixing B and T. They do not assume that every external order permutation is admitted.
@@ -26,6 +27,7 @@ $$
 \forall p\,[p\to u\le p].
 \tag{2}
 $$
+
 Thus f is greatest among the false propositions and u least among the true ones. They satisfy f<u and no proposition lies strictly between them. Indeed every proposition is true or false, and either alternative excludes an intermediate value. These are extrema of the truth classes, not global extrema of the chain.
 
 Define the admitted adjacency relation
@@ -35,6 +37,7 @@ $$
 \neg\exists x\,(a<x\land x<b).
 \tag{3}
 $$
+
 An order isomorphism preserves this relation in both directions. The **gap-density** condition is
 
 $$
@@ -42,6 +45,7 @@ $$
 \exists a,b\,(p\le a\land\mathrm{Gap}(a,b)\land b\le q)].
 \tag{4}
 $$
+
 It says every nontrivial closed interval contains an adjacent pair. This is different from density of the order, which would prohibit all adjacent pairs.
 
 The action is **transitive on gaps** when every two ordered adjacent pairs are matched by some G-member:
@@ -53,6 +57,7 @@ $$
 \end{aligned}
 \tag{5}
 $$
+
 All displayed quantifiers are over admitted objects. Formula (5) does not require an admitted operation choosing E uniformly for the pairs.
 
 ## 2. Exact characterization
@@ -64,6 +69,7 @@ S[G]:=\forall p,q\,[p=q\leftrightarrow
 \forall E\,(GE\to(Ep\leftrightarrow Eq))].
 \tag{6}
 $$
+
 **Theorem 1.** Under the bounded-chain, admitted-group and truth-extremum hypotheses above,
 
 $$
@@ -71,6 +77,7 @@ $$
 \text{gap-density and transitivity of G on gaps}.}
 \tag{7}
 $$
+
 **Necessity.** Suppose S[G] and p<q. Some admitted E with GE distinguishes p,q. Since E is increasing and truth is an upper segment, Ep is false and Eq true. By (2), Ep≤f<u≤Eq. Choose an admitted inverse F in G. Put a=Ff and b=Fu. Then p≤a<b≤q, and (3) holds for a,b because it holds for f,u and F is an order isomorphism. This proves (4).
 
 If a<b is itself an adjacent pair, a separating E again has Ea≤f<u≤Eb. Adjacency of Ea,Eb forces Ea=f and Eb=u: a strict inequality at either outer end would insert f or u strictly inside that adjacent pair. Hence every gap can be sent to the fixed truth gap (f,u). For any two gaps, compose a map from the first to (f,u) with the admitted inverse of a map from the second to (f,u). Closure of G gives a member taking the first gap to the second, proving (5).
@@ -89,6 +96,7 @@ $$
 E(\forall x^\sigma Fx)=\forall x^\sigma E(Fx).
 \tag{8}
 $$
+
 To prove this, write v=∀x Fx. Order preservation gives Ev≤E(Fx) for every x. If z≤E(Fx) for every x, apply the admitted inverse E⁻¹ to obtain E⁻¹z≤Fx for every x, hence E⁻¹z≤v and z≤Ev. Thus Ev is precisely the GLB of the admitted family λx.E(Fx), proving (8) by uniqueness. This reasoning does not quantify over external families or infer that every external subset is represented.
 
 Dually, if a primitive existential quantifier supplies the admitted LUBs, then
@@ -97,6 +105,7 @@ $$
 E(\exists x^\sigma Fx)=\exists x^\sigma E(Fx).
 \tag{9}
 $$
+
 If primitive disjunction is the join of the same chain, order isomorphisms likewise preserve it pointwise. At propositional scope, converting these equations into whole composite identities needs the relevant local Functionality instances: Fun_(σt,t) for each quantifier and the usual two curried instances for a binary connective. At full relational scope all Fun is already an explicit part of the factorization, so the whole-operation upgrade is available. No preservation of primitive negation follows from these order arguments.
 
 Consequently Theorem 1 gives the same exact characterization for full relational separation by reversible whole M,V,Q_Δ,P_Γ observers when the original M,V operations give the stated chain, the listed quantifiers supply its admitted bounds, Fun is present, and G is the specified admitted whole-M automorphism group. The lists Δ,Γ remain finite and external. If the observer class has additional restrictions, the group hypotheses and gap transitivity must hold for that actual admitted class.
@@ -112,12 +121,14 @@ U_-(p,y)&:=(\neg p\land y=p)\lor(p\land y=B).
 \end{aligned}
 \tag{9a}
 $$
+
 They supply admitted A₊,A₋:tt. Every A₊p is true, and A₊p=p whenever p is true. Every A₋p is false, and A₋p=p whenever p is false. Put
 
 $$
 u:=\forall p\,A_+p,\qquad f:=\exists p\,A_-p.
 \tag{9b}
 $$
+
 The H truth clauses make u true and f false. The GLB property gives u≤A₊p=p for every true p, while the LUB property gives p=A₋p≤f for every false p. Thus (2) follows, and linearity makes (f,u) adjacent. No equation between function objects or optional-premise necessitation has been used; Fun and C are unnecessary for this step.
 
 Consequently, under this exact Plenitude and order-quantifier package, Theorem 1 needs no additional truth-extremum premise: reversible separation by G is exactly gap-density plus gap transitivity. This also explains why the model below uses a split interval: an order-dense chain cannot have both such quantifiers, the stated admission instance, and their H truth clauses. The earlier dense-chain example uses different primitive quantifier operations, so there is no conflict.
@@ -132,12 +143,14 @@ $$
 L=\{B,T\}\ \cup\ ((0,1)\times\{0,1\}),
 \tag{10}
 $$
+
 where (0,1) is the real open unit interval. Put B below every ordered pair, T above every pair, and use the lexicographic order on the pairs. The two points at a real coordinate x satisfy
 
 $$
 (x,0)<(x,1).
 \tag{11}
 $$
+
 They are adjacent. These are all the adjacent pairs. If two interior points have distinct real coordinates, an intermediate real coordinate supplies a point strictly between them. The same argument supplies a point between B and any interior point, and between any interior point and T.
 
 The order is complete. Here is an explicit supremum calculation for a nonempty set A. If T∈A, its supremum is T. If A has no interior points, A={B} and its supremum is B. Otherwise take the ordinary real supremum r of its interior coordinates. If r=1 the supremum in L is T. If r<1 and A contains a point at r, take its largest such point: (r,1) if present, otherwise (r,0). If A contains no point at r, its supremum is (r,0). The defining upper-bound and leastness properties follow from the real supremum property and the lexicographic order. The infimum construction is dual: use B if the infimum coordinate is 0, the least point at r if attained, and (r,1) when approached only from above. Empty joins and meets are B and T respectively.
@@ -150,6 +163,7 @@ $$
 u=(1/2,1),\qquad f=(1/2,0).
 \tag{12}
 $$
+
 Then (2) holds, with f,u as displayed.
 
 ## 5. Full H interpretation and the separating group
@@ -161,6 +175,7 @@ $$
 \neg(x,i)=(1-x,1-i).
 \tag{13}
 $$
+
 This is an order-reversing involution and exchanges the true and false segments determined by (12). Interpret each universal quantifier as the infimum of the values of its admitted family, and each existential as the supremum. Completeness from §4 makes these operations total.
 
 These quantifiers have the H truth clauses. If every family value is true, every value is at least u, so its infimum is at least u and true. If some value is false, the infimum lies below that false value and is false. If some value is true, the supremum is true; if all values are false, all lie below f and their supremum lies below f, hence is false. Every type is nonempty. Identity at every type takes value T for actual equality and B otherwise.
@@ -174,6 +189,7 @@ E_h(B)=B,\quad E_h(T)=T,\qquad
 E_h(x,i)=(h(x),i).
 \tag{14}
 $$
+
 Its inverse is induced by h⁻¹. The predicate G selecting exactly these operations is admitted because the higher function domains are full; take it to return T on the specified class and B elsewhere. Composition, identity and inverses remain in G.
 
 For any 0<x,y<1, an increasing piecewise-linear bijection of [0,1] fixing its endpoints and taking x to y restricts to a bijection as above. Consequently G is transitive on the adjacent pairs (11). Section 4 gives gap-density, and Theorem 1 supplies S[G]. Full Functionality lifts this to separation at every relational output type.
@@ -188,6 +204,7 @@ $$
 p\lor\neg p=(3/4,1)\ne T.
 \tag{15}
 $$
+
 H proves the material equivalence of p∨¬p and T. C's Logical Equivalence schema would identify the corresponding lambda terms and hence these output values. Thus (15) contradicts C, while all the positive preservation claims in §5 hold.
 
 There is no conflict with complete logical separation recovering C. Negation preservation is absent from the qualified class. For instance, an h taking 1/2 away from 1/2 moves the actual truth gap and cannot commute with (13). The order automorphisms that do commute with (13) preserve that gap and therefore preserve current truth; they cannot separate distinct same-truth propositions. This last observation concerns the displayed order automorphisms; no classification of every possible observer in the model is needed for the C failure.

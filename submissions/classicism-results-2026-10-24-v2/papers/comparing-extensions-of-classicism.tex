@@ -1,0 +1,484 @@
+% !TEX program = xelatex
+\documentclass[12pt,letterpaper]{article}
+
+% In-house style supplied by the user, 24 October 2026.
+\usepackage[letterpaper,margin=1.2in,top=1.2in,bottom=1.0in]{geometry}
+\usepackage{fontspec}
+% Load legacy symbol definitions before unicode-math to avoid duplicate names.
+\usepackage{amsmath,amssymb,mathtools,amsthm}
+\usepackage{unicode-math}
+\defaultfontfeatures{Ligatures=TeX}
+% Resolve the requested fonts by their TeX-distribution filenames.
+\setmainfont[BoldFont=texgyrepagella-bold.otf,
+  ItalicFont=texgyrepagella-italic.otf,
+  BoldItalicFont=texgyrepagella-bolditalic.otf]{texgyrepagella-regular.otf}
+\setmathfont{Asana-Math.otf}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{natbib}
+\usepackage[hidelinks]{hyperref}
+\urlstyle{same}
+\setlength{\parindent}{1.5em}
+\setlength{\parskip}{0pt}
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+\titleformat{\section}{\normalfont\normalsize\bfseries}{\thesection}{1.5em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{1.5em}{}
+\titlespacing*{\section}{0pt}{2.5ex plus .5ex}{1.5ex}
+\titlespacing*{\subsection}{0pt}{2.0ex plus .5ex}{1.0ex}
+\renewcommand{\contentsname}{Contents}
+\renewcommand{\cfttoctitlefont}{\normalfont\normalsize\bfseries}
+\renewcommand{\cftsecfont}{\bfseries}
+\renewcommand{\cftsecpagefont}{\bfseries}
+\setlength{\cftbeforesecskip}{0.75em}
+\setlength{\cftsecnumwidth}{2em}
+\setlength{\cftsubsecindent}{2em}
+\setlength{\cftsubsecnumwidth}{2.5em}
+\setlist[itemize]{leftmargin=2em,itemsep=.35\baselineskip,topsep=.5\baselineskip}
+\setlist[enumerate]{leftmargin=2em,itemsep=.35\baselineskip,topsep=.5\baselineskip}
+\renewenvironment{quote}
+  {\list{}{\leftmargin=2.5em\rightmargin=2.5em}\item\relax}
+  {\endlist}
+\newcommand{\papertitle}{Paper Title}
+\newcommand{\paperauthor}{Author Name}
+\newcommand{\paperdate}{Draft: \today}
+\newcommand{\papernote}{}
+\newcommand{\makestyledtitle}{%
+  \begin{center}
+    \vspace*{0.5in}
+    {\huge\linespread{1.05}\selectfont \papertitle\par}
+    \vspace{0.35in}
+    {\large \paperauthor\par}
+    \vspace{0.2in}
+    {\large \paperdate\par}
+    \ifx\papernote\empty\else
+      {\large \papernote\par}
+    \fi
+  \end{center}
+  \vspace{0.4in}
+}
+\newcommand{\styledappendices}{%
+  \appendix
+  \renewcommand{\thesection}{Appendix~\Alph{section}}%
+  \addtocontents{toc}{\protect\setlength{\protect\cftsecnumwidth}{6em}}%
+}
+\setlength{\emergencystretch}{2em}
+\newcommand{\Hlogic}{\mathsf H}
+\newcommand{\C}{\mathsf C}
+\newcommand{\Cfive}{\mathsf{C5}}
+\newcommand{\CC}{\mathsf{CC}}
+\newcommand{\Max}{\mathsf{Max}}
+\newcommand{\EndSep}{\mathsf{End}}
+\newcommand{\Good}{\operatorname{Good}}
+\newcommand{\EndVal}{\operatorname{EndVal}}
+\newcommand{\Range}{\mathsf{Range}_{\infty}}
+\newcommand{\Tobs}{\mathsf T_{\mathrm{full}}}
+\newcommand{\RCh}{\mathsf{RCh}}
+\newcommand{\FC}{\mathsf{FC}}
+\newcommand{\Plen}{\mathsf{Plenitude}}
+\newcommand{\At}{\mathsf{Atomicity}}
+\newcommand{\Infq}{\mathsf{Inf}^{q}}
+\hypersetup{pdftitle={Comparing Extensions of Classicism},
+  pdfauthor={OpenAI Codex, prompted by Daniel Kodsi},
+  pdfsubject={An abductive comparison of higher-order foundations}}
+
+\begin{document}
+\renewcommand{\papertitle}{Comparing Extensions\\of Classicism}
+\renewcommand{\paperauthor}{OpenAI Codex, prompted by Daniel Kodsi}
+\renewcommand{\paperdate}{Draft: October 24, 2026}
+\renewcommand{\papernote}{An abductive comparison of higher-order foundations}
+\makestyledtitle
+\begin{abstract}
+The standard possible-worlds picture combines C5 and Atomicity with full higher-order domains. This paper compares its explanatory merits with those of Maximalist Classicism and Strong Possibility. Maximalism preserves broad logical possibilities at the cost of restrictions on operation representation and complete internal assessment. Strong Possibility adds much sharper consequences, including actual individual monism in the pure language and exhaustion by finitely many individual names in the corresponding signatures. The positive case develops necessary Plenitude as a route to the standard structure over Classicism, and endpoint-valued logical observer separation as a simpler route over H. These are equivalent structural foundations. Relational Choice, equivalent over them to Functional Choice, is assessed as a further selection principle. Infinitary Comprehension receives a distinct, secondary role: it characterizes fullness and recovers the full power of the standard hierarchy, even when abstraction must itself be reconstructed. The comparison concerns explanatory adequacy, not deductive strength alone.
+\end{abstract}
+\clearpage
+\tableofcontents
+\clearpage
+
+\section{The explanatory task}\label{sec:task}
+
+A higher-order theory should explain how propositions and relations support reasoning about mathematics and possibility. Among the phenomena to be explained are the identity of mathematical objects, the representation of functions by operations, and the assessment of propositions at complete possibilities. These demands interact. An operation can prevent its inputs from becoming identical when its outputs remain distinct; a sufficiently rich account of propositions can make complete possibilities available within the very domain being assessed. Their interaction makes a unified foundation attractive, and makes its choice a substantive philosophical question.
+
+The standard possible-worlds picture provides one such foundation. Its structural theory is $\Cfive$ together with Atomicity; in full models this gives the familiar hierarchy of propositions as sets of worlds and relations as world-indexed extensions. There are different routes to that structure. Over Classicism, necessary Plenitude suffices. Over the weaker base $\Hlogic$, separation by endpoint-valued logical observers suffices. The central equivalence is
+\begin{equation}\label{eq:structural}
+ \Hlogic+\EndSep
+ \quad\equiv\quad
+ \Cfive+\At_t
+ \quad\equiv\quad
+ \C+\Box\Plen.
+\end{equation}
+Under $\Cfive$, propositional Atomicity and all-type Atomicity are equivalent. The displayed formulations therefore describe the same structural position. Fullness is a further semantic commitment, which can itself be characterized by an additional comprehension principle. The question is how well this picture, and the principles that lead to it, explain the phenomena.
+
+Maximalist Classicism supplies a serious alternative. It maximizes pure distinctions not excluded by the base logic, and thereby maximizes the corresponding possibilities. Its attraction is an economical policy concerning logical determination: a pure identity should hold only when logic requires it. That policy offers a systematic rival to assumptions of stable identity, complete internal possibilities, and unrestricted representation of functional relations. Strong Possibility strengthens the policy by requiring eligible possibilities to remain available under a distinctness-preserving modality. The two positions need separate assessment. The most severe consequences of Strong Possibility must not be charged to Maximalism alone.
+
+The comparison is abductive. A principle can be justified by its contribution to a coherent account of successful reasoning even when it is less evident than particular applications. Williamson's account of abductive philosophy allows precisely this movement from a body of evidence towards an explanatory theory \citep[pp.~266, 270--273]{williamson2016}. Here the relevant virtues include mathematical applicability, explanatory unity, economy of formulation and the plausibility of the intended interpretation. Deductive strength by itself decides none of them. A stronger axiom might explain more with less conceptual machinery; a weaker one might identify the real source of an apparent benefit without an unnecessary further commitment.
+
+Two distinctions will discipline the comparison. First, the existence of a relation describing a function differs from the existence of an operation realizing it. Plenitude concerns the latter step, and Maximalism can support considerable relational mathematics while rejecting that step. Second, a complete possibility represented by a proposition differs from an external point in a semantic construction. A model with external points need not contain propositions representing complete possibilities. The standard picture integrates these roles; its rival must be assessed for what it can explain through another organization of them.
+
+The fixed language is Bacon and Dorr's relational type system. Its bases are individuals $e$ and propositions $t$; $\sigma\to\tau$ is admitted only when $\tau\ne e$. In particular, there is no type $e\to e$. Classicism, $\C$, adds to the classical higher-order base $\Hlogic$ identities between abstractions whose matrices are equivalent in $\Hlogic$. The equivalence must be a theorem of that fixed base. Optional assumptions do not enlarge the theoremhood condition \citep[\S\S1.1, 1.3]{bacondorr}. Necessity and possibility are defined by $\Box p:=(p=\top)$ and $\Diamond p:=(p\ne\bot)$. Their interpretation is part of what the competing foundations must justify.
+
+I first assess Maximalism on its own, then the additional costs of Strong Possibility. The positive account develops Plenitude and the observer characterization as routes to the standard structure. Relational Choice is then considered as a further principle, and infinitary comprehension as an addition supplying fullness. This organization keeps the central philosophical comparison distinct from the question of how much further mathematical strength to include.
+
+\section{Maximalist Classicism on its own}\label{sec:max}
+
+\subsection{Its motivation and mathematical resources}
+
+Pure Maximalist Classicism is the theory
+\[
+ \Max=\C+\{A\ne B:\ A=B\text{ is closed and pure, and }
+                       \C\nvdash A=B\}.
+\]
+Purity excludes nonlogical constants. Equivalently, Max makes every closed pure $\C$-consistent sentence possible. The reference theory is the original fixed finitary $\C$, not a theory enlarged by the further principles considered below \citep[\S2.4]{bacondorr}. Maximalism in a signature containing nonlogical constants is a different schema with its own reference theory.
+
+The appeal of Max is substantial. If logic leaves two pure descriptions distinguishable, identifying them seems to impose a restriction that calls for explanation. Max supplies a uniform answer: preserve their difference. In its possibility formulation, the same policy refuses to exclude a pure possibility without a logical reason. Such an account has theoretical economy, and broad logical possibility can be a legitimate subject even when it exceeds the possibilities relevant to some mathematical or metaphysical application.
+
+Max also has more mathematical resources than a list of failed operation principles suggests. Relations can serve as graphs, and current identity quotients can support arithmetic. The available constructions develop substantial impredicative relational arithmetic without treating every functional relation as an operation \citep[\S29]{coding}. A criticism that merely substitutes operation notation for a graph and then reports its absence would miss this response. The relevant question is whether the distinction between those two modes of representation has a satisfactory general explanation.
+
+\subsection{The cost of separating graphs from operations}
+
+Predecessor provides a useful example. At every closed counting type, Max excludes an admitted operation $f$ with $f(Sn)=n$ throughout the native Frege numbers. At individual counting, a total single-valued predecessor graph is nevertheless available \citep{predecessor}. The obstruction concerns representation of that graph by an operation, not the ability to define predecessor relationally or prove ordinary arithmetical facts.
+
+The difference has modal significance. The native numeral intensions can coalesce in patterns that an operation recovering their predecessors could not respect. An operation is itself an entity of the higher-order theory: its identity, application and outputs are subject to the same logic as other entities. The absence of an operation therefore expresses a restriction on how mathematical structure can be integrated with the ambient intensional structure.
+
+Plenitude takes the opposing position. When a relation already determines exactly one eligible output for each input, there is an operation realizing that determination, provided the output type is relational. No arbitrary selection among competing outputs is needed. This is an independently intelligible demand: a functional description should admit a corresponding operation within the same framework. Its appeal goes beyond a convenient notation for predecessor. It concerns uniform substitution, composition and the use of operations as arguments in further higher-order reasoning.
+
+Max can resist the demand. It can distinguish the extensional or quotient mathematics needed for an application from the native operation structure of a broader logical modality. But this interpretation carries an explanatory burden. It must say when relational reconstruction is enough, why operation representation fails where it does, and how the reconstructed mathematics connects to applications formulated using the ambient entities. These are costs of the policy even if the interpretation is ultimately defensible.
+
+\subsection{Complete possibilities and mathematical stability}
+
+A deeper limitation concerns complete possibilities. Pure Max is incompatible with unboxed propositional Atomicity \citep{maxatomicity}. Thus it cannot ensure that every nonzero proposition contains an atom, a nonzero proposition deciding every proposition by entailment. It excludes a central feature of the standard picture before Choice or infinitary comprehension enters the discussion. The incompatibility theorem does not say that Max alone is inconsistent, or that Max has no atoms at all; it refutes the general Atomicity principle.
+
+External semantic points do not remove this disagreement. Such points can help describe a model whose proposition domain fails Atomicity. They are then doing work that no adequate supply of internally available complete propositions can perform. The standard picture has a particular advantage here: possibilities can themselves enter the quantification and higher-order constructions used to reason about propositions. Its opponent can appeal to partial possibilities or external evaluation points, but must explain why that division of roles is preferable for the intended applications.
+
+Mathematical stability creates a related pressure. The structural theory in \eqref{eq:structural} entails No Pure Contingency for original closed pure sentences. The established rigidity and analytical connections also support invariance across the relevant real structures, including non-contingency of CH \citep{npc,analysisconnections}. These are not consequences of unrestricted infinitary comprehension newly added to the theory. They already belong to its finitary structural component. Max rejects some of these stability commitments; it cannot generally support the same account of pure mathematics and its modal invariance.
+
+None of this licenses an automatic victory for the standard interpretation. A broadly logical modality need not be the modality under which intended arithmetic or analysis is invariant. Possibility-frame models make the alternative systematic: the full modalized-cloud construction supports real structures satisfying CH and others falsifying it at the same type, with a fixed natural-number base and varying higher-order domains \citep[\S\S1, 6--7]{cloudtransfer}. This is an alternative account of mathematical variation, not a model being asserted here to satisfy pure Max. Conversely, the standard picture must explain why its stable domains capture the intended subject matter rather than simply stipulate away that variation.
+
+The comparative result is nevertheless substantive. Max pays for its generous pure possibilities with failures of operation representation and complete internal assessment, and with a more complicated relationship between native entities and stable mathematical interpretation. A defence of it must show that those costs purchase a better explanation. A defence of the standard picture must show that its integrated account is supported by the applications and by plausible general principles. Interpretive auxiliaries are assessed as parts of the resulting theories, in the spirit of Williamson's treatment of abductive comparisons \citep[\S13.4, pp.~339--342]{williamson2017}.
+
+\section{The further costs of Strong Possibility}\label{sec:sp}
+
+\subsection{From broad possibility to actual restrictions}
+
+Strong Possibility uses the distinctness-preserving modality
+\[
+ \Box_{\ne}p:=\exists q\,[q\land\Box(\Diamond q\to p)],
+ \qquad \Diamond_{\ne}p:=\neg\Box_{\ne}\neg p.
+\]
+Its pure schema adds $\Diamond_{\ne}P$ for every closed pure $P$ consistent with pure Max. This strengthens Max; its eligibility test is consistency with Max, whereas Max's ordinary possibility formulation uses consistency with $\C$ \citep[\S2.6]{bacondorr}. Confusing the two tests would change the theory.
+
+The stronger modality is attractive if ordinary possibility is too permissive about the loss of distinctions. The strengthening also restricts actuality. If $U$ is a closed universally quantified finite Boolean combination of typed identities, then
+\begin{equation}\label{eq:reflection}
+ \C\vdash\Diamond_{\ne}U\to U.
+\end{equation}
+The terms inside those identities may contain quantifiers. The finite Boolean restriction concerns their outer matrix. Consequently, every such $U$ individually consistent with Max becomes an actual consequence of Strong Possibility \citep[\S\S3--4]{spcore}.
+
+The mechanism is worth seeing. If $U$ fails, choose an actual countertuple. The identities true of that tuple persist by Necessity of Identity. The conjunction $q$ of its false identities' disequalities is true. Wherever $\Diamond q$ holds, those disequalities must still hold: an identity would persist and rule out any further $q$-possibility. The same tuple therefore continues to refute $U$ wherever $\Diamond q$ holds. Thus $q$ witnesses $\Box_{\ne}\neg U$. This proves \eqref{eq:reflection} without necessitating an optional premise or assuming Barcan.
+
+More generally, pure Strong Possibility is equivalent over $\C$ to the collection of all closed pure universal identity sentences of this form individually consistent with Max. A demand for abundant distinctness-preserving possibilities is therefore also a demand for actual universal constraints. This explains why its consequences can run in a sharply restrictive direction. It does not establish consistency: joint compatibility of all those constraints remains a separate question.
+
+\subsection{Monism and exhaustion by names}
+
+The most striking consequence is individual monism:
+\begin{equation}\label{eq:monism}
+ \mathrm{SP}_{\mathrm{pure}}\vdash
+ \forall x^e\forall y^e\,(x=y).
+\end{equation}
+The profile construction supplies a model of pure Max with exactly one actual individual. Monism is therefore eligible for Strong Possibility, and \eqref{eq:reflection} turns its strong possibility into its actuality. Standing nonemptiness makes the individual domain a singleton \citep[\S10]{spsignature}.
+
+Monism here concerns the actual domain of type $e$, not every higher-order domain. Nor is it necessary monism under the ordinary $\Box$. Max still requires ordinary possibilities with several individuals. The theory combines a singleton actual individual domain with those broader possibilities. Such a combination is mathematically intelligible in the intended nonstandard modal setting. As a foundation whose individual quantifiers are meant to range over ordinary objects, however, it is a severe restriction: any two distinct individuals refute it. Treating type $e$ instead as a deliberately minimal auxiliary domain is a possible response, but substantially changes the proposed interpretation.
+
+Moving to a named signature does not provide a simple escape. For a signature $\Sigma$ with exactly $u<\omega$ individual names, its own Strong Possibility theory entails exactly $\max(1,u)$ actual individuals. If $u\ge1$, the names exhaust the domain:
+\begin{equation}\label{eq:exhaustion}
+ \mathrm{SP}_{\Sigma}\vdash
+ \forall x^e\,(x=c_1\lor\cdots\lor x=c_u).
+\end{equation}
+Signature Max also makes distinct name symbols denote distinct individuals. The profile construction establishes the eligibility of the exhaustion sentence, and universal-identity reflection establishes its actuality. The relational part of the signature may be infinite \citep[\S10]{spsignature}.
+
+This is a particularly troublesome sensitivity to language. Adding a second individual name to a one-name signature changes the forced actual cardinality from one to two; further names continue to change it. A structural theory of individuals would normally leave room for unnamed objects and for conservative enrichment of its vocabulary. Here the fixed signature and the Max-consistency test together determine the actual number of individuals. The issue is not merely whether there are enough names to describe a previously given ontology. The theory's substantive consequences change when the reference language changes.
+
+The comparison must retain that reference-language dependence. Signature Strong Possibility is not automatically an extension of pure Strong Possibility: changing the signature changes which sentences are consistent with the relevant Max theory. The exhaustion claim here concerns finitely many individual names. That finite result already provides the central philosophical objection.
+
+\subsection{Limits on the remaining higher-order structure}
+
+Strong Possibility also sharpens Max's difficulties with uniform structure. Its pure formulation refutes Barcan at every admitted type and the corresponding pointwise Functionality instances \citep[\S6.3]{spprofileaudit}. Functionality here says that operations agreeing on every actual input are identical. Its failure leaves distinct operations with the same current application profile. Barcan's failure obstructs the passage from universal necessity to necessity of the universal assertion.
+
+These are consequences of the stronger theory and deserve separate weight. For the individual Barcan instance, the tension is already visible in monism: Barcan would carry universal necessary identity into necessary monism, conflicting with the ordinary possibilities of plurality supplied by Max. The higher-type argument uses the complete finite cells forced by reflection. Thus the restrictions are connected manifestations of the theory's modal policy, rather than unrelated anomalies collected for rhetorical effect.
+
+The objection concerns Strong Possibility's explanatory suitability even if consistent; the consistency question remains unresolved \citep[\S5]{spcore}. Monism, exhaustion by a finite stock of names, and pervasive failures of structural uniformity are substantial liabilities for a general foundation. A defence would need an interpretation that makes these consequences appropriate, and explains why the strengthened modality deserves its proposed role. Maximalism alone avoids the monism and exhaustion commitments established here; the distinction is essential to a fair comparison.
+
+\section{Plenitude, observers and the standard picture}\label{sec:observation}
+
+\subsection{Plenitude as a structural foundation}
+
+The positive alternative is the standard structure itself. $\Cfive$ adds necessarily holding necessary distinctness at all types to $\C$. Atomicity says that every nonzero proposition has a nonzero minimal part; with $\Cfive$, its propositional and all-relational-type formulations coincide. Together they supply stable identity and complete internal possibilities. Full models of this structural theory realize the familiar possible-worlds hierarchy. The axioms alone also admit nonfull models, a distinction returned to in \S\ref{sec:comprehension}.
+
+Necessary Plenitude is a particularly illuminating route to the structural theory. A relation is functional when each input has exactly one related output. Plenitude requires an operation realizing every such relation with relational output. Its necessary form says that this representation principle holds necessarily. Bacon and Dorr's connections establish
+\[
+ \C+\Box\Plen\quad\equiv\quad\Cfive+\At_t.
+\]
+Thus Plenitude is more than a special-purpose repair for missing mathematical operations. Requiring functional determination to be realized throughout possibility is exactly strong enough to recover the structural core of the standard picture \citep[\S2.3, concluding equivalences]{bacondorr}.
+
+The breadth of the connection strengthens its philosophical interest. Applying Plenitude to suitable functional relations produces operations that discriminate inputs and represent an actual-truth profile. Its necessary form supplies the modal stability needed to extend this organization through the hierarchy. Conversely, the atomic $\Cfive$ structure has the completeness resources needed to represent functional relations. The graph-to-operation principle, stable distinctions and complete possibilities therefore form one interlocking theory. Their unity is an explanatory advantage if these are the features an adequate foundation ought to connect.
+
+Plenitude's motivation is independent of an arbitrary demand for more entities. The outputs of a functional relation are already uniquely determined. The principle asks for that determination to be represented by one operation, rather than requiring new decisions among alternatives. Necessary Plenitude generalizes this demand across the possibilities described by the theory. This is exactly where Max's predecessor obstruction becomes revealing: the disagreement concerns whether already determined mathematical behavior should be realizable in the native operation structure.
+
+A defence must still justify the generalization. Some coherent intensional theories deliberately distinguish a current functional profile from an operation that respects identity throughout its modal behavior. Plenitude rules out such gaps. The connection to the standard picture makes the cost and benefit explicit, but the equivalence alone does not settle which interpretation is correct. Its abductive significance is that a compact and intelligible principle accounts for several aspects of the structure together.
+
+\subsection{A simpler route through logical observers}
+
+Endpoint-valued logical observers give a route over the weaker base $\Hlogic$. An observer is an admitted operation $O:t\to t$ whose output supplies a verdict on a proposition. An endpoint-valued observer has each output identical to $\top$ or $\bot$. Different observers can accept different propositions; they need not preserve actual truth.
+
+The relevant observers preserve logical operations. Observing a conjunction is the same operation as conjoining the observations, and similarly for negation, disjunction and quantification. These are identities between whole composite operations. Endpoint separation uses the full typed schema, specified in Appendix~\ref{app:axioms}.
+
+Endpoint separation says that every distinction between propositions or relations can be detected by such a logically coherent endpoint assessment, using argument tuples for relations. It connects identity to complete logical assessment: if two entities differ, some qualified perspective reveals their difference. The demand is stronger than classical bivalence. Bivalence assigns a truth value to each actual assertion; it does not supply admitted operations coordinating all their assessments into the required complete perspectives.
+
+The characterization theorem gives
+\[
+ \Hlogic+\EndSep\quad\equiv\quad\Cfive+\At_t.
+\]
+This is a simpler route to the same standard structure, without taking Classicism as an additional starting point. Logical preservation and full typed separation recover $\C$ itself. Endpoint outputs prevent distinguishable inputs from coalescing. Quantifier preservation supplies the relevant Barcan principles, and a diagonal construction associates an atom with each suitable endpoint observer. Conversely, atoms supply the required observers \citep[\S\S1--3]{observers}. In particular, the observer principle recovers necessary Plenitude; it does not replace Plenitude with a weaker representational policy.
+
+The atom--observer correspondence makes the philosophical connection concrete. An atom $a$ supplies the complete assessment
+\[
+ O_a(p)=\Box(a\to p),
+\]
+and a qualified endpoint observer supplies the atom
+\[
+ a_O=\forall p\,(Op\to p).
+\]
+Complete possibilities and complete logical assessments thereby describe the same internal structure. The unique true atom determines the observer of actual truth, while other atoms determine other complete assessments. Contingency remains available: in a two-world model, a proposition can be accepted by one observer and rejected by another. Endpoint outputs do not force their inputs to be necessary.
+
+Plenitude also connects to observation more directly: it can turn ordinary logical discernibility into complete endpoint assessment. Appendix~\ref{app:axioms} gives the precise connection. Plenitude and the observer account thus illuminate one another, linking the representation of functional determination to the availability of complete logical perspectives.
+
+The positive case is consequently broader than an appeal to familiar semantics. Necessary Plenitude motivates the structure through representation of functional determination. Endpoint separation motivates it through the logical discernibility of differences. Both reach $\Cfive+\At_t$, and neither requires arbitrary Choice or infinitary comprehension for that structural result. Their convergence supports investigating the standard picture as a unified explanation, while leaving open which formulation gives its best foundational rationale.
+
+\section{Whether to add Relational Choice}\label{sec:choice}
+
+The structural theory separates representation from arbitrary selection. Plenitude starts with a uniquely determined output at each input. Relational Choice starts with a serial relation, which may offer many eligible outputs, and supplies a total functional subrelation. Functional Choice supplies an operation selecting an eligible output. Over Plenitude, Relational Choice and Functional Choice are equivalent: choose the functional graph and then represent it, or take the graph of a selecting operation \citep[\S2.3, pp.~31--32]{bacondorr}.
+
+This equivalence already holds over the structural base in \eqref{eq:structural}; no infinitary range comprehension is needed. It also covers individual outputs through relational coding. Appendix~\ref{app:choice} gives the argument and explains why these Choice principles coincide with their necessary forms over the same base.
+
+There is a serious positive case for Choice. Coordinating separate existence claims into one relation or operation is central to many general mathematical constructions. A uniform principle can explain that practice without requiring a new argument about selection in every case. Functional Choice also combines the selection and representation commitments in one formulation. Its ability to support both may be an explanatory virtue: a theory need not adopt the deductively weakest principle that covers its present examples.
+
+The observer result changes how this case should be assessed. Stable identity, complete possibilities and necessary Plenitude already have a direct logical foundation over $\Hlogic$. Choice cannot claim those benefits as achievements for which no other independently motivated account exists. Yet their independent derivability does not prove that Choice is an incidental addition or an inferior explanation. Deductive decomposition helps identify the further commitment; abductive comparison must determine whether the combined principle is the most natural ground of the whole theory.
+
+The arithmetic comparison gives a useful limit on one argument for the further commitment. With the quantified Frege Infinity axioms at $e$ and $t$, the finitary necessary-Plenitude theory and Choice Classicism have the same ordinary first-order arithmetic consequences under the fixed translation \citep{uniformitynote}. This does not eliminate the mathematical value of Choice: higher-order selection and modal or structural claims lie outside the conservation result. It shows why the case should concern those broader uses, rather than an alleged gain in ordinary arithmetic theorems. No transfer of that conservation theorem to an infinitary extension is being assumed.
+
+The appropriate question is therefore whether the explanatory and mathematical value of arbitrary selection justifies adding it to the standard structural theory. Plenitude remains central whichever answer is given. It articulates the representation commitment already present, and makes the additional work of Choice precise.
+
+\section{Fullness as a further commitment}\label{sec:comprehension}
+
+The standard picture uses full models: all the relevant world-indexed relational patterns are available. The structural theory $\Cfive+\At_t$ also admits nonfull Henkin models. Infinitary Comprehension supplies the additional availability principle, making arbitrary specified intensions realizable within the higher-order domain.
+
+For every finite argument tuple of original types and every well-founded set-sized infinitary matrix $A$, require
+\begin{equation}\label{eq:infcomp}
+ \exists R^{\sigma_1\cdots\sigma_n t}\;
+ \Box\forall x_1\cdots x_n
+       \bigl(R[x_1,\ldots,x_n]\leftrightarrow A\bigr).
+\end{equation}
+The tuple may be empty; $R$ is fresh, and arbitrary simultaneous parameter families are permitted. The infinitary language has its ordinary interpretation. This principle says that every such specification has an intension agreeing with it throughout possibility \citep[\S\S1, 4]{infcomp}.
+
+The positive characterization can start from an especially economical base: \emph{full typed endpoint separation and boxed Infinitary Comprehension, over the $\lambda$-free base of $\Hlogic$, characterize full standard relational hierarchies in ZF}. Abstraction is reconstructed in this formulation. The finite comprehension instances provide the operations and abstractions needed to recover Classicism; the observer principle supplies the standard atomic structure; and the infinitary instances supply every world--argument pattern \citep{lambdahandoff}. The result connects an intrinsic account of logical assessment with comprehension of arbitrarily specified intensions, recovering the full standard framework from the two principles.
+
+The resulting set-sized models have the canonical representation
+\[
+ D_e=E,\qquad D_t=\mathcal P(W),\qquad
+ D_{\sigma\tau}=(D_\tau)^{D_\sigma}\quad(\tau\ne e),
+\]
+where $E,W$ are nonempty, truth is membership at a designated world, and application is ordinary function application. Worlds are proposition atoms, equivalently their endpoint observers. The converse holds as well: full standard hierarchies supply the comprehension witnesses, with world evaluations as endpoint observers.
+
+The fullness step is particularly transparent. Comprehension represents any specified family of singleton world--argument supports. Internal Boolean Completeness then forms their join, representing precisely the desired pattern. Every subset of the world set, and every permitted higher-type function, is available. The construction is canonical in ZF and requires no Axiom of Choice \citep[\S\S3, 5]{intrinsic}; Appendix~\ref{app:axioms} gives the representation argument.
+
+Once ordinary abstraction is already present in $\Hlogic$, even unboxed unary infinitary range comprehension suffices for this fullness step: every arbitrary set-indexed family has a property whose extension is exactly its range. Appendix~\ref{app:axioms} gives that refinement. Its significance is to isolate the additional availability commitment, while the boxed formulation also explains how the required abstractions can themselves be recovered.
+
+The distinction from arbitrary selection remains. Over ZF, Functional Choice is valid throughout all full one-world hierarchies exactly when ambient AC holds. This concerns all such hierarchies, not global AC inferred from Choice in one fixed hierarchy \citep[\S6]{intrinsic}; the proof is in Appendix~\ref{app:choice}. Fullness makes all specified patterns available; the further selection principle determines whether an eligible pattern can always be chosen.
+
+Fullness is relative to the ambient collections, and this representation theorem is not a completeness theorem for an effective calculus \citep[\S\S3--5]{calculus}. These limitations leave its positive contribution intact. The standard picture has an intrinsic characterization, its worlds and abstractions can be recovered, and its full relational power can be obtained without assuming Choice. Comprehension earns a supporting place in the foundation by completing the picture whose structural merits were established through Plenitude and logical assessment.
+
+\section{Comparative assessment}\label{sec:verdict}
+
+The standard picture offers an integrated account of mathematical representation and possibility. Functional determination is realized by operations; logical distinctions admit complete assessments; complete possibilities occur within the higher-order domain; and the resulting structure supports stable mathematical interpretation. Necessary Plenitude and endpoint separation provide two connected grounds for that organization. The latter reaches it directly from $\Hlogic$, while the former expresses its representation policy over $\C$. Their equivalence is the central positive result for the comparison.
+
+Maximalist Classicism offers a different economy: preserve every pure distinction the base leaves open. Its ability to support substantial relational mathematics prevents a facile dismissal. Its limitations are nevertheless significant. Failure of Atomicity restricts complete internal possibilities; missing operations limit the integration of mathematics with the native intensional structure; and mathematical stability requires a more qualified interpretation. The standard picture explains these features together through principles with independent motivations. That gives it a strong abductive advantage for a foundation intended to combine mathematics and modal reasoning within one higher-order framework.
+
+Strong Possibility incurs additional costs. The universal-identity reflection mechanism explains its monism and finite named exhaustion, rather than leaving them as isolated curiosities. Its failures of Barcan and Functionality reinforce the tension with structural uniformity. These consequences make it especially difficult to interpret as a general foundational theory. Its open consistency question neither removes those objections nor licenses attributing them to Max alone. Even a consistent Strong Possibility theory would owe a substantial account of why actuality should have the restrictions it imposes.
+
+The positive conclusion has limits. Complete endpoint assessments remain a substantive assumption, and a theorist of partial possibilities can challenge their unrestricted availability. The intended interpretation of the defined modality needs defence on both sides. Fullness adds a separate commitment about relational ranges, and Relational Choice adds arbitrary selection. A good abductive argument should make these commitments visible and evaluate their contribution, rather than count every downstream theorem as independent evidence for the whole package.
+
+Infinity is a further issue. The standard representation permits finite as well as infinite individual and world sets. The quantified Frege Infinity axioms at $e$ and $t$ can be added when an abundant foundation is intended; together they yield the all-type quantified Infinity schema already over $\C$ \citep[\S6]{finiteTypes}. They are stronger than merely listing standard finite lower bounds. Unlike Strong Possibility's monism or finite named exhaustion, acceptance of the standard structural theory does not settle the actual individual domain by the stock of names in its language.
+
+The resulting case favours the standard picture as a unified explanation, with Plenitude central to its mathematical meaning and endpoint separation providing a simple logical foundation. Choice can be defended as a natural strengthening when coordinated selection earns its further commitment. Infinitary comprehension can be added to characterize fullness and recover the entire standard hierarchy. This order makes the positive account intelligible on its own while preserving a substantive, differentiated critique of its maximalist alternatives.
+
+\styledappendices
+\section{Exact axioms and representation scope}\label{app:axioms}
+
+For a finite external list $\Delta$ of original types, $\Good_\Delta(O)$ requires whole-operation identities
+\begin{align*}
+ (\lambda p.\,O(\neg p))&=(\lambda p.\,\neg Op),\\
+ (\lambda p,q.\,O(p\land q))&=(\lambda p,q.\,Op\land Oq),\\
+ (\lambda p,q.\,O(p\lor q))&=(\lambda p,q.\,Op\lor Oq),\\
+ (\lambda F^{\sigma t}.\,O(\forall x^\sigma Fx))
+   &=(\lambda F^{\sigma t}.\,\forall x^\sigma O(Fx)),\\
+ (\lambda F^{\sigma t}.\,O(\exists x^\sigma Fx))
+   &=(\lambda F^{\sigma t}.\,\exists x^\sigma O(Fx))
+       \quad(\sigma\in\Delta).
+\end{align*}
+It also requires, at each $\sigma\in\Delta$,
+\[
+ \forall x^\sigma O(x=x),\qquad
+ \forall x,y^\sigma\forall F^{\sigma t}
+ [O(x=y)\to(O(Fx)\to O(Fy))].
+\]
+These equality clauses are retained over $\Hlogic$. No preservation of native necessity or infinitary connectives is included. Put
+\[
+ \EndVal(O):=\forall p^t(Op=\top\lor Op=\bot).
+\]
+For every relational $\tau=\bar\sigma t$ and every such $\Delta$, endpoint separation is
+\[
+ \begin{aligned}
+ \forall X,Y^\tau\bigl[X=Y\ \leftrightarrow\ \forall O^{tt}\bigl(&\Good_\Delta(O)\land\EndVal(O)\\[-2pt]
+ &\to\forall\bar x\,
+  [O(X[\bar x])\leftrightarrow O(Y[\bar x])]\bigr)\bigr].
+ \end{aligned}
+\]
+Application in $X[\bar x]$ is left-nested. The empty tuple gives the propositional case. Full typed separation is needed for the recovery of $\C$ over $\Hlogic$; the later reduction to one propositional instance presupposes $\C$. Separate endpoint-fixing clauses can be omitted by the recorded reduction. The formulation and the reduction have their stated ordinary mathematical status \citep[\S\S1--3]{observers}.
+
+Ordinary logical separation, $\mathrm{OS}$, omits the endpoint-valued requirement. Over $\Hlogic$, it reaches the endpoint theory once supplemented with just the propositional instance of Plenitude:
+\[
+ \mathrm{OS}+\operatorname{Plen}_{t,t}
+ \quad\equiv\quad\EndSep.
+\]
+Here $\mathrm{OS}$ retains its full typed scope and $\operatorname{Plen}_{t,t}$ concerns functional relations from propositions to propositions. It supplies the normalization and actual-world resources that turn ordinary logical discernibility into complete endpoint assessment \citep[\S\S1--3]{plenbridge}.
+
+The $\lambda$-free base has typed application, equality, Boolean formula constructors and object quantifier binders, with $\Box A:=(A=\top)$. In the formulation of \S\ref{sec:comprehension}, the commutation equations are expressed by represented composite operations; the finite comprehension instances reconstruct their abstraction notation. The equality clauses can then be derived rather than included initially. The selected axioms in this formulation are closed under necessitation \citep{lambdahandoff}.
+
+Over ordinary $\Hlogic$, the weaker range scheme suffices for fullness:
+\begin{equation}\label{eq:range}
+ \exists R^{\sigma t}\;\forall x^\sigma
+ \left(Rx\leftrightarrow\bigvee_{i\in I}x=a_i\right).
+\end{equation}
+It holds at every original input type, including $e$, under every simultaneous assignment to the parameter family. The index set is arbitrary, possibly empty or non-well-orderable, with no fixed cardinal bound. The original finitary abstraction rules and the H-theoremhood restriction remain unchanged in this range formulation.
+
+For the representation, write $W$ for all proposition atoms and $w_0$ for the unique true atom. At a relation type $\tau=\bar\sigma t$, use
+\[
+ \beta_\tau(R)=
+ \{(w,\bar a):w\le R[\bar a]\}.
+\]
+Barcan gives the universal-quantifier clause, and Atomicity and Functionality give faithfulness. A singleton support is represented by $\lambda\bar x.\,w\land\bigwedge_k x_k=a_k$. Range comprehension makes any family of these singleton atoms an admitted property extension, and internal Boolean Completeness supplies its join. If the join contained an extra point, removing that point's singleton atom would give a smaller upper bound. Thus its support is exactly the requested collection. Supports of existing external functions then give full operation domains.
+
+This proof requires no choice of representatives. For a quotient map $\pi:D\to D/{=}$ and $S\subseteq D/{=}$, index parameters by $\pi^{-1}[S]$ and assign each index its own raw value. The descended range is $S$. Representing supports are unique as identity classes, so their inverse map is obtained by Replacement. These details underpin the ZF refinement \citep[\S\S3, 5]{intrinsic}. The theorem is a representation of set-sized models and their original typed reducts, not a completeness theorem for a calculus or a claim of universe-absolute fullness.
+
+\section{Choice and the comparison with finitary packages}\label{app:choice}
+
+Let $\operatorname{Serial}(U):=\forall x\exists y\,U[x,y]$ and
+\[
+ \operatorname{Functional}(U):=
+ \forall x\exists y\,[U[x,y]\land\forall z(U[x,z]\to y=z)].
+\]
+Relational Choice supplies a functional subrelation of a serial relation; Functional Choice supplies a selecting operation when the output is relational. The standard graph and singleton-property arguments prove their equivalence over Plenitude. For individual outputs, encode $y$ by $\lambda z^e(z=y)$, select these relational codes, and recover the selected graph through equality of codes. No individual-returning operation is assumed.
+
+The No Pure Contingency theorem under $\Cfive+\At_t$ gives $P\to\Box P$ for each original closed pure $P$. Each closed type-instance of Functional Choice and Relational Choice is such a sentence. Their boxed and unboxed schemas therefore coincide over the endpoint base. This is a consequence of the existing theorem, attributed to Goodsell and Yli-Vakkuri, following Dorr's written argument; it is not a new necessitation rule \citep{npc}.
+
+The metatheoretic Choice comparison concerns universal validity across full hierarchies. Given an arbitrary family $(A_i)_{i\in I}$ of nonempty sets, form a nonempty individual set containing tagged copies of $I$ and of all pairs $(i,a)$ with $a\in A_i$, together with a default element. In its full one-world hierarchy, define a relation of type $e(et)t$ whose eligible outputs at index $i$ are the singleton properties of the tagged members of $A_i$. At other inputs use the default singleton. Functional Choice supplies an operation selecting such a property for each index; its unique member gives a choice function by Replacement. Conversely, ambient AC supplies selectors in each full hierarchy at each world. This proves the equivalence stated in \S\ref{sec:comprehension} \citep[\S6]{intrinsic}. It does not say that Choice in every particular fixed hierarchy entails ambient AC.
+
+For comparison with the earlier finitary proposals, retain
+\[
+ \CC=\C+\Box\FC+\Infq_e+\Infq_t,\qquad
+ T=\C+\Box\Plen+\Infq_e+\Infq_t.
+\]
+The infinity axioms assert that no Frege finite cardinality counts the whole domain at the indicated type. They are not merely all standard finite lower bounds. The source-based theorem that CC and $T$ have the same ordinary first-order arithmetic consequences remains a result about these finitary theories and their fixed Frege translation. It is not a conservativity theorem for the infinitary extensions considered here. Its proof and separate AI review remain in the companion \emph{Uniformity, Arithmetic and Recovery of a Mathematical Core} \citep{uniformitynote}.
+
+\section{Sources and evidence}\label{app:sources}
+
+Strong Possibility's monism and finite named-exhaustion consequences use the audited profile constructions together with identity reflection. The frozen results register records the full finite theorem as ordinary mathematics, with only the conditional reflection component formally checked. Countable exhaustion requires additional formation resources and a separately specified eligibility argument. The countable result has an explicit enlarged semantic reference theory and is not transferred to the original finitary schema \citep[\S\S2--5]{spexhaustion}. An exact restricted disjunction criterion locates the outstanding consistency question without settling it \citep[\S5]{spcore}. The universal-core reformulation and this criterion retain their separately recorded certification scopes. None of these results establishes consistency or inconsistency of Strong Possibility.
+
+The $\lambda$-free strengthening is from the subsequent 24 October research communication \citep{lambdahandoff}. The over-$\Hlogic$ formulation, unboxed range-comprehension refinement, ZF representation argument and universal full-model Choice comparison are taken from the completed 24 October consolidation \citep{intrinsic}. They are ordinary mathematical arguments. The earlier formal certificates for specified observer and infinitary representation statements retain their exact scopes; they are not certificates for every part of this consolidation. No new formal verification or literature-priority claim is made here.
+
+The framework and original Choice connections are attributed to Bacon and Dorr. Research records use their draft of 16 May 2023; the earlier source inspection for this manuscript used the accessible draft of 1 July 2022. The former pagination is retained as record-derived attribution. The pure Max/Atomicity proof uses the separately attributed Jech--Shelah rigid atomless algebra; its finite pure coding is identified in the research proof. This is not a claim that Max alone is inconsistent.
+
+The forcing comparison concerns the specified full modalized cloud. Its component hierarchies are full relative to the forcing extension, and real completeness concerns nonempty bounded internal subproperties. No equivalence between separate lottery presentations is assumed. The abstract forcing-to-CH incompatibility under the database's strict-smallness convention is not used; it has the countermodels and source-formulation caveats recorded in the forcing audit \citep{forcingaudit}.
+
+The methodological sources by Williamson were read in full in preparing the earlier manuscript; the inspected \emph{Modal Logic as Metaphysics} material was an excerpt including Chapter~1. The claim ledger preserves the exact research sources, historical uses and scope qualifications. The comparative judgments in this paper are philosophical assessments informed by those results, rather than conclusions attributed to the mathematical sources.
+
+\begin{thebibliography}{99}
+\raggedright
+\bibitem[Bacon and Dorr(2024)]{bacondorr}
+Bacon, Andrew, and Cian Dorr. 2024. \emph{Classicism}.
+In \emph{Higher-Order Metaphysics}, edited by Peter Fritz and Nicholas K. Jones, 109--190. Oxford University Press.
+Research-record locators refer to the draft of 16 May 2023.
+Earlier author draft: \url{https://andrew-bacon.github.io/papers/Classicism.pdf}.
+
+\bibitem[Bacon and Claude Opus 5.5(2026)]{modalized}
+Bacon, Andrew, and Claude Opus 5.5 (Anthropic). 2026.
+\emph{Modalized Domains on Possibility Frames}. Draft of 20 October 2026.
+The source distinguishes Bacon's constructions and suggestions from the written exposition and verification by Claude Opus 5.5.
+\url{https://andrew-bacon.github.io/techdoc/modalized-domains.pdf}.
+
+\bibitem[Intrinsic-axiom research(2026)]{intrinsic}
+OpenAI Codex. 2026. \emph{Intrinsic observer axioms and full standard hierarchies}. Ordinary mathematical consolidation, 24 October, \S\S1--8. Unpaginated. Project source: \nolinkurl{research/2026-10-24/intrinsic-observer-axioms.md}.
+
+\bibitem[Infinitary-comprehension research(2026)]{infcomp}
+OpenAI Codex. 2026. \emph{Infinitary Comprehension and full standard models}. Research note, 23 October, \S\S1, 4. Project source: \nolinkurl{research/2026-10-23/infinitary-comprehension/infinitary-comprehension.md}.
+
+\bibitem[Abstraction-reconstruction research(2026)]{lambdahandoff}
+OpenAI Codex. 2026. \emph{Endpoint separation and boxed Infinitary Comprehension over the $\lambda$-free base}. Research communication from ``Simplify and strengthen established\ldots'', 24 October. The communication combines the finite \emph{Lambda-free reconstruction of Classicism}, 23 October, with the observer and infinitary representation arguments, adding the initial reconstruction from separation. Source communication preserved in \nolinkurl{lambda-free-characterization-handoff.txt}; finite proof in \nolinkurl{research/2026-10-23/operator-characterizations/lambda-free-classicism-reconstruction-proof.txt}. Ordinary mathematical argument.
+
+\bibitem[Observer research(2026)]{observers}
+OpenAI Codex. 2026. \emph{Logical observer separation and its hierarchy}, \S\S1--3, and \emph{Typed separation and Classicism}, \S\S2--3. Research notes, 23--24 October. Unpaginated. Project directories: \nolinkurl{research/2026-10-23/operator-characterizations/} and \nolinkurl{research/2026-10-24/h-observer-space/}.
+
+\bibitem[Plenitude--observer research(2026)]{plenbridge}
+OpenAI Codex. 2026. \emph{Propositional Plenitude turns logical separation into endpoint separation}. Ordinary mathematical research, 24 October, \S\S1--5. Unpaginated. Project source: \nolinkurl{research/2026-10-24/h-observer-space/plenitude-endpoint-bridge.md}.
+
+\bibitem[Strong Possibility research(2026a)]{spcore}
+OpenAI Codex. 2026. \emph{Strong Possibility: density, universal theory, and algebraic embeddings}. Research note, 22 October, \S\S3--5. Unpaginated. Project source: \nolinkurl{research/2026-10-22/notes/reflection-universal-core-20261022.md}.
+
+\bibitem[Strong Possibility research(2026b)]{spsignature}
+OpenAI Codex. 2026. \emph{Signature Strong Possibility versus pure Strong Possibility}. Mathematical audit and further results, 22 October, especially \S10. Unpaginated. Project source: \nolinkurl{research/2026-10-22/notes/audit-signature-to-pure-sp-20261022.md}.
+
+\bibitem[Strong Possibility research(2026c)]{spprofileaudit}
+OpenAI Codex. 2026. \emph{Independent adversarial audit: pure term profiles at an isolated root}. Ordinary mathematical audit, 22 October, \S\S1--6. Unpaginated. Project source: \nolinkurl{research/2026-10-22/notes/audit-profile-20261022.md}.
+
+\bibitem[Infinitary exhaustion research(2026)]{spexhaustion}
+OpenAI Codex. 2026. \emph{Infinitary resources and named exhaustion}. Research note, 23 October, \S\S2--5. Unpaginated. Project source: \nolinkurl{research/2026-10-23/infinitary-named-exhaustion.md}.
+
+\bibitem[Research map(2026a)]{npc}
+\emph{C5 and Atomicity imply No Pure Contingency}. Classicism map write-up, following Cian Dorr's sketch of 23 September 2026, with permission from Zachary Goodsell. Originating theorem attributed to Goodsell and Yli-Vakkuri. Project write-up: \nolinkurl{c5-and-atomicity-imply-no-pure-contingency.md}.
+
+\bibitem[Research map(2026b)]{analysisconnections}
+Classicism map. 2026. Records on Second-Order Analytic Necessitism, Necessity of Analysis and Non-contingency of CH. Inspected 23 October. Underlying sources include Andrew Bacon, \emph{Could the truths of mathematics have been different?}, draft of 9 October 2025, \S5 and Appendix C.2; and Neil Barton and Zachary Goodsell, \emph{Continuum Contingency}, draft of 14 October 2026, \S\S5.6--5.9. Exact connecting-proof attributions and scope are retained in the claim ledger.
+
+\bibitem[Maximalism research(2026)]{maxatomicity}
+OpenAI Codex. 2026. \emph{Pure Maximalism and unboxed Atomicity: the canonical countable-generator proof}. Research note, 22--23 October. The Jech--Shelah rigid complete atomless Boolean algebra is an attributed external ingredient. Project proof: \nolinkurl{max-atomicity-canonical-code-proof.md}.
+
+\bibitem[Predecessor research(2026)]{predecessor}
+OpenAI Codex. 2026. \emph{Pure Maximalism forbids numerical predecessor operations}. Research proof, 23 October. All-closed-counting-type no-operation result; the graph-without-operation certificate is at individual counting. Project directory: \nolinkurl{research/2026-10-23/maximalist-mathematical-failures/}.
+
+\bibitem[Relational coding research(2026)]{coding}
+\emph{Relational coding and recursion}. Research notes, 22--23 October 2026, \S29. Unpaginated. Project source: \nolinkurl{research/2026-10-22/notes/relational-coding-recursion-20261022.md}.
+
+\bibitem[Forcing-transfer research(2026)]{cloudtransfer}
+OpenAI Codex. 2026. \emph{Forcing transfer for the real-code fragment of a modalized cloud}; \emph{Recursive normal forms at all finite relational types}. Research notes, 23 October. Unpaginated. Construction from \citet{modalized}; explicit transfer arguments separately attributed. Project sources: \nolinkurl{modalized-cloud-forcing-transfer.md} and \nolinkurl{modalized-cloud-all-finite-types.md}.
+
+\bibitem[Forcing audit(2026)]{forcingaudit}
+OpenAI Codex. 2026. \emph{The forcing/CH conjecture: strict-smallness formulation audit}, \S\S1--5. Research note, 23 October. Unpaginated. Submission proof: \nolinkurl{forcing-formulation.md}.
+
+\bibitem[Full-semantics research(2026)]{calculus}
+OpenAI Codex. 2026. \emph{Full standard Gallin semantics and the external atomic-join calculus}, \S\S3--5. Research note, 23 October. Project source: \nolinkurl{research/2026-10-23/full-standard-gallin/external-join-calculus.md}. Proof-admissibility restrictions and external complexity dependencies are stated there.
+
+\bibitem[Finite-type research(2026)]{finiteTypes}
+\emph{Exact finiteness and Infinity criteria by type}. Research note, 23 October 2026, \S6. Unpaginated. Submission proof: \nolinkurl{finite-type-classification.md}.
+
+\bibitem[Uniformity research(2026)]{uniformitynote}
+OpenAI Codex. 2026. \emph{Uniformity, Arithmetic and Recovery of a Mathematical Core}. Companion note, 23 October, \nolinkurl{uniformity-results.tex}. The arithmetic conservation argument uses Colin McLarty, \emph{Interpreting set theory in higher order arithmetic}, arXiv:1207.6357v5, 15 February 2013, \S\S2--5, pp.~2--6. Existing ordinary proof and separate AI review; no full Lean certificate.
+
+\bibitem[Williamson(2016)]{williamson2016}
+Williamson, Timothy. 2016. \emph{Abductive Philosophy}. \emph{The Philosophical Forum} 47: 263--280. \url{https://doi.org/10.1111/phil.12122}.
+
+\bibitem[Williamson(2017)]{williamson2017}
+Williamson, Timothy. 2017. \emph{Semantic Paradoxes and Abductive Methodology}. In \emph{Reflections on the Liar}, edited by Bradley Armour-Garb, 325--346. Oxford University Press. \url{https://doi.org/10.1093/oso/9780199896042.003.0013}.
+\end{thebibliography}
+\end{document}

@@ -9,20 +9,24 @@ Propositions have type t and observers E have type tt in the fixed relational ty
 $$
 a:=\forall p^t p,\qquad T:=a\lor\neg a,\qquad B:=a\land\neg a.
 $$
+
 Write
 
 $$
 S[R]:=\forall p,q\,[p=q\leftrightarrow\forall E(R(E)\to(Ep\leftrightarrow Eq))].
 $$
+
 The strong qualifications M, V and N are the whole-operation identities for preservation of conjunction, disjunction and negation. Qσ and Pσ are the corresponding whole-operation identities for universal and existential quantification at σ. A(E) means E(T) is true; Z(E) means E(B) is false. For example,
 
 $$
 M(E):=(\lambda p,q.E(p\land q))=(\lambda p,q.Ep\land Eq),
 $$
+
 $$
 Q_\sigma(E):=(\lambda F.E(\forall x^\sigma Fx))
  =(\lambda F.\forall x^\sigma E(Fx)).
 $$
+
 A type list Δ is finite and metalinguistic. No object-language quantification over types is introduced. Every family quantified over below is an admitted term or member of its indicated type domain.
 
 The main results concern these strong qualifications. Section 6 separately defines material qualifications and proves exact converse theorems for that weaker comparison tier. Truth equivalence, proposition identity, and whole-operation identity remain distinct.
@@ -34,6 +38,7 @@ Fix an H model and evaluation point satisfying S[R]. Let K be the set of its adm
 $$
 J(p):=\{E\in K:Ep\text{ is true}\}.
 $$
+
 Then S[R] says exactly that J is injective. Moreover, each preservation clause included in R gives the indicated identity of sets:
 
 | Clause | Truth-profile identity |
@@ -55,6 +60,7 @@ Internally, the corresponding order is
 $$
 p\preceq_R q:=\forall E(R(E)\to(Ep\to Eq)).
 $$
+
 It is always a preorder; S[R] is exactly its antisymmetry. Under separation, it is therefore a partial order. M makes the original conjunction its meet, and V makes the original disjunction its join. More explicitly,
 
 $$
@@ -62,6 +68,7 @@ p\preceq_R q\ \leftrightarrow\ p\land q=p\quad(M),
 \qquad
 p\preceq_R q\ \leftrightarrow\ p\lor q=q\quad(V).
 $$
+
 N makes negation an order-reversing involution. A makes T greatest; Z makes B least. Each assertion follows from the displayed profile identities and injectivity, or directly by the same observer calculations in H.
 
 ### Admitted bounds and adjunctions
@@ -72,15 +79,18 @@ $$
 u\preceq_R\forall x^\sigma Fx
  \leftrightarrow\forall x^\sigma(u\preceq_R Fx),
 $$
+
 $$
 (\exists x^\sigma Fx)\preceq_R u
  \leftrightarrow\forall x^\sigma(Fx\preceq_R u).
 $$
+
 Consequently, when both are listed, existential and universal quantification are respectively left and right adjoint to the constant-family map:
 
 $$
 \exists_\sigma\dashv(u\mapsto\lambda x^\sigma.u)\dashv\forall_\sigma.
 $$
+
 The order on admitted families is pointwise comparison. It is only a preorder on the family objects unless Functionality is separately available; the adjunction claim is a claim about preorders and does not assume Functionality. Nonempty type domains give both vacuity identities and ∀x Fx≼R∃x Fx.
 
 The representation also yields the usual valid interaction laws whenever the requisite clauses are listed. Examples include
@@ -88,9 +98,11 @@ The representation also yields the usual valid interaction laws whenever the req
 $$
 u\land\exists x Fx=\exists x(u\land Fx)\quad(M,P_\sigma),
 $$
+
 $$
 u\lor\forall x Fx=\forall x(u\lor Fx)\quad(V,Q_\sigma),
 $$
+
 and same-kind quantifier interchange at listed types. These are proposition identities. Mixed interchange gives the generally valid inequality
 
 $$
@@ -98,6 +110,7 @@ $$
  \preceq_R\forall y^\tau\exists x^\sigma Fxy
  \quad(P_\sigma,Q_\tau).
 $$
+
 No converse mixed interchange or distribution through an existentially quantified selection function follows from this calculation. Such a statement must respect the admitted selector domain and can contain a Choice principle. In particular, the recorded [Henkin model: base without a choice function](../../source/topics/classicism/models/henkin-without-relational-choice.yaml) has Extensionality, hence identity alone supplies all these separations, while Relational Choice fails. Thus all the preservation clauses together do not justify a general internal choice-of-witnesses step. The source's relative-consistency/metatheoretic condition remains part of that model claim.
 
 ## 3. Exact equational theory of the listed connective signature
@@ -109,6 +122,7 @@ For algebraic terms using only this listed signature, H+S[R] proves every equati
 $$
 \forall\bar p\,[s_1=t_1\land\cdots\land s_n=t_n\ \to\ s=t]
 $$
+
 valid in that reduct. To prove this, fix an eligible E and put hE(p)=1 exactly when Ep is true. The qualification makes hE a homomorphism for the listed operations and constants. premise identities pass to their images. The two-element implication gives equal truth values for the images of s and t, for every E, and separation gives s=t. This is also a direct H proof: expand the finite terms through the qualified observer and use the corresponding finite truth-table implication.
 
 Conversely, any such equation or Horn implication failing in the two-element reduct fails in the ordinary full two-valued H model. The identity observer qualifies for every clause in §1 and separates its two propositions. Thus additional clauses do not remove that countermodel.
@@ -141,18 +155,22 @@ $$
 S[A\land M\land R]\leftrightarrow
  S[M\land R]+\forall p(p\land T=p),
 $$
+
 $$
 S[Z\land M\land R]\leftrightarrow
  S[M\land R]+\forall p(p\land B=B),
 $$
+
 $$
 S[A\land V\land R]\leftrightarrow
  S[V\land R]+\forall p(p\lor T=T),
 $$
+
 $$
 S[Z\land V\land R]\leftrightarrow
  S[V\land R]+\forall p(p\lor B=p).
 $$
+
 Forward, preservation and the endpoint truth condition make both sides of each equation observationally equivalent. Conversely, a meet observer rejecting a meet unit T rejects every proposition; a meet observer accepting an absorbing B accepts every proposition. Dually, a join observer rejecting an absorbing T rejects everything, and one accepting a join unit B accepts everything. Such constant truth profiles distinguish no pair, so discarding them preserves separation. The extra restriction R is unchanged throughout.
 
 For pure negation,
@@ -160,9 +178,11 @@ For pure negation,
 $$
 S[N]\leftrightarrow S[A\land N]\leftrightarrow S[Z\land N],
 $$
+
 $$
 S[A\land Z\land N]\leftrightarrow S[N]+(B=\neg T).
 $$
+
 If E has the wrong endpoint truth, postcompose it with negation. The admitted operator λp.¬Ep still satisfies the full N identity, reverses its truth profile, and retains every disagreement. This proves the first line. The second follows by separation of B and ¬T in its forward direction; conversely B=¬T makes an accepting N observer reject B automatically.
 
 The first line changes the observer order: for the bare N class, closure under post-negation makes comparison symmetric, hence equality under separation. It does not say the bare and accepting classes induce the same order. Also the normalization is not asserted when arbitrary additional clauses are present: post-negation need not preserve M or Q.
@@ -172,9 +192,11 @@ For the two complementary signatures the exact alignments are
 $$
 S[A\land M\land N]\leftrightarrow S[M\land N]+(T=\neg B),
 $$
+
 $$
 S[Z\land V\land N]\leftrightarrow S[V\land N]+(B=\neg T).
 $$
+
 The other endpoint condition in each line already follows from qualification. For MVN both follow directly from qualification.
 
 ## 5. What endpoint fixing adds
@@ -196,12 +218,14 @@ For sufficiency assume those equations and define the admitted principal test
 $$
 E_b(p):=(b\land p=b).
 $$
+
 The semilattice equations give
 
 $$
 b\land(p\land q)=b
 \ \leftrightarrow\ (b\land p=b\ \land\ b\land q=b),
 $$
+
 so E_b preserves meet materially. If every principal test agrees on p and q, the tests b=p and b=q give p≤q and q≤p, hence p=q. Thus they separate.
 
 Adding A is exactly adding the greatest-element equation p∧T=p. Adding Z is exactly adding the least-element equation p∧B=B. To obtain rejecting separating tests, choose b=p when p is not below q, or b=q in the reverse case; the chosen b cannot be B. The same argument handles both endpoint conditions together. No external filter or choice of a family of tests is used: λb,p.(b∧p=b) is an admitted term.
@@ -213,6 +237,7 @@ Dually, S_m[V] is equivalent over H to the join-semilattice equations. Use the a
 $$
 E_b(p):=\neg(p\lor b=b).
 $$
+
 Since p∨q≤b iff p≤b and q≤b, ordinary truth-level De Morgan reasoning proves material join preservation. If p is not below q, the test b=q accepts p and rejects q; reverse the roles for the other case.
 
 Adding A is exactly requiring T greatest, p∨T=T; a separating cut b is then not T. Adding Z is exactly requiring B least, p∨B=p, which makes every principal cut reject B. Both can be imposed together.
@@ -224,11 +249,13 @@ Over H,
 $$
 S_m[N]\leftrightarrow\forall p(\neg\neg p=p).
 $$
+
 For the converse, double negation makes negation an involution; H truth conditions already exclude p=¬p. Use the admitted tests
 
 $$
 T_b(r):=(r=b)\lor\bigl(r\land(r\ne\neg b)\bigr).
 $$
+
 At r=b the test is true, at r=¬b it is false, and off that pair it has r's truth value. Double negation therefore gives T_b(¬r)↔¬T_b(r). For distinct p,q both false, use b=p; for both true, use b=¬p. For differing truth values identity suffices. This proves separation. The endpoint-orientation arguments of §4 apply materially as well: A alone or Z alone adds nothing; both together add exactly B=¬T.
 
 No corresponding converse from double negation to **strong** N separation is asserted here.
@@ -240,10 +267,12 @@ For every finite Δ, S_m[A∧M∧QΔ] is equivalent over H to the following outp
 1. Conjunction is a meet semilattice with greatest element T.
 2. For every σ in Δ and admitted F of type σt,
    \[
+
 $$
 u\land(\forall x^\sigma Fx)=u
 \leftrightarrow\forall x^\sigma(u\land Fx=u).
 $$
+
    \]
 
 Necessity is the observer-order theorem. For sufficiency, the same principal test E_b(p):=(b∧p=b) from §6 accepts T and preserves meet materially. The displayed GLB equivalence says exactly that it preserves every listed universal materially. Thus a single admitted family of principal tests satisfies all the listed laws simultaneously and separates. A can be omitted if the top condition is omitted, or Z can also be added with the bottom bound and the nonbottom choice of separating b from §6.
@@ -254,6 +283,7 @@ $$
 (\exists x^\sigma Fx)\lor u=u
 \leftrightarrow\forall x^\sigma(Fx\lor u=u).
 $$
+
 The principal cuts E_b(p):=¬(p∨b=b) preserve every listed existential materially by this LUB equivalence and ordinary quantifier duality in truth. No primitive quantifier-duality identity is assumed. Again the endpoint variants follow by the corresponding bounds.
 
 There is also a formulation without a specified meet operation. S_m[A∧QΔ] is equivalent to the existence of an admitted binary relation ≼ on propositions that is a partial order with greatest T and makes every listed universal the GLB of its admitted families. Forward use the observer-defined relation in §2. Backward use E_b(p):=(b≼p): the GLB condition is exactly its material Q law, and the tests b=p,q establish antisymmetry-based separation. Dually, S_m[Z∧PΔ] is equivalent to an admitted partial order with least B and the corresponding existential LUBs, using E_b(p):=¬(p≼b).

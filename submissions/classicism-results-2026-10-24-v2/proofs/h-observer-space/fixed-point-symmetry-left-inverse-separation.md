@@ -12,6 +12,7 @@ $$
 +\neg\Box\mathrm{OS}.
 \tag{1}
 $$
+
 In particular C5+SplitMono implies neither necessary OS nor necessary SplitMono. The positive separation verdict has full relational output scope and every finite external qualification list. The boxed OS failure is already witnessed by the propositional Boolean-separation instance at the empty list.
 
 ## 1. Framework and the exact sufficient condition
@@ -24,6 +25,7 @@ $$
 x_0,x_1,x_2,\ldots
 \tag{2}
 $$
+
 of pairwise distinct individuals, each fixed by every member of G_X. The argument needs precisely this sequence; it makes no object-language assertion of an admitted enumeration. In particular the hypothesis holds at a countably infinite source with trivial designated symmetry group. Other objects and their symmetry groups are unrestricted within the stated model framework.
 
 For a finite type list Δ, Good_Δ has the full Boolean and quantifier composite identities and translated equality clauses used throughout the observer notes. Recall the true-kernel condition
@@ -36,6 +38,7 @@ K_\Delta:=\exists E^{tt}F^{tt}c^t\,[
 \end{aligned}
 \tag{3}
 $$
+
 The construction below supplies the same admitted E,F,c for every finite Δ. This is a semantic fact about the witnesses, not an infinitary qualification formula.
 
 ## 2. The countable charts and the two observer profiles
@@ -46,12 +49,14 @@ $$
 \alpha_n=\nu_{n+1}\nu_n^{-1}.
 \tag{4}
 $$
+
 Each α_n commutes with G_X: it is supported on points fixed individually by that group. Define pairwise disjoint sets of self-arrows
 
 $$
 C_n=\{h:X\to X:h(x_0)=x_n\}.
 \tag{5}
 $$
+
 They are all pinned by {x₀} and are invariant under postcomposition by G_X. Moreover α_n maps C_n into C_{n+1} by postcomposition, and α_n^{-1} maps C_{n+1} into C_n. The complement of their union, including all arrows to other objects, is left unchanged in the construction.
 
 For every outgoing h:X→Y choose the following observation arrows, whose source is Y:
@@ -70,6 +75,7 @@ b_h=
 \end{cases}
 \tag{6}
 $$
+
 Define entire exponential truth profiles, for every proposition q at Y, by
 
 $$
@@ -78,6 +84,7 @@ E(h,q)\Longleftrightarrow a_h\in q,
 F(h,q)\Longleftrightarrow b_h\in q.
 \tag{7}
 $$
+
 Both profiles are {x₀}-pinned. If parallel h,h′ agree at x₀, they select the same branch and the same observation arrow, so (7) agrees for every input q.
 
 They also satisfy target symmetry. At target X, for μ∈G_X, the chart of μh is the chart of h, and μ commutes with its observation arrow s=a_h or b_h. The transport equation and proposition symmetry give
@@ -89,6 +96,7 @@ s\in\rho_t(\mu)q
 \ \Longleftrightarrow\ s\in q.
 \tag{8}
 $$
+
 On the complement the observation arrow is the identity, and the same calculation uses only proposition symmetry. At a different target Y, the entire branch is identity observation, which is likewise symmetric under G_Y. Thus ideal fullness admits E and F. Countably many cases in the external definition do not require an infinite pin: their selected value depends on the one point h(x₀).
 
 ## 3. The whole inverse equation and the true kernel element
@@ -99,6 +107,7 @@ $$
 a_{b_hh}\,b_h=\mathrm{id}_{\mathrm{target}(h)}.
 \tag{9}
 $$
+
 If h∈C_n, then b_h=α_n and b_hh∈C_{n+1}, where a_{b_hh}=α_n^{-1}. If h lies outside all charts, both observations are identity and it remains outside the charts. These cases exhaust all outgoing arrows. The E branch on C₀ is never used in this round trip.
 
 To check the whole operation identity rather than only current values, take any future arrow r:X→Y, arbitrary q∈D_t(Y), and further arrow l:Y→Z. Let E_r and F_r be the transported observers. Application and transport give
@@ -112,6 +121,7 @@ a_{b_{lr}lr}\,b_{lr}\,l\in q\\
 \end{aligned}
 \tag{10}
 $$
+
 where (9) is applied to h=lr. This holds for every future input and coordinate. Hence F∘E=I as an identity of admitted whole operations.
 
 Let c be the proposition C₀, false on all other-target arrows. It is symmetric and {x₀}-pinned, hence admitted. The identity arrow belongs to C₀, so c is currently true at X. For every outgoing h,
@@ -120,6 +130,7 @@ $$
 h\in Fc\quad\Longleftrightarrow\quad b_hh\in C_0.
 \tag{11}
 $$
+
 The right side never holds: each C_n maps into C_{n+1}, and the complement remains outside the charts. Thus Fc=Bottom as a proposition identity, not merely as current falsity.
 
 ## 4. Full logical qualification and the normalization consequence
@@ -134,6 +145,7 @@ $$
 E_G(p)=(c\land Gp)\lor(\neg c\land Ep)
 \tag{12}
 $$
+
 is Good_Δ, satisfies F∘E_G=I, and has exactly G's current truth profile, since c is true. The same F works for every G. Thus ordinary and qualified left-inverse observers have the same current separating power at X, at each fixed list and relational output type. In particular, full OS at this source implies full SplitMono. The fixed-point hypothesis alone does not claim ordinary separation for a general G_X.
 
 ## 5. A trivial source group supplies ordinary separation too
@@ -148,6 +160,7 @@ d\in q,&\mathrm{target}(h)=X,\\
 \end{cases}
 \tag{13}
 $$
+
 In the first branch q is a proposition at X, so membership of d is well typed. This entire profile is empty-pinned: for parallel h,h′ the answer on each fixed input q is the same. The first branch has no nontrivial target-symmetry obligation, and every other branch is identity observation. Hence O_d is admitted.
 
 Each selected observation arrow is a bijection, so the all-future calculation of §4 gives every full Boolean and quantifier identity for O_d. At the identity of X, its truth profile reads membership of d. Distinct propositions differ at some outgoing d, so these observers separate them. Functionality lifts this to every relational output type. Therefore full OS holds at every trivial-symmetry source in this framework.

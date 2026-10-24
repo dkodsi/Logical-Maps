@@ -9,6 +9,7 @@ $$
 +\mathrm{NoPureContingency}+\neg\mathrm{Rev}.}
 \tag{1}
 $$
+
 Thus adding No Pure Contingency does not close the established gap between reversible separation and C5 plus necessary ordinary separation. It also does not close that gap after ordinary separation is strengthened to qualified left-inverse separation and its necessity.
 
 The obstruction is a contingent statement with a **rigid binary relation parameter and an individual parameter**. Closed pure sentences remain noncontingent. Reversible observers fix those particular parameters under typewise conjugation, so they cannot detect the resulting proposition distinction.
@@ -24,6 +25,7 @@ We use exactly the following smaller group of arrows. Let
 $$
 X=\mathbb Z\times\mathbb N,\qquad C_n=\{n\}\times\mathbb N.
 $$
+
 On each even-indexed component C_n choose a partition into countably infinitely many blocks of every positive even finite size. On each odd-indexed component choose a partition into countably infinitely many blocks of sizes 2,4,8,16,… and no other sizes. All these choices can be fixed using enumerations of the countable components.
 
 Let G_n be the product of the full symmetric groups of the individual finite blocks in C_n. Put
@@ -32,6 +34,7 @@ $$
 G:=\prod_{n\in\mathbb Z}G_n.
 \tag{2}
 $$
+
 Thus G preserves each component and each designated finite block setwise; it does not permute distinct blocks.
 
 Let K consist of all bijections h:X→X for which there is one integer k such that
@@ -40,6 +43,7 @@ $$
 h(C_n)=C_{n+k}\qquad\text{for every }n.
 \tag{3}
 $$
+
 Within these prescribed component maps h is arbitrary. Call k its shift. Shifts add under composition and negate under inverse, so K is a group. It contains G. It also contains every finite-support permutation that preserves each component. It does not contain a permutation exchanging a few points in different components while fixing all remaining points.
 
 The category has one object X and arrow group K. Individuals are the elements of X, acted on by these bijections. The designated symmetry group is G. Allowed pins are finite subsets of X, and the admitted relational objects are exactly the symmetric intensions with some finite pin.
@@ -53,18 +57,21 @@ For precision, a relational intension A of type σ₁…σ_mt has a profile
 $$
 A(h;u_1,\ldots,u_m),\qquad h\in K,\quad u_i\in D_{\sigma_i}(X).
 $$
+
 It is symmetric when, for every μ∈G,
 
 $$
 A(\mu h;\rho(\mu)\bar u)=A(h;\bar u).
 \tag{4}
 $$
+
 A finite S pins it when its value, holding $\bar u$ fixed, depends on h only through h|S. Transport is right precomposition:
 
 $$
 (\rho(r)A)(h;\bar u)=A(hr;\bar u).
 \tag{5}
 $$
+
 All profiles satisfying (4) and some finite pin are admitted, recursively at every relational type. This is the profile construction in [Symmetric ideally-full map categories](../../source/research/2026-10-22/notes/rc-symmetric-ideal-full-categories.md), §1, specialized to our one-object group category.
 
 The restrictions remain stable under transport: if S pins A, then rS pins ρ(r)A, because equality of h,h′ on rS gives equality of hr,h′r on S. Left multiplication by G commutes with the right-precomposition calculation in (5), so symmetry is preserved as well. Every ρ(r) is a bijection, with inverse ρ(r⁻¹). The general construction consequently supplies application, lambda abstraction and the logical constants, with C soundness as in the cited one-object theorem. We are applying that general monoid/group theorem with its hypotheses checked, not importing C validity from the different all-bijections model.
@@ -79,6 +86,7 @@ A_0(\rho(g^{-1})\bar u),&h|S=g|S\text{ for some }g\in G,\\
 \end{cases}
 \tag{6}
 $$
+
 Two possible g's differ by a member of G_(S), so the value is independent of the representative. The branch is S-pinned. Under left multiplication by μ∈G a representative becomes μg, and the two transports cancel in (6), proving (4). At identity the relation has current extension A₀. Every arrow used in this calculation belongs to K because G≤K. This proves admission directly; it does not assume arbitrary extension fullness.
 
 Because every arrow acts bijectively at every type, identities and distinctness are necessary throughout the model. Thus it satisfies C5, all BF instances, and Functionality. We use the usual C5 consequences and the typed separation lifting with precisely these premises.
@@ -91,6 +99,7 @@ $$
 \rho(r)P=P\qquad(r\in K).
 \tag{7}
 $$
+
 If P is true at identity, evaluating (7) there says that P is true at every r. Conversely if it is false at identity, it is false at every r. Therefore every closed pure sentence denotes Top or Bottom, and No Pure Contingency holds.
 
 This is also the recorded [one-object No Pure Contingency argument](../../source/topics/classicism/arguments/no-pure-contingency-one-object.yaml), applied after the construction's C soundness has been checked.
@@ -109,6 +118,7 @@ $$
 jGj^{-1}\subseteq G.
 \tag{8}
 $$
+
 The countably many comparisons can be specified by the same enumerated packing algorithm in each component. No object-language selection operation is presumed.
 
 Let d be a nonbottom admitted proposition, let h∈d, and let P be a finite pin for d. Choose j with the same shift as h. Then j⁻¹h preserves every component. Its restriction to P extends to a finite-support permutation π preserving every component: complete the finite partial bijection within each of the finitely many affected components. Thus π∈K. Put b=jπ and choose finite S containing P and supp(π). Then b|P=h|P, so b∈d. Every element of G_(S) commutes with π, giving
@@ -117,6 +127,7 @@ $$
 bG_{(S)}b^{-1}=jG_{(S)}j^{-1}\subseteq G.
 \tag{9}
 $$
+
 Here is the admitted observer supplied by (9). At a coordinate h′ matching some g∈G on S, observe an input proposition q along bg⁻¹; at all other coordinates observe it at identity:
 
 $$
@@ -127,6 +138,7 @@ bg^{-1}\in q,&h'|S=g|S,\ g\in G,\\
 \end{cases}
 \tag{10}
 $$
+
 The independence, pinning and symmetry calculations of the arrow-evaluation representation proof use only (9), G≤K and group composition. All selected arrows bg⁻¹ are in K. Hence (10) is an admitted tt object, and at identity it reads the coordinate b.
 
 At every future evaluation, each output coordinate of this observer is evaluation of its input at one arrow of K. Such evaluation preserves the Boolean operations. Every selected arrow acts onto every type, so the universal and existential ranges coincide, proving the **full composite** quantifier identities at every fixed finite list. These are exactly the whole-profile calculations in [Local symmetry conjugacy](local-conjugacy-and-reversible-observers.md), §§3–4; those calculations do not need additional arrows outside the ones displayed. Since this group model has endpoint-valued equality judgments, the translated equality clauses hold as well.
@@ -142,6 +154,7 @@ For b,S as in (9), choose one component C_m and infinitely many of its 2-blocks 
 $$
 U_n=\{h'\in K:h'|S'=\nu_n g|S'\text{ for some }g\in G\}.
 $$
+
 The charts are pairwise disjoint, all share the finite pin S′, and α_nU_n=U_(n+1). Define E to observe bg⁻¹ on U₀, α_n⁻¹ on U_(n+1), and identity outside all charts. Define F to observe α_n on U_n and identity outside. The representative-independence of the first branch is (9); all constant shift branches are symmetric because their observation arrows normalize G. Hence both profiles are admitted.
 
 For arbitrary future r,l∈K and arbitrary future input q, the observation formula is
@@ -149,12 +162,14 @@ For arbitrary future r,l∈K and arbitrary future input q, the observation formu
 $$
 l\in(\rho(r)E)(q)\quad\Longleftrightarrow\quad a^E_{lr}l\in q.
 $$
+
 Applying F outside E therefore tests q at
 
 $$
 a^E_{\,a^F_{lr}lr}\,a^F_{lr}l.
 \tag{11}
 $$
+
 If lr∈U_n, F first shifts it by α_n into U_(n+1), where E uses α_n⁻¹. Equation (11) is then l. Outside all charts both arrows are identity. Thus F∘E=I as a whole-operation identity at every future input. The special b branch is never visited in that composition.
 
 Every observation arrow is in K and is invertible, so both observers satisfy all full Boolean and quantifier identities, and the equality clauses, at each finite list. At identity E observes b and accepts the desired d. The same Boolean-difference and Functionality arguments give full SplitMono separation. Its instances are closed pure formulas, so §3 gives □SplitMono. This establishes the positive premises of (1), including the stronger left-inverse package.
@@ -168,6 +183,7 @@ $$
 \bigwedge_i\forall\bar y^{\,e}\,
 \bigl(R_i\bar y=\top\ \lor\ R_i\bar y=\bot\bigr).
 $$
+
 Then full Rev over H implies the following external formula schema:
 
 $$
@@ -176,6 +192,7 @@ $$
 \Box P(\bar R,\bar x)\bigr).}
 \tag{12a}
 $$
+
 Here the displayed formula is universally closed over the finitely many relation and individual parameters; there is no quantification over formulas or infinite lists of relation types. With no parameters it specializes to No Pure Contingency.
 
 To prove it, recover C5 and qualified involutive separation from full Rev. Every Good_(Δ_P) involution T fixes the individual inputs. At each first-order relation parameter, the conjugation formula therefore reduces to
@@ -183,6 +200,7 @@ To prove it, recover C5 and qualified involutive separation from full Rev. Every
 $$
 (T^*_{e^{n_i}t}R_i)(\bar y)=T(R_i\bar y)=R_i\bar y,
 $$
+
 where the second equality uses $\mathrm{End}(\bar R)$ and endpoint preservation. The finitely many Functionality instances collect these tuple identities into whole identities T*R_i=R_i. The conjugation term induction in [Reversible separation and pure truth](reversible-separation-and-pure-truth.md), §§2–3, now fixes $P(\bar R,\bar x)$. If P is true, every such T agrees on P and Top; the propositional involutive-separation instance for Δ_P gives P=Top, which is □P. The reverse direction follows from modal reflexivity. Applying the same argument to ¬P also proves that the parameterized proposition is an endpoint. No observer qualification premise is necessitated. Once C5 has been recovered, this proof uses only the indicated finite propositional separation instance and the finitely many Functionality instances needed by the formula.
 
 The restriction to first-order relation parameters is essential to the stated scope: an arbitrary parameter with higher-type arguments need not be fixed by conjugation. We also require endpoint-valued tuples, rather than using an unspecified notion of rigidity.
@@ -196,6 +214,7 @@ R(h;x,y)\quad\Longleftrightarrow\quad
 x,y\text{ belong to the same component }C_n.
 \tag{12}
 $$
+
 It is independent of h and hence empty-pinned. Every symmetry in G preserves components, so it satisfies (4). Every arrow of K preserves the component equivalence relation, so ρ(h)R=R. Moreover, for any current a,b, the proposition R(a,b) is Top or Bottom: its truth at h is whether ha,hb lie in the same component, equivalent to the original condition.
 
 Let T be a Good_Δ involution. Its typewise lift from [Reversible separation and pure truth](reversible-separation-and-pure-truth.md), §§2–3, leaves individual inputs unchanged. Thus
@@ -204,6 +223,7 @@ $$
 (T^*_{eet}R)(a,b)=T(R(a,b))=R(a,b),
 \tag{13}
 $$
+
 since Boolean qualification fixes Top and Bottom. Current Functionality, available in C5, collects the two individual arguments in (13), giving T*_(eet)R=R as a whole object identity. This is the required parameter-fixing assertion; R is not treated as a pure logical constant.
 
 If P(R,a) is a pure formula with only the indicated relation and individual parameters, and Δ contains its quantifier types, the existing conjugation term induction now gives
@@ -212,6 +232,7 @@ $$
 T(P(R,a))=P(T^*R,T^*_e a)=P(R,a).
 \tag{14}
 $$
+
 All the typewise quantifier reindexing and whole-identity steps are those already verified in the pure-truth note. Equation (13) supplies the extra parameter case. No arbitrary nonlogical parameter is asserted to be fixed.
 
 ## 7. A contingent choice assertion inside one component
@@ -228,6 +249,7 @@ $$
 \Delta_0=\{t,e,et,(et)t,(et)(et)\}.
 \tag{15}
 $$
+
 The harmless t entry is retained for the finite-list reversible/involutive comparison. R:eet is a free parameter, not a quantified variable, so its type need not be added as a quantifier type. C5 handles all equality judgments used in the formula and in the conjugation proof.
 
 ### Even components: the assertion is false
@@ -255,10 +277,7 @@ Apply (6) to S₀ and N₁. It supplies an admitted selector with exactly that c
 ## 8. Failure of reversible separation despite pure noncontingency
 
 Choose a in an even component and put p=P(R,a). Section 7 makes p currently false. Choose an arrow h with shift one. Naturality, together with ρ(h)R=R, gives
-
-$$
-\rho(h)p=P(R,ha),
-$$
+$\rho(h)p=P(R,ha),$
 which is true because ha lies in an odd component. Thus p is not Bottom.
 
 Nevertheless every Good_(Δ₀) involution fixes p by (14). All such observers therefore reject p and Bottom alike. Propositional involutive separation fails for the exact list (15). Over the ambient C5, the same-list reversible-to-involutive patch turns any reversible observer accepting this false p into a qualified involution accepting it. That would contradict (14). Hence propositional reversible separation also fails for Δ₀. The full Rev schema fails a fortiori.
@@ -269,6 +288,7 @@ $$
 \mathrm{C5}+\Box\mathrm{OS}+\mathrm{NoPureContingency}
 \ \not\Longrightarrow\ \mathrm{Rev}.
 $$
+
 The necessary left-inverse strengthening in (1) shows that the failure is not repaired by supplying admitted qualified left inverses to the separating observers.
 
 There is no conflict with §3: p is formed using the nonlogical relation parameter R and the individual parameter a. No closed pure sentence changes truth. Nor does this contradict the one-object all-bijections Rev theorem: K deliberately excludes bijections that mix components in an arbitrary way. In this K every finite-support permutation has shift zero, so it cannot approximate a nonzero-shift arrow even at a single point whose image lies in another component. The chosen coarse relation is preserved by every allowed arrow and creates the new parameter obstruction.

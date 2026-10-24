@@ -189,11 +189,7 @@ The following is a new adaptation of the recorded profile construction.
 Let Ld be **finitary** C(Σ) syntax plus the constrained symbol d in (D).
 Let Kd be the class of set-sized action models of C satisfying its countable
 truth clause at every object. Define
-
-$$
-T_d:=\mathrm{Th}(\mathcal K_d),
-$$
-
+$T_d:=\mathrm{Th}(\mathcal K_d),$
 the set of finite Ld sentences valid at all points of all Kd models. This is
 an explicit, potentially noneffective **semantic reference theory**. It does
 not mean a theory deciding every sentence, and it asserts no completeness

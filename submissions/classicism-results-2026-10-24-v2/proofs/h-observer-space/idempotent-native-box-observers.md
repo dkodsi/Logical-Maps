@@ -15,6 +15,7 @@ $$
  (\lambda p.E(\Box p))=(\lambda p.\Box Ep),
 \qquad \Box p:=(p=\top).
 $$
+
 Add the whole idempotence identity E∘E=E. Write IdemBoxSep(τ,Δ) for separation by the common class of observers satisfying all three conditions. Without indices, IdemBoxSep denotes the full schema over relational output types and finite external qualification lists. It implies BoxSep and therefore recovers C, current BF and Functionality over H. A boxed schema means the separately boxed closed instances.
 
 The earlier [idempotent normalization](../logical-observer-hierarchy.md), §8, proves ordinary OS equivalent to separation by idempotent Good observers. That normalization is not asserted to preserve BoxComm. The models below show that it cannot always do so.
@@ -30,15 +31,13 @@ $$
 \quad\Longleftrightarrow\quad\mathrm{Extensionality}.}
 \tag{1}
 $$
+
 The full scope matters in recovering the background over H. The forward argument itself needs only the propositional separation instance once C5 is an explicit premise.
 
 ## 3. Full finite-frame observers are coordinate maps
 
 Let P be a finite partially ordered set with least point o. Regard its order as a thin category: one arrow x→y iff x≤y. Take singleton individuals and the full relational action-model domains. For x∈P put ↑x={y:x≤y}. Then
-
-$$
-D_t(x)=\mathcal P(\mathord\uparrow x),
-$$
+$D_t(x)=\mathcal P(\mathord\uparrow x),$
 with truth given by membership of x. Boolean operations are set operations. At any relational type, full objects are arbitrary future truth profiles on admitted argument tuples. Transport along x→y restricts such a profile to the future cone ↑y. Every such restricted profile extends to ↑x by arbitrary values outside ↑y. Thus transport is onto at every admitted type, including the singleton individual type.
 
 The full action-model theorem supplies C. Onto type transport gives BF and Functionality at every point, hence their necessary schemas. Proposition algebras are powersets, so Atomicity_t holds everywhere as well. All these claims concern this explicitly full construction.
@@ -49,6 +48,7 @@ $$
 E_f(p)=f^{-1}[p].
 \tag{2}
 $$
+
 This description covers the whole observer, not just its current action. At a future x and an arbitrary input q⊆↑x, its truth profile is true exactly when f(x)∈q. Conversely any inflationary f defines an admitted full observer by this profile.
 
 Such an observer preserves all quantifiers. At x, its application to ∀z^σ Fz reads the universal at f(x). The translated universal quantifies over z∈D_σ(x) and evaluates F at the transported argument in D_σ(f(x)). Onto transport makes these truth conditions equivalent. The existential proof is the same. Because the comparison covers every future x and every future F, it proves the whole composite identities. The translated equality clauses follow from Boolean qualification over C. Thus in this construction every Boolean observer is Good at every requested finite list; no analogous qualification collapse is asserted for arbitrary models.
@@ -66,6 +66,7 @@ E_f\text{ commutes with Box}
  \quad\text{for every }x.
 \tag{3}
 $$
+
 Equality of these sets is necessary because every subset is admitted; it is sufficient at every future input, so it gives the whole operation identity. Condition (3) implies monotonicity: if x≤y, then f(y)∈↑f(x).
 
 Likewise the whole equation E_f²=E_f is exactly
@@ -74,6 +75,7 @@ $$
 f^2=f.
 \tag{4}
 $$
+
 For necessity test singleton propositions; for sufficiency compute the truth of the compositions at arbitrary future inputs.
 
 Fix a∈P. Suppose (3)–(4) hold and f(o)=a. Equation (3) at o says the image of f is ↑a. Idempotence makes every point of that image fixed. For any x, inflationarity and monotonicity give x≤f(x) and a=f(o)≤f(x). If y is any upper bound of x and a, then y∈↑a, so f(y)=y; monotonicity gives f(x)≤f(y)=y. Hence
@@ -82,6 +84,7 @@ $$
 f(x)=x\lor a.
 \tag{5}
 $$
+
 Thus joining with a exists for every x, and the qualifying reader of a is unique.
 
 Conversely, if x∨a exists for every x, f_a(x)=x∨a is inflationary, monotone and idempotent. Moreover f_a[↑x]=↑(x∨a): the forward inclusion is monotonicity, while for y≥x∨a, choose y itself and use y∨a=y. This proves (3). It supplies an idempotent native-Box Good observer reading a at the root.
@@ -97,6 +100,7 @@ $$
 \end{array}}
 \tag{6}
 $$
+
 The failure direction is already propositional at Δ={t}; the success direction supplies all types and all finite lists. If P is a join-semilattice, every ↑x is one as well. Hence the same construction satisfies □IdemBoxSep.
 
 Equation (6) is an exact characterization for this model family. It is not an assertion that every abstract model of IdemBoxSep has a finite frame representation.
@@ -108,6 +112,7 @@ Take P={o,x,a,b,c,1}, ordered in four levels
 $$
 \{o\}<\{x,a\}<\{b,c\}<\{1\},
 $$
+
 where every point in a lower displayed level lies below every point in a higher one, and different points in a two-point level are incomparable. The pair x,a has two incomparable minimal upper bounds b,c, so no join. By (6), IdemBoxSep fails at the root.
 
 Nevertheless BoxSep holds. The following table gives one inflationary map for each possible root read point; columns are its input points.
@@ -129,6 +134,7 @@ $$
 \mathrm{IdemBoxSep}\quad\Longrightarrow\quad\mathrm{BoxSep}.
 \tag{7}
 $$
+
 The countermodel retains C, □BF, □Functionality, □Atomicity_t and □OS. It does not rely on a failure of the ordinary idempotent-observer normalization.
 
 ### The exact two-antichain family
@@ -142,6 +148,7 @@ $$
 \end{aligned}
 \tag{7a}
 $$
+
 These external integer conditions characterize the specified finite model family. They are not object-language cardinality principles.
 
 For the first equivalence, the cases m=1 or n=1 are join-semilattices, so §4 already supplies the required readers. Suppose m,n≥2 and a Box-commuting reader f sends the root to a∈A. If some b∈B were fixed, monotonicity would give f(x)≤b for every x∈A. For x≠a, inflationarity and the root value also force f(x)≥x,a, hence f(x)=b. The remaining f(a) is either a or b. For every c∈B different from b, monotonicity above such an x and inflationarity force f(c)≥b,c, so f(c) is the top. No input could then map to c: the root maps to a, lower points map only to a or b, and upper points map to themselves or top. This contradicts f[P]=↑a. Thus every upper point must map to top.
@@ -164,6 +171,7 @@ $$
  \lor\Diamond(q\land\Diamond p)\bigr].
 \tag{8}
 $$
+
 Set p={a} and q={b}. Both diamonds in the antecedent hold at o. The only p-point is a, from which no q-point is accessible; symmetrically no p-point is accessible from b. Both disjuncts in the consequent are false.
 
 Thus even necessary IdemBoxSep, with the necessary BF, Functionality and propositional Atomicity already present, implies neither C5 nor .3. Native-Box separation does imply .2 by its distinct theorem; the diamond locates that consequence without a hidden linearity assumption.
@@ -175,6 +183,7 @@ $$
  \ \Longleftrightarrow\ \mathrm{Extensionality}.}
 \tag{9}
 $$
+
 This conjunction permits different separating observer families. Rev supplies C5; equation (1) then applies. Extensionality supplies both factors.
 
 Endpoint separation is also incomparable with IdemBoxSep, and their conjunction is again Extensionality. The diamond refutes IdemBoxSep⇒End because End implies C5. The terminal two-point cluster in §7 has endpoint separation but fails IdemBoxSep: constant coordinate readers supply the former, while its only idempotent Box-commuting reader is identity. Thus neither of these natural restrictions absorbs the other, even though adding C5 to IdemBoxSep collapses it.
@@ -197,6 +206,7 @@ $$
 \qquad\neg\Box\mathrm{IdemBoxSep}.
 \tag{10}
 $$
+
 This does not conflict with persistence of each whole idempotence identity. As in the earlier inverse examples, the additional separating power need not persist when parameters and propositions are transported.
 
 ## 8. Sources

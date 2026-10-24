@@ -17,6 +17,7 @@ $$
 \forall p\,[E(Ep)=p].
 \tag{1}
 $$
+
 The whole-operation condition is instead E∘E=I. Equation (1) does not imply that condition over bare H. Likewise, pointwise preservation is not identified with identity of the complete composite operations.
 
 An endpoint orientation O is one of no condition, A(E):=ET, Z(E):=¬EB, or A∧Z. Write Fix(O) for fixing the endpoint objects mentioned by O; the empty orientation gives no condition. Every fixed endpoint has its correct H truth value, so Fix(O) implies O.
@@ -34,6 +35,7 @@ S[\mathrm{Fix}(O)\land\mathrm{Pt}_N
        \land\mathrm{Invol}_{\mathrm{pt}}].
 \tag{2}
 $$
+
 Without both endpoint conditions these principles are equivalent to the double-negation identity DN:=∀p(¬¬p=p). With both conditions they are equivalent to DN together with B=¬T.
 
 The material characterization and endpoint alignment are [Truth profiles](truth-profiles-and-connective-reducts.md), §§4 and 6. For completeness, material negation separation makes p and ¬¬p have the same profile, hence identifies them. If every eligible observer accepts T and rejects B, it accepts ¬B, so separation identifies T=¬B and DN gives B=¬T. The converses for material separation are proved there by admitted formula tests.
@@ -47,6 +49,7 @@ U_r(x,y):={}&((x=r\lor x=\neg r)\land y=\neg x)\\
 \end{aligned}
 \tag{3}
 $$
+
 Ordinary bivalence determines one branch, and each branch specifies one proposition object. Thus U_r is total and single-valued in H, and Plenitude gives an admitted F_r satisfying it. This operation exchanges r and ¬r and fixes every other proposition.
 
 The pair is closed under negation. On it, both F_r(¬x) and ¬F_r(x) equal x; off it, both equal ¬x. Thus F_r preserves negation pointwise. Applying the flip twice returns every input, proving (1).
@@ -69,6 +72,7 @@ x,&\text{for XOR},\\
 \end{cases}
 \tag{4}
 $$
+
 Here τ is a formula giving a truth value, not a newly postulated two-element object type. It satisfies τ(0) false and the material XOR law for +. Choose any a with τ(a) true. Such an a exists: T works for XOR, and B for biconditional.
 
 **Theorem 2.** Under H+Plen_{t,t}, for every such a,
@@ -80,6 +84,7 @@ S[\mathrm{Pt}_{+}\land\mathrm{Invol}_{\mathrm{pt}}
        \land Ea=a].
 \tag{5}
 $$
+
 The proof is a pairwise construction. Suppose p≠q and put d=p+q, so d≠0 by the group laws. If τ(d) is true, p,q already differ in truth; identity is a witness fixing a.
 
 Suppose instead τ(d) is false. Material separation of d from 0 gives E with τ(Ed) true. Indeed the material homomorphism law forces τ(E0) false, so a distinguishing observer must give the opposite truth at d. Put χ(x):=τ(Ex). This admitted formula is a material XOR character and χ(d) is true.
@@ -96,18 +101,21 @@ a,&\chi(x),\\
 \end{cases}
 \tag{6}
 $$
+
 More formally apply it to (χ(x)∧y=a)∨(¬χ(x)∧y=0), which is total and single-valued by H. The pair {0,a} is a two-element subgroup. Its exact group table, together with the character law, proves
 
 $$
 L(x+y)=Lx+Ly,\qquad L0=0,\qquad La=0.
 \tag{7}
 $$
+
 Define the admitted operation
 
 $$
 Jx:=x+Lx.
 \tag{8}
 $$
+
 Commutativity, associativity and (7) show J(x+y)=Jx+Jy. Also L(Lx)=0, because Lx is either 0 or a. Consequently
 
 $$
@@ -115,6 +123,7 @@ J(Jx)=x+Lx+L(x+Lx)
      =x+Lx+Lx+L(Lx)=x.
 \tag{9}
 $$
+
 Thus J is a pointwise involutive group homomorphism and Ja=a. Since χ(d) is true, Jd=d+a, whose τ-value is true. Homomorphism preservation gives Jd=Jp+Jq, so Jp,Jq differ in truth. This is the required witness. The reverse implication in (5) merely forgets qualifications.
 
 The construction is often called a transvection: a homomorphism with square zero is added to identity. Equations (6)–(9), rather than that terminology, provide the internal admitted witness. No basis, maximal subgroup, global character choice or finiteness is used.
@@ -130,6 +139,7 @@ S[\mathrm{Fix}(O)\land\mathrm{Pt}_{+}
        \land\mathrm{Invol}_{\mathrm{pt}}].
 \tag{10}
 $$
+
 For XOR choose a=T. The constructed witnesses always fix T. If Z is present, the existing material endpoint theorem identifies B=0: every material affine observer rejects both B and 0. Group homomorphisms fix 0, so they then fix B as well. No additional equation is needed for A alone.
 
 For biconditional choose a=B. The witnesses always fix B. If A is present, separation identifies T=0 because every material affine observer accepts the group unit; the witnesses then fix T too. No additional equation is needed for Z alone. Conversely, fixing an endpoint implies the corresponding truth condition, so the right side of (10) implies the left in every case.

@@ -13,6 +13,7 @@ $$
 \qquad \Box p:=(p=\top).
 \tag{1}
 $$
+
 Good_Δ has the full composite Boolean and listed quantifier identities. Every Δ is a finite external list. The full typed theory and its recovery of C over H are defined in [Native-Box logical observers](native-box-logical-observers.md), §§1–2.
 
 A **universal modal sentence** here has the form
@@ -22,6 +23,7 @@ A:=\forall p_1^t\cdots\forall p_n^t\,
 \theta(p_1,\ldots,p_n),
 \tag{2}
 $$
+
 where n is finite and θ is built from its displayed proposition variables, Top, Bottom, Boolean operations and the native Box. It has no object quantifiers inside θ and no additional parameters. Implication and biconditional may be written using their Boolean expansions. Modal Diamond may be read as ¬Box¬; the framework's equivalent original abbreviation transfers by the unconditional C-equivalence argument below.
 
 **Theorem 1.** For each sentence (2),
@@ -32,6 +34,7 @@ $$
 \quad\vdash\quad A\to\Box A.}
 \tag{3}
 $$
+
 This is an external schema indexed by finite formulas, not an object-language quantification over formulas.
 
 **Proof.** Fix a qualifying E. Structural induction on θ, using the Boolean operation identities, endpoint fixing over C, and (1), gives
@@ -41,6 +44,7 @@ E\bigl(\theta(\bar p)\bigr)
  =\theta(Ep_1,\ldots,Ep_n).
 \tag{4}
 $$
+
 Apply the full Q_t law once for each binder in (2). It follows that
 
 $$
@@ -48,6 +52,7 @@ E(A)=\forall p_1^t\cdots\forall p_n^t\,
 \theta(Ep_1,\ldots,Ep_n).
 \tag{5}
 $$
+
 Now assume current A. For each current tuple p̄, instantiate A at the admitted tuple Ep₁,…,Epₙ. Thus the right side of (5) is true. Hence E(A) and ETop are both true for every qualifying E. Propositional separation gives A=Top, exactly □A. Discharge A to obtain (3). No optional assumption has been necessitated, and neither injectivity nor surjectivity of E was used. ∎
 
 The number of universal proposition binders does not enlarge the qualification beyond t. For the degenerate case n=0, Q_t is unused; the same statement remains valid. Any larger finite Δ also suffices.
@@ -62,6 +67,7 @@ $$
 R_i^{\rho_i},\qquad
 \rho_i=\sigma_{i1}\cdots\sigma_{im_i}t.
 $$
+
 Zero arity is permitted, so a predicate variable may itself have type t. Let φ(R̄) be a formula of the following many-sorted first-order modal fragment:
 
 - Its nonconstant atomic formulas are applications R_i[x̄] to tuples of object variables of the indicated input types.
@@ -79,6 +85,7 @@ A:=\forall R_1^{\rho_1}\cdots\forall R_k^{\rho_k}
 \,\varphi(\bar R).
 \tag{6}
 $$
+
 Let Δ contain each outer type ρ_i and each type of an object-variable binder occurring in φ. This is a finite list because A is finite.
 
 **Theorem 2.** For every (6) in this fragment,
@@ -89,6 +96,7 @@ $$
 \quad\vdash\quad A\to\Box A.}
 \tag{7}
 $$
+
 **Proof.** For a qualifying E define, separately for each predicate variable, the admitted abstraction
 
 $$
@@ -96,6 +104,7 @@ R_i^E:=\lambda x_1^{\sigma_{i1}}\cdots
  x_{m_i}^{\sigma_{im_i}}.\,E(R_i[\bar x]).
 \tag{8}
 $$
+
 At zero arity this is simply ER_i. Induction on φ gives
 
 $$
@@ -103,6 +112,7 @@ E\bigl(\varphi(\bar R)\bigr)=
 \varphi(\bar R^E).
 \tag{9}
 $$
+
 The atomic step is contextual beta conversion using (8). The Boolean and Box steps use the whole preservation identities. For an object-variable binder x of type σ, use Q_σ or P_σ and then the induction hypothesis. The variable x remains the same object variable on both sides. There is no transformation x↦Ex and no reindexing of its domain, even when σ happens to be t. The restrictions on atomic formulas ensure exactly this distinction between predicate heads and object arguments.
 
 The outer Q_{ρ_i} identities now give
@@ -112,6 +122,7 @@ E(A)=\forall R_1^{\rho_1}\cdots\forall R_k^{\rho_k}
 \,\varphi(\bar R^E).
 \tag{10}
 $$
+
 Assume current A. For every tuple of current R_i, each R_i^E is an admitted predicate of the same type, so instantiate A at that tuple. This proves the truth of the right side of (10). All qualifying observers consequently accept A and Top, and separation gives A=Top. Discharge A. ∎
 
 Theorem 1 is the case in which all outer predicates are zero-ary and the body has no object binders. Theorem 2 also contains the earlier Barcan reflection: take one outer F of type σt and
@@ -122,6 +133,7 @@ $$
  \to\Box(\forall x^\sigma Fx).
 \tag{11}
 $$
+
 Its finite qualification is precisely {σt,σ}. Current BF_σ therefore implies necessary BF_σ under that single propositional BoxSep instance.
 
 The inner existential clauses in Theorem 2 do not license arbitrary existential predicate or proposition reflection. For example, an outer sentence ∀p∃q θ(p,q), with p and q used as bare proposition atoms, would translate to ∀p∃q θ(Ep,Eq). Its current truth supplies some q, not necessarily one in the image of E. The present proof does not make that inference. Nor does it allow existentially quantified relation heads inside φ.
@@ -138,6 +150,7 @@ $$
 \to\Diamond(p\land\Diamond q)\lor\Diamond(q\land\Diamond p)
 \right].
 $$
+
 The theorem gives, for example,
 
 $$
@@ -146,6 +159,7 @@ $$
 5\to\Box 5
 \tag{12}
 $$
+
 under C+BoxSep(t,{t}). These are conditional reflection statements. They do not assert .3 or 5. Native-Box separation already implies .2 by the smaller Bottom-fixing argument, so its necessary version follows here. The full theory does not imply C5, as the omega-chain model shows.
 
 The .3 consequence here remains conditional. The boundary in §5 establishes that even necessary ordinary separation and necessary BF do not suffice for general reflection.
@@ -158,6 +172,7 @@ $$
 \mathrm C+\mathrm{BF}_t+.2\quad\vdash\quad\Box .2.
 \tag{13}
 $$
+
 Use the exact [endpoint-selector characterization](../modal-selectors-and-quantifier-reduction.md), §1. Over C, .2 is equivalent to
 
 $$
@@ -166,12 +181,14 @@ B\top=\top\land B\bot=\bot\land
 \forall p^t\,(Bp=\top\lor Bp=\bot)\right].
 \tag{14}
 $$
+
 Choose a current witness B. For each p, one of the two displayed output identities holds. NI makes that identity necessary, and therefore makes their disjunction necessary. Generalize p and use BF_t to obtain
 
 $$
 \Box\forall p^t\,(Bp=\top\lor Bp=\bot).
 \tag{15}
 $$
+
 NI also supplies necessity of BTop=Top and BBottom=Bottom. Combine these necessities and apply necessary existential introduction to B, giving the box of (14). Necessitate the unconditional C implication from (14) to .2, and apply normality to obtain □.2. Only closed C theorems are necessitated; the witness identities are propagated by NI. No BF at tt or necessary BF is required.
 
 Accordingly, the general reflection theorem is the substantive extension. This note does not claim that it is strictly stronger than C+OS+□BF+.2; that comparison is not decided by the model below.
@@ -192,6 +209,7 @@ $$
 A:=\forall p^t\,[\Box\Diamond p\to\Diamond\Box p].
 \tag{16}
 $$
+
 It is read using the standard Boolean/native-Box expansion of Diamond. For any proposition p at r, if □◇p is true at r, then ◇p is true at s. Since s is terminal, p is true at s, so □p is true there. That same s witnesses ◇□p at r. Thus A is currently true at r for every admitted p.
 
 At either cluster point choose the proposition whose extension on the cluster is {u}. Diamond p is true at both u and v, so □◇p is true. Box p is false at both, so ◇□p is false. Hence A is false at that accessible cluster, and □A is false at r. We have proved
@@ -202,6 +220,7 @@ r\models\mathrm C+\Box\mathrm{BF}
 +A+\neg\Box A.
 \tag{17}
 $$
+
 This is a failure of the reflection schema, and consequently of BoxSep, despite the necessary ordinary logical package. It is not a current-BF transport failure.
 
 For clarity, the model does not satisfy .2 at r. Take p={s}. Then ◇□p is true at r, witnessed at s, but □◇p is false because no cluster point can reach s. Thus (17) does not separate reflection from the stronger lower bundle containing .2. No such strictness claim is made.

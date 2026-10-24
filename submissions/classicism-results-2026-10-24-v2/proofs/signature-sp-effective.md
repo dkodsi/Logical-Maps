@@ -275,11 +275,7 @@ nonempty stable kernel cannot have a hyperarithmetic closed code.
 
 It remains to relate this fact to the stages in (2). If a closed set
 F has a Z-recursive binary-tree presentation, then
-
-$$
-F\cap[s]\cap W_i\ne\varnothing
-$$
-
+$F\cap[s]\cap W_i\ne\varnothing$
 is Σ⁰₂ relative to Z: choose an enumerated cylinder inside W_i and
 test whether its compatible intersection with [s] has an infinite
 subtree. Consequently Z″ decides which cylinders miss F∩W_i. The

@@ -14,6 +14,7 @@ $$
 p\land T=p,\qquad p\land B=B.
 \tag{1}
 $$
+
 Write p≤q for p∧q=p, and p<q for p≤q and p≠q. These are output identities, so BMeet supplies a bounded meet-semilattice. Its bounds have opposite truth values by the H truth clauses.
 
 Put I:=λp.p and define composition by the admitted lambda term. As in [Reversible meet characterization](reversible-meet-characterization.md), let
@@ -23,6 +24,7 @@ M(E):=(\lambda p,q.E(p\land q))
        =(\lambda p,q.Ep\land Eq).
 \tag{2}
 $$
+
 Let G be an admitted predicate of type (tt)t satisfying the following conditions:
 
 1. GI is true, and GE and GF imply G(E∘F).
@@ -38,6 +40,7 @@ $$
 ET=T,\qquad EB=B.
 \tag{3}
 $$
+
 Thus acceptance of T and rejection of B need not be separately imposed on this group.
 
 The separation principle is
@@ -48,6 +51,7 @@ p=q\leftrightarrow
 \forall E\,(GE\to(Ep\leftrightarrow Eq))\right].
 \tag{4}
 $$
+
 No preservation of negation, disjunction or any quantifier is included in G unless expressly added. In particular the quantification used to define a relation below does not assert that the observers preserve that quantifier.
 
 ## 2. The largest invariant congruence compatible with truth
@@ -58,6 +62,7 @@ $$
 R_G(p,q):=\forall E^{tt}\,[GE\to(Ep\leftrightarrow Eq)].
 \tag{5}
 $$
+
 This is one lambda-defined relation of type ttt. The use of all members of the admitted predicate G is ordinary object-language quantification.
 
 A relation U is **truth-compatible** when
@@ -66,12 +71,14 @@ $$
 \forall p,q\,[U(p,q)\to(p\leftrightarrow q)],
 \tag{6}
 $$
+
 and **G-invariant** when, for every E with GE,
 
 $$
 \forall p,q\,[U(p,q)\leftrightarrow U(Ep,Eq)].
 \tag{7}
 $$
+
 These are material conditions on admitted relations. Equality of their higher-type objects is not being inferred from coextension.
 
 **Proposition 1.** R_G is an equivalence relation, is truth-compatible and G-invariant, and is a meet congruence. It is the largest G-invariant truth-compatible admitted equivalence relation, ordered by inclusion of current extensions. It is also the largest admitted meet congruence having these two properties.
@@ -84,6 +91,7 @@ $$
 E(p\land r)=Ep\land Er,\qquad
 E(q\land s)=Eq\land Es.
 $$
+
 The H conjunction truth clause and the two profile agreements make these outputs materially equivalent. Thus R_G(p∧r,q∧s), proving the congruence condition.
 
 Finally, if U satisfies (6)–(7) and U(p,q), invariance gives U(Ep,Eq) for every GE, and truth compatibility gives Ep↔Eq. Therefore U(p,q) implies R_G(p,q). This proves maximality; the proof of this inclusion does not even require U to be an equivalence. ∎
@@ -101,6 +109,7 @@ S[G]
 \end{aligned}}
 \tag{8}
 $$
+
 Here “is equality” means that the relation has precisely the pairs p=q as its current extension. The reverse implications use the particular admitted relation (5), so (8) does not assume that an external intersection of relations is admitted.
 
 There is also a semantic quotient interpretation. The external quotient of the proposition domain by R_G inherits meet and the G action. It embeds faithfully in the sets of admitted group members by
@@ -109,6 +118,7 @@ $$
 [p]\longmapsto\{E:GE\text{ and }Ep\text{ is true}\}.
 \tag{9}
 $$
+
 Meet becomes intersection. Acting on p by H replaces the displayed set by its inverse image under right composition E↦E∘H. This states the representation and its compatibility with the action. It does not assert an admitted quotient type, a set of all external subsets, or an identity of higher characteristic operations. Reversible separation says exactly that this canonical quotient has not identified distinct propositions.
 
 ## 3. The exact convex obstruction for chains
@@ -125,6 +135,7 @@ $$
 convex equivalence}.}
 \tag{10}
 $$
+
 “Nontrivial” here means that some distinct pair is related. The universal relation is not truth-compatible because T and B have opposite truth values. Convexity is an additional structural description of the maximal obstruction, not an assumption on arbitrary truth predicates.
 
 For the next statements, suppose the bounded chain is dense: whenever p<q there is r with p<r<q. Put
@@ -133,6 +144,7 @@ $$
 J(p):=B<p<T.
 \tag{11}
 $$
+
 All equivalence, invariance and convexity conditions can be restricted to J by guarding their variables with J. These are still formulas about admitted relations. Equation (3) makes J invariant under G.
 
 **Proposition 2.** On a bounded dense chain, (10) remains exact when the obstruction is sought only on J. In particular, if R_G is equality on J, then it is equality on the entire proposition domain.
@@ -153,6 +165,7 @@ $$
 \exists b,a\,[J(b)\land J(a)\land\neg b\land a].
 \tag{12}
 $$
+
 Necessarily b<a, since truth is an upper segment.
 
 **Theorem 3.** Over H, a bounded dense meet chain, an admitted group G as in §1, order primitivity on J, and (12) imply S[G]. In particular they imply separation by reversible whole-operation meet observers, fixing both bounds.
@@ -168,6 +181,7 @@ $$
 \exists E\,[GE\land Ep=u\land Eq=v].
 \tag{13}
 $$
+
 It implies order primitivity. If an invariant equivalence relates distinct p<q, (13) sends that pair to every u<v. Invariance and reflexivity make the relation universal. Thus (13) and (12) suffice. For an interior pair one can also see separation directly by sending it to b<a across the truth cut. The primitivity theorem does not require the stronger two-point motion in (13).
 
 ## 5. A full-function atomless H model below C
@@ -179,6 +193,7 @@ D_t=(\mathbb Q\cap[0,1])\setminus\{1/2\},
 \qquad p\text{ true}\Longleftrightarrow p>1/2.
 \tag{14}
 $$
+
 At every allowed relational arrow type take the full set of functions between the corresponding domains. There are no hidden arguments: admitted and outer domains coincide. Application and abstraction are ordinary function application and abstraction. Set
 
 $$
@@ -187,6 +202,7 @@ p\lor q=\max(p,q),\qquad
 \neg p=1-p.
 \tag{15}
 $$
+
 The removal of 1/2 makes negation truth-correct and keeps it an involution of the domain. Interpret each universal quantifier by 1 if all of the predicate's admitted instances are true, and by 0 otherwise. Interpret each existential quantifier analogously. Identity at every type returns 1 for actual equality and 0 for inequality. All these total operations belong to their full function domains.
 
 The ordinary truth clauses hold. Actual equality gives reflexivity and Leibniz substitution; the full function interpretation gives contextual beta and eta; quantifiers range over exactly the admitted domain. The H soundness argument is the full-domain specialization of [Local tiers and models](local-tiers-and-models.md), §1. Functionality holds at every type because functions have no unobserved arguments. This explicitly verifies the higher-type and admission requirements, rather than relying only on a proposed proposition algebra.
@@ -203,6 +219,7 @@ $$
 p\lor\neg p=3/4\ne1=T,
 \tag{16}
 $$
+
 whereas H proves the material equivalence of excluded middle and T, and C's Logical Equivalence rule would identify them. No negation or quantifier preservation is claimed for the separating automorphisms. The model therefore shows that this atomless reversible semilattice theory does not entail C.
 
 ## 6. A primitive admitted subgroup which is not 2-homogeneous
@@ -214,6 +231,7 @@ E_r(p)=\varphi^{-1}(\varphi(p)+r)\quad(p\in J),
 \qquad E_r(0)=0,\quad E_r(1)=1.
 \tag{17}
 $$
+
 Every E_r and its inverse E_{−r} is an admitted full meet/join automorphism. Let G be a predicate whose true members are exactly these operations. Such a predicate is admitted in this particular model because its higher function domains are full; it can return 1 on the specified set of operations and 0 elsewhere. The construction makes no general claim that an external subgroup can be named in an arbitrary Henkin model, and it does not require an object-language choice of all the E_r.
 
 This action is order-primitive, even with respect to external convex equivalences. To see this in rational coordinates, suppose an invariant convex equivalence relates x<y and put d=y−x>0. Translation invariance relates z to z+d for every rational z, and convexity relates every point between them. Given arbitrary s<t, choose a positive integer n with nd≥t−s. Transitivity along the n intervals of length d relates s to s+nd; convexity then relates s to t. The equivalence is universal. If no distinct pair is related, it is equality. This proves the required admitted version as well.

@@ -13,6 +13,7 @@ $$
 \mathrm{C5}+\Box\mathrm{OS}\ \not\Longrightarrow\ \mathrm{Rev}.}
 \tag{1}
 $$
+
 All observer preservation laws are full composite identities. OS and its boxed form have the full relational scope and every finite external type list. The argument for failure of Rev uses [Rev implies No Pure Contingency](reversible-separation-and-pure-truth.md), not an unproved necessity of the local-conjugacy criterion.
 
 ## 1. The two objects and their symmetry groups
@@ -30,6 +31,7 @@ G:=\prod_{B\in\mathcal B}\mathrm{Sym}(B),
 H:=\prod_{C\in\mathcal C}\mathrm{Sym}(C).
 \tag{2}
 $$
+
 Each group preserves **each individual block setwise**; it does not permute different blocks. It contains all independent choices of permutations within the blocks. These are closed permutation groups: preserving any specified finite block setwise is a closed condition, and the groups are the intersections of those conditions.
 
 Use W,V as the two objects of the symmetric ideally-full action construction. Include every bijection between every ordered pair of objects as an arrow. Use finite pinning at both objects, designated symmetry group G at W and H at V, and exactly the symmetric finitely pinned intensions at every relational type. Individuals are the underlying objects. If a signature expansion is wanted, interpret every nonlogical relational constant by the top element of its type.
@@ -46,6 +48,7 @@ jGj^{-1}\subseteq H,
 kHk^{-1}\subseteq G.
 \tag{3}
 $$
+
 Here is an explicit general packing argument that proves both assertions. Each source and target partition has arbitrarily large even blocks and infinitely many 2-blocks. Enumerate the source blocks of size greater than two and all target blocks. At each finite stage:
 
 1. Put the next unassigned source block of size greater than two inside a fresh target block of at least that size. Fill its even-sized remainder with previously unused source 2-blocks.
@@ -58,6 +61,7 @@ The [arrow-evaluation representation theorem](../operator-representation.md), §
 $$
 bG_{X,(S)}b^{-1}\subseteq G_Y
 $$
+
 for a finite S supplies an admitted observer evaluating current propositions at b, qualified by the full Boolean and quantifier operation identities at every fixed finite type list. A sufficient separation condition at X is that each target Y has one such comparison bijection with a finite stabilizer.
 
 For each self-target use the identity bijection. For the other target use j or k from (3), with the initial stabilizer restriction empty. To see the separation construction directly, let a nonempty proposition p at X be pinned by P and contain h:X→Y. Approximate j^{-1}h on P by a finite-support permutation π of X and put b=jπ. Then b∈p. On a finite set containing the support of π, the source stabilizer commutes with π, so b still meets the inclusion condition. The representation theorem gives a fully qualified observer accepting p. Applied to Boolean differences, these observers separate all propositions.
@@ -67,6 +71,7 @@ Functionality lifts this to every relational output type. The argument works at 
 $$
 \mathrm{OS}\quad\text{and}\quad\Box\mathrm{OS}
 $$
+
 hold at both objects, with the boxed schema read instance by instance. The witnesses are admitted observers with full composite identities, not just external evaluations or material homomorphisms.
 
 ## 3. Atomlessness
@@ -101,6 +106,7 @@ $$
 \to\forall x\,\neg(Xx\land Yx)].
 \end{aligned}
 $$
+
 Define the closed pure sentence
 
 $$
@@ -114,6 +120,7 @@ $$
 \end{aligned}
 \tag{4}
 $$
+
 Thus R must select a nonempty proper subset of each family member. It need not select a single individual or an intensional property object. The only higher-type object requested is the admitted relation R.
 
 Disjointness is stated for distinct intensional family members. Since each member has a nonempty six-element extension, it also ensures that two members with the same current extension are identical. This detail controls the possible movement of intensions in the proof.
@@ -125,13 +132,11 @@ For each six-block B∈$\mathcal B$, let X_B be the canonical rigid property who
 $$
 X_B(h,x)\quad\Longleftrightarrow\quad x\in h(B).
 $$
+
 It is pinned by B and symmetric at every target, so X_B is admitted. For g∈G, transport gives ρ(g)X_B=X_{g(B)}=X_B, because G preserves B setwise. The current family consisting of all these X_B is therefore G-invariant. The lemma of §4, with empty S, gives an admitted A with exactly that current extension. It satisfies DisjointSix(A).
 
 Suppose an admitted R selected a nonempty proper subset of each member. Let S be a finite pin for R. Choose a six-block B disjoint from S. Every permutation of B, extended by identity elsewhere, belongs to G_(S). Finite pinning and target symmetry make the current extension of R invariant under G_(S). Since X_B is itself fixed by these permutations, the selected subset
-
-$$
-\{x\in B:R(X_B,x)\}
-$$
+$\{x\in B:R(X_B,x)\}$
 is invariant under the full symmetric group of B. That group is transitive, so the subset is empty or all of B, contradicting (4). Thus MC₆ is false at W.
 
 ## 7. MC₆ holds at the power-of-two object V
@@ -144,6 +149,7 @@ $$
 \text{If a cell D meets a block C disjoint from S0, then }C\subseteq D.
 \tag{5}
 $$
+
 Indeed, if x∈D∩C and y∈$C\setminus D$, the transposition exchanging x,y lies in H_(S0). It carries the property object X with extension D to another A-member with extension $(D\setminus\{x\})\cup\{y\}$. The two extensions differ but overlap in five points. The property objects must therefore be distinct, contradicting A's disjointness. This proves (5), including for cells that also meet S0.
 
 Only finitely many cells meet S0, because they are disjoint and S0 is finite. Call them exceptional cells, and let S1 be S0 together with all their points. By (5), any points they add outside S0 comprise entire H-blocks. Hence S1 is itself a finite union of blocks. There is no iterative or infinite enlargement of the pin.
@@ -163,12 +169,14 @@ By [Reversible logical separation implies No Pure Contingency](reversible-separa
 $$
 \mathrm{C5}+\Box\mathrm{OS}+\neg\mathrm{Rev}.
 $$
+
 There is an explicit failed propositional instance. Take
 
 $$
 \Delta=\{t,e,et,(et)t,(et)(et)\}.
 \tag{6}
 $$
+
 The types e, et, (et)t and (et)(et) are precisely the bound-variable types needed in the expanded sentence MC₆; t additionally covers the fixed endpoint abbreviation and is harmless. By the term-induction proof in the cited No Pure Contingency note, every Good_Δ involution fixes MC₆ as a proposition. It therefore cannot distinguish MC₆ from Top at V, or ¬MC₆ from Top at W.
 
 The [reversible-to-involutive patching construction](../logical-observer-hierarchy.md), §4, preserves the **same** qualification list Δ over the C5 background already present here. Explicitly, if a reversible Good_Δ observer E accepted a false nonbottom d, with qualified inverse F, put c=¬d∧Ed, b=Fc and r=¬(c∨b). Then
@@ -176,6 +184,7 @@ The [reversible-to-involutive patching construction](../logical-observer-hierarc
 $$
 T(p)=(c\land Ep)\lor(b\land Fp)\lor(r\land p)
 $$
+
 is a Good_Δ involution accepting d. Boolean patching uses only the already listed quantifier laws; C5 supplies any required Barcan and Functionality instances without extending Δ. At V apply this to d=¬MC₆; at W apply it to d=MC₆. A reversible observer distinguishing the corresponding true sentence from Top would accept d, and hence would produce an impossible separating involution. Thus all eligible reversible observers agree on the displayed pair even though the propositions are unequal. Propositional reversible separation for exactly (6) fails at both objects. No assertion that every reversible separation instance fails is made.
 
 The groups also refute the proposed purely group-theoretic upgrade from mutual local inclusion to local conjugacy. Every finite point stabilizer G_(S) retains infinitely many orbits of size six: all untouched six-blocks. Every finite point stabilizer H_(T) has only finitely many six-orbits: untouched blocks have power-of-two sizes, and only the finitely many blocks meeting T can yield new remaining orbits of size six. Conjugation by any bijection preserves orbit sizes and their multiplicities. Thus no G_(S) and H_(T) are conjugate, despite (3).

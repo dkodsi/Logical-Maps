@@ -367,7 +367,7 @@ A finite compression labelled entrance model satisfies Tame Rigidity and Rigid P
 
 Compression and return maps remove label parameters from rigid subrelations, while approximate lifting supplies Rigid Power at every type.
 
-**Proof length:** long (3,131 words in the [selected exposition](proof-lengths.json)).
+**Proof length:** long (3,125 words in the [selected exposition](proof-lengths.json)).
 
 **Proofs:** [finite-compression.md](../proofs/finite-compression.md)
 
@@ -598,7 +598,7 @@ Assuming Con(ZFC), a coalesced sum of two extensional Henkin models makes CH and
 
 The two leaves use their own set-theoretic real fields and disagree about CH. Free root components preserve the generic atomicity, Barcan, rigidity and well-ordering arguments.
 
-**Proof length:** medium (2,614 words in the [selected exposition](proof-lengths.json)).
+**Proof length:** medium (2,612 words in the [selected exposition](proof-lengths.json)).
 
 **Proof locators:** coalesced-ch.md §§1–3; Opposite CH components: internal hierarchy, comprehension, real structure and CH truth correspondence; selected-ordinal alternative
 
@@ -986,7 +986,7 @@ The interpretation chain must preserve the arithmetic sort and the quantified In
 
 **Proof locators:** Frege infinity §§35–36.5 and §36.7; detailed proof §§1–6; McLarty, arXiv:1207.6357v5, §§2–5, pp. 2–6; Uniformity, Arithmetic and Recovery of a Mathematical Core, Theorem 5
 
-**Proofs:** [full-choice-arithmetic-conservativity.md](../proofs/full-choice-arithmetic-conservativity.md) · [infinity-world-richness-consolidation-20261022.md](../source/research/2026-10-22/notes/infinity-world-richness-consolidation-20261022.md) · [relational-coding-recursion-20261022.md](../source/research/2026-10-22/notes/relational-coding-recursion-20261022.md) · [comparison-handoff-20261022.md](../source/research/2026-10-22/notes/comparison-handoff-20261022.md) · [uniformity-arithmetic-core.tex](../papers/uniformity-arithmetic-core.tex)
+**Proofs:** [full-choice-arithmetic-conservativity.md](../proofs/full-choice-arithmetic-conservativity.md) · [infinity-world-richness-consolidation-20261022.md](../source/research/2026-10-22/notes/infinity-world-richness-consolidation-20261022.md) · [relational-coding-recursion-20261022.md](../source/research/2026-10-22/notes/relational-coding-recursion-20261022.md) · [comparison-handoff-20261022.md](../source/research/2026-10-22/notes/comparison-handoff-20261022.md) · [uniformity-results.tex](../source/research/2026-10-23/abductive-comparison/uniformity-results.tex)
 
 **Scope evidence:** [infinity_arithmetic_profiles.json](../source/research/2026-10-22/lean-formalization/verification-updates/infinity_arithmetic_profiles.json) · [strong_possibility.json](../source/research/2026-10-22/lean-formalization/verification-updates/strong_possibility.json) · [full-choice-arithmetic-review.json](full-choice-arithmetic-review.json) · [full-choice-arithmetic-delivery.json](full-choice-arithmetic-delivery.json)
 
@@ -1287,7 +1287,7 @@ For exactly one unary predicate constant and no individual names, nonemptiness o
 
 **Notes:** Neither K₁ emptiness nor failure of the fixed-domain construction would by itself refute signature SP. No successful survivor has been constructed.
 
-**Proof length:** long (6,123 words in the [selected exposition](proof-lengths.json)).
+**Proof length:** long (6,121 words in the [selected exposition](proof-lengths.json)).
 
 **Proofs:** [signature-sp-first-stage.md](../proofs/signature-sp-first-stage.md) · [signature-sp-derivative.md](../proofs/signature-sp-derivative.md) · [signature-sp-effective.md](../proofs/signature-sp-effective.md)
 
@@ -1476,7 +1476,7 @@ One admitted predicate saying “different from every name” gives countable na
 
 **Notes:** Finite named exhaustion is already a schema of ordinary object-language sentences. The external index of an infinitary scheme is metalinguistic; each admitted instance is an object-language formula.
 
-**Proof length:** long (4,650 words in the [selected exposition](proof-lengths.json)).
+**Proof length:** long (4,648 words in the [selected exposition](proof-lengths.json)).
 
 **Proofs:** [infinitary-resources.md](../proofs/infinitary-resources.md)
 
@@ -1773,7 +1773,7 @@ Over H, OS entails C + BF; full typed endpoint separation is equivalent to C5 + 
 
 **Notes:** The no-conjunction obstruction inherits the source countermodels’ metatheoretic qualifications. It does not exclude arbitrary Boolean combinations involving disjunction. The composite qualification does not inherit certificates for other observer qualifications. The endpoint-clause reduction is in logical-observer-endpoint-reduction.md; the saved formal certificate retains explicit endpoint identities.
 
-**Proof length:** long (114,518 words in the [selected exposition](proof-lengths.json)).
+**Proof length:** long (114,508 words in the [selected exposition](proof-lengths.json)).
 
 **Proof locators:** Right-inverse separation §§1–4; left-inverse models §§1–7; ternary Cantor model §§1–9; modal selectors §§6–7.; Fork and finite boundary §§1–5; component-shift model §§1–8; endpoint-parameter noncontingency §6.; Left-inverse decomposition §§1–6; finite colour-pattern propositions §§1–5.; Plenitude/endpoint bridge §§1–5; surjective observers §§1–7; linear/circular fibre model §§1–10; omega-chain observer classification §§1–6.; fixed-point symmetry §§1–7; cancellative monoid observers §§1–7.; root truth-profile surjective separation §§1–7.; Canonical adjoints §§2–7; integer-shift predecessor §§1–7.; Native-Box logical observers §§1–7; Boolean transversals §§1–6.; Idempotent native-Box observers §§1–7; injective decomposition §§1–6; native-Box reflection §§1–5.; Bounded stabilization §§1–6; finite relative generation §§1–6; image gap without split kernel §§1–5; injective decomposition §6 cross-reference.; Exterior-arm posets §§1–5; local-transversal support §§1–6; Zorn selection §§1–5; local homogeneity §§1–4.; Bounded fibre degree §§1–6; finite-image native Box §§1–5; central observers §§1–5; finite-colour completeness §§2–6.; Reversible fixed propositions §§1–5; central separation §§1–5; finite-image reflection §§1–5; reversible group centre §§1–5; invariant components §§1–5; bounded exponents §§1–5.; Group identities §§1–6; invariant components and group identities §§1–5; internally finite observer families §§1–5.
 
@@ -1808,7 +1808,7 @@ For any finite set Γ of independent primitive preservation clauses M, V, N, Qσ
 
 **Attribution:** OpenAI Codex, prompted by Daniel Kodsi, 24 October 2026. Direct source misc; proof notes unpaginated. Cited source constructions retain their stated attribution and draft dates.
 
-**Proof length:** long (143,871 words in the [selected exposition](proof-lengths.json)).
+**Proof length:** long (143,849 words in the [selected exposition](proof-lengths.json)).
 
 **Proof locators:** Primitive-package classification §§1–5; typed separation §§1–7; reversible meet atomicity §§1–6; remaining branches and frontier in MAP §§3–10.; Composition-closed characterization §§1–4; finite-image normalization §§1–5; contingent Barcan §§2–5; necessary separation and atoms §§1–4.; Finite-block symmetry §§1–8; ND representation §§1–6; reversible quantifiers §§1–4; local conjugacy §§2–6.; Finite affine normalization §§1–7; right-inverse separation §§1–4; Plenitude normalization §§1–6; left-inverse models §§1–7 (all-maps strengthening in §7); ternary Cantor model §§1–9; modal selectors §7.; Fork and finite boundary §§1–5; Zorn character extension §§1–7; partial reversible normalization §§1–5; component-shift model §§1–8, including the endpoint-parameter schema in §6.; Zorn lattice characters §§1–6; negation/affine compatibility §§1–7; left-inverse decomposition §§1–6; finite colour-pattern propositions §§1–5.; Plenitude/endpoint bridge §§1–5; surjective observers §§1–7; linear/circular fibre model §§1–10; omega-chain observer classification §§1–6.; Reversible order actions §§1–8; fixed-point symmetry §§1–7; cancellative monoid observers §§1–7.; Truth-gap chains §§1–7; convex-block and finite-factor reductions §§1–7; root truth-profile surjective separation §§1–7.; Canonical adjoints §§2–7; integer-shift predecessor §§1–7.; Native-Box logical observers §§1–7; Boolean transversals §§1–6.; Idempotent native-Box observers §§1–7; injective decomposition §§1–6; native-Box reflection §§1–5.; Bounded stabilization §§1–6; finite relative generation §§1–6; image gap without split kernel §§1–5; injective decomposition §6 cross-reference.; Exterior-arm posets §§1–5; local-transversal support §§1–6; Zorn selection §§1–5; local homogeneity §§1–4.; Bounded fibre degree §§1–6; finite-image native Box §§1–5; central observers §§1–5; finite-colour completeness §§2–6.; Reversible fixed propositions §§1–5; central separation §§1–5; finite-image reflection §§1–5; reversible group centre §§1–5; invariant components §§1–5; bounded exponents §§1–5.; Group identities §§1–6; invariant components and group identities §§1–5; internally finite observer families §§1–5.
 
@@ -1864,7 +1864,7 @@ In the finite-support hierarchy for the full permutation group G of an atom set 
 
 The key combinatorial step makes each fixed-support proposition stratum finite when there are finitely many world orbits; an injective operation omitting a value would produce infinitely many distinct iterates in one such stratum.
 
-**Proof length:** medium (1,091 words in the [selected exposition](proof-lengths.json)).
+**Proof length:** medium (1,089 words in the [selected exposition](proof-lengths.json)).
 
 **Proof locators:** §§1–4: finite-pattern orbit refinement, Dedekind equivalence and all-type Intensional Choice on atom worlds.
 

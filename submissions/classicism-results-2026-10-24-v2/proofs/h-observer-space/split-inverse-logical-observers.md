@@ -9,6 +9,7 @@ $$
 \quad\Longleftrightarrow\quad\mathrm{H}+\mathrm{Rev}.}
 \tag{1}
 $$
+
 The orientation matters: [qualified left-inverse separation is strictly weaker](finite-block-symmetry-left-inverse.md), §§1–6.
 
 ## 1. Exact qualifications and finite-list scope
@@ -29,6 +30,7 @@ $$
 \mathrm{Good}_\Delta(E)\land E\circ E=I.
 \end{aligned}
 $$
+
 Thus in SplitEpi, F is a **right inverse** of E. Every displayed composition equation is a whole-operation identity. Both E and F are admitted and qualified for the same list. Neither an external section nor current surjectivity alone is the stated hypothesis.
 
 Write S_{τ,Δ}[SplitEpi] for the corresponding separation instance at relational output type τ, and similarly for involutions or reversible observers. The full schema ranges over all such τ and every finite Δ.
@@ -45,6 +47,7 @@ $$
 u:=\forall p^t\,[F(Ep)\leftrightarrow p].
 \tag{2}
 $$
+
 Its defining universal statement is used as a proposition, not assumed true. In general u need not be Top or currently true.
 
 Universal instantiation and C's Boolean identities give, for every p,
@@ -53,6 +56,7 @@ $$
 u\land F(Ep)=u\land p.
 \tag{3}
 $$
+
 To justify the order reading precisely, the universally closed instantiation implication is an unconditional H theorem. C identifies its Boolean consequences, so u lies below each instance of the displayed biconditional. Boolean restriction to u yields (3); no conditional material equivalence is sent through Logical Equivalence.
 
 E's full Q_t and Boolean identities, together with E∘F=I, give
@@ -67,6 +71,7 @@ Eu
 \end{aligned}
 \tag{4}
 $$
+
 The last identity is an unconditional C logical identity. Equations (3) and (4) are the needed local substitute for the missing global identity F∘E=I. They use no atoms, Actuality or C5.
 
 ## 3. Turning a distinguishing witness into an involution
@@ -79,12 +84,14 @@ c:=\neg d\land Ed,
 \qquad r:=\neg(c\lor b),
 \tag{5}
 $$
+
 and define the admitted observer
 
 $$
 T(p):=(c\land Ep)\lor(b\land Fp)\lor(r\land p).
 \tag{6}
 $$
+
 All coefficient identities needed below hold without the current-truth assumptions on d and Ed. Those assumptions will be used only to establish that T distinguishes d from Bottom.
 
 First, by (4) and E∘F=I,
@@ -93,12 +100,14 @@ $$
 Eb=Eu\land E(Fc)=c.
 \tag{7}
 $$
+
 Since c≤Ed, monotonicity of the Boolean homomorphism F gives
 
 $$
 b\le u\land F(Ed)=u\land d\le d,
 \tag{8}
 $$
+
 where (3) was used at p=d. Hence b∧c=Bottom, and c,b,r form a Boolean partition of Top. The existing full-operation Boolean-patching lemma therefore makes T a Good_Δ observer. The identity observer, E and F all qualify for that same list; fixed propositional guards add no new observer quantifier type.
 
 Here are the cross-term identities used to check the square of T:
@@ -109,6 +118,7 @@ c\land Ec=\bot,
 \quad c\land Er=\bot,
 \tag{9}
 $$
+
 $$
 b\le Fc,
 \quad b\land Fb=\bot,
@@ -116,6 +126,7 @@ b\le Fc,
 \quad b\land F(Ep)=b\land p.
 \tag{10}
 $$
+
 For the first identity in (9), c contains Ed whereas Ec contains ¬Ed. The third follows from Eb=c and Er=¬(Ec∨Eb). For (10), b≤Fc is immediate. Since c≤¬d, Boolean preservation gives b≤Fc≤¬Fd; since b≤d, monotonicity gives Fb≤Fd. These imply b∧Fb=Bottom. The identity b∧Fr=Bottom follows from b≤Fc. The final identity in (10) follows from b≤u and (3).
 
 Now expand T(Tp) on the partition c,b,r. On c, (9) eliminates the first and third branches inside E(Tp), while the middle branch gives
@@ -123,23 +134,27 @@ Now expand T(Tp) on the partition c,b,r. On c, (9) eliminates the first and thir
 $$
 c\land Eb\land E(Fp)=c\land p.
 $$
+
 On b, (10) eliminates the second and third branches inside F(Tp), while the first gives
 
 $$
 b\land Fc\land F(Ep)=b\land p.
 $$
+
 On r, the identity branch gives r∧Tp=r∧p. Thus
 
 $$
 \forall p\,[T(Tp)=p].
 \tag{11}
 $$
+
 For the full-operation inverse requirement, apply NI to each identity in (11), then BF_t to collect them under ∀p. The resulting necessary coextension, followed by C's Intensionality at tt, gives
 
 $$
 T\circ T=I.
 \tag{12}
 $$
+
 This explicitly uses the stated ambient Barcan premise. It does not assert that an optional pointwise inverse premise can simply be necessitated, and no choice of an external inverse function is made.
 
 Finally c is currently true, because d is false and Ed true. Formula (6) therefore makes Td true. Good_Δ qualification makes TBottom false, so T distinguishes d from Bottom. We have proved:
@@ -160,6 +175,7 @@ S_{\tau,\Delta}[\mathrm{Invol}]
 S_{\tau,\Delta}[\mathrm{Rev}].
 \tag{13}
 $$
+
 For the nontrivial direction, let X≠Y. SplitEpi separation supplies an eligible observer and a tuple at which the two observed values have different truth values. Let d be the Boolean symmetric difference of those two proposition values. Then Ed is true. If d is true already, identity is a qualified involution distinguishing the pair. If d is false, the local lemma gives a qualified involution T with Td true, so its Boolean laws again make the original proposition values differ in truth under T. This separates X,Y at the same tuple. No new output type or qualification list is used. The reverse implications follow because an involution is its own qualified inverse and a two-sided inverse is a right inverse.
 
 For full typed separation over H, first forget the restriction to recover ordinary full logical separation, hence C+BF. Given any finite target list Δ, use the assumed right-inverse separation instance for Δ∪{t}. Apply (13), then forget the extra t qualification if necessary. This proves the forward direction of (1). Conversely Rev supplies right-inverse separation directly, at each original list. The same proof identifies both with full involutive separation.

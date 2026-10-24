@@ -14,6 +14,7 @@ $$
  \to\forall q\,\exists p\,[Ep=q]\right].
 \tag{1}
 $$
+
 Every operation and proposition in (1) is admitted. This is an internal assertion about injective operations of type tt; it is not an assertion about all external functions on the proposition domain. Nor is it being identified here with a stronger formulation quantifying over arbitrary serial injective relations without an admitted function representing them.
 
 The internal Frege statement Fin_t(All) implies (1), by the finite Dedekind argument recalled in [the fork note](fork-one-sided-inverse-separation.md), §5. The converse fails in the model below. Its failure will be proved using the established finite observer-collapse theorem, not inferred merely from an externally infinite domain.
@@ -24,6 +25,7 @@ $$
 E(Fq)=E(F(Ep))=Ep=q.
 \tag{2}
 $$
+
 Current Functionality collects these output identities into E∘F=I. If E and F are Good_Δ for the same finite qualification list, they remain so: no witness is replaced. Therefore SplitMono_Δ and Rev_Δ have exactly the same eligible observers under these premises, at every fixed finite Δ. Their corresponding separation sentences coincide at every relational output type. This conclusion alone does not give endpoint separation.
 
 ## 2. Finite fixed-pin algebras imply the internal condition
@@ -34,6 +36,7 @@ $$
 B_S:=\{p\in D_t(X):S\text{ pins }p\}.
 \tag{3}
 $$
+
 This is an external collection used in the semantic proof; it need not itself be the extension of an admitted predicate. Boolean set operations make it a Boolean algebra. Suppose every B_S is externally finite.
 
 **Support-union lemma.** If a finite P pins an admitted E:tt, and S pins p, then P∪S pins E(p).
@@ -45,6 +48,7 @@ h\in E(p)\quad\Longleftrightarrow\quad
 E\bigl(h,\rho_t(h)p\bigr).
 \tag{4}
 $$
+
 Suppose h,h′ have target Y and agree on P∪S. The transported inputs in (4) are equal as entire proposition objects at Y. To see this, test them at an arbitrary further coordinate l:Y→Z:
 
 $$
@@ -52,6 +56,7 @@ l\in\rho_t(h)p\ \Longleftrightarrow\ lh\in p,
 \qquad
 l\in\rho_t(h')p\ \Longleftrightarrow\ lh'\in p.
 $$
+
 The arrows lh and lh′ agree on S, so these truth values agree for every l. Thus $\rho_t(h)p=\rho_t(h')p$. E's P-pinning now makes the two sides of (4) agree. This proves the lemma at arbitrary output coordinates, not merely at the identity arrow.
 
 Consequently, if P⊆S, the current operation E sends B_S into B_S. Suppose E is injective on the whole current proposition domain. Its restriction to the finite set B_S is an injective self-map, hence onto B_S. Given any admitted q, choose a finite S containing both a pin for q and P. Then q∈B_S, so q=E(p) for some p∈B_S. This proves (1).
@@ -77,6 +82,7 @@ $$
 |B_S|=2^{\,2^{|S|}}.
 \tag{5}
 $$
+
 Every fixed-pin algebra is finite. Section 2 proves that the internal sentence $\mathsf D_t$ holds, although the union of these algebras need not be finite.
 
 ## 4. Atomlessness and reversible separation
@@ -87,6 +93,7 @@ $$
 q_x:=\{k:X\to X\text{ an arrow}:k(x)\in A\}
 \tag{6}
 $$
+
 is symmetric under G and pinned by {x}, so it is admitted. There are arrows h_A,h_B agreeing with h on S and sending x respectively into A and B: choose the new image outside the finite set h(S), and extend the resulting finite partial injection to a bijection. Both arrows belong to p by S-pinning. Hence p∧q_x and p∧¬q_x are both nonbottom. Since the Boolean operations are the corresponding set operations, this splits p into two proper nonzero parts.
 
 Thus every nonbottom proposition splits; the proposition algebra is atomless. In particular Atomicity_t fails, since Top is nonbottom and has no atom below it.
@@ -110,6 +117,7 @@ $$
  +\neg\mathrm{Fin}_t(\mathrm{All}).}
 \tag{7}
 $$
+
 This establishes that Rev together with (1) need not imply EndSep, even though (1) still makes every qualified left inverse two-sided. The two consequences of internal Frege finiteness must be kept distinct: its injection-to-surjection consequence suffices for the inverse conversion, whereas the finite-image witness used for endpoint separation is not supplied by (1).
 
 This two-colour example satisfies Rev and therefore SplitMono. The former C5+□OS⇒SplitMono question is settled negatively by [Linear and circular fibre orders](linear-circular-fibre-left-inverse-gap.md): its two-object model has finite fixed-pin algebras and hence (1), but satisfies C5+□OS while failing Rev. Section 1 then also excludes SplitMono. That model uses the finite-pin boundary proved here; its separate pure-sentence obstruction supplies the failure of Rev.

@@ -6,7 +6,7 @@ Run `python3 verify_package.py`. Python's standard library is sufficient. This h
 
 ## 2. Prerequisites
 
-The preserved `source/topics/classicism/lean/lean-toolchain` pins Lean 4.33.1. `lake-manifest.json` pins Mathlib to commit `0df444a360eaa60ab8c11dca51a86af692955474` and records the exact remaining package commits. Use those revisions on the recipient's platform. The toolchain and full dependency binaries are prerequisites, not included distributions; this release has performed no downloads. The `dependencies/` subset preserves the exact matching external sources used in selected checks, with their licenses and hash inventory.
+The preserved `source/topics/classicism/lean/lean-toolchain` pins Lean 4.33.1. `lake-manifest.json` pins Mathlib to commit `0df444a360eaa60ab8c11dca51a86af692955474` and records the exact remaining package commits. Use those revisions on the recipient's platform. The toolchain and compiled dependencies must be supplied separately. The `dependencies/` subset preserves the exact matching external sources used in selected checks, with their licenses and hash inventory.
 
 Do not use a whole-library default build as evidence for a specific result: the tree intentionally includes draft modules. Reproduce only the relevant exact target and its dependencies. The supplied checker records source fingerprints and principal axiom reports.
 
@@ -28,13 +28,13 @@ Require a completed successful check of the exact target declaration, matching c
 
 Repository validation is independent: install the source project's small Python requirements if necessary, then run `python3 scripts/pmap.py validate` from `source/`. The package's saved validation log records the packaging run; it is not a Lean certificate.
 
-## 5. New exact source closures
+## 5. Exact source closures
 
 The normalized receipts in [evidence/CERTIFICATES.json](evidence/CERTIFICATES.json) map module names to the exact successful source bytes, reusing existing files where possible. Their original run state is preserved: some selected targets passed before an unrelated later target failed. Only the selected successful targets are claimed.
 
 The three retained generated-algebra component logs have no explicit principal axiom report; their `evidence_kind` and `explicit_principal_axiom_report_present` fields preserve that scope. Current result-level coverage, including the later certificates, is stated in the [evidence index](evidence/RESULT-INDEX.md#arithmetic-foundations).
 
-Run `python3 certificate_sources.py` to verify every new receipt, mapped source and retained principal log. To materialize one exact source closure outside the package, run:
+Run `python3 certificate_sources.py` to verify the indexed receipts, mapped source and retained principal log. To materialize one exact source closure outside the package, run:
 
 ```sh
 python3 certificate_sources.py --certificate beta-eta --output /your/fresh/beta-eta-sources
@@ -44,14 +44,14 @@ The output recreates module paths for that selected check. The helper neither co
 
 ## 6. Maintaining the summaries
 
-Edit the structured records, then regenerate their views. `MAIN-RESULTS.json` owns each detailed entry’s statement, scope, significance, mathematical status and exact Lean status. Its `overview` supplies the shorter main-page summaries, grouping related entries through `result_refs`; `supplemental_results` identifies entries retained in the full index. Every detailed entry must occur in exactly one of these presentation roles. Notation changes must preserve the statement’s type and modal scope; do not apply blanket substitutions to principle names. `CATALOG.json` preserves all stable keys and supporting evidence; `result_ref` aliases inherit the main entry’s wording, `lean_status_ref` inherits the exact status of a matching main result, and `lean_status_refs` points to narrower aggregate coverage. `CONJECTURES.json` owns the questions, established progress and remaining obligations, and refers to main entries for formalization status. `DATABASE-INTEGRATION.json` owns proposed integration actions and captured database-record states. Its snapshots are historical evidence, not a live mirror. `CANDIDATES_DK.json` owns the isolated explorer proposals, their type and modal scopes, source locators, and evaluation equivalents; the renderer checks their evidence references and generates `CANDIDATES_DK.md`. Proposed IDs are not active database records. Supplementary assessments enter that same integration source with their exact statements, scopes, existing-record relationships, proof locators, Lean coverage and remaining obligations. Preserve the original intake receipt and its hash; scope receipts can sharpen a row without promoting its database status.
+Edit the structured records, then regenerate their views. `MAIN-RESULTS.json` owns each detailed entry’s statement, scope, significance, mathematical status and exact Lean status. Its `overview` supplies the shorter main-page summaries, grouping related entries through `result_refs`; `supplemental_results` identifies entries retained in the full index. Every detailed entry must occur in exactly one of these presentation roles. Notation changes must preserve the statement’s type and modal scope; do not apply blanket substitutions to principle names. `CATALOG.json` preserves all stable keys and supporting evidence; `result_ref` aliases inherit the main entry’s wording, `lean_status_ref` inherits the exact status of a matching main result, and `lean_status_refs` points to narrower aggregate coverage. `CONJECTURES.json` owns the questions, established progress and remaining obligations, and refers to main entries for formalization status. `DATABASE-INTEGRATION.json` owns proposed integration actions and captured database-record states. Its snapshots are historical evidence, not a live mirror. `CANDIDATES_DK.json` owns the isolated explorer proposals, their type and modal scopes, source locators, and evaluation equivalents; the renderer checks their evidence references and generates `CANDIDATES_DK.md` and the marked principle-reference section in `proofs/h-observer-space/GRAPH.md`. Proposed IDs are not active database records. Supplementary assessments enter that same integration source with their exact statements, scopes, existing-record relationships, proof locators, Lean coverage and remaining obligations. Preserve the original intake receipt and its hash; scope receipts can sharpen a row without promoting its database status.
 
 ```sh
 python3 render_results.py --check
 python3 render_results.py --write
 ```
 
-The first command is read-only and fails on stale generated Markdown, incomplete result or presentation coverage, missing evidence or altered database snapshots. The second updates the seven generated views; it does not change mathematical or certificate verdicts. Review the diff and validate the relevant database after editing. A research-module certificate does not authorize setting an official `lean: verified` flag by hand.
+The first command is read-only and fails on stale generated Markdown, incomplete result or presentation coverage, missing evidence or altered database snapshots. The second updates the summary views and the generated observer-principle reference section; it does not change mathematical or certificate verdicts. Review the diff and validate the relevant database after editing. A research-module certificate does not authorize setting an official `lean: verified` flag by hand.
 
 After reviewing an intentional local package update, regenerate its byte inventory and check it:
 

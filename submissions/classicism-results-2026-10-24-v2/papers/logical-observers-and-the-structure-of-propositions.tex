@@ -1,0 +1,540 @@
+% !TEX program = xelatex
+% The reusable preamble and title/appendix conventions are in house-style.tex.
+\documentclass[12pt,letterpaper]{article}
+\input{house-style.tex}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{caption}
+\usepackage[section]{placeins}
+\usepackage{bookmark}
+\usepackage[numbers,square]{natbib}
+% Permit a fallback line-breaking pass for long technical terms and citations.
+\setlength{\emergencystretch}{3em}
+\setlength{\bibsep}{4pt}
+\captionsetup{font=small,labelfont=bf,skip=9pt}
+\newcommand{\Hlogic}{\mathsf{H}}
+\newcommand{\C}{\mathsf{C}}
+\newcommand{\Cfive}{\mathsf{C5}}
+\newcommand{\BF}{\mathsf{BF}}
+\newcommand{\CBF}{\mathsf{CBF}}
+\newcommand{\OS}{\mathsf{OS}}
+\newcommand{\Good}{\mathsf{Good}}
+\newcommand{\End}{\mathsf{End}}
+\newcommand{\Rev}{\mathsf{Rev}}
+\newcommand{\Fin}{\mathsf{Fin}}
+\newcommand{\BoxSep}{\mathsf{BoxSep}}
+\newcommand{\Plen}{\mathsf{Plen}}
+\newcommand{\At}{\mathsf{Atomicity}}
+\newcommand{\ND}{\mathsf{ND}}
+\newcommand{\NI}{\mathsf{NI}}
+\newcommand{\BC}{\mathsf{BC}}
+\hypersetup{pdftitle={Logical Observers and the Structure of Propositions},
+  pdfauthor={OpenAI Codex, prompted by Daniel Kodsi},
+  pdfsubject={A hierarchy of separation principles over H}}
+\begin{document}
+\renewcommand{\papertitle}{Logical Observers and the\\Structure of Propositions}
+\renewcommand{\paperauthor}{OpenAI Codex, prompted by Daniel Kodsi}
+\renewcommand{\paperdate}{Draft: October 24, 2026}
+\renewcommand{\papernote}{A hierarchy of separation principles over $\Hlogic$}
+\makestyledtitle
+
+
+\begin{abstract}
+
+Propositional identity can be investigated through the operations capable of revealing distinctions. A separation principle says that propositions are identical when every eligible operation gives them the same truth value. Its force depends on what those operations must preserve. Starting with the minimal classical higher-order logic $\Hlogic$, I explain how increasingly coordinated forms of observation yield semilattices, Boolean structure, quantifier bounds, and eventually Classicism. Both Barcan directions already follow from a restricted universal separation principle that does not suffice for Classicism. Further restrictions generate distinct branches involving reversibility, finite images, endpoint range, and necessity. The hierarchy culminates in a representation theorem: over the abstraction-free core of $\Hlogic$, full typed endpoint separation together with boxed Infinitary Comprehension characterizes full standard relational hierarchies, in ZF. Abstraction is reconstructed, worlds emerge as propositional atoms, propositions become all subsets of those worlds, and every permitted higher-type function is represented. This connects an intrinsic account of logical observation with the full possible-worlds framework and identifies the principles responsible for its structure.
+
+
+\end{abstract}
+
+\clearpage\tableofcontents\clearpage
+
+\section{Truth and identity}
+
+Two propositions can have the same truth value without being the same proposition. That it is raining and that the door is open might both be true; their agreement leaves much about them unsettled. Even logical equivalence raises a further question. Classical reasoning establishes that a proposition and its conjunction with itself agree in truth. Does it also establish that they are identical? A theory of propositions must explain which such agreements amount to identity, and why.
+
+
+The starting point here is $\Hlogic$, the minimal classical higher-order logic used by Bacon and Dorr. It permits reasoning about propositions, properties, relations, and operations on them. Its logical rules have their classical force, but it does not automatically turn provable equivalence into identity. In particular, an identity between operations is stronger than a claim that their outputs always agree in truth. This leaves room to investigate how much structure different identity principles impose. Classicism, abbreviated $\C$, will enter as one substantive theory within this investigation.~\cite{r1}
+
+
+An observer is an admitted operation taking a proposition as input and returning a proposition. Observation consists in considering whether its output is true; the term carries no psychological or computational commitment. A class separates propositions if any two distinct propositions receive different truth values under at least one member. Equivalently, propositions are identical exactly when every eligible observer agrees on them. Identity implies agreement by substitution; separation asserts the converse. The question is which restricted classes of observers suffice to detect every distinction.
+
+
+With no restrictions on observers, propositional separation is already available in $\Hlogic$. Given a proposition $p$, the operation that sends $q$ to the proposition that $q$ is identical to $p$ distinguishes $p$ from every other proposition. Mere discernibility therefore says little. The interesting question is whether distinctions remain detectable when the observing operations must respect some specified logical structure.
+
+
+An observer need not preserve the current truth of its input. Indeed, if all observers merely repeated that truth value, they could never distinguish two different true propositions. Identity itself is an observer and preserves every logical operation, but it alone cannot reveal distinctions among propositions agreeing in truth. A separating class can contain identity while also including operations that make a currently false proposition true or a currently true proposition false. This freedom is essential to its ability to reveal more than actual truth.
+
+
+The proposal is to investigate identity through this constrained discernibility. Each restriction expresses a conception of which transformations should count as respecting logic. Separation then asks whether those transformations can account for all propositional distinctions. The mathematics traces the structural commitments of different answers; it does not assume that the most restrictive answer must be philosophically preferable.
+
+
+\section{Preserving one operation}
+
+Begin with observers that preserve conjunction. Observing a conjunction must have the same result as conjoining the observations of its two conjuncts. Throughout the main hierarchy, this means identity of the entire composite operations: first conjoin and then observe, or first observe each input and then conjoin. Mere agreement in truth, and identity of outputs at every current input, are weaker requirements whose roles will be distinguished below.
+
+
+Suppose this conjunction-preserving class separates propositions. Every member gives the same truth value to $p$ and to $p$ conjoined with itself. It therefore cannot distinguish those two propositions. Separation identifies them. The same argument gives commutativity and associativity. After observation, the relevant expressions agree by ordinary classical reasoning; separation turns their observational agreement into identity.~\cite[\S\S2--4]{r2}
+
+
+These identities make conjunction a meet operation. To understand the associated order, say that $p$ lies below $q$ when every eligible observer that accepts $p$ also accepts $q$. Separation makes this a partial order: if each proposition lies below the other, the two are identical. Conjunction is their greatest common lower bound. It collects exactly what is below both, measured by the same observers.
+
+
+This order is stronger than the material conditional. Because identity is eligible, $p$ lying below $q$ guarantees that if $p$ is true, $q$ is true. But the order also tests that implication after other permitted observations. It therefore expresses a structural relationship among propositions, rather than their accidental agreement at the current point of evaluation.
+
+
+Requiring observers also to accept the designated true proposition, $\top$, makes it the greatest element of this order. Acceptance suffices: the observer need not send $\top$ identically to $\top$. We obtain a meet semilattice with a greatest element without presupposing Classicism.~\cite[\S2]{r3}
+
+
+Disjunction supplies a parallel branch. Separating observers that preserve it make disjunction a join operation; requiring them to reject $\bot$ makes $\bot$ the least element. Negation introduces another kind of structure. Separation by negation-preserving observers identifies the double negation of a proposition with the proposition itself. Negation becomes an involution, an operation undone by applying it twice. These requirements concern different logical objects. None should initially be treated as a disguised formulation of another.
+
+
+The method is general. If the eligible observers carry some expression to an expression governed by an ordinary truth table, identities valid in that truth table can be tested by all the observers. Separation transfers those agreements back to identities of propositions. Conjunction yields semilattice laws; jointly preserved conjunction and disjunction yield distributive-lattice laws; adding negation yields Boolean structure. The conclusion concerns exactly the operations the observers preserve.
+
+
+That last qualification matters over $\Hlogic$. Conjunction and negation can produce a Boolean algebra with a join defined by the familiar De Morgan expression. They need not identify this derived join with the separately given primitive disjunction. $\Hlogic$ establishes the relevant truth equivalence, but the identity is still at issue. The same distinction will arise between primitive existential quantification and an existential defined using negation and universal quantification.~\cite[\S4]{r2}
+
+
+\section{Quantification and both Barcan directions}
+
+Quantification extends the problem from finite combinations to admitted families. Consider observers that accept $\top$ and preserve universal quantification at a chosen type. Observing that every object has a property must be the same operation as saying that every object has the observed property. A separation principle using just these observers already has substantial consequences over $\Hlogic$. Neither the full Boolean qualification nor Classicism is needed.
+
+
+The universal proposition becomes the greatest lower bound of its instances in the observer order. A proposition lies below the universal exactly when it lies below every instance. This follows directly from universal preservation: an observer accepts the universal exactly when it accepts every instance. Ordinary quantifier reasoning then gives the lower-bound characterization. The families concerned are those supplied by admitted predicates of the chosen type. Nothing here assumes that every externally specified family is available.~\cite[\S3]{r3}
+
+
+The designated greatest element yields a particularly significant consequence:
+\[
+(\forall x\,Fx)=\top \quad\longleftrightarrow\quad \forall x\,(Fx=\top).
+\]
+
+Both directions have short observational explanations. If every instance is $\top$, every eligible observer accepts every instance. Universal preservation makes it accept the universal, so separation identifies the universal with $\top$. Conversely, if the universal is $\top$, every eligible observer accepts it. Universal preservation makes every observer accept each instance. Separation therefore identifies each instance with $\top$.
+
+
+Define necessity, as in the framework, by identity with $\top$: a proposition is necessary when it is $\top$. The displayed biconditional is then the conjunction of $\BF$ and $\CBF$, the Barcan Formula and its converse. $\BF$ moves from every instance being necessary to the universal being necessary. $\CBF$ moves in the opposite direction. Restricted universal separation supplies both, already over $\Hlogic$. This is an early consequence of observational structure, not something that must await the recovery of $\C$.
+
+
+This definition of necessity does not import Classicism's modal laws. Both directions follow directly from separation and universal preservation, without assuming normal modal logic or a possible-worlds semantics.
+
+
+Nor do these formulas exhaust the quantifier principle. The lower-bound account also gives vacuous quantification, interchange of listed universal quantifiers, and invariance under admitted surjective changes of index. There are $\Hlogic$ models in which both Barcan directions hold while universal separation fails. Conversely, universal separation can hold without $\C$. Thus the restricted observer principle has a definite place between bare logical reasoning and a more comprehensive identity theory.~\cite[\S\S3--5]{r3}
+
+
+Existential preservation supplies the dual structural idea: existential quantification is a least upper bound of its admitted instances. With $\bot$ rejection, the existential is $\bot$ exactly when every instance is $\bot$. Over $\Hlogic$ this is its own endpoint law. Identifying it with the familiar modal dual of the universal Barcan law requires the relevant identities linking negation and the two quantifiers. Truth-functional duality alone does not supply those identities.~\cite[\S2]{r2};~\cite[\S2]{r4}
+
+
+\section{Why the hierarchy branches}
+
+Separate preservation principles do not automatically coordinate the structures they produce. A conjunction-preserving family can separate every pair, and a universal-preserving family can also separate every pair, while no family preserving both does so. The two families can determine different orders on the same propositions. Their separate success gives no reason for conjunction and universal quantification to compute bounds in one common order.
+
+
+Requiring joint preservation adds precisely that coordination. The universal must now be a greatest lower bound in the order already determined by conjunction. Familiar interaction identities follow, including the identity between a fixed proposition conjoined with a universal and the universal of its conjunction with each instance. Such identities express agreement between structures that separate principles leave apart.~\cite[\S3]{r3}
+
+
+A small model makes the distinction concrete. Take four propositions arranged in the usual Boolean diamond, with two incomparable middle elements. Let conjunction be meet in that diamond, but let universal quantification take minima in a chain that orders one middle element below the other. Appropriate tests separate the diamond structure, and different tests separate the chain structure. Both Barcan directions hold. Yet conjunction and quantification disagree about the bound of a family containing the two middle elements. No common preserving class can separate everything. The higher domains of this model contain all functions of their permitted types, so the failure is not caused by a shortage of candidate functions.~\cite[\S5]{r3}
+
+
+There is a related construction for conjunction and disjunction: one determines a diamond order and the other a chain order. Each has its own separating family, even with strong additional qualifications. Joint preservation would force absorption, which fails in the model. A conjunction of separation principles is therefore weaker than separation by observers satisfying the conjunction of their requirements.~\cite{r5}
+
+
+Figure 1 shows a small part of this structure. Its universal qualification is at the propositional type; every displayed observer class accepts $\top$. ``Both separate principles'' allows different witnesses for the two preservation requirements. ``Joint separation'' requires the same witnessing observers to preserve both.
+
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm,
+    every node/.style={align=center,font=\small,inner sep=5pt},
+    every path/.style={-{Stealth[length=2mm]},line width=.55pt}]
+  \node (top) at (0,0) {$\C+\BF_t$};
+  \node (c) at (-3.3,-1.3) {$\C$};
+  \node (j) at (2.5,-1.3) {$J$\\Joint preservation};
+  \node (both) at (2.5,-2.8) {$M$ and $Q$\\Both separate principles};
+  \node (m) at (-3,-4.2) {$M$\\Conjunction separation};
+  \node (q) at (3,-4.2) {$Q$\\Universal separation at $t$};
+  \node (h) at (0,-5.7) {$\Hlogic$};
+  \draw (top)--(c); \draw (top)--(j); \draw (c)--(m);
+  \draw (j)--(both); \draw (both)--(m); \draw (both)--(q);
+  \draw (m)--(h); \draw (q)--(h);
+\end{tikzpicture}
+
+\caption{A lower fragment over $\Hlogic$. Arrows run from stronger to weaker theories, and each displayed arrow is strict. $M$ is conjunction separation and $Q$ is universal separation at type $t$. $J$ requires joint preservation. $Q$ entails both $\BF$ at $t$ and $\CBF$ at $t$. The full network contains further branches. Source:~\cite[\S\S4--5]{r3}.}
+\end{figure}
+
+This is why a single ladder would misdescribe the investigation. One can add connectives, extend the range of quantifiers, coordinate previously separate structures, or demand stronger forms of preservation. These changes need not have the same effect. The fact that one formulation mentions more operations does not by itself determine its strength relative to a differently organized formulation.
+
+
+The choice of base also changes the comparisons. Over $\C$, the relevant connective identities are already available. The conjunction-only separation principle is then a theorem, and the restricted universal principle, with or without joint conjunction preservation, is exactly the corresponding $\BF$ package. Over $\Hlogic$ those equivalences do not hold. Starting with $\C$ would erase distinctions whose explanation is part of the point of the hierarchy.~\cite[\S4]{r3}
+
+
+\section{Recovering Classicism}
+
+The preceding principles recover particular laws by transporting particular patterns of reasoning through observers. This suggests a comprehensive version. Require observers to preserve the primitive Boolean operations and both quantifier families at every type needed for a given argument. Add the conditions that make observed equality obey reflexivity and substitution. Then every finite $\Hlogic$ proof can be transported through a suitably qualified observer.~\cite[\S3]{r6}
+
+
+Equality is itself proposition-valued, so its observed instances must support the equality rules. Countermodels show that Boolean and quantifier preservation alone do not ensure this: strong separation can hold while the equality propositions prevent recovery of $\C$.~\cite[\S\S5--6]{r6}
+
+
+Now take an equivalence provable in $\Hlogic$. Every observer qualified for the finite proof agrees on its two sides. Separation identifies them. To recover the full principle of Logical Equivalence, this reasoning must also apply to relations obtained by abstracting over free arguments. The comprehensive separation principle therefore ranges over relational types as well as propositions. It tests a relation by observing its proposition-valued applications at each argument tuple.
+
+
+Full relational separation is equivalent to propositional separation plus Functionality. If two operations return identical values on every argument, no observer can distinguish their applications, so full separation identifies the operations. Conversely, Functionality lifts propositional separation through their argument places.~\cite[\S2]{r6}
+
+
+Call the resulting full ordinary logical separation theory $\OS$. Over $\Hlogic$, $\OS$ yields $\C$, all Barcan instances, and Functionality. $\CBF$ has already appeared under the restricted universal principle and is also a theorem of $\C$. Classicism is reached because the qualified observers can transport the entire relevant proof, rather than just a connective truth table or a quantifier rule.
+
+
+The proof retains $\C$'s original condition: the equivalence must be provable in $\Hlogic$. Separation is used afterward to infer identity; it does not turn equivalences proved under additional hypotheses into instances of Logical Equivalence.
+
+
+For the full theory $\OS$, the three preservation requirements yield equivalent separation theories over $\Hlogic$: agreement in truth, identity of outputs at every input, and identity of the composite operations. These remain different conditions on individual observers; Appendix $\C$ explains how witnesses for the weaker theory can be replaced by strongly preserving ones.~\cite[\S4]{r6}
+
+
+The result also leaves $\OS$ stronger than the package of structural consequences just listed. $\C$ and $\BF$ do not by themselves ensure that fully logical observers separate. A theory can possess the familiar algebraic and quantifier laws while its admitted logical operations fail to expose some distinctions. Separation concerns the availability and effectiveness of transformations as well as the laws governing their inputs.~\cite[\S7]{r9}
+
+
+\section{Representation and the admission of observers}
+
+There is a simple representation behind all these arguments. Associate with a proposition the collection of eligible observers that accept it. Separation says that distinct propositions have different such profiles. Conjunction preservation turns conjunction into intersection of profiles; disjunction becomes union; negation becomes complement. Universal and existential preservation turn the corresponding admitted families into intersections and unions. The structure of propositions is faithfully displayed in the pattern of possible observations.~\cite[\S2]{r2}
+
+
+This embedding need not contain every subset of the observer class. Endpoint separation will later supply the world interpretation.
+
+
+The converse raises an internal existence question: does an abstract Boolean algebra admit enough logical observers to separate its propositions? Functions available in the mathematics used to describe a model need not belong to its higher-order domains. Principles governing the admission of operations therefore matter.
+
+
+Zorn's Lemma gives one route. Over $\Hlogic$, an explicitly stated preorder version at the type of proposition predicates supplies admitted prime filters in a distributive lattice. Membership in such a filter is a test preserving conjunction and disjunction in truth, and enough of these tests distinguish unequal propositions. This makes the distributive-lattice equations sufficient for material joint separation under that additional premise. The corresponding Boolean argument adds complement preservation. It does not supply preservation of all quantified families.~\cite{r7}
+
+
+Plenitude says that a total single-valued admitted relation has a representing operation, at the permitted output types. Its propositional instance concerns relations assigning one proposition to each proposition. It can turn truth classifications into admitted operations and, with the relevant preservation arguments, convert weaker tests into observers preserving identities.
+
+
+Boolean Completeness supplies greatest lower bounds for admitted families at the specified type. The type matters: a family of propositions and a family of proposition operations make different demands on the available structure. The stronger separation principles will make this difference explicit.
+
+
+These are distinct additions to $\Hlogic$, each supporting a different construction.
+
+
+\section{Reversibility and range}
+
+Once full logical separation is in place, the next questions concern how the observers reveal differences. Two especially natural restrictions point in different directions. One asks whether an observation can be undone. The other asks how many distinct outputs an observer needs. Their interaction exposes a substantial part of the higher hierarchy.
+
+
+A reversible observer has an admitted inverse that is logically qualified for the same requirements. Both composites are the identity operation. Reversible separation says that every propositional distinction can be brought into a difference of truth value by a transformation that retains all the information needed to recover the original input. It describes a richness of logical symmetry.
+
+
+Reversible separation entails $\Cfive$, the extension of $\C$ asserting necessarily that distinct entities are necessarily distinct. It also makes ordinary separation necessary. Nevertheless it need not make the proposition algebra atomic or supply Actuality, a true proposition entailing every truth.~\cite[\S\S4--7]{r9}
+
+
+An atom is a non-bottom proposition with no smaller non-bottom part in the Boolean order. An atomic algebra has an atom below every non-bottom proposition. The finite-support permutation model shows why reversibility does not ensure this. Its propositions depend on only finitely much permutation information. Admitted finite permutations can move any given distinction into view, but fresh information can always split a nonzero proposition further. The observers separate reversibly, while there are no atoms. There is also no single true proposition entailing all actual truths.~\cite[\S3]{r14};~\cite[\S7]{r9}
+
+
+Now require each separating observer to have finitely many outputs. This is a restriction on each observer's image, with no common numerical bound imposed across the class. It neither requires an inverse nor assumes that there are only finitely many propositions. A two-object chain model has finite-image logical separation but fails necessary distinctness, so it fails reversible separation. The permutation model supplies the converse separation: reversible separation holds there, but finite-image logical separation fails.~\cite[\S\S5--7]{r9}
+
+
+Their conjunction has an exact structural meaning. Reversible separation together with finite-image separation is endpoint separation. The latter requires outputs identical to $\top$ or $\bot$ and is equivalent over $\Hlogic$ to $\Cfive$ plus propositional Atomicity. Thus finite range and reversible access are independent restrictions whose combination reaches the atomic region.
+
+
+Under $\Cfive$, every qualified endpoint observer corresponds to an atom, and every atom supplies an observer: it asks whether that atom entails the input. Atomicity ensures that enough of these tests exist to distinguish all propositions. Since an atom decides each proposition, it can be understood as a complete possible scenario relative to the admitted domain. Endpoint separation thus gives a precise basis for possible-world language through the atom--observer correspondence.~\cite[\S3]{r9}
+
+
+The interaction is stronger than the conjunction theorem initially suggests. Under reversible separation, one suitably qualified observer with finite image suffices for endpoint separation, even if that observer does not itself separate anything. Its image supplies an atom; reversibility can move an atom into the actual truth region and then into every nonzero part. Consequently the algebra is either atomless or fully atomic. A single atom, and likewise Actuality, settles the dichotomy in favor of the endpoint region.~\cite[\S6]{r9}
+
+
+The admission principles of the preceding section now acquire a precise place. $\OS$ together with propositional Plenitude is exactly endpoint separation. An admission principle that helps normalize tests below $\C$ therefore imposes a major structural commitment when combined with the complete logical qualification.~\cite{r8}
+
+
+Boolean Completeness has a more varied effect. Even $\Cfive$, reversible separation, and necessary propositional Boolean Completeness can coexist with an atomless proposition algebra. Completeness at the type of proposition operations is stronger in the relevant respect: over $\Cfive$ it supplies the propositional Plenitude instance. With $\OS$ it reaches endpoint separation. The difference reflects what the bound is a bound of: propositions in one case, operations in the other.~\cite[\S4]{r13}
+
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm,
+    every node/.style={align=center,font=\small,inner sep=5pt},
+    every path/.style={-{Stealth[length=2mm]},line width=.55pt}]
+  \node (ext) at (0,0) {Extensionality};
+  \node (end) at (0,-1.2) {Endpoint separation};
+  \node (fin) at (-3.1,-2.6) {Finite-image separation};
+  \node (rev) at (3.1,-2.6) {Reversible separation};
+  \node (box) at (3.1,-4) {Native-necessity separation};
+  \node (os) at (0,-5.5) {Ordinary logical separation};
+  \draw (ext)--(end); \draw (end)--(fin); \draw (end)--(rev);
+  \draw (fin)--(os); \draw (rev)--(box); \draw (box)--(os);
+\end{tikzpicture}
+
+\caption{Selected stronger theories over $\Hlogic$. Every node uses full relational logical separation. Each displayed arrow is strict. Finite-image separation and reversible separation are incomparable; their conjunction is endpoint separation. Native-necessity separation is an additional branch requirement. Missing arrows assert no further comparison. Sources:~\cite[\S\S3--7]{r9} and~\cite[\S7]{r10}.}
+\end{figure}
+
+\section{Necessity and persistence}
+
+Preserving the Boolean operations and quantifiers does not automatically mean preserving the native necessity operation. The latter is defined by identity with $\top$. Requiring an observer to commute with it is an additional condition: observing whether a proposition is necessary must be the same operation as asking whether the observed proposition is necessary.
+
+
+Separation by such observers entails necessary $\BF$ and necessary Functionality. It also entails the modal principle usually called .2: if a proposition could be necessary, it is necessarily possible. These are stronger modal consequences than ordinary $\OS$ provides. Yet native-necessity separation need not yield $\Cfive$ and need not make ordinary separation necessary. A full infinite-chain model supports separating shift operations that commute with necessity while necessary distinctness fails. A further model has the required separation at its root while an accessible point fails even ordinary separation.~\cite[\S\S2, 5--6]{r10}
+
+
+The contrast identifies two different demands. Commutation with necessity concerns how each observer relates to one operation. Necessary separation concerns whether an adequate family is available throughout the modal range. The first does not automatically secure the second. Similarly, even when an observer's qualification persists, the assertion that qualified observers separate can fail elsewhere.
+
+
+Under $\Cfive$, the native-modal restriction has an exact algebraic characterization: a qualified logical observer commutes with necessity precisely when it is injective. It then loses no distinctions between its outputs. This gives a strict chain, with $\Cfive$ retained, from reversible separation to injective separation to ordinary separation. The middle condition is also native-necessity separation. Outside $\Cfive$, the identification between injectivity and modal preservation fails.~\cite[\S\S3, 7]{r10}
+
+
+Injectivity raises a further admission question: can the inverse on the image be extended to a qualified observer on the whole domain? Whether injective logical separation entails separation by observers with such left inverses remains unresolved here.
+
+
+Other restrictions show that apparent complexity does not measure strength. An idempotent observer changes nothing after its first application. One might expect restricting to such observers to weaken their detecting power. Nevertheless ordinary logical separation can always be witnessed by idempotent observers. A local modification of a distinguishing observer preserves its logical qualification, keeps the relevant distinction visible, and makes repeated application stable. The extra restriction does not strengthen $\OS$.~\cite[\S8]{r9}
+
+
+Factivity behaves differently. If an observer preserves negation and never makes a false proposition true, it must also preserve every current truth: apply factivity to the negation of a true proposition. A factive separating class can therefore distinguish only differences in actual truth. Full factive separation yields Extensionality, identifying coextensive relations and, in particular, propositions with the same truth value. Ordinary separation together with uniqueness of the entire qualified observer class yields the same result, since identity is already a member. These are claims about a separating class or all qualified observers, not about the uniqueness of a specially selected operation.~\cite[\S2]{r9}
+
+
+\section{Finite observation and global symmetry}
+
+Finiteness introduces further distinctions. An observer can have only two outputs while an infinite collection of such observers distinguishes infinitely many propositions. By contrast, a fixed family of $n$ observers supplies at most $2^n$ different truth profiles. If that family separates all propositions, it bounds the entire proposition domain. The number of outputs of each operation and the number of operations jointly used are different measures.
+
+
+The internal version of this argument uses the framework's Frege finiteness predicate. It proves over $\Hlogic$ that an internally finite admitted family can separate only an internally finite admitted class of propositions. It does not replace internal finiteness by a fixed external enumeration. Applied to full reversible separation, internal finiteness of the entire qualified reversible class is equivalent to $\Cfive$ together with internal finiteness of the proposition domain, and also to endpoint separation with that finiteness. Each formulation allows different finite sizes.~\cite{r11}
+
+
+There is a second way in which restrictions on a class of observers constrain the size of the proposition domain. Under reversible separation, requiring all qualified reversible observers to commute forces at most four propositions. The force comes from the richness of available symmetries: enough mutually disjoint nonzero propositions permit local permutations whose induced reversible observers do not commute. A global commutativity law rules those permutations out.~\cite[\S\S3--5]{r12}
+
+
+More generally, any fixed nontrivial group equation imposed on all qualified reversible observers gives an exact finite bound determined by the finite symmetric groups satisfying it. The requirement concerns the entire reversible class; selecting a separating family whose members satisfy the equation would be a different principle.
+
+
+\section{Recovering the full possible-worlds framework}
+
+The hierarchy has so far explained which structures different kinds of observation impose. There is a further question: how can these principles recover the full possible-worlds framework? Endpoint separation supplies the worlds as propositional atoms. Comprehension supplies the relations and operations needed to realize every specified pattern across those worlds. Together they give a characterization of the entire hierarchy.
+
+
+The relevant comprehension principle retains a familiar form. A specification of when a relation holds has a corresponding relation, with agreement required necessarily. Infinitary Comprehension allows the specification to contain arbitrary set-sized conjunctions and disjunctions. Its schema is
+\[
+\exists R^{\sigma_1\cdots\sigma_n t}\;\Box\forall x_1\cdots x_n\,\bigl(R[\bar x]\leftrightarrow A\bigr).
+\]
+
+The argument tuple is finite and may be empty, in which case the witness is a proposition. The matrix $A$ may be any admitted well-founded, set-sized infinitary formula, with arbitrary simultaneous parameter families; $R$ does not occur free in $A$. The infinitary connectives have their ordinary meanings. The principle says that every such specification has a corresponding intension: a relation whose extension follows the specification at every world.~\cite[\S1]{r18}
+
+
+To see the full explanatory force of the result, begin with the abstraction-free core of $\Hlogic$. This retains classical typed application, equality, Boolean formula constructors, and quantifier binders, with necessity defined by identity with $\top$. It initially has no abstraction operator. Together with separation, the finite instances of the displayed comprehension schema supply that operator, along with the first-class logical operations. Thus the same principle that eventually supplies unrestricted fullness also builds the language in which the preceding hierarchy was expressed.
+
+
+\noindent\textbf{Representation theorem.} \emph{Over the $\lambda\text{-free}$ base of $\Hlogic$, full typed endpoint separation together with boxed Infinitary Comprehension characterizes the full standard relational hierarchies, up to canonical typed representation. The theorem holds in ZF.}
+
+
+In the resulting representation, worlds are the propositional atoms and a proposition is the set of worlds at which it is true. Every subset of the world set is represented. The individual domain can be any nonempty set, and every function of a permitted higher type is present. Quantifiers range over these fixed domains, and necessity ranges over all the worlds. A designated world gives current truth. Conversely, every hierarchy of this form satisfies the two principles. The argument is given in Appendix E, combining the finite reconstruction with the canonical representation.~\cite[\S\S2--5]{r16};~\cite{r17};~\cite[\S4]{r18}
+
+
+There are three steps. First, separation and Boolean preservation establish the connection between necessary agreement and identity. Finite comprehension can then represent a formula as an operation with the required application law. Applied systematically, this reconstructs abstraction and the logical operations, yielding Classicism. Quantifier preservation supplies the Barcan laws; the endpoint condition supplies stable distinctness and atoms. This is the finitary structure already reached in the earlier hierarchy.
+
+
+Second, comprehension makes every specified collection available to that structure. Internal Boolean Completeness can join the members of an admitted property. Infinitary comprehension supplies a property for any externally specified family of atoms, so that every such family has a join. At the propositional level, joining any chosen collection of worlds gives exactly the proposition true at those worlds. This is why the proposition domain is the full powerset.
+
+
+Third, the same construction works at higher types. Fix a world and an argument tuple. Finite abstraction supplies the relation true just at that world on that tuple. Now take any set of these world-and-argument points and join their singleton relations. The result has exactly the desired support. Every relational intension is therefore represented. A higher-type function determines such a support through the values it assigns, and the construction supplies an operation with precisely those values.
+
+
+The proof uses no Axiom of Choice. It takes all atoms as worlds, represents each support by its unique identity class, and uses all representatives when passing through a quotient. These are canonical constructions available in ZF. Nor does the theorem impose an infinite domain: Infinity remains a further principle. Its force is fullness, whatever the size of the underlying domains.
+
+
+\section{The philosophical choices}
+
+This approach makes the role of identity especially clear. $\Hlogic$'s classical truth conditions do not settle the identity of its logical objects. Separation bridges that gap by ruling out distinctions invisible to a specified class of operations. The bridge can be narrower than $\C$, and different bridges can agree on some consequences while disagreeing elsewhere. The Barcan results are a useful example: one can secure their quantifier--necessity interaction while leaving other identities required by Classicism unsettled.
+
+
+A reason to accept separation is that propositional distinctions should be detectable by transformations preserving the relevant logic. A rival view may allow distinctions that every such transformation leaves invisible, or contest which operations the domain should contain. The results identify the structural commitments of these positions; their philosophical merits remain to be assessed.
+
+
+Several comparisons remain unsettled in this investigation. They include the joint effect of propositional Boolean Completeness and the relevant Zorn principle with ordinary separation, and intrinsic characterizations of some infinite lower branches without further admission assumptions.~\cite[\S10]{r15}
+
+
+The full characterization gives this approach a foundational application. Someone who accepts endpoint discernibility and the representation of arbitrarily specified intensions thereby accepts the structure of the full possible-worlds framework. Worlds, powersets, and higher-type function spaces emerge together from that commitment. The finite stages explain how the structure is obtained; comprehension explains its fullness. These stages also locate meaningful weaker positions for someone who accepts some of the principles but stops short of the complete package.
+
+
+\clearpage\styledappendices
+
+\section{Framework and separation}
+
+Types start with $e$ and $t$; an arrow $\sigma\to\tau$ is permitted only when $\tau$ is relational, that is, $\tau\ne e$. In particular, observers have type $t\to t$. $\top$ and $\bot$ retain the fixed abbreviations $a\lor\neg a$ and $a\land\neg a$, with $a:=\forall p\,p$. Put $\Box p:=(p=\top)$. Over $\Hlogic$, this abbreviation alone does not import $\C$'s modal laws. $\C$ is the smallest $\Hlogic$-theory containing Logical Equivalence, which identifies abstractions of $\Hlogic$-equivalent formulas. The theoremhood condition remains fixed when optional premises are added.~\cite{r1}
+
+
+For an admitted qualification $R(E)$, propositional separation is
+\[
+S[R]:=\forall p,q\,\bigl[p=q\leftrightarrow\forall E\bigl(R(E)\to(Ep\leftrightarrow Eq)\bigr)\bigr].
+\]
+
+For $\tau=\sigma_1\cdots\sigma_n t$, its relational version replaces $p,q$ by $X,Y$ of type $\tau$ and compares $E(X[z_1,\ldots,z_n])$ with $E(Y[z_1,\ldots,z_n])$ at every current argument tuple. The empty tuple gives the propositional case. Full separation ranges externally over all relational output types. It is equivalent over $\Hlogic$ to propositional separation plus Functionality, for any fixed qualification or nonempty family of qualifications.~\cite[Theorem 1]{r6}
+
+
+Write $A(E)$ for $E\top$ being true, and $Z(E)$ for $E\bot$ being false. $M,V,N$ denote preservation of conjunction, disjunction, and negation. $Q_\sigma$ and $P_\sigma$ denote preservation of universal and existential quantification at type $\sigma$. Each strong clause is an identity of composite operations. For example,
+\begin{gather*}
+(\lambda p,q.\,E(p\land q))=(\lambda p,q.\,Ep\land Eq),\\
+(\lambda F.\,E(\forall x^\sigma\,Fx))=(\lambda F.\,\forall x^\sigma\,E(Fx)).
+\end{gather*}
+
+The pointwise tier requires identity of the displayed outputs for every current input; the material tier requires only their truth equivalence. Full-operation identity entails pointwise identity, which entails material preservation. They are not interchangeable observer predicates over $\Hlogic$.
+
+
+For a finite external list $\Delta$ of types, $\Good_\Delta$ contains the three Boolean clauses, $Q_\sigma$ and $P_\sigma$ for $\sigma$ in $\Delta$, and the translated equality clauses
+\begin{gather*}
+\forall x^\sigma\,E(x=x),\\
+\forall x,y^\sigma\,\forall F^{\sigma t}\,\bigl[E(x=y)\to\bigl(E(Fx)\to E(Fy)\bigr)\bigr].
+\end{gather*}
+
+$\OS$ is full relational separation for every finite $\Delta$. The displayed equality clauses are used in the direct finite-transport argument and follow already over $\C$. All type lists are external and finite; no single observer is required by the schema to satisfy one infinite conjunction of type laws. A boxed schema means the separately boxed, object-variable-closed instances.~\cite{r6};~\cite[\S1]{r9}
+
+
+\section{Restricted quantification over \texorpdfstring{$\Hlogic$}{H}}
+
+Fix a type $\sigma$. Assume only $\Hlogic$ and $S[A\land Q_\sigma]$. For any current predicate $F$, if every $Fx$ is $\top$, an eligible $E$ accepts every $Fx$, and $Q_\sigma$ makes $E(\forall x\,Fx)$ true. Since it also accepts $\top$, separation gives $(\forall x\,Fx)=\top$. Conversely, if $(\forall x\,Fx)=\top$, each eligible $E$ accepts that universal; $Q_\sigma$ gives $E(Fx)$ for every $x$. For each fixed $x$, every eligible observer therefore agrees on $Fx$ and $\top$, so separation gives $Fx=\top$. Thus
+\[
+\forall F^{\sigma t}\,\bigl[\Box(\forall x^\sigma\,Fx)\leftrightarrow\forall x^\sigma\,\Box Fx\bigr].
+\]
+
+These are $\CBF_\sigma$ and $\BF_\sigma$, with no $\C$, $\NI$, native-Box commutation, Boolean preservation, or relational Functionality premise. The proof uses only the material content of $Q_\sigma$, so that weaker qualification also suffices. A finite list gives the corresponding instances, and the external schema gives all types. It does not box these Barcan instances.~\cite[\S3]{r3}
+
+
+The observer order relates $p$ to $q$ when every eligible observer accepting $p$ accepts $q$. Separation makes this order antisymmetric. Universal preservation says that a proposition is below the universal exactly when it is below every instance, and $A$ makes $\top$ greatest. If the same class also preserves conjunction, $p$ is below $q$ exactly when $p\land q=p$. The quantifier bounds then belong to that conjunction order. Separate separating classes need not have the same order. The diamond-meet/chain-universal construction in~\cite[\S5]{r3} proves the difference even with all $\BF$ and $\CBF$ instances and Functionality.
+
+
+Over $\C$, for each finite $\Delta$, $S[A\land Q_\Delta]$, $S[A\land M\land Q_\Delta]$, and $\BF_\Delta$ are equivalent. The converse uses a conditional principal observer: under $\BF_\Delta$ it has the truth profile of $p\mapsto\Box(a\to p)$, and otherwise it has identity's profile. Discharging the condition yields unconditional preservation theorems; $\C$ then supplies the whole-operation identities. This construction does not apply Logical Equivalence to an equivalence proved under an undischarged optional hypothesis.~\cite[\S4]{r3}
+
+
+\section{Complete preservation and stronger restrictions}
+
+Finite $\Hlogic$-proof transport uses the primitive preservation laws and the translated equality rules occurring in the proof. Full separation turns transported $\Hlogic$ equivalences into the abstraction identities defining $\C$. Full typed material, pointwise, and whole-operation $\OS$ are equivalent: recover $\C$ from material $\OS$, replace $E$ by the operation with value $(K(E)\land Ep)\lor(\neg K(E)\land p)$, and use the unconditional case proof of its laws. When $K(E)$ holds, the replacement retains $E$'s current truth profile. Full separation supplies Functionality.~\cite[\S\S2--4]{r6}
+
+
+The higher restrictions are imposed on $\Good_\Delta$ observers. $\End$ requires every $Ep$ to be identical to $\top$ or $\bot$. $\Rev$ requires an admitted $\Good_\Delta$ inverse $F$ with $E\circ F=I$ and $F\circ E=I$ as operation identities. $\Fin$ requires internal Frege finiteness of the image. $\BoxSep$ requires $(\lambda p.\,E(\Box p))=(\lambda p.\,\Box(Ep))$. Unless qualified otherwise, these names denote their full separation schemas over $\Hlogic$.
+
+
+The principal exact equivalences are
+\begin{gather*}
+\End\quad\Longleftrightarrow\quad\Cfive+\At_t,\\
+\End\quad\Longleftrightarrow\quad\Rev+\Fin\quad\Longleftrightarrow\quad\OS+\Plen_{t,t}.
+\end{gather*}
+
+Here $\Cfive$ is $\C$ plus $\Box\ND$ at every type, not $\C$ plus unboxed $\ND$. $\Rev$ implies $\Cfive$ and necessary $\OS$, and is equivalent to its separately boxed schema. $\Rev$ and $\Fin$ are incomparable. Under $\Rev$, one $\Good$ observer qualified at $\{t\}$ with internally finite image suffices for $\End$. Over $\Cfive$, $\Good$ endpoint observers correspond to atoms by
+\[
+a\longmapsto(\lambda p.\,\Box(a\to p)),\qquad E\longmapsto\forall p\,(Ep\to p).
+\]
+
+An atom supplies each finite-list qualification. Conversely, the diagonal proposition extracted from an endpoint observer qualified at $t$ is an atom. Atomicity supplies enough principal observers to separate; $\BF$ and Functionality provide the full relational lift.~\cite[\S\S3--6]{r9}
+
+
+$\BoxSep$ implies $\C$, $\OS$, necessary $\BF$, necessary Functionality, and .2. Over $\Cfive$, individual Box commutation is equivalent to injectivity for every $\Good_\Delta$ observer. No qualified inverse is inferred from that equivalence. Full factive separation is Extensionality; so is $\OS$ together with uniqueness of $\Good_\Delta$ for any one fixed finite $\Delta$. Idempotent separation, in contrast, is equivalent to ordinary $\OS$.~\cite[\S\S2, 8]{r9};~\cite{r10}
+
+
+\section{Admission and finiteness}
+
+The Zorn converse cited in the main text is over $\Hlogic$ with the explicit preorder-Zorn instance at type $tt$. It concerns admitted predicates ordered by current inclusion and supplies material lattice and Boolean characters. Propositional Plenitude can normalize these to pointwise observers; the indicated local Functionality instances give whole-operation identities. Full relational characterizations add all Functionality. No quantifier preservation is inferred from the finite-operation character theorem.~\cite[\S\S1--6]{r7}
+
+
+The completeness distinction is between $\BC$ at $t$ and $\BC$ at $tt$. The finite-colour model has $\Cfive$, necessary $\Rev$, and necessary $\BC$ at $t$, but is atomless and fails Actuality and $\End$. It also fails Zorn at $t$, so it does not settle the joint $\BC$-at-$t$ plus Zorn-at-$t$ question. Over $\Cfive$, $\BC$ at $tt$ supplies Plenitude $\text{at }t,t$ and Actuality; with $\OS$ it gives $\End$.~\cite[\S\S4, 6]{r13}
+
+
+Finite images, internally finite separating families, internal finiteness of the proposition domain, and a fixed external numerical bound are different conditions. For each fixed full separation instance, a finite-family principle may supply its own admitted internally finite family; it need not supply one family for all types and lists. Under $\Rev$, finiteness of the entire $\Good$-at-$t$ reversible class is equivalent to $\Cfive$ plus internal finiteness of all propositions.~\cite{r11}
+
+
+For a fixed nonempty reduced group word $w$, let $k(w)$ be the largest $j$ for which the finite symmetric group on $j$ elements satisfies that word identity. A finite path argument ensures that $k(w)$ exists. Over $\Hlogic$, $\Rev$ plus that identity for every qualified inverse tuple is equivalent to $\Cfive$ plus at most $2^{k(w)}$ propositions. Commutativity has $k=2$, giving at most four. The universal requirement on the qualified reversible class is essential.~\cite[\S\S1--5]{r12}
+
+
+\section{Reconstruction and full representation}
+
+Take the $\lambda\text{-free}$ base described in section 10, full typed endpoint separation, and boxed Infinitary Comprehension. The selected axiom schemas are closed under necessitation. Preserve the original relational types. The observer commutation clauses are identities of whole represented composite operations; finite comprehension supplies their representations. The initial qualification may omit the translated equality guards, which follow after reconstruction.
+
+
+First recover modal K and Intensionality. Since identity with $\top$ entails truth, the boxed definitions of the represented composites already yield their material preservation laws. Every eligible observer accepts $\top$. If $p$ and its implication to $q$ are identical to $\top$, Boolean preservation makes every eligible observer accept $q$; separation from $\top$ gives $q=\top$. This is K for the native necessity. If the biconditional between $p$ and $q$ is $\top$, Boolean preservation makes their observed truth values agree, so separation gives $p=q$. Thus propositional Intensionality holds. Boxed universal instantiation follows by necessitating the ordinary instantiation theorem and applying K. Applied to necessary coextension, it gives necessary agreement at each argument tuple, hence identity of the output propositions. Full typed separation then identifies the relations themselves. The resulting laws are
+\begin{gather*}
+\Box(p\leftrightarrow q)\;\longrightarrow\;p=q,\\
+\Box\forall x_1\cdots x_n\,\bigl(X[\bar x]\leftrightarrow Y[\bar x]\bigr)\;\longrightarrow\;X=Y.
+\end{gather*}
+
+The same separation argument gives Functionality from pointwise identities. For a finite comprehension witness, boxed instantiation followed by Intensionality upgrades its necessary pointwise equivalence to the required application identity. Applying this construction to the logical formula constructors and to a finite typed combinator basis reconstructs the logical objects and abstraction. The finite reconstruction theorem supplies their conversion laws and $\C$ with its original Logical Equivalence gate. Its first-class necessity operation is represented by the finite matrix $p=\top$.~\cite[\S\S2--6]{r17}
+
+
+Quantifier preservation now gives $\BF$. Endpoint separation gives necessary distinctness and then $\Cfive$; the established endpoint characterization gives Atomicity. In particular it supplies the canonical constant-domain world representation, all-type internal Boolean Completeness, and the unique currently true atom.~\cite[\S3]{r9};~\cite[\S2]{r16}
+
+
+Let $W$ be the set of proposition atoms and let $D_\sigma$ denote the current identity quotient at type $\sigma$. For a relation $X$ of type $\sigma_1\cdots\sigma_n t$, its support is
+\[
+\beta_\tau(X)=\{(w,\bar x):w\in W\text{ and }w\le X[\bar x]\}.
+\]
+
+Atomicity and Functionality make this representation injective. The Barcan laws give the quantifier clauses, and necessary identity and distinctness give fixed equality at every world. Truth is membership at the true atom, and native necessity is truth at every atom.~\cite[\S3]{r16}
+
+
+For any external family of atoms, use Infinitary Comprehension on the disjunction of identities with its members. The resulting property represents the family, and internal Boolean Completeness gives its external join. For an arbitrary set $U$ of world-and-argument points, finite abstraction provides a singleton-support relation at each point. Join precisely those singletons whose points lie in $U$. Its support contains $U$; if it contained another point, deleting that singleton would give a strictly smaller upper bound of the same family. Hence its support is exactly $U$. Flattening the relational output type of any external function turns its values into such a support, so the represented operation agrees with that function at every input. Consequently the represented domains have the form
+\[
+D_e=E,\qquad D_t=\mathcal P(W),\qquad D_{\sigma\to\rho}=D_\rho^{D_\sigma}\quad(\rho\ne e).
+\]
+
+All of this is available in ZF. If a desired family is a set of identity classes, index the comprehension instance by all raw representatives above those classes. The parameter assignment then uses each representative itself. After representation, each support has a unique representing identity class, so Replacement supplies the inverse map. No selection of representatives or atoms is required.~\cite[\S\S3, 5]{r16}
+
+
+Conversely, in a full standard hierarchy, each world supplies an admitted endpoint reader, and these readers preserve the whole logical operations and separate every relational type. Well-founded recursion gives the ordinary interpretation of each admitted infinitary matrix under every parameter assignment. Its world-and-argument support is a set, represented by a relation in the full hierarchy. That relation witnesses the boxed comprehension instance. This proves both directions of the characterization.~\cite[\S3]{r16};~\cite[\S4]{r18}
+
+
+\clearpage\section*{References and source notes}
+\addcontentsline{toc}{section}{References and source notes}
+
+The observer results are supported by unpaginated mathematical research notes by OpenAI Codex, developed at Daniel Kodsi's direction. They are cited as ordinary arguments, without a claim of literature priority or formal certification. Published background results retain their own attribution. Electronic reference titles link to the underlying sources.
+
+
+\renewcommand{\bibsection}{}
+\begin{thebibliography}{99}
+
+\bibitem{r1}\label{ref:1}
+\emph{\href{https://doi.org/10.1093/oso/9780192894885.003.0004}{Classicism}}. Bacon, Andrew, and Cian Dorr. 2024. In Peter Fritz and Nicholas K. Jones, eds., Higher-Order Metaphysics, Oxford University Press, pp. 109--190. Local proof locators use the draft of 16 May 2023: \S\S1.1--1.5; \S\S2.1--2.3, pp. 20--34; model constructions \S3.5, pp. 59--61, and Appendix D, pp. 74--79.
+
+\bibitem{r2}\label{ref:2}
+\emph{\href{run:../proofs/h-observer-space/truth-profiles-and-connective-reducts.md}{Truth profiles and connective reducts over H}}. OpenAI Codex. 24 October 2026. \S\S1--4 and 6--8.
+
+\bibitem{r3}\label{ref:3}
+\emph{\href{run:../proofs/meet-quantifier-separation.md}{Conjunction and quantifier separation over H}}. OpenAI Codex. 24 October 2026. \S\S1--7. Direct source for both Barcan directions below C, the joint-preservation comparison, and Figure 1.
+
+\bibitem{r4}\label{ref:4}
+\emph{\href{run:../proofs/observer-lattice.md}{The observer-separation lattice}}. OpenAI Codex. 24 October 2026. \S\S1--5.
+
+\bibitem{r5}\label{ref:5}
+\emph{\href{run:../proofs/h-observer-space/two-orders-model.md}{Full function model with diamond meet and chain join}}. OpenAI Codex. 24 October 2026. \S\S1--5.
+
+\bibitem{r6}\label{ref:6}
+\emph{\href{run:../proofs/h-observer-space/typed-separation-and-classicism.md}{Typed separation and the recovery of Classicism over H}}. OpenAI Codex. 24 October 2026. \S\S1--7.
+
+\bibitem{r7}\label{ref:7}
+\emph{\href{run:../proofs/h-observer-space/zorn-lattice-character-extension.md}{Zorn supplies admitted lattice and Boolean characters over H}}. OpenAI Codex. 24 October 2026. \S\S1--7; the explicit preorder-Zorn premise is specified in \S1.
+
+\bibitem{r8}\label{ref:8}
+\emph{\href{run:../proofs/h-observer-space/plenitude-endpoint-bridge.md}{Propositional Plenitude turns logical separation into endpoint separation}}. OpenAI Codex. 24 October 2026. \S\S1--5. Published ingredients: Bacon and Dorr, draft Propositions 2.13--2.15, pp. 32--33, with the transcription caveat retained in the note.
+
+\bibitem{r9}\label{ref:9}
+\emph{\href{run:../proofs/logical-observer-hierarchy.md}{Logical observer separation and its hierarchy}}. OpenAI Codex. 23--24 October 2026. \S\S1--8.
+
+\bibitem{r10}\label{ref:10}
+\emph{\href{run:../proofs/h-observer-space/native-box-logical-observers.md}{Native-Box logical observers: necessary Barcan and injectivity}}. OpenAI Codex. 24 October 2026. \S\S1--8.
+
+\bibitem{r11}\label{ref:11}
+\emph{\href{run:../proofs/h-observer-space/internally-finite-observer-families.md}{Internally finite separating families and the proposition domain}}. OpenAI Codex. 24 October 2026. \S\S1--6.
+
+\bibitem{r12}\label{ref:12}
+\emph{\href{run:../proofs/h-observer-space/group-identities-reversible-observers.md}{Group identities for every reversible observer}}. OpenAI Codex. 24 October 2026. \S\S1--7.
+
+\bibitem{r13}\label{ref:13}
+\emph{\href{run:../proofs/h-observer-space/finite-colour-propositional-completeness.md}{Finite colour patterns and propositional Boolean completeness}}. OpenAI Codex. 24 October 2026. \S\S1--7.
+
+\bibitem{r14}\label{ref:14}
+\emph{\href{run:../proofs/observer-models.md}{Models separating operator principles}}. OpenAI Codex. Unpaginated research note. \S3 supplies the finite-support permutation observer argument. The underlying construction is attributed in the model record to Bacon and Dorr, Classicism, draft Appendix D, pp. 74--79.
+
+\bibitem{r15}\label{ref:15}
+\emph{\href{run:../proofs/h-observer-space/MAP.md}{The theorem space of observer separation over H}}. OpenAI Codex. 24 October 2026. \S10 records the precisely scoped unresolved comparisons; linked notes supply the proofs and countermodels for the wider atlas.
+
+\bibitem{r16}\label{ref:16}
+\emph{\href{run:../proofs/intrinsic-observer-axioms.md}{Intrinsic observer axioms and full standard hierarchies}}. OpenAI Codex. 24 October 2026. \S\S2--5 give the atomic representation, fullness, and canonical ZF construction.
+
+\bibitem{r17}\label{ref:17}
+\emph{\href{run:../proofs/lambda-free-reconstruction.md}{Lambda-free reconstruction of Classicism}}. OpenAI Codex. 23 October 2026. \S\S1--6 give the finite reconstruction from strong comprehension, modal K, and relational Intensionality; Appendix E supplies the observer bootstrap to those premises.
+
+\bibitem{r18}\label{ref:18}
+\emph{\href{run:../proofs/infinitary-comprehension.md}{Infinitary Comprehension and full standard models}}. OpenAI Codex. 23 October 2026. \S\S1 and 4 give the comprehension schema and full representation. The ZF refinement is in [16].
+
+\end{thebibliography}
+\end{document}

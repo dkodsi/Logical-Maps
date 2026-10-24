@@ -9,9 +9,11 @@ Use the observer qualifications and separation tiers of [Local separation tiers]
 $$
 M_{\rm mat}(E):\quad\forall p,q\,[E(p\land q)\leftrightarrow(Ep\land Eq)],
 $$
+
 $$
 M_{\rm pt}(E):\quad\forall p,q\,[E(p\land q)=Ep\land Eq].
 $$
+
 The qualifications V_mat and V_pt are the analogous disjunction laws. A(E) means ETop is true, and Z(E) means EBottom is false. An optional orientation O is any of no condition, A, Z or A∧Z. Sep_t is propositional separation; FullSep is separation at every relational type.
 
 Let All:=λp.Top and let Fin_t(All) be internal Frege finiteness, as defined in §2. Then, for every such O,
@@ -22,6 +24,7 @@ $$
 \leftrightarrow\mathrm{Sep}_t[O\land M_{\rm pt}].}
 \tag{1}
 $$
+
 The same equivalence holds with V in place of M, and at full typed scope. At full typed scope the whole-operation tier is equivalent to these two tiers as well. At propositional scope, passing to the whole-operation tier requires the local Functionality instances specified in §6.
 
 The normalization uses a least true proposition in the meet order, or a greatest false proposition in the join order. Those extrema suffice even without internal finiteness. The two output values need not be the fixed abbreviations Top and Bottom.
@@ -35,14 +38,17 @@ $$
 \qquad
 \mathrm{Suc}(Z):=\lambda U.\exists y\,[Uy\land Z(\lambda x.Ux\land x\ne y)],
 $$
+
 $$
 \mathrm{FiniteCardinality}_t(Z):=
 \forall W\,[(W\mathbf0\land\forall Y(WY\to W(\mathrm{Suc}(Y))))\to WZ],
 $$
+
 $$
 \mathrm{Fin}_t(\mathrm{All}):=
 \exists Z^{(tt)t}\,[\mathrm{FiniteCardinality}_t(Z)\land Z(\mathrm{All})].
 $$
+
 All these types are admitted. Internal finiteness neither supplies a standard external enumeration nor says that its cardinality witness is a standard numeral.
 
 **Finite-closure lemma.** Suppose an admitted operation m makes the proposition domain a meet semilattice, with x≤y abbreviating m(x,y)=x. Under Fin_t(All), every admitted nonempty predicate C closed under m has a least member.
@@ -56,6 +62,7 @@ W(Z):=\forall U\left[ZU\to
 \forall x\,((Ux\land Cx)\to b\le x)\right]\right)\right].
 \tag{2}
 $$
+
 At cardinality zero, U has no members, so the antecedent asserting a member of U∩C is false. Thus W(0).
 
 For the successor, assume W(Z) and Suc(Z)U. Eliminate the latter existential to obtain y with Uy and Z(V), where V is the exact deletion term λx.Ux∧x≠y. Suppose U∩C is nonempty.
@@ -78,6 +85,7 @@ $$
 u,\qquad\forall p\,[p\to u\land p=u].
 \tag{3}
 $$
+
 Put
 
 $$
@@ -86,6 +94,7 @@ d:=u\land\neg u,
 \qquad\chi(p):=n(n(p)).
 \tag{4}
 $$
+
 Here u is true, d is false, and d≤u. All operations in (4) are explicitly admitted terms.
 
 If p is true, (3) gives u∧p=u, so n(p)=d. If p is false, u∧p is false, hence ¬(u∧p) is true; (3) then gives n(p)=u. Applying this calculation twice gives the identities
@@ -96,6 +105,7 @@ p\ \Longrightarrow\ \chi(p)=u,
 \neg p\ \Longrightarrow\ \chi(p)=d.
 \tag{5}
 $$
+
 Thus χ preserves current truth, takes exactly the two values u,d, and fixes both. In particular χ(χ(p))=χ(p). These are output identities, not just a claim about χ's truth profile.
 
 Given any materially meet-preserving observer E, define
@@ -104,12 +114,14 @@ $$
 E'(p):=\chi(Ep).
 \tag{6}
 $$
+
 Its truth profile is exactly E's. The two values u,d form a two-element meet chain, with u∧u=u, u∧d=d∧u=d and d∧d=d. Therefore the material M law for E and (5) imply, in all four truth cases for Ep and Eq,
 
 $$
 E'(p\land q)=E'p\land E'q.
 \tag{7}
 $$
+
 Hence E' satisfies M_pt. Any A or Z condition on E survives, since E' has the same truth at every input. No equation identifying u with Top or d with Bottom is claimed; endpoint fixing is a different restriction.
 
 This proves the stronger local assertion: under the semilattice equations and (3), **every admitted material meet character has an admitted pointwise meet character with the same truth profile**. In particular, composing χ with the principal tests λp.(a∧p=a) gives explicit pointwise meet separators.
@@ -122,6 +134,7 @@ $$
 \neg v,\qquad\forall p\,[\neg p\to v\lor p=v].
 \tag{8}
 $$
+
 Put
 
 $$
@@ -130,6 +143,7 @@ u:=v\lor\neg v,
 \qquad\chi(p):=n(n(p)).
 \tag{9}
 $$
+
 Then v is false, u is true and v≤u in the join order. If p is false, v∨p=v and n(p)=u. If p is true, v∨p is true and its negation is false, so (8) gives n(p)=v. Thus χ(p)=u when p is true and χ(p)=v when p is false.
 
 The pair v,u is a two-element join chain. Consequently E':=χ∘E turns every materially join-preserving observer E into a pointwise join-preserving observer with exactly the same truth profile. Its A/Z qualifications survive. This is the dual local theorem, again without identifying the pair with the fixed endpoints.
@@ -154,6 +168,7 @@ $$
 (\lambda p,q.E'(p\land q))
 =(\lambda p,q.E'p\land E'q).
 $$
+
 The same argument applies to V. Hence internal finiteness plus these two local Functionality instances collapses all three propositional separation tiers for M or V, with any of the four A/Z orientations.
 
 At full typed scope, [FullSep is propositional separation plus Functionality](typed-separation-and-classicism.md), §2. The local Functionality instances are consequently already available, giving equivalence of material, pointwise and whole-operation full typed separation under Fin_t(All).
