@@ -1156,7 +1156,7 @@
               240
             ]
           ],
-          "sha256": "dadc00f89726580bf3a3f9af6ef3d5e50618c7b201d7e95d854004af4e370121",
+          "sha256": "09ff5092dece0cf8ddc91319db3cf05899b3572876ef9eb91264764b4bf22f44",
           "word_count": 1755
         },
         {
@@ -3592,6 +3592,46 @@
           "word_count": 2230
         }
       ]
+    },
+    {
+      "result_ref": "INTRINSIC-OBSERVER-AXIOMS",
+      "rating": "long",
+      "word_count": 4231,
+      "sources": [
+        {
+          "path": "proofs/intrinsic-observer-axioms.md",
+          "line_spans": [
+            [
+              5,
+              273
+            ]
+          ],
+          "sha256": "d4ffe23ffde2de6545c8e46c8b76269e7495fd199f28564b04b430d23bcc27e4",
+          "word_count": 2769
+        },
+        {
+          "path": "proofs/logical-observer-hierarchy.md",
+          "line_spans": [
+            [
+              143,
+              213
+            ]
+          ],
+          "sha256": "5f29dde8e9f0533b7f3ee5d8a2592e8031168a4844969ae320ce5311016e2966",
+          "word_count": 697
+        },
+        {
+          "path": "proofs/h-observer-space/typed-separation-and-classicism.md",
+          "line_spans": [
+            [
+              34,
+              96
+            ]
+          ],
+          "sha256": "f0867996c0f7f623b5268b2d4acea6622720f030f3603c03da574e18c735f98c",
+          "word_count": 765
+        }
+      ]
     }
   ],
   "groups": [
@@ -3905,7 +3945,7 @@
               240
             ]
           ],
-          "sha256": "dadc00f89726580bf3a3f9af6ef3d5e50618c7b201d7e95d854004af4e370121",
+          "sha256": "09ff5092dece0cf8ddc91319db3cf05899b3572876ef9eb91264764b4bf22f44",
           "word_count": 1755
         },
         {
@@ -4529,10 +4569,11 @@
     {
       "group_ref": "infinitary-comprehension",
       "result_refs": [
-        "INFINITARY-COMPREHENSION"
+        "INFINITARY-COMPREHENSION",
+        "INTRINSIC-OBSERVER-AXIOMS"
       ],
       "rating": "long",
-      "word_count": 8194,
+      "word_count": 12425,
       "sources": [
         {
           "path": "proofs/infinitary-canonical-representation.md",
@@ -4578,6 +4619,39 @@
           ],
           "sha256": "2d880f14d4f65260f3fc7a95d59cae00680f1089b18b9bfef6d94d80240098b7",
           "word_count": 1241
+        },
+        {
+          "path": "proofs/intrinsic-observer-axioms.md",
+          "line_spans": [
+            [
+              5,
+              273
+            ]
+          ],
+          "sha256": "d4ffe23ffde2de6545c8e46c8b76269e7495fd199f28564b04b430d23bcc27e4",
+          "word_count": 2769
+        },
+        {
+          "path": "proofs/logical-observer-hierarchy.md",
+          "line_spans": [
+            [
+              143,
+              213
+            ]
+          ],
+          "sha256": "5f29dde8e9f0533b7f3ee5d8a2592e8031168a4844969ae320ce5311016e2966",
+          "word_count": 697
+        },
+        {
+          "path": "proofs/h-observer-space/typed-separation-and-classicism.md",
+          "line_spans": [
+            [
+              34,
+              96
+            ]
+          ],
+          "sha256": "f0867996c0f7f623b5268b2d4acea6622720f030f3603c03da574e18c735f98c",
+          "word_count": 765
         }
       ]
     },

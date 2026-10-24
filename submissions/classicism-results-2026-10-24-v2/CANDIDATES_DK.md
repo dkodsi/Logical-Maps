@@ -473,16 +473,24 @@ $$
 
 A is any classical formula built using arbitrary set-sized well-founded conjunctions and disjunctions, with any set-sized family of typed parameters; R is not free in A. Each instance holds for every simultaneous parameter assignment. The argument tuple is finite and may be empty.
 
-- With C5, it characterizes full standard relational hierarchies among set-sized models. Atomicity follows; neither Axiom of Infinity is needed. See also the [Arbitrary Atomic Joins characterization](MAIN-RESULTS.md#full-standard-gallin), which assumes propositional Atomicity.
+Over H + full typed endpoint separation, the following unboxed range scheme suffices for the same full-model characterization:
+
+$$
+\exists R^{\sigma t}\,\forall x^\sigma\,\left(Rx\leftrightarrow\bigvee_{i\in I}x=a_i\right).
+$$
+
+Here σ is any original input type, including e; I and the simultaneous parameter family are arbitrary sets. The representation is provable in ZF. See the [intrinsic formulation](proofs/intrinsic-observer-axioms.md).
+
+- With C5, it characterizes full standard relational hierarchies among set-sized models. Atomicity follows; neither Axiom of Infinity is needed. See also the [Arbitrary Atomic Joins characterization](MAIN-RESULTS.md#full-standard-gallin), which assumes propositional Atomicity. The unboxed range formulation over H + endpoint separation has the same original typed reducts; this comparison concerns model classes and canonical expansions.
 - The infinitary logical base gives Actuality and propositional Atomicity. Comprehension supplies arbitrary joins, Boolean Completeness, all-type Atomicity and Rigid Comprehension.
-- In ZFC the full hierarchy gives ☐Functional Choice. Finite full hierarchies show that neither Axiom of Infinity follows.
+- The full-model representation is provable in ZF. Functional Choice holding in every full hierarchy is equivalent to the ambient Axiom of Choice; in ZFC all full hierarchies satisfy ☐Functional Choice. Finite full hierarchies show that neither Axiom of Infinity follows.
 - For every infinite regular κ, a model satisfies C5, Atomicity and all instances with fewer than κ parameters, irrespective of formula size, while failing the unrestricted schema.
 
-**Sources:** [infinitary-comprehension.md](proofs/infinitary-comprehension.md) (§§1–4, 5 (source Theorem 5.3), and 6) · [infinitary-canonical-representation.md](proofs/infinitary-canonical-representation.md) (§5).
+**Sources:** [infinitary-comprehension.md](proofs/infinitary-comprehension.md) (§§1–4, 5 (source Theorem 5.3), and 6) · [infinitary-canonical-representation.md](proofs/infinitary-canonical-representation.md) (§5) · [intrinsic-observer-axioms.md](proofs/intrinsic-observer-axioms.md) (§§1–7).
 
-**Lean certified:** For universe-0 categorical premodels, term-denotation closure + unrestricted original-closed-type Infinitary Comprehension + ☐ND (type t) imply faithful full-standard representation; full standard models satisfy the corresponding infinitary axioms.
+**Lean certified:** For the general boxed schema, term-denotation closure + unrestricted original-closed-type Infinitary Comprehension + ☐ND (type t) give faithful full-standard representation of universe-0 categorical premodels, with a separately certified full-standard converse.
 
-**Evidence:** [Proofs and certificates](evidence/RESULT-INDEX.md#infinitary-comprehension).
+**Evidence:** [Infinitary Comprehension and C5 characterize full standard models](evidence/RESULT-INDEX.md#infinitary-comprehension) · [Endpoint separation and unboxed range comprehension characterize full standard models in ZF](evidence/RESULT-INDEX.md#intrinsic-observer-axioms).
 
 <a id="evaluation-principles"></a>
 ## Evaluation principles

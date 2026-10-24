@@ -140,11 +140,12 @@
       "id": "FULL-GALLIN",
       "question": "Do Boolean Completeness or bounded infinitary joins recover full standard models?",
       "status": "Negative bounds and exact semantic characterization",
-      "established": "C5 plus propositional Atomicity and Arbitrary Atomic Joins characterizes full standard hierarchies. Infinitary Comprehension gives the same characterization with C5 and no separate Atomicity premise. A support construction separates every fixed parameter bound even with unrestricted formula size. The specified uniformly Σ₁-admissible set-coded calculus cannot be complete.",
+      "established": "C5 plus propositional Atomicity and Arbitrary Atomic Joins characterizes full standard hierarchies. Over H, endpoint separation plus unboxed infinitary range comprehension gives this characterization in ZF, without Choice. General boxed Infinitary Comprehension gives the same full-model characterization with C5 and no separate Atomicity premise. A support construction separates every fixed parameter bound even with unrestricted formula size. The specified uniformly Σ₁-admissible set-coded calculus cannot be complete.",
       "remaining": "This is not an unrestricted impossibility theorem for every calculus. Full second-order validity remains the identified semantic benchmark.",
       "result_entries": [
         "FULL-STANDARD-GALLIN",
-        "INFINITARY-COMPREHENSION"
+        "INFINITARY-COMPREHENSION",
+        "INTRINSIC-OBSERVER-AXIOMS"
       ],
       "formalization_result_refs": [
         "FULL-STANDARD-GALLIN",
@@ -618,9 +619,8 @@
     },
     {
       "id": "infinity-arithmetic-forcing",
-      "title": "Infinity, arithmetic and forcing",
+      "title": "Infinity and forcing",
       "questions": [
-        "FULL-CHOICE-ARITHMETIC",
         "ABSTRACT-FORCING"
       ],
       "database_questions": [
@@ -642,26 +642,6 @@
           "text": "Even C + ☐Functional Choice has a model of both finite lower-bound Infinity schemata that necessarily refutes both quantified Axioms of Infinity. Another model has ☐Functional Choice, ☐Forcing Possibilism, ☐Axiom of Infinity at t and the individual Infinity schema while necessarily refuting Axiom of Infinity at e.",
           "result_refs": [
             "INFINITY-SCHEMA-SEPARATION"
-          ],
-          "catalog_refs": []
-        },
-        {
-          "id": "countable-completeness-boundary",
-          "title": "Countable completeness at a countable Boolean type forces finiteness",
-          "text": "Over C, an internally countable relational Boolean type is countably complete exactly when it is internally Frege-finite. Matching Countable Boolean Completeness therefore gives Actuality in this setting. Separately, the finite-fan model has arithmetic noncollapse at e but no Possible Infinity at e, even with the stated boxed comprehension, completeness and choice principles.",
-          "result_refs": [
-            "COUNTABLE-BOOLEAN-FINITENESS"
-          ],
-          "catalog_refs": [
-            "principles.34"
-          ]
-        },
-        {
-          "id": "analytic-rigidification-answer",
-          "title": "Rigid Comprehension stabilizes possible real structures",
-          "text": "C5 + ☐Rigid Comprehension gives a rigid representative of any possible real structure at a fixed type, necessarily satisfying the real-number axioms. The represented-power construction works simultaneously at each prescribed finite list of arities.",
-          "result_refs": [
-            "ANALYTIC-RIGIDIFICATION"
           ],
           "catalog_refs": []
         },
@@ -697,23 +677,11 @@
       "part": "database"
     },
     {
-      "id": "language-and-models",
-      "title": "Abstraction and full standard models",
+      "id": "choice-and-completeness",
+      "title": "Choice and completeness",
+      "part": "established",
       "questions": [
-        "LAMBDA-EQUIVALENCE",
-        "FULL-GALLIN",
-        "INFINITARY-SP"
-      ],
-      "database_questions": [],
-      "connections": [],
-      "part": "further"
-    },
-    {
-      "id": "new-characterizations",
-      "title": "New characterizations and separation questions",
-      "part": "further",
-      "questions": [
-        "PR-CHOICE"
+        "FC-FINITE-BASIS"
       ],
       "database_questions": [],
       "connections": [
@@ -729,49 +697,36 @@
           "catalog_refs": []
         },
         {
-          "id": "evaluation-characterizations",
-          "title": "Evaluation and coextension representatives",
-          "text": "The evaluator hierarchy distinguishes truth-fibre classification, correct evaluation, necessary evaluation and complete evaluation. Uniform complete-evaluator selection measures well-orderability of atom fields and, at all types, ☐Functional Choice. Coextension-invariant operations characterize Actuality at their stated type scopes.",
+          "id": "countable-completeness-boundary",
+          "title": "Countable completeness at a countable Boolean type forces finiteness",
+          "text": "Over C, an internally countable relational Boolean type is countably complete exactly when it is internally Frege-finite. Matching Countable Boolean Completeness therefore gives Actuality in this setting. Separately, the finite-fan model has arithmetic noncollapse at e but no Possible Infinity at e, even with the stated boxed comprehension, completeness and choice principles.",
           "result_refs": [
-            "EVALUATORS-CORES",
-            "UNIFORM-COMPLETE-EVALUATORS",
-            "COEXTENSION-OPERATIONS"
+            "COUNTABLE-BOOLEAN-FINITENESS"
           ],
-          "catalog_refs": []
-        },
-        {
-          "id": "observer-characterizations",
-          "title": "Logical separation and its stronger forms",
-          "text": "Over H, logical separation gives C + BF, endpoint separation is C5 + Atomicity at t, and factive or unique-observer separation is Extensionality. The inverse and native-modality restrictions yield further strict hierarchies. The comparison between injective and logical left-inverse separation remains open; the exact reductions and countermodel boundaries are in the observer atlas. With OS assumed over H, existence of a correct actual-truth evaluator is exactly what upgrades separation to endpoint separation. Over C, endpoint separation is equivalent to every possible world having its own unique correct evaluator, while a single evaluator that remains correct at every world is equivalent to Extensionality. See the [evaluation bridge](proofs/logical-observers.md#actual-truth-evaluation-and-endpoint-separation).",
-          "result_refs": [
-            "LOGICAL-OBSERVERS",
-            "FULL-IDENTITY-OBSERVERS",
-            "DIAGONAL-CHARACTERS",
-            "H-OBSERVER-SPACE"
-          ],
-          "catalog_refs": []
-        },
-        {
-          "id": "worlds-probability",
-          "title": "World representations and probability",
-          "text": "Profile realization, complete Boolean maps and admitted world maps have exact representation theorems. Faithful probability is characterized by the stated finite-fibre numerical labelling condition, with a further countability conclusion under finite-field Choice and a finiteness obstruction at higher types.",
-          "result_refs": [
-            "PROFILE-WORLD-ALGEBRA",
-            "PROBABILITY"
-          ],
-          "catalog_refs": []
+          "catalog_refs": [
+            "principles.34"
+          ]
         }
       ]
     },
     {
-      "id": "further-negative-results",
-      "title": "Further negative results and strength bounds",
-      "part": "further",
+      "id": "arithmetic-and-analysis",
+      "title": "Arithmetic and analysis",
+      "part": "established",
       "questions": [
-        "FC-FINITE-BASIS"
+        "FULL-CHOICE-ARITHMETIC"
       ],
       "database_questions": [],
       "connections": [
+        {
+          "id": "analytic-rigidification-answer",
+          "title": "Rigid Comprehension stabilizes possible real structures",
+          "text": "C5 + ☐Rigid Comprehension gives a rigid representative of any possible real structure at a fixed type, necessarily satisfying the real-number axioms. The represented-power construction works simultaneously at each prescribed finite list of arities.",
+          "result_refs": [
+            "ANALYTIC-RIGIDIFICATION"
+          ],
+          "catalog_refs": []
+        },
         {
           "id": "max-arithmetic-obstructions",
           "title": "Maximalism and SP have different arithmetic obstructions",
@@ -785,7 +740,16 @@
             "principles.07",
             "principles.09"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "further-negative-results",
+      "title": "Language, computation and construction limits",
+      "part": "established",
+      "questions": [],
+      "database_questions": [],
+      "connections": [
         {
           "id": "signature-extension-answers",
           "title": "Signature extensions and finite profile bounds",
@@ -820,6 +784,62 @@
             "F04",
             "F10"
           ]
+        }
+      ]
+    },
+    {
+      "id": "language-and-models",
+      "title": "Abstraction and full standard models",
+      "questions": [
+        "LAMBDA-EQUIVALENCE",
+        "FULL-GALLIN",
+        "INFINITARY-SP"
+      ],
+      "database_questions": [],
+      "connections": [],
+      "part": "extensions"
+    },
+    {
+      "id": "new-characterizations",
+      "title": "New characterizations and separation questions",
+      "part": "extensions",
+      "questions": [
+        "PR-CHOICE"
+      ],
+      "database_questions": [],
+      "connections": [
+        {
+          "id": "evaluation-characterizations",
+          "title": "Evaluation and coextension representatives",
+          "text": "The evaluator hierarchy distinguishes truth-fibre classification, correct evaluation, necessary evaluation and complete evaluation. Uniform complete-evaluator selection measures well-orderability of atom fields and, at all types, ☐Functional Choice. Coextension-invariant operations characterize Actuality at their stated type scopes.",
+          "result_refs": [
+            "EVALUATORS-CORES",
+            "UNIFORM-COMPLETE-EVALUATORS",
+            "COEXTENSION-OPERATIONS"
+          ],
+          "catalog_refs": []
+        },
+        {
+          "id": "observer-characterizations",
+          "title": "Logical separation and its stronger forms",
+          "text": "Over H, logical separation gives C + BF, endpoint separation is C5 + Atomicity at t, and factive or unique-observer separation is Extensionality. The inverse and native-modality restrictions yield further strict hierarchies. The comparison between injective and logical left-inverse separation remains open; the exact reductions and countermodel boundaries are in the observer atlas. With OS assumed over H, existence of a correct actual-truth evaluator is exactly what upgrades separation to endpoint separation. Over C, endpoint separation is equivalent to every possible world having its own unique correct evaluator, while a single evaluator that remains correct at every world is equivalent to Extensionality. See the [evaluation bridge](proofs/logical-observers.md#actual-truth-evaluation-and-endpoint-separation).",
+          "result_refs": [
+            "LOGICAL-OBSERVERS",
+            "FULL-IDENTITY-OBSERVERS",
+            "DIAGONAL-CHARACTERS",
+            "H-OBSERVER-SPACE"
+          ],
+          "catalog_refs": []
+        },
+        {
+          "id": "worlds-probability",
+          "title": "World representations and probability",
+          "text": "Profile realization, complete Boolean maps and admitted world maps have exact representation theorems. Faithful probability is characterized by the stated finite-fibre numerical labelling condition, with a further countability conclusion under finite-field Choice and a finiteness obstruction at higher types.",
+          "result_refs": [
+            "PROFILE-WORLD-ALGEBRA",
+            "PROBABILITY"
+          ],
+          "catalog_refs": []
         }
       ]
     }
@@ -1095,13 +1115,21 @@
     },
     {
       "id": "database-connections",
-      "title": "Relations between database principles",
+      "title": "I. Resolved database questions and connections",
       "kind": "database"
     },
     {
-      "id": "further-questions",
-      "title": "Further resolved questions and negative results",
-      "kind": "further"
+      "id": "established-principles",
+      "title": "II. Further results about established principles",
+      "kind": "established",
+      "anchor_aliases": [
+        "further-questions"
+      ]
+    },
+    {
+      "id": "extensions-and-new-directions",
+      "title": "III. Extensions and new directions",
+      "kind": "extensions"
     }
   ]
 }

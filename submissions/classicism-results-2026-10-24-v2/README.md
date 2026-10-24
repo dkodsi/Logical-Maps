@@ -1,8 +1,13 @@
 # Classicism: results, proofs and certificates — 24 October 2026 (v2)
 
-Research submission for review by the Logical Maps database owners.
+Research submission for review by the Logical Maps database owners. Start with [Main Results](MAIN-RESULTS.md):
 
-- [Main results](MAIN-RESULTS.md): implications, countermodels and characterizations, grouped by subject.
+- [I. Resolved database questions and connections](MAIN-RESULTS.md#database-connections)
+- [II. Further results about established principles](MAIN-RESULTS.md#established-principles)
+- [III. Extensions and new directions](MAIN-RESULTS.md#extensions-and-new-directions)
+
+## Guides and evidence
+
 - [Previously known results formalized](MAIN-RESULTS.md#previously-known-results-formalized): attribution and certified scope.
 - [Conjectures](CONJECTURES.md): established answers, obstructions and remaining questions.
 - [Candidates_DK](CANDIDATES_DK.md): proposed principles and equivalent formulations.

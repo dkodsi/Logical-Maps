@@ -238,6 +238,10 @@ Thus every possible world having its own unique correct evaluator gives endpoint
 
 Under OS plus correct evaluation, the evaluator $B$ is unique and qualifies logically at every finite list. For each logical observer $E$, $B\circ E$ is the unique endpoint-valued logical observer with the same entire current truth profile. The [canonical evaluator construction](../source/research/2026-10-22/proof-refinements/canonical-actual-evaluator.md) supplies the quantifier laws; recovered BF and Functionality give the whole-operation identities and uniqueness. Composition preserves those identities, and correctness gives $B(Ep)\leftrightarrow Ep$. Endpoint fixing makes this normalization fix every endpoint observer.
 
+## Range comprehension and full models
+
+Over H, endpoint separation together with unboxed infinitary range comprehension at every original input type characterizes full standard relational hierarchies. The [representation proof](intrinsic-observer-axioms.md) works in ZF: endpoint separation supplies the atomic structure, and range comprehension makes every world–argument support representable. Neither Infinity nor Extensionality is imposed.
+
 ## Main unresolved question
 
 Does separation by injective logical observers entail separation by logical observers with logical left inverses? This remains unresolved over H and over C5. The converse is immediate, but an injective observer need not itself have a logical left inverse. The question is whether a different separating family always exists. [Exact reduction and positive cases](../CONJECTURES.md#observer-strength).

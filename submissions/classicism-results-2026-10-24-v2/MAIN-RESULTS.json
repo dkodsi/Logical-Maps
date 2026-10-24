@@ -2197,6 +2197,48 @@
       "certified_scope": "For universe-0 categorical premodels, term-denotation closure + unrestricted original-closed-type Infinitary Comprehension + ☐ND (type t) imply faithful full-standard representation; full standard models satisfy the corresponding infinitary axioms."
     },
     {
+      "id": "INTRINSIC-OBSERVER-AXIOMS",
+      "registry_ids": [
+        "synthesis.intrinsic-observer-axioms"
+      ],
+      "title": "Endpoint separation and unboxed range comprehension characterize full standard models in ZF",
+      "statement": "Over H, full typed endpoint separation together with unboxed infinitary range comprehension at every original input type characterizes the full standard relational hierarchies among set-sized models, up to canonical typed representation. The representation is provable in ZF. Range comprehension permits arbitrary set-indexed parameter families under every simultaneous assignment. Over H + endpoint separation, it gives the same original typed reducts as External Comprehension, Arbitrary Atomic Joins, external Boolean completeness, or the larger boxed Infinitary Comprehension presentations.",
+      "scope": "The original relational types, including e as an input type and excluding individual-output arrows. Endpoint qualification uses identities of whole logical operations and translated equality clauses. Infinitary range assertions have ordinary classical truth conditions; no fixed cardinal or parameter bound is imposed, and index sets need not be well orderable. The conclusion concerns model classes and canonical expansions, not completeness of a deduction calculus.",
+      "lean_status": "Ordinary mathematical proof supplied.",
+      "significance": "Only endpoint separation and a unary unboxed comprehension schema are needed over H. Worlds are recovered as proposition atoms or endpoint observers; range comprehension supplies every world–argument support. The representation needs no Axiom of Choice, while Functional Choice holding in every full hierarchy is equivalent to AC over ZF.",
+      "proofs": [
+        "proofs/intrinsic-observer-axioms.md",
+        "proofs/logical-observer-hierarchy.md",
+        "proofs/h-observer-space/typed-separation-and-classicism.md",
+        "proofs/infinitary-canonical-representation.md"
+      ],
+      "proof_locators": [
+        "intrinsic-observer-axioms.md §§1–7",
+        "logical-observer-hierarchy.md §3",
+        "typed-separation-and-classicism.md §§2–3",
+        "infinitary-canonical-representation.md §5"
+      ],
+      "declarations": [],
+      "lean_sources": [],
+      "manifests": [],
+      "evidence": [],
+      "notes": "Endpoint separation already gives C5 + Atomicity at t, equivalently H + OS + correct evaluation or C + necessary correct evaluation. Infinity and Extensionality remain optional. The AC comparison quantifies over all full hierarchies; it is not a claim that each individual hierarchy implies ambient AC.",
+      "mathematical_status": "Ordinary proof supplied at the stated scope.",
+      "attribution": "OpenAI Codex, prompted by Daniel Kodsi, 24 October 2026; source misc, intrinsic-observer-axioms.md §§1–7, unpaginated. Inherited arguments and their direct sources are identified in §8.",
+      "sources": [
+        {
+          "path": "proofs/intrinsic-observer-axioms.md",
+          "source_id": "misc",
+          "locator": "§§1–7",
+          "pagination": "unpaginated"
+        }
+      ],
+      "proof_length": {
+        "rating": "long",
+        "words": 4231
+      }
+    },
+    {
       "id": "COMPUTABILITY-COMPARISON",
       "title": "Theoremhood and model construction have successive jump thresholds",
       "registry_ids": [
@@ -2744,6 +2786,7 @@
         "BETA-ETA-CONVERSION",
         "LOGICAL-OBSERVERS",
         "INFINITARY-COMPREHENSION",
+        "INTRINSIC-OBSERVER-AXIOMS",
         "NPC-ATOMICITY",
         "SIGNATURE-INDEPENDENCE"
       ]
@@ -3536,20 +3579,26 @@
           },
           {
             "id": "infinitary-comprehension",
-            "title": "Infinitary Comprehension and C5 characterize full standard models",
+            "title": "Infinitary Comprehension and full standard models",
             "result_refs": [
-              "INFINITARY-COMPREHENSION"
+              "INFINITARY-COMPREHENSION",
+              "INTRINSIC-OBSERVER-AXIOMS"
             ],
-            "principle_ref": "infinitary-comprehension-r",
-            "summary": "With C5, this schema characterizes the full standard relational hierarchies; Atomicity follows from the infinitary resources. In ZFC it also gives ☐Functional Choice, while leaving the sizes of the individual and world domains unrestricted.\n\nFor every infinite regular κ, a one-world model satisfies C5, Atomicity and every instance with fewer than κ parameters, regardless of formula size, but fails the unrestricted schema. At κ = ω its individual predicates are exactly the finite and cofinite subsets.\n\nFor the related algebraic characterization, see [Arbitrary Atomic Joins](#full-standard-gallin).",
+            "summary": "In ZF, these two principles characterize full standard relational hierarchies. Endpoint separation already supplies C5 + Atomicity (type t); range comprehension supplies every subset and operation. Infinity and Extensionality remain optional.\n\nThe general [boxed Infinitary Comprehension schema](CANDIDATES_DK.md#infinitary-comprehension-r), together with C5, gives the same full-model characterization without a separate Atomicity premise. For every infinite regular κ, allowing fewer than κ parameters leaves a countermodel, even with unrestricted formula size; at κ = ω its individual predicates are exactly the finite and cofinite subsets.\n\nFullness is choice-free. The assertion that Functional Choice holds in every full hierarchy is equivalent to AC over ZF. For the algebraic formulation, see [Arbitrary Atomic Joins](#full-standard-gallin).",
             "proof_length": {
               "rating": "long",
-              "words": 8194
+              "words": 12425
             },
             "evidence_labels": [
-              "Proofs and certificates"
+              "General comprehension: proofs and certificates",
+              "Unboxed range formulation and ZF proof"
             ],
-            "certified_summary": "For universe-0 categorical premodels, term-denotation closure + unrestricted original-closed-type Infinitary Comprehension + ☐ND (type t) imply faithful full-standard representation; full standard models satisfy the corresponding infinitary axioms."
+            "certified_summary": "For the general boxed schema, term-denotation closure + unrestricted original-closed-type Infinitary Comprehension + ☐ND (type t) give faithful full-standard representation of universe-0 categorical premodels, with a separately certified full-standard converse.",
+            "principle": {
+              "statement": "Over H + full typed endpoint separation, unboxed infinitary range comprehension suffices:",
+              "formal": "\\exists R^{\\sigma t}\\,\\forall x^\\sigma\\,\\left(Rx\\leftrightarrow\\bigvee_{i\\in I}x=a_i\\right).",
+              "scope": "For every original input type σ, including e, and every set-indexed parameter family, under every simultaneous assignment."
+            }
           },
           {
             "id": "full-standard-gallin",

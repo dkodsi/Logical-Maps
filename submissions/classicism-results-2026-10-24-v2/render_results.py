@@ -272,46 +272,78 @@ def render(root):
         'Axiom of Infinity is distinct from the Infinity schema. Quantification over properties ranges over those admitted by the model; the fullness result explicitly asks for more. The original C remains finitary.', '']
     out['MAIN-RESULTS.md'] = done(text)
 
-    text = ['# Full results, supplements and certificates', '',
-        '[Main results](../MAIN-RESULTS.md) · [Questions](../CONJECTURES.md) · [Catalog](../CATALOG.md) · [Database integration](../DATABASE-INTEGRATION.md)', '',
-        'Full statements, supporting results, proofs and certificates.', '',
-        '## Browse by category', '']
-    for section in overview['sections']:
-        text += ['### ' + section['title'], '']
-        for group in section['groups']:
-            text += ['- ' + ' · '.join('[' + rows[rid]['title'] + '](#' + rid.lower() + ')' for rid in group['result_refs'])]
-        text += ['']
-        text += [anchor('supplement-' + alias) for alias in section.get('supplement_anchor_aliases', [])]
-        text += [anchor('supplement-' + section['id'])]
-        if section['supplemental_results']:
-            text += ['**Supplemental results**', '']
-            text += ['- [' + rows[r['result_ref']]['title'] + '](#' + r['result_ref'].lower() + ')' for r in section['supplemental_results']]
-            text += ['']
-    for r in main['results']:
-        text += [anchor(r['id']), '## ' + r['title'], '', '**ID:** `' + r['id'] + '`. Tracked keys: ' + ', '.join('`' + k + '`' for k in r['registry_ids']) + '.', '',
+    def section_results(section):
+        return [rid for group in section['groups'] for rid in group['result_refs']] + [r['result_ref'] for r in section['supplemental_results']]
+
+    presentation_order = [rid for section in overview['sections'] for rid in section_results(section)]
+    assert len(presentation_order) == len(set(presentation_order)) == len(rows)
+    assert set(presentation_order) == set(rows), 'Incomplete companion-page coverage'
+
+    def part_navigation(target=''):
+        lines = ['| Part | Sections |', '|---|---|']
+        for pid, part in parts.items():
+            links = ['[' + section['title'] + '](' + target + '#' + section['id'] + ')' for section in overview['sections'] if section['part'] == pid]
+            if pid == 'database-connections':
+                links += ['[Previously known results formalized](' + target + '#previously-known-results-formalized)']
+            lines += ['| [' + part['title'] + '](' + target + '#' + pid + ') | ' + '; '.join(links) + '. |']
+        return lines + ['']
+
+    def known_formalizations(base='.', level=3):
+        target = posixpath.relpath('MAIN-RESULTS.md', base)
+        lines = [anchor('previously-known-results-formalized'), '#' * level + ' Previously known results formalized', '',
+                 '[Original attribution and certified scope](' + target + '#previously-known-results-formalized).', '']
+        lines += ['- ' + resultlink(item['result_ref'], base=base, label=item['name']) for item in main['established_formalizations']['entries']]
+        return lines + ['']
+
+    def full_result(r):
+        lines = []
+        lines += [anchor(r['id']), '#### ' + r['title'], '', '**ID:** `' + r['id'] + '`. Tracked keys: ' + ', '.join('`' + k + '`' for k in r['registry_ids']) + '.', '',
                  r['statement'], '', '**Scope:** ' + r['scope'], '', '**Significance:** ' + r['significance'], '',
                  certified_line(r), '']
         for field, title in [('notes', 'Notes'), ('attribution', 'Attribution')]:
             if r.get(field):
-                text += ['**' + title + ':** ' + r[field], '']
+                lines += ['**' + title + ':** ' + r[field], '']
         if r.get('proof_idea'):
-            text += [r['proof_idea'], '']
+            lines += [r['proof_idea'], '']
         if r.get('proof_length'):
             length = r['proof_length']
-            text += ['**Proof length:** ' + length['rating'] + ' (' + format(length['words'], ',') + ' words in the [selected exposition](proof-lengths.json)).', '']
+            lines += ['**Proof length:** ' + length['rating'] + ' (' + format(length['words'], ',') + ' words in the [selected exposition](proof-lengths.json)).', '']
         if r.get('proof_locators'):
-            text += ['**Proof locators:** ' + '; '.join(r['proof_locators']), '']
+            lines += ['**Proof locators:** ' + '; '.join(r['proof_locators']), '']
         for field, title in [('proofs', 'Proofs'), ('lean_sources', 'Earlier Lean sources'), ('manifests', 'Earlier saved manifests'), ('evidence', 'Scope evidence'), ('certificates', 'Selected exact certificates')]:
             if r.get(field):
-                text += ['**' + title + ':** ' + prooflinks(r[field], 'evidence'), '']
+                lines += ['**' + title + ':** ' + prooflinks(r[field], 'evidence'), '']
         if r.get('declarations'):
-            text += ['**Principal declarations:**', '']
-            text += ['- `' + x + '`' for x in r['declarations']] + ['']
+            lines += ['**Principal declarations:**', '']
+            lines += ['- `' + x + '`' for x in r['declarations']] + ['']
+        return lines
+
+    text = ['# Full results, supplements and certificates', '',
+        '[Main results](../MAIN-RESULTS.md) · [Questions](../CONJECTURES.md) · [Catalog](../CATALOG.md) · [Database integration](../DATABASE-INTEGRATION.md)', '',
+        'Full statements, supporting results, proofs and certificates.', '',
+        anchor('browse-by-category'), '## Contents', '']
+    text += part_navigation()
+    current_part = None
+    for section in overview['sections']:
+        if section['part'] != current_part:
+            if current_part == 'database-connections':
+                text += known_formalizations('evidence')
+            current_part = section['part']
+            text += [anchor(current_part), '## ' + parts[current_part]['title'], '']
+        text += [anchor(section['id']), '### ' + section['title'], '']
+        for group in section['groups']:
+            for rid in group['result_refs']:
+                text += full_result(rows[rid])
+        text += [anchor('supplement-' + alias) for alias in section.get('supplement_anchor_aliases', [])]
+        text += [anchor('supplement-' + section['id'])]
+        for item in section['supplemental_results']:
+            text += full_result(rows[item['result_ref']])
     out['evidence/RESULT-INDEX.md'] = done(text)
 
     text = ['# Detailed result catalog', '',
         f'All {len(keys)} stable keys, including the original {len(coverage["original_catalog_keys_retained"])}, are retained. Keys may group several claims. Exact aliases resolve to MAIN-RESULTS.json; linked aggregate keys retain narrower evidence boundaries. Supporting module metadata remains in [CATALOG.json](CATALOG.json).', '',
         '[Main guide](MAIN-RESULTS.md) · [Questions](CONJECTURES.md) · [Integration review](DATABASE-INTEGRATION.md)', '']
+    text += part_navigation('evidence/RESULT-INDEX.md')
     for item in catalog['entries']:
         r = dict(item)
         if 'result_ref' in r:
@@ -361,7 +393,7 @@ def render(root):
     text = ['# ' + questions['title'], '',
         'Open questions and established answers, grouped by mathematical family. The background is C unless stated otherwise. “Unresolved” refers to the cited evidence, not necessarily to the literature.', '',
         '[Main results](MAIN-RESULTS.md) · [Catalog](CATALOG.md) · [Evidence](evidence/RESULT-INDEX.md)', '',
-        'Relations between existing database principles are grouped by family, including all recorded resolved conjectures. Questions involving new definitions, metatheorems and failed constructions are collected separately.', '']
+        'Open questions come first. Established answers follow the three parts of Main Results: database connections, further results about established principles, and extensions.', '']
     text += ['- [' + part['title'] + '](#' + part['id'] + ')' for part in questions['parts']]
     text += ['']
     catalog_rows = {r['id']: r for r in catalog['entries']}
@@ -407,6 +439,7 @@ def render(root):
     for part in questions['parts']:
         kind = part.get('kind', 'open')
         selected = [s for s in questions['sections'] if s['part'] == kind]
+        text += [anchor(alias) for alias in part.get('anchor_aliases', [])]
         text += [anchor(part['id']), '## ' + part['title'], '']
         text += [' · '.join('[' + s['title'] + '](#' + s['id'] + ')' for s in selected), '']
         for section in selected:
@@ -419,6 +452,7 @@ def render(root):
                 for r in family['models']:
                     text += ['- **' + r['name'] + '.** ' + r['answer'] + ' ' + r['evidence'] + '.']
                 text += ['']
+            text += known_formalizations()
     out['CONJECTURES.md'] = done(text)
 
     records = integration['records']
@@ -432,9 +466,20 @@ def render(root):
         '**Record review:** ' + integration['reviewed_at_utc'] + '. Later capture times and hashes are recorded per snapshot.', '',
         '**Latest reconciliation:** ' + integration.get('reconciled_at_utc', integration['reviewed_at_utc']) + '.', '',
         '[CANDIDATES_DK](CANDIDATES_DK.md) isolate new explorer entries from alternative presentations of existing strengths. The source is [CANDIDATES_DK.json](CANDIDATES_DK.json); proposed entries are not active database assumptions.', '']
-    for section in main['sections']:
-        text += ['## ' + section['title'], '', '| Research result and evidence | Existing record or context | Proposed action |', '|---|---|---|']
-        for rid in section['results']:
+    text += part_navigation()
+    current_part = None
+    for section in overview['sections']:
+        if section['part'] != current_part:
+            if current_part == 'database-connections':
+                text += known_formalizations()
+            current_part = section['part']
+            text += [anchor(current_part), '## ' + parts[current_part]['title'], '']
+            if current_part == 'database-connections':
+                text += [anchor('headline-results')]
+        for alias in {'h-observer-separation': ['observer-separation-over-h'], 'worlds-and-probability': ['worlds-and-model-structure']}.get(section['id'], []):
+            text += [anchor(alias)]
+        text += [anchor(section['id']), '### ' + section['title'], '', '| Research result and evidence | Existing record or context | Proposed action |', '|---|---|---|']
+        for rid in section_results(section):
             entry = by_result[rid]
             contexts = []
             for target in entry['records']:
@@ -568,10 +613,18 @@ def render(root):
         'Research submission: results, proofs and exact certificate scope.', '',
         '[Main guide](MAIN-RESULTS.md) · [Exact evidence](evidence/RESULT-INDEX.md) · [Database reconciliation](DATABASE-INTEGRATION.md) · [Questions](CONJECTURES.md)', '',
         '## Certified results', '']
-    for rid in [rid for section in main['sections'] for rid in section['results']]:
-        r = rows[rid]
-        if r.get('certified_scope'):
-            text += ['- **' + r['title'] + '.** ' + ('Lean certified.' if r['certified_scope'] is True else 'Lean certified: ' + r['certified_scope']) + ' ' + resultlink(rid, label='Proof and certificate') + '.']
+    for pid, part in parts.items():
+        text += [anchor(pid), '### ' + part['title'], '']
+        for section in overview['sections']:
+            if section['part'] != pid:
+                continue
+            for rid in section_results(section):
+                r = rows[rid]
+                if r.get('certified_scope'):
+                    text += ['- **' + r['title'] + '.** ' + ('Lean certified.' if r['certified_scope'] is True else 'Lean certified: ' + r['certified_scope']) + ' ' + resultlink(rid, label='Proof and certificate') + '.']
+        text += ['']
+        if pid == 'database-connections':
+            text += known_formalizations(level=4)
     text += ['',
         '## Sources and reproduction', '',
         'Source proofs and accepted certificate evidence are linked in [SOURCE-MANIFEST.json](SOURCE-MANIFEST.json) and [the certificate index](evidence/CERTIFICATES.json).', '',

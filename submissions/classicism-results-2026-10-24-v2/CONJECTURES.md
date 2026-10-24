@@ -4,11 +4,12 @@ Open questions and established answers, grouped by mathematical family. The back
 
 [Main results](MAIN-RESULTS.md) · [Catalog](CATALOG.md) · [Evidence](evidence/RESULT-INDEX.md)
 
-Relations between existing database principles are grouped by family, including all recorded resolved conjectures. Questions involving new definitions, metatheorems and failed constructions are collected separately.
+Open questions come first. Established answers follow the three parts of Main Results: database connections, further results about established principles, and extensions.
 
 - [Open questions and claims awaiting review](#open-questions)
-- [Relations between database principles](#database-connections)
-- [Further resolved questions and negative results](#further-questions)
+- [I. Resolved database questions and connections](#database-connections)
+- [II. Further results about established principles](#established-principles)
+- [III. Extensions and new directions](#extensions-and-new-directions)
 
 <a id="open-questions"></a>
 ## Open questions and claims awaiting review
@@ -100,9 +101,9 @@ $$
 An ordinary proof is supplied for both inclusions, but the difficult upper inclusion still awaits independent review. Here $T_{\mathrm{arith}}$ is the common arithmetic theory of the positive Choice and Plenitude packages. See the [statement and proof](evidence/RESULT-INDEX.md#max-arithmetic-equality).
 
 <a id="database-connections"></a>
-## Relations between database principles
+## I. Resolved database questions and connections
 
-[Choice and comprehension](#choice-and-comprehension) · [Rigidity](#rigidity) · [Modal stability and noncontingency](#modal-stability) · [Maximalism and Strong Possibility](#maximalism-and-possibility) · [Infinity, arithmetic and forcing](#infinity-arithmetic-forcing)
+[Choice and comprehension](#choice-and-comprehension) · [Rigidity](#rigidity) · [Modal stability and noncontingency](#modal-stability) · [Maximalism and Strong Possibility](#maximalism-and-possibility) · [Infinity and forcing](#infinity-arithmetic-forcing)
 
 <a id="choice-and-comprehension"></a>
 ### Choice and comprehension
@@ -351,7 +352,7 @@ For Σ = {c:et}, the full one-world countermodels satisfy Independence together 
 **Lean certified:** [`SIGNATURE-INDEPENDENCE`](evidence/RESULT-INDEX.md#signature-independence).
 
 <a id="infinity-arithmetic-forcing"></a>
-### Infinity, arithmetic and forcing
+### Infinity and forcing
 
 <a id="possible-infinity-implies-axiom-of-infinity"></a>
 <a id="possible-infinity-e-implies-axiom-of-infinity-e"></a>
@@ -361,15 +362,6 @@ For Σ = {c:et}, the full one-world countermodels satisfy Independence together 
 No, at either e or t. A singleton-individual coalesced root refutes the type-e implication; the two-object chain with a free loop refutes the type-t implication.
 
 [Type-e countermodel](https://github.com/dkodsi/Logical-Maps/blob/12297812d21ed02a7d87cd4c642ba9adb8b4f7ff/logical-maps/topics/classicism/models/coalesced-single-individual-root.yaml) · [Type-t countermodel](https://github.com/dkodsi/Logical-Maps/blob/12297812d21ed02a7d87cd4c642ba9adb8b4f7ff/logical-maps/topics/classicism/models/full-two-object-chain-free-loop.yaml) · [Further Infinity separations](evidence/RESULT-INDEX.md#infinity-schema-separation).
-
-<a id="full-choice-arithmetic"></a>
-#### Does ☐Functional Choice add ordinary arithmetic over ☐Plenitude?
-
-**Position:** Arithmetic conservation established.
-
-Over C with quantified Infinity at e and t, replacing ☐Plenitude by ☐Functional Choice adds no ordinary first-order arithmetic theorems. Both have the arithmetic consequences of C plus numerical noncollapse at e, and this remains true after adding ☐Axiom of Infinity at every admitted type.
-
-The proof uses McLarty’s number-preserving interpretation.
 
 <a id="abstract-forcing"></a>
 #### Do ☐Rigid Comprehension, Intensional Choice and Forcing Possibilism force CH contingency?
@@ -397,22 +389,6 @@ Over C, Axiom of Infinity at t implies it at every relational type; Axiom of Inf
 Even C + ☐Functional Choice has a model of both finite lower-bound Infinity schemata that necessarily refutes both quantified Axioms of Infinity. Another model has ☐Functional Choice, ☐Forcing Possibilism, ☐Axiom of Infinity at t and the individual Infinity schema while necessarily refuting Axiom of Infinity at e.
 
 **Evidence:** [Infinity schemata do not imply their quantified axioms, even with necessary Choice](evidence/RESULT-INDEX.md#infinity-schema-separation).
-
-<a id="countable-completeness-boundary"></a>
-#### Countable completeness at a countable Boolean type forces finiteness
-
-Over C, an internally countable relational Boolean type is countably complete exactly when it is internally Frege-finite. Matching Countable Boolean Completeness therefore gives Actuality in this setting. Separately, the finite-fan model has arithmetic noncollapse at e but no Possible Infinity at e, even with the stated boxed comprehension, completeness and choice principles.
-
-**Evidence:** [Countable completeness forces Frege finiteness at countable Boolean types](evidence/RESULT-INDEX.md#countable-boolean-finiteness) · [principles.34](CATALOG.md#principles.34).
-
-<a id="analytic-rigidification-answer"></a>
-#### Rigid Comprehension stabilizes possible real structures
-
-C5 + ☐Rigid Comprehension gives a rigid representative of any possible real structure at a fixed type, necessarily satisfying the real-number axioms. The represented-power construction works simultaneously at each prescribed finite list of arities.
-
-**Evidence:** [Rigid Comprehension stabilizes a possible real structure](evidence/RESULT-INDEX.md#analytic-rigidification).
-
-**Lean certified:** [`ANALYTIC-RIGIDIFICATION`](evidence/RESULT-INDEX.md#analytic-rigidification): Rigidification and simultaneous represented powers of every prescribed finite list of positive arities, at every closed admitted type and in arbitrary signatures.
 
 <a id="ch-structural-boundary"></a>
 #### Strong boxed structural principles do not settle CH noncontingency
@@ -479,10 +455,107 @@ The database also settles existence questions for these nineteen constructions. 
 - **Henkin model without a choice function.** Extensionality and Axiom of Infinity (type e) coexist with failure of Relational Choice. [Construction and variants](https://github.com/dkodsi/Logical-Maps/blob/12297812d21ed02a7d87cd4c642ba9adb8b4f7ff/logical-maps/topics/classicism/models/henkin-without-relational-choice.yaml).
 - **Symmetric qualitative-contrast model.** C5, Actuality and Plenitude coexist with failures of Relational Choice and Atomicity. Thus Plenitude does not imply Functional Choice even under C5, Rigid Comprehension and Boolean Completeness. [Construction and variants](https://github.com/dkodsi/Logical-Maps/blob/12297812d21ed02a7d87cd4c642ba9adb8b4f7ff/logical-maps/topics/classicism/models/symmetric-qualitative-contrast.yaml).
 
-<a id="further-questions"></a>
-## Further resolved questions and negative results
+<a id="previously-known-results-formalized"></a>
+### Previously known results formalized
 
-[Abstraction and full standard models](#language-and-models) · [New characterizations and separation questions](#new-characterizations) · [Further negative results and strength bounds](#further-negative-results)
+[Original attribution and certified scope](MAIN-RESULTS.md#previously-known-results-formalized).
+
+- [C5 + Atomicity (type t) ⇒ No Pure Contingency](evidence/RESULT-INDEX.md#npc-atomicity)
+- [C5 + ☐Rigid Comprehension ⇒ Second-Order Analytic Necessitism](evidence/RESULT-INDEX.md#analytic-rigidification)
+- [Symmetric ideally-full model: old and new individuals](evidence/RESULT-INDEX.md#oldnew-separation)
+
+<a id="further-questions"></a>
+<a id="established-principles"></a>
+## II. Further results about established principles
+
+[Choice and completeness](#choice-and-completeness) · [Arithmetic and analysis](#arithmetic-and-analysis) · [Language, computation and construction limits](#further-negative-results)
+
+<a id="choice-and-completeness"></a>
+### Choice and completeness
+
+<a id="fc-finite-basis"></a>
+#### Can Functional Choice or ☐Functional Choice have a finite equivalent fixed-type basis?
+
+**Position:** Negative ordinary results established.
+
+Neither full Functional Choice nor its boxed form has an equivalent finite list of arbitrary pure fixed-type sentences over C. The Boolean-valued construction supplies ordinary separating models. The previously stated fixed-input and selector hierarchies remain in the supporting proofs.
+
+**Lean certified:** [`CHOICE-NO-FINITE-BASIS`](evidence/RESULT-INDEX.md#choice-no-finite-basis).
+
+<a id="inverse-characterizations"></a>
+#### Choice, Plenitude and C5 through inverses
+
+Functional Choice is Actuality plus pointwise sections of actual surjections; Plenitude is Actuality plus pointwise retractions of actual injections. Their stronger inverse formulations distinguish ☐Functional Choice and C5. Over C + ☐Plenitude, complete Boolean retractions characterize ☐Functional Choice.
+
+**Evidence:** [Choice and Plenitude decompose into Actuality and inverse maps](evidence/RESULT-INDEX.md#sections-retractions) · [C5 is exactly strong retractions of actual injections](evidence/RESULT-INDEX.md#c5-strong-retractions) · [Complete Boolean retractions characterize ☐Functional Choice](evidence/RESULT-INDEX.md#boolean-retractions-choice).
+
+**Lean certified:** [`SECTIONS-RETRACTIONS`](evidence/RESULT-INDEX.md#sections-retractions). [`C5-STRONG-RETRACTIONS`](evidence/RESULT-INDEX.md#c5-strong-retractions): The C5 forward rules for persistent injectivity and strong retractions at all admitted relational types, the low-type converses to ☐ND (type t), and the per-map necessary-injectivity/strong-retraction equivalence.
+
+<a id="countable-completeness-boundary"></a>
+#### Countable completeness at a countable Boolean type forces finiteness
+
+Over C, an internally countable relational Boolean type is countably complete exactly when it is internally Frege-finite. Matching Countable Boolean Completeness therefore gives Actuality in this setting. Separately, the finite-fan model has arithmetic noncollapse at e but no Possible Infinity at e, even with the stated boxed comprehension, completeness and choice principles.
+
+**Evidence:** [Countable completeness forces Frege finiteness at countable Boolean types](evidence/RESULT-INDEX.md#countable-boolean-finiteness) · [principles.34](CATALOG.md#principles.34).
+
+<a id="arithmetic-and-analysis"></a>
+### Arithmetic and analysis
+
+<a id="full-choice-arithmetic"></a>
+#### Does ☐Functional Choice add ordinary arithmetic over ☐Plenitude?
+
+**Position:** Arithmetic conservation established.
+
+Over C with quantified Infinity at e and t, replacing ☐Plenitude by ☐Functional Choice adds no ordinary first-order arithmetic theorems. Both have the arithmetic consequences of C plus numerical noncollapse at e, and this remains true after adding ☐Axiom of Infinity at every admitted type.
+
+The proof uses McLarty’s number-preserving interpretation.
+
+<a id="analytic-rigidification-answer"></a>
+#### Rigid Comprehension stabilizes possible real structures
+
+C5 + ☐Rigid Comprehension gives a rigid representative of any possible real structure at a fixed type, necessarily satisfying the real-number axioms. The represented-power construction works simultaneously at each prescribed finite list of arities.
+
+**Evidence:** [Rigid Comprehension stabilizes a possible real structure](evidence/RESULT-INDEX.md#analytic-rigidification).
+
+**Lean certified:** [`ANALYTIC-RIGIDIFICATION`](evidence/RESULT-INDEX.md#analytic-rigidification): Rigidification and simultaneous represented powers of every prescribed finite list of positive arities, at every closed admitted type and in arbitrary signatures.
+
+<a id="max-arithmetic-obstructions"></a>
+#### Maximalism and SP have different arithmetic obstructions
+
+Pure Maximalism forbids a predecessor operation at every admitted counting type, although the relevant total single-valued graph exists. Pure SP proves every standard-true Π₂ sentence under the specified Frege translation; if consistent, it omits some true Π₃ sentence. Max also refutes the explicit guarded numerical join, and its interval below ¬Actuality is internally Dedekind and Frege infinite, without asserting that ¬Actuality is currently true.
+
+**Evidence:** [Maximalism forbids a numerical predecessor operation](evidence/RESULT-INDEX.md#max-predecessor) · [Pure SP proves true Π₂ arithmetic, with a sharp conditional boundary](evidence/RESULT-INDEX.md#sp-arithmetic-reflection) · [Frege number structure and transfer can be separated from stronger model claims](evidence/RESULT-INDEX.md#arithmetic-foundations) · [principles.07](CATALOG.md#principles.07) · [principles.09](CATALOG.md#principles.09).
+
+**Lean certified:** [`MAX-PREDECESSOR`](evidence/RESULT-INDEX.md#max-predecessor): The no-predecessor theorem at every closed counting type; the total unique graph and Plenitude failure at e. [`ARITHMETIC-FOUNDATIONS`](evidence/RESULT-INDEX.md#arithmetic-foundations): The displayed Frege noncollapse and finiteness equivalences, number-map/Hume-class results, and C5–Actuality transfer results.
+
+<a id="further-negative-results"></a>
+### Language, computation and construction limits
+
+<a id="signature-extension-answers"></a>
+#### Signature extensions and finite profile bounds
+
+There is an exact boundary for conservative proper extensions of finite signatures, and an infinite reserve of names restores conservativity at the types receiving new constants. Pointed complete theories determine the finite Boolean intervals forced by SP. These metatheorems retain the reference language of each Max and SP schema.
+
+**Evidence:** [An exact boundary for finite signature extensions](evidence/RESULT-INDEX.md#signature-finite-boundary) · [An infinite reserve of names restores conservativity](evidence/RESULT-INDEX.md#signature-infinite-reservoir) · [Pointed theories determine the finite Boolean intervals forced by SP](evidence/RESULT-INDEX.md#sp-finite-profile-rank).
+
+<a id="computational-boundaries"></a>
+#### Computational strength and model construction
+
+Theoremhood, finite-condition consistency and adequate model construction have distinct jump thresholds. A supplied complete consistent pure theory has a model of exactly its computational degree; requiring externally standard natural numbers creates a stronger barrier. The completion-space comparisons separate finite descriptions and effective complexity.
+
+**Evidence:** [Theoremhood and model construction have successive jump thresholds](evidence/RESULT-INDEX.md#computability-comparison) · [A complete theory has a model of exactly its computational degree](evidence/RESULT-INDEX.md#exact-model-degrees) · [Standard natural numbers impose a much stronger computational barrier](evidence/RESULT-INDEX.md#standard-number-models) · [Finite descriptions distinguish the completion spaces](evidence/RESULT-INDEX.md#completion-spaces).
+
+<a id="failed-choice-constructions"></a>
+#### Construction failures that leave the main questions open
+
+The rational-shear and full rational-linear selector constructions fail after the required closure steps. The paired-individual example satisfies restricted Relational Choice fragments, not full Relational Choice, so it cannot settle Relational Choice ⇒ Transversal Choice. The one-block Cohen reservoir fails the required real-uniformization property; the separate ADℝ-relative separator retains its metatheoretic assumption.
+
+**Evidence:** [rigidity.29](CATALOG.md#rigidity.29) · [rigidity.30](CATALOG.md#rigidity.30) · [F04](CATALOG.md#f04) · [F10](CATALOG.md#f10).
+
+<a id="extensions-and-new-directions"></a>
+## III. Extensions and new directions
+
+[Abstraction and full standard models](#language-and-models) · [New characterizations and separation questions](#new-characterizations)
 
 <a id="language-and-models"></a>
 ### Abstraction and full standard models
@@ -501,7 +574,7 @@ An explicit classical lambda-free applicative calculus has exactly C’s consequ
 
 **Position:** Negative bounds and exact semantic characterization.
 
-C5 plus propositional Atomicity and Arbitrary Atomic Joins characterizes full standard hierarchies. Infinitary Comprehension gives the same characterization with C5 and no separate Atomicity premise. A support construction separates every fixed parameter bound even with unrestricted formula size. The specified uniformly Σ₁-admissible set-coded calculus cannot be complete.
+C5 plus propositional Atomicity and Arbitrary Atomic Joins characterizes full standard hierarchies. Over H, endpoint separation plus unboxed infinitary range comprehension gives this characterization in ZF, without Choice. General boxed Infinitary Comprehension gives the same full-model characterization with C5 and no separate Atomicity premise. A support construction separates every fixed parameter bound even with unrestricted formula size. The specified uniformly Σ₁-admissible set-coded calculus cannot be complete.
 
 This is not an unrestricted impossibility theorem for every calculus. Full second-order validity remains the identified semantic benchmark.
 
@@ -530,15 +603,6 @@ Supported nominal models realize exact individual profiles and arbitrarily high 
 
 **Lean certified:** [`PROFILE-WORLD-ALGEBRA`](evidence/RESULT-INDEX.md#profile-world-algebra): The finite-profile and atomic-profile results.
 
-<a id="inverse-characterizations"></a>
-#### Choice, Plenitude and C5 through inverses
-
-Functional Choice is Actuality plus pointwise sections of actual surjections; Plenitude is Actuality plus pointwise retractions of actual injections. Their stronger inverse formulations distinguish ☐Functional Choice and C5. Over C + ☐Plenitude, complete Boolean retractions characterize ☐Functional Choice.
-
-**Evidence:** [Choice and Plenitude decompose into Actuality and inverse maps](evidence/RESULT-INDEX.md#sections-retractions) · [C5 is exactly strong retractions of actual injections](evidence/RESULT-INDEX.md#c5-strong-retractions) · [Complete Boolean retractions characterize ☐Functional Choice](evidence/RESULT-INDEX.md#boolean-retractions-choice).
-
-**Lean certified:** [`SECTIONS-RETRACTIONS`](evidence/RESULT-INDEX.md#sections-retractions). [`C5-STRONG-RETRACTIONS`](evidence/RESULT-INDEX.md#c5-strong-retractions): The C5 forward rules for persistent injectivity and strong retractions at all admitted relational types, the low-type converses to ☐ND (type t), and the per-map necessary-injectivity/strong-retraction equivalence.
-
 <a id="evaluation-characterizations"></a>
 #### Evaluation and coextension representatives
 
@@ -565,45 +629,3 @@ Profile realization, complete Boolean maps and admitted world maps have exact re
 **Evidence:** [Profile Realization and the Boolean structure of worlds](evidence/RESULT-INDEX.md#profile-world-algebra) · [Faithful probability has an exact finite-fibre condition and type ceiling](evidence/RESULT-INDEX.md#probability).
 
 **Lean certified:** [`PROFILE-WORLD-ALGEBRA`](evidence/RESULT-INDEX.md#profile-world-algebra): The finite-profile and atomic-profile results. [`PROBABILITY`](evidence/RESULT-INDEX.md#probability): Supported-real suprema, natural-number order and basic numeric operations; cut crossing and supported-real negation, subtraction and inverses. Numeric-operation laws retain ActualWorld, quantified Infinity and domain guards; induction and cases require ActualWorld alone.
-
-<a id="further-negative-results"></a>
-### Further negative results and strength bounds
-
-<a id="fc-finite-basis"></a>
-#### Can Functional Choice or ☐Functional Choice have a finite equivalent fixed-type basis?
-
-**Position:** Negative ordinary results established.
-
-Neither full Functional Choice nor its boxed form has an equivalent finite list of arbitrary pure fixed-type sentences over C. The Boolean-valued construction supplies ordinary separating models. The previously stated fixed-input and selector hierarchies remain in the supporting proofs.
-
-**Lean certified:** [`CHOICE-NO-FINITE-BASIS`](evidence/RESULT-INDEX.md#choice-no-finite-basis).
-
-<a id="max-arithmetic-obstructions"></a>
-#### Maximalism and SP have different arithmetic obstructions
-
-Pure Maximalism forbids a predecessor operation at every admitted counting type, although the relevant total single-valued graph exists. Pure SP proves every standard-true Π₂ sentence under the specified Frege translation; if consistent, it omits some true Π₃ sentence. Max also refutes the explicit guarded numerical join, and its interval below ¬Actuality is internally Dedekind and Frege infinite, without asserting that ¬Actuality is currently true.
-
-**Evidence:** [Maximalism forbids a numerical predecessor operation](evidence/RESULT-INDEX.md#max-predecessor) · [Pure SP proves true Π₂ arithmetic, with a sharp conditional boundary](evidence/RESULT-INDEX.md#sp-arithmetic-reflection) · [Frege number structure and transfer can be separated from stronger model claims](evidence/RESULT-INDEX.md#arithmetic-foundations) · [principles.07](CATALOG.md#principles.07) · [principles.09](CATALOG.md#principles.09).
-
-**Lean certified:** [`MAX-PREDECESSOR`](evidence/RESULT-INDEX.md#max-predecessor): The no-predecessor theorem at every closed counting type; the total unique graph and Plenitude failure at e. [`ARITHMETIC-FOUNDATIONS`](evidence/RESULT-INDEX.md#arithmetic-foundations): The displayed Frege noncollapse and finiteness equivalences, number-map/Hume-class results, and C5–Actuality transfer results.
-
-<a id="signature-extension-answers"></a>
-#### Signature extensions and finite profile bounds
-
-There is an exact boundary for conservative proper extensions of finite signatures, and an infinite reserve of names restores conservativity at the types receiving new constants. Pointed complete theories determine the finite Boolean intervals forced by SP. These metatheorems retain the reference language of each Max and SP schema.
-
-**Evidence:** [An exact boundary for finite signature extensions](evidence/RESULT-INDEX.md#signature-finite-boundary) · [An infinite reserve of names restores conservativity](evidence/RESULT-INDEX.md#signature-infinite-reservoir) · [Pointed theories determine the finite Boolean intervals forced by SP](evidence/RESULT-INDEX.md#sp-finite-profile-rank).
-
-<a id="computational-boundaries"></a>
-#### Computational strength and model construction
-
-Theoremhood, finite-condition consistency and adequate model construction have distinct jump thresholds. A supplied complete consistent pure theory has a model of exactly its computational degree; requiring externally standard natural numbers creates a stronger barrier. The completion-space comparisons separate finite descriptions and effective complexity.
-
-**Evidence:** [Theoremhood and model construction have successive jump thresholds](evidence/RESULT-INDEX.md#computability-comparison) · [A complete theory has a model of exactly its computational degree](evidence/RESULT-INDEX.md#exact-model-degrees) · [Standard natural numbers impose a much stronger computational barrier](evidence/RESULT-INDEX.md#standard-number-models) · [Finite descriptions distinguish the completion spaces](evidence/RESULT-INDEX.md#completion-spaces).
-
-<a id="failed-choice-constructions"></a>
-#### Construction failures that leave the main questions open
-
-The rational-shear and full rational-linear selector constructions fail after the required closure steps. The paired-individual example satisfies restricted Relational Choice fragments, not full Relational Choice, so it cannot settle Relational Choice ⇒ Transversal Choice. The one-block Cohen reservoir fails the required real-uniformization property; the separate ADℝ-relative separator retains its metatheoretic assumption.
-
-**Evidence:** [rigidity.29](CATALOG.md#rigidity.29) · [rigidity.30](CATALOG.md#rigidity.30) · [F04](CATALOG.md#f04) · [F10](CATALOG.md#f10).

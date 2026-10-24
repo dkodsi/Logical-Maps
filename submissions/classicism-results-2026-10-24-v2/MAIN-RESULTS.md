@@ -479,25 +479,26 @@ The proof constructs bracket abstraction, substitution coherence and both term r
 [Lambda-free reconstruction](evidence/RESULT-INDEX.md#lambda-free-translation) · [Beta eta conversion](evidence/RESULT-INDEX.md#beta-eta-conversion).
 
 <a id="infinitary-comprehension"></a>
-#### Infinitary Comprehension and C5 characterize full standard models
+<a id="intrinsic-observer-axioms"></a>
+#### Infinitary Comprehension and full standard models
 
-Every infinitary formula defines a relation with the same truth conditions at every accessible point.
+Over H + full typed endpoint separation, unboxed infinitary range comprehension suffices:
 
 $$
-\exists R^{\sigma_1\cdots\sigma_n t}\,\Box\forall x_1\cdots x_n\,\bigl(R[\bar x]\leftrightarrow A\bigr).
+\exists R^{\sigma t}\,\forall x^\sigma\,\left(Rx\leftrightarrow\bigvee_{i\in I}x=a_i\right).
 $$
 
-A is any classical formula built using arbitrary set-sized well-founded conjunctions and disjunctions, with any set-sized family of typed parameters; R is not free in A. Each instance holds for every simultaneous parameter assignment. The argument tuple is finite and may be empty.
+For every original input type σ, including e, and every set-indexed parameter family, under every simultaneous assignment.
 
-With C5, this schema characterizes the full standard relational hierarchies; Atomicity follows from the infinitary resources. In ZFC it also gives ☐Functional Choice, while leaving the sizes of the individual and world domains unrestricted.
+In ZF, these two principles characterize full standard relational hierarchies. Endpoint separation already supplies C5 + Atomicity (type t); range comprehension supplies every subset and operation. Infinity and Extensionality remain optional.
 
-For every infinite regular κ, a one-world model satisfies C5, Atomicity and every instance with fewer than κ parameters, regardless of formula size, but fails the unrestricted schema. At κ = ω its individual predicates are exactly the finite and cofinite subsets.
+The general [boxed Infinitary Comprehension schema](CANDIDATES_DK.md#infinitary-comprehension-r), together with C5, gives the same full-model characterization without a separate Atomicity premise. For every infinite regular κ, allowing fewer than κ parameters leaves a countermodel, even with unrestricted formula size; at κ = ω its individual predicates are exactly the finite and cofinite subsets.
 
-For the related algebraic characterization, see [Arbitrary Atomic Joins](#full-standard-gallin).
+Fullness is choice-free. The assertion that Functional Choice holds in every full hierarchy is equivalent to AC over ZF. For the algebraic formulation, see [Arbitrary Atomic Joins](#full-standard-gallin).
 
-**Lean certified:** For universe-0 categorical premodels, term-denotation closure + unrestricted original-closed-type Infinitary Comprehension + ☐ND (type t) imply faithful full-standard representation; full standard models satisfy the corresponding infinitary axioms. · [Proof length](#proof-length): long.
+**Lean certified:** For the general boxed schema, term-denotation closure + unrestricted original-closed-type Infinitary Comprehension + ☐ND (type t) give faithful full-standard representation of universe-0 categorical premodels, with a separately certified full-standard converse. · [Proof length](#proof-length): long.
 
-[Proofs and certificates](evidence/RESULT-INDEX.md#infinitary-comprehension).
+[General comprehension: proofs and certificates](evidence/RESULT-INDEX.md#infinitary-comprehension) · [Unboxed range formulation and ZF proof](evidence/RESULT-INDEX.md#intrinsic-observer-axioms).
 
 <a id="full-standard-gallin"></a>
 #### Arbitrary Atomic Joins characterize full Gallin hierarchies

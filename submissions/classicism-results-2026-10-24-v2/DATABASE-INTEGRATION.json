@@ -3,8 +3,8 @@
   "database_snapshot_origin": "logical-maps",
   "purpose": "Local review plan only. Related records identify context, not a claim that the research result is already present. No official verdict or Lean status is changed.",
   "coverage": {
-    "main_entries": 59,
-    "catalog_keys": 184,
+    "main_entries": 60,
+    "catalog_keys": 185,
     "limit": "Detailed and supplementary claims are matched to source and database context at their stated scopes. Registration remains separate from mathematical proof and exact certificate acceptance.",
     "supplementary_review_keys": [
       "choice.04",
@@ -3014,6 +3014,25 @@
         {
           "record": "principles/functionality-r",
           "role": "related principle; the atlas proves an H factorization"
+        }
+      ]
+    },
+    {
+      "result_id": "INTRINSIC-OBSERVER-AXIOMS",
+      "action": "Keep the intrinsic formulation with the infinitary extension",
+      "proposal": "Use H + full typed endpoint separation + unboxed range comprehension as a concise full-model axiom system. Retain arbitrary set-indexed simultaneous parameters, including at input type e. Record the ZF representation and the AC equivalence for universal full-model Functional Choice separately from the existing general-comprehension certificate. These are semantic characterizations, not new finitary engine edges.",
+      "records": [
+        {
+          "record": "principles/necessary-distinctness-necessary-r",
+          "role": "C5 recovered by endpoint separation"
+        },
+        {
+          "record": "principles/atomicity-r",
+          "role": "atomic structure recovered before range comprehension"
+        },
+        {
+          "record": "principles/boolean-completeness-r",
+          "role": "joins admitted families; range comprehension supplies every external family"
         }
       ]
     }
