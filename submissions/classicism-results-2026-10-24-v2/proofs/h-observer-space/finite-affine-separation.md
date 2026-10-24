@@ -12,18 +12,18 @@ Let Fin_t(U) abbreviate
 
 $$
 \exists Z^{(tt)t}
-  (\operatorname{FiniteCardinality}_t(Z)\land ZU).
+  (\mathrm{FiniteCardinality}_t(Z)\land ZU).
 $$
 The definition is the existing Frege induction definition in [Background, Notation](../../source/topics/classicism/background.md):
 
 $$
 \mathbf0:=\lambda U.\forall x\neg Ux,
 \qquad
-\operatorname{Suc}(Z):=\lambda U.\exists y(Uy\land Z(\lambda x.Ux\land x\ne y)),
+\mathrm{Suc}(Z):=\lambda U.\exists y(Uy\land Z(\lambda x.Ux\land x\ne y)),
 $$
 $$
-\operatorname{FiniteCardinality}_t(Z):=
-\forall W\,[(W\mathbf0\land\forall Y(WY\to W(\operatorname{Suc}(Y))))\to WZ].
+\mathrm{FiniteCardinality}_t(Z):=
+\forall W\,[(W\mathbf0\land\forall Y(WY\to W(\mathrm{Suc}(Y))))\to WZ].
 $$
 All types here are admitted relational types. Put All:=λx.Top, and assume Fin_t(All). This is internal Frege finiteness of the proposition domain. It does not assert that the finite cardinality is a standard numeral or supply an external enumeration.
 
@@ -81,7 +81,7 @@ With L₀,e₀ fixed, define the admitted property W of cardinality objects by
 
 $$
 W(Z):=\forall U\,[ZU\to
-\exists L,e\,(\operatorname{Extension}(L,e;L_0,e_0)
+\exists L,e\,(\mathrm{Extension}(L,e;L_0,e_0)
  \land\forall x(Ux\to Lx))].
 \tag{3}
 $$

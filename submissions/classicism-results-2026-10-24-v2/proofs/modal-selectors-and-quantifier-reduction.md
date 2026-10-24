@@ -108,7 +108,7 @@ For the nontrivial direction, each separating witness qualifies for any requeste
 Combining §§3–4 with the identity-fixing results gives
 
 $$
-\mathrm C\ \vdash\ S[A\land\operatorname{FixEq}_t\land N\land Q_t]\ \leftrightarrow\ S[A\land\operatorname{FixEq}_t\land V\land Q_t]\ \leftrightarrow\ \mathrm{C5}+\mathrm{OS}.
+\mathrm C\ \vdash\ S[A\land\mathrm{FixEq}_t\land N\land Q_t]\ \leftrightarrow\ S[A\land\mathrm{FixEq}_t\land V\land Q_t]\ \leftrightarrow\ \mathrm{C5}+\mathrm{OS}.
 $$
 
 Identity-fixing and Top-accepting separation gives ND_t; Q_t separation gives BF_t; the recorded ND_t + BF_t theorem gives C5. Dropping FixEq from the qualification then gives one of the mixed separation principles, and §§3–4 give OS. Conversely C5 + OS supplies Good_{t} separating observers. Under C5, identity judgments are endpoints, and the persistent-premise/Intensionality argument makes their fixing a full composite identity. Thus those witnesses satisfy either displayed qualification.

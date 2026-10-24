@@ -11,10 +11,10 @@ Published background and the older components of the composition retain
 
 In the fixed framework C, with the map's relational type system,
 
-\[
+$$
 \mathrm{Relational\ Choice}+\mathrm{Boolean\ Completeness}
 \;\Longrightarrow\;\mathrm{Transversal\ Choice}.
-\]
+$$
 
 All three schemata are unboxed. Here **RC means Relational Choice**, not
 Rigid Comprehension. The stable conjecture ID and its original certificate
@@ -22,13 +22,13 @@ date are retained.
 
 There are two useful proofs. The short database composition is
 
-\[
+$$
 \begin{aligned}
 \mathrm{RC}+\mathrm{BC}&\Rightarrow\mathrm{Actuality},\\
 \mathrm{BC}+\mathrm{Actuality}&\Rightarrow\mathrm{Weak\ Rigid\ Comprehension},\\
 \mathrm{RC}+\mathrm{Weak\ Rigid\ Comprehension}&\Rightarrow\mathrm{TC}.
 \end{aligned}
-\]
+$$
 
 The first implication is the independent Codex research prompted by Daniel
 Kodsi, recorded in
@@ -96,9 +96,9 @@ all partial transversals. Form the represented union $A$ of its internal
 $g$-chains as in Part A. No completeness is needed to form $A$ or prove it
 internally well-ordered. For $F\in A$, put
 
-\[
+$$
 d_F=g(F)\wedge_\rho\neg_\rho F.
-\]
+$$
 
 Strictness makes $d_F$ nonbottom. If $F<G$ in $A$, its defining predecessor
 condition gives $g(F)\le G$, so $d_F\wedge_\rho d_G=0$. Thus the
@@ -119,10 +119,10 @@ and
 [Transversal plus RC implies TC](../source/topics/classicism/results/transversal-and-relational-choice-imply-transversal-choice.yaml)
 then give
 
-\[
+$$
 \mathrm{RC}_{t,t}+\mathrm{BC}_{tt}+\mathrm{RC}_{\sigma t,\sigma}
 \Rightarrow\mathrm{TC}_\sigma.
-\]
+$$
 
 Consequently all-type RC with BC at $tt$ alone suffices for all-type TC.
 This is complementary to the direct proof's completeness premise at

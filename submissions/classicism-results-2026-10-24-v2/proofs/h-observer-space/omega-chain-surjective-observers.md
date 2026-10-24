@@ -2,10 +2,10 @@
 
 By OpenAI Codex, prompted by Daniel Kodsi, 24 October 2026. Direct source for the new observer representation and verdicts: `misc`, this note, §§1–5, unpaginated. The existing full action-model construction and earlier omega-chain verdicts are attributed in §6.
 
-In the full omega-chain model, $\operatorname{Good}_{\{t\}}$ observers are exactly the inverse-image operations of maps f satisfying f(m)≥m. Such maps are called forward coordinate maps here; they need not be nondecreasing. Shifts give surjective observers which separate at every future stage. An injective logical observer must be the identity. This proves
+In the full omega-chain model, $\mathrm{Good}_{\{t\}}$ observers are exactly the inverse-image operations of maps f satisfying f(m)≥m. Such maps are called forward coordinate maps here; they need not be nondecreasing. Shifts give surjective observers which separate at every future stage. An injective logical observer must be the identity. This proves
 
 $$
-\mathrm C+\Box\mathrm{BF}+\Box\operatorname{Atomicity}_t
+\mathrm C+\Box\mathrm{BF}+\Box\mathrm{Atomicity}_t
 +\Box\mathrm{SurjSep}
 \ \not\Longrightarrow\ \mathrm{C5},\quad\mathrm{SplitMono}.
 \tag{1}
@@ -59,7 +59,7 @@ If p≠q in D_t(n), choose m≥n where their memberships differ and take k=m−n
 
 ## 3. Every Good_{t} observer is a forward coordinate map
 
-Let E be an arbitrary $\operatorname{Good}_{\{t\}}$ observer at n. Write E_m for its transport to m≥n. Its current Boolean truth test
+Let E be an arbitrary $\mathrm{Good}_{\{t\}}$ observer at n. Write E_m for its transport to m≥n. Its current Boolean truth test
 
 $$
 h_m(q):=[m\in E_m(q)]\qquad(q\subseteq T_m)
@@ -90,7 +90,7 @@ E(p)=f^{-1}[p],\qquad
 f:T_n\to T_n,\quad f(m)\ge m.
 \tag{10}
 $$
-This also specifies E on arbitrary future arguments through (7), so it identifies the whole admitted observer. Conversely, every external map f with f(m)≥m supplies an admitted profile E_f(m,q):=[f(m)∈q]. The Boolean proof and (5)–(6), now using j=f(m), show that E_f satisfies all full quantifier identities. Thus the correspondence is exact. In this particular model, $\operatorname{Good}_{\{t\}}$ already equals the class qualified at every finite list containing t. This is a semantic classification, not a general reduction of qualification over H or C.
+This also specifies E on arbitrary future arguments through (7), so it identifies the whole admitted observer. Conversely, every external map f with f(m)≥m supplies an admitted profile E_f(m,q):=[f(m)∈q]. The Boolean proof and (5)–(6), now using j=f(m), show that E_f satisfies all full quantifier identities. Thus the correspondence is exact. In this particular model, $\mathrm{Good}_{\{t\}}$ already equals the class qualified at every finite list containing t. This is a semantic classification, not a general reduction of qualification over H or C.
 
 ## 4. Injectivity and the absence of admitted inverses
 
@@ -103,7 +103,7 @@ E\text{ Good}_{\{t\}}\text{ and currently injective}
 \quad\Longrightarrow\quad E=I.
 \tag{11}
 $$
-Any admitted whole left inverse F∘E=I makes E currently injective, even if F is unqualified. Thus the only $\operatorname{Good}_{\{t\}}$ observer with an admitted left inverse is I. At n, the distinct propositions ∅ and {n+1} are both false, and I does not distinguish their truth. The propositional SplitMono separation instance for Δ={t} therefore fails at every node. The statement uses neither a presumed global inverse nor an identification of internal and external finiteness.
+Any admitted whole left inverse F∘E=I makes E currently injective, even if F is unqualified. Thus the only $\mathrm{Good}_{\{t\}}$ observer with an admitted left inverse is I. At n, the distinct propositions ∅ and {n+1} are both false, and I does not distinguish their truth. The propositional SplitMono separation instance for Δ={t} therefore fails at every node. The statement uses neither a presumed global inverse nor an identification of internal and external finiteness.
 
 Current surjectivity of E_f, by contrast, is equivalent to injectivity of f. If f(m)=f(l) with m≠l, no output can contain exactly one of m,l. If f is injective, an arbitrary output q⊆T_n has preimage f[q]. Positive shifts are examples, so current onto does not imply injective here.
 

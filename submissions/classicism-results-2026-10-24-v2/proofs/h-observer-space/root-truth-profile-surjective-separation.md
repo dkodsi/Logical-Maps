@@ -6,7 +6,7 @@ An individual admitted observer's current surjectivity persists over C+BF_t. Sur
 
 $$
 \mathrm C+\mathrm{SurjSep}+\Box\mathrm{BF}
-+\Box\operatorname{Functionality}+\neg\Box\mathrm{OS}.
++\Box\mathrm{Functionality}+\neg\Box\mathrm{OS}.
 \tag{1}
 $$
 Consequently it also refutes necessary SurjSep. Here SurjSep has every relational output type and every finite external qualification list. The failed boxed OS instance has output type t and the empty qualification list. This construction retains ☐BF; the separate [integer-shift predecessor](integer-shift-predecessor-contingent-barcan.md) refutes SurjSep ⇒ ☐BF at every admitted type.
@@ -16,13 +16,13 @@ Consequently it also refutes necessary SurjSep. Here SurjSep has every relationa
 Write
 
 $$
-\operatorname{Onto}(E):=\forall q^t\,\exists p^t\,Ep=q.
+\mathrm{Onto}(E):=\forall q^t\,\exists p^t\,Ep=q.
 $$
 Over C+BF_t, for every admitted E:tt,
 
 $$
-\operatorname{Onto}(E)\ \longrightarrow\
-\Box\operatorname{Onto}(E).
+\mathrm{Onto}(E)\ \longrightarrow\
+\Box\mathrm{Onto}(E).
 \tag{2}
 $$
 Fix E and assume Onto(E). For any current q, choose p with Ep=q. Necessity of Identity gives □(Ep=q). The unconditional existential-introduction theorem
@@ -40,10 +40,10 @@ Apply BF_t to the admitted predicate λq.∃z(Ez=q). This gives (2). The paramet
 For each fixed finite Δ, Good_Δ is also persistent over C. Its Boolean and quantifier requirements are a finite conjunction of operation identities, so Necessity of Identity boxes them. The translated equality clauses follow from those Boolean requirements over C, and that unconditional implication can be necessitated. Hence C+BF_t proves
 
 $$
-\operatorname{Good}_\Delta(E)\land\operatorname{Onto}(E)
+\mathrm{Good}_\Delta(E)\land\mathrm{Onto}(E)
 \ \longrightarrow\
-\Box\bigl(\operatorname{Good}_\Delta(E)
-\land\operatorname{Onto}(E)\bigr).
+\Box\bigl(\mathrm{Good}_\Delta(E)
+\land\mathrm{Onto}(E)\bigr).
 \tag{3}
 $$
 Full SurjSep over H implies full OS by forgetting the additional onto qualification, and hence recovers C+BF. Thus (3) applies to every current qualifying witness under the full SurjSep theory. It does not say that those witnesses separate at every future point. The distinction is realized below.

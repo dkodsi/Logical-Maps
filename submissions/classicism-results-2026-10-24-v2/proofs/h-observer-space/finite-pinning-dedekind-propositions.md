@@ -63,7 +63,7 @@ The only finiteness used is the external finiteness of each fixed-pin algebra. N
 Take one countably infinite object X partitioned into two disjoint infinite sets A and B. The partition is part of the external model specification; no nonlogical colour predicates are required in the language.
 
 - Arrows are all bijections X→X.
-- The designated symmetry group is $G=\operatorname{Sym}(A)\times\operatorname{Sym}(B)$: each symmetry preserves each colour class setwise.
+- The designated symmetry group is $G=\mathrm{Sym}(A)\times\mathrm{Sym}(B)$: each symmetry preserves each colour class setwise.
 - At every relational type, the domain consists of exactly the symmetric intensions pinned by some finite subset of X. Individuals are X, with the arrow action on X.
 - Evaluation is at the identity arrow. If a signature expansion is desired, every nonlogical relational constant may be interpreted as its type's top element.
 
@@ -107,7 +107,7 @@ $$
 \boxed{\mathrm{C5}+\mathrm{Rev}+\mathsf D_t
  +\text{atomless propositions}
  +\neg\mathrm{EndSep}
- +\neg\operatorname{Fin}_t(\mathrm{All}).}
+ +\neg\mathrm{Fin}_t(\mathrm{All}).}
 \tag{7}
 $$
 This establishes that Rev together with (1) need not imply EndSep, even though (1) still makes every qualified left inverse two-sided. The two consequences of internal Frege finiteness must be kept distinct: its injection-to-surjection consequence suffices for the inverse conversion, whereas the finite-image witness used for endpoint separation is not supplied by (1).

@@ -31,7 +31,7 @@ Thus f is greatest among the false propositions and u least among the true ones.
 Define the admitted adjacency relation
 
 $$
-\operatorname{Gap}(a,b):=a<b\ \land\
+\mathrm{Gap}(a,b):=a<b\ \land\
 \neg\exists x\,(a<x\land x<b).
 \tag{3}
 $$
@@ -39,7 +39,7 @@ An order isomorphism preserves this relation in both directions. The **gap-densi
 
 $$
 \forall p,q\,[p<q\to
-\exists a,b\,(p\le a\land\operatorname{Gap}(a,b)\land b\le q)].
+\exists a,b\,(p\le a\land\mathrm{Gap}(a,b)\land b\le q)].
 \tag{4}
 $$
 It says every nontrivial closed interval contains an adjacent pair. This is different from density of the order, which would prohibit all adjacent pairs.
@@ -48,7 +48,7 @@ The action is **transitive on gaps** when every two ordered adjacent pairs are m
 
 $$
 \begin{aligned}
-\forall a,b,c,d\,[&\operatorname{Gap}(a,b)\land\operatorname{Gap}(c,d)\\
+\forall a,b,c,d\,[&\mathrm{Gap}(a,b)\land\mathrm{Gap}(c,d)\\
 &\to\exists E\,(GE\land Ea=c\land Eb=d)].
 \end{aligned}
 \tag{5}

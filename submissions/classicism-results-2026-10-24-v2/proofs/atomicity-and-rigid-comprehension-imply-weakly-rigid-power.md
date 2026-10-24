@@ -27,7 +27,7 @@ $F^\tau$, the property
 
 $$
  P_F:=\lambda Y^\tau\,.\,
-       \operatorname{WeaklyRigid}(Y)\land Y\le F
+       \mathrm{WeaklyRigid}(Y)\land Y\le F
 $$
 
 is weakly rigid. It has type $\tau t$. This implies the all-type result
@@ -61,7 +61,7 @@ Fix a weakly rigid $F^\tau$ and abbreviate $P_F$ by $P$.
 ## 1. Weak persistence of the weak-power property
 
 If $P(Y)$ currently holds, RC at $\tau$ and the preceding lemma make $Y$
-rigid. Consequently $\Box\operatorname{WeaklyRigid}(Y)$ holds. Also,
+rigid. Consequently $\Box\mathrm{WeaklyRigid}(Y)$ holds. Also,
 $Y\le F$ persists, by NI (or the boxed form of entailment and 4).
 Together these give $\Box P(Y)$.
 

@@ -38,20 +38,20 @@ Then over H+ND_t,
 
 $$
 \boxed{
-\operatorname{Sep}_t[A\land M_{\rm mat}\land Q^{\rm mat}_\Delta]
+\mathrm{Sep}_t[A\land M_{\rm mat}\land Q^{\rm mat}_\Delta]
 \leftrightarrow\mathrm{Meet}_\Delta
 \leftrightarrow
-\operatorname{Sep}_t[A\land M_{\rm pt}\land Q^{\rm pt}_\Delta].}
+\mathrm{Sep}_t[A\land M_{\rm pt}\land Q^{\rm pt}_\Delta].}
 \tag{3}
 $$
 Likewise,
 
 $$
 \boxed{
-\operatorname{Sep}_t[Z\land V_{\rm mat}\land P^{\rm mat}_\Delta]
+\mathrm{Sep}_t[Z\land V_{\rm mat}\land P^{\rm mat}_\Delta]
 \leftrightarrow\mathrm{Join}_\Delta
 \leftrightarrow
-\operatorname{Sep}_t[Z\land V_{\rm pt}\land P^{\rm pt}_\Delta].}
+\mathrm{Sep}_t[Z\land V_{\rm pt}\land P^{\rm pt}_\Delta].}
 \tag{4}
 $$
 The pointwise witnesses in both constructions have at most two outputs. The list Δ may be empty and need not contain t. Whole-operation identities require precisely the lifting described in §5.
@@ -145,9 +145,9 @@ This is truth acceptance/rejection, not endpoint fixing: E_a(Top) may be v_a≠T
 To obtain whole-operation identities at propositional scope, assume
 
 $$
-\operatorname{Fun}_{t,t},\qquad
-\operatorname{Fun}_{t,tt},\qquad
-\{\operatorname{Fun}_{\sigma t,t}:\sigma\in\Delta\}.
+\mathrm{Fun}_{t,t},\qquad
+\mathrm{Fun}_{t,tt},\qquad
+\{\mathrm{Fun}_{\sigma t,t}:\sigma\in\Delta\}.
 \tag{9}
 $$
 The first two lift the binary law, one input at a time; the last lift the quantifier laws as identities of the F-operations. With (9), replace every pointwise qualification in (3)–(4) by its whole-operation version. No unlisted Functionality is required for this propositional upgrade.
@@ -162,10 +162,10 @@ There is a second application of §2 which requires no ND premise. For every fin
 
 $$
 \boxed{
-\operatorname{Sep}_t[O\land\operatorname{FinIm}\land
+\mathrm{Sep}_t[O\land\mathrm{FinIm}\land
  M_{\rm mat}\land Q^{\rm mat}_\Delta]
 \leftrightarrow
-\operatorname{Sep}_t[O\land\operatorname{Two}\land
+\mathrm{Sep}_t[O\land\mathrm{Two}\land
  M_{\rm pt}\land Q^{\rm pt}_\Delta].}
 \tag{10}
 $$
@@ -189,9 +189,9 @@ $$
 Then, still over bare H,
 
 $$
-\operatorname{Sep}_t[O\land\operatorname{FinIm}\land\Sigma_{\rm mat}]
+\mathrm{Sep}_t[O\land\mathrm{FinIm}\land\Sigma_{\rm mat}]
 \ \leftrightarrow\
-\operatorname{Sep}_t[O\land\operatorname{Two}\land\Sigma_{\rm pt}].
+\mathrm{Sep}_t[O\land\mathrm{Two}\land\Sigma_{\rm pt}].
 \tag{11}
 $$
 Indeed, the left principle gives the original distributive-lattice identities by the material M,V truth-profile argument. In particular the meet and join orders coincide. The meet normalization produces outputs b≤v, so they form a join chain as well as a meet chain. Both binary material laws consequently become pointwise identities on the same pair. Each listed Q law makes the primitive universal an admitted GLB in this shared order, and each P law makes the primitive existential an admitted LUB. Section 2 therefore upgrades all those laws simultaneously. The constant-profile cases use the GLB/LUB identity of a constant nonempty family. The reverse implication is again Two⇒FinIm and pointwise⇒material.

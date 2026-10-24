@@ -20,10 +20,10 @@ An observer family is an admitted predicate X:(tt)t. Its membership is ordinary 
 
 $$
 \begin{aligned}I&:=\lambda p.p,&F\circ E&:=\lambda p.F(Ep),\\
-\operatorname{Closed}(X)&:=\forall E,F\,[(X(E)\land X(F))\to X(F\circ E)],\\
-\operatorname{Monoid}(X)&:=X(I)\land\operatorname{Closed}(X),\\
-\operatorname{Material}_\Sigma(X)&:=\forall E\,[X(E)\to\operatorname{Mat}_\Sigma(E)],\\
-\operatorname{Sep}(X)&:=\forall p,q\,[p=q\leftrightarrow\forall E\,(X(E)\to(Ep\leftrightarrow Eq))].\end{aligned}
+\mathrm{Closed}(X)&:=\forall E,F\,[(X(E)\land X(F))\to X(F\circ E)],\\
+\mathrm{Monoid}(X)&:=X(I)\land\mathrm{Closed}(X),\\
+\mathrm{Material}_\Sigma(X)&:=\forall E\,[X(E)\to\mathrm{Mat}_\Sigma(E)],\\
+\mathrm{Sep}(X)&:=\forall p,q\,[p=q\leftrightarrow\forall E\,(X(E)\to(Ep\leftrightarrow Eq))].\end{aligned}
 $$
 
 All these formulas and the predicate λE.PtΣ(E) are admitted lambda terms. There is no external quantification over arbitrary sets of observers, and no object-language quantification over types.
@@ -33,9 +33,9 @@ All these formulas and the predicate λE.PtΣ(E) are admitted lambda terms. Ther
 **Theorem.** Over H,
 
 $$
-\begin{aligned}S[\operatorname{Pt}_\Sigma]
-&\leftrightarrow\exists X\,[\operatorname{Sep}(X)\land\operatorname{Closed}(X)\land\operatorname{Material}_\Sigma(X)]\\
-&\leftrightarrow\exists X\,[\operatorname{Sep}(X)\land\operatorname{Monoid}(X)\land\operatorname{Material}_\Sigma(X)].\end{aligned}
+\begin{aligned}S[\mathrm{Pt}_\Sigma]
+&\leftrightarrow\exists X\,[\mathrm{Sep}(X)\land\mathrm{Closed}(X)\land\mathrm{Material}_\Sigma(X)]\\
+&\leftrightarrow\exists X\,[\mathrm{Sep}(X)\land\mathrm{Monoid}(X)\land\mathrm{Material}_\Sigma(X)].\end{aligned}
 $$
 
 ### From pointwise identities to a material monoid
@@ -93,9 +93,9 @@ If Σ lists Top or Bottom as a fixed constant, the right-hand material family co
 Thus, for example,
 
 $$
-\begin{aligned}&S[\operatorname{Pt}_\Sigma\land E\top=\top\land E\bot=\bot]\\
-&\quad\leftrightarrow\exists X\,[\operatorname{Sep}(X)\land\operatorname{Monoid}(X)\land
-\forall E\,(X(E)\to(\operatorname{Mat}_\Sigma(E)\land A(E)\land Z(E)))].\end{aligned}
+\begin{aligned}&S[\mathrm{Pt}_\Sigma\land E\top=\top\land E\bot=\bot]\\
+&\quad\leftrightarrow\exists X\,[\mathrm{Sep}(X)\land\mathrm{Monoid}(X)\land
+\forall E\,(X(E)\to(\mathrm{Mat}_\Sigma(E)\land A(E)\land Z(E)))].\end{aligned}
 $$
 
 This is an exact bridge from truth conditions on a **closed separating family** to endpoint fixing. It does not say that the entire A,Z-qualified pointwise class is composition-closed: a map accepting Top can send it to a different true proposition which another map rejects. Nor does the theorem identify ordinary S[A Z PtΣ] with the displayed fixed-endpoint principle.
@@ -109,8 +109,8 @@ For a fixed relational type ρ, Sep_ρ(X) means separation by X of values after 
 For any ρ, over H,
 
 $$
-\begin{aligned}&S_t[\operatorname{Pt}_\Sigma]+S_\rho[\operatorname{Pt}_\Sigma]\\
-&\quad\leftrightarrow\exists X\,[\operatorname{Sep}_t(X)\land\operatorname{Sep}_\rho(X)\land\operatorname{Monoid}(X)\land\operatorname{Material}_\Sigma(X)].\end{aligned}
+\begin{aligned}&S_t[\mathrm{Pt}_\Sigma]+S_\rho[\mathrm{Pt}_\Sigma]\\
+&\quad\leftrightarrow\exists X\,[\mathrm{Sep}_t(X)\land\mathrm{Sep}_\rho(X)\land\mathrm{Monoid}(X)\land\mathrm{Material}_\Sigma(X)].\end{aligned}
 $$
 
 Forward use X=PtΣ. Reverse the propositional instance makes every X-member pointwise preserving by §2, and enlarging the class gives the ρ-instance too. No Functionality is needed for this paired statement.

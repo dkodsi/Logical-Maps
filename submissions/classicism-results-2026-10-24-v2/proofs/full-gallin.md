@@ -91,16 +91,16 @@ The relativized subdomain is essential: merely using $E$ as the second-order dom
 
 A finite C sentence $A$ uses finitely many types. Include all their subtypes and the types of the logical constants actually occurring in the term syntax. Use an auxiliary one-sorted second-order language with disjoint unary predicates for these typed domains and a world domain $U_s$. Introduce:
 
-- a binary relation $\operatorname{Ev}(p,w)$ between $U_t$ and $U_s$;
-- a ternary application graph $\operatorname{App}_{\sigma\tau}(f,x,y)$ for every required arrow type;
+- a binary relation $\mathrm{Ev}(p,w)$ between $U_t$ and $U_s$;
+- a ternary application graph $\mathrm{App}_{\sigma\tau}(f,x,y)$ for every required arrow type;
 - appropriately sorted symbols for the finitely many constants and logical operations actually needed.
 
-Let $\operatorname{Hierarchy}_A$ assert nonemptiness, the sort conditions, total single-valued application, extensionality, and the following **full second-order** clauses:
+Let $\mathrm{Hierarchy}_A$ assert nonemptiness, the sort conditions, total single-valued application, extensionality, and the following **full second-order** clauses:
 
 $$
 \forall X\subseteq U_s\;\exists p\in U_t\;
   \forall w\in U_s\,
-  \bigl(\operatorname{Ev}(p,w)\leftrightarrow Xw\bigr),
+  \bigl(\mathrm{Ev}(p,w)\leftrightarrow Xw\bigr),
 \tag{2.1}
 $$
 
@@ -108,51 +108,51 @@ with extensionality for $U_t$, and
 
 $$
 \forall R\bigl[
- \operatorname{Function}_{U_\sigma,U_\tau}(R)\to
+ \mathrm{Function}_{U_\sigma,U_\tau}(R)\to
  \exists f\in U_{\sigma\tau}\,
  \forall x\in U_\sigma\,\forall y\in U_\tau\,
-   (\operatorname{App}_{\sigma\tau}(f,x,y)\leftrightarrow R(x,y))
+   (\mathrm{App}_{\sigma\tau}(f,x,y)\leftrightarrow R(x,y))
  \bigr].
 \tag{2.2}
 $$
 
-Here a graph in $\operatorname{Function}_{U_\sigma,U_\tau}$ is supported on that product and gives each input exactly one output. All subsets and graphs are quantified in *full second-order semantics*. Add that $U_e,U_s$ are infinite, expressed, in ZFC, by existence of an injective nonsurjective graph on each. This is auxiliary second-order notation, not a forbidden original type $ee$.
+Here a graph in $\mathrm{Function}_{U_\sigma,U_\tau}$ is supported on that product and gives each input exactly one output. All subsets and graphs are quantified in *full second-order semantics*. Add that $U_e,U_s$ are infinite, expressed, in ZFC, by existence of an injective nonsurjective graph on each. This is auxiliary second-order notation, not a forbidden original type $ee$.
 
-Include in $\operatorname{Hierarchy}_A$ the defining graph clauses for each logical constant occurring in $A$, including when it occurs as a first-class value. Negation and conjunction act pointwise on evaluation. The equality constant at any type returns the proposition $U_s$ or $\varnothing$ according to literal sorted equality of its arguments. The universal-quantifier constant takes a predicate $P$ to the proposition $q$ specified by
+Include in $\mathrm{Hierarchy}_A$ the defining graph clauses for each logical constant occurring in $A$, including when it occurs as a first-class value. Negation and conjunction act pointwise on evaluation. The equality constant at any type returns the proposition $U_s$ or $\varnothing$ according to literal sorted equality of its arguments. The universal-quantifier constant takes a predicate $P$ to the proposition $q$ specified by
 
 $$
 \forall w\in U_s\,
- [\operatorname{Ev}(q,w)\leftrightarrow
+ [\mathrm{Ev}(q,w)\leftrightarrow
    \forall x\in U_\sigma\,\exists r\in U_t\,
-     (\operatorname{App}_{\sigma t}(P,x,r)\land\operatorname{Ev}(r,w))].
+     (\mathrm{App}_{\sigma t}(P,x,r)\land\mathrm{Ev}(r,w))].
 $$
 
 Here logical constants of curried type have their full curried graph constrained, at every argument, rather than being treated as uninterpreted operations.
 
 For explicit term translation, define a first-order formula
-$\operatorname{Den}_a(\bar x,u)$ recursively for each subterm $a$. A variable uses identity with its assigned value; a constant uses its constrained interpretation. Application existentially combines the two subterm denotations with the appropriate application graph. A lambda term $\lambda x^\sigma.b^\tau$ uses
+$\mathrm{Den}_a(\bar x,u)$ recursively for each subterm $a$. A variable uses identity with its assigned value; a constant uses its constrained interpretation. Application existentially combines the two subterm denotations with the appropriate application graph. A lambda term $\lambda x^\sigma.b^\tau$ uses
 $$
 \forall x\in U_\sigma\,\forall v\in U_\tau\,
- [\operatorname{App}_{\sigma\tau}(u,x,v)
-   \leftrightarrow \operatorname{Den}_b(\bar x,x,v)].
+ [\mathrm{App}_{\sigma\tau}(u,x,v)
+   \leftrightarrow \mathrm{Den}_b(\bar x,x,v)].
 $$
 Structural induction proves existence and uniqueness of every denotation: totality handles application, graph-fullness handles lambda abstraction, and the defining clauses plus (2.1)–(2.2) give all the logical constants. Extensionality proves uniqueness in the function cases. For a sentence $A:t$, take
 $$
 A^*(w):=\exists p\in U_t\,
-  (\operatorname{Den}_A(p)\land\operatorname{Ev}(p,w)).
+  (\mathrm{Den}_A(p)\land\mathrm{Ev}(p,w)).
 $$
 All these formulas are finite and first-order in the auxiliary sorted presentation. Thus no table of truths of arbitrary formulas is added to the translation.
 
 Let
 
 $$
-S(A):=\operatorname{Hierarchy}_A\to
+S(A):=\mathrm{Hierarchy}_A\to
              \forall w\in U_s\,A^*(w).
 $$
 
 Auxiliary predicates and constants may be treated as nonlogical symbols whose interpretations vary when testing validity. They may instead be universally quantified after relationalization.
 
-Every full Gallin hierarchy, restricted to these finitely many sorts and represented by tagged disjoint copies, satisfies $\operatorname{Hierarchy}_A$. Conversely, (2.1) identifies $U_t$ with the full powerset of $U_s$; induction on type complexity using (2.2) identifies every arrow domain with the full function set between its already identified input and output domains. This finite full hierarchy extends to all omitted admitted types by the same recursive construction. Induction on syntax preserves $A$. Therefore
+Every full Gallin hierarchy, restricted to these finitely many sorts and represented by tagged disjoint copies, satisfies $\mathrm{Hierarchy}_A$. Conversely, (2.1) identifies $U_t$ with the full powerset of $U_s$; induction on type complexity using (2.2) identifies every arrow domain with the full function set between its already identified input and output domains. This finite full hierarchy extends to all omitted admitted types by the same recursive construction. Induction on syntax preserves $A$. Therefore
 
 $$
 A\in\mathrm{Val}_{\mathrm{full},\infty}^{V,\mathrm{pure}}
@@ -167,13 +167,13 @@ Väänänen's Theorem 4(1), p. 18, states that full second-order validity is a c
 
 ## 3. Noncompactness while retaining both Infinity axioms
 
-Work in $\Sigma_0=\{P^{et}\}$, and put $\nu=(et)t$. Use exactly the bundle's definitions of $\mathbf0_e,\operatorname{Suc}_e,\operatorname{FiniteCardinality}_e$. Define
+Work in $\Sigma_0=\{P^{et}\}$, and put $\nu=(et)t$. Use exactly the bundle's definitions of $\mathbf0_e,\mathrm{Suc}_e,\mathrm{FiniteCardinality}_e$. Define
 
 $$
 \begin{aligned}
-\operatorname{Fin}(P)&:=
+\mathrm{Fin}(P)&:=
   \exists Z^\nu\,
-    (\operatorname{FiniteCardinality}_e(Z)\land ZP),\\
+    (\mathrm{FiniteCardinality}_e(Z)\land ZP),\\
 L_n(P)&:=
   \exists x_1^e\cdots x_n^e\,
    \left(\bigwedge_i Px_i\land\bigwedge_{i<j}x_i\ne x_j\right).
@@ -181,12 +181,12 @@ L_n(P)&:=
 $$
 
 **Lemma 3.1.** In a full hierarchy,
-$G,w\models\operatorname{Fin}(P)$ iff
+$G,w\models\mathrm{Fin}(P)$ iff
 $P_w=\{a\in E:w\in P(a)\}$ is externally finite.
 
-**Proof.** Let $z_n=\operatorname{Suc}_e^n(\mathbf0_e)$, and let
+**Proof.** Let $z_n=\mathrm{Suc}_e^n(\mathbf0_e)$, and let
 $N=\{z_n:n<\omega\}$, an external set of objects of type $\nu$.
-Fullness at $\nu t$ supplies its rigid characteristic predicate, with value $W$ on $N$ and $\varnothing$ elsewhere. This predicate contains zero and is successor-closed, so the impredicative definition of $\operatorname{FiniteCardinality}_e$ excludes every object outside $N$. Conversely, at any world, external finite induction puts each $z_n$ in every predicate locally containing zero and closed under successor. Thus the local extension of numberhood is exactly $N$.
+Fullness at $\nu t$ supplies its rigid characteristic predicate, with value $W$ on $N$ and $\varnothing$ elsewhere. This predicate contains zero and is successor-closed, so the impredicative definition of $\mathrm{FiniteCardinality}_e$ excludes every object outside $N$. Conversely, at any world, external finite induction puts each $z_n$ in every predicate locally containing zero and closed under successor. Thus the local extension of numberhood is exactly $N$.
 
 A second induction proves
 $$
@@ -197,7 +197,7 @@ The zero clause says the extension is empty. The successor clause removes a memb
 
 Now put
 $$
-\Gamma=\{\operatorname{Fin}(P)\}\cup\{L_n(P):1\le n<\omega\}.
+\Gamma=\{\mathrm{Fin}(P)\}\cup\{L_n(P):1\le n<\omega\}.
 $$
 
 Every finite $\Gamma_0\subseteq\Gamma$ has a full model with **$E=W=\omega$**: choose a finite set of individuals of size at least the largest displayed bound and interpret $P$ rigidly as that set. Both quantified Infinity axioms and all of $\Box FC$ hold. The whole $\Gamma$ has no full model by Lemma 3.1.
@@ -206,7 +206,7 @@ Every finite $\Gamma_0\subseteq\Gamma$ has a full model with **$E=W=\omega$**: c
 
 Indeed a finite proof of contradiction from $\Gamma$ uses only a finite subset, contradicting the full models just constructed. Boxing every displayed premise also proves noncompactness for global-premise consequence.
 
-This is **not** the old $\operatorname{Fin}_e$ assertion that the entire individual domain is finite. Only the named property's extension is finite. Nor does this argument establish noncompactness for pure *sentences* without parameters: existentially closing $P$ separately in the premises would destroy their shared witness.
+This is **not** the old $\mathrm{Fin}_e$ assertion that the entire individual domain is finite. Only the named property's extension is finite. Nor does this argument establish noncompactness for pure *sentences* without parameters: existentially closing $P$ separately in the premises would destroy their shared witness.
 
 It also follows that no ordinary first-order theory in added sorts or symbols has exactly this full class as its reduct class. First-order compactness applied to that theory together with $\Gamma$ would give an impossible full reduct.
 
@@ -254,8 +254,8 @@ The second-order version gives more. The set of all true second-order arithmetic
 **Proof.** Its theorem predicate has the form
 $$
 \exists T\,
- [\operatorname{Root}(T,n)\land
-  \operatorname{LocalCorrect}(T)\land\operatorname{WF}(T)].
+ [\mathrm{Root}(T,n)\land
+  \mathrm{LocalCorrect}(T)\land\mathrm{WF}(T)].
 $$
 Local correctness is arithmetical and well-foundedness is $\Pi^1_1$, so this is $\Sigma^1_2$. It is projective, contradicting §4.1 if it equals full validity. Uniformly hyperarithmetical local data give the same projective obstruction. $\square$
 
@@ -272,19 +272,19 @@ These are precise restrictions on proof formats. They do not exclude arbitrary n
 ## 5. The omega-rule: useful and insufficient
 
 At any fixed counting type $\sigma$, let
-$z_n^\sigma=\operatorname{Suc}_\sigma^n(\mathbf0_\sigma)$.
+$z_n^\sigma=\mathrm{Suc}_\sigma^n(\mathbf0_\sigma)$.
 The rule, denoted $(\omega_\sigma)$,
 
 $$
 \frac{\{\Gamma\vdash B(z_n^\sigma):n<\omega\}}
  {\Gamma\vdash
-   \forall Z\,(\operatorname{FiniteCardinality}_\sigma(Z)\to B(Z))}
+   \forall Z\,(\mathrm{FiniteCardinality}_\sigma(Z)\to B(Z))}
 \tag{5.1}
 $$
 
 is sound for full local consequence. Lemma 3.1 says exactly that every object satisfying the quantified numberhood predicate is one of these numeral objects. $B$ may contain higher-type parameters and modalities. The same assignment and premise context must be maintained in every premise.
 
-This rule refutes the $\Gamma$ of §3: for each standard $n$, $L_{n+1}(P)$ gives $\neg z_n(P)$; the rule yields that no finite cardinality applies to $P$, contradicting $\operatorname{Fin}(P)$.
+This rule refutes the $\Gamma$ of §3: for each standard $n$, $L_{n+1}(P)$ gives $\neg z_n(P)$; the rule yields that no finite cardinality applies to $P$, contradicting $\mathrm{Fin}(P)$.
 
 For ordinary first-order arithmetic, the unrestricted omega-rule really is complete. Use negation normal form and true closed arithmetic literals as decidable initial sequents. Induct on formula complexity: select a true disjunct or an existential numeral witness; use both conjuncts; at a universal number quantifier use all numeral instances. Every premise has smaller formula complexity, producing a countable well-founded proof. This is a fragment theorem, not a full higher-type completeness argument. Frittaion's directly consulted paper gives substantially stronger recursive and primitive-recursive coding results; see §12.
 
@@ -332,7 +332,7 @@ For every set $I$ and every relational type $\tau$, consider the axiom $J^\tau_I
 $$
 \forall(a_i^\tau)_{i\in I}\,
 \left[
- \bigwedge_{i\in I}\operatorname{Atom}_\tau(a_i)
+ \bigwedge_{i\in I}\mathrm{Atom}_\tau(a_i)
  \to
  \exists b^\tau\left(
    \bigwedge_{i\in I}a_i\le b\ \land\
@@ -399,10 +399,10 @@ Let $\mathcal F$ consist of formulas built from individual equality, individual 
 Introduce ordinary first-order sorts $E,W$, a distinguished $w_0$, and a relation $R^*(w,\bar x)$ for each original $R$. Define the standard translation:
 $$
 \begin{aligned}
-\operatorname{ST}_w(R[\bar x])&=R^*(w,\bar x),\\
-\operatorname{ST}_w(x=y)&=(x=y),\\
-\operatorname{ST}_w(\forall x^e B)&=\forall x^E\,\operatorname{ST}_w(B),\\
-\operatorname{ST}_w(\Box B)&=\forall v^W\,\operatorname{ST}_v(B),
+\mathrm{ST}_w(R[\bar x])&=R^*(w,\bar x),\\
+\mathrm{ST}_w(x=y)&=(x=y),\\
+\mathrm{ST}_w(\forall x^e B)&=\forall x^E\,\mathrm{ST}_w(B),\\
+\mathrm{ST}_w(\Box B)&=\forall v^W\,\mathrm{ST}_v(B),
 \end{aligned}
 $$
 commuting with Boolean connectives. Let $T_\infty$ contain all ordinary first-order finite lower bounds on both sorts.
@@ -411,13 +411,13 @@ commuting with Boolean connectives. Let $T_\infty$ contain all ordinary first-or
 $$
 \Gamma\models_{\mathrm{full},\infty}^{V,\Sigma} A
 \quad\Longleftrightarrow\quad
-T_\infty\cup\{\operatorname{ST}_{w_0}(B):B\in\Gamma\}
-\vdash_{FO}\operatorname{ST}_{w_0}(A).
+T_\infty\cup\{\mathrm{ST}_{w_0}(B):B\in\Gamma\}
+\vdash_{FO}\mathrm{ST}_{w_0}(A).
 $$
 
 **Proof.** Every full hierarchy yields the indicated first-order structure. Conversely, every first-order structure with infinite $E,W$ expands to a full hierarchy by taking all external function spaces and assigning each relational constant its given support. Syntax induction gives the truth equivalence. Ordinary first-order completeness proves the displayed equivalence. $\square$
 
-Thus there is a c.e. sound **strongly complete** calculus for this precise fragment. It does not contradict §3 because $\operatorname{Fin}(P)$ uses higher-type quantification.
+Thus there is a c.e. sound **strongly complete** calculus for this precise fragment. It does not contradict §3 because $\mathrm{Fin}(P)$ uses higher-type quantification.
 
 For validity alone, a finite leading universal block of relation variables may also be admitted: replace them by arbitrary fresh relation symbols before applying the translation. This additional observation is not a strong-completeness claim for premises with such universal higher-order prefixes.
 

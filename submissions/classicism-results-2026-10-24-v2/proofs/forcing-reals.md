@@ -21,9 +21,9 @@ there is a canonical real-number structure R_B at the one fixed type sigma = et
 for which
 
 $$
-\|\operatorname{Real}_{et}(\mathfrak R_B)\|=1_B,
+\|\mathrm{Real}_{et}(\mathfrak R_B)\|=1_B,
 \qquad
-\|\operatorname{CH}(\mathfrak R_B)\|
+\|\mathrm{CH}(\mathfrak R_B)\|
  =\|\mathrm{CH}\|_{M^B}.
 \tag{1}
 $$
@@ -34,10 +34,10 @@ lottery family therefore gives, at its root,
 
 $$
 \Diamond\exists\mathfrak R\,
- (\operatorname{Real}_{et}(\mathfrak R)\land\operatorname{CH}(\mathfrak R))
+ (\mathrm{Real}_{et}(\mathfrak R)\land\mathrm{CH}(\mathfrak R))
 \;\land\;
 \Diamond\exists\mathfrak R\,
- (\operatorname{Real}_{et}(\mathfrak R)\land\neg\operatorname{CH}(\mathfrak R)).
+ (\mathrm{Real}_{et}(\mathfrak R)\land\neg\mathrm{CH}(\mathfrak R)).
 \tag{2}
 $$
 
@@ -189,7 +189,7 @@ For a globally existing assignment of the other parameters, it is equivalent
 to
 
 $$
- p\le\bigwedge_{H\in\operatorname{Ext}(A)}\llbracket\phi(H)\rrbracket.
+ p\le\bigwedge_{H\in\mathrm{Ext}(A)}\llbracket\phi(H)\rrbracket.
 \tag{9}
 $$
 

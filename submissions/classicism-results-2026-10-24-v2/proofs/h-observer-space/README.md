@@ -60,4 +60,52 @@ The [truth-gap characterization](reversible-truth-gap-chains.md) identifies reve
 
 The [integer-shift predecessor](integer-shift-predecessor-contingent-barcan.md) satisfies full typed SurjSep and current BF while ☐BF fails at every admitted type. It combines finite-pin approximation by split epimorphisms, invertible integer translations and the root truth-profile construction. This settles SurjSep ⇒ ☐BF negatively.
 
+[Native necessity and injective separation](native-box-logical-observers.md) adds BoxSep and InjSep to the map. BoxSep gives ☐BF, ☐Functionality and .2; the .2 theorem already needs only propositional separation by Bottom-fixing observers commuting with native necessity over C. Over C5, Rev ⇒ InjSep ⇔ BoxSep ⇒ OS has both implications strict. Outside C5, BoxSep is incomparable with InjSep and SplitMono over C + BF, and with ☐OS even over C + ☐BF. The full consequence bundle does not recover BoxSep.
+
+[Boolean transversals](injective-observers-and-boolean-transversals.md) classify qualified left inverses of an injective observer over C5 by a single admitted selector proposition, with an explicit bijection. The regular-open model has an injective fully logical observer with no qualified left inverse, but fails OS itself. InjSep versus SplitMono therefore remains open, both over H and over C5.
+
+[Idempotent observers commuting with necessity](idempotent-native-box-observers.md) give a strict strengthening of BoxSep; adding C5 gives exactly Extensionality. In full models on finite rooted posets they separate exactly when all pairwise joins exist. The two-antichain family has exact thresholds; its seven-point member refutes the lower-bundle converse to BoxSep, and the diamond has ☐IdemBoxSep but fails .3 and C5. A three-point preorder refutes persistence of IdemBoxSep.
+
+[Injective separation decomposes](injective-separation-decomposition.md), over C5, as Rev or OS plus a single injective observer whose image floor sends a true proposition to Bottom. The single propositional Good-t instance represents the full schema here, so the finite J-versus-K alternative is justified under C5. It sharpens the open InjSep ⇒ SplitMono comparison without resolving it.
+
+[Modal reflection](native-box-reflection.md) makes current universally closed modal laws necessary under the specified BoxSep instance. It extends to the stated equality-free predicate-universal fragment, retaining both kinds of inner object quantifier and their exact variable-use restrictions. The conclusions .3 ⇒ ☐.3 and 5 ⇒ ☐5 remain conditional; ☐.2 already follows from C + BF (type t) + .2. The ordinary-separation countermodel does not separate reflection from the entire lower modal bundle.
+
+[Fixed finite stabilization](bounded-stabilization-native-box-observers.md) gives the strict hierarchy $B_1\Rightarrow B_2\Rightarrow\cdots\Rightarrow\mathsf{BoxSep}$, with $B_1=\mathsf{IdemBoxSep}$. Every step is strict, including for the separately boxed schemas. One infinite full model has ☐BoxSep but fails every fixed bound on the same proposition pair. The coordinate-reader and join theorems extend to rooted posets of fixed finite external width. With C5, Rev or End, each $B_r$ is exactly Extensionality.
+
+[Finite generation over an observer's image](finite-relative-image-generation.md) characterizes Rev over C5: for every fixed external $n\ge0$, separation by logical observers whose images need at most $n$ additional Boolean generators is exactly reversible separation. Injectivity is unnecessary for the same-profile involution theorem; it is required for the controlled left inverse. The condition is distinct from finite range and internal Frege finiteness.
+
+[A true image gap without a true split kernel](injective-gap-without-split-kernel.md) refutes $J\Rightarrow K$ over C5, even when the displayed J observer has a qualified left inverse. It is a new verdict in the existing regular-open model, which fails OS. The comparison OS + J ⇒ Rev or K remains open. Finite relative generation supplies the positive case: K is exactly J with one additional image generator, equivalently any fixed positive finite bound.
+
+[Exterior-arm posets](exterior-arm-posets-native-box-nonpersistence.md) show that BoxSep and every fixed $B_r$ with $r\ge2$ can fail to persist even on finite full posets. One ten-point model witnesses all these failures while retaining ☐OS, ☐BF, ☐Functionality, ☐Atomicity (type t) and ☐.2. Idempotence is hereditary within the poset family by the join criterion; its general preorder nonpersistence remains distinct.
+
+[Canonical local support](local-transversal-support.md) has exact composition, patching and compatible-gluing laws. Over C5, separation by observers with full support, with currently true support, or in the range of the canonical normalization is exactly Rev. These individual qualifications are broader than fixed finite relative generation; full support need not itself be local or make an observer invertible.
+
+[Selection from support](zorn-local-transversal-selection.md) uses the explicit additional current premises Boolean Completeness (type t) and Zorn's Lemma at t. For injective Good $E$, a qualified left inverse exists exactly when $L_Es_E=\top$; one killing $c$ exists exactly when $L_E(s_E\land\neg c)=\top$. Boolean Completeness supplies actual current chain joins, and Zorn supplies a maximal local transversal. The preceding maximal-support theorem does not require injection.
+
+[Admitted local homogeneity](local-homogeneity-and-split-observers.md) gives a separate positive criterion: C5 + OS + a currently true homogeneous principal interval implies SplitMono, without J. Relative isomorphisms and their inverses must be admitted; an external decomposition does not suffice. The general OS + J ⇒ Rev or K question remains open.
+
+[Bounded fibre degree](bounded-fibre-degree-logical-observers.md) gives another exact Rev characterization over C5: each fixed degree bound forces full local support and an involution with the observer's entire current profile. Degrees multiply under composition and add under Boolean patching. With both Boolean Completeness (type t) and Zorn at t, degree at most $n$ is exactly a partition into $n$ local sheets, and $\mathrm{FG}_k$ is equivalent to degree at most $2^k$. The bounds are fixed externally.
+
+[Finite-image native-necessity separation](finite-image-native-box-observers.md), together with Actuality, is equivalent over C to internal finiteness of all propositions plus BoxSep, at every fixed relational output and finite list. Full scope recovers C over H. In full rooted-poset models with singleton individuals, FinBoxSep holds exactly when the frame is finite and has BoxSep; Actuality is not removed from the abstract theorem.
+
+[Central logical observers](central-logical-observers.md) commute with every same-list Good observer. Their separation is Extensionality over C5. In the full finite rooted-poset family with singleton individuals it holds exactly on a singleton or two-point chain; CentreSep is incomparable with Rev and End over H. This is stronger than asking for a chosen pairwise commuting family.
+
+[Finite colour patterns and completeness](finite-colour-propositional-completeness.md) gives ☐Boolean Completeness at t in the existing atomless two-colour model, together with ☐Rev, but without Actuality, completeness at tt or Zorn at t. Completeness at tt already gives Plenitude at (t,t) and Actuality over C5. C5 + OS reflects each assumed Boolean Completeness instance into necessity; this does not raise its type or settle the joint Boolean-Completeness/Zorn question.
+
 **Lean certified:** H + OS ⇒ C + BF with explicit endpoint identities. [Certificate scope and evidence](../../evidence/RESULT-INDEX.md#logical-observers).
+
+## Reversibility and finite bounds
+
+- [Reversible separation and fixed propositions](reversible-fixed-proposition-characterization.md): over C5, Rev is exactly the assertion that only ⊥ and ⊤ are fixed by every reversible logical observer.
+- [Invariant components and local support](invariant-components-and-local-support.md): the same invariant algebra is recovered from all logical observers on their local supports, with an admitted orbit-closure operation.
+- [Central separation](central-separation-and-four-propositions.md) and [the reversible group centre](centre-of-reversible-logical-observers.md): two distinct exact four-proposition theories, both persistent, whose conjunction is Extensionality.
+- [Bounded exponents](bounded-exponent-reversible-observers.md): a uniform power identity on every reversible observer gives an exact finite bound, with a common-refinement and cycle construction.
+- [Finite-image reflection](finite-image-box-reflection.md): finite-image native-necessity separation forces internal finiteness; Actuality is a consequence at full scope.
+
+## Group identities and finite observer families
+
+- [Group identities](group-identities-reversible-observers.md): with Rev, every fixed nontrivial group law gives a sharp finite proposition bound; commutativity gives four and the metabelian law gives eight.
+- [Invariant components](invariant-components-and-group-identities.md): over C5 without Rev, the same group law is exactly a bound on disjoint regions with overlapping orbit joins.
+- [Internally finite families](internally-finite-observer-families.md): an internally finite family separates only an internally finite proposition class, already over H. With Rev, finiteness of the reversible observer class is equivalent to C5 plus finiteness of all propositions.
+
+The main unresolved question is whether injective logical separation entails separation by logical observers with logical left inverses, over H or C5. See [Conjectures](../../CONJECTURES.md#observer-strength).

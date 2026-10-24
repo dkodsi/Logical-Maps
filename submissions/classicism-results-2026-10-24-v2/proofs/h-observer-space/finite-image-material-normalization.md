@@ -9,26 +9,26 @@ This result concerns internal finiteness of an individual observer's image. The 
 For an admitted E:tt define its admitted image predicate by
 
 $$
-\operatorname{Im}(E)(y):=\exists p\,[Ep=y],
+\mathrm{Im}(E)(y):=\exists p\,[Ep=y],
 $$
 $$
-\operatorname{FinIm}(E):=
-\exists Z\,[\operatorname{FiniteCardinality}_t(Z)\land Z(\operatorname{Im}(E))].
+\mathrm{FinIm}(E):=
+\exists Z\,[\mathrm{FiniteCardinality}_t(Z)\land Z(\mathrm{Im}(E))].
 $$
 FiniteCardinality is the internal Frege induction predicate from the [background](../../source/topics/classicism/background.md), also displayed in [Finite semilattice normalization](finite-semilattice-normalization.md), §2. No standard finite bound or external enumeration is implicit in FinIm.
 
 Write
 
 $$
-\operatorname{Two}(E):=\exists b,c\,\forall p\,[Ep=b\lor Ep=c].
+\mathrm{Two}(E):=\exists b,c\,\forall p\,[Ep=b\lor Ep=c].
 $$
 This is an at-most-two-output condition. Its two witnesses need not be the fixed Top and Bottom. Let O be any of no condition, A, Z or A∧Z, where A(E):=ETop and Z(E):=¬EBottom. Then over H,
 
 $$
 \boxed{
-\operatorname{Sep}_t[O\land\operatorname{FinIm}\land M_{\rm mat}]
+\mathrm{Sep}_t[O\land\mathrm{FinIm}\land M_{\rm mat}]
 \ \leftrightarrow\
-\operatorname{Sep}_t[O\land\operatorname{Two}\land M_{\rm pt}].}
+\mathrm{Sep}_t[O\land\mathrm{Two}\land M_{\rm pt}].}
 \tag{1}
 $$
 The same result holds with V in place of M. Both equivalences hold at full typed scope, where the pointwise qualification can also be replaced by its whole-operation version.

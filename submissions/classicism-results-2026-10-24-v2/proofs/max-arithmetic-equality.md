@@ -3,8 +3,8 @@
 The existing research note supplies an ordinary proof of
 
 $$
-\operatorname{Th}_{\mathrm{arith}}(\operatorname{Max}(C))
-=\operatorname{Cn}\bigl(T_{\mathrm{arith}}\cup\mathrm{True}_{\Pi_1}\bigr).
+\mathrm{Th}_{\mathrm{arith}}(\mathrm{Max}(C))
+=\mathrm{Cn}\bigl(T_{\mathrm{arith}}\cup\mathrm{True}_{\Pi_1}\bigr).
 $$
 
 Here T_arith is the common ordinary first-order arithmetic consequence theory of C plus weak arithmetic noncollapse and of the boxed-Plenitude and boxed-Functional-Choice packages with quantified Infinity. True Π₁ means truth in the external standard natural numbers. Cn is ordinary first-order deductive closure. The retained proof below writes T for this arithmetic theory; it is not the intermediate modal theory also called T in the comparison paper.

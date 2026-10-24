@@ -108,7 +108,7 @@ Boolean operations are the corresponding set operations, so (8) preserves them a
 Now let d be any nonbottom proposition at X, pinned by finite P, and choose h:X→Y in d. For this ordered pair of objects choose the comparison c₀:X→Y supplied by identity, (4), or (5), with its finite stabilizer pin S₀. Extend the finite partial bijection (c₀^{-1}h)|P to a finite-support permutation π of X. Put c=c₀π and choose finite
 
 $$
-S\supseteq P\cup S_0\cup\operatorname{supp}(\pi).
+S\supseteq P\cup S_0\cup\mathrm{supp}(\pi).
 $$
 Every member of K_{X,(S)} commutes with π. Consequently c still satisfies (6). It agrees with h on P, so c∈d. The admitted observer (7) therefore makes Ed true at X.
 
@@ -145,13 +145,13 @@ Use the exact Frege definitions from [Background](../../source/topics/classicism
 $$
 \begin{aligned}
 \mathbf 0&:=\lambda X^{et}.\,\forall x^e\neg Xx,\\
-\operatorname{Suc}(Z)&:=\lambda X^{et}.\,
+\mathrm{Suc}(Z)&:=\lambda X^{et}.\,
  \exists y^e\,[Xy\land Z(\lambda u^e.\,Xu\land u\ne y)],\\
-\operatorname{FiniteCardinality}(Z)&:=
+\mathrm{FiniteCardinality}(Z)&:=
  \forall U^{\nu t}\bigl[(U\mathbf0\land
- \forall Y^\nu[UY\to U(\operatorname{Suc}Y)])\to UZ\bigr],\\
-\operatorname{Fin}(X)&:=\exists Z^\nu\,
- [\operatorname{FiniteCardinality}(Z)\land ZX].
+ \forall Y^\nu[UY\to U(\mathrm{Suc}Y)])\to UZ\bigr],\\
+\mathrm{Fin}(X)&:=\exists Z^\nu\,
+ [\mathrm{FiniteCardinality}(Z)\land ZX].
 \end{aligned}
 \tag{11}
 $$
@@ -162,11 +162,11 @@ N is invariant under the designated group because each numeral is a closed pure 
 For an admitted individual property X define
 
 $$
-\operatorname{Amor}(X):=
- \neg\operatorname{Fin}(X)\land
+\mathrm{Amor}(X):=
+ \neg\mathrm{Fin}(X)\land
  \forall Y^{et}\bigl[Y\subseteq X\to
- (\operatorname{Fin}(Y)\lor
- \operatorname{Fin}(\lambda x.\,Xx\land\neg Yx))\bigr].
+ (\mathrm{Fin}(Y)\lor
+ \mathrm{Fin}(\lambda x.\,Xx\land\neg Yx))\bigr].
 \tag{12}
 $$
 Thus X is infinite, and each admitted subset is finite or cofinite in it. The standardness just proved applies to every property in (12), including the displayed difference abstract.

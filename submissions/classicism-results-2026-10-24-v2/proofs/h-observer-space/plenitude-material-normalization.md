@@ -10,7 +10,7 @@ Use the existing [Plenitude](../../source/topics/classicism/principles/plenitude
 
 $$
 \begin{aligned}
-\operatorname{Plen}_{t,t}:\quad
+\mathrm{Plen}_{t,t}:\quad
 \forall U^{ttt}\bigl[&\forall p\,\exists y\,
 (U(p,y)\land\forall z(U(p,z)\to z=y))\\
 &\to\exists f^{tt}\,\forall p\,U(p,fp)\bigr].

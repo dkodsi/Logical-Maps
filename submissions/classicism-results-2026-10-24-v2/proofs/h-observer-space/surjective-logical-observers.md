@@ -15,7 +15,7 @@ Work over C5. Fix a finite external type list Δ with t∈Δ, and let S:tt be an
 Surjectivity is the current internal formula
 
 $$
-\operatorname{Onto}(S):=\forall q^t\,\exists p^t\,[Sp=q].
+\mathrm{Onto}(S):=\forall q^t\,\exists p^t\,[Sp=q].
 \tag{1}
 $$
 It ranges over admitted proposition objects and asserts output identities. It is not external surjectivity on some larger collection of possible values. We assume (1), not an admitted choice of its witnesses. All constructions below are lambda terms in S.
@@ -167,9 +167,9 @@ This is the promised qualified right inverse. The use of Q_t/P_t in the construc
 The converse to the construction is immediate: an admitted right inverse gives current surjectivity by evaluating its whole inverse identity at any q. Thus, over C5 and at each finite Δ containing t,
 
 $$
-\boxed{\operatorname{Good}_\Delta(S)\land\operatorname{Onto}(S)
+\boxed{\mathrm{Good}_\Delta(S)\land\mathrm{Onto}(S)
 \quad\longleftrightarrow\quad
-\operatorname{SplitEpi}_\Delta(S).}
+\mathrm{SplitEpi}_\Delta(S).}
 \tag{16}
 $$
 This time it is an equality of the individual qualified classes, not merely their separating power. The right inverse is admitted and qualified; current injectivity of S is not assumed.
@@ -178,9 +178,9 @@ The existing same-list right-inverse patching theorem over C+BF identifies Split
 
 $$
 \boxed{
-S_{\tau,\Delta}[\operatorname{Good}\land\operatorname{Onto}]
+S_{\tau,\Delta}[\mathrm{Good}\land\mathrm{Onto}]
 \quad\longleftrightarrow\quad
-S_{\tau,\Delta}[\operatorname{Rev}]
+S_{\tau,\Delta}[\mathrm{Rev}]
 \qquad\text{over C5, }t\in\Delta.
 }
 \tag{17}
@@ -195,7 +195,7 @@ Recall K_Δ from [Left-inverse separation decomposition](left-inverse-separation
 
 $$
 K_\Delta:=\exists E,F,c\,[
-\operatorname{Good}_\Delta(E)\land\operatorname{Good}_\Delta(F)
+\mathrm{Good}_\Delta(E)\land\mathrm{Good}_\Delta(F)
 \land F\circ E=I\land c\land Fc=\bot].
 $$
 Over C5, for finite Δ containing t, it has the equivalent formulations
@@ -205,11 +205,11 @@ $$
 \begin{aligned}
 K_\Delta
 &\longleftrightarrow
-\exists S\,[\operatorname{Good}_\Delta(S)
-\land\operatorname{Onto}(S)\land k_S]\\
+\exists S\,[\mathrm{Good}_\Delta(S)
+\land\mathrm{Onto}(S)\land k_S]\\
 &\longleftrightarrow
-\exists S,c\,[\operatorname{Good}_\Delta(S)
-\land\operatorname{Onto}(S)\land c\land Sc=\bot].
+\exists S,c\,[\mathrm{Good}_\Delta(S)
+\land\mathrm{Onto}(S)\land c\land Sc=\bot].
 \end{aligned}}
 \tag{18}
 $$

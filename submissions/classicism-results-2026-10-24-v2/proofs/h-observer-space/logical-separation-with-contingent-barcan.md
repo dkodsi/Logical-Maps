@@ -83,7 +83,7 @@ If this criterion holds for every finite Δ, it gives every propositional logica
 Suppose an arrow g:W→V has a section s:V→W with g∘s=id_V. Functoriality at every type gives
 
 $$
-g_\sigma\circ s_\sigma=\operatorname{id}_{D_\sigma(V)}.
+g_\sigma\circ s_\sigma=\mathrm{id}_{D_\sigma(V)}.
 $$
 Therefore g_σ is onto at every admitted type. This includes all higher relation types, not just individuals. No induction asserting surjectivity of arbitrary function-space maps is needed.
 
@@ -128,7 +128,7 @@ The established profile is therefore
 $$
 \boxed{\mathrm C+\mathrm{OS}+\mathrm{BF}
        +\neg\Box\mathrm{BF}_e+\neg\Box\mathrm{BF}_t
-       +\neg\Box\operatorname{Fun}_{e,t}.}
+       +\neg\Box\mathrm{Fun}_{e,t}.}
 $$
 In particular ordinary OS does not imply necessary OS, necessary BF, necessary BF_t, or necessary Functionality. The new separations concern necessary BF and Functionality; failure of necessary OS already had other witnesses.
 

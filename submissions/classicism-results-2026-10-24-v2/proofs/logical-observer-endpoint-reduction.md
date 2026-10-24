@@ -4,13 +4,13 @@ Ordinary mathematical argument by OpenAI Codex, 24 October 2026. Direct source: 
 
 ## 1. The revised qualification
 
-Let $\operatorname{Good}^{+}_{\Delta}(E)$ be the qualification in [Logical Observer Separation](logical-observers.md), §1. Define $\operatorname{Good}_{\Delta}(E)$ by deleting only
+Let $\mathrm{Good}^{+}_{\Delta}(E)$ be the qualification in [Logical Observer Separation](logical-observers.md), §1. Define $\mathrm{Good}_{\Delta}(E)$ by deleting only
 
 $$
 E\top=\top,\qquad E\bot=\bot.
 $$
 
-Retain the full operation identities for negation, conjunction, disjunction, and both quantifiers at every type in the finite list $\Delta$. Retain translated reflexivity and Leibniz substitution at those types. This change does not remove the separate range restriction $\operatorname{End}(E)$ used for endpoint-valued observers.
+Retain the full operation identities for negation, conjunction, disjunction, and both quantifiers at every type in the finite list $\Delta$. Retain translated reflexivity and Leibniz substitution at those types. This change does not remove the separate range restriction $\mathrm{End}(E)$ used for endpoint-valued observers.
 
 Use the fixed H abbreviations $a:=\forall p^t p$, $\top:=a\lor\neg a$, and $\bot:=a\land\neg a$. Boolean preservation gives
 
@@ -20,7 +20,7 @@ $$
 
 Consequently H proves that every newly qualified observer makes $E\top$ true and $E\bot$ false. These are truth claims; H alone need not identify the outputs with the endpoints.
 
-Over C, the Boolean identities identify the right sides with $\top$ and $\bot$. Hence C proves $\operatorname{Good}_{\Delta}(E)\leftrightarrow\operatorname{Good}^{+}_{\Delta}(E)$. This derivation needs no BF. Already over H, adding $\operatorname{End}(E)$ gives the same equivalence: each output at an endpoint must itself be an endpoint, and its truth value rules out the wrong one.
+Over C, the Boolean identities identify the right sides with $\top$ and $\bot$. Hence C proves $\mathrm{Good}_{\Delta}(E)\leftrightarrow\mathrm{Good}^{+}_{\Delta}(E)$. This derivation needs no BF. Already over H, adding $\mathrm{End}(E)$ gives the same equivalence: each output at an endpoint must itself be an endpoint, and its truth value rules out the wrong one.
 
 ## 2. Full separation over H is unchanged
 
@@ -28,7 +28,7 @@ Let OS use the revised qualification and let $\mathrm{OS}^{+}$ use the earlier q
 
 The H-proof transport argument in [Logical Observer Separation](logical-observers.md), §3, still applies to the revised qualification. Propositional tautologies are transported using Boolean commutation; the quantifier axioms and rules use the corresponding quantifier identities; reflexivity and Leibniz steps use the retained equality clauses. Conversion steps use translated reflexivity and ordinary H substitution. The endpoint truth facts in §1 suffice wherever the fixed abbreviations for truth or falsity occur. No step needs their outputs to be identical to the endpoints.
 
-Thus, for every H theorem $P$, a finite list $\Delta$ containing the types used in its proof suffices to establish $\operatorname{Good}_{\Delta}(E)\to EP$, with $E$ fresh. If H proves $P\leftrightarrow Q$, all such observers agree in truth on $P$ and $Q$. Applying full typed separation to the corresponding abstractions gives
+Thus, for every H theorem $P$, a finite list $\Delta$ containing the types used in its proof suffices to establish $\mathrm{Good}_{\Delta}(E)\to EP$, with $E$ fresh. If H proves $P\leftrightarrow Q$, all such observers agree in truth on $P$ and $Q$. Applying full typed separation to the corresponding abstractions gives
 
 $$
 (\lambda\bar z.P)=(\lambda\bar z.Q).
@@ -36,7 +36,7 @@ $$
 
 These are the Logical Equivalence instances defining C. Therefore H + OS yields C. Section 1 now identifies the old and new qualifications, so it also yields $\mathrm{OS}^{+}$.
 
-Conversely, $\operatorname{Good}^{+}_{\Delta}$ is a subclass of $\operatorname{Good}_{\Delta}$ already over H. Agreement under every newly qualified observer implies agreement under every old one; $\mathrm{OS}^{+}$ therefore gives OS. The two full theories over H are equivalent.
+Conversely, $\mathrm{Good}^{+}_{\Delta}$ is a subclass of $\mathrm{Good}_{\Delta}$ already over H. Agreement under every newly qualified observer implies agreement under every old one; $\mathrm{OS}^{+}$ therefore gives OS. The two full theories over H are equivalent.
 
 This does not identify the two observer classes in bare H. Nor does the argument recover C from a single propositional separation instance.
 
@@ -54,6 +54,6 @@ All established full restricted separation schemas imply ordinary OS by inclusio
 
 The fixed-type factive-separation argument over H uses negation preservation and the identity observer and remains unchanged. Its Fregean/universal-factivity converse needs only the endpoint truth facts from §1. Full OS with uniqueness still gives Extensionality; conversely Extensionality upgrades those endpoint truth facts to endpoint identities and identifies every qualified observer with identity.
 
-The restriction $\operatorname{End}$ itself is unchanged, and even its qualified observer class agrees with the earlier one over H. Other standalone qualification claims over bare H must retain the distinction between $\operatorname{Good}$ and $\operatorname{Good}^{+}$.
+The restriction $\mathrm{End}$ itself is unchanged, and even its qualified observer class agrees with the earlier one over H. Other standalone qualification claims over bare H must retain the distinction between $\mathrm{Good}$ and $\mathrm{Good}^{+}$.
 
-The original source proofs, saved manifests and exact certificate maps are preserved. Existing certificates refer to $\operatorname{Good}^{+}$; the shorter current definition is connected to them by this ordinary mathematical equivalence proof.
+The original source proofs, saved manifests and exact certificate maps are preserved. Existing certificates refer to $\mathrm{Good}^{+}$; the shorter current definition is connected to them by this ordinary mathematical equivalence proof.

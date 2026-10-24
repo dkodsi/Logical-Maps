@@ -32,7 +32,7 @@ Repository validation is independent: install the source project's small Python 
 
 The normalized receipts in [evidence/CERTIFICATES.json](evidence/CERTIFICATES.json) map module names to the exact successful source bytes, reusing existing files where possible. Their original run state is preserved: some selected targets passed before an unrelated later target failed. Only the selected successful targets are claimed.
 
-The generated-algebra receipts capture accepted component translations, not the complete theorem. Their `evidence_kind` and `explicit_principal_axiom_report_present` fields preserve the distinction: the three retained component logs have no explicit principal axiom report. The remaining original conclusions and final audit are still incomplete.
+The three retained generated-algebra component logs have no explicit principal axiom report; their `evidence_kind` and `explicit_principal_axiom_report_present` fields preserve that scope. Current result-level coverage, including the later certificates, is stated in the [evidence index](evidence/RESULT-INDEX.md#arithmetic-foundations).
 
 Run `python3 certificate_sources.py` to verify every new receipt, mapped source and retained principal log. To materialize one exact source closure outside the package, run:
 

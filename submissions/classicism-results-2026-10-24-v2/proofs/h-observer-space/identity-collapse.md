@@ -20,11 +20,11 @@ For an observer E of type tt define
 $$
 \begin{aligned}
 A(E)&:=ET,\\
-\operatorname{CorrectEq}_t(E)
+\mathrm{CorrectEq}_t(E)
 &:=\forall p,q^t\,[E(p=q)\leftrightarrow p=q],\\
-\operatorname{FixEq}^{\rm pt}_t(E)
+\mathrm{FixEq}^{\rm pt}_t(E)
 &:=\forall p,q^t\,[E(p=q)=(p=q)],\\
-\operatorname{FixEq}^{\rm op}_t(E)
+\mathrm{FixEq}^{\rm op}_t(E)
 &:=(\lambda p,q^t.E(p=q))=(\lambda p,q^t.p=q).
 \end{aligned}
 $$
@@ -40,7 +40,7 @@ $$
 Define propositional identity collapse by
 
 $$
-\operatorname{IC}_t:=\forall p,q^t\left[
+\mathrm{IC}_t:=\forall p,q^t\left[
 \bigl(p=q\to(p=q)=T\bigr)
 \land
 \bigl(p\ne q\to(p=q)=z\bigr)
@@ -54,11 +54,11 @@ The outer implications and conjunction are ordinary truth-level connectives. IC_
 
 $$
 \boxed{
-S[A\land\operatorname{CorrectEq}_t]
+S[A\land\mathrm{CorrectEq}_t]
 \ \leftrightarrow\
-S[A\land\operatorname{FixEq}^{\rm pt}_t]
+S[A\land\mathrm{FixEq}^{\rm pt}_t]
 \ \leftrightarrow\
-\operatorname{IC}_t.}
+\mathrm{IC}_t.}
 $$
 ### Separation forces collapse
 
@@ -132,9 +132,9 @@ $$
 Under the two local instances Fun_(t,t) and Fun_(t,tt), pointwise FixEq_t lifts to FixEq_t^op: first identify the q-abstractions for each p, then identify the resulting p-abstractions. Hence
 
 $$
-\mathrm H+\operatorname{IC}_t+\operatorname{Fun}_{t,t}
- +\operatorname{Fun}_{t,tt}
-\ \vdash\ S[A\land\operatorname{FixEq}^{\rm op}_t].
+\mathrm H+\mathrm{IC}_t+\mathrm{Fun}_{t,t}
+ +\mathrm{Fun}_{t,tt}
+\ \vdash\ S[A\land\mathrm{FixEq}^{\rm op}_t].
 $$
 Conversely, strong propositional separation entails IC_t because application gives pointwise fixing and then material correctness. No converse from IC_t alone to strong propositional separation is asserted here.
 
@@ -145,10 +145,10 @@ For a relational type tau=sigma_1...sigma_n t, define Sep_tau[K] by replacing p,
 $$
 \boxed{
 \begin{aligned}
-&\operatorname{FullSep}[A\land\operatorname{CorrectEq}_t],\\
-&\operatorname{FullSep}[A\land\operatorname{FixEq}^{\rm pt}_t],\\
-&\operatorname{FullSep}[A\land\operatorname{FixEq}^{\rm op}_t],\\
-&\operatorname{IC}_t+\operatorname{Functionality}.
+&\mathrm{FullSep}[A\land\mathrm{CorrectEq}_t],\\
+&\mathrm{FullSep}[A\land\mathrm{FixEq}^{\rm pt}_t],\\
+&\mathrm{FullSep}[A\land\mathrm{FixEq}^{\rm op}_t],\\
+&\mathrm{IC}_t+\mathrm{Functionality}.
 \end{aligned}}
 $$
 **Proof.** For every qualification K, full typed separation is equivalent over H to S[K] plus Functionality. In one direction, pointwise identity of two relational objects gives observational agreement at all their argument tuples, so typed separation identifies the objects. In the other, propositional separation identifies the outputs at each tuple; successive Functionality instances identify the relational objects. This is the general typed-separation theorem in [Typed separation and the recovery of Classicism over H](typed-separation-and-classicism.md), §2.
@@ -162,7 +162,7 @@ This proof never derives or assumes C. The Functionality schema is explicit, and
 Fixing equality judgments at t must be distinguished from fixing equality judgments at every admitted type. For a type sigma define
 
 $$
-\operatorname{IC}_\sigma:=\forall x,y^\sigma\left[
+\mathrm{IC}_\sigma:=\forall x,y^\sigma\left[
 \bigl(x=y\to(x=y)=T\bigr)
 \land
 \bigl(x\ne y\to(x=y)=z\bigr)
@@ -174,11 +174,11 @@ For a finite external list Gamma containing t, Theorem 1 generalizes to
 
 $$
 \begin{aligned}
-&S[A\land\bigwedge_{\sigma\in\Gamma}\operatorname{CorrectEq}_\sigma]
+&S[A\land\bigwedge_{\sigma\in\Gamma}\mathrm{CorrectEq}_\sigma]
 \ \leftrightarrow\
-S[A\land\bigwedge_{\sigma\in\Gamma}\operatorname{FixEq}^{\rm pt}_\sigma]\\
+S[A\land\bigwedge_{\sigma\in\Gamma}\mathrm{FixEq}^{\rm pt}_\sigma]\\
 &\hspace{30mm}\leftrightarrow\
-\bigwedge_{\sigma\in\Gamma}\operatorname{IC}_\sigma.
+\bigwedge_{\sigma\in\Gamma}\mathrm{IC}_\sigma.
 \end{aligned}
 $$
 Forward, compare each true identity judgment with T and each false one with z; inclusion of t ensures every eligible observer rejects z. Conversely IC_t defines the same admitted tests E_0,E_a, while each IC_sigma makes the sigma-identity judgments outputs T,z fixed by those tests. Thus one common observer family satisfies all clauses in the finite list.
@@ -211,9 +211,9 @@ $$
 
 $$
 \boxed{
-S[A\land N_{\rm mat}\land\operatorname{CorrectEq}_t]
+S[A\land N_{\rm mat}\land\mathrm{CorrectEq}_t]
 \ \leftrightarrow\
-\mathrm{DN}+\operatorname{IC}_t+(z=\neg T).}
+\mathrm{DN}+\mathrm{IC}_t+(z=\neg T).}
 $$
 This is a material-preservation theorem. No claim that its hypotheses imply full negation-operation preservation is included.
 

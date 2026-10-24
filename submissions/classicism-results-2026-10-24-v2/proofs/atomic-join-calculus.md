@@ -21,7 +21,7 @@ The atomic-join witness rule is
 
 $$
 \frac{
- \{\Gamma\vdash\operatorname{Atom}_\tau(a_i):i\in I\}
+ \{\Gamma\vdash\mathrm{Atom}_\tau(a_i):i\in I\}
  \qquad
  \Gamma,J_I^\tau(b;\bar a)\vdash A
 }{\Gamma\vdash A}
@@ -43,20 +43,20 @@ This is a genuine inference rule. Its soundness does not provide a model-existen
 Retain the shared $P^{et}$, designated world $w$, counting type $\nu=(et)t$, Frege numerals $z_n^\nu$, and premises from [the preceding note, §3](full-gallin.md):
 
 $$
-\Gamma=\{\operatorname{Fin}(P)\}\cup\{L_n(P):n\ge1\}.
+\Gamma=\{\mathrm{Fin}(P)\}\cup\{L_n(P):n\ge1\}.
 $$
 
 Here $L_n(P)$ says that $P$ has at least $n$ distinct instances at the current world, and
 $$
-\operatorname{Fin}(P):=\exists Z^\nu\,
-  (\operatorname{FiniteCardinality}_e(Z)\land Z(P)).
+\mathrm{Fin}(P):=\exists Z^\nu\,
+  (\mathrm{FiniteCardinality}_e(Z)\land Z(P)).
 $$
 
 The following gives an infinitary deduction from these premises, rather than appealing to the full-model cardinality lemma to assert that they are inconsistent.
 
 In the auxiliary presentation choose a fresh $q=\delta_w$, using singleton-world existence and existential elimination. Its defining axiom is
 $$
-\forall v\,[\operatorname{Eval}(q,v)\leftrightarrow v=w].
+\forall v\,[\mathrm{Eval}(q,v)\leftrightarrow v=w].
 $$
 Thus current truth $\chi(w)$ gives the global algebraic inequality $q\le_t\chi$. This step is essential. A direct presentation in C would have to supply the corresponding actual-atom condition, including $\forall p(p\to q\le_t p)$, from CC's principal-world reconstruction. Atomicity alone is not being used as an unexplained substitute.
 
@@ -72,11 +72,11 @@ Apply AJ to the countable family $(a_n)_{n<\omega}$. In the fresh-witness subder
 
 First, $a_0\le b$ gives $b(z_0)$ at $w$. Define
 $$
-c_s:=\lambda Z.\ q\land b(\operatorname{Suc}Z).
+c_s:=\lambda Z.\ q\land b(\mathrm{Suc}Z).
 $$
-For each $n$, $a_{n+1}\le b$, together with the defining numeral identity $\operatorname{Suc}z_n=z_{n+1}$, gives $a_n\le c_s$. Infinitary conjunction introduction collects these inequalities. Join leastness yields $b\le c_s$. At $w$, therefore, $b$ contains zero and is closed under successor. Applying the defining impredicative induction condition for Frege numberhood gives
+For each $n$, $a_{n+1}\le b$, together with the defining numeral identity $\mathrm{Suc}z_n=z_{n+1}$, gives $a_n\le c_s$. Infinitary conjunction introduction collects these inequalities. Join leastness yields $b\le c_s$. At $w$, therefore, $b$ contains zero and is closed under successor. Applying the defining impredicative induction condition for Frege numberhood gives
 $$
-\operatorname{FiniteCardinality}_e(Z)\to b(Z)
+\mathrm{FiniteCardinality}_e(Z)\to b(Z)
 $$
 at $w$.
 
@@ -90,7 +90,7 @@ c_P:=\lambda Z.\ q\land\neg Z(P).
 $$
 For each $n$, the local premise $L_{n+1}(P)$ and the singleton-world axiom give $a_n\le c_P$. Collect these inequalities and apply join leastness: $b\le c_P$.
 
-Finally $\operatorname{Fin}(P)$ supplies a $Z$ with numberhood and $Z(P)$. The first part gives $b(Z)$, and the second gives $\neg Z(P)$. Discharge the fresh join witness using AJ and the singleton-world witness by existential elimination. This derives contradiction from $\Gamma$.
+Finally $\mathrm{Fin}(P)$ supplies a $Z$ with numberhood and $Z(P)$. The first part gives $b(Z)$, and the second gives $\neg Z(P)$. Discharge the fresh join witness using AJ and the singleton-world witness by existential elimination. This derives contradiction from $\Gamma$.
 
 All countably many lower-bound premises refer to the same $P,w$. Neither base is made finite. The deduction is an ordinary mathematical derivation in the auxiliary calculus, not a Lean certificate. It shows that AJ addresses the concrete failure of compactness; it does not establish full completeness.
 
@@ -108,7 +108,7 @@ Then its theorem predicate on finite conclusion codes is $\Sigma_1$, with no car
 
 **Proof.** First suppose the local checks are bounded. Supply a set $T$ coding a proof, an ordinal $\alpha$, and a rank function
 $$
-r:\operatorname{Nodes}(T)\longrightarrow\alpha
+r:\mathrm{Nodes}(T)\longrightarrow\alpha
 $$
 strictly decreasing from each conclusion node to each of its premise nodes. Such a rank exists for every set-sized well-founded relation by well-founded recursion and Replacement. Conversely, rank descent certifies well-foundedness. The condition that $\alpha$ is an ordinal and the function, edge and rank conditions are all bounded once the indicated sets have been supplied.
 
@@ -137,7 +137,7 @@ Then $B$ is $\Pi_1$, hence $\Pi_2$, but not $\Sigma_1$ in this same $V$. If code
 By the cited $\Pi_2$-completeness result and the earlier computable reduction to Gallin validity, there is a computable function $f$ such that
 $$
 B(n)\quad\longleftrightarrow\quad
-\operatorname{FullVal}_\infty(f(n)).
+\mathrm{FullVal}_\infty(f(n)).
 $$
 If $D$ were the sound and complete theorem predicate of the proposed calculus, then
 $$
@@ -151,13 +151,13 @@ When working internally to an inner model $M$, the same argument compares its pr
 
 **Corollary 4.2.** Given an explicit parameter-free $\Sigma_1$ formula $D(x)$ for theoremhood, one can effectively produce a finite C sentence code $A$ such that
 $$
-\operatorname{FullVal}_\infty(A)\quad\longleftrightarrow\quad\neg D(A).
+\mathrm{FullVal}_\infty(A)\quad\longleftrightarrow\quad\neg D(A).
 $$
 If the calculus is sound, this sentence is valid and underivable.
 
 **Proof.** Fix the universal $U$ and reduction $f$ from Theorem 4.1. Effectively compile an index $e$ for the $\Sigma_1$ predicate $n\mapsto D(f(n))$, so $U(e,n)\leftrightarrow D(f(n))$. Set $A=f(e)$. Then
 $$
-\operatorname{FullVal}_\infty(f(e))
+\mathrm{FullVal}_\infty(f(e))
 \leftrightarrow\neg U(e,e)
 \leftrightarrow\neg D(f(e)).
 $$

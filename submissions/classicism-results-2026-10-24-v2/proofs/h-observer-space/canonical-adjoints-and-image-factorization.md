@@ -8,7 +8,7 @@ The image also has an admitted floor and ceiling. Its floor is an auxiliary S5 i
 
 ## 1. Assumptions and what was already known
 
-Work over C5 in the fixed relational type system. Write 0,1 for Bottom, Top, and x≤y for the output identity x∧y=x. Let $E^{tt}$ be an admitted $\operatorname{Good}_{\{t\}}$ observer: it has the full Boolean and type-t quantifier composite identities. Equivalently, one can begin with Good_Δ for any fixed finite external list containing t. No injectivity, surjectivity, inverse or choice assumption is imposed on E.
+Work over C5 in the fixed relational type system. Write 0,1 for Bottom, Top, and x≤y for the output identity x∧y=x. Let $E^{tt}$ be an admitted $\mathrm{Good}_{\{t\}}$ observer: it has the full Boolean and type-t quantifier composite identities. Equivalently, one can begin with Good_Δ for any fixed finite external list containing t. No injectivity, surjectivity, inverse or choice assumption is imposed on E.
 
 C5 supplies the Barcan and Functionality instances used below. In particular:
 
@@ -22,9 +22,9 @@ Only admitted families occur. No assertion is made that arbitrary external subse
 The individual-observer result
 
 $$
-\operatorname{Good}_{\{t\}}(E)
+\mathrm{Good}_{\{t\}}(E)
 \quad\Longrightarrow\quad
-\operatorname{Good}_{\Delta}(E)
+\mathrm{Good}_{\Delta}(E)
 \text{ for every fixed finite external }\Delta
 \tag{1}
 $$
@@ -134,7 +134,7 @@ Define the normalized right adjoint and image predicate by
 $$
 r(q):=a\land Rq,
 \qquad
-\operatorname{Im}_E(q):=\exists p\,(Ep=q).
+\mathrm{Im}_E(q):=\exists p\,(Ep=q).
 \tag{12}
 $$
 These are admitted terms. Since k≤Rq by monotonicity,
@@ -186,7 +186,7 @@ j(q)\le q\le c(q),
 \tag{18}
 $$
 $$
-\operatorname{Im}_E(q)
+\mathrm{Im}_E(q)
 \longleftrightarrow j(q)=q
 \longleftrightarrow c(q)=q.
 \tag{19}
@@ -212,7 +212,7 @@ $$
 For E(rq)=j(q)≤c(q)=E(Lq), and both arguments lie in [0,a], where E reflects order by (11). Equality holds precisely at the image values:
 
 $$
-r(q)=Lq\quad\longleftrightarrow\quad\operatorname{Im}_E(q).
+r(q)=Lq\quad\longleftrightarrow\quad\mathrm{Im}_E(q).
 \tag{22}
 $$
 The forward direction combines (18) with equality of the two E-images; the reverse is (14).

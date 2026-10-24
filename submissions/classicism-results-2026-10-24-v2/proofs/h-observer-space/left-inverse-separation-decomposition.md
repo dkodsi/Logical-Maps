@@ -17,8 +17,8 @@ Define the following one-pair sentence:
 $$
 \begin{aligned}
 K_\Delta:=\exists E^{tt}F^{tt}c^t\,[
-&\operatorname{Good}_\Delta(E)\land
-\operatorname{Good}_\Delta(F)\\
+&\mathrm{Good}_\Delta(E)\land
+\mathrm{Good}_\Delta(F)\\
 &\land F\circ E=I\land c\land Fc=\bot].
 \end{aligned}
 \tag{1}
@@ -29,11 +29,11 @@ The main fixed-instance theorem is
 
 $$
 \boxed{
-S_{\tau,\Delta}[\operatorname{SplitMono}]
+S_{\tau,\Delta}[\mathrm{SplitMono}]
 \ \longleftrightarrow\
-S_{\tau,\Delta}[\operatorname{Rev}]
+S_{\tau,\Delta}[\mathrm{Rev}]
 \ \lor\
-\bigl(S_{\tau,\Delta}[\operatorname{Good}]
+\bigl(S_{\tau,\Delta}[\mathrm{Good}]
 \land K_\Delta\bigr).
 }
 \tag{2}
@@ -178,8 +178,8 @@ An equivalent useful formulation is
 
 $$
 \neg K_\Delta\ \longrightarrow\
-\bigl(S_{\tau,\Delta}[\operatorname{SplitMono}]
-\leftrightarrow S_{\tau,\Delta}[\operatorname{Rev}]\bigr).
+\bigl(S_{\tau,\Delta}[\mathrm{SplitMono}]
+\leftrightarrow S_{\tau,\Delta}[\mathrm{Rev}]\bigr).
 \tag{15}
 $$
 Here ¬K_Δ means that no qualified pair has a currently true kernel element of the stated form. It does not assert that every left-invertible observer is a two-sided inverse. Formula (15) only replaces its distinguishing action by an involution.
@@ -195,7 +195,7 @@ $$
 \text{full OS}
 \ +\
 \bigl\{
-S_{t,\Delta}[\operatorname{Rev}]\lor K_\Delta:
+S_{t,\Delta}[\mathrm{Rev}]\lor K_\Delta:
 \Delta\text{ finite},\ t\in\Delta
 \bigr\}.
 }

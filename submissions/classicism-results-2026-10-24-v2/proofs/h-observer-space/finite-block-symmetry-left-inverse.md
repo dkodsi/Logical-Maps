@@ -17,9 +17,9 @@ The first implication is strict even in a model satisfying C5 and separately nec
 For a finite external type list Δ, write
 
 $$
-\operatorname{SplitMono}_\Delta(E):=
-\operatorname{Good}_\Delta(E)\land
-\exists F^{tt}\,[\operatorname{Good}_\Delta(F)\land F\circ E=I].
+\mathrm{SplitMono}_\Delta(E):=
+\mathrm{Good}_\Delta(E)\land
+\exists F^{tt}\,[\mathrm{Good}_\Delta(F)\land F\circ E=I].
 \tag{2}
 $$
 Good_Δ requires the full Boolean and quantifier composite identities, together with the translated equality clauses. The equation F∘E=I is a whole-operation identity, not merely an equation between current truth functions. Both maps are admitted and qualified for the same list. The separation schema has the full relational output scope and ranges over all finite Δ.
@@ -211,7 +211,7 @@ We prove the new verdict directly from its finite-pinning condition. We do not i
 Let d be a nonbottom proposition at ℕ, choose an outgoing arrow h in d and a finite pin P for d. If h:ℕ→ℕ, extend h|P to a surjection b:ℕ→ℕ: leave its finitely many prescribed values unchanged and enumerate all natural-number outputs on the remaining infinite input set. If h ends at {0}, take b to be the unique arrow ℕ→{0}. In either case b∈d and b has a section s in the all-maps category. Functoriality gives
 
 $$
-b_\sigma s_\sigma=I_{D_\sigma(\operatorname{cod}b)}
+b_\sigma s_\sigma=I_{D_\sigma(\mathrm{cod}b)}
 \tag{17}
 $$
 for every admitted type σ. Thus b_σ is onto at every type. This is the already established split-epimorphism observation in the contingent-Barcan note; no stronger claim about arbitrary transports is needed.
@@ -267,7 +267,7 @@ The accessible singleton still refutes BF_e, BF_t and Functionality at e,t. The 
 $$
 \boxed{\mathrm C+\mathrm{SplitMono}+\mathrm{BF}
 +\neg\Box\mathrm{BF}_e+\neg\Box\mathrm{BF}_t
-+\neg\Box\operatorname{Fun}_{e,t}.}
++\neg\Box\mathrm{Fun}_{e,t}.}
 \tag{20}
 $$
 Full OS implies BF, so necessary full OS would imply necessary BF and is false here. C5 implies necessary BF and is false here as well. Since SplitMono implies OS, its separately necessary schema also fails. Thus SplitMono entails none of C5, necessary OS, necessary SplitMono, necessary BF or necessary Functionality. The separate fork theorem refutes the reverse implication from ordinary or necessary OS to SplitMono. No atomlessness verdict is transferred from the different model of §§1–6.

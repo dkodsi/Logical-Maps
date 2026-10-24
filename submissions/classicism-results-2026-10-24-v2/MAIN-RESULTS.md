@@ -426,8 +426,11 @@ The [dedicated page](proofs/h-observer-space/GRAPH.md) develops the map from H, 
 - **The endpoint boundary.** OS + Plenitude at (t,t) is equivalent over H to endpoint separation, hence to C5 + Atomicity (type t). Reversibility can hold in atomless models; one atom raises it to endpoint separation.
 - **Canonical adjoints.** Over C5, every logical observer qualified at t has admitted order adjoints. These characterize injection, surjection and reversibility. A Boolean observer commutes with necessity exactly when it is injective.
 - **Limits of combination and persistence.** Separate preservation requirements need not combine. SurjSep entails neither ☐OS nor ☐BF, even though an individual observer’s surjectivity persists over C + BF (type t).
+- **Exact characterizations.** Over C5, Rev is characterized by its fixed propositions. Laws on the whole reversible group give sharp finite bounds; internally finite observer families give exact finiteness characterizations. [Statements and proofs](proofs/h-observer-space/GRAPH.md#reversibility-and-the-invariant-proposition-algebra).
 
 The [detailed map and research frontier](proofs/h-observer-space/MAP.md) also cover weaker connective fragments, normalization, character extension and atomless order models.
+
+**Main unresolved question:** does injective logical separation imply separation by logical observers with logical left inverses? The converse holds; this direction remains open over H and over C5. [Exact question and positive cases](CONJECTURES.md#observer-strength).
 
 **Lean certified:** The foundational implication H + OS ⇒ C + BF, with explicit endpoint identities. · [Proof length](#proof-length): long.
 
@@ -646,7 +649,6 @@ Finite pinning and permutation symmetry control which intensions are admitted. E
 The all-type Boolean Completeness verdict is a separate correction and strengthening, presented above.
 
 [Proof length](#proof-length): medium. [Proofs and certificates](evidence/RESULT-INDEX.md#oldnew-separation).
-
 
 ## Remaining central questions
 

@@ -70,7 +70,7 @@ $$
 with the analogous existential interpretation, again returning c or d. Interpret equality at every type by
 
 $$
-\operatorname{Eq}_\sigma(x,y)=
+\mathrm{Eq}_\sigma(x,y)=
 \begin{cases}c&x=y\text{ as domain elements},\\d&x\ne y.\end{cases}
 \tag{4}
 $$
@@ -152,9 +152,9 @@ Double negation also holds as an output identity. The direct tests above indepen
 The model proves
 
 $$
-\mathrm H+\operatorname{Functionality}
- +\operatorname{FullSep}[N_{\rm mat}]
-\ \not\models\ \operatorname{Sep}_t[N_{\rm pt}].
+\mathrm H+\mathrm{Functionality}
+ +\mathrm{FullSep}[N_{\rm mat}]
+\ \not\models\ \mathrm{Sep}_t[N_{\rm pt}].
 $$
 Consequently the material and pointwise separation tiers differ over H even with all Functionality and full typed material separation. The pointwise and whole-operation tiers coincide in this model; it does not counterexample their equivalence under Functionality.
 

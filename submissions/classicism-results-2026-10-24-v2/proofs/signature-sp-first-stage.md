@@ -8,8 +8,8 @@ Keep the original finitary relational C, exactly Σ={c:e→t}, and no individual
 names in the original signature. Let a:e be the auxiliary root marker, and put
 
 $$
-M=\operatorname{Max}(C(\Sigma)),\qquad
-T=\operatorname{Max}(C(\Sigma,a))+E_1,
+M=\mathrm{Max}(C(\Sigma)),\qquad
+T=\mathrm{Max}(C(\Sigma,a))+E_1,
 \qquad E_1:=\forall x^e y^e\,(x=y).
 $$
 
@@ -36,7 +36,7 @@ The main new conclusions are
 
 $$
 K_1\ne\varnothing\quad\Longrightarrow\quad
-\operatorname{Con}(\mathrm{SP}_\Sigma),
+\mathrm{Con}(\mathrm{SP}_\Sigma),
 \tag{2}
 $$
 
@@ -46,7 +46,7 @@ $$
 K_1\ne\varnothing\quad\Longleftrightarrow\quad
 \bigl[\ T\vdash\exists x^\sigma F(x)
 \ \Longrightarrow\
-\exists b\in B_\sigma\ \operatorname{Con}(T+F(b))\ \bigr]
+\exists b\in B_\sigma\ \mathrm{Con}(T+F(b))\ \bigr]
 \quad\text{for every }\sigma,F.
 \tag{3}
 $$
@@ -275,8 +275,8 @@ disjunction. That property is false here, even for a C-theorem.
 Let Atom(p) be Boolean atomhood, and define
 
 $$
-A:=\exists p^t\bigl(p\land\operatorname{Atom}(p)\bigr),\qquad
-G(p):=A\to\bigl(p\land\operatorname{Atom}(p)\bigr).
+A:=\exists p^t\bigl(p\land\mathrm{Atom}(p)\bigr),\qquad
+G(p):=A\to\bigl(p\land\mathrm{Atom}(p)\bigr).
 \tag{11}
 $$
 
@@ -308,7 +308,7 @@ part of j(b). The no-true-B-atom argument in §5 applies to the truth
 ultrafilter of every such model, giving a contradiction. Therefore
 
 $$
-T\vdash\neg\bigl(b\land\operatorname{Atom}(b)\bigr)
+T\vdash\neg\bigl(b\land\mathrm{Atom}(b)\bigr)
 \qquad\text{for every named }b:t.
 $$
 

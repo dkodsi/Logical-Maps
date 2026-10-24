@@ -69,7 +69,7 @@ The split epimorphisms also distinguish all proposition pairs at X. Distinct pro
 Fix any outgoing arrow b:X→Z, with tag k. It need not be invertible or split epic for this section. For integers j≥0 define
 
 $$
-C_j=\{h:X\to Z:\operatorname{tag}(h)=k+j\}.
+C_j=\{h:X\to Z:\mathrm{tag}(h)=k+j\}.
 \tag{6}
 $$
 These disjoint charts share the pin {(0,0)}. Their target and tag determine membership; agreeing on that single point determines the tag. Postcomposition by u_Z sends C_j onto C_{j+1}. Let c_b be the proposition C₀, false on all other arrows. It is admitted, and b∈c_b.
@@ -102,7 +102,7 @@ where q is any proposition at W. Both profiles have the same one-point pin; no u
 For every h,
 
 $$
-r_{s_hh}s_h=\mathrm{id}_{\operatorname{target}(h)}.
+r_{s_hh}s_h=\mathrm{id}_{\mathrm{target}(h)}.
 \tag{9}
 $$
 On C_j the first observation shifts to C_{j+1}, where the second observation shifts back. Outside the charts both observations are identities and the coordinate remains outside. For arbitrary future l:X→W, arbitrary q at W, and further arrow a:W→V, the application formula therefore gives
@@ -143,7 +143,7 @@ $$
 Then a∘h=a′∘h, but q₀ has different truth at a,a′. Every transported proposition ρ_t(h)p has equal truth at a,a′, because its values are p(ah) and p(a′h). Thus
 
 $$
-q_0\notin\operatorname{Im}\rho_t(h).
+q_0\notin\mathrm{Im}\rho_t(h).
 \tag{13}
 $$
 There is a missing object at every higher relational type as well. For τ=σ₁⋯σ_nt, let q_τ be the admitted constant relation λx₁⋯x_n.q₀ at X; for n=0 this is q₀ itself. Suppose q_τ=ρ_τ(h)A for some A at Y. Choose one argument a_i of each σ_i at Y, using nonemptiness of the type domains. Apply the assumed identity to their transported tuple. Naturality and beta yield

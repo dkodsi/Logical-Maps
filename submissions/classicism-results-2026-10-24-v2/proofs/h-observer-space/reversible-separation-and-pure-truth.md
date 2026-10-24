@@ -20,7 +20,7 @@ Full typed Rev already implies C5 and is equivalent to full typed separation by 
 Fix a closed pure sentence P. Let Δ_P contain every type σ for which a primitive quantifier ∀_σ or ∃_σ occurs in P, including occurrences inside its lambda subterms. Expand defined notation first. There are only finitely many such types. The following argument uses the propositional separation instance for that list, with involution qualification
 
 $$
-\operatorname{Good}_{\Delta_P}(T)\land T\circ T=I.
+\mathrm{Good}_{\Delta_P}(T)\land T\circ T=I.
 \tag{2}
 $$
 Equality types occurring in P need not be added to the quantifier list: C5 makes all their equality judgments endpoints, and Boolean qualification fixes those endpoints. Only finitely many C5, Barcan and Functionality instances enter the proof for a fixed P. Including additional types, such as t, in Δ_P is harmless but unnecessary for this step.

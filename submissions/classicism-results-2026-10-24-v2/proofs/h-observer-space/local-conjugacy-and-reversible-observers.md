@@ -142,7 +142,7 @@ To prove propositional separation, let p≠q and let d be their nonzero Boolean 
 $$
 b:=j_V\pi,
 \qquad
-S\supseteq P\cup D_V\cup\operatorname{supp}(\pi)
+S\supseteq P\cup D_V\cup\mathrm{supp}(\pi)
 $$
 with S finite. Then b agrees with h on P, hence b∈d. Enlarging D_V to S in (7) gives
 

@@ -15,7 +15,7 @@ unpointed empty-world case is not presented as a pointed model.
 The first target is the exact equivalence
 
 $$
-\operatorname{DedInf}_t\quad\Longleftrightarrow\quad
+\mathrm{DedInf}_t\quad\Longleftrightarrow\quad
 \text{the external set }W/G\text{ is infinite}.
 \tag{1}
 $$
@@ -29,7 +29,7 @@ The second target specializes W to A with its natural permutation action:
 
 $$
 \Box\mathrm{IC}_\sigma\quad\text{for every admitted type }\sigma,
-\qquad\Box\neg\operatorname{DedInf}_t.
+\qquad\Box\neg\mathrm{DedInf}_t.
 \tag{2}
 $$
 
@@ -76,7 +76,7 @@ finite supports K1,…,Km, take the union of those finite sets of local
 representatives. In particular,
 
 $$
-|W/\operatorname{Fix}(S)|\le
+|W/\mathrm{Fix}(S)|\le
 \sum_{j=1}^{m}(|S|+1)^{|K_j|}.
 \tag{3}
 $$

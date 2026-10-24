@@ -24,7 +24,7 @@ V(E)&:=(\lambda p,q\, .\,E(p\lor q))=(\lambda p,q\, .\,Ep\lor Eq),\\
 N(E)&:=(\lambda p\, .\,E\neg p)=(\lambda p\, .\,\neg Ep),\\
 Q_\sigma(E)&:=(\lambda F\, .\,E(\forall x^\sigma Fx))=(\lambda F\, .\,\forall x^\sigma E(Fx)),\\
 P_\sigma(E)&:=(\lambda F\, .\,E(\exists x^\sigma Fx))=(\lambda F\, .\,\exists x^\sigma E(Fx)),\\
-\operatorname{FixEq}_t(E)&:=(\lambda p,q\, .\,E(p=q))=(\lambda p,q\, .\,p=q).
+\mathrm{FixEq}_t(E)&:=(\lambda p,q\, .\,E(p=q))=(\lambda p,q\, .\,p=q).
 \end{aligned}
 $$
 
@@ -161,9 +161,9 @@ Fixing identity judgments gives the following exact bounds:
 
 $$
 \begin{aligned}
-\mathrm C&\vdash S[A\land\operatorname{FixEq}_t]\leftrightarrow\mathrm{ND}_t,\\
-\mathrm C&\vdash S[A\land\operatorname{FixEq}_t\land Q_\Delta]
-\leftrightarrow S[A\land\operatorname{FixEq}_t\land M\land Q_\Delta]
+\mathrm C&\vdash S[A\land\mathrm{FixEq}_t]\leftrightarrow\mathrm{ND}_t,\\
+\mathrm C&\vdash S[A\land\mathrm{FixEq}_t\land Q_\Delta]
+\leftrightarrow S[A\land\mathrm{FixEq}_t\land M\land Q_\Delta]
 \leftrightarrow\mathrm{ND}_t\land\mathrm{BF}_\Delta.
 \end{aligned}
 $$
@@ -175,7 +175,7 @@ First work over H. Every true identity judgment r is accepted by each identity-f
 If N is also required, a false judgment r has E¬r=¬Er=¬r true for every eligible observer. Separation gives ¬r=Top. Thus already over H,
 
 $$
-S[A\land N\land\operatorname{FixEq}_t]\quad\Longrightarrow\quad\mathrm{NI}_t\land\mathrm{ND}_t.
+S[A\land N\land\mathrm{FixEq}_t]\quad\Longrightarrow\quad\mathrm{NI}_t\land\mathrm{ND}_t.
 $$
 
 Over C, the H theorem ¬(Top=Bottom) and Logical Equivalence give (Top=Bottom)=Bottom. Hence the preceding false-judgment calculation gives ND_t without N. With QΔ, the earlier universal-separation argument also gives BFΔ.
@@ -206,7 +206,7 @@ $$
 For each finite Δ, put
 
 $$
-G_a:=\operatorname{Atom}(a)\land\mathrm{BF}_\Delta,
+G_a:=\mathrm{Atom}(a)\land\mathrm{BF}_\Delta,
 \qquad E_a(r):=(G_a\land\Box(a\to r))\lor(\neg G_a\land r).
 $$
 

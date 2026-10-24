@@ -8,17 +8,17 @@ The following finitary implications are already proved in the records:
 
 $$
 C5\Rightarrow BF_{\rm all},\qquad
-\operatorname{Atomicity}_t+BF_{\rm all}
- \Rightarrow\operatorname{Atomicity}_{\rm all},
+\mathrm{Atomicity}_t+BF_{\rm all}
+ \Rightarrow\mathrm{Atomicity}_{\rm all},
 $$
 $$
-C5+\operatorname{Atomicity}_{\rm all}
- \Rightarrow\Box\operatorname{Plenitude}_{\rm all}.
+C5+\mathrm{Atomicity}_{\rm all}
+ \Rightarrow\Box\mathrm{Plenitude}_{\rm all}.
 \tag{5.1}
 $$
 
 Here C5 is **boxed ND at all types**. Consequently
-$C5+\operatorname{Atomicity}_t$ and $\Box\operatorname{Plenitude}_{\rm all}$
+$C5+\mathrm{Atomicity}_t$ and $\Box\mathrm{Plenitude}_{\rm all}$
 are equivalent over C. The reverse implication follows from the recorded
 boxed-Plenitude consequences. This removes the all-type Atomicity assumption
 from the starting package, while retaining the full all-type AAJ scheme.
@@ -28,7 +28,7 @@ $\tau=\sigma_1\cdots\sigma_n t$, and put
 
 $$
 X_\tau=W\times D_{\sigma_1}\times\cdots\times D_{\sigma_n},
-\qquad W=\operatorname{At}(B_t).
+\qquad W=\mathrm{At}(B_t).
 $$
 
 The $\Box$Plenitude representation has literal typed identity,
@@ -107,14 +107,14 @@ This proves the sharpened form of the canonical
 [fullness theorem, §6](full-gallin.md):
 
 $$
-C+C5+\operatorname{Atomicity}_t+\mathrm{AAJ}_{\rm all}
+C+C5+\mathrm{Atomicity}_t+\mathrm{AAJ}_{\rm all}
 \quad\models\quad
 \text{full principal-world Gallin semantics}.
 \tag{5.3}
 $$
 
 Equivalently the initial finitary package can be
-$C+\Box\operatorname{Plenitude}_{\rm all}$. Within its canonical
+$C+\Box\mathrm{Plenitude}_{\rm all}$. Within its canonical
 representation, the following conditions are equivalent:
 
 1. Every external family of atoms at every relational type has a join.
@@ -132,7 +132,7 @@ $R$ of all tensor atoms
 
 $$
 \lambda x.\,a\wedge x=s
-\qquad(a\in\operatorname{At}(B_t),\ s\in S).
+\qquad(a\in\mathrm{At}(B_t),\ s\in S).
 \tag{5.4}
 $$
 

@@ -20,7 +20,7 @@ $$
 Write I for the identity operation and define composition by the admitted lambda term. Put
 
 $$
-\operatorname{Aut}_M(E):=
+\mathrm{Aut}_M(E):=
 M(E)\land
 \exists F^{tt}\,[M(F)\land E\circ F=I\land F\circ E=I].
 $$
@@ -29,7 +29,7 @@ All three preservation/inverse assertions are whole-operation identities. In par
 For any additional qualification R(E), set
 
 $$
-K_R(E):=R(E)\land\operatorname{Aut}_M(E),
+K_R(E):=R(E)\land\mathrm{Aut}_M(E),
 $$
 $$
 S_R:=S[A\land Z\land K_R],
@@ -57,7 +57,7 @@ $$
 and
 
 $$
-\operatorname{Atom}(a):=
+\mathrm{Atom}(a):=
 a\ne B\land
 \forall b\,[b\le a\to(b=B\lor b=a)].
 $$
@@ -66,10 +66,10 @@ Here Atom refers to this meet order, not to an unstated Boolean or modal structu
 Write AS for the atomistic order condition
 
 $$
-\operatorname{AS}:=
+\mathrm{AS}:=
 \forall p,q\left[
 \bigl(\forall a\,
-  ((\operatorname{Atom}(a)\land a\le p)\to a\le q)\bigr)
+  ((\mathrm{Atom}(a)\land a\le p)\to a\le q)\bigr)
 \to p\le q
 \right].
 $$
@@ -78,9 +78,9 @@ Under BMeet, this says exactly that each p is the least upper bound of its atoms
 Finally put
 
 $$
-\operatorname{MoveTrue}_R:=
+\mathrm{MoveTrue}_R:=
 \forall a\left[
-\operatorname{Atom}(a)\to
+\mathrm{Atom}(a)\to
 \exists E\,(K_R(E)\land Ea)
 \right].
 $$
@@ -92,10 +92,10 @@ This is an internal existence condition on admitted observers. It does not choos
 
 $$
 \boxed{
-S_R+\exists a\,\operatorname{Atom}(a)
+S_R+\exists a\,\mathrm{Atom}(a)
 \quad\leftrightarrow\quad
-\operatorname{BMeet}+\operatorname{AS}
-+\operatorname{MoveTrue}_R.}
+\mathrm{BMeet}+\mathrm{AS}
++\mathrm{MoveTrue}_R.}
 $$
 No closure property of R is required.
 
@@ -140,28 +140,28 @@ The converse extracts one atom and one observer for the particular pair being se
 For the basic class R=true, let
 
 $$
-\operatorname{TrueAtom}:=
-\exists w\,(\operatorname{Atom}(w)\land w)
+\mathrm{TrueAtom}:=
+\exists w\,(\mathrm{Atom}(w)\land w)
 $$
 and
 
 $$
-\operatorname{Trans}_M:=
+\mathrm{Trans}_M:=
 \forall a,b\left[
-(\operatorname{Atom}(a)\land\operatorname{Atom}(b))
+(\mathrm{Atom}(a)\land\mathrm{Atom}(b))
 \to
-\exists E\,(\operatorname{Aut}_M(E)\land Ea=b)
+\exists E\,(\mathrm{Aut}_M(E)\land Ea=b)
 \right].
 $$
 **Theorem 2.** Over H,
 
 $$
 \boxed{
-S[A\land Z\land\operatorname{Aut}_M]
-+\exists a\,\operatorname{Atom}(a)
+S[A\land Z\land\mathrm{Aut}_M]
++\exists a\,\mathrm{Atom}(a)
 \quad\leftrightarrow\quad
-\operatorname{BMeet}+\operatorname{AS}
-+\operatorname{TrueAtom}+\operatorname{Trans}_M.}
+\mathrm{BMeet}+\mathrm{AS}
++\mathrm{TrueAtom}+\mathrm{Trans}_M.}
 $$
 Under BMeet and AS, atoms exist. MoveTrue supplies a true atom w, which is unique by the truth/meet argument above. For any atoms a,b, choose admitted automorphisms E_a,E_b taking them to true atoms, hence to w. If F_b is an admitted inverse of E_b, then F_b composed with E_a takes a to b.
 
@@ -178,10 +178,10 @@ Theorem 1 remains valid with any R for which its displayed qualification is mean
 Under that closure assumption,
 
 $$
-\operatorname{MoveTrue}_R
+\mathrm{MoveTrue}_R
 \quad\leftrightarrow\quad
-\operatorname{TrueAtom}
-+\operatorname{Trans}_{K_R}
+\mathrm{TrueAtom}
++\mathrm{Trans}_{K_R}
 $$
 in the presence of BMeet and AS. The proof is exactly the composition argument in §3, now within the restricted class. It is enough that each K_R map has an admitted K_R inverse; no claim about every independently chosen inverse is needed.
 
@@ -194,7 +194,7 @@ If R is indexed by a fixed finite type list, all witnesses in that instance use 
 Assume either characterization. At a current evaluation point let
 
 $$
-\mathcal A(p):=\{a:\operatorname{Atom}(a)\text{ and }a\le p\}.
+\mathcal A(p):=\{a:\mathrm{Atom}(a)\text{ and }a\le p\}.
 $$
 AS makes this a faithful order representation, with
 
@@ -222,8 +222,8 @@ This is a representation of propositions and their current truth profiles. It do
 For full typed separation, the exact structural characterizations acquire precisely the explicit Functionality schema. For example,
 
 $$
-\operatorname{FullSep}[A\land Z\land\operatorname{Aut}_M]
-+\exists a\,\operatorname{Atom}(a)
+\mathrm{FullSep}[A\land Z\land\mathrm{Aut}_M]
++\exists a\,\mathrm{Atom}(a)
 $$
 is equivalent over H to BMeet + AS + TrueAtom + Trans_M + Functionality. This follows from the [general typed-separation theorem](typed-separation-and-classicism.md), §2, applied to Theorem 2.
 

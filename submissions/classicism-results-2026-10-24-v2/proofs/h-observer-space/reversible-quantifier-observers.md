@@ -9,7 +9,7 @@ Two natural formulations recover reversible logical separation. A logical observ
 For an admitted E:tt put
 
 $$
-\begin{aligned}\operatorname{Inj}(E)&:=\forall p,q\,[Ep=Eq\to p=q],\\\operatorname{Onto}(E)&:=\forall q\,\exists p\,[Ep=q],\\\operatorname{Bij}(E)&:=\operatorname{Inj}(E)\land\operatorname{Onto}(E),\\\operatorname{Inv}(E)&:=\exists F^{tt}\,[E\circ F=I\land F\circ E=I],\qquad I:=\lambda p.p.\end{aligned}
+\begin{aligned}\mathrm{Inj}(E)&:=\forall p,q\,[Ep=Eq\to p=q],\\\mathrm{Onto}(E)&:=\forall q\,\exists p\,[Ep=q],\\\mathrm{Bij}(E)&:=\mathrm{Inj}(E)\land\mathrm{Onto}(E),\\\mathrm{Inv}(E)&:=\exists F^{tt}\,[E\circ F=I\land F\circ E=I],\qquad I:=\lambda p.p.\end{aligned}
 $$
 
 The two inverse equations are identities of whole operations. Bij(E), by contrast, is a current first-order condition on the proposition domain. The box in □Bij(E) covers the displayed object-variable-closed formula, retaining E as a parameter. In C, □P means P=Top.
@@ -19,7 +19,7 @@ For each fixed finite external type list Δ, use the whole-operation qualificati
 **Theorem 1, over C.** For any admitted E,
 
 $$
-\operatorname{Inv}(E)\leftrightarrow\Box\operatorname{Bij}(E).
+\mathrm{Inv}(E)\leftrightarrow\Box\mathrm{Bij}(E).
 $$
 
 If E preserves a finite list of Boolean operations and universal/existential quantifiers, its inverse preserves the same operations. In particular, for a Good_Δ observer, Inv(E) is equivalent to existence of a Good_Δ inverse.
@@ -37,7 +37,7 @@ The C5 premise on the right is explicit. Current bijectivity over C alone is not
 **Theorem 3, over C.** If E satisfies Q_t and Inv(E), then E and its inverse preserve all Boolean operations by whole identities. If Δ contains t, then
 
 $$
-\begin{aligned}Q_\Delta(E)\land\operatorname{Inv}(E)&\leftrightarrow\operatorname{Good}_\Delta(E)\land\text{existence of a Good}_\Delta\text{ inverse}\\&\leftrightarrow Q_\Delta(E)\land\Box\operatorname{Bij}(E).\end{aligned}
+\begin{aligned}Q_\Delta(E)\land\mathrm{Inv}(E)&\leftrightarrow\mathrm{Good}_\Delta(E)\land\text{existence of a Good}_\Delta\text{ inverse}\\&\leftrightarrow Q_\Delta(E)\land\Box\mathrm{Bij}(E).\end{aligned}
 $$
 
 Here Good's equality clauses are the C-redundant translated logical clauses. The finite Q-list suffices for its matching existential list by C duality. Thus, at full separation scope,

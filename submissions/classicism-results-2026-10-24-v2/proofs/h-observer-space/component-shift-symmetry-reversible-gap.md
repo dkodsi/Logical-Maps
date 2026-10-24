@@ -164,14 +164,14 @@ Every observation arrow is in K and is invertible, so both observers satisfy all
 The parameter argument has a reusable general form. Fix an external finite list of first-order relational variables R_i of types $e^{n_i}t$, with n_i≥1, and an external finite list of individual variables $\bar x$. Let $P(\bar R,\bar x)$ be a pure formula whose free variables are among these lists. Expand its defined notation and let Δ_P contain the finitely many quantifier types that occur, together with t if needed for the reversible-to-involutive comparison. Define the endpoint condition
 
 $$
-\operatorname{End}(\bar R):=
+\mathrm{End}(\bar R):=
 \bigwedge_i\forall\bar y^{\,e}\,
 \bigl(R_i\bar y=\top\ \lor\ R_i\bar y=\bot\bigr).
 $$
 Then full Rev over H implies the following external formula schema:
 
 $$
-\boxed{\operatorname{End}(\bar R)\ \longrightarrow\
+\boxed{\mathrm{End}(\bar R)\ \longrightarrow\
 \bigl(P(\bar R,\bar x)\leftrightarrow
 \Box P(\bar R,\bar x)\bigr).}
 \tag{12a}
@@ -183,7 +183,7 @@ To prove it, recover C5 and qualified involutive separation from full Rev. Every
 $$
 (T^*_{e^{n_i}t}R_i)(\bar y)=T(R_i\bar y)=R_i\bar y,
 $$
-where the second equality uses $\operatorname{End}(\bar R)$ and endpoint preservation. The finitely many Functionality instances collect these tuple identities into whole identities T*R_i=R_i. The conjugation term induction in [Reversible separation and pure truth](reversible-separation-and-pure-truth.md), §§2–3, now fixes $P(\bar R,\bar x)$. If P is true, every such T agrees on P and Top; the propositional involutive-separation instance for Δ_P gives P=Top, which is □P. The reverse direction follows from modal reflexivity. Applying the same argument to ¬P also proves that the parameterized proposition is an endpoint. No observer qualification premise is necessitated. Once C5 has been recovered, this proof uses only the indicated finite propositional separation instance and the finitely many Functionality instances needed by the formula.
+where the second equality uses $\mathrm{End}(\bar R)$ and endpoint preservation. The finitely many Functionality instances collect these tuple identities into whole identities T*R_i=R_i. The conjugation term induction in [Reversible separation and pure truth](reversible-separation-and-pure-truth.md), §§2–3, now fixes $P(\bar R,\bar x)$. If P is true, every such T agrees on P and Top; the propositional involutive-separation instance for Δ_P gives P=Top, which is □P. The reverse direction follows from modal reflexivity. Applying the same argument to ¬P also proves that the parameterized proposition is an endpoint. No observer qualification premise is necessitated. Once C5 has been recovered, this proof uses only the indicated finite propositional separation instance and the finitely many Functionality instances needed by the formula.
 
 The restriction to first-order relation parameters is essential to the stated scope: an arbitrary parameter with higher-type arguments need not be fixed by conjugation. We also require endpoint-valued tuples, rather than using an unspecified notion of rigidity.
 

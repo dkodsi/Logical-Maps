@@ -37,7 +37,7 @@ tests to a family whose every member equals top. The argument neither
 necessitates an unboxed BF premise nor gives existential commutation for
 necessity. Whether either bound is exact remains unresolved here.
 
-For Boolean qualification a separate positive bound is now proved:
+Boolean qualification gives a separate positive bound:
 Atomicity_t + BF_t + BOX BF_Delta implies full composite separation.
 Under C5+Atomicity_t this separation holds necessarily. The complete proof
 and positive structural criteria are in positive-operator-representation.txt.

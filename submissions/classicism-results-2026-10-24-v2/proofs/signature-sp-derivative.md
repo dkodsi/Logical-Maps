@@ -7,7 +7,7 @@ Original mathematical argument, direct source misc; unpaginated.
 Throughout,
 
 $$
-\Sigma=\{c:e\to t\},\qquad M=\operatorname{Max}(C(\Sigma)),
+\Sigma=\{c:e\to t\},\qquad M=\mathrm{Max}(C(\Sigma)),
 $$
 
 with no individual constant in the original signature. The language and types are the original **finitary relational** ones. Write
@@ -22,7 +22,7 @@ The target theory is
 $$
 \mathrm{SP}_\Sigma=C(\Sigma)+
 \{DP:\ P\text{ closed in }\mathcal L(\Sigma),\
-                    \operatorname{Con}(M+P)\}.
+                    \mathrm{Con}(M+P)\}.
 $$
 
 Every SP side condition below uses this same **signature-relative** M. Neither pure Maximalism nor C-consistency is substituted for it.
@@ -94,8 +94,8 @@ preserving every logical term operation. This is the projection of the profile c
 Suppose π_σ(x)=π_σ(y). Preservation of the identity-valued operation gives
 
 $$
-\pi_t(\operatorname{eq}_\sigma(x,y))
- =\operatorname{eq}_\sigma(\pi_\sigma x,\pi_\sigma y)
+\pi_t(\mathrm{eq}_\sigma(x,y))
+ =\mathrm{eq}_\sigma(\pi_\sigma x,\pi_\sigma y)
  =\top_B=\pi_t(\top_A).
 $$
 
@@ -110,13 +110,13 @@ The qualification “genuine” matters: arbitrary abstract algebras must not be
 Let E₁ abbreviate ∀x^e y^e(x=y). For b∈B_t, write
 
 $$
-\widehat b=\{U\in\operatorname{Stone}(B_t):b\in U\}.
+\widehat b=\{U\in\mathrm{Stone}(B_t):b\in U\}.
 $$
 
 Define K to consist of the Boolean ultrafilters U such that E₁∈U and, for every type σ and b,d∈B_σ,
 
 $$
-\operatorname{eq}_\sigma(b,d)\in U
+\mathrm{eq}_\sigma(b,d)\in U
 \quad\Longleftrightarrow\quad b=d\text{ in }B_\sigma.
 \tag{I}
 $$
@@ -126,7 +126,7 @@ K is a closed subspace of a compact metrizable Stone space, hence compact and me
 Equivalently, K is the Stone space of complete consistent extensions of
 
 $$
-T_\Sigma:=\operatorname{Max}(C(\Sigma,a))+E_1.
+T_\Sigma:=\mathrm{Max}(C(\Sigma,a))+E_1.
 $$
 
 Indeed (I) imposes exactly the maximalist ground equality/disequality diagram in the marked language. C-theorems are top in B, and the ordinary deduction theorem transfers any finite consequence of those ground literals and E₁ to every such ultrafilter. Conversely any complete extension gives the corresponding Boolean truth ultrafilter. Section 3 justifies this use of the marker; the SP reference theory remains M.
@@ -177,7 +177,7 @@ $$
 K_0&=K,\\
 K_{\alpha+1}
  &=K_\alpha\setminus
-       \bigcup_F\operatorname{Int}_{K_\alpha}(Z_F\cap K_\alpha),\\
+       \bigcup_F\mathrm{Int}_{K_\alpha}(Z_F\cap K_\alpha),\\
 K_\lambda&=\bigcap_{\alpha<\lambda}K_\alpha
                  &&(\lambda\text{ a limit ordinal}).
 \end{aligned}
@@ -224,7 +224,7 @@ The arithmetic diagonal lemma, composed with the effective Frege-arithmetic tran
 
 $$
 \mathrm{PA}\vdash
-G_T\leftrightarrow\neg\operatorname{Pr}_{T_\Sigma}
+G_T\leftrightarrow\neg\mathrm{Pr}_{T_\Sigma}
                              (\ulcorner G_T^\#\urcorner).
 $$
 

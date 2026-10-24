@@ -23,7 +23,7 @@ $$
 and let
 
 $$
-\operatorname{Rev}_M(E):=
+\mathrm{Rev}_M(E):=
 \exists F^{tt}\,[M(F)\land E\circ F=I\land F\circ E=I].
 $$
 Both inverse equations are identities of the displayed operations. Every inverse used below is an object of the admitted tt domain.
@@ -32,7 +32,7 @@ Let K(E) be any qualification such that H, or explicit standing hypotheses, give
 
 $$
 K(E)\ \longrightarrow\
-A(E)\land Z(E)\land M(E)\land\operatorname{Rev}_M(E).
+A(E)\land Z(E)\land M(E)\land\mathrm{Rev}_M(E).
 $$
 Assume propositional separation
 
@@ -80,7 +80,7 @@ For example every proposition has the form Ex; since x is below T, every proposi
 Define a meet atom by
 
 $$
-\operatorname{Atom}_{\land}(a):=
+\mathrm{Atom}_{\land}(a):=
 a\ne B\land
 \forall c\,[c\le a\to(c=B\lor c=a)].
 $$
@@ -111,7 +111,7 @@ This is a material equivalence describing current truth. No claim that its two s
 $$
 \boxed{
 p\not\le q\ \longrightarrow\
-\exists a\,[\operatorname{Atom}_{\land}(a)
+\exists a\,[\mathrm{Atom}_{\land}(a)
             \land a\le p\land a\not\le q].}
 $$
 **Proof.** If p is not below q, then p and q differs from p. Separation supplies an eligible E whose outputs on those two propositions disagree. By M, E(p and q) has the truth value of Ep and Eq. It can disagree with Ep only when Ep is true and Eq false.
@@ -128,7 +128,7 @@ This gives the exact order characterization
 $$
 \boxed{
 p\le q\ \leftrightarrow\
-\forall a\,[\operatorname{Atom}_{\land}(a)
+\forall a\,[\mathrm{Atom}_{\land}(a)
              \land a\le p\ \to\ a\le q].}
 $$
 Taking q=B shows that every nonbottom proposition has an atom below it. The displayed equivalence is stronger than that ordinary atomicity condition. For example the three-element chain B<a<T is atomic, but a and T have the same atoms below them.
@@ -139,7 +139,7 @@ Externally, at any current evaluation point define
 
 $$
 \mathcal A(p):=
-\{a:\operatorname{Atom}_{\land}(a)\text{ and }a\le p\}.
+\{a:\mathrm{Atom}_{\land}(a)\text{ and }a\le p\}.
 $$
 Then
 
@@ -200,9 +200,9 @@ For arbitrary K as in §1, full typed separation supplies Functionality. Therefo
 
 $$
 \boxed{
-\exists!a\,\operatorname{Atom}_{\land}(a)
+\exists!a\,\mathrm{Atom}_{\land}(a)
 \quad\leftrightarrow\quad
-\operatorname{Extensionality}.}
+\mathrm{Extensionality}.}
 $$
 The forward proof uses propositional Fregean plus Functionality to identify coextensive relations at each relational type. The reverse follows from Extensionality's propositional instance.
 
@@ -210,10 +210,10 @@ For a theory-level characterization without FullSep[K] as background, suppose in
 
 $$
 \boxed{
-\operatorname{FullSep}[K]
-+\exists!a\,\operatorname{Atom}_{\land}(a)
+\mathrm{FullSep}[K]
++\exists!a\,\mathrm{Atom}_{\land}(a)
 \quad\leftrightarrow\quad
-\operatorname{Extensionality}.}
+\mathrm{Extensionality}.}
 $$
 In the converse direction identity qualifies and, under Extensionality, already separates every relational type. Extra restrictions must satisfy the stated identity-admission condition for this converse.
 

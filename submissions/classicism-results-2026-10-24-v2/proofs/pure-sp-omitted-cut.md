@@ -19,7 +19,7 @@ not a replacement independent sentence. The pure translation is $G^\#$.
 The unresolved question remains
 
 $$
-\operatorname{Con}(\operatorname{Max}(C)+U_G+D(\neg G^\#)).
+\mathrm{Con}(\mathrm{Max}(C)+U_G+D(\neg G^\#)).
 $$
 
 The source established $G^\#\leftrightarrow U_G$ under $I_e$, which Max
@@ -27,7 +27,7 @@ entails. Its local embedding criterion makes the question equivalent to the
 existence of genuine Max models $M,N$ and an embedding
 
 $$
-j:\operatorname{Alg}(M)\longrightarrow\operatorname{Alg}(N),
+j:\mathrm{Alg}(M)\longrightarrow\mathrm{Alg}(N),
 \qquad M\models G^\#,\quad N\models\neg G^\#.
 $$
 

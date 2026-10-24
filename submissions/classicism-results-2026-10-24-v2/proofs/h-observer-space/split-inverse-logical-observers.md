@@ -19,14 +19,14 @@ Let I:=λp.p and let composition be the admitted lambda term. Define
 
 $$
 \begin{aligned}
-\operatorname{SplitEpi}_\Delta(E):={}&
-\operatorname{Good}_\Delta(E)\land
-\exists F^{tt}\,[\operatorname{Good}_\Delta(F)\land E\circ F=I],\\
-\operatorname{SplitMono}_\Delta(E):={}&
-\operatorname{Good}_\Delta(E)\land
-\exists F^{tt}\,[\operatorname{Good}_\Delta(F)\land F\circ E=I],\\
-\operatorname{Invol}_\Delta(E):={}&
-\operatorname{Good}_\Delta(E)\land E\circ E=I.
+\mathrm{SplitEpi}_\Delta(E):={}&
+\mathrm{Good}_\Delta(E)\land
+\exists F^{tt}\,[\mathrm{Good}_\Delta(F)\land E\circ F=I],\\
+\mathrm{SplitMono}_\Delta(E):={}&
+\mathrm{Good}_\Delta(E)\land
+\exists F^{tt}\,[\mathrm{Good}_\Delta(F)\land F\circ E=I],\\
+\mathrm{Invol}_\Delta(E):={}&
+\mathrm{Good}_\Delta(E)\land E\circ E=I.
 \end{aligned}
 $$
 Thus in SplitEpi, F is a **right inverse** of E. Every displayed composition equation is a whole-operation identity. Both E and F are admitted and qualified for the same list. Neither an external section nor current surjectivity alone is the stated hypothesis.
@@ -153,11 +153,11 @@ The construction preserves the distinguishing Boolean difference of arbitrary in
 Over C+BF, for any fixed finite Δ containing t and any relational output type τ,
 
 $$
-S_{\tau,\Delta}[\operatorname{SplitEpi}]
+S_{\tau,\Delta}[\mathrm{SplitEpi}]
 \quad\Longleftrightarrow\quad
-S_{\tau,\Delta}[\operatorname{Invol}]
+S_{\tau,\Delta}[\mathrm{Invol}]
 \quad\Longleftrightarrow\quad
-S_{\tau,\Delta}[\operatorname{Rev}].
+S_{\tau,\Delta}[\mathrm{Rev}].
 \tag{13}
 $$
 For the nontrivial direction, let X≠Y. SplitEpi separation supplies an eligible observer and a tuple at which the two observed values have different truth values. Let d be the Boolean symmetric difference of those two proposition values. Then Ed is true. If d is true already, identity is a qualified involution distinguishing the pair. If d is false, the local lemma gives a qualified involution T with Td true, so its Boolean laws again make the original proposition values differ in truth under T. This separates X,Y at the same tuple. No new output type or qualification list is used. The reverse implications follow because an involution is its own qualified inverse and a two-sided inverse is a right inverse.

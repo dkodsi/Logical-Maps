@@ -29,9 +29,9 @@ for its actual tuple set `D` is rigid. At any future arrow `h`, every subsequent
 The definitions of weak persistence, weak inextensibility and rigidity are those in [Background](../source/topics/classicism/background.md): rigidity is necessary weak rigidity. The power properties are
 
 $$
- R_F(X):=\operatorname{Rigid}(X)\land X\le F,
+ R_F(X):=\mathrm{Rigid}(X)\land X\le F,
  \qquad
- W_F(X):=\operatorname{WeaklyRigid}(X)\land X\le F.
+ W_F(X):=\mathrm{WeaklyRigid}(X)\land X\le F.
 $$
 
 Here entailment `<=` is necessary pointwise implication. The property `R_F` is persistent in C, since rigidity and entailment are themselves necessary conditions.
@@ -218,7 +218,7 @@ The approximate lifting step adapts parts (c)–(d) of [the recorded surjection 
 Use the rigid unary root bound `F` from §3 and its weak power `W_F`. Root TR says that every current member of `W_F` is rigid. Since rigidity is necessary, the admitted test
 
 $$
- Z(X):=\operatorname{Rigid}(X)
+ Z(X):=\mathrm{Rigid}(X)
 $$
 
 is necessarily true of every current member of `W_F`.

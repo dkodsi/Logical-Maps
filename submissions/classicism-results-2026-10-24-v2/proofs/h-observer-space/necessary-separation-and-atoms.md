@@ -10,7 +10,7 @@ Use the fixed relational language and the whole-operation qualification Good_Δ 
 
 $$
 S_t:=\forall p,q^t\left[p=q\leftrightarrow
-\forall E^{tt}\bigl(\operatorname{Good}_{\{t\}}(E)
+\forall E^{tt}\bigl(\mathrm{Good}_{\{t\}}(E)
 \to(Ep\leftrightarrow Eq)\bigr)\right].
 $$
 Thus S_t is one closed formula: its output type is t and its quantifier-preservation list is exactly {t}. Its Boolean and quantifier laws remain full composite identities. Over C, the equality clauses of Good are consequences of the Boolean qualification. By that Boolean qualification, the material-agreement formulation above is equivalent to the formulation using E(p↔q).
@@ -18,9 +18,9 @@ Thus S_t is one closed formula: its output type is t and its quantifier-preserva
 Let
 
 $$
-\operatorname{OneAtom}:=\exists a^t\operatorname{Atom}(a),
+\mathrm{OneAtom}:=\exists a^t\mathrm{Atom}(a),
 \qquad
-\operatorname{Actuality}:=\exists a^t(\operatorname{Atom}(a)\land a).
+\mathrm{Actuality}:=\exists a^t(\mathrm{Atom}(a)\land a).
 $$
 Here Atom and Atomicity_t are the usual Boolean-order notions in C; in particular an atom is required to be distinct from Bottom. C5 means C together with the schema □ND at the relational types. It is not an abbreviation for unboxed ND.
 
@@ -29,8 +29,8 @@ Write OS, Rev and End for the full relational separation schemas with ordinary, 
 **Theorem.** Over C,
 
 $$
-\boxed{\mathrm{C5}+\Box S_t+\operatorname{OneAtom}
-\quad\Longrightarrow\quad\operatorname{Atomicity}_t.}
+\boxed{\mathrm{C5}+\Box S_t+\mathrm{OneAtom}
+\quad\Longrightarrow\quad\mathrm{Atomicity}_t.}
 \tag{1}
 $$
 Together with the previously established observer characterizations, this gives the exact theory equivalences over H:
@@ -38,9 +38,9 @@ Together with the previously established observer characterizations, this gives 
 $$
 \boxed{
 \mathrm{End}
-\ \Longleftrightarrow\ \mathrm{C5}+\operatorname{Atomicity}_t
-\ \Longleftrightarrow\ \mathrm{C5}+\Box S_t+\operatorname{OneAtom}
-\ \Longleftrightarrow\ \mathrm{C5}+\Box\mathrm{OS}+\operatorname{OneAtom}.}
+\ \Longleftrightarrow\ \mathrm{C5}+\mathrm{Atomicity}_t
+\ \Longleftrightarrow\ \mathrm{C5}+\Box S_t+\mathrm{OneAtom}
+\ \Longleftrightarrow\ \mathrm{C5}+\Box\mathrm{OS}+\mathrm{OneAtom}.}
 \tag{2}
 $$
 The right sides explicitly contain C as part of C5. The first equivalence uses the full typed endpoint-separation theorem that recovers C from H. The new argument itself does not recover C from the single formula □S_t.
@@ -54,7 +54,7 @@ Three established facts are used.
 2. **Atoms persist under C5.** For clarity, use
 
 $$
-   \operatorname{Atom}(a)\equiv a\ne\bot\ \land\
+   \mathrm{Atom}(a)\equiv a\ne\bot\ \land\
    \forall p\bigl[(a\land p=a)\lor(a\land\neg p=a)\bigr].
 $$
    ND_t makes a≠Bottom necessary. For each p, either displayed identity supplies its own necessity by NI, so the disjunction is necessary. BF_t then moves that necessity past ∀p. Hence Atom(a)→□Atom(a). This is a derivation under stated C5 instances, not an application of necessitation to Atom(a).
@@ -62,8 +62,8 @@ $$
 3. **Atomicity persists under C5.** The recorded route is Atomicity_t+BF⇒Atomicity at all relational types, followed by C5+Atomicity⇒necessary Atomicity. For the present conclusion only the final type-t instance is used. Its finite proof can be packaged as a closed C theorem
 
 $$
-   K_2\land\operatorname{Atomicity}_t\to
-   \Box\operatorname{Atomicity}_t,
+   K_2\land\mathrm{Atomicity}_t\to
+   \Box\mathrm{Atomicity}_t,
    \tag{3}
 $$
    where K_2 is the finite conjunction of C5 instances occurring in that proof. Axiom 4 makes those instances persistent.
@@ -71,8 +71,8 @@ $$
 Likewise the established local converse from [Atomic observers and finite stabilizers](../operator-representation.md), §3, uses the single propositional separation formula S_t:
 
 $$
-K_1\land\operatorname{Actuality}\land S_t
-\to\operatorname{Atomicity}_t.
+K_1\land\mathrm{Actuality}\land S_t
+\to\mathrm{Atomicity}_t.
 \tag{4}
 $$
 Here K_1 is a finite conjunction of C5 instances. Briefly, a true atom gives a correct endpoint evaluator. Compose it with an ordinary separating observer qualified at t. The resulting endpoint observer is still qualified at t; its universal diagonal produces an atom below any prescribed nonbottom proposition. No separation instance for a longer type list is needed in this local converse.
@@ -84,21 +84,21 @@ Equations (3) and (4) are closed finite-premise C theorems, so their necessitati
 Assume C5, □S_t and OneAtom. Choose an atom a. Since a≠Bottom, C's Boolean/modal laws give ◇a. Atom persistence gives □Atom(a). Therefore
 
 $$
-\Diamond\bigl(\operatorname{Atom}(a)\land a\bigr),
-\quad\text{hence}\quad\Diamond\operatorname{Actuality}.
+\Diamond\bigl(\mathrm{Atom}(a)\land a\bigr),
+\quad\text{hence}\quad\Diamond\mathrm{Actuality}.
 \tag{5}
 $$
 Necessitate the closed implication (4). Necessary K_1 and the premise □S_t then give
 
 $$
-\Box\bigl(\operatorname{Actuality}\to
-\operatorname{Atomicity}_t\bigr).
+\Box\bigl(\mathrm{Actuality}\to
+\mathrm{Atomicity}_t\bigr).
 $$
 Combining this with (5) yields ◇Atomicity_t. Now necessitate the closed implication (3). Necessary K_2 gives
 
 $$
-\Box\bigl(\operatorname{Atomicity}_t\to
-\Box\operatorname{Atomicity}_t\bigr),
+\Box\bigl(\mathrm{Atomicity}_t\to
+\Box\mathrm{Atomicity}_t\bigr),
 $$
 so ◇□Atomicity_t. The S5 consequence ◇□A→A finally gives Atomicity_t. This proves (1).
 
@@ -110,13 +110,13 @@ Fix C5+□S_t, or the stronger background C5+□OS. Over either background, the 
 
 $$
 \begin{gathered}
-\operatorname{OneAtom},\
-\operatorname{Actuality},\
-\operatorname{Atomicity}_t,\
-\exists E^{tt}\,[\operatorname{Good}_{\{t\}}(E)
-\land\operatorname{End}(E)],\
-\exists E^{tt}\,[\operatorname{Good}_{\{t\}}(E)
-\land\operatorname{FinIm}(E)],\
+\mathrm{OneAtom},\
+\mathrm{Actuality},\
+\mathrm{Atomicity}_t,\
+\exists E^{tt}\,[\mathrm{Good}_{\{t\}}(E)
+\land\mathrm{End}(E)],\
+\exists E^{tt}\,[\mathrm{Good}_{\{t\}}(E)
+\land\mathrm{FinIm}(E)],\
 \mathrm{End}.
 \end{gathered}
 \tag{6}

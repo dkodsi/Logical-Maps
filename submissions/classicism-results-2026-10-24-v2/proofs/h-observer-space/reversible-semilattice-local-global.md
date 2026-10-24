@@ -75,14 +75,14 @@ The second is the setwise stabilizer of the first. Indeed (5) shows that E sends
 Say that the block of c **crosses the truth cut** when
 
 $$
-\operatorname{Cross}(c):=
+\mathrm{Cross}(c):=
 \exists a,b\,[C_c(a)\land C_c(b)\land\neg a\land b].
 \tag{8}
 $$
 Necessarily a<b. Say that G is **transitive on blocks** when
 
 $$
-\operatorname{BlockTrans}(G,\mathcal B):=
+\mathrm{BlockTrans}(G,\mathcal B):=
 \forall p,q\in J\;\exists E\,[GE\land\mathcal B(Ep,q)].
 \tag{9}
 $$
@@ -101,9 +101,9 @@ This is an ordinary formula about proposition and observer variables. It does no
 $$
 \boxed{
 S[G]\ \longleftrightarrow\
-\exists c\in J\,[\operatorname{Cross}(c)\land
-\operatorname{BlockTrans}(G,\mathcal B)\land
-\operatorname{Sep}(G_c,C_c)].}
+\exists c\in J\,[\mathrm{Cross}(c)\land
+\mathrm{BlockTrans}(G,\mathcal B)\land
+\mathrm{Sep}(G_c,C_c)].}
 \tag{10}
 $$
 Equivalently, for any specified c whose block crosses the truth cut, S[G] is equivalent to the last two conditions in (10).
@@ -130,8 +130,8 @@ Say that G_c is **order-primitive on C_c** when every admitted G_c-invariant con
 
 $$
 \boxed{S[G]\ \longleftrightarrow\
-\operatorname{BlockTrans}(G,\mathcal B)
-\land\exists c\in J\,\operatorname{Cross}(c).}
+\mathrm{BlockTrans}(G,\mathcal B)
+\land\exists c\in J\,\mathrm{Cross}(c).}
 \tag{11}
 $$
 **Proof.** Necessity is Theorem 3. For sufficiency choose a crossed block C_c and define the admitted relation on it
@@ -215,7 +215,7 @@ $$
 
 $$
 \boxed{S[G]\ \longleftrightarrow\
-\operatorname{FactorTrans}\land\operatorname{Sep}(G_w,U_w).}
+\mathrm{FactorTrans}\land\mathrm{Sep}(G_w,U_w).}
 \tag{20}
 $$
 **Proof, forward.** Separate e_i from B. Every group member fixes B, so the separator sends e_i to a true unit, necessarily w. Thus every factor unit can be sent to w. Composing these witnesses with admitted inverses gives (19).
@@ -237,7 +237,7 @@ The transitivity in (19) is on the finite **factors**, not on proposition atoms.
 Suppose, in addition to the assumptions of §4, that [B,w] is a bounded dense chain and the stabilizer G_w is order-primitive on its open interval (B,w). Then
 
 $$
-\operatorname{Sep}(G_w,U_w)
+\mathrm{Sep}(G_w,U_w)
 \quad\longleftrightarrow\quad
 \exists b,a\,[B<b<w\land B<a<w\land\neg b\land a].
 \tag{22}

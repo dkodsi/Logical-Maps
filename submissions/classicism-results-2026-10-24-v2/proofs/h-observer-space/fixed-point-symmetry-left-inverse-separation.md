@@ -8,7 +8,7 @@ Applying this criterion to the existing qualitative-contrast model at its trivia
 
 $$
 \mathrm{C5}+\mathrm{SplitMono}+\Box\mathrm{BF}
-+\Box\operatorname{Functionality}
++\Box\mathrm{Functionality}
 +\neg\Box\mathrm{OS}.
 \tag{1}
 $$
@@ -31,7 +31,7 @@ For a finite type list Δ, Good_Δ has the full Boolean and quantifier composite
 $$
 \begin{aligned}
 K_\Delta:=\exists E^{tt}F^{tt}c^t\,[
-&\operatorname{Good}_\Delta(E)\land\operatorname{Good}_\Delta(F)\\
+&\mathrm{Good}_\Delta(E)\land\mathrm{Good}_\Delta(F)\\
 &\land F\circ E=I\land c\land Fc=\bot].
 \end{aligned}
 \tag{3}
@@ -96,7 +96,7 @@ On the complement the observation arrow is the identity, and the same calculatio
 For every outgoing h we have the arrow identity
 
 $$
-a_{b_hh}\,b_h=\mathrm{id}_{\operatorname{target}(h)}.
+a_{b_hh}\,b_h=\mathrm{id}_{\mathrm{target}(h)}.
 \tag{9}
 $$
 If h∈C_n, then b_h=α_n and b_hh∈C_{n+1}, where a_{b_hh}=α_n^{-1}. If h lies outside all charts, both observations are identity and it remains outside the charts. These cases exhaust all outgoing arrows. The E branch on C₀ is never used in this round trip.
@@ -143,8 +143,8 @@ Suppose now G_X is trivial. For any outgoing arrow d:X→Y define an observer O_
 $$
 O_d(h,q)\quad\Longleftrightarrow\quad
 \begin{cases}
-d\in q,&\operatorname{target}(h)=X,\\
-\mathrm{id}_{\operatorname{target}(h)}\in q,&\text{otherwise}.
+d\in q,&\mathrm{target}(h)=X,\\
+\mathrm{id}_{\mathrm{target}(h)}\in q,&\text{otherwise}.
 \end{cases}
 \tag{13}
 $$

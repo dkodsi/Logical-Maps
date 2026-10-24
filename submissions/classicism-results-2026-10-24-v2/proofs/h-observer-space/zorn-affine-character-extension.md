@@ -19,8 +19,8 @@ Use [Zorn's Lemma](../../source/topics/classicism/principles/zorn-r.yaml) at σ=
 
 $$
 \begin{aligned}
-\forall R^{(tt)(tt)t}\bigl[&\operatorname{Preorder}(R)\land
-\forall X^{(tt)t}\bigl(\operatorname{TotalOrder}(R,X)
+\forall R^{(tt)(tt)t}\bigl[&\mathrm{Preorder}(R)\land
+\forall X^{(tt)t}\bigl(\mathrm{TotalOrder}(R,X)
   \to\exists U^{tt}\,\forall K^{tt}(XK\to R(K,U))\bigr)\\
 &\to\exists K^{tt}\,\forall J^{tt}(R(K,J)\to R(J,K))\bigr].
 \end{aligned}
@@ -35,7 +35,7 @@ The database's ambient C is not imported: formula (1) is an explicit additional 
 Let L be an admitted subgroup and let d satisfy ¬Ld. Call a predicate K valid when
 
 $$
-V(K):=\operatorname{Subgroup}(K)\land L\subseteq K\land\neg Kd.
+V(K):=\mathrm{Subgroup}(K)\land L\subseteq K\land\neg Kd.
 \tag{2}
 $$
 The given L is valid. On all proposition predicates define the admitted relation
@@ -59,7 +59,7 @@ Every X-member K satisfies R(K,U): invalid K does so by the first disjunct of (3
 Zorn gives a maximal predicate K. It must be valid. Otherwise R(K,L) would hold and maximality would imply R(L,K), impossible because L is valid and K invalid. Its maximality therefore says
 
 $$
-\forall J\bigl[\operatorname{Subgroup}(J)\land K\subseteq J\land\neg Jd
+\forall J\bigl[\mathrm{Subgroup}(J)\land K\subseteq J\land\neg Jd
 \ \to\ J\subseteq K\bigr].
 \tag{5}
 $$

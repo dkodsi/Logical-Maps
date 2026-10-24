@@ -11,12 +11,12 @@ The three positive separation theories hold **together**, with different permitt
 Use M, V and N for the full composite identities preserving primitive conjunction, disjunction and negation. Q_Δ and P_Γ require the full universal and existential composite identities at the finite external type lists Δ and Γ. Put
 
 $$
-\operatorname{Fix}_{01}(E):=(E\top=\top)\land(E\bot=\bot).
+\mathrm{Fix}_{01}(E):=(E\top=\top)\land(E\bot=\bot).
 $$
 Write S_τ[K] for separation at relational output type τ by material agreement after all observers satisfying K, as in [Typed separation and Classicism](typed-separation-and-classicism.md), §1. At the model's root, for each K₀ in the **separate list** M, V, N, every relational τ and every finite Δ,Γ,
 
 $$
-S_\tau[\operatorname{Fix}_{01}\land K_0\land Q_\Delta\land P_\Gamma]
+S_\tau[\mathrm{Fix}_{01}\land K_0\land Q_\Delta\land P_\Gamma]
 \tag{1}
 $$
 holds. Every separately boxed instance of (1) holds as well. Nevertheless,
@@ -147,7 +147,7 @@ Let h:B→{0,1} be monotone for inclusion and invariant under G_(𝒫) for some 
 $$
 (E_h)_0(\varepsilon,b)=h(b),
 \qquad
-(E_h)_1(w)=\operatorname{id}_{\{0,1\}}.
+(E_h)_1(w)=\mathrm{id}_{\{0,1\}}.
 \tag{9}
 $$
 It is admitted by its stated support and its constant leaf profile. Its action on root propositions is

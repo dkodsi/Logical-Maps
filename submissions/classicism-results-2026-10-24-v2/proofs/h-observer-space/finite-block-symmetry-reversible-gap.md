@@ -25,9 +25,9 @@ Let W and V be countably infinite sets, partitioned as follows:
 Write $\mathcal B$ and $\mathcal C$ for these respective block partitions. Define
 
 $$
-G:=\prod_{B\in\mathcal B}\operatorname{Sym}(B),
+G:=\prod_{B\in\mathcal B}\mathrm{Sym}(B),
 \qquad
-H:=\prod_{C\in\mathcal C}\operatorname{Sym}(C).
+H:=\prod_{C\in\mathcal C}\mathrm{Sym}(C).
 \tag{2}
 $$
 Each group preserves **each individual block setwise**; it does not permute different blocks. It contains all independent choices of permutations within the blocks. These are closed permutation groups: preserving any specified finite block setwise is a closed condition, and the groups are the intersections of those conditions.
@@ -95,8 +95,8 @@ For A:(et)t put
 
 $$
 \begin{aligned}
-\operatorname{DisjointSix}(A):={}&
-\forall X\,(AX\to\operatorname{Six}(X))\\
+\mathrm{DisjointSix}(A):={}&
+\forall X\,(AX\to\mathrm{Six}(X))\\
 &\land\forall X,Y\,[AX\land AY\land X\ne Y
 \to\forall x\,\neg(Xx\land Yx)].
 \end{aligned}
@@ -106,7 +106,7 @@ Define the closed pure sentence
 $$
 \begin{aligned}
 \mathrm{MC}_6:=\forall A^{(et)t}\bigl[
-\operatorname{DisjointSix}(A)\to
+\mathrm{DisjointSix}(A)\to
 \exists R^{(et)(et)}\forall X^{et}\bigl(AX\to{}&
 (\exists x\,R(X,x))\\
 &\land\forall x\,(R(X,x)\to Xx)\\

@@ -21,9 +21,9 @@ admitted subproperty of X bounded above has a least upper bound. Write
 $$
  CH(R)\;:\!\iff\;
  \forall Y\subseteq X\,
-   \bigl(\exists G\;\operatorname{Injection}(Y,N,G)
+   \bigl(\exists G\;\mathrm{Injection}(Y,N,G)
        \;\lor\;
-       \exists G\;\operatorname{Bijection}(Y,X,G)\bigr).
+       \exists G\;\mathrm{Bijection}(Y,X,G)\bigr).
 $$
 
 Both subproperty and graph quantifiers range over the component's admitted
@@ -35,13 +35,13 @@ In a classical metatheory supporting first-order completeness and the usual
 relative-consistency theorems, the assertion is
 
 $$
- \operatorname{Con}(\mathrm{ZFC})\Longrightarrow
+ \mathrm{Con}(\mathrm{ZFC})\Longrightarrow
  \exists H_+,H_-\;
  \left\{
  \begin{array}{l}
  H_+,H_-\models C,\quad\text{each over one world},\\
- H_+\models\exists R\,(\operatorname{Real}(R)\land CH(R)),\\
- H_-\models\exists R\,(\operatorname{Real}(R)\land\neg CH(R)).
+ H_+\models\exists R\,(\mathrm{Real}(R)\land CH(R)),\\
+ H_-\models\exists R\,(\mathrm{Real}(R)\land\neg CH(R)).
  \end{array}\right.
 $$
 
@@ -97,7 +97,7 @@ $$
  T_{\sigma\to\rho}=D^{\rm code}_\sigma\times^{M}T_\rho,
  \qquad
  D^{\rm code}_e=r,\qquad
- D^{\rm code}_{\operatorname{rel}(\rho)}=\mathcal P^{M}(T_\rho).
+ D^{\rm code}_{\mathrm{rel}(\rho)}=\mathcal P^{M}(T_\rho).
 $$
 
 Here u is a fixed element of M, for example its empty set; products use an
@@ -112,7 +112,7 @@ An admitted relation is an element `A in M` that M regards as a subset of
 `T_rho`. Its profile on an external tuple a is
 
 $$
- \operatorname{profile}(A)(a)\iff M\models\operatorname{encode}(a)\in A.
+ \mathrm{profile}(A)(a)\iff M\models\mathrm{encode}(a)\in A.
 $$
 
 If two admitted relations have the same profile, they have the same M-members

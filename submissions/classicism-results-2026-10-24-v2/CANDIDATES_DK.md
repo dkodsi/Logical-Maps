@@ -89,6 +89,103 @@ Boolean preservation makes $E\top$ true and $E\bot$ false over H; over C it give
 - SurjSep + SplitMono is strictly stronger than either factor and strictly weaker than Rev. Even ☐SurjSep + ☐SplitMono + C + ☐BF does not imply Rev, witnessed by the [full ℤ×ℕ model](proofs/h-observer-space/full-cancellative-monoid-observers.md). Separate witness families are allowed.
 - Over C + BF (type t), Onto(E) implies ☐Onto(E), with E a free parameter. Nevertheless SurjSep implies neither ☐OS nor ☐SurjSep, even with ☐BF and ☐Functionality; see the [root truth-profile model](proofs/h-observer-space/root-truth-profile-surjective-separation.md). Rev ⇒ ☐SurjSep ⇒ SurjSep and ☐SurjSep ⇒ ☐OS are strict. SurjSep does not imply ☐BF, with failure at every admitted type in the integer-shift predecessor model.
 - Over C5, [canonical admitted adjoints](proofs/h-observer-space/canonical-adjoints-and-image-factorization.md) give exact individual-observer tests for injection, surjection and reversibility. A Boolean observer commutes with native necessity or possibility exactly when it is injective; this test needs no quantifier-preservation premise.
+- BoxSep, separation by logical observers commuting with native necessity, implies ☐BF and .2, hence ☐Functionality. Over C5 it is equivalent to InjSep and lies strictly between Rev and OS. It is incomparable with InjSep and SplitMono over C + BF, and with ☐OS over C + ☐BF; see [native necessity](proofs/h-observer-space/native-box-logical-observers.md).
+- IdemBoxSep strictly strengthens BoxSep and becomes Extensionality with C5. The finite-frame join theorem, C5 injective decomposition and scoped modal reflection are in the [updated atlas](proofs/h-observer-space/GRAPH.md).
+- Fixed finite stabilization bounds give an unbounded strict native-necessity hierarchy, including a single infinite countermodel to every fixed bound. Over C5, finite relative-generation separation is exactly Rev without assuming injection; J alone does not give K. See the [observer atlas](proofs/h-observer-space/GRAPH.md).
+- Over C5, canonical local-support separation is exactly Rev. Boolean Completeness (type t) plus Zorn at t gives exact controlled-inverse criteria; admitted true local homogeneity plus OS gives SplitMono without J. See the [support and selection map](proofs/h-observer-space/GRAPH.md#canonical-local-support-and-selection).
+- Over C5, central logical separation is Extensionality and fixed-degree separation is Rev. OS reflects each assumed Boolean Completeness instance into necessity; completeness at t remains strictly below the tt-to-Actuality route. See the [full observer map](proofs/h-observer-space/GRAPH.md).
+- Over C5, Rev is exactly triviality of the propositions fixed by all reversible Good-t observers. Centrality, group exponents and finite images have exact finite-domain characterizations; see the [full map](proofs/h-observer-space/GRAPH.md).
+- With Rev, any fixed nontrivial group law on all reversible observers gives an exact finite proposition bound. Without Rev, it gives an exact invariant-component condition over C5. Internally finite separating families give the corresponding full separation theory plus FinAll. See the [theorem map](proofs/h-observer-space/MAP.md).
+
+<a id="native-necessity-logical-observer-separation-r"></a>
+#### Logical Observer Separation with ☐ Preservation
+
+Logical observers commuting with native necessity distinguish every pair of distinct relations. Write BoxSep for the full schema.
+
+$$
+\begin{aligned}
+&\forall X,Y^{\bar\sigma t}\, .\,X=Y\leftrightarrow\forall E^{tt}\, .\,[\mathrm{Good}_\Delta(E)\land \mathrm{BoxComm}(E)]\\
+&\qquad\to\forall\bar z^{\bar\sigma}\, .\,(E(X[\bar z])\leftrightarrow E(Y[\bar z])).
+\end{aligned}
+$$
+
+$$
+\mathrm{BoxComm}(E):=(\lambda p^t.E(\Box p))=(\lambda p^t.\Box(Ep)),\qquad\Box p:=(p=\top).
+$$
+
+- Over H, implies OS + ☐BF + .2, hence ☐Functionality. The entire consequence bundle does not imply BoxSep.
+- Over C5, equivalent to InjSep at the same output type and finite list. Rev ⇒ BoxSep ⇒ OS has both implications strict.
+- Incomparable with InjSep and SplitMono over C + BF, and with ☐OS over C + ☐BF. Implies neither C5 nor its own boxed schema.
+- Reflects every current universal modal law and the specified predicate-universal first-order modal fragment to necessity; see [the exact grammar](proofs/h-observer-space/native-box-reflection.md). The .3 and 5 conclusions are conditional. Necessary .2 already follows from C + BF (type t) + .2.
+- Failure of persistence already occurs on a ten-point full poset satisfying B₂ and ☐OS + ☐BF + ☐Functionality + ☐Atomicity (type t) + ☐.2.
+- Over C at every fixed relational output and finite list, Actuality plus internally finite-image BoxSep is exactly Fin_t(All) plus BoxSep. At full scope C is recovered over H; Actuality remains on the finite-image side.
+- Full FinBoxSep is exactly BoxSep plus internal finiteness, and derives Actuality and necessary finiteness. Over C the fixed-instance theorem without Actuality holds whenever Δ contains a relational type. FinBoxSep need not persist even with necessary finiteness.
+
+<a id="idempotent-native-necessity-logical-observer-separation-r"></a>
+#### Idempotent Logical Observer Separation with ☐ Preservation
+
+Idempotent logical observers commuting with native necessity distinguish every pair of distinct relations. Write IdemBoxSep for the full schema.
+
+$$
+\begin{aligned}
+&\forall X,Y^{\bar\sigma t}\, .\,X=Y\leftrightarrow\forall E^{tt}\, .\,[\mathrm{Good}_\Delta(E)\land \mathrm{BoxComm}(E)\land E\circ E=E]\\
+&\qquad\to\forall\bar z^{\bar\sigma}\, .\,(E(X[\bar z])\leftrightarrow E(Y[\bar z])).
+\end{aligned}
+$$
+
+$$
+\mathrm{BoxComm}(E):=(\lambda p^t.E(\Box p))=(\lambda p^t.\Box(Ep)),\qquad\Box p:=(p=\top).
+$$
+
+- Strictly implies BoxSep. Over H, C5 + IdemBoxSep is equivalent to Extensionality.
+- Incomparable with Rev and End; either conjunction is Extensionality. Neither C5, .3 nor ☐IdemBoxSep follows from IdemBoxSep.
+- In full models with singleton individuals on finite rooted posets, holds exactly when every pair of frame points has a join. The specified two-antichain family has exact BoxSep and IdemBoxSep thresholds.
+
+<a id="bounded-stabilization-native-necessity-logical-observer-separation-r"></a>
+#### Logical Observer Separation with Bounded Stabilization and ☐ Preservation
+
+For each fixed external integer r≥1, logical observers commuting with native necessity and satisfying E^(r+1)=E^r distinguish every pair of distinct relations. Write B_r for the full schema.
+
+$$
+\begin{aligned}
+&\forall X,Y^{\bar\sigma t}\, .\,X=Y\leftrightarrow\forall E^{tt}\, .\,[\mathrm{Good}_\Delta(E)\land \mathrm{BoxComm}(E)\land E^{r+1}=E^r]\\
+&\qquad\to\forall\bar z^{\bar\sigma}\, .\,(E(X[\bar z])\leftrightarrow E(Y[\bar z])).
+\end{aligned}
+$$
+
+$$
+\mathrm{BoxComm}(E):=(\lambda p^t.E(\Box p))=(\lambda p^t.\Box(Ep)),\qquad\Box p:=(p=\top).
+$$
+
+The integer $r\ge1$ is a fixed external index. Powers of $E$ are finite term iterates; the schema introduces no object-language quantifier over bounds.
+
+- B₁ is IdemBoxSep. Every successive implication B_r ⇒ B_{r+1} is strict, as is each B_r ⇒ BoxSep. The separately boxed hierarchy is strict too.
+- For each fixed r, adding C5, Rev or End gives exactly Extensionality; B_r is incomparable with Rev and End.
+- One full infinite frame has ☐BoxSep and ☐OS + ☐BF + ☐Functionality + ☐Atomicity (type t) + ☐.2 but fails every fixed B_r on one common proposition pair.
+- For every fixed r≥2, B_r need not persist even in a finite full poset: the same ten-point model has B₂ but fails ☐BoxSep and every ☐B_r. B₁ is hereditary only within the stated full poset family.
+
+<a id="injective-logical-observer-separation-r"></a>
+#### Injective Logical Observer Separation
+
+Currently injective logical observers distinguish every pair of distinct relations. Write InjSep for the full schema.
+
+$$
+\begin{aligned}
+&\forall X,Y^{\bar\sigma t}\, .\,X=Y\leftrightarrow\forall E^{tt}\, .\,[\mathrm{Good}_\Delta(E)\land \mathrm{Inj}(E)]\\
+&\qquad\to\forall\bar z^{\bar\sigma}\, .\,(E(X[\bar z])\leftrightarrow E(Y[\bar z])).
+\end{aligned}
+$$
+
+$$
+\mathrm{Inj}(E):=\forall p,q^t\, .\,Ep=Eq\to p=q.
+$$
+
+- SplitMono implies InjSep, which implies OS. Over C5, Rev ⇒ InjSep ⇔ BoxSep ⇒ OS has both outer implications strict.
+- Over C5, qualified left inverses of an individual injective Good-t observer correspond exactly to its admitted Boolean transversals.
+- The regular-open nonsplitting model fails OS, so it does not refute InjSep ⇒ SplitMono.
+- Whether InjSep implies SplitMono remains unresolved over H and over C5.
+- Over C5, the full theory is exactly Rev or (OS and J_{t}), where J asserts one injective Good-t observer and a true proposition with no nonzero image part. SplitMono has the same decomposition with K_{t}, and K_{t} implies J_{t}; see [the decomposition](proofs/h-observer-space/injective-separation-decomposition.md).
+- Over C5, K implies J strictly. A J witness with any fixed finite image-generation bound gives K; the countermodel to J ⇒ K fails OS, leaving the separation comparison open.
 
 <a id="finite-image-logical-observer-separation-r"></a>
 #### Finite-Image Logical Observer Separation
@@ -144,6 +241,9 @@ $$
 - Equivalent over H to C5 + separation by currently surjective Good observers. The [explicit section](proofs/h-observer-space/surjective-logical-observers.md) uses the greatest kernel element and a definable fibre representative, without Choice; C5 cannot be omitted.
 - SurjSep + SplitMono is a strict weakening, even with both conjuncts boxed. The positive model-family theorem gives ☐SurjSep for full cancellative monoids and also ☐SplitMono when a specified infinite sequence of distinct units is available; a nonunit refutes C5 and hence Rev.
 - Strictly stronger than ☐SurjSep, which is strictly stronger than SurjSep and than ☐OS. Individual onto qualification persists over C + BF (type t), while surjective separation need not persist.
+- Over C5, equivalent to separation by Good observers with any fixed finite relative image-generation bound, without an injectivity premise; also equivalent to separation by Good observers each having a currently true local Boolean transversal.
+- Over C5, exactly separation by Good observers with full or currently true local-transversal support, equivalently by the range of the canonical support normalization. Individual normalized observers need not be injective.
+- Over C5, equivalent to separation by Good observers with any fixed fibre-degree bound n≥1; no injectivity, Boolean Completeness or Zorn is needed. The same-profile involution theorem applies to each such observer.
 
 <a id="endpoint-logical-observer-separation-r"></a>
 #### Endpoint Logical Observer Separation
@@ -197,10 +297,32 @@ Under Extensionality, truth is endpoint-valued: every true proposition is $\top$
 - Over C, one propositional instance suffices for full Extensionality; adding the endpoint restriction gives no further strength.
 - Over H, OS together with factivity of every qualified observer at one fixed finite list is also equivalent to full Extensionality. Universal factivity alone does not suffice.
 
-**Sources:** [logical-observers.md](proofs/logical-observers.md) (§§1–8) · [operator-representation.md](proofs/operator-representation.md) (§§2–6) · [logical-observer-hierarchy.md](proofs/logical-observer-hierarchy.md) (§§1–8) · [logical-observer-endpoint-reduction.md](proofs/logical-observer-endpoint-reduction.md) (§§1–4) · [observer-lattice.md](proofs/observer-lattice.md) (§§4–6) · [observer-lattice-models.md](proofs/observer-lattice-models.md) (§§1–3) · [modal-selectors-and-quantifier-reduction.md](proofs/modal-selectors-and-quantifier-reduction.md) (§§1–5) · [logical-separation-with-contingent-barcan.md](proofs/h-observer-space/logical-separation-with-contingent-barcan.md) (§§2–5) · [necessary-separation-and-atoms.md](proofs/h-observer-space/necessary-separation-and-atoms.md) (§§1–4) · [reversible-separation-and-pure-truth.md](proofs/h-observer-space/reversible-separation-and-pure-truth.md) (§§1–5) · [finite-block-symmetry-reversible-gap.md](proofs/h-observer-space/finite-block-symmetry-reversible-gap.md) (§§1–8) · [reversible-quantifier-observers.md](proofs/h-observer-space/reversible-quantifier-observers.md) (§§1–4) · [local-conjugacy-and-reversible-observers.md](proofs/h-observer-space/local-conjugacy-and-reversible-observers.md) (§§2–6) · [split-inverse-logical-observers.md](proofs/h-observer-space/split-inverse-logical-observers.md) (§§1–4) · [finite-block-symmetry-left-inverse.md](proofs/h-observer-space/finite-block-symmetry-left-inverse.md) (§§1–7) · [ternary-cantor-observer-model.md](proofs/h-observer-space/ternary-cantor-observer-model.md) (§§1–9) · [fork-one-sided-inverse-separation.md](proofs/h-observer-space/fork-one-sided-inverse-separation.md) (§§1–5) · [component-shift-symmetry-reversible-gap.md](proofs/h-observer-space/component-shift-symmetry-reversible-gap.md) (§§1–8) · [left-inverse-separation-decomposition.md](proofs/h-observer-space/left-inverse-separation-decomposition.md) (§§1–6) · [finite-pinning-dedekind-propositions.md](proofs/h-observer-space/finite-pinning-dedekind-propositions.md) (§§1–5) · [plenitude-endpoint-bridge.md](proofs/h-observer-space/plenitude-endpoint-bridge.md) (§§1–5) · [surjective-logical-observers.md](proofs/h-observer-space/surjective-logical-observers.md) (§§1–7) · [linear-circular-fibre-left-inverse-gap.md](proofs/h-observer-space/linear-circular-fibre-left-inverse-gap.md) (§§1–10) · [omega-chain-surjective-observers.md](proofs/h-observer-space/omega-chain-surjective-observers.md) (§§1–6) · [fixed-point-symmetry-left-inverse-separation.md](proofs/h-observer-space/fixed-point-symmetry-left-inverse-separation.md) (§§1–7) · [full-cancellative-monoid-observers.md](proofs/h-observer-space/full-cancellative-monoid-observers.md) (§§1–7) · [root-truth-profile-surjective-separation.md](proofs/h-observer-space/root-truth-profile-surjective-separation.md) (§§1–7) · [canonical-adjoints-and-image-factorization.md](proofs/h-observer-space/canonical-adjoints-and-image-factorization.md) (§§2–7) · [integer-shift-predecessor-contingent-barcan.md](proofs/h-observer-space/integer-shift-predecessor-contingent-barcan.md) (§§1–7).
+<a id="central-logical-observer-separation-r"></a>
+#### Central Logical Observer Separation
+
+Observers commuting with every logical observer at the same finite qualification list distinguish every pair of distinct relations. Write CentreSep for the full schema.
+
+$$
+\begin{aligned}
+&\forall X,Y^{\bar\sigma t}\, .\,X=Y\leftrightarrow\forall E^{tt}\, .\,[\mathrm{Cent}_\Delta(E)]\\
+&\qquad\to\forall\bar z^{\bar\sigma}\, .\,(E(X[\bar z])\leftrightarrow E(Y[\bar z])).
+\end{aligned}
+$$
+
+$$
+\mathrm{Cent}_\Delta(E):=\mathrm{Good}_\Delta(E)\land\forall G^{tt}\,[\mathrm{Good}_\Delta(G)\to E\circ G=G\circ E].
+$$
+
+Commutation is identity of whole operations, and ranges over every admitted same-list Good observer. A chosen pairwise commuting family is a different condition.
+
+- Over H, equivalent to IdemBoxSep plus at most four proposition objects, and equivalent to its separately boxed schema. Centrality within the reversible group instead gives C5 plus the same bound; the two principles are incomparable and their conjunction is Extensionality.
+- Over C5, equivalent to Extensionality; the propositional instance at any finite Δ containing t already suffices.
+- CentreSep + Rev and CentreSep + End are each equivalent to Extensionality. CentreSep is incomparable with Rev and End over H.
+- In full finite rooted-poset models with singleton individuals, holds exactly on the singleton and two-point chain. The latter has ☐CentreSep without C5 or Extensionality.
+
+**Sources:** [logical-observers.md](proofs/logical-observers.md) (§§1–8) · [operator-representation.md](proofs/operator-representation.md) (§§2–6) · [logical-observer-hierarchy.md](proofs/logical-observer-hierarchy.md) (§§1–8) · [logical-observer-endpoint-reduction.md](proofs/logical-observer-endpoint-reduction.md) (§§1–4) · [observer-lattice.md](proofs/observer-lattice.md) (§§4–6) · [observer-lattice-models.md](proofs/observer-lattice-models.md) (§§1–3) · [modal-selectors-and-quantifier-reduction.md](proofs/modal-selectors-and-quantifier-reduction.md) (§§1–5) · [logical-separation-with-contingent-barcan.md](proofs/h-observer-space/logical-separation-with-contingent-barcan.md) (§§2–5) · [necessary-separation-and-atoms.md](proofs/h-observer-space/necessary-separation-and-atoms.md) (§§1–4) · [reversible-separation-and-pure-truth.md](proofs/h-observer-space/reversible-separation-and-pure-truth.md) (§§1–5) · [finite-block-symmetry-reversible-gap.md](proofs/h-observer-space/finite-block-symmetry-reversible-gap.md) (§§1–8) · [reversible-quantifier-observers.md](proofs/h-observer-space/reversible-quantifier-observers.md) (§§1–4) · [local-conjugacy-and-reversible-observers.md](proofs/h-observer-space/local-conjugacy-and-reversible-observers.md) (§§2–6) · [split-inverse-logical-observers.md](proofs/h-observer-space/split-inverse-logical-observers.md) (§§1–4) · [finite-block-symmetry-left-inverse.md](proofs/h-observer-space/finite-block-symmetry-left-inverse.md) (§§1–7) · [ternary-cantor-observer-model.md](proofs/h-observer-space/ternary-cantor-observer-model.md) (§§1–9) · [fork-one-sided-inverse-separation.md](proofs/h-observer-space/fork-one-sided-inverse-separation.md) (§§1–5) · [component-shift-symmetry-reversible-gap.md](proofs/h-observer-space/component-shift-symmetry-reversible-gap.md) (§§1–8) · [left-inverse-separation-decomposition.md](proofs/h-observer-space/left-inverse-separation-decomposition.md) (§§1–6) · [finite-pinning-dedekind-propositions.md](proofs/h-observer-space/finite-pinning-dedekind-propositions.md) (§§1–5) · [plenitude-endpoint-bridge.md](proofs/h-observer-space/plenitude-endpoint-bridge.md) (§§1–5) · [surjective-logical-observers.md](proofs/h-observer-space/surjective-logical-observers.md) (§§1–7) · [linear-circular-fibre-left-inverse-gap.md](proofs/h-observer-space/linear-circular-fibre-left-inverse-gap.md) (§§1–10) · [omega-chain-surjective-observers.md](proofs/h-observer-space/omega-chain-surjective-observers.md) (§§1–6) · [fixed-point-symmetry-left-inverse-separation.md](proofs/h-observer-space/fixed-point-symmetry-left-inverse-separation.md) (§§1–7) · [full-cancellative-monoid-observers.md](proofs/h-observer-space/full-cancellative-monoid-observers.md) (§§1–7) · [root-truth-profile-surjective-separation.md](proofs/h-observer-space/root-truth-profile-surjective-separation.md) (§§1–7) · [canonical-adjoints-and-image-factorization.md](proofs/h-observer-space/canonical-adjoints-and-image-factorization.md) (§§2–7) · [integer-shift-predecessor-contingent-barcan.md](proofs/h-observer-space/integer-shift-predecessor-contingent-barcan.md) (§§1–7) · [native-box-logical-observers.md](proofs/h-observer-space/native-box-logical-observers.md) (§§1–7) · [injective-observers-and-boolean-transversals.md](proofs/h-observer-space/injective-observers-and-boolean-transversals.md) (§§1–6) · [idempotent-native-box-observers.md](proofs/h-observer-space/idempotent-native-box-observers.md) (§§1–7) · [injective-separation-decomposition.md](proofs/h-observer-space/injective-separation-decomposition.md) (§§1–6) · [native-box-reflection.md](proofs/h-observer-space/native-box-reflection.md) (§§1–5) · [bounded-stabilization-native-box-observers.md](proofs/h-observer-space/bounded-stabilization-native-box-observers.md) (§§1–6) · [finite-relative-image-generation.md](proofs/h-observer-space/finite-relative-image-generation.md) (§§1–6) · [injective-gap-without-split-kernel.md](proofs/h-observer-space/injective-gap-without-split-kernel.md) (§§1–5) · [exterior-arm-posets-native-box-nonpersistence.md](proofs/h-observer-space/exterior-arm-posets-native-box-nonpersistence.md) (§§1–5) · [local-transversal-support.md](proofs/h-observer-space/local-transversal-support.md) (§§1–6) · [zorn-local-transversal-selection.md](proofs/h-observer-space/zorn-local-transversal-selection.md) (§§1–5) · [local-homogeneity-and-split-observers.md](proofs/h-observer-space/local-homogeneity-and-split-observers.md) (§§1–4) · [bounded-fibre-degree-logical-observers.md](proofs/h-observer-space/bounded-fibre-degree-logical-observers.md) (§§1–6) · [finite-image-native-box-observers.md](proofs/h-observer-space/finite-image-native-box-observers.md) (§§1–5) · [central-logical-observers.md](proofs/h-observer-space/central-logical-observers.md) (§§1–5) · [finite-colour-propositional-completeness.md](proofs/h-observer-space/finite-colour-propositional-completeness.md) (§§2–6) · [reversible-fixed-proposition-characterization.md](proofs/h-observer-space/reversible-fixed-proposition-characterization.md) (§§1–5) · [central-separation-and-four-propositions.md](proofs/h-observer-space/central-separation-and-four-propositions.md) (§§1–5) · [finite-image-box-reflection.md](proofs/h-observer-space/finite-image-box-reflection.md) (§§1–5) · [centre-of-reversible-logical-observers.md](proofs/h-observer-space/centre-of-reversible-logical-observers.md) (§§1–5) · [invariant-components-and-local-support.md](proofs/h-observer-space/invariant-components-and-local-support.md) (§§1–5) · [bounded-exponent-reversible-observers.md](proofs/h-observer-space/bounded-exponent-reversible-observers.md) (§§1–5) · [group-identities-reversible-observers.md](proofs/h-observer-space/group-identities-reversible-observers.md) (§§1–6) · [invariant-components-and-group-identities.md](proofs/h-observer-space/invariant-components-and-group-identities.md) (§§1–5) · [internally-finite-observer-families.md](proofs/h-observer-space/internally-finite-observer-families.md) (§§1–5).
 
 **Evidence:** [Proofs and certificates](evidence/RESULT-INDEX.md#logical-observers).
-
 
 <a id="choice-and-rigidity-principles"></a>
 ## Choice and rigidity
@@ -271,7 +393,6 @@ $$
 
 **Evidence:** [Choice and Plenitude decompose into Actuality and inverse maps](evidence/RESULT-INDEX.md#sections-retractions) · [C5 is exactly strong retractions of actual injections](evidence/RESULT-INDEX.md#c5-strong-retractions).
 
-
 <a id="world-structure-principles"></a>
 ## World structure
 
@@ -337,7 +458,6 @@ The counting type $\kappa$ determines the Frege numerical type $\nu_\kappa=(\kap
 **Sources:** [world-cardinality-ucp-20261022.md](source/research/2026-10-22/notes/world-cardinality-ucp-20261022.md) (§§23–27,34).
 
 **Evidence:** [Proofs and certificates](evidence/RESULT-INDEX.md#profile-world-algebra).
-
 
 <a id="infinitary-extension"></a>
 ## Infinitary principles

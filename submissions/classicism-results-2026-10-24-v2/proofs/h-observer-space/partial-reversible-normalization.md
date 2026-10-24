@@ -13,7 +13,7 @@ Use H, the fixed Top and Bottom abbreviations T,B, and the exact single instance
 For a fixed operation f, write Mat_f and Pt_f for material and pointwise preservation. Define a **pointwise involution** by
 
 $$
-\operatorname{Invol}_{\mathrm{pt}}(E):=
+\mathrm{Invol}_{\mathrm{pt}}(E):=
 \forall p\,[E(Ep)=p].
 \tag{1}
 $$
@@ -30,8 +30,8 @@ We use the existing propositional separation formula S[K]. FullSep[K] is its ful
 $$
 S[O\land\mathrm{Mat}_N]
 \quad\longleftrightarrow\quad
-S[\operatorname{Fix}(O)\land\mathrm{Pt}_N
-       \land\operatorname{Invol}_{\mathrm{pt}}].
+S[\mathrm{Fix}(O)\land\mathrm{Pt}_N
+       \land\mathrm{Invol}_{\mathrm{pt}}].
 \tag{2}
 $$
 Without both endpoint conditions these principles are equivalent to the double-negation identity DN:=∀p(¬¬p=p). With both conditions they are equivalent to DN together with B=¬T.
@@ -76,7 +76,7 @@ Here τ is a formula giving a truth value, not a newly postulated two-element ob
 $$
 S[\mathrm{Mat}_{+}]
 \quad\longleftrightarrow\quad
-S[\mathrm{Pt}_{+}\land\operatorname{Invol}_{\mathrm{pt}}
+S[\mathrm{Pt}_{+}\land\mathrm{Invol}_{\mathrm{pt}}
        \land Ea=a].
 \tag{5}
 $$
@@ -126,8 +126,8 @@ The preceding theorem strengthens all the usual affine orientations:
 $$
 S[O\land\mathrm{Mat}_{+}]
 \quad\longleftrightarrow\quad
-S[\operatorname{Fix}(O)\land\mathrm{Pt}_{+}
-       \land\operatorname{Invol}_{\mathrm{pt}}].
+S[\mathrm{Fix}(O)\land\mathrm{Pt}_{+}
+       \land\mathrm{Invol}_{\mathrm{pt}}].
 \tag{10}
 $$
 For XOR choose a=T. The constructed witnesses always fix T. If Z is present, the existing material endpoint theorem identifies B=0: every material affine observer rejects both B and 0. Group homomorphisms fix 0, so they then fix B as well. No additional equation is needed for A alone.

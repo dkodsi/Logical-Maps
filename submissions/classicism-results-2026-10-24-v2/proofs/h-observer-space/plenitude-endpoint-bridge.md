@@ -11,16 +11,16 @@ Write OS and End for the full relational separation schemas using ordinary and e
 The single admission premise is
 
 $$
-\operatorname{Plen}_{t,t}:=
+\mathrm{Plen}_{t,t}:=
 \forall U^{ttt}\left[
-\operatorname{Functional}(U)\to
+\mathrm{Functional}(U)\to
 \exists Z^{tt}\,\forall p^t\,U[p,Zp]\right],
 \tag{1}
 $$
 where
 
 $$
-\operatorname{Functional}(U):=
+\mathrm{Functional}(U):=
 \forall p\,\exists q\left[
 U[p,q]\land\forall r\,(U[p,r]\to q=r)\right].
 $$
@@ -32,11 +32,11 @@ $$
 \boxed{
 \begin{aligned}
 \mathrm{End}
-&\longleftrightarrow \mathrm{OS}+\operatorname{Plen}_{t,t}\\
-&\longleftrightarrow \mathrm{OS}+\operatorname{Plen}_{r}\\
-&\longleftrightarrow \mathrm{C5}+\mathrm{OS}+\operatorname{Actuality}\\
-&\longleftrightarrow \mathrm{C5}+\mathrm{OS}+\operatorname{BC}_{r}\\
-&\longleftrightarrow \mathrm{C5}+\operatorname{Atomicity}_{t}.
+&\longleftrightarrow \mathrm{OS}+\mathrm{Plen}_{t,t}\\
+&\longleftrightarrow \mathrm{OS}+\mathrm{Plen}_{r}\\
+&\longleftrightarrow \mathrm{C5}+\mathrm{OS}+\mathrm{Actuality}\\
+&\longleftrightarrow \mathrm{C5}+\mathrm{OS}+\mathrm{BC}_{r}\\
+&\longleftrightarrow \mathrm{C5}+\mathrm{Atomicity}_{t}.
 \end{aligned}}
 \tag{2}
 $$
@@ -67,25 +67,25 @@ The second disjunct in (4) is **q=Top**. This follows the intended construction 
 Add BF_t. The recorded type-t instance of Proposition 2.4 gives
 
 $$
-\operatorname{ND}_{t}+\operatorname{BF}_{t}
-\quad\Longrightarrow\quad\Box\operatorname{ND}_{t}.
+\mathrm{ND}_{t}+\mathrm{BF}_{t}
+\quad\Longrightarrow\quad\Box\mathrm{ND}_{t}.
 \tag{5}
 $$
 This is a proved modal argument using NI, 4 and BF_t, not necessitation of the optional ND_t premise. The recorded boxed form of Proposition 2.2 then gives □ND at every required type. Consequently
 
 $$
-\mathrm{C}+\operatorname{BF}_{t}+\operatorname{Plen}_{t,t}
+\mathrm{C}+\mathrm{BF}_{t}+\mathrm{Plen}_{t,t}
 \quad\Longrightarrow\quad
-\mathrm{C5}+\operatorname{Actuality}.
+\mathrm{C5}+\mathrm{Actuality}.
 \tag{6}
 $$
 Conversely, the pre-existing C5+Actuality result gives BC_r, and C5+BC_r gives Plen_r. C5 also supplies every BF instance. Hence the admission bridge already has the exact strength
 
 $$
 \boxed{
-\mathrm{C}+\operatorname{BF}_{t}+\operatorname{Plen}_{t,t}
+\mathrm{C}+\mathrm{BF}_{t}+\mathrm{Plen}_{t,t}
 \quad\longleftrightarrow\quad
-\mathrm{C5}+\operatorname{Actuality}.}
+\mathrm{C5}+\mathrm{Actuality}.}
 \tag{7}
 $$
 The left side may equivalently use all BF instances. In particular, over C+BF_t, the single Plen_t,t instance is equivalent to full Plen_r. The type reduction in the forward direction is a mathematical specialization of the source proofs; the database engine does not instantiate schemas on its own.

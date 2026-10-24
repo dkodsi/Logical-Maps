@@ -4,7 +4,7 @@
 
 ## 1. The principle
 
-An observer is an admitted operation $E^{tt}$. For a finite set $\Delta$ of types, $\operatorname{Good}_{\Delta}(E)$ requires the Boolean operation identities
+An observer is an admitted operation $E^{tt}$. For a finite set $\Delta$ of types, $\mathrm{Good}_{\Delta}(E)$ requires the Boolean operation identities
 
 $$
 \begin{aligned}
@@ -36,7 +36,7 @@ $$
 Logical Observer Separation is the schema
 
 $$
-\forall X,Y^{\bar\sigma t}\, .\,X=Y\leftrightarrow\forall E^{tt}\, .\,\operatorname{Good}_{\Delta}(E)\to\forall\bar z^{\bar\sigma}\, .\,\bigl(E(X[\bar z])\leftrightarrow E(Y[\bar z])\bigr).
+\forall X,Y^{\bar\sigma t}\, .\,X=Y\leftrightarrow\forall E^{tt}\, .\,\mathrm{Good}_{\Delta}(E)\to\forall\bar z^{\bar\sigma}\, .\,\bigl(E(X[\bar z])\leftrightarrow E(Y[\bar z])\bigr).
 $$
 
 The tuple $\bar\sigma$ can be empty. Each $\Delta$ is finite; types index the schema rather than being quantified in its language. The identity observer qualifies in H by conversion and the H equality axioms.
@@ -59,7 +59,7 @@ The equality laws are therefore a natural requirement for the formulation over H
 
 **Theorem.** $\mathrm H+\mathrm{OS}\vdash\mathrm C+\mathrm{BF}$ at every type.
 
-For each H proof of $P$, there is a finite $\Delta$ such that H proves $\operatorname{Good}_{\Delta}(E)\to EP$, with $E$ fresh. Include the types of all quantifier and equality steps. Induct on the proof: Boolean preservation supplies propositional reasoning and modus ponens; application of the quantifier operation identities supplies instantiation, existential introduction and generalization; the equality laws supply reflexivity and substitution. For a conversion equation $A=B$, begin with $E(A=A)$ and substitute using the H equation inside $\lambda u\, .\,E(A=u)$. Substitution and renaming commute with this construction because $E$ is fresh.
+For each H proof of $P$, there is a finite $\Delta$ such that H proves $\mathrm{Good}_{\Delta}(E)\to EP$, with $E$ fresh. Include the types of all quantifier and equality steps. Induct on the proof: Boolean preservation supplies propositional reasoning and modus ponens; application of the quantifier operation identities supplies instantiation, existential introduction and generalization; the equality laws supply reflexivity and substitution. For a conversion equation $A=B$, begin with $E(A=A)$ and substitute using the H equation inside $\lambda u\, .\,E(A=u)$. Substitution and renaming commute with this construction because $E$ is fresh.
 
 If H proves $P\leftrightarrow Q$, all qualified observers agree on $P,Q$. Apply separation to the instances of $\lambda\bar z\, .\,P$ and $\lambda\bar z\, .\,Q$ at their relational type. Conversion gives
 
@@ -88,7 +88,7 @@ Thus, as theories over H, OS is equivalent to C plus this propositional separati
 **Theorem.** Over C,
 
 $$
-\operatorname{Atomicity}(t)+\Box\mathrm{BF}\ \vdash\ \mathrm{OS}.
+\mathrm{Atomicity}(t)+\Box\mathrm{BF}\ \vdash\ \mathrm{OS}.
 $$
 
 For an atom $a$, put $c=\Diamond a$ and
@@ -114,7 +114,7 @@ If $p\ne q$, choose an atom below their Boolean symmetric difference. Its $O_a$ 
 Over C5 + Actuality,
 
 $$
-\mathrm{OS}\quad\longleftrightarrow\quad\operatorname{Atomicity}(t)\quad\longleftrightarrow\quad\Box\mathrm{OS}.
+\mathrm{OS}\quad\longleftrightarrow\quad\mathrm{Atomicity}(t)\quad\longleftrightarrow\quad\Box\mathrm{OS}.
 $$
 
 Here $\Box\mathrm{OS}$ consists of the separately boxed instances.
@@ -175,16 +175,48 @@ $$
 \small\text{Extensionality}\ \Rightarrow\ \mathrm{C5}+\mathrm{Atomicity}_t\ \Rightarrow\ \Box\mathrm{OS}\ \Rightarrow\ \mathrm{OS}\ \Rightarrow\ \mathrm{BF}.
 $$
 
-Over C, propositional endpoint separation testing quantifiers at $t$ already suffices; one propositional factive-separation instance gives full Extensionality. Requiring $\operatorname{Good}_\Delta(E)$ necessarily leaves qualification unchanged over C, whereas ☐OS is strictly stronger than OS. The linked proof gives the diagonal atom construction and all four countermodels.
+Over C, propositional endpoint separation testing quantifiers at $t$ already suffices; one propositional factive-separation instance gives full Extensionality. Requiring $\mathrm{Good}_\Delta(E)$ necessarily leaves qualification unchanged over C, whereas ☐OS is strictly stronger than OS. The linked proof gives the diagonal atom construction and all four countermodels.
 
-## Sources
+## Reversibility, centrality and finite bounds
 
-The observer deductions are ordinary mathematical arguments by Codex, prompted by Daniel Kodsi (23–24 October 2026), source `misc`, unpaginated. Sections 2 and 4 give the simpler equality-law derivation and corresponding reformulation. The other arguments combine the H proof transformation, patched-atom calculation, and [full composite representation theorem](operator-representation.md).
+The [complete observer map](h-observer-space/GRAPH.md) distinguishes the full separation schemas below. Over C5, reversible separation has the exact characterization
 
-For background logic and models: Bacon–Dorr, *Classicism*, §1.3; in the database's 16 May 2023 draft, Proposition 2.3, pp. 22–23; Proposition 2.6, pp. 25–26; Appendix D, pp. 74–79; and the full-surjection construction, §3.5, pp. 59–61. The observer deductions are not attributed to those authors. Current certification scope is stated separately in the [evidence index](../evidence/RESULT-INDEX.md#logical-observers).
+$$
+\mathrm{Rev}\ \Longleftrightarrow\ \forall p\,[\mathrm{Inv}(p)\to(p=\bot\lor p=\top)],
+$$
+
+where $\mathrm{Inv}(p)$ says every admitted reversible logical observer qualified at t fixes $p$. The [proof](h-observer-space/reversible-fixed-proposition-characterization.md) constructs the least invariant proposition above $p$ as the admitted join of its reversible images. The [local-support theorem](h-observer-space/invariant-components-and-local-support.md) recovers the same invariants from all logical observers restricted to their local supports.
+
+| Separation requirement | Exact equivalent over H |
+|---|---|
+| Observers central among all same-list logical observers | IdemBoxSep + at most four propositions |
+| Observers central in the same-list reversible group | C5 + at most four propositions |
+| Rev and a fixed nontrivial group law $w$ for all reversible observers | C5 + at most $2^{k(w)}$ propositions |
+| Native-necessity-preserving observers with internally finite images | BoxSep + internal finiteness of all propositions |
+| Rev and internally finitely many reversible observers | C5 + internal finiteness of all propositions |
+
+Here $k(w)$ is the largest $j$ for which the finite symmetric group on $j$ letters satisfies $w$. The [group-identity theorem](h-observer-space/group-identities-reversible-observers.md) gives a bound of four propositions for commutativity and eight for the metabelian law. For the exponent law $E^n=I$, $k(w)$ is the largest $j$ for which every integer from 1 to $j$ divides $n$. These laws constrain every reversible observer; involutions already suffice as chosen separating witnesses for Rev.
+
+Without Rev, the [component theorem](h-observer-space/invariant-components-and-group-identities.md) gives an exact C5 characterization: no $k(w)+1$ disjoint propositions have reversible orbit joins with nonzero common meet. Its proof uses finite Boolean partitions and invariant regions; it needs no Choice, Boolean Completeness or Zorn.
+
+The [finite-family theorem](h-observer-space/internally-finite-observer-families.md) works already over H: an internally Frege-finite admitted family of arbitrary observers separates only an internally finite class of propositions. At full scope, finite-family logical separation is OS + FinAll; its reversible version is C5 + FinAll, and its native-necessity version is FinBoxSep. Each output type and qualification list has its own existential family. FinAll has no fixed numerical bound.
+
+The two [centrality](h-observer-space/central-separation-and-four-propositions.md) [principles](h-observer-space/centre-of-reversible-logical-observers.md) are incomparable, each equivalent to its separately boxed schema, and their conjunction is Extensionality. The [exponent theorem](h-observer-space/bounded-exponent-reversible-observers.md) uses finite common refinements to construct cycles of any prescribed finite length.
+
+The [finite-image theorem](h-observer-space/finite-image-box-reflection.md) derives Actuality and necessary internal finiteness at full scope. At a fixed relational output type over C, it needs the qualification list to contain a relational type; the empty and individual-only lists retain the earlier theorem with Actuality. FinBoxSep itself need not persist, even when global finiteness does.
 
 ## H structure and quantifier reduction
 
 Over H, full relational separation by any qualification is exactly propositional separation plus Functionality; the [H observer map](h-observer-space/MAP.md) develops the primitive, representation and restriction branches. Over C5, propositional separation by Boolean observers preserving the universal quantifier at $t$ is equivalent to full OS. Over C, the existence of an endpoint-fixing operator with range $\{\top,\bot\}$ is equivalent to modal .2; the [reduction proof](modal-selectors-and-quantifier-reduction.md) uses this to identify the mixed quantifier branches.
 
 **Lean certified:** H + OS ⇒ C + BF with explicit endpoint identities. [Certificate scope and evidence](../evidence/RESULT-INDEX.md#logical-observers).
+
+## Main unresolved question
+
+Does separation by injective logical observers entail separation by logical observers with logical left inverses? This remains unresolved over H and over C5. The converse is immediate, but an injective observer need not itself have a logical left inverse. The question is whether a different separating family always exists. [Exact reduction and positive cases](../CONJECTURES.md#observer-strength).
+
+## Sources
+
+The observer deductions are ordinary mathematical arguments by Codex, prompted by Daniel Kodsi (23–24 October 2026), source `misc`, unpaginated. Sections 2 and 4 give the simpler equality-law derivation and corresponding reformulation. The other arguments combine the H proof transformation, patched-atom calculation, and [full composite representation theorem](operator-representation.md).
+
+For background logic and models: Bacon–Dorr, *Classicism*, §1.3; in the database's 16 May 2023 draft, Proposition 2.3, pp. 22–23; Proposition 2.6, pp. 25–26; Appendix D, pp. 74–79; and the full-surjection construction, §3.5, pp. 59–61. The observer deductions are not attributed to those authors. Current certification scope is stated separately in the [evidence index](../evidence/RESULT-INDEX.md#logical-observers).

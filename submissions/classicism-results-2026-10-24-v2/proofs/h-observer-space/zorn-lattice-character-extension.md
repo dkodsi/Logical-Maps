@@ -33,8 +33,8 @@ Its upward closure gives the reverse implication. Membership in a filter likewis
 Call a predicate K valid when it is a filter, contains F, and is disjoint from I. Define the admitted relation on all predicates by
 
 $$
-R(K,J):=\neg\operatorname{Valid}(K)\lor
-  (\operatorname{Valid}(J)\land K\subseteq J).
+R(K,J):=\neg\mathrm{Valid}(K)\lor
+  (\mathrm{Valid}(J)\land K\subseteq J).
 \tag{3}
 $$
 Invalid predicates lie below everything; valid predicates are ordered by inclusion and are never below invalid ones. Consequently R is reflexive and transitive. The given F is valid.
@@ -43,7 +43,7 @@ For an admitted R-comparable family X, define
 
 $$
 U(x):=Fx\lor\exists K^{tt}
-  (XK\land\operatorname{Valid}(K)\land Kx).
+  (XK\land\mathrm{Valid}(K)\land Kx).
 \tag{4}
 $$
 This predicate is admitted by abstraction. It contains F and is nonempty, is upward closed, and omits I. For meet closure, two elements coming from valid X-members lie together in the larger member by comparability. An element of F belongs to every valid member; the case where both elements come from F uses F's closure. Thus U is valid, and R(K,U) for every X-member K. This includes the empty family and families with only invalid members.

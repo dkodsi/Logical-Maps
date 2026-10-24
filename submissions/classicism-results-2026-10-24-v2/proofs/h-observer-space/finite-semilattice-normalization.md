@@ -17,9 +17,9 @@ The qualifications V_mat and V_pt are the analogous disjunction laws. A(E) means
 Let All:=λp.Top and let Fin_t(All) be internal Frege finiteness, as defined in §2. Then, for every such O,
 
 $$
-\boxed{\mathrm H+\operatorname{Fin}_t(\mathrm{All})\ \vdash\
-\operatorname{Sep}_t[O\land M_{\rm mat}]
-\leftrightarrow\operatorname{Sep}_t[O\land M_{\rm pt}].}
+\boxed{\mathrm H+\mathrm{Fin}_t(\mathrm{All})\ \vdash\
+\mathrm{Sep}_t[O\land M_{\rm mat}]
+\leftrightarrow\mathrm{Sep}_t[O\land M_{\rm pt}].}
 \tag{1}
 $$
 The same equivalence holds with V in place of M, and at full typed scope. At full typed scope the whole-operation tier is equivalent to these two tiers as well. At propositional scope, passing to the whole-operation tier requires the local Functionality instances specified in §6.
@@ -33,15 +33,15 @@ The [background definition](../../source/topics/classicism/background.md) is
 $$
 \mathbf0:=\lambda U.\forall x\neg Ux,
 \qquad
-\operatorname{Suc}(Z):=\lambda U.\exists y\,[Uy\land Z(\lambda x.Ux\land x\ne y)],
+\mathrm{Suc}(Z):=\lambda U.\exists y\,[Uy\land Z(\lambda x.Ux\land x\ne y)],
 $$
 $$
-\operatorname{FiniteCardinality}_t(Z):=
-\forall W\,[(W\mathbf0\land\forall Y(WY\to W(\operatorname{Suc}(Y))))\to WZ],
+\mathrm{FiniteCardinality}_t(Z):=
+\forall W\,[(W\mathbf0\land\forall Y(WY\to W(\mathrm{Suc}(Y))))\to WZ],
 $$
 $$
-\operatorname{Fin}_t(\mathrm{All}):=
-\exists Z^{(tt)t}\,[\operatorname{FiniteCardinality}_t(Z)\land Z(\mathrm{All})].
+\mathrm{Fin}_t(\mathrm{All}):=
+\exists Z^{(tt)t}\,[\mathrm{FiniteCardinality}_t(Z)\land Z(\mathrm{All})].
 $$
 All these types are admitted. Internal finiteness neither supplies a standard external enumeration nor says that its cardinality witness is a standard numeral.
 

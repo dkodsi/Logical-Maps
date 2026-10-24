@@ -31,11 +31,11 @@ quantifier binders, top, a first-class $b:tt$, K, theorem-only
 necessitation, and Intensionality at every relational type:
 
 $$
- \Box\operatorname{coext}_\rho(X,Y)\longrightarrow X=Y,
+ \Box\mathrm{coext}_\rho(X,Y)\longrightarrow X=Y,
  \qquad \Box A:=b(A).
 $$
 
-Here $\operatorname{coext}_t(p,q)$ is $p\leftrightarrow q$, and
+Here $\mathrm{coext}_t(p,q)$ is $p\leftrightarrow q$, and
 coextension at an arrow type universally quantifies its argument and then
 uses coextension at the output type. The exact finite base is specified in
 [Lambda-free reconstruction, sections 1–2](lambda-free-reconstruction.md).
@@ -234,7 +234,7 @@ Their canonical representation uses the current identity quotients as
 constant domains and
 
 $$
- W=\operatorname{At}(D_t),\qquad
+ W=\mathrm{At}(D_t),\qquad
  \beta_\tau(R)=\{(w,\bar a):w\le R[\bar a]\}.
  \tag{4.2}
 $$

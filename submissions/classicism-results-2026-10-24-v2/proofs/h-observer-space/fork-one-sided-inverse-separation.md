@@ -42,9 +42,9 @@ for every admitted type σ. In particular each individual transport is onto. The
 For a finite external Δ let Good_Δ be the complete logical qualification. Define
 
 $$
-\operatorname{SplitMono}_\Delta(E):=
-\operatorname{Good}_\Delta(E)\land
-\exists F^{tt}\,[\operatorname{Good}_\Delta(F)\land F\circ E=I].
+\mathrm{SplitMono}_\Delta(E):=
+\mathrm{Good}_\Delta(E)\land
+\exists F^{tt}\,[\mathrm{Good}_\Delta(F)\land F\circ E=I].
 \tag{4}
 $$
 The inverse equation in (4) is an identity of admitted operations. The negative proof will require only E's full Boolean identities and an admitted left inverse; qualification of that inverse is not needed.
@@ -101,7 +101,7 @@ At a leaf the model is an ordinary full extensional type structure, with only tw
 
 $$
 \mathrm C+\Box\mathrm{OS}+\Box\mathrm{BF}
-+\Box\operatorname{Fun}.
++\Box\mathrm{Fun}.
 \tag{8}
 $$
 Each box in (8) is read instance by instance. No infinite conjunction is placed inside the object language.
@@ -159,7 +159,7 @@ At the root the exact new model profile is
 
 $$
 \boxed{\mathrm C+\Box\mathrm{OS}+\Box\mathrm{BF}
-+\Box\operatorname{Fun}+\neg\mathrm{SplitMono}.}
++\Box\mathrm{Fun}+\neg\mathrm{SplitMono}.}
 \tag{13}
 $$
 Therefore the implication SplitMono⇒OS is strict, even over C with every boxed BF and Functionality instance. In conjunction with the finite-block model from [Finite-pinning models with qualified left-inverse separation](finite-block-symmetry-left-inverse.md), §§1–6, which satisfies SplitMono but not Rev, this establishes both strict arrows in (1). Qualified right-inverse separation remains equivalent to Rev by [the right-inverse patching theorem](split-inverse-logical-observers.md).
@@ -179,8 +179,8 @@ The two non-implications in (14) use two different models. The all-maps model's 
 The finite-domain observation in §3 has an internal strengthening when current Functionality is explicitly available. Let All:=λp.Top and use the database's Frege definition
 
 $$
-\operatorname{Fin}_t(\mathrm{All}):=
-\exists Z^{(tt)t}\,[\operatorname{FiniteCardinality}_t(Z)\land Z(\mathrm{All})].
+\mathrm{Fin}_t(\mathrm{All}):=
+\exists Z^{(tt)t}\,[\mathrm{FiniteCardinality}_t(Z)\land Z(\mathrm{All})].
 $$
 This asserts internal finiteness; it does not supply a standard external enumeration. Over H plus this premise, every admitted injective operation E:tt is onto. Here is the exact internal justification. If E were injective but omitted q₀, the admitted relation R(p,q):=(Ep=q) would be serial on All, would never send two distinct inputs to the same output, and would omit q₀. The [recorded Dedekind lemma](../../source/topics/classicism/writeups/pure-possibility-implies-axiom-of-infinity-t.md), Lemma 5, proves by Frege induction that no predicate having a finite cardinality admits such a relation. Apply it to All.
 
@@ -200,7 +200,7 @@ $$
 \ \longleftrightarrow\ \mathrm{EndSep}.}
 \tag{15}
 $$
-For the final equivalence, Rev recovers C and the identity observer is $\operatorname{Good}_{\{t\}}$ with internally finite image: its image predicate is unconditionally H-equivalent, hence C-identical, to All. The existing [single finite-image witness theorem](../logical-observer-hierarchy.md), §§5–6, turns Rev plus this one witness into endpoint separation EndSep. Conversely EndSep already supplies Rev without a finiteness assumption. The fork remains a countermodel because it has OS but lacks the left-invertible separating witnesses; (15) does not upgrade ordinary OS.
+For the final equivalence, Rev recovers C and the identity observer is $\mathrm{Good}_{\{t\}}$ with internally finite image: its image predicate is unconditionally H-equivalent, hence C-identical, to All. The existing [single finite-image witness theorem](../logical-observer-hierarchy.md), §§5–6, turns Rev plus this one witness into endpoint separation EndSep. Conversely EndSep already supplies Rev without a finiteness assumption. The fork remains a countermodel because it has OS but lacks the left-invertible separating witnesses; (15) does not upgrade ordinary OS.
 
 Finally the fork does not satisfy C5. The nonbottom proposition u is distinct from Bottom at r, but both its leaf transports are Bottom. Necessary distinctness therefore fails at r. The fork establishes the broad H comparison OS versus SplitMono in (13). The stronger implication C5 plus necessary OS⇒SplitMono is refuted by the distinct [linear and circular fibre model](linear-circular-fibre-left-inverse-gap.md), §§1–9, whose finite-pin proposition algebras and pure-sentence obstruction supply that result.
 

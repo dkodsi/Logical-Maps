@@ -14,7 +14,7 @@ The main conclusions are:
 Let K(E) be any formula whose only free variable is E of type tt. For a relational type τ=σ₁…σₙt, define
 
 $$
-\operatorname{Sep}_{\tau}[K]:\quad
+\mathrm{Sep}_{\tau}[K]:\quad
 \forall X,Y^\tau\left[
 X=Y\leftrightarrow
 \forall E^{tt}\left(K(E)\to
@@ -36,9 +36,9 @@ This is [current Functionality](../../source/topics/classicism/principles/functi
 **Theorem 1.** For every K,
 
 $$
-\boxed{\mathrm H+\operatorname{FullSep}[K]
+\boxed{\mathrm H+\mathrm{FullSep}[K]
 \equiv
-\mathrm H+\operatorname{Sep}_t[K]+\operatorname{Functionality}.}
+\mathrm H+\mathrm{Sep}_t[K]+\mathrm{Functionality}.}
 $$
 No preservation, endpoint, existence or correctness condition on the qualified observers is needed.
 
@@ -130,11 +130,11 @@ Define, at a fixed type σ,
 
 $$
 \begin{aligned}
-\operatorname{Reflect}_\sigma(E)&:
+\mathrm{Reflect}_\sigma(E)&:
 \forall x,y^\sigma\,(E(x=y)\to x=y),\\
-\operatorname{CorrectEq}_\sigma(E)&:
+\mathrm{CorrectEq}_\sigma(E)&:
 \forall x,y^\sigma\,(E(x=y)\leftrightarrow x=y),\\
-\operatorname{FixEq}_\sigma(E)&:
+\mathrm{FixEq}_\sigma(E)&:
 (\lambda x,y^\sigma.E(x=y))=(\lambda x,y^\sigma.x=y).
 \end{aligned}
 $$

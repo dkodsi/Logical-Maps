@@ -8,6 +8,7 @@ import argparse
 import hashlib
 import json
 import posixpath
+import re
 from pathlib import Path
 
 
@@ -101,7 +102,8 @@ def render(root):
         return '**Lean certified:** ' + scope.rstrip('.') + '.' if scope else ''
 
     def done(lines):
-        return ('\n'.join(lines).rstrip() + '\n').replace(r'\operatorname', r'\mathrm')
+        text = ('\n'.join(lines).rstrip() + '\n').replace(r'\operatorname', r'\mathrm')
+        return re.sub(r'\n{3,}', '\n\n', text)
 
     def bullet(claim):
         # Indent continuation blocks so displayed mathematics stays in its list item.

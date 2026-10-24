@@ -95,8 +95,8 @@ Assume the single Plenitude instance Plen_{t,t}: every admitted current total si
 $$
 \boxed{S[O\land\mathrm{Mat}_N\land\mathrm{Mat}_{+}]
 \ \longleftrightarrow\
-S[\operatorname{Fix}(O)\land\mathrm{Pt}_N\land\mathrm{Pt}_{+}
-       \land\operatorname{Invol}_{\mathrm{pt}}].}
+S[\mathrm{Fix}(O)\land\mathrm{Pt}_N\land\mathrm{Pt}_{+}
+       \land\mathrm{Invol}_{\mathrm{pt}}].}
 \tag{5}
 $$
 For the forward direction, Theorem 1 supplies material + separation and the translation identity. Apply the affine involution construction of [Partial reversible normalization](partial-reversible-normalization.md), §3, with its distinguished opposite-unit element a set equal to c. It gives, for each unequal p,q, a separating admitted pointwise group involution J with Jc=c. A pointwise group homomorphism also fixes 0. Consequently

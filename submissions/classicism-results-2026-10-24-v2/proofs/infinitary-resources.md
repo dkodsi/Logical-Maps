@@ -14,7 +14,7 @@ For every relational type τ and every external set I, consider the instance
 
 $$
 \forall(a_i^\tau)_{i\in I}\left[
- \bigwedge_{i\in I}\operatorname{Atom}_\tau(a_i)
+ \bigwedge_{i\in I}\mathrm{Atom}_\tau(a_i)
  \to\exists b^\tau\left(
    \bigwedge_{i\in I}a_i\le_\tau b\ \land
    \forall c^\tau\left(
@@ -175,7 +175,7 @@ countably infinitely many only together with pairwise distinctness of these
 names. Crucially, (R) alone does not establish the needed SP eligibility:
 
 $$
-\operatorname{Con}\bigl(\operatorname{Max}(T)+E_\Sigma\bigr).
+\mathrm{Con}\bigl(\mathrm{Max}(T)+E_\Sigma\bigr).
 \tag{Eligibility}
 $$
 
@@ -191,7 +191,7 @@ Let Kd be the class of set-sized action models of C satisfying its countable
 truth clause at every object. Define
 
 $$
-T_d:=\operatorname{Th}(\mathcal K_d),
+T_d:=\mathrm{Th}(\mathcal K_d),
 $$
 
 the set of finite Ld sentences valid at all points of all Kd models. This is
@@ -207,7 +207,7 @@ Max(Td)-consistency side condition. The usual finitary C metarules remain
 available. We prove
 
 $$
-\operatorname{Con}(\operatorname{Max}(T_d)+E_\Sigma),
+\mathrm{Con}(\mathrm{Max}(T_d)+E_\Sigma),
 \qquad \mathrm{SP}(T_d)\vdash E_\Sigma.
 \tag{SNE}
 $$

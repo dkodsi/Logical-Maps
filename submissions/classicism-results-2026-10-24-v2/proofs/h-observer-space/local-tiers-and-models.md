@@ -29,12 +29,12 @@ Choose a truth map tr:D_t→{0,1}. On admitted inputs, interpret the logical ope
 
 $$
 \begin{aligned}
-\operatorname{tr}(\neg p)&=1-\operatorname{tr}(p),\\
-\operatorname{tr}(p\land q)&=\operatorname{tr}(p)\land\operatorname{tr}(q),\\
-\operatorname{tr}(p\lor q)&=\operatorname{tr}(p)\lor\operatorname{tr}(q),\\
-\operatorname{tr}(\forall_\sigma F)&=1
+\mathrm{tr}(\neg p)&=1-\mathrm{tr}(p),\\
+\mathrm{tr}(p\land q)&=\mathrm{tr}(p)\land\mathrm{tr}(q),\\
+\mathrm{tr}(p\lor q)&=\mathrm{tr}(p)\lor\mathrm{tr}(q),\\
+\mathrm{tr}(\forall_\sigma F)&=1
 \quad\Longleftrightarrow\quad
-\forall x\in D_\sigma\;\operatorname{tr}(Fx)=1,
+\forall x\in D_\sigma\;\mathrm{tr}(Fx)=1,
 \end{aligned}
 $$
 with the analogous existential clause. Identity judgments are true exactly when their admitted arguments are the same outer-domain element. The examples below give explicit total interpretations meeting these requirements.

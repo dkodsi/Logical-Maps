@@ -33,7 +33,7 @@ There is also an exact reduction without finiteness of the proposition domain. F
 
 $$
 \boxed{
-S[O\land\operatorname{FinIm}\land\mathrm{Mat}_+]
+S[O\land\mathrm{FinIm}\land\mathrm{Mat}_+]
 \quad\longleftrightarrow\quad
 S[O\land\mathrm{Two}\land\mathrm{Pt}_+].}
 \tag{8}
@@ -88,7 +88,7 @@ Let Admissible_d(K,A) express the subgroup, avoidance and two conditions in (2).
 $$
 W(Z):=\forall U\left[ZU\to
 \exists K,A\left(
-\operatorname{Admissible}_d(K,A)
+\mathrm{Admissible}_d(K,A)
 \land\forall x\bigl(Ux\to(Kx\lor K(x+d))\bigr)
 \right)\right].
 \tag{5}
@@ -173,7 +173,7 @@ We strengthen the invariant-test induction in §3. Let B_τ(K,A) express that K 
 
 $$
 \begin{aligned}
-\operatorname{Cover}_\tau(U,K):=\forall x\bigl[Ux\to
+\mathrm{Cover}_\tau(U,K):=\forall x\bigl[Ux\to
 &((\neg\tau x\to Kx)\\
 &\land(\tau x\to K(x+d)))\bigr],
 \end{aligned}
@@ -183,7 +183,7 @@ and the admitted induction property
 $$
 W_\tau(Z):=\forall U\left[ZU\to
 \exists K,A\bigl(B_\tau(K,A)\land
-\operatorname{Cover}_\tau(U,K)\bigr)\right].
+\mathrm{Cover}_\tau(U,K)\bigr)\right].
 \tag{10}
 $$
 For zero, use K(x):=(x=0) and A(x):=(x=0). For a successor witness y, apply the induction hypothesis to the exact deletion predicate λx.Ux∧x≠y. If τy is false put z:=y; if τy is true put z:=y+d. This is an ordinary proof by cases selecting one existing proposition in each case, not an assumed admitted conditional operation. In either case τz is false. If z∈K, retain K,A. Otherwise z lies outside K∪(d+K): membership in d+K would make τz true because K⊆ker τ. Apply the extension (3)–(4) with z in place of y.

@@ -7,7 +7,7 @@ Original mathematical argument, direct source misc; unpaginated.
 Keep exactly the original finitary relational language with
 
 $$
-\Sigma=\{c:e\to t\},\qquad M=\operatorname{Max}(C(\Sigma)).
+\Sigma=\{c:e\to t\},\qquad M=\mathrm{Max}(C(\Sigma)).
 $$
 
 There are no individual names in this original signature. Every Strong
@@ -208,7 +208,7 @@ that V is nonhyperarithmetic. Relativizing the same argument gives
 
 $$
 X\in\mathcal S_V\quad\Longrightarrow\quad
-V\notin\operatorname{HYP}(X).
+V\notin\mathrm{HYP}(X).
 \tag{7}
 $$
 
@@ -331,8 +331,8 @@ Let E_i enumerate the cylinder codes whose union is W_i. Define
 $$
 \begin{aligned}
 R(A)&=\{s:\exists i\ \forall t\in E_i\,
-                \operatorname{Cover}([s]\cap[t],A)\},\\
-\Gamma(A)&=\operatorname{Sat}\bigl(S_0\cup A\cup R(A)\bigr).
+                \mathrm{Cover}([s]\cap[t],A)\},\\
+\Gamma(A)&=\mathrm{Sat}\bigl(S_0\cup A\cup R(A)\bigr).
 \end{aligned}
 \tag{9}
 $$
