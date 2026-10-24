@@ -269,7 +269,7 @@ def render(root):
                 path, sep, fragment = target.partition('#')
                 return '](' + posixpath.relpath(path, posixpath.dirname(reference_path)) + sep + fragment + ')'
             body = re.sub(r'\]\(([^)\s]+)\)', rebase_link, body)
-            block = '\n\n' + anchor('logical-observer-principles') + '\n<details>\n<summary><strong>Logical-observer principles: definitions and established consequences</strong></summary>\n\n' + body + '\n</details>\n\n'
+            block = '\n\n' + anchor('logical-observer-principles') + '\n<details open>\n<summary><strong>Logical-observer principles: definitions and established consequences</strong></summary>\n\n' + body + '\n</details>\n\n'
             out[reference_path] = reference.split(begin)[0] + begin + block + end + reference.split(end)[1]
     evaluation = proposals['evaluation']
     text += [anchor('evaluation-principles'), '## Evaluation principles', '', evaluation['purpose'], '',

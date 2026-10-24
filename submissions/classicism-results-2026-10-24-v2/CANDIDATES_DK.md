@@ -50,7 +50,7 @@ The schema ranges over finite argument tuples $`\bar\sigma`$ and finite lists $`
 | <a id="factive-logical-observer-separation-r"></a>[Factive](proofs/h-observer-space/GRAPH.md#factive-logical-observer-separation-r) | Ep implies p | Exactly Extensionality at full scope over H. |
 | <a id="central-logical-observer-separation-r"></a>[Central](proofs/h-observer-space/GRAPH.md#central-logical-observer-separation-r) | Commutes with every qualified observer | Exactly Extensionality over C5. |
 
-The [headline guide](proofs/h-observer-space/GRAPH.md#headline-results) explains the main distinctions; the [definitions and consequences](proofs/h-observer-space/GRAPH.md#logical-observer-principles) retain the full proposal family and proof references.
+The [headline guide](proofs/h-observer-space/GRAPH.md#headline-results) explains the main distinctions; the [full list of connections and definitions](proofs/h-observer-space/GRAPH.md#logical-observer-principles) retains the proposal family and proof references.
 
 **Evidence:** [Proofs and certificates](evidence/RESULT-INDEX.md#logical-observers).
 

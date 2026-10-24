@@ -4,7 +4,7 @@ Observer separation asks which operations can distinguish propositions, and what
 
 Only the finite independent primitive family is completely classified. The [open frontier](#10-models-open-comparisons-and-research-status) remains under investigation.
 
-[Main Results](../../MAIN-RESULTS.md#h-observer-separation) · [Theorem tables](MAP.md) · [Language and notation](README.md)
+[Main Results](../../MAIN-RESULTS.md#h-observer-separation) · [Full list of connections](#logical-observer-principles) · [Theorem tables](MAP.md) · [Language and notation](README.md)
 
 <a id="headline-results"></a>
 ## Headline results
@@ -30,7 +30,7 @@ The broader investigation also classifies every finite package of independent pr
 <!-- BEGIN OBSERVER PRINCIPLE REFERENCE -->
 
 <a id="logical-observer-principles"></a>
-<details>
+<details open>
 <summary><strong>Logical-observer principles: definitions and established consequences</strong></summary>
 
 <a id="logical-observer-separation-r"></a>
