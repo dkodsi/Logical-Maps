@@ -109,7 +109,7 @@ join of $A$ needed by the final step of the fixed-point proof. Evaluation's
 adjunction, already proved in Part A, ensures that this join is a partial
 transversal. The fixed point contradicts strictness. This is the point-output
 refinement recorded in
-[the structural handoff, §1](../../../../submissions/classicism-results-2026-10-23-v1/source/research/2026-10-22/notes/structural-lane-handoff.md).
+[the structural handoff, §1](../../../../submissions/classicism-results-2026-10-24-v2/source/research/2026-10-22/notes/structural-lane-handoff.md).
 Part C retains the full, separate BC-upgrade proof at arbitrary $\tau$.
 
 The composition offers a different locality advantage. The Actuality
@@ -153,13 +153,13 @@ The RC-alone⇒TC question remains separate.
 ## 4. Provenance and exact verification boundary
 
 The frozen submission's
-[catalog entry rigidity.16](../../../../submissions/classicism-results-2026-10-23-v1/CATALOG.md#rigidity.16)
+[catalog entry rigidity.16](../../../../submissions/classicism-results-2026-10-24-v2/CATALOG.md#rigidity.16)
 identifies the direct theorem. Its three source notes are reproduced below
 with their mathematical text preserved:
 
-- [Original direct proof, §§1–9](../../../../submissions/classicism-results-2026-10-23-v1/source/research/2026-10-22/notes/relational-choice-boolean-completeness-transversal-proof.md).
-- [Guarded operation, §§1–6](../../../../submissions/classicism-results-2026-10-23-v1/source/research/2026-10-22/notes/rc-guarded-progressive-operation.md).
-- [Countable-completeness and CCC proof, §§1–4](../../../../submissions/classicism-results-2026-10-23-v1/source/research/2026-10-22/notes/relational-choice-countable-completeness-ccc.md).
+- [Original direct proof, §§1–9](../../../../submissions/classicism-results-2026-10-24-v2/source/research/2026-10-22/notes/relational-choice-boolean-completeness-transversal-proof.md).
+- [Guarded operation, §§1–6](../../../../submissions/classicism-results-2026-10-24-v2/source/research/2026-10-22/notes/rc-guarded-progressive-operation.md).
+- [Countable-completeness and CCC proof, §§1–4](../../../../submissions/classicism-results-2026-10-24-v2/source/research/2026-10-22/notes/relational-choice-countable-completeness-ccc.md).
 
 Their statements about no record edit, no formalization, or an unchanged
 map describe the drafts when written. They are retained as historical

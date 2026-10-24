@@ -2,9 +2,9 @@
 
 # Pure Maximalism and unboxed Atomicity: the canonical countable-generator proof
 
-**Status, 23 October 2026.** The exact final theorem and all its background dependencies have now passed the designated serial Lean check. The [successful manifest](../../../../submissions/classicism-results-2026-10-23-v1/source/research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json) reports exit code 0 and matching current source hashes; the [final axiom report](../../../../submissions/classicism-results-2026-10-23-v1/source/research/2026-10-22/lean-formalization/logs/runs/20261023T054730505817Z-9a834f08/Classicism_Results_Research_MaxAtomicityInconsistency.log) lists only `propext`, `Classical.choice`, and `Quot.sound`, with no `sorryAx` or custom mathematical axiom. See the [certificate index](../../../../submissions/classicism-results-2026-10-23-v1/source/research/2026-10-22/lean-formalization/max-background-certificates.md) and complete package. No mathematical database verdict or registry verification flag is changed by this note.
+**Status, 23 October 2026.** The exact final theorem and all its background dependencies have now passed the designated serial Lean check. The [successful manifest](../../../../submissions/classicism-results-2026-10-24-v2/source/research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json) reports exit code 0 and matching current source hashes; the [final axiom report](../../../../submissions/classicism-results-2026-10-24-v2/source/research/2026-10-22/lean-formalization/logs/runs/20261023T054730505817Z-9a834f08/Classicism_Results_Research_MaxAtomicityInconsistency.log) lists only `propext`, `Classical.choice`, and `Quot.sound`, with no `sorryAx` or custom mathematical axiom. See the [certificate index](../../../../submissions/classicism-results-2026-10-24-v2/source/research/2026-10-22/lean-formalization/max-background-certificates.md) and complete package. No mathematical database verdict or registry verification flag is changed by this note.
 
-This proof is separate from the earlier [constructible-universe proof](../../../../submissions/classicism-results-2026-10-23-v1/source/research/2026-10-22/lean-formalization/max-atomicity-inconsistency-proof.md). It uses a particular countably generated rigid complete Boolean algebra and its canonical natural-number-indexed generating sequence. It does not use a constructible well-order, an assumption that the ambient universe is L, or an L-restricted function domain.
+This proof is separate from the earlier [constructible-universe proof](../../../../submissions/classicism-results-2026-10-24-v2/source/research/2026-10-22/lean-formalization/max-atomicity-inconsistency-proof.md). It uses a particular countably generated rigid complete Boolean algebra and its canonical natural-number-indexed generating sequence. It does not use a constructible well-order, an assumption that the ambient universe is L, or an L-restricted function domain.
 
 The exact target is
 
@@ -633,49 +633,49 @@ The proof above separates the substantive mathematical obligations from compiler
 
 No result in this table is marked Lean-verified by this prose note. The older L-route proof remains a separate document. Repository validation after this note checks the map's data constraints only; it does not discharge any of the mathematical or compiler obligations described here.
 
-[final]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityInconsistency.lean
-[trees]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahTrees.lean
-[enumeration]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahEnumeration.lean
-[completion]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityRegularCompletion.lean
-[cylinders]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahCylinders.lean
-[indexed-generators]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahIndexedGenerators.lean
-[countable-generator]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityCountableGenerator.lean
-[slalom]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySlalomInvariance.lean
-[branch]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahBranch.lean
-[thinning]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySlalomThinning.lean
-[finite-refinement]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahFiniteRefinement.lean
-[local-stage]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahLocalStage.lean
-[amalgamation]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahAmalgamation.lean
-[fusion]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahFusion.lean
-[slalom-limit]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySlalomLimit.lean
-[local-fusion]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahLocalFusion.lean
-[rigidity-criterion]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahRigidityCriterion.lean
-[soundness]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Semantics/BooleanValuedSoundness.lean
-[concrete]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityConcreteModel.lean
-[universe]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHereditaryUniverse.lean
-[hcode-base]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySyntax.lean
-[hcode-syntax]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHCodeSyntax.lean
-[hcode-semantics]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean
-[mostowski]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityMostowski.lean
-[hereditary-cover]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHereditaryCover.lean
-[hcode-characterization]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHCodeCharacterization.lean
-[hcode-existence]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHCodeExistence.lean
-[graphs]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHereditaryGraphs.lean
-[set-codes]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahSetCodes.lean
-[js-syntax]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean
-[set-tools]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySetFormulaTools.lean
-[regular-code]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityRegularOpenCode.lean
-[index-coding]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahIndexCoding.lean
-[arithmetic-semantics]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahArithmeticSemantics.lean
-[arithmetic-existence]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahArithmeticExistence.lean
-[condition-semantics]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahConditionSemantics.lean
-[canonical-completion]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityCanonicalCompletion.lean
-[absoluteness]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySetCodeAbsoluteness.lean
-[selector-transport]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySelectorTransport.lean
-[pure-selector]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityPureSelector.lean
-[rigid-transport]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityRigidTransport.lean
-[set-semantics]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySetSemantics.lean
-[split-semantics]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySplitSemantics.lean
-[bounded-splitter]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/BoundedSplitter.lean
-[split-certificate]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySplitCertificate.lean
-[reduction]: ../../../../submissions/classicism-results-2026-10-23-v1/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityReduction.lean
+[final]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityInconsistency.lean
+[trees]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahTrees.lean
+[enumeration]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahEnumeration.lean
+[completion]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityRegularCompletion.lean
+[cylinders]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahCylinders.lean
+[indexed-generators]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahIndexedGenerators.lean
+[countable-generator]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityCountableGenerator.lean
+[slalom]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySlalomInvariance.lean
+[branch]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahBranch.lean
+[thinning]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySlalomThinning.lean
+[finite-refinement]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahFiniteRefinement.lean
+[local-stage]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahLocalStage.lean
+[amalgamation]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahAmalgamation.lean
+[fusion]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahFusion.lean
+[slalom-limit]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySlalomLimit.lean
+[local-fusion]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahLocalFusion.lean
+[rigidity-criterion]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahRigidityCriterion.lean
+[soundness]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Semantics/BooleanValuedSoundness.lean
+[concrete]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityConcreteModel.lean
+[universe]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHereditaryUniverse.lean
+[hcode-base]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySyntax.lean
+[hcode-syntax]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHCodeSyntax.lean
+[hcode-semantics]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean
+[mostowski]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityMostowski.lean
+[hereditary-cover]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHereditaryCover.lean
+[hcode-characterization]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHCodeCharacterization.lean
+[hcode-existence]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHCodeExistence.lean
+[graphs]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHereditaryGraphs.lean
+[set-codes]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahSetCodes.lean
+[js-syntax]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean
+[set-tools]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySetFormulaTools.lean
+[regular-code]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityRegularOpenCode.lean
+[index-coding]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahIndexCoding.lean
+[arithmetic-semantics]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahArithmeticSemantics.lean
+[arithmetic-existence]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahArithmeticExistence.lean
+[condition-semantics]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahConditionSemantics.lean
+[canonical-completion]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityCanonicalCompletion.lean
+[absoluteness]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySetCodeAbsoluteness.lean
+[selector-transport]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySelectorTransport.lean
+[pure-selector]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityPureSelector.lean
+[rigid-transport]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityRigidTransport.lean
+[set-semantics]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySetSemantics.lean
+[split-semantics]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySplitSemantics.lean
+[bounded-splitter]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/BoundedSplitter.lean
+[split-certificate]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySplitCertificate.lean
+[reduction]: ../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityReduction.lean

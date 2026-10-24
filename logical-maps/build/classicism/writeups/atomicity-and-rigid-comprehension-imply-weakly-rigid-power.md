@@ -3,7 +3,7 @@
 Original adaptation by Codex (OpenAI), prompted by Daniel Kodsi, 22 October
 2026; written out for the database by Codex (OpenAI), prompted by Daniel
 Kodsi, 23 October 2026. The direct source is the research note
-[Modal principles in Maximalist Classicism, §16](../../../../submissions/classicism-results-2026-10-23-v1/source/research/2026-10-22/notes/maximalism-modal.md),
+[Modal principles in Maximalist Classicism, §16](../../../../submissions/classicism-results-2026-10-24-v2/source/research/2026-10-22/notes/maximalism-modal.md),
 unpaginated. It adapts the atom-pullback method in the existing
 [Rigid Power proof](atomicity-and-rigid-comprehension-imply-rigid-power.md),
 which uses Bacon's *Could the truths of mathematics have been different?*,
@@ -180,7 +180,7 @@ all-schema WRP-to-RP implication additionally uses WRP, and hence Tame
 Rigidity, at the higher type $\tau t$; this proof does not replace that
 step by a same-type inference.
 
-The submission's [catalog entry rigidity.02](../../../../submissions/classicism-results-2026-10-23-v1/CATALOG.md#rigidity.02)
+The submission's [catalog entry rigidity.02](../../../../submissions/classicism-results-2026-10-24-v2/CATALOG.md#rigidity.02)
 and corresponding entry in CATALOG.json record research checks for
 RigidityClosureResearchAtomicPower, its certificate module, and
 RigidityClosureResearchContinuationSchemas, under manifest

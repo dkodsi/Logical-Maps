@@ -34,7 +34,7 @@ Exact certificate evidence:
 The separate whole-module derivation audits check all 28 graph theorems and
 all 8 bridge theorems, including composition, identities, selected-output
 realization, and represented well-foundedness:
-[`checks/20261023T044036874157Z-c349c7c2.json`](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1).
+[`checks/20261023T044036874157Z-c349c7c2.json`](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-24-v2).
 That latter manifest also contains an unsuccessful first membership-module
 check; its independent graph/bridge successes are not a claim that every
 target in the manifest passed. Printed derivation axiom reports include
@@ -87,7 +87,7 @@ Full prose proofs:
 - [`structural-algebraic-core.md`](../notes/structural-algebraic-core.md),
   the individually indexed Boolean/world-map/ultrafilter classifications.
 
-[`world-core-coverage-queue.json`](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) preserves all
+[`world-core-coverage-queue.json`](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-24-v2) preserves all
 26 original world-algebra keys and their qualifications. The general
 representation theorem does not certify all those classifications. Distinct
 Boolean retraction classifications are retained alongside, and distinguished

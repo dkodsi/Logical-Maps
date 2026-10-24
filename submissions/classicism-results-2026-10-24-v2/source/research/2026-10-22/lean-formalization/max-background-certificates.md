@@ -13,7 +13,7 @@ The full declaration name is `Classicism.Meta.Research.MaxAtomicityInconsistency
 
 - [Successful exact-target compiler manifest](checks/20261023T054730505817Z-9a834f08.json).
 - [Exact theorem type and complete axiom report](logs/runs/20261023T054730505817Z-9a834f08/Classicism_Results_Research_MaxAtomicityInconsistency.log).
-- [Complete certificate package](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1).
+- [Complete certificate package](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-24-v2).
 - [Ordinary mathematical proof and implementation guide](max-atomicity-canonical-code-proof.md).
 - [Machine-readable source and axiom audit](max-certificate-audit.json).
 

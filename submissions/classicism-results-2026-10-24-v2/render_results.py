@@ -173,7 +173,7 @@ def render(root):
             text += ['$$', formula, '$$', '']
         text += ['**Sources:** ' + proposal_sources(r) + '.', '', proposal_status(r), '']
     out['CANDIDATES_DK.md'] = done(text)
-    text = ['# Main results', '',
+    text = ['# Main results — 24 October 2026 (v2)', '',
         'Draft. The principal implications, countermodels, characterizations and strength comparisons, grouped by subject. The background is finitary relational **Classicism C** unless stated otherwise.', '',
         '[Full statements, proofs and certificates](evidence/RESULT-INDEX.md) · [Previously known results formalized](#previously-known-results-formalized) · [Questions and negative results](CONJECTURES.md) · [Notation](#notation)', '']
     text += [anchor('categories'), '## Results by category', '',

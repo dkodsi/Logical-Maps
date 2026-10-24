@@ -1,5 +1,5 @@
 {
-  "release_id": "classicism-results-2026-10-23-v1",
+  "release_id": "classicism-results-2026-10-24-v2",
   "description": "Subject-based synthesis of mathematical results, countermodels and exact saved formalization evidence.",
   "results": [
     {
@@ -3585,5 +3585,7 @@
     "long": "over 3,000 words",
     "description": "Ratings measure the length of selected mathematical exposition, including substantive supporting arguments, rather than intrinsic difficulty or discovery effort. Every detailed result and overview group is rated. Group counts combine their selected passages, counting overlapping source lines once. Alternative proofs, Lean code and compiler logs are excluded; published background is cited rather than expanded. Compressed exposition remains compressed in this measure.",
     "evidence": "evidence/proof-lengths.json"
-  }
+  },
+  "release_date": "2026-10-24",
+  "release_version": 2
 }

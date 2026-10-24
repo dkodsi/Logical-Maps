@@ -5,7 +5,7 @@ Each needs a decision before it is added, usually because it opens a family of
 variants or connections. Notation follows `background.md`. Remove an entry
 once it has been recorded or rejected.
 
-The [CANDIDATES_DK](../../../submissions/classicism-results-2026-10-23-v1/CANDIDATES_DK.md) isolates the 23 October research recommendations, with exact formulas, sources, known connections and evaluation equivalents. Its first batch is OS, Sections of Surjections, Retractions of Injections, Tame Rigidity below Rigid Bounds, and Individual Profile Realization. These proposals are outside the active principle records.
+The [CANDIDATES_DK](../../../submissions/classicism-results-2026-10-24-v2/CANDIDATES_DK.md) isolates the 23 October research recommendations, with exact formulas, sources, known connections and evaluation equivalents. Its first batch is OS, Sections of Surjections, Retractions of Injections, Tame Rigidity below Rigid Bounds, and Individual Profile Realization. These proposals are outside the active principle records.
 
 ## Weak variants of Rigid Power
 

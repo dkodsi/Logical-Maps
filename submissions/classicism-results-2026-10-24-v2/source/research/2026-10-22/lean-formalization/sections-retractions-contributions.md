@@ -71,19 +71,19 @@ Full-schema declarations have prefix `Classicism.Meta.Research.Splitting`.
 
 | Scope | Principal declaration | Successful manifest |
 | --- | --- | --- |
-| Strong retraction construction and arbitrary relational output | `necessary_injection_splitting.listRule`, `necessary_injection_iff_retraction.derivable` and separate `_t` theorem | [044838](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) |
-| C5 gives strong retractions | `c5_strong_retractions.listRule` | [044838](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) |
-| Actuality plus sections gives Choice | `actuality_sections_choice.listEntails` | [045645](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) |
-| Actuality plus retractions gives Plenitude | `actuality_retractions_plenitude.listEntails` | [045645](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) |
-| Full ordinary splitting characterizations | `functional_choice_equivalence`, `plenitude_equivalence` | [045645](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) |
-| Relational BF mask, including nullary output | `relational_surjectivity_persistence_barcan.listRule` | [050342](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) |
-| Stable unique graph representation | `barcan_stable_unique_graphs.listRule`, `uniform_graph_iff_stable_witnesses.derivable` | [050342](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) |
-| Modal unique-witness collapse | `necessary_unique_witness_iff_extensionality.derivable` | [050342](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) |
-| Rigidity of sections and exact ND converse | `nd_rigid_sections.listRule`, `rigid_point_sections_iff_nd.derivable`, weak analogues | [050719](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) |
-| Full completely boxed splitting characterizations | `necessary_choice_equivalence`, `necessary_plenitude_equivalence` | [050719](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) |
-| Surjectivity persistence and strong sections | `persistence_surjectivity_equivalence`, `strong_sections_equivalence` | [053829](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) |
-| Pairing Representation iff Plenitude | `pairing_representation_equivalence` | [053829](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) |
-| Persistence of elementary algebraic laws | `idempotence_persistence_equivalence`, `involutivity_persistence_equivalence` | [053829](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1) |
+| Strong retraction construction and arbitrary relational output | `necessary_injection_splitting.listRule`, `necessary_injection_iff_retraction.derivable` and separate `_t` theorem | [044838](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-24-v2) |
+| C5 gives strong retractions | `c5_strong_retractions.listRule` | [044838](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-24-v2) |
+| Actuality plus sections gives Choice | `actuality_sections_choice.listEntails` | [045645](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-24-v2) |
+| Actuality plus retractions gives Plenitude | `actuality_retractions_plenitude.listEntails` | [045645](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-24-v2) |
+| Full ordinary splitting characterizations | `functional_choice_equivalence`, `plenitude_equivalence` | [045645](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-24-v2) |
+| Relational BF mask, including nullary output | `relational_surjectivity_persistence_barcan.listRule` | [050342](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-24-v2) |
+| Stable unique graph representation | `barcan_stable_unique_graphs.listRule`, `uniform_graph_iff_stable_witnesses.derivable` | [050342](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-24-v2) |
+| Modal unique-witness collapse | `necessary_unique_witness_iff_extensionality.derivable` | [050342](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-24-v2) |
+| Rigidity of sections and exact ND converse | `nd_rigid_sections.listRule`, `rigid_point_sections_iff_nd.derivable`, weak analogues | [050719](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-24-v2) |
+| Full completely boxed splitting characterizations | `necessary_choice_equivalence`, `necessary_plenitude_equivalence` | [050719](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-24-v2) |
+| Surjectivity persistence and strong sections | `persistence_surjectivity_equivalence`, `strong_sections_equivalence` | [053829](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-24-v2) |
+| Pairing Representation iff Plenitude | `pairing_representation_equivalence` | [053829](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-24-v2) |
+| Persistence of elementary algebraic laws | `idempotence_persistence_equivalence`, `involutivity_persistence_equivalence` | [053829](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-24-v2) |
 
 These manifests passed source compilation, the requested Classicism gate and
 relational-type audits, translated object-language certificates and requested
@@ -101,7 +101,7 @@ dependency closure, including the sharp Actuality theorem and JoinTruth.
 ## Final schema assemblies
 
 The four mathematical assemblies below all passed in
-[the final leaf manifest](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1).
+[the final leaf manifest](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-24-v2).
 Its captured source closure was compared with the live files and matched.
 The separate aggregate import also passed in the final manifest linked above:
 

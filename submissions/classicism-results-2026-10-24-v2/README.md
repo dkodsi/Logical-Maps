@@ -1,4 +1,4 @@
-# Classicism: results, proofs and certificates
+# Classicism: results, proofs and certificates — 24 October 2026 (v2)
 
 Research submission for review by the Logical Maps database owners.
 

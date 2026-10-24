@@ -1,4 +1,4 @@
-# Main results
+# Main results — 24 October 2026 (v2)
 
 Draft. The principal implications, countermodels, characterizations and strength comparisons, grouped by subject. The background is finitary relational **Classicism C** unless stated otherwise.
 

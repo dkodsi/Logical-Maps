@@ -3,7 +3,7 @@
 Original derivation by Codex (OpenAI), prompted by Daniel Kodsi, 22 October
 2026; written out for the database by Codex (OpenAI), prompted by Daniel
 Kodsi, 23 October 2026. The direct source is
-[Necessary distinctness and Inextensible Comprehension imply Weakly Rigid Power, §§1–6](../../../../submissions/classicism-results-2026-10-23-v1/source/research/2026-10-22/notes/nd-inextensible-comprehension-implies-weak-power.md),
+[Necessary distinctness and Inextensible Comprehension imply Weakly Rigid Power, §§1–6](../../../../submissions/classicism-results-2026-10-24-v2/source/research/2026-10-22/notes/nd-inextensible-comprehension-implies-weak-power.md),
 an unpaginated research note. The definitions are those of the current
 database; literature novelty is not asserted.
 
@@ -323,7 +323,7 @@ premises. The all-schema implication WRP implies RP elsewhere in
 the database uses the higher power-property type; it is not a
 same-type shortcut in this proof.
 
-The submission's [catalog entry rigidity.09](../../../../submissions/classicism-results-2026-10-23-v1/CATALOG.md#rigidity.09)
+The submission's [catalog entry rigidity.09](../../../../submissions/classicism-results-2026-10-24-v2/CATALOG.md#rigidity.09)
 and corresponding CATALOG.json entry separately record the successful
 research check of InextensibleWeakPowerCertificates, manifest
 20261023T022700791873Z. This later evidence supersedes the source

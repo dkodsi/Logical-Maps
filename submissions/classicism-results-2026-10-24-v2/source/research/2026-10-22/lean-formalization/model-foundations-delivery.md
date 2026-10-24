@@ -6,8 +6,8 @@ This summary gives the model-construction results and their certificate scope. S
 
 | Package | Exact scope | Evidence |
 |---|---|---|
-| Finite-sort structures | Exhaustive covers of size 1, 2, or 3; Atomicity, Boolean Completeness, Actuality at t, and relational choice to any admitted output sort, including e. No all-bounds internal proof generator is claimed. | **Fresh gate/type audits and all twelve C-minus translations passed** in [the locked check](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1). [Exact independent-target evidence](model-foundations-existing-certificates-20261023.json). |
-| Boolean-valued semantics | Existing typed syntax interpreted over a complete Boolean algebra; substitution, conversion, C soundness, designated-truth soundness and modal value calculations. Generic semantics, without a concrete countermodel claim. | **The complete driver passed again** in [the locked check](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1). Eleven declarations were audited; classical metatheory uses propext, Classical.choice and Quot.sound. |
+| Finite-sort structures | Exhaustive covers of size 1, 2, or 3; Atomicity, Boolean Completeness, Actuality at t, and relational choice to any admitted output sort, including e. No all-bounds internal proof generator is claimed. | **Fresh gate/type audits and all twelve C-minus translations passed** in [the locked check](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-24-v2). [Exact independent-target evidence](model-foundations-existing-certificates-20261023.json). |
+| Boolean-valued semantics | Existing typed syntax interpreted over a complete Boolean algebra; substitution, conversion, C soundness, designated-truth soundness and modal value calculations. Generic semantics, without a concrete countermodel claim. | **The complete driver passed again** in [the locked check](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-24-v2). Eleven declarations were audited; classical metatheory uses propext, Classical.choice and Quot.sound. |
 | Single-predicate full models | Exactly the admitted signature {c:e→t}; full one-world Bool and Nat individual domains; c selects false or zero. Actual Independence and map schemas, complete consistent theories and the twelve central-question targets. Nonentailments refute signature-uniform claims, not every separately prescribed richer signature. | **The full principal driver passed**, with current sources matching, in [the locked check](checks/20261023T051126488606Z-b00090cd.json). [Exact declarations, hashes and axiom dependencies](singlepredicate-verified-20261023.json). |
 | Supported nominal hierarchy | All supported elements/functions for finite or countable support ideals; candidate typed evaluator, conversion and soundness; pure syntax and specified globally fixed constants. Arbitrary non-fixed interpretations of constants are outside this evaluator. | **The full driver has not passed.** The exact checked prefix, current sources and next obligation are recorded in [the lane update](verification-updates/model_foundations_signature_nominal.json). This is not a verified nominal classification. |
 
@@ -57,7 +57,7 @@ this delivery work.
 
 The current nominal SupportCore, LogicalOperations, TypedHierarchy and
 Substitution modules pass in
-[the last substantive nominal check](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-23-v1).
+[the last substantive nominal check](https://github.com/dkodsi/Logical-Maps/releases/tag/classicism-results-2026-10-24-v2).
 These are infrastructure checks, not a nominal model or classification
 certificate. NominalConversion then left six reflexive goals. The source
 repairs are saved, but [the final attempt](model-foundations-final-attempt.log)
