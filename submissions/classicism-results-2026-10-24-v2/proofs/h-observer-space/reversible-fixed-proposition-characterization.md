@@ -15,8 +15,8 @@ Let B(E) be the conjunction of the whole Boolean and type-t quantifier preservat
 Define the admitted predicate A:(tt)t by
 
 ```math
-A(E):=B(E)\land\exists F^{tt}
-\,[B(F)\land E\circ F=I\land F\circ E=I].
+{A(E):=B(E)\land\exists F^{tt}
+\,[B(F)\land E\circ F=I\land F\circ E=I]}
 \tag{1}
 ```
 
@@ -27,7 +27,7 @@ Two established C5 facts will be used. First, each $`\mathrm{Good}_{\{t\}}`$ obs
 For a proposition p put
 
 ```math
-\mathrm{Inv}(p):=\forall E^{tt}\,[A(E)\to Ep=p].
+\mathrm{Inv(p):=\forall E^{tt}\,[A(E)\to Ep=p]}
 \tag{2}
 ```
 
@@ -36,8 +36,8 @@ The restriction concerns propositions fixed by every member of A. It does not sa
 The proposed finite condition is
 
 ```math
-\mathrm{TrivialFix}:=
-\forall p^t\,[\mathrm{Inv}(p)\to(p=0\lor p=1)].
+\mathrm{TrivialFix:=
+\forall p^t\,[\mathrm{Inv}(p)\to(p=0\lor p=1)]}
 \tag{3}
 ```
 
@@ -48,7 +48,7 @@ Under C5 every identity proposition at every admitted type is 0 or 1. Boolean co
 Consequently the finite formula A(E), whose atomic clauses are whole-operation identities, always satisfies
 
 ```math
-A(E)=0\ \lor\ A(E)=1.
+{A(E)=0\ \lor\ A(E)=1}
 \tag{4}
 ```
 
@@ -61,7 +61,7 @@ Identity belongs to A. Composition of two A-members belongs to A, with the rever
 Define the admitted operation O:tt by
 
 ```math
-O(p):=\exists E^{tt}\,[A(E)\land Ep].
+{O(p):=\exists E^{tt}\,[A(E)\land Ep]}
 \tag{5}
 ```
 
@@ -70,7 +70,7 @@ Over C5, the quantifier is the Boolean join of this admitted family. Equation (4
 Identity supplies one joinand, so
 
 ```math
-p\le O(p).
+{p\le O(p)}
 \tag{6}
 ```
 
@@ -79,7 +79,7 @@ p\le O(p).
 Fix an admitted A-member G. It preserves the existential quantifier at tt by the type-reduction theorem, and fixes each guard A(E) by (4). Hence
 
 ```math
-G(O(p))=\exists E^{tt}\,[A(E)\land G(Ep)].
+{G(O(p))=\exists E^{tt}\,[A(E)\land G(Ep)]}
 \tag{7}
 ```
 
@@ -88,7 +88,7 @@ For each E, the displayed joinand is below O(p). If A(E) is false, its guard is 
 Choose an admitted qualified inverse F of G. The same argument gives F(O(p))≤O(p). Applying the monotone G and using G∘F=I gives O(p)≤G(O(p)). Antisymmetry proves
 
 ```math
-G(O(p))=O(p).
+{G(O(p))=O(p)}
 \tag{8}
 ```
 
@@ -97,7 +97,7 @@ This proves Inv(O(p)). The proof uses join bounds and one inverse; it does not n
 **Lemma 2.** O(p) is the least invariant proposition above p. Explicitly, for every invariant q,
 
 ```math
-O(p)\le q\quad\longleftrightarrow\quad p\le q.
+{O(p)\le q\quad\longleftrightarrow\quad p\le q}
 \tag{9}
 ```
 
@@ -106,7 +106,7 @@ The forward implication uses (6). Conversely, if p≤q and q is invariant, each 
 In particular O is monotone and idempotent, O0=0, O1=1, and
 
 ```math
-\mathrm{Inv}(p)\quad\longleftrightarrow\quad O(p)=p.
+\mathrm{Inv(p)\quad\longleftrightarrow\quad O(p)=p}
 \tag{10}
 ```
 
@@ -132,8 +132,8 @@ Equivalently, over H the full theory Rev is exactly C5 plus the single sentence 
 **From trivial fixed propositions to separation.** Let r≠0. By (6), O(r)≠0. Lemma 1 and (3) therefore give O(r)=1. Its current truth and the ordinary existential truth condition in (5) supply an admitted E with A(E) and Er true:
 
 ```math
-r\ne0\quad\Longrightarrow\quad
-\exists E^{tt}\,[A(E)\land Er].
+{r\ne0\quad\Longrightarrow\quad
+\exists E^{tt}\,[A(E)\land Er]}
 \tag{12}
 ```
 
@@ -157,8 +157,8 @@ Under C5, p≠0 is itself an endpoint. If p=0 both sides are Bottom. If p≠0, T
 Failure of Rev has a canonical invariant witness. By the type/list compression, a failure of full Rev over C5 is already a failure of separation by A at t. Choose p≠q with identical current A-profiles and let r=p△q. Every eligible Er is then false. Consequently O(r) is currently false, while r≤O(r) makes O(r) nonzero. Lemma 1 gives
 
 ```math
-\neg\mathrm{Rev}\quad\Longrightarrow\quad
-\exists u^t\,[u\ne0\land\neg u\land\mathrm{Inv}(u)].
+{\neg\mathrm{Rev}\quad\Longrightarrow\quad
+\exists u^t\,[u\ne0\land\neg u\land\mathrm{Inv}(u)]}
 \tag{14}
 ```
 
@@ -169,24 +169,24 @@ The invariant propositions form a Boolean subalgebra. They contain 0 and 1 and a
 Define the dual admitted operation
 
 ```math
-C(p):=\neg O(\neg p)
-       =\forall E^{tt}\,[A(E)\to Ep].
+{C(p):=\neg O(\neg p)
+       =\forall E^{tt}\,[A(E)\to Ep]}
 \tag{15}
 ```
 
 It is the greatest invariant proposition below p, by the complemented version of (9). Thus
 
 ```math
-C(p)\le p\le O(p),\qquad
+{C(p)\le p\le O(p),\qquad
 \mathrm{Inv}(p)\ \longleftrightarrow\ C(p)=p
-\ \longleftrightarrow\ O(p)=p.
+\ \longleftrightarrow\ O(p)=p}
 \tag{16}
 ```
 
 For invariant q the orbit closure has the useful restricted meet law
 
 ```math
-O(p\land q)=O(p)\land q.
+{O(p\land q)=O(p)\land q}
 \tag{17}
 ```
 
