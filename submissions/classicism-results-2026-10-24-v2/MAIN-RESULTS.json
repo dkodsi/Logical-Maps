@@ -945,7 +945,8 @@
         "evidence/certificates/probability-source-principal-audit/certificate.json",
         "evidence/certificates/probability-numeric-operations-twelve/certificate.json",
         "evidence/certificates/probability-addition-basic/certificate.json"
-      ]
+      ],
+      "certified_scope": "Supported-real suprema, natural-number order and basic numeric operations; cut crossing and supported-real negation, subtraction and inverses. Numeric-operation laws retain ActualWorld, quantified Infinity and domain guards; induction and cases require ActualWorld alone."
     },
     {
       "id": "SP-CRITERIA",
@@ -1784,7 +1785,7 @@
         "evidence/certificates/full-observers-propositional/certificate.json",
         "evidence/certificates/full-observers-simultaneous-finite-schema/certificate.json"
       ],
-      "certified_scope": "The propositional Atomicity characterization at quantifier type t, and the construction of observers at each fixed quantifier type.",
+      "certified_scope": "Simultaneous propositional separation for every finite list of closed quantifier types under C5 + Atomicity (type t), including its necessary schema; the converses and equivalence of the two schemas under C5 + Actuality.",
       "proof_length": {
         "rating": "long",
         "words": 6455
@@ -2304,22 +2305,41 @@
       "significance": "The placement of necessity in an inverse law separates C5 from the Actuality-plus-retraction characterization of Plenitude.",
       "mathematical_status": "Ordinary proofs supplied in the cited research notes, with the stated hypotheses; no literature-novelty claim.",
       "attribution": "OpenAI Codex, prompted by Daniel Kodsi, 22 October 2026. Imported mathematical results retain the attribution and locators given in the proofs.",
-      "lean_status": "Scoped constituent certificates are recorded under choice.04; no new certificate scope is assigned to this synthesized equivalence.",
+      "lean_status": "Lean certified constituent directions: The C5 forward rules for persistent injectivity and strong retractions at all admitted relational types, the low-type converses to ☐ND (type t), and the per-map necessary-injectivity/strong-retraction equivalence. The recorded collapse of ☐ND (type t) to C5 assembles the schema equivalence.",
       "proofs": [
         "source/research/2026-10-22/notes/choice-uniformization.md"
       ],
       "proof_locators": [
         "Choice uniformization §2, Theorem 3; §§7, 9, Theorems 11–13"
       ],
-      "declarations": [],
-      "lean_sources": [],
-      "manifests": [],
-      "evidence": [],
+      "declarations": [
+        "Classicism.Research.Splitting.c5_injectivity_persists.rule",
+        "Classicism.Research.Splitting.c5_strong_retractions.listRule",
+        "Classicism.Research.Splitting.c5_strong_retractions_t.derivable",
+        "Classicism.Research.Splitting.low_strong_retractions_c5.rule",
+        "Classicism.Research.Splitting.low_persistent_injections_c5.rule",
+        "Classicism.Research.Splitting.necessary_injection_splitting.listRule",
+        "Classicism.Research.Splitting.necessary_injection_iff_retraction.derivable",
+        "Classicism.Research.Splitting.necessary_injection_iff_retraction_t.derivable"
+      ],
+      "lean_sources": [
+        "topics/classicism/lean/Classicism/Results/Research/SectionsRetractionsStrong.lean",
+        "topics/classicism/lean/Classicism/Results/Research/SectionsRetractionsStrongCertificates.lean",
+        "topics/classicism/lean/Classicism/Results/Research/SectionsRetractionsMasks.lean",
+        "topics/classicism/lean/Classicism/Results/Research/SectionsRetractionsMasksCertificates.lean"
+      ],
+      "manifests": [
+        "research/2026-10-22/lean-formalization/checks/20261023T053945495916Z-2d579847.json"
+      ],
+      "evidence": [
+        "evidence/integration-scope-reconciliation.json"
+      ],
       "notes": "",
       "proof_length": {
         "rating": "medium",
         "words": 1080
-      }
+      },
+      "certified_scope": "The C5 forward rules for persistent injectivity and strong retractions at all admitted relational types, the low-type converses to ☐ND (type t), and the per-map necessary-injectivity/strong-retraction equivalence."
     },
     {
       "id": "FORCING-POSSIBILISM",
@@ -2528,8 +2548,13 @@
       "attribution": "OpenAI Codex, prompted by Daniel Kodsi, 24 October 2026. Direct source misc; proof notes unpaginated. Cited source constructions retain their stated attribution and draft dates.",
       "declarations": [],
       "lean_sources": [],
-      "manifests": [],
-      "evidence": [],
+      "manifests": [
+        "evidence/certificates/full-typed-logical-separation-actual-c/original-manifest.json"
+      ],
+      "evidence": [
+        "evidence/certification-closeout.json",
+        "evidence/certificates/full-typed-logical-separation-actual-c/acceptance.json"
+      ],
       "notes": "Only the finite independent primitive family is completely classified. Remaining comparisons concern infinite nonprincipal material-versus-pointwise M/V separation outside the proved sufficient hypotheses; bare-H infinite affine character existence without an admission premise; further partial-signature reversibility; further boxed inverse comparisons and intrinsic atomless-meet characterizations; and an exact converse for Rev beyond its modal and parameter-noncontingency consequences. Both arrows Rev ⇒ SplitMono ⇒ OS are proved strict. C5 + ☐OS + No Pure Contingency ⇒ Rev is refuted even after strengthening ☐OS to ☐SplitMono. Zorn supplies admitted characters; Plenitude supplies normalization and the specified involutive witnesses. Pointed and relative maximality characterize separation and partial-character extension respectively, without a converse to general Zorn. The parameter theorem covers finitely many individual and endpoint-valued first-order relation parameters, not arbitrary higher-type parameters. Internal finiteness, whole-operation identities and explicit H premises retain their stated scope. Zorn supplies both affine and lattice partial-character extension. D_t collapses the inverse comparison but not the endpoint comparison; the atomless two-colour model proves the latter failure. The atomless region includes exact gap, convex-block and finite-factor criteria under their stated structural hypotheses. SurjSep ⇒ ☐OS and SurjSep ⇒ ☐SurjSep are refuted; The root truth-profile countermodel retains ☐BF; the integer-shift predecessor separately refutes SurjSep ⇒ ☐BF at every admitted type.",
       "proof_length": {
         "rating": "long",
@@ -2556,6 +2581,16 @@
           "by": "OpenAI Codex, prompted by Daniel Kodsi",
           "summary": "Added admitted adjoints and exact individual-observer tests; settled SurjSep ⇒ ☐BF negatively at every admitted type."
         }
+      ],
+      "certified_scope": "The foundational implication H + OS ⇒ C + BF, with explicit endpoint identities.",
+      "certificates": [
+        "evidence/certificates/final-full-typed-logical-separation-h-transport/certificate.json",
+        "evidence/certificates/final-full-typed-logical-separation-h-bridge/certificate.json",
+        "evidence/certificates/final-full-typed-logical-separation-h-closure/certificate.json",
+        "evidence/certificates/final-full-typed-logical-separation-h-consequences/certificate.json",
+        "evidence/certificates/final-full-typed-logical-separation-c-holes/certificate.json",
+        "evidence/certificates/final-full-typed-logical-separation-c-transport/certificate.json",
+        "evidence/certificates/full-typed-logical-separation-actual-c/certificate.json"
       ]
     }
   ],
@@ -2874,7 +2909,7 @@
             "result_refs": [
               "LOGICAL-OBSERVERS"
             ],
-            "summary": "One increasing chain in the branching map is **logical observers → endpoint observers → unique observer**, with separation required throughout. Logical Observer Separation (OS) entails C + BF. Requiring the separating observers to return only $\\top$ or $\\bot$ characterizes C5 + Atomicity (type t). Requiring a unique qualified logical observer characterizes Extensionality, since the identity observer always qualifies. Under Extensionality, truth is itself endpoint-valued: the identity observer sends every true proposition to $\\top$ and every false proposition to $\\bot$. These characterizations use the full typed separation schemata over H. Over C, the following chain has every arrow strict; the full map also contains incomparable observer principles:\n\n$$\n\\small\\text{Extensionality}\\ \\Rightarrow\\ \\mathrm{C5}+\\mathrm{Atomicity}_t\\ \\Rightarrow\\ \\Box\\mathrm{OS}\\ \\Rightarrow\\ \\mathrm{OS}\\ \\Rightarrow\\ \\mathrm{BF}.\n$$\n\nSeparation by factive logical observers also characterizes Extensionality. Over C5 + Actuality, OS, ☐OS and Atomicity (type t) are equivalent. Over C5, ☐OS + ◇Actuality entails ☐Plenitude; OS in place of ☐OS does not suffice.\n\nReversible logical separation implies No Pure Contingency, without atoms or Actuality. OS does not imply ☐BF or ☐Functionality. Endpoint separation is equivalent to C5 + ☐OS + one atom; reversible separation is strictly stronger than C5 + ☐OS even in atomless models. The separating model has a contingent closed pure six-element selection sentence. See the [H observer map](proofs/h-observer-space/GRAPH.md#9-the-larger-region-above-c--bf).",
+            "summary": "Requiring separation by **logical observers → endpoint observers → a unique observer** leads respectively to C + BF, C5 + Atomicity (type t), and Extensionality over H. Under Extensionality, truth is itself an endpoint-valued observer. Over C, every arrow below is strict:\n\n$$\n\\small\\text{Extensionality}\\ \\Rightarrow\\ \\mathrm{C5}+\\mathrm{Atomicity}_t\\ \\Rightarrow\\ \\Box\\mathrm{OS}\\ \\Rightarrow\\ \\mathrm{OS}\\ \\Rightarrow\\ \\mathrm{BF}.\n$$\n\nReversible logical separation implies No Pure Contingency without atoms or Actuality. The [observer section](#h-observer-separation) and [full map](proofs/h-observer-space/GRAPH.md) give the other branches and separating models.",
             "evidence_labels": [
               "Proofs and certificates"
             ],
@@ -2932,7 +2967,7 @@
               "Boolean retractions",
               "Strong retractions and C5"
             ],
-            "certified_summary": "The Functional Choice, Plenitude and ☐Functional Choice decompositions.",
+            "certified_summary": "The Functional Choice, Plenitude and ☐Functional Choice decompositions; the constituent directions of the C5/strong-retraction characterization.",
             "proof_length": {
               "rating": "long",
               "words": 8534
@@ -3268,7 +3303,7 @@
             "result_refs": [
               "H-OBSERVER-SPACE"
             ],
-            "summary": "The [dedicated results page and full theorem map](proofs/h-observer-space/GRAPH.md) starts over H and locates C as a recovered region. It gives thematic diagrams, exact premises, proof and model links, and the remaining questions.\n\nFor a finite set $\\Gamma$ of independent primitive preservation clauses, let $T_J$ require separation by observers accepting $\\top$, rejecting $\\bot$, and preserving every clause in $J$. At each fixed preservation tier and type scope,\n\n$$\nT_K\\vdash T_J\\quad\\Longleftrightarrow\\quad J\\subseteq K.\n$$\n\nFor every qualification $K$, higher-type separation factors exactly:\n\n$$\n\\mathrm H+\\operatorname{FullSep}[K]\\ \\equiv\\ \\mathrm H+S[K]+\\operatorname{Functionality}.\n$$\n\n**Representation and normalization.** Truth profiles characterize connective reducts and admitted quantifier bounds. Under ND (type t), material and pointwise meet/universal separation have the same exact representation, with a join/existential dual. Pointwise separation is exactly separation by an admitted composition-closed family of material observers; that family may also contain identity. Internal finiteness of the proposition domain, or finite images of the separating observers, supplies two-output pointwise replacements for meet and join separation and the stated matching quantifier packages. The affine branches have the analogous finite-domain and finite-image results, separately for XOR and biconditional.\n\n**Admission and character extension.** Plenitude at (t,t) supplies normalization even for infinite-image observers: it covers every nonempty primitive connective signature, each separate affine operation, and the matching lattice/quantifier packages. Zorn’s preorder instance at tt supplies infinite affine and lattice characters, extends admitted partial characters, and gives exact material lattice/Boolean converses. Over H alone, translation identities characterize joint negation/affine and paired-affine separation; Plenitude supplies involutions for these linked signatures too. Plenitude also replaces separating witnesses by involutions for negation and each affine operation, fixing the mentioned endpoints. These involutions need only separate the chosen pair; they need not retain an earlier observer’s full truth profile. Whole-operation lifting retains local Functionality or full typed scope; two-output normalizations need not use the fixed endpoints.\n\n**Reversible meet separation.** Reversible meet separation plus one atom is exactly a bounded atomistic meet structure with a true atom and admitted meet automorphisms transitive on atoms; atomisticity and a true atom alone do not suffice. The [order-action theorem](proofs/h-observer-space/reversible-semilattice-order-actions.md) gives a positive atomless region over H: an admitted order-primitive action on the interior of a bounded dense chain, with an interior true/false pair, gives reversible meet separation. Its exact obstruction is a nontrivial admitted invariant truth-compatible congruence. A rational-chain full-function model has joint reversible meet/join separation and Functionality while C fails; a translation subgroup shows that order primitivity is weaker than order 2-homogeneity. The action includes whole preservation and inverse identities, and full typed scope retains Functionality.\n\n**Truth gaps, blocks and factors.** With a greatest false and a least true proposition, [reversible chain separation](proofs/h-observer-space/reversible-truth-gap-chains.md) is exactly gap-density plus transitivity on adjacent pairs. Plenitude at (t,t) and the stated order quantifiers supply the truth cut. The complete split interval is atomless and has full reversible M,V and both quantifier-family separation, yet fails C; negation preservation is absent. [Exact reductions](proofs/h-observer-space/reversible-semilattice-local-global.md) characterize separation through transitivity on convex blocks and separation by the crossed block’s stabilizer, or through transitivity on a specified finite central partition and separation inside its unique true factor. Lexicographic chains and finite products of atomless chains give examples below C. These factors are not proposition atoms, and their finite count is external.\n\n**Logical inverses.** In the complete logical region, right-inverse separation is exactly reversible separation. Both arrows Rev ⇒ SplitMono ⇒ OS are strict, and SplitMono is incomparable with ☐OS even over C5. The [qualitative-contrast model at its trivial-symmetry object](proofs/h-observer-space/fixed-point-symmetry-left-inverse-separation.md) supplies C5 + SplitMono without ☐OS or ☐SplitMono; a uniform fixed-point construction supplies the qualified left inverses. Left-inverse separation remains weaker than Rev even with C5 and its own boxed schema; it entails neither No Pure Contingency nor C5, ☐OS, its own boxed schema, ☐BF or ☐Functionality.\n\n**Finite boundaries and inverse decomposition.** Under internal finiteness of all propositions, full left-inverse, reversible and endpoint separation coincide. Over C + BF, each fixed-list left-inverse separation sentence is exactly reversible separation or ordinary separation plus one qualified left-inverse pair with a true proposition sent to Bottom. The full-H reformulation is a schema of these alternatives, not a global disjunction. The linear/circular fibre model refutes C5 + ☐OS ⇒ SplitMono even with atomlessness and the condition that every admitted proposition injection is onto. Its obstruction is a contingent pure sentence about ordering infinite amorphous cells. The weaker condition that every admitted injective proposition operation is onto equates left-inverse and reversible separation, but does not yield endpoint separation: the two-colour model satisfies C5 and Rev and remains atomless.\n\n**Surjectivity and admission.** A surjective observer has every proposition as an output; an admitted right inverse is an operation selecting preimages. Over C5, the greatest kernel element and a definable fibre representative supply a qualified right inverse. Consequently Rev ⇔ C5 + SurjSep. Over H, both arrows Rev ⇒ SurjSep ⇒ OS are strict, and SurjSep and SplitMono are incomparable even over C + ☐BF + ☐OS. The omega-chain model supplies surjective separation without left-inverse separation; the C5 finite-block model supplies the converse distinction. Within C5, SurjSep does imply SplitMono. Their conjunction forms a further strict intermediate step:\n\n$$\n\\mathrm{Rev}\\;\\Rightarrow\\;(\\mathrm{SurjSep}+\\mathrm{SplitMono})\\;\\Rightarrow\\;\\begin{cases}\\mathrm{SurjSep},\\\\\\mathrm{SplitMono}.\\end{cases}\n$$\n\nThe [cancellative-monoid theorem](proofs/h-observer-space/full-cancellative-monoid-observers.md) gives ☐SurjSep for full models with singleton individuals; a specified infinite sequence of distinct units also supplies ☐SplitMono. The concrete monoid ℤ×ℕ has both, with ☐BF, while C5 and Rev fail. Thus even boxing both conjuncts does not recover Rev. Separate observer families may witness the two factors.\n\n**Canonical adjoints.** Over C5, each Good-$\\{t\\}$ observer $E$ has [admitted order adjoints](proofs/h-observer-space/canonical-adjoints-and-image-factorization.md):\n\n$$\nRq:=\\exists p^t\\,[(Ep\\le q)\\land p],\\qquad Lq:=\\neg R(\\neg q),\\qquad L\\dashv E\\dashv R.\n$$\n\nThey give a canonical isomorphism from $[\\bot,\\neg R\\bot]$ onto the image of $E$. Their laws characterize the three individual restrictions:\n\n| Restriction on $E$ | Equivalent adjoint condition |\n| --- | --- |\n| Injective | $R\\bot=\\bot$, equivalently $L\\top=\\top$ |\n| Onto | $R$ preserves join, equivalently $L$ preserves meet |\n| Bijective | $R=L$, equivalently either adjoint preserves negation |\n\nThe image floor $ER$ is an auxiliary S5 interior; it equals native necessity exactly when $E$ is endpoint-valued. Two canonical endpoint-fixing envelopes preserve meet/all universal quantifiers and join/all existential quantifiers respectively. They coincide exactly when $E$ is onto, yielding its qualified right inverse. Separately, for a **Boolean observer over C5**, without a quantifier-preservation premise:\n\n$$\nE\\text{ injective}\\ \\Longleftrightarrow\\ E\\circ\\Box_t=\\Box_t\\circ E\\ \\Longleftrightarrow\\ E\\circ\\Diamond_t=\\Diamond_t\\circ E.\n$$\n\n**Persistence of qualifications and separation.** Over C + BF (type t), each admitted observer satisfies $\\operatorname{Onto}(E)\\to\\Box\\operatorname{Onto}(E)$. Its logical qualification persists too. Yet the [root truth-profile model](proofs/h-observer-space/root-truth-profile-surjective-separation.md) satisfies SurjSep with ☐BF and ☐Functionality while ☐OS and ☐SurjSep fail. The strict comparisons are Rev ⇒ ☐SurjSep ⇒ SurjSep and ☐SurjSep ⇒ ☐OS. The [integer-shift predecessor](proofs/h-observer-space/integer-shift-predecessor-contingent-barcan.md) settles SurjSep ⇒ ☐BF negatively: it satisfies full typed SurjSep and current BF, while ☐BF fails at every admitted type.\n\n**The upper logical region.** Current OS plus Plenitude at (t,t), or full Plenitude, is exactly endpoint separation. Equivalent formulations are C5 + OS + Actuality, C5 + OS + Boolean Completeness, and C5 + Atomicity (type t). The admission bridge is already C + BF (type t) + Plenitude at (t,t) ⇔ C5 + Actuality. Reversible logical separation implies C5 + ☐OS + No Pure Contingency without atoms or Actuality, and is strictly stronger than C5 + ☐OS even in atomless models. Endpoint separation is equivalent to C5 + ☐OS + one atom; the single boxed propositional $\\operatorname{Good}_{\\{t\\}}$ separation formula suffices in place of ☐OS.\n\nOver C, an admitted inverse is equivalent to necessary bijectivity, and invertible $Q_t$ observers are Boolean. Local stabilizer conjugacy supplies reversible observers in the specified symmetry-model families. A distinct component-shift model satisfies C5 + ☐SplitMono + No Pure Contingency while Rev fails, so adding pure noncontingency does not recover reversibility. Rev also forces noncontingency for pure formulas with finitely many individual parameters and first-order relation parameters whose outputs are endpoints. The component-shift model violates that parameter conclusion; the earlier finite-block model violates closed pure noncontingency.\n\n**Separate qualifications need not combine.** The ternary Cantor model satisfies full endpoint-fixing separation separately for M/Q/P, V/Q/P and N/Q/P, including their boxed instances and boxed BF and Functionality, but even propositional Boolean separation fails. This refutes the unrestricted mixed-quantifier reductions while preserving the positive results under .2. The map also retains the identity and truth restrictions, derived-operation and quantifier-constructor results. Only the finite independent primitive family is fully classified; the wider comparisons remain under investigation.",
+            "summary": "The [dedicated page](proofs/h-observer-space/GRAPH.md) develops the map from H, with exact premises, diagrams, proofs and countermodels. Its main results are:\n\n- **Preservation and higher types.** For the finite family of independent primitive clauses, implication between separation principles is exactly reverse inclusion of clauses. Full typed separation factors into propositional separation plus Functionality.\n- **Reversibility.** Separation by reversible logical observers (Rev) implies C5 + ☐OS + No Pure Contingency. Both chains Rev ⇒ SurjSep ⇒ OS and Rev ⇒ SplitMono ⇒ OS are strict; SurjSep and SplitMono require surjective observers and admitted qualified left inverses, respectively, and are incomparable. Over C5, SurjSep is Rev.\n- **The endpoint boundary.** OS + Plenitude at (t,t) is equivalent over H to endpoint separation, hence to C5 + Atomicity (type t). Reversibility can hold in atomless models; one atom raises it to endpoint separation.\n- **Canonical adjoints.** Over C5, every logical observer qualified at t has admitted order adjoints. These characterize injection, surjection and reversibility. A Boolean observer commutes with necessity exactly when it is injective.\n- **Limits of combination and persistence.** Separate preservation requirements need not combine. SurjSep entails neither ☐OS nor ☐BF, even though an individual observer’s surjectivity persists over C + BF (type t).\n\nThe [detailed map and research frontier](proofs/h-observer-space/MAP.md) also cover weaker connective fragments, normalization, character extension and atomless order models.",
             "evidence_labels": [
               "Map and proofs"
             ],

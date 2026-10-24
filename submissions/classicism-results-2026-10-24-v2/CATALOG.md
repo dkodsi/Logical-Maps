@@ -9,6 +9,8 @@ All 184 stable keys, including the original 160, are retained. Keys may group se
 
 FC iff Actuality + pointwise sections of actual surjections. The mirrored type-fragment reduction is included. (`functional-choice-by-sections.md`)
 
+**Lean certified:** [`SECTIONS-RETRACTIONS`](evidence/RESULT-INDEX.md#sections-retractions).
+
 **Proofs:** [functional-choice-by-sections.md](source/research/2026-10-22/notes/functional-choice-by-sections.md)
 
 **Scoped evidence:** [`SECTIONS-RETRACTIONS`](evidence/RESULT-INDEX.md#sections-retractions)
@@ -27,6 +29,8 @@ Boxed FC iff boxed Actuality + strong sections; fully boxed ordinary-section for
 
 Plenitude iff Actuality + pointwise retractions of actual injections. (same; `choice-uniformization.md`)
 
+**Lean certified:** [`SECTIONS-RETRACTIONS`](evidence/RESULT-INDEX.md#sections-retractions).
+
 **Proofs:** [choice-uniformization.md](source/research/2026-10-22/notes/choice-uniformization.md)
 
 **Scoped evidence:** [`SECTIONS-RETRACTIONS`](evidence/RESULT-INDEX.md#sections-retractions)
@@ -36,7 +40,7 @@ Plenitude iff Actuality + pointwise retractions of actual injections. (same; `ch
 
 C5 iff persistence of actual injectivity iff strong retractions of actual injections. (`choice-uniformization.md`)
 
-**Evidence:** [injectivity-persistence](DATABASE-INTEGRATION.md#choice.04--injectivity-persistence) · [per-map-necessary-injectivity](DATABASE-INTEGRATION.md#choice.04--per-map-necessary-injectivity) · [strong-left-splitting](DATABASE-INTEGRATION.md#choice.04--strong-left-splitting).
+**Lean certified:** The C5 forward rules for persistent injectivity and strong retractions at all admitted relational types, the low-type converses to ☐ND (type t), and the per-map necessary-injectivity/strong-retraction equivalence.
 
 **Exact reconciliation scope:** StrongLeftSplitting(A,B): forall f:A→B, actual Inj(f) implies exists g:B→A, box forall a, g(f a)=a. Ordinary pointwise retractions are weaker and must not receive this C5 equivalence. c5_injectivity_persists.rule covers arbitrary admitted A (including e) and relational B. Strong retractions restrict A to relational because g must return A. c5_strong_retractions.listRule ranges over finite argument lists, including the empty list, so its relational source is not restricted to unary types; B is arbitrary closed relational. The separate _t declaration also states the nullary source explicitly. The converses conclude boxed ND_t; the existing all-type collapse of boxed ND_t supplies C5. The fixed low-type tests are sufficient, not the total scope of the forward theorem. Per-map necessary injectivity iff existence of a strong retraction is separately checked. No choice, Atomicity or Actuality premise is introduced.
 
@@ -46,10 +50,14 @@ C5 iff persistence of actual injectivity iff strong retractions of actual inject
 
 **Scoped evidence:** [`C5-STRONG-RETRACTIONS`](evidence/RESULT-INDEX.md#c5-strong-retractions)
 
+**Integration assessment:** [injectivity-persistence](DATABASE-INTEGRATION.md#choice.04--injectivity-persistence) · [per-map-necessary-injectivity](DATABASE-INTEGRATION.md#choice.04--per-map-necessary-injectivity) · [strong-left-splitting](DATABASE-INTEGRATION.md#choice.04--strong-left-splitting)
+
 <a id="choice.05"></a>
 ## choice.05
 
 BF_rel persistence/splitting calculus: persistence of surjectivity, idempotence or involutivity characterizes BF_rel; strong sections iff ordinary sections + BF_rel. These related law formulations are one family. (`functional-choice-by-sections.md`; `reversible-comprehension-and-algebraic-laws.md`)
+
+**Lean certified:** [`SECTIONS-RETRACTIONS`](evidence/RESULT-INDEX.md#sections-retractions).
 
 **Proofs:** [functional-choice-by-sections.md](source/research/2026-10-22/notes/functional-choice-by-sections.md) · [reversible-comprehension-and-algebraic-laws.md](source/research/2026-10-22/notes/reversible-comprehension-and-algebraic-laws.md)
 
@@ -60,6 +68,8 @@ BF_rel persistence/splitting calculus: persistence of surjectivity, idempotence 
 
 Per-map categorical/strong-splitting classification: Epi(f) iff necessary surjectivity; strong left invertibility iff necessary injectivity, at the stated relational types. (`choice-uniformization.md`)
 
+**Lean certified:** [`SECTIONS-RETRACTIONS`](evidence/RESULT-INDEX.md#sections-retractions).
+
 **Proofs:** [choice-uniformization.md](source/research/2026-10-22/notes/choice-uniformization.md)
 
 **Scoped evidence:** [`SECTIONS-RETRACTIONS`](evidence/RESULT-INDEX.md#sections-retractions)
@@ -68,6 +78,8 @@ Per-map categorical/strong-splitting classification: Epi(f) iff necessary surjec
 ## choice.07
 
 Plenitude iff representation of all total symmetric single-valued graphs (involution representation). (`reversible-comprehension-and-algebraic-laws.md`)
+
+**Lean certified:** [`SECTIONS-RETRACTIONS`](evidence/RESULT-INDEX.md#sections-retractions).
 
 **Proofs:** [reversible-comprehension-and-algebraic-laws.md](source/research/2026-10-22/notes/reversible-comprehension-and-algebraic-laws.md)
 
@@ -78,6 +90,8 @@ Plenitude iff representation of all total symmetric single-valued graphs (involu
 
 The six evaluator equivalences, as one hierarchy: Actuality truth-fiber, ordinary BE, globally bivalent evaluator, unique ordinary BE, necessary local BE, fixed necessarily correct BE. The adjacent separations are recorded separately. (`actual-truth-evaluator-ladder.md`)
 
+**Lean certified:** [`EVALUATORS-CORES`](evidence/RESULT-INDEX.md#evaluators-cores): Actuality-core conversion and admitted-value lemmas.
+
 **Proofs:** [actual-truth-evaluator-ladder.md](source/research/2026-10-22/notes/actual-truth-evaluator-ladder.md)
 
 **Scoped evidence:** [`EVALUATORS-CORES`](evidence/RESULT-INDEX.md#evaluators-cores)
@@ -87,6 +101,8 @@ The six evaluator equivalences, as one hierarchy: Actuality truth-fiber, ordinar
 
 GC canonical evaluator/extensionalization theorem: unique globally bivalent evaluator, selected-world normal form, unique TwoVal representatives, idempotent Boolean normalization and pullback naturality. Grouped rather than counting each operator law. (`gallin-bivalent-evaluator.md`)
 
+**Lean certified:** [`EVALUATORS-CORES`](evidence/RESULT-INDEX.md#evaluators-cores): Actuality-core conversion and admitted-value lemmas.
+
 **Proofs:** [gallin-bivalent-evaluator.md](source/research/2026-10-22/notes/gallin-bivalent-evaluator.md)
 
 **Scoped evidence:** [`EVALUATORS-CORES`](evidence/RESULT-INDEX.md#evaluators-cores)
@@ -95,6 +111,8 @@ GC canonical evaluator/extensionalization theorem: unique globally bivalent eval
 ## choice.10
 
 GC quantifier-law family: current-predicate commutation, safe boxed absorption, and exact selected-world-relative-BF characterization of the stronger law. The unrestricted stronger law is not proved.
+
+**Lean certified:** [`EVALUATORS-CORES`](evidence/RESULT-INDEX.md#evaluators-cores): Actuality-core conversion and admitted-value lemmas.
 
 **Proofs:** [gallin-bivalent-evaluator.md](source/research/2026-10-22/notes/gallin-bivalent-evaluator.md)
 
@@ -121,6 +139,8 @@ Ordinary BE plus modal commutation forces Extensionality (and converse).
 ## choice.12
 
 Actuality iff localized extensionality; the supported current extensional relational Henkin HOL interpretation over all current individuals. (`actuality-world-slice-core.md`)
+
+**Lean certified:** [`EVALUATORS-CORES`](evidence/RESULT-INDEX.md#evaluators-cores): Actuality-core conversion and admitted-value lemmas.
 
 **Proofs:** [actuality-world-slice-core.md](source/research/2026-10-22/notes/actuality-world-slice-core.md)
 
@@ -164,6 +184,8 @@ Complete atomic local intervals and their unique supported projection representa
 
 Globally TwoVal GC core and its canonical isomorphism with the Actuality slice as current structures. (`gallin-extensional-core.md`)
 
+**Lean certified:** [`EVALUATORS-CORES`](evidence/RESULT-INDEX.md#evaluators-cores): Actuality-core conversion and admitted-value lemmas.
+
 **Proofs:** [gallin-extensional-core.md](source/research/2026-10-22/notes/gallin-extensional-core.md)
 
 **Scoped evidence:** [`EVALUATORS-CORES`](evidence/RESULT-INDEX.md#evaluators-cores)
@@ -184,6 +206,8 @@ Exact preservation of represented individual relations, well-orders, cardinal co
 
 Faithful probability iff internally countable atomic worlds iff internal ccc; existence of a countably additive replacement. (`faithful-probability-countable-worlds.md`)
 
+**Lean certified:** [`PROBABILITY`](evidence/RESULT-INDEX.md#probability): Supported-real suprema, natural-number order and basic numeric operations; cut crossing and supported-real negation, subtraction and inverses. Numeric-operation laws retain ActualWorld, quantified Infinity and domain guards; induction and cases require ActualWorld alone.
+
 **Proofs:** [faithful-probability-countable-worlds.md](source/research/2026-10-22/notes/faithful-probability-countable-worlds.md)
 
 **Scoped evidence:** [`PROBABILITY`](evidence/RESULT-INDEX.md#probability)
@@ -192,6 +216,8 @@ Faithful probability iff internally countable atomic worlds iff internal ccc; ex
 ## choice.19
 
 Probability type classification and ceiling: atom-product criterion, et/all finite individual arities, tt iff finite worlds, and all-type incompatibility with quantified Infinity_e. Grouped as ONE classification. (same, §§7–8)
+
+**Lean certified:** [`PROBABILITY`](evidence/RESULT-INDEX.md#probability): Supported-real suprema, natural-number order and basic numeric operations; cut crossing and supported-real negation, subtraction and inverses. Numeric-operation laws retain ActualWorld, quantified Infinity and domain guards; induction and cases require ActualWorld alone.
 
 **Proofs:** [faithful-probability-countable-worlds.md](source/research/2026-10-22/notes/faithful-probability-countable-worlds.md)
 
@@ -228,6 +254,8 @@ Finite-parameter pure-term definability of faithful probability forces finite wo
 ## choice.23
 
 Strict six-level evaluator hierarchy: five adjacent nonimplications, realized by the chain, double-retract, retract, atom-plus-atomless, and involution-group models. (`actual-truth-evaluator-ladder.md`)
+
+**Lean certified:** [`EVALUATORS-CORES`](evidence/RESULT-INDEX.md#evaluators-cores): Actuality-core conversion and admitted-value lemmas.
 
 **Proofs:** [actual-truth-evaluator-ladder.md](source/research/2026-10-22/notes/actual-truth-evaluator-ladder.md)
 
@@ -267,12 +295,16 @@ Finite torsor models plus Henkin compactness give endomorphism splitting + neces
 
 **Evidence:** [nullary-characterization](DATABASE-INTEGRATION.md#rigidity.01--nullary-characterization) · [nullary-laws](DATABASE-INTEGRATION.md#rigidity.01--nullary-laws).
 
+**Lean certified:** Nullary proof bodies establish WeakRigid(p) iff top/bottom iff Rigid(p), with the stated nullary TR/RP/WRP/Rigid Rigidity/Weakly Rigid Weak Rigidity/RC/WeakRC theorems and indicated necessary versions. No internally finite-power theorem is inferred.
+
 **Proofs:** [maximalism-modal.md](source/research/2026-10-22/notes/maximalism-modal.md)
 
 <a id="rigidity.02"></a>
 ## rigidity.02
 
 **Atomicity plus rigid comprehension.** Atomicity + Rigid Comprehension implies Weakly Rigid Power. Route: `maximalism-modal.md` §16.
+
+**Lean certified:** [`RIGIDITY-CLASSIFICATIONS`](evidence/RESULT-INDEX.md#rigidity-classifications).
 
 **Proofs:** [maximalism-modal.md](source/research/2026-10-22/notes/maximalism-modal.md)
 
@@ -294,6 +326,8 @@ Finite torsor models plus Henkin compactness give endomorphism splitting + neces
 
 **Evidence:** [necessary](DATABASE-INTEGRATION.md#rigidity.04--necessary) · [weak](DATABASE-INTEGRATION.md#rigidity.04--weak).
 
+**Lean certified:** Singleton reconstruction and its necessary counterpart, with explicit finite-tuple certificate requests for both.
+
 **Proofs:** [rigidity-by-joins-and-boolean-closure.md](source/research/2026-10-22/notes/rigidity-by-joins-and-boolean-closure.md)
 
 <a id="rigidity.05"></a>
@@ -302,6 +336,8 @@ Finite torsor models plus Henkin compactness give endomorphism splitting + neces
 **Existing joins and TR.** Existing represented joins preserve weak rigidity; TR is exactly closure of rigid relations under those joins. Route: the same file §2.
 
 **Evidence:** [tr-join-characterization](DATABASE-INTEGRATION.md#rigidity.05--tr-join-characterization) · [weak-existing-joins](DATABASE-INTEGRATION.md#rigidity.05--weak-existing-joins).
+
+**Lean certified:** Existing represented joins preserve weak rigidity; Tame Rigidity iff rigid-join closure, without optional completeness or a rigid indexing family.
 
 **Proofs:** [rigidity-by-joins-and-boolean-closure.md](source/research/2026-10-22/notes/rigidity-by-joins-and-boolean-closure.md)
 
@@ -312,6 +348,8 @@ Finite torsor models plus Henkin compactness give endomorphism splitting + neces
 
 **Evidence:** [finite-boolean](DATABASE-INTEGRATION.md#rigidity.06--finite-boolean) · [membership-bivalence](DATABASE-INTEGRATION.md#rigidity.06--membership-bivalence) · [sections](DATABASE-INTEGRATION.md#rigidity.06--sections).
 
+**Lean certified:** The intersection, difference, symmetric-difference and membership-bivalence characterizations at weak and rigid levels.
+
 **Proofs:** [rigid-boolean-closure.md](source/research/2026-10-22/notes/rigid-boolean-closure.md)
 
 <a id="rigidity.07"></a>
@@ -321,12 +359,16 @@ Finite torsor models plus Henkin compactness give endomorphism splitting + neces
 
 **Evidence:** [c5-schema](DATABASE-INTEGRATION.md#rigidity.07--c5-schema) · [rigid](DATABASE-INTEGRATION.md#rigidity.07--rigid) · [weak](DATABASE-INTEGRATION.md#rigidity.07--weak).
 
+**Lean certified:** Exact weak ND+BF versus rigid ND+boxed-BF complement characterizations, tt/C5 equivalence, and all-type C5 consequences with tuple laws.
+
 **Proofs:** [rigid-boolean-closure.md](source/research/2026-10-22/notes/rigid-boolean-closure.md)
 
 <a id="rigidity.08"></a>
 ## rigidity.08
 
 **The bounded propagation gap.** WRP has an exact decomposition through TR, RP and bounded future tameness; ND supplies the missing condition, yielding ND+TR+RP⇒WRP. Route: `maximalism-modal.md` §§18–19.
+
+**Lean certified:** [`RIGIDITY-CLASSIFICATIONS`](evidence/RESULT-INDEX.md#rigidity-classifications).
 
 **Proofs:** [maximalism-modal.md](source/research/2026-10-22/notes/maximalism-modal.md)
 
@@ -346,6 +388,8 @@ Finite torsor models plus Henkin compactness give endomorphism splitting + neces
 
 **The exact boundary over ND+BC.** IC, Rigid Comprehension, TR and WRP are equivalent additional assumptions over ND+BC. Routes: the preceding file, final section; `old-new-boolean-completeness-and-rigidity-separation.md`.
 
+**Lean certified:** [`RIGIDITY-ND-BC`](evidence/RESULT-INDEX.md#rigidity-nd-bc).
+
 **Proofs:** [old-new-boolean-completeness-and-rigidity-separation.md](source/research/2026-10-22/notes/old-new-boolean-completeness-and-rigidity-separation.md)
 
 **Scoped evidence:** [`RIGIDITY-ND-BC`](evidence/RESULT-INDEX.md#rigidity-nd-bc)
@@ -354,6 +398,8 @@ Finite torsor models plus Henkin compactness give endomorphism splitting + neces
 ## rigidity.11
 
 **Uniform rigidification.** Uniform weak/rigid comprehension is exactly the ND strengthening of the corresponding comprehension schema. Route: `rigidity-by-joins-and-boolean-closure.md` §6.
+
+**Lean certified:** [`RIGIDITY-CLASSIFICATIONS`](evidence/RESULT-INDEX.md#rigidity-classifications).
 
 **Proofs:** [rigidity-by-joins-and-boolean-closure.md](source/research/2026-10-22/notes/rigidity-by-joins-and-boolean-closure.md)
 
@@ -364,6 +410,8 @@ Finite torsor models plus Henkin compactness give endomorphism splitting + neces
 
 **Algebra of the weak and rigid fragments.** These fragments have the stated complete Boolean interval representation; uniform rigidification supplies a complete Boolean retraction. Route: the same file §§5–6. This concerns the rigidity fragments; the Actuality/Gallin interpretation has its own hypotheses.
 
+**Lean certified:** [`RIGIDITY-CLASSIFICATIONS`](evidence/RESULT-INDEX.md#rigidity-classifications).
+
 **Proofs:** [rigidity-by-joins-and-boolean-closure.md](source/research/2026-10-22/notes/rigidity-by-joins-and-boolean-closure.md)
 
 **Scoped evidence:** [`RIGIDITY-CLASSIFICATIONS`](evidence/RESULT-INDEX.md#rigidity-classifications)
@@ -372,6 +420,8 @@ Finite torsor models plus Henkin compactness give endomorphism splitting + neces
 ## rigidity.13
 
 **Strong Leibniz propagation.** Strong Leibniz + Rigid Comprehension implies necessary Strong Leibniz and necessary relational BF, including the sharper typed dependencies. Routes: `../strong-leibniz-rigid-bottom-cut.md`; `audit-rigid-bottom-cut.md`.
+
+**Lean certified:** [`MODAL-PROPAGATION`](evidence/RESULT-INDEX.md#modal-propagation).
 
 **Proofs:** [strong-leibniz-rigid-bottom-cut.md](source/research/2026-10-22/strong-leibniz-rigid-bottom-cut.md) · [audit-rigid-bottom-cut.md](source/research/2026-10-22/notes/audit-rigid-bottom-cut.md)
 
@@ -399,6 +449,8 @@ Finite torsor models plus Henkin compactness give endomorphism splitting + neces
 ## rigidity.16
 
 **The transversal theorem.** Point-output Relational Choice plus represented well-ordered Boolean-chain joins implies Transversal Choice. Includes RC+BC⇒TC and its sharper choice-instance refinement as one theorem. Routes: `relational-choice-boolean-completeness-transversal-proof.md`; `rc-guarded-progressive-operation.md`.
+
+**Lean certified:** [`CHOICE-COMPLETENESS`](evidence/RESULT-INDEX.md#choice-completeness): RC + BC ⇒ TC; the sharp Actuality theorem, Actuality-based TC, and the same-type RC + BC and CBC + CCC consequences.
 
 **Exact reconciliation scope:** For any admitted type sigma, including e: unboxed RC_(sigma t,sigma t) + BC_(sigma t) => TC_sigma. Actual equivalence relations; no Actuality, BC_tt, ND, BF, or Plenitude premise. All shallow theorem, relational-type, and object-language translation checks passed; gate reports C-minus. For admitted sigma,kappa: unboxed RC_(sigma t,sigma t) + CBC_(kappa,sigma t) + BooleanCCC_(kappa,sigma t) => TC_sigma. CBC and CCC use represented Frege-label countability, not external countability. This retains property-output RC, not the sharper point-output premise. For admitted counting type kappa and relational type tau: unboxed RC_(tau,tau) + CBC_(kappa,tau) + BooleanCCC_(kappa,tau) => BC_tau. Generic Rel/Order/Pointwise interfaces implement the relational type system. A represented progressive, total, single-valued graph on a represented antisymmetric poset has a fixed point whenever its represented canonical union has the supplied DomainLUB. This is certified support for one-supremum/chain refinements, not a certificate for every resulting choice theorem. Unboxed RC_(t,t) + BC_tt => Actuality. For any admitted sigma: unboxed RC_(t,t) + BC_tt + RC_(sigma t,sigma) => TC_sigma. This uses Actuality and Transversal; it is not the direct RC_(sigma t,sigma)+BC_(sigma t) theorem.
 
@@ -430,6 +482,8 @@ Finite torsor models plus Henkin compactness give endomorphism splitting + neces
 ## rigidity.19
 
 **Countable-completeness upgrade.** Matching RC+CBC+CCC implies BC, with the sharpened point-choice transversal consequence. Route: `relational-choice-countable-completeness-ccc.md`.
+
+**Lean certified:** [`CHOICE-COMPLETENESS`](evidence/RESULT-INDEX.md#choice-completeness): RC + BC ⇒ TC; the sharp Actuality theorem, Actuality-based TC, and the same-type RC + BC and CBC + CCC consequences.
 
 **Proofs:** [relational-choice-countable-completeness-ccc.md](source/research/2026-10-22/notes/relational-choice-countable-completeness-ccc.md)
 
@@ -539,6 +593,8 @@ Finite torsor models plus Henkin compactness give endomorphism splitting + neces
 
 **Corrected old/new model.** ND+full BC+¬IC_et+¬RigidComprehension_et at E, but ¬BC_et at O. Route: `old-new-boolean-completeness-and-rigidity-separation.md`.
 
+**Lean certified:** [`OLDNEW-SEPARATION`](evidence/RESULT-INDEX.md#oldnew-separation).
+
 **Proofs:** [old-new-boolean-completeness-and-rigidity-separation.md](source/research/2026-10-22/notes/old-new-boolean-completeness-and-rigidity-separation.md)
 
 **Scoped evidence:** [`OLDNEW-SEPARATION`](evidence/RESULT-INDEX.md#oldnew-separation)
@@ -579,6 +635,8 @@ A fixed-point entrance C-model with singleton individuals satisfies Atomicity, B
 
 Arithmetic-infinity equivalences, including the C5/domain-infinity boundary — `frege-infinity-20261022-1726.md` §§26–28,33.
 
+**Lean certified:** [`ARITHMETIC-FOUNDATIONS`](evidence/RESULT-INDEX.md#arithmetic-foundations): The displayed Frege noncollapse and finiteness equivalences, number-map/Hume-class results, and C5–Actuality transfer results.
+
 **Proofs:** [frege-infinity-20261022-1726.md](source/research/2026-10-22/notes/frege-infinity-20261022-1726.md)
 
 **Scoped evidence:** [`ARITHMETIC-FOUNDATIONS`](evidence/RESULT-INDEX.md#arithmetic-foundations)
@@ -587,6 +645,8 @@ Arithmetic-infinity equivalences, including the C5/domain-infinity boundary — 
 ## principles.02
 
 Function-type finiteness classification and higher-type infinity propagation — `relational-coding-recursion-20261022.md` §§24,27,30.
+
+**Lean certified:** [`ARITHMETIC-FOUNDATIONS`](evidence/RESULT-INDEX.md#arithmetic-foundations): The displayed Frege noncollapse and finiteness equivalences, number-map/Hume-class results, and C5–Actuality transfer results.
 
 **Proofs:** [relational-coding-recursion-20261022.md](source/research/2026-10-22/notes/relational-coding-recursion-20261022.md)
 
@@ -615,6 +675,8 @@ Exact pure-Max arithmetic theory Cn(T_arith ∪ TrueΠ₁), with the specified c
 
 Canonical successor-preserving arithmetic graphs between original counting bases — relational report §38.
 
+**Lean certified:** [`MAX-PREDECESSOR`](evidence/RESULT-INDEX.md#max-predecessor): The no-predecessor theorem at every closed counting type; the total unique graph and Plenitude failure at e.
+
 **Proofs:** [relational-coding-recursion-20261022.md](source/research/2026-10-22/notes/relational-coding-recursion-20261022.md)
 
 **Scoped evidence:** [`MAX-PREDECESSOR`](evidence/RESULT-INDEX.md#max-predecessor)
@@ -623,6 +685,8 @@ Canonical successor-preserving arithmetic graphs between original counting bases
 ## principles.06
 
 Max forbids predecessor operations and the displayed cross-base arithmetic operations — relational report §§34–35,38.
+
+**Lean certified:** [`MAX-PREDECESSOR`](evidence/RESULT-INDEX.md#max-predecessor): The no-predecessor theorem at every closed counting type; the total unique graph and Plenitude failure at e.
 
 **Proofs:** [relational-coding-recursion-20261022.md](source/research/2026-10-22/notes/relational-coding-recursion-20261022.md)
 
@@ -827,6 +891,8 @@ SP's exact finite-profile atom decompositions — `sp-finite-profile-rank-202610
 
 Pure/signature SP incompatibility and exact finite individual-name bounds — `audit-signature-to-pure-sp-20261022.md` §§1–7,10.
 
+**Lean certified:** [`SP-SIGNATURE-CONFLICT`](evidence/RESULT-INDEX.md#sp-signature-conflict): The signature-splitting lemma. [`SP-INDIVIDUAL-CARDINALITY`](evidence/RESULT-INDEX.md#sp-individual-cardinality): The conditional monism/reflection lemma.
+
 **Proofs:** [audit-signature-to-pure-sp-20261022.md](source/research/2026-10-22/notes/audit-signature-to-pure-sp-20261022.md)
 
 **Scoped evidence:** [`SP-SIGNATURE-CONFLICT`](evidence/RESULT-INDEX.md#sp-signature-conflict) · [`SP-INDIVIDUAL-CARDINALITY`](evidence/RESULT-INDEX.md#sp-individual-cardinality)
@@ -908,6 +974,8 @@ Finite pointed-complete/coalesced structures separating finite effective complet
 
 **Exact algebraic consistency/embedding criteria for SP.** SP equals Max plus the individually Max-consistent universal finite-Boolean-identity sentences; consistency is equivalent to the restricted existential-identity disjunction property. The normalized H-disjunction criterion and the criterion using embeddings into elementary extensions of every genuine Max model belong to this same family. This includes H-clopen embedding invariance. Routes: `notes/reflection-universal-core-20261022.md` §§2–7; `notes/sp-failed-disjunction-20261022.md` §§17,18.2. The required joint-embedding theorem and general H-clopen classification are not proved.
 
+**Lean certified:** [`SP-CRITERIA`](evidence/RESULT-INDEX.md#sp-criteria): The universal-core equivalence and the stated conditional disjunction criterion.
+
 **Proofs:** [reflection-universal-core-20261022.md](source/research/2026-10-22/notes/reflection-universal-core-20261022.md) · [reflection-universal-core-20261022.md](source/research/2026-10-22/sp-structural-proof-package/reflection-universal-core-20261022.md) · [sp-failed-disjunction-20261022.md](source/research/2026-10-22/notes/sp-failed-disjunction-20261022.md)
 
 **Scoped evidence:** [`SP-CRITERIA`](evidence/RESULT-INDEX.md#sp-criteria)
@@ -916,6 +984,8 @@ Finite pointed-complete/coalesced structures separating finite effective complet
 ## sp_supplement.02
 
 **Essential common-term algebra criterion.** Essentiality for the full pure term-operation signature is equivalent to the stated modal-ideal/density condition and is sufficient for a genuine Max model to satisfy SP; such an essential genuine model would fail Vicinity and Actuality. Route: `notes/sp-essential-extension-20261022.md` §§1–6,8. Exact status correction: essentiality has **not been shown necessary** for SP. There is no proved nonnecessity result and no essential genuine SP model is supplied.
+
+**Lean certified:** [`SP-CRITERIA`](evidence/RESULT-INDEX.md#sp-criteria): The universal-core equivalence and the stated conditional disjunction criterion.
 
 **Proofs:** [sp-essential-extension-20261022.md](source/research/2026-10-22/notes/sp-essential-extension-20261022.md)
 
@@ -980,6 +1050,8 @@ Finite pointed-complete/coalesced structures separating finite effective complet
 
 **Internal world-indexed representation.** Encode/decode of arbitrary relational intensions as admitted rigid world-indexed extensions; world-times-tuple atomic normal form and internal truth lemma; the associated slicing/normalization laws. These are grouped as one representation family, with no external-fullness assertion. Route: world-representation §§3–4; root §1. This concerns internal truth-table representation. The Gallin biinterpretation and local Actuality/GC cores have separate entries.
 
+**Lean certified:** [`PROFILE-WORLD-ALGEBRA`](evidence/RESULT-INDEX.md#profile-world-algebra): The finite-profile and atomic-profile results.
+
 **Proofs:** [structural-world-representation.md](source/research/2026-10-22/evaluation-and-choice/structural-world-representation.md) · [structural-world-representation.md](source/research/2026-10-22/notes/structural-world-representation.md) · [structural-representation-root.md](source/research/2026-10-22/evaluation-and-choice/structural-representation-root.md) · [structural-representation-root.md](source/research/2026-10-22/notes/structural-representation-root.md)
 
 **Scoped evidence:** [`PROFILE-WORLD-ALGEBRA`](evidence/RESULT-INDEX.md#profile-world-algebra)
@@ -1015,6 +1087,8 @@ Finite pointed-complete/coalesced structures separating finite effective complet
 ## world_algebra.05
 
 **Profile-map characterization and Cantor boundary.** EU is surjectivity and S injectivity of the world-to-rigid-profile map; literal pattern-cell characterization. The strongest type-boundary result is already in BARE C: unrestricted raw WR for all current profiles is impossible at every relational input type. Under T, raw WR and the rigid-profile EU formulation agree, so this supplies the EU boundary there. Do not silently identify the two outside T. Route: world-representation §5; root §§2, 4; world-cardinality-ucp-20261022.md §§12–17.
+
+**Lean certified:** [`PROFILE-WORLD-ALGEBRA`](evidence/RESULT-INDEX.md#profile-world-algebra): The finite-profile and atomic-profile results.
 
 **Proofs:** [world-cardinality-ucp-20261022.md](source/research/2026-10-22/notes/world-cardinality-ucp-20261022.md) · [structural-world-representation.md](source/research/2026-10-22/evaluation-and-choice/structural-world-representation.md) · [structural-world-representation.md](source/research/2026-10-22/notes/structural-world-representation.md) · [structural-representation-root.md](source/research/2026-10-22/evaluation-and-choice/structural-representation-root.md) · [structural-representation-root.md](source/research/2026-10-22/notes/structural-representation-root.md)
 
@@ -1078,6 +1152,8 @@ Finite pointed-complete/coalesced structures separating finite effective complet
 ## world_algebra.12
 
 **Complete Boolean retractions characterize full Choice.** Over T, complete retractions onto all admitted internally complete subalgebras at all relational types iff boxed FC. One canonical membership inclusion per output type suffices. Route: algebraic-core §§16, 18–19, 38; mixing §16; root §§10–11, 23. This is Boolean subalgebra splitting, distinct from ordinary surjection sections.
+
+**Lean certified:** [`PROFILE-WORLD-ALGEBRA`](evidence/RESULT-INDEX.md#profile-world-algebra): The finite-profile and atomic-profile results.
 
 **Proofs:** [structural-algebraic-core.md](source/research/2026-10-22/evaluation-and-choice/structural-algebraic-core.md) · [structural-algebraic-core.md](source/research/2026-10-22/notes/structural-algebraic-core.md) · [structural-mixing-models.md](source/research/2026-10-22/evaluation-and-choice/structural-mixing-models.md) · [structural-mixing-models.md](source/research/2026-10-22/notes/structural-mixing-models.md) · [structural-representation-root.md](source/research/2026-10-22/evaluation-and-choice/structural-representation-root.md) · [structural-representation-root.md](source/research/2026-10-22/notes/structural-representation-root.md)
 
@@ -1202,6 +1278,8 @@ Finite pointed-complete/coalesced structures separating finite effective complet
 
 **Exact and arbitrarily high supported profile richness without Choice.** Explicit ordinary-ZFC nominal models have BP+both quantified infinities+UWR_e/AUCP_e but fail Functional Choice; the tagged nominal hierarchy realizes every finite supported rigid-core WR rank simultaneously while still failing FC. The finite-profile Fin(A) versus full admitted-profile Fin(A)∪Cofin(A) separation is grouped with this construction family. These are distinct from item 20's ordered endpoint construction: here full exact individual profiles DO exist, and the point is their insufficiency for Choice. Routes: world-cardinality-ucp-20261022.md §§35–36; infinity-world-richness-consolidation-20261022.md §6. The nominal support-bound classification is recorded separately.
 
+**Lean certified:** [`PROFILE-WORLD-ALGEBRA`](evidence/RESULT-INDEX.md#profile-world-algebra): The finite-profile and atomic-profile results.
+
 **Proofs:** [world-cardinality-ucp-20261022.md](source/research/2026-10-22/notes/world-cardinality-ucp-20261022.md) · [infinity-world-richness-consolidation-20261022.md](source/research/2026-10-22/notes/infinity-world-richness-consolidation-20261022.md) · [structural-representation-root.md](source/research/2026-10-22/evaluation-and-choice/structural-representation-root.md) · [structural-representation-root.md](source/research/2026-10-22/notes/structural-representation-root.md)
 
 **Scoped evidence:** [`PROFILE-WORLD-ALGEBRA`](evidence/RESULT-INDEX.md#profile-world-algebra)
@@ -1220,6 +1298,8 @@ Finite pointed-complete/coalesced structures separating finite effective complet
 
 **C5 transfer of generated algebras and natural cardinalities.** The finite-sorted impredicative-generation transfer theorem, with admitted commuting maps and its explicit inverse conditions, includes the original/core Frege-natural isomorphism at every counting type. No Actuality or Choice is required. Proofs: [generated algebras](source/research/2026-10-22/notes/c5-generated-algebra-transfer-20261022.md), §§1–6; [natural-cardinality transfer](source/research/2026-10-22/notes/audit-infinity-transfer-20261022.md), §§3–7. This concerns the rigid C5 core and is distinct from the Actuality/GC slice transfer and the arithmetic-infinity classification.
 
+**Lean certified:** [`ARITHMETIC-FOUNDATIONS`](evidence/RESULT-INDEX.md#arithmetic-foundations): The displayed Frege noncollapse and finiteness equivalences, number-map/Hume-class results, and C5–Actuality transfer results.
+
 **Proofs:** [c5-generated-algebra-transfer-20261022.md](source/research/2026-10-22/notes/c5-generated-algebra-transfer-20261022.md) · [audit-infinity-transfer-20261022.md](source/research/2026-10-22/notes/audit-infinity-transfer-20261022.md) · [certificate.json](evidence/certificates/generated-algebra-source/certificate.json) · [certificate.json](evidence/certificates/generated-algebra-target/certificate.json) · [certificate.json](evidence/certificates/generated-algebra-left-inverse-zero/certificate.json)
 
 **Scoped evidence:** [`ARITHMETIC-FOUNDATIONS`](evidence/RESULT-INDEX.md#arithmetic-foundations)
@@ -1231,7 +1311,7 @@ Finite pointed-complete/coalesced structures separating finite effective complet
 
 **Evidence:** [main](DATABASE-INTEGRATION.md#model_interpretation.02--main).
 
-**Lean certified:** The propositional orbit/Dedekind-infinity equivalence and the atom-world all-type ☐Intensional Choice countermodel.
+**Lean certified:** Full permutation group and finite supports: propositional operational Dedekind infinity iff infinitely many global world orbits; atom-world necessary Intensional Choice at every admitted type and necessary failure of operational Dedekind infinity. Semantic metatheory; not a certificate for the full arbitrary-world Choice classification.
 
 **Proofs:** [nominal-choice-classification-20261022.md](source/research/2026-10-22/notes/nominal-choice-classification-20261022.md) · [nominal-orbit-classification.md](proofs/nominal-orbit-classification.md) · [certificate.json](evidence/certificates/nominal-orbit-classification/certificate.json)
 
@@ -1271,6 +1351,8 @@ Finite pointed-complete/coalesced structures separating finite effective complet
 
 RC_(t,t)+BC_(tt) implies Actuality, unboxed. BC_tt gives BC_t and a haecceity join; represented disjoint refinement reduces to the reflection lemma for a true disjoint join. Boxed premises yield the boxed conclusion only by necessitating the discharged theorem.
 
+**Lean certified:** [`CHOICE-COMPLETENESS`](evidence/RESULT-INDEX.md#choice-completeness): RC + BC ⇒ TC; the sharp Actuality theorem, Actuality-based TC, and the same-type RC + BC and CBC + CCC consequences.
+
 **Proofs:** [INVENTORY.md](source/research/2026-10-22/lean-formalization/INVENTORY.md) · [choice-completeness-actuality.md](source/research/2026-10-22/followup/choice-completeness-actuality.md) · [choice-completeness-actuality-audit.md](source/research/2026-10-22/followup/choice-completeness-actuality-audit.md)
 
 **Scoped evidence:** [`CHOICE-COMPLETENESS`](evidence/RESULT-INDEX.md#choice-completeness)
@@ -1307,6 +1389,8 @@ Symmetric full-BC surjection construction fails precisely RC_(t,t); stronger sup
 
 SL+RigidComp implies full boxed RigidComp and boxed BC, including individual/mixed tuples by haecceity-code pullback. Weaker sufficient package: SL_t+RigidComp+BF_rel.
 
+**Lean certified:** [`MODAL-PROPAGATION`](evidence/RESULT-INDEX.md#modal-propagation).
+
 **Proofs:** [INVENTORY.md](source/research/2026-10-22/lean-formalization/INVENTORY.md) · [modal-propagation.md](source/research/2026-10-22/followup/modal-propagation.md)
 
 **Scoped evidence:** [`MODAL-PROPAGATION`](evidence/RESULT-INDEX.md#modal-propagation)
@@ -1324,6 +1408,8 @@ Stitched forcing/coalesced middle-world countermodel to dropping BF_rel: boxed S
 ## F07
 
 Every permitted fixed set-sized signature has supported-product gluing model of Logical Necessity, boxed BF/TR, RelChoice and Countable BC, atomlessness and failure of Actuality/Vicinity/WIC/RP. Infinite-moving-individual variant has both quantified infinities.
+
+**Lean certified:** [`LOGICAL-NECESSITY-SEPARATION`](evidence/RESULT-INDEX.md#logical-necessity-separation).
 
 **Proofs:** [INVENTORY.md](source/research/2026-10-22/lean-formalization/INVENTORY.md) · [central-map.md](source/research/2026-10-22/followup/central-map.md)
 
@@ -1361,6 +1447,8 @@ Conditional AD_R uniformization separator; failed one-block Cohen reservoir refu
 
 Pure Maximalism + unboxed propositional Atomicity is inconsistent. The final proof and exact Lean certificate use the canonical Jech–Shelah splitting construction; no extra selector or non-theoremhood hypothesis remains.
 
+**Lean certified:** [`MAX-ATOMICITY`](evidence/RESULT-INDEX.md#max-atomicity).
+
 **Proofs:** [INVENTORY.md](source/research/2026-10-22/lean-formalization/INVENTORY.md) · [max-atomicity-rigid-selector.md](source/research/2026-10-22/followup/max-atomicity-rigid-selector.md) · [max-atomicity-selector-audit.md](source/research/2026-10-22/followup/max-atomicity-selector-audit.md)
 
 **Scoped evidence:** [`MAX-ATOMICITY`](evidence/RESULT-INDEX.md#max-atomicity)
@@ -1379,6 +1467,8 @@ Atomicity preserved by stated full coalescences; exact single-sentence construct
 
 Truth-preserving Boolean absorption/elementarity over the common term algebra, arbitrary finite Boolean alternations and several fixed evaluations; guarded numerical disjunction/witness preservation.
 
+**Lean certified:** [`SP-CRITERIA`](evidence/RESULT-INDEX.md#sp-criteria): The universal-core equivalence and the stated conditional disjunction criterion.
+
 **Proofs:** [INVENTORY.md](source/research/2026-10-22/lean-formalization/INVENTORY.md) · [strong-possibility.md](source/research/2026-10-22/followup/strong-possibility.md)
 
 **Scoped evidence:** [`SP-CRITERIA`](evidence/RESULT-INDEX.md#sp-criteria)
@@ -1388,6 +1478,8 @@ Truth-preserving Boolean absorption/elementarity over the common term algebra, a
 
 Pure SP one-step C+I omega-rule and true Pi02 arithmetic; sharp correctness boundary if consistent; explicit numerical H-Barcan obstruction.
 
+**Lean certified:** [`SP-CRITERIA`](evidence/RESULT-INDEX.md#sp-criteria): The universal-core equivalence and the stated conditional disjunction criterion.
+
 **Proofs:** [INVENTORY.md](source/research/2026-10-22/lean-formalization/INVENTORY.md) · [strong-possibility.md](source/research/2026-10-22/followup/strong-possibility.md)
 
 **Scoped evidence:** [`SP-CRITERIA`](evidence/RESULT-INDEX.md#sp-criteria) · [`SP-ARITHMETIC-REFLECTION`](evidence/RESULT-INDEX.md#sp-arithmetic-reflection)
@@ -1396,6 +1488,8 @@ Pure SP one-step C+I omega-rule and true Pi02 arithmetic; sharp correctness boun
 ## F15
 
 Full-term homomorphisms embed actual number fields; retractions force arithmetic isomorphism. D(P) at Max model M iff a one-way full-term embedding into a Max+P model. Exact target-kernel quotient, algebraic removal of H(G), and no-go for generic term/numerical profiles.
+
+**Lean certified:** [`SP-CRITERIA`](evidence/RESULT-INDEX.md#sp-criteria): The universal-core equivalence and the stated conditional disjunction criterion.
 
 **Proofs:** [INVENTORY.md](source/research/2026-10-22/lean-formalization/INVENTORY.md) · [strong-possibility-one-way.md](source/research/2026-10-22/followup/strong-possibility-one-way.md)
 
@@ -1415,6 +1509,8 @@ In C, relational-atom existential projection is a proposition atom; coordinates 
 
 Canonical completely additive atomic part below a finite additive faithful charge, zero-on-atoms remainder and normalized faithful replacement by finite subsums.
 
+**Lean certified:** [`PROBABILITY`](evidence/RESULT-INDEX.md#probability): Supported-real suprema, natural-number order and basic numeric operations; cut crossing and supported-real negation, subtraction and inverses. Numeric-operation laws retain ActualWorld, quantified Infinity and domain guards; induction and cases require ActualWorld alone.
+
 **Proofs:** [INVENTORY.md](source/research/2026-10-22/lean-formalization/INVENTORY.md) · [canonical-atomic-probability.md](source/research/2026-10-22/proof-refinements/canonical-atomic-probability.md)
 
 **Scoped evidence:** [`PROBABILITY`](evidence/RESULT-INDEX.md#probability)
@@ -1433,6 +1529,8 @@ Over C + ☐Functional Choice + quantified Infinity_e, faithful represented-R-in
 
 Actuality+quantified Infinity_e gives exact number isomorphism with its slice; GC version too. Preserves literal number identity and represented arithmetic/subsets, without Choice or BF.
 
+**Lean certified:** [`ARITHMETIC-FOUNDATIONS`](evidence/RESULT-INDEX.md#arithmetic-foundations): The displayed Frege noncollapse and finiteness equivalences, number-map/Hume-class results, and C5–Actuality transfer results.
+
 **Proofs:** [INVENTORY.md](source/research/2026-10-22/lean-formalization/INVENTORY.md) · [infinity-core-number-isomorphism.md](source/research/2026-10-22/proof-refinements/infinity-core-number-isomorphism.md)
 
 **Scoped evidence:** [`ARITHMETIC-FOUNDATIONS`](evidence/RESULT-INDEX.md#arithmetic-foundations)
@@ -1441,6 +1539,8 @@ Actuality+quantified Infinity_e gives exact number isomorphism with its slice; G
 ## R05
 
 Over C + ☐Plenitude + quantified Infinity_e, faithful finite/countable/complete-additive probability iff finite-fibre numerical labelling of worlds. Countable Choice for finite fields upgrades this to injection/countability.
+
+**Lean certified:** [`PROBABILITY`](evidence/RESULT-INDEX.md#probability): Supported-real suprema, natural-number order and basic numeric operations; cut crossing and supported-real negation, subtraction and inverses. Numeric-operation laws retain ActualWorld, quantified Infinity and domain guards; induction and cases require ActualWorld alone.
 
 **Exact reconciliation scope:** Finite fibres need not be singletons. The countability upgrade needs its separate choice resource; the exact finite-fibre statement does not. The countably/completely additive state is a constructed replacement; an arbitrary original finitely additive state is not thereby countably additive. R09 supplies current graph-valued probabilities, not automatically ambient C operations or a future-stable globally rigid real-code domain. It does not lower the stronger assumptions of higher-type or lifted world-symmetry theorems. Ordinary arithmetic or analysis-stability theorems do not provide the required internal number/core interpretation, represented-family operations, finite-fibre criterion, or type-ceiling argument.
 
@@ -1455,6 +1555,8 @@ Over C + ☐Plenitude + quantified Infinity_e, faithful finite/countable/complet
 
 Choice-free averaging on finite world classes gives unique completely additive invariant state with normalized class masses, idempotently; criterion is finite-fibre labelling plus finite classes over C + ☐Plenitude + Infinity_e.
 
+**Lean certified:** [`PROBABILITY`](evidence/RESULT-INDEX.md#probability): Supported-real suprema, natural-number order and basic numeric operations; cut crossing and supported-real negation, subtraction and inverses. Numeric-operation laws retain ActualWorld, quantified Infinity and domain guards; induction and cases require ActualWorld alone.
+
 **Exact reconciliation scope:** Finite fibres need not be singletons. The countability upgrade needs its separate choice resource; the exact finite-fibre statement does not. The countably/completely additive state is a constructed replacement; an arbitrary original finitely additive state is not thereby countably additive. R09 supplies current graph-valued probabilities, not automatically ambient C operations or a future-stable globally rigid real-code domain. It does not lower the stronger assumptions of higher-type or lifted world-symmetry theorems. Ordinary arithmetic or analysis-stability theorems do not provide the required internal number/core interpretation, represented-family operations, finite-fibre criterion, or type-ceiling argument.
 
 **Scope assessment:** [integration-scope-reconciliation.json](evidence/integration-scope-reconciliation.json)
@@ -1467,6 +1569,8 @@ Choice-free averaging on finite world classes gives unique completely additive i
 ## R07
 
 Admitted powerset P(X) has finite-fibre numerical labelling iff X is internally finite. Choice-free tt ceiling; event type (et)t already conflicts with quantified Infinity_e under C + ☐Plenitude.
+
+**Lean certified:** [`PROBABILITY`](evidence/RESULT-INDEX.md#probability): Supported-real suprema, natural-number order and basic numeric operations; cut crossing and supported-real negation, subtraction and inverses. Numeric-operation laws retain ActualWorld, quantified Infinity and domain guards; induction and cases require ActualWorld alone.
 
 **Exact reconciliation scope:** Finite fibres need not be singletons. The countability upgrade needs its separate choice resource; the exact finite-fibre statement does not. The countably/completely additive state is a constructed replacement; an arbitrary original finitely additive state is not thereby countably additive. R09 supplies current graph-valued probabilities, not automatically ambient C operations or a future-stable globally rigid real-code domain. It does not lower the stronger assumptions of higher-type or lifted world-symmetry theorems. Ordinary arithmetic or analysis-stability theorems do not provide the required internal number/core interpretation, represented-family operations, finite-fibre criterion, or type-ceiling argument.
 
@@ -1481,6 +1585,8 @@ Admitted powerset P(X) has finite-fibre numerical labelling iff X is internally 
 
 Ordinary Eval (equivalently ND+Actuality) yields canonical quantifier-preserving actual-world evaluator; global bivalence identifies any supplied evaluator with it. No BF/Choice or future-predicate boxed law.
 
+**Lean certified:** [`EVALUATORS-CORES`](evidence/RESULT-INDEX.md#evaluators-cores): Actuality-core conversion and admitted-value lemmas.
+
 **Proofs:** [INVENTORY.md](source/research/2026-10-22/lean-formalization/INVENTORY.md) · [canonical-actual-evaluator.md](source/research/2026-10-22/proof-refinements/canonical-actual-evaluator.md)
 
 **Scoped evidence:** [`EVALUATORS-CORES`](evidence/RESULT-INDEX.md#evaluators-cores)
@@ -1489,6 +1595,8 @@ Ordinary Eval (equivalently ND+Actuality) yields canonical quantifier-preserving
 ## R09
 
 Local graph-valued propositional probability finite-fibre criterion under Actuality+Atomicity_t+BC_t+quantified Infinity_e, without ND/BF/Plenitude/Choice.
+
+**Lean certified:** [`PROBABILITY`](evidence/RESULT-INDEX.md#probability): Supported-real suprema, natural-number order and basic numeric operations; cut crossing and supported-real negation, subtraction and inverses. Numeric-operation laws retain ActualWorld, quantified Infinity and domain guards; induction and cases require ActualWorld alone.
 
 **Exact reconciliation scope:** Finite fibres need not be singletons. The countability upgrade needs its separate choice resource; the exact finite-fibre statement does not. The countably/completely additive state is a constructed replacement; an arbitrary original finitely additive state is not thereby countably additive. R09 supplies current graph-valued probabilities, not automatically ambient C operations or a future-stable globally rigid real-code domain. It does not lower the stronger assumptions of higher-type or lifted world-symmetry theorems. Ordinary arithmetic or analysis-stability theorems do not provide the required internal number/core interpretation, represented-family operations, finite-fibre criterion, or type-ceiling argument.
 
@@ -1505,12 +1613,16 @@ At any one relational type, operation-valued uniform Persistent, Weak Persistent
 
 **Evidence:** [main](DATABASE-INTEGRATION.md#catalog.06--main).
 
+**Lean certified.**
+
 **Proofs:** [RESULT-CATALOG.md](source/research/2026-10-22/RESULT-CATALOG.md) · [uniform-half-comprehension-definitions.md](source/research/2026-10-22/notes/uniform-half-comprehension-definitions.md)
 
 <a id="central.signature_countermodels"></a>
 ## central.signature_countermodels
 
 Finite/natural full-model single-constant signature separators for the displayed central-question rows, with exact signature restrictions.
+
+**Lean certified:** [`SIGNATURE-INDEPENDENCE`](evidence/RESULT-INDEX.md#signature-independence).
 
 **Proofs:** [central-questions-audit.md](source/research/2026-10-22/central-questions-audit.md)
 
@@ -1669,7 +1781,7 @@ For a fixed actual equivalence R, two specified Relational Choice instances yiel
 
 Over C, Atomicity (type t) and BF at each tested type give separation by operators preserving Boolean connectives and both quantifiers as composite operation identities. Over C + ☐ND (type t) + Actuality this separation is equivalent to Atomicity (type t).
 
-**Lean certified:** The propositional Atomicity characterization at quantifier type t, and the construction of observers at each fixed quantifier type.
+**Lean certified:** Simultaneous propositional separation for every finite list of closed quantifier types under C5 + Atomicity (type t), including its necessary schema; the converses and equivalence of the two schemas under C5 + Actuality.
 
 **Proofs:** [operator-representation.md](proofs/operator-representation.md) · [ordered-observers.md](proofs/ordered-observers.md) · [full-identity-observers.md](proofs/full-identity-observers.md) · [local-observers.md](proofs/local-observers.md) · [operator-boundaries.md](proofs/operator-boundaries.md) · [observer-lattice.md](proofs/observer-lattice.md)
 
@@ -1757,6 +1869,8 @@ C + ☐Functional Choice has a Henkin model satisfying both finite lower-bound I
 ## synthesis.h-observer-space
 
 For any finite set Γ of independent primitive preservation clauses M, V, N, Qσ, Pσ, put T_J = H + S[A ∧ Z ∧ J]. At a fixed preservation tier and fixed propositional or full relational scope, T_K entails T_J exactly when J ⊆ K. Uniform corruption models prove every omitted-clause non-implication. For every observer qualification K, full relational separation is equivalent over H to propositional separation plus Functionality. Conjoining separately separating classes can be strictly weaker than requiring one class to satisfy both qualifications. The accompanying representation theorems characterize the connective, quantifier and equality branches with their explicit premises. Reversible accepting/rejecting meet separation plus one atom makes atoms separate order, represents every proposition as the join of its atoms, and gives a unique true atom. Under internal Frege finiteness of all propositions, material and pointwise meet separation are equivalent, and likewise for join separation, retaining each acceptance/rejection orientation. Full relational separation collapses all three tiers. A least true meet element or greatest false join element suffices for the corresponding normalization without finiteness. Reversible meet separation plus one atom is exactly bounded atomistic meet structure, a true atom and transitivity of admitted full-meet automorphisms on atoms; arbitrary extra restrictions use the exact MoveTrue condition without closure assumptions. A six-element model shows that atomisticity and a true atom alone do not suffice. For each finite preservation signature, pointwise separation is equivalent to the existence of an admitted composition-closed separating family of material observers, equivalently such a composition-closed family containing identity. Finite-image material meet separation is equivalent to at-most-two-output pointwise meet separation, and likewise for join, without finiteness of the proposition domain. Full typed OS need not imply ☐BF or ☐Functionality. Endpoint logical separation is equivalent to C5 + ☐OS + one atom, and already to C5 plus the boxed propositional Good_{ {t} } separation instance plus one atom. Reversible logical separation implies C5 + ☐OS + No Pure Contingency, with no atom or Actuality premise. The proof extends qualified involutions by typewise conjugation and applies separation to each closed pure sentence. Reversible logical separation is strictly stronger than C5 + ☐OS, even among atomless models: the even-block/power-of-two-block symmetry model has necessary OS but a contingent closed pure six-element selection sentence. Over H + ND (type t), material and pointwise meet/universal separation have the same exact meet/GLB representation, with a dual join/existential result. Finite-image normalization extends to matching quantifiers and joint M,V,Q,P packages. Over C, an admitted whole inverse is equivalent to necessary bijectivity; invertible Q_t observers are automatically Boolean. Local stabilizer conjugacy supplies reversible observers in the stated symmetry-model families. Internal Frege finiteness also gives exact affine representation by two-output pointwise homomorphisms, separately for XOR and biconditional. Finite-image material affine separation has the same normalization without finiteness of the domain. Plenitude at (t,t), stated explicitly over H, normalizes all seven nonempty primitive connective signatures, each affine operation, and the verified matching lattice/quantifier packages, including infinite-image observers. Full qualified right-inverse separation is exactly Rev. Qualified left-inverse separation is strictly weaker even with C5 and its own boxed schema; it implies OS, but not C5, ☐OS, its own boxed schema, ☐BF or ☐Functionality. The ternary Cantor model satisfies the separate endpoint-fixing M/Q/P, V/Q/P and N/Q/P separation schemas and their boxes, together with C and boxed BF and Functionality, while even propositional Boolean separation fails. Both arrows Rev ⇒ SplitMono ⇒ OS are strict. The full fork satisfies ☐OS and all boxed BF and Functionality but fails SplitMono, so SplitMono and ☐OS are incomparable. Under internal Fin_t(All), full SplitMono, Rev and endpoint separation coincide. Over H plus the preorder Zorn instance at tt, every admitted partial Boolean-group truth character extends, and material affine separation is exactly the relevant group equations with the stated endpoint alignments. Under Plenitude at (t,t), material negation separation and each separate material affine separation are equivalent to pointwise involutive separation, fixing the endpoints mentioned by the qualification; whole identities retain local Functionality or full typed scope. The component-shift symmetry model satisfies C5 + ☐SplitMono + No Pure Contingency but not Rev. Rev further implies noncontingency for pure formulas with finitely many individual parameters and endpoint-valued first-order relation parameters. Zorn at tt also supplies admitted prime filters and extension of admitted partial lattice truth characters over H; material joint lattice and Boolean separation have exact algebraic converses under this explicit premise, with the stated endpoint alignments and derived operations. Over bare H, joint negation/affine material separation is exactly affine separation plus the translation identity ¬x=x+c, c=¬0. Joint XOR/biconditional separation is exactly XOR separation plus the corresponding translated-operation identity. Under the actual expansion X=¬D, all three two-operation material packages agree with the three-operation package; Plenitude supplies pointwise involutions for the linked signatures. Over C + BF, at each finite list Δ containing t and relational output type τ, SplitMonoSep(τ,Δ) is equivalent to RevSep(τ,Δ) or [OS(τ,Δ) and KΔ], where KΔ asserts one admitted qualified pair F∘E=I and a true c with Fc=Bottom. The full-H form is full OS plus the external schema RevSep(t,Δ) or KΔ. The condition D_t that every admitted injective E:tt is onto makes full SplitMono and Rev equivalent. It is strictly weaker than internal Frege finiteness: a two-colour finite-pinning model satisfies C5 + Rev + D_t with atomless propositions, while endpoint separation and internal Frege finiteness fail. Over H, endpoint separation is equivalent to OS + Plenitude at (t,t), OS + full Plenitude, C5 + OS + Actuality, C5 + OS + Boolean Completeness, and C5 + Atomicity (type t). Already C + BF (type t) + Plenitude at (t,t) is equivalent to C5 + Actuality. Over C5, each currently surjective Good observer at a finite list containing t has a definable admitted same-list qualified right inverse; hence Rev is equivalent over H to C5 + full surjective logical separation. Both chains Rev ⇒ SurjSep ⇒ OS and Rev ⇒ SplitMono ⇒ OS are strict. SurjSep and SplitMono are incomparable even over C + ☐BF + ☐OS, witnessed by the full omega-chain and the C5 finite-block model. Within C5, SurjSep is Rev and does imply SplitMono. The linear/circular fibre model satisfies C5 + ☐OS + D_t with atomless propositions but fails SplitMono at the explicit propositional list {t,e,et,eet,(et)t,((et)t)t}; a contingent closed pure sentence about infinite amorphous cells proves the obstruction. For an admitted group G of whole meet automorphisms over H, its common truth-profile relation is the largest admitted invariant truth-compatible equivalence and is a meet congruence; separation is exactly the absence of a nontrivial such congruence. On chains the obstruction is convex. An admitted order-primitive action on the interior of a bounded dense chain, together with an interior true/false pair, gives reversible meet separation. The rational-chain full-function model has joint reversible meet/join separation and all Functionality while C fails, with no atoms or truth extrema. Order primitivity is strictly weaker than order 2-homogeneity for admitted actions. A specified countably infinite sequence fixed by a source symmetry group in the all-bijections finite-pinning framework gives one qualified left-inverse pair with a true kernel element, normalizing ordinary separators at that source. At the trivial-symmetry object of the qualitative-contrast model, C5 + SplitMono holds but ☐OS and ☐SplitMono fail. Thus SplitMono and ☐OS are incomparable even over C5. Every full cancellative-monoid action model with singleton individuals satisfies separately boxed full SurjSep. A specified infinite sequence of distinct units also gives separately boxed full SplitMono, with one common qualified left inverse. A nonunit refutes C5. The concrete monoid ℤ×ℕ therefore refutes ☐SurjSep + ☐SplitMono ⇒ Rev, even over C + ☐BF. SurjSep + SplitMono lies strictly below Rev and strictly above each factor; its two witness families may be different. Over H, a bounded meet chain with a greatest false and a least true proposition and a specified admitted whole-meet automorphism group G has S[G] exactly when every nontrivial interval contains an adjacent pair and G is transitive on adjacent pairs. Plenitude at (t,t) plus Q_t/P_t supplying the admitted order bounds gives that truth cut, without C or Functionality. The full-function complete split interval is atomless and satisfies full reversible endpoint-fixing M,V,Q_Δ,P_Γ separation for every finite list while C fails; its observers need not preserve negation. For a specified admitted invariant convex block relation on the interior of a bounded dense chain, with each block without endpoints, global separation is exactly one crossed block, transitivity on blocks and separation by its admitted stabilizer. For a specified external finite central partition of a bounded distributive lattice preserved by G, global separation is exactly transitivity on factor units and stabilizer separation inside the unique true factor. Lexicographic rational-chain and finite-product atomless models give joint reversible M/V separation with all Functionality below C. Over C + BF (type t), Onto(E) implies ☐Onto(E), with E a free parameter; Good qualification is persistent over C. Full SurjSep nevertheless gives neither ☐OS nor ☐SurjSep, even with ☐BF and ☐Functionality. A root truth-profile extension of a fixed/free symmetry tail supplies this countermodel, with failure already at the future propositional Boolean instance. Thus Rev ⇒ ☐SurjSep ⇒ SurjSep and ☐SurjSep ⇒ ☐OS are strict. SurjSep does not imply ☐BF, with failure at every admitted type in the integer-shift predecessor model. Over C5, every admitted Good-{t} observer E has admitted order adjoints L ⊣ E ⊣ R, with Rq=∃p[(Ep≤q)∧p] and Lq=¬R(¬q). With k=RBottom and a=¬k, R(Ep)=p∨k and L(Ep)=p∧a, giving a Boolean order isomorphism from [Bottom,a] onto the admitted image. Injectivity is equivalent to RBottom=Bottom or LTop=Top; onto is equivalent to join preservation by R or meet preservation by L; bijectivity is equivalent to R=L or negation preservation by either adjoint. The admitted image floor ER and ceiling EL are idempotent, with ER≤I≤EL and mutual absorption. ER is an auxiliary S5 interior and equals native Box exactly when E is endpoint-valued. The endpoint-fixing envelopes T−q=(a∧Rq)∨(k∧q) and T+q=Lq∨(k∧q) preserve M/all Q and V/all P respectively, and coincide exactly when E is onto. Already for a Boolean E over C5, commuting with native Box or Diamond is exactly injectivity, without Q_t. The integer-shift predecessor model satisfies C + full typed SurjSep + BF while ☐BF_σ fails at every admitted type σ. In the finite-pinning tail over ℕ×ℤ and {∗}×ℤ, split epimorphisms approximate finite pins and invertible integer translations supply prescribed-coordinate kernel pairs. The root truth-profile extension combines all-type evaluation readers with those onto tails. A future object has nononto transport at every type and refutes every BF instance. Hence SurjSep ⇒ ☐BF is refuted with exact all-type scope.
+
+**Lean certified:** The foundational implication H + OS ⇒ C + BF, with explicit endpoint identities.
 
 **Proofs:** [GRAPH.md](proofs/h-observer-space/GRAPH.md) · [MAP.md](proofs/h-observer-space/MAP.md) · [README.md](proofs/h-observer-space/README.md) · [finite-affine-separation.md](proofs/h-observer-space/finite-affine-separation.md) · [fork-without-binary-families.md](proofs/h-observer-space/fork-without-binary-families.md) · [identity-collapse.md](proofs/h-observer-space/identity-collapse.md) · [local-tiers-and-models.md](proofs/h-observer-space/local-tiers-and-models.md) · [observer-restrictions.md](proofs/h-observer-space/observer-restrictions.md) · [primitive-package-classification.md](proofs/h-observer-space/primitive-package-classification.md) · [quantifier-generated-lattices.md](proofs/h-observer-space/quantifier-generated-lattices.md) · [relational-clone-model.md](proofs/h-observer-space/relational-clone-model.md) · [representation-under-identity-bivalence.md](proofs/h-observer-space/representation-under-identity-bivalence.md) · [reversible-meet-atomicity.md](proofs/h-observer-space/reversible-meet-atomicity.md) · [term-closure-and-affine-branches.md](proofs/h-observer-space/term-closure-and-affine-branches.md) · [truth-profiles-and-connective-reducts.md](proofs/h-observer-space/truth-profiles-and-connective-reducts.md) · [two-orders-model.md](proofs/h-observer-space/two-orders-model.md) · [typed-separation-and-classicism.md](proofs/h-observer-space/typed-separation-and-classicism.md) · [reversible-meet-characterization.md](proofs/h-observer-space/reversible-meet-characterization.md) · [finite-semilattice-normalization.md](proofs/h-observer-space/finite-semilattice-normalization.md) · [composition-closed-characterization.md](proofs/h-observer-space/composition-closed-characterization.md) · [finite-image-material-normalization.md](proofs/h-observer-space/finite-image-material-normalization.md) · [logical-separation-with-contingent-barcan.md](proofs/h-observer-space/logical-separation-with-contingent-barcan.md) · [necessary-separation-and-atoms.md](proofs/h-observer-space/necessary-separation-and-atoms.md) · [reversible-separation-and-pure-truth.md](proofs/h-observer-space/reversible-separation-and-pure-truth.md) · [finite-block-symmetry-reversible-gap.md](proofs/h-observer-space/finite-block-symmetry-reversible-gap.md) · [necessity-of-distinctness-representation.md](proofs/h-observer-space/necessity-of-distinctness-representation.md) · [reversible-quantifier-observers.md](proofs/h-observer-space/reversible-quantifier-observers.md) · [local-conjugacy-and-reversible-observers.md](proofs/h-observer-space/local-conjugacy-and-reversible-observers.md) · [finite-affine-normalization.md](proofs/h-observer-space/finite-affine-normalization.md) · [split-inverse-logical-observers.md](proofs/h-observer-space/split-inverse-logical-observers.md) · [plenitude-material-normalization.md](proofs/h-observer-space/plenitude-material-normalization.md) · [finite-block-symmetry-left-inverse.md](proofs/h-observer-space/finite-block-symmetry-left-inverse.md) · [ternary-cantor-observer-model.md](proofs/h-observer-space/ternary-cantor-observer-model.md) · [fork-one-sided-inverse-separation.md](proofs/h-observer-space/fork-one-sided-inverse-separation.md) · [zorn-affine-character-extension.md](proofs/h-observer-space/zorn-affine-character-extension.md) · [partial-reversible-normalization.md](proofs/h-observer-space/partial-reversible-normalization.md) · [component-shift-symmetry-reversible-gap.md](proofs/h-observer-space/component-shift-symmetry-reversible-gap.md) · [zorn-lattice-character-extension.md](proofs/h-observer-space/zorn-lattice-character-extension.md) · [negation-affine-compatibility.md](proofs/h-observer-space/negation-affine-compatibility.md) · [left-inverse-separation-decomposition.md](proofs/h-observer-space/left-inverse-separation-decomposition.md) · [finite-pinning-dedekind-propositions.md](proofs/h-observer-space/finite-pinning-dedekind-propositions.md) · [plenitude-endpoint-bridge.md](proofs/h-observer-space/plenitude-endpoint-bridge.md) · [surjective-logical-observers.md](proofs/h-observer-space/surjective-logical-observers.md) · [linear-circular-fibre-left-inverse-gap.md](proofs/h-observer-space/linear-circular-fibre-left-inverse-gap.md) · [omega-chain-surjective-observers.md](proofs/h-observer-space/omega-chain-surjective-observers.md) · [reversible-semilattice-order-actions.md](proofs/h-observer-space/reversible-semilattice-order-actions.md) · [fixed-point-symmetry-left-inverse-separation.md](proofs/h-observer-space/fixed-point-symmetry-left-inverse-separation.md) · [full-cancellative-monoid-observers.md](proofs/h-observer-space/full-cancellative-monoid-observers.md) · [reversible-truth-gap-chains.md](proofs/h-observer-space/reversible-truth-gap-chains.md) · [reversible-semilattice-local-global.md](proofs/h-observer-space/reversible-semilattice-local-global.md) · [root-truth-profile-surjective-separation.md](proofs/h-observer-space/root-truth-profile-surjective-separation.md) · [canonical-adjoints-and-image-factorization.md](proofs/h-observer-space/canonical-adjoints-and-image-factorization.md) · [integer-shift-predecessor-contingent-barcan.md](proofs/h-observer-space/integer-shift-predecessor-contingent-barcan.md)
 

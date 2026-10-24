@@ -59,3 +59,5 @@ The [truth-gap characterization](reversible-truth-gap-chains.md) identifies reve
 [Canonical adjoints and image factorization](canonical-adjoints-and-image-factorization.md) construct admitted order adjoints L ⊣ E ⊣ R for every Good-t observer over C5. Their preservation laws characterize injection, surjection and reversibility; the image floor equals native necessity exactly for endpoint-valued observers. For a Boolean observer over C5, commuting with native necessity or possibility is exactly injectivity, without a quantifier-preservation premise.
 
 The [integer-shift predecessor](integer-shift-predecessor-contingent-barcan.md) satisfies full typed SurjSep and current BF while ☐BF fails at every admitted type. It combines finite-pin approximation by split epimorphisms, invertible integer translations and the root truth-profile construction. This settles SurjSep ⇒ ☐BF negatively.
+
+**Lean certified:** H + OS ⇒ C + BF with explicit endpoint identities. [Certificate scope and evidence](../../evidence/RESULT-INDEX.md#logical-observers).

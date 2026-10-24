@@ -1144,7 +1144,8 @@
           ],
           "questions": []
         }
-      ]
+      ],
+      "certified_scope": "The Functional Choice and ☐Functional Choice decompositions into Actuality and the corresponding section principles."
     },
     {
       "id": "retractions-of-injections-r",
@@ -1177,9 +1178,11 @@
         }
       ],
       "result_refs": [
-        "SECTIONS-RETRACTIONS"
+        "SECTIONS-RETRACTIONS",
+        "C5-STRONG-RETRACTIONS"
       ],
-      "questions": []
+      "questions": [],
+      "certified_scope": "The Plenitude decomposition; the constituent directions of the C5/strong-retraction characterization."
     },
     {
       "id": "individual-profile-realization",
@@ -1252,7 +1255,8 @@
           ],
           "questions": []
         }
-      ]
+      ],
+      "certified_scope": "The finite-profile and atomic-profile fragments."
     },
     {
       "id": "numerical-lottery-r",
@@ -1363,7 +1367,8 @@
     ],
     "result_refs": [
       "EVALUATORS-CORES"
-    ]
+    ],
+    "certified_scope": "Actuality-core conversion and admitted-value lemmas."
   },
   "alternative_formulations": [
     {
@@ -1382,7 +1387,8 @@
       ],
       "formulas": [
         "\\forall p,q^t\\, .\\,p=q\\leftrightarrow\\forall E^{tt}\\, .\\,D(E)\\to(Ep\\leftrightarrow Eq)."
-      ]
+      ],
+      "certified_scope": true
     },
     {
       "name": "Complete Boolean Retractions",
@@ -1442,7 +1448,8 @@
       ],
       "result_refs": [
         "INFINITARY-COMPREHENSION"
-      ]
+      ],
+      "certified_scope": "For universe-0 categorical premodels, term-denotation closure + unrestricted original-closed-type Infinitary Comprehension + ☐ND (type t) imply faithful full-standard representation; full standard models satisfy the corresponding infinitary axioms."
     }
   ],
   "presentation_sections": [

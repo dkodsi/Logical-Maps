@@ -101,7 +101,7 @@ def render(root):
         return '**Lean certified:** ' + scope.rstrip('.') + '.' if scope else ''
 
     def done(lines):
-        return '\n'.join(lines).rstrip() + '\n'
+        return ('\n'.join(lines).rstrip() + '\n').replace(r'\operatorname', r'\mathrm')
 
     def bullet(claim):
         # Indent continuation blocks so displayed mathematics stays in its list item.
@@ -126,7 +126,8 @@ def render(root):
         return ' · '.join(filelink(s['path']) + ' (' + s['locator'] + ')' for s in item['sources'])
     def proposal_status(item):
         refs = item.get('result_refs', [])
-        return ('**Evidence:** ' + ' · '.join(resultlink(rid, label=rows[rid]['title'] if len(refs) > 1 else 'Proofs and certificates') for rid in refs) + '.') if refs else ''
+        evidence = ('**Evidence:** ' + ' · '.join(resultlink(rid, label=rows[rid]['title'] if len(refs) > 1 else 'Proofs and certificates') for rid in refs) + '.') if refs else ''
+        return '\n\n'.join(x for x in [certified_line(item), evidence] if x)
     text = ['# ' + proposals['title'], '',
         proposals['scope'], '',
         '[Main results](MAIN-RESULTS.md) · [Integration review](DATABASE-INTEGRATION.md) · [Structured proposals](CANDIDATES_DK.json) · [Evaluation principles](#evaluation-principles) · [Infinitary extension](#infinitary-extension)', '',
@@ -308,6 +309,8 @@ def render(root):
                 assert rid in rows
         if certified_line(r):
             text += [certified_line(r), '']
+        elif r.get('lean_status_refs') and statusrefs(r['lean_status_refs']):
+            text += ['**Lean certified:** ' + statusrefs(r['lean_status_refs']), '']
         if r.get('reconciliation_receipts'):
             text += ['**Exact reconciliation scope:** ' + r.get('certificate_scope', ''), '',
                      '**Scope assessment:** ' + prooflinks(r['reconciliation_receipts']), '']
@@ -371,7 +374,7 @@ def render(root):
                     detail += '; Lean ' + str(lean)
                 contexts.append(filelink(rec['snapshot_path'], label='`' + rec['id'] + '`') + ' (' + detail + ')')
             context = '<br>'.join(contexts) if contexts else 'New metatheorem; no exact existing record matched.'
-            cells = [resultlink(rid, label=rows[rid]['title']), context, '**' + entry['action'] + '.** ' + entry['proposal']]
+            cells = [resultlink(rid, label=rows[rid]['title']) + ('<br>' + certified_line(rows[rid]) if certified_line(rows[rid]) else ''), context, '**' + entry['action'] + '.** ' + entry['proposal']]
             text += ['| ' + ' | '.join(x.replace('|', '\\|').replace('\n', ' ') for x in cells) + ' |']
         text += ['']
     if integration.get('closure_cross_references'):
@@ -480,7 +483,7 @@ def render(root):
         'Research submission: results, proofs and exact certificate scope.', '',
         '[Main guide](MAIN-RESULTS.md) · [Exact evidence](evidence/RESULT-INDEX.md) · [Database reconciliation](DATABASE-INTEGRATION.md) · [Questions](CONJECTURES.md)', '',
         '## Certified results', '']
-    for rid in ['MAX-ATOMICITY', 'OLDNEW-SEPARATION', 'SECTIONS-RETRACTIONS', 'NPC-ATOMICITY', 'CH-COALESCED', 'MAX-CH', 'ANALYTIC-RIGIDIFICATION', 'ARITHMETIC-COMPARISON', 'LAMBDA-FREE-TRANSLATION', 'BETA-ETA-CONVERSION']:
+    for rid in [rid for section in main['sections'] for rid in section['results']]:
         r = rows[rid]
         if r.get('certified_scope'):
             text += ['- **' + r['title'] + '.** ' + ('Lean certified.' if r['certified_scope'] is True else 'Lean certified: ' + r['certified_scope']) + ' ' + resultlink(rid, label='Proof and certificate') + '.']

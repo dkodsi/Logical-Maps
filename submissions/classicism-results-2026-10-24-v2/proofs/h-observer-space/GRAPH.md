@@ -657,3 +657,5 @@ The live research questions include:
 The linked proofs settle the finite primitive classification and the displayed implications, equivalences and countermodels. The broader H comparisons remain under investigation.
 
 Direct source for this organization: `misc`, OpenAI Codex, prompted by Daniel Kodsi, 24 October 2026, this document §§1–10, unpaginated. Individual mathematical claims retain the proofs, attributions and source caveats in their linked notes.
+
+**Lean certified:** H + OS ⇒ C + BF with explicit endpoint identities. [Certificate scope and evidence](../../evidence/RESULT-INDEX.md#logical-observers).

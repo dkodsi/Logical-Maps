@@ -82,7 +82,7 @@ Over H, OS entails C + BF; full typed endpoint separation is equivalent to C5 + 
 
 Infinite nonprincipal material-versus-pointwise M/V separation outside the proved sufficient hypotheses; bare-H infinite affine character existence without an admission premise; further partial-signature reversibility and an intrinsic atomless-meet characterization beyond the primitivity, gap, convex-block and finite-factor theorems; further relationships with separately boxed inverse restrictions; an exact converse for Rev beyond its modal and endpoint-parameter noncontingency consequences.
 
-**Lean certified:** [`LOGICAL-OBSERVERS`](evidence/RESULT-INDEX.md#logical-observers): H + OS ⇒ C + BF with explicit endpoint identities. Their omission is justified by the linked ordinary reduction proof. [`FULL-IDENTITY-OBSERVERS`](evidence/RESULT-INDEX.md#full-identity-observers): The propositional Atomicity characterization at quantifier type t, and the construction of observers at each fixed quantifier type. [`DIAGONAL-CHARACTERS`](evidence/RESULT-INDEX.md#diagonal-characters).
+**Lean certified:** [`LOGICAL-OBSERVERS`](evidence/RESULT-INDEX.md#logical-observers): H + OS ⇒ C + BF with explicit endpoint identities. Their omission is justified by the linked ordinary reduction proof. [`FULL-IDENTITY-OBSERVERS`](evidence/RESULT-INDEX.md#full-identity-observers): Simultaneous propositional separation for every finite list of closed quantifier types under C5 + Atomicity (type t), including its necessary schema; the converses and equivalence of the two schemas under C5 + Actuality. [`DIAGONAL-CHARACTERS`](evidence/RESULT-INDEX.md#diagonal-characters).
 
 <a id="full-gallin"></a>
 ## Do internal completeness or bounded infinitary joins recover full standard models?
@@ -141,7 +141,7 @@ The proof uses McLarty’s number-preserving interpretation.
 The source proves both inclusions in
 
 $$
-\operatorname{Th}_{\mathrm{arith}}(\operatorname{Max}(C))=\operatorname{Cn}\bigl(T_{\mathrm{arith}}\cup\mathrm{True}_{\Pi_1}\bigr).
+\mathrm{Th}_{\mathrm{arith}}(\mathrm{Max}(C))=\mathrm{Cn}\bigl(T_{\mathrm{arith}}\cup\mathrm{True}_{\Pi_1}\bigr).
 $$
 
 It also states the specified extensions by current graph-choice principles and quantified Infinity at their separate scopes.

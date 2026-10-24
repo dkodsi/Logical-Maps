@@ -186,3 +186,5 @@ For background logic and models: Bacon–Dorr, *Classicism*, §1.3; in the datab
 ## H structure and quantifier reduction
 
 Over H, full relational separation by any qualification is exactly propositional separation plus Functionality; the [H observer map](h-observer-space/MAP.md) develops the primitive, representation and restriction branches. Over C5, propositional separation by Boolean observers preserving the universal quantifier at $t$ is equivalent to full OS. Over C, the existence of an endpoint-fixing operator with range $\{\top,\bot\}$ is equivalent to modal .2; the [reduction proof](modal-selectors-and-quantifier-reduction.md) uses this to identify the mixed quantifier branches.
+
+**Lean certified:** H + OS ⇒ C + BF with explicit endpoint identities. [Certificate scope and evidence](../evidence/RESULT-INDEX.md#logical-observers).

@@ -141,7 +141,8 @@
         "choice.04--injectivity-persistence",
         "choice.04--per-map-necessary-injectivity",
         "choice.04--strong-left-splitting"
-      ]
+      ],
+      "lean_status_ref": "C5-STRONG-RETRACTIONS"
     },
     {
       "id": "choice.05",
@@ -1181,7 +1182,8 @@
       "integration_status_refs": [
         "rigidity.01--nullary-characterization",
         "rigidity.01--nullary-laws"
-      ]
+      ],
+      "certified_scope": "Nullary proof bodies establish WeakRigid(p) iff top/bottom iff Rigid(p), with the stated nullary TR/RP/WRP/Rigid Rigidity/Weakly Rigid Weak Rigidity/RC/WeakRC theorems and indicated necessary versions. No internally finite-power theorem is inferred."
     },
     {
       "id": "rigidity.02",
@@ -1364,7 +1366,8 @@
       "integration_status_refs": [
         "rigidity.04--necessary",
         "rigidity.04--weak"
-      ]
+      ],
+      "certified_scope": "Singleton reconstruction and its necessary counterpart, with explicit finite-tuple certificate requests for both."
     },
     {
       "id": "rigidity.05",
@@ -1410,7 +1413,8 @@
       "integration_status_refs": [
         "rigidity.05--tr-join-characterization",
         "rigidity.05--weak-existing-joins"
-      ]
+      ],
+      "certified_scope": "Existing represented joins preserve weak rigidity; Tame Rigidity iff rigid-join closure, without optional completeness or a rigid indexing family."
     },
     {
       "id": "rigidity.06",
@@ -1457,7 +1461,8 @@
         "rigidity.06--finite-boolean",
         "rigidity.06--membership-bivalence",
         "rigidity.06--sections"
-      ]
+      ],
+      "certified_scope": "The intersection, difference, symmetric-difference and membership-bivalence characterizations at weak and rigid levels."
     },
     {
       "id": "rigidity.07",
@@ -1564,7 +1569,8 @@
         "rigidity.07--c5-schema",
         "rigidity.07--rigid",
         "rigidity.07--weak"
-      ]
+      ],
+      "certified_scope": "Exact weak ND+BF versus rigid ND+boxed-BF complement characterizations, tt/C5 equivalence, and all-type C5 consequences with tuple laws."
     },
     {
       "id": "rigidity.08",
@@ -4140,7 +4146,7 @@
         "model_interpretation.02--main"
       ],
       "lean_status": "Propositional orbit/Dedekind-infinity equivalence and the atom-world all-type ☐Intensional Choice countermodel checked; general arbitrary-world Choice classification not fully certified",
-      "certified_scope": "The propositional orbit/Dedekind-infinity equivalence and the atom-world all-type ☐Intensional Choice countermodel."
+      "certified_scope": "Full permutation group and finite supports: propositional operational Dedekind infinity iff infinitely many global world orbits; atom-world necessary Intensional Choice at every admitted type and necessary failure of operational Dedekind infinity. Semantic metatheory; not a certificate for the full arbitrary-world Choice classification."
     },
     {
       "id": "model_interpretation.03",
@@ -5237,7 +5243,8 @@
       "remaining_obligation_at_collection": null,
       "integration_status_refs": [
         "catalog.06--main"
-      ]
+      ],
+      "certified_scope": true
     },
     {
       "id": "central.signature_countermodels",

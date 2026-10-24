@@ -25,12 +25,12 @@ Relations are identical exactly when all suitably qualified logical observers ag
 
 $$
 \begin{aligned}
-&\forall X,Y^{\bar\sigma t}\, .\,X=Y\leftrightarrow\forall E^{tt}\, .\,\operatorname{Good}_{\Delta}(E) \\
+&\forall X,Y^{\bar\sigma t}\, .\,X=Y\leftrightarrow\forall E^{tt}\, .\,\mathrm{Good}_{\Delta}(E) \\
 &\qquad \to\forall\bar z^{\bar\sigma}\, .\,(E(X[\bar z])\leftrightarrow E(Y[\bar z])).
 \end{aligned}
 $$
 
-The schema ranges over finite tuples $\bar\sigma$ of argument types, including the empty tuple, and finite sets $\Delta$ of tested types. $\operatorname{Good}_{\Delta}(E)$ consists of the following clauses:
+The schema ranges over finite tuples $\bar\sigma$ of argument types, including the empty tuple, and finite sets $\Delta$ of tested types. $\mathrm{Good}_{\Delta}(E)$ consists of the following clauses:
 
 Boolean operation identities:
 
@@ -74,10 +74,10 @@ Boolean preservation makes $E\top$ true and $E\bot$ false over H; over C it give
   $$
   \small\text{Extensionality}\ \Rightarrow\ \mathrm{C5}+\mathrm{Atomicity}_t\ \Rightarrow\ \Box\mathrm{OS}\ \Rightarrow\ \mathrm{OS}\ \Rightarrow\ \mathrm{BF}.
   $$
-- Over C, $\operatorname{Good}_\Delta(E)\leftrightarrow\Box\operatorname{Good}_\Delta(E)$; requiring the qualification necessarily does not strengthen separation.
+- Over C, $\mathrm{Good}_\Delta(E)\leftrightarrow\Box\mathrm{Good}_\Delta(E)$; requiring the qualification necessarily does not strengthen separation.
 - Over H, OS plus uniqueness of the qualified logical observer at one fixed finite list is equivalent to Extensionality; no endpoint restriction is needed.
 - Over C5, propositional separation by Boolean observers preserving the universal quantifier at t is equivalent to full OS.
-- Endpoint separation is equivalent over H to C5 + ☐OS + one atom; the boxed propositional $\operatorname{Good}_{\{t\}}$ separation instance suffices in place of ☐OS.
+- Endpoint separation is equivalent over H to C5 + ☐OS + one atom; the boxed propositional $\mathrm{Good}_{\{t\}}$ separation instance suffices in place of ☐OS.
 - Even the stronger qualified left-inverse separation principle does not imply C5, ☐OS, its own boxed schema, ☐BF or ☐Functionality; see the [all-maps model](proofs/h-observer-space/finite-block-symmetry-left-inverse.md), §7.
 - The [ternary Cantor model](proofs/h-observer-space/ternary-cantor-observer-model.md) has full endpoint-fixing separation for each separate M/Q/P, V/Q/P and N/Q/P class, even necessarily and with boxed BF and Functionality, while Boolean separation fails.
 - Qualified left-inverse separation lies strictly between reversible separation and OS, and is incomparable with ☐OS even over C5. With internal finiteness of all propositions, full left-inverse, reversible and endpoint separation coincide.
@@ -97,15 +97,15 @@ Logical observers with finitely many outputs distinguish every pair of distinct 
 
 $$
 \begin{aligned}
-&\forall X,Y^{\bar\sigma t}\, .\,X=Y\leftrightarrow\forall E^{tt}\, .\,[\operatorname{Good}_{\Delta}(E)\land\operatorname{FinIm}(E)] \\
+&\forall X,Y^{\bar\sigma t}\, .\,X=Y\leftrightarrow\forall E^{tt}\, .\,[\mathrm{Good}_{\Delta}(E)\land\mathrm{FinIm}(E)] \\
 &\qquad\to\forall\bar z^{\bar\sigma}\, .\,(E(X[\bar z])\leftrightarrow E(Y[\bar z])).
 \end{aligned}
 $$
 
-Put $\operatorname{Im}_E=\lambda r^t.\exists p^t(Ep=r)$. Then
+Put $\mathrm{Im}_E=\lambda r^t.\exists p^t(Ep=r)$. Then
 
 $$
-\operatorname{FinIm}(E):=\exists Z^{(tt)t}\, .\,\operatorname{FiniteCardinality}_t(Z)\land Z(\operatorname{Im}_E).
+\mathrm{FinIm}(E):=\exists Z^{(tt)t}\, .\,\mathrm{FiniteCardinality}_t(Z)\land Z(\mathrm{Im}_E).
 $$
 
 This uses the [database’s Frege finiteness definition](source/topics/classicism/background.md#notation). It is a single finitary condition, with no common bound on the number of outputs.
@@ -120,7 +120,7 @@ Logical observers with qualified inverses distinguish every pair of distinct rel
 
 $$
 \begin{aligned}
-&\forall X,Y^{\bar\sigma t}\, .\,X=Y\leftrightarrow\forall E^{tt}\, .\,[\operatorname{Good}_{\Delta}(E)\land\operatorname{Rev}_\Delta(E)] \\
+&\forall X,Y^{\bar\sigma t}\, .\,X=Y\leftrightarrow\forall E^{tt}\, .\,[\mathrm{Good}_{\Delta}(E)\land\mathrm{Rev}_\Delta(E)] \\
 &\qquad\to\forall\bar z^{\bar\sigma}\, .\,(E(X[\bar z])\leftrightarrow E(Y[\bar z])).
 \end{aligned}
 $$
@@ -128,7 +128,7 @@ $$
 Put $I=\lambda p.p$ and $(E\circ F)(p)=E(Fp)$.
 
 $$
-\operatorname{Rev}_\Delta(E):=\exists F^{tt}\, .\,\operatorname{Good}_\Delta(F)\land E\circ F=I\land F\circ E=I.
+\mathrm{Rev}_\Delta(E):=\exists F^{tt}\, .\,\mathrm{Good}_\Delta(F)\land E\circ F=I\land F\circ E=I.
 $$
 
 - Over H, equivalent to involutive separation and to its separately boxed schema; entails C5 + ☐OS + No Pure Contingency, without atoms or Actuality.
@@ -152,16 +152,16 @@ Logical observers with outputs restricted to ⊤ and ⊥ distinguish every pair 
 
 $$
 \begin{aligned}
-&\forall X,Y^{\bar\sigma t}\, .\,X=Y\leftrightarrow\forall E^{tt}\, .\,[\operatorname{Good}_{\Delta}(E)\land\operatorname{End}(E)] \\
+&\forall X,Y^{\bar\sigma t}\, .\,X=Y\leftrightarrow\forall E^{tt}\, .\,[\mathrm{Good}_{\Delta}(E)\land\mathrm{End}(E)] \\
 &\qquad\to\forall\bar z^{\bar\sigma}\, .\,(E(X[\bar z])\leftrightarrow E(Y[\bar z])).
 \end{aligned}
 $$
 
 $$
-\operatorname{End}(E):=\forall p^t\, .\,Ep=\top\lor Ep=\bot.
+\mathrm{End}(E):=\forall p^t\, .\,Ep=\top\lor Ep=\bot.
 $$
 
-The types and $\operatorname{Good}_\Delta$ are as above. In a full model with fixed domains and an admitted evaluation operation, an endpoint observer reports whether $p$ is true at a fixed possible world; it need not report the truth here.
+The types and $\mathrm{Good}_\Delta$ are as above. In a full model with fixed domains and an admitted evaluation operation, an endpoint observer reports whether $p$ is true at a fixed possible world; it need not report the truth here.
 
 Endpoint-valuedness differs from $\Box\forall p(Ep\leftrightarrow p)$: the latter gives the identity observer over C, whose outputs may remain contingent.
 
@@ -170,7 +170,7 @@ Endpoint-valuedness differs from $\Box\forall p(Ep\leftrightarrow p)$: the latte
 - Strictly stronger than ☐OS and strictly weaker than Extensionality over C.
 - Given endpoint separation, Extensionality is equivalent to there being a unique qualified endpoint observer; uniqueness at any one fixed finite list of tested types suffices.
 - Under C5, propositional atoms and endpoint observers qualified at $t$ correspond bijectively: $E_a(p)=\Box(a\to p)$ and $a_E=\forall p(Ep\to p)$. Such observers qualify at every finite type list.
-- Equivalent to C5 + ☐OS + one atom, and to C5 plus one atom and the single boxed propositional $\operatorname{Good}_{\{t\}}$ separation instance.
+- Equivalent to C5 + ☐OS + one atom, and to C5 plus one atom and the single boxed propositional $\mathrm{Good}_{\{t\}}$ separation instance.
 - Equivalent over H to OS + Plenitude at (t,t), OS + full Plenitude, C5 + OS + Actuality, and C5 + OS + Boolean Completeness. Both OS and Plenitude are current premises.
 
 <a id="factive-logical-observer-separation-r"></a>
@@ -180,16 +180,16 @@ Factive logical observers distinguish every pair of distinct relations.
 
 $$
 \begin{aligned}
-&\forall X,Y^{\bar\sigma t}\, .\,X=Y\leftrightarrow\forall E^{tt}\, .\,[\operatorname{Good}_{\Delta}(E)\land\operatorname{Fact}(E)] \\
+&\forall X,Y^{\bar\sigma t}\, .\,X=Y\leftrightarrow\forall E^{tt}\, .\,[\mathrm{Good}_{\Delta}(E)\land\mathrm{Fact}(E)] \\
 &\qquad\to\forall\bar z^{\bar\sigma}\, .\,(E(X[\bar z])\leftrightarrow E(Y[\bar z])).
 \end{aligned}
 $$
 
 $$
-\operatorname{Fact}(E):=\forall p^t\, .\,Ep\to p.
+\mathrm{Fact}(E):=\forall p^t\, .\,Ep\to p.
 $$
 
-The types and $\operatorname{Good}_\Delta$ are as above. Negation preservation and factivity imply $\forall p(Ep\leftrightarrow p)$.
+The types and $\mathrm{Good}_\Delta$ are as above. Negation preservation and factivity imply $\forall p(Ep\leftrightarrow p)$.
 
 Under Extensionality, truth is endpoint-valued: every true proposition is $\top$ and every false proposition is $\bot$, so the identity observer alone separates all propositions.
 
@@ -211,13 +211,13 @@ Under Extensionality, truth is endpoint-valued: every true proposition is $\top$
 Every surjective operation between relational types has a pointwise right inverse.
 
 $$
-\forall f^{\sigma\tau}\, .\,\operatorname{Surj}(f)\to\exists g^{\tau\sigma}\, .\,\forall y^\tau\, .\,f(gy)=y\qquad(\sigma,\tau\ne e).
+\forall f^{\sigma\tau}\, .\,\mathrm{Surj}(f)\to\exists g^{\tau\sigma}\, .\,\forall y^\tau\, .\,f(gy)=y\qquad(\sigma,\tau\ne e).
 $$
 
 Here
 
 $$
-\operatorname{Surj}(f):=\forall y^\tau\, .\,\exists x^\sigma\, .\,fx=y.
+\mathrm{Surj}(f):=\forall y^\tau\, .\,\exists x^\sigma\, .\,fx=y.
 $$
 
 - Over C: Functional Choice ⇔ Actuality + Sections of Surjections.
@@ -229,15 +229,17 @@ $$
 Every actually surjective operation between relational types has a necessarily correct right inverse.
 
 $$
-\forall f^{\sigma\tau}\, .\,\operatorname{Surj}(f)\to\exists g^{\tau\sigma}\, .\,\Box\forall y^\tau\, .\,f(gy)=y\qquad(\sigma,\tau\ne e).
+\forall f^{\sigma\tau}\, .\,\mathrm{Surj}(f)\to\exists g^{\tau\sigma}\, .\,\Box\forall y^\tau\, .\,f(gy)=y\qquad(\sigma,\tau\ne e).
 $$
 
-$\operatorname{Surj}$ is as defined under Sections of Surjections. The antecedent asserts actual surjectivity; the inverse equation holds necessarily.
+$\mathrm{Surj}$ is as defined under Sections of Surjections. The antecedent asserts actual surjectivity; the inverse equation holds necessarily.
 
 - Over C: ☐Functional Choice ⇔ ☐Actuality + Strong Sections.
 - Replacing Strong Sections by ordinary Sections fails, even beside ☐Actuality; the full two-object retract supplies the countermodel (§5).
 
 **Sources:** [functional-choice-by-sections.md](source/research/2026-10-22/notes/functional-choice-by-sections.md) (§§1–6) · [choice-uniformization.md](source/research/2026-10-22/notes/choice-uniformization.md) (§§11–20).
+
+**Lean certified:** The Functional Choice and ☐Functional Choice decompositions into Actuality and the corresponding section principles.
 
 **Evidence:** [Proofs and certificates](evidence/RESULT-INDEX.md#sections-retractions).
 
@@ -247,25 +249,27 @@ $\operatorname{Surj}$ is as defined under Sections of Surjections. The anteceden
 Every injective operation between relational types has a pointwise left inverse.
 
 $$
-\forall f^{\sigma\tau}\, .\,\operatorname{Inj}(f)\to\exists g^{\tau\sigma}\, .\,\forall x^\sigma\, .\,g(fx)=x\qquad(\sigma,\tau\ne e).
+\forall f^{\sigma\tau}\, .\,\mathrm{Inj}(f)\to\exists g^{\tau\sigma}\, .\,\forall x^\sigma\, .\,g(fx)=x\qquad(\sigma,\tau\ne e).
 $$
 
 Here
 
 $$
-\operatorname{Inj}(f):=\forall x,y^\sigma\, .\,fx=fy\to x=y.
+\mathrm{Inj}(f):=\forall x,y^\sigma\, .\,fx=fy\to x=y.
 $$
 
 - Over C: Plenitude ⇔ Actuality + Retractions of Injections.
 - Requiring a necessarily correct inverse gives exactly C5 over C:
 
   $$
-  \forall f^{\sigma\tau}\, .\,\operatorname{Inj}(f)\to\exists g^{\tau\sigma}\, .\,\Box\forall x^\sigma\, .\,g(fx)=x\qquad(\sigma,\tau\ne e).
+  \forall f^{\sigma\tau}\, .\,\mathrm{Inj}(f)\to\exists g^{\tau\sigma}\, .\,\Box\forall x^\sigma\, .\,g(fx)=x\qquad(\sigma,\tau\ne e).
   $$
 
 **Sources:** [functional-choice-by-sections.md](source/research/2026-10-22/notes/functional-choice-by-sections.md) (§§1–6) · [choice-uniformization.md](source/research/2026-10-22/notes/choice-uniformization.md) (§§11–20).
 
-**Evidence:** [Proofs and certificates](evidence/RESULT-INDEX.md#sections-retractions).
+**Lean certified:** The Plenitude decomposition; the constituent directions of the C5/strong-retraction characterization.
+
+**Evidence:** [Choice and Plenitude decompose into Actuality and inverse maps](evidence/RESULT-INDEX.md#sections-retractions) · [C5 is exactly strong retractions of actual injections](evidence/RESULT-INDEX.md#c5-strong-retractions).
 
 
 <a id="world-structure-principles"></a>
@@ -277,7 +281,7 @@ $$
 One individual predicate can possibly agree with every admitted rigid individual property.
 
 $$
-\exists V^{et}\, .\,\forall X^{et}\, .\,\operatorname{Rigid}(X)\to\Diamond c_V(X).
+\exists V^{et}\, .\,\forall X^{et}\, .\,\mathrm{Rigid}(X)\to\Diamond c_V(X).
 $$
 
 For $V,X^{et}$, put
@@ -298,7 +302,7 @@ Profiles range over admitted rigid individual properties. This differs from the 
 One individual predicate has an atomic agreement proposition for each admitted rigid individual property.
 
 $$
-\exists V^{et}\, .\,\forall X^{et}\, .\,\operatorname{Rigid}(X)\to\operatorname{Atom}_t(c_V(X)).
+\exists V^{et}\, .\,\forall X^{et}\, .\,\mathrm{Rigid}(X)\to\mathrm{Atom}_t(c_V(X)).
 $$
 
 The agreement proposition $c_V(X)$ is defined under Individual Profile Realization. Profiles again range over admitted rigid individual properties.
@@ -307,6 +311,8 @@ The agreement proposition $c_V(X)$ is defined under Individual Profile Realizati
 - Full S5 models with $D=\mathbb N$ and $W=\mathcal P(\mathbb N)$ satisfy the atomic version; $D=\mathbb N$ and $W=\mathcal P(\mathcal P(\mathbb N))$ satisfy the nonunique version but refute the atomic version. Both satisfy ☐Functional Choice in the ZFC metatheory.
 
 **Sources:** [world-cardinality-ucp-20261022.md](source/research/2026-10-22/notes/world-cardinality-ucp-20261022.md) (§§2–4,12–15,35–36) · [structural-world-representation.md](source/research/2026-10-22/notes/structural-world-representation.md) (§§3–8).
+
+**Lean certified:** The finite-profile and atomic-profile fragments.
 
 **Evidence:** [Proofs and certificates](evidence/RESULT-INDEX.md#profile-world-algebra).
 
@@ -324,7 +330,7 @@ $$
 
 The counting type $\kappa$ determines the Frege numerical type $\nu_\kappa=(\kappa t)t$, with finite-cardinality predicate $\mathbb N_\kappa$. The principle is a schema in $\kappa$.
 
-- Over C + ☐Plenitude + Axiom of Infinity at $\kappa$: equivalent to an $\mathbb N_\kappa$-indexed independent propositional family, a nonzero partition of $\top$ indexed by $\mathbb N_\kappa$, and an admitted surjection $\operatorname{Atoms}(t)\to\mathbb N_\kappa$.
+- Over C + ☐Plenitude + Axiom of Infinity at $\kappa$: equivalent to an $\mathbb N_\kappa$-indexed independent propositional family, a nonzero partition of $\top$ indexed by $\mathbb N_\kappa$, and an admitted surjection $\mathrm{Atoms}(t)\to\mathbb N_\kappa$.
 - Over C + ☐Functional Choice, the $t$-instance is equivalent to Axiom of Infinity (type t).
 - Nominal examples satisfy ☐Plenitude and both base-type Infinity axioms while refuting numerical independence, so Infinity alone does not supply this structure without Choice.
 
@@ -354,6 +360,8 @@ A is any classical formula built using arbitrary set-sized well-founded conjunct
 
 **Sources:** [infinitary-comprehension.md](proofs/infinitary-comprehension.md) (§§1–4, 5 (source Theorem 5.3), and 6) · [infinitary-canonical-representation.md](proofs/infinitary-canonical-representation.md) (§5).
 
+**Lean certified:** For universe-0 categorical premodels, term-denotation closure + unrestricted original-closed-type Infinitary Comprehension + ☐ND (type t) imply faithful full-standard representation; full standard models satisfy the corresponding infinitary axioms.
+
 **Evidence:** [Proofs and certificates](evidence/RESULT-INDEX.md#infinitary-comprehension).
 
 <a id="evaluation-principles"></a>
@@ -364,7 +372,7 @@ These six propositional operator requirements form a strict hierarchy over C. Th
 For $E^{tt}$, define
 
 $$
-\operatorname{Eval}(E):=\forall p^t\, .\,(p\to Ep=\top)\land(\neg p\to Ep=\bot).
+\mathrm{Eval}(E):=\forall p^t\, .\,(p\to Ep=\top)\land(\neg p\to Ep=\bot).
 $$
 
 ### Truth Test
@@ -378,7 +386,7 @@ $$
 ### Correct Evaluation
 
 $$
-\exists E^{tt}\, .\,\operatorname{Eval}(E).
+\exists E^{tt}\, .\,\mathrm{Eval}(E).
 $$
 
 **Equivalent over C:** ND + Actuality.
@@ -386,7 +394,7 @@ $$
 ### Correct Evaluation with ☐Bivalence
 
 $$
-\exists E^{tt}\, .\,\operatorname{Eval}(E)\land\bigl(\Box\forall p^t\, .\,Ep=\top\lor Ep=\bot\bigr).
+\exists E^{tt}\, .\,\mathrm{Eval}(E)\land\bigl(\Box\forall p^t\, .\,Ep=\top\lor Ep=\bot\bigr).
 $$
 
 **Equivalent over C:** Gallin Extensional Comprehension; equivalently ND + Strong Actuality.
@@ -394,7 +402,7 @@ $$
 ### Unique Correct Evaluation
 
 $$
-\exists!E^{tt}\, .\,\operatorname{Eval}(E).
+\exists!E^{tt}\, .\,\mathrm{Eval}(E).
 $$
 
 **Equivalent over C:** C5 + Actuality.
@@ -402,7 +410,7 @@ $$
 ### ☐Correct Evaluation
 
 $$
-\Box\exists E^{tt}\, .\,\operatorname{Eval}(E).
+\Box\exists E^{tt}\, .\,\mathrm{Eval}(E).
 $$
 
 **Equivalent over C:** ☐Plenitude.
@@ -410,7 +418,7 @@ $$
 ### Uniform Correct Evaluation
 
 $$
-\exists E^{tt}\, .\,\Box\operatorname{Eval}(E).
+\exists E^{tt}\, .\,\Box\mathrm{Eval}(E).
 $$
 
 **Equivalent over C:** Extensionality.
@@ -420,6 +428,8 @@ $$
 - The last two requirements distinguish an evaluator at each world from one fixed evaluator correct at every world.
 
 **Sources:** [actual-truth-evaluator-ladder.md](source/research/2026-10-22/notes/actual-truth-evaluator-ladder.md) (Six-level hierarchy and strictness arguments).
+
+**Lean certified:** Actuality-core conversion and admitted-value lemmas.
 
 **Evidence:** [Proofs and certificates](evidence/RESULT-INDEX.md#evaluators-cores).
 
@@ -448,16 +458,18 @@ $$
 
 **Sources:** [diagonal-characters.md](proofs/diagonal-characters.md) (§§1–4).
 
+**Lean certified.**
+
 **Evidence:** [Proofs and certificates](evidence/RESULT-INDEX.md#diagonal-characters).
 
 ### Complete Boolean Retractions
 
 Every rigid Boolean subalgebra, complete for admitted families, at every relational type has a complete Boolean retraction. Over C + ☐Plenitude this is equivalent to ☐Functional Choice; the propositional-only version is insufficient.
 
-For each relational type $\tau$, let $\operatorname{CBA}_\tau(A)$ say that $A$ is such a subalgebra, and $\operatorname{CBHom}_\tau(r)$ that $r$ preserves complements and all admitted meets. The principle is
+For each relational type $\tau$, let $\mathrm{CBA}_\tau(A)$ say that $A$ is such a subalgebra, and $\mathrm{CBHom}_\tau(r)$ that $r$ preserves complements and all admitted meets. The principle is
 
 $$
-\begin{aligned}\forall A^{\tau t}\, .\,\operatorname{CBA}_\tau(A)\to\exists r^{\tau\tau}\, .\,\bigl[&\operatorname{CBHom}_\tau(r)\land\forall p^\tau\, A(rp)\\&\land\forall q^\tau\,(Aq\to rq=q)\bigr].\end{aligned}
+\begin{aligned}\forall A^{\tau t}\, .\,\mathrm{CBA}_\tau(A)\to\exists r^{\tau\tau}\, .\,\bigl[&\mathrm{CBHom}_\tau(r)\land\forall p^\tau\, A(rp)\\&\land\forall q^\tau\,(Aq\to rq=q)\bigr].\end{aligned}
 $$
 
 **Sources:** [structural-algebraic-core.md](source/research/2026-10-22/notes/structural-algebraic-core.md) (§§16,18–19,38).

@@ -719,7 +719,7 @@ The interpretation chain must preserve the arithmetic sort and the quantified In
 The supplied ordinary proof proposes that pure Maximalism proves exactly the ordinary first-order arithmetic consequences of the positive packages’ common arithmetic theory together with all standard-true Π₁ sentences.
 
 $$
-\operatorname{Th}_{\mathrm{arith}}(\operatorname{Max}(C))=\operatorname{Cn}\bigl(T_{\mathrm{arith}}\cup\mathrm{True}_{\Pi_1}\bigr).
+\mathrm{Th}_{\mathrm{arith}}(\mathrm{Max}(C))=\mathrm{Cn}\bigl(T_{\mathrm{arith}}\cup\mathrm{True}_{\Pi_1}\bigr).
 $$
 
 **Scope:** Finitary pure Maximalism over fixed C, with the fixed Frege interpretation at any fixed counting type. T_arith is the ordinary arithmetic consequence theory shared by C+I and the positive quantified-Infinity packages. Standard truth on the right is metalinguistic; Cn means first-order deductive closure. This is a claim about actual arithmetic theorems, not higher-order/modal conservation or SP consistency.
@@ -774,7 +774,7 @@ Over C + ☐Plenitude + Axiom of Infinity (type e), the ordinary proofs equate f
 
 **Significance:** Faithful probability is controlled by internal world size, with an exact weaker labelling condition before Choice is added. The obstruction becomes stronger as the event type rises.
 
-
+**Lean certified:** Supported-real suprema, natural-number order and basic numeric operations; cut crossing and supported-real negation, subtraction and inverses. Numeric-operation laws retain ActualWorld, quantified Infinity and domain guards; induction and cases require ActualWorld alone.
 
 **Proof length:** long (4,289 words in the [selected exposition](proof-lengths.json)).
 
@@ -1384,7 +1384,7 @@ Over C, Atomicity (type t) and BF at each tested type give separation by operato
 
 **Significance:** The composite operation laws have positive representation theorems in atomless models and countermodels separating Boolean preservation, quantifier preservation and necessary separation.
 
-**Lean certified:** The propositional Atomicity characterization at quantifier type t, and the construction of observers at each fixed quantifier type.
+**Lean certified:** Simultaneous propositional separation for every finite list of closed quantifier types under C5 + Atomicity (type t), including its necessary schema; the converses and equivalence of the two schemas under C5 + Actuality.
 
 **Notes:** Over C, ND (type t) + Actuality + propositional full-composite separation at quantifier type t entails Atomicity (type t). Over C + ☐ND (type t) + Actuality, Atomicity (type t), separation at t, and its necessity are equivalent.
 
@@ -1808,7 +1808,7 @@ Over C, C5 is equivalent to the schema that every actually injective operation b
 
 **Significance:** The placement of necessity in an inverse law separates C5 from the Actuality-plus-retraction characterization of Plenitude.
 
-
+**Lean certified:** The C5 forward rules for persistent injectivity and strong retractions at all admitted relational types, the low-type converses to ☐ND (type t), and the per-map necessary-injectivity/strong-retraction equivalence.
 
 **Attribution:** OpenAI Codex, prompted by Daniel Kodsi, 22 October 2026. Imported mathematical results retain the attribution and locators given in the proofs.
 
@@ -1817,6 +1817,23 @@ Over C, C5 is equivalent to the schema that every actually injective operation b
 **Proof locators:** Choice uniformization §2, Theorem 3; §§7, 9, Theorems 11–13
 
 **Proofs:** [choice-uniformization.md](../source/research/2026-10-22/notes/choice-uniformization.md)
+
+**Earlier Lean sources:** [SectionsRetractionsStrong.lean](../source/topics/classicism/lean/Classicism/Results/Research/SectionsRetractionsStrong.lean) · [SectionsRetractionsStrongCertificates.lean](../source/topics/classicism/lean/Classicism/Results/Research/SectionsRetractionsStrongCertificates.lean) · [SectionsRetractionsMasks.lean](../source/topics/classicism/lean/Classicism/Results/Research/SectionsRetractionsMasks.lean) · [SectionsRetractionsMasksCertificates.lean](../source/topics/classicism/lean/Classicism/Results/Research/SectionsRetractionsMasksCertificates.lean)
+
+**Earlier saved manifests:** [20261023T053945495916Z-2d579847.json](../source/research/2026-10-22/lean-formalization/checks/20261023T053945495916Z-2d579847.json)
+
+**Scope evidence:** [integration-scope-reconciliation.json](integration-scope-reconciliation.json)
+
+**Principal declarations:**
+
+- `Classicism.Research.Splitting.c5_injectivity_persists.rule`
+- `Classicism.Research.Splitting.c5_strong_retractions.listRule`
+- `Classicism.Research.Splitting.c5_strong_retractions_t.derivable`
+- `Classicism.Research.Splitting.low_strong_retractions_c5.rule`
+- `Classicism.Research.Splitting.low_persistent_injections_c5.rule`
+- `Classicism.Research.Splitting.necessary_injection_splitting.listRule`
+- `Classicism.Research.Splitting.necessary_injection_iff_retraction.derivable`
+- `Classicism.Research.Splitting.necessary_injection_iff_retraction_t.derivable`
 
 <a id="forcing-possibilism"></a>
 ## Strict-smallness Forcing Possibilism is independent of necessary Choice and Infinity
@@ -1940,7 +1957,7 @@ For any finite set Γ of independent primitive preservation clauses M, V, N, Qσ
 
 **Significance:** Separates the choice of logical operations from the contribution of higher types, and gives a systematic H foundation for the C-relative observer hierarchy. General representation theorems and reusable countermodels replace disconnected partial-signature comparisons.
 
-
+**Lean certified:** The foundational implication H + OS ⇒ C + BF, with explicit endpoint identities.
 
 **Notes:** Only the finite independent primitive family is completely classified. Remaining comparisons concern infinite nonprincipal material-versus-pointwise M/V separation outside the proved sufficient hypotheses; bare-H infinite affine character existence without an admission premise; further partial-signature reversibility; further boxed inverse comparisons and intrinsic atomless-meet characterizations; and an exact converse for Rev beyond its modal and parameter-noncontingency consequences. Both arrows Rev ⇒ SplitMono ⇒ OS are proved strict. C5 + ☐OS + No Pure Contingency ⇒ Rev is refuted even after strengthening ☐OS to ☐SplitMono. Zorn supplies admitted characters; Plenitude supplies normalization and the specified involutive witnesses. Pointed and relative maximality characterize separation and partial-character extension respectively, without a converse to general Zorn. The parameter theorem covers finitely many individual and endpoint-valued first-order relation parameters, not arbitrary higher-type parameters. Internal finiteness, whole-operation identities and explicit H premises retain their stated scope. Zorn supplies both affine and lattice partial-character extension. D_t collapses the inverse comparison but not the endpoint comparison; the atomless two-colour model proves the latter failure. The atomless region includes exact gap, convex-block and finite-factor criteria under their stated structural hypotheses. SurjSep ⇒ ☐OS and SurjSep ⇒ ☐SurjSep are refuted; The root truth-profile countermodel retains ☐BF; the integer-shift predecessor separately refutes SurjSep ⇒ ☐BF at every admitted type.
 
@@ -1951,3 +1968,9 @@ For any finite set Γ of independent primitive preservation clauses M, V, N, Qσ
 **Proof locators:** Primitive-package classification §§1–5; typed separation §§1–7; reversible meet atomicity §§1–6; remaining branches and frontier in MAP §§3–10.; Composition-closed characterization §§1–4; finite-image normalization §§1–5; contingent Barcan §§2–5; necessary separation and atoms §§1–4.; Finite-block symmetry §§1–8; ND representation §§1–6; reversible quantifiers §§1–4; local conjugacy §§2–6.; Finite affine normalization §§1–7; right-inverse separation §§1–4; Plenitude normalization §§1–6; left-inverse models §§1–7 (all-maps strengthening in §7); ternary Cantor model §§1–9; modal selectors §7.; Fork and finite boundary §§1–5; Zorn character extension §§1–7; partial reversible normalization §§1–5; component-shift model §§1–8, including the endpoint-parameter schema in §6.; Zorn lattice characters §§1–6; negation/affine compatibility §§1–7; left-inverse decomposition §§1–6; finite colour-pattern propositions §§1–5.; Plenitude/endpoint bridge §§1–5; surjective observers §§1–7; linear/circular fibre model §§1–10; omega-chain observer classification §§1–6.; Reversible order actions §§1–8; fixed-point symmetry §§1–7; cancellative monoid observers §§1–7.; Truth-gap chains §§1–7; convex-block and finite-factor reductions §§1–7; root truth-profile surjective separation §§1–7.; Canonical adjoints §§2–7; integer-shift predecessor §§1–7.
 
 **Proofs:** [GRAPH.md](../proofs/h-observer-space/GRAPH.md) · [MAP.md](../proofs/h-observer-space/MAP.md) · [README.md](../proofs/h-observer-space/README.md) · [finite-affine-separation.md](../proofs/h-observer-space/finite-affine-separation.md) · [fork-without-binary-families.md](../proofs/h-observer-space/fork-without-binary-families.md) · [identity-collapse.md](../proofs/h-observer-space/identity-collapse.md) · [local-tiers-and-models.md](../proofs/h-observer-space/local-tiers-and-models.md) · [observer-restrictions.md](../proofs/h-observer-space/observer-restrictions.md) · [primitive-package-classification.md](../proofs/h-observer-space/primitive-package-classification.md) · [quantifier-generated-lattices.md](../proofs/h-observer-space/quantifier-generated-lattices.md) · [relational-clone-model.md](../proofs/h-observer-space/relational-clone-model.md) · [representation-under-identity-bivalence.md](../proofs/h-observer-space/representation-under-identity-bivalence.md) · [reversible-meet-atomicity.md](../proofs/h-observer-space/reversible-meet-atomicity.md) · [term-closure-and-affine-branches.md](../proofs/h-observer-space/term-closure-and-affine-branches.md) · [truth-profiles-and-connective-reducts.md](../proofs/h-observer-space/truth-profiles-and-connective-reducts.md) · [two-orders-model.md](../proofs/h-observer-space/two-orders-model.md) · [typed-separation-and-classicism.md](../proofs/h-observer-space/typed-separation-and-classicism.md) · [reversible-meet-characterization.md](../proofs/h-observer-space/reversible-meet-characterization.md) · [finite-semilattice-normalization.md](../proofs/h-observer-space/finite-semilattice-normalization.md) · [composition-closed-characterization.md](../proofs/h-observer-space/composition-closed-characterization.md) · [finite-image-material-normalization.md](../proofs/h-observer-space/finite-image-material-normalization.md) · [logical-separation-with-contingent-barcan.md](../proofs/h-observer-space/logical-separation-with-contingent-barcan.md) · [necessary-separation-and-atoms.md](../proofs/h-observer-space/necessary-separation-and-atoms.md) · [reversible-separation-and-pure-truth.md](../proofs/h-observer-space/reversible-separation-and-pure-truth.md) · [finite-block-symmetry-reversible-gap.md](../proofs/h-observer-space/finite-block-symmetry-reversible-gap.md) · [necessity-of-distinctness-representation.md](../proofs/h-observer-space/necessity-of-distinctness-representation.md) · [reversible-quantifier-observers.md](../proofs/h-observer-space/reversible-quantifier-observers.md) · [local-conjugacy-and-reversible-observers.md](../proofs/h-observer-space/local-conjugacy-and-reversible-observers.md) · [finite-affine-normalization.md](../proofs/h-observer-space/finite-affine-normalization.md) · [split-inverse-logical-observers.md](../proofs/h-observer-space/split-inverse-logical-observers.md) · [plenitude-material-normalization.md](../proofs/h-observer-space/plenitude-material-normalization.md) · [finite-block-symmetry-left-inverse.md](../proofs/h-observer-space/finite-block-symmetry-left-inverse.md) · [ternary-cantor-observer-model.md](../proofs/h-observer-space/ternary-cantor-observer-model.md) · [fork-one-sided-inverse-separation.md](../proofs/h-observer-space/fork-one-sided-inverse-separation.md) · [zorn-affine-character-extension.md](../proofs/h-observer-space/zorn-affine-character-extension.md) · [partial-reversible-normalization.md](../proofs/h-observer-space/partial-reversible-normalization.md) · [component-shift-symmetry-reversible-gap.md](../proofs/h-observer-space/component-shift-symmetry-reversible-gap.md) · [zorn-lattice-character-extension.md](../proofs/h-observer-space/zorn-lattice-character-extension.md) · [negation-affine-compatibility.md](../proofs/h-observer-space/negation-affine-compatibility.md) · [left-inverse-separation-decomposition.md](../proofs/h-observer-space/left-inverse-separation-decomposition.md) · [finite-pinning-dedekind-propositions.md](../proofs/h-observer-space/finite-pinning-dedekind-propositions.md) · [plenitude-endpoint-bridge.md](../proofs/h-observer-space/plenitude-endpoint-bridge.md) · [surjective-logical-observers.md](../proofs/h-observer-space/surjective-logical-observers.md) · [linear-circular-fibre-left-inverse-gap.md](../proofs/h-observer-space/linear-circular-fibre-left-inverse-gap.md) · [omega-chain-surjective-observers.md](../proofs/h-observer-space/omega-chain-surjective-observers.md) · [reversible-semilattice-order-actions.md](../proofs/h-observer-space/reversible-semilattice-order-actions.md) · [fixed-point-symmetry-left-inverse-separation.md](../proofs/h-observer-space/fixed-point-symmetry-left-inverse-separation.md) · [full-cancellative-monoid-observers.md](../proofs/h-observer-space/full-cancellative-monoid-observers.md) · [reversible-truth-gap-chains.md](../proofs/h-observer-space/reversible-truth-gap-chains.md) · [reversible-semilattice-local-global.md](../proofs/h-observer-space/reversible-semilattice-local-global.md) · [root-truth-profile-surjective-separation.md](../proofs/h-observer-space/root-truth-profile-surjective-separation.md) · [canonical-adjoints-and-image-factorization.md](../proofs/h-observer-space/canonical-adjoints-and-image-factorization.md) · [integer-shift-predecessor-contingent-barcan.md](../proofs/h-observer-space/integer-shift-predecessor-contingent-barcan.md)
+
+**Earlier saved manifests:** [original-manifest.json](certificates/full-typed-logical-separation-actual-c/original-manifest.json)
+
+**Scope evidence:** [certification-closeout.json](certification-closeout.json) · [acceptance.json](certificates/full-typed-logical-separation-actual-c/acceptance.json)
+
+**Selected exact certificates:** [certificate.json](certificates/final-full-typed-logical-separation-h-transport/certificate.json) · [certificate.json](certificates/final-full-typed-logical-separation-h-bridge/certificate.json) · [certificate.json](certificates/final-full-typed-logical-separation-h-closure/certificate.json) · [certificate.json](certificates/final-full-typed-logical-separation-h-consequences/certificate.json) · [certificate.json](certificates/final-full-typed-logical-separation-c-holes/certificate.json) · [certificate.json](certificates/final-full-typed-logical-separation-c-transport/certificate.json) · [certificate.json](certificates/full-typed-logical-separation-actual-c/certificate.json)
