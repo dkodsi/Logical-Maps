@@ -229,6 +229,7 @@ Proofs: [Quantifier-generated lattices](quantifier-generated-lattices.md), §§1
 Let z=(Top=Bottom). IC_t says that every true propositional equality judgment equals Top and every false one equals z. Let NC say every false proposition equals Bottom, PC every true proposition equals Top, and FA be the Fregean Axiom.
 
 ```mermaid
+%%{init: {"flowchart": {"nodeSpacing": 15, "rankSpacing": 40}}}%%
 flowchart LR
     Eq["S[A + truth-correct equality]"] <--> IC["ICₜ"]
     PointEq["S[A + pointwise equality fixing]"] <--> IC
@@ -246,11 +247,12 @@ One observer separating propositions is equivalent to FA when identity belongs t
 
 Proofs: [Identity collapse](identity-collapse.md), §§2–6; [Observer restrictions](observer-restrictions.md), §§2–6.
 
-## 6. The reversible-meet atom theorem over H
+## 6. Reversible meet separation: atoms and order actions
 
 RevM below means propositional S[A Z M Rev_M], where the observer has an admitted meet-preserving inverse and both inverse equations are whole-operation identities. Atom means a meet atom for p≤q iff p∧q=p, not an unannounced replacement by the C-based Boolean definition.
 
 ```mermaid
+%%{init: {"flowchart": {"nodeSpacing": 15, "rankSpacing": 40}}}%%
 flowchart LR
     Rev["RevM + one meet atom"] <--> Structure["Bounded atomistic meet structure +<br/>true atom + admitted automorphisms<br/>transitive on atoms"]
     Rev --> Order["Atoms distinguish every failure of<br/>order"]
@@ -268,6 +270,51 @@ The exact characterization supplies the converse with explicit action and truth 
 This is a substantive H theorem using none of C, N, V, Q, BF or identity bivalence. The six-element asymmetric-atom model proves that atomisticity plus a true atom does **not** suffice, even with all Fun, all-type identity bivalence, and ordinary strong meet separation by endpoint-valued idempotent witnesses. The atom-transitivity requirement is substantive.
 
 Proofs: [Reversible meet separation](reversible-meet-atomicity.md), §§1–6; [Exact reversible-meet characterization](reversible-meet-characterization.md), §§1–6.
+
+The atomless region has a different positive criterion. For an admitted group G of whole meet automorphisms, its common truth-profile relation is the largest admitted invariant truth-compatible equivalence and is a meet congruence. On a chain it is convex, so absence of a nontrivial such convex equivalence is an exact separation criterion.
+
+```mermaid
+flowchart LR
+    Primitive["Bounded dense meet chain<br/>+<br/>admitted order-primitive action<br/>+<br/>interior truth contrast"] --> AtomlessRev["Separation by G<br/>and hence<br/>reversible meet separation"]
+    TwoPoint["Order 2-homogeneity<br/>on the<br/>interior"] --> PrimitiveAction["Order primitivity<br/>on the interior"]
+    AtomlessRev --> Obstruction["No nontrivial admitted<br/>invariant<br/>truth-compatible<br/>congruence"]
+```
+
+In the last arrow the action is the qualified group being used; the corresponding absence condition also suffices when the bounded meet/group hypotheses are retained. Order primitivity says every admitted invariant convex equivalence on the interior is equality or universal. It does not mention truth. An interior true/false pair rules out the universal truth-profile relation, and density rules out identifying an endpoint with an interior proposition.
+
+The full-function rational-chain model has no atoms, no least true proposition and no greatest false proposition and satisfies joint reversible M/V separation plus Fun, while C fails. A restricted admitted translation subgroup is primitive and separating but not order 2-homogeneous. The dual join and joint lattice versions retain their whole-operation hypotheses. Full typed scope adds Fun. Proofs: [Reversible semilattice order actions](reversible-semilattice-order-actions.md), §§1–7.
+
+### Adjacent truth cuts
+
+For a bounded meet chain, an admitted whole-meet automorphism group G, and a greatest false/least true pair f<u, there is an exact alternative to density and primitivity:
+
+```mermaid
+flowchart LR
+    GapSep["Separation by G"] <--> GapAction["Every nontrivial interval contains a<br/>gap<br/>+ G transitive on gaps"]
+    PlenBounds["Plenitude at t,t<br/>+ admitted<br/>Q_t/P_t order bounds"] --> TruthGap["Greatest false f<br/>and least true u"]
+```
+
+The equivalence retains the stated chain/group/truth-gap background. A gap is an adjacent pair; it need not begin at Bottom. Plenitude admits the true-only and false-only families whose bounds give f,u. Order automorphisms preserve admitted GLBs and LUBs pointwise, and the corresponding Fun gives whole quantifier identities.
+
+The complete split interval has two points at every real coordinate in (0,1), with bounds added. It is atomless and every nontrivial interval contains a gap. Increasing coordinate bijections are gap-transitive. With truth across the gap at 1/2, genuine infima and suprema obey the H truth clauses. Full function domains therefore give **full reversible endpoint-fixing M,V,Q_Δ,P_Γ separation for every finite list**, while C fails. Primitive negation is omitted from this qualification. See [Reversible truth-gap chains](reversible-truth-gap-chains.md), §§1–6.
+
+### Convex blocks and finite lattice factors
+
+The following exact reductions have different backgrounds. The first uses a bounded dense chain with admitted invariant convex blocks, each without endpoints. The second uses a bounded distributive lattice with a specified external finite central partition preserved by the admitted whole-lattice group G.
+
+```mermaid
+flowchart LR
+    GlobalBlocks["Global separation by G"] <--> LocalBlocks["A block crosses the truth cut<br/>+ G<br/>transitive on blocks<br/>+ its<br/>stabilizer separates that block"]
+```
+
+At most one convex block crosses the truth cut. Primitive stabilizers turn its true/false contrast into local separation, so the global action need not itself be primitive. An imprimitive lexicographic full-function model realizes this criterion below C.
+
+```mermaid
+flowchart LR
+    GlobalFactors["Global separation by G"] <--> LocalFactors["G transitive on finite factor<br/>units<br/>+ stabilizer separates the<br/>true factor"]
+```
+
+There is exactly one true factor unit w. The lattice identity p=∨ᵢ(p∧eᵢ) finds a differing component, while z↔(z∧w) transfers the local truth test. The factors can be infinite and atomless: finite products of the rational-chain model give non-chain examples with joint reversible M/V separation and Fun but not C. The finite list of factors is external, not internal Frege finiteness of propositions. See [Reversible separation from blocks and factors](reversible-semilattice-local-global.md), §§1–6.
 
 ## 7. Derived implication and affine operations
 
@@ -356,9 +403,10 @@ OS means full logical separation. Fin means logical separation by observers with
 flowchart TD
     Ext["Extensionality"] --> End["Endpoint separation<br/>= C5 + Atomicityₜ"]
     End --> Rev["Rev = right-inverse<br/>separation"]
-    Rev -->|strict| Mono["SplitMono:<br/>left-inverse separation"]
+    Rev -->|strict| Both["Surj + SplitMono"]
+    Both -->|strict| Mono["SplitMono:<br/>left-inverse separation"]
     Mono -->|strict| OS["Full logical<br/>separation (OS)"]
-    Rev -->|strict| Surj["Surj: surjective<br/>separation"]
+    Both -->|strict| Surj["Surj: surjective<br/>separation"]
     Surj -->|strict| OS
     End --> Fin["Finite-image<br/>separation"]
     End --> At["C + BF<br/>+ Atomicityₜ"]
@@ -434,9 +482,50 @@ flowchart TD
 
 For each finite list containing t, the greatest kernel element k_S=∃p[(Sp=Bottom)∧p] defines a unique inverse below ¬k_S; filling the remaining region with identity gives an admitted same-list logical section. No Choice is assumed. This identifies the individual surjective-Good and qualified-right-invertible classes over C5, and their separation principles with Rev. See [Surjective logical observers](surjective-logical-observers.md), §§1–5. The C5 premise is explicit.
 
+The same C5 region has an exact **individual-observer** classification. Fix $\operatorname{Good}_{\{t\}}(E)$, let $Rq=\exists p\,[(Ep\le q)\land p]$, $Lq=\neg R(\neg q)$, and $k=R\bot$. These admitted terms are its right and left order adjoints:
+
+```mermaid
+flowchart TD
+    Bij["E bijective"] <--> Equal["Left adjoint = right adjoint"]
+    Bij --> Inj["E injective"]
+    Bij --> Onto["E onto"]
+    Inj <--> Modal["E commutes with original Box"]
+    Onto <--> Join["Right adjoint preserves join"]
+```
+
+The Box condition can be replaced by Diamond, and needs only Boolean qualification over C5. Injectivity also means R fixes Bottom; onto also means L preserves meet. The image has floor j=E∘R and ceiling c=E∘L, with j≤I≤c, both idempotent. E is endpoint-valued exactly when j is the original Box. Generally j is a separate auxiliary S5 interior. The terms T⁻q=(¬k∧Rq)∨(k∧q) and T⁺q=Lq∨(k∧q) fix both endpoints and respectively preserve M/all Q and V/all P. They coincide exactly when E is onto, recovering its canonical logical right inverse. See [Canonical adjoints and image factorization](canonical-adjoints-and-image-factorization.md), §§2–7. These are individual conditions, not additional separation-theory arrows. The interval/image factorization and the already known all-type preservation reduction use admitted families only.
+
 **Surj and left-inverse separation are incomparable without C5**, even over C+☐BF+☐OS. The full omega-chain has necessary Surj, yet its only injective Good_{ {t} } observer is identity, so left-inverse separation fails at that list. Its logical observers are exactly E(p)=f⁻¹[p] for maps with f(m)≥m; shifts give the surjective separators. Conversely the finite-block C5+necessary-left-inverse model fails Rev and therefore fails Surj. Within C5, Surj equals Rev and does imply left-inverse separation. These witnesses prove both strict arrows on the Surj branch of the main diagram. See [Omega-chain observer classification](omega-chain-surjective-observers.md), §§1–6.
 
-Qualified **left-inverse** separation lies strictly between Rev and OS. The finite-block model supplies left-inverse separation, even necessarily and together with C5 and atomlessness, while Rev fails. The full fork supplies the other strictness: it has necessary full OS and all boxed BF and Fun, but every left-invertible Boolean observer preserves current truth, so left-inverse separation fails. The natural-numbers/singleton all-maps model supplies left-inverse separation without ☐OS, C5, ☐BF or necessary Fun. Thus left-inverse separation and ☐OS are incomparable. See [Finite-pinning left-inverse models](finite-block-symmetry-left-inverse.md), §§2–7, and [The fork without left-inverse separation](fork-one-sided-inverse-separation.md), §§1–5.
+**Even their conjunction is strictly weaker than Rev, including when both schemas are separately boxed.** The full ℤ×ℕ monoid model supplies C+☐BF+necessary Surj+☐SplitMono but fails C5, hence Rev. Together with the preceding incomparability models, it makes both branches from the conjunction in the main graph strict. The conjunction uses separate families of observers.
+
+This example comes from a positive construction theorem for full one-object action models with singleton individuals:
+
+```mermaid
+flowchart TD
+    Cancel["Full cancellative-monoid model<br/>with singleton individuals"] --> SurjNecessary["☐SurjSep"]
+    Units["Such a model + a<br/>specified<br/>infinite sequence of<br/>distinct units"] --> BothNecessary["☐SurjSep<br/>+<br/>☐SplitMono"]
+    Units --> Cancel
+    BothNecessary --> SurjNecessary
+```
+
+With singleton individuals and full relational domains, constant-arrow evaluations separate; left cancellation makes each onto, and right cancellation supplies onto type transports for every quantifier identity. The unit sequence gives a shift of observation coordinates with one common qualified left inverse. The full equation is checked at arbitrary future inputs. A nonunit sends the nonzero singleton proposition {1} to Bottom, refuting C5. Taking the cancellative monoid ℤ×ℕ supplies both the units and a nonunit. See [Full cancellative monoid observers](full-cancellative-monoid-observers.md), §§1–6.
+
+Individual onto witnesses persist over C+BF_t, but their separating power need not:
+
+```mermaid
+flowchart TD
+    RevPersistent["Reversible separation"] -->|strict| NSurj["☐SurjSep"]
+    NSurj -->|strict| SurjCurrent["Surjective separation"]
+    NSurj -->|strict| NOS["☐OS"]
+    NOS --> NBarcan["C + ☐BF"]
+    SurjCurrent --> Barcan["C + BF"]
+    NBarcan --> Barcan
+```
+
+For an individual admitted E, C+BF_t proves Onto(E)→□Onto(E); Good_Δ also persists. Nevertheless a root truth-profile extension has full SurjSep+☐BF+☐Functionality but fails ☐OS and necessary SurjSep. Its symmetric tail has infinitely many fixed points supplying true-kernel pairs, alongside a freely permuted infinite part retaining the Boolean-separation obstruction. Root truth readers paired with those onto tail maps are admitted surjective logical separators. This supplies the strict NSurj→Surj edge. The omega-chain supplies Rev→NSurj strictness; the finite-block model supplies NSurj→☐OS strictness. See [Surjective separation without persistence](root-truth-profile-surjective-separation.md), §§1–6. That model retains ☐BF. A distinct [integer-shift predecessor](integer-shift-predecessor-contingent-barcan.md), §§1–7, now proves that current SurjSep does **not** imply ☐BF, with a failed BF instance at every admitted type in its accessible tail. Split epimorphisms approximate all finite pins at the source; integer translation charts provide prescribed-coordinate kernel pairs, and the root extension gives onto logical separators. At the smaller future object, one point pins every profile and each type has a missing transport value, yielding the explicit BF failures. Thus the omitted SurjCurrent→NBarcan arrow is a proved nonimplication, not an inference from the drawing.
+
+Qualified **left-inverse** separation lies strictly between Rev and OS. The finite-block model supplies left-inverse separation, even necessarily and together with C5 and atomlessness, while Rev fails. The full fork supplies the other strictness: it has ☐OS and ☐BF and ☐Functionality, but every left-invertible Boolean observer preserves current truth, so left-inverse separation fails. The natural-numbers/singleton all-maps model supplies left-inverse separation without ☐OS, C5, ☐BF or ☐Functionality. Thus left-inverse separation and ☐OS are incomparable. See [Finite-pinning left-inverse models](finite-block-symmetry-left-inverse.md), §§2–7, and [The fork without left-inverse separation](fork-one-sided-inverse-separation.md), §§1–5.
 
 There is an exact decomposition at each fixed output type τ and finite Δ containing t, over C+BF:
 
@@ -471,7 +560,7 @@ Even No Pure Contingency does not close the reversible gap:
 
 ```mermaid
 flowchart TD
-    R["Reversible logical separation"] -->|strict| CSM["C5 + ☐ left-inverse separation + No<br/>Pure Contingency"]
+    R["Reversible logical separation"] -->|strict| CSM["C5 + ☐SplitMono + No<br/>Pure Contingency"]
     CSM --> CNPC["C5 + ☐OS + No Pure Contingency"]
     R --> Param["Noncontingency with endpoint-valued<br/>first-order relation parameters"]
     Param --> Pure["No Pure Contingency"]
@@ -508,6 +597,8 @@ A one-object model with two infinite colour classes has finite fixed-pin proposi
 
 **Even C5+☐OS need not give left-inverse separation.** The [linear/circular fibre model](linear-circular-fibre-left-inverse-gap.md) has two objects with infinite fibres, ordered linearly at one and circularly at the other. Local stabilizer inclusions give full ☐OS; finitely many tuple orbits give D_t. A pure sentence about ordering infinite amorphous cells distinguishes the objects, so Rev fails. D_t then makes left-inverse separation fail as well, at the explicit finite propositional list {t,e,et,eet,(et)t,((et)t)t}. The cells' internal finiteness is verified, and the proposition algebras are atomless.
 
+The opposite C5-relative implication fails too. In an all-bijections symmetric finite-pinning model, a source group fixing a specified infinite sequence of individuals gives one qualified pair F∘E=I and a true c with Fc=Bottom. This uniform pair normalizes all ordinary separators into left-invertible ones. A trivial source group also provides ordinary separation. The qualitative-contrast model at its trivial-symmetry object therefore satisfies C5+left-inverse separation+☐BF+☐Functionality, but fails ☐OS and ☐SplitMono. **Left-inverse separation and ☐OS are consequently incomparable over C5.** See [Fixed-point symmetry](fixed-point-symmetry-left-inverse-separation.md), §§1–6.
+
 Rev and Fin are incomparable. So are C5 and OS, Rev and At, Fix and Nec, Fin and At, and Fin and Nec. No further negative comparisons are inferred from omitted arrows.
 
 **Rev is strictly stronger than C5 plus ☐OS.** The [finite-block symmetry model](finite-block-symmetry-reversible-gap.md) is atomless at both objects and satisfies C5+□OS throughout, but fails Rev. One object's designated group preserves blocks of every positive even size; the other's preserves blocks whose sizes are powers of two. A closed pure sentence about selecting proper nonempty subsets from disjoint six-element sets is true at one object and false at the other. This contradicts the No Pure Contingency consequence of Rev. The atom-bearing positive theorem above and this atomless countermodel settle both parts of the former converse question.
@@ -537,15 +628,22 @@ The following witnesses explain why the map has distinct directions.
 | Four-proposition relational model | Full material N separation plus Fun need not give pointwise N separation |
 | Full fork | All boxed BF and universal separation need not give exact binary families or .2 |
 | Full fork, join-of-leaf evaluations | Even endpoint-fixing idempotent observers preserving all universals and disjunction need not preserve conjunction |
-| Full fork, coordinate readers and the root atom | Necessary full OS, all boxed BF and Fun need not give qualified left-inverse separation |
-| Ternary Cantor symmetry with continuous finite leaf profiles | Even necessary full M+Q/P, V+Q/P and N+Q/P separation together, with all boxed BF and Fun, need not give Boolean separation |
+| Full fork, coordinate readers and the root atom | ☐OS, ☐BF and ☐Functionality need not give qualified left-inverse separation |
+| Ternary Cantor symmetry with continuous finite leaf profiles | Even necessary full M+Q/P, V+Q/P and N+Q/P separation together, with ☐BF and ☐Functionality, need not give Boolean separation |
 | Finite-support natural numbers / singleton, all maps, with a one-sided shift of evaluation neighborhoods | Even full qualified left-inverse separation need not give C5, ☐OS, its own necessary schema, ☐BF or ☐Functionality |
-| Finite-block symmetry: even sizes / powers of two | C5 plus necessary full OS need not give Rev, even with atomlessness at every object |
-| The same finite-block model, with a one-sided shift of evaluation neighborhoods | C5 plus necessary qualified left-inverse separation need not give Rev or No Pure Contingency |
-| One-object component-shift symmetry, with alternating finite-block patterns | C5 plus necessary qualified left-inverse separation and No Pure Contingency still need not give Rev |
+| Finite-block symmetry: even sizes / powers of two | C5 plus ☐OS need not give Rev, even with atomlessness at every object |
+| The same finite-block model, with a one-sided shift of evaluation neighborhoods | C5 plus ☐SplitMono need not give Rev or No Pure Contingency |
+| One-object component-shift symmetry, with alternating finite-block patterns | C5 plus ☐SplitMono and No Pure Contingency still need not give Rev |
 | One-object symmetry preserving two infinite colour classes | Every admitted proposition injection is onto, with C5 and Rev, yet propositions are atomless and not internally Frege finite |
-| Linear versus circular orders of infinite fibres | C5 plus necessary full OS, D_t and atomlessness still need not give qualified left-inverse separation |
-| Full omega-chain with forward coordinate observers | Necessary surjective logical separation, BF and Atomicity_t need not give C5 or left-inverse separation; every injective Good-t observer is identity |
+| Linear versus circular orders of infinite fibres | C5 plus ☐OS, D_t and atomlessness still need not give qualified left-inverse separation |
+| Full omega-chain with forward coordinate observers | ☐SurjSep + ☐BF + ☐Atomicity (type t) need not give C5 or left-inverse separation; every injective Good-t observer is identity |
+| Qualitative contrast evaluated at its trivial-symmetry object | C5 plus full qualified left-inverse separation, ☐BF and ☐Functionality need not give ☐OS or ☐SplitMono |
+| Atomless rational-chain full-function model | An admitted primitive order action gives joint reversible meet/join separation and Fun, while C fails |
+| Full cancellative monoid ℤ×ℕ | ☐SurjSep + ☐SplitMono, with C and ☐BF, still do not give C5 or Rev |
+| Root truth-profile extension of a fixed/free symmetry tail | Full surjective logical separation, ☐BF and ☐Functionality need not give ☐OS or ☐SurjSep |
+| Integer-shift predecessor over ℕ×ℤ and {∗}×ℤ | Full surjective logical separation and current BF coexist with failure of ☐BF at every admitted type |
+| Complete split interval with coordinate order automorphisms | Atomless full reversible M,V and both quantifier-family separation need not give C |
+| Lexicographic blocks and finite products of rational chains | Imprimitive and non-chain atomless actions give joint reversible M/V separation below C |
 | Three-proposition full-function models | Factivity and inflationarity separately give only one-sided collapse |
 | Six-element asymmetric-atom model | Atomisticity, a true atom, and ordinary strong meet separation do not supply reversible meet separation |
 
@@ -553,8 +651,8 @@ The live research questions include:
 
 1. Does material conjunction or disjunction separation imply its pointwise version in the remaining infinite, nonprincipal case? Internal finiteness, local truth extrema, a separating finite-image material family, ND_t and Plenitude at t,t give positive converses. Equivalently, can a separating material family always be replaced by an admitted composition-closed one? Any countermodel must evade the stated positive hypotheses.
 2. Do the infinite affine group equations supply admitted characters over bare H? Zorn at tt supplies characters and partial-character extension; Plenitude at t,t then supplies pointwise involutions. Pointed subgroup maximality exactly characterizes separation, while relative maximality exactly characterizes extension.
-3. What is the strength of combining surjective and left-inverse separation, and how do further boxed inverse principles compare? The separate principles are incomparable even over C+☐BF+☐OS; under C5, surjective separation equals Rev.
-4. Which further partial-signature reversibility and intrinsic admission conditions have exact characterizations? Plenitude now covers negation, each affine operation and the linked negation/affine and paired-affine signatures with their compatibility equations. Zorn gives intrinsic material lattice and Boolean converses as well as the affine converse. Even C5+□SplitMono+No Pure Contingency does not imply Rev. No converse using the stronger first-order endpoint-parameter noncontingency schema is asserted.
+3. What further exact relationships hold among separately boxed inverse restrictions? SurjSep ⇒ ☐BF is refuted at every admitted type by the integer-shift predecessor. Individual qualification persistence, separation persistence, the conjunction and the C5-relative comparisons are distinguished by the theorems above.
+4. Which further partial-signature reversibility and intrinsic admission conditions have exact characterizations? The atomless meet region has the invariant-congruence obstruction, dense-chain primitivity, exact gap-density/transitivity, and exact convex-block/finite-factor reductions. The complete split-interval model preserves both quantifier families reversibly below C. Arbitrary admitted semilattice actions still lack a complete intrinsic classification. Plenitude covers negation, each affine operation and the linked negation/affine and paired-affine signatures with their compatibility equations. Zorn gives intrinsic material lattice and Boolean converses as well as the affine converse. Even C5+□SplitMono+No Pure Contingency does not imply Rev. No converse using the stronger first-order endpoint-parameter noncontingency schema is asserted.
 
 The linked proofs settle the finite primitive classification and the displayed implications, equivalences and countermodels. The broader H comparisons remain under investigation.
 

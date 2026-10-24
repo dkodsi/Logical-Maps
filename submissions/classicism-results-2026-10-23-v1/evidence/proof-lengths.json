@@ -1116,7 +1116,7 @@
     {
       "result_ref": "LOGICAL-OBSERVERS",
       "rating": "long",
-      "word_count": 55508,
+      "word_count": 66238,
       "sources": [
         {
           "path": "proofs/full-identity-observers.md",
@@ -1196,7 +1196,7 @@
               457
             ]
           ],
-          "sha256": "2e7099ab459737fc8f14086b2c1c3c6c3b2aaa3163d03ea40fc6059c1562d396",
+          "sha256": "13437dc949e78a95d1e86a0a208fe002f7237ba23ec3b55d9494ab2f02e9cabf",
           "word_count": 3598
         },
         {
@@ -1440,6 +1440,61 @@
             ]
           ],
           "word_count": 1591
+        },
+        {
+          "path": "proofs/h-observer-space/fixed-point-symmetry-left-inverse-separation.md",
+          "sha256": "1adf067ef1d3bb3d97cfb00c79b1ef3f30262f73425378808af644eca88b2f6b",
+          "line_spans": [
+            [
+              17,
+              173
+            ]
+          ],
+          "word_count": 1577
+        },
+        {
+          "path": "proofs/h-observer-space/full-cancellative-monoid-observers.md",
+          "sha256": "2c0ad1df5c663ecc094b32f8369eeea7f1f7b88b724f03a96e59beb78330c10f",
+          "line_spans": [
+            [
+              16,
+              218
+            ]
+          ],
+          "word_count": 1829
+        },
+        {
+          "path": "proofs/h-observer-space/root-truth-profile-surjective-separation.md",
+          "sha256": "f4425a280244dcf97af255f0c259e1c4adcaa9dac14cb718a90a13d941a8056d",
+          "line_spans": [
+            [
+              14,
+              217
+            ]
+          ],
+          "word_count": 2087
+        },
+        {
+          "path": "proofs/h-observer-space/canonical-adjoints-and-image-factorization.md",
+          "sha256": "1d8275cbaa9ff1d5ca3bd070d25740b7ba3578e35f3af8d59b51d3324f102c8c",
+          "line_spans": [
+            [
+              9,
+              384
+            ]
+          ],
+          "word_count": 2715
+        },
+        {
+          "path": "proofs/h-observer-space/integer-shift-predecessor-contingent-barcan.md",
+          "sha256": "36ddb135e5a552e8ea2d4cba0cb9d77145064ce9f588a20996d0787bb46acef4",
+          "line_spans": [
+            [
+              17,
+              237
+            ]
+          ],
+          "word_count": 2522
         }
       ]
     },
@@ -2430,7 +2485,7 @@
     {
       "result_ref": "H-OBSERVER-SPACE",
       "rating": "long",
-      "word_count": 76898,
+      "word_count": 95742,
       "sources": [
         {
           "path": "proofs/h-observer-space/finite-affine-separation.md",
@@ -2893,6 +2948,94 @@
             ]
           ],
           "word_count": 1591
+        },
+        {
+          "path": "proofs/h-observer-space/reversible-semilattice-order-actions.md",
+          "sha256": "eb278b3523002449d35e95a2925720902d9d009e65ce1b1ee072c306b737800a",
+          "line_spans": [
+            [
+              9,
+              237
+            ]
+          ],
+          "word_count": 2578
+        },
+        {
+          "path": "proofs/h-observer-space/fixed-point-symmetry-left-inverse-separation.md",
+          "sha256": "1adf067ef1d3bb3d97cfb00c79b1ef3f30262f73425378808af644eca88b2f6b",
+          "line_spans": [
+            [
+              17,
+              173
+            ]
+          ],
+          "word_count": 1577
+        },
+        {
+          "path": "proofs/h-observer-space/full-cancellative-monoid-observers.md",
+          "sha256": "2c0ad1df5c663ecc094b32f8369eeea7f1f7b88b724f03a96e59beb78330c10f",
+          "line_spans": [
+            [
+              16,
+              218
+            ]
+          ],
+          "word_count": 1829
+        },
+        {
+          "path": "proofs/h-observer-space/reversible-truth-gap-chains.md",
+          "sha256": "320d8ba44202c6c01284298381504796338f9c008fd8026ebf496dd485ae937a",
+          "line_spans": [
+            [
+              9,
+              203
+            ]
+          ],
+          "word_count": 2384
+        },
+        {
+          "path": "proofs/h-observer-space/reversible-semilattice-local-global.md",
+          "sha256": "1b79b26e54eee7b9478e48a7cc4f204c0c38cfb845da5823b211c0808788ea9f",
+          "line_spans": [
+            [
+              9,
+              284
+            ]
+          ],
+          "word_count": 3152
+        },
+        {
+          "path": "proofs/h-observer-space/root-truth-profile-surjective-separation.md",
+          "sha256": "f4425a280244dcf97af255f0c259e1c4adcaa9dac14cb718a90a13d941a8056d",
+          "line_spans": [
+            [
+              14,
+              217
+            ]
+          ],
+          "word_count": 2087
+        },
+        {
+          "path": "proofs/h-observer-space/canonical-adjoints-and-image-factorization.md",
+          "sha256": "1d8275cbaa9ff1d5ca3bd070d25740b7ba3578e35f3af8d59b51d3324f102c8c",
+          "line_spans": [
+            [
+              9,
+              384
+            ]
+          ],
+          "word_count": 2715
+        },
+        {
+          "path": "proofs/h-observer-space/integer-shift-predecessor-contingent-barcan.md",
+          "sha256": "36ddb135e5a552e8ea2d4cba0cb9d77145064ce9f588a20996d0787bb46acef4",
+          "line_spans": [
+            [
+              17,
+              237
+            ]
+          ],
+          "word_count": 2522
         }
       ]
     }
@@ -3168,7 +3311,7 @@
         "LOGICAL-OBSERVERS"
       ],
       "rating": "long",
-      "word_count": 55508,
+      "word_count": 66238,
       "sources": [
         {
           "path": "proofs/full-identity-observers.md",
@@ -3248,7 +3391,7 @@
               457
             ]
           ],
-          "sha256": "2e7099ab459737fc8f14086b2c1c3c6c3b2aaa3163d03ea40fc6059c1562d396",
+          "sha256": "13437dc949e78a95d1e86a0a208fe002f7237ba23ec3b55d9494ab2f02e9cabf",
           "word_count": 3598
         },
         {
@@ -3492,6 +3635,61 @@
             ]
           ],
           "word_count": 1591
+        },
+        {
+          "path": "proofs/h-observer-space/fixed-point-symmetry-left-inverse-separation.md",
+          "sha256": "1adf067ef1d3bb3d97cfb00c79b1ef3f30262f73425378808af644eca88b2f6b",
+          "line_spans": [
+            [
+              17,
+              173
+            ]
+          ],
+          "word_count": 1577
+        },
+        {
+          "path": "proofs/h-observer-space/full-cancellative-monoid-observers.md",
+          "sha256": "2c0ad1df5c663ecc094b32f8369eeea7f1f7b88b724f03a96e59beb78330c10f",
+          "line_spans": [
+            [
+              16,
+              218
+            ]
+          ],
+          "word_count": 1829
+        },
+        {
+          "path": "proofs/h-observer-space/root-truth-profile-surjective-separation.md",
+          "sha256": "f4425a280244dcf97af255f0c259e1c4adcaa9dac14cb718a90a13d941a8056d",
+          "line_spans": [
+            [
+              14,
+              217
+            ]
+          ],
+          "word_count": 2087
+        },
+        {
+          "path": "proofs/h-observer-space/canonical-adjoints-and-image-factorization.md",
+          "sha256": "1d8275cbaa9ff1d5ca3bd070d25740b7ba3578e35f3af8d59b51d3324f102c8c",
+          "line_spans": [
+            [
+              9,
+              384
+            ]
+          ],
+          "word_count": 2715
+        },
+        {
+          "path": "proofs/h-observer-space/integer-shift-predecessor-contingent-barcan.md",
+          "sha256": "36ddb135e5a552e8ea2d4cba0cb9d77145064ce9f588a20996d0787bb46acef4",
+          "line_spans": [
+            [
+              17,
+              237
+            ]
+          ],
+          "word_count": 2522
         }
       ]
     },
@@ -5037,7 +5235,7 @@
         "H-OBSERVER-SPACE"
       ],
       "rating": "long",
-      "word_count": 76898,
+      "word_count": 95742,
       "sources": [
         {
           "path": "proofs/h-observer-space/finite-affine-separation.md",
@@ -5500,6 +5698,94 @@
             ]
           ],
           "word_count": 1591
+        },
+        {
+          "path": "proofs/h-observer-space/reversible-semilattice-order-actions.md",
+          "sha256": "eb278b3523002449d35e95a2925720902d9d009e65ce1b1ee072c306b737800a",
+          "line_spans": [
+            [
+              9,
+              237
+            ]
+          ],
+          "word_count": 2578
+        },
+        {
+          "path": "proofs/h-observer-space/fixed-point-symmetry-left-inverse-separation.md",
+          "sha256": "1adf067ef1d3bb3d97cfb00c79b1ef3f30262f73425378808af644eca88b2f6b",
+          "line_spans": [
+            [
+              17,
+              173
+            ]
+          ],
+          "word_count": 1577
+        },
+        {
+          "path": "proofs/h-observer-space/full-cancellative-monoid-observers.md",
+          "sha256": "2c0ad1df5c663ecc094b32f8369eeea7f1f7b88b724f03a96e59beb78330c10f",
+          "line_spans": [
+            [
+              16,
+              218
+            ]
+          ],
+          "word_count": 1829
+        },
+        {
+          "path": "proofs/h-observer-space/reversible-truth-gap-chains.md",
+          "sha256": "320d8ba44202c6c01284298381504796338f9c008fd8026ebf496dd485ae937a",
+          "line_spans": [
+            [
+              9,
+              203
+            ]
+          ],
+          "word_count": 2384
+        },
+        {
+          "path": "proofs/h-observer-space/reversible-semilattice-local-global.md",
+          "sha256": "1b79b26e54eee7b9478e48a7cc4f204c0c38cfb845da5823b211c0808788ea9f",
+          "line_spans": [
+            [
+              9,
+              284
+            ]
+          ],
+          "word_count": 3152
+        },
+        {
+          "path": "proofs/h-observer-space/root-truth-profile-surjective-separation.md",
+          "sha256": "f4425a280244dcf97af255f0c259e1c4adcaa9dac14cb718a90a13d941a8056d",
+          "line_spans": [
+            [
+              14,
+              217
+            ]
+          ],
+          "word_count": 2087
+        },
+        {
+          "path": "proofs/h-observer-space/canonical-adjoints-and-image-factorization.md",
+          "sha256": "1d8275cbaa9ff1d5ca3bd070d25740b7ba3578e35f3af8d59b51d3324f102c8c",
+          "line_spans": [
+            [
+              9,
+              384
+            ]
+          ],
+          "word_count": 2715
+        },
+        {
+          "path": "proofs/h-observer-space/integer-shift-predecessor-contingent-barcan.md",
+          "sha256": "36ddb135e5a552e8ea2d4cba0cb9d77145064ce9f588a20996d0787bb46acef4",
+          "line_spans": [
+            [
+              17,
+              237
+            ]
+          ],
+          "word_count": 2522
         }
       ]
     }
