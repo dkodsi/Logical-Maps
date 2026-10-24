@@ -1,6 +1,10 @@
 # Observer separation over H
 
-Observer separation over H, by OpenAI Codex, prompted by Daniel Kodsi, 24 October 2026. C and stronger theories are regions located and recovered inside that space. This folder is a mathematical research map; the existing Classicism database and its fixed C background have not been repurposed.
+By OpenAI Codex, prompted by Daniel Kodsi, 24 October 2026.
+
+An observer is an admitted operation on propositions. A separation principle says that distinct propositions—or, at full scope, distinct relations—can be distinguished by the truth values reported by suitably qualified observers. Changing what observers must preserve gives the branching map studied here.
+
+Start with the [dedicated results page and thematic diagrams](GRAPH.md). The [theorem tables](MAP.md) give exact equivalences, countermodels and the remaining questions; each result links to its proof. [Main Results](../../MAIN-RESULTS.md#h-observer-separation) gives the shorter synthesis.
 
 ## Fixed framework
 
@@ -16,39 +20,26 @@ Preservation means full identity of composite operations unless a comparison tie
 
 Propositional and full relational separation are recorded separately. Optional principles, including Functionality, identity bivalence, NI, ND, BF, and C, belong in the premises of individual claims. Ordinary H does not license modal normality, C's Intensionality, or the guard-normalization theorem proved over C.
 
-## Established foundations
+## Reading the map
 
-- Truth profiles give an external faithful representation of propositions by sets of eligible observers. This classifies the output equations and universal Horn laws in each preserved connective signature.
-- Full typed separation factors as propositional separation plus Functionality. The distinction between the truth algebra and equality of higher operations is therefore a structural dimension of the map.
-- Material conjunction/disjunction separation has exact semilattice characterizations. The matching quantifier branches have exact admitted greatest/least-upper-bound characterizations.
-- Strong representation can be recovered under explicit local hypotheses such as identity bivalence and Functionality. These hypotheses are not silently identified with C or declared weaker than C.
-- ND_t alone gives exact pointwise meet/universal and join/existential representations over H. The two-output witnesses need not use the fixed endpoints; whole-operation lifting retains its Functionality premise.
-- Full logical proof transport recovers C. Its primitive signature and equality clauses must be audited over H; functional completeness in ordinary Boolean truth is not enough to erase unpreserved primitives.
-- Pointwise separation is exactly separation by an admitted composition-closed family of material observers, for each finite preservation signature. Internal finite image also permits material M/V observers, their matching quantifiers, and the joint lattice/quantifier package to be replaced by two-output pointwise observers, preserving their truth profiles.
-- Ordinary full logical separation does not force necessary BF_e, necessary BF_t, or necessary Functionality at e,t. Under C5, necessary separation plus one atom instead has the exact strength of endpoint separation.
-- Full reversible logical separation implies No Pure Contingency without an atom premise, in addition to C5 and necessary ordinary separation.
-- Rev is strictly stronger than C5 plus necessary OS: the atomless even-block/power-of-two-block model satisfies the latter and has a contingent pure choice sentence. Over C, admitted invertibility is exactly necessary bijectivity; invertibility together with Q_t already supplies Boolean preservation.
+The primitive-package classification fixes both the preservation tier and the separation scope. It treats conjunction, disjunction, negation and quantifiers as independent primitives; its exact order does not transfer unchanged to a presentation defining one from the others. A common class preserving two operations can be stronger than two separate classes that each separate.
 
-The notes below contain the proofs and source locators.
+The three preservation tiers are agreement in truth, identity of outputs at every input, and identity of whole composite operations. The map calls them material, pointwise and whole-operation preservation. Comparisons between them retain their stated admission, finiteness or Functionality premises. Internal Frege finiteness of an observer's image is distinct from finiteness of the entire proposition domain.
 
-Start with [the full graphical map](GRAPH.md) and [the H theorem-space map](MAP.md). They include the exact primitive-package classification, representation and converse theorems, identity and observer restrictions, higher-type distinctions, and the C region. The independent primitive packages have a complete implication classification; unresolved comparisons elsewhere are listed explicitly.
+For complete logical observers, a qualified right inverse means an admitted same-list observer $F$ with $E\circ F=I$; a qualified left inverse means $F\circ E=I$. These are whole-operation identities. Right-inverse separation is exactly reversible separation. Left-inverse separation lies strictly between reversible separation and ordinary logical separation (OS), and is incomparable with ☐OS. Under internal Frege finiteness of all propositions, left-inverse, reversible and endpoint separation coincide. The theorem compares separation principles, not the individual classes of observers.
 
-## Existing regions and entry points
+The [upper logical region](GRAPH.md#9-the-larger-region-above-c--bf) connects these results to C, BF, C5, Atomicity, No Pure Contingency and Extensionality. The [model table and frontier](GRAPH.md#10-models-open-comparisons-and-research-status) distinguish established non-implications from unresolved comparisons. Only the finite primitive-package family has a complete classification; the wider H investigation remains active.
 
-The earlier [meet/quantifier note](../meet-quantifier-separation.md) contains H order results and the two-orders countermodel. The [connective and upper lattice](../observer-lattice.md) and its [model companion](../observer-lattice-models.md) give established regions to retain with their exact premises.
+The [Zorn theorem](zorn-affine-character-extension.md) supplies admitted infinite affine characters and extends partial characters, using the preorder instance at type tt as an explicit H premise. [Plenitude](partial-reversible-normalization.md) separately supplies involutive separating witnesses for negation and each affine operation; whole-operation identities retain their Functionality premises.
 
-The [modal-selector and quantifier-reduction note](../modal-selectors-and-quantifier-reduction.md) locates a further C region: modal .2 characterizes an endpoint selector; C5 reduces full logical separation to propositional Boolean/Q_t separation. Those are conditional results within the H program, not replacements for it.
+The [component-shift model](component-shift-symmetry-reversible-gap.md) satisfies C5 + ☐SplitMono + No Pure Contingency but fails reversible separation. Its obstruction uses an individual parameter and a first-order relation whose tuple values are endpoints. This complements the earlier finite-block model, whose obstruction is a closed pure sentence. Reversible separation forces noncontingency for the specified endpoint-relation parameter formulas as well; arbitrary higher-type parameters are not covered.
 
-The representation and reversibility results include [local symmetry conjugacy](local-conjugacy-and-reversible-observers.md), [necessity of distinctness representation](necessity-of-distinctness-representation.md), [reversible quantifier observers](reversible-quantifier-observers.md), and [the finite-block symmetry countermodel](finite-block-symmetry-reversible-gap.md). These give a general admitted-involution construction, exact ND_t representation, necessary-bijection and invertible-quantifier characterizations, and the strict Rev/☐OS comparison.
+The [lattice-character theorem](zorn-lattice-character-extension.md) extends the Zorn route to admitted prime filters and partial lattice characters, giving exact material lattice and Boolean converses. [Compatibility identities](negation-affine-compatibility.md) connect negation with an affine operation, or link two affine operations, over H; Plenitude then supplies the corresponding involutions. Quantifier preservation is not inferred from these connective results.
 
-Related results are [composition-closed characterization](composition-closed-characterization.md), [finite-image material normalization](finite-image-material-normalization.md), [logical separation with contingent Barcan](logical-separation-with-contingent-barcan.md), [necessary separation and atoms](necessary-separation-and-atoms.md), and [reversible separation and pure truth](reversible-separation-and-pure-truth.md). The modal-selector note's §6 adds a separate limitation: even all boxed BF does not upgrade each universal-preserving observer to a meet-preserving observer, or each existential-preserving observer to a join-preserving one. That individual-observer counterexample does not settle the associated separation-theory comparisons.
+The [left-inverse decomposition](left-inverse-separation-decomposition.md) is a theorem over C + BF for each fixed output type and finite list containing t. Its full-H form is a schema of disjunctions, not a single choice between two full theories. The [two-colour model](finite-pinning-dedekind-propositions.md) separates internal Frege finiteness from the weaker condition that every admitted injective proposition operation is onto: that condition equates the inverse orientations but does not imply endpoint separation.
 
-## Scope and frontier
+Current OS plus [Plenitude at (t,t)](plenitude-endpoint-bridge.md) is exactly endpoint separation; full Plenitude gives the same equivalence. The independent admission theorem is C + BF (type t) + Plenitude at (t,t) iff C5 + Actuality.
 
-The scope includes the connective signatures and their derived-operation closures; endpoints; universal and existential families; identity and equality transport; material versus full identity; propositional versus typed separation; admission and representation assumptions; and restrictions on observers such as endpoint range, finite image, reversibility, uniqueness and factivity.
+[Surjective observers](surjective-logical-observers.md) have every proposition as an output. This does not itself supply an admitted operation choosing preimages. Over C5, a definable kernel and fibre representative do supply a qualified right inverse, so C5 + surjective separation is exactly Rev. Over H, surjective and left-inverse separation are incomparable: the [omega-chain classification](omega-chain-surjective-observers.md) and the finite-block model give the two directions, even over C + ☐BF + ☐OS.
 
-The results distinguish same-observer conjunctions from conjunctions of separate separation principles. Missing arrows do not establish non-implication.
-
-The primitive-package classification treats conjunction, disjunction, negation, and the two quantifier families as independent primitives. It does not transfer unchanged to a presentation where one is defined from the others. Only this finite family has a complete implication classification; the wider comparisons remain under investigation. The wider atlas gives representation theorems, exact converses, observer restrictions and separating models, with unresolved comparisons listed in MAP §10. It does not claim an exhaustive enumeration of all H theories.
-
-The proposed implications OS ⇒ ☐BF and C5 + ☐OS ⇒ reversible separation are both refuted by the linked models. The unrestricted infinite material/pointwise M/V comparison and the other precisely scoped questions in MAP §10 remain unresolved here.
+The [linear/circular fibre model](linear-circular-fibre-left-inverse-gap.md) satisfies C5 + ☐OS, has atomless propositions and makes every admitted proposition injection onto, yet fails left-inverse separation. A closed pure sentence about ordering infinite amorphous cells proves the failure.

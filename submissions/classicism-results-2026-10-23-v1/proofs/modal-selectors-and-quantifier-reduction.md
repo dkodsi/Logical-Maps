@@ -168,3 +168,9 @@ Thus even C + all boxed BF does not imply that every universal-preserving observ
 For the last assertion, identity and the coordinate readers L(p)=(p_l,p_l,p_h), R(p)=(p_h,p_l,p_h), each with identity leaf components, preserve all Boolean operations and every universal/existential quantifier fully by the individual leaf-transport surjectivities; they separate the three proposition bits, and the model's Functionality supplies full typed separation. The whole-operation equations hold at the root and both leaves, and the translated equality clauses follow from C and Boolean preservation.
 
 The new observer verdicts in this section have direct source `misc`, OpenAI Codex, prompted by Daniel Kodsi, 24 October 2026, §6, unpaginated,  The underlying full action construction retains the source attribution in the linked fork note.
+
+## 7. Separation-theory countermodels without .2
+
+The unrestricted N+Q and V+Q separation reductions are refuted by the [ternary Cantor symmetry model](h-observer-space/ternary-cantor-observer-model.md), §§1–9. It satisfies C, every boxed BF and Functionality instance, and full endpoint-fixing separation for each of the separate M+Q/P, V+Q/P and N+Q/P classes. Every separately boxed instance of each positive separation schema also holds. Nevertheless Boolean observers fail to separate even propositions.
+
+Thus the conjunction of those separate separation theories still does not give a common Boolean separating class. This supplies the theory-level countermodel that the full fork of §6 does not supply. It does not change the positive reductions under .2 in §§1–5: .2 fails in the new model. The construction and proofs are in the linked note, direct source `misc`, OpenAI Codex, prompted by Daniel Kodsi, 24 October 2026, unpaginated.

@@ -44,7 +44,7 @@ No preservation, endpoint, existence or correctness condition on the qualified o
 
 **Proof.** FullSep includes its propositional instance. Suppose ∀x Xx=Yx, where X,Y have type σρ. Apply these identities to every remaining argument of the relational output ρ. Ordinary H substitution gives equality of the resulting propositions, and hence agreement in truth after applying any E. The full separation instance at σρ gives X=Y. This proves every Functionality instance.
 
-Conversely, suppose all K-observers agree on X[\bar z] and Y[\bar z] at every current tuple. Fix that tuple and apply propositional separation: X[\bar z]=Y[\bar z]. Generalize over the tuple. Iterating Functionality, starting with the final argument and proceeding outward, gives X=Y. The other direction of the separation biconditional is ordinary substitution. ∎
+Conversely, suppose all K-observers agree on $X[\bar z]$ and $Y[\bar z]$ at every current tuple. Fix that tuple and apply propositional separation: $X[\bar z]=Y[\bar z]$. Generalize over the tuple. Iterating Functionality, starting with the final argument and proceeding outward, gives X=Y. The other direction of the separation biconditional is ordinary substitution. ∎
 
 For a nonempty family of qualifications, use any one member to extract Functionality; apply the converse separately to each member. The theorem also locates the finite requirements for a particular output type: only the Functionality instances along its finite argument tuple are used.
 
@@ -85,7 +85,7 @@ This is a transformation of H proofs. It does not say qualified observers preser
 
 **Corollary 3.** FullSep[Good^mat_Δ], for all finite Δ, entails C, all BF instances and all Functionality instances over H.
 
-For C, take an H theorem P↔Q. The transport theorem gives EP↔EQ for every qualified E, uniformly in the free variables of P,Q. Apply separation at the type of λ\bar z.P and λ\bar z.Q. Beta conversion gives
+For C, take an H theorem P↔Q. The transport theorem gives EP↔EQ for every qualified E, uniformly in the free variables of P,Q. Apply separation at the type of $\lambda\bar z.P$ and $\lambda\bar z.Q$. Beta conversion gives
 
 $$
 (\lambda\bar z.P)=(\lambda\bar z.Q).

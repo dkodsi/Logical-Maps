@@ -1,6 +1,6 @@
 # Observer separation over H
 
-The main findings are an exact order for independent primitive packages; higher-type factorization; structural representation and normalization; and a branching map of logical-observer principles, including an atomless separation between reversibility and C5 + ☐OS. Complete logical separation recovers C and connects these H results to the existing observer hierarchy.
+Observer separation asks which operations can distinguish propositions, and what follows when those operations preserve specified logical structure. The map starts over H and recovers C in its complete logical region. Its branches track what observers preserve, which types they separate, and restrictions such as finite image or an admitted inverse.
 
 Only the finite independent primitive family is completely classified. The [open frontier](#10-models-open-comparisons-and-research-status) remains under investigation.
 
@@ -108,6 +108,17 @@ flowchart LR
 
 For the first three rows, replacing strong preservation by **material** preservation makes each implication an equivalence. The derived operations in the MN and VN rows are not identified with the omitted primitives.
 
+The joint lattice and Boolean rows also have intrinsic material converses under the explicit preorder Zorn instance at tt:
+
+```mermaid
+flowchart LR
+    ZDL["Zorn at tt + distributive-lattice<br/>identities"] <--> ZMV["Zorn at tt + material M,V separation"]
+    ZBA["Zorn at tt + Boolean-algebra<br/>identities"] <--> ZBool["Zorn at tt + material M,V,N<br/>separation"]
+    ZDL --> Extend["Every admitted partial lattice truth<br/>character extends"]
+```
+
+The M,V row retains all A/Z orientations: acceptance adds greatest Top, rejection adds least Bottom. The Boolean result also applies to M,N with its derived join and V,N with its derived meet, retaining their exact endpoint alignments. Zorn supplies an admitted prime filter separating any disjoint admitted filter and ideal; that relative principle is equivalent to partial-character extension. Plenitude adds pointwise normalization, local Fun adds whole identities, and full typed versions retain all Fun. Quantifier preservation is not included. See [Zorn lattice character extension](zorn-lattice-character-extension.md), §§1–6.
+
 The quantifier branches have exact material converses, and exact strong converses under a local identity package:
 
 ```mermaid
@@ -130,8 +141,8 @@ Internal finiteness provides a different exact representation route, without ide
 
 ```mermaid
 flowchart LR
-    FinMeet["Internal Fin_t(All) + meet-semilattice<br/>laws"] <--> FinPoint["Internal Fin_t(All) + pointwise M<br/>separation"]
-    FinJoin["Internal Fin_t(All) + join-semilattice<br/>laws"] <--> FinV["Internal Fin_t(All) + pointwise V<br/>separation"]
+    FinMeet["Internal Fin_t(All) +<br/>meet-semilattice laws"] <--> FinPoint["Internal Fin_t(All) + pointwise M<br/>separation"]
+    FinJoin["Internal Fin_t(All) +<br/>join-semilattice laws"] <--> FinV["Internal Fin_t(All) + pointwise V<br/>separation"]
     TruthMin["Meet laws + least true element"] --> NormM["Every material M character has a<br/>pointwise replacement with the same<br/>truth profile"]
     FalseMax["Join laws + greatest false element"] --> NormV["Every material V character has a<br/>pointwise replacement with the same<br/>truth profile"]
 ```
@@ -159,6 +170,15 @@ flowchart LR
 ```
 
 ND_t is the defining H formula saying that a true inequality judgment equals Top. No C-dependent reformulation is used. The witnesses have at most two outputs, which need not be Top and Bottom. Add the listed local Functionality instances to obtain whole-operation identities, or all Fun on the intrinsic side for full typed separation. There are H models of these packages with a corrupted omitted primitive, so the conclusion is not C. See [the proof](necessity-of-distinctness-representation.md), §§1–5.
+
+Plenitude gives an independent admission route on infinite domains. Here Plen_(t,t) is the single pre-existing Plenitude formula at input and output type t, used explicitly over H:
+
+```mermaid
+flowchart LR
+    Plen["Plenitude at t,t + material Σ<br/>separation"] <--> PlenPoint["Plenitude at t,t + two-output<br/>pointwise Σ separation"]
+```
+
+This panel covers every nonempty Σ⊆{M,V,N}, and each separate XOR or biconditional signature, with any A/Z orientation. The chosen false/true pair must realize the operation tables as identities; the algebra forced by separation supplies such a pair. The same theorem covers the stated matching M/Q, V/P and joint lattice/quantifier packages by their GLB/LUB laws. Add the appropriate local Fun for whole identities, or use full typed scope. No finiteness, ND or C is assumed. Plenitude does not supply an unrestricted infinite affine character-existence converse. See [Plenitude normalization](plenitude-material-normalization.md), §§1–6.
 
 ## 4. Quantifiers generate algebra; modal .2 supplies a selector in C
 
@@ -190,6 +210,17 @@ Here .2 is ∀p(◇□p→□◇p); an endpoint selector is Bp=◇□p. The Qₜ
 The full fork satisfies C and every boxed BF instance, yet has no nonconstant endpoint-valued family at any type. Therefore even full universal separation does not provide the missing constructor. It also has an individual observer preserving **every universal quantifier and disjunction**, fixing both endpoints and idempotent, which fails even material conjunction preservation. The existential/meet dual fails disjunction. Thus boxed BF cannot replace .2 in the individual-observer reduction; this is not a separation-theory non-implication, since the fork itself satisfies OS.
 
 Reversibility gives a positive reduction without .2: **over C, an invertible Q_t observer is automatically Boolean**. Its inverse also preserves each listed quantifier. Consequently, for full separation with finite Δ containing t, C plus separation by invertible QΔ observers is exactly Rev. Necessary bijectivity can replace the admitted-inverse condition. See [Reversible quantifier observers](reversible-quantifier-observers.md), §§1–4; §9 locates this within the upper region.
+
+The unrestricted separation-theory reductions without .2 fail. In the [ternary Cantor symmetry model](ternary-cantor-observer-model.md), the following hold together over C:
+
+| Separate qualified class | Full typed separation, also separately necessary |
+| --- | --- |
+| Endpoint fixing + M + every listed Q/P | Holds |
+| Endpoint fixing + V + every listed Q/P | Holds |
+| Endpoint fixing + N + every listed Q/P | Holds |
+| Boolean observers, even with no quantifier condition | Fails already for propositions |
+
+All BF and Functionality instances and their boxes also hold. The positive classes use different witnesses; no common M,V,N class is supplied. A monotone test on clopen profiles preserves quantifiers because each admitted family has an admitted argument attaining its leafwise minimum or maximum. Conditional majority gives the selfdual tests for N. A finite-support symmetry obstruction rules out all Boolean profile readers. This settles the former N+Q/V+Q frontier negatively and shows that their conjunction, even with the separate M branch, still does not give Boolean separation. The model fails .2, so it preserves the conditional positive arrows above.
 
 Proofs: [Quantifier-generated lattices](quantifier-generated-lattices.md), §§1–6; [Modal selectors](../modal-selectors-and-quantifier-reduction.md), §§1–6; [Fork model](fork-without-binary-families.md), §§2–5.
 
@@ -244,19 +275,60 @@ These nodes use specified actual terms for implication, biconditional and XOR. S
 
 ```mermaid
 flowchart LR
-    Imp["Implication separation"] --> Intervals["Join with greatest derived unit; every<br/>upper interval Boolean"]
+    Imp["Implication separation"] --> Intervals["Join with greatest derived unit;<br/>every upper interval Boolean"]
     Xor["XOR separation"] --> Group0["Boolean group with false derived unit"]
     Iff["Biconditional separation"] --> Group1["Boolean group with true derived unit"]
     XM["XOR + M or V, in one observer class"] --> Ring0["Boolean ring with derived least<br/>element"]
     DM["Biconditional + M or V, in one<br/>observer class"] --> Ring1["Boolean ring with derived greatest<br/>element"]
     FinGroup["Internal finiteness of all<br/>propositions + Boolean-group laws"] <--> FinChar["Same finiteness + material affine<br/>separation"]
+    FinChar <--> FinPoint["Same finiteness + two-output<br/>pointwise affine separation"]
 ```
 
-The last equivalence is separate for XOR and biconditional, with the corresponding operation and unit on both sides. Its proof extends admitted truth characters by the internal Frege induction formula; it uses no Choice and no external enumeration. A general infinite strong-character converse has not been proved. Fixing the missing endpoint in the stated affine branches permits full preservation of the derived complement.
+The final equivalences hold separately for XOR and biconditional, with the corresponding operation and unit on each side. Internal Frege induction constructs a subgroup of index two and an admitted test constant on each coset; translating its two outputs gives a pointwise homomorphism. This needs neither Choice, identity bivalence, ND nor an external enumeration. Add local binary Functionality for whole-operation preservation, or all Fun on the structural side for full typed separation. The exact A/Z alignments remain as in the earlier material theorem.
+
+Even on an infinite proposition domain, finite-image material affine observers can be normalized while preserving their entire truth profiles:
+
+```mermaid
+flowchart LR
+    FinAffine["Finite-image material affine<br/>separation"] <--> TwoAffine["Two-output pointwise affine<br/>separation"]
+```
+
+This holds separately for XOR and biconditional, with any A/Z orientation. The image need not be a subgroup. The two outputs need not be Top and Bottom. A general infinite converse without a finiteness or admission hypothesis remains unresolved. Fixing the missing endpoint in the stated affine branches permits full preservation of the derived complement.
 
 The rings may be nonunital. For XOR, multiplication is the appropriate meet and additive zero is the derived bottom. For biconditional, multiplication is the appropriate join and additive zero is the derived top of the observer lattice. The latter is not a claim that the ring's usual order has its zero greatest.
 
-Proofs: [Term closure and affine branches](term-closure-and-affine-branches.md), §§2–5; [Internally finite affine separation](finite-affine-separation.md), §§1–5.
+There is a positive infinite-domain route. Zorn is its **preorder instance at type tt**, used as an explicit H premise:
+
+```mermaid
+flowchart LR
+    ZBG["H + Zorn at tt + Boolean-group<br/>equations"] <--> ZSep["H + Zorn at tt + material affine<br/>separation"]
+    ZBG --> Extend["Every admitted partial truth<br/>character extends"]
+```
+
+This holds separately for XOR and biconditional. Add Bottom=0 for XOR rejection, or Top=0 for biconditional acceptance; the opposite endpoint condition adds no strength. The proof builds an admitted maximal subgroup avoiding a prescribed element, then an admitted two-coset character. Pointed maximality exactly characterizes separation, and relative maximality exactly characterizes extension. It does not infer admission from an external linear functional.
+
+For negation alone and each separate affine operation, Plenitude supplies a second positive reduction:
+
+```mermaid
+flowchart LR
+    PMat["Plenitude at t,t + material<br/>separation"] <--> PInv["Same Plenitude + pointwise involutive<br/>separation"]
+    WithFun["Plenitude at t,t + local Fun +<br/>pointwise involutive separation"] <--> PWhole["Plenitude at t,t + local Fun +<br/>whole-operation involutive separation"]
+    WithFun --> PInv
+```
+
+Each node uses one of those signatures, with the same A/Z orientation; the involutions can fix the mentioned endpoint objects. Full typed scope already supplies Fun. Negation uses a single-pair flip; the affine construction adds a square-zero homomorphism to identity. Unlike profile normalization, these witnesses need only separate the chosen pair. This does not assert an analogous collapse for conjunction or complete logical qualification. Under Zorn plus Plenitude, the affine group equations therefore give involutive separation as well, with the stated Functionality qualification for whole identities and full types.
+
+Negation and an affine operation can also be preserved together. Put c=¬0, where 0 is the affine unit:
+
+```mermaid
+flowchart LR
+    Compat["Material affine separation + negation<br/>is translation by c"] <--> Linked["Material joint N,affine separation"]
+    PlenLinked["Plenitude + material joint N,affine<br/>separation"] <--> InvLinked["Plenitude + pointwise joint<br/>involutive separation"]
+```
+
+The first equivalence is over bare H. The second permits fixing every endpoint whose truth condition was required; the endpoint alignments are explicit in [Negation and affine compatibility](negation-affine-compatibility.md), §§2–4. A parallel exact theorem handles XOR together with biconditional: D(x,y)=(x⊕y)⊕u, with u the biconditional unit. For the actual expansion X=¬D, all three two-operation material packages coincide and yield preservation of all three operations. Whole identities require local Fun, or full relational scope. Extra lattice or quantifier preservation is not added.
+
+Proofs: [Term closure and affine branches](term-closure-and-affine-branches.md), §§2–5; [Finite affine normalization](finite-affine-normalization.md), §§1–7; [Internally finite affine separation](finite-affine-separation.md), §§1–5; [Zorn character extension](zorn-affine-character-extension.md), §§1–7; [Partial-signature involutions](partial-reversible-normalization.md), §§1–5.
 
 ## 8. Complete logical proof transport recovers C
 
@@ -273,26 +345,29 @@ flowchart TD
 
 The proof transports finite H derivations through an observer; higher-type separation identifies the resulting relations. Propositional logical separation alone does not imply C or unrestricted Fun. The hidden-individual model refutes that upgrade even with only two propositions and endpoint-valued, factive, equality-fixing observers.
 
-The H + OS ⇒ C + BF step is [Lean certified](../../evidence/certificates/full-typed-logical-separation-actual-c/certificate.json) in the equivalent formulation with explicit endpoint identities.
-
 Proof: [Typed separation and Classicism](typed-separation-and-classicism.md), §§2–7; [Local tiers](local-tiers-and-models.md), §2.
 
 ## 9. The larger region above C + BF
 
-OS means full logical separation. Fin means logical separation by observers with internally finitely many outputs, with no uniform bound. Rev means logical separation by observers with an admitted qualified inverse. Nec is the separately boxed OS schema. Bool is propositional Boolean separation. Every complete-logical separation node already entails C+BF by §8.
+OS means full logical separation. Fin means logical separation by observers with internally finitely many outputs, with no uniform bound. Rev means logical separation by observers with an admitted qualified inverse. Surj means separation by currently surjective Good observers. Surjective means every proposition occurs as an output; it does not itself require an admitted operation selecting preimages. Nec is the separately boxed OS schema. Bool is propositional Boolean separation. Every complete-logical separation node already entails C+BF by §8.
 
 ```mermaid
+%%{init: {"flowchart": {"nodeSpacing": 15, "rankSpacing": 40}}}%%
 flowchart TD
-    Ext["Extensionality"] --> End["Endpoint separation = C5 + Atomicityₜ"]
-    End --> Rev["Reversible separation"]
-    End --> Fin["Finite-image separation"]
-    End --> At["C + BF + Atomicityₜ"]
+    Ext["Extensionality"] --> End["Endpoint separation<br/>= C5 + Atomicityₜ"]
+    End --> Rev["Rev = right-inverse<br/>separation"]
+    Rev -->|strict| Mono["SplitMono:<br/>left-inverse separation"]
+    Mono -->|strict| OS["Full logical<br/>separation (OS)"]
+    Rev -->|strict| Surj["Surj: surjective<br/>separation"]
+    Surj -->|strict| OS
+    End --> Fin["Finite-image<br/>separation"]
+    End --> At["C + BF<br/>+ Atomicityₜ"]
     Rev -->|strict| CN["C5 + ☐OS"]
-    Rev --> NPC["No Pure Contingency"]
-    CN --> Fix["C5 + OS = identity-fixing separation"]
+    Rev --> NPC["No Pure<br/>Contingency"]
+    CN --> Fix["C5 + OS<br/>= identity-fixing<br/>separation"]
     CN --> Nec["☐OS"]
     Fix --> C5["C5"]
-    Fix --> OS["Full logical separation OS"]
+    Fix --> OS
     Nec --> OS
     Nec --> NBF["C + ☐BF"]
     Fin --> OS
@@ -301,7 +376,7 @@ flowchart TD
     DB --> D["C + BF"]
     NBF --> D
     C5 --> D
-    C5 --> D2["C + .2 = C + endpoint selector"]
+    C5 --> D2["C + .2<br/>= C + endpoint selector"]
     D --> C["C"]
     D2 --> C
     C --> H["H"]
@@ -337,7 +412,103 @@ flowchart TD
 
 Here Good-t separation is the single closed propositional separation formula whose quantifier-type list is {t}. Under C5 plus that boxed formula, one atom, Actuality, propositional Atomicity, one endpoint-valued Good-t observer, one finite-image Good-t observer, and full endpoint separation are equivalent. See [Necessary separation and atoms](necessary-separation-and-atoms.md), §§2–4.
 
-Rev is equivalent to its involutive-observer version and to its separately boxed schema. Rev and Fin are incomparable. So are C5 and OS, Rev and At, Fix and Nec, Fin and At, and Fin and Nec. No further negative comparisons are inferred from omitted arrows.
+Current Plenitude gives another exact route into the endpoint region:
+
+```mermaid
+flowchart TD
+    EP["Endpoint separation = C5 + Atomicityₜ"] <--> OP["OS + Plenitude at t,t"]
+    EP <--> AP["C5 + OS + Actuality"]
+    AP <--> BP["C5 + OS + full Boolean Completeness"]
+```
+
+The single Plenitude instance already gives ND_t and Actuality over C. BF_t then gives C5; full OS supplies C and BF over H. Hence neither OS nor Plenitude is assumed necessary. Conversely End gives necessary full Plenitude, so Plenitude at t,t can equivalently be replaced by the full schema in this panel. The separate admission identity is C+BF_t+Plen_t,t iff C5+Actuality. See [Plenitude and endpoint separation](plenitude-endpoint-bridge.md), §§1–5.
+
+Rev is equivalent to its involutive-observer version, to its separately boxed schema, and to full separation by observers having admitted qualified right inverses. The last characterization uses a localized Boolean patch to replace a distinguishing right-invertible observer by an involution. Over C+BF this works at each fixed finite list containing t; full separation over H already recovers the needed background. It does not identify the individual observer classes. See [Qualified right-inverse separation](split-inverse-logical-observers.md), §§1–4.
+
+Over C5, current surjectivity supplies a qualified right inverse by an explicit fiber term:
+
+```mermaid
+flowchart TD
+    OntoSep["C5 + surjective Good separation"] <--> Reversible["Reversible separation"]
+```
+
+For each finite list containing t, the greatest kernel element k_S=∃p[(Sp=Bottom)∧p] defines a unique inverse below ¬k_S; filling the remaining region with identity gives an admitted same-list logical section. No Choice is assumed. This identifies the individual surjective-Good and qualified-right-invertible classes over C5, and their separation principles with Rev. See [Surjective logical observers](surjective-logical-observers.md), §§1–5. The C5 premise is explicit.
+
+**Surj and left-inverse separation are incomparable without C5**, even over C+☐BF+☐OS. The full omega-chain has necessary Surj, yet its only injective Good_{ {t} } observer is identity, so left-inverse separation fails at that list. Its logical observers are exactly E(p)=f⁻¹[p] for maps with f(m)≥m; shifts give the surjective separators. Conversely the finite-block C5+necessary-left-inverse model fails Rev and therefore fails Surj. Within C5, Surj equals Rev and does imply left-inverse separation. These witnesses prove both strict arrows on the Surj branch of the main diagram. See [Omega-chain observer classification](omega-chain-surjective-observers.md), §§1–6.
+
+Qualified **left-inverse** separation lies strictly between Rev and OS. The finite-block model supplies left-inverse separation, even necessarily and together with C5 and atomlessness, while Rev fails. The full fork supplies the other strictness: it has necessary full OS and all boxed BF and Fun, but every left-invertible Boolean observer preserves current truth, so left-inverse separation fails. The natural-numbers/singleton all-maps model supplies left-inverse separation without ☐OS, C5, ☐BF or necessary Fun. Thus left-inverse separation and ☐OS are incomparable. See [Finite-pinning left-inverse models](finite-block-symmetry-left-inverse.md), §§2–7, and [The fork without left-inverse separation](fork-one-sided-inverse-separation.md), §§1–5.
+
+There is an exact decomposition at each fixed output type τ and finite Δ containing t, over C+BF:
+
+```mermaid
+flowchart TD
+    MonoLocal["C + BF + left-inverse separation at<br/>τ,Δ"] <--> Either["C + BF + [RevSep at τ,Δ OR (OS at τ,Δ<br/>+ KΔ)]"]
+```
+
+The exact fixed-list equivalence is
+
+$$
+S_{\tau,\Delta}[\operatorname{SplitMono}]
+\ \leftrightarrow\ S_{\tau,\Delta}[\operatorname{Rev}]
+\lor\bigl(S_{\tau,\Delta}[\operatorname{Good}]\land K_\Delta\bigr).
+$$
+
+where
+
+$$
+\begin{aligned}
+K_\Delta:=\exists E^{tt},F^{tt},c^t\, .\,[
+&\operatorname{Good}_\Delta(E)\land\operatorname{Good}_\Delta(F)\\
+&\land F\circ E=I\land c\land Fc=\bot].
+\end{aligned}
+$$
+
+KΔ asserts one admitted qualified pair F∘E=I and one currently true c with Fc=Bottom. That single pair turns every GoodΔ observer G into E_G(p)=(c∧Gp)∨(¬c∧Ep), retaining its entire current truth profile and using the same F as whole left inverse. If no such pair exists, left-inverse and reversible separation coincide. At full H scope, use full OS together with the external schema RevSep(t,Δ)∨KΔ; do not replace it by one global disjunction. See [Left-inverse decomposition](left-inverse-separation-decomposition.md), §§1–6.
+
+Under C5, KΔ equivalently asks for one surjective Good_Δ observer with a currently true greatest kernel element. The opposite condition says every surjective Good_Δ observer satisfies c→◇Sc for every proposition c. This follows from the definable section above; it does not assert either alternative without the left-inverse separation premise.
+
+Even No Pure Contingency does not close the reversible gap:
+
+```mermaid
+flowchart TD
+    R["Reversible logical separation"] -->|strict| CSM["C5 + ☐ left-inverse separation + No<br/>Pure Contingency"]
+    CSM --> CNPC["C5 + ☐OS + No Pure Contingency"]
+    R --> Param["Noncontingency with endpoint-valued<br/>first-order relation parameters"]
+    Param --> Pure["No Pure Contingency"]
+```
+
+The [component-shift symmetry model](component-shift-symmetry-reversible-gap.md), §§1–8, satisfies the middle conjunction but fails Rev. One object guarantees pure noncontingency; allowed arrows shift components carrying alternating finite-block patterns. The same-component relation has endpoint-valued tuples. A choice assertion relative to that relation and an individual parameter changes truth, although every logical involution fixes it under conjugation. This proves the nonimplication using an explicit finite qualification list. It is a distinct construction from the earlier two-object model.
+
+The parameter-noncontingency node is an external formula schema: finitely many first-order relation parameters have types eⁿt and endpoint-valued outputs on every individual tuple; finitely many individual parameters may also occur. For every pure formula P in those variables, Rev gives P↔□P under that condition. It does not say that arbitrary higher-type parameters are fixed. No converse from this stronger parameter schema to Rev is claimed. The main diagram's strict arrow to C5+☐OS therefore remains strict even with the displayed additional premises.
+
+$$
+\operatorname{End}(\bar R)\ \to\
+\bigl(P(\bar R,\bar x)\leftrightarrow\Box P(\bar R,\bar x)\bigr).
+$$
+
+Here $\operatorname{End}(\bar R)$ requires every value of each relation parameter to equal $\top$ or $\bot$; the displayed formula is universally closed over those relation and individual parameters.
+
+If all propositions are internally Frege finite, full left-inverse separation, Rev and endpoint separation coincide. Injection from a left inverse becomes surjection by internal finite reasoning, and Fun supplies the whole right-inverse identity. The endpoint conclusion uses identity as a finite-image Good observer. Ordinary OS is not upgraded by this argument. The finite boundary is proved in the fork note, §5.
+
+The injection-to-surjection condition alone has a smaller effect. Let D_t mean that every admitted injective E:tt is onto:
+
+$$
+\mathsf D_t:=\forall E^{tt}\, .\,
+\bigl(\forall p,q\, .\,Ep=Eq\to p=q\bigr)
+\to\forall q\,\exists p\, .\,Ep=q.
+$$
+
+```mermaid
+flowchart TD
+    Frege["Internal Frege finiteness of all<br/>propositions"] -->|strict| Dedekind["Every admitted proposition injection<br/>is onto"]
+    DMono["D_t + full left-inverse separation"] <--> DRev["D_t + full reversible separation"]
+```
+
+A one-object model with two infinite colour classes has finite fixed-pin proposition algebras, hence D_t, but its total proposition algebra is atomless. It satisfies C5+Rev and fails endpoint separation and internal Frege finiteness. Thus D_t converts inverse orientations without supplying the finite-image witness needed for endpoint separation. These verdicts concern admitted tt operations, not every external function or an unmentioned relation-based finiteness condition. See [Finite colour-pattern propositions](finite-pinning-dedekind-propositions.md), §§1–5.
+
+**Even C5+☐OS need not give left-inverse separation.** The [linear/circular fibre model](linear-circular-fibre-left-inverse-gap.md) has two objects with infinite fibres, ordered linearly at one and circularly at the other. Local stabilizer inclusions give full ☐OS; finitely many tuple orbits give D_t. A pure sentence about ordering infinite amorphous cells distinguishes the objects, so Rev fails. D_t then makes left-inverse separation fail as well, at the explicit finite propositional list {t,e,et,eet,(et)t,((et)t)t}. The cells' internal finiteness is verified, and the proposition algebras are atomless.
+
+Rev and Fin are incomparable. So are C5 and OS, Rev and At, Fix and Nec, Fin and At, and Fin and Nec. No further negative comparisons are inferred from omitted arrows.
 
 **Rev is strictly stronger than C5 plus ☐OS.** The [finite-block symmetry model](finite-block-symmetry-reversible-gap.md) is atomless at both objects and satisfies C5+□OS throughout, but fails Rev. One object's designated group preserves blocks of every positive even size; the other's preserves blocks whose sizes are powers of two. A closed pure sentence about selecting proper nonempty subsets from disjoint six-element sets is true at one object and false at the other. This contradicts the No Pure Contingency consequence of Rev. The atom-bearing positive theorem above and this atomless countermodel settle both parts of the former converse question.
 
@@ -347,7 +518,7 @@ There are exact alternatives to the inverse qualification. Over C, an admitted o
 
 The positive semantic counterpart is [local symmetry conjugacy](local-conjugacy-and-reversible-observers.md): matching finite stabilizers give admitted logical involutions by swapping two evaluation neighborhoods. This establishes Rev in all one-object symmetric ideally-full models with all bijections and finite pins, and in the specified multiobject conjugate-group or finite-base families. The block model lies outside those sufficient families; its failure of Rev is proved by the pure sentence, not merely by lack of stabilizer conjugacy.
 
-**OS does not imply ☐BF or ☐Functionality.** The finite-support model on the natural numbers and a singleton, with all maps, satisfies C + OS at the natural-number object, but fails □BF_e, □BF_t and □Fun(e,t) there. Its accessible singleton witnesses the failures. This separates current logical observability from the persistence of Barcan and Functionality. The new OS proof uses finite pins, split epimorphisms, extensional fullness and a guarded upgrade to strong preservation; the model construction and earlier Barcan verdicts retain their original sources. See [Logical separation with contingent Barcan](logical-separation-with-contingent-barcan.md), §§2–5.
+**Even qualified left-inverse separation does not imply C5, ☐OS, ☐BF or ☐Functionality.** At the natural-number object of the finite-support natural-numbers/singleton all-maps model, a one-sided shift supplies full left-inverse separation. The accessible singleton still refutes BF at e and t and Functionality at (e,t); the boxed left-inverse schema also fails. The whole inverse calculation works at arbitrary future functions, and quantifier preservation uses onto type transports. See [the strengthened model verdict](finite-block-symmetry-left-inverse.md), §7, and [the underlying Barcan witnesses](logical-separation-with-contingent-barcan.md), §§3–5.
 
 Idempotent complete-logical observers already suffice for OS, so adding whole-operation idempotence to ordinary logical separation adds no strength. Factive complete-logical separation is exactly Extensionality, as is OS plus uniqueness of the qualified class at a fixed finite type list. Necessary qualification adds no strength over C, while necessary separation can be stronger. Fin + Nec is strictly stronger than each factor and strictly weaker than End.
 
@@ -366,18 +537,25 @@ The following witnesses explain why the map has distinct directions.
 | Four-proposition relational model | Full material N separation plus Fun need not give pointwise N separation |
 | Full fork | All boxed BF and universal separation need not give exact binary families or .2 |
 | Full fork, join-of-leaf evaluations | Even endpoint-fixing idempotent observers preserving all universals and disjunction need not preserve conjunction |
-| Finite-support natural numbers / singleton, all maps | Full logical separation need not give ☐BF or ☐Functionality |
+| Full fork, coordinate readers and the root atom | Necessary full OS, all boxed BF and Fun need not give qualified left-inverse separation |
+| Ternary Cantor symmetry with continuous finite leaf profiles | Even necessary full M+Q/P, V+Q/P and N+Q/P separation together, with all boxed BF and Fun, need not give Boolean separation |
+| Finite-support natural numbers / singleton, all maps, with a one-sided shift of evaluation neighborhoods | Even full qualified left-inverse separation need not give C5, ☐OS, its own necessary schema, ☐BF or ☐Functionality |
 | Finite-block symmetry: even sizes / powers of two | C5 plus necessary full OS need not give Rev, even with atomlessness at every object |
+| The same finite-block model, with a one-sided shift of evaluation neighborhoods | C5 plus necessary qualified left-inverse separation need not give Rev or No Pure Contingency |
+| One-object component-shift symmetry, with alternating finite-block patterns | C5 plus necessary qualified left-inverse separation and No Pure Contingency still need not give Rev |
+| One-object symmetry preserving two infinite colour classes | Every admitted proposition injection is onto, with C5 and Rev, yet propositions are atomless and not internally Frege finite |
+| Linear versus circular orders of infinite fibres | C5 plus necessary full OS, D_t and atomlessness still need not give qualified left-inverse separation |
+| Full omega-chain with forward coordinate observers | Necessary surjective logical separation, BF and Atomicity_t need not give C5 or left-inverse separation; every injective Good-t observer is identity |
 | Three-proposition full-function models | Factivity and inflationarity separately give only one-sided collapse |
 | Six-element asymmetric-atom model | Atomisticity, a true atom, and ordinary strong meet separation do not supply reversible meet separation |
 
-The unresolved comparisons are:
+The live research questions include:
 
-1. Does material conjunction or disjunction separation imply its pointwise version in the remaining infinite, nonprincipal case without ND_t? Internal finiteness, local truth extrema, a separating finite-image material family, and ND_t now give positive converses. Equivalently, can a separating material family always be replaced by an admitted composition-closed one? Any countermodel must evade the stated positive hypotheses.
-2. Which admission or extension principles characterize infinite affine separation, and when can material characters be upgraded to strong observers?
-3. Which unrestricted mixed quantifier reductions survive over C without .2? The invertible Q_t branch is now settled positively, but the ordinary N+Q/V+Q separation comparisons remain unresolved.
-4. Which further partial-signature reversibility and intrinsic admission conditions have exact characterizations? The complete-logical converse C5+□OS⇒Rev is settled negatively; adding No Pure Contingency is not asserted sufficient.
+1. Does material conjunction or disjunction separation imply its pointwise version in the remaining infinite, nonprincipal case? Internal finiteness, local truth extrema, a separating finite-image material family, ND_t and Plenitude at t,t give positive converses. Equivalently, can a separating material family always be replaced by an admitted composition-closed one? Any countermodel must evade the stated positive hypotheses.
+2. Do the infinite affine group equations supply admitted characters over bare H? Zorn at tt supplies characters and partial-character extension; Plenitude at t,t then supplies pointwise involutions. Pointed subgroup maximality exactly characterizes separation, while relative maximality exactly characterizes extension.
+3. What is the strength of combining surjective and left-inverse separation, and how do further boxed inverse principles compare? The separate principles are incomparable even over C+☐BF+☐OS; under C5, surjective separation equals Rev.
+4. Which further partial-signature reversibility and intrinsic admission conditions have exact characterizations? Plenitude now covers negation, each affine operation and the linked negation/affine and paired-affine signatures with their compatibility equations. Zorn gives intrinsic material lattice and Boolean converses as well as the affine converse. Even C5+□SplitMono+No Pure Contingency does not imply Rev. No converse using the stronger first-order endpoint-parameter noncontingency schema is asserted.
 
-The independent primitive classification and all solid arrows/equivalences in this document are established by the linked arguments. The remaining questions are not settled by that classification. The atom-bearing reversible-meet converse is resolved by §6's exact characterization, and the complete-logical C5+□OS converse is resolved by §9's countermodel. The remaining questions are listed above.
+The linked proofs settle the finite primitive classification and the displayed implications, equivalences and countermodels. The broader H comparisons remain under investigation.
 
 Direct source for this organization: `misc`, OpenAI Codex, prompted by Daniel Kodsi, 24 October 2026, this document §§1–10, unpaginated. Individual mathematical claims retain the proofs, attributions and source caveats in their linked notes.

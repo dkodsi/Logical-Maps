@@ -40,7 +40,7 @@ Then S[R] says exactly that J is injective. Moreover, each preservation clause i
 |---|---|
 | M | J(p∧q)=J(p)∩J(q) |
 | V | J(p∨q)=J(p)∪J(q) |
-| N | J(¬p)=K\J(p) |
+| N | $J(\neg p)=K\setminus J(p)$ |
 | Qσ | J(∀x:σ Fx)=⋂x∈Dσ J(Fx) |
 | Pσ | J(∃x:σ Fx)=⋃x∈Dσ J(Fx) |
 | A | J(T)=K |
@@ -240,8 +240,10 @@ For every finite Δ, S_m[A∧M∧QΔ] is equivalent over H to the following outp
 1. Conjunction is a meet semilattice with greatest element T.
 2. For every σ in Δ and admitted F of type σt,
    \[
-   u\land(\forall x^\sigma Fx)=u
-   \leftrightarrow\forall x^\sigma(u\land Fx=u).
+$$
+u\land(\forall x^\sigma Fx)=u
+\leftrightarrow\forall x^\sigma(u\land Fx=u).
+$$
    \]
 
 Necessity is the observer-order theorem. For sufficiency, the same principal test E_b(p):=(b∧p=b) from §6 accepts T and preserves meet materially. The displayed GLB equivalence says exactly that it preserves every listed universal materially. Thus a single admitted family of principal tests satisfies all the listed laws simultaneously and separates. A can be omitted if the top condition is omitted, or Z can also be added with the bottom bound and the nonbottom choice of separating b from §6.
@@ -256,7 +258,9 @@ The principal cuts E_b(p):=¬(p∨b=b) preserve every listed existential materia
 
 There is also a formulation without a specified meet operation. S_m[A∧QΔ] is equivalent to the existence of an admitted binary relation ≼ on propositions that is a partial order with greatest T and makes every listed universal the GLB of its admitted families. Forward use the observer-defined relation in §2. Backward use E_b(p):=(b≼p): the GLB condition is exactly its material Q law, and the tests b=p,q establish antisymmetry-based separation. Dually, S_m[Z∧PΔ] is equivalent to an admitted partial order with least B and the corresponding existential LUBs, using E_b(p):=¬(p≼b).
 
-These converse theorems depend on a principal test preserving the matching bounds. They do not establish that an arbitrary ordered structure with both admitted GLBs and LUBs supplies tests preserving both kinds simultaneously. Likewise, no converse from distributive-lattice or Boolean-algebra equations to strong or material joint Boolean separation is claimed.
+These converse theorems depend on a principal test preserving the matching bounds. They do not establish that an arbitrary ordered structure with both admitted GLBs and LUBs supplies tests preserving both kinds simultaneously. These arguments alone do not give a converse from distributive-lattice or Boolean-algebra equations to joint separation without an additional admission premise.
+
+With the explicit additional preorder Zorn instance at tt, [lattice character extension](zorn-lattice-character-extension.md), §§2–5, supplies the admitted prime filters needed for exact material joint lattice and Boolean converses. Plenitude and the stated Functionality premises then give the stronger tiers. That conditional result does not add preservation of the primitive quantifiers.
 
 ## 8. Boundaries and connection to the larger lattice
 

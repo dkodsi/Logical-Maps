@@ -30,7 +30,7 @@ $$
 
 If J⊆K, every K-qualified observer is J-qualified. Separation by the smaller K-qualified class therefore entails separation by the J-qualified class. This proof is already in H.
 
-For the converse suppose j∈J\K. The model in §3 satisfies every other primitive preservation requirement simultaneously, with a full typed strongly separating class fixing both endpoints. It fails even propositional material separation for j. Hence it satisfies T_K and refutes T_J in each of the six fixed presentations. This proves the reverse implication.
+For the converse suppose $j\in J\setminus K$. The model in §3 satisfies every other primitive preservation requirement simultaneously, with a full typed strongly separating class fixing both endpoints. It fails even propositional material separation for j. Hence it satisfies T_K and refutes T_J in each of the six fixed presentations. This proves the reverse implication.
 
 Thus there are exactly 2^|Γ| distinct theories in each displayed family, with precisely the implication order given by inclusion of the clause sets. There are no additional implications among these packages. This is a statement about the specified family, not a classification of every theory between its members or of cross-tier comparisons.
 

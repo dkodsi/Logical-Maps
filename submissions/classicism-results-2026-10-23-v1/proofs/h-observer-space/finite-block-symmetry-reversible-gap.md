@@ -144,7 +144,7 @@ $$
 \text{If a cell D meets a block C disjoint from S0, then }C\subseteq D.
 \tag{5}
 $$
-Indeed, if x∈D∩C and y∈C\D, the transposition exchanging x,y lies in H_(S0). It carries the property object X with extension D to another A-member with extension (D\{x})∪{y}. The two extensions differ but overlap in five points. The property objects must therefore be distinct, contradicting A's disjointness. This proves (5), including for cells that also meet S0.
+Indeed, if x∈D∩C and y∈$C\setminus D$, the transposition exchanging x,y lies in H_(S0). It carries the property object X with extension D to another A-member with extension $(D\setminus\{x\})\cup\{y\}$. The two extensions differ but overlap in five points. The property objects must therefore be distinct, contradicting A's disjointness. This proves (5), including for cells that also meet S0.
 
 Only finitely many cells meet S0, because they are disjoint and S0 is finite. Call them exceptional cells, and let S1 be S0 together with all their points. By (5), any points they add outside S0 comprise entire H-blocks. Hence S1 is itself a finite union of blocks. There is no iterative or infinite enlargement of the pin.
 

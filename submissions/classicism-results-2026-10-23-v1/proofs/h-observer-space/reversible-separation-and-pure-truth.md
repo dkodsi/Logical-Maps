@@ -1,6 +1,6 @@
 # Reversible logical separation implies No Pure Contingency
 
-Ordinary mathematical research by OpenAI Codex, prompted by Daniel Kodsi, 24 October 2026. Direct source for the new observer implication: `misc`, this note, §§1–5, unpaginated. The conjugation argument is adapted from the existing [C5 and Atomicity proof](../../source/topics/classicism/writeups/c5-and-atomicity-imply-no-pure-contingency.md), §§4–5; its attribution is specified in §5.
+By OpenAI Codex, prompted by Daniel Kodsi, 24 October 2026. Direct source for the new observer implication: `misc`, this note, §§1–5, unpaginated. The conjugation argument is adapted from the existing [C5 and Atomicity proof](../../source/topics/classicism/writeups/c5-and-atomicity-imply-no-pure-contingency.md), §§4–5; its attribution is specified in §5.
 
 **Over H, full reversible logical separation implies No Pure Contingency.** No atom or Actuality premise is needed. Combined with the previously established bounds, this gives
 
@@ -9,7 +9,7 @@ $$
 \mathrm{C5}+\Box\mathrm{OS}+\mathrm{NoPureContingency}.}
 \tag{1}
 $$
-This is an implication, not a characterization. The [finite-block symmetry model](finite-block-symmetry-reversible-gap.md) now uses this obstruction to refute the converse from C5 plus necessary ordinary separation: it has a contingent closed pure sentence and fails Rev.
+This is an implication, not a characterization. The [finite-block symmetry model](finite-block-symmetry-reversible-gap.md) uses this obstruction to refute the converse from C5 plus necessary ordinary separation: it has a contingent closed pure sentence and fails Rev. The later [component-shift symmetry model](component-shift-symmetry-reversible-gap.md) refutes the converse even with No Pure Contingency added, using an endpoint-valued first-order relation parameter and an individual parameter. Its §6 extends the positive conjugation argument to the precisely stated parameter schema.
 
 ## 1. Observer and schema scope
 
@@ -133,9 +133,9 @@ which is □P in C. Since P was an arbitrary closed pure sentence, No Pure Conti
 
 The same argument at ¬P yields the equivalent schema ◇P→P. This does not imply the Fregean Axiom: it applies to closed pure sentences, not arbitrary proposition parameters. In particular the [finite-support permutation model](../../source/topics/classicism/models/finite-support-permutations.yaml) satisfies Rev and is atomless, so neither atom existence nor Atomicity is a conclusion here.
 
-Together with [Necessary logical separation and one atom](necessary-separation-and-atoms.md), the result explains the boundary of the converse. A countermodel to C5+□OS⇒Rev must be atomless, and a contingent closed pure sentence suffices to prove failure of Rev. The [finite-block symmetry model](finite-block-symmetry-reversible-gap.md) supplies both features. No Pure Contingency is not asserted to be a sufficient additional hypothesis.
+Together with [Necessary logical separation and one atom](necessary-separation-and-atoms.md), the result explains the boundary of the converse. A countermodel to C5+□OS⇒Rev must be atomless, and a contingent closed pure sentence suffices to prove failure of Rev. The [finite-block symmetry model](finite-block-symmetry-reversible-gap.md) supplies both features. No Pure Contingency is not sufficient as an additional hypothesis: the separate component-shift model satisfies even C5+□SplitMono+No Pure Contingency while Rev fails.
 
-## 5. Sources
+## 5. Sources and mathematical status
 
 The new implication from Rev to No Pure Contingency is by OpenAI Codex, prompted by Daniel Kodsi, 24 October 2026: direct source `misc`, this note, §§1–4, unpaginated.
 

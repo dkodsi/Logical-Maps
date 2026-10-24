@@ -39,7 +39,14 @@
         "Over C, $\\operatorname{Good}_\\Delta(E)\\leftrightarrow\\Box\\operatorname{Good}_\\Delta(E)$; requiring the qualification necessarily does not strengthen separation.",
         "Over H, OS plus uniqueness of the qualified logical observer at one fixed finite list is equivalent to Extensionality; no endpoint restriction is needed.",
         "Over C5, propositional separation by Boolean observers preserving the universal quantifier at t is equivalent to full OS.",
-        "Endpoint separation is equivalent over H to C5 + ☐OS + one atom; the boxed propositional $\\operatorname{Good}_{\\{t\\}}$ separation instance suffices in place of ☐OS."
+        "Endpoint separation is equivalent over H to C5 + ☐OS + one atom; the boxed propositional $\\operatorname{Good}_{\\{t\\}}$ separation instance suffices in place of ☐OS.",
+        "Even the stronger qualified left-inverse separation principle does not imply C5, ☐OS, its own boxed schema, ☐BF or ☐Functionality; see the [all-maps model](proofs/h-observer-space/finite-block-symmetry-left-inverse.md), §7.",
+        "The [ternary Cantor model](proofs/h-observer-space/ternary-cantor-observer-model.md) has full endpoint-fixing separation for each separate M/Q/P, V/Q/P and N/Q/P class, even necessarily and with boxed BF and Functionality, while Boolean separation fails.",
+        "Qualified left-inverse separation lies strictly between reversible separation and OS, and is incomparable with ☐OS. With internal finiteness of all propositions, full left-inverse, reversible and endpoint separation coincide.",
+        "Over C + BF, each finite-list left-inverse separation instance is exactly the corresponding reversible instance or ordinary separation together with one qualified left-inverse pair having a true kernel element. The full-H statement is an external schema of alternatives; see the [decomposition](proofs/h-observer-space/left-inverse-separation-decomposition.md).",
+        "Over H, OS + Plenitude at (t,t) is equivalent to endpoint separation; full Plenitude may replace the single instance. Already C + BF (type t) + Plenitude at (t,t) is exactly C5 + Actuality. See the [Plenitude bridge](proofs/h-observer-space/plenitude-endpoint-bridge.md).",
+        "C5 + ☐OS need not imply qualified left-inverse separation, even when every admitted proposition injection is onto and propositions are atomless; see the [linear/circular fibre model](proofs/h-observer-space/linear-circular-fibre-left-inverse-gap.md).",
+        "Separation by currently surjective logical observers lies strictly between Rev and OS and is incomparable with qualified left-inverse separation, even over C + ☐BF + ☐OS. Under C5 it is equivalent to Rev. The [omega-chain classification](proofs/h-observer-space/omega-chain-surjective-observers.md) and finite-block model supply the distinctions."
       ],
       "sources": [
         {
@@ -117,6 +124,72 @@
         {
           "path": "proofs/h-observer-space/local-conjugacy-and-reversible-observers.md",
           "locator": "§§2–6",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "proofs/h-observer-space/split-inverse-logical-observers.md",
+          "locator": "§§1–4",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "proofs/h-observer-space/finite-block-symmetry-left-inverse.md",
+          "locator": "§§1–7",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "proofs/h-observer-space/ternary-cantor-observer-model.md",
+          "locator": "§§1–9",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "proofs/h-observer-space/fork-one-sided-inverse-separation.md",
+          "locator": "§§1–5",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "proofs/h-observer-space/component-shift-symmetry-reversible-gap.md",
+          "locator": "§§1–8",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "proofs/h-observer-space/left-inverse-separation-decomposition.md",
+          "locator": "§§1–6",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "proofs/h-observer-space/finite-pinning-dedekind-propositions.md",
+          "locator": "§§1–5",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "proofs/h-observer-space/plenitude-endpoint-bridge.md",
+          "locator": "§§1–5",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "proofs/h-observer-space/surjective-logical-observers.md",
+          "locator": "§§1–7",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "proofs/h-observer-space/linear-circular-fibre-left-inverse-gap.md",
+          "locator": "§§1–10",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "proofs/h-observer-space/omega-chain-surjective-observers.md",
+          "locator": "§§1–6",
           "source_id": "misc",
           "pagination": "unpaginated"
         }
@@ -222,6 +295,72 @@
               "locator": "§§2–6",
               "source_id": "misc",
               "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/split-inverse-logical-observers.md",
+              "locator": "§§1–4",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-block-symmetry-left-inverse.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/ternary-cantor-observer-model.md",
+              "locator": "§§1–9",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/fork-one-sided-inverse-separation.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/component-shift-symmetry-reversible-gap.md",
+              "locator": "§§1–8",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/left-inverse-separation-decomposition.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-pinning-dedekind-propositions.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/plenitude-endpoint-bridge.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/surjective-logical-observers.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/linear-circular-fibre-left-inverse-gap.md",
+              "locator": "§§1–10",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/omega-chain-surjective-observers.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
             }
           ],
           "result_refs": [
@@ -248,7 +387,12 @@
             "Together with Actuality, the existence of one atom, or the existence of one qualified observer at t with finitely many outputs, equivalent to C5 + Atomicity (type t). The single observer need not separate.",
             "Forces the proposition algebra to be either atomless or atomic with a true atom.",
             "Equivalent over H to full logical separation by necessarily bijective observers. Over C5, current bijectivity suffices.",
-            "Over C, equivalent to full separation by invertible observers preserving universal quantification at every finite type list containing t; Boolean preservation and the inverse quantifier laws follow."
+            "Over C, equivalent to full separation by invertible observers preserving universal quantification at every finite type list containing t; Boolean preservation and the inverse quantifier laws follow.",
+            "Equivalent over H to full logical separation by observers admitting a same-list qualified right inverse. Qualified left-inverse separation is strictly weaker, even with C5 and its own boxed schema; it need not imply No Pure Contingency.",
+            "Even C5 + ☐SplitMono + No Pure Contingency does not imply reversible separation, as the [component-shift model](proofs/h-observer-space/component-shift-symmetry-reversible-gap.md) shows.",
+            "Implies noncontingency for every pure formula with finitely many individual parameters and finitely many first-order relation parameters whose values on all tuples are endpoints. Arbitrary higher-type parameters are not covered.",
+            "If every admitted injective proposition operation is onto, full left-inverse and reversible separation coincide. C5 + Rev with that condition still need not imply endpoint separation, as the [two-colour model](proofs/h-observer-space/finite-pinning-dedekind-propositions.md) shows.",
+            "Equivalent over H to C5 + separation by currently surjective Good observers. The [explicit section](proofs/h-observer-space/surjective-logical-observers.md) uses the greatest kernel element and a definable fibre representative, without Choice; C5 cannot be omitted."
           ],
           "sources": [
             {
@@ -326,6 +470,72 @@
             {
               "path": "proofs/h-observer-space/local-conjugacy-and-reversible-observers.md",
               "locator": "§§2–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/split-inverse-logical-observers.md",
+              "locator": "§§1–4",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-block-symmetry-left-inverse.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/ternary-cantor-observer-model.md",
+              "locator": "§§1–9",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/fork-one-sided-inverse-separation.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/component-shift-symmetry-reversible-gap.md",
+              "locator": "§§1–8",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/left-inverse-separation-decomposition.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-pinning-dedekind-propositions.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/plenitude-endpoint-bridge.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/surjective-logical-observers.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/linear-circular-fibre-left-inverse-gap.md",
+              "locator": "§§1–10",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/omega-chain-surjective-observers.md",
+              "locator": "§§1–6",
               "source_id": "misc",
               "pagination": "unpaginated"
             }
@@ -355,7 +565,8 @@
             "Strictly stronger than ☐OS and strictly weaker than Extensionality over C.",
             "Given endpoint separation, Extensionality is equivalent to there being a unique qualified endpoint observer; uniqueness at any one fixed finite list of tested types suffices.",
             "Under C5, propositional atoms and endpoint observers qualified at $t$ correspond bijectively: $E_a(p)=\\Box(a\\to p)$ and $a_E=\\forall p(Ep\\to p)$. Such observers qualify at every finite type list.",
-            "Equivalent to C5 + ☐OS + one atom, and to C5 plus one atom and the single boxed propositional $\\operatorname{Good}_{\\{t\\}}$ separation instance."
+            "Equivalent to C5 + ☐OS + one atom, and to C5 plus one atom and the single boxed propositional $\\operatorname{Good}_{\\{t\\}}$ separation instance.",
+            "Equivalent over H to OS + Plenitude at (t,t), OS + full Plenitude, C5 + OS + Actuality, and C5 + OS + Boolean Completeness. Both OS and Plenitude are current premises."
           ],
           "sources": [
             {
@@ -433,6 +644,72 @@
             {
               "path": "proofs/h-observer-space/local-conjugacy-and-reversible-observers.md",
               "locator": "§§2–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/split-inverse-logical-observers.md",
+              "locator": "§§1–4",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-block-symmetry-left-inverse.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/ternary-cantor-observer-model.md",
+              "locator": "§§1–9",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/fork-one-sided-inverse-separation.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/component-shift-symmetry-reversible-gap.md",
+              "locator": "§§1–8",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/left-inverse-separation-decomposition.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-pinning-dedekind-propositions.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/plenitude-endpoint-bridge.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/surjective-logical-observers.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/linear-circular-fibre-left-inverse-gap.md",
+              "locator": "§§1–10",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/omega-chain-surjective-observers.md",
+              "locator": "§§1–6",
               "source_id": "misc",
               "pagination": "unpaginated"
             }
@@ -537,6 +814,72 @@
             {
               "path": "proofs/h-observer-space/local-conjugacy-and-reversible-observers.md",
               "locator": "§§2–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/split-inverse-logical-observers.md",
+              "locator": "§§1–4",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-block-symmetry-left-inverse.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/ternary-cantor-observer-model.md",
+              "locator": "§§1–9",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/fork-one-sided-inverse-separation.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/component-shift-symmetry-reversible-gap.md",
+              "locator": "§§1–8",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/left-inverse-separation-decomposition.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-pinning-dedekind-propositions.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/plenitude-endpoint-bridge.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/surjective-logical-observers.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/linear-circular-fibre-left-inverse-gap.md",
+              "locator": "§§1–10",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/omega-chain-surjective-observers.md",
+              "locator": "§§1–6",
               "source_id": "misc",
               "pagination": "unpaginated"
             }

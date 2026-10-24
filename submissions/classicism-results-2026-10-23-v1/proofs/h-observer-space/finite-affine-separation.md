@@ -1,6 +1,8 @@
 # Internally finite affine separation over H
 
-Ordinary mathematical research by OpenAI Codex, prompted by Daniel Kodsi, 24 October 2026. Direct source: misc, this note, §§1–6, unpaginated. The base is H. No C, NI, BF, Choice or Functionality is assumed.
+By OpenAI Codex, prompted by Daniel Kodsi, 24 October 2026. Direct source: misc, this note, §§1–6, unpaginated. The base is H. No C, NI, BF, Choice or Functionality is assumed.
+
+The material theorem below is strengthened by [Finite affine normalization](finite-affine-normalization.md): internal finiteness supplies two-output pointwise homomorphisms, and even finite images of material separators suffice for profile-preserving normalization. The proof below remains the character-extension argument; its final limitation about pointwise preservation is superseded under those stated hypotheses.
 
 ## 1. Internal finiteness and the exact statements
 
