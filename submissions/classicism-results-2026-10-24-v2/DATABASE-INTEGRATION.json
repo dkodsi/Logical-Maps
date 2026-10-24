@@ -3,8 +3,8 @@
   "database_snapshot_origin": "logical-maps",
   "purpose": "Local review plan only. Related records identify context, not a claim that the research result is already present. No official verdict or Lean status is changed.",
   "coverage": {
-    "main_entries": 60,
-    "catalog_keys": 185,
+    "main_entries": 61,
+    "catalog_keys": 186,
     "limit": "Detailed and supplementary claims are matched to source and database context at their stated scopes. Registration remains separate from mathematical proof and exact certificate acceptance.",
     "supplementary_review_keys": [
       "choice.04",
@@ -3033,6 +3033,21 @@
         {
           "record": "principles/boolean-completeness-r",
           "role": "joins admitted families; range comprehension supplies every external family"
+        }
+      ]
+    },
+    {
+      "result_id": "LAMBDA-FREE-ENDPOINT-COMPREHENSION",
+      "action": "Use as the λ-free presentation of the infinitary extension",
+      "proposal": "Pair full typed endpoint separation with boxed Infinitary Comprehension over the precisely specified λ-free base. Finite instances supply strong comprehension and recover abstraction; initial equality guards are derived rather than imposed. Retain strict whole-operation qualification, the necessitation convention and arbitrary simultaneous parameters. Preserve the existing finite-reconstruction certificate at its original scope; this combined theorem is a separate ordinary argument.",
+      "records": [
+        {
+          "record": "principles/necessary-distinctness-necessary-r",
+          "role": "recovered C5 consequence"
+        },
+        {
+          "record": "principles/atomicity-r",
+          "role": "consequence after observer reconstruction"
         }
       ]
     }

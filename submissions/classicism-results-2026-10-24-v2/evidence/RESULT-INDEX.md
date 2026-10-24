@@ -1442,6 +1442,45 @@ On raw typed lambda syntax, beta identity at every relational output type, ordin
 - `Classicism.Meta.Research.BetaIdentity.ModalBridge.contextual_conversion`
 - `Classicism.Meta.Research.BetaIdentity.PositiveArityModalBridge.contextual_conversion`
 
+<a id="lambda-free-endpoint-comprehension"></a>
+#### Endpoint separation and boxed Infinitary Comprehension reconstruct full standard models over λ-free H
+
+**ID:** `LAMBDA-FREE-ENDPOINT-COMPREHENSION`. Tracked keys: `synthesis.lambda-free-endpoint-comprehension`.
+
+Over the specified λ-free classical typed applicative base, full typed endpoint separation and boxed Infinitary Comprehension characterize the full standard relational hierarchies among set-sized models, up to canonical typed representation, in ZF. Finite comprehension instances reconstruct abstraction and C; separation supplies Intensionality, Functionality and C5, after which Atomicity and the full representation follow. The initial observer qualification can omit translated equality clauses. Whole-operation preservation has an equivalent λ-free formulation using composite representatives.
+
+**Scope:** Original relational types; primitive Boolean formula constructors and object quantifier binders; typed equality; native Box A := (A = Top). The selected axioms are closed under theorem necessitation. Abstraction, Intensionality and independently represented logical objects are not premises. Endpoint separation ranges over every relational type and finite tested-type list, with endpoint range, explicit Top-fixing and strict Boolean/quantifier identities. Infinitary comprehension allows arbitrary set-indexed simultaneous parameter families, including input type e, and finite bound argument tuples. Implication and biconditional are Boolean abbreviations.
+
+**Significance:** A two-principle λ-free presentation recovers the full hierarchy without a separate abstraction or finitary-comprehension axiom, and derives the equality guards previously included in observer qualification.
+
+**Notes:** A single boxed disjunctive-comprehension schema suffices: singleton families supply finite strong comprehension and identity matrices supply range comprehension. Endpoint separation plus unboxed range comprehension alone fails over this comprehension-free base, by the two-world rigid-output countermodel. This does not refute a different base that independently postulates first-class Boolean operations. Infinity and Extensionality remain optional; the conclusion is a model characterization, not proof-calculus completeness.
+
+**Attribution:** OpenAI Codex, prompted by Daniel Kodsi, 24 October 2026; source misc, lambda-free-endpoint-comprehension.md §§1–6, unpaginated. The finite reconstruction and ZF representation retain their cited sources and certification scopes.
+
+**Proof length:** long (9,087 words in the [selected exposition](proof-lengths.json)).
+
+**Proof locators:** lambda-free-endpoint-comprehension.md §§1–6; lambda-free-reconstruction.md §§1–6; intrinsic-observer-axioms.md §§3–7
+
+**Proofs:** [lambda-free-endpoint-comprehension.md](../proofs/lambda-free-endpoint-comprehension.md) · [lambda-free-reconstruction.md](../proofs/lambda-free-reconstruction.md) · [intrinsic-observer-axioms.md](../proofs/intrinsic-observer-axioms.md)
+
+<a id="infinitary-resources"></a>
+#### Infinitary formation changes exhaustion and arithmetic
+
+**ID:** `INFINITARY-RESOURCES`. Tracked keys: `synthesis.infinitary-resources`.
+
+One admitted predicate saying “different from every name” gives countable named-exhaustion reflection. A separate profile construction proves Max-eligibility for an explicit semantic reference theory Td, so SP(Td) entails exactly countably many actual individuals and failure of necessary exhaustion.
+
+**Scope:** The claim for an unspecified infinitary proof calculus remains conditional on its identity-separation/completeness bridge. SP(Td) consistency is not established. One countable numeral abstraction already standardizes Frege arithmetic and conflicts with Max referenced to original finitary C.
+
+**Significance:** Infinitary assertion, term formation and inference have different effects. Fixed bounds on parameter formation or atomic joins do not give unbounded fullness.
+
+**Notes:** Finite named exhaustion is already a schema of ordinary object-language sentences. The external index of an infinitary scheme is metalinguistic; each admitted instance is an object-language formula.
+
+**Proof length:** long (4,650 words in the [selected exposition](proof-lengths.json)).
+
+**Proofs:** [infinitary-resources.md](../proofs/infinitary-resources.md)
+
+<a id="supplement-abstraction-and-infinitary-extensions"></a>
 <a id="infinitary-comprehension"></a>
 #### Infinitary Comprehension and C5 characterize full standard models
 
@@ -1568,24 +1607,6 @@ Over C + C5 + Atomicity (type t), Arbitrary Atomic Joins at every relational typ
 
 **Proofs:** [full-gallin.md](../proofs/full-gallin.md) · [atomic-join-calculus.md](../proofs/atomic-join-calculus.md) · [infinitary-canonical-representation.md](../proofs/infinitary-canonical-representation.md)
 
-<a id="infinitary-resources"></a>
-#### Infinitary formation changes exhaustion and arithmetic
-
-**ID:** `INFINITARY-RESOURCES`. Tracked keys: `synthesis.infinitary-resources`.
-
-One admitted predicate saying “different from every name” gives countable named-exhaustion reflection. A separate profile construction proves Max-eligibility for an explicit semantic reference theory Td, so SP(Td) entails exactly countably many actual individuals and failure of necessary exhaustion.
-
-**Scope:** The claim for an unspecified infinitary proof calculus remains conditional on its identity-separation/completeness bridge. SP(Td) consistency is not established. One countable numeral abstraction already standardizes Frege arithmetic and conflicts with Max referenced to original finitary C.
-
-**Significance:** Infinitary assertion, term formation and inference have different effects. Fixed bounds on parameter formation or atomic joins do not give unbounded fullness.
-
-**Notes:** Finite named exhaustion is already a schema of ordinary object-language sentences. The external index of an infinitary scheme is metalinguistic; each admitted instance is an object-language formula.
-
-**Proof length:** long (4,650 words in the [selected exposition](proof-lengths.json)).
-
-**Proofs:** [infinitary-resources.md](../proofs/infinitary-resources.md)
-
-<a id="supplement-abstraction-and-infinitary-extensions"></a>
 <a id="operators-and-evaluation"></a>
 ### Evaluation and separating operators
 

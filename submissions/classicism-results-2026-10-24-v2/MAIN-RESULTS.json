@@ -2239,6 +2239,46 @@
       }
     },
     {
+      "id": "LAMBDA-FREE-ENDPOINT-COMPREHENSION",
+      "registry_ids": [
+        "synthesis.lambda-free-endpoint-comprehension"
+      ],
+      "title": "Endpoint separation and boxed Infinitary Comprehension reconstruct full standard models over λ-free H",
+      "statement": "Over the specified λ-free classical typed applicative base, full typed endpoint separation and boxed Infinitary Comprehension characterize the full standard relational hierarchies among set-sized models, up to canonical typed representation, in ZF. Finite comprehension instances reconstruct abstraction and C; separation supplies Intensionality, Functionality and C5, after which Atomicity and the full representation follow. The initial observer qualification can omit translated equality clauses. Whole-operation preservation has an equivalent λ-free formulation using composite representatives.",
+      "scope": "Original relational types; primitive Boolean formula constructors and object quantifier binders; typed equality; native Box A := (A = Top). The selected axioms are closed under theorem necessitation. Abstraction, Intensionality and independently represented logical objects are not premises. Endpoint separation ranges over every relational type and finite tested-type list, with endpoint range, explicit Top-fixing and strict Boolean/quantifier identities. Infinitary comprehension allows arbitrary set-indexed simultaneous parameter families, including input type e, and finite bound argument tuples. Implication and biconditional are Boolean abbreviations.",
+      "lean_status": "Ordinary mathematical proof supplied.",
+      "significance": "A two-principle λ-free presentation recovers the full hierarchy without a separate abstraction or finitary-comprehension axiom, and derives the equality guards previously included in observer qualification.",
+      "proofs": [
+        "proofs/lambda-free-endpoint-comprehension.md",
+        "proofs/lambda-free-reconstruction.md",
+        "proofs/intrinsic-observer-axioms.md"
+      ],
+      "proof_locators": [
+        "lambda-free-endpoint-comprehension.md §§1–6",
+        "lambda-free-reconstruction.md §§1–6",
+        "intrinsic-observer-axioms.md §§3–7"
+      ],
+      "declarations": [],
+      "lean_sources": [],
+      "manifests": [],
+      "evidence": [],
+      "notes": "A single boxed disjunctive-comprehension schema suffices: singleton families supply finite strong comprehension and identity matrices supply range comprehension. Endpoint separation plus unboxed range comprehension alone fails over this comprehension-free base, by the two-world rigid-output countermodel. This does not refute a different base that independently postulates first-class Boolean operations. Infinity and Extensionality remain optional; the conclusion is a model characterization, not proof-calculus completeness.",
+      "mathematical_status": "Ordinary proof and countermodel supplied at the stated scope.",
+      "attribution": "OpenAI Codex, prompted by Daniel Kodsi, 24 October 2026; source misc, lambda-free-endpoint-comprehension.md §§1–6, unpaginated. The finite reconstruction and ZF representation retain their cited sources and certification scopes.",
+      "sources": [
+        {
+          "path": "proofs/lambda-free-endpoint-comprehension.md",
+          "source_id": "misc",
+          "locator": "§§1–6",
+          "pagination": "unpaginated"
+        }
+      ],
+      "proof_length": {
+        "rating": "long",
+        "words": 9087
+      }
+    },
+    {
       "id": "COMPUTABILITY-COMPARISON",
       "title": "Theoremhood and model construction have successive jump thresholds",
       "registry_ids": [
@@ -2787,6 +2827,7 @@
         "LOGICAL-OBSERVERS",
         "INFINITARY-COMPREHENSION",
         "INTRINSIC-OBSERVER-AXIOMS",
+        "LAMBDA-FREE-ENDPOINT-COMPREHENSION",
         "NPC-ATOMICITY",
         "SIGNATURE-INDEPENDENCE"
       ]
@@ -3579,43 +3620,26 @@
           },
           {
             "id": "infinitary-comprehension",
-            "title": "Infinitary Comprehension and full standard models",
+            "title": "Endpoint separation and boxed Infinitary Comprehension characterize full standard models",
             "result_refs": [
-              "INFINITARY-COMPREHENSION",
-              "INTRINSIC-OBSERVER-AXIOMS"
+              "LAMBDA-FREE-ENDPOINT-COMPREHENSION"
             ],
-            "summary": "In ZF, these two principles characterize full standard relational hierarchies. Endpoint separation already supplies C5 + Atomicity (type t); range comprehension supplies every subset and operation. Infinity and Extensionality remain optional.\n\nThe general [boxed Infinitary Comprehension schema](CANDIDATES_DK.md#infinitary-comprehension-r), together with C5, gives the same full-model characterization without a separate Atomicity premise. For every infinite regular κ, allowing fewer than κ parameters leaves a countermodel, even with unrestricted formula size; at κ = ω its individual predicates are exactly the finite and cofinite subsets.\n\nFullness is choice-free. The assertion that Functional Choice holds in every full hierarchy is equivalent to AC over ZF. For the algebraic formulation, see [Arbitrary Atomic Joins](#full-standard-gallin).",
+            "summary": "Finite instances reconstruct abstraction, so no separate finitary-comprehension or λ-closure axiom is required. Endpoint separation recovers C5 + Atomicity (type t). The initial observer qualification needs strict Boolean and quantifier preservation; the translated equality clauses follow in the reconstructed theory. Whole-operation preservation remains expressible without λ notation.\n\nThe resulting hierarchy contains every proposition profile and every operation at an admitted relational-output type. The representation is provable in ZF, with Infinity and Extensionality left optional.",
             "proof_length": {
               "rating": "long",
-              "words": 12425
+              "words": 9087
             },
             "evidence_labels": [
-              "General comprehension: proofs and certificates",
-              "Unboxed range formulation and ZF proof"
+              "Proof and exact formulation"
             ],
-            "certified_summary": "For the general boxed schema, term-denotation closure + unrestricted original-closed-type Infinitary Comprehension + ☐ND (type t) give faithful full-standard representation of universe-0 categorical premodels, with a separately certified full-standard converse.",
             "principle": {
-              "statement": "Over H + full typed endpoint separation, unboxed infinitary range comprehension suffices:",
-              "formal": "\\exists R^{\\sigma t}\\,\\forall x^\\sigma\\,\\left(Rx\\leftrightarrow\\bigvee_{i\\in I}x=a_i\\right).",
-              "scope": "For every original input type σ, including e, and every set-indexed parameter family, under every simultaneous assignment."
-            }
-          },
-          {
-            "id": "full-standard-gallin",
-            "title": "Arbitrary Atomic Joins characterize full Gallin hierarchies",
-            "result_refs": [
-              "FULL-STANDARD-GALLIN"
-            ],
-            "summary": "Over C + C5 + Atomicity (type t), Arbitrary Atomic Joins is equivalent to fullness of the canonical standard hierarchy, or to representation of every subset of each typed domain. No Infinity premise is needed. Boolean Completeness covers only families already represented by properties. No fixed bound on family size forces fullness across arbitrary model sizes.\n\n[Infinitary Comprehension](#infinitary-comprehension) gives the corresponding characterization without a separate Atomicity premise.",
-            "proof_length": {
-              "rating": "long",
-              "words": 3902
+              "statement": "Over the λ-free base of H, full typed endpoint separation together with boxed Infinitary Comprehension characterizes full standard relational hierarchies in ZF:",
+              "formal": "\\exists R^{\\sigma_1\\cdots\\sigma_n t}\\,\\Box\\forall x_1\\cdots x_n\\,\\bigl(R[\\bar x]\\leftrightarrow A\\bigr).",
+              "scope": "A is an arbitrary set-sized infinitary matrix with unrestricted simultaneous typed parameters; the bound tuple is finite and may be empty. The selected axioms are closed under necessitation."
             },
-            "principle": {
-              "statement": "At every relational type, every family of atoms has a least upper bound, whether or not a property in the model collects that family. For each relational type $\\tau$ and set $I$, take the instance",
-              "formal": "\\small\\textstyle \\forall(a_i^\\tau)_{i\\in I}\\, .\\, (\\bigwedge_{i\\in I}\\operatorname{Atom}_\\tau(a_i)) \\to\\exists b^\\tau\\, . [ (\\bigwedge_{i\\in I}a_i\\le_\\tau b)\\land \\forall c^\\tau\\, .\\, ((\\bigwedge_{i\\in I}a_i\\le_\\tau c)\\to b\\le_\\tau c) ].",
-              "scope": "The type $\\tau$ and set $I$ index the schema. Each instance uses the existing definitions of atoms and algebraic order, with set-indexed conjunctions and a block of quantifiers over all the $a_i$. These are sentences of an infinitary extension of the original language; assignments range over all families, not just named or property-coded ones."
-            }
+            "anchor_aliases": [
+              "infinitary-comprehension"
+            ]
           },
           {
             "id": "infinitary-resources",
@@ -3630,7 +3654,17 @@
             }
           }
         ],
-        "supplemental_results": []
+        "supplemental_results": [
+          {
+            "result_ref": "INFINITARY-COMPREHENSION"
+          },
+          {
+            "result_ref": "INTRINSIC-OBSERVER-AXIOMS"
+          },
+          {
+            "result_ref": "FULL-STANDARD-GALLIN"
+          }
+        ]
       },
       {
         "id": "operators-and-evaluation",
@@ -3840,7 +3874,7 @@
       },
       {
         "group_ref": "infinitary-comprehension",
-        "label": "Infinitary Comprehension + C5 characterizes full standard models"
+        "label": "Endpoint separation + boxed Infinitary Comprehension characterizes full standard models over λ-free H"
       }
     ]
   },

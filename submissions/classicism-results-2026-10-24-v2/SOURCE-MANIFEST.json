@@ -15104,8 +15104,8 @@
     },
     {
       "path": "proofs/logical-observers.md",
-      "sha256": "09ff5092dece0cf8ddc91319db3cf05899b3572876ef9eb91264764b4bf22f44",
-      "bytes": 20484,
+      "sha256": "1537735c690dba5aef50e7659a46f051af862ddc0f9f3f25757a8d3ad0e575bd",
+      "bytes": 20852,
       "origin": "research/2026-10-23/operator-characterizations/h-logical-observer-strengthening.txt",
       "origin_sha256": "92823a77fe568417e91813dd51d0133e2438e818ad3cfc74eadc73fcb361d61b",
       "selected_line_spans": [
@@ -16832,8 +16832,8 @@
     {
       "path": "evidence/proof-lengths.json",
       "origin": "Curated mathematical section selections from retained proofs",
-      "sha256": "35da99f9fce5886ea80ec404cdf3c0bcdb511b7232182b453401875ce0212b1f",
-      "bytes": 191148,
+      "sha256": "573e539b6642ba8814be3ac11f02b059e733ee4f55028868ebcb019603b1fa8d",
+      "bytes": 190561,
       "original_sha256": "aadbdca8a15ceb2732a07c22605435cca0e7bec46ffcc641733c47855a8ebf5f"
     },
     {
@@ -20900,6 +20900,14 @@
       "editing": "Normalized mathematical notation and publication links, credited the prompter, and omitted coordination commentary. Retained the mathematical argument and its exact scope.",
       "sha256": "d4ffe23ffde2de6545c8e46c8b76269e7495fd199f28564b04b430d23bcc27e4",
       "bytes": 23513
+    },
+    {
+      "path": "proofs/lambda-free-endpoint-comprehension.md",
+      "origin": "research/2026-10-24/lambda-free-endpoint-comprehension.md",
+      "original_sha256": "910ea44dd287716aefccfa184f8d2d67eaffc21d8790da71c9a541eaf9be365d",
+      "editing": "Remapped mathematical source links to retained publication proofs; the mathematical text is unchanged.",
+      "sha256": "a3d5df851087a25ca20a662f5b519fe75742a9ce6e17e58b73702e11442091ff",
+      "bytes": 13083
     }
   ],
   "distribution": "Git source package, 24 October 2026 (v2)",

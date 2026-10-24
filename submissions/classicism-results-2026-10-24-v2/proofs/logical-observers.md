@@ -242,6 +242,8 @@ Under OS plus correct evaluation, the evaluator $B$ is unique and qualifies logi
 
 Over H, endpoint separation together with unboxed infinitary range comprehension at every original input type characterizes full standard relational hierarchies. The [representation proof](intrinsic-observer-axioms.md) works in ZF: endpoint separation supplies the atomic structure, and range comprehension makes every world–argument support representable. Neither Infinity nor Extensionality is imposed.
 
+A [λ-free formulation](lambda-free-endpoint-comprehension.md) uses endpoint separation plus boxed Infinitary Comprehension. Its finite instances reconstruct abstraction, and the translated equality clauses become consequences of the resulting C5 theory. Whole-operation preservation can be expressed with composite representatives and their strict application laws.
+
 ## Main unresolved question
 
 Does separation by injective logical observers entail separation by logical observers with logical left inverses? This remains unresolved over H and over C5. The converse is immediate, but an injective observer need not itself have a logical left inverse. The question is whether a different separating family always exists. [Exact reduction and positive cases](../CONJECTURES.md#observer-strength).

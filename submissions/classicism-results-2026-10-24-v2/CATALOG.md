@@ -1,6 +1,6 @@
 # Detailed result catalog
 
-All 185 stable keys, including the original 160, are retained. Keys may group several claims. Exact aliases resolve to MAIN-RESULTS.json; linked aggregate keys retain narrower evidence boundaries. Supporting module metadata remains in [CATALOG.json](CATALOG.json).
+All 186 stable keys, including the original 160, are retained. Keys may group several claims. Exact aliases resolve to MAIN-RESULTS.json; linked aggregate keys retain narrower evidence boundaries. Supporting module metadata remains in [CATALOG.json](CATALOG.json).
 
 [Main guide](MAIN-RESULTS.md) · [Questions](CONJECTURES.md) · [Integration review](DATABASE-INTEGRATION.md)
 
@@ -1890,3 +1890,12 @@ Over H, full typed endpoint separation together with unboxed infinitary range co
 **Proofs:** [intrinsic-observer-axioms.md](proofs/intrinsic-observer-axioms.md) · [logical-observer-hierarchy.md](proofs/logical-observer-hierarchy.md) · [typed-separation-and-classicism.md](proofs/h-observer-space/typed-separation-and-classicism.md) · [infinitary-canonical-representation.md](proofs/infinitary-canonical-representation.md)
 
 **Scoped evidence:** [`INTRINSIC-OBSERVER-AXIOMS`](evidence/RESULT-INDEX.md#intrinsic-observer-axioms)
+
+<a id="synthesis.lambda-free-endpoint-comprehension"></a>
+## synthesis.lambda-free-endpoint-comprehension
+
+Over the specified λ-free classical typed applicative base, full typed endpoint separation and boxed Infinitary Comprehension characterize the full standard relational hierarchies among set-sized models, up to canonical typed representation, in ZF. Finite comprehension instances reconstruct abstraction and C; separation supplies Intensionality, Functionality and C5, after which Atomicity and the full representation follow. The initial observer qualification can omit translated equality clauses. Whole-operation preservation has an equivalent λ-free formulation using composite representatives.
+
+**Proofs:** [lambda-free-endpoint-comprehension.md](proofs/lambda-free-endpoint-comprehension.md) · [lambda-free-reconstruction.md](proofs/lambda-free-reconstruction.md) · [intrinsic-observer-axioms.md](proofs/intrinsic-observer-axioms.md)
+
+**Scoped evidence:** [`LAMBDA-FREE-ENDPOINT-COMPREHENSION`](evidence/RESULT-INDEX.md#lambda-free-endpoint-comprehension)

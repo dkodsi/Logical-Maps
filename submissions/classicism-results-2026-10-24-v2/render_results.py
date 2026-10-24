@@ -151,13 +151,16 @@ def render(root):
                 text += [definition, '']
             text += [bullet(claim) for claim in r['connections']]
             for variant in r.get('variants', []):
-                # These variants share the parent's evidence; keep their stable anchors.
-                assert variant['sources'] == r['sources'], 'Variant needs separate source rendering'
-                assert variant['result_refs'] == r['result_refs'], 'Variant needs separate status rendering'
+                # Shared evidence is listed once; variant-specific additions stay here.
                 text += ['', anchor(variant['id']), '#### ' + variant['name'], '', variant['statement'], '', '$$', variant['formal'], '$$', '']
                 for definition in variant['definitions']:
                     text += [definition, '']
                 text += [bullet(claim) for claim in variant['connections']]
+                extra_sources = [s for s in variant['sources'] if s not in r['sources']]
+                if extra_sources:
+                    text += ['', '**Additional sources:** ' + proposal_sources({'sources': extra_sources}) + '.']
+                if variant['result_refs'] != r['result_refs']:
+                    text += ['', proposal_status(variant)]
             text += ['', '**Sources:** ' + proposal_sources(r) + '.', '', proposal_status(r), '']
             text += r.get('questions', []) + ([''] if r.get('questions') else [])
     evaluation = proposals['evaluation']
@@ -215,6 +218,7 @@ def render(root):
         text += ['| [' + part['title'] + '](#' + pid + ') | ' + '; '.join(entries) + '. |']
     text += ['']
     current_part = None
+    overview_anchors = {rid.lower() for g in overview_groups for rid in g['result_refs']} | {alias.lower() for g in overview_groups for alias in g.get('anchor_aliases', [])}
     for section in overview['sections']:
         if section['part'] != current_part:
             if current_part == 'database-connections':
@@ -248,7 +252,7 @@ def render(root):
             assert len(labels) == len(refs), 'Wrong evidence label count'
             text += [' · '.join(resultlink(rid, label=label) for rid, label in zip(refs, labels)) + '.', '']
         if section['supplemental_results']:
-            text += [anchor(r['result_ref']) for r in section['supplemental_results']]
+            text += [anchor(r['result_ref']) for r in section['supplemental_results'] if r['result_ref'].lower() not in overview_anchors]
             text += ['[Supplemental results in this category](evidence/RESULT-INDEX.md#supplement-' + section['id'] + ') · [Back to contents](#categories)', '']
         else:
             text += ['[Back to contents](#categories)', '']

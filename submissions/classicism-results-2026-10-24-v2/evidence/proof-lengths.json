@@ -1156,7 +1156,7 @@
               240
             ]
           ],
-          "sha256": "09ff5092dece0cf8ddc91319db3cf05899b3572876ef9eb91264764b4bf22f44",
+          "sha256": "1537735c690dba5aef50e7659a46f051af862ddc0f9f3f25757a8d3ad0e575bd",
           "word_count": 1755
         },
         {
@@ -3632,6 +3632,68 @@
           "word_count": 765
         }
       ]
+    },
+    {
+      "result_ref": "LAMBDA-FREE-ENDPOINT-COMPREHENSION",
+      "rating": "long",
+      "word_count": 9087,
+      "sources": [
+        {
+          "path": "proofs/lambda-free-endpoint-comprehension.md",
+          "line_spans": [
+            [
+              5,
+              148
+            ]
+          ],
+          "sha256": "a3d5df851087a25ca20a662f5b519fe75742a9ce6e17e58b73702e11442091ff",
+          "word_count": 1534
+        },
+        {
+          "path": "proofs/lambda-free-reconstruction.md",
+          "line_spans": [
+            [
+              5,
+              438
+            ]
+          ],
+          "sha256": "f5058487fc23e4d0cd45526ff1fbeb4fdfc8740c7b1cd52705f92fc2f040d7ef",
+          "word_count": 3322
+        },
+        {
+          "path": "proofs/intrinsic-observer-axioms.md",
+          "line_spans": [
+            [
+              5,
+              273
+            ]
+          ],
+          "sha256": "d4ffe23ffde2de6545c8e46c8b76269e7495fd199f28564b04b430d23bcc27e4",
+          "word_count": 2769
+        },
+        {
+          "path": "proofs/logical-observer-hierarchy.md",
+          "line_spans": [
+            [
+              143,
+              213
+            ]
+          ],
+          "sha256": "5f29dde8e9f0533b7f3ee5d8a2592e8031168a4844969ae320ce5311016e2966",
+          "word_count": 697
+        },
+        {
+          "path": "proofs/h-observer-space/typed-separation-and-classicism.md",
+          "line_spans": [
+            [
+              34,
+              96
+            ]
+          ],
+          "sha256": "f0867996c0f7f623b5268b2d4acea6622720f030f3603c03da574e18c735f98c",
+          "word_count": 765
+        }
+      ]
     }
   ],
   "groups": [
@@ -3945,7 +4007,7 @@
               240
             ]
           ],
-          "sha256": "09ff5092dece0cf8ddc91319db3cf05899b3572876ef9eb91264764b4bf22f44",
+          "sha256": "1537735c690dba5aef50e7659a46f051af862ddc0f9f3f25757a8d3ad0e575bd",
           "word_count": 1755
         },
         {
@@ -4569,34 +4631,21 @@
     {
       "group_ref": "infinitary-comprehension",
       "result_refs": [
-        "INFINITARY-COMPREHENSION",
-        "INTRINSIC-OBSERVER-AXIOMS"
+        "LAMBDA-FREE-ENDPOINT-COMPREHENSION"
       ],
       "rating": "long",
-      "word_count": 12425,
+      "word_count": 9087,
       "sources": [
         {
-          "path": "proofs/infinitary-canonical-representation.md",
+          "path": "proofs/lambda-free-endpoint-comprehension.md",
           "line_spans": [
             [
               5,
-              183
+              148
             ]
           ],
-          "sha256": "651f0f144ffb6ccace7a33cd4827a240e3ce4dd7438121b20d4d0a3603b8eab1",
-          "word_count": 1218,
-          "original_sha256": "ab6c722e0486ad3e79700a20ec097cd3f6e46a44997e0db6f30f39d1b7cf2805"
-        },
-        {
-          "path": "proofs/infinitary-comprehension.md",
-          "line_spans": [
-            [
-              20,
-              378
-            ]
-          ],
-          "sha256": "2803f88c996fb5e9165189c71ed80649273d88dd1c736d5cd12d6bf9cb765116",
-          "word_count": 2413
+          "sha256": "a3d5df851087a25ca20a662f5b519fe75742a9ce6e17e58b73702e11442091ff",
+          "word_count": 1534
         },
         {
           "path": "proofs/lambda-free-reconstruction.md",
@@ -4608,17 +4657,6 @@
           ],
           "sha256": "f5058487fc23e4d0cd45526ff1fbeb4fdfc8740c7b1cd52705f92fc2f040d7ef",
           "word_count": 3322
-        },
-        {
-          "path": "source/research/2026-10-22/notes/structural-world-representation.md",
-          "line_spans": [
-            [
-              5,
-              94
-            ]
-          ],
-          "sha256": "2d880f14d4f65260f3fc7a95d59cae00680f1089b18b9bfef6d94d80240098b7",
-          "word_count": 1241
         },
         {
           "path": "proofs/intrinsic-observer-axioms.md",
@@ -5572,61 +5610,6 @@
           ],
           "sha256": "79626565163df8057b4fa0f2d15e02779b2d1ccc79c321810284958abad3ceaa",
           "word_count": 1520
-        }
-      ]
-    },
-    {
-      "group_ref": "full-standard-gallin",
-      "result_refs": [
-        "FULL-STANDARD-GALLIN"
-      ],
-      "rating": "long",
-      "word_count": 3902,
-      "sources": [
-        {
-          "path": "proofs/atomic-join-calculus.md",
-          "line_spans": [
-            [
-              5,
-              40
-            ]
-          ],
-          "sha256": "38b8fb35ace29a158d1768de78ed45af29835779ee9d8d48cdfd40d51dbd63d4",
-          "word_count": 349
-        },
-        {
-          "path": "proofs/full-gallin.md",
-          "line_spans": [
-            [
-              295,
-              392
-            ]
-          ],
-          "sha256": "f28bdff95e2ef34df1cbce2f3f168e85ea15b51c9c028eb17a709bc15e728f31",
-          "word_count": 1094
-        },
-        {
-          "path": "proofs/infinitary-canonical-representation.md",
-          "line_spans": [
-            [
-              5,
-              183
-            ]
-          ],
-          "sha256": "651f0f144ffb6ccace7a33cd4827a240e3ce4dd7438121b20d4d0a3603b8eab1",
-          "word_count": 1218,
-          "original_sha256": "ab6c722e0486ad3e79700a20ec097cd3f6e46a44997e0db6f30f39d1b7cf2805"
-        },
-        {
-          "path": "source/research/2026-10-22/notes/structural-world-representation.md",
-          "line_spans": [
-            [
-              5,
-              94
-            ]
-          ],
-          "sha256": "2d880f14d4f65260f3fc7a95d59cae00680f1089b18b9bfef6d94d80240098b7",
-          "word_count": 1241
         }
       ]
     },

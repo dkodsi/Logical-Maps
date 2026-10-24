@@ -14,7 +14,7 @@ Draft. The background is finitary relational **Classicism C** unless stated othe
 - [Pure SP proves true Π₂ arithmetic, with a conditional Π₃ boundary](#sp-arithmetic-reflection).
 - [Lambda-free reconstruction and contextual beta eta conversion](#lambda-free-translation). **Lean certified.**
 - [Logical observer separation and its strict hierarchy](#logical-observers). **Lean certified H + OS ⇒ C + BF step.**
-- [Infinitary Comprehension + C5 characterizes full standard models](#infinitary-comprehension).
+- [Endpoint separation + boxed Infinitary Comprehension characterizes full standard models over λ-free H](#lambda-free-endpoint-comprehension).
 
 <a id="categories"></a>
 ## Contents
@@ -479,45 +479,24 @@ The proof constructs bracket abstraction, substitution coherence and both term r
 [Lambda-free reconstruction](evidence/RESULT-INDEX.md#lambda-free-translation) · [Beta eta conversion](evidence/RESULT-INDEX.md#beta-eta-conversion).
 
 <a id="infinitary-comprehension"></a>
-<a id="intrinsic-observer-axioms"></a>
-#### Infinitary Comprehension and full standard models
+<a id="lambda-free-endpoint-comprehension"></a>
+#### Endpoint separation and boxed Infinitary Comprehension characterize full standard models
 
-Over H + full typed endpoint separation, unboxed infinitary range comprehension suffices:
-
-$$
-\exists R^{\sigma t}\,\forall x^\sigma\,\left(Rx\leftrightarrow\bigvee_{i\in I}x=a_i\right).
-$$
-
-For every original input type σ, including e, and every set-indexed parameter family, under every simultaneous assignment.
-
-In ZF, these two principles characterize full standard relational hierarchies. Endpoint separation already supplies C5 + Atomicity (type t); range comprehension supplies every subset and operation. Infinity and Extensionality remain optional.
-
-The general [boxed Infinitary Comprehension schema](CANDIDATES_DK.md#infinitary-comprehension-r), together with C5, gives the same full-model characterization without a separate Atomicity premise. For every infinite regular κ, allowing fewer than κ parameters leaves a countermodel, even with unrestricted formula size; at κ = ω its individual predicates are exactly the finite and cofinite subsets.
-
-Fullness is choice-free. The assertion that Functional Choice holds in every full hierarchy is equivalent to AC over ZF. For the algebraic formulation, see [Arbitrary Atomic Joins](#full-standard-gallin).
-
-**Lean certified:** For the general boxed schema, term-denotation closure + unrestricted original-closed-type Infinitary Comprehension + ☐ND (type t) give faithful full-standard representation of universe-0 categorical premodels, with a separately certified full-standard converse. · [Proof length](#proof-length): long.
-
-[General comprehension: proofs and certificates](evidence/RESULT-INDEX.md#infinitary-comprehension) · [Unboxed range formulation and ZF proof](evidence/RESULT-INDEX.md#intrinsic-observer-axioms).
-
-<a id="full-standard-gallin"></a>
-#### Arbitrary Atomic Joins characterize full Gallin hierarchies
-
-At every relational type, every family of atoms has a least upper bound, whether or not a property in the model collects that family. For each relational type $\tau$ and set $I$, take the instance
+Over the λ-free base of H, full typed endpoint separation together with boxed Infinitary Comprehension characterizes full standard relational hierarchies in ZF:
 
 $$
-\small\textstyle \forall(a_i^\tau)_{i\in I}\, .\, (\bigwedge_{i\in I}\mathrm{Atom}_\tau(a_i)) \to\exists b^\tau\, . [ (\bigwedge_{i\in I}a_i\le_\tau b)\land \forall c^\tau\, .\, ((\bigwedge_{i\in I}a_i\le_\tau c)\to b\le_\tau c) ].
+\exists R^{\sigma_1\cdots\sigma_n t}\,\Box\forall x_1\cdots x_n\,\bigl(R[\bar x]\leftrightarrow A\bigr).
 $$
 
-The type $\tau$ and set $I$ index the schema. Each instance uses the existing definitions of atoms and algebraic order, with set-indexed conjunctions and a block of quantifiers over all the $a_i$. These are sentences of an infinitary extension of the original language; assignments range over all families, not just named or property-coded ones.
+A is an arbitrary set-sized infinitary matrix with unrestricted simultaneous typed parameters; the bound tuple is finite and may be empty. The selected axioms are closed under necessitation.
 
-Over C + C5 + Atomicity (type t), Arbitrary Atomic Joins is equivalent to fullness of the canonical standard hierarchy, or to representation of every subset of each typed domain. No Infinity premise is needed. Boolean Completeness covers only families already represented by properties. No fixed bound on family size forces fullness across arbitrary model sizes.
+Finite instances reconstruct abstraction, so no separate finitary-comprehension or λ-closure axiom is required. Endpoint separation recovers C5 + Atomicity (type t). The initial observer qualification needs strict Boolean and quantifier preservation; the translated equality clauses follow in the reconstructed theory. Whole-operation preservation remains expressible without λ notation.
 
-[Infinitary Comprehension](#infinitary-comprehension) gives the corresponding characterization without a separate Atomicity premise.
+The resulting hierarchy contains every proposition profile and every operation at an admitted relational-output type. The representation is provable in ZF, with Infinity and Extensionality left optional.
 
 [Proof length](#proof-length): long.
 
-[Proofs and certificates](evidence/RESULT-INDEX.md#full-standard-gallin).
+[Proof and exact formulation](evidence/RESULT-INDEX.md#lambda-free-endpoint-comprehension).
 
 <a id="infinitary-resources"></a>
 #### Infinitary formation changes named exhaustion and arithmetic
@@ -530,7 +509,9 @@ A different addition—one countable numeral abstraction—makes the Frege numbe
 
 [Proofs and certificates](evidence/RESULT-INDEX.md#infinitary-resources).
 
-[Back to contents](#categories)
+<a id="intrinsic-observer-axioms"></a>
+<a id="full-standard-gallin"></a>
+[Supplemental results in this category](evidence/RESULT-INDEX.md#supplement-abstraction-and-infinitary-extensions) · [Back to contents](#categories)
 
 <a id="operators-and-evaluation"></a>
 ### Evaluation and separating operators

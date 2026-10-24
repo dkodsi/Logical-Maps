@@ -570,15 +570,11 @@ An explicit classical lambda-free applicative calculus has exactly C’s consequ
 **Lean certified:** [`LAMBDA-FREE-TRANSLATION`](evidence/RESULT-INDEX.md#lambda-free-translation). [`BETA-ETA-CONVERSION`](evidence/RESULT-INDEX.md#beta-eta-conversion).
 
 <a id="full-gallin"></a>
-#### Do Boolean Completeness or bounded infinitary joins recover full standard models?
+#### Can endpoint separation and comprehension reconstruct full standard models?
 
-**Position:** Negative bounds and exact semantic characterization.
+**Position:** Resolved: a λ-free characterization in ZF.
 
-C5 plus propositional Atomicity and Arbitrary Atomic Joins characterizes full standard hierarchies. Over H, endpoint separation plus unboxed infinitary range comprehension gives this characterization in ZF, without Choice. General boxed Infinitary Comprehension gives the same full-model characterization with C5 and no separate Atomicity premise. A support construction separates every fixed parameter bound even with unrestricted formula size. The specified uniformly Σ₁-admissible set-coded calculus cannot be complete.
-
-This is not an unrestricted impossibility theorem for every calculus. Full second-order validity remains the identified semantic benchmark.
-
-**Lean certified:** [`INFINITARY-COMPREHENSION`](evidence/RESULT-INDEX.md#infinitary-comprehension): For universe-0 categorical premodels, term-denotation closure + unrestricted original-closed-type Infinitary Comprehension + ☐ND (type t) imply faithful full-standard representation; full standard models satisfy the corresponding infinitary axioms.
+Full typed endpoint separation plus boxed Infinitary Comprehension characterizes full standard relational hierarchies over the specified λ-free base of H. Finite instances reconstruct abstraction, while the translated observer equality clauses follow from the resulting C5 theory. The representation is provable in ZF. [Proof and exact formulation](proofs/lambda-free-endpoint-comprehension.md).
 
 <a id="infinitary-sp"></a>
 #### Does countable named exhaustion follow from SP with infinitary resources?

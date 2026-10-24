@@ -188,9 +188,10 @@
     "synthesis.forcing-possibilism",
     "synthesis.infinity-schema-separation",
     "synthesis.h-observer-space",
-    "synthesis.intrinsic-observer-axioms"
+    "synthesis.intrinsic-observer-axioms",
+    "synthesis.lambda-free-endpoint-comprehension"
   ],
-  "result_entries": 60,
+  "result_entries": 61,
   "questions": 15,
   "subject_coverage": [
     {
@@ -208,6 +209,7 @@
         "LOGICAL-OBSERVERS",
         "INFINITARY-COMPREHENSION",
         "INTRINSIC-OBSERVER-AXIOMS",
+        "LAMBDA-FREE-ENDPOINT-COMPREHENSION",
         "NPC-ATOMICITY",
         "SIGNATURE-INDEPENDENCE"
       ]
@@ -368,7 +370,7 @@
     "updated_at_utc": "2026-10-24T02:10:23.847226+00:00"
   },
   "presentation": {
-    "overview_groups": 44,
+    "overview_groups": 43,
     "overview_result_refs": [
       "MAX-ATOMICITY",
       "SP-SIGNATURE-CONFLICT",
@@ -408,9 +410,7 @@
       "COMPLETION-SPACES",
       "LAMBDA-FREE-TRANSLATION",
       "BETA-ETA-CONVERSION",
-      "INFINITARY-COMPREHENSION",
-      "INTRINSIC-OBSERVER-AXIOMS",
-      "FULL-STANDARD-GALLIN",
+      "LAMBDA-FREE-ENDPOINT-COMPREHENSION",
       "INFINITARY-RESOURCES",
       "EVALUATORS-CORES",
       "UNIFORM-COMPLETE-EVALUATORS",
@@ -431,8 +431,11 @@
       "ARITHMETIC-FOUNDATIONS",
       "PURE-SP-BOUNDED-IMAGE",
       "SIGNATURE-SP-SURVIVAL",
+      "INFINITARY-COMPREHENSION",
+      "INTRINSIC-OBSERVER-AXIOMS",
+      "FULL-STANDARD-GALLIN",
       "EVALUATOR-MODAL-COMMUTATION"
     ],
-    "complete_result_entries": 60
+    "complete_result_entries": 61
   }
 }

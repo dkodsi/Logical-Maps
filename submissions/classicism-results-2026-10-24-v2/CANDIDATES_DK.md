@@ -272,6 +272,9 @@ Endpoint-valuedness differs from $\Box\forall p(Ep\leftrightarrow p)$: the latte
 - Under C5, propositional atoms and endpoint observers qualified at $t$ correspond bijectively: $E_a(p)=\Box(a\to p)$ and $a_E=\forall p(Ep\to p)$. Such observers qualify at every finite type list.
 - Equivalent to C5 + ☐OS + one atom, and to C5 plus one atom and the single boxed propositional $\mathrm{Good}_{\{t\}}$ separation instance.
 - Equivalent over H to OS + Plenitude at (t,t), OS + full Plenitude, C5 + OS + Actuality, and C5 + OS + Boolean Completeness. Both OS and Plenitude are current premises.
+- Together with boxed Infinitary Comprehension, it characterizes full standard hierarchies over the λ-free base of H, in ZF. In this package the initial qualification may omit translated equality clauses; they follow after reconstruction. See the [exact formulation](proofs/lambda-free-endpoint-comprehension.md).
+
+**Additional sources:** [lambda-free-endpoint-comprehension.md](proofs/lambda-free-endpoint-comprehension.md) (§§1–5).
 
 <a id="factive-logical-observer-separation-r"></a>
 #### Factive Logical Observer Separation
@@ -473,24 +476,14 @@ $$
 
 A is any classical formula built using arbitrary set-sized well-founded conjunctions and disjunctions, with any set-sized family of typed parameters; R is not free in A. Each instance holds for every simultaneous parameter assignment. The argument tuple is finite and may be empty.
 
-Over H + full typed endpoint separation, the following unboxed range scheme suffices for the same full-model characterization:
+- Over the λ-free base of H, full typed endpoint separation plus this schema characterizes full standard hierarchies in ZF. Finite instances reconstruct abstraction; the observer qualification can omit translated equality clauses. Whole-operation preservation remains expressible using composite representatives. See the [λ-free reconstruction](proofs/lambda-free-endpoint-comprehension.md).
+- The resulting theory supplies C5, Atomicity, Actuality, Boolean Completeness, Plenitude and Rigid Comprehension. Its full-model representation is provable in ZF; Infinity and Extensionality remain optional.
 
-$$
-\exists R^{\sigma t}\,\forall x^\sigma\,\left(Rx\leftrightarrow\bigvee_{i\in I}x=a_i\right).
-$$
-
-Here σ is any original input type, including e; I and the simultaneous parameter family are arbitrary sets. The representation is provable in ZF. See the [intrinsic formulation](proofs/intrinsic-observer-axioms.md).
-
-- With C5, it characterizes full standard relational hierarchies among set-sized models. Atomicity follows; neither Axiom of Infinity is needed. See also the [Arbitrary Atomic Joins characterization](MAIN-RESULTS.md#full-standard-gallin), which assumes propositional Atomicity. The unboxed range formulation over H + endpoint separation has the same original typed reducts; this comparison concerns model classes and canonical expansions.
-- The infinitary logical base gives Actuality and propositional Atomicity. Comprehension supplies arbitrary joins, Boolean Completeness, all-type Atomicity and Rigid Comprehension.
-- The full-model representation is provable in ZF. Functional Choice holding in every full hierarchy is equivalent to the ambient Axiom of Choice; in ZFC all full hierarchies satisfy ☐Functional Choice. Finite full hierarchies show that neither Axiom of Infinity follows.
-- For every infinite regular κ, a model satisfies C5, Atomicity and all instances with fewer than κ parameters, irrespective of formula size, while failing the unrestricted schema.
-
-**Sources:** [infinitary-comprehension.md](proofs/infinitary-comprehension.md) (§§1–4, 5 (source Theorem 5.3), and 6) · [infinitary-canonical-representation.md](proofs/infinitary-canonical-representation.md) (§5) · [intrinsic-observer-axioms.md](proofs/intrinsic-observer-axioms.md) (§§1–7).
+**Sources:** [infinitary-comprehension.md](proofs/infinitary-comprehension.md) (§§1–4, 5 (source Theorem 5.3), and 6) · [infinitary-canonical-representation.md](proofs/infinitary-canonical-representation.md) (§5) · [intrinsic-observer-axioms.md](proofs/intrinsic-observer-axioms.md) (§§1–7) · [lambda-free-endpoint-comprehension.md](proofs/lambda-free-endpoint-comprehension.md) (§§1–6).
 
 **Lean certified:** For the general boxed schema, term-denotation closure + unrestricted original-closed-type Infinitary Comprehension + ☐ND (type t) give faithful full-standard representation of universe-0 categorical premodels, with a separately certified full-standard converse.
 
-**Evidence:** [Infinitary Comprehension and C5 characterize full standard models](evidence/RESULT-INDEX.md#infinitary-comprehension) · [Endpoint separation and unboxed range comprehension characterize full standard models in ZF](evidence/RESULT-INDEX.md#intrinsic-observer-axioms).
+**Evidence:** [Infinitary Comprehension and C5 characterize full standard models](evidence/RESULT-INDEX.md#infinitary-comprehension) · [Endpoint separation and unboxed range comprehension characterize full standard models in ZF](evidence/RESULT-INDEX.md#intrinsic-observer-axioms) · [Endpoint separation and boxed Infinitary Comprehension reconstruct full standard models over λ-free H](evidence/RESULT-INDEX.md#lambda-free-endpoint-comprehension).
 
 <a id="evaluation-principles"></a>
 ## Evaluation principles
