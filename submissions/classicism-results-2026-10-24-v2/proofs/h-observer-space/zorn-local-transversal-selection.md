@@ -57,7 +57,7 @@ s_E:=\exists b\,[\mathrm{Loc}_E(b)\land b].
 \tag{5}
 $$
 
-We use the support note's heredity and density theorem: every local b lies below $s_E$, and every nonzero q≤$s_E$ contains a nonzero local subproposition. The adjoint facts include q≤$C_E$q, L0=0 and Frobenius
+We use the support note's heredity and density theorem: every local b lies below $s_E$, and every nonzero q≤$s_E$ contains a nonzero local subproposition. The adjoint facts include $q\le C_E q$, L0=0 and Frobenius
 
 $$
 L(q\land Ep)=Lq\land p.
@@ -77,7 +77,7 @@ C_E\dashv j_E.
 \tag{7}
 $$
 
-Indeed $C_E$q≤p iff Lq≤Rp iff q≤E(Rp). Therefore $C_E$ preserves any existing least upper bound of a current admitted family. This assertion follows directly from the universal property: $C_E$u≤z iff u≤j_Ez iff every current family member b satisfies b≤j_Ez iff every $C_E$b≤z. The image family is admitted by the predicate ∃b(Xb∧y=$C_E$b).
+Indeed $C_E q\le p$ iff Lq≤Rp iff q≤E(Rp). Therefore $C_E$ preserves any existing least upper bound of a current admitted family. This assertion follows directly from the universal property: $C_E u\le z$ iff u≤j_Ez iff every current family member b satisfies b≤j_Ez iff every $C_E b\le z$. The image family is admitted by the predicate $\exists b(Xb\land y=C_E b)$.
 
 Likewise meet with a fixed q preserves every existing current least upper bound, because x∧q≤z iff x≤¬q∨z. This uses Boolean residuation, not a truth assumption about the membership predicate. $\mathrm{BC}_t$ supplies the image joins whenever needed.
 
@@ -90,7 +90,7 @@ b\land C_E(c\land q)\le q.
 \tag{8}
 $$
 
-Hold b fixed. The join-preservation facts show that b∧$C_E$(u∧q) is the least upper bound of the values b∧$C_E$(c∧q) for current c. Hence it is at most q. Now vary b: u∧$C_E$(u∧q) is the least upper bound of these b∧$C_E$(u∧q), so it too is at most q. It is also at most u. The adjunction unit supplies the reverse inequality u∧q≤u∧$C_E$(u∧q), proving locality. An empty family has u=0 and satisfies the same conclusion.
+Hold b fixed. The join-preservation facts show that $b\land C_E(u\land q)$ is the least upper bound of the values $b\land C_E(c\land q)$ for current c. Hence it is at most q. Now vary b: $u\land C_E(u\land q)$ is the least upper bound of these $b\land C_E(u\land q)$, so it too is at most q. It is also at most u. The adjunction unit supplies the reverse inequality $u\land q\le u\land C_E(u\land q)$, proving locality. An empty family has u=0 and satisfies the same conclusion.
 
 In particular this applies to a current chain of local elements: the union of two comparable members is the larger, hence local. No claim that X itself, or its chain property, persists is used.
 
@@ -137,13 +137,13 @@ C_Ev\le Ew,
 \tag{12}
 $$
 
-The two local elements u,v have disjoint image ceilings. The finite cross-term expansion therefore gives locality of u∨v: its diagonal terms are u∧q and v∧q, while u∧$C_E$(v∧q) and v∧$C_E$(u∧q) are zero by (12). Also u∧v=0 because each lies below its ceiling. Thus u∨v is a valid strict extension of u, contrary to maximality. So w=0 and Lu=a, proving (9). ∎
+The two local elements u,v have disjoint image ceilings. The finite cross-term expansion therefore gives locality of u∨v: its diagonal terms are u∧q and v∧q, while $u\land C_E(v\land q)$ and $v\land C_E(u\land q)$ are zero by (12). Also u∧v=0 because each lies below its ceiling. Thus u∨v is a valid strict extension of u, contrary to maximality. So w=0 and Lu=a, proving (9). ∎
 
 The domain part a=L($s_E$∧r) is canonical, even though a selected maximal u need not be unique. The relative maps p↦u∧Ep and q↦Lq give an admitted logical isomorphism between [0,a] and [0,u]. This is the local interval theorem, with Lu=a; it does not introduce an interval type or assert a uniform choice of u as r or E varies.
 
 ## 4. Exact qualified-inverse and kernel criteria
 
-Now assume E is injective. The [Boolean-transversal theorem](injective-observers-and-boolean-transversals.md), §§2–3, identifies its qualified left inverses with local u satisfying $C_E$u=1. Injectivity makes this last condition equivalent to Lu=1.
+Now assume E is injective. The [Boolean-transversal theorem](injective-observers-and-boolean-transversals.md), §§2–3, identifies its qualified left inverses with local u satisfying $C_E u=1$. Injectivity makes this last condition equivalent to Lu=1.
 
 Theorem 1 therefore gives, for every r,
 

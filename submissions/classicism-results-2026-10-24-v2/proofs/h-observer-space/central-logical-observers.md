@@ -46,7 +46,7 @@ F_p(r):=(Ep\land Er)\lor(\neg Ep\land r).
 \tag{4}
 $$
 
-Centrality gives E($F_p$p)=$F_p$(Ep). Boolean simplification gives the two sides explicitly:
+Centrality gives $E(F_p p)=F_p(Ep)$. Boolean simplification gives the two sides explicitly:
 
 $$
 E(F_pp)=E(Ep\lor p)=E^2p\lor Ep,
@@ -162,7 +162,7 @@ f(x)=f(g_x(o))=g_x(f(o))=x.
 \tag{14}
 $$
 
-Hence f=I. If f(o)=a≠o, the same calculation gives f(x)=$g_x$(a)=a for every x. Thus f is constant, and inflationarity forces a to be a greatest element of P.
+Hence f=I. If f(o)=a≠o, the same calculation gives $f(x)=g_x(a)=a$ for every x. Thus f is constant, and inflationarity forces a to be a greatest element of P.
 
 Conversely, identity is central, and if a greatest element $1_P$ exists the constant map to $1_P$ commutes with every inflationary map: each such map fixes $1_P$. We have proved the exact centre description
 

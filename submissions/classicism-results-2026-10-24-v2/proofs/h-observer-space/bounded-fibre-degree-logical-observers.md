@@ -19,7 +19,7 @@ L_EEL_E=L_E.
 \tag{1}
 $$
 
-The last identity is the usual triangular identity of the adjunction. In particular $L_E$ reflects zero: if $L_E$q=0, then q≤E0=0. $L_E$ preserves admitted joins and hence finite joins. It is not assumed globally Boolean or qualified as an observer.
+The last identity is the usual triangular identity of the adjunction. In particular $L_E$ reflects zero: if $L_E q=0$, then q≤E0=0. $L_E$ preserves admitted joins and hence finite joins. It is not assumed globally Boolean or qualified as an observer.
 
 For a fixed external integer n≥1, define degree at most n by the single finitary formula
 
@@ -43,7 +43,7 @@ $$
 
 then Frobenius gives $L_E c_i$=d for every i. These $c_i$ remain disjoint and are all nonzero. The reverse implication is immediate.
 
-One may equally use $C_E$ in place of $L_E$ in (2). Put a=$L_E$1. Frobenius gives $L_E$Ep=a∧p, so E reflects zero on [0,a]; all $L_E b_i$ lie in that interval. Since E preserves finite meets,
+One may equally use $C_E$ in place of $L_E$ in (2). Put $a=L_E1$. Frobenius gives $L_E(Ep)=a\land p$, so E reflects zero on [0,a]; all $L_E b_i$ lie in that interval. Since E preserves finite meets,
 
 $$
 \bigwedge_iL_Eb_i=0
@@ -74,21 +74,21 @@ Under C5 the locality guard can be expressed as an identity of complete unary op
 
 **Splitting lemma.** If b is not local, there are disjoint x,y≤b with the same nonzero $L_E$-image.
 
-Choose q≤b such that b∧$C_E$q≠q. The unit q≤$C_E$q gives
+Choose q≤b such that $b\land C_E q\ne q$. The unit $q\le C_E q$ gives
 
 $$
 y:=b\land C_Eq\land\neg q\ne0.
 \tag{6}
 $$
 
-Put d=$L_E$y. Zero-reflection makes d nonzero. Since y≤E($L_E$q), monotonicity and (1) give
+Put $d=L_E y$. Zero-reflection makes d nonzero. Since $y\le E(L_E q)$, monotonicity and (1) give
 
 $$
 d\le L_EEL_Eq=L_Eq.
 \tag{7}
 $$
 
-Now set x=q∧Ed. Frobenius gives $L_E$x=$L_E$q∧d=d=$L_E$y. Also x≤q and y≤¬q, so x,y are disjoint, nonzero and below b. This proves the lemma without injectivity of E.
+Now set x=q∧Ed. Frobenius gives $L_E x=L_E q\land d=d=L_E y$. Also x≤q and y≤¬q, so x,y are disjoint, nonzero and below b. This proves the lemma without injectivity of E.
 
 **Theorem 1.** For every fixed external n≥1,
 
@@ -110,7 +110,7 @@ $$
 \tag{9}
 $$
 
-If Deg₁ holds, the splitting lemma makes 1 local. Hence $C_E$q=q for every q, and q=E($L_E$q) supplies an admitted preimage. Conversely, if E is onto, $C_E$=I, so 1 is local. The restriction of $L_E$ to [0,1] is then a relative Boolean isomorphism onto [0,$L_E$1], by the local-interval theorem. It preserves disjointness, which is Deg₁. Equivalently, one can apply E to $L_E$b∧$L_E$c and use $L_E C_E$=$L_E$ to obtain zero when b∧c=0.
+If Deg₁ holds, the splitting lemma makes 1 local. Hence $C_E q=q$ for every q, and $q=E(L_E q)$ supplies an admitted preimage. Conversely, if E is onto, $C_E=I$, so 1 is local. The restriction of $L_E$ to [0,1] is then a relative Boolean isomorphism onto $[0,L_E1]$, by the local-interval theorem. It preserves disjointness, which is Deg₁. Equivalently, one can apply E to $L_E b\land L_E c$ and use $L_E C_E=L_E$ to obtain zero when b∧c=0.
 
 Full support is weaker than any particular finite degree bound for an individual observer. For example, the endpoint observer on the full powerset algebra of an infinite set that evaluates at a fixed atom has full support, because every singleton is local; arbitrarily many disjoint singletons have the same nonzero image ceiling. This is the same full-function example already checked in the support note, §6. The comparison below concerns separating classes, not an equivalence between individual qualifications.
 
@@ -152,7 +152,7 @@ $$
 \tag{12}
 $$
 
-The left adjoint of F∘E is $L_E$∘$L_F$. Let $b_i$, for i in a fixed set I of mn+1 indices, be pairwise disjoint, and put $d_i$=$L_F b_i$. The degree bound for F says that any intersection of n+1 distinct $d_i$ is zero.
+The left adjoint of F∘E is $L_E\circ L_F$. Let $b_i$, for i in a fixed set I of mn+1 indices, be pairwise disjoint, and put $d_i=L_F b_i$. The degree bound for F says that any intersection of n+1 distinct $d_i$ is zero.
 
 Form the finite Boolean cells
 
@@ -262,7 +262,7 @@ r_i=r_{i-1}\land\neg u_i.
 \tag{24}
 $$
 
-The $u_i$ are disjoint. If $r_n$≠0, let d=$L_E r_n$≠0. Since $r_n$≤$r_{i-1}$, each $u_i$∧Ed has $L_E$-image d. These n pieces, together with $r_n$, are n+1 disjoint pieces with the same nonzero image, contrary to $\mathrm{Deg}_n(E)$. Hence $r_n$=0, proving (22).
+The $u_i$ are disjoint. If $r_n$≠0, let $d=L_E r_n\ne0$. Since $r_n$≤$r_{i-1}$, each $u_i$∧Ed has $L_E$-image d. These n pieces, together with $r_n$, are n+1 disjoint pieces with the same nonzero image, contrary to $\mathrm{Deg}_n(E)$. Hence $r_n$=0, proving (22).
 
 The converse does not use (20). Let b₀,…,$b_n$ be disjoint. Because the sheets partition 1,
 

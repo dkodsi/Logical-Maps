@@ -920,7 +920,7 @@ All displayed separation principles have full relational/type-list scope. Each f
 
 ### Commuting with every logical observer
 
-Centrality means $\mathrm{Good}_\Delta$(E) together with E∘G=G∘E for every admitted $\mathrm{Good}_\Delta$ observer G, as a whole-operation identity. It is stronger than selecting a pairwise commuting family. Over C with unary Functionality, the Boolean patches with which E must commute force E²=E. With t∈Δ and ordinary propositional separation at that list, the centre contains only identity and at most one additional endpoint observer; this classification no longer requires C5. The idempotent observer's greatest kernel is the admitted join ∃p(p△Ep), avoiding equality guards.
+Centrality means $\mathrm{Good}_\Delta(E)$ together with E∘G=G∘E for every admitted $\mathrm{Good}_\Delta$ observer G, as a whole-operation identity. It is stronger than selecting a pairwise commuting family. Over C with unary Functionality, the Boolean patches with which E must commute force E²=E. With t∈Δ and ordinary propositional separation at that list, the centre contains only identity and at most one additional endpoint observer; this classification no longer requires C5. The idempotent observer's greatest kernel is the admitted join ∃p(p△Ep), avoiding equality guards.
 
 ```mermaid
 flowchart TD
@@ -1111,7 +1111,7 @@ flowchart LR
     LocalRespect <--> NormalFix["Every normalized observer N(E) fixes<br/>u"]
 ```
 
-Respect on $s_E$ is the identity $s_E$∧Eu=$s_E$∧u. Equivalently, no nonzero parts of u and ¬u admit a relative order isomorphism with an admitted inverse. Writing B(E) for the endpoint-valued identity-based Good_t guard, the same orbit closure is O(p)=∃E[B(E)∧$s_E$∧Ep]=∃E[B(E)∧N(E)p]. These are admitted guarded joins, with no Choice or external completeness.
+Respect on $s_E$ is the identity $s_E\land Eu=s_E\land u$. Equivalently, no nonzero parts of u and ¬u admit a relative order isomorphism with an admitted inverse. Writing B(E) for the endpoint-valued identity-based Good_t guard, the same orbit closure is $O(p)=\exists E[B(E)\land s_E\land Ep]=\exists E[B(E)\land N(E)p]$. These are admitted guarded joins, with no Choice or external completeness.
 
 An injective observer detecting a false invariant must change it outside its local support. With current $\mathrm{BC}_t$+$\mathrm{Zorn}_t$, the additional coverage $L_E s_E=\top$ then supplies a qualified inverse with a true kernel. That coverage is not automatic here, so the general InjSep/left-inverse comparison remains unresolved. See [Invariant components and local support](invariant-components-and-local-support.md), §§1–5.
 
@@ -1157,7 +1157,7 @@ flowchart LR
     QualifiedLeft["An admitted qualified left inverse of<br/>E"] <--> Transversal["A Boolean transversal for the image<br/>closure of E"]
 ```
 
-This is an **individual-observer** equivalence over C5, with E injective and $\mathrm{Good}_\Delta$ for a finite Δ containing t. Write $C_E$=E∘L. A transversal is an admitted proposition u with $C_E$u=Top and u∧$C_E$(u∧q)=u∧q for every q. The correspondence is a bijection: u gives F_u(q)=L(u∧q), and a qualified left inverse F gives u=¬k_F, where k_F is its greatest kernel element. The same terms preserve every listed quantifier, and available Functionality collects the whole-operation identities. No Choice premise or external power-set representation is assumed.
+This is an **individual-observer** equivalence over C5, with E injective and $\mathrm{Good}_\Delta$ for a finite Δ containing t. Write $C_E=E\circ L$. A transversal is an admitted proposition u with $C_E u=\top$ and $u\land C_E(u\land q)=u\land q$ for every q. The correspondence is a bijection: u gives F_u(q)=L(u∧q), and a qualified left inverse F gives u=¬k_F, where k_F is its greatest kernel element. The same terms preserve every listed quantifier, and available Functionality collects the whole-operation identities. No Choice premise or external power-set representation is assumed.
 
 The full-function C5 model with proposition algebra 2×RO(Cantor²) has an injective all-type Good cylinder embedding with **no qualified Good-t left inverse**, although its order adjoints are admitted whole left inverses. A clopen rectangle split rules out every transversal. This model itself fails OS; it therefore does **not** refute InjSep⇒SplitMono. See [Injective observers and Boolean transversals](injective-observers-and-boolean-transversals.md), §§1–6.
 
@@ -1216,13 +1216,13 @@ flowchart TD
     end
 ```
 
-Here c is arbitrary; it need not be true. $\mathrm{BC}_t$ is Boolean Completeness for current admitted proposition predicates, and $\mathrm{Zorn}_t$ is the existing preorder Zorn instance at t. $\mathrm{BC}_t$ supplies actual current joins of chains, without assuming their membership predicates are endpoint-valued; the adjunction $C_E$⊣E R_E and fixed-meet adjunction preserve those joins. Zorn then selects a maximal local u≤r, with $L_Eu=L_E(s_E\land r)$. This maximal-support theorem itself does not require E injective. Injectivity is used to turn coverage Top into a qualified whole left inverse F(q)=$L_E$(u∧q).
+Here c is arbitrary; it need not be true. $\mathrm{BC}_t$ is Boolean Completeness for current admitted proposition predicates, and $\mathrm{Zorn}_t$ is the existing preorder Zorn instance at t. $\mathrm{BC}_t$ supplies actual current joins of chains, without assuming their membership predicates are endpoint-valued; the adjunction $C_E\dashv E R_E$ and fixed-meet adjunction preserve those joins. Zorn then selects a maximal local u≤r, with $L_Eu=L_E(s_E\land r)$. This maximal-support theorem itself does not require E injective. Injectivity is used to turn coverage Top into a qualified whole left inverse $F(q)=L_E(u\land q)$.
 
 The optional premises are unboxed, and no uniform choice of u is asserted. In particular, a J witness gives K if its support covers the input after excluding its true gap c, as expressed by the second test. J alone only gives $L_E(\neg c)=\top$; it does not give the displayed support coverage. Neither these premises nor the tests settle the general OS+J comparison. See [Zorn selection from local support](zorn-local-transversal-selection.md), §§1–5.
 
 ### Bounded fibre degree and finite local sheets
 
-Over C5, fix an arbitrary $\mathrm{Good}_\Delta$ observer E with t∈Δ. For a fixed external n≥1, degree at most n means that no n+1 disjoint propositions have $L_E$-images with a common nonzero overlap. Equivalently, they cannot have the same nonzero image ceiling $C_E$b. This is one finitary formula for each n; it assumes neither atoms nor externally represented fibres.
+Over C5, fix an arbitrary $\mathrm{Good}_\Delta$ observer E with t∈Δ. For a fixed external n≥1, degree at most n means that no n+1 disjoint propositions have $L_E$-images with a common nonzero overlap. Equivalently, they cannot have the same nonzero image ceiling $C_E b$. This is one finitary formula for each n; it assumes neither atoms nor externally represented fibres.
 
 ```mermaid
 flowchart TD

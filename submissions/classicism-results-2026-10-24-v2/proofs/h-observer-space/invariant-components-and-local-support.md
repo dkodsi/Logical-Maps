@@ -131,7 +131,7 @@ b\land Eu=b\land u
 \tag{11}
 $$
 
-Multiply by the endpoint Loc guard and take the admitted join over b. Fixed-meet distributivity gives $s_E$∧Eu=$s_E$∧u. No observer injectivity or ordinary separation was assumed.
+Multiply by the endpoint Loc guard and take the admitted join over b. Fixed-meet distributivity gives $s_E\land Eu=s_E\land u$. No observer injectivity or ordinary separation was assumed.
 
 The second equivalence in (9) is the Boolean expansion of N(E): on ¬$s_E$ it is already identity, so N(E)u=u says exactly that its $s_E$ parts agree. For the converse to invariance, every reversible G has s_G=1 and N(G)=G. Either universal condition in (9) therefore gives Gu=u. ∎
 

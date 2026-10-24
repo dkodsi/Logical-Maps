@@ -39,7 +39,7 @@ Thus (3) is the join of the admitted local transversals. It is an actual proposi
 
 ## 2. The maximal region covered by local intervals
 
-For any b, $L_E$ maps [0,b] onto [0,$L_E$b]. An explicit preimage of p≤$L_E$b is b∧Ep, by (1). Moreover
+For any b, $L_E$ maps [0,b] onto $[0,L_E b]$. An explicit preimage of $p\le L_E b$ is b∧Ep, by (1). Moreover
 
 $$
 \boxed{\mathrm{Loc}_E(b)
@@ -48,7 +48,7 @@ L_E\text{ is injective on }[0,b].}
 \tag{4}
 $$
 
-If b is local, q=b∧E($L_E$q) for q≤b, proving injection. Conversely suppose the restriction is injective. For q≤b, the element q′=b∧E($L_E$q) lies in [0,b], contains q, and satisfies $L_E$q′=$L_E$q by (1). Therefore q′=q. This proves locality. All interval statements use guards in the existing proposition type; no interval type or choice of inverse values is introduced.
+If b is local, $q=b\land E(L_E q)$ for q≤b, proving injection. Conversely suppose the restriction is injective. For q≤b, the element $q'=b\land E(L_E q)$ lies in [0,b], contains q, and satisfies $L_E q'=L_E q$ by (1). Therefore q′=q. This proves locality. All interval statements use guards in the existing proposition type; no interval type or choice of inverse values is introduced.
 
 Locality is hereditary. If v≤b and b is local, monotonicity gives
 
@@ -104,7 +104,7 @@ These statements concern admitted families with the displayed identity condition
 
 ## 4. Composition, iteration and Boolean patching
 
-For G=F∘E, adjunction gives L_G=$L_E$∘L_F. The interval-surjection observation before (4) proves
+For G=F∘E, adjunction gives $L_G=L_E\circ L_F$. The interval-surjection observation before (4) proves
 
 $$
 \boxed{
@@ -205,7 +205,7 @@ S_{\tau,\Delta}[\mathrm{Rev}]
 \tag{19}
 $$
 
-All classes in (19) consist of $\mathrm{Good}_\Delta$ observers. The middle $s_E$ qualification means current truth, while $s_E=1$ means identity. The final class is the admitted range predicate ∃E($\mathrm{Good}_\Delta$(E)∧H=N(E)). Every reversible observer is onto and hence has support 1; the other directions follow by (18). These arguments preserve every observed current truth value, so also give the full relational schemas. They do not select a family of involutions uniformly over E or introduce an infinitary type qualification.
+All classes in (19) consist of $\mathrm{Good}_\Delta$ observers. The middle $s_E$ qualification means current truth, while $s_E=1$ means identity. The final class is the admitted range predicate $\exists E(\mathrm{Good}_\Delta(E)\land H=N(E))$. Every reversible observer is onto and hence has support 1; the other directions follow by (18). These arguments preserve every observed current truth value, so also give the full relational schemas. They do not select a family of involutions uniformly over E or introduce an infinitary type qualification.
 
 ## 6. Relation to finite generation and the limits of gluing
 
@@ -226,7 +226,7 @@ $$
 
 is a complete Boolean homomorphism and therefore Good at every type. Every singleton is local: its only subparts are itself and 0. Hence $s_E$=N. But the image has only two elements, and adjoining any fixed finite number of Boolean generators gives a finite algebra, not P(N). Thus $\mathrm{FG}_n(E)$ fails for each external finite n. This distinguishes individual qualification classes; their separating power is still the same by (19).
 
-Finally, full support need not itself be local. On the four-element Boolean algebra 2×2, take E(ε,δ)=(ε,ε). Both atoms are local, so $s_E=1$, but $C_E$(1,0)=(1,1); therefore 1 is not local. This example explains why an arbitrary local cover cannot simply be joined into one transversal. The controlled inverse theorem still requires its stated hypotheses, and no qualified global inverse is asserted from support 1 alone.
+Finally, full support need not itself be local. On the four-element Boolean algebra 2×2, take E(ε,δ)=(ε,ε). Both atoms are local, so $s_E=1$, but $C_E(1,0)=(1,1)$; therefore 1 is not local. This example explains why an arbitrary local cover cannot simply be joined into one transversal. The controlled inverse theorem still requires its stated hypotheses, and no qualified global inverse is asserted from support 1 alone.
 
 ## 7. Sources
 

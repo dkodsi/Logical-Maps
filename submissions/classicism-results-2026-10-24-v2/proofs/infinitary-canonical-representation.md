@@ -32,7 +32,7 @@ X_\tau=W\times D_{\sigma_1}\times\cdots\times D_{\sigma_n},
 \qquad W=\mathrm{At}(B_t).
 $$
 
-The $\Box$Plenitude representation has literal typed identity,
+The ☐Plenitude representation has literal typed identity,
 constant domains, pointwise truth operations, extensional application, and
 principal worlds. Its evaluation maps an object $R$ to
 

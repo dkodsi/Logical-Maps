@@ -196,7 +196,7 @@ q_F\le q_H\quad\longleftrightarrow\quad F\subseteq H.
 \tag{13}
 $$
 
-Let V be the external current subset consisting of exactly these $q_F$. It is invariant under G, since g$q_F$=$q_{g(F)}$ and g preserves A. The unary profile
+Let V be the external current subset consisting of exactly these $q_F$. It is invariant under G, since $gq_F=q_{g(F)}$ and g preserves A. The unary profile
 
 $$
 \widehat V(h,p):\longleftrightarrow p\in V

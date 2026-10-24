@@ -237,7 +237,7 @@ To verify the lemma, first suppose k is currently false. Then a is true, so the 
 
 If k is true, the identities Bk=0 and Ba=1 exclude k=1 and a=0. The four enumerated values are then distinct. Equations (16)–(17) exclude Gk=1,a for every Boolean G, so all such observers are I or B. In particular B is idempotent, I and B are central for $\mathrm{Good}_\Delta$, and their two current truth profiles distinguish the four values. Functionality gives the asserted relational separation. This proves the lemma without assuming that the truth of k persists.
 
-All individual identities in (19) persist by Necessity of Identity. $\mathrm{Good}_\Delta$(B) is a finite conjunction of whole-operation identities, so it persists for the same reason. For the enumeration, each currently true equality disjunct persists; finite disjunction therefore gives
+All individual identities in (19) persist by Necessity of Identity. $\mathrm{Good}_\Delta(B)$ is a finite conjunction of whole-operation identities, so it persists for the same reason. For the enumeration, each currently true equality disjunct persists; finite disjunction therefore gives
 
 $$
 \forall p\,\Box(p=0\lor p=k\lor p=a\lor p=1).

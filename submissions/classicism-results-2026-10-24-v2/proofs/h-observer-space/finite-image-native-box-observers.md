@@ -212,7 +212,7 @@ $$
  \tag{16}
 $$
 
-The finite-frame theorem in the idempotent note, §§3–4, identifies these maps with native-Box logical observers: $E_f$(p)=f⁻¹[p]. Every such observer satisfies all the required whole quantifier laws. Readers at every a separate propositions, and Functionality gives all relational output types. Conversely the distinct propositions ∅,{a} require such a reader. Thus (15) can equivalently be stated as finiteness of P together with (16) for every a.
+The finite-frame theorem in the idempotent note, §§3–4, identifies these maps with native-Box logical observers: $E_f(p)=f^{-1}[p]$. Every such observer satisfies all the required whole quantifier laws. Readers at every a separate propositions, and Functionality gives all relational output types. Conversely the distinct propositions ∅,{a} require such a reader. Thus (15) can equivalently be stated as finiteness of P together with (16) for every a.
 
 No classification of arbitrary observers on infinite-width frames is needed for (15). In particular, the finite-width principality argument in [Bounded stabilization](bounded-stabilization-native-box-observers.md), §6, is not being applied outside its stated range.
 

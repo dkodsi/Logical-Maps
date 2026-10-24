@@ -129,7 +129,7 @@ $$
 
 Then $F a_F$ is true: its quantifier calculation reduces to $\forall p\, .\,F(Fp)\to Fp$, and $F(Fp)=Fp$ because $Fp$ is an endpoint. Thus $a_F\ne\bot$. Necessary universal instantiation gives $a_F\le(Fp\to p)$. If $Fp=\top$, this yields $a_F\le p$; otherwise negation preservation gives $a_F\le\neg p$. The nonbottom $a_F$ decides every proposition, so it is an atom. Since $Fd=\top$, it lies below $d$.
 
-Conversely, C5 supplies $\Box$BF and, with Atomicity at $t$, necessary Atomicity at $t$. Apply the necessitated theorem of §5, using axiom 4 on the boxed BF premises. This gives every instance of $\Box$OS; T gives OS. Actuality is needed only for the converse to Atomicity.
+Conversely, C5 supplies ☐BF and, with Atomicity at $t$, necessary Atomicity at $t$. Apply the necessitated theorem of §5, using axiom 4 on the boxed BF premises. This gives every instance of ☐OS; T gives OS. Actuality is needed only for the converse to Atomicity.
 
 ## 7. Bounds and countermodels
 
@@ -137,13 +137,13 @@ Over C, the sufficient condition of §5 is strictly stronger than OS, while OS i
 
 The finite-support permutation model satisfies the composite identities and separates propositions. A finite-support permutation can agree on a finite pinning set with an arrow distinguishing two propositions. Its transport operator is admitted; inverse image preserves Boolean operations and both quantifiers at every future input, using bijectivity of transport on each typed domain. Sections 2 and 4 supply the equality laws and separation at all relational types. The model is atomless and fails Actuality and Extensionality. The detailed admission argument is in [permutation observers](observer-models.md).
 
-The qualitative-contrast model at $W_0$ satisfies C5 + Actuality + $\Box$BF and fails Atomicity at $t$. By §6 it fails OS. Thus this stronger Barcan background still does not supply OS. The [countermodel proof](observer-countermodel.md) also establishes a direct Boolean obstruction.
+The qualitative-contrast model at $W_0$ satisfies C5 + Actuality + ☐BF and fails Atomicity at $t$. By §6 it fails OS. Thus this stronger Barcan background still does not supply OS. The [countermodel proof](observer-countermodel.md) also establishes a direct Boolean obstruction.
 
-The full-surjection-monoid model satisfies Atomicity at $t$ and $\Box$BF, so §5 gives OS. It fails ND at $t$. Thus OS does not imply ND and is not C5.
+The full-surjection-monoid model satisfies Atomicity at $t$ and ☐BF, so §5 gives OS. It fails ND at $t$. Thus OS does not imply ND and is not C5.
 
-At $W_1$ of the qualitative-contrast construction the composite observers do separate; $W_0$ is accessible and fails separation. Thus OS does not imply $\Box$OS; see [the two evaluation points](local-observers.md).
+At $W_1$ of the qualitative-contrast construction the composite observers do separate; $W_0$ is accessible and fails separation. Thus OS does not imply ☐OS; see [the two evaluation points](local-observers.md).
 
-Atomicity at $t$ plus BF suffices for OS by the [guarded atomic construction](observer-lattice.md#5-atomicity-improves-the-logical-separation-upper-bound). OS does not entail $\Box$BF: the [finite-support two-object model](h-observer-space/logical-separation-with-contingent-barcan.md) refutes it at both e and t.
+Atomicity at $t$ plus BF suffices for OS by the [guarded atomic construction](observer-lattice.md#5-atomicity-improves-the-logical-separation-upper-bound). OS does not entail ☐BF: the [finite-support two-object model](h-observer-space/logical-separation-with-contingent-barcan.md) refutes it at both e and t.
 
 ## 8. Necessary OS and possible Actuality
 

@@ -15,7 +15,7 @@ $$
  \tag{1}
 $$
 
-Write $B_r$(τ,Δ) for separation by the common class satisfying $\mathrm{Good}_\Delta$, native-Box commutation and (1). Unindexed $B_r$ means the full schema over relational output types τ and finite external qualification lists Δ. A boxed $B_r$ means the separately boxed closed separation instances.
+Write $B_r(\tau,\Delta)$ for separation by the common class satisfying $\mathrm{Good}_\Delta$, native-Box commutation and (1). Unindexed $B_r$ means the full schema over relational output types τ and finite external qualification lists Δ. A boxed $B_r$ means the separately boxed closed separation instances.
 
 The index r is fixed in each principle. There is no object-language quantifier over natural numbers, no infinite qualification formula and no existential choice of an iteration bound inside $B_r$. In particular B₁ is exactly IdemBoxSep.
 

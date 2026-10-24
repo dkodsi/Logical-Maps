@@ -52,6 +52,14 @@ def math_layout_issues(name, body):
                 issues.append(location + ': missing blank line after display')
     if opening is not None:
         issues.append(name + ':' + str(opening + 1) + ': unclosed display')
+    prose = re.sub(r'```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]*`|\$\$[\s\S]*?\$\$',
+                   lambda match: re.sub(r'[^\n]', ' ', match[0]), body)
+    for match in re.finditer(r'(?<![\\$])\$[^\n$]+\$(?!\$)', prose):
+        before = prose[match.start() - 1:match.start()] if match.start() else ''
+        after = prose[match.end():match.end() + 1]
+        if re.match(r'[\w=]', before) or re.match(r'[\w(]', after):
+            line = body.count('\n', 0, match.start()) + 1
+            issues.append(name + ':' + str(line) + ': put the complete inline expression inside its delimiters')
     return issues
 
 
