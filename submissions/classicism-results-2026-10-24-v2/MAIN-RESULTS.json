@@ -3156,7 +3156,7 @@
               "RIGIDITY-ND-BC",
               "OLDNEW-SEPARATION"
             ],
-            "summary": "Over C + ND + Boolean Completeness, Inextensible Comprehension, Rigid Comprehension, Tame Rigidity and Weakly Rigid Power are equivalent. The old/new countermodel satisfies the base while refuting all four: the common extra strength is not already supplied by ND and completeness.",
+            "summary": "Over C + ND + Boolean Completeness, Inextensible Comprehension, Rigid Comprehension, Tame Rigidity and Weakly Rigid Power are equivalent. The new all-type Boolean Completeness argument for the existing old/new model shows that the base can hold while all four fail.",
             "evidence_labels": [
               "Equivalences",
               "Countermodel"
@@ -3223,6 +3223,10 @@
           {
             "result_ref": "CHOICE-COHERENCE",
             "label": "Coherence criteria for RC to TC"
+          },
+          {
+            "result_ref": "ANALYTIC-RIGIDIFICATION",
+            "label": "Existing analytic necessitism theorem formalized"
           }
         ]
       },
@@ -3384,7 +3388,7 @@
         "id": "arithmetic-and-evaluation",
         "title": "Arithmetic and analysis",
         "part": "established-principles",
-        "headline": "Arithmetic conservation and reflection; Max’s proposed arithmetic equality and predecessor obstruction; rigid real structures.",
+        "headline": "Arithmetic conservation and reflection; Max’s proposed arithmetic equality and predecessor obstruction.",
         "groups": [
           {
             "id": "arithmetic-comparison",
@@ -3432,18 +3436,6 @@
             "proof_length": {
               "rating": "short",
               "words": 636
-            }
-          },
-          {
-            "id": "analytic-rigidification",
-            "title": "Rigid Comprehension stabilizes a possible real structure",
-            "result_refs": [
-              "ANALYTIC-RIGIDIFICATION"
-            ],
-            "summary": "Over C5 plus ☐Rigid Comprehension, a possible real structure at a fixed type has a rigid representative that is necessarily a real structure. Represented powers can be supplied at any prescribed finite list of arities. The initial possibility premise is retained; completeness ranges over subproperties admitted by the model.",
-            "proof_length": {
-              "rating": "short",
-              "words": 486
             }
           }
         ],

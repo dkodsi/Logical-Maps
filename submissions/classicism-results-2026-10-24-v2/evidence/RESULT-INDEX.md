@@ -505,6 +505,29 @@ For a fixed actual equivalence R, two specified Relational Choice instances yiel
 
 **Proofs:** [choice-coherence.md](../proofs/choice-coherence.md)
 
+<a id="analytic-rigidification"></a>
+#### Rigid Comprehension stabilizes a possible real structure
+
+**ID:** `ANALYTIC-RIGIDIFICATION`. Tracked keys: `synthesis.analytic-rigidification`.
+
+Over C5 plus ☐Rigid Comprehension, a possible real structure at a fixed type has a rigid representative which is necessarily a real structure. Represented powers can be supplied simultaneously at each prescribed finite list of arities.
+
+**Scope:** The initial possibility premise remains. Completeness concerns nonempty bounded internal subproperties; represented powers are not external full powersets.
+
+**Significance:** The result carries internal analysis across worlds without assuming Atomicity or external fullness.
+
+**Lean certified:** Rigidification and simultaneous represented powers of every prescribed finite list of positive arities, at every closed admitted type and in arbitrary signatures.
+
+**Attribution:** Existing analytic-necessitism argument credited to Goodsell and Claude Fable 5.1, following Bacon; current work supplies the indicated formalization.
+
+**Proof length:** short (486 words in the [selected exposition](proof-lengths.json)).
+
+**Proofs:** [analytic-rigidification.md](../proofs/analytic-rigidification.md)
+
+**Scope evidence:** [certification-closeout.json](certification-closeout.json)
+
+**Selected exact certificates:** [certificate.json](certificates/analytic-rigidification/certificate.json) · [certificate.json](certificates/final-analytic-reuse-quotation/certificate.json) · [certificate.json](certificates/final-analytic-finite-packing/certificate.json) · [certificate.json](certificates/final-analytic-power-existence-certificates/certificate.json) · [certificate.json](certificates/final-analytic-power-vocabulary/certificate.json) · [certificate.json](certificates/final-analytic-finite-schema/certificate.json)
+
 <a id="infinity-connections"></a>
 ### Infinity
 
@@ -1037,29 +1060,6 @@ At every admitted counting type σ, pure Max refutes an operation f satisfying f
 **Principal declarations:**
 
 - `Classicism.Meta.Research.MaxPredecessorSchema.maximalism_no_predecessor`
-
-<a id="analytic-rigidification"></a>
-#### Rigid Comprehension stabilizes a possible real structure
-
-**ID:** `ANALYTIC-RIGIDIFICATION`. Tracked keys: `synthesis.analytic-rigidification`.
-
-Over C5 plus ☐Rigid Comprehension, a possible real structure at a fixed type has a rigid representative which is necessarily a real structure. Represented powers can be supplied simultaneously at each prescribed finite list of arities.
-
-**Scope:** The initial possibility premise remains. Completeness concerns nonempty bounded internal subproperties; represented powers are not external full powersets.
-
-**Significance:** The result carries internal analysis across worlds without assuming Atomicity or external fullness.
-
-**Lean certified:** Rigidification and simultaneous represented powers of every prescribed finite list of positive arities, at every closed admitted type and in arbitrary signatures.
-
-**Attribution:** Existing analytic-necessitism argument credited to Goodsell and Claude Fable 5.1, following Bacon; current work supplies the indicated formalization.
-
-**Proof length:** short (486 words in the [selected exposition](proof-lengths.json)).
-
-**Proofs:** [analytic-rigidification.md](../proofs/analytic-rigidification.md)
-
-**Scope evidence:** [certification-closeout.json](certification-closeout.json)
-
-**Selected exact certificates:** [certificate.json](certificates/analytic-rigidification/certificate.json) · [certificate.json](certificates/final-analytic-reuse-quotation/certificate.json) · [certificate.json](certificates/final-analytic-finite-packing/certificate.json) · [certificate.json](certificates/final-analytic-power-existence-certificates/certificate.json) · [certificate.json](certificates/final-analytic-power-vocabulary/certificate.json) · [certificate.json](certificates/final-analytic-finite-schema/certificate.json)
 
 <a id="supplement-arithmetic-and-evaluation"></a>
 <a id="arithmetic-foundations"></a>

@@ -2570,12 +2570,12 @@
     },
     {
       "result_id": "ANALYTIC-RIGIDIFICATION",
-      "action": "Match the analytic theorem; preserve finite-arity certificate scope",
-      "proposal": "The direct target is the existing C5 plus necessary Rigid Comprehension theorem for Second-Order Analytic Necessitism, with its source attribution. The research certificate checks rigidification and represented arities 1–3; it does not certify the whole general finite-arity schema.",
+      "action": "Attach formalization evidence to the existing analytic theorem",
+      "proposal": "The target is the existing C5 plus ☐Rigid Comprehension theorem for Second-Order Analytic Necessitism. Preserve its original attribution; the contribution here is Lean formalization. The accepted research certificates cover rigidification and simultaneous represented powers of every prescribed finite list of positive arities, at every closed admitted type and in arbitrary signatures. The database record’s own generated-statement verification status remains separate.",
       "records": [
         {
           "record": "results/c5-and-necessary-rigid-comprehension-imply-second-order-analytic-necessitism",
-          "role": "direct analytic target; general schema not fully Lean-certified"
+          "role": "existing analytic theorem; research formalization covers the arbitrary finite-arity schema"
         }
       ],
       "certification_update": {

@@ -62,7 +62,6 @@ For every finite signature Σ, including the empty signature, SP(Σ) refutes BF 
 
 [Proofs and certificates](evidence/RESULT-INDEX.md#sp-barcan-functionality).
 
-<a id="npc-atomicity"></a>
 <a id="signature-independence"></a>
 [Supplemental results in this category](evidence/RESULT-INDEX.md#supplement-maximalism-and-possibility) · [Back to contents](#categories)
 
@@ -93,7 +92,7 @@ For the specified one-predicate signature, a supported-product model satisfies L
 <a id="oldnew-separation"></a>
 #### Four rigidity principles coincide over ND and Boolean Completeness
 
-Over C + ND + Boolean Completeness, Inextensible Comprehension, Rigid Comprehension, Tame Rigidity and Weakly Rigid Power are equivalent. The old/new countermodel satisfies the base while refuting all four: the common extra strength is not already supplied by ND and completeness.
+Over C + ND + Boolean Completeness, Inextensible Comprehension, Rigid Comprehension, Tame Rigidity and Weakly Rigid Power are equivalent. The new all-type Boolean Completeness argument for the existing old/new model shows that the base can hold while all four fail.
 
 **Lean certified.** · [Proof length](#proof-length): medium.
 
@@ -221,6 +220,7 @@ A free-root model also satisfies FP and both quantified Infinity axioms while fa
 
 These contributions formalize existing mathematics. The original attribution is retained.
 
+<a id="npc-atomicity"></a>
 #### C5 + Atomicity (type t) ⇒ No Pure Contingency
 
 **Source:** Zachary Goodsell and Juhani Yli-Vakkuri; proof following Cian Dorr’s sketch.
@@ -231,6 +231,7 @@ The proof swaps two Boolean atoms, extends the swap by conjugation through every
 
 [Proof length](#proof-length): medium. [Proofs and certificates](evidence/RESULT-INDEX.md#npc-atomicity).
 
+<a id="analytic-rigidification"></a>
 #### C5 + ☐Rigid Comprehension ⇒ Second-Order Analytic Necessitism
 
 **Source:** Zachary Goodsell and Claude Fable 5.1, prompted by Goodsell, following Bacon’s Corollary 5.1 and Appendix C.2.
@@ -344,15 +345,6 @@ At every admitted counting type, pure Maximalism refutes an operation sending ea
 **Lean certified:** The no-predecessor theorem at every closed counting type; the total unique graph and Plenitude failure at e. · [Proof length](#proof-length): short.
 
 [Proofs and certificates](evidence/RESULT-INDEX.md#max-predecessor).
-
-<a id="analytic-rigidification"></a>
-#### Rigid Comprehension stabilizes a possible real structure
-
-Over C5 plus ☐Rigid Comprehension, a possible real structure at a fixed type has a rigid representative that is necessarily a real structure. Represented powers can be supplied at any prescribed finite list of arities. The initial possibility premise is retained; completeness ranges over subproperties admitted by the model.
-
-**Lean certified:** Rigidification and simultaneous represented powers of every prescribed finite list of positive arities, at every closed admitted type and in arbitrary signatures. · [Proof length](#proof-length): short.
-
-[Proofs and certificates](evidence/RESULT-INDEX.md#analytic-rigidification).
 
 <a id="arithmetic-foundations"></a>
 [Supplemental results in this category](evidence/RESULT-INDEX.md#supplement-arithmetic-and-evaluation) · [Back to contents](#categories)

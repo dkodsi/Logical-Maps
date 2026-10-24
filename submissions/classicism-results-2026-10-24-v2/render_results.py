@@ -188,6 +188,8 @@ def render(root):
             assert r.get('certified_scope'), 'Prior-result formalization needs a certificate'
             proof_idea = item.get('proof_idea', r.get('proof_idea'))
             assert proof_idea and r.get('proof_length'), 'Prior-result formalization needs a proof description and length'
+            if not any(rid in group['result_refs'] for group in overview_groups):
+                lines += [anchor(rid)]
             lines += ['#### ' + item['name'], '', '**Source:** ' + item['attribution'], '',
                       proof_idea, '', '**Lean certified:** ' + item['scope'], '']
             if item.get('note'):
@@ -218,7 +220,9 @@ def render(root):
         text += ['| [' + part['title'] + '](#' + pid + ') | ' + '; '.join(entries) + '. |']
     text += ['']
     current_part = None
-    overview_anchors = {rid.lower() for g in overview_groups for rid in g['result_refs']} | {alias.lower() for g in overview_groups for alias in g.get('anchor_aliases', [])}
+    overview_anchors = ({rid.lower() for g in overview_groups for rid in g['result_refs']}
+                        | {alias.lower() for g in overview_groups for alias in g.get('anchor_aliases', [])}
+                        | {item['result_ref'].lower() for item in main['established_formalizations']['entries']})
     for section in overview['sections']:
         if section['part'] != current_part:
             if current_part == 'database-connections':
