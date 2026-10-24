@@ -1,6 +1,6 @@
 # Logical Observer Separation
 
-[Main results](../MAIN-RESULTS.md#logical-observers) · [Full list of connections](h-observer-space/GRAPH.md#logical-observer-principles) · [Proposed principle](../CANDIDATES_DK.md#logical-observer-separation-r) · [Certificate scope](../evidence/RESULT-INDEX.md#logical-observers)
+[Main results](../MAIN-RESULTS.md#logical-observers) · [Full list of connections](h-observer-space/SUMMARY.md#logical-observer-principles) · [Proposed principle](../CANDIDATES_DK.md#logical-observer-separation-r) · [Certificate scope](../evidence/RESULT-INDEX.md#logical-observers)
 
 ## 1. The principle
 

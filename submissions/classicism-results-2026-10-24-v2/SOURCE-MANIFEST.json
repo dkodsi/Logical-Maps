@@ -15104,8 +15104,8 @@
     },
     {
       "path": "proofs/logical-observers.md",
-      "sha256": "494f74b8dca9017ce51a7529b344ceea08d01c4516066ad4dbbe31478845cacb",
-      "bytes": 21287,
+      "sha256": "cc85f4d6f3d9c47ee061c4a8d1c5306f95f9269d83f537bd2761eb087b0ac98f",
+      "bytes": 21289,
       "origin": "research/2026-10-23/operator-characterizations/h-logical-observer-strengthening.txt",
       "origin_sha256": "92823a77fe568417e91813dd51d0133e2438e818ad3cfc74eadc73fcb361d61b",
       "selected_line_spans": [
@@ -16832,7 +16832,7 @@
     {
       "path": "evidence/proof-lengths.json",
       "origin": "Curated mathematical section selections from retained proofs",
-      "sha256": "2ae2ddbe66b04e3530a1fcf456b5d19dedde1d122e15841007621a4d501ea48a",
+      "sha256": "ac284c8611c375105e98a7416eef87d16487128d199bab1687efd1cc2d31f391",
       "bytes": 190072,
       "original_sha256": "aadbdca8a15ceb2732a07c22605435cca0e7bec46ffcc641733c47855a8ebf5f"
     },
@@ -20399,8 +20399,8 @@
     },
     {
       "path": "proofs/h-observer-space/GRAPH.md",
-      "sha256": "b2f037136c029b0dbef3f928af270487a4aa90c18c9559beb438a8f0427224f2",
-      "bytes": 152027,
+      "sha256": "efea22df370215431a86c7bca0f9385ee83d3c29fd14a15139c1a45f107b2403",
+      "bytes": 118745,
       "origin": "research/2026-10-24/h-observer-space/GRAPH.md",
       "original_sha256": "e8323ccd6657255652b23b54e178d33d0fdcb39ec33a74cdc75adab3643d1f03",
       "editing": "Integrated scoped results and cross-references; rendered formulas and diagrams; retained source attribution; omitted coordination annotations."
@@ -20929,6 +20929,13 @@
       "original_sha256": "a283ac69c803add28f906ca6ea6186f5403f1a649035299fa7695f7f18d4c558",
       "sha256": "99c3946b1f917f9f7691d53bbc6bb360469baa00cacc06505b902427cecffac8",
       "bytes": 2553
+    },
+    {
+      "path": "proofs/h-observer-space/SUMMARY.md",
+      "origin": "proofs/h-observer-space/GRAPH.md",
+      "editing": "Extracted headline summary and complete principle connections; canonical principle definitions remain generated from CANDIDATES_DK.json.",
+      "sha256": "b8b041a2f585959bf610783413f99be946b7ca4a6fea42467857c3db7a71326e",
+      "bytes": 34186
     }
   ],
   "distribution": "Git source package, 24 October 2026 (v2)",

@@ -30,7 +30,7 @@ Relations are identical exactly when all suitably qualified logical observers ag
 \end{aligned}
 ```
 
-The schema ranges over finite argument tuples $`\bar\sigma`$ and finite lists $`\Delta`$ of tested types. $`\mathrm{Good}_\Delta(E)`$ requires preservation of Boolean operations and the listed quantifiers as identities of whole operations, together with the translated equality laws. [Exact qualification and variants](proofs/h-observer-space/GRAPH.md#logical-observer-separation-r).
+The schema ranges over finite argument tuples $`\bar\sigma`$ and finite lists $`\Delta`$ of tested types. $`\mathrm{Good}_\Delta(E)`$ requires preservation of Boolean operations and the listed quantifiers as identities of whole operations, together with the translated equality laws. [Exact qualification and variants](proofs/h-observer-space/SUMMARY.md#logical-observer-separation-r).
 
 - H + OS entails C + BF. **Lean certified** with explicit endpoint identities; [omitting them](proofs/logical-observer-endpoint-reduction.md) uses the ordinary reduction proof.
 - Over C: Atomicity (type t) + BF ⇒ OS ⇒ BF, with neither converse valid.
@@ -40,17 +40,17 @@ The schema ranges over finite argument tuples $`\bar\sigma`$ and finite lists $`
 
 | Variant | Additional qualification | Main consequence |
 |---|---|---|
-| <a id="endpoint-logical-observer-separation-r"></a>[Endpoint](proofs/h-observer-space/GRAPH.md#endpoint-logical-observer-separation-r) | Only ⊤ and ⊥ as outputs | Exactly C5 + Atomicity (type t) over H. |
-| <a id="reversible-logical-observer-separation-r"></a>[Reversible](proofs/h-observer-space/GRAPH.md#reversible-logical-observer-separation-r) | A qualified two-sided inverse | Gives C5 + ☐OS + No Pure Contingency, including in atomless models. |
-| <a id="injective-logical-observer-separation-r"></a>[Injective](proofs/h-observer-space/GRAPH.md#injective-logical-observer-separation-r) | Currently injective | Whether it gives logical left-inverse separation remains open. |
-| <a id="native-necessity-logical-observer-separation-r"></a>[☐-preserving](proofs/h-observer-space/GRAPH.md#native-necessity-logical-observer-separation-r) | Preserves native necessity | Gives ☐BF and .2; equivalent to injective separation over C5. |
-| <a id="finite-image-logical-observer-separation-r"></a>[Finite-image](proofs/h-observer-space/GRAPH.md#finite-image-logical-observer-separation-r) | Internally finite image | Strictly between OS and endpoint separation. |
-| <a id="idempotent-native-necessity-logical-observer-separation-r"></a>[Idempotent ☐-preserving](proofs/h-observer-space/GRAPH.md#idempotent-native-necessity-logical-observer-separation-r) | Also $`E\circ E=E`$ | Strictly stronger than ☐-preserving separation; with C5, exactly Extensionality. |
-| <a id="bounded-stabilization-native-necessity-logical-observer-separation-r"></a>[Bounded stabilization](proofs/h-observer-space/GRAPH.md#bounded-stabilization-native-necessity-logical-observer-separation-r) | $`E^{r+1}=E^r`$ for fixed $`r\ge1`$ | An unbounded strict hierarchy of ☐-preserving separation principles. |
-| <a id="factive-logical-observer-separation-r"></a>[Factive](proofs/h-observer-space/GRAPH.md#factive-logical-observer-separation-r) | Ep implies p | Exactly Extensionality at full scope over H. |
-| <a id="central-logical-observer-separation-r"></a>[Central](proofs/h-observer-space/GRAPH.md#central-logical-observer-separation-r) | Commutes with every qualified observer | Exactly Extensionality over C5. |
+| <a id="endpoint-logical-observer-separation-r"></a>[Endpoint](proofs/h-observer-space/SUMMARY.md#endpoint-logical-observer-separation-r) | Only ⊤ and ⊥ as outputs | Exactly C5 + Atomicity (type t) over H. |
+| <a id="reversible-logical-observer-separation-r"></a>[Reversible](proofs/h-observer-space/SUMMARY.md#reversible-logical-observer-separation-r) | A qualified two-sided inverse | Gives C5 + ☐OS + No Pure Contingency, including in atomless models. |
+| <a id="injective-logical-observer-separation-r"></a>[Injective](proofs/h-observer-space/SUMMARY.md#injective-logical-observer-separation-r) | Currently injective | Whether it gives logical left-inverse separation remains open. |
+| <a id="native-necessity-logical-observer-separation-r"></a>[☐-preserving](proofs/h-observer-space/SUMMARY.md#native-necessity-logical-observer-separation-r) | Preserves native necessity | Gives ☐BF and .2; equivalent to injective separation over C5. |
+| <a id="finite-image-logical-observer-separation-r"></a>[Finite-image](proofs/h-observer-space/SUMMARY.md#finite-image-logical-observer-separation-r) | Internally finite image | Strictly between OS and endpoint separation. |
+| <a id="idempotent-native-necessity-logical-observer-separation-r"></a>[Idempotent ☐-preserving](proofs/h-observer-space/SUMMARY.md#idempotent-native-necessity-logical-observer-separation-r) | Also $`E\circ E=E`$ | Strictly stronger than ☐-preserving separation; with C5, exactly Extensionality. |
+| <a id="bounded-stabilization-native-necessity-logical-observer-separation-r"></a>[Bounded stabilization](proofs/h-observer-space/SUMMARY.md#bounded-stabilization-native-necessity-logical-observer-separation-r) | $`E^{r+1}=E^r`$ for fixed $`r\ge1`$ | An unbounded strict hierarchy of ☐-preserving separation principles. |
+| <a id="factive-logical-observer-separation-r"></a>[Factive](proofs/h-observer-space/SUMMARY.md#factive-logical-observer-separation-r) | Ep implies p | Exactly Extensionality at full scope over H. |
+| <a id="central-logical-observer-separation-r"></a>[Central](proofs/h-observer-space/SUMMARY.md#central-logical-observer-separation-r) | Commutes with every qualified observer | Exactly Extensionality over C5. |
 
-The [headline guide](proofs/h-observer-space/GRAPH.md#headline-results) explains the main distinctions; the [full list of connections and definitions](proofs/h-observer-space/GRAPH.md#logical-observer-principles) retains the proposal family and proof references.
+The [headline guide](proofs/h-observer-space/SUMMARY.md#headline-results) explains the main distinctions; the [full list of connections and definitions](proofs/h-observer-space/SUMMARY.md#logical-observer-principles) retains the proposal family and proof references.
 
 **Evidence:** [Proofs and certificates](evidence/RESULT-INDEX.md#logical-observers).
 

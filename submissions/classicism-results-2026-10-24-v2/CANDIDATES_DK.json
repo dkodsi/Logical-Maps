@@ -3634,7 +3634,7 @@
         }
       ],
       "presentation": {
-        "definitions": "The schema ranges over finite argument tuples $\\bar\\sigma$ and finite lists $\\Delta$ of tested types. $\\mathrm{Good}_\\Delta(E)$ requires preservation of Boolean operations and the listed quantifiers as identities of whole operations, together with the translated equality laws. [Exact qualification and variants](proofs/h-observer-space/GRAPH.md#logical-observer-separation-r).",
+        "definitions": "The schema ranges over finite argument tuples $\\bar\\sigma$ and finite lists $\\Delta$ of tested types. $\\mathrm{Good}_\\Delta(E)$ requires preservation of Boolean operations and the listed quantifiers as identities of whole operations, together with the translated equality laws. [Exact qualification and variants](proofs/h-observer-space/SUMMARY.md#logical-observer-separation-r).",
         "connections": [
           "H + OS entails C + BF. **Lean certified** with explicit endpoint identities; [omitting them](proofs/logical-observer-endpoint-reduction.md) uses the ordinary reduction proof.",
           "Over C: Atomicity (type t) + BF ⇒ OS ⇒ BF, with neither converse valid.",
@@ -3696,8 +3696,8 @@
             "consequence": "Exactly Extensionality over C5."
           }
         ],
-        "reference": "proofs/h-observer-space/GRAPH.md",
-        "reference_intro": "The [headline guide](proofs/h-observer-space/GRAPH.md#headline-results) explains the main distinctions; the [full list of connections and definitions](proofs/h-observer-space/GRAPH.md#logical-observer-principles) retains the proposal family and proof references."
+        "reference": "proofs/h-observer-space/SUMMARY.md",
+        "reference_intro": "The [headline guide](proofs/h-observer-space/SUMMARY.md#headline-results) explains the main distinctions; the [full list of connections and definitions](proofs/h-observer-space/SUMMARY.md#logical-observer-principles) retains the proposal family and proof references."
       }
     },
     {
