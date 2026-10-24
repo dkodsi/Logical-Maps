@@ -655,6 +655,7 @@ The all-type Boolean Completeness verdict is a separate correction and strengthe
 - [Does Relational Choice entail Transversal Choice?](CONJECTURES.md#rc-tc) — Unresolved; sharper positive and negative criteria.
 - [Is pure Strong Possibility consistent?](CONJECTURES.md#pure-sp) — Unresolved; exact criteria and construction obstructions.
 - [Is SP consistent for one unary predicate constant and no individual names?](CONJECTURES.md#signature-sp) — Unresolved; first-stage sufficient criterion.
+- [Does injective logical separation imply logical left-inverse separation?](CONJECTURES.md#observer-strength) — Unresolved over H and over C5.
 
 Further reductions, failed constructions and incomplete formalizations are recorded in the [question register](CONJECTURES.md).
 

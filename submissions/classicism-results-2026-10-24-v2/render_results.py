@@ -324,18 +324,79 @@ def render(root):
             text += ['**Integration assessment:** ' + ' · '.join('[' + integration_claims[ref].get('subclaim_id', ref) + '](DATABASE-INTEGRATION.md#' + ref.lower() + ')' for ref in r['integration_status_refs']), '']
     out['CATALOG.md'] = done(text)
 
-    text = ['# Questions, progress and negative results', '',
-        'Established answers, unresolved questions and mathematical obstructions.', '',
-        '[Main results](MAIN-RESULTS.md) · [Catalog](CATALOG.md) · [Evidence](evidence/RESULT-INDEX.md)', '']
-    for r in questions['questions']:
-        assert 'lean_status' not in r, 'Duplicated question formalization status'
-        text += [anchor(r['id']), '## ' + r['question'], '', '**Position:** ' + r['status'] + '.', '', r['established'], '']
-        if r.get('remaining'):
-            text += [r['remaining'], '']
-        if statusrefs(r['formalization_result_refs']):
-            text += ['**Lean certified:** ' + statusrefs(r['formalization_result_refs']), '']
-        for rid in r['result_entries']:
-            assert rid in rows
+    database_questions = {r['id']: r for r in questions['database_questions']}
+    question_order = [qid for s in questions['sections'] for qid in s['questions']]
+    database_order = [qid for s in questions['sections'] for qid in s['database_questions']]
+    assert len(question_order) == len(set(question_order)) == len(question_rows), 'Question section coverage'
+    assert set(question_order) == set(question_rows), 'Missing question section'
+    assert len(database_order) == len(set(database_order)) == len(database_questions), 'Database question section coverage'
+    assert set(database_order) == set(database_questions), 'Missing database question section'
+    model_rows = [m for family in questions['model_families'] for m in family['models']]
+    assert len(model_rows) == questions['database_coverage']['model_construction_records'], 'Model family coverage'
+    database_ids = [qid for r in [*questions['questions'], *database_questions.values(), *model_rows]
+                    for qid in r.get('database_question_ids', [])]
+    assert len(database_ids) == len(set(database_ids)) == questions['database_coverage']['recorded_questions'], 'Database question coverage'
+    text = ['# ' + questions['title'], '',
+        'Open questions and established answers, grouped by mathematical family. The background is C unless stated otherwise. “Unresolved” refers to the cited evidence, not necessarily to the literature.', '',
+        '[Main results](MAIN-RESULTS.md) · [Catalog](CATALOG.md) · [Evidence](evidence/RESULT-INDEX.md)', '',
+        'Relations between existing database principles are grouped by family, including all recorded resolved conjectures. Questions involving new definitions, metatheorems and failed constructions are collected separately.', '']
+    text += ['- [' + part['title'] + '](#' + part['id'] + ')' for part in questions['parts']]
+    text += ['']
+    catalog_rows = {r['id']: r for r in catalog['entries']}
+
+    def question_section(section):
+        text = [anchor(section['id']), '### ' + section['title'], '']
+        for qid in section['database_questions']:
+            r = database_questions[qid]
+            text += [anchor(r['id'])]
+            text += [anchor(qid) for qid in r['database_question_ids'] if qid != r['id']]
+            text += ['#### ' + r['question'], '', r['answer'], '', r['evidence'] + '.', '']
+            if r.get('lean_certified'):
+                text += ['**Lean certified.**', '']
+            elif statusrefs(r['formalization_result_refs']):
+                text += ['**Lean certified:** ' + statusrefs(r['formalization_result_refs']), '']
+        for qid in section['questions']:
+            r = question_rows[qid]
+            assert 'lean_status' not in r, 'Duplicated question formalization status'
+            text += [anchor(r['id']), '#### ' + r['question'], '', '**Position:** ' + r['status'] + '.', '', r['established'], '']
+            if r.get('remaining'):
+                text += [r['remaining'], '']
+            if statusrefs(r['formalization_result_refs']):
+                text += ['**Lean certified:** ' + statusrefs(r['formalization_result_refs']), '']
+            for rid in r['result_entries']:
+                assert rid in rows
+        for r in section['connections']:
+            text += [anchor(r['id']), '#### ' + r['title'], '', r['text'], '']
+            refs = r['result_refs']
+            evidence = [resultlink(rid, label=rows[rid]['title']) for rid in refs]
+            for cid in r['catalog_refs']:
+                assert cid in catalog_rows, 'Missing connection evidence'
+                evidence.append('[' + cid + '](CATALOG.md#' + cid.lower() + ')')
+            text += ['**Evidence:** ' + ' · '.join(evidence) + '.', '']
+            if statusrefs(refs):
+                text += ['**Lean certified:** ' + statusrefs(refs), '']
+            for cid in r['catalog_refs']:
+                cr = catalog_rows[cid]
+                if cr.get('certified_scope'):
+                    scope = '' if cr['certified_scope'] is True else ': ' + cr['certified_scope'].rstrip('.')
+                    text += ['**Lean certified:** [' + cid + '](CATALOG.md#' + cid.lower() + ')' + scope + '.', '']
+        return text
+
+    for part in questions['parts']:
+        kind = part.get('kind', 'open')
+        selected = [s for s in questions['sections'] if s['part'] == kind]
+        text += [anchor(part['id']), '## ' + part['title'], '']
+        text += [' · '.join('[' + s['title'] + '](#' + s['id'] + ')' for s in selected), '']
+        for section in selected:
+            text += question_section(section)
+        if kind == 'database':
+            text += [anchor('resolved-model-questions'), '### Resolved model-construction questions', '',
+                'The database also settles existence questions for these nineteen constructions. The summaries describe the base models; signature, individual-domain and metatheoretic variants are grouped with their construction, whose linked record gives the exact scope.', '']
+            for family in questions['model_families']:
+                text += [anchor(family['id']), '#### ' + family['title'], '']
+                for r in family['models']:
+                    text += ['- **' + r['name'] + '.** ' + r['answer'] + ' ' + r['evidence'] + '.']
+                text += ['']
     out['CONJECTURES.md'] = done(text)
 
     records = integration['records']

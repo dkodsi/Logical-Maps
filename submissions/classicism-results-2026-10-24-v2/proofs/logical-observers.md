@@ -143,7 +143,7 @@ The full-surjection-monoid model satisfies Atomicity at $t$ and $\Box$BF, so §5
 
 At $W_1$ of the qualitative-contrast construction the composite observers do separate; $W_0$ is accessible and fails separation. Thus OS does not imply $\Box$OS; see [the two evaluation points](local-observers.md).
 
-Atomicity at $t$ plus BF suffices for OS by the [guarded atomic construction](observer-lattice.md#5-atomicity-improves-the-logical-separation-upper-bound). Whether OS entails $\Box$BF remains unsettled.
+Atomicity at $t$ plus BF suffices for OS by the [guarded atomic construction](observer-lattice.md#5-atomicity-improves-the-logical-separation-upper-bound). OS does not entail $\Box$BF: the [finite-support two-object model](h-observer-space/logical-separation-with-contingent-barcan.md) refutes it at both e and t.
 
 ## 8. Necessary OS and possible Actuality
 
@@ -165,7 +165,7 @@ over C5. Thus Actuality is either necessary or impossible.
 
 This consequence fails for OS in place of necessary OS. At $W_1$ of the [qualitative-contrast construction](local-observers.md), C5 and OS hold, while Actuality fails. An arrow to $W_0$, where Actuality holds, makes Actuality possible at $W_1$. Plenitude fails there because it implies Actuality. This is a separation by a named structural consequence, in addition to the failure of necessary OS itself.
 
-Necessary OS also entails necessary BF, by necessitating the finite implication proofs in §3. Whether OS alone already entails necessary BF remains unsettled here.
+Necessary OS also entails necessary BF, by necessitating the finite implication proofs in §3. OS alone does not, as the countermodel in §7 shows.
 
 ## 9. Endpoint and factive observers
 
@@ -210,6 +210,33 @@ The [finite-image theorem](h-observer-space/finite-image-box-reflection.md) deri
 Over H, full relational separation by any qualification is exactly propositional separation plus Functionality; the [H observer map](h-observer-space/MAP.md) develops the primitive, representation and restriction branches. Over C5, propositional separation by Boolean observers preserving the universal quantifier at $t$ is equivalent to full OS. Over C, the existence of an endpoint-fixing operator with range $\{\top,\bot\}$ is equivalent to modal .2; the [reduction proof](modal-selectors-and-quantifier-reduction.md) uses this to identify the mixed quantifier branches.
 
 **Lean certified:** H + OS ⇒ C + BF with explicit endpoint identities. [Certificate scope and evidence](../evidence/RESULT-INDEX.md#logical-observers).
+
+## Actual-truth evaluation and endpoint separation
+
+Write
+
+$$
+\mathrm{Eval}(B):=\forall p\,[(p\to Bp=\top)\land(\neg p\to Bp=\bot)].
+$$
+
+Over H, full OS together with $\exists B\,\mathrm{Eval}(B)$ is equivalent to endpoint logical separation, hence to C5 + Atomicity at t. OS supplies C + BF; correct evaluation supplies ND and Actuality; together these give C5, and §6 gives Atomicity. Conversely endpoint separation supplies C5 + Atomicity and thus a correct evaluator.
+
+Over C the quantifier order gives a sharper comparison:
+
+$$
+\begin{aligned}
+\text{Endpoint separation}
+&\longleftrightarrow\Box\exists B\,\mathrm{Eval}(B)
+\longleftrightarrow\Box\exists!B\,\mathrm{Eval}(B)
+\longleftrightarrow\Box\mathrm{Plenitude},\\
+\exists B\,\Box\mathrm{Eval}(B)
+&\longleftrightarrow\mathrm{Extensionality}.
+\end{aligned}
+$$
+
+Thus every possible world having its own unique correct evaluator gives endpoint separation; one fixed evaluator remaining correct at every world gives Extensionality. For the first equivalence, the [evaluation theorem](../source/research/2026-10-22/notes/bivalent-evaluation-root.md#theorem-2-one-boxed-finite-sentence-is-equivalent-to-the-whole-plenitude-schema) gives C5 + ☐Actuality, which entails Atomicity. Conversely C5 + Atomicity at t gives ☐Actuality and hence necessary correct evaluation. The same source proves the uniqueness and fixed-evaluator equivalences.
+
+Under OS plus correct evaluation, the evaluator $B$ is unique and qualifies logically at every finite list. For each logical observer $E$, $B\circ E$ is the unique endpoint-valued logical observer with the same entire current truth profile. The [canonical evaluator construction](../source/research/2026-10-22/proof-refinements/canonical-actual-evaluator.md) supplies the quantifier laws; recovered BF and Functionality give the whole-operation identities and uniqueness. Composition preserves those identities, and correctness gives $B(Ep)\leftrightarrow Ep$. Endpoint fixing makes this normalization fix every endpoint observer.
 
 ## Main unresolved question
 
