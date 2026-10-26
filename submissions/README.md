@@ -1,5 +1,7 @@
 # Classicism research submission
 
+The [cumulative integration register](integration-register/README.md) tracks connections still awaiting incorporation upstream, including results already supplied in the earlier submissions. Its [machine-readable companion](integration-register/database-connections.json) supplies exact record IDs, proof references, patch status and model verdicts.
+
 The [25 October update](next-update/README.md) contains new results, native database patches and certificate evidence. Start with its [database-owner guide](next-update/DATABASE-HANDOFF.md) for the comparison with 10-24 v2 and the proposed integration actions.
 
 The [canonical results package](classicism-results-2026-10-24-v2/README.md) is the entry point for the current synthesis. Release: **24 October 2026 (v2)**.

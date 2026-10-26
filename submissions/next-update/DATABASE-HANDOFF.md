@@ -2,6 +2,8 @@
 
 This update supplements the [24 October v2 post](../classicism-results-2026-10-24-v2/README.md). The [results page](README.md) organizes the contributions by subject; the table below identifies their relationship to that post. [Already incorporated results](UPSTREAM.md) are separated from additions proposed here.
 
+For the complete pending queue across both submissions and later findings, use the [cumulative integration register](../integration-register/README.md). Inclusion in this PR is distinguished from incorporation into the upstream database.
+
 ## From the earlier post to this update
 
 | Family in 10-24 v2 | Contribution in this update | Database treatment |
