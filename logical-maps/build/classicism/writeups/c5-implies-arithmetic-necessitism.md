@@ -1,25 +1,66 @@
-# □ND ⇒ Arithmetic Necessitism
+# C5 implies Arithmetic Necessitism
 
-<p class='cert'>Result — Source: Misc.; produced by Codex (OpenAI), prompted by Daniel Kodsi; recorded by Codex (OpenAI), prompted by Daniel Kodsi.</p>
+Proof by GPT-6 Astra (OpenAI), prompted by Daniel Kodsi, 23 October 2026;
+written out for the map by Claude Opus 5.5 (Anthropic), prompted by Cian Dorr,
+24 October 2026.
 
-## Premises
+**Theorem.** In C, □ND (at every type) implies Arithmetic Necessitism at every
+type $\sigma$, including $e$:
 
-- **□ND.** Necessarily, distinct things of any type are necessarily distinct.
+$$
+\operatorname{Rigid}(\mathbb N_\sigma)\land\forall m\,n\in\mathbb N_\sigma\, .\,m\ne n\to\Box\,m\ne n .
+$$
 
-## Conclusion
+The antecedent $\Box I^*_\sigma$ of the principle is not needed. Write $\mathbb N$ for
+$\mathbb N_\sigma$, $\mathbf 0$ for $\mathbf 0_\sigma$ and $\operatorname{Suc}$ for
+$\operatorname{Suc}_\sigma$ (Background).
 
-- **Arithmetic Necessitism.** Given that necessarily zero is not a successor and successor is injective on numbers, the numbers at $\sigma$ form a rigid property with necessarily distinct instances. One sentence for each type $\sigma$.
+**Facts used.** ND at $t$ implies 5 and hence B,
+$\forall p\, .\,p\to\Box\Diamond p$ (*Classicism*, Proposition 2.2), and □ND implies BF at
+every type (*Classicism*, Proposition 2.3). Both conclusions are necessary, since □ND
+is.
 
-## Proof
+## Step 1: $\mathbb N$ is persistent
 
-Numberhood is persistent by necessitating the C theorem obtained from induction with the predicate □N. In C5, persistence implies inextensibility, so N is rigid. C5 also gives ND at the number type; restricting to numbers gives the second conjunct. The exact □I* antecedent is retained and is unused. See the write-up for the definition and theoremhood checks.
+$\mathbb N\mathbf 0$ is a theorem of C, so $\Box\mathbb N\mathbf 0$. And
+$\forall n\, .\,\mathbb Nn\to\mathbb N(\operatorname{Suc}n)$ is a theorem of C, so
+$\forall n\, .\,\Box\mathbb Nn\to\Box\mathbb N(\operatorname{Suc}n)$. So
+$\lambda n\, .\,\Box\mathbb Nn$ holds of $\mathbf 0$ and is closed under successor, and
+since $\mathbb N$ is the least such property (the definition of
+$\operatorname{FiniteCardinality}$),
 
-## Notes
+$$
+\forall n\, .\,\mathbb Nn\to\Box\mathbb Nn .
+$$
 
-All admitted counting types, including e, are covered. No Rigid Comprehension, Actuality, choice or external standardness premise is used. The connecting argument is original misc, not attributed to the sources of the definitions.
+This is a theorem of C, so it is necessary: $\mathbb N$ is persistent.
 
-## Sources
+## Step 2: $\mathbb N$ is inextensible
 
-- **Kodsi research, 22–23 Oct 2026** — Codex (OpenAI), prompted by Daniel Kodsi, original connecting proof, 23 October 2026, writeups/c5-implies-arithmetic-necessitism.md, §§1–3 (unpaginated).
+By B and persistence, a non-number is necessarily a non-number:
+$\neg\mathbb Nn\to\Box\neg\mathbb Nn$. For if $\Diamond\mathbb Nn$ then
+$\Diamond\Box\mathbb Nn$, and B gives $\mathbb Nn$.
 
-<p class='cert'>Record: <code>topics/classicism/results/c5-implies-arithmetic-necessitism.yaml</code></p>
+Now suppose $\forall n\, .\,\mathbb Nn\to\Box Xn$. Then
+
+$$
+\forall n\, .\,\Box(\mathbb Nn\to Xn),
+$$
+
+from $\Box Xn$ if $\mathbb Nn$, and from $\Box\neg\mathbb Nn$ otherwise. BF gives
+$\Box\forall n\, .\,\mathbb Nn\to Xn$, that is, $\mathbb N\le X$. So $\mathbb N$ is weakly
+inextensible. The argument uses only B, BF and Step 1, which hold necessarily, so it
+can be carried out at every world: $\mathbb N$ is inextensible, and with Step 1, rigid.
+
+## Step 3: necessary distinctness
+
+ND at the type $(\sigma t)t$ of cardinalities gives $m\ne n\to\Box\,m\ne n$ for all
+$m,n$, in particular for numbers. $\square$
+
+Rigid Comprehension is not used. The recorded proof from □Rigid Comprehension
+([□Rigid Comprehension implies Arithmetic Necessitism](necessary-rigid-comprehension-implies-arithmetic-necessitism.html),
+Barton and Goodsell's Theorem 3) needs no ND.
+
+## Paper references
+
+- **Background: Classicism.** Bacon, Andrew, and Cian Dorr (2024). Classicism. In Peter Fritz and Nicholas K. Jones (eds), Higher-Order Metaphysics, Oxford University Press, pp. 109–190. The map was built from the draft dated 16 May 2023, 87 pages, which does not differ materially from the published version; all page, proposition and footnote locators in this map refer to that draft's numbering. — Propositions 2.2 and 2.3, p. 22. ND at $t$ gives B; □ND gives BF.

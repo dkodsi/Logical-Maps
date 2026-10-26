@@ -1,0 +1,114 @@
+diff --git a/logical-maps/topics/classicism/writeups/definable-atoms-and-extensional-transfer-corrections.md b/logical-maps/topics/classicism/writeups/definable-atoms-and-extensional-transfer-corrections.md
+new file mode 100644
+--- /dev/null
++++ b/logical-maps/topics/classicism/writeups/definable-atoms-and-extensional-transfer-corrections.md
+@@ -0,0 +1,29 @@
++# Corrections to model explanations and question status
++
++25 October 2026. Connecting arguments and audit by OpenAI Codex, prompted by Daniel Kodsi. Direct source: this note, §§1–4 (unpaginated), `misc`.
++
++## 1. The definable root has infinitely many atoms
++
++Use `coalesced-definable-root` without changing its construction. Its propositions are pairs `(b,[T])`, with a freely chosen current truth bit and a profile of a pure term with one individual marker. For each external n ≥ 1 let A_n be the Fregean Axiom conjoined with exactly n individuals.
++
++At a point satisfying A_n, Fregean entails Extensionality. Every admitted type is then finite and full: finite equality tests define every relation, and Extensionality identifies coextensive entities. The resulting pointed hierarchy is unique up to isomorphism; permutations of individuals act transitively. Each marker-dependent sentence consequently has one fixed truth value throughout these pointed A_n structures. The same holds at all transported targets. Thus the whole profile of A_n ∧ T is either that of A_n or bottom. A_n is nonzero by the finite full extensional model, and has false current truth bit at the infinite root. Hence A_n is an atom of the root proposition algebra. These atoms are pairwise disjoint.
++
++The root is countably infinite because its profiles are finite terms. If every subfamily of the A_n had a join, taking joins would inject the powerset of the natural numbers into that countable algebra. Distinct subfamilies have distinct joins by disjointness and complementation. Therefore some subfamily has no join. Every external subfamily is an admitted current property, by the free identity coordinate; taking complements gives failure of the meet formulation of Boolean Completeness at t.
++
++For Countable Boolean Completeness use the counting type t. Its standard numeral terms are distinct because current root properties with exactly n members distinguish them. Each numeral belongs to the least inductive cardinality family. The graph assigning each A_n its numeral is an admitted current relation. The missing-join family is therefore internally countable in the native schema. This repairs the completeness failures without the incorrect atomlessness claim. Atomicity's failure separately follows from the established pure Maximalism verdict and `maximalist-distinctness-incompatible-with-atomicity-t`.
++
++## 2. Restrict Boolean-valued transfer to extensional structure formulas
++
++In `full-boolean-valued-atom-and-atomless`, write B = 2 × A, a = (1,0), b = (0,1). Identity of ground entities is crisp. With singleton individuals, take F(*) = 0 and G(*) = a. Coextension has value b, equality has value 0, and the implication from coextension to equality has value a. Replacing a by b gives value b. The universal box-free Extensionality sentence thus has value at most a ∧ b = 0, whereas extensional predicate semantics validates it. Blanket transfer for every box-free typed formula is false.
++
++The transfer used for analytical structures is narrower. Relations on finite powers of a fixed ground carrier are interpreted by Boolean-valued subset names. Use them only by application to carrier elements, with equality only on those elements; exclude literal equality of relation intensions and predicates applied to those intensions. Quantification over full relation domains covers every subset name, and formula induction yields the forcing interpretation in this fragment. A separate capacity argument places the real field on the chosen carrier. This correction leaves the CH and Transversal Choice verdicts intact.
++
++## 3. Bare-C5 analytical contingency is source-reported
++
++Bacon, *Could the truths of mathematics have been different?*, draft of 9 October 2025, pp. 22–23, note 55, already reports failure of Necessity of Analysis under C5, using a nonconstructible real. The absence of an encoded countermodel was not literature openness. The new constructible-ground model adds a native-language transfer and an audit of its stronger premises.
++
++## 4. The strict Forcing Possibilism / CH conjecture is already refuted
++
++The upstream proved-only closure already supplies `full-free-monoid-glued-constants-singleton` as a countermodel to the recorded four-premise incompatibility. Its full proposition algebra is the powerset of a countably infinite monoid, of size continuum. An infinite complete Boolean algebra has at least continuum many elements, so the strict eligibility condition asks only for finite algebras; finite proper intervals realize them. The model also satisfies the recorded necessary Rigid Comprehension, Intensional Choice and Non-contingency of CH premises.
++
++The conjectured record status is historical metadata. Preserve the record and source attribution; the strict condition does not itself supply eligible infinite forcing algebras. The non-strict appendix formulation remains a separate question. No false proved-result verdict is asserted here.
+diff --git a/logical-maps/topics/classicism/models/coalesced-definable-root.yaml b/logical-maps/topics/classicism/models/coalesced-definable-root.yaml
+--- a/logical-maps/topics/classicism/models/coalesced-definable-root.yaml
++++ b/logical-maps/topics/classicism/models/coalesced-definable-root.yaml
+@@ -119,6 +119,11 @@
+     decreasing sequence without a greatest lower bound being available there; any family of root
+     propositions is the value at the identity of a root property, the value at the identity being
+     unconstrained.
++  revisions:
++  - date: '2026-10-25'
++    by: OpenAI Codex, prompted by Daniel Kodsi
++    note: >-
++      The atomlessness explanation is incorrect: Fregean together with exactly n individuals gives a nonzero profile atom for each n >= 1. The countable root therefore has infinitely many atoms, not an atomless profile algebra. The recorded failures remain: Maximalism excludes Atomicity; a missing join of a subfamily of these atoms proves Boolean Completeness and Countable Boolean Completeness fail, using counting type t. See writeups/definable-atoms-and-extensional-transfer-corrections.md, section 1, for the replacement argument. Original text and attribution are retained.
+ - id: one-individual-at-root
+   fails:
+   - infinity-e
+diff --git a/logical-maps/topics/classicism/models/full-boolean-valued-atom-and-atomless.yaml b/logical-maps/topics/classicism/models/full-boolean-valued-atom-and-atomless.yaml
+--- a/logical-maps/topics/classicism/models/full-boolean-valued-atom-and-atomless.yaml
++++ b/logical-maps/topics/classicism/models/full-boolean-valued-atom-and-atomless.yaml
+@@ -240,6 +240,11 @@
+     and $\forall\mathfrak R\, .\,\operatorname{Real}_t(\mathfrak R)\to\neg\operatorname{CH}(\mathfrak R)$ is
+     $(1,0_A)$ or $(0,1_A)$, not $\top$. As $\Box p$ is $p=\top$, both disjuncts of Non-contingency of CH
+     are $\bot$.
++  revisions:
++  - date: '2026-10-25'
++    by: OpenAI Codex, prompted by Daniel Kodsi
++    note: >-
++      The first sentence overstates the transfer: box-free Extensionality is a counterexample under crisp identity. Transfer here is restricted to extensional structure formulas whose relation variables are applied to carrier elements, with no equality or higher-order predicates on relation intensions. The CH argument lies in that fragment and its verdict is unchanged. See writeups/definable-atoms-and-extensional-transfer-corrections.md, section 2.
+ - holds: [arithmetic-necessitism]
+   by: Claude Fable 5.1 (Anthropic), prompted by Zachary Goodsell
+   date: '2026-10-23'
+diff --git a/logical-maps/topics/classicism/principles/necessity-of-analysis.yaml b/logical-maps/topics/classicism/principles/necessity-of-analysis.yaml
+--- a/logical-maps/topics/classicism/principles/necessity-of-analysis.yaml
++++ b/logical-maps/topics/classicism/principles/necessity-of-analysis.yaml
+@@ -43,10 +43,14 @@
+ notes: >-
+   The sentence-level counterpart of Analytic Necessitism, which implies it
+   ([[analytic-necessitism-implies-necessity-of-analysis]]); weaker than Necessity of Second-Order
+-  Analysis, which covers the continuum hypothesis. Whether C5 proves it is open: the proof of
++  Analysis, which covers the continuum hypothesis. Bacon already reports failure under C5 (pp. 22–23, note 55); the absence of an encoded countermodel was not an open literature question. The proof of
+   [[c5-implies-necessity-of-arithmetic]] uses BF at the type of numbers, and nothing comparable controls
+   new extensions of properties of numbers, over which first-order analytical sentences quantify through
+   the reals. It fails in a stitched forcing model whose ground model satisfies $V=L$, where "every real
+   is constructible" changes truth value; over a ground model with enough large cardinals projective truth
+-  is forcing-invariant, so such a model keeps this principle while refuting Analytic Necessitism. Neither
+-  variant is recorded yet.
++  is forcing-invariant, so such a model keeps this principle while refuting Analytic Necessitism. The source-described variants require their own exact model records.
++changes:
++- date: '2026-10-25'
++  by: OpenAI Codex, prompted by Daniel Kodsi
++  summary: >-
++    Corrected the stale source-status claim about C5; Bacon already reports analytical contingency in pp. 22–23, note 55. No new theorem is claimed by this correction.
+diff --git a/logical-maps/topics/classicism/results/necessary-rigid-comprehension-intensional-choice-and-forcing-possibilism-incompatible-with-non-contingency-of-ch.yaml b/logical-maps/topics/classicism/results/necessary-rigid-comprehension-intensional-choice-and-forcing-possibilism-incompatible-with-non-contingency-of-ch.yaml
+--- a/logical-maps/topics/classicism/results/necessary-rigid-comprehension-intensional-choice-and-forcing-possibilism-incompatible-with-non-contingency-of-ch.yaml
++++ b/logical-maps/topics/classicism/results/necessary-rigid-comprehension-intensional-choice-and-forcing-possibilism-incompatible-with-non-contingency-of-ch.yaml
+@@ -27,11 +27,17 @@
+     which contradicts both disjuncts of the Non-contingency of the Continuum Hypothesis at that type.
+ proof: ''
+ notes: >-
+-  Stated by Bacon as a theorem, with the proof deferred to another venue; his handout of 19 October 2026
+-  on the lottery-algebra model and the draft Modalized Domains on Possibility Frames do not reproduce it
+-  (the lottery record notes a transfer argument not given there). The expected proof: Forcing Possibilism
+-  supplies a proposition whose entailment algebra is a complete Boolean algebra forcing CH, and one
+-  forcing its negation; under □Rigid Comprehension and Intensional Choice the real number structures at
+-  the worlds below each are those of the corresponding generic extensions. Recorded as conjectured until
+-  a proof is supplied; a written proof, or a model of the three premises deciding CH one way necessarily,
+-  would settle it.
++  The strict-smallness formulation recorded here is already refuted by the proved-only database
++  closure, for example by full-free-monoid-glued-constants-singleton. Its full proposition algebra
++  has size continuum, so strict Forcing Possibilism requires only finite Boolean algebras; finite
++  proper intervals realize them. The other three premises also hold. The conjectured status retains
++  the source proposal; it does not mean that this recorded question is still open. The proposed
++  forcing argument requires existence and eligibility of infinite forcing algebras, which the strict
++  condition does not supply. Bacon's body and appendix use different size conventions; this
++  countermodel does not resolve every intended version of the source theorem. See
++  writeups/definable-atoms-and-extensional-transfer-corrections.md, section 4.
++changes:
++- date: '2026-10-25'
++  by: OpenAI Codex, prompted by Daniel Kodsi
++  summary: >-
++    Recorded the existing computed refutation under strict smallness and identified the missing existence/eligibility step; preserved the original conjecture, statement and attribution.

@@ -1,0 +1,822 @@
+{
+  "schema_version": 1,
+  "status": "compiled-semantic-components-and-conditional-assembly",
+  "full_lambda_free_H_endpoint_certified": false,
+  "verified_at_utc": "2026-10-26T01:41:12.923721+00:00",
+  "source": {
+    "id": "misc",
+    "reference": "endpoint-development.md, sections 1–4",
+    "date": "2026-10-25",
+    "pages": "unpaginated"
+  },
+  "run_id": "20261026T013903053652Z-13a864b0",
+  "target": "InfinitaryComprehensionEndpointAxioms",
+  "target_exit_code": 0,
+  "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "compiler_sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554",
+  "new_module_count": 13,
+  "source_closure_count": 22,
+  "axiom_report_count": 68,
+  "axiom_reports": [
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointActuality.truth_sup",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointActuality.diagonal_sup_top",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointActuality.true_diagonal_exists",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointActuality.true_diagonal_reads_current",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointActuality.actual_world_exists_unique",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointAssembly.rep_exact",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointAssembly.comprehension_transfer",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointAssembly.full_standard_representation",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointAtoms.QuantifiedEndpoints.fixes_output",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointAtoms.QuantifiedEndpoints.diagonal_atom",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointAtoms.QuantifiedEndpoints.atomicity",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointAtoms.QuantifiedEndpoints.infima_of_formation",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointAtoms.QuantifiedEndpoints.accepts_inf",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointAtoms.QuantifiedEndpoints.full_propositions",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointBinderBridge.binder_identity_of_rep",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointBinderBridge.observed_all_of_comprehension",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointBinderBridge.observed_ex_of_comprehension",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointBootstrap.MatrixDomain.same_material",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointBootstrap.BooleanPresentation.material",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointBootstrap.separation_K",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointBootstrap.separation_intensionality",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointBootstrap.relation_intensionality",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointBootstrap.MatrixDomain.comprehension_exact",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointBootstrap.MatrixDomain.comprehension_unique_exact",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointBootstrap.separation_barcan",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointBootstrap.same_universal_material",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointBootstrap.endpoint_necessary_distinctness",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointBootstrap.diagonal_exists",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointCanonical.box_iff_all_worlds",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointCanonical.model",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointCanonical.model_domain",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointCanonical.model_faithful",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointCanonical.model_worldSeparated",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointDiagonalBridge.UniversalPresentation.material",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointDiagonalBridge.diagonalRepresentative_exact",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointDiagonalBridge.quantifiedEndpoints",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointDiagonalBridge.atomicity_of_finite_comprehension",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointDistinctness.endpoint_reflect",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointDistinctness.endpoint_necessary_distinctness",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointEqualityBridge.reflexive_identity_top",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointEqualityBridge.propositional_identity_iff_of_nd",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointEqualityBridge.endpoint_propositional_identity_iff",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointEqualityBridge.typed_identity_iff_of_propositional_identity",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointEqualityBridge.endpoint_typed_identity_iff",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointFullness.full_standard_of_comprehension",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointFullness.unique_propositions",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointFullness.unique_functions",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointFullness.propositionEquiv",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointFullness.functionEquiv",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointQualificationBridge.Refinement.observer_profile",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointQualificationBridge.Refinement.covers_worlds",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointQualificationBridge.Refinement.universal",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointQualificationBridge.Refinement.existential",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointQualificationBridge.Refinement.equality_reflexivity",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointQualificationBridge.Refinement.equality_leibniz",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointStandard.hTop_eq_top",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointStandard.hBot_eq_bot",
+      "axioms": [
+        "propext",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointStandard.box_eq_hTop",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointStandard.endpointValued_iff_hEndpoints",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointStandard.worldReader_good",
+      "axioms": [
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointStandard.worldReader_endpoints",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointStandard.full_endpoint_separation",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointStandard.full_tuple_endpoint_separation",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointStandard.eval_sameFormula",
+      "axioms": [
+        "propext",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointStandard.full_standard_endpoint_OS_and_IC",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointSyntaxBridge.raw_all_eq_inf",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointSyntaxBridge.raw_ex_eq_sup",
+      "axioms": [
+        "propext",
+        "Classical.choice.{u}",
+        "Quot.sound.{u}"
+      ]
+    },
+    {
+      "declaration": "Classicism.Research.InfinitaryComprehension.EndpointBootstrap.relation_functionality",
+      "axioms": []
+    }
+  ],
+  "no_sorryAx": true,
+  "only_standard_Lean_metatheory_axioms": true,
+  "theorem_scope": {
+    "bootstrap": "K, typed Intensionality, Functionality, unique exact comprehension, Barcan and ND from explicit admitted-code observer interfaces; no starting C or I premise.",
+    "diagonals": "Finite common-representative quantifier qualification and finite IC construct diagonal atoms and Atomicity.",
+    "infinitary_formation": "Derive algebraic meets, complete observer truth, every proposition support and the unique current-truth world.",
+    "bridges": "Finite type qualification profile coverage; rigid typed equality via guards and finite equality-test matrices; IC binder truth and normalization.",
+    "canonical": "Construct fixed-domain faithful world-separated interpretation on the raw carriers; no intensional action Premodel input.",
+    "assembly": "Actual raw-code IC transfers through MatrixInterpretation and yields full profiles and unique representatives of every proposition/function; conditional on that explicit adapter.",
+    "converse": "Full standard relational hierarchies satisfy endpoint OS with common-representative qualification and actual infinitary IC."
+  },
+  "remaining_formalization_obligations": [
+    "Implement the concrete native lambda-free H syntax/axiom adapter for the admitted-code interfaces, including necessary UI and necessary ordinary binder congruence from theorem-only necessitation.",
+    "Construct EndpointAssembly.MatrixInterpretation for every actual infinitary term and simultaneous assignment, with its recursive evaluation agreement law; the compiled binder-normalization theorem supplies a key step but does not itself construct this adapter.",
+    "Ground auxiliary Ty.var codes to e so the starting axioms range only over original closed types."
+  ],
+  "not_claimed": [
+    "Unconditional complete H + endpoint OS + IC formal certification",
+    "Gated object-C derivation",
+    "ZF metatheoretic certification",
+    "Changed pmap lean: verified statuses"
+  ],
+  "original_receipt_sha256": "e880df6f075ee299f4b541082f327c880c77fb57dd6e527a91a9c07893d1617d",
+  "compiler_manifest_sha256": "dd15612abf6be83a7d9f8df32f1bd9c2e6b89fa47eeef52c9857418aa90e6458",
+  "target_log_sha256": "56fa9a7c9ca8f883d0780b2bb92b232d81ca2a485488d42cdc327ab11658afd2",
+  "source_archive": "endpoint-ic-components-sources.zip",
+  "source_archive_sha256": "91a6ae4e49769297494f68a108352f9232a43ade19f4ffbeed579e379af5dbe5",
+  "source_archive_members": {
+    "source/Classicism/Syntax/Types.lean": "567828e8f9a707cf635e3b4fb30bc868a419967307613d0686d795d195606eac",
+    "source/Classicism/Results/Research/InfinitaryComprehensionEndpointBootstrap.lean": "5d0bfc1e9b5190e40ea995b159e48d6818837de74483a6d899703d81594d93cd",
+    "source/Classicism/Results/Research/InfinitaryComprehensionEndpointAtoms.lean": "c2c240488e4aa50ef8c79881f7dd0013eeddd672c79596a7a8ee706ff5fdb157",
+    "source/Classicism/Results/Research/InfinitaryComprehensionEndpointActuality.lean": "693e053f8374677c84456d3c6fa5855df8e3acd8dd9aee20d30178973e982c09",
+    "source/Classicism/Syntax/Term.lean": "ad5172acbb74eaab9307662408928b80e6ffab62e14df16f2f41c7205de13f69",
+    "source/Classicism/Results/Research/InfinitaryComprehensionSyntax.lean": "15f92831d56f98b604ed6e8fbbae202e419ca21d849b5f6f50551052e21179da",
+    "source/Classicism/Results/Research/InfinitaryComprehensionAtomicity.lean": "3409edcef011e42983e4dbc6ec1b7951a8360fcccb014c8a514143d56e599652",
+    "source/Classicism/Results/Research/InfinitaryComprehensionSupport.lean": "d80670ce0723d6aea41b1314adee884defcbc70c2806411a8217f7b878a5a284",
+    "source/Classicism/Results/Research/InfinitaryComprehensionEndpointCanonical.lean": "e661c5e5f9add8201be9ae977077f4d04636fb8582e5161349b127618896016f",
+    "source/Classicism/Results/Research/InfinitaryComprehensionFullness.lean": "0ad6f1f970bb7ced90199697bc1f9f01f6f42ad906636eb99826f0323ed0ffd9",
+    "source/Classicism/Results/Research/InfinitaryComprehensionEndpointFullness.lean": "090a78f4773f111758b254c37f23f9c661b956384612773bc58d84046bc226a8",
+    "source/Classicism/Results/Research/InfinitaryComprehensionEndpointAssembly.lean": "b2e922ad85a04add95e40dab1734dbba36073ab969cd51345c114d77bec1c76e",
+    "source/Classicism/Results/Research/InfinitaryComprehensionEndpointBinderBridge.lean": "83e1f6a302b7f48b0bc4dbccfb0b3956a3b0676f3b2486832a9f4e293053760e",
+    "source/Classicism/Results/Research/InfinitaryComprehensionEndpointDiagonalBridge.lean": "7cf0ee05a2643aeca962ccf2e0354034bf3fc177292209444455b0589d39da8c",
+    "source/Classicism/Results/Research/InfinitaryComprehensionEndpointDistinctness.lean": "e8e98e6b6d5f34515fe769b4f1bfe039d9122c4eb8deaed59a9db3a2c928f761",
+    "source/Classicism/Results/Research/InfinitaryComprehensionEndpointEqualityBridge.lean": "042bb7b1adbeb58912fe630426b76dc670a621174462bcd40a5286ccb8cf2774",
+    "source/Classicism/Results/Research/InfinitaryComprehensionEndpointQualificationBridge.lean": "9f2b07e9c26d6b2330ed1c1350e75f45707403be427c7ad843918905f85f1d53",
+    "source/Classicism/Results/Research/InfinitaryComprehensionFull.lean": "9590f18aeb98070ea31b1345640bebd4b103f9bb96d292459a10d53e3d00b0e0",
+    "source/Classicism/Results/Research/InfinitaryComprehensionStandardLaws.lean": "faa18cf2e40a701973ac3ee01d0cd96bfc1312f290547575dbbc9dc3d98cb303",
+    "source/Classicism/Results/Research/InfinitaryComprehensionEndpointStandard.lean": "8dfe392a5d871a9de60985184b524a76e01af28fe386b6e32e7686c9f70a58a2",
+    "source/Classicism/Results/Research/InfinitaryComprehensionEndpointSyntaxBridge.lean": "8f1c0501db2a69c45e9dd1776499fc5ee387e1382aa544c538dacc8a1ed570a1",
+    "source/InfinitaryComprehensionEndpointAxioms.lean": "d0e8943b3c8992118c45ea0ac1aa72565fc4955f97e95d890538fa7cdf7ce02d"
+  },
+  "source_closure_in_dependency_order": [
+    {
+      "module": "Classicism.Syntax.Types",
+      "source": "source/Classicism/Syntax/Types.lean",
+      "sha256": "567828e8f9a707cf635e3b4fb30bc868a419967307613d0686d795d195606eac",
+      "fingerprint": "f920c6417fb0d73d4b6cb333a5de66a5647023a45396e3a09a0b7e943245c8cf",
+      "artifacts": {
+        ".olean": "06ab8b44ce7d7b6c90c25d4cc9e58b72ad316cb1c73e67e82c214ebc3117b126"
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionEndpointBootstrap",
+      "source": "source/Classicism/Results/Research/InfinitaryComprehensionEndpointBootstrap.lean",
+      "sha256": "5d0bfc1e9b5190e40ea995b159e48d6818837de74483a6d899703d81594d93cd",
+      "fingerprint": "e1a304cb3d12499355b8b0b2db0b13d8aaa32695c8207647cb3107e77a8f0741",
+      "artifacts": {
+        ".olean": "fffb853e5c085bc7a5ac6b505d010aca498f38c8c0d62fcb16ec873cff79aa27"
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionEndpointAtoms",
+      "source": "source/Classicism/Results/Research/InfinitaryComprehensionEndpointAtoms.lean",
+      "sha256": "c2c240488e4aa50ef8c79881f7dd0013eeddd672c79596a7a8ee706ff5fdb157",
+      "fingerprint": "aaec47e8a10ea47606801993e6be947144b1464303e97bd2af6e8c8124847e18",
+      "artifacts": {
+        ".olean": "dd644bf547e8ddb617f0666d52ddb472eb9a4c4c5c55bac76a251768c6075623"
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionEndpointActuality",
+      "source": "source/Classicism/Results/Research/InfinitaryComprehensionEndpointActuality.lean",
+      "sha256": "693e053f8374677c84456d3c6fa5855df8e3acd8dd9aee20d30178973e982c09",
+      "fingerprint": "818c5a1ddaa9abf102d00e0b4709af357aab35173d9921ba9fa28080b18bddd0",
+      "artifacts": {
+        ".olean": "235118da71273111673cb784d0072addfa58ddeb5ee7a6ff86110eb59d4ee374"
+      }
+    },
+    {
+      "module": "Classicism.Syntax.Term",
+      "source": "source/Classicism/Syntax/Term.lean",
+      "sha256": "ad5172acbb74eaab9307662408928b80e6ffab62e14df16f2f41c7205de13f69",
+      "fingerprint": "19fcc526fbf7a5f30c841e2fb11bd4cc6c4c8c77eddfb46e22a81b795035e2d5",
+      "artifacts": {
+        ".olean": "4f77c921708f52a8d1c646e52072b7a63daab23afc54007f41eb669fc9d057bc"
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionSyntax",
+      "source": "source/Classicism/Results/Research/InfinitaryComprehensionSyntax.lean",
+      "sha256": "15f92831d56f98b604ed6e8fbbae202e419ca21d849b5f6f50551052e21179da",
+      "fingerprint": "55fe095d3d802253983333c2c190d6a6483a78a8c36960f6ca49e9ea15c3af15",
+      "artifacts": {
+        ".olean": "4246f87ed31934213737773a29b61d5729bbf8bf40adb9979244846bea1a62ab"
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionAtomicity",
+      "source": "source/Classicism/Results/Research/InfinitaryComprehensionAtomicity.lean",
+      "sha256": "3409edcef011e42983e4dbc6ec1b7951a8360fcccb014c8a514143d56e599652",
+      "fingerprint": "6b250c274a5621be412e8d10628bdaf49fc0de53a3e0e92648177497d2f1286d",
+      "artifacts": {
+        ".olean": "757f8876550c935bf9767430dca31087c559170dca98bd77ac56a0fa0bed96d9"
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionSupport",
+      "source": "source/Classicism/Results/Research/InfinitaryComprehensionSupport.lean",
+      "sha256": "d80670ce0723d6aea41b1314adee884defcbc70c2806411a8217f7b878a5a284",
+      "fingerprint": "0a7fc1daa9cc39d43285850cc1b0119bad73e8df154e5e96567ec2c9f96632f3",
+      "artifacts": {
+        ".olean": "2025ce88f416c9793ed98f0f149f3ab90244f902878c906210224056e0642e4c"
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionEndpointCanonical",
+      "source": "source/Classicism/Results/Research/InfinitaryComprehensionEndpointCanonical.lean",
+      "sha256": "e661c5e5f9add8201be9ae977077f4d04636fb8582e5161349b127618896016f",
+      "fingerprint": "9fb91cd4174bfcbd1852391256a9f7240459777e19ebd0c01cd2f45ed2e5a92c",
+      "artifacts": {
+        ".olean": "9105d300651f69ad2510963824c1e3d2cb4d947d5b5283fd9ccc76ec151cd644"
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionFullness",
+      "source": "source/Classicism/Results/Research/InfinitaryComprehensionFullness.lean",
+      "sha256": "0ad6f1f970bb7ced90199697bc1f9f01f6f42ad906636eb99826f0323ed0ffd9",
+      "fingerprint": "e0f45a3dd34395053b2bf64cc6341fd98279ef5a92114bad542d344c19f37c70",
+      "artifacts": {
+        ".olean": "01fc0f51d75f9cb875820d58988adb3dbe844bd4bab6d6bb2047597caeeec19f"
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionEndpointFullness",
+      "source": "source/Classicism/Results/Research/InfinitaryComprehensionEndpointFullness.lean",
+      "sha256": "090a78f4773f111758b254c37f23f9c661b956384612773bc58d84046bc226a8",
+      "fingerprint": "c37e2bb0d33efbf93d4deeacf6963e687e3df4298f4c4e9d2c892fda8518ef67",
+      "artifacts": {
+        ".olean": "9cdb01dfb42902d105facb45aaabcd0c4b651f74dabe033bfa60ab5861885d47"
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionEndpointAssembly",
+      "source": "source/Classicism/Results/Research/InfinitaryComprehensionEndpointAssembly.lean",
+      "sha256": "b2e922ad85a04add95e40dab1734dbba36073ab969cd51345c114d77bec1c76e",
+      "fingerprint": "05bd1c0f4b88449519cd85ad92213bb70b12498e1dc0ffe5c1d04b90eed4a90e",
+      "artifacts": {
+        ".olean": "7da25d6371f3eb02840425691f743915d1c18bec36919dde2091028cdcfbd253"
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionEndpointBinderBridge",
+      "source": "source/Classicism/Results/Research/InfinitaryComprehensionEndpointBinderBridge.lean",
+      "sha256": "83e1f6a302b7f48b0bc4dbccfb0b3956a3b0676f3b2486832a9f4e293053760e",
+      "fingerprint": "403130d3a7fafbfd6a6fe4c56205f26cc55ba9ea49f6c1d7fac4eb1fe57f6d4b",
+      "artifacts": {
+        ".olean": "3bf5db6bfcbd9b9ed0351ba49b4e76f319c9db1d3b5722fb64c3f668d4e1c0d5"
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionEndpointDiagonalBridge",
+      "source": "source/Classicism/Results/Research/InfinitaryComprehensionEndpointDiagonalBridge.lean",
+      "sha256": "7cf0ee05a2643aeca962ccf2e0354034bf3fc177292209444455b0589d39da8c",
+      "fingerprint": "1c0cc2355dd26d2fdccb525c7335d53a0ba62b357b4f78f37f6b5f80fa22d22d",
+      "artifacts": {
+        ".olean": "8087739c8bc38703284503b6d1d52886a75da1814b17bcaa49fb5c1ad707b86c"
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionEndpointDistinctness",
+      "source": "source/Classicism/Results/Research/InfinitaryComprehensionEndpointDistinctness.lean",
+      "sha256": "e8e98e6b6d5f34515fe769b4f1bfe039d9122c4eb8deaed59a9db3a2c928f761",
+      "fingerprint": "56024c126aa34a763755f0de0a740dddea793ccc846f84a3cba876aa81bfa838",
+      "artifacts": {
+        ".olean": "72470f9924cdd3e5dc95dfbfda1200fc9c98c69fc448697cf893f4678c74569f"
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionEndpointEqualityBridge",
+      "source": "source/Classicism/Results/Research/InfinitaryComprehensionEndpointEqualityBridge.lean",
+      "sha256": "042bb7b1adbeb58912fe630426b76dc670a621174462bcd40a5286ccb8cf2774",
+      "fingerprint": "9f0a136d36b109fd75234847fe939d4968ac1f068ea40bc54065d6de099b71a3",
+      "artifacts": {
+        ".olean": "45cd4fb3445d77c126ecc66512e2434fa7781748cb3bac621d85220dde52dea0"
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionEndpointQualificationBridge",
+      "source": "source/Classicism/Results/Research/InfinitaryComprehensionEndpointQualificationBridge.lean",
+      "sha256": "9f2b07e9c26d6b2330ed1c1350e75f45707403be427c7ad843918905f85f1d53",
+      "fingerprint": "2c02d337c3c6a3f8e85fb158528e88a4530ce91c09ee93abffbf603f95b965f1",
+      "artifacts": {
+        ".olean": "d539c492f08d762b5e3a176558ed6016f0ec1db5bd8f07c5a460fad16403351c"
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionFull",
+      "source": "source/Classicism/Results/Research/InfinitaryComprehensionFull.lean",
+      "sha256": "9590f18aeb98070ea31b1345640bebd4b103f9bb96d292459a10d53e3d00b0e0",
+      "fingerprint": "5b66ea931035669592af96a806a80d69bd8334d75ea747828d5143898b561908",
+      "artifacts": {
+        ".olean": "6508d04c3f5a08c109a07d4bd74377f90922627b584c8e2b90528385106b35cb"
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionStandardLaws",
+      "source": "source/Classicism/Results/Research/InfinitaryComprehensionStandardLaws.lean",
+      "sha256": "faa18cf2e40a701973ac3ee01d0cd96bfc1312f290547575dbbc9dc3d98cb303",
+      "fingerprint": "2d1086215bd1924f8143e30f401a34d835c4cd11725387af6be995d8dd62e80d",
+      "artifacts": {
+        ".olean": "3e365fab6b7214fc63d6836690b829902fe66121d622874c6a74c31d7d6652aa"
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionEndpointStandard",
+      "source": "source/Classicism/Results/Research/InfinitaryComprehensionEndpointStandard.lean",
+      "sha256": "8dfe392a5d871a9de60985184b524a76e01af28fe386b6e32e7686c9f70a58a2",
+      "fingerprint": "e0f094900d9d734e520d9ebc6bf69e0d323ae6364906368a8ee7bbc0e4ab8e40",
+      "artifacts": {
+        ".olean": "3f61ae18d0250c5529083cb39b0da4099810f2eee45ac15371d313601e4d27f2"
+      }
+    },
+    {
+      "module": "Classicism.Results.Research.InfinitaryComprehensionEndpointSyntaxBridge",
+      "source": "source/Classicism/Results/Research/InfinitaryComprehensionEndpointSyntaxBridge.lean",
+      "sha256": "8f1c0501db2a69c45e9dd1776499fc5ee387e1382aa544c538dacc8a1ed570a1",
+      "fingerprint": "14f64faf88ff8eb0a874cae4ecef0fdc2ba601b6ef125efadef1a7b161662b5b",
+      "artifacts": {
+        ".olean": "0951616a9bad2adb8fc1aedf9596645b56b35a249863c4fe81339f5a2ac90a46"
+      }
+    },
+    {
+      "module": "InfinitaryComprehensionEndpointAxioms",
+      "source": "source/InfinitaryComprehensionEndpointAxioms.lean",
+      "sha256": "d0e8943b3c8992118c45ea0ac1aa72565fc4955f97e95d890538fa7cdf7ce02d",
+      "fingerprint": "ebe8536376c46d98016d52ea15589b2e13967fe7fa4470b546d5e67f9995ce39",
+      "artifacts": {
+        ".olean": "f2b2e8fc8f01a808f56a8d45c6dd9a0017c8508a2aae8d1850d6c9454fd59d85"
+      }
+    }
+  ],
+  "collection_checks": {
+    "source_files": 22,
+    "immutable_snapshot_files": 22,
+    "compiled_artifacts": 22,
+    "axiom_reports_matched_to_saved_log": 68,
+    "compiler_rerun": false
+  },
+  "preservation": {
+    "prior_receipt_sha256": "49c727d23236ec53f030a8a3271602f79ec60392b078a31621c15d9ce5fb6c88",
+    "prior_source_closure_count": 137,
+    "source_receipt_reports_prior_sources_unchanged": true
+  },
+  "packaging": "Exact immutable source bytes; compiled objects, original compiler logs, session instructions and machine paths excluded. Source order and exact compiler identity are recorded for reproduction. This is collection of an existing successful audit, not a new compiler run."
+}

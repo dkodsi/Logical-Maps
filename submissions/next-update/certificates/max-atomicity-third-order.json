@@ -1,0 +1,1277 @@
+{
+  "status": "Lean certified",
+  "compiled_at_utc": "2026-10-25T22:27:41.429944+00:00",
+  "exact_statement": "¬ Classicism.Meta.AxiomSet.Consistent (Classicism.Meta.AxiomSet.maximalist ∪ Classicism.P.AtomicityT.schema)",
+  "module": "Classicism.Results.Research.MaxAtomicityThirdOrderInconsistency",
+  "theorem": "Classicism.Meta.Research.MaxAtomicityThirdOrderInconsistency.maximalism_atomicity_inconsistent",
+  "attribution": "Original proof by GPT-6 Astra prompted by Daniel Kodsi; upstream map rewrite by Claude Opus 5.5 prompted by Cian Dorr, as attributed in that source. New Lean transcription: Codex, 25 October 2026.",
+  "simplified_proof_source": "https://github.com/zwlgzwlg/Logical-Maps/blob/ca7afd1d06cae46c4d8249f13d69e95f11d8dea3/logical-maps/topics/classicism/writeups/maximalist-distinctness-incompatible-with-atomicity-t.md",
+  "verification": {
+    "manifest": "research/2026-10-22/lean-formalization/checks/20261025T222618228100Z-749c2ed6.json",
+    "manifest_sha256": "93cf3afbdf02aa8857648e0408ccdceec6bc11294ac65550f410d9d00fc2f043",
+    "complete": true,
+    "exit_code": 0,
+    "current_sources_match": true,
+    "source_drift": [],
+    "checked_modules": 99,
+    "classicism_modules": 93,
+    "principal_axioms": {
+      "Classicism.Meta.Research.MaxAtomicityThirdOrderInconsistency.F_closedTypes": [],
+      "Classicism.Meta.Research.MaxAtomicityThirdOrderInconsistency.F_splits": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Classicism.Meta.Research.MaxAtomicityThirdOrderInconsistency.eval_split": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Classicism.Meta.Research.MaxAtomicityThirdOrderInconsistency.split_identity_not_C_theorem": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Classicism.Meta.Research.MaxAtomicityThirdOrderInconsistency.maximalism_atomicity_inconsistent": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "principal_sorryAx": false,
+    "principal_custom_axioms": [],
+    "direct_obstruction_gate_type_and_derivation": "Passed; exact module log recorded in compiler provenance.",
+    "compiler": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+    "compiler_sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554",
+    "precompiled_sha256": "675f46a345caf1daf1bbc81b42696e5a518c6d01fd9c8a8d02c8a158f8475a3e"
+  },
+  "compiled_local_modules": 99,
+  "classicism_modules": 93,
+  "axiom_audit_scope": "Five named principal declarations, transitively through their proof dependencies; not all unused declarations in every imported module",
+  "original_certificate_archive_sha256": "948454c3bfa790fbee2b0f6358bb904029f7dd4769c49072524a9a74eb2dd0f4",
+  "original_archive_members_verified": 346,
+  "source_archive": "max-atomicity-third-order-sources.zip",
+  "source_archive_sha256": "9d2a45420a3ba0a5e9c7818de9963186cac14d3c2a4b0236a24d7ad9308deaa5",
+  "source_archive_members": {
+    "reproduction/lake-manifest.json": "0767da3bec4be06e90bf9cf3bca1e6f261dce3a412d089cb610254846323562b",
+    "reproduction/lakefile.toml": "c6437385519896d6e75da5a165909df8c358fdc9e32d48c99464107558a898c9",
+    "reproduction/lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71",
+    "source/Classicism/Booleanism.lean": "0537132563704170d7ec4dc14755690639a9a784428650fa7bf04067acc0628f",
+    "source/Classicism/Cardinality.lean": "5e627927356fc561dfd5bfacd9935c558c7760678df56c0158820a7e8626703f",
+    "source/Classicism/Certified/Quoted.lean": "4f5e539a45bf30cf758effcd38c59330b95160a09aa57b08130226c491896447",
+    "source/Classicism/Certified/Schemas.lean": "5473826bbece5136406e9aca792c6eb38e93117d142bce275d5a084803ad4a38",
+    "source/Classicism/Comprehension.lean": "570435f620ec40a8c0f359ce546c26933cf3acfc6e7c8da81fa805170f9ab844",
+    "source/Classicism/Core.lean": "ed0b1189f3fe3f02ce7011058273c0915bb511e5fd30ae33340e7ae0c4afb81d",
+    "source/Classicism/Equivalence.lean": "257006775f36a2eacca652360f7ff8fb9dc403b2b0f4d71ff6a5543e5a939a76",
+    "source/Classicism/Identities.lean": "3629e17eb7ebf28d47f0d1a2450886bec05b39bf73ff52eff99a88a12579c3b3",
+    "source/Classicism/Lattice.lean": "43231f5d30bab05bc0d11927e1ce09f17ec384875e0aeb1cb72335e36f046070",
+    "source/Classicism/Modal.lean": "7706449a7246e0be0772a33dcda61ab010686bf5bd64c45017425bf39ed0cf42",
+    "source/Classicism/Order.lean": "4755de0b5eb272e541ce89e84078c4d80c3ae9a332a6910b395c73b78a2b4730",
+    "source/Classicism/Paper.lean": "3348a9c2bf786ef15a9a2a0341dce82e9a419e81a4c7b7486d8c8cba8fbdc895",
+    "source/Classicism/Pointwise.lean": "78b858a9d33feb587976879190bdf739afdc0e564c4e6dae5508f8f2c5e15a16",
+    "source/Classicism/Principles.lean": "747fc5fbde92a7dd1432aaaafee00437398594ae06dbc8ec2040690fae443049",
+    "source/Classicism/Principles/Base.lean": "d0c930dafb5decf6e747b5a05215cbff099d4efd9e69c607f01a54d5c5a7b96a",
+    "source/Classicism/Principles/Choice.lean": "a8f7e35f1a11805edc2b116b6af002bd5b1d0708b93aaea16781cff519687319",
+    "source/Classicism/Principles/Coarse.lean": "5c3aedc0a4117e7c214d186b384c42b8da6a17906fb7a76a75cb625f85b0a9b2",
+    "source/Classicism/Principles/Comprehension.lean": "7d47cbb2fcbf444bd1e708ceeb9d007c1be955b41346b2adf14f5613ec7e2537",
+    "source/Classicism/Principles/Extensionality.lean": "aa1929fee457845f79c2511b4df86462660ed1c68c3f85b5af8636a88a8f15e8",
+    "source/Classicism/Principles/Infinity.lean": "9c901565490f92a5a6b18ac1cf690c756bb5984e105e885614b87dcc00db027f",
+    "source/Classicism/Principles/Instances.lean": "53835a72c249e8f75246e6b42331d205b8bec73a8c03bc2d1ad48db37a88e47e",
+    "source/Classicism/Principles/Lattice.lean": "95a7c96bd3f2c0b131b59412ee36c288b9f12a772075e8f6ec83d8177f6ffd60",
+    "source/Classicism/Principles/Schematic.lean": "f6e0fe85d4c7f95deb80b98e19cf10e292ac98d87a5c2caec2ddcb9920e677ee",
+    "source/Classicism/Results/Records.lean": "6d6d399aab1e7f30eff9a5d385635ae311228e4faf03ce36ad39d5a1d22eede6",
+    "source/Classicism/Results/Records/Base.lean": "43794a516d90505e3c5b48267ddfe110b8e482b881cc1300f2e2ee182c2fc2db",
+    "source/Classicism/Results/Records/C5.lean": "670269847531e12553369ae4105b0926f8613883f8f709b94cdc88917eb49b7c",
+    "source/Classicism/Results/Records/Choice.lean": "28a17b666e917900329a015b2bf9cf3a6848a811762a6c862f6ef58135bf77ca",
+    "source/Classicism/Results/Records/Coarse.lean": "a3a6e0bc0120eecda1097efc51cd29c0d95daa15b81535f36d7dc6dd1d434882",
+    "source/Classicism/Results/Records/Comprehension.lean": "552f1c10d3b02f5cae87392141616f5de2200655837e07ba9b367e7bacfd77d7",
+    "source/Classicism/Results/Records/Extensionality.lean": "0a1d58485d6e8b0b84d68d973027dd621394ee0c4d1579f08746f10558f0a34a",
+    "source/Classicism/Results/Records/Infinity.lean": "dd622a8252d4bc861a68bf939b25198d39db51c119e89911e096b0523a3a1ba0",
+    "source/Classicism/Results/Records/Lattice.lean": "e5adae1ce94a42f477aa629e4f5b739aa78bf1f7a3abf785d591f4d3a62690f4",
+    "source/Classicism/Results/Research/MaxAtomicityCountableGenerator.lean": "ba85552f62386e3f13d36fca45eb897ad03bad69d7ddbf0c14e4ffca62dc781e",
+    "source/Classicism/Results/Research/MaxAtomicityDirectObstruction.lean": "115add00dc534dfbb6dca0088cee8e21e6d23bea5491d12232faaf604bba5924",
+    "source/Classicism/Results/Research/MaxAtomicityEvalTools.lean": "a56ccb6777ba92c8a2138dab628d2e860d202a9ad4dbb1f4d1935995434067d9",
+    "source/Classicism/Results/Research/MaxAtomicityIdentityFormula.lean": "2d9d41d6a5dd19467b24a66ce888db359bd97e044e4a683017942b0b2fa5ed1a",
+    "source/Classicism/Results/Research/MaxAtomicityJechShelahAmalgamation.lean": "0f0682708a2f91a97197d7a034776ac84f8f4719d6597ec5b50603929a50735a",
+    "source/Classicism/Results/Research/MaxAtomicityJechShelahBranch.lean": "4f09088861c8cf56ca3aea6d186e04763c1edf74e587f13c157550638208faac",
+    "source/Classicism/Results/Research/MaxAtomicityJechShelahCylinders.lean": "42025f166bb2c80378dd13b96e168152a5554a0376323eeb407d4f1b87afcec7",
+    "source/Classicism/Results/Research/MaxAtomicityJechShelahEnumeration.lean": "412a62c28acc4ba1bb1fdafa872108845972cb4d5985326f18079f7c14845751",
+    "source/Classicism/Results/Research/MaxAtomicityJechShelahFiniteRefinement.lean": "e2c567beffd0d93008bcc4085ce7282d33beace717fb1f424beac62216a3cd4a",
+    "source/Classicism/Results/Research/MaxAtomicityJechShelahFusion.lean": "9c020e86efde329ca1ad6b753aac8fbfe2f7675b559117f43a5a1266d5213163",
+    "source/Classicism/Results/Research/MaxAtomicityJechShelahIndexCoding.lean": "c2c50f09dace289dd2fb09988743939136ef07c4b5d7cf8bbd1a0d19355155c2",
+    "source/Classicism/Results/Research/MaxAtomicityJechShelahIndexedGenerators.lean": "461eda817eabd9745369d15665fa2b847fdac0be77a9ccb991ab2b226d4e2ccf",
+    "source/Classicism/Results/Research/MaxAtomicityJechShelahLocalFusion.lean": "3707fecc7829f38c86998c3324c411a6542dac8d1152fe5d8b8242a1ffecf035",
+    "source/Classicism/Results/Research/MaxAtomicityJechShelahLocalStage.lean": "8ccecf4cbe5509e5c6d29aa26f50fde1fb617755284d1829fd7d4bfec77f3c75",
+    "source/Classicism/Results/Research/MaxAtomicityJechShelahRigidityCriterion.lean": "22861b973e08c473b2cbe4ab03c22213c7dbae96e0a384a14f4c04d4de2cb63a",
+    "source/Classicism/Results/Research/MaxAtomicityJechShelahTrees.lean": "372ab28d11ade4e66a5ac96e2e21e312502cc4e3dbff63cc30503e8b9b4fb48b",
+    "source/Classicism/Results/Research/MaxAtomicityReduction.lean": "57343a60a522eea406621bbfeaa7897b88716c115de0bd18d05bde6764a1165e",
+    "source/Classicism/Results/Research/MaxAtomicityRegularCompletion.lean": "c5016583a1f01724023cb1ec2099379fe2a365b4e306647c13bab5ee6f2a9de0",
+    "source/Classicism/Results/Research/MaxAtomicityRigidTransport.lean": "bc0586cb57ba140534543960ba358971eecb7b6acd4efb809da6256b596671a0",
+    "source/Classicism/Results/Research/MaxAtomicitySlalomInvariance.lean": "94115d4f32cc457940b64df679fd4d79bce4827f35c89eb19ca854d30b7d9582",
+    "source/Classicism/Results/Research/MaxAtomicitySlalomLimit.lean": "e321806b1bc268bcfd98b1bf406abed775673aefcd0478a5d066f5bb8baa2745",
+    "source/Classicism/Results/Research/MaxAtomicitySlalomThinning.lean": "22e77ba07eaee37ca622586767c4d4ade97b5966a9769e3554184f4e6d8dd4c0",
+    "source/Classicism/Results/Research/MaxAtomicityThirdOrderArithmetic.lean": "aefcec4f2b62bfcdf76e7aea406aa5825bc03eaa60b1de8c51087bb18de76c2a",
+    "source/Classicism/Results/Research/MaxAtomicityThirdOrderBridge.lean": "35aabc0bfbbf78aefeec548fca2b34e694489758c07ec7a54a4d662a0dca3598",
+    "source/Classicism/Results/Research/MaxAtomicityThirdOrderDomains.lean": "f4ff97cb6419e18374b54f626bf9f9f2081cbd5712e5a65253f57f75cf91839d",
+    "source/Classicism/Results/Research/MaxAtomicityThirdOrderInconsistency.lean": "add3916dab9bca6bc677c60527286d55bde507db5df045b276f82766c74fb75d",
+    "source/Classicism/Results/Research/MaxAtomicityThirdOrderRegular.lean": "06fcdd7cd7c279949ecb7883a7f2144b3f807088d74754e1661a52e11510e897",
+    "source/Classicism/Results/Research/MaxAtomicityThirdOrderSelection.lean": "4245470d83f639f6bed29c4b63f3cf191227be8277590924f2faf38ddb274e6a",
+    "source/Classicism/Results/Research/MaxAtomicityThirdOrderSyntax.lean": "430a1595c9bc2b871fe14ef46be0b49b004751a78d82021102c3e7a978a9b2ee",
+    "source/Classicism/Results/Research/MaxAtomicityWellOrder.lean": "3035a223f88cf90e263b3b115cc70b12d8a850d59cf80cffd252044f7df86110",
+    "source/Classicism/Semantics/BooleanValued.lean": "f61196a8bd6e29ff34ad5e4e2038121cd15f273228fa130d024a6371568a69a0",
+    "source/Classicism/Semantics/BooleanValuedSoundness.lean": "3ffde61f91e9bcbb9aa804cf46621466c89b8829a816f48db0fa7f3cfe75cdf7",
+    "source/Classicism/Semantics/Denotation.lean": "2103000e1da2b0ce5413fa71820b7cd579bf562b7dd50d704e058b5cda0c7925",
+    "source/Classicism/Semantics/Env.lean": "ca6f223a2bfe71396b3e21de852057e432cd7b289005cdacc1cc24935358e09d",
+    "source/Classicism/Semantics/Relational.lean": "b9424788860fff653c01277d1d1e1e2aa257b0905ac02b0879bb6029a1c5c32a",
+    "source/Classicism/Strict/Algebra.lean": "d4cb80885b688ee323e6f59b084568746247f751986fe2ea7efd53cb4e6969a9",
+    "source/Classicism/Strict/Axiomatization.lean": "fa26c38979d08d22db2c14d999bd3c5454170e00e72f2781cf2cfa28910ed533",
+    "source/Classicism/Strict/Mirror.lean": "c9aa802c99fbaea769cb8a88af075fc434b3a9073bd9187f9d00b0e6e82451fe",
+    "source/Classicism/Strict/Primitives.lean": "b0875be460cec24411c21b6f5929f9c4f68485e6600317f1530adb0a20abd69b",
+    "source/Classicism/Strict/Quantifier.lean": "688f1a0f560a30f12fd4b4b6663fb7583fac374d9bd7591a55943bbb1b4695fa",
+    "source/Classicism/Strict/Rules.lean": "496f3272610ad5dac44de1f90bd394d38098d44f5c8e51fcc30e835e415a8609",
+    "source/Classicism/Strict/Tautology.lean": "edc88bb68c00443a3c309ad01da9c31e1325bc8d63bf0a2ba9392c43eebbadfe",
+    "source/Classicism/Strict/Transform.lean": "477d7ea0d6a8c0e438bdf1fdb29c68e79512216094ae8c8c5851b47133afe3ae",
+    "source/Classicism/Strict/Vocabulary.lean": "29fad160fd838d15256273fae84dce3cb5381cbd876e7c6ed882874da295b747",
+    "source/Classicism/Syntax/Axioms.lean": "f3dd3b51ef834f46f22e09fe34026f47120a8bc171afb190b5053c443f4a82a7",
+    "source/Classicism/Syntax/Blocks.lean": "77b4ef8fadb3646edd15d25854bac994a6eabb8bb1f51347c9dd00fce3a6ac5d",
+    "source/Classicism/Syntax/ClosedTypes.lean": "07ea7d86a0ec8faf8da218c04b9ab46c0b3b941c5772729340de705750227968",
+    "source/Classicism/Syntax/Conversion.lean": "c22fe48399811fcb0d71b37206c633749a7285291c62c2e7d786475ea6ae339e",
+    "source/Classicism/Syntax/Derivation.lean": "7cc2fd01542014d55e5a4c4a411724db7cdc076462d0de724c3530b0a8a3fc6b",
+    "source/Classicism/Syntax/Entailment.lean": "13f758dbf41a84dda7c2ae7adf6bcb9605ee114ce04dbda0efc5f1c4fbeabb1e",
+    "source/Classicism/Syntax/Normalize.lean": "1ba19ae01872f7d4357876e2e4c47e4f675cf6b733be98c1947838a1f0c94c1b",
+    "source/Classicism/Syntax/SentenceSchemas.lean": "4956cc5f79d94287bab644bff62b9eade4401a602a61e469ed0260a0007c9541",
+    "source/Classicism/Syntax/Term.lean": "ad5172acbb74eaab9307662408928b80e6ffab62e14df16f2f41c7205de13f69",
+    "source/Classicism/Syntax/Types.lean": "567828e8f9a707cf635e3b4fb30bc868a419967307613d0686d795d195606eac",
+    "source/Classicism/Syntax/Vectorize.lean": "b57548b87b70c0e9df1c0fd48a1f7b7d67d4828ab4d4286e164e7f32c4716817",
+    "source/Classicism/Syntax/VectorizeDerivable.lean": "17508c58aef3e3ad7b121f20349045d76c5e238a164cdaf96c2400255c492824",
+    "source/Classicism/Tools/Check.lean": "20fdb6525e533a835b5d561bce9529e553de2a3fc1b4f6416235da7f52da6cdf",
+    "source/Classicism/Tools/Quote.lean": "9539d77cb6894442171628c10fd8f4e1142fa8f7f99e80fac7dc1681c7eb96fe",
+    "source/Classicism/Tools/Schema.lean": "809bf8692601598451770b6422375de71cddf6e3d4cacc651b3905119fe40d2c",
+    "source/Classicism/Tools/Translate.lean": "471e8a2a7ab42f306e986af1320f0bd7f4d77dd073241e3f77234bf0fc5d6ba7",
+    "source/Classicism/Tools/TypeSystem.lean": "3db785bca90f4e2961bce8e7bde2d6bbd418e9e4c67ec99acae2251cb89e88e1",
+    "source/Mathlib/Combinatorics/Enumerative/DoubleCounting.lean": "7b2177666ad3691894e1324859c8beca8024ab70c40f109ab42af60add6b84f0",
+    "source/Mathlib/Combinatorics/Pigeonhole.lean": "5752ace39b839ca3867baf0fc439d6744d4efbe6d1346f115f47f2e1bd75f840",
+    "source/Mathlib/Order/CompleteLattice/SetLike.lean": "70a580250eb3cc81ce5caf1ee302ac9446b880e163e7609cacc7e4d5afd27429",
+    "source/Mathlib/Order/CompleteSublattice.lean": "d92bfb6b2e9ac896be11642d9d4143082705e663613cf16582d8cc9303f58ed6",
+    "source/Mathlib/Order/Heyting/Regular.lean": "dc7a83c1eb70da8d3ca703a602b6a96706f55b88f4b16cc5437746f0ac16014e",
+    "source/Mathlib/SetTheory/Descriptive/Tree.lean": "b5a8da7c04aa770c86c89c1080970098e2c86ec2113869931dfe2ffe732c40d8"
+  },
+  "source_bound_module_evidence": [
+    {
+      "module": "Classicism.Syntax.Types",
+      "fingerprint": "f920c6417fb0d73d4b6cb333a5de66a5647023a45396e3a09a0b7e943245c8cf",
+      "source_sha256": "567828e8f9a707cf635e3b4fb30bc868a419967307613d0686d795d195606eac",
+      "artifacts": {
+        ".olean": "06ab8b44ce7d7b6c90c25d4cc9e58b72ad316cb1c73e67e82c214ebc3117b126"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "6979b1e2afbc61344c3dda97ee761d074a77c7126d2c20ecd65514a90656a20b",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Syntax.Term",
+      "fingerprint": "19fcc526fbf7a5f30c841e2fb11bd4cc6c4c8c77eddfb46e22a81b795035e2d5",
+      "source_sha256": "ad5172acbb74eaab9307662408928b80e6ffab62e14df16f2f41c7205de13f69",
+      "artifacts": {
+        ".olean": "4f77c921708f52a8d1c646e52072b7a63daab23afc54007f41eb669fc9d057bc"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "6979b1e2afbc61344c3dda97ee761d074a77c7126d2c20ecd65514a90656a20b",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Syntax.Conversion",
+      "fingerprint": "98d38a7cbaf85616553560abf68733b885806aebd405d33965c1dc960da57f67",
+      "source_sha256": "c22fe48399811fcb0d71b37206c633749a7285291c62c2e7d786475ea6ae339e",
+      "artifacts": {
+        ".olean": "21dce520e2a4e2eb679fbf609ca34a6244daa22842f43fd08eaa4b9797224f6d"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "6979b1e2afbc61344c3dda97ee761d074a77c7126d2c20ecd65514a90656a20b",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Syntax.Derivation",
+      "fingerprint": "061b31ce6eb4dec06fa11b50e1a6c035783c2a4995cd0969cc86efba8ddcaddc",
+      "source_sha256": "7cc2fd01542014d55e5a4c4a411724db7cdc076462d0de724c3530b0a8a3fc6b",
+      "artifacts": {
+        ".olean": "4f72cefd18595b0c00c8587ec3ece9b1d63cff25da1e72eae28d18701c32da3f"
+      },
+      "log_sha256": "15a308202d41c8dd64911ff7aac59f6185a09aafb63e67bc4369c56d5ddf3268",
+      "provenance_sha256": "6979b1e2afbc61344c3dda97ee761d074a77c7126d2c20ecd65514a90656a20b",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Syntax.Axioms",
+      "fingerprint": "ddbcb4cf3a000255234e36d2ee2916e31b5fdb7a72f348dcefbd8c9d3ca7684a",
+      "source_sha256": "f3dd3b51ef834f46f22e09fe34026f47120a8bc171afb190b5053c443f4a82a7",
+      "artifacts": {
+        ".olean": "9119e12775e212ad694373b4138c67f18f8d297a1b655703f033e65072ccf154"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "6979b1e2afbc61344c3dda97ee761d074a77c7126d2c20ecd65514a90656a20b",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Syntax.Entailment",
+      "fingerprint": "f670afd73a6fd66b3870be6129d27860b6752cbea6867b77f897d6c298a0bb17",
+      "source_sha256": "13f758dbf41a84dda7c2ae7adf6bcb9605ee114ce04dbda0efc5f1c4fbeabb1e",
+      "artifacts": {
+        ".olean": "c561b23650a51895b766f0aaea9b30a8748f94111ded0220acc3ae1db4882b41"
+      },
+      "log_sha256": "34ff841e793e18c0c3ffe5b1639ba845b2d089a27f9ad5c0049236b15209146e",
+      "provenance_sha256": "6979b1e2afbc61344c3dda97ee761d074a77c7126d2c20ecd65514a90656a20b",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Semantics.Env",
+      "fingerprint": "7f3e4ffe9d4d890917cec6dec7d2aaf714d1012d59ca370044660890a5a783a3",
+      "source_sha256": "ca6f223a2bfe71396b3e21de852057e432cd7b289005cdacc1cc24935358e09d",
+      "artifacts": {
+        ".olean": "df18221319cd753b2acdbf634c4f6aa9fdba66f43eb4fa9e4f721d6ebdbd0e81"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "155b8be67b5f454c10bfeab3ee278b4676f6964ec0770a6f9327980226f17a7e",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Semantics.BooleanValued",
+      "fingerprint": "82117de242f33fb8e3add2314c7189125962f83abc32e72e7dd8980590882324",
+      "source_sha256": "f61196a8bd6e29ff34ad5e4e2038121cd15f273228fa130d024a6371568a69a0",
+      "artifacts": {
+        ".olean": "84e8735541a4a6a34fe43ea20deaff0da7428cd084df693e3f9b203474ca1d0c"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "cf096eec003446064e5a20a3599bf658e36907d0bc158bea820b2305a2eccaaa",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Syntax.ClosedTypes",
+      "fingerprint": "7c976b5b1656d60de70508fea43275956cf95917fab784ef3eb9d627e6c2c7fa",
+      "source_sha256": "07ea7d86a0ec8faf8da218c04b9ab46c0b3b941c5772729340de705750227968",
+      "artifacts": {
+        ".olean": "5fd0f066f66ccc53e9729b71b99a088d18df0eb101e505eeaa60a3d77fb77440"
+      },
+      "log_sha256": "756a99a38bb30ebfa07c3edf34f35e8de68631c76cad5d830bdd4ecd8eb3b459",
+      "provenance_sha256": "6979b1e2afbc61344c3dda97ee761d074a77c7126d2c20ecd65514a90656a20b",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Syntax.SentenceSchemas",
+      "fingerprint": "f29a7f058ee358e87f7c7844f03852c780119c0f21e999cc1d95af231702d159",
+      "source_sha256": "4956cc5f79d94287bab644bff62b9eade4401a602a61e469ed0260a0007c9541",
+      "artifacts": {
+        ".olean": "794e5a1f6c3b899f35d600ab080c13356ce0ecbbd7c29bf7886fe2c53368d5d5"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "78ebc730e79e58fd927b0ec0d515fec6e3b346e9173c63dd1ea4fb46ab12ac93",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityIdentityFormula",
+      "fingerprint": "163a184b6c1301835f8b51a59c2f81e7038c98218aa78cd60ba6bf7a5e8e154a",
+      "source_sha256": "2d9d41d6a5dd19467b24a66ce888db359bd97e044e4a683017942b0b2fa5ed1a",
+      "artifacts": {
+        ".olean": "8e50ee1edbe86fe297f4911c7d7d8faee70742f36b02802280c3eafeecfd40a6"
+      },
+      "log_sha256": "4daa2e35fc68ca4778af6b0ab15e0bb3d27397d75e186fe004b2792eeacd552f",
+      "provenance_sha256": "696e1ad5ef42dc13735f5ab2619d6fdc732991377198246a4f497777977c41ee",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityEvalTools",
+      "fingerprint": "6faa71afc2a8332e0b3e7f0d17868bae174c5caed5bc4e9a6fdfdd9ef01cb911",
+      "source_sha256": "a56ccb6777ba92c8a2138dab628d2e860d202a9ad4dbb1f4d1935995434067d9",
+      "artifacts": {
+        ".olean": "afb55f0589ed8b9c715a6ac2b3ec50df18bdfd8a7ff2a46464d6f3fc50ff191d"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "cf096eec003446064e5a20a3599bf658e36907d0bc158bea820b2305a2eccaaa",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityThirdOrderSyntax",
+      "fingerprint": "46db55ec84797d0bbcc8c0b1d4ac10468dfd40cd7faf998a1cc3fd57bd3897f9",
+      "source_sha256": "430a1595c9bc2b871fe14ef46be0b49b004751a78d82021102c3e7a978a9b2ee",
+      "artifacts": {
+        ".olean": "c815dc257dca817048745c2964d806ce584b1431f5422ad46899abb1494dc955"
+      },
+      "log_sha256": "6b5eb927776569c9ff1d58b2ba12ebcba926a3d46a8c6802c12f3e10224149ef",
+      "provenance_sha256": "696e1ad5ef42dc13735f5ab2619d6fdc732991377198246a4f497777977c41ee",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityThirdOrderDomains",
+      "fingerprint": "440fc0806e19cbd1b29840905fe26d2a901f0e24c3fa0393a3e06f03540284a3",
+      "source_sha256": "f4ff97cb6419e18374b54f626bf9f9f2081cbd5712e5a65253f57f75cf91839d",
+      "artifacts": {
+        ".olean": "cbb6f74580cc0de18490f6b02b0e4bd0d7d3da5a2c78b7d06b0d6613dd64e335"
+      },
+      "log_sha256": "3f33a08e9f429c9724b60732e0922da056c12a70a3be4e802de02c6c08b3ac6c",
+      "provenance_sha256": "696e1ad5ef42dc13735f5ab2619d6fdc732991377198246a4f497777977c41ee",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Order.Heyting.Regular",
+      "fingerprint": "6f882a59b6ff525681ab654e8444edd1a74d4a247811605c7d233c2903bf3230",
+      "source_sha256": "dc7a83c1eb70da8d3ca703a602b6a96706f55b88f4b16cc5437746f0ac16014e",
+      "artifacts": {
+        ".olean": "e93fdcacc7ff5761d2c9fa5c443ba7f5db8fd49a889c5abd6a75fbdc87ece247",
+        ".olean.private": "7b0f9daf6b48fcfa0768d93682ddf22f25265a0467445278bab7b6f366b799b6",
+        ".olean.server": "9c48626464e26918bbf50f8aa418e07af03f80bf35eb19f5a4ec165f25127cf6",
+        ".ir": "28e2a98fcd24079646fd3db9a134995598c0fa170652ce3511167b43b6ac2573",
+        ".ir.sig": "e1be984b2b39b8b24723791f3b51e900f236755b7dd788e0c2634eb5f3bdd3b2"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "91e2a777b24a87725078fa45574f52991787ed3df8baedd1a82f974e818e9ac0",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityRegularCompletion",
+      "fingerprint": "1fe7e700268b2de3caaf710993a9b8252d14b8ce05e5a7007b768da8c9bc4611",
+      "source_sha256": "c5016583a1f01724023cb1ec2099379fe2a365b4e306647c13bab5ee6f2a9de0",
+      "artifacts": {
+        ".olean": "7196a88a2297c4294389c4a3ec6167ac65b278112bd53e2d2db2309f237a7acf"
+      },
+      "log_sha256": "d61c18ef4c2b5d56c0650ff95b73829a5bffb14d1f4c806aba39dd293a6bd4b1",
+      "provenance_sha256": "cf096eec003446064e5a20a3599bf658e36907d0bc158bea820b2305a2eccaaa",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Order.CompleteSublattice",
+      "fingerprint": "15319fbd85fac697b7996286a7e2c93d239c9605b42ce3ba9f030ae069c0e07d",
+      "source_sha256": "d92bfb6b2e9ac896be11642d9d4143082705e663613cf16582d8cc9303f58ed6",
+      "artifacts": {
+        ".olean": "8a469b184e97753cf7369d0335a7365ba229a4daf84942346a8729c254fc754f",
+        ".olean.private": "054ea51452e732fe210752db391fc3b81e0f6001124e7d4bb88f466905f53885",
+        ".olean.server": "4dbd5e8795f0002a71c7838b70bf9b4e6cc6f0c16a7b597a2cc07d3f80b4f275",
+        ".ir": "b6aeafa3d23ba0948f79792ee59ce43079a85b17102de1d6df866a9eddf9c8f2",
+        ".ir.sig": "991e9c61605bef4c0148d00aab3daab66b3cbfa34baf86a595a3097fc8ee43c0"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "cf096eec003446064e5a20a3599bf658e36907d0bc158bea820b2305a2eccaaa",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Order.CompleteLattice.SetLike",
+      "fingerprint": "5cbeda938d64cafc56eb358fea5737206ca0dae9f795383b32ac3be5fb95606e",
+      "source_sha256": "70a580250eb3cc81ce5caf1ee302ac9446b880e163e7609cacc7e4d5afd27429",
+      "artifacts": {
+        ".olean": "622df64ec556be5d7637fb9289367dc854f3199f703a09000c8f5cac5d632a45",
+        ".olean.private": "59feacdf451e072238df42bf9304bb68c7f6fdc55159b5923e36adb026d62ed8",
+        ".olean.server": "976a32fa621b91051707fd3c2539e4bbc1ed75940aa3f9120f1c0f0631182d33",
+        ".ir": "5248236c6ab3e65df7b61191a7b49e4f2a83d027b1cdce55ee001fdbde37e0bf",
+        ".ir.sig": "f2f76f6c3c5d05b5322245c3699e2a22f9c1e7e80242ae01ad3078b8122f3707"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "cf096eec003446064e5a20a3599bf658e36907d0bc158bea820b2305a2eccaaa",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Mathlib.SetTheory.Descriptive.Tree",
+      "fingerprint": "1c876624a54a4529f3f1f53127269be2b4a5c92c2f8b32653f6dda3c9638933a",
+      "source_sha256": "b5a8da7c04aa770c86c89c1080970098e2c86ec2113869931dfe2ffe732c40d8",
+      "artifacts": {
+        ".olean": "b91a0b018302684ce1e4f1a6a6b7c19f38bc0d30f29cc1bdd7ef8f9e771ce7c0",
+        ".olean.private": "14088c775c035ea763fb001efee142616d98d036810c369d3bd87144ca3e20c2",
+        ".olean.server": "cbbb6f7f1b34c2343f626c45d1134bec0c661a7057006a19671a51063c2fd107",
+        ".ir": "4dca9ebab730235ecc26ec197fc60cb8918a8dfec2f36c669d9b5655263a468e",
+        ".ir.sig": "5411cdbdca375953f66a40a0d7adc2e68360465686892b72631a531f9e452176"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "cf096eec003446064e5a20a3599bf658e36907d0bc158bea820b2305a2eccaaa",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityJechShelahTrees",
+      "fingerprint": "b1c245ac29ba75fbe1dadf3aabd09cd4ebbcd48c1409c618257972338cbd932f",
+      "source_sha256": "372ab28d11ade4e66a5ac96e2e21e312502cc4e3dbff63cc30503e8b9b4fb48b",
+      "artifacts": {
+        ".olean": "9da3247dceabec97b856fd2c81d2ee1bae41c2a884d174d58d629d63cba75ca0"
+      },
+      "log_sha256": "4028a09e6cdb28e28bbc53ed4c6d6b43f79a54c5d572c436cd5053cee3632eb8",
+      "provenance_sha256": "cf096eec003446064e5a20a3599bf658e36907d0bc158bea820b2305a2eccaaa",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityJechShelahEnumeration",
+      "fingerprint": "621f94da9f4ec4a327c4508a4e642b0ed924014d0c76ae562acefce385b0e153",
+      "source_sha256": "412a62c28acc4ba1bb1fdafa872108845972cb4d5985326f18079f7c14845751",
+      "artifacts": {
+        ".olean": "7de8a4aa95080a7a996ae23d20e9d97ffb0c4be35a0562aec0473d16e0d1ab43"
+      },
+      "log_sha256": "394fba826249c51cabb6263d64f002f6fcb855d4b4535e305f84f46fca1e1ae6",
+      "provenance_sha256": "cf096eec003446064e5a20a3599bf658e36907d0bc158bea820b2305a2eccaaa",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityWellOrder",
+      "fingerprint": "b56ac60163b4da73a634059f81d0f62aee4b2c3430126185061fd836671a5cd1",
+      "source_sha256": "3035a223f88cf90e263b3b115cc70b12d8a850d59cf80cffd252044f7df86110",
+      "artifacts": {
+        ".olean": "8253fa376404bb355010ef1eab1b407754117a4dc33afd2dbef39d23ab54efbd"
+      },
+      "log_sha256": "12c82404a06121bb7549865bc8c02fa394009fa03daa274aada235bd314ef5ef",
+      "provenance_sha256": "cf096eec003446064e5a20a3599bf658e36907d0bc158bea820b2305a2eccaaa",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityCountableGenerator",
+      "fingerprint": "6a51209e75e45b56ad7f4ddf68455bbae77bb562f18ea8e512f32c8ddc7e9d66",
+      "source_sha256": "ba85552f62386e3f13d36fca45eb897ad03bad69d7ddbf0c14e4ffca62dc781e",
+      "artifacts": {
+        ".olean": "8e4067aeb71e7953fd3cf7de6a4426626a9737b90dc7d596ad8826d7c38742cc"
+      },
+      "log_sha256": "1cf9b2670aef8ababe4769e552f5c97c35aa5937b1c9b4625c5f749a0f87d2ae",
+      "provenance_sha256": "cf096eec003446064e5a20a3599bf658e36907d0bc158bea820b2305a2eccaaa",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityJechShelahCylinders",
+      "fingerprint": "7cb3a8a63dd48200eb925824206baea2fabee5577897b9328d6520510a769522",
+      "source_sha256": "42025f166bb2c80378dd13b96e168152a5554a0376323eeb407d4f1b87afcec7",
+      "artifacts": {
+        ".olean": "aa7df57dbbcea19dd22b9a706bb437c91f5007042943d130799f1979dce32029"
+      },
+      "log_sha256": "55eae364ff2908afdb4d057833ff6bcd1120b8158bceda4c11c893641e15d562",
+      "provenance_sha256": "cf096eec003446064e5a20a3599bf658e36907d0bc158bea820b2305a2eccaaa",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityJechShelahIndexedGenerators",
+      "fingerprint": "7fb670a0b6948b65f1e2182e1bd7df156c35d9d6e9b4ff9b30fa546e2200c748",
+      "source_sha256": "461eda817eabd9745369d15665fa2b847fdac0be77a9ccb991ab2b226d4e2ccf",
+      "artifacts": {
+        ".olean": "205fe3aca8fccadd73e590418a03bb0d6c0d32f6e12de11280fd25b9f3c58d9d"
+      },
+      "log_sha256": "4117d78f59ab7eed5226d2d281c914a83b87ca4f92853dfbb32c583ca8831797",
+      "provenance_sha256": "cf096eec003446064e5a20a3599bf658e36907d0bc158bea820b2305a2eccaaa",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicitySlalomInvariance",
+      "fingerprint": "d2be5ba389021bb5a33ef4ef58a584b8c3747b25900f16b47e16a285847434b6",
+      "source_sha256": "94115d4f32cc457940b64df679fd4d79bce4827f35c89eb19ca854d30b7d9582",
+      "artifacts": {
+        ".olean": "6644f48cc6482b76f67c714b37599384614018bc5ef4c9e283213e75ff49a3c5"
+      },
+      "log_sha256": "a2be8910981cdd7cac5897ba13db100a861e7428bdd0420db5e50d4b5d958cd3",
+      "provenance_sha256": "cf096eec003446064e5a20a3599bf658e36907d0bc158bea820b2305a2eccaaa",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityRigidTransport",
+      "fingerprint": "bf8ec618e8338db52594c314518efa5f9040188966cd3ff301767fcc0275927a",
+      "source_sha256": "bc0586cb57ba140534543960ba358971eecb7b6acd4efb809da6256b596671a0",
+      "artifacts": {
+        ".olean": "e7121bd36e8bd4d5ec63e59156178a4e96cb01133d1f2e83e7bf1a4f9b4cc53a"
+      },
+      "log_sha256": "d44876db7b6eff046c4271fa0ddd1b44e86d322db9aa63935e5b5742aa396e10",
+      "provenance_sha256": "cf096eec003446064e5a20a3599bf658e36907d0bc158bea820b2305a2eccaaa",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityJechShelahRigidityCriterion",
+      "fingerprint": "8a32daf92355615ce94bff231eb218cea70fb6d1cb7e26f9916dce146a9fb0ad",
+      "source_sha256": "22861b973e08c473b2cbe4ab03c22213c7dbae96e0a384a14f4c04d4de2cb63a",
+      "artifacts": {
+        ".olean": "99c04976cf513b41106b753201105fa04cd9c3049dd3c1046c6eb998fc55d762"
+      },
+      "log_sha256": "fbe80fecebf62818d633299385598da9c335706103a2d66f2fe5b7f3e8be775f",
+      "provenance_sha256": "cf096eec003446064e5a20a3599bf658e36907d0bc158bea820b2305a2eccaaa",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityJechShelahIndexCoding",
+      "fingerprint": "f49e027a3fdb7513fa385eac40a71c70a668da069466a7ae1c6fc5e252169f86",
+      "source_sha256": "c2c50f09dace289dd2fb09988743939136ef07c4b5d7cf8bbd1a0d19355155c2",
+      "artifacts": {
+        ".olean": "2bd7737127d7ef3240c6e00f7e09c9ba42288d236e9ce7560d32b7674c8905fd"
+      },
+      "log_sha256": "fb326198adff7863527679ddb23206ab3ba0b7be4d1d2405e443cae4c0494ba0",
+      "provenance_sha256": "cf096eec003446064e5a20a3599bf658e36907d0bc158bea820b2305a2eccaaa",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityThirdOrderArithmetic",
+      "fingerprint": "1806cc1df65a8f47d4139292bf534542c3d6ba84ae40a271e3cfa8ac6e2bb378",
+      "source_sha256": "aefcec4f2b62bfcdf76e7aea406aa5825bc03eaa60b1de8c51087bb18de76c2a",
+      "artifacts": {
+        ".olean": "1046666c9581772e65cdc864d68bb8de5d32ac030f632a434eb65847d2239c88"
+      },
+      "log_sha256": "b0701d0a74107a4e3843b1ab673fbed24ec2b82c597fda4f740d186841b74b19",
+      "provenance_sha256": "96d2ef925f3703943f4af3455991e21cfc689a28db43b8d3fbd239988665caa0",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityThirdOrderRegular",
+      "fingerprint": "960bfa15aed5c692914d59a49c7045a11abdb64825b0bfdc40f7dbc64ec48541",
+      "source_sha256": "06fcdd7cd7c279949ecb7883a7f2144b3f807088d74754e1661a52e11510e897",
+      "artifacts": {
+        ".olean": "66dd4d918bb9426449e852977db94b43a658c49739c938ab2b19b2439fbbc445"
+      },
+      "log_sha256": "3d05cf0741514896b6fd78e3401cbdf201c94d1cd9deb3a6fcb35cdb37f9fdc5",
+      "provenance_sha256": "96d2ef925f3703943f4af3455991e21cfc689a28db43b8d3fbd239988665caa0",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityJechShelahFusion",
+      "fingerprint": "3c0d520832c005f60f7a0569ca92dc88504dfc45a5c128e7db5ffece4b749746",
+      "source_sha256": "9c020e86efde329ca1ad6b753aac8fbfe2f7675b559117f43a5a1266d5213163",
+      "artifacts": {
+        ".olean": "aad46e4fd33e317ebfe25019410d32c3b2e3ad602ae9f4eafbe6fa2b2e1440bf"
+      },
+      "log_sha256": "b21dc5ad2ee868236135470e92b6a37e278335c31536919ae4040aacd652b605",
+      "provenance_sha256": "cf096eec003446064e5a20a3599bf658e36907d0bc158bea820b2305a2eccaaa",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityJechShelahAmalgamation",
+      "fingerprint": "98844876ee3edd1b0634f3bede38e414b4d6895f3138c8621101de384629f935",
+      "source_sha256": "0f0682708a2f91a97197d7a034776ac84f8f4719d6597ec5b50603929a50735a",
+      "artifacts": {
+        ".olean": "5fba06cfede1bd6db69224389902db60341d8d6afb3b19869d11621ad2b23232"
+      },
+      "log_sha256": "a70e0ba041aa80045a0278bd55fe2ab267788119a90b89df3bdefdbb09b58d34",
+      "provenance_sha256": "cf096eec003446064e5a20a3599bf658e36907d0bc158bea820b2305a2eccaaa",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityJechShelahFiniteRefinement",
+      "fingerprint": "fabfe3b268564943663255b321859933f39b16d314e08080db929e2c1dcb7b91",
+      "source_sha256": "e2c567beffd0d93008bcc4085ce7282d33beace717fb1f424beac62216a3cd4a",
+      "artifacts": {
+        ".olean": "2108213b7f54d40b2263f89d1ae33ab9f71f820e4f1d42eaeb842a30b09cb997"
+      },
+      "log_sha256": "d185ef35ea297d9fad8b6083942583a9ba832efbd3706f679936f8df2d54f104",
+      "provenance_sha256": "cf096eec003446064e5a20a3599bf658e36907d0bc158bea820b2305a2eccaaa",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Combinatorics.Enumerative.DoubleCounting",
+      "fingerprint": "9367d8ad0651ba277df23a1f144c3596ab0f62bfc82e1a57c25510c8182a37a6",
+      "source_sha256": "7b2177666ad3691894e1324859c8beca8024ab70c40f109ab42af60add6b84f0",
+      "artifacts": {
+        ".olean": "c4ada099e2f70d889ccb4ac50ab245e072548ffea6d9e75f5ffd854d34a89a47",
+        ".olean.private": "f3d8498a8e934758681d7d1064dd86dff467c3df5008797a81a0bd6a39cce2d2",
+        ".olean.server": "64344ebf29583bbc2782cdbbb28c11051cb8ce29d006c970348907de62bbd1bc",
+        ".ir": "d1a8039db2cb51872291814ea614c9f679a6c9370ff66f65a2f7b53c949ceaf4",
+        ".ir.sig": "99d894524535e3545dabd304e049a95379c8ecb4bb3b0ccb3bddbd21ef582669"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "cf096eec003446064e5a20a3599bf658e36907d0bc158bea820b2305a2eccaaa",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Mathlib.Combinatorics.Pigeonhole",
+      "fingerprint": "a1de03ab09bdef8fc89f1a433797f309a1f2da5669e8176cb97414af7b23d156",
+      "source_sha256": "5752ace39b839ca3867baf0fc439d6744d4efbe6d1346f115f47f2e1bd75f840",
+      "artifacts": {
+        ".olean": "bf0b7ce517dcd0761e2d83f021e3bf1be463b8b0191f5991634887209076b606",
+        ".olean.private": "a66d342add420388018648ae548e207176d673ff17d2d1d51224eefc043c2fc7",
+        ".olean.server": "7af98d2a800cc677136d68a63af919d67e1f2cc6a270711ec631524c0437ff32",
+        ".ir": "f5f16fe65b140aea63064eb5f4cad1472432b78b88148f009c9e768d9c5b2613",
+        ".ir.sig": "0b95aaf7c569f6f4d1f04e28b75bb0ece49811618b5110852a9749db539a7d37"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "cf096eec003446064e5a20a3599bf658e36907d0bc158bea820b2305a2eccaaa",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicitySlalomThinning",
+      "fingerprint": "6cbc9ef3e04126060ecf32929141bde97cdf5edba712f14d99776abed73273ba",
+      "source_sha256": "22e77ba07eaee37ca622586767c4d4ade97b5966a9769e3554184f4e6d8dd4c0",
+      "artifacts": {
+        ".olean": "bb489e0af019af7f9cfc305d375df2d74d69ce5bdddb8015777b2826df593dfb"
+      },
+      "log_sha256": "c1d8289b1fa8539dee9a2be35426310c5fce6378c6e03957ec8299e4cbab2af9",
+      "provenance_sha256": "cf096eec003446064e5a20a3599bf658e36907d0bc158bea820b2305a2eccaaa",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityJechShelahLocalStage",
+      "fingerprint": "347594d4271f64545d11853b3c26ac77ab08460415395104ecc3b02a72742492",
+      "source_sha256": "8ccecf4cbe5509e5c6d29aa26f50fde1fb617755284d1829fd7d4bfec77f3c75",
+      "artifacts": {
+        ".olean": "93a2200a4d0823a277a4d4df2546607076ad60c820da27b7c6c03d62685e41cc"
+      },
+      "log_sha256": "375c0a1fedb36a37e93ca5fb6713c842550304a5beaf7816da5667bd9b489ff2",
+      "provenance_sha256": "cf096eec003446064e5a20a3599bf658e36907d0bc158bea820b2305a2eccaaa",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicitySlalomLimit",
+      "fingerprint": "b0d0d919b59b56182b737d583e4acc5b27b6a74e9f0c429c1915277f29268eaf",
+      "source_sha256": "e321806b1bc268bcfd98b1bf406abed775673aefcd0478a5d066f5bb8baa2745",
+      "artifacts": {
+        ".olean": "6d20567cf53be689dfef30f49230f958f2c3c9b23b92ba727762e1fb4c2561ef"
+      },
+      "log_sha256": "a334351aa82196b0d479a9c775a36a895dcd1940a894fe77baad691a1782c043",
+      "provenance_sha256": "cf096eec003446064e5a20a3599bf658e36907d0bc158bea820b2305a2eccaaa",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityJechShelahBranch",
+      "fingerprint": "0750ed5ae3a244e66c8ef6fa92a6d30659a2121fa7830454fbdab3e712137bd0",
+      "source_sha256": "4f09088861c8cf56ca3aea6d186e04763c1edf74e587f13c157550638208faac",
+      "artifacts": {
+        ".olean": "5917aeb612458b7f232fef5f3a62709f429d061d049f7ee4c3de3393923fa274"
+      },
+      "log_sha256": "5fcd9672424fccefe298b7a924813dc380761f6f36b06124916095228ff1a415",
+      "provenance_sha256": "cf096eec003446064e5a20a3599bf658e36907d0bc158bea820b2305a2eccaaa",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityJechShelahLocalFusion",
+      "fingerprint": "e389be9407604705353967c781089e901fb4165990330a9d615b2ebf2fcc54fe",
+      "source_sha256": "3707fecc7829f38c86998c3324c411a6542dac8d1152fe5d8b8242a1ffecf035",
+      "artifacts": {
+        ".olean": "2076b538e7c3f26a4cef8bb73c63826347f41a291e7c36f84964d9bf7b5a0159"
+      },
+      "log_sha256": "bf019086cd9c36dc5ceead9388c33e517737265cd4c72dcebb5a665b7205e1a1",
+      "provenance_sha256": "cf096eec003446064e5a20a3599bf658e36907d0bc158bea820b2305a2eccaaa",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityThirdOrderSelection",
+      "fingerprint": "997bcfaa7c0462f8bb14cbeb710b97a95a602e3e5efa3a7d8a8bde00bded805e",
+      "source_sha256": "4245470d83f639f6bed29c4b63f3cf191227be8277590924f2faf38ddb274e6a",
+      "artifacts": {
+        ".olean": "271054fb57606467510122524513c0c6540bc4a49846e9d777127cd5313b154f"
+      },
+      "log_sha256": "93cede39dc123e102b7fb61416e477ff5435d0f3a98e20523ac9f14474233898",
+      "provenance_sha256": "b808abf8d7ccb19175a2ee6bddf83ecffd4b21fdd10822662f2bff971cefda7d",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityThirdOrderBridge",
+      "fingerprint": "a02aa9aca50ce113345557ef42a2e69ba3e7043064de71faed7369af77bf228d",
+      "source_sha256": "35aabc0bfbbf78aefeec548fca2b34e694489758c07ec7a54a4d662a0dca3598",
+      "artifacts": {
+        ".olean": "ed4258db198eb7a5db26def6f1fdb405156280378fc8127ccc76b3e47c3f7f35"
+      },
+      "log_sha256": "b243201af36b973b0b6883fbeb59146e87cae3e4789ed298633dcc07a9128669",
+      "provenance_sha256": "82319b368f8e3f5ed40175ef4565a673cab5bca5ea5c801f5c67ad354f2e69b6",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Semantics.BooleanValuedSoundness",
+      "fingerprint": "223ee711f9396ea0efe92096bf319ef100cd4b64f3853c9263747f671f86c81f",
+      "source_sha256": "3ffde61f91e9bcbb9aa804cf46621466c89b8829a816f48db0fa7f3cfe75cdf7",
+      "artifacts": {
+        ".olean": "96d14a85b93069af7061e46b5557cbf3ab1fda9ff70f2285e7eb19dd65e0ff0a"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "cf096eec003446064e5a20a3599bf658e36907d0bc158bea820b2305a2eccaaa",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Core",
+      "fingerprint": "106263f603fbfb12c1dbffa3c2cf0eea76f524ef90107bbd8cb3da5bc12c1ff6",
+      "source_sha256": "ed0b1189f3fe3f02ce7011058273c0915bb511e5fd30ae33340e7ae0c4afb81d",
+      "artifacts": {
+        ".olean": "4096b1bd17dd536827fe51c1c73322fc9aab46bb526e2a52047b47aff305efcd"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Paper",
+      "fingerprint": "aaa8b005d16eaf5430deb1709123bd2580dad38978e3ce7d05aa6d7620b865ee",
+      "source_sha256": "3348a9c2bf786ef15a9a2a0341dce82e9a419e81a4c7b7486d8c8cba8fbdc895",
+      "artifacts": {
+        ".olean": "4e19b4faa931dfd3ccfce2cd899744dabf84bd9200738e628b5bf3b7fce52f25"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Equivalence",
+      "fingerprint": "c15347e4764c0cd4c37fb83dc17821c459c2f019c71ff77b7dd5418f14ca25fa",
+      "source_sha256": "257006775f36a2eacca652360f7ff8fb9dc403b2b0f4d71ff6a5543e5a939a76",
+      "artifacts": {
+        ".olean": "0d1bb97d26f635a7dbcd19fa367c8d9a7048ca8942cc8b7ac06afb80ab88023d"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Booleanism",
+      "fingerprint": "f911cf2a5fb044ae79d2a327477c43cb9a7123862daf4f0a13de28cb9b114b0a",
+      "source_sha256": "0537132563704170d7ec4dc14755690639a9a784428650fa7bf04067acc0628f",
+      "artifacts": {
+        ".olean": "98b8c05a117cc308217d8f9fe40833975b46c80582f0309f291f99ca031efefd"
+      },
+      "log_sha256": "891b166d5088272728eb58eef586f608f31ab6b1f5aac370dabc613255d15f58",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Modal",
+      "fingerprint": "aeb651c0d0142f7a25017873ee1f4be90965b19e415ec41b66e58440c7c19d55",
+      "source_sha256": "7706449a7246e0be0772a33dcda61ab010686bf5bd64c45017425bf39ed0cf42",
+      "artifacts": {
+        ".olean": "57d01043696149874d7a869f019589434bf50ba324cd70d1507348306a8bd22a"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Order",
+      "fingerprint": "9edb507c8661fe6508eaaebb576f8bdc6977fb69bf17a2bf85a5a820dd6dbaa9",
+      "source_sha256": "4755de0b5eb272e541ce89e84078c4d80c3ae9a332a6910b395c73b78a2b4730",
+      "artifacts": {
+        ".olean": "4c7788e753989740fdb5f59938f8013bb629477369196586e15efab2d1ff5ce8"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Pointwise",
+      "fingerprint": "729e1d6e9b2ee057cf9887f1f9c08f1b7a8df301e2ab21f010105588f37e548c",
+      "source_sha256": "78b858a9d33feb587976879190bdf739afdc0e564c4e6dae5508f8f2c5e15a16",
+      "artifacts": {
+        ".olean": "03d01c38b61701d9f193fe0abd174ebc08a63a60213701a0ccbb3823b3f3cbc0"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Comprehension",
+      "fingerprint": "a9852412a839671a35e9e0896f46b99a2bde4b234ad60eb3fc2c83031307c89d",
+      "source_sha256": "570435f620ec40a8c0f359ce546c26933cf3acfc6e7c8da81fa805170f9ab844",
+      "artifacts": {
+        ".olean": "813cf9f39a4e486f9906dd6970d8415f635930a982f8e01a96d08ca29cca9275"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Lattice",
+      "fingerprint": "c368689dd8447ea18e0e6f2ec1e4b7ad2c3c7edda0966c048821360eb1c8a18a",
+      "source_sha256": "43231f5d30bab05bc0d11927e1ce09f17ec384875e0aeb1cb72335e36f046070",
+      "artifacts": {
+        ".olean": "277da454f009ca7f6353f6463dfcf355a405b20c70a33a27b0717ba0771abeb9"
+      },
+      "log_sha256": "e228c7ea81316c0e69b81ee289ae99119e73107e3975b1b5ee8eaf14f9176e95",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Principles.Base",
+      "fingerprint": "ab4f732bc7258e157d3fc29f141f434ac9ab5938638881f7155a997f80a7f0e8",
+      "source_sha256": "d0c930dafb5decf6e747b5a05215cbff099d4efd9e69c607f01a54d5c5a7b96a",
+      "artifacts": {
+        ".olean": "20e49d1a2b8376812d19aefbe611bad129d3d08459df5944869bce4ccd6701f1"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Principles.Coarse",
+      "fingerprint": "76eab9f7358a051bbdddec8ad1a302e1345c81f4ab97286478089a63d093bcb6",
+      "source_sha256": "5c3aedc0a4117e7c214d186b384c42b8da6a17906fb7a76a75cb625f85b0a9b2",
+      "artifacts": {
+        ".olean": "c3458dd19b42db171953accc7786ccff05b7f4b526f911d0b95d68ce2d7409a2"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Principles.Extensionality",
+      "fingerprint": "9025e1c4813cf45bef21ac78a21d16336be645f0884d4d1649bd254136f00691",
+      "source_sha256": "aa1929fee457845f79c2511b4df86462660ed1c68c3f85b5af8636a88a8f15e8",
+      "artifacts": {
+        ".olean": "a0e9e70fef6b3fc46f7f2e60d8f4e2885acb0f75e7932c4f4bda4b94a0c2a1e4"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Cardinality",
+      "fingerprint": "d354798138ba7b815909ac80ca8a657201589e1a2eb24574d3b10fa89800aad0",
+      "source_sha256": "5e627927356fc561dfd5bfacd9935c558c7760678df56c0158820a7e8626703f",
+      "artifacts": {
+        ".olean": "8cf1865ab3aa041a124ca962c33e049fa16b0ef84b346833bf2ba918b388a515"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Principles.Lattice",
+      "fingerprint": "3d83865391146079266ebe776437ddc36702b3cb58e6696f765f58d1d6251481",
+      "source_sha256": "95a7c96bd3f2c0b131b59412ee36c288b9f12a772075e8f6ec83d8177f6ffd60",
+      "artifacts": {
+        ".olean": "6bb64bf3b5e1623438e4a54aa99e7d8113e81f314ee929e518622bdedaba1d14"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Principles.Instances",
+      "fingerprint": "dfc5c55bc0561b807cb84a4071560636c26decf4c17c1ebe1a0dea22de341f72",
+      "source_sha256": "53835a72c249e8f75246e6b42331d205b8bec73a8c03bc2d1ad48db37a88e47e",
+      "artifacts": {
+        ".olean": "e6d465b99bcace775f20593aab1452224ed141f7354dec32581a28d5a602bbfc"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Principles.Comprehension",
+      "fingerprint": "0806ac413a479f8402a50834da9de38bd9d240531e2f4939100d2c6c36522648",
+      "source_sha256": "7d47cbb2fcbf444bd1e708ceeb9d007c1be955b41346b2adf14f5613ec7e2537",
+      "artifacts": {
+        ".olean": "500bbefccaf9aefc0f12194986abf67df699eac76bda2f96e823fd6382e36230"
+      },
+      "log_sha256": "b72b72633d9759643d2feaa4874aeff786348ba6ffd5a86b8586b8b67ee68c54",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Principles.Choice",
+      "fingerprint": "878f21beb4ceff306504037b182cbc9f7550e03d97906b3a0944faf0a5feda3a",
+      "source_sha256": "a8f7e35f1a11805edc2b116b6af002bd5b1d0708b93aaea16781cff519687319",
+      "artifacts": {
+        ".olean": "f1b45329aa59ba7c22d957cac5caf99a0ffb30a126e54ebd05a6d52e1a689b0f"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Principles.Infinity",
+      "fingerprint": "23a54de0b017227984238e63c2e0f9dbcf161c882b26c0b5b3dc96df6b80cf05",
+      "source_sha256": "9c901565490f92a5a6b18ac1cf690c756bb5984e105e885614b87dcc00db027f",
+      "artifacts": {
+        ".olean": "04665c2ef5c822fdedeb15d1a219af3c744d4845d1a3ad8de78e3b347293e015"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Principles.Schematic",
+      "fingerprint": "d27de11d8d474df8c930f8cd67247ee53d91a5a5e599871db5fee77a22faab75",
+      "source_sha256": "f6e0fe85d4c7f95deb80b98e19cf10e292ac98d87a5c2caec2ddcb9920e677ee",
+      "artifacts": {
+        ".olean": "61804af833b257357059659da4954fc4b710aeb3c04cbc527c1b114c7fbb6f3f"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Principles",
+      "fingerprint": "90ac24ea6a08c605e49932af32624ff01f216ad7e7d49d18939526b521630593",
+      "source_sha256": "747fc5fbde92a7dd1432aaaafee00437398594ae06dbc8ec2040690fae443049",
+      "artifacts": {
+        ".olean": "c8fb4965d740ffdbf260a245b9c1e59e7beff90e5a42191aff31828c6661d4a1"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Records.Coarse",
+      "fingerprint": "e503d7f7fb5c97d55b42b9373b4ca421a21053cb14bf9476e0461e2517861b3a",
+      "source_sha256": "a3a6e0bc0120eecda1097efc51cd29c0d95daa15b81535f36d7dc6dd1d434882",
+      "artifacts": {
+        ".olean": "ec6e4254a53cbc4d3ac84814238493d6b25b2854ef97ca47427f8bfec276863b"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Records.Extensionality",
+      "fingerprint": "5278848a501c9d394d348e1f8e2a7c67647e2d7517c11a61cfcec6c8cd945595",
+      "source_sha256": "0a1d58485d6e8b0b84d68d973027dd621394ee0c4d1579f08746f10558f0a34a",
+      "artifacts": {
+        ".olean": "2be66ae68300e8c156d0e8028e922913b1650a9fca182aa2a34ff45ca3ffc836"
+      },
+      "log_sha256": "dddab7e33bd822cf79a7b1631184018eb8f6fa0f6081c1af1a5d80f5100ddc46",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Records.Comprehension",
+      "fingerprint": "bf24680b17f62ba015aced980ce9229c0f35e07fded08e07d507318d0eb7541f",
+      "source_sha256": "552f1c10d3b02f5cae87392141616f5de2200655837e07ba9b367e7bacfd77d7",
+      "artifacts": {
+        ".olean": "162be8608efc02a35b68531d97c48518b3bfd4900c1bc779de0c0ead0bb77324"
+      },
+      "log_sha256": "29e41456041d985491ace0339aa3eb39d7ff2001e17ad19470e869de1d304478",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Records.Lattice",
+      "fingerprint": "72ccff7b7955700d02d2036f14c48af1c8a09aabed9290c029cbb8e4211ac2f0",
+      "source_sha256": "e5adae1ce94a42f477aa629e4f5b739aa78bf1f7a3abf785d591f4d3a62690f4",
+      "artifacts": {
+        ".olean": "ce145b63eddc8c7249d52c201ef10f17d39e8330f4ae4563a8405248813ea755"
+      },
+      "log_sha256": "0c54954e53dc4787bdf8a5cba764dd94e64686c61f5a08e0f76ca46933fd5aaf",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Tools.Check",
+      "fingerprint": "776b3300da237e0e891286dca86ac835286aa01dbcafb42feeb627614b644a1e",
+      "source_sha256": "20fdb6525e533a835b5d561bce9529e553de2a3fc1b4f6416235da7f52da6cdf",
+      "artifacts": {
+        ".olean": "9e6827329bb5bf88147f2bdbddb4b944bf721ea1538eb3a42f5e7d36c3921ee1"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Tools.TypeSystem",
+      "fingerprint": "7d43a0f804e634b04dfb5d6048b2d32c7608b6aedab9feebbc25cdb158a9a6a8",
+      "source_sha256": "3db785bca90f4e2961bce8e7bde2d6bbd418e9e4c67ec99acae2251cb89e88e1",
+      "artifacts": {
+        ".olean": "39ffc333d68335ca334761d681010072b46a3fbb0e1ce383e1bfcbb6f61e37be"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Semantics.Denotation",
+      "fingerprint": "47123ccfe2c8a40639f380eaad25c1f45203bef28fc73689bea70efe1e17a4aa",
+      "source_sha256": "2103000e1da2b0ce5413fa71820b7cd579bf562b7dd50d704e058b5cda0c7925",
+      "artifacts": {
+        ".olean": "8943e49d76dab4523282e63d6b3871f5b027aa79b606a885b7f39b6c48a5152c"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Identities",
+      "fingerprint": "bd7da817f31150b2fce200b73d4dc1c0f233449954575d6c092805356a7c39e3",
+      "source_sha256": "3629e17eb7ebf28d47f0d1a2450886bec05b39bf73ff52eff99a88a12579c3b3",
+      "artifacts": {
+        ".olean": "4aa11b19a80924f3a86578537e0f8438ac21feb4d1c04c69a311204131a331db"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Strict.Axiomatization",
+      "fingerprint": "75d10f5cda5e4490d3c071b0df90ab6e993e1f8b49ef44c23385bbf4384cd1e4",
+      "source_sha256": "fa26c38979d08d22db2c14d999bd3c5454170e00e72f2781cf2cfa28910ed533",
+      "artifacts": {
+        ".olean": "e8e720586d8c63bf6e3d86e62ed138d0d883cc61ce1b65fddf4ec82e9fc98321"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Strict.Algebra",
+      "fingerprint": "3b91a9c00818b2ab297ac98f7f9ef7d1297ea71c3211927256dde821960cec74",
+      "source_sha256": "d4cb80885b688ee323e6f59b084568746247f751986fe2ea7efd53cb4e6969a9",
+      "artifacts": {
+        ".olean": "4fbef3b460d57f020ed3fdc74f992f1f1dc25707acf9e2ce0da3d4922bfeae6e"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Strict.Vocabulary",
+      "fingerprint": "dbfb4eade20ad9ccca5971fbbf339a69ddfd38ba620005e9fda008b18a4769b3",
+      "source_sha256": "29fad160fd838d15256273fae84dce3cb5381cbd876e7c6ed882874da295b747",
+      "artifacts": {
+        ".olean": "6ece3edca732b902bec9189727c0453f0d07537edf454651cf470280d1117ba2"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Strict.Tautology",
+      "fingerprint": "e6416ae6f402e7a857dd4e72529ee86528267661adc73dffcc1d3c113beba1b6",
+      "source_sha256": "edc88bb68c00443a3c309ad01da9c31e1325bc8d63bf0a2ba9392c43eebbadfe",
+      "artifacts": {
+        ".olean": "f4f1dd7c74fcfed307820e209bf59a9776a0a053ee909946d491b1d9f25352ae"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Strict.Quantifier",
+      "fingerprint": "1d77e224df5545bebf5ee4b686f7320a1a7e4b0d8133a9a477beb402f41ba4a8",
+      "source_sha256": "688f1a0f560a30f12fd4b4b6663fb7583fac374d9bd7591a55943bbb1b4695fa",
+      "artifacts": {
+        ".olean": "12fb1d4603c8a65ac9dcfcf5593512cc77c05019c9daf612b7a36c5a2e6bb2c7"
+      },
+      "log_sha256": "393bf396f561cf825aa99cc73cb0deb801b6bcd530fb24fbcff9ce6c2f831602",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Strict.Rules",
+      "fingerprint": "210698fe0c53557f2ce0d2191ea61a830703dd894f4a23317c286200b9d22c06",
+      "source_sha256": "496f3272610ad5dac44de1f90bd394d38098d44f5c8e51fcc30e835e415a8609",
+      "artifacts": {
+        ".olean": "50b34fb97ae0d75ae892b240a4d2cf030de5e8e6dafffc4177c1a1aec4d272e1"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Strict.Primitives",
+      "fingerprint": "b838d093e66eb7e33b71039ae15168a069ca3b6899d9e9628ed698b19207208d",
+      "source_sha256": "b0875be460cec24411c21b6f5929f9c4f68485e6600317f1530adb0a20abd69b",
+      "artifacts": {
+        ".olean": "17cadc09c128c7d3a4bda4e889639534a90944380bf44524d9ebaccc9df74c79"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Strict.Transform",
+      "fingerprint": "edbee0763bf36f5f496a5401c2abd79e18f009a8126625af55c6274a919abce8",
+      "source_sha256": "477d7ea0d6a8c0e438bdf1fdb29c68e79512216094ae8c8c5851b47133afe3ae",
+      "artifacts": {
+        ".olean": "d50f145784bdaa4c9cf53102f0da3ea2728ac28414017dc76510601e5defc1c4"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Strict.Mirror",
+      "fingerprint": "2fea6fdaa69890ff9f271ec775a3965a463fca7420bb45b3651ff573593a701c",
+      "source_sha256": "c9aa802c99fbaea769cb8a88af075fc434b3a9073bd9187f9d00b0e6e82451fe",
+      "artifacts": {
+        ".olean": "dd97c6c376b273d72d75a452b0f3bffd065ea9714b74d47c300a67075748fabd"
+      },
+      "log_sha256": "8932b53f00a09e09d3a5e98386bfa8c5bc913af8447c06a119495f27fc46927d",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Semantics.Relational",
+      "fingerprint": "2c859cefe02fed00fabd827c711476aa72983f9b0a67ae3404a315e8d3578f4b",
+      "source_sha256": "b9424788860fff653c01277d1d1e1e2aa257b0905ac02b0879bb6029a1c5c32a",
+      "artifacts": {
+        ".olean": "10b1ebce4afc1b45e57ad6dae5e191615874ad7ad743568c9efd8a7c77c35a65"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Tools.Quote",
+      "fingerprint": "d4220ad0869558cc8b1912a64517dfa6def53f00ff6a4c8a6975e86b062c8a6f",
+      "source_sha256": "9539d77cb6894442171628c10fd8f4e1142fa8f7f99e80fac7dc1681c7eb96fe",
+      "artifacts": {
+        ".olean": "df567d6aa7ef8710b8fb037cd2ae85f69f48f9a182d41f80c43d498afeae3362"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Syntax.Normalize",
+      "fingerprint": "fbf0db0b6d9b8b4ab8a2144e85b96ccb9e7913e2c49e0cdd37ddd06fd80ff5bc",
+      "source_sha256": "1ba19ae01872f7d4357876e2e4c47e4f675cf6b733be98c1947838a1f0c94c1b",
+      "artifacts": {
+        ".olean": "466cabd2038839e898f9d083889e601f02dac99cec2e0816d94d88dae013ea80"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Tools.Translate",
+      "fingerprint": "85864cdb936fb71e2851a6bbcd0ce58b9bc1ef8bc76041dcf6b1cf70f2585f94",
+      "source_sha256": "471e8a2a7ab42f306e986af1320f0bd7f4d77dd073241e3f77234bf0fc5d6ba7",
+      "artifacts": {
+        ".olean": "e1f7c98b7f2c40a7ce40f5fe54a313881050dab1a04f491613f7d8f3961cc69b"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Syntax.Blocks",
+      "fingerprint": "8f619648c1c389b21f3ef2a40567f20862d30330a0620404a743ae921b4637a2",
+      "source_sha256": "77b4ef8fadb3646edd15d25854bac994a6eabb8bb1f51347c9dd00fce3a6ac5d",
+      "artifacts": {
+        ".olean": "311996802ea136c940f6231659fdd0256a3267f5a4f5ad2ad7817d75af70d32a"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "6979b1e2afbc61344c3dda97ee761d074a77c7126d2c20ecd65514a90656a20b",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Syntax.Vectorize",
+      "fingerprint": "c57e9e1a546872e4dd5521dde4e9e8200b4a7493a6908e4ba2bacd5c6ba6d27a",
+      "source_sha256": "b57548b87b70c0e9df1c0fd48a1f7b7d67d4828ab4d4286e164e7f32c4716817",
+      "artifacts": {
+        ".olean": "54676fc9c944d5a3d3790924422e2f96b91f632e553468b388bc76e0126e0735"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "6979b1e2afbc61344c3dda97ee761d074a77c7126d2c20ecd65514a90656a20b",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Syntax.VectorizeDerivable",
+      "fingerprint": "bd67d51fc6c088c18eaad5508eb23b8f2044a69e4884d6a45bdd37a678e66df0",
+      "source_sha256": "17508c58aef3e3ad7b121f20349045d76c5e238a164cdaf96c2400255c492824",
+      "artifacts": {
+        ".olean": "2cadee08cbe83be4eb007873437b03c95690ef5b51babe5c034e0bc3dc4ec7e8"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "6979b1e2afbc61344c3dda97ee761d074a77c7126d2c20ecd65514a90656a20b",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Tools.Schema",
+      "fingerprint": "25ff9dc1de7945d2755a9b5a2c698f54770a56ca5ccf8640229f3aa88244ca3e",
+      "source_sha256": "809bf8692601598451770b6422375de71cddf6e3d4cacc651b3905119fe40d2c",
+      "artifacts": {
+        ".olean": "255d53a068494804cda144c2eefdf3cea1597f1d8abfbd3828c2199e1be5d9b8"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Records.Base",
+      "fingerprint": "a89655f6db873d5961080ab8978b6aa6901afd05866b4d1c8fe1ad5f87f5b98a",
+      "source_sha256": "43794a516d90505e3c5b48267ddfe110b8e482b881cc1300f2e2ee182c2fc2db",
+      "artifacts": {
+        ".olean": "80585bfa7a293e518eb831134da927589abfb25fb335471a4cb0fc9a47be1d68"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "78ebc730e79e58fd927b0ec0d515fec6e3b346e9173c63dd1ea4fb46ab12ac93",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Records.Choice",
+      "fingerprint": "4dff099fffd7658cf1c6336160d3987ad42ad255fdc890012a3c6bbd7a4f57b4",
+      "source_sha256": "28a17b666e917900329a015b2bf9cf3a6848a811762a6c862f6ef58135bf77ca",
+      "artifacts": {
+        ".olean": "ed470c8e7d4f5d705cff4a3d632ae7740176da5f5d764f1fc0ba7859224306ee"
+      },
+      "log_sha256": "569d6b7c7a92a68a1da7b6cc164b0d656ccb3f1c0a7002afb13f00a19c3a56d5",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Records.C5",
+      "fingerprint": "d72b91823c9c4110b92ff5a60a905501ea3c6c8f0444ef454251c50aa2ddbc05",
+      "source_sha256": "670269847531e12553369ae4105b0926f8613883f8f709b94cdc88917eb49b7c",
+      "artifacts": {
+        ".olean": "7a42a73a1394a5622b3bbf734f3e2733ee52ff9714a665cb26203332906aae66"
+      },
+      "log_sha256": "fa33e51ca18a14b445133fa09a77825ae68934412b3fd4483cf38addd1725bd4",
+      "provenance_sha256": "25bf335af0639027c0d18b9a3cb230d2d1aaca765574816b4ea386dc2c741dab",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Records.Infinity",
+      "fingerprint": "401d152fd3baf0e0d0be4bcaa09a9535076c062e05496362922d7409a9388684",
+      "source_sha256": "dd622a8252d4bc861a68bf939b25198d39db51c119e89911e096b0523a3a1ba0",
+      "artifacts": {
+        ".olean": "4599c4caad09c95a5cb4872aacbd0085b876994c2e54b7690e91d27e559c4a74"
+      },
+      "log_sha256": "7457b7d25b7b4428a63f61f45834c08fcbf0a75198cce30d92cf3b5fe9e508ba",
+      "provenance_sha256": "78ebc730e79e58fd927b0ec0d515fec6e3b346e9173c63dd1ea4fb46ab12ac93",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Records",
+      "fingerprint": "f7561c09837d9f950ff8fccdefe6ad21a6605a9596f3f113c23466b1f9b42d7a",
+      "source_sha256": "6d6d399aab1e7f30eff9a5d385635ae311228e4faf03ce36ad39d5a1d22eede6",
+      "artifacts": {
+        ".olean": "2101e40096f46091682c9bffccb7eee7a6cc06961c165a0d5c15e6197b9e42e8"
+      },
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance_sha256": "78ebc730e79e58fd927b0ec0d515fec6e3b346e9173c63dd1ea4fb46ab12ac93",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Certified.Quoted",
+      "fingerprint": "1e283621c0adaf00cb814e51025789426076fdd410e904743f932dbf91b558d1",
+      "source_sha256": "4f5e539a45bf30cf758effcd38c59330b95160a09aa57b08130226c491896447",
+      "artifacts": {
+        ".olean": "9cdcdd2343f85a6c3084b26261040c661852e82bea2d9af52e64895494de5bab"
+      },
+      "log_sha256": "1f23597a21c5303e81b8b5d0086f3c37404fb6ea58b2e35f2022f0b3212c5f5a",
+      "provenance_sha256": "78ebc730e79e58fd927b0ec0d515fec6e3b346e9173c63dd1ea4fb46ab12ac93",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Certified.Schemas",
+      "fingerprint": "3ae397512adfb86dd4ad499f6383c4a85ad1cfa2a97adbfeb6d27ad2b63e1bfc",
+      "source_sha256": "5473826bbece5136406e9aca792c6eb38e93117d142bce275d5a084803ad4a38",
+      "artifacts": {
+        ".olean": "937b8eb4acc2838db7337aebadc31af21960fa92440d0c3d75bc84918112f8e7"
+      },
+      "log_sha256": "59bf1f8938de917ea0772bec21b946e722df73ff764a55fcd39c44a760bb8c19",
+      "provenance_sha256": "78ebc730e79e58fd927b0ec0d515fec6e3b346e9173c63dd1ea4fb46ab12ac93",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityReduction",
+      "fingerprint": "48b6c3b1077d52918b5314e75019f819e0a8abd97fd595604d67dce0d919100c",
+      "source_sha256": "57343a60a522eea406621bbfeaa7897b88716c115de0bd18d05bde6764a1165e",
+      "artifacts": {
+        ".olean": "d1491f404ddf49c6062c5d06dbd015689dcd1f1dd952cbff6054f35d5b9fdfb4"
+      },
+      "log_sha256": "e3c84632e2cbadfca2d639975810d5708b5e075738dfa616ad3adeb8a52308ec",
+      "provenance_sha256": "cf096eec003446064e5a20a3599bf658e36907d0bc158bea820b2305a2eccaaa",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityDirectObstruction",
+      "fingerprint": "2d712a358f896e580803a3401b086911bd0cdb418ef494b610f42b961380d645",
+      "source_sha256": "115add00dc534dfbb6dca0088cee8e21e6d23bea5491d12232faaf604bba5924",
+      "artifacts": {
+        ".olean": "f55ff6b10b0fb3e77898000c2080181fa6f1cfdde0acc4c0cec084b0ad1d5b60"
+      },
+      "log_sha256": "764bd7676f85b5937c5ce996b4c1cc610ce9b43cb71941d7fab10c55b1da3fe3",
+      "provenance_sha256": "696e1ad5ef42dc13735f5ab2619d6fdc732991377198246a4f497777977c41ee",
+      "provenance_source_and_artifacts_match": true
+    },
+    {
+      "module": "Classicism.Results.Research.MaxAtomicityThirdOrderInconsistency",
+      "fingerprint": "c7615991cd8d50096b8668e848eed56e6afa0176b26b4fd25b2043a2ca1992e0",
+      "source_sha256": "add3916dab9bca6bc677c60527286d55bde507db5df045b276f82766c74fb75d",
+      "artifacts": {
+        ".olean": "da6225826d67b4363d903e28ea083283dfae52c26337b2780521aa05653cf679"
+      },
+      "log_sha256": "09ddff076706d261b538c539f1e8dd7868c88b6e0e049b56e380e0bd5e24eee8",
+      "provenance_sha256": "93cf3afbdf02aa8857648e0408ccdceec6bc11294ac65550f410d9d00fc2f043",
+      "provenance_source_and_artifacts_match": true
+    }
+  ],
+  "preserved_prior_certificate_sha256": "8d580d201ebc5bcc8620cf5e12e624e1452c93586ccf9d5f635ddd4220ea3e0e",
+  "packaging": "Source bytes and project configuration copied without modification from the verified archive. Compiled objects, machine paths and historical logs remain in the preserved original archive outside this Git submission. This receipt is a curated extraction of the saved compiler and axiom audit, not a new compiler run.",
+  "native_database_scope": "Alternative certified proof of the existing Max plus unboxed Atomicity at t inconsistency. No generated-statement port or database Lean badge is changed."
+}

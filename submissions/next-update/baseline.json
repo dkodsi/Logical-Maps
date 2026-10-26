@@ -1,0 +1,203 @@
+{
+  "inspected_on": "2026-10-25",
+  "upstream": {
+    "repository": "https://github.com/zwlgzwlg/Logical-Maps",
+    "branch": "main",
+    "commit": "a89a5058ebbd5ebe93aec07d47a1a32e3b93f8bb"
+  },
+  "previous_package": {
+    "repository": "https://github.com/dkodsi/Logical-Maps",
+    "branch": "classicism-results-2026-10-24",
+    "commit": "52f324e09ca2df45d74ce4c522bcd761271efbed",
+    "path": "submissions/classicism-results-2026-10-24-v2"
+  },
+  "comparison": {
+    "last_shared_upstream_commit": "e467d99e47db491de27a210bf56de70a68302013",
+    "upstream_commits_since": 5,
+    "merged_into_working_fork": true,
+    "merged_upstream_commit": "a89a5058ebbd5ebe93aec07d47a1a32e3b93f8bb"
+  },
+  "scope": "Targeted reconciliation of the recent admissions and overlapping records; not a complete audit of the previous package.",
+  "verification": "Native Lean statuses below are read from the pinned upstream YAML. No Lean compilation or mathematical re-review was performed for this preparation.",
+  "documents": [
+    {
+      "path": "README.md",
+      "git_blob_sha": "658076d292a28aab7fa79c01e262176cb35ec1db"
+    },
+    {
+      "path": "logical-maps/README.md",
+      "git_blob_sha": "2e786a0e8e695de6ef17e61a980851eff9e5c8aa"
+    },
+    {
+      "path": "logical-maps/topics/classicism/contribute.md",
+      "git_blob_sha": "49af71d4b452e52e497d4ccb06c7a9125f43e67c"
+    },
+    {
+      "path": "logical-maps/CLAUDE.md",
+      "git_blob_sha": "d7a51d536bbd9446688cae89f33d2664aed79f23"
+    },
+    {
+      "path": "logical-maps/schema/result.schema.json",
+      "git_blob_sha": "ea48c7f4c46715c3e80c051c0fbba4a64f5cd51f"
+    },
+    {
+      "path": "logical-maps/schema/model.schema.json",
+      "git_blob_sha": "779960a7a30883c80e2a519ca65716e559b615a4"
+    },
+    {
+      "path": "logical-maps/schema/principle.schema.json",
+      "git_blob_sha": "1696f46508dfab8874f6e4793671a99f9d6c05dc"
+    }
+  ],
+  "records": [
+    {
+      "path": "logical-maps/topics/classicism/results/relational-choice-and-boolean-completeness-imply-actuality.yaml",
+      "git_blob_sha": "87e829c165b15b13bdb4ed548a4a39b2a1e1700d",
+      "record_status": "proved",
+      "premises": [
+        "relational-choice-r",
+        "boolean-completeness-r"
+      ],
+      "conclusion": "actuality",
+      "source_id": "misc",
+      "native_lean": "verified",
+      "native_lean_ref": "Classicism.Map.relational_choice_and_boolean_completeness_imply_actuality"
+    },
+    {
+      "path": "logical-maps/topics/classicism/results/strong-leibniz-and-rigid-comprehension-imply-necessary-strong-leibniz.yaml",
+      "git_blob_sha": "930f000ae6d26e9be2887335adb3872349042e28",
+      "record_status": "proved",
+      "premises": [
+        "strong-leibniz-r",
+        "rigid-comprehension-r"
+      ],
+      "conclusion": "necessary-strong-leibniz-r",
+      "source_id": "misc",
+      "native_lean": "verified",
+      "native_lean_ref": "Classicism.Map.strong_leibniz_and_rigid_comprehension_imply_necessary_strong_leibniz"
+    },
+    {
+      "path": "logical-maps/topics/classicism/results/strong-leibniz-and-rigid-comprehension-imply-necessary-rigid-comprehension.yaml",
+      "git_blob_sha": "f16c10eb61e5a8da2e620586dd62b3c683cc5130",
+      "record_status": "proved",
+      "premises": [
+        "strong-leibniz-r",
+        "rigid-comprehension-r"
+      ],
+      "conclusion": "necessary-rigid-comprehension-r",
+      "source_id": "misc",
+      "native_lean": "verified",
+      "native_lean_ref": "Classicism.Map.strong_leibniz_and_rigid_comprehension_imply_necessary_rigid_comprehension"
+    },
+    {
+      "path": "logical-maps/topics/classicism/results/atomicity-and-rigid-comprehension-imply-weakly-rigid-power.yaml",
+      "git_blob_sha": "29731760531ae757c95530e0f6a0d944d6207395",
+      "record_status": "proved",
+      "premises": [
+        "atomicity-r",
+        "rigid-comprehension-r"
+      ],
+      "conclusion": "weakly-rigid-power-r",
+      "source_id": "misc",
+      "native_lean": "verified",
+      "native_lean_ref": "Classicism.Map.atomicity_and_rigid_comprehension_imply_weakly_rigid_power"
+    },
+    {
+      "path": "logical-maps/topics/classicism/results/distinctness-necessary-t-and-inextensible-comprehension-imply-weakly-rigid-power.yaml",
+      "git_blob_sha": "591b757def154796a5a937f9251493eed02828a6",
+      "record_status": "proved",
+      "premises": [
+        "distinctness-necessary-t",
+        "inextensible-comprehension-r"
+      ],
+      "conclusion": "weakly-rigid-power-r",
+      "source_id": "misc",
+      "native_lean": "verified",
+      "native_lean_ref": "Classicism.Map.distinctness_necessary_t_and_inextensible_comprehension_imply_weakly_rigid_power"
+    },
+    {
+      "path": "logical-maps/topics/classicism/results/maximalist-distinctness-incompatible-with-atomicity-t.yaml",
+      "git_blob_sha": "603fce71b6e935d478408f6b9c3abcf30727f0f1",
+      "record_status": "proved",
+      "premises": [
+        "distinctness-schema-r",
+        "atomicity-t"
+      ],
+      "conclusion": false,
+      "source_id": "misc",
+      "native_lean": "stated"
+    },
+    {
+      "path": "logical-maps/topics/classicism/results/c5-implies-arithmetic-necessitism.yaml",
+      "git_blob_sha": "9149844f897b741e97abc16b5244b4984f1e712c",
+      "record_status": "proved",
+      "premises": [
+        "necessary-distinctness-necessary-r"
+      ],
+      "conclusion": "arithmetic-necessitism",
+      "source_id": "misc",
+      "native_lean": "none"
+    },
+    {
+      "path": "logical-maps/topics/classicism/results/maximalism-incompatible-with-non-contingency-of-ch.yaml",
+      "git_blob_sha": "e739810a2f68baa0f8e4570e1c00a50ab0d15c08",
+      "record_status": "proved",
+      "premises": [
+        "distinctness-schema-r",
+        "non-contingency-of-ch"
+      ],
+      "conclusion": false,
+      "source_id": "misc",
+      "native_lean": "none"
+    },
+    {
+      "path": "logical-maps/topics/classicism/results/maximalism-signature-incompatible-with-strong-possibility-pure.yaml",
+      "git_blob_sha": "99741ab5fa60ee24c96d1d048c3b6e0e596956b9",
+      "record_status": "proved",
+      "premises": [
+        "distinctness-signature-r",
+        "strong-possibility-r"
+      ],
+      "conclusion": false,
+      "source_id": "misc",
+      "native_lean": "stated"
+    },
+    {
+      "path": "logical-maps/topics/classicism/results/necessary-rigid-comprehension-implies-arithmetic-necessitism.yaml",
+      "git_blob_sha": "d7817cff78b13cb6f2e6cd0dfc37a8d233214296",
+      "record_status": "proved",
+      "premises": [
+        "necessary-rigid-comprehension-r"
+      ],
+      "conclusion": "arithmetic-necessitism",
+      "source_id": "barton-goodsell-continuum-contingency",
+      "native_lean": "none"
+    },
+    {
+      "path": "logical-maps/topics/classicism/models/symmetric-old-new-individuals.yaml",
+      "git_blob_sha": "bef4d73387124144f67eff6e372ac8a613f6f02a",
+      "verified_verdicts": [
+        {
+          "holds": "distinctness-necessary-r",
+          "ref": "Classicism.Map.Models.symmetric_old_new_individuals.distinctness_necessary_r"
+        },
+        {
+          "holds": "boolean-completeness-r",
+          "ref": "Classicism.Map.Models.symmetric_old_new_individuals.boolean_completeness_r"
+        },
+        {
+          "fails": "necessary-boolean-completeness-r",
+          "ref": "Classicism.Map.Models.symmetric_old_new_individuals.necessary_boolean_completeness_r"
+        }
+      ]
+    },
+    {
+      "path": "logical-maps/topics/classicism/models/full-boolean-valued-atom-and-atomless.yaml",
+      "git_blob_sha": "aaf7e3261f8f2793881f76725c790538f31f2e5f"
+    },
+    {
+      "path": "logical-maps/topics/classicism/models/coalesced-definable-root.yaml",
+      "git_blob_sha": "b0dfd3184fc54cce3fb5f4877f7a92c81de94cbe"
+    }
+  ]
+}

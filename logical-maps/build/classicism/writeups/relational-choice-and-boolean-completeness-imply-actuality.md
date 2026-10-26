@@ -1,196 +1,226 @@
-> Integration note, 23 October 2026: source prose is preserved below. Draft-time status statements are historical; the completed certificate and its scope are indexed in the frozen submission and in the integration report. Original work by Codex (OpenAI), prompted by Daniel Kodsi; construction and literature credits in the source remain in force.
-
 # Relational Choice and Boolean Completeness imply Actuality
 
-22 October 2026. Original ordinary mathematical argument by OpenAI Codex; direct source `misc`, this note. No human check, independent-agent check, formal verification, or literature-novelty claim. No database or frozen-archive edit.
+Proof by GPT-6 Astra (OpenAI), prompted by Daniel Kodsi, 22 October 2026;
+rewritten for the map by Claude Opus 5.5 (Anthropic), prompted by Cian Dorr,
+24 October 2026.
 
-## Exact local theorem
+**Theorem.** In C, Relational Choice from $t$ to $t$ together with Boolean
+Completeness at $t$ and at $tt$ implies Actuality. All premises are unboxed.
 
-Over the original fixed C,
+Since Boolean Completeness at $tt$ implies it at $t$ (Remark 2), the instances
+used are $\mathrm{RC}_{t,t}$ and $\mathrm{BC}_{tt}$. Nothing else is assumed:
+no ND, BF, Plenitude, or necessitated premise.
 
-    RC_(t,t) + BC_(tt)  ⇒  Actuality.
+**Overview.** If Actuality fails, the false propositions have join $\top$
+(Lemma 3). Relational Choice refines them into a family of pairwise disjoint
+false propositions with the same join $\top$ (Lemma 4). But Boolean
+Completeness at $tt$ guarantees that a pairwise disjoint family whose join is
+true has a true member (Lemma 2).
 
-Here RC_(t,t) is relational selection from propositions to propositions, and BC_(tt) is Boolean Completeness of the algebra of properties of propositions. Both premises are **actual and unboxed**. In particular, unboxed all-type Relational Choice plus unboxed all-type Boolean Completeness implies Actuality. Section 7 proves this sharpest local version. Sections 1–5 retain the independently useful guarded proof with RC_(tt,t), selection from proposition-properties to propositions.
+## Notation
 
-The short route is: BC_(tt) forces a true disjoint join to have a true member. RC_(t,t), with the resulting BC_t, gives a disjoint refinement of all actual falsehoods. If Actuality failed, those falsehoods would have join ⊤, yielding a true disjoint join with no true member.
+Throughout, $\le$ is $\le_t$, and $p<q$ means $p\le q\land p\ne q$. For a property
+$A^{tt}$ of propositions, $\bigvee A$ is its least upper bound at $t$, which
+Boolean Completeness at $t$ provides. For a proposition $a$, its haecceity is
 
-The proof uses no ND, BF, Plenitude, persistent selected edges, optional necessitation, or infinitary syntax. It does not use RC+BC⇒Transversal Choice; the direct proof below supplies an independent route. Its fixed-point input is the bare-C Bourbaki–Witt lemma already written out in `notes/relational-choice-boolean-completeness-transversal-proof.md`, §5, with the guarded-operation refinement in `notes/rc-guarded-progressive-operation.md`.
+$$
+H_a:=\lambda z^t\, .\,z=a\qquad(\text{type }tt),
+$$
 
-A fresh proved-only engine query before this argument found no recorded derivation or separator for RC+BC⇒Actuality. That is the record status, not an objection to the new proof.
+and two propositions are *same or disjoint* when
 
-## 1. Evaluation and the proposed meet reduction
+$$
+\operatorname{SameOrDisjoint}(x,y):=x=y\lor x\land y=\bot.
+$$
 
-Write H_a:=λz(z=a), of type tt. Evaluation at any proposition x has right adjoint
+A property $A^{tt}$ is *pairwise disjoint* when
+$\forall a\,b\, .\,Aa\land Ab\to\operatorname{SameOrDisjoint}(a,b)$.
 
-    r_x(b):=λz((z=x)→b).
+Recall that $p\le q$ is equivalent to $\Box(p\to q)$, and $X\le_{tt}Y$ to
+$\Box\forall z\, .\,Xz\to Yz$ (Background). In particular $p\le q$ gives $p\to q$.
 
-Indeed X(x)≤b iff X≤r_x(b): after unpacking algebraic order, this is the necessary universal closure of the H theorem
+## Lemma 1: evaluation preserves joins
 
-    ∀z[Xz→((z=x)→b)]  ↔  (Xx→b).
+For $X^{tt}$ and propositions $x,c$:
 
-Consequently evaluation preserves every represented algebraic join that exists. This does not identify algebraic joins with material unions.
+$$
+X\le_{tt}\lambda z\, .\,(z=x\to c)\quad\text{iff}\quad Xx\le c.
+$$
 
-BC_(tt) implies BC_t. Given a represented family of propositions, take its family of constant properties c_p:=λz.p, form their join at tt, and evaluate it at ⊤. The result is the join of the original family. Boolean duality gives meets as well.
+Indeed the left side is $\Box\forall z\, .\,Xz\to(z=x\to c)$, the right side
+is $\Box(Xx\to c)$, and $\forall z\, .\,(Xz\to(z=x\to c))\leftrightarrow(Xx\to c)$
+is a theorem of C, so its necessitation holds.
 
-Thus let m be the Boolean meet of the actual truths, represented by λp.p. Then
+Consequently, if $J$ is the least upper bound at $tt$ of a property
+$\mathcal A^{(tt)t}$, then for all $x,c$:
 
-    Actuality  ↔  m is true  ↔  m≠⊥.
+$$
+Jx\le c\quad\text{iff}\quad\forall Y\, .\,\mathcal AY\to Yx\le c.
+$$
 
-If an actuality witness u exists, u≤m, so m is true. If m is true, it itself is a witness. If m is false, ¬m is an actual truth, so m≤¬m and therefore m=⊥. Conversely ⊥ is false. Dually, under failure of Actuality, the join of all actual falsehoods is ⊤.
+For $Jx\le c$ iff $J\le_{tt}\lambda z\, .\,(z=x\to c)$ iff every $Y$ in $\mathcal A$
+has $Y\le_{tt}\lambda z\, .\,(z=x\to c)$ iff every $Y$ in $\mathcal A$ has $Yx\le c$.
 
-The additional argument needed is that relational selection forces enough disjoint refinement of those falsehoods. Algebraic completeness alone does not supply that refinement.
+## Lemma 2: a pairwise disjoint family with a true join has a true member
 
-## 2. A true disjoint join has a true member
+*Assume Boolean Completeness at $t$ and $tt$.* Let $A^{tt}$ be pairwise
+disjoint, with every member false. Then $\bigvee A$ is false.
 
-This lemma uses **only C+BC_(tt)**. Call A:tt a false antichain when
+*Proof.* Suppose $\bigvee A$ is true. Let $J$ be the least upper bound at $tt$ of
+the haecceities of members of $A$,
 
-    ∀a(Aa→¬a),
-    ∀a b(Aa∧Ab→[a=b ∨ a∧b=⊥]).
+$$
+\mathcal A:=\lambda Y^{tt}\, .\,\exists a\, .\,Aa\land Y=H_a .
+$$
 
-Zero members are harmless for this lemma. Suppose, toward contradiction, that the algebraic join j of A's actual instances is **true**.
+**Step 1.** For all propositions $x,y$:
 
-Use BC_(tt) to form J, the join of the represented family of haecceities H_a with Aa. For every actual a∈A,
+$$
+Jx\land Jy\le\operatorname{SameOrDisjoint}(x,y). \tag{1}
+$$
 
-    H_a≤J,             J(a)=⊤.
+Let $a,b$ be members of $A$. Then $\operatorname{SameOrDisjoint}(a,b)$, and as a
+disjunction of identities it is necessary. Since
+$x=a\land y=b\land\operatorname{SameOrDisjoint}(a,b)\to\operatorname{SameOrDisjoint}(x,y)$
+is a theorem of C, its necessitation gives the first line of
 
-Define C(x,y):=(x=y ∨ x∧y=⊥). We first prove
+$$
+\begin{aligned}
+H_ax\land H_by&\le\operatorname{SameOrDisjoint}(x,y),\\
+H_by&\le H_ax\to\operatorname{SameOrDisjoint}(x,y)&&\text{for all }b\text{ in }A,\\
+Jy&\le H_ax\to\operatorname{SameOrDisjoint}(x,y)&&\text{by Lemma 1},\\
+H_ax&\le Jy\to\operatorname{SameOrDisjoint}(x,y)&&\text{for all }a\text{ in }A,\\
+Jx&\le Jy\to\operatorname{SameOrDisjoint}(x,y)&&\text{by Lemma 1},
+\end{aligned}
+$$
 
-    J(x)∧J(y) ≤ C(x,y)                 for all actual x,y:t.       (1)
+which is (1).
 
-Fix actual a,b∈A. Either a=b or a∧b=⊥. Each alternative is a positive identity, so its truth is necessary by bare-C Necessity of Identity. Necessary substitution therefore gives
+**Step 2.** For each member $a$ of $A$, $H_a\le_{tt}J$ and $H_aa=(a=a)=\top$, so
+$Ja=\top$.
 
-    H_a(x)∧H_b(y) ≤ C(x,y).
+**Step 3.** Put $v:=\forall p\, .\,Jp\to\neg p$. For each member $a$ of $A$,
 
-For fixed a, move H_a(x) to the right by Boolean implication adjunction and use that J(y) is the join of the H_b(y)'s. Then move J(y) to the right and use that J(x) is the join of the H_a(x)'s. This proves (1). No inequality is necessitated, and no ND is used. J may include ⊥; (1) does not forbid that.
+$$
+v\le(Ja\to\neg a)=\neg a,\qquad\text{so}\qquad a\le\neg v .
+$$
 
-Now put
+Hence $\bigvee A\le\neg v$. As $\bigvee A$ is true, $v$ is false, so there is a
+proposition $q$ with
 
-    v:=∀p(J(p)→¬p).
+$$
+Jq\land q .
+$$
 
-For every a∈A, necessary universal instantiation and J(a)=⊤ give v≤¬a. Hence every a∈A lies below ¬v, so j≤¬v. Since j is true, v is false. Classical quantifier duality therefore supplies an **actual** q with
+**Step 4.** Let $a$ be a member of $A$. Then $q\ne a$, since $q$ is true and $a$
+is false. By (1) and Step 2, $\operatorname{SameOrDisjoint}(q,a)$, so
+$q\land a=\bot$ and $a\le\neg q$. Hence $\bigvee A\le\neg q$, and $\bigvee A$ is
+false since $q$ is true: a contradiction. $\square$
 
-    J(q) ∧ q.
+Equivalently, for any pairwise disjoint $A^{tt}$, $\bigvee A$ is true iff some
+member of $A$ is true. Relational Choice is not used.
 
-For every a∈A, q≠a because q is true and a is false. By (1), q∧a=⊥. Therefore every a∈A lies below ¬q, and j≤¬q. The truth of j contradicts the truth of q. This proves the lemma.
+## Lemma 3: without Actuality, the false propositions have join $\top$
 
-Equivalently, for **any** represented pairwise-disjoint family, its algebraic join is actually true iff some member is actually true. The reverse implication is immediate from being an upper bound. This disjoint-join reflection theorem uses no Relational Choice.
+*Assume Boolean Completeness at $t$.* Let $k:=\bigvee\lambda p\, .\,\neg p$.
 
-The essential combination is higher-type completeness and actual quantification: joining the haecceities forces an actual true member, while the stable antichain identities prohibit it.
+- If $k$ is false, then $\neg k$ witnesses Actuality: $\neg k$ is true, and for
+  each true $q$, $\neg q$ is false, so $\neg q\le k$ and $\neg k\le q$.
+- If $k$ is true, then $\neg k$ is false, so $\neg k\le k$, hence
+  $\neg k=\neg k\land k=\bot$ and $k=\top$.
 
-## 3. Under ¬Actuality, every nonzero proposition has a nonzero false part
+So if Actuality fails, $k=\top$.
 
-Let b≠⊥. If b is false, use b itself. If b is true, failure of Actuality says b does not entail every actual truth. Choose true q with b≰q. Then
+## Lemma 4: disjoint refinement
 
-    c:=b∧¬q
+*Assume Relational Choice from $t$ to $t$ and Boolean Completeness at $t$.* Let
+$X^{tt}$ and $j:=\bigvee X$. There is a pairwise disjoint $\Delta^{tt}$ such that
 
-is false, nonzero, and below b. This is an ordinary actual argument; no choice principle is needed for this one existential conclusion.
+- (i) each member of $\Delta$ lies below some member of $X$, and
+- (ii) $\bigvee\Delta=j$.
 
-Consequently, if A is a represented nonzero false antichain and j is its Boolean join, section 2 gives j≠⊤. There is a nonzero false a≤¬j. It is disjoint from every A-member and is not itself an A-member. Thus every such antichain has a strict extension by one false proposition.
+*Proof.* Let $U^{ttt}$ be
 
-## 4. A chain-complete algebraic poset of guarded antichains
+$$
+(Ub)x:=\bigl(b<j\to Xx\land x\not\le b\bigr)\land\bigl(\neg\,b<j\to x=\bot\bigr).
+$$
 
-Put
+$U$ is serial: if $b<j$, some member $x$ of $X$ has $x\not\le b$, since otherwise
+$b$ would be an upper bound of $X$ and $j\le b$. By Relational Choice there is a
+functional $S$ with $\forall b\,x\, .\,(Sb)x\to(Ub)x$; write $s(b)$ for the unique $x$ with $(Sb)x$, and let
 
-    D(p):=¬p ∧ p≠⊥,
-    P(F):= [F≤D] ∧ ∀p q □(F(p)∧F(q)→C(p,q)),
+$$
+(Gb)c:=\exists x\, .\,(Sb)x\land c=b\lor x,\qquad g(b):=b\lor s(b).
+$$
 
-where C is from (1). Order the P-members by the algebraic Boolean order at tt. This is an antisymmetric represented poset. Its actual members are nonzero false antichains.
+Apply the Bourbaki–Witt lemma (Background, *General lemmas*) at type $t$ with
+the property $I:=\lambda b\, .\,b\le j$, the order $\le$, and the function $G$:
 
-Every represented algebraically comparable family of P-members has its ambient join J by BC_(tt), and J still satisfies P. First J≤D because D upper-bounds the family. For fixed actual p,q and any two members F,G, comparability puts both below one of them. That member's boxed antichain clause gives
+- $\le$ partially orders $I$;
+- a chain $Z\subseteq I$ has supremum $\bigvee Z$ in $I$, because $j$ bounds $Z$;
+- $g$ maps $I$ into $I$ and $b\le g(b)$: if $b<j$ then $s(b)$ is in $X$, so
+  $s(b)\le j$; and $g(j)=j\lor\bot=j$.
 
-    F(p)∧G(q)≤C(p,q).
+Moreover $g(b)\ne b$ when $b<j$, since $s(b)\not\le b$. Let $M$ be the tower.
+By the lemma, $M$ is a chain; if $b<c$ in $M$ then $g(b)\le c$; and the supremum
+$m$ of $M$ is in $M$ with $g(m)=m$, so $m=j$ and $Mj$.
 
-The same two Boolean-adjunction steps used in section 2, with evaluation preserving the joins, yield J(p)∧J(q)≤C(p,q). Thus P(J). The empty family has join bottom, which satisfies P. Therefore the poset has represented chain suprema and a least element. The quantifier over p,q in P is outside its box; no interchange of □ with ∀ is made.
+For $b$ in $M$ with $b<j$, the *increment* at $b$ is $g(b)\land\neg b$. Let
 
-## 5. RC supplies an everywhere-guarded strictly progressive operation
+$$
+\Delta:=\lambda d\, .\,\exists b\, .\,Mb\land b<j\land d=g(b)\land\neg b .
+$$
 
-Continue to assume ¬Actuality. For every P-member F, section 3 supplies a nonzero false a disjoint from every actual F-member. Otherwise permit any output. Thus the relation
+*Pairwise disjoint.* Let $b<c$ be in $M$, both below $j$. Then
 
-    U(F,a):= P(F) → [¬a ∧ a≠⊥ ∧ ∀q(F(q)→a∧q=⊥)]
+$$
+(g(b)\land\neg b)\land(g(c)\land\neg c)\le g(b)\land\neg c\le c\land\neg c=\bot .
+$$
 
-is actually serial. RC_(tt,t) supplies an actually total functional S⊆U. Define
+Since $M$ is a chain, the increments at distinct members of $M$ are disjoint.
 
-    N(F,p):= S(F,p)
-             ∧ ∀r(S(F,r)→r=p)
-             ∧ D(p)
-             ∧ ∀q(F(q)→[C(p,q)∧C(q,p)]),
-    g(F):=λp(F(p)∨N(F,p)).
+*(i).* $g(b)\land\neg b=(b\lor s(b))\land\neg b=s(b)\land\neg b\le s(b)$, and
+$s(b)$ is in $X$.
 
-This is an admitted operation (tt)→(tt). Its construction does not reify S as an operation selecting proposition entities.
+*(ii).* Every increment is below $g(b)\le j$. Let $k$ be any upper bound of
+$\Delta$. The property $\lambda b\, .\,Mb\land b\le k$ is closed:
 
-The H theorem F(p)→g(F)(p) gives F≤g(F). If P(F), then g(F)≤D because the new clause explicitly implies D. To preserve the boxed antichain clause, check the four old/new cases for two arguments. Two old members use P(F); two new members are identified by the uniqueness guard; and one old plus one new uses the appropriate direction of the safety guard. Necessitate only this unconditional H implication and combine it with P(F)'s existing boxes. Hence P(g(F)). No future functionality or containment of S is assumed.
+- if $b<j$ and $b\le k$ then $g(b)=b\lor(g(b)\land\neg b)\le k$; and $g(j)=j$;
+- the supremum of a chain of propositions below $k$ is below $k$.
 
-Actually, at a P-member F the unique S-output a is false, nonzero, and disjoint from every F-member. Boolean commutativity gives disjointness in both directions, so all guards hold. Moreover F(a) is false: otherwise a would be disjoint from itself and hence zero. Thus g(F)(a) holds while F(a) does not, proving
+So every member of $M$ is below $k$, in particular $j\le k$. Thus $j=\bigvee\Delta$.
+$\square$
 
-    P(F) → F<g(F).
+## Proof of the theorem
 
-The bare-C Bourbaki–Witt lemma now applies to this represented chain-complete antisymmetric poset and its progressive operation. It gives F with g(F)=F, contradicting strictness. Therefore ¬Actuality is impossible, completing the local theorem.
+Suppose Actuality fails. By Lemma 3, $X:=\lambda p\, .\,\neg p$ has $\bigvee X=\top$.
+Let $\Delta$ be as in Lemma 4. Each member of $\Delta$ lies below a false
+proposition and so is false; $\Delta$ is pairwise disjoint; and
+$\bigvee\Delta=\top$ is true. This contradicts Lemma 2. $\square$
 
-## 6. Alternative route and modal scope
+## Remarks
 
-As a cross-check, Transversal Choice gives the recorded preorder form of Zorn's Lemma. Apply it to actual nonzero false antichains under inclusion: material unions bound comparable families. Under ¬Actuality, maximality and the density argument in section 3 force the maximal antichain to have join ⊤, contradicting section 2. Thus TC together with BC_(tt) also implies Actuality. This alternative uses the recorded TC⇒Zorn theorem; the direct proof above does not.
+1. **Transversal Choice.** With the recorded results that
+   [Actuality implies Transversal](actuality-implies-transversal.html) and that
+   [Transversal and Relational Choice imply Transversal Choice](transversal-and-relational-choice-imply-transversal-choice.html),
+   this settles the conjecture that Relational Choice and
+   Boolean Completeness imply Transversal Choice. Astra also gave a direct proof of
+   that conjecture, adapting Bourbaki–Witt to partial transversals, which needs
+   Relational Choice from $\sigma t$ to $\sigma$ and suprema of represented chains
+   at $\sigma t$.
 
-The local implication, including its sharper form proved next, is a closed C theorem with its assumptions discharged. Necessitating that **theorem** gives
+2. **Boolean Completeness at $tt$ gives it at $t$.** For $A^{tt}$, let $J$ be the
+   least upper bound at $tt$ of the constant properties
+   $\lambda z\, .\,p$ with $Ap$. By Lemma 1, $J\top\le c$ iff $p\le c$ for every
+   member $p$ of $A$, so $J\top=\bigvee A$.
 
-    □RC_(t,t) + □BC_(tt) ⇒ □Actuality.
+3. **Where the higher type is used.** Lemma 4 needs only Boolean Completeness at
+   $t$. The type-$tt$ instance is used only in Lemma 2, for the join of the
+   haecceities. The argument does not show that Relational Choice and Boolean
+   Completeness at $t$ alone imply Actuality.
 
-No boxed conclusion is inferred from the unboxed premises alone. This note supplies a mathematical proof, not an update to the conjecture records or any formal verification status.
-
-## 7. Sharpening: RC_(t,t) supplies a disjoint refinement
-
-**Disjoint-refinement lemma.** Over C+BC_t+RC_(t,t), every represented family X:tt has a represented pairwise-disjoint nonzero refinement with the same Boolean join. Each refinement member lies below some actual X-member.
-
-Let j=∨X. Use RC_(t,t) to select x from the serial relation requiring
-
-    X(x) ∧ x≰b     if b<j,
-    x=⊥            otherwise.
-
-Seriality when b<j follows from j's least-upper-bound property: not every X-member can lie below b. Let S(b,x) be the actual functional selector, and define the actual functional graph
-
-    f(b,c):=∃x(S(b,x) ∧ c=b∨x).
-
-On the algebraic interval [⊥,j], f is progressive, stays in the interval, is strict below j, and fixes j. The interval has suprema for all represented chains by BC_t. Apply the canonical-chain part of the bare-C Bourbaki–Witt proof: the union A of its f-chains is an internally well-ordered chain with greatest member j, and each b∈A is the supremum of f-values at its strict predecessors. In particular, if b<c in A then f(b)≤c. Function notation here abbreviates the uniquely specified actual graph value; no selecting operation is asserted.
-
-For b∈A with b<j define its increment d_b=f(b)∧¬b. Its represented graph existentially binds the unique f-value. The increment is nonzero, and if x is S's value at b, then
-
-    d_b=(b∨x)∧¬b=x∧¬b≤x,       X(x).
-
-If b<c are in A, then d_b≤c and d_c≤¬c, so their increments are disjoint. Let Δ be the represented image of these increments. It is a nonzero antichain refining X.
-
-We verify that j is its join, rather than assuming a transfinite telescoping rule. Every increment lies below j. If k upper-bounds Δ and some b∈A fails b≤k, take the least such b. For every c<b in A, c≤k and d_c≤k, hence f(c)=c∨d_c≤k. The defining supremum condition at b gives b≤k, contradiction. Therefore every A-member lies below k, including j. This proves j=∨Δ.
-
-Now assume ¬Actuality. By section 1, the represented family X(p):=¬p of all actual falsehoods has join ⊤. Apply the lemma. Every member of its disjoint refinement Δ is false, since it lies below a false X-member; yet ∨Δ=⊤ is true. This contradicts the disjoint-join reflection theorem of section 2. Since BC_(tt) supplies BC_t, this proves
-
-    C + RC_(t,t) + BC_(tt) ⊢ Actuality.
-
-The increment construction adapts the already audited disjoint-increment calculation in `notes/relational-choice-countable-completeness-ccc.md`, §3. Here no CCC or countability assertion is used; the additional spanning argument is the least-counterexample proof just given.
-
-## 8. An explicit single relation witnessing the obstruction
-
-The required choice instance can be made parameter-free. Define
-
-    W(b,x):= [b≠⊤ ∧ ¬x ∧ x≰b] ∨ [b=⊤ ∧ x=⊥].
-
-Bare C proves Serial(W) iff ¬Actuality. The forward obstruction is immediate from an actuality witness u: every false x lies below ¬u, so the row b=¬u≠⊤ is empty. Conversely, under ¬Actuality, section 3 supplies a nonzero false part x of ¬b whenever b≠⊤; then x≰b. At b=⊤ use ⊥.
-
-Under BC_(tt), W has **no** actually total functional subrelation. Such a subrelation would give the construction of section 7 with j=⊤, producing a represented false antichain with join ⊤, contrary to section 2. Thus any C+BC_(tt)+¬Actuality model explicitly fails relational selection for this one W. No model-construction hypothesis is involved in this obstruction.
-
-Even a subrelation of W with nonempty **internally finite** output fibres is impossible under those assumptions. The Boolean join of each such fibre exists, is false, and stays outside the input b when b≠⊤; at ⊤ it is ⊥. These joins have an admitted actually functional graph by their unique algebraic characterization, so they would supply the forbidden functional subrelation. The finite-join assertion is proved by the map's Frege induction: remove one member, take the induction hypothesis's join, and adjoin that member by binary ∨. It does not assume external standardness or a selecting operation.
-
-## 9. Consequences and limits
-
-Under all-type BC, section 2 also makes the Boolean join of any represented **algebraically disjoint** family of relations actually coextensive with its material union. Fix an actual argument tuple. Evaluation takes the join to the join of the corresponding proposition values; those values form a represented antichain, so section 2 reflects its truth to one member. This is actual coextension, not identity of relation entities.
-
-With all-type RC as well, the disjoint-refinement construction works at any relational type τ, using RC_(τ,τ) and BC_τ. Each refinement member lies below an original member. The same argument therefore shows that **every** represented algebraic join is actually coextensive with its material union. This does not claim necessary coextension, transport of a current supremum to a future supremum, BF, or Plenitude.
-
-Combining the new Actuality conclusion with the recorded BC+Actuality⇒Weak Rigid Comprehension and RC+Weak Rigid Comprehension⇒TC yields another proof of the all-type RC+BC⇒TC result. The original **RC alone ⇒ TC** question remains unresolved. In particular, the proof here requires completeness at **tt**, not merely BC_t; the haecceity join is the decisive higher-type use.
-
-There is also a stronger locality consequence for the TC question: **all-type RC plus BC_(tt) alone implies all-type TC**, since Actuality gives the recorded Transversal principle and Transversal+RC gives TC. No completeness premise at the individual-property type et or at every higher type is needed for this consequence.
-
-Conversely, under C+RC_(t,t)+BC_t+¬Actuality, section 7 produces a specific represented nonzero false antichain Δ with join ⊤. The family {H_a:Δ(a)} then has **no** Boolean join at tt, by section 2's proof. This is a concrete missing-join obstruction, rather than just the negation of a completeness schema. The case RC+BC_t⇒Actuality is not settled here.
-
-Without BC_t there is a precise two-level alternative. Under RC_(t,t)+¬Actuality choose S for the explicit W and form f(b)=b∨S(b) relationally. The union A of all f-chains is still represented and internally well ordered: the comparison and union portions of the fixed-point proof require no completeness. If A has an algebraic supremum, the final fixed-point argument makes it ⊤ and places ⊤ in A; the increments then give the preceding Δ and its missing haecceity join. Hence either this particular internally well-ordered family A has no join at t, or its increment antichain has no haecceity join at tt. This is a statement about two explicit represented families, not arbitrary external transfinite iteration.
-
-## Audit status
-
-Both proofs are ordinary mathematical arguments by this agent, not independently checked new results. The final checks preserve the positive-identity use of NI, the exact type tt of the haecceity join, actual quantifier duality, represented internal well-ordering, and the restriction on necessitation. Temporarily adding the unboxed and boxed all-type conclusions to the proved-only engine in memory introduced no new conflicts with recorded proved models; this consistency check is not a proof. Database records remain untouched. The engine separately reports `full-boolean-valued-atom-and-atomless` as a separator from **necessary** Actuality for the unboxed premises, so that stronger unboxed-to-boxed claim is not made.
+4. **The boxed form.** The theorem is a theorem of C with its premises discharged,
+   so necessitating it gives □Relational Choice and □Boolean Completeness imply
+   □Actuality. The unboxed premises do not give □Actuality: the model
+   [Full Boolean-valued model: one atom and an atomless component](full-boolean-valued-atom-and-atomless.html)
+   separates them.

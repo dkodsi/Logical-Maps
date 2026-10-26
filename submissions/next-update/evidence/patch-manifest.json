@@ -1,0 +1,188 @@
+{
+  "upstream": "a89a5058ebbd5ebe93aec07d47a1a32e3b93f8bb",
+  "patches": [
+    {
+      "id": "01-explanation-corrections",
+      "base": "a89a5058ebbd5ebe93aec07d47a1a32e3b93f8bb",
+      "targets": [
+        {
+          "path": "logical-maps/topics/classicism/writeups/definable-atoms-and-extensional-transfer-corrections.md",
+          "upstream_blob": null,
+          "patch_preimage_blob": null
+        },
+        {
+          "path": "logical-maps/topics/classicism/models/coalesced-definable-root.yaml",
+          "upstream_blob": "b0dfd3184fc54cce3fb5f4877f7a92c81de94cbe",
+          "patch_preimage_blob": "b0dfd3184fc54cce3fb5f4877f7a92c81de94cbe"
+        },
+        {
+          "path": "logical-maps/topics/classicism/models/full-boolean-valued-atom-and-atomless.yaml",
+          "upstream_blob": "aaf7e3261f8f2793881f76725c790538f31f2e5f",
+          "patch_preimage_blob": "aaf7e3261f8f2793881f76725c790538f31f2e5f"
+        },
+        {
+          "path": "logical-maps/topics/classicism/principles/necessity-of-analysis.yaml",
+          "upstream_blob": "c5b691744838f56f0969033d5c4588fa9a5366f1",
+          "patch_preimage_blob": "c5b691744838f56f0969033d5c4588fa9a5366f1"
+        },
+        {
+          "path": "logical-maps/topics/classicism/results/necessary-rigid-comprehension-intensional-choice-and-forcing-possibilism-incompatible-with-non-contingency-of-ch.yaml",
+          "upstream_blob": "464052f1f47e1f2a5f57feb5024e9e632bbe3f5f",
+          "patch_preimage_blob": "464052f1f47e1f2a5f57feb5024e9e632bbe3f5f"
+        }
+      ]
+    },
+    {
+      "id": "02-cloud-relational-choice",
+      "base": "a89a5058ebbd5ebe93aec07d47a1a32e3b93f8bb",
+      "targets": [
+        {
+          "path": "logical-maps/topics/classicism/groups/modalized-atomless-cloud.yaml",
+          "upstream_blob": "50ec157f5cf5c7b5af11d06329f81daa6f47eb57",
+          "patch_preimage_blob": "50ec157f5cf5c7b5af11d06329f81daa6f47eb57"
+        },
+        {
+          "path": "logical-maps/topics/classicism/writeups/modalized-cloud-relational-choice.md",
+          "upstream_blob": null,
+          "patch_preimage_blob": null
+        }
+      ]
+    },
+    {
+      "id": "03-analytical-contingency",
+      "base": "a89a5058ebbd5ebe93aec07d47a1a32e3b93f8bb",
+      "targets": [
+        {
+          "path": "logical-maps/topics/classicism/models/full-boolean-valued-atom-and-cohen-constructible-ground.yaml",
+          "upstream_blob": null,
+          "patch_preimage_blob": null
+        },
+        {
+          "path": "logical-maps/topics/classicism/writeups/full-boolean-valued-atom-and-cohen-constructible-ground.md",
+          "upstream_blob": null,
+          "patch_preimage_blob": null
+        }
+      ]
+    },
+    {
+      "id": "04-maximalism-forcing",
+      "base": "a89a5058ebbd5ebe93aec07d47a1a32e3b93f8bb",
+      "targets": [
+        {
+          "path": "logical-maps/topics/classicism/models/coalesced-definable-root.yaml",
+          "upstream_blob": "b0dfd3184fc54cce3fb5f4877f7a92c81de94cbe",
+          "patch_preimage_blob": "de56b786224ee6e7d5d61c835bfc6041da7cf20d"
+        },
+        {
+          "path": "logical-maps/topics/classicism/models/coalesced-pinned-interpretations-root.yaml",
+          "upstream_blob": "e853cfeb3903e7a40719383c5bf6d96f105fd2b4",
+          "patch_preimage_blob": "e853cfeb3903e7a40719383c5bf6d96f105fd2b4"
+        },
+        {
+          "path": "logical-maps/topics/classicism/models/coalesced-pinned-substitutions-root.yaml",
+          "upstream_blob": "e7cdf17b79adc195d48614bf9e8d97dce1aeb449",
+          "patch_preimage_blob": "e7cdf17b79adc195d48614bf9e8d97dce1aeb449"
+        },
+        {
+          "path": "logical-maps/topics/classicism/writeups/maximalism-and-forcing-possibilism.md",
+          "upstream_blob": null,
+          "patch_preimage_blob": null
+        }
+      ]
+    },
+    {
+      "id": "05-c5-choice",
+      "base": "a89a5058ebbd5ebe93aec07d47a1a32e3b93f8bb",
+      "targets": [
+        {
+          "path": "logical-maps/topics/classicism/writeups/c5-relational-choice-implies-transversal-choice.md",
+          "upstream_blob": null,
+          "patch_preimage_blob": null
+        },
+        {
+          "path": "logical-maps/topics/classicism/results/c5-relational-choice-implies-transversal-choice.yaml",
+          "upstream_blob": null,
+          "patch_preimage_blob": null
+        },
+        {
+          "path": "logical-maps/topics/classicism/results/relational-choice-r-implies-transversal-choice-r.yaml",
+          "upstream_blob": "c1177c718f0cd565a3a3bca20ab625737f683c59",
+          "patch_preimage_blob": "c1177c718f0cd565a3a3bca20ab625737f683c59"
+        }
+      ]
+    },
+    {
+      "id": "06-forcing-infinity-proof",
+      "base": "a89a5058ebbd5ebe93aec07d47a1a32e3b93f8bb",
+      "targets": [
+        {
+          "path": "logical-maps/topics/classicism/results/forcing-possibilism-implies-axiom-of-infinity-t.yaml",
+          "upstream_blob": "894536de37750d714fbadc7696dbb52883aff7ae",
+          "patch_preimage_blob": "894536de37750d714fbadc7696dbb52883aff7ae"
+        },
+        {
+          "path": "logical-maps/topics/classicism/writeups/forcing-possibilism-internal-infinity.md",
+          "upstream_blob": null,
+          "patch_preimage_blob": null
+        }
+      ]
+    },
+    {
+      "id": "07-propositional-zorn-actuality",
+      "base": "a89a5058ebbd5ebe93aec07d47a1a32e3b93f8bb",
+      "dependencies": [],
+      "targets": [
+        {
+          "path": "logical-maps/topics/classicism/writeups/c5-zorn-and-propositional-completeness-imply-actuality.md",
+          "upstream_blob": null,
+          "patch_preimage_blob": null
+        },
+        {
+          "path": "logical-maps/topics/classicism/writeups/propositional-canonical-chain-lemmas.md",
+          "upstream_blob": null,
+          "patch_preimage_blob": null
+        },
+        {
+          "path": "logical-maps/topics/classicism/results/c5-zorn-and-propositional-completeness-imply-actuality.yaml",
+          "upstream_blob": null,
+          "patch_preimage_blob": null
+        },
+        {
+          "path": "logical-maps/topics/classicism/writeups/vicinity-supported-interpretation.md",
+          "upstream_blob": null,
+          "patch_preimage_blob": null
+        },
+        {
+          "path": "logical-maps/topics/classicism/writeups/vicinity-relational-choice-and-propositional-completeness-imply-actuality.md",
+          "upstream_blob": null,
+          "patch_preimage_blob": null
+        },
+        {
+          "path": "logical-maps/topics/classicism/writeups/vicinity-zorn-and-propositional-completeness-imply-actuality.md",
+          "upstream_blob": null,
+          "patch_preimage_blob": null
+        },
+        {
+          "path": "logical-maps/topics/classicism/writeups/c5-relational-choice-and-propositional-completeness-imply-actuality.md",
+          "upstream_blob": null,
+          "patch_preimage_blob": null
+        },
+        {
+          "path": "logical-maps/topics/classicism/writeups/zorn-and-higher-completeness-imply-actuality.md",
+          "upstream_blob": null,
+          "patch_preimage_blob": null
+        },
+        {
+          "path": "logical-maps/topics/classicism/results/vicinity-relational-choice-and-propositional-completeness-imply-actuality.yaml",
+          "upstream_blob": null,
+          "patch_preimage_blob": null
+        },
+        {
+          "path": "logical-maps/topics/classicism/results/vicinity-zorn-and-propositional-completeness-imply-actuality.yaml",
+          "upstream_blob": null,
+          "patch_preimage_blob": null
+        }
+      ]
+    }
+  ]
+}

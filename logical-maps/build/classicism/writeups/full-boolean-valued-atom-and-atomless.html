@@ -332,18 +332,32 @@ class="math inline">t</span>. It therefore refutes</p>
 <p>The underlying construction is Andrew Bacon’s, <em>Could the truths
 of mathematics have been different?</em>, draft of 9 October 2025,
 online appendix §B.2, pp. 7–9 (PDF pp. 41–43). This record specializes
-the individual domain to a singleton and allows any nontrivial complete
-atomless component. Bacon uses an infinite individual domain and a
-particular regular-open algebra for his continuum-hypothesis argument;
-those features are not needed here.</p>
+the individual domain to a singleton. Bacon works in ZFC + CH with the
+algebra adding <span class="math inline">\aleph_2</span> Cohen reals, so
+that CH is contingent. The record keeps his algebra when CH holds and
+uses its dual when CH fails, so CH is contingent in ZFC alone (Section
+8).</p>
 <p>The choice and atomicity verifications below were written out by
 OpenAI Codex (GPT-6), 27 September 2026. The comparison with the
 recorded Plenitude countermodel is in Section 7.</p>
 <h2 id="interpretation-and-designated-truth">1. Interpretation and
 designated truth</h2>
 <p>Work in ZFC. Let <span class="math inline">A</span> be a nontrivial
-complete atomless Boolean algebra, for example the regular-open algebra
-of the real line. Put</p>
+complete atomless Boolean algebra. Sections 1–7 hold for every such
+<span class="math inline">A</span>. The record fixes it by cases on the
+continuum hypothesis in <span class="math inline">V</span>:</p>
+<p><span class="math display">
+A:=\begin{cases}\operatorname{RO}(\operatorname{Add}(\omega,\omega_2))&amp;\text{if
+CH holds},\\
+\operatorname{RO}(\operatorname{Col}(\omega_1,2^{\aleph_0})\times\operatorname{Add}(\omega,1))&amp;\text{if
+CH fails.}\end{cases}
+</span></p>
+<p>In both cases forcing with <span class="math inline">A</span> adds a
+Cohen real, which the failures of □Boolean Completeness (type <span
+class="math inline">t</span>), □Countable Boolean Completeness and
+Analytic Necessitism use (until 24 October 2026 <span
+class="math inline">A</span> was the regular open algebra of the real
+line, a single Cohen real). Put</p>
 <p><span class="math display">
 B=\mathbf{2}\times A,\qquad a=(1,0_A),\qquad b=(0,1_A).
 </span></p>
@@ -632,7 +646,61 @@ Plenitude countermodel to Functional Choice. The transfer is valid when
 extensional fullness is available. Bacon’s Boolean-valued construction
 provides that fullness at the designated atom, so the present model
 gives the corresponding counterexample with Functional Choice.</p>
-<h2 id="check-and-attribution">8. Check and attribution</h2>
+<h2 id="the-continuum-hypothesis-is-contingent">8. The continuum
+hypothesis is contingent</h2>
+<p>Added 24 October 2026 by Claude Opus 5.5 (Anthropic), prompted by
+Cian Dorr, who chose the algebra by cases on CH; the argument is Bacon’s
+(§B.2, Lemmas B.1–B.4).</p>
+<p>Write <span class="math inline">\pi,\rho</span> for the coordinate
+projections of <span class="math inline">B=\mathbf 2\times A</span>. For
+a sentence without <span class="math inline">\Box</span>:</p>
+<ul>
+<li>its <span class="math inline">\pi</span>-coordinate is its truth in
+the full standard model over the same domains, by extensional fullness
+at the atom (Bacon, after Lemma B.3);</li>
+<li>its <span class="math inline">\rho</span>-coordinate is its value in
+<span class="math inline">V^A</span>, with each domain read as a ground
+set and relations on it ranging over all names for subsets of it.</li>
+</ul>
+<p>A real number structure exists on a subset of <span
+class="math inline">D_t=B</span> in <span class="math inline">V</span>,
+since <span class="math inline">|B|\ge2^{\aleph_0}</span>, and in <span
+class="math inline">V^A</span>, since <span
+class="math inline">|B|\ge(2^{\aleph_0})^{V^A}</span>. In the first case
+<span class="math inline">|B|=\aleph_2^{\aleph_0}=\aleph_2</span> by CH,
+which is the continuum of <span class="math inline">V^A</span>, the
+forcing being ccc; in the second the collapse makes <span
+class="math inline">2^{\aleph_0}</span> of <span
+class="math inline">V</span> the <span
+class="math inline">\aleph_1</span> of <span
+class="math inline">V^A</span>, and <span class="math inline">V^A</span>
+satisfies CH, since adding one Cohen real after the collapse preserves
+it. Real number structures are unique up to isomorphism, so with <span
+class="math inline">\varphi_{\mathrm{CH}}:=\forall\mathfrak R\,
+.\,\operatorname{Real}_t(\mathfrak R)\to\operatorname{CH}(\mathfrak
+R)</span> and <span class="math inline">\varphi_{\neg\mathrm{CH}}</span>
+likewise,</p>
+<p><span class="math display">
+[\![\varphi_{\mathrm{CH}}]\!]=\bigl([\mathrm{CH}]^V,\
+[\![\mathrm{CH}]\!]^{V^A}\bigr),\qquad
+[\![\varphi_{\neg\mathrm{CH}}]\!]=\bigl([\neg\mathrm{CH}]^V,\
+[\![\neg\mathrm{CH}]\!]^{V^A}\bigr).
+</span></p>
+<p>CH takes opposite values in <span class="math inline">V</span> and
+<span class="math inline">V^A</span>, so each of these is <span
+class="math inline">(1,0_A)</span> or <span
+class="math inline">(0,1_A)</span>, and neither is <span
+class="math inline">\top</span>. Since <span class="math inline">\Box
+p</span> is <span class="math inline">p=\top</span>, both disjuncts of
+Non-contingency of CH at type <span class="math inline">t</span> are
+<span class="math inline">\bot</span>, and the principle fails. So does
+the Necessity of Second-Order Analysis, which implies it.</p>
+<p>The Necessity of Analysis is not settled this way: whether
+first-order analytical truths can differ between <span
+class="math inline">V</span> and <span class="math inline">V^A</span> is
+not decided by ZFC (they can if <span class="math inline">V=L</span>;
+they cannot under projective absoluteness).</p>
+<h2 id="check-and-attribution">9. Check and attribution</h2>
 <p>Run from <code>logical-maps/</code>:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> topics/classicism/checks/boolean_valued_choice.py</span></code></pre></div>
 <p>The check evaluates the relation, its functional and serial
@@ -663,9 +731,9 @@ appendix (PDF pp. 41–43); Theorem 4.4 and its proof (Appendix C.1) and
 Lemma C.6 (Appendix C.2) were read directly on 19 October 2026. — Online
 appendix §B.2, pp. 7–9 (PDF pp. 41–43). Source of the full
 Boolean-valued construction with a designated atom and an atomless
-component. This record uses a singleton individual domain and an
-arbitrary complete atomless algebra; it does not import the source’s
-continuum-hypothesis claims. The explicit Functional Choice and
+component. This record uses a singleton individual domain, and Bacon’s
+algebra when CH holds and its evident dual when CH fails, so that CH is
+contingent without assuming CH. The explicit Functional Choice and
 boxed-choice calculations are supplied in the write-up.</li>
 <li><strong>Background: Classicism.</strong> Bacon, Andrew, and Cian
 Dorr (2024). Classicism. In Peter Fritz and Nicholas K. Jones (eds),

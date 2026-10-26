@@ -32,7 +32,7 @@ Formalization is incomplete; individual certificates record verification status.
 
 ## Research submissions
 
-- [Classicism results and Lean certificate evidence, 24 October 2026 (v2)](submissions/README.md)
+- [Classicism research submissions: 10-24 v2 and the 25 October update](submissions/README.md)
 
 ## Contributing
 

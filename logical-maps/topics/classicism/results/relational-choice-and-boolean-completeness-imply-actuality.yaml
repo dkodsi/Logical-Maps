@@ -6,21 +6,30 @@ conclusion: actuality
 status: proved
 certificate:
   source_id: misc
-  produced_by: Codex (OpenAI), prompted by Daniel Kodsi
-  recorded_by: Codex (OpenAI), prompted by Daniel Kodsi
+  produced_by: GPT-6 Astra (OpenAI), prompted by Daniel Kodsi, 22 October 2026
+  recorded_by: Claude Opus 5.5 (Anthropic), prompted by Cian Dorr, 24 October 2026
   checked_by: []
-  date: '2026-10-23'
-  lean: stated
-  lean_ref: Classicism.Integration.Map.relational_choice_and_boolean_completeness_imply_actuality
+  date: '2026-10-24'
+  lean: verified
+  lean_ref: Classicism.Map.relational_choice_and_boolean_completeness_imply_actuality
 sources:
-- Codex (OpenAI), prompted by Daniel Kodsi, Relational Choice and Boolean Completeness imply Actuality,
-  22 October 2026, §§1–7 (unpaginated); frozen submission F01.
+- GPT-6 Astra (OpenAI), prompted by Daniel Kodsi, Relational Choice and Boolean Completeness imply Actuality,
+  research note of 22 October 2026, §§1–2 and 7 (unpaginated), in Daniel Kodsi's submission of 24 October
+  2026 (branch classicism-results-2026-10-24 of github.com/dkodsi/Logical-Maps).
 source_names:
-- Kodsi research, 22–23 Oct 2026
-proof: BC_tt makes evaluation preserve represented joins and ensures that a true disjoint join has a true
-  member. RC_(t,t) gives a progressive operation selecting a nonzero false part of any nonzero remainder
-  under failure of Actuality. The bare-C fixed-point argument produces a disjoint refinement of the falsehoods
-  with join top, contradicting disjoint-join reflection. The write-up proves the guarded fixed-point step
-  and the sharp local reduction.
-notes: The sharp certificate needs only unboxed RC_(t,t) and BC_tt. The map edge states the all-type consequence.
-  Neither ND nor BF nor Plenitude nor future choice/completeness is assumed.
+- Astra (Kodsi) 22 Oct
+proof: >-
+  See the write-up. Boolean Completeness at $tt$ gives: a pairwise disjoint property of propositions
+  whose join is true has a true member (join the haecceities $\lambda z\, .\,z=a$ of the members at
+  $tt$; if $J$ is that join, $Jx\land Jy$ entails that $x=y$ or $x\land y=\bot$, and a true $q$ with
+  $Jq$ exists by the truth of the join). If Actuality fails, the false propositions have join
+  $\top$. Relational Choice from $t$ to $t$ chooses, for each $b$ below the join, a false proposition
+  not below $b$; the Bourbaki–Witt tower of $b\mapsto b\lor s(b)$ yields pairwise disjoint false
+  increments with join $\top$, a contradiction.
+references: []
+notes: >-
+  The instances used are Relational Choice from $t$ to $t$ and Boolean Completeness at $tt$, which
+  implies it at $t$; all unboxed. With [[actuality-implies-transversal]] and
+  [[transversal-and-relational-choice-imply-transversal-choice]] this settles the conjecture
+  [[relational-choice-and-boolean-completeness-imply-transversal-choice]]. The Bourbaki–Witt lemma is
+  in Background, *General lemmas*.

@@ -1,0 +1,1244 @@
+{
+  "date": "2026-10-25",
+  "upstream": "a89a5058ebbd5ebe93aec07d47a1a32e3b93f8bb",
+  "publication": "Publication update on classicism-results-2026-10-24; patches remain proposed changes to the pinned upstream database.",
+  "patch_application": [
+    {
+      "patch": "patches/01-explanation-corrections.patch",
+      "sha256": "5ca23e48ff11d8be914069065156f167df35ab99569df18cb9e55b94e6303146",
+      "apply_check": true,
+      "applied": true,
+      "validation_exit_code": 0,
+      "classicism": [
+        "classicism: 139 principles, 468 results, 166 models — OK"
+      ],
+      "validation_output_sha256": "ce892c82e1d40d735877b487cc208b755b7083fde4c5abab4ccc23ae1fa07ab3"
+    },
+    {
+      "patch": "patches/02-cloud-relational-choice.patch",
+      "sha256": "78bc35026fb0523e97c22d9de7ae17377afd8aed96b6191ff9da787db1b06dce",
+      "apply_check": true,
+      "applied": true,
+      "validation_exit_code": 0,
+      "classicism": [
+        "classicism: 139 principles, 468 results, 166 models — OK"
+      ],
+      "validation_output_sha256": "ce892c82e1d40d735877b487cc208b755b7083fde4c5abab4ccc23ae1fa07ab3"
+    },
+    {
+      "patch": "patches/03-analytical-contingency.patch",
+      "sha256": "9362675116e11d5d6acb3e51b3dc1edc563b6f67e143c83da1ed11cd254dbfb9",
+      "apply_check": true,
+      "applied": true,
+      "validation_exit_code": 0,
+      "classicism": [
+        "classicism: 139 principles, 468 results, 167 models — OK"
+      ],
+      "validation_output_sha256": "7804f474a9715d1e221e8d24efd0b76664284994c993e7d21f4df0c8a8f37a19"
+    },
+    {
+      "patch": "patches/04-maximalism-forcing.patch",
+      "sha256": "ce729587a14f1fa919bb9187b199f94bd45426e228617c4b18a28deadb91394e",
+      "apply_check": true,
+      "applied": true,
+      "validation_exit_code": 0,
+      "classicism": [
+        "classicism: 139 principles, 468 results, 167 models — OK"
+      ],
+      "validation_output_sha256": "7804f474a9715d1e221e8d24efd0b76664284994c993e7d21f4df0c8a8f37a19"
+    },
+    {
+      "patch": "patches/05-c5-choice.patch",
+      "sha256": "e8e5e0bd171c0cad012dd52fb1abb0fd4320d4eeb513827098b7198983aa789c",
+      "apply_check": true,
+      "applied": true,
+      "validation_exit_code": 0,
+      "classicism": [
+        "classicism: 139 principles, 469 results, 167 models — OK"
+      ],
+      "validation_output_sha256": "cc3e46655a7db3fd9d271526df2b1aed7c765255255580df6bdc04456e9dda73"
+    },
+    {
+      "patch": "patches/06-forcing-infinity-proof.patch",
+      "sha256": "cafb7b0188afd5e4f377c9d0d51e2ac69e673ae1b4c73acfcfee2ec886e3fe25",
+      "apply_check": true,
+      "applied": true,
+      "validation_exit_code": 0,
+      "classicism": [
+        "classicism: 139 principles, 469 results, 167 models — OK"
+      ],
+      "validation_output_sha256": "cc3e46655a7db3fd9d271526df2b1aed7c765255255580df6bdc04456e9dda73"
+    },
+    {
+      "patch": "patches/07-propositional-zorn-actuality.patch",
+      "sha256": "2fedd6c68788855ac25fd052846dbbee6561eb4ef4e073903297afa4fe468ddb",
+      "apply_check": true,
+      "applied": true,
+      "validation_exit_code": 0,
+      "classicism": [
+        "classicism: 139 principles, 472 results, 167 models — OK"
+      ],
+      "validation_output_sha256": "5ac21a1f780a952a6cf23545b37fc53ebf98a319ce2f340b3dca5577d9103509"
+    }
+  ],
+  "lean_compilation_run": false,
+  "engine_or_viewer_changed": false,
+  "proved_only_queries": [
+    {
+      "premises": [
+        "necessary-rigid-comprehension-r",
+        "barcan-r",
+        "relational-choice-r"
+      ],
+      "conclusion": "atomicity-r",
+      "entails": [
+        false,
+        []
+      ],
+      "excludes": null,
+      "separates": [
+        [
+          "modalized-cohen-cloud",
+          "modalized-lottery-cloud"
+        ],
+        [
+          "modalized-cohen-cloud",
+          "atomicity-r-implies-atomicity-t"
+        ]
+      ]
+    },
+    {
+      "premises": [
+        "necessary-rigid-comprehension-r",
+        "necessary-barcan-r",
+        "necessary-relational-choice-r"
+      ],
+      "conclusion": "atomicity-t",
+      "entails": [
+        false,
+        []
+      ],
+      "excludes": null,
+      "separates": [
+        [
+          "modalized-cohen-cloud",
+          "modalized-lottery-cloud"
+        ],
+        [
+          "modalized-cohen-cloud"
+        ]
+      ]
+    },
+    {
+      "premises": [
+        "necessary-distinctness-necessary-r",
+        "functional-choice-r",
+        "axiom-of-infinity-e",
+        "axiom-of-infinity-t",
+        "non-contingency-of-ch"
+      ],
+      "conclusion": "necessity-of-analysis",
+      "entails": [
+        false,
+        []
+      ],
+      "excludes": null,
+      "separates": [
+        [
+          "full-boolean-valued-atom-and-cohen-constructible-ground"
+        ],
+        [
+          "full-boolean-valued-atom-and-cohen-constructible-ground"
+        ]
+      ]
+    },
+    {
+      "premises": [
+        "distinctness-schema-r"
+      ],
+      "conclusion": "forcing-possibilism",
+      "entails": [
+        false,
+        []
+      ],
+      "excludes": null,
+      "separates": [
+        [
+          "coalesced-pinned-interpretations-root",
+          "coalesced-pinned-substitutions-root"
+        ],
+        [
+          "coalesced-pinned-interpretations-root"
+        ]
+      ]
+    },
+    {
+      "premises": [
+        "necessary-distinctness-necessary-r",
+        "relational-choice-r"
+      ],
+      "conclusion": "transversal-choice-r",
+      "entails": [
+        true,
+        [
+          "c5-relational-choice-implies-transversal-choice"
+        ]
+      ],
+      "excludes": null,
+      "separates": [
+        [],
+        []
+      ]
+    },
+    {
+      "premises": [
+        "necessary-functional-choice-r"
+      ],
+      "conclusion": "necessity-of-analysis",
+      "entails": [
+        true,
+        [
+          "necessary-functional-choice-r-implies-necessary-plenitude-r",
+          "necessary-plenitude-r-implies-necessary-distinctness-necessary-r",
+          "necessary-plenitude-r-implies-atomicity-r",
+          "c5-and-atomicity-imply-necessary-rigid-comprehension",
+          "c5-and-necessary-rigid-comprehension-imply-second-order-analytic-necessitism",
+          "second-order-analytic-necessitism-implies-analytic-necessitism",
+          "analytic-necessitism-implies-necessity-of-analysis"
+        ]
+      ],
+      "excludes": null,
+      "separates": [
+        [],
+        []
+      ]
+    },
+    {
+      "premises": [
+        "relational-choice-r"
+      ],
+      "conclusion": "transversal-choice-r",
+      "entails": [
+        false,
+        []
+      ],
+      "excludes": null,
+      "separates": [
+        [],
+        []
+      ]
+    }
+  ],
+  "joint_max_and_fp_models": [
+    "coalesced-definable-root"
+  ],
+  "model_conflicts": {},
+  "baseline_queries": [
+    {
+      "premises": [
+        "necessary-rigid-comprehension-r",
+        "barcan-r",
+        "relational-choice-r"
+      ],
+      "conclusion": "atomicity-r",
+      "entails": [
+        false,
+        []
+      ],
+      "excludes": null,
+      "separates": [
+        [],
+        []
+      ]
+    },
+    {
+      "premises": [
+        "necessary-distinctness-necessary-r",
+        "functional-choice-r"
+      ],
+      "conclusion": "necessity-of-analysis",
+      "entails": [
+        false,
+        []
+      ],
+      "excludes": null,
+      "separates": [
+        [],
+        []
+      ]
+    },
+    {
+      "premises": [
+        "distinctness-schema-r"
+      ],
+      "conclusion": "forcing-possibilism",
+      "entails": [
+        false,
+        []
+      ],
+      "excludes": null,
+      "separates": [
+        [],
+        []
+      ]
+    },
+    {
+      "premises": [
+        "necessary-distinctness-necessary-r",
+        "relational-choice-r"
+      ],
+      "conclusion": "transversal-choice-r",
+      "entails": [
+        false,
+        []
+      ],
+      "excludes": null,
+      "separates": [
+        [],
+        []
+      ]
+    },
+    {
+      "premises": [
+        "necessary-functional-choice-r"
+      ],
+      "conclusion": "necessity-of-analysis",
+      "entails": [
+        true,
+        [
+          "necessary-functional-choice-r-implies-necessary-plenitude-r",
+          "necessary-plenitude-r-implies-necessary-distinctness-necessary-r",
+          "necessary-plenitude-r-implies-atomicity-r",
+          "c5-and-atomicity-imply-necessary-rigid-comprehension",
+          "c5-and-necessary-rigid-comprehension-imply-second-order-analytic-necessitism",
+          "second-order-analytic-necessitism-implies-analytic-necessitism",
+          "analytic-necessitism-implies-necessity-of-analysis"
+        ]
+      ],
+      "excludes": null,
+      "separates": [
+        [],
+        []
+      ]
+    }
+  ],
+  "format_checks": {
+    "kind": "static delimiter and link checks; no visual rendering or Lean compilation",
+    "unbalanced_display_delimiters": [],
+    "legacy_math_delimiters": [],
+    "control_characters": [],
+    "machine_paths": []
+  },
+  "scope": "Patch/application and database checks do not establish mathematical correctness. New proofs retain their recorded ordinary-review status. Existing Lean certificate scope is unchanged.",
+  "reference_checks": {
+    "checked_local_and_pinned_repository_links": 166,
+    "errors": [],
+    "latest_local_link_check": {
+      "count": 229,
+      "errors": []
+    }
+  },
+  "proof_length_counts": [
+    {
+      "item": "items/01-explanation-corrections.md",
+      "words": 720,
+      "category": "short",
+      "proofs": [
+        "../proofs/definable-atoms-and-extensional-transfer-corrections.md"
+      ]
+    },
+    {
+      "item": "items/02-cloud-relational-choice.md",
+      "words": 347,
+      "category": "short",
+      "proofs": [
+        "../proofs/modalized-cloud-relational-choice.md"
+      ]
+    },
+    {
+      "item": "items/03-analytical-contingency.md",
+      "words": 3143,
+      "category": "medium",
+      "proofs": [
+        "../proofs/full-boolean-valued-atom-and-cohen-constructible-ground.md"
+      ]
+    },
+    {
+      "item": "items/04-maximalism-forcing.md",
+      "words": 2478,
+      "category": "medium",
+      "proofs": [
+        "../proofs/maximalism-and-forcing-possibilism.md"
+      ]
+    },
+    {
+      "item": "items/05-c5-choice.md",
+      "words": 2125,
+      "category": "medium",
+      "proofs": [
+        "../proofs/c5-relational-choice-implies-transversal-choice.md"
+      ]
+    },
+    {
+      "item": "items/06-finite-collapse.md",
+      "words": 10029,
+      "category": "long",
+      "proofs": [
+        "../proofs/field-operations-under-max.md",
+        "../proofs/finite-collapse.md",
+        "../proofs/finite-type-capacities.md",
+        "../proofs/integer-division.md",
+        "../proofs/pairing-and-readouts.md",
+        "../proofs/stacks-shifts-and-algebra.md"
+      ]
+    },
+    {
+      "item": "items/07-analytical-shadow.md",
+      "words": 2927,
+      "category": "medium",
+      "proofs": [
+        "../proofs/analytical-shadow.md"
+      ]
+    },
+    {
+      "item": "items/08-analytical-choice.md",
+      "words": 4433,
+      "category": "long",
+      "proofs": [
+        "../proofs/analytical-choice-conservation.md",
+        "../proofs/analytical-choice-separation.md"
+      ]
+    },
+    {
+      "item": "items/09-numerical-operations.md",
+      "words": 12131,
+      "category": "long",
+      "proofs": [
+        "../proofs/alternating-bit-recursion.md",
+        "../proofs/internal-finite-realization.md",
+        "../proofs/numerical-models.md",
+        "../proofs/operational-real-fields.md",
+        "../proofs/protected-number-operations.md"
+      ]
+    },
+    {
+      "item": "items/11-forcing-infinity-proof.md",
+      "words": 679,
+      "category": "short",
+      "proofs": [
+        "../proofs/forcing-possibilism-internal-infinity.md"
+      ]
+    },
+    {
+      "item": "items/12-reversible-family-realization.md",
+      "words": 4279,
+      "category": "long",
+      "proofs": [
+        "../proofs/reversible-invariant-family-realization.md",
+        "../proofs/fixed-individual-component-shift.md"
+      ]
+    },
+    {
+      "item": "items/13-observers-and-necessary-choice.md",
+      "words": 11108,
+      "category": "long",
+      "proofs": [
+        "../proofs/observer-witness-transport.md",
+        "../proofs/observer-comprehension-reflection.md",
+        "../proofs/observer-choice-transport.md",
+        "../proofs/necessary-observer-positive-bounds.md",
+        "../proofs/infinite-colour-conditional-completeness-countermodel.md",
+        "../proofs/box-observer-completeness.md"
+      ]
+    },
+    {
+      "item": "items/14-reversible-separation-single-sentence.md",
+      "words": 770,
+      "category": "short",
+      "proofs": [
+        "../proofs/reversible-separation-single-sentence.md"
+      ]
+    },
+    {
+      "item": "items/15-observer-shift-semantics.md",
+      "words": 2845,
+      "category": "medium",
+      "proofs": [
+        "../proofs/observer-shift-semantics.md",
+        "../proofs/observer-shift-boundaries.md"
+      ]
+    },
+    {
+      "item": "items/16-evaluators-and-comprehension.md",
+      "words": 1736,
+      "category": "medium",
+      "proofs": [
+        "../proofs/endpoint-evaluators-and-comprehension.md",
+        "../proofs/endpoint-separation-finite-presentation.md"
+      ]
+    },
+    {
+      "item": "items/17-choice-proof-simplifications.md",
+      "words": 965,
+      "category": "short",
+      "proofs": [
+        "../proofs/choice-proof-simplifications.md"
+      ]
+    },
+    {
+      "item": "items/18-reversible-group-semantics.md",
+      "words": 1254,
+      "category": "medium",
+      "proofs": [
+        "../proofs/reversible-group-semantics.md"
+      ]
+    },
+    {
+      "item": "items/19-observer-single-type-schema.md",
+      "words": 4685,
+      "category": "long",
+      "proofs": [
+        "../proofs/observer-single-type-schema.md",
+        "../proofs/observer-no-finite-basis-direct.md",
+        "../proofs/observer-term-closed-profile-models.md"
+      ],
+      "excluded_alternative_proofs": [
+        "../proofs/observer-no-finite-basis.md"
+      ]
+    },
+    {
+      "item": "items/20-endpoint-ic-certificates.md",
+      "words": 1155,
+      "category": "medium",
+      "proofs": [
+        "../proofs/endpoint-ic-representation.md"
+      ]
+    },
+    {
+      "item": "items/21-observer-classical-cores.md",
+      "words": 8812,
+      "category": "long",
+      "proofs": [
+        "../proofs/observer-classical-cores.md",
+        "../proofs/endpoint-classical-cores.md",
+        "../proofs/observer-core-mathematics.md",
+        "../proofs/observer-core-recovery.md",
+        "../proofs/endpoint-core-individual-quotient.md"
+      ]
+    },
+    {
+      "item": "items/22-classical-present-conservation.md",
+      "words": 2783,
+      "category": "medium",
+      "proofs": [
+        "../proofs/classical-present-over-arbitrary-model.md",
+        "../proofs/classical-present-conservation.md"
+      ]
+    },
+    {
+      "item": "items/23-propositional-zorn-actuality.md",
+      "words": 12596,
+      "category": "long",
+      "proofs": [
+        "../proofs/vicinity-supported-interpretation.md",
+        "../proofs/vicinity-relational-choice-and-propositional-completeness-imply-actuality.md",
+        "../proofs/vicinity-zorn-and-propositional-completeness-imply-actuality.md",
+        "../proofs/c5-relational-choice-and-propositional-completeness-imply-actuality.md",
+        "../proofs/zorn-and-higher-completeness-imply-actuality.md",
+        "../proofs/c5-zorn-and-propositional-completeness-imply-actuality.md",
+        "../proofs/propositional-canonical-chain-lemmas.md"
+      ]
+    }
+  ],
+  "max_atomicity_certificate": {
+    "status": "compiled_verified",
+    "receipt": "certificates/max-atomicity-third-order.json",
+    "archive_member_hashes_checked": 346,
+    "current_classicism_source_hashes_checked": 93,
+    "compiler_rerun_during_collection": false
+  },
+  "forcing_infinity_audit": "Closed by alternative internal proof; patch 06 supplements the existing result.",
+  "observer_family_realization": {
+    "local_links_checked": 130,
+    "new_pinned_dependency_links_checked": 9,
+    "link_errors": [],
+    "new_document_format_errors": [],
+    "math_render": {
+      "formulas": 156,
+      "errors": []
+    },
+    "item": "items/12-reversible-family-realization.md",
+    "scope": "Local and immutable dependency links, KaTeX rendering, source hashes and scope review for the new observer supplement; no new native records or Lean compilation.",
+    "source_hashes_verified": [
+      "proofs/reversible-invariant-family-realization.md",
+      "proofs/fixed-individual-component-shift.md"
+    ],
+    "upstream_observer_records": "No observer principles in the pinned upstream snapshot; supplied as a supplement to the prior proposal.",
+    "base_repository_validation": {
+      "exit_code": 0,
+      "classicism": "132 principles, 448 results, 162 models — OK"
+    }
+  },
+  "observer_supplements": {
+    "local_links_checked": 141,
+    "new_pinned_dependency_links_checked": 30,
+    "link_errors": [],
+    "new_document_format_errors": [],
+    "math_render": {
+      "formulas": 380,
+      "errors": []
+    },
+    "source_hashes_verified": [
+      "proofs/reversible-invariant-family-realization.md",
+      "proofs/fixed-individual-component-shift.md",
+      "proofs/observer-witness-transport.md",
+      "proofs/observer-comprehension-reflection.md",
+      "proofs/observer-choice-transport.md"
+    ],
+    "items": [
+      "items/12-reversible-family-realization.md",
+      "items/13-observers-and-necessary-choice.md"
+    ],
+    "scope": "Links and anchors, immutable proof dependencies, KaTeX rendering and source hashes for both observer supplements. Ordinary proof scope and attribution checked; no native observer records or Lean compilation added.",
+    "existing_choice_boundary_query": {
+      "premises": [
+        "necessary-distinctness-necessary-r",
+        "necessary-barcan-r",
+        "functional-choice-r"
+      ],
+      "target": "necessary-functional-choice-r",
+      "entails": [
+        false,
+        []
+      ],
+      "excludes": null,
+      "separates": [
+        [
+          "full-boolean-valued-atom-and-atomless"
+        ],
+        [
+          "full-boolean-valued-atom-and-atomless",
+          "necessary-functional-choice-r-implies-necessary-plenitude-r",
+          "necessary-plenitude-r-implies-atomicity-r",
+          "atomicity-r-implies-atomicity-t"
+        ]
+      ]
+    },
+    "query_method": "scripts.pmap.load_topic and proved-only Engine with empty optional background; the named existing model only.",
+    "base_repository_validation": {
+      "exit_code": 0,
+      "classicism": "132 principles, 448 results, 162 models — OK"
+    }
+  },
+  "handoff_checks": {
+    "local_links_checked": 320,
+    "pinned_dependency_links_checked": 79,
+    "link_errors": [],
+    "document_format_errors": [],
+    "math_render": {
+      "formulas": 2352,
+      "errors": []
+    },
+    "prepared_proof_hashes_verified": [
+      "proofs/finite-collapse.md",
+      "proofs/finite-type-capacities.md",
+      "proofs/current-analysis-under-max.md",
+      "proofs/field-operations-under-max.md",
+      "proofs/pairing-and-readouts.md",
+      "proofs/stacks-shifts-and-algebra.md",
+      "proofs/integer-division.md",
+      "proofs/operational-real-fields.md",
+      "proofs/analytical-shadow.md",
+      "proofs/analytical-choice-conservation.md",
+      "proofs/analytical-choice-separation.md",
+      "proofs/protected-number-operations.md",
+      "proofs/alternating-bit-recursion.md",
+      "proofs/internal-finite-realization.md",
+      "proofs/numerical-transport.md",
+      "proofs/numerical-inverses.md",
+      "proofs/predecessor-henkin-countermodel.md",
+      "proofs/numerical-sections.md",
+      "proofs/numerical-models.md",
+      "proofs/domain-decoding.md",
+      "proofs/definable-atoms-and-extensional-transfer-corrections.md",
+      "proofs/modalized-cloud-relational-choice.md",
+      "proofs/full-boolean-valued-atom-and-cohen-constructible-ground.md",
+      "proofs/maximalism-and-forcing-possibilism.md",
+      "proofs/c5-relational-choice-implies-transversal-choice.md",
+      "proofs/forcing-possibilism-internal-infinity.md",
+      "proofs/reversible-invariant-family-realization.md",
+      "proofs/fixed-individual-component-shift.md",
+      "proofs/observer-witness-transport.md",
+      "proofs/observer-comprehension-reflection.md",
+      "proofs/observer-choice-transport.md",
+      "proofs/reversible-separation-single-sentence.md",
+      "proofs/observer-shift-semantics.md",
+      "proofs/observer-shift-boundaries.md",
+      "proofs/endpoint-evaluators-and-comprehension.md",
+      "proofs/choice-proof-simplifications.md",
+      "proofs/reversible-group-semantics.md",
+      "proofs/observer-single-type-schema.md",
+      "proofs/endpoint-separation-finite-presentation.md",
+      "proofs/necessary-observer-positive-bounds.md",
+      "proofs/observer-term-closed-profile-models.md",
+      "proofs/observer-no-finite-basis.md",
+      "items/20-endpoint-ic-certificates.md",
+      "proofs/observer-no-finite-basis-direct.md",
+      "proofs/observer-classical-cores.md",
+      "proofs/classical-present-over-arbitrary-model.md",
+      "proofs/classical-present-conservation.md",
+      "proofs/endpoint-ic-representation.md",
+      "proofs/c5-zorn-and-propositional-completeness-imply-actuality.md",
+      "proofs/propositional-canonical-chain-lemmas.md",
+      "proofs/endpoint-classical-cores.md",
+      "proofs/observer-core-mathematics.md",
+      "proofs/observer-core-recovery.md",
+      "proofs/endpoint-core-individual-quotient.md",
+      "proofs/vicinity-supported-interpretation.md",
+      "proofs/vicinity-relational-choice-and-propositional-completeness-imply-actuality.md",
+      "proofs/vicinity-zorn-and-propositional-completeness-imply-actuality.md",
+      "proofs/c5-relational-choice-and-propositional-completeness-imply-actuality.md",
+      "proofs/zorn-and-higher-completeness-imply-actuality.md",
+      "proofs/infinite-colour-conditional-completeness-countermodel.md",
+      "proofs/box-observer-completeness.md"
+    ],
+    "scope": "All staged Markdown links, anchors, pinned package references and formulas checked. Seven patches applied in order to a fresh copy of pinned upstream and validated; two new native Vicinity connections checked by proved-only closure. Source hashes verified. No Lean compiler rerun or browser visual review.",
+    "files_retained_from_previous_preparation": 97,
+    "files_in_handoff": 106,
+    "new_proof_files": [
+      "proofs/box-observer-completeness.md",
+      "proofs/c5-relational-choice-and-propositional-completeness-imply-actuality.md",
+      "proofs/infinite-colour-conditional-completeness-countermodel.md",
+      "proofs/vicinity-relational-choice-and-propositional-completeness-imply-actuality.md",
+      "proofs/vicinity-supported-interpretation.md",
+      "proofs/vicinity-zorn-and-propositional-completeness-imply-actuality.md",
+      "proofs/zorn-and-higher-completeness-imply-actuality.md"
+    ],
+    "existing_proof_files_updated": [],
+    "base_repository_validation": {
+      "exit_code": 0,
+      "classicism": "classicism: 132 principles, 450 results, 162 models — OK"
+    },
+    "patched_upstream_validation": {
+      "exit_code": 0,
+      "classicism": "classicism: 139 principles, 472 results, 167 models — OK"
+    },
+    "existing_certificates_unchanged": true,
+    "preparation_files_excluded": [
+      "AGENTS.md",
+      "templates/ITEM.md",
+      "templates/RECORDS.md"
+    ]
+  },
+  "proof_length_method": "Whitespace-delimited words in each listed proof, including its definitions, displayed formulas and source discussion; imported dependencies excluded. Short below 1,000, medium 1,000–4,000, long above 4,000.",
+  "observer_finite_basis": {
+    "item": "items/19-observer-single-type-schema.md",
+    "new_proofs": [
+      "proofs/observer-no-finite-basis.md",
+      "proofs/observer-term-closed-profile-models.md"
+    ],
+    "question_outcome": "No finite equivalent axiomatization of OS over C; no uniformly bounded elaborated type-order equivalent basis. The same obstruction covers every intermediate theory from C+BF to C+OS.",
+    "source_proof_hashes_checked": {
+      "models.txt": "8c74a5700c1ec54d9496a4629b9b1351b8307aeea26f1fda054e3b9d0af4894c",
+      "metatheory.txt": "95ae636ee7e8249710990fa2abea5aa1c9a7bdc8725f43eaee4c0b75600fe83a",
+      "REPORT.txt": "89cc9316affc568a014da5280e92972d6eff42376f172c7c1f035862aed5d490"
+    },
+    "source_links_verified": [
+      "https://karagila.org/files/Forcing-2023.pdf",
+      "https://jdh.hamkins.org/a-gentle-introduction-to-boolean-valued-model-theory/"
+    ],
+    "scope": "Source and proof-scope review, exposition, references, formula parsing and source hashes. Independent AI reviews are reported in proof-reviews.json. No native record changes, new certificate claims or Lean compilation.",
+    "preferred_proof": "proofs/observer-no-finite-basis-direct.md",
+    "alternative_proof": "proofs/observer-no-finite-basis.md",
+    "model_specific_characterization": "Within the coherent-profile construction: OS iff all-type BF iff every nonempty available leaf predicate has an available witness iff the term-closed leaf fragment is elementary in the specified typed-algebra presentation.",
+    "direct_argument_sources": {
+      "elementary-metatheory-search.txt": "b2ba0f42e0cc327322a9927f4c33552fb14e9d85164b769e10537c39dde97846",
+      "elementary-symmetry-search.txt": "dd5df3b7e1b858c7eed60d6b8e20ba02b937ce4d37b171954f468271beccb4df",
+      "models.txt": "dc3988456f524174753368ba9cd2528ce00e5764514bf807af934d010bbc1c2c"
+    }
+  },
+  "general_observer_cores": {
+    "items": [
+      "items/21-observer-classical-cores.md",
+      "items/22-classical-present-conservation.md"
+    ],
+    "source_hashes": {
+      "structure.txt": "fd53a5810da0eb9cb790d72b399804ce2902577b7af19805b4cbaa17129491a5",
+      "models.txt": "e69d1649ba7400154e77fc81120cb2e1a6741458339efc14b4af3220bbf4ae49",
+      "metatheory.txt": "55bd9135797b1e2478b0e2b29680f42df99b2ea74c34e2a8c1ecf2053cacd8bc"
+    },
+    "native_prerequisites_checked": [
+      "necessary-nd-implies-bf",
+      "necessary-distinctness-necessary-r-implies-necessary-barcan-r",
+      "barcan-r-implies-functionality-r"
+    ],
+    "native_definitions_checked": [
+      "strong-actuality",
+      "relational-choice-r",
+      "transversal-choice-r",
+      "distinctness-schema-r",
+      "distinctness-signature-r"
+    ],
+    "native_records_changed": false,
+    "lean_compilation_run": false,
+    "scope": "Ordinary mathematical model and conservation supplements; the original C5 consequences, special roots and conservation results are attributed separately. The standard second-order clause retains a countable relational signature and countably infinite prescribed structure, no individually named constants, and the E+/D+ consequence/premise restrictions."
+  },
+  "endpoint_ic_previous_component_audit": {
+    "item": "items/20-endpoint-ic-certificates.md",
+    "receipt": "certificates/endpoint-ic-components.json",
+    "run_id": "20261026T013903053652Z-13a864b0",
+    "new_modules": 13,
+    "source_closure_files_checked": 22,
+    "immutable_snapshot_files_checked": 22,
+    "compiled_artifact_hashes_checked": 22,
+    "axiom_reports_matched_to_saved_log": 68,
+    "source_archive_members_checked": 22,
+    "compiler_rerun": false,
+    "no_sorryAx": true,
+    "custom_axioms": [],
+    "prior_receipt_hash_matches": true,
+    "superseded_scope_summary": "The earlier component audit remains retained; the full theorem status is given by endpoint_ic_full."
+  },
+  "endpoint_ic_full": {
+    "item": "items/20-endpoint-ic-certificates.md",
+    "receipt": "certificates/endpoint-ic-full.json",
+    "run_id": "20261026T023452034866Z-3cfb5c76",
+    "source_closure_files_checked": 42,
+    "immutable_snapshot_files_checked": 42,
+    "compiled_artifact_hashes_checked": 42,
+    "axiom_reports_matched_to_saved_log": 41,
+    "source_archive_members_checked": 42,
+    "compiler_hash_checked": true,
+    "full_lambda_free_H_endpoint_certified": true,
+    "compiler_rerun": false,
+    "no_sorryAx": true,
+    "custom_axioms": [],
+    "prior_137_source_hashes_unchanged": true,
+    "previous_component_receipt_and_sources_retained": true,
+    "proof_calculus_completeness_claimed": false,
+    "choice_free_Lean_certificate_claimed": false
+  },
+  "propositional_zorn_actuality": {
+    "upstream_main_checked": "a89a5058ebbd5ebe93aec07d47a1a32e3b93f8bb",
+    "query_method": "scripts.pmap.load_topic and proved-only Engine; optional premises remain in query sets, with empty background. Before and after include patches 01–06.",
+    "before": [
+      {
+        "premises": [
+          "necessary-distinctness-necessary-r",
+          "boolean-completeness-t",
+          "zorn-r"
+        ],
+        "conclusion": "actuality",
+        "entails": [
+          false,
+          []
+        ],
+        "excludes": null,
+        "separates": [
+          [],
+          []
+        ]
+      },
+      {
+        "premises": [
+          "necessary-distinctness-necessary-r",
+          "boolean-completeness-t",
+          "relational-choice-r"
+        ],
+        "conclusion": "actuality",
+        "entails": [
+          false,
+          []
+        ],
+        "excludes": null,
+        "separates": [
+          [],
+          []
+        ]
+      }
+    ],
+    "after": [
+      {
+        "premises": [
+          "necessary-distinctness-necessary-r",
+          "boolean-completeness-t",
+          "zorn-r"
+        ],
+        "conclusion": "actuality",
+        "entails": [
+          true,
+          [
+            "c5-zorn-and-propositional-completeness-imply-actuality"
+          ]
+        ],
+        "excludes": null,
+        "separates": [
+          [],
+          []
+        ]
+      },
+      {
+        "premises": [
+          "necessary-distinctness-necessary-r",
+          "boolean-completeness-t",
+          "zorn-r"
+        ],
+        "conclusion": "boolean-completeness-r",
+        "entails": [
+          true,
+          [
+            "c5-zorn-and-propositional-completeness-imply-actuality",
+            "c5-and-actuality-imply-completeness"
+          ]
+        ],
+        "excludes": null,
+        "separates": [
+          [],
+          []
+        ]
+      },
+      {
+        "premises": [
+          "necessary-distinctness-necessary-r",
+          "boolean-completeness-t",
+          "relational-choice-r"
+        ],
+        "conclusion": "actuality",
+        "entails": [
+          true,
+          [
+            "c5-relational-choice-implies-transversal-choice",
+            "transversal-choice-r-implies-zorn-r",
+            "c5-zorn-and-propositional-completeness-imply-actuality"
+          ]
+        ],
+        "excludes": null,
+        "separates": [
+          [],
+          []
+        ]
+      },
+      {
+        "premises": [
+          "necessary-distinctness-necessary-r",
+          "actuality"
+        ],
+        "conclusion": "boolean-completeness-t",
+        "entails": [
+          true,
+          [
+            "c5-and-actuality-imply-completeness",
+            "boolean-completeness-r-implies-boolean-completeness-t"
+          ]
+        ],
+        "excludes": null,
+        "separates": [
+          [],
+          []
+        ]
+      }
+    ],
+    "sharp_scope": "C5 + current BC at t + current Zorn at t. Native record uses existing all-type Zorn node.",
+    "proof_dependencies": "Full current relational and strong crisp canonical-chain proofs included.",
+    "lean_compilation_run": false,
+    "new_upstream_link_targets_checked": 4
+  },
+  "observer_core_development": {
+    "proofs": [
+      "proofs/endpoint-classical-cores.md",
+      "proofs/observer-core-mathematics.md",
+      "proofs/observer-core-recovery.md",
+      "proofs/endpoint-core-individual-quotient.md"
+    ],
+    "bare_c_endpoint_core": true,
+    "whole_idempotence_assumed": false,
+    "one_observer_with_all_typed_quantifier_laws": true,
+    "individual_quotient": true,
+    "canonicity_scope": "Pure logical cores and individual constants; relational named constants require compatibility.",
+    "quantified_infinity_and_observed_choice_transfer_scope": "C5, retaining the original individuals.",
+    "fullness_scope": "External completeness of predicate algebras in the constructed endpoint core; not internal Boolean Completeness.",
+    "recovery_scope": "C5; joint normalization distinguished from observation with original arguments.",
+    "lean_compilation_run": false,
+    "source_hashes_rechecked": 4,
+    "whole_idempotence_derived": "Over C from endpoint valuation, whole Boolean preservation and propositional quantifier preservation; see endpoint-classical-cores.md."
+  },
+  "vicinity_actuality_consolidation": {
+    "shared_construction": "proofs/vicinity-supported-interpretation.md",
+    "branches": [
+      "RC_(t,t)",
+      "Zorn_t"
+    ],
+    "extra_type_refinement": "C + BC_tt + Zorn_t implies Actuality",
+    "sharp_optional_premises": "All current; neither branch imports the other choice premise.",
+    "ordinary_mathematical_proofs": true,
+    "lean_compilation_run": false,
+    "query_method": "Proved-only Engine from patched upstream, with optional premises in query sets. Before omits the two new Vicinity records; after includes them.",
+    "before": [
+      {
+        "premises": [
+          "vicinity",
+          "boolean-completeness-t",
+          "relational-choice-r"
+        ],
+        "target": "actuality",
+        "entails": [
+          false,
+          []
+        ],
+        "excludes": null,
+        "separates": [
+          [],
+          []
+        ]
+      },
+      {
+        "premises": [
+          "vicinity",
+          "boolean-completeness-t",
+          "zorn-r"
+        ],
+        "target": "actuality",
+        "entails": [
+          false,
+          []
+        ],
+        "excludes": null,
+        "separates": [
+          [],
+          []
+        ]
+      },
+      {
+        "premises": [
+          "distinctness-necessary-t",
+          "boolean-completeness-t",
+          "zorn-r"
+        ],
+        "target": "actuality",
+        "entails": [
+          false,
+          []
+        ],
+        "excludes": null,
+        "separates": [
+          [],
+          []
+        ]
+      },
+      {
+        "premises": [
+          "boolean-completeness-r",
+          "zorn-r"
+        ],
+        "target": "actuality",
+        "entails": [
+          true,
+          [
+            "zorn-r-implies-well-ordering-r",
+            "well-ordering-r-implies-transversal-choice-r",
+            "transversal-choice-r-implies-relational-choice-r",
+            "relational-choice-and-boolean-completeness-imply-actuality"
+          ]
+        ],
+        "excludes": null,
+        "separates": [
+          [],
+          []
+        ]
+      },
+      {
+        "premises": [
+          "boolean-completeness-t",
+          "zorn-r"
+        ],
+        "target": "actuality",
+        "entails": [
+          false,
+          []
+        ],
+        "excludes": null,
+        "separates": [
+          [],
+          []
+        ]
+      },
+      {
+        "premises": [
+          "boolean-completeness-t",
+          "relational-choice-r"
+        ],
+        "target": "actuality",
+        "entails": [
+          false,
+          []
+        ],
+        "excludes": null,
+        "separates": [
+          [],
+          []
+        ]
+      }
+    ],
+    "after": [
+      {
+        "premises": [
+          "vicinity",
+          "boolean-completeness-t",
+          "relational-choice-r"
+        ],
+        "target": "actuality",
+        "entails": [
+          true,
+          [
+            "vicinity-relational-choice-and-propositional-completeness-imply-actuality"
+          ]
+        ],
+        "excludes": null,
+        "separates": [
+          [],
+          []
+        ]
+      },
+      {
+        "premises": [
+          "vicinity",
+          "boolean-completeness-t",
+          "zorn-r"
+        ],
+        "target": "actuality",
+        "entails": [
+          true,
+          [
+            "vicinity-zorn-and-propositional-completeness-imply-actuality"
+          ]
+        ],
+        "excludes": null,
+        "separates": [
+          [],
+          []
+        ]
+      },
+      {
+        "premises": [
+          "distinctness-necessary-t",
+          "boolean-completeness-t",
+          "zorn-r"
+        ],
+        "target": "actuality",
+        "entails": [
+          true,
+          [
+            "distinctness-necessary-t-implies-vicinity",
+            "vicinity-zorn-and-propositional-completeness-imply-actuality"
+          ]
+        ],
+        "excludes": null,
+        "separates": [
+          [],
+          []
+        ]
+      },
+      {
+        "premises": [
+          "boolean-completeness-r",
+          "zorn-r"
+        ],
+        "target": "actuality",
+        "entails": [
+          true,
+          [
+            "zorn-r-implies-well-ordering-r",
+            "well-ordering-r-implies-transversal-choice-r",
+            "transversal-choice-r-implies-relational-choice-r",
+            "relational-choice-and-boolean-completeness-imply-actuality"
+          ]
+        ],
+        "excludes": null,
+        "separates": [
+          [],
+          []
+        ]
+      },
+      {
+        "premises": [
+          "boolean-completeness-t",
+          "zorn-r"
+        ],
+        "target": "actuality",
+        "entails": [
+          false,
+          []
+        ],
+        "excludes": null,
+        "separates": [
+          [],
+          []
+        ]
+      },
+      {
+        "premises": [
+          "boolean-completeness-t",
+          "relational-choice-r"
+        ],
+        "target": "actuality",
+        "entails": [
+          false,
+          []
+        ],
+        "excludes": null,
+        "separates": [
+          [],
+          []
+        ]
+      }
+    ],
+    "native_records_added": [
+      "vicinity-relational-choice-and-propositional-completeness-imply-actuality",
+      "vicinity-zorn-and-propositional-completeness-imply-actuality"
+    ]
+  },
+  "observer_completeness_supplement": {
+    "countermodel": "C + BC_t + necessary OS + necessary BF_all + possible (necessary ND_t and not BC_t); target is full C5",
+    "positive_reflection": "Over C + BC_t: idempotent or surjective qualified observers commuting with native Box accept BC_t; their separation gives necessary BC_t.",
+    "max_comparison": "Unresolved",
+    "lean_compilation_run": false
+  },
+  "release_checks": {
+    "upstream_main_verified": "a89a5058ebbd5ebe93aec07d47a1a32e3b93f8bb",
+    "publication_parent": "6535760397fa2d7b07dfc137528d165a0e31c596",
+    "remote_formatting_commits_preserved": true,
+    "database_build_exit_code": 0,
+    "source_database_changed": true,
+    "lean_compilation_run": false,
+    "previous_package_verified_files": 3501,
+    "previous_generated_views_check": "8 generated files, no drift",
+    "cross_reference_guide": "DATABASE-HANDOFF.md",
+    "scope": "Publication of the curated update and its proposed native patches; no patch applied to the working database.",
+    "held_proposal_excluded": "Countable Forcing Realization remains outside this publication.",
+    "upstream_merged": true,
+    "upstream_merge_parent": "a89a5058ebbd5ebe93aec07d47a1a32e3b93f8bb",
+    "source_database_changes": "Merged upstream main, retained its updated records, proofs and certification statuses, and removed one duplicated branch note. The seven proposed handoff patches remain unapplied.",
+    "engine_selftest": "Passed",
+    "falsity_check": "Passed: 40 exhaustive Horn theories and Python/JavaScript parity.",
+    "merged_database_validation": {
+      "principles": 139,
+      "results": 471,
+      "models": 166,
+      "status": "passed"
+    },
+    "handoff_checks": {
+      "local_links": 321,
+      "pinned_dependency_links": 79,
+      "formulas_rendered": 2352,
+      "errors": 0
+    },
+    "upstream_preservation": {
+      "changed_source_files": 124,
+      "retained_byte_for_byte": 122,
+      "expected_differences": {
+        "logical-maps/topics/classicism/lean/Classicism/Statements.lean": "Mechanically regenerated from the merged records.",
+        "logical-maps/topics/classicism/topic.yaml": "Preserves the fork source URL; all upstream topic changes retained."
+      }
+    }
+  }
+}

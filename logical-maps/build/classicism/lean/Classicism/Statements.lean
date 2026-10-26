@@ -1515,6 +1515,15 @@ def maximalism_incompatible_with_modalized_relational_choice : Prop :=
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.ModalizedRelationalChoice.schemaIn →
     ¬ Classicism.Meta.AxiomSet.Consistent Ax
 
+/-- `maximalism-signature-incompatible-with-strong-possibility-pure`
+
+Maximalism (signature Σ) ∧ Strong Possibility (pure) ⇒ ⊥ -/
+def maximalism_signature_incompatible_with_strong_possibility_pure : Prop :=
+  ∀ {Sig : Classicism.Meta.Signature} (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig),
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.distinctnessC _) →
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.strongPossibility) →
+    ¬ Classicism.Meta.AxiomSet.Consistent Ax
+
 /-- `maximalist-distinctness-incompatible-with-atomicity-t`
 
 Maximalism (pure) ∧ Atomicity (type t) ⇒ ⊥ -/

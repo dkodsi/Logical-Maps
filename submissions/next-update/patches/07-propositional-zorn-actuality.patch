@@ -1,0 +1,1570 @@
+diff --git a/logical-maps/topics/classicism/writeups/c5-zorn-and-propositional-completeness-imply-actuality.md b/logical-maps/topics/classicism/writeups/c5-zorn-and-propositional-completeness-imply-actuality.md
+new file mode 100644
+--- /dev/null
++++ b/logical-maps/topics/classicism/writeups/c5-zorn-and-propositional-completeness-imply-actuality.md
+@@ -0,0 +1,460 @@
++# Zorn and propositional completeness imply Actuality
++
++OpenAI Codex, prompted by Daniel Kodsi, 25 October 2026. Source: `misc`, this proof, unpaginated.
++
++**C5, Boolean Completeness at the proposition type, and Zorn at the proposition type imply Actuality.** Both additional principles are current, unboxed assumptions. No Relational Choice, higher-type Zorn, higher-type completeness, or admitted strict splitting operation is assumed.
++
++The main difficulty is that Zorn on propositions cannot simply be applied to partial choice functions. Instead, one proposition records a history of separated Boolean bands. The gaps between successive bands prevent a limit from erasing that history. Zorn therefore produces a wellordered refinement of any admitted chain whose meet is zero. Applied to a chain of truths, this gives a definable functional graph selecting a proper part of each true proposition. A coefficient normalization turns that graph into strict partitions on a true interval. A second proposition records choices from a disjoint family, completing the existing partition-and-reconstruction argument for Actuality.
++
++## 1 Statement and conventions
++
++In the fixed finitary relational language,
++
++
++$$
++\boxed{C5+BC_t+Zorn_t\ \Longrightarrow\ \mathrm{Actuality}.}
++\tag{1}
++$$
++
++
++Write 0 and 1 for Bottom and Top. The Boolean order is the algebraic order
++$p\le q\iff p\land q=p$; put $p\setminus q=p\land\neg q$.
++“Positive” means nonzero, and does not mean currently true. A predicate's family is always its **current extension** unless stated otherwise. All predicates, relations, images, and unions used below are admitted lambda-defined expressions. Their quantifiers range over the existing types of the framework.
++
++BC_t supplies actual least upper bounds and greatest lower bounds of admitted predicates of propositions. Zorn_t applies to admitted preorders on the carrier t; its chains are admitted predicates on which the preorder is antisymmetric and total. A code below is a single proposition, even though the definition of its validity quantifies over predicates. No application of Zorn has a predicate or a relation as its carrier.
++
++C5 supplies the required Barcan and Functionality instances and makes identity and Boolean-order assertions endpoint-valued. We call such assertions **crisp**. Boolean combinations and quantified formulas of crisp assertions remain crisp. This does not make arbitrary current predicate membership crisp.
++
++Two elementary bound facts will be used. First, fixed Boolean meet preserves every existing actual join: if u is the actual join of X, then b∧u is the actual join of the admitted image $\{b\land x:Xx\}$. This follows directly from the Boolean adjunction
++$b\land x\le v\iff x\le\neg b\lor v$.
++In particular, a positive a below u meets some X-member; otherwise ¬a would bound X and hence u.
++
++Second, under C5 the material existential over an entire admitted range is its actual join. More generally, when P is crisp,
++
++
++$$
++\exists x\,[P(x)\land v(x)]
++\tag{2}
++$$
++
++
++is the actual join of the v-values at current P-members. Each current upper-bound assertion is an identity; its crispness and Barcan give the necessary universal bound, which yields the bound on (2). The dual calculation applies to material universals. We use this calculation only for entire ranges or crisp indexing, never for an arbitrary current family.
++
++## 2 Failure of Actuality produces a true chain with meet zero
++
++This preliminary reduction uses only C, BC_t, and Zorn_t.
++
++Order the currently true propositions by reverse Boolean inclusion. Extend this to a preorder on all propositions by putting the false propositions below every true proposition and making the false propositions mutually equivalent. One formula for it is
++
++
++$$
++R(p,q):=\neg p\ \lor\ (q\land q\le p).
++\tag{3}
++$$
++
++
++If p is true and is not an atom, choose $0<b<p$. Exactly one of b and $p\setminus b$ is true, and either choice is a true proposition strictly below p. Thus, if Actuality fails, this preorder has no maximal element: a true member can be strictly extended in the reverse order, and a false member lies strictly below 1.
++
++Zorn_t therefore supplies an admitted R-chain with no upper bound. Its true part D is nonempty, is a Boolean-order chain, and has no currently true Boolean lower bound. If its true part were empty, 1 would bound the original R-chain.
++
++Let u be the actual infimum of D, supplied by BC_t. It is false. Replace D by the admitted image
++
++
++$$
++D_0(p):=\exists d\,[Dd\land p=(d\land\neg u)].
++\tag{4}
++$$
++
++
++Every D_0-member is true and positive. It is still a chain and has actual infimum 0. Indeed any lower bound v of D_0 is below every D-member and below ¬u, hence below $u\land\neg u=0$.
++
++It remains to rule out an admitted all-true chain of positive propositions with actual meet zero.
++
++## 3 Annuli and one-proposition history codes
++
++Let D be any admitted chain of positive propositions with actual infimum 0. Current truth of its members is not assumed in this section or the next.
++
++A **D-annulus** is a positive proposition of the form
++
++
++$$
++b=d\setminus c,\qquad Dc,\ Dd,\quad c<d.
++\tag{5}
++$$
++
++
++Its endpoints c,d are unique. To see this, suppose $d\setminus c=d'\setminus c'\ne0$ and c<c′. If d≤c′, the common band is both below and disjoint from c′. If c′<d, the positive proposition c′\c belongs to the first band and is disjoint from the second. Both are impossible. Thus c=c′, and equality of the upper endpoints follows in the same way. Endpoint notation below abbreviates this admitted unique graph; no endpoint operation is extracted.
++
++For a proposition m, define H_m to be its maximal D-annuli:
++
++
++$$
++\begin{aligned}
++H_m(b):={}&\mathrm{Ann}_D(b)\land b\le m\\
++&\land\forall b'\bigl(
++\mathrm{Ann}_D(b')\land b'\le m\land b\le b'
++\ \longrightarrow\ b=b'\bigr).
++\end{aligned}
++\tag{6}
++$$
++
++
++Distinct H_m-bands are disjoint and have a positive gap between them. If two overlap or touch, their union is a D-annulus contained in m and strictly extending at least one, contrary to maximality. Since their endpoints lie in a chain, one band lies outside the other. Order bands **from outside to inside**: if b=d\c and b′=d′\c′, then b precedes b′ when d′<c. The gap is c\d′.
++
++A proposition m is a **valid history code** when:
++
++1. m is the actual least upper bound of H_m;
++2. the outside-to-inside order wellorders H_m against every admitted current subpredicate.
++
++Denote this admitted condition by V(m). The empty code 0 is valid: H_0 is empty and has join 0.
++
++For valid p,q, write $p\preceq q$ when H_p is a subset of H_q and every new H_q-band follows every H_p-band. This is end-extension of histories. Define a preorder on all propositions by
++
++
++$$
++\mathcal R(p,q):=\neg V(p)\ \lor\
++\bigl(V(q)\land p\preceq q\bigr).
++\tag{7}
++$$
++
++
++In (7), the formula defining $p\preceq q$ is used at all inputs; its interpretation as an end-extension is needed only when p is valid. Invalid codes lie below all valid codes, and no valid code lies below an invalid code. End-extension is reflexive and transitive. On valid codes it is antisymmetric: equality of their band families implies equality of their actual joins. Thus $\mathcal R$ is a preorder and any maximal element is valid.
++
++The following limit observation is the reason a proposition can retain the history.
++
++**Band preservation lemma.** Suppose Y is an admitted, outside-to-inside wellordered family of D-annuli, distinct members have positive gaps, and u is its actual join. Then every D-annulus below u is contained in one Y-band. Consequently the maximal D-annuli below u are exactly the Y-bands.
++
++For the proof, a positive annulus a≤u meets a Y-band. If a meets two bands, let b be the earlier of two met bands and let s be its immediate Y-successor. Such a successor exists by wellordering, since a later band exists. The positive gap between b and s is contained in a: the endpoints of a must extend across the earlier met band and the later met band. This gap is disjoint from every Y-band, by consecutiveness and the linear order of all endpoints. Its complement therefore bounds Y, so the gap is disjoint from u, contradicting its inclusion in a≤u.
++
++If a meets only one Y-band b but is not contained in b, its positive excess a\b is below u and must meet another Y-band, again a contradiction. Hence a≤b. This also shows that every Y-band is maximal among the annuli below u, and that every maximal annulus below u is a Y-band. The empty-family case is immediate.
++
++## 4 Zorn gives a wellordered coinitial refinement
++
++Let X be an admitted $\mathcal R$-chain. Ignore its invalid members and let u be the actual join of its valid members, using BC_t; take u=0 if there are none. Put
++
++
++$$
++Y(b):=\exists m\,[Xm\land V(m)\land H_m(b)].
++\tag{8}
++$$
++
++
++The H_m form end-extended initial segments of Y. Their bands are pairwise gap-separated, because any two bands belong together to the larger of two comparable histories.
++
++Y is wellordered. Given any admitted nonempty subpredicate Z of Y, choose z∈Z and a constituent H_m containing z. The least member of Z∩H_m is least in all Z: every member of Z outside H_m follows every H_m-member. This uses the full current wellordering in V(m), not just wellordering against crisp predicates.
++
++The proposition u is also the actual join of Y. Every Y-band lies below a constituent code and hence below u. Conversely, any upper bound of Y bounds each H_m, so it bounds each constituent code and therefore u. By the band preservation lemma,
++
++
++$$
++H_u=Y\quad\hbox{as current extensions}.
++\tag{9}
++$$
++
++
++Thus u is valid. Each constituent H_m is an initial segment of H_u, so u is an $\mathcal R$-upper bound of X. Equality (9) is only a statement about current extensions; no identity of predicate objects is needed.
++
++Zorn_t now yields a maximal valid code m. It meets every D-member. Otherwise let d∈D satisfy m∧d=0. Because D has meet 0 and d>0, choose c,e∈D with
++
++
++$$
++0<c<e<d.
++\tag{10}
++$$
++
++
++Each old band has lower endpoint at least d: a band whose lower endpoint were below d would meet d. Append the new band e\c. It follows all old bands, with a positive gap, and the old wellorder followed by this last band is still a wellorder, including when the old history has no last member. Its join is m∨(e\c). The band preservation lemma shows that its maximal annuli are exactly the old bands together with the new band. It is a valid strict end-extension of m, a contradiction.
++
++Define L to be the admitted image of the lower endpoints of H_m. These endpoints are distinct and strictly decrease along the band wellorder, so L is wellordered by **reverse** Boolean inclusion. This transports full current wellordering: an admitted subpredicate of L pulls back to an admitted subpredicate of H_m along the unique endpoint graph.
++
++L is coinitial in D. For any d∈D, m∧d>0, so d meets some H_m-band. Its lower endpoint is then strictly below d. It follows that L has actual infimum 0. We have proved:
++
++
++$$
++\boxed{C+BC_t+Zorn_t:\quad
++\begin{gathered}
++\text{every admitted positive Boolean chain with meet }0\\
++\text{has an admitted reverse-wellordered coinitial subchain.}
++\end{gathered}}
++\tag{11}
++$$
++
++
++In particular, if the original chain consists of truths, so does L. This construction has not made either chain predicate crisp.
++
++## 5 A true wellordered chain supplies strict partitions
++
++Suppose L is an admitted, reverse-wellordered chain of true propositions with actual meet 0. For every true p there is an L-member c with p≰c. Reverse wellordering supplies the greatest such c in Boolean order. Define its graph by
++
++
++$$
++\mathrm{First}(p,c):=
++Lc\land p\nleq c\land
++\forall d\bigl(Ld\land p\nleq d\ \longrightarrow\ d\le c\bigr).
++\tag{12}
++$$
++
++
++The proposition p∧c is true, hence nonzero, and is strictly below p. Define
++
++
++$$
++\begin{aligned}
++F(p,q):={}&(\neg p\land q=0)\\
++&\lor\bigl(p\land 0<q<p\land
++\exists c[\mathrm{First}(p,c)\land q=(p\land c)]\bigr).
++\end{aligned}
++\tag{13}
++$$
++
++
++This is an admitted current total functional graph. False inputs have unique output 0; true inputs have the unique output just described. No Relational Choice is used, and no operation representing its current graph values is asserted. The explicit strictness guard is essential: it gives the algebraic inequality
++
++
++$$
++p\land F(p,q)\le(0<q<p)
++\tag{14}
++$$
++
++
++without trying to make the current functional assertion necessary.
++
++Normalize its coefficients:
++
++
++$$
++\begin{aligned}
++c_p(q)&:=F(p,q)\land\forall z\,[F(p,z)\to z=q],\\
++d_p&:=\exists q\,c_p(q),\qquad
++a:=\forall p\,d_p.
++\end{aligned}
++\tag{15}
++$$
++
++
++For every current p its selected output has a true coefficient. Hence every d_p, and therefore a, is currently true. Universal instantiation gives a≤d_p for every p. Coefficients at distinct outputs are algebraically disjoint: their conjunction implies equality of the outputs, and a false identity is 0 under C5.
++
++For all p,q define admitted operations
++
++
++$$
++u_0(p,q):=p\land c_p(q)\land q,
++\qquad
++u_1(p,q):=p\land c_p(q)\land\neg q.
++\tag{16}
++$$
++
++
++For every positive p≤a their positive values partition p into proper parts. This includes currently false p: weighting by p eliminates the false-input branch of F. No separate true atomless interval is assumed. Distinct coefficients give disjoint parts, and the two parts at one coefficient are disjoint. If either part is positive, then p∧c_p(q)>0. By (14), this is below the crisp strictness assertion 0<q<p; that assertion must therefore be 1. Consequently
++$u_0(p,q)\le q<p$ and $u_1(p,q)\le p\setminus q<p$.
++It is not necessary that both parts at every coefficient be positive.
++
++Finally,
++
++
++$$
++\exists q\,[u_0(p,q)\lor u_1(p,q)]
++=p\land d_p=p.
++\tag{17}
++$$
++
++
++The entire-range calculation from §1 makes this their actual join. Define
++
++
++$$
++\mathrm{Child}(p,r):=
++(0<p\le a)\land r>0\land
++\exists q\,[r=u_0(p,q)\lor r=u_1(p,q)].
++\tag{18}
++$$
++
++
++Child is crisp: its definition uses only identities, order assertions, and quantification over them. For every positive p≤a its children are pairwise disjoint proper parts with actual join p. Each such p has a child, and every child has a different sibling; otherwise its join would be a single proper part. Moreover,
++
++
++$$
++p=\exists r\,[\mathrm{Child}(p,r)\land r]
++\qquad(0<p\le a).
++\tag{19}
++$$
++
++
++Thus a true p has exactly one true child. We have obtained precisely the strict partition family needed below, on a true interval, without either a global splitter or RC.
++
++## 6 Zorn chooses simultaneously on disjoint pieces
++
++We record the second replacement for choice in a form that uses only C+BC_t+Zorn_t.
++
++Let D be an admitted family of pairwise disjoint positive propositions. Let T(d,r) be any admitted relation such that every current D-member d has a witness with 0<r≤d and T(d,r). Then there is one proposition b such that
++
++
++$$
++Dd\ \longrightarrow\
++\bigl(0<(b\land d)\ \land\ T(d,b\land d)\bigr).
++\tag{20}
++$$
++
++
++This is simultaneous selection by one Boolean mask; it is not unrestricted Functional Choice.
++
++Let j be the actual join of D. A partial mask p is valid when p≤j and, for each d∈D, either p∧d=0 or T(d,p∧d). Extend a valid p to a valid q when p≤q and every already occupied component is frozen:
++
++
++$$
++Dd\land (p\land d)\ne0
++\ \longrightarrow\ q\land d=p\land d.
++\tag{21}
++$$
++
++
++Put invalid masks below all valid masks, as in (7). This is a preorder on t, with 0 valid.
++
++For an admitted chain of valid masks, take its actual join u. If u∧d>0, some chain member p has p∧d>0. Comparability and freezing imply that every chain member's d-component is either 0 or p∧d. Fixed-meet preservation of the join gives u∧d=p∧d. Thus u remains valid and extends every chain member. This argument does not require T to be persistent or crisp.
++
++By Zorn, choose a maximal valid b. If b misses d∈D, adjoin one available witness r≤d. Disjointness leaves every other D-component unchanged, and gives a valid strict extension. Therefore b occupies every D-member, proving (20).
++
++## 7 The two canonical-chain facts used in the final argument
++
++The full proofs of both chain facts are included in [Canonical-chain lemmas](propositional-canonical-chain-lemmas.md).
++
++**Current graph chain.** In [0,a], an admitted current total single-valued deflationary graph has, under BC_t, a current reverse-wellordered canonical chain M ending at a fixed point. Its conformity equation is
++
++
++$$
++x=\inf_{[0,a]}\{f(y):My\text{ and }x<y\}.
++\tag{22}
++$$
++
++
++Function notation here abbreviates the graph's unique current output. The graph need not be represented by an operation. The empty predecessor family has interval-infimum a.
++
++The usual proof compares two canonical chains by their common initial segment; first points beyond it would be bounds of the same predecessor image and hence equal. The represented union of canonical chains is again canonical and fully wellordered. BC_t gives its interval-infimum. Adjoining this bound, and then its graph successor if different, forces a terminal fixed point. These are current bound arguments.
++
++**Strong crisp operation chain.** Under C5, an admitted operation g that is necessarily deflationary on [0,a] has a crisp canonical chain N, necessarily fully reverse-wellordered against all admitted subpredicates, ending at a fixed point. Its conformity has the same form as (22). This fact uses no current BC premise: the construction uses crisp-indexed material bounds, available under C5. The necessity and full wellordering are essential; a chain wellordered only against crisp subpredicates would be insufficient.
++
++These facts do not necessitate BC_t, Zorn_t, or any current graph-selection assertion. Their distinct modal scopes are preserved in the final argument.
++
++## 8 Reconstructing the true descent and obtaining the contradiction
++
++Assume Actuality fails. Section 2 gives an all-true chain with meet 0; §§3–4 give an all-true reverse-wellordered chain with meet 0; §5 gives a true a and a crisp proper-partition relation Child on every positive proposition below a.
++
++On [0,a] define the current functional graph
++
++
++$$
++G(p,r):=(\neg p\land r=p)
++\ \lor\ (p\land\mathrm{Child}(p,r)\land r).
++\tag{23}
++$$
++
++
++A false p is fixed. A true p has exactly one true child, which is strictly below it. Apply the current graph-chain fact to obtain M with terminal fixed point m. The terminal m is false, every earlier M-member is true, and for a true M-member p its graph successor G(p) is its next, true member. If q<p are M-members, conformity gives q≤G(p).
++
++Let Δ be the admitted family of children discarded at the true stages:
++
++
++$$
++\Delta(d):=\exists p,r\,[Mp\land p\land G(p,r)
++\land\mathrm{Child}(p,d)\land d\ne r].
++\tag{24}
++$$
++
++
++These are positive false propositions, pairwise disjoint even across stages. At one stage this is the partition property. At a later stage q<p, every child of q lies below q≤G(p), whereas every child discarded at p is disjoint from G(p). Every true stage has at least one discarded child, because its selected child is proper and the whole partition joins to the parent.
++
++Apply §6 to D=Δ and T(d,r)=Child(d,r). This yields b with
++
++
++$$
++\mathrm{Child}(d,b\land d),
++\qquad 0<(b\land d)<d
++\qquad(d\in\Delta).
++\tag{25}
++$$
++
++
++Define crisp tests
++
++
++$$
++\begin{aligned}
++\mathrm{Mixed}(x)&:=(x\land b>0)\land(x\land\neg b>0),\\
++H(c)&:=\exists e\,[\mathrm{Child}(c,e)\land\mathrm{Mixed}(e)].
++\end{aligned}
++\tag{26}
++$$
++
++
++Every discarded d fails H. Its children are either the chosen child b∧d or disjoint from that child. In the first case they lie below b; in the second they are disjoint from b, since they lie below d. None is mixed.
++
++Every true M-member c satisfies H: it has a discarded child d, and (25) makes that child mixed. Consequently, at a true M-member p, exactly one child satisfies H, namely the true successor G(p). All other children are discarded and fail H.
++
++Define the admitted operation
++
++
++$$
++g(p):=p\land\exists c\,[\mathrm{Child}(p,c)\land H(c)\land c].
++\tag{27}
++$$
++
++
++It is globally deflationary. These Boolean-order identities give the necessary interval and progress hypotheses under C5. At every true M-member p, crisp indexing in (27) selects exactly the entity G(p), so
++
++
++$$
++g(p)=G(p).
++\tag{28}
++$$
++
++
++This is an entity identity, not merely agreement in current truth. No global strictness of g is claimed.
++
++Let N be the strong crisp canonical g-chain. Compare M and N by their common initial segment. If the false terminal m of M has not yet been reached, their operations agree at every common predecessor by (28). If both chains had first points outside the common segment, conformity would make those points the infimum of the same current predecessor image, forcing equality. Thus one chain is an initial segment of the other. Full wellordering against arbitrary current subpredicates justifies this comparison even though M need not be crisp.
++
++N cannot be a proper initial segment of M: its fixed endpoint u would then be a true M-member and satisfy g(u)=G(u)<u, contradicting fixedness. Hence M, including m, is an initial segment of N.
++
++The predicate
++
++
++$$
++P_m(p):=Np\land m<p
++\tag{29}
++$$
++
++
++is crisp. Its current members are exactly the strict predecessors of m in M. All are true, and all their g-values are true by (28). Therefore
++
++
++$$
++a\land\forall p\,[P_m(p)\to g(p)]
++\tag{30}
++$$
++
++
++is true. By crisp indexing, (30) is the actual interval-infimum of those g-values. Conformity of N at m identifies that infimum with m. This makes m true, contradicting its construction. Actuality follows, proving (1).
++
++## 9 Consequences, exact scope, and sources
++
++The established C5+Actuality implication to full Boolean Completeness gives the useful equivalence
++
++
++$$
++\boxed{\text{over }C5+Zorn_t:\qquad
++BC_t\ \longleftrightarrow\ \mathrm{Actuality}
++\ \longleftrightarrow\ \text{full Boolean Completeness}.}
++\tag{31}
++$$
++
++
++The reverse implication uses [the recorded completeness theorem](../results/c5-and-actuality-imply-completeness.yaml), sourced there to Bacon and Dorr, *Classicism*, Proposition 2.5, pp. 25, 29–30. Full Boolean Completeness includes BC_t.
++
++The new proof applies Zorn only to three preorders on propositions: the reverse truth order, annulus histories coded by one proposition, and partial masks on disjoint pieces. It uses current BC_t for their bounds and for the current relational canonical chain. C5 is used for endpoint identity and order tests, crisp range bounds, and the strong crisp canonical-chain theorem. No optional premise is necessitated.
++
++The conclusion is Actuality. The argument does not derive a uniform splitting operation, global LocalSplit, Atomicity_t, or necessary BC_t from the displayed premises. It resolves the joint current-premise question directly.
++
++Sources and proof dependencies:
++
++- `misc`, this proof, §§2–6 and §8, unpaginated: annulus histories, functional-graph normalization, disjoint-family masks and their combination.
++- [Canonical-chain lemmas](propositional-canonical-chain-lemmas.md): full proofs of the current relational and strong crisp chain constructions used in §7. The partition-and-reconstruction argument also occurs in OpenAI Codex, *Relational Choice and propositional completeness imply Actuality over C5*, 25 October 2026, §§2–7, unpaginated; §§5–8 here give the argument with both choice applications replaced by Zorn.
++- [The Zorn schema](../principles/zorn-r.yaml), [Boolean Completeness (type t)](../principles/boolean-completeness-t.yaml), and [Actuality](../principles/actuality.yaml) fix the premises and conclusion.
+diff --git a/logical-maps/topics/classicism/writeups/propositional-canonical-chain-lemmas.md b/logical-maps/topics/classicism/writeups/propositional-canonical-chain-lemmas.md
+new file mode 100644
+--- /dev/null
++++ b/logical-maps/topics/classicism/writeups/propositional-canonical-chain-lemmas.md
+@@ -0,0 +1,122 @@
++# Canonical-chain lemmas for propositional completeness
++
++OpenAI Codex, prompted by Daniel Kodsi, 25 October 2026. Source: `misc`, this proof, unpaginated. These are the two chain constructions used in [Zorn and propositional completeness imply Actuality](c5-zorn-and-propositional-completeness-imply-actuality.md).
++
++## 1 Represented progressive graphs
++
++
++**Lemma.** Let $P^{\rho t}$ carry a represented antisymmetric partial order, have a least element 0, and have a LUB in P for every represented chain, including the empty chain. Let f be a represented total single-valued graph from P to P with x≤f(x) for every x∈P. Then f has a fixed point.
++
++The proof uses only predicate comprehension and ordinary quantification admitted in C. In particular it does not assume an external set of ordinals, standard finiteness, an operation representing f, or extensionality of property entities.
++
++Call a predicate $C^{\rho t}$ an **f-chain** when:
++
++1. C⊆P and the inherited order well-orders C: every admitted nonempty subproperty of C has a least member.
++2. For each x∈C, x is the LUB in P of the graph image
++
++
++$$
++\{f(y):Cy\text{ and }y<x\}.\tag{6}
++$$
++
++
++Condition 2 is a formula about being a LUB; it does not presume this image has a LUB before the condition is asserted. The singleton {0} is an f-chain. If x<y lie in an f-chain, then f(x)≤y by (6).
++
++**Comparison.** Any two f-chains C,D are comparable by initial segment. Define I to consist of those common members x for which the C- and D-predecessor properties below x are coextensive. I is an initial segment of both C and D: if x∈I and y<x lies in either chain, then y lies in both, and the predecessor properties below y are equal in extension as subsets of their common predecessor property below x.
++
++If both C\I and D\I were nonempty, let c,d be their respective least members. Their predecessor properties are each coextensive with I. The graph images in (6) are therefore coextensive. Since an antisymmetric poset has at most one LUB for a given actual family, c=d. This equality and equality of their predecessor extensions place c in I, contradiction. Hence C≡I or D≡I (actual coextension), proving comparison by initial segment. Notice that equality of predicate codes was never inferred from coextension; only uniqueness of their order-theoretic LUB was used.
++
++**Union.** Define the admitted property
++
++
++$$
++A(x):=\exists C^{\rho t}.\,(C\text{ is an }f\text{-chain}\land Cx).
++$$
++
++
++Comparison makes A a chain. It is internally well-ordered: given any nonempty represented X⊆A, choose x∈X and an f-chain C containing x. Let m be the least member of X∩C. For any z∈X, choose an f-chain D containing z. If D is an initial segment of C, then z∈C and m≤z. If C is an initial segment of D, then either z∈C, giving the same conclusion, or z lies strictly above every member of C, including m. Thus m is least in X.
++
++For x∈A choose an f-chain C containing x. Comparison shows that A and C have the same predecessor extension below x. Condition (6) for C therefore gives it for A, again using only actual coextension of the represented images. Hence A is itself an f-chain, and it contains every f-chain by definition.
++
++**The supremum is a fixed point.** Let u be the LUB of A in P. If u∉A, then A has no largest member. For every x∈A choose y∈A with x<y; (6) gives f(x)≤y≤u. Conversely x≤f(x) for each x, so any upper bound of f[A] bounds A. Therefore u is the LUB of f[A]. Adjoining u at the end of A gives another f-chain: its new predecessor property is A, and the defining LUB condition is the one just proved. This contradicts the definition of A, which would then contain u. Thus u∈A.
++
++If u<f(u), adjoining f(u) at the end of A again gives an f-chain. Its new LUB condition holds because f(u) is the greatest member of f[A]: for x<u in A, (6) gives f(x)≤u≤f(u), and f(u) itself is in that image. Again the definition of A would put f(u) into A, contradicting u being an upper bound. Progressivity leaves f(u)=u. This proves the lemma.
++
++## 2 Descending current graph chains
++
++Here is the order-dual form on the Boolean interval [0,h]. Suppose F is a current total functional relation there, with F(p)≤p. Function notation abbreviates its unique **current** graph value. A predicate C is an F-chain when:
++
++1. its current members form a chain in [0,h], internally wellordered by the reverse Boolean order (every admitted nonempty subproperty has a Boolean-greatest member);
++2. each member p is the actual Boolean infimum, within [0,h], of
++
++$$
++\{F(q):Cq\text{ and }p<q\}.
++\tag{3}
++$$
++
++
++The infimum of the empty family in the interval is h. The singleton {h} is an F-chain. Any two F-chains compare by initial segment: form their common part on which strict predecessor extensions agree; if both have a first disagreement, (3) gives the same actual infimum to both first new elements. Only uniqueness of an actual infimum is used, not equality of coextensive family codes.
++
++Their admitted union
++
++
++$$
++M(p):=\exists C\,[C\text{ is an F-chain}\land Cp]
++\tag{4}
++$$
++
++
++is itself an F-chain and contains every F-chain. BC_t supplies its actual infimum m. Appending that infimum, and then F(m) if necessary, proves m∈M and F(m)=m. These are exactly the comparison, union, and endpoint arguments of §1, with order reversed.
++
++We will also use two immediate consequences. If p∈M, its initial segment through p is an F-chain; adjoining F(p) shows F(p)∈M. If F(p)<p, this is the immediate next member. Moreover, for q<p in M, conformity at q gives q≤F(p). A fixed point in M must be terminal: otherwise the first member after it has, by (3), that same fixed point as its defining infimum.
++
++All families here are admitted predicates of propositions. BC_t is used for their **current extensions**, not identified with a material quantifier.
++
++## 3 Strong crisp chains for operations
++
++**Lemma.** Under C5, let g:tt be an admitted operation such that, throughout [0,h], g(p)≤p, and let these interval and progress conditions be necessary. There is an admitted crisp g-chain D, with full current reverse wellordering and conformity (3), whose terminal member is a fixed point of g. In fact D necessarily has those chain properties. No BC premise is needed for this lemma.
++
++Here crisp means that each membership coefficient is 0 or 1. C5 makes identity assertions crisp, supplies Barcan, and makes Boolean combinations and quantified formulas of crisp assertions crisp. For any crisp X:tt the term
++
++
++$$
++j_X:=h\land\forall p\,[Xp\to g(p)]
++\tag{5}
++$$
++
++
++is the actual algebraic infimum, within [0,h], of the current g-values at X-members. Indeed every current member has coefficient 1, and every nonmember coefficient 0. Universal instantiation gives the lower bounds. Conversely, if z≤h bounds all current g-values from below, the endpoint coefficients and Barcan collect those bounds into z≤j_X. This argument is valid at every world under C5.
++
++For a code C:tt define Strong(C) to assert:
++
++* C is crisp;
++* **necessarily**, its members are a chain in [0,h], fully wellordered in the reverse order against all admitted subproperties, and every p∈C is the algebraic infimum of the g-values at its strict predecessors.
++
++This is a finite formula at existing types. Crispness is a quantified identity condition, and the necessary clause is endpoint-valued under C5. Thus Strong(C) is crisp. The singleton of h satisfies Strong: its assertions hold uniformly, with the empty predecessor infimum h.
++
++Define
++
++
++$$
++D(p):=\exists C^{tt}\,[\mathrm{Strong}(C)\land Cp].
++\tag{6}
++$$
++
++
++The coefficients in (6) are crisp, so D is crisp.
++
++We verify its necessary chain assertions **uniformly at an arbitrary world**. Every current Strong-member there is a full g-chain there. The ordinary comparison argument of §2 therefore applies at that world, including to the possibly noncrisp differences of chain properties. It makes their union a chain. For any admitted nonempty current subproperty X of D, choose x∈X and a Strong-chain C containing x. Full wellordering of C gives the first member of X∩C. Comparing C with each Strong-chain containing another X-member shows that this member is first in all of X. Thus the union is fully wellordered, not merely wellordered for crisp X. Finally, all predecessors of a union member already occur in one Strong-chain containing it, so its infimum clause transfers by uniqueness of the actual infimum.
++
++This argument uses only the necessary hypotheses built into Strong and the C5 crisp-family bound calculation (5). It consequently proves the union's chain assertions at every world, hence their necessity. No instance of current BC_t is used or necessitated. Therefore Strong(D).
++
++Let u=h∧∀p(Dp→p), the actual infimum of D at every world by the same crisp-family argument. If u∉D, D has no last member. At every world, for each p∈D there is q∈D with u≤q<p; conformity at q gives q≤g(p). Together with g(p)≤p, this shows that the infima of D and g[D] coincide. Hence appending u preserves conformity. Appending a last element preserves full wellordering at every world: a nonempty subproperty either meets D, when D supplies its first member, or consists only of the appended point. The appended family is crisp. These facts give Strong(D∪{u}), contradicting the defining union (6). Thus u∈D.
++
++If g(u)<u, appending g(u) likewise preserves the necessary full wellordering and conformity: g(u) is the least g-value of D, since conformity at u puts every earlier g-value above u. Again (6) gives a contradiction. Therefore g(u)=u.
++
++The case distinctions used here are identity/order assertions involving admitted terms; under C5 they are stable. The append arguments are uniform proofs from necessary premises, not a boxing of optional current wellordering or completeness assumptions. This proves the lemma.
++
++In particular, if g(0)=0 and 0<g(p)<p for every positive p≤h, the terminal member of D is 0.
++
++## Sources
++
++The first lemma is reproduced from OpenAI Codex, *Relational Choice and Boolean Completeness imply Actuality*, Appendix D, unpaginated. The descending form and strong crisp lemma are reproduced from OpenAI Codex, *Propositional completeness excludes a strict splitter on a true interval*, 25 October 2026, §§2–3, unpaginated. The source hashes are recorded with this update.
+diff --git a/logical-maps/topics/classicism/results/c5-zorn-and-propositional-completeness-imply-actuality.yaml b/logical-maps/topics/classicism/results/c5-zorn-and-propositional-completeness-imply-actuality.yaml
+new file mode 100644
+--- /dev/null
++++ b/logical-maps/topics/classicism/results/c5-zorn-and-propositional-completeness-imply-actuality.yaml
+@@ -0,0 +1,39 @@
++id: c5-zorn-and-propositional-completeness-imply-actuality
++premises:
++- necessary-distinctness-necessary-r
++- boolean-completeness-t
++- zorn-r
++conclusion: actuality
++status: proved
++certificate:
++  source_id: misc
++  produced_by: OpenAI Codex, prompted by Daniel Kodsi, 25 October 2026
++  recorded_by: OpenAI Codex, prompted by Daniel Kodsi, 25 October 2026
++  checked_by: []
++  date: '2026-10-25'
++  lean: none
++sources:
++- 'OpenAI Codex, Zorn and propositional completeness imply Actuality, 25 October 2026, §§1–9, unpaginated; same-stem writeup, with the accompanying Canonical-chain lemmas.'
++source_names:
++- Codex propositional Zorn reconstruction proof
++proof: >-
++  If Actuality fails, Zorn on the reverse truth preorder and propositional
++  completeness give an admitted chain of true positive propositions with meet zero.
++  Encode separated Boolean annuli by one proposition; Zorn on end-extensions of
++  these codes produces a reverse-wellordered coinitial refinement. Its functional
++  first-failure graph normalizes to strict partitions on a true interval. A second
++  mask construction uses Zorn to select a child on each disjoint discarded piece.
++  The mask defines an admitted deflationary operation whose crisp canonical chain
++  agrees with the current truth-guided chain through its false endpoint. Crisp
++  indexing makes that endpoint a quantified meet of truths, a contradiction.
++  See the same-stem writeup and propositional-canonical-chain-lemmas.md for all
++  constructions and the two canonical-chain proofs.
++references: []
++notes: >-
++  The sharp theorem uses only the type-t instance of Zorn and current Boolean
++  Completeness at type t. The record uses the existing all-type Zorn node.
++  Neither optional premise is necessitated, and no higher-type Zorn or completeness
++  instance is used. Together with c5-and-actuality-imply-completeness, it makes
++  Boolean Completeness at type t, Actuality and all-type Boolean Completeness
++  equivalent over C5 plus Zorn at type t. The converse is the established
++  Bacon–Dorr result and retains its attribution.
+diff --git a/logical-maps/topics/classicism/writeups/vicinity-supported-interpretation.md b/logical-maps/topics/classicism/writeups/vicinity-supported-interpretation.md
+new file mode 100644
+--- /dev/null
++++ b/logical-maps/topics/classicism/writeups/vicinity-supported-interpretation.md
+@@ -0,0 +1,153 @@
++# The supported C5 interpretation from Vicinity
++
++OpenAI Codex, prompted by Daniel Kodsi, 25 October 2026. Source: `misc`, this proof, unpaginated.
++
++One construction supports both Actuality theorems: the [Relational Choice branch](vicinity-relational-choice-and-propositional-completeness-imply-actuality.md) and the [Zorn branch](vicinity-zorn-and-propositional-completeness-imply-actuality.md). Vicinity supplies a true support; hereditary retractions give a C5 interpretation on its supported domains. Propositional completeness transfers to this interpretation, and any supported Actuality witness is also an original Actuality witness. The two branches differ only in the additional choice principle transferred and the C5 theorem applied.
++
++The common-core mechanism extends Christopher Sun's 19 October 2026 argument in the [5-necessity variant of Vicinity](../principles/vicinity.yaml). The interpretation and its transfers are the new connecting arguments here.
++
++## 1. A common support for all admitted quantifiers
++
++Choose a true Vicinity witness w. Put
++
++$$
++A_w:=\forall r^t\, .\,(r\to w\le\Diamond r),\qquad s:=w\land A_w.
++$$
++
++Both w and A_w, hence s, are currently true. For every fixed admitted argument type σ and every admitted F:σt,
++
++$$
++\bigl[\forall x^\sigma\, .\,(s\le F(x))\bigr]
++\ \Longrightarrow\ s\le\forall x^\sigma F(x).
++\tag{3}
++$$
++
++Here and below the conclusion is an algebraic bound, not just a material implication.
++
++For the proof let T:=∀x(s≤F(x)) be currently true. Vicinity gives
++w≤◇(w∧T). Work at any accessible evaluation v where s is true. Suppose that an x available there satisfies ¬F(x). At v the A_w conjunct applies to the proposition s∧¬F(x), which is true there, and gives
++
++$$
++w\le\Diamond(s\land\neg F(x)).
++$$
++
++The bound w≤◇(w∧T) obtained at the original evaluation persists to v. Since w holds at v, there is an accessible u where w∧T holds. The parameter x is available at u; this uses only the converse-Barcan direction. T supplies □(s→F(x)) at u. The bound obtained at v also persists to u, and w there gives ◇(s∧¬F(x)), a contradiction. Thus every x at every accessible s-evaluation satisfies F(x), proving (3).
++
++This is an ordinary S4/CBF derivation expressed by evaluations. No Barcan premise, completeness, choice, or necessitation of an optional premise is involved. The same argument applies at every evaluation satisfying s, since w∧A_w holds there again. Its mechanism is the one used in Sun's recorded Vicinity argument; its all-type formulation here makes the required quantifier scope explicit.
++
++For every current identity E=(a=b), at any type, s decides E according to its current truth. If E is true, NI gives E=1. If E is false, Vicinity gives w≤◇¬E. NI makes E persistent, so ◇¬E=¬E. Consequently
++
++$$
++s\land E=\begin{cases}s,&a=b,\\0,&a\ne b.\end{cases}
++\tag{4}
++$$
++
++Induction on finite formulas, using (3) at universal quantifiers and a current witness for a false universal, extends this decision property to formulas built from identities by Boolean operations and typed quantifiers. Arbitrary atomic membership assertions are not included in that claim.
++
++There is also an exact range-bound consequence. For any admitted f:σt,
++
++$$
++s\land\exists x^\sigma f(x)
++=\bigvee_{x\text{ current}}\bigl(s\land f(x)\bigr).
++\tag{5}
++$$
++
++The right side means the actual algebraic least upper bound of the displayed range; (5) establishes its existence without BC. Instantiation gives each upper-bound inequality. If b bounds every s∧f(x), then s≤(f(x)→b) for every current x. Equation (3) collects these bounds into s≤∀x(f(x)→b), which gives the converse inequality. The relative meet statement is dual. An index predicate decided on s may be inserted: nonmembers then contribute 0, while current members contribute their full s-restricted values.
++
++## 2. Concrete supported domains
++
++Define hereditary retractions by
++
++$$
++j_e(x):=x,\qquad j_t(p):=s\land p,\qquad
++j_{\sigma\tau}(F):=\lambda x^\sigma\, .\,j_\tau(F(j_\sigma x)).
++\tag{6}
++$$
++
++The e-case is a substitution convention, **not** a term of the forbidden type ee. All other displayed retractions have admitted types. Whenever an argument type is e, the corresponding occurrence of j_e simply erases.
++
++These are idempotent as whole operations. At t this is the Boolean identity s∧(s∧p)=s∧p, also under abstraction. Inductively, β-expansion of j_(στ)(j_(στ)F) gives
++
++$$
++\lambda x\,j_\tau\bigl(j_\tau(F(j_\sigma(j_\sigma x)))\bigr).
++$$
++
++The already established lower-type whole identities reduce this to j_(στ)F. The same reduction under the outer F-abstraction proves whole-operation idempotence at the new type. All replacements are substitutions of entity identities in terms; there is no appeal to Functionality or to Logical Equivalence under an optional premise.
++
++Set
++
++$$
++D_\tau(x):=(j_\tau x=x),
++$$
++
++with D_e(x):=(x=x). Each domain is inhabited and is exactly the image of j_τ. If F and x are fixed in their respective types, β and the fixedness identities give F(x)=j_τ(F(x)), so application restricts to these domains. In particular D_t is exactly [0,s]. The predicates D_τ are identity predicates and are decided on s by (4).
++
++In the supported interpretation, use these concrete carriers and restricted application. At t use 0 and s as the endpoints, ordinary meet and join, and relative complement p↦s∧¬p. On fixed arguments equality is
++
++$$
++\mathrm{eq}_s(x,y):=s\land(x=y).
++\tag{7}
++$$
++
++Its admitted unrestricted relation is s∧(j_σx=j_σy). Current truth of (7) is precisely equality of the fixed entities, since s is true.
++
++Interpret an abstraction by evaluating its body on projected arguments and retracting its output. Quantifiers for a supported predicate F may be written
++
++$$
++\exists_s x\, .\,F(x):=s\land\exists x\,F(j_\sigma x),\qquad
++\forall_s x\, .\,F(x):=s\land\forall x\,F(j_\sigma x).
++\tag{8}
++$$
++
++The image description shows that their current truth is exactly quantification over D_σ. Equation (5) shows that their proposition values are the actual joins and meets in [0,s] of the corresponding fixed-domain range values. Quantifier operations and the displayed logical operations are themselves projected to their appropriate higher domains. β, idempotence and the Boolean identities give exactly the clauses above on fixed arguments.
++
++## 3. Preserving H and Logical Equivalence
++
++The retraction interpretation preserves H by ordinary relativization to the images of idempotent maps. The required details matter because C's Logical Equivalence rule applies only to H-theorem equivalences.
++
++Translate every variable occurrence through its j, use (7) for equality, (8) for quantification, and retract abstractions as in §2. For any finite H derivation, let E be the finite conjunction of the whole retraction identities and logical-constant identities needed in its translation. If supported parameters are left unprojected, include their fixedness identities as well. These are all **positive identities**. There is no Vicinity, quantifier-bound lemma, completeness, choice, or other optional material premise in E.
++
++Under E and s the usual H proof translates as follows. Identity and substitution concern actual equality of projected entities. Application stays in the projected domains. β uses j²=j on the argument and output, and η uses the same whole identity at the abstraction's type. Universal instantiation uses the projected instance jx; existential introduction uses that same available term. Generalization and elimination range over all images, precisely as in (8). The propositional rules use the ordinary Boolean clauses on an evaluation where s is true. These checks give induction on the H derivation. Every translated proposition is s-supported under E, so outside s two such matrices are both false.
++
++In particular, if H proves Φ↔Ψ, the preceding translation gives the **old-H theorem**
++
++$$
++(E\land\Phi^s)\ \longleftrightarrow\ (E\land\Psi^s).
++\tag{9}
++$$
++
++Apply old Logical Equivalence to (9), including the required abstraction variables. Each conjunct of E is a true identity in C and hence 1 by NI; therefore E=1. Substitution of this entity identity, and the unconditional Boolean identities under abstraction, removes E from the resulting abstraction identity. Retraction preserves that identity. This is precisely Logical Equivalence in the supported interpretation.
++
++This argument does not substitute current semantic coextension for entity identity. Nor does it feed an equivalence proved from Vicinity into Logical Equivalence: only the H theorem (9) enters the rule, and its explicit guard is subsequently removed by identity substitution. Together with the preceding H checks it establishes a concrete interpretation of C.
++
++## 4. C5 in the supported interpretation
++
++For each pair of current fixed entities, (4) makes its relative equality either 0 or s. If the entities are distinct, their relative inequality is s, so it is relatively necessary: its identity to the relative top s is true and its relative box has value s. Equal pairs have zero inequality antecedent.
++
++Thus every current instance of the ND matrix has relative value s. Equation (5) and its meet dual make the universal closure over the fixed domains s as well. Its relative box is consequently s. This proves ☐ND at every type in the interpretation, which is C5; it proves more than ND there.
++
++No assertion that the original structure satisfies C5, ND, BF, or Functionality has been made. The new necessity operator is identity to s within the supported propositional domain, rather than original identity to 1.
++
++## 5. Propositional completeness and Actuality
++
++Let X be any supported predicate on D_t. Apply old BC_t to the represented current family D_t(p)∧X(p). Its actual join b lies below s, since s bounds every member; hence b belongs to D_t. Relative algebraic order on [0,s] is the original algebraic order: p∨q=q has the same meaning in both Boolean algebras. The old least-upper-bound property of b is consequently its supported least-upper-bound property. This proves supported BC_t, without ☐BC. The meet formulation is equivalent.
++
++If the supported interpretation has a true Actuality witness u, then for every original true proposition q, the supported proposition s∧q is true. Hence u≤s∧q≤q. The same u witnesses original Actuality. This descent uses neither Relational Choice nor Zorn.
++
++## 6. Vicinity and persistent propositions
++
++Let O be the represented family of persistent propositions p=□p. A member of O is currently true exactly when it is 1. Then
++
++$$
++\mathrm{Vicinity}\quad\longleftrightarrow\quad
++\text{O has a greatest proper member}.
++\tag{10}
++$$
++
++For the forward direction let w witness Vicinity and put m:=□¬w. For every proper persistent p, ¬p is true, so w≤◇¬p=¬p. Hence p≤¬w, and persistence and monotonicity give p≤□¬w=m. The proposition m is persistent and false, since w is true. It is therefore the greatest proper member of O. Conversely, given such an m, let w:=¬m, which is true. For any true q, the persistent proposition □¬q is false and hence lies below m. Taking complements gives w≤◇q, so w witnesses Vicinity.
++
++No completeness is needed for (10). Equivalently, failure of Vicinity says that 1 is the least upper bound of all currently false persistent propositions. Indeed, any upper bound b<1 would make □b a proper persistent upper bound and hence the greatest proper member. Whether BC_t with RC at t,t or Zorn at t entails this condition remains open.
++
++## Sources
++
++The common-core mechanism is Christopher Sun's 19 October 2026 Vicinity argument, recorded in the linked principle. The all-type bound lemma, supported interpretation, transfers and persistent-proposition characterization are from OpenAI Codex, *Vicinity, Relational Choice and propositional completeness imply Actuality*, 25 October 2026, §§2–8, unpaginated. Their source hash and reported independent AI review are recorded with this update.
+diff --git a/logical-maps/topics/classicism/writeups/vicinity-relational-choice-and-propositional-completeness-imply-actuality.md b/logical-maps/topics/classicism/writeups/vicinity-relational-choice-and-propositional-completeness-imply-actuality.md
+new file mode 100644
+--- /dev/null
++++ b/logical-maps/topics/classicism/writeups/vicinity-relational-choice-and-propositional-completeness-imply-actuality.md
+@@ -0,0 +1,51 @@
++# Vicinity, Relational Choice and propositional completeness imply Actuality
++
++OpenAI Codex, prompted by Daniel Kodsi, 25 October 2026. Source: `misc`, this proof, unpaginated.
++
++The sharp theorem uses only the single Relational Choice instance with propositional inputs and outputs:
++
++$$
++C+\mathrm{Vicinity}+BC_t+RC_{t,t}\ \Longrightarrow\ \mathrm{Actuality}.
++$$
++
++All three added premises are unprefixed. The [shared supported interpretation](vicinity-supported-interpretation.md) supplies C5 and preserves BC_t. We transfer RC_{t,t} to that same interpretation and apply the [C5 Relational Choice theorem](c5-relational-choice-and-propositional-completeness-imply-actuality.md).
++
++## 1. Transferring Relational Choice
++
++More generally, fix any old RC_(σ,τ) instance. Let U be a supported relation currently serial on D_σ×D_τ. The old relation
++
++$$
++R(x,y):=D_\tau(y)\land U(j_\sigma x,y)
++$$
++
++is serial on all old x: j_σx is fixed, and supported seriality supplies a fixed y. Old RC gives a current total functional subrelation K of R. Retract K to S:=j_(στt)(K). On fixed arguments,
++
++$$
++S(x,y)=s\land K(x,y),
++$$
++
++so S has precisely K's current membership there. Its selected outputs are fixed because K is contained in R. It is therefore a supported total functional subrelation of U, where functional uniqueness uses equality of fixed entities. In particular, old RC_(t,t) alone transfers to the instance required by the C5 theorem.
++
++## 2. Descending Actuality
++
++The shared construction and §1 supply C5, RC_(t,t) and BC_t in the supported interpretation. The already proved [strict-partition reconstruction theorem](c5-relational-choice-and-propositional-completeness-imply-actuality.md), §§1–8, therefore supplies a true supported Actuality witness u∈D_t.
++
++For every original true proposition q, the proposition s∧q belongs to D_t and is currently true. Supported Actuality gives
++
++$$
++u\le s\land q\le q
++$$
++
++in the original algebra. Thus this same u is an original Actuality witness. This proves the theorem. Choice and completeness were used only at their original current evaluation; neither was transported by necessitation.
++
++## 3. Equivalence and remaining question
++
++Since Actuality implies Vicinity over C,
++
++$$
++C+BC_t+RC_{t,t}\ \vdash\ \mathrm{Actuality}\leftrightarrow\mathrm{Vicinity}.
++$$
++
++The existing [ND at t implies Vicinity](../results/distinctness-necessary-t-implies-vicinity.yaml) also makes unprefixed propositional ND a sufficient premise. The [shared construction, §6](vicinity-supported-interpretation.md#6-vicinity-and-persistent-propositions) characterizes Vicinity by a greatest proper persistent proposition. Deriving Vicinity from BC_t and RC_{t,t} alone remains open.
++
++The [Zorn theorem](vicinity-zorn-and-propositional-completeness-imply-actuality.md) uses the same interpretation and a separate transfer argument.
+diff --git a/logical-maps/topics/classicism/writeups/vicinity-zorn-and-propositional-completeness-imply-actuality.md b/logical-maps/topics/classicism/writeups/vicinity-zorn-and-propositional-completeness-imply-actuality.md
+new file mode 100644
+--- /dev/null
++++ b/logical-maps/topics/classicism/writeups/vicinity-zorn-and-propositional-completeness-imply-actuality.md
+@@ -0,0 +1,94 @@
++# Vicinity, propositional completeness and Zorn imply Actuality
++
++OpenAI Codex, prompted by Daniel Kodsi, 25 October 2026. Source: `misc`, this proof, unpaginated.
++
++**Over C + BC_t + Zorn_t, Actuality is equivalent to Vicinity.** This weakens the C5 premise in the earlier Zorn theorem. In particular, current propositional ND suffices; neither boxed ND nor Barcan is assumed in the original theory.
++
++## 1. Exact statements
++
++In the fixed finitary relational language,
++
++$$
++\boxed{C+\mathrm{Vicinity}+BC_t+Zorn_t
++\ \Longrightarrow\ \mathrm{Actuality}.}
++\tag{1}
++$$
++
++Both completeness and Zorn are current and unboxed. Zorn has carrier t, and BC_t concerns the Boolean algebra of propositions. Since Actuality implies Vicinity already over C, this gives
++
++$$
++\boxed{\text{over }C+BC_t+Zorn_t:\quad
++\mathrm{Actuality}\ \longleftrightarrow\ \mathrm{Vicinity}.}
++\tag{2}
++$$
++
++Vicinity says that some true proposition entails the possibility of every current truth. Actuality requires a true proposition entailing those truths themselves. The theorem shows that propositional completeness and Zorn close this gap.
++
++The recorded implication ND_t⇒Vicinity also gives
++
++$$
++C+ND_t+BC_t+Zorn_t\ \Longrightarrow\ \mathrm{Actuality}.
++\tag{3}
++$$
++
++Here ND_t is unprefixed and only propositional. We do not infer C5 for the original structure. Whether BC_t+Zorn_t alone supplies Vicinity remains unresolved.
++
++## 2. The shared supported interpretation
++
++Use the [construction from Vicinity](vicinity-supported-interpretation.md), §§1–5. It supplies a true support s, the idempotent retraction j_t(p)=s∧p and the supported carrier D_t=[0,s], together with C5 and current BC_t in the interpretation. It does not use Relational Choice.
++
++For an old predicate Y on propositions its retraction satisfies
++
++$$
++j_{tt}(Y)(d)=s\land Y(j_t d).
++\tag{7}
++$$
++
++On fixed d, this has precisely Y's current extension, since s is true. The same holds for relations on fixed tuples. These are the only additional facts needed for the transfer below.
++
++## 3. Zorn transfers to the supported carrier
++
++Assume old Zorn_t. Let R be a supported preorder on D_t such that every admitted supported R-chain has a supported upper bound. Write j=j_t and define an old relation on all propositions by
++
++$$
++R'(p,q):=R(jp,jq).
++\tag{8}
++$$
++
++This is admitted by lambda abstraction. It is currently reflexive and transitive because j maps every old proposition into D_t and R is a preorder there.
++
++Let X be any admitted old R'-chain. Form the old predicate
++
++$$
++Y(d):=D_t(d)\land\exists p\,[Xp\land d=jp],
++\tag{9}
++$$
++
++and retract it by (7). On supported d this represents precisely the current image j[X]. It is a supported R-chain. Totality and transitivity follow from the corresponding properties of X under R'. For antisymmetry, if d=jp and e=jq are current image members and both R(d,e) and R(e,d) hold, then R'(p,q) and R'(q,p) hold. Antisymmetry on X gives p=q, and therefore d=e. In particular j cannot identify two different current members of X: if jp=jq, reflexivity of R supplies both comparisons, so the same argument applies.
++
++By the supported chain-bound hypothesis, there is a fixed v upper-bounding (9). For each p with Xp, R(jp,v) holds. Since jv=v, this is R'(p,v). Thus every old R'-chain has an old upper bound. Empty chains cause no exception: the fixed domain is inhabited and the stipulated supported chain-bound property also covers its empty predicate.
++
++Old Zorn_t now supplies an old R'-maximal m. Put n=jm. It is supported. If a supported d satisfies R(n,d), then jd=d gives R'(m,d). Maximality yields R'(d,m), namely R(d,n). Thus n is supported R-maximal.
++
++This proves supported Zorn_t. The proof uses neither a choice operation nor a selector of chain bounds. Every application of Zorn has carrier t. Higher predicates appear only in the admitted image formula (9) and its retraction.
++
++## 4. Actuality and the remaining boundary
++
++The supported interpretation now satisfies C5+BC_t+Zorn_t. Apply [Zorn and propositional completeness imply Actuality](c5-zorn-and-propositional-completeness-imply-actuality.md). It supplies a currently true supported proposition u that lies below every supported truth.
++
++For each original true proposition q, the supported proposition s∧q is true. Hence
++
++$$
++u\le s\land q\le q.
++\tag{10}
++$$
++
++The same u therefore witnesses original Actuality, proving (1). The converse in (2) is the existing bare-C implication Actuality⇒Vicinity. Equation (3) follows from the existing ND_t⇒Vicinity implication.
++
++This theorem and the separately proved [C+BC_tt+Zorn_t⇒Actuality](zorn-and-higher-completeness-imply-actuality.md) make different trades: the present theorem keeps completeness at t and assumes Vicinity; the other raises completeness to tt and needs no Vicinity. Neither settles C+BC_t+Zorn_t⇒Actuality.
++
++The parallel recorded RC theorem gives Actuality↔Vicinity over C+BC_t+RC_(t,t). The present proof transfers Zorn directly; it does not derive RC_(t,t) from Zorn_t.
++
++## Sources
++
++The shared construction retains the attribution to Sun and the new supported-interpretation argument. The Zorn transfer is OpenAI Codex, *Vicinity, propositional completeness and Zorn imply Actuality*, 25 October 2026, §§1–4, unpaginated. The C5 theorem and [existing converse](../results/actuality-implies-vicinity.yaml) retain their separate attributions.
+diff --git a/logical-maps/topics/classicism/writeups/c5-relational-choice-and-propositional-completeness-imply-actuality.md b/logical-maps/topics/classicism/writeups/c5-relational-choice-and-propositional-completeness-imply-actuality.md
+new file mode 100644
+--- /dev/null
++++ b/logical-maps/topics/classicism/writeups/c5-relational-choice-and-propositional-completeness-imply-actuality.md
+@@ -0,0 +1,313 @@
++# Relational Choice and propositional completeness imply Actuality over C5
++
++OpenAI Codex, prompted by Daniel Kodsi, 25 October 2026. Source: `misc`, this proof, unpaginated.
++
++## 1. Statement and proof idea
++
++In the fixed finitary relational language,
++
++$$
++\boxed{C5+BC_t+RC_{t,t}\ \Longrightarrow\ \mathrm{Actuality}.}
++\tag{1}
++$$
++
++Here RC_{t,t} is the single Relational Choice instance whose inputs and outputs are propositions. BC_t is current Boolean completeness of propositions. Neither premise is boxed. The proof does not assume OS, all-type RC, BC_tt, an admitted strict splitting operation, or a crisp wellorder of all propositions.
++
++The argument uses two applications of RC_{t,t}. The first gives an admitted operation presenting a partition of every positive proposition in a true interval into proper nonzero parts. It does not give a binary splitter: each partition may have arbitrarily many parts. A current functional relation follows the unique true part of these partitions. BC_t supplies its canonical descending chain and a false terminal member.
++
++The second choice application selects one partition child of each discarded part along this chain. Their actual join is a Boolean code b. Every discarded part has only children that are monochromatic for b; every true chain member has a child meeting both b and its complement. This gives a crisp test which identifies the selected child at every true chain member. A lambda-defined operation collects the children passing that test. Its crisp canonical chain agrees with the original chain up to the false terminal member. The predecessor cut at that member is therefore crisp, making the terminal member a material meet of truths, a contradiction.
++
++## 2. Background facts and the two canonical-chain lemmas
++
++Write 0 and 1 for Bottom and Top, and use the algebraic Boolean order p≤q, meaning p∧q=p. A formula is **crisp** when its proposition is 0 or 1. C5 makes identities crisp, supplies Barcan, and makes Boolean combinations and quantified formulas of crisp assertions crisp. In particular, order comparisons and their quantified combinations are crisp and necessary when true.
++
++We use the following C5 bound calculation. For any admitted operation v indexed by a fixed admitted type, the material existential over its entire range is the actual algebraic join of those range values. More generally, if A is crisp, then
++
++$$
++\exists x\,[A(x)\land v(x)]
++\tag{2}
++$$
++
++is the actual algebraic join of the values v(x) at current A-members. Universal instantiation gives each bound. Conversely, a current algebraic bound at every index is a family of true identity statements; C5 and Barcan make the corresponding universal bound necessary, giving the algebraic bound on (2). The order-dual calculation applies to material universals. This fact is about crisp-indexed families or entire admitted ranges. It does not identify arbitrary current BC_t suprema with material existentials.
++
++Two previously proved chain lemmas are used:
++
++1. **Current relational canonical chain.** In a represented antisymmetric poset with a least element and suprema of all represented chains, a represented total progressive functional relation has a canonical internally wellordered chain ending at a fixed point. Function notation abbreviates its unique current graph value; an operation representing that graph is unnecessary. See [the represented and descending canonical-chain lemmas](propositional-canonical-chain-lemmas.md).
++2. **Strong crisp canonical chain.** Under C5, an admitted necessarily deflationary operation g on [0,a] has a crisp descending canonical chain N, fully wellordered in reverse Boolean order against **all admitted current subproperties**, and ending at a fixed point. Its conformity and full wellordering hold necessarily. No BC assumption is used in this lemma. See [the strong crisp-chain lemma](propositional-canonical-chain-lemmas.md#3-strong-crisp-chains-for-operations).
++
++For both descending chains, conformity means that a member x is the actual infimum, in [0,a], of the successor values at its strict predecessors:
++
++$$
++x=\inf\{f(y):y\text{ belongs to the chain and }x<y\}.
++\tag{3}
++$$
++
++The empty predecessor family has infimum a. The stronger lemma in item 2 is important: wellordering only against crisp subproperties would not justify the later comparison with a possibly noncrisp chain.
++
++## 3. A uniform strict partition on a true core
++
++Suppose h is currently true and [0,h] is atomless. Put
++
++$$
++A_h(p):=(0<p\land p\le h).
++$$
++
++For each current A_h-member p there is a q with 0<q<p. Thus the relation
++
++$$
++R(p,q):=[A_h(p)\land 0<q<p]
++\lor[\neg A_h(p)\land q=0]
++\tag{4}
++$$
++
++is currently serial. It is crisp. Apply RC_{t,t} to obtain a current total functional subrelation K of R.
++
++Normalize its coefficients by
++
++$$
++\begin{aligned}
++c_p(q)&:=K(p,q)\land R(p,q)\\
++&\quad\land\forall z\,[(K(p,z)\land R(p,z))\to z=q],\\
++d_p&:=\exists q\,c_p(q).
++\end{aligned}
++\tag{5}
++$$
++
++For every current p, its selected K-output has a true coefficient, so d_p is currently true. For distinct q,z the coefficients c_p(q),c_p(z) are algebraically disjoint: their conjunction implies q=z, and under C5 a false identity is 0. Also a coefficient with false R(p,q) is 0, because R is crisp.
++
++Define
++
++$$
++a:=h\land\forall p\,d_p.
++\tag{6}
++$$
++
++Then a is currently true, a≤h, and a≤d_p for every p. For all p,q define admitted operations
++
++$$
++u_0(p,q):=p\land c_p(q)\land q,
++\qquad
++u_1(p,q):=p\land c_p(q)\land\neg q.
++\tag{7}
++$$
++
++For 0<p≤a their positive values form a partition of p into proper parts:
++
++* Values belonging to distinct q are disjoint by the disjointness of their coefficients; the two values at one q are disjoint by q∧¬q=0.
++* If either value is nonzero, its coefficient is nonzero. Since p≤h and R is crisp, this gives 0<q<p. Hence u_0(p,q)≤q<p, and u_1(p,q)≤p∧¬q<p. Thus each positive value is strictly below p.
++* Their range join is p. Indeed the Boolean and quantifier laws give
++
++$$
++\exists q\,[u_0(p,q)\lor u_1(p,q)]
++=p\land d_p=p.
++\tag{8}
++$$
++
++  By the entire-range calculation of §2 this is also their actual algebraic join.
++
++Define the admitted relation
++
++$$
++\mathrm{Child}(p,r):=
++(0<p\le a)\land r>0\land
++\exists q\,[r=u_0(p,q)\lor r=u_1(p,q)].
++\tag{9}
++$$
++
++This relation is crisp: its assertions are identities, order comparisons, and quantifiers over them. For each 0<p≤a its current members are pairwise disjoint, all are strictly below p, and their actual join is p. Thus there is at least one positive child. Moreover, for **each** child r there is a different child: otherwise the whole join would be r<p. These existence claims concern nonzero entities, not current truth of their propositions.
++
++Because Child is crisp, its weighted material join is its actual join. In particular,
++
++$$
++p=\exists r\,[\mathrm{Child}(p,r)\land r]
++\qquad(0<p\le a).
++\tag{10}
++$$
++
++Therefore, if p is currently true, exactly one of its children is currently true. Existence follows from (10), and uniqueness follows from disjointness. No child is asserted to be true when p is false.
++
++## 4. The truth-guided relational chain and its discarded children
++
++On [0,a] define a current functional relation F as follows:
++
++$$
++F(p,r):=[\neg p\land r=p]
++\lor[p\land\mathrm{Child}(p,r)\land r].
++\tag{11}
++$$
++
++When p is false it selects p itself. When p is true, (10) supplies exactly one true child. Hence F is total, single-valued, deflationary, and strictly deflationary at every true p. It is an admitted relation; no operation with these literal outputs has been extracted.
++
++BC_t supplies all represented infima in [0,a]. Apply the current relational canonical-chain lemma. Let M be its canonical chain and m its terminal fixed point. Then:
++
++* m is false, since every true point is strictly decreased;
++* every other M-member is true, since each false point is fixed and a fixed point in a canonical chain is terminal;
++* for a true M-member p, its unique graph value F(p) is a true M-member and the next member of the chain;
++* if q<p are M-members, then q≤F(p), by conformity at q.
++
++Define the represented family of discarded positive children by
++
++$$
++\Delta(d):=\exists p,r\,[Mp\land p\land F(p,r)
++\land\mathrm{Child}(p,d)\land d\ne r].
++\tag{12}
++$$
++
++Each Δ-member is positive, lies below a, and is false. Crucially, distinct Δ-members are algebraically disjoint **across all stages**. At one parent this is the partition property. If p>q are different true M-parents, every child discarded at q lies below q≤F(p), whereas every child discarded at p is disjoint from F(p). Thus the two discarded children are disjoint. In particular, a positive discarded child cannot reappear at a different stage.
++
++Every true M-member has at least one discarded positive child, since its selected child is strictly smaller and the entire partition has join equal to the parent.
++
++## 5. One Boolean code from a second relational choice
++
++For each Δ-member d, its Child-partition is nonempty and all its members are strictly below d. Apply RC_{t,t} to the serial relation
++
++$$
++[\Delta(d)\land\mathrm{Child}(d,r)]
++\lor[\neg\Delta(d)\land r=0].
++\tag{13}
++$$
++
++Let J(d,r) be the resulting current total functional selector graph. For d∈Δ write r_d for its unique current output. Thus
++
++$$
++\mathrm{Child}(d,r_d),\qquad 0<r_d<d.
++\tag{14}
++$$
++
++This notation does not assert that d↦r_d is represented by an operation. Its image over Δ is the admitted current property
++
++$$
++Y(r):=\exists d\,[\Delta(d)\land J(d,r)].
++$$
++
++Use BC_t to choose its actual supremum b. For every current d∈Δ,
++
++$$
++b\land d=r_d.
++\tag{15}
++$$
++
++Indeed r_d≤b and r_d≤d. Conversely, every other selected r_e lies below a discarded e disjoint from d. Hence ¬d∨r_d bounds all members of Y, including r_d itself; the least-upper-bound property gives b≤¬d∨r_d. Meeting with d proves (15).
++
++Define the crisp formulas
++
++$$
++\begin{aligned}
++\mathrm{Mixed}(x)&:=(x\land b>0)\land(x\land\neg b>0),\\
++H(c)&:=\exists e\,[\mathrm{Child}(c,e)\land\mathrm{Mixed}(e)].
++\end{aligned}
++\tag{16}
++$$
++
++They have the following opposite behaviours.
++
++**Discarded children fail H.** If d∈Δ and Child(d,e), then e is either r_d or disjoint from r_d, because r_d is itself a child in the same partition. In the first case e≤b. In the second, e∧b=e∧d∧b=e∧r_d=0. Thus no child of d is mixed, so H(d) is false.
++
++**True chain members satisfy H.** If c is a true M-member, choose a positive child d discarded at c. Then d∈Δ, and (14)–(15) give
++
++$$
++d\land b=r_d>0,
++\qquad
++d\land\neg b=d\land\neg r_d>0.
++$$
++
++Thus d is a mixed child of c and H(c) is true.
++
++Consequently, at a true M-member p, exactly one Child(p,c) satisfies H(c), namely its selected true successor F(p). All other children are discarded and fail H. Because H is crisp, these true and false values are literal 1 and 0.
++
++## 6. The decoded operation
++
++Define the admitted operation
++
++$$
++g(p):=p\land\exists c\,[\mathrm{Child}(p,c)\land H(c)\land c].
++\tag{17}
++$$
++
++It is globally deflationary: g(p)≤p. It sends 0 to 0 and maps [0,a] into itself. Those are identities or quantified identity formulas, so C5 makes the required interval and progress hypotheses necessary.
++
++For every true M-member p,
++
++$$
++g(p)=F(p)
++\tag{18}
++$$
++
++as an **entity identity**. The crisp guard Child(p,c)∧H(c) selects exactly the one entity F(p); by §2 its weighted material join is that entity. Thus (18) does not infer identity merely from agreement in current truth.
++
++The operation g need not strictly decrease every positive proposition. Strictness is needed only on the true members of M, where (18) and (11) supply it. This is why the construction can use arbitrary partitions without first producing a binary strict splitter.
++
++## 7. Comparing the chains and deriving the contradiction
++
++Apply the strong crisp-chain lemma to g on [0,a]. Obtain a crisp, necessarily fully reverse-wellordered g-chain N with a terminal fixed point u.
++
++Compare M and N by their common initial segment I, defined using common membership and equality of the predecessor **extensions**. If m∈I, then M is already an initial segment of N. Otherwise every I-member is a true M-member, and F and g agree there by (18). If both chains had a first member outside I, full current wellordering supplies those first members; conformity makes both the infimum of the same current successor-image family. Antisymmetry identifies them, extending I, a contradiction. Hence one chain is an initial segment of the other.
++
++N cannot be a proper initial segment of M. If it were, its fixed endpoint u would be an M-member strictly before the terminal m, and hence true. But then
++
++$$
++g(u)=F(u)<u,
++$$
++
++contradicting g(u)=u. Therefore M is an initial segment of N, including m. This argument uses no global strictness of g.
++
++The predicate
++
++$$
++I_m(p):=Np\land m<p
++\tag{19}
++$$
++
++is crisp. Its current members are exactly the strict predecessors of m in M. All are true, and their g-values equal their true F-values. Thus
++
++$$
++a\land\forall p\,[I_m(p)\to g(p)]
++\tag{20}
++$$
++
++is currently true. Since I_m is crisp, §2 identifies (20) with the actual algebraic infimum in [0,a] of these g-values. Conformity of N at m identifies that infimum with m. This makes m true, contradicting §4.
++
++We have proved that C5+BC_t+RC_{t,t} permits no currently true atomless interval.
++
++## 8. Actuality and exact dependency scope
++
++Under C5, Atom(p) is crisp. Hence
++
++$$
++z:=\exists p\,[\mathrm{Atom}(p)\land p]
++\tag{21}
++$$
++
++is the algebraic join of the atoms by §2. If z is true, a true atom witnesses Actuality. If z is false, h=¬z is true and [0,h] is atomless: any atom below h would also lie below z, and so would be 0. The latter case is ruled out by §§3–7. Therefore Actuality follows, proving (1).
++
++The proof uses:
++
++* C5 for crisp identities and quantified identity assertions, the crisp-family bound calculation, and the strong crisp canonical-chain lemma;
++* two applications of the **same unboxed instance RC_{t,t}**, first for proper parts and then for children of discarded parts;
++* unboxed BC_t for the current relational chain's bounds and for the single code b.
++
++No selected graph is extracted into an operation. The operations u_0,u_1 and g are explicit admitted lambda terms, with the literal identities needed for g justified by crisp indexing. No coextension of predicate codes is turned into their identity, no current completeness or choice premise is necessitated, and no external recursion, wellorder of proposition entities, or infinite list of type qualifications occurs.
++
++The stronger crisp-chain lemma is the only chain result needed beyond the already recorded relational canonical-chain argument. Its full wellordering against noncrisp admitted subproperties, as proved in the cited §3, is essential to §7.
++
++## 9. Consequences using established results
++
++The recorded [C5 and Actuality imply full Boolean Completeness](../results/c5-and-actuality-imply-completeness.yaml) result, together with (1), gives
++
++$$
++\boxed{\text{over }C5+RC_{t,t}:\qquad
++BC_t\ \longleftrightarrow\ \mathrm{Actuality}
++\ \longleftrightarrow\ \text{full Boolean Completeness}.}
++\tag{22}
++$$
++
++In particular this equivalence holds with all-type RC in the background. The reverse implication from full completeness to BC_t is its propositional instance; the implication from Actuality to full completeness is the cited existing result, not a new part of the proof here.
++
++With all-type RC, the established C5+RC⇒TC⇒Zorn⇒WO chain supplies a current wellorder W of proposition entities. After (1), let u be a true atom. For any proposition r, u≤r holds exactly when r is currently true: the nonzero meet of the true propositions u and r must equal the atom u. Therefore
++
++$$
++W'(p,q):=(u\land W(p,q)=u)
++\tag{23}
++$$
++
++is crisp under C5 and currently coextensive with W. It is consequently a crisp current wellorder. This is the converse construction already checked in the preceding rigid-wellorder argument. Here the new theorem supplies its Actuality hypothesis. The separate [Zorn proof](c5-zorn-and-propositional-completeness-imply-actuality.md) establishes the corresponding implication from Zorn_t.
+diff --git a/logical-maps/topics/classicism/writeups/zorn-and-higher-completeness-imply-actuality.md b/logical-maps/topics/classicism/writeups/zorn-and-higher-completeness-imply-actuality.md
+new file mode 100644
+--- /dev/null
++++ b/logical-maps/topics/classicism/writeups/zorn-and-higher-completeness-imply-actuality.md
+@@ -0,0 +1,205 @@
++# Zorn and completeness of proposition properties imply Actuality
++
++OpenAI Codex, prompted by Daniel Kodsi, 25 October 2026. Source: `misc`, this proof, unpaginated.
++
++**Over bare C, Boolean Completeness at the single type tt, together with Zorn at type t, implies Actuality.** Both premises are current and unboxed. Here tt is the type of properties of propositions; it is a stronger completeness assumption than completeness of propositions alone.
++
++Zorn first supplies a wellordered descending chain of truths whose meet would be zero if Actuality failed. Taking the differences at its stages produces an admitted disjoint family of false propositions with join Top. Completeness at tt rules out exactly that configuration: joining the properties that identify those false propositions forces a true member. The proof does not require C5 or a choice operation selecting the stage differences.
++
++## 1 Statement and admission conventions
++
++In the fixed finitary relational language,
++
++$$
++\boxed{C+BC_{tt}+Zorn_t\ \Longrightarrow\ \mathrm{Actuality}.}
++\tag{1}
++$$
++
++Write 0 and 1 for Bottom and Top, and use the algebraic Boolean order
++$p\le q\iff p\land q=p$. A positive proposition is a nonzero proposition, whether or not it is currently true. Every family below is the current extension of an admitted predicate. An actual join or meet is defined by its algebraic universal property against all current bounds; it is not identified with a material existential or universal quantifier.
++
++For example, put
++
++$$
++\begin{aligned}
++\mathrm{GLB}(u,X):={}&
++\forall x(Xx\to u\le x)\\
++&\land\forall v\bigl(\forall x(Xx\to v\le x)\to v\le u\bigr).
++\end{aligned}
++\tag{2}
++$$
++
++This is an admitted formula. BC_t gives a unique current u satisfying it for each X. Whenever several such values are needed, the proof binds them existentially using (2). It never extracts an operation taking X to its actual meet.
++
++Zorn_t applies to admitted preorders on propositions. A chain is an admitted predicate on which the preorder is antisymmetric and total. Definitions of the preorder may quantify over higher types; its carrier remains t.
++
++Two elementary Boolean facts will be used. A fixed meet preserves every existing actual join, by the adjunction
++$a\land x\le b\iff x\le\neg a\lor b$.
++Consequently a positive proposition below an actual join meets one of its members: otherwise its complement would bound the family. Neither fact uses a modal distinctness principle.
++
++## 2 Completeness at tt supplies propositional completeness
++
++For each proposition p let $\kappa(p):=\lambda z^t.p$, a constant property. Given X:tt, form the admitted family of properties
++
++$$
++\mathcal C_X(Y):=\exists p\,[Xp\land Y=\kappa(p)].
++\tag{3}
++$$
++
++By BC_tt, let J be its actual join and put j:=J(1). If Xp, then $\kappa(p)\le J$, so p≤j. If q bounds X, the corresponding constant property κ(q) bounds every member of (3). Thus J≤κ(q), whence j≤q. Here constant abstraction and evaluation preserve Boolean order by the unconditional Boolean identities of C; no collection of merely pointwise equalities is used. This proves that j is the actual join of X. Boolean duality gives actual meets, including the empty meet 1. Therefore
++
++$$
++C+BC_{tt}\ \Longrightarrow\ BC_t.
++\tag{4}
++$$
++
++The same distinction is important for evaluating a nonconstant join. At a proposition x, evaluation has the admitted right adjoint
++
++$$
++r_x(b):=\lambda z\,((z=x)\to b),
++\qquad X(x)\le b\ \Longleftrightarrow\ X\le r_x(b).
++\tag{5}
++$$
++
++The adjunction follows from the necessary universal closure of the unconditional H equivalence
++$\forall z[Xz\to((z=x)\to b)]\leftrightarrow(Xx\to b)$,
++using C's Logical Equivalence. Thus evaluation preserves every represented actual join that exists at tt. This is an algebraic adjunction, not an assumption of Functionality or Barcan.
++
++## 3 Failure of Actuality gives a wellordered true chain
++
++We prove the needed refinement using only C+BC_t+Zorn_t.
++
++First order true propositions by reverse Boolean inclusion, with all false propositions in a bottom equivalence class. An admitted formula for this preorder is
++
++$$
++R(p,q):=\neg p\lor(q\land q\le p).
++\tag{6}
++$$
++
++If Actuality fails, no true proposition is an atom. Given true p and 0<b<p, one of b and p∧¬b is true and is a proper part of p. Hence (6) has no maximal element. By the contrapositive of Zorn_t, it has an admitted chain with no upper bound. Its true part D is nonempty and is a Boolean chain with no true lower bound.
++
++Let u be the actual infimum of D. It is false. The admitted image of D under $d\mapsto d\land\neg u$ is a chain of true positive propositions with infimum 0: a lower bound is below every d and below ¬u, hence below u∧¬u. Replace D by this image.
++
++We next refine D to an admitted chain L that is wellordered from larger to smaller elements and is coinitial in D. This refinement is needed because D itself need not be wellordered.
++
++A D-annulus is a positive proposition $b=d\land\neg c$, where c,d∈D and c<d. Its endpoints are unique. Indeed, if $d\setminus c=d'\setminus c'\ne0$ and c<c′, then either d≤c′, making the common band both contained in and disjoint from c′, or c<c′<d, making the positive difference c′\c belong to only the first band. Thus c=c′, and then d=d′. Endpoint notation below abbreviates this unique admitted graph, not an endpoint operation.
++
++For each proposition m define H_m to be its maximal D-annuli:
++
++$$
++\begin{aligned}
++H_m(b):={}&\mathrm{Ann}_D(b)\land b\le m\\
++&\land\forall b'\bigl(
++\mathrm{Ann}_D(b')\land b'\le m\land b\le b'
++\to b=b'\bigr).
++\end{aligned}
++\tag{7}
++$$
++
++Distinct H_m-bands are disjoint and have a positive gap: overlapping or touching annuli would have a larger annular union still below m. Order the bands from outside to inside. If b=d\c and b′=d′\c′, b precedes b′ when d′<c; their gap is c\d′.
++
++A proposition m is a valid history when it is the actual join of H_m and this order wellorders H_m against every admitted current subpredicate. The empty history 0 is valid. Order valid histories by end-extension of their band families, and put all invalid propositions in a bottom equivalence class. This defines an admitted preorder on t. End-extension is antisymmetric on valid histories because their band families determine their actual joins.
++
++The following limit fact ensures that a join does not erase the history. Suppose Y is an admitted wellordered family of D-annuli with positive gaps, and v is its actual join. Every D-annulus a≤v lies in one Y-band. To prove this, a meets some band. If it meets two, take the least met band b and its immediate Y-successor s. Both exist by full current wellordering. The endpoints of a span the positive gap between b and s, even if a meets only a later band after s. That gap is disjoint from every Y-band and hence from v, a contradiction. If a meets only b but exceeds b, its positive excess is below v and must meet another band, again a contradiction. It follows that the maximal D-annuli below v are exactly the Y-bands.
++
++Now take an admitted chain X of history codes. Let v be the actual join of its valid members and let
++
++$$
++Y(b):=\exists m\,[Xm\land\mathrm{Valid}(m)\land H_m(b)].
++\tag{8}
++$$
++
++The constituent histories are end-extended initial segments. Y is wellordered: for an admitted nonempty subfamily Z, select a Z-member in one constituent H_m and take the least member of Z∩H_m. Every Z-member outside H_m follows it. The proposition v is also the actual join of Y, because bounding all bands is equivalent to bounding all constituent codes. The limit fact gives H_v=Y as current extensions. Thus v is a valid upper bound of X; if X has no valid member, 0 is an upper bound.
++
++Zorn_t therefore gives a maximal valid history m. It meets every d∈D. Otherwise m∧d=0; since D is positive with infimum 0, choose c<e<d in D. Every old band's lower endpoint is at least d, since a band whose lower endpoint lay below d would meet d. Appending e\c therefore leaves a permanent positive gap after all old bands. Its join with m is a valid strict end-extension by the limit fact, contradicting maximality.
++
++Let L be the admitted image of the lower endpoints of H_m. They strictly decrease along the history, so L is wellordered by reverse Boolean inclusion. Full wellordering transfers through the unique endpoint graph: every admitted subpredicate of L pulls back to an admitted subpredicate of H_m. For each d∈D, the positive m∧d meets a band, whose lower endpoint lies strictly below d. Thus L is coinitial in D and has actual infimum 0. Every member is still true. We have proved
++
++$$
++\begin{gathered}
++C+BC_t+Zorn_t+\neg\mathrm{Actuality}\quad\Longrightarrow\\
++\text{an admitted reverse-wellordered all-true chain L with actual infimum 0.}
++\end{gathered}
++\tag{9}
++$$
++
++No assertion in this construction makes D or L a rigid predicate.
++
++## 4 Stage differences give a false antichain with join Top
++
++Fix L as in (9). Its strict predecessors of l, in the wellordering, are the L-members e with l<e. Define the admitted relation
++
++$$
++U(l,u):=Ll\land
++\mathrm{GLB}\bigl(u,\lambda e(Le\land l<e)\bigr).
++\tag{10}
++$$
++
++For each current l∈L, BC_t supplies exactly one current u with U(l,u). Write u_l for this value within the proof. The notation does not name an admitted operation. Since l is a lower bound of its strict predecessors, l≤u_l. Define
++
++$$
++\Delta(d):=d\ne0\land
++\exists l,u\,[U(l,u)\land d=(u\land\neg l)].
++\tag{11}
++$$
++
++Every member of Δ is false: it is below the complement of a true l. The members are pairwise disjoint. If l>m in L, then l is a predecessor of m, so u_m≤l. Hence the increment at m lies below l, while the increment at l is disjoint from l. Distinct witnesses with the same l give the same increment by uniqueness in (10).
++
++The actual join of Δ is 1. It suffices to show that any upper bound k equals 1. Suppose some l∈L satisfies ¬l≰k. The admitted subpredicate $Ll\land(\neg l\nleq k)$ has a first member l. For every predecessor e of l, ¬e≤k, so ¬k≤e. Therefore ¬k≤u_l, or ¬u_l≤k. Also u_l∧¬l≤k: the difference is either zero or a member of Δ. Since l≤u_l,
++
++$$
++\neg l=\neg u_l\lor(u_l\land\neg l)\le k,
++\tag{12}
++$$
++
++contradicting the choice of l. Thus ¬l≤k for all l∈L. Then ¬k is a lower bound of L, and its infimum 0 gives ¬k=0. This proves
++
++$$
++C+BC_t+Zorn_t+\neg\mathrm{Actuality}
++\ \Longrightarrow\
++\text{an admitted false antichain with actual join 1.}
++\tag{13}
++$$
++
++This is a least-counterexample argument inside the admitted wellorder. It does not assume a transfinite recursion theorem, a selector for the meets u_l, or identity of coextensive predicates.
++
++## 5 Completeness at tt reflects truth of disjoint joins
++
++We reproduce the bare-C reflection argument to make clear where BC_tt enters beyond (4).
++
++Let Δ be any admitted false antichain with a true actual join j. Put $H_a:=\lambda z(z=a)$, and use BC_tt to form the actual join J of the admitted family
++$\lambda Y\exists a(\Delta a\land Y=H_a)$.
++For each current a∈Δ, H_a≤J and J(a)=1. By the evaluation adjunction (5), J(x) is the actual join of the H_a(x) at current Δ-members.
++
++Put $C(x,y):=(x=y\lor x\land y=0)$. For current a,b∈Δ, either a=b or a∧b=0. Each true alternative is a positive identity and therefore necessary by C's Necessity of Identity. Necessary substitution yields
++
++$$
++H_a(x)\land H_b(y)\le C(x,y).
++\tag{14}
++$$
++
++For fixed a, use Boolean implication adjunction and the join property of J(y) to replace H_b(y) by J(y). Then use the same adjunction and the join property of J(x). The result is
++
++$$
++J(x)\land J(y)\le C(x,y).
++\tag{15}
++$$
++
++Define the admitted proposition $v:=\forall p(Jp\to\neg p)$.
++For every a∈Δ, necessary universal instantiation and J(a)=1 give v≤¬a. Consequently j≤¬v. Since j is true, v is false. Classical quantifier duality supplies a current q such that Jq and q are both true.
++
++For every a∈Δ, q≠a because q is true and a is false. Applying (15) to q,a, with both J-values true, gives q∧a=0. Hence j≤¬q, contradicting the truth of both j and q. Thus an admitted false antichain cannot have a true actual join under C+BC_tt.
++
++Applying this to (13), and using (4), proves (1).
++
++## 6 Exact scope
++
++The new refinement (13) uses only current BC_t and Zorn_t over C. The additional completeness at tt is used to join haecceities and reflect truth of the resulting disjoint join. The proof therefore does not settle whether C+BC_t+Zorn_t alone implies Actuality.
++
++Every invocation of Zorn has carrier t. Higher types occur only in admitted definitions and in the explicitly assumed BC_tt. All bounds are actual bounds; no optional premise is necessitated. In particular, the theorem asserts current Actuality, not necessary Actuality. The C5 result with BC_t alone remains the distinct theorem in [Zorn and propositional completeness imply Actuality](c5-zorn-and-propositional-completeness-imply-actuality.md).
++
++## 7 Sources
++
++- The new stage-difference refinement and theorem (1): OpenAI Codex, 25 October 2026, `misc`, §§1–6 of this note, unpaginated.
++- The bare-C chain extraction and annulus-history refinement: [Zorn and propositional completeness imply Actuality](c5-zorn-and-propositional-completeness-imply-actuality.md), §§2–4, OpenAI Codex, 25 October 2026, `misc`, unpaginated; restated with proof in §3 above.
++- Evaluation's right adjoint, BC_tt⇒BC_t, and higher-type disjoint-join reflection: [Relational Choice and Boolean Completeness imply Actuality](relational-choice-and-boolean-completeness-imply-actuality.md), §§1–2, OpenAI Codex, original proof 22 October 2026, recorded 23 October 2026, `misc`, unpaginated; restated in §§2 and 5 above. Its RC-based refinement is replaced here by (9)–(13).
+diff --git a/logical-maps/topics/classicism/results/vicinity-relational-choice-and-propositional-completeness-imply-actuality.yaml b/logical-maps/topics/classicism/results/vicinity-relational-choice-and-propositional-completeness-imply-actuality.yaml
+new file mode 100644
+--- /dev/null
++++ b/logical-maps/topics/classicism/results/vicinity-relational-choice-and-propositional-completeness-imply-actuality.yaml
+@@ -0,0 +1,47 @@
++id: vicinity-relational-choice-and-propositional-completeness-imply-actuality
++premises:
++- vicinity
++- boolean-completeness-t
++- relational-choice-r
++conclusion: actuality
++status: proved
++certificate:
++  source_id: misc
++  produced_by: OpenAI Codex, prompted by Daniel Kodsi, 25 October 2026
++  recorded_by: OpenAI Codex, prompted by Daniel Kodsi, 25 October 2026
++  checked_by: []
++  date: '2026-10-25'
++  lean: none
++sources:
++- 'OpenAI Codex, Vicinity, Relational Choice and propositional completeness imply Actuality, 25 October 2026, §§1–8, unpaginated; same-stem writeup and the shared vicinity-supported-interpretation writeup.'
++- 'Christopher Sun, 19 October 2026 Vicinity argument, recorded in the five-necessity variant of the Vicinity principle, unpaginated; source of the common-core mechanism generalized in §2 of the writeup.'
++source_names:
++- Codex supported-interpretation proof
++- Sun 19 Oct common-core argument
++proof: >-
++  A Vicinity witness w supplies the true core s=w∧∀r(r→w≤◇r), on which
++  identities are decided and pointwise algebraic bounds commute with every
++  admitted typed quantifier. Hereditary retractions onto s-supported domains
++  give a concrete C5 interpretation; guarded H relativization preserves the
++  strict Logical Equivalence rule using only positive identity guards. Current
++  propositional Relational Choice and Boolean Completeness transfer to these
++  domains. The established C5 theorem supplies a supported Actuality witness,
++  which bounds s∧q for every original truth q and hence witnesses original
++  Actuality. The same-stem writeup supplies all transfer and modal details.
++references: []
++notes: >-
++  The sharp theorem uses only the unboxed instance RC_(t,t), while this record
++  uses the existing all-type RC node. It replaces the earlier C5 premise by
++  Vicinity; over C+RC_(t,t)+BC_t, Actuality and Vicinity are therefore equivalent.
++  Deriving Vicinity from RC+BC_t remains unresolved. Unboxed ND_t is also a
++  sufficient extra premise through its recorded implication to Vicinity.
++  Independent AI review checked the common-core lemma and supported
++  interpretation. No human check, Lean verification, or literature-priority
++  claim is asserted.
++changes:
++- date: '2026-10-25'
++  by: OpenAI Codex
++  summary: Added the bare-C characterization of Vicinity by a greatest proper persistent proposition and linked the independently reviewed direct relative canonical-chain proof.
++- date: '2026-10-25'
++  by: OpenAI Codex, prompted by Daniel Kodsi
++  summary: Consolidated the supported interpretation into a shared writeup used by the RC and Zorn Actuality proofs; mathematical content and original certificate date retained.
+diff --git a/logical-maps/topics/classicism/results/vicinity-zorn-and-propositional-completeness-imply-actuality.yaml b/logical-maps/topics/classicism/results/vicinity-zorn-and-propositional-completeness-imply-actuality.yaml
+new file mode 100644
+--- /dev/null
++++ b/logical-maps/topics/classicism/results/vicinity-zorn-and-propositional-completeness-imply-actuality.yaml
+@@ -0,0 +1,36 @@
++id: vicinity-zorn-and-propositional-completeness-imply-actuality
++premises:
++- vicinity
++- boolean-completeness-t
++- zorn-r
++conclusion: actuality
++status: proved
++certificate:
++  source_id: misc
++  produced_by: OpenAI Codex, prompted by Daniel Kodsi, 25 October 2026
++  recorded_by: OpenAI Codex, prompted by Daniel Kodsi, 25 October 2026
++  checked_by: []
++  date: '2026-10-25'
++  lean: none
++sources:
++- 'OpenAI Codex, Vicinity, propositional completeness and Zorn imply Actuality, 25 October 2026, §§1–4, unpaginated; same-stem writeup.'
++- 'OpenAI Codex, Vicinity, Relational Choice and propositional completeness imply Actuality, 25 October 2026, §§2–6, unpaginated; shared supported interpretation, extending Christopher Sun’s 19 October 2026 common-core mechanism.'
++source_names:
++- Codex supported Zorn transfer
++- Codex supported interpretation
++proof: >-
++  Vicinity supplies a true support and hereditary retractions giving a C5
++  interpretation; current BC_t transfers. Pull a supported preorder back along
++  j_t. Every old antisymmetric chain maps injectively to an admitted supported
++  chain, whose supported bound lifts to an old bound. Zorn_t gives a maximal
++  old element, and its image is supported maximal. Thus supported Zorn_t holds.
++  The C5 theorem gives a true supported Actuality witness u. Every original
++  truth q has a true supported restriction s∧q, so u≤s∧q≤q; u witnesses
++  original Actuality. See the same-stem and shared-interpretation writeups.
++references: []
++notes: >-
++  The sharp theorem uses only current Zorn at type t and BC at type t. This
++  record uses the existing all-type Zorn node. No RC premise is used or inferred.
++  Actuality is equivalent to Vicinity over C+BC_t+Zorn_t. Unboxed ND_t is also
++  sufficient via the existing ND_t-to-Vicinity implication. Removing Vicinity
++  remains unresolved. No optional premise is necessitated.

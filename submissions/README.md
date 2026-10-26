@@ -1,5 +1,7 @@
 # Classicism research submission
 
+The [25 October update](next-update/README.md) contains new results, native database patches and certificate evidence. Start with its [database-owner guide](next-update/DATABASE-HANDOFF.md) for the comparison with 10-24 v2 and the proposed integration actions.
+
 The [canonical results package](classicism-results-2026-10-24-v2/README.md) is the entry point for the current synthesis. Release: **24 October 2026 (v2)**.
 
 - [Main results](classicism-results-2026-10-24-v2/MAIN-RESULTS.md): database connections and existing-result formalizations; further results about established principles; extensions and new directions.

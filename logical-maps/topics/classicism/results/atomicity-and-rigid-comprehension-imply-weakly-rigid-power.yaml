@@ -6,43 +6,32 @@ conclusion: weakly-rigid-power-r
 status: proved
 certificate:
   source_id: misc
-  produced_by: Codex (OpenAI), prompted by Daniel Kodsi, original adaptation of 22 October 2026
-  recorded_by: Codex (OpenAI), prompted by Daniel Kodsi, 23 October 2026
+  produced_by: GPT-6 Astra (OpenAI), prompted by Daniel Kodsi, 22 October 2026
+  recorded_by: Claude Opus 5.5 (Anthropic), prompted by Cian Dorr, 24 October 2026
   checked_by: []
-  date: '2026-10-23'
-  lean: none
+  date: '2026-10-24'
+  lean: verified
+  lean_ref: Classicism.Map.atomicity_and_rigid_comprehension_imply_weakly_rigid_power
 sources:
-- Codex (OpenAI), prompted by Daniel Kodsi, Modal principles in Maximalist Classicism,
-  research note of 22 October 2026, §16, Atomicity and Rigid Comprehension imply Weakly Rigid
-  Power, unpaginated; retained in submissions/classicism-results-2026-10-24-v2/source/research/2026-10-22/notes/maximalism-modal.md.
+- GPT-6 Astra (OpenAI), prompted by Daniel Kodsi, Modal principles in Maximalist Classicism, research note of
+  22 October 2026, §16 (unpaginated), in Daniel Kodsi's submission of 24 October 2026 (branch
+  classicism-results-2026-10-24 of github.com/dkodsi/Logical-Maps).
 source_names:
-- Codex, prompted by Daniel Kodsi, 22 Oct
+- Astra (Kodsi) 22 Oct
+proof: >-
+  See the write-up. For weakly rigid $F$, let $P:=\lambda Y\, .\,\operatorname{WeaklyRigid}(Y)\land Y\le F$.
+  Rigid Comprehension makes each weakly rigid $Y$ rigid (coextensive weakly rigid relations are
+  identical), so $P$ is weakly persistent. For an atom $W\le P$, a rigid coextension $X$ of
+  $\lambda\bar x\, .\,F[\bar x]\land\Box\forall Y\, .\,WY\to Y[\bar x]$ satisfies $PX$ and
+  $\Box\forall Y\, .\,WY\to Y=X$; only the weak rigidity of $Y$ at the later world is needed. If
+  $\forall Y\, .\,PY\to\Box ZY$ but $P\not\le Z$, an atom below $\lambda Y\, .\,PY\land\neg ZY$ yields a
+  contradiction.
 references:
 - paper: bacon-mathematical-contingency
   role: background
   locator: Appendix C.2, Lemma C.6, pp. 15–16 of the separately paginated appendix
-  note: The atom-pullback method adapted in the original research note. The present W,W,W
-    strengthening is not attributed to the paper.
-- paper: sun-possible-worlds-without-atomicity
-  role: background
-  note: Coextensive weakly rigid relations are identical; the elementary proof is reproduced
-    in the write-up.
-proof: >-
-  See the matching write-up, writeups/atomicity-and-rigid-comprehension-imply-weakly-rigid-power.md.
-  Fix a relational type $\tau$ and weakly rigid $F^\tau$. Rigid Comprehension at $\tau$
-  makes every current weakly rigid relation rigid, so the weak-power property
-  $P_F:=\lambda Y^\tau\,.\,\operatorname{WeaklyRigid}(Y)\land Y\le F$ is weakly persistent.
-  The atom-pullback argument uses Rigid Comprehension at $\tau$ to show that every atom
-  $W\le P_F$ entails identity with one current member of $P_F$. Atomicity at $\tau t$
-  then prevents a nonbottom part of $P_F$ from escaping any necessary cover of its
-  current members. Thus $P_F$ is weakly inextensible and hence weakly rigid.
+  note: The atom pullback, adapted to weakly rigid relations.
 notes: >-
-  The sharper typed implication is Rigid Comprehension at $\tau$ plus Atomicity at $\tau t$
-  implies Weakly Rigid Power at $\tau$, including $\tau=t$. No BF, boxed optional
-  premise, or comprehension at $\tau t$ is used. This is the W,W,W principle, not merely
-  the W,R,W refinement noted in [[atomicity-and-rigid-comprehension-imply-rigid-power]].
-  The existing all-schema implication [[weakly-rigid-power-implies-rigid-power]] uses
-  the higher power-property type; no same-type replacement of that argument is claimed.
-  The submission catalog, rigidity.02, separately records successful research-module
-  checks under manifest 20261023T044252100669Z-9b8e2beb. Those checks have not been
-  promoted to a generated-statement certificate for this new database record.
+  Uses Rigid Comprehension at $\tau$ and Atomicity at $\tau t$ for Weakly Rigid Power at $\tau$. It
+  subsumes [[atomicity-and-rigid-comprehension-imply-rigid-power]] through
+  [[weakly-rigid-power-implies-rigid-power]], which however uses Weakly Rigid Power at the higher type.

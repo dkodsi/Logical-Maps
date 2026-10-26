@@ -1,0 +1,92 @@
+# Forcing Possibilism implies quantified Infinity: an internal proof
+
+This is an alternative proof of the existing result `forcing-possibilism-implies-axiom-of-infinity-t`, attributed to Andrew Bacon, *Could the truths of mathematics have been different?*, draft of 9 October 2025, §6, p. 27. The argument below is by OpenAI Codex, prompted by Daniel Kodsi, 25 October 2026 (direct source: `misc`, §§1–4 below, unpaginated).
+
+## 1. Statement and definitions
+
+Work in relational Classicism C with the database's unboxed Forcing Possibilism. Let $U=\lambda p^t.\top$. We prove
+
+$$
+\neg\exists N^{(tt)t}.\ \mathrm{FiniteCardinality}_t(N)\land N(U).
+$$
+
+At an admitted carrier type, write $X-a=\lambda x.\ Xx\land x\ne a$. The Frege cardinality definitions are
+
+$$
+\mathbf 0(X)\equiv\forall x.\neg Xx,\qquad
+\mathrm{Suc}(Y)(X)\equiv\exists a.\ Xa\land Y(X-a),
+$$
+
+$$
+\mathrm{FiniteCardinality}(N)\equiv
+\forall W.\bigl(W\mathbf 0\land\forall Y.(WY\to W(\mathrm{Suc}(Y)))\bigr)\to WN.
+$$
+
+Write $\mathrm{DedFin}(X)$ for the database's $\mathrm{Fin}(X)$: every admitted total, single-valued injective binary relation on the current members of $X$ is surjective. All predicates and graphs used below are formula abstractions in the original language. Reasoning is unboxed throughout.
+
+For propositions, $x\le y$ means $x\land y=x$. C proves the Boolean-algebra laws for this order, including
+
+$$
+s\lor a\le z\quad\leftrightarrow\quad s\le z\land a\le z.
+$$
+
+## 2. Internal finiteness implies graph-Dedekind-finiteness
+
+Use the admitted induction predicate
+
+$$
+V=\lambda Z.\forall X.\ ZX\to\mathrm{DedFin}(X).
+$$
+
+The zero case is immediate. For the successor step assume $VY$ and $\mathrm{Suc}(Y)(X)$. Choose $a$ with $Xa$ and $Y(X-a)$. Thus $\mathrm{DedFin}(X-a)$.
+
+Let $R$ be a total, single-valued injective graph on $X$, and choose its value $b$ at $a$. This is one existential witness and needs no Choice principle. The transposition graph
+
+$$
+T_{ab}(u,v)\equiv
+(u=a\land v=b)\lor(u=b\land v=a)
+\lor(u\ne a\land u\ne b\land v=u)
+$$
+
+is an admitted permutation of $X$ and its own inverse, including when $a=b$. Define
+
+$$
+G(x,y)\equiv\exists z.\ R(x,z)\land T_{ab}(z,y).
+$$
+
+Then $G$ is an injective self-graph of $X$ fixing $a$. Injectivity prevents any other member of $X$ from mapping to $a$, so its restriction to $X-a$ is an injective self-graph. The induction hypothesis makes that restriction surjective. Together with $G(a,a)$, this makes $G$ surjective on $X$. Since the transposition is a permutation, $R$ is surjective too.
+
+The defining induction for finite cardinalities therefore gives
+
+$$
+\mathrm{FiniteCardinality}(N)\land N(X)\to\mathrm{DedFin}(X).
+$$
+
+This is internal induction, without an external enumeration or a necessity-of-distinctness assumption.
+
+## 3. Selected subfamilies of an internally finite carrier have joins
+
+For $X,F:tt$ and $s:t$, put
+
+$$
+J(X,F,s)\equiv\forall z^t.\
+\bigl(s\le z\leftrightarrow\forall x^t.(Xx\land Fx\to x\le z)\bigr).
+$$
+
+This states that $s$ is the least upper bound of the members of $X$ satisfying $F$: setting $z=s$ gives the upper-bound claim, and the equivalence gives leastness. Use the admitted induction predicate
+
+$$
+W=\lambda Z.\forall X^{tt}.\ ZX\to\forall F^{tt}.\exists s^t.\ J(X,F,s).
+$$
+
+For the zero cardinality choose $s=\bot$. For the successor step, choose $a$ with $Xa$ and $Y(X-a)$. The induction hypothesis supplies a join $s$ for the members of $X-a$ satisfying $F$. If $Fa$, choose $s\lor a$; otherwise choose $s$. The Boolean law in §1 verifies the defining equivalence in both cases, since the members of $X$ are precisely $a$ and those of $X-a$. This asserts no uniform choice function for joins.
+
+Thus $W\mathbf 0$ and closure under successor hold. The Frege definition yields $WN$ for every finite cardinality $N$. If also $N(U)$, every admitted property of propositions has an algebraic join. Together with C's Boolean laws, this is the internal $\mathrm{CBA}(U,\le)$ required by FP. No claim about all external subsets is needed.
+
+## 4. Apply FP to the proposition algebra itself
+
+Suppose $\mathrm{FiniteCardinality}_t(N)\land N(U)$. Sections 2 and 3 give $\mathrm{DedFin}(U)$ and $\mathrm{CBA}(U,\le)$. Apply FP at carrier type $t$, using its finite disjunct. It supplies $p\ne\top$ and an admitted isomorphism graph from $U$ onto the interval $[\bot,p]$.
+
+Viewed as a self-graph of $U$, this graph is total, single-valued and injective. Its range omits $\top$, since $\top\le p$ would imply $p=\top$. This contradicts $\mathrm{DedFin}(U)$ and proves the desired quantified Infinity axiom.
+
+The proof uses only FP's finite disjunct and proper-interval requirement. It also works with the non-strict alternative size bound, without identifying the two complete FP schemata. No ND, Choice, Actuality, BF, global Boolean Completeness or full-model assumption is added. No optional premise is necessitated, and no currently coextensive properties are identified.

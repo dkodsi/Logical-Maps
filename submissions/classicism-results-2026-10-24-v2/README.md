@@ -1,5 +1,7 @@
 # Classicism: results, proofs and certificates — 24 October 2026 (v2)
 
+[25 October update](../next-update/README.md) · [Changes since this post and database integration guide](../next-update/DATABASE-HANDOFF.md).
+
 Research submission for review by the Logical Maps database owners. Start with [Main Results](MAIN-RESULTS.md):
 
 - [I. Resolved database questions and connections](MAIN-RESULTS.md#database-connections)

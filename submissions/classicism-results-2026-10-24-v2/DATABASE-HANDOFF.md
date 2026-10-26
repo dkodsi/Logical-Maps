@@ -1,5 +1,7 @@
 # Review guide for the database owners
 
+[25 October update](../next-update/README.md) · [Changes since this post and database integration guide](../next-update/DATABASE-HANDOFF.md).
+
 [Main Results](MAIN-RESULTS.md) gives the principal results in three groups: database connections, further results about established principles, and extensions. [Conjectures](CONJECTURES.md) separates unresolved questions and claims awaiting review from the resolved database questions, grouped by family. It distinguishes new proofs from formalizations of existing results.
 
 [Candidates_DK](CANDIDATES_DK.md) presents proposed principles and their reasons for inclusion. The [logical-observer guide](proofs/h-observer-space/GRAPH.md#headline-results) gives the headline results and detailed comparisons for that family.

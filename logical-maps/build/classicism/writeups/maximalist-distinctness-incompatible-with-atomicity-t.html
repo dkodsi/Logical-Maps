@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>maximalist-distinctness-incompatible-with-atomicity-t</title><link rel="icon" type="image/png" href="../favicon.png">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Maximalism (pure) and Atomicity (type t) are incompatible</title><link rel="icon" type="image/png" href="../favicon.png">
 <style>/* Fixed forest palette, adapted from the supplied style example.
    Semantic and source hues retain their meaning in both modes. */
 :root {
@@ -322,1134 +322,600 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <link rel="stylesheet" href="../math/katex.min.css">
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
-<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>maximalist-distinctness-incompatible-with-atomicity-t</h1></header><blockquote>
-<p>Integration note, 23 October 2026: source prose is preserved below.
-Draft-time status statements are historical; the completed certificate
-and its scope are indexed in the frozen submission and in the
-integration report. Original work by Codex (OpenAI), prompted by Daniel
-Kodsi; construction and literature credits in the source remain in
-force.</p>
-</blockquote>
-<h1
-id="pure-maximalism-and-unboxed-atomicity-the-canonical-countable-generator-proof">Pure
-Maximalism and unboxed Atomicity: the canonical countable-generator
-proof</h1>
-<p><strong>Status, 23 October 2026.</strong> The exact final theorem and
-all its background dependencies have now passed the designated serial
-Lean check. The <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/research/2026-10-22/lean-formalization/checks/20261023T054730505817Z-9a834f08.json">successful
-manifest</a> reports exit code 0 and matching current source hashes; the
-<a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/research/2026-10-22/lean-formalization/logs/runs/20261023T054730505817Z-9a834f08/Classicism_Results_Research_MaxAtomicityInconsistency.log">final
-axiom report</a> lists only <code>propext</code>,
-<code>Classical.choice</code>, and <code>Quot.sound</code>, with no
-<code>sorryAx</code> or custom mathematical axiom. See the <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/research/2026-10-22/lean-formalization/max-background-certificates.md">certificate
-index</a> and complete package. No mathematical database verdict or
-registry verification flag is changed by this note.</p>
-<p>This proof is separate from the earlier <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/research/2026-10-22/lean-formalization/max-atomicity-inconsistency-proof.md">constructible-universe
-proof</a>. It uses a particular countably generated rigid complete
-Boolean algebra and its canonical natural-number-indexed generating
-sequence. It does not use a constructible well-order, an assumption that
-the ambient universe is L, or an L-restricted function domain.</p>
-<p>The exact target is</p>
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Maximalism (pure) and Atomicity (type t) are incompatible</h1></header><p>Proof by GPT-6 Astra (OpenAI), prompted by Daniel Kodsi, 22–23
+October 2026: the splitting sentence, Atomicity’s refutation of it, and
+its non-refutability via a full Boolean-valued model over the rigid
+Jech–Shelah algebra. Rewritten for the map, with a simpler coding of the
+algebra (third-order arithmetic in place of hereditarily small sets) and
+a direct definition of the splitter, by Claude Opus 5.5 (Anthropic),
+prompted by Cian Dorr, 24 October 2026.</p>
+<p><strong>Claim.</strong> C + Maximalism (pure) + Atomicity (type <span
+class="math inline">t</span>) is inconsistent.</p>
+<p><strong>Overview.</strong> For a closed term <span
+class="math inline">F</span> of type <span class="math inline">tt</span>
+put</p>
 <p><span class="math display">
-\neg\operatorname{Consistent}\bigl(\operatorname{Max}(C)
-       +\operatorname{Atomicity}_t\bigr),
-\tag{T}
+S_F:=\forall p\, .\,p\ne\bot\to\bigl(p\land Fp\ne\bot\ \land\ p\land\neg
+Fp\ne\bot\bigr),
 </span></p>
-<p>where Max is the original <strong>pure</strong>, finitary
-Distinctness schema, its reference theory is <strong>bare C</strong>,
-and Atomicity is <strong>unboxed</strong> and only at type t. The final
-source statement is</p>
-<pre class="lean"><code>¬ AxiomSet.Consistent (AxiomSet.maximalist ∪ P.AtomicityT.schema)</code></pre>
-<p>in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityInconsistency.lean">MaxAtomicityInconsistency.lean</a>,
-theorem <code>maximalism_atomicity_inconsistent</code>. Its proof
-expression supplies actual constructions for the semantic and syntactic
-obligations; it has no rigidity, definability, selector,
-non-theoremhood, or inconsistency assumption as a theorem parameter.
-That expression has now elaborated successfully; the exact theorem type
-and transitive axiom report are linked above.</p>
-<h2 id="framework-and-the-reduction-to-one-pure-sentence">1. Framework
-and the reduction to one pure sentence</h2>
-<p>The fixed language has base types e and t and function types σ→τ only
-when τ is relational, so every non-base type ends in t. The standing
-logic is C, including Logical Equivalence with its original theoremhood
-restriction. See <a href="../../../topics/classicism/background.md">the
-framework</a>, <a
-href="../../../topics/classicism/principles/distinctness-schema-r.yaml">pure
-Maximalism</a>, and <a
-href="../../../topics/classicism/principles/atomicity-t.yaml">Atomicity
-at t</a>. Those records cite Bacon and Dorr, <em>Classicism</em>, draft
-of 16 May 2023, respectively §1.3, §2.4 pp. 35–36, and §2.2 p. 24. These
-are the map’s formulation locators, not a claim that the present new
-proof occurs there.</p>
-<p>Write 0 and 1 for bottom and top, and use the algebraic order on
-propositions. For a closed pure term F:t→t define the literal finite
-sentence</p>
+<p>“<span class="math inline">F</span> splits every non-bottom
+proposition”. Lemma 1 shows that C + Atomicity<span
+class="math inline">(t)</span> proves <span
+class="math inline">S_F=\bot</span>, for <em>every</em> closed <span
+class="math inline">F</span>: an atom below <span
+class="math inline">S_F</span> could not be split. It remains to find a
+closed <strong>pure</strong> <span class="math inline">F</span> with
+<span class="math inline">C\nvdash S_F=\bot</span>; then Maximalism
+(pure) gives <span class="math inline">S_F\ne\bot</span>. We obtain
+<span class="math inline">F</span> from a full Boolean-valued model of C
+over a complete Boolean algebra <span class="math inline">B</span> that
+is rigid and has an explicit, arithmetically definable presentation: the
+algebra of Jech and Shelah. Full higher-order logic over <span
+class="math inline">B</span> interprets third-order arithmetic, and in
+third-order arithmetic one can define the Jech–Shelah algebra together
+with a canonical splitter of each non-zero element. Rigidity makes the
+isomorphism between <span class="math inline">B</span> and this
+arithmetically defined copy unique, so the splitter is pure-definable
+over <span class="math inline">B</span> itself.</p>
+<p>Notation is that of Background. In particular <span
+class="math inline">\Box p:=(p=\top)</span>, <span
+class="math inline">\Diamond p:=(p\ne\bot)</span>, and at type <span
+class="math inline">t</span>, <span class="math inline">x\le y</span> is
+<span class="math inline">y=x\lor y</span>, which C proves equivalent to
+<span class="math inline">\Box(x\to y)</span>.</p>
+<h2 id="atomicity-refutes-every-splitter">1. Atomicity refutes every
+splitter</h2>
+<p>The following theorems of C are used: (C1) if <span
+class="math inline">\vdash A</span> then <span
+class="math inline">\vdash\Box A</span>, and <span
+class="math inline">\vdash\Box(A\to B)\to\Box A\to\Box B</span>; (C2)
+<span class="math inline">\vdash a=b\to\Box\,a=b</span>, hence <span
+class="math inline">\vdash\Diamond(a\ne b)\to a\ne b</span>; (C3) <span
+class="math inline">\vdash x\le y\leftrightarrow\Box(x\to y)</span>,
+<span class="math inline">\vdash x\le\neg x\leftrightarrow
+x=\bot</span>, and <span class="math inline">\vdash x\to
+x\ne\bot</span>, for <span class="math inline">x,y</span> of type <span
+class="math inline">t</span>.</p>
+<p><strong>Lemma 1.</strong> For every closed term <span
+class="math inline">F^{tt}</span>, C + Atomicity<span
+class="math inline">(t)</span> <span class="math inline">\vdash
+S_F=\bot</span>.</p>
+<p><em>Proof.</em> Suppose <span class="math inline">S_F\ne\bot</span>.
+Then <span class="math inline">\neg(S_F\le\neg S_F)</span> by (C3), so
+the instance of Atomicity<span class="math inline">(t)</span> at <span
+class="math inline">p:=S_F</span> gives <span
+class="math inline">w</span> with</p>
 <p><span class="math display">
-S_F:=\forall p^t\bigl[p\ne0\ \to\
-((p\wedge Fp)\ne0\ \wedge\ (p\wedge\neg Fp)\ne0)\bigr].
-\tag{1}
+\operatorname{Atom}_t(w)\land w\le S_F. \tag{1}
 </span></p>
-<p>The two obligations are:</p>
-<ol type="1">
-<li>Construct a closed pure F, using only closed admitted types, and a
-sound interpretation of <strong>bare C</strong> in which S_F has value
-1. This proves C ⊬ S_F=0.</li>
-<li>Derive C+Atomicity_t ⊢ S_F=0 for every such F, without necessitating
-Atomicity or applying Logical Equivalence under that extra
-hypothesis.</li>
+<p>The instances <span class="math inline">z:=\bot</span> and <span
+class="math inline">z:=w\land Fw</span> of <span
+class="math inline">\operatorname{Atom}_t(w)</span> are</p>
+<p><span class="math display">
+(\bot\le w\land\bot\ne w)\leftrightarrow\bot\le\neg\bot,\qquad
+(w\land Fw\le w\land w\land Fw\ne w)\leftrightarrow w\land
+Fw\le\neg(w\land Fw).
+</span></p>
+<p>The first gives <span class="math inline">w\ne\bot</span>, that
+is,</p>
+<p><span class="math display">
+\Diamond w. \tag{2}
+</span></p>
+<p>By the second, either <span class="math inline">w\land Fw=w</span>,
+whence <span class="math inline">w\land\neg Fw=w\land Fw\land\neg
+Fw=\bot</span>, or <span class="math inline">w\land Fw\le\neg(w\land
+Fw)</span>, whence <span class="math inline">w\land Fw=\bot</span> by
+(C3):</p>
+<p><span class="math display">
+w\land Fw=\bot\ \lor\ w\land\neg Fw=\bot. \tag{3}
+</span></p>
+<p>From (1) and (C3), <span class="math inline">\Box(w\to S_F)</span>.
+By (C1) applied to instantiation of the universal <span
+class="math inline">S_F</span> at <span class="math inline">w</span>,
+and to <span class="math inline">w\to w\ne\bot</span>,</p>
+<p><span class="math display">
+\Box\bigl(S_F\to(w\ne\bot\to(w\land Fw\ne\bot\land w\land\neg
+Fw\ne\bot))\bigr),\qquad
+\Box(w\to w\ne\bot),
+</span></p>
+<p>so</p>
+<p><span class="math display">
+\Box\bigl(w\to(w\land Fw\ne\bot\ \land\ w\land\neg Fw\ne\bot)\bigr).
+</span></p>
+<p>With (2) and (C1),</p>
+<p><span class="math display">
+\Diamond(w\land Fw\ne\bot)\ \land\ \Diamond(w\land\neg Fw\ne\bot),
+</span></p>
+<p>and by (C2)</p>
+<p><span class="math display">
+w\land Fw\ne\bot\ \land\ w\land\neg Fw\ne\bot,
+</span></p>
+<p>contradicting (3). Hence <span class="math inline">S_F=\bot</span>.
+<span class="math inline">\square</span></p>
+<p>Atomicity is used once, unboxed, as a premise; everything
+necessitated is a theorem of C.</p>
+<h2 id="full-boolean-valued-models">2. Full Boolean-valued models</h2>
+<p>Let <span class="math inline">B</span> be a complete Boolean algebra.
+The <strong>full model</strong> over <span class="math inline">B</span>
+has</p>
+<p><span class="math display">
+D_e=\{*\},\qquad D_t=B,\qquad D_{\sigma\tau}=D_\tau^{D_\sigma},
+</span></p>
+<p>ordinary application and abstraction, Boolean operations for the
+connectives, meets and joins over <span
+class="math inline">D_\sigma</span> for <span
+class="math inline">\forall x^\sigma</span> and <span
+class="math inline">\exists x^\sigma</span>, and</p>
+<p><span class="math display">
+\llbracket a=b\rrbracket=\begin{cases}1&amp;\text{if }\llbracket
+a\rrbracket=\llbracket b\rrbracket,\\ 0&amp;\text{otherwise.}\end{cases}
+</span></p>
+<p><strong>Lemma 2 (soundness).</strong> Every theorem of C has value
+<span class="math inline">1</span> in the full model over <span
+class="math inline">B</span>, under every assignment.</p>
+<p>This is the standard verification (Bacon, <em>Could the truths of
+mathematics have been different?</em>, online appendix §B.2; see also <a
+href="full-boolean-valued-atom-and-atomless.html">the full
+Boolean-valued model</a>, §2, whose argument does not depend on the
+particular algebra). In brief: the axioms of H have value <span
+class="math inline">1</span> and its rules preserve value <span
+class="math inline">1</span>; and if <span
+class="math inline">A\leftrightarrow A&#39;</span> has value <span
+class="math inline">1</span> under every assignment, then <span
+class="math inline">\llbracket A\rrbracket=\llbracket
+A&#39;\rrbracket</span> under every assignment, so <span
+class="math inline">\lambda\bar x\, .\,A</span> and <span
+class="math inline">\lambda\bar x\, .\,A&#39;</span> denote the same
+function and Logical Equivalence holds.</p>
+<p>Call a formula an <strong>identity formula</strong> if it is built
+from identities <span class="math inline">a=b</span> (between arbitrary
+terms) by connectives and quantifiers. Let <span
+class="math inline">\mathfrak D</span> be the classical many-sorted
+structure with domains <span class="math inline">D_\sigma</span>,
+application, and identity.</p>
+<p><strong>Lemma 3.</strong> For an identity formula <span
+class="math inline">\varphi</span> and every assignment <span
+class="math inline">g</span>, <span
+class="math inline">\llbracket\varphi\rrbracket_g\in\{0,1\}</span>, and
+<span class="math inline">\llbracket\varphi\rrbracket_g=1</span> iff
+<span class="math inline">\mathfrak D\models\varphi[g]</span>.</p>
+<p><em>Proof.</em> Induction on <span
+class="math inline">\varphi</span>: identities have values in <span
+class="math inline">\{0,1\}</span>; Boolean operations on <span
+class="math inline">\{0,1\}</span> are the classical ones; a meet (join)
+of a family from <span class="math inline">\{0,1\}</span> is <span
+class="math inline">1</span> iff every (some) member is <span
+class="math inline">1</span>. <span
+class="math inline">\square</span></p>
+<p>For <span class="math inline">X</span> of type <span
+class="math inline">\sigma t</span> write</p>
+<p><span class="math display">
+x\mathrel{\varepsilon}X\ :=\ Xx=\top,\qquad
+\operatorname{ext}(X):=\{d\in D_\sigma:X(d)=1\}.
+</span></p>
+<p>Every subset of <span class="math inline">D_\sigma</span> is <span
+class="math inline">\operatorname{ext}(X)</span> for some <span
+class="math inline">X\in D_{\sigma t}</span>, namely its <span
+class="math inline">\{0,1\}</span>-valued characteristic function. So,
+restricted to identity formulas, the full model is full classical
+higher-order logic over the set <span class="math inline">B</span>.</p>
+<h2 id="the-jechshelah-algebra">3. The Jech–Shelah algebra</h2>
+<p>The following is from T. Jech and S. Shelah, “A complete Boolean
+algebra that has no proper atomless complete subalgebra”, <em>Journal of
+Algebra</em> 182 (1996), 748–755, pp. 749–750. Let</p>
+<p><span class="math display">
+P_0=N_0=1,\qquad P_k=N_0\cdots N_{k-1},\qquad N_k=2^{P_k}\quad(k\ge1).
+</span></p>
+<p>The <strong>master tree</strong> <span class="math inline">\mathbb
+T\subseteq\omega^{&lt;\omega}</span> and the bijection <span
+class="math inline">\operatorname{ind}:\mathbb T\to\omega</span> are
+fixed by: <span
+class="math inline">\operatorname{ind}(\langle\rangle)=0</span>; <span
+class="math inline">\operatorname{ind}</span> enumerates <span
+class="math inline">\mathbb T</span> by length and, within a length,
+lexicographically; and the node <span class="math inline">s</span> with
+<span class="math inline">\operatorname{ind}(s)=k</span> has exactly the
+<span class="math inline">N_k</span> successors <span
+class="math inline">s^\frown i</span>, <span
+class="math inline">i&lt;N_k</span>. Write <span
+class="math inline">s_k</span> for the node with index <span
+class="math inline">k</span>. Both <span class="math inline">\mathbb
+T</span> and <span class="math inline">\operatorname{ind}</span> are
+recursive.</p>
+<p><span class="math inline">\mathbb P</span> is the set of non-empty,
+prefix-closed <span class="math inline">T\subseteq\mathbb T</span> such
+that</p>
+<p><span class="math display">
+\forall s\in T\ \forall m\ \exists t\in T\, .\ t\supsetneq s\ \land\
+|\{i:t^\frown i\in T\}|\ge P_{\operatorname{ind}(t)}^m, \tag{4}
+</span></p>
+<p>ordered by inclusion. For <span class="math inline">T\in\mathbb
+P</span> and <span class="math inline">a\in T</span> put <span
+class="math inline">(T)_a:=\{s\in T:s\subseteq a\lor a\subseteq
+s\}</span>; then <span class="math inline">(T)_a\in\mathbb P</span> and
+<span class="math inline">(T)_a\subseteq T</span>. By (4) every <span
+class="math inline">T\in\mathbb P</span> has nodes of every length.</p>
+<p><span class="math inline">\operatorname{RO}(\mathbb P)</span> is the
+set of <span class="math inline">U\subseteq\mathbb P</span> such
+that</p>
+<p><span class="math display">
+\begin{aligned}
+&amp;T\in U\land T&#39;\in\mathbb P\land T&#39;\subseteq T\ \Rightarrow\
+T&#39;\in U,\\
+&amp;T\in\mathbb P\land\forall T&#39;\in\mathbb P\,(T&#39;\subseteq
+T\Rightarrow\exists T&#39;&#39;\in U\, .\,T&#39;&#39;\subseteq T&#39;)\
+\Rightarrow\ T\in U,
+\end{aligned}
+</span></p>
+<p>ordered by inclusion. It is a complete Boolean algebra, Jech’s <span
+class="math inline">B(\mathbb P)</span>, in which <span
+class="math inline">U\land V=U\cap V</span>, <span
+class="math inline">0=\varnothing</span>, and <span
+class="math inline">U\le V</span> iff <span
+class="math inline">U\subseteq V</span> (see T. Jech, <em>Set
+Theory</em>, 3rd millennium ed., Springer 2003, Chapter 7 and §14).</p>
+<p><strong>Theorem (Jech–Shelah, p. 749; proof pp. 752–754).</strong>
+<span class="math inline">\operatorname{RO}(\mathbb P)</span> is rigid:
+its only automorphism is the identity.</p>
+<p>The proof is in ZFC. Nothing else from the paper is used: neither the
+minimality of the generic real nor the absence of proper atomless
+complete subalgebras.</p>
+<p>For <span class="math inline">a\in\mathbb T</span> let</p>
+<p><span class="math display">
+\operatorname{Cyl}_a:=\{T\in\mathbb P:\text{every node of }T\text{ is
+}\subseteq\text{-comparable with }a\}.
+</span></p>
+<p><strong>Lemma 4.</strong> (i) <span
+class="math inline">\operatorname{Cyl}_a\in\operatorname{RO}(\mathbb
+P)</span>. (ii) For every <span
+class="math inline">U\in\operatorname{RO}(\mathbb P)</span> with <span
+class="math inline">U\ne\varnothing</span> there is <span
+class="math inline">a\in\mathbb T</span> with</p>
+<p><span class="math display">
+U\cap\operatorname{Cyl}_a\ne\varnothing\quad\text{and}\quad
+U\not\subseteq\operatorname{Cyl}_a,
+</span></p>
+<p>that is, <span
+class="math inline">U\land\operatorname{Cyl}_a\ne0</span> and <span
+class="math inline">U\land\neg\operatorname{Cyl}_a\ne0</span>.</p>
+<p><em>Proof.</em> (i) <span
+class="math inline">\operatorname{Cyl}_a</span> is closed downwards. Let
+<span class="math inline">T\in\mathbb
+P\setminus\operatorname{Cyl}_a</span>, with <span
+class="math inline">b\in T</span> incomparable with <span
+class="math inline">a</span>. Every <span
+class="math inline">T&#39;&#39;\in\mathbb P</span> with <span
+class="math inline">T&#39;&#39;\subseteq(T)_b</span> has a node longer
+than <span class="math inline">b</span>; it extends <span
+class="math inline">b</span>, so it is incomparable with <span
+class="math inline">a</span>, and <span
+class="math inline">T&#39;&#39;\notin\operatorname{Cyl}_a</span>. So
+<span class="math inline">T&#39;:=(T)_b\subseteq T</span> has no <span
+class="math inline">T&#39;&#39;\subseteq T&#39;</span> in <span
+class="math inline">\operatorname{Cyl}_a</span>, and <span
+class="math inline">\operatorname{Cyl}_a</span> satisfies the second
+clause.</p>
+<ol start="2" type="i">
+<li>Let <span class="math inline">T\in U</span> and <span
+class="math inline">s\in T</span> with <span
+class="math inline">|s|=2</span>. As <span
+class="math inline">N_0=1</span>, the only node of length <span
+class="math inline">1</span> is <span
+class="math inline">\langle0\rangle</span>, with index <span
+class="math inline">1</span>, so <span
+class="math inline">\operatorname{ind}(s)\ge2</span>. By (4) with <span
+class="math inline">m=1</span> there is <span
+class="math inline">t\supsetneq s</span> in <span
+class="math inline">T</span> with at least <span
+class="math inline">P_{\operatorname{ind}(t)}\ge P_3=8</span> successors
+in <span class="math inline">T</span>; let <span
+class="math inline">a\ne b</span> be two of them. Then <span
+class="math inline">(T)_a,(T)_b\in U</span>, <span
+class="math inline">(T)_a\in\operatorname{Cyl}_a</span>, and <span
+class="math inline">(T)_b\notin\operatorname{Cyl}_a</span> since <span
+class="math inline">b\in(T)_b</span> is incomparable with <span
+class="math inline">a</span>. <span
+class="math inline">\square</span></li>
 </ol>
-<p>Max then supplies S_F≠0, contradicting the second obligation. Notice
-that constructing an arbitrary external splitting operation would not
-discharge the first obligation: F must be a particular term in the empty
-nonlogical signature. Sections 2–9 construct that term and compute its
-value. Section 10 gives the object-language derivation.</p>
-<p>All set theory and cardinal arithmetic below are external classical
-metatheory. They are used to construct a model and prove a syntactic
-non-theorem. They are not added as object-language axioms. In
-particular, no Choice schema, GCH, C5, boxed Atomicity, infinitary
-connective, or named algebra is added to C.</p>
-<h2 id="the-actual-boolean-algebra-and-its-canonical-generators">2. The
-actual Boolean algebra and its canonical generators</h2>
-<h3 id="source-and-concrete-construction">2.1 Source and concrete
-construction</h3>
-<p>The external construction is Thomas Jech and Saharon Shelah, <a
-href="https://shelah.logic.at/files/95558/566.pdf"><em>A Complete
-Boolean Algebra That Has No Proper Atomless Complete
-Subalgebra</em></a>, <em>Journal of Algebra</em> <strong>182</strong>
-(1996), pp. <strong>748–755</strong>. The theorem and
-countable-generation corollary are on p. 749; the growth/tree
-definitions are on pp. 749–750; amalgamation and fusion are on
-pp. 750–751; rigidity is proved on pp. 752–754. The minimality argument
-on pp. 751–752 is not needed here. The finite coding, full-domain
-interpretation, pure selector, and Max/Atomicity deduction below are
-original work, <code>misc</code>, 22–23 October 2026, unpaginated; they
-are not attributed to that paper.</p>
-<p>Here is the actual construction used by the source modules. Define
-natural-number sequences</p>
+<p>In particular <span class="math inline">\operatorname{RO}(\mathbb
+P)</span> is atomless, hence infinite.</p>
+<p>From now on identify each <span class="math inline">T\in\mathbb
+P</span> with <span
+class="math inline">\operatorname{ind}[T]\subseteq\omega</span>, so that
+<span class="math inline">\mathbb P\subseteq\mathcal P(\omega)</span>
+and <span class="math inline">\operatorname{RO}(\mathbb
+P)\subseteq\mathcal P(\mathcal P(\omega))</span>, and let</p>
 <p><span class="math display">
-P_0=N_0=1,\qquad P_{k+1}=P_kN_k,\qquad
-N_{k+1}=2^{P_{k+1}},\qquad
-o_k=1+\sum_{j&lt;k}N_j.
-\tag{2}
+B:=\operatorname{RO}(\mathbb P),\qquad \mathfrak D:=\text{the full model
+over }B.
 </span></p>
-<p>Thus P_k=∏_{j&lt;k}N_j. Define the master tree and node index
-recursively:</p>
-<p><span class="math display">
-\operatorname{ind}(\varnothing)=0,\qquad
-\operatorname{ind}(s^\frown i)=o_{\operatorname{ind}(s)}+i,
-\quad i&lt;N_{\operatorname{ind}(s)}.
-\tag{3}
-</span></p>
-<p>The child blocks [o_k,o_k+N_k) partition the positive integers. Each
-parent index is smaller than its child indices. Induction on indices
-gives a bijection from master nodes to ℕ. Its inverse is
-<code>indexedNode</code>; no choice of an encoding of finite lists is
-used in the final generator graph.</p>
-<p>A condition is a nonempty prefix-closed subtree T of the master tree
-satisfying</p>
-<p><span class="math display">
-\forall s\in T\ \forall m\in\mathbb N\ \exists t\in T\,
-[s\text{ is a strict prefix of }t\ \wedge\
-   |\operatorname{Succ}_T(t)|\ge P_{\operatorname{ind}(t)}^m].
-\tag{4}
-</span></p>
-<p>The order is inclusion, with smaller trees stronger. For s∈T,
-restriction T↾s retains the nodes comparable with s and is again a
-condition. To see separativity, if Q⊈T choose s∈Q. The condition Q↾s is
-incompatible with T: a common condition would have arbitrarily long
-nodes comparable with s, hence a node extending s, which would force s∈T
-by prefix closure. Incompatible restrictions at a sufficiently splitting
-node give two incompatible strengthenings of every condition.</p>
-<p>The implementation is <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahTrees.lean">Trees</a>,
-with the bijection proved in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahEnumeration.lean">Enumeration</a>.</p>
-<h3 id="regular-lower-sets-and-density">2.2 Regular lower sets and
-density</h3>
-<p>Let <span class="math inline">\mathbb P</span> be this actual set of
-conditions. For a lower subset X⊆<span class="math inline">\mathbb
-P</span>, put</p>
-<p><span class="math display">
-X^*:=\{p\in\mathbb P: \forall q\le p,\ q\notin X\}.
-</span></p>
-<p>Take</p>
-<p><span class="math display">
-B:=\{X\subseteq\mathbb P:X\text{ is lower and }X=X^{**}\}.
-\tag{5}
-</span></p>
-<p>These are the regular elements of the complete Heyting algebra of
-lower sets. Their order is inclusion, complement is *, and arbitrary
-joins are the double pseudocomplement of unions. Write ι(T) for the
-regularization of ↓T. Separativity makes ι an order embedding; ι(T) is
-nonzero; and the image of ι is dense in B. Indeed, for nonzero regular X
-choose T∈X; then ι(T)⊆X. Incompatible strengthenings show B is atomless.
-It is therefore nontrivial and infinite. Set κ=|B|.</p>
-<p>These facts are supplied by <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityRegularCompletion.lean">RegularCompletion</a>,
-including <code>condition_ne_bot</code>, <code>condition_dense</code>,
-<code>condition_le_iff</code>, and <code>completion_atomless</code>,
-instantiated by <code>forcing_separative</code> and
-<code>forcing_completion_atomless</code> in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahTrees.lean">Trees</a>.
-They concern the actual regular-lower-set algebra, not an unspecified
-completion.</p>
-<p>For a master node s define its cylinder by</p>
-<p><span class="math display">
-c_s:=\iota(\mathbb T\mathbin{\upharpoonright}s),\qquad
-g_n:=c_{\operatorname{indexedNode}(n)}.
-\tag{6}
-</span></p>
-<p>Cylinders at distinct nodes on the same level are disjoint. For every
-condition T,</p>
-<p><span class="math display">
-\iota(T)=\bigwedge_{\ell&lt;\omega}
-           \bigvee_{s\in T,\ |s|=\ell}c_s.
-\tag{7}
-</span></p>
-<p>The forward inequality follows by restricting densely below T to a
-node on level ℓ. For the reverse, a condition Q outside T has a node
-s∈Q. Restricting Q to s gives a nonzero element below c_s and disjoint
-from the level-|s| join for T. Density excludes any nonzero part of the
-proposed right side outside ι(T). Finally,</p>
-<p><span class="math display">
-b=\bigvee\{\iota(T):\iota(T)\le b\}
-\tag{8}
-</span></p>
-<p>by density. Consequently the sequence (g_n) completely generates B.
-These are <code>condition_eq_iInf_levelJoin</code> and
-<code>eq_iSup_conditions</code> in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahCylinders.lean">Cylinders</a>,
-followed by <code>indexedGenerator_completely_generates</code> in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahIndexedGenerators.lean">IndexedGenerators</a>.</p>
-<h3 id="a-least-splitting-index-exists">2.3 A least splitting index
-exists</h3>
-<p>For p≠0, let</p>
-<p><span class="math display">
-\mathcal N_p:=\{a\in B:p\le a\text{ or }p\le\neg a\}.
-</span></p>
-<p>This set contains 0 and is closed under complement and arbitrary
-joins. For a join of its members, if some member contains p, the join
-contains p; otherwise p lies below every member’s complement and hence
-below the complement of the join. Thus <span
-class="math inline">\mathcal N_p</span> is a complete Boolean
-subalgebra. If no g_n split p, every g_n would belong to <span
-class="math inline">\mathcal N_p</span>, so complete generation would
-give <span class="math inline">\mathcal N_p=B</span>. An element
-strictly between 0 and p, supplied by atomlessness, contradicts this.
-Therefore there is a least natural number n(p) such that</p>
-<p><span class="math display">
-p\wedge g_{n(p)}\ne0,\qquad p\wedge\neg g_{n(p)}\ne0.
-\tag{9}
-</span></p>
-<p>The source proof is <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityCountableGenerator.lean">CountableGenerator</a>,
-<code>nonSplit_completeClosed</code>,
-<code>exists_generator_splits</code>, and the least-index specification.
-This is still an external algebraic construction; pure definability will
-follow only after coding and rigidity.</p>
-<h2 id="rigidity-including-the-local-fusion-obligation">3. Rigidity,
-including the local fusion obligation</h2>
-<p>The implementation uses actual Boolean values, so the quantifiers
-needed for the rigidity argument can be inspected directly.</p>
-<p>A bounded name is a family x=(x_{k,i}) with i&lt;N_k such that each
-row is a pairwise disjoint partition of 1. A slalom u assigns a finite
-subset u(k)⊆N_k with |u(k)|≤P_k. For A⊆ℕ define</p>
-<p><span class="math display">
-\begin{aligned}
-\operatorname{cap}_A(x,u)&amp;=\bigwedge_{k\in A}\bigvee_{i\in
-u(k)}x_{k,i},\\
-\operatorname{cover}_A(x)&amp;=\bigvee_u\operatorname{cap}_A(x,u),\\
-v_A&amp;=\bigvee_x\neg\operatorname{cover}_A(x).
-\end{aligned}
-\tag{10}
-</span></p>
-<p>Every actual order automorphism of B preserves arbitrary joins,
-meets, and complements. Applying it to every row is a bijection of
-bounded names, and it does not change the external index set of slaloms.
-Hence it fixes v_A. This reindexing proof is
-<code>automorphism_fixes_invariant</code> in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySlalomInvariance.lean">SlalomInvariance</a>.
-It does not assume that an automorphism already preserves a named
-generating sequence.</p>
-<p>For T∈<span class="math inline">\mathbb P</span>, put
-A_T={ind(s):s∈T}. The two substantive estimates are</p>
-<p><span class="math display">
-\iota(T)\le v_{A_T},
-\tag{11}
-</span></p>
-<p>and</p>
-<p><span class="math display">
-Q\nleq T\ \Longrightarrow\
-\exists R\le Q\quad \iota(R)\le\neg v_{A_T}.
-\tag{12}
-</span></p>
-<p>For (11), the branch name has, on a parent cylinder, the child
-cylinders as its row entries; the complement of the parent cylinder is
-assigned to digit 0, so every row really sums to 1. Given a slalom,
-densely below T choose a sufficiently large split with at least P_k²
-children, where k∈A_T and P_k&gt;1. A child digit outside the at most
-P_k slalom digits yields a restriction disjoint from that capture value.
-Thus ι(T) is disjoint from every capture value of the branch name,
-proving (11). See <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahBranch.lean">Branch</a>,
-<code>escape_slalom</code>, <code>branch_inf_capture</code>, and
-<code>condition_le_marker</code>.</p>
-<p>For (12), choose a forbidden node b∈Qof length at least 2 and set
-R=Q↾b. Fix an arbitrary bounded name x. The local fusion construction
-proves:</p>
-<p><span class="math display">
-\forall S\le R\ \exists S&#39;\le S\ \exists u\quad
-\iota(S&#39;)\le\operatorname{cap}_{A_T}(x,u).
-\tag{13}
-</span></p>
-<p>Its invariants are a finite front, an increasing coordinate cutoff,
-decisions of every coordinate below that cutoff by the front
-restrictions, and two cardinal bounds. Coordinates in A_T already passed
-have at most P_k retained values. For future coordinates in A_T, the
-current front size is strictly below P_k. All nodes above the chosen
-front extend b; their indices are outside A_T, since a node of T
-extending b would put b in T.</p>
-<p>At stage n, choose K∈A_T above the current cutoff and a chosen front
-restriction, then extend its stem to a splitting node with index m&gt;K
-and m≥n+2. This index is outside A_T. Choose P_m^{n+1} children and
-refine below each to decide all coordinates k&lt;m. There are
-exactly</p>
-<p><span class="math display">
-\prod_{k&lt;m}N_k=P_m
-</span></p>
-<p>possible full decision vectors. Finite pigeonhole therefore retains
-P_m^n children with the same vector. The other old front restrictions
-each contribute one retained piece. Amalgamation preserves the old front
-and the scheduled split. New coordinates from A_T below m have at most
-the old-front size many values; earlier value bounds persist because two
-decisions of one partition row below a common nonzero condition must
-agree.</p>
-<p>For the future bound, if the old-front size is L&lt;P_K≤P_m, the
-chosen growth bounds imply</p>
-<p><span class="math display">
-L+P_m^n&lt;P_m+N_m\le P_mN_m=P_{m+1}\le P_k
-\quad(k&gt;m).
-\tag{14}
-</span></p>
-<p>The hypotheses ensure P_m,N_m≥2 and P_m^n≤N_m. Since m∉A_T, the
-relevant later coordinates satisfy k&gt;m. The recursion schedules the
-node of index n at stage n and retains its required P^n split below the
-next protected front. Thus the intersection satisfies the scheduled
-version of (4) and is a condition. The eventual finite decision sets
-constitute a genuine slalom, giving (13).</p>
-<p>The finite counting lemma is
-<code>thin_power</code>/<code>thin_growth</code> in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySlalomThinning.lean">SlalomThinning</a>;
-finite decisions are in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahFiniteRefinement.lean">FiniteRefinement</a>;
-the actual step is <code>advance</code> in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahLocalStage.lean">LocalStage</a>.
-<a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahAmalgamation.lean">Amalgamation</a>,
-<a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahFusion.lean">Fusion</a>,
-and <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySlalomLimit.lean">SlalomLimit</a>
-verify the preservation and limit claims. <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahLocalFusion.lean">LocalFusion</a>
-constructs the initial stage, the entire tower, and its readout, rather
-than assuming the stage or fusion step.</p>
-<p>For this fixed x, (13) and density imply ι(R)≤cover_{A_T}(x). The
-same fixed R works for every x, with a different dense refinement
-construction for each x. Consequently</p>
-<p><span class="math display">
-\iota(R)\le\bigwedge_x\operatorname{cover}_{A_T}(x)
-            =\neg v_{A_T}.
-</span></p>
-<p>This order of quantifiers matters: no one condition is claimed to
-decide or capture all names simultaneously. It is exactly
-<code>local_separation</code> in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahLocalFusion.lean">LocalFusion</a>.</p>
-<p>Equations (11) and (12), with density and separativity, imply
-v_{A_T}=ι(T). Every automorphism fixes every ι(T), hence every element
-of B by (8). This is <code>actual_rigid</code>, using <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahRigidityCriterion.lean">RigidityCriterion</a>.
-Here rigidity means every actual <code>B ≃o B</code> is the identity. It
-is a theorem about the Boolean algebra without a chosen truth
-ultrafilter.</p>
-<h2 id="a-genuine-hereditary-size-universe-on-the-exact-type-utt">4. A
-genuine hereditary-size universe on the exact type U=t→t</h2>
-<h3 id="full-boolean-valued-interpretation">4.1 Full Boolean-valued
-interpretation</h3>
-<p>Use the actual algebra B above and the full interpretation</p>
-<p><span class="math display">
-D_e=\{*\},\quad D_t=B,\quad
-D_{\sigma\to\tau}=D_\tau^{D_\sigma}
-</span></p>
-<p>at every admitted function type. Equality is the crisp value 1 for
-actual equality and 0 otherwise; connectives are Boolean operations;
-universal and existential quantification are respectively meets and
-joins over the full domains. Lambda abstraction and application are
-ordinary functions. The soundness theorem is <code>C_sound</code> in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Semantics/BooleanValuedSoundness.lean">BooleanValuedSoundness</a>,
-instantiated in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityConcreteModel.lean">ConcreteModel</a>.
-No L-full versus ambient-full domain change is involved.</p>
-<p>Let U=t→t, so D_U=B→B. The auxiliary types U→t, U→U→t, and t→U are
-all admitted closed relational types. They are respectively used for
-subset predicates, membership relations, and maps from B to coded
-algebra elements.</p>
-<h3 id="the-universe-is-constructed-as-a-set">4.2 The universe is
-constructed as a set</h3>
-<p>A set x is <strong>hereditarily B-small</strong> when its member set
-embeds into B and the same is true recursively of every member. Denote
-the class by H_B. The implementation uses this precise hereditary
-predicate, not an assumed package of axioms for an unspecified H_κ.</p>
-<p>Construct the W-type</p>
-<p><span class="math display">
-W_B=W\bigl(s\mapsto s\ :\ s\subseteq B\bigr).
-</span></p>
-<p>Decode a node with children (w_i)_{i∈s} to the set {decode(w_i):i∈s}.
-Induction on trees shows every decoded set is hereditarily B-small.
-Conversely, membership induction on x∈H_B, using an actual embedding of
-its member set into B, produces such a tree. Therefore</p>
-<p><span class="math display">
-H_B=\operatorname{range}(\operatorname{decode})
-\tag{15}
-</span></p>
-<p>is an actual set, and it is transitive. These are
-<code>hereditary_range</code>, <code>decode_hereditary</code>,
-<code>hereditary_has_tree</code>, <code>mem_universeSet</code>, and
-<code>universeSet_transitive</code> in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHereditaryUniverse.lean">HereditaryUniverse</a>.
-Repetition in an indexed family causes no problem: a right inverse to
-its surjection onto the range supplies the member-set embedding.</p>
-<p>The W-type cardinal bound is proved using the bound at μ=2^κ:</p>
-<p><span class="math display">
-\sum_{s\subseteq B}\mu^{|s|}
-\le 2^\kappa\,(2^\kappa)^\kappa=2^\kappa.
-</span></p>
-<p>This yields |H_B|≤2^κ. For the converse, well-order B externally and
-collapse the order to distinct hereditary-small element codes; coding
-subsets of these elements injects P(B) into H_B. Hence</p>
-<p><span class="math display">
-|H_B|=2^\kappa=\kappa^\kappa=|B\to B|.
-\tag{16}
-</span></p>
-<p><code>presentationEquiv</code> in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHereditaryUniverse.lean">HereditaryUniverse</a>
-therefore supplies an actual bijection π:D_U≃H_B. Its chosen value is
-only external machinery for showing a code exists. The final pure term
-quantifies over every eligible code, so π is not a nonlogical constant.
-In ordinary ZFC this hereditary-size universe has the familiar H_{κ⁺}
-description; neither the construction nor the proof below requires that
-additional identification to have been formalized.</p>
-<h3 id="the-finite-hcode-formula-has-exactly-the-needed-meaning">4.3 The
-finite HCode formula has exactly the needed meaning</h3>
-<p>For X:U→t put</p>
-<p><span class="math display">
-\begin{aligned}
-\operatorname{Crisp}(X)&amp;:=\forall x\,(Xx=0\vee Xx=1),\\
-\operatorname{Small}(X)&amp;:=\exists f^{U\to t}\ \forall x,y\,
-[(Xx\wedge Xy\wedge fx=fy)\to x=y].
-\end{aligned}
-\tag{17}
-</span></p>
-<p>The witness f is <strong>not</strong> required to be crisp: its range
-is all of B. For crisp X, Small(X) has value 1 exactly when its
-extension embeds into B. An embedding extends to a total B-valued
-function by assigning 0 off that extension. This is
-<code>small_iff_embedding</code> and <code>eval_small</code> in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean">HCodeSemantics</a>.</p>
-<p>HCode(E), for E:U→U→t, is the finite conjunction of:</p>
+<h2 id="third-order-arithmetic-inside-the-full-model">4. Third-order
+arithmetic inside the full model</h2>
+<p>Let <span class="math inline">\mathcal L^3</span> be the language of
+third-order arithmetic: number variables <span
+class="math inline">x,y,\ldots</span>; real variables <span
+class="math inline">X,Y,\ldots</span> (sets of numbers); class variables
+<span class="math inline">\mathcal U,\mathcal V,\ldots</span> (sets of
+reals); and, for each <span class="math inline">k\ge2</span>, variables
+<span class="math inline">R,\ldots</span> for <span
+class="math inline">k</span>-ary relations on numbers. Its atomic
+formulas are identities between number terms (built from <span
+class="math inline">0</span> and successor <span
+class="math inline">\mathrm s</span>), between reals, and between
+classes, and <span class="math inline">x\in X</span>, <span
+class="math inline">X\in\mathcal U</span>, <span
+class="math inline">R(\bar x)</span>. Let <span
+class="math inline">\mathfrak A</span> be its standard full model over
+<span class="math inline">\omega</span>.</p>
+<p><strong>Lemma 5 (arithmetic).</strong> Every arithmetical relation on
+numbers and reals is definable in <span class="math inline">\mathfrak
+A</span> by an <span class="math inline">\mathcal L^3</span>
+formula.</p>
+<p>This is standard: <span class="math inline">x+y=z</span> holds iff
+<span class="math inline">(x,y,z)</span> belongs to every ternary
+relation containing all <span class="math inline">(u,0,u)</span> and
+closed under <span class="math inline">(u,v,w)\mapsto(u,\mathrm
+sv,\mathrm sw)</span>, similarly for multiplication, and every
+arithmetical formula is a first-order formula in <span
+class="math inline">0,\mathrm s,+,\times</span> and <span
+class="math inline">\in</span>. Since <span class="math inline">\mathbb
+T</span>, <span class="math inline">\operatorname{ind}</span>, <span
+class="math inline">k\mapsto P_k</span> and <span
+class="math inline">k\mapsto N_k</span> are recursive, and (4) is
+arithmetical in <span class="math inline">T</span>, there are <span
+class="math inline">\mathcal L^3</span> formulas such that in <span
+class="math inline">\mathfrak A</span>:</p>
 <ul>
-<li>E is crisp;</li>
-<li>E is extensional in its predecessor rows;</li>
-<li>every nonempty crisp subset predicate has an E-minimal member;</li>
-<li>every crisp small subset predicate is exactly one predecessor
-row;</li>
-<li>every predecessor row is small.</li>
+<li><span class="math inline">\operatorname{Cond}(X)</span> holds iff
+<span class="math inline">X\in\mathbb P</span>;</li>
+<li><span class="math inline">\operatorname{InCyl}(x,X)</span> holds iff
+<span class="math inline">X\in\operatorname{Cyl}_{s_x}</span>;</li>
+<li><span class="math inline">x&lt;y</span> is the usual order.</li>
 </ul>
-<p>The literal formulas occur in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySyntax.lean">Syntax</a>
-and <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHCodeSyntax.lean">HCodeSyntax</a>.
-In the full interpretation, every external subset has a characteristic
-predicate. Hence these clauses say precisely that R(x,y) iff E(x,y)=1 is
-well-founded, extensional, fills all subsets of size at most κ, and has
-all rows of size at most κ.</p>
-<p>The guards are essential. Noncrisp predicates X are quantified over
-too, but their Crisp antecedents are 0 in the well-foundedness and
-filling clauses. Noncrisp E makes the first conjunct, and hence the
-whole HCode, 0. No argument treats all predicates in a full function
-domain as automatically crisp. The exact evaluation is proved in
-<code>eval_hCode_exact</code> in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean">HCodeSemantics</a>.</p>
-<p>Given a successful E, Mostowski collapse is an injection preserving
-membership and identifying each predecessor row with the members of its
-collapsed image. Row smallness and well-founded induction put its range
-inside H_B. Conversely, for x∈H_B, inductively take preimages of its
-members. They form a small subset of D_U; the filling clause supplies a
-row consisting exactly of these preimages, whose collapse is x. Thus the
-range is <strong>all</strong> of H_B. See <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityMostowski.lean">Mostowski</a>,
-<a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHereditaryCover.lean">HereditaryCover</a>,
-and <code>good_collapseRange</code>/<code>collapseEquiv</code> in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHCodeCharacterization.lean">HCodeCharacterization</a>.</p>
-<p>Pulling actual membership back along π gives one successful E.
-Consequently every successful code is isomorphic, by an actual
-bijection, to this canonical membership structure. <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHCodeExistence.lean">HCodeExistence</a>
-proves existence; <code>canonicalChange_membership</code> in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHCodeCharacterization.lean">HCodeCharacterization</a>
-gives the change of presentation. Satisfaction of finite membership
-formulas is invariant under it by structural induction, including the
-quantified cases using surjectivity.</p>
-<h2 id="closure-witnesses-and-their-genuine-sizes">5. Closure witnesses
-and their genuine sizes</h2>
-<p>The construction needs actual members of H_B for its coded objects.
-It does not infer arbitrary powerset closure from transitivity. The
-central lemma is <code>hereditary_range</code>: a family of
-hereditary-small sets indexed by a type embedding into B has
-hereditary-small range. Pair and graph closure are built from this lemma
-in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHereditaryGraphs.lean">HereditaryGraphs</a>.</p>
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr>
-<th>Required object</th>
-<th>Actual index bound and justification</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>A natural numeral; an ordered pair</td>
-<td>Finite hereditary sets; finite indices embed into infinite B.</td>
-</tr>
-<tr>
-<td>ω; a real I⊆ℕ; a tree’s node-index set</td>
-<td>At most countable; ℕ embeds into B.</td>
-</tr>
-<tr>
-<td>Unary arithmetic graphs and graphs on ℕ²</td>
-<td>At most countable; pair entries are hereditary-small.</td>
-</tr>
-<tr>
-<td>The set of all condition codes</td>
-<td>Conditions embed into B by the separative map ι. Conditions are
-<strong>not</strong> asserted countable.</td>
-</tr>
-<tr>
-<td>Any one subset of the condition poset</td>
-<td>Its members are indexed by a subset of Conditions, hence by at most
-κ elements.</td>
-</tr>
-<tr>
-<td>The condition-order graph</td>
-<td>At most</td>
-</tr>
-<tr>
-<td>A coded regular open b</td>
-<td>One subset of the poset, therefore at most κ members.</td>
-</tr>
-<tr>
-<td>The algebra carrier, containing all coded b∈B</td>
-<td>Indexed by B itself, hence κ members, each already
-hereditary-small.</td>
-</tr>
-<tr>
-<td>The graph n↦code(g_n)</td>
-<td>Countably many ordered pairs with hereditary-small entries.</td>
-</tr>
-<tr>
-<td>A finite injection witnessing a successor count</td>
-<td>A finite graph between finite natural ordinals and natural node
-indices.</td>
-</tr>
-</tbody>
-</table>
-<p>In particular, <strong>every subset</strong> of the poset is
-separately represented, as required by the double-pseudocomplement
-definition. The set of all subsets of the poset is never required to be
-a member of H_B. The algebra carrier is smaller than an arbitrary such
-powerset for the relevant reason: it is indexed by the already
-constructed set B.</p>
-<p>The explicit codes are in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahSetCodes.lean">SetCodes</a>.
-Natural numerals are the collapse of the ordinary well-order on ℕ;
-<code>realCode I</code> is the range of those numerals for i∈I;
-<code>treeCode T</code> uses the indices of nodes of T. Master-index
-injectivity gives injectivity and order reflection of tree coding.
-<code>codeOpen b</code> is the set of tree codes belonging to the
-underlying lower set of b, and <code>algebraCode</code> is its range
-over b∈B. <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHereditaryGraphs.lean">HereditaryGraphs</a>
-supplies the order graph, generator graph, and arithmetic graphs with
-their membership and hereditary-size proofs.</p>
-<h2 id="the-literal-finite-membership-formula-jscodecwg">6. The literal
-finite membership formula JSCode(c,w,G)</h2>
-<p>The code is an actual value of the finite datatype
-<code>SetFormula 3</code>, defined in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean">JechShelahSyntax</a>.
-Its three free variables, in order, are the algebra carrier c, the
-natural-number set w, and the generator graph G. There is no infinitary
-scheme hidden in this assertion of definability.</p>
-<p>For clarity, the following displays use finite first-order
-abbreviations. They expand using <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySetFormulaTools.lean">SetFormulaTools</a>:</p>
+<p>Define further</p>
 <p><span class="math display">
 \begin{aligned}
-\operatorname{Empty}(a)&amp;\equiv\forall x\,x\notin a,\\
-a\subseteq b&amp;\equiv\forall x(x\in a\to x\in b),\\
-\operatorname{Pair}(x,y,z)&amp;\equiv z=\{\{x\},\{x,y\}\},\\
-\operatorname{App}(f,x,y)&amp;\equiv\exists
-z(\operatorname{Pair}(x,y,z)\wedge z\in f),\\
-\operatorname{Succ}(a,b)&amp;\equiv\forall x[x\in b\leftrightarrow(x\in
-a\vee x=a)].
+\operatorname{RegOpen}(\mathcal U)&amp;:=\forall X\,(X\in\mathcal
+U\to\operatorname{Cond}(X))\\
+&amp;\quad\land\forall X\,\forall Y\,\bigl(X\in\mathcal
+U\land\operatorname{Cond}(Y)\land Y\subseteq X\to Y\in\mathcal U\bigr)\\
+&amp;\quad\land\forall X\,\bigl(\operatorname{Cond}(X)\land\forall
+Y\,(\operatorname{Cond}(Y)\land Y\subseteq X\to\exists Z\,(Z\in\mathcal
+U\land Z\subseteq Y))\to X\in\mathcal U\bigr),\\
+\operatorname{Included}(\mathcal U,\mathcal V)&amp;:=\forall
+X\,(X\in\mathcal U\to X\in\mathcal V),\\
+\operatorname{IsCyl}(\mathcal U,x)&amp;:=\forall X\,(X\in\mathcal
+U\leftrightarrow\operatorname{InCyl}(x,X)),\\
+\operatorname{SplitsAt}(\mathcal U,x)&amp;:=\exists X\,(X\in\mathcal
+U\land\operatorname{InCyl}(x,X))\land\exists X\,(X\in\mathcal
+U\land\neg\operatorname{InCyl}(x,X)).
 \end{aligned}
-\tag{18}
 </span></p>
-<p>The pair display expands by quantifying the singleton and unordered
-pair and giving their exact membership biconditionals. FunctionGraph
-says every member is an ordered pair and outputs are unique.
-GraphDomain(f,r) says its inputs are exactly the members of r.
-App₂(f,x,y,z) uses an ordered pair (x,y) as the input. UnaryOn and
-BinaryOn give exact domains, totality, and natural-valued outputs;
-RelationOn says all graph members are pairs of naturals. Thus a graph
-cannot satisfy the intended clauses while carrying unrelated extra
-elements.</p>
-<h3 id="arithmetic-and-ancestry">6.1 Arithmetic and ancestry</h3>
-<p>Inductive(w) says w contains an empty set and is closed under
-successor. Define</p>
-<p><span class="math display">
-\operatorname{Omega}(w):=\operatorname{Inductive}(w)\wedge
-\forall I(\operatorname{Inductive}(I)\to w\subseteq I).
-\tag{19}
-</span></p>
-<p>JSCode existentially quantifies twelve witnesses</p>
-<p><span class="math display">
-z,\ 1_c,\ 2_c,\ A,\ M,\ E,\ p,\ n,\ o,\ a,\ P,\ O.
-</span></p>
-<p>Here E in this list is the exponentiation <strong>graph</strong>,
-distinct from the higher-order membership relation used elsewhere. The
-subformula Arithmetic says z is empty, 1_c is its successor, 2_c is the
-successor of 1_c, all belong to w, Omega(w) holds, and the arithmetic
-graphs satisfy their finite recursion laws. Written on their decoded
-inputs these laws are</p>
-<p><span class="math display">
-\begin{array}{lll}
-A(x,0)=x,&amp;A(x,y+1)=A(x,y)+1,\\
-M(x,0)=0,&amp;M(x,y+1)=A(M(x,y),x),\\
-E(x,0)=1,&amp;E(x,y+1)=M(E(x,y),x).
-\end{array}
-\tag{20}
-</span></p>
-<p>Each second equation is an App₂ biconditional with an existential
-previous value and a successor or graph clause, exactly as in
-<code>addRecursion</code>, <code>mulRecursion</code>, and
-<code>powRecursion</code>. No arithmetic function symbol is added. The
-unary graphs p,n,o start at 1 and satisfy</p>
-<p><span class="math display">
-p(k+1)=p(k)n(k),\quad n(k+1)=2^{p(k+1)},\quad o(k+1)=o(k)+n(k).
-\tag{21}
-</span></p>
-<p>Using equality-or-membership for ≤ on finite ordinals, define
-Child(k,j) by o(k)≤j&lt;o(k)+n(k). The ancestry graph has only pairs
-from w and satisfies the one finite clause</p>
-<p><span class="math display">
-a(i,j)\ \leftrightarrow\ i=j\ \vee\
-   \exists k\in w\,[\operatorname{Child}(k,j)\wedge a(i,k)].
-\tag{22}
-</span></p>
-<h3 id="conditions-order-completion-and-generators">6.2 Conditions,
-order, completion, and generators</h3>
-<p>ManyChildren(T,u,r) says there exists an injective function graph
-with <strong>exact domain r</strong>, every output of which is a child
-of u lying in T. Its witnesses are sets, not external cardinal
-comparisons. ConditionCode(T) says:</p>
-<ol type="1">
-<li>T⊆w and z∈T;</li>
-<li>T is closed downward under a;</li>
-<li>for i∈T and m∈w, some u∈T has i≠u, a(i,u), and ManyChildren(T,u,r),
-where p(u) and exponentiation give r=p(u)^m.</li>
-</ol>
-<p>PosetCarrier(P) is ∀T[T∈P↔︎ConditionCode(T)]. InclusionGraph(P,O) says
-the members of O are exactly pairs (X,Y) with X,Y∈P and X⊆Y.</p>
-<p>The finite regular-lower-set formulas from <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityRegularOpenCode.lean">RegularOpenCode</a>
-are</p>
+<p>In <span class="math inline">\mathfrak A</span>, <span
+class="math inline">\operatorname{RegOpen}</span> defines <span
+class="math inline">B</span>, <span
+class="math inline">\operatorname{Included}</span> defines its order,
+<span class="math inline">\operatorname{IsCyl}(\mathcal U,x)</span> says
+<span class="math inline">\mathcal U=\operatorname{Cyl}_{s_x}</span>,
+and, by Lemma 4, <span
+class="math inline">\operatorname{SplitsAt}(\mathcal U,x)</span> says
+<span class="math inline">\mathcal
+U\land\operatorname{Cyl}_{s_x}\ne0</span> and <span
+class="math inline">\mathcal
+U\land\neg\operatorname{Cyl}_{s_x}\ne0</span>.</p>
+<p><strong>Representing <span class="math inline">\mathcal L^3</span> in
+<span class="math inline">\mathfrak D</span>.</strong> Let <span
+class="math inline">N,\mathrm S</span> have type <span
+class="math inline">tt</span> and <span class="math inline">z</span>
+type <span class="math inline">t</span>, and put</p>
 <p><span class="math display">
 \begin{aligned}
-\operatorname{Lower}(P,O,X)&amp;\equiv X\subseteq P\ \wedge\
-\forall p\in X\ \forall q\in P\,[O(q,p)\to q\in X],\\
-\operatorname{PC}(P,O,X,Y)&amp;\equiv
-\forall p[p\in Y\leftrightarrow
-(p\in P\wedge\forall q\in P(O(q,p)\to q\notin X))],\\
-\operatorname{Regular}(P,O,X)&amp;\equiv\operatorname{Lower}(P,O,X)\wedge
-\exists Y[\operatorname{PC}(P,O,X,Y)\wedge\operatorname{PC}(P,O,Y,X)],\\
-\operatorname{AlgebraCarrier}(P,O,c)&amp;\equiv
-\forall X[X\in c\leftrightarrow\operatorname{Regular}(P,O,X)].
+\operatorname{Nat}(N,z,\mathrm
+S)&amp;:=z\mathrel{\varepsilon}N\land\forall
+x\,(x\mathrel{\varepsilon}N\to\mathrm
+Sx\mathrel{\varepsilon}N\land\mathrm Sx\ne z)\\
+&amp;\quad\land\forall x\,\forall y\,(x\mathrel{\varepsilon}N\land
+y\mathrel{\varepsilon}N\land\mathrm Sx=\mathrm Sy\to x=y)\\
+&amp;\quad\land\forall X^{tt}\,\bigl(z\mathrel{\varepsilon}X\land\forall
+x\,(x\mathrel{\varepsilon}N\land x\mathrel{\varepsilon}X\to\mathrm
+Sx\mathrel{\varepsilon}X)\to\forall x\,(x\mathrel{\varepsilon}N\to
+x\mathrel{\varepsilon}X)\bigr),\\
+\operatorname{Real}_N(X^{tt})&amp;:=\forall
+x\,\bigl((x\mathrel{\varepsilon}N\land x\mathrel{\varepsilon}X)\lor
+Xx=\bot\bigr),\\
+\operatorname{Class}_N(\mathcal U^{(tt)t})&amp;:=\forall
+X\,\bigl((\operatorname{Real}_N(X)\land X\mathrel{\varepsilon}\mathcal
+U)\lor\mathcal UX=\bot\bigr).
 \end{aligned}
-\tag{23}
 </span></p>
-<p>Finally,</p>
+<p>For <span class="math inline">W=(N,z,\mathrm S)</span>, the
+translation <span class="math inline">\varphi\mapsto\varphi^W</span> of
+<span class="math inline">\mathcal L^3</span> replaces <span
+class="math inline">0</span> by <span class="math inline">z</span> and
+<span class="math inline">\mathrm s</span> by <span
+class="math inline">\mathrm S</span>; relativizes number quantifiers to
+<span class="math inline">x\mathrel{\varepsilon}N</span> (variables of
+type <span class="math inline">t</span>), real quantifiers to <span
+class="math inline">\operatorname{Real}_N</span> (type <span
+class="math inline">tt</span>), and class quantifiers to <span
+class="math inline">\operatorname{Class}_N</span> (type <span
+class="math inline">(tt)t</span>); leaves <span
+class="math inline">k</span>-ary relation quantifiers (type <span
+class="math inline">t\cdots tt</span>) unrestricted; and replaces <span
+class="math inline">x\in X</span>, <span
+class="math inline">X\in\mathcal U</span>, <span
+class="math inline">R(\bar x)</span> by <span
+class="math inline">x\mathrel{\varepsilon}X</span>, <span
+class="math inline">X\mathrel{\varepsilon}\mathcal U</span>, <span
+class="math inline">R\bar x=\top</span>. Every <span
+class="math inline">\varphi^W</span> is an identity formula with no
+nonlogical constants.</p>
+<p><strong>Lemma 6 (transport).</strong> Suppose <span
+class="math inline">\mathfrak D\models\operatorname{Nat}(N,z,\mathrm
+S)</span>. Then there are bijections</p>
 <p><span class="math display">
-\operatorname{GeneratorOpen}(i,X)\equiv
-\forall T[T\in X\leftrightarrow
-(T\in P\wedge\forall j\in T(a(j,i)\vee a(i,j)))].
-\tag{24}
+\theta:\operatorname{ext}(N)\to\omega,\qquad
+\theta:\{X:\mathfrak D\models\operatorname{Real}_N(X)\}\to\mathcal
+P(\omega),\qquad
+\theta:\{\mathcal U:\mathfrak D\models\operatorname{Class}_N(\mathcal
+U)\}\to\mathcal P(\mathcal P(\omega)),
 </span></p>
-<p>GeneratorGraph(G) says G is a function graph of exact domain w and
-∀i∈w ∀X[App(G,i,X)↔︎GeneratorOpen(i,X)]. JSCode is the existential
-closure of Arithmetic, PosetCarrier, InclusionGraph, AlgebraCarrier, and
-GeneratorGraph over the twelve witnesses above.
-<code>satisfies_JSCode</code> in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean">JechShelahSyntax</a>
-proves the exact ordinary satisfaction equivalence for this actual
-syntax tree.</p>
-<h2 id="standardness-and-exact-adequacy-of-jscode">7. Standardness and
-exact adequacy of JSCode</h2>
-<h3 id="no-nonstandard-omega-or-arithmetic-is-admitted">7.1 No
-nonstandard omega or arithmetic is admitted</h3>
-<p>Work first in the canonical membership presentation π. The actual set
-of natural codes belongs to H_B by Section 5 and is inductive. If w
-satisfies (19), leastness gives w⊆ω. Conversely external induction on
-ordinary n proves every inductive set contains the code of n, so ω⊆w.
-Thus w is exactly the canonical natural set. This is
-<code>omega_iff</code> in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahArithmeticSemantics.lean">ArithmeticSemantics</a>.
-It uses the actual available ω witness; it does not infer external
-standardness from an internal induction axiom alone.</p>
-<p>Having identified w, totality and functionality let the arithmetic
-graphs be decoded into actual functions on ℕ or ℕ². External induction
-in the second argument proves (20) has precisely the usual addition,
-multiplication, and exponentiation values. Ordinary induction proves
-(21) has exactly the sequences (2). For ancestry, every immediate parent
-index is smaller than its child; strong induction on the second index
-makes (22) unique and identifies it with prefix of indexed master nodes.
-<a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahIndexCoding.lean">IndexCoding</a>
-proves these recursion uniqueness statements;
-<code>arithmetic_decoded</code> in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahArithmeticSemantics.lean">ArithmeticSemantics</a>
-assembles them.</p>
-<p>Existence is separate from uniqueness. Actual unary, binary, and
-relational natural graphs are hereditary-small by Section 5. They
-therefore supply all Arithmetic witnesses, including the entire ancestry
-graph, in the membership universe. This is the unconditional
-<code>canonical_arithmetic_exists</code> in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahArithmeticExistence.lean">ArithmeticExistence</a>.</p>
-<h3 id="the-condition-formula-has-both-directions">7.2 The condition
-formula has both directions</h3>
-<p>For X⊆ω put I_X={n:the code of n belongs to X}. Decoded ManyChildren
-is exactly an injection from Fin(P_u^m) to the retained child indices of
-u. The forward conversion evaluates the coded finite graph; the reverse
-constructs that finite graph and uses its hereditary-size witness.</p>
-<p>An actual condition T yields I_T={ind(s):s∈T}, and satisfies all
-these clauses. Conversely, from a set I satisfying the indexed clauses
-reconstruct</p>
+<p>and surjections <span class="math inline">\theta</span> from <span
+class="math inline">D_{t\cdots tt}</span> onto the <span
+class="math inline">k</span>-ary relations on <span
+class="math inline">\omega</span>, such that for every <span
+class="math inline">\mathcal L^3</span> formula <span
+class="math inline">\varphi</span> and every assignment <span
+class="math inline">g</span> of such arguments,</p>
 <p><span class="math display">
-T_I:=\{s\text{ a master node}:\operatorname{ind}(s)\in I\}.
+\mathfrak D\models\varphi^W[g]\iff\mathfrak A\models\varphi[\theta\circ
+g].
 </span></p>
-<p>It is nonempty because 0∈I. Ancestry closure gives prefix closure.
-For a required split, the formula supplies a strict ancestor pair i,u
-and distinct retained child indices. Prefix plus unequal indices gives a
-<strong>strict</strong> extension of nodes; every index in the block of
-u uniquely equals o_u+j for j&lt;N_u, so the finite injection gives
-distinct actual immediate successors. This proves (4), not merely an
-informal resemblance to it. The inverse node-index equations then
-identify X with the actual tree code. See
-<code>indexCondition_iff</code> in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahIndexCoding.lean">IndexCoding</a>
-and <code>manyChildren_iff</code>,
-<code>conditionCode_iff_indices</code>, and
-<code>conditionCode_iff_tree</code> in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahConditionSemantics.lean">ConditionSemantics</a>.</p>
-<p>Extensionality now makes P the actual set of all condition codes.
-Pair absoluteness and inclusion make O the actual order graph. The
-exact-domain and no-junk clauses matter here.</p>
-<h3 id="the-completion-and-generator-graph-are-canonical">7.3 The
-completion and generator graph are canonical</h3>
-<p>Every subset of the actual condition poset is represented in H_B.
-Thus the coded lower-set and pseudocomplement clauses (23) range over
-exactly the subsets needed to compute the actual regular-lower-set
-completion. <code>posetCoding_full</code> and
-<code>regular_iff_carrier</code> in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityCanonicalCompletion.lean">CanonicalCompletion</a>
-identify the regular codes with the images of actual b∈B.
-<code>algebraCarrier_unique</code> gives c=canonicalCarrier.</p>
-<p>For i∈ℕ, all nodes of a condition T are comparable with
-indexedNode(i) exactly when T≤<span class="math inline">\mathbb
-T</span>↾indexedNode(i). Separativity gives</p>
-<p><span class="math display">
-\iota(T)\le g_i\ \leftrightarrow\
-T\le\mathbb T\mathbin{\upharpoonright}\operatorname{indexedNode}(i).
-</span></p>
-<p>Membership of T in the regular lower set g_i has the same meaning.
-Therefore (24) picks out precisely codeOpen(g_i). FunctionGraph, exact
-domain, and output uniqueness make G exactly the actual natural-indexed
-generator graph, with no extra pairs. These are
-<code>canonical_generatorOpen</code>, <code>generatorOpen_iff</code>,
-and <code>generatorGraph_unique</code> in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahConditionSemantics.lean">ConditionSemantics</a>.</p>
-<p>Consequently <code>canonical_sound</code> proves that every
-canonical-membership triple satisfying JSCode is exactly
-(canonicalCarrier, canonicalNaturals, canonicalGraph). Conversely, the
-actual codes and the arithmetic witnesses satisfy every clause;
-<code>canonical_exists_of_arithmetic</code> applies to the unconditional
-arithmetic existence theorem.</p>
-<h3 id="transport-to-arbitrary-successful-membership-codes">7.4
-Transport to arbitrary successful membership codes</h3>
-<p>The collapse bijection from Section 4 transports finite membership
-satisfaction, subset, and graph application. <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySetCodeAbsoluteness.lean">SetCodeAbsoluteness</a>
-proves the primitive absolute meanings in the canonical code and
-constructs its actual presentation. <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySelectorTransport.lean">SelectorTransport</a>,
-<code>adequate_of_canonical</code>, transports that presentation to any
-successful E.</p>
-<p>Concretely, every successful JSCode supplies:</p>
-<ul>
-<li>an embedding j:B↪D_U with image exactly the members of c;</li>
-<li>j(b)⊆_E j(d) iff b≤d;</li>
-<li>an embedding ν:ℕ↪D_U with image exactly the members of w;</li>
-<li>a∈_Eν(k) iff a=ν(i) for some i&lt;k;</li>
-<li>App_E(G,ν(k),a) iff a=j(g_k).</li>
-</ul>
-<p>One such successful code exists. These are the exact fields of
-<code>Presentation</code> and <code>Adequate</code> in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityPureSelector.lean">PureSelector</a>.
-The theorem <code>canonical_adequacy</code> in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityInconsistency.lean">the
-final assembly</a> discharges this interface for the particular literal
-JSCode and actual indexedGenerator. It does not leave formula
-correctness as an assumption.</p>
-<h2 id="the-closed-pure-selector-and-its-crucial-guard">8. The closed
-pure selector and its crucial guard</h2>
-<p>Use only the following closed relational types:</p>
-<p><span class="math display">
-U=t\to t,\quad ER=U\to U\to t,\quad HU=t\to U.
-</span></p>
-<p>For propositions p,q, let Splits(p,q) be the conjunction of the two
-nonzero identities in (1). Let Iso(E,c,h), for h:HU, assert that h has
-image in c, is onto c, and reflects and preserves the order:</p>
-<p><span class="math display">
-p\le q\ \leftrightarrow\ h(p)\subseteq_E h(q).
-</span></p>
-<p>All three conditions are literal quantified formulas. Order
-reflection gives injectivity when c has the identified subset order.</p>
-<p>For six witnesses E,c,w,G,h,n define Raw to be the finite
-conjunction</p>
+<p>Moreover such <span class="math inline">N,z,\mathrm S</span>
+exist.</p>
+<p><em>Proof.</em> On numbers, <span class="math inline">\theta</span>
+is the unique isomorphism <span
+class="math inline">(\operatorname{ext}(N),z,\mathrm
+S)\cong(\omega,0,\mathrm s)</span>, which exists by Dedekind’s
+categoricity theorem, since every subset of <span
+class="math inline">\operatorname{ext}(N)</span> is <span
+class="math inline">\operatorname{ext}(X)</span> for some <span
+class="math inline">X</span>. Put <span
+class="math inline">\theta(X):=\theta[\operatorname{ext}(X)]</span>,
+<span class="math inline">\theta(\mathcal
+U):=\{\theta(X):\operatorname{Real}_N(X),\ \mathcal U(X)=1\}</span>, and
+<span class="math inline">\theta(R):=\{\theta(\bar x):\bar
+x\in\operatorname{ext}(N)^k,\ R\bar x=1\}</span>. A <span
+class="math inline">\operatorname{Real}_N</span> predicate takes value
+<span class="math inline">1</span> on <span
+class="math inline">\operatorname{ext}(X)\subseteq\operatorname{ext}(N)</span>
+and <span class="math inline">0</span> elsewhere, so it is determined by
+<span class="math inline">\operatorname{ext}(X)</span>; by fullness
+every subset of <span class="math inline">\operatorname{ext}(N)</span>
+arises. Hence <span class="math inline">\theta</span> is a bijection on
+reals, and likewise on classes. Fullness also makes <span
+class="math inline">\theta</span> onto the <span
+class="math inline">k</span>-ary relations. The equivalence follows by
+induction on <span class="math inline">\varphi</span>, using Lemma 3;
+the quantifier cases use surjectivity of <span
+class="math inline">\theta</span>. For existence, <span
+class="math inline">B</span> is infinite: take distinct <span
+class="math inline">b_0,b_1,\ldots\in B</span>, let <span
+class="math inline">N</span> be the characteristic function of <span
+class="math inline">\{b_k:k\in\omega\}</span>, <span
+class="math inline">z=b_0</span>, and <span class="math inline">\mathrm
+S(b_k)=b_{k+1}</span>, <span class="math inline">\mathrm S(c)=c</span>
+otherwise. <span class="math inline">\square</span></p>
+<h2 id="the-pure-splitter">5. The pure splitter</h2>
+<p>With <span class="math inline">W=(N,z,\mathrm S)</span>, <span
+class="math inline">h</span> of type <span
+class="math inline">t((tt)t)</span>, and <span
+class="math inline">p,q,n,m</span> of type <span
+class="math inline">t</span>, define</p>
 <p><span class="math display">
 \begin{aligned}
-&amp;\operatorname{HCode}(E),\quad\operatorname{JSCode}^{E}(c,w,G),\quad
-\operatorname{Iso}(E,c,h),\quad n\in_Ew,\\
-&amp;\operatorname{App}_E(G,n,h(q)),\quad\operatorname{Splits}(p,q),\\
-&amp;\forall m\in_En\ \forall r^t\,
-[\operatorname{App}_E(G,m,h(r))\to\neg\operatorname{Splits}(p,r)].
+\operatorname{Iso}_W(h)&amp;:=\forall
+p\,\bigl(\operatorname{Class}_N(hp)\land\operatorname{RegOpen}^W(hp)\bigr)\\
+&amp;\quad\land\forall\mathcal U\,\bigl(\operatorname{Class}_N(\mathcal
+U)\land\operatorname{RegOpen}^W(\mathcal U)\to\exists p\, .\,hp=\mathcal
+U\bigr)\\
+&amp;\quad\land\forall p\,\forall q\,\bigl(p\le
+q\leftrightarrow\operatorname{Included}^W(hp,hq)\bigr),\\[4pt]
+\operatorname{Sel}(p,q)&amp;:=\exists N\,\exists z\,\exists\mathrm
+S\,\exists h\,\exists n\,.\ \operatorname{Nat}(N,z,\mathrm
+S)\land\operatorname{Iso}_W(h)\land
+n\mathrel{\varepsilon}N\land\operatorname{IsCyl}^W(hq,n)\\
+&amp;\qquad\land\operatorname{SplitsAt}^W(hp,n)\land\forall
+m\,\bigl(m\mathrel{\varepsilon}N\land(m&lt;n)^W\to\neg\operatorname{SplitsAt}^W(hp,m)\bigr),\\[4pt]
+F&amp;:=\lambda p\, .\,\exists q\, .\,\operatorname{Sel}(p,q)\land q.
 \end{aligned}
-\tag{25}
 </span></p>
-<p>Here JSCode^E is the actual inductive translation of finite
-membership syntax to pure higher-order syntax.
-<code>eval_translate</code> in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySetSemantics.lean">SetSemantics</a>
-is proved by induction, including its environments, variable lifting,
-and binders.</p>
-<p>Now put</p>
+<p><span class="math inline">F</span> is a closed term of type <span
+class="math inline">tt</span> containing no nonlogical constants. All
+its types end in <span class="math inline">t</span>, so it belongs to
+the language of the map. <span
+class="math inline">\operatorname{Sel}</span> is an identity
+formula.</p>
+<p>For <span class="math inline">p\in B</span>, <span
+class="math inline">p\ne0</span>, let <span
+class="math inline">n(p)</span> be the least <span
+class="math inline">n</span> such that <span
+class="math inline">p\land\operatorname{Cyl}_{s_n}\ne0</span> and <span
+class="math inline">p\land\neg\operatorname{Cyl}_{s_n}\ne0</span>. It
+exists by Lemma 4(ii).</p>
+<p><strong>Lemma 7.</strong> In <span class="math inline">\mathfrak
+D</span>, <span class="math inline">\llbracket
+F\rrbracket(p)=\operatorname{Cyl}_{s_{n(p)}}</span> for every <span
+class="math inline">p\ne0</span>.</p>
+<p><em>Proof.</em> Let <span class="math inline">N,z,\mathrm S,h</span>
+satisfy <span class="math inline">\operatorname{Nat}(N,z,\mathrm
+S)\land\operatorname{Iso}_W(h)</span> in <span
+class="math inline">\mathfrak D</span>, and let <span
+class="math inline">\theta</span> be as in Lemma 6. By Lemma 6, <span
+class="math inline">\theta\circ h:B\to B</span> maps <span
+class="math inline">B</span> into <span
+class="math inline">\operatorname{RO}(\mathbb P)=B</span> and onto it,
+and</p>
 <p><span class="math display">
-\begin{aligned}
-\operatorname{Guard}(E,c,w,G,h,n;p,q)&amp;:=(\operatorname{Raw}=1),\\
-\operatorname{Sel}(p,q)&amp;:=\exists E,c,w,G,h,n\
-\operatorname{Guard},\\
-F&amp;:=\lambda p^t.\ \exists q^t\,[\operatorname{Sel}(p,q)\wedge q].
-\end{aligned}
-\tag{26}
+p\le q\iff\theta(hp)\subseteq\theta(hq).
 </span></p>
-<p>The equality-to-top test is applied <strong>to each witness’s Raw
-formula before the six existential quantifiers</strong>. This is not an
-exchangeable placement. In a general complete Boolean algebra a join can
-equal 1 without one summand equalling 1. In (26), each guard is already
-0 or 1. Its join is therefore 1 exactly when an actual successful
-witness exists, and otherwise 0. A noncrisp or otherwise invalid E gives
-guard 0; no spurious partly true presentation contributes a Boolean
-fragment to F.</p>
-<p>The syntax, purity, and closed-type proofs are <code>selector</code>,
-<code>selector_pure</code>, and <code>selector_closedTypes</code> in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityPureSelector.lean">PureSelector</a>.
-This term is finite. Every code, map, and index in (25) is bound; the
-only supplied datum is the finite syntax tree JSCode, which itself
-contains no nonlogical symbols.</p>
-<p>For p≠0 and a successful witness, adequacy gives j and ν as in
-Section 7. The quantified h is an order isomorphism from B onto the same
-coded carrier as j. Consequently j⁻¹∘h is an order automorphism of B.
-Rigidity forces h=j. This is a consequence of actual rigidity, not an
-assumption that presentations are already uniquely labelled; see <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityRigidTransport.lean">RigidTransport</a>
-and <code>Presentation.iso_eq_carrier</code> in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityPureSelector.lean">PureSelector</a>.</p>
-<p>The graph clause then says q=g_k where n=ν(k). The last clause of
-(25), using the exact predecessor description of ν(k), says no earlier
-generator splits p. Thus k=n(p) and q=g_{n(p)}. Conversely, choose a
-successful presentation, h=j, and n=ν(n(p)); all clauses hold. Hence</p>
+<p>So <span class="math inline">\theta\circ h</span> is an order
+automorphism of <span class="math inline">B</span>, hence a Boolean
+automorphism, hence the identity by the Jech–Shelah theorem. Therefore,
+by Lemma 6,</p>
 <p><span class="math display">
-\llbracket\operatorname{Sel}(p,q)\rrbracket=
-\begin{cases}1,&amp;q=g_{n(p)},\\0,&amp;\text{otherwise},\end{cases}
-\quad(p\ne0).
+\mathfrak D\models\operatorname{Sel}(p,q)\iff\exists n\in\omega\, .\
+q=\operatorname{Cyl}_{s_n}\land n\text{ is least with
+}p\land\operatorname{Cyl}_{s_n}\ne0\land
+p\land\neg\operatorname{Cyl}_{s_n}\ne0,
 </span></p>
-<p>Finally the outer existential in F is genuinely Boolean-valued:</p>
+<p>provided some <span class="math inline">N,z,\mathrm S,h</span>
+satisfy <span
+class="math inline">\operatorname{Nat}\land\operatorname{Iso}_W</span>.
+They do: take <span class="math inline">N,z,\mathrm S</span> from Lemma
+6 and <span class="math inline">h(p):=</span> the <span
+class="math inline">\operatorname{Class}_N</span> predicate with <span
+class="math inline">\theta(h(p))=p</span>. Hence, for <span
+class="math inline">p\ne0</span>, <span
+class="math inline">\llbracket\operatorname{Sel}(p,q)\rrbracket=1</span>
+if <span class="math inline">q=\operatorname{Cyl}_{s_{n(p)}}</span> and
+<span class="math inline">=0</span> otherwise, by Lemma 3, and</p>
 <p><span class="math display">
-\llbracket F\rrbracket(p)
-=\bigvee_{q\in B}\bigl(\llbracket\operatorname{Sel}(p,q)\rrbracket\wedge
-q\bigr)
-=g_{n(p)}.
-\tag{27}
+\llbracket F\rrbracket(p)=\bigvee_{q\in
+B}\bigl(\llbracket\operatorname{Sel}(p,q)\rrbracket\land
+q\bigr)=\operatorname{Cyl}_{s_{n(p)}}.\qquad\square
 </span></p>
-<p>All eligible presentations yield the same element, so taking their
-existential join does not change the selected value. The value at p=0 is
-immaterial. The source theorems are <code>eval_witnessGuard</code>,
-<code>eval_selects</code>, <code>selected_least</code>,
-<code>least_selected</code>, <code>eval_selector_eq_least</code>, and
-<code>eval_selector_splits</code> in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityPureSelector.lean">PureSelector</a>.</p>
-<h2 id="the-exact-non-theorem-of-bare-c">9. The exact non-theorem of
-bare C</h2>
-<p>Take F=<code>selector JSCode</code>. Equations (9) and (27) say that
-it splits every nonzero p in the actual B interpretation. All identities
-and nonidentities in (1) have crisp values, so every instance of its
-universal implication is 1. Therefore</p>
+<p>Without rigidity the argument fails at exactly one point. Different
+witnesses <span class="math inline">h</span> could select different
+<span class="math inline">q</span>, and <span
+class="math inline">\llbracket F\rrbracket(p)</span> would be their
+join, which need not split <span class="math inline">p</span>. Some such
+restriction is unavoidable for a full model: every automorphism of <span
+class="math inline">B</span> extends to an automorphism of the full
+model, which fixes the denotation of every closed pure term. So <span
+class="math inline">\llbracket F\rrbracket</span> must commute with
+every automorphism of <span class="math inline">B</span>.</p>
+<h2 id="proof-of-the-claim">6. Proof of the claim</h2>
+<p><span class="math inline">S_F</span> is an identity formula. For
+<span class="math inline">p=0</span> its matrix has value <span
+class="math inline">1</span> because the antecedent has value <span
+class="math inline">0</span>. For <span
+class="math inline">p\ne0</span>, Lemma 7 and the definition of <span
+class="math inline">n(p)</span> give</p>
 <p><span class="math display">
-\llbracket S_F\rrbracket=1,
-\qquad\llbracket S_F=0\rrbracket=0
-\tag{28}
+p\land\llbracket F\rrbracket(p)\ne0,\qquad p\land\neg\llbracket
+F\rrbracket(p)\ne0.
 </span></p>
-<p>because B is nontrivial. C soundness implies</p>
+<p>So by Lemma 3, <span class="math inline">\llbracket
+S_F\rrbracket=1</span> and <span class="math inline">\llbracket
+S_F=\bot\rrbracket=0\ne1</span>. By Lemma 2,</p>
 <p><span class="math display">
-C\nvdash S_F=0.
-\tag{29}
+C\nvdash S_F=\bot.
 </span></p>
-<p>This conclusion uses the exact original language and the exact C side
-condition. The fact that this full model validates additional principles
-is harmless: only its soundness for C is needed to refute C-theoremhood.
-No satisfiability-to-consistency converse or completeness theorem is
-invoked.</p>
-<p><a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySplitSemantics.lean">SplitSemantics</a>
-proves <code>eval_split</code> and the resulting
-<code>split_identity_not_C_theorem</code>. <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityInconsistency.lean">The
-final assembly</a> supplies the actual F, <code>F_closedTypes</code>,
-<code>F_pure</code>, and <code>F_splits</code>, then obtains (29). The
-pure term is what closes the definability gap left by a merely external
-rigid-algebra argument.</p>
-<h2 id="why-unboxed-atomicity-proves-the-stronger-zero-identity">10. Why
-unboxed Atomicity proves the stronger zero identity</h2>
-<p>It is not enough to show Atomicity implies ¬S_F: Max supplies S_F≠0,
-which is a different assertion in C. The required conclusion is the
-actual entity identity S_F=0. The bounded argument establishes it
-without boxing Atomicity.</p>
-<p>Define</p>
-<p><span class="math display">
-\operatorname{Split}(b,F):=\forall p[(p\ne0\wedge p\le b)\to
-((p\wedge Fp)\ne0\wedge(p\wedge\neg Fp)\ne0)].
-</span></p>
-<p>Bare C proves</p>
-<p><span class="math display">
-\operatorname{Split}(b\wedge\operatorname{Split}(b,F),F).
-\tag{30}
-</span></p>
-<p>For the proof take nonzero p≤b∧Split(b,F). It follows that p≤b and
-p≤Split(b,F). The C order/modal laws and the closed logical implication
-expressing universal instantiation give</p>
-<p><span class="math display">
-\Box\bigl(p\to[(p\wedge Fp)\ne0\wedge
-                         (p\wedge\neg Fp)\ne0]\bigr).
-</span></p>
-<p>Since p≠0, the displayed conjunction is possible. Each nonidentity is
-therefore possible, and C’s necessity of identity yields the
-corresponding actual nonidentity by contraposition: ◇(a≠b) implies a≠b.
-This proves (30). Only bare-C theorems are necessitated in this
-reasoning. This is <code>split_guard</code> in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/BoundedSplitter.lean">BoundedSplitter</a>.</p>
-<p>If a current atom w lies below a split bound b, then w≠0, so
-Split(b,F) says both parts w∧Fw and w∧¬Fw are nonzero. But the atom law
-gives w≤Fw or w≤¬Fw; the corresponding other part is 0. Thus no atom
-lies below a split bound. Unboxed Atomicity applied to that bound says
-it is 0. Applying this to (30) proves</p>
-<p><span class="math display">
-C+\operatorname{Atomicity}_t\vdash
-b\wedge\operatorname{Split}(b,F)=0.
-\tag{31}
-</span></p>
-<p>These are <code>split_excludes_atom</code>,
-<code>atomicity_split_bound_zero</code>, and
-<code>atomicity_guard_zero</code> in <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/BoundedSplitter.lean">BoundedSplitter</a>.
-The original Atomicity formula allows the bound itself to be bottom or
-supplies an atom below it; no boxed form is substituted.</p>
-<p>At b=1, bare C identifies the left term in (31) with S_F. The bridge
-is a closed Logical Equivalence instance with F as its term parameter;
-no Atomicity hypothesis occurs in the equivalence proof. <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySplitCertificate.lean">SplitCertificate</a>
-instantiates the generated object-language certificate
-<code>atomicity_guard_zero.derivable</code> at 1 and the actual closed
-term F, uses the Atomicity schema axiom, and composes with
-<code>guard_eq_split.derivable</code>. Its theorem is exactly</p>
-<p><span class="math display">
-\operatorname{Theorem}(C.\mathrm{axioms}\cup\operatorname{Atomicity}_t.\mathrm{schema},
-                       S_F=0).
-\tag{32}
-</span></p>
-<p>This is an object-language derivation, not a semantic obstruction
-inserted as a premise. Finally F and S_F have no free object variables,
-type variables, or nonlogical constants. By (29), the Max(C) instance
-for S_F=0 is S_F≠0. Combining it with (32) yields (T). <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityReduction.lean">MaxAtomicityReduction</a>
-handles this last schema membership and contradiction; <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityInconsistency.lean">the
-final module</a> supplies both required certificates.</p>
-<h2 id="verification-boundaries-and-direct-dependency-map">11.
-Verification boundaries and direct dependency map</h2>
-<p>The proof above separates the substantive mathematical obligations
-from compiler status. The implemented final composition has discharged,
-in source, the previously explicit premises of formula adequacy, actual
-rigidity, arithmetic witness existence, and pure splitting. Its validity
-as a Lean certificate still requires the serial checker to compile the
-full dependency chain and inspect the final theorem’s transitive axiom
-list, excluding <code>sorryAx</code> and any custom assumption serving
-as the missing result. Ordinary Lean metatheoretic axioms must be
-distinguished from object-language C axioms; in particular, the
-object-language equivalence/necessitation gate must certify the
-bounded-splitter derivation rather than importing a stronger untracked
-rule.</p>
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr>
-<th>Obligation</th>
-<th>Direct source endpoint</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Sound full interpretation of C</td>
-<td><a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Semantics/BooleanValuedSoundness.lean">BooleanValuedSoundness</a>,
-<code>C_sound</code>; <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityConcreteModel.lean">ConcreteModel</a>.</td>
-</tr>
-<tr>
-<td>Actual atomless completion</td>
-<td><a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahTrees.lean">Trees</a>,
-<code>forcing_completion_atomless</code>; <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityRegularCompletion.lean">RegularCompletion</a>.</td>
-</tr>
-<tr>
-<td>Actual canonical countable generators</td>
-<td><a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahIndexedGenerators.lean">IndexedGenerators</a>,
-<code>indexedGenerator_completely_generates</code>.</td>
-</tr>
-<tr>
-<td>Rigidity, with both slalom estimates</td>
-<td><a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahLocalFusion.lean">LocalFusion</a>,
-<code>actual_rigid</code>.</td>
-</tr>
-<tr>
-<td>Actual hereditary universe and its cardinality</td>
-<td><a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHereditaryUniverse.lean">HereditaryUniverse</a>,
-<code>universeSet</code>, <code>presentationEquiv</code>.</td>
-</tr>
-<tr>
-<td>Exact HCode semantics and existence</td>
-<td><a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHCodeSemantics.lean">HCodeSemantics</a>,
-<code>eval_hCode_exact</code>; <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHCodeExistence.lean">HCodeExistence</a>.</td>
-</tr>
-<tr>
-<td>Collapse onto the whole hereditary universe</td>
-<td><a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityHCodeCharacterization.lean">HCodeCharacterization</a>,
-<code>good_collapseRange</code>,
-<code>canonicalChange_membership</code>.</td>
-</tr>
-<tr>
-<td>Literal finite membership formula</td>
-<td><a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahSyntax.lean">JechShelahSyntax</a>,
-<code>JSCode</code>, <code>satisfies_JSCode</code>.</td>
-</tr>
-<tr>
-<td>Standard omega and arithmetic identification</td>
-<td><a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahArithmeticSemantics.lean">ArithmeticSemantics</a>,
-<code>omega_iff</code>, <code>arithmetic_decoded</code>.</td>
-</tr>
-<tr>
-<td>Actual arithmetic witness existence</td>
-<td><a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahArithmeticExistence.lean">ArithmeticExistence</a>,
-<code>canonical_arithmetic_exists</code>.</td>
-</tr>
-<tr>
-<td>Condition/order/completion/generator exactness</td>
-<td><a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityJechShelahConditionSemantics.lean">ConditionSemantics</a>,
-<code>canonical_sound</code>,
-<code>canonical_exists_of_arithmetic</code>; <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityCanonicalCompletion.lean">CanonicalCompletion</a>.</td>
-</tr>
-<tr>
-<td>Adequacy in every good membership presentation</td>
-<td><a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySelectorTransport.lean">SelectorTransport</a>,
-<code>adequate_of_canonical</code>; <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityInconsistency.lean">final
-assembly</a>, <code>canonical_adequacy</code>.</td>
-</tr>
-<tr>
-<td>Literal pure selector and its evaluated splitting</td>
-<td><a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityPureSelector.lean">PureSelector</a>,
-<code>selector_closedTypes</code>, <code>eval_selector_splits</code>; <a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityInconsistency.lean">final
-assembly</a>, <code>F_splits</code>.</td>
-</tr>
-<tr>
-<td>Exact C non-theorem</td>
-<td><a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityInconsistency.lean">final
-assembly</a>, <code>split_identity_not_C_theorem</code>.</td>
-</tr>
-<tr>
-<td>Actual Atomicity-to-zero derivation</td>
-<td><a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicitySplitCertificate.lean">SplitCertificate</a>,
-<code>split_zero_under_atomicity</code>.</td>
-</tr>
-<tr>
-<td>Exact target, with no supplied construction premise</td>
-<td><a
-href="../../../../submissions/classicism-results-2026-10-24-v2/source/topics/classicism/lean/Classicism/Results/Research/MaxAtomicityInconsistency.lean">final
-assembly</a>, <code>maximalism_atomicity_inconsistent</code>.</td>
-</tr>
-</tbody>
-</table>
-<p>No result in this table is marked Lean-verified by this prose note.
-The older L-route proof remains a separate document. Repository
-validation after this note checks the map’s data constraints only; it
-does not discharge any of the mathematical or compiler obligations
-described here.</p>
+<p>As <span class="math inline">S_F=\bot</span> is a closed pure
+identity, Maximalism (pure) gives <span
+class="math inline">S_F\ne\bot</span>, while Lemma 1 gives <span
+class="math inline">S_F=\bot</span> from Atomicity<span
+class="math inline">(t)</span>. <span
+class="math inline">\square</span></p>
 </body></html>
