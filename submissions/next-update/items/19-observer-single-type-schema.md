@@ -7,7 +7,7 @@ For every relational type $`\rho`$, require propositions to be separated by Bool
 The construction compresses any finite list of relational qualification types into
 
 ```math
-\rho=(\sigma_1t)\cdots(\sigma_nt)t.
+\rho=(\sigma_1t)\cdots(\sigma_nt)t
 ```
 
 Each $`\sigma_i`$ is a definable retract of $`\rho`$. Preservation of quantification descends along those retractions, so the **same observer** handles the entire list. The proof uses unconditional H equivalences and whole-operation identities; it needs no additional BF, C5 or Choice premise.

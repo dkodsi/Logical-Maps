@@ -11,7 +11,7 @@ Work in H with the fixed relational type system. Put
 ```math
 b:=\forall p^t\,p,\qquad
 T:=b\lor\neg b,\qquad B:=b\land\neg b,\qquad
-z:=(T=B).
+z:=(T=B)
 ```
 
 H proves T true and B false, hence T distinct from B. Consequently z is false and distinct from T. These truth facts do not identify z with B.
@@ -26,7 +26,7 @@ A(E)&:=ET,\\
 \mathrm{FixEq}^{\rm pt}_t(E)
 &:=\forall p,q^t\,[E(p=q)=(p=q)],\\
 \mathrm{FixEq}^{\rm op}_t(E)
-&:=(\lambda p,q^t.E(p=q))=(\lambda p,q^t.p=q).
+&:=(\lambda p,q^t.E(p=q))=(\lambda p,q^t.p=q)
 \end{aligned}
 ```
 
@@ -37,7 +37,7 @@ For any qualification K(E), write
 ```math
 S[K]:=\forall p,q^t\left[
 p=q\leftrightarrow\forall E^{tt}\bigl(K(E)\to(Ep\leftrightarrow Eq)\bigr)
-\right].
+\right]
 ```
 
 Define propositional identity collapse by
@@ -47,7 +47,7 @@ Define propositional identity collapse by
 \bigl(p=q\to(p=q)=T\bigr)
 \land
 \bigl(p\ne q\to(p=q)=z\bigr)
-\right].
+\right]
 ```
 
 The outer implications and conjunction are ordinary truth-level connectives. IC_t says that identity judgments have exactly the appropriate one of the two outputs T,z. It is not the assertion that all propositions belong to that pair.
@@ -62,7 +62,7 @@ S[A\land\mathrm{CorrectEq}_t]
 \ \leftrightarrow\
 S[A\land\mathrm{FixEq}^{\rm pt}_t]
 \ \leftrightarrow\
-\mathrm{IC}_t.}
+\mathrm{IC}_t}
 ```
 
 ### Separation forces collapse
@@ -85,7 +85,7 @@ has the exact output table
 E_0(r)=
 \begin{cases}
 T,&r=T,\\
-z,&r\ne T.
+z,&r\ne T
 \end{cases}
 ```
 
@@ -94,7 +94,7 @@ In particular E_0(T)=T and E_0(z)=z.
 For any a distinct from both T and z, define the admitted observer
 
 ```math
-E_a(r):=\bigl((r=T)=((r=a)=z)\bigr).
+E_a(r):=\bigl((r=T)=((r=a)=z)\bigr)
 ```
 
 Every parenthesized judgment here is an equality between propositions, so every application of IC is at t. The calculation is entirely in identities:
@@ -111,7 +111,7 @@ For example, on the last row the outer judgment is z=T, hence has output z by IC
 E_a(r)=
 \begin{cases}
 T,&r=T\text{ or }r=a,\\
-z,&\text{otherwise}.
+z,&\text{otherwise}
 \end{cases}
 ```
 
@@ -132,7 +132,7 @@ Write Functionality for the schema
 ```math
 \forall F,G^{\sigma\rho}\left[
 (\forall x^\sigma\,Fx=Gx)\to F=G
-\right],\qquad \rho\ne e.
+\right],\qquad \rho\ne e
 ```
 
 Under the two local instances Fun_(t,t) and Fun_(t,tt), pointwise FixEq_t lifts to FixEq_t^op: first identify the q-abstractions for each p, then identify the resulting p-abstractions. Hence
@@ -140,7 +140,7 @@ Under the two local instances Fun_(t,t) and Fun_(t,tt), pointwise FixEq_t lifts 
 ```math
 \mathrm H+\mathrm{IC}_t+\mathrm{Fun}_{t,t}
  +\mathrm{Fun}_{t,tt}
-\ \vdash\ S[A\land\mathrm{FixEq}^{\rm op}_t].
+\ \vdash\ S[A\land\mathrm{FixEq}^{\rm op}_t]
 ```
 
 Conversely, strong propositional separation entails IC_t because application gives pointwise fixing and then material correctness. No converse from IC_t alone to strong propositional separation is asserted here.
@@ -155,7 +155,7 @@ For a relational type tau=sigma_1...sigma_n t, define Sep_tau[K] by replacing p,
 &\mathrm{FullSep}[A\land\mathrm{CorrectEq}_t],\\
 &\mathrm{FullSep}[A\land\mathrm{FixEq}^{\rm pt}_t],\\
 &\mathrm{FullSep}[A\land\mathrm{FixEq}^{\rm op}_t],\\
-&\mathrm{IC}_t+\mathrm{Functionality}.
+&\mathrm{IC}_t+\mathrm{Functionality}
 \end{aligned}}
 ```
 
@@ -187,7 +187,7 @@ For a finite external list Gamma containing t, Theorem 1 generalizes to
 \ \leftrightarrow\
 S[A\land\bigwedge_{\sigma\in\Gamma}\mathrm{FixEq}^{\rm pt}_\sigma]\\
 &\hspace{30mm}\leftrightarrow\
-\bigwedge_{\sigma\in\Gamma}\mathrm{IC}_\sigma.
+\bigwedge_{\sigma\in\Gamma}\mathrm{IC}_\sigma
 \end{aligned}
 ```
 
@@ -202,7 +202,7 @@ IC_t alone leaves room for arbitrarily many propositions outside {T,z}. The nest
 IC_t also does not say z=B. If this extra identity is added, IC_t is equivalent to the familiar identity-bivalence assertion
 
 ```math
-\forall p,q\,[(p=q)=T\lor(p=q)=B].
+\forall p,q\,[(p=q)=T\lor(p=q)=B]
 ```
 
 Indeed the truth of an identity judgment determines which of the true/false endpoints it can equal. Conversely identity bivalence sends the false judgment T=B to B, so z=B, and then gives both clauses of IC_t.
@@ -216,7 +216,7 @@ Define
 ```math
 N_{\rm mat}(E):=\forall p\,[E(\neg p)\leftrightarrow\neg Ep],
 \qquad
-\mathrm{DN}:=\forall p\,(\neg\neg p=p).
+\mathrm{DN}:=\forall p\,(\neg\neg p=p)
 ```
 
 **Theorem 3.** Over H,
@@ -225,7 +225,7 @@ N_{\rm mat}(E):=\forall p\,[E(\neg p)\leftrightarrow\neg Ep],
 \boxed{
 S[A\land N_{\rm mat}\land\mathrm{CorrectEq}_t]
 \ \leftrightarrow\
-\mathrm{DN}+\mathrm{IC}_t+(z=\neg T).}
+\mathrm{DN}+\mathrm{IC}_t+(z=\neg T)}
 ```
 
 This is a material-preservation theorem. No claim that its hypotheses imply full negation-operation preservation is included.
@@ -250,7 +250,7 @@ For any a outside {T,z}, use the admitted terms
 
 ```math
 G_a(r):=(\chi_a(r)\land\neg r)
-         \lor(\neg\chi_a(r)\land r).
+         \lor(\neg\chi_a(r)\land r)
 ```
 
 These expressions use only H's truth laws; no identities between Boolean operations are assumed. Their truth calculation says that G_a reverses the truth of r on the orbit {a,neg a} and leaves it unchanged off that orbit.
@@ -258,7 +258,7 @@ These expressions use only H's truth laws; no identities between Boolean operati
 More explicitly, DN and ordinary equality substitution give
 
 ```math
-\chi_a(\neg r)\leftrightarrow\chi_a(r).
+\chi_a(\neg r)\leftrightarrow\chi_a(r)
 ```
 
 Indeed neg r=a is equivalent to r=neg a, and neg r=neg a is equivalent to r=a. If this common orbit-membership condition is true, G_a(r) has the truth value of neg r while G_a(neg r) has that of r; if it is false, the two truth values are those of r and neg r, respectively. Thus

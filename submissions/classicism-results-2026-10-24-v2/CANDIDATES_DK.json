@@ -19,13 +19,13 @@
       "category": "extensionality",
       "disposition": "proposed principle record",
       "statement": "Every pair of distinct relations can be distinguished at some arguments by a suitably qualified logical observer.",
-      "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
+      "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y",
       "definitions": [
         "The schema ranges over finite argument tuples $\\bar\\sigma$, including the empty tuple, and finite lists $\\Delta$ of tested types. The following finite conjunction defines $\\mathrm{Good}_\\Delta(E)$.",
-        "$$\nE\\top=\\top,\\qquad E\\bot=\\bot.\n$$",
-        "Boolean operation identities:\n\n$$\n(\\lambda p\\, .\\,E(\\neg p))=(\\lambda p\\, .\\,\\neg Ep),\n$$\n\n$$\n(\\lambda p,q\\, .\\,E(p\\land q))=(\\lambda p,q\\, .\\,Ep\\land Eq),\n$$\n\n$$\n(\\lambda p,q\\, .\\,E(p\\lor q))=(\\lambda p,q\\, .\\,Ep\\lor Eq).\n$$",
-        "For each $\\sigma\\in\\Delta$, quantifier operation identities:\n\n$$\n(\\lambda F^{\\sigma t}\\, .\\,E(\\forall x^\\sigma\\, .\\,Fx))=(\\lambda F^{\\sigma t}\\, .\\,\\forall x^\\sigma\\, .\\,E(Fx)),\n$$\n\n$$\n(\\lambda F^{\\sigma t}\\, .\\,E(\\exists x^\\sigma\\, .\\,Fx))=(\\lambda F^{\\sigma t}\\, .\\,\\exists x^\\sigma\\, .\\,E(Fx)).\n$$",
-        "For each $\\sigma\\in\\Delta$, Equality laws:\n\n$$\n\\forall x^\\sigma\\, .\\,E(x=x),\n$$\n\n$$\n\\forall x,y^\\sigma\\, .\\,\\forall F^{\\sigma t}\\, .\\,E(x=y)\\to(E(Fx)\\to E(Fy)).\n$$",
+        "$$\nE\\top=\\top,\\qquad E\\bot=\\bot\n$$",
+        "Boolean operation identities:\n\n$$\n(\\lambda p\\, .\\,E(\\neg p))=(\\lambda p\\, .\\,\\neg Ep),\n$$\n\n$$\n(\\lambda p,q\\, .\\,E(p\\land q))=(\\lambda p,q\\, .\\,Ep\\land Eq),\n$$\n\n$$\n(\\lambda p,q\\, .\\,E(p\\lor q))=(\\lambda p,q\\, .\\,Ep\\lor Eq)\n$$",
+        "For each $\\sigma\\in\\Delta$, quantifier operation identities:\n\n$$\n(\\lambda F^{\\sigma t}\\, .\\,E(\\forall x^\\sigma\\, .\\,Fx))=(\\lambda F^{\\sigma t}\\, .\\,\\forall x^\\sigma\\, .\\,E(Fx)),\n$$\n\n$$\n(\\lambda F^{\\sigma t}\\, .\\,E(\\exists x^\\sigma\\, .\\,Fx))=(\\lambda F^{\\sigma t}\\, .\\,\\exists x^\\sigma\\, .\\,E(Fx))\n$$",
+        "For each $\\sigma\\in\\Delta$, Equality laws:\n\n$$\n\\forall x^\\sigma\\, .\\,E(x=x),\n$$\n\n$$\n\\forall x,y^\\sigma\\, .\\,\\forall F^{\\sigma t}\\, .\\,E(x=y)\\to(E(Fx)\\to E(Fy))\n$$",
         "Over C, the equality laws follow from Boolean preservation. They support the formulation over H, where OS recovers C.",
         "The uniform definition includes the endpoint identities used in the Lean certificate. The formulation omitting those identities gives an equivalent full separation theory; see the H-to-C proof."
       ],
@@ -36,7 +36,7 @@
         "Over C5 + Actuality: OS ⇔ Atomicity ⇔ ☐OS.",
         "OS does not imply Atomicity (type t), Actuality, ND, ☐OS, ☐BF or ☐Functionality.",
         "Over C5, ☐OS + ◇Actuality entails ☐Plenitude; replacing ☐OS by OS does not suffice.",
-        "Over C, the variants below extend the strict hierarchy:\n\n$$\n\\small\\text{Extensionality}\\ \\Rightarrow\\ \\mathrm{C5}+\\mathrm{Atomicity}\\ \\Rightarrow\\ \\Box\\mathrm{OS}\\ \\Rightarrow\\ \\mathrm{OS}\\ \\Rightarrow\\ \\mathrm{BF}.\n$$",
+        "Over C, the variants below extend the strict hierarchy:\n\n$$\n\\small\\text{Extensionality}\\ \\Rightarrow\\ \\mathrm{C5}+\\mathrm{Atomicity}\\ \\Rightarrow\\ \\Box\\mathrm{OS}\\ \\Rightarrow\\ \\mathrm{OS}\\ \\Rightarrow\\ \\mathrm{BF}\n$$",
         "Over C, $\\operatorname{Good}_\\Delta(E)\\leftrightarrow\\Box\\operatorname{Good}_\\Delta(E)$; requiring the qualification necessarily does not strengthen separation.",
         "Over H, OS plus uniqueness of the qualified logical observer at one fixed finite list is equivalent to Extensionality; no endpoint restriction is needed.",
         "Over C5, propositional separation by Boolean observers preserving the universal quantifier at t is equivalent to full OS.",
@@ -417,9 +417,9 @@
           "category": "extensionality",
           "disposition": "variant of parent candidate",
           "statement": "Logical observers with outputs restricted to ⊤ and ⊥ distinguish every pair of distinct relations.",
-          "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{End}(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
+          "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{End}(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y",
           "definitions": [
-            "$$\n\\operatorname{End}(E):=\\forall p^t\\, .\\,Ep=\\top\\lor Ep=\\bot.\n$$",
+            "$$\n\\operatorname{End}(E):=\\forall p^t\\, .\\,Ep=\\top\\lor Ep=\\bot\n$$",
             "The types and $\\operatorname{Good}_\\Delta$ are as above. In a full model with fixed domains and an admitted evaluation operation, an endpoint observer reports whether $p$ is true at a fixed possible world; it need not report the truth here.",
             "Endpoint-valuedness differs from $\\Box\\forall p(Ep\\leftrightarrow p)$: the latter gives the identity observer over C, whose outputs may remain contingent."
           ],
@@ -778,10 +778,10 @@
           "category": "extensionality",
           "disposition": "variant of parent candidate",
           "statement": "Logical observers with qualified inverses distinguish every pair of distinct relations.",
-          "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{Rev}_\\Delta(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
+          "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{Rev}_\\Delta(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y",
           "definitions": [
             "Put $I=\\lambda p.p$ and $(E\\circ F)(p)=E(Fp)$.",
-            "$$\n\\operatorname{Rev}_\\Delta(E):=\\exists F^{tt}\\, .\\,\\operatorname{Good}_\\Delta(F)\\land E\\circ F=I\\land F\\circ E=I.\n$$"
+            "$$\n\\operatorname{Rev}_\\Delta(E):=\\exists F^{tt}\\, .\\,\\operatorname{Good}_\\Delta(F)\\land E\\circ F=I\\land F\\circ E=I\n$$"
           ],
           "rationale": "Adds reversibility to logical separation, forcing No Pure Contingency even in atomless models; one atom or one finite-image observer yields endpoint separation.",
           "connections": [
@@ -1145,7 +1145,7 @@
             {
               "base": "C",
               "name": "Propositional separation by conjunction-preserving involutions",
-              "formal": "\\forall p,q^t\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,J(E)\\to(Ep\\leftrightarrow Eq)\\Bigr]\\to p=q.",
+              "formal": "\\forall p,q^t\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,J(E)\\to(Ep\\leftrightarrow Eq)\\Bigr]\\to p=q",
               "definitions": [
                 "conjunction-preservation",
                 "involution-qualification",
@@ -1174,9 +1174,9 @@
           "category": "coarse",
           "disposition": "Proposed observer restriction; not an active database assumption.",
           "statement": "Every proposition is an output; all tests jointly distinguish relations.",
-          "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{Onto}(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
+          "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{Onto}(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y",
           "definitions": [
-            "$$\n\\mathrm{Onto}(E):=\\forall q^t\\, .\\,\\exists p^t\\, .\\,Ep=q.\n$$"
+            "$$\n\\mathrm{Onto}(E):=\\forall q^t\\, .\\,\\exists p^t\\, .\\,Ep=q\n$$"
           ],
           "rationale": "Distinguishes current surjectivity, admitted logical recovery and reversibility at full relational scope.",
           "connections": [
@@ -1202,9 +1202,9 @@
           "category": "coarse",
           "disposition": "Proposed observer restriction; not an active database assumption.",
           "statement": "Each observer can be undone by an admitted logical observer qualified at the same types.",
-          "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{Left}_\\Delta(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
+          "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{Left}_\\Delta(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y",
           "definitions": [
-            "$$\n\\mathrm{Left}_\\Delta(E):=\\exists F^{tt}\\, .\\,\\mathrm{Good}_\\Delta(F)\\land F\\circ E=I.\n$$"
+            "$$\n\\mathrm{Left}_\\Delta(E):=\\exists F^{tt}\\, .\\,\\mathrm{Good}_\\Delta(F)\\land F\\circ E=I\n$$"
           ],
           "rationale": "Distinguishes current surjectivity, admitted logical recovery and reversibility at full relational scope.",
           "connections": [
@@ -1559,9 +1559,9 @@
           "id": "injective-logical-observer-separation-r",
           "name": "Injective Logical Observer Separation",
           "statement": "Currently injective logical observers distinguish every pair of distinct relations. Write InjSep for the full schema.",
-          "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{Inj}(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
+          "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{Inj}(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y",
           "definitions": [
-            "$$\n\\operatorname{Inj}(E):=\\forall p,q^t\\, .\\,Ep=Eq\\to p=q.\n$$"
+            "$$\n\\operatorname{Inj}(E):=\\forall p,q^t\\, .\\,Ep=Eq\\to p=q\n$$"
           ],
           "rationale": "Separates current injectivity from an admitted qualified inverse; over C5 it gives the exact intermediate native-necessity separation theory.",
           "connections": [
@@ -1912,9 +1912,9 @@
           "id": "native-necessity-logical-observer-separation-r",
           "name": "Logical Observer Separation with ☐ Preservation",
           "statement": "Logical observers commuting with native necessity distinguish every pair of distinct relations. Write BoxSep for the full schema.",
-          "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{BoxComm}(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
+          "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{BoxComm}(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y",
           "definitions": [
-            "$$\n\\operatorname{BoxComm}(E):=(\\lambda p^t.E(\\Box p))=(\\lambda p^t.\\Box(Ep)),\\qquad\\Box p:=(p=\\top).\n$$"
+            "$$\n\\operatorname{BoxComm}(E):=(\\lambda p^t.E(\\Box p))=(\\lambda p^t.\\Box(Ep)),\\qquad\\Box p:=(p=\\top)\n$$"
           ],
           "rationale": "Gives necessary Barcan and .2, with exact strictness and incomparability results distinguishing this modal restriction from surjectivity and inverse restrictions.",
           "connections": [
@@ -1935,10 +1935,10 @@
           "category": "extensionality",
           "disposition": "variant of parent candidate",
           "statement": "Logical observers with finitely many outputs distinguish every pair of distinct relations.",
-          "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{FinIm}(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
+          "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{FinIm}(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y",
           "definitions": [
             "Put $\\operatorname{Im}_E=\\lambda r^t.\\exists p^t(Ep=r)$. Then",
-            "$$\n\\operatorname{FinIm}(E):=\\exists Z^{(tt)t}\\, .\\,\\operatorname{FiniteCardinality}_t(Z)\\land Z(\\operatorname{Im}_E).\n$$",
+            "$$\n\\operatorname{FinIm}(E):=\\exists Z^{(tt)t}\\, .\\,\\operatorname{FiniteCardinality}_t(Z)\\land Z(\\operatorname{Im}_E)\n$$",
             "This uses the [database’s Frege finiteness definition](source/topics/classicism/background.md#notation). It is a single finitary condition, with no common bound on the number of outputs."
           ],
           "rationale": "Strictly between ordinary and endpoint separation; together with C5, equivalent to endpoint separation.",
@@ -2613,9 +2613,9 @@
           "id": "idempotent-native-necessity-logical-observer-separation-r",
           "name": "Idempotent Logical Observer Separation with ☐ Preservation",
           "statement": "Idempotent logical observers commuting with native necessity distinguish every pair of distinct relations. Write IdemBoxSep for the full schema.",
-          "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{BoxComm}(E)\\land E\\circ E=E\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
+          "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{BoxComm}(E)\\land E\\circ E=E\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y",
           "definitions": [
-            "$$\n\\operatorname{BoxComm}(E):=(\\lambda p^t.E(\\Box p))=(\\lambda p^t.\\Box(Ep)),\\qquad\\Box p:=(p=\\top).\n$$"
+            "$$\n\\operatorname{BoxComm}(E):=(\\lambda p^t.E(\\Box p))=(\\lambda p^t.\\Box(Ep)),\\qquad\\Box p:=(p=\\top)\n$$"
           ],
           "rationale": "Idempotence becomes substantive with native-necessity preservation; finite-frame joins characterize the qualification, and adding C5 gives exactly Extensionality.",
           "connections": [
@@ -2961,9 +2961,9 @@
           "id": "bounded-stabilization-native-necessity-logical-observer-separation-r",
           "name": "Logical Observer Separation with Bounded Stabilization and ☐ Preservation",
           "statement": "For each fixed external integer r≥1, logical observers commuting with native necessity and satisfying E^(r+1)=E^r distinguish every pair of distinct relations. Write B_r for the full schema.",
-          "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{BoxComm}(E)\\land E^{r+1}=E^r\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
+          "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{BoxComm}(E)\\land E^{r+1}=E^r\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y",
           "definitions": [
-            "$$\n\\operatorname{BoxComm}(E):=(\\lambda p^t.E(\\Box p))=(\\lambda p^t.\\Box(Ep)),\\qquad\\Box p:=(p=\\top).\n$$",
+            "$$\n\\operatorname{BoxComm}(E):=(\\lambda p^t.E(\\Box p))=(\\lambda p^t.\\Box(Ep)),\\qquad\\Box p:=(p=\\top)\n$$",
             "The integer $r\\ge1$ is a fixed external index. Powers of $E$ are finite term iterates; the schema introduces no object-language quantifier over bounds."
           ],
           "rationale": "A strict unbounded family refining native-necessity separation, with exact finite-frame witnesses and one infinite model escaping every fixed bound.",
@@ -2982,9 +2982,9 @@
           "category": "extensionality",
           "disposition": "variant of parent candidate",
           "statement": "Factive logical observers distinguish every pair of distinct relations.",
-          "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{Fact}(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
+          "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{Fact}(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y",
           "definitions": [
-            "$$\n\\operatorname{Fact}(E):=\\forall p^t\\, .\\,Ep\\to p.\n$$",
+            "$$\n\\operatorname{Fact}(E):=\\forall p^t\\, .\\,Ep\\to p\n$$",
             "The types and $\\operatorname{Good}_\\Delta$ are as above. Negation preservation and factivity imply $\\forall p(Ep\\leftrightarrow p)$.",
             "Under Extensionality, truth is endpoint-valued: every true proposition is $\\top$ and every false proposition is $\\bot$, so the identity observer alone separates all propositions."
           ],
@@ -3661,9 +3661,9 @@
           "id": "central-logical-observer-separation-r",
           "name": "Central Logical Observer Separation",
           "statement": "Observers commuting with every logical observer at the same finite qualification list distinguish every pair of distinct relations. Write CentreSep for the full schema.",
-          "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{Cent}_\\Delta(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
+          "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{Cent}_\\Delta(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y",
           "definitions": [
-            "$$\n\\operatorname{Cent}_\\Delta(E):=\\operatorname{Good}_\\Delta(E)\\land\\forall G^{tt}\\,[\\operatorname{Good}_\\Delta(G)\\to E\\circ G=G\\circ E].\n$$",
+            "$$\n\\operatorname{Cent}_\\Delta(E):=\\operatorname{Good}_\\Delta(E)\\land\\forall G^{tt}\\,[\\operatorname{Good}_\\Delta(G)\\to E\\circ G=G\\circ E]\n$$",
             "Commutation is identity of whole operations, and ranges over every admitted same-list Good observer. A chosen pairwise commuting family is a different condition."
           ],
           "rationale": "Characterizes Extensionality over C5 while retaining a distinct weaker branch over H, with an exact finite-poset classification and separating models.",
@@ -3835,9 +3835,9 @@
       "category": "choice",
       "disposition": "proposed principle record",
       "statement": "Every surjective operation between relational types has a pointwise right inverse.",
-      "formal": "\\forall f^{\\sigma\\tau}\\, .\\,\\operatorname{Surj}(f)\\to\\exists g^{\\tau\\sigma}\\, .\\,\\forall y^\\tau\\, .\\,f(gy)=y\\qquad(\\sigma,\\tau\\ne e).",
+      "formal": "\\forall f^{\\sigma\\tau}\\, .\\,\\operatorname{Surj}(f)\\to\\exists g^{\\tau\\sigma}\\, .\\,\\forall y^\\tau\\, .\\,f(gy)=y\\qquad(\\sigma,\\tau\\ne e)",
       "definitions": [
-        "Here\n\n$$\n\\operatorname{Surj}(f):=\\forall y^\\tau\\, .\\,\\exists x^\\sigma\\, .\\,fx=y.\n$$"
+        "Here\n\n$$\n\\operatorname{Surj}(f):=\\forall y^\\tau\\, .\\,\\exists x^\\sigma\\, .\\,fx=y\n$$"
       ],
       "rationale": "Isolates the extra ingredient which, with Actuality, is exactly Functional Choice; countermodels show that neither conjunct can be omitted.",
       "connections": [
@@ -3870,7 +3870,7 @@
           "category": "choice",
           "disposition": "variant of parent candidate",
           "statement": "Every actually surjective operation between relational types has a necessarily correct right inverse.",
-          "formal": "\\forall f^{\\sigma\\tau}\\, .\\,\\operatorname{Surj}(f)\\to\\exists g^{\\tau\\sigma}\\, .\\,\\Box\\forall y^\\tau\\, .\\,f(gy)=y\\qquad(\\sigma,\\tau\\ne e).",
+          "formal": "\\forall f^{\\sigma\\tau}\\, .\\,\\operatorname{Surj}(f)\\to\\exists g^{\\tau\\sigma}\\, .\\,\\Box\\forall y^\\tau\\, .\\,f(gy)=y\\qquad(\\sigma,\\tau\\ne e)",
           "definitions": [
             "$\\operatorname{Surj}$ is as defined under Sections of Surjections. The antecedent asserts actual surjectivity; the inverse equation holds necessarily."
           ],
@@ -3908,14 +3908,14 @@
       "category": "choice",
       "disposition": "proposed principle record",
       "statement": "Every injective operation between relational types has a pointwise left inverse.",
-      "formal": "\\forall f^{\\sigma\\tau}\\, .\\,\\operatorname{Inj}(f)\\to\\exists g^{\\tau\\sigma}\\, .\\,\\forall x^\\sigma\\, .\\,g(fx)=x\\qquad(\\sigma,\\tau\\ne e).",
+      "formal": "\\forall f^{\\sigma\\tau}\\, .\\,\\operatorname{Inj}(f)\\to\\exists g^{\\tau\\sigma}\\, .\\,\\forall x^\\sigma\\, .\\,g(fx)=x\\qquad(\\sigma,\\tau\\ne e)",
       "definitions": [
-        "Here\n\n$$\n\\operatorname{Inj}(f):=\\forall x,y^\\sigma\\, .\\,fx=fy\\to x=y.\n$$"
+        "Here\n\n$$\n\\operatorname{Inj}(f):=\\forall x,y^\\sigma\\, .\\,fx=fy\\to x=y\n$$"
       ],
       "rationale": "Gives the matching decomposition of Plenitude; requiring necessarily correct retractions instead gives exactly C5.",
       "connections": [
         "Over C: Plenitude ⇔ Actuality + Retractions of Injections.",
-        "Requiring a necessarily correct inverse gives exactly C5 over C:\n\n$$\n\\forall f^{\\sigma\\tau}\\, .\\,\\operatorname{Inj}(f)\\to\\exists g^{\\tau\\sigma}\\, .\\,\\Box\\forall x^\\sigma\\, .\\,g(fx)=x\\qquad(\\sigma,\\tau\\ne e).\n$$"
+        "Requiring a necessarily correct inverse gives exactly C5 over C:\n\n$$\n\\forall f^{\\sigma\\tau}\\, .\\,\\operatorname{Inj}(f)\\to\\exists g^{\\tau\\sigma}\\, .\\,\\Box\\forall x^\\sigma\\, .\\,g(fx)=x\\qquad(\\sigma,\\tau\\ne e)\n$$"
       ],
       "sources": [
         {
@@ -3945,9 +3945,9 @@
       "category": "lattice",
       "disposition": "proposed principle record",
       "statement": "One individual predicate can possibly agree with every admitted rigid individual property.",
-      "formal": "\\exists V^{et}\\, .\\,\\forall X^{et}\\, .\\,\\operatorname{Rigid}(X)\\to\\Diamond c_V(X).",
+      "formal": "\\exists V^{et}\\, .\\,\\forall X^{et}\\, .\\,\\operatorname{Rigid}(X)\\to\\Diamond c_V(X)",
       "definitions": [
-        "For $V,X^{et}$, put\n\n$$\nc_V(X):=\\forall x^e\\, .\\,Vx\\leftrightarrow Xx.\n$$\n\nProfiles range over admitted rigid individual properties. This differs from the database’s Actual Profile principle."
+        "For $V,X^{et}$, put\n\n$$\nc_V(X):=\\forall x^e\\, .\\,Vx\\leftrightarrow Xx\n$$\n\nProfiles range over admitted rigid individual properties. This differs from the database’s Actual Profile principle."
       ],
       "rationale": "Adds realizable individual profiles beyond ☐Functional Choice, with exact full-model cardinality tests and a diagonal obstruction at relational input types.",
       "connections": [
@@ -3981,7 +3981,7 @@
           "category": "lattice",
           "disposition": "variant of parent candidate",
           "statement": "One individual predicate has an atomic agreement proposition for each admitted rigid individual property.",
-          "formal": "\\exists V^{et}\\, .\\,\\forall X^{et}\\, .\\,\\operatorname{Rigid}(X)\\to\\operatorname{Atom}_t(c_V(X)).",
+          "formal": "\\exists V^{et}\\, .\\,\\forall X^{et}\\, .\\,\\operatorname{Rigid}(X)\\to\\operatorname{Atom}_t(c_V(X))",
           "definitions": [
             "The agreement proposition $c_V(X)$ is defined under Individual Profile Realization. Profiles again range over admitted rigid individual properties."
           ],
@@ -4019,7 +4019,7 @@
       "category": "infinity",
       "disposition": "proposed principle record",
       "statement": "A numerical quantity necessarily takes exactly one natural value, and every current natural value is possible.",
-      "formal": "\\exists L^{\\nu_\\kappa t}\\, .\\,\\bigl(\\Box\\exists!n^{\\nu_\\kappa}\\, .\\,\\mathbb N_\\kappa n\\land Ln\\bigr) \\land\\bigl(\\forall n^{\\nu_\\kappa}\\, .\\,\\mathbb N_\\kappa n\\to\\Diamond Ln\\bigr).",
+      "formal": "\\exists L^{\\nu_\\kappa t}\\, .\\,\\bigl(\\Box\\exists!n^{\\nu_\\kappa}\\, .\\,\\mathbb N_\\kappa n\\land Ln\\bigr) \\land\\bigl(\\forall n^{\\nu_\\kappa}\\, .\\,\\mathbb N_\\kappa n\\to\\Diamond Ln\\bigr)",
       "definitions": [
         "The counting type $\\kappa$ determines the Frege numerical type $\\nu_\\kappa=(\\kappa t)t$, with finite-cardinality predicate $\\mathbb N_\\kappa$. The principle is a schema in $\\kappa$."
       ],
@@ -4049,10 +4049,10 @@
       "category": "extensionality",
       "disposition": "proposed family principle record",
       "statement": "An admitted family of pairwise commuting logical observers collectively distinguishes every pair of distinct relations.",
-      "formal": "\\mathrm{CoSep}_{\\bar\\sigma,\\Delta}:=\\exists K^{(tt)t}\\, .\\,\\bigl(\\forall E^{tt}\\, .\\,KE\\to\\mathrm{Good}_\\Delta(E)\\bigr)\\land\\bigl(\\forall E,F^{tt}\\, .\\,(KE\\land KF)\\to E\\circ F=F\\circ E\\bigr)\\land\\mathrm{Sep}_{\\bar\\sigma}(K).",
+      "formal": "\\mathrm{CoSep}_{\\bar\\sigma,\\Delta}:=\\exists K^{(tt)t}\\, .\\,\\bigl(\\forall E^{tt}\\, .\\,KE\\to\\mathrm{Good}_\\Delta(E)\\bigr)\\land\\bigl(\\forall E,F^{tt}\\, .\\,(KE\\land KF)\\to E\\circ F=F\\circ E\\bigr)\\land\\mathrm{Sep}_{\\bar\\sigma}(K)",
       "scope": "Each relational type and finite qualification list gives one instance. Over C5 it suffices to separate propositions with N(E) ∧ Q_t(E).",
       "definitions": [
-        "Here $\\mathrm{Sep}_{\\bar\\sigma}(K)$ means\n\n$$\n\\mathrm{Sep}_{\\bar\\sigma}(K):=\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,KE\\to\\forall\\bar x^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar x])\\leftrightarrow E(Y[\\bar x])\\bigr)\\Bigr]\\to X=Y.\n$$",
+        "Here $\\mathrm{Sep}_{\\bar\\sigma}(K)$ means\n\n$$\n\\mathrm{Sep}_{\\bar\\sigma}(K):=\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,KE\\to\\forall\\bar x^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar x])\\leftrightarrow E(Y[\\bar x])\\bigr)\\Bigr]\\to X=Y\n$$",
         "Good has the qualification of Logical Observer Separation above. Over C it requires preservation of conjunction, negation and the tested universal quantifiers as whole-operation identities."
       ],
       "rationale": "Adds the modal axiom .2 to OS; its stable idempotent form exactly characterizes Atomicity over C5.",
@@ -4095,7 +4095,7 @@
       {
         "id": "truth-test",
         "name": "Truth Test",
-        "formal": "\\exists f^{tt}\\, .\\,\\forall p^t\\, .\\,p\\leftrightarrow fp=f\\top.",
+        "formal": "\\exists f^{tt}\\, .\\,\\forall p^t\\, .\\,p\\leftrightarrow fp=f\\top",
         "equivalent_to": "Actuality",
         "targets": [
           "actuality"
@@ -4104,7 +4104,7 @@
       {
         "id": "correct-evaluation",
         "name": "Correct Evaluation",
-        "formal": "\\exists E^{tt}\\, .\\,\\operatorname{Eval}(E).",
+        "formal": "\\exists E^{tt}\\, .\\,\\operatorname{Eval}(E)",
         "equivalent_to": "ND + Actuality",
         "targets": [
           "distinctness-necessary-r",
@@ -4114,7 +4114,7 @@
       {
         "id": "necessarily-bivalent-evaluation",
         "name": "Correct Evaluation with ☐Bivalence",
-        "formal": "\\exists E^{tt}\\, .\\,\\operatorname{Eval}(E)\\land\\bigl(\\Box\\forall p^t\\, .\\,Ep=\\top\\lor Ep=\\bot\\bigr).",
+        "formal": "\\exists E^{tt}\\, .\\,\\operatorname{Eval}(E)\\land\\bigl(\\Box\\forall p^t\\, .\\,Ep=\\top\\lor Ep=\\bot\\bigr)",
         "equivalent_to": "Gallin Extensional Comprehension; equivalently ND + Strong Actuality",
         "targets": [
           "gallin-extensional-comprehension-r",
@@ -4125,7 +4125,7 @@
       {
         "id": "unique-correct-evaluation",
         "name": "Unique Correct Evaluation",
-        "formal": "\\exists!E^{tt}\\, .\\,\\operatorname{Eval}(E).",
+        "formal": "\\exists!E^{tt}\\, .\\,\\operatorname{Eval}(E)",
         "equivalent_to": "C5 + Actuality",
         "targets": [
           "necessary-distinctness-necessary-r",
@@ -4135,7 +4135,7 @@
       {
         "id": "necessary-correct-evaluation",
         "name": "☐Correct Evaluation",
-        "formal": "\\Box\\exists E^{tt}\\, .\\,\\operatorname{Eval}(E).",
+        "formal": "\\Box\\exists E^{tt}\\, .\\,\\operatorname{Eval}(E)",
         "equivalent_to": "☐Plenitude",
         "targets": [
           "necessary-plenitude-r"
@@ -4144,7 +4144,7 @@
       {
         "id": "uniform-correct-evaluation",
         "name": "Uniform Correct Evaluation",
-        "formal": "\\exists E^{tt}\\, .\\,\\Box\\operatorname{Eval}(E).",
+        "formal": "\\exists E^{tt}\\, .\\,\\Box\\operatorname{Eval}(E)",
         "equivalent_to": "Extensionality",
         "targets": [
           "extensionality-r"
@@ -4172,7 +4172,7 @@
   "alternative_formulations": [
     {
       "name": "Diagonal Character Separation",
-      "statement": "Diagonal Character Separation is equivalent over C to ND (type $t$) + Atomicity (type $t$). Put\n\n$$\nw_E:=\\forall p^t\\, .\\,Ep\\to p,\n$$\n\n$$\nD(E):=E\\bot=\\bot\\land(\\forall p^t\\, .\\,Ep=\\top\\lor Ep=\\bot) \\land(\\forall p^t\\, .\\,E(\\neg p)=\\neg(Ep))\\land E(w_E).\n$$\n\nThe separation principle is",
+      "statement": "Diagonal Character Separation is equivalent over C to ND (type $t$) + Atomicity (type $t$). Put\n\n$$\nw_E:=\\forall p^t\\, .\\,Ep\\to p,\n$$\n\n$$\nD(E):=E\\bot=\\bot\\land(\\forall p^t\\, .\\,Ep=\\top\\lor Ep=\\bot) \\land(\\forall p^t\\, .\\,E(\\neg p)=\\neg(Ep))\\land E(w_E)\n$$\n\nThe separation principle is",
       "sources": [
         {
           "path": "proofs/diagonal-characters.md",
@@ -4185,7 +4185,7 @@
         "DIAGONAL-CHARACTERS"
       ],
       "formulas": [
-        "\\forall p,q^t\\, .\\,p=q\\leftrightarrow\\forall E^{tt}\\, .\\,D(E)\\to(Ep\\leftrightarrow Eq)."
+        "\\forall p,q^t\\, .\\,p=q\\leftrightarrow\\forall E^{tt}\\, .\\,D(E)\\to(Ep\\leftrightarrow Eq)"
       ],
       "certified_scope": null
     },
@@ -4204,7 +4204,7 @@
         "BOOLEAN-RETRACTIONS-CHOICE"
       ],
       "formulas": [
-        "\\forall A^{\\tau t}\\, .\\,\\operatorname{CBA}_\\tau(A)\\to\\exists r^{\\tau\\tau}\\, .\\,\\bigl[\\operatorname{CBHom}_\\tau(r)\\land\\forall p^\\tau\\, A(rp) \\land\\forall q^\\tau\\,(Aq\\to rq=q)\\bigr]."
+        "\\forall A^{\\tau t}\\, .\\,\\operatorname{CBA}_\\tau(A)\\to\\exists r^{\\tau\\tau}\\, .\\,\\bigl[\\operatorname{CBHom}_\\tau(r)\\land\\forall p^\\tau\\, A(rp) \\land\\forall q^\\tau\\,(Aq\\to rq=q)\\bigr]"
       ]
     }
   ],
@@ -4222,7 +4222,7 @@
       "name": "Infinitary Comprehension",
       "disposition": "infinitary extension; separate from finitary explorer principles",
       "statement": "Every infinitary formula defines a relation with the same truth conditions at every accessible point.",
-      "formal": "\\exists R^{\\sigma_1\\cdots\\sigma_n t}\\, .\\,\\Box\\forall x_1\\cdots x_n\\, .\\,\\bigl(R[\\bar x]\\leftrightarrow A\\bigr).",
+      "formal": "\\exists R^{\\sigma_1\\cdots\\sigma_n t}\\, .\\,\\Box\\forall x_1\\cdots x_n\\, .\\,\\bigl(R[\\bar x]\\leftrightarrow A\\bigr)",
       "scope": "A is any classical formula built using arbitrary set-sized well-founded conjunctions and disjunctions, with any set-sized family of typed parameters; R is not free in A. Each instance holds for every simultaneous parameter assignment. The argument tuple is finite and may be empty.",
       "rationale": "It extends the ordinary comprehension schema directly and characterizes full standard models with C5.",
       "connections": [

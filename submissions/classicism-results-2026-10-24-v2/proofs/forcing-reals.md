@@ -24,7 +24,7 @@ for which
 \|\mathrm{Real}_{et}(\mathfrak R_B)\|=1_B,
 \qquad
 \|\mathrm{CH}(\mathfrak R_B)\|
- =\|\mathrm{CH}\|_{M^B}.
+ =\|\mathrm{CH}\|_{M^B}
 \tag{1}
 ```
 
@@ -37,7 +37,7 @@ lottery family therefore gives, at its root,
  (\mathrm{Real}_{et}(\mathfrak R)\land\mathrm{CH}(\mathfrak R))
 \;\land\;
 \Diamond\exists\mathfrak R\,
- (\mathrm{Real}_{et}(\mathfrak R)\land\neg\mathrm{CH}(\mathfrak R)).
+ (\mathrm{Real}_{et}(\mathfrak R)\land\neg\mathrm{CH}(\mathfrak R))
 \tag{2}
 ```
 
@@ -107,7 +107,7 @@ raw functions as underlying elements, with the source's partial identity:
 ```math
  f\sim_p g\quad\Longleftrightarrow\quad
  \forall q\le p\ \forall a,b\,
- (a\sim_q b\Rightarrow f(a)\sim_q g(b)).
+ (a\sim_q b\Rightarrow f(a)\sim_q g(b))
 \tag{3}
 ```
 
@@ -125,7 +125,7 @@ Their identity values are
 ```math
  \delta_e(n,m)=\begin{cases}1&n=m,\\0&n\ne m,\end{cases}
  \qquad
- \delta_\sigma(s,t)=\bigwedge_{n\in\omega}(s(n)\leftrightarrow t(n)).
+ \delta_\sigma(s,t)=\bigwedge_{n\in\omega}(s(n)\leftrightarrow t(n))
 \tag{4}
 ```
 
@@ -138,7 +138,7 @@ F:A -> B. Iterating (3) gives
  F\text{ exists at }p
  \quad\Longleftrightarrow\quad
  p\wedge\delta_A(a,c)\le F(a)\leftrightarrow F(c)
- \quad\text{for all }a,c\in A.
+ \quad\text{for all }a,c\in A
 \tag{5}
 ```
 
@@ -153,7 +153,7 @@ Define the existence value
 
 ```math
  \epsilon(F)=\bigwedge_{a,c\in A}
-  \bigl(\delta_A(a,c)\Rightarrow(F(a)\leftrightarrow F(c))\bigr).
+  \bigl(\delta_A(a,c)\Rightarrow(F(a)\leftrightarrow F(c))\bigr)
 \tag{6}
 ```
 
@@ -162,7 +162,7 @@ epsilon(F)=1. On arbitrary raw relations the partial identity value is
 
 ```math
  \delta(F,H)=\epsilon(F)\wedge\epsilon(H)
-              \wedge\bigwedge_{a\in A}(F(a)\leftrightarrow H(a)).
+              \wedge\bigwedge_{a\in A}(F(a)\leftrightarrow H(a))
 \tag{7}
 ```
 
@@ -174,7 +174,7 @@ Only on globally existing relations can the existence factors be omitted.
 **Local totalization.** If p <= epsilon(F), put
 
 ```math
- F^p(a)=p\wedge F(a).
+ F^p(a)=p\wedge F(a)
 \tag{8}
 ```
 
@@ -189,7 +189,7 @@ For a globally existing assignment of the other parameters, it is equivalent
 to
 
 ```math
- p\le\bigwedge_{H\in\mathrm{Ext}(A)}\llbracket\phi(H)\rrbracket.
+ p\le\bigwedge_{H\in\mathrm{Ext}(A)}\llbracket\phi(H)\rrbracket
 \tag{9}
 ```
 
@@ -206,7 +206,7 @@ about a raw relation outside its existence region is needed.
 For s in U_sigma use the name
 
 ```math
- \dot s=\{(\check n,s(n)):n\in\omega\}.
+ \dot s=\{(\check n,s(n)):n\in\omega\}
 \tag{10}
 ```
 
@@ -214,7 +214,7 @@ The recursive membership and equality clauses give
 
 ```math
  \|\check n\in\dot s\|=s(n),\qquad
- \|\dot s=\dot t\|=\delta_\sigma(s,t).
+ \|\dot s=\dot t\|=\delta_\sigma(s,t)
 \tag{11}
 ```
 
@@ -229,7 +229,7 @@ For a in A let dot-a be the finite tuple of its coordinate names, using
 check-n for individual coordinates. Define
 
 ```math
- \dot K_A=\{(\dot a,1):a\in A\}.
+ \dot K_A=\{(\dot a,1):a\in A\}
 \tag{12}
 ```
 
@@ -237,7 +237,7 @@ This is forced to be the corresponding product of check-omega and the
 internal powerset of check-omega. Its members satisfy Boolean coverage:
 
 ```math
- \|u\in\dot K_A\|=\bigvee_{a\in A}\|u=\dot a\|.
+ \|u\in\dot K_A\|=\bigvee_{a\in A}\|u=\dot a\|
 \tag{13}
 ```
 
@@ -252,7 +252,7 @@ an antichain need not equal one fixed numeral with value one.
 For F in Ext(A) define a subset name
 
 ```math
- \dot F=\{(\dot a,F(a)):a\in A\}.
+ \dot F=\{(\dot a,F(a)):a\in A\}
 \tag{14}
 ```
 
@@ -261,7 +261,7 @@ Then dot-F is forced to be a subset of dot-K_A, and
 ```math
  \|\dot c\in\dot F\|
  =\bigvee_{a\in A}\bigl(F(a)\wedge\delta_A(a,c)\bigr)
- =F(c).
+ =F(c)
 \tag{15}
 ```
 
@@ -318,7 +318,7 @@ join over represented tuples. Explicitly, if c is below every value
 ```math
  c\wedge\|u\in\dot K_A\|
  =\bigvee_a(c\wedge\|u=\dot a\|)
- \le\|\phi(u)\|.
+ \le\|\phi(u)\|
 ```
 
 The converse uses each dot-a as an instance. For relation quantifiers,
@@ -340,7 +340,7 @@ The corresponding tuple has exactly the types required by the map:
 ```math
  \mathfrak R_B=(X^{\sigma t},\le^{\sigma\sigma t},
  +^{\sigma\sigma\sigma t},\times^{\sigma\sigma\sigma t},
- 0^\sigma,1^\sigma,N^{\sigma t}).
+ 0^\sigma,1^\sigma,N^{\sigma t})
 ```
 
 The ZFC construction of the Dedekind reals gives a complete ordered field,
@@ -392,7 +392,7 @@ existing ground representatives can have new generic evaluations.
 For a family (B_i), the full cloud has propositional algebra
 
 ```math
- C=2\times\prod_iB_i.
+ C=2\times\prod_iB_i
 ```
 
 Let pi_i:C -> B_i be projection and j_i:B_i -> C insert an element in
@@ -411,7 +411,7 @@ component i; individual coordinates are unchanged.
 If F is a globally extensional component relation, lift it by
 
 ```math
- \widehat F(\vec a)=j_i\bigl(F(\pi_i\vec a)\bigr).
+ \widehat F(\vec a)=j_i\bigl(F(\pi_i\vec a)\bigr)
 \tag{18}
 ```
 
@@ -424,7 +424,7 @@ exactly the tests in the iterated form of (3).
 Conversely, if H is a cloud relation existing at p in component i, put
 
 ```math
- f(\vec s)=\pi_i H(j_i\vec s).
+ f(\vec s)=\pi_i H(j_i\vec s)
 \tag{19}
 ```
 

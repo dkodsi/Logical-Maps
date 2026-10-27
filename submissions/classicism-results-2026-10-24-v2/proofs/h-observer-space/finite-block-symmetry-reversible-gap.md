@@ -10,7 +10,7 @@ Consequently the established implication is strict:
 \boxed{\mathrm{Rev}\ \Longrightarrow\
 \mathrm{C5}+\Box\mathrm{OS},
 \qquad
-\mathrm{C5}+\Box\mathrm{OS}\ \not\Longrightarrow\ \mathrm{Rev}.}
+\mathrm{C5}+\Box\mathrm{OS}\ \not\Longrightarrow\ \mathrm{Rev}}
 \tag{1}
 ```
 
@@ -28,7 +28,7 @@ Write $`\mathcal B`$ and $`\mathcal C`$ for these respective block partitions. D
 ```math
 G:=\prod_{B\in\mathcal B}\mathrm{Sym}(B),
 \qquad
-H:=\prod_{C\in\mathcal C}\mathrm{Sym}(C).
+H:=\prod_{C\in\mathcal C}\mathrm{Sym}(C)
 \tag{2}
 ```
 
@@ -45,7 +45,7 @@ There exist bijections j:W→V and k:V→W such that
 ```math
 jGj^{-1}\subseteq H,
 \qquad
-kHk^{-1}\subseteq G.
+kHk^{-1}\subseteq G
 \tag{3}
 ```
 
@@ -103,7 +103,7 @@ For A:(et)t put
 \mathrm{DisjointSix}(A):={}&
 \forall X\,(AX\to\mathrm{Six}(X))\\
 &\land\forall X,Y\,[AX\land AY\land X\ne Y
-\to\forall x\,\neg(Xx\land Yx)].
+\to\forall x\,\neg(Xx\land Yx)]
 \end{aligned}
 ```
 
@@ -116,7 +116,7 @@ Define the closed pure sentence
 \exists R^{(et)(et)}\forall X^{et}\bigl(AX\to{}&
 (\exists x\,R(X,x))\\
 &\land\forall x\,(R(X,x)\to Xx)\\
-&\land\exists x\,(Xx\land\neg R(X,x))\bigr)\bigr].
+&\land\exists x\,(Xx\land\neg R(X,x))\bigr)\bigr]
 \end{aligned}
 \tag{4}
 ```
@@ -130,7 +130,7 @@ Disjointness is stated for distinct intensional family members. Since each membe
 For each six-block B∈$`\mathcal B`$, let X_B be the canonical rigid property whose extension at h:W→Y is h(B). Formally, its truth profile is
 
 ```math
-X_B(h,x)\quad\Longleftrightarrow\quad x\in h(B).
+X_B(h,x)\quad\Longleftrightarrow\quad x\in h(B)
 ```
 
 It is pinned by B and symmetric at every target, so X_B is admitted. For g∈G, transport gives ρ(g)X_B=X_{g(B)}=X_B, because G preserves B setwise. The current family consisting of all these X_B is therefore G-invariant. The lemma of §4, with empty S, gives an admitted A with exactly that current extension. It satisfies DisjointSix(A).
@@ -146,7 +146,7 @@ Let A be any admitted object satisfying DisjointSix(A) at V. Choose a finite pin
 Call the six-element current extensions of A's members its cells. They are pairwise disjoint. We first show:
 
 ```math
-\text{If a cell D meets a block C disjoint from S0, then }C\subseteq D.
+\text{If a cell D meets a block C disjoint from S0, then }C\subseteq D
 \tag{5}
 ```
 
@@ -167,13 +167,13 @@ The sentence MC₆ is closed and pure. It is true at V and false at W, and there
 By [Reversible logical separation implies No Pure Contingency](reversible-separation-and-pure-truth.md), full Rev consequently fails at both objects. Together with §§1–3, this gives the announced atomless countermodel
 
 ```math
-\mathrm{C5}+\Box\mathrm{OS}+\neg\mathrm{Rev}.
+\mathrm{C5}+\Box\mathrm{OS}+\neg\mathrm{Rev}
 ```
 
 There is an explicit failed propositional instance. Take
 
 ```math
-\Delta=\{t,e,et,(et)t,(et)(et)\}.
+\Delta=\{t,e,et,(et)t,(et)(et)\}
 \tag{6}
 ```
 

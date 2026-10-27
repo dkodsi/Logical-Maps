@@ -30,7 +30,7 @@ Define the typed domains recursively. Individuals form a singleton, propositions
 
 
 ```math
-(g\cdot f)(x)=g\cdot f(g^{-1}\cdot x).
+(g\cdot f)(x)=g\cdot f(g^{-1}\cdot x)
 ```
 
 
@@ -44,7 +44,7 @@ For a supported predicate F:D_σ→B, its range is H_P-invariant for a support P
 ```math
 \bigwedge_xF(x)\in U\iff\forall x\,[F(x)\in U],
 \qquad
-\bigvee_xF(x)\in U\iff\exists x\,[F(x)\in U].
+\bigvee_xF(x)\in U\iff\exists x\,[F(x)\in U]
 ```
 
 
@@ -73,7 +73,7 @@ Adjoin a new root r to the algebraic component of Section 2. A root individual h
 
 ```math
 (R,a),\qquad
-R\subseteq\prod_{j=1}^nD_{\sigma_j}(r),\quad a\in D_\tau.
+R\subseteq\prod_{j=1}^nD_{\sigma_j}(r),\quad a\in D_\tau
 ```
 
 
@@ -85,7 +85,7 @@ For every ultrafilter U on B define an admitted root operation
 
 
 ```math
-E_U(\epsilon,b)=(\mathbf1_{b\in U},b).
+E_U(\epsilon,b)=(\mathbf1_{b\in U},b)
 ```
 
 
@@ -114,7 +114,7 @@ C+OS+\Box BC_t+\Box BF_{\rm all}
  +\mathrm{RelationalChoice}_{\rm all}+\mathrm{Actuality}
  +\neg\mathrm{Atomicity}_t
  +\Diamond\Box\neg\mathrm{Actuality}
- +\Diamond\Box\neg\mathrm{BooleanSep}(t,\varnothing).
+ +\Diamond\Box\neg\mathrm{BooleanSep}(t,\varnothing)
 }
 ```
 
@@ -130,7 +130,7 @@ For use in the combined model, take
 B_c=2\times\mathcal P(\mathbb N),\qquad
 j(\epsilon,A)=
 \left(\mathbf1_{(\epsilon,A)=\top},
-\begin{cases}A&A\text{ cofinite},\\\varnothing&\text{otherwise}.\end{cases}\right).
+\begin{cases}A&A\text{ cofinite},\\\varnothing&\text{otherwise}.\end{cases}\right)
 ```
 
 
@@ -139,7 +139,7 @@ This is an S4 interior operator. Let O=Fix(j). Use the singleton individual doma
 
 ```math
 \delta(f,g)=j\!\left(\bigwedge_{\bar x}
- (f[\bar x]\leftrightarrow g[\bar x])\right).
+ (f[\bar x]\leftrightarrow g[\bar x])\right)
 ```
 
 
@@ -161,7 +161,7 @@ At coordinate n, propositional equality identifies A and A' exactly when their s
 
 
 ```math
-2\times\bigl(\mathcal P(\mathbb N\setminus\{n\})/\mathrm{Fin}\bigr).
+2\times\bigl(\mathcal P(\mathbb N\setminus\{n\})/\mathrm{Fin}\bigr)
 ```
 
 
@@ -177,7 +177,7 @@ F(\epsilon,A)=(1,f_n(A)),\qquad
 f_n(A)=
 \begin{cases}
 \mathbb N\setminus(A\setminus\{n\}),&A\text{ finite},\\
-\mathbb N,&A\text{ infinite}.
+\mathbb N,&A\text{ infinite}
 \end{cases}
 ```
 
@@ -190,7 +190,7 @@ The preceding components can be combined more closely. Let A be the complete hom
 
 
 ```math
-B_*=2\times A\times\mathcal P(\mathbb N).
+B_*=2\times A\times\mathcal P(\mathbb N)
 ```
 
 
@@ -203,7 +203,7 @@ j(\epsilon,a,S)=
 \mathbf1_{(\epsilon,a,S)=\top},
 \begin{cases}1_A&a=1_A\text{ and }S\text{ cofinite},\\0_A&\text{otherwise},\end{cases}
 \begin{cases}S&S\text{ cofinite},\\\varnothing&\text{otherwise}.\end{cases}
-\right).
+\right)
 ```
 
 
@@ -215,7 +215,7 @@ Fix a middle evaluation U. Two propositions are identical there exactly when the
 
 
 ```math
-A\times\bigl(\mathcal P(\mathbb N)/\mathrm{Fin}\bigr).
+A\times\bigl(\mathcal P(\mathbb N)/\mathrm{Fin}\bigr)
 ```
 
 
@@ -226,7 +226,7 @@ Both factors are atomless, so the database's propositional Atomlessness principl
 X(\epsilon,a,S)=
 \begin{cases}
 (0,1_A,\mathbb N)&[S]_{\mathrm{Fin}}\in\{[A_i]_{\mathrm{Fin}}:i\in\mathbb N\},\\
-0&\text{otherwise}.
+0&\text{otherwise}
 \end{cases}
 ```
 
@@ -240,7 +240,7 @@ We have proved
 
 ```math
 \mathrm{Con}\bigl(C+OS+BC_t+
-\Diamond(\mathrm{Atomlessness}\land\neg BC_t)\bigr).
+\Diamond(\mathrm{Atomlessness}\land\neg BC_t)\bigr)
 ```
 
 
@@ -257,7 +257,7 @@ j'(\epsilon,a,S)=
 \mathbf1_{(\epsilon,a,S)=\top},
 \begin{cases}1_A&a=1_A\text{ and }S\text{ cofinite},\\0_A&\text{otherwise},\end{cases}
 \begin{cases}S&a=1_A\text{ and }S\text{ cofinite},\\\varnothing&\text{otherwise}.\end{cases}
-\right).
+\right)
 ```
 
 
@@ -271,7 +271,7 @@ The same does not hold necessarily. For each n∈N take p=Top and q=(1,1_A,N∖{
 
 
 ```math
-\delta_t(p,q)=(0,1_A,\mathbb N\setminus\{n\}).
+\delta_t(p,q)=(0,1_A,\mathbb N\setminus\{n\})
 ```
 
 
@@ -280,7 +280,7 @@ At the principal n-evaluation this equality is false, while the native Box of it
 
 ```math
 \mathrm{ND}_t=(0,1_A,\varnothing),
-\qquad j'(\mathrm{ND}_t)=\bot.
+\qquad j'(\mathrm{ND}_t)=\bot
 ```
 
 
@@ -291,7 +291,7 @@ Adjoin the unrestricted predecessor using the same onto type projections and the
 
 ```math
 \mathrm{Atomlessness}\land\neg BC_t\land\neg BF_t
-\land\neg\Box\mathrm{ND}_t.
+\land\neg\Box\mathrm{ND}_t
 ```
 
 
@@ -305,7 +305,7 @@ C+OS+BC_t+
  \bigwedge_{\sigma\in\Gamma}\mathrm{ND}_\sigma
  \land\mathrm{Atomlessness}\land\neg BC_t\land\neg BF_t
  \land\neg\Box\mathrm{ND}_t
-\right)\right).
+\right)\right)
 ```
 
 
@@ -319,7 +319,7 @@ The observer construction has an exact characterization. Let M be a typed C comp
 ```math
 \chi(\forall x^\sigma Fx)=\bigwedge_{a\in D_\sigma(M)}\chi(Fa),
 \qquad
-\chi(\exists x^\sigma Fx)=\bigvee_{a\in D_\sigma(M)}\chi(Fa).
+\chi(\exists x^\sigma Fx)=\bigvee_{a\in D_\sigma(M)}\chi(Fa)
 ```
 
 
@@ -336,7 +336,7 @@ There is a useful closure principle. Let (M_i) be any set-indexed family of poin
 D_e(r)=\prod_iD_e(M_i),\qquad
 D_{\bar\sigma t}(r)=
 \mathcal P\!\left(\prod_jD_{\sigma_j}(r)\right)
-\times\prod_iD_{\bar\sigma t}(M_i).
+\times\prod_iD_{\bar\sigma t}(M_i)
 ```
 
 
@@ -354,7 +354,7 @@ The unresolved question is still
 
 
 ```math
-\mathrm{Con}(C+\mathrm{Max}(C)+OS+BC_t).
+\mathrm{Con}(C+\mathrm{Max}(C)+OS+BC_t)
 ```
 
 

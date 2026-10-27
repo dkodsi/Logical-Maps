@@ -12,13 +12,13 @@ The [single-join theorem](numeric-singleton-join-boundary.md), §§1–4, proves
 
 ```math
 J_N\ \longleftrightarrow\ \mathrm{LUB}_{\nu t}(N,\{h_n:Nn\})
-\ \longleftrightarrow\ \mathrm{BF}_N.
+\ \longleftrightarrow\ \mathrm{BF}_N
 ```
 
 Here BF_N is Barcan restricted to numberhood, not the ordinary BF instance at nu. Goodsell's arithmetic argument needs precisely this restricted principle. Consequently Max(C) rules out J_N. In particular:
 
 ```math
-C+\mathrm{Max}(C)+BC_{((et)t)t}\quad\text{is inconsistent}.
+C+\mathrm{Max}(C)+BC_{((et)t)t}\quad\text{is inconsistent}
 ```
 
 This is a genuine strengthening of the scalar target: BC at nu t implies BC_t by taking joins of constant predicates and evaluating at 0. The stronger conclusion is that Max forbids one fixed countable join, without needing all of BC at that type. The join-to-arithmetic argument is Goodsell's Lemma 8 and Theorem 9; the exact join characterization is the refinement proved in the linked note.
@@ -45,7 +45,7 @@ in which every pure sentence consistent with C + Extensionality_all is possible.
 
 ```math
 \Diamond(\Box ND_t\land\neg BC_t),\qquad\Diamond\neg BF_e,
-\qquad\Diamond\neg BF_t.
+\qquad\Diamond\neg BF_t
 ```
 
 For the first extra possibility use the finite-support permutation component already specified in the mixed-cover proof. For the other two use the singleton object of the [two-object all-maps component](../../../classicism-results-2026-10-24-v2/source/topics/classicism/models/finite-support-two-object-all-maps.yaml), whose recorded arguments verify both BF failures there. The cover preserves and reaches those objects. Thus current completeness and Barcan need not persist in this lower model.
@@ -69,7 +69,7 @@ With just these two targets, that cover gives even
 
 ```math
 C+OS+\Box BF_{\rm all}+\Box BC_t+\neg\mathrm{Actuality}
-+\Diamond(I_e\land A)+\Diamond(I_e\land\neg A).
++\Diamond(I_e\land A)+\Diamond(I_e\land\neg A)
 \tag{2}
 ```
 

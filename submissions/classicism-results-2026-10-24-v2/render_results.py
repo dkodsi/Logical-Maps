@@ -20,11 +20,43 @@ def anchor(name):
     return '<a id="' + name.lower() + '"></a>'
 
 
+# A sentence period may precede the closing brace of a box or a formula tag.
+TAIL = re.compile(r'(?:\s|[}\])]|\\(?:end|tag|label)\{[^{}\n]*\}|\\(?:right|bigr|Bigr|biggr|Biggr)\s*(?:[}\])]|\\[}\]]))*$')
+PROTECTED={'text','textrm','textnormal','textsf','texttt','textit','textbf','mbox','mathrm','operatorname','tag','label','href','url'}
+def in_text(s,pos):
+ stack=[]
+ for m in re.finditer(r'(?<!\\)[{}]',s[:pos]):
+  if m[0]=='{':
+   c=re.search(r'\\([A-Za-z]+)\*?\s*$',s[:m.start()]);stack.append(c[1] if c else '')
+  elif stack:stack.pop()
+ return any(x in PROTECTED for x in stack)
+def strip_math_periods(s):
+ # Each aligned row can contain its own complete formula.
+ parts=re.split(r'(\\\\(?:\[[^\]]*\])?)',s)
+ for i in range(0,len(parts),2):
+  row=parts[i];remove=[]
+  for m in re.finditer(r'(?<![\\.])\.(?!\.)',row):
+   pos=m.start()
+   if not TAIL.fullmatch(row[pos+1:]):continue
+   if re.search(r'\\(?:left|right|middle|big|Big|bigg|Bigg|bigl|bigr|Bigl|Bigr|biggl|biggr|Biggl|Biggr)\s*$',row[:pos]):continue
+   if in_text(row,pos):continue
+   remove.append(pos)
+  for pos in reversed(remove):row=row[:pos]+row[pos+1:]
+  parts[i]=row
+ return ''.join(parts)
+def strip_display_periods(s):
+ # Do not change inline mathematics or ordinary fenced code.
+ patterns=[r'(^[ \t]*```math[^\n]*\n)(.*?)(\n[ \t]*```)',r'(^[ \t]*\$\$[ \t]*\n)(.*?)(\n[ \t]*\$\$)',r'(\\\[)(.*?)(\\\])']
+ for pattern in patterns:s=re.sub(pattern,lambda m:m[1]+strip_math_periods(m[2])+m[3],s,flags=re.S|re.M)
+ return s
+
+
 def protect_markdown_math(body):
     """Keep LaTeX out of Markdown's escape and emphasis processing on GitHub.
 
-    Display/inline choices and all formula contents are preserved. Math fences
-    must be unindented for GitHub to render them. Other code stays unchanged.
+    Display/inline choices and mathematical content are preserved; sentence-ending
+    display periods are omitted. Math fences must be unindented for GitHub to
+    render them. Other code stays unchanged.
     """
     lines = body.splitlines(keepends=True)
     out = []
@@ -56,7 +88,7 @@ def protect_markdown_math(body):
         else:
             out.append(inline.sub(lambda m: '$`' + m[1] + '`$' if m[1] is not None else m[0], line))
     assert not display, 'Unclosed display math'
-    return ''.join(out)
+    return strip_display_periods(''.join(out))
 
 
 def math_layout_issues(name, body):

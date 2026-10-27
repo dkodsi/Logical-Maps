@@ -13,14 +13,14 @@ The construction distinguishes outer domains A_σ, used to interpret lambda abst
 Choose nonempty sets A_e and A_t. At every allowed arrow type put
 
 ```math
-A_{\sigma\rho}:=A_\rho^{A_\sigma},\qquad\rho\ne e.
+A_{\sigma\rho}:=A_\rho^{A_\sigma},\qquad\rho\ne e
 ```
 
 Choose nonempty D_e⊆A_e and D_t⊆A_t. Define recursively
 
 ```math
 D_{\sigma\rho}:=
-\{f\in A_{\sigma\rho}:f[D_\sigma]\subseteq D_\rho\}.
+\{f\in A_{\sigma\rho}:f[D_\sigma]\subseteq D_\rho\}
 ```
 
 All terms are evaluated in the full outer function hierarchy. Application is actual function application, and λx^σ.M is the function on **all of A_σ** obtained by varying x. Logical constants are total outer functions chosen so that they belong to their admitted domains. Relational constants may be any elements of their admitted domains; individual constants must belong to D_e.
@@ -52,7 +52,7 @@ Take
 
 ```math
 A_e=\{0,1\},\quad D_e=\{0\},\qquad
-A_t=D_t=\{0,1\}.
+A_t=D_t=\{0,1\}
 ```
 
 Truth is the ordinary Boolean value. In this example D_σ=A_σ for every relational σ. This follows by induction: every relational codomain already has its entire outer domain admitted, so every outer function into it is admitted. Only the individual domain is smaller than its outer domain.
@@ -74,7 +74,7 @@ Consequently **every propositional logical separation instance at every finite t
 Nevertheless Functionality at e,t fails. Choose the admitted outer predicates
 
 ```math
-F(0)=F(1)=1,\qquad G(0)=1,\quad G(1)=0.
+F(0)=F(1)=1,\qquad G(0)=1,\quad G(1)=0
 ```
 
 Then ∀x^e(Fx=Gx) is true, since x ranges only over {0}, while F and G are distinct outer functions. Full typed separation at et also fails: at the only admitted argument they give the same proposition, so every observer agrees on their current instances.
@@ -82,7 +82,7 @@ Then ∀x^e(Fx=Gx) is true, since x ranges only over {0}, while F and G are dist
 C fails directly, not just by inference from that Functionality failure. H proves the universal-instantiation formula
 
 ```math
-(\forall x^e\,Gx)\to Ga.
+(\forall x^e\,Gx)\to Ga
 ```
 
 Its abstraction over a, and the abstraction of ⊤, are identified by C's Logical Equivalence. In this model ∀x Gx=1, but the two outer abstractions differ at the hidden individual a=1: the displayed conditional is false there, while ⊤ is true. Thus an actual H Logical Equivalence instance fails.
@@ -95,7 +95,7 @@ This example uses one hidden proposition. Let
 
 ```math
 D_t=\{0,u,v,1\}=\{(0,0),(0,1),(1,0),(1,1)\},
-\qquad A_t=D_t\cup\{z\}.
+\qquad A_t=D_t\cup\{z\}
 ```
 
 Truth reads the first coordinate on D_t. Take A_e=D_e to be a singleton and use the admitted-domain recursion of §1 at higher types.
@@ -116,7 +116,7 @@ Write
 \begin{aligned}
 M_{\rm mat}(E)&:\forall p,q\,[E(m(p,q))\leftrightarrow(Ep\land Eq)],\\
 M_{\rm pt}(E)&:\forall p,q\,[E(m(p,q))=m(Ep,Eq)],\\
-M_{\rm op}(E)&:(\lambda p,q.E(m(p,q)))=(\lambda p,q.m(Ep,Eq)).
+M_{\rm op}(E)&:(\lambda p,q.E(m(p,q)))=(\lambda p,q.m(Ep,Eq))
 \end{aligned}
 ```
 
@@ -150,7 +150,7 @@ We have proved the strict implication
 ```math
 \boxed{\mathrm H+S[M_{\rm op}]
 \ \Longrightarrow\ \mathrm H+S[M_{\rm pt}],
-\qquad\text{with no converse}.}
+\qquad\text{with no converse}}
 ```
 
 The same countermodel separates whole-operation separation from material separation. It does **not** separate material separation from pointwise-identity separation: both hold in it.
@@ -168,7 +168,7 @@ and extend it at z by E(z)=0. Its actual truth value equals that of its input, s
 ```math
 E(m(v,u))=E(0)=0,
 \qquad
-m(E(v),E(u))=m(1,u)=u.
+m(E(v),E(u))=m(1,u)=u
 ```
 
 Hence M_pt(E) fails. This is a strict distinction between observer predicates, not a proof that their propositional separation theories differ. The latter implication remains unclassified here. Under the explicit local identity-bivalence assumptions in [the representation theorem](representation-under-identity-bivalence.md), principal tests give the stated positive equivalences instead.

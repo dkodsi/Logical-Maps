@@ -11,7 +11,7 @@ Then
 
 ```math
 C+MRC_{\rho t,\rho}\ \vdash\
-\Box TC_\kappa\ \longrightarrow\ MWO_\sigma.
+\Box TC_\kappa\ \longrightarrow\ MWO_\sigma
 \tag{1}
 ```
 
@@ -24,7 +24,7 @@ TC⇒Zorn⇒WO argument:
 
 ```math
 C\ \vdash\
-(RC_{\rho t,\rho}\land TC_{\rho t})\longrightarrow WO_\sigma.
+(RC_{\rho t,\rho}\land TC_{\rho t})\longrightarrow WO_\sigma
 \tag{2}
 ```
 
@@ -49,7 +49,7 @@ supplies a subproperty G that is necessarily uniquely inhabited
 and entails that property. Define
 
 ```math
-R'(x,y):=\exists R^\rho\,[GR\land(Rx)y].
+R'(x,y):=\exists R^\rho\,[GR\land(Rx)y]
 ```
 
 At each accessible evaluation R' is currently coextensive with the
@@ -65,7 +65,7 @@ The following are equivalent **provability questions**:
 ```math
 \begin{split}
 &C+MRC_{\rm all}\vdash MWO_{\rm all},\\
-&C+MRC_{\rm all}\vdash TC_{\rm all}.
+&C+MRC_{\rm all}\vdash TC_{\rm all}
 \end{split}
 \tag{3}
 ```
@@ -103,7 +103,7 @@ The contrapositive of (1) gives the exact local consequence
 
 ```math
 C+MRC_{\rho t,\rho}+\neg MWO_\sigma
-\ \vdash\ \Diamond\neg TC_{(\sigma\sigma t)t}.
+\ \vdash\ \Diamond\neg TC_{(\sigma\sigma t)t}
 \tag{5}
 ```
 

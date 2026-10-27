@@ -54,7 +54,7 @@ identity values recursively by
 ```math
  \delta_{\sigma\to\rho}(f,g)
  =\bigwedge_{a,c\in U_\sigma}
-     \bigl(\delta_\sigma(a,c)\Rightarrow\delta_\rho(fa,gc)\bigr).
+     \bigl(\delta_\sigma(a,c)\Rightarrow\delta_\rho(fa,gc)\bigr)
  \tag{1}
 ```
 
@@ -81,7 +81,7 @@ Repeated use of (1) gives
 
 ```math
  E_\rho(F)=\bigwedge_{a,c\in A}
-       \bigl(\delta_A(a,c)\Rightarrow(F(a)\leftrightarrow F(c))\bigr).
+       \bigl(\delta_A(a,c)\Rightarrow(F(a)\leftrightarrow F(c))\bigr)
  \tag{3}
 ```
 
@@ -105,7 +105,7 @@ Taking p=E_sigma(a), and leaving individuals unchanged, gives a global
 representative T_sigma(a) with
 
 ```math
- \delta_\sigma(a,T_\sigma(a))=E_\sigma(a).
+ \delta_\sigma(a,T_\sigma(a))=E_\sigma(a)
  \tag{5}
 ```
 
@@ -116,7 +116,7 @@ gives the same assertion with E_A. In particular
 
 ```math
  E_A(a)=\bigvee_{g\in G_A}\delta_A(a,g),
- \qquad G_A:=\prod_iG_{\sigma_i}.
+ \qquad G_A:=\prod_iG_{\sigma_i}
  \tag{6}
 ```
 
@@ -129,7 +129,7 @@ existence of every raw argument.
 For an arbitrary raw F:A -> B define
 
 ```math
- N(F)(a)=\bigvee_{g\in G_A} F(g)\wedge\delta_A(g,a).
+ N(F)(a)=\bigvee_{g\in G_A} F(g)\wedge\delta_A(g,a)
  \tag{7}
 ```
 
@@ -150,7 +150,7 @@ For the converse, use (6); below delta_A(a,g), extensionality identifies
 F(a) and F(g). Consequently
 
 ```math
- \delta_\rho(F,N(F))=E_\rho(F).
+ \delta_\rho(F,N(F))=E_\rho(F)
  \tag{8}
 ```
 
@@ -162,7 +162,7 @@ The same argument proves the useful equality test
 
 ```math
  \delta_\rho(F,H)=E_\rho(F)\wedge E_\rho(H)
-       \wedge\bigwedge_{g\in G_A}(F(g)\leftrightarrow H(g)).
+       \wedge\bigwedge_{g\in G_A}(F(g)\leftrightarrow H(g))
  \tag{9}
 ```
 
@@ -181,7 +181,7 @@ Define the intended internal carriers recursively in Boolean-valued set
 theory. H_e is check-omega. For rho = sigma_1 ... sigma_n t, let
 
 ```math
- H_\rho=\mathcal P\!\left(\prod_i H_{\sigma_i}\right).
+ H_\rho=\mathcal P\!\left(\prod_i H_{\sigma_i}\right)
  \tag{10}
 ```
 
@@ -211,14 +211,14 @@ finite distributivity show that this is the whole product, with
 
 ```math
  \|u\in K\|=\bigvee_{g\in G_A}\|u=\widehat g\|,
- \qquad \|\widehat g=\widehat h\|=\delta_A(g,h).
+ \qquad \|\widehat g=\widehat h\|=\delta_A(g,h)
  \tag{11}
 ```
 
 For F in G_rho put
 
 ```math
- \widehat F=\{(\widehat g,F(g)):g\in G_A\}.
+ \widehat F=\{(\widehat g,F(g)):g\in G_A\}
  \tag{12}
 ```
 
@@ -227,7 +227,7 @@ self-identity of global g give
 
 ```math
  \|\widehat g\in\widehat F\|
-    =\bigvee_{h\in G_A}F(h)\wedge\delta_A(h,g)=F(g).
+    =\bigvee_{h\in G_A}F(h)\wedge\delta_A(h,g)=F(g)
  \tag{13}
 ```
 
@@ -248,7 +248,7 @@ subsets. Given a name X, let b=||X is a subset of K|| and put
 ```math
  u(g)=b\wedge\|\widehat g\in X\|,
  \qquad
- F_X(a)=\bigvee_{g\in G_A}u(g)\wedge\delta_A(g,a).
+ F_X(a)=\bigvee_{g\in G_A}u(g)\wedge\delta_A(g,a)
  \tag{15}
 ```
 
@@ -257,7 +257,7 @@ names makes u extensional on global tuples; hence F_X(g)=u(g) there.
 Equations (11)--(13) show
 
 ```math
- b\le\|X=\widehat{F_X}\|.
+ b\le\|X=\widehat{F_X}\|
  \tag{16}
 ```
 
@@ -279,7 +279,7 @@ universal quantifier at type sigma has Boolean value
 
 ```math
  \llbracket\forall x^\sigma\,\phi(x)\rrbracket
-       =\bigwedge_{g\in G_\sigma}\llbracket\phi(g)\rrbracket.
+       =\bigwedge_{g\in G_\sigma}\llbracket\phi(g)\rrbracket
  \tag{17}
 ```
 
@@ -297,7 +297,7 @@ representatives. If c is below every ||phi(g-hat)||, then for any name u,
 ```math
  c\wedge\|u\in H_\sigma\|
    =\bigvee_g c\wedge\|u=\widehat g\|
-   \le\|\phi(u)\|.
+   \le\|\phi(u)\|
  \tag{18}
 ```
 
@@ -349,7 +349,7 @@ U^B_sigma and L_sigma:U^B_sigma -> U^C_sigma recursively:
 ```math
  (R_{\sigma\to\rho}F)(x)=R_\rho\bigl(F(L_\sigma x)\bigr),
  \qquad
- (L_{\sigma\to\rho}f)(a)=L_\rho\bigl(f(R_\sigma a)\bigr).
+ (L_{\sigma\to\rho}f)(a)=L_\rho\bigl(f(R_\sigma a)\bigr)
  \tag{19}
 ```
 
@@ -407,7 +407,7 @@ existing at p and a term t of type sigma,
 
 ```math
  R_\sigma(\llbracket t\rrbracket_{C,g})
-       \sim^B_p \llbracket t\rrbracket_{B,Rg}.
+       \sim^B_p \llbracket t\rrbracket_{B,Rg}
  \tag{20}
 ```
 

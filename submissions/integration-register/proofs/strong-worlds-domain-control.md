@@ -11,7 +11,7 @@ Two explicit models give stronger separations:
 1. **Eventually stationary entrance to the full successor action** satisfies
 
 ```math
-\mathrm C+\Box\mathrm{SL}_{\rm rel}+\neg\mathrm{BF}_t.
+\mathrm C+\Box\mathrm{SL}_{\rm rel}+\neg\mathrm{BF}_t
 ```
 
    Indeed, every relational Barcan instance fails at the entrance, while BF at individuals holds necessarily. This refutes even necessary Strong Leibniz implying relational Barcan.
@@ -20,7 +20,7 @@ Two explicit models give stronger separations:
 ```math
 \mathrm C+\mathrm{SL}_{\rm rel}+\mathrm{BF}_{\rm all}
    +\Box\mathrm{Atomicity}_{\rm rel}
-   +\neg\Box\mathrm{SL}_t+\neg\Box\mathrm{BF}_t.
+   +\neg\Box\mathrm{SL}_t+\neg\Box\mathrm{BF}_t
 ```
 
    Thus adding current Barcan at every type does not make Strong Leibniz necessary.
@@ -30,7 +30,7 @@ Here SL_rel is the full schema over every admitted type τ other than e. BF_all 
 There is also a positive intermediate theorem. SL at any one relational type entails that, necessarily, every **actually instantiated** relation of that type contains a strong world. This includes the strengthening
 
 ```math
-\mathrm{SL}_t\ \Longrightarrow\ \Box\mathrm{StrongActuality}.
+\mathrm{SL}_t\ \Longrightarrow\ \Box\mathrm{StrongActuality}
 ```
 
 The possible-but-not-currently-instantiated case remains essential in the definition of SL. The second model separates the intermediate theorem from necessary SL.
@@ -47,7 +47,7 @@ For τ=σ₁⋯σₙt, with n possibly zero, write 0_τ for bottom, ≤_τ for t
   &:=(W\ne0_\tau)\land\Box\mathrm{Dec}_\tau(W),\\
 \mathrm{SL}_\tau
   &:=\forall X^\tau\,(X\ne0_\tau\to
-       \exists W^\tau(\mathrm{SWorld}_\tau(W)\land W\le_\tau X)).
+       \exists W^\tau(\mathrm{SWorld}_\tau(W)\land W\le_\tau X))
 \end{aligned}
 ```
 
@@ -61,7 +61,7 @@ Let the target's endomorphism monoid be M. Its individual domain is a singleton,
 
 ```math
 D_s(\tau)=\mathcal P\left(M\times
-       \prod_{i=1}^nD_s(\sigma_i)\right).
+       \prod_{i=1}^nD_s(\sigma_i)\right)
 \tag{2.1}
 ```
 
@@ -70,14 +70,14 @@ For an empty argument tuple this is P(M), the proposition domain. Equivalently, 
 Transport is precomposition on the arrow coordinate:
 
 ```math
-(m\cdot F)_u=F_{um}.
+(m\cdot F)_u=F_{um}
 \tag{2.2}
 ```
 
 An application to assigned arguments is evaluated at u using the transported arguments u·a_i. Thus partial application has profile
 
 ```math
-(Fa)_u(\bar b)=F_u(u\cdot a,\bar b).
+(Fa)_u(\bar b)=F_u(u\cdot a,\bar b)
 \tag{2.3}
 ```
 
@@ -87,7 +87,7 @@ In particular every logical constant is fixed by every monoid action. Structural
 
 ```math
 m\cdot\llbracket T\rrbracket_s(\rho)
- =\llbracket T\rrbracket_s(m\cdot\rho).
+ =\llbracket T\rrbracket_s(m\cdot\rho)
 \tag{2.4}
 ```
 
@@ -119,14 +119,14 @@ This is an admissible profile restriction of the action semantics, rather than a
 Take M=(N,+), with identity 0 and successor action S=1·. The category has objects r,s, no arrows s→r, only identity at r, and arrows h_n:r→s for n≥0 with
 
 ```math
-k_mh_n=h_{m+n}.
+k_mh_n=h_{m+n}
 ```
 
 At s use the full hierarchy (2.1). Define the eventual-stationarity subset of each target relational domain by
 
 ```math
 \mathrm{ES}_\tau
- :=\{b\in D_s(\tau):\exists N\ (S^{N+1}b=S^Nb)\}.
+ :=\{b\in D_s(\tau):\exists N\ (S^{N+1}b=S^Nb)\}
 \tag{3.1}
 ```
 
@@ -135,7 +135,7 @@ The integer N is external construction data. No object-language arithmetic or ch
 ```math
 D_r(\tau)=
 \mathcal P\left(\prod_iD_r(\sigma_i)\right)
-\times\mathrm{ES}_\tau.
+\times\mathrm{ES}_\tau
 \tag{3.2}
 ```
 
@@ -162,7 +162,7 @@ The full target hierarchy itself has all singleton-coordinate atoms, with exactl
 
 ```math
 \mathcal A,r\models\Box\mathrm{SL}_\tau
-\quad\text{for every relational }\tau.
+\quad\text{for every relational }\tau
 \tag{3.3}
 ```
 
@@ -171,20 +171,20 @@ The full target hierarchy itself has all singleton-coordinate atoms, with exactl
 A root proposition is a bit ε for its truth at r together with a finite or cofinite subset B⊆N. At s, propositions are arbitrary subsets of N. Define the admitted, pure predicate
 
 ```math
-P(p):=\Diamond\Box p\lor\Diamond\Box\neg p.
+P(p):=\Diamond\Box p\lor\Diamond\Box\neg p
 \tag{3.4}
 ```
 
 Every finite/cofinite B is eventually constantly false/true. Thus P(p) holds at r for every root p, and at every successor for its transported value. Hence
 
 ```math
-\mathcal A,r\models\forall p\,\Box P(p).
+\mathcal A,r\models\forall p\,\Box P(p)
 ```
 
 At s take the proposition of even integers. Neither it nor its complement ever becomes necessary, so P is false of it. Consequently
 
 ```math
-\mathcal A,r\not\models\Box\forall p\,P(p).
+\mathcal A,r\not\models\Box\forall p\,P(p)
 \tag{3.5}
 ```
 
@@ -197,7 +197,7 @@ Fix a relational type τ. In the full target there is an admitted operation L_τ
 Choose a root operation E_τ:ττ with target component L_τ and any current extension, for example empty. It is admitted by (3.2). Put
 
 ```math
-P_\tau(Y):=\Diamond(E_\tau Y=Y).
+P_\tau(Y):=\Diamond(E_\tau Y=Y)
 \tag{3.6}
 ```
 
@@ -228,7 +228,7 @@ such that
 ```math
 k\cdot d_\infty=d_\infty,
 \qquad k\cdot d_n=d_\infty\ (\forall n),
-\qquad d_n=d_\infty\text{ for all but finitely many }n.
+\qquad d_n=d_\infty\text{ for all but finitely many }n
 \tag{4.1}
 ```
 
@@ -251,13 +251,13 @@ A current-coordinate atom maps to zero at every future object. The atom at (h_n,
 At type t, the target has four propositions P({1,k}). The nonzero proposition {k} is an atom, but
 
 ```math
-k\cdot\{k\}=\{1,k\}.
+k\cdot\{k\}=\{1,k\}
 ```
 
 The target proposition {1} splits that image. Thus {k} is not a strong world, and as an atom it contains no other nonzero candidate. SL_t fails at s. Since s is accessible from r,
 
 ```math
-\mathcal B,r\not\models\Box\mathrm{SL}_t.
+\mathcal B,r\not\models\Box\mathrm{SL}_t
 \tag{4.2}
 ```
 
@@ -284,7 +284,7 @@ including e. Notice that b need not be onto. Its lack of surjectivity cannot be 
 At s, BF_t fails by the usual full idempotent example. Let X:tt have current extension all four propositions and k-extension {0,1}. Every transported k·p is an endpoint, so ∀p Box Xp holds at s. But at k the newly quantified proposition {1} is not in that endpoint extension. Therefore Box ∀p Xp fails. Since s is accessible,
 
 ```math
-\mathcal B,r\not\models\Box\mathrm{BF}_t.
+\mathcal B,r\not\models\Box\mathrm{BF}_t
 \tag{5.2}
 ```
 
@@ -296,7 +296,7 @@ Fix a relational type τ=σ₁⋯σₙt, allowing n=0. Define the admitted relat
 
 ```math
 C_\tau[\bar x]:=\exists W^\tau\,
-   (\mathrm{SWorld}_\tau(W)\land W[\bar x]).
+   (\mathrm{SWorld}_\tau(W)\land W[\bar x])
 \tag{6.1}
 ```
 
@@ -308,7 +308,7 @@ Indeed Box Dec_τ(W) persists by 4. At any future point and tuple where W[x̄] h
 
 ```math
 \Box\forall\bar x\,\exists W^\tau\,
- (\mathrm{SWorld}_\tau(W)\land W[\bar x]).
+ (\mathrm{SWorld}_\tau(W)\land W[\bar x])
 \tag{6.2}
 ```
 
@@ -323,7 +323,7 @@ More generally, at every accessible point an actually instantiated X has a stron
 \Box\forall X^\tau\left[
  (\exists\bar x\,X[\bar x])\to
  \exists W^\tau(\mathrm{SWorld}_\tau(W)\land W\le_\tau X)
-\right].
+\right]
 \tag{6.3}
 ```
 
@@ -340,7 +340,7 @@ These results preserve the known positive theorem
 ```math
 \mathrm{SL}_{\rm rel}+\mathrm{RC}_{\rm rel}
 \Longrightarrow
-\Box\mathrm{SL}_{\rm rel}+\Box\mathrm{BF}_{\rm rel}.
+\Box\mathrm{SL}_{\rm rel}+\Box\mathrm{BF}_{\rm rel}
 ```
 
 Both new source models therefore fail full current Rigid Comprehension. That conclusion follows from the independently established positive theorem and their displayed failures; it is not assumed in the constructions.

@@ -12,7 +12,7 @@ literature-priority claim is made.
 There is an explicit countermodel in ordinary ZFC to
 
 ```math
-C+RC_{\rm all}+IC_{\rm all}\ \Longrightarrow\ MRC_{\rm all}.
+C+RC_{\rm all}+IC_{\rm all}\ \Longrightarrow\ MRC_{\rm all}
 \tag{1}
 ```
 
@@ -64,7 +64,7 @@ For every relational type τ=σ₁…σₙt, including n=0, set
 ```math
 D_\tau(r)=
 \mathcal P^V\!\left(\prod_{j=1}^{n}D_{\sigma_j}(r)\right)
-\times D_\tau(H).
+\times D_\tau(H)
 \tag{3}
 ```
 
@@ -82,7 +82,7 @@ Application takes sections of A and applies a to the projected
 argument. Thus, for a curried relation f and an argument x,
 
 ```math
-\pi_\tau(fx)=(\pi_{\sigma\tau}f)(\pi_\sigma x).
+\pi_\tau(fx)=(\pi_{\sigma\tau}f)(\pi_\sigma x)
 \tag{4}
 ```
 
@@ -120,7 +120,7 @@ premise is used in this argument. Thus the construction is a C model.
 Top is (1,1), and the definition Box p=(p=Top) gives
 
 ```math
-\Box(\epsilon,b)=(\epsilon\land b,b).
+\Box(\epsilon,b)=(\epsilon\land b,b)
 \tag{5}
 ```
 
@@ -157,7 +157,7 @@ its actual extension A is nonempty and its leaf property F_H is
 inhabited in H. Choose a∈A and b∈D_σ(H) with F_H(b). Let
 
 ```math
-G=(\{a\},H_b),\qquad H_b:=\lambda x^\sigma(x=b)	ext{ in H}.
+G=(\{a\},H_b),\qquad H_b:=\lambda x^\sigma(x=b)	ext{ in H}
 \tag{6}
 ```
 
@@ -191,7 +191,7 @@ the defining failure of Choice in H. Therefore
 
 ```math
 r\models RC_{\rm all}+\Box IC_{\rm all}
-+\neg MRC_{e,e}.
++\neg MRC_{e,e}
 \tag{7}
 ```
 

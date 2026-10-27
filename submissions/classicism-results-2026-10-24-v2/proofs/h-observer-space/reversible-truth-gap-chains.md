@@ -11,7 +11,7 @@ This permits atomless examples preserving both kinds of quantifier. A complete s
 Work over H in the fixed relational type system. Put B=Bottom and T=Top, retaining the fixed abbreviations of the atlas. Assume primitive conjunction is a bounded meet-semilattice with these bounds, and that its order is linear:
 
 ```math
-p\le q\quad\Longleftrightarrow\quad p\land q=p.
+p\le q\quad\Longleftrightarrow\quad p\land q=p
 \tag{1}
 ```
 
@@ -24,7 +24,7 @@ Assume there are propositions f,u such that
 ```math
 \neg f,\quad u,\qquad
 \forall p\,[\neg p\to p\le f],\qquad
-\forall p\,[p\to u\le p].
+\forall p\,[p\to u\le p]
 \tag{2}
 ```
 
@@ -34,7 +34,7 @@ Define the admitted adjacency relation
 
 ```math
 \mathrm{Gap}(a,b):=a<b\ \land\
-\neg\exists x\,(a<x\land x<b).
+\neg\exists x\,(a<x\land x<b)
 \tag{3}
 ```
 
@@ -42,7 +42,7 @@ An order isomorphism preserves this relation in both directions. The **gap-densi
 
 ```math
 \forall p,q\,[p<q\to
-\exists a,b\,(p\le a\land\mathrm{Gap}(a,b)\land b\le q)].
+\exists a,b\,(p\le a\land\mathrm{Gap}(a,b)\land b\le q)]
 \tag{4}
 ```
 
@@ -53,7 +53,7 @@ The action is **transitive on gaps** when every two ordered adjacent pairs are m
 ```math
 \begin{aligned}
 \forall a,b,c,d\,[&\mathrm{Gap}(a,b)\land\mathrm{Gap}(c,d)\\
-&\to\exists E\,(GE\land Ea=c\land Eb=d)].
+&\to\exists E\,(GE\land Ea=c\land Eb=d)]
 \end{aligned}
 \tag{5}
 ```
@@ -66,7 +66,7 @@ Write
 
 ```math
 S[G]:=\forall p,q\,[p=q\leftrightarrow
-\forall E\,(GE\to(Ep\leftrightarrow Eq))].
+\forall E\,(GE\to(Ep\leftrightarrow Eq))]
 \tag{6}
 ```
 
@@ -74,7 +74,7 @@ S[G]:=\forall p,q\,[p=q\leftrightarrow
 
 ```math
 \boxed{S[G]\quad\longleftrightarrow\quad
-\text{gap-density and transitivity of G on gaps}.}
+\text{gap-density and transitivity of G on gaps}}
 \tag{7}
 ```
 
@@ -93,7 +93,7 @@ The theorem does not require C, NI, ND, BF, Plenitude, Choice or an atom premise
 Suppose a primitive universal quantifier at an admitted type σ supplies the greatest lower bound of every admitted family F:σt in the chain. Every G-member then preserves this universal **pointwise**:
 
 ```math
-E(\forall x^\sigma Fx)=\forall x^\sigma E(Fx).
+E(\forall x^\sigma Fx)=\forall x^\sigma E(Fx)
 \tag{8}
 ```
 
@@ -102,7 +102,7 @@ To prove this, write v=∀x Fx. Order preservation gives Ev≤E(Fx) for every x.
 Dually, if a primitive existential quantifier supplies the admitted LUBs, then
 
 ```math
-E(\exists x^\sigma Fx)=\exists x^\sigma E(Fx).
+E(\exists x^\sigma Fx)=\exists x^\sigma E(Fx)
 \tag{9}
 ```
 
@@ -117,7 +117,7 @@ There is a route to (2) from a pre-existing admission principle. Assume the orig
 ```math
 \begin{aligned}
 U_+(p,y)&:=(p\land y=p)\lor(\neg p\land y=T),\\
-U_-(p,y)&:=(\neg p\land y=p)\lor(p\land y=B).
+U_-(p,y)&:=(\neg p\land y=p)\lor(p\land y=B)
 \end{aligned}
 \tag{9a}
 ```
@@ -125,7 +125,7 @@ U_-(p,y)&:=(\neg p\land y=p)\lor(p\land y=B).
 They supply admitted A₊,A₋:tt. Every A₊p is true, and A₊p=p whenever p is true. Every A₋p is false, and A₋p=p whenever p is false. Put
 
 ```math
-u:=\forall p\,A_+p,\qquad f:=\exists p\,A_-p.
+u:=\forall p\,A_+p,\qquad f:=\exists p\,A_-p
 \tag{9b}
 ```
 
@@ -147,7 +147,7 @@ L=\{B,T\}\ \cup\ ((0,1)\times\{0,1\}),
 where (0,1) is the real open unit interval. Put B below every ordered pair, T above every pair, and use the lexicographic order on the pairs. The two points at a real coordinate x satisfy
 
 ```math
-(x,0)<(x,1).
+(x,0)<(x,1)
 \tag{11}
 ```
 
@@ -160,7 +160,7 @@ The chain has no meet atoms: every p>B has a strictly intermediate point between
 Designate a proposition true exactly when it is at least
 
 ```math
-u=(1/2,1),\qquad f=(1/2,0).
+u=(1/2,1),\qquad f=(1/2,0)
 \tag{12}
 ```
 
@@ -172,7 +172,7 @@ Use singleton individuals. At every allowed relational arrow type take the full 
 
 ```math
 \neg B=T,\quad\neg T=B,\qquad
-\neg(x,i)=(1-x,1-i).
+\neg(x,i)=(1-x,1-i)
 \tag{13}
 ```
 
@@ -186,7 +186,7 @@ Every increasing bijection h:(0,1)→(0,1) induces an admitted operation
 
 ```math
 E_h(B)=B,\quad E_h(T)=T,\qquad
-E_h(x,i)=(h(x),i).
+E_h(x,i)=(h(x),i)
 \tag{14}
 ```
 
@@ -201,7 +201,7 @@ Every order isomorphism of a complete chain preserves all infima and suprema: th
 The model fails C. Take p=(1/4,0). Then ¬p=(3/4,1), so
 
 ```math
-p\lor\neg p=(3/4,1)\ne T.
+p\lor\neg p=(3/4,1)\ne T
 \tag{15}
 ```
 

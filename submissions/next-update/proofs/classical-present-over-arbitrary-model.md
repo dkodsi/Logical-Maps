@@ -10,13 +10,13 @@ Let $`K`$ be a general C model, choose a nonempty set $`A`$, and fix any map $`h
 
 ```math
 R_e=A,\qquad
-R_\tau=\mathcal P(R_{\sigma_1}\times\cdots\times R_{\sigma_n})\times K_\tau.
+R_\tau=\mathcal P(R_{\sigma_1}\times\cdots\times R_{\sigma_n})\times K_\tau
 ```
 
 For $`n=0`$, this is $`R_t=2\times K_t`$. A relation has an arbitrary current extension and an unchanged old object. Set $`q_e=h`$ and $`q_\tau(S,k)=k`$ for relational $`\tau`$. Application takes the current row and uses the old application:
 
 ```math
-(S,k)(x)=(S_x,k(q_\sigma(x))).
+(S,k)(x)=(S_x,k(q_\sigma(x)))
 ```
 
 No extensional identification of old operations is made. Each relational projection is onto, since any old object can be paired with the empty current relation. All domains are nonempty sets in ZFC.
@@ -24,7 +24,7 @@ No extensional identification of old operations is made. Each relational project
 Equivalently, an arrow object comprises a current function $`f_0:R_\sigma\to R_\tau`$ and an old object $`f_1\in K_{\sigma\tau}`$ satisfying
 
 ```math
-q_\tau(f_0(x))=f_1(q_\sigma(x))\quad(x\in R_\sigma).
+q_\tau(f_0(x))=f_1(q_\sigma(x))\quad(x\in R_\sigma)
 ```
 
 The equivalence follows by currying the arbitrary current extension. Different old objects are retained even when the current functions agree.
@@ -36,13 +36,13 @@ Current truth reads the first bit. Give every logical constant its ordinary curr
 ```math
 Q_\sigma^R(F)=
 \left([\forall x\in R_\sigma\, .\,F(x)\text{ is true}],\;
-Q_\sigma^K(q_{\sigma t}(F))\right).
+Q_\sigma^K(q_{\sigma t}(F))\right)
 ```
 
 The second coordinate uses the quantifier of $`K`$ over its entire domain; at $`e`$ it is not restricted to $`h[A]`$. For an abstraction, take its body's current extension and the denotation in $`K`$ of the same abstraction with projected free parameters. Both components are admitted by the product definition. Induction gives, for every term,
 
 ```math
-q_\tau(T^R(\bar a))=T^K(q(\bar a)).
+q_\tau(T^R(\bar a))=T^K(q(\bar a))
 ```
 
 At $`e`$, terms are variables or individual constants, since no function type has individual output. This explains why an arbitrary $`h`$ is possible. The abstraction step retains the old lambda interpretation, including when $`K`$ fails Functionality. Beta and eta hold at both components.
@@ -51,7 +51,7 @@ Leibniz equality computes as
 
 ```math
 \delta_\sigma^R(x,y)=
-\left([x=y],\delta_\sigma^K(q_\sigma(x),q_\sigma(y))\right).
+\left([x=y],\delta_\sigma^K(q_\sigma(x),q_\sigma(y))\right)
 ```
 
 Arbitrary current singleton predicates distinguish distinct root objects, while term projection computes the old equality expression with its original quantifier domain. Thus current equality is actual identity, regardless of whether $`h`$ is onto.
@@ -61,7 +61,7 @@ The current classical clauses validate H. An H theorem has old value Top by C's 
 In particular, for $`p=(\epsilon,b)`$,
 
 ```math
-\Box_Rp=([p=\top_R],\Box_Kb).
+\Box_Rp=([p=\top_R],\Box_Kb)
 ```
 
 For a sentence $`B`$ whose constants project correctly,
@@ -73,7 +73,7 @@ R\models\Box B\ \Longleftrightarrow\
 
 ```math
 R\models\Diamond B\ \Longleftrightarrow\
-(R\models B\ \text{or}\ B^K\ne\bot_K).
+(R\models B\ \text{or}\ B^K\ne\bot_K)
 ```
 
 Consequently a failure of necessity in $`K`$ remains a failure in $`R`$.
@@ -98,7 +98,7 @@ Define
 
 ```math
 n_e(x)=x,\qquad n_t(p)=a\land p,\qquad
-n_{\sigma\tau}(f)=\lambda x^\sigma\, .\,n_\tau\bigl(f(n_\sigma(x))\bigr).
+n_{\sigma\tau}(f)=\lambda x^\sigma\, .\,n_\tau\bigl(f(n_\sigma(x))\bigr)
 ```
 
 Again the individual identity is external notation. Every relational normalization is an admitted term. Induction shows that it is idempotent and every normalized relational object has old component Bottom. At an arrow, output normalization makes the old function constantly Bottom, so C's beta–eta and Boolean identities make the whole old arrow Bottom. A second normalization has the same current function by the induction hypotheses, and the same old component. This proves idempotence without ambient Functionality.
@@ -106,7 +106,7 @@ Again the individual identity is external notation. Every relational normalizati
 Let $`C_e=A`$ and $`C_\tau=\{x:n_\tau(x)=x\}`$ at relational types. Then $`C_t=\{\bot_R,a\}`$, and restriction gives
 
 ```math
-C_{\sigma\tau}\ \cong\ (C_\tau)^{C_\sigma}.
+C_{\sigma\tau}\ \cong\ (C_\tau)^{C_\sigma}
 ```
 
 A fixed arrow is determined by its values on fixed inputs, since $`f=n_\tau\circ f\circ n_\sigma`$, and its old component is Bottom. This proves injectivity. For any external $`u:C_\sigma\to C_\tau`$, take current function $`x\mapsto u(n_\sigma(x))`$ and old component Bottom. All outputs have old component Bottom, so the pair is coherent and admitted. It is fixed and restricts to $`u`$, proving surjectivity.
@@ -135,7 +135,7 @@ In particular, standard second-order arithmetic can hold actually and without re
 An external function $`f:R_\sigma\to R_\tau`$, with relational output, is represented by an ambient operation exactly when some admitted $`k\in K_{\sigma\tau}`$ satisfies
 
 ```math
-q_\tau(f(x))=k(q_\sigma(x))\quad\text{for every }x\in R_\sigma.
+q_\tau(f(x))=k(q_\sigma(x))\quad\text{for every }x\in R_\sigma
 ```
 
 Necessity follows from application; sufficiency is the coherent-pair description. Thus projected outputs must be constant on projection fibres, and the resulting rule must extend to an admitted old operation.

@@ -11,7 +11,7 @@ Zorn first supplies a wellordered descending chain of truths whose meet would be
 In the fixed finitary relational language,
 
 ```math
-\boxed{C+BC_{tt}+Zorn_t\ \Longrightarrow\ \mathrm{Actuality}.}
+\boxed{C+BC_{tt}+Zorn_t\ \Longrightarrow\ \mathrm{Actuality}}
 \tag{1}
 ```
 
@@ -24,7 +24,7 @@ For example, put
 \begin{aligned}
 \mathrm{GLB}(u,X):={}&
 \forall x(Xx\to u\le x)\\
-&\land\forall v\bigl(\forall x(Xx\to v\le x)\to v\le u\bigr).
+&\land\forall v\bigl(\forall x(Xx\to v\le x)\to v\le u\bigr)
 \end{aligned}
 \tag{2}
 ```
@@ -42,14 +42,14 @@ Consequently a positive proposition below an actual join meets one of its member
 For each proposition p let $`\kappa(p):=\lambda z^t.p`$, a constant property. Given X:tt, form the admitted family of properties
 
 ```math
-\mathcal C_X(Y):=\exists p\,[Xp\land Y=\kappa(p)].
+\mathcal C_X(Y):=\exists p\,[Xp\land Y=\kappa(p)]
 \tag{3}
 ```
 
 By BC_tt, let J be its actual join and put j:=J(1). If Xp, then $`\kappa(p)\le J`$, so p≤j. If q bounds X, the corresponding constant property κ(q) bounds every member of (3). Thus J≤κ(q), whence j≤q. Here constant abstraction and evaluation preserve Boolean order by the unconditional Boolean identities of C; no collection of merely pointwise equalities is used. This proves that j is the actual join of X. Boolean duality gives actual meets, including the empty meet 1. Therefore
 
 ```math
-C+BC_{tt}\ \Longrightarrow\ BC_t.
+C+BC_{tt}\ \Longrightarrow\ BC_t
 \tag{4}
 ```
 
@@ -57,7 +57,7 @@ The same distinction is important for evaluating a nonconstant join. At a propos
 
 ```math
 r_x(b):=\lambda z\,((z=x)\to b),
-\qquad X(x)\le b\ \Longleftrightarrow\ X\le r_x(b).
+\qquad X(x)\le b\ \Longleftrightarrow\ X\le r_x(b)
 \tag{5}
 ```
 
@@ -72,7 +72,7 @@ We prove the needed refinement using only C+BC_t+Zorn_t.
 First order true propositions by reverse Boolean inclusion, with all false propositions in a bottom equivalence class. An admitted formula for this preorder is
 
 ```math
-R(p,q):=\neg p\lor(q\land q\le p).
+R(p,q):=\neg p\lor(q\land q\le p)
 \tag{6}
 ```
 
@@ -91,7 +91,7 @@ For each proposition m define H_m to be its maximal D-annuli:
 H_m(b):={}&\mathrm{Ann}_D(b)\land b\le m\\
 &\land\forall b'\bigl(
 \mathrm{Ann}_D(b')\land b'\le m\land b\le b'
-\to b=b'\bigr).
+\to b=b'\bigr)
 \end{aligned}
 \tag{7}
 ```
@@ -105,7 +105,7 @@ The following limit fact ensures that a join does not erase the history. Suppose
 Now take an admitted chain X of history codes. Let v be the actual join of its valid members and let
 
 ```math
-Y(b):=\exists m\,[Xm\land\mathrm{Valid}(m)\land H_m(b)].
+Y(b):=\exists m\,[Xm\land\mathrm{Valid}(m)\land H_m(b)]
 \tag{8}
 ```
 
@@ -131,7 +131,7 @@ Fix L as in (9). Its strict predecessors of l, in the wellordering, are the L-me
 
 ```math
 U(l,u):=Ll\land
-\mathrm{GLB}\bigl(u,\lambda e(Le\land l<e)\bigr).
+\mathrm{GLB}\bigl(u,\lambda e(Le\land l<e)\bigr)
 \tag{10}
 ```
 
@@ -139,7 +139,7 @@ For each current l∈L, BC_t supplies exactly one current u with U(l,u). Write u
 
 ```math
 \Delta(d):=d\ne0\land
-\exists l,u\,[U(l,u)\land d=(u\land\neg l)].
+\exists l,u\,[U(l,u)\land d=(u\land\neg l)]
 \tag{11}
 ```
 
@@ -174,14 +174,14 @@ For each current a∈Δ, H_a≤J and J(a)=1. By the evaluation adjunction (5), J
 Put $`C(x,y):=(x=y\lor x\land y=0)`$. For current a,b∈Δ, either a=b or a∧b=0. Each true alternative is a positive identity and therefore necessary by C's Necessity of Identity. Necessary substitution yields
 
 ```math
-H_a(x)\land H_b(y)\le C(x,y).
+H_a(x)\land H_b(y)\le C(x,y)
 \tag{14}
 ```
 
 For fixed a, use Boolean implication adjunction and the join property of J(y) to replace H_b(y) by J(y). Then use the same adjunction and the join property of J(x). The result is
 
 ```math
-J(x)\land J(y)\le C(x,y).
+J(x)\land J(y)\le C(x,y)
 \tag{15}
 ```
 

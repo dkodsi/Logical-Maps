@@ -10,7 +10,7 @@ possibly with fixed parameters, for which C proves
 
 ```math
 A\approx A'\ \longrightarrow\
-\bigl(\Phi(A,b)\leftrightarrow\Phi(A',b)\bigr).
+\bigl(\Phi(A,b)\leftrightarrow\Phi(A',b)\bigr)
 \tag{1}
 ```
 
@@ -33,7 +33,7 @@ Define
 
 ```math
 B(A):=\neg\exists b\,\Phi(A,b),\qquad
-P(A):=B(A)\lor\neg\exists A'\,B(A').
+P(A):=B(A)\lor\neg\exists A'\,B(A')
 ```
 
 H proves ∃A P(A): if a bad input exists choose one, and otherwise
@@ -45,7 +45,7 @@ Form the admitted relational profile
 
 ```math
 \widehat A[\bar x]:=
-\exists A^\theta\bigl(GA\land A[\bar x]\bigr).
+\exists A^\theta\bigl(GA\land A[\bar x]\bigr)
 \tag{3}
 ```
 
@@ -82,7 +82,7 @@ Consequently, under IC_θ+IC_η and the two extensionality conditions,
 ```math
 \forall A^\theta\exists b^\eta\Box\Phi(A,b)
 \quad\longleftrightarrow\quad
-\Box\forall A^\theta\exists b^\eta\Phi(A,b).
+\Box\forall A^\theta\exists b^\eta\Phi(A,b)
 \tag{2a}
 ```
 
@@ -98,7 +98,7 @@ Fix any type σ, including e. The existing
 ```math
 C+BC_{\sigma t}+MRC_{\sigma t,\sigma}:\qquad
 \Box\mathrm{Equiv}(R)
-\ \longrightarrow\ \exists X\,\Box\mathrm{Tr}_R(X).
+\ \longrightarrow\ \exists X\,\Box\mathrm{Tr}_R(X)
 \tag{4}
 ```
 
@@ -109,7 +109,7 @@ define
 ```math
 (\widehat R x)y:=
 \bigl(\mathrm{Equiv}(R)\land(Rx)y\bigr)
-\lor\bigl(\neg\mathrm{Equiv}(R)\land x=y\bigr).
+\lor\bigl(\neg\mathrm{Equiv}(R)\land x=y\bigr)
 \tag{5}
 ```
 
@@ -124,7 +124,7 @@ transversal of R. Therefore
 \boxed{C+BC_{\sigma t}+MRC_{\sigma t,\sigma}\ \vdash\
 \forall R^{\sigma\sigma t}\exists X^{\sigma t}
 \Box\bigl(\mathrm{Equiv}(R)
-\to\mathrm{Tr}_R(X)\bigr).}
+\to\mathrm{Tr}_R(X)\bigr)}
 \tag{6}
 ```
 
@@ -138,7 +138,7 @@ with R as an entity under an optional hypothesis.
 Take θ=σσt and
 
 ```math
-\Phi(R,X):=\mathrm{Equiv}(R)\to\mathrm{Tr}_R(X).
+\Phi(R,X):=\mathrm{Equiv}(R)\to\mathrm{Tr}_R(X)
 ```
 
 The formula Φ depends only on R's current extension. H proves (1)
@@ -147,7 +147,7 @@ transversal. Combine (6) with the transfer lemma:
 
 ```math
 \boxed{C+BC_{\sigma t}+MRC_{\sigma t,\sigma}+IC_{\sigma\sigma t}
-\ \vdash\ \Box TC_\sigma.}
+\ \vdash\ \Box TC_\sigma}
 \tag{7}
 ```
 
@@ -155,7 +155,7 @@ Thus, with the full MRC schema,
 
 ```math
 \boxed{C+MRC_{\rm all}+BC_{\sigma t}
-\ \vdash\ \Box TC_\sigma.}
+\ \vdash\ \Box TC_\sigma}
 \tag{8}
 ```
 

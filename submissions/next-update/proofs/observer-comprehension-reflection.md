@@ -10,14 +10,14 @@ Work in fixed relational C. Fix a finite, possibly empty, argument tuple of admi
 
 ```math
 \bar\sigma=(\sigma_1,\ldots,\sigma_n),\qquad
-\tau=\sigma_1\cdots\sigma_n t.
+\tau=\sigma_1\cdots\sigma_n t
 ```
 
 The zero-argument case is $`\tau=t`$. Every type displayed is admitted; individual types may occur among the arguments. Define
 
 ```math
 \mathrm{Coext}_\tau(X,Y):=
-\forall\bar x\,[X[\bar x]\leftrightarrow Y[\bar x]].
+\forall\bar x\,[X[\bar x]\leftrightarrow Y[\bar x]]
 ```
 
 For a qualification $`Q(Y)`$, put
@@ -25,7 +25,7 @@ For a qualification $`Q(Y)`$, put
 ```math
 \mathrm{Comp}_{Q,\tau}:=
 \forall X^\tau\exists Y^\tau
-\,[Q(Y)\land\mathrm{Coext}_\tau(X,Y)].
+\,[Q(Y)\land\mathrm{Coext}_\tau(X,Y)]
 \tag{1}
 ```
 
@@ -37,7 +37,7 @@ P(Y)&:=\Box\forall\bar x\,[Y[\bar x]\to\Box Y[\bar x]],\\
 I(Y)&:=\Box\forall Z^\tau
 \,[(\forall\bar x\,[Y[\bar x]\to\Box Z[\bar x]])\to Y\le Z],\\
 R(Y)&:=P(Y)\land I(Y),\\
-G(Y)&:=P(Y)\land P(\neg Y).
+G(Y)&:=P(Y)\land P(\neg Y)
 \end{aligned}
 \tag{2}
 ```
@@ -57,7 +57,7 @@ be one finite external type list. The only separation premise needed is
 S_{t,\Delta}:\quad
 \forall p,q^t\left[p=q\leftrightarrow
 \forall E^{tt}\bigl(\mathrm{Good}_\Delta(E)
-\to(Ep\leftrightarrow Eq)\bigr)\right].
+\to(Ep\leftrightarrow Eq)\bigr)\right]
 \tag{4}
 ```
 
@@ -65,7 +65,7 @@ The smaller modal premise is the unboxed, currently asserted formula
 
 ```math
 \mathrm{ND}_t:=
-\forall p,q^t\,[p\ne q\to\Box(p\ne q)].
+\forall p,q^t\,[p\ne q\to\Box(p\ne q)]
 \tag{5}
 ```
 
@@ -76,7 +76,7 @@ Neither (4), (5), nor comprehension is assumed necessary. The result remains a f
 **Lemma 1.** Over C + ND_t, every native boxed proposition is one of the Boolean endpoints. Consequently every Good observer fixes it:
 
 ```math
-E(\Box q)=\Box q.
+E(\Box q)=\Box q
 \tag{6}
 ```
 
@@ -86,7 +86,7 @@ Proof. By definition $`\Box q`$ is the identity proposition $`q=\top`$. If this 
 
 ```math
 P(Y)\quad\Longrightarrow\quad
-\forall\bar x\,[Y[\bar x]=\Box Y[\bar x]].
+\forall\bar x\,[Y[\bar x]=\Box Y[\bar x]]
 \tag{7}
 ```
 
@@ -105,7 +105,7 @@ for each Good E. Thus each persistent witness is fixed pointwise. We do not asse
 Moreover, each of P(Y), R(Y) and G(Y) is a native boxed proposition or a finite Boolean combination of boxed propositions. By Lemma 1 and Boolean preservation,
 
 ```math
-E(Q(Y))=Q(Y)\qquad(Q=P,R,G).
+E(Q(Y))=Q(Y)\qquad(Q=P,R,G)
 \tag{9}
 ```
 
@@ -117,7 +117,7 @@ Here is the abstract step, separated from the sufficient modal premise. Suppose 
 
 ```math
 E(Q(Y))=Q(Y),\qquad
-Q(Y)\to\forall\bar x\,[E(Y[\bar x])=Y[\bar x]].
+Q(Y)\to\forall\bar x\,[E(Y[\bar x])=Y[\bar x]]
 \tag{10}
 ```
 
@@ -128,7 +128,7 @@ These are hypotheses about the actual admitted witnesses and observer actions, n
 ```math
 \mathrm{Comp}_{Q,\tau}
 \quad\Longrightarrow\quad
-\Box\mathrm{Comp}_{Q,\tau}.
+\Box\mathrm{Comp}_{Q,\tau}
 \tag{11}
 ```
 
@@ -138,7 +138,7 @@ Proof. Write A for the closed formula (1), and fix an arbitrary Good_Δ observer
 E(A)=\forall X^\tau\exists Y^\tau\left[
  E(Q(Y))\land
  \forall\bar x\,[E(X[\bar x])\leftrightarrow E(Y[\bar x])]
-\right].
+\right]
 \tag{12}
 ```
 
@@ -154,7 +154,7 @@ X^E:=\lambda\bar x.\,E(X[\bar x])
 is an admitted relation of exactly the same type τ. In the zero-argument case it is EX. Apply current A to X^E, obtaining an admitted Y with Q(Y) and
 
 ```math
-\forall\bar x\,[E(X[\bar x])\leftrightarrow Y[\bar x]].
+\forall\bar x\,[E(X[\bar x])\leftrightarrow Y[\bar x]]
 \tag{14}
 ```
 
@@ -172,7 +172,7 @@ Lemmas 1–2 verify (10) for every qualification in (2). Therefore, for each fix
 \quad\vdash\quad
 \mathrm{Comp}_{Q,\tau}\to
 \Box\mathrm{Comp}_{Q,\tau}
-\quad(Q=P,R,G).
+\quad(Q=P,R,G)
 }
 \tag{15}
 ```
@@ -181,7 +181,7 @@ In particular,
 
 ```math
 \boxed{\mathrm{C5}+\mathrm{OS}+\mathrm{RC}_\tau
-\quad\Longrightarrow\quad\Box\mathrm{RC}_\tau.}
+\quad\Longrightarrow\quad\Box\mathrm{RC}_\tau}
 \tag{16}
 ```
 

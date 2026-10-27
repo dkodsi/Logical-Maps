@@ -14,7 +14,7 @@ Fix variables x₁,…,x_r and a nonempty reduced word w in these variables and 
 w=a_L\cdots a_1,
 \qquad a_j=x_{i_j}^{\varepsilon_j},
 \qquad \varepsilon_j\in\{1,-1\},
-\qquad L\ge1.
+\qquad L\ge1
 \tag{1}
 ```
 
@@ -29,7 +29,7 @@ For admitted G,H:tt put
 \mathrm{Good}_{\{t\}}(G)\land
 \mathrm{Good}_{\{t\}}(H)\land
 G\circ H=I\land H\circ G=I,
-\qquad I:=\lambda p.p.
+\qquad I:=\lambda p.p
 \tag{2}
 ```
 
@@ -41,7 +41,7 @@ Define the whole unary operation W_w(G₁,H₁,…,G_r,H_r) by replacing a posit
 \left[
 \bigwedge_{i=1}^{r}\mathrm{Pair}(G_i,H_i)
 \ \to\ W_w(G_1,H_1,\ldots,G_r,H_r)=I
-\right].
+\right]
 \tag{3}
 ```
 
@@ -54,7 +54,7 @@ For fixed external N≥1, let
 ```math
 \mathrm{AtMost}_N(t):=
 \exists u_1\cdots u_N\ \forall p\,
-(p=u_1\lor\cdots\lor p=u_N).
+(p=u_1\lor\cdots\lor p=u_N)
 \tag{4}
 ```
 
@@ -71,7 +71,7 @@ Write Sym(m) for the ordinary finite symmetric group on m vertices. It is used i
 ```math
 \begin{cases}
 \pi_{i_j}(j-1)=j,&\varepsilon_j=1,\\
-\pi_{i_j}(j)=j-1,&\varepsilon_j=-1.
+\pi_{i_j}(j)=j-1,&\varepsilon_j=-1
 \end{cases}
 \tag{5}
 ```
@@ -83,7 +83,7 @@ For each i, the unused source and target sets have the same finite size. Match t
 At a positive step, (5) sends j−1 to j. At a negative step, π_i(j)=j−1 means π_i⁻¹ sends j−1 to j. Induction along the application order therefore gives
 
 ```math
-w(\pi_1,\ldots,\pi_r)(0)=L\ne0.
+w(\pi_1,\ldots,\pi_r)(0)=L\ne0
 \tag{6}
 ```
 
@@ -94,7 +94,7 @@ Sym(j) embeds in Sym(j+1) by fixing the last vertex. A word identity holding in 
 ```math
 \boxed{
 k(w):=\max\{j\ge1:\mathrm{Sym}(j)\text{ satisfies }w\}
-\quad\text{exists and satisfies }1\le k(w)\le L.}
+\quad\text{exists and satisfies }1\le k(w)\le L}
 \tag{7}
 ```
 
@@ -105,7 +105,7 @@ In particular Sym(k(w)+1) fails w. This threshold is effectively a finite calcul
 Assume full Rev, hence C5. Fix an external m≥1 and pairwise disjoint nonzero propositions b₁,…,b_m. The [finite common-refinement lemma](bounded-exponent-reversible-observers.md), §2, supplies a nonzero proposition d and admitted reversible $`\mathrm{Good}_{\{t\}}`$ observers G_i, with qualified inverses H_i, such that
 
 ```math
-c_i:=G_i d\ne0,\qquad c_i\le b_i.
+c_i:=G_i d\ne0,\qquad c_i\le b_i
 \tag{8}
 ```
 
@@ -116,7 +116,7 @@ Let r=¬∨ᵢc_i. For each external permutation π∈Sym(m) define the admitted
 ```math
 T_\pi(p):=(r\land p)\lor
 \bigvee_{i=1}^{m}
-\left[c_{\pi(i)}\land(G_{\pi(i)}\circ H_i)(p)\right].
+\left[c_{\pi(i)}\land(G_{\pi(i)}\circ H_i)(p)\right]
 \tag{9}
 ```
 
@@ -127,7 +127,7 @@ The whole multiplication law requires more than checking the finite set of selec
 ```math
 T_\pi(p\land c_i)=K_{\pi,i}(p\land c_i),
 \qquad
-T_\pi(p\land r)=p\land r.
+T_\pi(p\land r)=p\land r
 \tag{10}
 ```
 
@@ -138,7 +138,7 @@ All other branches vanish in the first equation, because their input regions are
 T_\pi(T_\sigma(p\land c_i))
 &=(G_{\pi(\sigma(i))}\circ H_{\sigma(i)})
   (G_{\sigma(i)}\circ H_i)(p\land c_i)\\
-&=(G_{\pi(\sigma(i))}\circ H_i)(p\land c_i).
+&=(G_{\pi(\sigma(i))}\circ H_i)(p\land c_i)
 \end{aligned}
 \tag{11}
 ```
@@ -149,7 +149,7 @@ The r part remains fixed. Distributing p across the finite partition and using F
 \boxed{
 T_\pi\circ T_\sigma=T_{\pi\circ\sigma},
 \qquad T_{\mathrm{id}}=I,
-\qquad T_\pi^{-1}=T_{\pi^{-1}}.}
+\qquad T_\pi^{-1}=T_{\pi^{-1}}}
 \tag{12}
 ```
 
@@ -174,7 +174,7 @@ For a fixed k≥1, the elementary Boolean bound is
 ```math
 \text{no }k+1\text{ disjoint nonzero propositions}
 \quad\longleftrightarrow\quad
-\mathrm{AtMost}_{2^k}(t).
+\mathrm{AtMost}_{2^k}(t)
 \tag{14}
 ```
 
@@ -188,7 +188,7 @@ Here is the finite reasoning. Starting with the partition {Top}, split a nonatom
 \quad\equiv\quad
 \mathrm{C5}+\mathrm{AtMost}_{2^k}(t)
 \quad\equiv\quad
-\mathrm H+\mathrm{End}+\mathrm{AtMost}_{2^k}(t).}
+\mathrm H+\mathrm{End}+\mathrm{AtMost}_{2^k}(t)}
 \tag{15}
 ```
 
@@ -227,7 +227,7 @@ over H. This recovers the [group-centre characterization](centre-of-reversible-l
 **The metabelian word.** Take
 
 ```math
-w=[[x_1,x_2],[x_3,x_4]].
+w=[[x_1,x_2],[x_3,x_4]]
 \tag{18}
 ```
 
@@ -237,7 +237,7 @@ It fails in Sym(4). With the stated convention,
 
 ```math
 [(12),(23)]=(132),\qquad
-[(12),(24)]=(142).
+[(12),(24)]=(142)
 \tag{19}
 ```
 
@@ -246,7 +246,7 @@ The two cycles do not commute: their products in the two orders send 1 respectiv
 ```math
 \mathrm{Rev}+\mathrm{Law}_{[[x_1,x_2],[x_3,x_4]]}
 \quad\equiv\quad
-\mathrm{C5}+\mathrm{AtMost}_{8}(t).
+\mathrm{C5}+\mathrm{AtMost}_{8}(t)
 \tag{20}
 ```
 
@@ -265,7 +265,7 @@ For a nonempty reduced word, (7) gives the uniform explicit upper estimate
 ```math
 \mathrm{Rev}+\mathrm{Law}_w
 \quad\vdash\quad
-\mathrm{AtMost}_{2^L}(t).
+\mathrm{AtMost}_{2^L}(t)
 \tag{21}
 ```
 

@@ -11,7 +11,7 @@ Work over H in the fixed relational type system. Write m(x,y) and v(x,y) for two
 DL(m,v) means the pointwise distributive-lattice equations: both operations are associative, commutative and idempotent, they satisfy both absorption equations, and each distributes over the other. Put
 
 ```math
-x\le y\quad:\!\!\Longleftrightarrow\quad m(x,y)=x.
+x\le y\quad:\!\!\Longleftrightarrow\quad m(x,y)=x
 \tag{1}
 ```
 
@@ -22,7 +22,7 @@ Use exactly the explicit preorder formula Zorn at σ=tt stated in [Zorn supplies
 A filter F is an admitted nonempty upward-closed predicate closed under m. An ideal I is an admitted nonempty downward-closed predicate closed under v. All inclusions in this note mean current truth inclusion, not identity of predicates. A prime filter is a proper filter K satisfying
 
 ```math
-K(v(x,y))\ \longrightarrow\ Kx\lor Ky.
+K(v(x,y))\ \longrightarrow\ Kx\lor Ky
 \tag{2}
 ```
 
@@ -36,7 +36,7 @@ Call a predicate K valid when it is a filter, contains F, and is disjoint from I
 
 ```math
 R(K,J):=\neg\mathrm{Valid}(K)\lor
-  (\mathrm{Valid}(J)\land K\subseteq J).
+  (\mathrm{Valid}(J)\land K\subseteq J)
 \tag{3}
 ```
 
@@ -46,7 +46,7 @@ For an admitted R-comparable family X, define
 
 ```math
 U(x):=Fx\lor\exists K^{tt}
-  (XK\land\mathrm{Valid}(K)\land Kx).
+  (XK\land\mathrm{Valid}(K)\land Kx)
 \tag{4}
 ```
 
@@ -73,7 +73,7 @@ w:=m(m(u,u'),v(x,y))
 belongs to K. Distributivity expresses w as
 
 ```math
-v\bigl(m(m(u,u'),x),\ m(m(u,u'),y)\bigr).
+v\bigl(m(m(u,u'),x),\ m(m(u,u'),y)\bigr)
 ```
 
 Its two joinands are respectively below m(u,x) and m(u′,y), so both belong to I. Ideal closure puts w in I, contradicting disjointness. This proves primeness. Since I is nonempty, K is proper. The character produced is the admitted predicate K itself; no externally chosen prime filter is assumed to be in the domain.
@@ -88,7 +88,7 @@ Consequently, over H+Zorn at tt,
 
 ```math
 \boxed{S[\mathrm{Mat}_m\land\mathrm{Mat}_v]
-\quad\longleftrightarrow\quad DL(m,v).}
+\quad\longleftrightarrow\quad DL(m,v)}
 \tag{7}
 ```
 
@@ -112,7 +112,7 @@ If e₀ is constantly false or constantly true on L, the respective constant ter
 ```math
 \begin{aligned}
 F(x)&:=\exists u\,(Lu\land e_0u\land u\le x),\\
-I(x)&:=\exists v\,(Lv\land\neg e_0v\land x\le v).
+I(x)&:=\exists v\,(Lv\land\neg e_0v\land x\le v)
 \end{aligned}
 \tag{8}
 ```

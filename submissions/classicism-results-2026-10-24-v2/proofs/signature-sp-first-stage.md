@@ -10,7 +10,7 @@ names in the original signature. Let a:e be the auxiliary root marker, and put
 ```math
 M=\mathrm{Max}(C(\Sigma)),\qquad
 T=\mathrm{Max}(C(\Sigma,a))+E_1,
-\qquad E_1:=\forall x^e y^e\,(x=y).
+\qquad E_1:=\forall x^e y^e\,(x=y)
 ```
 
 Every SP side condition continues to use M. The marker does not enlarge the
@@ -22,7 +22,7 @@ the compact space K=Stone(T), and
 ```math
 W_F=\widehat{\neg\exists xF(x)}
           \cup\bigcup_{b\in B_\sigma}\widehat{F(b)},
-\qquad K_1=\bigcap_F\overline{W_F}^{\,K}.
+\qquad K_1=\bigcap_F\overline{W_F}^{\,K}
 \tag{1}
 ```
 
@@ -47,7 +47,7 @@ K_1\ne\varnothing\quad\Longleftrightarrow\quad
 \bigl[\ T\vdash\exists x^\sigma F(x)
 \ \Longrightarrow\
 \exists b\in B_\sigma\ \mathrm{Con}(T+F(b))\ \bigr]
-\quad\text{for every }\sigma,F.
+\quad\text{for every }\sigma,F
 \tag{3}
 ```
 
@@ -60,14 +60,14 @@ The exact C-theorem from [universal-core analysis](../source/research/2026-10-22
 
 ```math
 DP\ \leftrightarrow\
-\forall r^t\bigl(r\ne\bot\ \to\ (P\land\Diamond r)\ne\bot\bigr).
+\forall r^t\bigl(r\ne\bot\ \to\ (P\land\Diamond r)\ne\bot\bigr)
 \tag{4}
 ```
 
 Fix a closed original-Σ sentence P with Con(M+P), and define
 
 ```math
-F_P(r):=(r\ne\bot)\land\bigl((P\land\Diamond r)=\bot\bigr).
+F_P(r):=(r\ne\bot)\land\bigl((P\land\Diamond r)=\bot\bigr)
 \tag{5}
 ```
 
@@ -81,13 +81,13 @@ REPORT §3 proves this independently of the chosen model or individual.
 Consequently
 
 ```math
-T\vdash\neg F_P(b)\qquad\text{for every closed term }b:t.
+T\vdash\neg F_P(b)\qquad\text{for every closed term }b:t
 ```
 
 All the named-witness cylinders in W_{F_P} are therefore empty, leaving
 
 ```math
-W_{F_P}=\widehat{DP}\quad\text{inside }K.
+W_{F_P}=\widehat{DP}\quad\text{inside }K
 \tag{6}
 ```
 
@@ -121,7 +121,7 @@ Define the following set of finitary sentences metatheoretically:
 
 ```math
 \Omega(T)=\{\forall x^\sigma\varphi(x):
-       T\vdash\varphi(b)\text{ for every closed marked }b:\sigma\}.
+       T\vdash\varphi(b)\text{ for every closed marked }b:\sigma\}
 \tag{7}
 ```
 
@@ -140,7 +140,7 @@ neighborhood hat(A) of U is disjoint from W_F. Completeness gives
 
 ```math
 T\vdash A\to\exists xF(x),\qquad
-T\vdash A\to\neg F(b)\quad\text{for every }b.
+T\vdash A\to\neg F(b)\quad\text{for every }b
 ```
 
 Thus Ω(T) contains ∀x(A→¬F(x)). Together with A, which belongs to U,
@@ -156,7 +156,7 @@ Equivalently,
 K_1=\varnothing\quad\Longleftrightarrow\quad
 \exists\sigma,F\
 \bigl(T\vdash\exists x^\sigma F(x)
-\ \land\ \forall b\in B_\sigma\ T\vdash\neg F(b)\bigr).
+\ \land\ \forall b\in B_\sigma\ T\vdash\neg F(b)\bigr)
 \tag{8}
 ```
 
@@ -168,7 +168,7 @@ predicates F_i:σ_i→t. Then
 ```math
 T\vdash\bigvee_i A_i,\qquad
 T\vdash A_i\to\exists x_iF_i(x_i),\qquad
-T\vdash A_i\to\neg F_i(b)\quad\text{for every named }b:\sigma_i.
+T\vdash A_i\to\neg F_i(b)\quad\text{for every named }b:\sigma_i
 ```
 
 Put Ψ(x₁,…,x_n)=∨_i(A_i∧F_i(x_i)). Nonempty type domains and the displayed
@@ -183,7 +183,7 @@ projections. Write σ_i=α_i1…α_ik_i t, allowing k_i=0, and put
 ```math
 \tau=(\sigma_1t)\cdots(\sigma_nt)t,\qquad
 \kappa(\bar x)=\lambda f_1^{\sigma_1t}\cdots f_n^{\sigma_nt}.
-                     \bigvee_i f_i(x_i).
+                     \bigvee_i f_i(x_i)
 ```
 
 Define π_i(z):σ_i by applying z to n arguments, taking argument j≠i to
@@ -193,7 +193,7 @@ as in the topic convention. Beta reduction, Boolean identities, and the
 C abstraction/eta laws give
 
 ```math
-C\vdash\pi_i(\kappa(\bar x))=x_i.
+C\vdash\pi_i(\kappa(\bar x))=x_i
 \tag{9}
 ```
 
@@ -210,7 +210,7 @@ It also proves the useful special feature of this family:
 
 ```math
 K_1\ne\varnothing\quad\Longleftrightarrow\quad
-\forall F\ (W_F\ne\varnothing).
+\forall F\ (W_F\ne\varnothing)
 \tag{10}
 ```
 
@@ -276,7 +276,7 @@ Let Atom(p) be Boolean atomhood, and define
 
 ```math
 A:=\exists p^t\bigl(p\land\mathrm{Atom}(p)\bigr),\qquad
-G(p):=A\to\bigl(p\land\mathrm{Atom}(p)\bigr).
+G(p):=A\to\bigl(p\land\mathrm{Atom}(p)\bigr)
 \tag{11}
 ```
 
@@ -309,7 +309,7 @@ ultrafilter of every such model, giving a contradiction. Therefore
 
 ```math
 T\vdash\neg\bigl(b\land\mathrm{Atom}(b)\bigr)
-\qquad\text{for every named }b:t.
+\qquad\text{for every named }b:t
 ```
 
 For F(p)=p∧Atom(p), it follows that W_F=hat(¬A), a clopen set. Thus

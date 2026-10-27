@@ -10,7 +10,7 @@ claim is made. The type system and logic are the fixed relational C.
 There is a relative countermodel to
 
 ```math
-C+IC_{\rm all}\ \Longrightarrow\ \Box IC_{\rm all}.
+C+IC_{\rm all}\ \Longrightarrow\ \Box IC_{\rm all}
 ```
 
 More precisely, working in ZF with a sequence
@@ -19,7 +19,7 @@ having no choice function, the construction below is a full action model
 with a distinguished object r satisfying
 
 ```math
-\boxed{IC_{\rm all}+\neg\Box IC_t.}
+\boxed{IC_{\rm all}+\neg\Box IC_t}
 \tag{1}
 ```
 
@@ -50,13 +50,13 @@ Take two objects r,s and hom-sets
 \mathrm{Hom}(r,r)=\{1_r\},\quad
 \mathrm{Hom}(r,s)=\{a\},\quad
 \mathrm{Hom}(s,r)=\varnothing,\quad
-\mathrm{Hom}(s,s)=\mathbb Z.
+\mathrm{Hom}(s,s)=\mathbb Z
 ```
 
 Composition in $`\mathbb Z`$ is addition, with identity 0, and
 
 ```math
-g\circ a=a\qquad(g\in\mathbb Z).
+g\circ a=a\qquad(g\in\mathbb Z)
 \tag{2}
 ```
 
@@ -71,7 +71,7 @@ $`k=0`$, its entities at an object v are all sets of tagged tuples
 
 ```math
 D_\tau(v)=\mathcal P\!\left(
-\coprod_{h:v\to w}\prod_{i=1}^k D_{\sigma_i}(w)\right).
+\coprod_{h:v\to w}\prod_{i=1}^k D_{\sigma_i}(w)\right)
 \tag{3}
 ```
 
@@ -83,7 +83,7 @@ all domains are nonempty, with the empty relation available.
 For $`k:v\to w`$, transport is precomposition:
 
 ```math
-(k_*X)(h;\bar x)=X(h\circ k;\bar x).
+(k_*X)(h;\bar x)=X(h\circ k;\bar x)
 \tag{4}
 ```
 
@@ -134,7 +134,7 @@ all F or over all types is being made.
 Define the admitted G by
 
 ```math
-G(1_r)=\{x\},\qquad G(a)=\{y\}.
+G(1_r)=\{x\},\qquad G(a)=\{y\}
 \tag{5}
 ```
 
@@ -159,7 +159,7 @@ $`C\subseteq\mathbb N`$, let $`p_C=\nu[C]`$, a proposition at s.
 Transport by g on these propositions is
 
 ```math
-g_*p=\{h\in\mathbb Z:h+g\in p\}.
+g_*p=\{h\in\mathbb Z:h+g\in p\}
 \tag{6}
 ```
 
@@ -167,7 +167,7 @@ It is invertible, with inverse transport by -g. Define an admitted
 property F of propositions at s by prescribing every extension:
 
 ```math
-F(\nu(n))=\{\nu(n)_*p_C:C\in A_n\}.
+F(\nu(n))=\{\nu(n)_*p_C:C\in A_n\}
 \tag{7}
 ```
 
@@ -180,7 +180,7 @@ $`g=\nu(n)`$, the extension G(g) would be a singleton $`\{q_n\}`$,
 with $`q_n=g_*p_{C_n}`$ for a unique $`C_n\in A_n`$. Recover it by
 
 ```math
-C_n=\nu^{-1}[(-\nu(n))_*q_n].
+C_n=\nu^{-1}[(-\nu(n))_*q_n]
 \tag{8}
 ```
 

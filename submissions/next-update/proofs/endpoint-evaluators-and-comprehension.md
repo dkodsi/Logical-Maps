@@ -8,7 +8,7 @@ Work in the fixed relational C. Define
 
 ```math
 \mathrm{Correct}(E):=\forall p^t\, .\,
-(p\to Ep=\top)\land(\neg p\to Ep=\bot).
+(p\to Ep=\top)\land(\neg p\to Ep=\bot)
 ```
 
 This asks for correct endpoint outputs at current inputs. It does not impose the logical-observer qualification. Over C,
@@ -16,7 +16,7 @@ This asks for correct endpoint outputs at current inputs. It does not impose the
 ```math
 \exists E^{tt}\, .\,\mathrm{Correct}(E)
 \quad\Longleftrightarrow\quad
-\mathrm{Actuality}+\mathrm{ND}_t.
+\mathrm{Actuality}+\mathrm{ND}_t
 ```
 
 Given such an $`E`$, put $`a_E:=\forall p\, .\,Ep\to p`$. This is true. If $`p`$ is true, $`Ep=\top`$, and universal instantiation gives $`a_E\le(Ep\to p)=p`$. Thus $`a_E`$ is an Actuality witness.
@@ -32,14 +32,14 @@ Conversely, let $`a`$ witness Actuality and assume ND at t. Define $`E(p):=\Box(
 ```math
 \mathrm C+\mathrm{ND}_t+\mathrm{BC}_{tt}
 \quad\vdash\quad\exists E^{tt}\, .\,\mathrm{Correct}(E)
-\quad\vdash\quad\mathrm{Actuality}.
+\quad\vdash\quad\mathrm{Actuality}
 ```
 
 Here $`\mathrm{BC}_{tt}`$ is Boolean Completeness at the type of properties of propositions. For $`p^t`$, put
 
 ```math
 h_p:=\lambda r^t\, .\,r=p,\qquad
-H:=\lambda h^{tt}\, .\,\exists p^t\, .\,p\land h=h_p.
+H:=\lambda h^{tt}\, .\,\exists p^t\, .\,p\land h=h_p
 ```
 
 The current members of the admitted family $`H`$ are exactly the haecceities of currently true propositions. Let $`E^{tt}`$ be their algebraic join, supplied by completeness in its dual form.
@@ -62,14 +62,14 @@ Fix $`\tau=\sigma_1\cdots\sigma_n t`$. Assume BC at $`\tau`$ and ND at the argum
 
 ```math
 h_{\bar x}:=\lambda\bar z\, .\,\bigwedge_i z_i=x_i,\qquad
-H_X:=\lambda Z^\tau\, .\,\exists\bar x\, .\,X[\bar x]\land Z=h_{\bar x}.
+H_X:=\lambda Z^\tau\, .\,\exists\bar x\, .\,X[\bar x]\land Z=h_{\bar x}
 ```
 
 Let $`Y`$ be the join of this admitted family. The same argument proves
 
 ```math
 X[\bar u]\to Y[\bar u]=\top,\qquad
-\neg X[\bar u]\to Y[\bar u]=\bot.
+\neg X[\bar u]\to Y[\bar u]=\bot
 ```
 
 For the second implication, use the complement of the haecceity of $`\bar u`$ as a bound. Any current X-tuple differs in some coordinate, whose ND instance makes the tuple difference necessary. The necessitated finite-tuple substitution theorem supplies the whole bound.
@@ -87,7 +87,7 @@ Under C5 + Actuality, §1 supplies a correct evaluator. BF makes quantifiers inf
 **Boolean Completeness.** For a current family $`F^{\tau t}`$, $`\tau=\bar\sigma t`$, define
 
 ```math
-G_F[\bar z]:=\forall Y^\tau\, .\,E(FY)\to Y[\bar z].
+G_F[\bar z]:=\forall Y^\tau\, .\,E(FY)\to Y[\bar z]
 ```
 
 For a current member $`Y`$, its guard is Top, so $`G_F\le Y`$. If $`V`$ bounds every current member, each guard is either Top with $`V\le Y`$, or Bottom with the implication Top. The range-infimum property gives $`V\le G_F`$. Thus this is the required greatest lower bound. Existential quantification with conjunction gives the dual join.
@@ -95,7 +95,7 @@ For a current member $`Y`$, its guard is Top, so $`G_F\le Y`$. If $`V`$ bounds e
 **Plenitude.** For a currently functional graph $`U^{\sigma\tau t}`$, $`\tau=\bar\rho t`$, define
 
 ```math
-g_U(x)[\bar z]:=\exists Y^\tau\, .\,E(U[x,Y])\land Y[\bar z].
+g_U(x)[\bar z]:=\exists Y^\tau\, .\,E(U[x,Y])\land Y[\bar z]
 ```
 
 Fix $`x`$ and its unique current output $`A`$. Correctness makes the guard Top exactly at $`Y=A`$. The range-supremum property gives $`g_U(x)[\bar z]=A[\bar z]`$; Functionality gives $`g_U(x)=A`$. This is an admitted representing operation at every permitted relational output type.
@@ -103,7 +103,7 @@ Fix $`x`$ and its unique current output $`A`$. Correctness makes the guard Top e
 **Rigid Comprehension.** Put
 
 ```math
-R_X[\bar z]:=E(X[\bar z]).
+R_X[\bar z]:=E(X[\bar z])
 ```
 
 It is currently coextensive with $`X`$. NI makes its endpoint identities necessary, and BF collects them into necessary universal endpoint-valuedness. Endpoint-valuedness plus BF implies weak rigidity: weak persistence is immediate; for weak inextensibility, each endpoint case gives the necessary implication to the proposed bound, and BF combines these into relation entailment. C5 supplies necessary BF. Necessitate this finite-premise implication and apply it to the necessary endpoint and BF premises. The result is necessary weak rigidity, hence the required rigidity of $`R_X`$.
@@ -122,7 +122,7 @@ Plenitude at $`(t,t)`$ represents the graph assigning Top to true propositions a
 &\Longleftrightarrow\mathrm{Boolean\ Completeness}
 \Longleftrightarrow\mathrm{Plenitude}_{t,t}\\
 &\Longleftrightarrow\mathrm{Plenitude}
-\Longleftrightarrow\mathrm{Rigid\ Comprehension}.
+\Longleftrightarrow\mathrm{Rigid\ Comprehension}
 \end{aligned}
 ```
 

@@ -14,7 +14,7 @@ All these data are one fixed W-set. The statement concerns this selected local i
 \mathrm{ZF+DC},\qquad
  \mathbb R=\check{\mathbb R}^{,W},\qquad
  \omega_1=\check\kappa,
- \qquad \check\kappa\not\hookrightarrow\mathbb R.
+ \qquad \check\kappa\not\hookrightarrow\mathbb R
  \tag{1}
 ```
 
@@ -53,7 +53,7 @@ Let N=M[H_λ], for the corresponding initial segment of the actual Levy generic.
 
 ```math
 \lambda=\omega_1^N=|\mathbb R^N|,
- \qquad \lambda<\kappa.
+ \qquad \lambda<\kappa
  \tag{3}
 ```
 
@@ -73,7 +73,7 @@ Let b be the coordinatewise union of this λ-sequence. It belongs to N, although
 \mathbb R^N\longrightarrow
  A_j[b_{<j}]
    :=\{x\in\mathbb R^N:
-           b_{<j}\Vdash_W x\in A_j\}.
+           b_{<j}\Vdash_W x\in A_j\}
  \tag{4}
 ```
 

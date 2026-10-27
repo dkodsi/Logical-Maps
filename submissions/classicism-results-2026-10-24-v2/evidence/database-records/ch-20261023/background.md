@@ -65,7 +65,7 @@ $$
 \operatorname{GLB}_\tau(y,X)&:=\forall z^\tau\, .\,
   \operatorname{LB}_\tau(z,X)\leftrightarrow z\le_\tau y,\\
 \operatorname{Atom}_\tau(y)&:=\forall z^\tau\, .\,
-  (z\le_\tau y\land z\ne y)\leftrightarrow z\le_\tau\neg_\tau z.
+  (z\le_\tau y\land z\ne y)\leftrightarrow z\le_\tau\neg_\tau z
 \end{aligned}
 $$
 
@@ -80,7 +80,7 @@ $$
 \operatorname{Suc}_\sigma(Z)&:=\lambda X^{\sigma t}\, .\,\exists y^\sigma\, .\,
   Xy\land Z(\lambda u^\sigma\, .\,Xu\land u\ne y),\\
 \operatorname{FiniteCardinality}_\sigma(Z)&:=\forall W^{((\sigma t)t)t}\, .\,
-  \bigl(W\mathbf{0}_\sigma\land\forall Y\, .\,WY\to W(\operatorname{Suc}_\sigma Y)\bigr)\to WZ.
+  \bigl(W\mathbf{0}_\sigma\land\forall Y\, .\,WY\to W(\operatorname{Suc}_\sigma Y)\bigr)\to WZ
 \end{aligned}
 $$
 
@@ -116,7 +116,7 @@ I^*_\sigma&:=\forall m\,n\in\mathbb N_\sigma\, .\,\mathbf{0}_\sigma\ne\operatorn
 \operatorname{Sum}_\sigma(m,n,o)&:=\forall R^{\nu_\sigma\nu_\sigma t}\, .\,R\mathbf{0}_\sigma m\to
   (\forall i\,j\in\mathbb N_\sigma\, .\,Rij\to R(\operatorname{Suc}_\sigma i)(\operatorname{Suc}_\sigma j))\to Rno,\\
 \operatorname{Prod}_\sigma(m,n,o)&:=\forall R^{\nu_\sigma\nu_\sigma t}\, .\,R\mathbf{0}_\sigma\mathbf{0}_\sigma\to
-  (\forall i\,j\,k\in\mathbb N_\sigma\, .\,Rij\to\operatorname{Sum}_\sigma(m,j,k)\to R(\operatorname{Suc}_\sigma i)k)\to Rno.
+  (\forall i\,j\,k\in\mathbb N_\sigma\, .\,Rij\to\operatorname{Sum}_\sigma(m,j,k)\to R(\operatorname{Suc}_\sigma i)k)\to Rno
 \end{aligned}
 $$
 
@@ -193,7 +193,7 @@ $$
 \operatorname{Inextensible}(Y)&:=\Box\forall X\, .\,
   (\forall\bar x\, .\,Y[\bar x]\to\Box X[\bar x])\to Y\le X,\\
 \operatorname{Rigid}(Y)&:=\operatorname{Persistent}(Y)\land
-  \operatorname{Inextensible}(Y).
+  \operatorname{Inextensible}(Y)
 \end{aligned}
 $$
 
@@ -213,7 +213,7 @@ $$
 \operatorname{WeaklyInextensible}(Y)&:=\forall X\, .\,
   (\forall\bar x\, .\,Y[\bar x]\to\Box X[\bar x])\to Y\le X,\\
 \operatorname{WeaklyRigid}(Y)&:=\operatorname{WeaklyPersistent}(Y)\land
-  \operatorname{WeaklyInextensible}(Y).
+  \operatorname{WeaklyInextensible}(Y)
 \end{aligned}
 $$
 
@@ -232,7 +232,7 @@ $$
 \begin{aligned}
 \operatorname{Serial}(U)&:=\forall x^\sigma\, .\,\exists y^\tau\, .\,(Ux)y,\\
 \operatorname{Functional}(U)&:=\forall x^\sigma\, .\,\exists y^\tau\, .\,
-  (Ux)y\land\forall z^\tau\, .\,(Ux)z\to y=z.
+  (Ux)y\land\forall z^\tau\, .\,(Ux)z\to y=z
 \end{aligned}
 $$
 
@@ -246,7 +246,7 @@ For $R^{\sigma\sigma t}$, at any type $\sigma$ including $e$,
 $$
 \operatorname{Equiv}(R):=\forall x^\sigma\, .\,(Rx)x\;\land\;
 \forall x^\sigma y^\sigma\, .\,(Rx)y\to(Ry)x\;\land\;
-\forall x^\sigma y^\sigma z^\sigma\, .\,(Rx)y\land(Ry)z\to(Rx)z.
+\forall x^\sigma y^\sigma z^\sigma\, .\,(Rx)y\land(Ry)z\to(Rx)z
 $$
 
 The cell of $x$ is the property $\lambda z\, .\,(Rx)z$. Transversal Choice
@@ -272,7 +272,7 @@ $$
 \operatorname{TotalOrder}(R,X)&:=\operatorname{Trans}(R,X)\land
   \operatorname{Antisymm}(R,X)\land\operatorname{Total}(R,X),\\
 \operatorname{WO}(R,X)&:=\operatorname{TotalOrder}(R,X)\land
-  \operatorname{WellFounded}(R,X).
+  \operatorname{WellFounded}(R,X)
 \end{aligned}
 $$
 
@@ -284,7 +284,7 @@ $\operatorname{WO}(R)$ says that $R$ well-orders the whole type. Further,
 $$
 \begin{aligned}
 \operatorname{Refl}(R)&:=\forall x^\sigma\, .\,(Rx)x,\\
-\operatorname{Preorder}(R)&:=\operatorname{Refl}(R)\land\operatorname{Trans}(R).
+\operatorname{Preorder}(R)&:=\operatorname{Refl}(R)\land\operatorname{Trans}(R)
 \end{aligned}
 $$
 
@@ -307,7 +307,7 @@ $$
 \operatorname{SWorld}_\sigma(W)&:=\Diamond_\sigma W\land\Box\forall Y^\sigma\, .\,
   W\le_\sigma Y\lor W\le_\sigma\neg_\sigma Y,\\
 \operatorname{WWorld}_\sigma(W)&:=\Diamond_\sigma W\land\forall Y^\sigma\, .\,
-  W\le_\sigma Y\lor W\le_\sigma\neg_\sigma Y.
+  W\le_\sigma Y\lor W\le_\sigma\neg_\sigma Y
 \end{aligned}
 $$
 
@@ -323,13 +323,13 @@ Strong Possibility uses the distinctness-preserving modality of §2.6, p. 42:
 
 $$
 \Box_{\ne}p:=\exists q\, .\,q\land\Box(\Diamond q\to p),
-\qquad \Diamond_{\ne}p:=\neg\Box_{\ne}\neg p.
+\qquad \Diamond_{\ne}p:=\neg\Box_{\ne}\neg p
 $$
 
 **Hats, two-hat necessity and 5-necessity.** For an operator $X^{tt}$ put
 
 $$
-\hat X:=\lambda p\, .\,\exists q\, .\,q\land\Box(\neg X\neg q\to p).
+\hat X:=\lambda p\, .\,\exists q\, .\,q\land\Box(\neg X\neg q\to p)
 $$
 
 In C, $\hat\Box=\Box_{\ne}$ (*The Bounds of Possibility*, Appendix D, Proposition
@@ -340,7 +340,7 @@ operator* when, necessarily, it is N, K and B:
 $$
 \operatorname{S5}(X):=\Box\bigl(\forall p\, .\,\Box p\to Xp\bigr)\land
 \Box\bigl(\forall p\,q\, .\,X(p\to q)\to Xp\to Xq\bigr)\land
-\Box\bigl(\forall p\, .\,p\to X\neg X\neg p\bigr).
+\Box\bigl(\forall p\, .\,p\to X\neg X\neg p\bigr)
 $$
 
 *5-necessity* is necessity under every S5 operator,

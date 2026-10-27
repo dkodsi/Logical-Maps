@@ -35,7 +35,7 @@ A_a^G=\{x\in R:a(x)\in G\},\qquad
  \widehat A_a^G=
  \begin{cases}
  A_a^G,&A_a^G\text{ is uncountable},\\
- R,&A_a^G\text{ is countable}.
+ R,&A_a^G\text{ is countable}
  \end{cases}
 ```
 
@@ -71,7 +71,7 @@ no collision because the indices are raw rows.
 If $`G`$ is target-generic and (H=j^{-1}[G]), then
 
 ```math
-(ja)^G=a^H.                                           \tag{2}
+(ja)^G=a^H                                           \tag{2}
 ```
 
 The normalization also agrees. Both prefix extensions have exactly the
@@ -83,7 +83,7 @@ is a join over old enumeration codes of meets of row-complements, so a
 complete embedding preserves it. Hence
 
 ```math
-\widehat A_{ja}^{G}=\widehat A_a^{H}.                   \tag{3}
+\widehat A_{ja}^{G}=\widehat A_a^{H}                   \tag{3}
 ```
 
 Finite or empty sets are included among the coded countable cases.

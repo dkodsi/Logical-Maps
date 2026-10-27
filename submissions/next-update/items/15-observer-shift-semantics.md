@@ -7,7 +7,7 @@ Shift models use sets, ordinary Henkin function domains, and a Boolean algebra o
 ```math
 \Gamma\vdash_{\mathrm C+\mathrm{OS}} A
 \quad\Longleftrightarrow\quad
-\text{every shift model satisfying }\Gamma\text{ satisfies }A.
+\text{every shift model satisfying }\Gamma\text{ satisfies }A
 ```
 
 In a countable language, the monoid can always be the finite strings of natural numbers under concatenation, with countable typed domains. Neither the definition nor the completeness proof requires category theory. The representation may require an elementary extension to realize observers qualified at all types simultaneously. Henkin closure remains part of the model conditions.

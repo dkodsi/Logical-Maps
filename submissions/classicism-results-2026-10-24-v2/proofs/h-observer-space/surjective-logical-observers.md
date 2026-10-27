@@ -15,7 +15,7 @@ Work over C5. Fix a finite external type list Δ with t∈Δ, and let S:tt be an
 Surjectivity is the current internal formula
 
 ```math
-\mathrm{Onto}(S):=\forall q^t\,\exists p^t\,[Sp=q].
+\mathrm{Onto}(S):=\forall q^t\,\exists p^t\,[Sp=q]
 \tag{1}
 ```
 
@@ -30,7 +30,7 @@ Write x≤y for x∧y=x. Quantifiers in C+BF are greatest or least bounds of the
 Define the admitted proposition
 
 ```math
-k_S:=\exists p^t\,[(Sp=\bot)\land p].
+k_S:=\exists p^t\,[(Sp=\bot)\land p]
 \tag{2}
 ```
 
@@ -41,7 +41,7 @@ Since t∈Δ, existential preservation and equality-judgment fixing give
 Sk_S
 &=\exists p\,S((Sp=\bot)\land p)\\
 &=\exists p\,[(Sp=\bot)\land Sp]
-=\bot.
+=\bot
 \end{aligned}
 \tag{3}
 ```
@@ -51,7 +51,7 @@ The last equality is an unconditional C logical identity: each displayed conjunc
 If Sp=Bottom, its equality judgment is Top. The p-instance in (2) is then p itself, so p≤k_S. Conversely p≤k_S implies Sp≤Sk_S=Bottom. Therefore
 
 ```math
-Sp=\bot\quad\longleftrightarrow\quad p\le k_S.
+Sp=\bot\quad\longleftrightarrow\quad p\le k_S
 \tag{4}
 ```
 
@@ -66,14 +66,14 @@ Define
 ```math
 j_S(q):=\exists p^t\,[(Sp=q)\land p],
 \qquad
-r_S(q):=a\land j_S(q).
+r_S(q):=a\land j_S(q)
 \tag{5}
 ```
 
 These are admitted tt terms. Applying S to j_S(q) gives
 
 ```math
-S(j_S(q))=\exists p\,[(Sp=q)\land Sp]=q.
+S(j_S(q))=\exists p\,[(Sp=q)\land Sp]=q
 \tag{6}
 ```
 
@@ -82,14 +82,14 @@ For the last identity, every joinand is below q by equality substitution. Surjec
 Since Sa=Top by (3), equations (5)–(6) give
 
 ```math
-r_S(q)\le a,\qquad S(r_S(q))=q.
+r_S(q)\le a,\qquad S(r_S(q))=q
 \tag{7}
 ```
 
 The injectivity on [Bottom,a] proved in §2 shows that r_S(q) is the unique representative in that interval having S-image q. In particular,
 
 ```math
-r_S(\bot)=\bot,\qquad r_S(\top)=a.
+r_S(\bot)=\bot,\qquad r_S(\top)=a
 \tag{8}
 ```
 
@@ -99,7 +99,7 @@ Uniqueness and Boolean preservation by S give the relative Boolean laws
 \begin{aligned}
 r_S(p\land q)&=r_Sp\land r_Sq,\\
 r_S(p\lor q)&=r_Sp\lor r_Sq,\\
-r_S(\neg p)&=a\land\neg r_Sp.
+r_S(\neg p)&=a\land\neg r_Sp
 \end{aligned}
 \tag{9}
 ```
@@ -119,14 +119,14 @@ r_S(\forall x^\sigma Gx)
 lie below a. For the second, choose an admitted σ-object and use universal instantiation; the type domains are inhabited in the fixed framework. Applying S to either expression gives ∀x Gx, using S's full Q_σ law and (7). The uniqueness from §3 therefore proves
 
 ```math
-r_S(\forall x^\sigma Gx)=\forall x^\sigma r_S(Gx).
+r_S(\forall x^\sigma Gx)=\forall x^\sigma r_S(Gx)
 \tag{10}
 ```
 
 For the existential version, every r_S(Gx) lies below a, so its admitted join also lies below a. Apply S's P_σ law and the same uniqueness argument to obtain
 
 ```math
-r_S(\exists x^\sigma Gx)=\exists x^\sigma r_S(Gx).
+r_S(\exists x^\sigma Gx)=\exists x^\sigma r_S(Gx)
 \tag{11}
 ```
 
@@ -135,7 +135,7 @@ The pointwise identities S(r_S(Gx))=Gx are collected into the required predicate
 Now fill the complementary region with identity:
 
 ```math
-E_S(q):=r_S(q)\lor(k_S\land q).
+E_S(q):=r_S(q)\lor(k_S\land q)
 \tag{12}
 ```
 
@@ -144,7 +144,7 @@ This is an admitted tt term. The relative Boolean laws (8)–(9) and the partiti
 For a listed quantifier, rewrite the right side of (12) as
 
 ```math
-(a\land r_S(q))\lor(k_S\land q).
+(a\land r_S(q))\lor(k_S\land q)
 ```
 
 The fixed-guard universal distribution identity gives
@@ -156,7 +156,7 @@ The fixed-guard universal distribution identity gives
   \lor(k_S\land\forall x\,Gx)\\
 &=r_S(\forall x\,Gx)
   \lor(k_S\land\forall x\,Gx)\\
-&=E_S(\forall x\,Gx).
+&=E_S(\forall x\,Gx)
 \end{aligned}
 \tag{13}
 ```
@@ -166,14 +166,14 @@ The existential calculation uses the corresponding distribution identity and (11
 Finally, (3) and (7) give
 
 ```math
-S(E_Sq)=S(r_Sq)\lor(Sk_S\land Sq)=q.
+S(E_Sq)=S(r_Sq)\lor(Sk_S\land Sq)=q
 \tag{14}
 ```
 
 Functionality at tt yields the whole-operation identity
 
 ```math
-S\circ E_S=I.
+S\circ E_S=I
 \tag{15}
 ```
 
@@ -186,7 +186,7 @@ The converse to the construction is immediate: an admitted right inverse gives c
 ```math
 \boxed{\mathrm{Good}_\Delta(S)\land\mathrm{Onto}(S)
 \quad\longleftrightarrow\quad
-\mathrm{SplitEpi}_\Delta(S).}
+\mathrm{SplitEpi}_\Delta(S)}
 \tag{16}
 ```
 
@@ -199,7 +199,7 @@ The existing same-list right-inverse patching theorem over C+BF identifies Split
 S_{\tau,\Delta}[\mathrm{Good}\land\mathrm{Onto}]
 \quad\longleftrightarrow\quad
 S_{\tau,\Delta}[\mathrm{Rev}]
-\qquad\text{over C5, }t\in\Delta.
+\qquad\text{over C5, }t\in\Delta
 }
 \tag{17}
 ```
@@ -215,7 +215,7 @@ Recall K_Δ from [Left-inverse separation decomposition](left-inverse-separation
 ```math
 K_\Delta:=\exists E,F,c\,[
 \mathrm{Good}_\Delta(E)\land\mathrm{Good}_\Delta(F)
-\land F\circ E=I\land c\land Fc=\bot].
+\land F\circ E=I\land c\land Fc=\bot]
 ```
 
 Over C5, for finite Δ containing t, it has the equivalent formulations
@@ -229,7 +229,7 @@ K_\Delta
 \land\mathrm{Onto}(S)\land k_S]\\
 &\longleftrightarrow
 \exists S,c\,[\mathrm{Good}_\Delta(S)
-\land\mathrm{Onto}(S)\land c\land Sc=\bot].
+\land\mathrm{Onto}(S)\land c\land Sc=\bot]
 \end{aligned}}
 \tag{18}
 ```

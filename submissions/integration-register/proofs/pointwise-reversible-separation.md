@@ -15,7 +15,7 @@ M_{\rm pt}(E)&:=\forall u\,v\,[E(u\land v)=Eu\land Ev],\\
 I_{\rm pt}(E)&:=\forall u\,[E(Eu)=u],\\
 K_{\rm pt}(E)&:=M_{\rm pt}(E)\land I_{\rm pt}(E),\\
 D(p,q)&:=\exists E^{tt}[K_{\rm pt}(E)\land\neg(Ep\leftrightarrow Eq)],\\
-S_{\rm pt}&:=\forall p\,q\,[(\forall E^{tt}\, .\,K_{\rm pt}(E)\to(Ep\leftrightarrow Eq))\to p=q].
+S_{\rm pt}&:=\forall p\,q\,[(\forall E^{tt}\, .\,K_{\rm pt}(E)\to(Ep\leftrightarrow Eq))\to p=q]
 \end{aligned}
 ```
 
@@ -25,7 +25,7 @@ The corresponding whole laws are identities of the lambda operations:
 ```math
 \begin{aligned}
 M_{\rm op}(E)&:=(\lambda u\,v.E(u\land v))=(\lambda u\,v.Eu\land Ev),\\
-I_{\rm op}(E)&:=(\lambda u.E(Eu))=(\lambda u.u).
+I_{\rm op}(E)&:=(\lambda u.E(Eu))=(\lambda u.u)
 \end{aligned}
 ```
 
@@ -39,7 +39,7 @@ sections 1 and 4. The principal new scope reduction is
 \mathrm{Rev}
 &\longleftrightarrow\Box S_{\rm pt}\\
 &\longleftrightarrow\forall p\,q\,\Box[p\ne q\to D(p,q)]\\
-&\longleftrightarrow\forall p\,q\,[p\ne q\to\Box D(p,q)].
+&\longleftrightarrow\forall p\,q\,[p\ne q\to\Box D(p,q)]
 \end{aligned}}
 \tag{1}
 ```
@@ -49,7 +49,7 @@ Equivalently, only one proposition parameter is needed:
 ```math
 \boxed{\mathrm{Rev}\longleftrightarrow
 \forall p\,[p\ne\bot\to
-\Box\exists E^{tt}(K_{\rm pt}(E)\land Ep)].}
+\Box\exists E^{tt}(K_{\rm pt}(E)\land Ep)]}
 \tag{2}
 ```
 
@@ -60,8 +60,8 @@ Changing that witness scope gives a much stronger principle:
 
 ```math
 \boxed{\mathrm{Extensionality}\longleftrightarrow
-\forall p\,[(\forall E^{tt}\, .\,
-\neg\Box(K_{\rm pt}(E)\land Ep))\to p=\bot].}
+\forall p\,[p\ne\bot\to
+\exists E^{tt}\Box(K_{\rm pt}(E)\land Ep)]}
 \tag{3}
 ```
 
@@ -80,13 +80,13 @@ restriction to separation at tt. For each admitted type sigma define
 ```math
 c(b)=\lambda x^\sigma.b,\quad
 L_E(F)=\lambda x^\sigma.E(Fx),\quad
-Q(F)=\forall x^\sigma Fx.
+Q(F)=\forall x^\sigma Fx
 ```
 
 C proves the entailment-order adjunction
 
 ```math
-c(b)\le F\ \longleftrightarrow\ b\le Q(F).
+c(b)\le F\ \longleftrightarrow\ b\le Q(F)
 \tag{4}
 ```
 
@@ -109,7 +109,7 @@ b\le Q(L_EF)
 \longleftrightarrow L_Ec(b)\le F\\
 &\longleftrightarrow c(Eb)\le F
 \longleftrightarrow Eb\le QF
-\longleftrightarrow b\le E(QF).
+\longleftrightarrow b\le E(QF)
 \end{aligned}
 ```
 
@@ -138,7 +138,7 @@ Top, Bottom, negation and the remaining Boolean operations as output identities.
 For entities a,b of any fixed admitted type sigma,
 
 ```math
-K_{\rm pt}(E)\ \longrightarrow\ [E(a=b)\leftrightarrow a=b].
+K_{\rm pt}(E)\ \longrightarrow\ [E(a=b)\leftrightarrow a=b]
 \tag{5}
 ```
 
@@ -158,7 +158,7 @@ Boolean combination of identity judgments. The terms inside the identities
 may be complex. Then
 
 ```math
-K_{\rm pt}(E)\longrightarrow(Eu\to u).
+K_{\rm pt}(E)\longrightarrow(Eu\to u)
 \tag{6}
 ```
 
@@ -171,7 +171,7 @@ one-sided reflection, not a claim of quantifier preservation.
 In particular put
 
 ```math
-n:=\forall x^t\forall y^t\,[x\ne y\to\Box(x\ne y)].
+n:=\forall x^t\forall y^t\,[x\ne y\to\Box(x\ne y)]
 \tag{7}
 ```
 
@@ -190,7 +190,7 @@ Use T at the single old pair n,Bottom. Since every eligible observer fixes
 Bottom, this gives
 
 ```math
-\Box\exists E\,[K_{\rm pt}(E)\land En].
+\Box\exists E\,[K_{\rm pt}(E)\land En]
 ```
 
 Necessitate the unconditional, universally closed reflection theorem (6),
@@ -218,7 +218,7 @@ Only the n-instance needs persistence once current S_pt is assumed. In particula
 
 ```math
 \mathrm{Rev}\longleftrightarrow
-S_{\rm pt}\land\Box\exists E(K_{\rm pt}(E)\land En).
+S_{\rm pt}\land\Box\exists E(K_{\rm pt}(E)\land En)
 \tag{8}
 ```
 
@@ -229,7 +229,7 @@ supplies the strongest witnesses, and the weakest version already implies Rev.
 There is also an exact unboxed bridge:
 
 ```math
-\mathrm{Rev}\longleftrightarrow S_{\rm pt}\land\mathrm{BF}_t.
+\mathrm{Rev}\longleftrightarrow S_{\rm pt}\land\mathrm{BF}_t
 \tag{9}
 ```
 
@@ -262,13 +262,13 @@ Use the full two-object retract category with jh=1_r and hj=k distinct from
 with transports
 
 ```math
-H(a,b)=(b,a,b),\quad J(x,y,z)=(y,z),\quad K(x,y,z)=(z,y,z).
+H(a,b)=(b,a,b),\quad J(x,y,z)=(y,z),\quad K(x,y,z)=(z,y,z)
 ```
 
 The raw observer profiles f_r(a,b)=b and f_h(x,y,z)=x XOR y XOR z induce
 
 ```math
-E_r(a,b)=(b,a),\qquad E_h(x,y,z)=(x\mathbin\oplus y\mathbin\oplus z,z,y).
+E_r(a,b)=(b,a),\qquad E_h(x,y,z)=(x\mathbin\oplus y\mathbin\oplus z,z,y)
 ```
 
 Both actions square to identity and are compatible with H,J,K, so whole
@@ -311,7 +311,7 @@ remained to be found was mistaken. Existing proved records give
 ```math
 \Box\mathrm{FC}\Rightarrow\Box\mathrm{Plenitude}
 \Rightarrow\mathrm{C5}+\mathrm{Atomicity}
-\Rightarrow\mathrm{Rev}.
+\Rightarrow\mathrm{Rev}
 ```
 
 The final implication is the existing atom-swap construction. Infinity is
@@ -344,7 +344,7 @@ The [atomic proof](pointwise-atomicity.md), sections 2–4, establishes over C
 ```math
 \boxed{S_{\rm pt}\land\mathrm{OneAtom}
 \ \longleftrightarrow\
-ND_t\land\mathrm{Atomicity}_t.}
+ND_t\land\mathrm{Atomicity}_t}
 \tag{12}
 ```
 
@@ -363,7 +363,7 @@ gives the further corollary
 
 ```math
 \boxed{\mathrm{Rev}\land\mathrm{OneAtom}
-\ \longleftrightarrow\ \Box\mathrm{Plenitude}.}
+\ \longleftrightarrow\ \Box\mathrm{Plenitude}}
 \tag{13}
 ```
 

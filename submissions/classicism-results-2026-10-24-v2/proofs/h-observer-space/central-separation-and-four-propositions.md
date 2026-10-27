@@ -14,7 +14,7 @@ Use the whole-operation qualifications and centrality from [Central logical obse
 \mathrm{Cent}_\Delta(E):=
 \mathrm{Good}_\Delta(E)\land
 \forall G^{tt}[\mathrm{Good}_\Delta(G)
- \to E\circ G=G\circ E].
+ \to E\circ G=G\circ E]
 \tag{1}
 ```
 
@@ -25,28 +25,28 @@ The local calculations first take place over C, with unary Functionality when ou
 The Boolean-patch proof in the central note, §2, gives E²=E for a central E. In fact the following construction works for any idempotent $`\mathrm{Good}_\Delta`$ observer E with t∈Δ. Write p△q for Boolean symmetric difference, and define
 
 ```math
-k_E:=\exists p^t\,(p\mathbin\triangle Ep).
+k_E:=\exists p^t\,(p\mathbin\triangle Ep)
 \tag{2}
 ```
 
 This is an admitted proposition. Existential preservation at t and idempotence give
 
 ```math
-Ek_E=\exists p\,(Ep\mathbin\triangle E^2p)=0.
+Ek_E=\exists p\,(Ep\mathbin\triangle E^2p)=0
 \tag{3}
 ```
 
 Every p△Ep is below k_E by the unconditional existential-introduction identity of C. Thus Ep=0 implies p≤k_E. The converse follows from Boolean monotonicity and (3), so
 
 ```math
-\boxed{Ep=0\quad\longleftrightarrow\quad p\le k_E.}
+\boxed{Ep=0\quad\longleftrightarrow\quad p\le k_E}
 \tag{4}
 ```
 
 In particular k_E is the greatest kernel element. Also
 
 ```math
-\neg k_E\land Ep=\neg k_E\land p.
+\neg k_E\land Ep=\neg k_E\land p
 \tag{5}
 ```
 
@@ -61,7 +61,7 @@ For every $`\mathrm{Good}_\Delta`$ observer G, commutation gives E(Gk)=G(Ek)=0, 
 If k is currently true, commute E with the admitted patch
 
 ```math
-P_k(G,I)(p):=(k\land Gp)\lor(\neg k\land p).
+P_k(G,I)(p):=(k\land Gp)\lor(\neg k\land p)
 \tag{6}
 ```
 
@@ -90,7 +90,7 @@ Now suppose CentreSep(t,Δ), not merely ordinary separation. If identity is the 
 For any p, its pair of truth values agrees with one row. Since all central observers are I or E, central separation identifies p with that row's proposition. Thus
 
 ```math
-\forall p\,(p=0\lor p=k\lor p=a\lor p=1).
+\forall p\,(p=0\lor p=k\lor p=a\lor p=1)
 \tag{8}
 ```
 
@@ -100,7 +100,7 @@ For later use define the single finitary cardinal bound
 
 ```math
 \mathrm{Four}_t:=(\exists u_0u_1u_2u_3\,
- \forall p\,\bigvee_{i=0}^{3}p=u_i).
+ \forall p\,\bigvee_{i=0}^{3}p=u_i)
 \tag{9}
 ```
 
@@ -137,7 +137,7 @@ giving C5. The first implication is [the type-t Barcan argument](../../source/to
 But the established C5 central-separation theorem would now give Extensionality, contradicting the four distinct values. Thus
 
 ```math
-\Box0=0,\quad\Box k=0,\quad\Box a=a,\quad\Box1=1.
+\Box0=0,\quad\Box k=0,\quad\Box a=a,\quad\Box1=1
 \tag{12}
 ```
 
@@ -151,7 +151,7 @@ Consequently, at full schema scope over H,
 \boxed{
 \mathrm{CentreSep}\ \Longrightarrow\
 \mathrm{IdemBoxSep}+\mathrm{Four}_t
- +\mathrm{Actuality}+\mathrm{Fin}_t(\mathrm{All}).}
+ +\mathrm{Actuality}+\mathrm{Fin}_t(\mathrm{All})}
 \tag{13}
 ```
 
@@ -165,7 +165,7 @@ It also implies FinBoxSep, because every admitted observer has internally finite
 \boxed{
 \mathrm H+\mathrm{CentreSep}
 \quad\equiv\quad
-\mathrm H+\mathrm{IdemBoxSep}+\mathrm{Four}_t.}
+\mathrm H+\mathrm{IdemBoxSep}+\mathrm{Four}_t}
 \tag{14}
 ```
 
@@ -176,21 +176,21 @@ Otherwise choose a proper nonzero proposition and take it or its complement to o
 For any desired finite Δ, choose an idempotent native-Box $`\mathrm{Good}_\Delta`$ observer B that distinguishes a from 0. Propositional separation at that list supplies it, and Ba must be true. Every Boolean observer on the four-element algebra is determined by its value on k. The four possible values give identity, the atom swap, or one of the two endpoint readers. Identity and the reader of k do not accept a. The swap is not idempotent. Consequently
 
 ```math
-Bk=0,\qquad Ba=1.
+Bk=0,\qquad Ba=1
 \tag{15}
 ```
 
 Since □a≤a, its only possibilities are 0,a. Native-Box commutation gives B(□a)=□Ba=1, excluding □a=0. Thus □a=a. As before □k=0. Using (10),
 
 ```math
-(k=0)=a,\qquad(a=0)=0.
+(k=0)=a,\qquad(a=0)=0
 \tag{16}
 ```
 
 Now consider **any admitted Boolean observer G**, without imposing any quantifier qualification. Equality congruence is an unconditional logical law, and therefore gives the algebraic inequality
 
 ```math
-(k=0)\le(Gk=G0).
+(k=0)\le(Gk=G0)
 \tag{17}
 ```
 
@@ -211,7 +211,7 @@ Equation (14) is an intrinsic theory characterization, unlike the earlier classi
 ```math
 \boxed{\mathrm{CentreSep}
 \quad\longleftrightarrow\quad
-\Box\mathrm{CentreSep}.}
+\Box\mathrm{CentreSep}}
 \tag{18}
 ```
 
@@ -224,7 +224,7 @@ Fix the output type τ and finite list Δ whose central separation formula is to
 a=\neg k,\qquad
 \forall p\,(p=0\lor p=k\lor p=a\lor p=1),\\
 (k=0)=a,\qquad(a=0)=0,\\
-Bk=0,\qquad Ba=1,\qquad\mathrm{Good}_\Delta(B).
+Bk=0,\qquad Ba=1,\qquad\mathrm{Good}_\Delta(B)
 \end{gathered}
 \tag{19}
 ```
@@ -240,7 +240,7 @@ If k is true, the identities Bk=0 and Ba=1 exclude k=1 and a=0. The four enumera
 All individual identities in (19) persist by Necessity of Identity. $`\mathrm{Good}_\Delta(B)`$ is a finite conjunction of whole-operation identities, so it persists for the same reason. For the enumeration, each currently true equality disjunct persists; finite disjunction therefore gives
 
 ```math
-\forall p\,\Box(p=0\lor p=k\lor p=a\lor p=1).
+\forall p\,\Box(p=0\lor p=k\lor p=a\lor p=1)
 \tag{20}
 ```
 

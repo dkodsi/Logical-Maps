@@ -13,7 +13,7 @@ A logical observer is an admitted operation on propositions preserving Boolean o
 - **Endpoint and unique observers locate familiar theories.** Requiring endpoint-valued observers gives exactly C5 + Atomicity (type t) over H; requiring OS and a unique qualified observer gives Extensionality. Under Extensionality, truth is itself endpoint-valued. Over C, every arrow in the following chain is strict:
 
 ```math
-\small\text{Extensionality}\Rightarrow\mathrm{C5}+\mathrm{Atomicity}_t\Rightarrow\Box\mathrm{OS}\Rightarrow\mathrm{OS}\Rightarrow\mathrm{BF}.
+\small\text{Extensionality}\Rightarrow\mathrm{C5}+\mathrm{Atomicity}_t\Rightarrow\Box\mathrm{OS}\Rightarrow\mathrm{OS}\Rightarrow\mathrm{BF}
 ```
 
   OS + Plenitude at (t,t) already gives endpoint separation. Over C5, ☐OS plus possible Actuality gives ☐Plenitude. [Hierarchy](../logical-observer-hierarchy.md) · [Plenitude bridge](plenitude-endpoint-bridge.md) · [Necessary OS](../logical-observers.md#8-necessary-os-and-possible-actuality).
@@ -36,13 +36,13 @@ The broader investigation also classifies every finite package of independent pr
 Every pair of distinct relations can be distinguished at some arguments by a suitably qualified logical observer.
 
 ```math
-\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,\bigl(\mathrm{Good}_\Delta(E)\bigr)\to\forall\bar z^{\bar\sigma}\, .\,\bigl(E(X[\bar z])\leftrightarrow E(Y[\bar z])\bigr)\Bigr]\to X=Y.
+\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,\bigl(\mathrm{Good}_\Delta(E)\bigr)\to\forall\bar z^{\bar\sigma}\, .\,\bigl(E(X[\bar z])\leftrightarrow E(Y[\bar z])\bigr)\Bigr]\to X=Y
 ```
 
 The schema ranges over finite argument tuples $`\bar\sigma`$, including the empty tuple, and finite lists $`\Delta`$ of tested types. The following finite conjunction defines $`\mathrm{Good}_\Delta(E)`$.
 
 ```math
-E\top=\top,\qquad E\bot=\bot.
+E\top=\top,\qquad E\bot=\bot
 ```
 
 Boolean operation identities:
@@ -56,7 +56,7 @@ Boolean operation identities:
 ```
 
 ```math
-(\lambda p,q\, .\,E(p\lor q))=(\lambda p,q\, .\,Ep\lor Eq).
+(\lambda p,q\, .\,E(p\lor q))=(\lambda p,q\, .\,Ep\lor Eq)
 ```
 
 For each $`\sigma\in\Delta`$, quantifier operation identities:
@@ -66,7 +66,7 @@ For each $`\sigma\in\Delta`$, quantifier operation identities:
 ```
 
 ```math
-(\lambda F^{\sigma t}\, .\,E(\exists x^\sigma\, .\,Fx))=(\lambda F^{\sigma t}\, .\,\exists x^\sigma\, .\,E(Fx)).
+(\lambda F^{\sigma t}\, .\,E(\exists x^\sigma\, .\,Fx))=(\lambda F^{\sigma t}\, .\,\exists x^\sigma\, .\,E(Fx))
 ```
 
 For each $`\sigma\in\Delta`$, Equality laws:
@@ -76,7 +76,7 @@ For each $`\sigma\in\Delta`$, Equality laws:
 ```
 
 ```math
-\forall x,y^\sigma\, .\,\forall F^{\sigma t}\, .\,E(x=y)\to(E(Fx)\to E(Fy)).
+\forall x,y^\sigma\, .\,\forall F^{\sigma t}\, .\,E(x=y)\to(E(Fx)\to E(Fy))
 ```
 
 Over C, the equality laws follow from Boolean preservation. They support the formulation over H, where OS recovers C.
@@ -91,7 +91,7 @@ The uniform definition includes the endpoint identities used in the Lean certifi
 - Over C, the variants below extend the strict hierarchy:
 
 ```math
-\small\text{Extensionality}\ \Rightarrow\ \mathrm{C5}+\mathrm{Atomicity}\ \Rightarrow\ \Box\mathrm{OS}\ \Rightarrow\ \mathrm{OS}\ \Rightarrow\ \mathrm{BF}.
+\small\text{Extensionality}\ \Rightarrow\ \mathrm{C5}+\mathrm{Atomicity}\ \Rightarrow\ \Box\mathrm{OS}\ \Rightarrow\ \mathrm{OS}\ \Rightarrow\ \mathrm{BF}
 ```
 
 - Over C, $`\mathrm{Good}_\Delta(E)\leftrightarrow\Box\mathrm{Good}_\Delta(E)`$; requiring the qualification necessarily does not strengthen separation.
@@ -124,11 +124,11 @@ The uniform definition includes the endpoint identities used in the Lean certifi
 Logical observers with outputs restricted to ⊤ and ⊥ distinguish every pair of distinct relations.
 
 ```math
-\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,\bigl(\mathrm{Good}_\Delta(E)\land \mathrm{End}(E)\bigr)\to\forall\bar z^{\bar\sigma}\, .\,\bigl(E(X[\bar z])\leftrightarrow E(Y[\bar z])\bigr)\Bigr]\to X=Y.
+\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,\bigl(\mathrm{Good}_\Delta(E)\land \mathrm{End}(E)\bigr)\to\forall\bar z^{\bar\sigma}\, .\,\bigl(E(X[\bar z])\leftrightarrow E(Y[\bar z])\bigr)\Bigr]\to X=Y
 ```
 
 ```math
-\mathrm{End}(E):=\forall p^t\, .\,Ep=\top\lor Ep=\bot.
+\mathrm{End}(E):=\forall p^t\, .\,Ep=\top\lor Ep=\bot
 ```
 
 The types and $`\mathrm{Good}_\Delta`$ are as above. In a full model with fixed domains and an admitted evaluation operation, an endpoint observer reports whether $`p`$ is true at a fixed possible world; it need not report the truth here.
@@ -152,13 +152,13 @@ Endpoint-valuedness differs from $`\Box\forall p(Ep\leftrightarrow p)`$: the lat
 Logical observers with qualified inverses distinguish every pair of distinct relations.
 
 ```math
-\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,\bigl(\mathrm{Good}_\Delta(E)\land \mathrm{Rev}_\Delta(E)\bigr)\to\forall\bar z^{\bar\sigma}\, .\,\bigl(E(X[\bar z])\leftrightarrow E(Y[\bar z])\bigr)\Bigr]\to X=Y.
+\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,\bigl(\mathrm{Good}_\Delta(E)\land \mathrm{Rev}_\Delta(E)\bigr)\to\forall\bar z^{\bar\sigma}\, .\,\bigl(E(X[\bar z])\leftrightarrow E(Y[\bar z])\bigr)\Bigr]\to X=Y
 ```
 
 Put $`I=\lambda p.p`$ and $`(E\circ F)(p)=E(Fp)`$.
 
 ```math
-\mathrm{Rev}_\Delta(E):=\exists F^{tt}\, .\,\mathrm{Good}_\Delta(F)\land E\circ F=I\land F\circ E=I.
+\mathrm{Rev}_\Delta(E):=\exists F^{tt}\, .\,\mathrm{Good}_\Delta(F)\land E\circ F=I\land F\circ E=I
 ```
 
 - Over C, equivalent to propositional separation by whole conjunction-preserving involutions. Their Boolean and all-type quantifier laws follow; no extra Good clause is required. [Simple formulation and proof](../reversible-propositional-separation.md).
@@ -189,11 +189,11 @@ Put $`I=\lambda p.p`$ and $`(E\circ F)(p)=E(Fp)`$.
 Every proposition is an output; all tests jointly distinguish relations.
 
 ```math
-\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,\bigl(\mathrm{Good}_\Delta(E)\land \mathrm{Onto}(E)\bigr)\to\forall\bar z^{\bar\sigma}\, .\,\bigl(E(X[\bar z])\leftrightarrow E(Y[\bar z])\bigr)\Bigr]\to X=Y.
+\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,\bigl(\mathrm{Good}_\Delta(E)\land \mathrm{Onto}(E)\bigr)\to\forall\bar z^{\bar\sigma}\, .\,\bigl(E(X[\bar z])\leftrightarrow E(Y[\bar z])\bigr)\Bigr]\to X=Y
 ```
 
 ```math
-\mathrm{Onto}(E):=\forall q^t\, .\,\exists p^t\, .\,Ep=q.
+\mathrm{Onto}(E):=\forall q^t\, .\,\exists p^t\, .\,Ep=q
 ```
 
 - Rev ⇒ SurjSep ⇒ OS, with both converses false. Over C5, SurjSep is equivalent to Rev.
@@ -206,11 +206,11 @@ Every proposition is an output; all tests jointly distinguish relations.
 Each observer can be undone by an admitted logical observer qualified at the same types.
 
 ```math
-\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,\bigl(\mathrm{Good}_\Delta(E)\land \mathrm{Left}_\Delta(E)\bigr)\to\forall\bar z^{\bar\sigma}\, .\,\bigl(E(X[\bar z])\leftrightarrow E(Y[\bar z])\bigr)\Bigr]\to X=Y.
+\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,\bigl(\mathrm{Good}_\Delta(E)\land \mathrm{Left}_\Delta(E)\bigr)\to\forall\bar z^{\bar\sigma}\, .\,\bigl(E(X[\bar z])\leftrightarrow E(Y[\bar z])\bigr)\Bigr]\to X=Y
 ```
 
 ```math
-\mathrm{Left}_\Delta(E):=\exists F^{tt}\, .\,\mathrm{Good}_\Delta(F)\land F\circ E=I.
+\mathrm{Left}_\Delta(E):=\exists F^{tt}\, .\,\mathrm{Good}_\Delta(F)\land F\circ E=I
 ```
 
 - Rev ⇒ SplitMono ⇒ InjSep ⇒ OS. SplitMono strictly implies InjSep, even over C5 with necessary all-type Relational Choice, Transversal Choice and Zorn. See [countermodel](rigid-souslin-injective-separation.md).
@@ -223,11 +223,11 @@ Each observer can be undone by an admitted logical observer qualified at the sam
 Currently injective logical observers distinguish every pair of distinct relations. Write InjSep for the full schema.
 
 ```math
-\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,\bigl(\mathrm{Good}_\Delta(E)\land \mathrm{Inj}(E)\bigr)\to\forall\bar z^{\bar\sigma}\, .\,\bigl(E(X[\bar z])\leftrightarrow E(Y[\bar z])\bigr)\Bigr]\to X=Y.
+\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,\bigl(\mathrm{Good}_\Delta(E)\land \mathrm{Inj}(E)\bigr)\to\forall\bar z^{\bar\sigma}\, .\,\bigl(E(X[\bar z])\leftrightarrow E(Y[\bar z])\bigr)\Bigr]\to X=Y
 ```
 
 ```math
-\mathrm{Inj}(E):=\forall p,q^t\, .\,Ep=Eq\to p=q.
+\mathrm{Inj}(E):=\forall p,q^t\, .\,Ep=Eq\to p=q
 ```
 
 - SplitMono implies InjSep, which implies OS. Over C5, Rev ⇒ InjSep ⇔ BoxSep ⇒ OS has both outer implications strict.
@@ -243,11 +243,11 @@ Currently injective logical observers distinguish every pair of distinct relatio
 Logical observers commuting with native necessity distinguish every pair of distinct relations. Write BoxSep for the full schema.
 
 ```math
-\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,\bigl(\mathrm{Good}_\Delta(E)\land \mathrm{BoxComm}(E)\bigr)\to\forall\bar z^{\bar\sigma}\, .\,\bigl(E(X[\bar z])\leftrightarrow E(Y[\bar z])\bigr)\Bigr]\to X=Y.
+\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,\bigl(\mathrm{Good}_\Delta(E)\land \mathrm{BoxComm}(E)\bigr)\to\forall\bar z^{\bar\sigma}\, .\,\bigl(E(X[\bar z])\leftrightarrow E(Y[\bar z])\bigr)\Bigr]\to X=Y
 ```
 
 ```math
-\mathrm{BoxComm}(E):=(\lambda p^t.E(\Box p))=(\lambda p^t.\Box(Ep)),\qquad\Box p:=(p=\top).
+\mathrm{BoxComm}(E):=(\lambda p^t.E(\Box p))=(\lambda p^t.\Box(Ep)),\qquad\Box p:=(p=\top)
 ```
 
 - Over H, implies OS + ☐BF + .2, hence ☐Functionality. The entire consequence bundle does not imply BoxSep.
@@ -264,13 +264,13 @@ Logical observers commuting with native necessity distinguish every pair of dist
 Logical observers with finitely many outputs distinguish every pair of distinct relations.
 
 ```math
-\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,\bigl(\mathrm{Good}_\Delta(E)\land \mathrm{FinIm}(E)\bigr)\to\forall\bar z^{\bar\sigma}\, .\,\bigl(E(X[\bar z])\leftrightarrow E(Y[\bar z])\bigr)\Bigr]\to X=Y.
+\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,\bigl(\mathrm{Good}_\Delta(E)\land \mathrm{FinIm}(E)\bigr)\to\forall\bar z^{\bar\sigma}\, .\,\bigl(E(X[\bar z])\leftrightarrow E(Y[\bar z])\bigr)\Bigr]\to X=Y
 ```
 
 Put $`\mathrm{Im}_E=\lambda r^t.\exists p^t(Ep=r)`$. Then
 
 ```math
-\mathrm{FinIm}(E):=\exists Z^{(tt)t}\, .\,\mathrm{FiniteCardinality}_t(Z)\land Z(\mathrm{Im}_E).
+\mathrm{FinIm}(E):=\exists Z^{(tt)t}\, .\,\mathrm{FiniteCardinality}_t(Z)\land Z(\mathrm{Im}_E)
 ```
 
 This uses the [database’s Frege finiteness definition](../../source/topics/classicism/background.md#notation). It is a single finitary condition, with no common bound on the number of outputs.
@@ -284,11 +284,11 @@ This uses the [database’s Frege finiteness definition](../../source/topics/cla
 Idempotent logical observers commuting with native necessity distinguish every pair of distinct relations. Write IdemBoxSep for the full schema.
 
 ```math
-\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,\bigl(\mathrm{Good}_\Delta(E)\land \mathrm{BoxComm}(E)\land E\circ E=E\bigr)\to\forall\bar z^{\bar\sigma}\, .\,\bigl(E(X[\bar z])\leftrightarrow E(Y[\bar z])\bigr)\Bigr]\to X=Y.
+\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,\bigl(\mathrm{Good}_\Delta(E)\land \mathrm{BoxComm}(E)\land E\circ E=E\bigr)\to\forall\bar z^{\bar\sigma}\, .\,\bigl(E(X[\bar z])\leftrightarrow E(Y[\bar z])\bigr)\Bigr]\to X=Y
 ```
 
 ```math
-\mathrm{BoxComm}(E):=(\lambda p^t.E(\Box p))=(\lambda p^t.\Box(Ep)),\qquad\Box p:=(p=\top).
+\mathrm{BoxComm}(E):=(\lambda p^t.E(\Box p))=(\lambda p^t.\Box(Ep)),\qquad\Box p:=(p=\top)
 ```
 
 - Strictly implies BoxSep. Over H, C5 + IdemBoxSep is equivalent to Extensionality.
@@ -301,11 +301,11 @@ Idempotent logical observers commuting with native necessity distinguish every p
 For each fixed external integer r≥1, logical observers commuting with native necessity and satisfying E^(r+1)=E^r distinguish every pair of distinct relations. Write B_r for the full schema.
 
 ```math
-\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,\bigl(\mathrm{Good}_\Delta(E)\land \mathrm{BoxComm}(E)\land E^{r+1}=E^r\bigr)\to\forall\bar z^{\bar\sigma}\, .\,\bigl(E(X[\bar z])\leftrightarrow E(Y[\bar z])\bigr)\Bigr]\to X=Y.
+\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,\bigl(\mathrm{Good}_\Delta(E)\land \mathrm{BoxComm}(E)\land E^{r+1}=E^r\bigr)\to\forall\bar z^{\bar\sigma}\, .\,\bigl(E(X[\bar z])\leftrightarrow E(Y[\bar z])\bigr)\Bigr]\to X=Y
 ```
 
 ```math
-\mathrm{BoxComm}(E):=(\lambda p^t.E(\Box p))=(\lambda p^t.\Box(Ep)),\qquad\Box p:=(p=\top).
+\mathrm{BoxComm}(E):=(\lambda p^t.E(\Box p))=(\lambda p^t.\Box(Ep)),\qquad\Box p:=(p=\top)
 ```
 
 The integer $`r\ge1`$ is a fixed external index. Powers of $`E`$ are finite term iterates; the schema introduces no object-language quantifier over bounds.
@@ -321,11 +321,11 @@ The integer $`r\ge1`$ is a fixed external index. Powers of $`E`$ are finite term
 Factive logical observers distinguish every pair of distinct relations.
 
 ```math
-\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,\bigl(\mathrm{Good}_\Delta(E)\land \mathrm{Fact}(E)\bigr)\to\forall\bar z^{\bar\sigma}\, .\,\bigl(E(X[\bar z])\leftrightarrow E(Y[\bar z])\bigr)\Bigr]\to X=Y.
+\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,\bigl(\mathrm{Good}_\Delta(E)\land \mathrm{Fact}(E)\bigr)\to\forall\bar z^{\bar\sigma}\, .\,\bigl(E(X[\bar z])\leftrightarrow E(Y[\bar z])\bigr)\Bigr]\to X=Y
 ```
 
 ```math
-\mathrm{Fact}(E):=\forall p^t\, .\,Ep\to p.
+\mathrm{Fact}(E):=\forall p^t\, .\,Ep\to p
 ```
 
 The types and $`\mathrm{Good}_\Delta`$ are as above. Negation preservation and factivity imply $`\forall p(Ep\leftrightarrow p)`$.
@@ -342,11 +342,11 @@ Under Extensionality, truth is endpoint-valued: every true proposition is $`\top
 Observers commuting with every logical observer at the same finite qualification list distinguish every pair of distinct relations. Write CentreSep for the full schema.
 
 ```math
-\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,\bigl(\mathrm{Good}_\Delta(E)\land \mathrm{Cent}_\Delta(E)\bigr)\to\forall\bar z^{\bar\sigma}\, .\,\bigl(E(X[\bar z])\leftrightarrow E(Y[\bar z])\bigr)\Bigr]\to X=Y.
+\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,\bigl(\mathrm{Good}_\Delta(E)\land \mathrm{Cent}_\Delta(E)\bigr)\to\forall\bar z^{\bar\sigma}\, .\,\bigl(E(X[\bar z])\leftrightarrow E(Y[\bar z])\bigr)\Bigr]\to X=Y
 ```
 
 ```math
-\mathrm{Cent}_\Delta(E):=\mathrm{Good}_\Delta(E)\land\forall G^{tt}\,[\mathrm{Good}_\Delta(G)\to E\circ G=G\circ E].
+\mathrm{Cent}_\Delta(E):=\mathrm{Good}_\Delta(E)\land\forall G^{tt}\,[\mathrm{Good}_\Delta(G)\to E\circ G=G\circ E]
 ```
 
 Commutation is identity of whole operations, and ranges over every admitted same-list Good observer. A chosen pairwise commuting family is a different condition.

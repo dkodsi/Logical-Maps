@@ -23,7 +23,7 @@ Fix an admitted carrier type $`\sigma`$ and an analytical sentence $`\varphi`$. 
 ```math
 U_{\sigma,\varphi}:=
 \forall\mathfrak R\,[\mathrm{Real}_\sigma(\mathfrak R)
-\to\varphi(\mathfrak R)].
+\to\varphi(\mathfrak R)]
 \tag{2}
 ```
 
@@ -35,7 +35,7 @@ For the usual relational expansions of (2) with a first-order analytical $`\varp
 
 ```math
 \Delta_\sigma=\{\sigma,\sigma t,\sigma\sigma t,
-\sigma\sigma\sigma t\}.
+\sigma\sigma\sigma t\}
 \tag{3}
 ```
 
@@ -62,7 +62,7 @@ E^*_{\alpha\beta}(X)
  E^*_\beta\bigl(X(F^*_\alpha y)\bigr),\\
 F^*_{\alpha\beta}(X)
  &=\lambda y^\alpha.\,
- F^*_\beta\bigl(X(E^*_\alpha y)\bigr).
+ F^*_\beta\bigl(X(E^*_\alpha y)\bigr)
 \end{aligned}
 \tag{4}
 ```
@@ -73,7 +73,7 @@ Induction on type gives
 
 ```math
 E^*_\tau(F^*_\tau x)=x,
-\qquad F^*_\tau(E^*_\tau x)=x.
+\qquad F^*_\tau(E^*_\tau x)=x
 \tag{5}
 ```
 
@@ -83,7 +83,7 @@ The same calculation gives application compatibility:
 
 ```math
 (E^*_{\alpha\beta}X)(E^*_\alpha y)
-=E^*_\beta(Xy).
+=E^*_\beta(Xy)
 \tag{6}
 ```
 
@@ -94,7 +94,7 @@ This is what ordinary postcomposition lacks: witnesses at higher types are trans
 **Boolean constants.** Good qualification fixes the endpoints. For negation,
 
 ```math
-E^*_{tt}(\neg)(p)=E(\neg Fp)=\neg E(Fp)=\neg p.
+E^*_{tt}(\neg)(p)=E(\neg Fp)=\neg E(Fp)=\neg p
 ```
 
 For conjunction the calculation is
@@ -103,13 +103,13 @@ $`E(Fp\land Fq)=p\land q`$; disjunction is the same. Functionality turns the poi
 **Equality.** C5 makes every identity proposition an endpoint: NI handles a true identity and ND a false one. A Boolean observer consequently fixes each such proposition. Since $`F^*_\alpha`$ is injective,
 
 ```math
-F^*_\alpha x=F^*_\alpha y\quad\leftrightarrow\quad x=y.
+F^*_\alpha x=F^*_\alpha y\quad\leftrightarrow\quad x=y
 ```
 
 Both sides are endpoint propositions, so they are identical. Hence conjugating the equality operation gives
 
 ```math
-E(F^*_\alpha x=F^*_\alpha y)=(x=y).
+E(F^*_\alpha x=F^*_\alpha y)=(x=y)
 \tag{7}
 ```
 
@@ -124,7 +124,7 @@ E^*_{(\alpha t)t}(\forall_\alpha)(G)
       F(G(E^*_\alpha x))\right)\\
  &=\forall x^\alpha\,E(F(G(E^*_\alpha x)))\\
  &=\forall x^\alpha\,G(E^*_\alpha x)\\
- &=\forall x^\alpha\,Gx.
+ &=\forall x^\alpha\,Gx
 \end{aligned}
 \tag{8}
 ```
@@ -143,7 +143,7 @@ E^*_\tau(A(\bar x))=A(E^*\bar x),
 where each free variable is transformed at its own type, and individual variables remain unchanged. The variable and logical-constant cases were covered above. Application uses (6). For a lambda abstraction, (4) first inserts $`F^*_\alpha y`$; the induction hypothesis then transforms that argument by $`E^*_\alpha`$, and (5) cancels the pair. Functionality supplies identity of the abstractions. Consequently, for the closed proposition $`P`$,
 
 ```math
-E(P)=P.
+E(P)=P
 \tag{10}
 ```
 
@@ -155,7 +155,7 @@ Assume $`P`$. Every reversible Good$`_{\Delta_P}`$ observer fixes $`P`$ by (10),
 
 ```math
 \mathrm{C5}+S_{t,\Delta_P}[\mathrm{Rev}]
-\quad\Longrightarrow\quad P\to\Box P.
+\quad\Longrightarrow\quad P\to\Box P
 \tag{11}
 ```
 
@@ -163,7 +163,7 @@ Full Rev over H already supplies C5 and the required instance. Therefore, withou
 
 ```math
 \boxed{\mathrm{Rev}\Rightarrow
-\bigl(U_{\sigma,\varphi}\to\Box U_{\sigma,\varphi}\bigr).}
+\bigl(U_{\sigma,\varphi}\to\Box U_{\sigma,\varphi}\bigr)}
 \tag{12}
 ```
 
@@ -181,7 +181,7 @@ holds, including the empty-structure case. Apply (12) to each disjunct to obtain
 ```math
 \boxed{\mathrm{Rev}\Rightarrow
 \Box U_{\sigma,\varphi}\ \lor
-\Box U_{\sigma,\neg\varphi}.}
+\Box U_{\sigma,\neg\varphi}}
 \tag{14}
 ```
 
@@ -194,7 +194,7 @@ Sentence-level stability is the conclusion. No claim is made here that Rev suppl
 The exact characterization in [Reversible separation and fixed propositions](../../../classicism-results-2026-10-24-v2/proofs/h-observer-space/reversible-fixed-proposition-characterization.md), §§1–3, gives an equivalent route. Over C5 let $`A(E)`$ say that $`E`$ and an admitted two-sided inverse are Good at $`\{t\}`$. Put
 
 ```math
-\mathrm{Inv}(p):=\forall E\,[A(E)\to Ep=p].
+\mathrm{Inv}(p):=\forall E\,[A(E)\to Ep=p]
 ```
 
 The established type-reduction theorem upgrades each such observer and its inverse to every requested finite qualification list. Hence (10) proves $`\mathrm{Inv}(U_{\sigma,\varphi})`$. The condition

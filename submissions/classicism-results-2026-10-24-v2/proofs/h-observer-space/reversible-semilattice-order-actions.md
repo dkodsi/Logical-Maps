@@ -11,7 +11,7 @@ The action hypothesis concerns admitted automorphisms with whole-operation ident
 Work in H, retaining the fixed abbreviations T for Top and B for Bottom. Assume **BMeet**: primitive conjunction is associative, commutative and idempotent, and
 
 ```math
-p\land T=p,\qquad p\land B=B.
+p\land T=p,\qquad p\land B=B
 \tag{1}
 ```
 
@@ -21,7 +21,7 @@ Put I:=λp.p and define composition by the admitted lambda term. As in [Reversib
 
 ```math
 M(E):=(\lambda p,q.E(p\land q))
-       =(\lambda p,q.Ep\land Eq).
+       =(\lambda p,q.Ep\land Eq)
 \tag{2}
 ```
 
@@ -37,7 +37,7 @@ Both inverse equations and (2) are whole-operation identities. The quantifiers r
 Every member of G is an order isomorphism. Meet preservation gives monotonicity, and its admitted inverse gives the reverse order implication. Surjectivity and uniqueness of the two bounds then give
 
 ```math
-ET=T,\qquad EB=B.
+ET=T,\qquad EB=B
 \tag{3}
 ```
 
@@ -48,7 +48,7 @@ The separation principle is
 ```math
 S[G]:=\forall p,q\left[
 p=q\leftrightarrow
-\forall E\,(GE\to(Ep\leftrightarrow Eq))\right].
+\forall E\,(GE\to(Ep\leftrightarrow Eq))\right]
 \tag{4}
 ```
 
@@ -59,7 +59,7 @@ No preservation of negation, disjunction or any quantifier is included in G unle
 Define the admitted relation
 
 ```math
-R_G(p,q):=\forall E^{tt}\,[GE\to(Ep\leftrightarrow Eq)].
+R_G(p,q):=\forall E^{tt}\,[GE\to(Ep\leftrightarrow Eq)]
 \tag{5}
 ```
 
@@ -75,7 +75,7 @@ A relation U is **truth-compatible** when
 and **G-invariant** when, for every E with GE,
 
 ```math
-\forall p,q\,[U(p,q)\leftrightarrow U(Ep,Eq)].
+\forall p,q\,[U(p,q)\leftrightarrow U(Ep,Eq)]
 \tag{7}
 ```
 
@@ -89,7 +89,7 @@ Suppose R_G(p,q) and R_G(r,s). For every E with GE, the full meet identity gives
 
 ```math
 E(p\land r)=Ep\land Er,\qquad
-E(q\land s)=Eq\land Es.
+E(q\land s)=Eq\land Es
 ```
 
 The H conjunction truth clause and the two profile agreements make these outputs materially equivalent. Thus R_G(p∧r,q∧s), proving the congruence condition.
@@ -105,7 +105,7 @@ S[G]
 &\longleftrightarrow
 \text{every admitted G-invariant truth-compatible equivalence is equality}\\
 &\longleftrightarrow
-\text{every admitted G-invariant truth-compatible meet congruence is equality}.
+\text{every admitted G-invariant truth-compatible meet congruence is equality}
 \end{aligned}}
 \tag{8}
 ```
@@ -115,7 +115,7 @@ Here “is equality” means that the relation has precisely the pairs p=q as it
 There is also a semantic quotient interpretation. The external quotient of the proposition domain by R_G inherits meet and the G action. It embeds faithfully in the sets of admitted group members by
 
 ```math
-[p]\longmapsto\{E:GE\text{ and }Ep\text{ is true}\}.
+[p]\longmapsto\{E:GE\text{ and }Ep\text{ is true}\}
 \tag{9}
 ```
 
@@ -132,7 +132,7 @@ Proposition 1 now has the chain formulation
 ```math
 \boxed{S[G]\ \longleftrightarrow\quad
 \text{there is no nontrivial admitted G-invariant, truth-compatible
-convex equivalence}.}
+convex equivalence}}
 \tag{10}
 ```
 
@@ -141,7 +141,7 @@ convex equivalence}.}
 For the next statements, suppose the bounded chain is dense: whenever p<q there is r with p<r<q. Put
 
 ```math
-J(p):=B<p<T.
+J(p):=B<p<T
 \tag{11}
 ```
 
@@ -162,7 +162,7 @@ Say that the admitted G action is **order-primitive on J** when every admitted G
 Assume also an interior truth contrast:
 
 ```math
-\exists b,a\,[J(b)\land J(a)\land\neg b\land a].
+\exists b,a\,[J(b)\land J(a)\land\neg b\land a]
 \tag{12}
 ```
 
@@ -178,7 +178,7 @@ A convenient stronger hypothesis is **order 2-homogeneity on J**:
 
 ```math
 \forall p<q\text{ in }J\;\forall u<v\text{ in }J\;
-\exists E\,[GE\land Ep=u\land Eq=v].
+\exists E\,[GE\land Ep=u\land Eq=v]
 \tag{13}
 ```
 
@@ -190,7 +190,7 @@ Take singleton individuals and proposition domain
 
 ```math
 D_t=(\mathbb Q\cap[0,1])\setminus\{1/2\},
-\qquad p\text{ true}\Longleftrightarrow p>1/2.
+\qquad p\text{ true}\Longleftrightarrow p>1/2
 \tag{14}
 ```
 
@@ -199,7 +199,7 @@ At every allowed relational arrow type take the full set of functions between th
 ```math
 p\land q=\min(p,q),\qquad
 p\lor q=\max(p,q),\qquad
-\neg p=1-p.
+\neg p=1-p
 \tag{15}
 ```
 
@@ -228,7 +228,7 @@ The same full-function model also exhibits a strict distinction between the two 
 
 ```math
 E_r(p)=\varphi^{-1}(\varphi(p)+r)\quad(p\in J),
-\qquad E_r(0)=0,\quad E_r(1)=1.
+\qquad E_r(0)=0,\quad E_r(1)=1
 \tag{17}
 ```
 

@@ -11,7 +11,7 @@ Injectivity does not by itself suffice. A full-function model based on the compl
 Work over C5. Fix a finite external list Δ containing t, and an admitted currently injective Good_Δ observer E:tt. Good has the full Boolean and listed quantifier composite identities. Current injectivity means
 
 ```math
-\forall p,q\,(Ep=Eq\to p=q).
+\forall p,q\,(Ep=Eq\to p=q)
 \tag{1}
 ```
 
@@ -20,7 +20,7 @@ Use 0,1 for Bottom, Top and x≤y for x∧y=x. The [canonical-adjoint theorem](c
 ```math
 R(q):=\exists p\,[(Ep\le q)\land p],
 \qquad L(q):=\neg R(\neg q),
-\qquad C_E:=E\circ L.
+\qquad C_E:=E\circ L
 \tag{2}
 ```
 
@@ -29,7 +29,7 @@ They satisfy L⊣E⊣R. Since E is injective, its maximal kernel is 0, and
 ```math
 L\circ E=I=R\circ E,
 \qquad L0=0,
-\qquad L1=1.
+\qquad L1=1
 \tag{3}
 ```
 
@@ -40,7 +40,7 @@ C_E is the least image value above its input: q≤C_E(q), its fixed points are e
 We shall use the following identity, valid already for the adjoints of any Boolean logical E:
 
 ```math
-L(q\land Ep)=Lq\land p.
+L(q\land Ep)=Lq\land p
 \tag{4}
 ```
 
@@ -52,7 +52,7 @@ L(q\land Ep)\le r
 &\longleftrightarrow q\land Ep\le Er\\
 &\longleftrightarrow q\le E(\neg p\lor r)\\
 &\longleftrightarrow Lq\le\neg p\lor r\\
-&\longleftrightarrow Lq\land p\le r.
+&\longleftrightarrow Lq\land p\le r
 \end{aligned}
 \tag{5}
 ```
@@ -60,7 +60,7 @@ L(q\land Ep)\le r
 Antisymmetry proves (4). Applying E also gives
 
 ```math
-C_E(q\land Ep)=C_E(q)\land Ep.
+C_E(q\land Ep)=C_E(q)\land Ep
 \tag{6}
 ```
 
@@ -73,7 +73,7 @@ Define the admitted proposition predicate
 ```math
 \mathrm{Sel}_E(u):=
 C_E(u)=1\ \land\
-\forall q\,[u\land C_E(u\land q)=u\land q].
+\forall q\,[u\land C_E(u\land q)=u\land q]
 \tag{7}
 ```
 
@@ -82,28 +82,28 @@ Call such a u a **Boolean transversal for the image closure**. This terminology 
 For any u define the admitted term
 
 ```math
-F_u(q):=L(u\land q).
+F_u(q):=L(u\land q)
 \tag{8}
 ```
 
 **Theorem 1.** If Sel_E(u), then F_u is a qualified logical observer at every requested finite list and
 
 ```math
-F_u\circ E=I.
+F_u\circ E=I
 \tag{9}
 ```
 
 **Proof.** Since E(Lu)=C_E(u)=1=E1 and E is injective, Lu=1. Put α(p):=u∧Ep. Equation (4) gives
 
 ```math
-L(\alpha(p))=L(u\land Ep)=Lu\land p=p.
+L(\alpha(p))=L(u\land Ep)=Lu\land p=p
 \tag{10}
 ```
 
 Hence α is injective, and (10) is already the output form of (9). The second selector condition gives
 
 ```math
-\alpha(F_uq)=u\land E(L(u\land q))=u\land q.
+\alpha(F_uq)=u\land E(L(u\land q))=u\land q
 \tag{11}
 ```
 
@@ -118,7 +118,7 @@ For an arbitrary admitted G:σt, L's admitted-join preservation and the fixed-gu
 F_u(\exists x^\sigma Gx)
 &=L(u\land\exists x^\sigma Gx)\\
 &=L(\exists x^\sigma(u\land Gx))\\
-&=\exists x^\sigma F_u(Gx).
+&=\exists x^\sigma F_u(Gx)
 \end{aligned}
 \tag{12}
 ```
@@ -130,21 +130,21 @@ Negation preservation and quantifier duality give every universal law. C5 Functi
 Suppose F is Good_Δ and F∘E=I. It is onto: p is the F-image of Ep. Its maximal kernel is the admitted proposition
 
 ```math
-k_F:=\exists q\,[(Fq=0)\land q].
+k_F:=\exists q\,[(Fq=0)\land q]
 \tag{13}
 ```
 
 The [kernel theorem](surjective-logical-observers.md), §2, gives Fk_F=0 and says F is injective on [0,¬k_F]. Put
 
 ```math
-u:=\neg k_F.
+u:=\neg k_F
 \tag{14}
 ```
 
 Then Fu=1. Both u∧E(Fq) and u∧q lie below u, and applying F to either gives Fq. Interval injectivity therefore yields
 
 ```math
-u\land E(Fq)=u\land q.
+u\land E(Fq)=u\land q
 \tag{15}
 ```
 
@@ -154,7 +154,7 @@ For every p, the original L⊣E adjunction now gives
 \begin{aligned}
 L(u\land q)\le p
 &\longleftrightarrow u\land q\le Ep\\
-&\longleftrightarrow Fq\le p.
+&\longleftrightarrow Fq\le p
 \end{aligned}
 \tag{16}
 ```
@@ -162,7 +162,7 @@ L(u\land q)\le p
 For the forward direction of the second equivalence, apply F and use Fu=1 and FE=I. Conversely, if Fq≤p, (15) gives u∧q=u∧E(Fq)≤Ep. Antisymmetry proves
 
 ```math
-Fq=L(u\land q)=F_uq.
+Fq=L(u\land q)=F_uq
 \tag{17}
 ```
 
@@ -172,7 +172,7 @@ Conversely, the kernel of the F_u constructed in Theorem 1 is exactly the princi
 
 ```math
 F_uq=0\quad\longleftrightarrow\quad u\land q=0
-\quad\longleftrightarrow\quad q\le\neg u.
+\quad\longleftrightarrow\quad q\le\neg u
 \tag{18}
 ```
 
@@ -195,7 +195,7 @@ with mutually inverse assignments
 ```math
 F\longmapsto\neg k_F,
 \qquad
-u\longmapsto\lambda q.L(u\land q).
+u\longmapsto\lambda q.L(u\land q)
 \tag{20}
 ```
 
@@ -211,7 +211,7 @@ Let $`X=2^{\mathbb N}`$ be Cantor space and $`Z=X\times X`$. Write B=RO(Z) for i
 
 ```math
 \bigvee_i U_i=\mathrm{int}\mathrm{cl}
-\left(\bigcup_iU_i\right).
+\left(\bigcup_iU_i\right)
 \tag{21}
 ```
 
@@ -222,7 +222,7 @@ Put
 ```math
 A=2\times B,
 \qquad
-0_A=(0,\varnothing),\quad1_A=(1,Z).
+0_A=(0,\varnothing),\quad1_A=(1,Z)
 \tag{22}
 ```
 
@@ -233,7 +233,7 @@ Interpret the Boolean connectives by the complete Boolean algebra operations of 
 ```math
 \forall_\sigma F:=\bigwedge_{x\in D_\sigma}F(x),
 \qquad
-\exists_\sigma F:=\bigvee_{x\in D_\sigma}F(x).
+\exists_\sigma F:=\bigvee_{x\in D_\sigma}F(x)
 \tag{23}
 ```
 
@@ -255,7 +255,7 @@ There is an explicit homeomorphism h:X→X×X: split a binary sequence into its 
 
 ```math
 i:B\longrightarrow B,
-\qquad i(U):=h^{-1}[U]\times X.
+\qquad i(U):=h^{-1}[U]\times X
 \tag{24}
 ```
 
@@ -264,7 +264,7 @@ Homeomorphism pullback is a complete Boolean isomorphism RO(Z)→RO(X). The cyli
 Define the admitted observer
 
 ```math
-E(\varepsilon,U):=(\varepsilon,i(U)).
+E(\varepsilon,U):=(\varepsilon,i(U))
 \tag{25}
 ```
 
@@ -273,7 +273,7 @@ It is injective and preserves arbitrary Boolean meets and joins. Equations (23) 
 Let C_B be the image ceiling for i. In particular, for nonempty clopen sets P,D⊆X,
 
 ```math
-C_B(P\times D)=P\times X.
+C_B(P\times D)=P\times X
 \tag{26}
 ```
 
@@ -289,7 +289,7 @@ because its image permits either first bit independently of the cylinder compone
 Suppose u=(ε,U) satisfied the Boolean transversal condition (7). Coverage C_E(u)=1_A would give ε=1 and C_B(U)=Z, in particular U≠∅. As a nonempty open subset of Cantor², U contains a nonempty clopen rectangle P×D. Cantor space has no isolated points, so D can be split into two disjoint nonempty clopen sets D₀,D₁. Put
 
 ```math
-q=(0,P\times D_0).
+q=(0,P\times D_0)
 \tag{28}
 ```
 
@@ -297,7 +297,7 @@ Then u∧q=q. By (26)–(27),
 
 ```math
 u\land C_E(u\land q)
-=(0,U\cap(P\times X)).
+=(0,U\cap(P\times X))
 \tag{29}
 ```
 
@@ -310,7 +310,7 @@ The operators L and R from (2) are nevertheless admitted and satisfy L∘E=R∘E
 This model does not satisfy ordinary logical separation. To verify that directly, B=RO(Cantor²) is atomless: any nonzero regular open contains a clopen rectangle, and splitting one coordinate gives a strictly smaller nonzero regular open. Thus A has exactly one atom,
 
 ```math
-w=(1,\varnothing).
+w=(1,\varnothing)
 \tag{30}
 ```
 

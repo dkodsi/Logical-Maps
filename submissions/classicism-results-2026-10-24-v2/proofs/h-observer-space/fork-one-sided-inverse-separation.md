@@ -7,7 +7,7 @@ The full three-object fork satisfies necessary ordinary logical separation but f
 ```math
 \boxed{\mathrm{Rev}\ \Longrightarrow\ \mathrm{SplitMono}
 \ \Longrightarrow\ \mathrm{OS},
-\qquad\text{both implications strict}.}
+\qquad\text{both implications strict}}
 \tag{1}
 ```
 
@@ -20,14 +20,14 @@ All qualifications below use full composite operation identities. The failure oc
 Use exactly [Full three-object fork: all Barcan instances without binary families](fork-without-binary-families.md), §§1–2. Its category has objects r,l,h, identity arrows and just two nonidentity arrows
 
 ```math
-\alpha:r\to l,\qquad\beta:r\to h.
+\alpha:r\to l,\qquad\beta:r\to h
 ```
 
 Each object has a singleton individual domain. Use the full action construction in the fixed relational language, with no function types ending in e. The current proposition domains are
 
 ```math
 D_t(r)=\{0,1\}^3,
-\qquad D_t(l)=D_t(h)=\{0,1\}.
+\qquad D_t(l)=D_t(h)=\{0,1\}
 \tag{2}
 ```
 
@@ -48,7 +48,7 @@ For a finite external Δ let Good_Δ be the complete logical qualification. Defi
 ```math
 \mathrm{SplitMono}_\Delta(E):=
 \mathrm{Good}_\Delta(E)\land
-\exists F^{tt}\,[\mathrm{Good}_\Delta(F)\land F\circ E=I].
+\exists F^{tt}\,[\mathrm{Good}_\Delta(F)\land F\circ E=I]
 \tag{4}
 ```
 
@@ -82,7 +82,7 @@ Fix any admitted type σ and any predicate F∈D_{σt}(r). Its universal proposi
 \bigwedge_{x\in D_\sigma(r)}F_r(x)_0,
 \ \bigwedge_{y\in D_\sigma(l)}F_l(y),
 \ \bigwedge_{z\in D_\sigma(h)}F_h(z)
-\right).
+\right)
 \tag{6}
 ```
 
@@ -91,7 +91,7 @@ For E_l, the root truth bit of E_l(∀_σF) is the middle coordinate in (6). The
 ```math
 \bigwedge_{x\in D_\sigma(r)}F_r(x)_l
 =\bigwedge_{x\in D_\sigma(r)}F_l(\alpha_\sigma x)
-=\bigwedge_{y\in D_\sigma(l)}F_l(y).
+=\bigwedge_{y\in D_\sigma(l)}F_l(y)
 \tag{7}
 ```
 
@@ -109,7 +109,7 @@ At a leaf the model is an ordinary full extensional type structure, with only tw
 
 ```math
 \mathrm C+\Box\mathrm{OS}+\Box\mathrm{BF}
-+\Box\mathrm{Fun}.
++\Box\mathrm{Fun}
 \tag{8}
 ```
 
@@ -130,34 +130,34 @@ Each leaf component of E fixes Top and Bottom. Since its leaf proposition domain
 ```math
 (ep)_l=p_l,
 \qquad(ep)_h=p_h
-\qquad\text{for every root proposition }p.
+\qquad\text{for every root proposition }p
 \tag{9}
 ```
 
 Put
 
 ```math
-u:=(1,0,0).
+u:=(1,0,0)
 ```
 
 Equation (9) makes both leaf bits of e(u) zero. Hence e(u) is either Bottom=(0,0,0) or u. Boolean preservation gives e(Bottom)=Bottom, and injectivity excludes e(u)=Bottom because u≠Bottom. Thus
 
 ```math
-e(u)=u.
+e(u)=u
 \tag{10}
 ```
 
 For every p, meet preservation now gives
 
 ```math
-u\land e(p)=e(u\land p).
+u\land e(p)=e(u\land p)
 \tag{11}
 ```
 
 If p₀=0 then u∧p=Bottom, so (11) makes the root bit of e(p) zero. If p₀=1 then u∧p=u, and (10)–(11) make the root bit of e(p) one. Therefore e preserves the root bit as well as the two leaf bits in (9):
 
 ```math
-e(p)=p\qquad\text{for every }p\in D_t(r).
+e(p)=p\qquad\text{for every }p\in D_t(r)
 \tag{12}
 ```
 
@@ -173,7 +173,7 @@ At the root the exact new model profile is
 
 ```math
 \boxed{\mathrm C+\Box\mathrm{OS}+\Box\mathrm{BF}
-+\Box\mathrm{Fun}+\neg\mathrm{SplitMono}.}
++\Box\mathrm{Fun}+\neg\mathrm{SplitMono}}
 \tag{13}
 ```
 
@@ -184,7 +184,7 @@ The all-maps model in the left-inverse note, §7, satisfies SplitMono but fails 
 ```math
 \mathrm{SplitMono}\not\Longrightarrow\Box\mathrm{OS},
 \qquad
-\Box\mathrm{OS}\not\Longrightarrow\mathrm{SplitMono}.
+\Box\mathrm{OS}\not\Longrightarrow\mathrm{SplitMono}
 \tag{14}
 ```
 
@@ -196,7 +196,7 @@ The finite-domain observation in §3 has an internal strengthening when current 
 
 ```math
 \mathrm{Fin}_t(\mathrm{All}):=
-\exists Z^{(tt)t}\,[\mathrm{FiniteCardinality}_t(Z)\land Z(\mathrm{All})].
+\exists Z^{(tt)t}\,[\mathrm{FiniteCardinality}_t(Z)\land Z(\mathrm{All})]
 ```
 
 This asserts internal finiteness; it does not supply a standard external enumeration. Over H plus this premise, every admitted injective operation E:tt is onto. Here is the exact internal justification. If E were injective but omitted q₀, the admitted relation R(p,q):=(Ep=q) would be serial on All, would never send two distinct inputs to the same output, and would omit q₀. The [recorded Dedekind lemma](../../source/topics/classicism/writeups/pure-possibility-implies-axiom-of-infinity-t.md), Lemma 5, proves by Frege induction that no predicate having a finite cardinality admits such a relation. Apply it to All.
@@ -206,7 +206,7 @@ Only that lemma's internal logical argument is used, not the surrounding maximal
 Now suppose F∘E=I. This gives injectivity of E, hence internal surjectivity by the preceding argument. For any q choose p with Ep=q. Equality substitution gives
 
 ```math
-E(Fq)=E(F(Ep))=Ep=q.
+E(Fq)=E(F(Ep))=Ep=q
 ```
 
 Under the explicit local premise Fun_{t,t}, these pointwise identities identify the whole operations E∘F=I. This is the step absent from a bare current-finiteness argument: here current Functionality, rather than a silent inference about future domains, supplies the identity. No necessity of the finiteness premise is asserted.
@@ -215,7 +215,7 @@ Thus under H+Fin_t(All)+Fun_{t,t}, the SplitMono_Δ and reversible qualification
 
 ```math
 \boxed{\mathrm{SplitMono}\ \longleftrightarrow\ \mathrm{Rev}
-\ \longleftrightarrow\ \mathrm{EndSep}.}
+\ \longleftrightarrow\ \mathrm{EndSep}}
 \tag{15}
 ```
 

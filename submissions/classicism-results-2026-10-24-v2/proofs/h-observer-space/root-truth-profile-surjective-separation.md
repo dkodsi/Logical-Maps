@@ -6,7 +6,7 @@ An individual admitted observer's current surjectivity persists over C+BF_t. Sur
 
 ```math
 \mathrm C+\mathrm{SurjSep}+\Box\mathrm{BF}
-+\Box\mathrm{Functionality}+\neg\Box\mathrm{OS}.
++\Box\mathrm{Functionality}+\neg\Box\mathrm{OS}
 \tag{1}
 ```
 
@@ -17,14 +17,14 @@ Consequently it also refutes necessary SurjSep. Here SurjSep has every relationa
 Write
 
 ```math
-\mathrm{Onto}(E):=\forall q^t\,\exists p^t\,Ep=q.
+\mathrm{Onto}(E):=\forall q^t\,\exists p^t\,Ep=q
 ```
 
 Over C+BF_t, for every admitted E:tt,
 
 ```math
 \mathrm{Onto}(E)\ \longrightarrow\
-\Box\mathrm{Onto}(E).
+\Box\mathrm{Onto}(E)
 \tag{2}
 ```
 
@@ -37,7 +37,7 @@ Ep=q\ \longrightarrow\ \exists z^t\,Ez=q
 can be necessitated. Normality therefore gives □∃z(Ez=q). Eliminating the current existential witness p and generalizing q yields
 
 ```math
-\forall q^t\,\Box\exists z^t\,Ez=q.
+\forall q^t\,\Box\exists z^t\,Ez=q
 ```
 
 Apply BF_t to the admitted predicate λq.∃z(Ez=q). This gives (2). The parameter E remains free throughout and is transported inside the box. No optional assumption is necessitated; no Choice, C5, or admitted inverse is used.
@@ -48,7 +48,7 @@ For each fixed finite Δ, Good_Δ is also persistent over C. Its Boolean and qua
 \mathrm{Good}_\Delta(E)\land\mathrm{Onto}(E)
 \ \longrightarrow\
 \Box\bigl(\mathrm{Good}_\Delta(E)
-\land\mathrm{Onto}(E)\bigr).
+\land\mathrm{Onto}(E)\bigr)
 \tag{3}
 ```
 
@@ -65,7 +65,7 @@ Call this old model B. It is a C model. All its arrows are invertible, so their 
 Both source groups have an infinite sequence of individually fixed points: use U at X and any enumeration at Y. The [fixed-point symmetry theorem](fixed-point-symmetry-left-inverse-separation.md), §§1–4, therefore supplies at each Z∈{X,Y} admitted operators S_Z,R_Z and a proposition c_Z such that
 
 ```math
-S_Z\circ R_Z=I,\qquad S_Zc_Z=\bot,\qquad c_Z\text{ is true at }Z.
+S_Z\circ R_Z=I,\qquad S_Zc_Z=\bot,\qquad c_Z\text{ is true at }Z
 \tag{4}
 ```
 
@@ -74,7 +74,7 @@ Both operators satisfy every finite full logical qualification list. That theore
 For any old arrow b:X→Z, transport (4) back along b⁻¹. Denote the resulting operators and proposition at X by S_b,R_b,c_b. Invertible transport preserves the whole identities and qualifications, giving
 
 ```math
-S_bR_b=I,\qquad S_bc_b=\bot,\qquad b\in c_b.
+S_bR_b=I,\qquad S_bc_b=\bot,\qquad b\in c_b
 \tag{5}
 ```
 
@@ -87,20 +87,20 @@ Let d be the proposition consisting of all arrows X→Y and no arrows X→X. It 
 Fix any admitted Boolean observer E at X, and a finite pin P for E. Choose distinct a,a′ in V outside P. Let μ∈G_X transpose a,a′ and fix every other individual. Then μ fixes P, so ρ_tt(μ)E=E. For every proposition q at X, symmetry under μ gives
 
 ```math
-v_X(\rho_t(\mu)q)=v_X(q).
+v_X(\rho_t(\mu)q)=v_X(q)
 ```
 
 Naturality of application consequently gives
 
 ```math
-v_X\bigl(E(\rho_t(\mu)q)\bigr)=v_X(Eq).
+v_X\bigl(E(\rho_t(\mu)q)\bigr)=v_X(Eq)
 \tag{6}
 ```
 
 Choose an external linear order on Y and let r contain exactly the arrows h:X→Y satisfying h(a)<h(a′). It is pinned by {a,a′}; its Y-target symmetry condition is vacuous and its X-target component is empty. Thus r is admitted. Swapping a,a′ gives the proposition identity
 
 ```math
-\rho_t(\mu)r=d\land\neg r.
+\rho_t(\mu)r=d\land\neg r
 \tag{7}
 ```
 
@@ -120,7 +120,7 @@ Define the new root domains recursively. Put A_e=B_e(X) with projection π_e the
 A_\tau=
 \{0,1\}^{A_{\sigma_1}\times\cdots\times A_{\sigma_k}}
 \times B_\tau(X),
-\qquad \pi_\tau(f,b)=b.
+\qquad \pi_\tau(f,b)=b
 \tag{8}
 ```
 
@@ -129,7 +129,7 @@ In particular A_t={0,1}×B_t(X). Root truth is the first bit. Every π_σ is ont
 Application sections the first truth function and applies the old second component to the projected argument. For F=(f,g) of type σt and x∈A_σ,
 
 ```math
-F(x)=\bigl(f(x),g(\pi_\sigma x)\bigr).
+F(x)=\bigl(f(x),g(\pi_\sigma x)\bigr)
 \tag{9}
 ```
 
@@ -142,7 +142,7 @@ At longer curried types the first component becomes the corresponding section of
 \exists_\sigma(f,g)&=
 \bigl(\exists x\in A_\sigma\ f(x),\ \exists_\sigma^B g\bigr),\\
 (x=_\sigma y)&=
-\bigl(\delta(x,y),\ (\pi_\sigma x=_\sigma\pi_\sigma y)^B\bigr).
+\bigl(\delta(x,y),\ (\pi_\sigma x=_\sigma\pi_\sigma y)^B\bigr)
 \end{aligned}
 \tag{10}
 ```
@@ -161,14 +161,14 @@ For each old b:X→Z define a root truth function and observer by
 
 ```math
 h_b(p):=\bigl[b\in\pi_t p\bigr],
-\qquad E_b=(h_b,S_b)\in A_{tt}.
+\qquad E_b=(h_b,S_b)\in A_{tt}
 \tag{11}
 ```
 
 Admission follows directly from (8): the first component is an arbitrary root truth function on A_t, and the second is the admitted old S_b. Its action is
 
 ```math
-E_b(p)=\bigl(h_b(p),S_b(\pi_t p)\bigr).
+E_b(p)=\bigl(h_b(p),S_b(\pi_t p)\bigr)
 \tag{12}
 ```
 
@@ -185,14 +185,14 @@ The translated equality clauses follow from Boolean qualification over C. Hence 
 Fix any desired root output (ε,q)∈{0,1}×B_t(X). Write εc_b for c_b if ε=1 and Bottom_B if ε=0, and put
 
 ```math
-z=(\neg c_b\land R_bq)\lor\varepsilon c_b.
+z=(\neg c_b\land R_bq)\lor\varepsilon c_b
 \tag{13}
 ```
 
 Boolean preservation and (5) give S_bz=q. Also b∈c_b, so membership of b in z is exactly ε. The admitted root proposition p=(0,z) therefore satisfies
 
 ```math
-E_b(p)=(\varepsilon,q).
+E_b(p)=(\varepsilon,q)
 \tag{14}
 ```
 
@@ -209,7 +209,7 @@ For relations of type σ₁⋯σ_k t, a difference between the root truth functi
 The accessible old object X still fails OS(t,∅), by §2. Hence
 
 ```math
-*\models\mathrm{SurjSep}\land\neg\Box\mathrm{OS}(t,\varnothing).
+*\models\mathrm{SurjSep}\land\neg\Box\mathrm{OS}(t,\varnothing)
 \tag{15}
 ```
 

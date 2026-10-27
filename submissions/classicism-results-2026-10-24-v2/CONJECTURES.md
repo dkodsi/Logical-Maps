@@ -87,7 +87,7 @@ The [forcing formulation](#abstract-forcing) has a separate source-comparison qu
 The proposed equality is
 
 ```math
-\mathrm{Th}_{\mathrm{arith}}(\mathrm{Max}(C))=\mathrm{Cn}\bigl(T_{\mathrm{arith}}\cup\mathrm{True}_{\Pi_1}\bigr).
+\mathrm{Th}_{\mathrm{arith}}(\mathrm{Max}(C))=\mathrm{Cn}\bigl(T_{\mathrm{arith}}\cup\mathrm{True}_{\Pi_1}\bigr)
 ```
 
 An ordinary proof is supplied for both inclusions, but the difficult upper inclusion still awaits independent review. Here $`T_{\mathrm{arith}}`$ is the common arithmetic theory of the positive Choice and Plenitude packages. See the [statement and proof](evidence/RESULT-INDEX.md#max-arithmetic-equality).
@@ -376,7 +376,7 @@ For every finite signature $`\Sigma`$, including the empty signature,
 
 ```math
 \mathrm{SP}(\Sigma)\vdash\neg\mathrm{BF}_{\alpha}\;\land\;\neg\mathrm{Functionality}_{\alpha,\beta}
-\qquad(\beta\ne e).
+\qquad(\beta\ne e)
 ```
 
 This holds at every admitted input type α and relational output type β, with explicit counterpredicates and counterfunctions. With infinitely many relational constants but finitely many individual names, the type-e BF failure and input-e Functionality failures still follow. The all-input result retains the finite-signature restriction. These are consequences of SP, not a proof of its consistency.
@@ -674,7 +674,7 @@ Every general C model has a proper qualified idempotent realization, preserving 
 SplitMono strictly implies InjSep, even over C5 with necessary all-type Relational Choice, Transversal Choice and Zorn. The [countermodel](proofs/h-observer-space/rigid-souslin-injective-separation.md) is constructed in ZFC and satisfies
 
 ```math
-\mathrm{C5}+\Box\mathrm{InjSep}+\Box\mathrm{RC}+\Box\mathrm{TC}+\Box\mathrm{Zorn}+\Box\neg\mathrm{SplitMono}_t.
+\mathrm{C5}+\Box\mathrm{InjSep}+\Box\mathrm{RC}+\Box\mathrm{TC}+\Box\mathrm{Zorn}+\Box\neg\mathrm{SplitMono}_t
 ```
 
 The positive schemas hold at every admitted type and finite qualification list. Failure is already at the propositional instance testing quantification at t. The identity is the only logical observer admitting a qualified logical left inverse, so no alternative separating family can repair the failure.

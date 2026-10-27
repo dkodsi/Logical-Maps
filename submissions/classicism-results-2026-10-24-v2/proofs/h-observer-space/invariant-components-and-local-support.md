@@ -14,7 +14,7 @@ Work over C5 in the fixed relational language. Write 0,1 for Bottom, Top, and p�
 A(E):=B(E)\land\exists F^{tt}
  [B(F)\land EF=I\land FE=I],
 \qquad
-\mathrm{Inv}(u):=\forall E^{tt}[A(E)\to Eu=u].
+\mathrm{Inv}(u):=\forall E^{tt}[A(E)\to Eu=u]
 \tag{1}
 ```
 
@@ -24,7 +24,7 @@ For a B-qualified E, use its admitted adjoints $`L_E`$⊣E⊣R_E and image closu
 
 ```math
 q\le C_Eq,
-\qquad L_E(q\land Ep)=L_Eq\land p.
+\qquad L_E(q\land Ep)=L_Eq\land p
 \tag{2}
 ```
 
@@ -32,7 +32,7 @@ $`L_E`$ preserves all admitted joins, but is not presumed Boolean or Good. It is
 
 ```math
 R_Eq:=\exists p[(Ep\le q)\land p],
-\qquad L_Eq:=\neg R_E(\neg q).
+\qquad L_Eq:=\neg R_E(\neg q)
 \tag{3}
 ```
 
@@ -45,7 +45,7 @@ The local-transversal predicate and canonical support are
 \mathrm{Loc}_E(b)&:\longleftrightarrow
  \forall q[b\land C_E(b\land q)=b\land q],\\
 s_E&:=\exists b[\mathrm{Loc}_E(b)\land b],\\
-\mathcal N(E)(p)&:=(s_E\land Ep)\lor(\neg s_E\land p).
+\mathcal N(E)(p)&:=(s_E\land Ep)\lor(\neg s_E\land p)
 \end{aligned}
 \tag{4}
 ```
@@ -68,7 +68,7 @@ An admitted relative isomorphism between [0,a] and [0,b] means admitted operatio
 
 ```math
 \beta\alpha(p)=a\land p,
-\qquad \alpha\beta(q)=b\land q.
+\qquad \alpha\beta(q)=b\land q
 \tag{6}
 ```
 
@@ -80,14 +80,14 @@ The relative Boolean laws follow from the order isomorphism. The admitted invers
 \boxed{\mathrm{Inv}(u)
 \quad\longleftrightarrow\quad
 \text{there are no nonzero }a\le u,\ b\le\neg u
-\text{ with an admitted relative isomorphism}.}
+\text{ with an admitted relative isomorphism}}
 \tag{7}
 ```
 
 **Proof.** Suppose such a,b,α,β exist. They are disjoint. Put r=¬(a∨b) and define
 
 ```math
-T(p):=\alpha(a\land p)\lor\beta(b\land p)\lor(r\land p).
+T(p):=\alpha(a\land p)\lor\beta(b\land p)\lor(r\land p)
 \tag{8}
 ```
 
@@ -108,7 +108,7 @@ The theorem concerns admitted relative maps. Abstract isomorphism of two externa
 &\longleftrightarrow
  \forall E[B(E)\to s_E\land Eu=s_E\land u]\\
 &\longleftrightarrow
- \forall E[B(E)\to\mathcal N(E)u=u].
+ \forall E[B(E)\to\mathcal N(E)u=u]
 \end{aligned}}
 \tag{9}
 ```
@@ -117,7 +117,7 @@ The theorem concerns admitted relative maps. Abstract isomorphism of two externa
 
 ```math
 v:=b\land Eu\land\neg u,
-\qquad a:=L_Ev.
+\qquad a:=L_Ev
 \tag{10}
 ```
 
@@ -127,7 +127,7 @@ The complement ¬u is invariant as well. Apply the same argument to it and use E
 
 ```math
 b\land Eu=b\land u
-\qquad(\mathrm{Loc}_E(b)).
+\qquad(\mathrm{Loc}_E(b))
 \tag{11}
 ```
 
@@ -139,7 +139,7 @@ One corresponding adjoint identity is
 
 ```math
 \boxed{L_E(s_E\land u)=L_E(s_E)\land u
-\qquad(\mathrm{Inv}(u),\ B(E)).}
+\qquad(\mathrm{Inv}(u),\ B(E))}
 \tag{12}
 ```
 
@@ -152,7 +152,7 @@ Thus the invariant Boolean algebra is exactly the common fixed algebra of the ad
 Recall the admitted reversible orbit closure
 
 ```math
-O(p):=\exists G^{tt}[A(G)\land Gp].
+O(p):=\exists G^{tt}[A(G)\land Gp]
 \tag{13}
 ```
 
@@ -164,7 +164,7 @@ It is the least invariant proposition above p by [Reversible fixed propositions]
 \boxed{
 O(p)
 =\exists E^{tt}[B(E)\land s_E\land Ep]
-=\exists E^{tt}[B(E)\land\mathcal N(E)p].}
+=\exists E^{tt}[B(E)\land\mathcal N(E)p]}
 \tag{14}
 ```
 
@@ -172,7 +172,7 @@ For a B-qualified E, monotonicity and (9), applied to invariant O(p), give
 
 ```math
 s_E\land Ep\le s_E\land E(O(p))
-=s_E\land O(p)\le O(p).
+=s_E\land O(p)\le O(p)
 \tag{15}
 ```
 
@@ -187,7 +187,7 @@ Only admitted families of type (tt)t occur here. No actual extension of an arbit
 Suppose u is a nonzero false invariant and B(E) with Eu currently true. Define the crossing proposition
 
 ```math
-c:=Eu\land\neg u.
+c:=Eu\land\neg u
 \tag{16}
 ```
 
@@ -196,7 +196,7 @@ Then c is currently true, and (9) yields c∧$`s_E`$=0. Every local transversal 
 For an exact inverse consequence, now add the explicit current premises $`\mathrm{BC}_t`$ and $`\mathrm{Zorn}_t`$ and suppose E is injective. The [controlled support-selection theorem](zorn-local-transversal-selection.md), §4, says that a qualified left inverse F killing c exists exactly when
 
 ```math
-L_E(s_E\land\neg c)=1.
+L_E(s_E\land\neg c)=1
 \tag{17}
 ```
 
@@ -207,7 +207,7 @@ Since $`s_E`$≤¬c, this condition is simply $`L_E s_E=1`$. Thus
 \mathrm{Inj}(E)\land L_Es_E=1
 \ \Longrightarrow\
 \exists F[B(F)\land FE=I\land Fc=0]
-\quad\text{under C5+BC}_t+\mathrm{Zorn}_t.}
+\quad\text{under C5+BC}_t+\mathrm{Zorn}_t}
 \tag{18}
 ```
 
@@ -216,7 +216,7 @@ Here E and c remain the detector and the true crossing from (16). The resulting 
 The obstruction can also be stated on the input side. If $`L_E s_E`$≠1, set a=¬$`L_E s_E`$. Then
 
 ```math
-a\ne0,\qquad Ea\le\neg s_E.
+a\ne0,\qquad Ea\le\neg s_E
 \tag{19}
 ```
 

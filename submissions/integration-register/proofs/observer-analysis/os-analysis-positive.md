@@ -19,7 +19,7 @@ choose a nonempty individual domain, and form the full relational hierarchy with
 Choose an M-generic ultrafilter G on A and declare
 
 ```math
-(\epsilon,b)\text{ true}\quad\Longleftrightarrow\quad b\in G.
+(\epsilon,b)\text{ true}\quad\Longleftrightarrow\quad b\in G
 \tag{1}
 ```
 
@@ -31,7 +31,7 @@ If $`(b_i)_{i\in I}`$ is a family coded in M and its M-join is b, then
 
 ```math
 b\in G\quad\Longleftrightarrow\quad
-\exists i\in I^M\;(b_i\in G).
+\exists i\in I^M\;(b_i\in G)
 \tag{2}
 ```
 
@@ -40,7 +40,7 @@ Inside M, take a maximal antichain below b refining the family: every member a o
 ```math
 \bigwedge_{i\in I}^{M}b_i\in G
 \quad\Longleftrightarrow\quad
-\forall i\in I^M\;(b_i\in G).
+\forall i\in I^M\;(b_i\in G)
 \tag{3}
 ```
 
@@ -60,7 +60,7 @@ Native Box remains
 
 ```math
 \Box p=\delta_t(p,1_B)=
-\begin{cases}1_B,&p=1_B,\\0_B,&p\ne1_B.\end{cases}
+\begin{cases}1_B,&p=1_B,\\0_B,&p\ne1_B\end{cases}
 \tag{4}
 ```
 
@@ -84,7 +84,7 @@ Assume the following internal homogeneity condition:
 
 ```math
 \bigvee_{\alpha\in\mathrm{Aut}^{M}(A)}^{M}\alpha(b)=1_A
-\qquad(0<b\in A).
+\qquad(0<b\in A)
 \tag{6}
 ```
 
@@ -107,7 +107,7 @@ Suppose there are a nonzero proper c∈A and an M-coded complete Boolean isomorp
 
 ```math
 h:A\longrightarrow A\mathbin{\upharpoonright}c,
-\qquad\neg c\in G.
+\qquad\neg c\in G
 \tag{8}
 ```
 
@@ -116,7 +116,7 @@ Here the interval has top c. Define internal B-operations
 ```math
 \begin{aligned}
 J(\epsilon,b)&=(\epsilon,\;\epsilon\neg c\lor h(b)),\\
-K(\epsilon,d)&=(\epsilon,\;h^{-1}(d\land c)).
+K(\epsilon,d)&=(\epsilon,\;h^{-1}(d\land c))
 \end{aligned}
 \tag{9}
 ```
@@ -126,7 +126,7 @@ Both are complete Boolean homomorphisms. In the second coordinate, the decomposi
 Direct calculation gives the identity of whole admitted operations
 
 ```math
-K\circ J=I_B.
+K\circ J=I_B
 \tag{10}
 ```
 

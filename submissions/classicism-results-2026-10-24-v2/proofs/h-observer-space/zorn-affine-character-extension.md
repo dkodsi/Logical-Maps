@@ -11,7 +11,7 @@ Fix an admitted binary operation + on propositions. Assume the Boolean-group out
 Write L⊆K for ∀x(Lx→Kx), and write Subgroup(L) for
 
 ```math
-L0\ \land\ \forall x,y\,(Lx\land Ly\to L(x+y)).
+L0\ \land\ \forall x,y\,(Lx\land Ly\to L(x+y))
 ```
 
 Every predicate and operation quantified over is admitted. Subgroup inclusion is truth inclusion; mutual inclusion is never replaced by predicate identity.
@@ -23,7 +23,7 @@ Use [Zorn's Lemma](../../source/topics/classicism/principles/zorn-r.yaml) at σ=
 \forall R^{(tt)(tt)t}\bigl[&\mathrm{Preorder}(R)\land
 \forall X^{(tt)t}\bigl(\mathrm{TotalOrder}(R,X)
   \to\exists U^{tt}\,\forall K^{tt}(XK\to R(K,U))\bigr)\\
-&\to\exists K^{tt}\,\forall J^{tt}(R(K,J)\to R(J,K))\bigr].
+&\to\exists K^{tt}\,\forall J^{tt}(R(K,J)\to R(J,K))\bigr]
 \end{aligned}
 \tag{1}
 ```
@@ -37,14 +37,14 @@ The database's ambient C is not imported: formula (1) is an explicit additional 
 Let L be an admitted subgroup and let d satisfy ¬Ld. Call a predicate K valid when
 
 ```math
-V(K):=\mathrm{Subgroup}(K)\land L\subseteq K\land\neg Kd.
+V(K):=\mathrm{Subgroup}(K)\land L\subseteq K\land\neg Kd
 \tag{2}
 ```
 
 The given L is valid. On all proposition predicates define the admitted relation
 
 ```math
-R(K,J):=\neg V(K)\lor\bigl(V(J)\land K\subseteq J\bigr).
+R(K,J):=\neg V(K)\lor\bigl(V(J)\land K\subseteq J\bigr)
 \tag{3}
 ```
 
@@ -53,7 +53,7 @@ It is a preorder. Invalid predicates are below everything. Among valid predicate
 For an admitted R-chain X, define the admitted union
 
 ```math
-U(x):=Lx\lor\exists K^{tt}\,(XK\land V(K)\land Kx).
+U(x):=Lx\lor\exists K^{tt}\,(XK\land V(K)\land Kx)
 \tag{4}
 ```
 
@@ -65,7 +65,7 @@ Zorn gives a maximal predicate K. It must be valid. Otherwise R(K,L) would hold 
 
 ```math
 \forall J\bigl[\mathrm{Subgroup}(J)\land K\subseteq J\land\neg Jd
-\ \to\ J\subseteq K\bigr].
+\ \to\ J\subseteq K\bigr]
 \tag{5}
 ```
 
@@ -83,7 +83,7 @@ K_y(x):=Kx\lor K(x+y)
 is a subgroup containing K and y. If neither Ky nor K(y+d) held, (6) would omit d and strictly extend K, contrary to (5). Hence
 
 ```math
-\forall x\,[Kx\lor K(x+d)].
+\forall x\,[Kx\lor K(x+d)]
 \tag{7}
 ```
 
@@ -92,7 +92,7 @@ The two alternatives are disjoint: their conjunction and subgroup closure would 
 Define the admitted truth test
 
 ```math
-e(x):=\neg Kx.
+e(x):=\neg Kx
 \tag{8}
 ```
 
@@ -100,7 +100,7 @@ It sends 0 to false and d to true, and it is false on L. Its truth values form a
 
 ```math
 e(x+y)\ \leftrightarrow\
-\bigl((ex\land\neg ey)\lor(\neg ex\land ey)\bigr).
+\bigl((ex\land\neg ey)\lor(\neg ex\land ey)\bigr)
 \tag{9}
 ```
 
@@ -115,7 +115,7 @@ An admitted partial truth character consists of a subgroup L₀ and an operation
 If e₀ is false everywhere on L₀, the constant-false term extends it. Otherwise choose a single d in L₀ with e₀d true, and form the admitted kernel
 
 ```math
-L(x):=L_0x\land\neg e_0x.
+L(x):=L_0x\land\neg e_0x
 \tag{10}
 ```
 

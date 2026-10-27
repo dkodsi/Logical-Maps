@@ -14,7 +14,7 @@ C5\Rightarrow BF_{\rm all},\qquad
 
 ```math
 C5+\mathrm{Atomicity}_{\rm all}
- \Rightarrow\Box\mathrm{Plenitude}_{\rm all}.
+ \Rightarrow\Box\mathrm{Plenitude}_{\rm all}
 \tag{5.1}
 ```
 
@@ -29,7 +29,7 @@ $`\tau=\sigma_1\cdots\sigma_n t`$, and put
 
 ```math
 X_\tau=W\times D_{\sigma_1}\times\cdots\times D_{\sigma_n},
-\qquad W=\mathrm{At}(B_t).
+\qquad W=\mathrm{At}(B_t)
 ```
 
 The ☐Plenitude representation has literal typed identity,
@@ -37,7 +37,7 @@ constant domains, pointwise truth operations, extensional application, and
 principal worlds. Its evaluation maps an object $`R`$ to
 
 ```math
-\beta_\tau(R)=\{(w,\bar a):w\le R[\bar a]\}.
+\beta_\tau(R)=\{(w,\bar a):w\le R[\bar a]\}
 \tag{5.2}
 ```
 
@@ -110,7 +110,7 @@ This proves the sharpened form of the canonical
 ```math
 C+C5+\mathrm{Atomicity}_t+\mathrm{AAJ}_{\rm all}
 \quad\models\quad
-\text{full principal-world Gallin semantics}.
+\text{full principal-world Gallin semantics}
 \tag{5.3}
 ```
 
@@ -133,7 +133,7 @@ $`R`$ of all tensor atoms
 
 ```math
 \lambda x.\,a\wedge x=s
-\qquad(a\in\mathrm{At}(B_t),\ s\in S).
+\qquad(a\in\mathrm{At}(B_t),\ s\in S)
 \tag{5.4}
 ```
 

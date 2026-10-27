@@ -13,7 +13,7 @@ Use the existing [Plenitude](../../source/topics/classicism/principles/plenitude
 \mathrm{Plen}_{t,t}:\quad
 \forall U^{ttt}\bigl[&\forall p\,\exists y\,
 (U(p,y)\land\forall z(U(p,z)\to z=y))\\
-&\to\exists f^{tt}\,\forall p\,U(p,fp)\bigr].
+&\to\exists f^{tt}\,\forall p\,U(p,fp)\bigr]
 \end{aligned}
 \tag{1}
 ```
@@ -35,7 +35,7 @@ is total and single-valued by ordinary H truth reasoning: in the true case its u
 
 ```math
 \forall p\left[(p\to\chi p=b_1)
-\land(\neg p\to\chi p=b_0)\right].
+\land(\neg p\to\chi p=b_0)\right]
 \tag{3}
 ```
 
@@ -44,7 +44,7 @@ Consequently χ has at most two outputs, χp↔p for every p, χb₁=b₁, and �
 For any admitted E define the admitted composite
 
 ```math
-E^\chi(p):=\chi(Ep).
+E^\chi(p):=\chi(Ep)
 \tag{4}
 ```
 
@@ -57,7 +57,7 @@ Fix a finite list Σ of admitted propositional operations, with specified H trut
 ```math
 f(b_{\epsilon_1},\ldots,b_{\epsilon_n})
 =b_{\widehat f(\epsilon_1,\ldots,\epsilon_n)}
-\qquad(\epsilon_i\in\{0,1\}).
+\qquad(\epsilon_i\in\{0,1\})
 \tag{5}
 ```
 

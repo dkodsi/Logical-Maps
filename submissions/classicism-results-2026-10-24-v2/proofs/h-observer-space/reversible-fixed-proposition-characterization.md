@@ -120,7 +120,7 @@ The map O is an auxiliary closure operation. It is not asserted to preserve nega
 \boxed{
 \mathrm{Rev}
 \quad\longleftrightarrow\quad
-\mathrm{TrivialFix}.
+\mathrm{TrivialFix}
 }
 \tag{11}
 ```
@@ -146,7 +146,7 @@ No simultaneous choice of E for all r occurs in (12). The proof supplies a witne
 One may also state the theorem as the identity law
 
 ```math
-\boxed{\forall p\,[O(p)=(p\ne0)].}
+\boxed{\forall p\,[O(p)=(p\ne0)]}
 \tag{13}
 ```
 

@@ -10,7 +10,7 @@ Write
 $$
 B_\infty=C+\Box\mathrm{Plenitude}+\mathrm{Infinity}_e+\mathrm{Infinity}_t,
 \qquad
-F_\infty=C+\Box\mathrm{FunctionalChoice}+\mathrm{Infinity}_e+\mathrm{Infinity}_t.
+F_\infty=C+\Box\mathrm{FunctionalChoice}+\mathrm{Infinity}_e+\mathrm{Infinity}_t
 $$
 
 
@@ -35,7 +35,7 @@ $$
  (\forall n\in\omega\;\aleph_{n+1}^{L[A]}\text{ is countable})
  \longrightarrow
  \aleph_\omega^{L[A]}\text{ is countable}
-\right].                                                     \tag{CCC}
+\right]                                                     \tag{CCC}
 $$
 
 
@@ -118,7 +118,7 @@ element. Thus there are explicit arithmetical predicates a and w such that
 
 $$
 \mathrm{HC}(A,X)\;\equiv\;
-a(A,X)\ \land\ \forall U\,w(X,U).                            \tag{1}
+a(A,X)\ \land\ \forall U\,w(X,U)                            \tag{1}
 $$
 
 
@@ -168,7 +168,7 @@ Define
 
 $$
 R(n,A,X):\equiv\mathrm{HC}(A,X)\ \land\
-\forall Y\Bigl[(t(A,X,Y)\land\forall V\,w_Y(V))\to g(n,Y)\Bigr].       \tag{3}
+\forall Y\Bigl[(t(A,X,Y)\land\forall V\,w_Y(V))\to g(n,Y)\Bigr]       \tag{3}
 $$
 
 
@@ -180,7 +180,7 @@ $$
 \underbrace{\bigl[
  a(A,X)\land w(X,U)\land
  (\neg t(A,X,Y)\lor\neg w_Y(V)\lor g(n,Y))
-\bigr]}_{\theta(n,A,X,(U,Y),V)\text{ arithmetical}}.           \tag{4}
+\bigr]}_{\theta(n,A,X,(U,Y),V)\text{ arithmetical}}           \tag{4}
 $$
 
 
@@ -194,7 +194,7 @@ For a valid X of height α, (3) holds exactly when
 
 
 $$
-\alpha=\aleph_{n+1}^{L[A]}.                                  \tag{5}
+\alpha=\aleph_{n+1}^{L[A]}                                  \tag{5}
 $$
 
 
@@ -256,7 +256,7 @@ $$
 \forall X\,\forall m\,\forall Y\;
 \exists U\,\exists Z\;\forall V\quad
 \bigl[& (b=0\land\neg\theta(n,A,X,U,V))\\
- {}\lor{}& (b=1\land\theta(m,A,F_m,Y,Z))\bigr].               \tag{7}
+ {}\lor{}& (b=1\land\theta(m,A,F_m,Y,Z))\bigr]               \tag{7}
 \end{split}
 $$
 
@@ -293,7 +293,7 @@ The translated relation on inputs z:ν and outputs X:νt is
 
 
 $$
-U(z,X):=(Nz\land R(z,A,X))\lor(\neg Nz\land X=\bot_{\nu t}).
+U(z,X):=(Nz\land R(z,A,X))\lor(\neg Nz\land X=\bot_{\nu t})
 $$
 
 
@@ -330,7 +330,7 @@ finite-support product of the collapses $\mathrm{Coll}(\omega,
 $$
 M\models\mathrm{ZF},\qquad
 M\models\text{each }\aleph_n^L\text{ is countable},\qquad
-M\models\aleph_\omega^L=\omega_1.
+M\models\aleph_\omega^L=\omega_1
 $$
 
 

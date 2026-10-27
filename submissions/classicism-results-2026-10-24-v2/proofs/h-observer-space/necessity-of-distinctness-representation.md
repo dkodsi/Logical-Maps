@@ -11,13 +11,13 @@ Use the defining formula of [ND at type t](../../source/topics/classicism/princi
 ```math
 \mathrm{ND}_t:\quad
 \forall x,y\,[x\ne y\to\Box(x\ne y)],
-\qquad\Box r:=(r=\mathrm{Top}).
+\qquad\Box r:=(r=\mathrm{Top})
 ```
 
 Thus the premise used below is exactly
 
 ```math
-\forall x,y\,[\neg(x=y)\to\neg(x=y)=\mathrm{Top}].
+\forall x,y\,[\neg(x=y)\to\neg(x=y)=\mathrm{Top}]
 \tag{1}
 ```
 
@@ -32,7 +32,7 @@ For a finite external type list Δ, let Meet_Δ mean:
 ```math
   u\land\forall x^\sigma Fx=u
   \quad\leftrightarrow\quad
-  \forall x^\sigma\,[u\land Fx=u].
+  \forall x^\sigma\,[u\land Fx=u]
   \tag{2}
 ```
 
@@ -45,7 +45,7 @@ Then over H+ND_t,
 \mathrm{Sep}_t[A\land M_{\rm mat}\land Q^{\rm mat}_\Delta]
 \leftrightarrow\mathrm{Meet}_\Delta
 \leftrightarrow
-\mathrm{Sep}_t[A\land M_{\rm pt}\land Q^{\rm pt}_\Delta].}
+\mathrm{Sep}_t[A\land M_{\rm pt}\land Q^{\rm pt}_\Delta]}
 \tag{3}
 ```
 
@@ -56,7 +56,7 @@ Likewise,
 \mathrm{Sep}_t[Z\land V_{\rm mat}\land P^{\rm mat}_\Delta]
 \leftrightarrow\mathrm{Join}_\Delta
 \leftrightarrow
-\mathrm{Sep}_t[Z\land V_{\rm pt}\land P^{\rm pt}_\Delta].}
+\mathrm{Sep}_t[Z\land V_{\rm pt}\land P^{\rm pt}_\Delta]}
 \tag{4}
 ```
 
@@ -72,7 +72,7 @@ If every value is v, its GLB is v. If a value is b, its GLB is b: b is a lower b
 (\forall x^\sigma Gx)=
 \begin{cases}
 v&\text{if every }Gx\text{ is true},\\
-b&\text{otherwise}.
+b&\text{otherwise}
 \end{cases}
 \tag{5}
 ```
@@ -89,7 +89,7 @@ Assume the conjunction semilattice equations. For each parameter a define
 
 ```math
 J_a(p):=(a\land p=a),\qquad
-u_a:=(a=a),\qquad v_a:=\neg\neg u_a,\qquad f:=\neg\mathrm{Top}.
+u_a:=(a=a),\qquad v_a:=\neg\neg u_a,\qquad f:=\neg\mathrm{Top}
 ```
 
 The propositions u_a,v_a are true, and f is false, by H's truth rules. If J_a(p) is true, substitution using a∧p=a gives J_a(p)=u_a. If J_a(p) is false, (1) gives ¬J_a(p)=Top. Therefore
@@ -98,7 +98,7 @@ The propositions u_a,v_a are true, and f is false, by H's truth rules. If J_a(p)
 \neg\neg J_a(p)=
 \begin{cases}
 v_a&\text{if }a\le p,\\
-f&\text{if }a\not\le p.
+f&\text{if }a\not\le p
 \end{cases}
 \tag{6}
 ```
@@ -106,14 +106,14 @@ f&\text{if }a\not\le p.
 This calculation does not use the output equation ¬¬r=r. Define the admitted observer
 
 ```math
-E_a(p):=\neg\neg J_a(p)\land v_a.
+E_a(p):=\neg\neg J_a(p)\land v_a
 \tag{7}
 ```
 
 Its true value is v_a and its false value is b_a:=f∧v_a. They are distinct by truth, and b_a≤v_a. The semilattice principal-filter calculation gives
 
 ```math
-E_a(p\land q)\leftrightarrow(E_ap\land E_aq).
+E_a(p\land q)\leftrightarrow(E_ap\land E_aq)
 ```
 
 Both sides have the same value in the two-element meet chain, so this is the pointwise M identity. If Top is greatest, E_a accepts Top.
@@ -122,7 +122,7 @@ Now assume (2) at every listed type. The principal-filter truth profile and (2) 
 
 ```math
 E_a(\forall x^\sigma Fx)
-\leftrightarrow\forall x^\sigma E_a(Fx).
+\leftrightarrow\forall x^\sigma E_a(Fx)
 ```
 
 The family λx.E_a(Fx) is admitted and takes values only in b_a,v_a. Section 2 converts this material law into the pointwise Qσ identity. The same E_a works for every type in the finite list.
@@ -134,13 +134,13 @@ The principal tests separate: if every E_a agrees on p,q, E_p gives p≤q and E_
 Assume the join-semilattice equations and define
 
 ```math
-J_a(p):=\neg(p\lor a=a),\qquad f_a:=\neg(a=a).
+J_a(p):=\neg(p\lor a=a),\qquad f_a:=\neg(a=a)
 ```
 
 If p≤a, substitution gives J_a(p)=f_a, which is false. If p is not below a, ND gives J_a(p)=Top, which is true. Put
 
 ```math
-D_a(p):=J_a(p)\lor f_a.
+D_a(p):=J_a(p)\lor f_a
 \tag{8}
 ```
 
@@ -161,7 +161,7 @@ To obtain whole-operation identities at propositional scope, assume
 ```math
 \mathrm{Fun}_{t,t},\qquad
 \mathrm{Fun}_{t,tt},\qquad
-\{\mathrm{Fun}_{\sigma t,t}:\sigma\in\Delta\}.
+\{\mathrm{Fun}_{\sigma t,t}:\sigma\in\Delta\}
 \tag{9}
 ```
 
@@ -181,7 +181,7 @@ There is a second application of §2 which requires no ND premise. For every fin
  M_{\rm mat}\land Q^{\rm mat}_\Delta]
 \leftrightarrow
 \mathrm{Sep}_t[O\land\mathrm{Two}\land
- M_{\rm pt}\land Q^{\rm pt}_\Delta].}
+ M_{\rm pt}\land Q^{\rm pt}_\Delta]}
 \tag{10}
 ```
 
@@ -200,7 +200,7 @@ Similarly, under internal Fin_t(All), the material/pointwise/whole-operation tie
 The same finite-image result also covers the joint M,V signature, including both kinds of indexed bound. For finite lists Δ,Γ, put
 
 ```math
-\Sigma:=\{M,V\}\cup Q_\Delta\cup P_\Gamma.
+\Sigma:=\{M,V\}\cup Q_\Delta\cup P_\Gamma
 ```
 
 Then, still over bare H,
@@ -208,7 +208,7 @@ Then, still over bare H,
 ```math
 \mathrm{Sep}_t[O\land\mathrm{FinIm}\land\Sigma_{\rm mat}]
 \ \leftrightarrow\
-\mathrm{Sep}_t[O\land\mathrm{Two}\land\Sigma_{\rm pt}].
+\mathrm{Sep}_t[O\land\mathrm{Two}\land\Sigma_{\rm pt}]
 \tag{11}
 ```
 

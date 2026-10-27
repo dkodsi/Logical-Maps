@@ -1112,7 +1112,7 @@ Pure SP proves every true Π⁰₂ arithmetic sentence under the specified pure 
 The supplied ordinary proof proposes that pure Maximalism proves exactly the ordinary first-order arithmetic consequences of the positive packages’ common arithmetic theory together with all standard-true Π₁ sentences.
 
 ```math
-\mathrm{Th}_{\mathrm{arith}}(\mathrm{Max}(C))=\mathrm{Cn}\bigl(T_{\mathrm{arith}}\cup\mathrm{True}_{\Pi_1}\bigr).
+\mathrm{Th}_{\mathrm{arith}}(\mathrm{Max}(C))=\mathrm{Cn}\bigl(T_{\mathrm{arith}}\cup\mathrm{True}_{\Pi_1}\bigr)
 ```
 
 **Scope:** Finitary pure Maximalism over fixed C, with the fixed Frege interpretation at any fixed counting type. T_arith is the ordinary arithmetic consequence theory shared by C+I and the positive quantified-Infinity packages. Standard truth on the right is metalinguistic; Cn means first-order deductive closure. This is a claim about actual arithmetic theorems, not higher-order/modal conservation or SP consistency.
@@ -1798,7 +1798,7 @@ Separation of propositions by diagonal characters is equivalent over C to ND (ty
 **Scope:** For $`E^{tt}`$, put
 
 ```math
-w_E:=\forall p^t\, .\,Ep\to p.
+w_E:=\forall p^t\, .\,Ep\to p
 ```
 
 A diagonal character preserves bottom and negation, has only top or bottom as each current value, and accepts $`w_E`$.
@@ -1940,7 +1940,7 @@ Over H, OS entails C + BF; full typed endpoint separation is equivalent to C5 + 
 
 **Notes:** The no-conjunction obstruction inherits the source countermodels’ metatheoretic qualifications. It does not exclude arbitrary Boolean combinations involving disjunction. The composite qualification does not inherit certificates for other observer qualifications. The endpoint-clause reduction is in logical-observer-endpoint-reduction.md; the saved formal certificate retains explicit endpoint identities.
 
-**Proof length:** long (135,203 words in the [selected exposition](proof-lengths.json)).
+**Proof length:** long (135,201 words in the [selected exposition](proof-lengths.json)).
 
 **Proof locators:** Right-inverse separation §§1–4; left-inverse models §§1–7; ternary Cantor model §§1–9; modal selectors §§6–7.; Fork and finite boundary §§1–5; component-shift model §§1–8; endpoint-parameter noncontingency §6.; Left-inverse decomposition §§1–6; finite colour-pattern propositions §§1–5.; Plenitude/endpoint bridge §§1–5; surjective observers §§1–7; linear/circular fibre model §§1–10; omega-chain observer classification §§1–6.; fixed-point symmetry §§1–7; cancellative monoid observers §§1–7.; root truth-profile surjective separation §§1–7.; Canonical adjoints §§2–7; integer-shift predecessor §§1–7.; Native-Box logical observers §§1–7; Boolean transversals §§1–6.; Idempotent native-Box observers §§1–7; injective decomposition §§1–6; native-Box reflection §§1–5.; Bounded stabilization §§1–6; finite relative generation §§1–6; image gap without split kernel §§1–5; injective decomposition §6 cross-reference.; Exterior-arm posets §§1–5; local-transversal support §§1–6; Zorn selection §§1–5; local homogeneity §§1–4.; Bounded fibre degree §§1–6; finite-image native Box §§1–5; central observers §§1–5; finite-colour completeness §§2–6.; Reversible fixed propositions §§1–5; central separation §§1–5; finite-image reflection §§1–5; reversible group centre §§1–5; invariant components §§1–5; bounded exponents §§1–5.; Group identities §§1–6; invariant components and group identities §§1–5; internally finite observer families §§1–5.; Rigid Souslin countermodel §§1–9; complete injective separation and failure of every qualified inverse family, with necessary all-type RC/TC/Zorn.; Commuting families: object-language definitions §§1–4; directedness §2; stable-family characterization and propagation §§2–4; explicit reconstruction §5; finite-alphabet and isolated-point models.
 

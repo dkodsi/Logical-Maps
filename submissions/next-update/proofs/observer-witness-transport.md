@@ -15,7 +15,7 @@ These mechanisms give the following conclusions, with finite, instancewise versi
 \begin{array}{rcl}
  C+OS+\mathrm{FunctionalChoice}&\Longrightarrow&\Box\mathrm{FunctionalChoice},\\
  C5+OS+\mathrm{RigidComp}&\Longrightarrow&\Box\mathrm{RigidComp},\\
- C5+OS+\mathrm{RelationalChoice}&\not\Longrightarrow&\Box\mathrm{RelationalChoice}.
+ C5+OS+\mathrm{RelationalChoice}&\not\Longrightarrow&\Box\mathrm{RelationalChoice}
 \end{array}
 \tag{1}
 ```
@@ -40,7 +40,7 @@ then every eligible observer agrees on A and Top, since Good observers fix Top o
 For a relation $`R^{\sigma_1\cdots\sigma_n t}`$, its pointwise transform is the admitted lambda term
 
 ```math
- R^E:=\lambda\bar x.\,E(R[\bar x]).
+ R^E:=\lambda\bar x.\,E(R[\bar x])
 \tag{3}
 ```
 
@@ -53,7 +53,7 @@ The following fragment extends the predicate-universal reflection mechanism to o
 Fix finitely many outer relation variables $`\bar R`$. Let
 
 ```math
-A:=\forall\bar R\,\varphi(\bar R).
+A:=\forall\bar R\,\varphi(\bar R)
 \tag{4}
 ```
 
@@ -62,7 +62,7 @@ The matrix φ is built using Boolean operations and arbitrary ordinary quantifie
 An optional extension permits additional tests $`B_j(\bar u)`$ not containing the distinguished R variables, provided the current background proves, for every eligible E and every relevant assignment,
 
 ```math
- E(B_j(\bar u))=B_j(\bar u).
+ E(B_j(\bar u))=B_j(\bar u)
 \tag{5}
 ```
 
@@ -73,14 +73,14 @@ Let Δ contain each outer relation type and each type of a binder exposed in φ.
 **Argument-witness transport theorem.** Over C, with (5) when such tests are used,
 
 ```math
- S_{t,\Delta}\quad\Longrightarrow\quad A\to\Box A.
+ S_{t,\Delta}\quad\Longrightarrow\quad A\to\Box A
 \tag{6}
 ```
 
 **Proof.** Fix an eligible E and assume current A. Move E through the exposed Boolean operations and binders, using the stipulated composite identities. Every atom $`E(R_i[\bar u])`$ is precisely $`R_i^E[\bar u]`$ by beta conversion. The argument terms remain the same; in particular an operation witness f remains f, even in the term fx. Each fixed test after expansion has the same current value by (5). Thus E(A) has the same current truth as
 
 ```math
- \forall\bar R\,\varphi(\bar R^E).
+ \forall\bar R\,\varphi(\bar R^E)
 \tag{7}
 ```
 
@@ -98,21 +98,21 @@ For admitted σ,τ with τ≠e, write
 \mathrm{FC}_{\sigma,\tau}:=
 \forall U^{\sigma\tau t}
  [(\forall x^\sigma\exists y^\tau U[x,y])\to
-  \exists f^{\sigma\tau}\forall x^\sigma U[x,fx]].
+  \exists f^{\sigma\tau}\forall x^\sigma U[x,fx]]
 \tag{8}
 ```
 
 The theorem applies without any fixed tests, with
 
 ```math
-\Delta=\{\sigma\tau t,\sigma,\tau,\sigma\tau\}.
+\Delta=\{\sigma\tau t,\sigma,\tau,\sigma\tau\}
 ```
 
 Therefore
 
 ```math
 \boxed{C+S_{t,\Delta}+\mathrm{FC}_{\sigma,\tau}
-\Longrightarrow\Box\mathrm{FC}_{\sigma,\tau}.}
+\Longrightarrow\Box\mathrm{FC}_{\sigma,\tau}}
 \tag{9}
 ```
 
@@ -147,7 +147,7 @@ Existential predicate heads require an additional mechanism. A useful general fo
 
 ```math
 A:=\forall\bar R\,[\alpha(\bar R)\to
-  \exists\bar Y(K(\bar Y)\land\beta(\bar R,\bar Y))].
+  \exists\bar Y(K(\bar Y)\land\beta(\bar R,\bar Y))]
 \tag{12}
 ```
 
@@ -156,7 +156,7 @@ Here α and β have the preceding Boolean/quantifier grammar, now allowing the Y
 ```math
  E(K(\bar Y))=K(\bar Y),\qquad
  K(\bar Y)\to
- \bigwedge_i\forall\bar x\,[E(Y_i[\bar x])=Y_i[\bar x]].
+ \bigwedge_i\forall\bar x\,[E(Y_i[\bar x])=Y_i[\bar x]]
 \tag{13}
 ```
 
@@ -173,7 +173,7 @@ For $`\tau=\sigma_1\cdots\sigma_n t`$, let
 ```math
 \mathrm{Comp}_{Q,\tau}:=
  \forall X^\tau\exists Y^\tau
- [Q(Y)\land\forall\bar x(X[\bar x]\leftrightarrow Y[\bar x])].
+ [Q(Y)\land\forall\bar x(X[\bar x]\leftrightarrow Y[\bar x])]
 ```
 
 Take Q to be the native Persistent, Rigid, or Gallin qualification, preserving every outer box in their definitions. Under current ND_t, every native boxed proposition is an endpoint: NI covers its true case, and ND_t its false case. Every Boolean observer therefore fixes the entire Q(Y), which is a box or a finite Boolean combination of boxes.
@@ -186,7 +186,7 @@ The exact local conclusion is
 \boxed{
 C+\mathrm{ND}_t+S_{t,\Delta}+\mathrm{Comp}_{Q,\tau}
 \Longrightarrow\Box\mathrm{Comp}_{Q,\tau},
-\quad\Delta=\{\tau,\sigma_1,\ldots,\sigma_n\}.}
+\quad\Delta=\{\tau,\sigma_1,\ldots,\sigma_n\}}
 \tag{14}
 ```
 
@@ -225,7 +225,7 @@ The first line of (1) combines with established implications to give a useful eq
 
 ```math
 \boxed{C+OS+\mathrm{FunctionalChoice}
-\quad\equiv\quad C+\Box\mathrm{FunctionalChoice}.}
+\quad\equiv\quad C+\Box\mathrm{FunctionalChoice}}
 \tag{16}
 ```
 
@@ -238,7 +238,7 @@ For Relational Choice, a useful extra premise is Weak Rigid Comprehension. Recor
 ```math
 C5+OS+\mathrm{WeakRigidComp}+\mathrm{RelChoice}
 \Longrightarrow\Box\mathrm{FunctionalChoice}
-\Longrightarrow\Box\mathrm{RelChoice}.
+\Longrightarrow\Box\mathrm{RelChoice}
 \tag{17}
 ```
 

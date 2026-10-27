@@ -28,7 +28,7 @@ Only the finite independent primitive family is completely classified. The [open
 An observer is an admitted operation $`E^{tt}`$. Propositional separation by a common class of qualified observers is
 
 ```math
-S[K]:=\forall p,q\, .\,p=q\leftrightarrow\forall E\, .\,K(E)\to(Ep\leftrightarrow Eq).
+S[K]:=\forall p,q\, .\,p=q\leftrightarrow\forall E\, .\,K(E)\to(Ep\leftrightarrow Eq)
 ```
 
 | Notation | Meaning |
@@ -699,7 +699,7 @@ Exact combinations, allowing separate witness families, locate the other branche
 \mathrm{C5}+\mathsf{Fin}&\ \leftrightarrow\ \mathsf{End},&
 \mathrm{C5}+\mathsf{At}&\ \leftrightarrow\ \mathsf{End},\\
 \mathsf{Fix}+\mathsf{Fin}&\ \leftrightarrow\ \mathsf{End},&
-\mathsf{Rev}+\text{one meet atom}&\ \leftrightarrow\ \mathsf{End}.
+\mathsf{Rev}+\text{one meet atom}&\ \leftrightarrow\ \mathsf{End}
 \end{aligned}
 ```
 
@@ -707,7 +707,7 @@ The meet-atom equivalence here is in the complete-logical region. Also,
 
 ```math
 \mathsf{Rev}+\text{one finite-image }\mathrm{Good}_{\{t\}}\text{ observer}
-\ \leftrightarrow\ \mathsf{End}.
+\ \leftrightarrow\ \mathsf{End}
 ```
 
 A single atom also closes the gap from necessary separation to endpoint separation:
@@ -964,7 +964,7 @@ The exact fixed-list equivalence is
 ```math
 S_{\tau,\Delta}[\mathrm{SplitMono}]
 \ \leftrightarrow\ S_{\tau,\Delta}[\mathrm{Rev}]
-\lor\bigl(S_{\tau,\Delta}[\mathrm{Good}]\land K_\Delta\bigr).
+\lor\bigl(S_{\tau,\Delta}[\mathrm{Good}]\land K_\Delta\bigr)
 ```
 
 where
@@ -973,7 +973,7 @@ where
 \begin{aligned}
 K_\Delta:=\exists E^{tt},F^{tt},c^t\, .\,[
 &\mathrm{Good}_\Delta(E)\land\mathrm{Good}_\Delta(F)\\
-&\land F\circ E=I\land c\land Fc=\bot].
+&\land F\circ E=I\land c\land Fc=\bot]
 \end{aligned}
 ```
 
@@ -1038,7 +1038,7 @@ The parameter-noncontingency node is an external formula schema: finitely many f
 
 ```math
 \mathrm{End}(\bar R)\ \to\
-\bigl(P(\bar R,\bar x)\leftrightarrow\Box P(\bar R,\bar x)\bigr).
+\bigl(P(\bar R,\bar x)\leftrightarrow\Box P(\bar R,\bar x)\bigr)
 ```
 
 Here $`\mathrm{End}(\bar R)`$ requires every value of each relation parameter to equal $`\top`$ or $`\bot`$; the displayed formula is universally closed over those relation and individual parameters.
@@ -1050,7 +1050,7 @@ The injection-to-surjection condition alone has a smaller effect. Let D_t mean t
 ```math
 \mathsf D_t:=\forall E^{tt}\, .\,
 \bigl(\forall p,q\, .\,Ep=Eq\to p=q\bigr)
-\to\forall q\,\exists p\, .\,Ep=q.
+\to\forall q\,\exists p\, .\,Ep=q
 ```
 
 ```mermaid

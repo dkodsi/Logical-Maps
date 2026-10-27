@@ -32,7 +32,7 @@ Define, by finite Boolean terms,
 
 
 ```math
-a_n=p_n\land\bigwedge_{j<n}\neg p_j.
+a_n=p_n\land\bigwedge_{j<n}\neg p_j
 \tag{1}
 ```
 

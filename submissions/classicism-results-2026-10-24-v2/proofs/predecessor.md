@@ -8,7 +8,7 @@ property. Define
 
 ```math
 \mathrm{PredOp}_\sigma :=
-\exists f^{\nu\nu}\,\forall n^\nu\,(Nn\to f(Sn)=n).
+\exists f^{\nu\nu}\,\forall n^\nu\,(Nn\to f(Sn)=n)
 ```
 
 There is no condition on f(0). The operation type is admitted because ν is
@@ -21,7 +21,7 @@ f(Sa)=a and f(Sb)=b. Necessity of Identity makes each identity necessary.
 The following implication is a bare logical theorem:
 
 ```math
-f(Sa)=a\to f(Sb)=b\to\neg(Sa=Sb\land a\ne b).
+f(Sa)=a\to f(Sb)=b\to\neg(Sa=Sb\land a\ne b)
 ```
 
 Necessitate this theorem and apply K twice. The result is
@@ -48,7 +48,7 @@ and a_i≠a_j. Their finite numeral terms define a closed pure sentence
 ```math
 \psi_{\sigma,i,j}:=
 (\overline{i+1}_\sigma=\overline{j+1}_\sigma)
-\land(\bar i_\sigma\ne\bar j_\sigma).
+\land(\bar i_\sigma\ne\bar j_\sigma)
 ```
 
 This exact sentence holds in the interpretation. C soundness certifies its
@@ -71,7 +71,7 @@ Define the represented relation on all of ν:
 ```math
 U(x,y):=
 [Nx\land x\ne0\land Ny\land x=Sy]
-\lor[(\neg Nx\lor x=0)\land y=0].
+\lor[(\neg Nx\lor x=0)\land y=0]
 ```
 
 C proves every number is zero or a successor of a number. Thus U is total

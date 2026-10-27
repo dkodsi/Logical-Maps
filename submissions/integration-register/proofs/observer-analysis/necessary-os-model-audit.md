@@ -18,7 +18,7 @@ Use exactly the [whole-operation qualification](../../../classicism-results-2026
 S:=S_{t,\{t\}}=
 \forall p,q^t\left[p=q\leftrightarrow
 \forall E^{tt}\bigl(\mathrm{Good}_{\{t\}}(E)
-\to(Ep\leftrightarrow Eq)\bigr)\right].
+\to(Ep\leftrightarrow Eq)\bigr)\right]
 \tag{1}
 ```
 
@@ -31,7 +31,7 @@ In this model, the admitted E satisfying $`\mathrm{Good}_{\{t\}}`$ are exactly t
 The forward implication has a useful fullness check. The whole Boolean identities make E a Boolean homomorphism fixing zero and one. Given any M-subset $`X\subseteq B`$, fullness admits
 
 ```math
-F_X(b)=\begin{cases}b,&b\in X,\\1_B,&b\notin X.\end{cases}
+F_X(b)=\begin{cases}b,&b\in X,\\1_B,&b\notin X\end{cases}
 ```
 
 The whole universal-quantifier identity at type t gives
@@ -40,7 +40,7 @@ The whole universal-quantifier identity at type t gives
 E\!\left(\bigwedge X\right)
 =E\!\left(\bigwedge_{b\in B}F_X(b)\right)
 =\bigwedge_{b\in B}E(F_X(b))
-=\bigwedge_{x\in X}E(x).
+=\bigwedge_{x\in X}E(x)
 \tag{2}
 ```
 
@@ -53,20 +53,20 @@ Write $`\mathcal E=\mathrm{End}_{\mathrm{comp}}^M(B)`$, an M-set. For $`p\ne q`$
 ```math
 \left\|p=q\leftrightarrow
 \forall E(\mathrm{Good}(E)\to(Ep\leftrightarrow Eq))\right\|
-=\bigvee_{E\in\mathcal E}E(r).
+=\bigvee_{E\in\mathcal E}E(r)
 ```
 
 The value is one when $`p=q`$. Since every nonzero r occurs as the difference of r and zero,
 
 ```math
-\boxed{\|S\|=\bigwedge_{0<r\in B}\ \bigvee_{E\in\mathcal E}E(r).}
+\boxed{\|S\|=\bigwedge_{0<r\in B}\ \bigvee_{E\in\mathcal E}E(r)}
 \tag{3}
 ```
 
 Hence □S entails the full orbit-cover condition
 
 ```math
-\bigvee_{E\in\mathcal E}E(r)=1_B\qquad(0<r\in B).
+\bigvee_{E\in\mathcal E}E(r)=1_B\qquad(0<r\in B)
 \tag{4}
 ```
 
@@ -77,7 +77,7 @@ Local complete embeddings alone do not establish (4): their direction, support a
 Call a set-theoretic formula $`\psi(\vec a)`$, with ground parameters $`\vec a`$, *forcing-persistent* here if ZFC proves that its truth in a forcing extension remains true after any further set forcing. Put
 
 ```math
-p=\|\psi(\check{\vec a})\|_B.
+p=\|\psi(\check{\vec a})\|_B
 ```
 
 **Lemma.** Every $`E\in\mathcal E`$ satisfies $`E(p)\le p`$.
@@ -85,7 +85,7 @@ p=\|\psi(\check{\vec a})\|_B.
 To include noninjective observers, set
 
 ```math
-k=\bigvee\{b\in B:E(b)=0\},\qquad s=\neg k.
+k=\bigvee\{b\in B:E(b)=0\},\qquad s=\neg k
 ```
 
 Completeness gives $`E(k)=0`$, and $`E(s)=1`$. Also $`E(b)=0`$ exactly when $`b\le k`$. Therefore the restriction
@@ -105,7 +105,7 @@ This is a ZFC proof about complete homomorphisms and forcing, and is interpreted
 Combining the lemma with (4), if $`p\ne0`$, then
 
 ```math
-1_B=\bigvee_{E\in\mathcal E}E(p)\le p.
+1_B=\bigvee_{E\in\mathcal E}E(p)\le p
 ```
 
 We obtain the main obstruction:
@@ -113,7 +113,7 @@ We obtain the main obstruction:
 ```math
 \boxed{\Box S\quad\Longrightarrow\quad
 \|\psi(\check{\vec a})\|_B\in\{0_B,1_B\}
-\quad\text{for every such forcing-persistent }\psi.}
+\quad\text{for every such forcing-persistent }\psi}
 \tag{6}
 ```
 
@@ -132,21 +132,21 @@ By (6), all these Boolean values are zero or one. The second assertion uses ZFC,
 There are a nonzero condition b and ground ordinals $`\gamma,\delta`$ such that
 
 ```math
-b\Vdash\omega_1=\check\gamma\ \land\ \omega_2=\check\delta.
+b\Vdash\omega_1=\check\gamma\ \land\ \omega_2=\check\delta
 \tag{7}
 ```
 
 Indeed ordinal names can be decided on a dense set of conditions. Every ground ordinal below $`\gamma`$ is countable below b, and $`\gamma`$ is uncountable below b. Since those facts are individually decided by (6), they hold throughout B. Thus $`1_B\Vdash\omega_1=\check\gamma`$. Similarly $`\delta`$ is a cardinal throughout B, and every ordinal strictly between $`\gamma`$ and $`\delta`$ is not a cardinal throughout B. Consequently
 
 ```math
-1_B\Vdash\omega_2=\check\delta.
+1_B\Vdash\omega_2=\check\delta
 \tag{8}
 ```
 
 The internal meets over those ordinal intervals are legitimate; no external countable-completeness assumption has entered the argument. In ZFC, with (8), CH is equivalent to the negation of
 
 ```math
-\exists f\;[f:\check\delta\hookrightarrow\mathcal P(\check\omega)].
+\exists f\;[f:\check\delta\hookrightarrow\mathcal P(\check\omega)]
 \tag{9}
 ```
 
@@ -154,7 +154,7 @@ The positive assertion (9) is forcing-persistent, so its Boolean value is an end
 
 ```math
 \boxed{\Box S\quad\Longrightarrow\quad
-\|\mathrm{CH}\|_B\in\{0_B,1_B\}.}
+\|\mathrm{CH}\|_B\in\{0_B,1_B\}}
 \tag{10}
 ```
 
@@ -166,7 +166,7 @@ Fix an admitted type $`\sigma`$, and write $`D=D_\sigma`$, an M-set. Choose a no
 
 ```math
 b\Vdash |\check D|=\check\kappa\quad\land\quad
-(\check\kappa)^+=\check\lambda.
+(\check\kappa)^+=\check\lambda
 \tag{11}
 ```
 
@@ -186,7 +186,7 @@ Use the restricted extensional forcing transfer in [the analysis construction](.
 
 ```math
 H_\sigma:=\exists\mathfrak R\,\mathrm{Real}_\sigma(\mathfrak R),
-\qquad h_\sigma=\|H_\sigma\|_B.
+\qquad h_\sigma=\|H_\sigma\|_B
 ```
 
 Every admitted tuple satisfying `Real` below a condition represents an internally complete ordered field on a subset of $`\check D`$. Its isomorphism with the extension's real field gives an injection $`\mathbb R\to\check D`$ below that condition. Hence $`h_\sigma\le\|\mathrm{Cap}_D\|_B`$.
@@ -196,7 +196,7 @@ If capacity has value one, M's Boolean maximum principle supplies a name for an 
 We have proved
 
 ```math
-\boxed{h_\sigma=\|\mathrm{Cap}_D\|_B\in\{0_B,1_B\}.}
+\boxed{h_\sigma=\|\mathrm{Cap}_D\|_B\in\{0_B,1_B\}}
 \tag{12}
 ```
 
@@ -205,7 +205,7 @@ Let $`\chi=\|\mathrm{CH}\|_B`$, also an endpoint by (10), and use the exact univ
 ```math
 \|U_{\sigma,\mathrm{CH}}\|_B=\neg h_\sigma\lor\chi,
 \qquad
-\|U_{\sigma,\neg\mathrm{CH}}\|_B=\neg h_\sigma\lor\neg\chi.
+\|U_{\sigma,\neg\mathrm{CH}}\|_B=\neg h_\sigma\lor\neg\chi
 \tag{13}
 ```
 

@@ -7,7 +7,7 @@ This two-object model satisfies C5 and necessary full ordinary logical separatio
 The model proves
 
 ```math
-\mathrm{C5}+\Box\mathrm{OS}\ \not\Longrightarrow\ \mathrm{SplitMono}.
+\mathrm{C5}+\Box\mathrm{OS}\ \not\Longrightarrow\ \mathrm{SplitMono}
 \tag{1}
 ```
 
@@ -19,7 +19,7 @@ Let L be the rational line with its usual order. On another copy D of the same s
 
 ```math
 C(x,y,z)\quad\Longleftrightarrow\quad
-x<y<z\ \lor\ y<z<x\ \lor\ z<x<y.
+x<y<z\ \lor\ y<z<x\ \lor\ z<x<y
 \tag{2}
 ```
 
@@ -28,7 +28,7 @@ This is a countable dense circular order. Its open arcs between any two distinct
 Take the individual sets
 
 ```math
-W=L\times\mathbb N,\qquad V=D\times\mathbb N.
+W=L\times\mathbb N,\qquad V=D\times\mathbb N
 ```
 
 The sets $`B_q=\{q\}\times\mathbb N`$ are the original fibres at either object. Define G at W to consist of all permutations inducing an order automorphism of L on the fibres and an arbitrary bijection within each fibre. Define H at V in the same way, with a circular-order automorphism of D on the fibres. In particular both groups contain every permutation of a single fibre, extended by identity outside it.
@@ -45,7 +45,7 @@ To construct it, at an arrow h:X→Y and tuple u at Y, declare its profile true 
 
 ```math
 Y=X,\quad h|_S=g|_S\text{ for some }g\in K,
-\quad R(\rho(g^{-1})u).
+\quad R(\rho(g^{-1})u)
 \tag{3}
 ```
 
@@ -60,7 +60,7 @@ For an individual fibre B and b∈B, its current subset is invariant under K_({b
 There is a bijection j:W→V with
 
 ```math
-jGj^{-1}\subseteq H.
+jGj^{-1}\subseteq H
 \tag{4}
 ```
 
@@ -71,7 +71,7 @@ For the reverse comparison choose two distinct circular quotient points c₀,c�
 A member of H_(T) acts by an increasing bijection on each arc, keeps each exceptional fibre setwise and fixes the two pinned individuals. Its b-conjugate therefore preserves the linear order of all target fibres, fixes the fibre B₀ setwise and acts there by a permitted within-fibre permutation. Hence
 
 ```math
-bH_{(T)}b^{-1}\subseteq G.
+bH_{(T)}b^{-1}\subseteq G
 \tag{5}
 ```
 
@@ -82,7 +82,7 @@ The packing of two infinite fibres into one is essential. Equations (4) and (5) 
 For completeness, here is the observer supplied by a local inclusion. Suppose c:X→Y and finite S⊆X satisfy
 
 ```math
-cK_{X,(S)}c^{-1}\subseteq K_Y.
+cK_{X,(S)}c^{-1}\subseteq K_Y
 \tag{6}
 ```
 
@@ -92,7 +92,7 @@ For h:X→Z and a proposition q at Z define E(h,q) by
 E(h,q)\quad\Longleftrightarrow\quad
 \begin{cases}
 cg^{-1}\in q,& Z=X\text{ and }h|_S=g|_S\text{ for some }g\in K_X,\\
-\mathrm{id}_Z\in q,&\text{otherwise}.
+\mathrm{id}_Z\in q,&\text{otherwise}
 \end{cases}
 \tag{7}
 ```
@@ -100,7 +100,7 @@ cg^{-1}\in q,& Z=X\text{ and }h|_S=g|_S\text{ for some }g\in K_X,\\
 In the first branch, replacing g by gv with v∈K_{X,(S)} changes cg^{-1} by left multiplication with cv^{-1}c^{-1}∈K_Y. Proposition symmetry makes membership unchanged. Thus (7) is well defined. It is S-pinned. For target symmetry μ∈K_X, use the representative μg and the transport law
 
 ```math
-k\in\rho_t(\mu)q\quad\Longleftrightarrow\quad k\mu\in q.
+k\in\rho_t(\mu)q\quad\Longleftrightarrow\quad k\mu\in q
 ```
 
 The first branch is invariant. Its complement is invariant as well; there the identity observation is unchanged in truth because q is symmetric under its target group. Ideal fullness therefore supplies an admitted E:tt. At the identity its truth profile is evaluation at c.
@@ -109,7 +109,7 @@ Every branch observes at a bijective arrow; write a_h for that arrow, with repre
 
 ```math
 l\in(\rho_{tt}(r)E)(q)
-\quad\Longleftrightarrow\quad a_{lr}l\in q.
+\quad\Longleftrightarrow\quad a_{lr}l\in q
 \tag{8}
 ```
 
@@ -118,7 +118,7 @@ Boolean operations are the corresponding set operations, so (8) preserves them a
 Now let d be any nonbottom proposition at X, pinned by finite P, and choose h:X→Y in d. For this ordered pair of objects choose the comparison c₀:X→Y supplied by identity, (4), or (5), with its finite stabilizer pin S₀. Extend the finite partial bijection (c₀^{-1}h)|P to a finite-support permutation π of X. Put c=c₀π and choose finite
 
 ```math
-S\supseteq P\cup S_0\cup\mathrm{supp}(\pi).
+S\supseteq P\cup S_0\cup\mathrm{supp}(\pi)
 ```
 
 Every member of K_{X,(S)} commutes with π. Consequently c still satisfies (6). It agrees with h on P, so c∈d. The admitted observer (7) therefore makes Ed true at X.
@@ -143,7 +143,7 @@ By [Finite colour patterns](finite-pinning-dedekind-propositions.md), §2, appli
 ```math
 \mathsf D_t:=\forall E^{tt}\left[
  (\forall p,q\,[Ep=Eq\to p=q])
- \to\forall q\,\exists p\,[Ep=q]\right].
+ \to\forall q\,\exists p\,[Ep=q]\right]
 \tag{10}
 ```
 
@@ -164,7 +164,7 @@ Use the exact Frege definitions from [Background](../../source/topics/classicism
  \forall U^{\nu t}\bigl[(U\mathbf0\land
  \forall Y^\nu[UY\to U(\mathrm{Suc}Y)])\to UZ\bigr],\\
 \mathrm{Fin}(X)&:=\exists Z^\nu\,
- [\mathrm{FiniteCardinality}(Z)\land ZX].
+ [\mathrm{FiniteCardinality}(Z)\land ZX]
 \end{aligned}
 \tag{11}
 ```
@@ -180,7 +180,7 @@ For an admitted individual property X define
  \neg\mathrm{Fin}(X)\land
  \forall Y^{et}\bigl[Y\subseteq X\to
  (\mathrm{Fin}(Y)\lor
- \mathrm{Fin}(\lambda x.\,Xx\land\neg Yx))\bigr].
+ \mathrm{Fin}(\lambda x.\,Xx\land\neg Yx))\bigr]
 \tag{12}
 ```
 
@@ -200,7 +200,7 @@ every cell $`\lambda y.\,x\sim_R y`$ is Amor, and the quotient strict order is d
 \begin{aligned}
 &\forall x,y\,[x\prec_R y\to
  \exists z\,(x\prec_R z\land z\prec_R y)],\\
-&\forall x\,\exists y,z\,[y\prec_R x\land x\prec_R z].
+&\forall x\,\exists y,z\,[y\prec_R x\land x\prec_R z]
 \end{aligned}
 \tag{13}
 ```
@@ -236,7 +236,7 @@ The pure sentence P is true at W and false at V, and there are arrows in both di
 There is also a precise finite-list failure. Expanding (11)–(13), all bound types in P belong to
 
 ```math
-\Delta_0=\{t,e,et,eet,(et)t,((et)t)t\}.
+\Delta_0=\{t,e,et,eet,(et)t,((et)t)t\}
 \tag{14}
 ```
 

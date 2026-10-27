@@ -14,19 +14,19 @@ Define recursively
 
 ```math
 r_e(x)=x,\qquad r_t(p)=E(p),\qquad
-r_{\sigma\tau}(f)=\lambda x^\sigma\, .\,r_\tau\bigl(f(r_\sigma(x))\bigr).
+r_{\sigma\tau}(f)=\lambda x^\sigma\, .\,r_\tau\bigl(f(r_\sigma(x))\bigr)
 ```
 
 The individual identity is external notation: when $`\sigma=e`$, use $`x`$ directly. No operation of type $`ee`$ is introduced. All relational normalizations are admitted lambda terms. Induction gives $`r_\sigma^2=r_\sigma`$. Put
 
 ```math
-D_\sigma^E=\{x\in D_\sigma:r_\sigma(x)=x\}.
+D_\sigma^E=\{x\in D_\sigma:r_\sigma(x)=x\}
 ```
 
 These domains are nonempty and definable. A fixed arrow $`f`$ satisfies
 
 ```math
-r_\tau\circ f=f,\qquad f\circ r_\sigma=f.
+r_\tau\circ f=f,\qquad f\circ r_\sigma=f
 ```
 
 Indeed, apply idempotence to either side of $`f=r_\tau\circ f\circ r_\sigma`$. It follows that fixed arrows take fixed inputs to fixed outputs and are determined by their restrictions to fixed inputs. They therefore form an actual-function subset of $`(D_\tau^E)^{D_\sigma^E}`$.
@@ -40,7 +40,7 @@ Interpret a logical constant $`c`$ in the core by $`r_{\mathrm{type}(c)}(c)`$, r
 For a fixed predicate $`F`$, we have $`E\circ F=F`$ and $`F\circ r_\sigma=F`$. Hence
 
 ```math
-E(Q_\sigma F)=Q_\sigma(E\circ F)=Q_\sigma F.
+E(Q_\sigma F)=Q_\sigma(E\circ F)=Q_\sigma F
 ```
 
 The range of $`F`$ on all original inputs equals its range on fixed inputs. Its original infimum is consequently fixed and is precisely the core universal value. The same range equality and the ambient quantifier truth clause give the required current truth clause. Existential quantification is dual.
@@ -56,7 +56,7 @@ The Boolean and quantifier clauses validate H and its algebraic theorem identiti
 Suppose $`E,F`$ are logical retractions with the same proposition image. Each fixes that image, so
 
 ```math
-E\circ F=F,\qquad F\circ E=E.
+E\circ F=F,\qquad F\circ E=E
 ```
 
 Induction through the normalization formula gives
@@ -75,7 +75,7 @@ Define $`\Phi_\sigma(x)=r_\sigma^F(x)`$ on $`D_\sigma^E`$. These equations give 
 \Phi_{\sigma\tau}(f)(\Phi_\sigma(x))
 &=r_\tau^F\bigl(f(r_\sigma^F(x))\bigr)\\
 &=r_\tau^F\bigl(f(r_\sigma^E r_\sigma^F r_\sigma^E(x))\bigr)\\
-&=r_\tau^F(f(x))=\Phi_\tau(f(x)).
+&=r_\tau^F(f(x))=\Phi_\tau(f(x))
 \end{aligned}
 ```
 
@@ -94,7 +94,7 @@ Every endpoint-valued logical observer fixes both endpoints and is idempotent, w
 Suppose the ambient model satisfies Functional Choice at $`\sigma,\tau`$. A serial core relation, viewed as an ambient normalized relation, is invariant under normalization of both arguments. Its core seriality implies ambient seriality: for ambient $`x`$, use a core witness for $`r_\sigma(x)`$. Ambient Functional Choice supplies $`f`$. Then $`g=r_{\sigma\tau}(f)`$ is a core selector, since on a core input $`x`$,
 
 ```math
-R[x,g(x)]=R[x,r_\tau(f(x))]=R[x,f(x)].
+R[x,g(x)]=R[x,r_\tau(f(x))]=R[x,f(x)]
 ```
 
 This uses invariance of the relation, without applying an observer to a merely true Choice assertion.
@@ -102,7 +102,7 @@ This uses invariance of the relation, without applying an observer to a merely t
 Suppose the ambient model satisfies Boolean Completeness at relational $`\tau`$. For a core family $`P`$, take the ambient predicate
 
 ```math
-P'(x)=(r_\tau(x)=x)\land P(x).
+P'(x)=(r_\tau(x)=x)\land P(x)
 ```
 
 Its current instances are exactly the selected core objects. Let $`y`$ be their ambient greatest lower bound. Then $`z=r_\tau(y)`$ is still a lower bound, because normalization is monotone and fixes every family member. Any core lower bound $`v`$ satisfies $`v\le y`$, hence $`v=r_\tau(v)\le z`$. The inherited order is the core Boolean order, so $`z`$ is its infimum. Both inheritance results concern the same current instances; no premise is necessitated.
@@ -113,7 +113,7 @@ If $`E,F`$ commute, their composite is a logical retraction. Induction gives
 
 ```math
 r_\sigma^E r_\sigma^F=r_\sigma^F r_\sigma^E=r_\sigma^{EF},
-\qquad D_\sigma^{EF}=D_\sigma^E\cap D_\sigma^F.
+\qquad D_\sigma^{EF}=D_\sigma^E\cap D_\sigma^F
 ```
 
 The intersection, with the projected operations, is again a C5 core.
@@ -121,7 +121,7 @@ The intersection, with the projected operations, is again a C5 core.
 Normalization does not preserve arbitrary ambient application. If $`Ep\ne p`$ and $`H(q)=(q=p)`$, crisp equality gives
 
 ```math
-E(H(p))=\top,\qquad r_{tt}(H)(E(p))=E(H(E(p)))=\bot.
+E(H(p))=\top,\qquad r_{tt}(H)(E(p))=E(H(E(p)))=\bot
 ```
 
 Accordingly this is not an elementary-submodel theorem or an invariance theorem for arbitrary original sentences. The interpretation translates terms recursively through the entire hierarchy. Restricting only the outputs would omit the necessary input invariance.

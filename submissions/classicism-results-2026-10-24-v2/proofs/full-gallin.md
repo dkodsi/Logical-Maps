@@ -9,7 +9,7 @@ Fix a well-founded ambient universe $`V`$ of sets with ZFC as the metatheory. Al
 The object language remains C's relational language:
 
 ```math
-e,\quad t,\quad \sigma\to\tau\ \text{only when }\tau\ne e.
+e,\quad t,\quad \sigma\to\tau\ \text{only when }\tau\ne e
 ```
 
 There are no object-language type quantifiers and no functions returning individuals. In particular, graphs used to represent successor or arithmetic operations have admitted relational types. Application below is explicitly parenthesized or written with a tuple.
@@ -18,7 +18,7 @@ For arbitrary infinite sets $`E,W\in V`$, put
 
 ```math
 D_e=E,\qquad D_t=\mathcal P^V(W),\qquad
-D_{\sigma\tau}=(D_\tau)^{D_\sigma}.
+D_{\sigma\tau}=(D_\tau)^{D_\sigma}
 ```
 
 All functions on the right belong to $`V`$. Interpret lambda by actual abstraction, application by evaluation, and propositional operations by set operations. Quantification is pointwise:
@@ -26,7 +26,7 @@ All functions on the right belong to $`V`$. Interpret lambda by actual abstracti
 ```math
 w\in\llbracket\forall x^\sigma A\rrbracket
 \ \Longleftrightarrow\
-\forall a\in D_\sigma\;w\in\llbracket A\rrbracket_{x:=a}.
+\forall a\in D_\sigma\;w\in\llbracket A\rrbracket_{x:=a}
 ```
 
 Identity at *every* type is literal equality, represented by $`W`$ when true and $`\varnothing`$ otherwise. Thus C's definition $`\Box p:=(p=\top)`$ gives universal-world necessity.
@@ -39,7 +39,7 @@ Write $`\mathcal G^\Sigma_\infty(V)`$ for these pointed models, including every 
 \Gamma\models_{\mathrm{full},\infty}^{V,\Sigma} A
 \quad\Longleftrightarrow\quad
 \forall(G,w)\in\mathcal G^\Sigma_\infty(V)
-\bigl[(\forall B\in\Gamma\;G,w\models B)\Rightarrow G,w\models A\bigr].
+\bigl[(\forall B\in\Gamma\;G,w\models B)\Rightarrow G,w\models A\bigr]
 ```
 
 All premises hold at the *same* point and under the same constant interpretation. Global-premise consequence instead requires every premise at every world; equivalently use $`\{\Box B:B\in\Gamma\}`$ as local premises.
@@ -82,7 +82,7 @@ Conversely, let a nonempty structure with domain $`A`$ refute $`\psi`$. Take $`E
 ```math
 \psi\in\mathrm{Val}_{SO}
 \quad\Longleftrightarrow\quad
-R(\psi)\in\mathrm{Val}_{\mathrm{full},\infty}^{V,\mathrm{pure}}.
+R(\psi)\in\mathrm{Val}_{\mathrm{full},\infty}^{V,\mathrm{pure}}
 ```
 
 The relativized subdomain is essential: merely using $`E`$ as the second-order domain would lose finite countermodels.
@@ -112,7 +112,7 @@ with extensionality for $`U_t`$, and
  \exists f\in U_{\sigma\tau}\,
  \forall x\in U_\sigma\,\forall y\in U_\tau\,
    (\mathrm{App}_{\sigma\tau}(f,x,y)\leftrightarrow R(x,y))
- \bigr].
+ \bigr]
 \tag{2.2}
 ```
 
@@ -124,7 +124,7 @@ Include in $`\mathrm{Hierarchy}_A`$ the defining graph clauses for each logical 
 \forall w\in U_s\,
  [\mathrm{Ev}(q,w)\leftrightarrow
    \forall x\in U_\sigma\,\exists r\in U_t\,
-     (\mathrm{App}_{\sigma t}(P,x,r)\land\mathrm{Ev}(r,w))].
+     (\mathrm{App}_{\sigma t}(P,x,r)\land\mathrm{Ev}(r,w))]
 ```
 
 Here logical constants of curried type have their full curried graph constrained, at every argument, rather than being treated as uninterpreted operations.
@@ -135,14 +135,14 @@ $`\mathrm{Den}_a(\bar x,u)`$ recursively for each subterm $`a`$. A variable uses
 ```math
 \forall x\in U_\sigma\,\forall v\in U_\tau\,
  [\mathrm{App}_{\sigma\tau}(u,x,v)
-   \leftrightarrow \mathrm{Den}_b(\bar x,x,v)].
+   \leftrightarrow \mathrm{Den}_b(\bar x,x,v)]
 ```
 
 Structural induction proves existence and uniqueness of every denotation: totality handles application, graph-fullness handles lambda abstraction, and the defining clauses plus (2.1)–(2.2) give all the logical constants. Extensionality proves uniqueness in the function cases. For a sentence $`A:t`$, take
 
 ```math
 A^*(w):=\exists p\in U_t\,
-  (\mathrm{Den}_A(p)\land\mathrm{Ev}(p,w)).
+  (\mathrm{Den}_A(p)\land\mathrm{Ev}(p,w))
 ```
 
 All these formulas are finite and first-order in the auxiliary sorted presentation. Thus no table of truths of arbitrary formulas is added to the translation.
@@ -151,7 +151,7 @@ Let
 
 ```math
 S(A):=\mathrm{Hierarchy}_A\to
-             \forall w\in U_s\,A^*(w).
+             \forall w\in U_s\,A^*(w)
 ```
 
 Auxiliary predicates and constants may be treated as nonlogical symbols whose interpretations vary when testing validity. They may instead be universally quantified after relationalization.
@@ -160,7 +160,7 @@ Every full Gallin hierarchy, restricted to these finitely many sorts and represe
 
 ```math
 A\in\mathrm{Val}_{\mathrm{full},\infty}^{V,\mathrm{pure}}
-\quad\Longleftrightarrow\quad S(A)\in\mathrm{Val}_{SO}.
+\quad\Longleftrightarrow\quad S(A)\in\mathrm{Val}_{SO}
 ```
 
 All syntax transformations are effective. This proves Theorem 2.1. The same forward reduction handles any fixed effectively coded admitted signature because each sentence mentions only finitely many constants.
@@ -180,7 +180,7 @@ Work in $`\Sigma_0=\{P^{et}\}`$, and put $`\nu=(et)t`$. Use exactly the bundle's
     (\mathrm{FiniteCardinality}_e(Z)\land ZP),\\
 L_n(P)&:=
   \exists x_1^e\cdots x_n^e\,
-   \left(\bigwedge_i Px_i\land\bigwedge_{i<j}x_i\ne x_j\right).
+   \left(\bigwedge_i Px_i\land\bigwedge_{i<j}x_i\ne x_j\right)
 \end{aligned}
 ```
 
@@ -196,7 +196,7 @@ A second induction proves
 
 ```math
 w\in z_n(X)\quad\Longleftrightarrow\quad
-|\{a\in E:w\in X(a)\}|=n.
+|\{a\in E:w\in X(a)\}|=n
 ```
 
 The zero clause says the extension is empty. The successor clause removes a member using literal individual inequality; an $`(n+1)`$-element extension has such a removal, and a removal leaving $`n`$ members makes the original size $`n+1`$. Combining the two inductions proves the lemma. The same proof works at any counting type, with its actual domain in place of $`E`$. $`\square`$
@@ -204,7 +204,7 @@ The zero clause says the extension is empty. The successor clause removes a memb
 Now put
 
 ```math
-\Gamma=\{\mathrm{Fin}(P)\}\cup\{L_n(P):1\le n<\omega\}.
+\Gamma=\{\mathrm{Fin}(P)\}\cup\{L_n(P):1\le n<\omega\}
 ```
 
 Every finite $`\Gamma_0\subseteq\Gamma`$ has a full model with **$`E=W=\omega`$**: choose a finite set of individuals of size at least the largest displayed bound and interpret $`P`$ rigidly as that set. Both quantified Infinity axioms and all of $`\Box FC`$ hold. The whole $`\Gamma`$ has no full model by Lemma 3.1.
@@ -224,7 +224,7 @@ It also follows that no ordinary first-order theory in added sorts or symbols ha
 For a first- or second-order arithmetic sentence $`\psi`$, use relational second-order Peano arithmetic on
 
 ```math
-z^e,\quad S^{eet},\quad A^{eeet},\quad M^{eeet}.
+z^e,\quad S^{eet},\quad A^{eeet},\quad M^{eeet}
 ```
 
 Its finite sentence $`PA_2(z,S,A,M)`$ asserts a total single-valued injective successor with zero outside its range, induction over every $`et`$-property, and total single-valued addition/multiplication graphs satisfying the usual recursion equations.
@@ -234,7 +234,7 @@ Put
 ```math
 V_\psi:=
 \forall z,S,A,M\,
-  (PA_2(z,S,A,M)\to\psi^\dagger(z,S,A,M)).
+  (PA_2(z,S,A,M)\to\psi^\dagger(z,S,A,M))
 \tag{4.1}
 ```
 
@@ -247,7 +247,7 @@ At any world, fullness makes the induction range all subsets of $`E`$. The exter
 ```math
 V_\psi\in\mathrm{Val}_{\mathrm{full},\infty}^{V,\mathrm{pure}}
 \quad\Longleftrightarrow\quad
-(\omega,\mathcal P^V(\omega))\models\psi.
+(\omega,\mathcal P^V(\omega))\models\psi
 \tag{4.2}
 ```
 
@@ -266,7 +266,7 @@ The second-order version gives more. The set of all true second-order arithmetic
 ```math
 \exists T\,
  [\mathrm{Root}(T,n)\land
-  \mathrm{LocalCorrect}(T)\land\mathrm{WF}(T)].
+  \mathrm{LocalCorrect}(T)\land\mathrm{WF}(T)]
 ```
 
 Local correctness is arithmetical and well-foundedness is $`\Pi^1_1`$, so this is $`\Sigma^1_2`$. It is projective, contradicting §4.1 if it equals full validity. Uniformly hyperarithmetical local data give the same projective obstruction. $`\square`$
@@ -276,7 +276,7 @@ For a standard presentation with number-indexed rule instances and arithmetical 
 ```math
 n\in D\quad\Longleftrightarrow\quad
 \forall X\subseteq\omega\,
-  [X\text{ contains the axioms and is rule-closed}\to n\in X].
+  [X\text{ contains the axioms and is rule-closed}\to n\in X]
 ```
 
 The bracketed condition is arithmetical in $`X`$, giving a $`\Pi^1_1`$ upper bound. Transfinite generation ranks yield well-founded derivation trees; induction on trees gives the converse. The broader $`\Sigma^1_2`$ bound suffices here.
@@ -316,14 +316,14 @@ For $`\tau=\sigma_1\cdots\sigma_n t`$, including $`n=0`$, let
 X_\tau=W\times D_{\sigma_1}\times\cdots\times D_{\sigma_n},
 \qquad
 \beta_\tau(f)=
-\{(w,\bar a):w\in f[\bar a]\}.
+\{(w,\bar a):w\in f[\bar a]\}
 ```
 
 Repeated extensionality identifies $`D_\tau`$ with a Boolean subalgebra
 $`B_\tau\subseteq\mathcal P(X_\tau)`$. Its order is C's algebraic order, and its Boolean operations are the set operations on these supports. For every point $`(w,\bar a)`$, lambda and literal identity supply
 
 ```math
-\lambda\bar x.\ \delta_w\land\bigwedge_i x_i=a_i.
+\lambda\bar x.\ \delta_w\land\bigwedge_i x_i=a_i
 ```
 
 Its support is that singleton. Hence the atoms of $`B_\tau`$ are precisely the singleton points.
@@ -356,7 +356,7 @@ For every set $`I`$ and every relational type $`\tau`$, consider the axiom $`J^\
    \forall c^\tau\left[
        \bigwedge_{i\in I}a_i\le c\to b\le c
    \right]\right)
-\right].
+\right]
 \tag{6.1}
 ```
 
@@ -394,7 +394,7 @@ There is $`M\prec H_\theta`$ with
 
 ```math
 |M|=\lambda,\quad \lambda\subseteq M,\quad
-\lambda,F\in M,\quad M^{<\kappa}\subseteq M.
+\lambda,F\in M,\quad M^{<\kappa}\subseteq M
 ```
 
 For completeness, construct an elementary chain of length $`\kappa`$. At each successor stage add every sequence of length less than $`\kappa`$ from the preceding stage and take a Skolem hull. The size remains $`\lambda`$ by $`\lambda^{<\kappa}=\lambda`$. Regularity of $`\kappa`$ puts every short sequence from the final union inside some stage, so it is added at the next. The union is elementary. Include the finitely tagged base sorts and all countably many type-domain objects in the initial hull.
@@ -434,7 +434,7 @@ commuting with Boolean connectives. Let $`T_\infty`$ contain all ordinary first-
 \Gamma\models_{\mathrm{full},\infty}^{V,\Sigma} A
 \quad\Longleftrightarrow\quad
 T_\infty\cup\{\mathrm{ST}_{w_0}(B):B\in\Gamma\}
-\vdash_{FO}\mathrm{ST}_{w_0}(A).
+\vdash_{FO}\mathrm{ST}_{w_0}(A)
 ```
 
 **Proof.** Every full hierarchy yields the indicated first-order structure. Conversely, every first-order structure with infinite $`E,W`$ expands to a full hierarchy by taking all external function spaces and assigning each relational constant its given support. Syntax induction gives the truth equivalence. Ordinary first-order completeness proves the displayed equivalence. $`\square`$
@@ -450,7 +450,7 @@ Fix one full hierarchy $`G`$, its signature interpretation, and a point $`w`$. I
 In addition to the usual Boolean rules and existential witness introduction, allow at every sort $`s`$ the rule $`U_s^G`$:
 
 ```math
-\frac{\{B(c_a):a\in D_s^G\}}{\forall x^s B(x)}.
+\frac{\{B(c_a):a\in D_s^G\}}{\forall x^s B(x)}
 \tag{8.2}
 ```
 
@@ -458,7 +458,7 @@ In addition to the usual Boolean rules and existential witness introduction, all
 
 ```math
 G\models A\quad\Longleftrightarrow\quad
-A\text{ has a well-founded set-sized proof from its atomic diagram}.
+A\text{ has a well-founded set-sized proof from its atomic diagram}
 ```
 
 **Proof.** Soundness is induction up the proof tree. For completeness put $`A`$ in negation normal form and induct on its logical complexity with named parameter values. A true literal is in the diagram (ground application terms can first be evaluated using primitive tables). A true existential has a named witness; a true disjunction has a true disjunct; a conjunction has both true conjuncts. A universal has a true instance for every named domain element, so apply $`U_s^G`$. The height decreases with formula complexity, and each branching set is a set. ZFC Choice chooses the needed family of witness subproofs. $`\square`$

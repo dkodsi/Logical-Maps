@@ -13,7 +13,7 @@ Use $`\mathrm{Good}_\Delta`$ and the whole-operation native-Box identity from [N
 ```math
  \mathrm{BoxComm}(E):\quad
  (\lambda p.E(\Box p))=(\lambda p.\Box Ep),
- \qquad \Box p:=(p=\top).
+ \qquad \Box p:=(p=\top)
  \tag{1}
 ```
 
@@ -22,7 +22,7 @@ Throughout §§1–3, work over C and assume that the finite external list Δ co
 ```math
  \mathrm{Im}(E)(q):=\exists p\,(Ep=q),
  \qquad
- \mathrm{FinIm}(E):=\mathrm{Fin}_t(\mathrm{Im}(E)).
+ \mathrm{FinIm}(E):=\mathrm{Fin}_t(\mathrm{Im}(E))
  \tag{2}
 ```
 
@@ -32,7 +32,7 @@ BoxSep omits FinIm. These are the same definitions as in [Finite-image native-Bo
 
 ```math
  \forall X^\sigma\,F(r(X))\quad\leftrightarrow\quad
- \forall p^t\,Fp.
+ \forall p^t\,Fp
  \tag{2a}
 ```
 
@@ -43,7 +43,7 @@ For the forward direction instantiate X with c(p); the reverse direction instant
  E(\forall p\,Fp)
  &=E(\forall X\,F(r(X)))\\
  &=\forall X\,E(F(r(X)))\\
- &=\forall p\,E(Fp).
+ &=\forall p\,E(Fp)
  \end{aligned}
  \tag{2b}
 ```
@@ -62,7 +62,7 @@ For clarity, the internal Frege definitions at type t are
  (U\setminus\{x\})(p)&:=Up\land p\ne x,\\
  \mathrm{FC}(Z)&:=\forall W\,
  [(W\mathbf0\land\forall Y(WY\to W(\mathrm{Suc}(Y))))\to WZ],\\
- \mathrm{Fin}(U)&:=\exists Z\,[\mathrm{FC}(Z)\land ZU].
+ \mathrm{Fin}(U)&:=\exists Z\,[\mathrm{FC}(Z)\land ZU]
 \end{aligned}
 \tag{3}
 ```
@@ -75,7 +75,7 @@ We use two unconditional H theorems:
  \mathbf0(U)\to\mathrm{Fin}(U),
  \qquad
  [Ux\land\mathrm{Fin}(U\setminus\{x\})]
-       \to\mathrm{Fin}(U).
+       \to\mathrm{Fin}(U)
  \tag{4}
 ```
 
@@ -87,7 +87,7 @@ An unconditional H theorem T, including one with the displayed free parameters, 
  E(\mathbf0(U))\to E(\mathrm{Fin}(U)),
  \qquad
  [E(Ux)\land E(\mathrm{Fin}(U\setminus\{x\}))]
-       \to E(\mathrm{Fin}(U)).
+       \to E(\mathrm{Fin}(U))
  \tag{5}
 ```
 
@@ -96,7 +96,7 @@ Only the unconditional formulas in (4) receive this treatment. Neither Fin(U), n
 Native-Box commutation supplies a second crucial identity. The unconditional C Boolean-modal identity (p=x)=□(p↔x), together with Boolean preservation, gives
 
 ```math
- \boxed{E(p=x)=(Ep=Ex).}
+ \boxed{E(p=x)=(Ep=Ex)}
  \tag{6}
 ```
 
@@ -107,7 +107,7 @@ Indeed E□(p↔x)=□E(p↔x)=□(Ep↔Ex). This is commutation with propositio
 Fix such an admitted observer E. For an admitted V:tt define
 
 ```math
- I_E(V)(q):=\exists p\,[Ep=q\land E(Vp)].
+ I_E(V)(q):=\exists p\,[Ep=q\land E(Vp)]
  \tag{7}
 ```
 
@@ -116,7 +116,7 @@ This is an admitted predicate. Its members are the E-images of inputs whose V-me
 **Lemma.** If I_E(V) is internally finite, then E(Fin(V)) is currently true:
 
 ```math
- \boxed{\mathrm{Fin}(I_E(V))\to E(\mathrm{Fin}(V)).}
+ \boxed{\mathrm{Fin}(I_E(V))\to E(\mathrm{Fin}(V))}
  \tag{8}
 ```
 
@@ -132,7 +132,7 @@ and use the single admitted induction predicate
 
 ```math
  W_E(Z):=\mathrm{FC}(Z)\land\mathrm{Ext}(Z)
- \land\forall V\,[Z(I_E(V))\to E(\mathrm{Fin}(V))].
+ \land\forall V\,[Z(I_E(V))\to E(\mathrm{Fin}(V))]
  \tag{10}
 ```
 
@@ -143,7 +143,7 @@ The bookkeeping conjuncts FC and Ext are deliberate. Ext holds at zero and passe
 ```math
  E(\mathbf0(V))
  =E(\forall p\,\neg Vp)
- =\forall p\,\neg E(Vp).
+ =\forall p\,\neg E(Vp)
  \tag{11}
 ```
 
@@ -152,14 +152,14 @@ The right side is true. The first implication in (5) therefore gives E(Fin(V)). 
 **Successor.** Assume W_E(Z) and Suc(Z)(I_E(V)). Choose y such that
 
 ```math
- I_E(V)(y),\qquad Z(I_E(V)\setminus\{y\}).
+ I_E(V)(y),\qquad Z(I_E(V)\setminus\{y\})
  \tag{12}
 ```
 
 Choose x witnessing the first conjunct, so Ex=y and E(Vx) is true. Put V′:=V\setminus\{x\}. Equation (6) gives, at every p,
 
 ```math
- E(V'p)=E(Vp)\land(Ep\ne Ex).
+ E(V'p)=E(Vp)\land(Ep\ne Ex)
  \tag{13}
 ```
 
@@ -167,7 +167,7 @@ It follows by ordinary quantified reasoning that
 
 ```math
  \forall q\,[I_E(V')(q)\leftrightarrow
-             (I_E(V)(q)\land q\ne y)].
+             (I_E(V)(q)\land q\ne y)]
  \tag{14}
 ```
 
@@ -186,7 +186,7 @@ Put All:=λp.Top and FinAll:=Fin(All). Since E Top=Top, I_E(All) is currently co
 ```math
  \mathrm{Good}_\Delta(E)\land\mathrm{BoxComm}(E)
  \land\mathrm{FinIm}(E)
- \quad\Longrightarrow\quad E(\mathrm{FinAll}).
+ \quad\Longrightarrow\quad E(\mathrm{FinAll})
  \tag{15}
 ```
 
@@ -195,7 +195,7 @@ Every member of this qualifying class also accepts Top. Propositional FinBoxSep(
 ```math
  \boxed{\mathrm C+\mathrm{FinBoxSep}(t,\Delta)
        \ \vdash\ \mathrm{FinAll}=\top
-       \quad(\sigma\in\Delta,\ \sigma\ne e).}
+       \quad(\sigma\in\Delta,\ \sigma\ne e)}
  \tag{16}
 ```
 
@@ -212,7 +212,7 @@ We have proved the exact local theorem, for every fixed relational τ and every 
  \mathrm{FinBoxSep}(\tau,\Delta)
  \quad\longleftrightarrow\quad
  \mathrm{FinAll}\land\mathrm{BoxSep}(\tau,\Delta)
- \qquad\text{over C}.}
+ \qquad\text{over C}}
  \tag{17}
 ```
 
@@ -226,7 +226,7 @@ At full schema scope, FinBoxSep implies ordinary full OS and therefore recovers 
  \boxed{
  \mathrm H+\mathrm{FinBoxSep}
  \quad\equiv\quad
- \mathrm H+\mathrm{FinAll}+\mathrm{BoxSep}.}
+ \mathrm H+\mathrm{FinAll}+\mathrm{BoxSep}}
  \tag{18}
 ```
 
@@ -242,7 +242,7 @@ In the C5 region the result combines with the established inverse and endpoint t
  \quad\equiv\quad
  \mathrm H+\mathrm{Rev}+\mathrm{FinBoxSep}
  \quad\equiv\quad
- \mathrm H+\mathrm{End}+\mathrm{FinAll}.}
+ \mathrm H+\mathrm{End}+\mathrm{FinAll}}
  \tag{19}
 ```
 

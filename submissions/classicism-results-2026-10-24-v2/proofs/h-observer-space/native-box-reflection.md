@@ -10,7 +10,7 @@ Work over C. Write BoxSep(t,Δ) for propositional separation by Good_Δ observer
 
 ```math
 (\lambda p.\,E(\Box p))=(\lambda p.\,\Box(Ep)),
-\qquad \Box p:=(p=\top).
+\qquad \Box p:=(p=\top)
 \tag{1}
 ```
 
@@ -31,7 +31,7 @@ where n is finite and θ is built from its displayed proposition variables, Top,
 ```math
 \boxed{
 \mathrm C+\mathrm{BoxSep}(t,\{t\})
-\quad\vdash\quad A\to\Box A.}
+\quad\vdash\quad A\to\Box A}
 \tag{3}
 ```
 
@@ -41,7 +41,7 @@ This is an external schema indexed by finite formulas, not an object-language qu
 
 ```math
 E\bigl(\theta(\bar p)\bigr)
- =\theta(Ep_1,\ldots,Ep_n).
+ =\theta(Ep_1,\ldots,Ep_n)
 \tag{4}
 ```
 
@@ -49,7 +49,7 @@ Apply the full Q_t law once for each binder in (2). It follows that
 
 ```math
 E(A)=\forall p_1^t\cdots\forall p_n^t\,
-\theta(Ep_1,\ldots,Ep_n).
+\theta(Ep_1,\ldots,Ep_n)
 \tag{5}
 ```
 
@@ -65,7 +65,7 @@ The same argument applies beyond (2). Fix finitely many predicate variables
 
 ```math
 R_i^{\rho_i},\qquad
-\rho_i=\sigma_{i1}\cdots\sigma_{im_i}t.
+\rho_i=\sigma_{i1}\cdots\sigma_{im_i}t
 ```
 
 Zero arity is permitted, so a predicate variable may itself have type t. Let φ(R̄) be a formula of the following many-sorted first-order modal fragment:
@@ -82,7 +82,7 @@ Put
 
 ```math
 A:=\forall R_1^{\rho_1}\cdots\forall R_k^{\rho_k}
-\,\varphi(\bar R).
+\,\varphi(\bar R)
 \tag{6}
 ```
 
@@ -93,7 +93,7 @@ Let Δ contain each outer type ρ_i and each type of an object-variable binder o
 ```math
 \boxed{
 \mathrm C+\mathrm{BoxSep}(t,\Delta)
-\quad\vdash\quad A\to\Box A.}
+\quad\vdash\quad A\to\Box A}
 \tag{7}
 ```
 
@@ -101,7 +101,7 @@ Let Δ contain each outer type ρ_i and each type of an object-variable binder o
 
 ```math
 R_i^E:=\lambda x_1^{\sigma_{i1}}\cdots
- x_{m_i}^{\sigma_{im_i}}.\,E(R_i[\bar x]).
+ x_{m_i}^{\sigma_{im_i}}.\,E(R_i[\bar x])
 \tag{8}
 ```
 
@@ -109,7 +109,7 @@ At zero arity this is simply ER_i. Induction on φ gives
 
 ```math
 E\bigl(\varphi(\bar R)\bigr)=
-\varphi(\bar R^E).
+\varphi(\bar R^E)
 \tag{9}
 ```
 
@@ -119,7 +119,7 @@ The outer Q_{ρ_i} identities now give
 
 ```math
 E(A)=\forall R_1^{\rho_1}\cdots\forall R_k^{\rho_k}
-\,\varphi(\bar R^E).
+\,\varphi(\bar R^E)
 \tag{10}
 ```
 
@@ -130,7 +130,7 @@ Theorem 1 is the case in which all outer predicates are zero-ary and the body ha
 ```math
 \varphi(F):=
  (\forall x^\sigma\,\Box Fx)
- \to\Box(\forall x^\sigma Fx).
+ \to\Box(\forall x^\sigma Fx)
 \tag{11}
 ```
 
@@ -148,7 +148,7 @@ For familiar modal axioms, write their finite-variable universal closures. Here 
 \forall p,q\left[
 (\Diamond p\land\Diamond q)
 \to\Diamond(p\land\Diamond q)\lor\Diamond(q\land\Diamond p)
-\right].
+\right]
 ```
 
 The theorem gives, for example,
@@ -169,7 +169,7 @@ The .3 consequence here remains conditional. The boundary in §5 establishes tha
 The special consequence □.2 is **not** a new strict separation above the previously established C+BF_t+.2 package. In fact,
 
 ```math
-\mathrm C+\mathrm{BF}_t+.2\quad\vdash\quad\Box .2.
+\mathrm C+\mathrm{BF}_t+.2\quad\vdash\quad\Box .2
 \tag{13}
 ```
 
@@ -178,14 +178,14 @@ Use the exact [endpoint-selector characterization](../modal-selectors-and-quanti
 ```math
 \exists B^{tt}\left[
 B\top=\top\land B\bot=\bot\land
-\forall p^t\,(Bp=\top\lor Bp=\bot)\right].
+\forall p^t\,(Bp=\top\lor Bp=\bot)\right]
 \tag{14}
 ```
 
 Choose a current witness B. For each p, one of the two displayed output identities holds. NI makes that identity necessary, and therefore makes their disjunction necessary. Generalize p and use BF_t to obtain
 
 ```math
-\Box\forall p^t\,(Bp=\top\lor Bp=\bot).
+\Box\forall p^t\,(Bp=\top\lor Bp=\bot)
 \tag{15}
 ```
 
@@ -206,7 +206,7 @@ The model also has full OS at every stage. To see this directly, choose any futu
 Consider the universal modal sentence
 
 ```math
-A:=\forall p^t\,[\Box\Diamond p\to\Diamond\Box p].
+A:=\forall p^t\,[\Box\Diamond p\to\Diamond\Box p]
 \tag{16}
 ```
 
@@ -217,7 +217,7 @@ At either cluster point choose the proposition whose extension on the cluster is
 ```math
 r\models\mathrm C+\Box\mathrm{BF}
 +\Box\mathrm{Functionality}+\Box\mathrm{OS}
-+A+\neg\Box A.
++A+\neg\Box A
 \tag{17}
 ```
 

@@ -5,7 +5,7 @@ OpenAI Codex, prompted by Daniel Kodsi, 25 October 2026. Source: `misc`, this pr
 The sharp theorem uses only the single Relational Choice instance with propositional inputs and outputs:
 
 ```math
-C+\mathrm{Vicinity}+BC_t+RC_{t,t}\ \Longrightarrow\ \mathrm{Actuality}.
+C+\mathrm{Vicinity}+BC_t+RC_{t,t}\ \Longrightarrow\ \mathrm{Actuality}
 ```
 
 All three added premises are unprefixed. The [shared supported interpretation](vicinity-supported-interpretation.md) supplies C5 and preserves BC_t. We transfer RC_{t,t} to that same interpretation and apply the [C5 Relational Choice theorem](c5-relational-choice-and-propositional-completeness-imply-actuality.md).
@@ -43,7 +43,7 @@ in the original algebra. Thus this same u is an original Actuality witness. This
 Since Actuality implies Vicinity over C,
 
 ```math
-C+BC_t+RC_{t,t}\ \vdash\ \mathrm{Actuality}\leftrightarrow\mathrm{Vicinity}.
+C+BC_t+RC_{t,t}\ \vdash\ \mathrm{Actuality}\leftrightarrow\mathrm{Vicinity}
 ```
 
 The existing [ND at t implies Vicinity](https://github.com/zwlgzwlg/Logical-Maps/blob/a89a5058ebbd5ebe93aec07d47a1a32e3b93f8bb/logical-maps/topics/classicism/results/distinctness-necessary-t-implies-vicinity.yaml) also makes unprefixed propositional ND a sufficient premise. The [shared construction, §6](vicinity-supported-interpretation.md#6-vicinity-and-persistent-propositions) characterizes Vicinity by a greatest proper persistent proposition. Deriving Vicinity from BC_t and RC_{t,t} alone remains open.

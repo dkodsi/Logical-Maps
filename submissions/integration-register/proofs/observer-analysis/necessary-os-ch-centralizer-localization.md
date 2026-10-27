@@ -42,7 +42,7 @@ For a countable set S of protected base blocks and repair coordinates and a coun
 H(S,D_0)=\mathrm{Fix}(S)
           \cap\bigcap_{d\in D_0}C_\Gamma(d),
  \qquad
- C_\Gamma(d)=\{g:gd=dg\}.
+ C_\Gamma(d)=\{g:gd=dg\}
  \tag{1}
 ```
 
@@ -53,7 +53,7 @@ The class D is closed under conjugation by Γ. Uniform copy permutations commute
 Consequently
 
 ```math
-gH(S,D_0)g^{-1}=H(gS,gD_0g^{-1}).
+gH(S,D_0)g^{-1}=H(gS,gD_0g^{-1})
  \tag{2}
 ```
 
@@ -82,7 +82,7 @@ First add all base blocks moved by the designated operators and all their listed
 For each touched orbit O let F_O contain the protected and exceptional copy indices occurring there, and retain the rectangle
 
 ```math
-O\times F_O.
+O\times F_O
  \tag{3}
 ```
 
@@ -105,7 +105,7 @@ More explicitly, if q≤π_Q(p), construct a lift r≤p by using q on the select
 ```math
 q\leq\pi_Q(p)
  \quad\Longrightarrow\quad
- \exists r\leq p\ [\pi_Q(r)\leq q].
+ \exists r\leq p\ [\pi_Q(r)\leq q]
  \tag{4}
 ```
 
@@ -131,7 +131,7 @@ d(a,\xi)=(da,\pi_{d,a}\xi),\qquad
 the needed equation is
 
 ```math
-\sigma_{da}\pi_{d,a}=\pi_{d,ga}\sigma_a.
+\sigma_{da}\pi_{d,a}=\pi_{d,ga}\sigma_a
  \tag{5}
 ```
 
@@ -143,7 +143,7 @@ Thus conditions with compatible Q-projections cannot force contradictory members
 
 ```math
 x_Q=\{(\pi_Q(p),\check u):
-        p\Vdash\check u\in x\}.
+        p\Vdash\check u\in x\}
  \tag{6}
 ```
 

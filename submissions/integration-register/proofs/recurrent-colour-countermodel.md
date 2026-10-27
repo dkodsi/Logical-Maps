@@ -8,7 +8,7 @@ The construction below gives a pointed model of fixed Classicism C with
 
 ```math
 C+\Box\mathrm{BF}+\Box\mathrm{RP}+\Box\mathrm{BC}+\mathrm{TR}
-+\neg\mathrm{WRP}_{et}+\neg\Box\mathrm{TR}_{et}.
++\neg\mathrm{WRP}_{et}+\neg\Box\mathrm{TR}_{et}
 ```
 
 Thus the proposed implication BF_all + TR_all + RP_all ⇒ WRP_all is false, even with BF and RP boxed and full boxed Boolean Completeness added. Sections 2–9 first prove current RP; section 11 upgrades it to boxed RP, and section 12 verifies boxed BC. All types are the fixed relational types, and the higher-type quantifiers range over the full admitted domains. The model does not have Rigid Comprehension: it fails even Weak Rigid Comprehension at et. The separate [Boolean-prefix construction](boolean-prefix-rigidity.md) refutes the strengthening that adds full Rigid Comprehension.

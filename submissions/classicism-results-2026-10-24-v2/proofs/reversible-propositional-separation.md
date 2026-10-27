@@ -8,14 +8,14 @@ Write $`I:=\lambda p^t\, .\,p`$ and $`E\circ F:=\lambda p^t\, .\,E(Fp)`$. Put
 
 ```math
 J(E):=\bigl((\lambda p,q^t\, .\,E(p\land q))
-=(\lambda p,q^t\, .\,Ep\land Eq)\bigr)\land E\circ E=I.
+=(\lambda p,q^t\, .\,Ep\land Eq)\bigr)\land E\circ E=I
 ```
 
 **Theorem.** Over C, full reversible logical separation is equivalent to
 
 ```math
 \forall p,q^t\, .\,\Bigl[\forall E^{tt}\, .\,
-J(E)\to(Ep\leftrightarrow Eq)\Bigr]\to p=q.
+J(E)\to(Ep\leftrightarrow Eq)\Bigr]\to p=q
 ```
 
 An observer preserves conjunction and undoes itself when applied twice. These are identities of whole operations. Boolean and quantifier preservation, BF and separation at every relational type follow; none is an extra premise.
@@ -27,13 +27,13 @@ For each admitted type σ, define
 ```math
 c(b):=\lambda x^\sigma\, .\,b,\qquad
 L_E(F):=\lambda x^\sigma\, .\,E(Fx),\qquad
-Q(F):=\forall x^\sigma\, .\,Fx.
+Q(F):=\forall x^\sigma\, .\,Fx
 ```
 
 C proves the adjunction
 
 ```math
-c(b)\le F\quad\longleftrightarrow\quad b\le Q(F).
+c(b)\le F\quad\longleftrightarrow\quad b\le Q(F)
 ```
 
 The order is Boolean entailment at the indicated relational type. The two sides are respectively equivalent to $`\Box\forall x^\sigma\, .\,(b\to Fx)`$ and $`\Box(b\to\forall x^\sigma\, .\,Fx)`$. The intervening equivalence is an unconditional H theorem. This argument does not require Q(F) to be the greatest lower bound of the currently quantified values of F, which would require additional assumptions.
@@ -47,7 +47,7 @@ b\le Q(L_EF)
 \leftrightarrow L_E(c(b))\le F\\
 &\leftrightarrow c(Eb)\le F
 \leftrightarrow Eb\le QF
-\leftrightarrow b\le E(QF).
+\leftrightarrow b\le E(QF)
 \end{aligned}
 ```
 
@@ -62,7 +62,7 @@ The observed equality laws follow from Boolean preservation over C: apply E to t
 Assume the displayed separation sentence. For any type σ and predicate F, suppose every Fx is Top. Every J-observer fixes Top and preserves the universal quantifier. Its output on $`\forall x^\sigma\, .\,Fx`$ is therefore true, as is its output on Top. Separation forces
 
 ```math
-(\forall x^\sigma\, .\,Fx)=\top.
+(\forall x^\sigma\, .\,Fx)=\top
 ```
 
 This proves BF at σ. The [established BF-to-Functionality argument](logical-observers.md#4-a-simpler-formulation-over-c) now gives Functionality at every relational output type.

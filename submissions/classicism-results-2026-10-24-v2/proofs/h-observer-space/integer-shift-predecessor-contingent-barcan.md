@@ -7,7 +7,7 @@ By OpenAI Codex, prompted by Daniel Kodsi, 24 October 2026. Direct source for th
 ```math
 \boxed{\mathrm C+\mathrm{SurjSep}+\mathrm{BF}
 \quad\text{and}\quad\neg\Box\mathrm{BF}_\sigma
-\text{ for every admitted type }\sigma.}
+\text{ for every admitted type }\sigma}
 \tag{1}
 ```
 
@@ -21,7 +21,7 @@ Take two objects
 
 ```math
 X=\mathbb N\times\mathbb Z,
-\qquad Y=\{*\}\times\mathbb Z.
+\qquad Y=\{*\}\times\mathbb Z
 \tag{2}
 ```
 
@@ -29,7 +29,7 @@ Write X₀=ℕ and Y₀={*}. For W,Z∈{X,Y}, the arrows W→Z are exactly
 
 ```math
 (f,k):(a,n)\longmapsto(f(a),n+k),
-\qquad f:W_0\to Z_0,\quad k\in\mathbb Z.
+\qquad f:W_0\to Z_0,\quad k\in\mathbb Z
 \tag{3}
 ```
 
@@ -74,7 +74,7 @@ The split epimorphisms also distinguish all proposition pairs at X. Distinct pro
 Fix any outgoing arrow b:X→Z, with tag k. It need not be invertible or split epic for this section. For integers j≥0 define
 
 ```math
-C_j=\{h:X\to Z:\mathrm{tag}(h)=k+j\}.
+C_j=\{h:X\to Z:\mathrm{tag}(h)=k+j\}
 \tag{6}
 ```
 
@@ -92,7 +92,7 @@ u_Z,&h\in\bigcup_{j\ge0}C_j,\\
 r_h=
 \begin{cases}
 u_Z^{-1},&h\in\bigcup_{j\ge1}C_j,\\
-\mathrm{id}_W,&\text{otherwise}.
+\mathrm{id}_W,&\text{otherwise}
 \end{cases}
 \tag{7}
 ```
@@ -110,7 +110,7 @@ where q is any proposition at W. Both profiles have the same one-point pin; no u
 For every h,
 
 ```math
-r_{s_hh}s_h=\mathrm{id}_{\mathrm{target}(h)}.
+r_{s_hh}s_h=\mathrm{id}_{\mathrm{target}(h)}
 \tag{9}
 ```
 
@@ -120,7 +120,7 @@ On C_j the first observation shifts to C_{j+1}, where the second observation shi
 \begin{aligned}
 a\in(\rho(l)S_b)((\rho(l)R_b)q)
 &\Longleftrightarrow r_{s_{al}al}s_{al}a\in q\\
-&\Longleftrightarrow a\in q.
+&\Longleftrightarrow a\in q
 \end{aligned}
 \tag{10}
 ```
@@ -134,7 +134,7 @@ h\in S_bc_b\quad\Longleftrightarrow\quad s_hh\in C_0,
 which never occurs: the charts move to their successors and their complement remains outside. Hence
 
 ```math
-S_b\circ R_b=I,\qquad S_bc_b=\bot,\qquad b\in c_b.
+S_b\circ R_b=I,\qquad S_bc_b=\bot,\qquad b\in c_b
 \tag{11}
 ```
 
@@ -149,14 +149,14 @@ Fix h:Y→X with first component selecting 0 and tag 0. Its individual action ha
 Its action on propositions is also not onto. Let q₀ be the proposition at X consisting of the self-arrows (g,m) with g(1)=0, and no arrows X→Y. This is pinned by {(1,0)}, hence admitted. Choose self-arrows a,a′ at X, both with tag 0, whose first maps agree at 0 but differ as follows:
 
 ```math
-g(0)=g'(0)=0,\qquad g(1)=1,\qquad g'(1)=0.
+g(0)=g'(0)=0,\qquad g(1)=1,\qquad g'(1)=0
 \tag{12}
 ```
 
 Then a∘h=a′∘h, but q₀ has different truth at a,a′. Every transported proposition ρ_t(h)p has equal truth at a,a′, because its values are p(ah) and p(a′h). Thus
 
 ```math
-q_0\notin\mathrm{Im}\rho_t(h).
+q_0\notin\mathrm{Im}\rho_t(h)
 \tag{13}
 ```
 
@@ -171,7 +171,7 @@ contradicting (13). Hence ρ_τ(h) is not onto at every relational type τ. This
 Now fix any admitted type σ, with q_σ outside the image as above. At Y define a predicate F_σ of type σt by the following entire truth profile, for every outgoing l:Y→W and x∈D_σ(W):
 
 ```math
-F_\sigma(l,x)\text{ is false exactly when }l=h\text{ and }x=q_\sigma.
+F_\sigma(l,x)\text{ is false exactly when }l=h\text{ and }x=q_\sigma
 \tag{14}
 ```
 
@@ -180,7 +180,7 @@ The one-point fullness fact from §1 admits this profile. For every current p∈
 ```math
 Y\models\forall p^\sigma\,\Box F_\sigma p
 \quad\text{and}\quad
-Y\not\models\Box\forall p^\sigma\,F_\sigma p.
+Y\not\models\Box\forall p^\sigma\,F_\sigma p
 \tag{15}
 ```
 
@@ -193,7 +193,7 @@ Adjoin a new predecessor * over X by the established [root truth-profile constru
 ```math
 A_e=B_e(X),\qquad
 A_{\sigma_1\cdots\sigma_nt}
-=\{0,1\}^{\prod_i A_{\sigma_i}}\times B_{\sigma_1\cdots\sigma_nt}(X).
+=\{0,1\}^{\prod_i A_{\sigma_i}}\times B_{\sigma_1\cdots\sigma_nt}(X)
 \tag{16}
 ```
 
@@ -209,14 +209,14 @@ Use only the split epimorphisms b:X→Z from §2 as separating evaluation arrows
 
 ```math
 E_b=(v_b,S_b),\qquad
-v_b(p):=[b\in\pi_t p].
+v_b(p):=[b\in\pi_t p]
 \tag{17}
 ```
 
 It is admitted by (16), and
 
 ```math
-E_b(p)=\bigl(v_b(p),S_b(\pi_t p)\bigr).
+E_b(p)=\bigl(v_b(p),S_b(\pi_t p)\bigr)
 \tag{18}
 ```
 

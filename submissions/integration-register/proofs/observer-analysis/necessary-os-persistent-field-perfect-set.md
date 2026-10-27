@@ -18,7 +18,7 @@ Fix an admitted carrier type σ and a tuple
 of the project's relational real-field data. All its predicates and relation graphs are persistent, including X and N, and assume
 
 ```math
-\Box\mathrm{Real}_\sigma(\mathfrak R).
+\Box\mathrm{Real}_\sigma(\mathfrak R)
 \tag{2}
 ```
 
@@ -52,7 +52,7 @@ and take their supremum. The finite-prefix relation and its set of partial sums 
 ```math
 \forall B^{\sigma t}\,[B\subseteq N\to
  \exists c\in X\;(\mathrm{Cantor}(c)\land
-        \forall n\in N\,[\mathrm{Digit}(c,n)\leftrightarrow Bn])].
+        \forall n\in N\,[\mathrm{Digit}(c,n)\leftrightarrow Bn])]
 \tag{4}
 ```
 
@@ -65,7 +65,7 @@ Let q_k be the fixed arithmetic enumeration of the field's rationals, expressed 
 \quad\Longleftrightarrow\quad
 x\in X\ \land\ \forall k\in N\,
  [\mathrm{Digit}(c,\langle n,k\rangle)
-                                      \leftrightarrow q_k<x].
+                                      \leftrightarrow q_k<x]
 \tag{5}
 ```
 
@@ -74,7 +74,7 @@ The notation q_k is eliminable using its graph. Rational density makes an entry 
 ```math
 \mathrm{Seq}(c):=
 c\in X\land\mathrm{Cantor}(c)\land
-\forall n\in N\;\exists x\in X\;\mathrm{Entry}(c,n,x).
+\forall n\in N\;\exists x\in X\;\mathrm{Entry}(c,n,x)
 \tag{6}
 ```
 
@@ -87,7 +87,7 @@ Consequently, for any admitted A⊆X,
 \quad\Longleftrightarrow\quad
 \exists c\in X\,[\mathrm{Seq}(c)\land
  \forall x\in X\,(Ax\to
-          \exists n\in N\;\mathrm{Entry}(c,n,x))].
+          \exists n\in N\;\mathrm{Entry}(c,n,x))]
 \tag{7}
 ```
 
@@ -105,7 +105,7 @@ A rational Cantor scheme assigns a nondegenerate closed rational interval I_s to
 \mathrm{Body}(c,x):=
 x\in X\land\forall n\in N\;\exists s\in N\,
  [s\text{ codes a binary string of length }n
-                          \land x\in I_s(c)].
+                          \land x\in I_s(c)]
 \tag{8}
 ```
 
@@ -124,7 +124,7 @@ We have proved the exact equivalence
 &\exists P^{\sigma t}\,[P\subseteq A\land P\text{ is nonempty perfect}]\\
 &\hspace{12mm}\Longleftrightarrow\quad
 \exists c\in X\,[\mathrm{Valid}(c)\land
-       \forall x\in X\,(\mathrm{Body}(c,x)\to Ax)].
+       \forall x\in X\,(\mathrm{Body}(c,x)\to Ax)]
 \end{aligned}
 \tag{9}
 ```
@@ -143,7 +143,7 @@ Write $`\mathrm{PSP}(\mathfrak R)`$ for the assertion that every admitted A⊆X 
 &\land\neg\exists c\in X\;(\mathrm{Seq}(c)\land
              \forall x\in X\,[Ax\to\exists n\in N\;\mathrm{Entry}(c,n,x)])\\
 &\land\neg\exists d\in X\;(\mathrm{Valid}(d)\land
-             \forall x\in X\,[\mathrm{Body}(d,x)\to Ax])].
+             \forall x\in X\,[\mathrm{Body}(d,x)\to Ax])]
 \end{aligned}
 \tag{10}
 ```
@@ -155,7 +155,7 @@ The equivalence with failure of PSP was proved from Real. Necessitating that clo
 ```math
 \boxed{\mathrm{PSP}(\mathfrak R)
  \leftrightarrow\Box\mathrm{PSP}(\mathfrak R)
- \leftrightarrow\Diamond\mathrm{PSP}(\mathfrak R).}
+ \leftrightarrow\Diamond\mathrm{PSP}(\mathfrak R)}
 \tag{11}
 ```
 
@@ -166,7 +166,7 @@ The same is true of its negation. Combining (11) with the necessary form of the 
                \Box\mathrm{CH}(\mathfrak R),
 \qquad
 \Diamond\neg\mathrm{CH}(\mathfrak R)\to
-               \Box\neg\mathrm{PSP}(\mathfrak R).
+               \Box\neg\mathrm{PSP}(\mathfrak R)
 \tag{12}
 ```
 
@@ -190,7 +190,7 @@ For dependent choice, define the principle with an arbitrary prescribed initial 
 ```math
 \exists H\;\exists x_0\in X\,
 [\mathrm{Serial}_{X,X}(H)\land
-       \forall c\in X\;\neg\mathrm{PathCode}(H,x_0,c)].
+       \forall c\in X\;\neg\mathrm{PathCode}(H,x_0,c)]
 \tag{14}
 ```
 

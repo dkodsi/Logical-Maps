@@ -41,7 +41,7 @@ There is a useful necessary bound. For every selected test type ρ,
 
 ```math
 \Box\forall W^{\rho t}\,
- [P(W)\land q_W\to W\hookrightarrow Z].
+ [P(W)\land q_W\to W\hookrightarrow Z]
 \tag{3}
 ```
 
@@ -63,21 +63,21 @@ Then
 \mathrm{C5}+\Box\mathrm{OS}+\Box\mathrm{CR}_{\sigma,T}
 \vdash
 H_\sigma\land U_{\sigma,\mathrm{CH}}
-\to\Box U_{\sigma,\mathrm{CH}}.
+\to\Box U_{\sigma,\mathrm{CH}}
 \tag{4}
 ```
 
 Here Hσ is existence of a real structure, and U_{σ,CH} is the native universal CH sentence. To prove (4), choose a current CH real structure with carrier X₀. Suppose a possible real structure on X has an admitted subproperty A witnessing failure of CH. At that world, necessary CR supplies persistent carriers Z and Y and admitted bijections
 
 ```math
-X\approx Z,\qquad A\approx Y.
+X\approx Z,\qquad A\approx Y
 \tag{5}
 ```
 
 Thus q_Z and q_Y hold there. Neither Z nor Y injects into the fixed N: real fields are uncountable, and A is the uncountable subset witnessing failure. All four facts are noncontingent. They therefore hold currently as well. Realize both cut families in X₀. Current CH gives
 
 ```math
-Z\approx X_0\approx Y.
+Z\approx X_0\approx Y
 \tag{6}
 ```
 
@@ -91,7 +91,7 @@ The same argument applies starting at any possible CH real world. At that world,
 \mathrm{C5}+\Box\mathrm{OS}+\Box\mathrm{CR}_{\sigma,T}
 \vdash
 \Box U_{\sigma,\mathrm{CH}}\ \lor\
-\Box U_{\sigma,\neg\mathrm{CH}}.
+\Box U_{\sigma,\neg\mathrm{CH}}
 \tag{7}
 ```
 

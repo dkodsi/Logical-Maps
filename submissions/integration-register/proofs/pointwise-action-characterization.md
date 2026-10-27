@@ -5,13 +5,13 @@ Ordinary proofs, 26 October 2026. The standing logic is C with its fixed relatio
 Let R be the evaluation object of a small category. In its full action model, propositions at V are all subsets of Out(V). Write q(u) for the membership bit of the arrow u in q. Transport is
 
 ```math
-(a^t p)(u)=p(ua).
+(a^t p)(u)=p(ua)
 ```
 
 A raw profile f_d:P(Out(cod d))->2 for each d out of R specifies an admitted E:tt. At a:R->V its induced operation obeys
 
 ```math
-(E_a q)(u)=f_{ua}(u^t q).
+(E_a q)(u)=f_{ua}(u^t q)
 ```
 
 The full model's other types retain their standard full domains. Nothing below changes the construction or the interpretation of C.
@@ -38,7 +38,7 @@ Fix h:R->S, h different from 1_R, and choose j:S->R with jh=1_R. Define the raw 
 f_d(q)=\begin{cases}
 q(h),&d=1_R,\\
 q(1_S)\mathbin\oplus q(j)\mathbin\oplus q(hj),&d=h,\\
-q(1_{\mathrm{cod}(d)}),&\text{otherwise}.
+q(1_{\mathrm{cod}(d)}),&\text{otherwise}
 \end{cases}
 ```
 
@@ -47,7 +47,7 @@ Here xor is addition of truth bits modulo two. These are arbitrary allowed raw e
 At the root its operation is exactly the Boolean atom transposition exchanging 1_R and h and fixing every other arrow. Indeed its values at those two coordinates are p(h) and
 
 ```math
-p(h)\oplus p(jh)\oplus p(hjh)=p(1_R).
+p(h)\oplus p(jh)\oplus p(hjh)=p(1_R)
 ```
 
 All other coordinates remain p(d). Thus E preserves conjunction pointwise at R.
@@ -58,14 +58,14 @@ It is an involution as a WHOLE operation, including on every newly quantified su
 (E_aq)(u)=\begin{cases}
 q(hu),&ua=1_R,\\
 q(u)\oplus q(ju)\oplus q(hju),&ua=h,\\
-q(u),&\text{otherwise}.
+q(u),&\text{otherwise}
 \end{cases}
 ```
 
 If ua=1_R, then (hu)a=h and the second application gives
 
 ```math
-q(hu)\oplus q(jhu)\oplus q(hjhu)=q(u).
+q(hu)\oplus q(jhu)\oplus q(hjhu)=q(u)
 ```
 
 If ua=h, put v_0=ju and v_1=hju. Then v_0a=1_R and v_1a=h. The displayed formula swaps the v_0 and v_1 coordinates. It toggles the u coordinate by their xor; since that xor is unchanged by the swap, applying E_a twice restores u. More explicitly E_aq(v_0)=q(v_1), E_aq(v_1)=q(v_0), and the two xor contributions cancel. Coordinates in the third case are fixed outright.
@@ -80,7 +80,7 @@ With the same h and j, take instead
 f_d(q)=\begin{cases}
 q(h),&d=1_R,\\
 q(j),&d=h,\\
-q(1_{\mathrm{cod}(d)}),&\text{otherwise}.
+q(1_{\mathrm{cod}(d)}),&\text{otherwise}
 \end{cases}
 ```
 
@@ -107,7 +107,7 @@ This represents every current functional relation and establishes Plenitude. Wit
 The recorded alternative derivation, checked with the proved-only Engine and no optional background, is
 
 ```math
-\mathrm{RC}+\mathrm{ND}+\mathrm{Relational\ Choice}\ \Longrightarrow\ \mathrm{FC}.
+\mathrm{RC}+\mathrm{ND}+\mathrm{Relational\ Choice}\ \Longrightarrow\ \mathrm{FC}
 ```
 
 The precise rule chain is:
@@ -124,7 +124,7 @@ The existing full two-object double-retraction model has h:R->S and j_1,j_2:S->R
 
 ```math
 E_R(a,b)=(b,a),\qquad
-E_S(q)=(x\oplus y_1\oplus z_1,z_1,z_2,y_1,y_2).
+E_S(q)=(x\oplus y_1\oplus z_1,z_1,z_2,y_1,y_2)
 ```
 
 The latter squares to the identity. The model lacks coherent retractions, Strong Actuality and Gallin Extensional Comprehension. It nevertheless HAS current Plenitude and Functional Choice. The current proved-only Engine confirms these positive and negative verdicts. It fails BF_t and Rev. Consequently it must not be described as a countermodel to current Plenitude or current Functional Choice.

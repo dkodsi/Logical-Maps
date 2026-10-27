@@ -14,7 +14,7 @@ Let
 
 ```math
 \mathbb P=\mathrm{Fn}(A,2,{<}\omega),
-\qquad B=\mathrm{RO}(\mathbb P).
+\qquad B=\mathrm{RO}(\mathbb P)
 \tag{1}
 ```
 
@@ -29,7 +29,7 @@ Write $`\dot S`$ for the canonical name for the set of coordinates receiving bit
 For every ground set T, no condition forces
 
 ```math
-\dot S\approx\check T.
+\dot S\approx\check T
 \tag{2}
 ```
 
@@ -37,14 +37,14 @@ Suppose otherwise that p forces (2), where the statement asserts existence of a 
 
 ```math
 p\Vdash \dot S\mathbin{\triangle}\{\check a\}
-                      \approx\check T.
+                      \approx\check T
 \tag{3}
 ```
 
 Extend p to q by assigning bit one at a. Together, (2) and (3) give
 
 ```math
-q\Vdash \dot S\approx\dot S\setminus\{\check a\}.
+q\Vdash \dot S\approx\dot S\setminus\{\check a\}
 \tag{4}
 ```
 
@@ -57,7 +57,7 @@ Equivalently, the Boolean truth value of (2) is zero for each old T. If it were 
 Use the ground real numbers as the individual domain and B as the proposition domain:
 
 ```math
-D_e=\mathbb R^M,\qquad D_t=B.
+D_e=\mathbb R^M,\qquad D_t=B
 \tag{5}
 ```
 
@@ -78,7 +78,7 @@ Leibniz equality is crisp at every type. If x and y are different domain objects
 \|\Box\varphi\|=
 \begin{cases}
 1,&\|\varphi\|=1,\\
-0,&\|\varphi\|\ne1.
+0,&\|\varphi\|\ne1
 \end{cases}
 \tag{7}
 ```
@@ -104,7 +104,7 @@ Since U meets (8),
 ```math
 \bigvee_i f(i)\in U
 \quad\Longleftrightarrow\quad
-\exists i\in I\ f(i)\in U.
+\exists i\in I\ f(i)\in U
 \tag{9}
 ```
 
@@ -117,7 +117,7 @@ Every finite bit flip extends to an internal complete Boolean automorphism of B,
 The finite-flip group is weakly homogeneous. Given p and q, flip precisely those coordinates in their common domain on which their bits disagree. The resulting image of p is compatible with q. Consequently, for every nonzero $`b\in B`$,
 
 ```math
-\bigvee_{\pi\text{ a finite bit flip}}\pi(b)=1.
+\bigvee_{\pi\text{ a finite bit flip}}\pi(b)=1
 \tag{10}
 ```
 
@@ -127,7 +127,7 @@ For distinct propositions u and v apply (10) to their nonzero symmetric differen
 
 ```math
 \Box\mathrm{Rev}_{\rm all},
-\qquad\text{hence}\qquad\Box\mathrm{OS}_{\rm all}.
+\qquad\text{hence}\qquad\Box\mathrm{OS}_{\rm all}
 \tag{11}
 ```
 
@@ -158,7 +158,7 @@ The generic subset is an admitted real subproperty: define $`S:D_e\to B`$ by ass
 For any admitted property $`Z:D_\rho\to B`$, native persistence is
 
 ```math
-P(Z):=\Box\forall x\,(Zx\to\Box Zx).
+P(Z):=\Box\forall x\,(Zx\to\Box Zx)
 \tag{13}
 ```
 
@@ -174,7 +174,7 @@ and (14) is an old M-set by Separation. This conclusion applies to every finite 
 Every admitted candidate graph $`F:D_e\times D_\rho\to B`$ is an M-coded Boolean name for a relation on the corresponding ground domains. If it were currently a bijection between S and persistent Z, its interpretation in the generic extension would be a bijection
 
 ```math
-S_U\approx\check T_Z.
+S_U\approx\check T_Z
 \tag{15}
 ```
 
@@ -184,14 +184,14 @@ For every standard finite type ρ we obtain
 
 ```math
 \left\|\exists Z^{\rho t}
-          [P(Z)\land S\approx Z]\right\|=0.
+          [P(Z)\land S\approx Z]\right\|=0
 \tag{16}
 ```
 
 The same S witnesses every one of these separate instances. Given any fixed finite list T, the finite disjunction of (16) is zero. Applying it to the necessarily real tuple (12) shows
 
 ```math
-\Box\neg\mathrm{CR}_{e,T}.
+\Box\neg\mathrm{CR}_{e,T}
 \tag{17}
 ```
 
@@ -204,7 +204,7 @@ The old set A itself is an endpoint-valued real subproperty. It remains infinite
 Thus A necessarily witnesses failure of the project's subset-cardinality formulation of CH in the persistent real field (12). Native real-field categoricity and transport of the relevant relations give
 
 ```math
-\Box U_{e,\neg\mathrm{CH}}.
+\Box U_{e,\neg\mathrm{CH}}
 \tag{18}
 ```
 

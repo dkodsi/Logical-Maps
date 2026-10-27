@@ -17,13 +17,13 @@ Here (Q) qualifies one observer through every type. It is not an illicit object-
 **Derived idempotence (I).** Boolean preservation and the quantifier law at t already give the whole identity $`E\circ E=E`$. Put
 
 ```math
-d_E:=\forall p^t.\,(Ep\leftrightarrow p).
+d_E:=\forall p^t.\,(Ep\leftrightarrow p)
 ```
 
 Whole preservation gives
 
 ```math
-E(d_E)=\forall p^t.\,(E(Ep)\leftrightarrow Ep).
+E(d_E)=\forall p^t.\,(E(Ep)\leftrightarrow Ep)
 ```
 
 Every Ep is an endpoint fixed by E, so the right side is currently true. The left side is itself an endpoint, hence equals Top. The universal coextension assertion is therefore necessary; C's Intensionality and β/η yield the whole identity E∘E=E. No optional premise is necessitated and no ambient Functionality is used. The canonicity argument below separately establishes its whole-operation comparison identities.
@@ -35,13 +35,13 @@ This improves the endpoint case of the [C5 core construction](observer-classical
 Use $`r_{e}`$=id externally; no forbidden ee object is introduced. Put
 
 ```math
-r_t=E,\qquad r_{\sigma\tau}(f)=\lambda x.\,r_\tau(f(r_\sigma(x))).\tag{2.1}
+r_t=E,\qquad r_{\sigma\tau}(f)=\lambda x.\,r_\tau(f(r_\sigma(x)))\tag{2.1}
 ```
 
 At an e input omit the external $`r_{e}`$. Every relational normalizer is an admitted lambda term. Whole β/η identities and congruence give, inductively from (I),
 
 ```math
-r_\sigma\circ r_\sigma=r_\sigma.\tag{2.2}
+r_\sigma\circ r_\sigma=r_\sigma\tag{2.2}
 ```
 
 as a whole operation identity. At the arrow step the composite rewrites to $`r_{\tau}`$ $`r_{\tau}`$ f $`r_{\sigma}`$ $`r_{\sigma}`$; replace the two whole composites by their inductive identities. This is equational rewriting under lambda, not inference of function identity from merely pointwise agreement.
@@ -49,7 +49,7 @@ as a whole operation identity. At the arrow step the composite rewrites to $`r_{
 Write $`S_{\sigma}`$=Fix($`r_{\sigma}`$), with $`S_{e}`$=$`D_{e}`$. Every fixed set is nonempty. An object f in $`S_{\sigma\tau}`$ satisfies the whole identities
 
 ```math
-r_\tau\circ f=f,\qquad f\circ r_\sigma=f.\tag{2.3}
+r_\tau\circ f=f,\qquad f\circ r_\sigma=f\tag{2.3}
 ```
 
 Indeed f=$`r_{\tau}`$ f $`r_{\sigma}`$; postcompose by $`r_{\tau}`$ or precompose by $`r_{\sigma}`$ and use (2.2). Consequently fixed functions take fixed inputs to fixed outputs and ignore input normalization.
@@ -57,7 +57,7 @@ Indeed f=$`r_{\tau}`$ f $`r_{\sigma}`$; postcompose by $`r_{\tau}`$ or precompos
 In flattened form $`\tau=\sigma_1\cdots\sigma_nt`$, a fixed relation f has the whole terminal-output identity and all input-invariance identities
 
 ```math
-\begin{aligned}f&=\lambda\bar x.\,E(f[\bar x]),\\f&=\lambda\bar x.\,f[r_{\sigma_1}(x_1),\ldots,r_{\sigma_n}(x_n)].\end{aligned}\tag{2.4}
+\begin{aligned}f&=\lambda\bar x.\,E(f[\bar x]),\\f&=\lambda\bar x.\,f[r_{\sigma_1}(x_1),\ldots,r_{\sigma_n}(x_n)]\end{aligned}\tag{2.4}
 ```
 
 These follow by unrolling (2.1), applying idempotence at each input and at t, and rewriting whole composites. All terminal values of f are endpoints by (V). Boolean operations preserve fixed objects, by (B).
@@ -67,7 +67,7 @@ These follow by unrolling (2.1), applying idempotence at each input and at t, an
 If an admitted predicate H:σ t satisfies $`E\circ H=H`$ as a whole identity, then (Q) gives E($`Q_\sigma`$ H)=$`Q_\sigma`$ H. Hence $`Q_\sigma`$ H is an endpoint. If H is true of every original input, the original quantifier truth clause says $`Q_\sigma`$ H is true; its being an endpoint now gives
 
 ```math
-Q_\sigma H=\top.\tag{3.1}
+Q_\sigma H=\top\tag{3.1}
 ```
 
 There is no optional necessitation here. The actual universal is an endpoint and actually true. Iterating the whole quantifier identities gives the same conclusion for any finite tuple of input types.
@@ -83,19 +83,19 @@ In particular fixed arrow objects are determined by their values on fixed inputs
 For any original objects a,b of type σ, put
 
 ```math
-a\mathrel{\approx_E}b\quad\Longleftrightarrow\quad E(\delta_\sigma(a,b))=\top.\tag{4.1}
+a\mathrel{\approx_E}b\quad\Longleftrightarrow\quad E(\delta_\sigma(a,b))=\top\tag{4.1}
 ```
 
 The Boolean and $`Q_{\sigma t}`$ laws, applied to the defining Leibniz formula, give the exact actual-truth criterion
 
 ```math
-a\mathrel{\approx_E}b\quad\Longleftrightarrow\quad\forall P^{\sigma t}.\,(E(Pa)\leftrightarrow E(Pb)).\tag{4.2}
+a\mathrel{\approx_E}b\quad\Longleftrightarrow\quad\forall P^{\sigma t}.\,(E(Pa)\leftrightarrow E(Pb))\tag{4.2}
 ```
 
 This is an equivalence relation. When a,b are fixed, normalizing P gives
 
 ```math
-\begin{gathered}P^{\prime}=r_{\sigma t}(P)=E\circ P\circ r_\sigma,\\P^{\prime}a=E(Pa),\qquad P^{\prime}b=E(Pb).\end{gathered}\tag{4.3}
+\begin{gathered}P^{\prime}=r_{\sigma t}(P)=E\circ P\circ r_\sigma,\\P^{\prime}a=E(Pa),\qquad P^{\prime}b=E(Pb)\end{gathered}\tag{4.3}
 ```
 
 Every P' is fixed, and every fixed predicate occurs among these. Thus on fixed objects approx_E is exactly indistinguishability by fixed predicates.
@@ -131,7 +131,7 @@ Thus every eligible retraction has the same individual quotient.
 Now let E,F satisfy all four qualifications of Section 1. Crucially we can prove the whole mutual triple identities without upgrading any arbitrary pointwise equality:
 
 ```math
-E\circ F\circ E=E,\qquad F\circ E\circ F=F.\tag{6.1}
+E\circ F\circ E=E,\qquad F\circ E\circ F=F\tag{6.1}
 ```
 
 Indeed EFE is $`r_{tt}^E`$(F), so is E-normalized. E is also E-normalized by whole idempotence. On the two E-fixed arguments Bottom and Top, both operations are identity because F fixes endpoints. The Extensionality Lemma inside the E-fixed hierarchy gives EFE=E as a whole operation identity. Exchange E,F for the other equation.
@@ -139,7 +139,7 @@ Indeed EFE is $`r_{tt}^E`$(F), so is E-normalized. E is also E-normalized by who
 Equational induction through (2.1) now gives
 
 ```math
-\begin{aligned}r_\sigma^E r_\sigma^F r_\sigma^E&=r_\sigma^E,\\r_\sigma^F r_\sigma^E r_\sigma^F&=r_\sigma^F.\end{aligned}\tag{6.2}
+\begin{aligned}r_\sigma^E r_\sigma^F r_\sigma^E&=r_\sigma^E,\\r_\sigma^F r_\sigma^E r_\sigma^F&=r_\sigma^F\end{aligned}\tag{6.2}
 ```
 
 Define Phi_sigma(x)=$`r_{\sigma}^F`$(x) on the E-fixed relational domain. At e use the identity on the common quotient. Equations (6.2) give inverse $`r_{\sigma}^E`$. The maps are identity on the endpoint proposition domain.
@@ -147,7 +147,7 @@ Define Phi_sigma(x)=$`r_{\sigma}^F`$(x) on the E-fixed relational domain. At e u
 They preserve application: for E-fixed f,x, using (2.3) and (6.2),
 
 ```math
-\begin{aligned}\Phi(f)(\Phi(x))&=r_\tau^F(f(r_\sigma^F(x)))\\&=r_\tau^F(f(r_\sigma^E r_\sigma^F r_\sigma^E(x)))\\&=r_\tau^F(f(x))=\Phi(f(x)).\end{aligned}\tag{6.3}
+\begin{aligned}\Phi(f)(\Phi(x))&=r_\tau^F(f(r_\sigma^F(x)))\\&=r_\tau^F(f(r_\sigma^E r_\sigma^F r_\sigma^E(x)))\\&=r_\tau^F(f(x))=\Phi(f(x))\end{aligned}\tag{6.3}
 ```
 
 At individual input use the shared quotient; the calculation is just the external identity normalization. Bijection of argument domains and identity at t preserve all quantifiers, Booleans and current truth. Thus Φ is a pointed logical isomorphism. These isomorphisms compose coherently: an application-preserving map fixing e and t is unique by induction through the core's actual function types.
@@ -163,7 +163,7 @@ Individual constants are also preserved, since their core interpretations are th
 Functional Choice descends instancewise exactly as in the C5 argument. For a core serial R, its original normalized relation ignores normalized inputs and outputs. Core seriality therefore gives original current seriality. An ambient selecting operation f exists by the given FC instance. Its normalization g=$`r_{\sigma\tau}`$(f) is a core operation, and for a fixed input x,
 
 ```math
-R(x,g(x))=R(x,r_\tau(f(x)))=R(x,f(x)).\tag{7.1}
+R(x,g(x))=R(x,r_\tau(f(x)))=R(x,f(x))\tag{7.1}
 ```
 
 This is the same proposition. Individual classes are respected by the core operations. No observer is applied to an arbitrary merely true selector assertion.

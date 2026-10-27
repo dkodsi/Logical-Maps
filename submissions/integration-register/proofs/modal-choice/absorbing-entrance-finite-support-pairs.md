@@ -12,7 +12,7 @@ There is an explicit set-sized model of C with
 ```math
 \boxed{IC_{\rm all}+\Box BC_{\rm all}
 +\Box\mathrm{Atomicity}_{\rm all}+\Box\mathrm{Actuality}
-+\neg\Box IC_e.}
++\neg\Box IC_e}
 \tag{1}
 ```
 
@@ -34,7 +34,7 @@ no arrows s→r, and endomorphism group ℤ at s. Write its group
 operation additively, and impose
 
 ```math
-k\circ a=a\quad(k\in\mathbb Z).
+k\circ a=a\quad(k\in\mathbb Z)
 \tag{2}
 ```
 
@@ -45,7 +45,7 @@ addition and the displayed absorbing rule.
 The individual domain at both objects is
 
 ```math
-X=\{A_n^0,A_n^1:n\in\mathbb N\}.
+X=\{A_n^0,A_n^1:n\in\mathbb N\}
 ```
 
 Every category arrow acts as the identity on X. Separately, let
@@ -66,7 +66,7 @@ $`\tau=\sigma_1\cdots\sigma_m t`$, including m=0, set
 ```math
 E_\tau(v)=\coprod_{h:v\to w}\prod_{i=1}^m D_{\sigma_i}(w),
 \qquad
-D_\tau(v)=\{Y\subseteq E_\tau(v):Y\text{ has finite }\Gamma\text{-support}\}.
+D_\tau(v)=\{Y\subseteq E_\tau(v):Y\text{ has finite }\Gamma\text{-support}\}
 \tag{3}
 ```
 
@@ -79,7 +79,7 @@ so D_t(v) is the entire powerset of the arrows out of v.
 Transport along k:v→w is the usual precomposition of intensions:
 
 ```math
-(k_*Y)(h;\bar x)=Y(h\circ k;\bar x).
+(k_*Y)(h;\bar x)=Y(h\circ k;\bar x)
 \tag{4}
 ```
 
@@ -126,7 +126,7 @@ extensions F(1_r) and F(a) are nonempty. Choose x∈F(1_r) and
 y∈F(a), and define
 
 ```math
-G(1_r)=\{x\},\qquad G(a)=\{y\}.
+G(1_r)=\{x\},\qquad G(a)=\{y\}
 \tag{5}
 ```
 
@@ -142,7 +142,7 @@ For the failure at s, fix an explicit bijection ν:ℕ→ℤ and define
 the intension F:et by
 
 ```math
-F(\nu(n))=\{A_n^0,A_n^1\}.
+F(\nu(n))=\{A_n^0,A_n^1\}
 \tag{6}
 ```
 

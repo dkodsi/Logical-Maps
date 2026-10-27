@@ -4,7 +4,7 @@
 
 ```math
 C+\mathrm{Vicinity}+RC_{(\sigma t),\sigma}
-\quad\Longrightarrow\quad TC_\sigma.
+\quad\Longrightarrow\quad TC_\sigma
 ```
 
 This holds at every admitted type σ, including e. Choice is unboxed; Boolean Completeness and Actuality are not premises. Unboxed NDₜ also suffices in place of Vicinity. At σ=t the required Choice instance is RC_(tt,t), not RC_(t,t).

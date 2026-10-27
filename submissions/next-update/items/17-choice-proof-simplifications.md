@@ -6,7 +6,7 @@ Over C,
 
 ```math
 \Box\mathrm{Plenitude}+\mathrm{Relational\ Choice}
-\quad\Longleftrightarrow\quad\Box\mathrm{Functional\ Choice}.
+\quad\Longleftrightarrow\quad\Box\mathrm{Functional\ Choice}
 ```
 
 Select a functional graph, represent it using Plenitude, and apply observer transport. Boxed Plenitude supplies the required observers independently of No Pure Contingency. This proves the existing equivalence without the conjugation argument or the alternative Zorn/well-ordering route.
@@ -16,7 +16,7 @@ The sharp instancewise theorem is
 ```math
 \mathrm C+\mathrm{Atomicity}_t+\mathrm{BF}_\Delta+\mathrm{FC}_{\sigma,\tau}
 \quad\vdash\quad\Box\mathrm{FC}_{\sigma,\tau},
-\qquad\Delta=\{\sigma\tau t,\sigma,\tau,\sigma\tau\},\quad\tau\ne e.
+\qquad\Delta=\{\sigma\tau t,\sigma,\tau,\sigma\tau\},\quad\tau\ne e
 ```
 
 Its shortest proof uses principal atom tests directly: transform the input relation, reuse the operation witness, and conclude every atom entails the Choice sentence. No full OS construction, extra BF at t, ND or C5 is needed.

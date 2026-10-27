@@ -17,7 +17,7 @@ N_\sigma(Z)&:=\forall W^{\nu t}
  [(W0_\sigma\land\forall Y^\nu(WY\to W(S_\sigma Y)))\to WZ],\\
 \mathrm{Fin}_\sigma&:=\exists Z^\nu
  [N_\sigma(Z)\land Z(\lambda x^\sigma.\top)],\\
-\mathrm{Inf}_\sigma&:=\neg\mathrm{Fin}_\sigma.
+\mathrm{Inf}_\sigma&:=\neg\mathrm{Fin}_\sigma
 \end{aligned}
 \tag{1}
 ```
@@ -26,7 +26,7 @@ N is exactly FiniteCardinality, not an externally imposed standard natural-numbe
 
 ```math
 L_{n,\sigma}:=\exists x_1\ldots x_n
- \bigwedge_{i<j}x_i\ne x_j\qquad(n\ge1).
+ \bigwedge_{i<j}x_i\ne x_j\qquad(n\ge1)
 \tag{2}
 ```
 
@@ -34,7 +34,7 @@ For comparison define the finite upper bound
 
 ```math
 U_{n,\sigma}:=\exists x_1\ldots x_n\forall y^\sigma
- \bigvee_{i=1}^n y=x_i\qquad(n\ge1).
+ \bigvee_{i=1}^n y=x_i\qquad(n\ge1)
 \tag{3}
 ```
 
@@ -52,7 +52,7 @@ For each fixed n, ordinary C proves the following finite-premise implications:
 
 ```math
 \mathrm{BF}_\sigma+U_{n,\sigma}
- \Longrightarrow\Box U_{n,\sigma}.
+ \Longrightarrow\Box U_{n,\sigma}
 \tag{5}
 ```
 
@@ -70,7 +70,7 @@ The recorded [Possible Infinity plus BF proof](../../../classicism-results-2026-
 
 ```math
 \mathrm{BF}_\sigma\to
- (\mathrm{Fin}_\sigma\to\Box\mathrm{Fin}_\sigma).
+ (\mathrm{Fin}_\sigma\to\Box\mathrm{Fin}_\sigma)
 \tag{6}
 ```
 
@@ -84,7 +84,7 @@ A useful local sufficient condition for the latter is
 \boxed{
 C+\mathrm{ND}_t+\Box\mathrm{BF}_\sigma
 \quad\vdash\quad
-\mathrm{Inf}_\sigma\to\Box\mathrm{Inf}_\sigma.
+\mathrm{Inf}_\sigma\to\Box\mathrm{Inf}_\sigma
 }
 \tag{7}
 ```
@@ -93,7 +93,7 @@ To prove it, necessitate the discharged C theorem (6), then use □BF_σ and K t
 
 ```math
 \Box(\mathrm{Fin}_\sigma\to
-                  \Box\mathrm{Fin}_\sigma).
+                  \Box\mathrm{Fin}_\sigma)
 \tag{8}
 ```
 
@@ -106,7 +106,7 @@ C5 supplies ND_t and □BF_σ for every admitted σ. Therefore
 ```math
 \boxed{C5\vdash
  (\mathrm{Inf}_\sigma\leftrightarrow\Box\mathrm{Inf}_\sigma)
- \land(\mathrm{Fin}_\sigma\leftrightarrow\Box\mathrm{Fin}_\sigma).}
+ \land(\mathrm{Fin}_\sigma\leftrightarrow\Box\mathrm{Fin}_\sigma)}
 \tag{9}
 ```
 
@@ -126,7 +126,7 @@ Each leaf has finitely many entities at every fixed type, so each leaf refutes b
 \boxed{
 C+\Box OS+\Box BF+\mathrm{Inf}_e+\mathrm{Inf}_t
  +\Diamond\neg\mathrm{Inf}_e
- +\Diamond\neg\mathrm{Inf}_t.
+ +\Diamond\neg\mathrm{Inf}_t
 }
 \tag{10}
 ```
@@ -141,7 +141,7 @@ Here is a new ordinary construction, in ZFC metatheory. It verifies
 \boxed{
 C+\Box OS+\Box BF+\Box ND_e
  +\{\Box L_{n,e}:n\ge1\}
- +\mathrm{Inf}_e+\Diamond\neg\mathrm{Inf}_e.
+ +\mathrm{Inf}_e+\Diamond\neg\mathrm{Inf}_e
 }
 \tag{11}
 ```
@@ -153,7 +153,7 @@ It has two stages r→s. The individual projection is the identity. The failure 
 For each positive integer m let F_m be the full extensional one-world relational type hierarchy with m individuals and two propositions. Take a nonprincipal ultrafilter U on the positive integers, and form the many-sorted Henkin ultraproduct
 
 ```math
-M=\prod_m F_m/U.
+M=\prod_m F_m/U
 \tag{12}
 ```
 
@@ -170,7 +170,7 @@ Set D_e(r)=E, with projection π_e=id_E to the leaf. Recursively, for every flat
 ```math
 D_\tau(r)=
  \mathcal P\!\left(\prod_{i=1}^k D_{\sigma_i}(r)\right)
- \times D_\tau(M).
+ \times D_\tau(M)
 \tag{13}
 ```
 
@@ -178,7 +178,7 @@ For k=0 this is D_t(r)=2×2. Projection π_τ takes the second component, so it 
 
 ```math
 (S,F)[\bar a]=
- (\mathbf1_{\bar a\in S},\ F[\pi\bar a]).
+ (\mathbf1_{\bar a\in S},\ F[\pi\bar a])
 \tag{14}
 ```
 
@@ -201,7 +201,7 @@ For each σ, if ∀x Box(Fx) is true at r, every root instance has both truth co
 Full observer admission can be checked explicitly. Besides identity I, let J:tt have root row p↦p_s and leaf operation the identity on {0,1}. Then
 
 ```math
-J(p_r,p_s)=(p_s,p_s).
+J(p_r,p_s)=(p_s,p_s)
 \tag{15}
 ```
 

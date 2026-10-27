@@ -12,13 +12,13 @@ Use the notation of [Number sets encoded by propositions](../dependencies/number
 
 ```math
 \nu=(et)t,\qquad N=\mathrm{FiniteCardinality}_e,
-\qquad a_n=(\mathrm{Suc}_e n)(\lambda x^e.\top).
+\qquad a_n=(\mathrm{Suc}_e n)(\lambda x^e.\top)
 ```
 
 The current members of N are the numbers in this argument. Define
 
 ```math
-\Psi:=\forall n^\nu\,(Nn\to\Diamond\Box a_n).
+\Psi:=\forall n^\nu\,(Nn\to\Diamond\Box a_n)
 \tag{1}
 ```
 
@@ -34,7 +34,7 @@ Let B be the current Boolean algebra of propositions. BC_t gives the actual alge
 
 ```math
 b:=\bigvee_{n\in N}a_n,
-\qquad d:=\bigvee_{n\in N}d_n.
+\qquad d:=\bigvee_{n\in N}d_n
 \tag{2}
 ```
 
@@ -43,7 +43,7 @@ These are joins of admitted properties: for example the second property is lambd
 Every existing join of Box-fixed propositions is Box-fixed. If z is such a join and p is one of its summands, monotonicity gives p = Box p ≤ Box z. Thus Box z is an upper bound, and leastness gives z ≤ Box z. T supplies the converse inequality. In particular,
 
 ```math
-d=\Box d.
+d=\Box d
 \tag{3}
 ```
 
@@ -55,7 +55,7 @@ The previous coding theorem identifies the algebra of number-set codes as
 
 ```math
 D=\{c\le b:\forall n\in N\,
-      (a_n\le c\ \lor\ a_n\land c=\bot)\}.
+      (a_n\le c\ \lor\ a_n\land c=\bot)\}
 \tag{4}
 ```
 
@@ -64,21 +64,21 @@ It is a Boolean algebra with relative unit b. Every nonzero member contains some
 Define the admitted operation
 
 ```math
-J:=\lambda c^t.(d\land c).
+J:=\lambda c^t.(d\land c)
 \tag{5}
 ```
 
 Finite meet distributes over every existing Boolean join. Since each c in D includes or excludes every a_n, equations (2) and (4) yield
 
 ```math
-J(c)=\bigvee\{d_n:n\in N\text{ and }a_n\le c\}.
+J(c)=\bigvee\{d_n:n\in N\text{ and }a_n\le c\}
 \tag{6}
 ```
 
 Every summand on the right is Box-fixed, so §2 proves
 
 ```math
-J(c)=\Box J(c)\qquad(c\in D).
+J(c)=\Box J(c)\qquad(c\in D)
 \tag{7}
 ```
 
@@ -88,7 +88,7 @@ The map J preserves Bottom, meets and finite joins, and sends b to d. Its relati
 
 ```math
 J(b\land\neg c)=d\land\neg c
-                =d\land\neg J(c).
+                =d\land\neg J(c)
 \tag{8}
 ```
 
@@ -108,7 +108,7 @@ and J(c) differs from J(e). Hence J restricts to a Boolean isomorphism from D on
 Suppose a family of members of D has an existing join s in D. The earlier coding theorem makes s its actual B-join. Therefore
 
 ```math
-J(s)=d\land s=\bigvee_c(d\land c)=\bigvee_c J(c).
+J(s)=d\land s=\bigvee_c(d\land c)=\bigvee_c J(c)
 \tag{9}
 ```
 

@@ -8,7 +8,7 @@ Work in classical set-theoretic metatheory with Choice and assume Con(ZFC). The 
 
 ```math
 N_+\models\mathrm{ZFC}+\mathrm{CH},\qquad
-N_-\models\mathrm{ZFC}+\neg\mathrm{CH}.
+N_-\models\mathrm{ZFC}+\neg\mathrm{CH}
 ```
 
 For each component, take its individual domain to be its own set of real numbers, its proposition domain to be its two-element Boolean algebra, and each admitted arrow domain to be the function set formed inside that component. Externalize membership and function evaluation. Internal extensionality ensures that two function objects with the same values on every available argument are identical. For each standard finite typed formula, Separation and Replacement supply the function denoted by its lambda abstraction; induction on terms and formulas establishes agreement with the corresponding set-theoretic interpretation. This yields a one-world extensional Henkin model of C at each component.
@@ -22,7 +22,7 @@ M_+\models\exists\mathfrak R\,
   (\mathrm{Real}_e(\mathfrak R)\land\mathrm{CH}(\mathfrak R)),
 \qquad
 M_-\models\exists\mathfrak R\,
-  (\mathrm{Real}_e(\mathfrak R)\land\neg\mathrm{CH}(\mathfrak R)).
+  (\mathrm{Real}_e(\mathfrak R)\land\neg\mathrm{CH}(\mathfrak R))
 ```
 
 The witnesses use the same admitted type e. Each component also satisfies Well-Ordering at every type: its internal well-orders have least elements for every nonempty admitted property, which is precisely the required Henkin reading.
@@ -68,7 +68,7 @@ Consequently, even the joint package of ☐Atomicity, ☐BF, ☐Strong Leibniz, 
 Let P and Q be the two closed pure type-e existential sentences displayed in §1. The component models establish their separate consistency with C. For any C-consistent closed pure sentence P, C does not prove the identity neg P = top. Pure Maximalism therefore supplies neg P != top, equivalently possibility P. Apply this to P and Q. Their simultaneous possibilities contradict both alternatives of Non-contingency of CH. Hence
 
 ```math
-\mathrm{Max}(C)+\text{Non-contingency of CH}\ \vdash\ \bot.
+\mathrm{Max}(C)+\text{Non-contingency of CH}\ \vdash\ \bot
 ```
 
 The consistency justification uses the metatheory of §1. No verification of the coalesced model’s structural flags is needed for this deduction. It also follows using Bacon’s same-type CH witnesses at et in place of the components above.

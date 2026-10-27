@@ -13,7 +13,7 @@ For full schemas over C,
 ```math
 \mathrm C+\mathrm{OS}+\text{Functional Choice}
 \quad\equiv\quad
-\mathrm C+\Box\text{Functional Choice}.
+\mathrm C+\Box\text{Functional Choice}
 ```
 
 The equivalence was already derivable through Plenitude, endpoint separation and No Pure Contingency. For this consequence, the new direct proof needs just one choice instance and one finite propositional separation instance:
@@ -21,7 +21,7 @@ The equivalence was already derivable through Plenitude, endpoint separation and
 ```math
 \mathrm C+S_{t,\Delta}+\mathrm{FC}_{\sigma,\tau}
 \quad\vdash\quad\Box\mathrm{FC}_{\sigma,\tau},
-\qquad\Delta=\{\sigma\tau t,\sigma,\tau,\sigma\tau\},\quad\tau\ne e.
+\qquad\Delta=\{\sigma\tau t,\sigma,\tau,\sigma\tau\},\quad\tau\ne e
 ```
 
 Transform the input relation by $`U^E[x,y]=E(U[x,y])`$. Its selecting operation $`f`$ can be reused unchanged in $`fx`$. Every qualified observer therefore accepts the choice sentence, and separation identifies it with Top. No C5 premise or observer surjectivity is required. See the [transport theorem, §3](../proofs/observer-witness-transport.md#3-transport-with-witnesses-used-as-arguments), and [Choice proof, §2](../proofs/observer-choice-transport.md#2-why-functional-choice-reflects).
@@ -36,7 +36,7 @@ Under C5 + ☐OS, each of the supported Choice, completeness and comprehension i
 
 ```math
 \Diamond A\quad\longleftrightarrow\quad A
-\quad\longleftrightarrow\quad\Box A.
+\quad\longleftrightarrow\quad\Box A
 ```
 
 The [positive-bounds proof](../proofs/necessary-observer-positive-bounds.md) gives the exact finite qualification lists. At a fixed carrier type, separately possible unary, binary and ternary Rigid Comprehension therefore suffice for CH and first-order analytical propagation. The [finite-support symmetric construction](../../integration-register/proofs/observer-analysis/necessary-os-ch-inaccessible-countermodel.md) refutes general CH propagation under C5 + ☐OS, starting from a strongly inaccessible cardinal. Its fixed real field is persistent and necessarily complete for nonempty bounded admitted subproperties.
@@ -49,7 +49,7 @@ Without native-☐ preservation, even necessary typed OS and BF do not suffice. 
 
 ```math
 C+BC_t+\Box\mathrm{OS}+\Box\mathrm{BF}_{\mathrm{all}}
-+\Diamond(\Box ND_t\land\neg BC_t).
++\Diamond(\Box ND_t\land\neg BC_t)
 ```
 
 Its target satisfies full C5. Thus OS + BC_t does not imply ☐(☐ND_t → BC_t). This removes a proposed completeness-persistence route to the Max comparison; the Max + OS + BC_t question remains open.

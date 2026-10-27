@@ -14,7 +14,7 @@ For E, let $`L_E`$⊣E⊣R_E be its [canonical admitted adjoints](canonical-adjo
 
 ```math
 q\le C_Eq,\qquad
-L_E(q\land Ep)=L_Eq\land p.
+L_E(q\land Ep)=L_Eq\land p
 \tag{1}
 ```
 
@@ -24,14 +24,14 @@ Use the local-transversal predicate from [Finite generation over an observer's i
 
 ```math
 \mathrm{Loc}_E(b):=
-\forall q\,[b\land C_E(b\land q)=b\land q].
+\forall q\,[b\land C_E(b\land q)=b\land q]
 \tag{2}
 ```
 
 By Functionality, (2) is equivalent to equality of the two displayed complete unary operations. We may use that identity as the definition of its guard. C5 makes the guard an endpoint: 1 when (2) holds, 0 when it fails. Define the admitted support
 
 ```math
-s_E:=\exists b^t\,[\mathrm{Loc}_E(b)\land b].
+s_E:=\exists b^t\,[\mathrm{Loc}_E(b)\land b]
 \tag{3}
 ```
 
@@ -44,7 +44,7 @@ For any b, $`L_E`$ maps [0,b] onto $`[0,L_E b]`$. An explicit preimage of $`p\le
 ```math
 \boxed{\mathrm{Loc}_E(b)
 \quad\longleftrightarrow\quad
-L_E\text{ is injective on }[0,b].}
+L_E\text{ is injective on }[0,b]}
 \tag{4}
 ```
 
@@ -66,7 +66,7 @@ The support has the following exact maximal-region characterization:
 \boxed{
 r\le s_E\quad\longleftrightarrow\quad
 \forall q\,[0\ne q\le r\ \to\
-\exists b\,(0\ne b\le q\land\mathrm{Loc}_E(b))].}
+\exists b\,(0\ne b\le q\land\mathrm{Loc}_E(b))]}
 \tag{6}
 ```
 
@@ -82,7 +82,7 @@ Let b:σt be any admitted family and write u=∃i^σ b_i. Then
 \boxed{
 \mathrm{Loc}_E(u)
 \quad\longleftrightarrow\quad
-\forall i,j\,\mathrm{Loc}_E(b_i\lor b_j).}
+\forall i,j\,\mathrm{Loc}_E(b_i\lor b_j)}
 \tag{7}
 ```
 
@@ -90,7 +90,7 @@ The forward direction is heredity. Conversely use admitted-join preservation and
 
 ```math
 u\land C_E(u\land q)
-=\exists i\,\exists j\,[b_i\land C_E(b_j\land q)].
+=\exists i\,\exists j\,[b_i\land C_E(b_j\land q)]
 \tag{8}
 ```
 
@@ -111,7 +111,7 @@ For G=F∘E, adjunction gives $`L_G=L_E\circ L_F`$. The interval-surjection obse
 \mathrm{Loc}_{F\circ E}(b)
 \quad\longleftrightarrow\quad
 \mathrm{Loc}_F(b)\land
-\mathrm{Loc}_E(L_Fb).}
+\mathrm{Loc}_E(L_Fb)}
 \tag{9}
 ```
 
@@ -120,7 +120,7 @@ Indeed, injection of the composite on [0,b] forces injection of L_F there. To ob
 The supports therefore obey the exact formula
 
 ```math
-\boxed{s_{F\circ E}=s_F\land F(s_E).}
+\boxed{s_{F\circ E}=s_F\land F(s_E)}
 \tag{10}
 ```
 
@@ -138,7 +138,7 @@ is local for E, again by heredity. Equation (9) makes every joinand local for F�
 In particular s_I=1, the class $`s_E=1`$ is closed under composition, and for every fixed external n≥1,
 
 ```math
-s_{E^n}=\bigwedge_{i=0}^{n-1}E^i(s_E).
+s_{E^n}=\bigwedge_{i=0}^{n-1}E^i(s_E)
 \tag{12}
 ```
 
@@ -147,7 +147,7 @@ Every onto Good observer has support 1, because $`C_E`$=I. Precomposition by suc
 There is also a precise finite-patching law. For an arbitrary proposition d, put
 
 ```math
-G(p):=(d\land Ep)\lor(\neg d\land Fp).
+G(p):=(d\land Ep)\lor(\neg d\land Fp)
 \tag{13}
 ```
 
@@ -161,7 +161,7 @@ L_Gq=L_E(d\land q)\lor L_F(\neg d\land q),
 as follows directly by testing whether q≤Gp. On [0,d] this is $`L_E`$, and on [0,¬d] it is L_F. Using (4), heredity and the definition of support yields
 
 ```math
-\boxed{s_G=(d\land s_E)\lor(\neg d\land s_F).}
+\boxed{s_G=(d\land s_E)\lor(\neg d\land s_F)}
 \tag{15}
 ```
 
@@ -172,14 +172,14 @@ For example, a local G-element restricted to d is local for E, giving one inequa
 Define the admitted normalization
 
 ```math
-\mathcal N(E)(p):=(s_E\land Ep)\lor(\neg s_E\land p).
+\mathcal N(E)(p):=(s_E\land Ep)\lor(\neg s_E\land p)
 \tag{16}
 ```
 
 It is Good by (13). Equation (15) gives
 
 ```math
-s_{\mathcal N(E)}=1.
+s_{\mathcal N(E)}=1
 \tag{17}
 ```
 
@@ -188,7 +188,7 @@ If $`s_E=1`$ then N(E)=E, so N(N(E))=N(E) on the Good class. Thus N is an admitt
 If $`s_E`$ is currently true, (3) gives an actually true local transversal by the ordinary existential truth rule. The [local-profile theorem](finite-relative-image-generation.md), §4, then supplies a qualified involution T with
 
 ```math
-\forall p\,(Tp\leftrightarrow Ep).
+\forall p\,(Tp\leftrightarrow Ep)
 \tag{18}
 ```
 
@@ -201,7 +201,7 @@ Consequently, over C5 and at each fixed relational output type τ and finite Δ 
 S_{\tau,\Delta}[\mathrm{Rev}]
 \ \longleftrightarrow\ S_{\tau,\Delta}[s_E=1]
 \ \longleftrightarrow\ S_{\tau,\Delta}[s_E]
-\ \longleftrightarrow\ S_{\tau,\Delta}[\mathcal N(\mathrm{Good}_\Delta)].}
+\ \longleftrightarrow\ S_{\tau,\Delta}[\mathcal N(\mathrm{Good}_\Delta)]}
 \tag{19}
 ```
 

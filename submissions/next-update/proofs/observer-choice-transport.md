@@ -10,7 +10,7 @@ The two choice principles behave differently under ordinary logical observer sep
 
 ```math
 \mathrm{FC}_{\sigma,\tau}\longrightarrow
-\Box\mathrm{FC}_{\sigma,\tau},\qquad \tau\ne e.
+\Box\mathrm{FC}_{\sigma,\tau},\qquad \tau\ne e
 \tag{1}
 ```
 
@@ -21,7 +21,7 @@ The two choice principles behave differently under ordinary logical observer sep
 ```math
 \mathrm{C5}+\mathrm{OS}
 +\mathrm{RelChoice}_{\rm all}
-+\neg\Box\mathrm{RelChoice}_{et,e}.
++\neg\Box\mathrm{RelChoice}_{et,e}
 \tag{2}
 ```
 
@@ -40,7 +40,7 @@ Fix admitted $`\sigma,\tau`$, with $`\tau\ne e`$. Put $`\rho=\sigma\tau t`$ and
 \mathrm{FC}_{\sigma,\tau}:={}&
 \forall U^\rho\bigl[(\forall x^\sigma\exists y^\tau\,U[x,y])\to
 \exists f^{\sigma\tau}\forall x^\sigma\,U[x,fx]\bigr],\\
-U^E:={}&\lambda x^\sigma y^\tau.\,E(U[x,y]).
+U^E:={}&\lambda x^\sigma y^\tau.\,E(U[x,y])
 \end{aligned}
 ```
 
@@ -49,7 +49,7 @@ Let $`\Delta`$ contain $`\rho,\sigma,\tau,\sigma\tau`$. The whole-operation Bool
 ```math
 E(\mathrm{FC}_{\sigma,\tau})=
 \forall U^\rho\bigl[(\forall x^\sigma\exists y^\tau\,U^E[x,y])\to
-\exists f^{\sigma\tau}\forall x^\sigma\,U^E[x,fx]\bigr].
+\exists f^{\sigma\tau}\forall x^\sigma\,U^E[x,fx]\bigr]
 \tag{3}
 ```
 
@@ -77,7 +77,7 @@ for every outgoing arrow $`h`$. This is the standard relational presentation of 
 **Proof.** Fix
 
 ```math
-R\subseteq\prod_jD_{\sigma_j}(X).
+R\subseteq\prod_jD_{\sigma_j}(X)
 ```
 
 Define the whole intension $`\widehat R`$, at source $`X`$, by
@@ -86,7 +86,7 @@ Define the whole intension $`\widehat R`$, at source $`X`$, by
 \widehat R(h)=
 \begin{cases}
 R,&\mathrm{target}(h)=X,\\
-\varnothing,&\mathrm{target}(h)\ne X.
+\varnothing,&\mathrm{target}(h)\ne X
 \end{cases}
 \tag{4}
 ```
@@ -109,7 +109,7 @@ The distinction in the final sentence matters: extensional fullness supplies eve
 Retain [the qualitative-contrast model](https://github.com/dkodsi/Logical-Maps/blob/52f324e09ca2df45d74ce4c522bcd761271efbed/submissions/classicism-results-2026-10-24-v2/source/topics/classicism/models/symmetric-qualitative-contrast.yaml) in its base-individual version. It has two objects $`W_0,W_1`$, each a copy of $`\mathbb N`$, with every bijection between every pair as an arrow. Each object uses finite pinning. Its symmetry groups are
 
 ```math
-G_{W_0}=\mathrm{Sym}(\mathbb N),\qquad G_{W_1}=\{1\}.
+G_{W_0}=\mathrm{Sym}(\mathbb N),\qquad G_{W_1}=\{1\}
 ```
 
 Evaluate it at $`W_1`$.
@@ -127,7 +127,7 @@ An independent general proof, and the stronger qualified-left-inverse verdict, a
 Let
 
 ```math
-U[X,y]:=Xy\lor\neg\exists z^e\,Xz.
+U[X,y]:=Xy\lor\neg\exists z^e\,Xz
 \tag{5}
 ```
 
@@ -136,7 +136,7 @@ This is an admitted closed term of type $`(et)et`$ and is serial. Suppose an adm
 The permutation $`g`$ lies in $`G_{W_0}`$, fixes the pin $`F`$, and fixes $`A`$. Hence it fixes the entity $`S`$. Target symmetry preserves truth while transporting all parameters by $`g`$. It carries the true proposition $`S[A,y]`$ to the true proposition
 
 ```math
-(gS)[gA,gy]=S[A,z].
+(gS)[gA,gy]=S[A,z]
 ```
 
 These are two different outputs at the same input, contradicting functionality. Thus $`\mathrm{RelChoice}_{et,e}`$ fails at $`W_0`$, and its boxed form fails at $`W_1`$.
@@ -144,7 +144,7 @@ These are two different outputs at the same input, contradicting functionality. 
 **Relational-output failure too.** Put $`H_y:=\lambda z^e.\,z=y`$, an admitted object of type $`et`$, and define
 
 ```math
-V[X,Y]:=\exists y^e\bigl[(Xy\lor\neg\exists z^eXz)\land Y=H_y\bigr].
+V[X,Y]:=\exists y^e\bigl[(Xy\lor\neg\exists z^eXz)\land Y=H_y\bigr]
 \tag{6}
 ```
 
@@ -158,7 +158,7 @@ For a Good observer $`E`$, postcompose relations by $`E`$: $`U^E[x,y]=E(U[x,y])`
 
 ```math
 \forall U\bigl[\mathrm{Serial}(U^E)\to
-\exists S\,[\mathrm{Functional}(S^E)\land S^E\subseteq U^E]\bigr].
+\exists S\,[\mathrm{Functional}(S^E)\land S^E\subseteq U^E]\bigr]
 \tag{7}
 ```
 
@@ -167,13 +167,13 @@ Current Relational Choice applied to $`U^E`$ yields some selector relation $`R`$
 The countermodel makes the failure visible using an admitted observer, rather than only an abstract lack of surjectivity. At $`W_1`$, let $`A`$ be the atom consisting of all arrows into $`W_0`$, and let
 
 ```math
-E_A(p):=\Box(A\to p).
+E_A(p):=\Box(A\to p)
 ```
 
 The linked local-observer proof verifies that $`E_A`$ is Good at every finite type list and reads truth at $`W_0`$. For either failed choice instance of §4, its universally closed proposition $`C_{\rm ch}`$ is true on all $`W_1`$-target arrows and false on all $`W_0`$-target arrows. Hence
 
 ```math
-C_{\rm ch}\text{ is currently true},\qquad E_A(C_{\rm ch})=\bot.
+C_{\rm ch}\text{ is currently true},\qquad E_A(C_{\rm ch})=\bot
 \tag{8}
 ```
 
@@ -188,7 +188,7 @@ The native records already establish
 ```math
 \mathrm{WeakRigidComp}+\mathrm{ND}\Rightarrow\mathrm{Plenitude},
 \qquad
-\mathrm{RelChoice}+\mathrm{Plenitude}\Rightarrow\mathrm{FC}.
+\mathrm{RelChoice}+\mathrm{Plenitude}\Rightarrow\mathrm{FC}
 ```
 
 See [Weak Rigid Comprehension and ND imply Plenitude](https://github.com/dkodsi/Logical-Maps/blob/52f324e09ca2df45d74ce4c522bcd761271efbed/submissions/classicism-results-2026-10-24-v2/source/topics/classicism/results/weak-rigid-comprehension-and-nd-imply-plenitude.yaml), and [Relational Choice and Plenitude imply Functional Choice](https://github.com/dkodsi/Logical-Maps/blob/52f324e09ca2df45d74ce4c522bcd761271efbed/submissions/classicism-results-2026-10-24-v2/source/topics/classicism/results/relational-choice-and-plenitude-imply-functional-choice-r.yaml). Their source is Bacon and Dorr, *Classicism*, draft of 16 May 2023, Proposition 2.16, p. 33 and n. 49, and §2.3, pp. 31–32; the weakening to weak rigidity is attributed in the first record to Cian Dorr.
@@ -197,7 +197,7 @@ Combining those proved implications with §2 gives
 
 ```math
 \mathrm{C5}+\mathrm{OS}+\mathrm{WeakRigidComp}+\mathrm{RelChoice}
-\Rightarrow\Box\mathrm{FC}\Rightarrow\Box\mathrm{RelChoice}.
+\Rightarrow\Box\mathrm{FC}\Rightarrow\Box\mathrm{RelChoice}
 \tag{9}
 ```
 
@@ -215,7 +215,7 @@ The model construction is Bacon and Dorr, *Classicism*, 16 May 2023 draft, Appen
 \not\Rightarrow\Box\mathrm{RelChoice}_{et,e},
 \qquad
 \mathrm{C5}+\mathrm{BoxSep}+\mathrm{RelChoice}_{\rm all}
-\not\Rightarrow\Box\mathrm{RelChoice}_{et,et}.
+\not\Rightarrow\Box\mathrm{RelChoice}_{et,et}
 \tag{10}
 ```
 
@@ -226,7 +226,7 @@ This follows from the existing observer comparison and the choice verdict above;
 ```math
 \boxed{\mathrm C+\mathrm{OS}+\mathrm{FC}_{\rm all}
 \quad\equiv\quad
-\mathrm C+\Box\mathrm{FC}_{\rm all}.}
+\mathrm C+\Box\mathrm{FC}_{\rm all}}
 \tag{11}
 ```
 

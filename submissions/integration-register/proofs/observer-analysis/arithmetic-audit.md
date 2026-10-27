@@ -7,7 +7,7 @@ Ordinary mathematical audit by OpenAI Codex, 25 October 2026. Fixed framework: r
 For every admitted type σ, put ν=(σt)t and interpret zero, successor, natural numberhood, Sum and Prod by the Frege definitions in [Background](../../../classicism-results-2026-10-24-v2/source/topics/classicism/background.md). Let A be a first-order arithmetical sentence in that exact interpretation. Then:
 
 ```math
-\boxed{C5\vdash (A\to\Box A)\land(\neg A\to\Box\neg A).}
+\boxed{C5\vdash (A\to\Box A)\land(\neg A\to\Box\neg A)}
 \tag{1}
 ```
 
@@ -16,7 +16,7 @@ Equivalently, C5 proves □A∨□¬A. **OS is unnecessary**, and there is no In
 ```math
 \mathrm{NA}_{\sigma,A}:=
 \Box(I_\sigma\to A)\lor\Box(I_\sigma\to\neg A),
-\quad I_\sigma:=\Diamond I^*_\sigma.
+\quad I_\sigma:=\Diamond I^*_\sigma
 \tag{2}
 ```
 
@@ -40,7 +40,7 @@ This proves the stronger formula version
 ```math
 \forall\bar n\in N\,
 [(A(\bar n)\to\Box A(\bar n))
-\land(\neg A(\bar n)\to\Box\neg A(\bar n))].
+\land(\neg A(\bar n)\to\Box\neg A(\bar n))]
 ```
 
 No optional premise is necessitated. The boxes in steps 1 and 2 come from theorems of C; the later steps use the stated current modal premises.
@@ -49,7 +49,7 @@ There is also a small positive fragment that requires **C alone**. For formulas 
 
 ```math
 C\vdash\forall\bar n\in N\,
-[P(\bar n)\to\Box P(\bar n)].
+[P(\bar n)\to\Box P(\bar n)]
 \tag{3}
 ```
 
@@ -61,7 +61,7 @@ The [complete Boolean root construction](../complete-boolean-root.md), §5, yiel
 
 ```math
 C+OS+BC_t+\mathrm{RelationalChoice}+\mathrm{Actuality}
- +\neg\mathrm{NecessityArithmetic}.
+ +\neg\mathrm{NecessityArithmetic}
 \tag{4}
 ```
 
@@ -77,7 +77,7 @@ If the question instead asks whether the *Necessity of Arithmetic instance itsel
 
 ```math
 C\vdash\mathrm{NA}_{\sigma,A}
- \to\Box\mathrm{NA}_{\sigma,A}.
+ \to\Box\mathrm{NA}_{\sigma,A}
 \tag{5}
 ```
 

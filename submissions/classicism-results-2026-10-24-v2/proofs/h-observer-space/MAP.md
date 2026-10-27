@@ -11,7 +11,7 @@ The [full graphical map](GRAPH.md) includes the structural, representation, quan
 Write S[R] for propositional separation by R-qualified observers:
 
 ```math
-S[R]:=\forall p,q\, .\,p=q\leftrightarrow\forall E\, .\,R(E)\to(Ep\leftrightarrow Eq).
+S[R]:=\forall p,q\, .\,p=q\leftrightarrow\forall E\, .\,R(E)\to(Ep\leftrightarrow Eq)
 ```
 
 FullSep[R] applies the same criterion to relations at every admitted argument tuple. Qualifications contain finite lists of types, indexed externally. The agreement clause is Ep↔Eq.
@@ -33,7 +33,7 @@ Primitive and derived operations remain distinct until the appropriate identity 
 For any finite Γ of independent clauses from M,V,N,Qσ,Pσ, put T_J=H+S[A∧Z∧J], for J⊆Γ. Fix one preservation tier and either propositional or full relational separation. Then
 
 ```math
-T_K\vdash T_J\quad\Longleftrightarrow\quad J\subseteq K.
+T_K\vdash T_J\quad\Longleftrightarrow\quad J\subseteq K
 ```
 
 This classifies all 2^|Γ| packages at once. Single-primitive corruption models prove every missing implication. The proof is [Primitive-package classification](primitive-package-classification.md), §§1–4.
@@ -104,7 +104,7 @@ The final row follows from [Finite semilattice normalization](finite-semilattice
 A further exact reduction needs only finite images of the separating observers, not finiteness of the proposition domain. Over H, for M and V separately and with any of no endpoint condition, A, Z or A+Z,
 
 ```math
-S[\text{finite-image material observers}]\ \leftrightarrow\ S[\text{at-most-two-output pointwise observers}].
+S[\text{finite-image material observers}]\ \leftrightarrow\ S[\text{at-most-two-output pointwise observers}]
 ```
 
 Here finite image is internal Frege finiteness. The two outputs depend on the observer and need not be Top and Bottom. The normalization retains the entire current truth profile. At full relational scope, the pointwise condition can also be replaced by whole-operation identity. See [Finite-image material normalization](finite-image-material-normalization.md), §§2–5.
@@ -136,7 +136,7 @@ The constructor is a substantive additional premise. The [full three-object fork
 There is also an exact general composition theorem. For a finite signature Σ of the displayed preservation clauses, optionally including fixed proposition constants,
 
 ```math
-S[\mathrm{Pt}_\Sigma]\ \leftrightarrow\exists X\,[\mathrm{Sep}(X)\land\mathrm{Closed}(X)\land\mathrm{Material}_\Sigma(X)].
+S[\mathrm{Pt}_\Sigma]\ \leftrightarrow\exists X\,[\mathrm{Sep}(X)\land\mathrm{Closed}(X)\land\mathrm{Material}_\Sigma(X)]
 ```
 
 The admitted family X may additionally be required to contain identity. Testing each proposed output equation with X and using composition closure proves that every X-member preserves it pointwise. Material acceptance/rejection in such a closed separating family upgrades to fixing the corresponding endpoint; ordinary A/Z qualifications are not silently composition-closed. For a relational type ρ the exact typed formula uses one X separating both t and ρ, and the full schema is indexed externally by ρ. Full typed scope also makes whole-operation preservation equivalent. See [Composition-closed characterization](composition-closed-characterization.md), §§1–4.
@@ -192,7 +192,7 @@ For a bounded distributive lattice with a specified external finite central part
 For every qualification K,
 
 ```math
-\mathrm H+\mathrm{FullSep}[K]\ \equiv\ \mathrm H+S[K]+\mathrm{Functionality}.
+\mathrm H+\mathrm{FullSep}[K]\ \equiv\ \mathrm H+S[K]+\mathrm{Functionality}
 ```
 
 Consequently pointwise and whole-operation preservation give equivalent full typed separation theories for corresponding finite qualifications. At propositional scope they can differ: the [hidden-proposition model](local-tiers-and-models.md), §3, has pointwise conjunction separation but lacks whole-operation conjunction separation, even with endpoint-valued equality-fixing witnesses.
@@ -269,7 +269,7 @@ Even full qualified left-inverse separation does **not** entail C5, ☐OS, its o
 The atom-bearing necessary-separation region has an exact converse. In fact C5 plus the single boxed propositional instance S_{t,{t}} and one proposition atom already implies Atomicity_t. Hence, over H,
 
 ```math
-\begin{aligned}\mathsf{End}&\leftrightarrow\mathrm{C5}+\mathrm{Atomicity}_t\\&\leftrightarrow\mathrm{C5}+\Box S_{t,\{t\}}+\text{one atom}\\&\leftrightarrow\mathrm{C5}+\Box\mathrm{OS}+\text{one atom}.\end{aligned}
+\begin{aligned}\mathsf{End}&\leftrightarrow\mathrm{C5}+\mathrm{Atomicity}_t\\&\leftrightarrow\mathrm{C5}+\Box S_{t,\{t\}}+\text{one atom}\\&\leftrightarrow\mathrm{C5}+\Box\mathrm{OS}+\text{one atom}\end{aligned}
 ```
 
 Here End is full typed endpoint separation, while S_{t,{t}} is one closed formula; the C5 premise explicitly includes C. One atom can equivalently be replaced by Actuality or by the existence of one internally finite-image $`\mathrm{Good}_{\{t\}}`$ observer. See [Necessary separation and atoms](necessary-separation-and-atoms.md), §§1–4. The atomless countermodel below shows why that atom-bearing conclusion does not extend to C5+□OS alone.
@@ -277,7 +277,7 @@ Here End is full typed endpoint separation, while S_{t,{t}} is one closed formul
 Reversibility also gives a pure-language consequence without any atom premise:
 
 ```math
-\mathsf{Rev}\ \Longrightarrow\ \mathrm{C5}+\Box\mathrm{OS}+\text{No Pure Contingency}.
+\mathsf{Rev}\ \Longrightarrow\ \mathrm{C5}+\Box\mathrm{OS}+\text{No Pure Contingency}
 ```
 
 For each closed pure sentence P, a qualified involution at the finite list of quantifier types occurring in P extends by explicit typewise conjugation. It fixes the logical constants and hence P. Involutive separation compares a true P with Top and gives □P. At the individual type, conjugation leaves variables unchanged; no forbidden e→e object is introduced. The quantifier-reindexing identity uses a necessary whole-operation involution identity, not necessitation of an optional premise. See [Reversible separation and pure truth](reversible-separation-and-pure-truth.md), §§1–4. This is not a characterization.
@@ -291,7 +291,7 @@ This gives a stronger positive bound as well: Rev implies noncontingency for pur
 **Reversibility has an exact algebraic characterization.** Over C5, let A(E) be the finite identity-based qualification for reversible $`\mathrm{Good}_{\{t\}}`$ observers. Then
 
 ```math
-\mathrm{Rev}\ \Longleftrightarrow\ \forall p\,[\mathrm{Inv}(p)\to(p=\bot\lor p=\top)]\qquad(\mathrm{C5}).
+\mathrm{Rev}\ \Longleftrightarrow\ \forall p\,[\mathrm{Inv}(p)\to(p=\bot\lor p=\top)]\qquad(\mathrm{C5})
 ```
 
 The same-observer quantifier reduction makes this single finite sentence characterize full typed Rev over the stated C5 base. Define the admitted orbit join O(p)=∃E(A(E)∧Ep). Its guard is endpoint-valued under C5. Composition and the admitted inverse show that O(p) is fixed by every eligible observer; it is the least such invariant above p. If the fixed propositions are only the endpoints, p≠Bottom forces O(p)=Top, whose existential truth supplies a reversible observer accepting p. Apply this to p△q to obtain separation. Conversely Rev identifies every invariant proposition with the endpoint matching its truth.
@@ -301,7 +301,7 @@ Failure of Rev therefore has an admitted nonzero false invariant O(r), not merel
 **The invariant algebra is also determined by all logical observers locally.** For arbitrary Good_t E over C5, let $`s_E`$ be its canonical local-transversal support and $`N(E)p=(s_E\land Ep)\lor(\neg s_E\land p)`$. A proposition u is fixed by every reversible observer exactly when $`s_E\land Eu=s_E\land u`$ for every Good_t E, equivalently when every N(E) fixes u. Another exact criterion is that no nonzero parts of u and ¬u admit a relative order isomorphism with an admitted inverse. The admitted orbit closure therefore has the identities
 
 ```math
-O(p)=\exists E\,[B(E)\land s_E\land Ep]=\exists E\,[B(E)\land\mathcal N(E)p].
+O(p)=\exists E\,[B(E)\land s_E\land Ep]=\exists E\,[B(E)\land\mathcal N(E)p]
 ```
 
 Here $`B(E)`$ is the endpoint-valued identity-based Good-t guard. These are admitted joins, not external orbit unions. If an observer accepts a false invariant u, its true crossing Eu∧¬u is disjoint from $`s_E`$. For an injective detector, $`\mathrm{C5}+\mathrm{BC}_t+\mathrm{Zorn}_t`$ and $`L_E s_E=\top`$ supply a qualified left inverse killing that crossing, hence K. The support-coverage premise is additional. The [rigid Souslin countermodel](rigid-souslin-injective-separation.md) refutes InjSep ⇒ SplitMono, even over C5 with necessary all-type Relational Choice, Transversal Choice and Zorn. See [Invariant components and local support](invariant-components-and-local-support.md), §§1–5.
@@ -313,7 +313,7 @@ Over **C5**, current surjectivity of a $`\mathrm{Good}_\Delta`$ observer, with t
 The canonical construction extends to **every $`\mathrm{Good}_{\{t\}}`$ observer E over C5**, without injectivity or surjectivity. The admitted terms
 
 ```math
-Rq:=\exists p^t\,[(Ep\le q)\land p],\qquad Lq:=\neg R(\neg q).
+Rq:=\exists p^t\,[(Ep\le q)\land p],\qquad Lq:=\neg R(\neg q)
 ```
 
 satisfy Lq≤p iff q≤Ep and Ep≤q iff p≤Rq. Put k=RBottom and a=¬k. Then R(Ep)=p∨k and L(Ep)=p∧a. E factors through p↦p∧a as an isomorphism from [Bottom,a] onto its image, with a canonical admitted inverse on that image. The image floor j=E∘R and ceiling c=E∘L are idempotent, satisfy j≤I≤c, and have the image as their common fixed points.
@@ -330,7 +330,7 @@ There are canonical endpoint-fixing envelopes T⁻q=(a∧Rq)∨(k∧q) and T⁺q
 **Native-Box separation** uses the additional whole-operation identity λp.E(□p)=λp.□Ep, where □p is the original identity judgment p=Top. Denote this full typed theory by BoxSep, and separation by currently injective Good observers by InjSep. Over H,
 
 ```math
-\mathsf{BoxSep}\ \Longrightarrow\ \mathrm C+\mathrm{OS}+\Box\mathrm{BF}+\Box\mathrm{Functionality}+.2.
+\mathsf{BoxSep}\ \Longrightarrow\ \mathrm C+\mathrm{OS}+\Box\mathrm{BF}+\Box\mathrm{Functionality}+.2
 ```
 
 The Barcan argument is finite and local: over C, current BF_σ plus BoxSep(t,Δ) for Δ containing σ and σt gives □BF_σ. Every qualifying E sends the closed BF_σ formula to a true instance of current BF_σ applied to λx.E(Fx); separation from Top then gives necessity. The .2 argument needs even less: **over C, propositional separation by observers fixing Bottom and commuting with Box implies .2**, without Boolean or quantifier qualification. If ◇□p, a separating E makes E□p true, hence Ep=Top. NI on that identity and EBottom=Bottom gives □(p≠Bottom). No optional premise is necessitated.
@@ -342,7 +342,7 @@ This includes current BF_σ→necessary BF_σ and conditional .3→□.3 and 5�
 Over C5, the native-Box and current-injectivity restrictions coincide at every fixed finite list and output type. At full scope this gives a strict chain:
 
 ```math
-\mathrm{C5}:\qquad\mathrm{Rev}\ \Longrightarrow\ \mathsf{InjSep}\ \Longleftrightarrow\ \mathsf{BoxSep}\ \Longrightarrow\ \mathrm{OS}.
+\mathrm{C5}:\qquad\mathrm{Rev}\ \Longrightarrow\ \mathsf{InjSep}\ \Longleftrightarrow\ \mathsf{BoxSep}\ \Longrightarrow\ \mathrm{OS}
 ```
 
 The finite-block C5+SplitMono model supplies the upper strictness; the linear/circular C5+□OS model, where every admitted injection of type tt is onto, supplies the lower. That latter model also refutes the converse from the entire bundle OS+□BF+□Fun+.2 to BoxSep. Outside C5, BoxSep is incomparable with InjSep and with SplitMono, already over C+current BF: omega shifts commute with native Box but its only injective logical observer is identity, whereas the all-maps SplitMono model fails necessary BF. BoxSep is also incomparable with □OS even over C+□BF: the C5-tail root extension has BoxSep but fails future OS, and the linear/circular model gives the other direction. In particular BoxSep implies neither C5 nor □OS nor □BoxSep. These are full-schema conclusions with the explicit failed finite instances given in [Native-Box logical observers](native-box-logical-observers.md), §§1–7.
@@ -350,7 +350,7 @@ The finite-block C5+SplitMono model supplies the upper strictness; the linear/ci
 **Finite-image native-Box separation forces global finiteness.** Let FinBoxSep require the same Good/native-Box observers also to have internally Frege-finite images. For every fixed relational output τ and finite qualification list Δ **containing a relational type**, over C,
 
 ```math
-\mathrm{FinBoxSep}_{\tau,\Delta}\ \Longleftrightarrow\ \mathrm{Fin}_t(\mathrm{All})+\mathrm{BoxSep}_{\tau,\Delta}\qquad(\mathrm C).
+\mathrm{FinBoxSep}_{\tau,\Delta}\ \Longleftrightarrow\ \mathrm{Fin}_t(\mathrm{All})+\mathrm{BoxSep}_{\tau,\Delta}\qquad(\mathrm C)
 ```
 
 For each qualifying E, define the observed image I_E(V)(q)=∃p(Ep=q∧E(Vp)). Internal Frege induction proves Fin(I_E(V))→E(Fin(V)). Native-Box preservation gives E(p=x)=(Ep=Ex), so deleting x from V deletes the entire observed fibre Ex from I_E(V), without injectivity. The zero step uses Q_t. A whole Q_σ law at any relational σ supplies Q_t by the admitted constant-relation/evaluation retraction; an existential law does so by Boolean duality. The empty-finite and finite-adjoining implications are unconditional H theorems and therefore have C identity with Top; applying E to them requires no preservation of the higher quantifiers inside the finiteness definition. Taking V=All makes every finite-image Box observer accept $`\mathrm{Fin}_t(\mathrm{All})`$, and separation identifies that proposition with Top.
@@ -370,7 +370,7 @@ A six-point frame with levels {o}<{x,a}<{b,c}<{1} has full BoxSep but fails Idem
 The two-antichain frames have an exact numerical classification. Let $`P_{m,n}`$ have a root, an m-point lower antichain, an n-point upper antichain and a top, with all cross-level comparisons, where m,n≥1 are external finite integers. In its full model,
 
 ```math
-\begin{aligned}\mathsf{BoxSep}&\ \Longleftrightarrow\ m=1\ \text{or}\ n\le m,\\\mathsf{IdemBoxSep}&\ \Longleftrightarrow\ m=1\ \text{or}\ n=1.\end{aligned}
+\begin{aligned}\mathsf{BoxSep}&\ \Longleftrightarrow\ m=1\ \text{or}\ n\le m,\\\mathsf{IdemBoxSep}&\ \Longleftrightarrow\ m=1\ \text{or}\ n=1\end{aligned}
 ```
 
 For m,n≥2, a native-Box reader of a lower point must send every upper point to the top, so the n upper values must be covered by the m lower inputs. An onto finite assignment supplies the converse. In particular the seven-point P_{2,3} satisfies C+□OS+□BF+□Fun+□Atomicity_t+□.2 but fails BoxSep. Its common top verifies .2 at every point. This supplies a finite countermodel to the converse from the entire established modal lower bundle, separately from the reflection countermodel above. See the idempotent note, §5, (7a); no internal cardinality principle is inferred.
@@ -378,7 +378,7 @@ For m,n≥2, a native-Box reader of a lower point must send every upper point to
 **Fixed finite stabilization gives an unbounded strict hierarchy.** For each fixed external r≥1, $`B_r`$ requires the same Good/native-Box observers to satisfy the whole identity $`E^{r+1}=E^r`$. Thus B₁=IdemBoxSep, and
 
 ```math
-B_1\Longrightarrow B_2\Longrightarrow B_3\Longrightarrow\cdots\Longrightarrow\mathsf{BoxSep}.
+B_1\Longrightarrow B_2\Longrightarrow B_3\Longrightarrow\cdots\Longrightarrow\mathsf{BoxSep}
 ```
 
 Every successive implication is strict, as is $`B_r`$⇒BoxSep for each fixed r. The separately boxed hierarchy is strict as well. In the two-antichain family, B₂ holds exactly when m=1 or n=1 or m>n, and B₃ is equivalent to BoxSep. The frame $`P_{3,2}`$ gives □B₂ but not B₁. For every r≥2, a root followed by r successive two-point antichains and a top gives □$`B_{r+1}`$ but not $`B_r`$: a reader of the first level must map each antichain bijectively onto the next. These finite witnesses retain C+□BF+□Fun+□OS+□Atomicity_t+□.2.
@@ -398,7 +398,7 @@ Under C5, if central observers themselves separate, that alternative would have 
 The full characterization over H is:
 
 ```math
-\mathrm{CentreSep}\ \Longleftrightarrow\ \mathrm{IdemBoxSep}+\mathrm{Four}_t\ \Longleftrightarrow\ \Box\mathrm{CentreSep}.
+\mathrm{CentreSep}\ \Longleftrightarrow\ \mathrm{IdemBoxSep}+\mathrm{Four}_t\ \Longleftrightarrow\ \Box\mathrm{CentreSep}
 ```
 
 In particular the proposition algebra is finite, with at most two Boolean atoms; CentreSep gives Actuality and FinBoxSep. In its nonextensional case the two central observers distinguish exactly 0,k,¬k,1. Modal congruence and BF_t force □k=0 and □¬k=¬k, making the central endpoint observer native-Box preserving. Conversely, under Four_t, an idempotent Box separator reading the false atom rules out every Boolean observer except itself and identity, so it is central at the original qualification list. Persistent finite identities, NI, BF_t and the necessary Functionality supplied by BoxSep then prove the separately boxed central schema. This does not assume that a current universal centrality assertion is automatically necessary.
@@ -408,7 +408,7 @@ CentreSep strictly implies both IdemBoxSep and FinBoxSep: the full diamond has b
 **Centrality within the reversible group gives a different finite theory.** Write CentreRevSep for separation by reversible $`\mathrm{Good}_\Delta`$ observers that commute, as whole operations, with every reversible $`\mathrm{Good}_\Delta`$ observer. Over H,
 
 ```math
-\begin{aligned}\mathrm{CentreRevSep}&\ \Longleftrightarrow\ \mathrm{C5}+\mathrm{Four}_t\ \Longleftrightarrow\ \mathrm{End}+\mathrm{Four}_t,\\\mathrm{CentreRevSep}&\ \Longleftrightarrow\ \Box\mathrm{CentreRevSep}.\end{aligned}
+\begin{aligned}\mathrm{CentreRevSep}&\ \Longleftrightarrow\ \mathrm{C5}+\mathrm{Four}_t\ \Longleftrightarrow\ \mathrm{End}+\mathrm{Four}_t,\\\mathrm{CentreRevSep}&\ \Longleftrightarrow\ \Box\mathrm{CentreRevSep}\end{aligned}
 ```
 
 For a reversible G, its admitted moved support m_G=∃p(p△Gp) is fixed by every group-central observer. Their separation forces m_G to an endpoint. A local swap of disjoint relatively isomorphic intervals has support exactly their union; requiring every nonidentity swap to have total support leaves at most two Boolean atoms. Conversely C5+Four_t gives Atomicity_t and End; its reversible group has at most two members and is abelian. This concerns the entire admitted group, not a selected commuting separating family.
@@ -418,7 +418,7 @@ Thus Extensionality strictly implies CentreRevSep, which strictly implies End. I
 **A uniform group exponent gives a family of exact finite bounds.** For each fixed external integer n≥1 let Exp_n say that every reversible Good_t E satisfies the whole identity E^n=I. Let k be the largest integer such that each of 1,…,k divides n. Then
 
 ```math
-\mathrm H+\mathrm{Rev}+\mathrm{Exp}_n\ \equiv\ \mathrm{C5}+\mathrm{AtMost}_{2^{k(n)}}(t).
+\mathrm H+\mathrm{Rev}+\mathrm{Exp}_n\ \equiv\ \mathrm{C5}+\mathrm{AtMost}_{2^{k(n)}}(t)
 ```
 
 The finite bound is an explicit finite enumeration formula. It is not internal Frege finiteness without a bound. For n=1,2,6,12,60 the bounds are respectively 2,4,8,16,64 propositions. The theorem uses a stronger structural lemma: under Rev, any finitely many disjoint nonzero regions contain smaller nonzero parts related by admitted reversible observers. Shrinking one common part at each finite step preserves the earlier identifications. Patching these maps gives a logical cycle of any specified length among those parts. A (k+1)-cycle contradicts Exp_n; finite Boolean splitting therefore leaves at most k atoms covering Top. Conversely the finite algebra's automorphisms permute its at most k atoms, so their n-th powers are identity.
@@ -428,7 +428,7 @@ Different n can yield the same k and hence the same theory; numerical increase a
 **Every nontrivial group equation has an exact finite bound.** Fix a nonempty reduced group word w. Law_w universally quantifies its finite tuple of admitted qualified inverse pairs and requires the resulting whole operation to be identity. Let k(w) be the largest j such that the finite symmetric group Sym(j) satisfies the word. If w has reduced length L, an explicit path on L+1 vertices supplies permutations on which w moves the initial vertex; thus 1≤k(w)≤L. Over H,
 
 ```math
-\mathrm{Rev}+\mathrm{Law}_w\ \equiv\ \mathrm{C5}+\mathrm{AtMost}_{2^{k(w)}}(t)\ \equiv\ \mathrm{End}+\mathrm{AtMost}_{2^{k(w)}}(t)\qquad(\mathrm H).
+\mathrm{Rev}+\mathrm{Law}_w\ \equiv\ \mathrm{C5}+\mathrm{AtMost}_{2^{k(w)}}(t)\ \equiv\ \mathrm{End}+\mathrm{AtMost}_{2^{k(w)}}(t)\qquad(\mathrm H)
 ```
 
 The finite common-refinement lemma supports a faithful admitted Sym(m) action, with whole multiplication and inverse identities on every proposition. A violating permutation tuple in Sym(k(w)+1) therefore excludes that many disjoint nonzero propositions. Conversely a Boolean algebra with at most k(w) atoms makes every admitted automorphism tuple obey the word. Commutativity gives k=2; the metabelian word saying that any two commutators commute gives k=3. The exponent theorem is a special case. A word reducing to the empty word imposes no new condition. See [Group identities for reversible observers](group-identities-reversible-observers.md), §§1–6.
@@ -436,7 +436,7 @@ The finite common-refinement lemma supports a faithful admitted Sym(m) action, w
 **Without separation, the same equation bounds invariant components exactly.** Over C5 define C_k to say that, for any k+1 disjoint propositions b_i, the meet of their admitted orbit joins O(b_i) is Bottom. Then
 
 ```math
-\mathrm{C5}\ \vdash\ \mathrm{Law}_w\longleftrightarrow\mathcal C_{k(w)}.
+\mathrm{C5}\ \vdash\ \mathrm{Law}_w\longleftrightarrow\mathcal C_{k(w)}
 ```
 
 More generally, finitely many target propositions have smaller nonzero parts related by admitted reversible observers exactly when their orbit joins have nonzero common meet. This supplies the forward group-law implication without Rev. For the converse, a finite sequence of Boolean partitions generated by a selected observer tuple stabilizes on finitely many invariant regions; C_k limits each localized partition to k cells. The tuple then acts by permutations on at most k atoms, so every word valid in Sym(k) holds there and hence globally. No Stone representation, Choice, BC or Zorn is used. Under Rev every nonzero orbit join is Top, recovering the global finite bound. Without Rev no bound on the total proposition domain follows from this argument. See [Group identities within invariant components](invariant-components-and-group-identities.md), §§1–5.
@@ -446,7 +446,7 @@ More generally, finitely many target propositions have smaller nonzero parts rel
 Consequently the following full theories coincide:
 
 ```math
-\begin{aligned}\mathrm{Rev}+\mathrm{Fin}_{tt}(\mathrm{Aut})&\ \equiv\ \mathrm{C5}+\mathrm{FinAll}\\&\ \equiv\ \mathrm{End}+\mathrm{FinAll}\ \equiv\ \mathrm{C5}+\mathrm{FinBoxSep}\qquad(\mathrm H).\end{aligned}
+\begin{aligned}\mathrm{Rev}+\mathrm{Fin}_{tt}(\mathrm{Aut})&\ \equiv\ \mathrm{C5}+\mathrm{FinAll}\\&\ \equiv\ \mathrm{End}+\mathrm{FinAll}\ \equiv\ \mathrm{C5}+\mathrm{FinBoxSep}\qquad(\mathrm H)\end{aligned}
 ```
 
 Here $`\mathrm{Aut}`$ is the admitted predicate of reversible Good-t observers, and FinAll is internal Frege finiteness of all proposition objects, with no fixed bound. C5+FinAll yields Atomicity_t by an internal minimal-element argument. One can equivalently require finiteness of the whole tt domain. At full scope, separation by an internally finite family of ordinary logical observers is OS+FinAll; the reversible version is C5+FinAll; the native-Box version is FinBoxSep. The finite family is existentially supplied for each fixed output type and finite qualification list, not chosen once for all types. For Box observers this is the same theory as finite-image Box separation, although family size and image size are different restrictions. See [Internally finite observer families](internally-finite-observer-families.md), §§1–5.
@@ -456,7 +456,7 @@ There is a separate admission theorem for **individual unqualified left inverses
 The **qualified** question has an exact individual answer over C5. Fix currently injective $`\mathrm{Good}_\Delta`$ E with t∈Δ, let L be its canonical left adjoint and c=E∘L its image closure. Qualified left inverses correspond bijectively to admitted propositions u satisfying
 
 ```math
-C_E(u)=\top\quad\land\quad\forall q^t\,[u\land C_E(u\land q)=u\land q].
+C_E(u)=\top\quad\land\quad\forall q^t\,[u\land C_E(u\land q)=u\land q]
 ```
 
 The inverse determined by u is F_u(q)=L(u∧q); conversely u is the complement of F's greatest kernel element. This is an internal Boolean-transversal condition, not an assumed quotient type or external selection function. A full-function C5 model based on 2×RO(Cantor²) contains an injective observer preserving all logical operations but no such transversal and hence no qualified left inverse. The cylinder embedding supplies the observer; splitting a rectangle inside a proposed transversal refutes its defining identity. The model fails OS already at propositional list {t}, so it does **not** separate InjSep from SplitMono. See [Injective observers and Boolean transversals](injective-observers-and-boolean-transversals.md), §§1–6.
@@ -468,7 +468,7 @@ The inverse determined by u is F_u(q)=L(u∧q); conversely u is the complement o
 s_E&:=\exists b\,[\mathrm{Loc}_E(b)\land b],\\
 s_{F\circ E}&=s_F\land F(s_E),\\
 s_G&=(d\land s_E)\lor(\neg d\land s_F),
-\end{aligned}\qquad G(p)=(d\land Ep)\lor(\neg d\land Fp).
+\end{aligned}\qquad G(p)=(d\land Ep)\lor(\neg d\land Fp)
 ```
 
 The support is the largest region in which each nonzero part contains a nonzero local transversal. Loc_E(b) is equivalent to injectivity of $`L_E`$ on [Bottom,b]. An admitted indexed family of locals has a local join exactly when every pair has a local union; directed families therefore glue. This does not turn an arbitrary predicate's current extension into such an indexed family.
@@ -490,7 +490,7 @@ For an **injective** Good E, the resulting exact criteria are
 \exists F\,[\mathrm{Good}_\Delta(F)\land F\circ E=I\land Fc=\bot]
 &\longleftrightarrow L_E(s_E\land\neg c)=\top,\\
 \exists u\,[\mathrm{Loc}_E(u)\land u\le r\land C_Eu=\top]
-&\longleftrightarrow L_E(s_E\land r)=\top.
+&\longleftrightarrow L_E(s_E\land r)=\top
 \end{aligned}
 ```
 
@@ -506,7 +506,7 @@ Combining the two weaker restrictions still does **not** recover reversibility. 
 \mathrm{Rev}\ \Longrightarrow\
 (\mathrm{SurjSep}+\mathrm{SplitMono})\ \Longrightarrow\
 \begin{cases}\mathrm{SurjSep},\\\mathrm{SplitMono}\end{cases}
-\ \Longrightarrow\ \mathrm{OS}.
+\ \Longrightarrow\ \mathrm{OS}
 ```
 
 Both branches out of the conjunction are strict, as are the existing arrows to OS. The conjunction allows separate witness families. The nonimplication to Rev persists when both conjuncts are separately boxed. See [Full cancellative monoid observers](full-cancellative-monoid-observers.md), §§1–6. This is a reusable positive model construction as well as the separating example; no current surjection is silently assigned an admitted inverse.
@@ -524,14 +524,14 @@ Left-inverse separation has an **exact fixed-instance decomposition** over C+BF,
 ```math
 S_{\tau,\Delta}[\mathrm{SplitMono}]
 \ \leftrightarrow\ S_{\tau,\Delta}[\mathrm{Rev}]
-\lor\bigl(S_{\tau,\Delta}[\mathrm{Good}]\land K_\Delta\bigr).
+\lor\bigl(S_{\tau,\Delta}[\mathrm{Good}]\land K_\Delta\bigr)
 ```
 
 ```math
 \begin{aligned}
 K_\Delta:=\exists E^{tt},F^{tt},c^t\, .\,[
 &\mathrm{Good}_\Delta(E)\land\mathrm{Good}_\Delta(F)\\
-&\land F\circ E=I\land c\land Fc=\bot].
+&\land F\circ E=I\land c\land Fc=\bot]
 \end{aligned}
 ```
 
@@ -542,7 +542,7 @@ The canonical-section theorem removes the inverse parameter from KΔ over C5: K�
 Injective separation now has a parallel exact decomposition over C5. Define J_Δ by one admitted injective $`\mathrm{Good}_\Delta`$ observer E and one currently true c such that no nonzero image value lies below c:
 
 ```math
-J_\Delta:=\exists E^{tt}c^t\,[\mathrm{Good}_\Delta(E)\land\mathrm{Inj}(E)\land c\land\forall p^t(Ep\le c\to p=\bot)].
+J_\Delta:=\exists E^{tt}c^t\,[\mathrm{Good}_\Delta(E)\land\mathrm{Inj}(E)\land c\land\forall p^t(Ep\le c\to p=\bot)]
 ```
 
 Equivalently $`R_Ec=\bot`$ for E's canonical right adjoint. This single pair turns every ordinary G into the injective observer (c∧Gp)∨(¬c∧Ep), preserving its entire current truth profile. Conversely, put u=∀q(j_Eq↔q) for j_E=E∘R_E. If u is false, removing the image floor from a true proposition yields J_Δ. If u is true, a distinguishing E has a local Boolean interval isomorphism; swapping that interval with its inverse and using identity elsewhere gives a qualified involution. The inverse piece uses $`L_E`$ only on the interval, never as an assumed globally Good observer.
@@ -560,7 +560,7 @@ There is now a positive finite-generation theorem over C5. For fixed external n�
 For any Good observer E with $`\mathrm{FG}_n(E)`$, a currently true partition cell is a local Boolean transversal. Swapping the associated relative intervals gives a qualified involution with the entire current truth profile of E. **Injectivity is not needed for this normalization.** Hence, over C5 at each fixed τ and finite Δ containing t,
 
 ```math
-S_{\tau,\Delta}[\mathrm{FG}_n]\ \longleftrightarrow\ S_{\tau,\Delta}[\mathrm{Rev}]\qquad(\mathrm{C5};\ n\ge0).
+S_{\tau,\Delta}[\mathrm{FG}_n]\ \longleftrightarrow\ S_{\tau,\Delta}[\mathrm{Rev}]\qquad(\mathrm{C5};\ n\ge0)
 ```
 
 The equivalence also holds for the full schemas with C5 retained, and more generally for separation by Good observers each admitting a currently true local transversal. In contrast, the controlled qualified-left-inverse theorem does require an injective E: $`\mathrm{FG}_n(E)`$ then supplies a qualified F with FE=I, chosen to satisfy Fc=Bottom whenever $`R_Ec=\bot`$.

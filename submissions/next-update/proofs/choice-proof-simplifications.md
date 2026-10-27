@@ -10,7 +10,7 @@ Fix admitted $`\sigma,\tau`$ with $`\tau\ne e`$. Let $`\rho=\sigma\tau t`$, $`\D
 A:=\mathrm{FC}_{\sigma,\tau}:=
 \forall U^\rho\, .\,
 (\forall x^\sigma\exists y^\tau\, .\,U[x,y])
-\to\exists f^{\sigma\tau}\forall x^\sigma\, .\,U[x,fx].
+\to\exists f^{\sigma\tau}\forall x^\sigma\, .\,U[x,fx]
 ```
 
 **Theorem.**
@@ -18,7 +18,7 @@ A:=\mathrm{FC}_{\sigma,\tau}:=
 ```math
 \mathrm C+\mathrm{Atomicity}_t+\mathrm{BF}_\Delta
 +\mathrm{FC}_{\sigma,\tau}
-\quad\vdash\quad\Box\mathrm{FC}_{\sigma,\tau}.
+\quad\vdash\quad\Box\mathrm{FC}_{\sigma,\tau}
 ```
 
 For any propositional atom $`a`$, define the admitted test $`P_a(p):=\Box(a\to p)`$. An atom lies below exactly one of $`p,\neg p`$, so the test's truth values preserve negation. Boolean entailment gives preservation of conjunction, acceptance of Top and rejection of Bottom; the other Boolean truth laws follow.
@@ -27,7 +27,7 @@ For each $`\kappa\in\Delta`$, BF and CBF, with fixed-parameter quantifier distri
 
 ```math
 P_a(\forall x^\kappa\, .\,Fx)
-\quad\Longleftrightarrow\quad\forall x^\kappa\, .\,P_a(Fx).
+\quad\Longleftrightarrow\quad\forall x^\kappa\, .\,P_a(Fx)
 ```
 
 Existential truth follows by duality. Apply these truth equivalences through the single displayed formula $`A`$. The result is
@@ -36,7 +36,7 @@ Existential truth follows by duality. Apply these truth equivalences through the
 P_a(A)\leftrightarrow
 \forall U^\rho\, .\,
 (\forall x^\sigma\exists y^\tau\, .\,P_a(U[x,y]))
-\to\exists f^{\sigma\tau}\forall x^\sigma\, .\,P_a(U[x,fx]).
+\to\exists f^{\sigma\tau}\forall x^\sigma\, .\,P_a(U[x,fx])
 ```
 
 For each $`U`$, abstraction admits $`U^a:=\lambda x,y\, .\,P_a(U[x,y])`$. Current $`\mathrm{FC}_{\sigma,\tau}`$ selects an operation for $`U^a`$ whenever it is serial. Its operation witness is reused unchanged in $`fx`$. Thus the right side is true, and $`a\le A`$ for every atom $`a`$.
@@ -59,7 +59,7 @@ Over C, the established packages satisfy
 &\Longleftrightarrow\mathrm{OS}+\mathrm{Functional\ Choice}\\
 &\Longleftrightarrow\mathrm{End}+\mathrm{Relational\ Choice}\\
 &\Longleftrightarrow\Box\mathrm{Plenitude}+\mathrm{Relational\ Choice}\\
-&\Longleftrightarrow\mathrm{C5}+\mathrm{Atomicity}_t+\mathrm{Relational\ Choice}.
+&\Longleftrightarrow\mathrm{C5}+\mathrm{Atomicity}_t+\mathrm{Relational\ Choice}
 \end{aligned}
 ```
 
@@ -80,7 +80,7 @@ Intensional Choice has the form
 ```math
 \mathrm{IC}_\sigma:=\forall F^{\sigma t}\, .\,
 \Box\exists x^\sigma\, .\,Fx
-\to\exists G^{\sigma t}\, .\,G\le F\land\Box\exists!x^\sigma\, .\,Gx.
+\to\exists G^{\sigma t}\, .\,G\le F\land\Box\exists!x^\sigma\, .\,Gx
 ```
 
 The entailment $`G\le F`$ is a boxed universally closed implication. Its exposed binders are therefore only at $`\sigma t`$. Modalized Relational Choice is
@@ -88,7 +88,7 @@ The entailment $`G\le F`$ is a boxed universally closed implication. Its exposed
 ```math
 \mathrm{MRC}_{\sigma,\tau}:=\forall R^{\sigma\tau t}\, .\,
 \Box\mathrm{Serial}(R)
-\to\exists S^{\sigma\tau t}\, .\,\Box\mathrm{Functional}(S)\land S\le R.
+\to\exists S^{\sigma\tau t}\, .\,\Box\mathrm{Functional}(S)\land S\le R
 ```
 
 Its exposed binders are at $`\sigma\tau t`$. The lemma gives
@@ -98,7 +98,7 @@ Its exposed binders are at $`\sigma\tau t`$. The lemma gives
 \mathrm C+\mathrm{ND}_t+\mathrm{BF}_{\sigma t}
 &\vdash\mathrm{IC}_\sigma\leftrightarrow\Box\mathrm{IC}_\sigma,\\
 \mathrm C+\mathrm{ND}_t+\mathrm{BF}_{\sigma\tau t}
-&\vdash\mathrm{MRC}_{\sigma,\tau}\leftrightarrow\Box\mathrm{MRC}_{\sigma,\tau}.
+&\vdash\mathrm{MRC}_{\sigma,\tau}\leftrightarrow\Box\mathrm{MRC}_{\sigma,\tau}
 \end{aligned}
 ```
 
@@ -108,7 +108,7 @@ Their negations are rigid too. No observer premise is needed. C5 supplies the hy
 \begin{aligned}
 \mathrm{Modalized\ Relational\ Choice}
 &\Longleftrightarrow\Box\mathrm{Relational\ Choice}+\mathrm{Intensional\ Choice}\\
-&\Longleftrightarrow\Box\mathrm{Relational\ Choice}+\Box\mathrm{Intensional\ Choice}.
+&\Longleftrightarrow\Box\mathrm{Relational\ Choice}+\Box\mathrm{Intensional\ Choice}
 \end{aligned}
 ```
 

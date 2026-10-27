@@ -30,7 +30,7 @@ Write
 
 ```math
 A=\mathrm{RO}(\mathbb D),\qquad
-C=\mathrm{RO}(\mathbb T).
+C=\mathrm{RO}(\mathbb T)
 ```
 
 All the following constructions can be performed within the ground model.
@@ -48,7 +48,7 @@ For either algebra, weak homogeneity gives the exact consequence needed below:
 \quad(a>0),
 \qquad
 \bigvee_{\beta\in\mathrm{Aut}(C)}\beta(c)=1_C
-\quad(c>0).
+\quad(c>0)
 \tag{2}
 ```
 
@@ -60,21 +60,21 @@ Palumbo's generic names yield complete unital Boolean homomorphisms
 
 ```math
 j:A\longrightarrow C,
-\qquad k:C\longrightarrow A.
+\qquad k:C\longrightarrow A
 \tag{3}
 ```
 
 Here is the precise general fact being used. If forcing with a complete algebra C supplies a ground A-generic ultrafilter $`\dot H`$, put
 
 ```math
-j(a)=\|\check a\in\dot H\|_C.
+j(a)=\|\check a\in\dot H\|_C
 \tag{4}
 ```
 
 Ultrafilter properties give the finite Boolean operations and endpoint preservation. For a ground family $`X\subseteq A`$, take a maximal antichain refining $`X\cup\{\neg\bigvee X\}`$. Genericity meets that antichain. It follows that membership of $`\bigvee X`$ in $`\dot H`$ is equivalent to membership of some member of X, so
 
 ```math
-j(\bigvee X)=\bigvee_{a\in X}j(a).
+j(\bigvee X)=\bigvee_{a\in X}j(a)
 ```
 
 Complements give arbitrary meets. This proves the completeness assertion, without silently identifying “adds a generic” with an injective embedding. Apply the argument in both directions to obtain (3).
@@ -84,20 +84,20 @@ Complements give arbitrary meets. This proves the completeness assertion, withou
 Set
 
 ```math
-B=A\times C.
+B=A\times C
 ```
 
 This is the Boolean algebra for a two-way lottery between the two forcings, not their forcing product. Both factors, and hence B, are atomless. Besides the product automorphisms $`\alpha\times\beta`$, B has the complete unital endomorphism
 
 ```math
-H(a,c)=(k(c),j(a)).
+H(a,c)=(k(c),j(a))
 \tag{5}
 ```
 
 We claim that every nonzero $`b\in B`$ has full endomorphism orbit:
 
 ```math
-\bigvee_{h\in\mathrm{End}_{\rm comp}(B)}h(b)=1_B.
+\bigvee_{h\in\mathrm{End}_{\rm comp}(B)}h(b)=1_B
 \tag{6}
 ```
 
@@ -106,7 +106,7 @@ Suppose first that $`b=(a,c)`$ with $`a>0`$. Product automorphisms applied to b 
 ```math
 \bigvee_{\alpha}j(\alpha(a))
  =j\!\left(\bigvee_{\alpha}\alpha(a)\right)
- =j(1_A)=1_C.
+ =j(1_A)=1_C
 ```
 
 The join over the union of these two families is therefore $`(1_A,1_C)`$. If instead $`c>0`$, use C's automorphisms and k in exactly the same calculation, with the coordinates interchanged. This proves (6).
@@ -116,7 +116,7 @@ Form the internal full relational hierarchy with proposition domain B. A complet
 For different propositions p and q, the difference $`b=p\mathbin{\triangle}q`$ is nonzero, and the Boolean value of their observer separation is the join in (6). Therefore the propositional separation formula has value one. For two different predicates of any admitted relational type, some argument tuple gives a nonzero difference. Applying the same calculation at that tuple makes the observer-separation formula have value one. Conversely identical predicates are of course indistinguishable. This proves every native OS instance with Boolean value one, hence
 
 ```math
-\boxed{\Box\mathrm{OS}_{\rm all}.}
+\boxed{\Box\mathrm{OS}_{\rm all}}
 \tag{7}
 ```
 
@@ -150,7 +150,7 @@ D_L(y)&\equiv
  \exists x\in\omega^\omega\left[
  U_L(x)\land
  \forall y\in\omega^\omega\,(D_L(y)\to x\le^*y)
- \right].
+ \right]
 \end{aligned}
 \tag{8}
 ```
@@ -164,7 +164,7 @@ By the cited forcing theorems, the exact Boolean values are
 ```math
 \|\varphi\|_A=1_A,
 \qquad \|\varphi\|_C=0_C,
-\qquad \|\varphi\|_B=(1_A,0_C).
+\qquad \|\varphi\|_B=(1_A,0_C)
 \tag{9}
 ```
 
@@ -179,14 +179,14 @@ Internally to M, CH holds. Each forcing has size at most $`\omega_1`$, is ccc, a
 Each of A and C has size at most $`\omega_1`$: in a ccc completion every regular open is the join of a countable antichain from the underlying poset. Each also has size at least the ground continuum, since an atomless complete Boolean algebra contains a countably infinite antichain and the distinct joins of all its subsets. Thus
 
 ```math
-|A|^M=|C|^M=|B|^M=\omega_1^M.
+|A|^M=|C|^M=|B|^M=\omega_1^M
 \tag{10}
 ```
 
 The carrier t, whose underlying domain is the ground set B, has adequate size in both forcing components. Each component forces an injection of its real field into $`\check B`$, and the ground real field injects into B as well. By the Boolean maximum principle choose a name for this injection, and compose it with a named finite permutation so that zero and one have two fixed, distinct ground labels in B. Pulling back the carrier, natural numbers, order and field-operation graphs gives names for relations on finite powers of $`\check B`$. Normalize each such name as an M-function $`B^n\to B`$, and curry it into the admitted relational domain. Thus there are actual admitted constants and relation objects, rather than unadmitted names for individual-valued functions. The extensional forcing transfer of [the earlier model](os-analysis-model.md), §6, and [the capacity audit](necessary-os-model-audit.md), §4, supplies an admitted real structure $`R^\ast`$ at carrier t with
 
 ```math
-\|\mathrm{Real}_t(R^\ast)\|_B=1_B.
+\|\mathrm{Real}_t(R^\ast)\|_B=1_B
 \tag{11}
 ```
 
@@ -197,7 +197,7 @@ Write the native universal sides as
 ```math
 \begin{aligned}
 U_\varphi&:=\forall R\,[\mathrm{Real}_t(R)\to\varphi^\ast(R)],\\
-U_{\neg\varphi}&:=\forall R\,[\mathrm{Real}_t(R)\to\neg\varphi^\ast(R)].
+U_{\neg\varphi}&:=\forall R\,[\mathrm{Real}_t(R)\to\neg\varphi^\ast(R)]
 \end{aligned}
 ```
 
@@ -206,7 +206,7 @@ Transfer and (9) give the lower bounds for all real structures. The total witnes
 ```math
 \|U_\varphi\|_B=(1_A,0_C),
 \qquad
-\|U_{\neg\varphi}\|_B=(0_A,1_C).
+\|U_{\neg\varphi}\|_B=(0_A,1_C)
 \tag{12}
 ```
 

@@ -20,7 +20,7 @@ Work in the fixed relational language of C. Put
 and let
 
 ```math
-\Pi=\forall n^\nu\,(Nn\to\Diamond a_n).
+\Pi=\forall n^\nu\,(Nn\to\Diamond a_n)
 \tag{1}
 ```
 
@@ -42,7 +42,7 @@ Let B be the current Boolean algebra of propositions. All joins below mean least
 For an admitted X of type nu t, form the admitted property of propositions
 
 ```math
-S_X(p):=\exists n^\nu\,(Nn\land Xn\land p=a_n).
+S_X(p):=\exists n^\nu\,(Nn\land Xn\land p=a_n)
 \tag{2}
 ```
 
@@ -50,7 +50,7 @@ BC_t gives a unique proposition b_X that is the current least upper bound of S_X
 
 ```math
 b_X=\bigvee\{a_n:Nn\text{ and }Xn\text{ currently hold}\},
-\qquad b=\bigvee_{n\in N}a_n.
+\qquad b=\bigvee_{n\in N}a_n
 \tag{3}
 ```
 
@@ -59,7 +59,7 @@ These values are specified by the admitted functional relation LUB_t(c,S_X). The
 For every current number n,
 
 ```math
-Xn\quad\Longleftrightarrow\quad a_n\le b_X.
+Xn\quad\Longleftrightarrow\quad a_n\le b_X
 \tag{4}
 ```
 
@@ -73,21 +73,21 @@ The image is the following definable subset of B:
 
 ```math
 D=\{c\le b:\forall n\in N\,
-       (a_n\le c\ \lor\ a_n\land c=\bot)\}.
+       (a_n\le c\ \lor\ a_n\land c=\bot)\}
 \tag{5}
 ```
 
 Every code satisfies (5), by §2. Conversely take c satisfying (5), and use the admitted predicate
 
 ```math
-X_c(n):=(a_n\le c).
+X_c(n):=(a_n\le c)
 \tag{6}
 ```
 
 Finite meet distributes over every existing join in a Boolean algebra. For clarity, if s=join S and v bounds all c∧x with x∈S, then not c∨v bounds S, whence c∧s≤v. Apply this to (3):
 
 ```math
-c=c\land b=\bigvee_{n\in N}(c\land a_n).
+c=c\land b=\bigvee_{n\in N}(c\land a_n)
 ```
 
 The condition defining D makes each summand either a_n or Bottom. Thus c=b_(X_c). This proves the image characterization and gives its inverse.
@@ -97,7 +97,7 @@ The code assignment is a Boolean isomorphism A→D, with relative unit b:
 ```math
 b_{X\land Y}=b_X\land b_Y,\qquad
 b_{\neg X}=b\land\neg b_X,\qquad
-b_{\bot}=\bot,\qquad b_{\top}=b.
+b_{\bot}=\bot,\qquad b_{\top}=b
 \tag{7}
 ```
 
@@ -121,7 +121,7 @@ For every current c∈D,
 
 ```math
 c\ne\bot\quad\Longrightarrow\quad
-\Box(\Pi\to\Diamond c).
+\Box(\Pi\to\Diamond c)
 \tag{8}
 ```
 
@@ -131,7 +131,7 @@ Apply (8) to the Boolean symmetric difference of two codes. It belongs to D and 
 
 ```math
 c,d\in D,\ c\ne d\quad\Longrightarrow\quad
-\Box(\Pi\to c\ne d).
+\Box(\Pi\to c\ne d)
 \tag{9}
 ```
 
@@ -140,14 +140,14 @@ These statements concern the current codes transported to other evaluations. The
 Each code also supplies a persistent representative of the set it encodes. For a current numeric predicate X, let c=b_X and put
 
 ```math
-Y_c(n):=(a_n\le c).
+Y_c(n):=(a_n\le c)
 \tag{10}
 ```
 
 Then Y_c agrees with X on current N. The predicate Y_c is an identity predicate, so C proves its positive persistence, including the universally boxed form
 
 ```math
-\Box\forall n\,(Y_c(n)\to\Box Y_c(n)).
+\Box\forall n\,(Y_c(n)\to\Box Y_c(n))
 \tag{11}
 ```
 
@@ -155,7 +155,7 @@ If a current number n fails X, then a_n is disjoint from c. That identity persis
 
 ```math
 Nn\land\neg Xn\quad\Longrightarrow\quad
-\Box(\Pi\to\neg Y_c(n)).
+\Box(\Pi\to\neg Y_c(n))
 \tag{12}
 ```
 
@@ -165,7 +165,7 @@ There is also a canonical admitted term that fixes every code:
 
 ```math
 c=\exists n^\nu\,[Nn\land(a_n\le c)\land a_n]
-\qquad(c\in D).
+\qquad(c\in D)
 \tag{13}
 ```
 
@@ -178,7 +178,7 @@ The algebra of codes is not countable in the database's native sense:
 ```math
 \neg\mathrm{Ctbl}_{e,t}(D),
 \qquad
-\neg\mathrm{Ctbl}_{e,t}(\lambda p^t.\top).
+\neg\mathrm{Ctbl}_{e,t}(\lambda p^t.\top)
 \tag{14}
 ```
 
@@ -194,7 +194,7 @@ X(n):=\forall c^t\,[Dc\land R(c,n)\to\neg(a_n\le c)]
 and let d=b_X. Since d lies in D, choose one current n∈N with R(d,n). Every c∈D related to this n is identical to d, by disjointness of the number fibres. Consequently
 
 ```math
-Xn\ \longleftrightarrow\ \neg(a_n\le d).
+Xn\ \longleftrightarrow\ \neg(a_n\le d)
 ```
 
 But code recovery (4) gives Xn if and only if a_n≤d, a contradiction. This proves the first assertion of (14). A relation counting all propositions would restrict to one counting D, giving the second.

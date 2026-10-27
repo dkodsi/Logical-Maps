@@ -9,7 +9,7 @@ construction, not a native database record or a Lean certificate.
 The discrete-profile finite-partition model satisfies every separately boxed instance of full logical observer separation, but has an admitted proper propositional filter without any admitted ultrafilter extension:
 
 ```math
-\mathrm C+\Box\mathrm{OS}\not\models\mathrm{UFE}_t.
+\mathrm C+\Box\mathrm{OS}\not\models\mathrm{UFE}_t
 ```
 
 Section 5.1 verifies the whole Boolean and quantifier identities for the separating observers. The failure concerns admitted filters and predicates in the model.
@@ -25,7 +25,7 @@ For an admitted predicate $`F^{tt}`$, put
                   \land\forall p\,(Up\lor U(\neg p)),\\
 \mathrm{UFE}_t:={}&\forall F^{tt}\bigl[\mathrm{Filter}(F)\to
  \exists U^{tt}(\mathrm{Ultra}(U)\land
-                    \forall p(Fp\to Up))\bigr].
+                    \forall p(Fp\to Up))\bigr]
 \end{aligned}
 \tag{3}
 ```
@@ -47,7 +47,7 @@ the same full classical relational type hierarchy:
 
 ```math
 L_e=\{*\},\qquad L_t=\{0,1\},\qquad
-L_{\sigma\tau}=L_\tau^{L_\sigma}\quad(\tau\ne e).
+L_{\sigma\tau}=L_\tau^{L_\sigma}\quad(\tau\ne e)
 \tag{4}
 ```
 
@@ -60,7 +60,7 @@ of $`\mathbb N`$ is a finite collection of disjoint nonempty cells with
 union $`\mathbb N`$. Write
 
 ```math
-G_{(\mathcal P)}:=\{g\in G:gC=C\text{ for every }C\in\mathcal P\}.
+G_{(\mathcal P)}:=\{g\in G:gC=C\text{ for every }C\in\mathcal P\}
 \tag{5}
 ```
 
@@ -92,7 +92,7 @@ The profile $`a_1`$ is arbitrary. The action is
 
 ```math
 (g a)_0(\bar x)=a_0(g^{-1}\bar x),\qquad
-(g a)_1(n)=a_1(g^{-1}n).
+(g a)_1(n)=a_1(g^{-1}n)
 \tag{7}
 ```
 
@@ -112,7 +112,7 @@ $`\mathbb N`$. Consequently
 
 ```math
 \boxed{D_t=\{0,1\}\times\mathcal P(\mathbb N),\qquad
-       g(\varepsilon,S)=(\varepsilon,gS).}
+       g(\varepsilon,S)=(\varepsilon,gS)}
 \tag{8}
 ```
 
@@ -151,7 +151,7 @@ the product Boolean operations. The fixed abbreviations yield
 \qquad
 (\varepsilon,S)\le(\delta,T)
 \quad\Longleftrightarrow\quad
-\varepsilon\le\delta\text{ and }S\subseteq T.
+\varepsilon\le\delta\text{ and }S\subseteq T
 \tag{10}
 ```
 
@@ -223,7 +223,7 @@ an admitted observer $`E_n`$ by
 ```math
 (E_n)_0(\varepsilon,S)=\mathbf1_{n\in S},
 \qquad (E_n)_1(m)=\mathrm{id}_{\{0,1\}}
-\quad\text{for every }m.
+\quad\text{for every }m
 \tag{12}
 ```
 
@@ -232,7 +232,7 @@ $`\{\{n\},\mathbb N\setminus\{n\}\}`$, and its profile is constant.
 Thus it belongs to $`D_{tt}`$. By (9),
 
 ```math
-E_n(\varepsilon,S)=(\mathbf1_{n\in S},S).
+E_n(\varepsilon,S)=(\mathbf1_{n\in S},S)
 \tag{13}
 ```
 
@@ -256,7 +256,7 @@ types, together with translated equality reflexivity and substitution:
 \begin{aligned}
 R_\sigma(E)&:\quad\forall x^\sigma\,E(x=x),\\
 L_\sigma(E)&:\quad\forall x^\sigma y^\sigma F^{\sigma t}
- [E(x=y)\to(E(Fx)\to E(Fy))].
+ [E(x=y)\to(E(Fx)\to E(Fy))]
 \end{aligned}
 ```
 
@@ -309,7 +309,7 @@ Define $`F_*\in D_{tt}`$ by
 (F_*)_0(\varepsilon,S)=1
  \quad\Longleftrightarrow\quad\mathbb N\setminus S\text{ is finite},
 \qquad
-(F_*)_1(n)=\mathrm{const}_0.
+(F_*)_1(n)=\mathrm{const}_0
 \tag{14}
 ```
 
@@ -361,7 +361,7 @@ subsets and fixes every original support cell setwise.
 Invariance gives
 
 ```math
-C_0\in\mathcal V\quad\Longleftrightarrow\quad C_1\in\mathcal V.
+C_0\in\mathcal V\quad\Longleftrightarrow\quad C_1\in\mathcal V
 \tag{17}
 ```
 

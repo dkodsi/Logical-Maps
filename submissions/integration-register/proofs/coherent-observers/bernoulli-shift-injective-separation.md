@@ -7,7 +7,7 @@
 There is a Henkin model of the fixed relational theory C satisfying
 
 ```math
- C5+\Box\mathrm{InjSep}+\Box\neg\mathrm{SplitMono}.
+ C5+\Box\mathrm{InjSep}+\Box\neg\mathrm{SplitMono}
  \tag{1}
 ```
 
@@ -30,7 +30,7 @@ the product fair-coin probability measure, and let B be its complete measure Boo
 For S subset I let B_S be the complete subalgebra of events depending only on columns in S. The one-sided shift gives the injective complete Boolean endomorphism
 
 ```math
- E(x_{i,n})=x_{i,n+1}.
+ E(x_{i,n})=x_{i,n+1}
  \tag{2}
 ```
 
@@ -41,7 +41,7 @@ Use the following group G of complete measure-preserving Boolean automorphisms. 
  \text{flip:}&x_{i,n}\mapsto\neg x_{i,n},\\
  \text{add:}&x_{i,n}\mapsto x_{i,n}\mathbin\triangle x_{j,n},\\
  \text{delayed add:}&x_{i,n}\mapsto x_{i,n}\mathbin\triangle x_{j,n+1},\\
- \text{product add:}&x_{i,n}\mapsto x_{i,n}\mathbin\triangle(x_{j,n}\land x_{k,n}).
+ \text{product add:}&x_{i,n}\mapsto x_{i,n}\mathbin\triangle(x_{j,n}\land x_{k,n})
 \end{array}
  \tag{3}
 ```
@@ -62,7 +62,7 @@ Indeed an element b has countable column support S union T. Move T outside S to 
 
 ```math
  F(b)=\bigvee_{m<\omega}\bigl(c_m\land E^m b\bigr),
- \qquad (c_m)_{m<\omega}\text{ a Boolean partition of }1.
+ \qquad (c_m)_{m<\omega}\text{ a Boolean partition of }1
  \tag{4}
 ```
 
@@ -107,7 +107,7 @@ The flip gate implies that the size of A is odd. Now use the product-add gate wi
 almost everywhere. A parity on two or more coordinates fails (7): choose z to have exactly one selected coordinate in A, and w exactly a different selected coordinate in A. This has positive product measure, makes the right side 1 and the left side 0. Consequently A is a singleton. Thus there is a measurable integer-valued function k_n(s) such that
 
 ```math
- F(x_{i,n})(s,y)=y(k_n(s))\quad(i\notin S).
+ F(x_{i,n})(s,y)=y(k_n(s))\quad(i\notin S)
  \tag{8}
 ```
 
@@ -130,7 +130,7 @@ almost everywhere. Intersecting the countably many conull sets gives k_n(s)=n+k(
 Finally use the add gate targeting a fresh i with control a in S. It fixes B_S pointwise. Its commutation equation and (8) give
 
 ```math
- F(x_{a,n})=x_{a,n+k(s)}.
+ F(x_{a,n})=x_{a,n+k(s)}
  \tag{9}
 ```
 
@@ -149,7 +149,7 @@ In particular, if F and A are supported complete Boolean endomorphisms and F A=I
 In contrast, for every nonzero b in B,
 
 ```math
- \bigvee_{m<\omega}E^m b=1.
+ \bigvee_{m<\omega}E^m b=1
  \tag{10}
 ```
 
@@ -174,7 +174,7 @@ and A_(sigma tau) is the set of all countably supported functions from A_sigma t
 Interpret Boolean connectives by the Boolean operations in B. For every type sigma define
 
 ```math
- Q_\sigma(f)=\bigwedge_{a\in A_\sigma}f(a).
+ Q_\sigma(f)=\bigwedge_{a\in A_\sigma}f(a)
  \tag{11}
 ```
 
@@ -217,7 +217,7 @@ The construction settles the unrestricted C5 implication and the bare-C implicat
 **Choice boundary.** The model necessarily fails RC_(tt,t). Use the empty-supported serial relation
 
 ```math
- U(X,p):=Xp\lor\bigl(\neg\exists q\,Xq\land p=0\bigr).
+ U(X,p):=Xp\lor\bigl(\neg\exists q\,Xq\land p=0\bigr)
 ```
 
 For any proposed subrelation R, let w be the Boolean value of its being functional and contained in U. Choose countable S supporting R's support parameters; w is fixed by all column permutations outside S, so w belongs to B_S. Choose countably infinitely many columns T disjoint from S and let X_T be the admitted crisp predicate selecting exactly the distinct propositions x_(i,0), i in T. On w, the values a_i=w meet R(X_T,x_(i,0)) are pairwise disjoint and have join w: containment excludes all other outputs, and functionality supplies one. Permutations of T fix R, w and X_T and permute the a_i. They preserve measure, so all a_i have equal measure. A countably infinite disjoint family of equal positive measure cannot lie in a probability algebra; hence all have measure zero, and w=0. This applies to every ambient R. The generic truth lemma gives the asserted necessary failure. This boundary check does not refute the separate implication with RC_all as an added premise.

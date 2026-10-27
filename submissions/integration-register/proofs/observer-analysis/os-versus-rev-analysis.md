@@ -15,7 +15,7 @@ Here analytical sentences use the real field together with its natural-numbers p
 ```math
 U_{\sigma,\varphi}:=\forall\mathfrak R\,
   (\mathrm{Real}_\sigma(\mathfrak R)\to\varphi(\mathfrak R)),
-\qquad U_{\sigma,\varphi}\to\Box U_{\sigma,\varphi}.
+\qquad U_{\sigma,\varphi}\to\Box U_{\sigma,\varphi}
 ```
 
 ## Why Rev succeeds
@@ -43,7 +43,7 @@ For the forcings used below, the isolated-atom component can even be handled by 
 ```math
 \begin{aligned}
 E(\epsilon,b)&=(\epsilon,\epsilon\neg c\vee h(b)),\\
-F(\epsilon,d)&=(\epsilon,h^{-1}(d\wedge c)).
+F(\epsilon,d)&=(\epsilon,h^{-1}(d\wedge c))
 \end{aligned}
 ```
 
@@ -58,7 +58,7 @@ The existing extensional forcing-transfer lemma identifies the Boolean value of 
 ```math
 \llbracket U_{t,\varphi}\rrbracket
  =\bigl(\mathbf 1_{M\models\varphi(\mathbb R)},
-         \|\varphi(\mathbb R)\|_A^M\bigr).
+         \|\varphi(\mathbb R)\|_A^M\bigr)
 ```
 
 There is a real-structure tuple of value Top, so the examples have actual real structures and no vacuity is involved. The proposition type $`t`$ has sufficient carrier capacity in each construction.

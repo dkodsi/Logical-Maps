@@ -11,7 +11,7 @@ Write
 ```math
 \mathsf D_t:=\forall E^{tt}\left[
  \bigl(\forall p,q\,[Ep=Eq\to p=q]\bigr)
- \to\forall q\,\exists p\,[Ep=q]\right].
+ \to\forall q\,\exists p\,[Ep=q]\right]
 \tag{1}
 ```
 
@@ -22,7 +22,7 @@ The internal Frege statement Fin_t(All) implies (1), by the finite Dedekind argu
 Under H+$`\mathsf D_t`$+Fun_{t,t}, any admitted whole left inverse is also a whole right inverse. Indeed, F∘E=I gives injectivity of E. For any q, (1) gives p with Ep=q, and hence
 
 ```math
-E(Fq)=E(F(Ep))=Ep=q.
+E(Fq)=E(F(Ep))=Ep=q
 \tag{2}
 ```
 
@@ -33,7 +33,7 @@ Current Functionality collects these output identities into E∘F=I. If E and F 
 Use the symmetric ideally-full action framework with finite pinning, as specified in [the local-conjugacy note](local-conjugacy-and-reversible-observers.md), §1. At a source object X, a proposition p is a set of arrows out of X. A finite S⊆X pins p when arrows with the same target and the same restriction to S agree on membership in p. Put
 
 ```math
-B_S:=\{p\in D_t(X):S\text{ pins }p\}.
+B_S:=\{p\in D_t(X):S\text{ pins }p\}
 \tag{3}
 ```
 
@@ -45,7 +45,7 @@ For an arrow h:X→Y, application has the truth clause
 
 ```math
 h\in E(p)\quad\Longleftrightarrow\quad
-E\bigl(h,\rho_t(h)p\bigr).
+E\bigl(h,\rho_t(h)p\bigr)
 \tag{4}
 ```
 
@@ -54,7 +54,7 @@ Suppose h,h′ have target Y and agree on P∪S. The transported inputs in (4) a
 ```math
 l\in\rho_t(h)p\ \Longleftrightarrow\ lh\in p,
 \qquad
-l\in\rho_t(h')p\ \Longleftrightarrow\ lh'\in p.
+l\in\rho_t(h')p\ \Longleftrightarrow\ lh'\in p
 ```
 
 The arrows lh and lh′ agree on S, so these truth values agree for every l. Thus $`\rho_t(h)p=\rho_t(h')p`$. E's P-pinning now makes the two sides of (4) agree. This proves the lemma at arbitrary output coordinates, not merely at the identity arrow.
@@ -79,7 +79,7 @@ For a finite S⊆X and arrow h, its colour pattern on S records, for each s∈S,
 If two arrows h,h′ have the same colour pattern on S, there is g∈G with (gh)|S=h′|S. Extend the finite partial bijections h(s)↦h′(s) separately within A and B. Symmetry and S-pinning therefore make every p∈B_S give h and h′ the same membership value. Conversely, any set of colour patterns defines a symmetric S-pinned proposition, hence an admitted proposition. Thus
 
 ```math
-|B_S|=2^{\,2^{|S|}}.
+|B_S|=2^{\,2^{|S|}}
 \tag{5}
 ```
 
@@ -114,7 +114,7 @@ The verified profile is therefore
 \boxed{\mathrm{C5}+\mathrm{Rev}+\mathsf D_t
  +\text{atomless propositions}
  +\neg\mathrm{EndSep}
- +\neg\mathrm{Fin}_t(\mathrm{All}).}
+ +\neg\mathrm{Fin}_t(\mathrm{All})}
 \tag{7}
 ```
 

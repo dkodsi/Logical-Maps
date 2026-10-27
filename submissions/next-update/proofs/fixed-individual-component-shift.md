@@ -6,7 +6,7 @@
 
 ```math
 \boxed{\mathrm{C5}+\Box\mathrm{SplitMono}
- +\Box\mathrm{EPNC}_{e}\not\models\mathrm{Rev}.}
+ +\Box\mathrm{EPNC}_{e}\not\models\mathrm{Rev}}
 ```
 
 The countermodel is the existing component-shift symmetric finite-pinning model with any nonempty set D as its individual domain and the trivial action on D. One may take $`D=\mathbb N`$. Its pinning carrier, arrows and symmetries remain unchanged. Its proposition-only hierarchy therefore retains the obstruction to Rev, while fixed individuals make all permitted endpoint relation parameters invariant under transport. Boxes of the two displayed schemata are read instance by instance after universal closure. No separate verdict about an object-language infinity axiom is needed or asserted.
@@ -18,7 +18,7 @@ Fix finitely many relation variables $`R_i:e^{n_i}t`$, where $`n_i\geq1`$, and f
 ```math
 \mathrm{End}(\bar R):=
 \bigwedge_i\forall\bar y^{\,e}
- \bigl(R_i[\bar y]=\top\lor R_i[\bar y]=\bot\bigr).
+ \bigl(R_i[\bar y]=\top\lor R_i[\bar y]=\bot\bigr)
 ```
 
 The schema $`\mathrm{EPNC}_e`$ consists of the universal closures of
@@ -26,7 +26,7 @@ The schema $`\mathrm{EPNC}_e`$ consists of the universal closures of
 ```math
 \mathrm{End}(\bar R)\longrightarrow
  \bigl(P(\bar R,\bar x)\leftrightarrow
-       \Box P(\bar R,\bar x)\bigr).
+       \Box P(\bar R,\bar x)\bigr)
 \tag{1}
 ```
 
@@ -51,7 +51,7 @@ To spell out the relevant closure facts, a relational profile satisfies
 ```math
 A(gh;\rho(g)\bar u)=A(h;\bar u)\quad(g\in G),
 \qquad
-(\rho(k)A)(h;\bar u)=A(hk;\bar u).
+(\rho(k)A)(h;\bar u)=A(hk;\bar u)
 ```
 
 Finite pins and these symmetry clauses are defined using X, K and G, not by quantifying over $`D_e`$. They are preserved by transport exactly as in the original construction. The constant individual action is coherent and bijective, and every individual parameter has empty support.
@@ -67,14 +67,14 @@ All arrows remain invertible, so transports at every type are bijections. Identi
 Fix an assignment satisfying $`\mathrm{End}(\bar R)`$ at the identity. For every i and every tuple $`\bar a\in D^{n_i}`$,
 
 ```math
-R_i[\bar a]\in\{\top,\bot\}.
+R_i[\bar a]\in\{\top,\bot\}
 ```
 
 These are proposition identities, so each displayed proposition has constant truth on K. Since every arrow fixes $`\bar a`$, its value at h is exactly the raw profile value $`R_i(h;\bar a)`$. Therefore
 
 ```math
 R_i(h;\bar a)=R_i(1;\bar a)
-\qquad(h\in K,\ \bar a\in D^{n_i}).
+\qquad(h\in K,\ \bar a\in D^{n_i})
 \tag{2}
 ```
 
@@ -85,7 +85,7 @@ Naturality for pure terms now gives, for every $`h\in K`$,
 ```math
 \rho(h)P(\bar R,\bar a)
  =P(\rho(h)\bar R,\rho(h)\bar a)
- =P(\bar R,\bar a).
+ =P(\bar R,\bar a)
 \tag{3}
 ```
 
@@ -120,7 +120,7 @@ A(E)&:=B(E)\land\exists F^{tt}
  [B(F)\land E\circ F=I\land F\circ E=I],\\
 \mathrm{Inv}(p)&:=\forall E^{tt}[A(E)\to Ep=p],\\
 \mathrm{TrivialFix}&:=\forall p^t
- [\mathrm{Inv}(p)\to(p=\bot\lor p=\top)].
+ [\mathrm{Inv}(p)\to(p=\bot\lor p=\top)]
 \end{aligned}
 ```
 
@@ -130,14 +130,14 @@ The established theorem is
 
 ```math
 \mathrm{C5}\models
- (\mathrm{Rev}\leftrightarrow\mathrm{TrivialFix}).
+ (\mathrm{Rev}\leftrightarrow\mathrm{TrivialFix})
 \tag{5}
 ```
 
 The original component-shift model satisfies C5 and fails Rev by its §§6–8, so it falsifies TrivialFix. Equation (4) transfers that same finite-sentence failure to $`\mathcal M_D`$. Since $`\mathcal M_D`$ also satisfies C5, (5) gives
 
 ```math
-\mathcal M_D\models\neg\mathrm{Rev}.
+\mathcal M_D\models\neg\mathrm{Rev}
 ```
 
 More concretely, the old model has a nonzero, currently false proposition fixed by every admitted reversible $`\mathrm{Good}_{\{t\}}`$ observer. The same proposition, observer domain, qualification and truth evaluation remain in the modified model. Its old definition using the moving individual domain and a binary relation need not remain expressible there. Its existence as a proposition object and its fixedness do remain, which is precisely why it can obstruct Rev without violating the restricted parameter schema.
@@ -152,7 +152,7 @@ The singleton special case has an additional independent soundness check. This c
 t^\#=t,\qquad
 (e\to\rho)^\#=\rho^\#,\qquad
 (\sigma\to\rho)^\#=\sigma^\#\to\rho^\#
- \quad(\sigma\ne e).
+ \quad(\sigma\ne e)
 ```
 
 Interpret a new relational type $`\rho`$ in an old model by its $`\rho^\#`$-domain, and interpret e by a singleton. Application to an e argument and lambda abstraction over an e variable delete that dummy argument or binder. Other applications and abstractions translate normally. The primitive constants require these explicit cases:

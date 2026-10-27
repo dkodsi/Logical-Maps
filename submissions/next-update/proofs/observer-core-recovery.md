@@ -17,7 +17,7 @@ These are inherited C5 consequences. The native bridges are necessary-nd-implies
 An observer E:B->B is Good_t in the existing whole-operation sense. The established C5 reduction supplies its whole Boolean laws and every typed quantifier law. When E is idempotent, put
 
 ```math
-r_e^E(x)=x,\qquad r_t^E(p)=E(p),\qquad r_{\sigma\tau}^E(f)=r_\tau^E\circ f\circ r_\sigma^E.\tag{1.1}
+r_e^E(x)=x,\qquad r_t^E(p)=E(p),\qquad r_{\sigma\tau}^E(f)=r_\tau^E\circ f\circ r_\sigma^E\tag{1.1}
 ```
 
 The e clause is external notation, never an object of forbidden type ee. All relational clauses are admitted lambda operations. Each r is idempotent. Its fixed hierarchy is the canonical C5 Henkin core of [the typed-core construction](observer-classical-cores.md), Sections 2-4.
@@ -25,13 +25,13 @@ The e clause is external notation, never an object of forbidden type ee. All rel
 At a flattened relational type $`\tau=\sigma_1\cdots\sigma_nt`$,
 
 ```math
-(r_\tau^Ef)[x_1,\ldots,x_n]=E(f[r_{\sigma_1}^Ex_1,\ldots,r_{\sigma_n}^Ex_n]).\tag{1.2}
+(r_\tau^Ef)[x_1,\ldots,x_n]=E(f[r_{\sigma_1}^Ex_1,\ldots,r_{\sigma_n}^Ex_n])\tag{1.2}
 ```
 
 Let J be any external set of idempotent Good observers. We examine
 
 ```math
-N_\tau(f)=(r_\tau^E(f))_{E\in J}.\tag{1.3}
+N_\tau(f)=(r_\tau^E(f))_{E\in J}\tag{1.3}
 ```
 
 This is a map into a product of fixed domains. It is not assumed to preserve original application or to be a logical-model homomorphism.
@@ -41,7 +41,7 @@ This is a map into a product of fixed domains. It is not assumed to preserve ori
 **Theorem 2.1.** For $`\tau=\sigma_1\cdots\sigma_nt`$, $`N_{\tau}`$ is injective if and only if the following local condition holds:
 
 ```math
-\forall\bar a\,\forall p\ne q\,\exists E\in J.\,\bigl(\bigwedge_{i=1}^n r_{\sigma_i}^E(a_i)=a_i\;\land\;E(p)\ne E(q)\bigr).\tag{2.1}
+\forall\bar a\,\forall p\ne q\,\exists E\in J.\,\bigl(\bigwedge_{i=1}^n r_{\sigma_i}^E(a_i)=a_i\;\land\;E(p)\ne E(q)\bigr)\tag{2.1}
 ```
 
 Thus separating output values is not sufficient: a separating observer must also leave the particular argument tuple intact. For n=0 this is exactly separation of B by J.
@@ -51,7 +51,7 @@ Proof of sufficiency. If f≠g, actual Functionality gives a full argument tuple
 Proof of necessity. Fix a and p≠q. Crisp tuple identity defines admitted relations
 
 ```math
-f[\bar x]=\delta(\bar x,\bar a)\land p,\qquad g[\bar x]=\delta(\bar x,\bar a)\land q.\tag{2.2}
+f[\bar x]=\delta(\bar x,\bar a)\land p,\qquad g[\bar x]=\delta(\bar x,\bar a)\land q\tag{2.2}
 ```
 
 where delta is Top on the specified tuple and Bottom otherwise. These relations differ at a. If E fails to fix some a_i, no normalized input $`r_{\sigma_i}^E`$(x_i) can equal a_i: every element of that image is fixed. Consequently both normalizations in (2.2) are constantly Bottom. If E fixes the whole tuple, their normalized values are E(p) and E(q) at a, and Bottom off its inverse image under the normalization map. Hence $`r_{\tau}^E`$ f and $`r_{\tau}^E`$ g differ only if E fixes a and separates p,q. Injectivity of $`N_{\tau}`$ supplies such an E. QED.
@@ -63,19 +63,19 @@ In particular, injectivity on $`D_{\sigma t}`$ requires every σ-object to lie i
 Let I=lambda p.p at type tt, and let
 
 ```math
-H_I(f):=\delta_{tt}(f,I),\qquad H_I:(tt)t.\tag{3.1}
+H_I(f):=\delta_{tt}(f,I),\qquad H_I:(tt)t\tag{3.1}
 ```
 
 This is a nonzero admitted predicate, since H_I(I)=Top. For every idempotent E,
 
 ```math
-r_{tt}^E(I)=E\circ I\circ E=E.\tag{3.2}
+r_{tt}^E(I)=E\circ I\circ E=E\tag{3.2}
 ```
 
 Thus I is fixed by $`r_{tt}^E`$ if and only if E=I. If E is proper, its normalized-input image omits I, and therefore
 
 ```math
-r_{(tt)t}^E(H_I)=\bot_{(tt)t}.\tag{3.3}
+r_{(tt)t}^E(H_I)=\bot_{(tt)t}\tag{3.3}
 ```
 
 **Theorem 3.1.** A family J of idempotent Good observers has injective joint normalization at every type if and only if I belongs to J. In fact, injectivity at the single type (tt)t already forces I to belong to J.
@@ -95,7 +95,7 @@ Positive direction. Normalization fixes individuals. For an e-only relation f it
 Negative direction. Suppose $`\tau=\sigma_1\cdots\sigma_nt`$ has a relational argument sigma_j. Let c:sigma_j be the admitted relation constantly equal to a (or c=a if sigma_j=t). By (1.2), $`r_{\sigma_j}^E`$(c) is the relation constantly equal to E(a), which is an endpoint and differs from a. Consequently c is fixed by no E in J. The admitted relation
 
 ```math
-F[x_1,\ldots,x_n]:=\delta_{\sigma_j}(x_j,c).\tag{4.1}
+F[x_1,\ldots,x_n]:=\delta_{\sigma_j}(x_j,c)\tag{4.1}
 ```
 
 is nonzero, since the argument domains are inhabited. But normalized arguments cannot equal c, so every $`r_{\tau}^E`$(F) is Bottom. QED.
@@ -107,7 +107,7 @@ In particular, the failure already occurs at tt, and also at (et)t: a higher pre
 For each n≥0 put
 
 ```math
-K_n=\{R\in D_{e^nt}:\forall\bar x.\,R[\bar x]\in\{\bot,\top\}\}.\tag{5.1}
+K_n=\{R\in D_{e^nt}:\forall\bar x.\,R[\bar x]\in\{\bot,\top\}\}\tag{5.1}
 ```
 
 Write e^0t=t. The $`K_n`$ are the same fixed domains for every endpoint observer, since individual inputs are never changed. In particular K_0={Bottom,Top}. Identify a member of $`K_n`$ with its extension as a relation on $`D_{e}`$; actual Functionality makes this identification injective. These form the ordinary second-order relational reduct K of the canonical classical Henkin core. Full external powerset domains are not assumed.
@@ -115,13 +115,13 @@ Write e^0t=t. The $`K_n`$ are the same fixed domains for every endpoint observer
 For E in J define
 
 ```math
-\pi_E(R)=\lambda\bar x.\,E(R[\bar x])\in K_n.\tag{5.2}
+\pi_E(R)=\lambda\bar x.\,E(R[\bar x])\in K_n\tag{5.2}
 ```
 
 Every pi_E is onto $`K_n`$ because it fixes every $`K_n`$-member. The map
 
 ```math
-R\longmapsto(\pi_E(R))_{E\in J}.\tag{5.3}
+R\longmapsto(\pi_E(R))_{E\in J}\tag{5.3}
 ```
 
 is injective by Theorem 4.1, and each coordinate is surjective. This is a subdirect representation of the relation/application reduct. It is not a homomorphism of the full typed language including relation identity.
@@ -131,7 +131,7 @@ THEOREM 5.1 (Parameter truth). Let A be an ordinary relational second-order form
 For any original assignment s and any E in J,
 
 ```math
-E(\llbracket A\rrbracket_{M,s})=\top\quad\Longleftrightarrow\quad K\models A[\pi_E(s)].\tag{5.4}
+E(\llbracket A\rrbracket_{M,s})=\top\quad\Longleftrightarrow\quad K\models A[\pi_E(s)]\tag{5.4}
 ```
 
 and E([[A]]_M,s)=Bottom otherwise. Individual values are unchanged by pi_E; each relation value is transformed by (5.2). Extensional equality of relations may be expressed using individual quantifiers; literal identity of relation objects is not part of this fragment.
@@ -139,7 +139,7 @@ and E([[A]]_M,s)=Bottom otherwise. Individual values are unchanged by pi_E; each
 Proof by formula induction. For a relation atom, (5.4) is definition (5.2). Individual equality is crisp and fixed by every E. The Boolean steps use E's Boolean laws. The individual universal step uses
 
 ```math
-E(Q_eF)=Q_e(E\circ F).
+E(Q_eF)=Q_e(E\circ F)
 ```
 
 and the same individual range $`D_{e}`$. The values E(Fx) are endpoints, so their quantified value is Top exactly when all are Top.
@@ -149,7 +149,7 @@ For a relation quantifier of type e^n t, the whole quantifier law gives the same
 **Corollary 5.2.** For any such A and assignment s,
 
 ```math
-\begin{aligned}\llbracket A\rrbracket_{M,s}=\top&\Longleftrightarrow\forall E\in J.\,K\models A[\pi_E(s)],\\\llbracket A\rrbracket_{M,s}\ne\bot&\Longleftrightarrow\exists E\in J.\,K\models A[\pi_E(s)].\end{aligned}\tag{5.5}
+\begin{aligned}\llbracket A\rrbracket_{M,s}=\top&\Longleftrightarrow\forall E\in J.\,K\models A[\pi_E(s)],\\\llbracket A\rrbracket_{M,s}\ne\bot&\Longleftrightarrow\exists E\in J.\,K\models A[\pi_E(s)]\end{aligned}\tag{5.5}
 ```
 
 These are exactly the native necessity and possibility tests, because J separates B and fixes the endpoints. They do not identify current truth with evaluation at some chosen E. Current truth remains U unless a truth-correct observer is separately supplied.
@@ -163,7 +163,7 @@ If all relation parameters lie in $`K_n`$, every pi_E fixes them. The denotation
 For an arbitrary relational type $`\tau=\sigma_1\cdots\sigma_nt`$ define the contextual observation table
 
 ```math
-\Gamma_\tau(f)(E,a_1,\ldots,a_n):=E(f[a_1,\ldots,a_n]).\tag{6.1}
+\Gamma_\tau(f)(E,a_1,\ldots,a_n):=E(f[a_1,\ldots,a_n])\tag{6.1}
 ```
 
 Unlike core normalization, this supplies original arguments before observing the output. Its entries are endpoints. The individual sort is retained literally.
@@ -175,13 +175,13 @@ Proof. Distinct f,g have a full argument tuple with different proposition values
 These tables recover the whole typed applicative structure. For example, application is slicing:
 
 ```math
-\Gamma_\tau(f(a))(E,\bar b)=\Gamma_{\sigma\tau}(f)(E,a,\bar b).\tag{6.2}
+\Gamma_\tau(f(a))(E,\bar b)=\Gamma_{\sigma\tau}(f)(E,a,\bar b)\tag{6.2}
 ```
 
 All pointwise Boolean operations are coordinatewise Boolean operations. Every admitted quantifier is recovered by
 
 ```math
-\Gamma_t(Q_\sigma F)(E)=\top\quad\Longleftrightarrow\quad\forall x\in D_\sigma.\,\Gamma_{\sigma t}(F)(E,x)=\top.\tag{6.3}
+\Gamma_t(Q_\sigma F)(E)=\top\quad\Longleftrightarrow\quad\forall x\in D_\sigma.\,\Gamma_{\sigma t}(F)(E,x)=\top\tag{6.3}
 ```
 
 The same holds for trailing arguments and existential quantifiers. Crisp identity is the constant Top table on equal original objects and constant Bottom otherwise; injectivity makes equality of original relational objects precisely equality of their entire tables. Transporting U along Gamma_t recovers actual truth. No additional ultrafilter choice is made.

@@ -73,7 +73,7 @@ write the individual names as $`c_1,\ldots,c_u`$. The recorded theorem is
 \mathrm{SP}_\Sigma\vdash
 \begin{cases}
 \forall x^e\forall y^e\;x=y,&u=0,\\
-U_\Sigma:=\forall x^e\bigvee_{i=1}^{u}x=c_i,&u\ge1.
+U_\Sigma:=\forall x^e\bigvee_{i=1}^{u}x=c_i,&u\ge1
 \end{cases}
 \tag{FNE}
 ```
@@ -109,7 +109,7 @@ closed, are
 ```math
 \forall x\,\varphi(x)\leftrightarrow\bigwedge_{i=1}^{u}\varphi(c_i),
 \qquad
-\exists x\,\varphi(x)\leftrightarrow\bigvee_{i=1}^{u}\varphi(c_i).
+\exists x\,\varphi(x)\leftrightarrow\bigvee_{i=1}^{u}\varphi(c_i)
 ```
 
 The theorem is in
@@ -128,7 +128,7 @@ distinguished definitional predicate
 
 ```math
 d_\Sigma:=\lambda x^e.\bigwedge_{n<\omega}x\ne c_n,
-\qquad E_\Sigma:=\neg\exists x^e\,d_\Sigma x.
+\qquad E_\Sigma:=\neg\exists x^e\,d_\Sigma x
 \tag{D}
 ```
 
@@ -144,7 +144,7 @@ the following argument.
 **Reflection theorem.** Under (D) and C,
 
 ```math
-\Diamond_{\ne}E_\Sigma\longrightarrow E_\Sigma.
+\Diamond_{\ne}E_\Sigma\longrightarrow E_\Sigma
 \tag{R}
 ```
 
@@ -158,7 +158,7 @@ q=d(a) witnesses
 
 ```math
 \exists q^t\,[q\land\Box(\Diamond q\to\neg E_\Sigma)]
-=\Box_{\ne}\neg E_\Sigma.
+=\Box_{\ne}\neg E_\Sigma
 ```
 
 Contraposition gives (R). No optional BF or ND is used.
@@ -175,7 +175,7 @@ countably infinitely many only together with pairwise distinctness of these
 names. Crucially, (R) alone does not establish the needed SP eligibility:
 
 ```math
-\mathrm{Con}\bigl(\mathrm{Max}(T)+E_\Sigma\bigr).
+\mathrm{Con}\bigl(\mathrm{Max}(T)+E_\Sigma\bigr)
 \tag{Eligibility}
 ```
 
@@ -204,7 +204,7 @@ available. We prove
 
 ```math
 \mathrm{Con}(\mathrm{Max}(T_d)+E_\Sigma),
-\qquad \mathrm{SP}(T_d)\vdash E_\Sigma.
+\qquad \mathrm{SP}(T_d)\vdash E_\Sigma
 \tag{SNE}
 ```
 
@@ -335,7 +335,7 @@ syntax now gives standard truth at every I point. Each arithmetical A
 therefore satisfies
 
 ```math
-\Box(I_e\to A)\ \lor\ \Box(I_e\to\neg A).
+\Box(I_e\to A)\ \lor\ \Box(I_e\to\neg A)
 ```
 
 This contradicts **original finitary Max**, whose reference theory C is

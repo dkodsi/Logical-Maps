@@ -38,7 +38,7 @@ Without primitive abstraction, express identity of composite operations by commo
 \mathrm{Same}_{\bar v}(B,C)=
 \exists R\, .\,
 \bigl(\mathrm{Rep}_{\bar v}(R,B)\land
-\mathrm{Rep}_{\bar v}(R,C)\bigr).
+\mathrm{Rep}_{\bar v}(R,C)\bigr)
 ```
 
 For each finite type list $`\Delta`$, require Boolean preservation and universal/existential quantifier preservation at its types in this common-representative form. Retain the translated equality guards
@@ -46,7 +46,7 @@ For each finite type list $`\Delta`$, require Boolean preservation and universal
 ```math
 \forall x^\sigma\, .\,E(x=x),\qquad
 \forall x,y^\sigma\forall F^{\sigma t}\, .\,
-E(x=y)\to\bigl(E(Fx)\to E(Fy)\bigr).
+E(x=y)\to\bigl(E(Fx)\to E(Fy)\bigr)
 ```
 
 Endpoint observers also satisfy $`\forall p\, .\,(Ep=\top\lor Ep=\bot)`$. Full typed separation requires, for every relational $`\tau=\bar\sigma t`$ and finite $`\Delta`$,
@@ -57,7 +57,7 @@ X=Y\ \leftrightarrow\
 \forall E^{tt}\, .\,
 \bigl((\mathrm{Good}_\Delta(E)\land\mathrm{End}(E))
 \to\forall\bar x\, .\,
-(E(X[\bar x])\leftrightarrow E(Y[\bar x]))\bigr).
+(E(X[\bar x])\leftrightarrow E(Y[\bar x]))\bigr)
 ```
 
 Types and finite lists index the schema externally. At this H starting point separation is required at every relational type. After reconstruction, common representation becomes identity of the corresponding whole operations.
@@ -71,7 +71,7 @@ Necessitated ordinary universal instantiation and K turn necessary universal coe
 For a finite Comprehension witness, boxed instantiation and Intensionality upgrade its defining equivalence to the exact application law
 
 ```math
-R[\bar a]=B(\bar a).
+R[\bar a]=B(\bar a)
 ```
 
 For relational-valued bodies, saturate their finite output argument tuple and use typed Intensionality. Representatives are unique. This supplies the finite logical operations and abstraction with its conversion laws, recovering C with its original H-theoremhood gate. The finite matrix $`p=\top`$ supplies the necessity operation. Uniqueness also identifies the common-representative qualification with whole-operation preservation.
@@ -85,7 +85,7 @@ An endpoint separator sends distinct propositions to opposite endpoints. Necessa
 A qualified endpoint observer determines the diagonal
 
 ```math
-a_E=\forall p^t\, .\,(Ep\to p).
+a_E=\forall p^t\, .\,(Ep\to p)
 ```
 
 Quantifier preservation and $`E(Ep)=Ep`$ give $`E(a_E)=\top`$, so the diagonal is nonbottom. Necessitated instantiation makes it entail every accepted proposition and the negation of every rejected one. Thus it is an atom. Separating a nonbottom proposition from Bottom supplies an atom beneath it.
@@ -94,7 +94,7 @@ Let $`W`$ be all proposition atoms. The construction gives a unique currently tr
 
 ```math
 \beta_\tau(R)=
-\{(w,\bar a):w\in W,\ w\le R[\bar a]\}.
+\{(w,\bar a):w\in W,\ w\le R[\bar a]\}
 ```
 
 Finite qualification lists cover the same worlds, and the translated equality clauses supply rigid typed equality. Atom observers give the quantifier truth clauses; Functionality and separation make the representation faithful. Current truth is evaluation at $`w_0`$, and necessity ranges over all worlds. At this stage the admitted domains can still omit subsets and functions.
@@ -108,7 +108,7 @@ For every $`U\subseteq W`$, the proposition $`\bigvee_{w\in U}w`$ has exactly su
 ```math
 B_U(\bar x)=
 \bigvee_{(w,\bar a)\in U}
-\left(w\land\bigwedge_i x_i=a_i\right).
+\left(w\land\bigwedge_i x_i=a_i\right)
 ```
 
 Rigid equality makes its support exactly $`U`$. Comprehension supplies one relation collecting these values at every world and tuple, and Intensionality gives uniqueness.
@@ -116,7 +116,7 @@ Rigid equality makes its support exactly $`U`$. Comprehension supplies one relat
 For an arbitrary function $`f:D_\sigma\to D_\tau`$, write $`\tau=\bar\rho t`$ and take the support
 
 ```math
-U_f=\{(w,x,\bar y):w\le f(x)[\bar y]\}.
+U_f=\{(w,x,\bar y):w\le f(x)[\bar y]\}
 ```
 
 Its representing relation has type $`\sigma\tau`$ and agrees with $`f`$ at every input, world and remaining argument tuple. Intensionality identifies the values, proving full function representation.

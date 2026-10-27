@@ -9,7 +9,7 @@ Work in ZFC with the fixed relational types. Choose a group $`G`$ with identity 
 ```math
 Q_\sigma(F)=\bigcap_{a\in D_\sigma}F(a),
 \qquad
-R_g(A)=\{h\in G:hg\in A\}\quad(g\in G).
+R_g(A)=\{h\in G:hg\in A\}\quad(g\in G)
 ```
 
 Every displayed quantifier intersection must belong to $`B`$, and each $`Q_\sigma`$ and $`R_g`$ must belong to its operation domain. Admitted predicates must distinguish different individuals at $`1`$. Truth is membership of $`1`$. Define equality and native necessity by
@@ -18,7 +18,7 @@ Every displayed quantifier intersection must belong to $`B`$, and each $`Q_\sigm
 \delta_\sigma(a,b)=
 \bigcap_{P\in D_{\sigma t}}(P(a)\leftrightarrow P(b)),
 \qquad
-\Box A=\delta_t(A,G).
+\Box A=\delta_t(A,G)
 ```
 
 The equality intersection is admitted by abstraction and $`Q_{\sigma t}`$. The domains need not contain every external function; intersections are required only for admitted predicates.
@@ -29,7 +29,7 @@ For every type,
 
 ```math
 \delta_\sigma(a,b)=
-\begin{cases}G&a=b,\\ \varnothing&a\ne b.\end{cases}
+\begin{cases}G&a=b,\\ \varnothing&a\ne b\end{cases}
 ```
 
 Equal arguments agree under every predicate. If individuals $`a,b`$ differ, choose a predicate $`P`$ distinguishing them at $`1`$. At any $`h\in G`$, the admitted predicate $`x\mapsto R_{h^{-1}}(P(x))`$ distinguishes them. If propositions $`A,B`$ differ at $`d`$, the predicate $`R_{h^{-1}d}`$ distinguishes them at $`h`$. Unequal functions differ at an argument; an inductively available predicate distinguishing their outputs gives a predicate on the functions by abstraction. This proves the assertion at all types.
@@ -47,7 +47,7 @@ If H proves $`A\leftrightarrow B`$, their values coincide under every assignment
 Inverse images preserve Boolean operations and all the required intersections:
 
 ```math
-R_g(Q_\sigma(F))=Q_\sigma(\lambda a\, .\,R_g(F(a))).
+R_g(Q_\sigma(F))=Q_\sigma(\lambda a\, .\,R_g(F(a)))
 ```
 
 These are identities of whole operations because the domains consist of actual functions. Moreover,
@@ -55,7 +55,7 @@ These are identities of whole operations because the domains consist of actual f
 ```math
 R_g\circ R_k=R_{gk},
 \qquad R_1=I,
-\qquad R_g^{-1}=R_{g^{-1}}.
+\qquad R_g^{-1}=R_{g^{-1}}
 ```
 
 Both inverse operations are admitted. Thus each shift is reversibly qualified at every type. If $`A\ne B`$, choose $`g`$ in their symmetric difference: $`R_g(A)`$ and $`R_g(B)`$ differ in truth at $`1`$. For different relations, choose an argument tuple giving different propositional outputs. This proves every Rev instance. At an arbitrary index $`h`$, replace the separator by $`R_{h^{-1}g}`$; the same proof gives Rev there, and hence ☐Rev.
@@ -69,7 +69,7 @@ Let $`G`$ consist of the admitted meet-preserving operations with an admitted tw
 ```math
 (\lambda p,q\, .\,E(p\land q))=(\lambda p,q\, .\,Ep\land Eq),
 \qquad
-\exists F^{tt}\, .\,E\circ F=I=F\circ E.
+\exists F^{tt}\, .\,E\circ F=I=F\circ E
 ```
 
 An invertible meet homomorphism is an order isomorphism. Monotonicity follows from meet preservation; reflection follows from injectivity. Surjectivity and the order characterizations then give preservation of Top, Bottom, joins and complements.
@@ -81,7 +81,7 @@ Thus every member of $`G`$ and its inverse qualify at every type simultaneously.
 Define
 
 ```math
-\phi(b)=\{g\in G:g(b)\in U\}.
+\phi(b)=\{g\in G:g(b)\in U\}
 ```
 
 Boolean preservation makes $`\phi`$ a Boolean homomorphism; Rev makes it injective. Quantifier preservation and the ordinary current truth clause give
@@ -89,7 +89,7 @@ Boolean preservation makes $`\phi`$ a Boolean homomorphism; Rev makes it injecti
 ```math
 g(Q_\sigma(F))\in U
 \quad\Longleftrightarrow\quad
-\forall a\in D_\sigma\, .\,g(F(a))\in U.
+\forall a\in D_\sigma\, .\,g(F(a))\in U
 ```
 
 Therefore
@@ -97,7 +97,7 @@ Therefore
 ```math
 \phi(Q_\sigma(F))=\bigcap_a\phi(F(a)),
 \qquad
-\phi(g(b))=R_g(\phi(b)).
+\phi(g(b))=R_g(\phi(b))
 ```
 
 Membership of $`1`$ preserves current truth. At $`e`$ use the identity map, at $`t`$ use $`\phi`$, and recursively transport each function $`f`$ to $`j_\tau\circ f\circ j_\sigma^{-1}`$. These are bijections onto the new typed domains. They preserve application, abstraction and logical operations; haecceities provide individual separation. Equality is preserved by its Leibniz definition. This gives the required isomorphism without enlarging a typed domain.
@@ -109,13 +109,13 @@ General Henkin completeness supplies a C + Rev model of $`\Gamma\cup\{\neg A\}`$
 ```math
 \Gamma\vdash_{\mathrm C+\mathrm{Rev}}A
 \quad\Longleftrightarrow\quad
-\text{every group model satisfying }\Gamma\text{ satisfies }A.
+\text{every group model satisfying }\Gamma\text{ satisfies }A
 ```
 
 In a countable language, choose the original model countable. Its admitted group is countable. Enumerate it and obtain a surjective homomorphism $`\pi:F_\omega\to G`$ from the free group on countably many generators. Replace each proposition $`A`$ by $`\pi^{-1}(A)`$ and transport the higher domains. Surjectivity makes this injective on propositions; inverse images preserve intersections and Boolean operations, while
 
 ```math
-R_w(\pi^{-1}(A))=\pi^{-1}(R_{\pi(w)}(A)).
+R_w(\pi^{-1}(A))=\pi^{-1}(R_{\pi(w)}(A))
 ```
 
 All shifts remain admitted. Every countable original model has this presentation directly. An arbitrary uncountable model uses its own possibly larger group. Admission of the free generators' shifts and their inverses suffices by composition.
@@ -126,7 +126,7 @@ Group shifts induce coherent transports at every type:
 
 ```math
 T_g^e=\mathrm{id},\qquad T_g^t=R_g,\qquad
-T_g^{\sigma\tau}(f)=T_g^\tau\circ f\circ T_{g^{-1}}^\sigma.
+T_g^{\sigma\tau}(f)=T_g^\tau\circ f\circ T_{g^{-1}}^\sigma
 ```
 
 At relational types these operations are admitted by recursive abstraction. At $`e`$ identity is a metatheoretic map; no forbidden individual-valued operation is introduced. Type induction gives inverse transports, $`T_gT_k=T_{gk}`$, and compatibility with application.

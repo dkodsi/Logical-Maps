@@ -11,14 +11,14 @@ Define
 ```math
 \begin{aligned}
 \mathrm{BR}&:=\exists B^{tt}\, .\,B\top=\top\land B\bot=\bot\land\forall p\,(Bp=\top\lor Bp=\bot),\\
-\mathrm{D2}&:=\forall p\,(\Diamond\Box p\to\Box\Diamond p).
+\mathrm{D2}&:=\forall p\,(\Diamond\Box p\to\Box\Diamond p)
 \end{aligned}
 ```
 
 No logical preservation is imposed on B. Over C,
 
 ```math
-\mathrm{BR}\ \leftrightarrow\ \mathrm{D2}.
+\mathrm{BR}\ \leftrightarrow\ \mathrm{D2}
 ```
 
 For BR ⇒ D2, suppose ◇□p. If Bp=Bottom, NI preserves this identity, as well as BTop=Top. Necessary substitution says that at any possibility where p=Top, Bp=Top, contradicting its persistent Bottom value. Hence Bp=Top. Similarly ◇□¬p forces Bp=Bottom, using BBottom=Bottom and C's identification of □¬p with p=Bottom. Therefore ◇□p excludes ◇□¬p, which is exactly □◇p. There is no necessitation of BR or of its universally quantified endpoint condition: only particular true identities are propagated by NI.
@@ -32,7 +32,7 @@ The notation .2 for ◇□p→□◇p is standard; see Hamkins and Löwe, [The m
 Over C, BR is also equivalent to
 
 ```math
-\forall p,q\,\exists F^{tt}\, .\,F\top=p\land F\bot=q\land\forall x\,(Fx=p\lor Fx=q).
+\forall p,q\,\exists F^{tt}\, .\,F\top=p\land F\bot=q\land\forall x\,(Fx=p\lor Fx=q)
 ```
 
 From BR use F(x)=(Bx∧p)∨(¬Bx∧q). Its endpoint cases give the required output identities and both designated values. Conversely specialize the family principle to p=Top, q=Bottom. This is an admitted binary range, not merely a family whose truth values sometimes agree with p and q.
@@ -42,7 +42,7 @@ Over C + BF_t, any such family has universal value p∧q. Indeed p∧q≤Fx for 
 It follows that
 
 ```math
-\mathrm C+\mathrm{BF}_t+\mathrm{D2}\ \vdash\ Q_t(E)\to M(E).
+\mathrm C+\mathrm{BF}_t+\mathrm{D2}\ \vdash\ Q_t(E)\to M(E)
 ```
 
 Apply the binary-range calculation to F and E∘F. Their universal values are p∧q and Ep∧Eq respectively. The Q_t identity at F yields E(p∧q)=Ep∧Eq. NI boxes each such output identity; BF_t, first over q and then over p, collects them into a necessary universal statement. Intensionality identifies the whole binary composite operations. No BF at tt, necessary BF, necessary D2, or Top-acceptance hypothesis on E is used.
@@ -54,7 +54,7 @@ The modal assumption is weaker than C5: the full two-object chain satisfies D2 a
 For every finite Δ containing t, over C + D2,
 
 ```math
-S[A\land N\land Q_\Delta]\ \leftrightarrow\ S[A\land V\land Q_\Delta]\ \leftrightarrow\ S[\mathsf{Bool}\land Q_\Delta].
+S[A\land N\land Q_\Delta]\ \leftrightarrow\ S[A\land V\land Q_\Delta]\ \leftrightarrow\ S[\mathsf{Bool}\land Q_\Delta]
 ```
 
 Each left-hand principle supplies BF_t by the universal-separation argument. Section 2 then makes Q_t observers preserve conjunction fully. On the N branch, De Morgan supplies the remaining Boolean law. On the V branch, a distinguishing observer cannot accept Bottom, since p∨Bottom=p would otherwise make it accept every input. Its conjunction and disjunction laws and endpoint truth conditions supply material negation preservation. Apply the finite guard normalization from the earlier lattice note to obtain full Boolean/QΔ witnesses with the same current distinguishing truth values. The reverse implications are inclusion of eligible classes.
@@ -70,7 +70,7 @@ Over C5, every Boolean Q_t observer E is GoodΔ for every finite Δ. The same ob
 For F:σt define its range predicate I_F:tt by
 
 ```math
-I_F(p):=\exists x^\sigma\, .\,Fx=p.
+I_F(p):=\exists x^\sigma\, .\,Fx=p
 ```
 
 Every I_F(p) is an endpoint. A witness gives □I_F(p) by NI and necessary existential introduction. If there is no witness, ND_t makes each Fx≠p necessary, and BF_σ makes their universal necessary. Thus ¬I_F(p) gives □¬I_F(p). Boolean observers fix the endpoints, so E(I_F(p))=I_F(p).
@@ -78,7 +78,7 @@ Every I_F(p) is an endpoint. A witness gives □I_F(p) by NI and necessary exist
 The H equivalence between the following universally quantified formulas gives an unconditional C identity:
 
 ```math
-(\forall x^\sigma\,Fx)=(\forall p^t\, .\,I_F(p)\to p).
+(\forall x^\sigma\,Fx)=(\forall p^t\, .\,I_F(p)\to p)
 ```
 
 Applying E, using Q_t and Boolean preservation, and then using the endpoint fact above, gives the material chain
@@ -87,7 +87,7 @@ Applying E, using Q_t and Boolean preservation, and then using the endpoint fact
 \begin{aligned}
 E(\forall x\,Fx)&\leftrightarrow\forall p\,E(I_F(p)\to p)\\
 &\leftrightarrow\forall p\,(I_F(p)\to Ep)\\
-&\leftrightarrow\forall x\,E(Fx).
+&\leftrightarrow\forall x\,E(Fx)
 \end{aligned}
 ```
 
@@ -98,7 +98,7 @@ For the full Q_σ identity, discharge the derivation as an unconditional C impli
 Consequently over C5,
 
 ```math
-\mathrm{C5}\ \vdash\ S[\mathsf{Bool}\land Q_t]\ \leftrightarrow\ \mathrm{OS}.
+\mathrm{C5}\ \vdash\ S[\mathsf{Bool}\land Q_t]\ \leftrightarrow\ \mathrm{OS}
 ```
 
 For the nontrivial direction, each separating witness qualifies for any requested finite list. C5 supplies Functionality, extending propositional separation to every relational type. This collapses the separation schema over this base; it does not introduce an infinitary object-language qualification.
@@ -108,7 +108,7 @@ For the nontrivial direction, each separating witness qualifies for any requeste
 Combining §§3–4 with the identity-fixing results gives
 
 ```math
-\mathrm C\ \vdash\ S[A\land\mathrm{FixEq}_t\land N\land Q_t]\ \leftrightarrow\ S[A\land\mathrm{FixEq}_t\land V\land Q_t]\ \leftrightarrow\ \mathrm{C5}+\mathrm{OS}.
+\mathrm C\ \vdash\ S[A\land\mathrm{FixEq}_t\land N\land Q_t]\ \leftrightarrow\ S[A\land\mathrm{FixEq}_t\land V\land Q_t]\ \leftrightarrow\ \mathrm{C5}+\mathrm{OS}
 ```
 
 Identity-fixing and Top-accepting separation gives ND_t; Q_t separation gives BF_t; the recorded ND_t + BF_t theorem gives C5. Dropping FixEq from the qualification then gives one of the mixed separation principles, and §§3–4 give OS. Conversely C5 + OS supplies Good_{t} separating observers. Under C5, identity judgments are endpoints, and the persistent-premise/Intensionality argument makes their fixing a full composite identity. Thus those witnesses satisfy either displayed qualification.
@@ -120,7 +120,7 @@ These are exact single-formula characterizations over C. They are not claimed ov
 The full three-object fork r→l and r→h, with singleton individuals, supplies a concrete counterexample to dropping .2 from §2. Its construction and all-type joint-surjectivity proof are in [Fork without binary families](h-observer-space/fork-without-binary-families.md), §§1–2. At the root, propositions are triples
 
 ```math
-p=(p_0,p_l,p_h)\in\{0,1\}^3.
+p=(p_0,p_l,p_h)\in\{0,1\}^3
 ```
 
 with root truth p₀, leaf transports the last two coordinates, and coordinatewise Boolean operations. The model satisfies C, all BF instances, and their boxed forms. For every admitted type σ, the pair of leaf transports Dσ(r)→Dσ(l)×Dσ(h) is onto.
@@ -128,7 +128,7 @@ with root truth p₀, leaf transports the last two coordinates, and coordinatewi
 Define an admitted root observer E with leaf components identity by
 
 ```math
-E(p_0,p_l,p_h)=(p_l\lor p_h,p_l,p_h).
+E(p_0,p_l,p_h)=(p_l\lor p_h,p_l,p_h)
 ```
 
 It is an admitted full action-model operation: its arbitrary root truth function and the two identity leaf functions satisfy the application/transport compatibility equations. It fixes Top and Bottom, preserves disjunction as a whole-operation identity, and is idempotent as a whole operation. These assertions follow coordinatewise at the root and both leaves. Its image is finite, with one output for each pair of leaf bits.
@@ -136,13 +136,13 @@ It is an admitted full action-model operation: its arbitrary root truth function
 For every σ it also preserves the universal quantifier as a whole-operation identity. Let F:σt have root truth function f and leaf components F_l,F_h, and write α,β for the two transports at σ. The root truth of E(∀x F(x)) is
 
 ```math
-(\forall x_l\,F_l(x_l))\lor(\forall x_h\,F_h(x_h)).
+(\forall x_l\,F_l(x_l))\lor(\forall x_h\,F_h(x_h))
 ```
 
 The root truth of ∀x E(F(x)) is
 
 ```math
-\forall x\in D_\sigma(r)\,[F_l(\alpha x)\lor F_h(\beta x)].
+\forall x\in D_\sigma(r)\,[F_l(\alpha x)\lor F_h(\beta x)]
 ```
 
 Joint surjectivity makes this equivalent to the universal statement over every independent pair x_l,x_h. That statement is equivalent in classical logic to the preceding disjunction of universals: if neither universal holds, one counterexample on each side gives a falsifying pair. The leaf components agree because E acts there as identity. This proves equality of outputs for every F at every future object. In the full model the complete λF operation profiles are therefore equal, proving full Qσ(E).
@@ -150,7 +150,7 @@ Joint surjectivity makes this equivalent to the universal statement over every i
 Conjunction fails even materially. Take
 
 ```math
-p=(0,1,0),\qquad q=(0,0,1).
+p=(0,1,0),\qquad q=(0,0,1)
 ```
 
 Their meet is Bottom, so E(p∧q) is false at r. Both Ep and Eq are true there. Hence E(p∧q) and Ep∧Eq are distinct propositions.
@@ -158,7 +158,7 @@ Their meet is Bottom, so E(p∧q) is false at r. Both Ep and Eq are true there. 
 The dual observer
 
 ```math
-D(p_0,p_l,p_h)=(p_l\land p_h,p_l,p_h).
+D(p_0,p_l,p_h)=(p_l\land p_h,p_l,p_h)
 ```
 
 fixes the endpoints, is idempotent, preserves conjunction and every existential quantifier fully, but fails disjunction. For existential preservation use the equivalence between ∃(x_l,x_h)[F_l(x_l)∧F_h(x_h)] and (∃x_l F_l(x_l))∧(∃x_h F_h(x_h)), again with joint surjectivity. The same p,q witness disjunction failure.

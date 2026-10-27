@@ -14,7 +14,7 @@ A(E):=ET,\qquad Z(E):=\neg EB,
 
 ```math
 M(E):=(\lambda p,q.E(p\land q))
-       =(\lambda p,q.Ep\land Eq).
+       =(\lambda p,q.Ep\land Eq)
 ```
 
 Thus M is identity of the whole conjunction composites, not merely pointwise equality or material preservation. Define the admitted composition and identity terms by
@@ -27,7 +27,7 @@ and let
 
 ```math
 \mathrm{Rev}_M(E):=
-\exists F^{tt}\,[M(F)\land E\circ F=I\land F\circ E=I].
+\exists F^{tt}\,[M(F)\land E\circ F=I\land F\circ E=I]
 ```
 
 Both inverse equations are identities of the displayed operations. Every inverse used below is an object of the admitted tt domain.
@@ -36,7 +36,7 @@ Let K(E) be any qualification such that H, or explicit standing hypotheses, give
 
 ```math
 K(E)\ \longrightarrow\
-A(E)\land Z(E)\land M(E)\land\mathrm{Rev}_M(E).
+A(E)\land Z(E)\land M(E)\land\mathrm{Rev}_M(E)
 ```
 
 Assume propositional separation
@@ -45,7 +45,7 @@ Assume propositional separation
 S[K]:=\forall p,q\left[
 p=q\leftrightarrow
 \forall E\,(K(E)\to(Ep\leftrightarrow Eq))
-\right].
+\right]
 ```
 
 The basic case is K=A and Z and M and Rev_M. Additional restrictions may be retained. The core theorem does not require those additional restrictions to hold of the inverse; the separate transitivity statement below identifies exactly where closure of the restricted class is needed.
@@ -58,7 +58,7 @@ Define
 
 ```math
 p\preceq_K q:=
-\forall E\,[K(E)\to(Ep\to Eq)].
+\forall E\,[K(E)\to(Ep\to Eq)]
 ```
 
 This is a preorder, and S[K] makes it antisymmetric. Every eligible observer accepts T and rejects B, so T is greatest and B least.
@@ -68,13 +68,13 @@ M, by application, gives the truth law for conjunction. Consequently
 ```math
 u\preceq_K(p\land q)
 \quad\leftrightarrow\quad
-(u\preceq_K p\land u\preceq_K q).
+(u\preceq_K p\land u\preceq_K q)
 ```
 
 Thus primitive conjunction is the meet. In particular it is associative, commutative and idempotent, with T a unit and B absorbing. Its order is exactly
 
 ```math
-p\le q\quad:\!\!\leftrightarrow\quad p\land q=p.
+p\le q\quad:\!\!\leftrightarrow\quad p\land q=p
 ```
 
 For the nontrivial direction of this identification, if p precedes q then every eligible observer agrees on p and p and q; separation identifies them. Conversely the displayed meet identity and its truth law imply Ep implies Eq.
@@ -82,7 +82,7 @@ For the nontrivial direction of this identification, if p precedes q then every 
 Hence every qualified E is an order homomorphism. If F witnesses Rev_M(E), the inverse identities give E(Fp)=p and F(Ep)=p. Since F also preserves meet, E and F are inverse order isomorphisms. In particular they fix both bounds:
 
 ```math
-ET=T,\quad EB=B,\quad FT=T,\quad FB=B.
+ET=T,\quad EB=B,\quad FT=T,\quad FB=B
 ```
 
 For example every proposition has the form Ex; since x is below T, every proposition is below ET, so ET=T. The other endpoint identities follow in the same way. This conclusion is stronger than the initial acceptance/rejection clauses, but is proved only after separation supplies the bounded order.
@@ -92,7 +92,7 @@ Define a meet atom by
 ```math
 \mathrm{Atom}_{\land}(a):=
 a\ne B\land
-\forall c\,[c\le a\to(c=B\lor c=a)].
+\forall c\,[c\le a\to(c=B\lor c=a)]
 ```
 
 Every admitted meet order isomorphism preserves this property. Indeed if c is below Ea, then Fc is below a. Applying atomhood of a and then E shows that c is B or Ea. Nonbottomness is preserved because the maps fix B. The inverse direction is identical.
@@ -121,7 +121,7 @@ This is a material equivalence describing current truth. No claim that its two s
 \boxed{
 p\not\le q\ \longrightarrow\
 \exists a\,[\mathrm{Atom}_{\land}(a)
-            \land a\le p\land a\not\le q].}
+            \land a\le p\land a\not\le q]}
 ```
 
 **Proof.** If p is not below q, then p and q differs from p. Separation supplies an eligible E whose outputs on those two propositions disagree. By M, E(p and q) has the truth value of Ep and Eq. It can disagree with Ep only when Ep is true and Eq false.
@@ -136,7 +136,7 @@ This gives the exact order characterization
 \boxed{
 p\le q\ \leftrightarrow\
 \forall a\,[\mathrm{Atom}_{\land}(a)
-             \land a\le p\ \to\ a\le q].}
+             \land a\le p\ \to\ a\le q]}
 ```
 
 Taking q=B shows that every nonbottom proposition has an atom below it. The displayed equivalence is stronger than that ordinary atomicity condition. For example the three-element chain B<a<T is atomic, but a and T have the same atoms below them.
@@ -147,7 +147,7 @@ Externally, at any current evaluation point define
 
 ```math
 \mathcal A(p):=
-\{a:\mathrm{Atom}_{\land}(a)\text{ and }a\le p\}.
+\{a:\mathrm{Atom}_{\land}(a)\text{ and }a\le p\}
 ```
 
 Then
@@ -158,7 +158,7 @@ p\le q&\quad\leftrightarrow\quad
         \mathcal A(p)\subseteq\mathcal A(q),\\
 \mathcal A(p\land q)&=\mathcal A(p)\cap\mathcal A(q),\\
 \mathcal A(B)&=\varnothing,\qquad
-\mathcal A(T)=\{\text{all meet atoms}\}.
+\mathcal A(T)=\{\text{all meet atoms}\}
 \end{aligned}
 ```
 
@@ -173,7 +173,7 @@ Every atom a can be sent to w by an eligible observer: repeat the separation arg
 For any two atoms a,b choose eligible observers E_a,E_b with
 
 ```math
-E_a a=w,\qquad E_b b=w.
+E_a a=w,\qquad E_b b=w
 ```
 
 Let F_b be an admitted meet-preserving inverse of E_b. Then
@@ -189,7 +189,7 @@ Composition here preserves the full M qualification, not merely its pointwise ve
 first with the full M identity for V and then with that for U. The result is
 
 ```math
-\lambda p,q.U(Vp)\land U(Vq).
+\lambda p,q.U(Vp)\land U(Vq)
 ```
 
 These are substitutions of given operation identities in term contexts, followed by conversion. They do not abstract a conditional pointwise identity. The inverse of F_b composed with E_a is F_a composed with E_b; its two full inverse identities follow from the given inverse identities by composition and conversion.
@@ -212,7 +212,7 @@ For arbitrary K as in §1, full typed separation supplies Functionality. Therefo
 \boxed{
 \exists!a\,\mathrm{Atom}_{\land}(a)
 \quad\leftrightarrow\quad
-\mathrm{Extensionality}.}
+\mathrm{Extensionality}}
 ```
 
 The forward proof uses propositional Fregean plus Functionality to identify coextensive relations at each relational type. The reverse follows from Extensionality's propositional instance.
@@ -224,7 +224,7 @@ For a theory-level characterization without FullSep[K] as background, suppose in
 \mathrm{FullSep}[K]
 +\exists!a\,\mathrm{Atom}_{\land}(a)
 \quad\leftrightarrow\quad
-\mathrm{Extensionality}.}
+\mathrm{Extensionality}}
 ```
 
 In the converse direction identity qualifies and, under Extensionality, already separates every relational type. Extra restrictions must satisfy the stated identity-admission condition for this converse.

@@ -14,7 +14,7 @@ with no individual constant in the original signature. The language and types ar
 
 ```math
 H P:=\exists q\bigl(q\land\Box(\Diamond q\to P)\bigr),
-\qquad D P:=\neg H\neg P.
+\qquad D P:=\neg H\neg P
 ```
 
 The target theory is
@@ -22,7 +22,7 @@ The target theory is
 ```math
 \mathrm{SP}_\Sigma=C(\Sigma)+
 \{DP:\ P\text{ closed in }\mathcal L(\Sigma),\
-                    \mathrm{Con}(M+P)\}.
+                    \mathrm{Con}(M+P)\}
 ```
 
 Every SP side condition below uses this same **signature-relative** M. Neither pure Maximalism nor C-consistency is substituted for it.
@@ -42,7 +42,7 @@ The [signature comparison](../source/research/2026-10-22/notes/audit-signature-t
 ```math
 \mathrm{SP}_\Sigma\vdash\mathrm{SP}_{\mathrm{pure}}
 \quad\Longleftrightarrow\quad
-\mathrm{SP}_\Sigma\text{ is inconsistent}.
+\mathrm{SP}_\Sigma\text{ is inconsistent}
 ```
 
 Its pure atom splitter is a completed obstruction to conservativity, not a consistency proof for the present target. The [SignatureSplit delivery](../source/research/2026-10-22/lean-formalization/sp-core-verification-status.md) certifies the splitting and its two C-consistency models; it does not certify the separate pure-profile construction.
@@ -64,7 +64,7 @@ Introduce one **auxiliary** individual marker a:e. It is used to describe a cand
 ```math
 B_\sigma=
  \{\text{closed terms of type }\sigma\text{ in }\mathcal L(\Sigma\cup\{a\})\}
- /{=_{C(\Sigma,a)}}.
+ /{=_{C(\Sigma,a)}}
 ```
 
 Include every term operation in this many-sorted algebra, including application, identity-valued operations and quantifier-valued operations. Omit external actual truth. In particular B_t is a countable Boolean algebra. There is only one individual term, a, since no admitted operation returns an individual.
@@ -72,7 +72,7 @@ Include every term operation in this many-sorted algebra, including application,
 The same B embeds into the full term reduct of every M-model after choosing any actual individual as a. To verify injectivity, suppose C(Σ) does not prove ∀x S(x)=T(x). The open formula S(x)≠T(x) is C(Σ)-consistent. Signature-relative unary Possibility+ gives
 
 ```math
-M\vdash\forall x\,\Diamond(S(x)\ne T(x)).
+M\vdash\forall x\,\Diamond(S(x)\ne T(x))
 ```
 
 NI makes equality at an actual x inconsistent with this possibility. Thus M proves the uniform disequality. Conversely a C-provable identity holds in every model. Consequently equality between one-marker term denotations is exactly their C(Σ,a)-provable equality.
@@ -96,7 +96,7 @@ Suppose π_σ(x)=π_σ(y). Preservation of the identity-valued operation gives
 ```math
 \pi_t(\mathrm{eq}_\sigma(x,y))
  =\mathrm{eq}_\sigma(\pi_\sigma x,\pi_\sigma y)
- =\top_B=\pi_t(\top_A).
+ =\top_B=\pi_t(\top_A)
 ```
 
 Injectivity at t gives eq_σ(x,y)=top_A. In the genuine source model this proposition is true, so literal identity gives x=y. This proves the lemma at every admitted type, including e.
@@ -110,14 +110,14 @@ The qualification “genuine” matters: arbitrary abstract algebras must not be
 Let E₁ abbreviate ∀x^e y^e(x=y). For b∈B_t, write
 
 ```math
-\widehat b=\{U\in\mathrm{Stone}(B_t):b\in U\}.
+\widehat b=\{U\in\mathrm{Stone}(B_t):b\in U\}
 ```
 
 Define K to consist of the Boolean ultrafilters U such that E₁∈U and, for every type σ and b,d∈B_σ,
 
 ```math
 \mathrm{eq}_\sigma(b,d)\in U
-\quad\Longleftrightarrow\quad b=d\text{ in }B_\sigma.
+\quad\Longleftrightarrow\quad b=d\text{ in }B_\sigma
 \tag{I}
 ```
 
@@ -126,7 +126,7 @@ K is a closed subspace of a compact metrizable Stone space, hence compact and me
 Equivalently, K is the Stone space of complete consistent extensions of
 
 ```math
-T_\Sigma:=\mathrm{Max}(C(\Sigma,a))+E_1.
+T_\Sigma:=\mathrm{Max}(C(\Sigma,a))+E_1
 ```
 
 Indeed (I) imposes exactly the maximalist ground equality/disequality diagram in the marked language. C-theorems are top in B, and the ordinary deduction theorem transfers any finite consequence of those ground literals and E₁ to every such ultrafilter. Conversely any complete extension gives the corresponding Boolean truth ultrafilter. Section 3 justifies this use of the marker; the SP reference theory remains M.
@@ -136,7 +136,7 @@ For every F∈B_{σt}, define the relatively open set
 ```math
 W_F=\widehat{\neg\exists_\sigma F}\ \cup
             \bigcup_{b\in B_\sigma}\widehat{F(b)}
-       \quad\subseteq K.
+       \quad\subseteq K
 \tag{W}
 ```
 
@@ -157,7 +157,7 @@ already supply its witness. This conditional equivalence is not promoted to an e
 **Why a point of 𝓗 yields SP_Σ.** Such a model N satisfies M and every actual proposition is Q(c,a) for a one-individual Σ-term Q. Fix a closed P with Con(M+P) and a true q=Q(c,a). Since Q(c,x) is C(Σ)-consistent, unary Possibility+ makes M prove ∀x◇Q(c,x). In an M+P model, P∧◇Q(c,x) therefore holds of an individual, and is C(Σ)-consistent. Unary Possibility+ in N gives
 
 ```math
-\Diamond\bigl(P\land\Diamond Q(c,a)\bigr).
+\Diamond\bigl(P\land\Diamond Q(c,a)\bigr)
 ```
 
 This holds for every true q, so the exact dual definition
@@ -179,7 +179,7 @@ K_{\alpha+1}
  &=K_\alpha\setminus
        \bigcup_F\mathrm{Int}_{K_\alpha}(Z_F\cap K_\alpha),\\
 K_\lambda&=\bigcap_{\alpha<\lambda}K_\alpha
-                 &&(\lambda\text{ a limit ordinal}).
+                 &&(\lambda\text{ a limit ordinal})
 \end{aligned}
 \tag{D}
 ```
@@ -208,7 +208,7 @@ The ordinary singleton Σ-profile root has externally standard N_e. The property
 
 ```math
 N_e(T)\in U\quad\Longrightarrow\quad
-T=\bar n\text{ in }B\text{ for some external }n\in\mathbb N.
+T=\bar n\text{ in }B\text{ for some external }n\in\mathbb N
 \tag{N}
 ```
 
@@ -225,7 +225,7 @@ The arithmetic diagonal lemma, composed with the effective Frege-arithmetic tran
 ```math
 \mathrm{PA}\vdash
 G_T\leftrightarrow\neg\mathrm{Pr}_{T_\Sigma}
-                             (\ulcorner G_T^\#\urcorner).
+                             (\ulcorner G_T^\#\urcorner)
 ```
 
 If T_Σ proved G_T#, arithmetic soundness would make G_T true, while its standard fixed-point equivalence would deny that very proof. Hence it does not prove G_T#. The same equivalence makes G_T standardly true; arithmetic soundness also rules out a proof of its negation. Thus both signs are T_Σ-consistent. This specifies G_T effectively by the fixed-point construction; no explicit numerical Gödel code was computed.
@@ -234,7 +234,7 @@ Write G_T in Π⁰₂ normal form $`\forall n\exists m\,R(n,m)`$, with the usual
 
 ```math
 F(n):=N_e(n)\land
-           \forall m\bigl(N_e(m)\to\neg R^\#(n,m)\bigr).
+           \forall m\bigl(N_e(m)\to\neg R^\#(n,m)\bigr)
 ```
 
 Then ∃nF(n) is ¬G_T#. For each standard k choose a standard l with R(k,l). Its finite arithmetic verification is supplied by PA in the fixed Frege interpretation. Consequently T_Σ refutes F(\bar k). By (N), no U∈K makes F(b) true for any b∈B_{ν_e}: nonnumeral terms fail the first conjunct, and numeral terms fail the second.
@@ -244,7 +244,7 @@ Therefore the witness open for F is exactly
 ```math
 W_F=\widehat{G_T^\#}\cap K,
 \qquad
-Z_F=\widehat{\neg G_T^\#}\cap K.
+Z_F=\widehat{\neg G_T^\#}\cap K
 ```
 
 The second set is nonempty because T_Σ+¬G_T# is consistent. It is clopen and is wholly removed at K₁. This explicitly disproves the naive claim that all witness requirements are dense in the initial compact truth space.
@@ -257,7 +257,7 @@ Let θ(n) be any fixed original-language formula with old term parameters; its i
 
 ```math
 F(n):=N_e(n)\land\neg\theta(n),\qquad
-A:=\forall n\bigl(N_e(n)\to\theta(n)\bigr).
+A:=\forall n\bigl(N_e(n)\to\theta(n)\bigr)
 ```
 
 By (N), no F(b) belongs to any U∈K_α. On K_α the witness open W_F is therefore precisely the clopen truth set of A. Its complementary truth set is relatively open inside the bad set and is removed at the next stage. Thus
@@ -266,7 +266,7 @@ By (N), no F(b) belongs to any U∈K_α. On K_α the witness open W_F is therefo
 \bigl[\forall k\in\mathbb N\ \forall U\in K_\alpha,
                      \theta(\bar k)\in U\bigr]
 \quad\Longrightarrow\quad
-\forall U\in K_{\alpha+1},\ A\in U.
+\forall U\in K_{\alpha+1},\ A\in U
 \tag{Omega}
 ```
 
@@ -277,7 +277,7 @@ Ground arithmetic on numeral terms is correct throughout K₀: Max entails the w
 ```math
 U\in K_\omega\quad\Longrightarrow\quad
 \bigl(A^\#\in U\ \Longleftrightarrow\ \mathbb N\models A\bigr)
-\quad\text{for every first-order arithmetic sentence }A.
+\quad\text{for every first-order arithmetic sentence }A
 \tag{A}
 ```
 

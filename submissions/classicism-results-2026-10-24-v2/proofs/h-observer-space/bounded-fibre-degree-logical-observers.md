@@ -15,7 +15,7 @@ Write $`L_E`$⊣E⊣$`R_E`$ for the [canonical admitted adjoints](canonical-adjo
 ```math
 q\le C_Eq,\qquad
 L_E(q\land Ep)=L_Eq\land p,\qquad
-L_EEL_E=L_E.
+L_EEL_E=L_E
 \tag{1}
 ```
 
@@ -29,7 +29,7 @@ For a fixed external integer n≥1, define degree at most n by the single finita
 \bigwedge_{i<j}(b_i\land b_j=0)
 \ \to\
 \bigwedge_{i=0}^{n}L_Eb_i=0
-\right].
+\right]
 \tag{2}
 ```
 
@@ -48,7 +48,7 @@ One may equally use $`C_E`$ in place of $`L_E`$ in (2). Put $`a=L_E1`$. Frobeniu
 ```math
 \bigwedge_iL_Eb_i=0
 \quad\longleftrightarrow\quad
-\bigwedge_iC_Eb_i=0.
+\bigwedge_iC_Eb_i=0
 \tag{4}
 ```
 
@@ -65,7 +65,7 @@ Recall the admitted local-transversal predicate and support from [Local-transver
 \mathrm{Loc}_E(b)
 &\quad\longleftrightarrow\quad
 \forall q\,[b\land C_E(b\land q)=b\land q],\\
-s_E&:=\exists b\,[\mathrm{Loc}_E(b)\land b].
+s_E&:=\exists b\,[\mathrm{Loc}_E(b)\land b]
 \end{aligned}
 \tag{5}
 ```
@@ -77,14 +77,14 @@ Under C5 the locality guard can be expressed as an identity of complete unary op
 Choose q≤b such that $`b\land C_E q\ne q`$. The unit $`q\le C_E q`$ gives
 
 ```math
-y:=b\land C_Eq\land\neg q\ne0.
+y:=b\land C_Eq\land\neg q\ne0
 \tag{6}
 ```
 
 Put $`d=L_E y`$. Zero-reflection makes d nonzero. Since $`y\le E(L_E q)`$, monotonicity and (1) give
 
 ```math
-d\le L_EEL_Eq=L_Eq.
+d\le L_EEL_Eq=L_Eq
 \tag{7}
 ```
 
@@ -93,7 +93,7 @@ Now set x=q∧Ed. Frobenius gives $`L_E x=L_E q\land d=d=L_E y`$. Also x≤q and
 **Theorem 1.** For every fixed external n≥1,
 
 ```math
-\boxed{\mathrm{Deg}_n(E)\ \longrightarrow\ s_E=1.}
+\boxed{\mathrm{Deg}_n(E)\ \longrightarrow\ s_E=1}
 \tag{8}
 ```
 
@@ -106,7 +106,7 @@ Only a fixed finite sequence of existential witnesses and explicit restrictions 
 At the smallest degree the condition is especially concrete:
 
 ```math
-\boxed{\mathrm{Deg}_1(E)\ \longleftrightarrow\ E\text{ is onto}.}
+\boxed{\mathrm{Deg}_1(E)\ \longleftrightarrow\ E\text{ is onto}}
 \tag{9}
 ```
 
@@ -120,7 +120,7 @@ The [local-transversal normalization theorem](finite-relative-image-generation.m
 
 ```math
 T\circ T=I,
-\qquad \forall p\,(Tp\leftrightarrow Ep).
+\qquad \forall p\,(Tp\leftrightarrow Ep)
 \tag{10}
 ```
 
@@ -135,7 +135,7 @@ Let $`S_{\tau,\Delta}`$[$`\mathrm{Deg}_n`$] be the full typed separation instanc
 S_{\tau,\Delta}[\mathrm{Deg}_n]
 \ \longleftrightarrow\
 S_{\tau,\Delta}[\mathrm{Rev}]
-\qquad\text{over C5, for every fixed external }n\ge1.}
+\qquad\text{over C5, for every fixed external }n\ge1}
 \tag{11}
 ```
 
@@ -148,7 +148,7 @@ These degree calculations require C5 only; no selection principle is used.
 **Composition theorem.** If $`\mathrm{Deg}_m(E)`$ and $`\mathrm{Deg}_n(F)`$, then
 
 ```math
-\boxed{\mathrm{Deg}_{mn}(F\circ E).}
+\boxed{\mathrm{Deg}_{mn}(F\circ E)}
 \tag{12}
 ```
 
@@ -159,21 +159,21 @@ Form the finite Boolean cells
 ```math
 e_J:=\bigwedge_{i\in J}d_i\land
        \bigwedge_{i\in I\setminus J}\neg d_i
-\qquad(J\subseteq I).
+\qquad(J\subseteq I)
 \tag{13}
 ```
 
 They are pairwise disjoint. A cell with |J|>n is zero, and
 
 ```math
-d_i=\bigvee_{J\ni i,\ |J|\le n}e_J.
+d_i=\bigvee_{J\ni i,\ |J|\le n}e_J
 \tag{14}
 ```
 
 If ∧_{i∈I}$`L_E d_i`$ were nonzero, finite-join preservation and finite distributivity applied to (14) would yield a choice of $`J_i`$ containing i, for each of these finitely many i, with
 
 ```math
-\bigwedge_{i\in I}L_Ee_{J_i}\ne0.
+\bigwedge_{i\in I}L_Ee_{J_i}\ne0
 \tag{15}
 ```
 
@@ -183,28 +183,28 @@ Consequently, for fixed external k≥1,
 
 ```math
 \mathrm{Deg}_n(E)\ \longrightarrow\
-\mathrm{Deg}_{n^k}(E^k).
+\mathrm{Deg}_{n^k}(E^k)
 \tag{16}
 ```
 
 **Patching theorem.** For any proposition a, put
 
 ```math
-G(p):=(a\land Ep)\lor(\neg a\land Fp).
+G(p):=(a\land Ep)\lor(\neg a\land Fp)
 \tag{17}
 ```
 
 Boolean partition patching gives all whole $`\mathrm{Good}_\Delta`$ identities. If $`\mathrm{Deg}_m(E)`$ and $`\mathrm{Deg}_n(F)`$, then
 
 ```math
-\boxed{\mathrm{Deg}_{m+n}(G).}
+\boxed{\mathrm{Deg}_{m+n}(G)}
 \tag{18}
 ```
 
 Its left adjoint is
 
 ```math
-L_Gq=L_E(a\land q)\lor L_F(\neg a\land q).
+L_Gq=L_E(a\land q)\lor L_F(\neg a\land q)
 \tag{19}
 ```
 
@@ -217,7 +217,7 @@ Equations (12), (16) and (18) are upper bounds. They do not identify a least deg
 For this section add the two explicit unboxed assumptions
 
 ```math
-\mathrm{BC}_t+\mathrm{Zorn}_t.
+\mathrm{BC}_t+\mathrm{Zorn}_t
 \tag{20}
 ```
 
@@ -226,7 +226,7 @@ These are [Boolean Completeness at t](../../source/topics/classicism/principles/
 ```math
 \forall r\ \exists u\,
 [\mathrm{Loc}_E(u)\land u\le r
- \land L_Eu=L_E(s_E\land r)].
+ \land L_Eu=L_E(s_E\land r)]
 \tag{21}
 ```
 
@@ -237,7 +237,7 @@ Say that E has n local sheets when there is a fixed tuple u₁,…,$`u_n`$ with
 ```math
 \bigvee_{i=1}^n u_i=1,\qquad
 u_i\land u_j=0\ (i\ne j),\qquad
-\mathrm{Loc}_E(u_i)\text{ for every }i.
+\mathrm{Loc}_E(u_i)\text{ for every }i
 \tag{22}
 ```
 
@@ -248,7 +248,7 @@ Zero sheets are allowed, so this means at most n nonzero sheets. These are admit
 ```math
 \boxed{\mathrm{Deg}_n(E)
 \quad\longleftrightarrow\quad
-E\text{ has }n\text{ local sheets}.}
+E\text{ has }n\text{ local sheets}}
 \tag{23}
 ```
 
@@ -258,7 +258,7 @@ For the forward direction, Theorem 1 gives $`s_E=1`$. Begin with r₀=1. Use (21
 u_i\le r_{i-1},\qquad
 \mathrm{Loc}_E(u_i),\qquad
 L_Eu_i=L_Er_{i-1},\qquad
-r_i=r_{i-1}\land\neg u_i.
+r_i=r_{i-1}\land\neg u_i
 \tag{24}
 ```
 
@@ -267,7 +267,7 @@ The $`u_i`$ are disjoint. If $`r_n`$≠0, let $`d=L_E r_n\ne0`$. Since $`r_n`$�
 The converse does not use (20). Let b₀,…,$`b_n`$ be disjoint. Because the sheets partition 1,
 
 ```math
-L_Eb_j=\bigvee_{i=1}^n L_E(u_i\land b_j).
+L_Eb_j=\bigvee_{i=1}^n L_E(u_i\land b_j)
 \tag{25}
 ```
 
@@ -281,21 +281,21 @@ For a fixed external k≥0, $`\mathrm{FG}_k(E)`$ says that the image of E and k 
 
 ```math
 \boxed{\mathrm{FG}_k(E)\ \longrightarrow\
-\mathrm{Deg}_{2^k}(E).}
+\mathrm{Deg}_{2^k}(E)}
 \tag{26}
 ```
 
 Conversely suppose $`\mathrm{Deg}_{2^k}(E)`$ and add (20). Theorem 2 gives a partition into 2^k local sheets $`u_s`$ indexed by the fixed bit strings s∈{0,1}^k, padding with zero sheets if necessary. Define k admitted generators
 
 ```math
-a_j:=\bigvee_{s:\,s_j=1}u_s\qquad(1\le j\le k).
+a_j:=\bigvee_{s:\,s_j=1}u_s\qquad(1\le j\le k)
 \tag{27}
 ```
 
 The Boolean cell determined by the generators and the string s is exactly $`u_s`$. Locality gives the explicit expansion
 
 ```math
-q=\bigvee_s\left[u_s\land E\bigl(L_E(u_s\land q)\bigr)\right].
+q=\bigvee_s\left[u_s\land E\bigl(L_E(u_s\land q)\bigr)\right]
 \tag{28}
 ```
 
@@ -307,7 +307,7 @@ Thus $`\mathrm{FG}_k(E)`$ holds, with no selected family of inverse values: (28)
 \ \vdash\
 \mathrm{FG}_k(E)\leftrightarrow
 \mathrm{Deg}_{2^k}(E)
-\quad\text{for every fixed external }k\ge0.}
+\quad\text{for every fixed external }k\ge0}
 \tag{29}
 ```
 

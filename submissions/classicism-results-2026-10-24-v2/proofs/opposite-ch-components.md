@@ -23,7 +23,7 @@ admitted subproperty of X bounded above has a least upper bound. Write
  \forall Y\subseteq X\,
    \bigl(\exists G\;\mathrm{Injection}(Y,N,G)
        \;\lor\;
-       \exists G\;\mathrm{Bijection}(Y,X,G)\bigr).
+       \exists G\;\mathrm{Bijection}(Y,X,G)\bigr)
 ```
 
 Both subproperty and graph quantifiers range over the component's admitted
@@ -58,7 +58,7 @@ set-sized structures
 
 ```math
  M_+\models\mathrm{ZFC}+CH,\qquad
- M_-\models\mathrm{ZFC}+\neg CH.
+ M_-\models\mathrm{ZFC}+\neg CH
 ```
 
 One may choose countable models, but countability is unnecessary below. Their
@@ -97,7 +97,7 @@ in t, put
  T_{\sigma\to\rho}=D^{\rm code}_\sigma\times^{M}T_\rho,
  \qquad
  D^{\rm code}_e=r,\qquad
- D^{\rm code}_{\mathrm{rel}(\rho)}=\mathcal P^{M}(T_\rho).
+ D^{\rm code}_{\mathrm{rel}(\rho)}=\mathcal P^{M}(T_\rho)
 ```
 
 Here u is a fixed element of M, for example its empty set; products use an
@@ -112,7 +112,7 @@ An admitted relation is an element `A in M` that M regards as a subset of
 `T_rho`. Its profile on an external tuple a is
 
 ```math
- \mathrm{profile}(A)(a)\iff M\models\mathrm{encode}(a)\in A.
+ \mathrm{profile}(A)(a)\iff M\models\mathrm{encode}(a)\in A
 ```
 
 If two admitted relations have the same profile, they have the same M-members
@@ -191,7 +191,7 @@ these relations into the nested tuple convention just defined. For example,
 an internal unary subset A of r is represented by
 
 ```math
- \{\langle x,u\rangle:x\in A\}^{M}.
+ \{\langle x,u\rangle:x\in A\}^{M}
 ```
 
 Replacement gives this code. Conversely, Separation on r decodes any
@@ -229,7 +229,7 @@ these sets. The satisfaction lemma consequently gives
 ```math
  H(M)\models CH(R_M)\quad\Longleftrightarrow\quad
  M\models\forall Y\subseteq\mathbb R\,
-   (Y\hookrightarrow\mathbb N\ \lor\ Y\cong\mathbb R).
+   (Y\hookrightarrow\mathbb N\ \lor\ Y\cong\mathbb R)
 ```
 
 The right-hand assertion is equivalent in ZFC to ordinary CH. Here is the

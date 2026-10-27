@@ -6,7 +6,7 @@ A one-object symmetric finite-pinning model satisfies C5, necessary ordinary log
 
 ```math
 \boxed{\mathrm{C5}+\Box\mathrm{SplitMono}
-+\mathrm{NoPureContingency}+\neg\mathrm{Rev}.}
++\mathrm{NoPureContingency}+\neg\mathrm{Rev}}
 \tag{1}
 ```
 
@@ -23,7 +23,7 @@ The model below is a new member of the general symmetric ideally-full constructi
 We use exactly the following smaller group of arrows. Let
 
 ```math
-X=\mathbb Z\times\mathbb N,\qquad C_n=\{n\}\times\mathbb N.
+X=\mathbb Z\times\mathbb N,\qquad C_n=\{n\}\times\mathbb N
 ```
 
 On each even-indexed component C_n choose a partition into countably infinitely many blocks of every positive even finite size. On each odd-indexed component choose a partition into countably infinitely many blocks of sizes 2,4,8,16,… and no other sizes. All these choices can be fixed using enumerations of the countable components.
@@ -31,7 +31,7 @@ On each even-indexed component C_n choose a partition into countably infinitely 
 Let G_n be the product of the full symmetric groups of the individual finite blocks in C_n. Put
 
 ```math
-G:=\prod_{n\in\mathbb Z}G_n.
+G:=\prod_{n\in\mathbb Z}G_n
 \tag{2}
 ```
 
@@ -40,7 +40,7 @@ Thus G preserves each component and each designated finite block setwise; it doe
 Let K consist of all bijections h:X→X for which there is one integer k such that
 
 ```math
-h(C_n)=C_{n+k}\qquad\text{for every }n.
+h(C_n)=C_{n+k}\qquad\text{for every }n
 \tag{3}
 ```
 
@@ -55,20 +55,20 @@ The general one-object symmetric ideally-full construction needs a monoid of map
 For precision, a relational intension A of type σ₁…σ_mt has a profile
 
 ```math
-A(h;u_1,\ldots,u_m),\qquad h\in K,\quad u_i\in D_{\sigma_i}(X).
+A(h;u_1,\ldots,u_m),\qquad h\in K,\quad u_i\in D_{\sigma_i}(X)
 ```
 
 It is symmetric when, for every μ∈G,
 
 ```math
-A(\mu h;\rho(\mu)\bar u)=A(h;\bar u).
+A(\mu h;\rho(\mu)\bar u)=A(h;\bar u)
 \tag{4}
 ```
 
 A finite S pins it when its value, holding $`\bar u`$ fixed, depends on h only through h|S. Transport is right precomposition:
 
 ```math
-(\rho(r)A)(h;\bar u)=A(hr;\bar u).
+(\rho(r)A)(h;\bar u)=A(hr;\bar u)
 \tag{5}
 ```
 
@@ -82,7 +82,7 @@ We will also use its invariant-current-relation admission lemma. If an external 
 A(h;\bar u)\quad\Longleftrightarrow\quad
 \begin{cases}
 A_0(\rho(g^{-1})\bar u),&h|S=g|S\text{ for some }g\in G,\\
-\text{false},&\text{otherwise}.
+\text{false},&\text{otherwise}
 \end{cases}
 \tag{6}
 ```
@@ -96,7 +96,7 @@ Because every arrow acts bijectively at every type, identities and distinctness 
 Every closed pure term is natural under the transports (5). For a closed pure proposition P this gives
 
 ```math
-\rho(r)P=P\qquad(r\in K).
+\rho(r)P=P\qquad(r\in K)
 \tag{7}
 ```
 
@@ -115,7 +115,7 @@ The two finite-block group patterns admit comparison bijections in both directio
 Fix an integer shift k. For each n choose such a comparison j_n:C_n→C_(n+k) between its two patterns. Their union j belongs to K and satisfies
 
 ```math
-jGj^{-1}\subseteq G.
+jGj^{-1}\subseteq G
 \tag{8}
 ```
 
@@ -124,7 +124,7 @@ The countably many comparisons can be specified by the same enumerated packing a
 Let d be a nonbottom admitted proposition, let h∈d, and let P be a finite pin for d. Choose j with the same shift as h. Then j⁻¹h preserves every component. Its restriction to P extends to a finite-support permutation π preserving every component: complete the finite partial bijection within each of the finitely many affected components. Thus π∈K. Put b=jπ and choose finite S containing P and supp(π). Then b|P=h|P, so b∈d. Every element of G_(S) commutes with π, giving
 
 ```math
-bG_{(S)}b^{-1}=jG_{(S)}j^{-1}\subseteq G.
+bG_{(S)}b^{-1}=jG_{(S)}j^{-1}\subseteq G
 \tag{9}
 ```
 
@@ -134,7 +134,7 @@ Here is the admitted observer supplied by (9). At a coordinate h′ matching som
 E(h';q)\quad\Longleftrightarrow\quad
 \begin{cases}
 bg^{-1}\in q,&h'|S=g|S,\ g\in G,\\
-1\in q,&\text{otherwise}.
+1\in q,&\text{otherwise}
 \end{cases}
 \tag{10}
 ```
@@ -152,7 +152,7 @@ The one-sided shift construction from [Finite-pinning models with left-inverse s
 For b,S as in (9), choose one component C_m and infinitely many of its 2-blocks B₀,B₁,… disjoint from S. Choose x∈B₀ and put S′=S∪{x}. Let ν₀=1 and let ν_n exchange B₀ with B_n, fixing everything else. These permutations preserve every component, so ν_n∈K. They normalize G, because they exchange equal-sized designated blocks. Set α_n=ν_(n+1)ν_n⁻¹ and
 
 ```math
-U_n=\{h'\in K:h'|S'=\nu_n g|S'\text{ for some }g\in G\}.
+U_n=\{h'\in K:h'|S'=\nu_n g|S'\text{ for some }g\in G\}
 ```
 
 The charts are pairwise disjoint, all share the finite pin S′, and α_nU_n=U_(n+1). Define E to observe bg⁻¹ on U₀, α_n⁻¹ on U_(n+1), and identity outside all charts. Define F to observe α_n on U_n and identity outside. The representative-independence of the first branch is (9); all constant shift branches are symmetric because their observation arrows normalize G. Hence both profiles are admitted.
@@ -160,13 +160,13 @@ The charts are pairwise disjoint, all share the finite pin S′, and α_nU_n=U_(
 For arbitrary future r,l∈K and arbitrary future input q, the observation formula is
 
 ```math
-l\in(\rho(r)E)(q)\quad\Longleftrightarrow\quad a^E_{lr}l\in q.
+l\in(\rho(r)E)(q)\quad\Longleftrightarrow\quad a^E_{lr}l\in q
 ```
 
 Applying F outside E therefore tests q at
 
 ```math
-a^E_{\,a^F_{lr}lr}\,a^F_{lr}l.
+a^E_{\,a^F_{lr}lr}\,a^F_{lr}l
 \tag{11}
 ```
 
@@ -181,7 +181,7 @@ The parameter argument has a reusable general form. Fix an external finite list 
 ```math
 \mathrm{End}(\bar R):=
 \bigwedge_i\forall\bar y^{\,e}\,
-\bigl(R_i\bar y=\top\ \lor\ R_i\bar y=\bot\bigr).
+\bigl(R_i\bar y=\top\ \lor\ R_i\bar y=\bot\bigr)
 ```
 
 Then full Rev over H implies the following external formula schema:
@@ -189,7 +189,7 @@ Then full Rev over H implies the following external formula schema:
 ```math
 \boxed{\mathrm{End}(\bar R)\ \longrightarrow\
 \bigl(P(\bar R,\bar x)\leftrightarrow
-\Box P(\bar R,\bar x)\bigr).}
+\Box P(\bar R,\bar x)\bigr)}
 \tag{12a}
 ```
 
@@ -211,7 +211,7 @@ Define the admitted binary individual relation R of type eet by the profile
 
 ```math
 R(h;x,y)\quad\Longleftrightarrow\quad
-x,y\text{ belong to the same component }C_n.
+x,y\text{ belong to the same component }C_n
 \tag{12}
 ```
 
@@ -229,7 +229,7 @@ since Boolean qualification fixes Top and Bottom. Current Functionality, availab
 If P(R,a) is a pure formula with only the indicated relation and individual parameters, and Δ contains its quantifier types, the existing conjugation term induction now gives
 
 ```math
-T(P(R,a))=P(T^*R,T^*_e a)=P(R,a).
+T(P(R,a))=P(T^*R,T^*_e a)=P(R,a)
 \tag{14}
 ```
 
@@ -246,7 +246,7 @@ More explicitly, A has type (et)t, S has type (et)(et), and the antecedent says 
 The quantifier types of this expanded formula lie in
 
 ```math
-\Delta_0=\{t,e,et,(et)t,(et)(et)\}.
+\Delta_0=\{t,e,et,(et)t,(et)(et)\}
 \tag{15}
 ```
 
@@ -286,7 +286,7 @@ This proves (1) and in particular
 
 ```math
 \mathrm{C5}+\Box\mathrm{OS}+\mathrm{NoPureContingency}
-\ \not\Longrightarrow\ \mathrm{Rev}.
+\ \not\Longrightarrow\ \mathrm{Rev}
 ```
 
 The necessary left-inverse strengthening in (1) shows that the failure is not repaired by supplying admitted qualified left inverses to the separating observers.

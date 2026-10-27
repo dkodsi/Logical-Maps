@@ -14,7 +14,7 @@ For an admitted E:tt define its admitted image predicate by
 
 ```math
 \mathrm{FinIm}(E):=
-\exists Z\,[\mathrm{FiniteCardinality}_t(Z)\land Z(\mathrm{Im}(E))].
+\exists Z\,[\mathrm{FiniteCardinality}_t(Z)\land Z(\mathrm{Im}(E))]
 ```
 
 FiniteCardinality is the internal Frege induction predicate from the [background](../../source/topics/classicism/background.md), also displayed in [Finite semilattice normalization](finite-semilattice-normalization.md), §2. No standard finite bound or external enumeration is implicit in FinIm.
@@ -22,7 +22,7 @@ FiniteCardinality is the internal Frege induction predicate from the [background
 Write
 
 ```math
-\mathrm{Two}(E):=\exists b,c\,\forall p\,[Ep=b\lor Ep=c].
+\mathrm{Two}(E):=\exists b,c\,\forall p\,[Ep=b\lor Ep=c]
 ```
 
 This is an at-most-two-output condition. Its two witnesses need not be the fixed Top and Bottom. Let O be any of no condition, A, Z or A∧Z, where A(E):=ETop and Z(E):=¬EBottom. Then over H,
@@ -31,7 +31,7 @@ This is an at-most-two-output condition. Its two witnesses need not be the fixed
 \boxed{
 \mathrm{Sep}_t[O\land\mathrm{FinIm}\land M_{\rm mat}]
 \ \leftrightarrow\
-\mathrm{Sep}_t[O\land\mathrm{Two}\land M_{\rm pt}].}
+\mathrm{Sep}_t[O\land\mathrm{Two}\land M_{\rm pt}]}
 \tag{1}
 ```
 
@@ -44,14 +44,14 @@ The proposition domain is not assumed internally finite. In particular (1) is no
 Assume conjunction is a meet semilattice. Let U,C,f be admitted predicates or operations of type tt, suppose Fin_t(U), and suppose
 
 ```math
-\forall x\,[Cx\to fx],\qquad\exists x\,[Ux\land Cx].
+\forall x\,[Cx\to fx],\qquad\exists x\,[Ux\land Cx]
 \tag{2}
 ```
 
 Then there is a true proposition u such that
 
 ```math
-\forall x\,[(Ux\land Cx)\to u\land fx=u].
+\forall x\,[(Ux\land Cx)\to u\land fx=u]
 \tag{3}
 ```
 
@@ -63,7 +63,7 @@ To prove this, use Frege induction with the admitted property
 W(Z):=\forall V\left[ZV\to
 \left((\exists x\,[Vx\land Cx])\to
 \exists u\left[u\land
-\forall x((Vx\land Cx)\to u\land fx=u)\right]\right)\right].
+\forall x((Vx\land Cx)\to u\land fx=u)\right]\right)\right]
 \tag{4}
 ```
 
@@ -78,20 +78,20 @@ Dually, in a join semilattice, if every selected fx is false and there is a sele
 Assume the conjunction semilattice equations and FinIm(E). First suppose E has both a true and a false output. Apply §2 to U:=Im(E), C(x):=x and f(x):=x. This gives a true u below every true output of E:
 
 ```math
-Ep\ \Longrightarrow\ u\land Ep=u.
+Ep\ \Longrightarrow\ u\land Ep=u
 \tag{5}
 ```
 
 Apply §2 a second time to the same internally finite U, now with
 
 ```math
-C(x):=\neg x,\qquad f(x):=\neg(u\land x).
+C(x):=\neg x,\qquad f(x):=\neg(u\land x)
 ```
 
 For every selected x, u∧x is false, so f(x) is true. There is a selected index because E has a false output. Obtain a true v satisfying
 
 ```math
-\neg Ep\ \Longrightarrow\ v\land\neg(u\land Ep)=v.
+\neg Ep\ \Longrightarrow\ v\land\neg(u\land Ep)=v
 \tag{6}
 ```
 
@@ -103,7 +103,7 @@ d:=v\land\neg u,
 ```
 
 ```math
-F(p):=\neg h(p)\land\neg d.
+F(p):=\neg h(p)\land\neg d
 \tag{7}
 ```
 
@@ -111,7 +111,7 @@ Since v,u are true, d is false. If Ep is true, (5) gives h(p)=d, hence F(p)=¬d 
 
 ```math
 t:=\neg d\quad\text{(true)},\qquad
-b:=\neg v\land\neg d\quad\text{(false)}.
+b:=\neg v\land\neg d\quad\text{(false)}
 \tag{8}
 ```
 
@@ -130,7 +130,7 @@ Assume the disjunction semilattice equations and FinIm(E), again first with both
 ```
 
 ```math
-Ep\ \Longrightarrow\ w\lor\neg(v\lor Ep)=w.
+Ep\ \Longrightarrow\ w\lor\neg(v\lor Ep)=w
 ```
 
 Put
@@ -138,7 +138,7 @@ Put
 ```math
 t:=w\lor\neg v,
 \qquad h(p):=w\lor\neg(v\lor Ep),
-\qquad F(p):=\neg h(p)\lor\neg t.
+\qquad F(p):=\neg h(p)\lor\neg t
 \tag{9}
 ```
 
@@ -146,7 +146,7 @@ The proposition t is true. When Ep is false, h(p)=t and F(p)=¬t. When Ep is tru
 
 ```math
 b:=\neg t\quad\text{(false)},\qquad
-u:=\neg w\lor\neg t\quad\text{(true)},\qquad b\le u.
+u:=\neg w\lor\neg t\quad\text{(true)},\qquad b\le u
 ```
 
 Hence F has E's truth profile, and material V for E gives pointwise V for F. Constant truth profiles are handled by constant observers as in §3. All A/Z orientations survive.

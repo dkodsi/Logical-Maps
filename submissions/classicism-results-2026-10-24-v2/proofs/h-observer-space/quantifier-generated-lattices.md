@@ -11,7 +11,7 @@ Use S[R], the observer order and the strong quantifier qualifications from [Trut
 \mathrm{BinaryRange}_\sigma(B):=\forall p,q\,[
  &\forall x^\sigma(B[p,q,x]=p\lor B[p,q,x]=q)\\
  &\land\exists x^\sigma(B[p,q,x]=p)
- \land\exists x^\sigma(B[p,q,x]=q)].
+ \land\exists x^\sigma(B[p,q,x]=q)]
 \end{aligned}
 ```
 
@@ -24,7 +24,7 @@ Define the admitted binary terms
 ```math
 \mu_B(p,q):=\forall x^\sigma B[p,q,x],
 \qquad
-\nu_B(p,q):=\exists x^\sigma B[p,q,x].
+\nu_B(p,q):=\exists x^\sigma B[p,q,x]
 ```
 
 These are initially new operations. They are not stipulated to be the primitive conjunction and disjunction.
@@ -34,7 +34,7 @@ These are initially new operations. They are not stipulated to be the primitive 
 Suppose every R-observer satisfies Qσ. For every eligible E, quantifier preservation and the range identities give
 
 ```math
-E\mu_B(p,q)\ \leftrightarrow\ Ep\land Eq.
+E\mu_B(p,q)\ \leftrightarrow\ Ep\land Eq
 \tag{1}
 ```
 
@@ -44,7 +44,7 @@ Under S[R], (1) makes μB the meet for the observer order:
 
 ```math
 u\preceq_R\mu_B(p,q)
-\ \leftrightarrow\ (u\preceq_Rp\land u\preceq_Rq).
+\ \leftrightarrow\ (u\preceq_Rp\land u\preceq_Rq)
 \tag{2}
 ```
 
@@ -66,14 +66,14 @@ Assume the observer class is closed under composition:
 
 ```math
 R(E)\land R(F)\ \longrightarrow\
-R(\lambda p.F(Ep)).
+R(\lambda p.F(Ep))
 \tag{3}
 ```
 
 Then S[R], R⇒Qσ and BinaryRangeσ(B) prove, for every R-observer E,
 
 ```math
-E\mu_B(p,q)=\mu_B(Ep,Eq).
+E\mu_B(p,q)=\mu_B(Ep,Eq)
 \tag{4}
 ```
 
@@ -110,7 +110,7 @@ Let Mμ(E) denote the full composite identity for preservation of the derived op
 
 ```math
 (\lambda p,q.E\mu_B(p,q))
- =(\lambda p,q.\mu_B(Ep,Eq)).
+ =(\lambda p,q.\mu_B(Ep,Eq))
 ```
 
 Functionality at the two stages t→t and t→tt lifts (4) to Mμ(E): first identify the unary q-functions for each p, then identify the outer p-functions. No C or necessity principle is involved. The analogous lift gives Vν(E) for νB.
@@ -120,7 +120,7 @@ Full typed separation for a fixed class R itself supplies the Functionality sche
 ```math
 \mathrm{FullSep}[R]
 \quad\leftrightarrow\quad
-\mathrm{FullSep}[R\land M_\mu].
+\mathrm{FullSep}[R\land M_\mu]
 \tag{5}
 ```
 
@@ -145,7 +145,7 @@ If additional Qτ or Pτ clauses are listed, those quantifiers are respectively 
 
 ```math
 \nu_B(p,\forall x^\tau Fx)
- =\forall x^\tau\nu_B(p,Fx)\qquad(Q_\tau).
+ =\forall x^\tau\nu_B(p,Fx)\qquad(Q_\tau)
 ```
 
 These identities use an admitted lambda family on the right. They assert neither existence of arbitrary external suprema nor an internal choice-of-witnesses principle. Finite type lists remain external schema indices.
@@ -159,14 +159,14 @@ An explicit sufficient premise for BinaryRangeσ(B) uses an admitted selector b:
 ```math
 \forall x(bx=\mathrm{Top}\lor bx=\mathrm{Bottom}),
 \quad\exists x(bx=\mathrm{Top}),
-\quad\exists x(bx=\mathrm{Bottom}).
+\quad\exists x(bx=\mathrm{Bottom})
 ```
 
 Also assume the following two **output identities** for the displayed Boolean conditional term C(r,p,q):=(r∧p)∨(¬r∧q):
 
 ```math
 C(\mathrm{Top},p,q)=p,
-\qquad C(\mathrm{Bottom},p,q)=q.
+\qquad C(\mathrm{Bottom},p,q)=q
 \tag{6}
 ```
 

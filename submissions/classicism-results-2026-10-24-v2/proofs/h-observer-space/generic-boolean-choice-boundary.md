@@ -10,7 +10,7 @@ There is a model satisfying
 ```math
 \boxed{C5+\Box\mathrm{Rev}+\Box\mathrm{TC}_{r}
  +\Box\mathrm{RC}_{r}+\Box\mathrm{Zorn}_{r}
- +\Box\neg BC_t+\Box\neg\mathrm{Actuality}.}
+ +\Box\neg BC_t+\Box\neg\mathrm{Actuality}}
 ```
 
 Rev denotes full typed separation by reversible logical observers, qualified by identities of whole Boolean and quantifier operations at each finite external type list. Boxed schema assertions mean their separately boxed instances. In particular this model has necessary ordinary observer separation. It is a countermodel after dropping BC_t from the proposed Actuality implication, not a countermodel with BC_t included.
@@ -27,13 +27,13 @@ Fix b∈B∩M with 0<b<1. In H_θ choose a complete Boolean isomorphism
 
 ```math
 h:B\mathbin{\upharpoonright}b\longrightarrow
- B\mathbin{\upharpoonright}\neg b.
+ B\mathbin{\upharpoonright}\neg b
 ```
 
 The relevant maps, subsets and completeness tests lie in H_θ by its size choice. Elementarity supplies such an h in M. Define
 
 ```math
-g(x)=h(x\land b)\lor h^{-1}(x\land\neg b).
+g(x)=h(x\land b)\lor h^{-1}(x\land\neg b)
 ```
 
 Then g∈M is an involutive complete Boolean automorphism, with g(b)=¬b. In particular g is an admitted operation of type tt and is its own admitted inverse.
@@ -45,7 +45,7 @@ g\left(\bigvee_{x\in A_\sigma}F(x)\right)
  =\bigvee_{x\in A_\sigma}g(F(x)),
 \qquad
 g\left(\bigwedge_{x\in A_\sigma}F(x)\right)
- =\bigwedge_{x\in A_\sigma}g(F(x)).
+ =\bigwedge_{x\in A_\sigma}g(F(x))
 ```
 
 Together with the Boolean identities, these are identities of the full ambient operations. Restriction therefore gives the required identities of the admitted whole operations, not merely their current truth equivalence. Crisp equality supplies the equality clauses of observer qualification. Thus the same g is Good at every requested finite type list, and g∘g=I as a whole-operation identity.
@@ -75,13 +75,13 @@ q_n,&p=a_n,\\
 belongs to M by definability and therefore is an admitted predicate of type tt. At a generic world G put, externally,
 
 ```math
-r_G=\{n\in\omega:q_n\in G\}.
+r_G=\{n\in\omega:q_n\in G\}
 ```
 
 Y's actual extension is exactly {a_n:n∈r_G}. Suppose it has an actual least upper bound b∈B∩M. Then
 
 ```math
-n\in r_G\quad\Longleftrightarrow\quad a_n\le b. \tag{1}
+n\in r_G\quad\Longleftrightarrow\quad a_n\le b \tag{1}
 ```
 
 The forward direction is upper-boundedness. If n∉r_G, pairwise disjointness makes ¬a_n an upper bound of every actual Y-member. This upper bound is admitted. Leastness therefore gives b≤¬a_n, and a_n≰b because a_n≠0. This proves the reverse direction without using any external completeness of B∩M.

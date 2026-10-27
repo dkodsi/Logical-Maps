@@ -19,7 +19,7 @@ where $`A(E)`$ requires a logical observer qualified at $`t`$ with an admitted q
 The [component-shift model with fixed individuals](../proofs/fixed-individual-component-shift.md) satisfies
 
 ```math
-\mathrm{C5}+\Box\mathrm{SplitMono}+\Box\mathrm{EPNC}_e+\neg\mathrm{Rev}.
+\mathrm{C5}+\Box\mathrm{SplitMono}+\Box\mathrm{EPNC}_e+\neg\mathrm{Rev}
 ```
 
 SplitMono requires qualified left inverses. Here $`\mathrm{EPNC}_e`$ is noncontingency for pure formulas with individual and endpoint-valued first-order relation parameters $`e^nt`$, $`n\ge1`$; bound variables may have any admitted type. Thus reversible symmetry adds something beyond necessary recoverable observation and this parameter noncontingency. The construction permits any nonempty fixed individual domain; no object-language Infinity verdict is claimed.

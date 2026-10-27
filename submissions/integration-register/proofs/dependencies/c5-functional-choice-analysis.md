@@ -23,7 +23,7 @@ The target is exactly `necessity-of-analysis`. For every admitted type $`\sigma`
  \qquad
  U_{\sigma,\varphi}:=
  \forall\mathfrak R\,
-   (\mathrm{Real}_\sigma(\mathfrak R)\to\varphi(\mathfrak R)).
+   (\mathrm{Real}_\sigma(\mathfrak R)\to\varphi(\mathfrak R))
 ```
 
 `Real` uses the carrier, order, ternary addition and multiplication graphs, zero, one and the least inductive natural-number predicate. Completeness concerns **nonempty** bounded subproperties. The failure below is at $`\sigma=t`$. Its witness is a finite, parameter-free first-order analytical sentence expressing that every real is constructible. It is not a CH sentence, a pure ordered-field sentence, or a claim about Analytic Necessitism.
@@ -35,14 +35,14 @@ The bare-C5 separation is already reported by Bacon, draft of 9 October 2025, pp
 Work in a ground universe $`V\models\mathrm{ZFC}`$. Let $`A`$ be a nontrivial complete atomless Boolean algebra and put
 
 ```math
-B=2\times A,\quad a=(1,0_A),\quad b=(0,1_A).
+B=2\times A,\quad a=(1,0_A),\quad b=(0,1_A)
 ```
 
 Fix a nonempty ground set $`E`$, and use precisely the admitted relational types:
 
 ```math
 D_e=E,\qquad D_t=B,\qquad
- D_{\sigma\to\rho}=D_\rho^{D_\sigma}\quad(\rho\ne e).
+ D_{\sigma\to\rho}=D_\rho^{D_\sigma}\quad(\rho\ne e)
 ```
 
 All these function spaces are formed in the ground universe. Application and abstraction are ordinary application and abstraction. Connectives are the Boolean operations of $`B`$; quantifiers are meets and joins. At every type, identity has value $`1_B`$ for equal ground entities and $`0_B`$ otherwise. Truth at the designated point is the first coordinate, $`\pi:B\to2`$. Write $`\rho:B\to A`$ for the second projection.
@@ -70,7 +70,7 @@ The important restriction is to **extensional, box-free structure formulas**. Qu
 ```math
 V\models |\mathbb R|\le |S|,
  \qquad
- 1_A\Vdash |\mathbb R|\le |\check S|.
+ 1_A\Vdash |\mathbb R|\le |\check S|
 ```
 
 For every sentence $`\varphi`$ of the first-order analytical language there is a single tuple $`\mathfrak R_*`$ in the typed model such that
@@ -80,7 +80,7 @@ For every sentence $`\varphi`$ of the first-order analytical language there is a
  \qquad
  \llbracket\varphi(\mathfrak R_*)\rrbracket
  =\bigl(\mathbf1_{V\models\varphi(\mathbb R)},
-          \|\varphi(\mathbb R)\|_A\bigr).           \tag{2}
+          \|\varphi(\mathbb R)\|_A\bigr)           \tag{2}
 ```
 
 The same assertion applies to finite second-order analytical formulas that use relation variables only extensionally, including CH.
@@ -92,7 +92,7 @@ Pull the ground real field and its natural numbers back to $`\mathrm{ran}j_0`$. 
 ```math
 \|\exists x,y,z\in\mathbb R\,
  (\dot j(x)=\check s\land\dot j(y)=\check t\land
-  \dot j(z)=\check u\land x+y=z)\|_A.
+  \dot j(z)=\check u\land x+y=z)\|_A
 ```
 
 The carrier's second coordinate at $`s`$ is $`\|\check s\in\mathrm{ran}\dot j\|_A`$. Define order, product and $`N`$ similarly; all relations have value zero outside $`S`$ in the relevant coordinates. Pair each ground characteristic function with the corresponding $`A`$-valued function. Fullness places the resulting curried graphs in the required relational types. Zero and one are the fixed ground labels, so no name for a new individual constant or unavailable operation type is introduced.
@@ -101,7 +101,7 @@ For a fixed ground set $`T`$, names for subsets of $`\check T`$ are represented,
 
 ```math
 f:T\to A,\qquad
- f(t)=\|\check t\in\dot Y\|_A.
+ f(t)=\|\check t\in\dot Y\|_A
 ```
 
 Conversely every such function gives the normalized name
@@ -117,7 +117,7 @@ The field axioms, nonempty bounded completeness and the least-inductive-subprope
 
 ```math
 \llbracket U_{\sigma,\varphi}\rrbracket=(\varepsilon,p),\qquad
- \llbracket U_{\sigma,\neg\varphi}\rrbracket=(1-\varepsilon,\neg p). \tag{3}
+ \llbracket U_{\sigma,\neg\varphi}\rrbracket=(1-\varepsilon,\neg p) \tag{3}
 ```
 
 For the lower bounds, every tuple satisfying `Real` in either coordinate is an internally complete ordered field with its standard natural numbers, and hence is isomorphic to that coordinate's standard real field. This argument applies below the Boolean value of `Real` even when that value is not one. Isomorphism invariance gives the indicated lower bounds on every implication. Taking their meet preserves them. The tuple in (2) gives the reverse bounds.
@@ -139,7 +139,7 @@ has a $`\Pi^1_3`$ presentation. The descriptive-set-theoretic input is standard 
 For clarity, the interpretation into the permitted first-order language is concrete. Code a subset $`U`$ by
 
 ```math
-c_U=\sum_{n\ge0}\frac{1+\mathbf1_U(n)}{4^{n+1}}.
+c_U=\sum_{n\ge0}\frac{1+\mathbf1_U(n)}{4^{n+1}}
 ```
 
 This sum describes the external coding, not an infinitary object-language formula. With number variables restricted by $`N`$, the graph of $`p=4^{n+1}`$ is arithmetically definable by finite-sequence coding. The conditions
@@ -154,7 +154,7 @@ Translate set quantifiers in (4) into quantifiers over `Code` reals, numerical q
 
 ```math
 \varphi_L(\mathbb R)\quad\Longleftrightarrow\quad
- \mathcal P(\omega)\subseteq L.
+ \mathcal P(\omega)\subseteq L
 ```
 
 The detailed digit definitions, proof of surjectivity and relational-term elimination are in [the sentence audit](analytical-sentence.txt).
@@ -164,14 +164,14 @@ The detailed digit definitions, proof of surjectivity and relational-term elimin
 Now take $`V\models\mathrm{ZFC}+V=L`$,
 
 ```math
-A=\mathrm{RO}(\mathrm{Add}(\omega,1)),\qquad E=\omega.
+A=\mathrm{RO}(\mathrm{Add}(\omega,1)),\qquad E=\omega
 ```
 
 The forcing adds a subset of $`\omega`$ outside the ground universe. Forcing does not change ordinals or the constructible hierarchy, so
 
 ```math
 V\models\varphi_L(\mathbb R),\qquad
- 1_A\Vdash\neg\varphi_L(\mathbb R).                         \tag{5}
+ 1_A\Vdash\neg\varphi_L(\mathbb R)                         \tag{5}
 ```
 
 Both coordinates satisfy CH. The ground universe does by $`V=L`$. Cohen forcing is countable and ccc, preserves $`\omega_1`$, and has at most
@@ -183,7 +183,7 @@ Equations (3) and (5) give the exact values
 
 ```math
 \llbracket U_{t,\varphi_L}\rrbracket=a,
- \qquad \llbracket U_{t,\neg\varphi_L}\rrbracket=b.
+ \qquad \llbracket U_{t,\neg\varphi_L}\rrbracket=b
 ```
 
 Neither value is top. Each box in the target instance is therefore bottom, and the instance has value $`0_B`$, so it is false at the designated atom.
@@ -202,7 +202,7 @@ $`\bigwedge_x\Box P(x)=\Box\bigwedge_xP(x)`$: each side is one exactly when ever
 **Boxed Relational Choice.** Well-order the ground output carrier and define
 
 ```math
-T(x,y)=U(x,y)\wedge\neg\bigvee_{z<y}U(x,z).
+T(x,y)=U(x,y)\wedge\neg\bigvee_{z<y}U(x,z)
 ```
 
 For each $`x`$, the values $`T(x,y)`$ are disjoint and their join equals $`\bigvee_yU(x,y)`$. To see the equality of joins, any nonzero part of the latter meets a first $`U(x,y)`$ in the well-order, and hence meets its disjointified part. Inclusion $`T\subseteq U`$ has value one; crisp equality and disjointness make uniqueness have value one. If seriality has value $`c`$, the functional-subrelation assertion for $`T`$ has value at least $`c`$. Thus each Relational Choice implication is top, as is its box. This argument admits individual outputs: $`T`$ is a relation ending in $`t`$, not an operation ending in $`e`$.
@@ -220,7 +220,7 @@ The independent model audit gives expanded calculations and locators: [Boolean m
 The countermodel **does not** preserve boxed Functional Choice. Consider
 
 ```math
-R(p,q)=(p\land q=\top)\lor(\neg p\land q=\bot).
+R(p,q)=(p\land q=\top)\lor(\neg p\land q=\bot)
 ```
 
 It is serial and functional with value one. For a ground operation $`f:B\to B`$, its selecting value $`c_f=\bigwedge_p R(p,f(p))`$ lies below either $`p`$ or $`\neg p`$ for each $`p`$. Every nonzero such $`c_f`$ is an atom. Conversely every atom is obtained by the corresponding decision function. Thus the join of all selecting values is the atomic part of $`B`$, exactly $`a`$. This Functional Choice instance is true at the designated point and has a false box.
@@ -234,7 +234,7 @@ There is a positive boundary already proved in the snapshot:
  \Longrightarrow\Box\text{Plenitude}
  \Longrightarrow C5+\text{Atomicity}
  \Longrightarrow C5+\Box\text{Rigid Comprehension}
- \Longrightarrow\text{Necessity of Analysis}.
+ \Longrightarrow\text{Necessity of Analysis}
 ```
 
 The last step is the existing analytic-necessitism route, not a new result of this note. Thus adding boxed Functional Choice cannot preserve this counterexample. The stronger boxed premise settles the target positively, without needing C5 as a separate assumption. The exact proved-record chain is saved in the database evidence.

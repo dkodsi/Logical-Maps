@@ -9,7 +9,7 @@ Let K be the full standard two-valued relational hierarchy on one individual *. 
 For $`\tau=\sigma_1\cdots\sigma_nt`$ the resulting C-model R has
 
 ```math
-D_\tau=\mathcal P(D_{\sigma_1}\times\cdots\times D_{\sigma_n})\times K_\tau.
+D_\tau=\mathcal P(D_{\sigma_1}\times\cdots\times D_{\sigma_n})\times K_\tau
 ```
 
 and $`q_{\tau}`$ is second-coordinate projection. All $`q_{\tau}`$ are onto, including $`q_{e}`$. Propositions are the four pairs (ε,η) in 2 x 2. Current truth is ε. Application, lambda interpretation and quantification retain K's original second components, as in the cited construction.
@@ -17,7 +17,7 @@ and $`q_{\tau}`$ is second-coordinate projection. All $`q_{\tau}`$ are onto, inc
 There is an admitted operation E:tt whose current action is
 
 ```math
-E(\epsilon,\eta)=(\eta,\eta).
+E(\epsilon,\eta)=(\eta,\eta)
 ```
 
 and whose old K-component is the identity on 2. It is admitted because its output's old component η depends only on the input's old component.
@@ -29,7 +29,7 @@ E is endpoint-valued and has the whole identity E composed with E=E: both operat
 For every admitted type σ and root predicate F, the current truth of $`Q_\sigma`$(E composed with F) is
 
 ```math
-\forall x\in D_\sigma.\,q(F)(q_\sigma(x))\text{ is true in }K.
+\forall x\in D_\sigma.\,q(F)(q_\sigma(x))\text{ is true in }K
 ```
 
 Surjectivity of $`q_{\sigma}`$ makes this equivalent to $`Q_\sigma^K`$(q(F)). That is exactly the current bit of E($`Q_\sigma`$ F). The old components agree as well, because q(E) is identity. Thus E commutes with every typed quantifier. This is a whole operation identity: both the current rows and the old components of the operations on F agree.
@@ -41,7 +41,7 @@ The example therefore satisfies bare C plus one endpoint-valued, whole-idempoten
 Actual equality of a and b is false. Its proposition has profile
 
 ```math
-\delta_e(a,b)=(0,1).
+\delta_e(a,b)=(0,1)
 ```
 
 because their current objects differ but their old images coincide. Consequently E(delta_e(a,b))=Top=(1,1).
@@ -57,13 +57,13 @@ C5 genuinely fails in this example. The distinct root propositions (0,1) and Top
 Define $`r_{e}`$=id externally, $`r_{t}`$=E and recursively
 
 ```math
-r_{\sigma\tau}(f)(x)=r_\tau(f(r_\sigma(x))).
+r_{\sigma\tau}(f)(x)=r_\tau(f(r_\sigma(x)))
 ```
 
 Since q(E) is identity, term preservation and β/η give $`q_{\tau}`$($`r_{\tau}`$ f)=$`q_{\tau}`$(f) at every relational type. At terminal truth, normalization reads the K component. It follows by induction through the arguments that $`r_{\tau}`$ f has current table
 
 ```math
-(x_1,\ldots,x_n)\longmapsto\mathrm{truth}_K(q_\tau(f)[q_{\sigma_1}(x_1),\ldots,q_{\sigma_n}(x_n)]).
+(x_1,\ldots,x_n)\longmapsto\mathrm{truth}_K(q_\tau(f)[q_{\sigma_1}(x_1),\ldots,q_{\sigma_n}(x_n)])
 ```
 
 Its old component is $`q_{\tau}`$(f). Thus a normalized relational object is uniquely determined by its old component, and every old component is realized. Projection q gives a bijection between the normalized objects at every relational type and $`K_{\tau}`$. At e it gives the bijection only after the a~b quotient. These maps preserve application and the core logical operations. The resulting classical core is exactly K up to this canonical isomorphism.

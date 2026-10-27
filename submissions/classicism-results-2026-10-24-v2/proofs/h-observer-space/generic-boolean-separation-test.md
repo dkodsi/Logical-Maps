@@ -35,7 +35,7 @@ Conversely completeness preserves the Boolean join and meet giving every ambient
 For a class T among H, A, I and L, define in B
 
 ```math
-v_T=\bigwedge_{0<d\in B}\ \bigvee_{E\in T} E(d).
+v_T=\bigwedge_{0<d\in B}\ \bigvee_{E\in T} E(d)
 \tag{2}
 ```
 
@@ -47,14 +47,14 @@ At a generic world G,
 v_H\in G\iff OS,
 \quad v_A\in G\iff Rev,
 \quad v_I\in G\iff InjSep,
-\quad v_L\in G\iff SplitMono.
+\quad v_L\in G\iff SplitMono
 \tag{3}
 ```
 
 To verify this, first use the exact propositional separation formula
 
 ```math
-\forall d\,[d\ne0\to\exists E\,(T(E)\land Ed)].
+\forall d\,[d\ne0\to\exists E\,(T(E)\land Ed)]
 \tag{4}
 ```
 
@@ -65,7 +65,7 @@ The symmetric-difference argument identifies (4) with propositional separation. 
 Put
 
 ```math
-\delta_B=v_I\land\neg v_L.
+\delta_B=v_I\land\neg v_L
 \tag{5}
 ```
 
@@ -87,7 +87,7 @@ j=\bigvee\{c\in B:\exists E\in I\ \forall p\in B\ (Ep\le c\Rightarrow p=0)\},
 and
 
 ```math
-k=\bigvee\{\neg u:B\mathbin{\upharpoonright}u\cong B\}.
+k=\bigvee\{\neg u:B\mathbin{\upharpoonright}u\cong B\}
 \tag{7}
 ```
 
@@ -99,7 +99,7 @@ Conversely suppose alpha:B -> B restricted to u is an isomorphism, with inverse 
 
 ```math
 F(q)=\beta(u\land q),\qquad
-E(p)=\alpha(p)\lor(\neg u\land p).
+E(p)=\alpha(p)\lor(\neg u\land p)
 \tag{8}
 ```
 
@@ -116,7 +116,7 @@ v_L=r\lor(o\land k),
 and hence
 
 ```math
-\boxed{\delta_B=o\land j\land\neg r\land\neg k.}
+\boxed{\delta_B=o\land j\land\neg r\land\neg k}
 \tag{10}
 ```
 

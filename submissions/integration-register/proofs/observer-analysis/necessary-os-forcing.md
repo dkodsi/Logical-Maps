@@ -11,14 +11,14 @@ Work internally to a model M of ZFC with a complete Boolean algebra B. Admit all
 Let $`S=S_{t,\{t\}}`$ be the single propositional ordinary observer-separation instance whose qualification includes the universal quantifier at type t. In this model family, a qualified observer is exactly an internal complete unital Boolean endomorphism of B. Write $`\mathcal E`$ for their internal set. The exact value is
 
 ```math
-\|S\|=\bigwedge_{0<b\in B}\bigvee_{h\in\mathcal E}h(b).
+\|S\|=\bigwedge_{0<b\in B}\bigvee_{h\in\mathcal E}h(b)
 \tag{1}
 ```
 
 Native necessity tests equality with the top Boolean value. Thus □S entails
 
 ```math
-\bigvee_{h\in\mathcal E}h(b)=1_B\qquad(0<b\in B).
+\bigvee_{h\in\mathcal E}h(b)=1_B\qquad(0<b\in B)
 \tag{2}
 ```
 
@@ -32,7 +32,7 @@ Fix a ground real a and a projective $`\Sigma^1_3(a)`$ sentence
 
 ```math
 \varphi(a)\equiv\exists x\in\mathbb R\;\theta(x,a),
-\qquad\theta\in\Pi^1_2.
+\qquad\theta\in\Pi^1_2
 \tag{3}
 ```
 
@@ -41,14 +41,14 @@ The standard forcing form of Shoenfield absoluteness says that a $`\Pi^1_2`$ sta
 Put $`b=\|\varphi(\check a)\|_B`$. For every internal complete endomorphism h,
 
 ```math
-h(b)\le b.
+h(b)\le b
 \tag{4}
 ```
 
 Here is the reason, including noninjective observers. The kernel of h is the principal ideal below
 
 ```math
-k=\bigvee\{d\in B:h(d)=0\}.
+k=\bigvee\{d\in B:h(d)=0\}
 ```
 
 Consequently h restricts to a complete unital embedding $`B\upharpoonright\neg k\to B`$. Pulling a B-generic ultrafilter back along this embedding gives an intermediate forcing extension of M; the full B-extension is a further quotient-forcing extension of it. Ground a is unchanged. If the intermediate extension satisfies (3), its witness x and Shoenfield absoluteness make the larger extension satisfy (3). The Boolean translation is exactly (4). This is the persistence lemma of [the independent audit](necessary-os-model-audit.md), §3, specialized to (3); its internal proof avoids imposing external transitivity on M.
@@ -58,7 +58,7 @@ Equations (2) and (4) prove
 ```math
 \boxed{\Box S\ \Longrightarrow
 \|\varphi(\check a)\|_B\in\{0_B,1_B\}
-\quad(\varphi\in\Sigma^1_3).}
+\quad(\varphi\in\Sigma^1_3)}
 \tag{5}
 ```
 
@@ -79,7 +79,7 @@ P=\bigoplus_{n>1}\mathrm{Coll}(\omega,\beth_n)
  *\mathrm{Add}(\check\beth_n^{+},1),
 \qquad
 Q=\bigoplus_{n>1}\mathrm{Coll}(\omega,\beth_n)
- *\mathrm{Add}(\omega,\check\beth_n^{++}).
+ *\mathrm{Add}(\omega,\check\beth_n^{++})
 \tag{6}
 ```
 

@@ -88,7 +88,7 @@ For RC + BC ⇒ TC, the direct proof adapts Bourbaki–Witt inside C: represente
 Over C, with full schemas,
 
 ```math
-\mathrm{MRC}\ \longleftrightarrow\ \Box\mathrm{MRC}\ \longleftrightarrow\ (\Box\mathrm{RC}+\mathrm{IC})\ \longleftrightarrow\ (\Box\mathrm{RC}+\Box\mathrm{IC}).
+\mathrm{MRC}\ \longleftrightarrow\ \Box\mathrm{MRC}\ \longleftrightarrow\ (\Box\mathrm{RC}+\mathrm{IC})\ \longleftrightarrow\ (\Box\mathrm{RC}+\Box\mathrm{IC})
 ```
 
 Here RC is Relational Choice and IC is Intensional Choice. With either Boolean Completeness or ☐Vicinity, these are also equivalent to Modal Well-Ordering; in particular the equivalence holds over C5. The [typed bounds and countermodels](evidence/RESULT-INDEX.md#modal-choice) separate current choice from modal selection and explain exactly when BF is needed. A proof that RC entails TC over C would also establish MRC ⇒ Modal Well-Ordering. The [reduction](../integration-register/proofs/modal-choice/modal-to-current-choice-reduction.md) relates the unresolved questions without assuming either answer.
@@ -204,7 +204,7 @@ The two leaves use their own set-theoretic real fields and disagree about CH. Fr
 Assuming Con(ZFC), the separate C-consistency of real structures satisfying CH and its negation gives
 
 ```math
-\mathrm{Max}(C)+\text{Non-contingency of CH}\ \vdash\ \bot.
+\mathrm{Max}(C)+\text{Non-contingency of CH}\ \vdash\ \bot
 ```
 
 Maximalism makes both real-structure assertions possible at the same type $`e`$.
@@ -228,7 +228,7 @@ In the specified full modalized-domain construction, finite relational types cor
 With the database’s strict-smallness definition, FP is independent over C + ☐Functional Choice + Axiom of Infinity (types e and t). Countably many S5 worlds supply the positive model; the negative direction was already recorded. More generally, for infinite W in external ZFC,
 
 ```math
-\mathrm{FullS5}(W)\models\mathrm{FP}\quad\Longleftrightarrow\quad 2^{|W|}=2^{\aleph_0}.
+\mathrm{FullS5}(W)\models\mathrm{FP}\quad\Longleftrightarrow\quad 2^{|W|}=2^{\aleph_0}
 ```
 
 A free-root model also satisfies FP and both quantified Infinity axioms while failing Intensional Choice. The cardinal criterion need not make W countable.
@@ -363,7 +363,7 @@ Under the specified pure Frege translation, pure SP proves every standard-true �
 The proposed equality says that pure Maximalism proves exactly the ordinary first-order arithmetic consequences of the positive packages’ common arithmetic theory together with all standard-true Π₁ sentences.
 
 ```math
-\mathrm{Th}_{\mathrm{arith}}(\mathrm{Max}(C))=\mathrm{Cn}\bigl(T_{\mathrm{arith}}\cup\mathrm{True}_{\Pi_1}\bigr).
+\mathrm{Th}_{\mathrm{arith}}(\mathrm{Max}(C))=\mathrm{Cn}\bigl(T_{\mathrm{arith}}\cup\mathrm{True}_{\Pi_1}\bigr)
 ```
 
 Here $`T_{\mathrm{arith}}`$ is the [common arithmetic theory](#arithmetic-comparison), $`\mathrm{True}_{\Pi_1}`$ means standard-true Π₁ sentences, and $`\mathrm{Cn}`$ is first-order deductive closure. The upper inclusion still awaits independent review.
@@ -513,7 +513,7 @@ The proof constructs bracket abstraction, substitution coherence and both term r
 Over the λ-free base of H, full typed endpoint separation together with boxed Infinitary Comprehension characterizes full standard relational hierarchies in ZF:
 
 ```math
-\exists R^{\sigma_1\cdots\sigma_n t}\, .\,\Box\forall x_1\cdots x_n\, .\,\bigl(R[\bar x]\leftrightarrow A\bigr).
+\exists R^{\sigma_1\cdots\sigma_n t}\, .\,\Box\forall x_1\cdots x_n\, .\,\bigl(R[\bar x]\leftrightarrow A\bigr)
 ```
 
 A is an arbitrary set-sized infinitary matrix with unrestricted simultaneous typed parameters; the bound tuple is finite and may be empty. The selected axioms are closed under necessitation.
@@ -550,7 +550,7 @@ A different addition—one countable numeral abstraction—makes the Frege numbe
 For $`E^{tt}`$, correct evaluation means
 
 ```math
-\mathrm{Eval}(E):=\forall p^t\, .\,(p\to Ep=\top)\land(\neg p\to Ep=\bot).
+\mathrm{Eval}(E):=\forall p^t\, .\,(p\to Ep=\top)\land(\neg p\to Ep=\bot)
 ```
 
 The following requirements form a strict hierarchy over C, with each row stronger than the preceding one.
@@ -587,7 +587,7 @@ Over C + ☐Plenitude, one admitted operator choosing, for each nonzero proposit
 A diagonal character preserves ⊥ and negation, takes only ⊤/⊥ values, and accepts
 
 ```math
-w_E:=\forall p^t\, .\,Ep\to p.
+w_E:=\forall p^t\, .\,Ep\to p
 ```
 
 Separation by such characters is equivalent to ND (type t) + Atomicity (type t); neither BF nor Choice is needed.

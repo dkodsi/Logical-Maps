@@ -8,7 +8,7 @@ There is a model of C with
 
 ```math
 BC_t+\Box OS+\Box BF_{\mathrm{all}}
-+\Diamond\bigl(\Box ND_t\land\neg BC_t\bigr).
++\Diamond\bigl(\Box ND_t\land\neg BC_t\bigr)
 \tag{1}
 ```
 
@@ -19,7 +19,7 @@ Consequently
 ```math
 C+OS+BC_t
 \ \not\Rightarrow\
-\Box(\Box ND_t\to BC_t).
+\Box(\Box ND_t\to BC_t)
 \tag{2}
 ```
 
@@ -37,7 +37,7 @@ Let
 Y=\mathbb N,\qquad
 X=\mathbb N\times\mathbb N,\qquad
 C_y=\{y\}\times\mathbb N,\qquad
-\beta(y,n)=y.
+\beta(y,n)=y
 \tag{3}
 ```
 
@@ -49,7 +49,7 @@ The arrows are
  \mathrm{Hom}(Y,Y)&=\mathrm{Sym}(Y),\\
  \mathrm{Hom}(X,Y)&=
  \{b:X\to Y:\text{every fibre }b^{-1}\{y\}\text{ is infinite}\},\\
- \mathrm{Hom}(Y,X)&=\varnothing .
+ \mathrm{Hom}(Y,X)&=\varnothing
 \end{aligned}
  \tag{4}
 ```
@@ -60,7 +60,7 @@ Give both objects the ideal of finite subsets and designate the symmetry groups
 
 ```math
 G_X=\prod_{y\in Y}\mathrm{Sym}(C_y),
-\qquad G_Y=\{1_Y\}.
+\qquad G_Y=\{1_Y\}
 \tag{5}
 ```
 
@@ -71,7 +71,7 @@ Here are the profile conventions used in the proof. If $`\tau=\bar\sigma t`$, an
 ```math
 A(h,\bar z)\in\{0,1\},
 \qquad h:W\to V,\quad
-\bar z\in\prod_i D_{\sigma_i}(V).
+\bar z\in\prod_i D_{\sigma_i}(V)
 \tag{6}
 ```
 
@@ -79,7 +79,7 @@ A finite $`P\subseteq W`$ pins A when arrows h,k with the same target and the sa
 
 ```math
 A(\mu h,\rho_\mu\bar z)=A(h,\bar z)
-\qquad(\mu\in G_V).
+\qquad(\mu\in G_V)
 \tag{7}
 ```
 
@@ -88,7 +88,7 @@ Transport and application are
 ```math
 (\rho_f A)(h,\bar z)=A(hf,\bar z),
 \qquad
-(A[\bar x])(h)=A(h,\rho_h\bar x).
+(A[\bar x])(h)=A(h,\rho_h\bar x)
 \tag{8}
 ```
 
@@ -113,7 +113,7 @@ k|_T=l|_S\,(b|_S)^{-1}
 and put
 
 ```math
-\widetilde A(l,\bar z)=A(k,\bar z).
+\widetilde A(l,\bar z)=A(k,\bar z)
 \tag{9}
 ```
 
@@ -126,7 +126,7 @@ For every permutation $`k:Y\to Y`$ and every appropriate argument tuple,
 ```math
 (\rho_b\widetilde A)(k,\bar z)
 =\widetilde A(kb,\bar z)
-=A(k,\bar z).
+=A(k,\bar z)
 \tag{10}
 ```
 
@@ -145,7 +145,7 @@ On a target arrow $`l:X\to Y`$, a P-pinned proposition depends exactly on $`l|_P
 The self and target branches are independent. Hence
 
 ```math
-B_P\cong\mathcal P(Y^P)\times\mathcal P(Y^P).
+B_P\cong\mathcal P(Y^P)\times\mathcal P(Y^P)
 \tag{11}
 ```
 
@@ -158,7 +158,7 @@ Let $`G_{X,(P)}`$ be the pointwise stabilizer of P inside $`G_X`$. Then
 ```math
 p\le\pi_Pp,\qquad
 \pi_P(\rho_g p)=\pi_Pp
-\quad(g\in G_{X,(P)}).
+\quad(g\in G_{X,(P)})
 \tag{12}
 ```
 
@@ -184,7 +184,7 @@ $`R(g,\rho_g p)=R(1_X,\rho_g p)`$.
 Using the complete algebra in (11), form
 
 ```math
-u=\bigvee_{p\in\mathcal F}\pi_Pp\quad\text{in }B_P.
+u=\bigvee_{p\in\mathcal F}\pi_Pp\quad\text{in }B_P
 \tag{13}
 ```
 
@@ -201,7 +201,7 @@ Two kinds of arrows out of X will suffice.
 1. A finitely supported permutation $`s:X\to X`$. Choose P containing its support. For $`v\in G_{X,(P)}`$, s and v commute. Since propositions are target-symmetric,
 
 ```math
-\chi_s(\rho_vq)=q(sv)=q(vs)=q(s)=\chi_s(q).
+\chi_s(\rho_vq)=q(sv)=q(vs)=q(s)=\chi_s(q)
 ```
 
 2. An arrow $`b':X\to Y`$ which agrees with $`\beta`$ outside a finite P. It still has every fibre infinite, and $`b'v=b'`$ for $`v\in G_{X,(P)}`$. Consequently $`\chi_{b'}`$ has the same stabilizer invariance.
@@ -210,7 +210,7 @@ Fix either selected arrow b and its finite P. The self-arrow colour chart is
 
 ```math
 \mathcal U_P=
-\{h\in\mathrm{Sym}(X):\beta h|_P=\beta|_P\}.
+\{h\in\mathrm{Sym}(X):\beta h|_P=\beta|_P\}
 \tag{14}
 ```
 
@@ -221,7 +221,7 @@ O(h,q)=
 \begin{cases}
 q(b g_h^{-1}), &h:X\to X,\ h\in\mathcal U_P,\\
 q(\beta), &h:X\to X,\ h\notin\mathcal U_P,\\
-q(1_Y), &h:X\to Y .
+q(1_Y), &h:X\to Y
 \end{cases}
 \tag{15}
 ```
@@ -236,7 +236,7 @@ To check symmetry, let $`\mu\in G_X`$. The chart is preserved by left multiplica
 ```math
 O(\mu h,\rho_\mu q)
 =q\bigl(b g_h^{-1}\mu^{-1}\mu\bigr)
-=O(h,q).
+=O(h,q)
 \tag{16}
 ```
 
@@ -250,7 +250,7 @@ Every row of O evaluates at an arrow with onto transports at every type: $`b g_h
  &=\bigwedge_{z\in D_\sigma(V)}F(a_h,z),\\
  (\forall x^\sigma O(Fx))(h)
  &=\bigwedge_{x\in D_\sigma(W)}
-       F(a_h,\rho_{a_h}x).
+       F(a_h,\rho_{a_h}x)
 \end{aligned}
  \tag{17}
 ```
@@ -310,7 +310,7 @@ I_E=\{p:E(p=0)\text{ is currently true}\},
 \qquad
 p\in I_E
 \ \Longleftrightarrow\
-p(k\beta)=0\text{ for every }k\in\mathrm{Sym}(Y).
+p(k\beta)=0\text{ for every }k\in\mathrm{Sym}(Y)
 \tag{19}
 ```
 

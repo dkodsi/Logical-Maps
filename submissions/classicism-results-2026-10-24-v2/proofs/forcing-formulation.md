@@ -13,7 +13,7 @@ incompatible over the map's fixed Classicism:
 \Box\mathrm{RigidComprehension},\quad
 \mathrm{IntensionalChoice},\quad
 \mathrm{ForcingPossibilism}_{<},\quad
-\mathrm{NonContingencyOfCH}.
+\mathrm{NonContingencyOfCH}
 ```
 
 Here the subscript emphasizes the **existing** definition: Forcing Possibilism

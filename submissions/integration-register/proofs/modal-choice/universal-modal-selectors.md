@@ -14,7 +14,7 @@ for every input type σ, yielding
 
 ```math
 \boxed{C+MRC_{\tau t,\tau}\ \vdash\
-\Box MRC_{\sigma,\tau}+\Box RC_{\sigma,\tau}+\Box IC_\tau.}
+\Box MRC_{\sigma,\tau}+\Box RC_{\sigma,\tau}+\Box IC_\tau}
 \tag{1}
 ```
 
@@ -23,7 +23,7 @@ In particular, over bare C, full MRC satisfies
 ```math
 \boxed{MRC\leftrightarrow\Box MRC
 \leftrightarrow(\Box RC+IC)
-\leftrightarrow(\Box RC+\Box IC).}
+\leftrightarrow(\Box RC+\Box IC)}
 \tag{2}
 ```
 
@@ -37,7 +37,7 @@ that same isolated instance necessary without other hypotheses.
 Fix τ. Define the admitted relation on τt and τ by
 
 ```math
-U(F,y):=Fy\lor\neg\exists z^\tau Fz.
+U(F,y):=Fy\lor\neg\exists z^\tau Fz
 \tag{3}
 ```
 
@@ -46,7 +46,7 @@ inhabitation of τ otherwise. Its necessitation is an unconditional
 C theorem. Apply MRC_(τt,τ), obtaining an admitted S such that
 
 ```math
-\Box\mathrm{Functional}(S),\qquad S\le U.
+\Box\mathrm{Functional}(S),\qquad S\le U
 \tag{4}
 ```
 
@@ -62,7 +62,7 @@ operation T_S:ρρ by
 
 ```math
 T_S(R)(x,y):=(Rx)y\land
-\bigl(S(\lambda z^\tau\,(Rx)z)\bigr)y.
+\bigl(S(\lambda z^\tau\,(Rx)z)\bigr)y
 \tag{5}
 ```
 
@@ -81,7 +81,7 @@ T_S(R)-output at x. Consequently (4) entails
 T_S(R)\le R\land
 \forall x^\sigma\left(
 (\exists y^\tau(Rx)y)\to
-\exists!y^\tau\,T_S(R)(x,y)\right)\right].
+\exists!y^\tau\,T_S(R)(x,y)\right)\right]
 \tag{6}
 ```
 
@@ -114,7 +114,7 @@ to be projections of root entities.
 For a property F:τt define
 
 ```math
-G_F(y):=Fy\land(SF)y.
+G_F(y):=Fy\land(SF)y
 \tag{7}
 ```
 

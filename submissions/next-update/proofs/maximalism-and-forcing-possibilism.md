@@ -21,7 +21,7 @@ its H-theoremhood condition. Pure Maximalism has the fixed C side condition:
 
 
 $$
-\Diamond P\qquad(P\text{ closed and pure},\ C+P\text{ consistent}).
+\Diamond P\qquad(P\text{ closed and pure},\ C+P\text{ consistent})
 $$
 
 
@@ -37,7 +37,7 @@ $$
 \forall X^{\sigma t}\,\forall R^{\sigma\sigma t}.
 \bigl(\mathrm{CBA}(X,R)\land
  (\mathrm{Fin}(X)\lor X\prec D_t)\bigr)
-\to\exists p^t\ne\top\; (X,R)\cong([0,p],\le).
+\to\exists p^t\ne\top\; (X,R)\cong([0,p],\le)
 \tag{FP}
 $$
 
@@ -129,7 +129,7 @@ For τ=σ_1…σ_k t put, recursively,
 
 $$
 D_\tau(o)=\mathcal P\bigl(D_{\sigma_1}(o)\times\cdots
- \times D_{\sigma_k}(o)\bigr)\times B_\tau.
+ \times D_{\sigma_k}(o)\bigr)\times B_\tau
 \tag{1}
 $$
 
@@ -235,7 +235,7 @@ nonempty individual set E and
 
 $$
 D_\tau(o)=\mathcal P\bigl(\textstyle\prod_jD_{\sigma_j}(o)\bigr)
-             \times\prod_i D_\tau(M_i).
+             \times\prod_i D_\tau(M_i)
 \tag{2}
 $$
 

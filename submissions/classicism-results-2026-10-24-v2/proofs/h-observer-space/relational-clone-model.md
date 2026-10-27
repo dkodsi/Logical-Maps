@@ -9,13 +9,13 @@ There is an H model satisfying all Functionality instances and full typed materi
 Let
 
 ```math
-D_t=\{c,d,c',d'\},\qquad A=\{c,d\},\qquad B=\{c',d'\}.
+D_t=\{c,d,c',d'\},\qquad A=\{c,d\},\qquad B=\{c',d'\}
 ```
 
 The true propositions are c and d'; the false propositions are d and c'. Define negation N by
 
 ```math
-Nc=c',\quad Nc'=c,\qquad Nd=d',\quad Nd'=d.
+Nc=c',\quad Nc'=c,\qquad Nd=d',\quad Nd'=d
 ```
 
 Thus N reverses truth and is an involution. Put
@@ -25,7 +25,7 @@ v=(c,d,c',d'),\qquad Nv=(c',d',c,d),
 ```
 
 ```math
-R_t:=A^4\cup B^4\cup\{v,Nv\}\subseteq D_t^4.
+R_t:=A^4\cup B^4\cup\{v,Nv\}\subseteq D_t^4
 \tag{1}
 ```
 
@@ -40,7 +40,7 @@ At every admitted arrow type σρ, where ρ≠e, define
 ```math
 D_{\sigma\rho}:=\{f:D_\sigma\to D_\rho:
 \forall(x_1,x_2,x_3,x_4)\in R_\sigma,
-(fx_1,fx_2,fx_3,fx_4)\in R_\rho\}.
+(fx_1,fx_2,fx_3,fx_4)\in R_\rho\}
 \tag{2}
 ```
 
@@ -50,7 +50,7 @@ For f₁,…,f₄ in this domain, define
 (f_1,f_2,f_3,f_4)\in R_{\sigma\rho}
 \quad\Longleftrightarrow\quad
 \forall(x_1,x_2,x_3,x_4)\in R_\sigma,
-(f_1x_1,f_2x_2,f_3x_3,f_4x_4)\in R_\rho.
+(f_1x_1,f_2x_2,f_3x_3,f_4x_4)\in R_\rho
 \tag{3}
 ```
 
@@ -78,7 +78,7 @@ with the analogous existential interpretation, again returning c or d. Interpret
 
 ```math
 \mathrm{Eq}_\sigma(x,y)=
-\begin{cases}c&x=y\text{ as domain elements},\\d&x\ne y.\end{cases}
+\begin{cases}c&x=y\text{ as domain elements},\\d&x\ne y\end{cases}
 \tag{4}
 ```
 
@@ -92,7 +92,7 @@ The fixed abbreviations have the following values. Since some propositions are f
 
 ```math
 \mathrm{Top}=a\lor\neg a=c,\qquad
-\mathrm{Bottom}=a\land\neg a=d.
+\mathrm{Bottom}=a\land\neg a=d
 \tag{5}
 ```
 
@@ -103,7 +103,7 @@ In particular N(Top)=c'≠d=Bottom. Thus C fails: H proves the material equivale
 The admitted observer domain is
 
 ```math
-D_{tt}=\{I,N\}\ \cup\ A^{D_t}\ \cup\ B^{D_t}.
+D_{tt}=\{I,N\}\ \cup\ A^{D_t}\ \cup\ B^{D_t}
 \tag{6}
 ```
 
@@ -118,7 +118,7 @@ Conversely, every map with range in one block preserves R_t because every output
 Write N_pt(E) for
 
 ```math
-\forall p\,[E(Np)=N(Ep)].
+\forall p\,[E(Np)=N(Ep)]
 ```
 
 No observer whose range is contained in A can satisfy this: E(Np) lies in A while N(Ep) lies in the disjoint block B. The same argument exchanges A and B. By (6), the only N_pt observers are I and N, and both do satisfy the identity.
@@ -134,7 +134,7 @@ is true, while c=d' is false. Propositional pointwise negation separation fails.
 Whole-operation preservation is
 
 ```math
-(\lambda p.E(Np))=(\lambda p.N(Ep)).
+(\lambda p.E(Np))=(\lambda p.N(Ep))
 ```
 
 The two sides are actual functions on D_t. Hence this qualification is equivalent to N_pt(E) in the model, also as a consequence of its Functionality instance at t,t. Propositional whole-operation negation separation fails as well.
@@ -144,7 +144,7 @@ The two sides are actual functions on D_t. Hence this qualification is equivalen
 Write N_mat(E) for
 
 ```math
-\forall p\,[E(Np)\leftrightarrow\neg Ep].
+\forall p\,[E(Np)\leftrightarrow\neg Ep]
 ```
 
 For each pair of ordinary Boolean values ε,δ, define an A-valued observer E_{εδ} by specifying its truth profile:
@@ -168,7 +168,7 @@ The model proves
 ```math
 \mathrm H+\mathrm{Functionality}
  +\mathrm{FullSep}[N_{\rm mat}]
-\ \not\models\ \mathrm{Sep}_t[N_{\rm pt}].
+\ \not\models\ \mathrm{Sep}_t[N_{\rm pt}]
 ```
 
 Consequently the material and pointwise separation tiers differ over H even with all Functionality and full typed material separation. The pointwise and whole-operation tiers coincide in this model; it does not counterexample their equivalence under Functionality.

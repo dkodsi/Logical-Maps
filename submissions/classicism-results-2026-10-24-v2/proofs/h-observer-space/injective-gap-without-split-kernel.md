@@ -17,7 +17,7 @@ J_\Delta:={}&\exists E^{tt}c^t\,[\mathrm{Good}_\Delta(E)
  \land\forall p\,(Ep\le c\to p=0)],\\
 K_\Delta:={}&\exists E^{tt}F^{tt}c^t\,[\mathrm{Good}_\Delta(E)
  \land\mathrm{Good}_\Delta(F)
- \land F\circ E=I\land c\land Fc=0].
+ \land F\circ E=I\land c\land Fc=0]
 \end{aligned}
 \tag{1}
 ```
@@ -28,7 +28,7 @@ Use exactly the model in [Injective observers and Boolean transversals](injectiv
 
 ```math
 X=(2^{\mathbb N})^2,\qquad C=\mathrm{RO}(X),
-\qquad A=\mathbf 2\times C.
+\qquad A=\mathbf 2\times C
 \tag{2}
 ```
 
@@ -50,7 +50,7 @@ and that atom is currently true. Every nonzero proposition of the form (0,U) is 
 Partition X into the two nonempty clopen sets P and Q according to the first bit of its first Cantor coordinate. The map which prepends the bit 1 to that coordinate and leaves the second coordinate unchanged is a homeomorphism X→Q. It induces a complete Boolean isomorphism
 
 ```math
-h:C\longrightarrow C\mathbin{\upharpoonright}Q.
+h:C\longrightarrow C\mathbin{\upharpoonright}Q
 \tag{4}
 ```
 
@@ -72,7 +72,7 @@ For the true proposition c from (3),
 ```math
 E(\varepsilon,U)\le c
 \quad\Longrightarrow\quad i(\varepsilon,U)=0_C
-\quad\Longrightarrow\quad(\varepsilon,U)=0_A.
+\quad\Longrightarrow\quad(\varepsilon,U)=0_A
 \tag{6}
 ```
 
@@ -95,14 +95,14 @@ is a complete Boolean character. Its accepted elements have a meet w with χ(w)=
 
 ```math
 \chi(p)=1\quad\Longleftrightarrow\quad c\le p
-\quad\Longleftrightarrow\quad\mathrm{pr}_1(p)=1.
+\quad\Longleftrightarrow\quad\mathrm{pr}_1(p)=1
 \tag{8}
 ```
 
 Every $`\mathrm{Good}_{\{t\}}`$ observer thus has exactly the original current truth profile. In particular, for every currently true d and every such T, Td is true and cannot be 0_A. This proves
 
 ```math
-\neg K_\Delta\qquad(t\in\Delta).
+\neg K_\Delta\qquad(t\in\Delta)
 \tag{9}
 ```
 
@@ -114,7 +114,7 @@ For clarity, the witness E in (5) is not another example of an individually unsp
 
 ```math
 F(\varepsilon,V):=
- \bigl(\varepsilon,h^{-1}(V\land Q)\bigr).
+ \bigl(\varepsilon,h^{-1}(V\land Q)\bigr)
 \tag{10}
 ```
 
@@ -122,7 +122,7 @@ This is a unital complete Boolean homomorphism A→A, so it is admitted and Good
 
 ```math
 F(E(\varepsilon,U))=(\varepsilon,U),
-\qquad F\circ E=I.
+\qquad F\circ E=I
 \tag{11}
 ```
 
@@ -136,7 +136,7 @@ The unchanged model therefore verifies
 
 ```math
 \boxed{\mathrm{C5}+J_{\{t\}}+\neg K_{\{t\}}
- +\neg S_{t,\{t\}}[\mathrm{Good}].}
+ +\neg S_{t,\{t\}}[\mathrm{Good}]}
 \tag{12}
 ```
 

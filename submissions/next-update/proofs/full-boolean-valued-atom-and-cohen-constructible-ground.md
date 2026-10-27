@@ -26,7 +26,7 @@ $$
  \qquad
  U_{\sigma,\varphi}:=
  \forall\mathfrak R\,
-   (\mathrm{Real}_\sigma(\mathfrak R)\to\varphi(\mathfrak R)).
+   (\mathrm{Real}_\sigma(\mathfrak R)\to\varphi(\mathfrak R))
 $$
 
 
@@ -40,7 +40,7 @@ Work in a ground universe $V\models\mathrm{ZFC}$. Let $A$ be a nontrivial comple
 
 
 $$
-B=2\times A,\quad a=(1,0_A),\quad b=(0,1_A).
+B=2\times A,\quad a=(1,0_A),\quad b=(0,1_A)
 $$
 
 
@@ -49,7 +49,7 @@ Fix a nonempty ground set $E$, and use precisely the admitted relational types:
 
 $$
 D_e=E,\qquad D_t=B,\qquad
- D_{\sigma\to\rho}=D_\rho^{D_\sigma}\quad(\rho\ne e).
+ D_{\sigma\to\rho}=D_\rho^{D_\sigma}\quad(\rho\ne e)
 $$
 
 
@@ -81,7 +81,7 @@ The important restriction is to **extensional, box-free structure formulas**. Qu
 $$
 V\models |\mathbb R|\le |S|,
  \qquad
- 1_A\Vdash |\mathbb R|\le |\check S|.
+ 1_A\Vdash |\mathbb R|\le |\check S|
 $$
 
 
@@ -93,7 +93,7 @@ $$
  \qquad
  \llbracket\varphi(\mathfrak R_*)\rrbracket
  =\bigl(\mathbf1_{V\models\varphi(\mathbb R)},
-          \|\varphi(\mathbb R)\|_A\bigr).           \tag{2}
+          \|\varphi(\mathbb R)\|_A\bigr)           \tag{2}
 $$
 
 
@@ -107,7 +107,7 @@ Pull the ground real field and its natural numbers back to $\mathrm{ran}j_0$. Fo
 $$
 \|\exists x,y,z\in\mathbb R\,
  (\dot j(x)=\check s\land\dot j(y)=\check t\land
-  \dot j(z)=\check u\land x+y=z)\|_A.
+  \dot j(z)=\check u\land x+y=z)\|_A
 $$
 
 
@@ -118,7 +118,7 @@ For a fixed ground set $T$, names for subsets of $\check T$ are represented, up 
 
 $$
 f:T\to A,\qquad
- f(t)=\|\check t\in\dot Y\|_A.
+ f(t)=\|\check t\in\dot Y\|_A
 $$
 
 
@@ -136,7 +136,7 @@ The field axioms, nonempty bounded completeness and the least-inductive-subprope
 
 $$
 \llbracket U_{\sigma,\varphi}\rrbracket=(\varepsilon,p),\qquad
- \llbracket U_{\sigma,\neg\varphi}\rrbracket=(1-\varepsilon,\neg p). \tag{3}
+ \llbracket U_{\sigma,\neg\varphi}\rrbracket=(1-\varepsilon,\neg p) \tag{3}
 $$
 
 
@@ -162,7 +162,7 @@ For clarity, the interpretation into the permitted first-order language is concr
 
 
 $$
-c_U=\sum_{n\ge0}\frac{1+\mathbf1_U(n)}{4^{n+1}}.
+c_U=\sum_{n\ge0}\frac{1+\mathbf1_U(n)}{4^{n+1}}
 $$
 
 
@@ -181,7 +181,7 @@ Translate set quantifiers in (4) into quantifiers over `Code` reals, numerical q
 
 $$
 \varphi_L(\mathbb R)\quad\Longleftrightarrow\quad
- \mathcal P(\omega)\subseteq L.
+ \mathcal P(\omega)\subseteq L
 $$
 
 
@@ -193,7 +193,7 @@ Now take $V\models\mathrm{ZFC}+V=L$,
 
 
 $$
-A=\mathrm{RO}(\mathrm{Add}(\omega,1)),\qquad E=\omega.
+A=\mathrm{RO}(\mathrm{Add}(\omega,1)),\qquad E=\omega
 $$
 
 
@@ -202,7 +202,7 @@ The forcing adds a subset of $\omega$ outside the ground universe. Forcing does 
 
 $$
 V\models\varphi_L(\mathbb R),\qquad
- 1_A\Vdash\neg\varphi_L(\mathbb R).                         \tag{5}
+ 1_A\Vdash\neg\varphi_L(\mathbb R)                         \tag{5}
 $$
 
 
@@ -216,7 +216,7 @@ Equations (3) and (5) give the exact values
 
 $$
 \llbracket U_{t,\varphi_L}\rrbracket=a,
- \qquad \llbracket U_{t,\neg\varphi_L}\rrbracket=b.
+ \qquad \llbracket U_{t,\neg\varphi_L}\rrbracket=b
 $$
 
 
@@ -237,7 +237,7 @@ $\bigwedge_x\Box P(x)=\Box\bigwedge_xP(x)$: each side is one exactly when every 
 
 
 $$
-T(x,y)=U(x,y)\wedge\neg\bigvee_{z<y}U(x,z).
+T(x,y)=U(x,y)\wedge\neg\bigvee_{z<y}U(x,z)
 $$
 
 
@@ -257,7 +257,7 @@ The countermodel **does not** preserve boxed Functional Choice. Consider
 
 
 $$
-R(p,q)=(p\land q=\top)\lor(\neg p\land q=\bot).
+R(p,q)=(p\land q=\top)\lor(\neg p\land q=\bot)
 $$
 
 
@@ -273,7 +273,7 @@ $$
  \Longrightarrow\Box\text{Plenitude}
  \Longrightarrow C5+\text{Atomicity}
  \Longrightarrow C5+\Box\text{Rigid Comprehension}
- \Longrightarrow\text{Necessity of Analysis}.
+ \Longrightarrow\text{Necessity of Analysis}
 $$
 
 
@@ -288,13 +288,13 @@ The descriptive-set-theoretic input is the parameter-free Σ¹₂ definition of 
 For each subset S of the naturals, its code is
 
 $$
-c_S=\sum_{n\ge0}\frac{1+\mathbf{1}_S(n)}{4^{n+1}}.
+c_S=\sum_{n\ge0}\frac{1+\mathbf{1}_S(n)}{4^{n+1}}
 $$
 
 This external sum explains the interpretation; it is not an infinitary object-language expression. Define Exp4(n,p) arithmetically by a coded finite sequence starting at 1 and multiplying by 4 at each step. Gödel finite-sequence coding uses only quantifiers restricted to N, addition and multiplication. For d equal to 1 or 2, put
 
 $$
-\mathrm{Digit}(c,n,d)\ \leftrightarrow\ \exists p,k,q\in N\ .\ \mathrm{Exp4}(n+1,p)\land k\le pc<k+1\land k=4q+d.
+\mathrm{Digit}(c,n,d)\ \leftrightarrow\ \exists p,k,q\in N\ .\ \mathrm{Exp4}(n+1,p)\land k\le pc<k+1\land k=4q+d
 $$
 
 Let Code(c) say 0 < c < 1 and that every digit is 1 or 2; Bit(c,n) says Digit(c,n,2). The scaled tail after any digit lies between 1/3 and 2/3, so these digits have no terminating-expansion ambiguity.
@@ -305,7 +305,7 @@ Translate number variables into field variables restricted by N and set variable
 
 $$
 (\forall U\,\varphi)^*=\forall c_U\ .\ \mathrm{Code}(c_U)\to\varphi^*,\qquad
-(\exists U\,\varphi)^*=\exists c_U\ .\ \mathrm{Code}(c_U)\land\varphi^*.
+(\exists U\,\varphi)^*=\exists c_U\ .\ \mathrm{Code}(c_U)\land\varphi^*
 $$
 
 Induction on formulas proves preservation in each universe's full standard structures; the bijection supplies both quantified steps, including every subset in that universe. Translate ∀U Constr(U), then eliminate field operation terms by fresh variables and the total unique ternary sum/product graphs. The result is one finite sentence in precisely the database's relational analytical grammar, with all bound variables ranging over the real carrier. No e-valued operation is introduced.

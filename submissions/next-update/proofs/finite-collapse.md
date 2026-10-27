@@ -16,7 +16,7 @@ The capacities are
 
 
 $$
-c_e=1,\qquad c_t=2,\qquad c_{\alpha\rho}=c_\rho^{c_\alpha}.
+c_e=1,\qquad c_t=2,\qquad c_{\alpha\rho}=c_\rho^{c_\alpha}
 \tag{1}
 $$
 
@@ -41,7 +41,7 @@ operation has the form
 
 $$
 f:A_{s_1}\times\cdots\times A_{s_k}\longrightarrow A_r,
-\qquad \tau_r\ne e.
+\qquad \tau_r\ne e
 $$
 
 
@@ -68,7 +68,7 @@ required to hold necessarily.
    
 $$
 |B_s|\le c_{\tau_s},\qquad
-   q_s(a)\ne q_s(b)\quad\text{for every }(a,b)\in P_s.
+   q_s(a)\ne q_s(b)\quad\text{for every }(a,b)\in P_s
    \tag{2}
 $$
 
@@ -176,7 +176,7 @@ $$
 G_f(\bar x)[\bar z]
 =\bigvee_{\bar b\in B_{s_1}\times\cdots\times B_{s_k}}
  \left(\bigwedge_j x_j=u^i_{s_j,b_j}\right)
- \land u^i_{r,f^B(\bar b)}[\bar z].                         \tag{4}
+ \land u^i_{r,f^B(\bar b)}[\bar z]                         \tag{4}
 $$
 
 
@@ -197,7 +197,7 @@ functions repeatedly. Choose sortwise injections
 
 
 $$
-j_s:A_s\hookrightarrow D_{\tau_s}^{H}.
+j_s:A_s\hookrightarrow D_{\tau_s}^{H}
 $$
 
 
@@ -219,7 +219,7 @@ For a relational sort, choose a current extension S_a and encode
 
 $$
 \widehat a=
-\left(S_a,\ (u^i_{s,q_s(a)})_i,\ j_s(a)\right).
+\left(S_a,\ (u^i_{s,q_s(a)})_i,\ j_s(a)\right)
 \tag{5}
 $$
 

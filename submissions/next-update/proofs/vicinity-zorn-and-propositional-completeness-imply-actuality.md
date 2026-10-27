@@ -10,7 +10,7 @@ In the fixed finitary relational language,
 
 ```math
 \boxed{C+\mathrm{Vicinity}+BC_t+Zorn_t
-\ \Longrightarrow\ \mathrm{Actuality}.}
+\ \Longrightarrow\ \mathrm{Actuality}}
 \tag{1}
 ```
 
@@ -18,7 +18,7 @@ Both completeness and Zorn are current and unboxed. Zorn has carrier t, and BC_t
 
 ```math
 \boxed{\text{over }C+BC_t+Zorn_t:\quad
-\mathrm{Actuality}\ \longleftrightarrow\ \mathrm{Vicinity}.}
+\mathrm{Actuality}\ \longleftrightarrow\ \mathrm{Vicinity}}
 \tag{2}
 ```
 
@@ -27,7 +27,7 @@ Vicinity says that some true proposition entails the possibility of every curren
 The recorded implication ND_t⇒Vicinity also gives
 
 ```math
-C+ND_t+BC_t+Zorn_t\ \Longrightarrow\ \mathrm{Actuality}.
+C+ND_t+BC_t+Zorn_t\ \Longrightarrow\ \mathrm{Actuality}
 \tag{3}
 ```
 
@@ -40,7 +40,7 @@ Use the [construction from Vicinity](vicinity-supported-interpretation.md), §§
 For an old predicate Y on propositions its retraction satisfies
 
 ```math
-j_{tt}(Y)(d)=s\land Y(j_t d).
+j_{tt}(Y)(d)=s\land Y(j_t d)
 \tag{7}
 ```
 
@@ -51,7 +51,7 @@ On fixed d, this has precisely Y's current extension, since s is true. The same 
 Assume old Zorn_t. Let R be a supported preorder on D_t such that every admitted supported R-chain has a supported upper bound. Write j=j_t and define an old relation on all propositions by
 
 ```math
-R'(p,q):=R(jp,jq).
+R'(p,q):=R(jp,jq)
 \tag{8}
 ```
 
@@ -79,7 +79,7 @@ The supported interpretation now satisfies C5+BC_t+Zorn_t. Apply [Zorn and propo
 For each original true proposition q, the supported proposition s∧q is true. Hence
 
 ```math
-u\le s\land q\le q.
+u\le s\land q\le q
 \tag{10}
 ```
 

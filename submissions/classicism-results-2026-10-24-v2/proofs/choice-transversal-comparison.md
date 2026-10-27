@@ -13,7 +13,7 @@ In the fixed framework C, with the map's relational type system,
 
 ```math
 \mathrm{Relational\ Choice}+\mathrm{Boolean\ Completeness}
-\;\Longrightarrow\;\mathrm{Transversal\ Choice}.
+\;\Longrightarrow\;\mathrm{Transversal\ Choice}
 ```
 
 All three schemata are unboxed. Here **RC means Relational Choice**, not
@@ -26,7 +26,7 @@ There are two useful proofs. The short database composition is
 \begin{aligned}
 \mathrm{RC}+\mathrm{BC}&\Rightarrow\mathrm{Actuality},\\
 \mathrm{BC}+\mathrm{Actuality}&\Rightarrow\mathrm{Weak\ Rigid\ Comprehension},\\
-\mathrm{RC}+\mathrm{Weak\ Rigid\ Comprehension}&\Rightarrow\mathrm{TC}.
+\mathrm{RC}+\mathrm{Weak\ Rigid\ Comprehension}&\Rightarrow\mathrm{TC}
 \end{aligned}
 ```
 
@@ -97,7 +97,7 @@ $`g`$-chains as in Part A. No completeness is needed to form $`A`$ or prove it
 internally well-ordered. For $`F\in A`$, put
 
 ```math
-d_F=g(F)\wedge_\rho\neg_\rho F.
+d_F=g(F)\wedge_\rho\neg_\rho F
 ```
 
 Strictness makes $`d_F`$ nonbottom. If $`F<G`$ in $`A`$, its defining predecessor
@@ -121,7 +121,7 @@ then give
 
 ```math
 \mathrm{RC}_{t,t}+\mathrm{BC}_{tt}+\mathrm{RC}_{\sigma t,\sigma}
-\Rightarrow\mathrm{TC}_\sigma.
+\Rightarrow\mathrm{TC}_\sigma
 ```
 
 Consequently all-type RC with BC at $`tt`$ alone suffices for all-type TC.

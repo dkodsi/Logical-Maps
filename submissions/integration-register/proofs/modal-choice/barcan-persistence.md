@@ -15,7 +15,7 @@ For F:σt write I(F):=∃x Fx and U(F):=∃!x Fx. The usual instance is
 ```math
 IC_\sigma:\quad
 \forall F^{\sigma t}\,[\Box I(F)\to
-\exists G^{\sigma t}(G\le F\land\Box U(G))].
+\exists G^{\sigma t}(G\le F\land\Box U(G))]
 ```
 
 Over C it is equivalent to
@@ -23,7 +23,7 @@ Over C it is equivalent to
 ```math
 IC^*_{\sigma}:\quad
 \forall F^{\sigma t}\exists G^{\sigma t}
-[G\le F\land\Box(I(F)\to U(G))].
+[G\le F\land\Box(I(F)\to U(G))]
 \tag{1}
 ```
 
@@ -43,7 +43,7 @@ For any formula A(x,y), C proves
 
 ```math
 (\exists y\,\Box A(x,y))\to
-\Box\exists y\,\Box A(x,y).
+\Box\exists y\,\Box A(x,y)
 \tag{2}
 ```
 
@@ -59,7 +59,7 @@ BF_α for the type of x,
 ```math
 \forall x^\alpha P(x)\quad\Longrightarrow\quad
 \forall x^\alpha\Box P(x)\quad\Longrightarrow\quad
-\Box\forall x^\alpha P(x).
+\Box\forall x^\alpha P(x)
 \tag{3}
 ```
 
@@ -74,7 +74,7 @@ Thus (2)–(3) yield
 
 ```math
 \boxed{C+BF_{\sigma t}\ \vdash\
-IC_\sigma\leftrightarrow\Box IC_\sigma.}
+IC_\sigma\leftrightarrow\Box IC_\sigma}
 \tag{4}
 ```
 
@@ -89,7 +89,7 @@ For Modalized Relational Choice use the existing entailing form
 \Box\forall x^\sigma
 \left((\exists y^\tau\,(Rx)y)\to
 \exists y^\tau\big((Sx)y\land
-\forall z^\tau((Sx)z\to y=z)\big)\right)\right].
+\forall z^\tau((Sx)z\to y=z)\big)\right)\right]
 \tag{5}
 ```
 
@@ -97,7 +97,7 @@ The same positive-boxed-witness argument gives
 
 ```math
 \boxed{C+BF_{\sigma\tau t}\ \vdash\
-MRC_{\sigma,\tau}\leftrightarrow\Box MRC_{\sigma,\tau}.}
+MRC_{\sigma,\tau}\leftrightarrow\Box MRC_{\sigma,\tau}}
 \tag{6}
 ```
 
@@ -116,7 +116,7 @@ With full BF, the existing chooser-of-graphs theorem now gives, over C,
 \boxed{MRC_{\rm all}\ \longleftrightarrow\
 \Box RC_{\rm all}+IC_{\rm all}
 \ \longleftrightarrow\
-\Box RC_{\rm all}+\Box IC_{\rm all}.}
+\Box RC_{\rm all}+\Box IC_{\rm all}}
 \tag{7}
 ```
 

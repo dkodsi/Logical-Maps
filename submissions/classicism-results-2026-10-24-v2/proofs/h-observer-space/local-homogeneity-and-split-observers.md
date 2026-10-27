@@ -12,7 +12,7 @@ An **admitted relative isomorphism** from [0,a] to [0,b] consists of admitted te
 
 ```math
  \alpha_a(p):=\alpha(a\land p),
- \qquad \beta_b(q):=\beta(b\land q).
+ \qquad \beta_b(q):=\beta(b\land q)
  \tag{1}
 ```
 
@@ -20,7 +20,7 @@ For normalized witnesses, their ranges lie below b,a respectively, and
 
 ```math
  \beta\alpha(p)=a\land p,
- \qquad \alpha\beta(q)=b\land q.
+ \qquad \alpha\beta(q)=b\land q
  \tag{2}
 ```
 
@@ -33,7 +33,7 @@ The isomorphisms are also relative logical isomorphisms for every requested fini
  q\le\forall x^\sigma\alpha(a\land Hx)
  &\longleftrightarrow\forall x^\sigma\,[\beta q\le a\land Hx]\\
  &\longleftrightarrow\beta q\le a\land\forall x^\sigma Hx\\
- &\longleftrightarrow q\le\alpha(a\land\forall x^\sigma Hx).
+ &\longleftrightarrow q\le\alpha(a\land\forall x^\sigma Hx)
 \end{aligned}
 \tag{3}
 ```
@@ -45,7 +45,7 @@ Define Hom(a) to say that a≠0 and, for every b with 0<b≤a, there exist admit
 The local truth premise is
 
 ```math
- \mathrm{TrueHom}:=\exists a^t\,[a\land\mathrm{Hom}(a)].
+ \mathrm{TrueHom}:=\exists a^t\,[a\land\mathrm{Hom}(a)]
  \tag{4}
 ```
 
@@ -59,7 +59,7 @@ Recall the one-pair condition K_Δ from [Left-inverse separation](left-inverse-s
 \begin{aligned}
  K_\Delta:=\exists E^{tt}F^{tt}c^t\,[
  &\mathrm{Good}_\Delta(E)\land\mathrm{Good}_\Delta(F)\\
- &\land F\circ E=I\land c\land Fc=0].
+ &\land F\circ E=I\land c\land Fc=0]
 \end{aligned}
 \tag{5}
 ```
@@ -73,7 +73,7 @@ Both observers have the same full Boolean and finite-list quantifier qualificati
 Otherwise choose x with 0<x<a. Both x and a∧¬x are nonzero. If x is false, put b=x; if x is true, put b=a∧¬x. In either case
 
 ```math
- 0<b<a,\qquad \neg b.
+ 0<b<a,\qquad \neg b
  \tag{6}
 ```
 
@@ -81,7 +81,7 @@ Homogeneity supplies one normalized admitted isomorphism α:[0,a]→[0,b] with i
 
 ```math
  d:=\neg a\lor b,
- \qquad c:=\neg d=a\land\neg b.
+ \qquad c:=\neg d=a\land\neg b
  \tag{7}
 ```
 
@@ -90,7 +90,7 @@ The proposition d is currently false and c is currently true. Patch the isomorph
 ```math
  A(p):=(\neg a\land p)\lor\alpha(a\land p),
  \qquad
- D(q):=(\neg a\land q)\lor\beta(b\land q).
+ D(q):=(\neg a\land q)\lor\beta(b\land q)
  \tag{8}
 ```
 
@@ -98,7 +98,7 @@ These admitted terms are relative logical isomorphisms between [0,1] and [0,d]. 
 
 ```math
  D(Ap)=p,
- \qquad A(Dq)=d\land q.
+ \qquad A(Dq)=d\land q
  \tag{9}
 ```
 
@@ -108,7 +108,7 @@ Now define the globally qualified observers
 
 ```math
  F(q):=D(q),
- \qquad E(p):=A(p)\lor(c\land p).
+ \qquad E(p):=A(p)\lor(c\land p)
  \tag{10}
 ```
 
@@ -117,7 +117,7 @@ The relative source top of D is d and its target top is 1, so D1=1, D0=0, and it
 Since Dc=0 and DA=I, equations (9)–(10) give
 
 ```math
- F\circ E=I,\qquad Fc=0.
+ F\circ E=I,\qquad Fc=0
  \tag{11}
 ```
 
@@ -136,7 +136,7 @@ The established local atomic-observer converse gives
  \quad\Longrightarrow\quad
  \mathrm{Atomicity}_t
  \quad\Longrightarrow\quad\mathrm{End}
- \quad\Longrightarrow\quad\mathrm{Rev}.
+ \quad\Longrightarrow\quad\mathrm{Rev}
  \tag{12}
 ```
 
@@ -145,7 +145,7 @@ The first step uses a correct endpoint evaluator at the true atom, composed with
 In the nonatomic case of §2, K_Δ converts each $`\mathrm{Good}_\Delta`$ observer G into
 
 ```math
- E_G(p):=(c\land Gp)\lor(\neg c\land Ep).
+ E_G(p):=(c\land Gp)\lor(\neg c\land Ep)
  \tag{13}
 ```
 
@@ -158,7 +158,7 @@ Consequently
  \mathrm{C5}+\mathrm{OS}+\mathrm{TrueHom}
  \quad\Longrightarrow\quad
  \mathrm{Rev}\lor(\mathrm{OS}\land K_{\{t\}})
- \quad\Longrightarrow\quad\mathrm{SplitMono}.}
+ \quad\Longrightarrow\quad\mathrm{SplitMono}}
 \tag{14}
 ```
 
@@ -172,7 +172,7 @@ One may replace TrueHom in (14) by an explicitly admitted homogeneous cover. For
 
 ```math
  \forall x^\sigma\,[Hx=0\lor\mathrm{Hom}(Hx)],
- \qquad (\exists x^\sigma Hx)=1.
+ \qquad (\exists x^\sigma Hx)=1
  \tag{15}
 ```
 

@@ -11,7 +11,7 @@ For this proof only, write $`\mathsf{Sel}`$ for Strong Actuality together with T
 ```math
 \mathrm C(\Sigma)+T+\mathsf{Sel}\vdash P
 \quad\Longleftrightarrow\quad
-\mathrm C(\Sigma)+T\vdash P.
+\mathrm C(\Sigma)+T\vdash P
 ```
 
 The model argument below is explicit. The derivability formulation uses ordinary general-Henkin completeness for C; it does not use completeness for full standard higher-order semantics. The constructed models also satisfy every Relational Choice instance and admit every external current relation, so these can be added to the semantic conclusion too.
@@ -29,7 +29,7 @@ R\models P(\bar a)\ \Longrightarrow\ K\models P(q\bar a)
 
 ```math
 K\models N(q\bar a)\ \Longrightarrow\ R\models N(\bar a)
-\quad(N\in\mathcal D^+).
+\quad(N\in\mathcal D^+)
 ```
 
 A true identity in $`R`$ is identity of its denotations. Term projection preserves it in $`K`$, and therefore reflects a disequality from $`K`$ to $`R`$. Conjunction and disjunction use their ordinary truth clauses. An existential identity-formula witness maps down; for a universal identity formula, lift an arbitrary old object using surjectivity. Dually, universal disequality formulas transfer using projected assignments, and existential witnesses lift. This proves the statements with arbitrary mixed quantifier prefixes.
@@ -47,7 +47,7 @@ The theorem covers every necessary conclusion because $`\Box B`$ is the typed id
 \forall\bar x\, .\,\Box B(\bar x)
 \quad\Longleftrightarrow\quad
 \mathrm C(\Sigma)+T\vdash
-\forall\bar x\, .\,\Box B(\bar x).
+\forall\bar x\, .\,\Box B(\bar x)
 ```
 
 The box remains on both sides. No optional premise is necessitated. Conversely $`\Diamond B`$ is $`B\ne\bot`$, so the retained premise theory may be any positive combination of possibility assertions with arbitrary object quantifiers.
@@ -65,7 +65,7 @@ Then
 +\mathrm{Th}_{\mathrm{SO}}(\mathcal A)\vdash P
 \quad\Longleftrightarrow\quad
 \mathrm C(\Sigma)+T\vdash P
-\qquad(P\in\mathcal E^+).
+\qquad(P\in\mathcal E^+)
 ```
 
 Take a general countermodel for the right side. Its many-sorted first-order presentation has countably many types and term-operation symbols. Downward Löwenheim–Skolem supplies a countermodel $`K`$ with countable sorts, preserving the whole theory $`T`$, including when it is nonrecursive. Choose the current individual set to be the domain of $`\mathcal A`$ and an onto map to the nonempty, at most countable $`K_e`$.
@@ -76,7 +76,7 @@ Take, for example, the standard natural numbers with
 
 ```math
 \mathsf{Zero}:et,\qquad \mathsf{Succ}:eet,\qquad
-\mathsf{Add}:eeet,\qquad \mathsf{Mul}:eeet.
+\mathsf{Add}:eeet,\qquad \mathsf{Mul}:eeet
 ```
 
 The current relations are the standard zero predicate and operation graphs. Their old interpretations remain those of $`K`$. All true full second-order arithmetic sentences of this presentation can therefore be added as actual truths without new positive identity consequences, even over signature Maximalism for this same signature.

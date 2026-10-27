@@ -14,7 +14,7 @@ For a fixed operation f, write Mat_f and Pt_f for material and pointwise preserv
 
 ```math
 \mathrm{Invol}_{\mathrm{pt}}(E):=
-\forall p\,[E(Ep)=p].
+\forall p\,[E(Ep)=p]
 \tag{1}
 ```
 
@@ -32,7 +32,7 @@ We use the existing propositional separation formula S[K]. FullSep[K] is its ful
 S[O\land\mathrm{Mat}_N]
 \quad\longleftrightarrow\quad
 S[\mathrm{Fix}(O)\land\mathrm{Pt}_N
-       \land\mathrm{Invol}_{\mathrm{pt}}].
+       \land\mathrm{Invol}_{\mathrm{pt}}]
 \tag{2}
 ```
 
@@ -45,7 +45,7 @@ It remains to construct the stronger witnesses under these output identities. DN
 ```math
 \begin{aligned}
 U_r(x,y):={}&((x=r\lor x=\neg r)\land y=\neg x)\\
-&\lor(\neg(x=r\lor x=\neg r)\land y=x).
+&\lor(\neg(x=r\lor x=\neg r)\land y=x)
 \end{aligned}
 \tag{3}
 ```
@@ -68,7 +68,7 @@ For the argument only, use the auxiliary formula
 \tau(x):=
 \begin{cases}
 x,&\text{for XOR},\\
-\neg x,&\text{for biconditional}.
+\neg x,&\text{for biconditional}
 \end{cases}
 \tag{4}
 ```
@@ -81,7 +81,7 @@ Here τ is a formula giving a truth value, not a newly postulated two-element ob
 S[\mathrm{Mat}_{+}]
 \quad\longleftrightarrow\quad
 S[\mathrm{Pt}_{+}\land\mathrm{Invol}_{\mathrm{pt}}
-       \land Ea=a].
+       \land Ea=a]
 \tag{5}
 ```
 
@@ -97,7 +97,7 @@ Plenitude now gives an admitted L with
 Lx=
 \begin{cases}
 a,&\chi(x),\\
-0,&\neg\chi(x).
+0,&\neg\chi(x)
 \end{cases}
 \tag{6}
 ```
@@ -105,14 +105,14 @@ a,&\chi(x),\\
 More formally apply it to (χ(x)∧y=a)∨(¬χ(x)∧y=0), which is total and single-valued by H. The pair {0,a} is a two-element subgroup. Its exact group table, together with the character law, proves
 
 ```math
-L(x+y)=Lx+Ly,\qquad L0=0,\qquad La=0.
+L(x+y)=Lx+Ly,\qquad L0=0,\qquad La=0
 \tag{7}
 ```
 
 Define the admitted operation
 
 ```math
-Jx:=x+Lx.
+Jx:=x+Lx
 \tag{8}
 ```
 
@@ -120,7 +120,7 @@ Commutativity, associativity and (7) show J(x+y)=Jx+Jy. Also L(Lx)=0, because Lx
 
 ```math
 J(Jx)=x+Lx+L(x+Lx)
-     =x+Lx+Lx+L(Lx)=x.
+     =x+Lx+Lx+L(Lx)=x
 \tag{9}
 ```
 
@@ -136,7 +136,7 @@ The preceding theorem strengthens all the usual affine orientations:
 S[O\land\mathrm{Mat}_{+}]
 \quad\longleftrightarrow\quad
 S[\mathrm{Fix}(O)\land\mathrm{Pt}_{+}
-       \land\mathrm{Invol}_{\mathrm{pt}}].
+       \land\mathrm{Invol}_{\mathrm{pt}}]
 \tag{10}
 ```
 

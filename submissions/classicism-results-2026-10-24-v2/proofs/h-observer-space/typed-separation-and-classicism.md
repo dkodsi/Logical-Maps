@@ -19,7 +19,7 @@ Let K(E) be any formula whose only free variable is E of type tt. For a relation
 X=Y\leftrightarrow
 \forall E^{tt}\left(K(E)\to
 \forall z_1^{\sigma_1}\cdots z_n^{\sigma_n}
-\bigl(E(X[\bar z])\leftrightarrow E(Y[\bar z])\bigr)\right)\right].
+\bigl(E(X[\bar z])\leftrightarrow E(Y[\bar z])\bigr)\right)\right]
 ```
 
 The tuple can be empty, giving propositional separation Sep_t[K]. FullSep[K] contains these instances at every relational type. The same notation applies to a nonempty family of qualifications, with every member included on both sides of the results below. Canonical logical qualification is indexed by all finite type lists Δ, including the empty list. No type quantifier or infinite conjunction occurs inside an axiom.
@@ -28,7 +28,7 @@ Functionality is the schema
 
 ```math
 \forall X,Y^{\sigma\rho}\left[
-(\forall x^\sigma\,Xx=Yx)\to X=Y\right],\qquad\rho\ne e.
+(\forall x^\sigma\,Xx=Yx)\to X=Y\right],\qquad\rho\ne e
 ```
 
 This is [current Functionality](../../source/topics/classicism/principles/functionality-r.yaml), not identity from current material coextension and not a rule permitting abstraction of arbitrary conditional identities.
@@ -40,7 +40,7 @@ This is [current Functionality](../../source/topics/classicism/principles/functi
 ```math
 \boxed{\mathrm H+\mathrm{FullSep}[K]
 \equiv
-\mathrm H+\mathrm{Sep}_t[K]+\mathrm{Functionality}.}
+\mathrm H+\mathrm{Sep}_t[K]+\mathrm{Functionality}}
 ```
 
 No preservation, endpoint, existence or correctness condition on the qualified observers is needed.
@@ -66,7 +66,7 @@ E(p\land q)&\leftrightarrow(Ep\land Eq),\\
 E(p\lor q)&\leftrightarrow(Ep\lor Eq),\\
 E(\forall x^\sigma Fx)&\leftrightarrow\forall x^\sigma E(Fx),\\
 E(\exists x^\sigma Fx)&\leftrightarrow\exists x^\sigma E(Fx)
-\qquad(\sigma\in\Delta).
+\qquad(\sigma\in\Delta)
 \end{aligned}
 ```
 
@@ -76,7 +76,7 @@ Universally close each law over its displayed input variables. Add, for each σ�
 \begin{aligned}
 R_\sigma(E)&:\quad\forall x^\sigma\,E(x=x),\\
 L_\sigma(E)&:\quad\forall x,y^\sigma\,\forall F^{\sigma t}
-\bigl(E(x=y)\to(E(Fx)\to E(Fy))\bigr).
+\bigl(E(x=y)\to(E(Fx)\to E(Fy))\bigr)
 \end{aligned}
 ```
 
@@ -93,7 +93,7 @@ This is a transformation of H proofs. It does not say qualified observers preser
 For C, take an H theorem P↔Q. The transport theorem gives EP↔EQ for every qualified E, uniformly in the free variables of P,Q. Apply separation at the type of $`\lambda\bar z.P`$ and $`\lambda\bar z.Q`$. Beta conversion gives
 
 ```math
-(\lambda\bar z.P)=(\lambda\bar z.Q).
+(\lambda\bar z.P)=(\lambda\bar z.Q)
 ```
 
 These are exactly the Logical Equivalence instances defining C. The optional separation axioms have not been used as premises of the H theoremhood side condition.
@@ -111,7 +111,7 @@ Write OS^mat, OS^pt and OS^op for the corresponding full typed separation schema
 ```math
 \boxed{\mathrm H+\mathrm{OS}^{\mathrm{mat}}
 \equiv\mathrm H+\mathrm{OS}^{\mathrm{pt}}
-\equiv\mathrm H+\mathrm{OS}^{\mathrm{op}}.}
+\equiv\mathrm H+\mathrm{OS}^{\mathrm{op}}}
 ```
 
 Application and identity substitution give Good^op→Good^pt→Good^mat in H. Since restriction to a smaller class strengthens separation, OS^op entails OS^pt, which entails OS^mat.
@@ -119,7 +119,7 @@ Application and identity substitution give Good^op→Good^pt→Good^mat in H. Si
 For the reverse implication, first use Corollary 3 to recover C from OS^mat. Fix Δ and abbreviate K(E):=Good^mat_Δ(E). Define the admitted term
 
 ```math
-E^\#p:=(K(E)\land Ep)\lor(\neg K(E)\land p).
+E^\#p:=(K(E)\land Ep)\lor(\neg K(E)\land p)
 ```
 
 H proves every requested material preservation law for E^# without assumptions. Split on K(E). In its true case E^# agrees in truth with E at every input and K supplies the requested law; in its false case E^# agrees with identity. K(E) has no free law-input variable, so the same case split works under each input quantifier. The identical argument proves R and L for E^#.
@@ -143,7 +143,7 @@ Define, at a fixed type σ,
 \mathrm{CorrectEq}_\sigma(E)&:
 \forall x,y^\sigma\,(E(x=y)\leftrightarrow x=y),\\
 \mathrm{FixEq}_\sigma(E)&:
-(\lambda x,y^\sigma.E(x=y))=(\lambda x,y^\sigma.x=y).
+(\lambda x,y^\sigma.E(x=y))=(\lambda x,y^\sigma.x=y)
 \end{aligned}
 ```
 
@@ -214,7 +214,7 @@ For the familiar abbreviation p→q:=¬p∨q, there is an explicit sharper examp
 
 ```math
 \neg(b,c)=(\neg b,c),\qquad
-(b,c)\lor(d,e)=(b\lor d,\neg c\lor e).
+(b,c)\lor(d,e)=(b\lor d,\neg c\lor e)
 ```
 
 Leave conjunction, all quantifiers and all equality predicates coordinatewise. The derived implication is then coordinatewise classical implication, so both coordinate readers preserve its full composite operation. They also preserve conjunction, all quantifiers and full FixEq, and fix both endpoints. They separate all relational types. Nevertheless ¬⊤=(0,1) differs from ⊥=(0,0), so C fails.

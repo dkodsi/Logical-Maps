@@ -6,7 +6,7 @@ Requiring a logical observer to have an admitted qualified right inverse does no
 
 ```math
 \boxed{\mathrm{H}+\text{full separation by qualified right-invertible observers}
-\quad\Longleftrightarrow\quad\mathrm{H}+\mathrm{Rev}.}
+\quad\Longleftrightarrow\quad\mathrm{H}+\mathrm{Rev}}
 \tag{1}
 ```
 
@@ -27,7 +27,7 @@ Let I:=λp.p and let composition be the admitted lambda term. Define
 \mathrm{Good}_\Delta(E)\land
 \exists F^{tt}\,[\mathrm{Good}_\Delta(F)\land F\circ E=I],\\
 \mathrm{Invol}_\Delta(E):={}&
-\mathrm{Good}_\Delta(E)\land E\circ E=I.
+\mathrm{Good}_\Delta(E)\land E\circ E=I
 \end{aligned}
 ```
 
@@ -44,7 +44,7 @@ The full-H characterization (1) adds no Barcan assumption: forgetting the invers
 Assume E,F are Good_Δ, t∈Δ, and E∘F=I. Define the admitted proposition
 
 ```math
-u:=\forall p^t\,[F(Ep)\leftrightarrow p].
+u:=\forall p^t\,[F(Ep)\leftrightarrow p]
 \tag{2}
 ```
 
@@ -53,7 +53,7 @@ Its defining universal statement is used as a proposition, not assumed true. In 
 Universal instantiation and C's Boolean identities give, for every p,
 
 ```math
-u\land F(Ep)=u\land p.
+u\land F(Ep)=u\land p
 \tag{3}
 ```
 
@@ -67,7 +67,7 @@ Eu
  &=\forall p\,E(F(Ep)\leftrightarrow p)\\
  &=\forall p\,[E(F(Ep))\leftrightarrow Ep]\\
  &=\forall p\,[Ep\leftrightarrow Ep]
- =\top.
+ =\top
 \end{aligned}
 \tag{4}
 ```
@@ -88,7 +88,7 @@ c:=\neg d\land Ed,
 and define the admitted observer
 
 ```math
-T(p):=(c\land Ep)\lor(b\land Fp)\lor(r\land p).
+T(p):=(c\land Ep)\lor(b\land Fp)\lor(r\land p)
 \tag{6}
 ```
 
@@ -97,7 +97,7 @@ All coefficient identities needed below hold without the current-truth assumptio
 First, by (4) and E∘F=I,
 
 ```math
-Eb=Eu\land E(Fc)=c.
+Eb=Eu\land E(Fc)=c
 \tag{7}
 ```
 
@@ -123,7 +123,7 @@ c\land Ec=\bot,
 b\le Fc,
 \quad b\land Fb=\bot,
 \quad b\land Fr=\bot,
-\quad b\land F(Ep)=b\land p.
+\quad b\land F(Ep)=b\land p
 \tag{10}
 ```
 
@@ -132,26 +132,26 @@ For the first identity in (9), c contains Ed whereas Ec contains ¬Ed. The third
 Now expand T(Tp) on the partition c,b,r. On c, (9) eliminates the first and third branches inside E(Tp), while the middle branch gives
 
 ```math
-c\land Eb\land E(Fp)=c\land p.
+c\land Eb\land E(Fp)=c\land p
 ```
 
 On b, (10) eliminates the second and third branches inside F(Tp), while the first gives
 
 ```math
-b\land Fc\land F(Ep)=b\land p.
+b\land Fc\land F(Ep)=b\land p
 ```
 
 On r, the identity branch gives r∧Tp=r∧p. Thus
 
 ```math
-\forall p\,[T(Tp)=p].
+\forall p\,[T(Tp)=p]
 \tag{11}
 ```
 
 For the full-operation inverse requirement, apply NI to each identity in (11), then BF_t to collect them under ∀p. The resulting necessary coextension, followed by C's Intensionality at tt, gives
 
 ```math
-T\circ T=I.
+T\circ T=I
 \tag{12}
 ```
 
@@ -172,7 +172,7 @@ S_{\tau,\Delta}[\mathrm{SplitEpi}]
 \quad\Longleftrightarrow\quad
 S_{\tau,\Delta}[\mathrm{Invol}]
 \quad\Longleftrightarrow\quad
-S_{\tau,\Delta}[\mathrm{Rev}].
+S_{\tau,\Delta}[\mathrm{Rev}]
 \tag{13}
 ```
 

@@ -18,7 +18,7 @@ therefore $\tau=t$. Over the fixed logic C,
 
 $$
  \mathrm{RC}_{\tau}\ \land\ \mathrm{Atomicity}_{\tau t}
- \quad\Longrightarrow\quad \mathrm{WRP}_{\tau}.
+ \quad\Longrightarrow\quad \mathrm{WRP}_{\tau}
 $$
 
 Both premises hold at the evaluation point. Here RC is Rigid
@@ -41,7 +41,7 @@ $$
  \mathrm{WI}(A)\ \equiv\
  \forall B\,.\,
   \bigl(\forall\bar x\,.\,A[\bar x]\to\Box B[\bar x]\bigr)
-       \to A\le B.
+       \to A\le B
 $$
 
 Entailment is necessary universal inclusion. C proves that weak rigidity
@@ -75,7 +75,7 @@ $X^\tau$ satisfies
 
 $$
  P(X)\qquad\text{and}\qquad
- \Box\forall Y^\tau\,.\,W(Y)\to Y=X.                 \tag{1}
+ \Box\forall Y^\tau\,.\,W(Y)\to Y=X                 \tag{1}
 $$
 
 RC at $\tau$ supplies a rigid $X$ currently coextensive with
@@ -83,7 +83,7 @@ RC at $\tau$ supplies a rigid $X$ currently coextensive with
 $$
  Q:=\lambda\bar x\,.\,
  F[\bar x]\land
- \Box\forall Y^\tau\,.\,W(Y)\to Y[\bar x].
+ \Box\forall Y^\tau\,.\,W(Y)\to Y[\bar x]
 $$
 
 First, every current $X$-tuple belongs to $F$ and hence necessarily
@@ -96,7 +96,7 @@ relation on tuples, gives
 
 $$
  \Box\forall Y\,.\,W(Y)\to
-           \forall\bar x\,.\,X[\bar x]\to Y[\bar x]. \tag{2}
+           \forall\bar x\,.\,X[\bar x]\to Y[\bar x] \tag{2}
 $$
 
 The quantifiers have only been rearranged inside the same box.
@@ -109,7 +109,7 @@ $F[\bar x]$, gives
 $$
  \neg\Box\forall Y\,.\,W(Y)\to Y[\bar x],
  \quad\text{that is}\quad
- W\not\le\lambda Y\,.\,Y[\bar x].
+ W\not\le\lambda Y\,.\,Y[\bar x]
 $$
 
 An atom lies below each element of its Boolean algebra or below its
@@ -118,7 +118,7 @@ $W\le\lambda Y\,.\,\neg Y[\bar x]$. In either case,
 
 $$
  \Box\forall Y\,.\,W(Y)\to
-                  \bigl(Y[\bar x]\to X[\bar x]\bigr).
+                  \bigl(Y[\bar x]\to X[\bar x]\bigr)
 $$
 
 Apply WI of $F$ to
@@ -128,7 +128,7 @@ $\lambda\bar x\,.\,\forall Y\,.\,W(Y)\to
 $$
  \Box\forall\bar x\,.\,F[\bar x]\to
       \forall Y\,.\,W(Y)\to
-                    \bigl(Y[\bar x]\to X[\bar x]\bigr).
+                    \bigl(Y[\bar x]\to X[\bar x]\bigr)
 $$
 
 At a reached world, $W(Y)$ implies $Y\le F$, because $W\le P$.
@@ -136,7 +136,7 @@ By T, every $Y$-tuple there is an $F$-tuple. Thus
 
 $$
  \Box\forall Y\,.\,W(Y)\to
-           \forall\bar x\,.\,Y[\bar x]\to X[\bar x]. \tag{3}
+           \forall\bar x\,.\,Y[\bar x]\to X[\bar x] \tag{3}
 $$
 
 Now take any reached world and any $Y$ there with $W(Y)$.
@@ -152,7 +152,7 @@ possibly new $Y$; this is the point that gives W,W,W.
 Let $Z^{\tau t}$ satisfy
 
 $$
- \forall Y^\tau\,.\,P(Y)\to\Box Z(Y).              \tag{4}
+ \forall Y^\tau\,.\,P(Y)\to\Box Z(Y)              \tag{4}
 $$
 
 Suppose $P\not\le Z$. Then

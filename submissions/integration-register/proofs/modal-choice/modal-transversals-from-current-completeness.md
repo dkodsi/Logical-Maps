@@ -14,7 +14,7 @@ exactly one member of each R-equivalence class. Then
 \boxed{C+BC_{\sigma t}+MRC_{\sigma t,\sigma}\ \vdash\
 \forall R^{\sigma\sigma t}
 \bigl(\Box\mathrm{Equiv}(R)
-\to\exists X^{\sigma t}\Box\mathrm{Tr}_R(X)\bigr).}
+\to\exists X^{\sigma t}\Box\mathrm{Tr}_R(X)\bigr)}
 \tag{1}
 ```
 
@@ -28,7 +28,7 @@ As a consequence, with full schemas,
 ```math
 \boxed{C+BC_{\rm all}:\qquad
 MRC\ \longleftrightarrow\ \mathrm{Modal\ Well\!\!\!\!-Ordering}
-\ \longleftrightarrow\ (\Box RC+IC).}
+\ \longleftrightarrow\ (\Box RC+IC)}
 \tag{2}
 ```
 
@@ -37,7 +37,7 @@ each target type:
 
 ```math
 \boxed{C+MRC_{(\sigma t)t,\sigma t}+BC_{(\sigma t)t}
-\ \vdash\ \mathrm{Modal\ Well\!\!\!\!-Ordering}_\sigma.}
+\ \vdash\ \mathrm{Modal\ Well\!\!\!\!-Ordering}_\sigma}
 \tag{2a}
 ```
 
@@ -58,7 +58,7 @@ Fix R with □Equiv(R). Call X:σt separated when
 ```math
 \mathrm{Sep}_R(X):=
 \Box\forall x^\sigma y^\sigma
-\bigl(Xx\land Xy\land(Rx)y\to x=y\bigr).
+\bigl(Xx\land Xy\land(Rx)y\to x=y\bigr)
 \tag{3}
 ```
 
@@ -70,7 +70,7 @@ Define the admitted operation
 
 ```math
 (\Gamma_R B)x:=\forall y^\sigma
-\bigl(By\land(Rx)y\to x=y\bigr).
+\bigl(By\land(Rx)y\to x=y\bigr)
 \tag{4}
 ```
 
@@ -80,14 +80,14 @@ give
 ```math
 A\le\Gamma_R B
 \quad\longleftrightarrow\quad
-\Box\forall x y\bigl(Ax\land By\land(Rx)y\to x=y\bigr).
+\Box\forall x y\bigl(Ax\land By\land(Rx)y\to x=y\bigr)
 \tag{5}
 ```
 
 Necessary symmetry of R makes the right side symmetric in A,B, so
 
 ```math
-A\le\Gamma_R B\quad\longleftrightarrow\quad B\le\Gamma_R A.
+A\le\Gamma_R B\quad\longleftrightarrow\quad B\le\Gamma_R A
 \tag{6}
 ```
 
@@ -121,7 +121,7 @@ By the [universal modal selector construction](universal-modal-selectors.md),
 
 ```math
 \Box\mathrm{Functional}(S),\qquad
-S\le\lambda F\,y\bigl(Fy\lor\neg\exists z^\sigma Fz\bigr).
+S\le\lambda F\,y\bigl(Fy\lor\neg\exists z^\sigma Fz\bigr)
 \tag{7}
 ```
 
@@ -135,7 +135,7 @@ and the admitted properties and operation
 
 ```math
 D_X(y):=M_X(y)\land(SM_X)y,\qquad
-\Phi(X):=X\lor D_X.
+\Phi(X):=X\lor D_X
 \tag{8}
 ```
 
@@ -158,7 +158,7 @@ admitted operation, so its functional graph needs no further choice.
 We obtain a separated X with the **entity identity**
 
 ```math
-\Phi(X)=X.
+\Phi(X)=X
 \tag{9}
 ```
 
@@ -169,7 +169,7 @@ be necessarily empty as well. Equivalently,
 
 ```math
 \Box\forall y^\sigma\exists x^\sigma
-\bigl(Xx\land(Rx)y\bigr).
+\bigl(Xx\land(Rx)y\bigr)
 \tag{10}
 ```
 
@@ -187,7 +187,7 @@ Assume full current BC and full MRC. For each σ, apply (1) at the
 type σt to the relation
 
 ```math
-E(F,G):=\forall x^\sigma(Fx\leftrightarrow Gx).
+E(F,G):=\forall x^\sigma(Fx\leftrightarrow Gx)
 \tag{11}
 ```
 
@@ -205,7 +205,7 @@ existing, discharged C implications now gives
 ```math
 \Box\mathrm{Transversal}_{\rm all}+\Box RC_{\rm all}
 \ \Longrightarrow\ \Box TC_{\rm all}
-\ \Longrightarrow\ \Box WO_{\rm all}.
+\ \Longrightarrow\ \Box WO_{\rm all}
 \tag{12}
 ```
 
@@ -266,7 +266,7 @@ This proves the type-specific C implication
 
 ```math
 \mathrm{Transversal}_\sigma+RC_{\sigma t,\sigma}
-\ \Longrightarrow\ WO_\sigma.
+\ \Longrightarrow\ WO_\sigma
 \tag{13}
 ```
 
@@ -275,7 +275,7 @@ K, by the admitted formula
 
 ```math
 (W_Kx)y:=\exists R^{\sigma\sigma t}
-\bigl(\mathrm{Conforming}_K(R)\land(Rx)y\bigr).
+\bigl(\mathrm{Conforming}_K(R)\land(Rx)y\bigr)
 \tag{14}
 ```
 
@@ -301,7 +301,7 @@ H_x:=λz^σ(z=x). For F:σt set
 V_F(Y):=
 \exists x^\sigma(Fx\land Y=H_x)
 \ \lor\ (\neg\exists x^\sigma Fx\land Y=H_a),
-\qquad Y:\rho.
+\qquad Y:\rho
 \tag{15}
 ```
 

@@ -7,7 +7,7 @@ OpenAI Codex, prompted by Daniel Kodsi, 25 October 2026 (`misc`).
 Use the C5 model and idempotent Good_t observer E of [Logical retractions and typed cores](observer-classical-cores.md), Sections 1-5. In its actual-function presentation, identity at every type is crisp. The same E obeys all typed quantifier laws. Write
 
 ```math
-r_e=\mathrm{id},\qquad r_t=E,\qquad r_{\sigma\tau}(f)=r_\tau\circ f\circ r_\sigma,\qquad C_\sigma=\mathrm{Fix}(r_\sigma).
+r_e=\mathrm{id},\qquad r_t=E,\qquad r_{\sigma\tau}(f)=r_\tau\circ f\circ r_\sigma,\qquad C_\sigma=\mathrm{Fix}(r_\sigma)
 ```
 
 The fixed hierarchy $`M_E`$ is a C5 Henkin model. An arrow is represented by its normalized ambient extension, and restricts injectively to a function between the fixed domains. Every $`r_{\sigma}`$ is onto $`C_{\sigma}`$. At relational types it is a Boolean retraction. The core quantifiers compute the original infima over the fixed domains. This construction and the already proved current FC/BC inheritance are inputs, not new claims here.
@@ -26,7 +26,7 @@ All assertions distinguish original current truth, E-observed truth, and truth c
 In this section E is endpoint-valued. Thus $`C_{t}`$={0,1} and the core is an ordinary extensional two-valued Henkin hierarchy. Identify $`C_{\sigma t}`$ with a Boolean subalgebra of P($`C_{\sigma}`$) by current extension. This is injective by core extensionality. It contains every singleton: for a in $`C_{\sigma}`$ the normalized ambient predicate
 
 ```math
-H_a(x):=(r_\sigma(x)=a).
+H_a(x):=(r_\sigma(x)=a)
 ```
 
 is admitted, fixed, and restricts to the characteristic function of {a}. For σ=e omit $`r_{e}`$. It also contains complements of all singletons.
@@ -43,13 +43,13 @@ Proof. (i) implies (ii), and (ii) implies (iii) implies (iv). For (iv)->(ii), le
 For (ii)->(i), let f:$`C_{\sigma}`$->$`C_{\tau}`$ be an arbitrary external function, where τ is relational. Code pairs (x,y) by their core haecceities
 
 ```math
-H_{(x,y)}(u,v):=(u=x\land v=y),\qquad\chi=\sigma\tau t.
+H_{(x,y)}(u,v):=(u=x\land v=y),\qquad\chi=\sigma\tau t
 ```
 
 Pair codes are injective by core extensionality. By (ii) at chi, the external subset {H_(x,f(x)):x in $`C_{\sigma}`$} has an admitted characteristic predicate A. Hence G(x,y):=A(H_(x,y)) is an admitted core graph of f. Write τ=rho_1...rho_k t and define
 
 ```math
-F(x,z_1,\ldots,z_k):=\exists y.\,(G(x,y)\land y[z_1,\ldots,z_k]).
+F(x,z_1,\ldots,z_k):=\exists y.\,(G(x,y)\land y[z_1,\ldots,z_k])
 ```
 
 For k=0 use y itself as the last conjunct. Lambda closure supplies F. The unique graph witness is f(x), so F(x) and f(x) agree at all their arguments. Core extensionality makes them identical. This represents every external f, as required. No function type ending in e is used.
@@ -69,7 +69,7 @@ Return to an arbitrary idempotent logical E, not necessarily endpoint. Let π=et
 For a fixed cardinal Y, its ambient normalized extension satisfies
 
 ```math
-Y(P)=E(Y(r_\pi(P))).
+Y(P)=E(Y(r_\pi(P)))
 ```
 
 In particular, hZ(P)=E(Z($`r_{\pi}`$(P))) for every original cardinal Z. The universal individual property 1_pi is fixed by $`r_{\pi}`$.
@@ -79,7 +79,7 @@ In particular, hZ(P)=E(Z($`r_{\pi}`$(P))) for every original cardinal Z. The uni
 The zero equation follows from E commuting with universal quantification over e and negation. For successor, let P be a core individual predicate. Deletion P-minus-y:=lambda u.P(u) and u≠y is again a core predicate: individual inequality is crisp and E fixes both endpoints. Consequently
 
 ```math
-\begin{aligned}h(SZ)(P)&=E(\exists y.\,(P(y)\land Z(P\mathbin{-}y)))\\&=\exists y.\,(P(y)\land E(Z(P\mathbin{-}y)))\\&=\exists y.\,(P(y)\land hZ(P\mathbin{-}y))\\&=S^c(hZ)(P).\end{aligned}
+\begin{aligned}h(SZ)(P)&=E(\exists y.\,(P(y)\land Z(P\mathbin{-}y)))\\&=\exists y.\,(P(y)\land E(Z(P\mathbin{-}y)))\\&=\exists y.\,(P(y)\land hZ(P\mathbin{-}y))\\&=S^c(hZ)(P)\end{aligned}
 ```
 
 The first and last expressions are fixed cardinal objects, so their agreement on all core predicates gives identity. This is why keeping the entire individual domain, rather than replacing it by a quotient, matters.
@@ -87,13 +87,13 @@ The first and last expressions are fixed cardinal objects, so their agreement on
 **Lemma 3.2.** For every original Z,
 
 ```math
-E(N(Z))\le N^c(hZ).\tag{3.1}
+E(N(Z))\le N^c(hZ)\tag{3.1}
 ```
 
 Take any core predicate W on core cardinals. Its original normalized extension obeys W h=W and E W=W. By Lemma 3.1 and surjectivity of h, the original induction assertion for this W has exactly its core value:
 
 ```math
-\begin{aligned}&W(0)\land\forall Z.\,(W(Z)\to W(SZ))\\&\quad=W(0^c)\land\forall Y\in C_\kappa.\,(W(Y)\to W(S^cY)).\end{aligned}\tag{3.2}
+\begin{aligned}&W(0)\land\forall Z.\,(W(Z)\to W(SZ))\\&\quad=W(0^c)\land\forall Y\in C_\kappa.\,(W(Y)\to W(S^cY))\end{aligned}\tag{3.2}
 ```
 
 The original definition of N(Z) implies the corresponding induction conditional for W. Apply the Boolean homomorphism E to that inequality. The right-hand W-values and induction assertion in (3.2) are E-fixed. Then take the infimum over core W. The result is (3.1). This argument uses E-observed naturalness, not an illicit assertion that N(Z) is crisp.
@@ -101,13 +101,13 @@ The original definition of N(Z) implies the corresponding induction conditional 
 **Lemma 3.3.** For every fixed Y,
 
 ```math
-N^c(Y)=\exists Z.\,(E(N(Z))\land hZ=Y).\tag{3.3}
+N^c(Y)=\exists Z.\,(E(N(Z))\land hZ=Y)\tag{3.3}
 ```
 
 Define the ambient extension of the right-hand predicate by
 
 ```math
-I(Y):=\exists Z.\,(E(N(Z))\land hZ=hY).
+I(Y):=\exists Z.\,(E(N(Z))\land hZ=hY)
 ```
 
 It is fixed: it is invariant under h on its input, and E commutes with the displayed existential quantifier, fixes its first conjunct by idempotence, and fixes its equality conjunct by C5. Lemma 3.2 gives I(Y)≤N^c(Y) for fixed Y.
@@ -115,7 +115,7 @@ It is fixed: it is invariant under h on its input, and E commutes with the displ
 Conversely I is an inductive predicate of the core. Original N(0)=1 and forall Z[N(Z)->N(SZ)]=1 are logical induction facts. Applying E and using its whole quantifier law gives E(N(0))=1 and
 
 ```math
-\bigl(\forall Z.\,(E(N(Z))\to E(N(SZ)))\bigr)=1.
+\bigl(\forall Z.\,(E(N(Z))\to E(N(SZ)))\bigr)=1
 ```
 
 These facts and Lemma 3.1 show I(0^c)=1 and closure under S^c. The core induction definition therefore gives N^c(Y)≤I(Y), proving (3.3). The existential in (3.3) ranges over original cardinals. This is an image theorem; it does not assert injectivity of h on natural cardinalities.
@@ -123,13 +123,13 @@ These facts and Lemma 3.1 show I(0^c)=1 and closure under S^c. The core inductio
 **Theorem 3.4.** As a proposition in Im(E),
 
 ```math
-\mathrm{Infinity}_e^c=E(\mathrm{Infinity}_e).\tag{3.4}
+\mathrm{Infinity}_e^c=E(\mathrm{Infinity}_e)\tag{3.4}
 ```
 
 By (3.3), the core assertion that some natural cardinal holds of the universal individual property is equivalent, with identical Boolean value, to
 
 ```math
-\begin{aligned}&\exists Z.\,(E(N(Z))\land hZ(1_\pi))\\&\quad=\exists Z.\,(E(N(Z))\land E(Z(1_\pi)))\\&\quad=E(\exists Z.\,(N(Z)\land Z(1_\pi))).\end{aligned}
+\begin{aligned}&\exists Z.\,(E(N(Z))\land hZ(1_\pi))\\&\quad=\exists Z.\,(E(N(Z))\land E(Z(1_\pi)))\\&\quad=E(\exists Z.\,(N(Z)\land Z(1_\pi)))\end{aligned}
 ```
 
 The first equivalence substitutes hZ for the core-cardinal witness; hZ is fixed and h is onto. Negating gives exactly (3.4).
@@ -151,13 +151,13 @@ The image/pullback method is adapted from the earlier Actuality world-slice Infi
 Let R be a serial core relation, extended as its normalized ambient function. Write $`\mathrm{Fix}_\tau`$(y) for $`r_{\tau}`$(y)=y, or 1 when τ=e. Form
 
 ```math
-U(x,y):=R(r_\sigma(x),y)\land\mathrm{Fix}_\tau(y).
+U(x,y):=R(r_\sigma(x),y)\land\mathrm{Fix}_\tau(y)
 ```
 
 Its values are E-fixed; it is originally serial because every $`r_{\sigma}`$(x) has a fixed core witness. Consequently E(Serial(U)) is true. Expand the assumed observed RC instance using E's Boolean and whole quantifier laws. It supplies an original S such that the pointwise observed graph
 
 ```math
-S_E(x,y):=E(S(x,y)).
+S_E(x,y):=E(S(x,y))
 ```
 
 is ACTUALLY total, single-valued, and a subrelation of U. In this expansion E(y=z)=(y=z), using crisp all-type identity. The existential over S is legitimate because E commutes with that relation-type quantifier too.
@@ -165,7 +165,7 @@ is ACTUALLY total, single-valued, and a subrelation of U. In this expansion E(y=
 Every selected y is fixed, by U's guard. Now take
 
 ```math
-T(x,y):=E(S(r_\sigma(x),r_\tau(y)))=r_{\sigma\tau t}(S)(x,y).
+T(x,y):=E(S(r_\sigma(x),r_\tau(y)))=r_{\sigma\tau t}(S)(x,y)
 ```
 
 This is a core relation. On core inputs it is exactly S_E, so its selected outputs are core objects and remain unique. It is a functional subrelation of R in $`M_E`$. This proves the theorem even for individual output.
@@ -177,7 +177,7 @@ This is a core relation. On core inputs it is exactly S_E, so its selected outpu
 Let R be a core equivalence relation. Extend it to all original objects by leaving every nonfixed object in its own singleton class:
 
 ```math
-V(x,y):=(\mathrm{Fix}(x)\land\mathrm{Fix}(y)\land R(x,y))\lor(\neg\mathrm{Fix}(x)\land x=y).
+V(x,y):=(\mathrm{Fix}(x)\land\mathrm{Fix}(y)\land R(x,y))\lor(\neg\mathrm{Fix}(x)\land x=y)
 ```
 
 This is an actual equivalence relation with E-fixed values, so E regards it as an equivalence relation as well. Expanding observed TC gives a predicate F whose observed predicate E o F is an actual V-transversal. On a class containing fixed elements every member is fixed. Therefore $`r_{\sigma t}`$(F) restricts to a core transversal of R. This proves the result, including σ=e. Necessary TC consequently descends.
@@ -199,7 +199,7 @@ If the endpoint core is full standard by Theorem 2.1 and the shared individual d
 There is a sharper arithmetic conclusion under those same hypotheses. The core's native Frege natural-cardinality domain is exactly
 
 ```math
-\{(S^c)^n(0^c):n\in\mathbb N_{\mathrm{standard}}\}.
+\{(S^c)^n(0^c):n\in\mathbb N_{\mathrm{standard}}\}
 ```
 
 Every displayed numeral is natural by ordinary finite induction. Conversely, fullness admits the characteristic predicate of this external orbit; it is inductive, so the core's impredicative definition of N excludes every object outside the orbit. The numerals are distinct, since the n-th one holds exactly of the individual properties with n members, and an infinite individual set has properties of every finite size. The defined Sum and Prod relations then give the ordinary addition and multiplication graphs: finite induction proves the intended pairs belong to their impredicative closures, and fullness admits the intended external graphs as tests excluding all other pairs. Thus this is standard Frege arithmetic, not merely a Henkin structure satisfying internal induction. Fullness also supplies all external subsets of this number domain, so its ordinary relational second- order arithmetic has full standard semantics. This conclusion would be false if external fullness were replaced just by internal FC and BC.

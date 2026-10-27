@@ -19,7 +19,7 @@ Fix a finite external list Δ. Write I=λp.p. $`\mathrm{Good}_\Delta`$ means the
 \mathrm{ZAut}_\Delta(E)
 &:=\mathrm{Aut}_\Delta(E)\land
  \forall G^{tt}\,[\mathrm{Aut}_\Delta(G)
-       \to E\circ G=G\circ E].
+       \to E\circ G=G\circ E]
 \end{aligned}
 \tag{1}
 ```
@@ -33,7 +33,7 @@ Write
 ```math
 \mathrm{Four}_t:=
 \exists u_0u_1u_2u_3\ \forall p\,
- (p=u_0\lor p=u_1\lor p=u_2\lor p=u_3).
+ (p=u_0\lor p=u_1\lor p=u_2\lor p=u_3)
 \tag{2}
 ```
 
@@ -51,7 +51,7 @@ m_G:=\exists p^t\,(p\mathbin\triangle Gp),
 where △ is Boolean symmetric difference. Under C5 this existential is the join of its admitted type-t family. It contains every p△Gp. Consequently
 
 ```math
-m_G=0\quad\longleftrightarrow\quad G=I.
+m_G=0\quad\longleftrightarrow\quad G=I
 \tag{4}
 ```
 
@@ -62,7 +62,7 @@ If Z is a member of ZAut_Δ and G belongs to Aut_Δ, its type-t existential and 
 ```math
 Z(m_G)=\exists p\,(Zp\mathbin\triangle Z(Gp))
        =\exists p\,(Zp\mathbin\triangle G(Zp))
-       =m_G.
+       =m_G
 \tag{5}
 ```
 
@@ -71,7 +71,7 @@ The middle equality is centrality. For the last equality, Z is onto by its admit
 Thus all eligible central reversible observers fix m_G. If m_G is true, their truth profiles agree on m_G and Top; if false, they agree on m_G and Bottom. CentreRevSep(t,Δ) therefore gives
 
 ```math
-\boxed{m_G=0\ \lor\ m_G=1.}
+\boxed{m_G=0\ \lor\ m_G=1}
 \tag{6}
 ```
 
@@ -82,7 +82,7 @@ Together with (4), every nonidentity reversible $`\mathrm{Good}_\Delta`$ observe
 Let G belong to Aut_Δ and fix an admitted qualified inverse F. Suppose a≠0 and a∧Ga=0. Put r=¬(a∨Ga) and define
 
 ```math
-T_a(q):=(Ga\land Gq)\lor(a\land Fq)\lor(r\land q).
+T_a(q):=(Ga\land Gq)\lor(a\land Fq)\lor(r\land q)
 \tag{7}
 ```
 
@@ -93,7 +93,7 @@ For completeness, the inverse check can be read on the three regions. Applying G
 ```math
 Ga\land G(T_aq)=Ga\land q,
 \qquad a\land F(T_aq)=a\land q,
-\qquad r\land T_aq=r\land q.
+\qquad r\land T_aq=r\land q
 \tag{8}
 ```
 
@@ -104,13 +104,13 @@ The operation is identity outside a∨Ga, and T_a(a)=Ga. It follows that
 ```math
 q\mathbin\triangle T_aq\le a\lor Ga\quad\text{for every }q,
 \qquad
-a\mathbin\triangle T_a(a)=a\lor Ga.
+a\mathbin\triangle T_a(a)=a\lor Ga
 ```
 
 Taking the admitted join proves the exact support equation
 
 ```math
-m_{T_a}=a\lor Ga.
+m_{T_a}=a\lor Ga
 \tag{9}
 ```
 
@@ -120,14 +120,14 @@ Every nonidentity reversible observer supplies such a pair, after possibly repla
 
 ```math
 a\ne0,\qquad Ga\ne0,\qquad a\land Ga=0,
-\qquad a\lor Ga=1.
+\qquad a\lor Ga=1
 \tag{10}
 ```
 
 For any 0<b≤a, b and Gb are disjoint, so repeat the same construction at b. Equations (6) and (9) give b∨Gb=1. But Gb≤Ga, and intersecting with a yields
 
 ```math
-a=a\land(b\lor Gb)=b.
+a=a\land(b\lor Gb)=b
 \tag{11}
 ```
 
@@ -139,7 +139,7 @@ If there is no nonidentity member of Aut_Δ, identity is the only central revers
 \boxed{
 \mathrm{C5}+\mathrm{CentreRevSep}(t,\Delta)
 \ \vdash\ \mathrm{Four}_t
-\qquad(t\in\Delta).}
+\qquad(t\in\Delta)}
 \tag{12}
 ```
 
@@ -158,7 +158,7 @@ Consequently, for **every** finite list Δ, including lists without t, the entir
 \mathrm H+\mathrm{CentreRevSep}
 \ \equiv\ \mathrm{C5}+\mathrm{Four}_t
 \ \equiv\ \mathrm H+\mathrm{Rev}+\mathrm{Four}_t
-\ \equiv\ \mathrm H+\mathrm{End}+\mathrm{Four}_t.}
+\ \equiv\ \mathrm H+\mathrm{End}+\mathrm{Four}_t}
 \tag{13}
 ```
 
@@ -171,7 +171,7 @@ The result is also persistent at full scope:
 ```math
 \boxed{\mathrm{CentreRevSep}
 \quad\longleftrightarrow\quad
-\Box\mathrm{CentreRevSep}.}
+\Box\mathrm{CentreRevSep}}
 \tag{14}
 ```
 
@@ -194,7 +194,7 @@ Their conjunction is exactly Extensionality:
 
 ```math
 \boxed{\mathrm{CentreSep}+\mathrm{CentreRevSep}
-\quad\longleftrightarrow\quad\mathrm{Extensionality}.}
+\quad\longleftrightarrow\quad\mathrm{Extensionality}}
 \tag{15}
 ```
 

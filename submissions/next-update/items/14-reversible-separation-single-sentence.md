@@ -6,7 +6,7 @@ Different unary propositional operations can be distinguished by conjunction-pre
 
 ```math
 K(E):=\bigl((\lambda p,q\, .\,E(p\land q))=(\lambda p,q\, .\,Ep\land Eq)\bigr)
-\land E\circ E=I.
+\land E\circ E=I
 ```
 
 Over C, full Rev is equivalent to
@@ -14,7 +14,7 @@ Over C, full Rev is equivalent to
 ```math
 \forall X,Y^{tt}\, .\,
 \bigl[\forall E^{tt}\, .\,K(E)\to\forall p^t\, .\,(E(Xp)\leftrightarrow E(Yp))\bigr]
-\to X=Y.
+\to X=Y
 ```
 
 The sentence first yields Functionality at tt and BF at t. Reversibility and equality substitution give ND at t, hence C5. Quantifiers are then admitted-range infima, so the same automorphisms preserve every quantifier. Functionality lifts separation to every relational type. The converse uses the established involutive normalization of Rev.

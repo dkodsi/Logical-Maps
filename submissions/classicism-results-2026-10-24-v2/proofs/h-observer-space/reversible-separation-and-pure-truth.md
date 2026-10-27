@@ -6,7 +6,7 @@ By OpenAI Codex, prompted by Daniel Kodsi, 24 October 2026. Direct source for th
 
 ```math
 \boxed{\mathrm{Rev}\ \Longrightarrow\
-\mathrm{C5}+\Box\mathrm{OS}+\mathrm{NoPureContingency}.}
+\mathrm{C5}+\Box\mathrm{OS}+\mathrm{NoPureContingency}}
 \tag{1}
 ```
 
@@ -21,7 +21,7 @@ Full typed Rev already implies C5 and is equivalent to full typed separation by 
 Fix a closed pure sentence P. Let Δ_P contain every type σ for which a primitive quantifier ∀_σ or ∃_σ occurs in P, including occurrences inside its lambda subterms. Expand defined notation first. There are only finitely many such types. The following argument uses the propositional separation instance for that list, with involution qualification
 
 ```math
-\mathrm{Good}_{\Delta_P}(T)\land T\circ T=I.
+\mathrm{Good}_{\Delta_P}(T)\land T\circ T=I
 \tag{2}
 ```
 
@@ -30,7 +30,7 @@ Equality types occurring in P need not be added to the quantifier list: C5 makes
 No Pure Contingency is the sentence schema
 
 ```math
-P\to\Box P\qquad(P\text{ a closed pure sentence}).
+P\to\Box P\qquad(P\text{ a closed pure sentence})
 ```
 
 It is not an internal universal quantification over all propositions. Nonlogical constants are excluded; the proof does not assert that an observer fixes arbitrary named propositions.
@@ -40,7 +40,7 @@ It is not an internal universal quantification over all propositions. Nonlogical
 Fix T satisfying (2). For each relational type τ define an admitted transformation T^*_τ on its objects. At t it is T. At the individual type use the metalevel convention
 
 ```math
-T^*_e(x):=x.
+T^*_e(x):=x
 ```
 
 This is a notation for leaving an individual variable unchanged, **not** an object of type e→e: that type is absent from the fixed relational language. For every relational type σ→τ, define
@@ -66,7 +66,7 @@ The same calculation gives application compatibility:
 
 ```math
 (T^*_{\sigma\tau}X)(T^*_\sigma y)
-=T^*_\tau(Xy).
+=T^*_\tau(Xy)
 \tag{5}
 ```
 
@@ -77,7 +77,7 @@ These are identities, not just material equivalences. All lifted objects are exp
 **Endpoints and Boolean connectives.** Boolean qualification fixes Top and Bottom over C. For negation, conjugation gives
 
 ```math
-T^*_{tt}(\neg)(p)=T(\neg Tp)=\neg T(Tp)=\neg p.
+T^*_{tt}(\neg)(p)=T(\neg Tp)=\neg T(Tp)=\neg p
 ```
 
 For conjunction it gives
@@ -92,13 +92,13 @@ and likewise for disjunction. Functionality lifts these pointwise output identit
 **Equality.** C5 makes every identity judgment x=_σy equal to Top or Bottom: NI handles x=y, and ND handles x≠y. Therefore T fixes every such judgment. Equation (4) gives
 
 ```math
-T^*_\sigma x=T^*_\sigma y\ \leftrightarrow\ x=y.
+T^*_\sigma x=T^*_\sigma y\ \leftrightarrow\ x=y
 ```
 
 Both identity judgments are endpoints, so this truth equivalence is their actual identity. Consequently
 
 ```math
-T\bigl(T^*_\sigma x=T^*_\sigma y\bigr)=(x=y).
+T\bigl(T^*_\sigma x=T^*_\sigma y\bigr)=(x=y)
 ```
 
 Successive Functionality instances show that the lifted equality constant is precisely =_σ. At e this uses only the identity substitution; it does not introduce an individual-function type.
@@ -111,7 +111,7 @@ T^*_{(\sigma t)t}(\forall_\sigma)(G)
  &=T\left(\forall y^\sigma\,T(G(T^*_\sigma y))\right)\\
  &=\forall y^\sigma\,T(T(G(T^*_\sigma y)))\\
  &=\forall y^\sigma\,G(T^*_\sigma y)\\
- &=\forall y^\sigma\,Gy.
+ &=\forall y^\sigma\,Gy
 \end{aligned}
 \tag{6}
 ```
@@ -123,14 +123,14 @@ To justify the final identity in (6) without promoting a conditional truth equiv
 **Term induction.** For any pure term A of type τ whose logical quantifier types are in Δ_P, and any list of its free variables x_i:σ_i,
 
 ```math
-T^*_\tau(A)=A[T^*_{\sigma_i}x_i/x_i].
+T^*_\tau(A)=A[T^*_{\sigma_i}x_i/x_i]
 \tag{7}
 ```
 
 The variable case is immediate, and the logical-constant cases were just proved. The application case uses (5). For an abstraction λy.A, conjugation first substitutes T^*_σz for y; the induction hypothesis transforms that occurrence once more. Equation (4) cancels the two substitutions, giving the desired body. Functionality passes its identity under the abstraction. Free individual variables are unchanged throughout. For the closed proposition P, (7) reduces to
 
 ```math
-TP=P.
+TP=P
 \tag{8}
 ```
 

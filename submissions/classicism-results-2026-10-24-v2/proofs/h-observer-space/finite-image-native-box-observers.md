@@ -11,7 +11,7 @@ Use $`\mathrm{Good}_\Delta`$ and the whole-operation qualification BoxComm from 
 ```math
  \mathrm{BoxComm}(E):\quad
  (\lambda p.E(\Box p))=(\lambda p.\Box Ep),
- \qquad \Box p:=(p=\top).
+ \qquad \Box p:=(p=\top)
  \tag{1}
 ```
 
@@ -20,7 +20,7 @@ For an admitted E:tt, put
 ```math
  \mathrm{Im}(E):=\lambda q.\exists p\,(Ep=q),
  \qquad \mathrm{FinIm}(E):=
- \mathrm{Fin}_t(\mathrm{Im}(E)).
+ \mathrm{Fin}_t(\mathrm{Im}(E))
  \tag{2}
 ```
 
@@ -35,7 +35,7 @@ For every relational τ and every finite Δ, over C,
  \mathrm{Actuality}\land\mathrm{FinBoxSep}(\tau,\Delta)
  \quad\longleftrightarrow\quad
  \mathrm{Fin}_t(\mathrm{All})\land\mathrm{BoxSep}(\tau,\Delta),
- \qquad \mathrm{All}:=\lambda p.\top.}
+ \qquad \mathrm{All}:=\lambda p.\top}
  \tag{3}
 ```
 
@@ -43,7 +43,7 @@ Actuality is the unboxed principle
 
 ```math
  \exists w\,[w\land\forall p\,(p\to w\le p)],
- \qquad p\le q\ :\!\!\iff\ p\land q=p.
+ \qquad p\le q\ :\!\!\iff\ p\land q=p
  \tag{4}
 ```
 
@@ -62,7 +62,7 @@ At type t the [background definitions](../../source/topics/classicism/background
  \forall W\,[(W\mathbf0\land
  \forall Y(WY\to W(\mathrm{Suc}(Y))))\to WZ],\\
  \mathrm{Fin}_t(U)&:=\exists Z\,
- [\mathrm{FiniteCardinality}_t(Z)\land ZU].
+ [\mathrm{FiniteCardinality}_t(Z)\land ZU]
  \end{aligned}
  \tag{5}
 ```
@@ -73,7 +73,7 @@ First, membership in a finite cardinality is invariant under current coextension
 
 ```math
  \forall U,V\,
- [\forall x(Ux\leftrightarrow Vx)\to(ZU\leftrightarrow ZV)].
+ [\forall x(Ux\leftrightarrow Vx)\to(ZU\leftrightarrow ZV)]
  \tag{6}
 ```
 
@@ -87,7 +87,7 @@ For the proof let
 
 ```math
  W_E(Z):=\forall U\,[ZU\to
- \mathrm{Fin}_t(\lambda x.U(Ex))].
+ \mathrm{Fin}_t(\lambda x.U(Ex))]
  \tag{7}
 ```
 
@@ -112,7 +112,7 @@ Use the analogous induction predicate which asserts this conclusion for every U 
 ```math
  \mathrm{Fin}_t(\mathrm{All})
  \quad\Longrightarrow\quad
- \forall E^{tt}\,\mathrm{FinIm}(E).
+ \forall E^{tt}\,\mathrm{FinIm}(E)
  \tag{9}
 ```
 
@@ -125,7 +125,7 @@ Work over C, and let w satisfy (4). Let E preserve the Boolean operations and co
 If p is true, w≤p. Boolean preservation makes E monotone, so Ew≤Ep and Ep is true. If p is false, ¬p is true, so w≤¬p; then Ew≤E¬p=¬Ep and Ep is false. Thus E has exactly the current truth profile of identity:
 
 ```math
- \forall p\,(Ep\leftrightarrow p).
+ \forall p\,(Ep\leftrightarrow p)
  \tag{10}
 ```
 
@@ -135,7 +135,7 @@ Now suppose Ep=Eq. Boolean preservation gives E(p↔q)=Top. Applying the whole n
  E\Box(p\leftrightarrow q)
  =\Box E(p\leftrightarrow q)
  =\Box\top
- =\top.
+ =\top
  \tag{11}
 ```
 
@@ -157,7 +157,7 @@ At full schema scope the explicit C premise can be recovered. FinBoxSep implies 
  \boxed{
  \mathrm H+\mathrm{Actuality}+\mathrm{FinBoxSep}
  \quad\equiv\quad
- \mathrm H+\mathrm{Fin}_t(\mathrm{All})+\mathrm{BoxSep}.}
+ \mathrm H+\mathrm{Fin}_t(\mathrm{All})+\mathrm{BoxSep}}
  \tag{12}
 ```
 
@@ -171,7 +171,7 @@ Let P be any nonempty set-sized partially ordered frame with a least point o. Us
 
 ```math
  D_t(x)=\mathcal P(\mathord\uparrow x),
- \qquad p\text{ is true at }x\ \Longleftrightarrow\ x\in p.
+ \qquad p\text{ is true at }x\ \Longleftrightarrow\ x\in p
  \tag{13}
 ```
 
@@ -197,7 +197,7 @@ Consequently, in this specified full-model family,
  \boxed{
  \mathrm{FinBoxSep}
  \quad\Longleftrightarrow\quad
- P\text{ is finite and the model satisfies BoxSep}.}
+ P\text{ is finite and the model satisfies BoxSep}}
  \tag{15}
 ```
 
@@ -208,7 +208,7 @@ For completeness, the remaining finite-frame condition has an exact coordinate f
 ```math
  x\le f(x),\qquad f(o)=a,\qquad
  f[\mathord\uparrow x]=\mathord\uparrow f(x)
- \quad\text{for every }x\in P.
+ \quad\text{for every }x\in P
  \tag{16}
 ```
 

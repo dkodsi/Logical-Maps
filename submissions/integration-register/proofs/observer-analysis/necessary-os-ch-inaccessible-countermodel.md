@@ -14,7 +14,7 @@ Use the finite local theorem in [symmetric repair](necessary-os-ch-symmetric-rep
 Q\Vdash\mathrm{ZF+DC},\quad
 \mathbb R=\check R,\quad
 \omega_1=\check\kappa,\quad
-\check\kappa\not\hookrightarrow\check R.
+\check\kappa\not\hookrightarrow\check R
 \tag{1}
 ```
 
@@ -68,7 +68,7 @@ Projection drops all other graph coordinates. Given q≤π_Q(p), use q on retain
 For relative homogeneity, first align compatible Q-parts of p and q. Protect all designated base blocks. At every active repair stage use a common small copy permutation on each designated row orbit, fixing the protected and exceptional indices. The exact commutation identity is
 
 ```math
-\sigma_{da}\pi_{d,a}=\pi_{d,ga}\sigma_a.
+\sigma_{da}\pi_{d,a}=\pi_{d,ga}\sigma_a
 \tag{5}
 ```
 
@@ -91,7 +91,7 @@ Let T be the hereditary symmetric model for Pω and (4). The ordinary normal-fil
 Instead, localize any symmetric name for a subset of ω by (6). Its actual Q-generic extension has the same reals as W by (1). Therefore
 
 ```math
-\mathbb R^T=R.
+\mathbb R^T=R
 \tag{7}
 ```
 
@@ -101,7 +101,7 @@ For A⊆R in T, choose its finite localization and a supported membership row at
 
 ```math
 T\models\forall A\subseteq R\,
-[A\hookrightarrow\omega\ \lor\ A\approx R].
+[A\hookrightarrow\omega\ \lor\ A\approx R]
 \tag{8}
 ```
 
@@ -114,7 +114,7 @@ Form Pω×Col_extra, with Γ acting only on Pω, and use the same filter (4). Ca
 For any supported F-name x⊆check U, construct Q from its Pω support and retain the entire extra factor. Projection is
 
 ```math
-(p,r)\longmapsto(\pi_Q(p),r).
+(p,r)\longmapsto(\pi_Q(p),r)
 \tag{9}
 ```
 
@@ -129,7 +129,7 @@ An F-injection graph between the cells would localize by (9). Its injection prop
 Let B_T=RO(Pω) and B_F=RO(Pω×Col_extra), computed in W. The natural inclusion gives a complete embedding i:B_T→B_F. Fix a base block β. Shift its inner coordinates n↦n+1 and send the extra coloring to the freed coordinate (β,0). The resulting map h:B_F→B_T satisfies
 
 ```math
-hi=j_\beta.
+hi=j_\beta
 \tag{10}
 ```
 
@@ -162,7 +162,7 @@ Within either symmetric ZF model, complete ordered-field categoricity follows fr
 
 ```math
 \|U_{e,\mathrm{CH}}\|=(1,0),\qquad
-\|U_{e,\neg\mathrm{CH}}\|=(0,1).
+\|U_{e,\neg\mathrm{CH}}\|=(0,1)
 \tag{12}
 ```
 

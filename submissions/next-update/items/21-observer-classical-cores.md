@@ -8,7 +8,7 @@ Normalize every relational type recursively:
 
 ```math
 r_e(x)=x,\qquad r_t(p)=E(p),\qquad
-r_{\sigma\tau}(f)=\lambda x^\sigma.\,r_\tau(f(r_\sigma(x))).
+r_{\sigma\tau}(f)=\lambda x^\sigma.\,r_\tau(f(r_\sigma(x)))
 ```
 
 Keep the fixed relational objects and identify individuals when $`E(a=b)=\top`$. The notation at e introduces no individual-valued operation. All eligible observers give the same individual quotient and canonically isomorphic pure logical cores. Individual constants are preserved; named relations require compatibility of their normalized interpretations. **Functional Choice and Boolean Completeness descend instancewise.**

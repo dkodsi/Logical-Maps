@@ -14,7 +14,7 @@ Take a nonempty individual domain, D_t=2×L, and the full function space at ever
 \begin{aligned}
 (i,l)\land(j,m)&:=(i\land j,l\land_d m),\\
 (i,l)\lor(j,m)&:=(i\lor j,l\lor_c m),\\
-\neg(i,l)&:=(1-i,c(l)).
+\neg(i,l)&:=(1-i,c(l))
 \end{aligned}
 ```
 
@@ -51,7 +51,7 @@ D_l(i,m):=\begin{cases}T&m\not\le_c l,\\B&\text{otherwise.}\end{cases}
 Use these observers together with E_*. They fix both endpoints and all identity judgments. For every admitted nonempty family (m_x),
 
 ```math
-\sup_c(m_x)\not\le_c l\quad\Longleftrightarrow\quad\exists x\,(m_x\not\le_c l).
+\sup_c(m_x)\not\le_c l\quad\Longleftrightarrow\quad\exists x\,(m_x\not\le_c l)
 ```
 
 This follows because l is an upper bound of the family exactly when every member is below l. It proves existential preservation; the two-input instance proves disjunction preservation. The endpoint operations are the Boolean join operations, so these are output identities and hence full composite identities.
@@ -65,7 +65,7 @@ Separation by any class preserving both primitive conjunction and primitive disj
 Here choose p=(0,a) and q=(0,b). Then
 
 ```math
-p\lor q=(0,b),\qquad p\land(p\lor q)=(0,0)\ne(0,a)=p.
+p\lor q=(0,b),\qquad p\land(p\lor q)=(0,0)\ne(0,a)=p
 ```
 
 Thus even material common-class conjunction/disjunction separation fails. In particular C fails, since C identifies the H-equivalent formulas p and p∧(p∨q).

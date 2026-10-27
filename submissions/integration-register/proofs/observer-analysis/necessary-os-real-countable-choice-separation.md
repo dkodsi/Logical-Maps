@@ -28,7 +28,7 @@ Here is a fixed native real-choice sentence, so the conclusion is not merely a f
 &\quad\land\forall n\,x\,[(Fn)x\to Nn\land Xx\land(Hn)x],\\
 \mathrm{CC}_{N,X}
 &:=\forall H\,[\mathrm{Serial}_{N,X}(H)
-             \to\exists F\,\mathrm{Select}_{N,X}(F,H)].
+             \to\exists F\,\mathrm{Select}_{N,X}(F,H)]
 \end{aligned}
 \tag{2}
 ```
@@ -40,14 +40,14 @@ In the construction N is the standard ground natural-number predicate within the
 Put K=2^ω as computed in W. Let C be the Boolean algebra of its finite-cylinder sets: a member's membership depends on a finite set S⊂ω of coordinates. For such S let C_S be the finite Boolean subalgebra of sets determined by S. Explicitly,
 
 ```math
-C=\bigcup_{S\in[\omega]^{<\omega}}C_S.
+C=\bigcup_{S\in[\omega]^{<\omega}}C_S
 \tag{3}
 ```
 
 Let Γ be the group of finite subsets of ω, with symmetric difference as product, acting on K by flipping the listed bits. It acts on C by direct image. Set
 
 ```math
-H_S=\{g\in\Gamma:g\cap S=\varnothing\}.
+H_S=\{g\in\Gamma:g\cap S=\varnothing\}
 \tag{4}
 ```
 
@@ -65,14 +65,14 @@ and, whenever τ≠e,
 ```math
 D_{\sigma\tau}
 =\{f\in(D_\tau^{D_\sigma})^W:
-                 f\text{ has a finite support}\}.
+                 f\text{ has a finite support}\}
 \tag{6}
 ```
 
 The action on functions is conjugation:
 
 ```math
-(g\cdot f)(x)=g\cdot f(g^{-1}\cdot x).
+(g\cdot f)(x)=g\cdot f(g^{-1}\cdot x)
 \tag{7}
 ```
 
@@ -105,7 +105,7 @@ Choose the old point z∈K with every coordinate zero, and call b∈C true iff z
 
 ```math
 z\in\bigcup_xF(x)\iff\exists x\ z\in F(x),\qquad
-z\in\bigcap_xF(x)\iff\forall x\ z\in F(x).
+z\in\bigcap_xF(x)\iff\forall x\ z\in F(x)
 \tag{9}
 ```
 
@@ -121,7 +121,7 @@ For every a∈D_σ, its endpoint-valued singleton property is supported by any s
 \|\Box\varphi\|=
 \begin{cases}
 K,&\|\varphi\|=K,\\
-\varnothing,&\|\varphi\|\ne K.
+\varnothing,&\|\varphi\|\ne K
 \end{cases}
 \tag{10}
 ```
@@ -135,7 +135,7 @@ For each g∈Γ let E_g:C→C be its Boolean action. The group is abelian, so E_
 For every nonempty b∈C_S,
 
 ```math
-\bigcup_{g\subseteq S} E_g(b)=K.
+\bigcup_{g\subseteq S} E_g(b)=K
 \tag{11}
 ```
 
@@ -144,7 +144,7 @@ Indeed the finite flips of S move a point of any nonempty S-cylinder to every ot
 ```math
 \Box\mathrm{Rev}_{\rm all},
 \qquad\text{and hence}\qquad
-\Box\mathrm{OS}_{\rm all}.
+\Box\mathrm{OS}_{\rm all}
 \tag{12}
 ```
 
@@ -159,7 +159,7 @@ Therefore, at each point, the admitted real subsets and finite-arity real relati
 Take the whole real carrier, ground 0 and 1, field operations as endpoint-valued relational graphs, ground order, and the ground natural-number predicate. The same tuple is persistent and satisfies Real at every point. In particular any admitted nonempty bounded real subproperty evaluates to a W-subset of W's reals and has its W-supremum. The usual ground induction clause also applies to exactly the admitted evaluated subsets. Thus
 
 ```math
-\Box\mathrm{Real}_e(\top_e,0,1,+,\times,\le,N).
+\Box\mathrm{Real}_e(\top_e,0,1,+,\times,\le,N)
 \tag{13}
 ```
 
@@ -172,14 +172,14 @@ PSP in W implies its subset-cardinality form of CH without Choice. For A⊆R, ei
 To verify the universal real-field form as well, an admitted tuple satisfying Real at a point has W real-relation extensions. All W real subsets are admitted, so it is a complete Archimedean ordered field in W. The usual ZF categoricity proof supplies its W-isomorphism with the standard W real field; that graph is admitted. Transferring W's CH witnesses proves
 
 ```math
-\Box U_{e,\mathrm{CH}}.
+\Box U_{e,\mathrm{CH}}
 \tag{14}
 ```
 
 Now choose in W a sequence (A_n) of nonempty real sets with no choice function, supplied by (1). Its incidence relation H(n,x) is an endpoint-valued admitted relation. It satisfies Serial_{N,top_e}(H) at every point. If an admitted F selected from H at any point, its evaluated relation would be a W graph selecting one element from each A_n, contrary to the choice of the family. Consequently the existential selector assertion has value ∅, while its seriality premise has value K. Hence
 
 ```math
-\Box\neg\mathrm{CC}_{N,\top_e}.
+\Box\neg\mathrm{CC}_{N,\top_e}
 \tag{15}
 ```
 
@@ -194,7 +194,7 @@ The construction establishes the relative consistency, at the ground strength st
 +\mathrm{Atomless}_t
 +\Box\mathrm{Real}(\text{one persistent tuple})
 +\Box U_{e,\mathrm{CH}}
-+\Box\neg\mathrm{CC}_{N,\top_e}.
++\Box\neg\mathrm{CC}_{N,\top_e}
 \tag{16}
 ```
 

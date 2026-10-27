@@ -64,7 +64,7 @@ union of the graph data. Countable support and boundedness ensure that the
 final automorphism $`d`$ has the stipulated small form. Thus
 
 ```math
-\forall p,q\in T\;\exists d\text{ small}\quad d(p)\parallel q. \tag{1}
+\forall p,q\in T\;\exists d\text{ small}\quad d(p)\parallel q \tag{1}
 ```
 
 There is no need for a uniform permutation at all raw rows. All the rows
@@ -75,7 +75,7 @@ Let $`B_T=\mathrm{RO}(T)`$. Equation (1) implies, for every nonzero
 $`b\in B_T`$,
 
 ```math
-\bigvee_{d\text{ small}}d(b)=1.                         \tag{2}
+\bigvee_{d\text{ small}}d(b)=1                         \tag{2}
 ```
 
 For if a nonzero condition lay below the complement of that join, choose
@@ -121,7 +121,7 @@ $`h`$ sends the extra coloring into base coordinate $`(\beta,0)`$, while
 compressing the $`T`$-part by $`j_\beta`$. Consequently
 
 ```math
-h i=j_\beta.                                           \tag{5}
+h i=j_\beta                                           \tag{5}
 ```
 
 Let the simultaneous group act on $`F`$ by its action on $`T`$ and fix the
@@ -129,7 +129,7 @@ extra coloring factor pointwise. Then $`i`$ is equivariant. The map $`h`$
 is supported by
 
 ```math
-C_\Gamma(j_\beta)\cap\mathrm{Fix}(\text{block }\beta). \tag{6}
+C_\Gamma(j_\beta)\cap\mathrm{Fix}(\text{block }\beta) \tag{6}
 ```
 
 Indeed, (5) proves equivariance on the $`T`$-generators for a group element
@@ -144,7 +144,7 @@ suffice. No automorphisms of the extra coloring factor are needed.
 On $`B=B_T\times B_F`$, define
 
 ```math
-E_T(b,c)=(b,i b),\qquad E_F(b,c)=(h c,c).                \tag{7}
+E_T(b,c)=(b,i b),\qquad E_F(b,c)=(h c,c)                \tag{7}
 ```
 
 They are complete unital Boolean homomorphisms. The supports in §4 show
@@ -156,7 +156,7 @@ Every small $`T`$-automorphism $`d`$ lifts to a simultaneous product
 automorphism $`\widetilde d=(d,d_F)`$, where
 
 ```math
-d_F i=i d.                                             \tag{8}
+d_F i=i d                                             \tag{8}
 ```
 
 These lifted automorphisms are admitted by §3. If $`r=(b,c)\ne0`$ and
@@ -164,14 +164,14 @@ $`b\ne0`$, equations (2) and (8), together with completeness of $`i`$, give
 
 ```math
 \bigvee_d\widetilde d E_T(r)
- =\left(\bigvee_d d b,\ i\bigvee_d d b\right)=(1,1).      \tag{9}
+ =\left(\bigvee_d d b,\ i\bigvee_d d b\right)=(1,1)      \tag{9}
 ```
 
 If instead $`c\ne0`$, injectivity of $`h`$ gives $`h c\ne0`$, and
 
 ```math
 \bigvee_d\widetilde d E_T E_F(r)
- =\left(\bigvee_d d h c,\ i\bigvee_d d h c\right)=(1,1).  \tag{10}
+ =\left(\bigvee_d d h c,\ i\bigvee_d d h c\right)=(1,1)  \tag{10}
 ```
 
 Thus admitted qualified observers cover every nonzero Boolean difference.

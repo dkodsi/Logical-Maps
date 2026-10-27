@@ -25,7 +25,7 @@ An observer is an admitted operation $`O^{tt}`$. For each finite list $`\Delta`$
  &= (\lambda F^{\sigma t}.\,\forall x^\sigma O(Fx)),\\
 (\lambda F^{\sigma t}.\,O(\exists x^\sigma Fx))
  &= (\lambda F^{\sigma t}.\,\exists x^\sigma O(Fx))
- \qquad(\sigma\in\Delta).
+ \qquad(\sigma\in\Delta)
 \end{aligned}
 \tag{1}
 ```
@@ -36,7 +36,7 @@ For each $`\sigma\in\Delta`$, also retain the translated equality clauses
 \begin{aligned}
 &\forall x^\sigma\,O(x=x),\\
 &\forall x,y^\sigma\,\forall F^{\sigma t}
-  \bigl[O(x=y)\to(O(Fx)\to O(Fy))\bigr].
+  \bigl[O(x=y)\to(O(Fx)\to O(Fy))\bigr]
 \end{aligned}
 \tag{2}
 ```
@@ -47,7 +47,7 @@ Define
 
 ```math
 \mathrm{EndVal}(O):=
-\forall p^t\,(Op=\top\lor Op=\bot).
+\forall p^t\,(Op=\top\lor Op=\bot)
 \tag{3}
 ```
 
@@ -63,7 +63,7 @@ X=Y\ \leftrightarrow\
 \forall O^{tt}\left(
 \mathrm{Good}_{\Delta}(O)\land\mathrm{EndVal}(O)
 \to\forall\bar x\,[O(X[\bar x])\leftrightarrow O(Y[\bar x])]
-\right)\right].
+\right)\right]
 \tag{EndSep}
 ```
 
@@ -75,7 +75,7 @@ For every original input type $`\sigma`$, including $`e`$, every set $`I`$, and 
 
 ```math
 \exists R^{\sigma t}\;\forall x^\sigma
-\left(Rx\leftrightarrow\bigvee_{i\in I}(x=a_i)\right).
+\left(Rx\leftrightarrow\bigvee_{i\in I}(x=a_i)\right)
 \tag{Range-infinity}
 ```
 
@@ -87,7 +87,7 @@ The proposed intrinsic package is
 
 ```math
 \mathsf T_{\mathrm{obs}}:=
-\mathrm H+\mathrm{End}+\mathrm{Range}_{\infty}.
+\mathrm H+\mathrm{End}+\mathrm{Range}_{\infty}
 \tag{4}
 ```
 
@@ -100,7 +100,7 @@ The established finitary characterization is
 ```math
 \mathrm H+\mathrm{End}
 \quad\equiv\quad
-\mathrm{C5}+\mathrm{Atomicity}_t.
+\mathrm{C5}+\mathrm{Atomicity}_t
 \tag{5}
 ```
 
@@ -113,7 +113,7 @@ There is a canonical correspondence between atoms and endpoint observers:
 ```math
 a\longmapsto O_a,\qquad O_a(p)=\Box(a\to p);
 \qquad
-O\longmapsto a_O=\forall p\,(Op\to p).
+O\longmapsto a_O=\forall p\,(Op\to p)
 \tag{6}
 ```
 
@@ -133,7 +133,7 @@ Fix any external family $`(b_i)_{i\in I}`$ of atoms of a relational type $`\tau`
 \forall Y^\tau\left[
 \left(\forall Z^\tau\,(XZ\to Z\le_\tau Y)\right)
 \leftrightarrow J\le_\tau Y
-\right].
+\right]
 \tag{7}
 ```
 
@@ -148,7 +148,7 @@ Let $`W`$ be the set of propositional atoms and $`w_0`$ its unique currently tru
 ```math
 \beta_\tau(R)=
 \{(w,\bar a)\in W\times\textstyle\prod_kD_{\sigma_k}:
-w\le R[\bar a]\}.
+w\le R[\bar a]\}
 \tag{8}
 ```
 
@@ -171,7 +171,7 @@ has support exactly $`\{z\}`$. It is therefore an atom of that relation type. Fo
 Let $`U\subseteq W\times\prod_kD_{\sigma_k}`$ be arbitrary. Form the external join $`J`$ of $`\{s_z:z\in U\}`$. Every point of $`U`$ belongs to $`\beta_\tau(J)`$. If $`z\notin U`$ nevertheless belonged to that support, then $`J\land\neg s_z`$ would be a strictly smaller upper bound of all the same singleton atoms. This contradicts leastness. Hence
 
 ```math
-\beta_\tau(J)=U.
+\beta_\tau(J)=U
 \tag{10}
 ```
 
@@ -214,7 +214,7 @@ The actual-truth evaluator connection gives alternative finite components. Put
 \mathrm{Eval}(B):=
 \forall p\,[(p\to Bp=\top)\land(\neg p\to Bp=\bot)],
 \qquad
-\mathrm{BE}:=\exists B^{tt}\,\mathrm{Eval}(B).
+\mathrm{BE}:=\exists B^{tt}\,\mathrm{Eval}(B)
 \tag{12}
 ```
 
@@ -223,7 +223,7 @@ Let OS be full ordinary logical separation with the same whole-operation qualifi
 ```math
 \mathrm H+\mathrm{End}
 \equiv\mathrm H+\mathrm{OS}+\mathrm{BE}
-\equiv\mathrm C+\Box\mathrm{BE}.
+\equiv\mathrm C+\Box\mathrm{BE}
 \tag{13}
 ```
 

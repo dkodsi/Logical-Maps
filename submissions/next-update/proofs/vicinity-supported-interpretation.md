@@ -11,14 +11,14 @@ The common-core mechanism extends Christopher Sun's 19 October 2026 argument in 
 Choose a true Vicinity witness w. Put
 
 ```math
-A_w:=\forall r^t\, .\,(r\to w\le\Diamond r),\qquad s:=w\land A_w.
+A_w:=\forall r^t\, .\,(r\to w\le\Diamond r),\qquad s:=w\land A_w
 ```
 
 Both w and A_w, hence s, are currently true. For every fixed admitted argument type σ and every admitted F:σt,
 
 ```math
 \bigl[\forall x^\sigma\, .\,(s\le F(x))\bigr]
-\ \Longrightarrow\ s\le\forall x^\sigma F(x).
+\ \Longrightarrow\ s\le\forall x^\sigma F(x)
 \tag{3}
 ```
 
@@ -28,7 +28,7 @@ For the proof let T:=∀x(s≤F(x)) be currently true. Vicinity gives
 w≤◇(w∧T). Work at any accessible evaluation v where s is true. Suppose that an x available there satisfies ¬F(x). At v the A_w conjunct applies to the proposition s∧¬F(x), which is true there, and gives
 
 ```math
-w\le\Diamond(s\land\neg F(x)).
+w\le\Diamond(s\land\neg F(x))
 ```
 
 The bound w≤◇(w∧T) obtained at the original evaluation persists to v. Since w holds at v, there is an accessible u where w∧T holds. The parameter x is available at u; this uses only the converse-Barcan direction. T supplies □(s→F(x)) at u. The bound obtained at v also persists to u, and w there gives ◇(s∧¬F(x)), a contradiction. Thus every x at every accessible s-evaluation satisfies F(x), proving (3).
@@ -38,7 +38,7 @@ This is an ordinary S4/CBF derivation expressed by evaluations. No Barcan premis
 For every current identity E=(a=b), at any type, s decides E according to its current truth. If E is true, NI gives E=1. If E is false, Vicinity gives w≤◇¬E. NI makes E persistent, so ◇¬E=¬E. Consequently
 
 ```math
-s\land E=\begin{cases}s,&a=b,\\0,&a\ne b.\end{cases}
+s\land E=\begin{cases}s,&a=b,\\0,&a\ne b\end{cases}
 \tag{4}
 ```
 
@@ -48,7 +48,7 @@ There is also an exact range-bound consequence. For any admitted f:σt,
 
 ```math
 s\land\exists x^\sigma f(x)
-=\bigvee_{x\text{ current}}\bigl(s\land f(x)\bigr).
+=\bigvee_{x\text{ current}}\bigl(s\land f(x)\bigr)
 \tag{5}
 ```
 
@@ -60,7 +60,7 @@ Define hereditary retractions by
 
 ```math
 j_e(x):=x,\qquad j_t(p):=s\land p,\qquad
-j_{\sigma\tau}(F):=\lambda x^\sigma\, .\,j_\tau(F(j_\sigma x)).
+j_{\sigma\tau}(F):=\lambda x^\sigma\, .\,j_\tau(F(j_\sigma x))
 \tag{6}
 ```
 
@@ -69,7 +69,7 @@ The e-case is a substitution convention, **not** a term of the forbidden type ee
 These are idempotent as whole operations. At t this is the Boolean identity s∧(s∧p)=s∧p, also under abstraction. Inductively, β-expansion of j_(στ)(j_(στ)F) gives
 
 ```math
-\lambda x\,j_\tau\bigl(j_\tau(F(j_\sigma(j_\sigma x)))\bigr).
+\lambda x\,j_\tau\bigl(j_\tau(F(j_\sigma(j_\sigma x)))\bigr)
 ```
 
 The already established lower-type whole identities reduce this to j_(στ)F. The same reduction under the outer F-abstraction proves whole-operation idempotence at the new type. All replacements are substitutions of entity identities in terms; there is no appeal to Functionality or to Logical Equivalence under an optional premise.
@@ -85,7 +85,7 @@ with D_e(x):=(x=x). Each domain is inhabited and is exactly the image of j_τ. I
 In the supported interpretation, use these concrete carriers and restricted application. At t use 0 and s as the endpoints, ordinary meet and join, and relative complement p↦s∧¬p. On fixed arguments equality is
 
 ```math
-\mathrm{eq}_s(x,y):=s\land(x=y).
+\mathrm{eq}_s(x,y):=s\land(x=y)
 \tag{7}
 ```
 
@@ -95,7 +95,7 @@ Interpret an abstraction by evaluating its body on projected arguments and retra
 
 ```math
 \exists_s x\, .\,F(x):=s\land\exists x\,F(j_\sigma x),\qquad
-\forall_s x\, .\,F(x):=s\land\forall x\,F(j_\sigma x).
+\forall_s x\, .\,F(x):=s\land\forall x\,F(j_\sigma x)
 \tag{8}
 ```
 
@@ -112,7 +112,7 @@ Under E and s the usual H proof translates as follows. Identity and substitution
 In particular, if H proves Φ↔Ψ, the preceding translation gives the **old-H theorem**
 
 ```math
-(E\land\Phi^s)\ \longleftrightarrow\ (E\land\Psi^s).
+(E\land\Phi^s)\ \longleftrightarrow\ (E\land\Psi^s)
 \tag{9}
 ```
 
@@ -140,7 +140,7 @@ Let O be the represented family of persistent propositions p=□p. A member of O
 
 ```math
 \mathrm{Vicinity}\quad\longleftrightarrow\quad
-\text{O has a greatest proper member}.
+\text{O has a greatest proper member}
 \tag{10}
 ```
 

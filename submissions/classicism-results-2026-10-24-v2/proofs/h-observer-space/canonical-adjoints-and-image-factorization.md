@@ -40,21 +40,21 @@ Define
 ```math
 R(q):=\exists p^t\,[(Ep\le q)\land p],
 \qquad
-L(q):=\neg R(\neg q).
+L(q):=\neg R(\neg q)
 \tag{2}
 ```
 
 The order guard Ep≤q abbreviates an identity judgment. C5 makes it an endpoint, so E fixes it. Type-t existential preservation therefore gives
 
 ```math
-E(Rq)=\exists p\,[(Ep\le q)\land Ep]\le q.
+E(Rq)=\exists p\,[(Ep\le q)\land Ep]\le q
 \tag{3}
 ```
 
 For the inequality, each joinand is 0 when its guard is false and is Ep≤q when its guard is true. Conversely, if Ep≤q, the p-joinand in (2) is p, and hence p≤Rq. Monotonicity of E and (3) prove
 
 ```math
-\boxed{Ep\le q\quad\longleftrightarrow\quad p\le Rq.}
+\boxed{Ep\le q\quad\longleftrightarrow\quad p\le Rq}
 \tag{4}
 ```
 
@@ -65,7 +65,7 @@ Boolean complementation gives the dual adjunction:
 Lq\le p
 &\longleftrightarrow \neg p\le R(\neg q)\\
 &\longleftrightarrow E(\neg p)\le\neg q\\
-&\longleftrightarrow q\le Ep.
+&\longleftrightarrow q\le Ep
 \end{aligned}
 \tag{5}
 ```
@@ -80,7 +80,7 @@ p\le R(\forall x^\sigma Fx)
 &\longleftrightarrow Ep\le\forall x^\sigma Fx\\
 &\longleftrightarrow\forall x^\sigma\,(Ep\le Fx)\\
 &\longleftrightarrow\forall x^\sigma\,(p\le R(Fx))\\
-&\longleftrightarrow p\le\forall x^\sigma R(Fx).
+&\longleftrightarrow p\le\forall x^\sigma R(Fx)
 \end{aligned}
 \tag{6}
 ```
@@ -94,7 +94,7 @@ In particular R preserves binary meet and 1; L preserves binary join and 0. Thes
 Put
 
 ```math
-k:=R0,\qquad a:=\neg k.
+k:=R0,\qquad a:=\neg k
 \tag{7}
 ```
 
@@ -103,7 +103,7 @@ Equations (3)–(4) give
 ```math
 Ek=0,
 \qquad
-Ep=0\quad\longleftrightarrow\quad p\le k.
+Ep=0\quad\longleftrightarrow\quad p\le k
 \tag{8}
 ```
 
@@ -116,7 +116,7 @@ For any x,p,
 Ex\le Ep
 &\longleftrightarrow E(x\land\neg p)=0\\
 &\longleftrightarrow x\land\neg p\le k\\
-&\longleftrightarrow x\le p\lor k.
+&\longleftrightarrow x\le p\lor k
 \end{aligned}
 \tag{9}
 ```
@@ -124,7 +124,7 @@ Ex\le Ep
 Combining (9) with (4), and then taking Boolean duals, yields
 
 ```math
-\boxed{R(Ep)=p\lor k,\qquad L(Ep)=p\land a.}
+\boxed{R(Ep)=p\lor k,\qquad L(Ep)=p\land a}
 \tag{10}
 ```
 
@@ -133,7 +133,7 @@ The exact fiber and order conditions are
 ```math
 \begin{aligned}
 Ep=Eq&\longleftrightarrow p\land a=q\land a,\\
-Ep\le Eq&\longleftrightarrow p\land a\le q\land a.
+Ep\le Eq&\longleftrightarrow p\land a\le q\land a
 \end{aligned}
 \tag{11}
 ```
@@ -145,7 +145,7 @@ Define the normalized right adjoint and image predicate by
 ```math
 r(q):=a\land Rq,
 \qquad
-\mathrm{Im}_E(q):=\exists p\,(Ep=q).
+\mathrm{Im}_E(q):=\exists p\,(Ep=q)
 \tag{12}
 ```
 
@@ -154,14 +154,14 @@ These are admitted terms. Since k≤Rq by monotonicity,
 ```math
 Rq=k\lor r(q),\qquad
 R1=1,\quad L0=0,\quad L1=a,
-\quad r0=0,\quad r1=a.
+\quad r0=0,\quad r1=a
 \tag{13}
 ```
 
 Both r(q) and Lq lie in [0,a]. For an image value q=Ep, equation (10) gives
 
 ```math
-r(q)=Lq=p\land a.
+r(q)=Lq=p\land a
 \tag{14}
 ```
 
@@ -180,7 +180,7 @@ The image is closed under every admitted quantifier family whose values lie in i
 ```math
 E(\forall x\,L(Fx))=\forall x\,Fx,
 \qquad
-E(\exists x\,L(Fx))=\exists x\,Fx.
+E(\exists x\,L(Fx))=\exists x\,Fx
 \tag{16}
 ```
 
@@ -192,7 +192,7 @@ Define the admitted operators
 
 ```math
 j:=E\circ R,
-\qquad c:=E\circ L.
+\qquad c:=E\circ L
 \tag{17}
 ```
 
@@ -206,7 +206,7 @@ j(q)\le q\le c(q),
 ```math
 \mathrm{Im}_E(q)
 \longleftrightarrow j(q)=q
-\longleftrightarrow c(q)=q.
+\longleftrightarrow c(q)=q
 \tag{19}
 ```
 
@@ -215,7 +215,7 @@ The range of each of j,c is exactly the image of E. The floor and ceiling proper
 ```math
 j^2=j,\qquad c^2=c,\qquad
 j\circ c=c,\qquad c\circ j=j,
-\qquad c(q)=\neg j(\neg q).
+\qquad c(q)=\neg j(\neg q)
 \tag{20}
 ```
 
@@ -226,14 +226,14 @@ Thus j is an **auxiliary S5 interior operator** on the Boolean proposition algeb
 The normalized adjoints satisfy
 
 ```math
-r(q)\le Lq.
+r(q)\le Lq
 \tag{21}
 ```
 
 For E(rq)=j(q)≤c(q)=E(Lq), and both arguments lie in [0,a], where E reflects order by (11). Equality holds precisely at the image values:
 
 ```math
-r(q)=Lq\quad\longleftrightarrow\quad\mathrm{Im}_E(q).
+r(q)=Lq\quad\longleftrightarrow\quad\mathrm{Im}_E(q)
 \tag{22}
 ```
 
@@ -243,7 +243,7 @@ There is also an exact test for idempotence of the original observer:
 
 ```math
 \boxed{E\circ E=E\quad\longleftrightarrow\quad
-\forall q\,[j(q)\le Eq\le c(q)].}
+\forall q\,[j(q)\le Eq\le c(q)]}
 \tag{23}
 ```
 
@@ -270,7 +270,7 @@ If R preserves binary joins, then
 ```math
 j(q)\lor j(\neg q)
 =E(Rq\lor R(\neg q))
-=E(R1)=1.
+=E(R1)=1
 \tag{24}
 ```
 
@@ -293,7 +293,7 @@ Define
 ```math
 T^-(q):=r(q)\lor(k\land q),
 \qquad
-T^+(q):=Lq\lor(k\land q).
+T^+(q):=Lq\lor(k\land q)
 \tag{25}
 ```
 
@@ -308,7 +308,7 @@ T^-0=T^+0=0,\qquad T^-1=T^+1=1,
 ```math
 T^+(q)=\neg T^-(\neg q),
 \qquad E\circ T^-=j,
-\qquad E\circ T^+=c.
+\qquad E\circ T^+=c
 \tag{27}
 ```
 
@@ -319,7 +319,7 @@ The operator r preserves binary meets and all admitted universal quantifiers, wi
 ```math
 r(\forall x\,Fx)
 =a\land\forall x\,R(Fx)
-=\forall x\,(a\land R(Fx)).
+=\forall x\,(a\land R(Fx))
 \tag{28}
 ```
 
@@ -336,7 +336,7 @@ For example, the partition identity gives
 &=(a\land\forall x\,r(Fx))
   \lor(k\land\forall x\,Fx)\\
 &=r(\forall x\,Fx)\lor(k\land\forall x\,Fx)
-=T^-(\forall x\,Fx).
+=T^-(\forall x\,Fx)
 \end{aligned}
 \tag{29}
 ```
@@ -349,7 +349,7 @@ Moreover,
 \boxed{
 E\text{ onto}\quad\longleftrightarrow\quad
 T^-=T^+\quad\longleftrightarrow\quad
-V(T^-)\quad\longleftrightarrow\quad N(T^-).}
+V(T^-)\quad\longleftrightarrow\quad N(T^-)}
 \tag{30}
 ```
 
@@ -365,7 +365,7 @@ Write $`\Box_t:=\lambda q.(q=1)`$ for the fixed necessity operation, and $`\Diam
 \Box_t(q)=
 \begin{cases}
 1& q=1,\\
-0& q\ne1.
+0& q\ne1
 \end{cases}
 \tag{31}
 ```
@@ -378,7 +378,7 @@ No case-function admission is inferred from this notation: Box_t is the already 
 \boxed{
 \forall p\,(Ep=0\lor Ep=1)
 \quad\longleftrightarrow\quad j=\Box_t
-\quad\longleftrightarrow\quad c=\Diamond_t.}
+\quad\longleftrightarrow\quad c=\Diamond_t}
 \tag{32}
 ```
 
@@ -398,7 +398,7 @@ E\text{ injective}
 \quad\longleftrightarrow\quad
 E\circ\Box_t=\Box_t\circ E
 \quad\longleftrightarrow\quad
-E\circ\Diamond_t=\Diamond_t\circ E.}
+E\circ\Diamond_t=\Diamond_t\circ E}
 \tag{33}
 ```
 

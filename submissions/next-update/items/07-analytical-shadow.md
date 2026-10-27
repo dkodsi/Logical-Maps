@@ -5,7 +5,7 @@
 For every second-order arithmetic sentence A, using current numerical sets extensionally:
 
 $$
-\mathrm{Max}(C)\vdash A^e\quad\Longleftrightarrow\quad C+I_e+\mathrm{True}\Pi^0_1\vdash A^e\quad\Longleftrightarrow\quad(C+\Box\mathrm{Plenitude}+\mathrm{Infinity}_e+\mathrm{Infinity}_t)+\mathrm{True}\Pi^0_1\vdash A^e.
+\mathrm{Max}(C)\vdash A^e\quad\Longleftrightarrow\quad C+I_e+\mathrm{True}\Pi^0_1\vdash A^e\quad\Longleftrightarrow\quad(C+\Box\mathrm{Plenitude}+\mathrm{Infinity}_e+\mathrm{Infinity}_t)+\mathrm{True}\Pi^0_1\vdash A^e
 $$
 
 Iₑ is numerical noncollapse, not quantified individual Infinity; TrueΠ⁰₁ is the external set of standard-true first-order Π₁ sentences. The theorem concerns every finite analytical complexity, not arbitrary modal formulas or intensional identity of real predicates.

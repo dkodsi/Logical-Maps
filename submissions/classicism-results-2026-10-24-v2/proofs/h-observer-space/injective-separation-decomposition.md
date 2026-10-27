@@ -14,7 +14,7 @@ Use 0,1 for Bottom, Top and p≤q for p∧q=p. For an injective Good_Δ observer
 
 ```math
 L_E\dashv E\dashv R_E,
-\qquad L_EE=I=R_EE.
+\qquad L_EE=I=R_EE
 \tag{1}
 ```
 
@@ -29,7 +29,7 @@ j_Eq\le q\le C_Eq,
 and the Frobenius identity
 
 ```math
-L_E(q\land Ep)=L_Eq\land p.
+L_E(q\land Ep)=L_Eq\land p
 \tag{3}
 ```
 
@@ -42,7 +42,7 @@ Define
 J_\Delta:=\exists E^{tt}c^t\,[
 &\mathrm{Good}_\Delta(E)\land\mathrm{Inj}(E)
 \land c\\
-&\land\forall p^t\,(Ep\le c\to p=0)].
+&\land\forall p^t\,(Ep\le c\to p=0)]
 \end{aligned}
 \tag{4}
 ```
@@ -57,7 +57,7 @@ S_{\tau,\Delta}[\mathrm{Inj}]
 \ \longleftrightarrow\
 S_{\tau,\Delta}[\mathrm{Rev}]
 \ \lor\
-\bigl(S_{\tau,\Delta}[\mathrm{Good}]\land J_\Delta\bigr).
+\bigl(S_{\tau,\Delta}[\mathrm{Good}]\land J_\Delta\bigr)
 }
 \tag{5}
 ```
@@ -69,7 +69,7 @@ Both disjuncts refer to the same fixed output type and finite qualification list
 Suppose E,c witness J_Δ. For an arbitrary admitted Good_Δ observer G, define the admitted lambda term
 
 ```math
-E_G(p):=(c\land Gp)\lor(\neg c\land Ep).
+E_G(p):=(c\land Gp)\lor(\neg c\land Ep)
 \tag{6}
 ```
 
@@ -77,7 +77,7 @@ Boolean partition patching makes E_G Good_Δ with full composite identities. The
 
 ```math
 \neg c\land Ep=\neg c\land Eq,
-\qquad E(p\mathbin\triangle q)\le c.
+\qquad E(p\mathbin\triangle q)\le c
 \tag{7}
 ```
 
@@ -86,7 +86,7 @@ Condition (4) gives p△q=0 and therefore p=q. This proves Inj(E_G). Equivalentl
 Since c is currently true, the entire current truth profile is preserved:
 
 ```math
-\forall p\,(E_Gp\leftrightarrow Gp).
+\forall p\,(E_Gp\leftrightarrow Gp)
 \tag{8}
 ```
 
@@ -97,7 +97,7 @@ The same E,c work for every G. No choice of a family of replacement observers is
 Fix one injective Good_Δ observer E. Suppress its subscript on L,R,j,C_E and form the admitted proposition
 
 ```math
-u:=\forall q^t\,(jq\leftrightarrow q).
+u:=\forall q^t\,(jq\leftrightarrow q)
 \tag{9}
 ```
 
@@ -105,21 +105,21 @@ An unconditional universal-instantiation theorem, followed by C's Boolean identi
 
 ```math
 u\land jq=u\land q
-\qquad\text{for every }q.
+\qquad\text{for every }q
 \tag{10}
 ```
 
 This is an output identity even when u is false. It is the same discharged logical argument used for the local equalizer in the [left-inverse decomposition](left-inverse-separation-decomposition.md), §3. It does not apply Logical Equivalence to a theorem depending on an optional hypothesis. Applying (10) to ¬q and taking the relative complement inside u gives
 
 ```math
-u\land C_Eq=u\land q.
+u\land C_Eq=u\land q
 \tag{11}
 ```
 
 If u is currently false, classical quantifier reasoning supplies q for which jq and q differ in truth. Since jq≤q, q is true and jq false. Put
 
 ```math
-c:=q\land\neg jq.
+c:=q\land\neg jq
 \tag{12}
 ```
 
@@ -130,7 +130,7 @@ Then c is true. Since j=ER, Boolean preservation by E and RE=I yield
 Rc
 &=Rq\land R(\neg ERq)\\
 &=Rq\land R(E(\neg Rq))\\
-&=Rq\land\neg Rq=0.
+&=Rq\land\neg Rq=0
 \end{aligned}
 \tag{13}
 ```
@@ -142,7 +142,7 @@ Conversely, any true c with Rc=0 has jc=0, so (9) is false. Therefore J_Δ is eq
 If u is true, (11) instead provides local inverse structure. For every v≤u and every q,
 
 ```math
-v\land C_E(v\land q)=v\land q.
+v\land C_E(v\land q)=v\land q
 \tag{14}
 ```
 
@@ -155,7 +155,7 @@ Suppose d is currently false, Ed currently true, and u from (9) currently true. 
 ```math
 v:=u\land Ed\land\neg d,
 \qquad a:=Lv,
-\qquad r:=\neg(v\lor a).
+\qquad r:=\neg(v\lor a)
 \tag{15}
 ```
 
@@ -171,21 +171,21 @@ L(v\land Ep)=a\land p,
 while (14) gives
 
 ```math
-v\land E(L(v\land q))=v\land q.
+v\land E(L(v\land q))=v\land q
 \tag{17}
 ```
 
 For p≤a, (16) is p; every q≤v is recovered by (17). Also v≤C_Ev=Ea, so αa=v. Boolean preservation of E gives all relative Boolean laws for α, including its relative complement law. They transfer to its inverse L on [0,v]. In particular the ambient term q↦L(v∧q) has top a, bottom 0 and satisfies
 
 ```math
-L(v\land\neg q)=a\land\neg L(v\land q).
+L(v\land\neg q)=a\land\neg L(v\land q)
 \tag{18}
 ```
 
 Now patch the two inverse interval maps with identity:
 
 ```math
-T(p):=(v\land Ep)\lor L(v\land p)\lor(r\land p).
+T(p):=(v\land Ep)\lor L(v\land p)\lor(r\land p)
 \tag{19}
 ```
 
@@ -197,7 +197,7 @@ For every σ in the requested list and every admitted H:σt, its middle branch p
 \begin{aligned}
 L(v\land\exists x^\sigma Hx)
 &=L(\exists x^\sigma(v\land Hx))\\
-&=\exists x^\sigma L(v\land Hx).
+&=\exists x^\sigma L(v\land Hx)
 \end{aligned}
 \tag{20}
 ```
@@ -207,7 +207,7 @@ The first branch has the same law by E's qualification and fixed-guard distribut
 It remains to check the whole inverse equation. Since v≤Ed and v≤¬d,
 
 ```math
-v\land Ev=0.
+v\land Ev=0
 \tag{21}
 ```
 
@@ -217,7 +217,7 @@ Also v≤Ea and r≤¬a give v∧Er=0. Expanding (19) therefore gives
 \begin{aligned}
 v\land E(Tp)&=v\land E(L(v\land p))=v\land p,\\
 L(v\land Tp)&=L(v\land Ep)=a\land p,\\
-r\land Tp&=r\land p.
+r\land Tp&=r\land p
 \end{aligned}
 \tag{22}
 ```
@@ -233,7 +233,7 @@ Assume S_{τ,Δ}[Inj]. Forgetting injectivity gives S_{τ,Δ}[Good]. If reversib
 Otherwise choose X≠Y of output type τ such that every qualified reversible observer agrees on X,Y at every argument tuple. An injective separator E supplies a tuple ā at which E(Xā) and E(Yā) differ in truth. Put
 
 ```math
-d:=(X\bar a)\mathbin\triangle(Y\bar a).
+d:=(X\bar a)\mathbin\triangle(Y\bar a)
 \tag{23}
 ```
 
@@ -246,7 +246,7 @@ In particular,
 ```math
 \neg J_\Delta\ \longrightarrow\
 \bigl(S_{\tau,\Delta}[\mathrm{Inj}]
-\leftrightarrow S_{\tau,\Delta}[\mathrm{Rev}]\bigr).
+\leftrightarrow S_{\tau,\Delta}[\mathrm{Rev}]\bigr)
 \tag{24}
 ```
 
@@ -257,7 +257,7 @@ One natural sufficient premise for ¬J_Δ is that every injective Good_Δ observ
 Let K_Δ be the established one-pair condition: admitted Good_Δ observers E,F satisfy F∘E=I, and some currently true c satisfies Fc=0. Then
 
 ```math
-K_\Delta\ \longrightarrow\ J_\Delta.
+K_\Delta\ \longrightarrow\ J_\Delta
 \tag{25}
 ```
 
@@ -274,7 +274,7 @@ S_{\tau,\Delta}[\mathrm{Rev}]
 S_{\tau,\Delta}[\mathrm{SplitMono}]
 &\longleftrightarrow&
 S_{\tau,\Delta}[\mathrm{Rev}]
-\lor(S_{\tau,\Delta}[\mathrm{Good}]\land K_\Delta).
+\lor(S_{\tau,\Delta}[\mathrm{Good}]\land K_\Delta)
 \end{array}
 \tag{26}
 ```
@@ -289,7 +289,7 @@ There is a stronger finite reformulation at full scope. Over C5, the individual 
 \text{full separation schema}
 \quad\longleftrightarrow\quad
 S_{t,\{t\}}[\text{that qualification}]
-\qquad\text{over C5}.
+\qquad\text{over C5}
 \tag{27}
 ```
 
@@ -309,7 +309,7 @@ Thus the full classifications can be written as genuine finite disjunctions:
 \text{full Rev}\ \lor\
 (\text{full OS}\land K_{\{t\}}),
 \end{array}
-\qquad\text{over C5}.
+\qquad\text{over C5}
 }
 \tag{28}
 ```

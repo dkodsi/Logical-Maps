@@ -50,7 +50,7 @@ The resulting b′ is a full N′-diagram extending every retained condition. He
 ```math
 P_n\Vdash A_{n,m}\subseteq\check{\mathbb R}^{,W}
        \text{ is uncountable},\qquad
- P_{n+1}=P_n*\prod_{m\in\omega}J(\dot A_{n,m}).
+ P_{n+1}=P_n*\prod_{m\in\omega}J(\dot A_{n,m})
  \tag{2}
 ```
 
@@ -60,7 +60,7 @@ The product uses countable supports. The coordinates and their target names are 
 \mathrm{ZF+DC},\qquad
  \mathbb R=\check{\mathbb R}^{,W},\qquad
  \omega_1=\check\kappa,\qquad
- \text{there is no injection }\check\kappa\longrightarrow\mathbb R.
+ \text{there is no injection }\check\kappa\longrightarrow\mathbb R
  \tag{3}
 ```
 
@@ -97,7 +97,7 @@ Let Col be the forcing of countable partial maps ℝ^W→2. If c is its generic 
 P_h\times\mathrm{Col}\Vdash
  C_0,C_1\text{ are uncountable},\quad
  C_0\not\hookrightarrow C_1,\quad
- C_1\not\hookrightarrow C_0.
+ C_1\not\hookrightarrow C_0
  \tag{4}
 ```
 
@@ -112,7 +112,7 @@ The pair (b,d) is a balanced full diagram for the product. The repair-coordinate
 For each x∈ℝ^N\D, the combined diagram forces x∈C₀ and hence forces f(x) to be a unique N-real. It forces that output into C₁, whose old part is contained in D. Using the reconstructed-W forcing relation, Replacement in N therefore gives an injection
 
 ```math
-\mathbb R^N\setminus D\longrightarrow D.
+\mathbb R^N\setminus D\longrightarrow D
  \tag{5}
 ```
 

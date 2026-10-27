@@ -9,7 +9,7 @@ Applying this criterion to the existing qualitative-contrast model at its trivia
 ```math
 \mathrm{C5}+\mathrm{SplitMono}+\Box\mathrm{BF}
 +\Box\mathrm{Functionality}
-+\neg\Box\mathrm{OS}.
++\neg\Box\mathrm{OS}
 \tag{1}
 ```
 
@@ -34,7 +34,7 @@ For a finite type list Δ, Good_Δ has the full Boolean and quantifier composite
 \begin{aligned}
 K_\Delta:=\exists E^{tt}F^{tt}c^t\,[
 &\mathrm{Good}_\Delta(E)\land\mathrm{Good}_\Delta(F)\\
-&\land F\circ E=I\land c\land Fc=\bot].
+&\land F\circ E=I\land c\land Fc=\bot]
 \end{aligned}
 \tag{3}
 ```
@@ -46,14 +46,14 @@ The construction below supplies the same admitted E,F,c for every finite Δ. Thi
 Let ν₀=id_X. For n>0 let ν_n swap x₀ and x_n and fix all other individuals. Put
 
 ```math
-\alpha_n=\nu_{n+1}\nu_n^{-1}.
+\alpha_n=\nu_{n+1}\nu_n^{-1}
 \tag{4}
 ```
 
 Each α_n commutes with G_X: it is supported on points fixed individually by that group. Define pairwise disjoint sets of self-arrows
 
 ```math
-C_n=\{h:X\to X:h(x_0)=x_n\}.
+C_n=\{h:X\to X:h(x_0)=x_n\}
 \tag{5}
 ```
 
@@ -71,7 +71,7 @@ a_h=
 b_h=
 \begin{cases}
 \alpha_n,&h\in C_n,\\
-\mathrm{id}_Y,&\text{otherwise}.
+\mathrm{id}_Y,&\text{otherwise}
 \end{cases}
 \tag{6}
 ```
@@ -81,7 +81,7 @@ Define entire exponential truth profiles, for every proposition q at Y, by
 ```math
 E(h,q)\Longleftrightarrow a_h\in q,
 \qquad
-F(h,q)\Longleftrightarrow b_h\in q.
+F(h,q)\Longleftrightarrow b_h\in q
 \tag{7}
 ```
 
@@ -93,7 +93,7 @@ They also satisfy target symmetry. At target X, for μ∈G_X, the chart of μh i
 s\in\rho_t(\mu)q
 \ \Longleftrightarrow\ s\mu\in q
 \ \Longleftrightarrow\ \mu s\in q
-\ \Longleftrightarrow\ s\in q.
+\ \Longleftrightarrow\ s\in q
 \tag{8}
 ```
 
@@ -104,7 +104,7 @@ On the complement the observation arrow is the identity, and the same calculatio
 For every outgoing h we have the arrow identity
 
 ```math
-a_{b_hh}\,b_h=\mathrm{id}_{\mathrm{target}(h)}.
+a_{b_hh}\,b_h=\mathrm{id}_{\mathrm{target}(h)}
 \tag{9}
 ```
 
@@ -127,7 +127,7 @@ where (9) is applied to h=lr. This holds for every future input and coordinate. 
 Let c be the proposition C₀, false on all other-target arrows. It is symmetric and {x₀}-pinned, hence admitted. The identity arrow belongs to C₀, so c is currently true at X. For every outgoing h,
 
 ```math
-h\in Fc\quad\Longleftrightarrow\quad b_hh\in C_0.
+h\in Fc\quad\Longleftrightarrow\quad b_hh\in C_0
 \tag{11}
 ```
 
@@ -156,7 +156,7 @@ Suppose now G_X is trivial. For any outgoing arrow d:X→Y define an observer O_
 O_d(h,q)\quad\Longleftrightarrow\quad
 \begin{cases}
 d\in q,&\mathrm{target}(h)=X,\\
-\mathrm{id}_{\mathrm{target}(h)}\in q,&\text{otherwise}.
+\mathrm{id}_{\mathrm{target}(h)}\in q,&\text{otherwise}
 \end{cases}
 \tag{13}
 ```

@@ -12,7 +12,7 @@ At an admitted type $`\sigma`$, put
 \begin{aligned}
 H_\sigma&:=\exists\mathfrak R\,\mathrm{Real}_\sigma(\mathfrak R),\\
 U_{\sigma,\varphi}&:=\forall\mathfrak R\,
- [\mathrm{Real}_\sigma(\mathfrak R)\to\varphi(\mathfrak R)].
+ [\mathrm{Real}_\sigma(\mathfrak R)\to\varphi(\mathfrak R)]
 \end{aligned}
 \tag{1}
 ```
@@ -22,7 +22,7 @@ The propagation question is $`U_{\sigma,\varphi}\to\Box U_{\sigma,\varphi}`$. Fo
 These are not the already-modal principles
 
 ```math
-\Box U_{\sigma,\varphi}\ \lor\ \Box U_{\sigma,\neg\varphi}.
+\Box U_{\sigma,\varphi}\ \lor\ \Box U_{\sigma,\neg\varphi}
 \tag{2}
 ```
 
@@ -31,7 +31,7 @@ The fresh upstream snapshot `a89a5058ebbd5ebe93aec07d47a1a32e3b93f8bb`, parsed s
 ```math
 \mathfrak R=(X^{\sigma t},\le^{\sigma\sigma t},
 +^{\sigma\sigma\sigma t},\times^{\sigma\sigma\sigma t},
-0^\sigma,1^\sigma,N^{\sigma t}).
+0^\sigma,1^\sigma,N^{\sigma t})
 ```
 
 Completeness concerns nonempty bounded admitted subproperties. $`N`$ is the least admitted inductive subproperty of $`X`$. CH says that every admitted subproperty of $`X`$ injects into $`N`$ or is in bijection with $`X`$, with injections and bijections represented by binary relations. Neither an individual-valued operation nor an external full powerset is part of this definition.
@@ -47,7 +47,7 @@ The established observer results give
 \mathrm C+\mathrm{OS}+\mathrm{FC}_{\rm all}
 &\Rightarrow\Box\mathrm{FC}_{\rm all},\\
 \mathrm{C5}+\mathrm{OS}+\mathrm{RigidComp}_{\rm all}
-&\Rightarrow\Box\mathrm{RigidComp}_{\rm all}.
+&\Rightarrow\Box\mathrm{RigidComp}_{\rm all}
 \end{aligned}
 \tag{3}
 ```
@@ -58,7 +58,7 @@ See [Choice audit](../../../next-update/proofs/observer-choice-transport.md), §
 \Box\mathrm{FC}\Rightarrow\Box\mathrm{Plenitude}
 \Rightarrow\mathrm{C5}+\mathrm{Atomicity}
 \Rightarrow\mathrm{C5}+\Box\mathrm{RigidComp}
-\Rightarrow\mathrm{SecondOrderAnalyticNecessitism}.
+\Rightarrow\mathrm{SecondOrderAnalyticNecessitism}
 \tag{4}
 ```
 
@@ -74,7 +74,7 @@ for every first-order or finite second-order analytical sentence, in particular 
 **Finite local refinement for CH and first-order analysis.** Fix $`\sigma`$, write $`\rho_k=\sigma^kt`$ for the curried $`k`$-ary relation type, and take
 
 ```math
-\Delta=\{\sigma,\rho_1,\rho_2,\rho_3\}.
+\Delta=\{\sigma,\rho_1,\rho_2,\rho_3\}
 ```
 
 It suffices to assume C5, the single ordinary propositional separation instance $`S_{t,\Delta}`$, and current Rigid Comprehension at $`\rho_1,\rho_2,\rho_3`$. The local rigidity-reflection theorem boxes exactly these three instances. The ordinary proof of the upstream result `c5-and-necessary-rigid-comprehension-imply-second-order-analytic-necessitism` uses them as follows:
@@ -129,7 +129,7 @@ Adjoin one root $`r`$ with one arrow to $`H`$, using the standard unrestricted c
 D_e(r)=D_e(H),\qquad
 D_{\bar\sigma t}(r)=
 \mathcal P^V\!\left(\prod_jD_{\sigma_j}(r)\right)
-\times D_{\bar\sigma t}(H).
+\times D_{\bar\sigma t}(H)
 \tag{7}
 ```
 
@@ -140,7 +140,7 @@ Application uses the current row and the leaf application; lambda terms use thei
 Write a root proposition as $`(\epsilon,b)`$, with actual truth $`\epsilon`$. Besides identity, admit the reader
 
 ```math
-E_\ell(\epsilon,b)=(b,b).
+E_\ell(\epsilon,b)=(b,b)
 \tag{8}
 ```
 
@@ -157,7 +157,7 @@ This reader also preserves native Box. Directly from the defined identity,
 and therefore
 
 ```math
-E_\ell(\Box p)=\Box(E_\ell p)=(b,b).
+E_\ell(\Box p)=\Box(E_\ell p)=(b,b)
 \tag{9}
 ```
 
@@ -184,7 +184,7 @@ D_{et}(r)=\mathcal P^V(D_e(r))\times D_{et}(H)
 has cardinality equal to the ambient continuum. Put an ordinary complete ordered real field of $`V`$ on this carrier, with the ordinary $`N`$. The actual rows in (7) admit its domain, order, field graphs, and $`N`$, paired with arbitrary compatible-type leaf components. They also admit every external subproperty of this carrier. Hence it is an actual real structure in exactly the native definition. In particular,
 
 ```math
-r\models H_{et}.
+r\models H_{et}
 \tag{10}
 ```
 
@@ -201,7 +201,7 @@ At the leaf, §3 gave real structures at the same type $`et`$ falsifying both se
 +\Box\mathrm{BC}_{t},\\
 H_{et}\land U_{et,\mathrm{CH}}\land U_{et,\varphi_L},\\
 \Diamond\neg U_{et,\mathrm{CH}}
-\land\Diamond\neg U_{et,\varphi_L}.
+\land\Diamond\neg U_{et,\varphi_L}
 \end{gathered}}
 \tag{11}
 ```

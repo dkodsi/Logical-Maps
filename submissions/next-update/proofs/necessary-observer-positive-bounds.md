@@ -15,7 +15,7 @@ where C5 supplies $`\Box K`$. Necessitating this discharged theorem and assuming
 ```math
 \mathrm{C5}+\Box S\ \vdash\
 (\Diamond A\leftrightarrow A\leftrightarrow\Box A)
-\land(\Box A\lor\Box\neg A).
+\land(\Box A\lor\Box\neg A)
 ```
 
 The final disjunction follows by splitting on $`A`$: if false, $`\Diamond A\to A`$ gives $`\neg\Diamond A`$. Only the closed theorem is necessitated.
@@ -36,7 +36,7 @@ Fix a carrier type $`\sigma`$, put $`\rho_k=\sigma^kt`$ for $`k=1,2,3`$, and let
 
 ```math
 U_{\sigma,\varphi}:=\forall\mathfrak R\, .\,
-(\mathrm{Real}_\sigma(\mathfrak R)\to\varphi(\mathfrak R)).
+(\mathrm{Real}_\sigma(\mathfrak R)\to\varphi(\mathfrak R))
 ```
 
 For CH, or a first-order ordered-field sentence with the natural-numbers predicate,
@@ -44,7 +44,7 @@ For CH, or a first-order ordered-field sentence with the natural-numbers predica
 ```math
 \mathrm{C5}+\Box S_{t,\Delta_\sigma}
 +\bigwedge_{k=1}^{3}\Diamond\mathrm{RigidComp}_{\rho_k}
-\ \vdash\ U_{\sigma,\varphi}\to\Box U_{\sigma,\varphi}.
+\ \vdash\ U_{\sigma,\varphi}\to\Box U_{\sigma,\varphi}
 ```
 
 Section 1 makes each separately possible comprehension instance necessary. A common possible world of witnesses is not assumed.
@@ -65,7 +65,7 @@ Over C5 + $`\Box S_{t,\{t\}}`$, the [one-atom theorem](https://github.com/dkodsi
 \mathrm{End}\ \longleftrightarrow\
 \text{there is an atom}\ \longleftrightarrow\
 \Diamond\mathrm{Actuality}\ \longleftrightarrow\
-\Diamond\mathrm{Eval}.
+\Diamond\mathrm{Eval}
 ```
 
 The possible condition may equally be Boolean Completeness at $`tt`$, Plenitude at $`t,t`$, or Rigid Comprehension at $`tt`$. Their current versions are equivalent as well.

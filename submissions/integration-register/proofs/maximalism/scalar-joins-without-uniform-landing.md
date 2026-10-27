@@ -13,7 +13,7 @@ Write
 ```math
 \nu=(et)t,\qquad N=\mathrm{FiniteCardinality}_e,
 \qquad \bar n=\mathrm{Suc}_e^n\mathbf 0_e
-\quad(n\in\mathbb N).
+\quad(n\in\mathbb N)
 ```
 
 Here the displayed index set is the external standard natural numbers. An admitted entity satisfying N need not be one of these numeral values.
@@ -25,7 +25,7 @@ The proposition domain of M is the two-element Boolean algebra. Its numberhood e
 Apply [the complete-Henkin interpretation-cover theorem](../complete-henkin-interpretation-cover.md), §§1–7, to this single target. Call the new source o. It satisfies
 
 ```math
-C+OS+\Box BF_{\rm all}+\Box BC_t+\neg\mathrm{Actuality}.
+C+OS+\Box BF_{\rm all}+\Box BC_t+\neg\mathrm{Actuality}
 \tag{1}
 ```
 
@@ -44,7 +44,7 @@ Currently W contains zero and is closed under successor. The unconditional induc
 
 ```math
 \{m\in D_\nu(o):N(m)\text{ currently holds}\}
-=\{\bar n_o:n\in\mathbb N\}.
+=\{\bar n_o:n\in\mathbb N\}
 \tag{2}
 ```
 
@@ -55,7 +55,7 @@ There are no identifications between different standard numeral values at o: any
 Fix any source entity m of type nu. For each external standard n, let
 
 ```math
-e_{n,m}:=(\bar n=m).
+e_{n,m}:=(\bar n=m)
 ```
 
 All these propositions share a finite pin for m, since the numeral is pure. Define u_m by taking their rowwise union.
@@ -64,7 +64,7 @@ At a source loop h, the native identity e_(n,m) is true exactly when the transpo
 
 ```math
 u_m(h)=1\quad\Longleftrightarrow\quad
-m=\bar n_o\text{ for some external standard }n.
+m=\bar n_o\text{ for some external standard }n
 \tag{3}
 ```
 
@@ -72,7 +72,7 @@ At an old interpretation I:o→M, transport of the native identity is the native
 
 ```math
 u_m(I)=1\quad\Longleftrightarrow\quad
-\rho_I(m)=\bar n_M\text{ for some external standard }n.
+\rho_I(m)=\bar n_M\text{ for some external standard }n
 \tag{4}
 ```
 
@@ -81,7 +81,7 @@ This profile is admitted. Its old rows depend only on the finite pin of m; its s
 The native Boolean order at source proposition type is pointwise inclusion of the whole profiles. The rowwise union therefore is the actual least upper bound of the e_(n,m), among all admitted source propositions. By (2), these are precisely the members of the admitted scalar family
 
 ```math
-S_m(p):=\exists n^\nu\,[Nn\land p=(n=m)].
+S_m(p):=\exists n^\nu\,[Nn\land p=(n=m)]
 ```
 
 Thus every current m has its scalar join u_m, with both its self rows and all old rows given by (3)–(4). No operation m↦u_m has been inserted into a higher domain.
@@ -94,7 +94,7 @@ For any a∈D_nu(M), onto transport supplies a current m with rho_I(m)=a. The cu
 
 ```math
 B_I(a)\quad\Longleftrightarrow\quad
-a=\bar n_M\text{ for some external standard }n.
+a=\bar n_M\text{ for some external standard }n
 \tag{5}
 ```
 
@@ -121,7 +121,7 @@ e\land(n=m)=e\land(n=k)
 for each current number n. Finite meet distributes over each existing scalar join, so
 
 ```math
-e\land u_m=e\land u_k.
+e\land u_m=e\land u_k
 \tag{7}
 ```
 
@@ -140,7 +140,7 @@ Put
 ```math
 a_n:=(\mathrm{Suc}_e n)(\lambda x^e.\top),
 \qquad
-\Psi:=\forall n^\nu\,[Nn\to\Diamond\Box a_n].
+\Psi:=\forall n^\nu\,[Nn\to\Diamond\Box a_n]
 \tag{8}
 ```
 
@@ -148,7 +148,7 @@ For a current number bar n, the target M_(n+1) makes a_(bar n) true. Its one-wor
 
 ```math
 C+OS+\Box BF_{\rm all}+\Box BC_t
-+\Psi+\neg\mathrm{Actuality}+\neg J_N.
++\Psi+\neg\mathrm{Actuality}+\neg J_N
 \tag{9}
 ```
 

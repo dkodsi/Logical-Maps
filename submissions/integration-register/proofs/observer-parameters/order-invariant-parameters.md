@@ -10,7 +10,7 @@ The original schema universally closes
 
 ```math
 \mathrm{End}(\bar R)\to
-\bigl(P(\bar R,\bar x)\leftrightarrow\Box P(\bar R,\bar x)\bigr).
+\bigl(P(\bar R,\bar x)\leftrightarrow\Box P(\bar R,\bar x)\bigr)
 \tag{1}
 ```
 
@@ -27,7 +27,7 @@ The revised schema admits a parameter X:tt representing a family of propositions
  &:=(\forall p^t\,(Xp=0\lor Xp=1))\\
  &\quad\land\forall E^{tt}\Bigl(
  \mathrm{Aut}_{\le}(E)\to
- \forall p^t\,X(Ep)=Xp\Bigr).
+ \forall p^t\,X(Ep)=Xp\Bigr)
 \end{aligned}
 \tag{2}
 ```
@@ -62,7 +62,7 @@ For every admitted H:σt, C5 proves
 ```math
 b\le\forall x^\sigma Hx
 \quad\longleftrightarrow\quad
-\forall x^\sigma(b\le Hx).
+\forall x^\sigma(b\le Hx)
 \tag{5}
 ```
 
@@ -78,13 +78,13 @@ For a fixed admitted H:σt, put
 
 ```math
 m:=\forall x^\sigma Hx,
-\qquad n:=\forall x^\sigma E(Hx).
+\qquad n:=\forall x^\sigma E(Hx)
 ```
 
 From m≤Hx, monotonicity and (5) give Em≤n. By surjectivity choose b with Eb=n. Each n≤E(Hx) and order reflection give b≤Hx. Equation (5) therefore gives b≤m, hence n=Eb≤Em. Antisymmetry proves
 
 ```math
-E(\forall x^\sigma Hx)=\forall x^\sigma E(Hx).
+E(\forall x^\sigma Hx)=\forall x^\sigma E(Hx)
 \tag{6}
 ```
 
@@ -92,7 +92,7 @@ Functionality over H supplies the whole quantifier identity
 
 ```math
 \lambda H^{\sigma t}.E(\forall x^\sigma Hx)
-=\lambda H^{\sigma t}.\forall x^\sigma E(Hx).
+=\lambda H^{\sigma t}.\forall x^\sigma E(Hx)
 \tag{7}
 ```
 
@@ -101,7 +101,7 @@ This works for each admitted σ directly. Existential preservation follows by Bo
 An inverse is admitted explicitly. Define
 
 ```math
-F_E(q):=\exists p^t\bigl((Ep=q)\land p\bigr).
+F_E(q):=\exists p^t\bigl((Ep=q)\land p\bigr)
 \tag{8}
 ```
 
@@ -123,7 +123,7 @@ A useful weaker-background observation is separate: when an admitted Boolean inv
 Assume Rev and Stable(X). For any admitted order automorphism E and its admitted inverse F, the conjugation lift at tt is
 
 ```math
-E_{tt}^*X=E\circ X\circ F.
+E_{tt}^*X=E\circ X\circ F
 ```
 
 Each output of X is an endpoint, so E fixes it. Stability under F gives X(Fp)=Xp. Functionality therefore gives E*X=X as a whole-operation identity. By (9), these are precisely the reversible logical symmetries.
@@ -133,7 +133,7 @@ The general pure-term conjugation lemma in [proof-route.md](../../../next-update
 For the converse, assume only (4). Let u be fixed by every Aut≤-member and define the admitted singleton family
 
 ```math
-X_u(q):=(q=u).
+X_u(q):=(q=u)
 \tag{10}
 ```
 

@@ -23,7 +23,7 @@ where
 ```math
 \mathrm{Functional}(U):=
 \forall p\,\exists q\left[
-U[p,q]\land\forall r\,(U[p,r]\to q=r)\right].
+U[p,q]\land\forall r\,(U[p,r]\to q=r)\right]
 ```
 
 Bracketed application is left-nested. Functional relations and representing operations are admitted objects of the language. Formula (1) does not quantify over arbitrary external functions, and it requires no individual-valued operation.
@@ -38,7 +38,7 @@ Let Plen_r be the full pre-existing Plenitude schema, BC_r the full Boolean Comp
 &\longleftrightarrow \mathrm{OS}+\mathrm{Plen}_{r}\\
 &\longleftrightarrow \mathrm{C5}+\mathrm{OS}+\mathrm{Actuality}\\
 &\longleftrightarrow \mathrm{C5}+\mathrm{OS}+\mathrm{BC}_{r}\\
-&\longleftrightarrow \mathrm{C5}+\mathrm{Atomicity}_{t}.
+&\longleftrightarrow \mathrm{C5}+\mathrm{Atomicity}_{t}
 \end{aligned}}
 \tag{2}
 ```
@@ -52,7 +52,7 @@ Work first over C. The proofs of Propositions 2.13 and 2.15 use only Plen_t,t fo
 **Necessary distinctness at t.** Fix distinct propositions p and q. Apply Plen_t,t to the functional relation that sends p to Top and every other proposition to Bottom:
 
 ```math
-U[x,y]:=(x=p\land y=\top)\lor(x\ne p\land y=\bot).
+U[x,y]:=(x=p\land y=\top)\lor(x\ne p\land y=\bot)
 \tag{3}
 ```
 
@@ -61,7 +61,7 @@ The resulting admitted Z satisfies Zp=Top and Zq=Bottom. NI makes these identiti
 **Actuality.** Apply Plen_t,t to the functional relation
 
 ```math
-V[p,q]:=(p\land p=q)\lor(\neg p\land q=\top).
+V[p,q]:=(p\land p=q)\lor(\neg p\land q=\top)
 \tag{4}
 ```
 
@@ -73,7 +73,7 @@ Add BF_t. The recorded type-t instance of Proposition 2.4 gives
 
 ```math
 \mathrm{ND}_{t}+\mathrm{BF}_{t}
-\quad\Longrightarrow\quad\Box\mathrm{ND}_{t}.
+\quad\Longrightarrow\quad\Box\mathrm{ND}_{t}
 \tag{5}
 ```
 
@@ -82,7 +82,7 @@ This is a proved modal argument using NI, 4 and BF_t, not necessitation of the o
 ```math
 \mathrm{C}+\mathrm{BF}_{t}+\mathrm{Plen}_{t,t}
 \quad\Longrightarrow\quad
-\mathrm{C5}+\mathrm{Actuality}.
+\mathrm{C5}+\mathrm{Actuality}
 \tag{6}
 ```
 
@@ -92,7 +92,7 @@ Conversely, the pre-existing C5+Actuality result gives BC_r, and C5+BC_r gives P
 \boxed{
 \mathrm{C}+\mathrm{BF}_{t}+\mathrm{Plen}_{t,t}
 \quad\longleftrightarrow\quad
-\mathrm{C5}+\mathrm{Actuality}.}
+\mathrm{C5}+\mathrm{Actuality}}
 \tag{7}
 ```
 

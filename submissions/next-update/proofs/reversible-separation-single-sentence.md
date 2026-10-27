@@ -8,7 +8,7 @@ Put $`I:=\lambda p^t\, .\,p`$ and define
 
 ```math
 K(E):=\bigl((\lambda p,q\, .\,E(p\land q))=(\lambda p,q\, .\,Ep\land Eq)\bigr)
-\land E\circ E=I.
+\land E\circ E=I
 ```
 
 The separation sentence is
@@ -16,7 +16,7 @@ The separation sentence is
 ```math
 \forall X,Y^{tt}\, .\,
 \bigl[\forall E^{tt}\, .\,K(E)\to\forall p^t\, .\,(E(Xp)\leftrightarrow E(Yp))\bigr]
-\to X=Y.
+\to X=Y
 ```
 
 **Theorem.** Over C, this sentence is equivalent to full Rev. Here Rev has its [existing full relational, finite-qualification-list definition](https://github.com/dkodsi/Logical-Maps/blob/52f324e09ca2df45d74ce4c522bcd761271efbed/submissions/classicism-results-2026-10-24-v2/proofs/logical-observer-hierarchy.md#1-definitions-and-scope).
@@ -32,7 +32,7 @@ The conjunction equation is an identity of whole operations. The separation type
 ```math
 \forall p\, .\,Fp
 =\forall p\, .\,(Fp\lor b)
-=\bigl(\forall p\, .\,Fp\bigr)\lor b.
+=\bigl(\forall p\, .\,Fp\bigr)\lor b
 ```
 
 Thus $`b\le\forall p\, .\,Fp`$. Taking $`b=\top`$ proves BF at t. This is the type-specific Functionality–Tractarianism–BF argument; no quantifier law for observers has been assumed.
@@ -44,7 +44,7 @@ Thus $`b\le\forall p\, .\,Fp`$. Taking $`b=\top`$ proves BF at t. This is the ty
 **ND at t.** C identifies each H-valid equality-substitution formula with Top. Applying $`E`$ and using its pointwise Boolean preservation gives
 
 ```math
-E(p=q)\to\bigl(E(Pp)\to E(Pq)\bigr).
+E(p=q)\to\bigl(E(Pp)\to E(Pq)\bigr)
 ```
 
 Choose the admitted predicate $`P:=\lambda z\, .\,E(p=z)`$. Involutivity makes $`E(Pp)=(p=p)`$ and $`E(Pq)=(p=q)`$. Hence $`E(p=q)\to p=q`$; reflexivity and substitution give the converse. If $`p\ne q`$, every eligible observer therefore rejects both $`(p=q)`$ and Bottom. Propositional separation identifies them, yielding $`\Box(p\ne q)`$.
@@ -56,13 +56,13 @@ The established implications ND at t + BF at t ⇒ ☐ND at t ⇒ ☐ND at all t
 Under BF, $`Q_\sigma(H):=\forall x^\sigma\, .\,Hx`$ is the greatest lower bound of the admitted range of $`H`$. Every admitted order automorphism preserves this bound. To see this directly, put
 
 ```math
-m:=Q_\sigma(H),\qquad n:=Q_\sigma(E\circ H).
+m:=Q_\sigma(H),\qquad n:=Q_\sigma(E\circ H)
 ```
 
 Monotonicity gives $`Em\le n`$. Choose $`b`$ with $`Eb=n`$, using surjectivity. Since $`Eb\le E(Hx)`$ for every $`x`$, order reflection gives $`b\le Hx`$, hence $`b\le m`$ and $`n\le Em`$. Therefore
 
 ```math
-E(Q_\sigma(H))=Q_\sigma(E\circ H).
+E(Q_\sigma(H))=Q_\sigma(E\circ H)
 ```
 
 Functionality supplies the identity of the whole quantifier operations. Boolean identities likewise become whole-operation identities, and existential preservation follows by duality. The translated equality laws follow from Boolean preservation over C. Thus every eligible involution is a fully qualified reversible observer for every finite list.
@@ -77,7 +77,7 @@ The same equivalence holds if the involution equation is replaced by an admitted
 
 ```math
 K'(E):=\bigl((\lambda p,q\, .\,E(p\land q))=(\lambda p,q\, .\,Ep\land Eq)\bigr)
-\land\exists F^{tt}\, .\,E\circ F=I\land F\circ E=I.
+\land\exists F^{tt}\, .\,E\circ F=I\land F\circ E=I
 ```
 
 The proof above uses $`F`$ in place of the second application of $`E`$, notably $`P(z):=F(p=z)`$ in the equality argument. The inverse is an order automorphism too, so its missing Boolean and quantifier laws follow. This converse follows directly from Rev's definition.

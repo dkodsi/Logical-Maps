@@ -13,7 +13,7 @@ K_{\rm pt}(E)&:=
 \forall p,q\,[E(p\land q)=Ep\land Eq]
 \land\forall p\,[E(Ep)=p],\\
 S_{\rm pt}&:=\forall p,q\,[(\forall E^{tt}\, .\,
-K_{\rm pt}(E)\to(Ep\leftrightarrow Eq))\to p=q].
+K_{\rm pt}(E)\to(Ep\leftrightarrow Eq))\to p=q]
 \end{aligned}
 ```
 
@@ -32,7 +32,7 @@ proof of that equivalence is included below.
 \boxed{
 S_{\rm pt}\land\mathrm{OneAtom}
 \quad\longleftrightarrow\quad
-ND_t\land\mathrm{Atomicity}_t.}
+ND_t\land\mathrm{Atomicity}_t}
 \tag{1}
 ```
 
@@ -44,7 +44,7 @@ Consequently, under current $`S_{\rm pt}`$,
 ```math
 \mathrm{OneAtom}
 \longleftrightarrow\mathrm{Atomicity}_t
-\longleftrightarrow\mathrm{Actuality}.
+\longleftrightarrow\mathrm{Actuality}
 \tag{2}
 ```
 
@@ -91,7 +91,7 @@ Assume $`ND_t`$ and Atomicity at t. The [Atomicity and Vicinity theorem](atomici
 the admitted operation
 
 ```math
-A_a(p):=\Box(a\to p).
+A_a(p):=\Box(a\to p)
 \tag{3}
 ```
 
@@ -107,7 +107,7 @@ Thus
 ```math
 A_a(p)=\top\quad\Longleftrightarrow\quad a\le p,
 \qquad
-\forall p\,[A_a(p)=\top\lor A_a(p)=\bot].
+\forall p\,[A_a(p)=\top\lor A_a(p)=\bot]
 \tag{4}
 ```
 
@@ -120,7 +120,7 @@ endpoint values in (4), this shows that $`A_a`$ is a Boolean homomorphism
 in the pointwise-identity sense. It fixes Top and Bottom. Also, for every p,
 
 ```math
-a\land A_a(p)=a\land p.
+a\land A_a(p)=a\land p
 \tag{5}
 ```
 
@@ -130,7 +130,7 @@ d is false, a and w are distinct and therefore disjoint. Put
 $`r=\neg(a\lor w)`$ and define the admitted operation
 
 ```math
-T(p)=(a\land A_w(p))\lor(w\land A_a(p))\lor(r\land p).
+T(p)=(a\land A_w(p))\lor(w\land A_a(p))\lor(r\land p)
 \tag{6}
 ```
 
@@ -145,7 +145,7 @@ evaluator fixes endpoint values and the other evaluator is endpoint-valued,
 expansion of (6) gives
 
 ```math
-A_a(Tp)=A_w(p),\qquad A_w(Tp)=A_a(p).
+A_a(Tp)=A_w(p),\qquad A_w(Tp)=A_a(p)
 ```
 
 A second expansion, followed by (5), yields
@@ -154,7 +154,7 @@ A second expansion, followed by (5), yields
 \begin{aligned}
 T(Tp)
 &=(a\land A_a(p))\lor(w\land A_w(p))\lor(r\land p)\\
-&=(a\land p)\lor(w\land p)\lor(r\land p)=p.
+&=(a\land p)\lor(w\land p)\lor(r\land p)=p
 \end{aligned}
 ```
 
@@ -180,7 +180,7 @@ main report gives
 \boxed{
 \Box S_{\rm pt}\land\mathrm{OneAtom}
 \quad\longleftrightarrow\quad
-\mathrm{C5}\land\mathrm{Atomicity}_t.}
+\mathrm{C5}\land\mathrm{Atomicity}_t}
 \tag{7}
 ```
 
@@ -193,7 +193,7 @@ The same package is equivalent to the separately explicit sentence
 
 ```math
 \Box\bigl(ND_t\land\mathrm{Atomicity}_t
-\land\mathrm{Actuality}\bigr).
+\land\mathrm{Actuality}\bigr)
 \tag{8}
 ```
 

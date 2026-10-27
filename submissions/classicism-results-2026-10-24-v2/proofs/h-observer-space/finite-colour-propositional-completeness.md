@@ -11,7 +11,7 @@ There is also a positive persistence theorem: over C5, ordinary logical separati
 Use exactly the model in [Finite colour patterns](finite-pinning-dedekind-propositions.md), §§2–4. There is one countably infinite object X, partitioned into two infinite colour classes A and B. Arrows are all bijections of X. The designated symmetry group is
 
 ```math
-G=\mathrm{Sym}(A)\times\mathrm{Sym}(B).
+G=\mathrm{Sym}(A)\times\mathrm{Sym}(B)
 \tag{1}
 ```
 
@@ -20,7 +20,7 @@ At every relational type, the domain consists of the symmetric intensions pinned
 For x∈X, write $`q_x`$ for the admitted proposition consisting of the arrows h for which h(x)∈A. A proposition pinned by a finite S is precisely a Boolean function of the finitely many tests $`q_x`$, x∈S. Every assignment of colours on a finite set is realized by an arrow: prescribe distinct images in the required infinite colour classes and extend the finite partial bijection. Consequently the proposition algebra is the free Boolean algebra on these tests, and its S-pinned subalgebra $`B_S`$ has
 
 ```math
-|B_S|=2^{2^{|S|}}.
+|B_S|=2^{2^{|S|}}
 \tag{2}
 ```
 
@@ -32,7 +32,7 @@ The [Boolean Completeness instance at t](../../source/topics/classicism/principl
 \mathrm{BC}_t:
 \forall Y^{tt}\,\exists u^t\,\forall z^t
 \left[u\le z\ \leftrightarrow\
-\forall b^t(Yb\to b\le z)\right].
+\forall b^t(Yb\to b\le z)\right]
 \tag{3}
 ```
 
@@ -75,7 +75,7 @@ is invariant under $`G_{(P)}`$. This standard consequence of pinning and symmetr
 There are only finitely many different values $`\pi_Pb`$, because they all belong to the finite algebra $`B_P`$. Let u be their finite Boolean join:
 
 ```math
-u:=\bigvee\{\pi_Pb:b\in\mathcal F\}\in B_P.
+u:=\bigvee\{\pi_Pb:b\in\mathcal F\}\in B_P
 \tag{6}
 ```
 
@@ -86,7 +86,7 @@ Every b∈ℱ lies below $`\pi_Pb`$ and therefore below u. Conversely, if z boun
 The same pure sentence is true at every future evaluation: there is only one object, and each future truth clause evaluates that closed sentence at that object. Equivalently, naturality of closed pure interpretations makes its proposition constant on the arrows. Therefore this unchanged model satisfies
 
 ```math
-\boxed{\Box\mathrm{BC}_t.}
+\boxed{\Box\mathrm{BC}_t}
 \tag{7}
 ```
 
@@ -104,7 +104,7 @@ Combining these already established facts with (7), the model satisfies
 \boxed{
 \mathrm{C5}+\Box\mathrm{Rev}+\Box\mathrm{BC}_t
  +D_t+\text{atomless propositions}
- +\neg\mathrm{Actuality}+\neg\mathrm{End}.}
+ +\neg\mathrm{Actuality}+\neg\mathrm{End}}
 \tag{8}
 ```
 
@@ -119,14 +119,14 @@ In particular, C5+OS+$`\mathrm{BC}_t`$ does not imply Actuality or endpoint sepa
 \quad\Longrightarrow\quad
 \mathrm{Plen}_{t,t}
 \quad\Longrightarrow\quad
-\mathrm{Actuality}.
+\mathrm{Actuality}
 \tag{8a}
 ```
 
 For the first implication, specialize the proof of Bacon and Dorr's Proposition 2.14 to operations with proposition inputs and outputs. Given an admitted currently functional relation U:ttt, consider the admitted family of operations H:tt satisfying
 
 ```math
-\forall x,p\,[U[x,p]\to Hx\le p].
+\forall x,p\,[U[x,p]\to Hx\le p]
 \tag{8b}
 ```
 
@@ -148,7 +148,7 @@ There is a general positive complement to (8). Work over C5, fix an admitted rel
 \boxed{
 S_{t,\Delta}+\mathrm{BC}_\sigma
 \quad\Longrightarrow\quad
-\Box\mathrm{BC}_\sigma.}
+\Box\mathrm{BC}_\sigma}
 \tag{9}
 ```
 
@@ -160,7 +160,7 @@ For the proof, use the greatest-lower-bound definition
 \mathrm{GLB}_\sigma(y,Y):=
 \forall z^\sigma\left[
  \bigl(\forall r^\sigma(Yr\to z\le r)\bigr)
- \leftrightarrow z\le y\right].
+ \leftrightarrow z\le y\right]
 \tag{10}
 ```
 
@@ -177,7 +177,7 @@ and hence
 ```math
 E(\mathrm{BC}_\sigma)
 =\forall Y^{\sigma t}\,\exists y^\sigma\,
- \mathrm{GLB}_\sigma(y,\lambda r.E(Yr)).
+ \mathrm{GLB}_\sigma(y,\lambda r.E(Yr))
 \tag{12}
 ```
 
@@ -192,7 +192,7 @@ The failure concerns exactly the σ=t instance of the [recorded preorder Zorn pr
 For an external finite subset F⊆A, put $`q_F`$:=∨_{x∈F}$`q_x`$, with $`q_\varnothing`$=Bottom. Independence of the colour coordinates gives
 
 ```math
-q_F\le q_H\quad\longleftrightarrow\quad F\subseteq H.
+q_F\le q_H\quad\longleftrightarrow\quad F\subseteq H
 \tag{13}
 ```
 
@@ -207,7 +207,7 @@ is independent of the arrow h, hence empty-pinned, and is symmetric under the si
 
 ```math
 P(b,c):\longleftrightarrow
-b\notin V\ \text{or}\ (c\in V\text{ and }b\le c).
+b\notin V\ \text{or}\ (c\in V\text{ and }b\le c)
 \tag{15}
 ```
 
@@ -222,7 +222,7 @@ Suppose a valid $`q_F`$ belongs to the chain. If F contained x∈A∖N, choose y
 The premise of $`\mathrm{Zorn}_t`$ is true for this admitted preorder, while its conclusion is false. Therefore the model additionally satisfies
 
 ```math
-\boxed{\neg\mathrm{Zorn}_t.}
+\boxed{\neg\mathrm{Zorn}_t}
 \tag{16}
 ```
 

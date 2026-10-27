@@ -19,7 +19,7 @@ Define the following one-pair sentence:
 K_\Delta:=\exists E^{tt}F^{tt}c^t\,[
 &\mathrm{Good}_\Delta(E)\land
 \mathrm{Good}_\Delta(F)\\
-&\land F\circ E=I\land c\land Fc=\bot].
+&\land F\circ E=I\land c\land Fc=\bot]
 \end{aligned}
 \tag{1}
 ```
@@ -35,7 +35,7 @@ S_{\tau,\Delta}[\mathrm{SplitMono}]
 S_{\tau,\Delta}[\mathrm{Rev}]
 \ \lor\
 \bigl(S_{\tau,\Delta}[\mathrm{Good}]
-\land K_\Delta\bigr).
+\land K_\Delta\bigr)
 }
 \tag{2}
 ```
@@ -47,7 +47,7 @@ The disjunction is between two sentences for the **same fixed output type and fi
 Assume E,F,c witness K_Δ. For any admitted Good_Δ observer G, form the lambda term
 
 ```math
-E_G(p):=(c\land Gp)\lor(\neg c\land Ep).
+E_G(p):=(c\land Gp)\lor(\neg c\land Ep)
 \tag{3}
 ```
 
@@ -59,7 +59,7 @@ Boolean preservation by F, Fc=Bottom and F∘E=I give, for every p,
 \begin{aligned}
 F(E_Gp)
 &=(Fc\land F(Gp))\lor(F(\neg c)\land F(Ep))\\
-&=(\bot\land F(Gp))\lor(\top\land p)=p.
+&=(\bot\land F(Gp))\lor(\top\land p)=p
 \end{aligned}
 \tag{4}
 ```
@@ -69,7 +69,7 @@ Functionality at tt, available from the stated Barcan background, collects (4) i
 Since c is currently true, propositional reasoning gives the entire current truth-profile agreement
 
 ```math
-\forall p\,(E_Gp\leftrightarrow Gp).
+\forall p\,(E_Gp\leftrightarrow Gp)
 \tag{5}
 ```
 
@@ -84,7 +84,7 @@ In fact under K_Δ, ordinary, left-inverse and qualified right-inverse-of-this-f
 Now assume only Good_Δ(E), Good_Δ(F) and F∘E=I. Put
 
 ```math
-u:=\forall p^t\,[E(Fp)\leftrightarrow p].
+u:=\forall p^t\,[E(Fp)\leftrightarrow p]
 \tag{6}
 ```
 
@@ -92,7 +92,7 @@ The proposition u is defined, not assumed true. The unconditional universal-inst
 
 ```math
 u\land E(Fp)=u\land p
-\qquad\text{for every }p.
+\qquad\text{for every }p
 \tag{7}
 ```
 
@@ -105,7 +105,7 @@ Since t∈Δ, F's full Q_t and Boolean identities give
 Fu
 &=\forall p\,F(E(Fp)\leftrightarrow p)\\
 &=\forall p\,[F(E(Fp))\leftrightarrow Fp]\\
-&=\forall p\,[Fp\leftrightarrow Fp]=\top.
+&=\forall p\,[Fp\leftrightarrow Fp]=\top
 \end{aligned}
 \tag{8}
 ```
@@ -128,7 +128,7 @@ c:=\neg d\land Ed\land u,
 and
 
 ```math
-T(p):=(c\land Ep)\lor(b\land Fp)\lor(r\land p).
+T(p):=(c\land Ep)\lor(b\land Fp)\lor(r\land p)
 \tag{10}
 ```
 
@@ -142,7 +142,7 @@ On the c-region we have
 c\land Ec=\bot,
 \qquad c\land Eb=c,
 \qquad c\land Er=\bot,
-\qquad c\land E(Fp)=c\land p.
+\qquad c\land E(Fp)=c\land p
 \tag{11}
 ```
 
@@ -154,7 +154,7 @@ On the b-region we have
 b\land Fc=b,
 \qquad b\land Fb=\bot,
 \qquad b\land Fr=\bot,
-\qquad F(Ep)=p.
+\qquad F(Ep)=p
 \tag{12}
 ```
 
@@ -163,7 +163,7 @@ The first is b=Fc. For the second, b≤d implies Fb≤Fd, while b≤¬Fd was alr
 Expand T(Tp) along c,b,r. On c, (11) removes the E(Ep) and E(p) branches; the remaining term is c∧E(Fp)=c∧p. On b, (12) removes the F(Fp) and F(p) branches; the remaining term is b∧F(Ep)=b∧p. On r, the outer identity branch gives r∧Tp=r∧p. Therefore
 
 ```math
-\forall p\,[T(Tp)=p].
+\forall p\,[T(Tp)=p]
 \tag{13}
 ```
 
@@ -193,7 +193,7 @@ An equivalent useful formulation is
 ```math
 \neg K_\Delta\ \longrightarrow\
 \bigl(S_{\tau,\Delta}[\mathrm{SplitMono}]
-\leftrightarrow S_{\tau,\Delta}[\mathrm{Rev}]\bigr).
+\leftrightarrow S_{\tau,\Delta}[\mathrm{Rev}]\bigr)
 \tag{15}
 ```
 
@@ -212,7 +212,7 @@ The full logical-separation theorem supplies C+BF from H+OS. Functionality then 
 \bigl\{
 S_{t,\Delta}[\mathrm{Rev}]\lor K_\Delta:
 \Delta\text{ finite},\ t\in\Delta
-\bigr\}.
+\bigr\}
 }
 \tag{16}
 ```

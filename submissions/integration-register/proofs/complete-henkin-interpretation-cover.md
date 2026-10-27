@@ -26,7 +26,7 @@ If all components are of the first kind, the source additionally satisfies
 
 
 ```math
-\Box BC_t+\Box BF_{\mathrm{all}}.
+\Box BC_t+\Box BF_{\mathrm{all}}
  \tag{2}
 ```
 
@@ -48,7 +48,7 @@ Put
 
 ```math
 C_\sigma=K_\sigma\times\kappa,\qquad
- \beta_\sigma(c)=\text{the first coordinate of }c.
+ \beta_\sigma(c)=\text{the first coordinate of }c
  \tag{3}
 ```
 
@@ -64,7 +64,7 @@ The root endomorphisms and designated symmetry group are
    &=\prod_\sigma\mathrm{Sym}(C_\sigma),\\
  G_o
    &=\prod_\sigma\prod_{a\in K_\sigma}
-       \mathrm{Sym}(\{a\}\times\kappa).
+       \mathrm{Sym}(\{a\}\times\kappa)
 \end{aligned}
  \tag{4}
 ```
@@ -78,7 +78,7 @@ For a complete-Henkin object V, an arrow $`I:o\to V`$ is a typed interpretation
 ```math
 I_\sigma:C_\sigma\longrightarrow D_\sigma(V)
  \quad\text{with every fibre of every }I_\sigma
- \text{ of cardinality }\kappa.
+ \text{ of cardinality }\kappa
  \tag{5}
 ```
 
@@ -99,14 +99,14 @@ For a finite set P of typed names write $`P_\sigma=P\cap C_\sigma`$. Agreement o
 We will use the following exact fact. Let $`k:V\to W`$ be an old arrow between complete-Henkin objects. Suppose I is an interpretation at V and J is one at W with
 
 ```math
-J|_P=(kI)|_P.
+J|_P=(kI)|_P
 ```
 
 Then there is an interpretation L at V such that
 
 
 ```math
-kL=J,\qquad L|_P=I|_P.
+kL=J,\qquad L|_P=I|_P
  \tag{6}
 ```
 
@@ -120,7 +120,7 @@ In particular, for fixed I and P,
 ```math
 \{kL:L|_P=I|_P\}
  =
- \{J:J|_P=(kI)|_P\}.
+ \{J:J|_P=(kI)|_P\}
  \tag{7}
 ```
 
@@ -142,7 +142,7 @@ Root-loop transport is precomposition:
 
 
 ```math
-(\rho_gA)(h,\bar z)=A(hg,\bar z).
+(\rho_gA)(h,\bar z)=A(hg,\bar z)
  \tag{8}
 ```
 
@@ -155,7 +155,7 @@ For a relational name $`c\in C_\tau`$, define $`\widehat c`$ as follows. Its sel
 ```math
 \rho_I\widehat c=I_\tau(c),
  \qquad
- \rho_g\widehat c=\widehat{g_\tau(c)}.
+ \rho_g\widehat c=\widehat{g_\tau(c)}
  \tag{9}
 ```
 
@@ -185,7 +185,7 @@ For a family $`(p_i)`$ in $`B_P`$, define its candidate join z as follows.
 
 ```math
 z_I=\bigvee_i\rho_Ip_i
- \quad\text{in }B_V.
+ \quad\text{in }B_V
  \tag{10}
 ```
 
@@ -218,7 +218,7 @@ At a complete-Henkin interpretation I, prescribe the old entity
 
 
 ```math
-a_I=\bigvee_{L|_P=I|_P}\rho_Lp.
+a_I=\bigvee_{L|_P=I|_P}\rho_Lp
  \tag{12}
 ```
 
@@ -230,7 +230,7 @@ By (7) and complete old transport,
 \rho_k a_I
  =\bigvee_{L|_P=I|_P}\rho_{kL}p
  =\bigvee_{J|_P=(kI)|_P}\rho_Jp
- =a_{kI}.
+ =a_{kI}
  \tag{13}
 ```
 
@@ -240,7 +240,7 @@ This proves landing. All rows are P-pinned and symmetric. Also $`p\le\pi_Pp`$.
 The envelope is exactly the least admitted upper bound of the orbit of p under
 
 ```math
-G_o(P)=\{g\in G_o:g|_P=1_P\}.
+G_o(P)=\{g\in G_o:g|_P=1_P\}
  \tag{14}
 ```
 
@@ -250,7 +250,7 @@ It bounds the orbit: on a complete-Henkin branch, $`Ig`$ occurs among the interp
 For leastness, suppose u is an admitted upper bound of this orbit, with pin R, and p has pin T. Consider a complete-Henkin I and any L agreeing with I on P. Choose $`g\in G_o(P)`$ that moves $`T\setminus P`$ outside R, within the infinite colour classes. Amalgamate the finite prescriptions
 
 ```math
-J|_R=I|_R,\qquad (Jg)|_T=L|_T.
+J|_R=I|_R,\qquad (Jg)|_T=L|_T
  \tag{15}
 ```
 
@@ -260,7 +260,7 @@ They are consistent on their overlap. Each finite typed prescription extends to 
 \rho_Lp
  =\rho_J(\rho_gp)
  \le\rho_Ju
- =\rho_Iu.
+ =\rho_Iu
  \tag{16}
 ```
 
@@ -282,7 +282,7 @@ By §4 the following join exists in $`B_P`$:
 
 
 ```math
-b=\bigvee_{p\in S}\pi_Pp.
+b=\bigvee_{p\in S}\pi_Pp
  \tag{17}
 ```
 
@@ -314,7 +314,7 @@ O(h,q)=
  \begin{cases}
   q(bg_h^{-1}),&h\text{ is a root loop on the chart},\\
   q(\beta_*),&h\text{ is a root loop off the chart},\\
-  q(1_V),&h:o\to V\text{ is an old-target arrow}.
+  q(1_V),&h:o\to V\text{ is an old-target arrow}
  \end{cases}
  \tag{19}
 ```
@@ -323,7 +323,7 @@ O(h,q)=
 Different extensions $`g_h`$ differ on the right by a member of $`G_o(P)`$, so the character invariance proves well-definedness. The profile is P-pinned. For $`\mu\in G_o`$, choose $`g_{\mu h}=\mu g_h`$; the first row then satisfies
 
 ```math
-(\rho_\mu q)(bg_h^{-1}\mu^{-1})=q(bg_h^{-1}).
+(\rho_\mu q)(bg_h^{-1}\mu^{-1})=q(bg_h^{-1})
  \tag{20}
 ```
 
@@ -340,7 +340,7 @@ Every row in (19) reads a typed-onto arrow or the identity. Boolean preservation
  \forall x\in D_\sigma(o)\,O_h(Fx)
  &\Longleftrightarrow
    \forall x\in D_\sigma(o)\,
-             F(a_h,\rho_{a_h}x).
+             F(a_h,\rho_{a_h}x)
 \end{aligned}
  \tag{21}
 ```
@@ -364,7 +364,7 @@ r(h)=[\beta_e h_e(a)=\beta_e(a)]
 and zero rows at all old objects. This profile is admitted and pinned by a. The proposition $`p\land r`$ is true at the identity. A root permutation fixing every name in P can move a to a different colour. At that row p remains true but r is false. Hence
 
 ```math
-0<p\land r<p.
+0<p\land r<p
  \tag{22}
 ```
 
@@ -393,7 +393,7 @@ The old proof of language closure applies: transported parameters depend on thei
 For a relational auxiliary name c, give $`\widehat c`$ its interpreted old rows and an empty identity row. Exactly as in (9),
 
 ```math
-\rho_I\widehat c=I(c).
+\rho_I\widehat c=I(c)
  \tag{23}
 ```
 
@@ -405,7 +405,7 @@ For a selected b define $`O_b`$ by
 
 ```math
 O_b(1_o,q)=q(b),\qquad
- O_b(h,q)=q(1_V)\quad(h:o\to V\text{ old}).
+ O_b(h,q)=q(1_V)\quad(h:o\to V\text{ old})
  \tag{24}
 ```
 
@@ -446,7 +446,7 @@ For any selected onto interpretation or root permutation b, define
 O_b(h,q)=
  \begin{cases}
  q(b),&h\text{ is a root loop},\\
- q(1_V),&h:o\to V\text{ is old}.
+ q(1_V),&h:o\to V\text{ is old}
  \end{cases}
  \tag{25a}
 ```
@@ -462,7 +462,7 @@ Thus the unrestricted permutation source satisfies
 
 ```math
 C+OS+BF_{\mathrm{all}}+\neg\mathrm{Actuality}
- +RC_{\mathrm{all}}+\mathrm{Zorn}_{\mathrm{all}}.
+ +RC_{\mathrm{all}}+\mathrm{Zorn}_{\mathrm{all}}
  \tag{26}
 ```
 
@@ -485,7 +485,7 @@ Applying §§8.1–8.2 to that family yields the two simultaneous models
  &C+\mathrm{Max}(C)+OS+BF_{\mathrm{all}}
    +\mathrm{Actuality}+RC_{\mathrm{all}}+\mathrm{Zorn}_{\mathrm{all}},\\
  &C+\mathrm{Max}(C)+OS+BF_{\mathrm{all}}
-   +\neg\mathrm{Actuality}+RC_{\mathrm{all}}+\mathrm{Zorn}_{\mathrm{all}}.
+   +\neg\mathrm{Actuality}+RC_{\mathrm{all}}+\mathrm{Zorn}_{\mathrm{all}}
 \end{aligned}
  \tag{27}
 ```

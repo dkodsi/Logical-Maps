@@ -13,7 +13,7 @@ Fix an actual binary propositional operation + whose H truth table is either XOR
 Write Mat_+(E) for material preservation and Pt_+(E) for
 
 ```math
-\forall x,y\; E(x+y)=Ex+Ey.
+\forall x,y\; E(x+y)=Ex+Ey
 ```
 
 Two(E) means that E has at most two actual output objects. Separation S uses agreement in truth, as in the [atlas notation](README.md).
@@ -23,7 +23,7 @@ Two(E) means that E has at most two actual output objects. Separation S uses agr
 ```math
 \mathrm{BG}(+)
 \quad\longleftrightarrow\quad S[\mathrm{Mat}_+]
-\quad\longleftrightarrow\quad S[\mathrm{Two}\land\mathrm{Pt}_+].
+\quad\longleftrightarrow\quad S[\mathrm{Two}\land\mathrm{Pt}_+]
 \tag{1}
 ```
 
@@ -37,7 +37,7 @@ There is also an exact reduction without finiteness of the proposition domain. F
 \boxed{
 S[O\land\mathrm{FinIm}\land\mathrm{Mat}_+]
 \quad\longleftrightarrow\quad
-S[O\land\mathrm{Two}\land\mathrm{Pt}_+].}
+S[O\land\mathrm{Two}\land\mathrm{Pt}_+]}
 \tag{8}
 ```
 
@@ -50,14 +50,14 @@ Assume BG(+) and fix d≠0. We construct an admitted subgroup K avoiding d and a
 ```math
 \forall x\;(Ax\leftrightarrow Kx),
 \qquad
-\forall k,x\;(Kk\to A(x+k)=Ax).
+\forall k,x\;(Kk\to A(x+k)=Ax)
 \tag{2}
 ```
 
 The first condition concerns truth; the second is a pointwise identity. Initially take
 
 ```math
-K(x):=(x=0),\qquad A(x):=(x=0).
+K(x):=(x=0),\qquad A(x):=(x=0)
 ```
 
 This subgroup avoids d, and (2) holds by substitution. No assumption is made about the output object of a true or false identity judgment.
@@ -65,7 +65,7 @@ This subgroup avoids d, and (2) holds by substitution. No assumption is made abo
 Suppose y lies outside both K and d+K. Define
 
 ```math
-K'(x):=Kx\lor K(x+y).
+K'(x):=Kx\lor K(x+y)
 \tag{3}
 ```
 
@@ -77,7 +77,7 @@ Define an admitted operation by the appropriate displayed term:
 A'(x):=
 \begin{cases}
 Ax+A(x+y),&\text{XOR truth table},\\
-\neg\bigl(Ax+A(x+y)\bigr),&\text{biconditional truth table}.
+\neg\bigl(Ax+A(x+y)\bigr),&\text{biconditional truth table}
 \end{cases}
 \tag{4}
 ```
@@ -97,14 +97,14 @@ W(Z):=\forall U\left[ZU\to
 \exists K,A\left(
 \mathrm{Admissible}_d(K,A)
 \land\forall x\bigl(Ux\to(Kx\lor K(x+d))\bigr)
-\right)\right].
+\right)\right]
 \tag{5}
 ```
 
 The zero cardinality satisfies W: use the initial subgroup and test in §2, since its U is empty. For the successor step, suppose Suc(Z)U and choose its witness y. By the defining Frege successor formula,
 
 ```math
-Z(\lambda x.Ux\land x\ne y).
+Z(\lambda x.Ux\land x\ne y)
 ```
 
 Apply W(Z) to that deletion predicate. If y is already in K∪(d+K), retain the witnesses. Otherwise use (3)–(4). The resulting witnesses cover every member of U and establish W(Suc(Z)).
@@ -112,7 +112,7 @@ Apply W(Z) to that deletion predicate. If y is already in K∪(d+K), retain the 
 Frege induction yields W(Z) for every internally finite cardinality Z. Apply it to a witness Z with Z(All). We obtain
 
 ```math
-\forall x\;(Kx\lor K(x+d)),\qquad \neg Kd.
+\forall x\;(Kx\lor K(x+d)),\qquad \neg Kd
 \tag{6}
 ```
 
@@ -126,14 +126,14 @@ Put u:=A0 and v:=Ad. Then u is true and v is false, hence u≠v. Translation inv
 Ax=
 \begin{cases}
 u,&Kx,\\
-v,&K(x+d).
+v,&K(x+d)
 \end{cases}
 ```
 
 Define F(x):=Ax+u and c:=v+u. The two outputs of F are 0 and c, and c≠0 by group cancellation. Its kernel is K; the other coset is d+K. Adding two members of the other coset returns to K, while adding a K-member leaves coset membership unchanged. Because c+c=0, the four coset cases give
 
 ```math
-F(x+y)=Fx+Fy.
+F(x+y)=Fx+Fy
 \tag{7}
 ```
 
@@ -165,7 +165,7 @@ These are truth conditions on the endpoint outputs; no endpoint fixing follows u
 Assume BG(+), and let E be any admitted observer with FinIm(E). We first construct a two-output observer F with
 
 ```math
-\forall p\;(Fp\leftrightarrow Ep).
+\forall p\;(Fp\leftrightarrow Ep)
 \tag{9}
 ```
 
@@ -177,7 +177,7 @@ For compact notation define the admitted predicate
 \tau(x):=
 \begin{cases}
 x,&\text{XOR truth table},\\
-\neg x,&\text{biconditional truth table}.
+\neg x,&\text{biconditional truth table}
 \end{cases}
 ```
 
@@ -198,7 +198,7 @@ and the admitted induction property
 ```math
 W_\tau(Z):=\forall U\left[ZU\to
 \exists K,A\bigl(B_\tau(K,A)\land
-\mathrm{Cover}_\tau(U,K)\bigr)\right].
+\mathrm{Cover}_\tau(U,K)\bigr)\right]
 \tag{10}
 ```
 
@@ -212,7 +212,7 @@ Apply (10) to the actual image predicate Im(E)(x):=∃p(Ep=x), using FinIm(E). P
 A(Ep)=
 \begin{cases}
 u,&\neg\tau(Ep),\\
-v,&\tau(Ep).
+v,&\tau(Ep)
 \end{cases}
 \tag{11}
 ```
@@ -222,7 +222,7 @@ Indeed, in the first case Ep∈K, so translation invariance gives A(Ep)=A0. In t
 Define the admitted operation
 
 ```math
-F(p):=A(Ep)+u,\qquad c:=v+u.
+F(p):=A(Ep)+u,\qquad c:=v+u
 \tag{12}
 ```
 

@@ -35,7 +35,7 @@ Choose a set K with at least two elements admitting a surjection $`\theta_V:K\to
 X=K\times\mathbb N,\qquad
  C_k=\{k\}\times\mathbb N,\qquad
  \beta(k,n)=k,\qquad
- \beta_V=\theta_V\beta .
+ \beta_V=\theta_V\beta
  \tag{2}
 ```
 
@@ -48,7 +48,7 @@ Every fibre of every $`\beta_V`$ is infinite. Set
  \mathrm{End}(o)&=\mathrm{Sym}(X),\\
  \mathrm{Hom}(o,V)&=A_V^X,\qquad
  \mathrm{Hom}(V,o)=\varnothing,\\
- G_o&=\prod_{k\in K}\mathrm{Sym}(C_k).
+ G_o&=\prod_{k\in K}\mathrm{Sym}(C_k)
 \end{aligned}
  \tag{3}
 ```
@@ -64,7 +64,7 @@ The source relational domains consist of symmetric finitely pinned profiles, wit
 ```math
 A(h,\bar z)\in\{0,1\},
  \qquad h:o\to V,\quad
- \bar z\in\prod_i D_{\sigma_i}(V).
+ \bar z\in\prod_i D_{\sigma_i}(V)
  \tag{4}
 ```
 
@@ -77,7 +77,7 @@ Finite pinning and symmetry have their usual meanings:
  h|_P=l|_P&\ \Longrightarrow\ A(h,\bar z)=A(l,\bar z)
        &&\text{for arrows with the same target},\\
  A(\mu h,\rho_\mu\bar z)&=A(h,\bar z)
-       &&(\mu\in G_V).
+       &&(\mu\in G_V)
 \end{aligned}
  \tag{5}
 ```
@@ -93,7 +93,7 @@ Source transport and application use the standard rules
 ```math
 (\rho_fA)(h,\bar z)=A(hf,\bar z),
  \qquad
- (A[\bar x])(h)=A(h,\rho_h\bar x).
+ (A[\bar x])(h)=A(h,\rho_h\bar x)
  \tag{6}
 ```
 
@@ -112,7 +112,7 @@ Every source permutation acts bijectively at all types. For any old object V, an
 
 
 ```math
-b|_P=h|_P,\qquad b\text{ is surjective}.
+b|_P=h|_P,\qquad b\text{ is surjective}
  \tag{7}
 ```
 
@@ -129,7 +129,7 @@ At individual type, a selected arrow is onto by (7), or by the singleton convent
  \begin{cases}
  A(k,\bar z),&
  \text{if some old }k:V\to W\text{ satisfies }k|_T=ls,\\
- 0,&\text{if no such }k\text{ exists}.
+ 0,&\text{if no such }k\text{ exists}
  \end{cases}
  \tag{8}
 ```
@@ -180,7 +180,7 @@ Exactly as in the [two-object orbit-envelope proof](../../next-update/proofs/inf
 
 ```math
 \pi_Pp=
- \sup_B\{\rho_gp:g\in G_{o,(P)}\}.
+ \sup_B\{\rho_gp:g\in G_{o,(P)}\}
  \tag{11}
 ```
 
@@ -217,7 +217,7 @@ O(h,q)=
  h:o\to o,\ \beta h|_P=\beta|_P,\\
  q(\beta_{V_0}),&
  h:o\to o,\ \beta h|_P\ne\beta|_P,\\
- q(1_V),&h:o\to V\text{ old}.
+ q(1_V),&h:o\to V\text{ old}
  \end{cases}
  \tag{13}
 ```
@@ -234,7 +234,7 @@ Every source self-row reads a selected arrow followed by a source permutation, a
 \bigwedge_{z\in D_\sigma(\mathrm{cod}a)}F(a,z)
  =
  \bigwedge_{x\in D_\sigma(\mathrm{dom}a)}
-             F(a,\rho_a x).
+             F(a,\rho_a x)
  \tag{14}
 ```
 
@@ -253,7 +253,7 @@ The construction preserves every old interpretation exactly. Therefore, if a pur
 
 
 ```math
-o\models\Diamond\varphi_i.
+o\models\Diamond\varphi_i
  \tag{15}
 ```
 
@@ -283,7 +283,7 @@ The theorem supplies one complete observer source for any set-many permitted tar
 
 
 ```math
-\mathrm{Con}\bigl(C+\mathrm{Max}(C)+OS+BC_t\bigr).
+\mathrm{Con}\bigl(C+\mathrm{Max}(C)+OS+BC_t\bigr)
 ```
 
 

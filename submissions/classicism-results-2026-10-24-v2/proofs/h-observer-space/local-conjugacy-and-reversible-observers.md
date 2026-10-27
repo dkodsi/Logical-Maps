@@ -20,7 +20,7 @@ Individuals are the underlying objects, with the stated arrow action. All arrow 
 Composition of arrows is written multiplicatively, with the rightmost arrow applied first. For a finite S⊆W put
 
 ```math
-G_{W,(S)}:=\{g\in G_W:g|_S=\mathrm{id}|_S\}.
+G_{W,(S)}:=\{g\in G_W:g|_S=\mathrm{id}|_S\}
 ```
 
 A proposition p at W is a set of arrows out of W. Its symmetry means that h∈p iff kh∈p for each k∈G_V when h:W→V. A finite pin P means that arrows with the same target and the same restriction to P agree on membership in p. Actual truth at W is membership of id_W.
@@ -29,14 +29,14 @@ More generally, a tt intension E at W has a truth profile E(h,q), where h:W→Z 
 
 ```math
 E(\mu h,\rho_t(\mu)q)=E(h,q)
-\qquad(\mu\in G_Z).
+\qquad(\mu\in G_Z)
 \tag{1}
 ```
 
 For propositions, transport satisfies
 
 ```math
-k\in\rho_t(\mu)q\quad\Longleftrightarrow\quad k\mu\in q.
+k\in\rho_t(\mu)q\quad\Longleftrightarrow\quad k\mu\in q
 \tag{2}
 ```
 
@@ -47,7 +47,7 @@ Every arrow acts bijectively on every admitted type, with its inverse arrow supp
 Fix W,V, an arrow b:W→V and finite S⊆W satisfying
 
 ```math
-bG_{W,(S)}b^{-1}=G_{V,(bS)}.
+bG_{W,(S)}b^{-1}=G_{V,(bS)}
 \tag{LC}
 ```
 
@@ -56,7 +56,7 @@ Consider two sets of arrows out of W:
 ```math
 \begin{aligned}
 C_0&:=\{h:W\to W:\exists g\in G_W,\ h|_S=g|_S\},\\
-C_1&:=\{h:W\to V:\exists k\in G_V,\ h|_S=(kb)|_S\}.
+C_1&:=\{h:W\to V:\exists k\in G_V,\ h|_S=(kb)|_S\}
 \end{aligned}
 \tag{3}
 ```
@@ -66,7 +66,7 @@ Both are symmetric and S-pinned, hence admitted propositions. Assume C_0 and C_1
 **Local swap lemma.** Under (LC) and disjointness, there is an admitted observer E:tt with E∘E=I as a whole-operation identity, qualified by full Boolean and quantifier identities at every finite list of types. At the actual evaluation it has truth profile
 
 ```math
-E(\mathrm{id}_W,p)\quad\Longleftrightarrow\quad b\in p.
+E(\mathrm{id}_W,p)\quad\Longleftrightarrow\quad b\in p
 \tag{4}
 ```
 
@@ -81,7 +81,7 @@ E(h,q)\quad\Longleftrightarrow\quad
 \begin{cases}
 b g^{-1}\in q,&h\in C_0,\ h|_S=g|_S,\ g\in G_W,\\
 b^{-1}k^{-1}\in q,&h\in C_1,\ h|_S=(kb)|_S,\ k\in G_V,\\
-\mathrm{id}_Z\in q,&h:W\to Z\text{ outside }C_0\cup C_1.
+\mathrm{id}_Z\in q,&h:W\to Z\text{ outside }C_0\cup C_1
 \end{cases}
 \tag{5}
 ```
@@ -102,7 +102,7 @@ has the same membership in q as bg^{-1}, by q's target symmetry. In the second c
 
 ```math
 bg^{-1}\mu^{-1}\in\rho_t(\mu)q
-\quad\Longleftrightarrow\quad bg^{-1}\in q.
+\quad\Longleftrightarrow\quad bg^{-1}\in q
 ```
 
 The C_1 calculation replaces k by μk and is identical. Both charts are invariant under their target symmetry groups, so an arrow outside them stays outside. In the default branch, id_Z∈ρ_t(μ)q iff μ∈q iff id_Z∈q. This proves (1). By symmetric ideal fullness, E is an admitted tt object. At id_W, choosing g=id_W gives (4).
@@ -113,7 +113,7 @@ It is useful to call the observation arrow selected by (5) at h an a_h; choices 
 
 ```math
 l\in(\rho_{tt}(r)E)(q)
-\quad\Longleftrightarrow\quad a_{lr}l\in q.
+\quad\Longleftrightarrow\quad a_{lr}l\in q
 \tag{6}
 ```
 
@@ -122,13 +122,13 @@ This formula checks identities on arbitrary q in the future domain, not merely o
 **The involution identity.** Put h=lr. If h∈C_0 has witness g, its observation arrow is a_h=bg^{-1}. The composite a_hh agrees with b on S, so it lies in C_1 with witness k=id_V. Its next observation arrow can therefore be taken to be b^{-1}. Applying (6) twice tests q at
 
 ```math
-b^{-1}bg^{-1}l=g^{-1}l.
+b^{-1}bg^{-1}l=g^{-1}l
 ```
 
 This agrees with testing q at l, because g^{-1}∈G_W and W is the target of l in this case. If h∈C_1 has witness k, the first observation arrow is b^{-1}k^{-1}. Its composite with h lies in C_0 with witness g=id_W, so the second observation arrow is b. The round trip tests q at k^{-1}l, again equivalent to l by target symmetry. Outside both charts the observation arrow is the identity, and the branch remains unchanged. Thus at every r, for every q and every l,
 
 ```math
-(\rho_{tt}(r)E)((\rho_{tt}(r)E)q)=q.
+(\rho_{tt}(r)E)((\rho_{tt}(r)E)q)=q
 ```
 
 These complete future profiles are identical, proving E∘E=I as an operation identity.
@@ -144,7 +144,7 @@ Finally every equality proposition is an endpoint, since all arrow actions are i
 Assume that for each object V there exist a bijection j_V:W→V and a finite D_V⊆W such that
 
 ```math
-j_VG_{W,(D_V)}j_V^{-1}=G_{V,(j_VD_V)}.
+j_VG_{W,(D_V)}j_V^{-1}=G_{V,(j_VD_V)}
 \tag{7}
 ```
 
@@ -169,7 +169,7 @@ by intersecting both sides with the stabilizers of the additional points. Every 
 ```math
 bG_{W,(S)}b^{-1}
 =j_VG_{W,(S)}j_V^{-1}
-=G_{V,(bS)}.
+=G_{V,(bS)}
 ```
 
 Construct C_0,C_1 from b,S. Since S contains P, every arrow in C_0 agrees, up to target symmetry, with id_W on a pin of d. Hence C_0⊆¬d. Similarly C_1⊆d because b∈d. The charts are therefore disjoint even when W=V. The local swap observer E satisfies Ed at W by (4). Its Boolean identities imply that Ep and Eq have different truth values. The same E qualifies at any specified finite Δ and is its own qualified inverse.
@@ -189,7 +189,7 @@ Thus these families satisfy Rev and its separately boxed schema. They include at
 The earlier representation criterion for an ordinary observer evaluating at b requires only
 
 ```math
-bG_{W,(S)}b^{-1}\subseteq G_V.
+bG_{W,(S)}b^{-1}\subseteq G_V
 ```
 
 Its positive separation criterion may hold at every object without presenting the compatible equalities (7). The [finite-block symmetry model](finite-block-symmetry-reversible-gap.md) realizes that distinction and independently refutes C5+□OS⇒Rev by a contingent pure sentence. No necessity of (7) for arbitrary admitted reversible observers is asserted. This note excludes the three families above from supplying that counterexample and identifies the local inverse structure used in its chart construction.

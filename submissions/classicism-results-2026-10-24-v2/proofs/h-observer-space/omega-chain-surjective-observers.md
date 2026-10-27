@@ -7,7 +7,7 @@ In the full omega-chain model, $`\mathrm{Good}_{\{t\}}`$ observers are exactly t
 ```math
 \mathrm C+\Box\mathrm{BF}+\Box\mathrm{Atomicity}_t
 +\Box\mathrm{SurjSep}
-\ \not\Longrightarrow\ \mathrm{C5},\quad\mathrm{SplitMono}.
+\ \not\Longrightarrow\ \mathrm{C5},\quad\mathrm{SplitMono}
 \tag{1}
 ```
 
@@ -18,7 +18,7 @@ SurjSep means full typed separation by currently surjective Good observers, with
 Take objects n∈ℕ, with one arrow n→m when n≤m, and singleton individuals. Use the full relational action-model domains. This is the existing omega-chain construction from [Two upper observer models](../observer-lattice-models.md), §1. At n,
 
 ```math
-D_t(n)=\mathcal P(T_n),\qquad T_n=\{m:m\ge n\}.
+D_t(n)=\mathcal P(T_n),\qquad T_n=\{m:m\ge n\}
 \tag{2}
 ```
 
@@ -31,14 +31,14 @@ The full action construction supplies C. Surjective type transport gives BF at e
 Fix an external natural number k≥0. At n define an observer E_k^n by its entire future profile: at an arrow n→m and an arbitrary q∈D_t(m), its truth value is
 
 ```math
-E_k^n(m,q)\quad\Longleftrightarrow\quad m+k\in q.
+E_k^n(m,q)\quad\Longleftrightarrow\quad m+k\in q
 \tag{3}
 ```
 
 Fullness admits this profile. It specifies the observer on every future input, not only current propositions. Transport of E_k^n to m gives E_k^m, and application yields
 
 ```math
-E_k^n(p)=\{m\ge n:m+k\in p\}.
+E_k^n(p)=\{m\ge n:m+k\in p\}
 \tag{4}
 ```
 
@@ -47,7 +47,7 @@ For any q⊆T_n the admitted proposition p={m+k:m∈q} is a preimage under (4). 
 Equation (4) preserves every Boolean operation and both endpoints. For the full universal-quantifier law at type σ, let m≥n and F∈D_{σt}(m) be an arbitrary future input. Put j=m+k and let F_j be its transport to j. The truth of E_k^m(∀_σF) at m says
 
 ```math
-\forall y\in D_\sigma(j)\quad F_j(y)\text{ is true at }j.
+\forall y\in D_\sigma(j)\quad F_j(y)\text{ is true at }j
 \tag{5}
 ```
 
@@ -55,7 +55,7 @@ The truth of ∀_σ(λx.E_k^m(Fx)) at m says
 
 ```math
 \forall x\in D_\sigma(m)\quad
-F_j\bigl(\rho_\sigma(m\to j)x\bigr)\text{ is true at }j.
+F_j\bigl(\rho_\sigma(m\to j)x\bigr)\text{ is true at }j
 \tag{6}
 ```
 
@@ -77,7 +77,7 @@ is a Boolean homomorphism to {0,1}, preserving both endpoints. We show it is eva
 Suppose no singleton is accepted. Boolean preservation then rejects every finite subset of T_m and accepts every cofinite subset. Fullness admits a predicate F:tt at m with the following truth profile at every j≥m and x⊆T_j:
 
 ```math
-F(j,x)\quad\Longleftrightarrow\quad x\ne\{j\}.
+F(j,x)\quad\Longleftrightarrow\quad x\ne\{j\}
 \tag{8}
 ```
 
@@ -96,7 +96,7 @@ Application naturality consequently gives, for every current p⊆T_n,
 
 ```math
 E(p)=f^{-1}[p],\qquad
-f:T_n\to T_n,\quad f(m)\ge m.
+f:T_n\to T_n,\quad f(m)\ge m
 \tag{10}
 ```
 
@@ -110,7 +110,7 @@ An onto map f:T_n→T_n satisfying f(m)≥m must be the identity. Surjectivity a
 
 ```math
 E\text{ Good}_{\{t\}}\text{ and currently injective}
-\quad\Longrightarrow\quad E=I.
+\quad\Longrightarrow\quad E=I
 \tag{11}
 ```
 
@@ -130,7 +130,7 @@ Globally, with the full schemas over H, the elementary implications are
 
 ```math
 \mathrm{Rev}\ \Longrightarrow\ \mathrm{SurjSep}
-\ \Longrightarrow\ \mathrm{OS}.
+\ \Longrightarrow\ \mathrm{OS}
 \tag{12}
 ```
 

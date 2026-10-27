@@ -12,7 +12,7 @@ Work over C5, with the two additional unboxed instances
 
 ```math
 \mathrm{BC}_t,
-\qquad \mathrm{Zorn}_t.
+\qquad \mathrm{Zorn}_t
 \tag{1}
 ```
 
@@ -20,7 +20,7 @@ $`\mathrm{BC}_t`$ is [Boolean Completeness at t](../../source/topics/classicism/
 
 ```math
 u\le q\quad\longleftrightarrow\quad
-\forall b\,(Xb\to b\le q).
+\forall b\,(Xb\to b\le q)
 \tag{2}
 ```
 
@@ -33,7 +33,7 @@ $`\mathrm{Zorn}_t`$ is the single σ=t instance of the database's [preorder Zorn
 \forall P^{ttt}\bigl[&\mathrm{Preorder}(P)\land
 \forall X^{tt}\bigl(\mathrm{TotalOrder}(P,X)
  \to\exists u^t\,\forall b^t(Xb\to P(b,u))\bigr)\\
-&\to\exists m^t\,\forall y^t(P(m,y)\to P(y,m))\bigr].
+&\to\exists m^t\,\forall y^t(P(m,y)\to P(y,m))\bigr]
 \end{aligned}
 \tag{3}
 ```
@@ -46,21 +46,21 @@ Fix a finite external list Δ containing t and an admitted $`\mathrm{Good}_\Delt
 C_E:=EL,\qquad j_E:=ER,
 \qquad
 \mathrm{Loc}_E(b):\longleftrightarrow
-\forall q\,[b\land C_E(b\land q)=b\land q].
+\forall q\,[b\land C_E(b\land q)=b\land q]
 \tag{4}
 ```
 
 As in [Local-transversal support](local-transversal-support.md), §1, the locality guard may be defined by equality of the two complete unary operations in (4). It is endpoint-valued under C5. The admitted support is
 
 ```math
-s_E:=\exists b\,[\mathrm{Loc}_E(b)\land b].
+s_E:=\exists b\,[\mathrm{Loc}_E(b)\land b]
 \tag{5}
 ```
 
 We use the support note's heredity and density theorem: every local b lies below $`s_E`$, and every nonzero q≤$`s_E`$ contains a nonzero local subproposition. The adjoint facts include $`q\le C_E q`$, L0=0 and Frobenius
 
 ```math
-L(q\land Ep)=Lq\land p.
+L(q\land Ep)=Lq\land p
 \tag{6}
 ```
 
@@ -73,7 +73,7 @@ We first justify the chain-bound step for arbitrary proposition-valued membershi
 Composition of the two adjunctions gives
 
 ```math
-C_E\dashv j_E.
+C_E\dashv j_E
 \tag{7}
 ```
 
@@ -86,7 +86,7 @@ Likewise meet with a fixed q preserves every existing current least upper bound,
 To prove this, fix q. For any current members b,c, locality of b∨c yields
 
 ```math
-b\land C_E(c\land q)\le q.
+b\land C_E(c\land q)\le q
 \tag{8}
 ```
 
@@ -99,7 +99,7 @@ In particular this applies to a current chain of local elements: the union of tw
 **Theorem 1.** For every proposition r, there exists an admitted local u≤r such that
 
 ```math
-\boxed{Lu=L(s_E\land r).}
+\boxed{Lu=L(s_E\land r)}
 \tag{9}
 ```
 
@@ -110,7 +110,7 @@ Every maximal local element below r satisfies (9). This theorem holds for arbitr
 ```math
 V(b):=\mathrm{Loc}_E(b)\land b\le r,
 \qquad
-P(b,c):=\neg V(b)\lor(V(c)\land b\le c).
+P(b,c):=\neg V(b)\lor(V(c)\land b\le c)
 \tag{10}
 ```
 
@@ -124,7 +124,7 @@ Put a=L($`s_E`$∧r). Since u is local and u≤r, u≤$`s_E`$∧r and Lu≤a. Su
 
 ```math
 w:=a\land\neg Lu\ne0,
-\qquad x:=(s_E\land r)\land Ew.
+\qquad x:=(s_E\land r)\land Ew
 \tag{11}
 ```
 
@@ -133,7 +133,7 @@ Frobenius gives Lx=a∧w=w, so x≠0. Since x≤$`s_E`$, the support-density the
 ```math
 C_Ev\le Ew,
 \qquad C_Eu=E(Lu)\le E(\neg w),
-\qquad C_Eu\land C_Ev=0.
+\qquad C_Eu\land C_Ev=0
 \tag{12}
 ```
 
@@ -150,7 +150,7 @@ Theorem 1 therefore gives, for every r,
 ```math
 \boxed{
 \exists u\,[\mathrm{Loc}_E(u)\land u\le r\land C_Eu=1]
-\quad\longleftrightarrow\quad L(s_E\land r)=1.}
+\quad\longleftrightarrow\quad L(s_E\land r)=1}
 \tag{13}
 ```
 
@@ -161,7 +161,7 @@ For a global transversal u the corresponding $`\mathrm{Good}_\Delta`$ inverse is
 ```math
 F_u(q):=L(u\land q),
 \qquad F_uE=I,
-\qquad F_uq=0\longleftrightarrow u\land q=0.
+\qquad F_uq=0\longleftrightarrow u\land q=0
 \tag{14}
 ```
 
@@ -173,7 +173,7 @@ The equalities of operations here are whole identities. The established transver
 \exists F\,[\mathrm{Good}_\Delta(F)\land FE=I]
 &\quad\longleftrightarrow\quad Ls_E=1,\\
 \exists F\,[\mathrm{Good}_\Delta(F)\land FE=I\land Fc=0]
-&\quad\longleftrightarrow\quad L(s_E\land\neg c)=1.
+&\quad\longleftrightarrow\quad L(s_E\land\neg c)=1
 \end{aligned}}
 \tag{15}
 ```
@@ -190,7 +190,7 @@ Under C5+$`\mathrm{BC}_t`$+$`\mathrm{Zorn}_t`$, the true-kernel sentence K_Δ ha
 \boxed{
 K_\Delta\quad\longleftrightarrow\quad
 \exists E,c\,[\mathrm{Good}_\Delta(E)\land\mathrm{Inj}(E)
-\land c\land L_E(s_E\land\neg c)=1].}
+\land c\land L_E(s_E\land\neg c)=1]}
 \tag{16}
 ```
 

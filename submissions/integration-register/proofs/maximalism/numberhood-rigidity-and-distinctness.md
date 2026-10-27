@@ -12,7 +12,7 @@ Work in the fixed relational language of C, and put
 
 ```math
 \nu=(et)t,\qquad N=\mathrm{FiniteCardinality}_e,
-\qquad \mathbf1=\mathrm{Suc}_e\mathbf0.
+\qquad \mathbf1=\mathrm{Suc}_e\mathbf0
 ```
 
 Consider the single closed sentence
@@ -25,7 +25,7 @@ Consider the single closed sentence
 and endpoint-valuedness of that same predicate:
 
 ```math
-\mathrm{EndN}:=\forall z^\nu\,(Nz=\top\ \lor\ Nz=\bot).
+\mathrm{EndN}:=\forall z^\nu\,(Nz=\top\ \lor\ Nz=\bot)
 \tag{2}
 ```
 
@@ -41,7 +41,7 @@ For the empty property O := lambda x.Bottom and any admitted individual a, let S
 
 ```math
 \mathbf0(O)=\top,\quad\mathbf1(O)=\bot,
-\qquad\mathbf0(S_a)=\bot,\quad\mathbf1(S_a)=\top.
+\qquad\mathbf0(S_a)=\bot,\quad\mathbf1(S_a)=\top
 \tag{3}
 ```
 
@@ -53,7 +53,7 @@ Define one admitted operation from propositions to cardinality objects:
 
 ```math
 M(p):=\lambda X^{et}.\,
-       (p\land\mathbf0(X))\lor(\neg p\land\mathbf1(X)).
+       (p\land\mathbf0(X))\lor(\neg p\land\mathbf1(X))
 \tag{4}
 ```
 
@@ -61,7 +61,7 @@ M(p):=\lambda X^{et}.\,
 
 ```math
 N(M(p))\quad\longleftrightarrow\quad
-       (p=\top\ \lor\ p=\bot).
+       (p=\top\ \lor\ p=\bot)
 \tag{5}
 ```
 
@@ -78,7 +78,7 @@ Conversely, p=Top identifies M(p) with 0 by substitution and the Boolean identit
 ```math
 \mathrm{NN}\quad\Longleftrightarrow\quad\mathrm{EndN}
 \quad\Longleftrightarrow\quad 5
-\quad\Longleftrightarrow\quad\mathrm{ND}_{\rm all}.
+\quad\Longleftrightarrow\quad\mathrm{ND}_{\rm all}
 \tag{6}
 ```
 
@@ -97,7 +97,7 @@ Finally assume ND at t and suppose not Nz. Then Nz differs from Top. ND_t makes 
 All implications used in §3 are theorems of C. Necessitating them therefore gives
 
 ```math
-C+\Box\mathrm{NN}\quad\Longleftrightarrow\quad C5.
+C+\Box\mathrm{NN}\quad\Longleftrightarrow\quad C5
 \tag{7}
 ```
 
@@ -106,7 +106,7 @@ In the forward direction obtain every boxed ND instance separately. In the rever
 There is also the current implication
 
 ```math
-C+\mathrm{NN}+\mathrm{BF}_t\quad\Longrightarrow\quad C5.
+C+\mathrm{NN}+\mathrm{BF}_t\quad\Longrightarrow\quad C5
 \tag{8}
 ```
 
@@ -117,7 +117,7 @@ Indeed §3 gives ND_t. The recorded [ND_t plus BF_t theorem](../../../classicism
 Pure Max(C) is [incompatible with ND](../../../classicism-results-2026-10-24-v2/source/topics/classicism/results/maximalist-distinctness-incompatible-with-nd.yaml). Equation (6) therefore makes it incompatible with NN and with EndN, already over C alone. In particular pure Max(C) entails
 
 ```math
-\exists z^\nu\,(\neg Nz\land\Diamond Nz).
+\exists z^\nu\,(\neg Nz\land\Diamond Nz)
 \tag{9}
 ```
 

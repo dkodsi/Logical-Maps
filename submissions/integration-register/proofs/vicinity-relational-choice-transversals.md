@@ -13,7 +13,7 @@ For every fixed type σ in the original relational language,
 
 ```math
 \boxed{C+\mathrm{Vicinity}+RC_{(\sigma t),\sigma}
-       \ \Longrightarrow\ TC_\sigma.}
+       \ \Longrightarrow\ TC_\sigma}
 \tag{1}
 ```
 
@@ -24,7 +24,7 @@ ambient premises. In particular,
 
 
 ```math
-\boxed{C+\mathrm{Vicinity}+RC_{\rm all}\Longrightarrow TC_{\rm all}.}
+\boxed{C+\mathrm{Vicinity}+RC_{\rm all}\Longrightarrow TC_{\rm all}}
 \tag{2}
 ```
 
@@ -50,7 +50,7 @@ e₀ and t₀, and define its interpretation in original types by
 
 ```math
 \iota(e_0)=\sigma,\qquad \iota(t_0)=t,\qquad
-\iota(\alpha\beta)=\iota(\alpha)\iota(\beta).
+\iota(\alpha\beta)=\iota(\alpha)\iota(\beta)
 \tag{3}
 ```
 
@@ -64,7 +64,7 @@ Choose the true core s supplied by Vicinity, as in dependency 1:
 
 
 ```math
-A_w=\forall r^t\,(r\to w\le\Diamond r),\qquad s=w\land A_w.
+A_w=\forall r^t\,(r\to w\le\Diamond r),\qquad s=w\land A_w
 \tag{4}
 ```
 
@@ -74,7 +74,7 @@ The cited true-core lemma holds at every original argument type τ:
 
 ```math
 \forall x^\tau\,(s\le F(x))\quad\Longrightarrow\quad
-s\le\forall x^\tau F(x).
+s\le\forall x^\tau F(x)
 \tag{5}
 ```
 
@@ -89,7 +89,7 @@ Define the retractions indexed by *source* types:
 ```math
 j_{e_0}(x)=x,\qquad j_{t_0}(p)=s\land p,\qquad
 j_{\alpha\beta}(F)=\lambda x^{\iota(\alpha)}\,
- j_\beta(F(j_\alpha x)).
+ j_\beta(F(j_\alpha x))
 \tag{6}
 ```
 
@@ -106,7 +106,7 @@ Let D_α be its fixed-point domain. In particular,
 ```math
 D_{e_0}=\text{the entire original }\sigma\text{ carrier},\qquad
 D_{t_0}=[0,s],\qquad
-j_{e_0t_0}(X)=\lambda a^\sigma\,s\land X(a).
+j_{e_0t_0}(X)=\lambda a^\sigma\,s\land X(a)
 \tag{7}
 ```
 
@@ -127,7 +127,7 @@ s∧(x=y), endpoints 0,s, relative complement s∧¬p, and quantifiers
 ```math
 \exists^s x\,F(x)=s\land\exists x^{\iota(\alpha)}F(j_\alpha x),
 \qquad
-\forall^s x\,F(x)=s\land\forall x^{\iota(\alpha)}F(j_\alpha x).
+\forall^s x\,F(x)=s\land\forall x^{\iota(\alpha)}F(j_\alpha x)
 \tag{8}
 ```
 
@@ -148,7 +148,7 @@ translated proposition matrices are false. Thus an H-theorem
 
 
 ```math
-(E\land\Phi^s)\leftrightarrow(E\land\Psi^s).
+(E\land\Phi^s)\leftrightarrow(E\land\Psi^s)
 \tag{9}
 ```
 
@@ -185,7 +185,7 @@ Its supported projection is
 
 
 ```math
-L(X,a):=s\land K(j_{e_0t_0}(X),a).
+L(X,a):=s\land K(j_{e_0t_0}(X),a)
 \tag{11}
 ```
 
@@ -200,7 +200,7 @@ Now take any original current equivalence R on σ and put
 
 
 ```math
-R^s(a,b):=s\land R(a,b).
+R^s(a,b):=s\land R(a,b)
 \tag{12}
 ```
 
@@ -224,7 +224,7 @@ By the recorded unboxed ND_t⇒Vicinity theorem, (1) also gives
 
 
 ```math
-C+ND_t+RC_{(\sigma t),\sigma}\Longrightarrow TC_\sigma.
+C+ND_t+RC_{(\sigma t),\sigma}\Longrightarrow TC_\sigma
 \tag{13}
 ```
 
@@ -240,7 +240,7 @@ gives, over C+Vicinity,
 ```math
 RC_{\rm all}\ \longleftrightarrow\ TC_{\rm all}
 \ \longleftrightarrow\ Zorn_{\rm all}
-\ \longleftrightarrow\ WO_{\rm all}.
+\ \longleftrightarrow\ WO_{\rm all}
 \tag{14}
 ```
 

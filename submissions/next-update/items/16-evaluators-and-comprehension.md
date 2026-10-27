@@ -7,7 +7,7 @@ ND at t and Boolean Completeness at tt supply an admitted operation assigning To
 ```math
 \mathrm C+\mathrm{ND}_t+\mathrm{BC}_{tt}
 \quad\vdash\quad\exists E^{tt}\, .\,\mathrm{Correct}(E)
-\quad\vdash\quad\mathrm{Actuality}.
+\quad\vdash\quad\mathrm{Actuality}
 ```
 
 Join the haecceities of the currently true propositions. ND makes the complement of each false proposition's haecceity an upper bound, forcing the required endpoint outputs. This avoids the older route through Vicinity and Weakly Inextensible Comprehension and requires neither BF nor OS. Completeness is at tt, not t.
@@ -22,7 +22,7 @@ Over C5, this yields the current-package equivalence
 &\Longleftrightarrow\mathrm{Boolean\ Completeness}
 \Longleftrightarrow\mathrm{Plenitude}_{t,t}\\
 &\Longleftrightarrow\mathrm{Plenitude}
-\Longleftrightarrow\mathrm{Rigid\ Comprehension}.
+\Longleftrightarrow\mathrm{Rigid\ Comprehension}
 \end{aligned}
 ```
 
@@ -37,7 +37,7 @@ The [finite endpoint presentation](../proofs/endpoint-separation-finite-presenta
 \quad\Longleftrightarrow\quad
 S_{t,\{t\}}+\mathrm{Eval}
 \quad\Longleftrightarrow\quad
-S_{t,\{t\}}+\mathrm{ND}_t+\mathrm{BC}_{tt}.
+S_{t,\{t\}}+\mathrm{ND}_t+\mathrm{BC}_{tt}
 ```
 
 Here Eval is existence of a correct evaluator, and the single separation formula uses Boolean observers preserving only the quantifier at t. These finite premises recover the full endpoint schema, equivalently C5 + Atomicity at t or ☐Plenitude. The contribution is this finite assembly of established local arguments.

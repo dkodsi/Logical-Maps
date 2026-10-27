@@ -796,7 +796,7 @@
         "principles.04"
       ],
       "title": "Proposed exact arithmetic strength of pure Maximalism",
-      "statement": "The supplied ordinary proof proposes that pure Maximalism proves exactly the ordinary first-order arithmetic consequences of the positive packages’ common arithmetic theory together with all standard-true Π₁ sentences.\n\n$$\n\\operatorname{Th}_{\\mathrm{arith}}(\\operatorname{Max}(C))=\\operatorname{Cn}\\bigl(T_{\\mathrm{arith}}\\cup\\mathrm{True}_{\\Pi_1}\\bigr).\n$$",
+      "statement": "The supplied ordinary proof proposes that pure Maximalism proves exactly the ordinary first-order arithmetic consequences of the positive packages’ common arithmetic theory together with all standard-true Π₁ sentences.\n\n$$\n\\operatorname{Th}_{\\mathrm{arith}}(\\operatorname{Max}(C))=\\operatorname{Cn}\\bigl(T_{\\mathrm{arith}}\\cup\\mathrm{True}_{\\Pi_1}\\bigr)\n$$",
       "scope": "Finitary pure Maximalism over fixed C, with the fixed Frege interpretation at any fixed counting type. T_arith is the ordinary arithmetic consequence theory shared by C+I and the positive quantified-Infinity packages. Standard truth on the right is metalinguistic; Cn means first-order deductive closure. This is a claim about actual arithmetic theorems, not higher-order/modal conservation or SP consistency.",
       "significance": "This gives an exact upper as well as lower bound on Max’s added arithmetic strength. It distinguishes stronger actual arithmetic from the structural and modal benefits of the positive packages, without identifying Max with all arithmetic truth.",
       "mathematical_status": "Ordinary proof supplied in Frege infinity §37; the difficult upper inclusion still awaits independent review. The completed independent §36 review expressly excluded this equality. No literature-novelty or human-review claim.",
@@ -1303,7 +1303,7 @@
       ],
       "title": "Stable atoms are exactly what diagonal separation requires",
       "statement": "Separation of propositions by diagonal characters is equivalent over C to ND (type t) together with Atomicity (type t).",
-      "scope": "For $E^{tt}$, put\n\n$$\nw_E:=\\forall p^t\\, .\\,Ep\\to p.\n$$\n\nA diagonal character preserves bottom and negation, has only top or bottom as each current value, and accepts $w_E$.",
+      "scope": "For $E^{tt}$, put\n\n$$\nw_E:=\\forall p^t\\, .\\,Ep\\to p\n$$\n\nA diagonal character preserves bottom and negation, has only top or bottom as each current value, and accepts $w_E$.",
       "lean_status": "Exact equivalence and reconstruction lemmas checked",
       "significance": "A single diagonal acceptance condition replaces a much larger quantifier-preservation demand. Each character determines a necessarily nonbottom atom; no Barcan, C5 or Choice assumption is needed.",
       "proofs": [
@@ -1491,7 +1491,7 @@
       "mathematical_status": "Ordinary proof supplied at the stated scope.",
       "proof_length": {
         "rating": "long",
-        "words": 135203
+        "words": 135201
       },
       "certificates": [
         "evidence/certificates/final-full-typed-logical-separation-h-transport/certificate.json",
@@ -3476,7 +3476,7 @@
             "result_refs": [
               "MODAL-CHOICE"
             ],
-            "summary": "Over C, with full schemas,\n\n$$\n\\mathrm{MRC}\\ \\longleftrightarrow\\ \\Box\\mathrm{MRC}\\ \\longleftrightarrow\\ (\\Box\\mathrm{RC}+\\mathrm{IC})\\ \\longleftrightarrow\\ (\\Box\\mathrm{RC}+\\Box\\mathrm{IC}).\n$$\n\nHere RC is Relational Choice and IC is Intensional Choice. With either Boolean Completeness or ☐Vicinity, these are also equivalent to Modal Well-Ordering; in particular the equivalence holds over C5. The [typed bounds and countermodels](evidence/RESULT-INDEX.md#modal-choice) separate current choice from modal selection and explain exactly when BF is needed. A proof that RC entails TC over C would also establish MRC ⇒ Modal Well-Ordering. The [reduction](../integration-register/proofs/modal-choice/modal-to-current-choice-reduction.md) relates the unresolved questions without assuming either answer.",
+            "summary": "Over C, with full schemas,\n\n$$\n\\mathrm{MRC}\\ \\longleftrightarrow\\ \\Box\\mathrm{MRC}\\ \\longleftrightarrow\\ (\\Box\\mathrm{RC}+\\mathrm{IC})\\ \\longleftrightarrow\\ (\\Box\\mathrm{RC}+\\Box\\mathrm{IC})\n$$\n\nHere RC is Relational Choice and IC is Intensional Choice. With either Boolean Completeness or ☐Vicinity, these are also equivalent to Modal Well-Ordering; in particular the equivalence holds over C5. The [typed bounds and countermodels](evidence/RESULT-INDEX.md#modal-choice) separate current choice from modal selection and explain exactly when BF is needed. A proof that RC entails TC over C would also establish MRC ⇒ Modal Well-Ordering. The [reduction](../integration-register/proofs/modal-choice/modal-to-current-choice-reduction.md) relates the unresolved questions without assuming either answer.",
             "proof_length": {
               "rating": "long",
               "words": 9720
@@ -3647,7 +3647,7 @@
             "result_refs": [
               "MAX-CH"
             ],
-            "summary": "Assuming Con(ZFC), the separate C-consistency of real structures satisfying CH and its negation gives\n\n$$\n\\operatorname{Max}(C)+\\text{Non-contingency of CH}\\ \\vdash\\ \\bot.\n$$\n\nMaximalism makes both real-structure assertions possible at the same type $e$.",
+            "summary": "Assuming Con(ZFC), the separate C-consistency of real structures satisfying CH and its negation gives\n\n$$\n\\operatorname{Max}(C)+\\text{Non-contingency of CH}\\ \\vdash\\ \\bot\n$$\n\nMaximalism makes both real-structure assertions possible at the same type $e$.",
             "evidence_labels": [
               "Proofs and certificates"
             ],
@@ -3677,7 +3677,7 @@
             "evidence_labels": [
               "Proofs"
             ],
-            "summary": "With the database’s strict-smallness definition, FP is independent over C + ☐Functional Choice + Axiom of Infinity (types e and t). Countably many S5 worlds supply the positive model; the negative direction was already recorded. More generally, for infinite W in external ZFC,\n\n$$\n\\operatorname{FullS5}(W)\\models\\mathrm{FP}\\quad\\Longleftrightarrow\\quad 2^{|W|}=2^{\\aleph_0}.\n$$\n\nA free-root model also satisfies FP and both quantified Infinity axioms while failing Intensional Choice. The cardinal criterion need not make W countable.",
+            "summary": "With the database’s strict-smallness definition, FP is independent over C + ☐Functional Choice + Axiom of Infinity (types e and t). Countably many S5 worlds supply the positive model; the negative direction was already recorded. More generally, for infinite W in external ZFC,\n\n$$\n\\operatorname{FullS5}(W)\\models\\mathrm{FP}\\quad\\Longleftrightarrow\\quad 2^{|W|}=2^{\\aleph_0}\n$$\n\nA free-root model also satisfies FP and both quantified Infinity axioms while failing Intensional Choice. The cardinal criterion need not make W countable.",
             "proof_length": {
               "rating": "medium",
               "words": 1673
@@ -3790,7 +3790,7 @@
             "result_refs": [
               "MAX-ARITHMETIC-EQUALITY"
             ],
-            "summary": "The proposed equality says that pure Maximalism proves exactly the ordinary first-order arithmetic consequences of the positive packages’ common arithmetic theory together with all standard-true Π₁ sentences.\n\n$$\n\\operatorname{Th}_{\\mathrm{arith}}(\\operatorname{Max}(C))=\\operatorname{Cn}\\bigl(T_{\\mathrm{arith}}\\cup\\mathrm{True}_{\\Pi_1}\\bigr).\n$$\n\nHere $T_{\\mathrm{arith}}$ is the [common arithmetic theory](#arithmetic-comparison), $\\mathrm{True}_{\\Pi_1}$ means standard-true Π₁ sentences, and $\\operatorname{Cn}$ is first-order deductive closure. The upper inclusion still awaits independent review.",
+            "summary": "The proposed equality says that pure Maximalism proves exactly the ordinary first-order arithmetic consequences of the positive packages’ common arithmetic theory together with all standard-true Π₁ sentences.\n\n$$\n\\operatorname{Th}_{\\mathrm{arith}}(\\operatorname{Max}(C))=\\operatorname{Cn}\\bigl(T_{\\mathrm{arith}}\\cup\\mathrm{True}_{\\Pi_1}\\bigr)\n$$\n\nHere $T_{\\mathrm{arith}}$ is the [common arithmetic theory](#arithmetic-comparison), $\\mathrm{True}_{\\Pi_1}$ means standard-true Π₁ sentences, and $\\operatorname{Cn}$ is first-order deductive closure. The upper inclusion still awaits independent review.",
             "proof_length": {
               "rating": "long",
               "words": 12168
@@ -4000,7 +4000,7 @@
             ],
             "principle": {
               "statement": "Over the λ-free base of H, full typed endpoint separation together with boxed Infinitary Comprehension characterizes full standard relational hierarchies in ZF:",
-              "formal": "\\exists R^{\\sigma_1\\cdots\\sigma_n t}\\, .\\,\\Box\\forall x_1\\cdots x_n\\, .\\,\\bigl(R[\\bar x]\\leftrightarrow A\\bigr).",
+              "formal": "\\exists R^{\\sigma_1\\cdots\\sigma_n t}\\, .\\,\\Box\\forall x_1\\cdots x_n\\, .\\,\\bigl(R[\\bar x]\\leftrightarrow A\\bigr)",
               "scope": "A is an arbitrary set-sized infinitary matrix with unrestricted simultaneous typed parameters; the bound tuple is finite and may be empty. The selected axioms are closed under necessitation."
             },
             "anchor_aliases": [
@@ -4045,7 +4045,7 @@
             "result_refs": [
               "EVALUATORS-CORES"
             ],
-            "summary": "For $E^{tt}$, correct evaluation means\n\n$$\n\\operatorname{Eval}(E):=\\forall p^t\\, .\\,(p\\to Ep=\\top)\\land(\\neg p\\to Ep=\\bot).\n$$\n\nThe following requirements form a strict hierarchy over C, with each row stronger than the preceding one.\n\n| Requirement | Equivalent principle |\n|---|---|\n| $\\exists f^{tt}\\, .\\,\\forall p^t\\, .\\,p\\leftrightarrow fp=f\\top$ | Actuality |\n| $\\exists E^{tt}\\, .\\,\\operatorname{Eval}(E)$ | ND + Actuality |\n| $\\exists E^{tt}\\, .\\,\\operatorname{Eval}(E)\\land\\bigl(\\Box\\forall p^t\\, .\\,Ep=\\top\\lor Ep=\\bot\\bigr)$ | Gallin Extensional Comprehension; equivalently ND + Strong Actuality |\n| $\\exists!E^{tt}\\, .\\,\\operatorname{Eval}(E)$ | C5 + Actuality |\n| $\\Box\\exists E^{tt}\\, .\\,\\operatorname{Eval}(E)$, equivalently $\\Box\\exists!E^{tt}\\, .\\,\\operatorname{Eval}(E)$ | ☐Plenitude |\n| $\\exists E^{tt}\\, .\\,\\Box\\operatorname{Eval}(E)$ | Extensionality |\n\nThe last two rows separate an evaluator available at each world from one fixed evaluator correct at every world. Uniqueness in the fourth row is among all evaluators correct at the current world. The third row already gives Boolean and quantifier identities for current predicates; the stronger ☐∀F law remains unresolved.\n\nActuality alone also interprets extensional Henkin higher-order logic over all current individuals. Represented relations and quantified Infinity transfer exactly, and Relational Choice supplies ordinary Choice in this interpretation. The construction makes no claim that its domains persist at other worlds.",
+            "summary": "For $E^{tt}$, correct evaluation means\n\n$$\n\\operatorname{Eval}(E):=\\forall p^t\\, .\\,(p\\to Ep=\\top)\\land(\\neg p\\to Ep=\\bot)\n$$\n\nThe following requirements form a strict hierarchy over C, with each row stronger than the preceding one.\n\n| Requirement | Equivalent principle |\n|---|---|\n| $\\exists f^{tt}\\, .\\,\\forall p^t\\, .\\,p\\leftrightarrow fp=f\\top$ | Actuality |\n| $\\exists E^{tt}\\, .\\,\\operatorname{Eval}(E)$ | ND + Actuality |\n| $\\exists E^{tt}\\, .\\,\\operatorname{Eval}(E)\\land\\bigl(\\Box\\forall p^t\\, .\\,Ep=\\top\\lor Ep=\\bot\\bigr)$ | Gallin Extensional Comprehension; equivalently ND + Strong Actuality |\n| $\\exists!E^{tt}\\, .\\,\\operatorname{Eval}(E)$ | C5 + Actuality |\n| $\\Box\\exists E^{tt}\\, .\\,\\operatorname{Eval}(E)$, equivalently $\\Box\\exists!E^{tt}\\, .\\,\\operatorname{Eval}(E)$ | ☐Plenitude |\n| $\\exists E^{tt}\\, .\\,\\Box\\operatorname{Eval}(E)$ | Extensionality |\n\nThe last two rows separate an evaluator available at each world from one fixed evaluator correct at every world. Uniqueness in the fourth row is among all evaluators correct at the current world. The third row already gives Boolean and quantifier identities for current predicates; the stronger ☐∀F law remains unresolved.\n\nActuality alone also interprets extensional Henkin higher-order logic over all current individuals. Represented relations and quantified Infinity transfer exactly, and Relational Choice supplies ordinary Choice in this interpretation. The construction makes no claim that its domains persist at other worlds.",
             "proof_length": {
               "rating": "long",
               "words": 5834
@@ -4072,7 +4072,7 @@
             "result_refs": [
               "DIAGONAL-CHARACTERS"
             ],
-            "summary": "A diagonal character preserves ⊥ and negation, takes only ⊤/⊥ values, and accepts\n\n$$\nw_E:=\\forall p^t\\, .\\,Ep\\to p.\n$$\n\nSeparation by such characters is equivalent to ND (type t) + Atomicity (type t); neither BF nor Choice is needed.\n\nFor the stronger logical-observer schema, see [Logical Observer Separation](#logical-observers).",
+            "summary": "A diagonal character preserves ⊥ and negation, takes only ⊤/⊥ values, and accepts\n\n$$\nw_E:=\\forall p^t\\, .\\,Ep\\to p\n$$\n\nSeparation by such characters is equivalent to ND (type t) + Atomicity (type t); neither BF nor Choice is needed.\n\nFor the stronger logical-observer schema, see [Logical Observer Separation](#logical-observers).",
             "proof_length": {
               "rating": "medium",
               "words": 1030
@@ -4136,7 +4136,7 @@
             ],
             "proof_length": {
               "rating": "long",
-              "words": 135203
+              "words": 135201
             },
             "certified_summary": "H + OS ⇒ C + BF in the equivalent formulation with explicit endpoint identities"
           },

@@ -8,7 +8,7 @@ Take $`M=\{1,z\}`$ with $`z^2=z`$, $`B=\mathcal P(M)`$ and a singleton individua
 
 ```math
 f\sim_{\sigma\tau}g\quad\Longleftrightarrow\quad
-\forall a\in D_\sigma\, .\,f(a)\sim_\tau g(a).
+\forall a\in D_\sigma\, .\,f(a)\sim_\tau g(a)
 ```
 
 Every domain is finite at each fixed type. Application respects equivalence because $`f\sim g`$ and $`a\sim b`$ imply $`f(a)\sim g(a)\sim g(b)`$. Boolean operations preserve the equivalence at t. Related predicates have the same z-membership at each input, so quantifier intersections respect equivalence too. Induction on terms proves parameterized abstraction closure.
@@ -16,14 +16,14 @@ Every domain is finite at each fixed type. Application respects equivalence beca
 A predicate at any type can have arbitrary 1-membership on its inputs and arbitrary z-membership on their equivalence classes. Hence Leibniz equality is
 
 ```math
-\delta_\sigma(a,b)=\{1:a=b\}\cup\{z:a\sim_\sigma b\}.
+\delta_\sigma(a,b)=\{1:a=b\}\cup\{z:a\sim_\sigma b\}
 ```
 
 The shifts are identity and
 
 ```math
 R_z(A)=
-\begin{cases}M&z\in A,\\\varnothing&z\notin A.\end{cases}
+\begin{cases}M&z\in A,\\\varnothing&z\notin A\end{cases}
 ```
 
 They are admitted, preserve all quantifiers and separate the proposition domain. The general soundness theorem gives C + OS. For $`a=\{1\}`$ and $`b=\varnothing`$, their equality has value $`\{z\}`$; their distinctness has value $`\{1\}`$ but its necessity has value $`\varnothing`$. Thus ND at t fails.
@@ -41,7 +41,7 @@ At an arrow type, a full action object on the chain is a pair of functions satis
 ```math
 f_0:D_\sigma^0\to D_\tau^0,\qquad
 f_1:D_\sigma^1\to D_\tau^1,\qquad
-q_\tau\circ f_0=f_1\circ q_\sigma.
+q_\tau\circ f_0=f_1\circ q_\sigma
 ```
 
 Since $`q_\sigma`$ is onto, $`f_1`$ is uniquely determined by $`f_0`$ whenever it exists. Existence is exactly preservation of the equivalences. Every $`f_1`$ lifts: choose a representative of each output class, using only finite choice at each type. The quotient at the arrow type is therefore onto, with kernel pointwise output equivalence. This proves the typed correspondence inductively.
@@ -57,7 +57,7 @@ Existing records: [full two-object chain](https://github.com/dkodsi/Logical-Maps
 Keep $`M=\{1,z\}`$, $`B=\mathcal P(M)`$ and the singleton individual domain. In the equivalence-preserving hierarchy above,
 
 ```math
-\Box\{z\}=\delta_t(\{z\},M)=\{z\}.
+\Box\{z\}=\delta_t(\{z\},M)=\{z\}
 ```
 
 Instead admit every ordinary function at every allowed arrow type. All required abstractions, quantifiers and shifts are admitted, so this too is a shift model. For distinct $`u,v`$, the admitted predicate which is $`M`$ exactly at $`u`$ and empty elsewhere makes their Leibniz equality empty. Equal objects have equality value $`M`$. Consequently,
@@ -72,7 +72,7 @@ There is always the inclusion
 
 ```math
 \Box A\subseteq K_M(A),\qquad
-K_M(A):=\{n\in M:\forall m\in M\, .\,nm\in A\}.
+K_M(A):=\{n\in M:\forall m\in M\, .\,nm\in A\}
 ```
 
 If $`n\in\delta_t(A,M)`$, every admitted predicate agrees on $`A,M`$ at $`n`$. Apply this to each $`R_m`$, which sends $`M`$ to itself; then $`nm\in A`$. In the two hierarchies, $`K_M(\{z\})=\{z\}`$, with equality in the first and strict containment in the second. Thus the right-extension test does not generally define native necessity.

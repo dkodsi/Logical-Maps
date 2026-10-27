@@ -11,7 +11,7 @@ Use the fixed relational language and the whole-operation qualification Good_Δ 
 ```math
 S_t:=\forall p,q^t\left[p=q\leftrightarrow
 \forall E^{tt}\bigl(\mathrm{Good}_{\{t\}}(E)
-\to(Ep\leftrightarrow Eq)\bigr)\right].
+\to(Ep\leftrightarrow Eq)\bigr)\right]
 ```
 
 Thus S_t is one closed formula: its output type is t and its quantifier-preservation list is exactly {t}. Its Boolean and quantifier laws remain full composite identities. Over C, the equality clauses of Good are consequences of the Boolean qualification. By that Boolean qualification, the material-agreement formulation above is equivalent to the formulation using E(p↔q).
@@ -21,7 +21,7 @@ Let
 ```math
 \mathrm{OneAtom}:=\exists a^t\mathrm{Atom}(a),
 \qquad
-\mathrm{Actuality}:=\exists a^t(\mathrm{Atom}(a)\land a).
+\mathrm{Actuality}:=\exists a^t(\mathrm{Atom}(a)\land a)
 ```
 
 Here Atom and Atomicity_t are the usual Boolean-order notions in C; in particular an atom is required to be distinct from Bottom. C5 means C together with the schema □ND at the relational types. It is not an abbreviation for unboxed ND.
@@ -32,7 +32,7 @@ Write OS, Rev and End for the full relational separation schemas with ordinary, 
 
 ```math
 \boxed{\mathrm{C5}+\Box S_t+\mathrm{OneAtom}
-\quad\Longrightarrow\quad\mathrm{Atomicity}_t.}
+\quad\Longrightarrow\quad\mathrm{Atomicity}_t}
 \tag{1}
 ```
 
@@ -43,7 +43,7 @@ Together with the previously established observer characterizations, this gives 
 \mathrm{End}
 \ \Longleftrightarrow\ \mathrm{C5}+\mathrm{Atomicity}_t
 \ \Longleftrightarrow\ \mathrm{C5}+\Box S_t+\mathrm{OneAtom}
-\ \Longleftrightarrow\ \mathrm{C5}+\Box\mathrm{OS}+\mathrm{OneAtom}.}
+\ \Longleftrightarrow\ \mathrm{C5}+\Box\mathrm{OS}+\mathrm{OneAtom}}
 \tag{2}
 ```
 
@@ -59,7 +59,7 @@ Three established facts are used.
 
 ```math
    \mathrm{Atom}(a)\equiv a\ne\bot\ \land\
-   \forall p\bigl[(a\land p=a)\lor(a\land\neg p=a)\bigr].
+   \forall p\bigl[(a\land p=a)\lor(a\land\neg p=a)\bigr]
 ```
 
    ND_t makes a≠Bottom necessary. For each p, either displayed identity supplies its own necessity by NI, so the disjunction is necessary. BF_t then moves that necessity past ∀p. Hence Atom(a)→□Atom(a). This is a derivation under stated C5 instances, not an application of necessitation to Atom(a).
@@ -78,7 +78,7 @@ Likewise the established local converse from [Atomic observers and finite stabil
 
 ```math
 K_1\land\mathrm{Actuality}\land S_t
-\to\mathrm{Atomicity}_t.
+\to\mathrm{Atomicity}_t
 \tag{4}
 ```
 
@@ -92,7 +92,7 @@ Assume C5, □S_t and OneAtom. Choose an atom a. Since a≠Bottom, C's Boolean/m
 
 ```math
 \Diamond\bigl(\mathrm{Atom}(a)\land a\bigr),
-\quad\text{hence}\quad\Diamond\mathrm{Actuality}.
+\quad\text{hence}\quad\Diamond\mathrm{Actuality}
 \tag{5}
 ```
 
@@ -100,7 +100,7 @@ Necessitate the closed implication (4). Necessary K_1 and the premise □S_t the
 
 ```math
 \Box\bigl(\mathrm{Actuality}\to
-\mathrm{Atomicity}_t\bigr).
+\mathrm{Atomicity}_t\bigr)
 ```
 
 Combining this with (5) yields ◇Atomicity_t. Now necessitate the closed implication (3). Necessary K_2 gives
@@ -127,7 +127,7 @@ Fix C5+□S_t, or the stronger background C5+□OS. Over either background, the 
 \land\mathrm{End}(E)],\
 \exists E^{tt}\,[\mathrm{Good}_{\{t\}}(E)
 \land\mathrm{FinIm}(E)],\
-\mathrm{End}.
+\mathrm{End}
 \end{gathered}
 \tag{6}
 ```

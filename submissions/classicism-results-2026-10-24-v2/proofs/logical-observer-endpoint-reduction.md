@@ -7,7 +7,7 @@ Ordinary mathematical argument by OpenAI Codex, 24 October 2026. Direct source: 
 Let $`\mathrm{Good}^{+}_{\Delta}(E)`$ be the qualification in [Logical Observer Separation](logical-observers.md), §1. Define $`\mathrm{Good}_{\Delta}(E)`$ by deleting only
 
 ```math
-E\top=\top,\qquad E\bot=\bot.
+E\top=\top,\qquad E\bot=\bot
 ```
 
 Retain the full operation identities for negation, conjunction, disjunction, and both quantifiers at every type in the finite list $`\Delta`$. Retain translated reflexivity and Leibniz substitution at those types. This change does not remove the separate range restriction $`\mathrm{End}(E)`$ used for endpoint-valued observers.
@@ -15,7 +15,7 @@ Retain the full operation identities for negation, conjunction, disjunction, and
 Use the fixed H abbreviations $`a:=\forall p^t p`$, $`\top:=a\lor\neg a`$, and $`\bot:=a\land\neg a`$. Boolean preservation gives
 
 ```math
-E\top=Ea\lor\neg Ea,\qquad E\bot=Ea\land\neg Ea.
+E\top=Ea\lor\neg Ea,\qquad E\bot=Ea\land\neg Ea
 ```
 
 Consequently H proves that every newly qualified observer makes $`E\top`$ true and $`E\bot`$ false. These are truth claims; H alone need not identify the outputs with the endpoints.
@@ -31,7 +31,7 @@ The H-proof transport argument in [Logical Observer Separation](logical-observer
 Thus, for every H theorem $`P`$, a finite list $`\Delta`$ containing the types used in its proof suffices to establish $`\mathrm{Good}_{\Delta}(E)\to EP`$, with $`E`$ fresh. If H proves $`P\leftrightarrow Q`$, all such observers agree in truth on $`P`$ and $`Q`$. Applying full typed separation to the corresponding abstractions gives
 
 ```math
-(\lambda\bar z.P)=(\lambda\bar z.Q).
+(\lambda\bar z.P)=(\lambda\bar z.Q)
 ```
 
 These are the Logical Equivalence instances defining C. Therefore H + OS yields C. Section 1 now identifies the old and new qualifications, so it also yields $`\mathrm{OS}^{+}`$.

@@ -7,7 +7,7 @@ This construction gives C models whose prescribed lower types have full observer
 Work in ZFC. Let $`L`$ be the full two-valued relational hierarchy over a nonempty individual domain $`A`$:
 
 ```math
-L_e=A,\qquad L_t=2,\qquad L_{\sigma\tau}=L_\tau^{L_\sigma}.
+L_e=A,\qquad L_t=2,\qquad L_{\sigma\tau}=L_\tau^{L_\sigma}
 ```
 
 Only arrows with relational output are admitted. Interpret application, abstraction, the Boolean operations and quantifiers classically in $`L`$. Choose nonempty subsets $`N_\sigma\subseteq L_\sigma`$, with $`N_e=L_e`$ and $`N_t=L_t`$, satisfying this closure condition: every finite typed term with parameters in $`N`$ has its **full-$`L`$ denotation** in $`N`$ at its result type. In particular, logical constants belong to $`N`$, and $`N`$ is closed under application and abstraction.
@@ -20,7 +20,7 @@ Use two stages $`0\to1`$, with $`L`$ at stage 1. Define the root domains and tra
 
 ```math
 D_e=A,\qquad q_e(a)=a,\qquad
-D_t=2\times2,\qquad q_t(u,v)=v.
+D_t=2\times2,\qquad q_t(u,v)=v
 ```
 
 At an arrow type, put
@@ -30,7 +30,7 @@ At an arrow type, put
 D_{\sigma\tau}=\{(f_0,f_1):\;&f_0:D_\sigma\to D_\tau,
 \quad f_1\in N_{\sigma\tau},\\
 &q_\tau(f_0(a))=f_1(q_\sigma(a))\text{ for all }a\in D_\sigma\},\\
-q_{\sigma\tau}(f_0,f_1)&=f_1.
+q_{\sigma\tau}(f_0,f_1)&=f_1
 \end{aligned}
 ```
 
@@ -55,7 +55,7 @@ Q_\sigma(F)=
 \left(
 \bigwedge_{a\in D_\sigma}\pi_0(F_0(a)),
 \quad\bigwedge_{b\in L_\sigma}F_1(b)
-\right).
+\right)
 ```
 
 Here $`\pi_0`$ reads current truth, and the meets are ordinary meets of bits. The existential quantifier uses the corresponding joins. The future component is the full leaf quantifier, which belongs to $`N_{(\sigma t)t}`$. Hence these are admitted coherent operation profiles. The future coordinate quantifies over all of $`L_\sigma`$.
@@ -70,7 +70,7 @@ Interpret the equality constant at each type by its Leibniz expression:
 
 ```math
 \delta_\sigma(a,b)=
-\forall P^{\sigma t}\, .\,(Pa\leftrightarrow Pb).
+\forall P^{\sigma t}\, .\,(Pa\leftrightarrow Pb)
 ```
 
 Its value is
@@ -85,7 +85,7 @@ where brackets denote the appropriate bit. The second coordinate follows from th
 With $`\top=(1,1)`$, the defined modal operation has value
 
 ```math
-\Box(u,v)=(u\land v,v).
+\Box(u,v)=(u\land v,v)
 ```
 
 At the root, the first-coordinate clauses validate H's ordinary Boolean and quantifier truth conditions. Actual root identity validates reflexivity and substitution; beta and eta hold by the preceding term induction. At the leaf, the ordinary full classical clauses validate the same axioms and rules. Consequently every H theorem has root value $`(1,1)`$ under every root assignment.
@@ -98,7 +98,7 @@ The identity observer and the terminal reader are admitted:
 
 ```math
 I_0(u,v)=(u,v),\qquad
-E_0(u,v)=(v,v),\qquad I_1=E_1=\mathrm{id}_2.
+E_0(u,v)=(v,v),\qquad I_1=E_1=\mathrm{id}_2
 ```
 
 Their leaf identities belong to $`N_{tt}`$, and both profiles are coherent. Both preserve the whole Boolean operations. Identity preserves every quantifier.
@@ -107,7 +107,7 @@ If $`N_\sigma=L_\sigma`$, the terminal reader preserves the whole quantifier ope
 
 ```math
 E\circ Q_\sigma=Q_\sigma\circ E^*_\sigma,
-\qquad E^*_\sigma(F)=\lambda x^\sigma\, .\,E(Fx).
+\qquad E^*_\sigma(F)=\lambda x^\sigma\, .\,E(Fx)
 ```
 
 For a root predicate $`F`$, the left side has both coordinates equal to $`\bigwedge_{b\in L_\sigma}F_1(b)`$. The right side has current coordinate $`\bigwedge_{a\in D_\sigma}F_1(q_\sigma(a))`$ and the same future coordinate. These agree because $`q_\sigma`$ is onto $`L_\sigma`$. The complete future operation components also agree, since the leaf observer is identity on every leaf predicate, including predicates outside $`N_{\sigma t}`$. Thus this is equality of the operation profiles. Existential preservation follows by the same calculation with joins.
@@ -129,14 +129,14 @@ Suppose there is a future predicate $`F\in N_{\sigma t}`$ with
 ```math
 \{b\in L_\sigma:Fb=1\}\ne\varnothing,
 \qquad
-\{b\in N_\sigma:Fb=1\}=\varnothing.
+\{b\in N_\sigma:Fb=1\}=\varnothing
 ```
 
 Term closure supplies $`H_1=\neg F`$. Pair it with the constantly-Top root function $`H_0`$. The profile $`H=(H_0,H_1)`$ is coherent because every transported root argument lies outside $`F`$. Thus
 
 ```math
 H(a)=\top\quad(a\in D_\sigma),
-\qquad Q_\sigma(H)=(1,0).
+\qquad Q_\sigma(H)=(1,0)
 ```
 
 The first fact makes $`\forall x^\sigma\, .\,\Box Hx`$ currently true. The second makes $`\Box\forall x^\sigma\, .\,Hx`$ currently false. Hence BF fails at $`\sigma`$.
@@ -150,7 +150,7 @@ Both the [direct Boolean proof](observer-no-finite-basis-direct.md#5-a-nonempty-
 The construction also works when $`L`$ is an extensional two-valued Henkin hierarchy:
 
 ```math
-L_{\sigma\tau}\subseteq L_\tau^{L_\sigma}.
+L_{\sigma\tau}\subseteq L_\tau^{L_\sigma}
 ```
 
 Require ordinary application, all parameterized lambda denotations, the classical Boolean operations, quantifiers over each entire specified $`L_\sigma`$, and Leibniz equality agreeing with actual identity. The closure of $`N`$ is now interpreted in this Henkin hierarchy. Root domains still contain all coherent current functions with future component in $`N`$.
@@ -163,7 +163,7 @@ There is a precise improvement on the sufficient condition $`N_\sigma=L_\sigma`$
 \text{For every }F\in N_{\sigma t},\quad
 \bigl(\exists b\in L_\sigma\, .\,Fb=1\bigr)
 \ \Longrightarrow\
-\bigl(\exists a\in N_\sigma\, .\,Fa=1\bigr).
+\bigl(\exists a\in N_\sigma\, .\,Fa=1\bigr)
 ```
 
 For this construction, the following are equivalent: BF at $`\sigma`$, $`W_\sigma`$, preservation of the whole $`Q_\sigma`$ operation by the terminal reader, and Functionality for predicates of type $`\sigma t`$.
@@ -182,7 +182,7 @@ M(L,N)\models\mathrm{OS}
 M(L,N)\models\mathrm{BF}
 \quad\Longleftrightarrow\quad
 (\forall\sigma\, .\,W_\sigma)
-\quad\Longleftrightarrow\quad N\prec L.
+\quad\Longleftrightarrow\quad N\prec L
 ```
 
 Here the type quantifier and $`N\prec L`$ are metatheoretic. For the forward direction, OS entails BF over C. Conversely, all witness conditions make root functions extensional, as just proved. Repeated application reduces distinct relations to distinct propositions; identity and the terminal reader then separate them, with the same reader preserving every requested quantifier.

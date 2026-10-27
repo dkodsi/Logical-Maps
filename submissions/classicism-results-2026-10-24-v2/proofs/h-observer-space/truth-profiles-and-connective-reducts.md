@@ -7,13 +7,13 @@ Ordinary mathematical research by OpenAI Codex, prompted by Daniel Kodsi, 24 Oct
 Propositions have type t and observers E have type tt in the fixed relational type system. Retain the fixed abbreviations
 
 ```math
-a:=\forall p^t p,\qquad T:=a\lor\neg a,\qquad B:=a\land\neg a.
+a:=\forall p^t p,\qquad T:=a\lor\neg a,\qquad B:=a\land\neg a
 ```
 
 Write
 
 ```math
-S[R]:=\forall p,q\,[p=q\leftrightarrow\forall E(R(E)\to(Ep\leftrightarrow Eq))].
+S[R]:=\forall p,q\,[p=q\leftrightarrow\forall E(R(E)\to(Ep\leftrightarrow Eq))]
 ```
 
 The strong qualifications M, V and N are the whole-operation identities for preservation of conjunction, disjunction and negation. Qσ and Pσ are the corresponding whole-operation identities for universal and existential quantification at σ. A(E) means E(T) is true; Z(E) means E(B) is false. For example,
@@ -24,7 +24,7 @@ M(E):=(\lambda p,q.E(p\land q))=(\lambda p,q.Ep\land Eq),
 
 ```math
 Q_\sigma(E):=(\lambda F.E(\forall x^\sigma Fx))
- =(\lambda F.\forall x^\sigma E(Fx)).
+ =(\lambda F.\forall x^\sigma E(Fx))
 ```
 
 A type list Δ is finite and metalinguistic. No object-language quantification over types is introduced. Every family quantified over below is an admitted term or member of its indicated type domain.
@@ -36,7 +36,7 @@ The main results concern these strong qualifications. Section 6 separately defin
 Fix an H model and evaluation point satisfying S[R]. Let K be the set of its admitted observers satisfying R at that point, and define the external truth profile
 
 ```math
-J(p):=\{E\in K:Ep\text{ is true}\}.
+J(p):=\{E\in K:Ep\text{ is true}\}
 ```
 
 Then S[R] says exactly that J is injective. Moreover, each preservation clause included in R gives the indicated identity of sets:
@@ -58,7 +58,7 @@ Thus the proposition domain has a faithful set representation preserving the lis
 Internally, the corresponding order is
 
 ```math
-p\preceq_R q:=\forall E(R(E)\to(Ep\to Eq)).
+p\preceq_R q:=\forall E(R(E)\to(Ep\to Eq))
 ```
 
 It is always a preorder; S[R] is exactly its antisymmetry. Under separation, it is therefore a partial order. M makes the original conjunction its meet, and V makes the original disjunction its join. More explicitly,
@@ -66,7 +66,7 @@ It is always a preorder; S[R] is exactly its antisymmetry. Under separation, it 
 ```math
 p\preceq_R q\ \leftrightarrow\ p\land q=p\quad(M),
 \qquad
-p\preceq_R q\ \leftrightarrow\ p\lor q=q\quad(V).
+p\preceq_R q\ \leftrightarrow\ p\lor q=q\quad(V)
 ```
 
 N makes negation an order-reversing involution. A makes T greatest; Z makes B least. Each assertion follows from the displayed profile identities and injectivity, or directly by the same observer calculations in H.
@@ -82,13 +82,13 @@ u\preceq_R\forall x^\sigma Fx
 
 ```math
 (\exists x^\sigma Fx)\preceq_R u
- \leftrightarrow\forall x^\sigma(Fx\preceq_R u).
+ \leftrightarrow\forall x^\sigma(Fx\preceq_R u)
 ```
 
 Consequently, when both are listed, existential and universal quantification are respectively left and right adjoint to the constant-family map:
 
 ```math
-\exists_\sigma\dashv(u\mapsto\lambda x^\sigma.u)\dashv\forall_\sigma.
+\exists_\sigma\dashv(u\mapsto\lambda x^\sigma.u)\dashv\forall_\sigma
 ```
 
 The order on admitted families is pointwise comparison. It is only a preorder on the family objects unless Functionality is separately available; the adjunction claim is a claim about preorders and does not assume Functionality. Nonempty type domains give both vacuity identities and ∀x Fx≼R∃x Fx.
@@ -108,7 +108,7 @@ and same-kind quantifier interchange at listed types. These are proposition iden
 ```math
 \exists x^\sigma\forall y^\tau Fxy
  \preceq_R\forall y^\tau\exists x^\sigma Fxy
- \quad(P_\sigma,Q_\tau).
+ \quad(P_\sigma,Q_\tau)
 ```
 
 No converse mixed interchange or distribution through an existentially quantified selection function follows from this calculation. Such a statement must respect the admitted selector domain and can contain a Choice principle. In particular, the recorded [Henkin model: base without a choice function](../../source/topics/classicism/models/henkin-without-relational-choice.yaml) has Extensionality, hence identity alone supplies all these separations, while Relational Choice fails. Thus all the preservation clauses together do not justify a general internal choice-of-witnesses step. The source's relative-consistency/metatheoretic condition remains part of that model claim.
@@ -168,7 +168,7 @@ S[A\land V\land R]\leftrightarrow
 
 ```math
 S[Z\land V\land R]\leftrightarrow
- S[V\land R]+\forall p(p\lor B=p).
+ S[V\land R]+\forall p(p\lor B=p)
 ```
 
 Forward, preservation and the endpoint truth condition make both sides of each equation observationally equivalent. Conversely, a meet observer rejecting a meet unit T rejects every proposition; a meet observer accepting an absorbing B accepts every proposition. Dually, a join observer rejecting an absorbing T rejects everything, and one accepting a join unit B accepts everything. Such constant truth profiles distinguish no pair, so discarding them preserves separation. The extra restriction R is unchanged throughout.
@@ -180,7 +180,7 @@ S[N]\leftrightarrow S[A\land N]\leftrightarrow S[Z\land N],
 ```
 
 ```math
-S[A\land Z\land N]\leftrightarrow S[N]+(B=\neg T).
+S[A\land Z\land N]\leftrightarrow S[N]+(B=\neg T)
 ```
 
 If E has the wrong endpoint truth, postcompose it with negation. The admitted operator λp.¬Ep still satisfies the full N identity, reverses its truth profile, and retains every disagreement. This proves the first line. The second follows by separation of B and ¬T in its forward direction; conversely B=¬T makes an accepting N observer reject B automatically.
@@ -194,7 +194,7 @@ S[A\land M\land N]\leftrightarrow S[M\land N]+(T=\neg B),
 ```
 
 ```math
-S[Z\land V\land N]\leftrightarrow S[V\land N]+(B=\neg T).
+S[Z\land V\land N]\leftrightarrow S[V\land N]+(B=\neg T)
 ```
 
 The other endpoint condition in each line already follows from qualification. For MVN both follow directly from qualification.
@@ -216,7 +216,7 @@ Over H, S_m[M] is equivalent to the pointwise associativity, commutativity and i
 For sufficiency assume those equations and define the admitted principal test
 
 ```math
-E_b(p):=(b\land p=b).
+E_b(p):=(b\land p=b)
 ```
 
 The semilattice equations give
@@ -235,7 +235,7 @@ Adding A is exactly adding the greatest-element equation p∧T=p. Adding Z is ex
 Dually, S_m[V] is equivalent over H to the join-semilattice equations. Use the admitted tests
 
 ```math
-E_b(p):=\neg(p\lor b=b).
+E_b(p):=\neg(p\lor b=b)
 ```
 
 Since p∨q≤b iff p≤b and q≤b, ordinary truth-level De Morgan reasoning proves material join preservation. If p is not below q, the test b=q accepts p and rejects q; reverse the roles for the other case.
@@ -247,13 +247,13 @@ Adding A is exactly requiring T greatest, p∨T=T; a separating cut b is then no
 Over H,
 
 ```math
-S_m[N]\leftrightarrow\forall p(\neg\neg p=p).
+S_m[N]\leftrightarrow\forall p(\neg\neg p=p)
 ```
 
 For the converse, double negation makes negation an involution; H truth conditions already exclude p=¬p. Use the admitted tests
 
 ```math
-T_b(r):=(r=b)\lor\bigl(r\land(r\ne\neg b)\bigr).
+T_b(r):=(r=b)\lor\bigl(r\land(r\ne\neg b)\bigr)
 ```
 
 At r=b the test is true, at r=¬b it is false, and off that pair it has r's truth value. Double negation therefore gives T_b(¬r)↔¬T_b(r). For distinct p,q both false, use b=p; for both true, use b=¬p. For differing truth values identity suffices. This proves separation. The endpoint-orientation arguments of §4 apply materially as well: A alone or Z alone adds nothing; both together add exactly B=¬T.
@@ -270,7 +270,7 @@ For every finite Δ, S_m[A∧M∧QΔ] is equivalent over H to the following outp
 
 ```math
 u\land(\forall x^\sigma Fx)=u
-\leftrightarrow\forall x^\sigma(u\land Fx=u).
+\leftrightarrow\forall x^\sigma(u\land Fx=u)
 ```
 
    \]
@@ -281,7 +281,7 @@ Dually, S_m[Z∧V∧PΔ] is equivalent to a join semilattice with least B in whi
 
 ```math
 (\exists x^\sigma Fx)\lor u=u
-\leftrightarrow\forall x^\sigma(Fx\lor u=u).
+\leftrightarrow\forall x^\sigma(Fx\lor u=u)
 ```
 
 The principal cuts E_b(p):=¬(p∨b=b) preserve every listed existential materially by this LUB equivalence and ordinary quantifier duality in truth. No primitive quantifier-duality identity is assumed. Again the endpoint variants follow by the corresponding bounds.

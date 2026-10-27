@@ -3,7 +3,7 @@
 For a finite type list $`\Delta`$, let $`S_\Delta`$ assert proposition separation by admitted observers preserving top and meet and satisfying the universal composite identities at each tested type. Over C,
 
 ```math
-\Box\mathrm{BF}_\Delta\ \Longrightarrow\ S_\Delta\ \Longrightarrow\ \mathrm{BF}_\Delta.
+\Box\mathrm{BF}_\Delta\ \Longrightarrow\ S_\Delta\ \Longrightarrow\ \mathrm{BF}_\Delta
 ```
 
 For the right implication, if every $`Fx=\top`$, the universal operation identity makes every qualified observer accept $`\forall x\, .\,Fx`$. Separation from top gives its necessity.

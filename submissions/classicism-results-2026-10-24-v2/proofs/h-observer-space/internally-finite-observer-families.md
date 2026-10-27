@@ -20,7 +20,7 @@ Fix any object type α. For U:αt write U−a for λx.(Ux∧x≠a), and write U�
  [(W\mathbf0_\alpha\land
    \forall Y(WY\to W(\mathrm{Suc}_\alpha(Y))))\to WZ],\\
 \mathrm{Fin}_\alpha(U)&:=
- \exists Z^{(\alpha t)t}\,[\mathrm{FC}_\alpha(Z)\land ZU].
+ \exists Z^{(\alpha t)t}\,[\mathrm{FC}_\alpha(Z)\land ZU]
 \end{aligned}
 \tag{1}
 ```
@@ -31,7 +31,7 @@ All types here are fixed externally. Every predicate used in an induction below 
 
 ```math
 \mathrm{Ext}_\alpha(Z):=
-\forall U,V\,[U\approx V\to(ZU\leftrightarrow ZV)].
+\forall U,V\,[U\approx V\to(ZU\leftrightarrow ZV)]
 \tag{2}
 ```
 
@@ -40,7 +40,7 @@ This holds at zero. If it holds for Z, it holds for Suc(Z): the same chosen a be
 ```math
 U\approx V\quad\Longrightarrow\quad
 (\mathrm{Fin}_\alpha(U)\leftrightarrow
- \mathrm{Fin}_\alpha(V)).
+ \mathrm{Fin}_\alpha(V))
 \tag{3}
 ```
 
@@ -62,7 +62,7 @@ We will use the following H lemmas, with their internal proofs.
 \forall x\,[Xx\to\mathrm{Fin}_\beta(\lambda y.R(x,y))]
 \ \Longrightarrow\
 \mathrm{Fin}_\beta
- \bigl(\lambda y.\exists x\,[Xx\land R(x,y)]\bigr).
+ \bigl(\lambda y.\exists x\,[Xx\land R(x,y)]\bigr)
 \tag{4}
 ```
 
@@ -81,7 +81,7 @@ For U:(tt)t and V:tt define
  Vp\land Vq\land
  \forall E^{tt}(UE\to(Ep\leftrightarrow Eq))
  \ \to\ p=q
-\right].
+\right]
 \tag{5}
 ```
 
@@ -92,7 +92,7 @@ The family U and the class V are admitted predicates. The observers in U need no
 ```math
 \boxed{
 \mathrm{Fin}_{tt}(U)\land\mathrm{Sep}(U,V)
-\ \Longrightarrow\ \mathrm{Fin}_t(V).}
+\ \Longrightarrow\ \mathrm{Fin}_t(V)}
 \tag{6}
 ```
 
@@ -113,7 +113,7 @@ For the successor step choose E∈U with Z(U−E). Define
 
 ```math
 V_+(p):=Vp\land Ep,\qquad
-V_-(p):=Vp\land\neg Ep.
+V_-(p):=Vp\land\neg Ep
 \tag{8}
 ```
 
@@ -125,7 +125,7 @@ In particular, with All_t:=λp.Top,
 
 ```math
 \mathrm{Fin}_{tt}(U)\land\mathrm{Sep}(U,\mathrm{All}_t)
-\ \Longrightarrow\ \mathrm{Fin}_t(\mathrm{All}_t).
+\ \Longrightarrow\ \mathrm{Fin}_t(\mathrm{All}_t)
 \tag{9}
 ```
 
@@ -141,7 +141,7 @@ Fix types α,β with β≠e, so αβ is an allowed function type. Let X:αt, Y:�
  \forall f\,[Vf\to\forall x(Xx\to Y(fx))],\\
 \mathrm{Identifies}(X,V)&:=
  \forall f,g\,
- [(Vf\land Vg\land\forall x(Xx\to fx=gx))\to f=g].
+ [(Vf\land Vg\land\forall x(Xx\to fx=gx))\to f=g]
 \end{aligned}
 \tag{10}
 ```
@@ -155,7 +155,7 @@ Here the evaluation test is the identity fx=gx. A material biconditional between
 \mathrm{Fin}_\alpha(X)\land\mathrm{Fin}_\beta(Y)
 \land\mathrm{Values}(V,X,Y)
 \land\mathrm{Identifies}(X,V)
-\ \Longrightarrow\ \mathrm{Fin}_{\alpha\beta}(V).}
+\ \Longrightarrow\ \mathrm{Fin}_{\alpha\beta}(V)}
 \tag{11}
 ```
 
@@ -166,7 +166,7 @@ If X is empty, the evaluation premise in Identifies is vacuous and V has at most
 For a successor choose a∈X with Z(X−a). For each y∈Y define the admitted fibre
 
 ```math
-V_y(f):=Vf\land fa=y.
+V_y(f):=Vf\land fa=y
 \tag{12}
 ```
 
@@ -186,7 +186,7 @@ Let Fun_{α,β} be the stated local Functionality premise
 \land\mathrm{Fin}_\beta(\mathrm{All}_\beta)
 \ \to\
 \mathrm{Fin}_{\alpha\beta}(\mathrm{All}_{\alpha\beta})
-\right].
+\right]
 \tag{13}
 ```
 
@@ -196,7 +196,7 @@ In particular,
 \mathrm H+\mathrm{Fun}_{t,t}\ \vdash\
 \mathrm{Fin}_t(\mathrm{All}_t)
 \ \longrightarrow\
-\mathrm{Fin}_{tt}(\mathrm{All}_{tt}).
+\mathrm{Fin}_{tt}(\mathrm{All}_{tt})
 \tag{14}
 ```
 
@@ -211,7 +211,7 @@ Let Aut:(tt)t be the admitted predicate
 \mathrm{Good}_{\{t\}}(E)\land
 \exists F^{tt}\,
 [\mathrm{Good}_{\{t\}}(F)\land
- E\circ F=I\land F\circ E=I].
+ E\circ F=I\land F\circ E=I]
 \tag{15}
 ```
 
@@ -231,7 +231,7 @@ Rev and End below are the full reversible and endpoint logical separation schema
 &\quad\equiv\quad
 \mathrm{C5}+\mathrm{FinAll}\\
 &\quad\equiv\quad
-\mathrm{C5}+\mathrm{FinBoxSep}.
+\mathrm{C5}+\mathrm{FinBoxSep}
 \end{aligned}}
 \tag{16}
 ```
@@ -269,7 +269,7 @@ For full schemas over H the preceding lemmas give
  \ \equiv\ \mathrm{C5}+\mathrm{FinAll},\\
 \text{finite-family native-Box logical separation}
  &\ \equiv\ \mathrm{BoxSep}+\mathrm{FinAll}
- \ \equiv\ \mathrm{FinBoxSep}.
+ \ \equiv\ \mathrm{FinBoxSep}
 \end{aligned}}
 \tag{17}
 ```

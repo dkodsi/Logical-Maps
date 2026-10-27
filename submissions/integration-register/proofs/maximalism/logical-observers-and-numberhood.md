@@ -8,7 +8,7 @@ Work throughout over C in its fixed relational language. Max means pure Max(C), 
 
 ```math
 \nu=(et)t,\qquad N=\mathrm{FiniteCardinality}_e,
-\qquad a_n=(\mathrm{Suc}_e n)(\lambda x^e.\top).
+\qquad a_n=(\mathrm{Suc}_e n)(\lambda x^e.\top)
 ```
 
 Use the whole-operation qualification $`\mathrm{Good}_\Delta(E)`$ and full typed OS from [the observer definitions](../../../classicism-results-2026-10-24-v2/proofs/logical-observer-hierarchy.md), §1. Each qualification list $`\Delta`$ is finite. Over C a qualified observer is a unital Boolean endomorphism of the current proposition algebra. It need not fix identity propositions, numberhood, or other pure propositions. Full OS supplies current BF at every relational type; no boxed OS or boxed BF is assumed here.
@@ -24,7 +24,7 @@ Put
 the sentence that every positive finite individual size is possible. Max(C) implies Pi. Pi is backward persistent, but no forward persistence is assumed. Write pointwise preservation of nonnumberhood conditional on Pi as
 
 ```math
-\mathrm{NN}_\Pi:=\forall n^\nu\,(\neg Nn\to\Box(\Pi\to\neg Nn)).
+\mathrm{NN}_\Pi:=\forall n^\nu\,(\neg Nn\to\Box(\Pi\to\neg Nn))
 \tag{1}
 ```
 
@@ -33,14 +33,14 @@ the sentence that every positive finite individual size is possible. Max(C) impl
 ```math
 \forall X^{\nu t}\,
  [\forall n(Nn\to\Box(\Pi\to Xn))
-   \to\Box(\Pi\to\forall n(Nn\to Xn))].
+   \to\Box(\Pi\to\forall n(Nn\to Xn))]
 \tag{2}
 ```
 
 Let X satisfy the antecedent of (2). For each n, if Nn is true, $`\Box(\Pi\to Xn)`$ gives $`\Box(\Pi\to(Nn\to Xn))`$. If Nn is false, $`\mathrm{NN}_\Pi`$ gives $`\Box(\Pi\to\neg Nn)`$, with the same consequence. Hence
 
 ```math
-\forall n\,\Box(\Pi\to(Nn\to Xn)).
+\forall n\,\Box(\Pi\to(Nn\to Xn))
 ```
 
 BF and moving the n-independent Pi through the universal quantifier give (2). This is an implication of C with the two displayed premises; no metatheoretic Maximalism argument is needed for the bridge.
@@ -52,7 +52,7 @@ Use the [proof of Goodsell's Necessity of Arithmetic theorem](../../../classicis
 For the inductive step with $`\forall m\in N\,A(\vec n,m)`$, the induction hypothesis gives, for each current m, either $`\Box(\Pi\to A)`$ or $`\Box(\Pi\to\neg A)`$. If every m takes the first disjunct, apply (2) to $`\lambda m.A(\vec n,m)`$, obtaining the positive quantified box. Otherwise choose a current m taking the second disjunct. Numberhood persistence gives $`\Box Nm`$, and K yields the negative quantified box. Thus (2) handles the entire numerical domain at the possible evaluation; it is not assumed to consist only of current numbers. This proves, for every closed arithmetical sentence A,
 
 ```math
-\Box(\Pi\to A)\ \lor\ \Box(\Pi\to\neg A).
+\Box(\Pi\to A)\ \lor\ \Box(\Pi\to\neg A)
 ```
 
 This contradicts Max(C), by the following Pi-relative version of the recorded [arithmetic incompatibility argument](../../../classicism-results-2026-10-24-v2/source/topics/classicism/results/possibility-and-necessity-of-arithmetic-incompatible.yaml). C + Pi is consistent: the [coalesced sum over all finite individual domains](../../../classicism-results-2026-10-24-v2/source/topics/classicism/writeups/coalesced-all-finite-individual-domains.md) satisfies Pi at its root. C + Pi is recursively enumerable, and $`\Pi\to I_e`$ together with Goodsell's Lemma 1 gives the interpreted Peano axioms. Its arithmetical consequences therefore form a consistent recursively enumerable extension of PA. Gödel–Rosser supplies an arithmetical A for which both $`\Pi\land A`$ and $`\Pi\land\neg A`$ are C-consistent pure sentences. Max(C) makes both possible, contrary to the displayed disjunction. The reference theory in both consistency conditions remains C.
@@ -62,7 +62,7 @@ Consequently Max(C) together with BF refutes $`\mathrm{NN}_\Pi`$, proving the ob
 ```math
 \mathrm C+\mathrm{Max}(\mathrm C)+\mathrm{BF}_\nu
 \quad\Longrightarrow\quad
-\exists n\,(\neg Nn\land\Diamond(\Pi\land Nn)).
+\exists n\,(\neg Nn\land\Diamond(\Pi\land Nn))
 \tag{3}
 ```
 
@@ -72,7 +72,7 @@ Full OS supplies $`\mathrm{BF}_\nu`$. Fix an n given by (3). Since $`\Pi\land Nn
 
 ```math
 \exists E^{tt}\exists n^\nu\,
- [\mathrm{Good}_\Delta(E)\land E\Pi\land E(Nn)\land\neg Nn].
+ [\mathrm{Good}_\Delta(E)\land E\Pi\land E(Nn)\land\neg Nn]
 \tag{4}
 ```
 
@@ -81,7 +81,7 @@ One fixed n can serve for all finite external lists; E can vary with the list. N
 The same current nonnumber can also possibly be instantiated as a finite cardinality of a co-singleton individual domain:
 
 ```math
-\Diamond(Nn\land a_n).
+\Diamond(Nn\land a_n)
 \tag{4a}
 ```
 
@@ -91,14 +91,14 @@ In particular, Max(C) plus full OS refutes numberhood reflection at every such l
 
 ```math
 \forall E^{tt}\forall n^\nu\,
- [\mathrm{Good}_\Delta(E)\land E(Nn)\to Nn].
+ [\mathrm{Good}_\Delta(E)\land E(Nn)\to Nn]
 \tag{5}
 ```
 
 The intermediate structure is exact. Under (5), if a current n is not a number, all qualified E reject Nn and Bottom, so the propositional OS instance for this same list gives $`Nn=\bot`$. If n is a number, the C persistence theorem gives $`Nn=\top`$. Therefore
 
 ```math
-\forall n\,(Nn=\top\ \lor\ Nn=\bot).
+\forall n\,(Nn=\top\ \lor\ Nn=\bot)
 \tag{6}
 ```
 
@@ -109,7 +109,7 @@ Conversely, (6) implies (5) because observers fix Bottom. Thus, with this propos
 The profile theorem below uses the following unconditional C theorem:
 
 ```math
-Nn\land Nm\land a_n\land a_m\quad\longrightarrow\quad n=m.
+Nn\land Nm\land a_n\land a_m\quad\longrightarrow\quad n=m
 \tag{7}
 ```
 
@@ -125,7 +125,7 @@ Define the admitted operation
 
 ```math
 T(p):=\exists m^\nu\,[Nm\land(a_m\le p)\land a_m],
-\qquad a_m\le p\;:\!\iff\;a_m\land p=a_m.
+\qquad a_m\le p\;:\!\iff\;a_m\land p=a_m
 \tag{8}
 ```
 
@@ -133,7 +133,7 @@ From (7), ordinary existential reasoning proves in C
 
 ```math
 Nn\land a_n\quad\longrightarrow\quad
- [T(p)\leftrightarrow(a_n\le p)].
+ [T(p)\leftrightarrow(a_n\le p)]
 \tag{9}
 ```
 
@@ -147,7 +147,7 @@ Assume C + Max(C) + BC_t. The [number-set coding theorem](../dependencies/number
 b=\bigvee_{n\in N}a_n,
 \qquad
 D=\{c\le b:\forall n\in N\,
-       (a_n\le c\ \lor\ a_n\land c=\bot)\}.
+       (a_n\le c\ \lor\ a_n\land c=\bot)\}
 \tag{10}
 ```
 
@@ -155,7 +155,7 @@ The join is in the current algebraic order. Every a_n indexed by a current numbe
 
 ```math
 T(c)=c\quad(c\in D),
-\qquad T(b)=b.
+\qquad T(b)=b
 \tag{11}
 ```
 
@@ -173,7 +173,7 @@ E(Nn)\land E(a_n)
 is true and, simultaneously for every current $`c\in D`$,
 
 ```math
-Ec\quad\longleftrightarrow\quad E(a_n\le c).
+Ec\quad\longleftrightarrow\quad E(a_n\le c)
 \tag{13}
 ```
 
@@ -181,7 +181,7 @@ Indeed, apply E to $`b=T(b)`$. Its whole existential law at $`\nu`$ and its Bool
 
 ```math
 Eb\leftrightarrow
-\exists n\,[E(Nn)\land E(a_n\le b)\land E(a_n)].
+\exists n\,[E(Nn)\land E(a_n\le b)\land E(a_n)]
 \tag{14}
 ```
 
@@ -197,7 +197,7 @@ If the witness n in the profile theorem is already a current number, E's truth p
 
 ```math
 Ec\quad\longleftrightarrow\quad a_n\le c
-\qquad(c\in D).
+\qquad(c\in D)
 \tag{15}
 ```
 

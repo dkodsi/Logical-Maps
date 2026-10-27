@@ -7,7 +7,7 @@ Original mathematical argument, direct source misc; unpaginated.
 Keep exactly the original finitary relational language with
 
 ```math
-\Sigma=\{c:e\to t\},\qquad M=\mathrm{Max}(C(\Sigma)).
+\Sigma=\{c:e\to t\},\qquad M=\mathrm{Max}(C(\Sigma))
 ```
 
 There are no individual names in this original signature. Every Strong
@@ -24,7 +24,7 @@ For each predicate term F of type σ→t, its witness requirement is
 W_F=\widehat{\neg\exists_\sigma F}
        \cup\bigcup_{b\in B_\sigma}\widehat{F(b)},
 \qquad
-\mathcal H=\bigcap_F W_F.
+\mathcal H=\bigcap_F W_F
 \tag{1}
 ```
 
@@ -34,7 +34,7 @@ domains B. It yields a model of the requested SP_Σ by REPORT §5. Define
 ```math
 K_0=K,\qquad
 K_{\alpha+1}=\bigcap_F\overline{K_\alpha\cap W_F},
-\qquad K_\lambda=\bigcap_{\alpha<\lambda}K_\alpha.
+\qquad K_\lambda=\bigcap_{\alpha<\lambda}K_\alpha
 \tag{2}
 ```
 
@@ -56,7 +56,7 @@ K_γ=cl(H). Let γ denote the least stabilization ordinal.
 ```math
 \boxed{\mathcal H\ne\varnothing
        \quad\Longleftrightarrow\quad
-       \gamma=\omega_1^{\mathrm{CK}}.}
+       \gamma=\omega_1^{\mathrm{CK}}}
 \tag{3}
 ```
 
@@ -80,7 +80,7 @@ laws, invariance under C-provable identity, the singleton sentence, and
 ```math
 V(\ulcorner S=T\urcorner)=1
 \quad\Longleftrightarrow\quad
-C(\Sigma,a)\vdash S=T.
+C(\Sigma,a)\vdash S=T
 \tag{4}
 ```
 
@@ -116,7 +116,7 @@ For R∈B_{νt}, put
 
 ```math
 X_R=\{n\in\mathbb N:V(\ulcorner R(\bar n)\urcorner)=1\},
-\qquad \mathcal S_V=\{X_R:R\in B_{\nu t}\}.
+\qquad \mathcal S_V=\{X_R:R\in B_{\nu t}\}
 \tag{5}
 ```
 
@@ -183,7 +183,7 @@ following material biconditional is true in the model:
 
 ```math
 L\ \leftrightarrow\
-\neg R(\overline{\ulcorner L\urcorner}).
+\neg R(\overline{\ulcorner L\urcorner})
 \tag{6}
 ```
 
@@ -208,7 +208,7 @@ that V is nonhyperarithmetic. Relativizing the same argument gives
 
 ```math
 X\in\mathcal S_V\quad\Longrightarrow\quad
-V\notin\mathrm{HYP}(X).
+V\notin\mathrm{HYP}(X)
 \tag{7}
 ```
 
@@ -307,7 +307,7 @@ supplies the matching upper bound and the extinction alternative.
 Represent each stage by its **saturated** open-complement code
 
 ```math
-S_\alpha=\{s:[s]\cap K_\alpha=\varnothing\}.
+S_\alpha=\{s:[s]\cap K_\alpha=\varnothing\}
 \tag{8}
 ```
 
@@ -328,7 +328,7 @@ Let E_i enumerate the cylinder codes whose union is W_i. Define
 \begin{aligned}
 R(A)&=\{s:\exists i\ \forall t\in E_i\,
                 \mathrm{Cover}([s]\cap[t],A)\},\\
-\Gamma(A)&=\mathrm{Sat}\bigl(S_0\cup A\cup R(A)\bigr).
+\Gamma(A)&=\mathrm{Sat}\bigl(S_0\cup A\cup R(A)\bigr)
 \end{aligned}
 \tag{9}
 ```
@@ -348,7 +348,7 @@ the union of these removed cylinders and the old complement. Taking
 Sat accounts for all cylinders lying inside that open union. Hence
 
 ```math
-S_{\alpha+1}=\Gamma(S_\alpha).
+S_{\alpha+1}=\Gamma(S_\alpha)
 \tag{10}
 ```
 
@@ -386,7 +386,7 @@ this case γ<ω₁^CK. We obtain the exact alternatives
 \mathcal H=\varnothing:
   &\text{extinction at a computable ordinal};\\
 \mathcal H\ne\varnothing:
-  &\text{first stabilization, nonempty, at }\omega_1^{\mathrm{CK}}.
+  &\text{first stabilization, nonempty, at }\omega_1^{\mathrm{CK}}
 \end{array}
 \tag{11}
 ```

@@ -42,7 +42,7 @@ Together with §2, this establishes relative independence of FP over C+□FC+I_e
 More generally, for infinite W in ZFC:
 
 ```math
-\mathrm{FullS5}(W)\models\mathrm{FP}\quad\Longleftrightarrow\quad 2^{|W|}=2^{\aleph_0}.
+\mathrm{FullS5}(W)\models\mathrm{FP}\quad\Longleftrightarrow\quad 2^{|W|}=2^{\aleph_0}
 ```
 
 If equality holds, the finite-only argument applies. If the cardinal is larger, the Cohen algebra qualifies and atomicity refutes FP. This is not equivalent to “W is countable”: the continuum function can have a plateau. Individual cardinality and the specified Σ interpretations do not affect this pure FP classification. Do not attach a uniform FP verdict to the existing arbitrary-infinite-W family.

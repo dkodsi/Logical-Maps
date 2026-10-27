@@ -12,7 +12,7 @@ Let Fin_t(U) abbreviate
 
 ```math
 \exists Z^{(tt)t}
-  (\mathrm{FiniteCardinality}_t(Z)\land ZU).
+  (\mathrm{FiniteCardinality}_t(Z)\land ZU)
 ```
 
 The definition is the existing Frege induction definition in [Background, Notation](../../source/topics/classicism/background.md):
@@ -25,7 +25,7 @@ The definition is the existing Frege induction definition in [Background, Notati
 
 ```math
 \mathrm{FiniteCardinality}_t(Z):=
-\forall W\,[(W\mathbf0\land\forall Y(WY\to W(\mathrm{Suc}(Y))))\to WZ].
+\forall W\,[(W\mathbf0\land\forall Y(WY\to W(\mathrm{Suc}(Y))))\to WZ]
 ```
 
 All types here are admitted relational types. Put All:=λx.Top, and assume Fin_t(All). This is internal Frege finiteness of the proposition domain. It does not assert that the finite cardinality is a standard numeral or supply an external enumeration.
@@ -33,7 +33,7 @@ All types here are admitted relational types. Put All:=λx.Top, and assume Fin_t
 **Theorem 1.** Over H+Fin_t(All), material XOR separation is equivalent to the Boolean-group equations for XOR. Explicitly, for z:=a⊕a at any fixed proposition a, these equations say ⊕ is associative and commutative and
 
 ```math
-p\oplus z=p,\qquad p\oplus p=z.
+p\oplus z=p,\qquad p\oplus p=z
 ```
 
 **Theorem 2.** Over the same base, material biconditional separation is equivalent to the analogous Boolean-group equations for ↔, with identity u:=a↔a.
@@ -50,7 +50,7 @@ An admitted truth character e:tt on L satisfies
 \neg e0,
 \qquad
 \forall x,y\,[Lx\land Ly\to
-(e(x+y)\leftrightarrow((ex\land\neg ey)\lor(\neg ex\land ey)))].
+(e(x+y)\leftrightarrow((ex\land\neg ey)\lor(\neg ex\land ey)))]
 \tag{1}
 ```
 
@@ -67,7 +67,7 @@ L'(x):=Lx\lor L(x+y),
 ```
 
 ```math
-e'(x):=(Lx\land ex)\lor(L(x+y)\land e(x+y)).
+e'(x):=(Lx\land ex)\lor(L(x+y)\land e(x+y))
 \tag{2}
 ```
 
@@ -76,7 +76,7 @@ The two cosets in L' are disjoint: if both Lx and L(x+y) held, closure and x+x=0
 On L, e' agrees with e. On y+L, it agrees with the character at the translated element x+y. The four coset combinations verify (1) for e'. For example, if x and v both belong to y+L, then x+y and v+y lie in L and
 
 ```math
-x+v=(x+y)+(v+y).
+x+v=(x+y)+(v+y)
 ```
 
 Thus e'(x+v) has the XOR truth value of e(x+y) and e(v+y), which are e'(x) and e'(v). In the mixed case, x+(v+y) lies in L and the same character law applies. The case where both inputs lie in L uses the old law directly. Also e'(0) is false, and e'(y) is false because y+y=0. Hence (L',e') is an extension assigning y character value zero.
@@ -90,7 +90,7 @@ With L₀,e₀ fixed, define the admitted property W of cardinality objects by
 ```math
 W(Z):=\forall U\,[ZU\to
 \exists L,e\,(\mathrm{Extension}(L,e;L_0,e_0)
- \land\forall x(Ux\to Lx))].
+ \land\forall x(Ux\to Lx))]
 \tag{3}
 ```
 
@@ -99,7 +99,7 @@ W(Z):=\forall U\,[ZU\to
 **Successor.** Assume W(Z), and suppose Suc(Z)U. By its defining formula, choose y with Uy and
 
 ```math
-Z(\lambda x.Ux\land x\ne y).
+Z(\lambda x.Ux\land x\ne y)
 ```
 
 Apply W(Z) to that deletion predicate, obtaining an extension containing every U-member other than y. Use §3 to adjoin y if necessary. The resulting extension contains every U-member and proves W(Suc(Z)). This uses only a witness in this single existential-elimination step; it does not select witnesses uniformly over a family of steps.
@@ -114,7 +114,7 @@ Given d≠0, take
 
 ```math
 L_0(x):=(x=0)\lor(x=d),
-\qquad e_0(x):=(x=d).
+\qquad e_0(x):=(x=d)
 ```
 
 The group equations make L₀ a subgroup, and e₀ is a character on it with e₀d true. Section 4 yields an admitted character e on the entire group with ed true.
@@ -128,7 +128,7 @@ For **biconditional**, use +=↔ and E:=λx.¬ex. Its unit is the true propositi
 ```math
 E(p\leftrightarrow q)
 \leftrightarrow\neg(ep\mathbin{\mathrm{XOR}}eq)
-\leftrightarrow(Ep\leftrightarrow Eq).
+\leftrightarrow(Ep\leftrightarrow Eq)
 ```
 
 So E is materially biconditional-preserving and distinguishes p,q. This proves S[D_m]. The equality-to-agreement directions of both separation biconditionals are ordinary H substitution.

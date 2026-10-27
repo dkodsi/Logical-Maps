@@ -10,7 +10,7 @@ The argument below proves the restricted theorem
 
 $$
 \boxed{C5+\mathrm{RC}_{(\sigma t),\sigma}
-       \ \Longrightarrow\ \mathrm{TC}_{\sigma}.}
+       \ \Longrightarrow\ \mathrm{TC}_{\sigma}}
 $$
 
 
@@ -35,7 +35,7 @@ closure identities for S. Let
 
 $$
 P(B):=\bigl(\lambda A^\rho.\,B\land S(B\land A)\bigr)
-       =\bigl(\lambda A^\rho.\,B\land A\bigr).
+       =\bigl(\lambda A^\rho.\,B\land A\bigr)
 $$
 
 
@@ -48,7 +48,7 @@ Use the unconditional strict-local normalization
 
 
 $$
-N(D)(x):=Dx\land\forall y\,[(Dy\land Q_R(x,y))\to y=x].
+N(D)(x):=Dx\land\forall y\,[(Dy\land Q_R(x,y))\to y=x]
 $$
 
 
@@ -70,7 +70,7 @@ gives an actual functional subrelation K⊆U, total at every B. Put
 
 $$
 K_B:=\lambda x.K(B,x),\qquad
-f(B):=B\lor\bigl(N(K_B)\land\neg S(B)\bigr).
+f(B):=B\lor\bigl(N(K_B)\land\neg S(B)\bigr)
 \tag{1}
 $$
 
@@ -118,7 +118,7 @@ For any family code X:ρt define crisp membership
 
 
 $$
-\widehat X(B):=\Box(XB)=(XB=\top).
+\widehat X(B):=\Box(XB)=(XB=\top)
 $$
 
 
@@ -202,7 +202,7 @@ Define the canonical union
 
 
 $$
-A(b):=\exists X\,[\mathrm{Chain}_f(X)\land\widehat X(b)].
+A(b):=\exists X\,[\mathrm{Chain}_f(X)\land\widehat X(b)]
 \tag{3}
 $$
 
@@ -267,7 +267,7 @@ $$
 Q_R(x,y):=\forall P^{\sigma\sigma t}
  \bigl[(\mathrm{Equiv}(P)\land R\subseteq P)\to P(x,y)\bigr],
 \qquad
-R\subseteq P:=\forall u,v\,(R(u,v)\to P(u,v)).
+R\subseteq P:=\forall u,v\,(R(u,v)\to P(u,v))
 $$
 
 
@@ -282,7 +282,7 @@ Define saturation on properties by
 
 
 $$
-S(A)(x):=\exists y\,[Q_R(x,y)\land A(y)].
+S(A)(x):=\exists y\,[Q_R(x,y)\land A(y)]
 $$
 
 
@@ -299,7 +299,7 @@ $$
 
 $$
 S(A\lor B)=SA\lor SB,\qquad
-S(A\land SB)=SA\land SB.
+S(A\land SB)=SA\land SB
 $$
 
 
@@ -320,7 +320,7 @@ $$
 \mathrm{Loc}^{\approx}(B)
  &:=\forall A\,[B\land S(B\land A)\approx B\land A],\\
 \mathrm{Loc}^{=}(B)
- &:=\forall A\,[B\land S(B\land A)=B\land A].
+ &:=\forall A\,[B\land S(B\land A)=B\land A]
 \end{aligned}
 $$
 
@@ -341,7 +341,7 @@ There is also an explicit admitted normalization:
 
 
 $$
-N(B)(x):=Bx\land\forall y\,[(By\land Q_R(x,y))\to y=x].
+N(B)(x):=Bx\land\forall y\,[(By\land Q_R(x,y))\to y=x]
 $$
 
 
@@ -352,7 +352,7 @@ the two pointwise formulas for N(B), for every A. Logical Equivalence yields
 
 
 $$
-\mathrm{Loc}^{=}(N(B)).
+\mathrm{Loc}^{=}(N(B))
 $$
 
 
@@ -366,7 +366,7 @@ Consequently there is an exact bare-C reduction:
 $$
 \boxed{\mathrm{TC}(R)\quad\longleftrightarrow\quad
 \exists B^{\sigma t}
- \bigl[\mathrm{Loc}^{=}(B)\land\forall x^{\sigma}\,S(B)(x)\bigr].}
+ \bigl[\mathrm{Loc}^{=}(B)\land\forall x^{\sigma}\,S(B)(x)\bigr]}
 $$
 
 

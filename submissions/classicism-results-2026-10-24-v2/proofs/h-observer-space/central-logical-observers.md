@@ -109,7 +109,7 @@ The theorem classifies the centre under ordinary separation; it does not assert 
 
 ```math
 \boxed{\mathrm{C5}+\mathrm{CentreSep}(t,\Delta)
-\quad\longleftrightarrow\quad\mathrm{Extensionality}.}
+\quad\longleftrightarrow\quad\mathrm{Extensionality}}
 \tag{10}
 ```
 
@@ -140,7 +140,7 @@ Since Rev and End each imply C5, the full-theory conjunctions give two further e
 \boxed{
 \mathrm{CentreSep}+\mathrm{Rev}
 \ \longleftrightarrow\ \mathrm{Extensionality}
-\ \longleftrightarrow\ \mathrm{CentreSep}+\mathrm{End}.}
+\ \longleftrightarrow\ \mathrm{CentreSep}+\mathrm{End}}
 \tag{12}
 ```
 
@@ -171,7 +171,7 @@ Conversely, identity is central, and if a greatest element $`1_P`$ exists the co
 Z(\mathrm{Infl}(P))=
 \begin{cases}
 \{I,\mathrm{const}_{1_P}\},&P\text{ has a greatest element},\\
-\{I\},&P\text{ has none}.
+\{I\},&P\text{ has none}
 \end{cases}}
 \tag{15}
 ```
@@ -181,7 +181,7 @@ On a singleton the two displayed maps coincide. Otherwise the central read point
 ```math
 \boxed{\mathrm{CentreSep}\text{ holds in the full finite rooted-poset model}
 \quad\longleftrightarrow\quad
-P\text{ is a singleton or a two-point chain}.}
+P\text{ is a singleton or a two-point chain}}
 \tag{16}
 ```
 

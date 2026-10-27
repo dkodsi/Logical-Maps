@@ -7,7 +7,7 @@ The [direct Boolean-algebra proof](observer-no-finite-basis-direct.md) gives the
 More strongly, no set of sentences of uniformly bounded elaborated type order, even an infinite set, is equivalent to OS over C. The same conclusion holds for every deductively closed theory $`T`$ with
 
 ```math
-\mathrm C+\mathrm{BF}\ \subseteq\ T\ \subseteq\ \mathrm C+\mathrm{OS}.
+\mathrm C+\mathrm{BF}\ \subseteq\ T\ \subseteq\ \mathrm C+\mathrm{OS}
 ```
 
 In particular it applies to the full schemata BF, Functionality and Tractarianism. The [one-type schema reduction](observer-single-type-schema.md) remains valid: its external type parameter is unbounded. Finite stronger theories such as the [Rev presentation](reversible-separation-single-sentence.md) and [End presentation](endpoint-separation-finite-presentation.md) can imply OS. The theorem concerns an **equivalent** basis.
@@ -20,7 +20,7 @@ Define type order by
 \mathrm{ord}(e)=\mathrm{ord}(t)=0,
 \qquad
 \mathrm{ord}(\sigma\tau)
-=\max\{\mathrm{ord}(\sigma)+1,\mathrm{ord}(\tau)\}.
+=\max\{\mathrm{ord}(\sigma)+1,\mathrm{ord}(\tau)\}
 ```
 
 Count every type in the fully elaborated formula, including logical constants and lambda subterms. For example, $`Q_\sigma`$ has type $`(\sigma t)t`$ and order $`\mathrm{ord}(\sigma)+2`$. Counting only the bound variable's type would understate the formula's scope.
@@ -36,7 +36,7 @@ An elementary submodel would not provide this last feature: elementarity would s
 Begin with the ground full hierarchy $`L^V`$ over individuals $`\omega`$ and two truth values. Fix $`n<\omega`$, and put
 
 ```math
-\mu=\beth_n,\qquad \kappa=\mu^+.
+\mu=\beth_n,\qquad \kappa=\mu^+
 ```
 
 Every type of order at most $`n`$ has a ground domain of cardinality at most $`\mu`$. To see this, induct on the finite type tree. At an arrow of order $`k\ge1`$, the input order is at most $`k-1`$ and the output order at most $`k`$, so
@@ -44,7 +44,7 @@ Every type of order at most $`n`$ has a ground domain of cardinality at most $`\
 ```math
 |L^V_{\alpha\beta}|
 \le(\beth_k)^{\beth_{k-1}}
-=\beth_k.
+=\beth_k
 ```
 
 The bases are countable or finite. There are countably many types, so all order-at-most-$`n`$ domains together still have cardinality at most $`\mu`$.
@@ -53,7 +53,7 @@ Set $`\rho_0=e`$, $`\rho_{j+1}=\rho_jt`$ and $`\nu=\rho_{n+1}`$. Then
 
 ```math
 |L^V_{\rho_n}|=\mu,
-\qquad |L^V_\nu|=2^\mu\ge\kappa.
+\qquad |L^V_\nu|=2^\mu\ge\kappa
 ```
 
 Choose a ground injection $`b:\kappa\to L^V_\nu`$. Use the forcing
@@ -78,7 +78,7 @@ identifying $`F`$ with its characteristic predicate of type $`\sigma t`$. It is 
 Generate $`N`$ from $`F`$ and **every object of every preserved domain of order at most $`n`$**, by taking all denotations of finite typed terms with finitely many generator parameters. There is a set of such terms and parameter assignments. This gives nonempty domains at every type, contains the logical constants, and is closed under all finite term constructions by substitution. Moreover,
 
 ```math
-N_\tau=L_\tau\qquad\text{when }\mathrm{ord}(\tau)\le n.
+N_\tau=L_\tau\qquad\text{when }\mathrm{ord}(\tau)\le n
 ```
 
 **Nonselection lemma.** No member of $`F`$ belongs to $`N_\sigma`$.
@@ -86,13 +86,13 @@ N_\tau=L_\tau\qquad\text{when }\mathrm{ord}(\tau)\le n.
 Suppose a term with parameters $`F`$ and finitely many preserved ground objects selected a member. Strengthen a condition to choose an index $`i`$ such that
 
 ```math
-p\Vdash u(F,\bar a)=c_i.
+p\Vdash u(F,\bar a)=c_i
 ```
 
 Choose $`j\ne i`$ outside the column support of $`p`$. Let $`\pi`$ transpose columns $`i,j`$. It fixes the ground parameters and the unordered family $`F`$ as names up to forced equality. Interpretation of each fixed typed term in the full hierarchy is uniquely definable from its parameters, including when it quantifies over changed high domains. Forcing equivariance therefore gives
 
 ```math
-\pi(p)\Vdash u(F,\bar a)=c_j.
+\pi(p)\Vdash u(F,\bar a)=c_j
 ```
 
 The conditions $`p`$ and $`\pi(p)`$ are compatible. At column $`i`$ only the former can have entries; at column $`j`$ only the latter can have entries; elsewhere they agree. Their union is still a condition. It forces $`c_i=c_j`$, contradicting the forced distinction. This proves the lemma.
@@ -117,7 +117,7 @@ Concretely, the failure predicate has constant-Top current function and future p
 \forall x^\sigma\, .\,\Box Hx
 \qquad\text{holds, while}\qquad
 \Box\forall x^\sigma\, .\,Hx
-\qquad\text{fails}.
+\qquad\text{fails}
 ```
 
 The same predicate and constant Top are distinct relation profiles with identical outputs on every current argument. This directly refutes Functionality and relational OS, even for an empty observer qualification list.

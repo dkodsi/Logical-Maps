@@ -32,7 +32,7 @@ necessitation, and Intensionality at every relational type:
 
 ```math
  \Box\mathrm{coext}_\rho(X,Y)\longrightarrow X=Y,
- \qquad \Box A:=b(A).
+ \qquad \Box A:=b(A)
 ```
 
 Here $`\mathrm{coext}_t(p,q)`$ is $`p\leftrightarrow q`$, and
@@ -62,7 +62,7 @@ interpretation of necessity. Two logical laws used explicitly below are
 
 ```math
  \Box\bigwedge_{i\in I}A_i
- \ \leftrightarrow\ \bigwedge_{i\in I}\Box A_i.
+ \ \leftrightarrow\ \bigwedge_{i\in I}\Box A_i
  \tag{1.2}
 ```
 
@@ -128,7 +128,7 @@ entities by I and assign parameters $`p_i`$ to them. For each
 $`\epsilon\in2^I`$, form the admitted proposition
 
 ```math
- a_\epsilon=\bigwedge_{i\in I}p_i^{\epsilon(i)}.
+ a_\epsilon=\bigwedge_{i\in I}p_i^{\epsilon(i)}
  \tag{2.1}
 ```
 
@@ -185,7 +185,7 @@ ordinary internal Boolean Completeness formula. QED.
 let R represent
 
 ```math
- D(\bar x)=\bigvee_{i\in I}(\bar x=\bar s_i).
+ D(\bar x)=\bigvee_{i\in I}(\bar x=\bar s_i)
  \tag{3.1}
 ```
 
@@ -213,7 +213,7 @@ A **full standard hierarchy** has nonempty sets E and W and domains
 
 ```math
  D_e=E,\qquad D_t=\mathcal P(W),\qquad
- D_{\sigma\rho}=D_\rho^{D_\sigma}\quad(\rho\ne e).
+ D_{\sigma\rho}=D_\rho^{D_\sigma}\quad(\rho\ne e)
  \tag{4.1}
 ```
 
@@ -235,7 +235,7 @@ constant domains and
 
 ```math
  W=\mathrm{At}(D_t),\qquad
- \beta_\tau(R)=\{(w,\bar a):w\le R[\bar a]\}.
+ \beta_\tau(R)=\{(w,\bar a):w\le R[\bar a]\}
  \tag{4.2}
 ```
 
@@ -261,7 +261,7 @@ of each tuple in U. Apply Comprehension to
 ```math
  A_U(\bar x)=
  \bigvee_{(w,\bar a)\in U}
-   \left(p_w\land\bigwedge_k x_k=a_k\right).
+   \left(p_w\land\bigwedge_k x_k=a_k\right)
  \tag{4.3}
 ```
 
@@ -345,7 +345,7 @@ all functions from $`D_\sigma`$ to $`D_\rho`$ with a support of
 cardinality less than kappa, under the conjugation action
 
 ```math
- (g\cdot f)(x)=g\cdot f(g^{-1}\cdot x).
+ (g\cdot f)(x)=g\cdot f(g^{-1}\cdot x)
 ```
 
 These domains are invariant under G. Every individual has its singleton

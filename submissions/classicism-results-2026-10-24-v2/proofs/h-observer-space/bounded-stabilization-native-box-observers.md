@@ -11,7 +11,7 @@ The reason is structural. In a frame built from successive two-point antichains,
 For a fixed external integer r≥1, define powers of an admitted observer E:tt by finite term iteration: E⁰=I and Eⁱ⁺¹=E∘Eⁱ. Use the full logical qualification $`\mathrm{Good}_\Delta`$ and native-Box identity from [Native-Box logical observers](native-box-logical-observers.md), §1. The additional stabilization condition is the whole operation identity
 
 ```math
- E^{r+1}=E^r.
+ E^{r+1}=E^r
  \tag{1}
 ```
 
@@ -23,7 +23,7 @@ Multiplying (1) by E shows Eʳ⁺²=Eʳ⁺¹. Thus the qualifying classes grow w
 
 ```math
  B_1\ \Longrightarrow\ B_2\ \Longrightarrow\ B_3
- \ \Longrightarrow\ \cdots\ \Longrightarrow\mathrm{BoxSep}.
+ \ \Longrightarrow\ \cdots\ \Longrightarrow\mathrm{BoxSep}
  \tag{2}
 ```
 
@@ -36,7 +36,7 @@ Over C5, every native-Box Boolean observer is injective. Finite repeated cancell
 \begin{aligned}
  \mathrm{C5}+B_r&\quad\Longleftrightarrow\quad\mathrm{Extensionality},\\
  \mathrm{Rev}+B_r&\quad\Longleftrightarrow\quad\mathrm{Extensionality},\\
- \mathrm{End}+B_r&\quad\Longleftrightarrow\quad\mathrm{Extensionality}.
+ \mathrm{End}+B_r&\quad\Longleftrightarrow\quad\mathrm{Extensionality}
 \end{aligned}}
 \tag{3}
 ```
@@ -52,7 +52,7 @@ and current truth is membership of x. Relational objects are full future truth p
 Every Boolean observer is uniquely a coordinate reader E_f for an inflationary map f:P→P:
 
 ```math
- x\le f(x),\qquad E_f(p)=f^{-1}[p].
+ x\le f(x),\qquad E_f(p)=f^{-1}[p]
  \tag{4}
 ```
 
@@ -62,14 +62,14 @@ Native-Box preservation is exactly the cone-image condition
 
 ```math
  f[\mathord\uparrow x]=\mathord\uparrow f(x)
- \quad\text{for every }x.
+ \quad\text{for every }x
  \tag{5}
 ```
 
 It entails monotonicity. The whole stabilization identity (1) is exactly
 
 ```math
- f^{r+1}=f^r.
+ f^{r+1}=f^r
  \tag{6}
 ```
 
@@ -89,7 +89,7 @@ For positive finite integers m,n, let $`P_{m,n}`$ have four levels: root o, an m
  B_1&\quad\Longleftrightarrow\quad m=1\ \text{or}\ n=1,\\
  B_2&\quad\Longleftrightarrow\quad m=1\ \text{or}\ n=1\ \text{or}\ m>n,\\
  B_3&\quad\Longleftrightarrow\quad\mathrm{BoxSep}
- \quad\Longleftrightarrow\quad m=1\ \text{or}\ n\le m.
+ \quad\Longleftrightarrow\quad m=1\ \text{or}\ n\le m
 \end{aligned}}
 \tag{7}
 ```
@@ -134,7 +134,7 @@ In particular the root orbit visits one point of each level in order:
 
 ```math
  o\ \mapsto\ a\in A_1\ \mapsto\ A_2
- \ \mapsto\cdots\mapsto\ A_k\ \mapsto\ 1.
+ \ \mapsto\cdots\mapsto\ A_k\ \mapsto\ 1
  \tag{8}
 ```
 
@@ -156,7 +156,7 @@ The base case $`P_{3,2}`$ and the frames T_k together show, for every fixed exte
 
 ```math
 \boxed{B_r\ \Longrightarrow\ B_{r+1}
-\quad\text{strictly over H}.}
+\quad\text{strictly over H}}
 \tag{9}
 ```
 
@@ -166,7 +166,7 @@ All these witnesses have a common top in every future cone. Consequently .2 hold
 
 ```math
  \mathrm C+\Box\mathrm{BF}+\Box\mathrm{Functionality}
- +\Box\mathrm{OS}+\Box\mathrm{Atomicity}_t+\Box .2.
+ +\Box\mathrm{OS}+\Box\mathrm{Atomicity}_t+\Box .2
  \tag{10}
 ```
 
@@ -186,7 +186,7 @@ Fix any source x, and let E be $`\mathrm{Good}_{\{t\}}`$. Its current truth char
 
 ```math
  h(q)=\text{the current truth value of }Eq,
- \qquad q\subseteq\mathord\uparrow x.
+ \qquad q\subseteq\mathord\uparrow x
  \tag{11}
 ```
 
@@ -195,14 +195,14 @@ Boolean qualification makes h a Boolean character. If it accepts a singleton {y}
 Define a full admitted predicate F:tt at x by the following future truth profile: for every y≥x and every q⊆↑y,
 
 ```math
- F(y,q)\text{ is true}\quad\Longleftrightarrow\quad q\ne\{y\}.
+ F(y,q)\text{ is true}\quad\Longleftrightarrow\quad q\ne\{y\}
  \tag{12}
 ```
 
 Fullness admits this specified profile; no arbitrary-family encoding or external character-extension theorem is being assumed. For any current p⊆↑x, its application has profile
 
 ```math
- F_x(p)=\{y\ge x:p\cap\mathord\uparrow y\ne\{y\}\}.
+ F_x(p)=\{y\ge x:p\cap\mathord\uparrow y\ne\{y\}\}
  \tag{13}
 ```
 
@@ -231,7 +231,7 @@ Principality shows that this excludes every $`\mathrm{Good}_{\{t\}}`$ native-Box
  T_\omega\models\Box\mathrm{BoxSep},
  \qquad
  T_\omega\not\models B_r(t,\{t\})
- \quad\text{for every external finite }r\ge1.}
+ \quad\text{for every external finite }r\ge1}
  \tag{14}
 ```
 

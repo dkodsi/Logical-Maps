@@ -5,13 +5,13 @@ Ordinary mathematical arguments, 26 October 2026. No Lean verification or native
 Write K_pt(E) for current pointwise conjunction preservation and involutivity:
 
 ```math
-\forall p q\,E(p\land q)=Ep\land Eq,\qquad \forall p\,E(Ep)=p.
+\forall p q\,E(p\land q)=Ep\land Eq,\qquad \forall p\,E(Ep)=p
 ```
 
 Write S_pt for propositional separation by these observers, and P_sep for
 
 ```math
-\forall p q\,\Box\Bigl[(\forall E\, .\,K_{pt}(E)\to(Ep\leftrightarrow Eq))\to p=q\Bigr].
+\forall p q\,\Box\Bigl[(\forall E\, .\,K_{pt}(E)\to(Ep\leftrightarrow Eq))\to p=q\Bigr]
 ```
 
 ## 1. The finite full retract does not satisfy P_sep
@@ -19,7 +19,7 @@ Write S_pt for propositional separation by these observers, and P_sep for
 Its root proposition domain is 2^2 and its target proposition domain is 2^3. The transports are
 
 ```math
-H(a,b)=(b,a,b),\quad J(x,y,z)=(y,z),\quad K(x,y,z)=(z,y,z).
+H(a,b)=(b,a,b),\quad J(x,y,z)=(y,z),\quad K(x,y,z)=(z,y,z)
 ```
 
 Any admitted operation at the target has its last two output coordinates determined by (y,z), because these coordinates lie after the arrows j and k. If its current operation is a Boolean automorphism, it permutes the three atoms. Thus the last two output coordinates must permute y,z, and the first output coordinate must be x. Every current eligible observer at the target therefore preserves current truth. The old root proposition (1,0) transports to (0,1,0), distinct from zero but not separable from zero by a current eligible observer. P_sep fails.
@@ -53,7 +53,7 @@ The global proof in [REPORT.md](pointwise-reversible-separation.md), section 4, 
 There is a full C model with
 
 ```math
-\mathrm{FC}+S_{pt}+\Box\mathrm{InfAx}_e+\Box\mathrm{InfAx}_t+\neg\mathrm{BF}_t.
+\mathrm{FC}+S_{pt}+\Box\mathrm{InfAx}_e+\Box\mathrm{InfAx}_t+\neg\mathrm{BF}_t
 ```
 
 Thus it also satisfies the corresponding infinity schemata and fails Rev. This uses current FC, not boxed FC.
@@ -63,13 +63,13 @@ Take the product of the two-object retract category with the one-object group Z,
 Every arrow a out of R has a unique retraction r_a. Explicitly, (1_R,n) has retraction (1_R,-n), and (h,n) has retraction (j,-n). If b follows a, uniqueness gives
 
 ```math
-r_{ba}b=r_a.
+r_{ba}b=r_a
 ```
 
 Fix any admitted input type sigma, relational output type tau, and any external set-function F:D_R(sigma)->D_R(tau). For each arrow a out of R define
 
 ```math
-F_a=a^\tau\,F\,r_a^\sigma.
+F_a=a^\tau\,F\,r_a^\sigma
 ```
 
 These functions are natural, because
@@ -77,7 +77,7 @@ These functions are natural, because
 ```math
 b^\tau F_a=(ba)^\tau F r_a^\sigma
 =(ba)^\tau F r_{ba}^\sigma b^\sigma
-=F_{ba}b^\sigma.
+=F_{ba}b^\sigma
 ```
 
 To check admission explicitly, write tau=rho_1 ... rho_n t. At an arrow a:R->V, assign the raw extension consisting of tuples (x,z_1,...,z_n) such that F_a(x)[z_1,...,z_n] is true at V. Fullness admits this profile as an entity of type sigma tau; no function with output e is used. For any further arrow b:V->W, its value on x at coordinate b is the truth of F_{ba}(b^sigma x) on an arbitrary residual tuple from the domains at W. The naturality equation identifies this with b^tau(F_a(x)). Since the residual tuple is arbitrary at every b, all raw coordinates of the resulting relation equal those of F_a(x). Thus its entire operation component at a is F_a. At the identity its actual map is exactly F. Thus every external current set-function with relational output is represented.

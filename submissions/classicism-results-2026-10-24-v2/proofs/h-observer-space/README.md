@@ -13,7 +13,7 @@ Use H in the existing relational type system: e and t are base types, and arrow 
 The principal separation form is
 
 ```math
-S[R]:=\forall p,q\, .\,p=q\leftrightarrow\forall E\, .\,R(E)\to(Ep\leftrightarrow Eq).
+S[R]:=\forall p,q\, .\,p=q\leftrightarrow\forall E\, .\,R(E)\to(Ep\leftrightarrow Eq)
 ```
 
 Preservation means full identity of composite operations unless a comparison tier is explicitly labelled material or pointwise. Acceptance of Top, fixing Top, rejection of Bottom, and fixing Bottom are distinct conditions. Primitive connectives and their classically equivalent derived versions remain distinct until an identity has been proved. The same applies to primitive and derived quantifiers.

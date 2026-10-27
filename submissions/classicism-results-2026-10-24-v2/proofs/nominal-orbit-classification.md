@@ -16,7 +16,7 @@ The first target is the exact equivalence
 
 ```math
 \mathrm{DedInf}_t\quad\Longleftrightarrow\quad
-\text{the external set }W/G\text{ is infinite}.
+\text{the external set }W/G\text{ is infinite}
 \tag{1}
 ```
 
@@ -29,7 +29,7 @@ The second target specializes W to A with its natural permutation action:
 
 ```math
 \Box\mathrm{IC}_\sigma\quad\text{for every admitted type }\sigma,
-\qquad\Box\neg\mathrm{DedInf}_t.
+\qquad\Box\neg\mathrm{DedInf}_t
 \tag{2}
 ```
 
@@ -54,7 +54,7 @@ record the finite pattern
 
 ```math
 \pi_g:K\longrightarrow S\sqcup\{*\},\qquad
-\pi_g(a)=\begin{cases}g(a),&g(a)\in S,\\ *,&g(a)\notin S.\end{cases}
+\pi_g(a)=\begin{cases}g(a),&g(a)\in S,\\ *,&g(a)\notin S\end{cases}
 ```
 
 There are at most $`(|S|+1)^{|K|}`$ patterns. If g and h have the same pattern,
@@ -77,7 +77,7 @@ representatives. In particular,
 
 ```math
 |W/\mathrm{Fix}(S)|\le
-\sum_{j=1}^{m}(|S|+1)^{|K_j|}.
+\sum_{j=1}^{m}(|S|+1)^{|K_j|}
 \tag{3}
 ```
 
@@ -92,7 +92,7 @@ Each characteristic proposition qn=On is fixed by every permutation. Define
 an operation on **every** admitted proposition by
 
 ```math
-f(q_n)=q_{n+1},\qquad f(p)=p\text{ when }p\notin\{q_n:n<\omega\}.
+f(q_n)=q_{n+1},\qquad f(p)=p\text{ when }p\notin\{q_n:n<\omega\}
 ```
 
 It is equivariant, hence empty-supported and admitted at type tt. Its action

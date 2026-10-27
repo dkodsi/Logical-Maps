@@ -20,7 +20,7 @@ For a simple stronger package covering every type and every finite second-order 
 ```math
 C+OS+\mathrm{FunctionalChoice}
  \Longrightarrow\Box\mathrm{FunctionalChoice}
- \Longrightarrow\text{second-order analytic necessitism and necessity}.
+ \Longrightarrow\text{second-order analytic necessitism and necessity}
 \tag{1}
 ```
 
@@ -51,13 +51,13 @@ Let
 \mathrm{Fin}_\sigma:=
  \exists Z^{(\sigma t)t}
  [\mathrm{FiniteCardinality}_\sigma(Z)\land Z(\top_\sigma)],
-\qquad \mathrm{Inf}_\sigma:=\neg\mathrm{Fin}_\sigma.
+\qquad \mathrm{Inf}_\sigma:=\neg\mathrm{Fin}_\sigma
 ```
 
 This is the quantified Infinity axiom, not the external schema of arbitrarily large finite sets. The existing internal-induction proof gives the discharged C theorem
 
 ```math
-BF_\sigma\to(\mathrm{Fin}_\sigma\to\Box\mathrm{Fin}_\sigma).
+BF_\sigma\to(\mathrm{Fin}_\sigma\to\Box\mathrm{Fin}_\sigma)
 \tag{3}
 ```
 
@@ -65,7 +65,7 @@ Under □BF_σ, its necessitation makes the persistence conditional necessary. C
 
 ```math
 \boxed{C+ND_t+\Box BF_\sigma
- \vdash\mathrm{Inf}_\sigma\to\Box\mathrm{Inf}_\sigma.}
+ \vdash\mathrm{Inf}_\sigma\to\Box\mathrm{Inf}_\sigma}
 \tag{4}
 ```
 
@@ -85,7 +85,7 @@ At a fixed σ, write
 ```math
 U_{\sigma,\varphi}:=
  \forall\mathfrak R
- (\mathrm{Real}_\sigma(\mathfrak R)\to\varphi(\mathfrak R)).
+ (\mathrm{Real}_\sigma(\mathfrak R)\to\varphi(\mathfrak R))
 \tag{5}
 ```
 
@@ -100,7 +100,7 @@ C5+S_{t,\Delta}
 \Longrightarrow
 \Box RC_{\sigma t}+\Box RC_{\sigma\sigma t}
  +\Box RC_{\sigma\sigma\sigma t},\\
-\Delta=\{\sigma,\sigma t,\sigma\sigma t,\sigma\sigma\sigma t\}.
+\Delta=\{\sigma,\sigma t,\sigma\sigma t,\sigma\sigma\sigma t\}
 \end{gathered}
 \tag{6}
 ```
@@ -134,7 +134,7 @@ The native Necessity of Arithmetic, Necessity of Analysis, Necessity of Second-O
 
 ```math
 (\Box B_1\lor\cdots\lor\Box B_n)
- \to\Box(\Box B_1\lor\cdots\lor\Box B_n).
+ \to\Box(\Box B_1\lor\cdots\lor\Box B_n)
 \tag{8}
 ```
 

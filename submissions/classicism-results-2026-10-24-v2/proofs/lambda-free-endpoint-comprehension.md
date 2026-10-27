@@ -18,7 +18,7 @@ O\top=\top,\qquad \forall p\, .\,(Op=\top\lor Op=\bot),\\
 \forall p,q\, .\,O(p\lor q)=Op\lor Oq,\\
 \forall F^{\sigma t}\, .\,O(\forall x^\sigma\, .\,Fx)=\forall x^\sigma\, .\,O(Fx),\\
 \forall F^{\sigma t}\, .\,O(\exists x^\sigma\, .\,Fx)=\exists x^\sigma\, .\,O(Fx)
-\qquad(\sigma\in\Delta).
+\qquad(\sigma\in\Delta)
 \end{gathered}
 ```
 
@@ -30,7 +30,7 @@ Write $`Q_\Delta(O)`$ for these conditions. Top-fixing is explicit because $`\to
 \forall X,Y^\tau\, .\,\left[X=Y\leftrightarrow
 \forall O^{tt}\, .\,\left(Q_\Delta(O)\to
 \forall\bar x\, .\,[O(X[\bar x])\leftrightarrow O(Y[\bar x])]
-\right)\right].
+\right)\right]
 ```
 
 The tuple may be empty. Application $`X[\bar x]`$ is explicitly left-nested. Types and finite type lists index the schema; they are not quantified objects.
@@ -40,7 +40,7 @@ The tuple may be empty. Application $`X[\bar x]`$ is explicitly left-nested. Typ
 ```math
 \exists R^{\sigma_1\cdots\sigma_n t}\, .\,
 \Box\forall x_1\cdots x_n\, .\,
-\bigl(R[\bar x]\leftrightarrow A\bigr).
+\bigl(R[\bar x]\leftrightarrow A\bigr)
 ```
 
 Here $`A`$ is a well-founded set-sized infinitary matrix with ordinary classical truth clauses, arbitrary set-sized Boolean conjunctions and disjunctions, and arbitrary simultaneous typed parameter families. Every instance holds under every such assignment. The bound argument tuple is finite, possibly empty; its types may include $`e`$. The representing variable is fresh. No fixed cardinal bound or well-orderability restriction is imposed.
@@ -50,13 +50,13 @@ Here $`A`$ is a well-founded set-sized infinitary matrix with ordinary classical
 First derive K. Suppose $`p=\top`$ and $`(p\to q)=\top`$. Every qualified observer fixing top accepts $`p`$ and $`p\to q`$. Boolean preservation therefore makes it accept $`q`$. It also accepts $`\top`$, so propositional separation gives $`q=\top`$. Discharging these premises yields
 
 ```math
-\Box(p\to q)\to(\Box p\to\Box q).
+\Box(p\to q)\to(\Box p\to\Box q)
 ```
 
 The same argument with $`(p\leftrightarrow q)=\top`$ makes every qualified observer agree on $`p,q`$. Thus
 
 ```math
-\Box(p\leftrightarrow q)\to p=q.
+\Box(p\leftrightarrow q)\to p=q
 ```
 
 Necessitating pure universal instantiation and applying the derived K gives boxed universal instantiation. Consequently, from $`\Box\forall\bar x\, .\,(X[\bar x]\leftrightarrow Y[\bar x])`$, obtain equality of the proposition values at each tuple. Equality substitution makes every observer agree on those values. Full typed separation gives $`X=Y`$. This is relational Intensionality.
@@ -77,7 +77,7 @@ In the recovered C, BF and $`\mathrm{ND}_t`$ give C5. Identity judgments at ever
 
 ```math
 \forall x\, .\,O(x=x),\qquad
-\forall x,y,F\, .\,[O(x=y)\to(O(Fx)\to O(Fy))].
+\forall x,y,F\, .\,[O(x=y)\to(O(Fx)\to O(Fy))]
 ```
 
 For the substitution clause, an accepted identity cannot be bottom; it is therefore top, whence $`x=y`$, and ordinary substitution identifies the outputs. Section 4 upgrades the qualification to the original whole-operation identities. The established [endpoint characterization](logical-observer-hierarchy.md), §3, now supplies Atomicity at $`t`$ and its C5 consequences.
@@ -92,7 +92,7 @@ Whole-operation preservation can itself be written λ-free. For negation, bind t
 \exists L,R^{tt}\, .\,\left[
 \forall p\, .\,Lp=O(\neg p)\ \land\
 \forall p\, .\,Rp=\neg Op\ \land\ L=R
-\right].
+\right]
 ```
 
 Use the corresponding finite-arity representatives for the other Boolean clauses. For the universal clause, the two operations have type $`(\sigma t)t`$, with application laws $`LF=O(\forall x\, .\,Fx)`$ and $`RF=\forall x\, .\,O(Fx)`$, and are required to be identical.
@@ -105,7 +105,7 @@ An equality matrix in boxed Infinitary Comprehension gives
 
 ```math
 \exists R^{\sigma t}\, .\,\Box\forall x^\sigma\, .\,
-\left(Rx\leftrightarrow\bigvee_{i\in I}x=a_i\right).
+\left(Rx\leftrightarrow\bigvee_{i\in I}x=a_i\right)
 ```
 
 T follows immediately from $`\Box A=(A=\top)`$ and equality substitution, so these instances give unboxed range comprehension. Section 3 gives H with full endpoint separation. The [intrinsic representation theorem](intrinsic-observer-axioms.md), §§3–5, therefore applies: range comprehension represents every external atom-family, Boolean Completeness joins it, and joins of singleton world–argument supports represent every subset and every existing allowed function.
@@ -131,7 +131,7 @@ The distinction from the over-H formulation is witnessed by the rigid-output con
 
 ```math
 D_{\sigma t}=\{f:D_\sigma\to\{\varnothing,W\}\},\qquad
-D_{\sigma\rho}=D_\rho^{D_\sigma}\quad(\rho\ne t,e).
+D_{\sigma\rho}=D_\rho^{D_\sigma}\quad(\rho\ne t,e)
 ```
 
 Application is evaluation; the primitive formula constructors and binders have ordinary worldwise truth conditions. Identity is constant equality and necessity ranges over both worlds. The two readers $`O_w(p)=W`$ when $`w\in p`$, and $`O_w(p)=\varnothing`$ otherwise, are admitted operations.

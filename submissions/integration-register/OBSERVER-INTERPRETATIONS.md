@@ -13,7 +13,7 @@ Over C, this interpretation always gives another model of C. Neither BF nor C5 i
 ```math
 \begin{aligned}
 M\models\Box F&\quad\Longrightarrow\quad\mathrm{Core}(M,E)\models\Box F,\\
-M\models\Box\mathrm{BC}_\tau&\quad\Longrightarrow\quad\mathrm{Core}(M,E)\models\Box\mathrm{BC}_\tau.
+M\models\Box\mathrm{BC}_\tau&\quad\Longrightarrow\quad\mathrm{Core}(M,E)\models\Box\mathrm{BC}_\tau
 \end{aligned}
 ```
 
@@ -30,7 +30,7 @@ where the right side is the normalized formula before quotienting. The order in 
 If E and F are commuting idempotent logical observers, both qualified at every type, interpreting through E and then through the induced observer F̄ agrees with interpreting through E∘F:
 
 ```math
-\mathrm{Core}(\mathrm{Core}(M,E),\overline F)\cong\mathrm{Core}(M,E\circ F).
+\mathrm{Core}(\mathrm{Core}(M,E),\overline F)\cong\mathrm{Core}(M,E\circ F)
 ```
 
 This holds over C, retaining the quotient at every type. Finite iterations are independent of order and grouping; BF, Functionality and Choice are not required. [Proof](proofs/coherent-observers/iterated-cores.txt), §§2–5.
@@ -42,7 +42,7 @@ Every pointed set-sized general C model K is isomorphic to the interpretation de
 ```math
 \mathrm{Core}(M,E)\cong K,\qquad
 \mathrm{Im}(E)\subsetneq D_t^M,\qquad
-D_e^M=D_e^K,\qquad B_M\cong B_K\times B_K.
+D_e^M=D_e^K,\qquad B_M\cong B_K\times B_K
 ```
 
 All higher objects are coded using objects already admitted in K. The construction preserves full Boolean Completeness and, separately, its necessary form. **Every model of C + ☐Functional Choice has a proper realization within C + ☐Functional Choice**, with the same signature, individuals and doubled proposition algebra. The [Choice construction](proofs/observer-choice-realization.txt), §§1–8, needs neither Infinity nor full function domains. Instancewise it uses BC at the translated type Tτ to obtain BC at τ, with T(e)=e, T(t)=tt and T(στ)=T(σ)T(τ); the same bound holds for the necessary instances. Properness concerns the observer's image, not abstract nonisomorphism of infinite models. [Complete construction](proofs/observer-proper-doubling.txt), §§1–8.

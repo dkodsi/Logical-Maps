@@ -7,7 +7,7 @@ OpenAI Codex, prompted by Daniel Kodsi, 25 October 2026. Source: `misc`, this pr
 In the fixed finitary relational language,
 
 ```math
-\boxed{C5+BC_t+RC_{t,t}\ \Longrightarrow\ \mathrm{Actuality}.}
+\boxed{C5+BC_t+RC_{t,t}\ \Longrightarrow\ \mathrm{Actuality}}
 \tag{1}
 ```
 
@@ -38,7 +38,7 @@ Two previously proved chain lemmas are used:
 For both descending chains, conformity means that a member x is the actual infimum, in [0,a], of the successor values at its strict predecessors:
 
 ```math
-x=\inf\{f(y):y\text{ belongs to the chain and }x<y\}.
+x=\inf\{f(y):y\text{ belongs to the chain and }x<y\}
 \tag{3}
 ```
 
@@ -49,7 +49,7 @@ The empty predecessor family has infimum a. The stronger lemma in item 2 is impo
 Suppose h is currently true and [0,h] is atomless. Put
 
 ```math
-A_h(p):=(0<p\land p\le h).
+A_h(p):=(0<p\land p\le h)
 ```
 
 For each current A_h-member p there is a q with 0<q<p. Thus the relation
@@ -68,7 +68,7 @@ Normalize its coefficients by
 \begin{aligned}
 c_p(q)&:=K(p,q)\land R(p,q)\\
 &\quad\land\forall z\,[(K(p,z)\land R(p,z))\to z=q],\\
-d_p&:=\exists q\,c_p(q).
+d_p&:=\exists q\,c_p(q)
 \end{aligned}
 \tag{5}
 ```
@@ -78,7 +78,7 @@ For every current p, its selected K-output has a true coefficient, so d_p is cur
 Define
 
 ```math
-a:=h\land\forall p\,d_p.
+a:=h\land\forall p\,d_p
 \tag{6}
 ```
 
@@ -87,7 +87,7 @@ Then a is currently true, a≤h, and a≤d_p for every p. For all p,q define adm
 ```math
 u_0(p,q):=p\land c_p(q)\land q,
 \qquad
-u_1(p,q):=p\land c_p(q)\land\neg q.
+u_1(p,q):=p\land c_p(q)\land\neg q
 \tag{7}
 ```
 
@@ -99,7 +99,7 @@ For 0<p≤a their positive values form a partition of p into proper parts:
 
 ```math
 \exists q\,[u_0(p,q)\lor u_1(p,q)]
-=p\land d_p=p.
+=p\land d_p=p
 \tag{8}
 ```
 
@@ -110,7 +110,7 @@ Define the admitted relation
 ```math
 \mathrm{Child}(p,r):=
 (0<p\le a)\land r>0\land
-\exists q\,[r=u_0(p,q)\lor r=u_1(p,q)].
+\exists q\,[r=u_0(p,q)\lor r=u_1(p,q)]
 \tag{9}
 ```
 
@@ -120,7 +120,7 @@ Because Child is crisp, its weighted material join is its actual join. In partic
 
 ```math
 p=\exists r\,[\mathrm{Child}(p,r)\land r]
-\qquad(0<p\le a).
+\qquad(0<p\le a)
 \tag{10}
 ```
 
@@ -132,7 +132,7 @@ On [0,a] define a current functional relation F as follows:
 
 ```math
 F(p,r):=[\neg p\land r=p]
-\lor[p\land\mathrm{Child}(p,r)\land r].
+\lor[p\land\mathrm{Child}(p,r)\land r]
 \tag{11}
 ```
 
@@ -149,7 +149,7 @@ Define the represented family of discarded positive children by
 
 ```math
 \Delta(d):=\exists p,r\,[Mp\land p\land F(p,r)
-\land\mathrm{Child}(p,d)\land d\ne r].
+\land\mathrm{Child}(p,d)\land d\ne r]
 \tag{12}
 ```
 
@@ -163,27 +163,27 @@ For each Δ-member d, its Child-partition is nonempty and all its members are st
 
 ```math
 [\Delta(d)\land\mathrm{Child}(d,r)]
-\lor[\neg\Delta(d)\land r=0].
+\lor[\neg\Delta(d)\land r=0]
 \tag{13}
 ```
 
 Let J(d,r) be the resulting current total functional selector graph. For d∈Δ write r_d for its unique current output. Thus
 
 ```math
-\mathrm{Child}(d,r_d),\qquad 0<r_d<d.
+\mathrm{Child}(d,r_d),\qquad 0<r_d<d
 \tag{14}
 ```
 
 This notation does not assert that d↦r_d is represented by an operation. Its image over Δ is the admitted current property
 
 ```math
-Y(r):=\exists d\,[\Delta(d)\land J(d,r)].
+Y(r):=\exists d\,[\Delta(d)\land J(d,r)]
 ```
 
 Use BC_t to choose its actual supremum b. For every current d∈Δ,
 
 ```math
-b\land d=r_d.
+b\land d=r_d
 \tag{15}
 ```
 
@@ -194,7 +194,7 @@ Define the crisp formulas
 ```math
 \begin{aligned}
 \mathrm{Mixed}(x)&:=(x\land b>0)\land(x\land\neg b>0),\\
-H(c)&:=\exists e\,[\mathrm{Child}(c,e)\land\mathrm{Mixed}(e)].
+H(c)&:=\exists e\,[\mathrm{Child}(c,e)\land\mathrm{Mixed}(e)]
 \end{aligned}
 \tag{16}
 ```
@@ -208,7 +208,7 @@ They have the following opposite behaviours.
 ```math
 d\land b=r_d>0,
 \qquad
-d\land\neg b=d\land\neg r_d>0.
+d\land\neg b=d\land\neg r_d>0
 ```
 
 Thus d is a mixed child of c and H(c) is true.
@@ -220,7 +220,7 @@ Consequently, at a true M-member p, exactly one Child(p,c) satisfies H(c), namel
 Define the admitted operation
 
 ```math
-g(p):=p\land\exists c\,[\mathrm{Child}(p,c)\land H(c)\land c].
+g(p):=p\land\exists c\,[\mathrm{Child}(p,c)\land H(c)\land c]
 \tag{17}
 ```
 
@@ -297,7 +297,7 @@ The recorded [C5 and Actuality imply full Boolean Completeness](https://github.c
 ```math
 \boxed{\text{over }C5+RC_{t,t}:\qquad
 BC_t\ \longleftrightarrow\ \mathrm{Actuality}
-\ \longleftrightarrow\ \text{full Boolean Completeness}.}
+\ \longleftrightarrow\ \text{full Boolean Completeness}}
 \tag{22}
 ```
 

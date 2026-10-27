@@ -14,14 +14,14 @@ Put
 
 ```math
 \nu=(et)t,\qquad N=\mathrm{FiniteCardinality}_e,
-\qquad h_n:=\lambda m^\nu.(n=m).
+\qquad h_n:=\lambda m^\nu.(n=m)
 ```
 
 The relevant family is the admitted property
 
 ```math
 S(P):=\exists n^\nu\,(Nn\land P=h_n),
-\qquad P:\nu t.
+\qquad P:\nu t
 \tag{1}
 ```
 
@@ -32,7 +32,7 @@ Write J_N for the single current assertion that S has a least upper bound in the
 ```math
 \mathrm{BF}_N:=\forall X^{\nu t}\,
  \left[(\forall n^\nu\,(Nn\to\Box Xn))
- \to\Box\forall n^\nu\,(Nn\to Xn)\right].
+ \to\Box\forall n^\nu\,(Nn\to Xn)\right]
 \tag{2}
 ```
 
@@ -43,7 +43,7 @@ For any admitted X, C gives the upper-bound characterization
 ```math
 X\text{ bounds }S
 \quad\Longleftrightarrow\quad
-\forall n^\nu\,(Nn\to\Box Xn).
+\forall n^\nu\,(Nn\to\Box Xn)
 \tag{3}
 ```
 
@@ -56,7 +56,7 @@ The [positive persistence theorem for numberhood](../../../classicism-results-20
 Suppose B is a current least upper bound of S. Since N is an upper bound,
 
 ```math
-B\le_{\nu t}N.
+B\le_{\nu t}N
 \tag{4}
 ```
 
@@ -69,7 +69,7 @@ B^+(n):=B(\mathrm{Suc}_e n)
 is another upper bound of S. Leastness gives B ≤ B^+, or
 
 ```math
-\Box\forall n^\nu\,[Bn\to B(\mathrm{Suc}_e n)].
+\Box\forall n^\nu\,[Bn\to B(\mathrm{Suc}_e n)]
 \tag{5}
 ```
 
@@ -77,7 +77,7 @@ Also Box B(0) holds because 0 is a number. Induction is an unconditional theorem
 
 ```math
 \Box\forall n^\nu\,(Nn\to Bn),
-\quad\text{hence }N\le_{\nu t}B.
+\quad\text{hence }N\le_{\nu t}B
 \tag{6}
 ```
 
@@ -92,7 +92,7 @@ J_N
 \quad\Longleftrightarrow\quad
 \mathrm{LUB}_{\nu t}(N,S)
 \quad\Longleftrightarrow\quad
-\mathrm{BF}_N.
+\mathrm{BF}_N
 \tag{7}
 ```
 
@@ -121,7 +121,7 @@ Thus
 C+\mathrm{Max}(C)\ \vdash\ \neg J_N,
 \qquad
 C+\mathrm{Max}(C)+\mathrm{BC}_{((et)t)t}
-\ \vdash\ \bot.
+\ \vdash\ \bot
 \tag{9}
 ```
 
@@ -136,7 +136,7 @@ No propositional BC, ordinary BF, observer separation, Choice, Zorn, or boxed co
 For each m of type nu, define the admitted scalar family
 
 ```math
-S_m(p):=\exists n^\nu\,(Nn\land p=(n=m)).
+S_m(p):=\exists n^\nu\,(Nn\land p=(n=m))
 \tag{10}
 ```
 
@@ -144,7 +144,7 @@ Over C + BF_nu, the following is equivalent to J_N:
 
 ```math
 \exists B^{\nu t}\,\forall m^\nu\,
-       \mathrm{LUB}_t(Bm,S_m).
+       \mathrm{LUB}_t(Bm,S_m)
 \tag{11}
 ```
 
@@ -160,7 +160,7 @@ Retain
 
 ```math
 \Pi:=\forall n^\nu\,[Nn\to\Diamond a_n],
-\qquad a_n=(\mathrm{Suc}_e n)(\lambda x^e.\top).
+\qquad a_n=(\mathrm{Suc}_e n)(\lambda x^e.\top)
 ```
 
 **Theorem.** C + Max(C) + BC_t + BF_nu implies
@@ -170,7 +170,7 @@ Retain
  \neg Nm\land\Diamond r
  \land\Box\bigl(r\to(\Pi\land Nm)\bigr)
  \land\forall n^\nu\bigl(Nn\to\Box(r\to m\ne n)\bigr)
-\right].
+\right]
 \tag{12}
 ```
 
@@ -179,7 +179,7 @@ Thus the same possible condition r makes m a number while excluding its identity
 For each current m, BC_t supplies the unique scalar join u_m of S_m from (10). This notation specifies values one at a time, not an admitted operation. Suppose, for contradiction, that
 
 ```math
-\Pi\land Nm\le u_m\qquad\text{for every current }m.
+\Pi\land Nm\le u_m\qquad\text{for every current }m
 \tag{13}
 ```
 
@@ -188,14 +188,14 @@ We derive the Pi-relative numerical Barcan principle
 ```math
 \forall X^{\nu t}\,
  \left[\forall n(Nn\to\Box(\Pi\to Xn))
- \to\Box\bigl(\Pi\to\forall n(Nn\to Xn)\bigr)\right].
+ \to\Box\bigl(\Pi\to\forall n(Nn\to Xn)\bigr)\right]
 \tag{14}
 ```
 
 Fix X satisfying its antecedent and fix any m. For each current number n, the antecedent and equality substitution give
 
 ```math
-\Pi\land(n=m)\le Xm.
+\Pi\land(n=m)\le Xm
 ```
 
 Finite meet distributes over the existing join u_m. Consequently Pi and u_m together entail Xm. Assumption (13) now gives Pi and Nm together entail Xm. In native modal notation this is Box(Pi and Nm implies Xm). Generalizing m and applying ordinary BF_nu collects these pointwise boxes into the boxed universal implication in (14).
@@ -205,7 +205,7 @@ The previously proved [Pi-relative arithmetic argument](logical-observers-and-nu
 Therefore (13) fails at some m. Choose its scalar join u_m and put
 
 ```math
-r:=\Pi\land Nm\land\neg u_m.
+r:=\Pi\land Nm\land\neg u_m
 \tag{15}
 ```
 
@@ -215,7 +215,7 @@ It is nonzero. For every current number n, (n=m) ≤ u_m by its upper-bound prop
 
 ```math
 E\Pi,\qquad E(Nm),\qquad
-\forall n^\nu\,[Nn\to\neg E(m=n)].
+\forall n^\nu\,[Nn\to\neg E(m=n)]
 \tag{16}
 ```
 

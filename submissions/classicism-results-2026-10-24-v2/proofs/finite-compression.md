@@ -9,7 +9,7 @@ Work in the fixed relational type system: `e` and `t` are types, and `sigma -> t
 The claim is the existence of a pointed model satisfying
 
 ```math
- C+\mathrm{TR}+\mathrm{RP}+\neg\mathrm{WRP}_{et}.
+ C+\mathrm{TR}+\mathrm{RP}+\neg\mathrm{WRP}_{et}
 ```
 
 TR and RP here are the full schemas at the distinguished root. No boxed RP or Barcan assumption is added. In fact Barcan at individual type fails in this construction.
@@ -27,7 +27,7 @@ The definitions of weak persistence, weak inextensibility and rigidity are those
 ```math
  R_F(X):=\mathrm{Rigid}(X)\land X\le F,
  \qquad
- W_F(X):=\mathrm{WeaklyRigid}(X)\land X\le F.
+ W_F(X):=\mathrm{WeaklyRigid}(X)\land X\le F
 ```
 
 Here entailment `<=` is necessary pointwise implication. The property `R_F` is persistent in C, since rigidity and entailment are themselves necessary conditions.
@@ -43,7 +43,7 @@ Let `N` be countably infinite, partitioned into infinitely many infinite blocks 
 All these labels are distinct. Define their fibres by
 
 ```math
- R(q_i)=B_i,\qquad R(q_D)=D,\qquad R(q_{\mathrm{top}})=N.
+ R(q_i)=B_i,\qquad R(q_D)=D,\qquad R(q_{\mathrm{top}})=N
 ```
 
 The two objects have bases `A = N` and `B = N disjoint-union Q`.
@@ -53,7 +53,7 @@ The endomorphisms of `A` are all surjections `N -> N`. Arrows from `A` to `B` ar
 An endomorphism of `B` is a pair `(f,g)` acting separately on its two summands, where `f:N -> N` is surjective, `g:Q -> Q` fixes `q_top`, and
 
 ```math
- f[R(q)]\subseteq R(g(q))\quad\text{for every }q\in Q.
+ f[R(q)]\subseteq R(g(q))\quad\text{for every }q\in Q
 \tag{1}
 ```
 
@@ -74,7 +74,7 @@ Let `i:A -> B` be the entrance which is the identity on `N`. Call a tail entity 
 To prove pinning, take arrows `h,h':A -> V` with the same target, agreeing on `S`, and `a in D`. Choose a finite root pin `M` for `a`. Both arrows are surjective onto the target's `N` part. Prescribe a root map `u` to fix `S`, and for `x in M minus S` choose `u(x)` with `h(u(x)) = h'(x)`. These are compatible finite prescriptions. Extend them to a surjection `u:N -> N`, using the infinitely many unprescribed points. Then `ua in D` and
 
 ```math
- h'a=h(ua)\in h[D].
+ h'a=h(ua)\in h[D]
 ```
 
 Interchanging `h,h'` proves equality of the two image sets. The profile respects target symmetries since `s(h[D])=(sh)[D]`; hence it is admitted. Exact images imply rigidity by §1.
@@ -95,7 +95,7 @@ One special case will be our bound. Take `D=N` at individual argument type. Its 
 For a label `q`, define the unary tail relation `U_q` by
 
 ```math
- (U_q)_{(f,g)}=R(g(q)).
+ (U_q)_{(f,g)}=R(g(q))
 \tag{3}
 ```
 
@@ -114,7 +114,7 @@ The hypothesis on `Z` gives `j*n=y in Z_j`. As `j` and `h` agree on the pin of `
 It is not rigid. Choose distinct `a,b in N`. There is a tail arrow sending `q_i` to `q_{ {a,b} }` and sending `B_i` into `{a,b}`; another infinite block supplies global surjectivity, and all other labels can go to `q_top`. The transported relation is `U_{q_{ {a,b} }}`, currently coextensive with the finite haecceity union
 
 ```math
- H=\delta_a\lor\delta_b.
+ H=\delta_a\lor\delta_b
 ```
 
 This union is rigid and necessarily true of both current members. There is a further tail arrow `m` fixing the label `q_{ {a,b} }` while mapping both `a` and `b` to `a`. Its `N` component can still be surjective because other points supply the missing targets; send all remaining labels to `q_top`. At this arrow the fibre relation still contains both `a,b`, while the transported haecceity union contains only `a`. Thus the fibre relation does not entail `H`, and fails weak inextensibility. The original infinite-block relation is therefore weakly rigid but not rigid.
@@ -142,7 +142,7 @@ Choose a finite pin `P` of `Y`. Let `N_0 subset N` contain its individual part a
 ```math
  z_i\in B_i\setminus N_0,
  \qquad
- D_i=(B_i\cap N_0)\cup\{z_i\}.
+ D_i=(B_i\cap N_0)\cup\{z_i\}
 ```
 
 The sets `D_i` are nonempty and pairwise distinct. None equals a pinned finite fibre, since those are contained in `N_0` whereas `D_i` contains `z_i`.
@@ -154,7 +154,7 @@ Construct a return arrow `r` whose individual component is the identity on all o
 The composite `rc` agrees with the identity on `P`, so
 
 ```math
- r(cY)=Y.
+ r(cY)=Y
 \tag{4}
 ```
 
@@ -173,14 +173,14 @@ If `V=A`, choose an ordinary finite pin `T subset N` of `Y`. If `V=B`, choose a 
 Extend the finite prescription `h|N_1` to a surjection `j:N -> N` whose nonsingleton fibres are finitely many and finite: send `N minus N_1` bijectively onto `N minus h[N_1]`. Regard it as an arrow to `V`. It agrees with `h` on `S`, so `jF=hF`. Choose a finite `P subset N` containing `N_1`, every nonsingleton fibre of `j`, and a `j`-preimage of each member of `T`. Put
 
 ```math
- D=\{a\in E:j*a\in Y_{1_V}\}.
+ D=\{a\in E:j*a\in Y_{1_V}\}
 \tag{5}
 ```
 
 Equation (2) gives `(jF)_(1_V)=j[E]`, and `Y <= jF`; consequently
 
 ```math
- j[D]=Y_{1_V}.
+ j[D]=Y_{1_V}
 \tag{6}
 ```
 

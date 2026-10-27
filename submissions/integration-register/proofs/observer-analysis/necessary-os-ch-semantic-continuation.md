@@ -13,7 +13,7 @@ C5 makes every object-identity proposition an endpoint. Accordingly native Box i
 The existing [canonical-adjoint theorem](../../../classicism-results-2026-10-24-v2/proofs/h-observer-space/canonical-adjoints-and-image-factorization.md), §§2–4, supplies admitted maps
 
 ```math
-L_E\dashv E\dashv R_E.
+L_E\dashv E\dashv R_E
 \tag{1}
 ```
 
@@ -27,7 +27,7 @@ Let $`\overline B`$ be the Boolean, equivalently MacNeille, completion of B, ide
 
 ```math
 \overline E(x):=
-\bigvee^{\overline B}\{E(b):b\in B, b\le x\}.
+\bigvee^{\overline B}\{E(b):b\in B, b\le x\}
 \tag{2}
 ```
 
@@ -43,7 +43,7 @@ For the reverse, fix $`b\in B`$ below $`\bigvee_i x_i`$. The B-elements lying be
 Now assume □$`S_{t,\{t\}}`$. For each $`b\in B`$, $`b>0`$, the exact separation formula gives
 
 ```math
-\bigvee_{E\in\mathcal E}^{B} E(b)=1_B.
+\bigvee_{E\in\mathcal E}^{B} E(b)=1_B
 \tag{3}
 ```
 
@@ -54,7 +54,7 @@ Qualification is endpoint-valued under C5. Necessary separation says that this v
 For any $`0<x\in\overline B`$, choose $`0<b\in B`$ below x. Monotonicity and (3) yield
 
 ```math
-\boxed{\bigvee_{E\in\mathcal E}^{\overline B}\overline E(x)=1_{\overline B}.}
+\boxed{\bigvee_{E\in\mathcal E}^{\overline B}\overline E(x)=1_{\overline B}}
 \tag{4}
 ```
 
@@ -80,7 +80,7 @@ There is an elementary C consequence
 
 ```math
 S_{t,\Delta}\land\mathrm{Sub}_\Delta(p)\land p\ne0
-\quad\longrightarrow\quad p.
+\quad\longrightarrow\quad p
 \tag{6}
 ```
 
@@ -89,7 +89,7 @@ For if p is false, every qualified E(p) is false by the order inequality. Separa
 ```math
 \boxed{C5+\Box S_{t,\Delta}\ \vdash\
 \mathrm{Sub}_\Delta(p)
-\ \longleftrightarrow\ (p=0\lor p=1).}
+\ \longleftrightarrow\ (p=0\lor p=1)}
 \tag{7}
 ```
 
@@ -98,7 +98,7 @@ The converse just uses endpoint fixing. Current separation alone gives (6), not 
 Here is a useful sufficient grammar for (5). Let $`\vec A`$ be persistent relation predicates, and put
 
 ```math
-p(\vec A)=\exists R_1\cdots R_n\;	heta(\vec R,\vec A).
+p(\vec A)=\exists R_1\cdots R_n\;	heta(\vec R,\vec A)
 \tag{8}
 ```
 
@@ -110,7 +110,7 @@ Persistence over C5 makes every value of every $`A_j`$ an endpoint. Whole observ
 E(p)=\exists R_1\cdots R_n\;
 \theta(\vec R^{,E},\vec A),
 \qquad
-R_i^{,E}[\vec x]=E(R_i[\vec x]).
+R_i^{,E}[\vec x]=E(R_i[\vec x])
 \tag{9}
 ```
 
@@ -137,7 +137,7 @@ For a persistent $`Z^{\zeta t}`$, let $`\mathrm{CutFam}(Z)`$ say that there is a
 
 ```math
 \forall z,z'\in Z\;[z\ne z'\to
-  \exists q\in Q\;(Czq\mathbin{\not\leftrightarrow}Cz'q)].
+  \exists q\in Q\;(Czq\mathbin{\not\leftrightarrow}Cz'q)]
 \tag{11}
 ```
 
@@ -147,7 +147,7 @@ Every quantifier after the initial existential C is an ordinary object quantifie
 C5+\Box OS+I^*_\kappa
 \quad\vdash\quad
 \mathrm{CutFam}(Z)\leftrightarrow
-\Box\mathrm{CutFam}(Z).
+\Box\mathrm{CutFam}(Z)
 \tag{12}
 ```
 
@@ -156,7 +156,7 @@ For any admitted real structure $`\mathfrak R`$ with carrier X, the ordinary int
 ```math
 \mathrm{Real}(\mathfrak R)\quad\Longrightarrow\quad
 \bigl(\mathrm{CutFam}(Z)
-\leftrightarrow\exists F\,[F:Z\hookrightarrow X]\bigr).
+\leftrightarrow\exists F\,[F:Z\hookrightarrow X]\bigr)
 \tag{13}
 ```
 
@@ -187,7 +187,7 @@ for every admitted target real-carrier type σ. No well-order of Z, Y, or the re
 Here is the current mathematical implication underlying (14). Given a real structure with carrier X, use (13) to obtain injections f:Z→X and g:Y→X. Define its admitted subproperty
 
 ```math
-A(x):=Xx\land\exists z\in Z\;f(z,x).
+A(x):=Xx\land\exists z\in Z\;f(z,x)
 \tag{15}
 ```
 

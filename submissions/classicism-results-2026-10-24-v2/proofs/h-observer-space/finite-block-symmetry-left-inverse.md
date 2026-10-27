@@ -7,7 +7,7 @@ In the [finite-block symmetry model](finite-block-symmetry-reversible-gap.md), e
 ```math
 \boxed{\mathrm{Rev}\ \Longrightarrow\ \mathrm{SplitMono}
 \ \Longrightarrow\ \mathrm{OS},
-\qquad \mathrm{SplitMono}\ \not\Longrightarrow\ \mathrm{Rev}.}
+\qquad \mathrm{SplitMono}\ \not\Longrightarrow\ \mathrm{Rev}}
 \tag{1}
 ```
 
@@ -20,7 +20,7 @@ For a finite external type list Δ, write
 ```math
 \mathrm{SplitMono}_\Delta(E):=
 \mathrm{Good}_\Delta(E)\land
-\exists F^{tt}\,[\mathrm{Good}_\Delta(F)\land F\circ E=I].
+\exists F^{tt}\,[\mathrm{Good}_\Delta(F)\land F\circ E=I]
 \tag{2}
 ```
 
@@ -42,7 +42,7 @@ Throughout this note products of arrows are composed right to left. For a finite
 Work first at a source object X with designated group K. Let Y be any target object, with designated group L, and suppose b:X→Y and finite S⊆X satisfy
 
 ```math
-bK_{(S)}b^{-1}\subseteq L.
+bK_{(S)}b^{-1}\subseteq L
 \tag{3}
 ```
 
@@ -54,7 +54,7 @@ Define sets of arrows out of X by
 
 ```math
 C_n:=\{h:X\to X:\exists g\in K,
-\ h|_{S'}=(\nu_n g)|_{S'}\}.
+\ h|_{S'}=(\nu_n g)|_{S'}\}
 \tag{4}
 ```
 
@@ -69,14 +69,14 @@ and the parenthesized permutation belongs to K. Their definitions, and membershi
 Put
 
 ```math
-\alpha_n:=\nu_{n+1}\nu_n^{-1}.
+\alpha_n:=\nu_{n+1}\nu_n^{-1}
 \tag{5}
 ```
 
 Then α_n normalizes K and sends C_n bijectively to C_{n+1} by left composition. In fact if h agrees with ν_n g on S', then α_n h agrees with ν_{n+1}g there; the inverse calculation gives the converse. Thus
 
 ```math
-\alpha_n C_n=C_{n+1}.
+\alpha_n C_n=C_{n+1}
 \tag{6}
 ```
 
@@ -98,7 +98,7 @@ bg^{-1}\in q,&h\in C_0,\ h|_{S'}=g|_{S'},\ g\in K,\\
 F(h,q)\quad\Longleftrightarrow\quad
 \begin{cases}
 \alpha_n\in q,&h\in C_n\quad(n\ge0),\\
-\mathrm{id}_Z\in q,&h:X\to Z\text{ outside }\bigcup_{n\ge0}C_n.
+\mathrm{id}_Z\in q,&h:X\to Z\text{ outside }\bigcup_{n\ge0}C_n
 \end{cases}
 \tag{8}
 ```
@@ -106,7 +106,7 @@ F(h,q)\quad\Longleftrightarrow\quad
 Every observation arrow in these formulas has q's source as its domain. In particular the first branch of E reads q along an arrow X→Y, while its source h has target X. The other nondefault branches use arrows X→X. At the actual evaluation id_X, choose g=id_X in (7); hence
 
 ```math
-E(\mathrm{id}_X,p)\quad\Longleftrightarrow\quad b\in p.
+E(\mathrm{id}_X,p)\quad\Longleftrightarrow\quad b\in p
 \tag{9}
 ```
 
@@ -115,7 +115,7 @@ We verify that these are admitted tt objects.
 **Independence of the first branch's representative.** Suppose g and g' both agree with h on S', and write g'=gu. Then u∈K_(S')⊆K_(S). By (3), bu^{-1}b^{-1}∈L, and
 
 ```math
-b(g')^{-1}=(bu^{-1}b^{-1})(bg^{-1}).
+b(g')^{-1}=(bu^{-1}b^{-1})(bg^{-1})
 ```
 
 The two tested arrows therefore agree on membership in q by its target symmetry at Y. No representative is chosen as an additional object-language function. The remaining branches have no representative ambiguity.
@@ -132,7 +132,7 @@ E(\mu h,\rho_t(\mu)q)=E(h,q),
 and similarly for F. Proposition transport obeys
 
 ```math
-a\in\rho_t(\mu)q\quad\Longleftrightarrow\quad a\mu\in q.
+a\in\rho_t(\mu)q\quad\Longleftrightarrow\quad a\mu\in q
 \tag{11}
 ```
 
@@ -151,7 +151,7 @@ l\in(\rho_{tt}(r)E)(q)
 and the same formula for F. In particular, applying F outside E tests q at
 
 ```math
-a^E_{\,a^F_{lr}lr}\,a^F_{lr}\,l.
+a^E_{\,a^F_{lr}lr}\,a^F_{lr}\,l
 \tag{13}
 ```
 
@@ -160,7 +160,7 @@ Put h:=lr. If h∈C_n, then a^F_h=α_n and α_nh∈C_{n+1} by (6). The E branch 
 Thus for every r, every q in its future domain and every l,
 
 ```math
-(\rho_{tt}(r)F)((\rho_{tt}(r)E)q)=q.
+(\rho_{tt}(r)F)((\rho_{tt}(r)E)q)=q
 ```
 
 The complete future profiles are identical, proving
@@ -185,7 +185,7 @@ The same E,F therefore satisfy (2) for every fixed finite Δ. This is a metatheo
 We now supply (3) for any desired distinction in the two-object model. Let d be a nonbottom proposition at X. If d is currently true, the identity observer and its own left inverse accept it. Otherwise choose h:X→Y in d and a finite pin P for d. The existing packing construction gives a comparison bijection j:X→Y with jKj^{-1}⊆L; use j=id_X for Y=X. Extend the finite partial bijection (j^{-1}h)|P to a finite-support permutation π of X and put b:=jπ. Choose finite S containing P and the support of π. Then b agrees with h on P, so b∈d. A permutation in K_(S) commutes with π, and hence
 
 ```math
-bK_{(S)}b^{-1}=jK_{(S)}j^{-1}\subseteq L.
+bK_{(S)}b^{-1}=jK_{(S)}j^{-1}\subseteq L
 ```
 
 Apply §§2–4. Formula (9) makes Ed true, and (14) supplies its admitted qualified left inverse. For distinct propositions p,q, apply this to their nonbottom Boolean symmetric difference d. The Boolean identities turn truth of Ed into different truth values for Ep and Eq. Thus SplitMono separation holds at output type t for every finite qualification list.
@@ -193,7 +193,7 @@ Apply §§2–4. Formula (9) makes Ed true, and (14) supplies its admitted quali
 Functionality, valid throughout this model, lifts the result to every relational output type: two unequal relations have a tuple at which their proposition values are unequal, and the preceding separator distinguishes those values. The converse direction of separation is equality substitution. The construction works at either source object. It therefore proves the full SplitMono schema at both objects and its separately boxed instances:
 
 ```math
-\mathrm{C5}+\Box\mathrm{SplitMono}.
+\mathrm{C5}+\Box\mathrm{SplitMono}
 \tag{15}
 ```
 
@@ -205,7 +205,7 @@ The underlying model is unchanged. Its previously proved atomlessness and failur
 
 ```math
 \boxed{\mathrm{C5}+\Box\mathrm{SplitMono}
-+\text{atomlessness}+\neg\mathrm{Rev}.}
++\text{atomlessness}+\neg\mathrm{Rev}}
 \tag{16}
 ```
 
@@ -242,7 +242,7 @@ Fix a finite S containing P. Choose pairwise distinct points x₀,x₁,x₂,… 
 
 ```math
 C_n:=\{h:\mathbb N\to\mathbb N:
-h|_{S'}=\nu_n|_{S'}\}.
+h|_{S'}=\nu_n|_{S'}\}
 \tag{18}
 ```
 
@@ -263,7 +263,7 @@ b\in q,&h\in C_0,\\
 F(h,q)\quad\Longleftrightarrow\quad
 \begin{cases}
 \alpha_n\in q,&h\in C_n,\\
-\mathrm{id}_Z\in q,&h\notin\bigcup_n C_n.
+\mathrm{id}_Z\in q,&h\notin\bigcup_n C_n
 \end{cases}
 \tag{19}
 ```
@@ -291,7 +291,7 @@ The accessible singleton still refutes BF_e, BF_t and Functionality at e,t. The 
 ```math
 \boxed{\mathrm C+\mathrm{SplitMono}+\mathrm{BF}
 +\neg\Box\mathrm{BF}_e+\neg\Box\mathrm{BF}_t
-+\neg\Box\mathrm{Fun}_{e,t}.}
++\neg\Box\mathrm{Fun}_{e,t}}
 \tag{20}
 ```
 

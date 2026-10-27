@@ -21,14 +21,14 @@ Let M be a set-sized monoid, with unit 1. Regard it as a category with one objec
 ```math
 ab=ac\ \Longrightarrow\ b=c,
 \qquad
-ba=ca\ \Longrightarrow\ b=c.
+ba=ca\ \Longrightarrow\ b=c
 \tag{2}
 ```
 
 Give the sole object one individual and use the full relational action-model domains. Thus every intension at every admitted relational type is present. A relational intension R of type σ₁⋯σₖt is specified by its truth profile R(h,x₁,…,xₖ), for every h∈M and every argument tuple at the sole object. Its transport is
 
 ```math
-(\rho_r R)(h,\bar x)=R(hr,\bar x).
+(\rho_r R)(h,\bar x)=R(hr,\bar x)
 \tag{3}
 ```
 
@@ -37,7 +37,7 @@ Arguments are transported when an intension is applied. In particular, propositi
 ```math
 \rho_r p=\{h:hr\in p\},
 \qquad
-\top=M,\quad\bot=\varnothing.
+\top=M,\quad\bot=\varnothing
 \tag{4}
 ```
 
@@ -54,14 +54,14 @@ SurjSep is separation by Good_Δ observers E satisfying the current internal sen
 Let a:M→M be any externally specified function. Fullness admits the observer E_a with profile
 
 ```math
-E_a(m,q)\quad\Longleftrightarrow\quad a(m)\in q.
+E_a(m,q)\quad\Longleftrightarrow\quad a(m)\in q
 \tag{5}
 ```
 
 Here q is an arbitrary proposition at the target of m, which is again the sole object. Application and (4) give
 
 ```math
-E_a(p)=\{m:a(m)m\in p\}.
+E_a(p)=\{m:a(m)m\in p\}
 \tag{6}
 ```
 
@@ -70,7 +70,7 @@ More generally, transport E_a along r and apply it to an arbitrary future input 
 ```math
 h\in (\rho_r E_a)(q)
 \quad\Longleftrightarrow\quad
-a(hr)h\in q.
+a(hr)h\in q
 \tag{7}
 ```
 
@@ -79,7 +79,7 @@ The distinction between (5), (6) and (7) matters: (5) defines the whole admitted
 Every E_a is Good_Δ for every finite Δ. Boolean preservation follows because every individual truth test in (5) is evaluation at an arrow and Boolean operations are pointwise. For the universal law, fix any future coordinate m and any admitted F of type σt there. Write b=a(m). The truth of E_a(∀_σF) at that coordinate is
 
 ```math
-\forall y\in D_\sigma\quad F(b,y)\text{ is true}.
+\forall y\in D_\sigma\quad F(b,y)\text{ is true}
 \tag{8}
 ```
 
@@ -87,7 +87,7 @@ The truth of ∀_σ(λx.E_a(Fx)) there is
 
 ```math
 \forall x\in D_\sigma\quad
-F\bigl(b,\rho_\sigma(b)x\bigr)\text{ is true}.
+F\bigl(b,\rho_\sigma(b)x\bigr)\text{ is true}
 \tag{9}
 ```
 
@@ -100,7 +100,7 @@ No injectivity of ρ_σ(b) is required. In particular this argument does not pre
 For b∈M choose the constant assignment a(m)=b, and write its observer as S_b. Then
 
 ```math
-S_b(p)=\{m:bm\in p\}.
+S_b(p)=\{m:bm\in p\}
 \tag{10}
 ```
 
@@ -115,14 +115,14 @@ If p≠q, choose b∈M at which their memberships differ. At the actual coordina
 Assume in addition that a specific external sequence of pairwise distinct units has been supplied:
 
 ```math
-u_0=1,u_1,u_2,\ldots.
+u_0=1,u_1,u_2,\ldots
 \tag{11}
 ```
 
 This is a hypothesis about the model construction. It is not an internally admitted enumeration or an invocation of object-language Choice. Put
 
 ```math
-\alpha_n=u_{n+1}u_n^{-1}.
+\alpha_n=u_{n+1}u_n^{-1}
 \tag{12}
 ```
 
@@ -139,7 +139,7 @@ b,&z=u_0,\\
 c(z)=
 \begin{cases}
 \alpha_n,&z=u_n,\\
-1,&z\notin\{u_0,u_1,\ldots\}.
+1,&z\notin\{u_0,u_1,\ldots\}
 \end{cases}
 \tag{13}
 ```
@@ -149,7 +149,7 @@ The cases are disjoint because the units are pairwise distinct. Let E_b:=E_{a_b}
 For every z∈M,
 
 ```math
-a_b\bigl(c(z)z\bigr)c(z)=1.
+a_b\bigl(c(z)z\bigr)c(z)=1
 \tag{14}
 ```
 
@@ -164,7 +164,7 @@ h\in (\rho_r F)\bigl((\rho_r E_b)(q)\bigr)
 c(hr)h\in (\rho_r E_b)(q)\\
 &\Longleftrightarrow
 a_b\bigl(c(hr)hr\bigr)c(hr)h\in q\\
-&\Longleftrightarrow h\in q.
+&\Longleftrightarrow h\in q
 \end{aligned}
 \tag{15}
 ```
@@ -184,7 +184,7 @@ Now take the additive cancellative monoid
 ```math
 M=\mathbb Z\times\mathbb N,
 \qquad 1_M=(0,0),
-\qquad u_n=(n,0).
+\qquad u_n=(n,0)
 \tag{16}
 ```
 
@@ -193,7 +193,7 @@ Its units are the pairs (z,0), so (11) holds and α_n=(1,0). The constructions a
 Let w={(0,0)} and let v=(0,1). The admitted proposition w differs from Bottom but
 
 ```math
-\rho_v w=\varnothing.
+\rho_v w=\varnothing
 \tag{17}
 ```
 
@@ -203,7 +203,7 @@ Thus distinct propositions become identical, so ND_t fails and C5 fails. The est
 \boxed{
 \mathrm C+\Box\mathrm{BF}
 +\Box\mathrm{SurjSep}+\Box\mathrm{SplitMono}
-+\neg\mathrm{C5}+\neg\mathrm{Rev}.
++\neg\mathrm{C5}+\neg\mathrm{Rev}
 }
 \tag{18}
 ```
@@ -222,7 +222,7 @@ Consequently there are strict implications
 \mathrm{Rev}
 \ \Longrightarrow\
 \bigl(\mathrm{SurjSep}\land\mathrm{SplitMono}\bigr)
-\ \Longrightarrow\ \mathrm{SurjSep},\ \mathrm{SplitMono}.
+\ \Longrightarrow\ \mathrm{SurjSep},\ \mathrm{SplitMono}
 \tag{19}
 ```
 

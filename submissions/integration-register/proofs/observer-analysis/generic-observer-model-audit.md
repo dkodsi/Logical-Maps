@@ -9,14 +9,14 @@
 Let $`M`$ be a countable model of ZFC, not assumed transitive or well founded. All constructions described as internal below take place in $`M`$. Let $`A`$ be an internally complete atomless Boolean algebra, and put
 
 ```math
-B=2\times A,\qquad a=(1,0),\qquad b=(0,1).
+B=2\times A,\qquad a=(1,0),\qquad b=(0,1)
 ```
 
 Use the internal full function hierarchy at precisely the admitted relational types:
 
 ```math
 D_e=E\ne\varnothing,\quad D_t=B,\quad
- D_{\sigma\rho}=(D_\rho^{D_\sigma})^M\quad(\rho\ne e).
+ D_{\sigma\rho}=(D_\rho^{D_\sigma})^M\quad(\rho\ne e)
 ```
 
 Externalize each internal set and its application operation. Internal extensionality makes these honest, possibly non-full, external function domains: distinct represented functions differ on some represented argument. Identity is crisp literal identity at every type. Connectives are the internal Boolean operations; quantifiers are the internally computed meets and joins.
@@ -24,7 +24,7 @@ Externalize each internal set and its application operation. Internal extensiona
 There are only countably many dense subsets of $`A^+`$ represented in $`M`$. Construct an external ultrafilter $`G`$ meeting all of them, and designate
 
 ```math
-v_G(\varepsilon,d)=1\quad\Longleftrightarrow\quad d\in G.
+v_G(\varepsilon,d)=1\quad\Longleftrightarrow\quad d\in G
  \tag{1}
 ```
 
@@ -41,7 +41,7 @@ is dense. Meeting it proves
 ```math
 \bigvee\nolimits_i^M d_i\in G
  \quad\Longleftrightarrow\quad
- (\exists i\in I^M)\ d_i\in G.                       \tag{2}
+ (\exists i\in I^M)\ d_i\in G                       \tag{2}
 ```
 
 The universal version follows by complementation. Every standard finite typed formula, including its instances with admitted parameters, produces an $`M`$-coded family. Thus (1) gives ordinary external quantifiers over the externalized typed domains. Internal satisfaction of bounded assertions about these sets is precisely external satisfaction over their represented members; nontransitivity causes no extra assumption here.
@@ -82,7 +82,7 @@ If two propositions have different first bits, $`E_0`$ separates their truth val
 For the forcings in §5, every nonzero basic condition $`c`$ has an internal complete Boolean isomorphism
 
 ```math
-h:A\longrightarrow A\mathbin{\upharpoonright}c.
+h:A\longrightarrow A\mathbin{\upharpoonright}c
 ```
 
 Choose such a proper $`c\notin G`$, for example one of two incompatible nonzero basic conditions. Define
@@ -90,7 +90,7 @@ Choose such a proper $`c\notin G`$, for example one of two incompatible nonzero 
 ```math
 E(\varepsilon,d)=(\varepsilon,\varepsilon\neg c\vee h(d)),
  \qquad
- F(\varepsilon,d)=(\varepsilon,h^{-1}(d\wedge c)).
+ F(\varepsilon,d)=(\varepsilon,h^{-1}(d\wedge c))
  \tag{5}
 ```
 
@@ -99,7 +99,7 @@ Both are admitted internal complete Boolean homomorphisms. For $`E`$, the tail i
 Replace $`E_0`$ in §2 by this $`E`$. The maps $`E_\alpha`$ have admitted qualified two-sided inverses $`E_{\alpha^{-1}}`$. Thus all the separating witnesses have qualified left inverses: full **SplitMono** holds. Each separating observer is injective and fixes Top, so
 
 ```math
-E(d)=1_B\iff d=1_B.
+E(d)=1_B\iff d=1_B
 ```
 
 Equation (3) gives the whole native-Box commutation identity. Hence full **BoxSep** holds as well.
@@ -112,7 +112,7 @@ For $`S=D_t=B`$, the required capacity conditions are
 
 ```math
 M\models|\mathbb R|\le|B|,
- \qquad M\models 1_A\Vdash|\mathbb R|\le|\check B|.
+ \qquad M\models 1_A\Vdash|\mathbb R|\le|\check B|
  \tag{6}
 ```
 
@@ -121,7 +121,7 @@ They give a mixed real structure $`\mathfrak R_*`$ with $`\llbracket\mathrm{Real
 ```math
 \llbracket U_{t,\varphi}\rrbracket
  =\bigl(\mathbf1_{M\models\varphi(\mathbb R)},
-          \|\varphi(\mathbb R)\|_A^M\bigr).           \tag{7}
+          \|\varphi(\mathbb R)\|_A^M\bigr)           \tag{7}
 ```
 
 Here $`U_{t,\varphi}=\forall\mathfrak R(\mathrm{Real}_t(\mathfrak R)\to\varphi(\mathfrak R))`$. Real completeness is for **nonempty bounded** subproperties, and the natural-numbers predicate is included. The same lemma covers CH's extensional second-order formula. Its proof uses all internally admitted subset names, not only ground extensions. Equation (7) is an internally proved finite mathematical assertion; it therefore remains applicable when $`M`$ is nonstandard.
@@ -134,14 +134,14 @@ Internally, GCH and the usual ccc/nice-name count give $`1_A\Vdash 2^\omega=\ome
 
 ```math
 \llbracket U_{t,\mathrm{CH}}\rrbracket=a,\qquad
- \llbracket U_{t,\neg\mathrm{CH}}\rrbracket=b.
+ \llbracket U_{t,\neg\mathrm{CH}}\rrbracket=b
 ```
 
 For the fixed first-order analytical sentence $`\varphi_L`$ from the analysis note §4, the ground satisfies $`\varphi_L`$, while Cohen forcing adds a nonconstructible real and preserves the constructible hierarchy. Hence
 
 ```math
 \llbracket U_{t,\varphi_L}\rrbracket=a,\qquad
- \llbracket U_{t,\neg\varphi_L}\rrbracket=b.
+ \llbracket U_{t,\neg\varphi_L}\rrbracket=b
 ```
 
 At (1), each displayed $`b`$-valued current sentence is true and its box is false. Both Non-contingency of CH and Necessity of Analysis fail. This variant alone does **not** refute the literal implication $`U_{t,\mathrm{CH}}\to\Box U_{t,\mathrm{CH}}`$, because its antecedent is currently false.
@@ -154,7 +154,7 @@ Now
 
 ```math
 \llbracket U_{t,\mathrm{CH}}\rrbracket=b,\qquad
- \llbracket U_{t,\neg\mathrm{CH}}\rrbracket=a.        \tag{8}
+ \llbracket U_{t,\neg\mathrm{CH}}\rrbracket=a        \tag{8}
 ```
 
 At (1), (8) refutes **literal current CH propagation**. Do not infer a first-order analytical change from this no-new-real variant; its role is the second-order CH target.
@@ -172,7 +172,7 @@ is serial and functional with value Top. For every internal operation $`f:B\to B
 Boxed Relational Choice does hold. Internally well order each output domain and disjointify a relation by
 
 ```math
-T(x,y)=U(x,y)\wedge\neg\bigvee_{z<y}U(x,z).
+T(x,y)=U(x,y)\wedge\neg\bigvee_{z<y}U(x,z)
 ```
 
 The total weight is preserved, distinct outputs are disjoint, and $`T\le U`$. This gives Boolean value Top to every Relational Choice instance, including individual-output instances. It does not provide an admitted operation selecting a ground output simultaneously across all Boolean components.

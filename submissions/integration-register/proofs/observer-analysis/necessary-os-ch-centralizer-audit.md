@@ -30,7 +30,7 @@ For the lift itself, let q≤π(p). Use q on retained coordinates and retain p�
 
 ```math
 q\leq\pi(p)\quad\Longrightarrow\quad
-\exists r\leq p\;[\pi(r)\leq q].
+\exists r\leq p\;[\pi(r)\leq q]
 ```
 
 An unretained target may depend on retained coordinates. This causes no problem: strengthening a prefix preserves each already forced range assertion. No independence assumption between selected and unselected targets is needed for this lift.
@@ -47,13 +47,13 @@ Here is the exact commutation check. Write
 
 ```math
 d(a,\xi)=(da,\pi_{d,a}\xi),\qquad
-g(a,\xi)=(ga,\sigma_a\xi).
+g(a,\xi)=(ga,\sigma_a\xi)
 ```
 
 Assuming the prefix actions commute, the remaining equation is
 
 ```math
-\sigma_{da}\pi_{d,a}=\pi_{d,ga}\sigma_a.
+\sigma_{da}\pi_{d,a}=\pi_{d,ga}\sigma_a
 ```
 
 Away from listed exceptions, both π terms are identities and σ is constant on the d-orbit. At an exceptional row, the prefix fixes the row and σ fixes every exceptional input and output index. The equality follows again. Backward support closure is precisely what permits this calculation at later exceptional stages; no surjectivity statement about restricting centralizers is used.
@@ -80,7 +80,7 @@ For F, take any HS name x⊆check U, for example the graph of a purported inject
 
 ```math
 P_\kappa\times\mathrm{Col}\longrightarrow Q\times\mathrm{Col},
-\qquad (p,r)\longmapsto(\pi_Q(p),r).
+\qquad (p,r)\longmapsto(\pi_Q(p),r)
 ```
 
 If two product conditions have compatible projections, strengthen to a common Q-condition and a common extra-color condition. The relative automorphism from §4 acts on their Pκ parts and fixes the extra condition. Hence it makes the full product conditions compatible. The projected-membership argument therefore localizes the whole F-name to an actual Q×Col generic extension. Q’s targets remain the original Pκ-prefix targets and are independent of the extra color.

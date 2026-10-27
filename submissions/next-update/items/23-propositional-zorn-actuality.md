@@ -4,7 +4,7 @@
 
 ```math
 C+\mathrm{Atomicity}_t+\mathrm{Vicinity}
-\quad\Longrightarrow\quad\mathrm{Actuality}.
+\quad\Longrightarrow\quad\mathrm{Actuality}
 ```
 
 The [atom-decision proof](../../integration-register/proofs/atomicity-vicinity-actuality.md) needs no Choice or completeness. Under Atomicityₜ, Actuality and Vicinity are equivalent. The existing NDₜ ⇒ Vicinity connection also gives NDₜ + Atomicityₜ ⇒ Actuality.
@@ -12,11 +12,11 @@ The [atom-decision proof](../../integration-register/proofs/atomicity-vicinity-a
 ## Propositional completeness and Choice
 
 ```math
-C+BC_t+\mathrm{Vicinity}+RC_{t,t}\ \Longrightarrow\ \mathrm{Actuality}.
+C+BC_t+\mathrm{Vicinity}+RC_{t,t}\ \Longrightarrow\ \mathrm{Actuality}
 ```
 
 ```math
-C+BC_t+\mathrm{Vicinity}+\mathrm{Zorn}_t\ \Longrightarrow\ \mathrm{Actuality}.
+C+BC_t+\mathrm{Vicinity}+\mathrm{Zorn}_t\ \Longrightarrow\ \mathrm{Actuality}
 ```
 
 All added premises are unprefixed. The first theorem needs only Relational Choice with propositional inputs and outputs; the second needs only Zorn on propositions. Neither proof needs higher-type completeness.
@@ -36,7 +36,7 @@ The shared construction also gives a bare-C characterization: **Vicinity holds e
 With completeness at tt, the type of properties of propositions, Vicinity is unnecessary:
 
 ```math
-C+BC_{tt}+\mathrm{Zorn}_t\ \Longrightarrow\ \mathrm{Actuality}.
+C+BC_{tt}+\mathrm{Zorn}_t\ \Longrightarrow\ \mathrm{Actuality}
 ```
 
 The [proof](../proofs/zorn-and-higher-completeness-imply-actuality.md) uses a reverse-wellordered chain of truths, its disjoint stage differences, and higher-type completeness to reflect truth of their join. This is a sharper type requirement for an implication already derivable from all-type completeness and all-type Zorn; no duplicate all-type record is proposed.

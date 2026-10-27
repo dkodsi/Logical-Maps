@@ -16,7 +16,7 @@ Call a predicate $`C^{\rho t}`$ an **f-chain** when:
 
 
 ```math
-\{f(y):Cy\text{ and }y<x\}.\tag{6}
+\{f(y):Cy\text{ and }y<x\}\tag{6}
 ```
 
 
@@ -30,7 +30,7 @@ If both C\I and D\I were nonempty, let c,d be their respective least members. Th
 
 
 ```math
-A(x):=\exists C^{\rho t}.\,(C\text{ is an }f\text{-chain}\land Cx).
+A(x):=\exists C^{\rho t}.\,(C\text{ is an }f\text{-chain}\land Cx)
 ```
 
 
@@ -50,7 +50,7 @@ Here is the order-dual form on the Boolean interval [0,h]. Suppose F is a curren
 2. each member p is the actual Boolean infimum, within [0,h], of
 
 ```math
-\{F(q):Cq\text{ and }p<q\}.
+\{F(q):Cq\text{ and }p<q\}
 \tag{3}
 ```
 
@@ -98,7 +98,7 @@ Define
 
 
 ```math
-D(p):=\exists C^{tt}\,[\mathrm{Strong}(C)\land Cp].
+D(p):=\exists C^{tt}\,[\mathrm{Strong}(C)\land Cp]
 \tag{6}
 ```
 

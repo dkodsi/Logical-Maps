@@ -13,7 +13,7 @@ Work in ZFC with the fixed relational types: e, t, and $`\sigma\tau`$ only when 
 - For each $`m\in M`$, the shift below belongs to $`D_{tt}`$:
 
 ```math
-R_m(A):=\{n\in M:nm\in A\}.
+R_m(A):=\{n\in M:nm\in A\}
 ```
 
 - Admitted predicates distinguish different individuals at $`1`$: for distinct $`a,b\in D_e`$, some $`P\in D_{et}`$ has exactly one of $`P(a),P(b)`$ containing $`1`$.
@@ -23,7 +23,7 @@ Truth is membership of $`1`$. Equality is determined by the admitted predicates:
 ```math
 \delta_\sigma(a,b):=
 \bigcap_{P\in D_{\sigma t}}\bigl(P(a)\leftrightarrow P(b)\bigr),
-\qquad \Box A:=\delta_t(A,M).
+\qquad \Box A:=\delta_t(A,M)
 ```
 
 For subsets of $`M`$, $`A\leftrightarrow B`$ denotes the complement of their symmetric difference. The equality intersection is admitted: apply $`Q_{\sigma t}`$ to the lambda-defined predicate $`P\mapsto(P(a)\leftrightarrow P(b))`$. Abstraction also admits the whole equality operation.
@@ -35,7 +35,7 @@ These are Henkin domains, closed under the language's operations. They need not 
 **Actual equality lemma.** At every type,
 
 ```math
-1\in\delta_\sigma(a,b)\quad\Longleftrightarrow\quad a=b.
+1\in\delta_\sigma(a,b)\quad\Longleftrightarrow\quad a=b
 ```
 
 Equal objects agree under every predicate. Distinct individuals are separated by the defining condition. If propositions $`A,B`$ differ, choose $`m`$ in their symmetric difference. The admitted predicate $`R_m`$ distinguishes them at $`1`$, since $`1\in R_m(A)`$ exactly when $`m\in A`$.
@@ -59,7 +59,7 @@ Inverse images preserve Boolean operations and arbitrary intersections. In parti
 ```math
 R_m(Q_\sigma(F))
 =\bigcap_{a\in D_\sigma}R_m(F(a))
-=Q_\sigma(\lambda a\, .\,R_m(F(a))).
+=Q_\sigma(\lambda a\, .\,R_m(F(a)))
 ```
 
 Abstraction admits the predicate on the right. These are equalities of values for every input, hence identities of the whole composite operations in the function domains. Existential preservation follows by duality. The H equality laws have value $`M`$, so their observed versions hold as well. Every shift is thus qualified at every admitted type.
@@ -71,7 +71,7 @@ For different propositions, the shift chosen in the actual equality lemma distin
 Conversely, take any general Henkin model of C + OS and its actual identity quotients. C makes its proposition domain a Boolean algebra. OS implies BF, which is equivalent to Functionality and Tractarianism. Functionality presents the arrow domains as sets of ordinary functions by recursively taking their current values. BF makes a quantifier the Boolean infimum of its admitted range:
 
 ```math
-Q_\sigma(F)=\inf_{a\in D_\sigma}F(a).
+Q_\sigma(F)=\inf_{a\in D_\sigma}F(a)
 ```
 
 Instantiation gives the lower-bound direction. If $`b\le F(a)`$ for every $`a`$, then each $`b\to F(a)`$ is Top. BF gives the necessity of their universal closure; C's fixed-parameter distribution law yields $`b\le Q_\sigma(F)`$. The H equivalence between identity and agreement under all predicates gives the corresponding algebraic formula for $`\delta`$.
@@ -95,7 +95,7 @@ The collection of uniformly qualified observers is an external set. No admitted 
 In $`N`$, let $`M`$ be the monoid of all uniformly qualified admitted observers, with $`mn=m\circ n`$. Abstraction admits composition and identity; the preservation laws are closed under composition. Put
 
 ```math
-\phi(b):=\{m\in M:m(b)\text{ is true in }N\}.
+\phi(b):=\{m\in M:m(b)\text{ is true in }N\}
 ```
 
 Boolean preservation makes $`\phi`$ a Boolean homomorphism. If $`b\ne c`$, their symmetric difference is nonzero; the lemma supplies an observer accepting that difference and hence distinguishing them. Thus $`\phi`$ is injective.
@@ -105,26 +105,26 @@ For every admitted predicate and every $`m\in M`$, quantifier preservation and a
 ```math
 m(Q_\sigma(F))\text{ is true}
 \quad\Longleftrightarrow\quad
-\forall a\in D_\sigma\, .\,m(F(a))\text{ is true}.
+\forall a\in D_\sigma\, .\,m(F(a))\text{ is true}
 ```
 
 Consequently,
 
 ```math
-\phi(Q_\sigma(F))=\bigcap_{a\in D_\sigma}\phi(F(a)).
+\phi(Q_\sigma(F))=\bigcap_{a\in D_\sigma}\phi(F(a))
 ```
 
 Transport the higher domains recursively along $`\phi`$ at t and identity at e. If the type bijections are $`j_\sigma,j_\tau`$, represent $`f`$ by $`j_\tau\circ f\circ j_\sigma^{-1}`$. These transports preserve application, abstraction and logical operations. The displayed equation makes quantifiers literal intersections. The identity observer preserves current truth:
 
 ```math
-1\in\phi(b)\quad\Longleftrightarrow\quad b\text{ is true in }N.
+1\in\phi(b)\quad\Longleftrightarrow\quad b\text{ is true in }N
 ```
 
 The transported observer $`m`$ is exactly the required shift:
 
 ```math
 \phi(m(b))=\{n:n(m(b))\text{ is true}\}
-=\{n:nm\in\phi(b)\}=R_m(\phi(b)).
+=\{n:nm\in\phi(b)\}=R_m(\phi(b))
 ```
 
 Haecceities distinguish different current individuals. Equality is preserved by its predicate characterization. All the defining shift-model conditions therefore hold.
@@ -136,7 +136,7 @@ Haecceities distinguish different current individuals. Equality is preserved by 
 ```math
 \Gamma\vdash_{\mathrm C+\mathrm{OS}} A
 \quad\Longleftrightarrow\quad
-\text{every shift model satisfying }\Gamma\text{ satisfies }A.
+\text{every shift model satisfying }\Gamma\text{ satisfies }A
 ```
 
 Soundness was proved above. If the deduction fails, general Henkin completeness supplies a C + OS model of $`\Gamma\cup\{\neg A\}`$. The elementary extension and representation preserve those sentences and give a shift countermodel. Neither the optional premises nor OS are automatically necessitated. The theorem concerns current OS, not ☐OS.
@@ -152,7 +152,7 @@ Choose the initial countermodel and the extension countable. The resulting monoi
 where $`\mathbb N^*`$ is the monoid of finite words under concatenation. Replace $`\phi(b)`$ by $`\pi^{-1}(\phi(b))`$ and transport all higher domains along the resulting bijection onto the new proposition domain. Surjectivity makes inverse image injective on subsets of $`M`$, and inverse image preserves every intersection and Boolean operation. Moreover,
 
 ```math
-R_u(\pi^{-1}(A))=\pi^{-1}(R_{\pi(u)}(A)).
+R_u(\pi^{-1}(A))=\pi^{-1}(R_{\pi(u)}(A))
 ```
 
 Thus each word shift is admitted, and truth at the empty word agrees with truth at $`1`$. All domains remain countable. Countable-domain shift models on this single fixed monoid are strongly complete, also with a countable signature of additional constants. It suffices to require admission of the one-letter shifts: composition supplies the rest. The indices are metatheoretic objects and introduce no new object-language type.

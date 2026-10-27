@@ -7,7 +7,7 @@ Over C, full OS is equivalent to propositional separation by Boolean observers p
 Write $`Q_\sigma(F)=\forall x^\sigma\, .\,Fx`$ and $`E^*_\sigma(F)=\lambda x^\sigma\, .\,E(Fx)`$. Qualification at $`\sigma`$ is the whole-operation identity
 
 ```math
-E\circ Q_\sigma=Q_\sigma\circ E^*_\sigma.
+E\circ Q_\sigma=Q_\sigma\circ E^*_\sigma
 ```
 
 Let $`\mathrm{Bool}(E)`$ assert the Boolean preservation identities. For each relational type $`\rho`$, put
@@ -15,7 +15,7 @@ Let $`\mathrm{Bool}(E)`$ assert the Boolean preservation identities. For each re
 ```math
 K_\rho(E):=\mathrm{Bool}(E)
 \land E\circ Q_e=Q_e\circ E^*_e
-\land E\circ Q_\rho=Q_\rho\circ E^*_\rho.
+\land E\circ Q_\rho=Q_\rho\circ E^*_\rho
 ```
 
 The proposed presentation of OS is
@@ -24,7 +24,7 @@ The proposed presentation of OS is
 \forall p,q^t\, .\,
 \bigl[\forall E^{tt}\, .\,K_\rho(E)\to(Ep\leftrightarrow Eq)\bigr]
 \to p=q
-\qquad(\rho\ne e).
+\qquad(\rho\ne e)
 ```
 
 The type parameter ranges externally over all relational types. This is a schema, not one finite sentence. Over C, existential preservation follows by duality and the translated equality clauses follow from Boolean qualification, as in the [existing observer definition](https://github.com/dkodsi/Logical-Maps/blob/52f324e09ca2df45d74ce4c522bcd761271efbed/submissions/classicism-results-2026-10-24-v2/proofs/logical-observer-hierarchy.md).
@@ -34,7 +34,7 @@ The type parameter ranges externally over all relational types. This is a schema
 Suppose closed H terms $`j:\sigma\rho`$ and $`r:\rho\sigma`$ satisfy $`r\circ j=I_\sigma`$ by conversion. The output $`\sigma`$ is relational. Define
 
 ```math
-r^*(F):=\lambda z^\rho\, .\,F(rz).
+r^*(F):=\lambda z^\rho\, .\,F(rz)
 ```
 
 H proves $`\forall z^\rho\, .\,F(rz)\leftrightarrow\forall a^\sigma\, .\,Fa`$: instantiate the left side at $`j(a)`$ for one direction and the right side at $`r(z)`$ for the other. C therefore gives the unconditional whole-operation identity $`Q_\sigma=Q_\rho\circ r^*`$. Conversion also gives $`r^*\circ E^*_\sigma=E^*_\rho\circ r^*`$. Consequently,
@@ -45,7 +45,7 @@ E\circ Q_\sigma
 &=E\circ Q_\rho\circ r^*\\
 &=Q_\rho\circ E^*_\rho\circ r^*\\
 &=Q_\rho\circ r^*\circ E^*_\sigma\\
-&=Q_\sigma\circ E^*_\sigma.
+&=Q_\sigma\circ E^*_\sigma
 \end{aligned}
 ```
 
@@ -58,7 +58,7 @@ For relational types $`\sigma_1,\ldots,\sigma_n`$, put
 ```math
 \rho=(\sigma_1t)\cdots(\sigma_nt)t,
 \qquad
-j_i(a)=\lambda P_1\cdots P_n\, .\,P_i(a).
+j_i(a)=\lambda P_1\cdots P_n\, .\,P_i(a)
 ```
 
 Write $`\sigma_i=\tau_1\cdots\tau_kt`$. Define $`r_i(z)`$ at an argument tuple by
@@ -68,7 +68,7 @@ r_i(z)[\bar x]=z[K_1,\ldots,K_n],
 \qquad
 K_i=\lambda a^{\sigma_i}\, .\,a[\bar x],
 \qquad
-K_\ell=\lambda a^{\sigma_\ell}\, .\,\top\quad(\ell\ne i).
+K_\ell=\lambda a^{\sigma_\ell}\, .\,\top\quad(\ell\ne i)
 ```
 
 The tuple is empty if $`\sigma_i=t`$. Beta reduction gives $`r_i(j_i(a))[\bar x]=a[\bar x]`$; eta conversion gives $`r_i\circ j_i=I_{\sigma_i}`$ as an operation identity. All types are admitted because the outputs are relational.
@@ -91,7 +91,7 @@ Their complete typed reducts built from $`t`$ alone are identical. At $`t`$ both
 
 ```math
 D_t(0)=\{0,1\}^2,\qquad D_t(1)=\{0,1\},
-\qquad q_t(p_0,p_1)=p_1.
+\qquad q_t(p_0,p_1)=p_1
 ```
 
 At an arrow type, the full root domain consists of compatible profiles
@@ -99,7 +99,7 @@ At an arrow type, the full root domain consists of compatible profiles
 ```math
 f_0:D_\sigma(0)\to D_\tau(0),\qquad
 f_1:D_\sigma(1)\to D_\tau(1),\qquad
-q_\tau\circ f_0=f_1\circ q_\sigma.
+q_\tau\circ f_0=f_1\circ q_\sigma
 ```
 
 Transport sends the profile to $`f_1`$. Recursion through types built only from $`t`$ uses the same data in both models, including all logical operations and truth.
@@ -117,7 +117,7 @@ There is a stronger boundary. In B every relational transport is onto: the profi
 ```math
 L(Q_e(H))=(0,0),
 \qquad
-Q_e(\lambda x\, .\,L(Hx))=(1,0).
+Q_e(\lambda x\, .\,L(Hx))=(1,0)
 ```
 
 The only admitted Boolean observers are identity and $`L`$: their future component must be identity and their root truth coordinate one of the two Boolean characters. Only identity preserves $`Q_e`$, and it does not separate all propositions.

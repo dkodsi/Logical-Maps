@@ -11,7 +11,7 @@ The two reductions concern admitted groups of observers with whole-operation ide
 Work in H, retaining the fixed abbreviations T for Top and B for Bottom. Initially assume **BMeet**: primitive conjunction is associative, commutative and idempotent, and
 
 ```math
-p\land T=p,\qquad p\land B=B.
+p\land T=p,\qquad p\land B=B
 \tag{1}
 ```
 
@@ -24,7 +24,7 @@ Put I:=λp.p and use the admitted lambda term for composition. An admitted predi
 
 ```math
 M(E):=(\lambda p,q.E(p\land q))
-      =(\lambda p,q.Ep\land Eq).
+      =(\lambda p,q.Ep\land Eq)
 \tag{2}
 ```
 
@@ -37,7 +37,7 @@ The separation formula is
 ```math
 S[G]:=\forall p,q\left[
 p=q\leftrightarrow
-\forall E^{tt}(GE\to(Ep\leftrightarrow Eq))\right].
+\forall E^{tt}(GE\to(Ep\leftrightarrow Eq))\right]
 \tag{3}
 ```
 
@@ -48,7 +48,7 @@ For an admitted invariant predicate U of propositions and an admitted subgroup K
 Assume the meet order is a bounded dense chain, and put
 
 ```math
-J(p):=B<p<T.
+J(p):=B<p<T
 \tag{4}
 ```
 
@@ -62,7 +62,7 @@ Let $`\mathcal B^{ttt}`$ be an admitted relation whose current extension is an e
 
 ```math
 \forall p\in J\;\exists u,v\in J\;
-[\mathcal B(p,u)\land\mathcal B(p,v)\land u<p<v].
+[\mathcal B(p,u)\land\mathcal B(p,v)\land u<p<v]
 \tag{6}
 ```
 
@@ -73,7 +73,7 @@ For a proposition c∈J define the admitted predicates
 ```math
 C_c(p):=J(p)\land\mathcal B(c,p),
 \qquad
-G_c(E):=GE\land\mathcal B(c,Ec).
+G_c(E):=GE\land\mathcal B(c,Ec)
 \tag{7}
 ```
 
@@ -83,7 +83,7 @@ Say that the block of c **crosses the truth cut** when
 
 ```math
 \mathrm{Cross}(c):=
-\exists a,b\,[C_c(a)\land C_c(b)\land\neg a\land b].
+\exists a,b\,[C_c(a)\land C_c(b)\land\neg a\land b]
 \tag{8}
 ```
 
@@ -91,7 +91,7 @@ Necessarily a<b. Say that G is **transitive on blocks** when
 
 ```math
 \mathrm{BlockTrans}(G,\mathcal B):=
-\forall p,q\in J\;\exists E\,[GE\land\mathcal B(Ep,q)].
+\forall p,q\in J\;\exists E\,[GE\land\mathcal B(Ep,q)]
 \tag{9}
 ```
 
@@ -112,7 +112,7 @@ This is an ordinary formula about proposition and observer variables. It does no
 S[G]\ \longleftrightarrow\
 \exists c\in J\,[\mathrm{Cross}(c)\land
 \mathrm{BlockTrans}(G,\mathcal B)\land
-\mathrm{Sep}(G_c,C_c)].}
+\mathrm{Sep}(G_c,C_c)]}
 \tag{10}
 ```
 
@@ -141,7 +141,7 @@ Say that G_c is **order-primitive on C_c** when every admitted G_c-invariant con
 ```math
 \boxed{S[G]\ \longleftrightarrow\
 \mathrm{BlockTrans}(G,\mathcal B)
-\land\exists c\in J\,\mathrm{Cross}(c).}
+\land\exists c\in J\,\mathrm{Cross}(c)}
 \tag{11}
 ```
 
@@ -149,7 +149,7 @@ Say that G_c is **order-primitive on C_c** when every admitted G_c-invariant con
 
 ```math
 R_c(p,q):=C_c(p)\land C_c(q)\land
-\forall E\,[G_c(E)\to(Ep\leftrightarrow Eq)].
+\forall E\,[G_c(E)\to(Ep\leftrightarrow Eq)]
 \tag{12}
 ```
 
@@ -185,7 +185,7 @@ Now assume that the primitive operations ∧ and ∨ make the proposition object
 
 ```math
 V(E):=(\lambda p,q.E(p\lor q))
-       =(\lambda p,q.Ep\lor Eq).
+       =(\lambda p,q.Ep\lor Eq)
 \tag{14}
 ```
 
@@ -193,7 +193,7 @@ Fix an **external finite list** e₁,…,eₙ, where n≥1, satisfying
 
 ```math
 e_i\ne B,\qquad e_i\land e_j=B\ (i\ne j),\qquad
-e_1\lor\cdots\lor e_n=T.
+e_1\lor\cdots\lor e_n=T
 \tag{15}
 ```
 
@@ -204,21 +204,21 @@ There is **exactly one true factor unit** w. The finite join in (15) is true, so
 For every proposition z,
 
 ```math
-z\leftrightarrow z\land w.
+z\leftrightarrow z\land w
 \tag{16}
 ```
 
 This is a material truth equivalence because w is true; it is not the identity z=z∧w. Distributivity and (15) separately give the output identity
 
 ```math
-p=(p\land e_1)\lor\cdots\lor(p\land e_n).
+p=(p\land e_1)\lor\cdots\lor(p\land e_n)
 \tag{17}
 ```
 
 Let $`U_w(p):=p\le w`$, the interval [B,w], and define its admitted stabilizer
 
 ```math
-G_w(E):=GE\land Ew=w.
+G_w(E):=GE\land Ew=w
 \tag{18}
 ```
 
@@ -226,7 +226,7 @@ It is a group of admitted whole lattice automorphisms of that interval. Define *
 
 ```math
 \bigwedge_{1\le i,j\le n}
-\exists E\,[GE\land E(e_i)=e_j].
+\exists E\,[GE\land E(e_i)=e_j]
 \tag{19}
 ```
 
@@ -234,7 +234,7 @@ It is a group of admitted whole lattice automorphisms of that interval. Define *
 
 ```math
 \boxed{S[G]\ \longleftrightarrow\
-\mathrm{FactorTrans}\land\mathrm{Sep}(G_w,U_w).}
+\mathrm{FactorTrans}\land\mathrm{Sep}(G_w,U_w)}
 \tag{20}
 ```
 
@@ -245,7 +245,7 @@ Suppose x,y≤w are distinct, and let E globally separate them. Both outputs are
 **Proof, reverse.** If p≠q, (17) implies p∧e_i≠q∧e_i for some i. By (19), choose E sending e_i to w. Injectivity and meet preservation give
 
 ```math
-Ep\land w\ne Eq\land w.
+Ep\land w\ne Eq\land w
 \tag{21}
 ```
 
@@ -260,7 +260,7 @@ Suppose, in addition to the assumptions of §4, that [B,w] is a bounded dense ch
 ```math
 \mathrm{Sep}(G_w,U_w)
 \quad\longleftrightarrow\quad
-\exists b,a\,[B<b<w\land B<a<w\land\neg b\land a].
+\exists b,a\,[B<b<w\land B<a<w\land\neg b\land a]
 \tag{22}
 ```
 
@@ -272,7 +272,7 @@ For a non-chain example, fix an external integer n≥2 and set
 
 ```math
 L_0=(\mathbb Q\cap[0,1])\setminus\{1/2\},
-\qquad D_t=L_0^n.
+\qquad D_t=L_0^n
 \tag{23}
 ```
 

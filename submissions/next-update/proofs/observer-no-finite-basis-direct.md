@@ -11,7 +11,7 @@ Fix $`n<\omega`$, put $`\mu=\beth_n`$ and let $`\kappa=\mu^+`$. Let $`P`$ consis
 On $`\Omega=2^{\kappa\times\kappa}`$, use the topology with basic clopen sets
 
 ```math
-[p]=\{x\in\Omega:p\subseteq x\}\qquad(p\in P).
+[p]=\{x\in\Omega:p\subseteq x\}\qquad(p\in P)
 ```
 
 These sets can specify infinitely many entries, provided there are fewer than $`\kappa`$. Let $`B=\mathrm{RO}(\Omega)`$. The basic conditions are dense in this complete Boolean algebra; two have nonzero meet exactly when they are compatible. Their union then gives a common extension. Write $`b_{i,\alpha}`$ for the Boolean value of assigning 1 at $`(i,\alpha)`$. Column permutations induce automorphisms of $`B`$ and permute these values accordingly.
@@ -25,7 +25,7 @@ Start below any nonzero Boolean element with a basic condition. For each anticha
 Define carriers $`X_\sigma`$ with Boolean-valued equalities $`d_\sigma`$. At $`e`$, take all $`B`$-partitions $`(a_m)_{m\in\omega}`$ of 1 and set
 
 ```math
-d_e((a_m),(c_m))=\bigvee_{m\in\omega}(a_m\wedge c_m).
+d_e((a_m),(c_m))=\bigvee_{m\in\omega}(a_m\wedge c_m)
 ```
 
 The representative of a ground individual $`m`$ has value 1 at $`m`$ and 0 elsewhere. Set $`X_t=B`$, with $`d_t(b,c)=(b\leftrightarrow c)`$. For every admitted arrow, take all Boolean-extensional maps:
@@ -37,7 +37,7 @@ d_\sigma(x,y)\le d_\tau(f(x),f(y))\text{ for all }x,y\},
 ```
 
 ```math
-d_{\sigma\tau}(f,g)=\bigwedge_{x\in X_\sigma}d_\tau(f(x),g(x)).
+d_{\sigma\tau}(f,g)=\bigwedge_{x\in X_\sigma}d_\tau(f(x),g(x))
 ```
 
 Each carrier admits mixing: for a Boolean partition $`(a_j)`$ and objects $`x_j`$ there is $`x`$ such that $`a_j\le d_\sigma(x,x_j)`$ for every $`j`$. At $`e`$ mix coordinatewise; at $`t`$ use $`\bigvee_j(a_j\wedge x_j)`$; at arrows mix outputs pointwise. Pointwise mixing preserves Boolean extensionality.
@@ -45,7 +45,7 @@ Each carrier admits mixing: for a Boolean partition $`(a_j)`$ and objects $`x_j`
 Application is evaluation, Boolean operations are those of $`B`$, and quantification is
 
 ```math
-Q_\sigma(f)=\bigwedge_{x\in X_\sigma}f(x).
+Q_\sigma(f)=\bigwedge_{x\in X_\sigma}f(x)
 ```
 
 The quantifier is Boolean-extensional, since below $`d_{\sigma t}(f,g)`$ all corresponding values, hence their meets, agree. It belongs to the required arrow carrier. Simultaneous induction on terms proves substitution and Boolean extensionality of evaluation, admitting every allowed lambda abstraction; beta and eta hold at value 1.
@@ -55,7 +55,7 @@ The displayed equalities coincide with typed Leibniz equality. Every predicate i
 Column permutations act on base carriers through their Boolean coordinates, and on arrows by conjugation:
 
 ```math
-(\pi f)(x)=\pi_\tau\bigl(f(\pi_\sigma^{-1}(x))\bigr).
+(\pi f)(x)=\pi_\tau\bigl(f(\pi_\sigma^{-1}(x))\bigr)
 ```
 
 Equality and all logical operations are equivariant. For quantifiers, the permutation is a bijection of the quantified carrier. The term induction consequently gives equivariance even for terms involving arbitrarily high quantification.
@@ -76,13 +76,13 @@ Let $`S`$ be the full ordinary two-valued hierarchy over $`\omega`$. Define
 
 ```math
 \mathrm{ord}(e)=\mathrm{ord}(t)=0,\qquad
-\mathrm{ord}(\sigma\tau)=\max\{\mathrm{ord}(\sigma)+1,\mathrm{ord}(\tau)\}.
+\mathrm{ord}(\sigma\tau)=\max\{\mathrm{ord}(\sigma)+1,\mathrm{ord}(\tau)\}
 ```
 
 If $`\mathrm{ord}(\sigma)\le n`$, then $`|S_\sigma|\le\beth_n`$. Structural induction proves this bound: at an arrow of order $`k\ge1`$, use
 
 ```math
-|S_{\alpha\beta}|\le(\beth_k)^{\beth_{k-1}}=\beth_k.
+|S_{\alpha\beta}|\le(\beth_k)^{\beth_{k-1}}=\beth_k
 ```
 
 Put $`\rho_0=e`$, $`\rho_{j+1}=\rho_jt`$ and $`\nu=\rho_{n+1}`$. Thus $`|S_{\rho_n}|=\mu`$ and $`|S_\nu|=2^\mu\ge\kappa`$. Fix an injection $`j:\kappa\to S_\nu`$.
@@ -90,7 +90,7 @@ Put $`\rho_0=e`$, $`\rho_{j+1}=\rho_jt`$ and $`\nu=\rho_{n+1}`$. Thus $`|S_{\rho
 **Ground-value lemma.** At every type of order at most $`n`$, and also at $`\nu`$, there are representatives $`\check a`$ of the ground objects satisfying
 
 ```math
-\bigvee_{a\in S_\sigma}d_\sigma(x,\check a)=1.
+\bigvee_{a\in S_\sigma}d_\sigma(x,\check a)=1
 ```
 
 Distinct ground representatives have equality value 0, and column permutations fix each representative up to equality value 1.
@@ -111,7 +111,7 @@ Set $`\sigma=\nu t`$. Define
 c_i(x)=\bigvee_{\alpha<\kappa}
 \bigl(d_\nu(x,\check{j(\alpha)})\wedge b_{i,\alpha}\bigr),
 \qquad
-F(x)=\bigvee_{i<\kappa}d_\sigma(x,c_i).
+F(x)=\bigvee_{i<\kappa}d_\sigma(x,c_i)
 ```
 
 Both definitions are Boolean-extensional, so $`c_i\in X_\sigma`$ and $`F\in X_{\sigma t}`$. We have $`F(c_i)=1`$. For $`i\ne k`$, $`d_\sigma(c_i,c_k)=0`$: below any basic condition, a fresh coordinate allows opposite bits in the two columns, yielding unequal values at the corresponding ground input. Column permutations permute the $`c_i`$ and fix $`F`$.
@@ -119,14 +119,14 @@ Both definitions are Boolean-extensional, so $`c_i\in X_\sigma`$ and $`F\in X_{\
 **Nonselection lemma.** If $`u(F,z_1,\ldots,z_m)`$ is a finite term of type $`\sigma`$ and each $`z_j`$ has order at most $`n`$, then
 
 ```math
-F\bigl(u(F,z_1,\ldots,z_m)\bigr)=0.
+F\bigl(u(F,z_1,\ldots,z_m)\bigr)=0
 ```
 
 Suppose otherwise. Some index $`i`$ has a nonzero equality value between the term and $`c_i`$. Refine this positive Boolean piece so that all finitely many low parameters equal ground representatives, and take a basic condition $`p`$ below it. Substitution gives
 
 ```math
 p\le d_\sigma(v,c_i),\qquad
-v=u(F,\check a_1,\ldots,\check a_m).
+v=u(F,\check a_1,\ldots,\check a_m)
 ```
 
 Choose a column $`k\ne i`$ outside the support of $`p`$, and transpose $`i,k`$. Equivariance fixes $`v`$ up to equality value 1, so $`\pi p\le d_\sigma(v,c_k)`$. But $`p`$ and $`\pi p`$ are compatible: at the exchanged columns only one contributes entries, and elsewhere they agree. Their common extension would lie below $`d_\sigma(c_i,c_k)=0`$, a contradiction. There is no restriction on intermediate types or quantifiers in the term.
@@ -136,7 +136,7 @@ In the quotient $`L`$, let $`N`$ be the closure under all finite typed terms of 
 ```math
 N_\tau=L_\tau\quad(\mathrm{ord}(\tau)\le n),\qquad
 [F]\in N_{\sigma t},\qquad
-[F]\text{ is nonempty in }L\text{ but has no member in }N_\sigma.
+[F]\text{ is nonempty in }L\text{ but has no member in }N_\sigma
 ```
 
 ## 6. The comparison and the theorem

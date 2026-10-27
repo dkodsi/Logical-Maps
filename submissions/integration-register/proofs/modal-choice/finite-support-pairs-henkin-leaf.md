@@ -18,7 +18,7 @@ Let the individual domain be the disjoint union
 
 ```math
 D_e=\{L_i:i\in\mathbb N\}\ \sqcup\
-\{A_i^0,A_i^1:i\in\mathbb N\}.
+\{A_i^0,A_i^1:i\in\mathbb N\}
 ```
 
 Take the group $`G=\{0,1\}^{\mathbb N}`$ under coordinatewise
@@ -43,7 +43,7 @@ D_{\sigma\tau}=
 where
 
 ```math
-(g\cdot f)(x)=g\cdot f(g^{-1}\cdot x).
+(g\cdot f)(x)=g\cdot f(g^{-1}\cdot x)
 \tag{2}
 ```
 
@@ -97,7 +97,7 @@ y=A_i^0\ \lor\ y=A_i^1,
 ```
 
 ```math
-U(A_i^\epsilon,y)\quad\Longleftrightarrow\quad y=L_0.
+U(A_i^\epsilon,y)\quad\Longleftrightarrow\quad y=L_0
 \tag{3}
 ```
 
@@ -137,7 +137,7 @@ that countermodel is an ordinary ZFC construction satisfying
 ```math
 RC_{\rm all}+TC_{\rm all}+\Box IC_{\rm all}
 +\Box BF_{\rm all}+\Box OS_{\rm full}+\Box BC_t
-+\mathrm{Actuality}+\neg MRC_{e,e}.
++\mathrm{Actuality}+\neg MRC_{e,e}
 ```
 
 This replaces the first version's extra existence assumption on

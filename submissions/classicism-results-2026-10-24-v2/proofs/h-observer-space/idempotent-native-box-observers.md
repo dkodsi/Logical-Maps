@@ -13,7 +13,7 @@ Use Good_Δ and BoxComm from [Native-Box logical observers](native-box-logical-o
 ```math
 \mathrm{BoxComm}(E):\quad
  (\lambda p.E(\Box p))=(\lambda p.\Box Ep),
-\qquad \Box p:=(p=\top).
+\qquad \Box p:=(p=\top)
 ```
 
 Add the whole idempotence identity E∘E=E. Write IdemBoxSep(τ,Δ) for separation by the common class of observers satisfying all three conditions. Without indices, IdemBoxSep denotes the full schema over relational output types and finite external qualification lists. It implies BoxSep and therefore recovers C, current BF and Functionality over H. A boxed schema means the separately boxed closed instances.
@@ -28,7 +28,7 @@ Consequently, over C5 every IdemBox-qualified observer is identity. Propositiona
 
 ```math
 \boxed{\mathrm{C5}+\mathrm{IdemBoxSep}
-\quad\Longleftrightarrow\quad\mathrm{Extensionality}.}
+\quad\Longleftrightarrow\quad\mathrm{Extensionality}}
 \tag{1}
 ```
 
@@ -45,7 +45,7 @@ The full action-model theorem supplies C. Onto type transport gives BF and Funct
 An arbitrary observer satisfying the whole Boolean laws induces at each future x a Boolean truth character on the finite powerset D_t(x). Every such character is evaluation at one unique point f(x)∈↑x: a character accepts one atom, since the finitely many atoms join to Top. Consequently every Boolean observer is determined by an inflationary coordinate map f:P→P, with x≤f(x), through
 
 ```math
-E_f(p)=f^{-1}[p].
+E_f(p)=f^{-1}[p]
 \tag{2}
 ```
 
@@ -63,7 +63,7 @@ At any x, native Box is the universal test on ↑x. Applying the two sides of Bo
 E_f\text{ commutes with Box}
 \quad\Longleftrightarrow\quad
  f[\mathord\uparrow x]=\mathord\uparrow f(x)
- \quad\text{for every }x.
+ \quad\text{for every }x
 \tag{3}
 ```
 
@@ -72,7 +72,7 @@ Equality of these sets is necessary because every subset is admitted; it is suff
 Likewise the whole equation E_f²=E_f is exactly
 
 ```math
-f^2=f.
+f^2=f
 \tag{4}
 ```
 
@@ -81,7 +81,7 @@ For necessity test singleton propositions; for sufficiency compute the truth of 
 Fix a∈P. Suppose (3)–(4) hold and f(o)=a. Equation (3) at o says the image of f is ↑a. Idempotence makes every point of that image fixed. For any x, inflationarity and monotonicity give x≤f(x) and a=f(o)≤f(x). If y is any upper bound of x and a, then y∈↑a, so f(y)=y; monotonicity gives f(x)≤f(y)=y. Hence
 
 ```math
-f(x)=x\lor a.
+f(x)=x\lor a
 \tag{5}
 ```
 
@@ -131,7 +131,7 @@ Each row satisfies (3). For the a-reader, the cone images at o,x,a are respectiv
 This proves the strict implication, over H,
 
 ```math
-\mathrm{IdemBoxSep}\quad\Longrightarrow\quad\mathrm{BoxSep}.
+\mathrm{IdemBoxSep}\quad\Longrightarrow\quad\mathrm{BoxSep}
 \tag{7}
 ```
 
@@ -144,7 +144,7 @@ The six-point example belongs to a family with a sharp native-Box threshold. For
 ```math
 \begin{aligned}
 \mathrm{BoxSep}&\quad\Longleftrightarrow\quad m=1\ \text{or}\ n\le m,\\
-\mathrm{IdemBoxSep}&\quad\Longleftrightarrow\quad m=1\ \text{or}\ n=1.
+\mathrm{IdemBoxSep}&\quad\Longleftrightarrow\quad m=1\ \text{or}\ n=1
 \end{aligned}
 \tag{7a}
 ```
@@ -168,7 +168,7 @@ Take the four-point diamond o<a,b<1, with a,b incomparable. It is a join-semilat
 ```math
 (\Diamond p\land\Diamond q)\to
 \bigl[\Diamond(p\land\Diamond q)
- \lor\Diamond(q\land\Diamond p)\bigr].
+ \lor\Diamond(q\land\Diamond p)\bigr]
 \tag{8}
 ```
 
@@ -180,7 +180,7 @@ Combining this example with (1) gives the following exact comparisons. IdemBoxSe
 
 ```math
 \boxed{\mathrm{IdemBoxSep}+\mathrm{Rev}
- \ \Longleftrightarrow\ \mathrm{Extensionality}.}
+ \ \Longleftrightarrow\ \mathrm{Extensionality}}
 \tag{9}
 ```
 
@@ -203,7 +203,7 @@ Consequently the root satisfies
 ```math
 \mathrm{IdemBoxSep}+\Box\mathrm{OS}
 +\Box\mathrm{BF}+\Box\mathrm{Functionality},
-\qquad\neg\Box\mathrm{IdemBoxSep}.
+\qquad\neg\Box\mathrm{IdemBoxSep}
 \tag{10}
 ```
 

@@ -5,7 +5,7 @@ Separation by endpoint-valued logical observers characterizes **C5 + Atomicity**
 ```math
 \boxed{\mathrm H+\mathsf S_{\mathrm{rev}}
 +\exists E\,(\mathrm{Good}_{\{t\}}(E)\land\mathrm{FinIm}(E))
-\ \equiv\ \mathrm{C5}+\mathrm{Atomicity}_t.}
+\ \equiv\ \mathrm{C5}+\mathrm{Atomicity}_t}
 ```
 
 Under C5, atoms correspond exactly to endpoint observers qualified at $`t`$. Reversible separation is equivalent to involutive separation and to its separately boxed schema; it entails C5 and necessary ordinary separation. Factive separation, or ordinary separation with a unique logical observer, gives Extensionality.
@@ -20,7 +20,7 @@ Use the fixed relational language of [Classicism](../source/topics/classicism/ba
 \begin{gathered}
 (\lambda p\, .\,E(\neg p))=(\lambda p\, .\,\neg Ep),\\
 (\lambda p,q\, .\,E(p\land q))=(\lambda p,q\, .\,Ep\land Eq),\\
-(\lambda p,q\, .\,E(p\lor q))=(\lambda p,q\, .\,Ep\lor Eq).
+(\lambda p,q\, .\,E(p\lor q))=(\lambda p,q\, .\,Ep\lor Eq)
 \end{gathered}
 ```
 
@@ -61,7 +61,7 @@ R(E)&=\top &&\text{ordinary logical separation},\\
 \mathrm{End}(E)&:=\forall p\,(Ep=\top\lor Ep=\bot)
  &&\text{outputs restricted to the two endpoints},\\
 \mathrm{Fact}(E)&:=\forall p\,(Ep\to p)
- &&\text{factivity}.
+ &&\text{factivity}
 \end{aligned}
 ```
 
@@ -87,7 +87,7 @@ Put $`\mathrm{Im}_E=\lambda r^t.\exists p^t(Ep=r)`$ and use the [background defi
 
 ```math
 \mathrm{FinIm}(E):=
-\exists Z^{(tt)t}\bigl(\mathrm{FiniteCardinality}_t(Z)\land Z(\mathrm{Im}_E)\bigr).
+\exists Z^{(tt)t}\bigl(\mathrm{FiniteCardinality}_t(Z)\land Z(\mathrm{Im}_E)\bigr)
 ```
 
 This is a finitary formula. Each finite output list witnesses it, but internal finiteness is not identified with external finiteness in arbitrary Henkin models. The proofs below use the defining induction, so they also cover internal finite images without a standard enumeration. No common cardinal bound is required across observers.
@@ -99,7 +99,7 @@ This is a finitary formula. Each finite output list witnesses it, but internal f
 If $`E`$ is qualified and factive, apply its negation identity and factivity to $`\neg p`$: $`\neg Ep\to E\neg p\to\neg p`$. Contraposition gives $`p\to Ep`$; hence
 
 ```math
-\forall p\,(Ep\leftrightarrow p).
+\forall p\,(Ep\leftrightarrow p)
 ```
 
 Consequently coextensive relations agree under every such observer. Conversely, the identity observer satisfies every finite qualification and is factive already in H. Agreement under all qualified factive observers therefore implies ordinary coextension. Substituting this equivalence into separation gives
@@ -107,7 +107,7 @@ Consequently coextensive relations agree under every such observer. Conversely, 
 ```math
 S_{\tau,\Delta}[\mathrm{Fact}]
 \ \leftrightarrow\
-\forall X,Y^\tau\bigl[(\forall\bar z\,(X[\bar z]\leftrightarrow Y[\bar z]))\to X=Y\bigr].
+\forall X,Y^\tau\bigl[(\forall\bar z\,(X[\bar z]\leftrightarrow Y[\bar z]))\to X=Y\bigr]
 ```
 
 At $`t`$, this is the Fregean Axiom. Over **C**, the Fregean Axiom implies full Extensionality: any true proposition is $`\top`$, so a true universal coextension statement is necessary; C's Intensionality then identifies the relations. Thus one propositional factive-separation instance, even $`\Delta=\varnothing`$, suffices over C. This upgrade from propositions to arbitrary relation types uses C; the equivalence over H above is stated type by type.
@@ -125,7 +125,7 @@ Put $`A_\Delta:=\forall E(\mathrm{Good}_\Delta(E)\to\mathrm{Fact}(E))`$. Over H,
 ```math
 S_{t,\Delta}[\mathrm{Fact}]
 \ \leftrightarrow\ \mathrm{Fregean}
-\ \leftrightarrow\ S_{t,\Delta}[\top]+A_\Delta.
+\ \leftrightarrow\ S_{t,\Delta}[\top]+A_\Delta
 ```
 
 For the last converse, all eligible observers preserve current truth, so separation gives Fregean. In the other direction, Fregean gives $`p=\top`$ when $`p`$, and $`p=\bot`$ otherwise. Since $`E\top`$ is true and $`E\bot`$ is false, substitution gives $`Ep\leftrightarrow p`$, proving $`A_\Delta`$; identity supplies separation.
@@ -135,7 +135,7 @@ For the full typed schemas, **OS plus one $`A_{\Delta_0}`$** is equivalent over 
 Universal factivity alone is much weaker. In the qualitative-contrast model at $`W_0`$, let $`d`$ contain all arrows into $`W_1`$, and $`a=\neg d`$. The [Boolean-observer obstruction](observer-countermodel.md), §4, proves that every admitted Boolean observer rejects $`d`$. Its truth map $`h_E(p)=v(Ep)`$ is Boolean, so $`h_E(d)=0`$ and $`h_E(a)=1`$. Target symmetry gives
 
 ```math
-\neg p\Rightarrow p\le d,\qquad p\Rightarrow a\le p.
+\neg p\Rightarrow p\le d,\qquad p\Rightarrow a\le p
 ```
 
 Monotonicity yields $`h_E(p)=v(p)`$. Thus **every Boolean observer is factive**, although $`d\ne\bot`$ and no such observer distinguishes them. OS and Extensionality fail. This is also why truth-correctness of observers cannot replace the separation requirement.
@@ -149,19 +149,19 @@ Monotonicity yields $`h_E(p)=v(p)`$. Thus **every Boolean observer is factive**,
 **Atomicity.** Given $`d\ne\bot`$, separate $`d`$ from $`\bot`$ by $`E`$, so $`Ed`$ is true. Set
 
 ```math
-w_E:=\forall p^t\,(Ep\to p).
+w_E:=\forall p^t\,(Ep\to p)
 ```
 
 End and the derived endpoint identities give $`E(Ep)=Ep`$ at every current input. Apply the universal operation identity at $`t`$ to $`\lambda p\, .\,Ep\to p`$, then use Boolean preservation:
 
 ```math
-Ew_E\ \leftrightarrow\ \forall p\,(E(Ep)\to Ep).
+Ew_E\ \leftrightarrow\ \forall p\,(E(Ep)\to Ep)
 ```
 
 The right side is true, so $`Ew_E=\top`$ and $`w_E\ne\bot`$. Necessary universal instantiation, an unconditional C theorem, gives
 
 ```math
-w_E\le(Ep\to p).
+w_E\le(Ep\to p)
 ```
 
 If $`Ep=\top`$, substitution gives $`w_E\le p`$. Otherwise negation preservation gives $`E\neg p=\top`$, hence $`w_E\le\neg p`$. A nonbottom proposition deciding every proposition is an atom. Since $`Ed=\top`$, it lies below $`d`$.
@@ -171,7 +171,7 @@ If $`Ep=\top`$, substitution gives $`w_E\le p`$. Otherwise negation preservation
 ```math
 \mathrm{ND}_t+\mathrm{BF}_t
 \ \Rightarrow\ \Box\mathrm{ND}_t
-\ \Rightarrow\ \Box\mathrm{ND}_{\text{all types}}.
+\ \Rightarrow\ \Box\mathrm{ND}_{\text{all types}}
 ```
 
 The first uses NI, ND and 4 to obtain each necessary ND instance, then twice uses $`\mathrm{BF}_t`$ to collect its two proposition arguments. The second is the necessary form of C's type-$`t`$-to-all-types ND implication. These are [Propositions 2.4](../source/topics/classicism/results/nd-t-and-bf-t-imply-necessary-nd-t.yaml) and [2.2](../source/topics/classicism/results/necessary-distinctness-necessary-t-implies-necessary-distinctness-necessary-r.yaml) in the recorded form.
@@ -179,7 +179,7 @@ The first uses NI, ND and 4 to obtain each necessary ND instance, then twice use
 **Converse.** Assume C5 and Atomicity at $`t`$. For unequal $`p,q`$, choose an atom $`a`$ below their Boolean symmetric difference. C5 supplies $`\Box\mathrm{BF}`$, so the [composite atom-observer theorem](operator-representation.md), §§2–3, gives a qualified separating observer for each chosen finite $`\Delta`$:
 
 ```math
-O_a(r)=(\Diamond a\land\Box(a\to r))\lor(\neg\Diamond a\land r).
+O_a(r)=(\Diamond a\land\Box(a\to r))\lor(\neg\Diamond a\land r)
 ```
 
 ND makes the atom necessarily nonbottom, so $`\Diamond a=\top`$; this observer is the principal operation $`E_a(r)=\Box(a\to r)`$. Atomhood gives $`a\le r`$ or $`a\le\neg r`$. In the first case, 4 makes $`E_a(r)=\top`$. In the second, NI preserves $`a\le\neg r`$, and necessary nonbottomness of $`a`$ excludes $`a\le r`$ necessarily, giving $`E_a(r)=\bot`$. Thus the already-qualified observer satisfies End. The same observer handles every type in the finite list.
@@ -190,7 +190,7 @@ Finally, over **H**, full typed endpoint separation implies full OS by inclusion
 
 ```math
 \boxed{\mathrm H+\text{full typed endpoint separation}
-\ \equiv\ \mathrm{C5}+\mathrm{Atomicity}_t.}
+\ \equiv\ \mathrm{C5}+\mathrm{Atomicity}_t}
 ```
 
 The full typed schema is used in the recovery of C from H. The reduction to the single propositional $`\{t\}`$ instance is asserted over C.
@@ -202,7 +202,7 @@ The full typed schema is used in the recovery of C from H. The reduction to the 
 ```math
 a\longmapsto E_a,\qquad E_a(p)=\Box(a\to p);
 \qquad
-E\longmapsto a_E=\forall p(Ep\to p).
+E\longmapsto a_E=\forall p(Ep\to p)
 ```
 
 No global Atomicity or Actuality premise is needed. The diagonal proof above shows that $`a_E`$ is an atom for any such $`E`$: $`Ea_E=\top`$, so it is nonbottom, and it decides every proposition. The principal-observer argument supplies $`E_a`$ from any atom under C5 and qualifies it at every finite type list.
@@ -218,7 +218,7 @@ The natural-language interpretation is evaluation at a fixed complete possible s
 Over H with the full typed schema,
 
 ```math
-\mathsf S_{\mathrm{fix}}\ \equiv\ \mathrm{C5}+\mathrm{OS}.
+\mathsf S_{\mathrm{fix}}\ \equiv\ \mathrm{C5}+\mathrm{OS}
 ```
 
 First recover C + BF by forgetting the restriction. If $`p\ne q`$, all eligible observers send $`(p=q)`$ to its false self and send $`\bot`$ to $`\bot`$. Separation gives $`(p=q)=\bot`$, hence $`\Box(p\ne q)`$. Thus $`\mathrm{ND}_t`$ holds, and $`\mathrm{ND}_t+\mathrm{BF}_t`$ yields C5. Conversely, C5 makes every identity proposition an endpoint, so every Boolean observer fixes it. NI, BF and Intensionality give the displayed composite identity. Under C, the equivalent necessity-fixing condition is $`(\lambda p.E(\Box p))=(\lambda p.\Box p)`$, using $`(p=q)=\Box(p\leftrightarrow q)`$. This is fixing necessity judgments, rather than the different equation $`E(\Box p)=\Box(Ep)`$.
@@ -240,7 +240,7 @@ For the composite identity requirement, work over C, where Good is equivalent to
 Let $`E`$ have qualified inverse $`F`$. It preserves the truth of identity propositions. For the nontrivial direction, use the translated Leibniz clause at type $`t`$ with the predicate $`P(z)=F(x=z)`$. From $`E(x=y)`$ and $`E(Px)=x=x`$, obtain $`E(Py)=x=y`$. The converse follows by substitution and translated reflexivity. With a list containing $`t`$, reversible separation therefore identifies every false equality proposition with $`\bot`$, just as above. It follows that
 
 ```math
-\mathsf S_{\mathrm{rev}}\ \Longrightarrow\ \mathrm{C5}+\mathrm{OS}.
+\mathsf S_{\mathrm{rev}}\ \Longrightarrow\ \mathrm{C5}+\mathrm{OS}
 ```
 
 C5 subsequently makes these identity-preservation statements full identities.
@@ -252,13 +252,13 @@ Suppose $`d\ne\bot`$. If $`d`$ is true, identity already distinguishes it from $
 ```math
 c=\neg d\land Ed,\qquad b=Fc,\qquad r=\neg(c\lor b),
 \qquad
-T(p)=(c\land Ep)\lor(b\land Fp)\lor(r\land p).
+T(p)=(c\land Ep)\lor(b\land Fp)\lor(r\land p)
 ```
 
 Boolean preservation gives $`c\land Ec=\bot`$ and, after applying $`F`$, $`c\land b=\bot`$. Also $`Eb=c`$. Applying the patching lemma, $`T`$ is qualified. Expansion on the three pieces proves $`T^2p=p`$: on $`c`$, the second application passes through the $`b`$-piece and uses $`EF=I`$; on $`b`$, it passes through $`c`$ and uses $`FE=I`$; on $`r`$, it is identity. Functionality upgrades this to $`T\circ T=I`$. Currently $`c`$ is true, so $`Td`$ is true. Apply the construction to the Boolean symmetric difference to separate any unequal inputs. The converse uses an involution as its own inverse:
 
 ```math
-\mathsf S_{\mathrm{rev}}\ \equiv\ \text{involutive separation}.
+\mathsf S_{\mathrm{rev}}\ \equiv\ \text{involutive separation}
 ```
 
 ### Endpoint separation supplies reversible witnesses
@@ -266,7 +266,7 @@ Boolean preservation gives $`c\land Ec=\bot`$ and, after applying $`F`$, $`c\lan
 C5 + Atomicity supplies a true atom $`w`$ by [Atomicity with BF implies necessary Actuality](../source/topics/classicism/results/atomicity-t-and-bf-imply-necessary-actuality.yaml). Given a false nonbottom $`d`$, choose an atom $`a\le d`$; then $`a\ne w`$. Let $`A=E_a`$ and $`W=E_w`$ be the qualified endpoint observers. Define
 
 ```math
-T(p)=(a\land Wp)\lor(w\land Ap)\lor(\neg(a\lor w)\land p).
+T(p)=(a\land Wp)\lor(w\land Ap)\lor(\neg(a\lor w)\land p)
 ```
 
 The partition lemma qualifies $`T`$. Endpoint laws give $`A(Wp)=Wp`$ and $`W(Ap)=Ap`$. Atomhood gives $`a\land Ap=a\land p`$ and $`w\land Wp=w\land p`$. Hence $`A(Tp)=Wp`$, $`W(Tp)=Ap`$, and expansion gives $`T^2p=p`$. Functionality identifies the composite with $`I`$. Since $`w`$ and $`Ad`$ are true, $`Td`$ is true. For true $`d`$ use identity. Thus endpoint separation implies involutive, and hence reversible, separation.
@@ -276,7 +276,7 @@ The partition lemma qualifies $`T`$. Endpoint laws give $`A(Wp)=Wp`$ and $`W(Ap)
 Fix a closed separation instance $`P=S_{\rho,\Delta}[K]`$, where $`K`$ is either ordinary qualification or reversible qualification. Choose a finite list $`\Lambda`$ containing $`\Delta`$, $`\rho`$, $`tt`$, and the argument types of $`\rho`$. For every reversible $`\Lambda`$-qualified $`E`$, we have
 
 ```math
-EP\leftrightarrow P.
+EP\leftrightarrow P
 ```
 
 To verify this, distribute $`E`$ through the displayed quantifiers and Boolean connectives. Under C5 it fixes identity propositions. Ordinary qualification is equivalent to a finite conjunction of operation identities, so $`E`$ fixes its truth. Reversible qualification adds an existential inverse of type $`tt`$ and identities of compositions; the $`tt`$ quantifier law fixes its truth too. Postcomposition $`B\mapsto E\circ B`$ bijects the ordinary $`\Delta`$-qualified class, and also the reversible class, with inverse $`B\mapsto E^{-1}\circ B`$. It changes each observed agreement precisely to its $`E`$-image. Reindexing this quantified class proves the claimed equivalence.
@@ -286,7 +286,7 @@ Under full reversible separation, $`P`$ is true for either class. Every reversib
 ```math
 \mathsf S_{\mathrm{rev}}\ \equiv\ \Box\mathsf S_{\mathrm{rev}},
 \qquad
-\mathsf S_{\mathrm{rev}}\ \Longrightarrow\ \mathrm{C5}+\Box\mathrm{OS}.
+\mathsf S_{\mathrm{rev}}\ \Longrightarrow\ \mathrm{C5}+\Box\mathrm{OS}
 ```
 
 Boxes mean separately boxed instances. No converse from C5 + necessary OS is established here.
@@ -300,7 +300,7 @@ The image of a Boolean observer is a Boolean subalgebra. The internal finite-car
 Given a nonbottom output $`Ed`$, apply this lemma to the nonzero image elements below $`Ed`$. It gives an atom $`b`$ of the image, with $`b\le Ed`$. This is a relative image atom, not yet an atom of the whole proposition algebra. It decides every output: $`b\le Ep`$ or $`b\le\neg Ep`$. Put
 
 ```math
-F(p)=\Box(b\to Ep).
+F(p)=\Box(b\to Ep)
 ```
 
 C5 keeps $`b`$ nonbottom necessarily. In the first decision case, 4 makes $`Fp=\top`$; in the second, NI preserves $`b\le\neg Ep`$, and stable nonbottomness gives $`Fp=\bot`$. Thus $`F`$ has endpoint outputs. The relative atom decisions verify its pointwise Boolean identities. NI, BF and Intensionality upgrade them to composite identities.
@@ -310,7 +310,7 @@ For a listed type $`\sigma`$, qualified universal preservation and BF/CBF give t
 ```math
 \Box\bigl(b\to E(\forall x^\sigma Xx)\bigr)
 =
-\forall x^\sigma\Box(b\to E(Xx)).
+\forall x^\sigma\Box(b\to E(Xx))
 ```
 
 More explicitly, substitute the universal law of $`E`$, distribute the fixed antecedent through the quantifier, and use BF to commute necessity with that quantifier. Necessary BF and persistent Good give the identities between the composite operations on $`X`$; existential preservation follows by Boolean duality. Consequently $`F`$ retains each listed qualification. Since $`Fd=\top`$, it distinguishes $`d`$ from $`\bot`$.
@@ -320,7 +320,7 @@ This proves, using the endpoint characterization,
 ```math
 \boxed{\mathrm{C5}+\mathsf S_{\mathrm{fin}}
 \ \equiv\ \mathrm{C5}+\mathrm{Atomicity}_t
-\ \equiv\ \mathsf S_{\mathrm{end}}.}
+\ \equiv\ \mathsf S_{\mathrm{end}}}
 ```
 
 The converse uses the finite image $`\{\top,\bot\}`$. The proof works for each fixed finite output list as well as for the internal finiteness formula, and requires no common bound across witnesses.
@@ -343,7 +343,7 @@ Combining this argument with the representation and finite-image results gives t
 &\equiv \mathsf S_{\mathrm{rev}}+
  \exists E\,(\mathrm{Good}_{\{t\}}(E)\land\mathrm{FinIm}(E))\\
 &\equiv \mathsf S_{\mathrm{rev}}+\mathsf S_{\mathrm{fin}}\\
-&\equiv \mathrm{C5}+\mathrm{Atomicity}_t.
+&\equiv \mathrm{C5}+\mathrm{Atomicity}_t
 \end{aligned}
 ```
 
@@ -354,7 +354,7 @@ There is a corresponding uniqueness result. Under reversible separation, a uniqu
 ```math
 \mathrm H+\mathsf S_{\mathrm{rev}}
 +\exists!E\,(\mathrm{Good}_{\{t\}}(E)\land\mathrm{End}(E))
-\ \equiv\ \mathrm{Extensionality}.
+\ \equiv\ \mathrm{Extensionality}
 ```
 
 Without separation, one endpoint observer can correspond to a sole atom alongside an atomless remainder, as at qualitative contrast $`W_0`$.
@@ -373,7 +373,7 @@ The following two chains are strict at every displayed arrow:
 ```math
 \mathsf S_{\mathrm{end}}
 \ \Longrightarrow\ \mathsf S_{\mathrm{fin}}
-\ \Longrightarrow\ \mathrm{OS}.
+\ \Longrightarrow\ \mathrm{OS}
 ```
 
 Reversible separation and finite-image separation are incomparable. Their witnesses use the existing constructions, with the following observer calculations.
@@ -395,7 +395,7 @@ The previously established boxed hierarchy is also strict at every arrow over C:
 \underbrace{\mathrm{C5}+\mathrm{Atomicity}_t}_{\text{endpoint separation}}
 \ \Longrightarrow\ \Box\mathrm{OS}
 \ \Longrightarrow\ \mathrm{OS}
-\ \Longrightarrow\ \mathrm{BF}.
+\ \Longrightarrow\ \mathrm{BF}
 ```
 
 | Converse that fails | Model and evaluation point | Reason |
@@ -422,7 +422,7 @@ satisfy the composite Boolean identities and separate at $`W`$, while $`\mathrm{
 **Necessary qualification adds nothing to Good over C.** Remove the redundant equality clauses and call the remaining finite conjunction of operation identities $`B_\Delta(E)`$. NI and finite modal distribution give $`B_\Delta(E)\to\Box B_\Delta(E)`$; T gives the converse. The unconditional C equivalence $`B_\Delta(E)\leftrightarrow\mathrm{Good}_\Delta(E)`$, together with its necessitation, yields
 
 ```math
-\mathrm{Good}_\Delta(E)\leftrightarrow\Box\mathrm{Good}_\Delta(E).
+\mathrm{Good}_\Delta(E)\leftrightarrow\Box\mathrm{Good}_\Delta(E)
 ```
 
 Thus replacing Good by necessary Good leaves separation unchanged. Boxing the separation instance itself is stronger, as the $`W_1/W_0`$ example proves. This collapse concerns Good; no unconditional persistence of the additional Fact or End predicates is assumed.
@@ -430,14 +430,14 @@ Thus replacing Good by necessary Good leaves separation unchanged. Boxing the se
 **Existence, correctness and separation have different roles.** A qualified factive observer always exists: the identity. A correct evaluator with outputs in $`\{\top,\bot\}`$, without imposing Good, satisfies
 
 ```math
-\mathrm{Correct}(B):=\forall p\,[(p\to Bp=\top)\land(\neg p\to Bp=\bot)].
+\mathrm{Correct}(B):=\forall p\,[(p\to Bp=\top)\land(\neg p\to Bp=\bot)]
 ```
 
 Over C,
 
 ```math
 \exists B\,\mathrm{Correct}(B)
-\quad\leftrightarrow\quad \mathrm{Actuality}+\mathrm{ND}_t.
+\quad\leftrightarrow\quad \mathrm{Actuality}+\mathrm{ND}_t
 ```
 
 For the forward direction, $`w_B=\forall p(Bp\to p)`$ is true and necessarily entails each true $`p`$, giving Actuality. If $`p\ne q`$, correctness gives $`B(p=q)=\bot`$ and $`B\top=\top`$. NI preserves these output identities. The unconditional C implication $`p=q\to(p=q)=\top`$ excludes equality at any accessible point, giving $`\mathrm{ND}_t`$. Conversely, an Actuality witness is a true atom; ND makes it necessarily nonbottom, and its principal operation $`B(p)=\Box(w\to p)`$ has the required values. This equivalence does not include composite preservation in Correct.
@@ -450,7 +450,7 @@ Full OS is equivalent to separation by idempotent observers. For unequal $`p,q`$
 
 ```math
 c=d\land\neg Ed,\qquad
-F(r)=(c\land Er)\lor(\neg c\land r).
+F(r)=(c\land Er)\lor(\neg c\land r)
 ```
 
 Patching preserves qualification. Since $`Ec=Ed\land\neg E^2d`$, we have $`c\land Ec=\bot`$. Expansion gives $`F^2r=Fr`$, while $`Fd=d\land Ed`$ is false. Thus $`F`$ still distinguishes $`p,q`$. Under full OS, Functionality upgrades pointwise idempotence to the operation identity. This is a normalization of separating witnesses, so idempotence supplies no additional separation strength.

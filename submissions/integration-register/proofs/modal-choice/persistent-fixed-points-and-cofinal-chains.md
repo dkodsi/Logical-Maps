@@ -20,7 +20,7 @@ The two conclusions are:
 In particular, each choice package implies Actuality if the persistent propositions form a chain under entailment: between any two, one entails the other. Equivalently,
 
 ```math
-\forall p^t q^t\, .\,(\Box p\le\Box q\lor\Box q\le\Box p).
+\forall p^t q^t\, .\,(\Box p\le\Box q\lor\Box q\le\Box p)
 ```
  The unrestricted bare-C implications remain unresolved.
 
@@ -29,7 +29,7 @@ In particular, each choice package implies Actuality if the persistent propositi
 **Lemma.** Let f:tt be admitted. Suppose, currently, for every p∈O⁻,
 
 ```math
-f(p)\in O^-,\qquad p\le f(p).
+f(p)\in O^-,\qquad p\le f(p)
 \tag{1}
 ```
 
@@ -40,7 +40,7 @@ Define admitted terms
 
 ```math
 u(x):=f(\Box x)\land\neg\Box x,\qquad
-B:=\exists x^t\,u(x),\qquad r:=\Box B.
+B:=\exists x^t\,u(x),\qquad r:=\Box B
 \tag{2}
 ```
 
@@ -53,13 +53,13 @@ Unconditional existential introduction in C gives u(r)≤B. Also r≤B
 by T and □r=r by persistence. Apply (1) to r. Boolean algebra gives
 
 ```math
-f(r)=r\lor(f(r)\land\neg r)=r\lor u(r)\le B.
+f(r)=r\lor(f(r)\land\neg r)=r\lor u(r)\le B
 ```
 
 Since f(r) is persistent, algebraic monotonicity of □ gives
 
 ```math
-f(r)=\Box f(r)\le\Box B=r.
+f(r)=\Box f(r)\le\Box B=r
 ```
 
 Together with r≤f(r), this proves f(r)=r. In particular, there is no
@@ -83,7 +83,7 @@ Suppose there are an admitted chain D⊆O⁻ cofinal in O⁻ and an admitted
 current functional graph F on O such that
 
 ```math
-F(1)=1,\qquad p<F(p)\in D\quad(p\in O^-).
+F(1)=1,\qquad p<F(p)\in D\quad(p\in O^-)
 \tag{3}
 ```
 
@@ -96,7 +96,7 @@ intermediate value. We obtain an admitted internally wellordered
 chain C, closed under F², with conformity
 
 ```math
-c=\sup\{F^2(e):e\in C,\ e<c\}\quad(c\in C).
+c=\sup\{F^2(e):e\in C,\ e<c\}\quad(c\in C)
 \tag{4}
 ```
 
@@ -107,7 +107,7 @@ F²(c)≤e. Also F²(c) is proper whenever c is proper. Conformity at 1
 therefore proves
 
 ```math
-\sup(C\setminus\{1\})=1.
+\sup(C\setminus\{1\})=1
 \tag{5}
 ```
 
@@ -127,7 +127,7 @@ graphs:
 
 ```math
 A_c:=F(c)\land\neg c,\qquad
-B_c:=F^2(c)\land\neg F(c).
+B_c:=F^2(c)\land\neg F(c)
 \tag{6}
 ```
 
@@ -136,7 +136,7 @@ because c<e implies F²(c)≤e; the two bands at one stage are disjoint
 as well. BC_t supplies the scalar Boolean join
 
 ```math
-b:=\sup\{A_c:c\in C,\ c\ne1\}.
+b:=\sup\{A_c:c\in C,\ c\ne1\}
 \tag{7}
 ```
 
@@ -147,7 +147,7 @@ B_c≤¬b because each B_c is disjoint from every A-band.
 Define the admitted operation
 
 ```math
-h_b(p):=\Box(p\lor b)\lor\Box(p\lor\neg b).
+h_b(p):=\Box(p\lor b)\lor\Box(p\lor\neg b)
 \tag{8}
 ```
 
@@ -169,13 +169,13 @@ is nonempty because it contains 1. Let c be its least member. Every
 e∈C below c satisfies e≤p. For such e,
 
 ```math
-F(e)=e\lor A_e\le p\lor b.
+F(e)=e\lor A_e\le p\lor b
 ```
 
 Persistence of F(e) gives
 
 ```math
-F(e)\le\Box(p\lor b)\le h_b(p)=p.
+F(e)\le\Box(p\lor b)\le h_b(p)=p
 ```
 
 Similarly,
@@ -183,7 +183,7 @@ Similarly,
 ```math
 F^2(e)=F(e)\lor B_e\le p\lor\neg b,
 \qquad
-F^2(e)\le\Box(p\lor\neg b)\le p.
+F^2(e)\le\Box(p\lor\neg b)\le p
 ```
 
 Conformity (4) yields c≤p, a contradiction. This proves that the
@@ -200,7 +200,7 @@ have been assumed crisp, persistent, or necessarily wellordered.
 ```math
 \mathrm{Actuality};\qquad
 \mathrm{Vicinity};\qquad
-O^{-}\text{ has an admitted cofinal chain}.
+O^{-}\text{ has an admitted cofinal chain}
 \tag{9}
 ```
 

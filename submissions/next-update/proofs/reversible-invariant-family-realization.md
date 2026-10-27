@@ -12,7 +12,7 @@ Use $`B(E)`$ and $`A(E)`$ from [Reversible separation and fixed propositions](ht
 
 ```math
 A(E):=B(E)\land\exists F^{tt}
-\bigl(B(F)\land E\circ F=I\land F\circ E=I\bigr).
+\bigl(B(F)\land E\circ F=I\land F\circ E=I\bigr)
 ```
 
 Here $`B`$ consists of the whole-operation Boolean and type-t quantifier identities. The inverse is admitted and qualified. Over C5, qualification at t gives qualification at every fixed quantifier type; propositional separation by these observers gives full relational Rev. The guard $`A(E)`$ is an endpoint. The qualified observers contain identity and are closed under composition and admitted inverses.
@@ -22,14 +22,14 @@ Put
 ```math
 \mathrm{Inv}(p):=\forall E^{tt}(A(E)\to Ep=p),
 \qquad
-O(p):=\exists E^{tt}(A(E)\land Ep).
+O(p):=\exists E^{tt}(A(E)\land Ep)
 ```
 
 The cited note, §§2–4, proves that $`O(p)`$ is the least admitted invariant proposition above p, and
 
 ```math
 \mathrm{Rev}\ \Longleftrightarrow\
-\forall p\bigl(\mathrm{Inv}(p)\to(p=0\lor p=1)\bigr).
+\forall p\bigl(\mathrm{Inv}(p)\to(p=0\lor p=1)\bigr)
 \tag{1}
 ```
 
@@ -37,7 +37,7 @@ Let **EPNC** denote the original schema from [Component-shift symmetry](https://
 
 ```math
 \mathrm{End}(\bar R)\to
-\bigl(P(\bar R,\bar x)\leftrightarrow\Box P(\bar R,\bar x)\bigr).
+\bigl(P(\bar R,\bar x)\leftrightarrow\Box P(\bar R,\bar x)\bigr)
 \tag{2}
 ```
 
@@ -54,7 +54,7 @@ Fix qualified mutual inverses E and F. Define their typewise lifts simultaneousl
 E_{\sigma\rho}^*X
  &:=\lambda y^\sigma.\ E_\rho^*\bigl(X(F_\sigma^*y)\bigr),\\
 F_{\sigma\rho}^*X
- &:=\lambda y^\sigma.\ F_\rho^*\bigl(X(E_\sigma^*y)\bigr).
+ &:=\lambda y^\sigma.\ F_\rho^*\bigl(X(E_\sigma^*y)\bigr)
 \end{aligned}
 \tag{3}
 ```
@@ -64,7 +64,7 @@ No object of forbidden type ee is formed. Every transformation actually abstract
 Induction on types, beta reduction and C5 Functionality prove that the two lifts are mutually inverse. The same calculation proves application compatibility:
 
 ```math
-(E_{\sigma\rho}^*X)(E_\sigma^*y)=E_\rho^*(Xy).
+(E_{\sigma\rho}^*X)(E_\sigma^*y)=E_\rho^*(Xy)
 \tag{4}
 ```
 
@@ -77,7 +77,7 @@ For a quantifier, the calculation is
 E_{(\sigma t)t}^*(\forall_\sigma)(G)
  &=E\bigl(\forall y^\sigma\,F(G(E_\sigma^*y))\bigr)\\
  &=\forall y^\sigma\,G(E_\sigma^*y)\\
- &=\forall y^\sigma\,Gy.
+ &=\forall y^\sigma\,Gy
 \end{aligned}
 \tag{5}
 ```
@@ -88,14 +88,14 @@ Pure-term induction now gives
 
 ```math
 E_\tau^*\bigl(Q(\bar a)\bigr)
-   =Q(E_{\sigma_1}^*a_1,\ldots,E_{\sigma_k}^*a_k).
+   =Q(E_{\sigma_1}^*a_1,\ldots,E_{\sigma_k}^*a_k)
 \tag{6}
 ```
 
 There are only finitely many types in any application of this argument. For endpoint first-order relations, the lifted individual arguments remain unchanged and E fixes every output, so
 
 ```math
-E_{e^nt}^*R=R.
+E_{e^nt}^*R=R
 \tag{7}
 ```
 
@@ -115,7 +115,7 @@ For one admitted family $`X:tt`$, define
  &:=\forall E^{tt}\forall p^t
        \bigl((A(E)\land Xp)\to X(Ep)\bigr),\\
 J(X)&:=\exists p^t(Xp\land p),\\
-K(X)&:=\mathrm{End}_t(X)\land\mathrm{Closed}_A(X).
+K(X)&:=\mathrm{End}_t(X)\land\mathrm{Closed}_A(X)
 \end{aligned}
 \tag{8}
 ```
@@ -130,7 +130,7 @@ K(X)\to
 \exists p^t(Xp\land\Diamond p)
 \ \longrightarrow\
 \exists p^t(Xp\land p)
-\right)\right].}
+\right)\right]}
 \tag{9}
 ```
 
@@ -139,7 +139,7 @@ In words: an endpoint-valued admitted family closed under reversible logical obs
 **Closure really is conjugation stability.** Suppose K(X). If E has qualified inverse F, closure gives $`Xp\to X(Ep)`$. Apply closure for F to Ep to obtain the converse. Since X is endpoint-valued,
 
 ```math
-X(Ep)=Xp.
+X(Ep)=Xp
 \tag{10}
 ```
 
@@ -148,7 +148,7 @@ For this type, $`E_{tt}^*X=E\circ X\circ F`$. E fixes X's endpoint outputs, whil
 **The join J(X) is invariant.** E preserves the type-t existential and fixes each Xp, so
 
 ```math
-E(J(X))=\exists p^t\bigl(Xp\land Ep\bigr).
+E(J(X))=\exists p^t\bigl(Xp\land Ep\bigr)
 \tag{11}
 ```
 
@@ -159,7 +159,7 @@ The endpoint guard also gives
 ```math
 \Diamond J(X)
 \quad\longleftrightarrow\quad
-\exists p^t(Xp\land\Diamond p).
+\exists p^t(Xp\land\Diamond p)
 \tag{12}
 ```
 
@@ -170,7 +170,7 @@ A nonzero selected p lies below J(X), proving one direction. If no selected p is
 **(9) implies Rev.** For arbitrary r define the admitted orbit predicate
 
 ```math
-X_r(q):=\exists E^{tt}\bigl(A(E)\land q=Er\bigr).
+X_r(q):=\exists E^{tt}\bigl(A(E)\land q=Er\bigr)
 \tag{13}
 ```
 
@@ -183,7 +183,7 @@ Sentence (9) is also equivalent, over C5, to
 ```math
 \boxed{
 \forall X^{tt}\bigl(K(X)\to
-   (J(X)\leftrightarrow\Box J(X))\bigr).}
+   (J(X)\leftrightarrow\Box J(X))\bigr)}
 \tag{14}
 ```
 
@@ -212,7 +212,7 @@ H_p(q):=(q=p)
 is endpoint-valued under C5, and the admitted join laws give
 
 ```math
-J(H_p)=p.
+J(H_p)=p
 \tag{17}
 ```
 
@@ -224,7 +224,7 @@ The collapse already occurs with an endpoint-valued **second-order predicate on 
 
 ```math
 L(X):=\exists F^{et}\bigl(XF\land\forall x^e Fx\bigr),
-\qquad X:(et)t.
+\qquad X:(et)t
 \tag{18}
 ```
 
@@ -243,7 +243,7 @@ The two principles say exactly
 ```math
 \begin{aligned}
 \mathrm{EPNC}&\quad\Longleftrightarrow\quad\mathcal D=\{0,1\},\\
-\mathrm{Rev}&\quad\Longleftrightarrow\quad\mathcal I=\{0,1\}.
+\mathrm{Rev}&\quad\Longleftrightarrow\quad\mathcal I=\{0,1\}
 \end{aligned}
 \tag{19}
 ```
@@ -254,7 +254,7 @@ A sufficient representational hypothesis is **order density in the invariant alg
 
 ```math
 \forall u\in\mathcal I\setminus\{0\}\quad
-\exists d\in\mathcal D\setminus\{0\}\quad d\le u.
+\exists d\in\mathcal D\setminus\{0\}\quad d\le u
 \tag{20}
 ```
 
@@ -270,7 +270,7 @@ Suppose there are finitely many pure formulas $`\delta_1(x),\ldots,\delta_m(x)`$
 
 ```math
 \mathrm{EPNC}\quad\Longleftrightarrow\quad
-\mathrm{NoPureContingency}.
+\mathrm{NoPureContingency}
 \tag{21}
 ```
 

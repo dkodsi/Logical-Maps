@@ -11,7 +11,7 @@ Use the revised whole-operation qualification Good_Δ from [Logical observer sep
 The **native modality** is the framework's original operation
 
 ```math
-\Box p:=(p=\top).
+\Box p:=(p=\top)
 ```
 
 For an admitted E:tt define
@@ -21,7 +21,7 @@ For an admitted E:tt define
 \mathrm{BoxComm}(E)&:\quad
  (\lambda p^t.\,E(\Box p))=(\lambda p^t.\,\Box(Ep)),\\
 \mathrm{Inj}(E)&:\quad
- \forall p,q^t\,[Ep=Eq\to p=q].
+ \forall p,q^t\,[Ep=Eq\to p=q]
 \end{aligned}
 \tag{1}
 ```
@@ -35,7 +35,7 @@ Write BoxSep(τ,Δ) for the usual separation sentence S_{τ,Δ}[BoxComm], and In
  \forall E^{tt}\left(
  \mathrm{Good}_\Delta(E)\land\mathrm{BoxComm}(E)
  \to\forall\bar z\,[E(X[\bar z])\leftrightarrow E(Y[\bar z])]
- \right)\right].
+ \right)\right]
 \tag{2}
 ```
 
@@ -47,7 +47,7 @@ Forgetting restrictions gives, over H,
 \mathrm{SplitMono}\Longrightarrow\mathrm{InjSep}
 \Longrightarrow\mathrm{OS},
 \qquad
-\mathrm{BoxSep}\Longrightarrow\mathrm{OS}.
+\mathrm{BoxSep}\Longrightarrow\mathrm{OS}
 \tag{3}
 ```
 
@@ -60,7 +60,7 @@ There is a finite local theorem. For every admitted type σ, over C,
 ```math
 \mathrm{BF}_\sigma+\mathrm{BoxSep}(t,\Delta)
 \quad\Longrightarrow\quad\Box\mathrm{BF}_\sigma,
-\qquad \{\sigma,\sigma t\}\subseteq\Delta.
+\qquad \{\sigma,\sigma t\}\subseteq\Delta
 \tag{4}
 ```
 
@@ -69,7 +69,7 @@ Here BF_σ denotes its closed predicate formulation
 ```math
 B_\sigma:=\forall F^{\sigma t}
  \left[(\forall x^\sigma\,\Box Fx)
-       \to\Box(\forall x^\sigma Fx)\right].
+       \to\Box(\forall x^\sigma Fx)\right]
 \tag{5}
 ```
 
@@ -78,7 +78,7 @@ Assume current B_σ and fix an arbitrary Good_Δ observer E satisfying BoxComm. 
 ```math
 \forall F^{\sigma t}
  \left[(\forall x^\sigma\,\Box E(Fx))
-       \to\Box(\forall x^\sigma E(Fx))\right].
+       \to\Box(\forall x^\sigma E(Fx))\right]
 \tag{6}
 ```
 
@@ -91,7 +91,7 @@ Full BoxSep first recovers current BF by (3), and provides every finite list nee
 ```math
 \boxed{\mathrm H+\mathrm{BoxSep}
 \ \Longrightarrow\ \mathrm C+\mathrm{OS}
- +\Box\mathrm{BF}+\Box\mathrm{Functionality}+.2.}
+ +\Box\mathrm{BF}+\Box\mathrm{Functionality}+.2}
 \tag{7}
 ```
 
@@ -104,7 +104,7 @@ The .2 conclusion has a smaller local premise. Put FixBottom(E):=(EBottom=Bottom
 ```math
 \mathrm{Sep}_t[\mathrm{FixBottom}\land\mathrm{BoxComm}]
 \quad\Longrightarrow\quad
-\forall p^t\,[\Diamond\Box p\to\Box\Diamond p].
+\forall p^t\,[\Diamond\Box p\to\Box\Diamond p]
 \tag{7a}
 ```
 
@@ -126,14 +126,14 @@ For any Good_Δ observer E, C5 proves
 
 ```math
 \boxed{\mathrm{BoxComm}(E)
-\ \leftrightarrow\ \mathrm{Inj}(E).}
+\ \leftrightarrow\ \mathrm{Inj}(E)}
 \tag{8}
 ```
 
 C5 makes each identity proposition an endpoint. In particular □p equals Top when p=Top and equals Bottom otherwise. Because E fixes endpoints,
 
 ```math
-E(\Box p)=\Box p.
+E(\Box p)=\Box p
 \tag{9}
 ```
 
@@ -145,7 +145,7 @@ Consequently, at every fixed τ and finite Δ over C5,
 
 ```math
 \mathrm{BoxSep}(\tau,\Delta)
-\ \leftrightarrow\ \mathrm{InjSep}(\tau,\Delta).
+\ \leftrightarrow\ \mathrm{InjSep}(\tau,\Delta)
 \tag{10}
 ```
 
@@ -159,7 +159,7 @@ For an arbitrary admitted E:tt, without any preservation assumption, C proves
 \boxed{
 \Box\mathrm{Inj}(E)
 \ \leftrightarrow\
-\exists F^{tt}\,[F\circ E=I].}
+\exists F^{tt}\,[F\circ E=I]}
 \tag{11}
 ```
 
@@ -168,7 +168,7 @@ The box closes the displayed p,q variables in Inj and leaves E as a parameter. T
 Define the admitted description term
 
 ```math
-D_E(q):=\forall p^t\,[(Ep=q)\to p].
+D_E(q):=\forall p^t\,[(Ep=q)\to p]
 \tag{12}
 ```
 
@@ -176,7 +176,7 @@ H proves the unconditional implication
 
 ```math
 \mathrm{Inj}(E)
-\to\forall x^t\,[D_E(Ex)\leftrightarrow x].
+\to\forall x^t\,[D_E(Ex)\leftrightarrow x]
 \tag{13}
 ```
 
@@ -202,7 +202,7 @@ with the usual order on the integer part and singleton individuals. A propositio
 Define an observer at * by observing the identity arrow at * and n→n+1 at each future integer n, on arbitrary inputs at each such stage. These profiles are admitted by fullness. All observation arrows act onto at every type, so the same Boolean and all-future quantifier calculation as for the omega-chain shifts proves every full Good law. On current propositions it acts by inverse image under
 
 ```math
-f(*)=*,\qquad f(n)=n+1.
+f(*)=*,\qquad f(n)=n+1
 \tag{14}
 ```
 
@@ -213,7 +213,7 @@ This f is a bijection of P. Thus E is currently bijective, and in particular inj
 In the [full omega-chain model](omega-chain-surjective-observers.md), a proposition at n is p⊆T_n and
 
 ```math
-(E_kp)(m)=p(m+k),\qquad k\ge0.
+(E_kp)(m)=p(m+k),\qquad k\ge0
 \tag{15}
 ```
 
@@ -226,7 +226,7 @@ They also commute with native Box. At every future m and arbitrary input p⊆T_m
 m\in E_k(\Box p)
 &\ \leftrightarrow\ T_{m+k}\subseteq p,\\
 m\in\Box(E_kp)
-&\ \leftrightarrow\ \forall j\ge m\ [j+k\in p].
+&\ \leftrightarrow\ \forall j\ge m\ [j+k\in p]
 \end{aligned}
 \tag{16}
 ```
@@ -252,7 +252,7 @@ For each old arrow b:X→Z, use the newly selected root observer
 
 ```math
 O_b=(h_b,I_B),\qquad
-h_b(\varepsilon,q):=[b\in q].
+h_b(\varepsilon,q):=[b\in q]
 \tag{18}
 ```
 
@@ -262,7 +262,7 @@ For p=(ε,q), put δ=1 if q=Top_B and δ=0 otherwise. The old equality judgment 
 
 ```math
 \Box_*(\varepsilon,q)
-  =(\varepsilon\land\delta,\delta\,\top_B).
+  =(\varepsilon\land\delta,\delta\,\top_B)
 \tag{19}
 ```
 
@@ -270,7 +270,7 @@ Here δTop_B denotes Top_B or Bottom_B according to δ. Equations (18)–(19) gi
 
 ```math
 O_b(\Box_*p)=(\delta,\delta\top_B)
-            =\Box_*(O_bp).
+            =\Box_*(O_bp)
 \tag{20}
 ```
 
@@ -282,7 +282,7 @@ The root identity observer distinguishes different first bits. If old tails diff
 \boxed{
 \mathrm C+\mathrm{BoxSep}+\Box\mathrm{BF}
 +\Box\mathrm{Functionality}
-+\neg\Box\mathrm{OS}(t,\varnothing).}
++\neg\Box\mathrm{OS}(t,\varnothing)}
 \tag{21}
 ```
 
@@ -295,7 +295,7 @@ The following implications hold for the full schemas over H:
 ```math
 \mathrm{Rev}\Longrightarrow\mathrm{BoxSep}
 \Longrightarrow\mathrm{OS}+\Box\mathrm{BF}
-+\Box\mathrm{Functionality}+.2.
++\Box\mathrm{Functionality}+.2
 \tag{22}
 ```
 
@@ -312,7 +312,7 @@ Over C5 the full schemas form the strict chain
 ```math
 \mathrm{Rev}\Longrightarrow
 \mathrm{InjSep}\ \Longleftrightarrow\ \mathrm{BoxSep}
-\Longrightarrow\mathrm{OS}.
+\Longrightarrow\mathrm{OS}
 \tag{23}
 ```
 

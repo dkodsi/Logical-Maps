@@ -8,7 +8,7 @@ Over C,
 
 ```math
 \boxed{\mathrm{Atomicity}_t+\mathrm{Vicinity}
-\ \Longrightarrow\ \mathrm{Actuality}.}
+\ \Longrightarrow\ \mathrm{Actuality}}
 \tag{1}
 ```
 
@@ -16,7 +16,7 @@ Consequently, because current propositional ND implies Vicinity,
 
 ```math
 \boxed{ND_t+\mathrm{Atomicity}_t
-\ \Longrightarrow\ \mathrm{Actuality}.}
+\ \Longrightarrow\ \mathrm{Actuality}}
 \tag{2}
 ```
 
@@ -26,7 +26,7 @@ always implies Vicinity, (1) also gives the exact equivalence
 
 ```math
 \boxed{\text{over }C+\mathrm{Atomicity}_t:\qquad
-\mathrm{Actuality}\ \longleftrightarrow\ \mathrm{Vicinity}.}
+\mathrm{Actuality}\ \longleftrightarrow\ \mathrm{Vicinity}}
 \tag{3}
 ```
 
@@ -52,7 +52,7 @@ Let $`w`$ witness Vicinity. Put
 
 ```math
 A_w:=\forall r^t(r\to w\le\Diamond r),
-\qquad s:=w\land A_w.
+\qquad s:=w\land A_w
 ```
 
 Both $`w`$ and $`A_w`$, hence $`s`$, are true. For every admitted type
@@ -60,7 +60,7 @@ $`\sigma`$ and every admitted predicate $`F^{\sigma t}`$,
 
 ```math
 \boxed{\forall x^\sigma(s\le F(x))
-\ \Longrightarrow\ s\le\forall x^\sigma F(x).}
+\ \Longrightarrow\ s\le\forall x^\sigma F(x)}
 \tag{4}
 ```
 
@@ -71,7 +71,7 @@ To prove it, suppose $`T:=\forall x(s\le F(x))`$ is true. Since $`w\land T`$
 is true, Vicinity gives
 
 ```math
-w\le\Diamond(w\land T).
+w\le\Diamond(w\land T)
 \tag{5}
 ```
 
@@ -80,7 +80,7 @@ an available $`x`$ satisfies $`\neg F(x)`$. The $`A_w`$ conjunct of $`s`$
 applied there to the true proposition $`s\land\neg F(x)`$ gives
 
 ```math
-w\le\Diamond(s\land\neg F(x)).
+w\le\Diamond(s\land\neg F(x))
 \tag{6}
 ```
 
@@ -106,7 +106,7 @@ Write $`\mathsf A`$ for the closed Actuality proposition. Fix any current
 atom $`a`$. For every current proposition $`q`$, Boolean atomicity gives
 
 ```math
-D_a(q):=(a\le q\ \lor\ a\le\neg q).
+D_a(q):=(a\le q\ \lor\ a\le\neg q)
 \tag{7}
 ```
 
@@ -119,7 +119,7 @@ $`s\le D_a(q)`$ for every current $`q`$. Applying (4) with
 $`F(q)=D_a(q)`$ gives
 
 ```math
-s\le\forall q^t\,D_a(q).
+s\le\forall q^t\,D_a(q)
 \tag{8}
 ```
 
@@ -127,7 +127,7 @@ C proves the universally closed implication
 
 ```math
 \left(a\land\forall q^t(a\le q\lor a\le\neg q)\right)
-\ \longrightarrow\ \mathsf A.
+\ \longrightarrow\ \mathsf A
 \tag{9}
 ```
 
@@ -139,7 +139,7 @@ bound (8) gives
 
 ```math
 s\land a\le\mathsf A,
-\qquad\text{equivalently}\qquad a\le(s\to\mathsf A).
+\qquad\text{equivalently}\qquad a\le(s\to\mathsf A)
 \tag{10}
 ```
 
@@ -148,7 +148,7 @@ proposition entailed by every current atom is necessary. Applying it to
 $`s\to\mathsf A`$ yields
 
 ```math
-\Box(s\to\mathsf A).
+\Box(s\to\mathsf A)
 ```
 
 Since $`s`$ is true, $`\mathsf A`$ is true. This proves (1).
@@ -173,7 +173,7 @@ Vicinity witness. Combining this with (1) proves (2).
 This also identifies a concrete core for (2): take
 
 ```math
-s=\forall r^t(r\to\Box\Diamond r).
+s=\forall r^t(r\to\Box\Diamond r)
 ```
 
 It is currently true by $`ND_t`$; its truth at other evaluations is used
@@ -186,7 +186,7 @@ Let Sₚₜ assert separation by admitted operations whose current outputs prese
 
 ```math
 S_{\mathrm{pt}}+\mathrm{OneAtom}
-\quad\longleftrightarrow\quad ND_t+\mathrm{Atomicity}_t.
+\quad\longleftrightarrow\quad ND_t+\mathrm{Atomicity}_t
 ```
 
 Separation and one atom give NDₜ, Actuality and Atomicityₜ: send the atom to a true atom, and transport that true atom below any given nonzero proposition. Conversely NDₜ and Atomicityₜ supply Actuality by §4, and swapping a suitable atom with a true atom gives the required observers. Thus under Atomicityₜ, Sₚₜ is exactly NDₜ.

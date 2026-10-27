@@ -14,7 +14,7 @@ the following implication holds over the fixed logic C:
 
 $$
  \mathrm{ND}_t\ \land\ \mathrm{IC}_{\tau t}
- \quad\Longrightarrow\quad \mathrm{WRP}_{\tau}.       \tag{1}
+ \quad\Longrightarrow\quad \mathrm{WRP}_{\tau}       \tag{1}
 $$
 
 Here **IC means Inextensible Comprehension, not Intensional Choice**.
@@ -30,7 +30,7 @@ $$
  \mathrm{WI}(A):=
  \forall Z\,.\,
  \bigl(\forall\bar x\,.\,A[\bar x]\to\Box Z[\bar x]\bigr)
-       \to A\le Z.
+       \to A\le Z
 $$
 
 Inextensibility is $\Box\mathrm{WI}(A)$; rigidity is persistence
@@ -46,7 +46,7 @@ $$
  \operatorname{Sep}(A):=
  \Box\forall\bar a\,\bar b\,.\,
  \bigl(A[\bar a]\land A[\bar b]\land\bar a\ne\bar b\bigr)
-              \to\Box(\bar a\ne\bar b).             \tag{2}
+              \to\Box(\bar a\ne\bar b)             \tag{2}
 $$
 
 Tuple equality is the conjunction of coordinate identities. All
@@ -68,7 +68,7 @@ $\neg p$ currently. Then $p\ne\top$, and current $\mathrm{ND}_t$
 gives
 
 $$
- \Box(p\ne\top)=\Box\neg\Box p.
+ \Box(p\ne\top)=\Box\neg\Box p
 $$
 
 Together with persistence this entails $\Box\neg p$. Thus an initially
@@ -91,14 +91,14 @@ $\bar a$ to obtain
 
 $$
  G\le\lambda\bar b\,.\,\bar b\ne\bar a,
- \quad\text{hence}\quad \Box\neg G[\bar a].
+ \quad\text{hence}\quad \Box\neg G[\bar a]
 $$
 
 Persistence of $A$ also gives $\Box A[\bar a]$. The same tuple
 therefore remains a witness to
 
 $$
- q:=\exists\bar a\,.\,A[\bar a]\land\neg G[\bar a].
+ q:=\exists\bar a\,.\,A[\bar a]\land\neg G[\bar a]
 $$
 
 The reached world and witness were arbitrary, so
@@ -120,7 +120,7 @@ necessary on every current $K$-tuple:
 
 $$
  \forall\bar a\,\bar b\,.\,
- A[\bar a]\land B[\bar b]\to\Box Z[\bar a,\bar b].
+ A[\bar a]\land B[\bar b]\to\Box Z[\bar a,\bar b]
 $$
 
 For a fixed current $A$-tuple $\bar a$, WI of $B$ gives
@@ -157,7 +157,7 @@ apply section 2, using its C-provable persistence. Thus
 
 $$
  \mathrm{ND}_t+\mathrm{IC}_{\tau}
-       \quad\Longrightarrow\quad\mathrm{TR}_{\tau}. \tag{3}
+       \quad\Longrightarrow\quad\mathrm{TR}_{\tau} \tag{3}
 $$
 
 The use of IC in (3) is essential to this argument.
@@ -176,7 +176,7 @@ Given an arbitrary $X^\tau$, form its singleton family
 
 $$
  J_X(Y):=\exists\bar a\,.\,
-           X[\bar a]\land Y=\delta_{\bar a}.
+           X[\bar a]\land Y=\delta_{\bar a}
 $$
 
 IC at $\tau t$ provides an inextensible $G^{\tau t}$ currently
@@ -190,7 +190,7 @@ NI. These are necessary containments, not a necessitated coextension.
 Put
 
 $$
- U[\bar a]:=\exists Y^\tau\,.\,G(Y)\land Y[\bar a].
+ U[\bar a]:=\exists Y^\tau\,.\,G(Y)\land Y[\bar a]
 $$
 
 We show $U$ is inextensible. At any reached world, $G$ is weakly
@@ -211,7 +211,7 @@ We have proved
 
 $$
  \mathrm{IC}_{\tau t}\quad\Longrightarrow\quad
- \mathrm{IC}_{\tau}.                              \tag{4}
+ \mathrm{IC}_{\tau}                              \tag{4}
 $$
 
 This descent is a C derivation; it uses neither ND nor any choice
@@ -225,7 +225,7 @@ Let
 
 $$
  R_F:=\lambda Y^\tau\,.\,
-             \operatorname{Rigid}(Y)\land Y\le F.
+             \operatorname{Rigid}(Y)\land Y\le F
 $$
 
 This property is persistent in C: both rigidity and entailment have
@@ -263,7 +263,7 @@ $\bar a$, so separation of $F$ and WI of $X$ give
 $\Box\neg X[\bar a]$. Thus every current $F$-tuple satisfies
 
 $$
- D_X[\bar a]:=\Box X[\bar a]\lor\Box\neg X[\bar a].
+ D_X[\bar a]:=\Box X[\bar a]\lor\Box\neg X[\bar a]
 $$
 
 By 4, this decision predicate is persistent. WI of $F$ at $v$
@@ -275,7 +275,7 @@ Now take any world $u$ accessible from $v$ and any current test $Z$
 there with
 
 $$
- \forall\bar a\,.\,X[\bar a]\to\Box Z[\bar a].       \tag{5}
+ \forall\bar a\,.\,X[\bar a]\to\Box Z[\bar a]       \tag{5}
 $$
 
 Every current $F$-tuple at $u$ satisfies $D_X$. In its positive
@@ -284,7 +284,7 @@ in its negative case, $\Box\neg X[\bar a]$ holds. In either case
 $\Box(X[\bar a]\to Z[\bar a])$. WI of $F$ **at $u$** yields
 
 $$
- F\le\lambda\bar a\,.\,X[\bar a]\to Z[\bar a].
+ F\le\lambda\bar a\,.\,X[\bar a]\to Z[\bar a]
 $$
 
 Since $X\le F$ persists, this implies $X\le Z$. We have proved
@@ -296,7 +296,7 @@ As $v$ and its current $X$ were arbitrary, we have proved
 $$
  \Box\forall X^\tau\,.\,
   \bigl(\operatorname{WeaklyRigid}(X)\land X\le F\bigr)
-                      \to\operatorname{Rigid}(X).  \tag{6}
+                      \to\operatorname{Rigid}(X)  \tag{6}
 $$
 
 The converse implication holds in C by T. Therefore the weak-power

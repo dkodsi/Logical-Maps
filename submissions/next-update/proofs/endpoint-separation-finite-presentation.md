@@ -7,14 +7,14 @@ Over C, one propositional separation formula and one correct truth evaluator giv
 \quad\Longleftrightarrow\quad
 S_{t,\{t\}}+\mathrm{Eval}
 \quad\Longleftrightarrow\quad
-S_{t,\{t\}}+\mathrm{ND}_t+\mathrm{BC}_{tt}.
+S_{t,\{t\}}+\mathrm{ND}_t+\mathrm{BC}_{tt}
 ```
 
 Here $`S_{t,\{t\}}`$ separates propositions using Boolean observers preserving the universal quantifier at $`t`$, as identities of whole operations. Put
 
 ```math
 \mathrm{Eval}:=\exists E^{tt}\, .\,
-\forall p^t\, .\,[(p\to Ep=\top)\land(\neg p\to Ep=\bot)].
+\forall p^t\, .\,[(p\to Ep=\top)\land(\neg p\to Ep=\bot)]
 ```
 
 No logical-preservation condition is part of Eval. Boolean Completeness at $`tt`$ concerns families of operations on propositions, not families of propositions.
@@ -26,7 +26,7 @@ The [evaluator construction](endpoint-evaluators-and-comprehension.md) proves
 ```math
 \mathrm{Eval}\longleftrightarrow\mathrm{Actuality}+\mathrm{ND}_t,
 \qquad
-\mathrm{ND}_t+\mathrm{BC}_{tt}\longrightarrow\mathrm{Eval}.
+\mathrm{ND}_t+\mathrm{BC}_{tt}\longrightarrow\mathrm{Eval}
 ```
 
 The separation formula supplies BF at $`t`$. If every $`Fp=\top`$, every qualified observer accepts each instance and therefore accepts its universal quantification. It also accepts Top. Separation identifies the universal proposition with Top.
@@ -46,7 +46,7 @@ For each separator $`O`$ qualified at $`t`$, the composite $`E_a\circ O`$ has en
 Given $`d\ne\bot`$, choose an endpoint separator $`B`$ with $`Bd=\top`$, and set
 
 ```math
-b_B=\forall p^t\, .\,(Bp\to p).
+b_B=\forall p^t\, .\,(Bp\to p)
 ```
 
 Endpoint fixing gives $`B(Bp)=Bp`$. Quantifier and Boolean preservation therefore give $`B(b_B)=\top`$, so $`b_B\ne\bot`$. Necessary universal instantiation gives $`b_B\le(Bp\to p)`$. If $`Bp=\top`$, then $`b_B\le p`$; otherwise $`B(\neg p)=\top`$, so $`b_B\le\neg p`$. Thus $`b_B`$ is an atom, and $`Bd=\top`$ gives $`b_B\le d`$.
@@ -64,7 +64,7 @@ The same constructions give
 \quad\equiv\quad
 \mathrm{C5}+\mathrm{Actuality}
 \quad\equiv\quad
-\mathrm C+\mathrm{ND}_t+\mathrm{BF}_t+\mathrm{BC}_{tt}.
+\mathrm C+\mathrm{ND}_t+\mathrm{BF}_t+\mathrm{BC}_{tt}
 ```
 
 Plenitude at $`t,t`$ realizes the unique endpoint output specified by current truth, giving Eval. The converse follows from the evaluator's explicit graph-realization construction.

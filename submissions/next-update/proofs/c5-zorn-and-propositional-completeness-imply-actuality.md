@@ -12,7 +12,7 @@ In the fixed finitary relational language,
 
 
 ```math
-\boxed{C5+BC_t+Zorn_t\ \Longrightarrow\ \mathrm{Actuality}.}
+\boxed{C5+BC_t+Zorn_t\ \Longrightarrow\ \mathrm{Actuality}}
 \tag{1}
 ```
 
@@ -48,7 +48,7 @@ Order the currently true propositions by reverse Boolean inclusion. Extend this 
 
 
 ```math
-R(p,q):=\neg p\ \lor\ (q\land q\le p).
+R(p,q):=\neg p\ \lor\ (q\land q\le p)
 \tag{3}
 ```
 
@@ -61,7 +61,7 @@ Let u be the actual infimum of D, supplied by BC_t. It is false. Replace D by th
 
 
 ```math
-D_0(p):=\exists d\,[Dd\land p=(d\land\neg u)].
+D_0(p):=\exists d\,[Dd\land p=(d\land\neg u)]
 \tag{4}
 ```
 
@@ -78,7 +78,7 @@ A **D-annulus** is a positive proposition of the form
 
 
 ```math
-b=d\setminus c,\qquad Dc,\ Dd,\quad c<d.
+b=d\setminus c,\qquad Dc,\ Dd,\quad c<d
 \tag{5}
 ```
 
@@ -93,7 +93,7 @@ For a proposition m, define H_m to be its maximal D-annuli:
 H_m(b):={}&\mathrm{Ann}_D(b)\land b\le m\\
 &\land\forall b'\bigl(
 \mathrm{Ann}_D(b')\land b'\le m\land b\le b'
-\ \longrightarrow\ b=b'\bigr).
+\ \longrightarrow\ b=b'\bigr)
 \end{aligned}
 \tag{6}
 ```
@@ -113,7 +113,7 @@ For valid p,q, write $`p\preceq q`$ when H_p is a subset of H_q and every new H_
 
 ```math
 \mathcal R(p,q):=\neg V(p)\ \lor\
-\bigl(V(q)\land p\preceq q\bigr).
+\bigl(V(q)\land p\preceq q\bigr)
 \tag{7}
 ```
 
@@ -134,7 +134,7 @@ Let X be an admitted $`\mathcal R`$-chain. Ignore its invalid members and let u 
 
 
 ```math
-Y(b):=\exists m\,[Xm\land V(m)\land H_m(b)].
+Y(b):=\exists m\,[Xm\land V(m)\land H_m(b)]
 \tag{8}
 ```
 
@@ -147,7 +147,7 @@ The proposition u is also the actual join of Y. Every Y-band lies below a consti
 
 
 ```math
-H_u=Y\quad\hbox{as current extensions}.
+H_u=Y\quad\hbox{as current extensions}
 \tag{9}
 ```
 
@@ -158,7 +158,7 @@ Zorn_t now yields a maximal valid code m. It meets every D-member. Otherwise let
 
 
 ```math
-0<c<e<d.
+0<c<e<d
 \tag{10}
 ```
 
@@ -190,7 +190,7 @@ Suppose L is an admitted, reverse-wellordered chain of true propositions with ac
 ```math
 \mathrm{First}(p,c):=
 Lc\land p\nleq c\land
-\forall d\bigl(Ld\land p\nleq d\ \longrightarrow\ d\le c\bigr).
+\forall d\bigl(Ld\land p\nleq d\ \longrightarrow\ d\le c\bigr)
 \tag{12}
 ```
 
@@ -202,7 +202,7 @@ The proposition p∧c is true, hence nonzero, and is strictly below p. Define
 \begin{aligned}
 F(p,q):={}&(\neg p\land q=0)\\
 &\lor\bigl(p\land 0<q<p\land
-\exists c[\mathrm{First}(p,c)\land q=(p\land c)]\bigr).
+\exists c[\mathrm{First}(p,c)\land q=(p\land c)]\bigr)
 \end{aligned}
 \tag{13}
 ```
@@ -226,7 +226,7 @@ Normalize its coefficients:
 \begin{aligned}
 c_p(q)&:=F(p,q)\land\forall z\,[F(p,z)\to z=q],\\
 d_p&:=\exists q\,c_p(q),\qquad
-a:=\forall p\,d_p.
+a:=\forall p\,d_p
 \end{aligned}
 \tag{15}
 ```
@@ -240,7 +240,7 @@ For all p,q define admitted operations
 ```math
 u_0(p,q):=p\land c_p(q)\land q,
 \qquad
-u_1(p,q):=p\land c_p(q)\land\neg q.
+u_1(p,q):=p\land c_p(q)\land\neg q
 \tag{16}
 ```
 
@@ -254,7 +254,7 @@ Finally,
 
 ```math
 \exists q\,[u_0(p,q)\lor u_1(p,q)]
-=p\land d_p=p.
+=p\land d_p=p
 \tag{17}
 ```
 
@@ -265,7 +265,7 @@ The entire-range calculation from §1 makes this their actual join. Define
 ```math
 \mathrm{Child}(p,r):=
 (0<p\le a)\land r>0\land
-\exists q\,[r=u_0(p,q)\lor r=u_1(p,q)].
+\exists q\,[r=u_0(p,q)\lor r=u_1(p,q)]
 \tag{18}
 ```
 
@@ -275,7 +275,7 @@ Child is crisp: its definition uses only identities, order assertions, and quant
 
 ```math
 p=\exists r\,[\mathrm{Child}(p,r)\land r]
-\qquad(0<p\le a).
+\qquad(0<p\le a)
 \tag{19}
 ```
 
@@ -291,7 +291,7 @@ Let D be an admitted family of pairwise disjoint positive propositions. Let T(d,
 
 ```math
 Dd\ \longrightarrow\
-\bigl(0<(b\land d)\ \land\ T(d,b\land d)\bigr).
+\bigl(0<(b\land d)\ \land\ T(d,b\land d)\bigr)
 \tag{20}
 ```
 
@@ -303,7 +303,7 @@ Let j be the actual join of D. A partial mask p is valid when p≤j and, for eac
 
 ```math
 Dd\land (p\land d)\ne0
-\ \longrightarrow\ q\land d=p\land d.
+\ \longrightarrow\ q\land d=p\land d
 \tag{21}
 ```
 
@@ -322,7 +322,7 @@ The full proofs of both chain facts are included in [Canonical-chain lemmas](pro
 
 
 ```math
-x=\inf_{[0,a]}\{f(y):My\text{ and }x<y\}.
+x=\inf_{[0,a]}\{f(y):My\text{ and }x<y\}
 \tag{22}
 ```
 
@@ -344,7 +344,7 @@ On [0,a] define the current functional graph
 
 ```math
 G(p,r):=(\neg p\land r=p)
-\ \lor\ (p\land\mathrm{Child}(p,r)\land r).
+\ \lor\ (p\land\mathrm{Child}(p,r)\land r)
 \tag{23}
 ```
 
@@ -356,7 +356,7 @@ Let Δ be the admitted family of children discarded at the true stages:
 
 ```math
 \Delta(d):=\exists p,r\,[Mp\land p\land G(p,r)
-\land\mathrm{Child}(p,d)\land d\ne r].
+\land\mathrm{Child}(p,d)\land d\ne r]
 \tag{24}
 ```
 
@@ -369,7 +369,7 @@ Apply §6 to D=Δ and T(d,r)=Child(d,r). This yields b with
 ```math
 \mathrm{Child}(d,b\land d),
 \qquad 0<(b\land d)<d
-\qquad(d\in\Delta).
+\qquad(d\in\Delta)
 \tag{25}
 ```
 
@@ -380,7 +380,7 @@ Define crisp tests
 ```math
 \begin{aligned}
 \mathrm{Mixed}(x)&:=(x\land b>0)\land(x\land\neg b>0),\\
-H(c)&:=\exists e\,[\mathrm{Child}(c,e)\land\mathrm{Mixed}(e)].
+H(c)&:=\exists e\,[\mathrm{Child}(c,e)\land\mathrm{Mixed}(e)]
 \end{aligned}
 \tag{26}
 ```
@@ -394,7 +394,7 @@ Define the admitted operation
 
 
 ```math
-g(p):=p\land\exists c\,[\mathrm{Child}(p,c)\land H(c)\land c].
+g(p):=p\land\exists c\,[\mathrm{Child}(p,c)\land H(c)\land c]
 \tag{27}
 ```
 
@@ -403,7 +403,7 @@ It is globally deflationary. These Boolean-order identities give the necessary i
 
 
 ```math
-g(p)=G(p).
+g(p)=G(p)
 \tag{28}
 ```
 
@@ -442,7 +442,7 @@ The established C5+Actuality implication to full Boolean Completeness gives the 
 ```math
 \boxed{\text{over }C5+Zorn_t:\qquad
 BC_t\ \longleftrightarrow\ \mathrm{Actuality}
-\ \longleftrightarrow\ \text{full Boolean Completeness}.}
+\ \longleftrightarrow\ \text{full Boolean Completeness}}
 \tag{31}
 ```
 

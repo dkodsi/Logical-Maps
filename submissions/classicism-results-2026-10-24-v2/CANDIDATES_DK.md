@@ -25,7 +25,7 @@ The background is finitary relational C unless stated otherwise.
 Every pair of distinct relations can be distinguished at some arguments by a suitably qualified logical observer.
 
 ```math
-\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,\bigl(\mathrm{Good}_\Delta(E)\bigr)\to\forall\bar z^{\bar\sigma}\, .\,\bigl(E(X[\bar z])\leftrightarrow E(Y[\bar z])\bigr)\Bigr]\to X=Y.
+\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,\bigl(\mathrm{Good}_\Delta(E)\bigr)\to\forall\bar z^{\bar\sigma}\, .\,\bigl(E(X[\bar z])\leftrightarrow E(Y[\bar z])\bigr)\Bigr]\to X=Y
 ```
 
 The same separation pattern applies to every relational type. $`\mathrm{Good}_\Delta(E)`$ has the uniform H definition in the [observer guide](LOGICAL-OBSERVERS.md#uniform-definitions-over-h), with simpler equivalent qualifications over C and C5. Types and finite lists index the schema; every instance is a finite object-language formula.
@@ -60,7 +60,7 @@ Start with [the maps, definitions and intuition](LOGICAL-OBSERVERS.md). The [str
 An admitted family of pairwise commuting logical observers collectively distinguishes every pair of distinct relations.
 
 ```math
-\mathrm{CoSep}_{\bar\sigma,\Delta}:=\exists K^{(tt)t}\, .\,\bigl(\forall E^{tt}\, .\,KE\to\mathrm{Good}_\Delta(E)\bigr)\land\bigl(\forall E,F^{tt}\, .\,(KE\land KF)\to E\circ F=F\circ E\bigr)\land\mathrm{Sep}_{\bar\sigma}(K).
+\mathrm{CoSep}_{\bar\sigma,\Delta}:=\exists K^{(tt)t}\, .\,\bigl(\forall E^{tt}\, .\,KE\to\mathrm{Good}_\Delta(E)\bigr)\land\bigl(\forall E,F^{tt}\, .\,(KE\land KF)\to E\circ F=F\circ E\bigr)\land\mathrm{Sep}_{\bar\sigma}(K)
 ```
 
 Each relational type and finite qualification list gives one instance. Over C5 it suffices to separate propositions with N(E) ∧ Q_t(E).
@@ -68,7 +68,7 @@ Each relational type and finite qualification list gives one instance. Over C5 i
 Here $`\mathrm{Sep}_{\bar\sigma}(K)`$ means
 
 ```math
-\mathrm{Sep}_{\bar\sigma}(K):=\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,KE\to\forall\bar x^{\bar\sigma}\, .\,\bigl(E(X[\bar x])\leftrightarrow E(Y[\bar x])\bigr)\Bigr]\to X=Y.
+\mathrm{Sep}_{\bar\sigma}(K):=\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,KE\to\forall\bar x^{\bar\sigma}\, .\,\bigl(E(X[\bar x])\leftrightarrow E(Y[\bar x])\bigr)\Bigr]\to X=Y
 ```
 
 Good has the qualification of Logical Observer Separation above. Over C it requires preservation of conjunction, negation and the tested universal quantifiers as whole-operation identities.
@@ -90,13 +90,13 @@ Good has the qualification of Logical Observer Separation above. Over C it requi
 Every surjective operation between relational types has a pointwise right inverse.
 
 ```math
-\forall f^{\sigma\tau}\, .\,\mathrm{Surj}(f)\to\exists g^{\tau\sigma}\, .\,\forall y^\tau\, .\,f(gy)=y\qquad(\sigma,\tau\ne e).
+\forall f^{\sigma\tau}\, .\,\mathrm{Surj}(f)\to\exists g^{\tau\sigma}\, .\,\forall y^\tau\, .\,f(gy)=y\qquad(\sigma,\tau\ne e)
 ```
 
 Here
 
 ```math
-\mathrm{Surj}(f):=\forall y^\tau\, .\,\exists x^\sigma\, .\,fx=y.
+\mathrm{Surj}(f):=\forall y^\tau\, .\,\exists x^\sigma\, .\,fx=y
 ```
 
 - Over C: Functional Choice ⇔ Actuality + Sections of Surjections.
@@ -108,7 +108,7 @@ Here
 Every actually surjective operation between relational types has a necessarily correct right inverse.
 
 ```math
-\forall f^{\sigma\tau}\, .\,\mathrm{Surj}(f)\to\exists g^{\tau\sigma}\, .\,\Box\forall y^\tau\, .\,f(gy)=y\qquad(\sigma,\tau\ne e).
+\forall f^{\sigma\tau}\, .\,\mathrm{Surj}(f)\to\exists g^{\tau\sigma}\, .\,\Box\forall y^\tau\, .\,f(gy)=y\qquad(\sigma,\tau\ne e)
 ```
 
 $`\mathrm{Surj}`$ is as defined under Sections of Surjections. The antecedent asserts actual surjectivity; the inverse equation holds necessarily.
@@ -128,20 +128,20 @@ $`\mathrm{Surj}`$ is as defined under Sections of Surjections. The antecedent as
 Every injective operation between relational types has a pointwise left inverse.
 
 ```math
-\forall f^{\sigma\tau}\, .\,\mathrm{Inj}(f)\to\exists g^{\tau\sigma}\, .\,\forall x^\sigma\, .\,g(fx)=x\qquad(\sigma,\tau\ne e).
+\forall f^{\sigma\tau}\, .\,\mathrm{Inj}(f)\to\exists g^{\tau\sigma}\, .\,\forall x^\sigma\, .\,g(fx)=x\qquad(\sigma,\tau\ne e)
 ```
 
 Here
 
 ```math
-\mathrm{Inj}(f):=\forall x,y^\sigma\, .\,fx=fy\to x=y.
+\mathrm{Inj}(f):=\forall x,y^\sigma\, .\,fx=fy\to x=y
 ```
 
 - Over C: Plenitude ⇔ Actuality + Retractions of Injections.
 - Requiring a necessarily correct inverse gives exactly C5 over C:
 
 ```math
-\forall f^{\sigma\tau}\, .\,\mathrm{Inj}(f)\to\exists g^{\tau\sigma}\, .\,\Box\forall x^\sigma\, .\,g(fx)=x\qquad(\sigma,\tau\ne e).
+\forall f^{\sigma\tau}\, .\,\mathrm{Inj}(f)\to\exists g^{\tau\sigma}\, .\,\Box\forall x^\sigma\, .\,g(fx)=x\qquad(\sigma,\tau\ne e)
 ```
 
 **Sources:** [functional-choice-by-sections.md](source/research/2026-10-22/notes/functional-choice-by-sections.md) (§§1–6) · [choice-uniformization.md](source/research/2026-10-22/notes/choice-uniformization.md) (§§11–20).
@@ -159,13 +159,13 @@ Here
 One individual predicate can possibly agree with every admitted rigid individual property.
 
 ```math
-\exists V^{et}\, .\,\forall X^{et}\, .\,\mathrm{Rigid}(X)\to\Diamond c_V(X).
+\exists V^{et}\, .\,\forall X^{et}\, .\,\mathrm{Rigid}(X)\to\Diamond c_V(X)
 ```
 
 For $`V,X^{et}`$, put
 
 ```math
-c_V(X):=\forall x^e\, .\,Vx\leftrightarrow Xx.
+c_V(X):=\forall x^e\, .\,Vx\leftrightarrow Xx
 ```
 
 Profiles range over admitted rigid individual properties. This differs from the database’s Actual Profile principle.
@@ -180,7 +180,7 @@ Profiles range over admitted rigid individual properties. This differs from the 
 One individual predicate has an atomic agreement proposition for each admitted rigid individual property.
 
 ```math
-\exists V^{et}\, .\,\forall X^{et}\, .\,\mathrm{Rigid}(X)\to\mathrm{Atom}_t(c_V(X)).
+\exists V^{et}\, .\,\forall X^{et}\, .\,\mathrm{Rigid}(X)\to\mathrm{Atom}_t(c_V(X))
 ```
 
 The agreement proposition $`c_V(X)`$ is defined under Individual Profile Realization. Profiles again range over admitted rigid individual properties.
@@ -200,7 +200,7 @@ The agreement proposition $`c_V(X)`$ is defined under Individual Profile Realiza
 A numerical quantity necessarily takes exactly one natural value, and every current natural value is possible.
 
 ```math
-\exists L^{\nu_\kappa t}\, .\,\bigl(\Box\exists!n^{\nu_\kappa}\, .\,\mathbb N_\kappa n\land Ln\bigr) \land\bigl(\forall n^{\nu_\kappa}\, .\,\mathbb N_\kappa n\to\Diamond Ln\bigr).
+\exists L^{\nu_\kappa t}\, .\,\bigl(\Box\exists!n^{\nu_\kappa}\, .\,\mathbb N_\kappa n\land Ln\bigr) \land\bigl(\forall n^{\nu_\kappa}\, .\,\mathbb N_\kappa n\to\Diamond Ln\bigr)
 ```
 
 The counting type $`\kappa`$ determines the Frege numerical type $`\nu_\kappa=(\kappa t)t`$, with finite-cardinality predicate $`\mathbb N_\kappa`$. The principle is a schema in $`\kappa`$.
@@ -222,7 +222,7 @@ The counting type $`\kappa`$ determines the Frege numerical type $`\nu_\kappa=(\
 Every infinitary formula defines a relation with the same truth conditions at every accessible point.
 
 ```math
-\exists R^{\sigma_1\cdots\sigma_n t}\, .\,\Box\forall x_1\cdots x_n\, .\,\bigl(R[\bar x]\leftrightarrow A\bigr).
+\exists R^{\sigma_1\cdots\sigma_n t}\, .\,\Box\forall x_1\cdots x_n\, .\,\bigl(R[\bar x]\leftrightarrow A\bigr)
 ```
 
 A is any classical formula built using arbitrary set-sized well-founded conjunctions and disjunctions, with any set-sized family of typed parameters; R is not free in A. Each instance holds for every simultaneous parameter assignment. The argument tuple is finite and may be empty.
@@ -244,13 +244,13 @@ These six propositional operator requirements form a strict hierarchy over C. Th
 For $`E^{tt}`$, define
 
 ```math
-\mathrm{Eval}(E):=\forall p^t\, .\,(p\to Ep=\top)\land(\neg p\to Ep=\bot).
+\mathrm{Eval}(E):=\forall p^t\, .\,(p\to Ep=\top)\land(\neg p\to Ep=\bot)
 ```
 
 ### Truth Test
 
 ```math
-\exists f^{tt}\, .\,\forall p^t\, .\,p\leftrightarrow fp=f\top.
+\exists f^{tt}\, .\,\forall p^t\, .\,p\leftrightarrow fp=f\top
 ```
 
 **Equivalent over C:** Actuality.
@@ -258,7 +258,7 @@ For $`E^{tt}`$, define
 ### Correct Evaluation
 
 ```math
-\exists E^{tt}\, .\,\mathrm{Eval}(E).
+\exists E^{tt}\, .\,\mathrm{Eval}(E)
 ```
 
 **Equivalent over C:** ND + Actuality.
@@ -266,7 +266,7 @@ For $`E^{tt}`$, define
 ### Correct Evaluation with ☐Bivalence
 
 ```math
-\exists E^{tt}\, .\,\mathrm{Eval}(E)\land\bigl(\Box\forall p^t\, .\,Ep=\top\lor Ep=\bot\bigr).
+\exists E^{tt}\, .\,\mathrm{Eval}(E)\land\bigl(\Box\forall p^t\, .\,Ep=\top\lor Ep=\bot\bigr)
 ```
 
 **Equivalent over C:** Gallin Extensional Comprehension; equivalently ND + Strong Actuality.
@@ -274,7 +274,7 @@ For $`E^{tt}`$, define
 ### Unique Correct Evaluation
 
 ```math
-\exists!E^{tt}\, .\,\mathrm{Eval}(E).
+\exists!E^{tt}\, .\,\mathrm{Eval}(E)
 ```
 
 **Equivalent over C:** C5 + Actuality.
@@ -282,7 +282,7 @@ For $`E^{tt}`$, define
 ### ☐Correct Evaluation
 
 ```math
-\Box\exists E^{tt}\, .\,\mathrm{Eval}(E).
+\Box\exists E^{tt}\, .\,\mathrm{Eval}(E)
 ```
 
 **Equivalent over C:** ☐Plenitude.
@@ -290,7 +290,7 @@ For $`E^{tt}`$, define
 ### Uniform Correct Evaluation
 
 ```math
-\exists E^{tt}\, .\,\Box\mathrm{Eval}(E).
+\exists E^{tt}\, .\,\Box\mathrm{Eval}(E)
 ```
 
 **Equivalent over C:** Extensionality.
@@ -316,13 +316,13 @@ w_E:=\forall p^t\, .\,Ep\to p,
 ```
 
 ```math
-D(E):=E\bot=\bot\land(\forall p^t\, .\,Ep=\top\lor Ep=\bot) \land(\forall p^t\, .\,E(\neg p)=\neg(Ep))\land E(w_E).
+D(E):=E\bot=\bot\land(\forall p^t\, .\,Ep=\top\lor Ep=\bot) \land(\forall p^t\, .\,E(\neg p)=\neg(Ep))\land E(w_E)
 ```
 
 The separation principle is
 
 ```math
-\forall p,q^t\, .\,p=q\leftrightarrow\forall E^{tt}\, .\,D(E)\to(Ep\leftrightarrow Eq).
+\forall p,q^t\, .\,p=q\leftrightarrow\forall E^{tt}\, .\,D(E)\to(Ep\leftrightarrow Eq)
 ```
 
 **Sources:** [diagonal-characters.md](proofs/diagonal-characters.md) (§§1–4).
@@ -336,7 +336,7 @@ Every rigid Boolean subalgebra, complete for admitted families, at every relatio
 For each relational type $`\tau`$, let $`\mathrm{CBA}_\tau(A)`$ say that $`A`$ is such a subalgebra, and $`\mathrm{CBHom}_\tau(r)`$ that $`r`$ preserves complements and all admitted meets. The principle is
 
 ```math
-\forall A^{\tau t}\, .\,\mathrm{CBA}_\tau(A)\to\exists r^{\tau\tau}\, .\,\bigl[\mathrm{CBHom}_\tau(r)\land\forall p^\tau\, A(rp) \land\forall q^\tau\,(Aq\to rq=q)\bigr].
+\forall A^{\tau t}\, .\,\mathrm{CBA}_\tau(A)\to\exists r^{\tau\tau}\, .\,\bigl[\mathrm{CBHom}_\tau(r)\land\forall p^\tau\, A(rp) \land\forall q^\tau\,(Aq\to rq=q)\bigr]
 ```
 
 **Sources:** [structural-algebraic-core.md](source/research/2026-10-22/notes/structural-algebraic-core.md) (§§16,18–19,38).

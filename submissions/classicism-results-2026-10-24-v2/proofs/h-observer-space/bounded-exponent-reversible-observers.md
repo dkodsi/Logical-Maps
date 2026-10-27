@@ -12,7 +12,7 @@ Work first over C5. Write 0,1 for Bottom, Top and I=λp.p. Let A(G) be the finit
 
 ```math
 A(G):=B(G)\land\exists H^{tt}
-[B(H)\land G\circ H=I\land H\circ G=I].
+[B(H)\land G\circ H=I\land H\circ G=I]
 \tag{1}
 ```
 
@@ -21,7 +21,7 @@ B is the conjunction of whole Boolean and type-t quantifier identities. As in [R
 For a fixed external integer n≥1 define the single finite sentence
 
 ```math
-\mathrm{Exp}_n:=\forall G^{tt}[A(G)\to G^n=I].
+\mathrm{Exp}_n:=\forall G^{tt}[A(G)\to G^n=I]
 \tag{2}
 ```
 
@@ -29,7 +29,7 @@ Gⁿ is the displayed n-fold composite; Gⁿ=I is identity of complete unary ope
 
 ```math
 k(n):=\max\{j\ge1:\text{ every integer }1\le m\le j
-                         \text{ divides }n\}.
+                         \text{ divides }n\}
 \tag{3}
 ```
 
@@ -38,7 +38,7 @@ The maximum exists: 1 divides n and n+1 does not. In particular k(n)+1 does not 
 ```math
 \mathrm{AtMost}_N(t):=
 \exists u_1\cdots u_N\ \forall p\
-(p=u_1\lor\cdots\lor p=u_N).
+(p=u_1\lor\cdots\lor p=u_N)
 \tag{4}
 ```
 
@@ -50,14 +50,14 @@ Assume full Rev, and hence C5. The [orbit-join theorem](reversible-fixed-proposi
 
 ```math
 O(d):=\exists G^{tt}[A(G)\land Gd]=1
-\qquad(d\ne0).
+\qquad(d\ne0)
 \tag{5}
 ```
 
 For any nonzero d,b there is therefore an admitted A-member G such that
 
 ```math
-Gd\land b\ne0.
+Gd\land b\ne0
 \tag{6}
 ```
 
@@ -67,7 +67,7 @@ Here is the extraction, including the case in which b is currently false. Meet b
 
 ```math
 c_i:=G_i d\ne0,\qquad c_i\le b_i
-\quad(1\le i\le m).
+\quad(1\le i\le m)
 \tag{7}
 ```
 
@@ -76,7 +76,7 @@ The c_i are disjoint, and their principal intervals are isomorphic by the admitt
 Start with d=b₁ and G₁=I. Suppose (7) holds for the first j members. Use (6) with the current d and b_{j+1} to choose G, and choose an admitted qualified inverse H. Replace d by
 
 ```math
-d':=d\land H(b_{j+1}).
+d':=d\land H(b_{j+1})
 \tag{8}
 ```
 
@@ -91,7 +91,7 @@ Keep the c_i,G_i from (7), choose admitted qualified inverses H_i, and read indi
 ```math
 T(p):=(r\land p)\lor
 \bigvee_{i=1}^{m}
-[c_{i+1}\land(G_{i+1}\circ H_i)(p)].
+[c_{i+1}\land(G_{i+1}\circ H_i)(p)]
 \tag{9}
 ```
 
@@ -100,7 +100,7 @@ Every composite G_{i+1}∘H_i is Good at every requested finite list. The output
 The transitions satisfy
 
 ```math
-(G_{i+1}\circ H_i)(c_i)=c_{i+1}.
+(G_{i+1}\circ H_i)(c_i)=c_{i+1}
 \tag{10}
 ```
 
@@ -109,21 +109,21 @@ Their inverses carry c_{i+1} back to c_i. Masking an input with c_i therefore le
 ```math
 T^s(p)=(r\land p)\lor
 \bigvee_{i=1}^{m}
-[c_{i+s}\land(G_{i+s}\circ H_i)(p)].
+[c_{i+s}\land(G_{i+s}\circ H_i)(p)]
 \tag{11}
 ```
 
 For s=0 this is the partition of p. The successor step follows because only consecutive regions overlap, and the maps telescope using H_i∘G_i=I. At s=m every map in (11) is identity, so Tᵐp=p for every p. Functionality gives
 
 ```math
-T^m=I.
+T^m=I
 \tag{12}
 ```
 
 Thus T is reversible with admitted qualified inverse T^{m−1}. Moreover Tˢc₁=c_{1+s}. For 0<s<m these are distinct nonzero disjoint propositions, so Tˢ≠I. Ordinary external division of n by m and (12) give
 
 ```math
-\boxed{T^n=I\quad\longleftrightarrow\quad m\mid n.}
+\boxed{T^n=I\quad\longleftrightarrow\quad m\mid n}
 \tag{13}
 ```
 
@@ -145,7 +145,7 @@ Conversely, k+1 disjoint nonzero elements yield 2^{k+1} distinct finite joins. I
 \quad\equiv\quad
 \mathrm{C5}+\mathrm{AtMost}_{2^k}(t)
 \quad\equiv\quad
-\mathrm H+\mathrm{End}+\mathrm{AtMost}_{2^k}(t).}
+\mathrm H+\mathrm{End}+\mathrm{AtMost}_{2^k}(t)}
 \tag{14}
 ```
 

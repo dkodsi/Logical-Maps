@@ -24,13 +24,13 @@ N(E):=(\lambda p^t\, .\,E(\neg p))=(\lambda p^t\, .\,\neg Ep),
 ```
 
 ```math
-Q_\sigma(E):=(\lambda F^{\sigma t}\, .\,E(\forall x^\sigma\, .\,Fx)) =(\lambda F^{\sigma t}\, .\,\forall x^\sigma\, .\,E(Fx)).
+Q_\sigma(E):=(\lambda F^{\sigma t}\, .\,E(\forall x^\sigma\, .\,Fx)) =(\lambda F^{\sigma t}\, .\,\forall x^\sigma\, .\,E(Fx))
 ```
 
 For a finite list of types Δ, put
 
 ```math
-\mathrm{Good}_\Delta(E):=M(E)\land N(E)\land\bigwedge_{\sigma\in\Delta}Q_\sigma(E).
+\mathrm{Good}_\Delta(E):=M(E)\land N(E)\land\bigwedge_{\sigma\in\Delta}Q_\sigma(E)
 ```
 
 Over C, these identities also give preservation of ⊤, ⊥ and the other Boolean operations, existential quantification at the same types, and the observed equality laws. Write $`\mathrm{Bool}_C(E):=M(E)\land N(E)`$. The [H formulation](#uniform-definitions-over-h) adds the clauses that do not yet follow without C. Types and finite lists index the schema; there is no quantification over types.
@@ -41,7 +41,7 @@ Over C, these identities also give preservation of ⊤, ⊥ and the other Boolea
 Using $`\mathrm{Good}_\Delta(E)`$ as defined above, the individual observer restrictions below have the following object-language form:
 
 ```math
-\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\, \bigl(\mathrm{Good}_\Delta(E)\land K(E)\bigr) \to\forall\bar x^{\bar\sigma}\, .\, \bigl(E(X[\bar x])\leftrightarrow E(Y[\bar x])\bigr)\Bigr] \to X=Y.
+\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\, \bigl(\mathrm{Good}_\Delta(E)\land K(E)\bigr) \to\forall\bar x^{\bar\sigma}\, .\, \bigl(E(X[\bar x])\leftrightarrow E(Y[\bar x])\bigr)\Bigr] \to X=Y
 ```
 
 Every pair of distinct relations is distinguished at some arguments by an eligible observer. K specifies the additional observer condition; OS takes it to be ⊤.
@@ -82,13 +82,13 @@ It differs from BoxSep, which requires each separating observer to preserve nece
 For OS over C, it is enough to separate propositions. For each type ρ of propositions or relations, put
 
 ```math
-K_\rho(E):=\mathrm{Bool}_C(E)\land Q_e(E)\land Q_\rho(E).
+K_\rho(E):=\mathrm{Bool}_C(E)\land Q_e(E)\land Q_\rho(E)
 ```
 
 Then OS is equivalent over C to the schema
 
 ```math
-\mathrm{Sep}_t(\lambda E^{tt}\, .\,K_\rho(E))\qquad(\rho\ne e).
+\mathrm{Sep}_t(\lambda E^{tt}\, .\,K_\rho(E))\qquad(\rho\ne e)
 ```
 
 These instances supply BF and therefore Functionality, which lifts proposition separation to relations. The same observer can handle any requested finite list by testing a common relational type.
@@ -103,13 +103,13 @@ These instances supply BF and therefore Functionality, which lifts proposition s
 Rev has an especially short formulation over C: conjunction-preserving observers that undo themselves distinguish any two distinct propositions. Put
 
 ```math
-J(E):=M(E)\land E\circ E=I.
+J(E):=M(E)\land E\circ E=I
 ```
 
 Then Rev is exactly
 
 ```math
-\forall p,q^t\, .\,\Bigl[\forall E^{tt}\, .\,J(E)\to(Ep\leftrightarrow Eq)\Bigr]\to p=q.
+\forall p,q^t\, .\,\Bigl[\forall E^{tt}\, .\,J(E)\to(Ep\leftrightarrow Eq)\Bigr]\to p=q
 ```
 
 The two laws in J already force preservation of negation and every typed quantifier. Proposition separation then supplies BF and Functionality, so separation of relations follows. [Proof](proofs/reversible-propositional-separation.md).
@@ -119,19 +119,19 @@ The two laws in J already force preservation of negation and every typed quantif
 The whole-operation identities can also be replaced by pointwise identities, provided separation is required necessarily. Put
 
 ```math
-J_{\mathrm{pt}}(E):=(\forall u,v^t\, .\,E(u\land v)=Eu\land Ev)\land(\forall u^t\, .\,E(Eu)=u).
+J_{\mathrm{pt}}(E):=(\forall u,v^t\, .\,E(u\land v)=Eu\land Ev)\land(\forall u^t\, .\,E(Eu)=u)
 ```
 
 **Pointwise separation**, Sₚₜ, says that observers satisfying these two conditions distinguish every pair of distinct propositions:
 
 ```math
-S_{\mathrm{pt}}:=\forall p,q^t\, .\,\Bigl[\forall E^{tt}\, .\,J_{\mathrm{pt}}(E)\to(Ep\leftrightarrow Eq)\Bigr]\to p=q.
+S_{\mathrm{pt}}:=\forall p,q^t\, .\,\Bigl[\forall E^{tt}\, .\,J_{\mathrm{pt}}(E)\to(Ep\leftrightarrow Eq)\Bigr]\to p=q
 ```
 
 Over C,
 
 ```math
-\mathrm{Rev}\ \longleftrightarrow\ \Box S_{\mathrm{pt}}\ \longleftrightarrow\ (S_{\mathrm{pt}}\land\mathrm{BF}_t).
+\mathrm{Rev}\ \longleftrightarrow\ \Box S_{\mathrm{pt}}\ \longleftrightarrow\ (S_{\mathrm{pt}}\land\mathrm{BF}_t)
 ```
 
 The necessity allows a different observer at each accessible evaluation. Unboxed Sₚₜ alone is weaker. [Exact scopes and proof](../integration-register/proofs/pointwise-reversible-separation.md).
@@ -144,13 +144,13 @@ A commuting family lets us apply any two of its observers in either order with t
 For a family $`K^{(tt)t}`$, write
 
 ```math
-\mathrm{Sep}_{\bar\sigma}(K):=\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,KE\to\forall\bar x^{\bar\sigma}\, .\,\bigl(E(X[\bar x])\leftrightarrow E(Y[\bar x])\bigr)\Bigr]\to X=Y.
+\mathrm{Sep}_{\bar\sigma}(K):=\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,KE\to\forall\bar x^{\bar\sigma}\, .\,\bigl(E(X[\bar x])\leftrightarrow E(Y[\bar x])\bigr)\Bigr]\to X=Y
 ```
 
 Then CoSep is the schema
 
 ```math
-\mathrm{CoSep}_{\bar\sigma,\Delta}:=\exists K^{(tt)t}\, .\,\bigl(\forall E^{tt}\, .\,KE\to\mathrm{Good}_\Delta(E)\bigr)\land\bigl(\forall E,F^{tt}\, .\,(KE\land KF)\to E\circ F=F\circ E\bigr)\land\mathrm{Sep}_{\bar\sigma}(K).
+\mathrm{CoSep}_{\bar\sigma,\Delta}:=\exists K^{(tt)t}\, .\,\bigl(\forall E^{tt}\, .\,KE\to\mathrm{Good}_\Delta(E)\bigr)\land\bigl(\forall E,F^{tt}\, .\,(KE\land KF)\to E\circ F=F\circ E\bigr)\land\mathrm{Sep}_{\bar\sigma}(K)
 ```
 
 CoIdemSep adds $`\forall E^{tt}\, .\,KE\to E\circ E=E`$ inside the same existential. These are conditions on a family, rather than on each observer separately.
@@ -162,7 +162,7 @@ Two further restrictions apply to the same family. **CoInjSep** requires its mem
 ```
 
 ```math
-\forall E^{tt}\, .\,KE\to\exists F^{tt}\, .\, \bigl(\mathrm{Good}_\Delta(F)\land E\circ F=I\land F\circ E=I\bigr).
+\forall E^{tt}\, .\,KE\to\exists F^{tt}\, .\, \bigl(\mathrm{Good}_\Delta(F)\land E\circ F=I\land F\circ E=I\bigr)
 ```
 
 **Over C5, one sentence suffices:** take $`\bar\sigma`$ empty, so only propositions are separated, and replace $`\mathrm{Good}_\Delta(E)`$ by $`N(E)\land Q_t(E)`$. The same family then qualifies and separates at every relational type. [Definitions and reduction](../integration-register/proofs/coherent-observers/object-language-and-finite-basis.txt), §§1–4.
@@ -219,7 +219,7 @@ The [fuller familiar-principles map](proofs/h-observer-space/GRAPH.md#9-the-larg
 Here .2 is
 
 ```math
-\forall p^t\, .\, (\Diamond\Box p\to\Box\Diamond p).
+\forall p^t\, .\, (\Diamond\Box p\to\Box\Diamond p)
 ```
 
 Necessity-preserving separation makes what could be necessary necessarily possible. Reversible separation gives both C5 and No Pure Contingency, even in atomless models. Endpoint separation entails reversible separation by constructing different observers; an endpoint-valued observer itself need not be invertible. C5 also turns surjective separation into reversible separation, as the two-headed arrow records.
@@ -309,7 +309,7 @@ SurjSep and SplitMono are incomparable, as are BoxSep and ☐OS. SplitMono stric
 Over C5, the same observer preserving the Boolean operations and the quantifier at t preserves every typed quantifier. Functionality is already available. OS, InjSep, SplitMono and Rev therefore reduce to their single propositional instance with qualification $`\mathrm{Bool}_C(E)\land Q_t(E)`$ and the stated restriction. In this setting:
 
 ```math
-\mathrm{SurjSep}\ \longleftrightarrow\ \mathrm{Rev},\qquad\mathrm{BoxSep}\ \longleftrightarrow\ \mathrm{InjSep}.
+\mathrm{SurjSep}\ \longleftrightarrow\ \mathrm{Rev},\qquad\mathrm{BoxSep}\ \longleftrightarrow\ \mathrm{InjSep}
 ```
 
 [C5 quantifier reduction](proofs/modal-selectors-and-quantifier-reduction.md#4-over-c5-q_t-supplies-every-quantifier) · [Surjectivity](proofs/h-observer-space/surjective-logical-observers.md) · [Necessity preservation and injectivity](proofs/h-observer-space/native-box-logical-observers.md#3-over-c5-native-box-preservation-is-injectivity) · [Finite-image separation](proofs/logical-observer-hierarchy.md#5-observers-with-finitely-many-outputs).
@@ -322,13 +322,13 @@ Over C, CoSep entails **OS + .2**: propositions cannot be possibly necessary and
 Over C5, **Atomicity is exactly separation by a stable commuting family of idempotent observers**. Stable membership means
 
 ```math
-\mathrm{Stable}(K):=\forall E^{tt}\, .\,(KE=\top\lor KE=\bot).
+\mathrm{Stable}(K):=\forall E^{tt}\, .\,(KE=\top\lor KE=\bot)
 ```
 
 It fixes which observers belong to the family; their outputs need not be endpoints. Thus
 
 ```math
-\mathrm{Atomicity}\quad\longleftrightarrow\quad\exists K^{(tt)t}\, .\,\mathrm{Stable}(K)\land\mathrm{Sep}_t(K) \land\bigl(\forall E\, .\,KE\to N(E)\land Q_t(E)\land E\circ E=E\bigr) \land\bigl(\forall E,F\, .\,(KE\land KF)\to E\circ F=F\circ E\bigr).
+\mathrm{Atomicity}\quad\longleftrightarrow\quad\exists K^{(tt)t}\, .\,\mathrm{Stable}(K)\land\mathrm{Sep}_t(K) \land\bigl(\forall E\, .\,KE\to N(E)\land Q_t(E)\land E\circ E=E\bigr) \land\bigl(\forall E,F\, .\,(KE\land KF)\to E\circ F=F\circ E\bigr)
 ```
 
 No Functional Choice is needed. Dropping stability gives the strictly weaker CoIdemSep; dropping idempotence gives CoSep, itself strictly stronger than OS. [Characterization](../integration-register/proofs/coherent-observers/stable-families-and-propagation.txt), §3; [strictness](../integration-register/proofs/coherent-observers/finite-alphabet-coherence-countermodels.txt).
@@ -338,7 +338,7 @@ No Functional Choice is needed. Dropping stability gives the strictly weaker CoI
 ☐Functional Choice supplies one stable commuting family of reversible observers that distinguishes all relations throughout possibility:
 
 ```math
-\Box\mathrm{Functional\ Choice}\quad\Longrightarrow\quad\mathrm{CoRevSep}.
+\Box\mathrm{Functional\ Choice}\quad\Longrightarrow\quad\mathrm{CoRevSep}
 ```
 
 The same family works necessarily, at every relational type and every finite list of quantifier qualifications. Already C5 + Atomicity suffices when the world atoms admit a well-order. [Construction](../integration-register/proofs/coherent-observers/choice-implies-coherent-reversible-separation.txt), §§1–7.
@@ -350,7 +350,7 @@ With Actuality, every member of a commuting injective separating family already 
 ```math
 \mathrm{Actuality}+\mathrm{CoInjSep}
 \quad\longleftrightarrow\quad
-\mathrm{C5}+\mathrm{Atomicity}+\mathrm{CoRevSep}.
+\mathrm{C5}+\mathrm{Atomicity}+\mathrm{CoRevSep}
 ```
 
 This package also gives ☐Plenitude and the necessary forms of Actuality, CoInjSep and CoRevSep. [Proof](../integration-register/proofs/coherent-observers/joint-injective-separation.txt), §§2–3. Separate CoSep and InjSep need not have a common witness family; the [catalogue](CATALOG.md#coherent.joint-separation) records the boundary.
@@ -361,7 +361,7 @@ Over C5, let K be stable, logically qualified, commuting and currently separatin
 
 ```math
 \Box\mathrm{Sep}_t(K)\quad\longleftrightarrow\quad
-\forall E^{tt}\, .\,KE\to\mathrm{Inj}(E).
+\forall E^{tt}\, .\,KE\to\mathrm{Inj}(E)
 ```
 
 If its observers are also idempotent, the existence of such a necessarily separating family is equivalent to **Extensionality**. This concerns the same K throughout possibility. Merely requiring a family to exist currently does not give necessary CoSep. [Exact criterion](../integration-register/proofs/coherent-observers/stable-families-and-propagation.txt), §§2–4; [boundary](../integration-register/proofs/coherent-observers/isolated-point-nonpropagation.txt).
@@ -372,7 +372,7 @@ If its observers are also idempotent, the existence of such a necessarily separa
 Here Max(C) includes C and pure Maximalism, with C fixed as its reference theory. Adding OS leaves the closed pure identity theorems unchanged:
 
 ```math
-\mathrm{Max}(C+OS)=\mathrm{Max}(C)+OS.
+\mathrm{Max}(C+OS)=\mathrm{Max}(C)+OS
 ```
 
 | Addition to Max(C) | Status | Consequence or witness |
@@ -402,13 +402,13 @@ V(E):=(\lambda p,q^t\, .\,E(p\lor q))=(\lambda p,q^t\, .\,Ep\lor Eq),
 ```
 
 ```math
-P_\sigma(E):=(\lambda F^{\sigma t}\, .\,E(\exists x^\sigma\, .\,Fx)) =(\lambda F^{\sigma t}\, .\,\exists x^\sigma\, .\,E(Fx)).
+P_\sigma(E):=(\lambda F^{\sigma t}\, .\,E(\exists x^\sigma\, .\,Fx)) =(\lambda F^{\sigma t}\, .\,\exists x^\sigma\, .\,E(Fx))
 ```
 
 Boolean qualification over H is
 
 ```math
-\mathrm{Bool}_H(E):=M(E)\land V(E)\land N(E)\land E\top=\top\land E\bot=\bot.
+\mathrm{Bool}_H(E):=M(E)\land V(E)\land N(E)\land E\top=\top\land E\bot=\bot
 ```
 
 Boolean separation is the schema $`\mathrm{Sep}_{\bar\sigma}(\mathrm{Bool}_H)`$. It gives **Booleanism**: abstractions of Boolean-equivalent formulas are identical. The observers agree on each such equivalence, and separation identifies the abstractions.
@@ -416,14 +416,14 @@ Boolean separation is the schema $`\mathrm{Sep}_{\bar\sigma}(\mathrm{Bool}_H)`$.
 The observed equality laws are
 
 ```math
-\mathrm{Eq}_\sigma(E):=(\forall x^\sigma\, .\,E(x=x)) \land\forall x,y^\sigma\, .\,\forall F^{\sigma t}\, .\, \bigl(E(x=y)\to(E(Fx)\to E(Fy))\bigr).
+\mathrm{Eq}_\sigma(E):=(\forall x^\sigma\, .\,E(x=x)) \land\forall x,y^\sigma\, .\,\forall F^{\sigma t}\, .\, \bigl(E(x=y)\to(E(Fx)\to E(Fy))\bigr)
 ```
 
 Observed equality expresses reflexivity and substitution; it does not require E to fix each identity proposition. Thus use
 
 ```math
 \mathrm{Good}^{H}_\Delta(E):=\mathrm{Bool}_H(E)\land
-\bigwedge_{\sigma\in\Delta}\bigl(Q_\sigma(E)\land P_\sigma(E)\land\mathrm{Eq}_\sigma(E)\bigr).
+\bigwedge_{\sigma\in\Delta}\bigl(Q_\sigma(E)\land P_\sigma(E)\land\mathrm{Eq}_\sigma(E)\bigr)
 ```
 
 Use this qualification throughout the observer conditions and the full relational separation schema. Over C the extra clauses follow, so both qualifications agree. The short propositional formulation of Rev above is stated over C.
@@ -459,7 +459,7 @@ flowchart TD
 For any fixed condition K, the general scope theorem over H is
 
 ```math
-\mathrm{FullSep}[K]\quad\longleftrightarrow\quad\mathrm{Sep}_t[K]+\mathrm{Functionality}.
+\mathrm{FullSep}[K]\quad\longleftrightarrow\quad\mathrm{Sep}_t[K]+\mathrm{Functionality}
 ```
 
 This also holds for a nonempty family of conditions, with the same family on both sides. The [proof](proofs/h-observer-space/typed-separation-and-classicism.md#2-the-exact-role-of-full-typed-separation) does not assume that K preserves any logical operation. Once full OS recovers C, the relations between the stronger full principles are those in the [C observer map](#observer-relations-over-c); a second copy is unnecessary.
@@ -510,7 +510,7 @@ flowchart TD
 The order associated with each qualified separating family is
 
 ```math
-p\preceq_K q:=\forall E^{tt}\, .\,K(E)\to(Ep\to Eq).
+p\preceq_K q:=\forall E^{tt}\, .\,K(E)\to(Ep\to Eq)
 ```
 
 When the same observers preserve ∧ and ∀, these greatest lower bounds agree with the conjunction order. The ∨, ∃ branch is dual. Over H, preserving two Boolean primitives does not automatically preserve the third; all three are used for Booleanism.
@@ -527,7 +527,7 @@ An endpoint observer gives a definite version of each relation. These versions o
 Put
 
 ```math
-X_E:=\lambda\bar x\, .\,E(X[\bar x]).
+X_E:=\lambda\bar x\, .\,E(X[\bar x])
 ```
 
 Over C, if E is an endpoint logical observer qualified at the argument types, then
@@ -535,7 +535,7 @@ Over C, if E is an endpoint logical observer qualified at the argument types, th
 ```math
 \forall X,Y^{\bar\sigma t}\, .\,
 \bigl(\forall\bar x\, .\,X_E[\bar x]\leftrightarrow Y_E[\bar x]\bigr)
-\to X_E=Y_E.
+\to X_E=Y_E
 ```
 
 Thus the observed relations are identical whenever they apply to the same arguments. Qualification at t also gives the operation identity $`E\circ E=E`$: observing a second time changes nothing. These conclusions need the stated observer, without assuming separation or C5.
@@ -546,21 +546,21 @@ Work over C5 for the remainder of this section, and abbreviate $`L(E):=\mathrm{B
 
 ```math
 D_n(R):=\forall x_1^e\cdots x_n^e\, .\,
-R[\bar x]=\top\lor R[\bar x]=\bot.
+R[\bar x]=\top\lor R[\bar x]=\bot
 ```
 
 Let A be an ordinary relational second-order formula: it may quantify over individuals and their relations, use individual equality, and apply relations to individuals. Define $`A^\circ`$ by restricting each relation quantifier to definite relations; individual quantifiers stay unchanged. For example,
 
 ```math
 (\forall R^{e\cdots et}\, .\,B)^\circ
-:=\forall R^{e\cdots et}\, .\,D_n(R)\to B^\circ.
+:=\forall R^{e\cdots et}\, .\,D_n(R)\to B^\circ
 ```
 
 Existential quantifiers use $`D_n(R)\land B^\circ`$. For any endpoint logical observer, the exact evaluation identity is
 
 ```math
 L(E)\ \to\ E\bigl(A(\bar R,\bar a)\bigr)
-=A^\circ(\bar R_E,\bar a).
+=A^\circ(\bar R_E,\bar a)
 ```
 
 Every observer uses the same individuals and the same definite relations. What varies is how it interprets the original relation parameters. For example, different observers can turn a given relation into different definite relations on those same individuals.
@@ -572,7 +572,7 @@ If endpoint separation holds, necessity and possibility have the following objec
 ```
 
 ```math
-\Diamond A(\bar R,\bar a) \leftrightarrow\exists E^{tt}\, .\,L(E)\land A^\circ(\bar R_E,\bar a).
+\Diamond A(\bar R,\bar a) \leftrightarrow\exists E^{tt}\, .\,L(E)\land A^\circ(\bar R_E,\bar a)
 ```
 
 So necessity means that every such interpretation makes A true, and possibility means that some such interpretation does. Several parameters must be interpreted by the **same** observer; their interpretations cannot be freely recombined.
@@ -584,7 +584,7 @@ For relations taking relations as arguments, observe the arguments as well as th
 ```math
 r_t^E(p):=Ep,\qquad
 r_{\sigma\tau}^E(f):=\lambda x^\sigma\, .\,
-r_\tau^E\bigl(f(r_\sigma^E(x))\bigr).
+r_\tau^E\bigl(f(r_\sigma^E(x))\bigr)
 ```
 
 At individual arguments use x unchanged; no operation of type ee is introduced. Write $`A^{[E]}`$ for the formula interpreted using the objects fixed by these terms: restrict relational quantifiers by $`r_\sigma^E(x)=x`$, and use the correspondingly observed logical operations and abstractions. This is a finite translation into the original language; its [full definition](../next-update/proofs/observer-classical-cores.md#2-the-core-is-a-c5-model) specifies each clause.
@@ -608,13 +608,13 @@ E(\mathrm{Transversal\ Choice})\to(\mathrm{Transversal\ Choice})^{[E]},
 ```
 
 ```math
-(\mathrm{Infinity}_e)^{[E]}=E(\mathrm{Infinity}_e).
+(\mathrm{Infinity}_e)^{[E]}=E(\mathrm{Infinity}_e)
 ```
 
 Consequently, ☐Relational Choice, ☐Transversal Choice and quantified ☐Infinity at e imply their translated versions. Functional Choice and Boolean Completeness require only their unboxed instances. For every pure sentence A, any two endpoint logical observers agree on the translated claim:
 
 ```math
-L(E)\land L(F)\ \to\ (A^{[E]}\leftrightarrow A^{[F]}).
+L(E)\land L(F)\ \to\ (A^{[E]}\leftrightarrow A^{[F]})
 ```
 
 These results give one shared interpretation of pure mathematics. They do not assert that A itself always agrees with $`A^{[E]}`$, or that every set of objects has an admitted predicate. Endpoint separation with ☐Infinitary Comprehension reconstructs full standard models; this representation theorem is **Lean certified** and uses the stated extension of the language. [Statement and certificate](../next-update/items/20-endpoint-ic-certificates.md).
@@ -675,7 +675,7 @@ Each separating observer commutes with every observer qualified at the same fini
 Requiring, for each nonzero proposition, an observer that necessarily remains pointwise-qualified and accepts it is equivalent over C to Extensionality:
 
 ```math
-\mathrm{Extensionality}\ \longleftrightarrow\ \forall p^t\, .\,\Bigl[\forall E^{tt}\, .\,\neg\Box\bigl(J_{\mathrm{pt}}(E)\land Ep\bigr)\Bigr]\to p=\bot.
+\mathrm{Extensionality}\ \longleftrightarrow\ \forall p^t\, .\,p\ne\bot\to\exists E^{tt}\, .\,\Box\bigl(J_{\mathrm{pt}}(E)\land Ep\bigr)
 ```
 
 [Proof](../integration-register/proofs/pointwise-reversible-separation.md#1-definitions-and-main-conclusions).
@@ -685,7 +685,7 @@ With OneAtom meaning that some proposition is a Boolean atom, the exact atomic c
 ```math
 S_{\mathrm{pt}}+\mathrm{OneAtom}\ \longleftrightarrow\ ND_t+\mathrm{Atomicity}_t,
 \qquad
-\mathrm{Rev}+\mathrm{OneAtom}\ \longleftrightarrow\ \Box\mathrm{Plenitude}.
+\mathrm{Rev}+\mathrm{OneAtom}\ \longleftrightarrow\ \Box\mathrm{Plenitude}
 ```
 
 Under pointwise separation, one atom suffices for Atomicityₜ and Actuality. The reverse implication uses Atomicityₜ + Vicinity ⇒ Actuality, with Vicinity supplied by NDₜ. [Atomic proof](../integration-register/proofs/pointwise-atomicity.md).
@@ -709,7 +709,7 @@ Uniqueness says that identity is the only qualified observer at a specified fini
 The stabilization principles form a strict hierarchy:
 
 ```math
-\mathrm{IdemBoxSep}=B_1\ \Longrightarrow\ B_2\ \Longrightarrow\ \cdots\ \Longrightarrow\ \mathrm{BoxSep}.
+\mathrm{IdemBoxSep}=B_1\ \Longrightarrow\ B_2\ \Longrightarrow\ \cdots\ \Longrightarrow\ \mathrm{BoxSep}
 ```
 
 Each fixed stabilization principle, and also CentreSep, gives Extensionality together with C5. Finite-family, group-law and degree restrictions have further exact characterizations in the [full connection catalogue](proofs/h-observer-space/SUMMARY.md) and [technical map](proofs/h-observer-space/GRAPH.md).

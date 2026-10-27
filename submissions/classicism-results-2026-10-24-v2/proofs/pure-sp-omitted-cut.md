@@ -19,7 +19,7 @@ not a replacement independent sentence. The pure translation is $`G^\#`$.
 The unresolved question remains
 
 ```math
-\mathrm{Con}(\mathrm{Max}(C)+U_G+D(\neg G^\#)).
+\mathrm{Con}(\mathrm{Max}(C)+U_G+D(\neg G^\#))
 ```
 
 The source established $`G^\#\leftrightarrow U_G`$ under $`I_e`$, which Max
@@ -28,7 +28,7 @@ existence of genuine Max models $`M,N`$ and an embedding
 
 ```math
 j:\mathrm{Alg}(M)\longrightarrow\mathrm{Alg}(N),
-\qquad M\models G^\#,\quad N\models\neg G^\#.
+\qquad M\models G^\#,\quad N\models\neg G^\#
 ```
 
 Here Alg includes every pure term operation at every admitted type, including
@@ -46,7 +46,7 @@ For every $`a\in A`$, PA finite collection and $`M\models G^\#`$ give a
 $`c\in A`$ such that
 
 ```math
-M\models \forall x\le a\;\exists y<c\;\delta(x,y).                 \tag{1}
+M\models \forall x\le a\;\exists y<c\;\delta(x,y)                 \tag{1}
 ```
 
 This is actual finite collection even when $`a`$ is externally nonstandard.
@@ -60,20 +60,20 @@ arithmetic rigidity lemma turns its truth in M into the literal proposition
 identity
 
 ```math
-I_M\wedge [\forall x\le a\;\exists y<c\;\delta(x,y)]_M=I_M.
+I_M\wedge [\forall x\le a\;\exists y<c\;\delta(x,y)]_M=I_M
 ```
 
 The full-term map preserves this identity. Since $`I_N`$ is actually true,
 
 ```math
-N\models \forall x\le j(a)\;\exists y<j(c)\;\delta(x,y).           \tag{2}
+N\models \forall x\le j(a)\;\exists y<j(c)\;\delta(x,y)           \tag{2}
 ```
 
 Consequently every number $`b\in B`$ for which
 $`N\models\neg P(b)`$ satisfies
 
 ```math
-                     j(a)<b\quad\text{for every }a\in A.          \tag{3}
+                     j(a)<b\quad\text{for every }a\in A          \tag{3}
 ```
 
 This is stronger than saying that a counterexample is outside the image.
@@ -91,7 +91,7 @@ its possibly nonstandard numerical domain.
 Define externally
 
 ```math
-K=\{b\in B:\text{ for some }a\in A,\ b\le j(a)\}.
+K=\{b\in B:\text{ for some }a\in A,\ b\le j(a)\}
 ```
 
 Then:
@@ -126,7 +126,7 @@ of an admitted target predicate of type $`\nu_e t`$.
 
 ```math
 N\models W(b)\quad\Longleftrightarrow\quad b\in j[A]
-\quad(b\in B).
+\quad(b\in B)
 ```
 
 Since j fixes zero and preserves successor, W is true of zero and is closed

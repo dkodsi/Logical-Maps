@@ -31,7 +31,7 @@ Then propositional full-composite Good_Δ separation holds at W.
 To prove it, choose such a g for the given distinct p,q. Let
 
 ```math
-U_g:=\{r\in D_t(W):g_t(r)\text{ is true at }V\}.
+U_g:=\{r\in D_t(W):g_t(r)\text{ is true at }V\}
 ```
 
 Extensional fullness gives an admitted observer O_g with exactly this **current truth extension**:
@@ -39,7 +39,7 @@ Extensional fullness gives an admitted observer O_g with exactly this **current 
 ```math
 O_g(r)\text{ is true at }W
 \quad\Longleftrightarrow\quad
-g_t(r)\text{ is true at }V.
+g_t(r)\text{ is true at }V
 \tag{1}
 ```
 
@@ -56,7 +56,7 @@ O_g(\forall_\sigma F)\text{ is true at }W
 \forall x\in D_\sigma(W),\ (g_{\sigma t}F)(g_\sigma x)
                                       \text{ is true at }V\\
 &\Longleftrightarrow
-\forall x\in D_\sigma(W),\ O_g(Fx)\text{ is true at }W.
+\forall x\in D_\sigma(W),\ O_g(Fx)\text{ is true at }W
 \end{aligned}
 \tag{2}
 ```
@@ -87,7 +87,7 @@ If this criterion holds for every finite Δ, it gives every propositional logica
 Suppose an arrow g:W→V has a section s:V→W with g∘s=id_V. Functoriality at every type gives
 
 ```math
-g_\sigma\circ s_\sigma=\mathrm{id}_{D_\sigma(V)}.
+g_\sigma\circ s_\sigma=\mathrm{id}_{D_\sigma(V)}
 ```
 
 Therefore g_σ is onto at every admitted type. This includes all higher relation types, not just individuals. No induction asserting surjectivity of arbitrary function-space maps is needed.
@@ -105,7 +105,7 @@ If h has codomain W₀, extend its restriction h|_S to a surjection g:ℕ→ℕ.
 ```math
 p\text{ has the same truth at }g\text{ and }h,
 \qquad
-q\text{ has the same truth at }g\text{ and }h.
+q\text{ has the same truth at }g\text{ and }h
 ```
 
 Thus g still distinguishes p,q, and §3 makes every g_σ onto.
@@ -131,7 +131,7 @@ The established profile is therefore
 ```math
 \boxed{\mathrm C+\mathrm{OS}+\mathrm{BF}
        +\neg\Box\mathrm{BF}_e+\neg\Box\mathrm{BF}_t
-       +\neg\Box\mathrm{Fun}_{e,t}.}
+       +\neg\Box\mathrm{Fun}_{e,t}}
 ```
 
 In particular ordinary OS does not imply necessary OS, necessary BF, necessary BF_t, or necessary Functionality. The new separations concern necessary BF and Functionality; failure of necessary OS already had other witnesses.

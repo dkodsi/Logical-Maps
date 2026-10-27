@@ -29,7 +29,7 @@ In M choose an atomless complete Boolean algebra A. Let
 
 ```math
 B=2\times A,
-\qquad a=(1,0_A),\qquad b=(0,1_A).
+\qquad a=(1,0_A),\qquad b=(0,1_A)
 ```
 
 All algebras, maps, subsets and joins called *internal* are objects or computations of M. Their externalizations use the membership relation of M. Thus A is an ordinary external countable Boolean algebra, but it need not be externally complete. Its internally asserted completeness is used only on families that belong to M.
@@ -39,7 +39,7 @@ Let G be an external filter on A meeting every subset D of A which belongs to M 
 Designate truth in B by
 
 ```math
-\mathcal U_G=\{(\epsilon,c)\in B:c\in G\}.
+\mathcal U_G=\{(\epsilon,c)\in B:c\in G\}
 \tag{2}
 ```
 
@@ -51,7 +51,7 @@ Let I and f:I→A belong to M, with I interpreted externally as its members in M
 
 ```math
 D_f=\{c\ne0:c\le\neg j\ \text{or}
-              \exists i\in I\ (c\le f(i))\}.
+              \exists i\in I\ (c\le f(i))\}
 \tag{3}
 ```
 
@@ -62,7 +62,7 @@ If j∈G, a point of G∩D_f cannot lie below ¬j, so f(i)∈G for some i. The c
 ```math
 \bigvee_{i\in I}f(i)\in G
 \quad\Longleftrightarrow\quad
-\exists i\in I\ [f(i)\in G].
+\exists i\in I\ [f(i)\in G]
 \tag{4}
 ```
 
@@ -71,7 +71,7 @@ Complementation gives the universal version
 ```math
 \bigwedge_{i\in I}f(i)\in G
 \quad\Longleftrightarrow\quad
-\forall i\in I\ [f(i)\in G].
+\forall i\in I\ [f(i)\in G]
 \tag{5}
 ```
 
@@ -83,7 +83,7 @@ Build the full relational type hierarchy internally in M:
 
 ```math
 D_e=\omega^M,\qquad D_t=B,\qquad
-D_{\sigma\to\tau}=(D_\tau)^{D_\sigma}\quad(\tau\ne e).
+D_{\sigma\to\tau}=(D_\tau)^{D_\sigma}\quad(\tau\ne e)
 \tag{6}
 ```
 
@@ -95,7 +95,7 @@ Defined Leibniz equality is crisp at every type. If x=y as members of M, every p
 
 ```math
 \|\Box p\|=\|p=1_B\|=
-\begin{cases}1_B,&p=1_B,\\0_B,&p\ne1_B.\end{cases}
+\begin{cases}1_B,&p=1_B,\\0_B,&p\ne1_B\end{cases}
 \tag{7}
 ```
 
@@ -112,7 +112,7 @@ For every admitted predicate F, both ∀x□Fx and □∀xFx have value 1 exactl
 This holds internally as a Boolean-valued formula and consequently at both designated evaluations. Given a relation U:σ×τ→B, internally well-order D_τ and put
 
 ```math
-S(x,y)=U(x,y)\wedge\neg\bigvee_{z<y}U(x,z).
+S(x,y)=U(x,y)\wedge\neg\bigvee_{z<y}U(x,z)
 \tag{8}
 ```
 
@@ -126,7 +126,7 @@ Assume M has a set Γ of complete Boolean automorphisms of A such that
 
 ```math
 \forall c,d\ne0\ \exists\alpha\in\Gamma\quad
-\alpha(c)\wedge d\ne0.
+\alpha(c)\wedge d\ne0
 \tag{9}
 ```
 
@@ -144,7 +144,7 @@ Consider the following internally admitted operations B→B:
 ```math
 E_0(\epsilon,c)=(\epsilon,\epsilon\cdot1_A),
 \qquad
-E_\alpha(\epsilon,c)=(\epsilon,\alpha(c)).
+E_\alpha(\epsilon,c)=(\epsilon,\alpha(c))
 \tag{11}
 ```
 
@@ -153,7 +153,7 @@ Each is a unital Boolean homomorphism preserving all internal joins and meets. T
 ```math
 E\left(\bigwedge_xF(x)\right)=\bigwedge_xE(F(x)),
 \quad
-E\left(\bigvee_xF(x)\right)=\bigvee_xE(F(x)).
+E\left(\bigvee_xF(x)\right)=\bigvee_xE(F(x))
 \tag{12}
 ```
 
@@ -170,7 +170,7 @@ The reader E₀ need not preserve native Box; this is repaired for the forcings 
 Suppose there is an internal nonzero proper c∉G and an internal complete Boolean isomorphism
 
 ```math
-h:A\longrightarrow A\mathbin{\upharpoonright}c.
+h:A\longrightarrow A\mathbin{\upharpoonright}c
 ```
 
 Define internal operations
@@ -178,7 +178,7 @@ Define internal operations
 ```math
 \begin{aligned}
 E(\epsilon,d)&=(\epsilon,\ (\epsilon\cdot\neg c)\vee h(d)),\\
-F(\epsilon,d)&=(\epsilon,\ h^{-1}(d\wedge c)).
+F(\epsilon,d)&=(\epsilon,\ h^{-1}(d\wedge c))
 \end{aligned}
 \tag{13}
 ```
@@ -200,7 +200,7 @@ At σ=t the carrier labels are B. Assume internally
 ```math
 |\mathbb R^M|\le|B|,
 \qquad
-1_A\Vdash|\mathbb R|\le|\check B|.
+1_A\Vdash|\mathbb R|\le|\check B|
 \tag{14}
 ```
 
@@ -212,20 +212,20 @@ Pull the ground field, order and N back along j₀; pull the forced real field a
 \left(
  \mathbf1_{\text{ground sum}(x,y,z)},
  \|\text{forced sum}(\check x,\check y,\check z)\|_A
-\right).
+\right)
 ```
 
 Internal Replacement makes this an admitted ternary relation B³→B. The domain, N, order and product graphs are admitted in the same way; s₀,s₁ supply the individual constants of the real structure. This forms a tuple $`\mathfrak R_*`$ with
 
 ```math
-\|\mathrm{Real}_t(\mathfrak R_*)\|=1_B.
+\|\mathrm{Real}_t(\mathfrak R_*)\|=1_B
 \tag{15}
 ```
 
 Here is the quantifier check needed for (15), not just the field axioms. Every internal name for a subset of $`\check T`$, for an internal set T, is equivalent to the canonical name with coefficients
 
 ```math
-t\longmapsto\|\check t\in\dot Y\|_A.
+t\longmapsto\|\check t\in\dot Y\|_A
 ```
 
 Conversely every internal map T→A supplies such a name. At T=B^k these maps are exactly the A-coordinates available in the full k-ary relational domains; their first coordinates can be independently chosen. Thus the native relation quantifiers cover all internal forcing names for subsets of the carrier and its finite powers. Element quantifiers over $`\check B`$ are the corresponding meets and joins over ground labels; arbitrary mixed names for its elements do not add cases, by the usual Boolean-valued bounded-quantifier interpretation. All these are fixed set-theoretic assertions proved inside M.
@@ -236,14 +236,14 @@ For a first-order analytical sentence φ, or an extensional finite second-order 
 
 ```math
 U_\varphi=\forall\mathfrak R
- [\mathrm{Real}_t(\mathfrak R)\to\varphi(\mathfrak R)].
+ [\mathrm{Real}_t(\mathfrak R)\to\varphi(\mathfrak R)]
 ```
 
 Let εφ be the ground truth value of φ in M's standard real field, and let pφ be its internal forcing Boolean value. Then
 
 ```math
 \boxed{\|U_\varphi\|=(\epsilon_\varphi,p_\varphi),
-\qquad \|U_{\neg\varphi}\|=(1-\epsilon_\varphi,\neg p_\varphi).}
+\qquad \|U_{\neg\varphi}\|=(1-\epsilon_\varphi,\neg p_\varphi)}
 \tag{16}
 ```
 
@@ -268,7 +268,7 @@ M satisfies CH and φ_L. The forcing gives ¬CH and adds a real outside the old 
 ```math
 \|U_{\rm CH}\|=\|U_{\varphi_L}\|=a,
 \quad
-\|U_{\neg\rm CH}\|=\|U_{\neg\varphi_L}\|=b.
+\|U_{\neg\rm CH}\|=\|U_{\neg\varphi_L}\|=b
 \tag{17}
 ```
 
@@ -298,7 +298,7 @@ Now (16) gives
 ```math
 \|U_{\rm CH}\|=b=(0,1_A),
 \qquad
-\|U_{\neg\rm CH}\|=a=(1,0_A).
+\|U_{\neg\rm CH}\|=a=(1,0_A)
 \tag{18}
 ```
 
@@ -306,7 +306,7 @@ Hence the generic evaluation satisfies actual real-structure existence, current 
 
 ```math
 \boxed{\mathrm{C5}+\mathrm{OS}+H_t+U_{t,\rm CH}
-\not\models\Box U_{t,\rm CH}.}
+\not\models\Box U_{t,\rm CH}}
 \tag{19}
 ```
 
@@ -321,14 +321,14 @@ The earlier full Boolean-valued counterexample was evaluated at the isolated ato
 An exact failed instance uses input and output type t. Put
 
 ```math
-R(p,q)=(p\wedge(q=\top))\vee(\neg p\wedge(q=\bot)).
+R(p,q)=(p\wedge(q=\top))\vee(\neg p\wedge(q=\bot))
 \tag{20}
 ```
 
 Its seriality has value 1. For a selecting operation f:B→B, let
 
 ```math
-c_f=\bigwedge_{p\in B}R(p,f(p)).
+c_f=\bigwedge_{p\in B}R(p,f(p))
 ```
 
 If c_f>0, then for every p it lies either below p or below ¬p; if f(p) is neither endpoint, the corresponding factor is 0. A nonzero c_f is therefore an atom of B. Since A is atomless, the only atom is a. Conversely the internal selector choosing the endpoint according to p's first bit has c_f=a. Thus the existential selector value is exactly a, and the FC_{t,t} instance has value a. Its box has value 0.

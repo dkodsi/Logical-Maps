@@ -11,7 +11,7 @@ Over C+□Vicinity,
 ```math
 \boxed{\mathrm{MWO}
 \quad\longleftrightarrow\quad
-\Box RC+IC.}
+\Box RC+IC}
 \tag{1}
 ```
 
@@ -20,7 +20,7 @@ The universal-modal-selector theorem also gives
 ```math
 \boxed{C+\Box\mathrm{Vicinity}:\qquad
 MRC\quad\longleftrightarrow\quad
-\mathrm{MWO}.}
+\mathrm{MWO}}
 \tag{2}
 ```
 
@@ -33,7 +33,7 @@ The [Vicinity choice theorem](../vicinity-relational-choice-transversals.md),
 §§2–4, is an implication over C, at every fixed type σ:
 
 ```math
-\mathrm{Vicinity}+RC_{(\sigma t),\sigma}\Longrightarrow TC_\sigma.
+\mathrm{Vicinity}+RC_{(\sigma t),\sigma}\Longrightarrow TC_\sigma
 ```
 
 Its unconditional closed implication may be necessitated. Therefore
