@@ -44,7 +44,7 @@ Using $`\mathrm{Good}_\Delta(E)`$ as defined above, the individual observer rest
 \forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\, \bigl(\mathrm{Good}_\Delta(E)\land K(E)\bigr) \to\forall\bar x^{\bar\sigma}\, .\, \bigl(E(X[\bar x])\leftrightarrow E(Y[\bar x])\bigr)\Bigr] \to X=Y
 ```
 
-Every pair of distinct relations is distinguished at some arguments by an eligible observer. K specifies the additional observer condition; OS takes it to be ⊤.
+Every pair of distinct relations is distinguished at some arguments by an eligible observer. K specifies the additional observer condition; OS takes it to be ⊤. We will use the predicate mathrm{Sep} below to express that this schema is valid for a given specification of K.
 
 <a id="observer-principles-at-a-glance"></a>
 ## The observer principles
