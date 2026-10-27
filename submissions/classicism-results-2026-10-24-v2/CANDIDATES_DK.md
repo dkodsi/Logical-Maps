@@ -60,7 +60,7 @@ Start with [the maps, definitions and intuition](LOGICAL-OBSERVERS.md). The [str
 An admitted family of pairwise commuting logical observers collectively distinguishes every pair of distinct relations.
 
 ```math
-\begin{aligned}\mathrm{CoSep}_{\bar\sigma,\Delta}:=\exists K^{(tt)t}\, .\,\bigl(&\forall E^{tt}\, .\,KE\to\mathrm{Good}_\Delta(E)\bigr)\\{}\land{}&\bigl(\forall E,F^{tt}\, .\,(KE\land KF)\to E\circ F=F\circ E\bigr)\\{}\land{}&\mathrm{Sep}_{\bar\sigma}(K).\end{aligned}
+\mathrm{CoSep}_{\bar\sigma,\Delta}:=\exists K^{(tt)t}\, .\,\bigl(\forall E^{tt}\, .\,KE\to\mathrm{Good}_\Delta(E)\bigr)\land\bigl(\forall E,F^{tt}\, .\,(KE\land KF)\to E\circ F=F\circ E\bigr)\land\mathrm{Sep}_{\bar\sigma}(K).
 ```
 
 Each relational type and finite qualification list gives one instance. Over C5 it suffices to separate propositions with N(E) ∧ Q_t(E).

@@ -4049,7 +4049,7 @@
       "category": "extensionality",
       "disposition": "proposed family principle record",
       "statement": "An admitted family of pairwise commuting logical observers collectively distinguishes every pair of distinct relations.",
-      "formal": "\\begin{aligned}\\mathrm{CoSep}_{\\bar\\sigma,\\Delta}:=\\exists K^{(tt)t}\\, .\\,\\bigl(&\\forall E^{tt}\\, .\\,KE\\to\\mathrm{Good}_\\Delta(E)\\bigr)\\\\{}\\land{}&\\bigl(\\forall E,F^{tt}\\, .\\,(KE\\land KF)\\to E\\circ F=F\\circ E\\bigr)\\\\{}\\land{}&\\mathrm{Sep}_{\\bar\\sigma}(K).\\end{aligned}",
+      "formal": "\\mathrm{CoSep}_{\\bar\\sigma,\\Delta}:=\\exists K^{(tt)t}\\, .\\,\\bigl(\\forall E^{tt}\\, .\\,KE\\to\\mathrm{Good}_\\Delta(E)\\bigr)\\land\\bigl(\\forall E,F^{tt}\\, .\\,(KE\\land KF)\\to E\\circ F=F\\circ E\\bigr)\\land\\mathrm{Sep}_{\\bar\\sigma}(K).",
       "scope": "Each relational type and finite qualification list gives one instance. Over C5 it suffices to separate propositions with N(E) ∧ Q_t(E).",
       "definitions": [
         "Here $\\mathrm{Sep}_{\\bar\\sigma}(K)$ means\n\n$$\n\\mathrm{Sep}_{\\bar\\sigma}(K):=\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,KE\\to\\forall\\bar x^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar x])\\leftrightarrow E(Y[\\bar x])\\bigr)\\Bigr]\\to X=Y.\n$$",

@@ -38,13 +38,7 @@ Over C, these identities also give preservation of ⊤, ⊥ and the other Boolea
 Using $`\mathrm{Good}_\Delta(E)`$ as defined above, the individual observer restrictions below have the following object-language form:
 
 ```math
-\begin{aligned}
-\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,
-\bigl(\mathrm{Good}_\Delta(E)\land K(E)\bigr)
-&\to\forall\bar x^{\bar\sigma}\, .\,
-\bigl(E(X[\bar x])\leftrightarrow E(Y[\bar x])\bigr)\Bigr]\\
-&\to X=Y.
-\end{aligned}
+\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\, \bigl(\mathrm{Good}_\Delta(E)\land K(E)\bigr) \to\forall\bar x^{\bar\sigma}\, .\, \bigl(E(X[\bar x])\leftrightarrow E(Y[\bar x])\bigr)\Bigr] \to X=Y.
 ```
 
 Every pair of distinct relations is distinguished at some arguments by an eligible observer. K specifies the additional observer condition; OS takes it to be ⊤.
@@ -153,7 +147,7 @@ For a family $`K^{(tt)t}`$, write
 Then CoSep is the schema
 
 ```math
-\begin{aligned}\mathrm{CoSep}_{\bar\sigma,\Delta}:=\exists K^{(tt)t}\, .\,\bigl(&\forall E^{tt}\, .\,KE\to\mathrm{Good}_\Delta(E)\bigr)\\{}\land{}&\bigl(\forall E,F^{tt}\, .\,(KE\land KF)\to E\circ F=F\circ E\bigr)\\{}\land{}&\mathrm{Sep}_{\bar\sigma}(K).\end{aligned}
+\mathrm{CoSep}_{\bar\sigma,\Delta}:=\exists K^{(tt)t}\, .\,\bigl(\forall E^{tt}\, .\,KE\to\mathrm{Good}_\Delta(E)\bigr)\land\bigl(\forall E,F^{tt}\, .\,(KE\land KF)\to E\circ F=F\circ E\bigr)\land\mathrm{Sep}_{\bar\sigma}(K).
 ```
 
 CoIdemSep adds $`\forall E^{tt}\, .\,KE\to E\circ E=E`$ inside the same existential. These are conditions on a family, rather than on each observer separately.
