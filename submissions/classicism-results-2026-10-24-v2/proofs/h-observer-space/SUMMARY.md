@@ -48,29 +48,35 @@ E\top=\top,\qquad E\bot=\bot.
 Boolean operation identities:
 
 ```math
-\begin{aligned}
-&(\lambda p\, .\,E(\neg p))=(\lambda p\, .\,\neg Ep), \\
-&(\lambda p,q\, .\,E(p\land q))=(\lambda p,q\, .\,Ep\land Eq), \\
-&(\lambda p,q\, .\,E(p\lor q))=(\lambda p,q\, .\,Ep\lor Eq).
-\end{aligned}
+(\lambda p\, .\,E(\neg p))=(\lambda p\, .\,\neg Ep),
+```
+
+```math
+(\lambda p,q\, .\,E(p\land q))=(\lambda p,q\, .\,Ep\land Eq),
+```
+
+```math
+(\lambda p,q\, .\,E(p\lor q))=(\lambda p,q\, .\,Ep\lor Eq).
 ```
 
 For each $`\sigma\in\Delta`$, quantifier operation identities:
 
 ```math
-\begin{aligned}
-&(\lambda F^{\sigma t}\, .\,E(\forall x^\sigma\, .\,Fx))=(\lambda F^{\sigma t}\, .\,\forall x^\sigma\, .\,E(Fx)), \\
-&(\lambda F^{\sigma t}\, .\,E(\exists x^\sigma\, .\,Fx))=(\lambda F^{\sigma t}\, .\,\exists x^\sigma\, .\,E(Fx)).
-\end{aligned}
+(\lambda F^{\sigma t}\, .\,E(\forall x^\sigma\, .\,Fx))=(\lambda F^{\sigma t}\, .\,\forall x^\sigma\, .\,E(Fx)),
+```
+
+```math
+(\lambda F^{\sigma t}\, .\,E(\exists x^\sigma\, .\,Fx))=(\lambda F^{\sigma t}\, .\,\exists x^\sigma\, .\,E(Fx)).
 ```
 
 For each $`\sigma\in\Delta`$, Equality laws:
 
 ```math
-\begin{aligned}
-&\forall x^\sigma\, .\,E(x=x), \\
-&\forall x,y^\sigma\, .\,\forall F^{\sigma t}\, .\,E(x=y)\to(E(Fx)\to E(Fy)).
-\end{aligned}
+\forall x^\sigma\, .\,E(x=x),
+```
+
+```math
+\forall x,y^\sigma\, .\,\forall F^{\sigma t}\, .\,E(x=y)\to(E(Fx)\to E(Fy)).
 ```
 
 Over C, the equality laws follow from Boolean preservation. They support the formulation over H, where OS recovers C.

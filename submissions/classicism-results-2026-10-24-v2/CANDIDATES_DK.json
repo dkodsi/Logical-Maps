@@ -23,9 +23,9 @@
       "definitions": [
         "The schema ranges over finite argument tuples $\\bar\\sigma$, including the empty tuple, and finite lists $\\Delta$ of tested types. The following finite conjunction defines $\\mathrm{Good}_\\Delta(E)$.",
         "$$\nE\\top=\\top,\\qquad E\\bot=\\bot.\n$$",
-        "Boolean operation identities:\n\n$$\n\\begin{aligned}\n&(\\lambda p\\, .\\,E(\\neg p))=(\\lambda p\\, .\\,\\neg Ep), \\\\\n&(\\lambda p,q\\, .\\,E(p\\land q))=(\\lambda p,q\\, .\\,Ep\\land Eq), \\\\\n&(\\lambda p,q\\, .\\,E(p\\lor q))=(\\lambda p,q\\, .\\,Ep\\lor Eq).\n\\end{aligned}\n$$",
-        "For each $\\sigma\\in\\Delta$, quantifier operation identities:\n\n$$\n\\begin{aligned}\n&(\\lambda F^{\\sigma t}\\, .\\,E(\\forall x^\\sigma\\, .\\,Fx))=(\\lambda F^{\\sigma t}\\, .\\,\\forall x^\\sigma\\, .\\,E(Fx)), \\\\\n&(\\lambda F^{\\sigma t}\\, .\\,E(\\exists x^\\sigma\\, .\\,Fx))=(\\lambda F^{\\sigma t}\\, .\\,\\exists x^\\sigma\\, .\\,E(Fx)).\n\\end{aligned}\n$$",
-        "For each $\\sigma\\in\\Delta$, Equality laws:\n\n$$\n\\begin{aligned}\n&\\forall x^\\sigma\\, .\\,E(x=x), \\\\\n&\\forall x,y^\\sigma\\, .\\,\\forall F^{\\sigma t}\\, .\\,E(x=y)\\to(E(Fx)\\to E(Fy)).\n\\end{aligned}\n$$",
+        "Boolean operation identities:\n\n$$\n(\\lambda p\\, .\\,E(\\neg p))=(\\lambda p\\, .\\,\\neg Ep),\n$$\n\n$$\n(\\lambda p,q\\, .\\,E(p\\land q))=(\\lambda p,q\\, .\\,Ep\\land Eq),\n$$\n\n$$\n(\\lambda p,q\\, .\\,E(p\\lor q))=(\\lambda p,q\\, .\\,Ep\\lor Eq).\n$$",
+        "For each $\\sigma\\in\\Delta$, quantifier operation identities:\n\n$$\n(\\lambda F^{\\sigma t}\\, .\\,E(\\forall x^\\sigma\\, .\\,Fx))=(\\lambda F^{\\sigma t}\\, .\\,\\forall x^\\sigma\\, .\\,E(Fx)),\n$$\n\n$$\n(\\lambda F^{\\sigma t}\\, .\\,E(\\exists x^\\sigma\\, .\\,Fx))=(\\lambda F^{\\sigma t}\\, .\\,\\exists x^\\sigma\\, .\\,E(Fx)).\n$$",
+        "For each $\\sigma\\in\\Delta$, Equality laws:\n\n$$\n\\forall x^\\sigma\\, .\\,E(x=x),\n$$\n\n$$\n\\forall x,y^\\sigma\\, .\\,\\forall F^{\\sigma t}\\, .\\,E(x=y)\\to(E(Fx)\\to E(Fy)).\n$$",
         "Over C, the equality laws follow from Boolean preservation. They support the formulation over H, where OS recovers C.",
         "The uniform definition includes the endpoint identities used in the Lean certificate. The formulation omitting those identities gives an equivalent full separation theory; see the H-to-C proof."
       ],
@@ -4019,7 +4019,7 @@
       "category": "infinity",
       "disposition": "proposed principle record",
       "statement": "A numerical quantity necessarily takes exactly one natural value, and every current natural value is possible.",
-      "formal": "\\begin{aligned}\n&\\exists L^{\\nu_\\kappa t}\\, .\\,\\bigl(\\Box\\exists!n^{\\nu_\\kappa}\\, .\\,\\mathbb N_\\kappa n\\land Ln\\bigr) \\\\\n&\\qquad \\land\\bigl(\\forall n^{\\nu_\\kappa}\\, .\\,\\mathbb N_\\kappa n\\to\\Diamond Ln\\bigr).\n\\end{aligned}",
+      "formal": "\\exists L^{\\nu_\\kappa t}\\, .\\,\\bigl(\\Box\\exists!n^{\\nu_\\kappa}\\, .\\,\\mathbb N_\\kappa n\\land Ln\\bigr) \\land\\bigl(\\forall n^{\\nu_\\kappa}\\, .\\,\\mathbb N_\\kappa n\\to\\Diamond Ln\\bigr).",
       "definitions": [
         "The counting type $\\kappa$ determines the Frege numerical type $\\nu_\\kappa=(\\kappa t)t$, with finite-cardinality predicate $\\mathbb N_\\kappa$. The principle is a schema in $\\kappa$."
       ],
@@ -4172,7 +4172,7 @@
   "alternative_formulations": [
     {
       "name": "Diagonal Character Separation",
-      "statement": "Diagonal Character Separation is equivalent over C to ND (type $t$) + Atomicity (type $t$). Put\n\n$$\nw_E:=\\forall p^t\\, .\\,Ep\\to p,\n$$\n\n$$\n\\begin{aligned}\n&D(E):=E\\bot=\\bot\\land(\\forall p^t\\, .\\,Ep=\\top\\lor Ep=\\bot) \\\\\n&\\qquad \\land(\\forall p^t\\, .\\,E(\\neg p)=\\neg(Ep))\\land E(w_E).\n\\end{aligned}\n$$\n\nThe separation principle is",
+      "statement": "Diagonal Character Separation is equivalent over C to ND (type $t$) + Atomicity (type $t$). Put\n\n$$\nw_E:=\\forall p^t\\, .\\,Ep\\to p,\n$$\n\n$$\nD(E):=E\\bot=\\bot\\land(\\forall p^t\\, .\\,Ep=\\top\\lor Ep=\\bot) \\land(\\forall p^t\\, .\\,E(\\neg p)=\\neg(Ep))\\land E(w_E).\n$$\n\nThe separation principle is",
       "sources": [
         {
           "path": "proofs/diagonal-characters.md",
@@ -4204,7 +4204,7 @@
         "BOOLEAN-RETRACTIONS-CHOICE"
       ],
       "formulas": [
-        "\\begin{aligned}\\forall A^{\\tau t}\\, .\\,\\operatorname{CBA}_\\tau(A)\\to\\exists r^{\\tau\\tau}\\, .\\,\\bigl[&\\operatorname{CBHom}_\\tau(r)\\land\\forall p^\\tau\\, A(rp)\\\\&\\land\\forall q^\\tau\\,(Aq\\to rq=q)\\bigr].\\end{aligned}"
+        "\\forall A^{\\tau t}\\, .\\,\\operatorname{CBA}_\\tau(A)\\to\\exists r^{\\tau\\tau}\\, .\\,\\bigl[\\operatorname{CBHom}_\\tau(r)\\land\\forall p^\\tau\\, A(rp) \\land\\forall q^\\tau\\,(Aq\\to rq=q)\\bigr]."
       ]
     }
   ],

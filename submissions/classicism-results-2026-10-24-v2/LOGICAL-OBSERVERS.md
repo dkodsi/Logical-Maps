@@ -16,12 +16,15 @@ An observer $`E^{tt}`$ sends propositions to propositions. The truth of $`Ep`$ i
 A **logical observer** preserves conjunction, negation and universal quantification at the types being tested:
 
 ```math
-\begin{aligned}
-M(E)&:=(\lambda p,q^t\, .\,E(p\land q))=(\lambda p,q^t\, .\,Ep\land Eq),\\
-N(E)&:=(\lambda p^t\, .\,E(\neg p))=(\lambda p^t\, .\,\neg Ep),\\
-Q_\sigma(E)&:=(\lambda F^{\sigma t}\, .\,E(\forall x^\sigma\, .\,Fx))
-=(\lambda F^{\sigma t}\, .\,\forall x^\sigma\, .\,E(Fx)).
-\end{aligned}
+M(E):=(\lambda p,q^t\, .\,E(p\land q))=(\lambda p,q^t\, .\,Ep\land Eq),
+```
+
+```math
+N(E):=(\lambda p^t\, .\,E(\neg p))=(\lambda p^t\, .\,\neg Ep),
+```
+
+```math
+Q_\sigma(E):=(\lambda F^{\sigma t}\, .\,E(\forall x^\sigma\, .\,Fx)) =(\lambda F^{\sigma t}\, .\,\forall x^\sigma\, .\,E(Fx)).
 ```
 
 For a finite list of types Δ, put
@@ -155,11 +158,11 @@ CoIdemSep adds $`\forall E^{tt}\, .\,KE\to E\circ E=E`$ inside the same existent
 Two further restrictions apply to the same family. **CoInjSep** requires its members to be injective; **CoRevSep** requires admitted logical inverses. The respective added clauses are
 
 ```math
-\begin{aligned}
-&\forall E^{tt}\, .\,KE\to\forall p,q^t\, .\,(Ep=Eq\to p=q),\\
-&\forall E^{tt}\, .\,KE\to\exists F^{tt}\, .\,
-\bigl(\mathrm{Good}_\Delta(F)\land E\circ F=I\land F\circ E=I\bigr).
-\end{aligned}
+\forall E^{tt}\, .\,KE\to\forall p,q^t\, .\,(Ep=Eq\to p=q),
+```
+
+```math
+\forall E^{tt}\, .\,KE\to\exists F^{tt}\, .\, \bigl(\mathrm{Good}_\Delta(F)\land E\circ F=I\land F\circ E=I\bigr).
 ```
 
 **Over C5, one sentence suffices:** take $`\bar\sigma`$ empty, so only propositions are separated, and replace $`\mathrm{Good}_\Delta(E)`$ by $`N(E)\land Q_t(E)`$. The same family then qualifies and separates at every relational type. [Definitions and reduction](../integration-register/proofs/coherent-observers/object-language-and-finite-basis.txt), §§1–4.
@@ -325,11 +328,7 @@ Over C5, **Atomicity is exactly separation by a stable commuting family of idemp
 It fixes which observers belong to the family; their outputs need not be endpoints. Thus
 
 ```math
-\begin{aligned}
-\mathrm{Atomicity}\quad\longleftrightarrow\quad\exists K^{(tt)t}\, .\,&\mathrm{Stable}(K)\land\mathrm{Sep}_t(K)\\
-&\land\bigl(\forall E\, .\,KE\to N(E)\land Q_t(E)\land E\circ E=E\bigr)\\
-&\land\bigl(\forall E,F\, .\,(KE\land KF)\to E\circ F=F\circ E\bigr).
-\end{aligned}
+\mathrm{Atomicity}\quad\longleftrightarrow\quad\exists K^{(tt)t}\, .\,\mathrm{Stable}(K)\land\mathrm{Sep}_t(K) \land\bigl(\forall E\, .\,KE\to N(E)\land Q_t(E)\land E\circ E=E\bigr) \land\bigl(\forall E,F\, .\,(KE\land KF)\to E\circ F=F\circ E\bigr).
 ```
 
 No Functional Choice is needed. Dropping stability gives the strictly weaker CoIdemSep; dropping idempotence gives CoSep, itself strictly stronger than OS. [Characterization](../integration-register/proofs/coherent-observers/stable-families-and-propagation.txt), §3; [strictness](../integration-register/proofs/coherent-observers/finite-alphabet-coherence-countermodels.txt).
@@ -399,11 +398,11 @@ Over H, preservation of each primitive operation has its own consequences. Boole
 Keep M, N and Q as above, and put
 
 ```math
-\begin{aligned}
-V(E)&:=(\lambda p,q^t\, .\,E(p\lor q))=(\lambda p,q^t\, .\,Ep\lor Eq),\\
-P_\sigma(E)&:=(\lambda F^{\sigma t}\, .\,E(\exists x^\sigma\, .\,Fx))
-=(\lambda F^{\sigma t}\, .\,\exists x^\sigma\, .\,E(Fx)).
-\end{aligned}
+V(E):=(\lambda p,q^t\, .\,E(p\lor q))=(\lambda p,q^t\, .\,Ep\lor Eq),
+```
+
+```math
+P_\sigma(E):=(\lambda F^{\sigma t}\, .\,E(\exists x^\sigma\, .\,Fx)) =(\lambda F^{\sigma t}\, .\,\exists x^\sigma\, .\,E(Fx)).
 ```
 
 Boolean qualification over H is
@@ -417,11 +416,7 @@ Boolean separation is the schema $`\mathrm{Sep}_{\bar\sigma}(\mathrm{Bool}_H)`$.
 The observed equality laws are
 
 ```math
-\begin{aligned}
-\mathrm{Eq}_\sigma(E):={}&(\forall x^\sigma\, .\,E(x=x))\\
-&\land\forall x,y^\sigma\, .\,\forall F^{\sigma t}\, .\,
-\bigl(E(x=y)\to(E(Fx)\to E(Fy))\bigr).
-\end{aligned}
+\mathrm{Eq}_\sigma(E):=(\forall x^\sigma\, .\,E(x=x)) \land\forall x,y^\sigma\, .\,\forall F^{\sigma t}\, .\, \bigl(E(x=y)\to(E(Fx)\to E(Fy))\bigr).
 ```
 
 Observed equality expresses reflexivity and substitution; it does not require E to fix each identity proposition. Thus use
@@ -573,12 +568,11 @@ Every observer uses the same individuals and the same definite relations. What v
 If endpoint separation holds, necessity and possibility have the following object-language tests:
 
 ```math
-\begin{aligned}
-\Box A(\bar R,\bar a)
-&\leftrightarrow\forall E^{tt}\, .\,L(E)\to A^\circ(\bar R_E,\bar a),\\
-\Diamond A(\bar R,\bar a)
-&\leftrightarrow\exists E^{tt}\, .\,L(E)\land A^\circ(\bar R_E,\bar a).
-\end{aligned}
+\Box A(\bar R,\bar a) \leftrightarrow\forall E^{tt}\, .\,L(E)\to A^\circ(\bar R_E,\bar a),
+```
+
+```math
+\Diamond A(\bar R,\bar a) \leftrightarrow\exists E^{tt}\, .\,L(E)\land A^\circ(\bar R_E,\bar a).
 ```
 
 So necessity means that every such interpretation makes A true, and possibility means that some such interpretation does. Several parameters must be interpreted by the **same** observer; their interpretations cannot be freely recombined.
@@ -598,13 +592,23 @@ At individual arguments use x unchanged; no operation of type ee is introduced. 
 For any endpoint logical observer, the following connections hold, instance by instance:
 
 ```math
-\begin{aligned}
-\mathrm{Functional\ Choice}&\to(\mathrm{Functional\ Choice})^{[E]},\\
-\mathrm{Boolean\ Completeness}&\to(\mathrm{Boolean\ Completeness})^{[E]},\\
-E(\mathrm{Relational\ Choice})&\to(\mathrm{Relational\ Choice})^{[E]},\\
-E(\mathrm{Transversal\ Choice})&\to(\mathrm{Transversal\ Choice})^{[E]},\\
-(\mathrm{Infinity}_e)^{[E]}&=E(\mathrm{Infinity}_e).
-\end{aligned}
+\mathrm{Functional\ Choice}\to(\mathrm{Functional\ Choice})^{[E]},
+```
+
+```math
+\mathrm{Boolean\ Completeness}\to(\mathrm{Boolean\ Completeness})^{[E]},
+```
+
+```math
+E(\mathrm{Relational\ Choice})\to(\mathrm{Relational\ Choice})^{[E]},
+```
+
+```math
+E(\mathrm{Transversal\ Choice})\to(\mathrm{Transversal\ Choice})^{[E]},
+```
+
+```math
+(\mathrm{Infinity}_e)^{[E]}=E(\mathrm{Infinity}_e).
 ```
 
 Consequently, ☐Relational Choice, ☐Transversal Choice and quantified ☐Infinity at e imply their translated versions. Functional Choice and Boolean Completeness require only their unboxed instances. For every pure sentence A, any two endpoint logical observers agree on the translated claim:

@@ -200,10 +200,7 @@ The agreement proposition $`c_V(X)`$ is defined under Individual Profile Realiza
 A numerical quantity necessarily takes exactly one natural value, and every current natural value is possible.
 
 ```math
-\begin{aligned}
-&\exists L^{\nu_\kappa t}\, .\,\bigl(\Box\exists!n^{\nu_\kappa}\, .\,\mathbb N_\kappa n\land Ln\bigr) \\
-&\qquad \land\bigl(\forall n^{\nu_\kappa}\, .\,\mathbb N_\kappa n\to\Diamond Ln\bigr).
-\end{aligned}
+\exists L^{\nu_\kappa t}\, .\,\bigl(\Box\exists!n^{\nu_\kappa}\, .\,\mathbb N_\kappa n\land Ln\bigr) \land\bigl(\forall n^{\nu_\kappa}\, .\,\mathbb N_\kappa n\to\Diamond Ln\bigr).
 ```
 
 The counting type $`\kappa`$ determines the Frege numerical type $`\nu_\kappa=(\kappa t)t`$, with finite-cardinality predicate $`\mathbb N_\kappa`$. The principle is a schema in $`\kappa`$.
@@ -319,10 +316,7 @@ w_E:=\forall p^t\, .\,Ep\to p,
 ```
 
 ```math
-\begin{aligned}
-&D(E):=E\bot=\bot\land(\forall p^t\, .\,Ep=\top\lor Ep=\bot) \\
-&\qquad \land(\forall p^t\, .\,E(\neg p)=\neg(Ep))\land E(w_E).
-\end{aligned}
+D(E):=E\bot=\bot\land(\forall p^t\, .\,Ep=\top\lor Ep=\bot) \land(\forall p^t\, .\,E(\neg p)=\neg(Ep))\land E(w_E).
 ```
 
 The separation principle is
@@ -342,7 +336,7 @@ Every rigid Boolean subalgebra, complete for admitted families, at every relatio
 For each relational type $`\tau`$, let $`\mathrm{CBA}_\tau(A)`$ say that $`A`$ is such a subalgebra, and $`\mathrm{CBHom}_\tau(r)`$ that $`r`$ preserves complements and all admitted meets. The principle is
 
 ```math
-\begin{aligned}\forall A^{\tau t}\, .\,\mathrm{CBA}_\tau(A)\to\exists r^{\tau\tau}\, .\,\bigl[&\mathrm{CBHom}_\tau(r)\land\forall p^\tau\, A(rp)\\&\land\forall q^\tau\,(Aq\to rq=q)\bigr].\end{aligned}
+\forall A^{\tau t}\, .\,\mathrm{CBA}_\tau(A)\to\exists r^{\tau\tau}\, .\,\bigl[\mathrm{CBHom}_\tau(r)\land\forall p^\tau\, A(rp) \land\forall q^\tau\,(Aq\to rq=q)\bigr].
 ```
 
 **Sources:** [structural-algebraic-core.md](source/research/2026-10-22/notes/structural-algebraic-core.md) (§§16,18–19,38).
