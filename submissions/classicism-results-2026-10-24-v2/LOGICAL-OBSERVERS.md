@@ -44,7 +44,13 @@ Using $`\mathrm{Good}_\Delta(E)`$ as defined above, the individual observer rest
 \forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\, \bigl(\mathrm{Good}_\Delta(E)\land K(E)\bigr) \to\forall\bar x^{\bar\sigma}\, .\, \bigl(E(X[\bar x])\leftrightarrow E(Y[\bar x])\bigr)\Bigr] \to X=Y
 ```
 
-Every pair of distinct relations is distinguished at some arguments by an eligible observer. K specifies the additional observer condition; OS takes it to be ⊤. We will use the predicate mathrm{Sep} below to express that this schema is valid for a given specification of K.
+Every pair of distinct relations is distinguished at some arguments by an eligible observer. K specifies the additional observer condition; OS takes it to be ⊤. 
+
+For a family $`K^{(tt)t}`$, write
+
+```math
+\mathrm{Sep}_{\bar\sigma}(K):=\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,KE\to\forall\bar x^{\bar\sigma}\, .\,\bigl(E(X[\bar x])\leftrightarrow E(Y[\bar x])\bigr)\Bigr]\to X=Y
+```
 
 <a id="observer-principles-at-a-glance"></a>
 ## The observer principles
@@ -141,13 +147,7 @@ The necessity allows a different observer at each accessible evaluation. Unboxed
 
 A commuting family lets us apply any two of its observers in either order with the same result. **CoSep** asks for one such admitted family that distinguishes every pair of distinct relations. **CoIdemSep** also requires that observing twice changes nothing.
 
-For a family $`K^{(tt)t}`$, write
-
-```math
-\mathrm{Sep}_{\bar\sigma}(K):=\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,KE\to\forall\bar x^{\bar\sigma}\, .\,\bigl(E(X[\bar x])\leftrightarrow E(Y[\bar x])\bigr)\Bigr]\to X=Y
-```
-
-Then CoSep is the schema
+CoSep is the schema
 
 ```math
 \mathrm{CoSep}_{\bar\sigma,\Delta}:=\exists K^{(tt)t}\, .\,\bigl(\forall E^{tt}\, .\,KE\to\mathrm{Good}_\Delta(E)\bigr)\land\bigl(\forall E,F^{tt}\, .\,(KE\land KF)\to E\circ F=F\circ E\bigr)\land\mathrm{Sep}_{\bar\sigma}(K)
