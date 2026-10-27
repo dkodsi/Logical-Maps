@@ -9,6 +9,8 @@ The [canonical results package](classicism-results-2026-10-24-v2/README.md) is t
 - [Main results](classicism-results-2026-10-24-v2/MAIN-RESULTS.md): database connections and existing-result formalizations; further results about established principles; extensions and new directions.
 - [Unresolved and resolved questions](classicism-results-2026-10-24-v2/CONJECTURES.md): open problems, claims awaiting review and resolved cases, distinguishing proofs from formalizations.
 - [Database integration](classicism-results-2026-10-24-v2/DATABASE-INTEGRATION.md): existing records, proposed actions and exact proof/certificate references.
+- [Logical observers](classicism-results-2026-10-24-v2/LOGICAL-OBSERVERS.md): the C and H maps, object-language definitions and C/C5 simplifications.
+- [General observer interpretations](integration-register/OBSERVER-INTERPRETATIONS.md): preservation, proper realization and the same-image comparison.
 - [CANDIDATES_DK](classicism-results-2026-10-24-v2/CANDIDATES_DK.md): isolated candidate records and the evaluator hierarchy with exact equivalent formulations.
 - [Complete catalog](classicism-results-2026-10-24-v2/CATALOG.md) and [evidence index](classicism-results-2026-10-24-v2/evidence/RESULT-INDEX.md).
 

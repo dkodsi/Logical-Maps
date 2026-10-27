@@ -1,0 +1,1601 @@
+{
+  "schema_version": null,
+  "title": "Logical observers: principles, maps and consequences",
+  "date": "2026-10-26",
+  "purpose": "Common object-language definitions and proposed principle records for the fixed relational type system. No native database records are changed.",
+  "base": "H, with explicitly stated simplifications over C and C5.",
+  "type_convention": "Types index finite schemas externally. Observers have type tt; qualifications have type (tt)t. All function outputs are relational.",
+  "definitions": {
+    "separation": "\\mathrm{Sep}_{\\bar\\sigma}(K):=\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,KE\\to\\forall\\bar x^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar x])\\leftrightarrow E(Y[\\bar x])\\bigr)\\Bigr]\\to X=Y.",
+    "boolean-preservation": "\\begin{aligned}E\\top&=\\top,&E\\bot&=\\bot,\\\\(\\lambda p\\, .\\,E(\\neg p))&=(\\lambda p\\, .\\,\\neg Ep),\\\\(\\lambda p,q\\, .\\,E(p\\land q))&=(\\lambda p,q\\, .\\,Ep\\land Eq),\\\\(\\lambda p,q\\, .\\,E(p\\lor q))&=(\\lambda p,q\\, .\\,Ep\\lor Eq).\\end{aligned}",
+    "quantifier-preservation": "\\begin{aligned}Q_\\sigma(E)&:= (\\lambda F^{\\sigma t}\\, .\\,E(\\forall x^\\sigma\\, .\\,Fx))=(\\lambda F^{\\sigma t}\\, .\\,\\forall x^\\sigma\\, .\\,E(Fx)),\\\\P_\\sigma(E)&:= (\\lambda F^{\\sigma t}\\, .\\,E(\\exists x^\\sigma\\, .\\,Fx))=(\\lambda F^{\\sigma t}\\, .\\,\\exists x^\\sigma\\, .\\,E(Fx)).\\end{aligned}",
+    "observed-equality": "\\begin{aligned}\\mathrm{Eq}_\\sigma(E):={}&(\\forall x^\\sigma\\, .\\,E(x=x))\\\\&\\land\\forall x,y^\\sigma\\, .\\,\\forall F^{\\sigma t}\\, .\\,\\bigl(E(x=y)\\to(E(Fx)\\to E(Fy))\\bigr).\\end{aligned}",
+    "Good": "\\mathrm{Good}_\\Delta(E):=\\mathrm{Bool}(E)\\land\\bigwedge_{\\sigma\\in\\Delta}\\bigl(Q_\\sigma(E)\\land P_\\sigma(E)\\land\\mathrm{Eq}_\\sigma(E)\\bigr)",
+    "composition": "I:=\\lambda p^t\\, .\\,p,\\qquad E\\circ F:=\\lambda p^t\\, .\\,E(Fp)",
+    "End": "\\mathrm{End}(E):=\\forall p^t\\, .\\,Ep=\\top\\lor Ep=\\bot",
+    "Rev": "\\mathrm{Rev}_\\Delta(E):=\\exists F^{tt}\\, .\\,\\mathrm{Good}_\\Delta(F)\\land F\\circ E=I\\land E\\circ F=I",
+    "SurjSep": "\\mathrm{Onto}(E):=\\forall q^t\\, .\\,\\exists p^t\\, .\\,Ep=q",
+    "SplitMono": "\\mathrm{Left}_\\Delta(E):=\\exists F^{tt}\\, .\\,\\mathrm{Good}_\\Delta(F)\\land F\\circ E=I",
+    "InjSep": "\\mathrm{Inj}(E):=\\forall p,q^t\\, .\\,Ep=Eq\\to p=q",
+    "BoxSep": "\\mathrm{BoxComm}(E):=(\\lambda p^t\\, .\\,E(\\Box p))=(\\lambda p^t\\, .\\,\\Box(Ep))",
+    "FinSep": "\\mathrm{Im}_E:=\\lambda q^t\\, .\\,\\exists p^t\\, .\\,Ep=q,\\qquad\\mathrm{FinIm}(E):=\\exists Z^{(tt)t}\\, .\\,\\mathrm{FiniteCardinality}_t(Z)\\land Z(\\mathrm{Im}_E)",
+    "IdemBoxSep": "\\mathrm{BoxComm}(E)\\land E\\circ E=E",
+    "B_r": "\\mathrm{BoxComm}(E)\\land E^{r+1}=E^r\\qquad(r\\ge1)",
+    "FactiveSep": "\\mathrm{Fact}(E):=\\forall p^t\\, .\\,Ep\\to p",
+    "CentreSep": "\\mathrm{Cent}_\\Delta(E):=\\forall F^{tt}\\, .\\,\\mathrm{Good}_\\Delta(F)\\to E\\circ F=F\\circ E",
+    "Unique": "\\mathrm{Unique}_\\Delta:=\\forall E^{tt}\\, .\\,\\mathrm{Good}_\\Delta(E)\\to E=I",
+    "Bool_C": "((\\lambda p\\, .\\,E(\\neg p))=(\\lambda p\\, .\\,\\neg Ep))\\land((\\lambda p,q\\, .\\,E(p\\land q))=(\\lambda p,q\\, .\\,Ep\\land Eq))",
+    "conjunction-preservation": "M(E):=(\\lambda p,q^t\\, .\\,E(p\\land q))=(\\lambda p,q^t\\, .\\,Ep\\land Eq)",
+    "negation-preservation": "N(E):=(\\lambda p^t\\, .\\,E(\\neg p))=(\\lambda p^t\\, .\\,\\neg Ep)",
+    "universal-preservation": "Q_\\sigma(E):=(\\lambda F^{\\sigma t}\\, .\\,E(\\forall x^\\sigma\\, .\\,Fx))=(\\lambda F^{\\sigma t}\\, .\\,\\forall x^\\sigma\\, .\\,E(Fx))",
+    "Good_C": "\\mathrm{Good}^{C}_\\Delta(E):=M(E)\\land N(E)\\land\\bigwedge_{\\sigma\\in\\Delta}Q_\\sigma(E)",
+    "involution-qualification": "J(E):=M(E)\\land E\\circ E=I",
+    "Rev_C": "\\forall p,q^t\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,J(E)\\to(Ep\\leftrightarrow Eq)\\Bigr]\\to p=q.",
+    "pointwise-involution-qualification": "J_{\\mathrm{pt}}(E):=(\\forall u,v^t\\, .\\,E(u\\land v)=Eu\\land Ev)\\land(\\forall u^t\\, .\\,E(Eu)=u).",
+    "pointwise-reversible-separation": "S_{\\mathrm{pt}}:=\\forall p,q^t\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,J_{\\mathrm{pt}}(E)\\to(Ep\\leftrightarrow Eq)\\Bigr]\\to p=q.",
+    "disjunction-preservation": "V(E):=(\\lambda p,q^t\\, .\\,E(p\\lor q))=(\\lambda p,q^t\\, .\\,Ep\\lor Eq)",
+    "Bool_H": "\\mathrm{Bool}_H(E):=M(E)\\land V(E)\\land N(E)\\land E\\top=\\top\\land E\\bot=\\bot",
+    "Stable": "\\mathrm{Stable}(K):=\\forall E^{tt}\\, .\\,(KE=\\top\\lor KE=\\bot)"
+  },
+  "principles": [
+    {
+      "id": "logical-observer-separation-r",
+      "name": "Logical Observer Separation",
+      "symbol": "OS",
+      "group": "principal",
+      "base": "H",
+      "kind": "relational-type schema",
+      "intuition": "Every difference between relations is detected by some logical observer.",
+      "qualification": "\\mathrm{Good}_\\Delta(E)",
+      "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
+      "schema_parameters": {
+        "argument_types": "Any finite tuple of admitted types, including the empty tuple.",
+        "qualification_types": "Any finite list Delta of admitted types.",
+        "bound": null
+      },
+      "definitions": [
+        "separation",
+        "boolean-preservation",
+        "quantifier-preservation",
+        "observed-equality",
+        "Good",
+        "composition"
+      ],
+      "sources": [
+        {
+          "path": "proofs/logical-observers.md",
+          "locator": "§§1–8",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "proofs/operator-representation.md",
+          "locator": "§§2–6",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "proofs/logical-observer-hierarchy.md",
+          "locator": "§§1–8",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        }
+      ],
+      "scope_note": "All observer and inverse variables range over admitted objects. Composition equations are identities of whole operations; qualification and the separation instance are not boxed unless explicitly stated.",
+      "overview_condition": "\\top"
+    },
+    {
+      "id": "endpoint-logical-observer-separation-r",
+      "name": "Endpoint Logical Observer Separation",
+      "symbol": "End",
+      "group": "principal",
+      "base": "H",
+      "kind": "relational-type schema",
+      "intuition": "The separating observers always return Top or Bottom: each makes an entirely definite assessment.",
+      "qualification": "\\mathrm{Good}_\\Delta(E)\\land \\mathrm{End}(E)",
+      "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{End}(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
+      "schema_parameters": {
+        "argument_types": "Any finite tuple of admitted types, including the empty tuple.",
+        "qualification_types": "Any finite list Delta of admitted types.",
+        "bound": null
+      },
+      "definitions": [
+        "separation",
+        "boolean-preservation",
+        "quantifier-preservation",
+        "observed-equality",
+        "End",
+        "Good",
+        "composition"
+      ],
+      "sources": [
+        {
+          "path": "proofs/logical-observers.md",
+          "locator": "§§1–8",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "proofs/operator-representation.md",
+          "locator": "§§2–6",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "proofs/logical-observer-hierarchy.md",
+          "locator": "§§1–8",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        }
+      ],
+      "scope_note": "All observer and inverse variables range over admitted objects. Composition equations are identities of whole operations; qualification and the separation instance are not boxed unless explicitly stated.",
+      "overview_condition": "\\forall p^t\\, .\\,Ep=\\top\\lor Ep=\\bot"
+    },
+    {
+      "id": "reversible-logical-observer-separation-r",
+      "name": "Reversible Logical Observer Separation",
+      "symbol": "Rev",
+      "group": "principal",
+      "base": "H",
+      "kind": "relational-type schema",
+      "intuition": "Each separating observer can be undone by another logical observer.",
+      "qualification": "\\mathrm{Good}_\\Delta(E)\\land \\mathrm{Rev}_\\Delta(E)",
+      "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{Rev}_\\Delta(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
+      "schema_parameters": {
+        "argument_types": "Any finite tuple of admitted types, including the empty tuple.",
+        "qualification_types": "Any finite list Delta of admitted types.",
+        "bound": null
+      },
+      "definitions": [
+        "separation",
+        "boolean-preservation",
+        "quantifier-preservation",
+        "observed-equality",
+        "Rev",
+        "Good",
+        "composition"
+      ],
+      "sources": [
+        {
+          "path": "proofs/logical-observers.md",
+          "locator": "§§1–8",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "proofs/operator-representation.md",
+          "locator": "§§2–6",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "proofs/logical-observer-hierarchy.md",
+          "locator": "§§1–8",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "proofs/reversible-propositional-separation.md",
+          "locator": "§§1–3",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        }
+      ],
+      "scope_note": "All observer and inverse variables range over admitted objects. Composition equations are identities of whole operations; qualification and the separation instance are not boxed unless explicitly stated.",
+      "overview_condition": "E\\circ E=I",
+      "overview_intuition": "Each separating observer undoes itself when applied twice.",
+      "equivalent_formulations": [
+        {
+          "base": "C",
+          "name": "Propositional separation by conjunction-preserving involutions",
+          "formal": "\\forall p,q^t\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,J(E)\\to(Ep\\leftrightarrow Eq)\\Bigr]\\to p=q.",
+          "definitions": [
+            "conjunction-preservation",
+            "involution-qualification",
+            "composition"
+          ],
+          "source": {
+            "path": "proofs/reversible-propositional-separation.md",
+            "locator": "§§1–3",
+            "source_id": "misc",
+            "pagination": "unpaginated"
+          }
+        }
+      ],
+      "changes": [
+        {
+          "date": "2026-10-26",
+          "by": "OpenAI Codex",
+          "summary": "Added the ordinary-proof equivalence with propositional separation by whole conjunction-preserving involutions over C; the H record is unchanged."
+        }
+      ]
+    },
+    {
+      "id": "surjective-logical-observer-separation-r",
+      "name": "Surjective Logical Observer Separation",
+      "symbol": "SurjSep",
+      "group": "principal",
+      "base": "H",
+      "kind": "relational-type schema",
+      "intuition": "Every proposition occurs as an output of each separating observer.",
+      "qualification": "\\mathrm{Good}_\\Delta(E)\\land \\mathrm{Onto}(E)",
+      "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{Onto}(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
+      "schema_parameters": {
+        "argument_types": "Any finite tuple of admitted types, including the empty tuple.",
+        "qualification_types": "Any finite list Delta of admitted types.",
+        "bound": null
+      },
+      "definitions": [
+        "separation",
+        "boolean-preservation",
+        "quantifier-preservation",
+        "observed-equality",
+        "SurjSep",
+        "Good",
+        "composition"
+      ],
+      "sources": [
+        {
+          "path": "proofs/h-observer-space/surjective-logical-observers.md",
+          "locator": "§§1–5",
+          "source_id": "misc",
+          "pagination": "Unpaginated proof note."
+        }
+      ],
+      "scope_note": "All observer and inverse variables range over admitted objects. Composition equations are identities of whole operations; qualification and the separation instance are not boxed unless explicitly stated.",
+      "overview_condition": "\\forall q^t\\, .\\,\\exists p^t\\, .\\,Ep=q"
+    },
+    {
+      "id": "logical-left-inverse-separation-r",
+      "name": "Logical Left-Inverse Separation",
+      "symbol": "SplitMono",
+      "group": "further",
+      "base": "H",
+      "kind": "relational-type schema",
+      "intuition": "Another logical observer recovers every input from the separating observer’s output.",
+      "qualification": "\\mathrm{Good}_\\Delta(E)\\land \\mathrm{Left}_\\Delta(E)",
+      "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{Left}_\\Delta(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
+      "schema_parameters": {
+        "argument_types": "Any finite tuple of admitted types, including the empty tuple.",
+        "qualification_types": "Any finite list Delta of admitted types.",
+        "bound": null
+      },
+      "definitions": [
+        "separation",
+        "boolean-preservation",
+        "quantifier-preservation",
+        "observed-equality",
+        "SplitMono",
+        "Good",
+        "composition"
+      ],
+      "sources": [
+        {
+          "path": "proofs/h-observer-space/split-inverse-logical-observers.md",
+          "locator": "§§1–5",
+          "source_id": "misc",
+          "pagination": "Unpaginated proof note."
+        }
+      ],
+      "scope_note": "All observer and inverse variables range over admitted objects. Composition equations are identities of whole operations; qualification and the separation instance are not boxed unless explicitly stated.",
+      "overview_condition": "\\exists F^{tt}\\, .\\,\\mathrm{Good}_\\Delta(F)\\land F\\circ E=I"
+    },
+    {
+      "id": "injective-logical-observer-separation-r",
+      "name": "Injective Logical Observer Separation",
+      "symbol": "InjSep",
+      "group": "further",
+      "base": "H",
+      "kind": "relational-type schema",
+      "intuition": "Each separating observer sends distinct input propositions to distinct output propositions.",
+      "qualification": "\\mathrm{Good}_\\Delta(E)\\land \\mathrm{Inj}(E)",
+      "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{Inj}(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
+      "schema_parameters": {
+        "argument_types": "Any finite tuple of admitted types, including the empty tuple.",
+        "qualification_types": "Any finite list Delta of admitted types.",
+        "bound": null
+      },
+      "definitions": [
+        "separation",
+        "boolean-preservation",
+        "quantifier-preservation",
+        "observed-equality",
+        "InjSep",
+        "Good",
+        "composition"
+      ],
+      "sources": [
+        {
+          "path": "proofs/logical-observers.md",
+          "locator": "§§1–8",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "proofs/operator-representation.md",
+          "locator": "§§2–6",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "proofs/logical-observer-hierarchy.md",
+          "locator": "§§1–8",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        }
+      ],
+      "scope_note": "All observer and inverse variables range over admitted objects. Composition equations are identities of whole operations; qualification and the separation instance are not boxed unless explicitly stated.",
+      "overview_condition": "\\forall p,q^t\\, .\\,Ep=Eq\\to p=q"
+    },
+    {
+      "id": "native-necessity-logical-observer-separation-r",
+      "name": "Logical Observer Separation with ☐ Preservation",
+      "symbol": "BoxSep",
+      "group": "principal",
+      "base": "H",
+      "kind": "relational-type schema",
+      "intuition": "The separating observers preserve necessity as well as the logical operations.",
+      "qualification": "\\mathrm{Good}_\\Delta(E)\\land \\mathrm{BoxComm}(E)",
+      "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{BoxComm}(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
+      "schema_parameters": {
+        "argument_types": "Any finite tuple of admitted types, including the empty tuple.",
+        "qualification_types": "Any finite list Delta of admitted types.",
+        "bound": null
+      },
+      "definitions": [
+        "separation",
+        "boolean-preservation",
+        "quantifier-preservation",
+        "observed-equality",
+        "BoxSep",
+        "Good",
+        "composition"
+      ],
+      "sources": [
+        {
+          "path": "proofs/logical-observers.md",
+          "locator": "§§1–8",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "proofs/operator-representation.md",
+          "locator": "§§2–6",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "proofs/logical-observer-hierarchy.md",
+          "locator": "§§1–8",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        }
+      ],
+      "scope_note": "All observer and inverse variables range over admitted objects. Composition equations are identities of whole operations; qualification and the separation instance are not boxed unless explicitly stated.",
+      "overview_condition": "(\\lambda p^t\\, .\\,E(\\Box p))=(\\lambda p^t\\, .\\,\\Box(Ep))"
+    },
+    {
+      "id": "finite-image-logical-observer-separation-r",
+      "name": "Finite-Image Logical Observer Separation",
+      "symbol": "FinSep",
+      "group": "further",
+      "base": "H",
+      "kind": "relational-type schema",
+      "intuition": "Each separating observer has finitely many possible outputs.",
+      "qualification": "\\mathrm{Good}_\\Delta(E)\\land \\mathrm{FinIm}(E)",
+      "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{FinIm}(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
+      "schema_parameters": {
+        "argument_types": "Any finite tuple of admitted types, including the empty tuple.",
+        "qualification_types": "Any finite list Delta of admitted types.",
+        "bound": null
+      },
+      "definitions": [
+        "separation",
+        "boolean-preservation",
+        "quantifier-preservation",
+        "observed-equality",
+        "FinSep",
+        "Good",
+        "composition"
+      ],
+      "sources": [
+        {
+          "path": "proofs/logical-observers.md",
+          "locator": "§§1–8",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "proofs/operator-representation.md",
+          "locator": "§§2–6",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "proofs/logical-observer-hierarchy.md",
+          "locator": "§§1–8",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        }
+      ],
+      "scope_note": "All observer and inverse variables range over admitted objects. Composition equations are identities of whole operations; qualification and the separation instance are not boxed unless explicitly stated.",
+      "overview_condition": "\\mathrm{FinIm}(E)"
+    },
+    {
+      "id": "idempotent-native-necessity-logical-observer-separation-r",
+      "name": "Idempotent Logical Observer Separation with ☐ Preservation",
+      "symbol": "IdemBoxSep",
+      "group": "further",
+      "base": "H",
+      "kind": "relational-type schema",
+      "intuition": "The observers preserve necessity and stabilize after one application.",
+      "qualification": "\\mathrm{Good}_\\Delta(E)\\land \\mathrm{BoxComm}(E)\\land E\\circ E=E",
+      "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{BoxComm}(E)\\land E\\circ E=E\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
+      "schema_parameters": {
+        "argument_types": "Any finite tuple of admitted types, including the empty tuple.",
+        "qualification_types": "Any finite list Delta of admitted types.",
+        "bound": null
+      },
+      "definitions": [
+        "separation",
+        "boolean-preservation",
+        "quantifier-preservation",
+        "observed-equality",
+        "IdemBoxSep",
+        "Good",
+        "composition"
+      ],
+      "sources": [
+        {
+          "path": "proofs/logical-observers.md",
+          "locator": "§§1–8",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "proofs/operator-representation.md",
+          "locator": "§§2–6",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "proofs/logical-observer-hierarchy.md",
+          "locator": "§§1–8",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        }
+      ],
+      "scope_note": "All observer and inverse variables range over admitted objects. Composition equations are identities of whole operations; qualification and the separation instance are not boxed unless explicitly stated."
+    },
+    {
+      "id": "bounded-stabilization-native-necessity-logical-observer-separation-r",
+      "name": "Logical Observer Separation with Bounded Stabilization and ☐ Preservation",
+      "symbol": "B_r",
+      "group": "further",
+      "base": "H",
+      "kind": "relational-type schema",
+      "intuition": "The observers preserve necessity and stabilize after a fixed number r of applications.",
+      "qualification": "\\mathrm{Good}_\\Delta(E)\\land \\mathrm{BoxComm}(E)\\land E^{r+1}=E^r",
+      "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{BoxComm}(E)\\land E^{r+1}=E^r\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
+      "schema_parameters": {
+        "argument_types": "Any finite tuple of admitted types, including the empty tuple.",
+        "qualification_types": "Any finite list Delta of admitted types.",
+        "bound": "Fixed external integer r >= 1."
+      },
+      "definitions": [
+        "separation",
+        "boolean-preservation",
+        "quantifier-preservation",
+        "observed-equality",
+        "B_r",
+        "Good",
+        "composition"
+      ],
+      "sources": [
+        {
+          "path": "proofs/logical-observers.md",
+          "locator": "§§1–8",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "proofs/operator-representation.md",
+          "locator": "§§2–6",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "proofs/logical-observer-hierarchy.md",
+          "locator": "§§1–8",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        }
+      ],
+      "scope_note": "All observer and inverse variables range over admitted objects. Composition equations are identities of whole operations; qualification and the separation instance are not boxed unless explicitly stated."
+    },
+    {
+      "id": "factive-logical-observer-separation-r",
+      "name": "Factive Logical Observer Separation",
+      "symbol": "FactiveSep",
+      "group": "further",
+      "base": "H",
+      "kind": "relational-type schema",
+      "intuition": "Every proposition accepted by a separating observer is true.",
+      "qualification": "\\mathrm{Good}_\\Delta(E)\\land \\mathrm{Fact}(E)",
+      "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{Fact}(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
+      "schema_parameters": {
+        "argument_types": "Any finite tuple of admitted types, including the empty tuple.",
+        "qualification_types": "Any finite list Delta of admitted types.",
+        "bound": null
+      },
+      "definitions": [
+        "separation",
+        "boolean-preservation",
+        "quantifier-preservation",
+        "observed-equality",
+        "FactiveSep",
+        "Good",
+        "composition"
+      ],
+      "sources": [
+        {
+          "path": "proofs/logical-observers.md",
+          "locator": "§§1–8",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "proofs/operator-representation.md",
+          "locator": "§§2–6",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "proofs/logical-observer-hierarchy.md",
+          "locator": "§§1–8",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        }
+      ],
+      "scope_note": "All observer and inverse variables range over admitted objects. Composition equations are identities of whole operations; qualification and the separation instance are not boxed unless explicitly stated.",
+      "overview_condition": "\\forall p^t\\, .\\,Ep\\to p"
+    },
+    {
+      "id": "central-logical-observer-separation-r",
+      "name": "Central Logical Observer Separation",
+      "symbol": "CentreSep",
+      "group": "further",
+      "base": "H",
+      "kind": "relational-type schema",
+      "intuition": "Each separating observer commutes with every observer qualified at the same finite list.",
+      "qualification": "\\mathrm{Good}_\\Delta(E)\\land \\mathrm{Cent}_\\Delta(E)",
+      "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{Cent}_\\Delta(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
+      "schema_parameters": {
+        "argument_types": "Any finite tuple of admitted types, including the empty tuple.",
+        "qualification_types": "Any finite list Delta of admitted types.",
+        "bound": null
+      },
+      "definitions": [
+        "separation",
+        "boolean-preservation",
+        "quantifier-preservation",
+        "observed-equality",
+        "CentreSep",
+        "Good",
+        "composition"
+      ],
+      "sources": [
+        {
+          "path": "proofs/logical-observers.md",
+          "locator": "§§1–8",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "proofs/operator-representation.md",
+          "locator": "§§2–6",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "proofs/logical-observer-hierarchy.md",
+          "locator": "§§1–8",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        }
+      ],
+      "scope_note": "All observer and inverse variables range over admitted objects. Composition equations are identities of whole operations; qualification and the separation instance are not boxed unless explicitly stated."
+    }
+  ],
+  "boxed_schema": {
+    "name": "Necessary Logical Observer Separation",
+    "symbol": "Box OS",
+    "formal": "\\Box\\mathrm{Sep}_{\\bar\\sigma}(\\lambda E^{tt}\\, .\\,\\mathrm{Good}_\\Delta(E))",
+    "scope": "Box every separately closed instance, for each finite type tuple and qualification list.",
+    "general_convention": "For every observer principle P, ☐P consists of the boxes of its separately closed instances. The displayed formula is the OS instance of this convention."
+  },
+  "guide_sections": [
+    {
+      "id": "logical-observers-over-c",
+      "title": "Logical observers over C",
+      "body": "An observer $E^{tt}$ sends propositions to propositions. The truth of $Ep$ is its assessment of p. Two propositions can agree in truth and still be distinct; observers separate them when some observer gives them different truth values.\n\nA **logical observer** preserves conjunction, negation and universal quantification at the types being tested:\n\n$$\n\\begin{aligned}\nM(E)&:=(\\lambda p,q^t\\, .\\,E(p\\land q))=(\\lambda p,q^t\\, .\\,Ep\\land Eq),\\\\\nN(E)&:=(\\lambda p^t\\, .\\,E(\\neg p))=(\\lambda p^t\\, .\\,\\neg Ep),\\\\\nQ_\\sigma(E)&:=(\\lambda F^{\\sigma t}\\, .\\,E(\\forall x^\\sigma\\, .\\,Fx))\n=(\\lambda F^{\\sigma t}\\, .\\,\\forall x^\\sigma\\, .\\,E(Fx)).\n\\end{aligned}\n$$\n\nFor a finite list of types Δ, put\n\n$$\n\\mathrm{Good}_\\Delta(E):=M(E)\\land N(E)\\land\\bigwedge_{\\sigma\\in\\Delta}Q_\\sigma(E).\n$$\n\nOver C, these identities also give preservation of ⊤, ⊥ and the other Boolean operations, existential quantification at the same types, and the observed equality laws. Write $\\mathrm{Bool}_C(E):=M(E)\\land N(E)$. The [H formulation](#uniform-definitions-over-h) adds the clauses that do not yet follow without C. Types and finite lists index the schema; there is no quantification over types."
+    },
+    {
+      "id": "observer-separation",
+      "title": "The common separation principle",
+      "body": "Using $\\mathrm{Good}_\\Delta(E)$ as defined above, the individual observer restrictions below have the following object-language form:\n\n$$\n\\begin{aligned}\n\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\n\\bigl(\\mathrm{Good}_\\Delta(E)\\land K(E)\\bigr)\n&\\to\\forall\\bar x^{\\bar\\sigma}\\, .\\,\n\\bigl(E(X[\\bar x])\\leftrightarrow E(Y[\\bar x])\\bigr)\\Bigr]\\\\\n&\\to X=Y.\n\\end{aligned}\n$$\n\nEvery pair of distinct relations is distinguished at some arguments by an eligible observer. K specifies the additional observer condition; OS takes it to be ⊤."
+    },
+    {
+      "id": "observer-principles-at-a-glance",
+      "title": "The observer principles",
+      "kind": "observer_overview",
+      "symbols": [
+        "OS",
+        "End",
+        "Rev",
+        "BoxSep",
+        "FinSep",
+        "FactiveSep",
+        "SurjSep"
+      ],
+      "body": "<a id=\"principal-observer-principles\"></a>\n\nIn the formulas, p and q are propositions, E and F are operations on propositions, $I:=\\lambda p^t\\, .\\,p$, and $E\\circ F:=\\lambda p^t\\, .\\,E(Fp)$.\n\nThe maps use **Fin** as the short label for FinSep."
+    },
+    {
+      "id": "necessary-separation",
+      "title": "Necessary separation",
+      "body": "For any observer principle P, **☐P** requires each separately closed instance of P to hold necessarily. For example, **☐OS** is the schema\n\n$$\n\\Box\\mathrm{Sep}_{\\bar\\sigma}(\\lambda E^{tt}\\, .\\,\\mathrm{Good}_\\Delta(E))\n$$\n\nIt differs from BoxSep, which requires each separating observer to preserve necessity."
+    },
+    {
+      "id": "simplifications-over-c-and-c5",
+      "title": "Simpler formulations over C",
+      "body": "For OS over C, it is enough to separate propositions. For each type ρ of propositions or relations, put\n\n$$\nK_\\rho(E):=\\mathrm{Bool}_C(E)\\land Q_e(E)\\land Q_\\rho(E).\n$$\n\nThen OS is equivalent over C to the schema\n\n$$\n\\mathrm{Sep}_t(\\lambda E^{tt}\\, .\\,K_\\rho(E))\\qquad(\\rho\\ne e).\n$$\n\nThese instances supply BF and therefore Functionality, which lifts proposition separation to relations. The same observer can handle any requested finite list by testing a common relational type.\n\n**Endpoint separation:** the one propositional instance using $\\mathrm{Bool}_C(E)\\land Q_t(E)\\land\\mathrm{End}(E)$ is equivalent to C5 + Atomicity. Under Extensionality, truth is endpoint-valued and the identity observer suffices.\n\n[OS reduction](../next-update/proofs/observer-single-type-schema.md) · [Endpoint reduction](proofs/logical-observer-hierarchy.md#3-endpoint-separation-is-c5-plus-atomicity)."
+    },
+    {
+      "id": "reversible-propositional-formulation",
+      "title": "Reversible separation: a simpler sentence",
+      "body": "Rev has an especially short formulation over C: conjunction-preserving observers that undo themselves distinguish any two distinct propositions. Put\n\n$$\nJ(E):=M(E)\\land E\\circ E=I.\n$$\n\nThen Rev is exactly\n\n$$\n\\forall p,q^t\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,J(E)\\to(Ep\\leftrightarrow Eq)\\Bigr]\\to p=q.\n$$\n\nThe two laws in J already force preservation of negation and every typed quantifier. Proposition separation then supplies BF and Functionality, so separation of relations follows. [Proof](proofs/reversible-propositional-separation.md).\n\n### Pointwise formulation\n\nThe whole-operation identities can also be replaced by pointwise identities, provided separation is required necessarily. Put\n\n$$\nJ_{\\mathrm{pt}}(E):=(\\forall u,v^t\\, .\\,E(u\\land v)=Eu\\land Ev)\\land(\\forall u^t\\, .\\,E(Eu)=u).\n$$\n\n**Pointwise separation**, Sₚₜ, says that observers satisfying these two conditions distinguish every pair of distinct propositions:\n\n$$\nS_{\\mathrm{pt}}:=\\forall p,q^t\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,J_{\\mathrm{pt}}(E)\\to(Ep\\leftrightarrow Eq)\\Bigr]\\to p=q.\n$$\n\nOver C,\n\n$$\n\\mathrm{Rev}\\ \\longleftrightarrow\\ \\Box S_{\\mathrm{pt}}\\ \\longleftrightarrow\\ (S_{\\mathrm{pt}}\\land\\mathrm{BF}_t).\n$$\n\nThe necessity allows a different observer at each accessible evaluation. Unboxed Sₚₜ alone is weaker. [Exact scopes and proof](../integration-register/proofs/pointwise-reversible-separation.md)."
+    },
+    {
+      "id": "commuting-observer-families",
+      "title": "Commuting families of observers",
+      "body": "A commuting family lets us apply any two of its observers in either order with the same result. **CoSep** asks for one such admitted family that distinguishes every pair of distinct relations. **CoIdemSep** also requires that observing twice changes nothing.\n\nFor a family $K^{(tt)t}$, write\n\n$$\n\\mathrm{Sep}_{\\bar\\sigma}(K):=\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,KE\\to\\forall\\bar x^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar x])\\leftrightarrow E(Y[\\bar x])\\bigr)\\Bigr]\\to X=Y.\n$$\n\nThen CoSep is the schema\n\n$$\n\\begin{aligned}\\mathrm{CoSep}_{\\bar\\sigma,\\Delta}:=\\exists K^{(tt)t}\\, .\\,\\bigl(&\\forall E^{tt}\\, .\\,KE\\to\\mathrm{Good}_\\Delta(E)\\bigr)\\\\{}\\land{}&\\bigl(\\forall E,F^{tt}\\, .\\,(KE\\land KF)\\to E\\circ F=F\\circ E\\bigr)\\\\{}\\land{}&\\mathrm{Sep}_{\\bar\\sigma}(K).\\end{aligned}\n$$\n\nCoIdemSep adds $\\forall E^{tt}\\, .\\,KE\\to E\\circ E=E$ inside the same existential. These are conditions on a family, rather than on each observer separately.\n\nTwo further restrictions apply to the same family. **CoInjSep** requires its members to be injective; **CoRevSep** requires admitted logical inverses. The respective added clauses are\n\n$$\n\\begin{aligned}\n&\\forall E^{tt}\\, .\\,KE\\to\\forall p,q^t\\, .\\,(Ep=Eq\\to p=q),\\\\\n&\\forall E^{tt}\\, .\\,KE\\to\\exists F^{tt}\\, .\\,\n\\bigl(\\mathrm{Good}_\\Delta(F)\\land E\\circ F=I\\land F\\circ E=I\\bigr).\n\\end{aligned}\n$$\n\n**Over C5, one sentence suffices:** take $\\bar\\sigma$ empty, so only propositions are separated, and replace $\\mathrm{Good}_\\Delta(E)$ by $N(E)\\land Q_t(E)$. The same family then qualifies and separates at every relational type. [Definitions and reduction](../integration-register/proofs/coherent-observers/object-language-and-finite-basis.txt), §§1–4."
+    },
+    {
+      "id": "map-over-c",
+      "title": "The map over C",
+      "body": "All arrows are over C and use full relational separation. A two-headed arrow labelled “+ X” means **upper principle ⇔ lower principle + X**. Ordinary implication arrows point downward.\n\n<a id=\"familiar-principles-over-c\"></a>\n### Familiar principles over C\n\n```mermaid\n%%{init: {\"theme\":\"base\",\"themeVariables\":{\"fontFamily\":\"Arial, sans-serif\",\"fontSize\":\"16px\",\"lineColor\":\"#7b8596\",\"edgeLabelBackground\":\"#ffffff\"},\"flowchart\":{\"curve\":\"monotoneY\",\"nodeSpacing\":36,\"rankSpacing\":48,\"padding\":14}}}%%\nflowchart TD\n    Ext[\"Extensionality\"] --> At[\"C5 + Atomicity<br/>= ☐Plenitude = End\"]\n    NFC[\"☐Functional Choice\"] --> At\n    NFC --> CoRev[\"CoRevSep\"]\n    CoRev --> Rev\n    CoRev --> Co\n    At --> AtBF[\"Atomicity + BF\"]\n    AtBF --> OS[\"OS\"]\n    At --> Co[\"CoSep\"]\n    Co --> OS\n    Co --> Dot[\".2\"]\n    At <-->|\"+ one atom\"| Rev[\"Rev\"]\n    At <-->|\"+ C5\"| Fin[\"Fin\"]\n    Fin --> OS\n    Rev --> NPC[\"No Pure Contingency\"]\n    Rev <-->|\"+ SurjSep\"| Five[\"C5\"]\n    Rev --> Box[\"BoxSep\"]\n    Rev --> NOS[\"☐OS\"]\n    Box --> NBDot[\"☐BF + .2\"]\n    Box --> OS\n    Five --> NBDot\n    NOS --> NBF[\"☐BF\"]\n    NOS --> OS\n    NBDot --> Dot\n    NBDot --> NBF\n    NBF --> BF[\"BF\"]\n    OS --> BF\n    NFC <-->|\"+ Functional Choice\"| OS\n    At <-->|\"+ Plenitude at (t,t)\"| OS\n    classDef default fill:#f6f8fc,stroke:#8794ab,stroke-width:1px,color:#243249,rx:6,ry:6;\n    classDef observer fill:#eeedfa,stroke:#938bbd,stroke-width:1px,color:#302953,rx:6,ry:6;\n    classDef base fill:#e7edf5,stroke:#8794ab,color:#243249,rx:6,ry:6;\n    linkStyle default stroke:#7b8596,stroke-width:1.2px;\n    class CoRev,Co,At,OS,Rev,Box,NOS,Fin observer;\n    class BF base;\n```\n\nThe [fuller familiar-principles map](proofs/h-observer-space/GRAPH.md#9-the-larger-region-above-c--bf) also includes the idempotent branch; inverse distinctions remain in the observer map below.\n\nHere .2 is\n\n$$\n\\forall p^t\\, .\\, (\\Diamond\\Box p\\to\\Box\\Diamond p).\n$$\n\nNecessity-preserving separation makes what could be necessary necessarily possible. Reversible separation gives both C5 and No Pure Contingency, even in atomless models. Endpoint separation entails reversible separation by constructing different observers; an endpoint-valued observer itself need not be invertible. C5 also turns surjective separation into reversible separation, as the two-headed arrow records.\n\n### Further exact strengthenings\n\n| Starting principle | Add | Equivalent to |\n| --- | --- | --- |\n| OS | Correct Evaluation | [End](proofs/logical-observers.md#actual-truth-evaluation-and-endpoint-separation) |\n| OS | C5 + Actuality | [End](proofs/h-observer-space/plenitude-endpoint-bridge.md) |\n| ☐OS | C5 + one atom, or C5 + ◇Actuality | [End](proofs/h-observer-space/necessary-separation-and-atoms.md) |\n| OS | A unique qualified logical observer | [Extensionality](proofs/h-observer-space/observer-restrictions.md#4-one-observer-a-separating-subfamily-versus-a-unique-qualified-class) |\n| Rev | A unique endpoint observer qualified at t | [Extensionality](proofs/logical-observer-hierarchy.md#6-one-observer-suffices-alongside-reversibility) |\n\nHere one atom is $\\exists a^t\\, .\\,\\mathrm{Atom}_t(a)$. Correct Evaluation requires a Top-or-Bottom-valued operation agreeing with current truth. Logical-observer uniqueness is at any one fixed finite qualification list."
+    },
+    {
+      "id": "injectivity-and-left-inverses",
+      "title": "Injectivity and left inverses",
+      "body": "All inverse witnesses are admitted and logically qualified at the same finite list. Injectivity preserves differences between proposition objects; separation asks the family to reveal a difference in truth. Surjectivity says every proposition occurs as an output; it does not itself specify an inverse operation.",
+      "kind": "further_table",
+      "symbols": [
+        "SplitMono",
+        "InjSep"
+      ]
+    },
+    {
+      "id": "observer-relations-over-c",
+      "title": "Relations between observer principles over C",
+      "body": "```mermaid\n%%{init: {\"theme\":\"base\",\"themeVariables\":{\"fontFamily\":\"Arial, sans-serif\",\"fontSize\":\"16px\",\"lineColor\":\"#7b8596\",\"edgeLabelBackground\":\"#ffffff\"},\"flowchart\":{\"curve\":\"monotoneY\",\"nodeSpacing\":36,\"rankSpacing\":48,\"padding\":14}}}%%\nflowchart TD\n    End[\"End = ☐End\"] --> Rev[\"Rev = ☐Rev\"]\n    CoRev[\"CoRevSep = ☐CoRevSep\"] --> Rev\n    CoRev --> CoInj[\"CoInjSep\"]\n    CoInj --> Inj[\"InjSep\"]\n    CoInj --> Co[\"CoSep\"]\n    End -->|strict| CoIdem[\"CoIdemSep\"]\n    CoIdem -->|strict| Co[\"CoSep\"]\n    Co -->|strict| OS[\"OS\"]\n    Rev -->|strict| Both[\"☐SurjSep + ☐SplitMono\"]\n    Rev --> NBox[\"☐BoxSep\"]\n    Both --> NSurj[\"☐SurjSep\"]\n    Both --> NSplit[\"☐SplitMono\"]\n    NSplit -->|strict| NInj[\"☐InjSep\"]\n    NSurj --> NOS[\"☐OS\"]\n    NInj --> NOS\n    NBox --> NOS\n    NSurj --> Surj[\"SurjSep\"]\n    NSplit --> Split[\"SplitMono\"]\n    NInj --> Inj[\"InjSep\"]\n    NBox --> Box[\"BoxSep\"]\n    NOS --> OS[\"OS\"]\n    Split -->|strict| Inj\n    Surj --> OS\n    Inj --> OS\n    Box --> OS\n    classDef default fill:#f6f8fc,stroke:#8794ab,stroke-width:1px,color:#243249,rx:6,ry:6;\n    classDef observer fill:#eeedfa,stroke:#938bbd,stroke-width:1px,color:#302953,rx:6,ry:6;\n    classDef base fill:#e7edf5,stroke:#8794ab,color:#243249,rx:6,ry:6;\n    linkStyle default stroke:#7b8596,stroke-width:1.2px;\n    class CoRev,CoInj,CoIdem,Co,End,Rev,Both,NSurj,NSplit,NInj,NBox,NOS,Surj,Split,Inj,Box,OS observer;\n```\n\nEnd, Rev and CoRevSep entail their necessary forms. Necessity strictly strengthens OS, SurjSep, SplitMono, InjSep and BoxSep. Even ☐SurjSep and ☐SplitMono together remain weaker than Rev. Their separating families may be different.\n\nSurjSep and SplitMono are incomparable, as are BoxSep and ☐OS. SplitMono strictly implies InjSep. The converse fails even over C5 with ☐Relational Choice, ☐Transversal Choice and ☐Zorn at all types: the [countermodel](proofs/h-observer-space/rigid-souslin-injective-separation.md) has ☐InjSep but necessarily fails propositional SplitMono.\n\n[Reversible persistence](proofs/logical-observer-hierarchy.md#reversible-separation-entails-its-boxed-form) · [Necessary inverse principles](proofs/h-observer-space/full-cancellative-monoid-observers.md) · [Surjective persistence](proofs/h-observer-space/root-truth-profile-surjective-separation.md) · [Injective and left-inverse persistence](proofs/h-observer-space/fixed-point-symmetry-left-inverse-separation.md) · [BoxSep and ☐OS](proofs/h-observer-space/native-box-logical-observers.md#7-exact-comparisons-established-here).\n\n<a id=\"c5-simplifications\"></a>\n### Over C5\n\nOver C5, the same observer preserving the Boolean operations and the quantifier at t preserves every typed quantifier. Functionality is already available. OS, InjSep, SplitMono and Rev therefore reduce to their single propositional instance with qualification $\\mathrm{Bool}_C(E)\\land Q_t(E)$ and the stated restriction. In this setting:\n\n$$\n\\mathrm{SurjSep}\\ \\longleftrightarrow\\ \\mathrm{Rev},\\qquad\\mathrm{BoxSep}\\ \\longleftrightarrow\\ \\mathrm{InjSep}.\n$$\n\n[C5 quantifier reduction](proofs/modal-selectors-and-quantifier-reduction.md#4-over-c5-q_t-supplies-every-quantifier) · [Surjectivity](proofs/h-observer-space/surjective-logical-observers.md) · [Necessity preservation and injectivity](proofs/h-observer-space/native-box-logical-observers.md#3-over-c5-native-box-preservation-is-injectivity) · [Finite-image separation](proofs/logical-observer-hierarchy.md#5-observers-with-finitely-many-outputs)."
+    },
+    {
+      "id": "commuting-family-connections",
+      "title": "Commuting families and Atomicity",
+      "body": "Over C, CoSep entails **OS + .2**: propositions cannot be possibly necessary and possibly necessarily false. [Proof](../integration-register/proofs/coherent-observers/coherent-families.txt), §2.\n\nOver C5, **Atomicity is exactly separation by a stable commuting family of idempotent observers**. Stable membership means\n\n$$\n\\mathrm{Stable}(K):=\\forall E^{tt}\\, .\\,(KE=\\top\\lor KE=\\bot).\n$$\n\nIt fixes which observers belong to the family; their outputs need not be endpoints. Thus\n\n$$\n\\begin{aligned}\n\\mathrm{Atomicity}\\quad\\longleftrightarrow\\quad\\exists K^{(tt)t}\\, .\\,&\\mathrm{Stable}(K)\\land\\mathrm{Sep}_t(K)\\\\\n&\\land\\bigl(\\forall E\\, .\\,KE\\to N(E)\\land Q_t(E)\\land E\\circ E=E\\bigr)\\\\\n&\\land\\bigl(\\forall E,F\\, .\\,(KE\\land KF)\\to E\\circ F=F\\circ E\\bigr).\n\\end{aligned}\n$$\n\nNo Functional Choice is needed. Dropping stability gives the strictly weaker CoIdemSep; dropping idempotence gives CoSep, itself strictly stronger than OS. [Characterization](../integration-register/proofs/coherent-observers/stable-families-and-propagation.txt), §3; [strictness](../integration-register/proofs/coherent-observers/finite-alphabet-coherence-countermodels.txt).\n\n### Choice organizes observation\n\n☐Functional Choice supplies one stable commuting family of reversible observers that distinguishes all relations throughout possibility:\n\n$$\n\\Box\\mathrm{Functional\\ Choice}\\quad\\Longrightarrow\\quad\\mathrm{CoRevSep}.\n$$\n\nThe same family works necessarily, at every relational type and every finite list of quantifier qualifications. Already C5 + Atomicity suffices when the world atoms admit a well-order. [Construction](../integration-register/proofs/coherent-observers/choice-implies-coherent-reversible-separation.txt), §§1–7.\n\n### Actuality supplies inverses\n\nWith Actuality, every member of a commuting injective separating family already has an inverse in that same family. Over C,\n\n$$\n\\mathrm{Actuality}+\\mathrm{CoInjSep}\n\\quad\\longleftrightarrow\\quad\n\\mathrm{C5}+\\mathrm{Atomicity}+\\mathrm{CoRevSep}.\n$$\n\nThis package also gives ☐Plenitude and the necessary forms of Actuality, CoInjSep and CoRevSep. [Proof](../integration-register/proofs/coherent-observers/joint-injective-separation.txt), §§2–3. Separate CoSep and InjSep need not have a common witness family; the [catalogue](CATALOG.md#coherent.joint-separation) records the boundary.\n\n### When the same family continues to separate\n\nOver C5, let K be stable, logically qualified, commuting and currently separating. Then\n\n$$\n\\Box\\mathrm{Sep}_t(K)\\quad\\longleftrightarrow\\quad\n\\forall E^{tt}\\, .\\,KE\\to\\mathrm{Inj}(E).\n$$\n\nIf its observers are also idempotent, the existence of such a necessarily separating family is equivalent to **Extensionality**. This concerns the same K throughout possibility. Merely requiring a family to exist currently does not give necessary CoSep. [Exact criterion](../integration-register/proofs/coherent-observers/stable-families-and-propagation.txt), §§2–4; [boundary](../integration-register/proofs/coherent-observers/isolated-point-nonpropagation.txt)."
+    },
+    {
+      "id": "map-over-max-c",
+      "title": "Maximalism and logical observers",
+      "body": "Here Max(C) includes C and pure Maximalism, with C fixed as its reference theory. Adding OS leaves the closed pure identity theorems unchanged:\n\n$$\n\\mathrm{Max}(C+OS)=\\mathrm{Max}(C)+OS.\n$$\n\n| Addition to Max(C) | Status | Consequence or witness |\n| --- | --- | --- |\n| OS | Consistent | Gives BF. [Interpretation-root model](../integration-register/proofs/complete-henkin-interpretation-cover.md#83-the-exact-maximalism-corollaries). |\n| OS + Zorn | Consistent with Actuality and with ¬Actuality | The [two models](../integration-register/proofs/complete-henkin-interpretation-cover.md#83-the-exact-maximalism-corollaries) also satisfy Relational Choice. Zorn and choice have their all-type scope. |\n| CoSep | Inconsistent | Its .2 consequence conflicts with Max(C). [Proof](../integration-register/proofs/coherent-observers/stable-families-and-propagation.txt), §5. |\n| SurjSep; SplitMono; InjSep | Open | — |\n| OS + Boolean Completeness at t | Open | [The remaining compatibility question](proofs/maximalism-and-logical-observers.md#4-compatible-choice-and-actuality-variants). |\n\n[Maximalization equality and proofs](proofs/maximalism-and-logical-observers.md).\n\nMore generally, adding **OS + Strong Actuality + Zorn** preserves every positive-equational consequence of any negative-equational background theory, in any fixed signature. Here “positive-equational” means built from identities using ∧, ∨, ∀ and ∃; the negative class starts from disequalities. Terms inside these atoms are unrestricted. [Conservation theorem](../integration-register/proofs/observer-positive-conservativity.txt)."
+    },
+    {
+      "id": "map-over-h",
+      "title": "The map over H",
+      "body": "Over H, preservation of each primitive operation has its own consequences. Boolean separation gives Booleanism; universal preservation already gives BF. The full logical qualification also covers H’s equality reasoning, allowing OS to recover C + BF.\n\n<a id=\"uniform-definitions-over-h\"></a>\n### The additional clauses over H\n\nKeep M, N and Q as above, and put\n\n$$\n\\begin{aligned}\nV(E)&:=(\\lambda p,q^t\\, .\\,E(p\\lor q))=(\\lambda p,q^t\\, .\\,Ep\\lor Eq),\\\\\nP_\\sigma(E)&:=(\\lambda F^{\\sigma t}\\, .\\,E(\\exists x^\\sigma\\, .\\,Fx))\n=(\\lambda F^{\\sigma t}\\, .\\,\\exists x^\\sigma\\, .\\,E(Fx)).\n\\end{aligned}\n$$\n\nBoolean qualification over H is\n\n$$\n\\mathrm{Bool}_H(E):=M(E)\\land V(E)\\land N(E)\\land E\\top=\\top\\land E\\bot=\\bot.\n$$\n\nBoolean separation is the schema $\\mathrm{Sep}_{\\bar\\sigma}(\\mathrm{Bool}_H)$. It gives **Booleanism**: abstractions of Boolean-equivalent formulas are identical. The observers agree on each such equivalence, and separation identifies the abstractions.\n\nThe observed equality laws are\n\n$$\n\\begin{aligned}\n\\mathrm{Eq}_\\sigma(E):={}&(\\forall x^\\sigma\\, .\\,E(x=x))\\\\\n&\\land\\forall x,y^\\sigma\\, .\\,\\forall F^{\\sigma t}\\, .\\,\n\\bigl(E(x=y)\\to(E(Fx)\\to E(Fy))\\bigr).\n\\end{aligned}\n$$\n\nObserved equality expresses reflexivity and substitution; it does not require E to fix each identity proposition. Thus use\n\n$$\n\\mathrm{Good}^{H}_\\Delta(E):=\\mathrm{Bool}_H(E)\\land\n\\bigwedge_{\\sigma\\in\\Delta}\\bigl(Q_\\sigma(E)\\land P_\\sigma(E)\\land\\mathrm{Eq}_\\sigma(E)\\bigr).\n$$\n\nUse this qualification throughout the observer conditions and the full relational separation schema. Over C the extra clauses follow, so both qualifications agree. The short propositional formulation of Rev above is stated over C.\n\nSeparating relations recovers C; separating propositions alone need not. Functionality bridges the two scopes.\n\n<a id=\"familiar-principles-over-h\"></a>\n### Recovering familiar principles\n\n```mermaid\n%%{init: {\"theme\":\"base\",\"themeVariables\":{\"fontFamily\":\"Arial, sans-serif\",\"fontSize\":\"16px\",\"lineColor\":\"#7b8596\",\"edgeLabelBackground\":\"#ffffff\"},\"flowchart\":{\"curve\":\"monotoneY\",\"nodeSpacing\":36,\"rankSpacing\":48,\"padding\":14}}}%%\nflowchart TD\n    Factive[\"Extensionality<br/>= FactiveSep\"] --> OS[\"OS\"]\n    Factive <-->|\"+ Functionality\"| FactT[\"Fregean Axiom<br/>= propositional factive separation\"]\n    OS --> CBF[\"C + BF\"]\n    OS --> BoolSep[\"Boolean separation\"]\n    BoolSep --> Booleanism[\"Booleanism\"]\n    CBF --> Booleanism\n    OS <-->|\"+ Functionality\"| OSt[\"Propositional OS\"]\n    FactT --> OSt\n    OSt --> BF[\"BF\"]\n    CBF --> BF\n    classDef default fill:#f6f8fc,stroke:#8794ab,stroke-width:1px,color:#243249,rx:6,ry:6;\n    classDef observer fill:#eeedfa,stroke:#938bbd,stroke-width:1px,color:#302953,rx:6,ry:6;\n    classDef base fill:#e7edf5,stroke:#8794ab,color:#243249,rx:6,ry:6;\n    linkStyle default stroke:#7b8596,stroke-width:1.2px;\n    class Factive,OS,FactT,OSt,BoolSep observer;\n    class BF,Booleanism base;\n```\n\n**H + OS ⇒ C + BF is Lean certified** for this formulation with explicit endpoint identities. Propositional OS already gives BF. Factive separation gives Extensionality, while its propositional instance gives the Fregean Axiom.\n\nFor any fixed condition K, the general scope theorem over H is\n\n$$\n\\mathrm{FullSep}[K]\\quad\\longleftrightarrow\\quad\\mathrm{Sep}_t[K]+\\mathrm{Functionality}.\n$$\n\nThis also holds for a nonempty family of conditions, with the same family on both sides. The [proof](proofs/h-observer-space/typed-separation-and-classicism.md#2-the-exact-role-of-full-typed-separation) does not assume that K preserves any logical operation. Once full OS recovers C, the relations between the stronger full principles are those in the [C observer map](#observer-relations-over-c); a second copy is unnecessary.\n\n[Proof of the scope equivalence](proofs/h-observer-space/typed-separation-and-classicism.md#2-the-exact-role-of-full-typed-separation) · [H-to-C and BF proof](proofs/logical-observers.md#3-os-entails-c-and-bf-over-h) · [Factivity](proofs/h-observer-space/observer-restrictions.md#3-negation-converts-either-one-sided-condition-into-correctness).\n\n<a id=\"observer-relations-over-h\"></a>\n### Preserving fewer operations\n\nEach node below uses the same relational-separation schema $\\mathrm{Sep}_{\\bar\\sigma}(K)$. Its qualification K requires $E\\top=\\top$, $E\\bot=\\bot$, and preservation of just the displayed operations. Thus ∧ separation uses $K(E):=E\\top=\\top\\land E\\bot=\\bot\\land M(E)$; ∀ separation replaces M by $\\bigwedge_{\\sigma\\in\\Delta}Q_\\sigma$. Quantifier labels include every finite type list Δ.\n\nA combined label requires the **same observers** to preserve the listed operations. Separate families need not combine into one.\n\n```mermaid\n%%{init: {\"theme\":\"base\",\"themeVariables\":{\"fontFamily\":\"Arial, sans-serif\",\"fontSize\":\"16px\",\"lineColor\":\"#7b8596\",\"edgeLabelBackground\":\"#ffffff\"},\"flowchart\":{\"curve\":\"monotoneY\",\"nodeSpacing\":36,\"rankSpacing\":48,\"padding\":14}}}%%\nflowchart TD\n    OS[\"OS\"] --> MQ[\"∧, ∀ separation\"]\n    OS --> Bool[\"Boolean separation\"]\n    OS --> VP[\"∨, ∃ separation\"]\n    MQ --> Q[\"∀ separation\"]\n    MQ --> M[\"∧ separation\"]\n    Bool --> M\n    Bool --> N[\"¬ separation\"]\n    Bool --> V[\"∨ separation\"]\n    VP --> V\n    VP --> P[\"∃ separation\"]\n    Q --> Fun[\"H + Functionality\"]\n    M --> Fun\n    N --> Fun\n    V --> Fun\n    P --> Fun\n    classDef default fill:#f6f8fc,stroke:#8794ab,stroke-width:1px,color:#243249,rx:6,ry:6;\n    classDef observer fill:#eeedfa,stroke:#938bbd,stroke-width:1px,color:#302953,rx:6,ry:6;\n    classDef base fill:#e7edf5,stroke:#8794ab,color:#243249,rx:6,ry:6;\n    linkStyle default stroke:#7b8596,stroke-width:1.2px;\n    class OS,Bool,MQ,VP,M,N,V,Q,P observer;\n    class Fun base;\n```\n\n| Preservation required | Consequence over H |\n| --- | --- |\n| ∧ | Conjunction is commutative, associative and idempotent, with Top as its unit. |\n| ∨ | The corresponding join laws, with Bottom as its unit. |\n| ¬ | Double negation is identity: $\\forall p^t\\, .\\,\\neg\\neg p=p$. |\n| ∀ | BF; universal quantifiers give greatest lower bounds in the order defined below. |\n| ∃ | Existential quantifiers give least upper bounds in that order. |\n\nThe order associated with each qualified separating family is\n\n$$\np\\preceq_K q:=\\forall E^{tt}\\, .\\,K(E)\\to(Ep\\to Eq).\n$$\n\nWhen the same observers preserve ∧ and ∀, these greatest lower bounds agree with the conjunction order. The ∨, ∃ branch is dual. Over H, preserving two Boolean primitives does not automatically preserve the third; all three are used for Booleanism.\n\n[Connective laws](proofs/h-observer-space/truth-profiles-and-connective-reducts.md#3-exact-equational-theory-of-the-listed-connective-signature) · [Quantifiers and BF](proofs/meet-quantifier-separation.md#3-quantification-and-the-interaction-result) · [Complete primitive comparison](proofs/h-observer-space/primitive-package-classification.md)."
+    },
+    {
+      "id": "mathematics-through-observers",
+      "title": "Mathematics through endpoint observers",
+      "body": "An endpoint observer gives a definite version of each relation. These versions obey Extensionality, and they let us express mathematical claims using the original language.\n\n### Definite relations obey Extensionality\n\nPut\n\n$$\nX_E:=\\lambda\\bar x\\, .\\,E(X[\\bar x]).\n$$\n\nOver C, if E is an endpoint logical observer qualified at the argument types, then\n\n$$\n\\forall X,Y^{\\bar\\sigma t}\\, .\\,\n\\bigl(\\forall\\bar x\\, .\\,X_E[\\bar x]\\leftrightarrow Y_E[\\bar x]\\bigr)\n\\to X_E=Y_E.\n$$\n\nThus the observed relations are identical whenever they apply to the same arguments. Qualification at t also gives the operation identity $E\\circ E=E$: observing a second time changes nothing. These conclusions need the stated observer, without assuming separation or C5.\n\n### Ordinary mathematics with definite relations\n\nWork over C5 for the remainder of this section, and abbreviate $L(E):=\\mathrm{Bool}_C(E)\\land Q_t(E)\\land\\mathrm{End}(E)$. This qualifies E at every type. A relation on individuals is **definite** when every application is Top or Bottom:\n\n$$\nD_n(R):=\\forall x_1^e\\cdots x_n^e\\, .\\,\nR[\\bar x]=\\top\\lor R[\\bar x]=\\bot.\n$$\n\nLet A be an ordinary relational second-order formula: it may quantify over individuals and their relations, use individual equality, and apply relations to individuals. Define $A^\\circ$ by restricting each relation quantifier to definite relations; individual quantifiers stay unchanged. For example,\n\n$$\n(\\forall R^{e\\cdots et}\\, .\\,B)^\\circ\n:=\\forall R^{e\\cdots et}\\, .\\,D_n(R)\\to B^\\circ.\n$$\n\nExistential quantifiers use $D_n(R)\\land B^\\circ$. For any endpoint logical observer, the exact evaluation identity is\n\n$$\nL(E)\\ \\to\\ E\\bigl(A(\\bar R,\\bar a)\\bigr)\n=A^\\circ(\\bar R_E,\\bar a).\n$$\n\nEvery observer uses the same individuals and the same definite relations. What varies is how it interprets the original relation parameters. For example, different observers can turn a given relation into different definite relations on those same individuals.\n\nIf endpoint separation holds, necessity and possibility have the following object-language tests:\n\n$$\n\\begin{aligned}\n\\Box A(\\bar R,\\bar a)\n&\\leftrightarrow\\forall E^{tt}\\, .\\,L(E)\\to A^\\circ(\\bar R_E,\\bar a),\\\\\n\\Diamond A(\\bar R,\\bar a)\n&\\leftrightarrow\\exists E^{tt}\\, .\\,L(E)\\land A^\\circ(\\bar R_E,\\bar a).\n\\end{aligned}\n$$\n\nSo necessity means that every such interpretation makes A true, and possibility means that some such interpretation does. Several parameters must be interpreted by the **same** observer; their interpretations cannot be freely recombined.\n\n### Choice, completeness and infinity at higher types\n\nFor relations taking relations as arguments, observe the arguments as well as the final output. The recursive terms are\n\n$$\nr_t^E(p):=Ep,\\qquad\nr_{\\sigma\\tau}^E(f):=\\lambda x^\\sigma\\, .\\,\nr_\\tau^E\\bigl(f(r_\\sigma^E(x))\\bigr).\n$$\n\nAt individual arguments use x unchanged; no operation of type ee is introduced. Write $A^{[E]}$ for the formula interpreted using the objects fixed by these terms: restrict relational quantifiers by $r_\\sigma^E(x)=x$, and use the correspondingly observed logical operations and abstractions. This is a finite translation into the original language; its [full definition](../next-update/proofs/observer-classical-cores.md#2-the-core-is-a-c5-model) specifies each clause.\n\nFor any endpoint logical observer, the following connections hold, instance by instance:\n\n$$\n\\begin{aligned}\n\\mathrm{Functional\\ Choice}&\\to(\\mathrm{Functional\\ Choice})^{[E]},\\\\\n\\mathrm{Boolean\\ Completeness}&\\to(\\mathrm{Boolean\\ Completeness})^{[E]},\\\\\nE(\\mathrm{Relational\\ Choice})&\\to(\\mathrm{Relational\\ Choice})^{[E]},\\\\\nE(\\mathrm{Transversal\\ Choice})&\\to(\\mathrm{Transversal\\ Choice})^{[E]},\\\\\n(\\mathrm{Infinity}_e)^{[E]}&=E(\\mathrm{Infinity}_e).\n\\end{aligned}\n$$\n\nConsequently, ☐Relational Choice, ☐Transversal Choice and quantified ☐Infinity at e imply their translated versions. Functional Choice and Boolean Completeness require only their unboxed instances. For every pure sentence A, any two endpoint logical observers agree on the translated claim:\n\n$$\nL(E)\\land L(F)\\ \\to\\ (A^{[E]}\\leftrightarrow A^{[F]}).\n$$\n\nThese results give one shared interpretation of pure mathematics. They do not assert that A itself always agrees with $A^{[E]}$, or that every set of objects has an admitted predicate. Endpoint separation with ☐Infinitary Comprehension reconstructs full standard models; this representation theorem is **Lean certified** and uses the stated extension of the language. [Statement and certificate](../next-update/items/20-endpoint-ic-certificates.md).\n\n[Extensionality and idempotence over C](../next-update/proofs/endpoint-classical-cores.md#3-extensionality-inside-the-fixed-hierarchy) · [Second-order evaluation](../next-update/proofs/observer-core-recovery.md#5-one-classical-second-order-structure) · [Choice and completeness](../next-update/proofs/observer-classical-cores.md#4-choice-and-completeness-descend) · [Infinity and observed choice](../next-update/proofs/observer-core-mathematics.md)."
+    },
+    {
+      "id": "general-observer-interpretations",
+      "title": "General interpretations over C",
+      "body": "The [general interpretation theorem](../integration-register/OBSERVER-INTERPRETATIONS.md) applies to idempotent logical observers without endpoint values or C5. Functional Choice descends in both its current and necessary forms, and necessary Boolean Completeness descends instancewise. Every general C model has a proper observer realization; full current or necessary completeness is preserved. Every model of **C + ☐Functional Choice** also has a proper realization within that same theory.\n\nCurrent Relational Choice and Transversal Choice can fail to descend even over C5 + OS; Actuality repairs endpoint descent under full Relational Choice. General interpretations can also lose current BF or Boolean Completeness.\n\nOver BF, observers with the same proposition image give isomorphic pure interpretations, so this holds under OS. Without BF, the same image can yield different pure theories even with all-type ☐Atomicity and ☐Boolean Completeness.\n\nCommuting idempotent observers also **compose their interpretations**: interpreting through E and then through the observer induced by F gives the same structure as interpreting through E∘F. Finite iterations are independent of order and grouping, already over C. [Composition theorem](../integration-register/OBSERVER-INTERPRETATIONS.md#commuting-interpretations)."
+    },
+    {
+      "id": "further-restrictions",
+      "title": "Further observer conditions",
+      "body": "",
+      "kind": "further_table",
+      "symbols": [
+        "FinSep",
+        "IdemBoxSep",
+        "B_r",
+        "CentreSep"
+      ]
+    },
+    {
+      "id": "restriction-formulas",
+      "title": "Pointwise separation and atoms",
+      "body": "Requiring, for each nonzero proposition, an observer that necessarily remains pointwise-qualified and accepts it is equivalent over C to Extensionality:\n\n$$\n\\mathrm{Extensionality}\\ \\longleftrightarrow\\ \\forall p^t\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\neg\\Box\\bigl(J_{\\mathrm{pt}}(E)\\land Ep\\bigr)\\Bigr]\\to p=\\bot.\n$$\n\n[Proof](../integration-register/proofs/pointwise-reversible-separation.md#1-definitions-and-main-conclusions).\n\nWith OneAtom meaning that some proposition is a Boolean atom, the exact atomic cases over C are\n\n$$\nS_{\\mathrm{pt}}+\\mathrm{OneAtom}\\ \\longleftrightarrow\\ ND_t+\\mathrm{Atomicity}_t,\n\\qquad\n\\mathrm{Rev}+\\mathrm{OneAtom}\\ \\longleftrightarrow\\ \\Box\\mathrm{Plenitude}.\n$$\n\nUnder pointwise separation, one atom suffices for Atomicityₜ and Actuality. The reverse implication uses Atomicityₜ + Vicinity ⇒ Actuality, with Vicinity supplied by NDₜ. [Atomic proof](../integration-register/proofs/pointwise-atomicity.md)."
+    },
+    {
+      "id": "further-formulas",
+      "title": "Finiteness, iteration and uniqueness",
+      "body": "FiniteCardinality is the database's [Frege-finiteness predicate](source/topics/classicism/background.md). Finite-image separation imposes no common numerical bound.\n\nFor the stabilization principles, r is a fixed external integer with r ≥ 1. Powers abbreviate finite composition: $E^0=I$ and $E^{r+1}=E\\circ E^r$.\n\nUniqueness says that identity is the only qualified observer at a specified finite list:\n\n$$\n\\mathrm{Unique}_\\Delta:=\\forall E^{tt}\\, .\\,\\mathrm{Good}_\\Delta(E)\\to E=I\n$$"
+    },
+    {
+      "id": "further-connections",
+      "title": "Further connections",
+      "body": "The stabilization principles form a strict hierarchy:\n\n$$\n\\mathrm{IdemBoxSep}=B_1\\ \\Longrightarrow\\ B_2\\ \\Longrightarrow\\ \\cdots\\ \\Longrightarrow\\ \\mathrm{BoxSep}.\n$$\n\nEach fixed stabilization principle, and also CentreSep, gives Extensionality together with C5. Finite-family, group-law and degree restrictions have further exact characterizations in the [full connection catalogue](proofs/h-observer-space/SUMMARY.md) and [technical map](proofs/h-observer-space/GRAPH.md).\n\nRev implies noncontingency with endpoint-valued first-order relation parameters, but the converse fails even with C5 + ☐SplitMono. Over C5 an exact converse uses endpoint-valued families of propositions invariant under admitted surjective order automorphisms. [Countermodel](../next-update/proofs/fixed-individual-component-shift.md) · [Exact characterization](../integration-register/proofs/observer-parameters/order-invariant-parameters.md).\n\nNo finite or uniformly bounded-type-order axiomatization is equivalent to OS over C. [Proof](../next-update/proofs/observer-single-type-schema.md)."
+    },
+    {
+      "id": "shift-models",
+      "title": "Shift models",
+      "body": "The observer principles also have a common model-theoretic presentation: observation acts by shifts.\n\n| Theory | Shift structure |\n| --- | --- |\n| C + OS | [Monoid](../next-update/proofs/observer-shift-semantics.md) |\n| C + Rev | [Group](../next-update/proofs/reversible-group-semantics.md) |\n| C5 + CoSep | [Commutative monoid](../integration-register/proofs/coherent-observers/commutative-shift-semantics.txt) |\n| C5 + CoIdemSep | [Semilattice](../integration-register/proofs/coherent-observers/commutative-shift-semantics.txt) |\n\nEach class gives a sound and strongly complete semantics with admitted shifts and, for the commuting principles, an admitted selecting family. These are general/Henkin models; full standard domains are not required."
+    },
+    {
+      "id": "lean-evidence",
+      "title": "Lean-certified results and components",
+      "body": "| Result | Certified scope |\n| --- | --- |\n| **Recovery of C and BF from H + OS** | Full relational separation with the explicit endpoint identities. The proof translates the repository C calculus into H + OS and also derives BF and Functionality. [Certificate](evidence/certificates/full-typed-logical-separation-actual-c/certificate.json). |\n| **Atoms give logical observers** | C5 + Atomicityₜ gives current and necessary propositional separation, using one observer for each specified finite list of closed quantifier types. Over C5 + Actuality, either schema gives Atomicityₜ, and the two schemas are equivalent. This certificate covers propositional separation. [Certificate](evidence/certificates/full-observers-simultaneous-finite-schema/certificate.json). |\n| **Diagonal separation and stable atoms** | The specified diagonal-character separation is equivalent over C to NDₜ + Atomicityₜ; the observer-to-atom reconstruction is also certified. [Statement](evidence/RESULT-INDEX.md#diagonal-characters) · [Certificate](evidence/certificates/diagonal-characters/certificate.json). |\n| **Endpoint separation + Infinitary Comprehension** | Full standard representation and its converse from the specified λ-free H framework, preserving the original typed carriers, application and formula values. C and the needed classical structure are recovered. The certificate uses Lean’s classical metatheory. [Statement and certificate](../next-update/items/20-endpoint-ic-certificates.md). |\n| **Choice, Plenitude and inverse maps** | Functional Choice and Plenitude decompose into Actuality plus the respective section/retraction schemas; the necessary Functional Choice characterization is also certified. For C5 and strong retractions, the forward rules, low-type converses to ☐NDₜ and per-map necessary-injectivity equivalence are certified. [Choice and Plenitude](evidence/RESULT-INDEX.md#sections-retractions) · [C5 and retractions](evidence/RESULT-INDEX.md#c5-strong-retractions). |\n| **Actuality-based evaluation** | Canonical current evaluators, graph normalization and the current-truth interpretation have certified components. These concern the earlier Actuality construction, rather than the whole observer-interpretation development above. [Scope and evidence](evidence/RESULT-INDEX.md#evaluators-cores). |\n| **Actual truth and modality** | Existence of an actual truth evaluator commuting with ☐ is equivalent to Extensionality; the same holds for ◇. Both equivalences are certified. [Statement and certificate](evidence/RESULT-INDEX.md#evaluator-modal-commutation). |\n\nThe commuting-family characterizations, representations and composition theorem have ordinary proofs with [scoped independent AI review](../integration-register/evidence/coherent-observer-review.json)."
+    }
+  ],
+  "simplifications": [
+    {
+      "base": "C",
+      "principle": "OS",
+      "qualification": "\\mathrm{Bool}_C(E)\\land Q_e(E)\\land Q_\\rho(E)",
+      "separation_type": "t",
+      "schema": "Each relational type rho; e is still tested in every instance.",
+      "sources": [
+        "../next-update/proofs/observer-single-type-schema.md"
+      ]
+    },
+    {
+      "base": "C5",
+      "principles": [
+        "OS",
+        "InjSep",
+        "SplitMono",
+        "Rev"
+      ],
+      "qualification": "\\mathrm{Bool}_C(E)\\land Q_t(E)",
+      "separation_type": "t",
+      "scope": "Retain the named restriction and same-qualification inverse witnesses. The same observer then qualifies at every finite type list.",
+      "sources": [
+        "proofs/modal-selectors-and-quantifier-reduction.md"
+      ]
+    },
+    {
+      "base": "C5",
+      "equivalences": [
+        [
+          "SurjSep",
+          "Rev"
+        ],
+        [
+          "BoxSep",
+          "InjSep"
+        ]
+      ],
+      "sources": [
+        "proofs/h-observer-space/surjective-logical-observers.md",
+        "proofs/h-observer-space/native-box-logical-observers.md"
+      ]
+    },
+    {
+      "base": "C",
+      "principle": "Rev",
+      "qualification": "M(E)\\land E\\circ E=I",
+      "separation_type": "t",
+      "formal": "\\forall p,q^t\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,J(E)\\to(Ep\\leftrightarrow Eq)\\Bigr]\\to p=q.",
+      "scope": "Both laws are identities of whole operations; no BF, C5 or quantifier preservation is separately assumed.",
+      "sources": [
+        "proofs/reversible-propositional-separation.md"
+      ]
+    }
+  ],
+  "maps": [
+    {
+      "base": "C",
+      "edges": [
+        [
+          "Extensionality",
+          "End"
+        ],
+        [
+          "End",
+          "Rev"
+        ],
+        [
+          "Rev",
+          "SplitMono"
+        ],
+        [
+          "SplitMono",
+          "InjSep"
+        ],
+        [
+          "InjSep",
+          "OS"
+        ],
+        [
+          "Rev",
+          "SurjSep"
+        ],
+        [
+          "SurjSep",
+          "OS"
+        ],
+        [
+          "Rev",
+          "BoxSep"
+        ],
+        [
+          "BoxSep",
+          "OS"
+        ],
+        [
+          "Rev",
+          "Box OS"
+        ],
+        [
+          "Box OS",
+          "OS"
+        ],
+        [
+          "OS",
+          "BF"
+        ],
+        [
+          "End",
+          "Atomicity + BF"
+        ],
+        [
+          "Atomicity + BF",
+          "OS"
+        ],
+        [
+          "BoxSep",
+          "☐BF + .2"
+        ],
+        [
+          "Rev",
+          "C5"
+        ],
+        [
+          "Rev",
+          "No Pure Contingency"
+        ],
+        [
+          "Rev",
+          "Box SurjSep + Box SplitMono"
+        ],
+        [
+          "Rev",
+          "Box BoxSep"
+        ],
+        [
+          "Box SurjSep + Box SplitMono",
+          "Box SurjSep"
+        ],
+        [
+          "Box SurjSep + Box SplitMono",
+          "Box SplitMono"
+        ],
+        [
+          "Box SurjSep",
+          "Box OS"
+        ],
+        [
+          "Box SplitMono",
+          "Box InjSep"
+        ],
+        [
+          "Box InjSep",
+          "Box OS"
+        ],
+        [
+          "Box BoxSep",
+          "Box OS"
+        ],
+        [
+          "☐Functional Choice",
+          "End"
+        ],
+        [
+          "Box OS",
+          "☐BF"
+        ],
+        [
+          "☐BF + .2",
+          "☐BF"
+        ],
+        [
+          "☐BF",
+          "BF"
+        ],
+        [
+          "C5",
+          "☐BF + .2"
+        ],
+        [
+          "End",
+          "FinSep"
+        ],
+        [
+          "FinSep",
+          "OS"
+        ],
+        [
+          "End",
+          "CoIdemSep"
+        ],
+        [
+          "CoIdemSep",
+          "CoSep"
+        ],
+        [
+          "CoSep",
+          "OS"
+        ],
+        [
+          "CoSep",
+          ".2"
+        ],
+        [
+          "☐BF + .2",
+          ".2"
+        ],
+        [
+          "CoRevSep",
+          "Rev"
+        ],
+        [
+          "CoRevSep",
+          "CoInjSep"
+        ],
+        [
+          "CoInjSep",
+          "InjSep"
+        ],
+        [
+          "CoInjSep",
+          "CoSep"
+        ],
+        [
+          "☐Functional Choice",
+          "CoRevSep"
+        ]
+      ],
+      "equivalences": [
+        [
+          "End",
+          "C5 + Atomicity"
+        ],
+        [
+          "OS + Plenitude at (t,t)",
+          "End"
+        ],
+        [
+          "OS + Functional Choice",
+          "☐Functional Choice"
+        ],
+        [
+          "C5 + OS + Actuality",
+          "End"
+        ],
+        [
+          "C5 + BoxSep",
+          "C5 + InjSep"
+        ],
+        [
+          "Rev",
+          "Box Rev"
+        ],
+        [
+          "End",
+          "Box End"
+        ],
+        [
+          "C5 + Box OS + OneAtom",
+          "End"
+        ],
+        [
+          "End",
+          "☐Plenitude"
+        ],
+        [
+          "End + Relational Choice",
+          "☐Functional Choice"
+        ],
+        [
+          "OS + Plenitude",
+          "End"
+        ],
+        [
+          "OS + Correct Evaluation",
+          "End"
+        ],
+        [
+          "C5 + OS + Boolean Completeness",
+          "End"
+        ],
+        [
+          "Rev + Actuality",
+          "End"
+        ],
+        [
+          "Rev + OneAtom",
+          "End"
+        ],
+        [
+          "Rev + FinSep",
+          "End"
+        ],
+        [
+          "C5 + FinSep",
+          "End"
+        ],
+        [
+          "C5 + SurjSep",
+          "Rev"
+        ],
+        [
+          "OS + Unique",
+          "Extensionality"
+        ],
+        [
+          "C5 + Atomicity",
+          "C5 + stable CoIdemSep"
+        ],
+        [
+          "Actuality + CoInjSep",
+          "C5 + Atomicity + CoRevSep"
+        ],
+        [
+          "CoRevSep",
+          "Box CoRevSep"
+        ]
+      ],
+      "open_edges": [],
+      "scope": "Observer principles use full relational schemas. Familiar database principles retain their stated type and sentence-schema scope. These edges are proved; missing edges do not assert non-implication.",
+      "sources": [
+        "proofs/logical-observer-hierarchy.md",
+        "proofs/h-observer-space/SUMMARY.md",
+        "proofs/h-observer-space/native-box-logical-observers.md",
+        "proofs/h-observer-space/plenitude-endpoint-bridge.md",
+        "../next-update/items/13-observers-and-necessary-choice.md",
+        "proofs/h-observer-space/necessary-separation-and-atoms.md",
+        "proofs/h-observer-space/full-cancellative-monoid-observers.md",
+        "proofs/h-observer-space/root-truth-profile-surjective-separation.md",
+        "proofs/h-observer-space/fixed-point-symmetry-left-inverse-separation.md",
+        "source/topics/classicism/results/c5-and-atomicity-imply-necessary-atomicity.yaml",
+        "source/topics/classicism/results/necessary-nd-implies-bf.yaml",
+        "source/topics/classicism/results/atomicity-t-and-bf-imply-atomicity.yaml",
+        "../next-update/items/17-choice-proof-simplifications.md",
+        "proofs/logical-observers.md",
+        "proofs/h-observer-space/observer-restrictions.md",
+        "proofs/h-observer-space/bounded-stabilization-native-box-observers.md",
+        "proofs/h-observer-space/central-logical-observers.md",
+        "proofs/h-observer-space/surjective-logical-observers.md",
+        "source/topics/classicism/results/necessary-functional-choice-r-implies-necessary-plenitude-r.yaml",
+        "source/topics/classicism/results/c5-and-atomicity-imply-necessary-plenitude.yaml",
+        "proofs/h-observer-space/rigid-souslin-injective-separation.md",
+        "../integration-register/proofs/coherent-observers/coherent-families.txt",
+        "../integration-register/proofs/coherent-observers/stable-families-and-propagation.txt",
+        "../integration-register/proofs/coherent-observers/finite-alphabet-coherence-countermodels.txt",
+        "../integration-register/proofs/coherent-observers/joint-injective-separation.txt",
+        "../integration-register/proofs/coherent-observers/choice-implies-coherent-reversible-separation.txt"
+      ],
+      "strict_strengthenings": [
+        [
+          "Box OS",
+          "OS"
+        ],
+        [
+          "Box InjSep",
+          "InjSep"
+        ],
+        [
+          "Box SplitMono",
+          "SplitMono"
+        ],
+        [
+          "Box SurjSep",
+          "SurjSep"
+        ],
+        [
+          "Box BoxSep",
+          "BoxSep"
+        ]
+      ],
+      "strict_implications": [
+        [
+          "Rev",
+          "Box SurjSep + Box SplitMono"
+        ],
+        [
+          "SplitMono",
+          "InjSep"
+        ],
+        [
+          "Box SplitMono",
+          "Box InjSep"
+        ],
+        [
+          "End",
+          "CoIdemSep"
+        ],
+        [
+          "CoIdemSep",
+          "CoSep"
+        ],
+        [
+          "CoSep",
+          "OS"
+        ]
+      ],
+      "incomparabilities": [
+        [
+          "BoxSep",
+          "Box OS"
+        ]
+      ],
+      "presentation_panels": [
+        {
+          "id": "familiar-principles-over-c",
+          "focus": "Familiar principles",
+          "mermaid": "%%{init: {\"theme\":\"base\",\"themeVariables\":{\"fontFamily\":\"Arial, sans-serif\",\"fontSize\":\"16px\",\"lineColor\":\"#7b8596\",\"edgeLabelBackground\":\"#ffffff\"},\"flowchart\":{\"curve\":\"monotoneY\",\"nodeSpacing\":36,\"rankSpacing\":48,\"padding\":14}}}%%\nflowchart TD\n    Ext[\"Extensionality\"] --> At[\"C5 + Atomicity<br/>= ☐Plenitude = End\"]\n    NFC[\"☐Functional Choice\"] --> At\n    NFC --> CoRev[\"CoRevSep\"]\n    CoRev --> Rev\n    CoRev --> Co\n    At --> AtBF[\"Atomicity + BF\"]\n    AtBF --> OS[\"OS\"]\n    At --> Co[\"CoSep\"]\n    Co --> OS\n    Co --> Dot[\".2\"]\n    At <-->|\"+ one atom\"| Rev[\"Rev\"]\n    At <-->|\"+ C5\"| Fin[\"Fin\"]\n    Fin --> OS\n    Rev --> NPC[\"No Pure Contingency\"]\n    Rev <-->|\"+ SurjSep\"| Five[\"C5\"]\n    Rev --> Box[\"BoxSep\"]\n    Rev --> NOS[\"☐OS\"]\n    Box --> NBDot[\"☐BF + .2\"]\n    Box --> OS\n    Five --> NBDot\n    NOS --> NBF[\"☐BF\"]\n    NOS --> OS\n    NBDot --> Dot\n    NBDot --> NBF\n    NBF --> BF[\"BF\"]\n    OS --> BF\n    NFC <-->|\"+ Functional Choice\"| OS\n    At <-->|\"+ Plenitude at (t,t)\"| OS\n    classDef default fill:#f6f8fc,stroke:#8794ab,stroke-width:1px,color:#243249,rx:6,ry:6;\n    classDef observer fill:#eeedfa,stroke:#938bbd,stroke-width:1px,color:#302953,rx:6,ry:6;\n    classDef base fill:#e7edf5,stroke:#8794ab,color:#243249,rx:6,ry:6;\n    linkStyle default stroke:#7b8596,stroke-width:1.2px;\n    class CoRev,Co,At,OS,Rev,Box,NOS,Fin observer;\n    class BF base;",
+          "upgrade_edges": [
+            {
+              "upper": "NFC",
+              "lower": "OS",
+              "addition": "Functional Choice"
+            },
+            {
+              "upper": "At",
+              "lower": "OS",
+              "addition": "Plenitude at (t,t)"
+            },
+            {
+              "upper": "At",
+              "lower": "Fin",
+              "addition": "C5"
+            },
+            {
+              "upper": "At",
+              "lower": "Rev",
+              "addition": "one atom"
+            },
+            {
+              "upper": "Rev",
+              "lower": "Five",
+              "addition": "SurjSep"
+            }
+          ]
+        },
+        {
+          "id": "observer-relations-over-c",
+          "focus": "Observer principles",
+          "mermaid": "%%{init: {\"theme\":\"base\",\"themeVariables\":{\"fontFamily\":\"Arial, sans-serif\",\"fontSize\":\"16px\",\"lineColor\":\"#7b8596\",\"edgeLabelBackground\":\"#ffffff\"},\"flowchart\":{\"curve\":\"monotoneY\",\"nodeSpacing\":36,\"rankSpacing\":48,\"padding\":14}}}%%\nflowchart TD\n    End[\"End = ☐End\"] --> Rev[\"Rev = ☐Rev\"]\n    CoRev[\"CoRevSep = ☐CoRevSep\"] --> Rev\n    CoRev --> CoInj[\"CoInjSep\"]\n    CoInj --> Inj[\"InjSep\"]\n    CoInj --> Co[\"CoSep\"]\n    End -->|strict| CoIdem[\"CoIdemSep\"]\n    CoIdem -->|strict| Co[\"CoSep\"]\n    Co -->|strict| OS[\"OS\"]\n    Rev -->|strict| Both[\"☐SurjSep + ☐SplitMono\"]\n    Rev --> NBox[\"☐BoxSep\"]\n    Both --> NSurj[\"☐SurjSep\"]\n    Both --> NSplit[\"☐SplitMono\"]\n    NSplit -->|strict| NInj[\"☐InjSep\"]\n    NSurj --> NOS[\"☐OS\"]\n    NInj --> NOS\n    NBox --> NOS\n    NSurj --> Surj[\"SurjSep\"]\n    NSplit --> Split[\"SplitMono\"]\n    NInj --> Inj[\"InjSep\"]\n    NBox --> Box[\"BoxSep\"]\n    NOS --> OS[\"OS\"]\n    Split -->|strict| Inj\n    Surj --> OS\n    Inj --> OS\n    Box --> OS\n    classDef default fill:#f6f8fc,stroke:#8794ab,stroke-width:1px,color:#243249,rx:6,ry:6;\n    classDef observer fill:#eeedfa,stroke:#938bbd,stroke-width:1px,color:#302953,rx:6,ry:6;\n    classDef base fill:#e7edf5,stroke:#8794ab,color:#243249,rx:6,ry:6;\n    linkStyle default stroke:#7b8596,stroke-width:1.2px;\n    class CoRev,CoInj,CoIdem,Co,End,Rev,Both,NSurj,NSplit,NInj,NBox,NOS,Surj,Split,Inj,Box,OS observer;"
+        }
+      ],
+      "exact_strengthenings": [
+        {
+          "start": "SurjSep",
+          "addition": "C5",
+          "equivalent_to": "Rev",
+          "source": "proofs/h-observer-space/surjective-logical-observers.md"
+        },
+        {
+          "start": "BoxSep",
+          "addition": "C5",
+          "equivalent_to": "C5 + InjSep",
+          "source": "proofs/h-observer-space/native-box-logical-observers.md"
+        },
+        {
+          "start": "FinSep",
+          "addition": "C5",
+          "equivalent_to": "End",
+          "source": "proofs/logical-observer-hierarchy.md"
+        },
+        {
+          "start": "OS",
+          "addition": "Correct Evaluation",
+          "equivalent_to": "End",
+          "source": "proofs/logical-observers.md#actual-truth-evaluation-and-endpoint-separation"
+        },
+        {
+          "start": "OS",
+          "addition": "C5 + Actuality",
+          "equivalent_to": "End",
+          "source": "proofs/h-observer-space/plenitude-endpoint-bridge.md"
+        },
+        {
+          "start": "☐OS",
+          "addition": "C5 + one atom, or C5 + ◇Actuality",
+          "equivalent_to": "End",
+          "source": "proofs/h-observer-space/necessary-separation-and-atoms.md"
+        },
+        {
+          "start": "OS",
+          "addition": "A unique qualified logical observer",
+          "equivalent_to": "Extensionality",
+          "source": "proofs/h-observer-space/observer-restrictions.md#4-one-observer-a-separating-subfamily-versus-a-unique-qualified-class"
+        },
+        {
+          "start": "Rev",
+          "addition": "A unique endpoint observer qualified at t",
+          "equivalent_to": "Extensionality",
+          "source": "proofs/logical-observer-hierarchy.md#6-one-observer-suffices-alongside-reversibility"
+        },
+        {
+          "start": "$B_r$ (including IdemBoxSep)",
+          "addition": "C5",
+          "equivalent_to": "Extensionality",
+          "source": "proofs/h-observer-space/bounded-stabilization-native-box-observers.md"
+        },
+        {
+          "start": "CentreSep",
+          "addition": "C5",
+          "equivalent_to": "Extensionality",
+          "source": "proofs/h-observer-space/central-logical-observers.md"
+        },
+        {
+          "start": "OS",
+          "addition": "Functional Choice",
+          "equivalent_to": "☐Functional Choice",
+          "source": "../next-update/items/13-observers-and-necessary-choice.md"
+        },
+        {
+          "start": "OS",
+          "addition": "Plenitude at (t,t)",
+          "equivalent_to": "End",
+          "source": "proofs/h-observer-space/plenitude-endpoint-bridge.md"
+        }
+      ]
+    },
+    {
+      "base": "H",
+      "equivalences": [
+        [
+          "FullSep[K]",
+          "Sep_t[K] + Functionality"
+        ],
+        [
+          "OS",
+          "propositional logical separation + Functionality"
+        ],
+        [
+          "FactiveSep",
+          "Extensionality"
+        ],
+        [
+          "propositional factive logical separation",
+          "Fregean Axiom"
+        ]
+      ],
+      "edges": [
+        [
+          "End",
+          "OS"
+        ],
+        [
+          "Rev",
+          "OS"
+        ],
+        [
+          "SurjSep",
+          "OS"
+        ],
+        [
+          "SplitMono",
+          "OS"
+        ],
+        [
+          "InjSep",
+          "OS"
+        ],
+        [
+          "BoxSep",
+          "OS"
+        ],
+        [
+          "FinSep",
+          "OS"
+        ],
+        [
+          "IdemBoxSep",
+          "OS"
+        ],
+        [
+          "B_r",
+          "OS"
+        ],
+        [
+          "FactiveSep",
+          "OS"
+        ],
+        [
+          "CentreSep",
+          "OS"
+        ],
+        [
+          "OS",
+          "C + BF"
+        ],
+        [
+          "propositional logical separation",
+          "BF"
+        ],
+        [
+          "propositional factive logical separation",
+          "propositional logical separation"
+        ],
+        [
+          "C + BF",
+          "BF"
+        ],
+        [
+          "OS",
+          "full Boolean separation"
+        ],
+        [
+          "full Boolean separation",
+          "Booleanism"
+        ],
+        [
+          "C + BF",
+          "Booleanism"
+        ],
+        [
+          "OS",
+          "full conjunction-and-universal separation"
+        ],
+        [
+          "OS",
+          "full disjunction-and-existential separation"
+        ],
+        [
+          "full universal separation",
+          "BF"
+        ],
+        [
+          "full Boolean separation",
+          "full conjunction separation"
+        ],
+        [
+          "full Boolean separation",
+          "full disjunction separation"
+        ],
+        [
+          "full Boolean separation",
+          "full negation separation"
+        ],
+        [
+          "full conjunction-and-universal separation",
+          "full conjunction separation"
+        ],
+        [
+          "full conjunction-and-universal separation",
+          "full universal separation"
+        ],
+        [
+          "full disjunction-and-existential separation",
+          "full disjunction separation"
+        ],
+        [
+          "full disjunction-and-existential separation",
+          "full existential separation"
+        ],
+        [
+          "full conjunction separation",
+          "Functionality"
+        ],
+        [
+          "full disjunction separation",
+          "Functionality"
+        ],
+        [
+          "full negation separation",
+          "Functionality"
+        ],
+        [
+          "full universal separation",
+          "Functionality"
+        ],
+        [
+          "full existential separation",
+          "Functionality"
+        ]
+      ],
+      "scope": "Use the uniform H qualifications and full relational schemas. K is an admitted qualification or a nonempty family; OS retains every finite qualification list. The simplified C formulations retain their C assumption.",
+      "sources": [
+        "proofs/h-observer-space/typed-separation-and-classicism.md",
+        "proofs/logical-observers.md",
+        "proofs/h-observer-space/primitive-package-classification.md",
+        "proofs/h-observer-space/observer-restrictions.md",
+        "proofs/h-observer-space/rigid-souslin-injective-separation.md",
+        "proofs/h-observer-space/truth-profiles-and-connective-reducts.md",
+        "proofs/meet-quantifier-separation.md"
+      ],
+      "purpose": "Recovery of familiar principles, the role of relational separation, and weaker primitive-preservation packages.",
+      "formulation_limits": [
+        {
+          "formulation": "Reduced OS using negation, conjunction, and universal quantification at e and each relational type in turn",
+          "over_C": "Equivalent to OS",
+          "over_H": "Does not imply C",
+          "source": "proofs/h-observer-space/typed-separation-and-classicism.md"
+        }
+      ],
+      "presentation_panels": [
+        {
+          "id": "familiar-principles-over-h",
+          "focus": "Recovery of familiar principles and the exact role of relational separation",
+          "mermaid": "%%{init: {\"theme\":\"base\",\"themeVariables\":{\"fontFamily\":\"Arial, sans-serif\",\"fontSize\":\"16px\",\"lineColor\":\"#7b8596\",\"edgeLabelBackground\":\"#ffffff\"},\"flowchart\":{\"curve\":\"monotoneY\",\"nodeSpacing\":36,\"rankSpacing\":48,\"padding\":14}}}%%\nflowchart TD\n    Factive[\"Extensionality<br/>= FactiveSep\"] --> OS[\"OS\"]\n    Factive <-->|\"+ Functionality\"| FactT[\"Fregean Axiom<br/>= propositional factive separation\"]\n    OS --> CBF[\"C + BF\"]\n    OS --> BoolSep[\"Boolean separation\"]\n    BoolSep --> Booleanism[\"Booleanism\"]\n    CBF --> Booleanism\n    OS <-->|\"+ Functionality\"| OSt[\"Propositional OS\"]\n    FactT --> OSt\n    OSt --> BF[\"BF\"]\n    CBF --> BF\n    classDef default fill:#f6f8fc,stroke:#8794ab,stroke-width:1px,color:#243249,rx:6,ry:6;\n    classDef observer fill:#eeedfa,stroke:#938bbd,stroke-width:1px,color:#302953,rx:6,ry:6;\n    classDef base fill:#e7edf5,stroke:#8794ab,color:#243249,rx:6,ry:6;\n    linkStyle default stroke:#7b8596,stroke-width:1.2px;\n    class Factive,OS,FactT,OSt,BoolSep observer;\n    class BF,Booleanism base;",
+          "upgrade_edges": [
+            {
+              "upper": "Factive",
+              "lower": "FactT",
+              "addition": "Functionality"
+            },
+            {
+              "upper": "OS",
+              "lower": "OSt",
+              "addition": "Functionality"
+            }
+          ]
+        },
+        {
+          "id": "observer-relations-over-h",
+          "focus": "Separation by selected primitive-preserving observers",
+          "scope": "Full relational separation; both endpoint identities; whole-operation preservation; every finite list of quantifier types. Combined labels require common witnesses.",
+          "mermaid": "%%{init: {\"theme\":\"base\",\"themeVariables\":{\"fontFamily\":\"Arial, sans-serif\",\"fontSize\":\"16px\",\"lineColor\":\"#7b8596\",\"edgeLabelBackground\":\"#ffffff\"},\"flowchart\":{\"curve\":\"monotoneY\",\"nodeSpacing\":36,\"rankSpacing\":48,\"padding\":14}}}%%\nflowchart TD\n    OS[\"OS\"] --> MQ[\"∧, ∀ separation\"]\n    OS --> Bool[\"Boolean separation\"]\n    OS --> VP[\"∨, ∃ separation\"]\n    MQ --> Q[\"∀ separation\"]\n    MQ --> M[\"∧ separation\"]\n    Bool --> M\n    Bool --> N[\"¬ separation\"]\n    Bool --> V[\"∨ separation\"]\n    VP --> V\n    VP --> P[\"∃ separation\"]\n    Q --> Fun[\"H + Functionality\"]\n    M --> Fun\n    N --> Fun\n    V --> Fun\n    P --> Fun\n    classDef default fill:#f6f8fc,stroke:#8794ab,stroke-width:1px,color:#243249,rx:6,ry:6;\n    classDef observer fill:#eeedfa,stroke:#938bbd,stroke-width:1px,color:#302953,rx:6,ry:6;\n    classDef base fill:#e7edf5,stroke:#8794ab,color:#243249,rx:6,ry:6;\n    linkStyle default stroke:#7b8596,stroke-width:1.2px;\n    class OS,Bool,MQ,VP,M,N,V,Q,P observer;\n    class Fun base;",
+          "sources": [
+            "proofs/h-observer-space/primitive-package-classification.md",
+            "proofs/h-observer-space/truth-profiles-and-connective-reducts.md",
+            "proofs/meet-quantifier-separation.md"
+          ]
+        }
+      ],
+      "open_edges": [],
+      "strict_implications": [
+        [
+          "SplitMono",
+          "InjSep"
+        ],
+        [
+          "Box SplitMono",
+          "Box InjSep"
+        ]
+      ],
+      "primitive_scope": "The primitive comparison panel uses full relational separation, endpoint identities, and whole-operation preservation. Quantifier schemas range over finite type lists."
+    },
+    {
+      "base": "Max(C)",
+      "scope": "Fixed pure C Maximalism, ordinary H-closure. Full relational observer schemas; named familiar principles have all-type scope unless specified.",
+      "edges": [
+        [
+          "OS",
+          "BF"
+        ]
+      ],
+      "inconsistent_additions": [
+        "Box OS",
+        "BoxSep",
+        "Rev",
+        "End",
+        "Atomicity (type t)",
+        "ND",
+        "Plenitude",
+        "Functional Choice",
+        "Boolean Completeness",
+        "No Pure Contingency",
+        "CoSep"
+      ],
+      "compatible_packages": [
+        [
+          "OS",
+          "Relational Choice",
+          "Zorn",
+          "Actuality"
+        ],
+        [
+          "OS",
+          "Relational Choice",
+          "Zorn",
+          "not Actuality"
+        ]
+      ],
+      "equivalences": [
+        [
+          "Max(C + OS)",
+          "Max(C) + OS"
+        ]
+      ],
+      "open_compatibility": [
+        [
+          "OS",
+          "Boolean Completeness (type t)"
+        ],
+        [
+          "SurjSep"
+        ],
+        [
+          "SplitMono"
+        ],
+        [
+          "InjSep"
+        ]
+      ],
+      "sources": [
+        "proofs/maximalism-and-logical-observers.md",
+        "../integration-register/proofs/complete-henkin-interpretation-cover.md",
+        "../integration-register/proofs/coherent-observers/stable-families-and-propagation.txt"
+      ],
+      "presentation": "status table distinguishing proof conclusions, model witnesses and open compatibility"
+    }
+  ],
+  "mathematical_interpretation": {
+    "scope": "Object-language formulations of the existing endpoint interpretation results; the second-order evaluation and higher-type transfers retain C5.",
+    "second_order_fragment": "Individual equality, relations on individuals, their application and quantification; no native modality, intensional relation identity or relations taking relational arguments.",
+    "separation_required_for": "Necessity and possibility tests, not the evaluation identity for one qualified endpoint observer.",
+    "sources": [
+      "../next-update/proofs/endpoint-classical-cores.md",
+      "../next-update/proofs/observer-core-recovery.md",
+      "../next-update/proofs/observer-classical-cores.md",
+      "../next-update/proofs/observer-core-mathematics.md"
+    ]
+  },
+  "family_principles": [
+    {
+      "id": "commuting-logical-observer-separation-r",
+      "symbol": "CoSep",
+      "base": "C",
+      "formal": "\\begin{aligned}\\mathrm{CoSep}_{\\bar\\sigma,\\Delta}:=\\exists K^{(tt)t}\\, .\\,\\bigl(&\\forall E^{tt}\\, .\\,KE\\to\\mathrm{Good}_\\Delta(E)\\bigr)\\\\{}\\land{}&\\bigl(\\forall E,F^{tt}\\, .\\,(KE\\land KF)\\to E\\circ F=F\\circ E\\bigr)\\\\{}\\land{}&\\mathrm{Sep}_{\\bar\\sigma}(K).\\end{aligned}",
+      "scope": "Every relational output type and every finite qualification list; K is an admitted predicate with current membership.",
+      "sources": [
+        "../integration-register/proofs/coherent-observers/object-language-and-finite-basis.txt"
+      ]
+    },
+    {
+      "id": "commuting-idempotent-logical-observer-separation-r",
+      "symbol": "CoIdemSep",
+      "base": "C",
+      "formal": "\\begin{aligned}\\mathrm{CoIdemSep}_{\\bar\\sigma,\\Delta}:=\\exists K^{(tt)t}\\, .\\,\\bigl(&\\forall E^{tt}\\, .\\,KE\\to\\mathrm{Good}_\\Delta(E)\\bigr)\\\\{}\\land{}&\\bigl(\\forall E,F^{tt}\\, .\\,(KE\\land KF)\\to E\\circ F=F\\circ E\\bigr)\\\\{}\\land{}&\\mathrm{Sep}_{\\bar\\sigma}(K)\\land(\\forall E^{tt}\\, .\\,KE\\to E\\circ E=E).\\end{aligned}",
+      "scope": "The same family K also consists of idempotent observers.",
+      "sources": [
+        "../integration-register/proofs/coherent-observers/object-language-and-finite-basis.txt"
+      ]
+    },
+    {
+      "id": "commuting-injective-logical-observer-separation-r",
+      "symbol": "CoInjSep",
+      "base": "C",
+      "formal": "\\begin{aligned}\\mathrm{CoInjSep}_{\\bar\\sigma,\\Delta}:=\\exists K^{(tt)t}\\, .\\,\\bigl(&\\forall E^{tt}\\, .\\,KE\\to\\mathrm{Good}_\\Delta(E)\\bigr)\\\\{}\\land{}&\\bigl(\\forall E,F^{tt}\\, .\\,(KE\\land KF)\\to E\\circ F=F\\circ E\\bigr)\\\\{}\\land{}&\\mathrm{Sep}_{\\bar\\sigma}(K)\\land(\\forall E^{tt}\\, .\\,KE\\to\\forall p,q^t\\, .\\,(Ep=Eq\\to p=q)).\\end{aligned}",
+      "scope": "Same admitted family; full relational output schema and every finite qualification list.",
+      "sources": [
+        "../integration-register/proofs/coherent-observers/joint-injective-separation.txt"
+      ]
+    },
+    {
+      "id": "commuting-reversible-logical-observer-separation-r",
+      "symbol": "CoRevSep",
+      "base": "C",
+      "formal": "\\begin{aligned}\\mathrm{CoRevSep}_{\\bar\\sigma,\\Delta}:=\\exists K^{(tt)t}\\, .\\,\\bigl(&\\forall E^{tt}\\, .\\,KE\\to\\mathrm{Good}_\\Delta(E)\\bigr)\\\\{}\\land{}&\\bigl(\\forall E,F^{tt}\\, .\\,(KE\\land KF)\\to E\\circ F=F\\circ E\\bigr)\\\\{}\\land{}&\\mathrm{Sep}_{\\bar\\sigma}(K)\\land(\\forall E^{tt}\\, .\\,KE\\to\\exists F^{tt}\\, .\\,(\\mathrm{Good}_\\Delta(F)\\land E\\circ F=I\\land F\\circ E=I)).\\end{aligned}",
+      "scope": "Same admitted family; full relational output schema and every finite qualification list.",
+      "sources": [
+        "../integration-register/proofs/coherent-observers/joint-injective-separation.txt"
+      ]
+    }
+  ],
+  "family_witnesses": {
+    "CoRevWitness": "\\mathrm{CoRevWitness}_{\\bar\\sigma,\\Delta}(K):=(\\forall E^{tt}\\, .\\,KE\\to\\mathrm{Good}_\\Delta(E))\\land(\\forall E,F^{tt}\\, .\\,(KE\\land KF)\\to E\\circ F=F\\circ E)\\land\\mathrm{Sep}_{\\bar\\sigma}(K)\\land(\\forall E^{tt}\\, .\\,KE\\to\\exists F^{tt}\\, .\\,(\\mathrm{Good}_\\Delta(F)\\land E\\circ F=I\\land F\\circ E=I))",
+    "choice_consequence": "\\Box\\mathrm{Functional\\ Choice}\\to\\exists K^{(tt)t}\\, .\\,(\\mathrm{Stable}(K)\\land\\Box\\mathrm{CoRevWitness}_{\\bar\\sigma,\\Delta}(K))",
+    "scope": "The construction supplies the same K for every relational output type and every finite qualification list. The formula is a schema, with no quantification over types. Stable is endpoint-valued family membership."
+  }
+}

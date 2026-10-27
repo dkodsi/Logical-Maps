@@ -1,0 +1,174 @@
+FINITE-SUPPORT FINITE/COFINITE MODEL: SEPARATE AND JOINT OBSERVER STRENGTHS
+27 October 2026. Original ordinary construction and verdicts by OpenAI Codex,
+independently AI-reviewed.
+Direct source: misc, Sections 1–7, unpaginated.
+
+1. EXACT VERDICTS
+
+There is a model of the fixed relational C satisfying, at every world,
+
+  C5, full Atomicity, Actuality, full Rev, and full CoIdemSep,
+
+while no commuting family of injective Boolean observers separates
+propositions at any world. This excludes even external families, and hence
+refutes CoInjSep with an admitted predicate and any stronger qualification.
+Thus CoSep+InjSep does not imply joint realization, even with the necessary
+positive principles listed above.
+
+The model uses finite/cofinite sets and finite support, not forcing or
+generic evaluation. The standard finite-support Henkin construction is
+background methodology; the simultaneous-observer verdict and its proof
+are the new deductions. No Choice verdict is asserted or transferred from
+another model.
+
+2. THE FULL TYPED CONSTRUCTION
+
+Let W be infinite and G=Sym(W). Put
+
+  B=FinCof(W)={A subset W : A finite or W minus A finite}.
+
+G acts on B by direct image. For finite S subset W, let H_S be the pointwise
+stabilizer of S. An object is supported by S when H_S fixes it. Let D_e be
+a singleton with trivial action and D_t=B. At each permitted arrow sigma
+tau, admit ALL finitely supported actual functions D_sigma -> D_tau,
+with conjugation action. Application is evaluation. Truth at a designated
+a in W is membership of a.
+
+The key observation is:
+
+  Every H_S-invariant subset of W consists of some subset of S, optionally
+  together with all of W minus S, and therefore belongs to B.             (1)
+
+H_S fixes S pointwise and is transitive on its complement.
+
+For F:D_sigma->B supported by S, its range is H_S-invariant as a set of
+propositions. The literal intersection and union of that range are
+H_S-invariant subsets of W, hence belong to B by (1). Define quantifiers
+by these literal intersections/unions. Their operations are equivariant
+and admitted. Finite attainment is not required.
+
+Logical constants are equivariant. A parameterized lambda interpretation
+has support contained in the finite union of its parameter supports,
+so all required abstractions belong to the domains. At every type sigma
+and object x, the singleton test
+
+  y |-> W if y=x, empty otherwise
+
+is supported by any support of x. Leibniz identity, defined using the
+admitted literal quantifier, is therefore crisp at every type. Native
+Box A is W exactly when A=W and empty otherwise.
+
+These clauses have ordinary classical truth conditions at every world.
+Actual functions give beta/eta and application. H theorems hold everywhere;
+H-equivalent formulas give identical sets and identical abstractions.
+This checks C's original Logical Equivalence gate. Crisp identity gives
+every boxed ND instance, hence C5 at every world.
+
+3. ATOMICITY AND REVERSIBLE SEPARATION
+
+The atoms of B are the singletons. Every nonempty proposition has an atom
+below it, and {a} is true and entails every truth at a. Thus propositional
+Atomicity and Actuality hold at every world.
+
+At a relational type, any nonzero relation has a tuple xbar and world w
+at which its value contains w. The relation taking exactly xbar to {w}
+and all other tuples to empty is admitted: xbar and w have a finite union
+of supports. It is an atom below the given relation. This verifies full
+relational Atomicity directly.
+
+Each finitely supported permutation g of W induces the admitted observer
+E_g(A)=g^{-1}[A], with inverse E_(g^{-1}). Its moved set supports the
+operation. Inverse image preserves Boolean operations and every literal
+intersection/union, so both qualify at every type. If A and B differ at
+w, a transposition taking the designated a to w separates them. Actual
+function domains lift this to relational separation. Hence full Rev
+holds at every world.
+
+4. AN ADMITTED COMMUTING IDEMPOTENT FAMILY
+
+Fix a and one b!=a. Give W the flat semilattice with least point a,
+greatest point b, and all other points incomparable. Write v*w for join,
+f_w(v)=v*w, and
+
+  T_w(A)=f_w^{-1}[A].
+
+For w=a this is identity; for w=b it is evaluation at b. Otherwise f_w
+sends a and w to w, and every other point to b. Its inverse images of
+finite/cofinite sets are finite/cofinite; T_w is supported by {a,b,w}.
+Literal inverse image again proves every typed quantifier law.
+
+Semilattice laws give T_w T_z=T_z T_w and T_w^2=T_w. Define K(E)=W
+exactly when E=T_w for some w, and K(E)=empty otherwise. Every permutation
+fixing a,b permutes this collection by reindexing w. Thus K has support
+{a,b} and is an ADMITTED endpoint-valued predicate. Since a*w=w, it
+separates at a, including at all relational types.
+
+The construction works at every designated world, proving necessary
+full CoIdemSep. It does not say the same idempotent family separates
+at every world.
+
+5. ALL ADMITTED INJECTIVE BOOLEAN OBSERVERS ARE FINITARY PERMUTATIONS
+
+Let E:B->B be any admitted injective Boolean endomorphism, and choose a
+finite support S. For u outside S put A_u=E({u}). It is invariant under
+H_(S union {u}), so consists of some subset of S, optionally u, and
+optionally all of W minus (S union {u}). Equivariance under H_S makes
+this pattern uniform for u outside S.
+
+An S-point in one A_u would belong to them all, contradicting pairwise
+disjointness. An outside part would make A_u and A_v overlap outside
+S union {u,v}, again impossible. Thus A_u is either {u} or empty.
+Injectivity and E(empty)=empty exclude empty. Therefore
+
+  E({u})={u} for all u outside S.                            (2)
+
+For s in S, E({s}) is disjoint from all the outside singletons, so lies
+in S. The |S| such images are nonempty and pairwise disjoint, hence are
+singleton sets permuting S. Every member of B is a finite union of
+singletons or its complement, so Boolean preservation determines E
+as inverse image under a permutation fixing W minus S pointwise.
+
+This classifies EVERY admitted injective Boolean observer. Quantifier
+qualification is not needed for the classification.
+
+6. WHY NO COMMUTING INJECTIVE FAMILY CAN SEPARATE
+
+Suppose such a family separates at a, and let P be its finitary dual
+permutations. They commute: pullback commutation on singletons detects
+commutation of the point maps. For every w, separating {w} from empty
+supplies h in P with h(a)=w. Thus these orbit values cover W.
+
+Choose g in P with g(a)!=a. For every h in P,
+
+  g(h(a))=h(g(a))!=h(a),                                    (3)
+
+using commutation and injectivity of h. Hence g moves every point
+reached by the family, namely every point of W. This contradicts
+finite support. No admission assumption about the family was used.
+
+The model distinguishes ample reversible observations from one coherent
+commuting system of reversible observations. The positive counterpart
+is the abelian world-symmetry theorem in joint-injective-separation.txt.
+
+7. EXPLICIT FAILURE OF FUNCTIONAL CHOICE
+
+The following argument received independent AI review.
+
+Define the endpoint-valued relation on propositions
+
+  U(A,p) iff [A!=empty and p is an atom below A]
+             or [A=empty and p=empty].
+
+It is equivariant, hence admitted, and serial: every nonempty member of
+the finite/cofinite algebra contains a singleton. Suppose an admitted
+selector X:B->B exists and choose a finite support S for X. The proposition
+A=W minus S is nonempty and fixed by the pointwise stabilizer H_S.
+Equivariance therefore requires X(A) to be fixed by H_S. Selection requires
+X(A)={w} for some w outside S. But H_S permutes the infinite complement
+transitively, so no such singleton is fixed. This is a contradiction.
+
+The relation has endpoint values, so the same argument applies at every
+evaluation point. The model satisfies necessary failure of the (t,t)
+Functional Choice instance. It therefore does not challenge the positive
+boxed-Functional-Choice theorem in
+choice-implies-coherent-reversible-separation.txt.

@@ -1,0 +1,335 @@
+FINITE ALPHABETS SEPARATE REVERSIBILITY FROM COHERENCE
+26 October 2026. Original ordinary mathematical argument by OpenAI Codex.
+Direct source: misc, Sections 1-9 below, unpaginated.
+Independently reviewed ordinary proof; see ../../evidence/coherent-observer-review.json for
+scope. No Lean certification.
+
+1. RESULTS
+
+The first separation result is:
+
+  C5 + OS does not imply CoSep.
+
+There is, in fact, a C5 model satisfying full necessary Rev and therefore
+necessary OS, while commuting Boolean observer separation fails at every
+world. Failure concerns the weakest propositional instance, with no
+quantifier qualification. It excludes every admitted predicate family,
+not just uniformly indexed families or a particular choice of observers.
+
+A second model separates the idempotent requirement:
+
+  C5 + CoSep does not imply CoIdemSep,
+
+even with necessary Rev and necessary CoSep. Thus replacing individual
+separators by idempotents need not preserve their mutual compatibility.
+
+Both results belong to one elementary model family M_q, with an infinite
+set of independent coordinates and q possible values at each coordinate.
+For each finite integer q>=2 the proposition algebra is atomless and
+the model satisfies C5 and necessary full Rev. Exactly:
+
+  M_q satisfies CoSep       iff q is 2, 3 or 4;
+  M_q satisfies CoIdemSep   iff q is 2.
+
+Positive assertions have every relational output type and every finite
+qualification list, and hold at every world. Negative assertions already
+refute propositional separation by Boolean observers at every world.
+These are classifications of THIS model family, not cardinality tests
+asserted about arbitrary C5 models.
+
+2. THE SUPPORTED HIERARCHY
+
+Fix a countably infinite external coordinate set J and a finite alphabet
+A={0,...,q-1}. Put X=A^J with its product topology, and let B be its Boolean
+algebra of clopen sets. Equivalently B consists of all subsets determined
+by finitely many coordinates. Coordinates are semantic indices, not an
+assumed internally enumerated family of individuals or propositions.
+
+Let G be the full wreath-product permutation group: it permits arbitrary
+permutations of J and, independently at each coordinate, arbitrary
+permutations of A. It acts on X and on B by direct image. For finite
+S subset J, H_S is the subgroup fixing every coordinate of S individually
+and acting as the identity on its alphabet. Outside S its coordinate
+and alphabet permutations are unrestricted.
+
+An object has finite coordinate support if H_S fixes it for some finite S.
+Set D_e to a singleton with trivial action, D_t=B, and recursively let
+D_(sigma tau), tau relational, consist of ALL finitely supported functions
+D_sigma -> D_tau. The action on functions is conjugation. Application is
+ordinary function evaluation. Nonempty domains and closure under application
+follow immediately; supports of finitely many parameters have finite union.
+
+The propositions fixed by H_S are precisely B_S, the finite Boolean
+algebra of sets depending only on S. Indeed independent alphabet changes
+outside S erase any dependence on such coordinates; the converse is direct.
+This observation is used at every stage below.
+
+FINITE-ATTAINMENT LEMMA. Every H_S-invariant subset R of B has a join in B,
+attained by finitely many members of R, and dually a finitely attained meet.
+For b in R, take a finite T supporting b. Apply all alphabet permutations
+on the finite set T minus S. Their finitely many images of b belong to R,
+and their union is the cylinder over the S-patterns having an extension
+in b. That union belongs to B_S. There are only finitely many possible
+S-patterns, so finitely many such finite orbits cover the union of all R.
+This proves the join assertion, including the empty-set convention.
+Complementation proves the meet assertion.
+
+For a supported predicate F:D_sigma -> B, its range is invariant under
+H_S for a support S of F. Define its universal and existential values
+as the intersection and union of that range. The lemma puts both in B
+and makes them finitely attained. The quantifier operations are equivariant
+and therefore have empty support. Boolean operations are equivariant too.
+
+At a world x in X, truth means x belongs to the proposition. The set
+intersection/union definitions give exactly the ordinary classical
+quantifier clauses over the same D_sigma at every x. Unlike a generic
+Boolean construction, no forcing or generic-ultrafilter argument is used.
+
+Singleton tests y |-> 1[y=a] are admitted with a support of a. They show
+that defined Leibniz identity is the crisp 0/1 test of literal equality.
+The interpretation of each lambda expression is a supported function:
+induct on the expression and take the union of its parameter supports.
+All logical operations used in the induction are equivariant. Ordinary
+function application gives beta, eta and Functionality.
+
+These facts validate H at every world. An H-provable equivalence therefore
+has identical B-valued interpretations under every assignment; abstractions
+are literally identical functions. This validates precisely C's fixed
+H-theoremhood gate. Native Box is the test b=X, and identity and distinctness
+are crisp at every type. Thus M_q satisfies C5 at every world. All domains,
+including higher function spaces, have just been specified and checked;
+the proof is not merely a Boolean-algebra counterexample.
+
+Every nonempty clopen set can be split by a fresh coordinate. Consequently
+B is atomless for q>=2. The world set X separates all its elements.
+
+3. ALL-TYPE REVERSIBLE OBSERVERS SUPPLY NECESSARY OS
+
+Every transformation g of X which permutes alphabet values on just finitely
+many coordinates induces an admitted Boolean automorphism E_g of B. Its
+support is contained in those coordinates, since g commutes with H_S there.
+Its inverse is admitted with the same support.
+
+It preserves every admitted typed quantifier: inverse image under a
+bijection commutes with the interpreted intersections and unions of every
+predicate range. The composed predicate is admitted by function closure.
+These are identities of actual functions on the unchanged full admitted
+domains, so they are the required WHOLE operation identities. Both E_g
+and its inverse qualify for every finite type list.
+
+Given x in X and a nonempty clopen b, choose a finite cylinder contained
+in b. Finitely many coordinate alphabet permutations send x into that
+cylinder. Their observer accepts b. Boolean differences give propositional
+separation; ordinary function extensionality gives an argument tuple for
+any relational difference and lifts the separation to all relational types.
+
+This proves full Rev at EVERY world, and hence its separately boxed schema,
+necessary OS, necessary BF and necessary Functionality. These claims do
+not rely on an internal enumeration of the coordinate permutations.
+
+4. CLASSIFICATION OF EVERY BOOLEAN OBSERVER WHEN q>=3
+
+Let E:B->B be any admitted Boolean observer, and choose finite S supporting
+it. For i in J and a in A let p_(i,a)={x:x_i=a}. Since the images of this
+finite partition form a partition, define a continuous map f:X->X by
+
+  f(x)_i=a iff x belongs to E(p_(i,a)).
+
+The coordinate cells generate B, so E(b)=f^{-1}[b] for every b. Equivariance
+of E under H_S is exactly commutation of f with the corresponding H_S
+coordinate transformations.
+
+If i is in S, E(p_(i,a)) is H_S-fixed and therefore belongs to B_S. Thus
+f(x)_i depends only on x restricted to S.
+If i is outside S, E(p_(i,a)) is fixed by H_(S union {i}) and so depends
+only on S union {i}. For each fixed S-pattern s, the resulting function
+u_s:A->A commutes with EVERY permutation of A. When q>=3 such a function
+is identity: the stabilizer of any a fixes only a, so u_s(a)=a. Therefore
+
+  f(x)_i=x_i for every i outside S.                         (4.1)
+
+Hence EVERY admitted Boolean observer is inverse image under a finite-
+coordinate transformation: an arbitrary map on A^S, extended by identity
+outside S. Conversely every such transformation induces a supported
+Boolean observer. It preserves every typed quantifier because inverse
+image commutes with set intersections and unions. Its operation is
+admitted, and these preservation identities are whole identities as above.
+
+Thus (4.1) classifies every potentially eligible witness, not only the
+explicit reversible separators. The restriction q>=3 in this classification
+is essential: at q=2 a global simultaneous bit flip is also equivariant.
+
+5. THE SUPPORT LEMMA FOR A HYPOTHETICAL COMMUTING FAMILY
+
+Assume q>=3 and that an admitted predicate K:(tt)t selects a commuting
+Boolean separating family at a world x. By a coordinatewise alphabet
+permutation we can suppose x is the all-zero point. Let S support K.
+
+Take the external monoid M of continuous coordinate transformations
+corresponding to its current members, closed under finite composition
+and with identity included. All members still commute and are finite-
+coordinate transformations by Section 4. This external closure is used
+only to analyse an assumed family; no internal monoid existence is needed.
+
+Its orbit Mx is dense in X: separation from Bottom says that some member
+sends x into every nonempty clopen set. The group
+
+  L=H_S intersect Stab_G(x)
+
+normalizes M. Indeed K is H_S-equivariant, and an element fixing x preserves
+the current truth of K-membership. Conjugation then preserves the generated
+commutative monoid as well.
+
+EVALUATION INJECTIVITY. If f,g in M have f(x)=g(x), then for every h in M,
+commutation gives f(hx)=h(fx)=h(gx)=g(hx). Continuity and density of Mx
+give f=g. This is a statement about the WHOLE coordinate transformations.
+
+NO HIDDEN COORDINATE CHANGE. If j is outside S and f(x)_j=0, then f fixes
+coordinate j on EVERY input, not merely at x.
+To prove this, put y=f(x), and choose a fresh k outside S, a finite
+coordinate support of f, and the finite set where y differs from x.
+Also choose k!=j. Let g exchange coordinates j,k. It belongs to L and
+fixes y, since y_j=y_k=0. Consequently g f g^{-1} is in M and has the
+same value y at x. Evaluation injectivity gives g f g^{-1}=f. For any z,
+
+  f(z)_j = (g f g^{-1}z)_j = f(g^{-1}z)_k = z_j,
+
+because f fixes the fresh coordinate k. This proves the assertion.
+The infinite supply of fresh coordinates is important in this argument.
+
+6. FIVE OR MORE VALUES RULE OUT EVERY COMMUTING SEPARATING FAMILY
+
+Assume q>=5. Choose j outside S. Density supplies f in M with f(x)_j=a!=0.
+Conjugate f by all permutations of the nonzero labels at coordinate j,
+fixing 0 and all other coordinates. They belong to L. For each nonzero
+b this gives f_b in M with value y_b=f_b(x), where y_b and y_c differ
+only at coordinate j, with respective values b,c. Evaluation injectivity
+makes f_b independent of the chosen conjugating permutation. It also gives
+
+  sigma f_b sigma^{-1} = f_(sigma b).                      (6.1)
+
+Take distinct nonzero b,c and h_bc=f_b f_c. Its value t_bc at x is fixed
+by permutations of all the other nonzero labels, since those fix both
+f_b and f_c by (6.1). At least TWO such labels remain. Therefore
+(t_bc)_j can only be 0,b or c. The transposition of b,c fixes h_bc by
+commutativity, so it fixes t_bc too. It excludes b,c, leaving
+
+  (t_bc)_j=0.                                             (6.2)
+
+Permuting the nonzero labels carries any distinct pair b,c to any other
+such pair. It sends t_bc to the corresponding product value but changes
+only coordinate j; (6.2) says that coordinate is fixed. Thus every t_bc
+is the SAME point t. Evaluation injectivity implies every h_bc is the
+SAME transformation h.
+
+Choose three distinct nonzero labels a,b,c. Associativity gives
+
+  h f_a = (f_b f_c)f_a = f_b(f_c f_a) = f_b h = h f_b.     (6.3)
+
+But h(x)_j=0, so the support lemma says h fixes coordinate j everywhere.
+The two sides of (6.3), evaluated at x in coordinate j, are therefore a
+and b respectively. This contradiction rules out K.
+
+It rules out even Boolean CoSep(t,empty), hence every full logical CoSep.
+The argument applies at every world, by the initial symmetry reduction.
+Together with Section 3 this proves
+
+  M_5 satisfies C5 + Box Rev + Box not CoSep(t,empty).
+
+In particular the requested C5+OS converse and the stronger converse
+from C5+necessary OS are both false. Reversibility itself does not supply
+a mutually commuting separating family.
+
+7. THREE OR MORE VALUES RULE OUT COMMUTING IDEMPOTENT SEPARATION
+
+Now assume only q>=3 and additionally suppose the selected family consists
+of idempotents. Its commuting monoid M then consists of idempotents too.
+Use f_b for every nonzero label as in Section 6 and put
+
+  h = product_(b!=0) f_b.
+
+Every permutation of the nonzero labels preserves this product, so h(x)_j
+is fixed by their full symmetric group. There are at least two nonzero
+labels, so the sole fixed label is 0. The support lemma therefore makes
+h fix coordinate j everywhere. On the other hand idempotence and
+commutativity give h f_a=h for every nonzero a. At x in coordinate j,
+the left side is a and the right side is 0, a contradiction.
+
+This proves failure of CoIdemSep(t,empty) for every q>=3, including the
+models with positive CoSep in the next section.
+
+8. THE POSITIVE SMALL-ALPHABET CASES ARE ADMITTED FAMILIES
+
+For q=2,3,4 the symmetric group on A has a canonical normal abelian
+regular subgroup N_q:
+
+  q=2: S_2;
+  q=3: A_3, the cyclic group of order 3;
+  q=4: {identity and the three double transpositions}, the Klein group.
+
+Regular means that some member sends any specified letter to any other.
+Let T be the group of finite-coordinate transformations which use members
+of N_q independently on their finitely many active coordinates. It is
+abelian. Because N_q is normal in S_q and the definition treats coordinates
+uniformly, T is invariant under conjugation by the full group G.
+
+Define K on admitted proposition operations to have value Top exactly
+on the inverse-image operations of members of T, and Bottom otherwise.
+This function is G-equivariant, hence is an admitted predicate with empty
+support. Its members are the fully qualified reversible observers of
+Section 3, commute, and send any world into any specified finite cylinder.
+Thus this ONE admitted family separates at every world and at every
+relational output type. It proves necessary full CoSep for q=2,3,4.
+
+For q=2 there is also an admitted commuting IDEMPOTENT family. For each
+finite partial binary assignment s let r_s overwrite precisely those
+coordinates and let E_s be inverse image under r_s. Put
+
+  K(E_s)=[bar s],    K(E)=Bottom for other E,
+
+where [bar s] is the cylinder prescribing the opposite bit on each
+coordinate of s. Distinct s give distinct operations, so this is a
+function. Binary complement commutes with every alphabet relabelling;
+consequently this K is G-equivariant and has empty support.
+
+At a world x its members overwrite selected coordinates with the unique
+opposite values. All current assignments are compatible and their resets
+commute; every reset is idempotent and fully qualified. Given a finite
+target pattern t, reset just the coordinates where x differs from t.
+This is a current K-member and sends x into its cylinder. Thus necessary
+full CoIdemSep holds. This is the binary-reset argument from the earlier
+Cohen model, here in a clopen finite-support model without forcing.
+
+Combining Sections 6-8 gives the exact classifications in Section 1.
+
+9. CONSEQUENCES, SCOPE AND SOURCES
+
+The q=5 model separates Rev from CoSep even when both are considered
+over C5 and with their necessary instances. The q=3 model separates
+CoSep from CoIdemSep under the same robust modal background. By the
+earlier uniform-retraction theorem, uniformly indexed commuting
+idempotent separation would imply Atomicity; the q=2 predicate-family
+example is atomless and illustrates again why indexing is stronger.
+
+The complete proof is internal to ordinary set-based supported-model
+mathematics above. It uses no forcing, large cardinals, tree construction,
+prohibited individual-output function, or external type quantification.
+The finite-alphabet labels are semantic values, not assumed extra logical
+constants. Truth at every world and the actual admitted higher domains
+were checked before deriving the observer classification.
+
+The source of the new construction, classification and exclusions is
+this note (misc), Sections 2-8. The exact CoSep and CoIdemSep formulations
+are in coherent-families.txt, Section 1. The earlier
+truth-profile uniqueness argument there, Section 2A, has the dense-orbit
+form used in Section 5. The general supported-hierarchy method and finite
+attainment strategy have local precedents in ../complete-boolean-root.md, Sections 1-2; neither the
+finite-coordinate observer classification nor the commuting-family
+exclusion is attributed to that source. The binary reset construction
+also appears in cohen-separation-model.txt, Sections 2-3, with a different
+ambient hierarchy. Background C, whole qualification, and typed lifting
+retain the definitions in ../../../classicism-results-2026-10-24-v2/source/topics/classicism/background.md and ../../../classicism-results-2026-10-24-v2/proofs/logical-observer-hierarchy.md, Section 1.
+
+No claim of historical priority, independent checking, Lean verification,
+or native database promotion is made. The model directly answers the
+converse asked here; no unknown graph edge is used as independence evidence.

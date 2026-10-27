@@ -5512,6 +5512,181 @@
       "result_entries": [
         "LAMBDA-FREE-ENDPOINT-COMPREHENSION"
       ]
+    },
+    {
+      "id": "rigidity.recurrent-colour",
+      "statement": "A symmetric ideally-full model of C satisfies ☐BF, ☐Rigid Power, ☐Boolean Completeness and Tame Rigidity, at all relational types, but fails Weakly Rigid Power and ☐Tame Rigidity at et. Its proposition algebra is atomless at every world. Recorded implications also give failures of Weakly Rigid Weak Rigidity and No Pure Contingency. Thus even Tame Rigidity + ☐Rigid Rigidity does not imply Weakly Rigid Weak Rigidity. Separately, Rigid Rigidity + Rigid Power implies ☐Rigid Power; ☐BF + Rigid Power is a sufficient special case.",
+      "proofs": [
+        "proofs/recurrent-colour-countermodel.md"
+      ],
+      "result_entries": [
+        "RECURRENT-COLOUR-SEPARATION"
+      ],
+      "certificate_scope": null,
+      "certificate_modules": [],
+      "lean_status_refs": []
+    },
+    {
+      "id": "synthesis.atomicity-vicinity",
+      "result_ref": "ATOMICITY-VICINITY",
+      "result_entries": [
+        "ATOMICITY-VICINITY"
+      ]
+    },
+    {
+      "id": "synthesis.observer-interpretations",
+      "result_ref": "OBSERVER-INTERPRETATIONS",
+      "result_entries": [
+        "OBSERVER-INTERPRETATIONS"
+      ]
+    },
+    {
+      "id": "synthesis.os-conservativity",
+      "result_ref": "OS-CONSERVATIVITY",
+      "result_entries": [
+        "OS-CONSERVATIVITY"
+      ]
+    },
+    {
+      "id": "synthesis.modal-choice",
+      "result_ref": "MODAL-CHOICE",
+      "result_entries": [
+        "MODAL-CHOICE"
+      ]
+    },
+    {
+      "id": "synthesis.strong-worlds-domains",
+      "result_ref": "STRONG-WORLDS-DOMAINS",
+      "result_entries": [
+        "STRONG-WORLDS-DOMAINS"
+      ]
+    },
+    {
+      "id": "synthesis.observer-analysis",
+      "result_ref": "OBSERVER-ANALYSIS",
+      "result_entries": [
+        "OBSERVER-ANALYSIS"
+      ]
+    },
+    {
+      "id": "synthesis.max-number-sets",
+      "result_ref": "MAX-NUMBER-SETS",
+      "result_entries": [
+        "MAX-NUMBER-SETS"
+      ]
+    },
+    {
+      "id": "coherent.definitions",
+      "statement": "CoSep is separation by an admitted pairwise commuting family; CoIdemSep adds idempotence. Over C5 each full schema is equivalent to one propositional sentence using N and Q_t. Internal composition closure may be required without strengthening either principle. Already over C, CoSep entails OS + .2 and is incompatible with pure Max(C).",
+      "proofs": [
+        "../integration-register/proofs/coherent-observers/object-language-and-finite-basis.txt",
+        "../integration-register/proofs/coherent-observers/coherent-families.txt",
+        "../integration-register/proofs/coherent-observers/stable-families-and-propagation.txt"
+      ],
+      "result_entries": [
+        "LOGICAL-OBSERVERS"
+      ],
+      "certificate_scope": null,
+      "certificate_modules": [],
+      "remaining_obligation_at_collection": null
+    },
+    {
+      "id": "coherent.atomicity",
+      "statement": "Over C5, Atomicity_t (equivalently all-type Atomicity) is equivalent to stable commuting idempotent separation, to its persistent-membership version, and to uniformly t-indexed commuting idempotent separation. The explicit reconstruction requires no Functional Choice.",
+      "proofs": [
+        "../integration-register/proofs/coherent-observers/stable-families-and-propagation.txt",
+        "../integration-register/proofs/coherent-observers/uniform-retractions.txt"
+      ],
+      "result_entries": [
+        "LOGICAL-OBSERVERS"
+      ],
+      "certificate_scope": null,
+      "certificate_modules": [],
+      "remaining_obligation_at_collection": null
+    },
+    {
+      "id": "coherent.propagation",
+      "statement": "Over C5, for the same stable, qualified, commuting and currently separating family K, Box Sep(K) iff every current member is injective. With idempotence, existence of such a necessarily separating family is equivalent to Extensionality. Stability cannot be weakened to persistence of current members in these two criteria.",
+      "proofs": [
+        "../integration-register/proofs/coherent-observers/stable-families-and-propagation.txt"
+      ],
+      "result_entries": [
+        "LOGICAL-OBSERVERS"
+      ],
+      "certificate_scope": null,
+      "certificate_modules": [],
+      "remaining_obligation_at_collection": null
+    },
+    {
+      "id": "coherent.representation",
+      "statement": "C5 + CoSep and C5 + CoIdemSep have sound and strongly complete general/Henkin semantics by commutative-monoid and semilattice shifts respectively, with admitted selecting families. Their C5 representations are direct. The separate bare-C commutative representation retains its elementary-extension and equality qualifications.",
+      "proofs": [
+        "../integration-register/proofs/coherent-observers/commutative-shift-semantics.txt"
+      ],
+      "result_entries": [
+        "LOGICAL-OBSERVERS"
+      ],
+      "certificate_scope": null,
+      "certificate_modules": [],
+      "remaining_obligation_at_collection": null
+    },
+    {
+      "id": "coherent.composition",
+      "statement": "Over bare C, two all-type qualified commuting idempotent observers compose their interpreted models: Core(Core(M,E),Fbar) is isomorphic to Core(M,E∘F), with the quotient retained at every type. Finite iterations are independent of order and grouping; no BF, Functionality or Choice premise is required.",
+      "proofs": [
+        "../integration-register/proofs/coherent-observers/iterated-cores.txt"
+      ],
+      "result_entries": [
+        "LOGICAL-OBSERVERS"
+      ],
+      "certificate_scope": null,
+      "certificate_modules": [],
+      "remaining_obligation_at_collection": null
+    },
+    {
+      "id": "coherent.separations",
+      "statement": "Finite-alphabet models are atomless C5 + necessary Rev models; CoSep holds exactly for alphabet sizes 2, 3 and 4, and CoIdemSep exactly for size 2. Thus Atomicity and stable CoIdemSep are equivalent, while stable CoIdemSep ⇒ CoIdemSep ⇒ CoSep ⇒ OS are strict implications over C5. The isolated-point model has current CoIdemSep and a stable commuting separating family but not necessary OS. The Bernoulli extension has necessary CoSep without SplitMono or Rev. The supported Boolean root gives OS + .2 without CoSep and separates CoSep from BoxSep and IdemBoxSep; its stronger verified Choice/completeness bounds remain in the proof. The Cohen model retains its separate metatheory and verdicts.",
+      "proofs": [
+        "../integration-register/proofs/coherent-observers/finite-alphabet-coherence-countermodels.txt",
+        "../integration-register/proofs/coherent-observers/isolated-point-nonpropagation.txt",
+        "../integration-register/proofs/coherent-observers/commuting-shifts-without-inverses.txt",
+        "../integration-register/proofs/coherent-observers/directedness-converse-countermodel.txt",
+        "../integration-register/proofs/coherent-observers/cohen-separation-model.txt"
+      ],
+      "result_entries": [
+        "LOGICAL-OBSERVERS"
+      ],
+      "certificate_scope": null,
+      "certificate_modules": [],
+      "remaining_obligation_at_collection": null
+    },
+    {
+      "id": "coherent.joint-separation",
+      "statement": "Over C, Actuality + full CoInjSep is equivalent to C5 + full Atomicity + full CoRevSep. Each current member has a qualified inverse in the same family; the package also entails necessary Actuality, CoInjSep, CoRevSep and Plenitude. Its admitted composition closure acts regularly and commutatively on world atoms. A finite-support finite/cofinite model satisfies necessary full Atomicity, Rev and CoIdemSep but has no commuting injective Boolean family determining propositions, even externally. Thus separate CoSep and InjSep do not suffice for CoInjSep. The new inverse lemma is an ordinary proof; the stronger structural consequences use the cited pre-existing C5 results.",
+      "proofs": [
+        "../integration-register/proofs/coherent-observers/joint-injective-separation.txt",
+        "../integration-register/proofs/coherent-observers/finite-cofinite-joint-separation.txt"
+      ],
+      "result_entries": [
+        "LOGICAL-OBSERVERS"
+      ],
+      "certificate_scope": null,
+      "certificate_modules": [],
+      "remaining_obligation_at_collection": null
+    },
+    {
+      "id": "coherent.choice",
+      "statement": "Over C, ☐Functional Choice supplies an admitted endpoint-membership family K which necessarily witnesses full CoRevSep, with the same K for every relational output type and finite qualification list. The sharper premise is C5 + Atomicity + an admitted well-order of the world atoms. No quantified Infinity or full standard semantics is needed; the internal construction covers finite, pseudofinite and internally infinite fields. The conclusion is ∃K(Stable(K) ∧ ☐CoRevWitness(K)) instancewise, not merely ☐∃K. The finite/cofinite countermodel necessarily fails Functional Choice at (t,t).",
+      "proofs": [
+        "../integration-register/proofs/coherent-observers/choice-implies-coherent-reversible-separation.txt",
+        "../integration-register/proofs/coherent-observers/finite-cofinite-joint-separation.txt"
+      ],
+      "result_entries": [
+        "LOGICAL-OBSERVERS"
+      ],
+      "certificate_scope": null,
+      "certificate_modules": [],
+      "remaining_obligation_at_collection": null
     }
   ],
   "captured_at_utc": "2026-10-24T01:58:54.591956+00:00",

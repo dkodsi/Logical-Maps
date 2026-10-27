@@ -48,13 +48,13 @@ bK_{(S)}b^{-1}\subseteq L.
 
 For this construction it suffices that K is the product of the within-block symmetric groups of a partition having infinitely many 2-blocks. Both source objects of our model have this property.
 
-Choose distinct 2-blocks B₀,B₁,B₂,…, all disjoint from S, and a point x∈B₀. Put S′:=S∪{x}. For n≥1 choose a permutation ν_n that exchanges B₀ and B_n by a bijection and its inverse and fixes every other point. Put ν₀:=id_X. Each ν_n normalizes K: it permutes two blocks of the same size, conjugating their full symmetric factors and leaving the remaining factors unchanged. The ν_n need not themselves belong to K.
+Choose distinct 2-blocks B₀,B₁,B₂,…, all disjoint from S, and a point x∈B₀. Put S':=S∪{x}. For n≥1 choose a permutation ν_n that exchanges B₀ and B_n by a bijection and its inverse and fixes every other point. Put ν₀:=id_X. Each ν_n normalizes K: it permutes two blocks of the same size, conjugating their full symmetric factors and leaving the remaining factors unchanged. The ν_n need not themselves belong to K.
 
 Define sets of arrows out of X by
 
 ```math
 C_n:=\{h:X\to X:\exists g\in K,
-\ h|_{S′}=(\nu_n g)|_{S′}\}.
+\ h|_{S'}=(\nu_n g)|_{S'}\}.
 \tag{4}
 ```
 
@@ -64,7 +64,7 @@ The charts are pairwise disjoint. Indeed h∈C_n implies h(x)∈B_n, and the blo
 \mu\nu_n g=\nu_n(\nu_n^{-1}\mu\nu_n)g,
 ```
 
-and the parenthesized permutation belongs to K. Their definitions, and membership in their union, depend only on the target of h and h|S′. In particular the countably many charts share the **one finite pin S′**. Infinitely many possible values of the pinned individual x do not require an infinite pin.
+and the parenthesized permutation belongs to K. Their definitions, and membership in their union, depend only on the target of h and h|S'. In particular the countably many charts share the **one finite pin S'**. Infinitely many possible values of the pinned individual x do not require an infinite pin.
 
 Put
 
@@ -73,7 +73,7 @@ Put
 \tag{5}
 ```
 
-Then α_n normalizes K and sends C_n bijectively to C_{n+1} by left composition. In fact if h agrees with ν_n g on S′, then α_n h agrees with ν_{n+1}g there; the inverse calculation gives the converse. Thus
+Then α_n normalizes K and sends C_n bijectively to C_{n+1} by left composition. In fact if h agrees with ν_n g on S', then α_n h agrees with ν_{n+1}g there; the inverse calculation gives the converse. Thus
 
 ```math
 \alpha_n C_n=C_{n+1}.
@@ -87,7 +87,7 @@ A tt intension at X has a truth profile E(h,q), where h:X→Z and q is a proposi
 ```math
 E(h,q)\quad\Longleftrightarrow\quad
 \begin{cases}
-bg^{-1}\in q,&h\in C_0,\ h|_{S′}=g|_{S′},\ g\in K,\\
+bg^{-1}\in q,&h\in C_0,\ h|_{S'}=g|_{S'},\ g\in K,\\
 \alpha_n^{-1}\in q,&h\in C_{n+1}\quad(n\ge0),\\
 \mathrm{id}_Z\in q,&h:X\to Z\text{ outside }\bigcup_{n\ge0}C_n,
 \end{cases}
@@ -112,15 +112,15 @@ E(\mathrm{id}_X,p)\quad\Longleftrightarrow\quad b\in p.
 
 We verify that these are admitted tt objects.
 
-**Independence of the first branch's representative.** Suppose g and g′ both agree with h on S′, and write g′=gu. Then u∈K_(S′)⊆K_(S). By (3), bu^{-1}b^{-1}∈L, and
+**Independence of the first branch's representative.** Suppose g and g' both agree with h on S', and write g'=gu. Then u∈K_(S')⊆K_(S). By (3), bu^{-1}b^{-1}∈L, and
 
 ```math
-b(g′)^{-1}=(bu^{-1}b^{-1})(bg^{-1}).
+b(g')^{-1}=(bu^{-1}b^{-1})(bg^{-1}).
 ```
 
 The two tested arrows therefore agree on membership in q by its target symmetry at Y. No representative is chosen as an additional object-language function. The remaining branches have no representative ambiguity.
 
-**Finite pinning.** The branch and the available first-branch representatives depend only on the target of h and h|S′. Thus S′ pins both profiles. The countable definition does not demand an infinitary object-language formula: symmetric ideal fullness admits every profile satisfying the stated symmetry and finite-pinning conditions.
+**Finite pinning.** The branch and the available first-branch representatives depend only on the target of h and h|S'. Thus S' pins both profiles. The countable definition does not demand an infinitary object-language formula: symmetric ideal fullness admits every profile satisfying the stated symmetry and finite-pinning conditions.
 
 **Target symmetry.** For μ in the designated group at Z, the required equation is
 
@@ -178,7 +178,7 @@ The cross-object C₀ branch of E never enters this calculation: F sends each C_
 
 Both E and F satisfy Good_Δ for every specified finite Δ. To verify this, use (12) at every future r and output coordinate l. Each observer evaluates its input at one bijective arrow. Evaluation preserves the Boolean set operations and both endpoints, giving the full Boolean composite identities on arbitrary future input tuples.
 
-For a universal quantifier over any admitted type σ, let a:U→U′ be the observation arrow at lr. Evaluating the transported universal at a quantifies over the entire σ-domain at U′. Universally evaluating the transported predicate through the observer quantifies over the image of the σ-domain at U under ρ_σ(a). Those ranges are equal because ρ_σ(a) is onto, with inverse ρ_σ(a^{-1}). The existential calculation is identical with “some” in place of “every.” These calculations hold for every future predicate, so they verify the full composite quantifier identities, not just current material commutation. Every equality proposition is an endpoint because all arrow actions are injective; endpoint fixing gives the translated equality clauses as well.
+For a universal quantifier over any admitted type σ, let a:U→U' be the observation arrow at lr. Evaluating the transported universal at a quantifies over the entire σ-domain at U'. Universally evaluating the transported predicate through the observer quantifies over the image of the σ-domain at U under ρ_σ(a). Those ranges are equal because ρ_σ(a) is onto, with inverse ρ_σ(a^{-1}). The existential calculation is identical with “some” in place of “every.” These calculations hold for every future predicate, so they verify the full composite quantifier identities, not just current material commutation. Every equality proposition is an endpoint because all arrow actions are injective; endpoint fixing gives the translated equality clauses as well.
 
 The same E,F therefore satisfy (2) for every fixed finite Δ. This is a metatheoretic statement about the witnesses; it does not insert an infinite qualification conjunction into the object language.
 
@@ -238,15 +238,15 @@ b_\sigma s_\sigma=I_{D_\sigma(\mathrm{cod}b)}
 
 for every admitted type σ. Thus b_σ is onto at every type. This is the already established split-epimorphism observation in the contingent-Barcan note; no stronger claim about arbitrary transports is needed.
 
-Fix a finite S containing P. Choose pairwise distinct points x₀,x₁,x₂,… outside S. Set S′:=S∪{x₀}, let ν₀=id, and let ν_n exchange x₀ and x_n for n≥1, fixing all other points. Put α_n:=ν_{n+1}ν_n^{-1}. Define
+Fix a finite S containing P. Choose pairwise distinct points x₀,x₁,x₂,… outside S. Set S':=S∪{x₀}, let ν₀=id, and let ν_n exchange x₀ and x_n for n≥1, fixing all other points. Put α_n:=ν_{n+1}ν_n^{-1}. Define
 
 ```math
 C_n:=\{h:\mathbb N\to\mathbb N:
-h|_{S′}=\nu_n|_{S′}\}.
+h|_{S'}=\nu_n|_{S'}\}.
 \tag{18}
 ```
 
-These are disjoint because h(x₀)=x_n on C_n. They are all S′-pinned, id∈C₀, and α_n C_n=C_{n+1}. This last equality holds for arbitrary functions h, not only for bijections: left composition by the permutation α_n changes the specified finite values exactly as required, and its inverse gives the reverse inclusion.
+These are disjoint because h(x₀)=x_n on C_n. They are all S'-pinned, id∈C₀, and α_n C_n=C_{n+1}. This last equality holds for arbitrary functions h, not only for bijections: left composition by the permutation α_n changes the specified finite values exactly as required, and its inverse gives the reverse inclusion.
 
 ### Admitted observers and the full inverse equation
 
@@ -268,7 +268,7 @@ F(h,q)\quad\Longleftrightarrow\quad
 \tag{19}
 ```
 
-Each branch is determined by the target of h and its values on S′. Both profiles are therefore pinned by S′, and ideal fullness admits both tt objects. There is no representative choice or target-symmetry condition here. At id, E has the truth profile of evaluation at b.
+Each branch is determined by the target of h and its values on S'. Both profiles are therefore pinned by S', and ideal fullness admits both tt objects. There is no representative choice or target-symmetry condition here. At id, E has the truth profile of evaluation at b.
 
 The future application formula (12) remains valid in the all-maps action model. Take arbitrary future functions r:ℕ→Z and l:Z→U and an arbitrary proposition q at Z. Put h:=lr. If h∈C_n, F's observation arrow is α_n, its new coordinate α_nh belongs to C_{n+1}, and E's observation arrow there is α_n^{-1}. The composite test in (13) is exactly α_n^{-1}α_nl=l. Outside all charts, both tests are identities. This proves F∘E=I as a whole-operation identity.
 

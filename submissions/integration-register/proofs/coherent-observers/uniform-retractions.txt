@@ -1,0 +1,187 @@
+ATOMICITY FROM UNIFORMLY INDEXED COMMUTING RETRACTIONS
+26 October 2026. New ordinary proof by OpenAI Codex.
+Direct source: misc, Sections 1-6 of this note, unpaginated.
+Ordinary proof, with the explicit reconstruction in Section 5 independently
+AI-reviewed; see ../../evidence/coherent-observer-review.json. No human or Lean certification.
+
+1. THE EXACT CHARACTERIZATION
+
+Over C5, propositional Atomicity is equivalent to the following single
+finitary assertion:
+
+There exists Phi:t(tt) such that, writing E_i=Phi(i),
+
+  (i)   every E_i is Good_{t};
+  (ii)  E_i^2=E_i for every i;
+  (iii) E_i E_j=E_j E_i for every i,j;
+  (iv)  forall p,q. [forall i. (E_i p iff E_i q)] -> p=q.
+
+All observer equations are whole-operation identities. Good_{t}
+includes whole Boolean and propositional-quantifier preservation.
+The family itself is an admitted operation, not a predicate selecting
+different members according to current truth.
+
+The forward implication from a family to Atomicity works at ANY
+specified admitted index type iota, with Phi:iota(tt). The converse
+constructs Phi at iota=t explicitly and makes every member qualified
+at every finite list of types. It supplies full relational separation.
+No Functional Choice premise is required in either direction.
+
+C5 supplies necessary ND, BF, and Functionality, with the established
+native C type reductions. In particular every native identity has
+value Top or Bottom. These facts are used explicitly below.
+
+2. TRUTH-PRESERVING MEMBERS MUST BE IDENTITY
+
+Write I=lambda p.p and define the admitted proposition
+
+  r_i := forall p. (E_i p iff p).
+
+If r_i is currently true, then E_i=I. To prove this, fix p and j.
+Commutation gives E_j(E_i p)=E_i(E_j p). Current truth preservation
+by E_i makes the right side true exactly when E_j p is true.
+Separation (iv) yields E_i p=p. This holds for every current p;
+Functionality collects it into E_i=I. Conversely E_i=I plainly
+makes r_i true. Thus, currently,
+
+  r_i iff (E_i=I).                                               (2)
+
+Idempotence and propositional-quantifier preservation give the
+stronger VALUE identity
+
+  E_i(r_i)
+    = forall p. (E_i(E_i p) iff E_i p)
+    = Top.                                                      (3)
+
+The first equality uses the whole quantifier and Boolean laws;
+the second rewrites with the whole idempotence equation. It does
+not turn merely current truth preservation into a whole equation.
+
+3. THE FAMILY DEFINES A TRUE ATOM
+
+Let c_i be the native identity proposition E_i=I, and define
+
+  a := forall i. (r_i -> c_i).                                  (4)
+
+By (2) and the actual quantifier truth clause, a is currently true.
+Since C5 makes c_i an endpoint and observers fix endpoints,
+E_i(c_i)=c_i. Unconditional universal instantiation gives
+a <= (r_i -> c_i). Apply E_i and use (3):
+
+  E_i(a) <= (E_i(r_i) -> E_i(c_i)) = c_i.                        (5)
+
+Therefore:
+  if E_i is not I, E_i(a)=Bottom;
+  if E_i is I, E_i(a)=a.
+
+Take b<=a with b nonzero. Separation from Bottom supplies i with
+E_i(b) true. Monotonicity and (5) force E_i=I, hence b is true.
+For every j, if E_j=I then E_j(b) and E_j(a) are both true; if
+E_j is not I then both values are Bottom. Separation now gives
+b=a. Thus a is an atom, and it is currently true.
+
+Notice that no preservation of the index-type quantifier by E_i
+was needed in (5): universal INSTantiation alone supplied its
+algebraic inequality. Qualification at t suffices.
+
+4. FROM THE TRUE ATOM TO ATOMICITY EVERYWHERE
+
+For any atom a in C5, its principal reader
+
+  H_a(p) := Box(a -> p)
+
+is an admitted endpoint-valued observer qualified at every finite
+type list. Here is the needed verification. An atom decides every
+proposition, and C5 makes the corresponding identities crisp, so
+H_a(p) is Top exactly when a<=p and Bottom otherwise. These tests
+preserve Boolean operations. For a quantified predicate F,
+
+  a <= forall x.Fx  iff  forall x. a<=Fx
+
+by BF/Tractarianism. Thus H_a preserves each admitted universal;
+existentials follow by duality. Endpoint values and Functionality
+turn these pointwise value identities into the required whole
+operation identities. This is the existing atom-reader theorem,
+spelled out to expose its BF use. Since our a is true, H_a also
+preserves current truth.
+
+For nonzero d, separation supplies i with E_i(d) true. Then
+H_a E_i(d)=Top. The composite H_a E_i is Good_t and endpoint-valued.
+For any such endpoint observer H, put
+
+  w_H := forall p. (H(p) -> p).
+
+Quantifier preservation and H(Hp)=Hp give H(w_H)=Top, so w_H is
+nonzero. Universal instantiation gives w_H<=p when Hp=Top, and
+w_H<=not-p otherwise. Therefore w_H is an atom. In the displayed
+case it lies below d. Every nonzero d thus has an atom below it.
+
+This proves the forward implication. The endpoint-reader step uses
+only established observer lemmas, with their hypotheses checked;
+it does not assume global Atomicity before deriving it.
+
+5. EXPLICIT CONVERSE: REPLACING WORLD READERS BY COMMUTING RETRACTIONS
+
+Assume C5+Atomicity_t. The established consequence Actuality gives
+a true atom a. If it is the only atom, Atomicity makes Top=a and
+every proposition an endpoint. Take Phi constantly I.
+
+Otherwise choose one further atom b distinct from a. No family
+choice is involved. For each atom w distinct from a define
+
+  T_w(p) := ((a or w) and H_w(p))
+             or (not(a or w) and H_b(p)).                         (6)
+
+Set T_a=I, and also assign I to every nonatom index. This assignment
+is one admitted lambda operation Phi:t(tt): in (6), use the guard
+q(w)=Atom(w) and w!=a, putting Phi(w)(p)=
+  (not q(w) and p) or (q(w) and the right side of (6)).
+
+Under C5 the guard q(w) is endpoint-valued. Atomhood is built from
+identity/order tests, whose values are endpoints; BF preserves this
+endpoint property through its quantifiers. Thus each Phi(w) is
+literally the claimed observer. Formula (6) is Boolean patching of
+two fully qualified endpoint observers, so it is itself fully
+qualified. Identity handles the other indices.
+
+To check commutation and idempotence, test at an arbitrary atom v.
+For w!=a, H_v(T_w(p)) is H_w(p) if v=a or v=w, and is H_b(p)
+otherwise. On atoms this is the flat join operation with least
+element a, greatest element b, and all remaining atoms incomparable:
+v star w=v when w=a; v star v=v; b is absorbing; distinct nonleast
+atoms have product b. It is associative, commutative, and idempotent.
+
+Consequently every atomic reader gives the same value to
+T_w(T_z(p)) and T_z(T_w(p)), and likewise to T_w(T_w(p)) and T_w(p).
+Atomicity detects equality of propositions; Functionality collects
+these identities into the whole-operation equations. Nonatom
+indices merely add further copies of I.
+
+At the current true atom a, T_w(p) has exactly the current truth
+value of H_w(p), also when w=a. Given unequal p,q, Atomicity supplies
+an atom w under their symmetric difference, and that index
+distinguishes them. Thus Phi separates propositions. Functionality
+lifts the same family to every relational output type.
+
+The range of this Phi even forms a commutative idempotent monoid.
+It is not necessary to postulate this extra closure separately.
+
+6. INTERPRETATION AND SCOPE
+
+Over C5 this is a new characterization of Atomicity, not an
+independent proposed strengthening of it. Its content is that
+uniformly available compatible logical projections recover atomic
+worlds without requiring the projections themselves to be endpoint
+valued. In (6) their outputs can remain contingent.
+
+The family distinction is essential: cohen-separation-model.txt
+constructs an atomless C5 model satisfying the predicate-family
+version, even with idempotence and composition closure. It also
+shows that uniformly indexed commuting INVOLUTIONS can separate in
+an atomless model. Idempotence cannot be replaced by finite order.
+
+Sources for prior ingredients: ../../../classicism-results-2026-10-24-v2/proofs/logical-observer-hierarchy.md,
+Sections 1, 3, 4, for qualification, endpoint-to-atom, and patching;
+the recorded C5+Atomicity consequences for Actuality, BF, and
+Functionality. The true-atom formula (4), its proof, and the flat
+join reconstruction (6) are the new arguments in this note (misc).

@@ -198,7 +198,7 @@ This follows directly from (15). The right side already implies the J condition 
 
 Thus a J witness with full support yields K under the stated premises. Finite relative generation is a separate sufficient condition: its finite construction gives the controlled inverse over C5 alone, without $`\mathrm{BC}_t`$ or $`\mathrm{Zorn}_t`$. The present proof extends selection to admitted current chains, rather than replacing that finite argument.
 
-The result does not settle OS+J⇒Rev∨K over C5, nor does it claim that adding $`\mathrm{BC}_t`$ and $`\mathrm{Zorn}_t`$ settles that separation comparison. The support-coverage premise in (16) remains substantive. The [regular-open image-gap model](injective-gap-without-split-kernel.md) already shows why having a qualified inverse for E is not enough to ensure an inverse killing a prescribed true c. No new verdict about these optional principles in that model is needed here.
+Over C5, the unrestricted OS+J⇒Rev∨K comparison is refuted by the [rigid Souslin model](rigid-souslin-injective-separation.md). With both BCₜ and Zornₜ, the [Actuality theorem](../../../next-update/proofs/c5-zorn-and-propositional-completeness-imply-actuality.md) gives Actuality, so OS gives endpoint separation and hence Rev. The support-coverage premise in (16) remains substantive. The [regular-open image-gap model](injective-gap-without-split-kernel.md) already shows why having a qualified inverse for E is not enough to ensure an inverse killing a prescribed true c. No new verdict about these optional principles in that model is needed here.
 
 ## 6. Sources
 

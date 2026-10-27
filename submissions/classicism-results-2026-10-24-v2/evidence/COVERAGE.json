@@ -191,8 +191,8 @@
     "synthesis.intrinsic-observer-axioms",
     "synthesis.lambda-free-endpoint-comprehension"
   ],
-  "result_entries": 61,
-  "questions": 15,
+  "result_entries": 69,
+  "questions": 17,
   "subject_coverage": [
     {
       "id": "central-results",
@@ -233,7 +233,11 @@
         "COEXTENSION-OPERATIONS",
         "CHOICE-COHERENCE",
         "C5-STRONG-RETRACTIONS",
-        "FIXED-POINT-ENTRANCE"
+        "FIXED-POINT-ENTRANCE",
+        "RECURRENT-COLOUR-SEPARATION",
+        "ATOMICITY-VICINITY",
+        "MODAL-CHOICE",
+        "STRONG-WORLDS-DOMAINS"
       ]
     },
     {
@@ -246,7 +250,8 @@
         "ANALYTIC-RIGIDIFICATION",
         "FINITE-TYPE-PROPAGATION",
         "ARITHMETIC-FOUNDATIONS",
-        "INFINITY-SCHEMA-SEPARATION"
+        "INFINITY-SCHEMA-SEPARATION",
+        "MAX-NUMBER-SETS"
       ]
     },
     {
@@ -257,7 +262,8 @@
         "CH-COALESCED",
         "MAX-CH",
         "FORCING-TRANSFER",
-        "FORCING-POSSIBILISM"
+        "FORCING-POSSIBILISM",
+        "OBSERVER-ANALYSIS"
       ]
     },
     {
@@ -269,7 +275,9 @@
         "DIAGONAL-CHARACTERS",
         "FULL-IDENTITY-OBSERVERS",
         "EVALUATOR-MODAL-COMMUTATION",
-        "UNIFORM-COMPLETE-EVALUATORS"
+        "UNIFORM-COMPLETE-EVALUATORS",
+        "OBSERVER-INTERPRETATIONS",
+        "OS-CONSERVATIVITY"
       ]
     },
     {
@@ -370,18 +378,21 @@
     "updated_at_utc": "2026-10-24T02:10:23.847226+00:00"
   },
   "presentation": {
-    "overview_groups": 42,
+    "overview_groups": 45,
     "overview_result_refs": [
       "MAX-ATOMICITY",
       "SP-SIGNATURE-CONFLICT",
       "SP-BARCAN-FUNCTIONALITY",
       "CHOICE-COMPLETENESS",
+      "ATOMICITY-VICINITY",
+      "MODAL-CHOICE",
       "LOGICAL-NECESSITY-SEPARATION",
       "RIGIDITY-ND-BC",
       "OLDNEW-SEPARATION",
       "MODAL-PROPAGATION",
       "RIGIDITY-CLASSIFICATIONS",
       "FINITE-COMPRESSION-SEPARATION",
+      "RECURRENT-COLOUR-SEPARATION",
       "FIXED-POINT-ENTRANCE",
       "FINITE-TYPE-PROPAGATION",
       "INFINITY-SCHEMA-SEPARATION",
@@ -389,6 +400,7 @@
       "MAX-CH",
       "FORCING-TRANSFER",
       "FORCING-POSSIBILISM",
+      "OBSERVER-ANALYSIS",
       "SECTIONS-RETRACTIONS",
       "BOOLEAN-RETRACTIONS-CHOICE",
       "C5-STRONG-RETRACTIONS",
@@ -415,6 +427,7 @@
       "UNIFORM-COMPLETE-EVALUATORS",
       "DIAGONAL-CHARACTERS",
       "FULL-IDENTITY-OBSERVERS",
+      "OS-CONSERVATIVITY",
       "LOGICAL-OBSERVERS",
       "H-OBSERVER-SPACE",
       "PROFILE-WORLD-ALGEBRA",
@@ -428,14 +441,17 @@
       "COEXTENSION-OPERATIONS",
       "CHOICE-COHERENCE",
       "ANALYTIC-RIGIDIFICATION",
+      "STRONG-WORLDS-DOMAINS",
       "ARITHMETIC-FOUNDATIONS",
+      "MAX-NUMBER-SETS",
       "PURE-SP-BOUNDED-IMAGE",
       "SIGNATURE-SP-SURVIVAL",
       "INFINITARY-COMPREHENSION",
       "INTRINSIC-OBSERVER-AXIOMS",
       "FULL-STANDARD-GALLIN",
-      "EVALUATOR-MODAL-COMMUTATION"
+      "EVALUATOR-MODAL-COMMUTATION",
+      "OBSERVER-INTERPRETATIONS"
     ],
-    "complete_result_entries": 61
+    "complete_result_entries": 69
   }
 }

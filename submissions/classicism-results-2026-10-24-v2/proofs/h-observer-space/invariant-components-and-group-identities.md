@@ -194,7 +194,7 @@ Without Rev, equation (14) is a component bound. It does not identify the invari
 
 Equation (6) also locates the homogeneity supplied by reversible motion precisely. Nonzero overlap of the invariant orbit joins suffices for equivalent nonzero subpieces, and is necessary. It does not give an isomorphism of the entire target intervals, a uniform choice of partial isomorphisms, or an inverse for an arbitrary injective logical observer. In particular, if disjoint nonzero a,b have O(a)∧O(b)=0, no such reversible common refinement can cross that invariant boundary.
 
-The existing support theorem says that every Good observer agrees with a reversible invariant u on its local support. A detector of a false invariant must therefore act outside that support. The present finite-refinement result does not establish support coverage for that detector and does not supply the controlled inverse selection required by $`\mathrm{BC}_t`$+$`\mathrm{Zorn}_t`$. The question C5+OS+J⇒Rev∨K, equivalently the remaining injective-versus-qualified-left-inverse separation comparison, remains unresolved here.
+The existing support theorem says that every Good observer agrees with a reversible invariant u on its local support. A detector of a false invariant must therefore act outside that support. The present finite-refinement result does not establish support coverage for that detector and does not supply the controlled inverse selection required by $`\mathrm{BC}_t`$+$`\mathrm{Zorn}_t`$. C5+OS+J⇒Rev∨K, equivalently InjSep⇒SplitMono over C5, is refuted by the [rigid Souslin countermodel](rigid-souslin-injective-separation.md).
 
 ## 6. Sources
 

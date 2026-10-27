@@ -1,0 +1,205 @@
+COHERENT FAMILIES OF LOGICAL OBSERVERS
+26 October 2026. Ordinary mathematical research by OpenAI Codex.
+Direct source for the new arguments: misc, this note, Sections 1-6,
+unpaginated. Self-checked ordinary proofs; no independent, human, or
+Lean certification is claimed. No native database record is changed.
+
+1. EXACT TWO FORMS OF A FAMILY
+
+Work in the fixed relational Classicism C. Use Good_Delta from
+../../../classicism-results-2026-10-24-v2/proofs/logical-observer-hierarchy.md,
+Section 1: whole Boolean and specified typed quantifier identities.
+Composition and idempotence below are identities of entire operations.
+
+A predicate family is an admitted K:(tt)t. For a relational output
+type tau, say it separates at tau when, for all X,Y:tau,
+
+  [forall E. K(E) -> forall zbar. (E(X[zbar]) iff E(Y[zbar]))]
+       -> X=Y.                                                   (1)
+
+Require every current K-member to be Good_Delta and require
+
+  forall E,F. K(E) and K(F) -> EF=FE.                              (2)
+
+CoSep(tau,Delta) asserts existence of such K. CoIdemSep adds
+K(E) -> E^2=E. The full theories consist of these separate finite
+instances. They do not quantify over types. They imply ordinary OS
+at the same instances. Current membership is used throughout; K is
+not assumed endpoint-valued or persistent.
+
+A uniformly indexed family instead is one admitted Phi:iota(tt).
+Write E_i=Phi(i). Require every E_i to be Good_Delta, every E_i,E_j
+to commute, and separation with forall i in place of the guarded
+forall E in (1). UCoIdemSep adds E_i^2=E_i for every i. The index
+sort is an ordinary specified type. In particular iota=t gives one
+finitary formula for each tau,Delta.
+
+The indexed version implies the predicate version: take
+K(E):=exists i. E=Phi(i). The converse is NOT automatic. The other
+two notes in this folder prove a sharp distinction even over C5.
+
+2. COMMUTING SEPARATION IMPLIES DIRECTEDNESS
+
+Theorem. Over C, propositional CoSep implies
+
+  forall p. Diamond Box p -> Box Diamond p.                       (.2)
+
+No idempotence, quantifier-preservation clause, Choice, BF, or ND
+is needed for this implication beyond the specified Boolean
+qualification and propositional separation. It holds for either
+form of family in Section 1.
+
+Proof. Suppose Diamond Box p and Diamond Box not-p. Separation
+from Bottom supplies current members E,F with E(Box p) and
+F(Box not-p) true, respectively. This follows because each Boolean
+observer sends Bottom to Bottom.
+
+The H theorem expressing Leibniz substitution gives the algebraic
+inequality
+
+  (p=Top) <= (G(p) iff G(Top))
+
+for every admitted G. It can be transported through a Boolean
+observer by the Boolean whole identities. Take G=F and use
+F(Top)=Top. From E(Box p) we obtain E(Fp) true. Similarly, take
+G=E and use E(Bottom)=Bottom. From F(Box not-p), equivalently
+F(p=Bottom), we obtain F(Ep) false. But EF=FE, a contradiction.
+
+Hence not(Diamond Box p and Diamond Box not-p). By native Boolean
+duality this is Diamond Box p -> Box Diamond p. All uses of logical
+equivalence are the unconditional H substitution and Boolean laws;
+no optional hypothesis has been necessitated. QED.
+
+Thus order-independent observation has a concrete modal consequence:
+two incompatible propositions cannot each be possibly necessary.
+The separately boxed family principles imply separately boxed .2
+by necessitating the discharged C implication, not its premises.
+
+2A. ACTUAL TRUTH PROFILES DETERMINE COMMUTING OPERATIONS
+
+Assume the family separates propositions, and assume Functionality
+at tt (already supplied by full CoSep through OS). Let A,B:tt each
+commute with every current family member. If forall p.(Ap iff Bp)
+holds currently, then A=B as whole operations.
+
+For any current family member E and any p, commutation rewrites
+E(Ap) as A(Ep) and E(Bp) as B(Ep). Their truth values agree by
+the assumed truth-profile equivalence. Separation yields Ap=Bp.
+Functionality then gives A=B. Neither A nor B needs a separate
+qualification hypothesis for this argument.
+
+In particular the only operation commuting with the entire family
+and preserving current truth is I. This does not say that every
+observer is identity; the other family members change current truth.
+It explains the first step of uniform-retractions.txt without a
+special appeal to Atomicity or to C5 beyond Functionality.
+
+3. COMPOSITION CLOSURE CAN BE ADDED TO PREDICATE FAMILIES
+
+Every predicate family as in Section 1 can be enlarged to an admitted
+commutative monoid of qualified observers without losing separation.
+For CoIdemSep the enlargement consists entirely of idempotents.
+
+Define G(E) to say that every admitted predicate P:(tt)t containing
+I and K and closed under composition contains E. This is ordinary
+impredicative comprehension, not an external finite-word set. It
+contains I and K, and is closed under composition, by its definition.
+
+Good_Delta is itself a composition-closed predicate containing I and
+K, so all G-members are qualified. For fixed k in K the predicate
+of operations commuting with k contains I and K and is composition
+closed. Thus every G-member commutes with k. Now fix g in G and
+repeat this argument for the predicate of operations commuting with
+g. It contains K by the first argument. Hence G is pairwise commuting.
+
+If K consists of idempotents, use the predicate G(E) and E^2=E.
+It contains I and K and is closed under composition because its
+members already commute. The defining induction for G therefore
+makes every G-member idempotent. Separation persists since K is
+contained in G. All arguments concern admitted predicates and
+current whole-operation identities. No standardness of finite words
+or Choice principle is being assumed.
+
+4. EXACT FINITE ROOTED-POSET CHARACTERIZATION
+
+Use the full relational action model on a finite poset P with least
+point o and singleton individuals. The existing coordinate theorem
+in ../../../classicism-results-2026-10-24-v2/proofs/h-observer-space/idempotent-native-box-observers.md, Section 3, says:
+
+  D_t(o)=P(P), truth is membership of o;
+  Good observers are exactly E_f(p)=f^{-1}(p), with x<=f(x);
+  every such reader preserves every typed quantifier as a WHOLE
+  operation; the model has necessary BF and Functionality.
+
+Theorem. In this model the following are equivalent:
+
+  (a) propositional CoSep;
+  (b) full CoIdemSep;
+  (c) P has a greatest point.
+
+Proof of necessity. For every x in P, separation of {x} from the
+empty proposition supplies a family reader f_x with f_x(o)=x.
+All the f_x commute. Compose this finite list and put y=product f_x(o).
+For any x, move f_x to the first position. The remaining composite
+is inflationary, so y>=f_x(o)=x. Thus y is a greatest point. This
+argument uses neither idempotence nor monotonicity of the readers.
+
+Proof of sufficiency. If P is a singleton use identity. Otherwise
+let 1 be its greatest point. Give the underlying set a second, flat
+join operation star: o is its identity, 1 is absorbing, x star x=x,
+and two different elements other than o have product 1. This is an
+associative commutative idempotent operation. It need not be the join
+for the original order. Define f_a(x)=a star x. These maps are
+inflationary in the ORIGINAL order, pairwise commuting, idempotent,
+and satisfy f_a(o)=a. Thus they are fully qualified readers and
+separate propositions. Functionality lifts separation to every
+relational type. Their finite family is admitted by the predicate
+E=E_fa1 or ... or E=E_fan. QED.
+
+Every future cone still has a greatest point, so these successful
+models satisfy the separately boxed full CoIdemSep schema. Its
+witness family may be chosen anew at a future evaluation. The
+theorem concerns predicate families; it does not assert uniform
+operation indexing in the singleton-individual model.
+
+5. SHARP COMPARISONS AND EXAMPLES
+
+The three-point fork o<a,b, with a,b incomparable and maximal,
+satisfies necessary OS but refutes CoSep: it has no greatest point.
+It also refutes .2 directly, using p={a}. Hence coherent separation
+is strictly stronger than ordinary OS over C.
+
+The four-point diamond o<a,b<1 satisfies necessary CoIdemSep but
+fails C5, since the nonzero {o} becomes Bottom at a. It also fails
+the usual modal linearity principle .3, using p={a}, q={b}. Thus
+commuting observation forces directedness, not linearity or S5.
+
+The seven-point four-level poset with level sizes 1,2,3,1 has a
+greatest point, so satisfies necessary CoIdemSep. It fails even
+native-Box observer separation by the proved P_(m,n) classification
+in ../../../classicism-results-2026-10-24-v2/proofs/h-observer-space/idempotent-native-box-observers.md, Section 5 (m=2,n=3).
+Consequently commuting separation need not supply observers that
+commute with native necessity.
+
+Finally, C5+Atomicity implies the stronger uniformly indexed version
+by uniform-retractions.txt. Thus the new predicate-family restriction
+is satisfied throughout Choice Classicism. These implications are
+compatible with the atomless model in cohen-separation-model.txt.
+
+6. SOURCES AND LIMITS
+
+New arguments: Sections 1-5 of this note, misc. Qualification and
+ordinary observer separation: ../../../classicism-results-2026-10-24-v2/proofs/logical-observer-hierarchy.md, Section 1.
+Finite model soundness, the coordinate-map theorem, and the existing
+BoxSep and .3 counterexamples: ../../../classicism-results-2026-10-24-v2/proofs/h-observer-space/idempotent-native-box-observers.md,
+Sections 3, 5, 6. The underlying full action models are Bacon and
+Dorr, Classicism, 16 May 2023 draft, Section 3.5 pp.58-61 and
+Appendix D pp.73-74, as recorded in the model-family notes.
+
+The finite-poset classification is not claimed for arbitrary Henkin
+models. The model in directedness-converse-countermodel.txt refutes
+OS+.2 -> CoSep in an unrestricted root over a supported atomless
+component, even with full IdemBoxSep and boxed .2. Its observer
+classification also distinguishes CoSep from the older central and
+native-Box restrictions. No unboxed premise is replaced by its
+necessary version.

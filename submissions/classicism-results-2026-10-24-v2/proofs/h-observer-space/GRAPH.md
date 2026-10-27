@@ -1,5 +1,7 @@
 # Observer separation over H
 
+[Unified guide: C and H maps, definitions and simplifications](../../LOGICAL-OBSERVERS.md).
+
 Observer separation asks which operations can distinguish propositions, and what follows when those operations preserve specified logical structure. The map starts over H and recovers C in its complete logical region. Its branches track what observers preserve, which types they separate, and restrictions such as finite image or an admitted inverse.
 
 Only the finite independent primitive family is completely classified. The [open frontier](#10-models-open-comparisons-and-research-status) remains under investigation.
@@ -442,24 +444,21 @@ Proof: [Typed separation and Classicism](typed-separation-and-classicism.md), §
 
 OS means full logical separation. Fin means logical separation by observers with internally finitely many outputs, with no uniform bound. Rev uses observers with an admitted qualified two-sided inverse; SplitMono uses a qualified left inverse. Surj and InjSep require current surjectivity and injectivity respectively. BoxSep requires whole-operation commutation with the original □p=(p=Top); IdemBoxSep also requires the whole identity E∘E=E. FinBoxSep adds internally finite image to BoxSep. CentreSep requires commutation with every same-list Good observer. These qualifications are added to Good for the same finite type list. Nec is the separately boxed OS schema. Bool is propositional Boolean separation. Every complete-logical separation node already entails C+BF by §8.
 
+A two-headed arrow labelled “+ X” means **upper principle ⇔ lower principle + X**. Ordinary implication arrows point downward. Intermediate inverse principles appear in the [observer-only map](../../LOGICAL-OBSERVERS.md#observer-relations-over-c).
+
 ```mermaid
-%%{init: {"flowchart": {"nodeSpacing": 15, "rankSpacing": 40}}}%%
+%%{init: {"theme":"base","themeVariables":{"fontFamily":"Arial, sans-serif","fontSize":"16px","lineColor":"#7b8596","edgeLabelBackground":"#ffffff"},"flowchart":{"curve":"monotoneY","nodeSpacing":36,"rankSpacing":48,"padding":14}}}%%
 flowchart TD
-    Ext["Extensionality"] --> End["End<br/>= C5 + Atomicityₜ"]
-    Ext -->|strict| IdemBox["IdemBoxSep"]
+    Ext["Extensionality"] --> End["End = ☐Plenitude<br/>= C5 + Atomicity"]
+    NFC["☐Functional Choice"] --> End
+    Ext <-->|"+ C5"| IdemBox["IdemBoxSep"]
     IdemBox -->|strict| BoxSep["BoxSep"]
-    End --> Rev["Rev"]
-    Rev -->|strict| Both["SurjSep + SplitMono"]
-    Both -->|strict| SplitMono["SplitMono"]
-    SplitMono --> Inj["InjSep"]
-    Inj -->|strict| OS["OS"]
+    End <-->|"+ one atom"| Rev["Rev"]
     Rev -->|strict| BoxSep
     BoxSep -->|strict| OS
     BoxSep --> NBF["C + ☐BF"]
     BoxSep --> D2["C + .2"]
-    Both -->|strict| Surj["SurjSep"]
-    Surj -->|strict| OS
-    End --> Fin["Fin"]
+    End <-->|"+ C5"| Fin["Fin"]
     End --> At["C + BF<br/>+ Atomicityₜ"]
     Rev -->|strict| CN["C5 + ☐OS"]
     Rev --> NPC["No Pure<br/>Contingency"]
@@ -469,16 +468,23 @@ flowchart TD
     Fix --> OS
     Nec --> OS
     Nec --> NBF
+    NFC <-->|"+ Functional Choice"| OS
+    End <-->|"+ Plenitude at (t,t)"| OS
     Fin --> OS
     At --> OS
-    OS --> DB["C + BF + Bool"]
-    DB --> D["C + BF"]
+    OS --> D["C + BF"]
     NBF --> D
-    C5 --> D
+    C5 --> NBF
     C5 --> D2
     D --> C["C"]
     D2 --> C
     C --> H["H"]
+    classDef default fill:#f6f8fc,stroke:#8794ab,stroke-width:1px,color:#243249,rx:6,ry:6;
+    classDef observer fill:#eeedfa,stroke:#938bbd,stroke-width:1px,color:#302953,rx:6,ry:6;
+    classDef base fill:#e7edf5,stroke:#8794ab,color:#243249,rx:6,ry:6;
+    linkStyle default stroke:#7b8596,stroke-width:1.2px;
+    class End,Rev,BoxSep,IdemBox,Fin,OS,Nec observer;
+    class C,H base;
 ```
 
 The new injective and native-modal branches coincide only with an explicit C5 premise:
@@ -490,7 +496,7 @@ flowchart TD
     BoxFive -->|strict| OSFive["C5 + ordinary logical separation"]
 ```
 
-Both strictness claims retain C5. The finite-block model has C5+SplitMono and fails Rev, while the linear/circular fibre model has C5+☐OS and fails InjSep and BoxSep at the explicit list {t,e,et,eet,(et)t,((et)t)t}. The latter model satisfies D_t, so any injective Good observer there would be bijective and qualified reversible. **SplitMono⇒InjSep is not marked strict or reversible:** that comparison remains unresolved, both over H and over C5.
+Both strictness claims retain C5. The finite-block model has C5+SplitMono and fails Rev, while the linear/circular fibre model has C5+☐OS and fails InjSep and BoxSep at the explicit list {t,e,et,eet,(et)t,((et)t)t}. The latter model satisfies D_t, so any injective Good observer there would be bijective and qualified reversible. **SplitMono ⇒ InjSep is strict**, even over C5 with necessary all-type RC, TC and Zorn; see the [rigid Souslin countermodel](rigid-souslin-injective-separation.md).
 
 Without C5, BoxSep and InjSep are incomparable, as are BoxSep and SplitMono, already over C+current BF. Omega shifts supply BoxSep without InjSep or SplitMono. The all-maps natural-numbers/singleton model supplies SplitMono and thus InjSep, but fails ☐BF and hence BoxSep. BoxSep and ☐OS are also incomparable over C+☐BF: the root truth-profile model has BoxSep but fails ☐OS, while the linear/circular model supplies the reverse witness. The root model also refutes persistence of BoxSep itself.
 
@@ -776,7 +782,7 @@ flowchart LR
 
 Respect on $`s_E`$ is the identity $`s_E\land Eu=s_E\land u`$. Equivalently, no nonzero parts of u and ¬u admit a relative order isomorphism with an admitted inverse. Writing B(E) for the endpoint-valued identity-based Good_t guard, the same orbit closure is $`O(p)=\exists E[B(E)\land s_E\land Ep]=\exists E[B(E)\land N(E)p]`$. These are admitted guarded joins, with no Choice or external completeness.
 
-An injective observer detecting a false invariant must change it outside its local support. With current $`\mathrm{BC}_t`$+$`\mathrm{Zorn}_t`$, the additional coverage $`L_E s_E=\top`$ then supplies a qualified inverse with a true kernel. That coverage is not automatic here, so the general InjSep/left-inverse comparison remains unresolved. See [Invariant components and local support](invariant-components-and-local-support.md), §§1–5.
+An injective observer detecting a false invariant must change it outside its local support. With current $`\mathrm{BC}_t`$+$`\mathrm{Zorn}_t`$, the additional coverage $`L_E s_E=\top`$ then supplies a qualified inverse with a true kernel. That coverage is an additional hypothesis; the [rigid Souslin countermodel](rigid-souslin-injective-separation.md) refutes the unrestricted separation implication. See [Invariant components and local support](invariant-components-and-local-support.md), §§1–5.
 
 ### Group identities without separation
 
@@ -985,7 +991,7 @@ flowchart TD
     MonoGlobal["C5 + full SplitMono"] <--> KGlobal["C5 + [Rev OR (OS + K at t)]"]
 ```
 
-The same-observer type-reduction theorem makes each $`\mathrm{Good}_{\{t\}}`$ observer qualified at every requested finite list, with equivalence for lists containing t; Functionality lifts propositional separation to all relational outputs. Each full-schema expression in this panel can therefore be represented by its single closed separation formula at t,{t}. No infinitary disjunction or common choice of witnesses across independent instances is used. C5 is essential to this compression. $`K_{\{t\}}`$ implies $`J_{\{t\}}`$ strictly, but the comparison needed for separation remains unresolved: **over C5, does OS+$`J_{\{t\}}`$ imply Rev∨$`K_{\{t\}}`$?** See [Injective separation decomposition](injective-separation-decomposition.md), §§1–6 and its dated cross-reference update.
+The same-observer type-reduction theorem makes each $`\mathrm{Good}_{\{t\}}`$ observer qualified at every requested finite list, with equivalence for lists containing t; Functionality lifts propositional separation to all relational outputs. Each full-schema expression in this panel can therefore be represented by its single closed separation formula at t,{t}. No infinitary disjunction or common choice of witnesses across independent instances is used. C5 is essential to this compression. $`K_{\{t\}}`$ implies $`J_{\{t\}}`$ strictly, and OS+$`J_{\{t\}}`$ does not imply Rev∨$`K_{\{t\}}`$, by the [rigid Souslin countermodel](rigid-souslin-injective-separation.md). See [Injective separation decomposition](injective-separation-decomposition.md), §§1–6 and its dated cross-reference update.
 
 Finite relative generation and principal intervals make the distinction more structural. The following panel is over C5 at one fixed finite Δ containing t:
 
@@ -1102,6 +1108,7 @@ The following witnesses explain why the map has distinct directions.
 | Full cancellative monoid ℤ×ℕ | ☐SurjSep + ☐SplitMono, with C and ☐BF, still do not give C5 or Rev |
 | Root truth-profile extension of a fixed/free symmetry tail | Full Surj and BoxSep, ☐BF and ☐Functionality need not give ☐OS, ☐SurjSep or ☐BoxSep |
 | Full action root below the integers, with future shifts | An individual currently bijective Good observer need not be necessarily injective or have any admitted whole left inverse, even with ☐BF and Fun |
+| Rigid Souslin generic Henkin model | C5 + ☐InjSep + ☐RC + ☐TC + ☐Zorn, with ☐¬SplitMono at t; [proof](rigid-souslin-injective-separation.md) |
 | Full-function 2×RO(Cantor²), with a cylinder embedding | An individual injective all-type Good observer need not have a qualified Good-t left inverse; the model fails OS, so it does not separate InjSep from SplitMono |
 | The same full-function algebra, with a clopen-partition embedding | C5+J need not give K, even when the J witness has a qualified left inverse; that inverse has a false kernel, and OS fails |
 | Full six-point frame {o}<{x,a}<{b,c}<{1} | BoxSep need not give IdemBoxSep, even with ☐BF, ☐Functionality, ☐Atomicity (type t) and ☐OS |
@@ -1126,11 +1133,10 @@ The live research questions include:
 
 1. Does material conjunction or disjunction separation imply its pointwise version in the remaining infinite, nonprincipal case? Internal finiteness, local truth extrema, a separating finite-image material family, ND_t and Plenitude at t,t give positive converses. Equivalently, can a separating material family always be replaced by an admitted composition-closed one? Any countermodel must evade the stated positive hypotheses.
 2. Do the infinite affine group equations supply admitted characters over bare H? Zorn at tt supplies characters and partial-character extension; Plenitude at t,t then supplies pointwise involutions. Pointed subgroup maximality exactly characterizes separation, while relative maximality exactly characterizes extension.
-3. **Main unresolved question: does InjSep imply SplitMono over H, or over C5?** See also [Conjectures](../../CONJECTURES.md#observer-strength). Every qualified left inverse gives injectivity, and C5 identifies injectivity with native-Box preservation. The finite C5 decompositions reduce the C5 question exactly to whether OS+$`J_{\{t\}}`$ implies Rev∨$`K_{\{t\}}`$. J alone does not imply K: the regular-open example proves this, but lacks OS. A J witness with any fixed finite relative-generation bound gives K. Separation by full-support observers, observers whose support is currently true, or observers of any fixed bounded fibre degree is already Rev over C5, without assuming injectivity. $`\mathrm{BC}_t`$+$`\mathrm{Zorn}_t`$ supplies exact support-coverage criteria for individual qualified left inverses and controlled kernels, and turns bounded degree into a finite local-sheet partition, but J alone does not meet those criteria. A currently true admitted homogeneous interval together with OS supplies SplitMono even without J. The remaining comparison concerns models outside these positive conditions; none of the individual obstructions settles it.
 4. Which further boxed inverse comparisons admit exact characterizations? SurjSep⇒necessary BF is refuted by the integer-shift predecessor, with failure at every admitted type. Individual Onto(E) persists over C+BF_t, but SurjSep implies neither necessary OS nor its own necessary schema, even with necessary BF and Fun. The conjunction of surjective and left-inverse separation is strictly weaker than Rev, even with both conjuncts boxed. The factors remain incomparable over C+necessary BF+necessary OS; under C5, Surj equals Rev. Left-inverse separation and necessary OS are incomparable even over C5, and C5+left-inverse separation does not imply its own boxed schema. The exterior-arm models now settle native-Box and $`B_r`$ nonpersistence for every fixed r≥2 even in full finite posets; B₁ remains cone-hereditary within that model family. These comparisons are settled by the linked models.
 5. Which further partial-signature reversibility and intrinsic admission conditions have exact characterizations? The atomless meet region has the invariant-congruence obstruction, dense-chain primitivity, exact gap-density/transitivity, and exact convex-block/finite-factor reductions. The complete split-interval model preserves both quantifier families reversibly below C. Arbitrary admitted semilattice actions still lack a complete intrinsic classification. Plenitude covers negation, each affine operation and the linked negation/affine and paired-affine signatures with their compatibility equations. Zorn gives intrinsic material lattice and Boolean converses as well as the affine converse. Even C5+□SplitMono+No Pure Contingency does not imply Rev. No converse using the stronger first-order endpoint-parameter noncontingency schema is asserted.
 
-The new completeness boundary does not settle what $`\mathrm{BC}_t`$ and $`\mathrm{Zorn}_t`$ together add to ordinary separation: the two-colour model refutes Actuality from C5+OS+$`\mathrm{BC}_t`$ but fails $`\mathrm{Zorn}_t`$ itself. By contrast $`\mathrm{BC}_{tt}`$ reaches Actuality over C5, and adding OS gives End. The central-observer result is also now settled: central separation is Extensionality over C5, while its intrinsic strength over bare H is not characterized by the finite-poset classification.
+Over C5, BCₜ + Zornₜ implies Actuality, so adjoining OS gives End; see the [Actuality proof](../../../next-update/proofs/c5-zorn-and-propositional-completeness-imply-actuality.md). The two-colour model refutes Actuality from C5+OS+BCₜ but fails Zornₜ. By contrast $`\mathrm{BC}_{tt}`$ reaches Actuality over C5, and adding OS gives End. The central-observer result is also now settled: central separation is Extensionality over C5, while its intrinsic strength over bare H is not characterized by the finite-poset classification.
 
 The linked proofs settle the finite primitive classification and the displayed implications, equivalences and countermodels. The broader H comparisons remain under investigation.
 

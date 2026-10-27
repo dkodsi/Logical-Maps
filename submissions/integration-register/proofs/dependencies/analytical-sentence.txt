@@ -1,0 +1,212 @@
+FIRST-ORDER ANALYTICAL SENTENCE FOR CONSTRUCTIBLE REALS
+25 October 2026
+Ordinary mathematical audit by OpenAI Codex, prompted by Daniel Kodsi.
+No Lean work, database edits, or publication. This note supplies the sentence
+and forcing-truth part of the analysis assignment; it does not independently
+certify the ambient Classicism model or its choice principles.
+
+Exact target and language
+
+The upstream ID is necessity-of-analysis. The snapshot is
+ a89a5058ebbd5ebe93aec07d47a1a32e3b93f8bb.
+Its Background, Analysis, defines real structures at an admitted type sigma
+using a carrier X, order, ternary sum and product graphs, 0, 1, and a predicate
+N for the least inductive subproperty. Completeness is for NONEMPTY bounded
+subproperties. First-order analytical formulas quantify only over elements
+of X and use those relations and element identity. They do not quantify over
+arbitrary relations on X. In particular N is included.
+
+There is a parameter-free sentence A_L in exactly this first-order analytical
+language such that, in a standard real field in any ZFC universe W,
+
+  W |= A_L(R,+,times,<,0,1,N)
+       iff W |= every subset of omega belongs to L.
+
+Thus a real-adding forcing extension of a ground universe satisfying V=L
+changes A_L from true to false. This is a first-order analytical witness;
+it is not a CH witness and is not a sentence in the pure real-closed-field
+language.
+
+Primary-source status
+
+The bare-C5 conclusion is already explicitly source-reported by Andrew
+Bacon, Could the truths of mathematics have been different?, draft dated
+9 October 2025, pp. 22-23 (PDF pages 22-23), discussion after Theorem 5.1
+and footnote 55. He states that a variant gives contingency of first-order
+analysis in C.5 and identifies existence of a nonconstructible subset of
+naturals over V=L as the witness. He credits Noah Schweber's answer for
+this observation. This is a source claim, not a new discovery of this note.
+The native-map C5 and Functional Choice transfer still require their own
+model checks. The upstream statement that the bare-C5 question is open
+conflicts with the cited passage and should not be repeated as a current
+literature claim.
+
+https://andrew-bacon.github.io/papers/Could%20mathematics%20have%20been%20different.pdf
+
+The descriptive-set-theoretic input is that the constructible subsets of
+omega have a parameter-free Sigma^1_2 definition. See Boban Velickovic and
+W. Hugh Woodin, Complexity of the reals of inner models of set theory,
+arXiv:math/9501203v1, 2 January 1995, Introduction, p. 1. The paper explicitly
+states the usual Sigma^1_2 definition of the constructible reals. The
+parameter-free form comes from coding the constructible hierarchy without
+an oracle parameter; no distinguished real is supplied to the sentence.
+
+https://arxiv.org/pdf/math/9501203
+
+Fix such a second-order-arithmetic formula
+
+  Constr(U) := exists V forall W theta(U,V,W),
+
+where U,V,W range over subsets of omega and theta is arithmetical. Equally,
+real function variables can first be coded as subsets of omega by coding
+ordered pairs. The standard definition codes a countable well-founded
+piece of the constructible hierarchy containing U: the well-foundedness
+check is Pi^1_1 and the existential code gives Sigma^1_2. The cited standard
+definability theorem is the input here; this note does not replace it by
+an inadequately specified 'countable model of ZFC' assertion.
+
+Consequently
+
+  forall U Constr(U)
+
+has a Pi^1_3 presentation, and its negation has a Sigma^1_3 presentation.
+This names a sufficient projective presentation, not a claim of an
+absolute minimal complexity in every universe.
+
+Explicit real coding, with no digit-endpoint ambiguity
+
+Here is a direct interpretation of second-order arithmetic in the required
+first-order language. For a subset S of omega set
+
+  c_S = sum over n>=0 of (1 + chi_S(n)) / 4^(n+1).
+
+This is ordinary external mathematics explaining the interpretation, not
+an infinitary expression added to the object language. Digits 1 and 2 in
+base 4 avoid the ambiguity caused by terminating expansions. The tail
+after the nth digit, multiplied by 4^(n+1), lies between 1/3 and 2/3.
+Thus floor(4^(n+1) c_S) has final base-4 digit 1+chi_S(n).
+
+Everything in the following definitions is first-order definable using
+the field operations and N. Quantifiers displayed as over N are field
+quantifiers restricted by N. Define Exp4(n,p) over N by the arithmetical
+formula for a finite sequence beginning with 1 and repeatedly multiplying
+by 4, ending at p after n steps. Finite sequences are coded by natural
+numbers, for example with the standard Godel beta coding. This uses no
+set quantifier, extra sort, exponentiation primitive, or infinite formula.
+
+For d equal to the numeral 1 or 2, define
+
+  Digit(c,n,d) iff
+    exists p,k,q in N,
+      Exp4(n+1,p) and k <= p*c < k+1 and k = 4*q+d.
+
+Define
+
+  Code(c) iff 0<c<1 and
+    forall n in N, (Digit(c,n,1) or Digit(c,n,2));
+
+  Bit(c,n) iff Digit(c,n,2).
+
+Then S |-> c_S is a bijection between subsets of N and Code-reals, and
+Bit(c_S,n) iff n belongs to S.
+
+Proof of the converse, which matters for universal set quantifiers:
+If Code(c), let k_n=floor(4^(n+1)c) and d_n=k_n mod 4. Since 0<c<1,
+the initial integer part is zero. The floor recursion gives the base-4
+prefix with digits d_0,...,d_n, each 1 or 2. The error between c and that
+prefix is less than 4^(-n-1), so c is the real coded by the set of n with
+d_n=2. If two sets first differ at n, their contribution at n has magnitude
+4^(-n-1), while the total possible later difference is only
+(1/3)*4^(-n-1); hence their codes differ. This proves surjectivity and
+injectivity without making a choice of decimal expansions.
+
+Syntactic translation
+
+Translate number variables to field variables restricted by N. Translate
+set variables U to field variables c_U restricted by Code. Replace
+membership n in U by Bit(c_U,n). Replace equality of sets, if present,
+by agreement of their bits for every n in N. Preserve Boolean connectives.
+For the set quantifiers use
+
+  (forall U phi)* = forall c_U (Code(c_U) -> phi*),
+  (exists U phi)* = exists c_U (Code(c_U) and phi*).
+
+Numerical addition, multiplication, order and finite-sequence coding use
+N and the field operations. An induction on formulas proves that a
+second-order-arithmetic sentence and its translation have the same truth
+value in the full standard structures of each universe W. The bijection
+just established proves both quantified steps, including the existence
+of codes for ALL subsets of N in W, not just ground-model subsets.
+
+A_L is the translation of forall U Constr(U). It is one finite formula.
+After translation all bound variables are field elements. Its apparently
+higher-order strength comes from coding subsets of N by real elements;
+there are no quantifiers over higher-type predicates in A_L itself.
+
+The database uses ternary graphs rather than operations. Eliminate every
+sum/product term by the usual introduction of fresh field variables and
+the graph atoms +(x,y,z) or times(x,y,z). Their totality and uniqueness on
+a real structure justify this syntactic elimination. Numerals use 0, 1
+and iterated addition; strict inequality abbreviates <= with inequality.
+The result has exactly the native analytical grammar. No ambient
+sigma-to-sigma operation, especially no e-valued function, is assumed.
+
+Forcing calculation and a useful CH-preserving specialization
+
+Let M satisfy ZFC+V=L and let G be generic for Add(omega,1). Work either
+with a transitive-ground-model presentation or with the corresponding
+Boolean-valued calculation internally to the ground metatheory. Forcing
+preserves ordinals, so the constructible hierarchy of M[G] is the ground
+constructible hierarchy. The generic subset of omega is not in M, hence
+not in L of M[G]. Therefore
+
+  M |= A_L,
+  M[G] |= not A_L.
+
+This needs a forcing which genuinely adds a real, not merely one which
+changes a cardinality. More generally any real-adding forcing over M=L
+has the same effect. Over a ground model already containing nonconstructible
+reals, this particular sentence is false before forcing and cannot witness
+a change; the V=L hypothesis must remain explicit.
+
+One Cohen real is sufficient. It preserves CH over L: the forcing is
+countable and ccc, preserves omega_1, and there are at most
+(2^aleph_0)^(aleph_0)=aleph_1 nice names for reals in the CH ground model.
+The old reals still give at least aleph_1 reals. Thus both M and M[G]
+satisfy CH, while they disagree on A_L.
+
+For the proposed B=2 x A construction one may therefore take
+A=RO(Add(omega,1)). In the ground model |A|=2^aleph_0=aleph_1: a countable
+base supplies the upper bound, and joins of arbitrary subsets of a
+countably infinite antichain supply the lower bound. The ground carrier
+B therefore has enough elements for a real field both in M and in M[G],
+since CH and omega_1 are preserved. The parent model argument must still
+supply the Boolean-valued real structure on this carrier and show that
+its quantifier ranges represent all needed subsets internally. Once that
+transfer is proved, this specialization separates analytical invariance
+from CH invariance in the particularly strong way that CH remains true
+in both coordinates.
+
+Scope and remaining model obligation
+
+This note settles the language issue and the changing truth value. It
+requires no added infinitary conjunction and no parameters in A_L. It
+uses the external ZFC/constructibility/forcing metatheory explicitly.
+It does not claim that C5 itself has a canonical internal L predicate,
+nor that the formula quantifies over sets in the Classicism language.
+
+To finish the native non-entailment argument, separately verify that the
+chosen full Boolean-valued typed construction validates the fixed C
+framework, necessary-distinctness-necessary-r, functional-choice-r at the
+specified evaluation point, and the exact completeness/quantifier
+interpretation used for Real_sigma. In particular, a real of M[G] must
+be represented by an element of a real structure there; presenting only
+the old ground reals would fail completeness and would not suffice.
+Do not infer boxed Functional Choice from its truth at the isolated atom.
+
+Attribution: the logical phenomenon and the nonconstructible-real witness
+are source-reported by Bacon. The explicit base-4 coding and its native
+relational-grammar audit here are explanatory reconstruction. Any new
+choice-preserving native model transfer belongs to the accompanying model
+argument, not to the source quotation. Existing Lean certificates concern
+other results and are not certificates for this note.

@@ -1,0 +1,308 @@
+FULL BOOLEAN COMPLETENESS CAN FAIL IN A GENERAL OBSERVER CORE
+
+26 October 2026. Ordinary mathematical research by OpenAI Codex.
+Direct source: misc, this note, sections 1-8, unpaginated.
+The completed proof received an independent ordinary AI audit. Its one
+correction, normalization of the explicit kernel witness in section 6,
+is incorporated. No human verification, Lean work, or database-record
+changes are claimed.
+
+1. The counterexample
+
+In ordinary ZFC there is a C model M satisfying
+
+  BC_all + boxed BF_all + boxed OS,
+
+and an admitted whole-idempotent Boolean observer E preserving every
+typed quantifier, such that its general all-sort quotient core K satisfies
+
+  C5 + OS + not BC_t.
+
+Thus ambient CURRENT Boolean Completeness does not descend through the
+general observer-core quotient, even if supplied at EVERY relational
+type, even with necessary all-type Barcan and necessary full typed OS,
+and even when the resulting core satisfies C5. A fortiori neither the
+single-instance BC_t transfer nor the full-schema BC transfer holds.
+
+The proposition quotient in this example is explicitly nontrivial.
+The result therefore does not conflict with the earlier positive transfer
+under necessity reflection / triviality of all relational quotients.
+
+The model modifies the earlier infinite-colour two-object countermodel
+by allowing all source surjections instead of just source permutations.
+This simple change supplies Dorr's finite-amalgamation hypothesis and
+upgrades current BC_t to full BC. A new family of source baselines retains
+full observer separation despite the added noninjective self-arrows.
+
+2. Semantic framework and exact construction
+
+Use the symmetric ideally-full finite-pinning construction recorded in
+topics/classicism/groups/symmetric-ideally-full.yaml. Its underlying
+source is Cian Dorr, Boolean Completeness does not imply Rigid
+Comprehension, draft of 30 July 2026, Definitions 15-18 p.8, Lemma 21
+p.10 and Proposition 22 p.11. The new two-object category below is not
+attributed to that source.
+
+Let Y=N and X=N x N. Put C_y={y} x N and beta(y,n)=y. The arrows are
+
+  X -> X: all surjections of X onto X;
+  X -> Y: all maps with every fibre infinite;
+  Y -> Y: all permutations of Y;
+  Y -> X: none.
+
+This is a category under ordinary composition. The only point needing
+checking is b h:X->Y, with b having infinite fibres and h:X->X onto.
+The preimage under h of the infinite set b^{-1}{y} is infinite, since
+h maps it onto that set. Thus b h again has infinite fibres. The other
+compositions plainly retain their arrow classes.
+
+Use finite pinning at both objects, with designated symmetry groups
+
+  G_X = product over y of Sym(C_y),     G_Y={id_Y}.
+
+Individuals are the underlying sets. For a relational type tau=sigmabar t,
+an admitted entity A at W is a symmetric finitely pinned bit profile
+
+  A(h,zbar),   h:W->V, zbar in the appropriate domains at V.
+
+A finite P subset W pins A when same-target arrows agreeing on P have
+the same row on EVERY target tuple. Symmetry is
+
+  A(mu h, rho_mu zbar)=A(h,zbar),    mu in G_V.
+
+Transport is precomposition: (rho_f A)(h,zbar)=A(hf,zbar).
+Application evaluates the profile on transported arguments. All such
+profiles are admitted, recursively through the fixed relational types.
+The finite-pinning/symmetry framework gives closure under the language
+and a model of C with its original H-equivalence gate. The target's old
+domains are unaffected by adding a source with no arrows returning from Y.
+
+3. All typed transports are onto; hence necessary BF
+
+Every underlying arrow is onto. The general finite-section lifting
+argument gives onto action at EVERY type, not merely at e.
+
+Let i:W->V and let A at V have finite pin T. Choose a finite section
+s:T->W with i s=id_T. For j:W->U define a source lift B by
+
+  B(j,zbar)=A(k,zbar) if some k:V->U has k|T=j s;
+  B(j,zbar)=0 if there is no such k.
+
+The chosen value is independent of k because T pins A. B is pinned by
+s[T]. For mu in G_U, k is a matching arrow exactly when mu k matches
+mu j; applying the inverse symmetry proves the reverse implication.
+Symmetry of A therefore makes B symmetric. Thus B is admitted.
+At j=k i the old arrow k itself matches, and
+
+  (rho_i B)(k,zbar)=B(k i,zbar)=A(k,zbar).
+
+Hence rho_i B=A as complete profiles. This proof applies to self
+surjections, including noninjective ones, and to arrows X->Y. Individuals
+are covered by ordinary surjectivity. It is the all-type proof recorded
+under 'barcan-surjective' in the group file, supplied here to expose its
+exact hypotheses.
+
+Surjectivity at every type makes BF hold at both objects: a witness
+available after an arrow lifts to the present. Every object is one of
+these two, so each separately boxed BF instance holds at X.
+
+4. Full current Boolean Completeness at X
+
+Apply Dorr's hull theorem, Theorem 36 p.18 and Corollary 37 p.19, in the
+multiple-object form recorded as 'hull-conditions' and
+'boolean-completeness' in symmetric-ideally-full.yaml. This theorem
+gives BC at every relational type, not merely BC_t. Here are all its
+construction-specific checks, with distinguished finite set M0 empty.
+
+(B1) Let h,h':X->V agree on finite M, and let finite P,Q satisfy
+P intersection Q subset M. The prescription h' on P and h on Q is
+consistent on its overlap. If V=X, any finite map X->X extends to a
+surjection: map the countably infinite remainder onto every missing
+target point, assigning remaining inputs arbitrarily. If V=Y, extend
+the finite map to an infinite-fibre surjection by dividing the remaining
+source into countably many infinite sets, one for each y. Thus the
+required amalgam exists for ALL h, including those covered by the hull
+theorem's separation proviso. No injectivity is demanded of this amalgam.
+
+(B2) Given finite N,P,Q, choose within each infinite colour class a
+permutation fixing N and moving the finitely many points of P outside N
+away from Q. The union of these finitely many prescriptions extends to
+an element of G_X. This is exactly the required symmetry displacement.
+
+Both hull hypotheses therefore hold at X. The theorem constructs, for
+each admitted current family of relational entities, the least upper
+bound of that family using symmetric finitely pinned hulls. By Boolean
+duality it also gives the greatest lower bound. Hence BC_all holds at X.
+
+This step uses the all-type hull theorem, not an illicit extension of
+the simpler propositional orbit-envelope proof. That simpler proof does
+not by itself control moving higher-type argument tuples. Allowing source
+surjections is precisely what makes the stated all-type theorem apply.
+
+5. A specified idempotent observer and its exact core
+
+Define E:tt by
+
+  E(h,q)=q(beta) for every h:X->X;
+  E(l,q)=q(id_Y) for every l:X->Y.
+
+This is empty-pinned. It is symmetric at X because beta mu=beta for
+mu in G_X, and at Y the designated symmetry is trivial. Thus E is
+admitted. Its transport along every self-arrow is E, and its transport
+along every X->Y arrow is the WHOLE identity observer of Y.
+
+At every self row its Boolean laws are evaluation laws. For any type
+sigma and arbitrary current predicate F,
+
+  E(forall x F x) is true at that row
+  iff forall y in D_sigma(Y), (rho_beta F)(y) is true
+  iff forall x in D_sigma(X), (rho_beta F)(rho_beta x) is true
+  iff forall x E(F x) is true at that row.
+
+The middle equivalence uses section 3's actual all-type onto transport.
+The existential law is dual. At Y rows E is the whole identity. Since
+these checks use arbitrary future inputs at arbitrary rows, they prove
+the required WHOLE operation identities. Thus E is Good at all types
+simultaneously. Moreover E(Eq) at a self row has value (Eq)(beta)=q(beta),
+and at Y it is plainly Eq. This proves the whole identity E composed E=E.
+
+Let r_sigma be the recursive normalizers and S_sigma their fixed domains.
+Write q_sigma=rho_beta at each type. Since q(E) is the identity at Y,
+induction through the type grammar gives
+
+  q_sigma(r_sigma a)=q_sigma(a).                            (5.1)
+
+Consequently q restricted to S is onto every target domain: lift a target
+object first by section 3 and then normalize its lift. For a fixed
+proposition p, its actual truth at X is exactly its truth at beta,
+because Ep=p. Thus q both preserves and reflects current truth on S.
+Action transport preserves applications, abstractions and logical
+operations; (5.1) removes every normalization in their images. Hence
+q is a surjective truth-exact logical homomorphism from the fixed
+prestructure S onto the original model at Y.
+
+Its kernel is precisely the all-sort fixed-test equivalence. One
+direction is immediate by transporting each fixed predicate. Conversely,
+every target predicate has a fixed lift by surjectivity. If fixed a,b
+agree in truth under all fixed predicates, their images agree in truth
+under all target predicates. The target has literal actual Leibniz
+identity, so q(a)=q(b). Therefore
+
+  S_sigma / ~_sigma  is canonically isomorphic to D_sigma(Y)
+
+at every type, compatibly with every term and truth. This identifies the
+GENERAL observer core, including its proposition quotient, with Y.
+
+6. The core is C5 but fails BC_t
+
+At Y the future category has just all permutations of N, with trivial
+designated symmetry and finite pinning. This is the recorded finite-
+support permutation model. Every transport is invertible, so distinctness
+is persistent at every type, giving C5.
+
+Here is a direct failure of propositional completeness. For m>=1 let A_m
+be the proposition that a permutation exchanges 0 and m:
+
+  A_m(h) iff h(0)=m and h(m)=0.
+
+It is pinned by {0,m}. The external family A={A_m:m>=1} is the current
+extension of an admitted tt predicate: give that predicate the SAME row
+A at every permutation. It is empty-pinned and there is no designated
+symmetry restriction at Y.
+
+Suppose u were its least admitted upper bound. Let finite S pin u,
+enlarged to contain 0, and choose distinct m,n outside S. The cycle
+alpha=(0 m n) agrees on S with the transposition (0 m), so alpha is in u.
+But
+
+  v(h) iff h(0)!=m or h(m)=0
+
+is a finitely pinned upper bound of every A_j and excludes alpha. This
+contradicts u<=v. Thus the displayed admitted family has no least upper
+bound, and BC_t fails. The isomorphism in section 5 transfers this exact
+failure to the observer core.
+
+The proposition quotient is genuinely nontrivial. Choose distinct x,x' in one
+colour class and first let p0 have zero self rows and old row
+
+  p0(l) iff l(x)!=l(x').
+
+Put p=E(p0). It is fixed by whole E-idempotence. Its old rows are unchanged,
+so it is nonzero; its self row at h is beta(h(x))!=beta(h(x')), which
+need not be zero. Nevertheless p0(k beta)=0 for every permutation k of
+Y, so rho_beta p=rho_beta p0=Bottom. Hence [p]=[Bottom] in the core
+although p!=Bottom in the original Boolean image. This locates the exact
+extra identification that defeats the earlier trivial-quotient
+completeness transfer. Normalizing p0 is essential: application at a
+self row h transports its argument, so (E p0)(h)=p0(beta h), rather
+than the fixed bit p0(beta).
+
+7. Full OS persists despite the noninjective source arrows
+
+Fix a bijection j:N->X and two baselines
+
+  b_X(y,n)=j(y),        b_Y(y,n)=y.
+
+Each has infinite fibres. A finite modification of either baseline,
+matching ANY prescribed same-target arrow on a finite P, remains an
+allowed onto arrow. Call these arrows selected. If b differs from its
+baseline only on P, then b g=b for every g in G_X fixing P pointwise.
+
+For such b define a reader O_b. Its source-row chart consists of arrows
+h:X->X whose restriction to P is injective and preserves the original
+colour of each point. On that chart choose g_h in G_X extending h|P,
+and set
+
+  O_b(h,q)=q(b g_h^{-1}) on the chart;
+  O_b(h,q)=q(beta) off the chart;
+  O_b(l,q)=q(id_Y) at every Y-target arrow l.
+
+Different g_h choices differ on the right by a colour symmetry fixing
+P, which b absorbs; hence the definition is independent of that choice.
+It is P-pinned. The chart is invariant under left multiplication by
+mu in G_X. Taking g_(mu h)=mu g_h gives the symmetry equation on-chart;
+beta mu=beta gives it off-chart. Y has trivial symmetry. Thus O_b is
+an admitted observer.
+
+Every row reads an arrow with onto transport at every type: b g_h^{-1},
+beta, or the identity of Y. Exactly the arbitrary-future-input argument
+of section 5 proves all whole Boolean and quantifier identities. At the
+actual identity arrow the chart holds and the reader's current truth
+profile is evaluation at b.
+
+If relations A,B differ at an arbitrary arrow h on a target tuple, take
+the union P of their finite pins and select b agreeing with h on P.
+Their rows still differ on that tuple at b. Lift the tuple through rho_b
+using section 3. Then O_b separates the resulting current applications.
+This works for ALL relational output types and qualification lists.
+
+At Y, the constant-row readers O_b(h,q)=q(b), for permutations b, are
+admitted and fully qualified, and separate relations by the same lifting
+argument. OS therefore holds at both objects, and boxed OS holds at X.
+
+The extra injection requirement on the chart is essential. We did not
+try to extend an arbitrary colliding finite self-map to a permutation.
+Such arrows are instead approximated by the newly selected infinite-fibre
+source surjections. This is why the old reader proof survives the changed
+source monoid only after adding these baselines.
+
+8. Sources and relationship to earlier work
+
+The existing precursor is research/2026-10-25/observer-completeness/
+infinite-colour-conditional-completeness-countermodel.md, sections 2-8.
+It has source permutations and proves BC_t, boxed BF and boxed OS.
+Its section 8 already specifies the idempotent baseline observer; the
+exact all-sort core identification is established here in section 5.
+
+The modified source surjections, full BC hull-hypothesis verification,
+new source-baseline observer readers, and core-inheritance conclusion are
+new arguments in this note. The cited framework and hull theorem remain
+attributed to Dorr. The target is Bacon and Dorr, Classicism, draft
+16 May 2023, Proposition D.5(1), pp.75-76; its BC_t failure is independently
+reproved in section 6.
+
+For the core construction itself see research/2026-10-26/
+observer-core-without-barcan/general-core.txt, sections 2-6. No extension
+of its C gate is needed for this countermodel. For the positive result
+under a trivial proposition quotient, see observer-core-quotients/
+necessity-reflection.txt, section 4.

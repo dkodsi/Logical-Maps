@@ -1,0 +1,139 @@
+COMMUTING OBSERVER CORES COMPOSE OVER BARE C
+26 October 2026. Original ordinary proof by OpenAI Codex.
+Direct source: misc, Sections 1-5 of this note, unpaginated.
+Independently AI-reviewed ordinary proof; see ../../evidence/coherent-observer-review.json for
+scope. No human or Lean certification claimed.
+
+1. STATEMENT
+
+Let M be a general pointed model of C. Let E,F:tt be admitted,
+qualified at every admitted type, and satisfy the whole equations
+
+  E^2=E,  F^2=F,  EF=FE.
+
+Then F induces a qualified idempotent observer Fbar on Core(M,E),
+and there is a canonical pointed typed logical isomorphism
+
+  Core(Core(M,E),Fbar)  =_iso  Core(M,EF).                       (1)
+
+No BF, Functionality, C5, Atomicity, or Choice premise is needed.
+The all-type qualification is a metatheoretic specification of
+these particular observers; each finite proof or translation uses
+only finitely many whole laws. No quantifier over types is added.
+
+The source construction is
+../observer-quotient-general.txt,
+Sections 2-8. At EVERY type it quotients normalized fixed objects
+by agreement in current truth under all normalized fixed tests.
+Skipping that quotient is not part of the present proof.
+
+2. NORMALIZERS COMMUTE BEFORE ANY QUOTIENT
+
+For observer H define r_e^H=id, r_t^H=H, and
+
+  r_(sigma tau)^H(f)=r_tau^H composed f composed r_sigma^H.
+
+Induction on types gives the WHOLE equations
+
+  r_sigma^E r_sigma^F = r_sigma^F r_sigma^E = r_sigma^(EF).       (2)
+
+At an arrow the left side becomes
+r_tau^E r_tau^F f r_sigma^F r_sigma^E. Apply the inductive whole
+identities on both sides of f. This is equational rewriting under
+lambda, as in the source's stable-premise abstraction lemma, not
+an application of current pointwise Functionality.
+
+The common fixed domain is therefore
+
+  T_sigma = Fix(r_sigma^E) intersect Fix(r_sigma^F)
+          = Fix(r_sigma^(EF)).                                  (3)
+
+The product EF is itself fully qualified and idempotent by direct
+composition of the whole laws.
+
+3. THE SECOND OBSERVER IS ADMITTED IN THE FIRST CORE
+
+Write S_sigma=Fix(r_sigma^E), and q:S -> K=Core(M,E) for the
+first logical quotient. The E-normalization of F at tt is
+
+  E F E = EF.
+
+Thus Fbar:=q_tt(EF) is an admitted operation in K. On a fixed
+proposition p in S_t it has value q_t(Fp), since Ep=p and EF=FE.
+The operation EF is itself E-fixed, so application congruence
+of q makes this action well-defined on all classes.
+
+Whole Boolean and quantifier preservation for Fbar follow from
+those for F and the E-normalized constants. For example, an
+E-fixed predicate H satisfies H r_sigma^E=H and E H=H.
+Then F H is again E-fixed and
+
+  F(Q_sigma H)=Q_sigma(F H).
+
+Both sides lie in S_t, and q carries this equation to the core
+quantifier equation. Normalizing the whole composite operations
+gives the same equations at their function types; this retains
+whole qualification and does not infer operation equality merely
+from equality at current inputs. The Boolean checks are identical
+calculations, and Fbar^2=Fbar follows from F^2=F.
+
+The recursively induced Fbar-normalizer in K obeys
+
+  rbar_sigma(q_sigma(x))=q_sigma(r_sigma^F(x))  (x in S_sigma).  (4)
+
+This is proved by induction on types using (2), quotient application
+and lambda compatibility. For e, both sides are q_e(x). For t
+it is the displayed action of Fbar. At an arrow it is the same
+input/output conjugation formula for the normalizers.
+
+4. THE TWO LOGICAL QUOTIENTS HAVE THE SAME FINAL KERNEL
+
+Let S' be the fixed prestructure of rbar inside K. Map
+
+  h_sigma:T_sigma -> S'_sigma,  h_sigma(x)=q_sigma(x).
+
+It is surjective: if q(z) is rbar-fixed, (4) gives
+q(r^F z)=q(z); choose x=r^F z. Equations (2)-(3) put x in T.
+No simultaneous selection of class representatives is required.
+
+The map h preserves application, normalized constants and lambda
+interpretations by (2) and the quotient congruence. It also
+preserves quantifiers. For a T-fixed predicate H the original
+Q_sigma H is fixed under BOTH observers; the first quotient
+quantifier sends q(H) to q(Q_sigma H), and restricting to S'
+does not alter that value because H is invariant under r^F.
+Surjectivity at each sort gives precisely the intended ranges.
+Both prestructures use original current truth, so h preserves
+and reflects truth.
+
+Now compose h with the canonical logical quotient S' -> Core(K,Fbar).
+It is a sortwise-surjective, truth-preserving and truth-reflecting
+logical homomorphism onto an identity-separated C model.
+By the source construction's universal characterization, its
+kernel is exactly agreement under all T-fixed tests. But T is the
+EF-normalized prestructure by (3), so its canonical quotient is
+Core(M,EF). This supplies the unique canonical isomorphism (1).
+
+Explicitly, the isomorphism sends the final class represented by
+q(x), for x in T, to the EF-core class represented by x. The
+kernel argument proves independence of every choice of representative,
+including at the individual and proposition types.
+
+5. CONSEQUENCES AND LIMITS
+
+The same theorem iterates for any finite pairwise commuting family
+of qualified whole-idempotent observers. Successive cores are
+canonically the core of their product and do not depend on order
+or parenthesization. The comparison maps agree because on common
+fixed representatives they are the same map. This is a coherence
+statement for the isomorphisms, not just equality of theory.
+
+Constants in an expanded signature are normalized in each stage;
+equation (2) makes their iterated and product interpretations agree.
+No comparison is asserted for independently reassigned constants.
+
+The source's current Functional Choice inheritance consequently
+holds through any such finite sequence, with the original allowed
+relational output types. No new RC/TC inheritance theorem is
+asserted. This note does not identify cores of arbitrary observers
+with the same Boolean image, or omit the all-sort quotient.

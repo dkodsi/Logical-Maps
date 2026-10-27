@@ -1,7 +1,7 @@
 {
-  "date": "2026-10-25",
+  "date": "2026-10-27",
   "upstream": "a89a5058ebbd5ebe93aec07d47a1a32e3b93f8bb",
-  "publication": "Publication update on classicism-results-2026-10-24; patches remain proposed changes to the pinned upstream database.",
+  "publication": "Prepared patches checked in an isolated copy of the pinned upstream database; no publication or live upstream integration is asserted.",
   "patch_application": [
     {
       "patch": "patches/01-explanation-corrections.patch",
@@ -49,14 +49,14 @@
     },
     {
       "patch": "patches/05-c5-choice.patch",
-      "sha256": "e8e5e0bd171c0cad012dd52fb1abb0fd4320d4eeb513827098b7198983aa789c",
+      "sha256": "ce2ea70aca3796d89988691d2cf4b3a5309e9f3d6b5fed15216c33bd7ad15ce1",
       "apply_check": true,
       "applied": true,
       "validation_exit_code": 0,
       "classicism": [
-        "classicism: 139 principles, 469 results, 167 models — OK"
+        "classicism: 139 principles, 470 results, 167 models — OK"
       ],
-      "validation_output_sha256": "cc3e46655a7db3fd9d271526df2b1aed7c765255255580df6bdc04456e9dda73"
+      "validation_output_sha256": "606572b1b9cfb57bbce76aafafb9013284031cbccc5e77f71133bb1b4ef3dee0"
     },
     {
       "patch": "patches/06-forcing-infinity-proof.patch",
@@ -65,20 +65,20 @@
       "applied": true,
       "validation_exit_code": 0,
       "classicism": [
-        "classicism: 139 principles, 469 results, 167 models — OK"
+        "classicism: 139 principles, 470 results, 167 models — OK"
       ],
-      "validation_output_sha256": "cc3e46655a7db3fd9d271526df2b1aed7c765255255580df6bdc04456e9dda73"
+      "validation_output_sha256": "606572b1b9cfb57bbce76aafafb9013284031cbccc5e77f71133bb1b4ef3dee0"
     },
     {
       "patch": "patches/07-propositional-zorn-actuality.patch",
-      "sha256": "2fedd6c68788855ac25fd052846dbbee6561eb4ef4e073903297afa4fe468ddb",
+      "sha256": "fafb0eee2cc1013c5ab27ecac4cffbffc04cd012ad6c2d701d92a318328be015",
       "apply_check": true,
       "applied": true,
       "validation_exit_code": 0,
       "classicism": [
-        "classicism: 139 principles, 472 results, 167 models — OK"
+        "classicism: 139 principles, 474 results, 167 models — OK"
       ],
-      "validation_output_sha256": "5ac21a1f780a952a6cf23545b37fc53ebf98a319ce2f340b3dca5577d9103509"
+      "validation_output_sha256": "b430b585ef5a01b8eae345634f64410ec8b2b1c072430e2c9bf00a6d9df8719f"
     }
   ],
   "lean_compilation_run": false,
@@ -218,6 +218,189 @@
         "relational-choice-r"
       ],
       "conclusion": "transversal-choice-r",
+      "entails": [
+        false,
+        []
+      ],
+      "excludes": null,
+      "separates": [
+        [],
+        []
+      ]
+    },
+    {
+      "premises": [
+        "vicinity",
+        "relational-choice-r"
+      ],
+      "conclusion": "transversal-choice-r",
+      "entails": [
+        true,
+        [
+          "vicinity-relational-choice-implies-transversal-choice"
+        ]
+      ],
+      "excludes": null,
+      "separates": [
+        [],
+        []
+      ]
+    },
+    {
+      "premises": [
+        "distinctness-necessary-t",
+        "relational-choice-r"
+      ],
+      "conclusion": "transversal-choice-r",
+      "entails": [
+        true,
+        [
+          "distinctness-necessary-t-implies-vicinity",
+          "vicinity-relational-choice-implies-transversal-choice"
+        ]
+      ],
+      "excludes": null,
+      "separates": [
+        [],
+        []
+      ]
+    },
+    {
+      "premises": [
+        "vicinity",
+        "relational-choice-r"
+      ],
+      "conclusion": "well-ordering-r",
+      "entails": [
+        true,
+        [
+          "vicinity-relational-choice-implies-transversal-choice",
+          "transversal-choice-r-implies-zorn-r",
+          "zorn-r-implies-well-ordering-r"
+        ]
+      ],
+      "excludes": null,
+      "separates": [
+        [],
+        []
+      ]
+    },
+    {
+      "premises": [
+        "vicinity",
+        "relational-choice-r"
+      ],
+      "conclusion": "zorn-r",
+      "entails": [
+        true,
+        [
+          "vicinity-relational-choice-implies-transversal-choice",
+          "transversal-choice-r-implies-zorn-r"
+        ]
+      ],
+      "excludes": null,
+      "separates": [
+        [],
+        []
+      ]
+    },
+    {
+      "premises": [
+        "atomicity-t",
+        "vicinity"
+      ],
+      "conclusion": "actuality",
+      "entails": [
+        true,
+        [
+          "atomicity-t-and-vicinity-imply-actuality"
+        ]
+      ],
+      "excludes": null,
+      "separates": [
+        [],
+        []
+      ]
+    },
+    {
+      "premises": [
+        "atomicity-t",
+        "distinctness-necessary-t"
+      ],
+      "conclusion": "actuality",
+      "entails": [
+        true,
+        [
+          "distinctness-necessary-t-implies-vicinity",
+          "atomicity-t-and-vicinity-imply-actuality"
+        ]
+      ],
+      "excludes": null,
+      "separates": [
+        [],
+        []
+      ]
+    },
+    {
+      "premises": [
+        "vicinity",
+        "boolean-completeness-t",
+        "relational-choice-r"
+      ],
+      "conclusion": "actuality",
+      "entails": [
+        true,
+        [
+          "vicinity-relational-choice-and-propositional-completeness-imply-actuality"
+        ]
+      ],
+      "excludes": null,
+      "separates": [
+        [],
+        []
+      ]
+    },
+    {
+      "premises": [
+        "vicinity",
+        "boolean-completeness-t",
+        "zorn-r"
+      ],
+      "conclusion": "actuality",
+      "entails": [
+        true,
+        [
+          "vicinity-zorn-and-propositional-completeness-imply-actuality"
+        ]
+      ],
+      "excludes": null,
+      "separates": [
+        [],
+        []
+      ]
+    },
+    {
+      "premises": [
+        "boolean-completeness-t",
+        "relational-choice-r"
+      ],
+      "conclusion": "actuality",
+      "entails": [
+        false,
+        []
+      ],
+      "excludes": null,
+      "separates": [
+        [],
+        []
+      ]
+    },
+    {
+      "premises": [
+        "boolean-completeness-t",
+        "zorn-r"
+      ],
+      "conclusion": "actuality",
       "entails": [
         false,
         []
@@ -373,9 +556,11 @@
     },
     {
       "item": "items/05-c5-choice.md",
-      "words": 2125,
-      "category": "medium",
+      "words": 5077,
+      "category": "long",
       "proofs": [
+        "../../integration-register/proofs/vicinity-relational-choice-transversals.md",
+        "../proofs/vicinity-supported-interpretation.md",
         "../proofs/c5-relational-choice-implies-transversal-choice.md"
       ]
     },
@@ -537,7 +722,7 @@
     },
     {
       "item": "items/23-propositional-zorn-actuality.md",
-      "words": 12596,
+      "words": 14991,
       "category": "long",
       "proofs": [
         "../proofs/vicinity-supported-interpretation.md",
@@ -546,8 +731,13 @@
         "../proofs/c5-relational-choice-and-propositional-completeness-imply-actuality.md",
         "../proofs/zorn-and-higher-completeness-imply-actuality.md",
         "../proofs/c5-zorn-and-propositional-completeness-imply-actuality.md",
-        "../proofs/propositional-canonical-chain-lemmas.md"
-      ]
+        "../proofs/propositional-canonical-chain-lemmas.md",
+        "../../integration-register/proofs/atomicity-vicinity-actuality.md",
+        "../../integration-register/proofs/modal-choice/persistent-fixed-points-and-cofinal-chains.md"
+      ],
+      "proof_sections": {
+        "../../integration-register/proofs/atomicity-vicinity-actuality.md": "1–4"
+      }
     }
   ],
   "max_atomicity_certificate": {
@@ -965,237 +1155,21 @@
   "vicinity_actuality_consolidation": {
     "shared_construction": "proofs/vicinity-supported-interpretation.md",
     "branches": [
-      "RC_(t,t)",
-      "Zorn_t"
+      "Atomicity_t",
+      "BC_t + RC_(t,t)",
+      "BC_t + Zorn_t"
     ],
+    "cofinal_chain_characterization": "Under BC_t + RC_(t,t), or BC_t + Zorn_t: Actuality iff Vicinity iff an admitted cofinal chain of proper persistent propositions exists.",
     "extra_type_refinement": "C + BC_tt + Zorn_t implies Actuality",
-    "sharp_optional_premises": "All current; neither branch imports the other choice premise.",
+    "sharp_optional_premises": "All current; neither choice branch imports the other choice premise.",
     "ordinary_mathematical_proofs": true,
     "lean_compilation_run": false,
-    "query_method": "Proved-only Engine from patched upstream, with optional premises in query sets. Before omits the two new Vicinity records; after includes them.",
-    "before": [
-      {
-        "premises": [
-          "vicinity",
-          "boolean-completeness-t",
-          "relational-choice-r"
-        ],
-        "target": "actuality",
-        "entails": [
-          false,
-          []
-        ],
-        "excludes": null,
-        "separates": [
-          [],
-          []
-        ]
-      },
-      {
-        "premises": [
-          "vicinity",
-          "boolean-completeness-t",
-          "zorn-r"
-        ],
-        "target": "actuality",
-        "entails": [
-          false,
-          []
-        ],
-        "excludes": null,
-        "separates": [
-          [],
-          []
-        ]
-      },
-      {
-        "premises": [
-          "distinctness-necessary-t",
-          "boolean-completeness-t",
-          "zorn-r"
-        ],
-        "target": "actuality",
-        "entails": [
-          false,
-          []
-        ],
-        "excludes": null,
-        "separates": [
-          [],
-          []
-        ]
-      },
-      {
-        "premises": [
-          "boolean-completeness-r",
-          "zorn-r"
-        ],
-        "target": "actuality",
-        "entails": [
-          true,
-          [
-            "zorn-r-implies-well-ordering-r",
-            "well-ordering-r-implies-transversal-choice-r",
-            "transversal-choice-r-implies-relational-choice-r",
-            "relational-choice-and-boolean-completeness-imply-actuality"
-          ]
-        ],
-        "excludes": null,
-        "separates": [
-          [],
-          []
-        ]
-      },
-      {
-        "premises": [
-          "boolean-completeness-t",
-          "zorn-r"
-        ],
-        "target": "actuality",
-        "entails": [
-          false,
-          []
-        ],
-        "excludes": null,
-        "separates": [
-          [],
-          []
-        ]
-      },
-      {
-        "premises": [
-          "boolean-completeness-t",
-          "relational-choice-r"
-        ],
-        "target": "actuality",
-        "entails": [
-          false,
-          []
-        ],
-        "excludes": null,
-        "separates": [
-          [],
-          []
-        ]
-      }
-    ],
-    "after": [
-      {
-        "premises": [
-          "vicinity",
-          "boolean-completeness-t",
-          "relational-choice-r"
-        ],
-        "target": "actuality",
-        "entails": [
-          true,
-          [
-            "vicinity-relational-choice-and-propositional-completeness-imply-actuality"
-          ]
-        ],
-        "excludes": null,
-        "separates": [
-          [],
-          []
-        ]
-      },
-      {
-        "premises": [
-          "vicinity",
-          "boolean-completeness-t",
-          "zorn-r"
-        ],
-        "target": "actuality",
-        "entails": [
-          true,
-          [
-            "vicinity-zorn-and-propositional-completeness-imply-actuality"
-          ]
-        ],
-        "excludes": null,
-        "separates": [
-          [],
-          []
-        ]
-      },
-      {
-        "premises": [
-          "distinctness-necessary-t",
-          "boolean-completeness-t",
-          "zorn-r"
-        ],
-        "target": "actuality",
-        "entails": [
-          true,
-          [
-            "distinctness-necessary-t-implies-vicinity",
-            "vicinity-zorn-and-propositional-completeness-imply-actuality"
-          ]
-        ],
-        "excludes": null,
-        "separates": [
-          [],
-          []
-        ]
-      },
-      {
-        "premises": [
-          "boolean-completeness-r",
-          "zorn-r"
-        ],
-        "target": "actuality",
-        "entails": [
-          true,
-          [
-            "zorn-r-implies-well-ordering-r",
-            "well-ordering-r-implies-transversal-choice-r",
-            "transversal-choice-r-implies-relational-choice-r",
-            "relational-choice-and-boolean-completeness-imply-actuality"
-          ]
-        ],
-        "excludes": null,
-        "separates": [
-          [],
-          []
-        ]
-      },
-      {
-        "premises": [
-          "boolean-completeness-t",
-          "zorn-r"
-        ],
-        "target": "actuality",
-        "entails": [
-          false,
-          []
-        ],
-        "excludes": null,
-        "separates": [
-          [],
-          []
-        ]
-      },
-      {
-        "premises": [
-          "boolean-completeness-t",
-          "relational-choice-r"
-        ],
-        "target": "actuality",
-        "entails": [
-          false,
-          []
-        ],
-        "excludes": null,
-        "separates": [
-          [],
-          []
-        ]
-      }
-    ],
-    "native_records_added": [
+    "native_records": [
+      "atomicity-t-and-vicinity-imply-actuality",
       "vicinity-relational-choice-and-propositional-completeness-imply-actuality",
       "vicinity-zorn-and-propositional-completeness-imply-actuality"
-    ]
+    ],
+    "queries": "See proved_only_queries for the current patched-database evidence."
   },
   "observer_completeness_supplement": {
     "countermodel": "C + BC_t + necessary OS + necessary BF_all + possible (necessary ND_t and not BC_t); target is full C5",
@@ -1239,6 +1213,51 @@
         "logical-maps/topics/classicism/lean/Classicism/Statements.lean": "Mechanically regenerated from the merged records.",
         "logical-maps/topics/classicism/topic.yaml": "Preserves the fork source URL; all upstream topic changes retained."
       }
+    }
+  },
+  "strongest_native_results": {
+    "date": "2026-10-26",
+    "new_records": [
+      "vicinity-relational-choice-implies-transversal-choice",
+      "atomicity-t-and-vicinity-imply-actuality"
+    ],
+    "cofinal_chain_proof": "logical-maps/topics/classicism/writeups/persistent-fixed-points-and-cofinal-chains.md",
+    "shared_interpretation_patch": "05-c5-choice",
+    "scope": "Ordinary source proofs integrated; native application, record consistency and recorded closure checked. No new Lean certification or independent mathematical audit claimed.",
+    "native_reader_checks": {
+      "native_writeups": 16,
+      "local_links": 36,
+      "math": {
+        "formulas": 479,
+        "errors": []
+      },
+      "errors": []
+    },
+    "reader_checks": {
+      "markdown_files": 317,
+      "local_links": 5561,
+      "math": {
+        "formulas": 8495,
+        "errors": []
+      },
+      "errors": []
+    },
+    "integration_register_checks": {
+      "local_links": 443,
+      "source_hashes": 325,
+      "connections": 60,
+      "intake": 277,
+      "math": {
+        "formulas": 2122,
+        "errors": []
+      },
+      "errors": []
+    },
+    "root_validation": {
+      "exit_code": 0,
+      "classicism": [
+        "classicism: 132 principles, 450 results, 162 models — OK"
+      ]
     }
   }
 }

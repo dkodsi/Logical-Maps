@@ -1,0 +1,127 @@
+EQUIVALENCE CLOSURE AND MAXIMAL OBSERVER SEPARATION
+26 October 2026
+
+Scope: the fixed pure finitary relational language of the Classicism map.
+OS means the full typed observer-separation schema, with whole operation
+identities and separately finite qualification lists. Additional axioms
+below mean their universally closed instances. All additions of axioms
+use ordinary H-consequence unless an extra closure rule is specified.
+
+1. Equivalence closure of an extension
+
+Bare C already is the smallest H-theory closed under the dynamic Rule of
+Equivalence. Bacon and Dorr explicitly consider and settle this question
+in Classicism section 1.4 and Appendix A. The online author-hosted draft
+inspected here is dated 1 July 2022; its section 1.4 begins at printed p.14.
+The database normally uses the later 16 May 2023 draft's pagination.
+
+For an extension, however, there is a real and exactly describable choice:
+
+  EqCl(C + Gamma) = Cn_H(C + Box Gamma).                       (1)
+
+Over C, theorem Equivalence and theorem Necessitation impose the same
+closure condition. Equivalence turns a theorem P iff Top into P=Top.
+Conversely, necessitate the universally closed theorem P iff Q and use
+C's Intensionality to identify its lambda abstractions.
+
+To prove (1), Equivalence closure must contain Box Gamma. In the opposite
+direction, any deduction from C plus boxed sentences uses finitely many
+such sentences. Discharge them, necessitate the resulting C theorem,
+and use K and 4 to recover its boxed conclusion. Thus C+Box Gamma is
+already Necessitation-closed and hence Equivalence-closed. This argument
+does not necessitate temporary assumptions in an ordinary deduction.
+
+Rigid Comprehension separates the two policies strictly. The existing
+full Boolean-valued model B=2 x A, with A complete atomless and designated
+atom a=(1,0), satisfies C5 and current Actuality, hence Rigid Comprehension.
+Actuality has Boolean value a rather than Top, so necessary Actuality
+fails. Since necessary Rigid Comprehension entails necessary Actuality,
+necessary Rigid Comprehension fails too. Both extension policies are
+consistent, but they are different theories. See dynamic-audit.txt section 4.
+
+The methodological question is therefore whether the additional principles
+are proposed as necessary laws or as current truths. Bare C's fixed-H
+presentation alone does not create a weaker alternative to dynamic closure.
+
+2. Exact maximalization conventions
+
+For an H-theory T extending C, Max(T) adds A!=B for every closed pure
+identity A=B not provable in T. Equivalently it adds Diamond P for every
+closed pure P consistent with T. Its base theory is included.
+
+Put
+
+  L = Cn_H(C + OS),
+  N = EqCl(L) = Cn_H(C + Box OS).
+
+The answers are:
+
+  Max(L)                         consistent;
+  Max(N)                         consistent;
+  Cn_H(Max(C) + Box OS)           inconsistent;
+  EqCl(Max(L))                   inconsistent;
+  EqCl(Max(N))                   inconsistent.
+
+The positive claims are model constructions in ordinary ZFC. The negative
+claims are finite ordinary arguments over C. Changing the reference theory
+before maximalizing and closing the resulting maximalization under a rule
+are different operations.
+
+3. OS adds no new closed pure identities
+
+The existing finitely pinned interpretation-root construction preserves an
+arbitrary set-sized family of C action models, supplies full typed OS at a
+new root, and makes each target reachable. Take a witness for every pure
+C-consistent sentence. The resulting root satisfies Max(C)+OS.
+
+Consequently, if C+OS proved a closed pure identity not provable in C,
+this root would satisfy both that identity and its Max(C) disequality.
+Therefore C+OS is conservative over C for closed pure identities, and
+
+                Max(C+OS) = Cn_H(Max(C)+OS).                  (2)
+
+This equational conservativity does not make OS redundant. OS supplies
+new current truths, including BF. It does not identify those truths with
+Top. Dynamic closure does make those identifications and is strictly
+stronger. The full root and whole typed observer checks are spelled out
+in maximal-os-audit.txt sections 3-4, with direct construction sources.
+
+4. Maximalizing necessary OS is also consistent
+
+Choose an action-model witness for every pure sentence consistent with N.
+Since N is Necessitation-closed, every reachable object in each witness
+satisfies N, and in particular OS. Apply the same interpretation-root
+construction to this family. Old components remain unchanged; OS holds
+there and at the new root. Thus OS holds globally, the root satisfies N,
+and every N-consistent pure sentence remains possible there. This proves
+Max(N) consistent. The argument uses the special OS-preserving root
+construction, not a blanket principle about maximalizing all extensions.
+
+By contrast, fixed Max(C) demands the possibility of a failure of BF,
+since such failures are C-consistent. Necessary OS implies necessary BF.
+Hence Max(C)+Box OS is inconsistent. Relative Max(N) avoids that conflict
+because the BF failures are no longer consistent with its reference theory.
+
+5. Closing the finished maximalization under Equivalence is inconsistent
+
+This is a separate, short obstruction. Let F be the closed pure Fregean
+Axiom. C proves F -> Box F: under F every true proposition equals Top,
+including the proposition F itself. Thus C also proves
+
+                    Box(F -> not Diamond not F).
+
+Both F and not F are consistent with L and with N. A full one-world
+extensional model witnesses F; a full two-world S5 model witnesses not F
+and necessary OS. Therefore Max(T), for T=L or N, contains both
+
+                     Diamond F, Diamond not F.
+
+Adding theorem Necessitation gives Box Diamond not F. But the F-world
+required by Diamond F must satisfy both Diamond not F and its negation.
+Contradiction. Equivalence closure entails Necessitation closure, so it
+has the same obstruction.
+
+More generally, this proof works for every extension T of C admitting
+both F and not F. It does NOT refute Max(T) without that added rule.
+Indeed Max(T) proves that its own axiom Diamond not F is not necessary:
+Diamond F and Box(F -> not Diamond not F) imply not Box Diamond not F.

@@ -2,7 +2,7 @@
 
 Draft. The background is finitary relational **Classicism C** unless stated otherwise.
 
-[Full statements, proofs and certificates](evidence/RESULT-INDEX.md) · [Previously known results formalized](#previously-known-results-formalized) · [Questions and negative results](CONJECTURES.md) · [Notation](#notation)
+[Full statements, proofs and certificates](evidence/RESULT-INDEX.md) · [Previously known results formalized](#previously-known-results-formalized) · [Questions and negative results](CONJECTURES.md) · [Logical observers](LOGICAL-OBSERVERS.md) · [Notation](#notation)
 
 <a id="central-results"></a>
 ## Headline results
@@ -69,15 +69,33 @@ For every finite signature Σ, including the empty signature, SP(Σ) refutes BF 
 ### Choice and rigidity
 
 <a id="choice-completeness"></a>
+<a id="atomicity-vicinity"></a>
 #### Choice and completeness produce Actuality and transversals
 
-Relational Choice from t to t plus Boolean Completeness (type tt) implies Actuality. Relational Choice plus Boolean Completeness implies Transversal Choice. Relational Choice alone implying Transversal Choice remains unresolved.
+Relational Choice from t to t plus Boolean Completeness (type tt) implies Actuality. Relational Choice plus Boolean Completeness implies Transversal Choice. Vicinity + Relational Choice also implies Transversal Choice; Relational Choice alone remains unresolved.
 
-The direct proof adapts Bourbaki–Witt inside C: represented joins preserve partial transversals, and guarded progress yields a fixed point without assuming Plenitude.
+A separate route uses **Atomicityₜ + Vicinity ⇒ Actuality**, hence also NDₜ + Atomicityₜ ⇒ Actuality. All these premises are unboxed; no BF, Choice or Boolean Completeness is needed for this route.
 
-**Lean certified:** The stated Actuality and RC + BC ⇒ TC implications. · [Proof length](#proof-length): long.
+For RC + BC ⇒ TC, the direct proof adapts Bourbaki–Witt inside C: represented joins preserve partial transversals, and guarded progress yields a fixed point without assuming Plenitude.
 
-[Proofs and certificates](evidence/RESULT-INDEX.md#choice-completeness).
+**Lean certified:** RC from t to t + Boolean Completeness at tt ⇒ Actuality, and RC + Boolean Completeness ⇒ TC. · [Proof length](#proof-length): long.
+
+[Choice and completeness produce Actuality and transversals](evidence/RESULT-INDEX.md#choice-completeness) · [Atomicity and Vicinity recover Actuality](evidence/RESULT-INDEX.md#atomicity-vicinity).
+
+<a id="modal-choice"></a>
+#### Modalized Relational Choice is already necessary
+
+Over C, with full schemas,
+
+```math
+\mathrm{MRC}\ \longleftrightarrow\ \Box\mathrm{MRC}\ \longleftrightarrow\ (\Box\mathrm{RC}+\mathrm{IC})\ \longleftrightarrow\ (\Box\mathrm{RC}+\Box\mathrm{IC}).
+```
+
+Here RC is Relational Choice and IC is Intensional Choice. With either Boolean Completeness or ☐Vicinity, these are also equivalent to Modal Well-Ordering; in particular the equivalence holds over C5. The [typed bounds and countermodels](evidence/RESULT-INDEX.md#modal-choice) separate current choice from modal selection and explain exactly when BF is needed. A proof that RC entails TC over C would also establish MRC ⇒ Modal Well-Ordering. The [reduction](../integration-register/proofs/modal-choice/modal-to-current-choice-reduction.md) relates the unresolved questions without assuming either answer.
+
+[Proof length](#proof-length): long.
+
+[Proofs](evidence/RESULT-INDEX.md#modal-choice).
 
 <a id="logical-necessity-separation"></a>
 #### Logical Necessity and strong selection laws do not force Actuality
@@ -109,15 +127,20 @@ Strong Leibniz Biconditionals plus Rigid Comprehension entails ☐Strong Leibniz
 
 <a id="rigidity-classifications"></a>
 <a id="finite-compression-separation"></a>
-#### TR + RP does not imply WRP
+<a id="recurrent-colour-separation"></a>
+#### The rigidity gap persists with ☐BF and ☐Boolean Completeness
 
-Weakly Rigid Power is equivalent to Tame Rigidity + Rigid Power + bounded future-tameness: every future weakly rigid subrelation of an actual rigid bound must be rigid. A finite compression model satisfies Tame Rigidity and Rigid Power but fails Weakly Rigid Power (type et), refuting the conjectured implication without the extra condition.
+A model satisfies **☐BF + ☐Rigid Power + ☐Boolean Completeness + Tame Rigidity**, yet fails Weakly Rigid Power and ☐Tame Rigidity. It also refutes Weakly Rigid Weak Rigidity and No Pure Contingency. In particular, even Tame Rigidity + ☐Rigid Rigidity does not imply Weakly Rigid Weak Rigidity.
+
+The exact characterization still identifies the missing condition: Weakly Rigid Power is Tame Rigidity + Rigid Power + bounded future-tameness. The new proof also establishes Rigid Rigidity + Rigid Power ⇒ ☐Rigid Power. [Resolved comparisons](CONJECTURES.md#tr-rp-wrp).
+
+A separate Boolean-prefix model retains **Rigid Comprehension + ☐BF + ☐Rigid Power** while Weakly Rigid Power and ☐Tame Rigidity still fail. It has current Boolean Completeness and Actuality; the necessary completeness claim above belongs to the first construction.
 
 Compression and return maps remove label parameters from rigid subrelations, while approximate lifting supplies Rigid Power at every type.
 
-**Lean certified.** · [Proof length](#proof-length): long.
+**Lean certified:** the WRP characterization and earlier finite-compression countermodel. · [Proof length](#proof-length): long.
 
-[Characterization](evidence/RESULT-INDEX.md#rigidity-classifications) · [Countermodel](evidence/RESULT-INDEX.md#finite-compression-separation).
+[Characterization](evidence/RESULT-INDEX.md#rigidity-classifications) · [Earlier finite-compression model](evidence/RESULT-INDEX.md#finite-compression-separation) · [Stronger recurrent-colour model](evidence/RESULT-INDEX.md#recurrent-colour-separation).
 
 <a id="fixed-point-entrance"></a>
 #### Comprehension, completeness and choice do not force ☐Tame Rigidity
@@ -133,6 +156,7 @@ Attach a fixed-point entrance to a qualitative tail. Exact-image relations suppl
 <a id="colour-collapse-scope"></a>
 <a id="coextension-operations"></a>
 <a id="choice-coherence"></a>
+<a id="strong-worlds-domains"></a>
 [Supplemental results in this category](evidence/RESULT-INDEX.md#supplement-choice-and-rigidity) · [Back to contents](#categories)
 
 <a id="infinity-connections"></a>
@@ -212,6 +236,17 @@ A free-root model also satisfies FP and both quantified Infinity axioms while fa
 [Proof length](#proof-length): medium.
 
 [Proofs](evidence/RESULT-INDEX.md#forcing-possibilism).
+
+<a id="observer-analysis"></a>
+#### Necessary observers and analytical noncontingency
+
+With one fixed persistent necessarily complete real field, **C5 + ☐OS** makes the perfect-set property, real countable choice and real dependent choice noncontingent. This does not assert that the choice principles hold.
+
+CH can still vary: a strongly inaccessible cardinal suffices for an atomless C5 + ☐OS countermodel with that persistent real field. Separately, relative to Con(ZFC), even **☐Rev + ☐CH** is compatible with necessary failure of real countable choice. Completeness throughout concerns nonempty bounded admitted subproperties.
+
+[Proof length](#proof-length): long.
+
+[Proofs](evidence/RESULT-INDEX.md#observer-analysis).
 
 [Back to contents](#categories)
 
@@ -347,6 +382,7 @@ At every admitted counting type, pure Maximalism refutes an operation sending ea
 [Proofs and certificates](evidence/RESULT-INDEX.md#max-predecessor).
 
 <a id="arithmetic-foundations"></a>
+<a id="max-number-sets"></a>
 [Supplemental results in this category](evidence/RESULT-INDEX.md#supplement-arithmetic-and-evaluation) · [Back to contents](#categories)
 
 <a id="possibility-and-language"></a>
@@ -357,7 +393,7 @@ At every admitted counting type, pure Maximalism refutes an operation sending ea
 
 Pure Strong Possibility is equivalent over C to all closed pure universal finite-Boolean-identity sentences individually consistent with Max. Assuming Max is consistent, SP is consistent exactly when Max has the specified restricted finite-disjunction property for existential finite-Boolean-identity sentences. The criterion is proved; the required disjunction property remains unresolved.
 
-**Lean certified:** The universal-core equivalence and the stated conditional disjunction criterion. · [Proof length](#proof-length): medium.
+**Lean certified:** The universal-core equivalence and the stated conditional disjunction criterion. · [Proof length](#proof-length): long.
 
 [Proofs and certificates](evidence/RESULT-INDEX.md#sp-criteria).
 
@@ -486,9 +522,9 @@ Finite instances reconstruct abstraction, so no separate finitary-comprehension 
 
 The resulting hierarchy contains every proposition profile and every operation at an admitted relational-output type. The representation is provable in ZF, with Infinity and Extensionality left optional.
 
-[Proof length](#proof-length): long.
+**Lean certified:** Full representation and converse for the specified native λ-free H formulation, in Lean’s classical metatheory; the separate ZF proof retains its ordinary-proof status. · [Proof length](#proof-length): long.
 
-[Proof and exact formulation](evidence/RESULT-INDEX.md#lambda-free-endpoint-comprehension).
+[Proof, exact formulation and certificate](evidence/RESULT-INDEX.md#lambda-free-endpoint-comprehension).
 
 <a id="infinitary-resources"></a>
 #### Infinitary formation changes named exhaustion and arithmetic
@@ -575,7 +611,17 @@ The ordered symmetry construction separates these demands: Boolean observer sepa
 
 [Proofs and certificates](evidence/RESULT-INDEX.md#full-identity-observers).
 
+<a id="os-conservativity"></a>
+#### Observers and choice preserve positive-equational consequences
+
+Adding **OS + Strong Actuality + Zorn** preserves every consequence built from identities using ∧, ∨, ∀ and ∃, even over a background theory built in the same way from disequalities. The signature and terms inside those atoms are unrestricted. In particular, Max(C + OS) = Max(C) + OS. The [guide](LOGICAL-OBSERVERS.md#map-over-max-c) distinguishes this from adding ☐OS or changing the reference theory for Max.
+
+[Proof length](#proof-length): long.
+
+[Proofs](evidence/RESULT-INDEX.md#os-conservativity).
+
 <a id="evaluator-modal-commutation"></a>
+<a id="observer-interpretations"></a>
 [Supplemental results in this category](evidence/RESULT-INDEX.md#supplement-operators-and-evaluation) · [Back to contents](#categories)
 
 <a id="h-observer-separation"></a>
@@ -584,13 +630,11 @@ The ordered symmetry construction separates these demands: Boolean observer sepa
 <a id="logical-observers"></a>
 #### Logical observer separation: a branching implication map
 
-Requiring separation by **logical observers → endpoint observers → a unique observer** leads respectively to C + BF, C5 + Atomicity (type t), and Extensionality over H. Under Extensionality, truth is itself an endpoint-valued observer. Over C, every arrow below is strict:
+Logical separation recovers **C + BF from H**. Endpoint separation is exactly **C5 + Atomicity (type t)**; OS with a unique qualified observer is Extensionality. Under Extensionality, truth is itself endpoint-valued.
 
-```math
-\small\text{Extensionality}\ \Rightarrow\ \mathrm{C5}+\mathrm{Atomicity}_t\ \Rightarrow\ \Box\mathrm{OS}\ \Rightarrow\ \mathrm{OS}\ \Rightarrow\ \mathrm{BF}.
-```
+Reversible separation implies C5 + ☐OS + No Pure Contingency, without assuming atoms. OS + Functional Choice is equivalent to ☐Functional Choice over C. Over C5, **Atomicity is also equivalent to separation by a stable commuting family of idempotent observers**. ☐Functional Choice supplies one stable commuting reversible family that works necessarily; with Actuality, commuting injective separation already gives C5 + Atomicity and inverses in the same family. The [unified observer guide](LOGICAL-OBSERVERS.md) gives the C and H maps, the object-language definitions and their C5 simplifications.
 
-Reversible logical separation implies No Pure Contingency without atoms or Actuality. The [observer section](#h-observer-separation) and [full map](proofs/h-observer-space/GRAPH.md) give the other branches and separating models.
+[General observer interpretations](../integration-register/OBSERVER-INTERPRETATIONS.md) preserve necessary completeness and admit proper realizations of every C model. BF ensures that observers with the same proposition image give the same pure interpretation; the general counterexample lies outside OS.
 
 **Lean certified:** H + OS ⇒ C + BF in the equivalent formulation with explicit endpoint identities. · [Proof length](#proof-length): long.
 
@@ -599,18 +643,11 @@ Reversible logical separation implies No Pure Contingency without atoms or Actua
 <a id="h-observer-space"></a>
 #### Preservation, representation and logical observers
 
-The [dedicated page](proofs/h-observer-space/GRAPH.md) develops the map from H, with exact premises, diagrams, proofs and countermodels. Its main results are:
+Full relational separation is exactly propositional separation plus Functionality, for any qualification of observers. Complete logical qualification then recovers C + BF; weaker preservation clauses give an exact hierarchy of connective fragments.
 
-- **Preservation and higher types.** For the finite family of independent primitive clauses, implication between separation principles is exactly reverse inclusion of clauses. Full typed separation factors into propositional separation plus Functionality.
-- **Reversibility.** Separation by reversible logical observers (Rev) implies C5 + ☐OS + No Pure Contingency. Both chains Rev ⇒ SurjSep ⇒ OS and Rev ⇒ SplitMono ⇒ OS are strict; SurjSep and SplitMono require surjective observers and admitted qualified left inverses, respectively, and are incomparable. Over C5, SurjSep is Rev.
-- **The endpoint boundary.** OS + Plenitude at (t,t) is equivalent over H to endpoint separation, hence to C5 + Atomicity (type t). Reversibility can hold in atomless models; one atom raises it to endpoint separation.
-- **Canonical adjoints.** Over C5, every logical observer qualified at t has admitted order adjoints. These characterize injection, surjection and reversibility. A Boolean observer commutes with necessity exactly when it is injective.
-- **Limits of combination and persistence.** Separate preservation requirements need not combine. SurjSep entails neither ☐OS nor ☐BF, even though an individual observer’s surjectivity persists over C + BF (type t).
-- **Exact characterizations.** Over C5, Rev is characterized by its fixed propositions. Laws on the whole reversible group give sharp finite bounds; internally finite observer families give exact finiteness characterizations. [Statements and proofs](proofs/h-observer-space/GRAPH.md#reversibility-and-the-invariant-proposition-algebra).
+Over C5, one propositional quantifier test replaces all tested types. Surjective separation becomes reversible separation, and necessity-preserving separation becomes injective separation. [Maps, definitions and intuition](LOGICAL-OBSERVERS.md) · [Full catalogue of connections](proofs/h-observer-space/SUMMARY.md).
 
-The [detailed map and research frontier](proofs/h-observer-space/MAP.md) also cover weaker connective fragments, normalization, character extension and atomless order models.
-
-**Main unresolved question:** does injective logical separation imply separation by logical observers with logical left inverses? The converse holds; this direction remains open over H and over C5. [Exact question and positive cases](CONJECTURES.md#observer-strength).
+Logical left-inverse separation strictly implies injective separation, even over C5 with ☐Relational Choice, ☐Transversal Choice and ☐Zorn at all types. [Countermodel and exact scope](CONJECTURES.md#observer-strength).
 
 **Lean certified:** The foundational implication H + OS ⇒ C + BF, with explicit endpoint identities. · [Proof length](#proof-length): long.
 
@@ -658,8 +695,8 @@ Over C + ☐Plenitude + Axiom of Infinity (type e), faithful probability is equi
 
 - [Does Relational Choice entail Transversal Choice?](CONJECTURES.md#rc-tc) — Unresolved; sharper positive and negative criteria.
 - [Is pure Strong Possibility consistent?](CONJECTURES.md#pure-sp) — Unresolved; exact criteria and construction obstructions.
-- [Is SP consistent for one unary predicate constant and no individual names?](CONJECTURES.md#signature-sp) — Unresolved; first-stage sufficient criterion.
-- [Does injective logical separation imply logical left-inverse separation?](CONJECTURES.md#observer-strength) — Unresolved over H and over C5.
+- [Is SP consistent for one unary predicate constant and no individual names?](CONJECTURES.md#signature-sp) — Unresolved.
+- [Is C + Max(C) + Boolean Completeness at t consistent?](CONJECTURES.md#max-bc) — Unresolved.
 
 Further reductions, failed constructions and incomplete formalizations are recorded in the [question register](CONJECTURES.md).
 

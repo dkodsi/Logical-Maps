@@ -1,0 +1,73 @@
+{
+  "source_id": "misc",
+  "date": "2026-10-26",
+  "review_kind": "Independent AI mathematical review",
+  "source_receipt_sha256": "327f42062b55e51c00c4e9196686524ee599fe3f85d17a88645b62d15456944b",
+  "scope": [
+    {
+      "proof": "object-language-and-finite-basis.txt",
+      "sections": "1–4",
+      "source_sha256": "336f67a7dc14b5a7814205753497fe4135ae1cb36eacb528680cd0c20b3cb823"
+    },
+    {
+      "proof": "commutative-shift-semantics.txt",
+      "sections": "2–8",
+      "source_sha256": "6ee14262b0dcdc6bd41a9f33d2034004be92799b1ad3daf9aa22390379900648"
+    },
+    {
+      "proof": "finite-alphabet-coherence-countermodels.txt",
+      "sections": "1–9",
+      "source_sha256": "d551f8af50784c483634ef745c4f68a31dd6f76d7ffc9386aa19aca5ab961e36"
+    },
+    {
+      "proof": "isolated-point-nonpropagation.txt",
+      "sections": "1–7",
+      "source_sha256": "7661c775243112d64b6c67711e77afcd13c1ed0ded5492ef1753a6c1c1645682"
+    },
+    {
+      "proof": "stable-families-and-propagation.txt",
+      "sections": "2–4",
+      "source_sha256": "0a822230529da8e94a87978919d92543ff0f3a6e9cf6acd6568330815dba120d"
+    },
+    {
+      "proof": "uniform-retractions.txt",
+      "sections": "5",
+      "source_sha256": "eb74dd0d9cca68f871594e1e588e3619d66fc7d2ac1895bb750cf5774dea3ea3"
+    },
+    {
+      "proof": "iterated-cores.txt",
+      "sections": "2–5",
+      "source_sha256": "3d3732c1af2d253bcb4ff8049915c3c00413a10aa0e9779502219eabbef9a4b3"
+    }
+  ],
+  "limits": [
+    "The earlier observer reductions and underlying Bernoulli construction retain their own evidence.",
+    "The Cohen and directedness-converse notes and the Maximalism corollary retain their separate self-check status.",
+    "The propagation and Extensionality criteria use endpoint-valued family membership, not merely persistence of current members."
+  ],
+  "formalization": "Ordinary proofs; this receipt is not a Lean certificate.",
+  "additional_review_reports": [
+    {
+      "date": "2026-10-27",
+      "source": "joint-injective-separation.txt, §6",
+      "source_sha256": "9d8fee097131955c9db2e1d6adacb72a30ba912eca6f8819bb384cdf1dbd218f",
+      "reviewed": [
+        "finite-cofinite-joint-separation.txt, §§2–6",
+        "joint-injective-separation.txt, §2 and the atomic regular-action argument in §4"
+      ],
+      "scope": "The strengthened structural and necessary consequences compose the new inverse lemma with the cited established theorems. They are ordinary deductions, not a new Lean certificate."
+    },
+    {
+      "date": "2026-10-27",
+      "source": "choice-implies-coherent-reversible-separation.txt, §§1–8",
+      "source_sha256": "6d6d0c154306144c3cf6c3a2b3c6a208de094f104913081318f9f92755cd924f",
+      "reviewed": [
+        "internal sorted finite-subset coding and finite/pseudofinite cyclic construction",
+        "the weaker well-order premise",
+        "atomic observer lift, qualification, admission and fixed-family necessity",
+        "finite-cofinite-joint-separation.txt, §7: failure of Functional Choice at (t,t)"
+      ],
+      "scope": "Independent AI reviews of the ordinary construction; no new Lean certificate is asserted."
+    }
+  ]
+}

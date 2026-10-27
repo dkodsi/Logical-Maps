@@ -1,0 +1,252 @@
+NECESSARY FUNCTIONAL CHOICE SURVIVES EVERY LOGICAL CORE
+26 October 2026. Original argument by OpenAI Codex.
+Direct source: misc, this note Sections 1-7, unpaginated.
+
+1. THEOREM
+
+Let M be any pointed general model of Classicism C in the fixed relational
+type system. Let E:tt be an admitted observer satisfying whole Boolean
+preservation, whole preservation of each typed universal quantifier, and
+the whole idempotence identity E composed E=E. Let K=Core(M,E) be its
+canonical all-sort fixed-test quotient core.
+
+For EACH single admitted pair of types sigma,tau, with tau relational,
+
+  M satisfies Box FC_(sigma,tau)
+       implies K satisfies Box FC_(sigma,tau).                (1.1)
+
+Consequently every such core of a model of Choice Classicism
+
+  C + Box Functional Choice
+
+is again a model of Choice Classicism. No BF, ND, Atomicity, C5 or
+Functionality is needed as a separate assumption for the instancewise
+theorem. A single boxed choice instance suffices for the corresponding
+boxed instance in the core; the other choice instances are not used.
+
+The proof gives the stronger comparison of ambient proposition values
+
+  E(FC_(sigma,tau)) <= (FC_(sigma,tau))^r,                    (1.2)
+
+where the right side is the normalized interpretation of the core choice
+formula, BEFORE taking the quotient, and <= is the ambient algebraic
+Boolean order. Hence the weaker condition E(FC_(sigma,tau))=Top already
+implies the boxed instance in K. Current truth of E(FC_(sigma,tau))
+implies current truth of that choice instance in K.
+
+These are sufficient conditions. No reflection or equality of the two
+propositions in (1.2) is asserted.
+
+2. THE EXISTING CORE AND ITS EXACT MODAL MEANING
+
+Use the completed bare-C construction in
+
+  research/2026-10-26/observer-core-without-barcan/general-core.txt,
+  especially Sections 2-6.
+
+It defines normalizers recursively by
+
+  r_e=id externally,   r_t=E,
+  r_(alpha beta)(f)=lambda x. r_beta(f(r_alpha(x))).          (2.1)
+
+At an individual input omit the notation r_e. No forbidden ee object is
+introduced. The whole identity r_alpha composed r_alpha=r_alpha follows
+equationally. Put S_alpha=Fix(r_alpha). Fixed functions are invariant
+under input normalization and have fixed outputs as WHOLE identities:
+
+  f composed r_alpha=f,       r_beta composed f=f.           (2.2)
+
+Translate a core term T to T^r by normalizing every variable and logical
+constant, preserving application and lambda abstraction. For each finite
+collection of terms and formulas, all its normalization identities are
+C-derivable from a finite conjunction P(E) of the required WHOLE observer
+identities. In particular,
+
+  r_type(T)(T^r)=T^r.                                      (2.3)
+
+Translated Boolean connectives are the original connectives on translated
+bodies. Translated quantifiers have the exact term identities
+
+  (forall x.A)^r=forall x.A^r,
+  (exists x.A)^r=exists x.A^r.                              (2.4)
+
+The right side still quantifies over original objects, but each bound
+variable occurrence inside A^r is normalized. Its range therefore has
+the right fixed-domain truth clause. These are term equations furnished
+by the qualified observer laws, not an assertion that arbitrary current
+families have external Boolean infima.
+
+Fixed objects are then quotiented by agreement in current truth under
+all fixed predicates. The resulting K is a C model with literal current
+identity. Its interpretation of any formula A is [A^r]. In particular,
+
+  K satisfies Box A iff [A^r]=[Top].                        (2.5)
+
+The ambient equality A^r=Top is sufficient for (2.5). We will prove that
+STRONGER equality. We do not identify native core Box with ambient Box,
+and we do not replace translated Leibniz identity by ambient identity.
+
+3. THE CURRENT CHOICE ARGUMENT IS AN INTERNAL DERIVATION
+
+Fix sigma,tau with tau relational. Write F for the closed formula
+
+  forall U^(sigma tau t).
+    (forall x^sigma. exists y^tau. (U x)y)
+      -> exists f^(sigma tau). forall x^sigma. (U x)(f x).    (3.1)
+
+Let P(E) include the finitely many whole observer laws needed for the
+normalizers and formula (3.1). Besides E-idempotence and Boolean laws,
+only finitely many typed quantifier laws can occur, including the
+quantifiers at the relation, input, output and function types. The finite
+normalization lemma of Section 2 supplies all auxiliary equations from
+this same finite P. No object-language quantification over types is used.
+
+We prove the unconditional C theorem
+
+  P(E) -> (F -> F^r).                                     (3.2)
+
+Here is the derivation explicitly. For an arbitrary original U, set
+R=r_(sigma tau t)(U). Equations (2.2) imply both input invariances
+
+  (R(r_sigma(x)))y=(R x)y,
+  (R x)(r_tau(y))=(R x)y.                                 (3.3)
+
+By (2.4), the antecedent of the translated instance for U is literally
+
+  forall x. exists y. (R(r_sigma(x)))(r_tau(y)),             (3.4)
+
+and (3.3) identifies this with ordinary ambient seriality of R. Apply
+the assumed formula F to the admitted relation R. Obtain an original
+f:sigma tau with
+
+  forall u. (R u)(f u).                                   (3.5)
+
+The translated existential quantifier over functions permits the same
+original f as its witness; its occurrences normalize to
+
+  g=r_(sigma tau)(f).
+
+For each original x, put a=r_sigma(x). Idempotence and (2.1) give
+
+  g(a)=r_tau(f(a)).                                       (3.6)
+
+The translated concluding matrix is
+
+  (R a)(g(a))=(R a)(r_tau(f(a)))=(R a)(f(a)),                (3.7)
+
+which holds by (3.5) instantiated at a. Universal generalization over x,
+existential introduction using f, and generalization over U establish
+F^r. Every operation in this argument is an admitted term; every step
+is ordinary internal C reasoning from the displayed assumptions.
+
+In particular, this is not merely an external observation that one
+specific model has a selector. It is a uniform derivation of (3.2).
+There is no need to choose representatives of quotient classes.
+
+4. NECESSITATE THE DERIVATION, NOT THE OPTIONAL CHOICE AXIOM
+
+Every conjunct of P(E) is a whole object identity. Native Necessity of
+Identity and finite conjunction therefore give the C theorem
+
+  P(E) -> Box P(E).                                       (4.1)
+
+Necessitate the UNCONDITIONAL C theorem (3.2), then use K and (4.1):
+
+  C proves P(E) -> Box(F -> F^r).                          (4.2)
+
+For full syntactic precision, universally close E and any remaining
+parameters before applying the theorem-Necessitation rule. Necessitated
+universal elimination then gives the desired instance of the boxed
+conditional for the specified E. No Barcan movement of Box through a
+universal quantifier is involved.
+
+Since C identifies algebraic order p<=q with Box(p -> q), (4.2) says
+
+  F <= F^r                                                (4.3)
+
+in every model satisfying the whole observer laws. If M satisfies
+Box F, native literal identity says F=Top. Equation (4.3) forces
+F^r=Top. Passing to the fixed-test quotient gives [F^r]=[Top], and (2.5)
+proves K satisfies Box F. This proves (1.1).
+
+Alternatively, modus ponens under Box in (4.2) and Box F gives the
+ambient Box F^r directly. Its native meaning is again F^r=Top.
+
+This does not infer Box F from current F. The boxed hypothesis is used
+only in the final step. Necessitation was applied solely to a theorem
+of C, and stability was supplied solely by identity premises.
+
+5. THE STRONGER OBSERVED-CHOICE SUFFICIENT CONDITIONS
+
+E is a Boolean homomorphism, so it preserves algebraic order. Apply E
+to (4.3), then use the fixedness of the translated formula:
+
+  E(F) <= E(F^r)=F^r.                                    (5.1)
+
+If E(F) is currently true, upward closure of the ambient truth filter
+makes F^r true. Quotient truth then makes F true in K. If E(F)=Top,
+(5.1) forces F^r=Top and hence Box F in K.
+
+Ordinary ambient Box F implies E(F)=Top because E(Top)=Top. Thus the
+main theorem is an immediate special case of (5.1). This comparison is
+stronger than the existing current-FC descent result, but the central
+new consequence is the necessary-FC closure of all logical cores.
+
+6. GENERAL STABLE-PREMISE TRANSFER LEMMA
+
+The proof isolates a reusable principle. Suppose A and B are formulas
+closed over their displayed object variables, and a finite conjunction
+P(E) of whole observer identities yields an internal C derivation
+
+  P(E) -> (A -> B^r).
+
+Suppose P also supplies fixedness E(B^r)=B^r. Then C proves
+
+  P(E) -> Box(A -> B^r),
+
+and in the associated fixed hierarchy
+
+  E(A) <= B^r.
+
+Therefore current observed A suffices for core B, and E(A)=Top suffices
+for core Box B. In particular ambient Box A suffices for core Box B.
+This is a transfer lemma for an INTERNAL uniform derivation; it does
+not turn arbitrary external current inheritance arguments into modal
+inheritance claims. The FC derivation in Section 3 meets its hypotheses.
+
+7. SCOPE, SOURCES AND SIGNIFICANCE
+
+The theorem includes general Henkin models, arbitrary image observers,
+and cores whose all-sort quotient is nontrivial. It uses no external
+fullness, countable completeness, choice of quotient representatives,
+or metatheoretic selector construction. Named constants can be included
+in the ambient language and normalized as usual; the choice formulas
+themselves are pure and unaffected by that expansion.
+
+For polyadic Functional Choice, repeat Section 3 with a finite tuple of
+inputs and its componentwise normalizers. Alternatively use the native
+proved equivalence of the unary schema and its polyadic form, together
+with its necessitated version. There is no output operation returning e.
+
+The main proof is a short but substantive corollary of the more involved
+bare-C core construction: the new point is that its current selector
+argument has an internal uniform proof with stable whole-identity
+premises. No appeal to Atomicity inheritance or No Pure Contingency is
+needed. Current Functional Choice or current Plenitude alone must not
+be used to infer Atomicity.
+
+Exact local sources:
+- topics/classicism/topic.yaml, framework and notation; background.md,
+  Framework, Notation, Choice definitions and Modal scope.
+- topics/classicism/principles/functional-choice-r.yaml and
+  necessary-functional-choice-r.yaml, fixed formulas and polyadic forms.
+  Their source formulation is Bacon and Dorr, Classicism, draft of
+  16 May 2023, Section 2.3, pp. 31-33.
+- topics/classicism/principles/identity-necessary-r.yaml; source
+  Bacon and Dorr, Classicism, same draft, Section 2.1, p. 22.
+- research/2026-10-26/observer-core-without-barcan/general-core.txt,
+  Sections 2-6 (normalization, finite proof translation, quotient and
+  C soundness), Section 7 (current selector normalization).
+
+Direct attribution for the transfer proof in this note is misc, not the
+published sources supplying the framework and native principles.

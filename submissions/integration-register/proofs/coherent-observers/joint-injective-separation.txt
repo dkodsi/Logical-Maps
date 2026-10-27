@@ -1,0 +1,209 @@
+COMPATIBLE INJECTIVE OBSERVATION AND ABELIAN WORLD SYMMETRY
+27 October 2026. Original ordinary mathematics by OpenAI Codex.
+Direct source: misc, Sections 1-6, unpaginated. The countermodel and positive
+inverse argument received independent AI review; see
+../../evidence/coherent-observer-review.json.
+
+1. THE QUESTION AND THE RESULTS
+
+Can commuting separation and injective separation be witnessed together?
+Write CoInjSep for CoSep with each current member required to be injective.
+Write CoRevSep for the corresponding commuting family of qualified
+reversible observers. These are working abbreviations, not new native
+database records. The family is an admitted predicate K:(tt)t; membership
+is current membership unless explicitly made stable.
+
+Use CoSep_(tau,Delta) from object-language-and-finite-basis.txt, Section 1,
+adding respectively
+
+  forall E. KE -> forall p,q.(Ep=Eq -> p=q);                  (CoInjSep)
+
+  forall E. KE -> exists F.
+    Logical_Delta(F) and EF=I and FE=I.                     (CoRevSep)
+
+Equations of operations are WHOLE identities. Full theories range over
+relational output types and finite qualification lists. Over C5 the same
+finite propositional/Q_t reduction applies, retaining the same K.
+
+The original combination does not suffice:
+
+  C5 + CoSep + InjSep does not imply CoInjSep.                (1)
+
+The companion finite/cofinite model satisfies even necessary full Atomicity,
+necessary full Rev and necessary full CoIdemSep, while no commuting
+injective Boolean family separates. The exclusion holds even for external
+families. See finite-cofinite-joint-separation.txt.
+
+The positive result is:
+
+  C + Actuality + full CoInjSep -> full CoRevSep.              (2)
+
+The SAME family already contains a qualified inverse for each member.
+No C5, necessity of Actuality, or Choice premise is needed. Under Actuality
+this is an equivalence, since a two-sided inverse always gives injectivity.
+
+In particular over C5+Atomicity, compatible injective separation is exactly
+compatible reversible separation. Internal composition closure supplies an
+abelian group acting regularly on world atoms: for any two atoms, exactly
+one member carries one to the other. The joint condition thus describes
+an admitted coherent system of world symmetries. Section 5 also verifies
+it in ordinary full set models.
+
+2. THE LOCAL INVERSE LEMMA OVER C
+
+Assume C, Functionality at tt, and Actuality. Let K be an admitted family
+of Boolean observers that currently commute, are injective, and separate
+propositions. No quantifier-preservation law is needed for this lemma.
+
+Choose an Actuality witness a. By the native definition,
+
+  a is true, and for every p, p is true iff a<=p.              (3)
+
+The reverse implication follows from factivity of algebraic entailment.
+In particular a is nonzero. Fix a current member E of K. Injectivity and
+preservation of Bottom make E(a) nonzero. Separation from Bottom supplies
+a current F in K for which F(E(a)) is true. Put H=FE.
+
+H is Boolean and H(a) is true. If p is true, (3) gives a<=p and therefore
+H(a)<=H(p), so H(p) is true. If p is false, apply the same argument to
+not-p and use H(not-p)=not H(p). Thus H preserves current truth on every
+proposition. It commutes with every current member of K, since E and F do.
+
+For any current G in K and any p, commutation gives G(Hp)=H(Gp). Truth
+preservation by H makes this agree in truth with Gp. Separation gives
+Hp=p. Functionality at tt collects these output identities into H=I.
+Finally EF=FE by pairwise commutation, so
+
+  FE=I=EF.                                                   (4)
+
+The inverse F already belongs to the original family. Any logical
+qualifications of its members therefore apply to F without a selection
+or admission assumption. This proves the local lemma.
+
+3. FULL SCHEMAS, INTERNAL GROUP CLOSURE AND NECESSITY
+
+Full CoInjSep supplies OS and hence current Functionality, including at tt.
+For each requested finite Delta, apply the local lemma to its separating
+family. A family separating a relational type also separates propositions:
+unequal p,q give unequal constant relations, and every tuple evaluates
+those relations to p,q. The usual nonempty argument domains suffice.
+The lemma retains the same family and its original qualifications, proving
+the full-schema implication (2) with C's theoremhood gate unchanged.
+
+Close K internally under composition using K* from
+object-language-and-finite-basis.txt, Section 4. It contains identity,
+remains qualified, commuting, injective and separating, and is admitted.
+To check inverse closure, use the admitted predicate
+
+  P(E) := exists F.[K*(F) and EF=FE=I].                       (5)
+
+P contains I and K by Section 2. It is composition-closed: the inverse of
+a product is the reverse product of its inverse witnesses, which belongs
+to K*. The defining induction for K* makes every current K*-member satisfy
+P. Thus its current members form an abelian group of admitted qualified
+operations. This is internal predicate induction, not an assumption that
+arbitrary external finite-word collections are admitted.
+
+Equation (2) supplies full Rev. Its existing bootstrap yields C5, and its
+No Pure Contingency theorem makes the closed pure Actuality and CoInjSep
+instances necessary. Consequently Actuality+CoInjSep implies its own
+necessary version over C. This propagation statement is a corollary of
+the existing Rev theorem, not a new proof of pure-term invariance.
+
+STRENGTHENED COROLLARY. The same premises also imply full Atomicity:
+Rev gives C5 and makes Actuality necessary; the recorded theorem
+C5 + necessary Actuality -> Atomicity then applies. Consequently
+
+  C + Actuality + full CoInjSep
+    -> C5 + Atomicity + full CoRevSep + necessary Actuality
+       + necessary CoInjSep + necessary CoRevSep.             (6)
+
+Here every necessary family principle means the separately boxed closed
+pure instances. The recorded C5+Atomicity equivalence also gives necessary
+Plenitude. Thus the atomic interpretation of Section 4 applies already
+under the original bare-C package: C5 and Atomicity need not be separately
+assumed. The reverse implication from C5+Atomicity+CoRevSep to
+Actuality+CoInjSep uses the established Atomicity-to-Actuality consequence
+over C5 and the inverse-to-injectivity implication. These packages are
+therefore equivalent over C.
+
+Native dependencies are
+../../../classicism-results-2026-10-24-v2/source/topics/classicism/results/c5-and-necessary-actuality-imply-atomicity.yaml
+(Bacon and Dorr, Classicism, Proposition 2.6, pp. 25-26) and
+../../../classicism-results-2026-10-24-v2/source/topics/classicism/results/c5-and-atomicity-imply-necessary-plenitude.yaml.
+Equation (6) is a short deduction from those existing theorems and the
+new inverse lemma, not a new proof or a new Lean certificate for them.
+
+4. THE ATOMIC INTERPRETATION
+
+Assume C5+Atomicity and CoInjSep. The existing C5 Atomicity theorem supplies
+Actuality, so Sections 2-3 give the abelian group G of current K*-members.
+Let a be the true atom. Every member of G is a Boolean automorphism and
+therefore permutes the atoms.
+
+For any atom b, separation from Bottom supplies E in G with E(b) true.
+E(b) is an atom, so E(b)=a. Its inverse sends a to b, proving transitivity.
+If E(a)=a, then a<=p iff a<=E(p) for every p, so E preserves current truth.
+The argument of Section 2 gives E=I. The stabilizer of a is trivial;
+transitivity makes every stabilizer trivial. Exactly one group member
+therefore carries any given atom to any other.
+
+This is a regular abelian action on the world atoms. Choosing a as origin
+identifies those atoms with G. G comes from the admitted K*; no arbitrary
+external group is being postulated as an internal object.
+
+The direct commutative-shift representation now has a group as its index
+monoid, and its proposition algebra contains every singleton. Indeed
+
+  phi(p)={g in G : g(p) is currently true}.
+
+Regularity gives phi(a)={I}; every other atom likewise represents one
+singleton. Conversely, an abelian group shift model with all singleton
+propositions and an admitted shift-family predicate supplies propositional
+Atomicity and CoInjSep; the existing C5 type reduction supplies full
+Atomicity. This is the atomic specialization of the earlier representation,
+without elementary extension. Retain all the Henkin-domain and admitted-
+family conditions in commutative-shift-semantics.txt.
+
+5. ORDINARY FULL SET MODELS SUPPLY THE JOINT STRUCTURE
+
+Work in ordinary ZFC metatheory. Let W be any nonempty set, D_t=P(W),
+and take full actual-function domains at every permitted relational arrow,
+with nonempty D_e. Boolean operations are set operations, quantifiers
+literal intersections/unions, identity crisp, and truth membership of
+a designated a in W.
+
+Put an abelian group structure on W with a as identity. For finite W use
+a cyclic group of its size. For infinite cardinal kappa=|W|, the direct sum
+of kappa copies of the two-element group has cardinality kappa. Transport
+its group structure along a bijection sending identity to a. This uses
+ZFC in the metatheory; it is not an object-language Choice-free derivation.
+
+Inverse images of translations are admitted bijective Boolean observers.
+They preserve every typed quantifier because inverse image commutes with
+arbitrary intersections. The endpoint predicate selecting their family is
+admitted in the full domains. The observers commute and their transitivity
+makes them separate at a. All these full set models therefore satisfy
+CoInjSep, indeed stable CoRevSep.
+
+Thus full availability of functions supplies a coherent global organization
+of observation. The finite/cofinite Henkin model has ample reversible
+observations without admitting such an organization. This standard-model
+argument alone does not give an internal Choice derivation. The internal proof in
+choice-implies-coherent-reversible-separation.txt establishes the stronger result: boxed Functional Choice implies stable CoRevSep, without
+assuming full standard semantics or quantified Infinity.
+
+6. SOURCES AND PROOF SCOPE
+
+The audit agent independently found the same finite/cofinite countermodel,
+checked its full hierarchy, and supplied the shorter classification of
+injective Boolean observers. It checked the atomic inverse/regular-action
+argument and then confirmed the stronger bare-C Actuality proof of Section
+2. Section 3's propagation corollary and Section 5's standard-model comparison
+are self-checked deductions from explicitly stated prior facts.
+
+Existing inputs: native actuality.yaml; OS -> Functionality and
+Rev -> C5/No Pure Contingency; coherent-families.txt Section 2A;
+object-language-and-finite-basis.txt Sections 2-4; uniform-retractions.txt;
+commutative-shift-semantics.txt. New arguments have source_id misc. The
+group cardinality calculation is background set theory, not a novelty claim.

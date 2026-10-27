@@ -1,0 +1,206 @@
+NECESSARY BOOLEAN COMPLETENESS SURVIVES EVERY LOGICAL OBSERVER CORE
+
+Original mathematical argument, OpenAI Codex, 26 October 2026.
+Direct source: misc; the numbered proof sections below are unpaginated.
+
+1. THEOREM
+
+Let M be an arbitrary pointed general model of C in the fixed relational
+type system. Let E:tt be an admitted observer preserving Boolean operations
+and every typed quantifier as WHOLE operation identities, and satisfying
+the whole idempotence identity E composed E=E. Let K=Core(M,E) be the
+canonical all-sort fixed-test quotient core.
+
+For EACH relational type tau,
+
+  M satisfies Box BC_tau  =>  K satisfies Box BC_tau.       (1.1)
+
+No ambient BF, ND, C5, Functionality, Atomicity or other completeness
+instance is required as a separate premise. Thus the class of general
+C+boxed Boolean Completeness models is closed under these observer cores.
+
+The stronger comparison proved below is an ambient Boolean inequality:
+
+  E(BC_tau) <= (BC_tau)^r.                                (1.2)
+
+Here (BC_tau)^r is the normalized proposition BEFORE the core quotient.
+It follows that:
+  - current truth of E(BC_tau) suffices for current BC_tau in K;
+  - the ambient identity E(BC_tau)=Top suffices for Box BC_tau in K.
+
+These are sufficient conditions; no converse or equality in (1.2) is
+claimed. The earlier countermodel to CURRENT BC inheritance remains
+valid: current truth of BC_tau does not ensure truth of E(BC_tau).
+
+2. NOTATION AND THE EXACT NATIVE CORE ORDER
+
+Use the completed bare-C core construction in
+  observer-quotient-general.txt, Sections 2-6.
+
+Its type normalizers are
+
+  r_e=id externally, r_t=E,
+  r_(sigma rho)(f)=lambda x. r_rho(f(r_sigma x)).           (2.1)
+
+There is no term of forbidden type ee. Put r=r_tau. Normalization is
+idempotent and preserves the Boolean operations at tau as whole identities.
+Let S_tau=Fix(r). For a,b in S_tau, the prequotient core identity is
+
+  Delta_tau(a,b)=E(delta_tau^M(a,b)).                      (2.2)
+
+The full typed core is obtained by identifying fixed objects whose Delta
+is currently true. Formula interpretation in the core is [A^r], and
+current truth is inherited from A^r. In particular, literal ambient
+A^r=Top is sufficient for the core's OWN Box A. We do not identify
+native core necessity with ambient necessity.
+
+Write a<=b for the original algebraic order at tau, defined by the
+identity a or b=b. Define the OBSERVED ORDER PROPOSITION, on arbitrary
+original objects, by
+
+  O(a,b):=E(a<=b).                                       (2.3)
+
+For fixed a,b, the prequotient native core order is exactly O(a,b):
+normalized join is original join, and (2.2) applies to its identity
+with b. Thus the core's actual order need not be the original order.
+This is the distinction needed for a possibly nontrivial quotient.
+
+3. THE INTERNAL OBSERVED REASONING RULES
+
+For this one proof and this one tau, take a finite conjunction P(E) of
+the whole observer identities needed for normalization, Boolean laws,
+and the finitely many quantified types in the formulas. The normalization
+lemma supplies its whole identities from this same finite P.
+
+C proves P -> Box P by Necessity of Identity. If C proves P -> Theta,
+first universally close any parameters, necessitate that unconditional
+theorem, and use K and P -> Box P. Consequently P -> Box Theta, with
+the required parameter instances obtained by necessitated universal
+elimination. No BF direction is used. Therefore under P the proposition
+Theta is literally Top, and E(Theta)=Top as well.
+
+Applying this to the lattice, identity and normalization theorems, then
+commuting E through Boolean operations and the displayed quantifiers,
+gives the following CURRENT internal rules:
+
+  O(a,a);                                                (3.1)
+  O(a,b) and O(b,c) -> O(a,c);                            (3.2)
+  O(a,b) -> O(ra,rb);                                    (3.3)
+  E(a=b) -> (O(z,a) iff O(z,b)).                          (3.4)
+
+For (3.3), the underlying C consequence of P is monotonicity of the
+Boolean homomorphism r. For (3.4), the underlying theorem is ordinary
+Leibniz substitution into the order predicate. We are not treating a
+currently true identity as an unconditionally valid equation inside E;
+the E-image of the substitution implication supplies the conditional
+rule explicitly. Equations such as r(ra)=ra can also be rewritten in
+these expressions by ordinary identity congruence.
+
+All steps in the next two sections are internal C reasoning under P.
+They do not appeal to an external completeness theorem or to an already
+complete core. The core construction is used only to identify the final
+translated formula and its semantic interpretation.
+
+4. APPLY COMPLETENESS AS EVALUATED BY THE OBSERVER
+
+The unboxed original instance B=BC_tau is
+
+  forall U^(tau t). exists y^tau.
+    forall z^tau.
+      (forall w^tau. Uw -> z<=w) iff z<=y.                (4.1)
+
+Assume E(B). Let V be an arbitrary original tau t object and put
+R=r_(tau t)(V). The whole fixedness equations imply
+
+  R(rw)=R(w),             E(R(w))=R(w).                  (4.2)
+
+Define an ORIGINAL admitted family
+
+  F(w):=(rw=w) and R(w).                                 (4.3)
+
+Commute E through every quantifier and Boolean connective in E(B),
+then instantiate its U binder at F. We obtain an original object y
+such that for every original z,
+
+  LB_E(z,F) iff O(z,y),                                  (4.4)
+
+where
+
+  LB_E(z,F):=forall w.
+    (E(rw=w) and R(w)) -> O(z,w).                         (4.5)
+
+Equation (4.5) uses E(F(w))=E(rw=w) and R(w), from Boolean preservation
+and (4.2). The observed guard E(rw=w) is essential; it must NOT be
+replaced by the current ordinary guard rw=w.
+
+Observed reflexivity (3.1) and (4.4) at z=y show LB_E(y,F).
+Use g=ry as the fixed core candidate.
+
+5. NORMALIZING THE OBSERVED GREATEST LOWER BOUND
+
+First g is a lower bound for the core family. Let v be any original
+object and suppose R(rv). The literal identity r(rv)=rv has value Top,
+so E(r(rv)=rv)=Top. Apply LB_E(y,F) at w=rv to get O(y,rv).
+Observed monotonicity (3.3) gives
+
+  O(ry,r(rv))=O(g,rv).                                   (5.1)
+
+Thus forall v (R(rv) -> O(g,rv)), exactly the translated lower-bound
+condition on g.
+
+Next let a=rz be any fixed competitor and assume
+
+  forall v. R(rv) -> O(a,rv).                            (5.2)
+
+We show LB_E(a,F) for ALL original w, not just literally fixed w.
+Suppose E(rw=w) and R(w). By (4.2), R(rw) holds, so (5.2) gives
+O(a,rw). Observed identity substitution (3.4), using E(rw=w), now
+gives O(a,w). This proves LB_E(a,F).
+
+Equation (4.4) therefore yields O(a,y). Observed monotonicity and ra=a
+give
+
+  O(a,ry)=O(a,g).                                        (5.3)
+
+Conversely, if O(a,g), then (5.1) and observed transitivity give
+O(a,rv) for every selected rv. Hence (5.2) holds. We have established
+the entire biconditional
+
+  [forall v. R(rv) -> O(rz,rv)] iff O(rz,ry)              (5.4)
+
+for every original z. This is exactly the translated GLB formula.
+The original y is an admissible witness for the translated existential,
+whose occurrences normalize to ry. Generalize over original V to obtain
+
+  C proves P(E) -> (E(BC_tau) -> (BC_tau)^r).             (5.5)
+
+All apparent restrictions to fixed objects in the explanation are
+implemented by r-occurrences under the original binders. Thus (5.5)
+is a uniform internal derivation, with only the same completeness
+instance at tau and the finite whole-observer premises P. No selection
+of representatives of quotient classes occurs.
+
+6. NECESSITATE THE DERIVATION AND PASS TO THE CORE
+
+Universally close the remaining observer parameter in (5.5), necessitate
+the unconditional C theorem, instantiate inside the box, and use
+P -> Box P. We obtain
+
+  C proves P -> Box(E(BC_tau) -> (BC_tau)^r).             (6.1)
+
+By the algebraic order characterization in C, this is precisely (1.2).
+If E(BC_tau) is currently true, (5.5) makes (BC_tau)^r true, giving
+current BC_tau in K. If E(BC_tau)=Top, (1.2) forces
+
+  (BC_tau)^r=Top                                         (6.2)
+
+literally in M, before quotienting. Its core class is therefore Top,
+which is K's own Box BC_tau.
+
+Finally ambient Box BC_tau says BC_tau=Top. Since E fixes Top, it
+implies E(BC_tau)=Top. This proves (1.1).
+
+No optional completeness assumption was necessitated. Necessitation
+was applied only to the unconditional internal implication (5.5).
+Nor was a translated identity replaced by original identity: the proof
+uses O=E(original order) throughout, as dictated by the native core.

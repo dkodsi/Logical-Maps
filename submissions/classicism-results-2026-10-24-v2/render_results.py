@@ -198,6 +198,44 @@ def render(root):
         return body + ('\n' if lines[-1].strip() == '$$' else '')
 
     out = {}
+    observers = load(root, 'OBSERVER-PRINCIPLES.json')
+    observer_ids = {r['id'] for r in observers['principles']}
+    assert len(observer_ids) == len(observers['principles']), 'Duplicate observer principle'
+    for r in observers['principles']:
+        assert all(k in observers['definitions'] for k in r['definitions']), 'Missing observer definition'
+    family_rows = observers.get('family_principles', [])
+    assert len({r['id'] for r in family_rows}) == len(family_rows), 'Duplicate family principle'
+    assert not observer_ids & {r['id'] for r in family_rows}, 'Family principle reused as an individual restriction'
+    for r in family_rows:
+        assert r['formal'] and r['scope'] and r['sources'], 'Incomplete family principle'
+        assert all((root / path).is_file() for path in r['sources']), 'Missing family proof'
+    text = ['# ' + observers['title'], '',
+        'Logical observers preserve logical structure while offering different perspectives on propositions. An observer can distinguish two propositions that are both true here by returning a truth for one and a falsehood for the other. A separating family makes every difference between relations detectable.', '',
+        '**Boolean separation recovers Booleanism; logical separation recovers Classicism together with BF.** Over H, Boolean observers suffice to identify abstractions of Boolean-equivalent formulas. The richer qualification in [OS](#map-over-h) extends this to all H-provable equivalences and also entails BF: H + OS ⇒ C + BF (**Lean certified**). Both recovery claims use separation at every relational type. We begin over C, where the observer conditions have their simplest form, then give the additional clauses needed over H.', '',
+        '[Main results](MAIN-RESULTS.md) · [Candidates](CANDIDATES_DK.md) · [Structured definitions](OBSERVER-PRINCIPLES.json) · [Full connection catalogue](proofs/h-observer-space/SUMMARY.md)', '',
+        '[Logical observers](#logical-observers-over-c) · [Separation](#observer-separation) · [Principles](#observer-principles-at-a-glance) · [Simplifications](#simplifications-over-c-and-c5) · [C: familiar principles](#familiar-principles-over-c) · [C: observers](#observer-relations-over-c) · [C5](#c5-simplifications) · [Commuting families](#commuting-observer-families) · [Max(C)](#map-over-max-c) · [H: familiar principles](#familiar-principles-over-h) · [H: observers](#observer-relations-over-h) · [Mathematics](#mathematics-through-observers) · [Shift models](#shift-models) · [Lean evidence](#lean-evidence)', '']
+    overview_symbols = {symbol for section in observers['guide_sections'] if section.get('kind') == 'observer_overview' for symbol in section['symbols']}
+    for section in observers['guide_sections']:
+        text += [anchor(section['id']), '## ' + section['title'], '', section['body'], '']
+        if section.get('kind') == 'observer_overview':
+            text += ['| Principle and meaning | Additional condition $K(E)$ |', '| --- | --- |']
+            for symbol in section['symbols']:
+                r = next(r for r in observers['principles'] if r['symbol'] == symbol)
+                text += ['| ' + anchor(r['id']) + '**' + symbol + '.** ' + r.get('overview_intuition', r['intuition']) + ' | $' + r['overview_condition'] + '$ |']
+            text += ['']
+        if section.get('kind') in ('principal_table', 'further_table'):
+            group = 'principal' if section['kind'] == 'principal_table' else 'further'
+            for r in observers['principles']:
+                if r['group'] == group and r['symbol'] in section.get('symbols', [r['symbol']]):
+                    detail_id = ('details-' if r['symbol'] in overview_symbols else '') + r['id']
+                    text += [anchor(detail_id), '### ' + r['symbol'], '']
+                    if r['symbol'] not in overview_symbols:
+                        text += [r['intuition'], '']
+                    if r['symbol'] != 'OS':
+                        text += ['$$', observers['definitions'][r['symbol']], '$$', '']
+                    else:
+                        text += ['OS uses the common separation formula with no additional observer condition.', '']
+    out['LOGICAL-OBSERVERS.md'] = done(text)
     proposed = proposals['principles']
     infinitary = proposals.get('infinitary_principles', [])
     candidate_rows = [item for r in proposed for item in [r, *r.get('variants', [])]] + infinitary
@@ -239,7 +277,7 @@ def render(root):
         return lines
     text = ['# ' + proposals['title'], '',
         proposals['scope'], '',
-        '[Main results](MAIN-RESULTS.md) · [Integration review](DATABASE-INTEGRATION.md) · [Structured proposals](CANDIDATES_DK.json) · [Evaluation principles](#evaluation-principles) · [Infinitary extension](#infinitary-extension)', '',
+        '[Main results](MAIN-RESULTS.md) · [Observer guide](LOGICAL-OBSERVERS.md) · [Integration review](DATABASE-INTEGRATION.md) · [Structured proposals](CANDIDATES_DK.json) · [Evaluation principles](#evaluation-principles) · [Infinitary extension](#infinitary-extension)', '',
         '## Proposed principles', '',
         '| Subject | Principle | Reason for inclusion |', '|---|---|---|']
     for section in proposal_sections:
@@ -260,7 +298,7 @@ def render(root):
             text += ['', '#### Observer restrictions', '', '| Variant | Additional qualification | Main consequence |', '|---|---|---|']
             assert {v['id'] for v in compact['variants']} == {v['id'] for v in r['variants']}, 'Missing observer variant'
             for variant in compact['variants']:
-                label = anchor(variant['id']) + '[' + variant['label'] + '](' + compact['reference'] + '#' + variant['id'] + ')'
+                label = anchor(variant['id']) + '[' + variant['label'] + '](' + compact.get('guide_reference', compact['reference']) + '#' + variant['id'] + ')'
                 text += ['| ' + label + ' | ' + variant['qualification'] + ' | ' + variant['consequence'] + ' |']
             text += ['', compact['reference_intro'], '', proposal_status(r), '']
 
@@ -321,7 +359,7 @@ def render(root):
     assert len({h['group_ref'] for h in overview['headlines']}) == len(overview['headlines'])
     text = ['# Main results — 24 October 2026 (v2)', '',
         'Draft. The background is finitary relational **Classicism C** unless stated otherwise.', '',
-        '[Full statements, proofs and certificates](evidence/RESULT-INDEX.md) · [Previously known results formalized](#previously-known-results-formalized) · [Questions and negative results](CONJECTURES.md) · [Notation](#notation)', '',
+        '[Full statements, proofs and certificates](evidence/RESULT-INDEX.md) · [Previously known results formalized](#previously-known-results-formalized) · [Questions and negative results](CONJECTURES.md) · [Logical observers](LOGICAL-OBSERVERS.md) · [Notation](#notation)', '',
         anchor('central-results'), '## Headline results', '']
     for item in overview['headlines']:
         group = groups_by_id[item['group_ref']]
@@ -523,7 +561,7 @@ def render(root):
     text = ['# ' + questions['title'], '',
         'The background is C unless stated otherwise. “Unresolved” refers to the cited evidence, not necessarily to the literature.', '',
         '[Main results](MAIN-RESULTS.md) · [Catalog](CATALOG.md) · [Evidence](evidence/RESULT-INDEX.md)', '',
-        'The four central open questions are listed below. Claims awaiting review are separate; resolved questions and established connections are grouped in expandable sections at the end.', '',
+        'The central open questions are listed below. Claims awaiting review are separate; resolved questions and established connections are grouped in expandable sections at the end.', '',
         '| Unresolved question | Scope |', '|---|---|']
     assert {r['question_ref'] for r in questions['open_overview']} == set(next(s for s in questions['sections'] if s['id'] == 'remaining-questions')['questions'])
     text += ['| [' + r['summary'] + '](#' + r['question_ref'].lower() + ') | ' + r['scope'] + ' |' for r in questions['open_overview']]

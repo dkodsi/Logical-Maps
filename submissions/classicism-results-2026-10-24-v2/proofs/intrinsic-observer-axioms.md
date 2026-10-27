@@ -76,7 +76,7 @@ For every original input type $`\sigma`$, including $`e`$, every set $`I`$, and 
 ```math
 \exists R^{\sigma t}\;\forall x^\sigma
 \left(Rx\leftrightarrow\bigvee_{i\in I}(x=a_i)\right).
-\tag{Range∞}
+\tag{Range-infinity}
 ```
 
 The variables $`R,x`$ are fresh for the parameter family. The instance is required under **every simultaneous assignment** to those parameters. Empty $`I`$, repeated parameter values, and non-well-orderable index sets are allowed. Each instance is set sized, with no fixed cardinal bound. The scheme is fixed independently of the model to which an instance is applied.

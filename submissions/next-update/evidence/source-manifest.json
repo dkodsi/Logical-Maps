@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-25",
+  "date": "2026-10-26",
   "upstream": "a89a5058ebbd5ebe93aec07d47a1a32e3b93f8bb",
   "files": [
     {
@@ -317,7 +317,7 @@
       "source": "research/2026-10-25/observer-propagation/necessary-os-positive.md",
       "source_sha256": "67872656c273025609370271b7bd80692d3dc50fdcc536cdfc34679d843be8d1",
       "published": "proofs/necessary-observer-positive-bounds.md",
-      "published_sha256": "0f90791cb7cd271b738328ba2c42f05d48747418218081411405704a4f4c4ad7",
+      "published_sha256": "0016136748634ae9987f18dee077dfb46672e812e6f0950741ab5cca7d29036a",
       "editing": "Sections 1–4: finite modal promotion, possible finite rigidity, one-atom bounds and invariant-current-extension theorem; unsuccessful construction histories omitted.",
       "additional_sources": [
         {
@@ -491,8 +491,8 @@
       "source": "topics/classicism/writeups/vicinity-relational-choice-and-propositional-completeness-imply-actuality.md",
       "source_sha256": "d76bd4948ec56c3678356ecda1add2f33cabbf56c74cd7b1a4b703384e78b80b",
       "published": "proofs/vicinity-supported-interpretation.md",
-      "published_sha256": "5ad7c846653359ceec1942289b41d6fe7958ccc60063df3ce15d364166a5ecf5",
-      "editing": "Shared construction extracted once; common-core and supported interpretation proofs, completeness transfer, Actuality descent and persistent-proposition characterization retained. Math delimiters and links normalized; credit retained."
+      "published_sha256": "cdc816bdd882c0122ebedf3e3502754e0358b3b158c8e71f61556aeccc32dfa8",
+      "editing": "Shared construction extracted once; common-core and supported interpretation proofs, completeness transfer, Actuality descent and persistent-proposition characterization retained. Math delimiters and links normalized; credit retained. Introduction links the Choice and Actuality uses of the shared construction; the unresolved question is explicitly Vicinity."
     },
     {
       "source": "topics/classicism/writeups/vicinity-relational-choice-and-propositional-completeness-imply-actuality.md",
@@ -535,6 +535,35 @@
       "published": "proofs/box-observer-completeness.md",
       "published_sha256": "dfdfea401e4e9d44af313244f1b16eb315811c771a9954fd532456e4c0ce42e1",
       "editing": "Full mathematical proof retained; research/status preamble removed; notation and links normalized."
+    }
+  ],
+  "native_writeups": [
+    {
+      "source": "deliverables/Logical-Maps/submissions/integration-register/proofs/vicinity-relational-choice-transversals.md",
+      "source_sha256": "4c50b200b3f3a9248308c497a0317b33badb7f53a26ce2f6896dccb12effec59",
+      "published_patch": "patches/05-c5-choice.patch",
+      "published_patch_sha256": "4fdd727aabef250cf9c8ebfa510ec1211fa672a62eb5c1dbb36711f303e8420a",
+      "target": "logical-maps/topics/classicism/writeups/vicinity-relational-choice-implies-transversal-choice.md",
+      "target_sha256": "b7aafbb45a96944a019be5ed8bfd3646baed45fa1e6bfdfe4abcce5b4140877a",
+      "editing": "Research preamble shortened; links and section locators adapted to native write-ups."
+    },
+    {
+      "source": "deliverables/Logical-Maps/submissions/integration-register/proofs/atomicity-vicinity-actuality.md",
+      "source_sha256": "c83619b8e8f95164e4c831bf8b087a49fad9fa12e3a113833ac71ba09943245c",
+      "published_patch": "patches/07-propositional-zorn-actuality.patch",
+      "published_patch_sha256": "fafb0eee2cc1013c5ab27ecac4cffbffc04cd012ad6c2d701d92a318328be015",
+      "target": "logical-maps/topics/classicism/writeups/atomicity-t-and-vicinity-imply-actuality.md",
+      "target_sha256": "b3ff40764c669312f39f02f283c8d3fbfea2e7afc7fde7a28987bc6661dfa46f",
+      "editing": "Sections 1–4 retained; observer extension omitted; links adapted to native records."
+    },
+    {
+      "source": "deliverables/Logical-Maps/submissions/integration-register/proofs/modal-choice/persistent-fixed-points-and-cofinal-chains.md",
+      "source_sha256": "8c50a9f8793648617321b37c8b098bb63c2340d562adb057d34de2e2b30b9a72",
+      "published_patch": "patches/07-propositional-zorn-actuality.patch",
+      "published_patch_sha256": "fafb0eee2cc1013c5ab27ecac4cffbffc04cd012ad6c2d701d92a318328be015",
+      "target": "logical-maps/topics/classicism/writeups/persistent-fixed-points-and-cofinal-chains.md",
+      "target_sha256": "13e5d22bfb96c366bab5c6d939d97179f5ae060a6c8932662571db90f99b68fe",
+      "editing": "Full proof retained; links adapted to native write-ups."
     }
   ]
 }

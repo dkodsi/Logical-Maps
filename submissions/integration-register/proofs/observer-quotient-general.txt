@@ -1,0 +1,314 @@
+GENERAL LOGICAL CORES OVER BARE CLASSICISM
+
+Original mathematical argument, OpenAI Codex, 26 October 2026.
+Direct source: misc; the numbered proof sections below are unpaginated.
+
+1. THEOREM AND SCOPE
+
+Let M be an arbitrary general model of C in the fixed relational language,
+in its usual presentation with literal actual identity. Let an admitted
+E:tt satisfy whole Boolean preservation, whole preservation of Q_sigma
+for every admitted type sigma, and whole idempotence E composed E=E.
+One observer is specified metatheoretically; no object-language type
+quantifier or infinite premise in a finite derivation is introduced.
+
+Recursively normalize all types, then identify fixed objects that agree
+in current truth under all fixed predicates. The resulting all-sort
+logical quotient K is a general pointed model of C. Its proposition
+algebra is a Boolean quotient of Im(E). Current Functional Choice descends
+instance by instance, with the usual relational-output restriction.
+
+No ambient BF, Functionality, ND, C5, endpoint-valuedness or external
+Boolean completeness is assumed. The construction does not force BF in
+the core: E=id recovers any original C model, including models failing BF.
+
+Canonicity here means the canonical truth-compatible logical quotient for
+the specified E. The stronger comparison of different same-image observers
+is not silently imported from the earlier BF theorem; Section 8 records
+the distinction.
+
+2. NORMALIZATION IS EQUATIONAL, NOT EXTENSIONAL
+
+Use r_e=id externally, r_t=E, and at an admitted arrow put
+
+  r_(sigma tau)(f)=lambda x. r_tau(f(r_sigma(x))).           (2.1)
+
+Omit r_e at an individual input. All relational r are admitted terms.
+The whole identities r_sigma composed r_sigma=r_sigma follow by
+induction from whole E-idempotence and C's beta/eta identities. At an
+arrow, rewriting the composite produces r_tau r_tau f r_sigma r_sigma;
+replace the two whole composites by their inductive equations. No use
+is made of an inference from pointwise equality to function identity.
+
+STABLE-PREMISE ABSTRACTION LEMMA. Let P be a finite conjunction of whole
+identities, independent of a tuple zbar. Native C proves P -> Box P by
+NI and finite conjunction. Suppose an unconditional C theorem has the
+form P -> forall zbar.coext_tau(T,U), with tau relational. Necessitate
+that theorem, apply K and P -> Box P, and use native C Intensionality.
+The result is the C theorem
+
+  P -> (lambda zbar.T)=(lambda zbar.U).                    (2.4)
+
+The same conclusion follows from P -> forall zbar.(T=U), since identity
+implies coextension. Here coext_tau quantifies the terminal arguments
+of tau; all these quantifiers are INSIDE the boxed universal obtained
+by necessitating the unconditional implication. No BF is used.
+This is a derived rule for these stable premises, not an unrestricted
+rule for abstracting pointwise equalities under optional assumptions.
+It uses only native ambient C, before any core has been constructed.
+
+Set S_e=D_e and S_sigma=Fix(r_sigma). The fixed domains are nonempty.
+For fixed f at sigma tau, equational composition gives
+
+  r_tau composed f=f,             f composed r_sigma=f.     (2.2)
+
+These are whole identities. Thus application maps fixed objects to
+fixed objects and is unchanged by normalizing an input. We do NOT assert
+that a fixed arrow is determined by its values on current fixed inputs.
+Without BF that assertion can fail even for E=id.
+
+The fixed proposition algebra B_E is Im(E), with the restricted ambient
+Boolean operations and current truth predicate. Every relational fixed
+domain is closed under its defined Boolean operations, by whole Boolean
+preservation and the recursive equations.
+
+3. NORMALIZED TERMS, SUBSTITUTION AND THE TRUTH CLAUSES
+
+Write T^r for the normalized translation of a core term into M:
+
+  x^r=r_sigma(x), with x^r=x at e;
+  c^r=r_type(c)(c) for a logical or named constant c;
+  (T U)^r=T^r U^r;
+  (lambda x.T)^r=lambda x.T^r.
+
+Renaming bound variables avoids capture of E or other parameters.
+For any fixed finite list of translated terms, the following statements
+are C-derivable from a FINITE conjunction P(E) of the required whole
+observer laws. They are uniform term identities, not metatheoretic
+pointwise observations at one evaluation.
+
+  (a) T^r has fixed output: r_tau(T^r)=T^r.
+  (b) Replacing a free input x by r_sigma(x) leaves T^r unchanged.
+  (c) (T[U/x])^r = T^r[U^r/x].                            (3.1)
+
+These follow together by structural induction. In the variable case of
+(c), the right side is r_sigma(U^r), which reduces to U^r by (a).
+Constants and application use congruence and (2.2). At an abstraction,
+alpha-rename its binder. Direct whole-composite identities can be rewritten
+under the lambda; wherever an inductive equality is instead stated with
+the bound variable free, first generalize that variable under P(E) and
+apply the stable-premise abstraction lemma (2.4). P(E) contains no such
+bound variable. The induction is well-founded on smaller terms, and
+(2.4) uses only ambient C, so this is not a circular appeal to core
+soundness. Beta/eta and whole r^2=r then remove repeated normalizations
+of bound inputs. This proves lambda closure of S as an intensional
+applicative structure without inserting ambient Functionality.
+
+Normalized Boolean constants act on fixed inputs as the original Boolean
+operations. If F in S_(sigma t), then E composed F=F and F composed
+r_sigma=F. Whole Q preservation therefore gives the exact identity
+
+  E(Q_sigma F)=Q_sigma(E composed F)=Q_sigma F.             (3.2)
+
+The normalized quantifier is r_((sigma t)t)(Q_sigma); on fixed F it
+therefore returns Q_sigma F itself. Its current truth clause is
+
+  Q_sigma F true iff F(x) true for every x in S_sigma,      (3.3)
+
+because the ambient truth clause ranges over D_sigma, and the values
+on D_sigma and S_sigma have the same range by input normalization.
+Existentials follow dually. This is a current TRUTH statement. Q_sigma F
+need not be the external Boolean infimum of the current family F(x).
+
+For formulas, (3.2) and Boolean preservation mean that translating a
+logical connective or quantifier agrees literally with applying the
+original connective or quantifier to the translated body. For example
+
+  (forall x.A)^r = forall x.A^r.                           (3.4)
+
+The bound x on the right still ranges over D_sigma, but all occurrences
+in the translated body are normalized. Equation (3.4) follows by
+applying the normalized Q to the fixed translated abstraction. It is
+not a replacement of the original quantifier by a set-theoretic meet.
+
+4. INTERNAL H-PROOF TRANSLATION
+
+For each finite H proof of a formula A, there is a finite P(E), consisting
+only of whole observer identities, such that
+
+  C proves P(E) -> A^r.                                   (4.1)
+
+This is an INTERNAL syntactic proof transformation. Merely observing
+externally that S is currently H-sound would not suffice for Section 5.
+Here are its checks.
+
+Propositional axioms: by Section 3 the translated connectives are the
+original connectives on translated bodies. Each propositional axiom is
+therefore a substitution instance of the same classical tautology.
+
+Quantifier axioms: translated universal elimination reduces by (3.4)
+and (3.1) to the original elimination theorem, instantiated at U^r.
+The apparent extra normalization r_sigma(U^r) disappears by fixedness.
+Existential introduction is analogous. Distribution and the usual
+free-variable side conditions are preserved. Domains stay nonempty
+because they are images of nonempty domains under idempotent operations.
+
+Beta/eta: beta uses the substitution identity (3.1); eta uses the whole
+input-invariance identity of the translated arrow and original eta.
+These are equations, not applications of the forbidden Functionality
+inference. Equational congruence and renaming are preserved.
+
+Derived identity: the translated Leibniz formula quantifies over fixed
+predicates, as described explicitly in Section 6. Reflexivity is the
+universal closure of P(a) iff P(a). For substitution into a formula
+context A(z), abstract its normalized translation as a fixed predicate
+of z. The translated Leibniz hypothesis applies to that predicate and
+gives the required biconditional. For a term context followed by an
+identity conclusion, compose each fixed output test with the translated
+term context and repeat. This handles equality elimination through
+application and lambda contexts without using Functionality.
+
+Rules: modus ponens is preserved by Boolean compatibility. Generalization
+is preserved by (3.4); P(E) is independent of the newly bound variable.
+Capture-free substitution is (3.1). Taking the finite union of the
+observer laws used in a finite proof gives a single finite P(E).
+
+Equivalently the usual inductive H soundness proof has been performed
+inside C under P(E). Original identity has not been substituted for the
+translated fixed-test identity. No C Logical Equivalence inference is
+being assumed as a rule of H.
+
+5. THE NECESSITY OF IDENTITY REMOVES THE BARCAN OBSTRUCTION
+
+Each conjunct of P(E) is a WHOLE object identity. C's Necessity of
+Identity, followed by finite conjunction, proves
+
+  P(E) -> Box P(E).                                       (5.1)
+
+Let H prove A iff B. Apply Section 4, and universally close the variables
+to be abstracted, to obtain the unconditional C theorem
+
+  P(E) -> forall zbar.(A^r iff B^r).                       (5.2)
+
+Any remaining free parameters can first be universally closed and then
+instantiated using necessitated universal elimination. No BF direction
+is used. Necessitate the UNCONDITIONAL C theorem (5.2). Modal K and
+(5.1) give the C consequence
+
+  P(E) -> Box forall zbar.(A^r iff B^r).                   (5.3)
+
+In a model satisfying the stated whole observer laws, P(E) holds. C's
+Intensionality now yields the literal original-object identity
+
+  (lambda zbar.A^r)=(lambda zbar.B^r).                     (5.4)
+
+Those are exactly the admitted normalized abstractions in S. This proves
+C's Logical Equivalence gate for the fixed prestructure, before taking
+its identity quotient.
+
+The crucial move is to establish (5.2) by a finite proof transformation,
+and then use the stability of its identity premises. We never infer
+necessity from arbitrary current pointwise truth, never necessitate an
+optional unboxed premise, and never regard equivalence under observer
+assumptions as an H theorem. The H theorem is the original A iff B;
+the transformed conditional (5.2) is an unconditional C theorem.
+
+Sections 3-4 supply current H truth and rules in S; (5.4) supplies all C
+Logical Equivalence instances. Hence S validates C as an intensional
+typed logical prestructure, although its native actual identity may
+identify different members of a fixed domain. The next step repairs
+precisely that issue.
+
+6. THE ALL-SORT LOGICAL QUOTIENT
+
+For a,b in S_sigma define the core Leibniz proposition Delta_sigma(a,b)
+by quantifying P(a) iff P(b) over the fixed predicates S_(sigma t), using
+the normalized quantifier. Section 3 makes this an admitted fixed value.
+By the whole Boolean and predicate-quantifier observer laws,
+
+  Delta_sigma(a,b)=E(delta_sigma^M(a,b)).                  (6.1)
+
+To verify this without a Boolean-infimum argument, expand the ambient
+Leibniz definition and commute E through its Q and biconditional.
+Its predicate body is E(P(a)) iff E(P(b)). On fixed a,b this is exactly
+the value of the fixed predicate r_(sigma t)(P). Its quantification over
+all original P is the translated fixed-predicate quantification from
+(3.4). This is a term calculation, not an inference from equality of
+the current ranges of unrelated quantifier operations.
+
+Define a~_sigma b iff Delta_sigma(a,b) is currently true. By (3.3),
+
+  a~b iff every fixed predicate gives a,b the same truth.  (6.2)
+
+This is an equivalence relation at each type. At t, the normalized
+identity test E distinguishes true from false fixed propositions, so
+truth is constant on ~ classes and Top is not equivalent to Bottom.
+
+For every normalized term context T(z) and every fixed output test P,
+the context lambda z.P(T(r_sigma(z))) is an admitted fixed predicate,
+by Section 3. Therefore a~b implies T(a)~T(b). This proves congruence
+for applications, logical constants, quantifiers and lambda parameters.
+
+Set K_sigma=S_sigma/~_sigma at EVERY type. Induce term interpretation
+and Boolean operations from S, and let [p] be true iff p is currently
+true. The truth clauses for quantifiers follow directly from (3.3):
+quantifying over all fixed representatives is equivalent to quantifying
+over all classes, because predicate values are congruent. No selection
+of a representative from every class is needed.
+
+The quotient's native Leibniz proposition at [a],[b] is [Delta(a,b)].
+It is true iff a~b, hence iff [a]=[b]. Thus K has literal actual identity.
+Induction on formulas preserves current truth from S to K. Since S
+validates H and the C gate, K is an identity-separated pointed C model.
+
+At t this is the Boolean quotient Im(E)/~_t. Its Top class is a proper
+Boolean filter contained in the ambient current ultrafilter. The
+quotient can be nontrivial on propositions as well as individuals.
+
+7. CURRENT FUNCTIONAL CHOICE DESCENDS WITHOUT BF
+
+Assume M satisfies FC_(sigma,tau), where tau is relational. Let [R] be
+a serial core relation; choose its representative R in S_(sigma tau t).
+For each original input u, normalize to r_sigma(u). Core seriality gives
+some fixed y with R(r_sigma(u),y) true. Exact input invariance makes
+R(u,y) the same proposition. Therefore R is originally currently serial.
+
+Ambient FC supplies an admitted f:sigma tau with R(u,f(u)) true for
+every original u. Put g=r_(sigma tau)(f). For fixed x,
+
+  g(x)=r_tau(f(x)),
+  R(x,g(x))=R(x,r_tau(f(x)))=R(x,f(x)).                     (7.1)
+
+The last equality is the whole target-input invariance of fixed R.
+Consequently [g] selects [R] in K. Well-definedness on classes is already
+provided by quotient congruence. The argument applies an observer to no
+merely true graph entry and chooses no class-representative function.
+
+This strengthens the earlier arbitrary-image transfer result: neither
+ambient BF nor triviality of the proposition quotient is required for
+current FC inheritance. No analogous unrestricted current BC transfer
+is claimed, because quotienting can change the order of relational objects.
+
+8. CANONICITY AND LIMITS
+
+For fixed E, ~ is the largest typed term congruence respecting current
+truth: any such congruence must identify objects only when every fixed
+test agrees in truth, and Section 6 proves that this test relation is
+itself a congruence. Any sortwise-surjective, truth-preserving and
+truth-reflecting logical homomorphism from S onto an identity-separated
+model has this same kernel, because all target tests lift. Hence its
+target is canonically isomorphic to K.
+
+For E=id, normalization is literally the identity at every type, and
+ambient identity separation makes ~ literal equality. Thus K=M. This
+explains why the construction cannot generally prove BF or external
+actual-function representation for its result.
+
+The old C+BF same-image comparison used Functionality to upgrade
+pointwise EF=F and FE=E to whole identities. We do not use that step
+here or assert the unrestricted same-image comparison. Whole mutual
+triple identities, if independently available, still permit the earlier
+equational comparison. The bare-C endpoint comparison remains proved
+by its separate endpoint-extensionality argument.
+
+Necessary BF descends under necessary BF. The same-image comparison without BF is refuted by observer-same-image-countermodel.txt; the positive BF comparison is in observer-quotient-bf.txt, Section 6.

@@ -1,6 +1,6 @@
 # Positive bounds under necessary observer separation
 
-Over C5, necessary separation makes each supported Choice, completeness and comprehension instance modally constant. For CH and first-order analysis at a fixed carrier, separately possible unary, binary and ternary Rigid Comprehension suffice. General CH propagation from C5 + ☐OS alone remains unresolved.
+Over C5, necessary separation makes each supported Choice, completeness and comprehension instance modally constant. For CH and first-order analysis at a fixed carrier, separately possible unary, binary and ternary Rigid Comprehension suffice. The [finite-support symmetric construction](../../integration-register/proofs/observer-analysis/necessary-os-ch-inaccessible-countermodel.md) refutes general CH propagation under C5 + ☐OS, starting from a strongly inaccessible cardinal. Its fixed real field is persistent and necessarily complete for nonempty bounded admitted subproperties.
 
 ## 1. From reflection to modal constancy
 

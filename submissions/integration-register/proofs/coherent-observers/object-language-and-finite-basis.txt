@@ -1,0 +1,154 @@
+COMMUTING OBSERVER SEPARATION: THE OBJECT-LANGUAGE PRINCIPLE
+26 October 2026. Ordinary mathematics by OpenAI Codex.
+Direct source for the formulations and deductions: misc, Sections 1-5,
+unpaginated. Independently reviewed ordinary argument; see
+../../evidence/coherent-observer-review.json for scope. No Lean certification.
+
+1. THE PRINCIPLE OVER THE FIXED BASE C
+
+An observer is an object E:tt. A family is an admitted predicate K:(tt)t.
+Write I=lambda p.p and E o F=lambda p.E(Fp). Application in the formulas
+below is explicitly parenthesized when needed.
+
+For a finite external list Delta of types, Logical_Delta(E) is the
+conjunction of these WHOLE-OPERATION identities:
+
+  (lambda p.E(not p)) = (lambda p.not(Ep));
+  (lambda p,q.E(p and q)) = (lambda p,q.Ep and Eq);
+
+and, for each sigma in Delta,
+
+  (lambda F:sigma t.E(forall x:sigma.Fx))
+    = (lambda F:sigma t.forall x:sigma.E(Fx)).
+
+Over C these clauses are equivalent to the established Good_Delta:
+disjunction and existential preservation follow from the unconditional
+De Morgan identities and substitution into the displayed whole identities.
+Boolean preservation supplies the endpoint and translated identity laws.
+This reduction is not asserted over bare H.
+
+For tau=sigma_1 ... sigma_n t define
+
+  Separates_tau(K) :=
+    forall X,Y:tau.
+      [forall E:tt. KE -> forall x_1:sigma_1 ... x_n:sigma_n.
+        (E(X[xbar]) iff E(Y[xbar]))] -> X=Y.
+
+When tau=t the argument tuple is empty. The principle is
+
+  CoSep_(tau,Delta) := exists K:(tt)t.
+       [forall E:tt. KE -> Logical_Delta(E)]
+   and [forall E,F:tt. KE and KF -> E o F = F o E]
+   and Separates_tau(K).                                      (1)
+
+The full CoSep theory consists of these finitary sentences for each
+relational tau and each finite Delta. There is no object-language type
+quantification and no conjunction over infinitely many types.
+
+Plain English: an internally available family of logical operations
+commute pairwise and collectively distinguish every distinct relation.
+Separation is actual truth-value disagreement; commutation and logical
+preservation are identities of operations. These roles must not be swapped.
+
+Membership KE is current membership. The principle does not require K to
+have endpoint values, or to be supplied as the image of an operation
+i |-> E_i. Those are additional conditions and cannot silently be imposed.
+CoIdemSep adds forall E.(KE -> E o E=E).
+
+2. OVER C5, ONE FINITE SENTENCE SUFFICES
+
+Theorem. Over C5, the full CoSep schema is equivalent to
+CoSep_(t,{t}). The SAME K witnesses all relational output types and all
+finite qualification lists. Likewise for CoIdemSep.
+
+The forward implication is an instance. Conversely, the observer
+quantifier-reduction theorem says that over C5 each Boolean Q_t observer
+preserves every admitted typed quantifier. It changes neither the observer
+nor its qualification at the original type. Consequently each current
+K-member qualifies at every requested finite list, retaining commutation
+and, if required, idempotence.
+
+C5 supplies Functionality at all types. If X!=Y at a relational output
+type, repeated use of its contrapositive supplies an argument tuple with
+X[xbar]!=Y[xbar] as propositions. Propositional separation supplies a
+current K-member distinguishing those values. This proves the full claim.
+
+For clarity, the quantifier-reduction argument is not an assumption of
+standard higher domains. For F:sigma t form its admitted range predicate
+I_F(p):=exists x:sigma.Fx=p. Under C5, identity is endpoint-valued and BF
+makes I_F(p) endpoint-valued too. The observer therefore fixes I_F(p).
+Rewrite forall x.Fx as forall p.(I_F(p)->p); use Q_t and Boolean laws;
+rewrite back to forall x.E(Fx). The persistent-premise/Intensionality
+argument in the source upgrades this to the required whole Q_sigma
+identity. This is why the SAME observer qualifies at all types.
+
+Thus the object-language principle relevant to the C5 research is one
+finite sentence using only t, tt, and (tt)t. Individual types and all
+higher relational instances are recovered from the base and this sentence.
+
+3. AN EVEN SHORTER QUALIFICATION OVER C5
+
+Under C5, Logical_{t}(E) in (1) can be replaced by the TWO identities
+
+  N(E): (lambda p.E(not p)) = (lambda p.not(Ep));
+  Q(E): (lambda F:tt.E(forall p:t.Fp))
+          = (lambda F:tt.forall p:t.E(Fp)).
+
+Q_t already entails whole conjunction preservation over C+BF_t+.2,
+and C5 supplies these premises. To see the essential calculation, C5
+admits an endpoint selector, hence a proposition-indexed binary-range
+family with designated values p and q. Its universal value is p and q;
+the universal value of its E-image is Ep and Eq. Apply Q_t. NI and BF_t
+upgrade the pointwise identities to the whole binary operation identity.
+Negation supplies disjunction and endpoint laws by Boolean identities.
+
+Accordingly a compact exact formulation over C5 is
+
+  exists K:(tt)t.
+       [forall E. KE -> N(E) and Q(E)]
+   and [forall E,F. KE and KF -> E o F = F o E]
+   and [forall p,q. (forall E. KE -> (Ep iff Eq)) -> p=q].    (2)
+
+Over C5 Functionality also permits the displayed whole identities to be
+written as universally quantified output IDENTITIES. Replacing '=' by
+material equivalence would be a different condition.
+
+4. INTERNAL MONOID FORM
+
+One may additionally require K(I) and
+
+  forall E,F. KE and KF -> K(E o F),
+
+without changing CoSep. Define the monoid closure of a witness K by
+
+  K*(E) := forall P:(tt)t.
+    [PI and (forall F.KF -> PF)
+        and (forall F,G.PF and PG -> P(F o G))] -> PE.
+
+This admitted predicate contains I and K and is composition-closed.
+For every fixed finite Delta, Logical_Delta is a composition-closed
+predicate containing I and K; thus every K*-member is qualified.
+For each k in K, the predicate of operations commuting with k contains
+I and K and is composition-closed. Therefore K* commutes with K.
+Repeat for a fixed member of K* to obtain pairwise commutation in K*.
+Separation persists by inclusion. If K consists of idempotents, the
+predicate K*(E) and E^2=E is closed under composition, now using mutual
+commutation, so the same defining induction gives idempotence throughout.
+
+This is internal higher-order induction over admitted predicates. It is
+not an assertion that an external finite-word family is an admitted set.
+
+5. SOURCES AND STATUS
+
+The family formulation and closure argument retain coherent-families.txt,
+Sections 1 and 3. The qualification reduction is the existing independently
+reviewed ordinary theorem in ../../../classicism-results-2026-10-24-v2/proofs/modal-selectors-and-quantifier-reduction.md, Sections 2 and 4. The observer
+definitions and equality-clause reduction are in ../../../classicism-results-2026-10-24-v2/proofs/logical-observer-hierarchy.md,
+Section 1. The new deduction here is the exact finite
+CoSep/CoIdemSep basis and its application to these internal families; no
+new proof of the earlier individual-observer reduction is attributed here.
+
+Necessary CoSep means the box of (2), equivalently the separately boxed
+full instances over C5. It does NOT follow merely by boxing the current
+premise. The isolated-point countermodel in this folder refutes that
+implication, even for current full CoIdemSep.

@@ -53,6 +53,7 @@ Research submission: results, proofs and exact certificate scope.
 
 - **Classicism can be reconstructed without primitive lambda.** Lean certified. [Proof and certificate](evidence/RESULT-INDEX.md#lambda-free-translation).
 - **Beta identity plus a theorem rule yields contextual beta eta.** Lean certified. [Proof and certificate](evidence/RESULT-INDEX.md#beta-eta-conversion).
+- **Endpoint separation and boxed Infinitary Comprehension reconstruct full standard models over λ-free H.** Lean certified: Full representation and converse for the native original-type λ-free H formulation, in Lean’s classical metatheory. The choice-free ZF argument retains its ordinary-proof status. [Proof and certificate](evidence/RESULT-INDEX.md#lambda-free-endpoint-comprehension).
 - **Infinitary Comprehension and C5 characterize full standard models.** Lean certified: For universe-0 categorical premodels, term-denotation closure + unrestricted original-closed-type Infinitary Comprehension + ☐ND (type t) imply faithful full-standard representation; full standard models satisfy the corresponding infinitary axioms. [Proof and certificate](evidence/RESULT-INDEX.md#infinitary-comprehension).
 - **Actual-truth evaluators and current extensional cores.** Lean certified: Actuality-core conversion and admitted-value lemmas. [Proof and certificate](evidence/RESULT-INDEX.md#evaluators-cores).
 - **Stable atoms are exactly what diagonal separation requires.** Lean certified. [Proof and certificate](evidence/RESULT-INDEX.md#diagonal-characters).

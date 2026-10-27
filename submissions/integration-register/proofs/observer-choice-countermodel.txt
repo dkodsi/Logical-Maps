@@ -1,0 +1,208 @@
+CHOICE AT A FREE ORBIT, FAILURE IN AN ENDPOINT CORE
+26 October 2026. Original argument by OpenAI Codex.
+Direct source: misc, this note, Sections 1-8, unpaginated.
+Ordinary mathematics in ZFC; no human or Lean certification.
+
+1. RESULT
+
+There is a C5 model satisfying full current Observer Separation and all
+current Relational Choice and Transversal Choice instances, with an
+admitted endpoint observer E
+preserving Booleans and EVERY typed quantifier as whole operations,
+whose canonical classical core fails Relational Choice and Transversal
+Choice. The core fails TC_e and already RC_(e,e). No coalescence of identities
+is used: ambient identity is crisp at every type and every index.
+
+The construction uses the familiar finite-support idea, but puts a fixed
+observer index beside a free group orbit. The free orbit permits arbitrary
+current relation extensions. The fixed index retains the usual symmetry
+obstruction to choosing one element of each pair.
+
+2. GROUP, INDIVIDUALS AND BOOLEAN VALUES
+
+Let G=(Z/2Z)^N, the group of all binary sequences under addition mod 2.
+For finite J subset N, let G_J={g:g(n)=0 for all n in J}.
+An object has finite support if G_J fixes it for some finite J.
+
+Let A=N x {0,1}, with g(n,i)=(n,i+g(n)). Let
+
+  W={*} disjoint-union G.
+
+G fixes * and acts on its own copy by left translation. W is an external
+index set; its free-orbit points need NOT be finitely supported objects.
+Let B be the Boolean algebra of all finitely supported subsets of W,
+with the induced translation action. Equivalently B consists of clopen
+subsets of Cantor G, independently with or without the point *.
+Top=W and Bottom=empty. Actual truth means membership of the identity
+1_G (the zero sequence), not membership of *.
+
+3. FULL FINITE-SUPPORT FUNCTION HIERARCHY
+
+Set D_e=A and D_t=B. Recursively, for every permitted arrow sigma tau,
+let D_(sigma tau) be ALL finitely supported set-functions D_sigma->D_tau,
+under the conjugation action
+
+  (g f)(x)=g(f(g^(-1)x)).
+
+Every domain is a G-set all of whose elements have finite support.
+Application is ordinary function evaluation. There are no arrow types
+ending in e. Nonemptiness follows from supported constant functions.
+
+The Boolean operations are equivariant and admitted. For admitted
+F:D_sigma->B define Q_sigma(F)=intersection_{x in D_sigma} F(x).
+If J supports F, G_J fixes this intersection, since it permutes D_sigma.
+Thus the intersection belongs to B. Moreover Q_sigma is equivariant,
+so Q_sigma itself belongs to D_((sigma t)t). Existentials are unions.
+
+Every lambda denotation is finitely supported: the finite union of the
+supports of its finitely many parameters supports the denotation, by
+the usual equivariance induction on terms. This proves full lambda
+closure, including unrestricted typed quantifiers. Beta and eta are
+literal function identities. At every index w in W, quantifiers have
+the ordinary truth clauses because they are literal intersections and
+unions.
+
+For any a in D_sigma the haecceity H_a(x)=Top iff x=a (Bottom otherwise)
+is finitely supported by any support of a, hence admitted. Derived
+Leibniz equality is therefore exactly Top for identical objects and
+Bottom for distinct objects, at EVERY type.
+
+Boolean-valued H soundness follows from the Boolean laws, intersections,
+unions, literal beta/eta and crisp identity. An H equivalence has equal
+Boolean values under every assignment, so its abstractions are identical
+actual functions. This is exactly C's Logical Equivalence gate. Every
+ND instance and its necessity have value Top, proving C5. BF is likewise
+necessary: intersection_x Box(F(x))=Box(intersection_x F(x)), since each
+side is Top exactly when every F(x) is Top, and Bottom otherwise. Hence
+every closed BF instance has value Top, and so does its necessity.
+
+4. EVERY CURRENT EXTERNAL RELATION IS REPRESENTED
+
+Let R be ANY external subset of D_sigma1 x ... x D_sigman. Define
+
+  V_R(xbar)={g in G : R(g^(-1)xbar)},
+
+and stipulate * is never in V_R(xbar). Here the action on the tuple is
+coordinatewise. For h in G,
+
+  V_R(h xbar)=h V_R(xbar).
+
+Consequently V_R(xbar) has finite support: a finite union of supports
+of the arguments fixes the tuple and hence its value. Thus each value
+belongs to B. The whole map V_R is equivariant, so its curried form is
+an admitted relational object with empty support. More explicitly each
+partially applied map is supported by its already supplied arguments;
+this verifies admission at every intermediate curried arrow type.
+
+At the actual index 1_G, V_R(xbar) is true exactly when R(xbar).
+Thus every external relation at every admitted finite arity has a
+current representative. For any currently serial admitted relation,
+external ZFC choice gives a functional subrelation of its actual
+extension; V_R represents that graph. This proves RC at ALL types,
+including RC with individual outputs. External selection from the
+actual equivalence classes similarly proves every current TC instance.
+
+No claim of Plenitude is made. Representing an external GRAPH by a
+relation does not represent the corresponding operation on intensional
+objects. No claim that choice holds at * is made either.
+
+5. THE ENDPOINT OBSERVER
+
+Define E:B->B by E(b)=Top if * belongs to b and E(b)=Bottom otherwise.
+Because * is G-fixed, E is equivariant and belongs to D_tt with empty
+support. It is endpoint-valued, Boolean and idempotent. For EVERY type
+sigma and every admitted F,
+
+  E(Q_sigma F)=Q_sigma(lambda x.E(F(x))).
+
+Indeed membership of * commutes with literal intersection. The objects
+on both sides of each observer qualification are actual functions;
+their pointwise equality therefore is whole-object equality. This
+supplies one observer qualified simultaneously at all admitted types.
+
+6. ITS CORE IS THE CLASSICAL FINITE-SUPPORT HIERARCHY
+
+Independently form N_e=A, N_t={0,1}, with trivial action at t, and let
+N_(sigma tau) be all finitely supported functions N_sigma->N_tau.
+Use ordinary two-valued logical constants. This is a classical Henkin
+model by the same support and lambda-closure argument as above.
+
+Let r be the usual normalizers for E and let S_sigma=Fix(r_sigma).
+All r are equivariant. By induction S_sigma is equivariantly isomorphic
+to N_sigma. The base cases are A and the two endpoints. At an arrow,
+restrict an S-fixed function to fixed inputs and use the inductive
+isomorphisms. Its induced N-function has finite support. Conversely,
+any finitely supported N-function extends to an ambient function by
+first applying r_sigma, then the inductive identifications, then that
+N-function, then the inverse identification into S_tau. This extension
+is finitely supported, admitted, and r-fixed. These constructions are
+inverse and preserve application, lambda interpretation and quantifiers.
+
+Hence the canonical endpoint core is exactly N. Ambient C5 makes all
+identities crisp, so no individual or other quotient is needed here.
+
+In N the equivalence relation on A given by equality of the first
+coordinate is invariant. Any TC_e witness would select one atom from
+each pair P_n={n}x{0,1}. If finite J supports the witness, choose n not
+in J. The flip at coordinate n fixes the witness but exchanges the
+two atoms of P_n, contradicting unique selection. Thus N fails TC_e.
+
+For a direct RC failure already at (e,e), use the invariant serial
+relation
+
+  R((n,i),(m,j)) iff m=n+1.
+
+It has empty support, so is admitted in N. Suppose a functional
+subrelation S has finite support J. Choose k>=1 outside J and put
+x=(k-1,0). The flip at coordinate k fixes x and S, but exchanges the
+two allowed outputs (k,0),(k,1). Thus exactly one cannot be selected.
+This proves failure of RC_(e,e). This sharper witness was supplied and
+independently checked by the coordinating AI agent.
+
+7. CURRENT OBSERVER SEPARATION ALSO HOLDS
+
+For each h in G let O_h(b)=h b, the translate of b. Because G is abelian,
+O_h is equivariant under the conjugation action on D_tt, hence admitted
+with empty support. Translation preserves Booleans and arbitrary literal
+intersections, so O_h obeys EVERY typed Q law as a whole identity.
+
+At the actual identity index, O_h(b) is true iff h^(-1) belongs to b.
+If two propositions differ somewhere on G, one such translation
+distinguishes them in current truth. If they differ at *, the endpoint
+observer E distinguishes them. Thus these fully qualified observers
+separate all propositions. Distinct relational objects are distinct
+actual functions, so repeated application to suitable arguments yields
+distinct propositions. Applying the appropriate O_h or E then supplies
+the relational OS witness. This verifies full current OS at every
+finite quantifier qualification list, indeed using witnesses qualified
+at all types simultaneously.
+
+This argument makes no claim about necessary OS or reversible separation.
+
+8. BOUNDARIES AND SOURCES
+
+B has exactly one atom, {*}, and its Cantor component is atomless. Thus
+propositional Atomicity fails, and the actual ultrafilter at 1_G contains
+no atom: Actuality fails. This avoids C5+Atomicity's NPC route. B is not
+externally complete. Since Section 4 represents every external subset
+of B by a current predicate, internal BC_t would force external Boolean
+completeness; therefore BC_t also fails.
+
+An explicit missing join is the family of cylinders C_n with n even,
+where C_n consists of sequences whose first 1 is at coordinate n.
+Any clopen upper bound must contain the zero sequence, a limit point,
+and therefore contains some odd C_m as well. Removing that C_m gives
+a strictly smaller clopen upper bound. The isolated point * does not
+change this argument.
+
+The model is constructed in ordinary ZFC without assuming a model of
+ZF without Choice. Its core's failed selection is verified directly by
+coordinate flips, not imported from a relative-consistency record.
+
+Background finite-support method: Bacon-Dorr Classicism Appendix D,
+Proposition D.5, as indexed by native finite-support-permutations.yaml.
+That source is background only, not an attribution of the present
+fixed-point-plus-free-orbit construction or core noninheritance proof.
+Core definitions: research/2026-10-25/observer-core-development/
+mathematics.txt Sections 1 and 4, and general-observer-principles/
+structure.txt Sections 1-5. Direct source of this argument is misc above.

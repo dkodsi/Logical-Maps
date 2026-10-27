@@ -140,6 +140,6 @@ The unchanged model therefore verifies
 \tag{12}
 ```
 
-In particular $`J_t`$⇒$`K_t`$ is refuted. The additional premise OS in the remaining comparison is essential to its formulation: the question whether C5+OS+$`J_t`$ implies Rev or $`K_t`$ is not settled by (12). Nor does the existence of this individual injective E establish injective separation.
+In particular $`J_t`$⇒$`K_t`$ is refuted. The additional premise OS in the remaining comparison is essential to its formulation: the stronger failure of C5+OS+$`J_t`$ implying Rev or $`K_t`$ is proved by the separate [rigid Souslin model](rigid-souslin-injective-separation.md). Nor does the existence of this individual injective E establish injective separation.
 
 The new embedding, inverse and J/¬K verdict are by OpenAI Codex, prompted by Daniel Kodsi, 24 October 2026: direct source `misc`, this note, §§1–5, unpaginated. The full-function construction, its C5 verification and the complete-character argument retain their proof and attribution in [Injective observers and Boolean transversals](injective-observers-and-boolean-transversals.md), §§4–6. The meanings and whole-operation scope of J and K are in [Injective separation decomposition](injective-separation-decomposition.md), §§1 and 6; the finite-generation consequence uses the linked theorem. No claim is attributed to a published source for the new argument.

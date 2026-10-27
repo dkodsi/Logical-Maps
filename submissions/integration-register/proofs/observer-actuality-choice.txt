@@ -1,0 +1,123 @@
+ACTUALITY RESTORES CHOICE IN EVERY CLASSICAL OBSERVER CORE
+26 October 2026. Ordinary mathematical proof by OpenAI Codex.
+Direct source: misc, this note Sections 1-5, unpaginated.
+No native records changed; no human or Lean certification.
+
+1. THEOREM
+
+Let M satisfy C5 + Actuality + full current Relational Choice. Then
+every fully qualified endpoint observer has a canonical classical core
+satisfying full Functional Choice, Relational Choice and Transversal
+Choice. Only current choice is assumed. No Atomicity schema is needed.
+
+Two useful corollaries are:
+
+  C5 + Actuality + current TC_all has the same conclusion;
+  C5 + BC_t + current RC_all has the same conclusion.
+
+The first uses the established TC_all -> RC_all theorem. The second
+uses the proved native result c5-relational-choice-and-propositional-
+completeness-imply-actuality. That result's proof uses RC_(t,t); the
+full RC premise displayed here also supplies the remaining core choice
+instances. It is not asserted that RC_(t,t) alone yields full core choice.
+
+2. ACTUALITY SUPPLIES AN ACTUALLY CORRECT ENDPOINT OBSERVER
+
+Use the C5 presentation: proposition algebra B, current ultrafilter U,
+crisp identity, actual-function arrow domains and Boolean infima for
+admitted quantified families. An Actuality witness a is in U and obeys
+
+  p in U => a <= p.
+
+Conversely a<=p implies p in U. For every p either p or its complement
+belongs to U. Thus a lies below one of p and its complement. Since a is
+nonzero, this makes a a Boolean atom. In particular
+
+  p is currently true iff a<=p.
+
+Define the admitted operation
+
+  E_a(p)=Box(a -> p).
+
+C5 makes Box(q) Top or Bottom, so E_a(p) is Top exactly when
+a<=p. The principal ultrafilter of an atom respects complements and
+finite meets/joins, hence E_a is Boolean, fixes endpoints, and is
+idempotent. For any admitted F:sigma t,
+
+  a<=Q_sigma(F) iff a<=F(x) for every x in D_sigma.
+
+This follows from the actual Boolean-infimum property supplied by C5;
+no external completeness of B is needed. Consequently
+
+  E_a(Q_sigma F)=Q_sigma(lambda x.E_a(F(x))).
+
+Both sides are the same endpoint. Existentials follow by Boolean duality.
+Ambient Functionality collects the pointwise equations into whole
+operation identities. Thus this one observer is fully qualified at all
+types and is actually truth-correct: E_a(p) is true iff p is true.
+
+3. RELATIONAL CHOICE DESCENDS
+
+The earlier observed-choice theorem says that E(RC_(sigma,tau)) being
+currently true suffices for the E-core to satisfy that RC instance,
+including tau=e. Apply it to E_a. Truth-correctness makes each required
+observed choice assertion true, so the E_a-core satisfies full RC.
+
+For clarity, the theorem does not simply normalize a merely true graph.
+For a serial core relation R, apply the observed RC assertion to the
+ambient guarded relation R(r_sigma(x),y) and Fix_tau(y). Expanding the
+observer through its Boolean and quantifier laws produces a graph whose
+E-observed values form a functional selector. Normalizing its arguments
+then yields a selecting relation in the core. C5 supplies the required
+crisp equality clauses.
+
+All fully qualified endpoint cores of a C5 model are canonically
+isomorphic as pure pointed logical models. Hence every such core, not
+only the one associated with the actual atom, satisfies these RC
+instances. This does not assert observer-independent interpretations of
+arbitrary named relational parameters.
+
+4. THE CLASSICAL CORE ALSO HAS FC AND TC
+
+An endpoint core is an extensional, two-valued Henkin model.
+
+For Functional Choice, let S(x,y) be a total functional subrelation of
+a serial R(x,y), with relational output type tau=sigma_bar t. Define
+
+  f(x)[zbar] iff exists y. S(x,y) and y[zbar].
+
+This is an admitted lambda term. For each x its value is coextensive
+with the unique S-selected y. Core Extensionality makes f(x)=y, giving
+the required operation. The empty output-argument tuple (tau=t) is
+included. No operation with codomain e is introduced.
+
+For TC at sigma use RC_(sigma t,sigma) on the serial membership-with-
+default relation U(P,y):=P(y) or not exists z.P(z). Let S(P,y) be its
+functional subrelation. For an equivalence relation R, put
+
+  C_x=lambda z.R(x,z),
+  T(y)=S(C_y,y).
+
+All cells are nonempty. If y is the S-selected member of C_x, then
+C_y=C_x by core Extensionality and the equivalence laws, so T(y).
+Any other T-member z of C_x satisfies C_z=C_x, so S uniqueness gives
+z=y. Thus T is a transversal. This is the usual classical conversion,
+made explicit to expose the type-instance requirement.
+
+5. SOURCES AND SCOPE
+
+Observed RC transfer:
+  research/2026-10-25/observer-core-development/mathematics.txt Section 4.
+Endpoint-core canonicity and classicality:
+  research/2026-10-25/general-observer-principles/structure.txt Sections 3-5.
+  The later bare-C endpoint theorem strengthens these assumptions but is
+  not needed for this corollary.
+Actuality and RC definitions:
+  topics/classicism/principles/actuality.yaml and relational-choice-r.yaml.
+The BC_t sufficient premise:
+  topics/classicism/results/
+  c5-relational-choice-and-propositional-completeness-imply-actuality.yaml.
+
+The new corollary explains why the preceding countermodel must exploit
+failure of Actuality. It proves a sufficient repair, not a claim that
+Actuality is necessary whenever a particular core happens to have choice.

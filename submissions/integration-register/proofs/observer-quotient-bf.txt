@@ -1,0 +1,241 @@
+GENERAL OBSERVER CORES BY LOGICAL QUOTIENT
+
+Original mathematical argument, OpenAI Codex, 26 October 2026.
+Direct source: misc; the numbered proof sections below are unpaginated.
+
+1. THE TARGET AND THE POSITIVE RESULT
+
+Work in the fixed relational language of C. Assume all-type BF in the
+ambient pointed model M. Let E:tt be an admitted observer satisfying the
+WHOLE Boolean identities, every WHOLE typed quantifier identity, and the
+WHOLE identity E composed with E = E. Qualification at every type refers
+to one metatheoretically specified observer, not an object-language type
+quantifier. No identity-fixing assumption is imposed on E.
+
+The normalized hierarchy always has a canonical logical quotient which
+is a general model of C. All types, including the proposition type, must
+be eligible for quotienting. Its proposition algebra is a quotient of
+Im(E), not in general Im(E) itself. Observers with the same image give
+canonically isomorphic pointed quotient cores.
+
+Necessary BF descends to necessary BF. Current ambient BF is a different hypothesis from necessary BF.
+
+2. NORMALIZED PRESTRUCTURE AND ITS ACTUAL TRUTH CLAUSES
+
+BF gives Functionality. Use the ambient actual-function presentation:
+D_t is the Boolean algebra B, current truth is an ultrafilter U, and
+admitted quantified predicates have Boolean infima together with the
+ordinary current quantifier truth clauses. Identity need not be crisp.
+These are the same ambient inputs used in the preceding C+BF theorem.
+
+Define r_e=id externally, r_t=E, and
+
+  r_(sigma tau)(f) = lambda x. r_tau(f(r_sigma(x))).
+
+No ee object is introduced. All relational normalizers are admitted.
+Whole idempotence gives whole r_sigma squared = r_sigma by induction.
+Set S_e=D_e and S_sigma=Fix(r_sigma) at relational types. A fixed arrow
+f obeys r_tau f=f and f r_sigma=f. Thus it maps fixed inputs to fixed
+outputs and is determined, as an AMBIENT object, on fixed inputs.
+
+All S_sigma are nonempty. For relational sigma they are Boolean
+subalgebras. The fixed proposition algebra is B_E=Im(E). A fixed
+predicate F:sigma t satisfies E F=F and F r_sigma=F. Consequently
+
+  E(Q_sigma F)=Q_sigma(E F)=Q_sigma F,
+
+and the value range of F on D_sigma is exactly its range on S_sigma.
+Thus the normalized quantifier has value Q_sigma F and computes its
+Boolean infimum over S_sigma. Moreover
+
+  Q_sigma F belongs to U iff F(a) belongs to U for every a in S_sigma.
+
+The corresponding existential assertion holds as well. These are
+current truth clauses in addition to Boolean infimum identities.
+
+Boolean operations restrict to B_E. Interpret logical constants by
+their recursive normalizations. For lambda closure, translate a core
+term to M by normalizing variables, using these normalized constants,
+preserving application, and abstracting the translated body. Induction
+gives fixed outputs and invariance under normalizing each free input.
+The abstraction is therefore fixed and admitted. Beta and eta are exact.
+
+Call this fixed typed prestructure S. It has actual-function operations
+but its internally defined Leibniz identity need not coincide with
+external equality. Therefore S is not yet asserted to be a native
+identity-separated C model.
+
+3. OBSERVED IDENTITY IS EXACTLY CORE LEIBNIZ IDENTITY
+
+For a,b in S_sigma define the Boolean value
+
+  Delta_sigma(a,b) = forall P in S_(sigma t). (P(a) iff P(b)).
+
+This is evaluation of a core formula, hence an admitted element of B_E.
+For fixed a,b, normalization of an arbitrary original P gives
+
+  (r_(sigma t)P)(a)=E(P(a)),
+  (r_(sigma t)P)(b)=E(P(b)).
+
+Every fixed predicate is obtained in this way. Equality of the value
+ranges, Boolean preservation, and Q_(sigma t) preservation give
+
+  Delta_sigma(a,b) = E(delta_sigma^M(a,b)).                 (3.1)
+
+Here delta^M is native ambient Leibniz identity. Equation (3.1) is an
+identity of proposition VALUES, not an identification of objects.
+
+Define
+
+  a ~_sigma b iff Delta_sigma(a,b) belongs to U.
+
+The quantifier truth clause gives the equivalent external criterion
+
+  a ~_sigma b iff every P in S_(sigma t) gives P(a),P(b)
+                       the same current truth value.      (3.2)
+
+This is an equivalence relation. At t, current truth is constant on
+equivalence classes: the fixed tt object E restricts to identity on B_E,
+so (3.2) includes the test p |-> p. Top is not equivalent to Bottom.
+
+4. CONGRUENCE AT EVERY TYPE, INCLUDING LAMBDA PARAMETERS
+
+Suppose f~g in S_(sigma tau) and x~y in S_sigma. For any fixed test
+P in S_(tau t), the normalized translation of lambda h.P(h(x)) is a
+fixed test on S_(sigma tau), by lambda closure. Concretely its ambient
+body is P((r_(sigma tau)h)(x)). Hence P(f(x)) and P(g(x)) agree in
+truth. The fixed test lambda z.P(g(r_sigma(z))) now gives agreement
+of P(g(x)) and P(g(y)). Therefore f(x)~g(y).
+
+The same argument works for every admitted term context T(z): compose
+any output test P with the normalized translation T(r_sigma(z)) and
+abstract z. In particular it applies when
+T contains lambda abstractions, quantifiers, and other fixed parameters.
+Changing equivalent parameters cannot change the equivalence class of
+the resulting lambda object. This proves congruence for the entire
+typed term interpretation, not just for application at the last type.
+
+Form K_sigma=S_sigma/~_sigma at EVERY type. Its application and term
+operations are induced from S. Its truth predicate is [p] true iff
+p belongs to U. The proposition algebra K_t is the Boolean quotient
+B_E/~_t. The Boolean congruence follows from the term-context argument;
+its equivalence class of Top is a proper Boolean filter contained in U.
+
+Quantification ranges over the quotient sorts. A quotient predicate
+[F] has [F]([a])=[F(a)], independent of representatives. Consequently
+the S truth clause gives exactly
+
+  [Q F] true iff [F]([a]) true for every [a] in K_sigma.
+
+Existential quantification follows similarly. No external selection
+function for quotient representatives is needed.
+
+Native derived identity in K has value [Delta_sigma(a,b)], since its
+predicate quantifier ranges over all classes of fixed predicates.
+Its current truth is equivalent to a~b, hence to [a]=[b]. Thus K has
+literal actual identity, as required by the native model presentation.
+
+5. THE H SOUNDNESS AND CLASSICISM GATE
+
+First consider Boolean values in S, before quotienting. The Boolean
+tautologies have value Top. Quantifiers are the admitted infima/suprema
+over S, with lambda closure, so the ordinary quantifier axiom and rule
+checks apply. Beta and eta hold as literal objects. Leibniz identity
+has the value Delta defined above; for every fixed test P,
+
+  Delta(a,b) <= (P(a) iff P(b)).
+
+Tests obtained by abstracting arbitrary term/formula contexts give the
+substitution instances. Reflexivity has value Top. These verify the
+usual Boolean-valued soundness induction for H: every H theorem has
+value Top under every S assignment. This check uses algebraic values,
+not just the current truth of a theorem, and it does not assume that
+Delta is crisp or that S is identity-separated.
+
+If H proves A iff B, their values in S are therefore literally equal
+under every assignment. For any tuple abstracted in a Logical Equivalence
+instance, their admitted S abstractions agree in proposition VALUE on
+all fixed input tuples. Input invariance extends that agreement to all
+ambient tuples. Ambient Functionality then identifies the two lambda
+objects literally in M and S. Their identity value in S is Top.
+
+This verifies precisely C's H-theoremhood side condition. No equivalence
+derived from optional observer assumptions is treated as an H theorem.
+Closure under the H rules now proves that S validates C; the quotient
+preserves the truth of every S formula by induction on terms and
+formulas. Hence K, with its literal actual identity, is a general
+pointed C model.
+
+K is not claimed to have actual-function arrow domains. Quotienting can
+make distinct output objects equivalent, so ambient Functionality by
+itself cannot simply be reused after the quotient.
+
+6. CANONICITY AND THE UNIVERSAL CHARACTERIZATION
+
+The family (~_sigma) is the largest typed term congruence on S compatible
+with its truth predicate. Indeed, if a congruence identifies a,b, it
+identifies P(a),P(b) for every fixed test P. Truth compatibility then
+gives a~b by (3.2). Conversely Section 4 verifies that ~ itself has all
+these properties.
+
+More precisely, let h be a sortwise surjective homomorphism of the
+fixed typed logical structure into an identity-separated pointed model,
+preserving and reflecting current truth. Then ker(h)=~. One direction
+uses composition with tests. For the other, every target predicate is
+the image of some fixed predicate, by surjectivity at predicate types;
+indistinguishability by all those predicates means literal target
+identity. Thus any such logical reduction is uniquely isomorphic to K.
+
+For idempotent observers E,F with the SAME Boolean image, ambient BF
+and Functionality give EF=F and FE=E as whole identities. The recursive
+normalizers obey the mutual triple identities. The maps
+
+  Phi_sigma(x)=r_sigma^F(x)  (and Phi_e=id)
+
+give inverse bijections between their fixed domains, preserve
+application, and are identity on the common B_E. They preserve the
+quantifier values because they preserve the entire value ranges.
+Consequently they preserve all fixed tests and hence the relations ~.
+They descend to canonical pointed C-model isomorphisms of the quotient
+cores. The isomorphisms compose coherently as in the earlier fixed-core
+construction. The individual equivalence relation is also common to the
+two observers.
+
+Arbitrary named relational constants require the usual compatibility
+condition between their projected interpretations. This canonicity
+claim is for pure logical cores (and compatible expansions), not for
+all arbitrary expansions at once.
+
+7. NECESSARY BARCAN DESCENDS
+
+Assume additionally all-type necessary BF in M. The native unconditional
+equivalence of BF and Functionality gives necessary Functionality. For
+any original f,g at sigma tau, the following Boolean inequality holds:
+
+  (forall x in D_sigma. delta_tau(f(x),g(x)))
+                                      <= delta_(sigma tau)(f,g). (7.1)
+
+This follows by universal instantiation of the necessary Functionality
+formula. Now restrict f,g to S_(sigma tau) and apply E. Whole Q_sigma
+preservation, f r_sigma=f and g r_sigma=g, together with (3.1), give
+
+  (forall x in S_sigma. Delta_tau(f(x),g(x)))
+                                      <= Delta_(sigma tau)(f,g). (7.2)
+
+Thus every Functionality instance has value Top in S, including its
+universal closure over fixed f,g: the quantifier is the Boolean infimum
+of a constant-Top family. In K its value is [Top]. Necessity of that
+instance is true, because native identity is literal there. Necessitated
+BF/Functionality equivalence inside the now established C-model K gives
+all-type necessary BF in K.
+
+There is also a weaker sufficient CURRENT hypothesis: E regards the
+ambient Functionality instances as true. Expanding E through their
+quantifiers and Boolean connectives, then restricting f,g to fixed
+objects, gives the truth version of (7.2). Therefore K satisfies current
+Functionality and BF. This does not silently replace that observed
+hypothesis by current Functionality in M.
+
+Whether current BF in M alone always guarantees current BF in K remains
+open in this note. The fork example does not refute it: its quotient is
+classical and satisfies BF.

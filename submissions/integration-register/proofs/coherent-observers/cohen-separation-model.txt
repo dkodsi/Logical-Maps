@@ -1,0 +1,189 @@
+AN ATOMLESS MODEL SEPARATING TWO KINDS OF COHERENT FAMILY
+26 October 2026. New model analysis by OpenAI Codex.
+Direct source: misc, Sections 1-6 of this note, unpaginated.
+Self-checked ordinary mathematics, not independent or Lean certification.
+
+1. RESULTS AND THE EXISTING MODEL CONSTRUCTION USED
+
+There is an ordinary-ZFC Henkin model satisfying C5 in which:
+
+  (a) an admitted predicate family of pairwise commuting, idempotent,
+      fully qualified observers separates at every relational type;
+      its current members form a commutative idempotent monoid;
+  (b) a single admitted operation Phi:t(tt) indexes a separating
+      family of pairwise commuting INVOLUTIVE logical observers;
+  (c) there are no propositional atoms, and no family as in the
+      uniformly indexed IDEMPOTENT characterization;
+  (d) all-type Relational Choice, Transversal Choice and Zorn hold.
+
+All these verdicts hold at every world, hence their separately boxed
+forms hold. In (a) the same predicate parameter works at every world,
+but which reset maps belong to it can vary with the world. In (b)
+the actual range of the indexed operation consists of fixed finite
+bit flips. The two witness families are different.
+
+Use the existing generic Boolean Henkin construction with
+B=RO(2^N), the complete atomless algebra of regular open subsets
+of Cantor space. The full ambient relational hierarchy has
+A_e=N, A_t=B, and all functions at the permitted relational arrows.
+Take a sufficiently large H_theta and countable elementary M
+containing this hierarchy and the additional maps defined below.
+Restrict to D_sigma=M intersect A_sigma. Worlds are M-generic
+ultrafilters; the existing truth lemma interprets all admitted
+quantifiers and abstraction and gives C5 with literal identity.
+
+These are construction dependencies, not a claim that arbitrary
+ultrafilters preserve infinitary meets. A complete Boolean
+endomorphism in M is an admitted observer qualified at every
+finite list. See ../../../classicism-results-2026-10-24-v2/proofs/h-observer-space/generic-boolean-separation-test.md, Section 2.
+The construction's boxed RC, TC and Zorn verdicts follow from
+../../../classicism-results-2026-10-24-v2/proofs/h-observer-space/generic-boolean-choice-model.md, Sections 1-4.
+
+2. FINITE RESETS GIVE COMPLETE IDEMPOTENT ENDOMORPHISMS
+
+Let s be a finite partial map from N to {0,1}. Define r_s on
+Cantor space by overwriting the coordinates in dom(s) with s and
+leaving every other coordinate unchanged. It is continuous and open
+as a map into Cantor space: its image is the clopen cylinder [s],
+and the image of each basic cylinder is a basic cylinder or empty.
+
+For a continuous open map r, inverse image commutes with both
+closure and interior. For closure, a neighborhood of x has open
+image, which meets U whenever r(x) belongs to cl(U); the reverse
+inclusion uses continuity. For interior, map a witnessing open
+neighborhood forward for one direction and use continuity for the
+other. Thus r^{-1}(int cl U)=int cl(r^{-1}U).
+
+Consequently r_s^{-1} maps regular opens to regular opens and
+preserves their regular-open Boolean complements and arbitrary
+joins and meets. Put E_s(U)=r_s^{-1}(U). It is a complete Boolean
+endomorphism and E_s^2=E_s. If s and t agree on their common domain,
+their resets commute and E_s E_t=E_t E_s=E_(s union t).
+
+Distinct finite assignments give distinct maps on B, as can be
+checked on one-coordinate clopens. In particular E_empty=I.
+
+3. AN ADMITTED PREDICATE CHOOSES A COHERENT RESET FAMILY
+
+For s let bar(s) assign 1-s(n) on the same domain. Define the ambient
+function K:A_tt -> B by
+
+  K(E_s)=[bar(s)] for finite s;
+  K(E)=0 for every other E.
+
+The uniqueness just proved makes this well-defined. It is an
+ordinary member of the full ambient predicate domain, definable
+from the coded reset sequence, so arrange K and that sequence in M.
+Its restriction is therefore admitted in the Henkin model.
+
+Every current K-member is some E_s, hence fully qualified and
+idempotent. If s,t conflict on an overlap, [bar(s)] and [bar(t)]
+are disjoint, so K(E_s) and K(E_t) cannot both be true at a world.
+Otherwise their maps commute. Thus the whole-operation commutation
+condition holds for every pair of current members at every world.
+Identity belongs since K(I)=1. If two members are current, their
+compatible union is current too because
+
+  [bar(s union t)]=[bar(s)] intersect [bar(t)].
+
+The current family is therefore a commutative idempotent monoid.
+
+To prove separation, take any nonzero b in B and choose a basic
+cylinder [t] contained in b. For each subset J of dom(t), write
+s_J=t restricted to J. The finitely many clopen sets
+
+  K(E_sJ) intersect E_sJ([t])
+
+cover Cantor space. Indeed, for any point x let
+J={n in dom(t): x(n)!=t(n)}. Then x belongs to [bar(s_J)] and
+r_sJ(x) belongs to [t]. Therefore
+
+  join_J (K(E_sJ) meet E_sJ(b)) = 1.                            (7)
+
+At every ultrafilter, at least one term of this FINITE join is
+true. For b in M the chosen cylinder and finite assignments can
+be taken in M by elementarity (or by the standard finite cylinder
+codes). Hence every nonzero admitted proposition is accepted by
+a current K-member. Symmetric difference proves propositional
+separation; C5 Functionality lifts it to every relational type.
+Every reset has all the requested whole quantifier laws, so the
+same K works at every finite qualification list.
+
+This verification avoids postulating the generic point as an
+admitted object or parameter. K is defined using finite cylinders
+already in the ground hierarchy. Membership varies through their
+Boolean truth values.
+
+4. A UNIFORMLY INDEXED COMMUTING INVOLUTION FAMILY
+
+For each finite subset S of N, flip the bits in S. This is a
+homeomorphism h_S; its inverse-image map A_S on B is a complete
+Boolean automorphism. All A_S commute and A_S^2=I.
+
+The finitely many flips with support inside dom(t) carry a cylinder
+[t] through every bit pattern on that domain. Their inverse images
+of [t] cover the whole space. Thus for every nonzero b,
+
+  join_{S finite} A_S(b)=1,
+
+and a finite subjoin already witnesses this for each b. Consequently
+the flip family separates at every generic world.
+
+It has an admitted operation index of type t, not just a predicate
+presentation. Enumerate the finite subsets as S_n, and fix distinct
+nonzero clopens b_n=[0^n 1]. In the full ambient hierarchy define
+
+  Phi(b_n)=A_(S_n);   Phi(b)=I for every other b.
+
+This is an actual set-function A_t -> A_tt and hence belongs to
+the full ambient function space. Include it and its defining
+sequences in M. All standard n and b_n belong to M. The admitted
+restricted operation has exactly the desired range on the
+restricted domain, and its whole qualification, commutation and
+involution equations hold. The finite-cover argument gives
+propositional separation; Functionality again gives the relational
+instances. These facts hold at all generic worlds.
+
+This is no use of Functional Choice IN the model. The ambient ZFC
+construction admits this explicitly described particular operation.
+
+5. ATOMLESSNESS AND THE STRICT SEPARATIONS
+
+For every nonzero b in M intersect B, atomlessness of B provides
+0<c<b. Elementarity returns such c in M. Algebraic order and
+identity are literal in the construction, so there are no admitted
+propositional atoms at any world.
+
+By uniform-retractions.txt, C5 rules out EVERY uniformly indexed
+commuting idempotent separating family at any admitted index type.
+Thus the admitted predicate K from Section 3 cannot be reindexed
+by an admitted operation which retains qualification, commutation,
+idempotence and separation. It is not merely the displayed list
+of reset codes which fails to provide a convenient indexing.
+
+The model proves both that predicate-family coherence does not
+force Atomicity, and that idempotence in the uniform theorem
+cannot be replaced by involution. Its strong relational-choice
+verdicts survive, so relational selection does not remove the
+distinction between these two forms of family.
+
+For a converse contrast, the full standard three-world Gallin model
+satisfies Atomicity and hence uniform commuting IDEMPOTENT separation.
+It admits no commuting INVOLUTIVE separating family. Its Boolean
+observers are inverse images of self-maps of the three worlds;
+involutions are permutations. Commuting involutions generate an
+elementary abelian 2-group. Separation at a world requires its
+orbit to contain all three worlds, but every finite orbit of such
+a group has power-of-two size. This contradiction uses no restriction
+on how the proposed family is indexed.
+
+6. SOURCES AND STATUS
+
+The reset-family predicate and the two coherent-family verdicts
+are new arguments here (misc). The background C5 Henkin model and
+its observer identification are the cited generic-Boolean source
+and its construction references. Its relational-choice verdicts
+retain the sources and scope in ../../../classicism-results-2026-10-24-v2/proofs/h-observer-space/generic-boolean-choice-model.md.
+
+The proofs are ordinary and self-checked. No Lean, database verdict,
+independent review, or literature-priority claim is asserted.

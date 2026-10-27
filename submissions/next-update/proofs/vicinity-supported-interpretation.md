@@ -2,7 +2,7 @@
 
 OpenAI Codex, prompted by Daniel Kodsi, 25 October 2026. Source: `misc`, this proof, unpaginated.
 
-One construction supports both [Actuality theorems](../items/23-propositional-zorn-actuality.md): the [Relational Choice branch](vicinity-relational-choice-and-propositional-completeness-imply-actuality.md) and the [Zorn branch](vicinity-zorn-and-propositional-completeness-imply-actuality.md). Vicinity supplies a true support; hereditary retractions give a C5 interpretation on its supported domains. Propositional completeness transfers to this interpretation, and any supported Actuality witness is also an original Actuality witness. The two branches differ only in the additional choice principle transferred and the C5 theorem applied.
+Vicinity supplies a true support; hereditary retractions give a C5 interpretation on its supported domains. This construction supports the [Transversal Choice theorem](../../integration-register/proofs/vicinity-relational-choice-transversals.md) and the [Actuality theorems](../items/23-propositional-zorn-actuality.md). Propositional completeness transfers to the interpretation, and any supported Actuality witness is also an original Actuality witness.
 
 The common-core mechanism extends Christopher Sun's 19 October 2026 argument in the [5-necessity variant of Vicinity](https://github.com/zwlgzwlg/Logical-Maps/blob/a89a5058ebbd5ebe93aec07d47a1a32e3b93f8bb/logical-maps/topics/classicism/principles/vicinity.yaml). The interpretation and its transfers are the new connecting arguments here.
 
@@ -146,7 +146,7 @@ Let O be the represented family of persistent propositions p=□p. A member of O
 
 For the forward direction let w witness Vicinity and put m:=□¬w. For every proper persistent p, ¬p is true, so w≤◇¬p=¬p. Hence p≤¬w, and persistence and monotonicity give p≤□¬w=m. The proposition m is persistent and false, since w is true. It is therefore the greatest proper member of O. Conversely, given such an m, let w:=¬m, which is true. For any true q, the persistent proposition □¬q is false and hence lies below m. Taking complements gives w≤◇q, so w witnesses Vicinity.
 
-No completeness is needed for (10). Equivalently, failure of Vicinity says that 1 is the least upper bound of all currently false persistent propositions. Indeed, any upper bound b<1 would make □b a proper persistent upper bound and hence the greatest proper member. Whether BC_t with RC at t,t or Zorn at t entails this condition remains open.
+No completeness is needed for (10). Equivalently, failure of Vicinity says that 1 is the least upper bound of all currently false persistent propositions. Indeed, any upper bound b<1 would make □b a proper persistent upper bound and hence the greatest proper member. Whether BC_t with RC at t,t or Zorn at t entails Vicinity remains open.
 
 ## Sources
 

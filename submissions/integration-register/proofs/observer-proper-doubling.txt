@@ -1,0 +1,319 @@
+EVERY GENERAL CLASSICIST MODEL HAS A PROPER FINITE DOUBLING
+
+Original mathematical argument, OpenAI Codex, 26 October 2026.
+Direct source: misc; the numbered proof sections below are unpaginated.
+
+1. THEOREMS
+
+Let K be any pointed set-sized general model of C in the fixed relational
+type grammar. There is a pointed general C model M and an admitted
+whole-idempotent observer E preserving the Boolean operations and every
+typed quantifier as WHOLE operation identities such that:
+
+  Core(M,E) is isomorphic to K as a pointed typed logical model;
+  Im(E) is proper;
+  D_e^M=D_e^K and B_M is isomorphic to B_K x B_K.
+
+The core is the canonical all-sort fixed-test quotient. The isomorphism
+preserves any specified nonlogical signature, interpreted in M as below.
+All higher M domains use objects ALREADY ADMITTED at explicit K types;
+no full external function spaces replace the original Henkin domains.
+
+The construction preserves full current Boolean Completeness, and also
+full necessary Boolean Completeness. In particular:
+
+  EVERY K satisfying C + Box BC_all is a proper observer core of
+  another M satisfying C + Box BC_all.                    (1.1)
+
+Together with observer-completeness-descent.txt this answers both
+directions: necessary completeness descends to qualified cores, and every
+necessarily complete general model has a proper realization within that
+same class. No BF, C5, Atomicity, Choice, Infinity or standardness premise
+is added. Properness concerns the observer image; for an infinite K no
+claim is made that K and M must be abstractly non-isomorphic.
+
+The exact instance bound for the construction is
+
+  K satisfies BC_(T tau)     => M satisfies BC_tau;
+  K satisfies Box BC_(T tau) => M satisfies Box BC_tau,    (1.2)
+
+where the type translation T is defined in Section 2. Thus (1.1) uses
+full completeness only to supply the corresponding coded-type instances.
+
+2. PURE PAIR CODES AND WHOLE RETRACTIONS
+
+All notation in this section denotes original K terms. Write 1 and 0
+for its proposition endpoints. Define
+
+  pair(p,q) := lambda z^t. ((z=1) and p) or ((z!=1) and q),
+  pi_0(g):=g(1),              pi_1(g):=g(0).
+
+C proves the exact identities pi_0(pair(p,q))=p and
+pi_1(pair(p,q))=q. Identity of 1 with itself has value 1, and identity
+of 0 with 1 has value 0, by the unconditional C theorems and their
+necessitations. No assertion that z=1 is crisp for arbitrary z is used.
+
+For any Boolean coefficient c, the expression (c and p) or (not c and q)
+preserves Boolean operations in the pair (p,q). Ordinary Boolean
+tautologies therefore prove that pair is a Boolean homomorphism into
+the OLD pointwise Boolean algebra at tt. These are whole term identities
+in C: universally close the tautologies, necessitate and apply
+Intensionality when abstraction is required.
+
+Translate new types into old types by
+
+  T e=e,             T t=tt,
+  T(sigma tau)=(T sigma)(T tau).
+
+All types remain within the permitted grammar. Define old admitted
+retractions at the coded types:
+
+  d_e=id externally;
+  d_t(g)=pair(pi_0(g),pi_1(g));
+  d_(sigma tau)(F)=lambda x. d_tau(F(d_sigma(x))).          (2.1)
+
+At individual arguments d_e means substitution of x, not a forbidden ee
+operation. Each relational d is an admitted term. C proves WHOLE
+idempotence d_sigma d_sigma=d_sigma. The arrow calculation is equational
+composition of the lower-type identities, using beta and eta. It does
+not infer function identity from agreement on current arguments.
+
+At each relational sigma, d_sigma is a Boolean homomorphism of the
+ORIGINAL coded-type Boolean algebra B_(T sigma). This follows from the
+pair calculation, recursively by postcomposition and precomposition.
+Set
+
+  D_sigma^M := Fix(d_sigma) in D_(T sigma)^K.              (2.2)
+
+These domains are nonempty, and their relational members are Boolean
+subalgebras of the old coded-type algebras. A fixed arrow F has the whole
+identities d_tau F=F and F d_sigma=F. Application therefore closes on
+the fixed domains. We do not identify an arrow with its current table.
+
+3. LOGICAL CONSTANTS, ABSTRACTION AND THE TWO TRUTH EVALUATIONS
+
+The new proposition domain consists exactly of pair codes, hence is
+B_K x B_K. Give it coordinatewise Boolean operations. If F is fixed
+at the NEW predicate type sigma t, define
+
+  Q_sigma^M(F)=pair(
+    Q_(T sigma)^K(lambda x. pi_0(F(x))),
+    Q_(T sigma)^K(lambda x. pi_1(F(x))) ).                 (3.1)
+
+On arbitrary old coded inputs use their d-normalizations. This supplies
+admitted total old extensions for these new constants. Because F d_sigma
+=F, ranging x over the original carrier is equivalent, for this formula,
+to ranging over Fix(d_sigma). Existential quantification is dual.
+
+Translate an arbitrary new term A to an old coded term A^d: normalize
+variables by d, use the coded logical constants, preserve application,
+and use normalized abstraction. At an arrow the latter can be written
+
+  lambda x^(T sigma). d_tau(body(d_sigma(x))).            (3.2)
+
+A structural induction gives fixed outputs, input invariance, and
+substitution. Beta and eta use the corresponding whole equations. All
+inductive identities are unconditional C theorems about the displayed
+pure coding terms; they may therefore be universally closed,
+necessitated and abstracted by source Intensionality. This is the same
+stable-premise abstraction method as general-core.txt, with no optional
+premise here. It is not an appeal to Functionality.
+
+For each i=0,1 put T_i(pair(p_0,p_1)) iff p_i is true in pointed K.
+Boolean truth clauses hold coordinatewise. Equation (3.1), the original
+K truth clause, and input invariance give
+
+  T_i(Q_sigma^M F) iff every a in D_sigma^M satisfies T_i(F(a)).
+
+Choose T_0 as M's designated truth. Both T_i will be useful in checking
+the construction. No set of old world atoms or Kripke presentation is
+introduced, and no quantifier is replaced by an external Boolean meet.
+
+4. EXACT NATIVE IDENTITY: WHY NO EXTRA QUOTIENT IS NEEDED
+
+Let delta_K at T sigma denote the original Leibniz identity proposition.
+Let Delta_M(a,b) be the new Leibniz proposition obtained by quantifying
+over ALL admitted new predicates. For d-fixed a,b the exact identity is
+
+  Delta_M(a,b)=pair(delta_K(a,b),delta_K(a,b)).             (4.1)
+
+Here is an internal proof of each coordinate. For any old P:(T sigma)t,
+the term
+
+  L_P(x)=pair(P(d_sigma x),P(d_sigma x))                  (4.2)
+
+is a fixed new predicate. Thus equality under all new predicates entails
+agreement under every old P. Conversely, for any old coded candidate F,
+the function x |-> pi_i((d_(sigma t) F)(d_sigma x)) is an old admitted
+predicate. Old Leibniz identity therefore entails agreement at that
+coordinate under every new predicate. Use a=d_sigma(u), b=d_sigma(v)
+throughout: both quantified implications are unconditional C theorems
+in arbitrary old u,v. Necessitate them and apply source propositional
+Intensionality to obtain literal coordinate identities, hence (4.1).
+The argument does not identify quantifiers merely because their current
+ranges agree, or abstract under unboxed fixedness assumptions.
+
+At either T_i, (4.1) is true precisely when a=b literally in the original
+K carrier. Thus the new prestructure already has literal current
+identity at EVERY type. No quotient is needed to obtain M itself.
+Identity may remain noncrisp as a proposition; C5 is not inferred.
+
+At every relational type the new Boolean operations equal the OLD
+coded-type operations restricted to Fix(d). At t this is the mux
+calculation in Section 2; at arrows use it recursively, beta/eta and
+input invariance. Consequently the new native algebraic order is
+
+  (a <=_tau^M b)
+     =pair(a <=_(T tau)^K b, a <=_(T tau)^K b)             (4.3)
+
+for fixed a,b. This exact native-order comparison is essential below.
+
+5. THE FIXED C LOGICAL-EQUIVALENCE GATE
+
+Current classical truth clauses alone do not establish the C gate.
+Translate a finite H proof into each coordinate of the coded formulas.
+The propositional and quantifier axioms reduce to their original K
+counterparts by Section 3. The substitution calculation gives beta/eta;
+Section 4 supplies identity and congruence. Modus ponens and
+generalization are preserved. Thus, if H proves A iff B, C proves
+
+  pi_i(A^d) iff pi_i(B^d),     i=0,1,                     (5.1)
+
+uniformly over all original coded arguments, whose occurrences normalize
+by d. These are unconditional C theorems, not H equivalences under
+additional axioms or optional hypotheses.
+
+Universally close all arguments. For an extra original tag z, the mux
+definition combines the two coordinate equivalences into coextension
+of the paired outputs at z. Necessitate that universally closed C
+theorem and apply SOURCE Intensionality through every coded argument
+and the final tag z. The resulting identity is literal equality in K
+of the coded lambda abstractions corresponding to A and B. Therefore
+their interpretations in M are identical, as C's fixed H-equivalence
+rule requires. The same argument covers arbitrary finite tuples of
+abstracted variables and formula parameters.
+
+H truth and rules, literal current identity and this exact gate establish
+that M is a general pointed model of C. Neither an actual-function
+representation nor Barcan was used.
+
+6. BOOLEAN COMPLETENESS SURVIVES DOUBLING
+
+Fix a relational tau and a coordinate i. Let U be a fixed new family
+at tau t. In K form the admitted old family on T tau
+
+  F_i(w):=(d_tau(w)=w) and pi_i(U(d_tau(w))).              (6.1)
+
+Assume old BC_(T tau). It supplies an old greatest lower bound y of F_i.
+Set g=d_tau(y), an admitted fixed new tau-object. For each selected fixed
+w, ambient lower-boundedness gives y<=w. Monotonicity of d_tau gives
+g<=d_tau(w)=w. If fixed z is another lower bound of all the selected
+fixed objects, it is a lower bound of F_i on ALL old w: the guard d_tau(w)
+=w in (6.1) permits identity substitution. Thus z<=y and
+z=d_tau(z)<=d_tau(y)=g. Conversely z<=g implies lower-boundedness by
+transitivity. By (4.3) these are exactly the new GLB inequalities and
+their biconditional at coordinate i.
+
+Every old family variable V codes U=d_(tau t)(V); original y is the
+witness whose new occurrences normalize to g. Therefore this proof is
+a uniform INTERNAL derivation
+
+  C proves BC_(T tau) -> pi_i((BC_tau)^d).                (6.2)
+
+It is not just an external assertion about current true extensions.
+Both directions of the native GLB biconditional are proved above, and
+all quantifiers on the right range over original coded variables with
+d-normalized occurrences. Only the indicated old BC instance is used.
+
+Current BC_(T tau) gives current BC_tau in M immediately (indeed at
+both T_i). Necessitate the unconditional theorem (6.2). If K satisfies
+Box BC_(T tau), modal K gives
+
+  K satisfies Box pi_i((BC_tau)^d),
+  hence pi_i((BC_tau)^d)=Top_K literally, for i=0,1.
+
+The coded BC proposition is therefore pair(Top_K,Top_K)=Top_M. Native
+M necessity is equality with Top_M, so M satisfies its OWN Box BC_tau.
+No optional completeness premise was necessitated, no core/ambient
+modal operators were identified, and no family of witnesses was chosen
+uniformly across evaluations. This proves (1.2) and hence (1.1).
+
+7. A PROPER WHOLE-IDEMPOTENT LOGICAL OBSERVER
+
+Define, on paired propositions,
+
+  E(pair(p,q))=pair(p,p).                                 (7.1)
+
+Its extension to all old codes first applies d_t, so it is an admitted
+new tt-object. It preserves Boolean operations and is idempotent by
+the pure pair/projection equations. Equation (3.1) computes both
+E(Q_sigma^M F) and Q_sigma^M(E composed F) as the repeated pair whose
+coordinate is Q_(T sigma)^K(lambda x.pi_0(F(x))). Thus every typed
+quantifier is preserved.
+
+All these equalities are WHOLE old coded-term identities, obtained by
+the same unconditional C equational calculations and source abstraction
+used above. By (4.1) they are precisely the required whole-operation
+identities in M. This avoids an inference from current tables to
+operation identity. The one specified E satisfies every typed law; no
+object-language quantification over types is introduced.
+
+The element pair(1,0) is distinct from E(pair(1,0))=pair(1,1), since
+their second projections differ. Hence the image is proper, including
+when K has only two propositions and one individual.
+
+8. EXACT RECOVERY OF K THROUGH ALL TYPES
+
+Define embeddings and decoders as original K terms:
+
+  i_e=j_e=id externally;
+  i_t(p)=pair(p,p),                 j_t(g)=pi_0(g);
+  i_(sigma tau)(f)=lambda x. i_tau(f(j_sigma(x)));
+  j_(sigma tau)(F)=lambda x. j_tau(F(i_sigma(x))).          (8.1)
+
+Simultaneous equational induction, using beta/eta and abstraction of
+unconditional C theorems, gives WHOLE identities
+
+  j_sigma i_sigma=id,
+  d_sigma i_sigma=i_sigma,
+  j_sigma d_sigma=j_sigma.                               (8.2)
+
+For example the first arrow composite reduces to
+j_tau i_tau(f(j_sigma i_sigma(x)))=f(x). These are equations of original
+intensions, not merely agreements on current inputs. Thus every i_sigma
+embeds the EXACT old carrier into the new fixed carrier.
+
+Put n_sigma=i_sigma j_sigma on new objects. At t this is E. At an arrow,
+direct beta reduction gives the whole identity
+
+  n_(sigma tau)(F)=lambda x. n_tau(F(n_sigma(x))).         (8.3)
+
+The normalized new abstraction includes d, but (8.2) and new fixedness
+remove those extra d occurrences. Hence n is exactly the recursive
+normalizer induced by E in the canonical general core construction.
+Its fixed carrier is exactly
+
+  Fix(n_sigma) = i_sigma[D_sigma^K],                      (8.4)
+
+with inverse j_sigma: one direction follows from ji=id, and the other
+from a=na=i(ja). No extra Henkin objects survive.
+
+The bijections preserve application by (8.1), Boolean operations by
+diagonal coding, and abstraction by the whole equations. For a core
+predicate i_(sigma t)(P), its value at a coded argument x is
+pair(P(j_sigma x),P(j_sigma x)). Since j_sigma i_sigma=id and
+j_sigma d_sigma=j_sigma, its original quantified formula is equivalent
+to quantification over ALL of D_sigma^K. Both implications are uniform
+unconditional C derivations using instantiation at i_sigma(a); after
+necessitation, source Intensionality supplies literal equality of the
+quantifier values. Thus this is exact term transport, not just agreement
+at the designated truth point.
+
+Old predicates i_(sigma t)(P) separate i_sigma(a),i_sigma(b) whenever
+a!=b in K: choose the original current haecceity of a. It need not be
+crisp. Consequently the core's fixed-test quotient introduces no further
+identifications. Current truth of i_t(p) at M is exactly old truth of p.
+This establishes the claimed pointed typed isomorphism. Interpret each
+specified nonlogical constant c in M as i(c); normalization fixes it,
+and j recovers it. All signature interpretations are thereby retained
+in the core, without claiming M has K's entire original sentence theory.

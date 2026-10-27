@@ -1,0 +1,307 @@
+COMMUTATIVE SHIFT MODELS FOR COMMUTING OBSERVER SEPARATION
+26 October 2026. Original ordinary mathematical deduction by OpenAI Codex.
+Direct source: misc, Sections 1-9, unpaginated.
+Independently reviewed ordinary argument; see ../../evidence/coherent-observer-review.json for
+scope. No Lean certification or native record.
+
+1. THE REPRESENTATION THEOREMS
+
+C5 + CoSep has a sound and strongly complete semantics using:
+
+  a commutative monoid M;
+  a Boolean algebra B of subsets of M;
+  ordinary Henkin function domains;
+  admitted shifts and an admitted predicate selecting their family.
+
+Equality is crisp, quantifiers are literal intersections/unions, and native
+Box is the test A=M. Every C5+CoSep Henkin model, after taking its current
+identity quotients, has an ISOMORPHIC representation of this form. No
+elementary extension is needed for this C5 theorem.
+
+For the countable project language, strong completeness already holds with
+one fixed index monoid: the finite-support sequences of natural numbers,
+with coordinatewise addition. For CoIdemSep one may instead fix the finite
+subsets of N, with union. These index sets are external semantic data, not
+new logical sorts or internally admitted enumerations.
+
+Over bare C, the same commutative shift idea supplies strong completeness
+for the full CoSep schema, but identity may be noncrisp and an elementary
+extension handles the finite qualification lists. Section 8 states the
+separate argument and does not transfer the C5 simplifications to bare C.
+
+The admitted-family requirement is essential to the definition. Merely
+making each individual shift an admitted operation does not establish the
+existence of an object-language predicate collecting them.
+
+2. C5 MODEL DATA
+
+Work in ordinary ZFC metatheory and the fixed relational type system.
+Specify a commutative monoid (M,*,1), a nonempty D_e, and a Boolean
+subalgebra B of P(M). Put D_t=B. At each allowed arrow type specify a
+nonempty set of actual functions
+
+  D_(sigma tau) subseteq (D_tau)^(D_sigma).
+
+Application is evaluation. Impose the following ordinary Henkin closures:
+
+(H) All permitted parameterized lambda interpretations and the Boolean
+    operations belong to their indicated domains.
+
+(Q) For each admitted F:D_sigma->B, its LITERAL intersection over D_sigma
+    belongs to B; the quantifier map Q_sigma itself is admitted. Existential
+    quantifiers are literal unions, obtained by Boolean duality.
+
+(=) For every object a at every type sigma, its crisp singleton predicate
+    x |-> M if x=a, empty otherwise, belongs to D_(sigma t).
+
+(S) For every m in M, its shift
+
+      R_m(A)={n in M:n*m belongs to A}
+
+    belongs to D_(tt). This includes closure of B under that inverse image.
+
+(K) There is K in D_((tt)t) whose truth fibre at 1 is exactly the shifts:
+
+      1 in K(E) iff E=R_m for some m in M.                       (1)
+
+No endpoint-valuedness of K is stipulated. Formula (1) is a condition on
+the semantic data, not an internal quantifier over M. Distinct indices may
+induce the same shift, as happens after the fixed-monoid reduction below.
+
+Boolean operations are set operations. Leibniz equality is interpreted by
+
+  delta_sigma(a,b)=intersection_(P in D_(sigma t)) (P(a) iff P(b)),
+
+where iff denotes Boolean set equivalence. Q and lambda closure make this
+an admitted proposition and operation. Condition (=) gives
+
+  delta_sigma(a,b)=M if a=b, empty otherwise.                     (2)
+
+Truth is membership of 1. Native necessity is defined as in C, so
+
+  Box A=delta_t(A,M)=M if A=M, empty otherwise.                   (3)
+
+It is NOT defined by the monoid's forward orbit from an index. Even when
+M has an absorbing element, native necessity in these C5 models is the
+global test (3). Observation routes and native modal accessibility are
+different structures.
+
+3. SOUNDNESS
+
+The Boolean and quantifier clauses have their ordinary classical truth
+conditions at every index. Actual functions supply beta, eta, application
+congruence and Functionality. Crisp equality supplies H's identity rules.
+Thus H theorems have value M under every assignment. An H-theorem
+equivalence gives identical proposition sets, so its lambda abstractions
+are literally identical actual functions. This verifies precisely C's
+fixed H-theoremhood gate. Equation (2) gives all boxed ND instances: C5.
+
+Every R_m is fully qualified. Inverse image preserves Boolean operations,
+and for every admitted predicate F,
+
+  R_m(intersection_a F(a))=intersection_a R_m(F(a)).              (4)
+
+Lambda closure admits a |-> R_m(F(a)); hence (4) is exactly the typed
+quantifier identity. These equalities hold for every law-input, so the
+whole operations are literally identical. The existential law follows
+dually. Commutativity gives R_m o R_n=R_n o R_m.
+
+If propositions A and B differ, choose m in their symmetric difference.
+Their observed values under R_m differ in truth at 1. By (1), R_m is a
+current K-member. Distinct relational functions differ at an argument
+tuple; the same propositional argument separates their resulting values.
+Thus K witnesses every current CoSep instance, with all qualifications.
+
+If M is idempotent, every R_m is idempotent and the same proof gives
+CoIdemSep. Nothing in this soundness proof asserts separation at every
+index. The isolated-point countermodel shows that assertion would be false.
+
+4. DIRECT REPRESENTATION OF AN ARBITRARY C5+CoSep MODEL
+
+Start with any general Henkin model A of C5+CoSep. Take current identity
+quotients. C makes its proposition domain a Boolean algebra, and C5's
+Functionality makes arrow objects faithful actual functions on current
+domains. Current quantifiers retain the classical truth clauses.
+
+By object-language-and-finite-basis.txt, Section 2, choose ONE admitted
+predicate K whose current members separate propositions, commute, and
+preserve Q_t and Boolean operations. C5 upgrades EACH SAME member to
+qualification at every type. Replace K by its internal monoid closure
+from Section 4 of that note. Separation, qualification and commutation
+are preserved; I and composition are now included.
+
+Let M be the external set of its current members, with multiplication
+given by whole-operation composition. It is a commutative monoid of
+admitted operations. For each proposition p define
+
+  phi(p)={m in M : m(p) is actually true in A}.                  (5)
+
+Every m is a Boolean endomorphism, so phi preserves all Boolean operations.
+Separation makes phi injective. Set B=phi[D_t]. This is a Boolean subalgebra
+of P(M). Current truth is preserved because I belongs to M:
+
+  1 in phi(p) iff p is actually true.                           (6)
+
+For every admitted F and m in M, whole quantifier preservation and current
+quantifier truth give
+
+  m(Q_sigma F) is true iff forall a in D_sigma, m(F(a)) is true.
+
+Consequently
+
+  phi(Q_sigma F)=intersection_(a in D_sigma) phi(F(a)).          (7)
+
+Transport every higher domain recursively along phi at t and identity at e:
+if j_sigma and j_tau have been defined, send f to
+
+  j_tau o f o inverse(j_sigma).
+
+These are typewise bijections onto the new ordinary-function domains.
+All application, lambda and logical operations are transported, and (7)
+gives the required literal quantifier intersections. This is an isomorphism
+of the entire current typed structure, preserving all formulas, rather
+than just an embedding of the Boolean algebra.
+
+For any m in M its transported operation is exactly a right shift:
+
+  phi(m(p))={n:n(m(p)) is true}=R_m(phi(p)).                     (8)
+
+The transported K belongs to its transported higher domain. By (6), its
+current truth fibre consists EXACTLY of the transported current members
+of K, namely the R_m. This proves (K), not merely individual shift admission.
+
+C5 makes every identity proposition in A an endpoint: NI treats true
+identities and ND treats false ones. Therefore lambda x.(x=a) is its crisp
+singleton predicate and transports to (=). All the data conditions hold.
+
+If the original family was idempotent, use its idempotent monoid closure.
+Then M is a commutative idempotent monoid. Thus the direct representation
+also holds for C5+CoIdemSep.
+
+5. STRONG COMPLETENESS AND THE FIXED COUNTABLE MONOIDS
+
+Soundness and Section 4 give, for any set Gamma of sentences,
+
+  Gamma |-_(C5+CoSep) A
+    iff every C5 commutative shift model of Gamma satisfies A.   (9)
+
+For the right-to-left direction, a nonderivation has a general Henkin
+countermodel by the usual many-sorted Henkin construction for the fixed
+language and C gate. Apply the direct representation. The C5+CoIdemSep
+version restricts M to commutative idempotent monoids.
+
+In the project's countable language, choose a countable Henkin countermodel.
+Then M, a subset of its tt-domain, is countable. Enumerate M by m_0,m_1,...,
+allowing repetitions. Let F=N^(N) be the finitely supported sequences of
+natural numbers. The assignment of its k-th generator to m_k extends to
+a surjective homomorphism pi:F->M. Replace each A subset M in B by pi^-1(A)
+and transport all higher domains along this bijection onto the new B.
+
+Surjectivity preserves distinctness; inverse image preserves every literal
+intersection, union and Boolean operation. For each u in F,
+
+  R_u(pi^-1(A))=pi^-1(R_(pi(u))(A)).                            (10)
+
+Thus all new shifts are admitted. The transported K selects exactly their
+set at 0, the monoid identity, since pi is onto. All satisfaction statements
+are unchanged. This proves strong completeness with the ONE fixed monoid
+(N^(N),+,0). The fixed-monoid class need not separate every distinct
+external index by an admitted proposition.
+
+For idempotent M, replace F by Fin(N), the finite subsets of N under union,
+and let pi(S) be the product of the m_k for k in S. The same proof applies.
+No internal map from an index TYPE onto the observer family is assumed.
+This distinction matters: internal uniform idempotent indexing can imply
+Atomicity, while the predicate-family principle has atomless models.
+
+6. WHAT IS GAINED, AND WHAT IS RETAINED
+
+OS already permits ordinary function domains, literal intersections and
+admitted shifts of a monoid. CoSep permits the indexing monoid to be
+COMMUTATIVE, and requires its shifts to have an admitted family predicate.
+CoIdemSep permits an idempotent commutative monoid, equivalently a
+join-semilattice with a least element (the identity).
+
+The crucial C5 improvement is direct representation: one finite formula
+provides a family whose members qualify at every type. There is no
+compactness extension to produce uniformly qualified witnesses. Equality
+and native necessity also have the simple explicit forms (2)-(3).
+
+The higher domains are still Henkin domains, with genuine closure and
+family-admission requirements. Replacing them by full function spaces
+would change the theory. The theorem is not completeness for full standard
+models, an algorithm for computing a representation, or a claim that
+monoid multiplication alone determines the whole higher-order model.
+
+7. WHY PROPAGATION NEED NOT HOLD IN THESE MODELS
+
+At the identity, the shifts inspect every index of M. At another index n,
+the same shifts inspect only nM. Commutativity does not imply nM=M, nor
+that nM meets every nonempty admitted proposition. A separating family
+at 1 can therefore fail to separate at n.
+
+This explains a possible mechanism; by itself it does not exclude OTHER
+admitted witnesses at n. isolated-point-nonpropagation.txt closes that
+obligation. Its current rigid family has monoid
+
+  (direct sum over J of C_2) with an absorbing zero adjoined.
+
+The zero is the constant reader of the isolated point. From a binary world
+the flip orbit detects every nonempty clopen of the binary component and
+the zero detects the isolated atom. At zero, the whole monoid stays at zero.
+The support/ultrafilter argument excludes every alternative Boolean reader
+there. Thus that note gives an actual C5 countermodel to propagation, not
+just a failure of one convenient witness family.
+
+8. THE BARE-C VERSION, WITH ITS DIFFERENT COMPLETENESS CLAIM
+
+For a commutative shift model of C+CoSep drop crisp-singleton condition (=).
+Instead require admitted predicates to distinguish distinct individuals
+in truth at 1. Retain H,Q,S,K. Define equality by the displayed Leibniz
+intersection, and native Box by delta_t(A,M).
+
+Shifts distinguish distinct propositions at 1; induction through actual
+function domains distinguishes distinct relational objects there. Together
+with individual separation this makes equality literal at 1, though it
+may identify distinct raw objects at other indices. The substitution,
+quantifier and H-gate argument of the earlier OS shift theorem still works.
+Commutativity and K then give full current CoSep exactly as in Section 3.
+No crisp-Box or C5 assertion follows in this version.
+
+Conversely begin with any C+full CoSep Henkin model. OS follows, so BF and
+Functionality supply its ordinary-function presentation. In its elementary
+diagram add ONE new predicate constant K. Require propositional separation,
+pairwise commutation, I membership, composition closure, Boolean qualification
+of all members, and Q_sigma qualification for every external type sigma.
+Every finite subset is satisfiable in the original model: choose one
+CoSep_(t,Delta) instance containing the finitely requested types and apply
+the INTERNAL monoid closure construction. Hence compactness gives an
+elementary extension with such a K. This is one compactness step, not a
+sequence choosing unrelated witnesses. All new propositions are covered
+by the universal separation axiom for K in the extension.
+
+Now use (5)-(8). Every current K-member qualifies at every type, so the
+entire typed representation and admitted-family condition follow. For an
+idempotent family include its idempotence in the diagram and use the
+idempotent closure lemma. This proves strong completeness for the bare-C
+full schemas using the corresponding commutative/semilattice shift models.
+In a countable language the extension can be chosen countable, so the same
+fixed-monoid reductions apply. Isomorphic representation is of the
+ELEMENTARY EXTENSION in this paragraph, not necessarily the starting model.
+
+9. SOURCES AND VERIFICATION STATUS
+
+The underlying OS shift construction, general Henkin presentation and
+soundness argument are in ../../../next-update/proofs/observer-shift-semantics.md, Sections 2-8, independently reviewed there. Its modal
+limits are in ../../../next-update/proofs/observer-shift-boundaries.md,
+Section 1. Those are retained prior results.
+
+The finite C5 basis and the source of the individual qualification reduction
+are documented in object-language-and-finite-basis.txt in this directory.
+The new deductions here are the internal-family commutative normal form,
+the direct C5 representation, the admitted-family soundness/completeness
+check, and the fixed commutative and semilattice monoids. The isolated-point
+countermodel is a separate new construction with its own full proof.
+
+The ordinary proofs in Sections 2–8 received independent AI review;
+see ../../evidence/coherent-observer-review.json for its scope.

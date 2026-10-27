@@ -322,4 +322,4 @@ The one-observer condition, universal-profile normalization, local interval invo
 
 The adjoints and their admitted-bound preservation are proved in [Canonical adjoints and image factorization](canonical-adjoints-and-image-factorization.md), §§2–4. The relative Boolean isomorphism and whole quantifier verification refine [Injective observers and Boolean transversals](injective-observers-and-boolean-transversals.md), §§1–3; only local coverage is needed here. The established inverse decomposition is [Left-inverse separation](left-inverse-separation-decomposition.md), §§1–6. Boolean partition patching is in [Logical observer hierarchy](../logical-observer-hierarchy.md), §4. The fixed C framework and its theoremhood restrictions are Bacon and Dorr, *Classicism*, draft of 16 May 2023, §1.5, pp. 16–18; that source supplies the framework, not these new proofs.
 
- The open separation comparison identified after (26) remains open in this research record.
+ The [rigid Souslin countermodel](rigid-souslin-injective-separation.md) refutes InjSep ⇒ SplitMono, even over C5 with necessary all-type Relational Choice, Transversal Choice and Zorn.

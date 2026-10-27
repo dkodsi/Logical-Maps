@@ -4,6 +4,7 @@
     {
       "id": "01-explanation-corrections",
       "base": "a89a5058ebbd5ebe93aec07d47a1a32e3b93f8bb",
+      "dependencies": [],
       "targets": [
         {
           "path": "logical-maps/topics/classicism/writeups/definable-atoms-and-extensional-transfer-corrections.md",
@@ -35,6 +36,7 @@
     {
       "id": "02-cloud-relational-choice",
       "base": "a89a5058ebbd5ebe93aec07d47a1a32e3b93f8bb",
+      "dependencies": [],
       "targets": [
         {
           "path": "logical-maps/topics/classicism/groups/modalized-atomless-cloud.yaml",
@@ -51,6 +53,7 @@
     {
       "id": "03-analytical-contingency",
       "base": "a89a5058ebbd5ebe93aec07d47a1a32e3b93f8bb",
+      "dependencies": [],
       "targets": [
         {
           "path": "logical-maps/topics/classicism/models/full-boolean-valued-atom-and-cohen-constructible-ground.yaml",
@@ -67,6 +70,9 @@
     {
       "id": "04-maximalism-forcing",
       "base": "a89a5058ebbd5ebe93aec07d47a1a32e3b93f8bb",
+      "dependencies": [
+        "01-explanation-corrections"
+      ],
       "targets": [
         {
           "path": "logical-maps/topics/classicism/models/coalesced-definable-root.yaml",
@@ -93,12 +99,8 @@
     {
       "id": "05-c5-choice",
       "base": "a89a5058ebbd5ebe93aec07d47a1a32e3b93f8bb",
+      "dependencies": [],
       "targets": [
-        {
-          "path": "logical-maps/topics/classicism/writeups/c5-relational-choice-implies-transversal-choice.md",
-          "upstream_blob": null,
-          "patch_preimage_blob": null
-        },
         {
           "path": "logical-maps/topics/classicism/results/c5-relational-choice-implies-transversal-choice.yaml",
           "upstream_blob": null,
@@ -108,12 +110,33 @@
           "path": "logical-maps/topics/classicism/results/relational-choice-r-implies-transversal-choice-r.yaml",
           "upstream_blob": "c1177c718f0cd565a3a3bca20ab625737f683c59",
           "patch_preimage_blob": "c1177c718f0cd565a3a3bca20ab625737f683c59"
+        },
+        {
+          "path": "logical-maps/topics/classicism/results/vicinity-relational-choice-implies-transversal-choice.yaml",
+          "upstream_blob": null,
+          "patch_preimage_blob": null
+        },
+        {
+          "path": "logical-maps/topics/classicism/writeups/c5-relational-choice-implies-transversal-choice.md",
+          "upstream_blob": null,
+          "patch_preimage_blob": null
+        },
+        {
+          "path": "logical-maps/topics/classicism/writeups/vicinity-relational-choice-implies-transversal-choice.md",
+          "upstream_blob": null,
+          "patch_preimage_blob": null
+        },
+        {
+          "path": "logical-maps/topics/classicism/writeups/vicinity-supported-interpretation.md",
+          "upstream_blob": null,
+          "patch_preimage_blob": null
         }
       ]
     },
     {
       "id": "06-forcing-infinity-proof",
       "base": "a89a5058ebbd5ebe93aec07d47a1a32e3b93f8bb",
+      "dependencies": [],
       "targets": [
         {
           "path": "logical-maps/topics/classicism/results/forcing-possibilism-implies-axiom-of-infinity-t.yaml",
@@ -130,15 +153,12 @@
     {
       "id": "07-propositional-zorn-actuality",
       "base": "a89a5058ebbd5ebe93aec07d47a1a32e3b93f8bb",
-      "dependencies": [],
+      "dependencies": [
+        "05-c5-choice"
+      ],
       "targets": [
         {
-          "path": "logical-maps/topics/classicism/writeups/c5-zorn-and-propositional-completeness-imply-actuality.md",
-          "upstream_blob": null,
-          "patch_preimage_blob": null
-        },
-        {
-          "path": "logical-maps/topics/classicism/writeups/propositional-canonical-chain-lemmas.md",
+          "path": "logical-maps/topics/classicism/results/atomicity-t-and-vicinity-imply-actuality.yaml",
           "upstream_blob": null,
           "patch_preimage_blob": null
         },
@@ -148,7 +168,37 @@
           "patch_preimage_blob": null
         },
         {
-          "path": "logical-maps/topics/classicism/writeups/vicinity-supported-interpretation.md",
+          "path": "logical-maps/topics/classicism/results/vicinity-relational-choice-and-propositional-completeness-imply-actuality.yaml",
+          "upstream_blob": null,
+          "patch_preimage_blob": null
+        },
+        {
+          "path": "logical-maps/topics/classicism/results/vicinity-zorn-and-propositional-completeness-imply-actuality.yaml",
+          "upstream_blob": null,
+          "patch_preimage_blob": null
+        },
+        {
+          "path": "logical-maps/topics/classicism/writeups/atomicity-t-and-vicinity-imply-actuality.md",
+          "upstream_blob": null,
+          "patch_preimage_blob": null
+        },
+        {
+          "path": "logical-maps/topics/classicism/writeups/c5-relational-choice-and-propositional-completeness-imply-actuality.md",
+          "upstream_blob": null,
+          "patch_preimage_blob": null
+        },
+        {
+          "path": "logical-maps/topics/classicism/writeups/c5-zorn-and-propositional-completeness-imply-actuality.md",
+          "upstream_blob": null,
+          "patch_preimage_blob": null
+        },
+        {
+          "path": "logical-maps/topics/classicism/writeups/persistent-fixed-points-and-cofinal-chains.md",
+          "upstream_blob": null,
+          "patch_preimage_blob": null
+        },
+        {
+          "path": "logical-maps/topics/classicism/writeups/propositional-canonical-chain-lemmas.md",
           "upstream_blob": null,
           "patch_preimage_blob": null
         },
@@ -163,22 +213,7 @@
           "patch_preimage_blob": null
         },
         {
-          "path": "logical-maps/topics/classicism/writeups/c5-relational-choice-and-propositional-completeness-imply-actuality.md",
-          "upstream_blob": null,
-          "patch_preimage_blob": null
-        },
-        {
           "path": "logical-maps/topics/classicism/writeups/zorn-and-higher-completeness-imply-actuality.md",
-          "upstream_blob": null,
-          "patch_preimage_blob": null
-        },
-        {
-          "path": "logical-maps/topics/classicism/results/vicinity-relational-choice-and-propositional-completeness-imply-actuality.yaml",
-          "upstream_blob": null,
-          "patch_preimage_blob": null
-        },
-        {
-          "path": "logical-maps/topics/classicism/results/vicinity-zorn-and-propositional-completeness-imply-actuality.yaml",
           "upstream_blob": null,
           "patch_preimage_blob": null
         }

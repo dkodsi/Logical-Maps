@@ -305,7 +305,7 @@ The second component contains P×D₁, whereas that of u∧q is P×D₀. The set
 
 The operators L and R from (2) are nevertheless admitted and satisfy L∘E=R∘E=I. Therefore this is not a failure of unqualified left-inverse admission. The additional Boolean/logical qualification fails. By [the native-modal commutation criterion](canonical-adjoints-and-image-factorization.md), §7, E also commutes with the original Box and Diamond. Even that natural modal qualification does not supply a qualified left inverse for the individual observer.
 
-## 6. Why the separation comparison remains open here
+## 6. Why this individual-observer obstruction does not establish separation
 
 This model does not satisfy ordinary logical separation. To verify that directly, B=RO(Cantor²) is atomless: any nonzero regular open contains a clopen rectangle, and splitting one coordinate gives a strictly smaller nonzero regular open. Thus A has exactly one atom,
 

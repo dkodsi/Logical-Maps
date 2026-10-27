@@ -3,8 +3,8 @@
   "database_snapshot_origin": "logical-maps",
   "purpose": "Result-to-database comparison, with exact matches distinguished from related records and research certificates distinguished from database verification status.",
   "coverage": {
-    "main_entries": 61,
-    "catalog_keys": 186,
+    "main_entries": 69,
+    "catalog_keys": 194,
     "limit": "Detailed and supplementary claims are matched to source and database context at their stated scopes. Registration remains separate from mathematical proof and exact certificate acceptance.",
     "supplementary_review_keys": [
       "choice.04",
@@ -2218,7 +2218,7 @@
         "status_source": "MAIN-RESULTS.json#CHOICE-NO-FINITE-BASIS",
         "scope": "Lean certified: the Boolean-valued construction, countable witness extraction and transfer to the original pure syntax; finite-fragment countermodels for Functional Choice and ☐Functional Choice; their absence of an equivalent finite fixed-type basis; strict selector stages and adjacent countermodels. The stage-union, all-type diagonal Choice and ☐selector consequences are also certified.",
         "receipt_index": "evidence/certification-closeout.json",
-        "official_verification_flags_changed": false
+        "official_verification_flags_changed": null
       }
     },
     {
@@ -2240,7 +2240,7 @@
         "status_source": "MAIN-RESULTS.json#ARITHMETIC-FOUNDATIONS",
         "scope": "Lean certified: the saved three-sort generated-algebra development and all seven specified semantic targets, including the number-field and extensionally-full orbit results. The detailed audit identifies all 36 original conclusions, 15 separate auxiliary translations and the 129-report union. Full Choice arithmetic conservativity and uniform interpretation for arbitrary generated signatures remain separate.",
         "receipt_index": "evidence/certification-closeout.json",
-        "official_verification_flags_changed": false
+        "official_verification_flags_changed": null
       }
     },
     {
@@ -2276,7 +2276,7 @@
           "evidence/certificates/max-predecessor/certificate.json",
           "evidence/certificates/max-predecessor-graph/certificate.json"
         ],
-        "official_verification_flags_changed": false
+        "official_verification_flags_changed": null
       }
     },
     {
@@ -2332,7 +2332,7 @@
         "status_source": "MAIN-RESULTS.json#PROBABILITY",
         "scope": "Object-language certificates cover supported-real suprema, natural-number order and basic numeric operations, including left zero, left successor and commutativity for the defined addition term. Cut crossing and supported-real negation, subtraction and inverses also have checked ordinary Lean source proofs and principal axiom audits. Further object-language translations are prepared but uncertified; the bounded addition/multiplication checks do not complete the probability development. The full internal probability interpretation, its equivalences and type ceiling remain without a complete certificate. Certified numeric-operation laws retain ActualWorld, quantified Infinity and internal domain guards; induction and cases require ActualWorld but not Infinity.",
         "receipt_index": "evidence/certification-closeout.json",
-        "official_verification_flags_changed": false
+        "official_verification_flags_changed": null
       }
     },
     {
@@ -2531,7 +2531,7 @@
         "certificates": [
           "evidence/certificates/orbit-code-towers/certificate.json"
         ],
-        "official_verification_flags_changed": false
+        "official_verification_flags_changed": null
       }
     },
     {
@@ -2565,7 +2565,7 @@
         "status_source": "MAIN-RESULTS.json#LOGICAL-OBSERVERS",
         "scope": "Lean certified: H + full typed Logical Observer Separation with explicit endpoint identities contains the actual repository C calculus and derives BF, by a same-signature, same-sequent proof translation in the fixed relational language. The shorter definition is connected by the ordinary endpoint-reduction proof.",
         "receipt_index": "evidence/certificates/full-typed-logical-separation-actual-c/acceptance.json",
-        "official_verification_flags_changed": false
+        "official_verification_flags_changed": null
       }
     },
     {
@@ -2583,7 +2583,7 @@
         "status_source": "MAIN-RESULTS.json#ANALYTIC-RIGIDIFICATION",
         "scope": "The arbitrary finite-arity schema and signature transport are accepted, with clean principal axiom reports.",
         "receipt_index": "evidence/certification-closeout.json",
-        "official_verification_flags_changed": false
+        "official_verification_flags_changed": null
       }
     },
     {
@@ -2633,7 +2633,7 @@
         "certificates": [
           "evidence/certificates/finite-compression/certificate.json"
         ],
-        "official_verification_flags_changed": false
+        "official_verification_flags_changed": null
       }
     },
     {
@@ -2650,7 +2650,7 @@
           "evidence/certificates/representation-core/certificate.json",
           "evidence/certificates/lambda-free-reconstruction/certificate.json"
         ],
-        "official_verification_flags_changed": false
+        "official_verification_flags_changed": null
       }
     },
     {
@@ -2674,7 +2674,7 @@
         "status_source": "MAIN-RESULTS.json#FINITE-TYPE-PROPAGATION",
         "scope": "Finiteness propagation, descent and type classification checked. The four C5 base-infinity models and the stated two-stage model/finiteness/Functionality endpoints now have separate accepted receipts; their remaining numerical bridges are unaccepted.",
         "receipt_index": "evidence/certification-closeout.json",
-        "official_verification_flags_changed": false
+        "official_verification_flags_changed": null
       }
     },
     {
@@ -2713,7 +2713,7 @@
         "certificates": [
           "evidence/certificates/full-observers-simultaneous-finite-schema/certificate.json"
         ],
-        "official_verification_flags_changed": false
+        "official_verification_flags_changed": null
       }
     },
     {
@@ -2802,7 +2802,7 @@
         "status_source": "MAIN-RESULTS.json#CH-COALESCED",
         "scope": "Lean certified: Actual opposite-CH components at type e and their coalesced C countermodel with ☐BF, constructed in Lean’s ambient metatheory. The retained conditional certificate also covers ☐Atomicity. The additional rigidity and well-ordering verdicts, and a finitistic reduction from Con(ZFC), are outside this certification.",
         "receipt_index": "evidence/certificates/coalesced-ch-expanded/acceptance.json",
-        "official_verification_flags_changed": false
+        "official_verification_flags_changed": null
       }
     },
     {
@@ -2828,7 +2828,7 @@
         "status_source": "MAIN-RESULTS.json#MAX-CH",
         "scope": "Lean certified: Maximalism together with Non-contingency of CH is inconsistent, using constructed opposite-CH components at type e in Lean’s ambient metatheory. This certifies neither Maximalism-alone inconsistency nor a finitistic reduction from Con(ZFC).",
         "receipt_index": "evidence/certificates/coalesced-ch-expanded/acceptance.json",
-        "official_verification_flags_changed": false
+        "official_verification_flags_changed": null
       }
     },
     {
@@ -2853,7 +2853,7 @@
         "status_source": "MAIN-RESULTS.json#INFINITARY-COMPREHENSION",
         "scope": "Lean certified: for universe-0 categorical premodels, closure under actual infinitary term denotations, unrestricted original-closed-type Infinitary Comprehension and ☐ND at type t imply faithful full-standard representation. The representation retains the original closed root-domain carriers, quotients observationally equivalent reachable worlds, preserves infinitary truth through grounding, and represents every proposition profile and every external function at an admitted relational-output type. Separate full-standard validity reports give the converse semantic direction. Supporting certificates cover regular-cardinal parameter-bound strictness, the countable finite-C reduct, the finite syntax bridge, cardinal closure, and the two infinitary action countermodels. Nominal Atomicity is semantic profile-order Atomicity; general action Atomicity and Rigid Comprehension retain their root-level premises. The result is neither recursive proof-calculus completeness nor equivalence with finitary Choice Classicism; arbitrary-universe forward representation and the full H-theta application are not certified.",
         "receipt_index": "evidence/certificates/infinitary-full-representation/acceptance.json",
-        "official_verification_flags_changed": false
+        "official_verification_flags_changed": null
       }
     },
     {
@@ -3009,7 +3009,7 @@
     {
       "result_id": "H-OBSERVER-SPACE",
       "action": "Keep as a separate H research atlas",
-      "proposal": "Keep H as the explicit base of the linked research atlas; the database’s standing C framework cannot represent the whole development. Preserve the fixed primitive signatures, preservation tiers, finite qualification lists and output-type scopes. The atlas covers exact primitive-package order and higher-type factorization; truth-profile, ND and identity-bivalence representations; composition-closed families and finite-image normalization; explicit Plenitude and Zorn admission results; linked affine signatures; identity, truth and quantifier-constructor restrictions; and the reversible-meet atom characterization. Its complete logical region recovers C + BF and includes the strict reversible, surjective, left-inverse, necessary and endpoint separation comparisons, the Plenitude/endpoint equivalences and the finite-list inverse decomposition. Retain the independent countermodels, including the ternary Cantor, finite-block, component-shift, two-colour, linear/circular fibre and omega-chain constructions. C5 + necessary OS does not imply SplitMono. The surjective-section theorem requires C5; SurjSep/SplitMono incomparability is over C + necessary BF + necessary OS. Preserve direct attribution and the existing exact certificate scope. Include the admitted invariant-congruence obstruction, dense-chain order-primitivity theorem and explicit atomless H model; the fixed-point criterion and C5-relative nonpersistence; and the cancellative-monoid family theorem placing SurjSep + SplitMono strictly between Rev and its two factors. The conjunction converse and C5-relative persistence comparisons are settled negatively. Include the exact gap characterization and Plenitude/order-bound truth-cut bridge, the complete split interval preserving both quantifier families below C, and the specified convex-block/finite-factor reductions. Separate Onto(E) persistence over C + BF (type t) from failure of SurjSep persistence; include the integer-shift predecessor refuting SurjSep ⇒ ☐BF at every admitted type. Include the admitted adjoint/image-factorization theorem over C5 and distinguish the Boolean-only native modal commutation test from separation principles. Include the BoxSep/InjSep branch, finite Barcan and minimal .2 theorems, strict C5 chain, and both incomparabilities. Record the exact individual Boolean-transversal classification; its countermodel does not settle InjSep versus SplitMono. Include idempotent native-necessity separation with the finite-frame scope explicit, the C5 J-versus-K finite decomposition, and the exact universal-modal/predicate-universal reflection grammar. Do not promote necessary .2 to a new strict consequence or use the nonsplitting model as an InjSep countermodel. Include the fixed external stabilization hierarchy and its single infinite countermodel, the C5 finite-relative-generation characterization of Rev without injection, and J without K in the existing regular-open model. Retain OS in the unresolved separation comparison and injection in the controlled individual inverse theorem. Include finite-poset nonpersistence beyond idempotence, canonical local support and its exact Rev strength, controlled selectors with both BC_t and Zorn_t explicit, and the admitted local-homogeneity route to SplitMono. None settles the general OS+J question. Include bounded-degree normalization and its additional-premise sheet count, finite-image BoxSep retaining Actuality, central separation versus Extensionality with C5 explicit, and completeness reflection and the exact t/tt boundary. The colour model fails Zorn_t, so it is not a countermodel with both admission premises. Include the invariant characterization of Rev, the two centrality characterizations, fixed group exponents and finite-image reflection. The arbitrary-list theorem retains Actuality, while full scope and lists containing a relational type do not require it. Include the general group-word classification, its exact C5 invariant-component form and the internal finite-family equivalences. The injective-to-logical-left-inverse separation question remains unresolved.",
+      "proposal": "Keep H as the explicit base of the linked research atlas; the database’s standing C framework cannot represent the whole development. Preserve the fixed primitive signatures, preservation tiers, finite qualification lists and output-type scopes. The atlas covers exact primitive-package order and higher-type factorization; truth-profile, ND and identity-bivalence representations; composition-closed families and finite-image normalization; explicit Plenitude and Zorn admission results; linked affine signatures; identity, truth and quantifier-constructor restrictions; and the reversible-meet atom characterization. Its complete logical region recovers C + BF and includes the strict reversible, surjective, left-inverse, necessary and endpoint separation comparisons, the Plenitude/endpoint equivalences and the finite-list inverse decomposition. Retain the independent countermodels, including the ternary Cantor, finite-block, component-shift, two-colour, linear/circular fibre and omega-chain constructions. C5 + necessary OS does not imply SplitMono. The surjective-section theorem requires C5; SurjSep/SplitMono incomparability is over C + necessary BF + necessary OS. Preserve direct attribution and the existing exact certificate scope. Include the admitted invariant-congruence obstruction, dense-chain order-primitivity theorem and explicit atomless H model; the fixed-point criterion and C5-relative nonpersistence; and the cancellative-monoid family theorem placing SurjSep + SplitMono strictly between Rev and its two factors. The conjunction converse and C5-relative persistence comparisons are settled negatively. Include the exact gap characterization and Plenitude/order-bound truth-cut bridge, the complete split interval preserving both quantifier families below C, and the specified convex-block/finite-factor reductions. Separate Onto(E) persistence over C + BF (type t) from failure of SurjSep persistence; include the integer-shift predecessor refuting SurjSep ⇒ ☐BF at every admitted type. Include the admitted adjoint/image-factorization theorem over C5 and distinguish the Boolean-only native modal commutation test from separation principles. Include the BoxSep/InjSep branch, finite Barcan and minimal .2 theorems, strict C5 chain, and both incomparabilities. Record the exact individual Boolean-transversal classification; its countermodel does not settle InjSep versus SplitMono. Include idempotent native-necessity separation with the finite-frame scope explicit, the C5 J-versus-K finite decomposition, and the exact universal-modal/predicate-universal reflection grammar. Do not promote necessary .2 to a new strict consequence or use the nonsplitting model as an InjSep countermodel. Include the fixed external stabilization hierarchy and its single infinite countermodel, the C5 finite-relative-generation characterization of Rev without injection, and J without K in the existing regular-open model. Retain OS in the separation decompositions and injection in the controlled individual inverse theorem. Include finite-poset nonpersistence beyond idempotence, canonical local support and its exact Rev strength, controlled selectors with both BC_t and Zorn_t explicit, and the admitted local-homogeneity route to SplitMono. None settles the general OS+J question. Include bounded-degree normalization and its additional-premise sheet count, finite-image BoxSep retaining Actuality, central separation versus Extensionality with C5 explicit, and completeness reflection and the exact t/tt boundary. The colour model fails Zorn_t, so it is not a countermodel with both admission premises. Include the invariant characterization of Rev, the two centrality characterizations, fixed group exponents and finite-image reflection. The arbitrary-list theorem retains Actuality, while full scope and lists containing a relational type do not require it. Include the general group-word classification, its exact C5 invariant-component form and the internal finite-family equivalences. SplitMono strictly implies InjSep, even over C5 with necessary all-type Relational Choice, Transversal Choice and Zorn.",
       "records": [
         {
           "record": "principles/functionality-r",
@@ -3039,7 +3039,7 @@
     {
       "result_id": "LAMBDA-FREE-ENDPOINT-COMPREHENSION",
       "action": "Use as the λ-free presentation of the infinitary extension",
-      "proposal": "Pair full typed endpoint separation with boxed Infinitary Comprehension over the precisely specified λ-free base. Finite instances supply strong comprehension and recover abstraction; initial equality guards are derived rather than imposed. Retain strict whole-operation qualification, the necessitation convention and arbitrary simultaneous parameters. Preserve the existing finite-reconstruction certificate at its original scope; this combined theorem is a separate ordinary argument.",
+      "proposal": "Use the later complete native endpoint-IC certificate in next-update/certificates/endpoint-ic-full.json. Its classical Lean metatheory is distinct from the ordinary choice-free ZF proof; preserve that scope.",
       "records": [
         {
           "record": "principles/necessary-distinctness-necessary-r",
@@ -3050,6 +3050,59 @@
           "role": "consequence after observer reconstruction"
         }
       ]
+    },
+    {
+      "result_id": "RECURRENT-COLOUR-SEPARATION",
+      "action": "Add the model and the separate propagation implication",
+      "proposal": "Use recurrent-colour-rigidity, rigid-rigidity-power-necessitation and boxed-barcan-power-necessitation in the cumulative integration register. Record non-entailments as model verdicts. The consequence register derives the broader rigidity failures; retain the older finite-compression certificate only for its own model.",
+      "records": [
+        {
+          "record": "results/tame-rigidity-and-rigid-power-imply-weakly-rigid-power",
+          "role": "recorded conjecture refuted"
+        }
+      ]
+    },
+    {
+      "result_id": "ATOMICITY-VICINITY",
+      "action": "Add the Atomicity/Vicinity implication; derive the ND corollary",
+      "proposal": "Use atomicity-vicinity-actuality and atomicity-nd-actuality in the cumulative integration register. All premises are unboxed. The existing ND_t -> Vicinity and Actuality -> Vicinity records supply the corollary and converse; one shared proof is sufficient.",
+      "records": []
+    },
+    {
+      "result_id": "OBSERVER-INTERPRETATIONS",
+      "action": "Keep as a scoped model-construction and interpretation theorem family",
+      "proposal": "The cumulative register includes the general quotient, completeness descent, proper realization and same-image comparison. The countermodel is outside BF and OS. These are observer-extension results, not unqualified native edges.",
+      "records": []
+    },
+    {
+      "result_id": "OS-CONSERVATIVITY",
+      "action": "Integrate the scoped theorem family and its proof sources",
+      "proposal": "See the cumulative integration register for native connection specifications and the exact construction scopes.",
+      "records": []
+    },
+    {
+      "result_id": "MODAL-CHOICE",
+      "action": "Integrate the scoped theorem family and its proof sources",
+      "proposal": "See the cumulative integration register for native connection specifications and the exact construction scopes.",
+      "records": []
+    },
+    {
+      "result_id": "STRONG-WORLDS-DOMAINS",
+      "action": "Integrate the scoped theorem family and its proof sources",
+      "proposal": "See the cumulative integration register for native connection specifications and the exact construction scopes.",
+      "records": []
+    },
+    {
+      "result_id": "OBSERVER-ANALYSIS",
+      "action": "Integrate the scoped theorem family and its proof sources",
+      "proposal": "See the cumulative integration register for native connection specifications and the exact construction scopes.",
+      "records": []
+    },
+    {
+      "result_id": "MAX-NUMBER-SETS",
+      "action": "Integrate the scoped theorem family and its proof sources",
+      "proposal": "See the cumulative integration register for native connection specifications and the exact construction scopes.",
+      "records": []
     }
   ],
   "reconciled_at_utc": "2026-10-24T02:20:15.596764+00:00",
@@ -10428,8 +10481,8 @@
   "supplementary_intake": {
     "path": "evidence/supplementary-reconciliation.json",
     "sha256": "a7776c8fa86bb040504e28c90f629c3b452aa7047f58234735d0d4e56f94e568",
-    "keys": 94,
-    "claims": 176,
+    "keys": null,
+    "claims": null,
     "normalized_at_utc": "2026-10-24T02:10:22.431760+00:00",
     "additional_source_evidence": [
       {

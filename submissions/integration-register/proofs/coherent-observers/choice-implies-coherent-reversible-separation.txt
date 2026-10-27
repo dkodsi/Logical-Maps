@@ -1,0 +1,340 @@
+CHOICE SUPPLIES COHERENT REVERSIBLE OBSERVATION
+27 October 2026. Original ordinary mathematical argument by OpenAI Codex.
+Direct source: misc, Sections 1-8, unpaginated. The internal constructions and
+weaker-premise refinement received independent AI review; see
+../../evidence/coherent-observer-review.json.
+
+1. THE THEOREM AND ITS MEANING
+
+In the fixed relational type system of C,
+
+  C + boxed Functional Choice -> full CoRevSep,
+                              -> necessary full CoRevSep.       (1)
+
+CoRevSep asks for one admitted, pairwise commuting family of reversible
+logical observers that collectively distinguishes all distinct relations.
+For the full schema, each finite list of quantifier qualifications and
+each relational output type is included, as defined in
+object-language-and-finite-basis.txt and joint-injective-separation.txt.
+Our construction supplies the SAME endpoint-membership family for all
+these instances. Each observer and its inverse preserve Boolean operations
+and every admitted typed quantifier as whole-operation identities.
+The same family continues to witness separation at every world: for each
+finite instance the stronger conclusion is
+
+  exists K.[Stable(K) and Box CoRevWitness_(tau,Delta)(K)],     (1a)
+
+where CoRevWitness is the conjunction inside CoRevSep, with K left free,
+and Stable(K) says every K(E) is Top or Bottom. The constructed K is common
+to all the instances. This is stronger than just Box exists K.
+
+In particular the proposed implication to CoInjSep is proved. Choice
+provides more than individual distinguishing operations: it lets them be
+organized into a single compatible, reversible system.
+
+The sharper sufficient premise is
+
+  C5 + Atomicity + an admitted well-order of the world atoms
+       -> stable full CoRevSep.                                (2)
+
+No quantified Infinity axiom is required. Internally finite atom fields
+and internally infinite atom fields are handled separately. The argument
+also applies to nonstandard Henkin models: an internally finite field is
+not assumed to be externally standard-finite. No external family of
+functions is declared admitted merely because it exists in set theory.
+
+2. THE RIGID CLASSICAL FRAGMENT
+
+Write T for C5+Atomicity, equivalently C+boxed Plenitude. Let
+
+  W(w) := Atom_t(w),          At(w,p) := Box(w -> p).
+
+T supplies C5, BF at every type, Functionality, necessary Actuality, and
+Plenitude. At every evaluation point there is exactly one true atom a.
+W and all identities are endpoint-valued. For an atom w, At(w,-) obeys
+the classical Boolean laws and the typed quantifier law
+
+  At(w, forall x.Fx) iff forall x.At(w,Fx).                    (3)
+
+Moreover p=q iff every atom has the same At-value on p and q. These are
+the atomic truth and representation lemmas in
+../../../classicism-results-2026-10-24-v2/source/research/2026-10-22/evaluation-and-choice/structural-world-representation.md, Sections 1-4.
+
+We do the set constructions below with admitted endpoint-valued predicates
+and graphs. Their current extensions behave classically; coextensive such
+predicates are identical, by BF and Intensionality. Quantifying over these
+objects, or taking an impredicatively defined intersection of them, is
+permitted at the indicated fixed types. C5 and BF make the resulting
+predicates endpoint-valued too. All references below to least inductive
+relations or families mean this internal construction, not an intersection
+over all external subsets.
+
+An arbitrary currently admitted predicate P has an endpoint-valued
+representative with the same current extension: at the true atom a use
+lambda x.At(a,Px). The same applies to binary relations. Thus an admitted
+current well-order of W can be replaced by an endpoint-valued well-order
+with the same current order. All subsequent well-order reasoning is in
+the rigid fragment, over admitted rigid subsets of W.
+
+Unique-value graphs whose output type is relational become operations by
+Plenitude, extending by a fixed default outside their fields. Every output
+type used below is relational (t, tt, or an iterated relational type).
+There is no operation returning e and no implicit type extension.
+
+3. TWO INTERNAL SET-THEORETIC LEMMAS
+
+The following previously established proofs apply to any admitted rigid
+field at a fixed type, not only to the full individual domain.
+
+(a) Internal Schroeder-Bernstein: admitted injections both ways give an
+admitted bijection. If f:X->Y and j:Y->X are injections, let D be the
+least admitted X-subset containing X minus j[Y] and closed under j o f.
+Then D=(X minus j[Y]) union j[f[D]]. Use f on D and the inverse graph of
+j on X minus D. This is a bijection; its unique-value graph is an operation
+when needed. See ../../../classicism-results-2026-10-24-v2/source/research/2026-10-22/evaluation-and-choice/structural-world-representation.md, Section 6.
+
+(b) Internal infinite-square lemma: an internally infinite admitted
+well-ordered field X admits an injection X times X -> X. The proof in
+Section 10 of the same source is recalled to identify its assumptions.
+
+Suppose X is a counterexample and take a least bad initial segment K:
+choose the least endpoint of a bad proper segment if one exists, and
+otherwise take X. Every proper initial segment is finite or has a square
+injection. No proper segment is equipotent to K. K has no greatest point:
+if K=L union {m}, L is infinite and L squared injects into L; two distinct
+points of L give K -> L squared -> L, contradicting Schroeder-Bernstein
+and the preceding assertion.
+
+Well-order K squared by (max(x,y),x,y). Every proper predecessor set P
+is contained in J squared for a proper initial segment J of K. No K
+injects into P: if J is finite this contradicts finiteness heredity; if
+J is infinite, the square injection of J gives K -> J and contradicts
+Schroeder-Bernstein. But internal comparison of the two well-orders K
+and K squared embeds one onto an initial segment of the other. Embedding
+K squared into K contradicts badness. Embedding K into K squared must
+have proper range, contradicting the preceding restriction on P.
+
+Comparison is internal: take the admitted union of all initial-segment
+order-isomorphisms. Least disagreement proves compatibility. If neither
+side is exhausted, adjoining the two least omitted points extends the
+union, contradiction. Products and pairs can be coded by haecceities.
+
+Finiteness in these arguments is internal Frege finiteness. Its invariance
+under represented bijections, injection heredity, and closure under finite
+unions and products follow by successor-removal induction at fixed types;
+the details are in the cited Section 10. The square proof needs the given
+well-order, these finiteness lemmas, and internal Schroeder-Bernstein.
+It has no remaining use of Functional Choice. Plenitude supplies any
+operation needed from a unique-value graph.
+
+4. INTERNALLY FINITE FIELDS: ONE CYCLIC PERMUTATION
+
+Suppose W is internally finite. Internal finite-subset induction proves
+that every nonempty finite subfield A has an admitted cyclic permutation
+g: a permutation with no proper nonempty admitted forward-closed subset
+of A. Extend g by identity outside A.
+
+For a singleton, use identity. For the successor step take a cyclic
+permutation of nonempty A, choose a point u in A, and insert a new z
+into its edge u -> g(u):
+
+  g'(u)=z,       g'(z)=g(u),       g'(v)=g(v) otherwise.
+
+This is an admitted permutation of A union {z}. If a nonempty admitted
+subset B of the enlarged field is g'-forward-closed, its old part B cap A
+is nonempty: if z is its first available point, g'(z) belongs to A.
+The old part is g-forward-closed, including at u since closure gives
+u -> z -> g(u). Thus B cap A=A, and closure from u also includes z.
+This proves cyclicity. Adjoining a point already present changes nothing.
+The empty starting field is handled by the singleton step.
+
+The induction predicate is an admitted formula asserting existence of
+such a permutation. This is internal finite induction and therefore
+also covers pseudofinite W.
+
+Let M be the least admitted family of operations containing I and g and
+closed under composition. Use endpoint-valued candidate families in its
+definition. The usual two-stage centralizer induction proves that all
+M-members commute: first show every member commutes with g; then, for
+each such member, show every member commutes with it.
+
+Every member permutes W, fixes its complement, and has an admitted inverse.
+These properties contain I,g and are closed under composition. The inverse
+of g is given by its unique inverse graph using Plenitude; a product's
+inverse is the reverse product of its inverses. This does not presume
+that the inverse already belongs to M.
+
+For any a in W the admitted orbit
+
+  O(v) := W(v) and exists f.[M(f) and f(a)=v]
+
+is nonempty and g-forward-closed. Cyclicity gives O=W. Hence M is an
+admitted commuting family of permutations acting transitively on W.
+
+5. INTERNALLY INFINITE FIELDS: A BOOLEAN GROUP
+
+Now suppose W is internally infinite. Its well-order and Section 3 give
+an admitted injective pairing p:W squared -> W. Choose a!=b in W and put
+
+  c=p(a,b),                  J(x,z)=p(p(x,z),a).
+
+J is injective and misses c: equality p(p(x,z),a)=p(a,b) would imply a=b.
+
+Let Fin(W) be the admitted field of internally finite endpoint-valued
+subsets of W, normalized false off W. Equivalently these are the members
+of the least admitted family containing the empty subset and closed under
+adjoining one point. Equivalence with the Frege definition follows by
+finite-cardinal induction in one direction and adjunction induction in
+the other. Finite unions, subsets and symmetric differences stay finite.
+
+Define R(A,z) as the least admitted relation of subset/code pairs containing
+(empty,c) and closed under sorted append:
+
+  R(A,z) and x in W and (forall u in A.u<x)
+       -> R(A union {x}, J(x,z)).                              (4)
+
+Every set appearing in R is an endpoint-valued subset of W and every code
+belongs to W. All definitions are at fixed types: A:tt, z:t and relations
+on these variables. There is no sort of external finite sequences.
+
+Here are the two substantive coding obligations.
+
+ARBITRARY INSERTION. Induct on R(A,z) to prove that for every x in W the
+set A union {x} has some R-code. At the base append x. At a successor
+A=A0 union {y}, with all A0 below y, compare x and y. If x<y, insert x
+into A0 by induction and then append y. If x=y retain the existing code.
+If y<x append x to the existing code. Thus the domain of R contains empty
+and is closed under arbitrary adjunction. Internal finite induction gives
+a code for every internally finite subset of W.
+
+DECODING IS SINGLE-VALUED. The least-relation definition has an internal
+inversion rule. If F(P) denotes the base pair plus the permitted successors
+of P, closure gives F(R) subset R. Monotonicity gives F(F(R)) subset F(R),
+so F(R) is also closed. Minimality yields R=F(R).
+
+Induct on R(A,z) with the assertion that R(B,z) implies B=A. For z=c,
+inversion cannot give a successor because c is outside J's range, so B is
+empty. In the successor step z=J(x,u) and A=A0 union {x}, with R(A0,u).
+Inversion of R(B,z) gives B=B0 union {y}, z=J(y,v), and R(B0,v).
+Injectivity of J gives x=y and u=v. Induction gives A0=B0, hence A=B.
+
+For each finite A choose its LEAST R-code in the given well-order of W.
+This is an admitted unique-value graph and hence an operation by Plenitude.
+Decoding uniqueness makes this an injection Fin(W) -> W. Singleton
+formation supplies W -> Fin(W). Internal Schroeder-Bernstein therefore
+gives an admitted bijection b:W -> Fin(W).
+
+Symmetric difference makes Fin(W) an abelian group in which every element
+is its own inverse. Its operation is an admitted lambda term, and its
+identities follow from the Boolean identities on endpoint-valued predicates.
+Transport along b gives an admitted group operation * on W. The inverse
+of b is again a unique-value graph represented by Plenitude. No selection
+principle beyond the initial well-order has been used.
+
+The translations f_u(v)=u*v on W, extended by identity off W, are admitted
+permutations. Their endpoint range predicate is an admitted family M.
+They commute, act transitively, and are all involutions.
+
+6. LIFTING PERMUTATIONS TO FULL LOGICAL OBSERVERS
+
+The two branches produce an admitted endpoint family M of pairwise
+commuting permutations of W, transitive on W. Each f has an admitted
+inverse; each operation fixes nonatoms. Define its observer by the
+uniform lambda term
+
+  L_f(p) := exists w.[W(w) and w and At(f(w),p)].               (5)
+
+Atomic pasting, or the unique-true-atom calculation, gives for every v in W
+
+  At(v,L_f(p)) iff At(f(v),p).                                (6)
+
+Consequently L_f preserves negation and conjunction. Using (3), it also
+preserves every typed universal quantifier: at each atom v both
+L_f(forall x.Fx) and forall x.L_f(Fx) have truth value
+forall x.At(f(v),Fx). Atomic separation identifies the propositions, and
+Functionality upgrades the universally quantified output identities to
+the required whole-operation identities. The same reasoning applies to
+the Boolean clauses. Existential preservation follows by duality.
+
+Composition reverses the permutation order:
+
+  L_f o L_h = L_(h o f),       L_I=I.
+
+Thus commuting permutations give commuting observers. The lift of an
+inverse permutation is a two-sided inverse and has all the same logical
+qualifications. In particular every L_f is injective.
+
+Define the admitted family predicate
+
+  K(E) := exists f.[M(f) and E=L_f].                          (7)
+
+It is endpoint-valued by C5 and BF; the uniform lambda term in (5) makes
+the displayed definition internal. Let a be the currently true atom.
+If p!=q, some atom v distinguishes their At-values. Transitivity supplies
+f in M with f(a)=v. Formula (6) then makes L_f(p) and L_f(q) differ in
+current truth. K separates propositions. Functionality supplies an
+argument tuple distinguishing any two unequal relations, so the SAME K
+separates all relational types. Section 6 proves (2).
+
+The SAME K works necessarily. All membership, permutation and transitivity
+facts about M are endpoint-valued, and BF makes their universal closures
+necessary. At any world choose its true atom a'; transitivity from a'
+repeats the separation proof just given. Whole qualification, commutation
+and inverse identities persist by NI, with the same inverse witnesses;
+BF collects the universally quantified clauses. This proves (1a) under
+the weaker premise (2), without changing the witness family.
+
+In the infinite branch the observers themselves are involutions. The
+finite branch need not have this additional property.
+
+7. BOXED FUNCTIONAL CHOICE AND NECESSITY
+
+The recorded consequences of boxed Functional Choice are boxed Plenitude,
+C5, Atomicity, Well-Ordering, Functionality and No Pure Contingency. In particular a well-order of the proposition type
+restricts to an admitted well-order of W, supplying the premise of (2).
+
+The necessary-Plenitude arrow is
+necessary-functional-choice-r-implies-necessary-plenitude-r. The recorded
+Well-Ordering chain runs through necessary Relational Choice, necessary
+Actuality/Transversal, necessary Transversal Choice, and necessary
+Well-Ordering. This is a use of the recorded strong Choice package, not
+a claim to settle unboxed Relational Choice -> Transversal Choice.
+
+Hence boxed Functional Choice proves stable full CoRevSep, with the same
+witness family necessarily satisfying each instance, by Section 6. This
+implies the necessary existential principles in (1). The existing finite
+propositional/Q_t reduction also recovers all relational and quantifier
+instances. No Pure Contingency provides an alternative route to the boxed
+closed sentences, but is not needed for the stronger fixed-family result.
+Neither route uses unrestricted necessitation on optional hypotheses.
+
+The same argument gives necessary CoInjSep, necessary CoSep, and necessary
+full Rev. The witness family is not asserted to be canonical. Its existence
+and its necessary witness properties are what the theorem establishes.
+
+8. SIGNIFICANCE, BOUNDARY AND REVIEW
+
+Together with joint-injective-separation.txt the results give two routes:
+
+  Actuality + CoInjSep -> C5 + Atomicity + CoRevSep;
+
+  boxed Functional Choice -> stable CoRevSep.
+
+The first extracts atomic reversible structure from coherent injectivity.
+The second supplies that coherent structure from a familiar strong theory.
+The joint observer principle records an organization of logical access to
+worlds that separate individual observer principles do not express.
+
+The finite/cofinite countermodel from this folder still shows that
+C5 + necessary Atomicity + necessary Rev + necessary CoIdemSep does not
+suffice. It explicitly fails even unboxed Functional Choice at (t,t):
+an equivariant serial relation asks for an atom below each nonzero
+proposition, but any finite-support selector fails on the complement of
+its own finite support. See the companion countermodel note.
+
+The main nontrivial work is internal finite-subset coding and the
+finite/pseudofinite cyclic construction, combined with the previously
+proved internal infinite-square lemma. The observer lift is short once
+atomic pasting is used. The abstract set-theoretic existence of abelian
+group structures is background mathematics; the claim here is the
+admitted construction and its consequence for the fixed logical theory.

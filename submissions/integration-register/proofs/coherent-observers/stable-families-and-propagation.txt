@@ -1,0 +1,183 @@
+STABLE COMMUTING FAMILIES: ATOMICITY AND EXACT PROPAGATION
+26 October 2026. Original ordinary mathematical arguments by OpenAI Codex.
+Direct source: misc, Sections 1-5 below, unpaginated. Sections 2-4 received
+independent ordinary review by a second Codex agent; see ../../evidence/coherent-observer-review.json.
+No human checking, Lean certification, or native database promotion asserted.
+
+1. DEFINITIONS AND RESULTS
+
+Work over the fixed relational C5. All observers below satisfy whole Boolean
+and Q_t preservation. The existing C5 reduction upgrades those SAME observers
+to every typed quantifier. Use the object-language definitions in
+object-language-and-finite-basis.txt; no external family is being substituted
+for an admitted predicate K:(tt)t.
+
+Write I=lambda p.p, and put
+
+  Sep(K) := forall p,q. [forall E. KE -> (Ep iff Eq)] -> p=q;
+  Stable(K) := forall E. (KE=Top or KE=Bottom);
+  Persistent(K) := forall E. (KE -> Box KE);
+  Inj(E) := forall p,q. (Ep=Eq -> p=q).
+
+Here stable means that membership has endpoint values. It says nothing about
+the outputs of the observers themselves. Assume current K-members commute
+as whole operations and collectively separate. Then:
+
+  Stable(K) implies
+    [Box Sep(K) iff forall E.(KE -> Inj(E))].                 (A)
+
+There are also exact characterizations:
+
+  Atomicity_t
+    iff separation by a stable commuting family of idempotent observers;
+    iff separation by a persistent commuting family of idempotent observers;
+    iff uniformly indexed commuting idempotent observer separation.        (B)
+
+The last formulation can use index type t. No Functional Choice is required.
+In particular the stable-family formulation is one finite sentence over C5.
+
+  Extensionality
+    iff there is a stable commuting idempotent family K with Box Sep(K).    (C)
+
+The positive picture is precise: stable availability of enough compatible
+retractions recovers atomic worlds. For a stable commuting family, remaining
+separating necessarily is exactly the condition that none of its observers
+identifies distinct propositions. Full relational separation is recovered
+by C5 Functionality with the same family.
+
+2. EXACT PROPAGATION FOR A STABLE FAMILY
+
+Let A=Sep(K), and fix a current member E of K. Expand E(A) using its whole
+Boolean and typed quantifier identities. C5 makes p!=q endpoint-valued, and
+Stable(K) makes KF endpoint-valued. Boolean observers fix these values.
+For each current F in K, use EF=FE. Consequently E(A) is currently true
+exactly when
+
+  forall p,q. [forall F. KF -> (F(Ep) iff F(Eq))] -> p=q.    (1)
+
+By current separation of K, (1) is equivalent to Inj(E): unequal p,q must
+have unequal E-images, which K then distinguishes. Conversely a witness to
+the displayed truth disagreement makes the E-images unequal.
+
+If Box A holds, A=Top, so E(A)=Top for every current E and every such E is
+injective. Conversely suppose every current member is injective. Then every
+current member makes A true, exactly as it makes Top true. Separation of A
+from Top forces A=Top. This proves (A).
+
+There is no hidden shift of family here: it is the same admitted K in the
+premise and in Box Sep(K). Stable membership and C5's BF, NI and ND also
+make qualification and pairwise commutation necessary: each relevant
+membership value and each whole-operation identity is already an endpoint.
+Thus (A) can equivalently be stated for necessary adequacy of the same
+whole commuting-family witness. It does not replace Box exists K by
+exists K Box or assume that these quantifier placements coincide.
+
+3. STABLE AVAILABILITY OF COMMUTING RETRACTIONS CHARACTERIZES ATOMICITY
+
+The forward proof needs only Persistent(K). For each observer E put
+
+  r_E := forall p.(Ep iff p),     c_E := (E=I).
+
+For any current K-member E, if r_E is true then E=I. Indeed, for every
+current member F and every p, commutation gives F(Ep)=E(Fp). Actual truth
+preservation by E makes this agree in truth with Fp. Separation gives
+Ep=p; Functionality collects these identities into E=I.
+
+Define the admitted proposition
+
+  a := forall E.[KE -> (r_E -> c_E)].                         (2)
+
+It is true by the preceding argument. Current membership persistence gives
+KE=Top for each current E. Idempotence and Q_t give the value identity
+
+  E(r_E)=forall p.(E(Ep) iff Ep)=Top.
+
+C5 makes c_E an endpoint. Algebraic universal instantiation in (2), followed
+by the Boolean observer E, therefore gives
+
+  E(a) <= E(KE -> (r_E -> c_E)) = c_E.                       (3)
+
+Every nonidentity current member kills a, and identity fixes a. Let b be
+nonzero with b<=a. Separation from Bottom supplies a current E with E(b)
+true. By monotonicity and (3), E must be identity, so b is true. For every
+current F, the values F(b) and F(a) now agree in truth: both are true when
+F=I and both are Bottom otherwise. Separation gives b=a. Thus a is a true
+atom. Notice that no Q_(tt) clause was needed to obtain (3); universal
+instantiation supplied the requisite algebraic inequality directly.
+
+For completeness, this yields full propositional Atomicity as follows.
+The principal reader H_a(p)=Box(a->p) is an admitted endpoint-valued logical
+observer. An atom decides every proposition; C5's BF/Tractarianism gives
+
+  a<=forall x.Fx iff forall x.(a<=Fx),
+
+so H_a preserves every admitted quantifier. Because a is true, it preserves
+actual truth. For any nonzero d, choose a current E with E(d) true. Then
+H=H_a E is an endpoint-valued Q_t observer with H(d)=Top. Define
+
+  w := forall p.(Hp -> p).
+
+Q_t and endpoint-valuedness yield H(w)=Top, hence w is nonzero. For each p,
+universal instantiation gives w<=p if Hp=Top and w<=not-p otherwise.
+Thus w is an atom; since H(d)=Top, w<=d. This proves Atomicity_t.
+
+Conversely Atomicity_t supplies the explicit indexed family Phi:t(tt) in
+uniform-retractions.txt, Section 5. Its members commute, are idempotent,
+qualify at every type, and separate all relational distinctions. Define
+
+  KE := exists i:t.(E=Phi(i)).                               (4)
+
+C5 makes each identity an endpoint, and BF makes its existential closure
+an endpoint. Thus K is stable and has exactly the current range of Phi.
+This proves the stable-family converse, and stable membership plainly
+implies persistence. The prior indexed characterization completes (B).
+
+One can also replace a persistent witness directly by the stable predicate
+K'(E):=Box KE. C5 makes its values endpoints; persistence and reflexivity
+give exactly the same current members. No internal choice of enumeration
+or selected indexing operation is required for this replacement.
+
+The explicit Atomicity-to-Phi construction is substantive prior work, not
+reproved here. It received a separate final independent AI review recorded
+in ../../evidence/coherent-observer-review.json. Its use and the range step are identified so
+the proof dependencies remain inspectable.
+
+4. THE EXTENSIONAL ENDPOINT
+
+Suppose a stable commuting idempotent family separates necessarily. By (A)
+each current member is injective. From E(Ep)=Ep, injectivity gives Ep=p;
+Functionality gives E=I. Current separation therefore says that material
+equivalence implies propositional identity: the Fregean Axiom, equivalent
+over C to full relational Extensionality.
+
+Conversely under Extensionality the singleton family of identity is stable,
+qualified, commuting, idempotent and separating. Identity is injective, so
+(A) gives necessary separation by that same family. This proves (C).
+
+Scope: in (A) and (C) use stable membership, not just persistence of the
+currently present members. The latter permits additional members to enter
+elsewhere. For example in the full two-world C5 model at w0, with endpoint
+readers E0,E1, take K(I)=K(E1)=Top and K(E0)={w1}, with other values Bottom.
+Currently {I,E1} is commuting, idempotent, separating and persistent.
+Sep(K) holds at both worlds, but Extensionality fails. The enlarged family
+at w1 does not commute. This scope check belongs in the proof, not as a
+prominent negative result in the introductory guide.
+
+5. THE MODAL CONNECTION TO MAXIMALISM
+
+The earlier bare-C proof CoSep -> .2 has a direct Maximalism consequence.
+Let P be the pure sentence saying that all individuals are identical.
+A full one-world model with one individual satisfies Box P, and one with
+two individuals satisfies Box not-P. Both are C models. Hence neither
+closed pure identity Box P=Bottom nor Box not-P=Bottom is a C theorem.
+Pure Max(C) asserts their negations, namely Diamond Box P and
+Diamond Box not-P. These contradict .2, and thus CoSep. No C5 premise or
+enlargement of the reference theory is used. This is a short consequence
+of the existing directedness theorem, not a new Maximalism research line.
+
+
+Dependencies and provenance: object-language-and-finite-basis.txt, Sections
+1-3; uniform-retractions.txt, Sections 2-5; coherent-families.txt, Section 2;
+../../../classicism-results-2026-10-24-v2/source/topics/classicism/results/fregean-axiom-implies-extensionality-r.yaml.
+All new deductions in this note have source_id misc. Section 5 is self-
+checked; the independent audit covered Sections 2-4 as specified separately.

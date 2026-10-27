@@ -32,12 +32,7 @@ ambient premises. In particular,
 The dependencies are the following ordinary mathematical proofs, with
 their exact scopes retained:
 
-1. [Vicinity, Relational Choice and propositional completeness imply
-   Actuality](../../next-update/proofs/vicinity-relational-choice-and-propositional-completeness-imply-actuality.md),
-   §§2–5: the true-core bound law and concrete supported interpretation
-   of C5. These sections use Vicinity alone; choice and completeness enter
-   only in the later application. The same note's §6 gives the general
-   current-RC transfer calculation.
+1. [The supported C5 interpretation from Vicinity](../../next-update/proofs/vicinity-supported-interpretation.md), §§1–4: the true-core bound law and supported interpretation of C5. These use Vicinity alone. Section 4 below proves the required current-RC transfer.
 2. [Strict local sections, crisp chains, and Relational
    Choice](../../next-update/proofs/c5-relational-choice-implies-transversal-choice.md),
    §§1–4: C5 + RC_((αt),α) implies TC_α, for every type α, including e.
@@ -102,7 +97,7 @@ j_{\alpha\beta}(F)=\lambda x^{\iota(\alpha)}\,
 The first clause is an identity substitution convention; it need not be
 an admitted σσ operation. Thus (6) also works for σ=e. Each other
 displayed operation has an admitted original type. The structural
-β-reduction and lower-type identity substitution in dependency 1, §3,
+β-reduction and lower-type identity substitution in dependency 1, §2,
 prove whole idempotence of each j.
 
 Let D_α be its fixed-point domain. In particular,
@@ -142,7 +137,7 @@ is the image of j_α and s is true. Equation (5) makes the quantified
 values the actual joins and meets of the fixed-domain ranges in [0,s].
 
 The H and strict Logical Equivalence verification is exactly dependency
-1, §4, with original type τ there replaced by ι(α) at each source sort.
+1, §3, with original type τ there replaced by ι(α) at each source sort.
 To spell out the relevant side condition, translate variables through
 their j's and abstractions by projected arguments and outputs. For a
 finite source H derivation, collect the required whole idempotence and
@@ -256,7 +251,7 @@ RC_((σt),σ), as σ varies, suffices for the forward implication.
 
 Any model separating all-type RC from all-type TC must therefore fail
 Vicinity, and must fail unboxed ND_t. Equivalently, by dependency 1,
-§8, its persistent propositions cannot have a greatest proper member.
+§6, its persistent propositions cannot have a greatest proper member.
 
 Bare C+RC⇒TC remains unresolved. The theorem does not derive Vicinity
 from RC, does not derive Actuality without the additional completeness

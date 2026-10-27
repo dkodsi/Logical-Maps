@@ -267,12 +267,12 @@ By (N), no F(b) belongs to any U∈K_α. On K_α the witness open W_F is therefo
                      \theta(\bar k)\in U\bigr]
 \quad\Longrightarrow\quad
 \forall U\in K_{\alpha+1},\ A\in U.
-\tag{Ω}
+\tag{Omega}
 ```
 
 This is a metatheoretic rule about the closed-set procedure, not a new infinitary object-language axiom.
 
-Ground arithmetic on numeral terms is correct throughout K₀: Max entails the weak Infinity antecedent used by the fixed PA interpretation, and C+that antecedent proves the ground numeral facts. Induct on finite arithmetic quantifier depth, using negation-normal form. A true existential sentence has a standard witness and follows already from the induction hypothesis for that instance. For a true universal sentence, all standard instances are true at the preceding stage, and (Ω) supplies its universal closure at the next. Apply the same argument to the standardly true negation of any false sentence. Every arithmetical sentence has finite depth, so
+Ground arithmetic on numeral terms is correct throughout K₀: Max entails the weak Infinity antecedent used by the fixed PA interpretation, and C+that antecedent proves the ground numeral facts. Induct on finite arithmetic quantifier depth, using negation-normal form. A true existential sentence has a standard witness and follows already from the induction hypothesis for that instance. For a true universal sentence, all standard instances are true at the preceding stage, and (Omega) supplies its universal closure at the next. Apply the same argument to the standardly true negation of any false sentence. Every arithmetical sentence has finite depth, so
 
 ```math
 U\in K_\omega\quad\Longrightarrow\quad

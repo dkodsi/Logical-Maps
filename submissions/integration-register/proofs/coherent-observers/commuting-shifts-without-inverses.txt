@@ -1,0 +1,58 @@
+COMMUTING SEPARATION NEED NOT GIVE REVERSIBLE SEPARATION
+26 October 2026. Ordinary deduction by OpenAI Codex.
+Direct source for this additional verdict: misc, Sections 1-3 below.
+Self-checked; not independently audited or Lean-certified.
+
+1. THE EXISTING MODEL
+
+Use bernoulli-shift-injective-separation.md, Sections 2-6. Its supported
+measure-algebra hierarchy and generic elementary-hull model satisfy
+C5 and necessary InjSep, but necessarily fail SplitMono. Its powers
+E^n of the one-sided Bernoulli shift are admitted, injective, and
+qualified for every type, and already supply all the separating
+witnesses. The source includes an independent ordinary audit of
+its underlying proof; that audit did not check the new verdict here.
+
+2. THE COMMUTING FAMILY IS ITSELF ADMITTED
+
+In the source's ambient supported hierarchy define
+
+  K(F)=Top iff F=E^n for some external n in N;
+  K(F)=Bottom otherwise.
+
+Every symmetry fixes E and all its powers, so this function is
+equivariant. It therefore has empty support and belongs to the
+permitted predicate domain. Include K and the power sequence among
+the parameters of the countable elementary hull used by the generic
+construction. Each standard n and E^n then belongs to that hull.
+
+Faithful restriction preserves the actual distinctness of functions.
+Thus the current K-members in the resulting logical model are
+exactly the restrictions of these powers. There is no internal
+assumption of an arbitrary set of observers or a type-quantifier.
+
+Their whole compositions satisfy E^n E^m=E^(n+m)=E^m E^n.
+The source's strong-mixing and genericity argument, Section 6, says
+that for any nonzero admitted d some E^n d is currently true, at
+every generic world. Therefore this admitted commuting family
+separates propositions everywhere; the source's Functionality and
+faithfulness lift it to every relational type and finite list.
+
+Consequently this model satisfies
+
+  C5 + Box CoSep + Box not SplitMono,
+
+and hence necessarily fails Rev as well. The existing failure of
+RC_(tt,t) is retained; no stronger choice verdict is claimed.
+
+3. COMPARISON
+
+The finite-alphabet model M_5 in
+finite-alphabet-coherence-countermodels.txt satisfies C5+Box Rev
+and necessarily fails CoSep. Together the two models prove that
+CoSep and Rev are incomparable over C5, including at boxed scope.
+Coherence and availability of qualified inverses are separate
+restrictions on how enough observers may be supplied.
+
+The present note adds a family-admission check and a new comparison
+to an existing model; it does not claim a new Bernoulli construction.

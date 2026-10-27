@@ -1,0 +1,191 @@
+A COMMUTING FAMILY CAN LOSE SEPARATION: AN ELEMENTARY C5 COUNTERMODEL
+26 October 2026. Original ordinary mathematical proof by OpenAI Codex.
+Direct source: misc, Sections 1-7, unpaginated.
+Independently reviewed ordinary argument; see ../../evidence/coherent-observer-review.json for
+scope. No Lean certificate or native record.
+
+1. RESULTS
+
+  C5 + full CoSep does NOT imply necessary CoSep.
+
+More strongly there is a C5 model satisfying full current CoIdemSep and
+having an endpoint-valued predicate of commuting fully qualified observers
+which separates every relational type, but refuting even
+
+  Box OS_(t,empty).
+
+The same model satisfies necessary full BF and Functionality. Its failure
+of propagation is not caused by changes in family membership: the specified
+commuting family has rigid membership. It loses separation at an accessible
+isolated world. Its current idempotent family is a second witness and need
+not have rigid membership.
+
+The construction uses ordinary clopen sets and finite support. It requires
+neither forcing, generic filters, countable models of set theory, nor large
+cardinals. All quantifiers have their ordinary truth clauses at every world.
+
+2. WORLD SET, SYMMETRIES AND ALL HIGHER DOMAINS
+
+Let J be a countably infinite external set and X={0,1}^J. Adjoin an isolated
+point *, and put W={*} disjoint-union X. The proposition algebra is
+
+  B=Clop(W)=2 x Clop(X).
+
+Write a=(1,empty) for the isolated atom and b=(0,X) for its complement.
+Both are nonzero, and a or b=Top. A proposition (epsilon,c) is true at *
+iff epsilon=1, and true at x in X iff x belongs to c.
+
+G is the full binary wreath group: independent flips of coordinate values
+and arbitrary permutations of J. Every g fixes *. For finite S subset J,
+H_S fixes coordinates in S and their values, and is unrestricted outside S.
+An object is supported when some H_S fixes it. Set D_e to a singleton,
+D_t=B, and at every permitted arrow let D_(sigma tau) contain ALL supported
+actual functions D_sigma -> D_tau, with conjugation action.
+
+The support filter is invariant under conjugation; finite unions of supports
+are supports. Application preserves support. Every proposition is supported.
+
+3. FINITE ATTAINMENT, QUANTIFIERS, AND C5
+
+The H_S-fixed algebra is the finite algebra 2 x B_S, where B_S consists of
+binary clopens depending only on S. Every H_S-invariant subset R of B has
+its literal union and intersection in B, each attained by finitely many
+members (with the empty-family conventions).
+
+For the union, take r=(epsilon,c) in R. The orbit of c under flips of a
+finite support outside S is finite. Its union is the cylinder over the
+S-patterns extending into c. The first bit epsilon is unchanged. There
+are only finitely many S-patterns and two possible first bits. Finitely
+many such finite orbits therefore attain the union of R. Apply complements
+for the intersection. This is the finite-attainment lemma from the earlier
+finite-alphabet construction, with one additional invariant Boolean bit.
+
+For supported F:D_sigma->B, the range of F is invariant under a support
+stabilizer of F. Define Q_sigma(F) as its actual intersection and existential
+quantification as its actual union. The lemma puts these in B. Quantifier
+maps are equivariant and admitted with empty support. Boolean operations
+are equivariant too. The literal set operations give exactly the classical
+quantifier truth clauses at EVERY point of W.
+
+Parameter-sensitive term induction proves lambda closure: the union of
+the finitely many parameter supports supports the term denotation. Beta,
+eta and Functionality hold as identities of actual functions. Every object
+u has the supported endpoint test v |-> Top if v=u, Bottom otherwise.
+Thus Leibniz identity is literally Top for equal objects and Bottom for
+distinct objects, at every type. Native Box tests equality with Top.
+
+H is sound at every point. H-theorem equivalences have identical B-values
+under every assignment, hence their lambda abstractions are identical
+actual functions. This validates precisely C's fixed H-theoremhood gate.
+Crisp identity gives boxed ND at every type, so C5 holds at every world.
+Literal quantifier intersections also make all BF instances Top: both
+forall u.Box F(u) and Box forall u.F(u) are Top exactly when every F(u)
+is Top, and are Bottom otherwise. Functionality is likewise necessarily
+true. No optional-premise equivalence is used as a C identity rule.
+
+4. ONE RIGID COMMUTING FAMILY SEPARATES AT EVERY x IN X
+
+For finite T subset J let f_T fix * and flip exactly the coordinates T on X.
+Let E_T be inverse image under f_T. Also let r:W->W be the constant map
+with value *, and E_* its inverse-image operation:
+
+  E_*(epsilon,c)=(epsilon, epsilon X).
+
+Each map is continuous. E_T is supported by T; E_* is equivariant. Inverse
+image preserves the literal Boolean operations and all admitted quantifier
+intersections and unions. Function closure admits the composed predicates.
+Consequently every E_T and E_* is qualified at every type as a WHOLE
+operation identity. Their compositions obey
+
+  E_T E_U = E_(T symmetric-difference U),
+  E_* E_T = E_T E_* = E_*,        E_* E_*=E_*.
+
+Define K(E)=Top exactly when E=E_* or E=E_T for some finite T, and Bottom
+otherwise. This is an actual function on the whole admitted tt-domain.
+The specified set is invariant under G: coordinate permutations permute
+the finite flip sets, arbitrary flips commute with them, and E_* is fixed.
+Hence K has empty support and is an admitted endpoint-valued predicate.
+Its members commute at all worlds, and its membership is rigid.
+
+Fix x in X. Every nonzero proposition d=(epsilon,c) is accepted by a current
+member: use E_* if epsilon=1; otherwise c is nonempty, and finitely many
+flips send x into a finite cylinder contained in c. Apply this to the
+Boolean symmetric difference to separate unequal propositions. Functionality
+lifts it to all relational types. Thus this one K witnesses EVERY finite
+CoSep instance at x, with all-type qualification already proved.
+
+5. A COMMUTING IDEMPOTENT FAMILY ALSO SEPARATES THERE
+
+For each finite partial binary assignment s let r_s fix * and overwrite
+the indicated coordinates on X with s. Its inverse-image operation E_s is
+supported, idempotent, and fully qualified by the same set-operation proof.
+Distinct s give distinct operations, and none is E_*.
+
+Define L on the entire admitted operation domain by
+
+  L(E_*)=Top;
+  L(E_s)=(0,[bar s]);
+  L(E)=Bottom otherwise,
+
+where [bar s] prescribes the bit opposite s on its finite domain. This
+definition is G-equivariant, since binary complementation commutes with
+all binary value relabellings. Thus L is admitted with empty support.
+
+At x in X its current reset members set every selected bit to the opposite
+of x's bit. Overlapping assignments agree, so these reset operations commute.
+They also commute with E_*, since all r_s fix *. Every member is idempotent.
+To reach a specified finite cylinder, reset just those coordinates where x
+differs from its pattern. E_* handles the isolated atom. Thus L witnesses
+full CoIdemSep at every x in X.
+
+6. AT THE ISOLATED POINT NO BOOLEAN OBSERVERS SEPARATE
+
+Let E:B->B be ANY admitted Boolean observer and choose finite S supporting
+it. The function h_E(d)=1 iff * belongs to E(d) is a Boolean homomorphism
+B->2, hence defines an ultrafilter U_E. Because * is fixed by G and E
+commutes with H_S, this ultrafilter is H_S-invariant.
+
+Suppose b=(0,X) belongs to U_E. Choose j outside S and partition b into
+
+  p=(0,{x:x_j=0}),    q=(0,{x:x_j=1}).
+
+An ultrafilter containing b contains exactly one of p,q. But flipping j
+lies in H_S and interchanges p,q, so H_S-invariance says it contains either
+both or neither. Contradiction. Thus b is not in U_E. The ultrafilter
+contains a, the isolated atom, and is its principal ultrafilter. Therefore
+
+  * belongs to E(epsilon,c) iff epsilon=1.                       (3)
+
+Every admitted Boolean observer preserves actual truth at *. In particular
+none distinguishes the different propositions b and Bottom there.
+Even OS_(t,empty) fails, and therefore every stronger propositional CoSep
+instance fails. This excludes ALL admitted witnesses, not just K and L.
+
+The ordinary CoSep_(t,{t}) and CoIdemSep_(t,{t}) sentences consequently
+have exact B-value b: true at every point of X and false at *. Their boxes
+have value Bottom, since b!=Top. Choosing any x in X as the designated
+world proves all non-entailments in Section 1. The two evaluations use
+the SAME higher domains and logical operations; * is a native possibility
+because its atom a is nonzero.
+
+7. INTERPRETATION AND SOURCE BOUNDARIES
+
+The coherent family can reach both components from a binary world, but
+the isolated point is fixed by every admitted observer. Necessary identity
+does not make these observation routes reversible. A stable family can
+therefore lose its ability to distinguish propositions at another world.
+
+This is an original isolated-point variant of the finite-support clopen
+hierarchy in finite-alphabet-coherence-countermodels.txt, Sections 2-3 and 8.
+It replaces the heavier generic-point construction previously used for
+current OS without necessary OS. That older construction is not needed
+for this proof. The binary reset idea is retained from the earlier model;
+the new ingredients are the isolated point, its absorbing reader, the
+rigid commuting family, and the universal failure argument at that point.
+
+A positive boundary follows from an existing theorem: full Rev implies
+No Pure Contingency. Every CoSep instance is a closed pure formula, so
+Rev + CoSep DOES imply separately necessary CoSep (and similarly for
+CoIdemSep when it is assumed). This is a corollary of the existing Rev
+theorem, not a new proof of No Pure Contingency. The present countermodel
+necessarily lacks Rev, as its pure CoSep sentence is contingent.

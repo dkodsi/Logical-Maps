@@ -1,5 +1,5 @@
 {
-  "schema_version": 2,
+  "schema_version": null,
   "title": "CANDIDATES_DK",
   "date": "2026-10-24",
   "prepared_by": "Codex (OpenAI), prompted by Daniel Kodsi",
@@ -18,24 +18,25 @@
       "batch": "first",
       "category": "extensionality",
       "disposition": "proposed principle record",
-      "statement": "Relations are identical exactly when all suitably qualified logical observers agree on their instances.",
-      "formal": "\\begin{aligned}\n&\\forall X,Y^{\\bar\\sigma t}\\, .\\,X=Y\\leftrightarrow\\forall E^{tt}\\, .\\,\\operatorname{Good}_{\\Delta}(E) \\\\\n&\\qquad \\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])).\n\\end{aligned}",
+      "statement": "Every pair of distinct relations can be distinguished at some arguments by a suitably qualified logical observer.",
+      "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
       "definitions": [
-        "The schema ranges over finite tuples $\\bar\\sigma$ of argument types, including the empty tuple, and finite sets $\\Delta$ of tested types. $\\operatorname{Good}_{\\Delta}(E)$ consists of the following clauses:",
+        "The schema ranges over finite argument tuples $\\bar\\sigma$, including the empty tuple, and finite lists $\\Delta$ of tested types. The following finite conjunction defines $\\mathrm{Good}_\\Delta(E)$.",
+        "$$\nE\\top=\\top,\\qquad E\\bot=\\bot.\n$$",
         "Boolean operation identities:\n\n$$\n\\begin{aligned}\n&(\\lambda p\\, .\\,E(\\neg p))=(\\lambda p\\, .\\,\\neg Ep), \\\\\n&(\\lambda p,q\\, .\\,E(p\\land q))=(\\lambda p,q\\, .\\,Ep\\land Eq), \\\\\n&(\\lambda p,q\\, .\\,E(p\\lor q))=(\\lambda p,q\\, .\\,Ep\\lor Eq).\n\\end{aligned}\n$$",
         "For each $\\sigma\\in\\Delta$, quantifier operation identities:\n\n$$\n\\begin{aligned}\n&(\\lambda F^{\\sigma t}\\, .\\,E(\\forall x^\\sigma\\, .\\,Fx))=(\\lambda F^{\\sigma t}\\, .\\,\\forall x^\\sigma\\, .\\,E(Fx)), \\\\\n&(\\lambda F^{\\sigma t}\\, .\\,E(\\exists x^\\sigma\\, .\\,Fx))=(\\lambda F^{\\sigma t}\\, .\\,\\exists x^\\sigma\\, .\\,E(Fx)).\n\\end{aligned}\n$$",
         "For each $\\sigma\\in\\Delta$, Equality laws:\n\n$$\n\\begin{aligned}\n&\\forall x^\\sigma\\, .\\,E(x=x), \\\\\n&\\forall x,y^\\sigma\\, .\\,\\forall F^{\\sigma t}\\, .\\,E(x=y)\\to(E(Fx)\\to E(Fy)).\n\\end{aligned}\n$$",
         "Over C, the equality laws follow from Boolean preservation. They support the formulation over H, where OS recovers C.",
-        "Boolean preservation makes $E\\top$ true and $E\\bot$ false over H; over C it gives $E\\top=\\top$ and $E\\bot=\\bot$. Including these identities leaves the full separation theory unchanged: see the [reduction proof](proofs/logical-observer-endpoint-reduction.md)."
+        "The uniform definition includes the endpoint identities used in the Lean certificate. The formulation omitting those identities gives an equivalent full separation theory; see the H-to-C proof."
       ],
       "rationale": "Recovers C + BF over H and has atomless models. Restrictions on its observers give a hierarchy through C5 + Atomicity to Extensionality.",
       "connections": [
         "H + OS entails C + BF. **Lean certified** with explicit endpoint identities; [omitting them](proofs/logical-observer-endpoint-reduction.md) uses the ordinary reduction proof.",
-        "Over C: Atomicity (type t) + BF ⇒ OS ⇒ BF, with neither converse valid.",
-        "Over C5 + Actuality: OS ⇔ Atomicity (type t) ⇔ ☐OS.",
+        "Over C: Atomicity + BF ⇒ OS ⇒ BF, with neither converse valid.",
+        "Over C5 + Actuality: OS ⇔ Atomicity ⇔ ☐OS.",
         "OS does not imply Atomicity (type t), Actuality, ND, ☐OS, ☐BF or ☐Functionality.",
         "Over C5, ☐OS + ◇Actuality entails ☐Plenitude; replacing ☐OS by OS does not suffice.",
-        "Over C, the variants below extend the strict hierarchy:\n\n$$\n\\small\\text{Extensionality}\\ \\Rightarrow\\ \\mathrm{C5}+\\mathrm{Atomicity}_t\\ \\Rightarrow\\ \\Box\\mathrm{OS}\\ \\Rightarrow\\ \\mathrm{OS}\\ \\Rightarrow\\ \\mathrm{BF}.\n$$",
+        "Over C, the variants below extend the strict hierarchy:\n\n$$\n\\small\\text{Extensionality}\\ \\Rightarrow\\ \\mathrm{C5}+\\mathrm{Atomicity}\\ \\Rightarrow\\ \\Box\\mathrm{OS}\\ \\Rightarrow\\ \\mathrm{OS}\\ \\Rightarrow\\ \\mathrm{BF}.\n$$",
         "Over C, $\\operatorname{Good}_\\Delta(E)\\leftrightarrow\\Box\\operatorname{Good}_\\Delta(E)$; requiring the qualification necessarily does not strengthen separation.",
         "Over H, OS plus uniqueness of the qualified logical observer at one fixed finite list is equivalent to Extensionality; no endpoint restriction is needed.",
         "Over C5, propositional separation by Boolean observers preserving the universal quantifier at t is equivalent to full OS.",
@@ -57,7 +58,8 @@
         "Over C5, canonical local-support separation is exactly Rev. Boolean Completeness (type t) plus Zorn at t gives exact controlled-inverse criteria; admitted true local homogeneity plus OS gives SplitMono without J. See the [support and selection map](proofs/h-observer-space/GRAPH.md#canonical-local-support-and-selection).",
         "Over C5, central logical separation is Extensionality and fixed-degree separation is Rev. OS reflects each assumed Boolean Completeness instance into necessity; completeness at t remains strictly below the tt-to-Actuality route. See the [full observer map](proofs/h-observer-space/GRAPH.md).",
         "Over C5, Rev is exactly triviality of the propositions fixed by all reversible Good-t observers. Centrality, group exponents and finite images have exact finite-domain characterizations; see the [full map](proofs/h-observer-space/GRAPH.md).",
-        "With Rev, any fixed nontrivial group law on all reversible observers gives an exact finite proposition bound. Without Rev, it gives an exact invariant-component condition over C5. Internally finite separating families give the corresponding full separation theory plus FinAll. See the [theorem map](proofs/h-observer-space/MAP.md)."
+        "With Rev, any fixed nontrivial group law on all reversible observers gives an exact finite proposition bound. Without Rev, it gives an exact invariant-component condition over C5. Internally finite separating families give the corresponding full separation theory plus FinAll. See the [theorem map](proofs/h-observer-space/MAP.md).",
+        "Even necessary full OS does not imply that every admitted proper propositional filter has an admitted ultrafilter extension; the finite-partition construction gives the countermodel. This is a boundary on admitted extension, not an identification of observers with ultrafilters."
       ],
       "sources": [
         {
@@ -383,6 +385,24 @@
           "locator": "§§1–5",
           "source_id": "misc",
           "pagination": "unpaginated"
+        },
+        {
+          "path": "../integration-register/proofs/pointwise-reversible-separation.md",
+          "locator": "Numbered theorem and proof sections",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "../integration-register/proofs/observer-parameters/order-invariant-parameters.md",
+          "locator": "Numbered theorem and proof sections",
+          "source_id": "misc",
+          "pagination": "unpaginated"
+        },
+        {
+          "path": "../integration-register/proofs/observer-filter-extension-countermodel.md",
+          "locator": "Numbered theorem and proof sections",
+          "source_id": "misc",
+          "pagination": "unpaginated"
         }
       ],
       "result_refs": [
@@ -390,6 +410,1172 @@
       ],
       "questions": [],
       "variants": [
+        {
+          "id": "endpoint-logical-observer-separation-r",
+          "name": "Endpoint Logical Observer Separation",
+          "batch": "further",
+          "category": "extensionality",
+          "disposition": "variant of parent candidate",
+          "statement": "Logical observers with outputs restricted to ⊤ and ⊥ distinguish every pair of distinct relations.",
+          "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{End}(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
+          "definitions": [
+            "$$\n\\operatorname{End}(E):=\\forall p^t\\, .\\,Ep=\\top\\lor Ep=\\bot.\n$$",
+            "The types and $\\operatorname{Good}_\\Delta$ are as above. In a full model with fixed domains and an admitted evaluation operation, an endpoint observer reports whether $p$ is true at a fixed possible world; it need not report the truth here.",
+            "Endpoint-valuedness differs from $\\Box\\forall p(Ep\\leftrightarrow p)$: the latter gives the identity observer over C, whose outputs may remain contingent."
+          ],
+          "rationale": "Characterizes C5 + Atomicity by a restriction on the same observer class.",
+          "connections": [
+            "Over H, the full typed schema is equivalent to C5 + Atomicity, without Actuality.",
+            "Over C, propositional separation testing quantifiers only at t already suffices. The full schema and its separately boxed form are equivalent.",
+            "Strictly stronger than ☐OS and strictly weaker than Extensionality over C.",
+            "Given endpoint separation, Extensionality is equivalent to there being a unique qualified endpoint observer; uniqueness at any one fixed finite list of tested types suffices.",
+            "Under C5, propositional atoms and endpoint observers qualified at $t$ correspond bijectively: $E_a(p)=\\Box(a\\to p)$ and $a_E=\\forall p(Ep\\to p)$. Such observers qualify at every finite type list.",
+            "Equivalent to C5 + ☐OS + one atom, and to C5 plus one atom and the single boxed propositional $\\operatorname{Good}_{\\{t\\}}$ separation instance.",
+            "Equivalent over H to OS + Plenitude at (t,t), OS + full Plenitude, C5 + OS + Actuality, and C5 + OS + Boolean Completeness. Both OS and Plenitude are current premises.",
+            "Together with boxed Infinitary Comprehension, it characterizes full standard hierarchies over the λ-free base of H, in ZF. In this package the initial qualification may omit translated equality clauses; they follow after reconstruction. See the [exact formulation](proofs/lambda-free-endpoint-comprehension.md)."
+          ],
+          "sources": [
+            {
+              "path": "proofs/logical-observers.md",
+              "locator": "§§1–8",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/operator-representation.md",
+              "locator": "§§2–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/logical-observer-hierarchy.md",
+              "locator": "§§1–8",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/logical-observer-endpoint-reduction.md",
+              "locator": "§§1–4",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/observer-lattice.md",
+              "locator": "§§4–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/observer-lattice-models.md",
+              "locator": "§§1–3",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/modal-selectors-and-quantifier-reduction.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/logical-separation-with-contingent-barcan.md",
+              "locator": "§§2–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/necessary-separation-and-atoms.md",
+              "locator": "§§1–4",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/reversible-separation-and-pure-truth.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-block-symmetry-reversible-gap.md",
+              "locator": "§§1–8",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/reversible-quantifier-observers.md",
+              "locator": "§§1–4",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/local-conjugacy-and-reversible-observers.md",
+              "locator": "§§2–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/split-inverse-logical-observers.md",
+              "locator": "§§1–4",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-block-symmetry-left-inverse.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/ternary-cantor-observer-model.md",
+              "locator": "§§1–9",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/fork-one-sided-inverse-separation.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/component-shift-symmetry-reversible-gap.md",
+              "locator": "§§1–8",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/left-inverse-separation-decomposition.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-pinning-dedekind-propositions.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/plenitude-endpoint-bridge.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/surjective-logical-observers.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/linear-circular-fibre-left-inverse-gap.md",
+              "locator": "§§1–10",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/omega-chain-surjective-observers.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/fixed-point-symmetry-left-inverse-separation.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/full-cancellative-monoid-observers.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/root-truth-profile-surjective-separation.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/canonical-adjoints-and-image-factorization.md",
+              "locator": "§§2–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/integer-shift-predecessor-contingent-barcan.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/native-box-logical-observers.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/injective-observers-and-boolean-transversals.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/idempotent-native-box-observers.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/injective-separation-decomposition.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/native-box-reflection.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/bounded-stabilization-native-box-observers.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-relative-image-generation.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/injective-gap-without-split-kernel.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/exterior-arm-posets-native-box-nonpersistence.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/local-transversal-support.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/zorn-local-transversal-selection.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/local-homogeneity-and-split-observers.md",
+              "locator": "§§1–4",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/bounded-fibre-degree-logical-observers.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-image-native-box-observers.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/central-logical-observers.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-colour-propositional-completeness.md",
+              "locator": "§§2–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/reversible-fixed-proposition-characterization.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/central-separation-and-four-propositions.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-image-box-reflection.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/centre-of-reversible-logical-observers.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/invariant-components-and-local-support.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/bounded-exponent-reversible-observers.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/group-identities-reversible-observers.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/invariant-components-and-group-identities.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/internally-finite-observer-families.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/lambda-free-endpoint-comprehension.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            }
+          ],
+          "result_refs": [
+            "LOGICAL-OBSERVERS"
+          ],
+          "questions": []
+        },
+        {
+          "id": "reversible-logical-observer-separation-r",
+          "name": "Reversible Logical Observer Separation",
+          "batch": "further",
+          "category": "extensionality",
+          "disposition": "variant of parent candidate",
+          "statement": "Logical observers with qualified inverses distinguish every pair of distinct relations.",
+          "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{Rev}_\\Delta(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
+          "definitions": [
+            "Put $I=\\lambda p.p$ and $(E\\circ F)(p)=E(Fp)$.",
+            "$$\n\\operatorname{Rev}_\\Delta(E):=\\exists F^{tt}\\, .\\,\\operatorname{Good}_\\Delta(F)\\land E\\circ F=I\\land F\\circ E=I.\n$$"
+          ],
+          "rationale": "Adds reversibility to logical separation, forcing No Pure Contingency even in atomless models; one atom or one finite-image observer yields endpoint separation.",
+          "connections": [
+            "Over C, equivalent to propositional separation by whole conjunction-preserving involutions. Their Boolean and all-type quantifier laws follow; no extra Good clause is required. [Simple formulation and proof](proofs/reversible-propositional-separation.md).",
+            "Over H, equivalent to involutive separation and to its separately boxed schema; entails C5 + ☐OS + No Pure Contingency, without atoms or Actuality.",
+            "Strictly weaker than endpoint separation and strictly stronger than C5 + ☐OS, even in atomless models. Incomparable with finite-image separation.",
+            "Together with Actuality, the existence of one atom, or the existence of one qualified observer at t with finitely many outputs, equivalent to C5 + Atomicity. The single observer need not separate.",
+            "Forces the proposition algebra to be either atomless or atomic with a true atom.",
+            "Equivalent over H to full logical separation by necessarily bijective observers. Over C5, current bijectivity suffices.",
+            "Over C, equivalent to full separation by invertible observers preserving universal quantification at every finite type list containing t; Boolean preservation and the inverse quantifier laws follow.",
+            "Equivalent over H to full logical separation by observers admitting a same-list qualified right inverse. Qualified left-inverse separation is strictly weaker, even with C5 and its own boxed schema; it need not imply No Pure Contingency.",
+            "Even C5 + ☐SplitMono + No Pure Contingency does not imply reversible separation, as the [component-shift model](proofs/h-observer-space/component-shift-symmetry-reversible-gap.md) shows.",
+            "Implies noncontingency for every pure formula with finitely many individual parameters and finitely many first-order relation parameters whose values on all tuples are endpoints. Arbitrary higher-type parameters are not covered.",
+            "If every admitted injective proposition operation is onto, full left-inverse and reversible separation coincide. C5 + Rev with that condition still need not imply endpoint separation, as the [two-colour model](proofs/h-observer-space/finite-pinning-dedekind-propositions.md) shows.",
+            "Equivalent over H to C5 + separation by currently surjective Good observers. The [explicit section](proofs/h-observer-space/surjective-logical-observers.md) uses the greatest kernel element and a definable fibre representative, without Choice; C5 cannot be omitted.",
+            "SurjSep + SplitMono is a strict weakening, even with both conjuncts boxed. The positive model-family theorem gives ☐SurjSep for full cancellative monoids and also ☐SplitMono when a specified infinite sequence of distinct units is available; a nonunit refutes C5 and hence Rev.",
+            "Strictly stronger than ☐SurjSep, which is strictly stronger than SurjSep and than ☐OS. Individual onto qualification persists over C + BF (type t), while surjective separation need not persist.",
+            "Over C5, equivalent to separation by Good observers with any fixed finite relative image-generation bound, without an injectivity premise; also equivalent to separation by Good observers each having a currently true local Boolean transversal.",
+            "Over C5, exactly separation by Good observers with full or currently true local-transversal support, equivalently by the range of the canonical support normalization. Individual normalized observers need not be injective.",
+            "Over C5, equivalent to separation by Good observers with any fixed fibre-degree bound n≥1; no injectivity, Boolean Completeness or Zorn is needed. The same-profile involution theorem applies to each such observer.",
+            "Over C, let S_pt assert propositional separation by pointwise conjunction-preserving involutions. Then Rev ↔ ☐S_pt ↔ S_pt + BF_t. A fixed necessarily accepting witness instead gives Extensionality. S_pt + OneAtom ↔ ND_t + Atomicity_t.",
+            "The converse from first-order endpoint-parameter noncontingency to Rev fails even over C5 + ☐SplitMono. Over C5, noncontingency for endpoint-valued proposition families invariant under admitted surjective order automorphisms is equivalent to Rev."
+          ],
+          "sources": [
+            {
+              "path": "proofs/logical-observers.md",
+              "locator": "§§1–8",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/operator-representation.md",
+              "locator": "§§2–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/logical-observer-hierarchy.md",
+              "locator": "§§1–8",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/logical-observer-endpoint-reduction.md",
+              "locator": "§§1–4",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/observer-lattice.md",
+              "locator": "§§4–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/observer-lattice-models.md",
+              "locator": "§§1–3",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/modal-selectors-and-quantifier-reduction.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/logical-separation-with-contingent-barcan.md",
+              "locator": "§§2–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/necessary-separation-and-atoms.md",
+              "locator": "§§1–4",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/reversible-separation-and-pure-truth.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-block-symmetry-reversible-gap.md",
+              "locator": "§§1–8",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/reversible-quantifier-observers.md",
+              "locator": "§§1–4",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/local-conjugacy-and-reversible-observers.md",
+              "locator": "§§2–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/split-inverse-logical-observers.md",
+              "locator": "§§1–4",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-block-symmetry-left-inverse.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/ternary-cantor-observer-model.md",
+              "locator": "§§1–9",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/fork-one-sided-inverse-separation.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/component-shift-symmetry-reversible-gap.md",
+              "locator": "§§1–8",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/left-inverse-separation-decomposition.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-pinning-dedekind-propositions.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/plenitude-endpoint-bridge.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/surjective-logical-observers.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/linear-circular-fibre-left-inverse-gap.md",
+              "locator": "§§1–10",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/omega-chain-surjective-observers.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/fixed-point-symmetry-left-inverse-separation.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/full-cancellative-monoid-observers.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/root-truth-profile-surjective-separation.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/canonical-adjoints-and-image-factorization.md",
+              "locator": "§§2–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/integer-shift-predecessor-contingent-barcan.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/native-box-logical-observers.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/injective-observers-and-boolean-transversals.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/idempotent-native-box-observers.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/injective-separation-decomposition.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/native-box-reflection.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/bounded-stabilization-native-box-observers.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-relative-image-generation.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/injective-gap-without-split-kernel.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/exterior-arm-posets-native-box-nonpersistence.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/local-transversal-support.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/zorn-local-transversal-selection.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/local-homogeneity-and-split-observers.md",
+              "locator": "§§1–4",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/bounded-fibre-degree-logical-observers.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-image-native-box-observers.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/central-logical-observers.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-colour-propositional-completeness.md",
+              "locator": "§§2–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/reversible-fixed-proposition-characterization.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/central-separation-and-four-propositions.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-image-box-reflection.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/centre-of-reversible-logical-observers.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/invariant-components-and-local-support.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/bounded-exponent-reversible-observers.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/group-identities-reversible-observers.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/invariant-components-and-group-identities.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/internally-finite-observer-families.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/reversible-propositional-separation.md",
+              "locator": "§§1–3",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            }
+          ],
+          "result_refs": [
+            "LOGICAL-OBSERVERS"
+          ],
+          "questions": [],
+          "equivalent_formulations": [
+            {
+              "base": "C",
+              "name": "Propositional separation by conjunction-preserving involutions",
+              "formal": "\\forall p,q^t\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,J(E)\\to(Ep\\leftrightarrow Eq)\\Bigr]\\to p=q.",
+              "definitions": [
+                "conjunction-preservation",
+                "involution-qualification",
+                "composition"
+              ],
+              "source": {
+                "path": "proofs/reversible-propositional-separation.md",
+                "locator": "§§1–3",
+                "source_id": "misc",
+                "pagination": "unpaginated"
+              }
+            }
+          ],
+          "changes": [
+            {
+              "date": "2026-10-26",
+              "by": "OpenAI Codex",
+              "summary": "Added the ordinary-proof equivalence with propositional separation by whole conjunction-preserving involutions over C; the H record is unchanged."
+            }
+          ]
+        },
+        {
+          "id": "surjective-logical-observer-separation-r",
+          "name": "Surjective Logical Observer Separation",
+          "batch": "further",
+          "category": "coarse",
+          "disposition": "Proposed observer restriction; not an active database assumption.",
+          "statement": "Every proposition is an output; all tests jointly distinguish relations.",
+          "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{Onto}(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
+          "definitions": [
+            "$$\n\\mathrm{Onto}(E):=\\forall q^t\\, .\\,\\exists p^t\\, .\\,Ep=q.\n$$"
+          ],
+          "rationale": "Distinguishes current surjectivity, admitted logical recovery and reversibility at full relational scope.",
+          "connections": [
+            "Rev ⇒ SurjSep ⇒ OS, with both converses false. Over C5, SurjSep is equivalent to Rev."
+          ],
+          "sources": [
+            {
+              "path": "proofs/h-observer-space/surjective-logical-observers.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "Unpaginated proof note."
+            }
+          ],
+          "result_refs": [
+            "LOGICAL-OBSERVERS"
+          ],
+          "questions": []
+        },
+        {
+          "id": "logical-left-inverse-separation-r",
+          "name": "Logical Left-Inverse Separation",
+          "batch": "further",
+          "category": "coarse",
+          "disposition": "Proposed observer restriction; not an active database assumption.",
+          "statement": "Each observer can be undone by an admitted logical observer qualified at the same types.",
+          "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{Left}_\\Delta(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
+          "definitions": [
+            "$$\n\\mathrm{Left}_\\Delta(E):=\\exists F^{tt}\\, .\\,\\mathrm{Good}_\\Delta(F)\\land F\\circ E=I.\n$$"
+          ],
+          "rationale": "Distinguishes current surjectivity, admitted logical recovery and reversibility at full relational scope.",
+          "connections": [
+            "Rev ⇒ SplitMono ⇒ InjSep ⇒ OS. SplitMono strictly implies InjSep, even over C5 with necessary all-type Relational Choice, Transversal Choice and Zorn. See [countermodel](proofs/h-observer-space/rigid-souslin-injective-separation.md)."
+          ],
+          "sources": [
+            {
+              "path": "proofs/h-observer-space/split-inverse-logical-observers.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "Unpaginated proof note."
+            }
+          ],
+          "result_refs": [
+            "LOGICAL-OBSERVERS"
+          ],
+          "questions": []
+        },
+        {
+          "batch": "further",
+          "category": "extensionality",
+          "disposition": "variant of parent candidate",
+          "sources": [
+            {
+              "path": "proofs/logical-observers.md",
+              "locator": "§§1–8",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/operator-representation.md",
+              "locator": "§§2–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/logical-observer-hierarchy.md",
+              "locator": "§§1–8",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/logical-observer-endpoint-reduction.md",
+              "locator": "§§1–4",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/observer-lattice.md",
+              "locator": "§§4–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/observer-lattice-models.md",
+              "locator": "§§1–3",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/modal-selectors-and-quantifier-reduction.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/logical-separation-with-contingent-barcan.md",
+              "locator": "§§2–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/necessary-separation-and-atoms.md",
+              "locator": "§§1–4",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/reversible-separation-and-pure-truth.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-block-symmetry-reversible-gap.md",
+              "locator": "§§1–8",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/reversible-quantifier-observers.md",
+              "locator": "§§1–4",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/local-conjugacy-and-reversible-observers.md",
+              "locator": "§§2–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/split-inverse-logical-observers.md",
+              "locator": "§§1–4",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-block-symmetry-left-inverse.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/ternary-cantor-observer-model.md",
+              "locator": "§§1–9",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/fork-one-sided-inverse-separation.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/component-shift-symmetry-reversible-gap.md",
+              "locator": "§§1–8",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/left-inverse-separation-decomposition.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-pinning-dedekind-propositions.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/plenitude-endpoint-bridge.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/surjective-logical-observers.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/linear-circular-fibre-left-inverse-gap.md",
+              "locator": "§§1–10",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/omega-chain-surjective-observers.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/fixed-point-symmetry-left-inverse-separation.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/full-cancellative-monoid-observers.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/root-truth-profile-surjective-separation.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/canonical-adjoints-and-image-factorization.md",
+              "locator": "§§2–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/integer-shift-predecessor-contingent-barcan.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/native-box-logical-observers.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/injective-observers-and-boolean-transversals.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/idempotent-native-box-observers.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/injective-separation-decomposition.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/native-box-reflection.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/bounded-stabilization-native-box-observers.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-relative-image-generation.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/injective-gap-without-split-kernel.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/exterior-arm-posets-native-box-nonpersistence.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/local-transversal-support.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/zorn-local-transversal-selection.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/local-homogeneity-and-split-observers.md",
+              "locator": "§§1–4",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/bounded-fibre-degree-logical-observers.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-image-native-box-observers.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/central-logical-observers.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-colour-propositional-completeness.md",
+              "locator": "§§2–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/reversible-fixed-proposition-characterization.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/central-separation-and-four-propositions.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-image-box-reflection.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/centre-of-reversible-logical-observers.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/invariant-components-and-local-support.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/bounded-exponent-reversible-observers.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/group-identities-reversible-observers.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/invariant-components-and-group-identities.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/internally-finite-observer-families.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            }
+          ],
+          "result_refs": [
+            "LOGICAL-OBSERVERS"
+          ],
+          "id": "injective-logical-observer-separation-r",
+          "name": "Injective Logical Observer Separation",
+          "statement": "Currently injective logical observers distinguish every pair of distinct relations. Write InjSep for the full schema.",
+          "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{Inj}(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
+          "definitions": [
+            "$$\n\\operatorname{Inj}(E):=\\forall p,q^t\\, .\\,Ep=Eq\\to p=q.\n$$"
+          ],
+          "rationale": "Separates current injectivity from an admitted qualified inverse; over C5 it gives the exact intermediate native-necessity separation theory.",
+          "connections": [
+            "SplitMono implies InjSep, which implies OS. Over C5, Rev ⇒ InjSep ⇔ BoxSep ⇒ OS has both outer implications strict.",
+            "Over C5, qualified left inverses of an individual injective Good-t observer correspond exactly to its admitted Boolean transversals.",
+            "The regular-open nonsplitting model fails OS, so it does not refute InjSep ⇒ SplitMono.",
+            "SplitMono strictly implies InjSep, even over C5 with necessary all-type Relational Choice, Transversal Choice and Zorn. See [countermodel](proofs/h-observer-space/rigid-souslin-injective-separation.md).",
+            "Over C5, the full theory is exactly Rev or (OS and J_{t}), where J asserts one injective Good-t observer and a true proposition with no nonzero image part. SplitMono has the same decomposition with K_{t}, and K_{t} implies J_{t}; see [the decomposition](proofs/h-observer-space/injective-separation-decomposition.md).",
+            "Over C5, K implies J strictly. A J witness with any fixed finite image-generation bound gives K; the earlier countermodel to J ⇒ K fails OS. The [rigid Souslin countermodel](proofs/h-observer-space/rigid-souslin-injective-separation.md) refutes InjSep ⇒ SplitMono, even over C5 with necessary all-type Relational Choice, Transversal Choice and Zorn."
+          ],
+          "questions": [
+            "The rigid Souslin model refutes OS + J_{t} ⇒ Rev or K_{t} over C5, and InjSep ⇒ SplitMono over H; see [countermodel](proofs/h-observer-space/rigid-souslin-injective-separation.md)."
+          ]
+        },
         {
           "batch": "further",
           "category": "extensionality",
@@ -726,7 +1912,7 @@
           "id": "native-necessity-logical-observer-separation-r",
           "name": "Logical Observer Separation with ☐ Preservation",
           "statement": "Logical observers commuting with native necessity distinguish every pair of distinct relations. Write BoxSep for the full schema.",
-          "formal": "\\begin{aligned}\n&\\forall X,Y^{\\bar\\sigma t}\\, .\\,X=Y\\leftrightarrow\\forall E^{tt}\\, .\\,[\\operatorname{Good}_\\Delta(E)\\land \\operatorname{BoxComm}(E)]\\\\\n&\\qquad\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])).\n\\end{aligned}",
+          "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{BoxComm}(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
           "definitions": [
             "$$\n\\operatorname{BoxComm}(E):=(\\lambda p^t.E(\\Box p))=(\\lambda p^t.\\Box(Ep)),\\qquad\\Box p:=(p=\\top).\n$$"
           ],
@@ -739,6 +1925,355 @@
             "Failure of persistence already occurs on a ten-point full poset satisfying B₂ and ☐OS + ☐BF + ☐Functionality + ☐Atomicity (type t) + ☐.2.",
             "Over C at every fixed relational output and finite list, Actuality plus internally finite-image BoxSep is exactly Fin_t(All) plus BoxSep. At full scope C is recovered over H; Actuality remains on the finite-image side.",
             "Full FinBoxSep is exactly BoxSep plus internal finiteness, and derives Actuality and necessary finiteness. Over C the fixed-instance theorem without Actuality holds whenever Δ contains a relational type. FinBoxSep need not persist even with necessary finiteness."
+          ],
+          "questions": []
+        },
+        {
+          "id": "finite-image-logical-observer-separation-r",
+          "name": "Finite-Image Logical Observer Separation",
+          "batch": "further",
+          "category": "extensionality",
+          "disposition": "variant of parent candidate",
+          "statement": "Logical observers with finitely many outputs distinguish every pair of distinct relations.",
+          "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{FinIm}(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
+          "definitions": [
+            "Put $\\operatorname{Im}_E=\\lambda r^t.\\exists p^t(Ep=r)$. Then",
+            "$$\n\\operatorname{FinIm}(E):=\\exists Z^{(tt)t}\\, .\\,\\operatorname{FiniteCardinality}_t(Z)\\land Z(\\operatorname{Im}_E).\n$$",
+            "This uses the [database’s Frege finiteness definition](source/topics/classicism/background.md#notation). It is a single finitary condition, with no common bound on the number of outputs."
+          ],
+          "rationale": "Strictly between ordinary and endpoint separation; together with C5, equivalent to endpoint separation.",
+          "connections": [
+            "Strictly stronger than OS and strictly weaker than endpoint separation; incomparable with reversible separation, C + Atomicity + BF, and ☐OS.",
+            "Together with C5, equivalent to C5 + Atomicity."
+          ],
+          "sources": [
+            {
+              "path": "proofs/logical-observers.md",
+              "locator": "§§1–8",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/operator-representation.md",
+              "locator": "§§2–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/logical-observer-hierarchy.md",
+              "locator": "§§1–8",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/logical-observer-endpoint-reduction.md",
+              "locator": "§§1–4",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/observer-lattice.md",
+              "locator": "§§4–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/observer-lattice-models.md",
+              "locator": "§§1–3",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/modal-selectors-and-quantifier-reduction.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/logical-separation-with-contingent-barcan.md",
+              "locator": "§§2–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/necessary-separation-and-atoms.md",
+              "locator": "§§1–4",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/reversible-separation-and-pure-truth.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-block-symmetry-reversible-gap.md",
+              "locator": "§§1–8",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/reversible-quantifier-observers.md",
+              "locator": "§§1–4",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/local-conjugacy-and-reversible-observers.md",
+              "locator": "§§2–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/split-inverse-logical-observers.md",
+              "locator": "§§1–4",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-block-symmetry-left-inverse.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/ternary-cantor-observer-model.md",
+              "locator": "§§1–9",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/fork-one-sided-inverse-separation.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/component-shift-symmetry-reversible-gap.md",
+              "locator": "§§1–8",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/left-inverse-separation-decomposition.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-pinning-dedekind-propositions.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/plenitude-endpoint-bridge.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/surjective-logical-observers.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/linear-circular-fibre-left-inverse-gap.md",
+              "locator": "§§1–10",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/omega-chain-surjective-observers.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/fixed-point-symmetry-left-inverse-separation.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/full-cancellative-monoid-observers.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/root-truth-profile-surjective-separation.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/canonical-adjoints-and-image-factorization.md",
+              "locator": "§§2–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/integer-shift-predecessor-contingent-barcan.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/native-box-logical-observers.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/injective-observers-and-boolean-transversals.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/idempotent-native-box-observers.md",
+              "locator": "§§1–7",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/injective-separation-decomposition.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/native-box-reflection.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/bounded-stabilization-native-box-observers.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-relative-image-generation.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/injective-gap-without-split-kernel.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/exterior-arm-posets-native-box-nonpersistence.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/local-transversal-support.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/zorn-local-transversal-selection.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/local-homogeneity-and-split-observers.md",
+              "locator": "§§1–4",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/bounded-fibre-degree-logical-observers.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-image-native-box-observers.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/central-logical-observers.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-colour-propositional-completeness.md",
+              "locator": "§§2–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/reversible-fixed-proposition-characterization.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/central-separation-and-four-propositions.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/finite-image-box-reflection.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/centre-of-reversible-logical-observers.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/invariant-components-and-local-support.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/bounded-exponent-reversible-observers.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/group-identities-reversible-observers.md",
+              "locator": "§§1–6",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/invariant-components-and-group-identities.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            },
+            {
+              "path": "proofs/h-observer-space/internally-finite-observer-families.md",
+              "locator": "§§1–5",
+              "source_id": "misc",
+              "pagination": "unpaginated"
+            }
+          ],
+          "result_refs": [
+            "LOGICAL-OBSERVERS"
           ],
           "questions": []
         },
@@ -1078,7 +2613,7 @@
           "id": "idempotent-native-necessity-logical-observer-separation-r",
           "name": "Idempotent Logical Observer Separation with ☐ Preservation",
           "statement": "Idempotent logical observers commuting with native necessity distinguish every pair of distinct relations. Write IdemBoxSep for the full schema.",
-          "formal": "\\begin{aligned}\n&\\forall X,Y^{\\bar\\sigma t}\\, .\\,X=Y\\leftrightarrow\\forall E^{tt}\\, .\\,[\\operatorname{Good}_\\Delta(E)\\land \\operatorname{BoxComm}(E)\\land E\\circ E=E]\\\\\n&\\qquad\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])).\n\\end{aligned}",
+          "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{BoxComm}(E)\\land E\\circ E=E\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
           "definitions": [
             "$$\n\\operatorname{BoxComm}(E):=(\\lambda p^t.E(\\Box p))=(\\lambda p^t.\\Box(Ep)),\\qquad\\Box p:=(p=\\top).\n$$"
           ],
@@ -1426,7 +2961,7 @@
           "id": "bounded-stabilization-native-necessity-logical-observer-separation-r",
           "name": "Logical Observer Separation with Bounded Stabilization and ☐ Preservation",
           "statement": "For each fixed external integer r≥1, logical observers commuting with native necessity and satisfying E^(r+1)=E^r distinguish every pair of distinct relations. Write B_r for the full schema.",
-          "formal": "\\begin{aligned}\n&\\forall X,Y^{\\bar\\sigma t}\\, .\\,X=Y\\leftrightarrow\\forall E^{tt}\\, .\\,[\\operatorname{Good}_\\Delta(E)\\land \\operatorname{BoxComm}(E)\\land E^{r+1}=E^r]\\\\\n&\\qquad\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])).\n\\end{aligned}",
+          "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{BoxComm}(E)\\land E^{r+1}=E^r\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
           "definitions": [
             "$$\n\\operatorname{BoxComm}(E):=(\\lambda p^t.E(\\Box p))=(\\lambda p^t.\\Box(Ep)),\\qquad\\Box p:=(p=\\top).\n$$",
             "The integer $r\\ge1$ is a fixed external index. Powers of $E$ are finite term iterates; the schema introduces no object-language quantifier over bounds."
@@ -1441,1438 +2976,13 @@
           "questions": []
         },
         {
-          "batch": "further",
-          "category": "extensionality",
-          "disposition": "variant of parent candidate",
-          "sources": [
-            {
-              "path": "proofs/logical-observers.md",
-              "locator": "§§1–8",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/operator-representation.md",
-              "locator": "§§2–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/logical-observer-hierarchy.md",
-              "locator": "§§1–8",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/logical-observer-endpoint-reduction.md",
-              "locator": "§§1–4",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/observer-lattice.md",
-              "locator": "§§4–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/observer-lattice-models.md",
-              "locator": "§§1–3",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/modal-selectors-and-quantifier-reduction.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/logical-separation-with-contingent-barcan.md",
-              "locator": "§§2–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/necessary-separation-and-atoms.md",
-              "locator": "§§1–4",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/reversible-separation-and-pure-truth.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/finite-block-symmetry-reversible-gap.md",
-              "locator": "§§1–8",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/reversible-quantifier-observers.md",
-              "locator": "§§1–4",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/local-conjugacy-and-reversible-observers.md",
-              "locator": "§§2–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/split-inverse-logical-observers.md",
-              "locator": "§§1–4",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/finite-block-symmetry-left-inverse.md",
-              "locator": "§§1–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/ternary-cantor-observer-model.md",
-              "locator": "§§1–9",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/fork-one-sided-inverse-separation.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/component-shift-symmetry-reversible-gap.md",
-              "locator": "§§1–8",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/left-inverse-separation-decomposition.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/finite-pinning-dedekind-propositions.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/plenitude-endpoint-bridge.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/surjective-logical-observers.md",
-              "locator": "§§1–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/linear-circular-fibre-left-inverse-gap.md",
-              "locator": "§§1–10",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/omega-chain-surjective-observers.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/fixed-point-symmetry-left-inverse-separation.md",
-              "locator": "§§1–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/full-cancellative-monoid-observers.md",
-              "locator": "§§1–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/root-truth-profile-surjective-separation.md",
-              "locator": "§§1–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/canonical-adjoints-and-image-factorization.md",
-              "locator": "§§2–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/integer-shift-predecessor-contingent-barcan.md",
-              "locator": "§§1–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/native-box-logical-observers.md",
-              "locator": "§§1–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/injective-observers-and-boolean-transversals.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/idempotent-native-box-observers.md",
-              "locator": "§§1–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/injective-separation-decomposition.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/native-box-reflection.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/bounded-stabilization-native-box-observers.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/finite-relative-image-generation.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/injective-gap-without-split-kernel.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/exterior-arm-posets-native-box-nonpersistence.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/local-transversal-support.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/zorn-local-transversal-selection.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/local-homogeneity-and-split-observers.md",
-              "locator": "§§1–4",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/bounded-fibre-degree-logical-observers.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/finite-image-native-box-observers.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/central-logical-observers.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/finite-colour-propositional-completeness.md",
-              "locator": "§§2–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/reversible-fixed-proposition-characterization.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/central-separation-and-four-propositions.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/finite-image-box-reflection.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/centre-of-reversible-logical-observers.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/invariant-components-and-local-support.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/bounded-exponent-reversible-observers.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/group-identities-reversible-observers.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/invariant-components-and-group-identities.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/internally-finite-observer-families.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            }
-          ],
-          "result_refs": [
-            "LOGICAL-OBSERVERS"
-          ],
-          "id": "injective-logical-observer-separation-r",
-          "name": "Injective Logical Observer Separation",
-          "statement": "Currently injective logical observers distinguish every pair of distinct relations. Write InjSep for the full schema.",
-          "formal": "\\begin{aligned}\n&\\forall X,Y^{\\bar\\sigma t}\\, .\\,X=Y\\leftrightarrow\\forall E^{tt}\\, .\\,[\\operatorname{Good}_\\Delta(E)\\land \\operatorname{Inj}(E)]\\\\\n&\\qquad\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])).\n\\end{aligned}",
-          "definitions": [
-            "$$\n\\operatorname{Inj}(E):=\\forall p,q^t\\, .\\,Ep=Eq\\to p=q.\n$$"
-          ],
-          "rationale": "Separates current injectivity from an admitted qualified inverse; over C5 it gives the exact intermediate native-necessity separation theory.",
-          "connections": [
-            "SplitMono implies InjSep, which implies OS. Over C5, Rev ⇒ InjSep ⇔ BoxSep ⇒ OS has both outer implications strict.",
-            "Over C5, qualified left inverses of an individual injective Good-t observer correspond exactly to its admitted Boolean transversals.",
-            "The regular-open nonsplitting model fails OS, so it does not refute InjSep ⇒ SplitMono.",
-            "Whether InjSep implies SplitMono remains unresolved over H and over C5.",
-            "Over C5, the full theory is exactly Rev or (OS and J_{t}), where J asserts one injective Good-t observer and a true proposition with no nonzero image part. SplitMono has the same decomposition with K_{t}, and K_{t} implies J_{t}; see [the decomposition](proofs/h-observer-space/injective-separation-decomposition.md).",
-            "Over C5, K implies J strictly. A J witness with any fixed finite image-generation bound gives K; the countermodel to J ⇒ K fails OS, leaving the separation comparison open."
-          ],
-          "questions": [
-            "Over C5, does OS + J_{t} force Rev or K_{t}? The broader InjSep ⇒ SplitMono question over H also remains open."
-          ]
-        },
-        {
-          "id": "finite-image-logical-observer-separation-r",
-          "name": "Finite-Image Logical Observer Separation",
-          "batch": "further",
-          "category": "extensionality",
-          "disposition": "variant of parent candidate",
-          "statement": "Logical observers with finitely many outputs distinguish every pair of distinct relations.",
-          "formal": "\\begin{aligned}\n&\\forall X,Y^{\\bar\\sigma t}\\, .\\,X=Y\\leftrightarrow\\forall E^{tt}\\, .\\,[\\operatorname{Good}_{\\Delta}(E)\\land\\operatorname{FinIm}(E)] \\\\\n&\\qquad\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])).\n\\end{aligned}",
-          "definitions": [
-            "Put $\\operatorname{Im}_E=\\lambda r^t.\\exists p^t(Ep=r)$. Then",
-            "$$\n\\operatorname{FinIm}(E):=\\exists Z^{(tt)t}\\, .\\,\\operatorname{FiniteCardinality}_t(Z)\\land Z(\\operatorname{Im}_E).\n$$",
-            "This uses the [database’s Frege finiteness definition](source/topics/classicism/background.md#notation). It is a single finitary condition, with no common bound on the number of outputs."
-          ],
-          "rationale": "Strictly between ordinary and endpoint separation; together with C5, equivalent to endpoint separation.",
-          "connections": [
-            "Strictly stronger than OS and strictly weaker than endpoint separation; incomparable with reversible separation, C + Atomicity (type t) + BF, and ☐OS.",
-            "Together with C5, equivalent to C5 + Atomicity (type t)."
-          ],
-          "sources": [
-            {
-              "path": "proofs/logical-observers.md",
-              "locator": "§§1–8",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/operator-representation.md",
-              "locator": "§§2–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/logical-observer-hierarchy.md",
-              "locator": "§§1–8",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/logical-observer-endpoint-reduction.md",
-              "locator": "§§1–4",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/observer-lattice.md",
-              "locator": "§§4–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/observer-lattice-models.md",
-              "locator": "§§1–3",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/modal-selectors-and-quantifier-reduction.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/logical-separation-with-contingent-barcan.md",
-              "locator": "§§2–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/necessary-separation-and-atoms.md",
-              "locator": "§§1–4",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/reversible-separation-and-pure-truth.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/finite-block-symmetry-reversible-gap.md",
-              "locator": "§§1–8",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/reversible-quantifier-observers.md",
-              "locator": "§§1–4",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/local-conjugacy-and-reversible-observers.md",
-              "locator": "§§2–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/split-inverse-logical-observers.md",
-              "locator": "§§1–4",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/finite-block-symmetry-left-inverse.md",
-              "locator": "§§1–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/ternary-cantor-observer-model.md",
-              "locator": "§§1–9",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/fork-one-sided-inverse-separation.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/component-shift-symmetry-reversible-gap.md",
-              "locator": "§§1–8",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/left-inverse-separation-decomposition.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/finite-pinning-dedekind-propositions.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/plenitude-endpoint-bridge.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/surjective-logical-observers.md",
-              "locator": "§§1–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/linear-circular-fibre-left-inverse-gap.md",
-              "locator": "§§1–10",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/omega-chain-surjective-observers.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/fixed-point-symmetry-left-inverse-separation.md",
-              "locator": "§§1–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/full-cancellative-monoid-observers.md",
-              "locator": "§§1–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/root-truth-profile-surjective-separation.md",
-              "locator": "§§1–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/canonical-adjoints-and-image-factorization.md",
-              "locator": "§§2–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/integer-shift-predecessor-contingent-barcan.md",
-              "locator": "§§1–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/native-box-logical-observers.md",
-              "locator": "§§1–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/injective-observers-and-boolean-transversals.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/idempotent-native-box-observers.md",
-              "locator": "§§1–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/injective-separation-decomposition.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/native-box-reflection.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/bounded-stabilization-native-box-observers.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/finite-relative-image-generation.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/injective-gap-without-split-kernel.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/exterior-arm-posets-native-box-nonpersistence.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/local-transversal-support.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/zorn-local-transversal-selection.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/local-homogeneity-and-split-observers.md",
-              "locator": "§§1–4",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/bounded-fibre-degree-logical-observers.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/finite-image-native-box-observers.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/central-logical-observers.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/finite-colour-propositional-completeness.md",
-              "locator": "§§2–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/reversible-fixed-proposition-characterization.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/central-separation-and-four-propositions.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/finite-image-box-reflection.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/centre-of-reversible-logical-observers.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/invariant-components-and-local-support.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/bounded-exponent-reversible-observers.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/group-identities-reversible-observers.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/invariant-components-and-group-identities.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/internally-finite-observer-families.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            }
-          ],
-          "result_refs": [
-            "LOGICAL-OBSERVERS"
-          ],
-          "questions": []
-        },
-        {
-          "id": "reversible-logical-observer-separation-r",
-          "name": "Reversible Logical Observer Separation",
-          "batch": "further",
-          "category": "extensionality",
-          "disposition": "variant of parent candidate",
-          "statement": "Logical observers with qualified inverses distinguish every pair of distinct relations.",
-          "formal": "\\begin{aligned}\n&\\forall X,Y^{\\bar\\sigma t}\\, .\\,X=Y\\leftrightarrow\\forall E^{tt}\\, .\\,[\\operatorname{Good}_{\\Delta}(E)\\land\\operatorname{Rev}_\\Delta(E)] \\\\\n&\\qquad\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])).\n\\end{aligned}",
-          "definitions": [
-            "Put $I=\\lambda p.p$ and $(E\\circ F)(p)=E(Fp)$.",
-            "$$\n\\operatorname{Rev}_\\Delta(E):=\\exists F^{tt}\\, .\\,\\operatorname{Good}_\\Delta(F)\\land E\\circ F=I\\land F\\circ E=I.\n$$"
-          ],
-          "rationale": "Adds reversibility to logical separation, forcing No Pure Contingency even in atomless models; one atom or one finite-image observer yields endpoint separation.",
-          "connections": [
-            "Over H, equivalent to involutive separation and to its separately boxed schema; entails C5 + ☐OS + No Pure Contingency, without atoms or Actuality.",
-            "Strictly weaker than endpoint separation and strictly stronger than C5 + ☐OS, even in atomless models. Incomparable with finite-image separation.",
-            "Together with Actuality, the existence of one atom, or the existence of one qualified observer at t with finitely many outputs, equivalent to C5 + Atomicity (type t). The single observer need not separate.",
-            "Forces the proposition algebra to be either atomless or atomic with a true atom.",
-            "Equivalent over H to full logical separation by necessarily bijective observers. Over C5, current bijectivity suffices.",
-            "Over C, equivalent to full separation by invertible observers preserving universal quantification at every finite type list containing t; Boolean preservation and the inverse quantifier laws follow.",
-            "Equivalent over H to full logical separation by observers admitting a same-list qualified right inverse. Qualified left-inverse separation is strictly weaker, even with C5 and its own boxed schema; it need not imply No Pure Contingency.",
-            "Even C5 + ☐SplitMono + No Pure Contingency does not imply reversible separation, as the [component-shift model](proofs/h-observer-space/component-shift-symmetry-reversible-gap.md) shows.",
-            "Implies noncontingency for every pure formula with finitely many individual parameters and finitely many first-order relation parameters whose values on all tuples are endpoints. Arbitrary higher-type parameters are not covered.",
-            "If every admitted injective proposition operation is onto, full left-inverse and reversible separation coincide. C5 + Rev with that condition still need not imply endpoint separation, as the [two-colour model](proofs/h-observer-space/finite-pinning-dedekind-propositions.md) shows.",
-            "Equivalent over H to C5 + separation by currently surjective Good observers. The [explicit section](proofs/h-observer-space/surjective-logical-observers.md) uses the greatest kernel element and a definable fibre representative, without Choice; C5 cannot be omitted.",
-            "SurjSep + SplitMono is a strict weakening, even with both conjuncts boxed. The positive model-family theorem gives ☐SurjSep for full cancellative monoids and also ☐SplitMono when a specified infinite sequence of distinct units is available; a nonunit refutes C5 and hence Rev.",
-            "Strictly stronger than ☐SurjSep, which is strictly stronger than SurjSep and than ☐OS. Individual onto qualification persists over C + BF (type t), while surjective separation need not persist.",
-            "Over C5, equivalent to separation by Good observers with any fixed finite relative image-generation bound, without an injectivity premise; also equivalent to separation by Good observers each having a currently true local Boolean transversal.",
-            "Over C5, exactly separation by Good observers with full or currently true local-transversal support, equivalently by the range of the canonical support normalization. Individual normalized observers need not be injective.",
-            "Over C5, equivalent to separation by Good observers with any fixed fibre-degree bound n≥1; no injectivity, Boolean Completeness or Zorn is needed. The same-profile involution theorem applies to each such observer."
-          ],
-          "sources": [
-            {
-              "path": "proofs/logical-observers.md",
-              "locator": "§§1–8",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/operator-representation.md",
-              "locator": "§§2–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/logical-observer-hierarchy.md",
-              "locator": "§§1–8",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/logical-observer-endpoint-reduction.md",
-              "locator": "§§1–4",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/observer-lattice.md",
-              "locator": "§§4–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/observer-lattice-models.md",
-              "locator": "§§1–3",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/modal-selectors-and-quantifier-reduction.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/logical-separation-with-contingent-barcan.md",
-              "locator": "§§2–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/necessary-separation-and-atoms.md",
-              "locator": "§§1–4",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/reversible-separation-and-pure-truth.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/finite-block-symmetry-reversible-gap.md",
-              "locator": "§§1–8",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/reversible-quantifier-observers.md",
-              "locator": "§§1–4",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/local-conjugacy-and-reversible-observers.md",
-              "locator": "§§2–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/split-inverse-logical-observers.md",
-              "locator": "§§1–4",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/finite-block-symmetry-left-inverse.md",
-              "locator": "§§1–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/ternary-cantor-observer-model.md",
-              "locator": "§§1–9",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/fork-one-sided-inverse-separation.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/component-shift-symmetry-reversible-gap.md",
-              "locator": "§§1–8",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/left-inverse-separation-decomposition.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/finite-pinning-dedekind-propositions.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/plenitude-endpoint-bridge.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/surjective-logical-observers.md",
-              "locator": "§§1–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/linear-circular-fibre-left-inverse-gap.md",
-              "locator": "§§1–10",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/omega-chain-surjective-observers.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/fixed-point-symmetry-left-inverse-separation.md",
-              "locator": "§§1–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/full-cancellative-monoid-observers.md",
-              "locator": "§§1–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/root-truth-profile-surjective-separation.md",
-              "locator": "§§1–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/canonical-adjoints-and-image-factorization.md",
-              "locator": "§§2–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/integer-shift-predecessor-contingent-barcan.md",
-              "locator": "§§1–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/native-box-logical-observers.md",
-              "locator": "§§1–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/injective-observers-and-boolean-transversals.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/idempotent-native-box-observers.md",
-              "locator": "§§1–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/injective-separation-decomposition.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/native-box-reflection.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/bounded-stabilization-native-box-observers.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/finite-relative-image-generation.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/injective-gap-without-split-kernel.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/exterior-arm-posets-native-box-nonpersistence.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/local-transversal-support.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/zorn-local-transversal-selection.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/local-homogeneity-and-split-observers.md",
-              "locator": "§§1–4",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/bounded-fibre-degree-logical-observers.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/finite-image-native-box-observers.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/central-logical-observers.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/finite-colour-propositional-completeness.md",
-              "locator": "§§2–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/reversible-fixed-proposition-characterization.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/central-separation-and-four-propositions.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/finite-image-box-reflection.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/centre-of-reversible-logical-observers.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/invariant-components-and-local-support.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/bounded-exponent-reversible-observers.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/group-identities-reversible-observers.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/invariant-components-and-group-identities.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/internally-finite-observer-families.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            }
-          ],
-          "result_refs": [
-            "LOGICAL-OBSERVERS"
-          ],
-          "questions": []
-        },
-        {
-          "id": "endpoint-logical-observer-separation-r",
-          "name": "Endpoint Logical Observer Separation",
-          "batch": "further",
-          "category": "extensionality",
-          "disposition": "variant of parent candidate",
-          "statement": "Logical observers with outputs restricted to ⊤ and ⊥ distinguish every pair of distinct relations.",
-          "formal": "\\begin{aligned}\n&\\forall X,Y^{\\bar\\sigma t}\\, .\\,X=Y\\leftrightarrow\\forall E^{tt}\\, .\\,[\\operatorname{Good}_{\\Delta}(E)\\land\\operatorname{End}(E)] \\\\\n&\\qquad\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])).\n\\end{aligned}",
-          "definitions": [
-            "$$\n\\operatorname{End}(E):=\\forall p^t\\, .\\,Ep=\\top\\lor Ep=\\bot.\n$$",
-            "The types and $\\operatorname{Good}_\\Delta$ are as above. In a full model with fixed domains and an admitted evaluation operation, an endpoint observer reports whether $p$ is true at a fixed possible world; it need not report the truth here.",
-            "Endpoint-valuedness differs from $\\Box\\forall p(Ep\\leftrightarrow p)$: the latter gives the identity observer over C, whose outputs may remain contingent."
-          ],
-          "rationale": "Characterizes C5 + Atomicity by a restriction on the same observer class.",
-          "connections": [
-            "Over H, the full typed schema is equivalent to C5 + Atomicity (type t), without Actuality.",
-            "Over C, propositional separation testing quantifiers only at t already suffices. The full schema and its separately boxed form are equivalent.",
-            "Strictly stronger than ☐OS and strictly weaker than Extensionality over C.",
-            "Given endpoint separation, Extensionality is equivalent to there being a unique qualified endpoint observer; uniqueness at any one fixed finite list of tested types suffices.",
-            "Under C5, propositional atoms and endpoint observers qualified at $t$ correspond bijectively: $E_a(p)=\\Box(a\\to p)$ and $a_E=\\forall p(Ep\\to p)$. Such observers qualify at every finite type list.",
-            "Equivalent to C5 + ☐OS + one atom, and to C5 plus one atom and the single boxed propositional $\\operatorname{Good}_{\\{t\\}}$ separation instance.",
-            "Equivalent over H to OS + Plenitude at (t,t), OS + full Plenitude, C5 + OS + Actuality, and C5 + OS + Boolean Completeness. Both OS and Plenitude are current premises.",
-            "Together with boxed Infinitary Comprehension, it characterizes full standard hierarchies over the λ-free base of H, in ZF. In this package the initial qualification may omit translated equality clauses; they follow after reconstruction. See the [exact formulation](proofs/lambda-free-endpoint-comprehension.md)."
-          ],
-          "sources": [
-            {
-              "path": "proofs/logical-observers.md",
-              "locator": "§§1–8",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/operator-representation.md",
-              "locator": "§§2–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/logical-observer-hierarchy.md",
-              "locator": "§§1–8",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/logical-observer-endpoint-reduction.md",
-              "locator": "§§1–4",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/observer-lattice.md",
-              "locator": "§§4–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/observer-lattice-models.md",
-              "locator": "§§1–3",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/modal-selectors-and-quantifier-reduction.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/logical-separation-with-contingent-barcan.md",
-              "locator": "§§2–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/necessary-separation-and-atoms.md",
-              "locator": "§§1–4",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/reversible-separation-and-pure-truth.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/finite-block-symmetry-reversible-gap.md",
-              "locator": "§§1–8",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/reversible-quantifier-observers.md",
-              "locator": "§§1–4",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/local-conjugacy-and-reversible-observers.md",
-              "locator": "§§2–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/split-inverse-logical-observers.md",
-              "locator": "§§1–4",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/finite-block-symmetry-left-inverse.md",
-              "locator": "§§1–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/ternary-cantor-observer-model.md",
-              "locator": "§§1–9",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/fork-one-sided-inverse-separation.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/component-shift-symmetry-reversible-gap.md",
-              "locator": "§§1–8",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/left-inverse-separation-decomposition.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/finite-pinning-dedekind-propositions.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/plenitude-endpoint-bridge.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/surjective-logical-observers.md",
-              "locator": "§§1–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/linear-circular-fibre-left-inverse-gap.md",
-              "locator": "§§1–10",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/omega-chain-surjective-observers.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/fixed-point-symmetry-left-inverse-separation.md",
-              "locator": "§§1–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/full-cancellative-monoid-observers.md",
-              "locator": "§§1–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/root-truth-profile-surjective-separation.md",
-              "locator": "§§1–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/canonical-adjoints-and-image-factorization.md",
-              "locator": "§§2–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/integer-shift-predecessor-contingent-barcan.md",
-              "locator": "§§1–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/native-box-logical-observers.md",
-              "locator": "§§1–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/injective-observers-and-boolean-transversals.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/idempotent-native-box-observers.md",
-              "locator": "§§1–7",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/injective-separation-decomposition.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/native-box-reflection.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/bounded-stabilization-native-box-observers.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/finite-relative-image-generation.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/injective-gap-without-split-kernel.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/exterior-arm-posets-native-box-nonpersistence.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/local-transversal-support.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/zorn-local-transversal-selection.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/local-homogeneity-and-split-observers.md",
-              "locator": "§§1–4",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/bounded-fibre-degree-logical-observers.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/finite-image-native-box-observers.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/central-logical-observers.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/finite-colour-propositional-completeness.md",
-              "locator": "§§2–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/reversible-fixed-proposition-characterization.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/central-separation-and-four-propositions.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/finite-image-box-reflection.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/centre-of-reversible-logical-observers.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/invariant-components-and-local-support.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/bounded-exponent-reversible-observers.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/group-identities-reversible-observers.md",
-              "locator": "§§1–6",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/invariant-components-and-group-identities.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/h-observer-space/internally-finite-observer-families.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            },
-            {
-              "path": "proofs/lambda-free-endpoint-comprehension.md",
-              "locator": "§§1–5",
-              "source_id": "misc",
-              "pagination": "unpaginated"
-            }
-          ],
-          "result_refs": [
-            "LOGICAL-OBSERVERS"
-          ],
-          "questions": []
-        },
-        {
           "id": "factive-logical-observer-separation-r",
           "name": "Factive Logical Observer Separation",
           "batch": "further",
           "category": "extensionality",
           "disposition": "variant of parent candidate",
           "statement": "Factive logical observers distinguish every pair of distinct relations.",
-          "formal": "\\begin{aligned}\n&\\forall X,Y^{\\bar\\sigma t}\\, .\\,X=Y\\leftrightarrow\\forall E^{tt}\\, .\\,[\\operatorname{Good}_{\\Delta}(E)\\land\\operatorname{Fact}(E)] \\\\\n&\\qquad\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])).\n\\end{aligned}",
+          "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{Fact}(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
           "definitions": [
             "$$\n\\operatorname{Fact}(E):=\\forall p^t\\, .\\,Ep\\to p.\n$$",
             "The types and $\\operatorname{Good}_\\Delta$ are as above. Negation preservation and factivity imply $\\forall p(Ep\\leftrightarrow p)$.",
@@ -3551,7 +3661,7 @@
           "id": "central-logical-observer-separation-r",
           "name": "Central Logical Observer Separation",
           "statement": "Observers commuting with every logical observer at the same finite qualification list distinguish every pair of distinct relations. Write CentreSep for the full schema.",
-          "formal": "\\begin{aligned}\n&\\forall X,Y^{\\bar\\sigma t}\\, .\\,X=Y\\leftrightarrow\\forall E^{tt}\\, .\\,[\\operatorname{Cent}_\\Delta(E)]\\\\\n&\\qquad\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])).\n\\end{aligned}",
+          "formal": "\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,\\bigl(\\mathrm{Good}_\\Delta(E)\\land \\mathrm{Cent}_\\Delta(E)\\bigr)\\to\\forall\\bar z^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar z])\\leftrightarrow E(Y[\\bar z])\\bigr)\\Bigr]\\to X=Y.",
           "definitions": [
             "$$\n\\operatorname{Cent}_\\Delta(E):=\\operatorname{Good}_\\Delta(E)\\land\\forall G^{tt}\\,[\\operatorname{Good}_\\Delta(G)\\to E\\circ G=G\\circ E].\n$$",
             "Commutation is identity of whole operations, and ranges over every admitted same-list Good observer. A chosen pairwise commuting family is a different condition."
@@ -3631,33 +3741,50 @@
           "date": "2026-10-24",
           "by": "OpenAI Codex, prompted by Daniel Kodsi",
           "summary": "Added the endpoint-separation and Infinitary Comprehension characterization over the specified λ-free base, with equality clauses derived after reconstruction."
+        },
+        {
+          "date": "2026-10-26",
+          "by": "OpenAI Codex, prompted by Daniel Kodsi",
+          "summary": "Unified object-language guide and C/H maps; added explicit SurjSep and SplitMono proposal variants; clarified collective separation."
         }
       ],
       "presentation": {
-        "definitions": "The schema ranges over finite argument tuples $\\bar\\sigma$ and finite lists $\\Delta$ of tested types. $\\mathrm{Good}_\\Delta(E)$ requires preservation of Boolean operations and the listed quantifiers as identities of whole operations, together with the translated equality laws. [Exact qualification and variants](proofs/h-observer-space/SUMMARY.md#logical-observer-separation-r).",
+        "definitions": "The same separation pattern applies to every relational type. $\\mathrm{Good}_\\Delta(E)$ has the uniform H definition in the [observer guide](LOGICAL-OBSERVERS.md#uniform-definitions-over-h), with simpler equivalent qualifications over C and C5. Types and finite lists index the schema; every instance is a finite object-language formula.",
         "connections": [
           "H + OS entails C + BF. **Lean certified** with explicit endpoint identities; [omitting them](proofs/logical-observer-endpoint-reduction.md) uses the ordinary reduction proof.",
-          "Over C: Atomicity (type t) + BF ⇒ OS ⇒ BF, with neither converse valid.",
-          "Endpoint separation is equivalent over H to C5 + Atomicity (type t). Given OS, uniqueness of the qualified observer is equivalent to Extensionality."
+          "Over C: Atomicity + BF ⇒ OS ⇒ BF, with neither converse valid.",
+          "Endpoint separation is equivalent over H to C5 + Atomicity. Given OS, uniqueness of the qualified observer is equivalent to Extensionality."
         ],
         "variants": [
           {
             "id": "endpoint-logical-observer-separation-r",
             "label": "Endpoint",
             "qualification": "Only ⊤ and ⊥ as outputs",
-            "consequence": "Exactly C5 + Atomicity (type t) over H."
+            "consequence": "Exactly C5 + Atomicity over H."
           },
           {
             "id": "reversible-logical-observer-separation-r",
             "label": "Reversible",
-            "qualification": "A qualified two-sided inverse",
+            "qualification": "Over C: conjunction-preserving involutions separating propositions",
             "consequence": "Gives C5 + ☐OS + No Pure Contingency, including in atomless models."
+          },
+          {
+            "id": "surjective-logical-observer-separation-r",
+            "label": "SurjSep",
+            "qualification": "Currently onto",
+            "consequence": "Rev ⇒ SurjSep ⇒ OS, with both converses false. Over C5, SurjSep is equivalent to Rev."
+          },
+          {
+            "id": "logical-left-inverse-separation-r",
+            "label": "SplitMono",
+            "qualification": "An admitted same-list logical left inverse",
+            "consequence": "Rev ⇒ SplitMono ⇒ InjSep ⇒ OS. SplitMono strictly implies InjSep, even over C5 with necessary all-type Relational Choice, Transversal Choice and Zorn. See [countermodel](proofs/h-observer-space/rigid-souslin-injective-separation.md)."
           },
           {
             "id": "injective-logical-observer-separation-r",
             "label": "Injective",
             "qualification": "Currently injective",
-            "consequence": "Whether it gives logical left-inverse separation remains open."
+            "consequence": "It does not imply logical left-inverse separation, even with C5 and necessary all-type Relational Choice, Transversal Choice and Zorn; see [countermodel](proofs/h-observer-space/rigid-souslin-injective-separation.md)."
           },
           {
             "id": "native-necessity-logical-observer-separation-r",
@@ -3697,7 +3824,8 @@
           }
         ],
         "reference": "proofs/h-observer-space/SUMMARY.md",
-        "reference_intro": "The [headline guide](proofs/h-observer-space/SUMMARY.md#headline-results) explains the main distinctions; the [full list of connections and definitions](proofs/h-observer-space/SUMMARY.md#logical-observer-principles) retains the proposal family and proof references."
+        "reference_intro": "Start with [the maps, definitions and intuition](LOGICAL-OBSERVERS.md). The [structured principle register](OBSERVER-PRINCIPLES.json) supplies object-language formulas and exact type scope; the [full list of connections](proofs/h-observer-space/SUMMARY.md#logical-observer-principles) retains the detailed evidence.",
+        "guide_reference": "LOGICAL-OBSERVERS.md"
       }
     },
     {
@@ -3913,6 +4041,51 @@
         "PROFILE-WORLD-ALGEBRA"
       ],
       "questions": []
+    },
+    {
+      "id": "commuting-logical-observer-separation-r",
+      "name": "Commuting Logical Observer Separation",
+      "batch": "further",
+      "category": "extensionality",
+      "disposition": "proposed family principle record",
+      "statement": "An admitted family of pairwise commuting logical observers collectively distinguishes every pair of distinct relations.",
+      "formal": "\\begin{aligned}\\mathrm{CoSep}_{\\bar\\sigma,\\Delta}:=\\exists K^{(tt)t}\\, .\\,\\bigl(&\\forall E^{tt}\\, .\\,KE\\to\\mathrm{Good}_\\Delta(E)\\bigr)\\\\{}\\land{}&\\bigl(\\forall E,F^{tt}\\, .\\,(KE\\land KF)\\to E\\circ F=F\\circ E\\bigr)\\\\{}\\land{}&\\mathrm{Sep}_{\\bar\\sigma}(K).\\end{aligned}",
+      "scope": "Each relational type and finite qualification list gives one instance. Over C5 it suffices to separate propositions with N(E) ∧ Q_t(E).",
+      "definitions": [
+        "Here $\\mathrm{Sep}_{\\bar\\sigma}(K)$ means\n\n$$\n\\mathrm{Sep}_{\\bar\\sigma}(K):=\\forall X,Y^{\\bar\\sigma t}\\, .\\,\\Bigl[\\forall E^{tt}\\, .\\,KE\\to\\forall\\bar x^{\\bar\\sigma}\\, .\\,\\bigl(E(X[\\bar x])\\leftrightarrow E(Y[\\bar x])\\bigr)\\Bigr]\\to X=Y.\n$$",
+        "Good has the qualification of Logical Observer Separation above. Over C it requires preservation of conjunction, negation and the tested universal quantifiers as whole-operation identities."
+      ],
+      "rationale": "Adds the modal axiom .2 to OS; its stable idempotent form exactly characterizes Atomicity over C5.",
+      "connections": [
+        "Over C: CoSep ⇒ OS + .2.",
+        "CoIdemSep adds $\\forall E^{tt}\\, .\\,KE\\to E\\circ E=E$ within the same existential. Over C5, requiring additionally $\\forall E^{tt}\\, .\\,(KE=\\top\\lor KE=\\bot)$ makes it equivalent to Atomicity.",
+        "The [observer guide](LOGICAL-OBSERVERS.md#commuting-observer-families) gives the definitions and maps.",
+        "CoInjSep requires the family’s observers to be injective; CoRevSep requires them to have admitted logical inverses. Over C, Actuality + CoInjSep is equivalent to C5 + Atomicity + CoRevSep, and hence entails ☐Plenitude. [Definitions and proof](LOGICAL-OBSERVERS.md#commuting-family-connections).",
+        "☐Functional Choice supplies a stable CoRevSep family that necessarily distinguishes all relations, with the same family at every type and qualification list. C5 + Atomicity and an admitted well-order of world atoms already suffice."
+      ],
+      "sources": [
+        {
+          "path": "../integration-register/proofs/coherent-observers/object-language-and-finite-basis.txt",
+          "locator": "§§1–4, unpaginated"
+        },
+        {
+          "path": "../integration-register/proofs/coherent-observers/stable-families-and-propagation.txt",
+          "locator": "§§2–4, unpaginated"
+        },
+        {
+          "path": "../integration-register/proofs/coherent-observers/coherent-families.txt",
+          "locator": "§2, unpaginated"
+        },
+        {
+          "path": "../integration-register/proofs/coherent-observers/joint-injective-separation.txt",
+          "locator": "§§1–3, unpaginated"
+        },
+        {
+          "path": "../integration-register/proofs/coherent-observers/choice-implies-coherent-reversible-separation.txt",
+          "locator": "§§1–7, unpaginated"
+        }
+      ],
+      "result_refs": []
     }
   ],
   "evaluation": {
@@ -4014,7 +4187,7 @@
       "formulas": [
         "\\forall p,q^t\\, .\\,p=q\\leftrightarrow\\forall E^{tt}\\, .\\,D(E)\\to(Ep\\leftrightarrow Eq)."
       ],
-      "certified_scope": true
+      "certified_scope": null
     },
     {
       "name": "Complete Boolean Retractions",
@@ -4095,7 +4268,8 @@
       "id": "observer-principles",
       "title": "Observers",
       "principles": [
-        "logical-observer-separation-r"
+        "logical-observer-separation-r",
+        "commuting-logical-observer-separation-r"
       ]
     },
     {

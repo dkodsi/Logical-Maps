@@ -1,0 +1,357 @@
+SAME PROPOSITION IMAGE, ELEMENTARILY DIFFERENT LOGICAL CORES
+
+Original mathematical argument, OpenAI Codex, 26 October 2026.
+Direct source: misc; the numbered proof sections below are unpaginated.
+
+1. THE RESULT
+
+Same-image canonicity fails over bare Classicism, even under necessary
+Boolean Completeness and necessary Atomicity at EVERY relational type.
+
+There is a pointed C model M with one individual and exactly sixteen
+propositions, containing two admitted observers E,F such that:
+
+  (a) E and F preserve Boolean operations and EVERY typed quantifier,
+      as WHOLE operation identities, and E^2=E, F^2=F wholly.
+  (b) E and F preserve current truth and have the SAME actual image,
+      an eight-element Boolean subalgebra of M_t.
+  (c) Their recursively normalized all-sort fixed-test quotient cores
+      are elementarily inequivalent in the PURE language of C.
+  (d) Both cores, and M itself, satisfy Box BC_tau and Box Atomicity_tau
+      for every relational tau. Each core has eight propositions.
+  (e) The fixed-test quotient is trivial at EVERY sort in both cases.
+      Thus the difference is already in their literal fixed structures;
+      quotient ambiguity is not responsible.
+  (f) BF at type t fails explicitly in the source and in both cores.
+      In particular none of these models satisfies full typed OS.
+
+A single closed pure sentence distinguishes the cores: there are two
+different false propositional atoms exchanged by a conjunction-preserving
+involution. Conjunction preservation and involution are WHOLE identities.
+
+The existing theorem with CURRENT all-type BF remains valid. Full typed
+Observer Separation implies current BF, so same-image canonicity in an
+OS ambient model was already settled positively. The new result answers
+the general bare-C question, including the necessarily complete case.
+
+2. TWO TRANSITIVE ACTIONS WITH MAPS BOTH WAYS BUT NO ISOMORPHISM
+
+Put A=Z[1/6], and let
+
+  G=A semidirect Z,
+  (a,n)(b,m)=(a+6^n b,n+m),       t=(0,1).
+
+Regard H=Z and J=(1/2)Z as subgroups of translations in G. Then
+
+  H is contained in J,       J is contained in t^(-1) H t=(1/6)Z.
+
+Let U=G/H and V=G/J, with their usual left G-actions. There are
+surjective G-equivariant maps
+
+  c:U -> V,        c(gH)=gJ,
+  d:V -> U,        d(gJ)=g t^(-1)H.                         (2.1)
+
+The displayed subgroup containments prove well-definedness, and any
+equivariant map between nonempty transitive G-sets is onto.
+
+But U and V are NOT isomorphic as G-sets. Transitive coset G-sets are
+isomorphic precisely when their stabilizers are conjugate: an image
+of the base coset determines the conjugate stabilizer, and a bijection
+forces equality. Direct calculation gives
+
+  (a,n) H (a,n)^(-1)=6^n Z.
+
+This never equals (1/2)Z. Equality of these cyclic subgroups of the
+additive rationals would equate their least positive generators, giving
+6^n=1/2, impossible for an integer n. No external group classification
+is used.
+
+Take three disjoint G-orbits
+
+  W=U_0 disjoint-union U_1 disjoint-union V_2,
+
+where U_0,U_1 are named copies of U. Define G-equivariant retractions
+
+  j_E:W -> W: fixes U_0,U_1; sends V_2 to U_1 using d;
+  j_F:W -> W: fixes U_0,V_2; sends U_1 to V_2 using c.        (2.2)
+
+Both are idempotent. Their image G-sets are
+
+  W_E=U_0 disjoint-union U_1,
+  W_F=U_0 disjoint-union V_2.
+
+The spare orbit U_0 makes the difference between U and V intrinsically
+detectable: W_E has an equivariant permutation interchanging its two
+orbits, whereas W_F has none.
+
+3. THE FULL STANDARD FUTURE AND ITS SYMMETRIES
+
+Let K(W) be the full standard relational hierarchy with one individual:
+
+  K_e={*},     K_t=P(W),     K_(sigma tau)=K_tau^(K_sigma).
+
+Application and lambda are actual function application and abstraction.
+Boolean operations are pointwise, and Q_sigma takes the intersection
+over ALL K_sigma. A world w makes p true iff w belongs to p. This is
+the usual full standard C model, with native equality crisp: identity
+has value W when the objects are equal and empty otherwise. At each
+type full predicates separate unequal objects.
+
+The action of G on W induces its Boolean action on P(W), the trivial
+action at e, and the conjugation action at every arrow type. Thus
+
+  (g f)(x)=g(f(g^(-1)x)).
+
+Every logical constant is invariant. All typed lambda and quantifier
+interpretations commute with this action. Write K_sigma^G for the
+invariant objects of type sigma.
+
+For any G-equivariant map j:W->W, inverse image j*:P(W)->P(W) is an
+invariant tt object. It preserves all Boolean operations and ALL
+intersections. Consequently, for every type sigma and every predicate
+X:K_sigma->P(W),
+
+  j*(Q_sigma X)=Q_sigma(j* composed X).                    (3.1)
+
+These are identities of the FULL operations, on all future arguments,
+not merely on the invariant objects. If j is idempotent, so is j*.
+
+4. A SYMMETRY-RESTRICTED PREDECESSOR MODEL
+
+Define a new model R(W,G) recursively on the fixed relational types.
+Every relational type has a unique flattened form tau=alpha_1...alpha_n t.
+Set
+
+  D_e={*},
+  D_tau=P(D_alpha1 x ... x D_alphan) x K_tau^G.             (4.1)
+
+For n=0 the first factor is 2. Write q_tau(A,k)=k; q_e is the unique
+individual map. Current truth of p=(b,k) is b.
+
+Application curries the arbitrary current table and applies future
+objects to projected arguments:
+
+  (A,k)(x)=(A_x, k(q(x))).                                (4.2)
+
+Because k and q(x) are invariant, so is k(q(x)); application is closed.
+Every logical constant has its ordinary current truth table and its
+full standard K(W) interpretation as future component. In particular,
+
+  Q_sigma^R(X)=([for all x in D_sigma, X(x) is true],
+                         Q_sigma^K(q_(sigma t)(X))).       (4.3)
+
+The second component quantifies over ALL K_sigma, not just K_sigma^G.
+This is part of the specified quantifier operation. The operation is
+admitted because Q_sigma^K is invariant.
+
+Interpret a lambda term by its current truth table on the root domain
+and its ordinary K(W) lambda denotation with projected free parameters.
+The latter is invariant, since all those parameters and every logical
+constant are invariant. It is therefore admitted in (4.1). Induction
+on ALL terms, including lambda and quantified terms, gives
+
+  q(T^R(parameters))=T^K(q(parameters)).                   (4.4)
+
+Beta and eta hold componentwise. Native Leibniz identity has value
+
+  delta_sigma^R(x,y)=([x=y], delta_sigma^K(q(x),q(y))).     (4.5)
+
+For its current bit, arbitrary singleton current predicates, paired
+with bottom future profiles, distinguish unequal root objects. For its
+future profile, (4.4) computes the full original Leibniz formula in K,
+including its full predicate quantifier. Thus actual identity is literal.
+
+The Boolean, quantifier and identity truth clauses validate H. For an
+H theorem, the future value is Top_K and the current bit is true, so
+the root value is Top_R. If H proves A equivalent to B, their lambda
+abstractions have identical current tables, and identical future full
+functions by validity at every future world and assignment. Hence the
+abstractions are the same pair. This verifies exactly C's original
+H-theorem Logical Equivalence gate. No optional-premise equivalence or
+standard completeness theorem has been used.
+
+This construction is the symmetry-restricted variant of the established
+full-current-table predecessor model. Surjectivity of q onto the FULL
+future hierarchy is deliberately absent and is not needed for C.
+
+5. THE TWO OBSERVERS AND THEIR COMMON IMAGE
+
+Take M=R(W,G) for W from Section 2. Since W has three G-orbits,
+
+  D_t=2 x K_t^G=2 x 2^3.
+
+Write a proposition as (b,u_0,u_1,v_2). Define admitted E,F:tt by
+their current tables p -> current_truth(p), and their respective
+future components j_E*,j_F*. Their actual proposition actions are
+
+  E(b,u_0,u_1,v_2)=(b,u_0,u_1,u_1),
+  F(b,u_0,u_1,v_2)=(b,u_0,v_2,v_2).                        (5.1)
+
+Thus they preserve truth and have the identical proper image
+
+  B={ (b,u,v,v): b,u,v in 2 },                             (5.2)
+
+with eight elements. Whole Boolean preservation and whole idempotence
+hold in the current tables and in the future profiles, so hold as
+actual identities of the relevant root operation objects.
+
+For whole Q_sigma preservation, the current bit of E(Q_sigma X) is
+the current bit of Q_sigma X. The current bit of Q_sigma(E composed X)
+is the same, because E preserves current truth for every proposition.
+The future operation profiles agree on ALL future arguments by (3.1).
+The two root operation objects therefore have the same complete current
+table and future profile, establishing the WHOLE identity. This works
+for every type and for F as well. It does not infer whole equality from
+current pointwise equality or use ambient Functionality.
+
+6. IDENTIFYING THE CORES EXACTLY
+
+For L=E or F use the standard recursive normalizer
+
+  r_e=id,       r_t=L,
+  r_(sigma tau)(f)=lambda x.r_tau(f(r_sigma(x))).           (6.1)
+
+The general bare-C construction takes fixed objects, then identifies
+them when all fixed predicates agree in current truth. Here that
+quotient is trivial at every type. Indeed, for fixed a!=b choose an
+ambient predicate P with different current truth at a,b, using an
+arbitrary current table and bottom future profile. Its normalization
+is lambda x.L(P(r_sigma(x))); on fixed a,b, its current truths remain
+those of P, because L preserves current truth. This is a separating
+fixed predicate.
+
+Let j be j_E or j_F, S=j[W], and let n_sigma be the corresponding
+normalizers in the full future K(W). The full standard fixed hierarchy
+is equivariantly isomorphic to K(S). Explicitly at t, embed a subset
+of S by its inverse image under j, and project a subset of W by
+restriction to S. At e use identity. Recursively, for embed i and
+project p at the input/output types, set
+
+  i_(sigma tau)(f)=i_tau composed f composed p_sigma,
+  p_(sigma tau)(h)=p_tau composed h composed i_sigma.
+
+Induction gives p_sigma i_sigma=id and i_sigma p_sigma=n_sigma.
+These are actual functions in the full hierarchy and commute with G.
+Consequently
+
+  Fix(n_sigma) intersect K_sigma(W)^G = i_sigma[K_sigma(S)^G].
+
+In the root, normalization replaces a current truth table A by the
+table A(r_alpha1(x_1),...,r_alphan(x_n)), because L preserves its final
+current truth bit. Thus fixed root tables are exactly arbitrary tables
+on the fixed input domains, extended by those input normalizers. Their
+future profiles are exactly the invariant n-fixed objects just identified.
+
+Restriction of the current table and the map p_sigma on its future
+profile now give, by induction on types, a bijection between the root
+fixed domains and the domains in (4.1) for R(S,G). Application, Boolean
+operations and lambda commute with these bijections by their definitions.
+Quantifiers also do: on fixed predicates, the current range over original
+inputs equals that over fixed inputs by input invariance; in the full
+future, normalizer surjectivity makes the corresponding universal ranges
+equal. Truth is the unchanged current bit. This proves pointed logical
+isomorphisms, including the native quantifiers and identities,
+
+  Core(M,E) is isomorphic to R(U_0 disjoint-union U_1,G),
+  Core(M,F) is isomorphic to R(U_0 disjoint-union V_2,G).    (6.2)
+
+Neither core has any additional fixed-test identifications. Both have
+proposition algebra 2 x 2^2: one currently true atom and two false atoms.
+
+7. A CLOSED PURE SENTENCE DISTINGUISHING THE CORES
+
+Use the map's native propositional Atom predicate, and put
+
+  MeetInv(L) :=
+    (lambda p q.L(p and q))=(lambda p q.(L(p) and L(q)))
+    and (lambda p.L(L(p)))=(lambda p.p).
+
+The distinguishing pure sentence is
+
+  Psi := exists a^t b^t L^tt.
+    Atom(a) and Atom(b) and not a and not b and a!=b
+    and MeetInv(L) and L(a)=b.                            (7.1)
+
+All displayed operation equations are literal native identities, not
+universally quantified current coextensions. No type schema or naming
+constant occurs in Psi.
+
+In the E core, exchange the two copies U_0,U_1 using the evident
+equivariant permutation of their disjoint union. Its inverse-image
+operation on the full future powerset is invariant, preserves meet,
+and is an involution. Pair it with current table p -> current_truth(p).
+This gives an admitted whole meet-preserving involution in R(W_E,G).
+It exchanges the two false atoms, proving Psi.
+
+Suppose Psi held in the F core. Its only false atoms are the root
+propositions with future profiles U_0 and V_2. Let l be the future
+component of the witnessing L. Since native operation identity is
+literal identity of pairs, MeetInv(L) forces l to preserve meet on ALL
+P(W_F) and to satisfy l^2=id there. It is therefore an order automorphism
+of P(W_F): monotonicity follows from meet preservation, and its inverse
+is itself. An order automorphism carries atoms to atoms, giving a unique
+permutation s of W_F; moreover it preserves all existing joins, so its
+action on arbitrary subsets is completely determined by that permutation.
+
+The profile l is G-invariant, hence commutes with the G-action. Its
+permutation s is therefore G-equivariant (apply the commutation identity
+to singletons). L(a)=b forces s to interchange U_0 and V_2. Restriction
+would then be a G-equivariant bijection U -> V, contradicting Section 2.
+Thus the F core satisfies not Psi.
+
+This proves elementary inequivalence, and therefore non-isomorphism,
+even without any demand that an isomorphism fix the common proposition
+image. The spare anchor orbit is what makes the distinction intrinsic.
+
+8. NECESSARY COMPLETENESS AND ATOMICITY AT EVERY RELATIONAL TYPE
+
+For tau=alpha_1...alpha_n t, put X=product_i K_alphai. The full future
+Boolean algebra K_tau is naturally P(X x W). The induced G action is
+the action on subsets from the diagonal action on X x W. Hence
+
+  K_tau^G is naturally P((X x W)/G),                     (8.1)
+
+because an invariant subset is exactly a union of orbits. It follows
+that K_tau^G is externally complete AND atomic, with orbit subsets as
+its atoms. By (4.1), the root relational Boolean algebra is the product
+of this complete atomic algebra with the full current-table powerset.
+Native order is the ordinary coordinatewise algebraic order, because
+actual identity is literal. The root algebra is therefore externally
+complete and atomic at every relational type.
+
+For each admitted property, its current extension is an actual subset
+of the corresponding root carrier. External completeness supplies a
+greatest lower bound in that carrier, verifying the precise native BC
+formula. Atomicity follows from the displayed powerset representation
+and verifies the map's native Atom formula. Thus every BC_tau and
+Atomicity_tau is currently true.
+
+These closed sentences have future profiles equal to their full K(W)
+values by (4.4). The future Boolean algebras are also full powersets,
+so those values are Top_K. Their root values are consequently
+(true,Top_K)=Top_R. Native Box A is A=Top; it follows that the root
+satisfies Box BC_tau AND Box Atomicity_tau for every relational tau.
+The argument applies unchanged with W_E or W_F in place of W, proving
+the same boxed schemes in both exact cores in (6.2).
+
+This strengthening does not add C5: different current tables can have
+the same future profile. Necessary completeness and atomicity therefore
+do not restore same-image canonicity in the absence of BF.
+
+Here is an explicit BF_t failure, valid in the source and both cores.
+In the full future define U:P(W)->P(W) to return Top on G-invariant
+propositions and Bottom on every other proposition. This operation is
+itself invariant: the set of invariant propositions is stable under G,
+and Top and Bottom are fixed. The root predicate X with always-true
+current table and future profile U is therefore admitted. For every
+CURRENT root proposition p, its q(p) is invariant, so X(p)=Top_R
+literally. Hence forall p.Box X(p) is currently true. But the root
+proposition forall p.X(p) has current bit true and future value Bottom:
+the future quantifier sees non-invariant subsets of its nontrivial
+transitive orbits. Thus forall p.X(p)=(true,empty)!=Top_R, and
+Box forall p.X(p) is false. This refutes precisely the BF_t instance
+
+  (forall p.Box X(p)) -> Box forall p.X(p).
+
+The same construction works over either two-orbit future. This makes
+the boundary with the BF and OS canonicity results explicit.

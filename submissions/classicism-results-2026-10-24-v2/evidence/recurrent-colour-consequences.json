@@ -1,0 +1,599 @@
+{
+  "satisfies": [
+    "atomlessness",
+    "axiom-of-infinity-t",
+    "barcan-r",
+    "barcan-relational",
+    "barcan-t",
+    "boolean-completeness-r",
+    "boolean-completeness-t",
+    "broad-necessitism-r",
+    "converse-barcan-r",
+    "countable-boolean-completeness-r",
+    "existence-r",
+    "functionality-r",
+    "identity-necessary-r",
+    "infinity-t",
+    "intensionality-r",
+    "modal-four",
+    "modal-k",
+    "modal-t",
+    "modalized-fregean",
+    "modalized-functionality-r",
+    "modalized-plenitude-r",
+    "necessary-barcan-r",
+    "necessary-barcan-relational",
+    "necessary-barcan-t",
+    "necessary-boolean-completeness-r",
+    "necessary-boolean-completeness-t",
+    "necessary-countable-boolean-completeness-r",
+    "necessary-functionality-r",
+    "necessary-rigid-power-r",
+    "necessary-rigid-rigidity-r",
+    "necessary-tractarianism-r",
+    "necessary-weakly-inextensible-comprehension-r",
+    "necessity-of-arithmetic",
+    "ordinary-comprehension-r",
+    "possible-infinity-t",
+    "rigid-power-r",
+    "rigid-rigidity-r",
+    "tame-rigidity-r",
+    "tractarianism-r",
+    "weakly-inextensible-comprehension-r"
+  ],
+  "violates": [
+    "actual-profile-r",
+    "actuality",
+    "atomicity-r",
+    "atomicity-t",
+    "converse-witnessed-possibility-r",
+    "distinctness-necessary-r",
+    "distinctness-necessary-t",
+    "distinctness-schema-r",
+    "distinctness-signature-r",
+    "extensionality-r",
+    "fregean-axiom",
+    "functional-choice-r",
+    "gallin-extensional-comprehension-r",
+    "logical-necessity-r",
+    "modal-b",
+    "modal-five",
+    "modal-freedom-signature-r",
+    "modal-well-ordering-r",
+    "modalized-relational-choice-r",
+    "necessary-actuality",
+    "necessary-atomicity-r",
+    "necessary-atomicity-t",
+    "necessary-distinctness-necessary-r",
+    "necessary-distinctness-necessary-t",
+    "necessary-extensionality-r",
+    "necessary-fregean-axiom",
+    "necessary-functional-choice-r",
+    "necessary-gallin-extensional-comprehension-r",
+    "necessary-modal-b",
+    "necessary-modal-five",
+    "necessary-modalized-relational-choice-r",
+    "necessary-persistent-comprehension-r",
+    "necessary-plenitude-r",
+    "necessary-relational-choice-r",
+    "necessary-rigid-comprehension-r",
+    "necessary-strong-actuality",
+    "necessary-strong-leibniz-r",
+    "necessary-strong-leibniz-t",
+    "necessary-tame-rigidity-r",
+    "necessary-transversal-choice-r",
+    "necessary-vicinity",
+    "necessary-weak-rigid-comprehension-r",
+    "necessary-weakly-rigid-power-r",
+    "necessary-weakly-rigid-weak-rigidity-r",
+    "necessary-well-ordering-r",
+    "no-contingency-signature-r",
+    "no-pure-contingency-r",
+    "persistent-comprehension-r",
+    "plenitude-r",
+    "possibility-plus-r",
+    "possibility-plus-signature-r",
+    "relational-choice-r",
+    "rigid-comprehension-r",
+    "strong-actuality",
+    "strong-leibniz-r",
+    "strong-leibniz-t",
+    "strong-possibility-r",
+    "strong-possibility-signature-r",
+    "transversal-choice-r",
+    "vicinity",
+    "weak-rigid-comprehension-r",
+    "weakly-rigid-power-r",
+    "weakly-rigid-weak-rigidity-r",
+    "well-ordering-r",
+    "zorn-r"
+  ],
+  "resolved_recorded_conjectures": [
+    {
+      "id": "tame-rigidity-and-rigid-power-imply-weakly-rigid-power",
+      "premises": [
+        "tame-rigidity-r",
+        "rigid-power-r"
+      ],
+      "conclusion": "weakly-rigid-power-r"
+    }
+  ],
+  "new_one_or_two_premise_comparisons_in_rigidity_family": [
+    {
+      "premises": [
+        "tame-rigidity-r"
+      ],
+      "target": "necessary-tame-rigidity-r"
+    },
+    {
+      "premises": [
+        "tame-rigidity-r",
+        "rigid-power-r"
+      ],
+      "target": "weakly-rigid-power-r"
+    },
+    {
+      "premises": [
+        "tame-rigidity-r",
+        "necessary-rigid-power-r"
+      ],
+      "target": "weakly-rigid-power-r"
+    },
+    {
+      "premises": [
+        "tame-rigidity-r",
+        "rigid-rigidity-r"
+      ],
+      "target": "weakly-rigid-weak-rigidity-r"
+    },
+    {
+      "premises": [
+        "tame-rigidity-r",
+        "necessary-rigid-rigidity-r"
+      ],
+      "target": "weakly-rigid-weak-rigidity-r"
+    }
+  ],
+  "derived_failure_reasons": {
+    "strong-leibniz-r": [
+      "recurrent-colour-audit",
+      "strong-leibniz-r-implies-strong-leibniz-t",
+      "strong-leibniz-t-implies-atomicity-t",
+      "atomicity-t-incompatible-with-atomlessness"
+    ],
+    "functional-choice-r": [
+      "recurrent-colour-audit",
+      "functional-choice-r-implies-plenitude-r",
+      "plenitude-r-implies-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "strong-possibility-r": [
+      "recurrent-colour-audit",
+      "strong-possibility-r-implies-possibility-schema-r",
+      "maximalist-distinctness-incompatible-with-necessary-barcan-r"
+    ],
+    "necessary-fregean-axiom": [
+      "recurrent-colour-audit",
+      "necessary-fregean-axiom-implies-fregean-axiom",
+      "atomlessness-implies-infinity-t",
+      "fregean-incompatible-with-infinity-t"
+    ],
+    "rigid-comprehension-r": [
+      "recurrent-colour-audit",
+      "rigid-comprehension-r-implies-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "weak-rigid-comprehension-r": [
+      "recurrent-colour-audit",
+      "weak-rigid-comprehension-r-implies-persistent-comprehension-r",
+      "persistent-comprehension-r-implies-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "necessary-weakly-rigid-weak-rigidity-r": [
+      "recurrent-colour-audit",
+      "necessary-weakly-rigid-weak-rigidity-r-implies-weakly-rigid-weak-rigidity-r",
+      "weakly-rigid-weak-rigidity-implies-necessary-tame-rigidity",
+      "necessary-rigid-power-r-implies-rigid-power-r",
+      "necessary-tame-rigidity-and-rigid-power-imply-weakly-rigid-power"
+    ],
+    "well-ordering-r": [
+      "recurrent-colour-audit",
+      "necessary-boolean-completeness-r-implies-boolean-completeness-r",
+      "well-ordering-r-implies-transversal-choice-r",
+      "transversal-choice-r-implies-relational-choice-r",
+      "relational-choice-and-boolean-completeness-imply-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "necessary-atomicity-t": [
+      "recurrent-colour-audit",
+      "necessary-atomicity-t-implies-atomicity-t",
+      "atomicity-t-incompatible-with-atomlessness"
+    ],
+    "necessary-gallin-extensional-comprehension-r": [
+      "recurrent-colour-audit",
+      "necessary-gallin-comprehension-implies-necessary-rigid-comprehension",
+      "necessary-rigid-comprehension-r-implies-rigid-comprehension-r",
+      "rigid-comprehension-r-implies-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "necessary-distinctness-necessary-r": [
+      "recurrent-colour-audit",
+      "necessary-distinctness-necessary-r-implies-necessary-distinctness-necessary-t",
+      "necessary-distinctness-necessary-t-implies-necessary-vicinity",
+      "necessary-vicinity-implies-vicinity",
+      "necessary-boolean-completeness-implies-necessary-weakly-inextensible-comprehension",
+      "necessary-weakly-inextensible-comprehension-r-implies-weakly-inextensible-comprehension-r",
+      "vicinity-and-weakly-inextensible-comprehension-imply-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "possibility-plus-r": [
+      "recurrent-colour-audit",
+      "possibility-plus-r-implies-possibility-schema-r",
+      "maximalist-distinctness-incompatible-with-necessary-barcan-r"
+    ],
+    "zorn-r": [
+      "recurrent-colour-audit",
+      "necessary-boolean-completeness-r-implies-boolean-completeness-r",
+      "zorn-r-implies-well-ordering-r",
+      "well-ordering-r-implies-transversal-choice-r",
+      "transversal-choice-r-implies-relational-choice-r",
+      "relational-choice-and-boolean-completeness-imply-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "distinctness-necessary-t": [
+      "recurrent-colour-audit",
+      "distinctness-necessary-t-implies-vicinity",
+      "necessary-boolean-completeness-implies-necessary-weakly-inextensible-comprehension",
+      "necessary-weakly-inextensible-comprehension-r-implies-weakly-inextensible-comprehension-r",
+      "vicinity-and-weakly-inextensible-comprehension-imply-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "distinctness-schema-r": [
+      "recurrent-colour-audit",
+      "maximalist-distinctness-incompatible-with-necessary-barcan-r"
+    ],
+    "relational-choice-r": [
+      "recurrent-colour-audit",
+      "necessary-boolean-completeness-r-implies-boolean-completeness-r",
+      "relational-choice-and-boolean-completeness-imply-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "necessary-functional-choice-r": [
+      "recurrent-colour-audit",
+      "necessary-functional-choice-r-implies-necessary-plenitude-r",
+      "necessary-plenitude-r-implies-plenitude-r",
+      "plenitude-r-implies-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "atomicity-t": [
+      "recurrent-colour-audit",
+      "atomicity-t-incompatible-with-atomlessness"
+    ],
+    "necessary-persistent-comprehension-r": [
+      "recurrent-colour-audit",
+      "necessary-persistent-comprehension-r-implies-persistent-comprehension-r",
+      "persistent-comprehension-r-implies-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "necessary-modal-five": [
+      "recurrent-colour-audit",
+      "necessary-boolean-completeness-r-implies-boolean-completeness-r",
+      "necessary-modal-five-implies-necessary-modal-b",
+      "necessary-modal-b-implies-necessary-distinctness-necessary-r",
+      "c5-and-completeness-imply-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "actual-profile-r": [
+      "recurrent-colour-audit",
+      "actual-profile-r-implies-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "necessary-weak-rigid-comprehension-r": [
+      "recurrent-colour-audit",
+      "necessary-weak-rigid-comprehension-r-implies-weak-rigid-comprehension-r",
+      "weak-rigid-comprehension-r-implies-persistent-comprehension-r",
+      "persistent-comprehension-r-implies-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "atomicity-r": [
+      "recurrent-colour-audit",
+      "atomicity-r-implies-atomicity-t",
+      "atomicity-t-incompatible-with-atomlessness"
+    ],
+    "modal-b": [
+      "recurrent-colour-audit",
+      "modal-b-implies-distinctness-necessary-r",
+      "distinctness-necessary-r-implies-distinctness-necessary-t",
+      "distinctness-necessary-t-implies-vicinity",
+      "necessary-boolean-completeness-implies-necessary-weakly-inextensible-comprehension",
+      "necessary-weakly-inextensible-comprehension-r-implies-weakly-inextensible-comprehension-r",
+      "vicinity-and-weakly-inextensible-comprehension-imply-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "necessary-atomicity-r": [
+      "recurrent-colour-audit",
+      "necessary-atomicity-r-implies-necessary-atomicity-t",
+      "necessary-atomicity-t-implies-atomicity-t",
+      "atomicity-t-incompatible-with-atomlessness"
+    ],
+    "gallin-extensional-comprehension-r": [
+      "recurrent-colour-audit",
+      "gallin-comprehension-implies-strong-actuality",
+      "strong-actuality-implies-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "strong-possibility-signature-r": [
+      "recurrent-colour-audit",
+      "strong-possibility-signature-r-implies-possibility-signature-r",
+      "distinctness-signature-r-implies-distinctness-schema-r",
+      "maximalist-distinctness-incompatible-with-necessary-barcan-r"
+    ],
+    "necessary-strong-leibniz-t": [
+      "recurrent-colour-audit",
+      "necessary-strong-leibniz-t-implies-strong-leibniz-t",
+      "strong-leibniz-t-implies-atomicity-t",
+      "atomicity-t-incompatible-with-atomlessness"
+    ],
+    "weakly-rigid-power-r": [
+      "recurrent-colour-audit"
+    ],
+    "no-pure-contingency-r": [
+      "recurrent-colour-audit",
+      "no-pure-contingency-and-tame-rigidity-imply-necessary-tame-rigidity",
+      "necessary-rigid-power-r-implies-rigid-power-r",
+      "necessary-tame-rigidity-and-rigid-power-imply-weakly-rigid-power"
+    ],
+    "logical-necessity-r": [
+      "recurrent-colour-audit",
+      "logical-necessity-r-implies-no-pure-contingency-r",
+      "no-pure-contingency-and-tame-rigidity-imply-necessary-tame-rigidity",
+      "necessary-rigid-power-r-implies-rigid-power-r",
+      "necessary-tame-rigidity-and-rigid-power-imply-weakly-rigid-power"
+    ],
+    "necessary-rigid-comprehension-r": [
+      "recurrent-colour-audit",
+      "necessary-rigid-comprehension-r-implies-rigid-comprehension-r",
+      "rigid-comprehension-r-implies-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "modal-well-ordering-r": [
+      "recurrent-colour-audit",
+      "necessary-boolean-completeness-r-implies-boolean-completeness-r",
+      "modal-well-ordering-implies-modalized-relational-choice",
+      "modalized-relational-choice-implies-relational-choice",
+      "relational-choice-and-boolean-completeness-imply-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "necessary-actuality": [
+      "recurrent-colour-audit",
+      "necessary-actuality-implies-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "necessary-tame-rigidity-r": [
+      "recurrent-colour-audit",
+      "necessary-rigid-power-r-implies-rigid-power-r",
+      "necessary-tame-rigidity-and-rigid-power-imply-weakly-rigid-power"
+    ],
+    "necessary-vicinity": [
+      "recurrent-colour-audit",
+      "necessary-vicinity-implies-vicinity",
+      "necessary-boolean-completeness-implies-necessary-weakly-inextensible-comprehension",
+      "necessary-weakly-inextensible-comprehension-r-implies-weakly-inextensible-comprehension-r",
+      "vicinity-and-weakly-inextensible-comprehension-imply-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "necessary-distinctness-necessary-t": [
+      "recurrent-colour-audit",
+      "necessary-distinctness-necessary-t-implies-necessary-vicinity",
+      "necessary-vicinity-implies-vicinity",
+      "necessary-boolean-completeness-implies-necessary-weakly-inextensible-comprehension",
+      "necessary-weakly-inextensible-comprehension-r-implies-weakly-inextensible-comprehension-r",
+      "vicinity-and-weakly-inextensible-comprehension-imply-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "necessary-transversal-choice-r": [
+      "recurrent-colour-audit",
+      "necessary-boolean-completeness-r-implies-boolean-completeness-r",
+      "necessary-transversal-choice-r-implies-transversal-choice-r",
+      "transversal-choice-r-implies-relational-choice-r",
+      "relational-choice-and-boolean-completeness-imply-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "plenitude-r": [
+      "recurrent-colour-audit",
+      "plenitude-r-implies-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "necessary-weakly-rigid-power-r": [
+      "recurrent-colour-audit",
+      "necessary-weakly-rigid-power-r-implies-weakly-rigid-power-r"
+    ],
+    "actuality": [
+      "recurrent-colour-audit",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "modal-freedom-signature-r": [
+      "recurrent-colour-audit",
+      "modal-freedom-signature-r-implies-no-pure-contingency-r",
+      "no-pure-contingency-and-tame-rigidity-imply-necessary-tame-rigidity",
+      "necessary-rigid-power-r-implies-rigid-power-r",
+      "necessary-tame-rigidity-and-rigid-power-imply-weakly-rigid-power"
+    ],
+    "converse-witnessed-possibility-r": [
+      "recurrent-colour-audit",
+      "converse-witnessed-possibility-r-implies-no-pure-contingency-r",
+      "no-pure-contingency-and-tame-rigidity-imply-necessary-tame-rigidity",
+      "necessary-rigid-power-r-implies-rigid-power-r",
+      "necessary-tame-rigidity-and-rigid-power-imply-weakly-rigid-power"
+    ],
+    "necessary-modalized-relational-choice-r": [
+      "recurrent-colour-audit",
+      "necessary-boolean-completeness-r-implies-boolean-completeness-r",
+      "necessary-modalized-relational-choice-implies-necessary-relational-choice",
+      "necessary-relational-choice-r-implies-relational-choice-r",
+      "relational-choice-and-boolean-completeness-imply-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "transversal-choice-r": [
+      "recurrent-colour-audit",
+      "necessary-boolean-completeness-r-implies-boolean-completeness-r",
+      "transversal-choice-r-implies-relational-choice-r",
+      "relational-choice-and-boolean-completeness-imply-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "distinctness-necessary-r": [
+      "recurrent-colour-audit",
+      "distinctness-necessary-r-implies-distinctness-necessary-t",
+      "distinctness-necessary-t-implies-vicinity",
+      "necessary-boolean-completeness-implies-necessary-weakly-inextensible-comprehension",
+      "necessary-weakly-inextensible-comprehension-r-implies-weakly-inextensible-comprehension-r",
+      "vicinity-and-weakly-inextensible-comprehension-imply-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "necessary-strong-leibniz-r": [
+      "recurrent-colour-audit",
+      "necessary-strong-leibniz-r-implies-necessary-strong-leibniz-t",
+      "necessary-strong-leibniz-t-implies-strong-leibniz-t",
+      "strong-leibniz-t-implies-atomicity-t",
+      "atomicity-t-incompatible-with-atomlessness"
+    ],
+    "strong-leibniz-t": [
+      "recurrent-colour-audit",
+      "strong-leibniz-t-implies-atomicity-t",
+      "atomicity-t-incompatible-with-atomlessness"
+    ],
+    "extensionality-r": [
+      "recurrent-colour-audit",
+      "extensionality-r-implies-fregean-axiom",
+      "atomlessness-implies-infinity-t",
+      "fregean-incompatible-with-infinity-t"
+    ],
+    "weakly-rigid-weak-rigidity-r": [
+      "recurrent-colour-audit",
+      "weakly-rigid-weak-rigidity-implies-necessary-tame-rigidity",
+      "necessary-rigid-power-r-implies-rigid-power-r",
+      "necessary-tame-rigidity-and-rigid-power-imply-weakly-rigid-power"
+    ],
+    "distinctness-signature-r": [
+      "recurrent-colour-audit",
+      "distinctness-signature-r-implies-distinctness-schema-r",
+      "maximalist-distinctness-incompatible-with-necessary-barcan-r"
+    ],
+    "necessary-well-ordering-r": [
+      "recurrent-colour-audit",
+      "necessary-boolean-completeness-r-implies-boolean-completeness-r",
+      "necessary-well-ordering-r-implies-well-ordering-r",
+      "well-ordering-r-implies-transversal-choice-r",
+      "transversal-choice-r-implies-relational-choice-r",
+      "relational-choice-and-boolean-completeness-imply-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "possibility-plus-signature-r": [
+      "recurrent-colour-audit",
+      "possibility-plus-signature-r-implies-possibility-signature-r",
+      "distinctness-signature-r-implies-distinctness-schema-r",
+      "maximalist-distinctness-incompatible-with-necessary-barcan-r"
+    ],
+    "vicinity": [
+      "recurrent-colour-audit",
+      "necessary-boolean-completeness-implies-necessary-weakly-inextensible-comprehension",
+      "necessary-weakly-inextensible-comprehension-r-implies-weakly-inextensible-comprehension-r",
+      "vicinity-and-weakly-inextensible-comprehension-imply-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "modal-five": [
+      "recurrent-colour-audit",
+      "necessary-barcan-r-implies-barcan-r",
+      "modal-five-implies-modal-b",
+      "modal-b-implies-distinctness-necessary-r",
+      "nd-and-bf-imply-necessary-nd",
+      "necessary-distinctness-necessary-r-implies-necessary-distinctness-necessary-t",
+      "necessary-distinctness-necessary-t-implies-necessary-vicinity",
+      "necessary-vicinity-implies-vicinity",
+      "necessary-boolean-completeness-implies-necessary-weakly-inextensible-comprehension",
+      "necessary-weakly-inextensible-comprehension-r-implies-weakly-inextensible-comprehension-r",
+      "vicinity-and-weakly-inextensible-comprehension-imply-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "no-contingency-signature-r": [
+      "recurrent-colour-audit",
+      "no-contingency-signature-r-implies-no-pure-contingency-r",
+      "no-pure-contingency-and-tame-rigidity-imply-necessary-tame-rigidity",
+      "necessary-rigid-power-r-implies-rigid-power-r",
+      "necessary-tame-rigidity-and-rigid-power-imply-weakly-rigid-power"
+    ],
+    "necessary-extensionality-r": [
+      "recurrent-colour-audit",
+      "necessary-extensionality-r-implies-extensionality-r",
+      "extensionality-r-implies-fregean-axiom",
+      "atomlessness-implies-infinity-t",
+      "fregean-incompatible-with-infinity-t"
+    ],
+    "necessary-plenitude-r": [
+      "recurrent-colour-audit",
+      "necessary-plenitude-r-implies-plenitude-r",
+      "plenitude-r-implies-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "modalized-relational-choice-r": [
+      "recurrent-colour-audit",
+      "necessary-boolean-completeness-r-implies-boolean-completeness-r",
+      "modalized-relational-choice-implies-relational-choice",
+      "relational-choice-and-boolean-completeness-imply-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "necessary-modal-b": [
+      "recurrent-colour-audit",
+      "necessary-boolean-completeness-r-implies-boolean-completeness-r",
+      "necessary-modal-b-implies-necessary-distinctness-necessary-r",
+      "c5-and-completeness-imply-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "necessary-strong-actuality": [
+      "recurrent-colour-audit",
+      "necessary-strong-actuality-implies-strong-actuality",
+      "strong-actuality-implies-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "strong-actuality": [
+      "recurrent-colour-audit",
+      "strong-actuality-implies-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "fregean-axiom": [
+      "recurrent-colour-audit",
+      "atomlessness-implies-infinity-t",
+      "fregean-incompatible-with-infinity-t"
+    ],
+    "necessary-relational-choice-r": [
+      "recurrent-colour-audit",
+      "necessary-boolean-completeness-r-implies-boolean-completeness-r",
+      "necessary-relational-choice-r-implies-relational-choice-r",
+      "relational-choice-and-boolean-completeness-imply-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ],
+    "persistent-comprehension-r": [
+      "recurrent-colour-audit",
+      "persistent-comprehension-r-implies-actuality",
+      "actuality-incompatible-with-atomlessness"
+    ]
+  },
+  "baseline": "upstream main a89a5058ebbd5ebe93aec07d47a1a32e3b93f8bb; proved records only, no optional background",
+  "construction": "../integration-register/proofs/recurrent-colour-countermodel.md",
+  "construction_sha256": "d4951fd6a5f51814d71f31734219bbab7ecead74a980908e5794e10385e9136c",
+  "method": "Closure of the verified joint model verdicts through the proved database implications. New one- or two-premise comparisons are relative to this upstream snapshot; the first two were already settled by the earlier submitted finite-compression model.",
+  "direct_satisfies": [
+    "necessary-barcan-r",
+    "necessary-rigid-power-r",
+    "necessary-boolean-completeness-r",
+    "tame-rigidity-r",
+    "atomlessness"
+  ],
+  "direct_violates": [
+    "weakly-rigid-power-r",
+    "necessary-tame-rigidity-r",
+    "actuality",
+    "rigid-comprehension-r",
+    "weak-rigid-comprehension-r"
+  ]
+}

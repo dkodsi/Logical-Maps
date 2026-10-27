@@ -1,0 +1,394 @@
+OBSERVER SEPARATION AND POSITIVE-EQUATIONAL CONSERVATIVITY
+26 October 2026
+Ordinary mathematical argument by OpenAI Codex, at Daniel Kodsi's request.
+Direct source for this strengthening: misc, this report, sections 1-8,
+unpaginated. The interpretation-root construction and earlier preservation
+argument retain their separate attributions in section 8. No native map
+record or Lean source is changed.
+
+1. RESULT
+
+Fix any set-sized signature Sigma of constants of admitted types, including
+the empty signature. Work in C(Sigma), with the fixed relational type
+grammar: e and t, and arrows whose result type is not e.
+
+Let E+ consist of formulas built from typed identities s=t by finite
+conjunction, finite disjunction, and either object quantifier. Let D+ be
+the corresponding class starting from typed disequalities s!=t. Terms in
+these atoms are unrestricted: they may contain lambda, quantifiers,
+identity-valued terms, Boolean connectives, modal operators, and parameters
+of arbitrary admitted types. Only the OUTER formula grammar is restricted.
+In particular, all quantifier alternations and individual quantifiers are
+allowed. E+ and D+ are the de Morgan duals of one another over C.
+
+Write P for the following current package:
+
+       full typed OS + Strong Actuality + all-type Zorn.              (1)
+
+The constructed roots also satisfy all-type BF, Relational Choice,
+Transversal Choice and Well-Ordering. These do not require extra premises:
+OS implies BF, and the recorded Zorn -> Well-Ordering -> Transversal
+Choice -> Relational Choice implications recover the other assertions.
+Thus (1) is a simpler statement of the full package developed below.
+
+THEOREM. For every set Gamma of D+ sentences and every E+ sentence A,
+
+  C(Sigma)+Gamma+P proves A iff C(Sigma)+Gamma proves A.               (2)
+
+Here theories are ordinary H-closures. Their additional axioms are not
+silently necessitated. In particular the same theorem holds for the
+requested smaller package OS + Actuality + Relational Choice + Zorn.
+
+The semantic statement is stronger and parameter-sensitive. Every pointed
+set-sized C action model K has a new pointed C action model R satisfying
+(1), together with maps q_sigma:R_sigma -> K_sigma that are onto at EVERY
+admitted type and commute with EVERY typed term. Under compatible
+parameter assignments,
+
+  R satisfies A implies K satisfies A                 for A in E+;
+  K satisfies N implies R satisfies N                 for N in D+.   (3)
+
+Thus one root preserves an entire D+ theory at once and reflects every
+E+ failure of its target. The proof-theoretic theorem needs only ordinary
+action-model completeness for a single C-consistent formula; the finite
+proof argument below handles arbitrary infinite Gamma. There is no
+completeness assertion about full standard higher-order models.
+
+The novelty here is adding full OS to the earlier positive-equational
+conservation theorem, with the stronger Strong Actuality package and an
+explicit audit of all-type surjectivity, unrestricted terms, constants,
+and parameters. The preservation induction itself is elementary once the
+appropriate observer source exists.
+
+2. THE INTERPRETATION ROOT, WITH AN ONTO BASELINE
+
+Start with the underlying C action model of K, retaining its pointed
+object V. Choose an infinite cardinal kappa large enough for all domains
+at all old objects and for Sigma. At each type sigma take a set N_sigma
+of auxiliary names, with sufficiently many spare names that every old
+domain has an onto interpretation of N_sigma with infinite fibres.
+These names are construction data, not additional constants in Sigma.
+
+Adjoin a new object o with only its identity endomorphism. For every old
+object W and every typed interpretation I of the auxiliary names at W,
+add an arrow I:o->W. No other arrow enters o. Composition with an old
+arrow k sends I to kI, interpreted name by name using old transport.
+Allow ALL interpretations, not just the onto ones. This guarantees closure
+under arbitrary old transports, which need not be onto or injective.
+
+The root individuals are N_e. A root relational entity F is an intension
+with an arbitrary identity row and old rows subject to two conditions:
+
+  finite pinning: for some finite typed name set S, old rows into the same
+  W agree whenever their interpretations agree on S;
+
+  landing: the ENTIRE transported section along every I:o->W belongs to
+  W's original domain of the same type.
+
+Domains are defined recursively on type. No old domain, arrow, logical
+operation or pure-language interpretation is changed.
+
+For a relational name c define hat(c) by an empty identity row and the
+current extension of I(c) at every old arrow I. For individual names put
+hat(c)=c. Then, at every admitted type,
+
+                       rho_I(hat(c)) = I(c).                       (4)
+
+For relational names this is equality of WHOLE old intensions: at every
+future k:W->U, the row of the left side is the current row of (kI)(c),
+which is precisely the k-row of I(c). Thus hat(c) lands and is pinned by
+{c}; it is not merely an entity matching I(c)'s current extension.
+
+Choose a baseline interpretation b:o->V that is onto on names at every
+type, with infinite fibres. For any y in K_sigma, choose a name c with
+b(c)=y. Equation (4) gives rho_b(hat(c))=y. Hence
+
+                 q_sigma := rho_b is onto at every type.           (5)
+
+This includes e, all higher relational sorts, and domains not externally
+full as function spaces. Only the auxiliary names are chosen freely;
+the old Henkin domains remain exactly as they were.
+
+3. TERM PRESERVATION: THE WHOLE-INTENSION CHECK
+
+For every typed term u of type tau, every root valuation a, and every
+old arrow I:o->W,
+
+       rho_I(u^R(a)) = u^W(rho_I(a)).                              (6)
+
+The right side uses the old model's own term interpretation, including
+its own quantified domains and lambda interpretation. Root signature
+constants are treated as additional parameters until section 5 fixes
+their lifts. Here is the structural check, including the delicate cases.
+
+Variables and individual names satisfy (6) by definition. Application
+commutes with action transport. Boolean operations are interpreted row
+by row and so commute as well.
+
+For a lambda term lambda x.A, inspect an arbitrary future k of W and an
+arbitrary tuple of arguments in its target U. The transported root
+lambda has there the extension obtained by interpreting A in U with the
+free parameters transported along kI and with that arbitrary local
+argument tuple. This is exactly the k-row of W's own denotation of
+lambda x.A. The arguments need not be images of root arguments. Checking
+all such k and tuples proves equality of the whole intensions in (6),
+not just equality on the actual image of rho_I.
+
+For a quantified proposition term forall x^sigma A, its row at I is
+
+       [for every x in D_sigma(W), A is true in W
+        with free parameters rho_I(a)].
+
+At a future k the same clause uses ALL of D_sigma(U). It is therefore
+exactly W's old quantified term denotation, with its full future profile.
+Existential quantification is the dual case. This is NOT obtained by
+moving a quantifier across the current map rho_I, and it requires no
+surjectivity of I. Surjectivity is used later only for the chosen baseline
+and the outer preservation induction.
+
+For an identity-valued subterm s=t, its row at I is the actual identity
+test between s^W(rho_I(a)) and t^W(rho_I(a)); its rows at kI give the
+corresponding old future tests. This is exactly W's identity-valued term.
+An old transport can identify objects distinct at the root: the identity
+proposition then changes truth along that arrow. Nothing here assumes
+ND, crisp identity across worlds, or injectivity of transport. Actual
+identity at each object is literal identity of that object's entities.
+
+These same clauses verify root term closure. If the free parameters have
+finite pins whose union is S, agreement on S identifies their whole
+transports: after every k, the transported interpretations still agree on
+S. Old term denotations therefore agree, and the new denotation is pinned
+by S. Its old sections land by (6), because old terms are admitted. Its
+root identity row is unrestricted and uses the ordinary truth clauses
+over the recursively defined root domains.
+
+For completeness about C's theorem gate: H is valid at each object under
+all local assignments, with the displayed application, quantifier, identity,
+and beta-eta clauses. If H proves A iff B, those truth values agree at
+every old target and at the root, for arbitrary local arguments. The
+corresponding abstractions have identical full profiles. Thus C's
+H-theorem-gated Logical Equivalence holds. H-closure gives C. No equivalence
+derived only from optional root assumptions is used for this step.
+
+4. THE ROOT'S STRUCTURAL PRINCIPLES
+
+Full OS. Every finite modification of an infinite-fibre onto baseline is
+still onto at all types. Given any old interpretation I and any finite pin
+set S, such an onto interpretation b' with the same target can be chosen
+to agree with I on S.
+
+For each selected onto b':o->W define E_b' as follows. Its identity row
+reads the proposition at b'. Its row at an arbitrary old h:o->U is the
+current truth test on the proposition input in U. Consequently the WHOLE
+transport of E_b' along every old arrow is U's identity observer. The old
+rows are independent of the name interpretation, so E_b' is empty-pinned
+and lands; its arbitrary root row is allowed.
+
+Boolean preservation at the root follows by reading a truth value. For a
+typed predicate F, quantifier preservation follows by reindexing:
+
+ E_b'(forall x F x) is true at o
+   iff every y in D_sigma(W) satisfies (rho_b' F)(y)
+   iff every x in D_sigma(o) satisfies (rho_b' F)(rho_b' x)
+   iff forall x E_b'(F x) is true at o.
+
+The middle equivalence uses (5). The existential case is dual. At every
+old future E_b' is the whole identity, so the same preservation equations
+hold there for all newly available inputs. Therefore these are identities
+of the displayed OPERATIONS, not mere current pointwise equivalences.
+The reader meets every finite typed qualification list simultaneously.
+
+If X and Y differ on a current tuple, the identity observer separates
+them. Otherwise they differ at an old interpretation I on a tuple in
+its target. Match I on the union of their pins with a selected onto b',
+and lift the distinguishing tuple along b'. The reader E_b' separates
+the lifted applications. This proves full relational OS, not just its
+propositional instance. In fact every reader is whole-idempotent: its old
+transport is identity, so reading E_b'(p) at b' gives the same bit as
+reading p there; all old rows are identity. Hence idempotent qualified
+observers already suffice for all the separation witnesses in this model.
+
+Strong Actuality. The proposition w with only the identity row true is
+admitted and true. At o it entails each currently true proposition, and
+entails the negation of each currently false proposition. Along every old
+arrow its transport is Bottom, which entails every newly available
+proposition and its negation. Hence
+
+                 w and Box forall p (w<=p or w<=not p)
+
+holds at o. Thus the root satisfies Strong Actuality, strengthening the
+Actuality claim in the underlying cover construction.
+
+Full current relational representation. For every external relation on
+any finite tuple of root typed domains, take that relation as identity
+row and take all old rows empty. This is empty-pinned, lands as Bottom,
+and is an admitted relation. With ordinary external ZFC choice, every
+current serial relation therefore has an admitted selecting subrelation;
+every current equivalence relation has an admitted transversal; and each
+typed domain has an admitted current well-order. These prove all-type
+RC, TC and Well-Ordering, including individual outputs for RC.
+
+For the map's exact preorder Zorn axiom, quotient a current preorder by
+mutual comparability. Every quotient chain has a set of representatives,
+an antisymmetric chain for the original preorder. Relational fullness
+represents this set by a current predicate. The internal hypothesis gives
+an upper bound for it, hence for the quotient chain. External Zorn gives
+a maximal quotient class; any representative has the required preorder
+maximality. Thus the precise native all-type Zorn schema holds.
+
+Current BF follows independently by the same finite-pin approximation.
+If Diamond exists x F x has a witness at an old arrow I, match I on F's
+pin with an onto b', lift the witness, and obtain a current x satisfying
+Diamond F x. An identity-row witness needs no approximation. This proves
+the dual BF form at each type. No necessary BF claim follows: old failing
+objects remain unchanged. Likewise none of the choice conclusions is
+silently boxed, and no Boolean Completeness premise was introduced.
+
+5. FIXED SIGNATURES AND PARAMETERS
+
+For each official c in Sigma choose a root preimage of c^K under q at its
+type. Give c this interpretation at o. Equation (6) at the chosen baseline
+b now holds for every term of the SAME language L(Sigma):
+
+                   q_tau(u^R(a)) = u^K(q(a)).                     (7)
+
+If desired, choose distinct auxiliary names for the official symbols,
+prescribe their baseline values to be c^K, and reserve a disjoint spare
+name supply for surjectivity and finite modifications. This works for
+arbitrary set-sized Sigma; no countability restriction is needed.
+
+Only the designated baseline must match K's official constant
+interpretations. Other interpretation arrows may give those parameters
+different values. We do not claim to preserve K's fixed Sigma-valuation
+along every incoming interpretation arrow. Along b and every continuation
+kb it is exactly the original valuation and its old transport.
+
+For free parameters choose compatible root preimages of their assigned
+K-values. This is an external valuation choice, not an expansion of Sigma
+or a change to the reference theory in a Maximalism schema. Repeated
+occurrences use the same chosen preimage.
+
+6. PRESERVATION AND THE CONSERVATIVITY PROOF
+
+For E+, prove the first implication in (3) by induction. Actual typed
+identity of denotations in R is preserved by the map q and equation (7).
+Conjunction and disjunction use ordinary current truth clauses. An
+existential witness maps to a K-witness. For a universal formula, take
+any K-object, choose a root preimage using (5), and apply induction.
+This argument covers arbitrary quantifier alternations and every sort.
+
+The D+ implication is the dual induction. Unequal target denotations
+cannot have equal root preimages. A target universal formula applies
+to the image of every root object; a target existential witness lifts
+using (5). Alternatively negate an E+ formula and put only its OUTER
+connectives into de Morgan form. Internal terms stay unrestricted.
+
+For a semantic countermodel K of Gamma and not A, (3) makes its root a
+countermodel of Gamma+P and not A. Every D+ sentence in Gamma transfers
+simultaneously, however large Gamma is.
+
+For the exact syntactic statement (2), suppose an enlarged-theory proof
+of A exists but C(Sigma)+Gamma does not prove A. The proof uses finitely
+many assumptions Gamma_0 from Gamma. The single formula
+
+                     (conjunction Gamma_0) and not A
+
+is C(Sigma)-consistent, so ordinary action-model completeness supplies a
+pointed action countermodel K. The root satisfies Gamma_0 and the entire
+package P but falsifies A, contradicting soundness of that finite proof.
+This needs only action completeness for one formula; it does not assume
+that full standard models are complete, or that arbitrary C models are
+identical to their action representations. The converse in
+(2) is immediate from inclusion of theories.
+
+The same proof applies to finite parameter tuples and deductions from
+D+ assumptions under a valuation. For a sentence-level formulation, take
+the appropriate universal closure of a conclusion or existentially close
+the finite counterexample diagram. These outer quantifiers stay within
+the same two classes. No stronger quantifier-free restriction is needed.
+
+7. CONSEQUENCES AND EXACT SCOPE
+
+Consistency is preserved: if C(Sigma)+Gamma is consistent, so is its
+extension by P. Otherwise (2), applied to the false identity Top=Bottom,
+would make the original theory inconsistent.
+
+Every necessary consequence is preserved, since Box B is the identity
+B=Top with arbitrary B. The theorem also covers such conclusions as
+
+  forall x exists y (Box A(x,y) or (f(x,y)=g(x,y) and Box B(x,y))),
+
+with admitted terms and types. The right side of the conservation claim
+retains exactly those boxes and quantifiers; it is not a claim merely
+that the original theory proves an unboxed version.
+
+D+ premises include arbitrary positive quantified combinations of
+possibility assertions, because Diamond B is B!=Bottom. Pure and fixed-
+signature Maximalist DISTINCTNESS axioms are also D+ sentences. Therefore,
+whenever such a Max theory is consistent, adjoining the full current
+package P preserves its consistency and all its E+ consequences, without
+altering the reference theory used in the Max schema.
+
+This is stronger than closed-pure-equational conservativity: it allows
+arbitrary signatures, parameters, positive Boolean combinations, mixed
+quantifiers, and arbitrary negative-equational background theories. It
+does not assert conservation of all formulas. In particular OS supplies
+current BF and the package supplies current choice and strong actuality;
+their equality-to-Top assertions are a separate matter. Conditional
+equations are outside the preserved outer grammar unless independently
+equivalent to an E+ formula. The theorem does not claim their conservation.
+
+The semantic scope is arbitrary pointed C ACTION models, which suffice
+for all the stated syntactic conclusions. No C5, Barcan, Boolean
+Completeness, external completeness of the old proposition algebra,
+fullness of old higher domains, or old-arrow surjectivity is required.
+External ZFC choice is used for the size/name choices and the current
+selection and maximality arguments.
+
+8. SOURCES AND VERIFICATION STATUS
+
+Earlier conservation argument, being strengthened rather than replaced:
+research/2026-10-25/general-observer-principles/metatheory.txt,
+sections 1-5, and its companion models.txt. OpenAI Codex, 25 October 2026,
+misc, unpaginated. That predecessor had unrestricted current rows but the
+new full OS verification is supplied by the interpretation root below.
+
+Construction input and current root principles:
+research/2026-10-26/observer-completeness/
+complete-henkin-interpretation-cover.md, sections 8.1 and 8.3;
+OpenAI Codex, 26 October 2026, misc, unpaginated.
+Independent whole-observer audit:
+research/2026-10-26/dynamic-equivalence/maximal-os-audit.txt, section 3.
+
+Underlying human-origin interpretation-root framework:
+topics/classicism/writeups/coalesced-pinned-interpretations-root.md,
+sections The construction; The entities hat c; It is a model of C;
+BF holds at every type; Other verdicts. The write-up attributes the
+construction to Cian Dorr, 19 October 2026, and the explicit landing
+condition in that discussion to Claude Opus 5.5. This report preserves
+that attribution. The onto-name and qualified-reader extension is the
+later research construction, not a newly attributed human theorem.
+
+Direct primary-source check for the completeness input:
+Bacon and Dorr, Classicism, author-hosted draft dated 1 July 2022,
+https://andrew-bacon.github.io/papers/Classicism.pdf : Theorem 3.2,
+printed pp.44-45; Theorem 3.12, p.51; Proposition 3.22, p.57;
+Theorem 3.23, p.58. The last gives action-model counterexamples to
+C-nontheorems. This is ordinary general-model completeness. The draft
+date and page locators are not substituted for the database's usual
+16 May 2023 draft metadata.
+
+Exact OS qualification:
+research/2026-10-23/operator-characterizations/
+logical-observer-hierarchy.md, section 1, including the later revised
+endpoint-redundant definition of Good.
+Native principle definitions checked:
+topics/classicism/principles/strong-actuality.yaml;
+relational-choice-r.yaml; transversal-choice-r.yaml;
+well-ordering-r.yaml; zorn-r.yaml.
+Redundant package components are removed using the proved native results
+zorn-r-implies-well-ordering-r;
+well-ordering-r-implies-transversal-choice-r;
+transversal-choice-r-implies-relational-choice-r. The observer-to-BF
+connection is in the logical-observer source cited immediately above;
+section 4 also proves BF directly in the constructed root.

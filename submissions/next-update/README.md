@@ -1,4 +1,4 @@
-# Classicism update — 25 October 2026
+# Classicism update — 25–26 October 2026
 
 An update to the [10-24 v2 post](../classicism-results-2026-10-24-v2/README.md). The [database-owner guide](DATABASE-HANDOFF.md) maps each family to the earlier post and identifies the proposed database actions.
 
@@ -8,15 +8,15 @@ Results and source patches against upstream [`a89a5058`](https://github.com/zwlg
 
 | Contribution | Database change | Patch |
 |---|---|---|
-| [C5 + Relational Choice ⇒ Transversal Choice](items/05-c5-choice.md) | RC, TC, Zorn and Well-Ordering coincide over C5; the bare-C question remains open. | [05](patches/05-c5-choice.patch) |
+| [Vicinity + Relational Choice ⇒ Transversal Choice](items/05-c5-choice.md) | RC, TC, Zorn and Well-Ordering coincide over C + Vicinity; unboxed NDₜ also suffices. The bare-C question remains open. | [05](patches/05-c5-choice.patch) |
 | [C5 + Functional Choice permits analytical contingency](items/03-analytical-contingency.md) | A constructible-ground Cohen model, retaining both quantified infinities and necessary CH. | [03](patches/03-analytical-contingency.patch) |
 | [Strict Forcing Possibilism is independent of pure Max](items/04-maximalism-forcing.md) | Positive definable-root and negative pinned-root verdicts. | [04](patches/04-maximalism-forcing.patch) |
-| [Vicinity + propositional completeness + RC or Zorn ⇒ Actuality](items/23-propositional-zorn-actuality.md) | With propositional completeness and either choice premise, Actuality is equivalent to Vicinity. | [07](patches/07-propositional-zorn-actuality.patch) |
+| [Vicinity and Actuality](items/23-propositional-zorn-actuality.md) | Atomicityₜ + Vicinity ⇒ Actuality. Under BCₜ with RC_(t,t) or Zornₜ, Actuality ⇔ Vicinity ⇔ a cofinal chain of proper persistent propositions. | [07](patches/07-propositional-zorn-actuality.patch) |
 | [Choice and rigid comprehension do not force Atomicity](items/02-cloud-relational-choice.md) | A new Choice argument for the existing Cohen/lottery cloud family. | [02](patches/02-cloud-relational-choice.patch) |
 | [Forcing Possibilism ⇒ quantified Infinity](items/11-forcing-infinity-proof.md) | Alternative internal proof of the existing theorem, preserving its attribution. | [06](patches/06-forcing-infinity-proof.patch) |
 | [Explanation and source-status corrections](items/01-explanation-corrections.md) | Definable-root, Boolean-transfer, analytical and FP/CH corrections; no proved-result verdict withdrawn. | [01](patches/01-explanation-corrections.patch) |
 
-Apply patches in numerical order from the repository root; 04 depends on 01. Each includes its native write-up. [Files and dependencies](evidence/patch-manifest.json) · [Validation and question outcomes](evidence/validation.json).
+Apply patches in numerical order from the repository root; 04 depends on 01, and 07 uses the shared construction in 05. Each includes its native write-up. [Files and dependencies](evidence/patch-manifest.json) · [Validation and question outcomes](evidence/validation.json).
 
 ## Further results about established principles
 
@@ -41,7 +41,7 @@ The analytical metatheorems are supplied with proofs rather than native implicat
 | [Direct group models for C + Rev](items/18-reversible-group-semantics.md) | Every model has a group representation preserving its typed domains; inverse shifts give crisp equality and coherent higher-type transports. |
 | [Rev from conjunction-preserving involutions](items/14-reversible-separation-single-sentence.md) | Over C, one separation sentence at type tt implies the full reversible logical-observer schema. Quantifier preservation follows. |
 
-The [shorter OS schema](items/19-observer-single-type-schema.md) uses one varying qualification type; its supporting proofs also explain why no finite fixed-type basis suffices.
+The [shorter OS schema](items/19-observer-single-type-schema.md) has an instance for each type of propositions or relations; its supporting proofs also explain why no finite fixed-type basis suffices.
 
 [Witness transport and supporting observer results](items/13-observers-and-necessary-choice.md) connects the hierarchy to Choice and comprehension, including [positive bounds under ☐OS](proofs/necessary-observer-positive-bounds.md) for CH and analysis. The [invariant-family characterization of Rev](items/12-reversible-family-realization.md) supplies a complementary modal interpretation.
 

@@ -1,0 +1,288 @@
+EVERY CHOICE-CLASSICIST HENKIN MODEL IS A PROPER OBSERVER CORE
+
+26 October 2026. Ordinary mathematical research by OpenAI Codex.
+Direct source: misc, this note, sections 1-9, unpaginated.
+No human or Lean certification; no native record changes.
+
+1. The theorem
+
+Let K be any pointed general/Henkin model of C + boxed Functional Choice
+in the fixed relational type grammar. A fixed nonlogical signature may
+be retained. There is a pointed general/Henkin model M of the SAME theory,
+with an admitted observer E satisfying
+
+  whole Boolean preservation;
+  whole preservation of every typed universal/existential quantifier;
+  E composed E = E;
+  E != identity;
+
+whose canonical normalized all-sort logical quotient core is isomorphic
+to K as a pointed typed logical model, compatibly with its constants.
+
+M has exactly K's individuals. Its proposition algebra is B_K x B_K.
+All higher M domains consist of canonically normalized operations ALREADY
+ADMITTED at explicitly specified K types. No external full function space
+or standard Gallin completion replaces any Henkin domain.
+
+The construction is a definable finite-coordinate interpretation inside
+K. It gives a proper realization even when K has only one individual and
+only two propositions. No Infinity premise is needed.
+
+2. The available atomic functional presentation of K
+
+The established consequences of boxed Functional Choice include C5,
+propositional Atomicity and necessary Actuality (through boxed Plenitude).
+These consequences and their type scope are recorded in the topic's
+principle/result files and the core research cited in section 9.
+
+Use K's actual-function presentation, available from C5 and Functionality:
+each D_(sigma tau)^K is a set of actual operations from D_sigma^K to
+D_tau^K, potentially a proper Henkin subset. Distinct entities are not
+identified by this presentation. Identity propositions at every type are
+crisp: Top if the objects coincide, Bottom otherwise. This follows from
+NI and ND, including their necessary forms.
+
+Let B=D_t^K and W the external set of its atoms. An atom a evaluates p
+as true exactly when a<=p. Atoms separate B. The designated current truth
+of K is evaluation at its unique true atom a0: if p is true, a0 and p
+have nonzero intersection, so atomhood gives a0<=p; the converse follows
+because a0 is true. No externally full powerset algebra is assumed.
+
+The original universal Q_sigma is the infimum of the admitted range of
+its input F. Universal elimination gives the lower-bound inequalities;
+the converse uses BF to turn all current inequalities p<=F(x) into the
+necessary universal implication p<=Q_sigma F. Consequently
+
+  a<=Q_sigma F iff forall x in D_sigma^K, a<=F(x).
+
+Boolean complementation and atomhood supply the existential truth clause.
+Thus every a in W is a classical point for the entire original typed
+Henkin hierarchy, with constant domains. Native Box is truth at all a.
+In particular boxed FC in K gives every FC instance at every a. This
+atomic presentation uses admitted ranges only, not external completeness.
+
+3. Finite codes and total typed retractions
+
+Use old endpoints 1,0 in B as two distinct tags. Define the K-admitted
+pair code
+
+  pair(p,q)=lambda z^t. ((z=1) and p) or ((z!=1) and q).
+
+Crisp old identity gives pair(p,q)(1)=p and pair(p,q)(0)=q.
+Write pi_0(g)=g(1), pi_1(g)=g(0).
+
+Translate the NEW type grammar into OLD K types by
+
+  T_e=e,      T_t=tt,      T_(sigma tau)=T_sigma T_tau.
+
+All these types are permitted in the fixed relational grammar. Define
+total retractions d_sigma on the K carrier D_(T_sigma)^K:
+
+  d_e=id;
+  d_t(g)=pair(pi_0 g,pi_1 g);
+  d_(sigma tau)(F)=lambda x. d_tau(F(d_sigma x)).            (3.1)
+
+The symbol d_e is a metatheoretic identity substitution, not a term of
+the forbidden type ee. Every other d_sigma is an admitted K term.
+Induction gives d_sigma squared=d_sigma as an actual operation. Define
+
+  D_sigma^M = Fix(d_sigma) inside D_(T_sigma)^K.             (3.2)
+
+These carriers are nonempty. A fixed F:T_sigma T_tau satisfies
+d_tau F=F and F d_sigma=F, so application stays in the fixed carriers.
+It also has a unique extension from the fixed inputs to the whole coded
+input carrier: its values outside Fix(d_sigma) are prescribed by d_sigma.
+Thus the admitted coded F is faithfully its actual operation on D_sigma^M.
+
+In particular D_e^M=D_e^K and D_t^M is exactly the admitted pair codes,
+canonically B x B. All K pairs are admitted because pair is a K lambda
+term. Conversely fixedness determines a pair by its two coordinates.
+
+4. Logical constants, abstraction and truth in M
+
+Give propositions coordinatewise Boolean operations. For fixed
+F in D_(sigma t)^M define
+
+  Q_sigma^M(F) = pair(
+    Q_(T_sigma)^K(lambda x. pi_0(F(x))),
+    Q_(T_sigma)^K(lambda x. pi_1(F(x))) ).                  (4.1)
+
+The existential is dual. Every expression here is a K term. On arbitrary
+coded inputs first apply the relevant d, so these constants have the
+canonical extensions demanded by (3.2). Formula (4.1) quantifies over
+the old coded carrier, but F d_sigma=F and d_sigma maps onto its fixed
+carrier, so this is precisely quantification over D_sigma^M.
+
+Interpret M at points (a,i) in W x {0,1}, taking pair(p,q) to be true
+when a<=p for i=0 and a<=q for i=1. The designated point is (a0,0).
+Equation (4.1) and section 2 give the usual quantifier truth clauses at
+each point. Application is the original coded operation application.
+
+Abstraction is closed without enlarging any K domain. Translate a body
+using the K terms for the logical constants above and normalized input
+variables. If its coded output type is T_tau, use
+
+  lambda x^(T_sigma). d_tau(body(d_sigma x)).              (4.2)
+
+The smaller-term induction makes its output fixed and its input
+normalized, hence its denotation belongs to D_(sigma tau)^M. The same
+induction proves substitution and beta. Eta follows because every fixed
+F already satisfies F d_sigma=F. Arbitrary finite tuples and higher
+parameter types cause no change to this syntactic interpretation.
+
+Identity in M is literal and crisp. For any fixed a, the predicate
+
+  x |-> pair(delta_K(d_sigma x,a),delta_K(d_sigma x,a))
+
+is an admitted fixed predicate; old delta_K is crisp identity at T_sigma.
+These diagonal haecceities distinguish different fixed objects at every
+point. Consequently the native Leibniz formula of M is Top_M on equal
+objects and Bottom_M on distinct objects. Its equality axioms are sound.
+
+Thus H is sound at every (a,i). If H proves two formula bodies equivalent,
+their coordinates agree at all old atoms for every assignment of fixed
+arguments. Atom separation makes their paired proposition values equal.
+Canonical extension from fixed inputs then makes their abstractions
+equal as admitted coded functions. This proves the exact C
+Logical Equivalence gate. It does not apply that gate to optional premises.
+
+M is therefore a C model. Crisp identity gives C5. Its proposition algebra
+B x B is atomic, with atoms (a,0) and (0,a), a in W, so the displayed
+points are exactly its atomic evaluations. Native Box means truth at
+every displayed point. This identifies the modal semantics used next.
+
+5. Necessary Functional Choice is retained
+
+Fix a point (a,i), a new input type sigma, a relational output type tau,
+and an admitted M relation R serial there. Define an OLD admitted
+K relation, on the coded carriers, by
+
+  U_i(u,v) = pi_i(R(d_sigma u,d_tau v)).                    (5.1)
+
+Currying in this display is left-nested. Seriality of R over the fixed
+M carriers makes U_i serial over ALL of D_(T_sigma)^K at the old point a:
+normalize u first, choose a fixed M output, and use it as v. K has FC at
+a by its boxed FC. Since T_tau is relational, the permitted old FC
+instance supplies an admitted f:T_sigma T_tau such that
+
+  U_i(u,f(u)) is true at a for every coded u.
+
+Put g=d_(sigma tau)(f), an admitted M operation. For fixed x,
+
+  pi_i(R(x,g(x)))
+    = pi_i(R(x,d_tau(f(x))))
+    = U_i(x,f(x)).                                        (5.2)
+
+Thus g selects R at (a,i). This works for each point and every allowed
+type instance, proving boxed FC in M.
+
+Different points may have different existential witnesses g. Nothing
+requires assembling them into a single operation or mixing selected
+output objects coordinatewise. Such mixing could invalidate an arbitrary
+relation on whole objects; (5.1)-(5.2) never use it. Output normalization
+is global and algebraic, so a witness chosen at a does not have merely
+local membership in the new typed domain.
+
+6. A proper fully qualified idempotent observer
+
+Define E on paired propositions by
+
+  E(pair(p,q))=pair(p,p).                                  (6.1)
+
+Its K-coded extension is i_t followed by pi_0 and d_t, so it is an
+admitted M operation and has canonical input/output normalization.
+It is Boolean and whole-idempotent. For every M type sigma, (4.1)
+computes both E(Q_sigma F) and Q_sigma(E composed F) as the pair whose
+two coordinates are Q_(T_sigma)^K(lambda x.pi_0(F(x))). Hence E preserves
+every typed quantifier. Existentials follow either identically or by
+duality. These are equalities of actual operations; M's Functionality
+therefore gives the demanded whole-operation identities.
+
+It is proper: pair(1,0) and E(pair(1,0))=pair(1,1) are different. No
+assumption about K having two individuals or infinitely many objects
+enters this argument.
+
+7. Exact recovery of every original Henkin domain
+
+Define K-admitted embeddings i_sigma and decoders j_sigma recursively:
+
+  i_e=j_e=id;
+  i_t(p)=pair(p,p),            j_t(g)=pi_0(g);
+  i_(sigma tau)(f)=lambda x. i_tau(f(j_sigma x));
+  j_(sigma tau)(F)=lambda x. j_tau(F(i_sigma x)).            (7.1)
+
+At e these again denote identity substitutions, not forbidden terms.
+Their domains/codomains elsewhere are the old sigma and translated
+T_sigma. Simultaneous induction gives whole operation identities
+
+  j_sigma i_sigma=id,     d_sigma i_sigma=i_sigma,
+  j_sigma d_sigma=j_sigma.                                (7.2)
+
+For example, decoding the encoded f reduces pointwise to
+j_tau i_tau(f(j_sigma i_sigma x))=f(x). For d i at an arrow,
+use output d_tau i_tau=i_tau and input j_sigma d_sigma=j_sigma.
+For j d use j_tau d_tau=j_tau and d_sigma i_sigma=i_sigma.
+Old Functionality identifies the resulting operations. These equations
+use only old admitted lambda terms, not arbitrary external decoders.
+
+Therefore i_sigma maps every original K entity into D_sigma^M. On these
+new domains define n_sigma=i_sigma j_sigma. At t this is exactly E;
+at e it is the identity. At an arrow, direct substitution in (7.1) gives
+
+  n_(sigma tau)(F)(x)=n_tau(F(n_sigma x)).                 (7.3)
+
+Thus n is precisely the recursive normalization determined by E in the
+general observer-core construction. Both sides in (7.3) are canonical
+M functions, so equality on fixed new inputs establishes their literal
+equality. Its fixed domain is EXACTLY
+
+  Fix(n_sigma) = i_sigma[D_sigma^K],                     (7.4)
+
+with inverse j_sigma. The inclusion from right to left follows from
+ji=id; the reverse follows from F=nF=i(jF). This proves that no new
+Henkin functions survive merely because the new source has more objects.
+
+The bijections preserve application by (7.1). They preserve Boolean
+operations by diagonal coding. For a fixed core predicate i_(sigma t)(f),
+its value at a coded new argument x is pair(f(j_sigma x),f(j_sigma x)).
+In the core quantifier every argument is normalized by n; its old coded
+range under j_sigma is exactly D_sigma^K because ji=id. Equation (4.1)
+therefore gives i_t(Q_sigma^K f). This verifies quantifiers without an
+external fullness assumption. Abstractions are preserved by the same
+application equations and canonical extension.
+
+The fixed-test quotient introduces no further identifications: if i(a)
+and i(b) differ, a fixed predicate obtained by embedding an old crisp
+haecceity separates them currently. Hence (7.4), already before quotient,
+is the exact core hierarchy. At the designated point, i_t(p)=pair(p,p)
+is true exactly when p is true in pointed K. This proves the required
+pointed typed logical isomorphism.
+
+8. Constants and precise strength
+
+For each nonlogical constant c:sigma of K, interpret its M counterpart
+as i_sigma(c). The core normalization fixes it by (7.4), and j_sigma
+recovers the exact original interpretation. This works simultaneously
+for any fixed signature, including individual constants. No signature
+reference theory or maximalization side condition is involved.
+
+The construction of C5+Atomicity and the exact-core result use only the
+atomic functional presentation associated with C5+Atomicity. Full boxed
+FC is used specifically in section 5 to preserve the target theory. In
+particular the finite doubling does not obtain Choice by replacing
+general models with full standard models.
+
+9. Sources and verification
+
+The atomic functional presentation uses recorded C5/boxed-Plenitude
+results and the established actual-world evaluation account. Relevant
+local entry points are research/2026-10-22/evaluation-and-choice/
+structural-algebraic-core.md, sections 0,9,16, and its companion
+structural-world-representation.md, sections 13-15. The present finite
+typed retraction construction avoids relying on a new full Gallin
+representation theorem or external function-space completion.
+
+The canonical observer core is the one in research/2026-10-26/
+observer-core-without-barcan/general-core.txt, sections 2-6.
+
+The finite coding, necessary Choice preservation and exact all-type decoder argument are proved in §§3–8.

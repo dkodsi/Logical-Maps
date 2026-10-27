@@ -39,7 +39,7 @@ Under C5 + ☐OS, each of the supported Choice, completeness and comprehension i
 \quad\longleftrightarrow\quad\Box A.
 ```
 
-The [positive-bounds proof](../proofs/necessary-observer-positive-bounds.md) gives the exact finite qualification lists. At a fixed carrier type, separately possible unary, binary and ternary Rigid Comprehension therefore suffice for CH and first-order analytical propagation. The general CH conclusion from C5 + ☐OS remains [unresolved](../PENDING.md).
+The [positive-bounds proof](../proofs/necessary-observer-positive-bounds.md) gives the exact finite qualification lists. At a fixed carrier type, separately possible unary, binary and ternary Rigid Comprehension therefore suffice for CH and first-order analytical propagation. The [finite-support symmetric construction](../../integration-register/proofs/observer-analysis/necessary-os-ch-inaccessible-countermodel.md) refutes general CH propagation under C5 + ☐OS, starting from a strongly inaccessible cardinal. Its fixed real field is persistent and necessarily complete for nonempty bounded admitted subproperties.
 
 ## Completeness and observer images
 

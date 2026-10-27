@@ -4,14 +4,14 @@ The background is C unless stated otherwise. “Unresolved” refers to the cite
 
 [Main results](MAIN-RESULTS.md) · [Catalog](CATALOG.md) · [Evidence](evidence/RESULT-INDEX.md)
 
-The four central open questions are listed below. Claims awaiting review are separate; resolved questions and established connections are grouped in expandable sections at the end.
+The central open questions are listed below. Claims awaiting review are separate; resolved questions and established connections are grouped in expandable sections at the end.
 
 | Unresolved question | Scope |
 |---|---|
 | [Does Relational Choice entail Transversal Choice?](#rc-tc) | Over C |
 | [Is Strong Possibility consistent?](#pure-sp) | Pure finitary language |
 | [Is signature Strong Possibility consistent?](#signature-sp) | One unary predicate constant; no individual names |
-| [Does injective logical separation entail logical left-inverse separation?](#observer-strength) | Over H and over C5 |
+| [Can Max(C) coexist with propositional Boolean Completeness?](#max-bc) | Pure Maximalism relative to C; current BC_t |
 
 Further observer comparisons are listed in the [dedicated research frontier](proofs/h-observer-space/MAP.md#10-explicit-frontier).
 
@@ -34,7 +34,7 @@ Further observer comparisons are listed in the [dedicated research frontier](pro
 
 **Position:** Unresolved; sharper positive and negative criteria.
 
-Relational Choice plus Boolean Completeness gives Actuality and TC. The history construction reduces Transversal Choice at the evaluation point to finite ambiguity in at least one missed cell. Finite code orbits obstruct symmetry-based countermodels. Class-code iteration preserves ambiguity, and orbit exhaustion is exactly Actuality.
+Vicinity + RC_(σt,σ) gives TC_σ; thus RC, TC, Zorn and Well-Ordering coincide over C + Vicinity. ND_t or full Boolean Completeness also suffice. [Proofs](evidence/RESULT-INDEX.md#choice-completeness). A proof of bare-C RC ⇒ TC would establish MRC ⇒ Modal Well-Ordering; over full MRC, TC and Modal Well-Ordering are equivalent provability questions. MRC already gives Modal Well-Ordering under ☐Vicinity (hence over C5) or current Boolean Completeness. [Exact reduction](../integration-register/proofs/modal-choice/modal-to-current-choice-reduction.md).
 
 Derive a suitable coherent chooser from RC alone, or construct a genuine full RC countermodel meeting the closure and code-orbit restrictions.
 
@@ -45,54 +45,29 @@ Derive a suitable coherent chooser from RC alone, or construct a genuine full RC
 
 **Position:** Unresolved; exact criteria and construction obstructions.
 
-Universal-identity and restricted-disjunction criteria are established. In the specified two-axiom test any required full-term embedding must leave every target arithmetic counterexample above its entire source number image.
+The universal-identity criterion and simultaneous fragment constructions are established. The [witness-extension test](../integration-register/proofs/strong-possibility/conditional-cut-models.md#9-a-witness-extension-test-with-a-finite-refutation-certificate) requires every realized finite existential identity pattern to remain provable in the original Max theory; a proved obstruction to all genuine extensions gives a finite refutation.
 
-Construct the genuine endpoint embedding or otherwise settle joint consistency. A noncofinal omitted-cut requirement rules out routes, not the theory.
+Neither a general witness-extension construction nor an impossible witness demand has been established. The reference theory is Max(C). Failure of one proposed witness or one fixed embedding does not decide consistency.
 
 **Lean-certified related results:** [`SP-CRITERIA`](evidence/RESULT-INDEX.md#sp-criteria): The universal-core equivalence and the stated conditional disjunction criterion.
 
 <a id="signature-sp"></a>
 #### Is SP consistent for one unary predicate constant and no individual names?
 
-**Position:** Unresolved; first-stage sufficient criterion.
+**Position:** Unresolved.
 
-Nonempty K₁ already implies full signature SP consistency and is equivalent to weak named existence for the marked Max theory. Finite Herbrand extraction fails; the singleton-profile root is deleted. A successful fixed-domain kernel must be perfect and nonhyperarithmetic, with exact stabilization ordinal ω₁CK.
+The same [witness-extension criterion](#pure-sp) applies with reference theory Max(C(Σ)), for exactly Σ={c:et} and no individual names.
 
-Prove weak named existence or give a globally empty witness open. Failure of K₁ or the stronger fixed-domain construction would not alone refute SP.
+Neither a general admissible witness-extension construction nor an impossible witness demand has been established.
 
 **Lean-certified related results:** [`SP-SIGNATURE-CONFLICT`](evidence/RESULT-INDEX.md#sp-signature-conflict): The signature-splitting lemma.
 
-<a id="observer-strength"></a>
-#### Does injective logical separation imply logical left-inverse separation?
+<a id="max-bc"></a>
+#### Is C + Max(C) + Boolean Completeness at t consistent?
 
-**Position:** Unresolved over H and over C5.
+**Position:** Unresolved.
 
-Separation by logical observers with logical left inverses (SplitMono) entails separation by injective logical observers (InjSep). The converse asks whether a separating family can be replaced by one whose members have logical left inverses; it does not require each original observer to have such an inverse. Over C5, the exact decompositions are
-
-```math
-\begin{aligned}
-\mathrm{InjSep}&\longleftrightarrow\mathrm{Rev}\lor(\mathrm{OS}\land J_t),\\
-\mathrm{SplitMono}&\longleftrightarrow\mathrm{Rev}\lor(\mathrm{OS}\land K_t).
-\end{aligned}
-```
-
-Here $`J_t`$ says that some injective logical observer $`E`$ and currently true $`c`$ satisfy $`\forall p(Ep\le c\to p=\bot)`$. The condition $`K_t`$ says that logical observers $`E,F`$ and currently true $`c`$ satisfy $`F\circ E=I`$ and $`Fc=\bot`$. Both use the same qualification at type t; C5 reduces the full schemas to these finite instances. See the [injective](proofs/h-observer-space/injective-separation-decomposition.md) and [left-inverse](proofs/h-observer-space/left-inverse-separation-decomposition.md) decompositions.
-
-The regular-open countermodel refutes $`J_t\Rightarrow K_t`$, but fails OS, so it does not settle the separation question. Finite relative generation gives a positive case. With $`\mathrm{BC}_t+\mathrm{Zorn}_t`$, the stated support-coverage equation supplies the required logical inverse; a currently true admitted homogeneous interval is another sufficient condition. The [theorem map](proofs/h-observer-space/MAP.md#10-explicit-frontier) records their exact premises.
-
-The established hierarchy includes H + OS ⇒ C + BF and endpoint separation ⇔ C5 + Atomicity (type t). Reversible separation has an exact invariant-proposition characterization; the [group-law and finite-family theorems](proofs/h-observer-space/GRAPH.md#any-nontrivial-group-equation) give further exact regions without resolving this comparison.
-
-The main C5 question is exactly whether
-
-```math
-\mathrm{C5}+\mathrm{OS}+J_t\ \vdash\ \mathrm{Rev}\lor K_t.
-```
-
-Over H the corresponding question is InjSep ⇒ SplitMono. A countermodel must satisfy the full injective separation schema, rather than merely contain an injective observer lacking a logical left inverse.
-
-Other unresolved comparisons are collected in the [research frontier](proofs/h-observer-space/MAP.md#10-explicit-frontier): the joint effect of $`\mathrm{BC}_t`$ and $`\mathrm{Zorn}_t`$ with OS; the remaining infinite connective and affine admission questions; the general atomless meet classification; the endpoint-parameter noncontingency converse for Rev; further inverse/necessity comparisons; and removing Actuality from the C-based FinBox theorem for empty or individual-only qualification lists.
-
-**Lean-certified related results:** [`LOGICAL-OBSERVERS`](evidence/RESULT-INDEX.md#logical-observers): H + OS ⇒ C + BF with explicit endpoint identities. Their omission is justified by the linked ordinary reduction proof. [`FULL-IDENTITY-OBSERVERS`](evidence/RESULT-INDEX.md#full-identity-observers): Simultaneous propositional separation for every finite list of closed quantifier types under C5 + Atomicity (type t), including its necessary schema; the converses and equivalence of the two schemas under C5 + Actuality. [`DIAGONAL-CHARACTERS`](evidence/RESULT-INDEX.md#diagonal-characters).
+Complete models realize substantial selected Max(C) fragments, even with strong Barcan and observer principles. Full Max(C) with current BC_t has no consistency or inconsistency verdict; adding BF or OS may introduce further obstacles. [Bounds and constructions](../integration-register/proofs/maximalism/completeness-triangulation.md).
 
 <a id="claims-awaiting-review"></a>
 ## Claims and source questions awaiting review
@@ -116,6 +91,8 @@ The proposed equality is
 ```
 
 An ordinary proof is supplied for both inclusions, but the difficult upper inclusion still awaits independent review. Here $`T_{\mathrm{arith}}`$ is the common arithmetic theory of the positive Choice and Plenitude packages. See the [statement and proof](evidence/RESULT-INDEX.md#max-arithmetic-equality).
+
+The related [conservation manuscript](../integration-register/proofs/strong-possibility/barcan-arithmetic-conservativity.md) adds unboxed Strong Actuality, BF, Relational Choice and Transversal Choice, separately for pure Max and Max with exactly one unary predicate constant. It relies on the same upper-bound input, so it does not remove that review requirement.
 
 ---
 
@@ -191,6 +168,22 @@ Directed Boolean completeness is equivalent to Boolean Completeness over C. With
 
 **Evidence:** [rigidity.17](CATALOG.md#rigidity.17) · [rigidity.18](CATALOG.md#rigidity.18) · [rigidity.22](CATALOG.md#rigidity.22) · [rigidity.28](CATALOG.md#rigidity.28).
 
+<a id="atomicity-vicinity-actuality"></a>
+#### Atomicity and Vicinity imply Actuality
+
+Over C, Atomicity (type t) + Vicinity implies Actuality. Consequently ND (type t) + Atomicity (type t) implies Actuality, and under Atomicity (type t), Actuality and Vicinity are equivalent. All premises are unboxed. No BF, Functionality, choice or Boolean Completeness is assumed.
+
+**Evidence:** [Atomicity and Vicinity recover Actuality](evidence/RESULT-INDEX.md#atomicity-vicinity).
+
+<a id="modal-choice-coherence"></a>
+#### Modal choice, necessity and completeness
+
+Over C, full Modalized Relational Choice is equivalent to its necessary form, to ☐Relational Choice + Intensional Choice, and to ☐Relational Choice + ☐Intensional Choice. Instancewise MRC_(τt,τ) entails ☐MRC_(σ,τ), ☐RC_(σ,τ) and ☐IC_τ. BF_(σt) suffices for IC_σ ⇒ ☐IC_σ; BF_(στt) suffices for MRC_(σ,τ) ⇒ ☐MRC_(σ,τ). Under either full current Boolean Completeness or ☐Vicinity, MRC is also equivalent to Modal Well-Ordering; the latter equivalence holds in particular over C5. Explicit ZFC models separate current RC + IC from MRC even with current TC, ☐IC, ☐BF, ☐OS and ☐BC_t; and separate current IC from ☐IC even with ☐BC, ☐Atomicity and ☐Actuality. These are not C5 separators. Over bare C, the full-schema provability questions MRC ⇒ TC and MRC ⇒ Modal Well-Ordering are equivalent. A proof of RC ⇒ TC would settle both. A countermodel to MRC ⇒ Modal Well-Ordering yields an accessible RC/TC counterexample, still satisfying full MRC. These are reductions between proof obligations, not a material conditional; the bare-C questions remain unresolved.
+
+Ordinary proofs of the new propagation equivalences and typed completeness bound, with explicit ZFC countermodels; existing chooser-of-graphs and well-ordering arguments retain their source attribution.
+
+**Evidence:** [Modalized Relational Choice supplies its own necessity](evidence/RESULT-INDEX.md#modal-choice).
+
 <a id="rigidity"></a>
 ### Rigidity
 
@@ -213,11 +206,24 @@ No. A coalesced sum of two extensional models disagreeing about arithmetic satis
 **Existing countermodel:** Cian Dorr’s coalesced construction, with verification by Claude Opus 5.5 and the rigidity verdicts by Claude Fable 5.1 at Dorr’s prompting.
 
 <a id="tr-rp-wrp"></a>
-#### Does Tame Rigidity + Rigid Power entail Weakly Rigid Power?
+#### Which rigidity conclusions follow from Tame Rigidity, Rigid Power and Barcan?
 
-**Position:** Refuted by a certified full C countermodel.
+**Position:** The recorded TR + RP ⇒ WRP conjecture and stronger variants are refuted.
 
-No. The finite compression model satisfies Tame Rigidity and Rigid Power but fails Weakly Rigid Power at type et. The earlier colour-collapse example fails Rigid Power at the next property type and does not by itself settle this question.
+The earlier finite-compression model refutes Tame Rigidity + Rigid Power ⇒ Weakly Rigid Power; that result is Lean certified.
+
+The new [recurrent-colour construction](../integration-register/proofs/recurrent-colour-countermodel.md) strengthens the positive package to ☐BF + ☐Rigid Power + ☐Boolean Completeness + Tame Rigidity, while Weakly Rigid Power and ☐Tame Rigidity still fail at et. Its further consequences include:
+
+- Tame Rigidity + ☐Rigid Power ⇏ Weakly Rigid Power.
+- Tame Rigidity + ☐Rigid Rigidity ⇏ Weakly Rigid Weak Rigidity; this also refutes the unboxed comparison.
+- The full positive package does not imply No Pure Contingency.
+- Actuality and Rigid Comprehension fail everywhere; Weak Rigid Comprehension fails at et.
+
+The full list of derived verdicts and supporting database implications is in [the consequence register](evidence/recurrent-colour-consequences.json).
+
+The connecting implication Rigid Rigidity + Rigid Power ⇒ ☐Rigid Power is proved separately in §11. Rigid Rigidity alone does not imply Rigid Power: the database already has the coalesced two-extensional-arithmetics countermodel.
+
+A distinct [atomless Boolean-prefix construction](../integration-register/proofs/boolean-prefix-rigidity.md) satisfies **Rigid Comprehension + ☐BF + ☐Rigid Power**, with current Boolean Completeness and Actuality, while Weakly Rigid Power and ☐Tame Rigidity still fail at et. Thus adding Rigid Comprehension, even together with BCₜ, does not repair those implications. Necessary Boolean Completeness belongs to the earlier recurrent-colour model and is not claimed for this variant.
 
 **Lean certified:** [`FINITE-COMPRESSION-SEPARATION`](evidence/RESULT-INDEX.md#finite-compression-separation). [`COLOUR-COLLAPSE-SCOPE`](evidence/RESULT-INDEX.md#colour-collapse-scope). [`RIGIDITY-CLASSIFICATIONS`](evidence/RESULT-INDEX.md#rigidity-classifications).
 
@@ -271,6 +277,15 @@ One fixed-point entrance model satisfies Atomicity, Boolean Completeness, Rigid 
 **Evidence:** [Comprehension, completeness and choice do not force ☐Tame Rigidity](evidence/RESULT-INDEX.md#fixed-point-entrance).
 
 **Lean certified:** [`FIXED-POINT-ENTRANCE`](evidence/RESULT-INDEX.md#fixed-point-entrance).
+
+<a id="strong-worlds-domains"></a>
+#### Strong Leibniz alone does not give Barcan or necessary Strong Leibniz
+
+Strong Leibniz at t implies ☐Strong Actuality. At any relational type it necessarily supplies strong refinements of actually instantiated relations. An eventually stationary entrance model satisfies C + ☐Strong Leibniz at every relational type and ☐BF_e while failing every relational BF instance. A cofinite entrance model satisfies C + Strong Leibniz + BF + ☐Atomicity at all relevant types, but fails ☐Strong Leibniz_t and ☐BF_t.
+
+New typed entrance constructions and the stronger Strong Actuality consequence; separate from the existing certified propagation theorem.
+
+**Evidence:** [Strong Leibniz does not control modal domains](evidence/RESULT-INDEX.md#strong-worlds-domains).
 
 <a id="modal-stability"></a>
 ### Modal stability and noncontingency
@@ -617,7 +632,9 @@ An explicit classical lambda-free applicative calculus has exactly C’s consequ
 
 **Position:** Resolved: a λ-free characterization in ZF.
 
-Full typed endpoint separation plus boxed Infinitary Comprehension characterizes full standard relational hierarchies over the specified λ-free base of H. Finite instances reconstruct abstraction, while the translated observer equality clauses follow from the resulting C5 theory. The representation is provable in ZF. [Proof and exact formulation](proofs/lambda-free-endpoint-comprehension.md).
+Full typed endpoint separation plus boxed Infinitary Comprehension characterizes full standard relational hierarchies over the specified λ-free base of H. Finite instances reconstruct abstraction, while the translated observer equality clauses follow from the resulting C5 theory. The representation is provable in ZF. [Proof and exact formulation](proofs/lambda-free-endpoint-comprehension.md). The later native λ-free H formulation has a [full Lean certificate](../next-update/items/20-endpoint-ic-certificates.md) in classical metatheory; this does not certify the separate ZF proof.
+
+**Lean certified:** [`LAMBDA-FREE-ENDPOINT-COMPREHENSION`](evidence/RESULT-INDEX.md#lambda-free-endpoint-comprehension): Full representation and converse for the native original-type λ-free H formulation, in Lean’s classical metatheory. The choice-free ZF argument retains its ordinary-proof status.
 
 <a id="infinitary-sp"></a>
 #### Does countable named exhaustion follow from SP with infinitary resources?
@@ -642,6 +659,30 @@ Supported nominal models realize exact individual profiles and arbitrarily high 
 
 **Lean certified:** [`PROFILE-WORLD-ALGEBRA`](evidence/RESULT-INDEX.md#profile-world-algebra): The finite-profile and atomic-profile results.
 
+<a id="observer-interpretations"></a>
+#### When do observers define the same interpretation, and which models can be realized this way?
+
+**Position:** Resolved for proper realization and the same-image comparison.
+
+Every general C model has a proper qualified idempotent realization, preserving full current and necessary Boolean Completeness separately. C + ☐Functional Choice is closed under both interpretation and proper realization. Current Relational Choice and Transversal Choice can fail to descend even over C5 + OS; Actuality repairs endpoint descent with full current Relational Choice. Current BF and current Boolean Completeness can fail in general interpretations. Over BF, observers with the same proposition image give isomorphic pure interpretations. Without BF this fails even with all-type ☐Boolean Completeness and ☐Atomicity. [Statements and proofs](../integration-register/OBSERVER-INTERPRETATIONS.md).
+
+<a id="observer-strength"></a>
+#### Does injective logical separation imply logical left-inverse separation?
+
+**Position:** Resolved negatively, even with necessary all-type Relational Choice, Transversal Choice and Zorn.
+
+SplitMono strictly implies InjSep, even over C5 with necessary all-type Relational Choice, Transversal Choice and Zorn. The [countermodel](proofs/h-observer-space/rigid-souslin-injective-separation.md) is constructed in ZFC and satisfies
+
+```math
+\mathrm{C5}+\Box\mathrm{InjSep}+\Box\mathrm{RC}+\Box\mathrm{TC}+\Box\mathrm{Zorn}+\Box\neg\mathrm{SplitMono}_t.
+```
+
+The positive schemas hold at every admitted type and finite qualification list. Failure is already at the propositional instance testing quantification at t. The identity is the only logical observer admitting a qualified logical left inverse, so no alternative separating family can repair the failure.
+
+Over C5, this also refutes OS + $`J_t`$ ⇒ Rev or $`K_t`$ in the [injective](proofs/h-observer-space/injective-separation-decomposition.md) and [left-inverse](proofs/h-observer-space/left-inverse-separation-decomposition.md) decompositions. The established positive cases retain their additional finite-generation, support-coverage or homogeneity hypotheses.
+
+**Lean certified:** [`LOGICAL-OBSERVERS`](evidence/RESULT-INDEX.md#logical-observers): H + OS ⇒ C + BF with explicit endpoint identities. Their omission is justified by the linked ordinary reduction proof. [`FULL-IDENTITY-OBSERVERS`](evidence/RESULT-INDEX.md#full-identity-observers): Simultaneous propositional separation for every finite list of closed quantifier types under C5 + Atomicity (type t), including its necessary schema; the converses and equivalence of the two schemas under C5 + Actuality. [`DIAGONAL-CHARACTERS`](evidence/RESULT-INDEX.md#diagonal-characters).
+
 <a id="evaluation-characterizations"></a>
 #### Evaluation and coextension representatives
 
@@ -654,7 +695,7 @@ The evaluator hierarchy distinguishes truth-fibre classification, correct evalua
 <a id="observer-characterizations"></a>
 #### Logical separation and its stronger forms
 
-Over H, logical separation gives C + BF, endpoint separation is C5 + Atomicity at t, and factive or unique-observer separation is Extensionality. The inverse and native-modality restrictions yield further strict hierarchies. The comparison between injective and logical left-inverse separation remains open; the exact reductions and countermodel boundaries are in the observer atlas. With OS assumed over H, existence of a correct actual-truth evaluator is exactly what upgrades separation to endpoint separation. Over C, endpoint separation is equivalent to every possible world having its own unique correct evaluator, while a single evaluator that remains correct at every world is equivalent to Extensionality. See the [evaluation bridge](proofs/logical-observers.md#actual-truth-evaluation-and-endpoint-separation).
+Over H, logical separation gives C + BF, endpoint separation is C5 + Atomicity at t, and factive or unique-observer separation is Extensionality. The inverse and native-modality restrictions yield further strict hierarchies. SplitMono strictly implies InjSep, even over C5 with necessary all-type Relational Choice, Transversal Choice and Zorn. The [countermodel](proofs/h-observer-space/rigid-souslin-injective-separation.md) satisfies the full separating schema. With OS assumed over H, existence of a correct actual-truth evaluator is exactly what upgrades separation to endpoint separation. Over C, endpoint separation is equivalent to every possible world having its own unique correct evaluator, while a single evaluator that remains correct at every world is equivalent to Extensionality. See the [evaluation bridge](proofs/logical-observers.md#actual-truth-evaluation-and-endpoint-separation).
 
 **Evidence:** [Logical observer separation: a strict hierarchy from BF to Extensionality](evidence/RESULT-INDEX.md#logical-observers) · [Full identity observers have atomic and symmetry representations](evidence/RESULT-INDEX.md#full-identity-observers) · [Stable atoms are exactly what diagonal separation requires](evidence/RESULT-INDEX.md#diagonal-characters) · [Observer separation over H: primitive packages, representation and higher types](evidence/RESULT-INDEX.md#h-observer-space).
 
@@ -668,5 +709,12 @@ Profile realization, complete Boolean maps and admitted world maps have exact re
 **Evidence:** [Profile Realization and the Boolean structure of worlds](evidence/RESULT-INDEX.md#profile-world-algebra) · [Faithful probability has an exact finite-fibre condition and type ceiling](evidence/RESULT-INDEX.md#probability).
 
 **Lean certified:** [`PROFILE-WORLD-ALGEBRA`](evidence/RESULT-INDEX.md#profile-world-algebra): The finite-profile and atomic-profile results. [`PROBABILITY`](evidence/RESULT-INDEX.md#probability): Supported-real suprema, natural-number order and basic numeric operations; cut crossing and supported-real negation, subtraction and inverses. Numeric-operation laws retain ActualWorld, quantified Infinity and domain guards; induction and cases require ActualWorld alone.
+
+<a id="commuting-family-characterizations"></a>
+#### Commuting families and Atomicity
+
+Over C5, Atomicity is exactly separation by a stable commuting family of idempotent logical observers. For a stable qualified commuting separating family, necessary separation by that same family is equivalent to injectivity of every member; with idempotence, its existence characterizes Extensionality. The weaker CoIdemSep, CoSep and OS form a strict hierarchy. These are new ordinary proofs; the [guide](LOGICAL-OBSERVERS.md#commuting-family-connections) gives the formulations and the [catalogue](CATALOG.md#coherent.separations) retains the separation models. Over C, Actuality + CoInjSep is exactly C5 + Atomicity + CoRevSep, with inverse witnesses in the same family. ☐Functional Choice supplies one stable commuting reversible family that necessarily witnesses every instance; C5 + Atomicity and an admitted well-order of the world atoms suffice.
+
+**Evidence:** [coherent.definitions](CATALOG.md#coherent.definitions) · [coherent.atomicity](CATALOG.md#coherent.atomicity) · [coherent.propagation](CATALOG.md#coherent.propagation) · [coherent.joint-separation](CATALOG.md#coherent.joint-separation) · [coherent.choice](CATALOG.md#coherent.choice).
 
 </details>

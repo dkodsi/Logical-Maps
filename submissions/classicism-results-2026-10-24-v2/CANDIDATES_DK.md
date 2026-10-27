@@ -2,13 +2,14 @@
 
 The background is finitary relational C unless stated otherwise.
 
-[Main results](MAIN-RESULTS.md) · [Integration review](DATABASE-INTEGRATION.md) · [Structured proposals](CANDIDATES_DK.json) · [Evaluation principles](#evaluation-principles) · [Infinitary extension](#infinitary-extension)
+[Main results](MAIN-RESULTS.md) · [Observer guide](LOGICAL-OBSERVERS.md) · [Integration review](DATABASE-INTEGRATION.md) · [Structured proposals](CANDIDATES_DK.json) · [Evaluation principles](#evaluation-principles) · [Infinitary extension](#infinitary-extension)
 
 ## Proposed principles
 
 | Subject | Principle | Reason for inclusion |
 |---|---|---|
 | Observers | [Logical Observer Separation](#logical-observer-separation-r) | Recovers C + BF over H and has atomless models. Restrictions on its observers give a hierarchy through C5 + Atomicity to Extensionality. |
+| Observers | [Commuting Logical Observer Separation](#commuting-logical-observer-separation-r) | Adds the modal axiom .2 to OS; its stable idempotent form exactly characterizes Atomicity over C5. |
 | Choice and rigidity | [Sections of Surjections](#sections-of-surjections-r) | Isolates the extra ingredient which, with Actuality, is exactly Functional Choice; countermodels show that neither conjunct can be omitted. |
 | Choice and rigidity | [Retractions of Injections](#retractions-of-injections-r) | Gives the matching decomposition of Plenitude; requiring necessarily correct retractions instead gives exactly C5. |
 | World structure | [Individual Profile Realization](#individual-profile-realization) | Adds realizable individual profiles beyond ☐Functional Choice, with exact full-model cardinality tests and a diagonal obstruction at relational input types. |
@@ -21,38 +22,64 @@ The background is finitary relational C unless stated otherwise.
 <a id="logical-observer-separation-r"></a>
 ### Logical Observer Separation
 
-Relations are identical exactly when all suitably qualified logical observers agree on their instances.
+Every pair of distinct relations can be distinguished at some arguments by a suitably qualified logical observer.
 
 ```math
-\begin{aligned}
-&\forall X,Y^{\bar\sigma t}\, .\,X=Y\leftrightarrow\forall E^{tt}\, .\,\mathrm{Good}_{\Delta}(E) \\
-&\qquad \to\forall\bar z^{\bar\sigma}\, .\,(E(X[\bar z])\leftrightarrow E(Y[\bar z])).
-\end{aligned}
+\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,\bigl(\mathrm{Good}_\Delta(E)\bigr)\to\forall\bar z^{\bar\sigma}\, .\,\bigl(E(X[\bar z])\leftrightarrow E(Y[\bar z])\bigr)\Bigr]\to X=Y.
 ```
 
-The schema ranges over finite argument tuples $`\bar\sigma`$ and finite lists $`\Delta`$ of tested types. $`\mathrm{Good}_\Delta(E)`$ requires preservation of Boolean operations and the listed quantifiers as identities of whole operations, together with the translated equality laws. [Exact qualification and variants](proofs/h-observer-space/SUMMARY.md#logical-observer-separation-r).
+The same separation pattern applies to every relational type. $`\mathrm{Good}_\Delta(E)`$ has the uniform H definition in the [observer guide](LOGICAL-OBSERVERS.md#uniform-definitions-over-h), with simpler equivalent qualifications over C and C5. Types and finite lists index the schema; every instance is a finite object-language formula.
 
 - H + OS entails C + BF. **Lean certified** with explicit endpoint identities; [omitting them](proofs/logical-observer-endpoint-reduction.md) uses the ordinary reduction proof.
-- Over C: Atomicity (type t) + BF ⇒ OS ⇒ BF, with neither converse valid.
-- Endpoint separation is equivalent over H to C5 + Atomicity (type t). Given OS, uniqueness of the qualified observer is equivalent to Extensionality.
+- Over C: Atomicity + BF ⇒ OS ⇒ BF, with neither converse valid.
+- Endpoint separation is equivalent over H to C5 + Atomicity. Given OS, uniqueness of the qualified observer is equivalent to Extensionality.
 
 #### Observer restrictions
 
 | Variant | Additional qualification | Main consequence |
 |---|---|---|
-| <a id="endpoint-logical-observer-separation-r"></a>[Endpoint](proofs/h-observer-space/SUMMARY.md#endpoint-logical-observer-separation-r) | Only ⊤ and ⊥ as outputs | Exactly C5 + Atomicity (type t) over H. |
-| <a id="reversible-logical-observer-separation-r"></a>[Reversible](proofs/h-observer-space/SUMMARY.md#reversible-logical-observer-separation-r) | A qualified two-sided inverse | Gives C5 + ☐OS + No Pure Contingency, including in atomless models. |
-| <a id="injective-logical-observer-separation-r"></a>[Injective](proofs/h-observer-space/SUMMARY.md#injective-logical-observer-separation-r) | Currently injective | Whether it gives logical left-inverse separation remains open. |
-| <a id="native-necessity-logical-observer-separation-r"></a>[☐-preserving](proofs/h-observer-space/SUMMARY.md#native-necessity-logical-observer-separation-r) | Preserves native necessity | Gives ☐BF and .2; equivalent to injective separation over C5. |
-| <a id="finite-image-logical-observer-separation-r"></a>[Finite-image](proofs/h-observer-space/SUMMARY.md#finite-image-logical-observer-separation-r) | Internally finite image | Strictly between OS and endpoint separation. |
-| <a id="idempotent-native-necessity-logical-observer-separation-r"></a>[Idempotent ☐-preserving](proofs/h-observer-space/SUMMARY.md#idempotent-native-necessity-logical-observer-separation-r) | Also $`E\circ E=E`$ | Strictly stronger than ☐-preserving separation; with C5, exactly Extensionality. |
-| <a id="bounded-stabilization-native-necessity-logical-observer-separation-r"></a>[Bounded stabilization](proofs/h-observer-space/SUMMARY.md#bounded-stabilization-native-necessity-logical-observer-separation-r) | $`E^{r+1}=E^r`$ for fixed $`r\ge1`$ | An unbounded strict hierarchy of ☐-preserving separation principles. |
-| <a id="factive-logical-observer-separation-r"></a>[Factive](proofs/h-observer-space/SUMMARY.md#factive-logical-observer-separation-r) | Ep implies p | Exactly Extensionality at full scope over H. |
-| <a id="central-logical-observer-separation-r"></a>[Central](proofs/h-observer-space/SUMMARY.md#central-logical-observer-separation-r) | Commutes with every qualified observer | Exactly Extensionality over C5. |
+| <a id="endpoint-logical-observer-separation-r"></a>[Endpoint](LOGICAL-OBSERVERS.md#endpoint-logical-observer-separation-r) | Only ⊤ and ⊥ as outputs | Exactly C5 + Atomicity over H. |
+| <a id="reversible-logical-observer-separation-r"></a>[Reversible](LOGICAL-OBSERVERS.md#reversible-logical-observer-separation-r) | Over C: conjunction-preserving involutions separating propositions | Gives C5 + ☐OS + No Pure Contingency, including in atomless models. |
+| <a id="surjective-logical-observer-separation-r"></a>[SurjSep](LOGICAL-OBSERVERS.md#surjective-logical-observer-separation-r) | Currently onto | Rev ⇒ SurjSep ⇒ OS, with both converses false. Over C5, SurjSep is equivalent to Rev. |
+| <a id="logical-left-inverse-separation-r"></a>[SplitMono](LOGICAL-OBSERVERS.md#logical-left-inverse-separation-r) | An admitted same-list logical left inverse | Rev ⇒ SplitMono ⇒ InjSep ⇒ OS. SplitMono strictly implies InjSep, even over C5 with necessary all-type Relational Choice, Transversal Choice and Zorn. See [countermodel](proofs/h-observer-space/rigid-souslin-injective-separation.md). |
+| <a id="injective-logical-observer-separation-r"></a>[Injective](LOGICAL-OBSERVERS.md#injective-logical-observer-separation-r) | Currently injective | It does not imply logical left-inverse separation, even with C5 and necessary all-type Relational Choice, Transversal Choice and Zorn; see [countermodel](proofs/h-observer-space/rigid-souslin-injective-separation.md). |
+| <a id="native-necessity-logical-observer-separation-r"></a>[☐-preserving](LOGICAL-OBSERVERS.md#native-necessity-logical-observer-separation-r) | Preserves native necessity | Gives ☐BF and .2; equivalent to injective separation over C5. |
+| <a id="finite-image-logical-observer-separation-r"></a>[Finite-image](LOGICAL-OBSERVERS.md#finite-image-logical-observer-separation-r) | Internally finite image | Strictly between OS and endpoint separation. |
+| <a id="idempotent-native-necessity-logical-observer-separation-r"></a>[Idempotent ☐-preserving](LOGICAL-OBSERVERS.md#idempotent-native-necessity-logical-observer-separation-r) | Also $`E\circ E=E`$ | Strictly stronger than ☐-preserving separation; with C5, exactly Extensionality. |
+| <a id="bounded-stabilization-native-necessity-logical-observer-separation-r"></a>[Bounded stabilization](LOGICAL-OBSERVERS.md#bounded-stabilization-native-necessity-logical-observer-separation-r) | $`E^{r+1}=E^r`$ for fixed $`r\ge1`$ | An unbounded strict hierarchy of ☐-preserving separation principles. |
+| <a id="factive-logical-observer-separation-r"></a>[Factive](LOGICAL-OBSERVERS.md#factive-logical-observer-separation-r) | Ep implies p | Exactly Extensionality at full scope over H. |
+| <a id="central-logical-observer-separation-r"></a>[Central](LOGICAL-OBSERVERS.md#central-logical-observer-separation-r) | Commutes with every qualified observer | Exactly Extensionality over C5. |
 
-The [headline guide](proofs/h-observer-space/SUMMARY.md#headline-results) explains the main distinctions; the [full list of connections and definitions](proofs/h-observer-space/SUMMARY.md#logical-observer-principles) retains the proposal family and proof references.
+Start with [the maps, definitions and intuition](LOGICAL-OBSERVERS.md). The [structured principle register](OBSERVER-PRINCIPLES.json) supplies object-language formulas and exact type scope; the [full list of connections](proofs/h-observer-space/SUMMARY.md#logical-observer-principles) retains the detailed evidence.
 
 **Evidence:** [Proofs and certificates](evidence/RESULT-INDEX.md#logical-observers).
+
+<a id="commuting-logical-observer-separation-r"></a>
+### Commuting Logical Observer Separation
+
+An admitted family of pairwise commuting logical observers collectively distinguishes every pair of distinct relations.
+
+```math
+\begin{aligned}\mathrm{CoSep}_{\bar\sigma,\Delta}:=\exists K^{(tt)t}\, .\,\bigl(&\forall E^{tt}\, .\,KE\to\mathrm{Good}_\Delta(E)\bigr)\\{}\land{}&\bigl(\forall E,F^{tt}\, .\,(KE\land KF)\to E\circ F=F\circ E\bigr)\\{}\land{}&\mathrm{Sep}_{\bar\sigma}(K).\end{aligned}
+```
+
+Each relational type and finite qualification list gives one instance. Over C5 it suffices to separate propositions with N(E) ∧ Q_t(E).
+
+Here $`\mathrm{Sep}_{\bar\sigma}(K)`$ means
+
+```math
+\mathrm{Sep}_{\bar\sigma}(K):=\forall X,Y^{\bar\sigma t}\, .\,\Bigl[\forall E^{tt}\, .\,KE\to\forall\bar x^{\bar\sigma}\, .\,\bigl(E(X[\bar x])\leftrightarrow E(Y[\bar x])\bigr)\Bigr]\to X=Y.
+```
+
+Good has the qualification of Logical Observer Separation above. Over C it requires preservation of conjunction, negation and the tested universal quantifiers as whole-operation identities.
+
+- Over C: CoSep ⇒ OS + .2.
+- CoIdemSep adds $`\forall E^{tt}\, .\,KE\to E\circ E=E`$ within the same existential. Over C5, requiring additionally $`\forall E^{tt}\, .\,(KE=\top\lor KE=\bot)`$ makes it equivalent to Atomicity.
+- The [observer guide](LOGICAL-OBSERVERS.md#commuting-observer-families) gives the definitions and maps.
+- CoInjSep requires the family’s observers to be injective; CoRevSep requires them to have admitted logical inverses. Over C, Actuality + CoInjSep is equivalent to C5 + Atomicity + CoRevSep, and hence entails ☐Plenitude. [Definitions and proof](LOGICAL-OBSERVERS.md#commuting-family-connections).
+- ☐Functional Choice supplies a stable CoRevSep family that necessarily distinguishes all relations, with the same family at every type and qualification list. C5 + Atomicity and an admitted well-order of world atoms already suffice.
+
+**Sources:** [object-language-and-finite-basis.txt](../integration-register/proofs/coherent-observers/object-language-and-finite-basis.txt) (§§1–4, unpaginated) · [stable-families-and-propagation.txt](../integration-register/proofs/coherent-observers/stable-families-and-propagation.txt) (§§2–4, unpaginated) · [coherent-families.txt](../integration-register/proofs/coherent-observers/coherent-families.txt) (§2, unpaginated) · [joint-injective-separation.txt](../integration-register/proofs/coherent-observers/joint-injective-separation.txt) (§§1–3, unpaginated) · [choice-implies-coherent-reversible-separation.txt](../integration-register/proofs/coherent-observers/choice-implies-coherent-reversible-separation.txt) (§§1–7, unpaginated).
 
 <a id="choice-and-rigidity-principles"></a>
 ## Choice and rigidity
@@ -305,8 +332,6 @@ The separation principle is
 ```
 
 **Sources:** [diagonal-characters.md](proofs/diagonal-characters.md) (§§1–4).
-
-**Lean certified.**
 
 **Evidence:** [Proofs and certificates](evidence/RESULT-INDEX.md#diagonal-characters).
 

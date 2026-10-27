@@ -1,0 +1,273 @@
+Full Boolean-valued carrier and premise audit
+25 October 2026 — OpenAI Codex, mathematical research only
+
+Purpose and status
+------------------
+This note independently audits the full Boolean-valued construction proposed
+for the question whether C5 + unboxed Functional Choice entails Necessity of
+Analysis. It verifies the model premises and the Boolean interpretation of a
+mixed real structure. The project lead supplies the analytical sentence and
+the final combined non-entailment argument. No database record, published
+proof, Lean source or certificate is changed by this note.
+
+The current upstream record is full-boolean-valued-atom-and-atomless in
+snapshot a89a5058ebbd5ebe93aec07d47a1a32e3b93f8bb, read from
+/tmp/classicism-upstream-a89a5058-decoded.json. It differs materially from the
+native YAML: upstream chooses the forcing algebra by cases on CH, whereas
+the native YAML still chooses RO(R). Under V=L the upstream choice is
+A = RO(Add(omega,omega_2)). This is the choice used below.
+
+The construction is Bacon's: Could the truths of mathematics have been
+different?, draft of 9 October 2025, online appendix B.2, pp. 7–9 (PDF
+pp. 41–43), especially the construction and Lemmas B.1–B.4. The full domains,
+designated atom and extensional-fullness argument are source material.
+The fixed-index mixed-field presentation below is a connecting argument in
+this research pass; it should not be attributed to Bacon as an explicit
+published proof of this first-order analytical claim.
+Source URL:
+https://andrew-bacon.github.io/papers/Could%20mathematics%20have%20been%20different.pdf
+
+1. Construction and C5
+---------------------
+Work in a ground model V of ZFC. Let A be a complete atomless Boolean algebra,
+B=2 x A, a=(1,0_A), and b=(0,1_A). Let E be any nonempty ground set. Interpret
+the relational types by D_e=E, D_t=B, and D_(sigma->tau)=D_tau^(D_sigma)
+for every admitted arrow type tau != e. Application and abstraction are
+ordinary set-function application and abstraction. Propositional operations
+are those of B; quantifiers are meets and joins; identity at every type has
+value 1_B for equal ground elements and 0_B otherwise.
+
+Designated truth is pi(c)=1, where pi is the first-coordinate projection.
+The projection preserves arbitrary joins and meets. It therefore makes
+existential truth mean that some ground witness is true, and makes universal
+truth mean that every ground instance is true.
+
+The usual Boolean-valued soundness induction validates H at value 1_B.
+An H-equivalence has equal Boolean values under all assignments; its lambda
+abstractions are consequently the same set function. This validates Logical
+Equivalence with its theoremhood restriction, hence C. This is not an
+application of Equivalence under the optional choice assumptions.
+
+Box is the defined operation p=top, so its value is 1_B exactly at input
+1_B, and 0_B at every other input. Crisp equality immediately validates
+boxed all-type ND, necessary-distinctness-necessary-r, the C5 premise.
+For every family (p_d), meet_d Box(p_d)=Box(meet_d p_d); both are 1_B just
+when every p_d is 1_B. Thus boxed BF, necessary-barcan-r, holds as well.
+
+2. Functional Choice: true, but not necessarily true
+---------------------------------------------------
+At the designated atom, a serial U has nonempty true fibres. Ground-model
+choice selects f(x) in each fibre; the full function domain contains f.
+Thus functional-choice-r holds at every admitted input/output pair (the
+output is relational). This proof uses metatheoretic ZFC choice. It remains
+valid for any E, finite or infinite.
+
+Its boxed counterpart fails independently of the analytical construction.
+At type t,t put
+  R(p,q) = (p and q=top) or (not p and q=bottom).
+For each p, the entries at q=top and q=bottom are p and not p. Consequently
+Serial(R) and Functional(R) both have value 1_B. For a ground function f:B->B,
+the selector value c_f=meet_p R(p,f(p)) is below either p or not p for every p.
+If c_f is nonzero, it is an atom: a proper nonzero part d<c_f makes both
+alternatives at p=d impossible. Conversely each atom c is achieved by the
+function selecting top when c<=p and bottom otherwise. Hence
+  [exists f forall p R(p,f(p))] = join{c : c is an atom of B} = a.
+All FC instances are true at the atom, so their values are at least a; this
+one bounds the closed type-t,t instance above by a. That closed instance
+therefore has value exactly a, and its box has value 0_B.
+
+This proves failure of necessary-functional-choice-r. It also refutes
+necessary-plenitude-r, since R is already functional. Full domains do not
+permit exchanging an arbitrary meet of joins with a join of selector meets.
+
+3. Stronger relational choice premises that really do hold
+---------------------------------------------------------
+Boxed Relational Choice does hold. Well-order the ground output domain and
+for any U define
+  S(x,y) = U(x,y) and not join_{z<y} U(x,z).
+For each x the entries S(x,y) are disjoint, have the same join as the row of
+U, and are pointwise below U. The join identity follows by induction along
+the chosen well-order, including limit joins. Crisp equality now gives
+  [Functional(S)] = meet_x join_y S(x,y) = [Serial(U)],
+while the inclusion S subset U has value 1_B. Each RC implication has value
+1_B, so necessary-relational-choice-r holds, including individual outputs.
+
+The same disjointization, applied to a single F, proves the upstream
+necessary-intensional-choice-r: if join_x F(x)=1_B, its disjoint refinement
+is necessarily uniquely instantiated and algebraically entails F.
+
+The upstream necessary-transversal-choice-r also survives any E. A ground
+well-order gives the least member of each equivalence class. This is an
+extensional statement about a relation on a ground set. Its Boolean-valued
+truth is 1_B, since in V^B the ground well-order remains a well-order and
+each subset of the ground set has its least member. Equivalently the selected
+predicate is F(y)=meet_{z<y} not R(z,y), and the same least-element argument
+applies below the Boolean value of Equiv(R). This does not use or establish
+boxed Functional Choice.
+
+4. Quantified Infinity, including the infinite-individual variant
+----------------------------------------------------------------
+At any type sigma with infinite ground carrier D, let Z_n be the n-fold
+successor of the zero-cardinality function, using the exact definitions in
+background.md. The full domain contains the crisp characteristic function W
+of the set {Z_n : n in omega}. This W is inductive at value 1_B. Therefore
+FiniteCardinality(Z) has value 0_B off that set. Conversely ordinary finite
+induction shows each Z_n belongs to every inductive W at value 1_B, so
+FiniteCardinality is exactly the crisp predicate of these numeral entities.
+Distinctness of the Z_n follows by evaluating them on crisp finite subsets
+of D of the relevant sizes.
+
+For a crisp subset S of D, the recursion gives Z_n(S)=1_B if |S|=n and 0_B
+otherwise. In particular Z_n(top_D)=0_B for every n when D is infinite.
+Thus the quantified Axiom of Infinity at sigma has value 1_B, as does its
+box. This is the quantified axiom, not merely the finite-distinctness schema.
+
+B is infinite, so axiom-of-infinity-t holds. For the upstream singleton
+E, axiom-of-infinity-e fails. If instead E=omega (as in Bacon's original
+construction), axiom-of-infinity-e holds, while all proofs in Sections 1–3
+are unchanged. This is an infinite-individual variant of the recorded model;
+do not add the e-Infinity verdict to the singleton model.
+
+5. Exact Boolean transfer needed for the mixed real structure
+------------------------------------------------------------
+The rho-coordinate of arbitrary typed language is NOT the entire usual
+Boolean-valued semantics of V^A: identity of higher-type objects is literal
+ground equality, not Boolean-valued extensional equality of names. The
+transfer used here has a precise restricted scope. It concerns box-free
+formulas using predicates and relation graphs extensionally, by application,
+and identity only between carrier elements. Higher-order variables may range
+over predicates/graphs, but must not occur in identities of those objects.
+
+For a ground carrier D, every A-valued predicate on D is a name for a subset
+of check D; conversely every such subset name is represented by
+d |-> [check d belongs to the name]. The same holds for finite-arity graphs.
+All these functions occur as rho-coordinates in the full typed domains.
+An induction on the restricted formula proves agreement with V^A: Boolean
+connectives and quantifiers use the same meets/joins, carrier identity is
+crisp in both, and quantified predicate names are exhaustively represented.
+For quantification over check D, mixing does not enlarge the computed join:
+every mixed name for a member of check D is assembled from ground members
+on a Boolean partition, and its formula value is bounded by their join.
+
+The specified Real predicate lies in this fragment: its operations are
+ternary graphs, not selectable operation objects; field equality is equality
+of carrier elements; completeness quantifies over nonempty bounded
+subproperties; and the naturals predicate is characterized by induction over
+subproperties. First-order analytical formulas in the field language with N
+also lie in the fragment. This verification must be repeated if the Real
+definition is changed to use identity of predicate/graph objects.
+
+Now specialize V to V=L, kappa=omega_2, A=RO(Add(omega,kappa)). This forcing
+is ccc, preserves kappa, and forces continuum=kappa. In V, CH implies
+kappa^omega=kappa, so |B|=kappa. Choose S subset B of size kappa, S_0 subset S
+of size omega_1, with two fixed distinct labels z,o in S_0. Put a ground real
+field on S_0 by a bijection with R^V taking z,o to 0,1.
+
+In V^A there is a bijection check S -> R taking z,o to 0,1. The maximum
+principle supplies one name for such a bijection, with these properties
+forced by 1_A. Pull back order, addition, multiplication and N along it to
+get A-valued graphs on S. Literal equality of indices agrees with equality
+of their real images because the bijection is forced injective. No quotient
+of a ground collection of real names is being silently identified with
+literal identity.
+
+Merge the ground and forcing graphs coordinatewise. The carrier predicate
+on S is X(s)=(1_{S_0}(s),1_A), and it is 0_B off S. Its pi-field is the ground
+field; its rho-field is the forced field on S. Both use fixed labels z,o.
+By the restricted transfer, this single tuple R satisfies [Real(R)]=1_B.
+For every chosen analytical sentence Phi,
+  [Phi(R)] = (truth of Phi in R^V, Boolean forcing truth of Phi in R^{V^A}).
+
+In particular, if the lead argument supplies an allowed sentence with
+ground truth 1 and forced truth 0 (the proposed example is that every real
+is constructible), its value on R is a. Let U_+ be the universal conditional
+Real -> Phi over all tuples and U_- its Real -> not Phi counterpart. The
+one mixed witness already gives U_+<=a and U_-<=b. Neither can equal 1_B;
+therefore Box(U_+) or Box(U_-) has value 0_B. No global categoricity argument
+over all typed tuples is necessary for this last step.
+
+This calculation does not substitute CH contingency or Analytic Necessitism
+failure for the requested first-order analytical failure. It requires an
+actual allowed analytical sentence with the indicated truth change.
+
+6. Database transfer and attribution boundaries
+------------------------------------------------
+Target: necessity-of-analysis. Premises: necessary-distinctness-necessary-r
+and functional-choice-r. Verified retained premises include
+necessary-barcan-r, necessary-relational-choice-r,
+necessary-intensional-choice-r, necessary-transversal-choice-r,
+axiom-of-infinity-t. The separate E=omega variant additionally retains
+axiom-of-infinity-e. Both variants refute necessary-functional-choice-r.
+
+The existing upstream model already records non-contingency-of-ch failure
+and analytic-necessitism failure; those facts alone do not settle the target.
+The native necessity-of-analysis principle is absent, so conclusions about
+this target must use the decoded current upstream, not a misleading native
+engine result. This note contains no newly certified Lean result and does
+not change the upstream source attribution or certificate date.
+
+7. Additional verified premises: unboxed RC and BC
+-------------------------------------------------
+Rigid Comprehension, rigid-comprehension-r, holds at every finite relational
+arity, including propositions. Given X, let Y be the crisp characteristic
+function of its designated extension {d : pi(X(d))=1}. Then Y is coextensive
+with X at the designated atom. It is rigid with value 1_B. Persistence is
+immediate. For each Z, the value of forall d (Y(d) -> Box Z(d)) is crisp and
+is 1_B exactly when Z(d)=1_B at every tuple in Y's crisp extension. This is
+exactly the condition for the crisp algebraic statement Y<=Z to have value
+1_B. Thus the entire inextensibility implication has value 1_B for every Z,
+as does its box. This verifies the exact native definition of rigidity.
+
+Boxed RC nevertheless fails. A predicate is persistent here only if all its
+values are 0_B or 1_B, so the preceding paragraph characterizes all rigid
+predicates. At unary type t->t take X(p)=p. For a rigid Y the coextension
+value is meet_p(p iff Y(p)), and consequently decides every p below it.
+Each nonzero such meet is an atom, and every atom occurs by choosing its
+truth pattern. The existential rigidification value is therefore exactly
+a, the join of the atoms of B. Thus the closed unary RC instance has value
+a, and necessary-rigid-comprehension-r fails. The type-t empty-arity
+instance alone does not witness this failure: choosing top or bottom gives
+its existential rigidification value p or not p, whose join is 1_B.
+
+Boolean Completeness, boolean-completeness-r, also holds at every relational
+type. By induction on types, D_tau is a complete Boolean algebra with all
+operations pointwise. Its algebraic order is crisp because it is defined
+using literal equality of functions. Given X:D_tau->B, form in the ground
+metatheory the meet y of the set S={w : pi(X(w))=1}. For every z,
+  pi(forall w (X(w) -> z<=w))=1  iff  z is a lower bound of S
+                                      iff  z<=y.
+Consequently the exact GLB formula has designated truth 1. This argument
+establishes unboxed BC only. It makes no inference about the A-coordinate
+of an arbitrary fuzzy family's GLB formula. The upstream counterexample
+to necessary-boolean-completeness-t remains applicable when A adds a real.
+
+8. A simpler CH-preserving specialization
+----------------------------------------
+For a countermodel whose analytical contingency is separated even from CH
+contingency, use V=L and A=RO(Add(omega,1)) instead. This is a variant of
+the upstream construction, not its currently fixed CH-reversing algebra.
+The countable forcing is ccc. In the CH ground, it has at most omega_1
+nice names for reals and preserves omega_1, so it forces CH. Its regular
+open algebra has ground cardinality continuum=omega_1. Take one fixed
+S subset B of size omega_1; both the ground field and the forced field can
+be put on S using bijections anchored at the same two constant labels.
+The coordinatewise mixture and transfer from Section 5 are otherwise
+unchanged; in this variant even the field carrier X can be crisp.
+
+For the exact extensional formulation of CH in the map, every real-number
+structure satisfies CH in both V and V^A. The restricted transfer applies
+to its quantification over subsets and graph relations as well. Hence
+forall R (Real(R) -> CH(R)) has value 1_B, and its box does too. The variant
+therefore satisfies non-contingency-of-ch while the proposed constructibility
+sentence is contingent. This is a separate verification, not an inference
+from the first-order analytical result.
+
+With E=omega, the main retained package is therefore
+  C5 + Functional Choice + boxed BF + boxed Relational Choice
+     + Rigid Comprehension + Boolean Completeness
+     + quantified Infinity at both e and t,
+and also boxed Intensional Choice, boxed Transversal Choice and
+Non-contingency of CH. All arguments establishing these premises are above.
+The forcing truth-change argument still requires the analytical sentence
+to be given in the permitted field-with-N language. No boxed Functional
+Choice or boxed Rigid Comprehension is included; both are explicitly false.

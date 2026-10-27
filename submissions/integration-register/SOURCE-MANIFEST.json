@@ -12,8 +12,8 @@
       "source": "research/2026-10-26/structural-frontier/choice-actuality/vicinity-relational-choice-transversals.md",
       "source_sha256": "278d9978bfeb1bf7ab0ce78487c7f1ebc04211e125916d6009435b4733551904",
       "published": "submissions/integration-register/proofs/vicinity-relational-choice-transversals.md",
-      "published_sha256": "4f7fa91e5a0b01ed57e95c5dc64ab915fb87f065f35599a394a8cc6a6f5e9021",
-      "editing": "Mathematical text retained; links and math delimiters normalized. The supported-product proof omits its process preamble and section 12 status report."
+      "published_sha256": "4c50b200b3f3a9248308c497a0317b33badb7f53a26ce2f6896dccb12effec59",
+      "editing": "Mathematical text retained; links and math delimiters normalized; section locators updated to the shared supported-interpretation page."
     },
     {
       "source": "research/2026-10-25/observer-completeness/complete-boolean-root.md",
@@ -47,9 +47,684 @@
       "source": "research/2026-10-26/structural-frontier/barcan-rigidity/RECURRENT-COLOUR-COUNTERMODEL.md",
       "source_sha256": "7ff52521476796b331000e0a10eab656fb5d4bd66309a400c7644954cd1d9969",
       "published": "submissions/integration-register/proofs/recurrent-colour-countermodel.md",
-      "published_sha256": "d4951fd6a5f51814d71f31734219bbab7ecead74a980908e5794e10385e9136c",
+      "published_sha256": "43789836dd7a9edf123ae4decfea72c2d442030e2742a2764e4970fbe6222476",
       "editing": "Mathematical content retained; main statement displayed, RC expanded as Rigid Comprehension, process-status wording shortened."
+    },
+    {
+      "source": "research/2026-10-26/observer-core-quotients/quotient-core.txt",
+      "source_sha256": "8e84095c2d4027004021e8b0ca990d9d310baffd03e891b7f574194a6717988b",
+      "published": "submissions/integration-register/proofs/observer-quotient-bf.txt",
+      "published_sha256": "019dce3801382553d064706c56399dd10e86ad3cf2fdee829272a6bc504503cf",
+      "editing": "Mathematical proof sections retained; coordination, audit logs and historical research-status discussion omitted. Cross-references between included proofs normalized."
+    },
+    {
+      "source": "research/2026-10-26/observer-core-without-barcan/general-core.txt",
+      "source_sha256": "56b8b16b59490aa01c9796c8558b1f3a650306f828caafd5131d48fd4f0845c9",
+      "published": "submissions/integration-register/proofs/observer-quotient-general.txt",
+      "published_sha256": "cd0c7d21b01162abd3a572030c237a50a866a6f49d616c1482f5b085b9c46058",
+      "editing": "Mathematical proof sections retained; coordination, audit logs and historical research-status discussion omitted. Cross-references between included proofs normalized."
+    },
+    {
+      "source": "research/2026-10-26/necessary-completeness-cores/REPORT.txt",
+      "source_sha256": "98cbcb2dbd89ec15c25fd4eb5a73963d62b2eb3ecdbc08afdcc9018cd6e68f37",
+      "published": "submissions/integration-register/proofs/observer-completeness-descent.txt",
+      "published_sha256": "a076ce00c05e9f1e94f062305bf6f2c4f355c341a92196e34ba9c24bd3f9972d",
+      "editing": "Mathematical proof sections retained; coordination, audit logs and historical research-status discussion omitted. Cross-references between included proofs normalized."
+    },
+    {
+      "source": "research/2026-10-26/complete-core-realization/REPORT.txt",
+      "source_sha256": "1039f582c8be790274cd7941e31666b02275735ffab366c4ff20c999e4a5cb91",
+      "published": "submissions/integration-register/proofs/observer-proper-doubling.txt",
+      "published_sha256": "35985cf59df540658a3477a8959328fdcc14bb888a87225701f41ab4fbf888b4",
+      "editing": "Mathematical proof sections retained; coordination, audit logs and historical research-status discussion omitted. Cross-references between included proofs normalized."
+    },
+    {
+      "source": "research/2026-10-26/same-image-cores/REPORT.txt",
+      "source_sha256": "6bd53a603e166186302dea7cbe8bd1f5cd97239cb63c9e8667516e17c815c3f9",
+      "published": "submissions/integration-register/proofs/observer-same-image-countermodel.txt",
+      "published_sha256": "67b9b7ca4621a0ebeb1b6594ca6f531ad9011cde25540b4bcbba38e059f17432",
+      "editing": "Mathematical proof sections retained; coordination, audit logs and historical research-status discussion omitted. Cross-references between included proofs normalized."
+    },
+    {
+      "source": "research/2026-10-26/atomic-question-and-h-observers/atomic-proof.md",
+      "source_sha256": "40b7563ab1135851a211311072cdc59732c238b5c498a7044df988c3e6c6ec8b",
+      "published": "submissions/integration-register/proofs/atomicity-vicinity-actuality.md",
+      "published_sha256": "c83619b8e8f95164e4c831bf8b087a49fad9fa12e3a113833ac71ba09943245c",
+      "editing": "Integrated the reduced atomic characterization using the linked Atomicity/Vicinity proof; removed superseded search-status paragraphs; retained constructions and original source provenance."
+    },
+    {
+      "source": "research/2026-10-26/choice-classicism-cores/preservation.txt",
+      "source_sha256": "0af91e69f9e45b4a4650624fdc23038ee342697f16964260caf887a30e29d1c4",
+      "published": "submissions/integration-register/proofs/observer-choice-preservation.txt",
+      "published_sha256": "30166a1ff48522dd05d75254f16cd3b5e02900e1e34b5cb25cc11d8400202466",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-26/choice-classicism-cores/proper-realization.txt",
+      "source_sha256": "7a2ec607bcd7907f225fc7641e6510622231801960536a412f0b8d68b73ed1e7",
+      "published": "submissions/integration-register/proofs/observer-choice-realization.txt",
+      "published_sha256": "5906fa5e076eca06e5c791fb9a0898a677d1df966d3cc0403a75044a5bf2b070",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-26/observer-core-choice/model-audit.txt",
+      "source_sha256": "b9b63992e0ad8cce53cc039f4ff13e7a3016a54d07e95eaefb57142abf24029e",
+      "published": "submissions/integration-register/proofs/observer-choice-countermodel.txt",
+      "published_sha256": "b9b63992e0ad8cce53cc039f4ff13e7a3016a54d07e95eaefb57142abf24029e",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-26/observer-core-choice/actuality-corollary.txt",
+      "source_sha256": "ad5b7a52e163100946442c96002eecf0ed7da57b570021965b64a9d680763f66",
+      "published": "submissions/integration-register/proofs/observer-actuality-choice.txt",
+      "published_sha256": "3e6a07740c2be04b121baccace7c0ca43c6b3b9a99ec4e2021f1454d9f2566e2",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-26/observer-core-inheritance/boolean-completeness.txt",
+      "source_sha256": "66a146b8148681a07b13e90fa3e5ac0e1569db0accc614753eef9ede93c779b0",
+      "published": "submissions/integration-register/proofs/observer-current-completeness-countermodel.txt",
+      "published_sha256": "66a146b8148681a07b13e90fa3e5ac0e1569db0accc614753eef9ede93c779b0",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-26/observer-core-inheritance/universal-realization.txt",
+      "source_sha256": "8d8abdf08e5894a98c66f36e946f65e4446854f361794d8acd05aabd4af96afb",
+      "published": "submissions/integration-register/proofs/observer-action-realization.txt",
+      "published_sha256": "39c1c4dff90f7c3d960bed5137ec5276bf30868397faa25e862ec6a3c686bb46",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-26/os-positive-conservativity/REPORT.txt",
+      "source_sha256": "a95549da1e9c6a570aae29bd11adf8736ef2bc5e953602de36b295ffb6677cb1",
+      "published": "submissions/integration-register/proofs/observer-positive-conservativity.txt",
+      "published_sha256": "4fce998acfc1790a48e1bf7046e624d5fee79fcd6afd1711383f1cdcab10aed7",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-26/dynamic-equivalence/REPORT.txt",
+      "source_sha256": "7cd1be29698880ba4b9577fe665998c0ad2d2d36bfded3b7c7cb788773c128a4",
+      "published": "submissions/integration-register/proofs/equivalence-and-maximalism.txt",
+      "published_sha256": "6dec45716468f6990c13bbfc89d523b69743bb57a4a1462a3bf18eae753d265e",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-26/strong-worlds-domain-control/REPORT.md",
+      "source_sha256": "230be6704b32af47415b7f6fa045ff001eefc9609b96760b34be8ad5dc25e0ed",
+      "published": "submissions/integration-register/proofs/strong-worlds-domain-control.md",
+      "published_sha256": "5d5b0511e5473b1317857df356bed7767ec0f7cd04c110f31939329cb6bee03c",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-26/modal-choice-coherence/universal-modal-selectors.md",
+      "source_sha256": "df4c296917a80b3c21c98fe99b484ce925199d20f5dbd6237da84ec881b56aa6",
+      "published": "submissions/integration-register/proofs/modal-choice/universal-modal-selectors.md",
+      "published_sha256": "839438378c6b7635a85ca720722b778912fac46ffd9aa7a912b918e564f25de5",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-26/modal-choice-coherence/barcan-persistence.md",
+      "source_sha256": "3dc2b29a788a9499d439d27e939435226783840ae1ef621276d44ab88dcc003c",
+      "published": "submissions/integration-register/proofs/modal-choice/barcan-persistence.md",
+      "published_sha256": "da05a362ddd726d5e73a1ba2ad54726afabf7ee009c42edeb12cfa8b0aea2ae7",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-26/modal-choice-coherence/free-root-choiceless-henkin-leaf.md",
+      "source_sha256": "e87944e81d0053b8251528ea3759c47bb9010049c2321919ecbbadf23d262b2c",
+      "published": "submissions/integration-register/proofs/modal-choice/free-root-choiceless-henkin-leaf.md",
+      "published_sha256": "63815d4783b3926795feff8af094aa9ea4dc7540b58609c01eea6228ba114fe2",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-26/modal-choice-coherence/absorbing-entrance-finite-support-pairs.md",
+      "source_sha256": "498f9c0c82bc27d02c13f0f88463f0933bb9e468eb56de31e14c3ac769fd35a9",
+      "published": "submissions/integration-register/proofs/modal-choice/absorbing-entrance-finite-support-pairs.md",
+      "published_sha256": "3ffd2c37831e16581216fe0513d0df2e764bc61ef1a9f1b83c4a8aade5887383",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-26/modal-choice-coherence/modal-transversals-from-current-completeness.md",
+      "source_sha256": "ec2dbd6180c68b90a5fc13fcd674496a315fbe78e08d47afbac75d0a0d66c4c4",
+      "published": "submissions/integration-register/proofs/modal-choice/modal-transversals-from-current-completeness.md",
+      "published_sha256": "a7cb9f20a65253d541c8dba90f72e26776c316d6e8d0b2729b94c006d27b4e12",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-26/structural-frontier/barcan-rigidity/ATOMLESS-BOOLEAN-PREFIX-COUNTERMODEL.md",
+      "source_sha256": "23c99682fd7b05c54fa3967333b1de199d70352e9bdc0e5fe5faf67e1d4f6f91",
+      "published": "submissions/integration-register/proofs/boolean-prefix-rigidity.md",
+      "published_sha256": "2b12fe80303ae1fa118acd471bcd13fef18f55251f1277e2287ec70728d969e2",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-25/observer-propagation/necessary-os-ch-inaccessible-countermodel.md",
+      "source_sha256": "6454d43affc125b5fbef9799277a3fa24aea72fbb5548a9208b6b931f98c4c72",
+      "published": "submissions/integration-register/proofs/observer-analysis/necessary-os-ch-inaccessible-countermodel.md",
+      "published_sha256": "3cb94b6094329b7a1c752b1c5f14c6e7ce5b53cb66b38f04e2a9ca30a14375b8",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-25/observer-propagation/necessary-os-persistent-field-perfect-set.md",
+      "source_sha256": "b119eae9557fae035ae70ae1a4b0ee09c894f5bd08ca1f92bea727bacd5d42d3",
+      "published": "submissions/integration-register/proofs/observer-analysis/necessary-os-persistent-field-perfect-set.md",
+      "published_sha256": "69c5dc42331f429af9b216e00e166b22b4ad5e8c98de3e0a1bf40415058b3ace",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-25/observer-propagation/necessary-os-real-countable-choice-separation.md",
+      "source_sha256": "9e0dea204a3a85d3b941022bc58e20c2683ff29250c0245bb88ea4d0faad34a6",
+      "published": "submissions/integration-register/proofs/observer-analysis/necessary-os-real-countable-choice-separation.md",
+      "published_sha256": "5790e550c54d21d28ca1d48b0b61d617d8967f1107020fcac786dc381c2a9c2f",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-25/observer-parameter-noncontingency/order-invariant-parameters.md",
+      "source_sha256": "678c5e00e9c4e21919ddcbe5aa77e26c66f38db86775eaa159ea90379e786463",
+      "published": "submissions/integration-register/proofs/observer-parameters/order-invariant-parameters.md",
+      "published_sha256": "0bc4ce10c76bcbf19c102428348473271891921485a14f4fca0989001b0ebc7e",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-26/pure-observer-recovery/filter-extension-countermodel.md",
+      "source_sha256": "eac917d5d9249d4e0f3d73f7fc006386e22506f419f0abd99e54c3e5ac151026",
+      "published": "submissions/integration-register/proofs/observer-filter-extension-countermodel.md",
+      "published_sha256": "51b88a1e31ba67ca1b47dc6342549e86f5435cae09278163cf2caa782683d8d2",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-26/structural-frontier/observers-maximalism/persistent-number-set-codes.md",
+      "source_sha256": "b778f7e654ef4312a91fcae70f14da9f15c697768076082174b72bc50a572b01",
+      "published": "submissions/integration-register/proofs/maximalism/persistent-number-set-codes.md",
+      "published_sha256": "07790a64b312e80c3c228371eef7d6293ea3a0630d38da64719a5827ce5ceec3",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-26/structural-frontier/strong-possibility/barcan-arithmetic-conservativity.md",
+      "source_sha256": "65bd300a896cd66803c6ad0263a0ab324253cb64a12d7fe1b030ffa999341efa",
+      "published": "submissions/integration-register/proofs/strong-possibility/barcan-arithmetic-conservativity.md",
+      "published_sha256": "001434c441a036eda99f16f993b532d486aad157d9dd98995dba6931ea01e0ce",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-26/structural-frontier/strong-possibility/triangulation-ladder.md",
+      "source_sha256": "02428afdb03a724e7dc2285688672cd25a3fa988349726c9725c242e0b55a22c",
+      "published": "submissions/integration-register/proofs/strong-possibility/triangulation-ladder.md",
+      "published_sha256": "c9bc2e6fd3e12812116aa802fe3313791bab2ff9d08886118216cdbf42409ffa",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-26/structural-frontier/strong-possibility/arithmetic-lifting.md",
+      "source_sha256": "a25c6e6d3c5db2c34055413ed39c6ae497572b512ded533f049447bcf73d2010",
+      "published": "submissions/integration-register/proofs/strong-possibility/arithmetic-lifting.md",
+      "published_sha256": "7474f2486219ddd9091107a3dfae3f0ab8361311ac20e038a30e3d940ffa5636",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-26/modal-choice-coherence/finite-support-pairs-henkin-leaf.md",
+      "source_sha256": "910644e0967cc90f95c434df89e4f5997800e3ccce49053b3a4a61a5e2679ad8",
+      "published": "submissions/integration-register/proofs/modal-choice/finite-support-pairs-henkin-leaf.md",
+      "published_sha256": "3aece69d47cff50604c557626380f980be53df0cfc4cd66d175652a21206ec69",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-25/observer-propagation/ch-analysis-audit.md",
+      "source_sha256": "c591219f8e837fd6190b14b7e29a702e034175a51233c83bd508f188cf1843ee",
+      "published": "submissions/integration-register/proofs/observer-analysis/ch-analysis-audit.md",
+      "published_sha256": "9d8611d3d6138358e71236c73c14413daed6073fb9575a984521019fd4a99f4c",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-26/modal-choice-coherence/absorbing-entrance-choiceless-group.md",
+      "source_sha256": "9ed702120cb558af791df5310bd08c1b9100bd4fc9ebcc60121c901aa7e2db25",
+      "published": "submissions/integration-register/proofs/modal-choice/absorbing-entrance-choiceless-group.md",
+      "published_sha256": "684a6d7addd5cc3b453a0b3a599f8c7792fbfdf2f655339245b232a89a5923c7",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-25/observer-propagation/necessary-os-ch-mahlo-countermodel.md",
+      "source_sha256": "0c201a9b85a74e16fb4140bc62a7d103f7618d82413de0c99156d9f9163220ee",
+      "published": "submissions/integration-register/proofs/observer-analysis/necessary-os-ch-mahlo-countermodel.md",
+      "published_sha256": "0f9718279676948b9a92a388db22e0a084a9720615659bbe647eab7ccf163c1c",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-25/observer-propagation/necessary-os-ch-symmetric-repair.md",
+      "source_sha256": "59ec7da6a9d7e0e79c915c3df93a2efe47038f30de713ce5421878199765c87a",
+      "published": "submissions/integration-register/proofs/observer-analysis/necessary-os-ch-symmetric-repair.md",
+      "published_sha256": "6c41fc7f04e2443aafc02df9cd7274c61116deedd4e44d5c372210d47fb0b4ae",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-25/observer-propagation/necessary-os-ch-centralizer-localization.md",
+      "source_sha256": "5d0c9486ed8a48db3ee5ad8fc62ae0c54f98c3d94865ae9da33d7a3a0d83843b",
+      "published": "submissions/integration-register/proofs/observer-analysis/necessary-os-ch-centralizer-localization.md",
+      "published_sha256": "9d1e8c498d421d955e209fbee7996f2ea7ca2ea20aba03fbb1a95c8749316a62",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-25/observer-propagation/necessary-os-ch-centralizer-audit.md",
+      "source_sha256": "5cd6b246f6a19866928ae247704b20fff6ba5def25ac246b476be36feef0dddc",
+      "published": "submissions/integration-register/proofs/observer-analysis/necessary-os-ch-centralizer-audit.md",
+      "published_sha256": "edcac0703e30128888f74c7ad15a1896b99e53347f32f84cc4bacf3ac8f90edb",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-25/observer-propagation/necessary-os-ch-stage-preserving-compressions.md",
+      "source_sha256": "86c0fcf2bd49b5aa98cd34ceb29a0907181147a4f2c3e7ac1f12c04dbf8256b0",
+      "published": "submissions/integration-register/proofs/observer-analysis/necessary-os-ch-stage-preserving-compressions.md",
+      "published_sha256": "c99936c73825d54234e7d2e43525aae514597aba9d90eadb8c708d78d1c07286",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-25/observer-propagation/necessary-os-ch-small-observer-cover.md",
+      "source_sha256": "1cf434ea21a80fa7b0675b7bd3d0e355b7f8a97b5530cfc33501838a9823551f",
+      "published": "submissions/integration-register/proofs/observer-analysis/necessary-os-ch-small-observer-cover.md",
+      "published_sha256": "44310dee5a1540035bf70ae022e6e5dbd4570cddedb641b51cfec32a3aad31da",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-25/observer-propagation/necessary-os-ch-semantic-continuation.md",
+      "source_sha256": "5aee1cc887d9fd794bcd66dfd449015d4e4a313b20d06481baed6d00be05482a",
+      "published": "submissions/integration-register/proofs/observer-analysis/necessary-os-ch-semantic-continuation.md",
+      "published_sha256": "e825dd3f01e528d257041f26e4296cb18cf7cc2979d7a6a91d43bf05b72fd25a",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-26/structural-frontier/observers-maximalism/number-set-codes-in-complete-maximalism.md",
+      "source_sha256": "3210130b46ad33dcb01bb971130af4e9a48c2a56ea46728753edafec6f08a83c",
+      "published": "submissions/integration-register/proofs/dependencies/number-set-codes-in-complete-maximalism.md",
+      "published_sha256": "2052406fb7b53b67caaf38a0a64c78d5992f1e20b6e048ff67855e59c6415199",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-26/structural-frontier/strong-possibility/neighborhood-comparison.md",
+      "source_sha256": "9aa12ac162b654b9c607daa52f2b231abad688e4cc1b0102490628af05025457",
+      "published": "submissions/integration-register/proofs/strong-possibility/neighborhood-comparison.md",
+      "published_sha256": "8129e66d6103756c045241d5b2d40283c1b685d7dc8b647f6deb48316dc3f89a",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-26/structural-frontier/strong-possibility/inductive-witnesses.md",
+      "source_sha256": "e2c88c0bea21ad295c0d532ab74b75f47dfff3f13d4d26d8099f024e310a40aa",
+      "published": "submissions/integration-register/proofs/strong-possibility/inductive-witnesses.md",
+      "published_sha256": "43f0dd27d4f1d4b3f56a126a904bf1b0708a9a592989aeacc89cff69f68e0d08",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-26/structural-frontier/strong-possibility/finite-hat-clusters.md",
+      "source_sha256": "a6fe144523ed91d64335d08ed5a25f19e274e4683d1da87252b12b49d0a9bded",
+      "published": "submissions/integration-register/proofs/strong-possibility/finite-hat-clusters.md",
+      "published_sha256": "a6fe144523ed91d64335d08ed5a25f19e274e4683d1da87252b12b49d0a9bded",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-25/observer-propagation/os-analysis-model.md",
+      "source_sha256": "31b7caf34c80664fb712ab30e59929fb3f18f674db89ce600b741d2f98be4b68",
+      "published": "submissions/integration-register/proofs/observer-analysis/os-analysis-model.md",
+      "published_sha256": "aac2710f2dcd914eddb2673e78b240ff076af2d602f4165b2236666cbdfe685d",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-25/observer-propagation/rev-analysis.md",
+      "source_sha256": "448245bcaa834b7d4f4c19f813de4a33702a9ca18a3c8751cafd58a9132733c8",
+      "published": "submissions/integration-register/proofs/observer-analysis/rev-analysis.md",
+      "published_sha256": "bd333cff37f123db2e464642a827e3742b5d3364f2e82f5cf5b3cdff568f9746",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-25/observer-propagation/os-versus-rev-analysis.md",
+      "source_sha256": "cbaefd0d6864c1376144942bd8f8cd82ee91d9805a862a11771ea173f1358f92",
+      "published": "submissions/integration-register/proofs/observer-analysis/os-versus-rev-analysis.md",
+      "published_sha256": "fc99aab8693f142bb9ffbc8ebdcdd1ef08e8b9c3a877907ce0ae769d97a3027f",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-25/database-priorities/analysis/analytical-sentence.txt",
+      "source_sha256": "0edff407c4b347b1cae7d5192faf4b603ce0b900e43610064a4d3c93ea62632a",
+      "published": "submissions/integration-register/proofs/dependencies/analytical-sentence.txt",
+      "published_sha256": "0edff407c4b347b1cae7d5192faf4b603ce0b900e43610064a4d3c93ea62632a",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-25/database-priorities/analysis/c5-functional-choice-analysis.md",
+      "source_sha256": "5b014e783e82c3e35a323a785ae9971e6f937fe3bc5ce97ff26b491c5478b596",
+      "published": "submissions/integration-register/proofs/dependencies/c5-functional-choice-analysis.md",
+      "published_sha256": "df3f87ed17bcdded57030ea3af9c54ca307c61af25972e843c74693cbfe21ed9",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-25/observer-propagation/necessary-os-ch-countable-repair.md",
+      "source_sha256": "a825f3aafe3c2c776864dab249d792fd16b772f136e4df5356f3d364133576d5",
+      "published": "submissions/integration-register/proofs/observer-analysis/necessary-os-ch-countable-repair.md",
+      "published_sha256": "8d979e92d0f169a6aa9f24ec5d11c31a5d39c79182c7914b380d349d1a6ac3fc",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-25/observer-propagation/necessary-os-ch-cardinal-representation-countermodel.md",
+      "source_sha256": "b2d0ed92d44555a061c2562b4f9eaffadd1156cbb39312f02a8a083a6687fc8c",
+      "published": "submissions/integration-register/proofs/observer-analysis/necessary-os-ch-cardinal-representation-countermodel.md",
+      "published_sha256": "f252be9b1de63b3f2d0bacd3ac643d203c6e488f12c9319212590e0e7af6e30f",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-25/observer-propagation/necessary-os-analysis-countermodel.md",
+      "source_sha256": "6fae6a02a271b69c97b523a15e99c8842b1d0ed6b7024f42e7bf7e246fc6932e",
+      "published": "submissions/integration-register/proofs/observer-analysis/necessary-os-analysis-countermodel.md",
+      "published_sha256": "f6a692ce864483d7a95e23d2a4dff2c8dae922ccede9a53ff8503b78b6936dbf",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-25/observer-propagation/necessary-os-ch-mixed-support-localization.md",
+      "source_sha256": "04131721cb5f56536814979e8843f3c13c88ffffe18034eed8dad1917613c9b8",
+      "published": "submissions/integration-register/proofs/observer-analysis/necessary-os-ch-mixed-support-localization.md",
+      "published_sha256": "3fc9e0e7cff4e8f8f0daa4e4e5cf51a03cdbe3eb00d7b6ea5ff0301d6c2c20e7",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-25/observer-propagation/arithmetic-audit.md",
+      "source_sha256": "233b0656bb1f0ed39a88e83512ffc521a23475c80806af47a78ada953ccbe1ae",
+      "published": "submissions/integration-register/proofs/observer-analysis/arithmetic-audit.md",
+      "published_sha256": "f016a2ff8a4208206f8cead5852ed28a8a0bf9b541987f9b232fa869fa59c8e1",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-25/strong-possibility/unrestricted-pass/masked-retraction.md",
+      "source_sha256": "e9258d266d0abf93e25efae5372192f510a0bbf7619d2ef9a94c12c141dc5377",
+      "published": "submissions/integration-register/proofs/strong-possibility/masked-retraction.md",
+      "published_sha256": "8df798bfe5633266d59f6c754e6e0ed817a4c6aa5757f634a6ef5a6bdc77f67d",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-25/observer-propagation/os-analysis-positive.md",
+      "source_sha256": "fd96e8784e92b96b9c5daa531b6d6b0c27d8e79915d47e4fce6b2334ded496b7",
+      "published": "submissions/integration-register/proofs/observer-analysis/os-analysis-positive.md",
+      "published_sha256": "b800879aa8402e2fa39106ad7d260065c3e461bda998b236b94ba4cc83162121",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-25/observer-propagation/generic-observer-model-audit.md",
+      "source_sha256": "3b8c93c2157c3c5d1ab4abf1c0c23ab989b7892f94af06d86d7aa5a698503854",
+      "published": "submissions/integration-register/proofs/observer-analysis/generic-observer-model-audit.md",
+      "published_sha256": "8889d504fcd85377abddcc4606d0ba546b1d40b65635d419fa4e310244a1669b",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-25/observer-propagation/mathematical-propagation.md",
+      "source_sha256": "3c314a836626d176f23dc8fa435ca9e500c59a604b0da6c7e4224b79dd30f283",
+      "published": "submissions/integration-register/proofs/observer-analysis/mathematical-propagation.md",
+      "published_sha256": "f34c96cbee4a9b469aeb8d2a4621accaba619f50d35b0bb39439f5f311f860c6",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-25/database-priorities/analysis/boolean-model-audit.txt",
+      "source_sha256": "c86d6f8f06143e3f66cd8c9d9f4726e9a84c736611ca38bff15bc7ab8ffc2134",
+      "published": "submissions/integration-register/proofs/dependencies/boolean-model-audit.txt",
+      "published_sha256": "e4c962c08f07fc68b235bd8aa0233fce88c9a1103772bac45fea85b457384efd",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-25/observer-propagation/necessary-os-ch-cardinal-profiles.md",
+      "source_sha256": "31b764e9dcbe13f53d2780a246d94c03d2d80ea699cbfda9ce4fc6cd656b078e",
+      "published": "submissions/integration-register/proofs/observer-analysis/necessary-os-ch-cardinal-profiles.md",
+      "published_sha256": "efb0bdf0177cf13351e90d42eae81f581e3735cab7aa67df559d63980e5758f1",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-25/observer-propagation/necessary-os-model-audit.md",
+      "source_sha256": "e365072b559e46f316c173ca9c95f069ff20cee01fee60aa88b1bba26e008a82",
+      "published": "submissions/integration-register/proofs/observer-analysis/necessary-os-model-audit.md",
+      "published_sha256": "b4d8a8e2e9e817cd8a8995b6423a73fa5ed24cbea00d138f9f58831bdce4747e",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-25/observer-propagation/necessary-os-forcing.md",
+      "source_sha256": "e154e25c6e456836f48433d3ebe1d8c31b45145374fe48fde235a6126ac91286",
+      "published": "submissions/integration-register/proofs/observer-analysis/necessary-os-forcing.md",
+      "published_sha256": "8e442b91bb2025586fd3ca2b40a8da49ed0b16ef97633025f26a3d2bd4458f7a",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-25/observer-propagation/infinity-audit.md",
+      "source_sha256": "360bc908466dcc77bb4598bb5b2ec06080920a1d3686cad4487d6a71955e129f",
+      "published": "submissions/integration-register/proofs/observer-analysis/infinity-audit.md",
+      "published_sha256": "22577137d55f29d28f71a27e8f052f7658b969db880920579406c128043ec3a2",
+      "editing": "Mathematical proof retained; research workflow and historical status prose omitted where separable. Publication-relative cross-references and math delimiters normalized."
+    },
+    {
+      "source": "research/2026-10-26/pointwise-reversible-separation/REPORT.md",
+      "source_sha256": "30429b27fc3b82ed56b653a6f8877241d7bff8897481d7913e23aca0ffdc7928",
+      "published": "submissions/integration-register/proofs/pointwise-reversible-separation.md",
+      "published_sha256": "eb91b39bf63616697cf4a870f8c6ecf98266e0fa2a8a0e73f883b36354ebefd6",
+      "editing": "Integrated the reduced atomic characterization using the linked Atomicity/Vicinity proof; removed superseded search-status paragraphs; retained constructions and original source provenance."
+    },
+    {
+      "source": "research/2026-10-26/pointwise-reversible-separation/model-lane.md",
+      "source_sha256": "78ef8c6ce7eabd2dbdd9b6db60204a08abae4a7d4fb3ae460c8475eb0efc6293",
+      "published": "submissions/integration-register/proofs/pointwise-models.md",
+      "published_sha256": "09fe8dd79409e1da15bb15bee444a36fda75c8dc589f5570f00671dc0a08daa8",
+      "editing": "Retained pointwise and whole-law mathematics; omitted the separate exact-C observer-recovery proposal; normalized links and display math."
+    },
+    {
+      "source": "research/2026-10-26/pointwise-reversible-separation/atomic-lane.md",
+      "source_sha256": "a8049d28341bc9db661d831600e36138566fe07991a6ad5e743e496c1c669994",
+      "published": "submissions/integration-register/proofs/pointwise-atomicity.md",
+      "published_sha256": "92b1de4719b61c0fe3edb3ff1752cff0ce1d2552ad426262e47f493f0aa66416",
+      "editing": "Integrated the reduced atomic characterization using the linked Atomicity/Vicinity proof; removed superseded search-status paragraphs; retained constructions and original source provenance."
+    },
+    {
+      "source": "research/2026-10-26/pointwise-reversible-separation/model-characterization.md",
+      "source_sha256": "095a1ae1f5fd7fae88478e10f0f50af5450924174ed3f3fee4768c98a5759cb7",
+      "published": "submissions/integration-register/proofs/pointwise-action-characterization.md",
+      "published_sha256": "cbff4b01b080ff0a6d71051179f04b3327a602613523002caa9af6cf628f010d",
+      "editing": "Retained pointwise and whole-law mathematics; omitted the separate exact-C observer-recovery proposal; normalized links and display math."
+    },
+    {
+      "source": "research/2026-10-26/modal-choice-coherence/modal-to-current-choice-reduction.md",
+      "source_sha256": "60c95e7a4fd6a22f0443fcef1bf15e2317f56b35c23a0f9408b191950aab2b4f",
+      "published": "submissions/integration-register/proofs/modal-choice/modal-to-current-choice-reduction.md",
+      "published_sha256": "ebaa9fa50e0fedb06c3c59f7e630e55505ae5ef92ffb85eb51f4b453fc4b89ae",
+      "editing": "Retained theorem statements, proofs and attribution; normalized mathematical display and source links; omitted workflow declarations."
+    },
+    {
+      "source": "research/2026-10-26/modal-choice-coherence/modal-well-ordering-bounds.md",
+      "source_sha256": "65e7cad5273b6f97ac380b8d1244f4a5281778992ea57ce8c6b188e4d9e7bf6c",
+      "published": "submissions/integration-register/proofs/modal-choice/modal-well-ordering-bounds.md",
+      "published_sha256": "4d9c0e4cd9bb4b04e0ea3edfadd11735b9983090c0986a41e2e023782c65d9c8",
+      "editing": "Retained theorem statements, proofs and attribution; normalized mathematical display and source links; omitted workflow declarations."
+    },
+    {
+      "source": "research/2026-10-26/modal-choice-coherence/modal-witness-transfer.md",
+      "source_sha256": "6220336882805bc1f9c0149611ad40e0cc5122323733f98fd0c57d2c7e35e5bb",
+      "published": "submissions/integration-register/proofs/modal-choice/modal-witness-transfer.md",
+      "published_sha256": "597455a174c8aab8c2b82d49dc9af89048a118ef019c20cf204dd2fa635eaf43",
+      "editing": "Retained theorem statements, proofs and attribution; normalized mathematical display and source links; omitted workflow declarations."
+    },
+    {
+      "source": "research/2026-10-26/structural-frontier/observers-maximalism/completeness-triangulation.md",
+      "source_sha256": "3cd7af3221587b6091aab94297fd6c893b2c606c1986a49c545736d44fd02801",
+      "published": "submissions/integration-register/proofs/maximalism/completeness-triangulation.md",
+      "published_sha256": "ca282abf8fa91e571cc23557cf0d306daa789b2e02084cdc2dd4df087ea48680",
+      "editing": "Retained mathematical arguments and scope; normalized notation and public links; removed workflow status and audit chronology."
+    },
+    {
+      "source": "research/2026-10-26/structural-frontier/observers-maximalism/scalar-joins-without-uniform-landing.md",
+      "source_sha256": "b873ae4fec0c007c6ad2d67d731082cec20ea773455dcfad42ddf6f104365124",
+      "published": "submissions/integration-register/proofs/maximalism/scalar-joins-without-uniform-landing.md",
+      "published_sha256": "6aee938ba1d045fc092387b2b7e887e0faf5129b7dcf83a94f50afc894940c20",
+      "editing": "Retained mathematical arguments and scope; normalized notation and public links; removed workflow status and audit chronology."
+    },
+    {
+      "source": "research/2026-10-26/structural-frontier/observers-maximalism/numeric-singleton-join-boundary.md",
+      "source_sha256": "b0605c19b8f0b1b497441628d552a3eae8b1f1abf0310f212c479b0c62ca0803",
+      "published": "submissions/integration-register/proofs/maximalism/numeric-singleton-join-boundary.md",
+      "published_sha256": "6f05e54108b42fab88780a39bbbf1f2c8eec56b229dc87ce4e0b10b60bf10529",
+      "editing": "Retained mathematical arguments and scope; normalized notation and public links; removed workflow status and audit chronology."
+    },
+    {
+      "source": "research/2026-10-26/structural-frontier/observers-maximalism/numberhood-rigidity-and-distinctness.md",
+      "source_sha256": "edff0600dfe154877a2788370640fde0ad76b4f1a6399199f9ca2cf2366a41b0",
+      "published": "submissions/integration-register/proofs/maximalism/numberhood-rigidity-and-distinctness.md",
+      "published_sha256": "e232a80b8abf357dfcf2df7452756c10d964c2fc4e8f781b6ef9a627f2863e20",
+      "editing": "Retained mathematical arguments and scope; normalized notation and public links; removed workflow status and audit chronology."
+    },
+    {
+      "source": "research/2026-10-26/structural-frontier/observers-maximalism/logical-observers-and-numberhood.md",
+      "source_sha256": "454d88564810acdd5af7c4b10d18cc01d61faedfac3626d2942266d8d756f6db",
+      "published": "submissions/integration-register/proofs/maximalism/logical-observers-and-numberhood.md",
+      "published_sha256": "80aa0ae996f38147587c2707d210fc49b616e9bc82bacd11bde72b6529013338",
+      "editing": "Retained mathematical arguments and scope; normalized notation and public links; removed workflow status and audit chronology."
+    },
+    {
+      "source": "research/2026-10-26/structural-frontier/strong-possibility/conditional-cut-models.md",
+      "source_sha256": "5def040f1732aa06a14e229a8b3e66deaba574830a7ec799e9fd733167568ed0",
+      "published": "submissions/integration-register/proofs/strong-possibility/conditional-cut-models.md",
+      "published_sha256": "15d02399b5a7d857f724f3b72b666568f8125a7eb6ab22f24941361d1bc87cb7",
+      "editing": "Retained mathematical arguments and scope; normalized notation and public links; removed workflow status and audit chronology."
+    },
+    {
+      "source": "research/2026-10-26/structural-frontier/choice-actuality/persistent-fixed-points-and-cofinal-chains.md",
+      "source_sha256": "84200f57c7e95e55bc41c8a9be60f02642d992dfd55b7d261e1a543abc4cbb45",
+      "published": "submissions/integration-register/proofs/modal-choice/persistent-fixed-points-and-cofinal-chains.md",
+      "published_sha256": "8c50a9f8793648617321b37c8b098bb63c2340d562adb057d34de2e2b30b9a72",
+      "editing": "Retained mathematical arguments and scope; normalized notation and public links; removed workflow status and audit chronology."
+    },
+    {
+      "source": "research/2026-10-26/structural-frontier/strong-possibility/conditional-sigma-one-soundness.md",
+      "source_sha256": "29bf83e215acebe476d7697b30cdac378e20df9a837ed324bf357d532d0328d4",
+      "published": "submissions/integration-register/proofs/strong-possibility/conditional-sigma-one-soundness.md",
+      "published_sha256": "a8fc5b55fade61f3f34a62c5912242f4fb5a42e452c06f283c9f176e09ddc502",
+      "editing": "Retained mathematical arguments and scope; normalized notation and public links; removed workflow status and audit chronology."
+    },
+    {
+      "source": "research/2026-10-26/structural-frontier/strong-possibility/arithmetic-triangulation.md",
+      "source_sha256": "77b0b9d838e32149d36bd3f43721ff24cefd1d9c737d8ee834a6c31ba3807a6a",
+      "published": "submissions/integration-register/proofs/strong-possibility/arithmetic-triangulation.md",
+      "published_sha256": "db9b0b6d8e34876820a7396c4043f33454bb0746be40244368fc6b4ad39f014a",
+      "editing": "Retained mathematical arguments and scope; normalized notation and public links; removed workflow status and audit chronology."
+    },
+    {
+      "source": "research/2026-10-26/coherent-observer-families/object-language-and-finite-basis.txt",
+      "source_sha256": "336f67a7dc14b5a7814205753497fe4135ae1cb36eacb528680cd0c20b3cb823",
+      "published": "submissions/integration-register/proofs/coherent-observers/object-language-and-finite-basis.txt",
+      "published_sha256": "d27770177183db76a918d4b1039a214f129971a4dd494e697e739e80f0325d15",
+      "editing": "Mathematical text retained; portable proof references; omitted workflow commentary and reconciled review status with its scoped receipt. Equivalent separation statements use universal agreement implying identity; distinguishing-language explanations and witness arguments are retained."
+    },
+    {
+      "source": "research/2026-10-26/coherent-observer-families/stable-families-and-propagation.txt",
+      "source_sha256": "0a822230529da8e94a87978919d92543ff0f3a6e9cf6acd6568330815dba120d",
+      "published": "submissions/integration-register/proofs/coherent-observers/stable-families-and-propagation.txt",
+      "published_sha256": "a732ea216eab43a5ddcfcf15f643dbfdf8ff44638b6ee3675787d724022989af",
+      "editing": "Mathematical text retained; portable proof references; omitted workflow commentary and reconciled review status with its scoped receipt. Equivalent separation statements use universal agreement implying identity; distinguishing-language explanations and witness arguments are retained."
+    },
+    {
+      "source": "research/2026-10-26/coherent-observer-families/uniform-retractions.txt",
+      "source_sha256": "eb74dd0d9cca68f871594e1e588e3619d66fc7d2ac1895bb750cf5774dea3ea3",
+      "published": "submissions/integration-register/proofs/coherent-observers/uniform-retractions.txt",
+      "published_sha256": "6dd57f9c6dac92ebaecab1712a80b0de076f6c45209535261807247427a3f737",
+      "editing": "Mathematical text retained; portable proof references; omitted workflow commentary and reconciled review status with its scoped receipt. Equivalent separation statements use universal agreement implying identity; distinguishing-language explanations and witness arguments are retained."
+    },
+    {
+      "source": "research/2026-10-26/coherent-observer-families/commutative-shift-semantics.txt",
+      "source_sha256": "6ee14262b0dcdc6bd41a9f33d2034004be92799b1ad3daf9aa22390379900648",
+      "published": "submissions/integration-register/proofs/coherent-observers/commutative-shift-semantics.txt",
+      "published_sha256": "77d0023c9e8abb3925f2b142eb188aa42c295e91216daff9ed0dbb954df41c60",
+      "editing": "Mathematical text retained; portable proof references; omitted workflow commentary and reconciled review status with its scoped receipt. Equivalent separation statements use universal agreement implying identity; distinguishing-language explanations and witness arguments are retained."
+    },
+    {
+      "source": "research/2026-10-26/coherent-observer-families/iterated-cores.txt",
+      "source_sha256": "3d3732c1af2d253bcb4ff8049915c3c00413a10aa0e9779502219eabbef9a4b3",
+      "published": "submissions/integration-register/proofs/coherent-observers/iterated-cores.txt",
+      "published_sha256": "34d8dfdb2cd1795e5c03b83ed59d2778d01cd7c35ea3f86b2233c9a845287de9",
+      "editing": "Mathematical text retained; portable proof references; omitted workflow commentary and reconciled review status with its scoped receipt. Equivalent separation statements use universal agreement implying identity; distinguishing-language explanations and witness arguments are retained."
+    },
+    {
+      "source": "research/2026-10-26/coherent-observer-families/coherent-families.txt",
+      "source_sha256": "d3094a0526f795a5b052f10f2728ff8b871df4ce65161f5ede3ee035f71548ca",
+      "published": "submissions/integration-register/proofs/coherent-observers/coherent-families.txt",
+      "published_sha256": "ee5b64c295ded5c728330e4c5e0d417af8dd484550b14abcc353ba31842eea1d",
+      "editing": "Mathematical text retained; portable proof references; omitted workflow commentary and reconciled review status with its scoped receipt. Equivalent separation statements use universal agreement implying identity; distinguishing-language explanations and witness arguments are retained."
+    },
+    {
+      "source": "research/2026-10-26/coherent-observer-families/finite-alphabet-coherence-countermodels.txt",
+      "source_sha256": "d551f8af50784c483634ef745c4f68a31dd6f76d7ffc9386aa19aca5ab961e36",
+      "published": "submissions/integration-register/proofs/coherent-observers/finite-alphabet-coherence-countermodels.txt",
+      "published_sha256": "0c7fce9d6f4fbc4e031e0d8334b42be4f24fda48c0e069b73dba4cbef0815de1",
+      "editing": "Mathematical text retained; portable proof references; omitted workflow commentary and reconciled review status with its scoped receipt. Equivalent separation statements use universal agreement implying identity; distinguishing-language explanations and witness arguments are retained."
+    },
+    {
+      "source": "research/2026-10-26/coherent-observer-families/isolated-point-nonpropagation.txt",
+      "source_sha256": "7661c775243112d64b6c67711e77afcd13c1ed0ded5492ef1753a6c1c1645682",
+      "published": "submissions/integration-register/proofs/coherent-observers/isolated-point-nonpropagation.txt",
+      "published_sha256": "0d9fa6d38528aa477816b8135b97ce77b5a46bc8679fdbbb8367cdcdf94b15c2",
+      "editing": "Mathematical text retained; portable proof references; omitted workflow commentary and reconciled review status with its scoped receipt. Equivalent separation statements use universal agreement implying identity; distinguishing-language explanations and witness arguments are retained."
+    },
+    {
+      "source": "research/2026-10-26/coherent-observer-families/commuting-shifts-without-inverses.txt",
+      "source_sha256": "98bb1cdb8af64fc1e56f044c37502e748e09bb2bda9e87720447629c056c4811",
+      "published": "submissions/integration-register/proofs/coherent-observers/commuting-shifts-without-inverses.txt",
+      "published_sha256": "a9ae362047e92ef45dddd0803dd5245284651c1c15662ae8d9b81cabd4bbb67a",
+      "editing": "Mathematical text retained; portable proof references; omitted workflow commentary and reconciled review status with its scoped receipt. Equivalent separation statements use universal agreement implying identity; distinguishing-language explanations and witness arguments are retained."
+    },
+    {
+      "source": "research/2026-10-26/coherent-observer-families/cohen-separation-model.txt",
+      "source_sha256": "e04447bc19beb3d9480b3d87c198a87db7d2d23058be0b5699f4a5699b1b96e5",
+      "published": "submissions/integration-register/proofs/coherent-observers/cohen-separation-model.txt",
+      "published_sha256": "b5913d49d7b60082e1776c3232a00ea20d228727c03cd015f662f5f27309d587",
+      "editing": "Mathematical text retained; portable proof references; omitted workflow commentary and reconciled review status with its scoped receipt. Equivalent separation statements use universal agreement implying identity; distinguishing-language explanations and witness arguments are retained."
+    },
+    {
+      "source": "research/2026-10-26/coherent-observer-families/directedness-converse-countermodel.txt",
+      "source_sha256": "83b35128e8db17e6368468739a88d8fc2644ab219c0c5d7b2f175d6ff723a6ea",
+      "published": "submissions/integration-register/proofs/coherent-observers/directedness-converse-countermodel.txt",
+      "published_sha256": "4a80b599f24c0010127cb35cf941eb5b878081bb094d682aa27dd5b42d5e8f7d",
+      "editing": "Mathematical text retained; portable proof references; omitted workflow commentary and reconciled review status with its scoped receipt. Equivalent separation statements use universal agreement implying identity; distinguishing-language explanations and witness arguments are retained."
+    },
+    {
+      "source": "research/2026-10-26/structural-frontier/observers-maximalism/bernoulli-shift-injective-separation.md",
+      "source_sha256": "22fe06ea4f5ad7fc0257264f21e94bc5dcc6ac428f007682f893e19243bad3ae",
+      "published": "submissions/integration-register/proofs/coherent-observers/bernoulli-shift-injective-separation.md",
+      "published_sha256": "8a58979cccb15220dc20579b4bb408eab0ed542a70bc7b839d576c5197920819",
+      "editing": "Retained construction and proof; relative references made portable. Equivalent separation statements use universal agreement implying identity; distinguishing-language explanations and witness arguments are retained."
+    },
+    {
+      "source": "research/2026-10-26/coherent-observer-families/joint-injective-separation.txt",
+      "source_sha256": "9d8fee097131955c9db2e1d6adacb72a30ba912eca6f8819bb384cdf1dbd218f",
+      "published": "submissions/integration-register/proofs/coherent-observers/joint-injective-separation.txt",
+      "published_sha256": "bdfd0ab0615c83dbd797bbb68b4cb4fd34c5d82678a2f35a4adfe63a59705c59",
+      "editing": "Retained mathematical arguments and exact scope; portable source references; omitted internal process identifiers and progress commentary. Equivalent separation statements use universal agreement implying identity; distinguishing-language explanations and witness arguments are retained."
+    },
+    {
+      "source": "research/2026-10-26/coherent-observer-families/finite-cofinite-joint-separation.txt",
+      "source_sha256": "3bfab8d6b631cc1bcad59ac7b68cd305aa8e75017bdda561ff1127cb0e2b65a4",
+      "published": "submissions/integration-register/proofs/coherent-observers/finite-cofinite-joint-separation.txt",
+      "published_sha256": "fb659509e6f3955a2d6ddd7982fe9b9671255d439b2eed0cddec39e10aced3e6",
+      "editing": "Retained mathematical arguments and exact scope; portable source references; omitted internal process identifiers and progress commentary. Equivalent separation statements use universal agreement implying identity; distinguishing-language explanations and witness arguments are retained."
+    },
+    {
+      "source": "research/2026-10-26/coherent-observer-families/choice-implies-coherent-reversible-separation.txt",
+      "source_sha256": "6d6d0c154306144c3cf6c3a2b3c6a208de094f104913081318f9f92755cd924f",
+      "published": "submissions/integration-register/proofs/coherent-observers/choice-implies-coherent-reversible-separation.txt",
+      "published_sha256": "be4231824765490f37c382fa7c3f3b76c1437f06d6650371eeb44000e02b9aaa",
+      "editing": "Retained mathematical arguments and exact scope; portable source references; omitted internal process identifiers and progress commentary. Equivalent separation statements use universal agreement implying identity; distinguishing-language explanations and witness arguments are retained."
     }
   ],
-  "source_register_sha256": "a65cf06b942cd84e848e787357678d53a8970a1546b3427023b6a4bfb2948792"
+  "source_register_sha256": "fd7584484f479f627728f413df10df5522c1a8e340524953a17124b75ba0255b",
+  "summary": {
+    "published": "submissions/integration-register/OBSERVER-INTERPRETATIONS.md",
+    "source_proofs": [
+      "submissions/integration-register/proofs/observer-quotient-bf.txt",
+      "submissions/integration-register/proofs/observer-quotient-general.txt",
+      "submissions/integration-register/proofs/observer-completeness-descent.txt",
+      "submissions/integration-register/proofs/observer-proper-doubling.txt",
+      "submissions/integration-register/proofs/observer-same-image-countermodel.txt",
+      "submissions/integration-register/proofs/observer-choice-preservation.txt",
+      "submissions/integration-register/proofs/observer-choice-realization.txt",
+      "submissions/integration-register/proofs/observer-choice-countermodel.txt",
+      "submissions/integration-register/proofs/observer-actuality-choice.txt",
+      "submissions/integration-register/proofs/observer-current-completeness-countermodel.txt",
+      "submissions/integration-register/proofs/observer-action-realization.txt",
+      "submissions/integration-register/proofs/observer-positive-conservativity.txt"
+    ]
+  }
 }
