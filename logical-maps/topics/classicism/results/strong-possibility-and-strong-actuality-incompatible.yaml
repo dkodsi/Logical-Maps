@@ -1,0 +1,32 @@
+id: strong-possibility-and-strong-actuality-incompatible
+premises:
+- strong-possibility-r
+- strong-actuality
+conclusion: false
+proof: 'C reflects distinctness-preserving possibility of every universal finite Boolean combination of
+  typed identities: a false identity pattern is protected by the conjunction of its disequalities and
+  NI. The pure sentence saying there are no strong propositional worlds is such a universal identity sentence,
+  since the boxed decision law is itself equality to Top. The recorded atomless Maximalist model makes
+  that sentence consistent with Max(C), so pure Strong Possibility supplies its distinctness-preserving
+  possibility and reflection supplies its truth. A Strong Actuality witness contradicts it. The same-stem
+  writeup also proves that existential projection sends every strong relational world to a strong propositional
+  world, with no BF.'
+sources:
+- 'OpenAI Codex, prompted by Daniel Kodsi, Strong Possibility: density, universal theory, and algebraic
+  embeddings, 22 October 2026, §3, unpaginated; Strong Possibility: products, reduced products, and minimal
+  identity algebras, 22 October 2026, §5, unpaginated.'
+- Cian Dorr with Claude Opus 5.5, coalesced-pinned-substitutions-root model, 19 October 2026, maximalism
+  and atomlessness arguments; model verification caveat preserved in the writeup.
+notes: The proof excludes arbitrary strong-world entities at every relational type, not weak atoms or
+  Actuality. It uses the existing recorded atomless Maximalist model without upgrading its verification
+  status. Pure SP consistency remains open. Its incompatibility with Strong Atomicity was already a native
+  consequence and is not duplicated. Independent AI mathematical review; no human or Lean certification.
+status: proved
+certificate:
+  source_id: misc
+  produced_by: OpenAI Codex, prompted by Daniel Kodsi, ordinary mathematical research
+  recorded_by: OpenAI Codex, prompted by Daniel Kodsi, integration preparation of 28 October 2026
+  checked_by: []
+  date: '2026-10-28'
+  lean: none
+references: []

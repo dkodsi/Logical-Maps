@@ -1,0 +1,74 @@
+id: full-boolean-valued-atom-and-cohen-constructible-ground
+name: 'Full Boolean-valued model: isolated atom and Cohen algebra over a constructible ground'
+definition: Work internally over ZFC + V=L. Set E=omega, A=RO(Add(omega,1)), B=2 x A, D_e=E, D_t=B, and
+  D_(sigma,rho)=D_rho^D_sigma for every admitted relational output rho. Use Boolean operations and complete
+  meets/joins, ordinary application and abstraction, and crisp identity of ground entities at every type.
+  Evaluate at the isolated first-coordinate atom. Interpret relational signature constants as top; no
+  signature-specific verdict is claimed. This is a ground-specific variant of Bacon's full Boolean-valued
+  construction, not a replacement of the CH-changing upstream model.
+certificate:
+  source_id: misc
+  produced_by: OpenAI Codex, prompted by Daniel Kodsi (native-language transfer and strengthened-premise
+    audit); underlying construction and analytical contingency by Andrew Bacon
+  recorded_by: OpenAI Codex, prompted by Daniel Kodsi; independent integration review of 28 October 2026
+  checked_by: []
+  date: '2026-10-25'
+  lean: none
+sources:
+- Andrew Bacon, Could the truths of mathematics have been different?, draft of 9 October 2025, pp. 22–23,
+  note 55, and Appendix B.2, pp. 7–9 of the separately paginated appendix.
+- OpenAI Codex, prompted by Daniel Kodsi, C5 and Functional Choice do not entail Necessity of Analysis,
+  25 October 2026, §§2–7 (unpaginated).
+source_names:
+- 'Bacon: analytical contingency'
+- Native analytical transfer and premise audit
+references:
+- paper: bacon-mathematical-contingency
+  role: background
+  locator: pp. 22–23, note 55; Appendix B.2, pp. 7–9
+  note: The source already reports bare-C5 analytical contingency; the additional-premise verification
+    and CH-preserving native-language transfer are the connecting contribution.
+arguments:
+- id: stable-identity-and-choice
+  holds:
+  - necessary-distinctness-necessary-r
+  - functional-choice-r
+  by: OpenAI Codex, prompted by Daniel Kodsi
+  date: '2026-10-25'
+  choice: uses
+  writeup: full-boolean-valued-atom-and-cohen-constructible-ground
+  text: Crisp identity gives necessary all-type ND. At the isolated atom, external Choice and full function
+    domains give Functional Choice. The other audited choice and completeness premises follow by recorded
+    closure; §§2 and 6 of the write-up also give direct model verifications.
+- id: quantified-infinity
+  holds:
+  - axiom-of-infinity-e
+  - axiom-of-infinity-t
+  by: OpenAI Codex, prompted by Daniel Kodsi
+  date: '2026-10-25'
+  writeup: full-boolean-valued-atom-and-cohen-constructible-ground
+  text: Both ground carriers are infinite. Crisp finite subsets distinguish all finite numeral terms.
+    The crisp characteristic family of their successor orbit is inductive and excludes every other candidate
+    from the least inductive cardinality family. No such numeral counts the universal infinite carrier.
+    This proves the quantified axioms, not just their finite lower-bound schemas; §6.
+- id: analytical-contingency-with-ch
+  holds:
+  - non-contingency-of-ch
+  fails:
+  - necessity-of-analysis
+  by: OpenAI Codex, prompted by Daniel Kodsi
+  date: '2026-10-25'
+  choice: uses
+  writeup: full-boolean-valued-atom-and-cohen-constructible-ground
+  text: The finite first-order field sentence with N expressing that every real is constructible holds
+    in the ground and is forced false after one Cohen real. Both coordinates satisfy CH. The extensional
+    subset-name transfer and carrier-capacity argument in §§3–5 put real structures on the same carrier
+    at t. The two universal analytical truth propositions have values (1,0) and (0,1), so neither is top
+    and both boxes fail. CH holds in every real structure in both coordinates. Transfer excludes literal
+    equality or higher predicates on relation intensions.
+notes: Relative construction over ZFC + V=L, of the usual consistency strength of ZFC; no countable transitive
+  model or ambient generic is assumed. Full Boolean names implement the forcing calculation. Bare-C5 analytical
+  contingency is source-reported; the ground-specific native model and stronger-premise comparison are
+  the present contribution. The integration review checked all ordinary arguments in §§1–7 and the finite-language
+  appendix; the source model, theory scope and date are retained. No whole-language Boolean-valued transfer
+  is asserted.

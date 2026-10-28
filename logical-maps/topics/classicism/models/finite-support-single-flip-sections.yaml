@@ -1,0 +1,61 @@
+id: finite-support-single-flip-sections
+name: 'Finite-support action model: single-flip sections and projection'
+certificate:
+  source_id: misc
+  produced_by: OpenAI Codex, prompted by Daniel Kodsi, replacement witness argument of 28 October 2026,
+    using the attributed constructions below
+  recorded_by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review of 28 October 2026
+  checked_by: []
+  date: '2026-10-28'
+  lean: none
+sources:
+- OpenAI Codex, prompted by Daniel Kodsi, Admissible replacement witnesses for four completeness separations,
+  28 October 2026, §§1–5, unpaginated; independent integration proof in the linked writeups.
+- 'Andrew Bacon and Cian Dorr, Classicism, draft of 16 May 2023, Appendix D, Definitions D.1–D.3 and Proposition
+  D.4, pp. 73–74: soundness of ideally-full finitely pinned action models. The earlier unrestricted sections-and-projection
+  construction supplies the framework precedent, not these new atomic/completeness verdicts.'
+definition: Individuals are N at W0 and N×{0,1} at W1. From W0 there are only identity and sections f_*
+  (all zero) and f_k (one flip at k). From W1 there are projection pi to W0, identity and e_j=f_j pi to
+  W1. Composition obeys pi f_j=1, e_i f_j=f_i, e_i e_j=e_i and pi e_j=pi. Use the ideally-full hierarchy
+  of all finitely pinned intensions, without an extra symmetry condition, and evaluate at 1_W0. The writeup
+  checks the category and whole transported finite pinning, not only current rows.
+arguments:
+- id: current-distinctness
+  text: Each f_j has the left inverse pi, so transport is injective at every type. Thus full current ND
+    holds; §2.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: finite-support-single-flip-sections
+  holds:
+  - distinctness-necessary-r
+- id: current-propositional-atomicity
+  text: Root propositions form 2 times the finite/cofinite algebra on the single-flip sections. Its atoms
+    are the root identity singleton and the individual single-flip singletons; every nonzero proposition
+    contains one. The whole-pinning classification is checked in §2.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: finite-support-single-flip-sections
+  holds:
+  - atomicity-t
+- id: admitted-even-atom-family
+  text: The predicate whose root row consists of the even-section singleton atoms and whose section rows
+    are empty is empty-pinned as a whole intension. Every upper bound contains a removable odd singleton.
+    The complement-transformed family has no GLB, proving native BC_t failure; §3.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: finite-support-single-flip-sections
+  fails:
+  - boolean-completeness-t
+- id: necessary-strong-actuality
+  text: The true root identity singleton shifts to the singleton {pi}, whose further shifts are itself
+    or the root singleton; the true tail identity singleton shifts to Bottom along each nonidentity tail
+    arrow. All are atoms or Bottom, so Strong Actuality holds at both objects. This additional flag was
+    independently checked during integration; §4.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: finite-support-single-flip-sections
+  holds:
+  - necessary-strong-actuality
+notes: This record preserves the withdrawn original E verdict and its authorship. The first construction
+  is new; the second only changes evaluation. Only independently checked current/necessary flags are recorded.
+  No Lean or human certification is claimed.

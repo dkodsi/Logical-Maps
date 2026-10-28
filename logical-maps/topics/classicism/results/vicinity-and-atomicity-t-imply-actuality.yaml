@@ -15,8 +15,11 @@ certificate:
 sources:
 - Cian Dorr, argument of 28 October 2026 that Vicinity and Atomicity give Actuality, through the 5-necessity
   form of Vicinity and BF for 5-necessity (session transcript).
+- OpenAI Codex, prompted by Daniel Kodsi, Atomicity and Vicinity imply Actuality, 26 October 2026, §§2–3,
+  unpaginated; separately credited alternative proof.
 source_names:
 - Dorr 28 Oct
+- Codex common-core proof, 26 Oct
 proof: 'By the 5-necessity form of [[vicinity]], some truth $v$ entails every 5-necessary truth. We show
   that every atom $w\le v$ is a self-atom. Let $A:=\operatorname{Atom}_t(w)$. Since $w$ is an atom, $w\le
   A$ or $w\le\neg A$; suppose $w\le\neg A$. First, $\Diamond_5w$: otherwise $\Box_5\neg w$, so $v\le\neg
@@ -38,3 +41,10 @@ proof: 'By the 5-necessity form of [[vicinity]], some truth $v$ entails every 5-
 notes: Vicinity and Atomicity thus give Actuality as Vicinity and Weakly Inextensible Comprehension do
   ([[vicinity-and-weakly-inextensible-comprehension-imply-actuality]]). The proof shows more, that every
   atom below the strongest 5-necessary truth is a self-atom.
+  A separately credited alternative using a common quantified-bound region, without BF for 5-necessity,
+  is in the [common-core proof](vicinity-and-atomicity-t-imply-actuality.html#common-core-proof). The original proof above is unchanged.
+changes:
+- date: '2026-10-28'
+  by: OpenAI Codex, prompted by Daniel Kodsi
+  summary: Added a separately credited common-core proof note of the same theorem, preserving the original
+    Dorr/Claude proof, its source attribution, certificate date and all mathematical record fields.

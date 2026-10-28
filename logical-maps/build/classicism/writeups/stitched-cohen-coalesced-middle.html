@@ -1,0 +1,692 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Stitched Cohen model with a coalesced middle world</title><link rel="icon" type="image/png" href="../favicon.png">
+<style>/* Fixed forest palette, adapted from the supplied style example.
+   Semantic and source hues retain their meaning in both modes. */
+:root {
+  --bg: #f3f1e8;
+  --panel: #f8f7f0;
+  --panel-2: #e9ecdf;
+  --line: #d4d9c9;
+  --line-strong: #a2ae97;
+  --ink: #283c28;
+  --ink-2: #4f604b;
+  --ink-3: #5f6d58;
+  --accent: #356044;
+  --link-hover: #914b30;
+  --human: #3e7052;
+  --assisted: #746044;
+  --ai: #a35b36;
+  --derived: #7b8271;
+  --indep: #a0483a;
+  --open: #e2e5d9;
+  --open-ink: #65705f;
+  --conj: #896b27;
+  --node-fill: #f8f7f0;
+  --node-stroke: #98a68b;
+  --junction: #52634b;
+  --hl: #e0e7cd;
+  --focus: #914b30;
+  --badge-ink: #ffffff;
+  --warning-bg: #f4e6dc;
+  --source-forest: #3e7052;
+  --source-rust: #a25336;
+  --source-ochre: #896b27;
+  --source-slate: #4c7279;
+  --source-berry: #80556d;
+  --source-olive: #69753c;
+  --source-misc: #696d61;
+  --shadow: 0 4px 24px rgb(40 60 40 / 12%);
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --serif: var(--sans);
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  --bg: #0e1912;
+  --panel: #142018;
+  --panel-2: #1d2b20;
+  --line: #304332;
+  --line-strong: #596e51;
+  --ink: #d7dfca;
+  --ink-2: #b3c1a7;
+  --ink-3: #96aa8d;
+  --accent: #a6c699;
+  --link-hover: #dfab89;
+  --human: #94bc95;
+  --assisted: #c1ad8d;
+  --ai: #dca17b;
+  --derived: #83937c;
+  --indep: #e09b86;
+  --open: #243327;
+  --open-ink: #a2b398;
+  --conj: #d0b36b;
+  --node-fill: #19261c;
+  --node-stroke: #627957;
+  --junction: #b3c1a7;
+  --hl: #30422a;
+  --focus: #dfab89;
+  --badge-ink: #0e1912;
+  --warning-bg: #32251f;
+  --source-forest: #94bc95;
+  --source-rust: #dca17b;
+  --source-ochre: #d0b36b;
+  --source-slate: #95bcc1;
+  --source-berry: #c5a0b7;
+  --source-olive: #b6c383;
+  --source-misc: #a9b09c;
+  --shadow: 0 4px 24px rgb(0 0 0 / 25%);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { background: var(--bg); scrollbar-color: var(--line-strong) var(--bg); }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.6 var(--sans); }
+button, input, select { font: inherit; color: inherit; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--link-hover); text-decoration: underline; text-underline-offset: 3px; }
+input[type="checkbox"] { accent-color: var(--accent); }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+::selection { background: var(--hl); color: var(--ink); }
+.theme-toggle { border: 0; padding: 6px 0; background: transparent; color: var(--ink-2); cursor: pointer; font: 13px var(--sans); white-space: nowrap; }
+.theme-toggle:hover { color: var(--link-hover); }
+.display-toggles { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0 16px; }
+.theme-toggle[aria-pressed="true"] { color: var(--accent); }
+
+/* A prismatic name: one rainbow wheel around a point in the word, spinning;
+   --prism-x and --prism-y move that point off the middle.
+   Pure spectral stops, turned by a registered angle rather than a hue
+   filter, which would muddy them. */
+@property --prism { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
+.prismatic { font-weight: 600; color: transparent; background: conic-gradient(from var(--prism) at var(--prism-x, 50%) var(--prism-y, 50%), #ff1a1a, #ff8a00, #ffd000, #22c33a, #00a8f0, #3d4bff, #b026ff, #ff1a1a); -webkit-background-clip: text; background-clip: text; animation: prism-spin 6s linear infinite; }
+/* As a link it keeps the gradient on hover, under an accent underline. */
+a.prismatic, a.prismatic:hover { color: transparent; }
+a.prismatic:hover { text-decoration-color: var(--accent); }
+@keyframes prism-spin { to { --prism: 360deg; } }
+@media (prefers-reduced-motion: reduce) { .prismatic { animation: none; } }
+
+/* Standalone write-ups use the same quiet, ruled typography as the map. */
+html:has(body.writeup-page) { background: var(--bg); }
+body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; font: 16px/1.7 var(--sans); overflow-wrap: anywhere; }
+.writeup-nav { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 16px; border-bottom: 1px solid var(--line); padding-bottom: 12px; margin-bottom: 24px; font-size: 13px; }
+.writeup-page h1 { font-size: 1.4em; line-height: 1.4; margin: 0 0 20px; color: var(--ink); }
+.writeup-page h2 { font-size: 1.15em; line-height: 1.4; margin: 1.8em 0 .5em; padding-top: 14px; border-top: 1px solid var(--line); }
+.writeup-page h3 { font-size: 1em; }
+.writeup-page p { margin: 0 0 12px; }
+.writeup-page .cert { color: var(--ink-2); font-size: .85em; }
+.writeup-page code, .writeup-page pre { font: .85em/1.6 var(--mono); color: var(--ink); }
+.writeup-page pre { padding: 14px; background: var(--panel-2); overflow-x: auto; }
+.writeup-page blockquote { color: var(--ink-2); border-left: 2px solid var(--line-strong); margin-left: 0; padding-left: 20px; }
+.writeup-page math[display="block"] { display: block; overflow-x: auto; padding: 8px 0; }
+.writeup-page table { display: block; overflow-x: auto; border-collapse: collapse; }
+.writeup-page th, .writeup-page td { border-bottom: 1px solid var(--line); padding: 8px 12px; }
+@media (max-width: 600px) {
+  body.writeup-page { margin: 1.5em auto; padding: 0 1em 2em; }
+}
+@media print {
+  :root, :root[data-theme="dark"] { --bg: white; --ink: #283c28; --ink-2: #4f604b; --accent: #356044; --line: #d4d9c9; color-scheme: light; }
+  .writeup-nav { display: none; }
+  body.writeup-page { max-width: none; margin: 0; padding: 0; }
+}
+
+/* Teal-grey, muted rust, deep teal and warm stone. Screen-only overrides
+   preserve print styling. */
+@media screen {
+  :root {
+    --bg: #ebf1f1;
+    --panel: #e1eae9;
+    --panel-2: #d0dfde;
+    --line: #c0cecd;
+    --line-strong: #849997;
+    --ink: #303b3a;
+    --ink-2: #4a5a59;
+    --ink-3: #526160;
+    --accent: #884932;
+    --link-hover: #6f3827;
+    --derived: #6f8180;
+    --open: #d6e2e1;
+    --open-ink: #526160;
+    --node-fill: #f1f6f6;
+    --node-stroke: #7f9391;
+    --junction: #596b6a;
+    --human: #2f6b66;
+    --source-forest: #2f6b66;
+    --hl: #e6ddd0;
+    --focus: #884932;
+    --shadow: 0 4px 24px rgb(48 59 58 / 10%);
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #171e1d;
+    --panel: #202a29;
+    --panel-2: #2b3736;
+    --line: #3d4b4a;
+    --line-strong: #6b817f;
+    --ink: #dbe8e7;
+    --ink-2: #b9cbca;
+    --ink-3: #a6bdbb;
+    --accent: #e2ad92;
+    --link-hover: #f0c3aa;
+    --derived: #87a09e;
+    --open: #303d3c;
+    --open-ink: #aec6c4;
+    --node-fill: #263130;
+    --node-stroke: #738d8b;
+    --junction: #b3cbc9;
+    --human: #86c0b6;
+    --source-forest: #86c0b6;
+    --hl: #463f37;
+    --focus: #e2ad92;
+    --badge-ink: #171e1a;
+    --shadow: 0 4px 24px rgb(0 0 0 / 24%);
+  }
+}
+
+/* Shared Okabe–Ito palette: https://jfly.uni-koeln.de/color/#pallet
+   Loaded after topic themes. Sky blue and orange distinguish positive and
+   negative relations; darker inks keep small labels readable in light mode.
+   Neutral surfaces are identical across maps. Print uses the shared theme. */
+@media screen {
+  :root[data-palette="colourblind"] {
+    --bg: #f4f5f6;
+    --panel: #ffffff;
+    --panel-2: #e9edf0;
+    --line: #d0d6da;
+    --line-strong: #87949d;
+    --ink: #202930;
+    --ink-2: #45535d;
+    --ink-3: #586670;
+    --accent: #0072b2;
+    --link-hover: #925f00;
+    --human: #0072b2;
+    --assisted: #80506a;
+    --ai: #a44500;
+    --derived: #687780;
+    --indep: #925f00;
+    --open: #e9edf0;
+    --open-ink: #586670;
+    --conj: #80506a;
+    --node-fill: #ffffff;
+    --node-stroke: #7a8b96;
+    --junction: #45535d;
+    --hl: #dce4ea;
+    --focus: #0072b2;
+    --badge-ink: #ffffff;
+    --warning-bg: #fff0ce;
+    --source-forest: #56b4e9;
+    --source-rust: #e69f00;
+    --source-ochre: #d55e00;
+    --source-slate: #0072b2;
+    --source-berry: #cc79a7;
+    --source-olive: #009e73;
+    --source-misc: #687780;
+    --rel-positive: #56b4e9;
+    --rel-negative: #e69f00;
+    --shadow: 0 4px 24px rgb(32 41 48 / 12%);
+  }
+  :root[data-palette="colourblind"][data-theme="dark"] {
+    --bg: #111820;
+    --panel: #18222b;
+    --panel-2: #23303b;
+    --line: #354550;
+    --line-strong: #718492;
+    --ink: #edf2f5;
+    --ink-2: #c1ced7;
+    --ink-3: #a5b5c1;
+    --accent: #56b4e9;
+    --link-hover: #e69f00;
+    --human: #56b4e9;
+    --assisted: #cc79a7;
+    --ai: #e69f00;
+    --derived: #91a1ad;
+    --indep: #e69f00;
+    --open: #23303b;
+    --open-ink: #a5b5c1;
+    --conj: #cc79a7;
+    --node-fill: #1c2933;
+    --node-stroke: #8094a3;
+    --junction: #c1ced7;
+    --hl: #354654;
+    --focus: #56b4e9;
+    --badge-ink: #111820;
+    --warning-bg: #352b18;
+    --source-misc: #91a1ad;
+    --shadow: 0 4px 24px rgb(0 0 0 / 25%);
+  }
+  /* Source swatches use the unmodified palette; outlined badges allow their
+     text to keep the normal contrast on both light and dark surfaces. */
+  :root[data-palette="colourblind"] .badge.source {
+    background: var(--panel);
+    color: var(--ink);
+    border: 1px solid var(--source-color);
+    border-left-width: 4px;
+  }
+}
+</style>
+<script>/* Apply before paint; share the preference between every map and write-up. */
+(() => {
+  const key = 'pmap-theme';
+  const paletteKey = 'pmap-palette';
+  const system = window.matchMedia?.('(prefers-color-scheme: dark)');
+  let preference;
+  let palette;
+  try { preference = localStorage.getItem(key); } catch (_) {}
+  try { palette = localStorage.getItem(paletteKey); } catch (_) {}
+  if (!['light', 'dark'].includes(preference)) preference = null;
+  if (palette !== 'colourblind') palette = 'default';
+  function apply(theme) {
+    document.documentElement.dataset.theme = theme;
+    document.querySelectorAll('[data-theme-toggle]').forEach(button => {
+      button.textContent = theme === 'dark' ? '[Light mode]' : '[Dark mode]';
+      button.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);
+    });
+  }
+  function applyPalette() {
+    document.documentElement.dataset.palette = palette;
+    document.querySelectorAll('[data-colourblind-toggle]').forEach(button => {
+      button.setAttribute('aria-pressed', String(palette === 'colourblind'));
+      button.textContent = `[Colourblind mode: ${palette === 'colourblind' ? 'on' : 'off'}]`;
+    });
+  }
+  const initial = () => preference || (system?.matches ? 'dark' : 'light');
+  apply(initial());
+  applyPalette();
+  document.addEventListener('DOMContentLoaded', () => {
+    apply(initial());
+    applyPalette();
+    document.querySelectorAll('[data-theme-toggle]').forEach(button => {
+      button.addEventListener('click', () => {
+        preference = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+        apply(preference);
+        try { localStorage.setItem(key, preference); } catch (_) {}
+      });
+    });
+    document.querySelectorAll('[data-colourblind-toggle]').forEach(button => {
+      button.addEventListener('click', () => {
+        palette = palette === 'colourblind' ? 'default' : 'colourblind';
+        applyPalette();
+        try { localStorage.setItem(paletteKey, palette); } catch (_) {}
+      });
+    });
+  });
+  system?.addEventListener('change', () => { if (!preference) apply(initial()); });
+  window.addEventListener('storage', event => {
+    if (event.key === key || event.key === null) {
+      preference = ['light', 'dark'].includes(event.newValue) ? event.newValue : null;
+      apply(initial());
+    }
+    if (event.key === paletteKey || event.key === null) {
+      palette = event.newValue === 'colourblind' ? 'colourblind' : 'default';
+      applyPalette();
+    }
+  });
+})();
+</script>
+<link rel="stylesheet" href="../math/katex.min.css">
+<script defer src="../math/katex.min.js"></script>
+<script defer src="../math/contrib/auto-render.min.js"></script>
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Stitched Cohen model with a coalesced middle world</h1></header><p>This existing construction separates necessary propositional strong
+worlds and propositional Barcan from the higher-type domain control
+needed for propagation. At the initial world, full Rigid Comprehension
+holds, together with necessary Relational Choice, necessary Strong
+Atomicity at t, necessary BF at t and necessary Boolean Completeness at
+t. The accessible middle world fails Rigid Comprehension and Boolean
+Completeness at et. The root itself has an atomless interval at
+(et)t.</p>
+<p>The proof below is the complete original §§1–7, independently
+reviewed for this integration. Its original self-audit status is
+historical; the new review checks the invariant-name quotient, all-type
+closure and the exact-image arguments. The unreviewed different variant
+in original §8 is excluded. The construction uses a ground model and its
+Cohen-generic extension, as in the recorded stitched Cohen example; it
+is a relative model construction in that forcing metatheory, not an
+assertion that an actual generic over the entire ambient universe is
+available.</p>
+<h2 id="the-two-terminals-and-the-middle-world">1. The two terminals and
+the middle world</h2>
+<p>Work with a ground universe V and a Cohen extension V[G]. Let A be
+the full extensional relational-type hierarchy on N constructed in V,
+and B the corresponding hierarchy in V[G]. Both are one-world models.
+The entire countable sequence of typed domains and operations of A is a
+set in V; it is a fixed ground parameter below. There is no need to use
+V itself as a parameter inside V[G].</p>
+<p>In V[G], coalesce A and B at a new world s, with arrows a:s→A and
+b:s→B. Put D_s,e=N×N and let a,b be the two projections. At a flattened
+relational type τ=σ̄t let</p>
+<pre><code>D_s,τ = P(D_s,σ̄) × D_A,τ × D_B,τ.</code></pre>
+<p>The powerset here is that of V[G]. The three components specify the
+extension at s and the complete entity at each terminal. The root
+component is unrestricted. Application, abstraction and transport are
+the ordinary coalesced-model operations; all outputs still end in t. The
+terminals’ domains are closed under their operations, and the
+unrestricted s-extension supplies the extension of every abstraction at
+s. This is the usual direct closure proof for the coalesced sum, not an
+assertion that the ground terminal contains new subsets.</p>
+<p>Let c⊆N be the new Cohen real. At s take a property X of individuals
+with actual extension</p>
+<pre><code>E=c×{0},</code></pre>
+<p>and empty terminal extensions. It is admitted at s.</p>
+<h2 id="rigid-comprehension-and-bc-fail-at-s">2. Rigid Comprehension and
+BC fail at s</h2>
+<p>Suppose a rigid Y were actually coextensive with X. Its A-extension C
+belongs to P(N)^V. Persistence gives c⊆C.</p>
+<p>For every n∉c, let Z_n have universal s-extension, A-extension N{n},
+and universal B-extension. This is admitted. Every current Y-member
+(k,0), k∈c, necessarily falls under Z_n: it does so at s, at A because
+k≠n, and at B. Weak inextensibility of Y gives Y≤Z_n and hence C⊆N{n}.
+For all n∉c this implies C⊆c. Therefore C=c, impossible because c∉V.
+Thus Rigid Comprehension fails already for properties of
+individuals.</p>
+<p>This does not by itself prove failure of weakly inextensible
+comprehension: the persistence step was essential. To prove BC fails,
+use a separate represented family. At s let F:(et)t have as its actual
+members the haecceities H_(k,0) for k∈c; choose empty terminal
+extensions for F. If J were its algebraic least upper bound, the ground
+set J_A would contain c. Each Z_n above, n∉c, is an upper bound of the
+whole haecceity family, so J≤Z_n implies J_A⊆N{n}. Again J_A=c would
+follow, contradicting c∉V. Thus BC at et fails at s.</p>
+<p>There is an exact local criterion behind both failures. Fix τ=σ̄t and
+let T=D_A,σ̄ be the ground set of argument tuples at A. At s, Rigid
+Comprehension at τ and BC at τ each hold exactly when V[G] has no new
+subsets of T.</p>
+<p>For comprehension, a rigid representative of an actual extension E
+must have A-extension aE: persistence gives one inclusion, and the same
+co-singleton tests, one for each ground tuple outside aE, give the
+other. Conversely, if aE is represented in A, the exact-image triple
+(E,aE,bE) is admitted and rigid; B is full in V[G]. The tuple map a is
+onto and has a fixed section (choose the other components to be bottom,
+or 0 for individuals). Hence its possible images aE range over all
+ambient subsets of T. This proves the comprehension criterion.</p>
+<p>For BC, if all ambient subsets of T are ground, every represented
+family has its pointwise union at all three components, including A, and
+that union is an admitted join. Conversely a new C⊆T can index the
+S-relations with A-extension {z}, z∈C, and empty other extensions. This
+family is represented by the unrestricted root component at s. A least
+upper bound would have A-extension C, by singleton lower requirements
+and co-singleton upper bounds, impossible. Thus the same criterion
+decides BC. For τ=t the tuple set T is a singleton and the criterion is
+automatic; for τ=et it fails at the new real c. This is a
+construction-specific representability criterion, not a claimed
+equivalence of the two principles over C.</p>
+<h2 id="a-ground-set-of-invariant-names">3. A ground set of invariant
+names</h2>
+<p>The following elementary forcing device makes the initial world’s
+domains precise. Let Γ be the group of finite bit-flips of Cohen
+forcing. It is weakly homogeneous: any two finite conditions can be made
+compatible by flipping the finitely many disagreements. The name for the
+structure at s is invariant, up to forced equality, because it is
+canonically defined from the ground parameter A and the extension’s full
+hierarchy B.</p>
+<p>Call a name u for an element of D_s,τ invariant when</p>
+<pre><code>1 ⊩ πu=u    for every π∈Γ.</code></pre>
+<p>Take such names modulo 1-forced equality. For each type these classes
+can be represented by a set in V: fix a name for D_s,τ; names forced to
+be its members have equivalent bounded-rank representatives, obtained by
+mixing names occurring in it along a maximal antichain. Normalizing a
+name preserves invariance up to forced equality. Denote this ground
+quotient set by Q_τ.</p>
+<p>Three facts will be used.</p>
+<ol type="1">
+<li>Equality of two invariant names is decided by 1. If a condition
+forces equality, move it by weak homogeneity to be compatible with any
+proposed condition forcing inequality; invariance gives a contradiction.
+The same applies to any invariant sentence with invariant parameters. In
+particular two invariant names have equal values in the chosen extension
+exactly when 1 forces them equal. Thus their ground quotient injects
+into the actual s-domain.</li>
+<li>An invariant name forced to belong to a fixed ground set has a
+single ground value forced by 1. Some condition decides it to be a
+particular member; the preceding argument promotes that decision to 1.
+More generally an invariant name for a subset of a fixed ground set is a
+ground subset, since membership of each ground member is decided by
+1.</li>
+<li>Uniquely defined operations on invariant names have invariant
+outputs. This includes typed application, the interpretations of
+formulas and abstractions in the s-model, and the images of ground sets
+of invariant tuples. Their outputs may be new sets of new entities; only
+outputs lying in a fixed ground set are asserted to be ground
+values.</li>
+</ol>
+<p>In particular, the A-projection of a Q_τ-value is a uniquely
+determined member of D_A,τ, and the map Q_τ→D_A,τ is a function in V.
+The B-projection need not be a ground entity.</p>
+<h2 id="the-initial-world-r">4. The initial world r</h2>
+<p>Add r→s; the arrows r→A and r→B are its composites with a,b. There
+are exactly four worlds, with no arrows back and with a unique arrow
+between any comparable pair.</p>
+<p>Set D_r,e=N×N and let r→s be the identity on individuals.
+Recursively, in V, put</p>
+<pre><code>D_r,σ̄t = P^V(D_r,σ̄) × Q_(σ̄t).</code></pre>
+<p>A root entity is a pair (E,[u]). Its actual extension is E, and its
+image at s is u^G. The other images are the terminal projections of u^G.
+Equality at r is literal equality of the two ground components. Equality
+of invariant-name classes and satisfaction of invariant sentences are
+decided as in §3.</p>
+<p>At low types the tail domains are concrete: Q_t consists of the eight
+ground truth vectors, and Q_et consists exactly of the triples
+P(N×N)<sup>V×P(N)</sup>V×P(N)^V. At higher types Q also contains
+invariant names for new sets, such as the universal property of all
+s-properties of individuals. It is not merely the old full type
+hierarchy. These higher names are essential for preserving the full
+future quantifiers.</p>
+<p>Here is the closure check. Application gives an actual extension
+definable in V from its ground arguments, and its s-component is
+application of their invariant tail names. For abstraction λx.T(x;p̄),
+the actual extension is the set of ground arguments satisfying its body
+in the r-structure; the evaluation is computed recursively in V. Its
+s-component is the interpretation of that abstraction in the s-model
+with the invariant tails of p̄, and is therefore an invariant name.
+Quantifiers at r range over the ground sets D_r,σ, so the root extension
+remains in V. Quantifiers in the tail range over all the corresponding
+s-domains, as required; they are not restricted to images of root
+entities. Boolean operations and identity obey the same
+construction.</p>
+<p>In curried notation the application just described is explicit: if
+F=(E,[u]), then F(x) has root extension E_x and tail class [u(hx)]. The
+quotient operations are functions in V, so x↦F(x) is a ground function
+with the required compatibility. This is why the flattened profile
+definition respects currying, rather than discarding the future values
+of a function. No abstraction with individual output is used.</p>
+<p>These observations give the induction establishing term closure, β
+and η, and commutation of terms with every arrow. Two H-equivalent
+abstractions have equal extensions at r and equal complete s-tails,
+hence are identical. Thus H and the original Logical Equivalence schema
+hold. This is a C model; no theoremhood rule is applied under an
+optional assumption, and no type with output e has been introduced.</p>
+<p>The injectivity in §3 is important here: equality of evaluated tails
+cannot leave two distinct ground codes for the same complete profile.
+Consequently literal equality and Boolean order in the root agree with
+equality and pointwise inclusion of the four-world profiles. The
+exact-image and upper-bound arguments below therefore use the model’s
+actual algebraic order.</p>
+<h2 id="every-root-family-has-exact-representable-images">5. Every root
+family has exact representable images</h2>
+<p>Let E∈P^V(D_r,σ̄) be the actual extension of any root relation. Its
+image hE at s is an invariantly named set of tuples. Its image a(hE)
+belongs to V: the A-projection of each invariant tuple is decided in V
+by §3, and E is a ground set. Its image b(hE) is a set of B-tuples in
+V[G], and the full B-domain admits it.</p>
+<p>Consequently there is an s-relation R_E whose three extensions are
+exactly</p>
+<pre><code>hE,       a(hE),       b(hE).</code></pre>
+<p>It is admitted by §1, and its complete name is invariant by §3.
+Therefore the r-relation</p>
+<pre><code>Y_E=(E,[R_E])</code></pre>
+<p>is admitted. At every arrow from r its extension is exactly the image
+of E. At s its extensions are likewise exactly the images of hE.</p>
+<p>An exact-image relation is rigid: persistence is immediate, and any
+predicate necessarily covering its current members covers their images
+at every future world. The same argument applies after every arrow.
+Hence Y_E is rigid and actually coextensive with the original relation.
+This proves full Rigid Comprehension at r, for all finite argument
+tuples, including individual and mixed tuples.</p>
+<p>The distinction from s is precise. Every root E is a ground set of
+root tuples, so its A-image is represented in A. At s, the new family
+c×{0} has A-image c, which A does not represent. Root comprehension
+gives no representative for this newly available family.</p>
+<p>There is a direct BC cross-check at r as well. For a represented
+family of τ-relations, its actual family F is a ground set. Take the
+pointwise union of its root extensions and of its complete tail
+profiles. The root union is in V. The A-union is in V because the
+A-projection is a ground function on the ground family F; the s- and
+B-unions are admitted by their full extension components. The resulting
+tail is invariant. Thus the pointwise union is an admitted least upper
+bound at r. Applying this to the ground family of haecceities of E gives
+the same rigid exact-image representative Y_E. At s the new haecceity
+family from §2 lacks precisely this pointwise A-component.</p>
+<h2
+id="propositional-strong-atomicity-choice-and-the-missing-bf-instance">6.
+Propositional Strong Atomicity, Choice, and the missing BF instance</h2>
+<p>At s the propositions are all eight truth-value assignments on
+{s,A,B}. All are ground and have invariant names. Hence r has all
+sixteen truth-value assignments on {r,s,A,B}. Each singleton world
+proposition is an atom, and its transport is either the corresponding
+singleton in a smaller future cone or bottom. It necessarily decides
+every proposition there. Every nonzero proposition contains a singleton.
+Thus SL_t holds at every world, and □SL_t holds at r. The same singleton
+at each evaluation world witnesses Actuality, so □Actuality holds as
+well.</p>
+<p>All arrows are onto at type t and at e. Direct witness lifting
+therefore proves BF at those types everywhere. At r every actual serial
+relation is a ground set between ground domains; its seriality is
+absolute to V, and choice in V supplies a ground functional subrelation.
+Give that graph any invariant tail, for example bottom. At s use choice
+in V[G] and its unrestricted root extensions; at A and B use their
+respective full extensional hierarchies. Therefore □Relational Choice
+holds.</p>
+<p>By contrast BF fails at et along r→s. The actual s-extension of any
+invariantly named et-entity is a ground subset of N×N, by §3. Thus X
+from §1, with actual extension c×{0}, is not an image of any root
+et-entity. Apply §5 to the root family E=D_r,et. Its rigid exact-image
+representative U:(et)t necessarily holds of every root property of
+individuals, but at s it omits X. Therefore</p>
+<pre><code>∀Z^et □U(Z)    but    ¬□∀Z^et U(Z).</code></pre>
+<p>This is an explicit failure of BF_et. It isolates the missing
+higher-type surjectivity; no failure of BF_e or BF_t is being used.</p>
+<p>In particular U is actually coextensive with the universal property
+of root et-entities, but is not identical to it. The universal
+property’s s-tail quantifies over all new s-entities, whereas U’s tail
+is the proper image h[D_r,et]. Root Rigid Comprehension promises the
+former actual coextension; it does not identify these two complete
+profiles. This is the precise quantifier step which BF_rel supplied in
+the positive propagation proof.</p>
+<p>There is also a direct check that all-type Strong Atomicity has not
+slipped into the premises. Let N_s=D_s,etD_r,et], an invariantly named
+nonempty set. At r take F of type (et)t with empty root extension and an
+s-tail whose s-extension is N_s and whose terminal extensions are empty.
+Suppose a nonzero strong world W lay below F. Its only nonempty
+extension must be at s. Strong deciding at s, tested on singleton
+s-properties with empty terminal components, forces that extension to be
+a singleton {x}. Since W’s tail name is invariant, singletonhood is
+decided by 1 and its unique member has an invariant name. Thus x lies in
+h[D_r,et], contrary to x∈N_s. Hence Strong Atomicity fails at (et)t.
+This verifies the boundary with the proved all-type Strong Atomicity
+theorem without appealing to that theorem by contraposition.</p>
+<p>In fact F bounds an atomless interval in the root Boolean algebra at
+(et)t. For any nonzero Y≤F, the same invariant-singleton argument shows
+that its s-extension contains distinct x,y. An s-entity of type et is a
+triple of subsets of the fixed ground individual sets N×N, N and N.
+Hence x,y differ at some world component and some ground individual
+coordinate. The s-property of et-entities satisfying that coordinate
+test, with empty terminal extensions, has an invariant name: its
+definition uses only that ground coordinate and the canonical component
+maps. Give it an empty root extension. Intersecting Y with it and with
+its complement gives two nonzero proper parts of Y. Thus the full
+propositional algebra is finite and atomic while this higher algebra has
+an atomless interval. The gap between SL_t and all-type Strong Atomicity
+is substantive even before considering the future splitting of
+atoms.</p>
+<h2 id="consequence-and-source-boundary">7. Consequence and source
+boundary</h2>
+<p>At r the premises SL_t and Rigid Comprehension hold, but their
+accessible world s fails Rigid Comprehension and BC. This refutes the
+two unboxed-to-boxed propagation claims without BF_rel, while leaving
+the full all-type Strong Atomicity propagation proof intact. It also
+explains why merely observing BF_rel fail in the earlier stitched Cohen
+model did not settle the question: that model’s only future world was
+fully extensional and retained comprehension. The middle world here
+permits new families while one of its branches still has only ground
+sets.</p>
+<p>This does not make BF_rel a necessary condition for boxed
+comprehension in an individual model. The old stitched Cohen model has
+□Rigid Comprehension while BF_rel fails. The new model instead shows
+that BF_rel cannot be omitted uniformly from the sufficient
+propositional-SL package. Both behaviors are compatible with the unboxed
+premises; the differing issue is representability of the new future
+families, not BF failure by itself.</p>
+<p>The weaker failure of Rigid Comprehension ⇒ □Rigid Comprehension was
+already recorded: a fresh proved-only query returns
+<code>full-boolean-valued-atom-and-atomless</code> and
+qualitative-contrast variants. The proposed gain here is the
+counterexample retaining propositional Strong Atomicity, indeed its
+necessity, together with propositional BF. No literature-novelty claim
+is made.</p>
+<p>As a limiting check, trivial forcing removes the obstruction: all
+s-entities then have ground names, h is onto at every type, all the
+relevant images and pointwise joins belong to the ground terminal, and
+the four-world full construction retains comprehension everywhere. The
+actual Cohen extension supplies exactly the new family excluded by that
+check. All assertions here are pure; a permitted fixed signature may be
+interpreted at r and transported without changing them.</p>
+<p>Background constructions: Bacon–Dorr, <em>Classicism</em>, draft 16
+May 2023, Appendix E, Definition E.2, pp.80–83, as recorded in
+<code>groups/coalesced-sums.yaml</code>; Barton–Goodsell, <em>Continuum
+Contingency</em>, draft 14 October 2026, §8, Definition 1 and Lemmas
+11–19, as recorded in <code>models/stitched-cohen-extension.yaml</code>.
+The published/unpublished source arguments are not edited. The
+four-world combination and the invariant-name construction above are new
+arguments with direct source <code>misc</code>, not claimed as the
+authors’ result. This note supplies its own closure and image proofs
+rather than presuming an unchecked generalization of their stitching
+theorem.</p>
+<h2 id="self-audit-status">Self-audit status</h2>
+<p>Critical obligations checked in the construction: invariant-name
+classes form ground sets; equality and ground-valued projections are
+decided; tail abstraction quantifies over the full new domains; every
+root family’s A-image is ground; the bad middle-world family’s A-image
+is not; and rigidity is verified at all worlds, not just weak rigidity
+at r. The stronger claim that weak inextensible comprehension fails at s
+is deliberately not made: its refutation would need a persistence
+premise that it does not have.</p>
+<p>The self-audit is complete. It included a second check of quotient
+equality versus evaluated equality, the distinction between a tail
+abstraction’s full quantification and its old invariant parameters, the
+curried application formula, the direct pointwise-join check at r, the
+concrete missing haecceity join at s, and the higher-type atomless
+interval. No remaining construction gap was identified in this pass.
+This remains a proposed ordinary mathematical countermodel, not an
+independently checked or formally verified record.</p>
+<p>A proved-only Engine check of the stated positive package against the
+failures of necessary Rigid Comprehension, necessary BC and relational
+BF found no conflict. This is only a check against the existing records.
+The old stitched Cohen model and both original pinned-root models retain
+their existing verdicts.</p>
+<h2 id="integration-clarifications-and-source-boundary">Integration
+clarifications and source boundary</h2>
+<p>The failure of a supremum in §2 also refutes the official GLB form of
+BC: replace the represented family F by the admitted
+complement-transformed family X(Z)=F(not Z). A greatest lower bound of X
+would complement to a supremum of F. No unrepresented external family is
+quantified in this argument.</p>
+<p>The invariant-name argument quantifies over the set of bounded-rank
+representatives modulo forced equality, and uses finite-bit-flip weak
+homogeneity only for sentences with invariant names. It does not assert
+that every object of the generic extension is ground. Whole future tails
+are retained in the root entities; in particular their quantifiers range
+over full future domains, not just transported root domains. The
+exact-image construction is checked at every relational type and every
+finite tuple, including individuals. Necessary propositional strong
+worlds may become zero; no necessary nonzeroness is assumed.</p>
+<p>The direct proof of BF_et failure and of full Strong Atomicity
+failure remains in §6. The staged record gives the irredundant stronger
+failure of all-type Atomicity: the interval bounded by F at (et)t is
+atomless. Necessary Actuality is also proved directly, and derived from
+the staged necessary Strong Atomicity verdict. None of these is a
+failure of propositional Atomicity or of BF_t.</p>
+<p>Direct source: OpenAI Codex, prompted by Daniel Kodsi, <em>Stitched
+forcing model with a coalesced middle world</em>, 22 October 2026,
+§§1–7, unpaginated. Background: Bacon–Dorr, <em>Classicism</em>, draft
+16 May 2023, Appendix E, Definition E.2, pp.80–83; Barton–Goodsell,
+<em>Continuum Contingency</em>, draft 14 October 2026, §8, Definition 1
+and Lemmas 11–19. Those source constructions are not modified or
+credited with the new four-world combination. Ordinary independent
+integration review: OpenAI Codex, prompted by Daniel Kodsi, 28 October
+2026. No Lean certification is claimed.</p>
+</body></html>

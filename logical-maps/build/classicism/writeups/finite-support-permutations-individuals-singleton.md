@@ -63,6 +63,8 @@ At every type, so Analytic Necessitism holds too. At type $e$ the antecedent fai
 
 *Write-up: [finite-support-permutations](finite-support-permutations.html). By Claude Fable 5.1 (Anthropic), prompted by Zachary Goodsell, 2026-10-23.*
 
+*Revised 2026-10-28 by OpenAI Codex (GPT-6), prompted by Daniel Kodsi:* Corrected the pin of the transported object k·Y^A in the write-up from {0} to {k0}, as its displayed extension depends on j(k0). The family in Lemma 2 remains pinned by {0}; the construction and verdicts are unchanged.
+
 ### Holds Axiom of Infinity (type t).
 
 The propositions that a given number is fixed by the arrow, one for each number, are pairwise distinct and each has that number as finite support, so there are infinitely many propositions. The set of numerals at type $t$ is invariant under every arrow, hence has empty support and lies in the domain, so finite cardinality is standard and no finite cardinality holds of the universal property.

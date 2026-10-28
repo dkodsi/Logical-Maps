@@ -1,0 +1,7 @@
+# Relational Choice at the full roots of modalized clouds
+
+The existing Cohen-cloud and lottery-cloud constructions are unchanged. Their root-fullness lemma represents every set of root-existing tuples closed under root identity by an admitted relation: return the isolated-root proposition on that set and Bottom elsewhere. At the root this respects identity; throughout the cloud both values are locally Bottom. This is Lemma 6.7, p.31, of Andrew Bacon and Claude Opus 5.5 (Anthropic), *Modalized Domains on Possibility Frames*, inspected draft of 23 October 2026.
+
+Let R be a currently serial relation of argument/output types sigma,tau. On the quotient sets of root-existing entities by root identity, metatheoretic Choice selects one output class for each input class satisfying R. The graph is closed under root identity, so root fullness represents it. It is currently total, single-valued and contained in R, including when tau=e. Thus full current Relational Choice holds at the root of each construction. Nothing here boxes that verdict or presupposes an admitted individual-valued operation.
+
+This connecting deduction is OpenAI Codex, prompted by Daniel Kodsi, *Relational Choice in full rooted clouds*, 25 October 2026, §§1–2, unpaginated; independently checked for integration on 28 October 2026. The cited model soundness/fullness remains the source theorem. No new human review or Lean certification is asserted.

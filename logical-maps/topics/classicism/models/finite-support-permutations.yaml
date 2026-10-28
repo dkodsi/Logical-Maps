@@ -116,6 +116,10 @@ arguments:
     pinned down by $\{0\}$, their value at $k$ depending only on $k0$; at every arrow the structure
     has the same instances and relations as at the identity, so it is necessarily a real number
     structure with represented powers of every arity (write-up).
+  revisions:
+  - date: '2026-10-28'
+    by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+    note: 'Corrected the pin of the transported object k·Y^A in the write-up from {0} to {k0}, as its displayed extension depends on j(k0). The family in Lemma 2 remains pinned by {0}; the construction and verdicts are unchanged.'
 notes: >-
   The cited construction is a model of the map’s relational-type framework. The description
   identifies its evaluation point; construction and verification are given at the PDF locations in

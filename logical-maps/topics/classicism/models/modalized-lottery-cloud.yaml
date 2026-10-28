@@ -38,6 +38,17 @@ arguments:
   date: '2026-10-21'
   holds:
   - forcing-possibilism
+- id: root-fullness-relational-choice
+  holds:
+  - relational-choice-r
+  by: OpenAI Codex, prompted by Daniel Kodsi, connecting deduction of 25 October 2026; independent integration
+    review
+  date: '2026-10-28'
+  writeup: rooted-cloud-relational-choice
+  text: The full rooted-cloud hierarchy realizes every actual relation on root identity classes. External
+    Choice chooses one output class for each input class in a serial relation; the root-only graph is
+    admitted and is a total single-valued subrelation, including for individual outputs. See the common
+    cloud proof and this writeup.
 notes: There are 2^μ propositions at the root and 2^ℵ₀ rigid properties of individuals up to root identity.
   Choosing μ above any prescribed cardinal gives the unbounded-size assertion of Corollary 6.9. MP uses
   finite or strictly smaller, not the non-strict reading; it is not asserted necessary. This model implements

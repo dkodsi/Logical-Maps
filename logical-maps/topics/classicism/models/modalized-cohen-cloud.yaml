@@ -19,6 +19,18 @@ references:
 group: modalized-atomless-cloud
 settings:
   family: Use the one-element family consisting of the Cohen algebra RO(Fn(ω,2)).
-arguments: []
+arguments:
+- id: root-fullness-relational-choice
+  holds:
+  - relational-choice-r
+  by: OpenAI Codex, prompted by Daniel Kodsi, connecting deduction of 25 October 2026; independent integration
+    review
+  date: '2026-10-28'
+  writeup: rooted-cloud-relational-choice
+  text: At the isolated root, Lemma 6.7 represents every relation on the quotient of existing entities
+    by whole root identity. External ZFC Choice selects one output class for each input class of a serial
+    relation. Give selected tuples the root-only proposition and all others bottom; this respects root
+    identity, and at every cloud point both values are locally bottom. The admitted graph is total, single-valued
+    and contained in the original relation. Individual outputs remain relationally encoded.
 notes: Theorem A. This is the full modalized-domain model of the paper, with world-indexed existence and
   identity. The construction and its proofs are source-reported mathematical evidence, not Lean verification.

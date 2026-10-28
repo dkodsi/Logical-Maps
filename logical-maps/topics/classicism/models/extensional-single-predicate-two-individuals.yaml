@@ -1,0 +1,57 @@
+id: extensional-single-predicate-two-individuals
+name: 'Extensional model: single independent predicate on two individuals'
+certificate:
+  source_id: misc
+  produced_by: OpenAI Codex, prompted by Daniel Kodsi, signature-expansion audit of 22 October 2026
+  recorded_by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review of 28 October 2026
+  checked_by: []
+  date: '2026-10-28'
+  lean: none
+sources:
+- OpenAI Codex, prompted by Daniel Kodsi, Central question audit, 22 October 2026, sections The signature
+  and the two models, Independence holds, Other verified properties, and Signature qualification, unpaginated.
+definition: Fix exactly Sigma={c:et}. Use the full one-world extensional hierarchy with individuals {0,1},
+  propositions {0,1} and every actual function at each admitted relational-output arrow type. Interpret
+  c as the proper singleton {0}. The label 0 is external model notation, not a second language constant.
+  Evaluate at its only world. The linked writeup §1 verifies the fixed typed C semantics.
+arguments:
+- id: extensionality
+  text: All relational objects are actual functions and equality is extensional; §1.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: extensional-single-predicate-independence
+  holds:
+  - extensionality-r
+- id: necessary-functional-choice
+  text: Full domains admit every chosen relational-output selector operation, and one-world necessity
+    is truth. External Choice supplies selection (finite selection suffices at every type in the two-individual
+    model); §3.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: extensional-single-predicate-independence
+  holds:
+  - necessary-functional-choice-r
+- id: independent-named-predicate
+  text: Every closed pure et term is fixed by all permutations of the individual domain and hence denotes
+    empty or the full field. The proper named singleton is neither. With only one constant, these are
+    all Independence instances; §2.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: extensional-single-predicate-independence
+  holds:
+  - independence-signature-r
+- id: finite-domain-schema-failures
+  text: The proposition domain has two elements, and so does the individual domain in the two-individual
+    variant. The third lower-bound schema instance fails. The native finite-cardinality definitions are
+    standard in these full extensional domains; §3.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: extensional-single-predicate-independence
+  fails:
+  - infinity-e
+  - infinity-t
+notes: Exact one-predicate signature. This witnesses failure of an implication uniformly claimed over
+  permitted signatures; it does not establish existence for each prescribed richer signature. Metatheory
+  is ordinary ZFC. Witnessed Possibility fails by the direct Top-predicate instance, but is derived from
+  the recorded Extensionality closure rather than duplicated. No old human proof, native record or Lean
+  metadata is modified.

@@ -1,0 +1,67 @@
+id: restricted-entrance-cofinite-idempotent
+name: 'Restricted entrance model: cofinite idempotent profiles'
+certificate:
+  source_id: misc
+  produced_by: OpenAI Codex, prompted by Daniel Kodsi, strong-world domain constructions of 26 October
+    2026
+  recorded_by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review of 28 October 2026
+  checked_by: []
+  date: '2026-10-28'
+  lean: none
+sources:
+- OpenAI Codex, prompted by Daniel Kodsi, Strong worlds do not control modal domains, 26 October 2026,
+  §§2–5, unpaginated.
+- 'Andrew Bacon and Cian Dorr, Classicism, draft of 16 May 2023, Definition 3.19 and satisfaction clauses
+  pp.55–57, §3.5 pp.58–60: full target semantics only.'
+definition: Use a full-action target with monoid {1,k}, k²=k, and singleton individuals. Add root arrows
+  h_n and b satisfying k h_n=b and k b=b. Root relations have arbitrary current extensions and target
+  components d_infty,d_n with k d_infty=d_infty, k d_n=d_infty, and d_n=d_infty except at finitely many
+  n. Evaluate at the root. The linked proof §§2,4 verifies the full typed hierarchy and C.
+arguments:
+- id: current-full-strong-leibniz
+  text: Every nonzero root relation contains a singleton current tuple or one h_n target tuple. Their
+    future images are zero or a target singleton at identity, which maps to zero under k. They are therefore
+    strong worlds; §4.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: strong-worlds-and-entrance-domains
+  holds:
+  - strong-atomicity-r
+- id: current-full-barcan
+  text: Every h_n transport is onto at every type. Given the BF antecedent, all h_n extensions of the
+    predicate are universal. Beyond its finite exceptional set one whole h_n component equals the b component,
+    so b is universal too. This proves full current BF despite non-surjectivity at b; §5.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: strong-worlds-and-entrance-domains
+  holds:
+  - barcan-r
+- id: necessary-full-atomicity
+  text: The preceding singleton coordinates atomize the root, and the target relation domains are full
+    powersets, hence atomic at every type. Thus necessary full Atomicity holds; §4.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: strong-worlds-and-entrance-domains
+  holds:
+  - necessary-atomicity-r
+- id: necessary-strong-leibniz-failure
+  text: At the target the atom {k} maps under k to Top, which is split by {1}. It contains no other nonzero
+    candidate and so has no strong world below it. Thus SL_t fails at an actually accessible target; §4.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: strong-worlds-and-entrance-domains
+  fails:
+  - necessary-strong-atomicity-t
+- id: necessary-barcan-failure
+  text: At the target use the admitted predicate with universal current extension and endpoint-only k
+    extension. Every transported current proposition is an endpoint but the fresh quantified {1} is not.
+    This refutes BF_t there, hence its necessity at the root; §5.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: strong-worlds-and-entrance-domains
+  fails:
+  - necessary-barcan-t
+notes: Ordinary ZFC. All positive Strong Atomicity/Atomicity schemas cover every relational type; BF includes
+  e where asserted. Strong worlds may become zero. No C5 premise or individual-domain growth is used.
+  The restricted entrance closure is proved separately from the cited full-action framework. No original
+  source proof, native record or Lean status is changed.

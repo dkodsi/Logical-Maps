@@ -1,0 +1,30 @@
+id: strong-possibility-incompatible-with-barcan-t
+premises:
+- strong-possibility-r
+- barcan-t
+conclusion: false
+sources:
+- OpenAI Codex, prompted by Daniel Kodsi, finite-c5-profile-cells-20261022.md, 22 October 2026, §§1–6
+  and 9, unpaginated; signature-sp-barcan-20261022.md, §§2–4.
+- 'OpenAI Codex, prompted by Daniel Kodsi, Strong Possibility: explicit Barcan failures and the signature
+  boundary, integration review 28 October 2026, §§2–3, unpaginated.'
+proof: Let B assert C5, one individual and four propositions. It is stable and its pointed finite typed
+  structure is unique. The definable-profile pure-Max root makes B an atom. Universal-identity reflection
+  for the distinctness-preserving modality therefore makes Atom(B) a consequence of pure SP. Pure Max
+  also gives Diamond B. For Phi(p):=B→(p=Top or p=Bottom), every current p necessarily satisfies Phi by
+  atomhood, NI and stability of B. At a possible B-point some local proposition is neither Top nor Bottom,
+  so not Box forall p Phi(p). This contradicts BF_t. The full admission, modal and reference-theory details
+  are in writeups/strong-possibility-incompatible-with-barcan-t.html.
+notes: The native statement is pure. The accompanying stronger finite-signature theorem is not inserted
+  as an unguarded arbitrary-signature arrow. Failure of full BF and full Functionality follows by recorded
+  implications; the proof also exhibits each fixed-type counterinstance. No consistency of SP is asserted.
+  Independent AI mathematical review; no human or Lean certification.
+status: proved
+certificate:
+  source_id: misc
+  produced_by: OpenAI Codex, prompted by Daniel Kodsi, ordinary mathematical research
+  recorded_by: OpenAI Codex, prompted by Daniel Kodsi, integration preparation of 28 October 2026
+  checked_by: []
+  date: '2026-10-28'
+  lean: none
+references: []

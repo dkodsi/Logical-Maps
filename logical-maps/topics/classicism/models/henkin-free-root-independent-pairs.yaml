@@ -1,0 +1,73 @@
+id: henkin-free-root-independent-pairs
+name: 'Henkin model: free root over independently swappable pairs'
+certificate:
+  source_id: misc
+  produced_by: OpenAI Codex, prompted by Daniel Kodsi, modal-choice constructions of 26 October 2026
+  recorded_by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review of 28 October 2026
+  checked_by: []
+  date: '2026-10-28'
+  lean: none
+sources:
+- OpenAI Codex, prompted by Daniel Kodsi, Free root over a choiceless Henkin leaf, 26 October 2026, §§1–7;
+  Classical Henkin leaf with independently swappable pairs, same date, §§1–4; Absorbing entrance with
+  finitely supported pair intensions, same date, §§1–5; all unpaginated.
+definition: At the leaf use individuals L_i,A_i^0,A_i^1, propositions 2, and all functions finitely supported
+  by the group independently swapping A_i^0,A_i^1 and fixing every L_i. Add one unrestricted root with
+  unchanged individuals and relational domains P(product of root argument domains) × the corresponding
+  leaf domain, transporting by the second projection. Evaluate at the root. The linked writeup §§1–2 verifies
+  the complete typed hierarchy and C.
+arguments:
+- id: current-relational-choice
+  text: The unrestricted current extension of a serial relation has an external selector. Pair its graph
+    with the empty leaf relation. The resulting admitted current choice relation entails the input; §3.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: henkin-free-root-independent-pairs
+  holds:
+  - relational-choice-r
+- id: necessary-intensional-choice
+  text: For necessarily inhabited F, choose one current and one leaf instance and use their independent
+    singleton rows. These form an admitted property entailing F that is necessarily uniquely inhabited.
+    IC holds at the terminal leaf too; §3.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: henkin-free-root-independent-pairs
+  holds:
+  - necessary-intensional-choice-r
+- id: necessary-propositional-completeness
+  text: Both proposition algebras, 2×2 and 2, are finite complete Boolean algebras; §4.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: henkin-free-root-independent-pairs
+  holds:
+  - necessary-boolean-completeness-t
+- id: current-actuality
+  text: The true root-only proposition (1,0) entails every current truth; §4.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: henkin-free-root-independent-pairs
+  holds:
+  - actuality
+- id: modalized-choice-failure
+  text: Take the universal current relation with the invariant unselectable pair relation U as leaf component.
+    A necessarily functional admitted subrelation would project to a leaf selector, contradicting an untouched
+    pair swap; §§1 and 3.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: henkin-free-root-independent-pairs
+  fails:
+  - modalized-relational-choice-r
+- id: necessary-full-barcan
+  holds:
+  - necessary-barcan-r
+  text: All typed component projections are onto. At the root, forall x Box Fx forces the whole root row
+    and every projected leaf instance true, hence Box forall x Fx. At the extensional terminal leaf BF
+    holds at every type. Thus the full BF schema is necessary; see the direct transport calculation in
+    the linked proof §4.
+  by: OpenAI Codex, prompted by Daniel Kodsi
+  date: '2026-10-28'
+  writeup: independent-pairs-and-modal-choice
+notes: Ordinary ZFC metatheory. No choiceless-universe existence hypothesis is used. The support group
+  and category arrows have distinct roles. The linked proof keeps current, necessary and exact typed verdicts
+  separate; current RC is not inferred at the absorbing entrance. No existing published model or proof
+  is modified.

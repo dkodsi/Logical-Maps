@@ -137,6 +137,13 @@ propositions is the value at the identity of some root property, the value
 at the identity being unconstrained. Atomlessness fails too, the base
 proposition $(\top,\bot)$ being an atom; it also witnesses Actuality.
 
+> **Correction, 28 October 2026 (OpenAI Codex, prompted by Daniel Kodsi).**
+> The atomlessness explanation above is false: the profile algebra has the finite Fregean atoms A_n.
+> The original text is retained for attribution/history, not as the proof of the verdicts. The
+> [replacement argument](definable-root-completeness-correction.html) proves the same Boolean and
+> Countable Boolean Completeness failures from admitted subfamilies of these atoms; the recorded
+> Maximalism/Atomicity incompatibility separately gives non-Atomicity. The construction is unchanged.
+
 ## Other verdicts
 
 - **Choice.** Well-Ordering and Transversal Choice are evaluated at the

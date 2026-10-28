@@ -1,0 +1,66 @@
+id: supported-boolean-complete-predecessor
+name: 'Supported Boolean model: unrestricted predecessor of a homogeneous atomless algebra'
+certificate:
+  source_id: misc
+  produced_by: OpenAI Codex, prompted by Daniel Kodsi, supported Boolean constructions of 25 October 2026
+  recorded_by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review of 28 October 2026
+  checked_by: []
+  date: '2026-10-28'
+  lean: none
+sources:
+- OpenAI Codex, prompted by Daniel Kodsi, Observer separation with propositional completeness and divergent
+  possibilities, 25 October 2026, §§1–3 and 5a, unpaginated; independently expanded typed proofs in the
+  linked writeup, §§1–3.
+definition: Let A be the complete homogeneous atomless regular-open algebra of Cantor space, acted on
+  by its full Boolean automorphism group. The component has singleton individuals, proposition domain
+  A and all finitely A-supported actual functions at each admitted type, crisp identity and A-meet/join
+  quantifiers. Adjoin an unrestricted predecessor with each relational entity a pair (arbitrary current
+  row, component entity); component projections are onto, and application and quantification use the two
+  coordinates. Evaluate truth at the predecessor first coordinate. The linked writeup §§1–2 checks higher-type
+  closure, quantifier truth and C soundness.
+arguments:
+- id: necessary-propositional-completeness
+  text: The current algebra 2×A is externally complete and the A component satisfies BC_t at every ultrafilter
+    evaluation. Thus the closed BC_t proposition is Top and its necessary form holds; §2.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: supported-boolean-structural-contrasts
+  holds:
+  - necessary-boolean-completeness-t
+- id: necessary-full-barcan
+  text: At the predecessor all necessarily true input values are literally Top; onto component projections
+    make their quantified value Top. The component is crisp C5 and has BF at every type. Hence the entire
+    BF schema holds necessarily at the predecessor; §2.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: supported-boolean-structural-contrasts
+  holds:
+  - necessary-barcan-r
+- id: current-relational-choice
+  text: An externally selected current selector graph is admitted as its arbitrary first row with empty
+    component part, at every typed relation including individual outputs; §2.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: supported-boolean-structural-contrasts
+  holds:
+  - relational-choice-r
+- id: current-actuality
+  text: The true proposition (1,0) is below every current truth; §2.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: supported-boolean-structural-contrasts
+  holds:
+  - actuality
+- id: failures-of-global-atoms-and-stable-actuality
+  text: Every nonzero (0,a) has an atomless interval, and Actuality has component value 0 since every
+    component ultrafilter is nonprincipal on atomless A. Hence current Atomicity_t and necessary Actuality
+    fail; §2.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: supported-boolean-structural-contrasts
+  fails:
+  - necessary-actuality
+notes: The metatheory is ZFC. All current/necessary claims refer to the displayed evaluation, with no
+  all-type BC flag inferred from propositional BC. Only the predecessor has the observer verdict proved
+  in §2; no observer node is substituted. No original human source, native record, signature flag or Lean
+  certificate is changed.

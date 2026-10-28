@@ -1,0 +1,44 @@
+id: restricted-entrance-eventually-stationary
+name: 'Restricted entrance model: eventually stationary successor profiles'
+certificate:
+  source_id: misc
+  produced_by: OpenAI Codex, prompted by Daniel Kodsi, strong-world domain constructions of 26 October
+    2026
+  recorded_by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review of 28 October 2026
+  checked_by: []
+  date: '2026-10-28'
+  lean: none
+sources:
+- OpenAI Codex, prompted by Daniel Kodsi, Strong worlds do not control modal domains, 26 October 2026,
+  §§2–5, unpaginated.
+- 'Andrew Bacon and Cian Dorr, Classicism, draft of 16 May 2023, Definition 3.19 and satisfaction clauses
+  pp.55–57, §3.5 pp.58–60: full target semantics only.'
+definition: Use a full-action target with endomorphism monoid (N,+), singleton individuals and relational
+  domains P(N × product of target argument domains). Add a root with arrows h_n and k_m h_n=h_(m+n). A
+  root relational entity is an arbitrary current extension paired with a target entity eventually fixed
+  under successor transport. Transport along h_n takes the nth successor shift. Evaluate at the root.
+  The linked proof §§2–3 establishes complete typed closure and C.
+arguments:
+- id: necessary-full-strong-leibniz
+  text: Every nonzero root or target relation contains a singleton current or target profile coordinate.
+    All its future images are singleton atoms or zero, so it decides the full future relation domain.
+    Hence full Strong Atomicity holds at both objects and necessarily at the root; §3.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: strong-worlds-and-entrance-domains
+  holds:
+  - necessary-strong-atomicity-r
+- id: propositional-barcan-failure
+  text: Every root proposition has a finite/cofinite successor profile and necessarily satisfies Diamond
+    Box p or Diamond Box not p. The target even-integer proposition does not, so the pure admitted predicate
+    refutes BF_t. The shift-equality variant refutes BF at every relational type; BF_e holds necessarily;
+    §3.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: strong-worlds-and-entrance-domains
+  fails:
+  - barcan-t
+notes: Ordinary ZFC. All positive Strong Atomicity/Atomicity schemas cover every relational type; BF includes
+  e where asserted. Strong worlds may become zero. No C5 premise or individual-domain growth is used.
+  The restricted entrance closure is proved separately from the cited full-action framework. No original
+  source proof, native record or Lean status is changed.

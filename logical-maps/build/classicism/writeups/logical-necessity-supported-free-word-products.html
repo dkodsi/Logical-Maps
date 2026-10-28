@@ -1,0 +1,768 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Supported free-word products with Logical Necessity</title><link rel="icon" type="image/png" href="../favicon.png">
+<style>/* Fixed forest palette, adapted from the supplied style example.
+   Semantic and source hues retain their meaning in both modes. */
+:root {
+  --bg: #f3f1e8;
+  --panel: #f8f7f0;
+  --panel-2: #e9ecdf;
+  --line: #d4d9c9;
+  --line-strong: #a2ae97;
+  --ink: #283c28;
+  --ink-2: #4f604b;
+  --ink-3: #5f6d58;
+  --accent: #356044;
+  --link-hover: #914b30;
+  --human: #3e7052;
+  --assisted: #746044;
+  --ai: #a35b36;
+  --derived: #7b8271;
+  --indep: #a0483a;
+  --open: #e2e5d9;
+  --open-ink: #65705f;
+  --conj: #896b27;
+  --node-fill: #f8f7f0;
+  --node-stroke: #98a68b;
+  --junction: #52634b;
+  --hl: #e0e7cd;
+  --focus: #914b30;
+  --badge-ink: #ffffff;
+  --warning-bg: #f4e6dc;
+  --source-forest: #3e7052;
+  --source-rust: #a25336;
+  --source-ochre: #896b27;
+  --source-slate: #4c7279;
+  --source-berry: #80556d;
+  --source-olive: #69753c;
+  --source-misc: #696d61;
+  --shadow: 0 4px 24px rgb(40 60 40 / 12%);
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --serif: var(--sans);
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  --bg: #0e1912;
+  --panel: #142018;
+  --panel-2: #1d2b20;
+  --line: #304332;
+  --line-strong: #596e51;
+  --ink: #d7dfca;
+  --ink-2: #b3c1a7;
+  --ink-3: #96aa8d;
+  --accent: #a6c699;
+  --link-hover: #dfab89;
+  --human: #94bc95;
+  --assisted: #c1ad8d;
+  --ai: #dca17b;
+  --derived: #83937c;
+  --indep: #e09b86;
+  --open: #243327;
+  --open-ink: #a2b398;
+  --conj: #d0b36b;
+  --node-fill: #19261c;
+  --node-stroke: #627957;
+  --junction: #b3c1a7;
+  --hl: #30422a;
+  --focus: #dfab89;
+  --badge-ink: #0e1912;
+  --warning-bg: #32251f;
+  --source-forest: #94bc95;
+  --source-rust: #dca17b;
+  --source-ochre: #d0b36b;
+  --source-slate: #95bcc1;
+  --source-berry: #c5a0b7;
+  --source-olive: #b6c383;
+  --source-misc: #a9b09c;
+  --shadow: 0 4px 24px rgb(0 0 0 / 25%);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { background: var(--bg); scrollbar-color: var(--line-strong) var(--bg); }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.6 var(--sans); }
+button, input, select { font: inherit; color: inherit; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--link-hover); text-decoration: underline; text-underline-offset: 3px; }
+input[type="checkbox"] { accent-color: var(--accent); }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+::selection { background: var(--hl); color: var(--ink); }
+.theme-toggle { border: 0; padding: 6px 0; background: transparent; color: var(--ink-2); cursor: pointer; font: 13px var(--sans); white-space: nowrap; }
+.theme-toggle:hover { color: var(--link-hover); }
+.display-toggles { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0 16px; }
+.theme-toggle[aria-pressed="true"] { color: var(--accent); }
+
+/* A prismatic name: one rainbow wheel around a point in the word, spinning;
+   --prism-x and --prism-y move that point off the middle.
+   Pure spectral stops, turned by a registered angle rather than a hue
+   filter, which would muddy them. */
+@property --prism { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
+.prismatic { font-weight: 600; color: transparent; background: conic-gradient(from var(--prism) at var(--prism-x, 50%) var(--prism-y, 50%), #ff1a1a, #ff8a00, #ffd000, #22c33a, #00a8f0, #3d4bff, #b026ff, #ff1a1a); -webkit-background-clip: text; background-clip: text; animation: prism-spin 6s linear infinite; }
+/* As a link it keeps the gradient on hover, under an accent underline. */
+a.prismatic, a.prismatic:hover { color: transparent; }
+a.prismatic:hover { text-decoration-color: var(--accent); }
+@keyframes prism-spin { to { --prism: 360deg; } }
+@media (prefers-reduced-motion: reduce) { .prismatic { animation: none; } }
+
+/* Standalone write-ups use the same quiet, ruled typography as the map. */
+html:has(body.writeup-page) { background: var(--bg); }
+body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; font: 16px/1.7 var(--sans); overflow-wrap: anywhere; }
+.writeup-nav { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 16px; border-bottom: 1px solid var(--line); padding-bottom: 12px; margin-bottom: 24px; font-size: 13px; }
+.writeup-page h1 { font-size: 1.4em; line-height: 1.4; margin: 0 0 20px; color: var(--ink); }
+.writeup-page h2 { font-size: 1.15em; line-height: 1.4; margin: 1.8em 0 .5em; padding-top: 14px; border-top: 1px solid var(--line); }
+.writeup-page h3 { font-size: 1em; }
+.writeup-page p { margin: 0 0 12px; }
+.writeup-page .cert { color: var(--ink-2); font-size: .85em; }
+.writeup-page code, .writeup-page pre { font: .85em/1.6 var(--mono); color: var(--ink); }
+.writeup-page pre { padding: 14px; background: var(--panel-2); overflow-x: auto; }
+.writeup-page blockquote { color: var(--ink-2); border-left: 2px solid var(--line-strong); margin-left: 0; padding-left: 20px; }
+.writeup-page math[display="block"] { display: block; overflow-x: auto; padding: 8px 0; }
+.writeup-page table { display: block; overflow-x: auto; border-collapse: collapse; }
+.writeup-page th, .writeup-page td { border-bottom: 1px solid var(--line); padding: 8px 12px; }
+@media (max-width: 600px) {
+  body.writeup-page { margin: 1.5em auto; padding: 0 1em 2em; }
+}
+@media print {
+  :root, :root[data-theme="dark"] { --bg: white; --ink: #283c28; --ink-2: #4f604b; --accent: #356044; --line: #d4d9c9; color-scheme: light; }
+  .writeup-nav { display: none; }
+  body.writeup-page { max-width: none; margin: 0; padding: 0; }
+}
+
+/* Teal-grey, muted rust, deep teal and warm stone. Screen-only overrides
+   preserve print styling. */
+@media screen {
+  :root {
+    --bg: #ebf1f1;
+    --panel: #e1eae9;
+    --panel-2: #d0dfde;
+    --line: #c0cecd;
+    --line-strong: #849997;
+    --ink: #303b3a;
+    --ink-2: #4a5a59;
+    --ink-3: #526160;
+    --accent: #884932;
+    --link-hover: #6f3827;
+    --derived: #6f8180;
+    --open: #d6e2e1;
+    --open-ink: #526160;
+    --node-fill: #f1f6f6;
+    --node-stroke: #7f9391;
+    --junction: #596b6a;
+    --human: #2f6b66;
+    --source-forest: #2f6b66;
+    --hl: #e6ddd0;
+    --focus: #884932;
+    --shadow: 0 4px 24px rgb(48 59 58 / 10%);
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #171e1d;
+    --panel: #202a29;
+    --panel-2: #2b3736;
+    --line: #3d4b4a;
+    --line-strong: #6b817f;
+    --ink: #dbe8e7;
+    --ink-2: #b9cbca;
+    --ink-3: #a6bdbb;
+    --accent: #e2ad92;
+    --link-hover: #f0c3aa;
+    --derived: #87a09e;
+    --open: #303d3c;
+    --open-ink: #aec6c4;
+    --node-fill: #263130;
+    --node-stroke: #738d8b;
+    --junction: #b3cbc9;
+    --human: #86c0b6;
+    --source-forest: #86c0b6;
+    --hl: #463f37;
+    --focus: #e2ad92;
+    --badge-ink: #171e1a;
+    --shadow: 0 4px 24px rgb(0 0 0 / 24%);
+  }
+}
+
+/* Shared Okabe–Ito palette: https://jfly.uni-koeln.de/color/#pallet
+   Loaded after topic themes. Sky blue and orange distinguish positive and
+   negative relations; darker inks keep small labels readable in light mode.
+   Neutral surfaces are identical across maps. Print uses the shared theme. */
+@media screen {
+  :root[data-palette="colourblind"] {
+    --bg: #f4f5f6;
+    --panel: #ffffff;
+    --panel-2: #e9edf0;
+    --line: #d0d6da;
+    --line-strong: #87949d;
+    --ink: #202930;
+    --ink-2: #45535d;
+    --ink-3: #586670;
+    --accent: #0072b2;
+    --link-hover: #925f00;
+    --human: #0072b2;
+    --assisted: #80506a;
+    --ai: #a44500;
+    --derived: #687780;
+    --indep: #925f00;
+    --open: #e9edf0;
+    --open-ink: #586670;
+    --conj: #80506a;
+    --node-fill: #ffffff;
+    --node-stroke: #7a8b96;
+    --junction: #45535d;
+    --hl: #dce4ea;
+    --focus: #0072b2;
+    --badge-ink: #ffffff;
+    --warning-bg: #fff0ce;
+    --source-forest: #56b4e9;
+    --source-rust: #e69f00;
+    --source-ochre: #d55e00;
+    --source-slate: #0072b2;
+    --source-berry: #cc79a7;
+    --source-olive: #009e73;
+    --source-misc: #687780;
+    --rel-positive: #56b4e9;
+    --rel-negative: #e69f00;
+    --shadow: 0 4px 24px rgb(32 41 48 / 12%);
+  }
+  :root[data-palette="colourblind"][data-theme="dark"] {
+    --bg: #111820;
+    --panel: #18222b;
+    --panel-2: #23303b;
+    --line: #354550;
+    --line-strong: #718492;
+    --ink: #edf2f5;
+    --ink-2: #c1ced7;
+    --ink-3: #a5b5c1;
+    --accent: #56b4e9;
+    --link-hover: #e69f00;
+    --human: #56b4e9;
+    --assisted: #cc79a7;
+    --ai: #e69f00;
+    --derived: #91a1ad;
+    --indep: #e69f00;
+    --open: #23303b;
+    --open-ink: #a5b5c1;
+    --conj: #cc79a7;
+    --node-fill: #1c2933;
+    --node-stroke: #8094a3;
+    --junction: #c1ced7;
+    --hl: #354654;
+    --focus: #56b4e9;
+    --badge-ink: #111820;
+    --warning-bg: #352b18;
+    --source-misc: #91a1ad;
+    --shadow: 0 4px 24px rgb(0 0 0 / 25%);
+  }
+  /* Source swatches use the unmodified palette; outlined badges allow their
+     text to keep the normal contrast on both light and dark surfaces. */
+  :root[data-palette="colourblind"] .badge.source {
+    background: var(--panel);
+    color: var(--ink);
+    border: 1px solid var(--source-color);
+    border-left-width: 4px;
+  }
+}
+</style>
+<script>/* Apply before paint; share the preference between every map and write-up. */
+(() => {
+  const key = 'pmap-theme';
+  const paletteKey = 'pmap-palette';
+  const system = window.matchMedia?.('(prefers-color-scheme: dark)');
+  let preference;
+  let palette;
+  try { preference = localStorage.getItem(key); } catch (_) {}
+  try { palette = localStorage.getItem(paletteKey); } catch (_) {}
+  if (!['light', 'dark'].includes(preference)) preference = null;
+  if (palette !== 'colourblind') palette = 'default';
+  function apply(theme) {
+    document.documentElement.dataset.theme = theme;
+    document.querySelectorAll('[data-theme-toggle]').forEach(button => {
+      button.textContent = theme === 'dark' ? '[Light mode]' : '[Dark mode]';
+      button.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);
+    });
+  }
+  function applyPalette() {
+    document.documentElement.dataset.palette = palette;
+    document.querySelectorAll('[data-colourblind-toggle]').forEach(button => {
+      button.setAttribute('aria-pressed', String(palette === 'colourblind'));
+      button.textContent = `[Colourblind mode: ${palette === 'colourblind' ? 'on' : 'off'}]`;
+    });
+  }
+  const initial = () => preference || (system?.matches ? 'dark' : 'light');
+  apply(initial());
+  applyPalette();
+  document.addEventListener('DOMContentLoaded', () => {
+    apply(initial());
+    applyPalette();
+    document.querySelectorAll('[data-theme-toggle]').forEach(button => {
+      button.addEventListener('click', () => {
+        preference = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+        apply(preference);
+        try { localStorage.setItem(key, preference); } catch (_) {}
+      });
+    });
+    document.querySelectorAll('[data-colourblind-toggle]').forEach(button => {
+      button.addEventListener('click', () => {
+        palette = palette === 'colourblind' ? 'default' : 'colourblind';
+        applyPalette();
+        try { localStorage.setItem(paletteKey, palette); } catch (_) {}
+      });
+    });
+  });
+  system?.addEventListener('change', () => { if (!preference) apply(initial()); });
+  window.addEventListener('storage', event => {
+    if (event.key === key || event.key === null) {
+      preference = ['light', 'dark'].includes(event.newValue) ? event.newValue : null;
+      apply(initial());
+    }
+    if (event.key === paletteKey || event.key === null) {
+      palette = event.newValue === 'colourblind' ? 'colourblind' : 'default';
+      applyPalette();
+    }
+  });
+})();
+</script>
+<link rel="stylesheet" href="../math/katex.min.css">
+<script defer src="../math/katex.min.js"></script>
+<script defer src="../math/contrib/auto-render.min.js"></script>
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Supported free-word products with Logical Necessity</h1></header><p>Independent integration review, 28 October 2026. The complete 22
+October source proof below has been checked against the current
+signature, Choice, countability, rigidity and modal definitions. These
+are existing constructions, not new discoveries of the integration
+exercise. All metatheory is ZFC. No human or Lean certification is
+asserted.</p>
+<p>For any prescribed permitted set-sized signature choose an infinite
+kappa at least its size. The pure typed domains are fixed first. At most
+kappa satisfiable sentences and their full witness interpretations use
+at most kappa coordinates/pins in total. The gluing therefore interprets
+the ENTIRE prescribed signature simultaneously. Logical Necessity is
+asserted at the evaluation point only; the pure one-object invariance
+argument does not box a signature schema.</p>
+<p>The support condition restricts only the arrow variable, so every
+constant current graph profile is admitted. External Choice supplies one
+such graph for any serial current relation, including individual
+outputs. This proves full RC; pure one-object invariance makes it
+necessary. Countable BC is verified at EVERY counting type by the actual
+successor-orbit predicate, not inferred from a small individual sort.
+The model fails full BC, witnessed by failure of Weakly Inextensible
+Comprehension.</p>
+<p>Only irredundant direct verdicts are placed in the staged records;
+Actuality/completeness/Choice failures already derived by native closure
+retain their direct proofs below. The separately moving-individual model
+has a distinct record and the fully quantified Infinity axioms at e and
+t.</p>
+<h2 id="the-supported-product-model">1. The supported product model</h2>
+<p>Choose an infinite cardinal κ ≥ |Σ|. Let I have cardinality κ⁺ and
+let L be the free monoid of finite words on an alphabet of cardinality
+κ, with empty word ε. Set</p>
+<pre><code>M = L^I,       (kh)_i = k_i h_i.</code></pre>
+<p>Regard M as the arrows of a one-object category. Its identity 1 has
+every coordinate ε and is the evaluation point. The individual domain is
+a singleton, on which all arrows act trivially. Recursively, for every
+relational type τ = σ₁…σₙt, including n=0, take D_τ to contain exactly
+the profiles</p>
+<pre><code>F : M → P(D_σ₁ × … × D_σₙ)</code></pre>
+<p>for which some S ⊆ I, |S| ≤ κ, satisfies</p>
+<pre><code>m|S = m&#39;|S  ⇒  F_m = F_m&#39;.                         (support)</code></pre>
+<p>For n=0 identify a profile with a subset of M. Thus propositions are
+precisely the subsets depending on at most κ coordinates. All these
+domains are sets, defined recursively on type complexity. Define
+transport by</p>
+<pre><code>(h·F)_k = F_kh.</code></pre>
+<p>It preserves S-support: agreement of k,k’ on S implies agreement of
+kh,k’h on S. Also h·F as an entire profile depends on h only through
+h|S. Transport is functorial, since
+<code>(g·(h·F))_k = F_kgh</code>.</p>
+<p>The support condition concerns the arrow variable. It does not impose
+an equivariance condition on the members of F_m. In particular, for any
+set E of tuples, the constant profile F_m=E is admitted with empty
+support. This is the same distinction used by the extensionally full,
+pinned action constructions in the local records.</p>
+<p><strong>Closure and C.</strong> Use ordinary action-model
+interpretation: a formula at h is evaluated at the sole object with its
+parameters transported by h; quantifiers range over the displayed
+domains. If F has support S and a has support T, application has
+profile</p>
+<pre><code>(Fa)_h(b̄)  ⇔  F_h(h·a,b̄),</code></pre>
+<p>so it has support S∪T. For λ-abstraction with parameters ā, its
+profile at h consists of the tuples b̄ satisfying its body with
+parameters h·ā and bound variables b̄. This depends on h only through the
+union of the parameters’ supports. Boolean operations, equality, and
+quantification preserve that dependence: after the transported
+parameters agree, they are evaluated in the same object with exactly the
+same quantified domains. Finite unions of supports still have size
+≤κ.</p>
+<p>Induction on terms therefore gives λ-closure, closure under all
+logical operations, and commutation of interpretation with transport.
+The usual action-model verification gives H and Logical Equivalence: an
+H-valid equivalence holds at every arrow with every assignment, so the
+corresponding abstraction profiles are equal. Thus this is a model of
+the fixed C, without upgrading an equivalence under optional hypotheses
+to Logical Equivalence. Curried relational types are handled by the
+application rule above; no type with output e is added.</p>
+<p>Every pure closed sentence has the same truth value at every arrow,
+because there is one object and it has no parameters to transport. In
+particular, No Pure Contingency holds.</p>
+<p><strong>Adversarial audit of currying and quantification.</strong>
+Write τ=ρ₁…ρ_nt for the output of a permitted abstraction, and let A
+denote λx.T(x;ā). Its flattened profile is</p>
+<pre><code>A_m(b,c̄) ⇔ c̄ belongs to ⟦T(x;m·ā)⟧ at the identity with x=b.</code></pre>
+<p>The external parameters ā here include the denotations of all
+constants occurring in T. Substituting b=m·a shows, by induction on the
+body, that <code>(Aa)_m=⟦T(a;ā)⟧_m</code>: β is profile equality. For η,
+<code>(λx.Fx)_m(b,c̄)=((m·F)b)_1(c̄)=F_m(b,c̄)</code>. Thus currying does
+not discard off-identity information. Applying h to the abstraction
+replaces m·ā by (mh)·ā=m·(h·ā), which also verifies transport through
+λ.</p>
+<p>For a quantified body, e.g. λx̄.∀y φ(x̄,y;ā), the values compared at m
+and m’ use the same fresh argument tuple b̄ and the same full domain D_y.
+Agreement of m,m’ on the external parameters’ supports makes those
+parameters identical as whole transported entities, and hence gives the
+same truth value for every y. No union of the supports of all quantified
+entities is taken. This is why arbitrary higher quantification preserves
+support despite the very large domains. Identity is literal profile
+equality; if presented through Leibniz tests, the empty-supported
+constant profiles with singleton extensions separate unequal entities.
+Such constant profiles are not being confused with the moving logical
+haecceities <code>m↦{m·a}</code>.</p>
+<h2 id="a-gluing-lemma-that-preserves-the-support-bound">2. A gluing
+lemma that preserves the support bound</h2>
+<p>Suppose at most κ entities F_α of one relational type have been
+specified, and choose j outside the union of their supports. Let h_α be
+the arrow with the one-letter word α at coordinate j and ε elsewhere.
+Define a profile G by</p>
+<pre><code>G_m = (F_α)_m   if m_j ends in the letter α,
+      ∅         if m_j is empty or its last letter is not a used index.</code></pre>
+<p>This is unambiguous. It has support <code>{j} ∪ ⋃_α S_α</code>, of
+size ≤κ, so G is admitted. For every k,</p>
+<pre><code>(h_α·G)_k = G_kh_α = (F_α)_kh_α = (F_α)_k.       (gluing)</code></pre>
+<p>The last equality uses j∉S_α; right multiplication by h_α changes no
+other coordinate. Hence h_α·G=F_α as entities, not merely in their
+current extensions. The same sites work simultaneously for at most κ
+such families: choose j outside the union of all their supports, still a
+set of size ≤κ. The singleton individual type needs no gluing.</p>
+<p>This is the point at which finite support would be inadequate.
+Supports of size ≤κ accommodate all κ many witness assignments, and I
+has a coordinate left over. No infinitary conjunction is introduced into
+the object language.</p>
+<h2 id="interpret-the-fixed-signature-to-obtain-logical-necessity">3.
+Interpret the fixed signature to obtain Logical Necessity</h2>
+<p>Keep the pure model just constructed fixed. There are at most κ
+finitary Σ-sentences. Enumerate the sentences φ_α that are true at the
+object under some interpretation J_α of Σ, choosing one such
+interpretation for each. Each J_α(c) has a support of size ≤κ. There are
+at most κ² pairs (α,c), so a coordinate j exists outside the union of
+all their supports.</p>
+<p>For each relational constant c, glue the family J_α(c) using §2, and
+interpret c by the resulting G_c. Interpret individual constants by the
+unique individual. Then, simultaneously for every c,</p>
+<pre><code>h_α·G_c = J_α(c).</code></pre>
+<p>Consequently φ_α is true at h_α. Conversely, any Σ-sentence true at
+some arrow h is true in an expansion of the same pure object, with
+constants interpreted as h·G_c. We have proved</p>
+<pre><code>◇φ holds in the glued expansion
+   iff φ is satisfiable by an interpretation over this pure model.  (★)</code></pre>
+<p>Now let P be pure, with free variables among x̄, and let c̄ be distinct
+matching constants of the fixed Σ. The sentence P[c̄/x̄] is satisfiable
+over the pure model iff ∃x̄ P holds there: assign the constants a witness
+tuple in one direction, and read their interpretations as witnesses in
+the other. Distinct symbols need not denote distinct entities. Combining
+this fact with (★) yields</p>
+<pre><code>◇P[c̄/x̄] ↔ ∃x̄ P.</code></pre>
+<p>Apply it to ¬P and take duals to get the required schema</p>
+<pre><code>□P[c̄/x̄] ↔ ∀x̄ P.</code></pre>
+<p>The empty tuple is covered as well. The construction handles the
+prescribed Σ itself, including all its constants and all admitted
+instances; it is not a counterexample obtained only by replacing a
+richer signature with a singleton signature. Logical Necessity is
+asserted at the identity. It is a signature schema, so the one-object
+argument for pure sentences does not automatically box it; no boxed
+Logical Necessity claim is made.</p>
+<p>The second audit checked the simultaneous cardinal bound, not just
+gluing one tuple: κ assignments × κ constants × at most κ coordinates
+per support still use at most κ coordinates, in ZFC. The pure domains
+are fixed before any assignments are selected, and gluing changes only
+the constant interpretations. Thus neither a circular enlargement of the
+domains nor an unproved expansion to the prescribed signature is
+used.</p>
+<h2 id="atomlessness-failure-of-actuality-and-failure-of-vicinity">4.
+Atomlessness, failure of Actuality, and failure of Vicinity</h2>
+<p>For i∈I put</p>
+<pre><code>q_i = {m : m_i=ε}.</code></pre>
+<p>This is an admitted, true proposition supported by {i}. Its
+transports satisfy</p>
+<pre><code>h·q_i = q_i  if h_i=ε,
+        ⊥    otherwise.                          (kill)</code></pre>
+<p>Let p≠⊥ have support S and choose j∉S. Changing just coordinate j of
+a member of p to ε or to a nonempty word produces members of p on both
+sides of q_j. Thus p∧q_j is nonzero and strictly below p. This proves
+Atomlessness.</p>
+<p>More directly, if p is true, take j∉S and h with a nonempty word at j
+and ε elsewhere. Then p holds at h, whereas q_j does not, although q_j
+is true at the identity. Hence p does not entail every truth, proving
+failure of Actuality.</p>
+<p>Furthermore ◇q_j=q_j. Indeed, k_j h_j can be empty for some k iff h_j
+is empty. The same h therefore satisfies p but not ◇q_j. No truth
+entails the possibility of every truth, proving failure of Vicinity.
+These pure failures hold at every arrow of this one-object model.</p>
+<h2 id="failure-of-weakly-inextensible-comprehension">5. Failure of
+Weakly Inextensible Comprehension</h2>
+<p>Let E={q_i:i∈I}, and let X∈D_tt have the constant profile X_m=E. It
+is admitted with empty support. Suppose Y∈D_tt is actually coextensive
+with X, so Y_1=E, and let S support Y. Choose j∉S and let h have one
+letter at j and ε elsewhere. Then Y_h=Y_1=E.</p>
+<p>Define an admitted test relation Z∈D_tt by</p>
+<pre><code>Z_m = D_t              if m_j=ε,
+      D_t \ {q_j}     otherwise.</code></pre>
+<p>Its support is {j}. For every actual member q_i of Y and every arrow
+m, (kill) says that m·q_i is q_i or ⊥. If i=j and m_j is nonempty, it is
+⊥; if i≠j, neither possible value is q_j. Thus Z necessarily holds of
+every actual Y-member:</p>
+<pre><code>∀p (Yp → □Zp).</code></pre>
+<p>But q_j∈Y_h and q_j∉Z_h. Consequently Y≰Z. This contradicts
+WeaklyInextensible(Y). Since every actual coextension Y is defeated this
+way, Weakly Inextensible Comprehension fails at the relation type tt.
+Its boxed version fails as well.</p>
+<p>The untransported q_j in the definition of Z_m is legitimate: Z is an
+externally specified domain element whose profile depends on one
+coordinate. It is not being claimed to be the denotation of an
+expression that silently treats q_j as a rigid parameter.</p>
+<p>The second audit checked this against the exact definition: the cover
+hypothesis quantifies over actual Y-instances and asks for □Z of each
+transported instance, whereas Y≤Z tests every fresh target instance at
+every arrow. The former uses m·q_i; the latter can test q_j itself at h.
+Their difference is the exhibited failure, not an interchange of the two
+quantifier scopes. The choice of j and Z may depend on Y, as the
+negation of the comprehension instance allows.</p>
+<h2 id="all-type-bf-nevertheless-holds">6. All-type □BF nevertheless
+holds</h2>
+<p>Every arrow h acts surjectively at every type. This is immediate at
+e. For a relational F with support S, define G_m as follows. If, for
+every i∈S, m_i has h_i as a suffix, remove those suffixes and let r(m)
+be the resulting prefixes on S and ε elsewhere; set G_m=F_r(m). In the
+other case set G_m=∅. This profile is S-supported, hence admitted. For
+every k, the suffix test passes at kh and r(kh)|S=k|S, so</p>
+<pre><code>(h·G)_k = G_kh = F_k.</code></pre>
+<p>Thus h·G=F. To verify BF directly, suppose ∀a □Ra. At any h and for
+any target entity b, choose a with h·a=b. Then □Ra gives b∈R_h.
+Therefore □∀b Rb. The argument applies at every type; each BF instance
+is a pure closed sentence, so it holds at every arrow, giving □BF.</p>
+<h2 id="optional-countable-conjunctions">7. Optional countable
+conjunctions</h2>
+<p>The original-language result above needs no extension. It also
+survives adding pointwise countable conjunctions and disjunctions with
+the corresponding λ-terms. Fix that set-sized syntax first and choose κ
+large enough to bound its set of sentences and the sizes of its parse
+trees. Induction on those trees preserves the support bound, since a
+countable union of sets of size ≤κ still has size ≤κ. Sections 2–3 then
+glue witnesses for all sentences of this larger language, giving its
+Logical Necessity schema for the same finite matching tuples. Sections
+4–6 are unchanged. This is a separately identified extension of the
+result, not an assumption in its original-language proof. Unrestricted
+conjunctions of all actual propositions are not licensed: their
+parameter family can exceed the support bound.</p>
+<h2 id="one-further-verdict-all-type-tame-rigidity">8. One further
+verdict: all-type □Tame Rigidity</h2>
+<p>Here is a new structural lemma for this same model, in the original
+language. For a set E of argument tuples write</p>
+<pre><code>H_E(m) = m·E.</code></pre>
+<p>This is initially an external profile; it is not assumed to belong to
+a domain. <strong>Exact-image lemma:</strong> an admitted relation Y
+with actual extension E is weakly rigid iff Y=H_E. In that case Y is
+rigid at every arrow.</p>
+<p>For the nontrivial direction, suppose Y is weakly rigid and supported
+by S. Weak persistence gives m·E⊆Y_m. For any T⊆I of size ≤κ define the
+admitted, T-supported approximation</p>
+<pre><code>B_T(E)_k = ⋃{n·E : n|T=k|T}.</code></pre>
+<p>Every actual ā∈E necessarily falls under B_T(E), taking n=k at each
+arrow. Weak inextensibility therefore gives Y≤B_T(E). This approximation
+is the analogue of the finite-pinning test in the recorded
+<code>arguments/tame-rigidity-factorizable.yaml</code>; the following
+coordinate factorization is specific to the present construction.</p>
+<p>Fix b̄∈Y_m. Enlarge S to T by adding supports of the finitely many
+entries of b̄; |T|≤κ. From Y≤B_T(E), choose n and ā∈E with n|T=m|T and
+n·ā=b̄. Define arrows r,u coordinatewise by</p>
+<pre><code>r_i=u_i=ε       for i∈T,
+r_i=n_i, u_i=m_i for i∉T.</code></pre>
+<p>These are arrows of the full product M, even if they have more than κ
+nonempty coordinates. We have mr=un: on T this is m_i=n_i, and outside T
+both sides are m_i n_i. Since r fixes S, Y_r=Y_1=E; weak persistence
+therefore gives r·ā∈E. Since u fixes the supports of b̄, u·b̄=b̄.
+Consequently</p>
+<pre><code>m·(r·ā) = (mr)·ā = (un)·ā = u·b̄ = b̄.</code></pre>
+<p>Thus Y_m⊆m·E, proving equality at every m. No cancellation or
+inverses, and no support bound on the arrows themselves, were
+assumed.</p>
+<p>Conversely, if the admitted Y equals H_E, it is weakly persistent.
+Any admitted Z necessarily holding of every ā∈E contains m·E at every m,
+so Y≤Z, proving weak inextensibility. For any arrow h,</p>
+<pre><code>(h·Y)_k = (kh)·E = k·(h·E),       (h·Y)_1=h·E.</code></pre>
+<p>Hence every transported Y also has the exact-image property and is
+weakly rigid. This proves Rigid(Y). The empty tuple and individual
+arguments are covered: the empty tuple and the singleton individual have
+empty support. Thus Tame Rigidity holds at all relational types. Its
+instances are pure closed sentences of the one-object model, so □Tame
+Rigidity holds as well.</p>
+<p>The lemma does <strong>not</strong> make every H_E admissible. For
+example, E={q_i:i∈I} yields H_E(m)={q_i:m_i=ε} together with ⊥ when some
+coordinate is nonempty; its dependence on all I coordinates prevents a
+support of size ≤κ. The full-model proof of Rigid Power cannot therefore
+be imported. Section 9 now turns this lifting issue into a
+counterexample in this same model. The original pinned models have not
+been altered or assigned new verdicts.</p>
+<h2 id="rigid-power-fails-a-family-of-shifted-relations">9. Rigid Power
+fails: a family of shifted relations</h2>
+<p>Fix o∈I and put J=I{o}. Retain the distinct propositions q_j of §4.
+Let y_j∈D_tt be the constant profile with extension {q_j}. Each y_j is
+fixed <strong>as an entity</strong> by every arrow; it need not be rigid
+as a relation. The y_j are pairwise distinct.</p>
+<p>Let χ(n) be 1 when the integer n is a nonnegative square, and 0
+otherwise. Its right tails χ(n+z), n≥0, are different for different
+integers z: sufficiently large consecutive squares have gaps exceeding
+any prescribed nonzero shift. Every tail also contains a 1. For z∈Z and
+j∈J define e_(z,j)∈D_tt by the following extensions, where r=|m_o| and
+n=|m_j|:</p>
+<pre><code>r=0:  {q_j} ∪ ({⊥} if χ(n+z)=1, otherwise ∅);
+r=1:  {q_j} if n+z≥0, otherwise ∅;
+r≥2:  {q_j}.</code></pre>
+<p>These profiles have support {o,j}. The square markers distinguish all
+z in a fixed j-family, and the q_j markers distinguish the families. Let
+a have one letter at o and ε elsewhere; let b_j have one letter at j and
+ε elsewhere. Direct right translation gives</p>
+<pre><code>b_j·e_(z,j)=e_(z+1,j),       a²·e_(z,j)=y_j,
+a·e_(z,j)=y_j  iff z≥0.</code></pre>
+<p>For z&lt;0 the last image has empty extension at the identity, so it
+is not any y_k. Also b_j fixes every e_(z,k) for k≠j. All of these are
+equalities of complete profiles. The q_j appearing inside their
+extensions are fixed set members in these definitions, not silently
+rigidified propositional parameters.</p>
+<p>Put E=⋃<em>(j∈J){e</em>(z,j):z∈Z} and B={y_j:j∈J}. The exact-image
+profile F=H_E is admitted at type <code>(tt)t</code> with support {o}.
+Indeed, an arbitrary arrow m shifts the integer z in each j-family by
+|m_j|, which permutes Z. Thus m·E depends only on |m_o|: it is E if that
+length is 0, a·E if it is 1, and B if it is at least 2. The profile
+X=H_B is the constant profile B, hence admitted with empty support. Both
+F and X are rigid by §8, and X≤a·F.</p>
+<p>There is no rigid Y≤F with a·Y=X. Otherwise §8 writes Y=H_A for A⊆E,
+and a·A=B. Let S support Y and choose j∈J. Since b_j fixes S, b_j·Y=Y,
+whence b_j·A=A. The nonempty set</p>
+<pre><code>A_j={z∈Z:e_(z,j)∈A}</code></pre>
+<p>is invariant under the bijective shift z↦z+1: no other family maps
+into this one. It is nonempty because a·A contains y_j, whose only
+preimages in E have the form e_(z,j) with z≥0. Shift invariance forces
+A_j=Z. It then contains e_(-1,j), whose a-image is not in B, a
+contradiction.</p>
+<p>Let P_F=λY(Rigid(Y)∧Y≤F). At a its extension contains X, whereas the
+a-image of its actual extension does not. The exact-image lemma
+therefore says P_F is not weakly rigid, and in particular not rigid.
+This refutes Rigid Power at the bound type <code>(tt)t</code>. Its boxed
+version fails; Weakly Rigid Power fails as well, since that principle
+implies Rigid Power. These are pure failures, unaffected by the glued
+interpretation of Σ.</p>
+<p><strong>Why small tests miss this obstruction.</strong> If a future
+rigid subrelation H_D≤h·H_E has |D|≤κ, choose one preimage in E for each
+member of D. Their set A has size ≤κ, and the union of their supports
+has size ≤κ. Therefore H_A is admitted and rigid, and h·H_A=H_D. Every
+such small target lifts. In the counterexample |B|=κ⁺, and every
+≤κ-sized subfamily lifts even though B itself does not. This is an
+external cardinal statement in the fixed model, not a new
+object-language cardinality axiom.</p>
+<h2 id="countable-boolean-completeness-holds-at-every-counting-type">10.
+Countable Boolean Completeness holds at every counting type</h2>
+<p>At every relational type, the pointwise union or intersection of at
+most κ admitted profiles is admitted: take the union of their supports.
+This external closure alone should not be confused with the map’s
+internal countability predicate; the following verifies the
+connection.</p>
+<p>For any counting type σ, the actual extension of FiniteCardinality_σ
+is exactly the external orbit {Suc_σⁿ(0_σ):n∈N}. Every actual inductive
+property contains this orbit by external finite induction. Conversely,
+the constant profile whose extension is exactly this orbit is admitted
+and is an inductive property, so the impredicative definition includes
+no other entities. This proves external countability of the number
+domain without assuming that all numerals are distinct, or assuming
+I_σ.</p>
+<p>If Ctbl_(σ,τ)(A) holds, its witnessing relation assigns a nonempty
+set of these labels to each actual A-instance, with disjoint label sets
+for distinct instances. Assign each instance the least external
+iteration index of one of its labels. This is an external injection into
+N, so the actual extension E=A_1 is countable. The pointwise union
+⋃_(x∈E)x is admitted by the support bound and is its least upper bound
+under profile inclusion. This is exactly the map’s LUB definition with
+A’s <strong>actual</strong> instances. Thus the whole Countable Boolean
+Completeness schema holds for every σ and relational τ; its boxed
+instances hold by the one-object pure-sentence argument. The proof does
+not use a small individual domain to trivialize the schema.</p>
+<h2 id="a-variant-with-infinitely-many-moving-individuals">11. A variant
+with infinitely many moving individuals</h2>
+<p>The Choice + Countable BC counterexample can also have infinitely
+many individuals, while retaining Logical Necessity for signatures
+containing individual constants. Let U have cardinality κ⁺ and S be the
+monoid of surjections U→U. Replace M by L^I×S, take D_e=U with action
+(m,s)·a=s(a), and allow every relational profile that depends on at most
+κ coordinates of its L^I argument and arbitrarily on its whole S
+argument. Impose no symmetry condition. This is a separate model. All
+constant extension profiles remain admitted, so the Relational Choice
+proof remains valid.</p>
+<p>Closure under application, abstraction and quantification is
+unchanged: parameters have bounded dependence on the L^I coordinates,
+while unrestricted dependence on the S-coordinate is permitted.
+Individual parameters have empty L^I-support. For BF, retain the
+coordinatewise suffix lifts of §6. Right multiplication by s∈S is
+injective, since rs=ts and surjectivity of s imply r=t. Therefore a
+profile F has a preimage under s by assigning F_(m,r) at coordinates
+(m,rs), and empty extension outside this image. This preserves its
+L^I-support. The action at e is onto by definition, so all-type □BF
+holds.</p>
+<p>The exact-image lemma also survives. In B_T(E), require not only
+agreement on T but also equality of the whole S-coordinate. For
+b∈Y_(m,s), this produces (n,s)·a=b with n|T=m|T. Use the same
+coordinatewise r,u as §8, giving both of them S-coordinate id. The
+factorization (m,s)(r,id)=(u,id)(n,s) still holds. Both the
+fixed-support arguments are unchanged, so □Tame Rigidity follows. The
+Rigid Power obstruction in §9 ignores the S-coordinate, and its
+fresh-coordinate shifts have S-coordinate id; it therefore refutes Rigid
+Power here as well.</p>
+<p>For gluing, choose distinct a_c∈U for all individual constants. For
+each full witness interpretation J_α, extend the prescriptions
+a_c↦J_α(c) to a surjection s_α; there are at most κ prescriptions and κ⁺
+remaining arguments. For each relational constant c choose B_(α,c) with
+s_α·B_(α,c)=J_α(c), using the preceding profile lift. This lift does not
+enlarge L^I-supports. Choose a coordinate j outside the union of all
+these supports and glue B_(α,c) by the last letter at j, as in §2. At
+the arrow with that letter only at j and with S-coordinate s_α, all
+constants simultaneously become their J_α-values, including the
+individual constants. This proves the same full fixed-signature Logical
+Necessity schema.</p>
+<p>The proofs of Atomlessness, failure of Vicinity and failure of Weakly
+Inextensible Comprehension keep the S-coordinate equal to id, and hence
+remain valid. The Countable Boolean Completeness argument in §10 uses
+admitted constant profiles and bounded unions of supports, both still
+available. It therefore remains valid too. Finally the impredicative
+finite-cardinality domain is still exactly the external successor orbit,
+by the constant-orbit-property argument in §10. Its nth member holds
+precisely of n-element actual extensions, by finite induction. Since
+D_e=U is infinite, this proves the quantified Axiom of Infinity at e;
+Atomlessness gives an infinite D_t and the same proof gives its Axiom of
+Infinity. These pure truths are necessary.</p>
+<p>Thus the weaker Choice + Countable BC question has a negative answer
+even with quantified infinity at e and t and the other positive
+properties stated above. The original source recorded this as a
+self-audit; the present integration has independently checked its
+construction and typed verdicts; full BC still fails by the verified
+weak-inextensibility obstruction.</p>
+<h2 id="direct-sources-and-background-attribution">Direct sources and
+background attribution</h2>
+<p>Direct sources: OpenAI Codex, prompted by Daniel Kodsi, <em>Logical
+Necessity without Actuality</em> (central-map.md), 22 October 2026,
+§§1–11, and <em>Symmetric surjection model with free-word gluing</em>,
+same date, §§1–9, unpaginated, as applicable above. The former is
+preserved in the integration-register supported-products proof. This
+integration independently checks their current saved arguments.</p>
+<p>Background: Bacon and Dorr, <em>Classicism</em>, draft of 16 May
+2023, §3.5 pp.58–61 and Appendix D pp.73–79; Cian Dorr, <em>Boolean
+Completeness does not imply Rigid Comprehension</em>, draft of 30 July
+2026, Definitions 15–18 p.8 and Theorem 36 pp.18–19; the existing <a
+href="https://github.com/zwlgzwlg/Logical-Maps/blob/6f15ef5c491fcb117d4d11d8837545a9baaa042d/logical-maps/topics/classicism/arguments/rigid-power-surjections.yaml">surjection
+rigid-power proof</a> supplies the finite-pinning comparison. The
+larger-support constructions, simultaneous signature expansions and new
+verdicts are the AI source arguments. No published proof is modified or
+credited with those additions.</p>
+</body></html>

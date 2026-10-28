@@ -1,0 +1,26 @@
+id: modalized-relational-choice-implies-necessary-modalized-relational-choice
+premises:
+- modalized-relational-choice-r
+conclusion: necessary-modalized-relational-choice-r
+status: proved
+certificate:
+  source_id: misc
+  produced_by: OpenAI Codex, prompted by Daniel Kodsi, ordinary mathematical research
+  recorded_by: OpenAI Codex, prompted by Daniel Kodsi, integration preparation of 28 October 2026
+  checked_by: []
+  date: '2026-10-28'
+  lean: none
+sources:
+- OpenAI Codex, prompted by Daniel Kodsi, Universal modal selectors and persistence of MRC, 26 October
+  2026, §§1–5, unpaginated; proof and source distinctions in the linked writeup.
+proof: Apply MRC_(tau t,tau) to the unconditionally necessarily serial relation U(F,y)=Fy or not exists
+  z Fz. Its one admitted necessarily functional subrelation S selects from every inhabited property at
+  every accessible evaluation. Intersect any relation R with S applied to its rows. The resulting admitted
+  relation entails R and is necessarily functional whenever R is necessarily serial, at every accessible
+  evaluation. This supplies necessary MRC at every input type with output tau. Full MRC supplies every
+  required membership instance. See the same-stem writeup for exact scope.
+references: []
+notes: The stronger typed statement is MRC_(tau t,tau) ⇒ □MRC_(sigma,tau), □RC_(sigma,tau), and □IC_tau,
+  including tau=e. No BF is needed. Existing boxed-MRC arrows and Dorr’s chooser-of-graphs result then
+  derive the full equivalence MRC = □MRC = □RC+IC = □RC+□IC without redundant arrows. Independent AI proof
+  review is recorded in the staging receipt; no human or Lean certification is asserted.

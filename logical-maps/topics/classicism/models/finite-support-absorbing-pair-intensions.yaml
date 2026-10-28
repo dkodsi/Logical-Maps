@@ -1,0 +1,66 @@
+id: finite-support-absorbing-pair-intensions
+name: 'Finite-support model: absorbing entrance with independent pair intensions'
+certificate:
+  source_id: misc
+  produced_by: OpenAI Codex, prompted by Daniel Kodsi, modal-choice constructions of 26 October 2026
+  recorded_by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review of 28 October 2026
+  checked_by: []
+  date: '2026-10-28'
+  lean: none
+sources:
+- OpenAI Codex, prompted by Daniel Kodsi, Free root over a choiceless Henkin leaf, 26 October 2026, §§1–7;
+  Classical Henkin leaf with independently swappable pairs, same date, §§1–4; Absorbing entrance with
+  finitely supported pair intensions, same date, §§1–5; all unpaginated.
+definition: The category has r→s via a, endomorphism group Z at s, and k a=a for every integer k; there
+  is no return arrow. Individuals at both objects are pairs A_n^0,A_n^1, transported identically. A separate
+  group independently swaps pairs and fixes all category arrows. At every relational type admit exactly
+  all finitely supported subsets of the tagged arrow/local-tuple domain. Evaluate at r. The complete typed
+  restriction and C verification are in the linked writeup §5.
+arguments:
+- id: current-intensional-choice
+  text: Only identity_r and a depart r. Two chosen local instances have a common finite support, so their
+    singleton rows form the required property; §6.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: finite-support-absorbing-pair-intensions
+  holds:
+  - intensional-choice-r
+- id: necessary-full-completeness
+  text: A current admitted family with support N has an intersection invariant under the same support
+    stabilizer. This admits its GLB at every relational type and at both objects; §7.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: finite-support-absorbing-pair-intensions
+  holds:
+  - necessary-boolean-completeness-r
+- id: necessary-full-atomicity
+  text: Every tagged tuple has finite support; its admitted singleton is an atom. Every nonempty relation
+    contains one, at each object and every type; §7.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: finite-support-absorbing-pair-intensions
+  holds:
+  - necessary-atomicity-r
+- id: necessary-intensional-choice-failure
+  text: At s, the intension whose nth integer row is the nth pair is empty-supported and necessarily inhabited.
+    A necessarily singleton subproperty cannot be fixed by an untouched pair swap. Thus IC_e fails at
+    the accessible s; §6.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: finite-support-absorbing-pair-intensions
+  fails:
+  - necessary-intensional-choice-r
+- id: relational-barcan-and-distinctness-failures
+  text: The a-transport image on propositions consists only of the endpoints; its admitted image test
+    refutes BF_t. The nonzero root-only proposition transports to Bottom, refuting ND_t; §7. BF_e and
+    ND_e nevertheless hold necessarily.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: finite-support-absorbing-pair-intensions
+  fails:
+  - barcan-t
+  - distinctness-necessary-t
+notes: Ordinary ZFC metatheory. No choiceless-universe existence hypothesis is used. The support group
+  and category arrows have distinct roles. The linked proof keeps current, necessary and exact typed verdicts
+  separate; current RC is not inferred at the absorbing entrance. No existing published model or proof
+  is modified.

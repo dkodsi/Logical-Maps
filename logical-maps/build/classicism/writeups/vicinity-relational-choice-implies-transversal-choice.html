@@ -1,0 +1,713 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vicinity and Relational Choice give Transversal Choice</title><link rel="icon" type="image/png" href="../favicon.png">
+<style>/* Fixed forest palette, adapted from the supplied style example.
+   Semantic and source hues retain their meaning in both modes. */
+:root {
+  --bg: #f3f1e8;
+  --panel: #f8f7f0;
+  --panel-2: #e9ecdf;
+  --line: #d4d9c9;
+  --line-strong: #a2ae97;
+  --ink: #283c28;
+  --ink-2: #4f604b;
+  --ink-3: #5f6d58;
+  --accent: #356044;
+  --link-hover: #914b30;
+  --human: #3e7052;
+  --assisted: #746044;
+  --ai: #a35b36;
+  --derived: #7b8271;
+  --indep: #a0483a;
+  --open: #e2e5d9;
+  --open-ink: #65705f;
+  --conj: #896b27;
+  --node-fill: #f8f7f0;
+  --node-stroke: #98a68b;
+  --junction: #52634b;
+  --hl: #e0e7cd;
+  --focus: #914b30;
+  --badge-ink: #ffffff;
+  --warning-bg: #f4e6dc;
+  --source-forest: #3e7052;
+  --source-rust: #a25336;
+  --source-ochre: #896b27;
+  --source-slate: #4c7279;
+  --source-berry: #80556d;
+  --source-olive: #69753c;
+  --source-misc: #696d61;
+  --shadow: 0 4px 24px rgb(40 60 40 / 12%);
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --serif: var(--sans);
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  --bg: #0e1912;
+  --panel: #142018;
+  --panel-2: #1d2b20;
+  --line: #304332;
+  --line-strong: #596e51;
+  --ink: #d7dfca;
+  --ink-2: #b3c1a7;
+  --ink-3: #96aa8d;
+  --accent: #a6c699;
+  --link-hover: #dfab89;
+  --human: #94bc95;
+  --assisted: #c1ad8d;
+  --ai: #dca17b;
+  --derived: #83937c;
+  --indep: #e09b86;
+  --open: #243327;
+  --open-ink: #a2b398;
+  --conj: #d0b36b;
+  --node-fill: #19261c;
+  --node-stroke: #627957;
+  --junction: #b3c1a7;
+  --hl: #30422a;
+  --focus: #dfab89;
+  --badge-ink: #0e1912;
+  --warning-bg: #32251f;
+  --source-forest: #94bc95;
+  --source-rust: #dca17b;
+  --source-ochre: #d0b36b;
+  --source-slate: #95bcc1;
+  --source-berry: #c5a0b7;
+  --source-olive: #b6c383;
+  --source-misc: #a9b09c;
+  --shadow: 0 4px 24px rgb(0 0 0 / 25%);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { background: var(--bg); scrollbar-color: var(--line-strong) var(--bg); }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.6 var(--sans); }
+button, input, select { font: inherit; color: inherit; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--link-hover); text-decoration: underline; text-underline-offset: 3px; }
+input[type="checkbox"] { accent-color: var(--accent); }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+::selection { background: var(--hl); color: var(--ink); }
+.theme-toggle { border: 0; padding: 6px 0; background: transparent; color: var(--ink-2); cursor: pointer; font: 13px var(--sans); white-space: nowrap; }
+.theme-toggle:hover { color: var(--link-hover); }
+.display-toggles { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0 16px; }
+.theme-toggle[aria-pressed="true"] { color: var(--accent); }
+
+/* A prismatic name: one rainbow wheel around a point in the word, spinning;
+   --prism-x and --prism-y move that point off the middle.
+   Pure spectral stops, turned by a registered angle rather than a hue
+   filter, which would muddy them. */
+@property --prism { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
+.prismatic { font-weight: 600; color: transparent; background: conic-gradient(from var(--prism) at var(--prism-x, 50%) var(--prism-y, 50%), #ff1a1a, #ff8a00, #ffd000, #22c33a, #00a8f0, #3d4bff, #b026ff, #ff1a1a); -webkit-background-clip: text; background-clip: text; animation: prism-spin 6s linear infinite; }
+/* As a link it keeps the gradient on hover, under an accent underline. */
+a.prismatic, a.prismatic:hover { color: transparent; }
+a.prismatic:hover { text-decoration-color: var(--accent); }
+@keyframes prism-spin { to { --prism: 360deg; } }
+@media (prefers-reduced-motion: reduce) { .prismatic { animation: none; } }
+
+/* Standalone write-ups use the same quiet, ruled typography as the map. */
+html:has(body.writeup-page) { background: var(--bg); }
+body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; font: 16px/1.7 var(--sans); overflow-wrap: anywhere; }
+.writeup-nav { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 16px; border-bottom: 1px solid var(--line); padding-bottom: 12px; margin-bottom: 24px; font-size: 13px; }
+.writeup-page h1 { font-size: 1.4em; line-height: 1.4; margin: 0 0 20px; color: var(--ink); }
+.writeup-page h2 { font-size: 1.15em; line-height: 1.4; margin: 1.8em 0 .5em; padding-top: 14px; border-top: 1px solid var(--line); }
+.writeup-page h3 { font-size: 1em; }
+.writeup-page p { margin: 0 0 12px; }
+.writeup-page .cert { color: var(--ink-2); font-size: .85em; }
+.writeup-page code, .writeup-page pre { font: .85em/1.6 var(--mono); color: var(--ink); }
+.writeup-page pre { padding: 14px; background: var(--panel-2); overflow-x: auto; }
+.writeup-page blockquote { color: var(--ink-2); border-left: 2px solid var(--line-strong); margin-left: 0; padding-left: 20px; }
+.writeup-page math[display="block"] { display: block; overflow-x: auto; padding: 8px 0; }
+.writeup-page table { display: block; overflow-x: auto; border-collapse: collapse; }
+.writeup-page th, .writeup-page td { border-bottom: 1px solid var(--line); padding: 8px 12px; }
+@media (max-width: 600px) {
+  body.writeup-page { margin: 1.5em auto; padding: 0 1em 2em; }
+}
+@media print {
+  :root, :root[data-theme="dark"] { --bg: white; --ink: #283c28; --ink-2: #4f604b; --accent: #356044; --line: #d4d9c9; color-scheme: light; }
+  .writeup-nav { display: none; }
+  body.writeup-page { max-width: none; margin: 0; padding: 0; }
+}
+
+/* Teal-grey, muted rust, deep teal and warm stone. Screen-only overrides
+   preserve print styling. */
+@media screen {
+  :root {
+    --bg: #ebf1f1;
+    --panel: #e1eae9;
+    --panel-2: #d0dfde;
+    --line: #c0cecd;
+    --line-strong: #849997;
+    --ink: #303b3a;
+    --ink-2: #4a5a59;
+    --ink-3: #526160;
+    --accent: #884932;
+    --link-hover: #6f3827;
+    --derived: #6f8180;
+    --open: #d6e2e1;
+    --open-ink: #526160;
+    --node-fill: #f1f6f6;
+    --node-stroke: #7f9391;
+    --junction: #596b6a;
+    --human: #2f6b66;
+    --source-forest: #2f6b66;
+    --hl: #e6ddd0;
+    --focus: #884932;
+    --shadow: 0 4px 24px rgb(48 59 58 / 10%);
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #171e1d;
+    --panel: #202a29;
+    --panel-2: #2b3736;
+    --line: #3d4b4a;
+    --line-strong: #6b817f;
+    --ink: #dbe8e7;
+    --ink-2: #b9cbca;
+    --ink-3: #a6bdbb;
+    --accent: #e2ad92;
+    --link-hover: #f0c3aa;
+    --derived: #87a09e;
+    --open: #303d3c;
+    --open-ink: #aec6c4;
+    --node-fill: #263130;
+    --node-stroke: #738d8b;
+    --junction: #b3cbc9;
+    --human: #86c0b6;
+    --source-forest: #86c0b6;
+    --hl: #463f37;
+    --focus: #e2ad92;
+    --badge-ink: #171e1a;
+    --shadow: 0 4px 24px rgb(0 0 0 / 24%);
+  }
+}
+
+/* Shared Okabe–Ito palette: https://jfly.uni-koeln.de/color/#pallet
+   Loaded after topic themes. Sky blue and orange distinguish positive and
+   negative relations; darker inks keep small labels readable in light mode.
+   Neutral surfaces are identical across maps. Print uses the shared theme. */
+@media screen {
+  :root[data-palette="colourblind"] {
+    --bg: #f4f5f6;
+    --panel: #ffffff;
+    --panel-2: #e9edf0;
+    --line: #d0d6da;
+    --line-strong: #87949d;
+    --ink: #202930;
+    --ink-2: #45535d;
+    --ink-3: #586670;
+    --accent: #0072b2;
+    --link-hover: #925f00;
+    --human: #0072b2;
+    --assisted: #80506a;
+    --ai: #a44500;
+    --derived: #687780;
+    --indep: #925f00;
+    --open: #e9edf0;
+    --open-ink: #586670;
+    --conj: #80506a;
+    --node-fill: #ffffff;
+    --node-stroke: #7a8b96;
+    --junction: #45535d;
+    --hl: #dce4ea;
+    --focus: #0072b2;
+    --badge-ink: #ffffff;
+    --warning-bg: #fff0ce;
+    --source-forest: #56b4e9;
+    --source-rust: #e69f00;
+    --source-ochre: #d55e00;
+    --source-slate: #0072b2;
+    --source-berry: #cc79a7;
+    --source-olive: #009e73;
+    --source-misc: #687780;
+    --rel-positive: #56b4e9;
+    --rel-negative: #e69f00;
+    --shadow: 0 4px 24px rgb(32 41 48 / 12%);
+  }
+  :root[data-palette="colourblind"][data-theme="dark"] {
+    --bg: #111820;
+    --panel: #18222b;
+    --panel-2: #23303b;
+    --line: #354550;
+    --line-strong: #718492;
+    --ink: #edf2f5;
+    --ink-2: #c1ced7;
+    --ink-3: #a5b5c1;
+    --accent: #56b4e9;
+    --link-hover: #e69f00;
+    --human: #56b4e9;
+    --assisted: #cc79a7;
+    --ai: #e69f00;
+    --derived: #91a1ad;
+    --indep: #e69f00;
+    --open: #23303b;
+    --open-ink: #a5b5c1;
+    --conj: #cc79a7;
+    --node-fill: #1c2933;
+    --node-stroke: #8094a3;
+    --junction: #c1ced7;
+    --hl: #354654;
+    --focus: #56b4e9;
+    --badge-ink: #111820;
+    --warning-bg: #352b18;
+    --source-misc: #91a1ad;
+    --shadow: 0 4px 24px rgb(0 0 0 / 25%);
+  }
+  /* Source swatches use the unmodified palette; outlined badges allow their
+     text to keep the normal contrast on both light and dark surfaces. */
+  :root[data-palette="colourblind"] .badge.source {
+    background: var(--panel);
+    color: var(--ink);
+    border: 1px solid var(--source-color);
+    border-left-width: 4px;
+  }
+}
+</style>
+<script>/* Apply before paint; share the preference between every map and write-up. */
+(() => {
+  const key = 'pmap-theme';
+  const paletteKey = 'pmap-palette';
+  const system = window.matchMedia?.('(prefers-color-scheme: dark)');
+  let preference;
+  let palette;
+  try { preference = localStorage.getItem(key); } catch (_) {}
+  try { palette = localStorage.getItem(paletteKey); } catch (_) {}
+  if (!['light', 'dark'].includes(preference)) preference = null;
+  if (palette !== 'colourblind') palette = 'default';
+  function apply(theme) {
+    document.documentElement.dataset.theme = theme;
+    document.querySelectorAll('[data-theme-toggle]').forEach(button => {
+      button.textContent = theme === 'dark' ? '[Light mode]' : '[Dark mode]';
+      button.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);
+    });
+  }
+  function applyPalette() {
+    document.documentElement.dataset.palette = palette;
+    document.querySelectorAll('[data-colourblind-toggle]').forEach(button => {
+      button.setAttribute('aria-pressed', String(palette === 'colourblind'));
+      button.textContent = `[Colourblind mode: ${palette === 'colourblind' ? 'on' : 'off'}]`;
+    });
+  }
+  const initial = () => preference || (system?.matches ? 'dark' : 'light');
+  apply(initial());
+  applyPalette();
+  document.addEventListener('DOMContentLoaded', () => {
+    apply(initial());
+    applyPalette();
+    document.querySelectorAll('[data-theme-toggle]').forEach(button => {
+      button.addEventListener('click', () => {
+        preference = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+        apply(preference);
+        try { localStorage.setItem(key, preference); } catch (_) {}
+      });
+    });
+    document.querySelectorAll('[data-colourblind-toggle]').forEach(button => {
+      button.addEventListener('click', () => {
+        palette = palette === 'colourblind' ? 'default' : 'colourblind';
+        applyPalette();
+        try { localStorage.setItem(paletteKey, palette); } catch (_) {}
+      });
+    });
+  });
+  system?.addEventListener('change', () => { if (!preference) apply(initial()); });
+  window.addEventListener('storage', event => {
+    if (event.key === key || event.key === null) {
+      preference = ['light', 'dark'].includes(event.newValue) ? event.newValue : null;
+      apply(initial());
+    }
+    if (event.key === paletteKey || event.key === null) {
+      palette = event.newValue === 'colourblind' ? 'colourblind' : 'default';
+      applyPalette();
+    }
+  });
+})();
+</script>
+<link rel="stylesheet" href="../math/katex.min.css">
+<script defer src="../math/katex.min.js"></script>
+<script defer src="../math/contrib/auto-render.min.js"></script>
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Vicinity and Relational Choice give Transversal Choice</h1></header><p>For every fixed type <span class="math inline">\sigma</span>,
+including <span class="math inline">e</span>, C proves <span
+class="math display">
+\operatorname{Vicinity}+RC_{\sigma t,\sigma}\ \Longrightarrow\
+TC_\sigma.
+\tag{1}
+</span> Thus full RC, TC, Well-Ordering and Zorn coincide over C plus
+Vicinity. Unboxed ND_t suffices through its existing implication to
+Vicinity. No completeness or Actuality premise is used. We first prove
+the C5 lemma, then interpret it on a true Vicinity region without
+shrinking the carrier on which the transversal is required.</p>
+<h2 id="normalize-the-equivalence-and-partial-transversals">1. Normalize
+the equivalence and partial transversals</h2>
+<p>Fix a current equivalence <span class="math inline">R</span> on <span
+class="math inline">\sigma</span>, and let <span
+class="math inline">\rho=\sigma t</span>. Define its uniform equivalence
+closure <span class="math display">
+Q(x,y):=\forall P^{\sigma\sigma t}
+((\operatorname{Equiv}(P)\land R\subseteq P)\to(Px)y),
+\qquad (SA)x:=\exists y((Qx)y\land Ay).
+</span> H proves, for arbitrary <span class="math inline">R</span>, that
+<span class="math inline">Q</span> is an equivalence and contains <span
+class="math inline">R</span>. Since the current <span
+class="math inline">R</span> is an equivalence, <span
+class="math inline">Q</span> and <span class="math inline">R</span>
+currently agree. The unconditional equivalence laws give literal C
+saturation identities: <span class="math inline">S0=0</span>, <span
+class="math inline">S1=1</span>, <span class="math inline">SS=S</span>,
+<span class="math inline">A\le SA</span>, <span
+class="math inline">S(A\lor B)=SA\lor SB</span>, and <span
+class="math inline">S(A\land SB)=SA\land SB</span>. Saturation also
+commutes with admitted existential unions. No optional equivalence
+enters Logical Equivalence.</p>
+<p>Call <span class="math inline">B</span> <em>strictly local</em> when
+<span class="math display">
+P(B):=(\lambda A.B\land S(B\land A))=(\lambda A.B\land A).
+</span> This is one identity, so C5 makes its value an endpoint. It
+implies that <span class="math inline">B</span> is a current partial
+transversal: apply locality with a singleton to any two related members.
+Conversely the term <span class="math display">
+N(D)x:=Dx\land\forall y((Dy\land(Qx)y)\to y=x)
+</span> is strictly local by an unconditional H uniqueness proof and
+Logical Equivalence. If <span class="math inline">D</span> currently has
+a singleton extension, <span class="math inline">N(D)</span> has that
+same extension. Strict locality is hereditary under algebraic
+subobjects.</p>
+<h2 id="choice-supplies-a-progressive-operation">2. Choice supplies a
+progressive operation</h2>
+<p>Set <span class="math inline">\operatorname{Full}(B):=\forall
+x(SB)x</span>. The relation <span
+class="math inline">U(B,a):=\operatorname{Full}(B)\lor\neg(SB)a</span>
+is currently serial: use any object when Full holds and a missed object
+otherwise. The single instance <span
+class="math inline">RC_{\rho,\sigma}</span> gives a current functional
+subrelation <span class="math inline">K</span> of <span
+class="math inline">U</span>, total on <span
+class="math inline">B</span>. Put <span class="math display">
+K_B:=\lambda x.(KB)x,\qquad
+f(B):=B\lor(N(K_B)\land\neg SB).
+</span> This is an admitted <span class="math inline">\rho\rho</span>
+operation even when <span class="math inline">\sigma=e</span>. It has
+<span class="math inline">B\le f(B)</span>. If <span
+class="math inline">B</span> is local, write <span
+class="math inline">D=N(K_B)\land\neg SB</span>. Then <span
+class="math inline">D</span> is local and <span
+class="math inline">SD\le\neg SB</span>; a complement of an S-fixed
+object is S-fixed. Expanding the locality expression for <span
+class="math inline">B\lor D</span>, the two cross terms vanish and the
+diagonal terms are <span class="math inline">B\land A</span> and <span
+class="math inline">D\land A</span>. Thus <span
+class="math inline">f</span> preserves locality. C5 Functionality
+collects these value identities into the displayed whole-operation
+identity.</p>
+<p>If <span class="math inline">B</span> misses a cell, its unique
+current K-output <span class="math inline">a</span> satisfies <span
+class="math inline">\neg(SB)a</span>. The singleton property <span
+class="math inline">K_B</span> is preserved currently by <span
+class="math inline">N</span>, so <span class="math inline">f(B)a</span>
+and <span class="math inline">\neg Ba</span>. Hence <span
+class="math inline">f(B)\ne B</span>. It remains to find a fixed point
+among local objects.</p>
+<h2 id="c5-supplies-exactly-the-joins-the-canonical-chain-needs">3. C5
+supplies exactly the joins the canonical chain needs</h2>
+<p>Under C5, identity predicates and their quantified Boolean
+combinations are endpoint-valued. For any family code <span
+class="math inline">X^{\rho t}</span>, write <span
+class="math inline">\widehat X(B):=\Box XB</span>; this is
+endpoint-valued. Only such families are used below. BF makes the
+admitted existential their actual algebraic join, not merely a material
+union.</p>
+<p>If an endpoint-valued family <span class="math inline">X</span>
+consists of a chain of local objects, its join <span
+class="math inline">J_X(x):=\exists B(XB\land Bx)</span> is local. To
+see this, expand <span class="math inline">J_X\land S(J_X\land
+A)</span>. For any two members <span class="math inline">B,D</span>,
+comparability and locality imply <span class="math inline">B\land
+S(D\land A)\le A</span>. These bounds collect across the two admitted
+existential indices by BF; zero membership coefficients contribute zero.
+This gives the desired locality inequality; the reverse is saturation’s
+unit law. Functionality packages it as P(J_X). The empty join is zero.
+No arbitrary current family has been rigidified and Boolean Completeness
+has not been assumed.</p>
+<p>Use endpoint-valued family codes to define an f-chain as a chain in P
+well-ordered against all admitted endpoint subfamilies, with every
+member <span class="math inline">b</span> the algebraic supremum in P of
+<span class="math inline">\{f(a):a&lt;b\text{ in the chain}\}</span>.
+All clauses are formulas in identities, so the predicate of f-chain
+codes is endpoint-valued. The singleton zero is an f-chain.</p>
+<p>Two f-chains agree up to an initial segment and one extends the
+other. Indeed form their common initial segment of elements with the
+same strict predecessors. If both remainders were nonempty, their least
+elements would have exactly that common predecessor family; their
+defining supremum property makes them equal, a contradiction. Every
+difference and predecessor family here is an admitted endpoint
+predicate.</p>
+<p>Let A be the admitted existential union of all f-chains. It is again
+an endpoint-valued f-chain. Comparison gives linearity and the
+predecessor condition. For well-foundedness, choose any element of an
+admitted nonempty subfamily and a chain containing it. The least element
+of the subfamily’s intersection with that chain is globally least by
+comparison. Let <span class="math inline">u=J_A</span>, which exists and
+is local by the preceding join lemma.</p>
+<p>If <span class="math inline">u\notin A</span>, A has no greatest
+member. For each <span class="math inline">a\in A</span> choose a later
+<span class="math inline">b\in A</span>; conformity gives <span
+class="math inline">f(a)\le b\le u</span>. Since <span
+class="math inline">a\le f(a)</span>, u is also the supremum of f[A].
+Appending u gives another admitted endpoint f-chain, contrary to the
+definition of A. Thus <span class="math inline">u\in A</span>. If <span
+class="math inline">u&lt;f(u)</span>, appending f(u) again gives an
+f-chain: f(u) is the greatest member of f[A]. This contradicts u being
+an upper bound of A. Hence <span class="math inline">f(u)=u</span>, and
+§2 forces Full(u). Locality and Full make u an R-transversal. This
+proves the C5 lemma without Zorn or BC.</p>
+<h2 id="rebase-the-vicinity-interpretation-before-taking-its-support">4.
+Rebase the Vicinity interpretation before taking its support</h2>
+<p>The <a
+href="vicinity-relational-choice-implies-transversal-choice.html#supported-interpretation">existing
+supported-interpretation theorem</a>, §§2–5, supplies from Vicinity a
+true proposition s that decides current identities and collects every
+typed algebraic bound below s. Its hereditary retractions give a
+concrete C5 interpretation and preserve strict Logical Equivalence by a
+finite positive-identity guard, without ambient BF or Functionality.
+Those sections use Vicinity alone; their RC/completeness application
+occurs later.</p>
+<p>Use that construction with a fresh source individual sort <span
+class="math inline">e_0</span> interpreted as the <strong>entire
+original <span class="math inline">\sigma</span> carrier</strong>, and
+source <span class="math inline">t_0</span> as original t. Recursively
+translate source arrow types. This respects the restriction on
+individual-valued functions: source arrow codomains are never <span
+class="math inline">e_0</span>. Set <span
+class="math inline">j_{e_0}</span> to identity substitution, <span
+class="math inline">j_{t_0}(p)=s\land p</span>, and <span
+class="math inline">j_{\alpha\beta}(F)=\lambda x.j_\beta(F(j_\alpha
+x))</span>. The identity substitution convention does not introduce an
+ee operation. The cited proof is parametric in the original types and
+applies unchanged. Even if two source sorts translate to the same
+original type, keep their separately specified domains and retractions
+distinct.</p>
+<p>The interpreted individual domain is therefore all original <span
+class="math inline">\sigma</span>, and its property domain is the image
+of <span class="math inline">j(X)=\lambda a.s\land Xa</span>. For a
+supported serial relation U from that property domain to individuals,
+apply original <span class="math inline">RC_{\sigma t,\sigma}</span> to
+<span class="math inline">V(X,a):=U(jX,a)</span>. A selected relation K
+retracts to <span class="math inline">L(X,a):=s\land K(jX,a)</span>. On
+fixed inputs its current membership and equality of outputs agree with
+the original ones, so it witnesses the required source RC instance.</p>
+<p>Original <span class="math inline">R</span> becomes <span
+class="math inline">R^s(a,b):=s\land R(a,b)</span>, with exactly the
+same current equivalence classes. The C5 lemma supplies a source
+transversal. It is an actual admitted original property of <span
+class="math inline">\sigma</span>, and the source individual domain
+contains every original object. Hence it is the desired original
+transversal. No quotient representatives or descent across coextensive
+codes are selected.</p>
+<h2 id="consequences-and-exact-modal-scope">5. Consequences and exact
+modal scope</h2>
+<p>Necessitating the discharged theorem (1) gives <span
+class="math inline">\Box\operatorname{Vicinity}+\Box RC\to\Box
+TC</span>. Together with MRC-to-boxed-MRC, the existing boxed
+TC-to-boxed Well-Ordering arrow and Dorr’s boxed Well-Ordering-plus-IC
+theorem, this also yields <span
+class="math inline">\Box\operatorname{Vicinity}+MRC\to</span> Modal
+Well-Ordering. No duplicate records for these longer derived paths are
+needed.</p>
+<p>The bare-C conjecture RC → TC remains open. The type-t result uses
+<span class="math inline">RC_{tt,t}</span>, not <span
+class="math inline">RC_{t,t}</span>. The proof does not obtain Vicinity
+from RC or Actuality without further premises.</p>
+<h2 id="sources-and-review">Sources and review</h2>
+<p>Direct sources: OpenAI Codex, prompted by Daniel Kodsi, <em>Strict
+local sections, crisp chains, and Relational Choice</em>, 25 October
+2026, §§1–4; <em>The observer machinery and the remaining RC–TC
+gap</em>, 25 October 2026, §§1–2; and <em>Vicinity suffices for
+Relational Choice to imply Transversal Choice</em>, 26 October 2026,
+§§1–5; all unpaginated. The common-core construction retains Christopher
+Sun’s attribution in the linked existing proof. This consolidated
+referee-oriented argument was independently read and checked on 28
+October 2026. Ordinary AI review; no human or Lean certification.</p>
+<p><a id="supported-interpretation"></a></p>
+<h2 id="appendix-supported-interpretation-from-vicinity">Appendix:
+supported interpretation from Vicinity</h2>
+<p>The supporting proof below retains its original internal section
+numbering.</p>
+<p>This note supplies the supported C5 interpretation used in the
+Transversal Choice proof; it asserts no additional database result.</p>
+<h2 id="one-core-controls-all-admitted-quantifiers">2. One core controls
+all admitted quantifiers</h2>
+<p>Choose a true Vicinity witness w. Put</p>
+<p><span class="math display">
+A_w:=\forall r^t\,(r\to w\le\Diamond r),\qquad s:=w\land A_w.
+</span></p>
+<p>Both w and A_w, hence s, are currently true. For every fixed admitted
+argument type σ and every admitted F:σt,</p>
+<p><span class="math display">
+\bigl[\forall x^\sigma\,(s\le F(x))\bigr]
+\ \Longrightarrow\ s\le\forall x^\sigma F(x).
+\tag{3}
+</span></p>
+<p>Here and below the conclusion is an algebraic bound, not just a
+material implication.</p>
+<p>For the proof let T:=∀x(s≤F(x)) be currently true. Vicinity gives
+w≤◇(w∧T). Work at any accessible evaluation v where s is true. Suppose
+that an x available there satisfies ¬F(x). At v the A_w conjunct applies
+to the proposition s∧¬F(x), which is true there, and gives</p>
+<p><span class="math display">
+w\le\Diamond(s\land\neg F(x)).
+</span></p>
+<p>The bound w≤◇(w∧T) obtained at the original evaluation persists to v.
+Since w holds at v, there is an accessible u where w∧T holds. The
+parameter x is available at u; this uses only the converse-Barcan
+direction. T supplies □(s→F(x)) at u. The bound obtained at v also
+persists to u, and w there gives ◇(s∧¬F(x)), a contradiction. Thus every
+x at every accessible s-evaluation satisfies F(x), proving (3).</p>
+<p>This is an ordinary S4/CBF derivation expressed by evaluations. No
+Barcan premise, completeness, choice, or necessitation of an optional
+premise is involved. The same argument applies at every evaluation
+satisfying s, since w∧A_w holds there again. Its mechanism is the one
+used in Sun’s recorded Vicinity argument; its all-type formulation here
+makes the required quantifier scope explicit.</p>
+<p>For every current identity E=(a=b), at any type, s decides E
+according to its current truth. If E is true, NI gives E=1. If E is
+false, Vicinity gives w≤◇¬E. NI makes E persistent, so ◇¬E=¬E.
+Consequently</p>
+<p><span class="math display">
+s\land E=\begin{cases}s,&amp;a=b,\\0,&amp;a\ne b.\end{cases}
+\tag{4}
+</span></p>
+<p>Induction on finite formulas, using (3) at universal quantifiers and
+a current witness for a false universal, extends this decision property
+to formulas built from identities by Boolean operations and typed
+quantifiers. Arbitrary atomic membership assertions are not included in
+that claim.</p>
+<p>There is also an exact range-bound consequence. For any admitted
+f:σt,</p>
+<p><span class="math display">
+s\land\exists x^\sigma f(x)
+=\bigvee_{x\text{ current}}\bigl(s\land f(x)\bigr).
+\tag{5}
+</span></p>
+<p>The right side means the actual algebraic least upper bound of the
+displayed range; (5) establishes its existence without BC. Instantiation
+gives each upper-bound inequality. If b bounds every s∧f(x), then
+s≤(f(x)→b) for every current x. Equation (3) collects these bounds into
+s≤∀x(f(x)→b), which gives the converse inequality. The relative meet
+statement is dual. An index predicate decided on s may be inserted:
+nonmembers then contribute 0, while current members contribute their
+full s-restricted values.</p>
+<h2 id="concrete-supported-domains">3. Concrete supported domains</h2>
+<p>Define hereditary retractions by</p>
+<p><span class="math display">
+j_e(x):=x,\qquad j_t(p):=s\land p,\qquad
+j_{\sigma\tau}(F):=\lambda x^\sigma\,j_\tau(F(j_\sigma x)).
+\tag{6}
+</span></p>
+<p>The e-case is a substitution convention, <strong>not</strong> a term
+of the forbidden type ee. All other displayed retractions have admitted
+types. Whenever an argument type is e, the corresponding occurrence of
+j_e simply erases.</p>
+<p>These are idempotent as whole operations. At t this is the Boolean
+identity s∧(s∧p)=s∧p, also under abstraction. Inductively, β-expansion
+of j_(στ)(j_(στ)F) gives</p>
+<p><span class="math display">
+\lambda x\,j_\tau\bigl(j_\tau(F(j_\sigma(j_\sigma x)))\bigr).
+</span></p>
+<p>The already established lower-type whole identities reduce this to
+j_(στ)F. The same reduction under the outer F-abstraction proves
+whole-operation idempotence at the new type. All replacements are
+substitutions of entity identities in terms; there is no appeal to
+Functionality or to Logical Equivalence under an optional premise.</p>
+<p>Set</p>
+<p><span class="math display">
+D_\tau(x):=(j_\tau x=x),
+</span></p>
+<p>with D_e(x):=(x=x). Each domain is inhabited and is exactly the image
+of j_τ. If F and x are fixed in their respective types, β and the
+fixedness identities give F(x)=j_τ(F(x)), so application restricts to
+these domains. In particular D_t is exactly [0,s]. The predicates D_τ
+are identity predicates and are decided on s by (4).</p>
+<p>In the supported interpretation, use these concrete carriers and
+restricted application. At t use 0 and s as the endpoints, ordinary meet
+and join, and relative complement p↦s∧¬p. On fixed arguments equality
+is</p>
+<p><span class="math display">
+\operatorname{eq}_s(x,y):=s\land(x=y).
+\tag{7}
+</span></p>
+<p>Its admitted unrestricted relation is s∧(j_σx=j_σy). Current truth of
+(7) is precisely literal equality of the fixed entities, since s is
+true.</p>
+<p>Interpret an abstraction by evaluating its body on projected
+arguments and retracting its output. Quantifiers for a supported
+predicate F may be written</p>
+<p><span class="math display">
+\exists_s x\,F(x):=s\land\exists x\,F(j_\sigma x),\qquad
+\forall_s x\,F(x):=s\land\forall x\,F(j_\sigma x).
+\tag{8}
+</span></p>
+<p>The image description shows that their current truth is exactly
+quantification over D_σ. Equation (5) shows that their proposition
+values are the actual joins and meets in [0,s] of the corresponding
+fixed-domain range values. Quantifier operations and the displayed
+logical operations are themselves projected to their appropriate higher
+domains. β, idempotence and the Boolean identities give exactly the
+clauses above on fixed arguments.</p>
+<h2 id="preserving-h-and-the-strict-logical-equivalence-rule">4.
+Preserving H and the strict Logical Equivalence rule</h2>
+<p>The retraction interpretation preserves H by ordinary relativization
+to the images of idempotent maps. The required details matter because
+C’s Logical Equivalence rule applies only to H-theorem equivalences.</p>
+<p>Translate every variable occurrence through its j, use (7) for
+equality, (8) for quantification, and retract abstractions as in §3. For
+any finite H derivation, let E be the finite conjunction of the whole
+retraction identities and logical-constant identities needed in its
+translation. If supported parameters are left unprojected, include their
+fixedness identities as well. These are all <strong>positive
+identities</strong>. There is no Vicinity, quantifier-bound lemma,
+completeness, choice, or other optional material premise in E.</p>
+<p>Under E and s the usual H proof translates as follows. Identity and
+substitution concern actual equality of projected entities. Application
+stays in the projected domains. β uses j²=j on the argument and output,
+and η uses the same whole identity at the abstraction’s type. Universal
+instantiation uses the projected instance jx; existential introduction
+uses that same available term. Generalization and elimination range over
+all images, precisely as in (8). The propositional rules use the
+ordinary Boolean clauses on an evaluation where s is true. These checks
+give induction on the H derivation. Every translated proposition is
+s-supported under E, so outside s two such matrices are both false.</p>
+<p>In particular, if H proves Φ↔︎Ψ, the preceding translation gives the
+<strong>old-H theorem</strong></p>
+<p><span class="math display">
+(E\land\Phi^s)\ \longleftrightarrow\ (E\land\Psi^s).
+\tag{9}
+</span></p>
+<p>Apply old Logical Equivalence to (9), including the required
+abstraction variables. Each conjunct of E is a true identity in C and
+hence literally 1 by NI; therefore E=1. Substitution of this entity
+identity, and the unconditional Boolean identities under abstraction,
+removes E from the resulting abstraction identity. Retraction preserves
+that identity. This is precisely Logical Equivalence in the supported
+interpretation.</p>
+<p>This argument does not substitute current semantic coextension for
+entity identity. Nor does it feed an equivalence proved from Vicinity
+into Logical Equivalence: only the H theorem (9) enters the rule, and
+its explicit guard is subsequently removed by identity substitution.
+Together with the preceding H checks it establishes a concrete
+interpretation of C.</p>
+<h2 id="the-supported-interpretation-satisfies-c5">5. The supported
+interpretation satisfies C5</h2>
+<p>For each pair of current fixed entities, (4) makes its relative
+equality either 0 or s. If the entities are distinct, their relative
+inequality is literally s, so it is relatively necessary: its identity
+to the relative top s is true and its relative box has value s. Equal
+pairs have zero inequality antecedent.</p>
+<p>Thus every current instance of the ND matrix has relative value s.
+Equation (5) and its meet dual make the universal closure over the fixed
+domains literally s as well. Its relative box is consequently s. This
+proves <strong>boxed all-type ND</strong> in the interpretation, which
+is C5; it proves more than current unboxed ND there.</p>
+<p>No assertion that the original unrelativized structure satisfies C5,
+ND, BF, or Functionality has been made. The new necessity operator is
+identity to s within the supported propositional domain, rather than
+original identity to 1.</p>
+<p>Source: OpenAI Codex, prompted by Daniel Kodsi, Vicinity, Relational
+Choice and propositional completeness imply Actuality, 25 October 2026,
+§§2–5, unpaginated.</p>
+</body></html>

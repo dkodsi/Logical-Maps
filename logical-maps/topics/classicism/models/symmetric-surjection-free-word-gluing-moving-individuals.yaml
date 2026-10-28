@@ -1,0 +1,92 @@
+id: symmetric-surjection-free-word-gluing-moving-individuals
+name: 'Symmetric surjection and free-word model: moving individuals'
+certificate:
+  source_id: misc
+  produced_by: OpenAI Codex, prompted by Daniel Kodsi, Logical Necessity constructions of 22 October 2026
+  recorded_by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review of 28 October 2026
+  checked_by: []
+  date: '2026-10-28'
+  lean: none
+sources:
+- OpenAI Codex, prompted by Daniel Kodsi, Logical Necessity without Actuality, 22 October 2026, §§1–11,
+  and Symmetric surjection model with free-word gluing, same date, §§1–9, unpaginated; the applicable
+  construction and sections are specified in the linked writeup.
+definition: Fix any permitted set-sized Sigma, infinite kappa>=|Sigma|, |U|=kappa^+, a free monoid W on
+  kappa letters and M=W×Surj(U). Use the designated symmetries {empty word}×Sym(U), individuals U with
+  the surjection action, and all relational profiles with a U-pinning set of size at most kappa satisfying
+  target-permutation equivariance. Profiles may depend arbitrarily on the whole word coordinate. Glue
+  all satisfiable Sigma-interpretations by distinct final letters, also using onto individual-coordinate
+  maps and relational preimages. Evaluate at the identity. The linked proof §§1–3 and 9 verifies all typed
+  closure and the full fixed-signature expansion.
+arguments:
+- id: logical-necessity
+  text: Last-letter gluing uses at most kappa supports and respects the target symmetry. It simultaneously
+    reaches every selected interpretation over the fixed pure domains; in the moving version an additional
+    surjection handles all individual constants. The satisfiability/possibility equivalence gives Logical
+    Necessity at the evaluation point; §§3 and 9.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: logical-necessity-symmetric-free-word-gluing
+  holds:
+  - logical-necessity-r
+- id: necessary-full-completeness
+  text: The direct larger-pin hull J unions the extensions of current instances along maps agreeing on
+    the family pin. Symmetry moves each instance pin away from an upper-bound pin, and an onto splice
+    shows minimality. This is proved at every relational type and boxes by pure one-object invariance;
+    §2.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: logical-necessity-symmetric-free-word-gluing
+  holds:
+  - necessary-boolean-completeness-r
+- id: necessary-barcan
+  text: A permutation supplies a right inverse on the pin of any target entity, and free-word suffix deletion
+    handles the word coordinate. All typed transports are onto; this proves necessary full BF, including
+    moving individuals; §§3 and 9.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: logical-necessity-symmetric-free-word-gluing
+  holds:
+  - necessary-barcan-r
+- id: necessary-weak-rigid-power
+  text: The exact-image lemma gives TR. Stabilizer-invariant tuple sets admit exact images; a surjection
+    with small nonsingleton fibres permits approximate rigid lifts agreeing on any test pin. This proves
+    RP at all types, and global TR identifies the weak power. Pure invariance boxes WRP; §§5–6.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: logical-necessity-symmetric-free-word-gluing
+  holds:
+  - necessary-weakly-rigid-power-r
+- id: atomlessness
+  text: Two fresh U-points outside a proposition pin can be coalesced or kept distinct while preserving
+    that pin. Their admitted inequality test splits every nonzero proposition; §4.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: logical-necessity-symmetric-free-word-gluing
+  holds:
+  - atomlessness
+- id: vicinity-failure
+  text: For any currently true pinned proposition, a surjection fixing its pin can permanently collapse
+    two fresh U-points. Their currently true inequality then becomes impossible while the proposed vicinity
+    remains true; §4.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: logical-necessity-symmetric-free-word-gluing
+  fails:
+  - vicinity
+- id: quantified-infinity
+  text: The pure successor terms are fixed, and their actual orbit is an admitted inductive property;
+    hence native FiniteCardinality has exactly the standard finite orbit. Its nth member tests n-element
+    actual extensions. Both the individual and proposition domains are infinite, so neither universal
+    property has finite cardinality; §9.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: logical-necessity-symmetric-free-word-gluing
+  holds:
+  - axiom-of-infinity-e
+notes: 'Ordinary ZFC and the original finitary language. Signature is any prescribed permitted set-sized
+  Sigma, not just the one-predicate certificate scope. The pure domains are fixed before the gluing assignments.
+  Only current Logical Necessity is asserted; necessary pure schemas do not justify boxing the signature
+  schema. The supported and symmetric constructions have different selector admission: the first has necessary
+  RC but fails full BC; the second has necessary full BC and fails RC. No certificate from a narrower
+  signature or earlier construction is transferred.'

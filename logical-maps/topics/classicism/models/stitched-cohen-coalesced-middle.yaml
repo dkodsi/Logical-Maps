@@ -1,0 +1,91 @@
+id: stitched-cohen-coalesced-middle
+name: 'Stitched Cohen model: coalesced middle world'
+certificate:
+  source_id: misc
+  produced_by: OpenAI Codex, prompted by Daniel Kodsi, construction of 22 October 2026
+  recorded_by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review of 28 October 2026
+  checked_by: []
+  date: '2026-10-28'
+  lean: none
+sources:
+- OpenAI Codex, prompted by Daniel Kodsi, Stitched forcing model with a coalesced middle world, 22 October
+  2026, §§1–7, unpaginated.
+- 'Andrew Bacon and Cian Dorr, Classicism, draft 16 May 2023, Appendix E, Definition E.2, pp.80–83: coalesced-sum
+  background.'
+- 'Neil Barton and Zach Goodsell, Continuum Contingency, draft 14 October 2026, §8, Definition 1 and Lemmas
+  11–19: stitched-ground/extension background.'
+definition: Work with a ground ZFC universe V and a Cohen-generic extension V[G]. Let A and B be the full
+  extensional relational hierarchies on N in V and V[G]. Coalesce them at s with individuals N×N and unrestricted
+  current relation components. Add r→s with ground individual domain N×N. A root relation is a ground
+  current extension paired with an invariant Cohen name for a complete s-relation, modulo forced equality
+  under all finite bit flips. The linked construction establishes this quotient as a ground set and proves
+  all-type closure and landing. Evaluate at r.
+arguments:
+- id: rigid-root
+  text: Every ground current family has invariantly named exact images at the middle and both terminals.
+    Its A-image is ground; its B-image is admitted by the extension hierarchy. These exact-image profiles
+    are persistent and inextensible at every future point, and are currently coextensive with the original
+    family; §§3–5.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: stitched-cohen-coalesced-middle
+  holds:
+  - rigid-comprehension-r
+- id: necessary-propositional-strong-worlds
+  text: The propositional algebras are the full truth-vector algebras on the finite future cones. Singleton
+    world propositions decide every future proposition, and their images are singletons or zero; §6.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: stitched-cohen-coalesced-middle
+  holds:
+  - necessary-strong-atomicity-t
+- id: necessary-propositional-barcan
+  text: Every arrow is onto at t (also at e), so direct witness lifting proves the corresponding Barcan
+    instances at all four worlds; §6.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: stitched-cohen-coalesced-middle
+  holds:
+  - necessary-barcan-t
+- id: necessary-relational-choice
+  text: At the root, an actual serial relation is a ground set on ground typed domains and its ground
+    selector can be given a bottom invariant tail. Use the full current extension at the middle and the
+    relevant full ground/extension hierarchies at the terminals. This verifies all input and output types,
+    including e; §6.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: stitched-cohen-coalesced-middle
+  holds:
+  - necessary-relational-choice-r
+- id: necessary-propositional-completeness
+  text: Every proposition algebra is finite, so each represented family has its Boolean meet at all four
+    worlds; §§1,6.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: stitched-cohen-coalesced-middle
+  holds:
+  - necessary-boolean-completeness-t
+- id: necessary-relational-completeness-failure
+  text: 'At the middle, the admitted family of haecceities indexed by the new Cohen real has no supremum:
+    its ground-terminal component would have to be precisely the new real. Complement transforms this
+    into an admitted family with no GLB. Failure is at et, and the middle is accessible; §2 and integration
+    clarification.'
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: stitched-cohen-coalesced-middle
+  fails:
+  - necessary-boolean-completeness-r
+- id: higher-atomicity-failure
+  text: At the root, the admitted (et)t-relation supported exactly on new middle et-entities bounds a
+    nonzero atomless interval. An invariant singleton would give an invariant name for a new entity, impossible;
+    distinct entities can be split by an invariant ground-coordinate test. This is not a propositional
+    failure; §6.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: stitched-cohen-coalesced-middle
+  fails:
+  - atomicity-r
+notes: Relative forcing-model construction in the stated ground/extension metatheory. The source proposed
+  variant with group terminals is excluded. Current all-type Atomicity fails despite necessary propositional
+  Strong Atomicity; necessary BC fails at et while necessary BC_t holds. No original or native model is
+  changed.

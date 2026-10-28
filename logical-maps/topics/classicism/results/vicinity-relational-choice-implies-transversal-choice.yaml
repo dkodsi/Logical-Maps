@@ -1,0 +1,29 @@
+id: vicinity-relational-choice-implies-transversal-choice
+premises:
+- vicinity
+- relational-choice-r
+conclusion: transversal-choice-r
+proof: Uniform equivalence closure and singleton normalization make current partial transversals strictly
+  local. RC supplies an admitted progressive operation on local properties. Under C5, its canonical chain
+  uses only endpoint-valued admitted subfamilies, whose unions are actual algebraic joins by BF; the resulting
+  fixed point meets every cell. For the Vicinity theorem, rebase the source individual sort to the entire
+  original target carrier before applying the existing supported C5 interpretation. RC_(sigma t,sigma)
+  transfers by projecting inputs, and the source transversal descends on the unchanged individual carrier.
+  The same-stem writeup proves every normalization, chain and transfer step.
+sources:
+- OpenAI Codex, prompted by Daniel Kodsi, Strict local sections, crisp chains, and Relational Choice,
+  25 October 2026, §§1–4; Vicinity suffices for Relational Choice to imply Transversal Choice, 26 October
+  2026, §§1–5; unpaginated. Consolidated in the same-stem writeup.
+notes: The exact bound is Vicinity+RC_(sigma t,sigma)→TC_sigma, including sigma=e. No BC, Actuality, ambient
+  BF or Functionality is assumed. Unboxed ND_t suffices via Vicinity; C5 is therefore not needed as a
+  separate stronger record. RC alone→TC remains open. Independent AI mathematical review; no human or
+  Lean certification.
+status: proved
+certificate:
+  source_id: misc
+  produced_by: OpenAI Codex, prompted by Daniel Kodsi, ordinary mathematical research
+  recorded_by: OpenAI Codex, prompted by Daniel Kodsi, integration preparation of 28 October 2026
+  checked_by: []
+  date: '2026-10-28'
+  lean: none
+references: []

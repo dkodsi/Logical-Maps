@@ -1,0 +1,57 @@
+id: coalesced-three-map-and-countable-s5-root
+name: 'Coalesced sum: three-map symmetry and countable S5'
+certificate:
+  source_id: misc
+  produced_by: OpenAI Codex, prompted by Daniel Kodsi, specializations and connecting proofs of 23 October
+    2026
+  recorded_by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review of 28 October 2026
+  checked_by: []
+  date: '2026-10-28'
+  lean: none
+sources:
+- OpenAI Codex, prompted by Daniel Kodsi, Forcing Possibilism, Choice and Infinity, 23 October 2026, §§1–5,
+  unpaginated.
+- 'Cian Dorr, full S5 reference model, 7 October 2026; three-individual symmetry-constrained all-maps
+  construction and IC failure, 4 October 2026, with propositional witness repair by Claude Fable 5.1:
+  native model records.'
+- Andrew Bacon and Cian Dorr, Classicism, draft 16 May 2023, §3.5 pp.58–61; Appendix E, Definition E.2
+  pp.80–83.
+definition: Take the existing symmetry-constrained all-maps component on three individuals and a full
+  countable-world S5 component with one individual. Add an isolated free root with individuals N and arbitrary
+  maps into the component individual domains. At each relational type its domain is the product of an
+  arbitrary current tuple extension and one complete entity from each component. Keep all old arrows and
+  quantifiers; evaluate at the new root.
+arguments:
+- id: strict-forcing-possibilism
+  text: The root proposition algebra is 2 × 32 × P(N), hence a countable powerset algebra of cardinal
+    continuum. Every current relation on each root domain is represented. The finite-only small-algebra
+    argument therefore proves FP; §§1,4.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: forcing-possibilism-choice-and-infinity
+  holds:
+  - forcing-possibilism
+- id: quantified-infinity
+  text: The root individual and proposition carriers are infinite. Unrestricted actual higher relations
+    make its native finite-cardinality predicate exactly the finite successor orbit, so both quantified
+    Infinity axioms hold; §4.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: forcing-possibilism-choice-and-infinity
+  holds:
+  - axiom-of-infinity-e
+  - axiom-of-infinity-t
+- id: intensional-choice-failure
+  text: Lift the three-individual component property x!=a to a root relation with universal current and
+    S5 extensions. It is necessarily instantiated. Any admitted root IC selector would project to a necessarily
+    unique subrelation of the component witness; a transposition fixing a constant arrow swaps its two
+    possible outputs, contradiction; §4.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: forcing-possibilism-choice-and-infinity
+  fails:
+  - intensional-choice-r
+notes: Ordinary ZFC. FP is the exact strict-smallness schema at all admitted carrier types, with graph-Dedekind
+  finiteness and proper target interval. Internal fullness is proved at the evaluation point before using
+  the external cardinal lemma. No verdict is generalized to arbitrary infinite world cardinality or a
+  choiceless metatheory. Existing construction attribution is preserved; no native model is replaced.

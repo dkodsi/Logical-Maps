@@ -1,0 +1,26 @@
+id: maximalism-implies-arithmetic-necessitism
+premises:
+- distinctness-schema-r
+conclusion: arithmetic-necessitism
+sources:
+- Claude Fable 5.1 (Anthropic), prompted by Zachary Goodsell, coalesced-sums argument arithmetic-necessitism-complete-components,
+  23 October 2026, unpaginated; same pure-Maximalism argument stated independently of a particular model
+  here.
+- OpenAI Codex, prompted by Daniel Kodsi, Maximalism and mathematical necessity, 28 October 2026, §3,
+  unpaginated.
+proof: For each fixed carrier type sigma, the one-world full extensional model with one individual has
+  finitely many entities at every admitted type and falsifies native I*_sigma. Thus the pure sentence
+  not I*_sigma is consistent with C. Pure Maximalism gives Diamond not I*_sigma, so Box I*_sigma is false.
+  The corresponding Arithmetic Necessitism implication is therefore true. See the same-stem writeup.
+notes: This is the existing complete-component argument abstracted to its actual premise. Arithmetic Necessitism
+  holds here vacuously; it does not assert stable arithmetic under Infinity, and it is not Necessity of
+  Arithmetic. No necessary version is inferred. Independent AI mathematical review; no human or Lean certification.
+status: proved
+certificate:
+  source_id: misc
+  produced_by: OpenAI Codex, prompted by Daniel Kodsi, ordinary mathematical research
+  recorded_by: OpenAI Codex, prompted by Daniel Kodsi, integration preparation of 28 October 2026
+  checked_by: []
+  date: '2026-10-28'
+  lean: none
+references: []

@@ -1,0 +1,113 @@
+id: supported-free-word-product-moving-individuals
+name: 'Supported free-word product: moving individuals'
+certificate:
+  source_id: misc
+  produced_by: OpenAI Codex, prompted by Daniel Kodsi, Logical Necessity constructions of 22 October 2026
+  recorded_by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review of 28 October 2026
+  checked_by: []
+  date: '2026-10-28'
+  lean: none
+sources:
+- OpenAI Codex, prompted by Daniel Kodsi, Logical Necessity without Actuality, 22 October 2026, §§1–11,
+  and Symmetric surjection model with free-word gluing, same date, §§1–9, unpaginated; the applicable
+  construction and sections are specified in the linked writeup.
+definition: Fix any permitted set-sized Sigma, infinite kappa>=|Sigma|, an index set I of size kappa^+,
+  and a free monoid L on kappa letters. The one-object arrow monoid is L^I × Surj(U), with |U|=kappa^+,
+  individuals U and the surjection action. At each relational type admit all profiles on arrows and local
+  tuples depending on at most kappa L-coordinates and arbitrarily on the entire surjection coordinate,
+  without a tuple-equivariance restriction. Glue all satisfiable Sigma-interpretations at one unused last-letter
+  coordinate, using simultaneous surjections for individual constants and relational preimages. Evaluate
+  at the identity. The linked proof §§1–3 and 11 verifies the complete hierarchy and exact fixed-signature
+  expansion.
+arguments:
+- id: logical-necessity
+  text: Choose one witness interpretation for each satisfiable finitary sentence over the already fixed
+    pure domains. One unused coordinate encodes all those interpretations simultaneously by last letters.
+    Thus possibility of a pure matrix at distinct named constants equals existential truth, and duality
+    gives the full Logical Necessity schema; §§2–3 and 11.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: logical-necessity-supported-free-word-products
+  holds:
+  - logical-necessity-r
+- id: necessary-relational-choice
+  text: Every actual graph has an admitted constant profile because no symmetry requirement restricts
+    tuple extensions. External Choice selects a graph for each serial relation; the one-object pure-sentence
+    argument boxes every RC instance; integration introduction and §1.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: logical-necessity-supported-free-word-products
+  holds:
+  - necessary-relational-choice-r
+- id: necessary-countable-completeness
+  text: The admitted constant successor-orbit property makes every native counting domain externally countable.
+    The exact Ctbl relation then injects the actual family into N; the union of its at most countably
+    many supports has size at most kappa, admitting its LUB. Pure one-object invariance gives the necessary
+    all-counting-type schema; §10.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: logical-necessity-supported-free-word-products
+  holds:
+  - necessary-countable-boolean-completeness-r
+- id: necessary-tame-rigidity
+  text: The coordinate factorization mr=un converts the bounded-support approximation to exact transported
+    images. An admitted relation is weakly rigid precisely when it is its actual extension exact-image
+    profile; such profiles remain weakly rigid under every transport. This is full necessary TR; §8.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: logical-necessity-supported-free-word-products
+  holds:
+  - necessary-tame-rigidity-r
+- id: necessary-barcan
+  text: Suffix deletion gives a supported preimage under every free-word product arrow. In the moving
+    variant, right multiplication by a surjection is injective, yielding the additional profile preimage;
+    individuals are onto. Every typed transport is onto, proving necessary full BF; §§6 and 11.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: logical-necessity-supported-free-word-products
+  holds:
+  - necessary-barcan-r
+- id: atomlessness
+  text: An unused coordinate can be made empty or nonempty without changing a nonzero supported proposition.
+    Its empty-coordinate test splits that proposition; §4.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: logical-necessity-supported-free-word-products
+  holds:
+  - atomlessness
+- id: vicinity-and-weak-comprehension-failures
+  text: A fresh-coordinate empty-word truth becomes permanently false without changing any proposed vicinity.
+    For WIC, the admitted constant family of empty-coordinate propositions defeats every supported coextension
+    through a fresh-coordinate cover test; §§4–5.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: logical-necessity-supported-free-word-products
+  fails:
+  - vicinity
+  - weakly-inextensible-comprehension-r
+- id: rigid-power-failure
+  text: The admitted rigid bound is an exact-image family of marked integer-shift profiles. A future rigid
+    subrelation requires a choice of a nonnegative shift in every unused coordinate; support invariance
+    forces the entire integer orbit and an unwanted negative-shift image. No admitted rigid lift exists,
+    so its power fails weak rigidity; §9.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: logical-necessity-supported-free-word-products
+  fails:
+  - rigid-power-r
+- id: quantified-infinity
+  text: The pure successor terms are fixed, and their actual orbit is an admitted inductive property;
+    hence native FiniteCardinality has exactly the standard finite orbit. Its nth member tests n-element
+    actual extensions. Both the individual and proposition domains are infinite, so neither universal
+    property has finite cardinality; §§10–11.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review
+  date: '2026-10-28'
+  writeup: logical-necessity-supported-free-word-products
+  holds:
+  - axiom-of-infinity-e
+notes: 'Ordinary ZFC and the original finitary language. Signature is any prescribed permitted set-sized
+  Sigma, not just the one-predicate certificate scope. The pure domains are fixed before the gluing assignments.
+  Only current Logical Necessity is asserted; necessary pure schemas do not justify boxing the signature
+  schema. The supported and symmetric constructions have different selector admission: the first has necessary
+  RC but fails full BC; the second has necessary full BC and fails RC. No certificate from a narrower
+  signature or earlier construction is transferred.'

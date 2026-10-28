@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vicinity ∧ Atomicity (type t) ⇒ Actuality</title><link rel="icon" type="image/png" href="../favicon.png">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vicinity and propositional Atomicity imply Actuality</title><link rel="icon" type="image/png" href="../favicon.png">
 <style>/* Fixed forest palette, adapted from the supplied style example.
    Semantic and source hues retain their meaning in both modes. */
 :root {
@@ -322,27 +322,13 @@ body.writeup-page { max-width: 82ch; margin: 3em auto; padding: 0 1.5em 3em; fon
 <link rel="stylesheet" href="../math/katex.min.css">
 <script defer src="../math/katex.min.js"></script>
 <script defer src="../math/contrib/auto-render.min.js"></script>
-<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Vicinity ∧ Atomicity (type t) ⇒ Actuality</h1></header><p class="cert">
-Result — Source: Misc.; produced by Cian Dorr (the argument and its use
-of BF for 5-necessity, 28 October 2026), with Claude Opus 5.5
-(Anthropic), who completed the step showing that the atoms below the
-witness are self-atoms; recorded by Claude Opus 5.5 (Anthropic),
-prompted by Cian Dorr, 28 October 2026.
-</p>
-<h2 id="premises">Premises</h2>
-<ul>
-<li><strong>Vicinity.</strong> There is a true proposition that entails
-the possibility of each true proposition.</li>
-<li><strong>Atomicity (type t).</strong> Every non-bottom proposition
-has an atom below it.</li>
-</ul>
-<h2 id="conclusion">Conclusion</h2>
-<ul>
-<li><strong>Actuality.</strong> There is a true proposition that entails
-every true proposition.</li>
-</ul>
-<h2 id="proof">Proof</h2>
-<p>By the 5-necessity form of [[vicinity]], some truth <span
+<script defer src="../math/math.js"></script></head><body class="writeup-page"><nav class="writeup-nav" aria-label="Write-up navigation"><a href="../index.html">← Back to map</a><div class="display-toggles"><button type="button" class="theme-toggle" data-theme-toggle>[Dark mode]</button><button type="button" class="theme-toggle" data-colourblind-toggle aria-label="Colourblind mode" aria-pressed="false">[Colourblind mode: off]</button></div></nav><header id="title-block-header"><h1>Vicinity and propositional Atomicity imply Actuality</h1></header><h2 id="original-recorded-proof">Original recorded proof</h2>
+<p>Cian Dorr (the argument and its use of BF for 5-necessity, 28 October
+2026), with Claude Opus 5.5 (Anthropic), who completed the step showing
+that the atoms below the witness are self-atoms. The following proof is
+reproduced from the native result record with its cross-reference label
+expanded.</p>
+<p>By the 5-necessity form of Vicinity, some truth <span
 class="math inline">v</span> entails every 5-necessary truth. We show
 that every atom <span class="math inline">w\le v</span> is a self-atom.
 Let <span class="math inline">A:=\operatorname{Atom}_t(w)</span>. Since
@@ -403,20 +389,50 @@ class="math inline">w\le\mathrm{Act}</span>, so <span
 class="math inline">w=\bot</span>. So <span
 class="math inline">v\le\mathrm{Act}</span>, and since <span
 class="math inline">v</span> is true, Actuality holds.</p>
-<h2 id="notes">Notes</h2>
-<p>Vicinity and Atomicity thus give Actuality as Vicinity and Weakly
-Inextensible Comprehension do
-([[vicinity-and-weakly-inextensible-comprehension-imply-actuality]]).
-The proof shows more, that every atom below the strongest 5-necessary
-truth is a self-atom.</p>
-<h2 id="sources">Sources</h2>
-<ul>
-<li><strong>Dorr 28 Oct</strong> — Cian Dorr, argument of 28 October
-2026 that Vicinity and Atomicity give Actuality, through the 5-necessity
-form of Vicinity and BF for 5-necessity (session transcript).</li>
-</ul>
-<p class="cert">
-Record:
-<code>topics/classicism/results/vicinity-and-atomicity-t-imply-actuality.yaml</code>
-</p>
+<p><a id="common-core-proof"></a></p>
+<h2 id="alternative-common-core-proof">Alternative common-core
+proof</h2>
+<p>This is an alternative proof of the already recorded theorem, over C
+with current Vicinity and Atomicity_t. The existing Dorr/Claude proof
+and attribution are retained unchanged. The following argument uses only
+S4, Necessity of Identity and converse Barcan; it does not invoke the
+derived 5-necessity operator or its BF theorem.</p>
+<p>Choose a true Vicinity witness w and put</p>
+<pre><code>A_w := forall r (r -&gt; w &lt;= Diamond r),      s := w and A_w.</code></pre>
+<p>Thus s is true. We first prove, for every admitted predicate F:sigma
+t,</p>
+<pre><code>forall x (s &lt;= F(x))  -&gt;  s &lt;= forall x F(x).                 (1)</code></pre>
+<p>Suppose the antecedent T is true. Vicinity gives w&lt;=Diamond(w and
+T). At any accessible evaluation where s holds, suppose an available x
+makes F(x) false. The A_w conjunct there gives w&lt;=Diamond(s and not
+F(x)). Both bounds are positive identities and persist. The first
+supplies a further evaluation with w and T. Converse Barcan keeps the
+parameter x available there, so T gives Box(s-&gt;F(x)); the second
+bound and w give Diamond(s and not F(x)), a contradiction. This proves
+(1). In particular T itself was not transported; Vicinity supplied a new
+evaluation where it holds.</p>
+<p>Now fix any current atom a. For each current q, either a&lt;=q or
+a&lt;=not q. Whichever disjunct holds is an identity, hence necessary.
+Apply (1) to these decisions to obtain</p>
+<pre><code>s &lt;= forall q (a&lt;=q or a&lt;=not q).                            (2)</code></pre>
+<p>C unconditionally proves that a true proposition deciding every q is
+an Actuality witness: when q is true, a&lt;=not q is impossible.
+Necessitate only this unconditional theorem and combine it with (2).
+Writing Act for the Actuality proposition gives</p>
+<pre><code>s and a &lt;= Act                                              (3)</code></pre>
+<p>for every current atom a. If s and not Act were nonzero, Atomicity
+would supply an atom below it. Equation (3) would put that atom below
+both Act and not Act, contradicting nonzeroness. Therefore s&lt;=Act.
+Since s is true, Actuality follows.</p>
+<p>The proof collects atom decisions only beneath the single true core
+s. It neither infers ordinary BF nor assumes that every current atom
+remains an atom at future evaluations. Current ND_t implies Vicinity by
+an existing native arrow, so its Atomicity corollary is already derived
+and receives no duplicate result.</p>
+<p>Source: OpenAI Codex, prompted by Daniel Kodsi, <em>Atomicity and
+Vicinity imply Actuality</em>, 26 October 2026, §§2–3, unpaginated. The
+common-core calculation was developed on 25 October from the mechanism
+of Christopher Sun’s 19 October Vicinity argument. Independently checked
+ordinary mathematical proof; no historical priority or Lean
+certification is claimed.</p>
 </body></html>

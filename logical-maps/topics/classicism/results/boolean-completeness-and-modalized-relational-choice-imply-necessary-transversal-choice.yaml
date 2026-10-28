@@ -1,0 +1,30 @@
+id: boolean-completeness-and-modalized-relational-choice-imply-necessary-transversal-choice
+premises:
+- boolean-completeness-r
+- modalized-relational-choice-r
+conclusion: necessary-transversal-choice-r
+proof: 'For a necessarily equivalent R, necessary partial transversals form a chain-complete algebraic
+  poset under current BC: the antitone compatibility operation Gamma gives A≤Gamma B iff B≤Gamma A, so
+  a chain join is still separated. The universal modal selector supplies a progressive operation adding
+  a missed class. The represented canonical-chain lemma gives an entity fixed point, necessarily a transversal.
+  Qualify arbitrary R by using equality when R is not an equivalence. Finally IC on relations selects
+  a bad future input if one exists; its current relational profile has a modal transversal witness, contradicting
+  badness. The same-stem writeup gives the proof and precise type bounds.'
+sources:
+- OpenAI Codex, prompted by Daniel Kodsi, Modal transversals from current Boolean completeness, 26 October
+  2026, §§1–4; Transferring modal witnesses through relational profiles, 26 October 2026, §§1–3; unpaginated.
+  Consolidated in the same-stem writeup.
+notes: At fixed sigma, BC_(sigma t)+MRC_(sigma t,sigma)+IC_(sigma sigma t) suffices; full MRC supplies
+  the IC instance. Completeness remains current. Necessary TC gives necessary Well-Ordering; with the
+  existing IC consequence this yields Modal Well-Ordering by closure, without a duplicate edge. This does
+  not settle MRC→Modal Well-Ordering without completeness or BC_t+RC_(t,t)→Actuality. Independent AI mathematical
+  review; no human or Lean certification.
+status: proved
+certificate:
+  source_id: misc
+  produced_by: OpenAI Codex, prompted by Daniel Kodsi, ordinary mathematical research
+  recorded_by: OpenAI Codex, prompted by Daniel Kodsi, integration preparation of 28 October 2026
+  checked_by: []
+  date: '2026-10-28'
+  lean: none
+references: []

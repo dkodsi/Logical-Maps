@@ -1,0 +1,23 @@
+id: rigid-rigidity-and-rigid-power-imply-necessary-rigid-power
+premises:
+- rigid-rigidity-r
+- rigid-power-r
+conclusion: necessary-rigid-power-r
+proof: Put R(F)=Rigid(F) and Z(F)=Rigid(lambda X. Rigid(X) and X≤F). Current RP says every R-member satisfies
+  Z, and the positive boxed form of rigidity gives Z(F)→□Z(F) by 4. Rigid Rigidity makes R weakly inextensible,
+  so its test Z gives R≤Z. This is exactly the boxed RP formula. See the same-stem writeup.
+sources:
+- OpenAI Codex, prompted by Daniel Kodsi, Recurrent finite-colour approximations, 26 October 2026, §11,
+  unpaginated; simplified in the same-stem writeup.
+notes: The existing □BF+RP→Rigid Rigidity theorem derives □BF+RP→□RP without a redundant edge. The RP
+  premise is retained; Rigid Rigidity→RP is not proved here. Independent AI mathematical review; no human
+  or Lean certification.
+status: proved
+certificate:
+  source_id: misc
+  produced_by: OpenAI Codex, prompted by Daniel Kodsi, ordinary mathematical research
+  recorded_by: OpenAI Codex, prompted by Daniel Kodsi, integration preparation of 28 October 2026
+  checked_by: []
+  date: '2026-10-28'
+  lean: none
+references: []

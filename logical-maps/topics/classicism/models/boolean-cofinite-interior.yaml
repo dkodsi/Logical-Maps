@@ -1,0 +1,82 @@
+id: boolean-cofinite-interior
+name: 'Boolean nonexpansive model: cofinite interior'
+certificate:
+  source_id: misc
+  produced_by: OpenAI Codex, prompted by Daniel Kodsi, construction of 25 October 2026
+  recorded_by: OpenAI Codex, prompted by Daniel Kodsi, independent integration review of 28 October 2026
+  checked_by: []
+  date: '2026-10-28'
+  lean: none
+sources:
+- OpenAI Codex, prompted by Daniel Kodsi, Observer separation with propositional completeness and divergent
+  possibilities, 25 October 2026, §4, unpaginated; expanded independent typed soundness and verdict proof
+  in the same-stem writeup, §§1–5.
+source_names:
+- Codex cofinite interior proof
+definition: Propositions form B=2×P(N), with interior j(epsilon,A)=(1[(epsilon,A)=Top], A if A is cofinite
+  and empty otherwise). Individuals form a singleton. Put delta_t(p,q)=j(p iff q), and at each admitted
+  function type take all nonexpansive functions for the recursively defined open-valued equalities; function
+  equality is j of the pointwise equivalence meet at the flattened relational type. Boolean operations
+  and quantifiers are the B operations and actual meets/joins. Evaluate truth at the first coordinate.
+  The writeup, §§1–2, checks lambda, quantifier and defined-identity admission and C soundness. This is
+  not a C5 construction.
+arguments:
+- id: current-complete-atomic-propositions
+  holds:
+  - atomicity-t
+  - boolean-completeness-t
+  text: At the first-coordinate evaluation, defined identity is literal equality, so native order is exactly
+    the externally complete atomic Boolean order on 2×P(N). Every represented family has its meet and
+    every nonzero proposition lies above (1,empty) or (0,{n}). See §3.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration proof review
+  date: '2026-10-28'
+  writeup: boolean-cofinite-interior
+- id: current-full-barcan
+  holds:
+  - barcan-r
+  text: If every Fx is necessary at the initial evaluation, each j(Fx) has first bit 1, hence every Fx
+    is Top. Its actual meet is Top, proving the full current BF schema. See §3.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration proof review
+  date: '2026-10-28'
+  writeup: boolean-cofinite-interior
+- id: current-full-relational-choice
+  holds:
+  - relational-choice-r
+  text: 'Every arbitrary actual relation is admitted when represented with value (1,empty) on its tuples
+    and Bottom elsewhere: a changed input has open equality at most (0,N), which is the equality between
+    the two output values. External Choice supplies a selector graph. This applies at all admitted argument
+    and output types, including e. See §3.'
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration proof review
+  date: '2026-10-28'
+  writeup: boolean-cofinite-interior
+- id: possible-propositional-incompleteness
+  fails:
+  - necessary-boolean-completeness-t
+  text: At coordinate n the local proposition algebra is 2×(P(N minus {n})/Fin). An infinite partition
+    into infinite blocks gives a family with no join, and the explicitly nonexpansive predicate X_S with
+    output (0,{n}) admits that family. Thus the Boolean value of BC_t is not Top and necessary BC_t fails
+    initially. See §4.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration proof review
+  date: '2026-10-28'
+  writeup: boolean-cofinite-interior
+- id: possible-propositional-barcan-failure
+  fails:
+  - necessary-barcan-t
+  text: At coordinate n use F(epsilon,A)=(1,N minus (A minus {n})) for finite A and Top otherwise. It
+    is nonexpansive. Every j(Fp) holds at n, but j of their meet (1,{n}) is Bottom. This refutes BF_t
+    at n, hence necessary BF_t initially. See §5.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration proof review
+  date: '2026-10-28'
+  writeup: boolean-cofinite-interior
+- id: current-distinctness-failure
+  fails:
+  - distinctness-necessary-t
+  text: The root-only atom a=(1,empty) is currently distinct from Bottom, but its identity with Bottom
+    is (0,N), true at every tail coordinate. Its distinctness is therefore not necessary. See §5.
+  by: OpenAI Codex, prompted by Daniel Kodsi, independent integration proof review
+  date: '2026-10-28'
+  writeup: boolean-cofinite-interior
+notes: Full typed logical observer separation is proved in §3 using identity and E_n(epsilon,A)=(1[n in
+  A],A), with whole-operation qualification; it is not encoded under an unrelated native node. Only current
+  BF and current Atomicity_t are asserted. No all-type Atomicity, necessary ND, or observer-injectivity
+  claim is made. Ordinary proof review is separate from repository validation and from Lean certification.

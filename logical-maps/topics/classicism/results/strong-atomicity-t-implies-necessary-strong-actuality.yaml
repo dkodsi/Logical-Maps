@@ -1,0 +1,23 @@
+id: strong-atomicity-t-implies-necessary-strong-actuality
+premises:
+- strong-atomicity-t
+conclusion: necessary-strong-actuality
+proof: 'Let c be the Strong Actuality proposition. Every current strong world w entails c: its boxed decision
+  law persists by 4, and wherever w is true it witnesses c there. If c is not Top, Strong Atomicity supplies
+  a nonzero strong world below its complement, contradicting the previous bound. Thus c=Top, exactly necessary
+  Strong Actuality. The same-stem writeup gives the full relational cover theorem and modal details.'
+sources:
+- OpenAI Codex, prompted by Daniel Kodsi, Strong worlds do not control modal domains, 26 October 2026,
+  §6, unpaginated; simplified in the same-stem writeup, §§1–2.
+notes: The Strong Atomicity premise is current. No BF, comprehension, ND or Choice is assumed. This strengthens
+  the conclusion of the existing human-attributed current theorem without modifying its proof. It does
+  not imply necessary Strong Atomicity. Independent AI mathematical review; no human or Lean certification.
+status: proved
+certificate:
+  source_id: misc
+  produced_by: OpenAI Codex, prompted by Daniel Kodsi, ordinary mathematical research
+  recorded_by: OpenAI Codex, prompted by Daniel Kodsi, integration preparation of 28 October 2026
+  checked_by: []
+  date: '2026-10-28'
+  lean: none
+references: []

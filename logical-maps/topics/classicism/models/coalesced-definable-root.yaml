@@ -104,7 +104,7 @@ arguments:
   by: Claude Fable 5.1 (Anthropic), at Cian Dorr's direction
   date: '2026-10-20'
   choice: free
-  writeup: coalesced-definable-root
+  writeup: definable-root-completeness-correction
   text: >-
     Two root propositions false at the identity, with sentences $t$ and $t^{\prime}$, are identical iff
     $t\leftrightarrow t^{\prime}$ holds at every object of every model in $A$ under every interpretation
@@ -119,6 +119,14 @@ arguments:
     decreasing sequence without a greatest lower bound being available there; any family of root
     propositions is the value at the identity of a root property, the value at the identity being
     unconstrained.
+  revisions:
+  - date: '2026-10-28'
+    by: OpenAI Codex, prompted by Daniel Kodsi
+    note: The original atomlessness explanation is false and is preserved as source history. The profile
+      algebra has the finite Fregean atoms A_n. Their admitted subfamilies supply missing joins and refute
+      both completeness principles; non-Atomicity follows separately from the recorded pure-Maximalism
+      incompatibility. See the replacement proof definable-root-completeness-correction.md. The model,
+      original attribution and verdicts are unchanged.
 - id: one-individual-at-root
   fails:
   - infinity-e
@@ -171,6 +179,17 @@ arguments:
     $W_0$ iff $P$ does. The closed pure sentence $\neg$Actuality is consistent with Maximalist Classicism,
     both holding at the root of coalesced-pinned-substitutions-root, and it is false at $W_0$, so it is not
     $\Diamond_{\ne}$-possible.
+- id: forcing-possibilism
+  by: OpenAI Codex, prompted by Daniel Kodsi
+  date: '2026-10-25'
+  writeup: maximalism-and-forcing-possibilism
+  holds:
+  - forcing-possibilism
+  text: The root is extensionally full and its proposition algebra is countably infinite, with pairwise
+    disjoint atoms given by finite Fregean profiles. Strict smallness therefore asks only for finite Boolean
+    algebras. An n-atom algebra is the interval below a join of n such atoms, properly below Top because
+    a further atom remains. Every isomorphism graph is admitted at every carrier type. See §§2–4 of the
+    common proof.
 notes: 'Built on 20 October 2026, at Cian Dorr''s suggestion, as a coalesced root whose entities are exactly
   the ones definable by closed terms, uniformly across the components, so that every root entity is
   pure-definable at every component world where there is one individual. Its purpose is the closed pure
