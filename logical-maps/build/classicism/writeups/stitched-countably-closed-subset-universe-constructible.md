@@ -15,7 +15,6 @@
 - **□Atomicity (type t).** Necessarily, every non-bottom proposition has an atom below it.
 - **□BF (type t).** Necessarily, if every proposition necessarily has a property, then necessarily every proposition has it.
 - **□Truths are ND-necessary.** Necessarily, every truth is ND-necessary. In C this is the identity $\Box_{\ne}=\lambda p\, .\,p$.
-- **¬ Finite-Type Necessitism.** If the canonical arithmetic at a type is necessarily genuine, its numbers have a rigid power containing representatives of every admitted subset, at every possibility. The same requirement applies after any specified finite number of iterations of this power construction. There is one sentence for each source type and finite height.
 - **¬ Infinity Schema (type t).** There are arbitrarily many pairwise distinct entities of this fixed type; one sentence for each positive integer n.
 - **¬ B for pure sentences.** The B instance for every closed sentence in the pure language.
 - **¬ Possible Infinity (type t).** Possibly there are not finitely many propositions: the Axiom of Infinity at this type, under a diamond.
@@ -45,12 +44,6 @@ Interpretation of Σ, fixed for these records: every constant of Σ is relationa
 At every infinite relational type a uniformly ground-definable embedding of the ground real field into the terminal domain has a ground-coded family of root lifts. Their carrier and field relations are paired with their exact transported images, so they are rigid and the carrier has necessarily distinct instances. No new subsets of omega means no new rational cuts: the same field is complete at both objects, including for new bounded families at the terminal object. The individual type and the remaining finite types cannot carry a real structure. Thus the same-type ANA schema holds at every type. The writeup gives the type induction and the simultaneous admitted structure.
 
 *Write-up: [stitched-countably-closed-subset](stitched-countably-closed-subset.html). Address: `stitched-countably-closed-subset-universe-constructible#fixed-real-fields-at-every-carrier`. By GPT-6 Astra, prompted by Daniel Kodsi, 2026-10-30.*
-
-### Fails Finite-Type Necessitism.
-
-The e-counting arithmetic is necessarily genuine. The canonical number carrier and its first rigid power transport bijectively, because omega and its subsets are unchanged. A ground injection of omega_1 into the first power converts the generic subset into a new subset of that fixed power. It is a new terminal member of the second canonical power. The admitted predicate consisting of all its current members and only their terminal images witnesses failure of inextensibility, so the n=1 FTN instance fails.
-
-*Write-up: [stitched-countably-closed-subset](stitched-countably-closed-subset.html). Address: `stitched-countably-closed-subset-universe-constructible#new-second-power-member`. By GPT-6 Astra, prompted by Daniel Kodsi, 2026-10-30.*
 
 ### Holds □Atoms are self-atoms, □Atoms are strong atoms, □Self-atoms are atoms, □Self-atoms are strong atoms.
 
@@ -123,7 +116,7 @@ Let $c\in\Sigma$ have relational type $\tau$, so $c=\top_\tau$ necessarily. Witn
 
 ## Notes
 
-Relative consistency in the usual ZFC forcing interpretation of the stitching construction. The group's necessary Rigid Comprehension and necessary Relational Choice apply without an adds-a-real hypothesis. This model supplies their joint compatibility with Analytic Necessitism and failure of FTN; its fixed real fields actually exist, for example at et. No global ND, CH-stability assertion, or general all-type ANA transfer rule is used. This is distinct from the full Boolean-valued countably-closed-subset construction.
+Relative consistency in the usual ZFC forcing interpretation of the stitching construction. The group's necessary Rigid Comprehension and necessary Relational Choice apply without an adds-a-real hypothesis. This model supplies their joint compatibility with Analytic Necessitism; its fixed real fields actually exist, for example at et. No global ND, CH-stability assertion, or general all-type ANA transfer rule is used. This is distinct from the full Boolean-valued countably-closed-subset construction.
 
 ## Sources
 

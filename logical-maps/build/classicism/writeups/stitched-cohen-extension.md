@@ -15,7 +15,6 @@
 - **□BF (type t).** Necessarily, if every proposition necessarily has a property, then necessarily every proposition has it.
 - **□Truths are ND-necessary.** Necessarily, every truth is ND-necessary. In C this is the identity $\Box_{\ne}=\lambda p\, .\,p$.
 - **Non-contingency of the Continuum Hypothesis.** Either necessarily every real number structure satisfies the continuum hypothesis, or necessarily every real number structure falsifies it: that every subproperty of the continuum either injects into the natural numbers or is in bijection with the continuum. One sentence for each type $\sigma$.
-- **¬ Finite-Type Necessitism.** If the canonical arithmetic at a type is necessarily genuine, its numbers have a rigid power containing representatives of every admitted subset, at every possibility. The same requirement applies after any specified finite number of iterations of this power construction. There is one sentence for each source type and finite height.
 - **¬ Infinity Schema (type t).** There are arbitrarily many pairwise distinct entities of this fixed type; one sentence for each positive integer n.
 - **¬ Rigid Power.** If a relation is rigid, so is the property of being a rigid relation that entails it.
 - **¬ Rigid Rigidity.** Being rigid is a rigid property of relations, including propositions.
@@ -44,12 +43,6 @@ Interpretation of Σ, fixed for these records: every constant of Σ is relationa
 *A member of the group Stitched forcing models, which supplies this definition with the record's settings, and the arguments marked as shared.*
 
 ## Arguments
-
-### Fails Finite-Type Necessitism.
-
-The canonical e-counting numbers at the root and terminal object are identified with the ground's natural-number carrier, with bijective transport and $\Box I^*_e$. The current members of its first canonical rigid power are precisely the paired predicates of ground subsets; terminally the full hierarchy includes a predicate for every extension subset. A new real is therefore a new terminal power member. The root predicate with all current power members in its current extension and exactly their transported images in its terminal extension is admitted: its terminal definition uses the ground parameter $\mathcal P(\omega)^V$ and the numeral coding. It necessarily contains each current member but misses the new one, refuting inextensibility of this power carrier and hence FTN. This uses the stated stitching construction, not an arbitrary Boolean-valued model. Direct source: Finite-type necessitism: canonical models and finite-level separations, §§2.3 and 3.1–3.3, 29 October 2026, unpaginated (misc); the source's Cohen instance uses only adds-a-real.
-
-*Write-up: [finite-type-model-verdicts](finite-type-model-verdicts.html). From the group *Stitched forcing models*, shared argument `stitched-forcing#finite-type-power-growth`. It requires that The forcing $P$ adds a real: some subset of $\mathbb N$ in $V[G]$ is not in $V$. Here: Cohen forcing adds the Cohen real. By GPT-6 Astra, prompted by Daniel Kodsi, 2026-10-29.*
 
 ### Holds □Atoms are self-atoms, □Atoms are strong atoms, □Self-atoms are atoms, □Self-atoms are strong atoms.
 

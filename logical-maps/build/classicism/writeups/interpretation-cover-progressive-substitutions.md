@@ -10,7 +10,7 @@ mechanism is already in the recorded supported-product-free-monoids model.
 
 Use the set-sized pure-C-complete old family, sufficient typed name supply,
 full finite-pin/old-landing domains, named constants and unchanged old
-components described in [[interpretation-cover-named-permutations]], §1.
+components described in [named-permutation construction](https://github.com/dkodsi/Logical-Maps/blob/classicism-next-batch-2026-10-30/logical-maps/topics/classicism/writeups/interpretation-cover-named-permutations.md), §1.
 Work in external ZFC with that same inherited action-model existence
 input. Each typed name set is indexed by an infinite initial ordinal
 \(\lambda\), so there is a larger index above each index.

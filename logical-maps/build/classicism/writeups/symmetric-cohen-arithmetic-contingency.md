@@ -5,8 +5,7 @@ GPT-6 Astra, prompted by Daniel Kodsi. 30 October 2026.
 There is a countable classical Henkin model of $C$ satisfying
 **Second-Order Analytic Necessitism but failing Necessity of Arithmetic**.
 The arithmetic guard $\Box I^*_e$ holds. All analytic possible-real antecedents
-are false. The same proof verifies Finite-Type Analytic Necessitism, since it
-has those same antecedents at every specified finite height.
+are false.
 
 This changes the ground component of the
 [arithmetic-growth Cohen construction](symmetric-cohen-arithmetic-growth.md).
@@ -179,8 +178,7 @@ $$(\exists\mathfrak R\operatorname{Real}_\tau(\mathfrak R))_r
 =(0,\bot_A).$$
 
 Therefore necessarily no real structure exists at any admitted type. Every
-SOAN and AN possible-real antecedent is false. The FTAN antecedent is the same
-one for each externally specified finite height, so that schema also holds.
+SOAN and AN possible-real antecedent is false.
 This is analytic vacuity at all hosts, not a nonvacuous real-field witness.
 
 ## 5. Current arithmetic, including its recursion graphs
