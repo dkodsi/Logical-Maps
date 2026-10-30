@@ -90,6 +90,8 @@ only the auxiliary code carriers use higher types.
 
 The existing SOAN results already yield Analytic Necessitism, Necessity
 of Second-Order Analysis and Non-contingency of CH. No extra direct arrows
-or assertion deciding CH are required. This proof concerns finite arities;
-it neither identifies all iterative finite-type demands with SOAN nor
-claims a reverse implication or a strictness theorem absent a source model.
+or assertion deciding CH are required. The implication is strict: [[full-present-continuum-closed-henkin]] satisfies SOAN
+but fails FTAN at host \(et\), height 1. Its first real power contains
+all unary subsets; the failed clause represents subsets of that first power
+in the next power. See [[henkin-finite-type-powers]] for the all-candidate-field
+cardinality argument.

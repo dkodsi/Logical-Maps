@@ -151,6 +151,22 @@ Rigid Comprehension + AN: a new subset of an unchanged first power defeats
 the next rigid power. This explains the extra Rigid Power premise in the
 positive generator.
 
+## Finite arity versus further power depth
+
+The [[full-present-continuum-closed-henkin]] model satisfies **SOAN but not
+FTAN**. At host \(et\), every candidate real field has all its unary subsets
+represented, as SOAN requires. Its first power has size \(2^{\mathfrak c}\),
+but the second canonical power cannot represent every subset of that
+first power. Thus the FTAN clause at height 1 fails with the possible-real
+antecedent active. This separates finite-arity relations on reals from
+further iterations of the power construction.
+
+Both elementary-Henkin models have active \(\Box I^*_e\). The countably
+closed model satisfies e-FTN height 0 and fails height 1; the continuum-closed
+model satisfies heights 0 and 1 and fails height 2. These bounded positive
+clauses are not positive full FTN schemas. See
+[[henkin-finite-type-powers|the exact power-height proof and table]].
+
 ## Sources
 
 1. GPT-6 Astra, prompted by Daniel Kodsi, *Finite-Type Necessitism and Analytic

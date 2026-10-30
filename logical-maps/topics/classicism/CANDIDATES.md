@@ -187,13 +187,3 @@ fixed round. *Conventions.* The sentence is positive, so it may be recorded as a
 it would be incompatible with each recorded identity principle, and only a model with all
 levels distinct could witness it. $\Box$Actuality refutes it (collapse at the second hat),
 as does $\Box$ND at type $t$ (collapse at $\Box$ itself).
-
-
-**Resolution (30 October 2026).** Ordinary [[no-collapse]] is realized by
-[[finite-pin-fanout-nested-equivalence-components]], a ZFC construction
-of GPT-6 Astra, prompted by Daniel Kodsi. Uniform finite-depth components
-and one admitted hat-closed family establish the exact sentence above.
-Extensional No Collapse remains a separate question. The incompatibilities
-recorded with the new node concern identities forcing a finite iterate to
-be fixed; the upper-bound identity $\Box_5=\lambda p.p$ alone is not among
-them.
