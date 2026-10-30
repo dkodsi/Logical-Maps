@@ -16,13 +16,10 @@ sources:
   10 (unpaginated).
 - Andrew Bacon and Cian Dorr, Classicism, draft of 16 May 2023, section 1.3 and Appendix D, pp. 73–74,
   for the standing C framework and typed semantics.
-- GPT-6 Astra, prompted by Daniel Kodsi, Henkin roots and finite-type represented powers, 30 October 2026,
-  sections 3–7 (unpaginated).
 source_names:
 - Subset-closed Henkin presents 30 Oct
 - Kodsi full present and numeral orbit
 - Classicism
-- Canonical power heights 30 Oct
 references:
 - paper: bacon-dorr-classicism
   role: background
@@ -88,22 +85,8 @@ arguments:
     admitted root family has no LUB either. The failure occurs at ((et)t)t. See section 3.
   fails:
   - boolean-completeness-r
-- id: finite-type-analytic-height-one-failure
-  fails:
-  - finite-type-analytic-necessitism
-  by: GPT-6 Astra, prompted by Daniel Kodsi
-  date: '2026-10-30'
-  choice: uses
-  writeup: henkin-finite-type-powers
-  text: At et every candidate rigid real carrier has c current members and injective transport. Exact
-    continuum-subset closure makes its first canonical power a full carrier of size lambda=2^c. The whole
-    second canonical power transports injectively into an H sort of size at most lambda. Root fullness
-    supplies all 2^lambda subsets of the first power, so some lacks a representative. Thus every candidate
-    field fails the height-1 FTAN clause, with possible Real active. This proves SOAN does not imply FTAN.
-    FTN failure follows from AN and the FTN+AN-to-FTAN bridge; no redundant negative flag is added.
 notes: A scaled version of the countably closed construction. It supplies whole finite-arity powers of
   each seeded real field while leaving a missing Boolean join one type higher. No CH is assumed. Necessary
   Actuality, necessary IC and necessary Transversal also follow from the proved geometry or recorded implications;
-  no propositional BC failure is asserted. The finite-type supplement separates SOAN from FTAN at host
-  et, height 1; e-counting has an active Box I*_e, with FTN heights 0 and 1 true and height 2 false. These
-  bounded heights are not a positive full FTN schema.
+  no propositional Boolean Completeness failure is asserted. The proof and verdicts retained here concern
+  this completeness/SOAN separation.

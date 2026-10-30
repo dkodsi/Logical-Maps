@@ -13,12 +13,9 @@ sources:
 - Bacon and Dorr, Classicism, for the standing C framework and Henkin semantics; the symmetric Boolean/hybrid
   construction and NoReal argument are supplied in the direct source, not attributed to the framework
   paper.
-- GPT-6 Astra, prompted by Daniel Kodsi, Finite-Type Necessitism and Analytic Non-Contingency, 30 October
-  2026, §7, equations (29)–(30) and the following symmetric Cohen paragraph (unpaginated).
 source_names:
 - Kodsi–GPT-6 Astra 29 Oct
 - Classicism
-- Finite-Type Necessitism and Analytic Non-Contingency
 references:
 - paper: bacon-dorr-classicism
   role: background
@@ -53,11 +50,6 @@ arguments:
   writeup: symmetric-cohen-arithmetic-growth
   by: GPT-6 Astra, prompted by Daniel Kodsi
   date: '2026-10-29'
-  withdrawn:
-    date: '2026-10-30'
-    by: OpenAI Codex, prompted by Daniel Kodsi
-    reason: Superseded by the stronger finite-type-analytic-vacuity argument. The original SOAN proof
-      remains valid; SOAN follows from FTAN.
 - id: canonical-number-growth
   fails:
   - arithmetic-necessitism
@@ -70,20 +62,7 @@ arguments:
   writeup: symmetric-cohen-arithmetic-growth
   by: GPT-6 Astra, prompted by Daniel Kodsi
   date: '2026-10-29'
-- id: finite-type-analytic-vacuity
-  holds:
-  - finite-type-analytic-necessitism
-  text: At every admitted real host tau the entire existential Real proposition is bottom (original model
-    proof Section 7.2), so its possible-real antecedent is false. For every external finite height n,
-    the same antecedent guards the FTAN instance at that same host tau; hence every instance holds vacuously.
-    The original Box I*_e and failure of Arithmetic Necessitism remain unchanged. Failure of FTN follows
-    from the FTN-to-Arithmetic-Necessitism theorem. This finite-type consequence is explicitly stated
-    in Finite-Type Necessitism and Analytic Non-Contingency, Section 7, equations (29)–(30) and the following
-    model paragraph.
-  writeup: symmetric-cohen-arithmetic-growth-finite-types
-  by: GPT-6 Astra, prompted by Daniel Kodsi
-  date: '2026-10-30'
-notes: ZFC construction, with Boolean-Henkin reduction and a ground nonstandard component as specified
-  in the write-up. Necessarily no real structure exists at every admitted type, making FTAN vacuous. The
-  guard Box I*_e holds while canonical-number inextensibility fails. FTAN entails SOAN and AN; failure
-  of Arithmetic Necessitism entails failure of FTN. No failure of Necessity of Arithmetic is asserted.
+notes: ZFC construction, with the Boolean-Henkin reduction and ground nonstandard component specified
+  in the accompanying proof. Necessarily no real structure exists at any admitted type, so SOAN and AN
+  hold vacuously. The guard Box I*_e holds while canonical-number inextensibility fails. No failure of
+  Necessity of Arithmetic is asserted.

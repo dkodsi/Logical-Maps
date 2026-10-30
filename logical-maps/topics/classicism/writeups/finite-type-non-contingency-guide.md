@@ -1,186 +1,100 @@
-# Two finite-type non-contingency principles
+# Finite-Type Necessitism: principle, consequences, and exact-height independence
 
-FTN and FTAN extend arithmetic and analytical necessitism by iterating the
-same rigid-power construction. Each finite height gives a
-separate sentence; neither collects an infinite hierarchy into one object.
+**Daniel Kodsi, with assistance from GPT-6 Astra (OpenAI). 30 October 2026.**
 
-| Principle | When an instance applies | What it supplies |
-| --- | --- | --- |
-| [[finite-type-necessitism]] (FTN) | The canonical arithmetic at the source type is necessarily genuine | Rigid represented powers of the canonical numbers, through each specified finite height |
-| [[finite-type-analytic-necessitism]] (FTAN) | A real-number structure is possible at a host type | A rigid, necessarily real structure at that same host type, with represented powers through each specified finite height |
+**[Read the complete paper (PDF, 12 pages)](../papers/finite-type-necessitism.pdf) · [LaTeX source](../papers/finite-type-necessitism.tex)**
 
-## What a represented power adds
+This guide locates the definitions, principal results and model family in the supplied paper. The PDF and source are unchanged; Figure 1 (p. 8) gives the entailment diagram.
 
-For a carrier \(X\), put \(\mathsf P(X)=\{A:\operatorname{Rigid}(A)\land A\le X\}\),
-where inclusion is necessary inclusion. Requiring this canonical family to
-be a represented power says that the family is rigid and that, at every
-possibility, every admitted predicate on \(X\) agrees there with a member.
-A rigid \(X\) alone does not ensure this fullness.
+## 1. The principle and its scope
 
-FTN iterates this operation from the numbers: subsets of numbers, families
-of those subsets, and so on. FTAN starts from a returned real carrier.
-The real carrier stays at the original host type; its powers occupy their
-native higher predicate types.
+Work over Classicism C in its relational simple-type system, with native modalities. Let
 
-## Four proved connections and what they add
+$$
+\operatorname{Arith}^{\tau}_n(\mathcal A)
+:=\operatorname{Peano}(X_0,z,S)\land
+\bigwedge_{i<n}\operatorname{Pow}(X_i,X_{i+1},E_i).
+$$
 
-1. **Necessary Rigid Comprehension + current Rigid Power → FTN.**
-   This identifies familiar sufficient assumptions: boxed comprehension
-   supplies necessary fullness, and current Rigid Power fixes each successive
-   family. Rigid Power need not be boxed.
-   [Proof](necessary-rigid-comprehension-and-rigid-power-imply-finite-type-necessitism.md).
-2. **FTN → Arithmetic Necessitism.**
-   The first represented power already fixes its number carrier, under the
-   same arithmetic guard.
-   [Proof](finite-type-necessitism-implies-arithmetic-necessitism.md).
-3. **FTN + Analytic Necessitism → FTAN.**
-   This strengthens the source paper's UFTN + AN bridge: UFTN additionally
-   asserts necessarily genuine arithmetic at \(e\), but that extra assumption
-   is unnecessary. An activated AN instance supplies a fixed real field;
-   its number substructure activates FTN. The resulting finite powers
-   transfer to that same real field.
-   [Proof](finite-type-necessitism-and-analytic-necessitism-imply-finite-type-analytic-necessitism.md).
-4. **FTAN → Second-Order Analytic Necessitism (SOAN).**
-   Finite tuple coding converts sufficiently many unary power levels into
-   represented relations of each requested finite arity.
-   [Proof](finite-type-analytic-necessitism-implies-second-order-analytic-necessitism.md).
+Every level has the same carrier type: $X_i:\tau t$, $z:\tau$, and $S,E_i:\tau\tau t$. The levels may overlap. The formula $\operatorname{Pow}(X,Y,E)$ requires support on $X\times Y$ and exactly one member of $Y$ coding each admitted extension on $X$:
 
-The last connection gives Necessity of Second-Order Analysis and
-Non-contingency of CH through the existing SOAN implications.
-SOAN supplies relations on reals; FTAN additionally supplies higher
-families of relations.
+$$\forall F^{\tau t}\exists!y\in Y\;\forall x\in X\;(E(x,y)\leftrightarrow Fx).$$
 
-## Why the same carrier type matters
+**Finite-Type Necessitism** is, for every carrier type $\tau$ and finite height $n$,
 
-Even with an active arithmetic guard, FTN does not imply AN as the map
-defines it. FTN builds a fixed real field at a suitable higher type.
-AN requires one at the **same type at which a real field was possible**.
+$$
+\Diamond\exists\mathcal A\,\operatorname{Arith}^{\tau}_n(\mathcal A)
+\ \longrightarrow\
+\exists\mathcal A\Bigl[
+\operatorname{Arith}^{\tau}_n(\mathcal A)
+\land\operatorname{RigidStr}(\mathcal A)
+\land\operatorname{RepPower}_1(\mathsf P(X_n),X_n)
+\Bigr].
+$$
 
-The source's full paired-profile model makes this distinction concrete.
-Its root has one individual; its terminal point has continuum many.
-Relational objects at the root are all pairs of current and terminal
-profiles, and transport takes the terminal profile. A carrier projecting
-bijectively to its terminal carrier is fixed; paired subsets and their
-images supply its full rigid powers at every finite height.
+Here $\mathsf P(X)=\lambda B\,(\operatorname{Rigid}(B)\land B\le X)$, with necessary inclusion. Rigid structure includes necessary distinctness of each carrier's members. The **extra represented power is at the native predicate type**; it need not fit into $\tau$. Types and heights index schemas and are not object-language quantifiers. The principle does not assert that an arithmetic hierarchy is possible. Nor does it put necessary correctness into the antecedent or consequent: **Lemma 2.3 derives necessary correctness** from the displayed witness.
 
-The canonical numbers have distinct numeral profiles and project
-bijectively to the terminal numbers. This verifies FTN at every activated
-source and an active arithmetic guard at \(e\), hence UFTN. Yet a real
-field at individual type is possible only terminally: none fits on the
-root singleton. AN fails at \(e\), while the fixed reference continuum
-remains available at a higher relational type. [1, §7.]
+Write $F_n$ for the exact-height schema, with all carrier types still included. Thus $\mathrm{FTN}=\{F_n:n\in\mathbb N\}$. An exact height is not a cumulative fragment.
 
-Thus the obstruction persists even when genuine arithmetic exists.
-FTN + AN → FTAN retains original-host realization as a premise.
+## 2. The principal positive results
 
-## The reference variant and its arithmetic bridge
+**The arithmetic fragment.** Theorem 3.1 and Theorem 4.4 establish
 
-Change AN's consequent so that the fixed real field need not occupy the
-original host. For each fixed counting source \(\sigma\), put
-\(\rho_\sigma=((\sigma t)t)t\). The source's **Reference Analytic
-Necessitism**, written here \(\mathrm{AN}^{\mathrm{ref}(\sigma)}\), is
-the schema, for every specified target host \(\tau\),
+$$F_0\ \Longrightarrow\
+\text{Arithmetic Necessitism},\quad
+\text{Necessity of Arithmetic},\quad
+\text{Necessity of Analysis}.$$
 
-\[
-\Diamond\exists\mathfrak R\,\operatorname{Real}_\tau(\mathfrak R)
-\ \to\
-\exists\mathfrak R\,[\operatorname{RigidStr}(\mathfrak R)
-             \land\Box\operatorname{Real}_{\rho_\sigma}(\mathfrak R)].
-\]
+For Arithmetic Necessitism, retain the existing canonical-arithmetic guard. A height-zero witness becomes necessarily Peano by Lemma 2.3; Peano matching transfers rigidity and necessary distinctness to the canonical numbers. For arithmetic truth, apply categoricity and the rigid-reference argument. For analytical truth, the native power of the rigid number carrier yields a Dedekind-cut reference field, possibly **at another type**; cross-type categoricity transfers first-order analytical truth. This last conclusion is not same-carrier Analytic Necessitism.
 
-The source calls this RANA; its second-order version, SRANA, also supplies
-the represented relations required by SOAN on the reference field.
+**Height one is exactly SOAN.** Theorem 4.3 proves, at each carrier type,
 
-The exact proved bridge is
+$$F_1\quad\longleftrightarrow\quad
+\text{Second-Order Analytic Necessitism}.$$
 
-\[
-\boxed{\mathrm{FTN}+\Box I^*_\sigma
-       \ \Longrightarrow\ \mathrm{SRANA}_{\rho_\sigma}
-       \ \Longrightarrow\ \mathrm{AN}^{\mathrm{ref}(\sigma)}.}
-\]
+Lemma 4.2 identifies the same-type possibility antecedents for a height-one arithmetic presentation and a real structure. Dedekind cuts convert a rigid height-one witness into a real field with a full unary represented power. Conversely, the number subcarrier and Cantor coding in a rigid real field give same-type subset codes. Lemma 4.1 explains why the unary power supplies all finite relation arities. These are equivalences with the existing SOAN formulation, not changes to that formulation.
 
-Under the guard, Dedekind cuts of rational codes in the first full rigid
-power form a fixed necessarily-real field. Unions of admitted bounded
-families of cuts have representatives by fullness, proving completeness.
-Higher powers, restricted to this field and finite tuple codes, supply
-the represented relations. The construction already supplies the
-reference without needing the possible-real antecedent. [1, §4.]
+**The seven existing principles.** Already $F_0\land F_1$ entails Arithmetic Necessitism, Necessity of Arithmetic, Analytic Necessitism, SOAN, Necessity of Analysis, Necessity of Second-Order Analysis, and non-contingency of CH. Full FTN therefore entails them all, without a separate existence premise. The existing arrows from AN to Necessity of Analysis, from SOAN to Necessity of Second-Order Analysis, and from the latter to non-contingency of CH are used as background connections, not reintroduced as new results.
 
-RANA implies Necessity of Analysis. SRANA implies Necessity of Second-Order
-Analysis and Non-contingency of CH: truth is stable on the full fixed
-reference and transfers by categoricity to genuine real structures at
-other types. This does not require a fixed realization at each such type.
+**Finite-type truth.** Section 5 gives the exact non-contingency schema for first-order sentences in a hierarchy's many-sorted arithmetic-and-membership signature, with sort-respecting equality and quantifiers restricted to the displayed levels. It also explains finite iteration through native powers. The claimed extension to extensional finite-type mathematics retains the requirement that higher predicates respect agreement of their lower-type arguments. It does not include arbitrary intensional formulas or an infinite tuple of witnesses.
 
-The arithmetic premise is **\(\Box I^*_\sigma\)** at one specified source.
-It must not be replaced by the map's weaker \(I_\sigma=\Diamond I^*_\sigma\).
-Types remain schema parameters; there is no quantifier over types.
-UFTN includes the required guard at \(e\). Bare guarded FTN does not:
-complete-component coalesced roots satisfy FTN vacuously while analytical
-truth principles fail. See [the model arguments](finite-type-model-verdicts.md).
+Section 3 also records the background guard-transfer implication
 
-## SOAN with failure of Arithmetic Necessitism
+$$\Box I^*_{\rho}\longrightarrow\Box I^*_{et}$$
 
-The [[symmetric-cohen-arithmetic-growth]] model has active
-\(\Box I^*_e\) but a number carrier that is not inextensible, so Arithmetic
-Necessitism fails. No real structure is possible at any admitted host.
-Therefore every possible-real antecedent is false: **FTAN, SOAN and AN
-all hold**, while FTN fails.
+for every finite type $\rho$, without using FTN. It is a theorem about the native canonical-arithmetic guards, not an extra assumption in Definition 1.1. The optional assumption [[necessary-arithmetic-infinity]] is the node $\Box I^*_{\rho}$ itself. The displayed conditional is retained as a [supporting transfer lemma](necessary-arithmetic-infinity.md), not as a node or an empty-premise proof of arithmetic infinity.
 
-More generally, relative to a specified failed Arithmetic Necessitism
-instance, **AN, SOAN, FTAN and the all-type absence of possible real
-structures are equivalent**. Any possible field together with AN would
-give a fixed Peano reference. That reference fixes the offending
-canonical numbers under their active arithmetic guard, a contradiction.
-Conversely, no possible fields makes all three analytic schemas vacuous.
-Their analytical-truth and CH consequences can therefore hold while
-structural Arithmetic Necessitism fails.
+## 3. Exact-height independence and the lattice
 
-In the Cohen model, the necessary arithmetic guard and no-possible-reals
-result also imply **necessary failure of Transversal at \((et)t\)** and
-**necessary failure of Actuality**. Current genuine arithmetic plus that
-Transversal instance gives a real field at \(((et)t)t\); necessitating
-this closed conditional proves the first failure, and Actuality implies
-Transversal. No possible reals alone would not suffice. See the
-[full consequences](symmetric-cohen-arithmetic-growth-consequences.md) and
-[finite-type verdict](symmetric-cohen-arithmetic-growth-finite-types.md).
-This does not identify failure of Arithmetic Necessitism with failure of
-the distinct Necessity of Arithmetic principle.
+**Theorem 6.1:** for every finite $j$, there is a model of C satisfying every $F_n$ with $n\ne j$ and falsifying $F_j$.
 
-The model [[stitched-countably-closed-subset]] separates FTN from necessary
-Rigid Comprehension + AN: a new subset of an unchanged first power defeats
-the next rigid power. This explains the extra Rigid Power premise in the
-positive generator.
+This is stronger than successive strictness of a cumulative chain. Even **all the other exact heights together** fail to entail the missing one. In the set-theoretic metatheory used for the models, Corollary 6.2 establishes
 
-## Finite arity versus further power depth
+$$C+\{F_n:n\in S\}\vdash F_m\quad\Longleftrightarrow\quad m\in S.$$
 
-The [[full-present-continuum-closed-henkin]] model satisfies **SOAN but not
-FTAN**. At host \(et\), every candidate real field has all its unary subsets
-represented, as SOAN requires. Its first power has size \(2^{\mathfrak c}\),
-but the second canonical power cannot represent every subset of that
-first power. Thus the FTAN clause at height 1 fails with the possible-real
-antecedent active. This separates finite-arity relations on reals from
-further iterations of the power construction.
+Consequently the cumulative fragments $G_n=F_0\land\cdots\land F_n$ form a strict chain, with $G_0=F_0$ and $G_1=F_0\land\mathrm{SOAN}$. No finite collection of heights entails FTN. In particular:
 
-Both elementary-Henkin models have active \(\Box I^*_e\). The countably
-closed model satisfies e-FTN height 0 and fails height 1; the continuum-closed
-model satisfies heights 0 and 1 and fails height 2. These bounded positive
-clauses are not positive full FTN schemas. See
-[[henkin-finite-type-powers|the exact power-height proof and table]].
+* $F_0$ and SOAN are incomparable, and $F_0$ does not entail Analytic Necessitism.
+* The seven existing mathematical non-contingency principles, **jointly**, do not entail FTN.
 
-## Sources
+The paper uses one uniform full two-point construction, with $A\subseteq B$ as the two individual domains. At terminal point $s$ take the full extensional hierarchy over $B$. At root $r$, for a flattened relational type $\tau=\sigma_1\cdots\sigma_k t$, use
 
-1. GPT-6 Astra, prompted by Daniel Kodsi, *Finite-Type Necessitism and Analytic
-   Non-Contingency*, 30 October 2026, §3, Proposition 5, pp. 4–6; §4,
-   Proposition 7, Theorem 8 and “Reference formulations,” pp. 6–8; §7,
-   “Fixed mathematics and a changing available carrier” and the arithmetic
-   separation, accompanying unpaginated Markdown version. The source uses
-   SANA for the map's SOAN.
-2. OpenAI Codex, prompted by Daniel Kodsi, *Simple generators for finite-type
-   mathematical non-contingency*, 29 October 2026, §§1–3, and *Finite-type
-   necessitism: a stronger comparison and simpler bridges*, 29 October 2026,
-   §§3–4, both unpaginated. The linked proofs reproduce the generator and
-   strengthened FTN + AN bridge with their precise assumptions.
-3. GPT-6 Astra, prompted by Daniel Kodsi, *Symmetric Cohen model: arithmetic
-   growth*, 29 October 2026, §§7.2–7.4, and *Finite-type consequences*,
-   29 October 2026, §5, both unpaginated. The NoReal supplement supplies the
-   additional Transversal and Actuality consequences with their guards.
+$$D_\tau^r=\mathcal P\Bigl(\prod_iD_{\sigma_i}^r\Bigr)\times D_\tau^s,$$
+
+with second projection as transport, and the equality and quantifiers of equations (6.2)–(6.3). In this model rigidity is precisely $E_s=\pi[E_r]$, and necessary distinctness is injectivity of projection on the carrier. Projection-bijective carriers have full native rigid powers. Taking cardinalities $(1,\beth_0)$ for $j=0$, or $(\beth_{j-1},\beth_j)$ for $j\ge1$, isolates the missing height at individual type. Relational-type instances hold by the capacity and section argument in the proof. Choice here belongs to the model-building metatheory; it is not an added object-theory premise.
+
+The map records $F_0$ and $F_2$, with $F_1$ as an equivalent formulation of the existing SOAN node. Three records instantiate this **one construction** at $j=0,1,2$, making the principal separations queryable. Theorem 6.1, not the three examples alone, establishes independence at every finite height.
+
+## 4. Attribution
+
+**Daniel Kodsi suggestion:** Finite-Type Necessitism. The exact-height equivalence, uniform independence construction and lattice are attributed to Daniel Kodsi with the assistance credited on the paper's title page. The standing Classicism framework, Goodsell's arithmetic interpretation, the existing Barton–Goodsell principles, and Bacon's categoricity arguments retain the paper's references and their original attribution.
+
+The supplied paper is an informal mathematical proof. The accompanying record and graph checks check transcription, dependencies, consistency of the recorded verdicts, and packaging; they are not independent human verification or Lean certification. No new Lean proof is claimed.
+
+## 5. Supporting invariant variant
+
+Appendix A supplies [[invariant-finite-type-necessitism]]. Its map connections are invariant FTN → FTN and FTN + C5 → invariant FTN. The exact converse to C5 retains the possible-Peano-presentation guard in Theorem A.1; there is no unguarded invariant-FTN-to-C5 arrow.
+
+Two specializations of the shared two-point construction make the distinctions queryable. With $A=B=\omega$, ordinary FTN holds and invariant FTN fails. With $A=B=\{*\}$, invariant FTN holds vacuously and C5 fails. The paper also gives a nonvacuous invariant model with contingent propositions; its proof remains in Appendix A without a further graph record duplicating the currently recorded separation profile.
+
+These are supporting map entries, not additional headline claims.

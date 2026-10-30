@@ -6,8 +6,10 @@ formal: '$\forall p^t\, .\,p\ne\bot\to\exists w^t\, .\,\Box\operatorname{Atom}_t
 definitions: 'Here a world is a propositional atom: $\operatorname{Atom}_t(w):=w\ne\bot\land\forall q^t\, .\,w\le q\lor w\le\neg q$, equivalently the atom predicate in Background. The order is algebraic entailment, so $w\le p$ is $\Box(w\to p)$. Necessary atomhood includes necessary nonzeroness; it does not assert that $w$ is necessarily true.'
 date: '2026-10-30'
 sources:
+- Daniel Kodsi suggestion, with assistance from ChatGPT, recorded 30 October 2026.
 - OpenAI Codex, prompted by Daniel Kodsi, Adjunctions, atom projection, and persistent worlds, 28 October 2026, §§2–5, unpaginated; Pure uniformity and one necessary atom, §§3–4, unpaginated.
 source_names:
+- Daniel Kodsi suggestion
 - Persistent atoms and necessary worlds
 references:
 - paper: bacon-dorr-classicism
