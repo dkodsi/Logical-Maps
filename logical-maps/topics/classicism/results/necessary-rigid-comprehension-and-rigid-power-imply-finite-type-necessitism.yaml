@@ -1,0 +1,30 @@
+id: necessary-rigid-comprehension-and-rigid-power-imply-finite-type-necessitism
+premises:
+- necessary-rigid-comprehension-r
+- rigid-power-r
+conclusion: finite-type-necessitism
+status: proved
+certificate:
+  source_id: misc
+  produced_by: OpenAI Codex, prompted by Daniel Kodsi, 29 October 2026, after the finite-type definitions
+    and rigidity lemmas of GPT-6 Astra, prompted by Daniel Kodsi
+  recorded_by: OpenAI Codex, prompted by Daniel Kodsi, 30 October 2026
+  checked_by: []
+  date: '2026-10-29'
+  lean: none
+sources:
+- OpenAI Codex, prompted by Daniel Kodsi, Simple generators for finite-type mathematical non-contingency,
+  29 October 2026, §§1–3, unpaginated.
+- GPT-6 Astra, prompted by Daniel Kodsi, Finite-Type Necessitism and Analytic Non-Contingency, dated 30
+  October 2026, §§2–3, pp. 2–6; accompanying Finite-type necessitism (companion proof notes) §§3–4.
+source_names:
+- Finite generators 29 Oct
+- Finite-Type Necessitism and Analytic Non-Contingency
+proof: See the write-up. Under each necessary Peano guard, boxed Rigid Comprehension gives the fixed canonical
+  number carrier and necessary fullness of its canonical rigid power. Current Rigid Power makes that power
+  rigid. Iterate at each external finite height; necessary distinctness passes from a fixed carrier to
+  its rigid subproperties. Only the fullness argument uses boxed RC; the optional RP premise is never
+  necessitated.
+notes: The necessary arithmetic guard, necessary inclusion and leading boxes in rigidity are retained.
+  The Rigid Power premise is current, not boxed. Boxed Plenitude already gives both premises through existing
+  results.

@@ -1,0 +1,88 @@
+id: interpretation-cover-named-permutations
+name: 'Interpretation cover: named permutations'
+definition: >-
+  In ZFC take a nonempty set-sized family of pointed C action models witnessing every C-consistent
+  pure sentence, using the interpretation-root construction's action-model-existence input. Keep
+  all old objects, domains and arrows unchanged. Choose infinite typed auxiliary name sets large
+  enough to dominate their domains and to give distinct coordinates to a fixed set-sized constant
+  signature Sigma. Add a root whose individuals are its individual names, whose loops are all
+  type-preserving permutations of names, and whose arrows into each old object are all typed
+  interpretations of names in that object's domains. There are no old-to-root arrows and the
+  designated root symmetry group is trivial. Root relational entities are exactly all profiles
+  pinned by finitely many typed names and landing as whole admitted entities at every old target;
+  pinning applies to all root loops including identity. Transport is precomposition. Individual
+  constants denote their designated names; relational constants denote their named lifts, with
+  empty root-loop rows and whole interpreted old sections. Evaluate at the root identity.
+certificate:
+  source_id: misc
+  produced_by: OpenAI Codex, prompted by Daniel Kodsi, 26 October 2026 (unrestricted permutation cover), after Cian Dorr's
+    interpretation-root construction; GPT-6 Astra, prompted by Daniel Kodsi (additional verdicts
+    and explicit signature expansion, 29–30 October 2026)
+  recorded_by: OpenAI Codex, prompted by Daniel Kodsi, 30 October 2026
+  checked_by: []
+  date: '2026-10-30'
+  lean: none
+sources:
+- OpenAI Codex, prompted by Daniel Kodsi, Observer covers and Boolean completeness, 26 October 2026, §§8.2–8.3, unpaginated.
+- 'GPT-6 Astra, prompted by Daniel Kodsi, Verdict review: Kodsi’s permutation cover has Atomlessness and Vicinity,
+  29 October 2026, construction and Vicinity/Atomlessness proofs, unpaginated.'
+- GPT-6 Astra, prompted by Daniel Kodsi, Explicit named-lift expansion of Kodsi’s permutation cover, §§1–4, 30
+  October 2026, unpaginated.
+- Cian Dorr, interpretation-root and pinned-substitution constructions, 19 October 2026, coalesced-pinned-interpretations-root
+  and coalesced-pinned-substitutions-root write-ups.
+- Andrew Bacon and Cian Dorr, Classicism, draft of 16 May 2023, Appendix D, Definitions D.1–D.3 and Proposition
+  D.4, pp. 73–74; Appendix E, Definition E.2, pp. 80–83.
+source_names:
+- Permutation cover 26 Oct
+- Atomlessness and Vicinity 29 Oct
+- Named cover expansion 30 Oct
+- Dorr interpretation roots
+- Classicism
+references:
+- paper: bacon-dorr-classicism
+  role: background
+  locator: Appendix D, pp. 73–74; Appendix E, pp. 80–83
+  note: Typed pinned action models and coalesced components.
+arguments:
+- id: current-barcan-and-choice
+  holds: [barcan-r, relational-choice-r]
+  by: OpenAI Codex, prompted by Daniel Kodsi, 26 October 2026, after Cian Dorr's interpretation-root machinery
+  date: '2026-10-26'
+  choice: uses
+  writeup: interpretation-cover-named-permutations
+  text: >-
+    Root permutations are onto at every type. Every old interpretation can be matched on a finite
+    pin by an onto interpretation, using finite modification of an infinite-fibre baseline; named
+    lifts make the latter onto actual higher types. This proves current BF. Every external current
+    relation is represented by a constant root-loop table with empty old rows, so external ZFC
+    choice gives each current Relational Choice graph. These are not boxed verdicts.
+- id: splitting-and-vicinity
+  holds: [atomlessness, vicinity]
+  by: GPT-6 Astra, prompted by Daniel Kodsi
+  date: '2026-10-29'
+  choice: free
+  writeup: interpretation-cover-named-permutations
+  text: >-
+    The root-loop characteristic proposition is a true Vicinity witness, since every loop has
+    an inverse returning to the identity. A possible proposition splits either by varying a fresh
+    individual-name image at a root loop, or by varying a fresh propositional-name interpretation
+    between top and bottom in an old target. Both support locations are checked.
+- id: named-signature-possibility
+  holds: [possibility-plus-signature-r]
+  by: GPT-6 Astra, prompted by Daniel Kodsi
+  date: '2026-10-30'
+  choice: uses
+  writeup: interpretation-cover-named-permutations
+  text: >-
+    Replace the finitely many constants of a consistent Sigma formula by typed variables and
+    existentially close. A pure-complete old component supplies values. Assign its values to
+    the designated constant names and the displayed pairwise-distinct root individuals. The
+    exact native exclusions from individual constants occurring in the formula make these
+    prescriptions compatible. Whole named-lift landing supplies the formula's possible truth.
+notes: >-
+  This is the named expansion of the unrestricted permutation cover, not the colour-symmetric
+  Boolean-complete cover. A larger signature may require a larger size instance. Signature
+  constants have no additional nonlogical axioms and need not be fixed by loops. Pure Max,
+  signature Max and the weaker possibility consequences are derived. No Strong Possibility, Boolean Completeness or observer verdict
+  is asserted. The semantic existence input is inherited, not a new exact consistency-strength
+  theorem.

@@ -1,0 +1,36 @@
+id: finite-type-necessitism
+name: Finite-Type Necessitism
+category: mathematical-contingency
+statement: If the canonical arithmetic at a type is necessarily genuine, its numbers have a rigid power
+  containing representatives of every admitted subset, at every possibility. The same requirement applies
+  after any specified finite number of iterations of this power construction. There is one sentence for
+  each source type and finite height.
+formal: $\Box I^*_\sigma\to\operatorname{RepPower}_1(H_{\sigma,n+1},H_{\sigma,n})\qquad(n\ge0)$
+definitions: Put $\nu_\sigma=(\sigma t)t$, $H_{\sigma,0}=\mathbb N_\sigma$ and $H_{\sigma,n+1}=\mathsf
+  P(H_{\sigma,n})$, where $\mathsf P(X):=\lambda A\, .\,\operatorname{Rigid}(A)\land A\le X$. Inclusion
+  is necessary inclusion. Rigidity and $I^*_\sigma$ have the definitions in Background; $\Box I^*_\sigma$
+  says that the canonical successor necessarily omits zero and is injective on the canonical numbers.
+  For this canonical power, $\operatorname{RepPower}_1(\mathsf P(X),X)$ is $\operatorname{Rigid}(\mathsf
+  P(X))\land \Box\forall F\exists G\in\mathsf P(X)\, .\,\forall x\in X\, .\,Fx\leftrightarrow Gx$. Fullness
+  ranges over every admitted predicate. Types and finite heights are metalinguistic schema indices, not
+  object-language quantifiers. If $X$ has type $\alpha t$, its power has type $(\alpha t)t$.
+date: '2026-10-29'
+sources:
+- GPT-6 Astra, prompted by Daniel Kodsi, Finite-Type Necessitism and Analytic Non-Contingency, dated 30
+  October 2026, §3, Definition 1 and Proposition 5, pp. 4–6; the accompanying Finite-type necessitism,
+  companion proof notes, 29 October 2026, §§1,3–4 (unpaginated).
+source_names:
+- Finite-Type Necessitism and Analytic Non-Contingency
+references:
+- paper: barton-goodsell-continuum-contingency
+  role: background
+  locator: §5.8–§5.9
+  note: Arithmetic and continuum necessitism; the finite-type schema is the source's extension.
+about: The hierarchy starts with numbers, then subsets of numbers, then families of those subsets, and
+  continues to any specified finite height. It fixes both the available mathematical objects and the fullness
+  of their represented powers. Its first power already gives Arithmetic Necessitism.
+notes: 'Boxed Rigid Comprehension and current Rigid Power suffice ([[necessary-rigid-comprehension-and-rigid-power-imply-finite-type-necessitism]]).
+  The necessary-arithmetic guard must be retained: the principle does not assert that a genuine arithmetic
+  exists at any source. The guard alone supplies no unguarded implication to Non-contingency of CH. It
+  does not put all levels into one host type or collect an infinite hierarchy. It implies [[arithmetic-necessitism]]
+  by [[finite-type-necessitism-implies-arithmetic-necessitism]].'

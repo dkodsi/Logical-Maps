@@ -6,6 +6,7 @@
 
 - **Possibility+ (signature Σ).** The Possibility+ schema for the fixed nonlogical signature Sigma: for a formula P of L(Sigma) consistent with C(Sigma) whose free variables are the displayed individual variables, if those individuals are pairwise distinct and distinct from every individual denoted by a constant occurring in P, then P is possible. Include the empty tuple.
 - **Axiom of Infinity (type e).** There are not finitely many individuals. No finite cardinality holds of the universal property, so the domain of the type cannot be exhausted by finitely many steps from the empty property.
+- **Finite-Type Necessitism.** If the canonical arithmetic at a type is necessarily genuine, its numbers have a rigid power containing representatives of every admitted subset, at every possibility. The same requirement applies after any specified finite number of iterations of this power construction. There is one sentence for each source type and finite height.
 - **Relational Choice.** Every serial binary relation has a functional subrelation.
 - **Actuality.** There is a true proposition that entails every true proposition.
 - **Arithmetic Necessitism.** Given that necessarily zero is not a successor and successor is injective on numbers, the numbers at $\sigma$ form a rigid property with necessarily distinct instances. One sentence for each type $\sigma$.
@@ -57,6 +58,12 @@ Distinct constants denote distinct root individuals, so there are infinitely man
 The components form a set of action models complete for C in the signature, so for each of the three unboxed collapse principles, which fail in some model of C (the paired-individuals two-object model for 5-necessities are two-hat necessary, the two-object retract full model for Two-hat necessities are ND-necessary, the involution group for Truths are 5-necessary), some component falsifies it at its own evaluation point; the component is carried into the coalesced sum unchanged and its evaluation point is a world accessible from the root by the distinguished arrow. So none of the boxed collapse principles holds at the root, although every truth at the root is ND-necessary.
 
 *Address: `coalesced-constant-indexed-root#no-boxed-collapse`. By Claude Fable 5.1 (Anthropic), at Cian Dorr's direction, 2026-10-14.*
+
+### Holds Finite-Type Necessitism.
+
+Every canonical necessary-Peano guard fails at the root. For each source type $\sigma$, the pure sentence $\neg I^*_\sigma$ is consistent with C: in a full one-world model with finite individuals every type is finite, and sufficiently large Frege cardinalities coincide. Completeness of the component family makes this sentence possible at the root, so $\Box I^*_\sigma$ is false. Every guarded FTN instance is therefore true. No fixed power carrier is asserted. This is the same guard argument as arithmetic-necessitism-complete-components, now applied to the exact FTN definition. Direct source: the mathematical-necessitism handoff, 29 October 2026, coalesced group supplement and reference-analytic- necessitism §6, unpaginated (misc).
+
+*Write-up: [finite-type-model-verdicts](finite-type-model-verdicts.html). From the group *Coalesced sums at a new root*, shared argument `coalesced-sums#finite-type-necessitism-complete-components`. It requires that The components are a family of action models complete for C: every sentence consistent with C is true at the root of some component. Here: The action models for L(Σ) are a set complete for C(Σ), so in particular for C. By GPT-6 Astra, prompted by Daniel Kodsi, 2026-10-29.*
 
 ### Fails Tame Rigidity.
 

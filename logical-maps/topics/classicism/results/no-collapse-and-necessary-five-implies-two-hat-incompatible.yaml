@@ -1,0 +1,21 @@
+id: no-collapse-and-necessary-five-implies-two-hat-incompatible
+premises:
+- no-collapse
+- necessary-five-implies-two-hat-necessity
+conclusion: false
+status: proved
+certificate:
+  source_id: misc
+  produced_by: GPT-6 Astra, prompted by Daniel Kodsi
+  recorded_by: OpenAI Codex, prompted by Daniel Kodsi
+  checked_by: []
+  date: '2026-10-30'
+  lean: none
+sources:
+- GPT-6 Astra, prompted by Daniel Kodsi, Ordinary No Collapse integration proposal, 30 October 2026, source-known logical consequences, unpaginated.
+- Cian Dorr, John Hawthorne, and Juhani Yli-Vakkuri, The Bounds of Possibility, Appendix D, pp. 400–409, for the fixed-point behavior of the S5 upper bound.
+source_names:
+- Ordinary No Collapse consequences
+- Bounds of Possibility
+proof: 'Let O_0=Box and O_(n+1)=hat(O_n). A No Collapse family contains O_0, O_1 and O_2 by two applications of closure, and therefore O_2 differs from O_3. The second premise is the whole-operator identity O_2=Box_5. The S5 operator Box_5 is a hat fixed point, so O_3=hat(Box_5)=Box_5=O_2, a contradiction. The write-up gives the exact scope and derived exclusions.'
+notes: "The other recorded boxed identities forcing a finite fixed point imply the second premise through existing results. No incompatibility with necessary-truth-implies-five-necessity is inferred: Box_5=identity alone does not say that a finite iterate attains this upper bound."

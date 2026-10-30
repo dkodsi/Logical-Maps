@@ -89,6 +89,26 @@ conditions:
     root arguments.
 
 arguments:
+- id: finite-type-necessitism-complete-components
+  requires: [complete-components]
+  holds: [finite-type-necessitism]
+  choice: free
+  by: GPT-6 Astra, prompted by Daniel Kodsi
+  date: '2026-10-29'
+  writeup: finite-type-model-verdicts
+  text: >-
+    Every canonical necessary-Peano guard fails at the root. For each source
+    type $\sigma$, the pure sentence $\neg I^*_\sigma$ is consistent with C:
+    in a full one-world model with finite individuals every type is finite,
+    and sufficiently large Frege cardinalities coincide. Completeness of the
+    component family makes this sentence possible at the root, so
+    $\Box I^*_\sigma$ is false. Every guarded FTN instance is therefore true.
+    No fixed power carrier is asserted. This is the same guard argument as
+    arithmetic-necessitism-complete-components, now applied to the exact FTN
+    definition. Direct source: the mathematical-necessitism handoff,
+    29 October 2026, coalesced group supplement and reference-analytic-
+    necessitism §6, unpaginated (misc).
+
 - id: tame-rigidity-component
   requires: [complete-components, free-root-component, distinguished-arrows]
   fails: [tame-rigidity-r]

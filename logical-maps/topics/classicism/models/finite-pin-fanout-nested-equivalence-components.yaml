@@ -1,0 +1,39 @@
+id: finite-pin-fanout-nested-equivalence-components
+name: 'Finite-pin fanout: nested-equivalence components'
+definition: 'For each positive integer d, form countable leaf structures A_d and B_d with d nested equivalence relations. Level-zero nodes have positive finite or countably infinite size. A level-j node U_j(m) has m infinite-parameter children and countably many children of every finite type. A_d has countably many top nodes of each finite parameter; B_d also has countably many infinite-parameter top nodes. Arrows within each two-object component are all total functions preserving the nested equivalences. Take disjoint tagged components, add a countably infinite root R with only its identity endomorphism and no incoming old arrows, and include every individual function R to each old object. At every relational type use all profiles pinned by finite subsets of the source individuals. Evaluate at R. The write-up specifies the full hierarchy, the uniform return calculation, and the admitted operator-family witness.'
+certificate:
+  source_id: misc
+  produced_by: GPT-6 Astra, prompted by Daniel Kodsi
+  recorded_by: OpenAI Codex, prompted by Daniel Kodsi
+  checked_by: []
+  date: '2026-10-30'
+  lean: none
+sources:
+- "GPT-6 Astra, prompted by Daniel Kodsi, Arbitrary finite hat depth: uniform finite-allocation proof, 30 October 2026, \u00a7\u00a71\u20135; Finite-depth models to an admitted hat family, 30 October 2026, \u00a7\u00a72\u20136, both unpaginated."
+- Andrew Bacon and Cian Dorr, Classicism, draft of 16 May 2023, Appendix D, Definitions D.1–D.3 and Proposition D.4, pp. 73–74, for ideally full finite-pin C models.
+source_names:
+- Uniform finite hat depth and admitted fanout family
+- Classicism
+references:
+- paper: bacon-dorr-classicism
+  role: background
+  locator: Appendix D, Definitions D.1–D.3 and Proposition D.4, pp. 73–74
+  note: Ideally full C semantics with finite-set ideals; the nested components and common fanout are the new construction.
+arguments:
+- id: admitted-hat-closed-family
+  holds:
+  - no-collapse
+  by: GPT-6 Astra, prompted by Daniel Kodsi
+  date: '2026-10-30'
+  choice: uses
+  writeup: finite-pin-fanout-nested-equivalence-components
+  text: 'Uniform finite-capacity allocation gives, for every positive d, a component separating O_(2d+1) from O_(2d+2). An adjacent root identity would propagate to every later pair and transport to a contradicted component. The family whose row at each arrow to V consists of all whole O_n at V is empty-pinned and has admitted old sections. It contains Box, is hat-closed, and has no current fixed member.'
+- id: root-actuality
+  holds:
+  - actuality
+  by: GPT-6 Astra, prompted by Daniel Kodsi
+  date: '2026-10-30'
+  choice: uses
+  writeup: finite-pin-fanout-nested-equivalence-components
+  text: 'The root-only proposition is empty-pinned because R has only its identity endomorphism. It is true and entails every root truth, witnessing Actuality. Its diamond equals itself, so every positive hat iterate is currently coextensive with truth. Their whole operators remain distinct in the old component rows.'
+notes: "ZFC set construction using the ideally full C-model theorem. Each finite component stabilizes at its own even stage; the one fanout root and its admitted family establish ordinary No Collapse. No extensional or necessary No Collapse claim is made."
