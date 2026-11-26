@@ -3355,6 +3355,10 @@ function dateOf(x) {
   if (x.companion_of) return (x.arguments || []).map(a => String(a.date || x.certificate.date || '')).sort().pop() || '';  // dated by its conjectured arguments
   return x.satisfies || x.premises ? (x.certificate.date || '') : (x.date || '');
 }
+// The day something went live on the published site (apply_published in scripts/pmap.py), which
+// is the day the Changes tab files it under; its own date where the build gives none. A record's
+// own date stays its origin, on its page.
+const liveDate = (o, own) => String(o?.published || own || '');
 // A record written as arguments keeps no log of its own. What changed for a model on a day is
 // the arguments it gained that day and the revisions of its arguments, each dated after everything
 // in the record's history. An argument that many models share, a general argument or a group's,
@@ -3363,10 +3367,12 @@ function argumentEvents(x) {
   if (!x.arguments || x.companion_of) return [];
   const since = [x.certificate.date || '', ...(x.history || []).map(ch => String(ch.date || ''))].sort().pop();
   const shared = a => a.general ? 'general/' + a.general : a.group ? 'group/' + a.group + '/' + (a.id || '') : null;
+  // Whether an argument is a change at all goes by the dates the record gives, as its history
+  // does; the day it is filed under is the day it went live.
   return x.arguments.flatMap(a => [
-    { date: String(a.date || x.certificate.date || ''), by: a.by || x.certificate.produced_by, a, shared: shared(a), added: true },
-    ...(a.revisions || []).map(r => ({ date: String(r.date || ''), by: r.by, a, shared: shared(a), note: r.note }))
-  ]).filter(ev => ev.date > since);
+    { own: String(a.date || x.certificate.date || ''), by: a.by || x.certificate.produced_by, a, shared: shared(a), added: true },
+    ...(a.revisions || []).map(r => ({ own: String(r.date || ''), by: r.by, a, shared: shared(a), note: r.note, r }))
+  ]).filter(ev => ev.own > since).map(ev => ({ ...ev, date: liveDate(ev.added ? ev.a : ev.r, ev.own) }));
 }
 // One change a model a day: how many verdicts its new arguments record that none of its earlier
 // ones does, and which; its own conjectured arguments; and the revisions of its own arguments.
@@ -3380,8 +3386,9 @@ function laterArguments(x) {
   const counts = a => !a.withdrawn && a.standing !== 'conjectured';
   const clip = t => t.length > 300 ? t.slice(0, 300) + '…' : t;
   return [...days].map(([date, evs]) => {
-    const earlier = x.arguments.filter(a => counts(a) && String(a.date || x.certificate.date || '') < date);
     const added = evs.filter(ev => ev.added), own = evs.filter(ev => !ev.shared);
+    const todays = new Set(added.map(ev => ev.a));
+    const earlier = x.arguments.filter(a => counts(a) && !todays.has(a) && liveDate(a, a.date || x.certificate.date) <= date);
     const gained = k => [...new Set(added.filter(ev => counts(ev.a)).flatMap(ev => ev.a[k] || []))].filter(p => !earlier.some(a => (a[k] || []).includes(p)));
     const satisfies = gained('holds'), violates = gained('fails'), n = satisfies.length + violates.length;
     const established = own.filter(ev => ev.added && counts(ev.a)).length;
@@ -3408,8 +3415,9 @@ function sharedArgumentRows() {
 }
 function kindOf(x) { return x.satisfies ? 'model' : x.premises ? 'result' : 'principle'; }
 // ---------------------------------------------------------------- changes
-// The rows are built once: one per record at its certificate date, plus one per logged revision at
-// the revision's own date, since later additions to a record are changes too. A minor change
+// The rows are built once: one per record, plus one per logged revision, since later additions
+// to a record are changes too. Each is filed under the day it went live on the published site
+// (liveDate), which can be later than the date its author gave it. A minor change
 // (housekeeping: rewording, formatting, cross-references) waits behind its checkbox. The search
 // box shares the Results tab's mechanism: the query and each record's text go through findText,
 // a record's text is computed once, and typing redraws the list when it pauses. A long list comes
@@ -3431,7 +3439,7 @@ function changesRows() {
   // Rebuilt at each render, since a record's revisions can grow while the page is open; it is
   // the per-record search text and the drawing that cost, not this.
   return [...P, ...R, ...MODELS]
-    .flatMap(x => [{ date: dateOf(x), x }, ...[...(x.changes || []), ...(x.history || []), ...laterArguments(x)].map(change => ({ date: String(change.date || ''), x, change }))])
+    .flatMap(x => [{ date: liveDate(x, dateOf(x)), x }, ...[...(x.changes || []), ...(x.history || []), ...laterArguments(x)].map(change => ({ date: liveDate(change, change.date), x, change }))])
     .concat(sharedArgumentRows())
     .sort((a, b) => b.date.localeCompare(a.date));
 }

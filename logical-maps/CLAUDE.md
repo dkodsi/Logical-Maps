@@ -112,6 +112,14 @@ and reports unless it is asked for by name.
   (`check_history_ui.cjs`). That chart's default view, Contributions, needs no ledger: the
   viewer sizes each day's work from the record dates (a new principle, result or model 1, an
   argument with verdicts on an older model ½, revisions nothing).
+- `python3 scripts/pmap.py published` — the publication ledger, `topics/<topic>/published.json`:
+  the first day each record, change, argument and revision appeared in the published
+  `build/<topic>/data.json`, read from the last commit of each day of `origin/main`'s
+  first-parent history (`published_items` gives the keys; `--rebuild` rereads every day).
+  `history` runs it too, so the step after a merge covers both ledgers. A build gives each of
+  them that day as `published` (`apply_published`), or the build's own day when the ledger has
+  not seen it, and the Changes tab files its rows under it (`liveDate`); whether an argument is a
+  change at all still goes by the dates in the record. A topic with no ledger keeps its own dates.
 - Lean-checked counts: `lean_checked` keeps the proved results and model verdicts whose
   certificates in the topic's Lean index (`lean.index.file`) rest on `LEAN_ALLOWED_AXIOMS`, and
   `Lynchpins.settled_by` counts how many of the full map's questions that part settles alone (the
@@ -257,7 +265,8 @@ When you (an AI) add or edit a result or model:
   newly verified property of a model, an added proof, a corrected statement),
   append an entry to its `changes` list: `date`, `by`, `summary`, and for models
   the newly verified `satisfies`/`violates` ids. The Changes tab lists each entry
-  under its own date, and its badge counts the entries since the visitor's last
+  under the day it went live on the published site, which can be later than the
+  date it carries, and its badge counts the entries since the visitor's last
   visit (the last 7 days on a first visit). Never move `certificate.date`; it is the record's origin.
   Mark an entry `minor: true` when it leaves what the record says unchanged —
   rewording, formatting, cross-references, dropping certificates of derived

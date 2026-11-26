@@ -221,6 +221,18 @@ try{
   assert.match(day[0].textContent,/2 new verdicts\. Now satisfies: C\. Now violates: D\./,'It counts and lists the new verdicts, not the one the model had');
   assert.match(day[0].textContent,/Third author; Fourth author/,'And names both authors');
   assert.ok(!day[0].textContent.includes('New.'),'The arguments\' text stays on the model\'s page');
+  // A row is filed under the day its record, change or argument went live, where the build says
+  // (`published`), not under the date its author gave it; whether an argument is a change at all
+  // still goes by the record's own dates.
+  w2.eval(`{const n=byMid.get('n');n.published='2026-06-01';n.history[0].published='2026-06-02';
+    for(const a of n.arguments){ if(a.date==='2026-02-03') a.published='2026-06-03'; if(!a.date) a.published='2026-06-01'; }
+    renderResults();}`);
+  const live=id=>[...d2.querySelectorAll('#results tr')].filter(tr=>tr.dataset.id===id).map(tr=>[tr.querySelector('td').textContent,tr.textContent]);
+  assert.ok(live('n').some(([d,t])=>d==='2026-06-01'&&!t.includes('new verdict')),'The record sits at the day it went live');
+  assert.ok(live('n').some(([d,t])=>d==='2026-06-02'&&t.includes('An old change.')),'So does a logged change');
+  assert.ok(live('n').some(([d,t])=>d==='2026-06-03'&&/2 new verdicts\. Now satisfies: C\. Now violates: D\./.test(t)),'And the arguments of a day, with the same verdicts counted');
+  assert.ok(!live('n').some(([d])=>d==='2026-02-03'),'Not under the date the arguments give');
+  assert.ok(!live('n').some(([d,t])=>t.includes('Why A holds')),'An argument as old as the record is still no change, though it went live later than its date');
   assert.deepEqual(errors2.map(String),[]);
   console.log('PASS: a model page sorts every principle into three columns, satisfied, violated and unsettled, counts each, gives each principle one control to its evidence or arguments and a derived verdict its derivation in place, starting from the verdicts it uses and linking each to its argument, a back button that retraces the pages, holds the derived verdicts behind a closed toggle, keeps Lean status on the pop-up of a verdict while the explorer list keeps its marks; a model written as arguments shows its definition, then three columns of principles with one control each and no sources, each argument once in record order headed by its verdicts with who supplied it inside (for a trawl argument, who found, reviewed and admitted it), its history behind a toggle, a write-up that does not replace the definition, and its companion.');
 }finally{w2.close();}

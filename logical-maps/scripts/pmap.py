@@ -11,6 +11,7 @@ Subcommands
   status   [TOPIC ...]      print a text summary (counts, open pairs, redundancies)
   lynchpins [TOPIC ...]     rank open questions by what each answer would settle
   history  [TOPIC ...]      add the days of the published branch's history to the settled-count ledger
+  published [TOPIC ...]     add them to the publication ledger: the day each record and change went live
   new-topic TOPIC           scaffold topics/TOPIC/
   new-principle TOPIC ID    scaffold a principle file
   new-result TOPIC ID       scaffold an implication file
@@ -1965,6 +1966,132 @@ def history_export(topic_id: str, data: dict) -> dict | None:
     return {"ref": ledger.get("ref", HISTORY_REF), "points": points, "live": live}
 
 
+# When a record went live. The Changes tab dates a row by the day it first appeared on the
+# published site, not by the date its author gave it: a record written on the 22nd and pushed on
+# the 25th is news on the 25th. The site's own history says when. `build/<topic>/data.json` at
+# the last commit of each day of the published branch is what was live that day, and `pmap.py
+# history` (or `published`) reads those and keeps, in topics/<topic>/published.json, the first day
+# each record, change, argument and revision was seen. A build gives every one that day as
+# `published`; one the ledger has not seen is new with this build and gets the build's day. A
+# record keeps its own date as its origin, on its page. A topic with no ledger keeps its own dates.
+PUBLISHED_VERSION = 1
+
+
+def published_path(topic_id: str) -> Path:
+    return TOPICS / topic_id / "published.json"
+
+
+def published_items(payload: dict):
+    """(key, object) for everything in an exported payload that the Changes tab dates: each
+    principle, result and model, the entries of its `changes` and `history`, a model's own
+    arguments, the topic's general arguments and each group's shared arguments, and the revisions
+    of an argument. A key names its thing across builds: an entry or a revision is the n-th of its
+    date in its list, an argument of a model's own the n-th with its date and verdicts. It reads
+    the payload as the viewer receives it or before its encoding, of any age."""
+    import hashlib
+    shared = payload.get("shared_arguments") or []
+
+    def nth(seen: dict, key: str) -> str:
+        seen[key] = seen.get(key, 0) + 1
+        return f"{key}#{seen[key]}"
+
+    def revisions(owner: str, a: dict):
+        seen: dict = {}
+        for r in a.get("revisions") or []:
+            if isinstance(r, dict):
+                yield nth(seen, f"{owner}/revision/{r.get('date', '')}"), r
+
+    for kind, plural in (("principle", "principles"), ("result", "results"), ("model", "models")):
+        for x in payload.get(plural) or []:
+            if not isinstance(x, dict) or "id" not in x:
+                continue
+            owner = f"{kind}/{x['id']}"
+            yield owner, x
+            seen: dict = {}
+            for ch in [*(x.get("history") or []), *(x.get("changes") or [])]:
+                if isinstance(ch, dict):
+                    yield nth(seen, f"{owner}/change/{ch.get('date', '')}"), ch
+            seen = {}
+            for a in (x.get("arguments") or []) if kind == "model" else []:
+                if isinstance(a, dict) and "$ref" in a:
+                    a = shared[a["$ref"]] if isinstance(a["$ref"], int) and a["$ref"] < len(shared) else None
+                if not isinstance(a, dict):
+                    continue
+                if a.get("general"):
+                    key = f"argument/{a['general']}"
+                elif a.get("group"):
+                    key = f"group/{a['group']}/argument/{a.get('id', '')}"
+                else:
+                    verdicts = json.dumps([sorted(a.get("holds") or []), sorted(a.get("fails") or []), a.get("standing", "")])
+                    key = nth(seen, f"{owner}/argument/{a.get('date', '')}/{hashlib.sha1(verdicts.encode()).hexdigest()[:10]}")
+                yield key, a
+                yield from revisions(key, a)
+    for a in payload.get("general_arguments") or []:
+        if isinstance(a, dict) and a.get("id"):
+            yield f"argument/{a['id']}", a
+            yield from revisions(f"argument/{a['id']}", a)
+    for g in payload.get("groups") or []:
+        for a in (g.get("arguments") or []) if isinstance(g, dict) else []:
+            if isinstance(a, dict):
+                key = f"group/{g.get('id')}/argument/{a.get('id', '')}"
+                yield key, a
+                yield from revisions(key, a)
+
+
+def update_published(topic_id: str, ref: str = HISTORY_REF, rebuild: bool = False) -> Path:
+    """Add to the publication ledger whatever the days of ref's first-parent history that it has
+    not read show for the first time."""
+    import subprocess
+    path = published_path(topic_id)
+    old = json.loads(path.read_text()) if path.exists() else {}
+    fresh = rebuild or old.get("version") != PUBLISHED_VERSION
+    days = {} if fresh else dict(old.get("days") or {})
+    first = {} if fresh else {k: day for day, keys in (old.get("first") or {}).items() for k in keys}
+    log = subprocess.run(["git", "log", ref, "--first-parent", "--format=%H %cd", "--date=short"],
+                         cwd=ROOT.parent, capture_output=True, text=True, check=True).stdout.split("\n")
+    last = {}
+    for line in reversed([x for x in log if x.strip()]):   # oldest first; a later commit that day replaces an earlier one
+        commit, day = line.split()
+        last[day] = commit
+    file = (BUILD / topic_id / "data.json").relative_to(ROOT.parent).as_posix()
+    for day, commit in sorted(last.items()):
+        if days.get(day) == commit[:8]:
+            continue
+        blob = subprocess.run(["git", "show", f"{commit}:{file}"], cwd=ROOT.parent, capture_output=True)
+        if blob.returncode:
+            continue   # no build of this topic that day
+        try:
+            payload = json.loads(blob.stdout)
+        except ValueError:
+            continue
+        new = 0
+        for key, _ in published_items(payload):
+            if key not in first or day < first[key]:
+                first[key], new = day, new + 1
+        days[day] = commit[:8]
+        print(f"{day} {commit[:8]}: {new:,} first seen")
+    by_day: dict = {}
+    for key, day in first.items():
+        by_day.setdefault(day, []).append(key)
+    path.write_text(json.dumps({"version": PUBLISHED_VERSION, "ref": ref, "days": dict(sorted(days.items())),
+                                "first": {day: sorted(keys) for day, keys in sorted(by_day.items())}},
+                               indent=0, ensure_ascii=False) + "\n", encoding="utf-8")
+    return path
+
+
+def apply_published(payload: dict, topic_id: str, today: str | None = None) -> None:
+    """Give everything the Changes tab dates the day it went live: the ledger's, or this build's
+    day for what the ledger has not seen. A topic with no ledger is left alone."""
+    path = published_path(topic_id)
+    ledger = json.loads(path.read_text()) if path.exists() else {}
+    if ledger.get("version") != PUBLISHED_VERSION:
+        return
+    first = {k: day for day, keys in (ledger.get("first") or {}).items() for k in keys}
+    today = today or _dt.date.today().isoformat()
+    for key, obj in published_items(payload):
+        obj["published"] = first.get(key, today)
+
+
 def lynchpin_report(data: dict, *, sparse_ok: bool = True, top: int | None = 50) -> dict:
     """Rankings under the topic background alone and under each background preset.
 
@@ -3070,6 +3197,7 @@ def enriched_payload(topic_id: str, downloads: dict, *, base: dict | None = None
     an export already made, a deep copy of it is enriched instead of a fresh export."""
     import copy
     payload = copy.deepcopy(base) if base is not None else export_json(topic_id)
+    apply_published(payload, topic_id)
     site = site_config()
     if topic_id in site.get("maps", []):
         payload["navigation"] = [
@@ -6160,6 +6288,34 @@ def selftest():
     assert len(kept) < n and [r["rank"] for r in rep["rows"]] == sorted(kept) and [r["auto_rank"] for r in rep["auto"]] == sorted(r["auto_rank"] for r in rep["rows"])
     assert "auto" not in compact_viewer_payload(small)["lynchpins"]["reports"][0], "the cut rows still rebuild the automatic conjectures"
     assert len(synth) == n and "truncated" not in big["lynchpins"]["reports"][0], "the input is not modified"
+    # What the Changes tab dates has a key that names it across builds, encoded or not, and gets the
+    # day the publication ledger first saw it, or the build's day when the ledger has not seen it.
+    own = {"holds": ["p"], "date": "2026-01-02", "text": "T", "revisions": [{"date": "2026-01-03", "note": "n"}]}
+    shared_arg = {"id": "s", "fails": ["q"], "group": "g", "date": "2026-01-04"}
+    pub = {"principles": [{"id": "p", "date": "2026-01-01"}],
+           "results": [{"id": "r", "changes": [{"date": "2026-01-05", "summary": "a"}, {"date": "2026-01-05", "summary": "b"}]}],
+           "models": [{"id": "m", "history": [{"date": "2026-01-01", "summary": "h"}], "arguments": [own, dict(own), shared_arg, {"general": "gen", "holds": ["p"]}]}],
+           "general_arguments": [{"id": "gen", "holds": ["p"]}], "groups": [{"id": "g", "arguments": [{"id": "s", "fails": ["q"]}]}]}
+    keys = [k for k, _ in published_items(pub)]
+    assert keys[:6] == ["principle/p", "result/r", "result/r/change/2026-01-05#1", "result/r/change/2026-01-05#2", "model/m", "model/m/change/2026-01-01#1"], keys
+    arg_keys = [k for k in keys if k.startswith("model/m/argument/")]
+    assert len(arg_keys) == 4 and arg_keys[0].endswith("#1") and arg_keys[1].endswith("#1/revision/2026-01-03#1") and arg_keys[2].endswith("#2"), arg_keys
+    assert keys.count("group/g/argument/s") == 2 and keys.count("argument/gen") == 2, "a shared argument has one key, on its record and on each model"
+    assert sorted(set(keys)) == sorted({k for k, _ in published_items(compact_viewer_payload(pub))}), "the encoded payload gives the same keys"
+    import tempfile
+    with tempfile.TemporaryDirectory() as tmp:
+        kept, globals()["TOPICS"] = TOPICS, Path(tmp)
+        try:
+            apply_published(pub, "t", today="2026-02-02")
+            assert "published" not in pub["principles"][0], "a topic with no ledger is left alone"
+            (Path(tmp) / "t").mkdir()
+            published_path("t").write_text(json.dumps({"version": PUBLISHED_VERSION, "first": {"2026-01-09": ["principle/p", "group/g/argument/s"]}}))
+            apply_published(pub, "t", today="2026-02-02")
+        finally:
+            globals()["TOPICS"] = kept
+    assert pub["principles"][0]["published"] == "2026-01-09" and pub["results"][0]["published"] == "2026-02-02", "the ledger's day, or the build's"
+    assert pub["models"][0]["arguments"][2]["published"] == pub["groups"][0]["arguments"][0]["published"] == "2026-01-09"
+    assert pub["models"][0]["arguments"][0]["revisions"][0]["published"] == "2026-02-02"
     print("selftest OK")
 
 
@@ -6168,10 +6324,10 @@ def selftest():
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="pmap", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
-    for name in ("validate", "build", "status", "bundle", "lean", "lean-check", "lynchpins", "history"):
+    for name in ("validate", "build", "status", "bundle", "lean", "lean-check", "lynchpins", "history", "published"):
         s = sub.add_parser(name)
         s.add_argument("topics", nargs="*")
-        if name == "history":
+        if name in ("history", "published"):
             s.add_argument("--ref", default=HISTORY_REF, help=f"the published branch (default {HISTORY_REF})")
             s.add_argument("--rebuild", action="store_true", help="recount every point, not only the new days")
         if name == "lynchpins":
@@ -6228,6 +6384,11 @@ def main(argv=None):
             if load_topic(t)["topic"].get("draft"):
                 continue
             print(f"wrote {update_history(t, a.ref, a.rebuild).relative_to(ROOT)}")
+            print(f"wrote {update_published(t, a.ref, a.rebuild).relative_to(ROOT)}")
+        elif a.cmd == "published":
+            if load_topic(t)["topic"].get("draft"):
+                continue
+            print(f"wrote {update_published(t, a.ref, a.rebuild).relative_to(ROOT)}")
         elif a.cmd == "lean":
             path = generate_lean_statements(t)
             print(f"wrote {path.relative_to(ROOT)}" if path else f"{t}: no Lean library configured")
