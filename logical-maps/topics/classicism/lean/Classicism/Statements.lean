@@ -5370,6 +5370,14 @@ def strong_possibility_r_implies_distinctness_schema_r : Prop :=
     Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.strongPossibility) →
     Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.distinctnessC)
 
+/-- `strong-possibility-r-inconsistent`  (conjectured)
+
+Strong Possibility (pure) ⇒ ⊥ -/
+def strong_possibility_r_inconsistent : Prop :=
+  ∀ {Sig : Classicism.Meta.Signature} (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig),
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.strongPossibility) →
+    ¬ Classicism.Meta.AxiomSet.Consistent Ax
+
 /-- `strong-possibility-signature-and-truths-are-nd-necessary-incompatible`
 
 Strong Possibility (signature Σ) ∧ Truths are ND-necessary ⇒ ⊥ -/
