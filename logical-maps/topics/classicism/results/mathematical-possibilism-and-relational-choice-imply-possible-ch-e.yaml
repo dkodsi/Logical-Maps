@@ -20,9 +20,9 @@ certificate:
 sources:
 - Andrew Bacon, finite-power forcing proof of cardinal CH contingency, checkpoint 151 version 349 (14 November
   2026), formalized by OpenAI Codex, prompted by Andrew Bacon.
-- Zachary Goodsell, 26 November 2026, that the conclusion be stated for real number structures, which the
-  premises make of the at-least numbers with their rigid properties (Background, the numbers with their rigid
-  properties).
+- Zachary Goodsell, 26 November 2026, that the conclusion be stated for real number structures, of which the
+  premises make the rigid properties of the at-least numbers the reals (Background, the rigid properties of the
+  numbers).
 source_names:
 - Bacon, finite-power CH
 - Goodsell 26 Nov
@@ -33,9 +33,10 @@ proof: >-
 
   That is the possibility of cardinal CH: possibly, every collection of rigid properties of at-least numbers
   injects into the at-least numbers or is in bijection with all the rigid properties of them.
-  At such a world □Rigid Comprehension and □Potential Infinity (type e) make the at-least numbers over
-  individuals, with their rigid properties, a real number structure at $\nu_e$ (Background,
-  [[rigid-power-of-the-numbers]]), and the continuum hypothesis of that structure is the cardinal statement.
+  At such a world □Rigid Comprehension and □Potential Infinity (type e) make the rigid properties of the at-least numbers
+  over individuals the reals of a real number structure at $\nu_et$, each number being represented by the property of
+  being it (Background, [[rigid-power-of-the-numbers]]), and the continuum hypothesis of that structure is the
+  cardinal statement.
   So possibly a real number structure satisfies the continuum hypothesis.
 changes:
 - date: '2026-11-24'

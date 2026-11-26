@@ -7,8 +7,9 @@ Andrew Bacon's forcing argument, formalized by OpenAI Codex (GPT-6), prompted by
 > and possibly fails in a real number structure, so that Non-contingency of the Continuum Hypothesis fails.
 > What follows is Bacon's proof, unchanged. It proves the cardinal statement for one structure, the at-least
 > numbers $N$ over individuals with their rigid properties $S$. □Rigid Comprehension and □Potential Infinity
-> (type e) make $N$ with $S$ a real number structure, and the continuum hypothesis of that structure is the
-> claim $C$ below (Background, [[rigid-power-of-the-numbers]]).
+> (type e) make $S$ the reals of a real number structure whose numbers are the members of $N$, each
+> represented by the property of being it, and the continuum hypothesis of that structure is the claim $C$
+> below (Background, [[rigid-power-of-the-numbers]]).
 
 Let $N$ be the inductive property of the at-least cardinalities over individuals, generated from $\lambda A.\top$ by cardinal successor. Let $S$ consist of its rigid subproperties. Write $C$ for the assertion that every subcollection of $S$ either embeds into $N$ or admits a bijection with $S$. All maps are relations at the evaluation world. Necessary lower-Peano says that necessarily the zero of $N$ is outside the range of successor and successor is injective on $N$.
 

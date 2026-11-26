@@ -29,23 +29,31 @@ references:
     completeness to other worlds. Under S5 the original world stays accessible, so completeness need not
     be carried, and the conclusion is the entity-level principle at every type.
 proof: >-
-  See the write-up. C5 gives B, 5, ND and BF at every type. Suppose a real number structure at $\sigma$
-  is possible, at a world $w$. □Rigid Comprehension at $w$ gives rigid relations coextensive there with
-  its domain, order, addition, multiplication and natural numbers; rigidity is necessary if true, so by
-  B and 5 these relations are rigid at the actual world too, with necessarily distinct instances by ND.
-  Every first-order fact about rigid relations with necessarily distinct instances is non-contingent
-  (the induction of analytic-necessitism-implies-necessity-of-analysis), so the field axioms, true of
-  the rigidified structure at $w$, hold at the actual world and necessarily. Completeness at any world
-  $u$: a bounded subproperty of the domain has, by Rigid Comprehension at $u$, a rigid coextension; that
-  it has a least upper bound in the domain is a first-order fact about rigid relations, true at $w$ by
-  the completeness of the original structure, hence necessary, hence true at $u$ by B. So the
-  rigidified structure is necessarily a real number structure. Its represented powers: the property of
-  rigid relations holding only of tuples of its instances is persistent since rigidity is necessary if
-  true, and inextensible by BF, rigidity being non-contingent under 5; Rigid Comprehension at each
-  world represents every relation on the domain by one of them.
+  See the write-up. C5 gives B, 5, ND and BF at every type. Suppose a real number structure at $\sigma$ is
+  possible, at a world $w$. □Rigid Comprehension at $w$ gives rigid relations coextensive there with its
+  numbers, successor, reals and membership; rigidity is necessary if true, so by B and 5 these relations
+  are rigid at the actual world too, with necessarily distinct instances by ND. Every first-order fact
+  about rigid relations with necessarily distinct instances is non-contingent (the induction of
+  analytic-necessitism-implies-necessity-of-analysis), so the first-order clauses of being a real number
+  structure, true of the rigidified structure at $w$, hold at the actual world and necessarily: those on
+  zero and successor, on membership, and extensionality. Fullness at any world $u$: a property has, by
+  Rigid Comprehension at $u$, a rigid coextension on the numbers; that some real has just the instances of
+  this for its members is a first-order fact about rigid relations, true at $w$ by the fullness of the
+  original structure, hence necessary, hence true at $u$ by B. That the numbers are the least property
+  containing zero and closed under successor goes the same way. So the rigidified structure is necessarily
+  a real number structure. Its represented powers: the property of rigid relations holding only of its
+  numbers and reals is persistent since rigidity is necessary if true, and inextensible by BF, rigidity
+  being non-contingent under 5; Rigid Comprehension at each world represents every relation on them by one
+  of them.
 notes: >-
   Hence □Plenitude gives Second-Order Analytic Necessitism, Analytic Necessitism, the Necessity of
   Second-Order Analysis and the Non-contingency of the Continuum Hypothesis, since □Plenitude gives C5
   and □Rigid Comprehension on the map; Extensionality reaches them through □Plenitude. Bacon's Corollary
   5.1 is the sentence-level consequence. Atomicity is not used: with S5 the world of the given structure
-  stays accessible, so completeness is read off there instead of being carried by Rigid Power.
+  stays accessible, so fullness is read off there instead of being carried by Rigid Power.
+changes:
+- date: '2026-11-26'
+  by: Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell
+  summary: Reworded for real number structures as numbers and reals with a membership relation
+    (Background, Analysis), in place of complete ordered fields. Fullness and the leastness of the numbers
+    take the place of completeness.

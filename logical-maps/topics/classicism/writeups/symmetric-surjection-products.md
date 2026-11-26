@@ -5,6 +5,10 @@ note *Symmetric surjection model with free-word gluing* of 22 October 2026. Chec
 rewritten for the map by Claude Opus 5.5 (Anthropic), prompted by Cian Dorr, 28 October
 2026.
 
+Wording about real number structures revised by Claude Fable 5.2 (Anthropic), prompted by Zachary
+Goodsell, 26 November 2026: they are now numbers and reals with a membership relation (Background,
+Analysis).
+
 These models extend Dorr's symmetric all-surjections model (symmetric-all-surjections) in two
 ways, each needed to add **Logical Necessity** to that model's package:
 
@@ -320,7 +324,7 @@ pinned down by $\varnothing$ and symmetric. So the numbers are the numerals, fix
 
 **Analytic Necessitism holds**, and so does its second-order form. Revised 29 October 2026: this
 section first recorded a failure. Its argument was withdrawn, because it inferred membership in a
-rigid carrier from inextensibility, which only bounds a carrier from above.
+rigid property from inextensibility, which only bounds a property from above.
 
 - **The entities.** For finite $N$, the arrows whose surjection is constant on $N$ form a symmetric
   proposition, pinned down by $N$. Its orbit under the permutations depends only on $|N|$. So the

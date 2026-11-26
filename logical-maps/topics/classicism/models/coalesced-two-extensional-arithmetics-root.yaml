@@ -403,20 +403,28 @@ arguments:
   date: '2026-10-23'
   choice: uses
   text: >-
-    At the type $\sigma:=((et)t)t$ of properties of the numbers at $e$. In each component, a model
-    of $T$ and so of C with $I^*_e$, there is a real number structure of type $\sigma$: the Dedekind
-    cuts over the numbers at $e$, with the rationals coded as numbers, form a complete ordered
-    field, completeness holding by comprehension since the union of a bounded family of cuts is a
-    cut, and its least inductive subproperty is the image of the numbers, so its arithmetic is the
-    component's. Let $A$ be the first-order analytical sentence $\exists n\in
-    N\,.\,\operatorname{Proof}_T(n,\bot)$, written with $N$, $+$ and $\times$. In $M_2$, which
-    satisfies $\neg\operatorname{Con}(T)$, every real number structure makes $A$ true, and in $M_1$,
-    which satisfies $\operatorname{Con}(T)$, every one makes it false, the real number structures at
-    a world all being isomorphic there. The root reaches both components, so neither
-    $\Box\forall\mathfrak R\,.\,\operatorname{Real}_\sigma(\mathfrak R)\to A(\mathfrak R)$ nor
-    $\Box\forall\mathfrak R\,.\,\operatorname{Real}_\sigma(\mathfrak R)\to\neg A(\mathfrak R)$ holds
-    at the root: the Necessity of Analysis fails, and with it the Necessity of Second-Order Analysis
-    and Analytic Necessitism, which imply it.
+    At the type $\sigma:=((et)t)t$ of properties of the numbers at $e$. In each component, a model of
+    $T$ and so of C with Extensionality and $I^*_e$, there is a real number structure of type $\sigma$:
+    its reals are the properties of the numbers at $e$ that hold only of numbers, each number is
+    represented by the property of being it, and membership is instantiation. Reals with the same
+    members are identical by Extensionality, every property of the representatives is matched by a real
+    by comprehension, and the representatives satisfy the conditions on zero and successor by $I^*_e$,
+    so its arithmetic is the component's. Let $A$ be the first-order analytical sentence $\exists n\in
+    N\,.\,\operatorname{Proof}_T(n,\bot)$, written with sum and product. In $M_2$, which satisfies
+    $\neg\operatorname{Con}(T)$, every real number structure makes $A$ true, and in $M_1$, which
+    satisfies $\operatorname{Con}(T)$, every one makes it false, the real number structures at a world
+    all being isomorphic there. The root reaches both components, so neither $\Box\forall\mathfrak
+    R\,.\,\operatorname{Real}_\sigma(\mathfrak R)\to A(\mathfrak R)$ nor $\Box\forall\mathfrak
+    R\,.\,\operatorname{Real}_\sigma(\mathfrak R)\to\neg A(\mathfrak R)$ holds at the root: the
+    Necessity of Analysis fails, and with it the Necessity of Second-Order Analysis and Analytic
+    Necessitism, which imply it.
+  revisions:
+  - date: '2026-11-26'
+    by: Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell
+    note: >-
+      Reworded for real number structures as numbers and reals with a membership relation (Background,
+      Analysis), in place of complete ordered fields. The verdict is unchanged. The structure in each
+      component is the properties of its numbers, where it was the Dedekind cuts among them.
 - id: necessary-axiom-of-infinity-e
   holds: [necessary-axiom-of-infinity-e]
   by: Claude Opus 5.5 (Anthropic), prompted by Cian Dorr

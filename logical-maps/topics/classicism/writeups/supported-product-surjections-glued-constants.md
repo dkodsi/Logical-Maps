@@ -4,6 +4,10 @@ Construction by GPT-6 Astra (OpenAI), prompted by Daniel Kodsi, 22 October 2026 
 the note behind the base model). Checked, extended and written up for the map by Claude
 Opus 5.5 (Anthropic), prompted by Cian Dorr, 28 October 2026.
 
+Wording about real number structures revised by Claude Fable 5.2 (Anthropic), prompted by Zachary
+Goodsell, 26 November 2026: they are now numbers and reals with a membership relation (Background,
+Analysis).
+
 This is a variant of the base model, the supported-product action model with free-monoid
 coordinates and glued constants, whose write-up should be read first. The base model has
 one individual. Here each arrow also carries a surjection of a large set of individuals.
@@ -223,9 +227,9 @@ $|U|\ge2^{\aleph_0}$, and every set of tuples of individuals is the extension of
 profile. So the antecedent $\Diamond\exists\mathfrak R\,.\,\operatorname{Real}_e(\mathfrak R)$
 holds.
 
-But no structure at $e$ is rigid. Its carrier has two distinct actual instances $a$ and $b$.
+But no structure at $e$ is rigid. It has two distinct numbers $a$ and $b$.
 Take a surjection $s$ with $s(a)=s(b)$. At $(\varepsilon,s)$ we have $a=b$, since identity
-there is identity of the transports. So the instances of the carrier are not necessarily
+there is identity of the transports. So its numbers are not necessarily
 distinct. Both Analytic Necessitism and its second-order form therefore fail.
 
 If $|U|<2^{\aleph_0}$, no real number structure on individuals would be possible at any

@@ -9,11 +9,17 @@ text: >-
   types: the individuals at $v$ are finitely many by hypothesis, the propositions at $v$ are sets of
   the finitely many arrows out of it, and an entity of a relational type $\bar\sigma t$ at $v$ is an
   intension assigning to each of those arrows a set of tuples of entities of types $\bar\sigma$ at
-  its target, which is reachable too, so that finitely many values are available at each arrow. An
-  ordered field has infinitely many elements, its $0$, $1$, $1+1,\ldots$ being pairwise distinct, so
+  its target, which is reachable too, so that finitely many values are available at each arrow. A real number structure has infinitely many numbers, its $0$ and the successors of $0$ being pairwise
+  distinct, so
   no real number structure exists at any reachable object, at any type. The antecedents
   $\Diamond\exists\mathfrak R\,.\,\operatorname{Real}_\sigma(\mathfrak R)$ of Analytic Necessitism
   and of Second-Order Analytic Necessitism are therefore false at every type, and both hold; and
   $\Box\forall\mathfrak R\,.\,\operatorname{Real}_\sigma(\mathfrak R)\to A(\mathfrak R)$ holds for
   every sentence $A$, so the Necessity of Second-Order Analysis holds, with the Necessity of
   Analysis and the Non-contingency of the Continuum Hypothesis. No choice is used.
+revisions:
+- date: '2026-11-26'
+  by: Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell
+  note: >-
+    Reworded for real number structures as numbers and reals with a membership relation (Background,
+    Analysis), in place of complete ordered fields. The verdict is unchanged.

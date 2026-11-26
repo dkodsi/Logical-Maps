@@ -1549,8 +1549,8 @@ every module.
 
 *Withdrawn, 26 November.* `Certified/CardinalCH.lean` goes, with the three cardinal CH principles it
 stated and the three records it certified. The map now states Bacon's results for real number
-structures, which are natural-number structures with their full powers (Background, Analysis);
-the at-least numbers with their rigid properties are one under his premises, and its continuum
+structures, which are numbers and reals with a membership relation (Background, Analysis); under
+his premises the rigid properties of the at-least numbers are the reals of one, whose continuum
 hypothesis is his cardinal statement. Like the other principles of analysis, the two that
 replace the three have no Lean statement here.
 

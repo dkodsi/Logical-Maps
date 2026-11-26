@@ -49,11 +49,17 @@ arguments:
   choice: free
   writeup: coalesced-two-extensional-ch-models-root
   text: >-
-    At type $e$. The components' real fields are real number structures of type $e$, since the map's
-    quantifiers over relations range there over the components' own sets; one satisfies CH and the other
-    does not. So at the root, $\Box\forall\mathfrak R\, .\,(\operatorname{Real}_e(\mathfrak R)\to
-    \operatorname{CH}(\mathfrak R))$ fails at the world of $N_-$, and the boxed negative form at the world
-    of $N_+$.
+    At type $e$. The components' individuals are their reals, and these carry real number structures of
+    type $e$ (Background, [[real-structures-and-fields]]), in which the map's quantifiers over relations
+    range over the components' own sets; one satisfies CH and the other does not. So at the root,
+    $\Box\forall\mathfrak R\, .\,(\operatorname{Real}_e(\mathfrak R)\to \operatorname{CH}(\mathfrak R))$
+    fails at the world of $N_-$, and the boxed negative form at the world of $N_+$.
+  revisions:
+  - date: '2026-11-26'
+    by: Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell
+    note: >-
+      Reworded for real number structures as numbers and reals with a membership relation (Background,
+      Analysis), in place of complete ordered fields. The verdict is unchanged.
 - holds:
   - necessary-strong-atomicity-r
   - necessary-strong-atomicity-t

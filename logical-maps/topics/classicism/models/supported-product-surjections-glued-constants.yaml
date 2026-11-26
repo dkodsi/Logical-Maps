@@ -63,10 +63,15 @@ arguments:
   writeup: supported-product-surjections-glued-constants
   text: >-
     At type $e$. Every set of tuples of individuals is the extension of a constant profile, and
-    $|U|>2^{\aleph_0}$, so a real number structure on individuals exists. None is rigid: two distinct
-    instances $a,b$ of its carrier are identified at the arrow $(\varepsilon,s)$ for a surjection $s$ with
+    $|U|>2^{\aleph_0}$, so a real number structure on individuals exists. None is rigid: two distinct numbers $a,b$ of it are identified at the arrow $(\varepsilon,s)$ for a surjection $s$ with
     $s(a)=s(b)$, so they are not necessarily distinct. At every other type both principles hold, by the
     base model's arguments (see the write-up).
+  revisions:
+  - date: '2026-11-26'
+    by: Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell
+    note: >-
+      Reworded for real number structures as numbers and reals with a membership relation (Background,
+      Analysis), in place of complete ordered fields. The verdict is unchanged.
 - holds: [necessary-two-hat-implies-nd-necessity, necessary-five-implies-nd-necessity, necessary-five-implies-two-hat-necessity]
   choice: free
   writeup: supported-product-surjections-glued-constants

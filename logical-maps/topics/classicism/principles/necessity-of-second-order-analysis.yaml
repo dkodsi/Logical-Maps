@@ -6,7 +6,7 @@ statement: >-
   possible world or false in every real number structure in every possible world. One sentence for each
   type $\sigma$ and each second-order analytical sentence.
 formal: >-
-  $\Box\bigl(\exists\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\to\forall\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\toA(\mathfrak R)\bigr)\;\lor$
+  $\Box\bigl(\exists\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\to\forall\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\to A(\mathfrak R)\bigr)\;\lor$
   $\Box\bigl(\exists\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\to\forall\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\to\neg A(\mathfrak R)\bigr)\quad$
   $(A\text{ a second-order analytical sentence})$
 definitions: >-
@@ -45,6 +45,8 @@ notes: >-
 changes:
 - date: '2026-11-26'
   by: Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell
-  summary: Restated with real number structures as natural-number structures with their full powers (Background,
-    Analysis), in place of complete ordered fields, at Zachary Goodsell's direction; the two presentations are
-    interdefinable. Each disjunct is written with its antecedent, that there is a real number structure, which is redundant.
+  summary: Restated with real number structures as numbers and reals with a membership relation
+    (Background, Analysis), in place of complete ordered fields, at Zachary Goodsell's direction. The two
+    kinds of structure define each other rigidly at each type (Background,
+    [[real-structures-and-fields]]), so every instance says what it said. Each disjunct is written with
+    its antecedent, that there is a real number structure, which is redundant.

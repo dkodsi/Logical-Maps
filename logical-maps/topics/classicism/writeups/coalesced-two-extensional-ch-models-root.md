@@ -6,6 +6,10 @@ components chosen by GPT-6 Astra (OpenAI), prompted by Daniel Kodsi, 23 October 
 to disagree about the continuum hypothesis. Written for the map by Claude Opus 5.5
 (Anthropic), prompted by Cian Dorr, 24 October 2026.
 
+Wording about real number structures revised by Claude Fable 5.2 (Anthropic), prompted by Zachary
+Goodsell, 26 November 2026: they are now numbers and reals with a membership relation (Background,
+Analysis).
+
 At its root this model satisfies □Atomicity, □BF, □Strong Atomicity, □Tame Rigidity,
 □Rigid Rigidity, □Weakly Rigid Weak Rigidity, Modal Well-Ordering and □Intensional
 Choice, and fails Non-contingency of CH at type $e$.
@@ -47,9 +51,10 @@ M_{N_+}\models\exists\mathfrak R\, .\,\operatorname{Real}_e(\mathfrak R)\land\op
 M_{N_-}\models\exists\mathfrak R\, .\,\operatorname{Real}_e(\mathfrak R)\land\neg\operatorname{CH}(\mathfrak R),
 $$
 
-witnessed by $N_\pm$'s field of reals with its order, operations and natural numbers.
-By Huntington's theorem (all real structures are isomorphic, provably in the non-modal
-fragment) every real number structure at type $e$ in $M_{N_+}$ satisfies CH, and every one
+witnessed by the real number structure that $N_\pm$'s field of reals defines: its natural
+numbers, with the reals that code sets of them by their digits (Background, the lemma on real
+number structures and complete ordered fields). All real number structures being isomorphic,
+provably in the non-modal fragment, every real number structure at type $e$ in $M_{N_+}$ satisfies CH, and every one
 in $M_{N_-}$ falsifies it.
 
 ## The coalesced sum

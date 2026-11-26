@@ -3,52 +3,53 @@
 Composed by Claude Fable 5.1 (Anthropic), prompted by Zachary Goodsell, 23 October 2026, extending the write-up of
 analytic-necessitism-implies-necessity-of-analysis, after Theorem 7 of Neil Barton and Zachary Goodsell,
 *Continuum Contingency* (draft of 14 October 2026), with Proposition C.3 and Lemma C.3 of Andrew Bacon,
-*Could the truths of mathematics have been different?* (draft of 9 October 2025). Informal, not
-Lean-verified.
+*Could the truths of mathematics have been different?* (draft of 9 October 2025). Revised by Claude
+Fable 5.2 (Anthropic), prompted by Zachary Goodsell, 26 November 2026, for real number structures as
+numbers and reals with a membership relation. Informal, not Lean-verified.
 
 **Setting.** Work in C at a type $\sigma$. Fix a second-order analytical sentence $A$ and let $n$ be
 the largest arity of a relation variable in it. If no real number structure at $\sigma$ is possible,
 the instance holds vacuously. Otherwise the instance of Second-Order Analytic Necessitism for $n$
-supplies a rigid real number structure $\mathfrak R=(X,\le,+,\times,0,1,N)$ with necessarily distinct
-elements, $\Box\operatorname{Real}_\sigma(\mathfrak R)$, and for each $k\le n$ a represented power
-$\mathcal P_k$: a rigid property of rigid $k$-ary relations holding only of tuples of instances of $X$,
-such that $\Box\forall R\,\exists S(\mathcal P_kS\land\forall\bar x\in X(S\bar x\leftrightarrow R\bar x))$.
+supplies a rigid real number structure $\mathfrak R=(N,0,S,X,E)$ with necessarily distinct numbers and
+reals, $\Box\operatorname{Real}_\sigma(\mathfrak R)$, and for each $k\le n$ a represented power
+$\mathcal P_k$: a rigid property of rigid $k$-ary relations holding only of tuples of numbers and reals
+of $\mathfrak R$, such that necessarily every $k$-ary relation agrees on such tuples with an instance
+of $\mathcal P_k$. Write $D$ for the property of being a number or a real of $\mathfrak R$.
 
-**Lemma 1′ (atomic facts).** Lemma 1 of the first-order write-up holds also for $S$ an instance of
-some $\mathcal P_k$: $S\bar x\to\Box S\bar x$ and $\neg S\bar x\to\Box\neg S\bar x$ for $\bar x$ from
-$X$. The proof is the same, $S$ being rigid and holding only of tuples of instances of $X$, which are
-necessarily distinct from $\bar x$ when distinct from it.
+**Lemma 1′ (atomic facts).** Lemma 1 of the first-order write-up applies to an instance $Q$ of some
+$\mathcal P_k$: $Q\bar u\to\Box Q\bar u$ and $\neg Q\bar u\to\Box\neg Q\bar u$ for $\bar u$ from $D$.
+$Q$ is rigid and holds only of tuples of instances of $D$, which are necessarily distinct.
 
 **Lemma 2′ (formulas with parameters).** For every second-order analytical formula
-$\varphi(\bar v,\bar V)$, every tuple $\bar x$ of instances of $X$ and every tuple $\bar S$ of
-instances of the $\mathcal P_k$ of the arities of $\bar V$: $\varphi(\bar x,\bar S)\to
-\Box\varphi(\bar x,\bar S)$ and $\neg\varphi(\bar x,\bar S)\to\Box\neg\varphi(\bar x,\bar S)$.
+$\varphi(\bar v,\bar V)$, all numbers and reals $\bar u$ of $\mathfrak R$ for $\bar v$ and every tuple
+$\bar Q$ of instances of the $\mathcal P_k$ of the arities of $\bar V$: $\varphi(\bar u,\bar Q)\to
+\Box\varphi(\bar u,\bar Q)$ and $\neg\varphi(\bar u,\bar Q)\to\Box\neg\varphi(\bar u,\bar Q)$.
 
 *Proof.* Induction on $\varphi$. The atomic, connective and first-order quantifier cases are those of
-the first-order write-up, with Lemma 1′ for the atomic formulas $V\bar x$. For a relation quantifier
-$\forall R\,\psi(R,\bar x,\bar S)$ of arity $k$, first note that necessarily
-$\forall R\,\psi(R,\bar x,\bar S)\leftrightarrow\forall R(\mathcal P_kR\to\psi(R,\bar x,\bar S))$. The
+the first-order write-up, with Lemma 1′ for the atomic formulas $V\bar u$. For a relation quantifier
+$\forall R\,\psi(R,\bar u,\bar Q)$ of arity $k$, first note that necessarily
+$\forall R\,\psi(R,\bar u,\bar Q)\leftrightarrow\forall R(\mathcal P_kR\to\psi(R,\bar u,\bar Q))$. The
 left-to-right direction is trivial. For the converse, at any world, a relation $R$ agrees on tuples of
-instances of $X$ with some instance $S$ of $\mathcal P_k$, by the representation clause, and
-$\psi(S,\bar x,\bar S)\to\psi(R,\bar x,\bar S)$ because an analytical formula applies its relation
-variables only to terms denoting instances of $X$ (its first-order variables are restricted to $X$ and
-$0,1$ are instances of $X$), so it cannot distinguish relations agreeing on such tuples: this is
-Bacon's Proposition C.3, Analytic Extensionality, a theorem schema of the non-modal fragment, whose
-necessitation holds. It therefore suffices to show that
-$\forall R(\mathcal P_kR\to\psi(R,\bar x,\bar S))$ is necessary if true and impossible if false, and this
-is the first-order quantifier case with $\mathcal P_k$ as restrictor: if it holds, each instance $S$ of
-$\mathcal P_k$ has $\psi(S,\bar x,\bar S)$, hence $\Box\psi(S,\bar x,\bar S)$ by the induction hypothesis
-(the parameters $S,\bar S$ being instances of the $\mathcal P$'s), and inextensibility of $\mathcal P_k$
-at $\lambda R\, .\,\psi(R,\bar x,\bar S)$ gives $\Box\forall R(\mathcal P_kR\to\psi(R,\bar x,\bar S))$;
-if it fails, some instance $S$ has $\neg\psi(S,\bar x,\bar S)$, so $\Box\neg\psi(S,\bar x,\bar S)$ by the
-induction hypothesis and $\Box\mathcal P_kS$ by persistence, whence the negation is necessary by K.
+instances of $D$ with some instance $Q$ of $\mathcal P_k$, by the representation clause, and
+$\psi(Q,\bar u,\bar Q)\to\psi(R,\bar u,\bar Q)$ because an analytical formula applies its relation
+variables only to terms denoting numbers and reals of the structure (its first-order variables are
+restricted to $N$ and $X$, and $0$ is a number), so it cannot distinguish relations agreeing on such
+tuples: this is Bacon's Proposition C.3, Analytic Extensionality, a theorem schema of the non-modal
+fragment, whose necessitation holds. It therefore suffices to show that
+$\forall R(\mathcal P_kR\to\psi(R,\bar u,\bar Q))$ is necessary if true and impossible if false, and this
+is the first-order quantifier case with $\mathcal P_k$ as restrictor: if it holds, each instance $Q$ of
+$\mathcal P_k$ has $\psi(Q,\bar u,\bar Q)$, hence $\Box\psi(Q,\bar u,\bar Q)$ by the induction hypothesis
+(the parameters $Q,\bar Q$ being instances of the $\mathcal P$'s), and inextensibility of $\mathcal P_k$
+at $\lambda R\, .\,\psi(R,\bar u,\bar Q)$ gives $\Box\forall R(\mathcal P_kR\to\psi(R,\bar u,\bar Q))$;
+if it fails, some instance $Q$ has $\neg\psi(Q,\bar u,\bar Q)$, so $\Box\neg\psi(Q,\bar u,\bar Q)$ by the
+induction hypothesis and $\Box\mathcal P_kQ$ by persistence, whence the negation is necessary by K.
 $\square$
 
 **Lemma 3′ (categoricity).** $\Box\forall\mathfrak R'(\operatorname{Real}_\sigma\mathfrak R'\to
-(A(\mathfrak R')\leftrightarrow A(\mathfrak R)))$: Huntington's theorem, and the invariance of
-second-order analytical sentences under isomorphism, since an isomorphism between structures at the
-same type transports relations by λ-abstraction (Bacon's Lemma C.3); both theorems of the non-modal
-fragment, necessitated.
+(A(\mathfrak R')\leftrightarrow A(\mathfrak R)))$: any two real number structures are isomorphic, and
+second-order analytical sentences are invariant under isomorphism, since an isomorphism transports
+relations by λ-abstraction (Background, the lemma that real number structures are isomorphic; Bacon's
+Lemma C.3 for complete ordered fields). Both are theorems of the non-modal fragment, necessitated.
 
 **Proof of the implication.** As in the first-order case: Lemma 2′ at $A$ gives $\Box A(\mathfrak R)$
 or $\Box\neg A(\mathfrak R)$, and Lemma 3′ turns either into the corresponding disjunct of the
@@ -57,8 +58,8 @@ instance. $\square$
 **Remarks.** The represented powers enter only through the relation quantifiers, where the
 representation clause makes the restricted and unrestricted quantifiers necessarily equivalent and
 the rigidity of $\mathcal P_k$ makes the restricted one non-contingent. Under Rigid Comprehension the
-rigid relations holding only of $X$-tuples represent every relation, and Barton and Goodsell's
-Second-Order Continuum Necessitism, that the property of rigid properties of reals is rigid, is the
-arity-one represented power of the reals; relations of higher arity reduce to properties there by
+rigid relations holding only of tuples of numbers and reals represent every relation, and Barton and
+Goodsell's Second-Order Continuum Necessitism, that the property of rigid properties of reals is rigid,
+is the arity-one represented power of the reals; relations of higher arity reduce to properties there by
 pairing. The continuum hypothesis is a second-order analytical sentence, so the Non-contingency of the
 Continuum Hypothesis follows (necessity-of-second-order-analysis-implies-non-contingency-of-ch).

@@ -2,23 +2,25 @@ id: possible-failure-of-ch-e
 name: Possible failure of the Continuum Hypothesis (type e)
 category: mathematical-contingency
 statement: >-
-  Possibly, some real number structure whose numbers are of the type of the numbers counted at type $e$ falsifies
-  the continuum hypothesis.
-formal: $\Diamond\exists\mathfrak R\, .\,\operatorname{Real}_{\nu_e}(\mathfrak R)\land\neg\operatorname{CH}(\mathfrak R)$
+  Possibly, some real number structure at the type of properties of the numbers counted at type $e$
+  falsifies the continuum hypothesis.
+formal: $\Diamond\exists\mathfrak R\, .\,\operatorname{Real}_{\nu_et}(\mathfrak R)\land\neg\operatorname{CH}(\mathfrak R)$
 definitions: >-
-  See Background, Analysis, for real number structures and $\operatorname{CH}(\mathfrak R)$: every collection
-  of the structure's reals injects into its numbers or is in bijection with its reals, injections and bijections
-  being relations. $\nu_e=(et)t$ is the type of the numbers counted at type $e$; a structure at $\nu_e$ has
-  entities of that type for its numbers and properties of them for its reals. Any two real number structures in
-  a world agree on the continuum hypothesis ([[real-structures-isomorphic]]), so "some" here is as much as
-  "some, and every".
+  See Background, Analysis, for real number structures and $\operatorname{CH}(\mathfrak R)$: every
+  collection of the structure's reals injects into its numbers or is in bijection with its reals,
+  injections and bijections being relations. $\nu_e=(et)t$ is the type of the numbers counted at type $e$,
+  so a structure at $\nu_et$ has properties of such numbers for its numbers and for its reals. The
+  structure of Bacon's argument is of that type: its reals are the rigid properties of the at-least
+  numbers over individuals, and each number is represented by the property of being it
+  ([[rigid-power-of-the-numbers]]). Any two real number structures in a world agree on the continuum
+  hypothesis ([[real-structures-isomorphic]]), so "some" here is as much as "some, and every".
 date: '2026-11-16'
 sources:
 - Andrew Bacon, finite-power forcing proof of cardinal CH contingency, checkpoint 151 version 349 (14 November
   2026), formalized by OpenAI Codex, prompted by Andrew Bacon.
-- Zachary Goodsell, 26 November 2026, that the conclusion be stated for real number structures, which the
-  premises make of the at-least numbers with their rigid properties (Background, the numbers with their rigid
-  properties).
+- Zachary Goodsell, 26 November 2026, that the conclusion be stated for real number structures, of which the
+  premises make the rigid properties of the at-least numbers the reals (Background, the rigid properties of the
+  numbers).
 source_names:
 - Bacon, finite-power CH
 - Goodsell 26 Nov
@@ -30,6 +32,7 @@ notes: >-
 changes:
 - date: '2026-11-26'
   by: Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell
-  summary: Restated for real number structures. The record was `possible-failure-of-cardinal-ch`, Possible failure of Cardinal CH, Bacon's statement for
-    one structure, the at-least numbers over individuals with their rigid properties, which his premises make
-    a real number structure (Background, [[rigid-power-of-the-numbers]]).
+  summary: Restated for real number structures. The record was `possible-failure-of-cardinal-ch`, Possible
+    failure of Cardinal CH, Bacon's statement for one structure, the at-least numbers over individuals
+    with their rigid properties, which his premises make the numbers and reals of a real number structure
+    (Background, [[rigid-power-of-the-numbers]]).

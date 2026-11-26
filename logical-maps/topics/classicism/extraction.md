@@ -369,3 +369,37 @@ the symmetry-constrained models and the coalesced sums. Open: whether Self-Atomi
 Actuality (it does in every full and every plain ideally full model), and whether Self-Atomicity with
 Rigid Comprehension implies its own boxed form or □Rigid Comprehension. Transcript in .private
 (25 October 2026).
+
+## Real number structures without the field (26 November 2026)
+
+At Zachary Goodsell's direction the map's real number structures are no longer complete ordered fields
+with their natural numbers, Bacon's presentation, but natural-number structures with entities of the same
+type standing for the sets of their numbers through a membership relation (Background, Analysis). The two
+kinds of structure define each other at each type, rigidly and with their represented powers (Background,
+`real-structures-and-fields`), so the five principles of analysis say of each type what they said and every
+model verdict stands. Their statements, the proofs and write-ups of the results among them, and the model
+arguments were reworded by Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell, with a revision
+recorded on each argument; withdrawn arguments and the earlier entries of this file are left speaking of
+fields, carriers and Dedekind cuts. First-order analytical sentences are sentences of second-order
+arithmetic, with the structure's sum and product defined from zero and successor.
+
+The three non-contingency principles are written in the form
+$\Box(\exists\mathfrak R\,.\,\operatorname{Real}\to\forall\mathfrak R\,.\,\operatorname{Real}\to A)\lor
+\Box(\exists\mathfrak R\,.\,\operatorname{Real}\to\forall\mathfrak R\,.\,\operatorname{Real}\to\neg A)$,
+whose antecedents are redundant.
+
+Bacon's revised forcing result (16 November 2026) was recorded for a cardinal continuum hypothesis, about
+the at-least numbers over individuals and their rigid properties. Under its premises those rigid
+properties are the reals of a real number structure (Background, `rigid-power-of-the-numbers`), so the
+three cardinal principles were replaced by `possible-ch-e` and `possible-failure-of-ch-e`, his three
+results restated with that last step added, and the third again refutes `non-contingency-of-ch`, as his
+Theorem 6.1 does. Withdrawn with the cardinal principles: the records linking them, their Lean
+statements, and two general arguments giving them verdicts in models with boundedly many individuals.
+Those arguments were about the at-least numbers over individuals, which are finitely many there; the new
+principles are about every real number structure of the type, and nothing so simple settles them.
+
+A first draft took the reals to be properties of the numbers, one type above them. That changes Analytic
+Necessitism and its second-order form at types that are infinite without holding a continuum: in
+`finite-support-permutations` the individuals with a successor that is not rigid would be the numbers of
+a real number structure at type $e$, of which no rigid one exists. It was dropped for the present
+definition, under which the numbers and the reals are of one type, as the field's were.

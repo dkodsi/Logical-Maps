@@ -6,14 +6,15 @@ statement: >-
   world or false in every real number structure in every possible world. One sentence for each type
   $\sigma$ and each first-order analytical sentence.
 formal: >-
-  $\Box\bigl(\exists\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\to\forall\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\toA(\mathfrak R)\bigr)\;\lor$
+  $\Box\bigl(\exists\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\to\forall\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\to A(\mathfrak R)\bigr)\;\lor$
   $\Box\bigl(\exists\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\to\forall\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\to\neg A(\mathfrak R)\bigr)\quad$
   $(A\text{ a first-order analytical sentence})$
 definitions: >-
   See Background, Analysis: a real number structure at $\sigma$ is a natural-number structure on entities
-  of type $\sigma$ with its full power, one property of numbers for each coextension, and a first-order
-  analytical sentence is a sentence of second-order arithmetic read in it, built from successor,
-  membership and identity with quantifiers over its numbers and over its reals. Any two real number
+  of type $\sigma$ together with entities of that type, its reals, that stand for the sets of its numbers,
+  one for each; and a first-order analytical sentence is a sentence of second-order arithmetic read in it,
+  built from successor, sum, product, membership and identity with quantifiers over its numbers and over
+  its reals. Any two real number
   structures are isomorphic in the non-modal fragment, so within a world all of them agree on $A$; the
   schema says that the worlds with a continuum agree too. The antecedent of each disjunct, that there is
   a real number structure, is redundant, the disjunct being equivalent to its consequent boxed; it says
@@ -62,6 +63,8 @@ changes:
   minor: true
 - date: '2026-11-26'
   by: Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell
-  summary: Restated with real number structures as natural-number structures with their full powers (Background,
-    Analysis), in place of complete ordered fields, at Zachary Goodsell's direction; the two presentations are
-    interdefinable. Each disjunct is written with its antecedent, that there is a real number structure, which is redundant.
+  summary: Restated with real number structures as numbers and reals with a membership relation
+    (Background, Analysis), in place of complete ordered fields, at Zachary Goodsell's direction. The two
+    kinds of structure define each other rigidly at each type (Background,
+    [[real-structures-and-fields]]), so every instance says what it said. Each disjunct is written with
+    its antecedent, that there is a real number structure, which is redundant.

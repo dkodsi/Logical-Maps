@@ -87,8 +87,8 @@ arguments:
   date: '2026-10-25'
   text: >-
     At type $t$, for the analytical sentence $\Phi$ saying that every real is constructible: membership
-    of a real in $L$ is $\Sigma^1_2$ (Shoenfield), so $\Phi$ is $\Pi^1_3$, a first-order analytical
-    sentence in any real number structure, whose natural numbers code sets of naturals by its reals.
+    of a real in $L$ is $\Sigma^1_2$ (Shoenfield), so $\Phi$ is $\Pi^1_3$, a first-order analytical sentence, the reals of a real number structure standing
+    for the sets of its numbers.
     Write $\pi,\rho$ for the projections of $B=\mathbf 2\times A$ onto the atom's coordinate and $A$.
     As in the argument for the contingency of CH, the $\pi$-coordinate of a box-free sentence of the
     kind used there, whose relation variables are only applied to carrier elements, with identity only
@@ -108,3 +108,8 @@ arguments:
       The transfer is stated for the fragment the argument uses, as in the corrected argument ch-contingent
       of full-boolean-valued-atom-and-atomless; it does not hold for every box-free sentence. The verdict is
       unchanged.
+  - date: '2026-11-26'
+    by: Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell
+    note: >-
+      Reworded for real number structures as numbers and reals with a membership relation (Background,
+      Analysis), in place of complete ordered fields. The verdict is unchanged.

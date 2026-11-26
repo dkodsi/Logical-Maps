@@ -4,6 +4,10 @@ Construction and verification by GPT-6 Astra (OpenAI), prompted by Daniel Kodsi,
 22 October 2026; checked and rewritten for the map by Claude Opus 5.5
 (Anthropic), prompted by Cian Dorr, 24 October 2026.
 
+Wording about real number structures revised by Claude Fable 5.2 (Anthropic), prompted by Zachary
+Goodsell, 26 November 2026: they are now numbers and reals with a membership relation (Background,
+Analysis).
+
 At its evaluation point this model satisfies Logical Necessity, □BF, □Relational
 Choice, □Countable Boolean Completeness and Atomlessness, and fails Actuality,
 Vicinity, Weakly Inextensible Comprehension (at $tt$) and Rigid Power (at
@@ -345,11 +349,11 @@ numerals are necessarily distinct.
   where $a,b$ are two letters and $o\in I$ is fixed. Then $k\cdot p_x=p_{x-c}$ with
   $c:=\#_a(k_o)-\#_b(k_o)$, so each arrow acts injectively on these propositions. Put a real
   structure on continuum many of them, and let $\mathfrak R$ consist of the exact images of
-  its carrier and relations, and the represented powers of the exact images of the sets of
-  exact images $H_D$, $D$ a set of $k$-tuples of the carrier. All are supported by $\{o\}$, hence
+  its numbers, reals and relations, and the represented powers of the exact images of the sets of
+  exact images $H_D$, $D$ a set of $k$-tuples of its numbers and reals. All are supported by $\{o\}$, hence
   rigid by Lemma 3; at each arrow $k$, $k\cdot\mathfrak R$ is the image of the structure under
-  the injection $k\cdot{}$, so a real structure, and any relation agrees on its carrier with
-  some $H_{k\cdot D}$.
+  the injection $k\cdot{}$, so a real structure, and any relation agrees on its numbers and
+  reals with some $H_{k\cdot D}$.
 
 So Second-Order Analytic Necessitism, and with it Analytic Necessitism, holds.
 

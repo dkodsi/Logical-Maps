@@ -92,8 +92,8 @@ arguments:
     $W_0$, whose arithmetic is standard, and fails at $V_2$; so neither $\Box(I\to A)$ nor
     $\Box(I\to\neg A)$ holds at $W_0$, and the Necessity of Arithmetic fails. The Necessity of Analysis
     fails as in coalesced-two-extensional-arithmetics-root, with $W_0$ and $V_2$ for the two components:
-    the Dedekind cuts over the numbers form a real number structure at each, every real number structure
-    at a world is isomorphic to it, and $\exists n\in N\,.\,\operatorname{Proof}_T(n,\bot)$ is false in
+    there is a real number structure at each, with a real for each property of the numbers,
+    every real number structure at a world is isomorphic to it, and $\exists n\in N\,.\,\operatorname{Proof}_T(n,\bot)$ is false in
     those at $W_0$ and true in those at $V_2$. Arithmetic Necessitism fails by the inextensibility of
     $\mathbb N_e$: let $X:=\lambda x\, .\,\mathbb N x\land\neg\exists m\in\mathbb N\, .\,m<x\land
     \operatorname{Proof}_T(m,\bot)$, a closed pure term. Each number at $W_0$ is a numeral
@@ -103,6 +103,12 @@ arguments:
     from $T$, and $\operatorname{Suc}m$ is a number lacking $X$; so $\mathbb N_e\le X$ fails. The Axiom of
     Infinity (type e) holds at $W_0$: its finite cardinalities are the numerals, and none holds of the
     universal property, which has infinitely many instances there.
+  revisions:
+  - date: '2026-11-26'
+    by: Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell
+    note: >-
+      Reworded for real number structures as numbers and reals with a membership relation (Background,
+      Analysis), in place of complete ordered fields. The verdict is unchanged.
 - id: necessary-potential-infinity-e
   holds:
   - necessary-potential-infinity-e

@@ -30,8 +30,8 @@ proof: >-
   the pure language, every notion in them being defined by abstraction, so No Pure Contingency makes
   each necessary if true. One of them is true: if some real number structure at $\sigma$ falsifies $A$,
   then every one does, since any two are isomorphic and isomorphic structures agree on second-order
-  analytical sentences (Huntington's theorem and Bacon's Lemma C.3, theorems of the non-modal
-  fragment); and if none falsifies $A$, the first holds, vacuously when there is no structure at all.
+  analytical sentences (Background, [[real-structures-isomorphic]], a theorem
+  of the non-modal fragment); and if none falsifies $A$, the first holds, vacuously when there is no structure at all.
   So one disjunct of the instance of the Necessity of Second-Order Analysis is true, hence necessary.
 notes: >-
   With [[necessity-of-second-order-analysis-implies-necessity-of-analysis]] and
@@ -39,3 +39,9 @@ notes: >-
   schema and the Non-contingency of the Continuum Hypothesis from No Pure Contingency too, as
   [[no-pure-contingency-implies-necessity-of-arithmetic]] gives the Necessity of Arithmetic. The
   Fregean Axiom and Extensionality reach it through No Pure Contingency.
+changes:
+- date: '2026-11-26'
+  by: Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell
+  summary: The isomorphism of real number structures is now the Background's lemma, where it was
+    Huntington's theorem for complete ordered fields.
+  minor: true

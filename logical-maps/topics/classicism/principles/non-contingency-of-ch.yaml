@@ -10,8 +10,8 @@ formal: >-
   $\Box\bigl(\exists\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\to\forall\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\to\operatorname{CH}(\mathfrak R)\bigr)\;\lor$
   $\Box\bigl(\exists\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\to\forall\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\to\neg\operatorname{CH}(\mathfrak R)\bigr)$
 definitions: >-
-  See Background, Analysis, for real number structures, natural-number structures with their full
-  powers, and for $\operatorname{CH}(\mathfrak R)$, with injections and bijections as relations. The
+  See Background, Analysis, for real number structures and for $\operatorname{CH}(\mathfrak R)$, with
+  injections and bijections as relations. The
   antecedent of each disjunct, that there is a real number structure, is redundant, the disjunct being
   equivalent to its consequent boxed; it says what the disjunct is about. This is the instance of the Necessity of Second-Order Analysis at the continuum hypothesis,
   kept apart because the sources treat it on its own. Which way it fails, true but possibly false or
@@ -41,8 +41,7 @@ notes: >-
   from Atomicity with □Rigid Comprehension. Bacon's forcing argument
   refutes it, from Mathematical Possibilism with □Rigid Comprehension, Intensional Choice, □Potential
   Infinity (type e) and Relational Choice ([[mathematical-possibilism-and-relational-choice-incompatible-with-non-contingency-of-ch]]):
-  it makes the continuum hypothesis possible, and its failure possible, in a real number structure whose
-  numbers are the at-least numbers over individuals ([[mathematical-possibilism-and-relational-choice-imply-possible-ch-e]],
+  it makes the continuum hypothesis possible, and its failure possible, in a real number structure whose reals are the rigid properties of the at-least numbers over individuals ([[mathematical-possibilism-and-relational-choice-imply-possible-ch-e]],
   [[mathematical-possibilism-implies-possible-failure-of-ch-e]]). That is his Theorem 6.1 with its premises revised.
   Of Barton and Goodsell's stitched models, the one adding a single Cohen real
   ([[stitched-cohen-extension]]) leaves the truth value of the continuum hypothesis unchanged and
@@ -63,7 +62,9 @@ changes:
   minor: true
 - date: '2026-11-26'
   by: Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell
-  summary: Restated with real number structures as natural-number structures with their full powers (Background,
-    Analysis), in place of complete ordered fields, at Zachary Goodsell's direction; the two presentations are
-    interdefinable. Each disjunct is written with its antecedent, that there is a real number structure, which
-    is redundant. Notes updated for Bacon's forcing result, now stated for real number structures.
+  summary: Restated with real number structures as numbers and reals with a membership relation
+    (Background, Analysis), in place of complete ordered fields, at Zachary Goodsell's direction. The two
+    kinds of structure define each other rigidly at each type (Background,
+    [[real-structures-and-fields]]), so every instance says what it said. Each disjunct is written with
+    its antecedent, that there is a real number structure, which is redundant. Notes updated for Bacon's
+    forcing result, now stated for real number structures.

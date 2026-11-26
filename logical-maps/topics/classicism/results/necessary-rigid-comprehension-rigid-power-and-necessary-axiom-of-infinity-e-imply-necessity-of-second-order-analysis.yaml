@@ -27,7 +27,8 @@ proof: >-
   Power at $R$ makes the property of rigid properties of reals rigid; their instances are necessarily distinct,
   as in Barton and Goodsell's Theorems 4 and 6. By □Rigid Comprehension every property of numbers, and every
   relation among reals (coded as a class of reals), is at every world coextensive with one of these fixed rigid
-  entities. So the field defined arithmetically on $R$ is necessarily a real number structure, and every second-order
+  entities. So $R$ is necessarily the reals of a real number structure, in which each number is represented by the property of
+  being it and membership is instantiation (Background, [[rigid-power-of-the-numbers]]), and every second-order
   analytical sentence is non-contingent in it (Barton and Goodsell's Theorem 7). In each world every real number
   structure, at any type, is isomorphic to it and agrees with it on such sentences.
 references:
@@ -45,3 +46,9 @@ notes: >-
   one type that is necessarily infinite is all the argument needs. Whether the infinity premise can be dropped
   is open; Bacon's Theorem 5.2 ([[atomicity-and-necessary-rigid-comprehension-imply-necessity-of-second-order-analysis]])
   avoids one by relativizing to worlds with a natural number structure.
+changes:
+- date: '2026-11-26'
+  by: Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell
+  summary: Reworded for real number structures as numbers and reals with a membership relation
+    (Background, Analysis), in place of complete ordered fields. The rigid properties of the numbers are
+    the reals of the structure, with no field to define on them.

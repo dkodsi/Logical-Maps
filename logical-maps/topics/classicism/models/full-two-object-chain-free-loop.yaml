@@ -95,16 +95,24 @@ arguments:
   by: Claude Opus 5.5 (Anthropic), prompted by Cian Dorr
   date: '2026-10-29'
   text: >-
-    At type $tt$. For a set $A$ of natural numbers let $Y_A$ be the intension whose value at every arrow into
-    $W_1$ is $E^A$, for an injection $A\mapsto E^A$ into the sets of propositions at $W_1$, which are continuum
-    many, and at the identity of $W_0$ is $\varnothing$. It depends only on the codomain, so it is in the full
-    domain; its transport along $h$, or along any arrow into $W_1$, is the codomain-only intension at $W_1$ with
-    value $E^A$; and distinct $A$ give distinct $Y_A$ at both objects. Carry the reals onto the $Y_A$ by
-    codomain-only relations, whose values at $W_1$ are the transported sets of tuples. Along every arrow the
-    structure goes to an isomorphic one, a real number structure at the target, the model being full. So it is
-    rigid, with necessarily distinct instances, and necessarily a real number structure, and the codomain-only
-    intensions of the sets of its codomain-only relations are represented powers. So Analytic Necessitism and
-    its second-order form hold.
+    At type $tt$. For a set $A$ of natural numbers let $Y_A$ be the intension whose value at every arrow
+    into $W_1$ is $E^A$, for an injection $A\mapsto E^A$ into the sets of propositions at $W_1$, which
+    are continuum many, and at the identity of $W_0$ is $\varnothing$. It depends only on the codomain,
+    so it is in the full domain; its transport along $h$, or along any arrow into $W_1$, is the
+    codomain-only intension at $W_1$ with value $E^A$; and distinct $A$ give distinct $Y_A$ at both
+    objects. Take the $Y_{\{n\}}$ for numbers and all the $Y_A$ for reals, with $Y_{\{n\}}$ a member of
+    $Y_A$ when $n\in A$, and with successor and membership given by codomain-only relations, whose
+    values at $W_1$ are the transported sets of tuples. Along every arrow the structure goes to an
+    isomorphic one, a real number structure at the target, the model being full. So it is rigid, with
+    necessarily distinct numbers and reals, and necessarily a real number structure, and the
+    codomain-only intensions of the sets of its codomain-only relations are represented powers. So
+    Analytic Necessitism and its second-order form hold.
+  revisions:
+  - date: '2026-11-26'
+    by: Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell
+    note: >-
+      Reworded for real number structures as numbers and reals with a membership relation (Background,
+      Analysis), in place of complete ordered fields. The verdict is unchanged.
 notes: >-
   The two-object chain with an infinite monoid of endomorphisms at the second object. It is recorded to
   refute the conjecture possible-infinity-t-implies-axiom-of-infinity-t: the evaluation object has four

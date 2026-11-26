@@ -278,18 +278,19 @@ arguments:
   date: '2026-10-23'
   text: >-
     At type $et$, at the root. A real number structure exists there: the rigid properties of individuals
-    are the pairs $(E,E)$ with $E\subseteq\mathbb N$ in $V$, the reals of $V$ as sets of naturals, and
-    the field relations on them, defined from membership by arithmetical formulas, are root relations
-    (a function in $V$ with the corresponding definable $C_0$-relation); completeness at the root holds
-    because every root property of these is a set in $V$. Now let $\mathfrak R$ be any rigid real number
-    structure at $et$ with necessarily distinct elements. At the root it is a complete ordered field, so
-    by categoricity its domain $X$ is in bijection with the reals of $V$ and its rationals are a
-    countable dense subfield. Its root extension is a set $E$ in $V$ and, $X$ being rigid, its
-    $C_0$-extension is $h[E]=E$, the same reals. At $C_0$ every property is available, in particular the
-    cut in the rationals of $X$ of a real of $V[G]$ not in $V$, a bounded subproperty of $X$ with no least
-    upper bound in $E$, a least upper bound being a real of $V$ equal to that new real. So $X$ is not
-    complete at $C_0$, $\Box\operatorname{Real}_{et}(\mathfrak R)$ fails, and the instance fails: a real
-    number structure is possible, indeed actual, and no rigid one is necessarily a real number structure.
+    are the pairs $(E,E)$ with $E\subseteq\mathbb N$ in $V$. Take them for the reals and those with $E$
+    a singleton for the numbers, with zero, successor and membership read off the sets $E$; these are
+    root relations (a function in $V$ with the corresponding definable $C_0$-relation), and fullness at
+    the root holds because every root property of the numbers is a set in $V$. Now let $\mathfrak R$ be
+    any rigid real number structure at $et$ with necessarily distinct numbers and reals. At the root it
+    is a real number structure, so its numbers are a copy of the natural numbers and the sets of members
+    of its reals are the sets of numbers in $V$. The root extensions of its numbers, reals and
+    membership are sets in $V$ and, these being rigid, their $C_0$-extensions are their images under
+    $h$, the same numbers and reals with the same members. At $C_0$ every property is available, in
+    particular one holding of just the numbers in a set of $V[G]$ that is not in $V$; no real has just
+    those for its members, the members of each real making up a set in $V$. So the structure is not full
+    at $C_0$, $\Box\operatorname{Real}_{et}(\mathfrak R)$ fails, and the instance fails: a real number
+    structure is possible, indeed actual, and no rigid one is necessarily a real number structure.
   revisions:
   - date: '2026-10-25'
     by: Claude Opus 5.5 (Anthropic), prompted by Cian Dorr
@@ -297,6 +298,12 @@ arguments:
       Moved from stitched-cohen-extension into the group, for every member whose forcing adds a real;
       the Cohen real of the original text is now any real of $V[G]$ not in $V$, and the appeal to the
       weak homogeneity of Cohen forcing is to the $V$-decisiveness of $P$.
+  - date: '2026-11-26'
+    by: Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell
+    note: >-
+      Reworded for real number structures as numbers and reals with a membership relation (Background,
+      Analysis), in place of complete ordered fields. The verdict is unchanged. The new real is a set of
+      the structure's numbers with no real for it, where it was a cut with no least upper bound.
 
 - id: continuum-hypothesis-preserved
   requires: [preserves-ch]
@@ -304,18 +311,25 @@ arguments:
   by: Claude Opus 5.5 (Anthropic), prompted by Cian Dorr
   date: '2026-10-25'
   text: >-
-    At each object, every real number structure satisfies the continuum hypothesis
-    iff the universe that object is built in does: at the root $V$, at $C_0$ $V[G]$. At $C_0$ this is
-    because $C_0$ is the full extensional model of $V[G]$ over the natural numbers: a real number
-    structure there is a complete ordered field of $V[G]$, with every subproperty and every relation of
-    $V[G]$ available, so it has $V[G]$'s continuum, and its satisfying CH is CH in $V[G]$. At the root it
-    is because every set in $V$ of root tuples is the root extension of a root relation, whatever its
-    $C_0$-extension: so the root, read at the root, is the full hierarchy of $V$ over its domains, and
-    the same reasoning applies in $V$. Real number structures exist at both objects, at type $et$ (see
-    the argument for the failure of Analytic Necessitism, or take any complete ordered field on
-    $\mathcal P(\mathbb N)$ at $C_0$). When $P$ leaves CH unchanged, every real number structure, of any type, satisfies CH at
-    both objects, or every one falsifies it at both; since the root sees exactly the two objects, one
-    of the two disjuncts holds there.
+    At each object, every real number structure satisfies the continuum hypothesis iff the universe that
+    object is built in does: at the root $V$, at $C_0$ $V[G]$. At $C_0$ this is because $C_0$ is the
+    full extensional model of $V[G]$ over the natural numbers: a real number structure there has a copy
+    of the natural numbers for its numbers and, every property and every relation of $V[G]$ being
+    available, a real for each set of them in $V[G]$, so it has $V[G]$'s continuum, and its satisfying
+    CH is CH in $V[G]$. At the root it is because every set in $V$ of root tuples is the root extension
+    of a root relation, whatever its $C_0$-extension: so the root, read at the root, is the full
+    hierarchy of $V$ over its domains, and the same reasoning applies in $V$. Real number structures
+    exist at both objects, at type $et$ (see the argument for the failure of Analytic Necessitism, or
+    take $\mathcal P(\mathbb N)$ for the reals at $C_0$, with the singletons for numbers). When $P$
+    leaves CH unchanged, every real number structure, of any type, satisfies CH at both objects, or
+    every one falsifies it at both; since the root sees exactly the two objects, one of the two
+    disjuncts holds there.
+  revisions:
+  - date: '2026-11-26'
+    by: Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell
+    note: >-
+      Reworded for real number structures as numbers and reals with a membership relation (Background,
+      Analysis), in place of complete ordered fields. The verdict is unchanged.
 
 - id: continuum-hypothesis-changed
   requires: [changes-ch]
@@ -325,18 +339,24 @@ arguments:
   date: '2026-10-25'
   source: {paper: barton-goodsell-continuum-contingency, locator: 'Theorem 20'}
   text: >-
-    Theorem 20 of the source. At each object, every real number structure satisfies the continuum hypothesis
-    iff the universe that object is built in does: at the root $V$, at $C_0$ $V[G]$. At $C_0$ this is
-    because $C_0$ is the full extensional model of $V[G]$ over the natural numbers: a real number
-    structure there is a complete ordered field of $V[G]$, with every subproperty and every relation of
-    $V[G]$ available, so it has $V[G]$'s continuum, and its satisfying CH is CH in $V[G]$. At the root it
-    is because every set in $V$ of root tuples is the root extension of a root relation, whatever its
-    $C_0$-extension: so the root, read at the root, is the full hierarchy of $V$ over its domains, and
-    the same reasoning applies in $V$. Real number structures exist at both objects, at type $et$ (see
-    the argument for the failure of Analytic Necessitism, or take any complete ordered field on
-    $\mathcal P(\mathbb N)$ at $C_0$). When $P$ changes CH, at type $et$ some real number structure
-    satisfies CH at one object and some falsifies it at the other, and the root sees both, so neither
-    disjunct holds at the root.
+    Theorem 20 of the source. At each object, every real number structure satisfies the continuum
+    hypothesis iff the universe that object is built in does: at the root $V$, at $C_0$ $V[G]$. At $C_0$
+    this is because $C_0$ is the full extensional model of $V[G]$ over the natural numbers: a real
+    number structure there has a copy of the natural numbers for its numbers and, every property and
+    every relation of $V[G]$ being available, a real for each set of them in $V[G]$, so it has $V[G]$'s
+    continuum, and its satisfying CH is CH in $V[G]$. At the root it is because every set in $V$ of root
+    tuples is the root extension of a root relation, whatever its $C_0$-extension: so the root, read at
+    the root, is the full hierarchy of $V$ over its domains, and the same reasoning applies in $V$. Real
+    number structures exist at both objects, at type $et$ (see the argument for the failure of Analytic
+    Necessitism, or take $\mathcal P(\mathbb N)$ for the reals at $C_0$, with the singletons for
+    numbers). When $P$ changes CH, at type $et$ some real number structure satisfies CH at one object
+    and some falsifies it at the other, and the root sees both, so neither disjunct holds at the root.
+  revisions:
+  - date: '2026-11-26'
+    by: Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell
+    note: >-
+      Reworded for real number structures as numbers and reals with a membership relation (Background,
+      Analysis), in place of complete ordered fields. The verdict is unchanged.
 
 - id: necessity-of-analysis-constructible
   when: {universe: constructible}
@@ -347,12 +367,18 @@ arguments:
   text: >-
     At type $et$, for the analytical sentence $\Phi$ saying that every real is constructible: membership
     of a real in $L$ is $\Sigma^1_2$ (Shoenfield), so $\Phi$ is $\Pi^1_3$, a first-order analytical
-    sentence in any real number structure, whose natural numbers code sets of naturals by its reals.
-    Real number structures exist at type $et$ at both objects (see the argument for the failure of
-    Analytic Necessitism). At $C_0$, the full extensional model of $L[G]$, every real number structure
-    has the reals of $L[G]$, among them a real not in $L$, and Shoenfield absoluteness makes the
-    $\Sigma^1_2$ definition of constructibility mean the same in $L[G]$; so $\Phi$ fails in every real
-    number structure there. At the root every set in $L$ of root tuples is the root extension of a root
+    sentence, the reals of a real number structure standing for the sets of its numbers. Real number
+    structures exist at type $et$ at both objects (see the argument for the failure of Analytic
+    Necessitism). At $C_0$, the full extensional model of $L[G]$, every real number structure has the
+    reals of $L[G]$, among them a real not in $L$, and Shoenfield absoluteness makes the $\Sigma^1_2$
+    definition of constructibility mean the same in $L[G]$; so $\Phi$ fails in every real number
+    structure there. At the root every set in $L$ of root tuples is the root extension of a root
     relation, whatever its $C_0$-extension, so the root read at the root is the full hierarchy of $L$
-    over its domains, and $\Phi$ holds in every real number structure there, as it does in $L$. The
-    root sees both objects, so neither disjunct of the instance holds there.
+    over its domains, and $\Phi$ holds in every real number structure there, as it does in $L$. The root
+    sees both objects, so neither disjunct of the instance holds there.
+  revisions:
+  - date: '2026-11-26'
+    by: Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell
+    note: >-
+      Reworded for real number structures as numbers and reals with a membership relation (Background,
+      Analysis), in place of complete ordered fields. The verdict is unchanged.

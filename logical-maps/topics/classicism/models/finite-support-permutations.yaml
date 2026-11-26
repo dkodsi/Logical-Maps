@@ -106,16 +106,16 @@ arguments:
   choice: free
   writeup: finite-support-permutations
   text: >-
-    At every type, so Analytic Necessitism holds too. At type $e$ the antecedent fails, the
-    individuals being countable or one. At a relational type $\sigma$ the entities pinned down by
-    $\{0\}$ are continuum many; choose a set $X_1$ of them in bijection with the reals and let $X_k$
-    be its transport $k\cdot X_1$, and likewise for the order, sum, product and natural numbers of
-    the reals carried over to $X_1$ and for the represented powers, the rigid relations with a given
-    extension among the instances. Every arrow being a permutation, transport is injective and
-    reversible, so these intensions are rigid, with necessarily distinct instances, and they are
-    pinned down by $\{0\}$, their value at $k$ depending only on $k0$; at every arrow the structure
-    has the same instances and relations as at the identity, so it is necessarily a real number
-    structure with represented powers of every arity (write-up).
+    At every type, so Analytic Necessitism holds too. At type $e$ the antecedent fails, the individuals
+    being countable or one. At a relational type $\sigma$ the entities pinned down by $\{0\}$ are
+    continuum many; choose among them a countable set $N_1$ for the numbers and a set $X_1$ in bijection
+    with the sets of natural numbers for the reals, let $N_k$ and $X_k$ be their transports $k\cdot N_1$
+    and $k\cdot X_1$, and likewise for zero, successor and membership carried over to them and for the
+    represented powers, the rigid relations with a given extension among the instances. Every arrow
+    being a permutation, transport is injective and reversible, so these intensions are rigid, with
+    necessarily distinct instances, and they are pinned down by $\{0\}$, their value at $k$ depending
+    only on $k0$; at every arrow the structure has the same instances and relations as at the identity,
+    so it is necessarily a real number structure with represented powers of every arity (write-up).
   revisions:
   - date: '2026-10-29'
     by: Claude Opus 5.5 (Anthropic), prompted by Cian Dorr, from a correction by OpenAI Codex (GPT-6),
@@ -124,6 +124,11 @@ arguments:
       In the write-up, the transported intension $k\cdot Y^A$ is pinned down by $\{k0\}$, not by
       $\{0\}$, its value at $j$ depending on $j(k0)$. Lemma 2, that $X$ and the relations are pinned down
       by $\{0\}$, is unaffected, and so are the verdicts.
+  - date: '2026-11-26'
+    by: Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell
+    note: >-
+      Reworded for real number structures as numbers and reals with a membership relation (Background,
+      Analysis), in place of complete ordered fields. The verdict is unchanged.
 notes: >-
   The cited construction is a model of the map’s relational-type framework. The description
   identifies its evaluation point; construction and verification are given at the PDF locations in

@@ -36,18 +36,27 @@ references:
     non-contingency of the given structure's truths into the schema over all real number structures.
 proof: >-
   See the write-up. If no real number structure at $\sigma$ is possible, both disjuncts of the instance
-  hold vacuously. Otherwise Analytic Necessitism gives a rigid real number structure $\mathfrak R$ with
-  necessarily distinct elements and $\Box\operatorname{Real}_\sigma(\mathfrak R)$. By induction on
-  first-order analytical formulas with parameters from $X$, each is necessary if true and impossible if
-  false at those parameters: atomic facts by the persistence of the rigid relations and, for their
-  negations, by inextensibility applied to the relation of differing from the given tuple, which every
-  actual instance necessarily does; identity by the necessity of identity and necessary distinctness;
-  connectives in C; a universal quantifier over $X$ by inextensibility of $X$ at the matrix, and its
-  negation by persistence. So $\Box A(\mathfrak R)$ or $\Box\neg A(\mathfrak R)$. Necessarily every real
-  number structure at $\sigma$ is isomorphic to $\mathfrak R$ and agrees with it on $A$ (Huntington's
-  theorem and isomorphism invariance, theorems of the non-modal fragment), which gives the disjunct.
+  hold vacuously. Otherwise Analytic Necessitism gives a rigid real number structure $\mathfrak R$, with
+  necessarily distinct numbers and reals, and $\Box\operatorname{Real}_\sigma(\mathfrak R)$. By induction
+  on first-order analytical formulas with numbers and reals of $\mathfrak R$ for parameters, each is
+  necessary if true and impossible if false at those parameters: atomic facts of successor and membership
+  by the persistence of the rigid relations and, for their negations, by inextensibility applied to the
+  relation of differing from the given pair, which every actual instance necessarily does; those of sum
+  and product because the two are, necessarily, the graphs of the functions defined by recursion from zero
+  and successor, whose values at given numbers the persistence of successor fixes; identity by the
+  necessity of identity and necessary distinctness; connectives in C; a universal quantifier over the
+  numbers by inextensibility of $N$ at the matrix, and its negation by persistence, and likewise over the
+  reals with $X$. So $\Box A(\mathfrak R)$ or $\Box\neg A(\mathfrak R)$. Necessarily every real number
+  structure at $\sigma$ is isomorphic to $\mathfrak R$ and agrees with it on $A$ (Background,
+  [[real-structures-isomorphic]], a theorem of the non-modal fragment), which gives the disjunct.
 notes: >-
   Uses K, T and 4 only, through the boxes carried by persistence and inextensibility; neither B, BF,
-  Rigid Comprehension nor choice. The rigidity of $\le$, $+$, $\times$ and $N$ is used in the atomic
-  case, and the necessary distinctness of the elements for the negative atomic facts; the second-order
+  Rigid Comprehension nor choice. The rigidity of $S$ and $E$ is used in the atomic case, and the necessary distinctness of the
+  numbers and reals for the negative atomic facts; the second-order
   case is [[second-order-analytic-necessitism-implies-necessity-of-second-order-analysis]].
+changes:
+- date: '2026-11-26'
+  by: Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell
+  summary: Reworded for real number structures as numbers and reals with a membership relation
+    (Background, Analysis), in place of complete ordered fields. The induction has atomic cases for
+    successor, membership, sum and product, where it had them for the field relations.

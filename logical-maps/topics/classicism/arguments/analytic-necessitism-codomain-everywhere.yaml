@@ -9,14 +9,20 @@ text: >-
   E^A_V$ from the sets of natural numbers into the sets of propositions at $V$, possible as these are
   infinitely many, and let $Y_A$ be the intension whose value at an arrow into $V$ is $E^A_V$: it depends
   only on the codomain, so it is in the domain, and its transport along an arrow into $V$ is the $Y_A$ of
-  $V$, distinct for distinct $A$. Carry the real numbers onto the $Y_A$ and take as relations the
-  codomain-only intensions whose value at $V$ is the corresponding set of tuples of the $Y_A$ of $V$.
-  Along every arrow the structure is carried to the like structure at the target, an isomorphic copy,
-  which is a real number structure there: bounded sets of its elements have least upper bounds among them
-  and every inductive subproperty contains its natural numbers. Such a structure is rigid, its instances
-  are necessarily distinct, and it is necessarily a real number structure; and the codomain-only intension
-  of type $((\tau)^kt)t$ whose value at each object is the set of codomain-only $k$-ary relations among
-  the carrier there is a represented power of arity $k$, since at every world each $k$-ary relation agrees
-  on the carrier with one of them. So the consequents of Analytic Necessitism and of its second-order form
+  $V$, distinct for distinct $A$. Take the $Y_{\{n\}}$ for numbers and all the $Y_A$ for reals, with $Y_{\{n\}}$ a member of $Y_A$ when $n\in A$, and take as
+  numbers, successor, reals and membership the codomain-only intensions whose value at $V$ is the corresponding
+  set of tuples of the $Y_A$ of $V$. Along every arrow the structure is carried to the like structure at the
+  target, an isomorphic copy, which is a real number structure there: every set of its numbers is the set of
+  members of one of its reals, and every property that holds of its zero and is closed under its successor holds
+  of all its numbers. Such a structure is rigid, its numbers and reals are necessarily distinct, and it is necessarily a real
+  number structure; and the codomain-only intension of type $((\tau)^kt)t$ whose value at each object is the
+  set of codomain-only $k$-ary relations among its numbers and reals there is a represented power of arity
+  $k$, since at every world each $k$-ary relation agrees on them with one of them. So the consequents of Analytic Necessitism and of its second-order form
   hold, and both principles hold. (The argument of the withdrawn analytic-necessitism-unretracted-arrow
   would refute this structure; its step from inextensibility is the gap.)
+revisions:
+- date: '2026-11-26'
+  by: Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell
+  note: >-
+    Reworded for real number structures as numbers and reals with a membership relation (Background,
+    Analysis), in place of complete ordered fields. The verdict is unchanged.

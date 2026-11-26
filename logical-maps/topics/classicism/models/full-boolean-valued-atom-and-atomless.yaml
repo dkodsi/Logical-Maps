@@ -201,27 +201,34 @@ arguments:
   date: '2026-10-23'
   choice: free
   text: >-
-    At type $t$, for the algebra fixed in the definition. Here $\Box p$ is $p=\top$, so a property
-    $X$ of type $t\to t$ satisfies $\Box\forall x\,.\,(Xx\to\Box Xx)\land(\neg Xx\to\Box\neg Xx)$
-    with first coordinate $1$ only if $X$ is crisp, taking the values $\top$ and $\bot$ alone, and
-    likewise for relations; so a rigid real number structure $\mathfrak R$ is crisp, the check of a
-    structure $(S,\le,+,\times,0,1,N)$ of the ground model, and $\Box\operatorname{Real}_t(\mathfrak
-    R)$ asks that $\operatorname{Real}_t(\mathfrak R)$ have value $\top$, in particular
-    $\rho$-coordinate $1_A$. That fails: forcing with $A$ adds a real $r$; the $A$-valued subproperty of $S$ naming the
-    lower Dedekind cut of $r$ in $S$ is in the full domain and is bounded, but has no least upper
-    bound in $S$ with positive value, since $[\![r=\check s]\!]=0$ for every ground real $s$. So the
-    consequent of Analytic Necessitism is false at the evaluation point. Its antecedent is true: $B$
-    has at least continuum many elements, the crisp characteristic functions of a set $S\subseteq B$
-    in bijection with the reals and of its order, sum, product and natural numbers are in the full
-    domains, and $\operatorname{Real}_t$ of this structure has $\pi$-coordinate $1$, every bounded
-    crisp subset of $S$ having a least upper bound in it; so $\exists\mathfrak
-    R\,.\,\operatorname{Real}_t(\mathfrak R)$ is not $\bot$ and its possibility is $\top$.
+    At type $t$, for the algebra fixed in the definition. Here $\Box p$ is $p=\top$, so a property $X$
+    of type $t\to t$ satisfies $\Box\forall x\,.\,(Xx\to\Box Xx)\land(\neg Xx\to\Box\neg Xx)$ with first
+    coordinate $1$ only if $X$ is crisp, taking the values $\top$ and $\bot$ alone, and likewise for
+    relations; so a rigid real number structure $\mathfrak R$ is crisp, the check of a structure
+    $(N,0,S,X,E)$ of the ground model, and $\Box\operatorname{Real}_t(\mathfrak R)$ asks that
+    $\operatorname{Real}_t(\mathfrak R)$ have value $\top$, in particular $\rho$-coordinate $1_A$. That
+    fails: forcing with $A$ adds a real $r$, a set of the numbers of $N$; the $A$-valued property naming
+    $r$ is in the full domain, but no real in $X$ has just the numbers in $r$ for its members with
+    positive value, since $[\![r=\check s]\!]=0$ for every ground set $s$ of numbers. So the consequent
+    of Analytic Necessitism is false at the evaluation point. Its antecedent is true: $B$ has at least
+    continuum many elements, the crisp characteristic functions of sets $N,X\subseteq B$ in bijection
+    with the natural numbers and with the sets of natural numbers, and of the corresponding successor
+    and membership, are in the full domains, and $\operatorname{Real}_t$ of this structure has
+    $\pi$-coordinate $1$, every crisp set of its numbers being the set of members of one of its reals;
+    so $\exists\mathfrak R\,.\,\operatorname{Real}_t(\mathfrak R)$ is not $\bot$ and its possibility is
+    $\top$.
   revisions:
   - date: '2026-10-24'
     by: Claude Opus 5.5 (Anthropic), prompted by Cian Dorr
     note: The argument used only that forcing with $A$ adds a real and that $B$ has at least continuum many
       elements, true of the algebras now fixed by cases on CH; the text says so instead of naming the
       regular open algebra of the real line.
+  - date: '2026-11-26'
+    by: Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell
+    note: >-
+      Reworded for real number structures as numbers and reals with a membership relation (Background,
+      Analysis), in place of complete ordered fields. The verdict is unchanged. The new real is a set of
+      the structure's numbers with no real for it, where it was a cut with no least upper bound.
 - id: ch-contingent
   fails: [non-contingency-of-ch]
   by: Cian Dorr (the choice of algebra by cases on CH, after Bacon's §B.2), with Claude Opus 5.5 (Anthropic)

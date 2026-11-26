@@ -6,7 +6,9 @@ model of *Classicism*, Proposition D.5, part 1, whose arrows are the permutation
 with the ideal of finite sets, and its generated variants (one individual; Σ true atom). It shows
 that Second-Order Analytic Necessitism, and so Analytic Necessitism, hold there, although Rigid
 Comprehension fails: a rigid real number structure need not be made of rigid properties of
-numbers.
+numbers. Revised by Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell, 26 November 2026, for
+real number structures as numbers and reals with a membership relation: the structure is the $Y^A$
+with the sets $A$ for their members, where it was the real numbers carried onto them by a bijection.
 
 ## Setting
 
@@ -45,54 +47,53 @@ For $A\subseteq\mathbb N$ let $Y^A$ be the intension of type $\sigma$ with $Y^A_
 $j0\in A$ and $Y^A_j:=\emptyset$ otherwise. It is pinned down by $\{0\}$, so in the domain, the
 $Y^A$ are pairwise distinct, and $(k\cdot Y^A)_j=Y^A_{j\circ k}$ is $\{\bar u\}$ iff $j(k0)\in A$,
 so $k\cdot Y^A$ is pinned down by $\{k0\}$, its value at $j$ depending only on $j(k0)$.
-Let $P:=\{Y^A:A\subseteq\mathbb N\}$ and fix a bijection $\beta\colon P\to\mathbb R$, through the
-bijection of the sets of natural numbers with the reals (a theorem of ZF).
+Let $P:=\{Y^A:A\subseteq\mathbb N\}$, and write $\hat n$ for $Y^{\{n\}}$.
 
 Define the intensions
 $$X_j:=j\cdot P,\qquad
-{\le}_j:=\{(j\cdot x,j\cdot y):x,y\in P,\ \beta x\le\beta y\},\qquad
-{+}_j:=\{(j\cdot x,j\cdot y,j\cdot z):\beta x+\beta y=\beta z\},$$
-$\times_j$ likewise, $N_j:=\{j\cdot x:\beta x\in\mathbb N\}$, and the entities
-$0:=\beta^{-1}(0)$ and $1:=\beta^{-1}(1)$ of $P$.
+N_j:=\{j\cdot\hat n:n\in\mathbb N\},\qquad
+S_j:=\{(j\cdot\hat m,j\cdot\hat n):n=m+1\},\qquad
+E_j:=\{(j\cdot\hat n,j\cdot Y^A):n\in A\},$$
+and the entity $0:=\hat 0$ of $P$.
 
 **Lemma 2.** These intensions are in the domain, pinned down by $\{0\}$.
 
-*Proof.* $j\cdot Y^A$ depends on $j$ only through $j0$, so each of $X_j$, $\le_j$, $+_j$,
-$\times_j$ and $N_j$ depends only on $j0$. $\blacksquare$
+*Proof.* $j\cdot Y^A$ depends on $j$ only through $j0$, so each of $X_j$, $N_j$, $S_j$ and $E_j$
+depends only on $j0$. $\blacksquare$
 
-**Lemma 3.** $\mathfrak R:=(X,\le,+,\times,0,1,N)$ is a rigid real number structure, necessarily
+**Lemma 3.** $\mathfrak R:=(N,0,S,X,E)$ is a rigid real number structure, necessarily
 a real number structure: $\operatorname{RigidStr}(\mathfrak R)\land\Box\operatorname{Real}_\sigma
 (\mathfrak R)$ holds at the evaluation point.
 
-*Proof.* By construction $X_j=j\cdot X_1$ and likewise for the relations, so by Lemma 1 all are
-rigid with necessarily distinct instances, and at every arrow $k$ the instances of $X$ are the
-members of $P$, while $x\le y$ holds at $k$ iff $(k\cdot x,k\cdot y)\in{\le}_k$ iff $\beta x\le
-\beta y$, and similarly for $+$, $\times$ and $N$. So at every arrow the structure is the
-$\beta$-preimage of the real numbers on $P$: an ordered field with $+$ and $\times$ functional,
-in which $N$ is the set of natural numbers. Completeness at $k$: a subproperty $Y$ of $X$ bounded
-at $k$ has as instances there a set $\{x:k\cdot x\in Y_k\}\subseteq P$ bounded in the
-$\beta$-order, whose least upper bound in the reals pulls back to a least upper bound in $P$. And
-$N$ is the least inductive subproperty at $k$: its instances contain $0$ and are closed under
-adding $1$, and any subproperty inductive at $k$ contains them, the natural numbers being the
-least inductive subset of the reals. $\blacksquare$
+*Proof.* By construction $X_j=j\cdot X_1$ and likewise for $N$, $S$ and $E$, so by Lemma 1 all are
+rigid with necessarily distinct instances, and at every arrow $k$ the reals are the members of
+$P$ and the numbers the $\hat n$, while $S$ holds at $k$ of $\hat m$ and $\hat n$ iff $n=m+1$, and
+$E$ of $\hat n$ and $Y^A$ iff $n\in A$. So at every arrow the structure is a copy of the natural
+numbers with their sets: the numbers $\hat n$ satisfy the conditions on zero and successor, and
+there is one real $Y^A$ for each set $A$, whose members are the $\hat n$ with $n\in A$, so that
+reals with the same members are identical. Fullness at $k$: a property $Y$ has among the numbers
+the instances $\hat n$ with $k\cdot\hat n\in Y_k$, and these are the members of $Y^A$ for
+$A:=\{n:k\cdot\hat n\in Y_k\}$. And $N$ is the least property containing $0$ and closed under $S$
+at $k$: a property that holds there of $\hat 0$, and of $\hat n$'s successor whenever it holds of
+$\hat n$, holds of every $\hat n$, by induction on $n$. $\blacksquare$
 
 ## Represented powers
 
-For $m\ge1$ and $E\subseteq P^m$ let $\rho(E)$ be the relation of type $\sigma^m t$ with
-$\rho(E)_j:=j\cdot E=\{(j\cdot x_1,\ldots,j\cdot x_m):\bar x\in E\}$. It is pinned down by
-$\{0\}$ (Lemma 2), rigid by Lemma 1 with $\rho(E)_j=j\cdot\rho(E)_1$, holds at every arrow of
-exactly the tuples in $E$, which are tuples of instances of $X$, and $k\cdot\rho(E)=\rho(k\cdot
-E)$, since $(k\cdot\rho(E))_j=(j\circ k)\cdot E=j\cdot(k\cdot E)$.
+For $m\ge1$ and $T\subseteq P^m$ let $\rho(T)$ be the relation of type $\sigma^m t$ with
+$\rho(T)_j:=j\cdot T=\{(j\cdot x_1,\ldots,j\cdot x_m):\bar x\in T\}$. It is pinned down by
+$\{0\}$ (Lemma 2), rigid by Lemma 1 with $\rho(T)_j=j\cdot\rho(T)_1$, holds at every arrow of
+exactly the tuples in $T$, which are tuples of reals, the numbers being among them, and $k\cdot\rho(T)=\rho(k\cdot
+T)$, since $(k\cdot\rho(T))_j=(j\circ k)\cdot T=j\cdot(k\cdot T)$.
 
-Let $\mathcal P^0:=\{\rho(E):E\subseteq P^m\}$ and define $\mathcal P_m$ of type $(\sigma^m t)t$
-by $(\mathcal P_m)_k:=k\cdot\mathcal P^0$. Then $(\mathcal P_m)_k=\{\rho(E'):E'\subseteq(k\cdot
+Let $\mathcal P^0:=\{\rho(T):T\subseteq P^m\}$ and define $\mathcal P_m$ of type $(\sigma^m t)t$
+by $(\mathcal P_m)_k:=k\cdot\mathcal P^0$. Then $(\mathcal P_m)_k=\{\rho(T'):T'\subseteq(k\cdot
 P)^m\}$ depends on $k$ only through $k0$, so $\mathcal P_m$ is in the domain; it is rigid by
 Lemma 1, and at every arrow it holds of exactly the members of $\mathcal P^0$, rigid relations
-holding only of tuples of instances of $X$. Representation: at an arrow $k$ and for any relation
-$R$ of type $\sigma^m t$, let $E:=\{\bar x\in P^m:k\cdot\bar x\in R_k\}$. Then $\rho(E)\in\mathcal
-P^0$, so $\mathcal P_m$ holds of it at $k$, and for $\bar x\in P^m$, $\rho(E)$ holds of $\bar x$
-at $k$ iff $\bar x\in E$ iff $R$ holds of $\bar x$ at $k$. So
-$\operatorname{RepPower}_m(\mathcal P_m,X)$ holds for every $m$, and with Lemma 3 the consequent
+holding only of tuples of numbers and reals. Representation: at an arrow $k$ and for any relation
+$R$ of type $\sigma^m t$, let $T:=\{\bar x\in P^m:k\cdot\bar x\in R_k\}$. Then $\rho(T)\in\mathcal
+P^0$, so $\mathcal P_m$ holds of it at $k$, and for $\bar x\in P^m$, $\rho(T)$ holds of $\bar x$
+at $k$ iff $\bar x\in T$ iff $R$ holds of $\bar x$ at $k$. So
+$\operatorname{RepPower}_m(\mathcal P_m,\mathfrak R)$ holds for every $m$, and with Lemma 3 the consequent
 of Second-Order Analytic Necessitism holds at $\sigma$ for every $n$.
 
 ## Type $e$
@@ -108,7 +109,7 @@ The construction uses only that the arrows form a group acting on the pinning po
 every finitely pinned intension is present; it does not use the full strength of the
 permutation group. The other finite-support models were once recorded as failing Analytic
 Necessitism, because some arrow identifies two points and no entity of type $tt$ is determined by
-its transport along it. That argument was withdrawn on 29 October 2026. A rigid carrier only needs
-to be transported injectively, and the constant intensions, fixed by every arrow, give one in each
+its transport along it. That argument was withdrawn on 29 October 2026. The numbers and reals of a
+rigid structure only need to be transported injectively, and the constant intensions, fixed by every arrow, give one in each
 of them (the general argument analytic-necessitism-codomain-fixed). So Analytic Necessitism holds
 there as well.

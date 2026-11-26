@@ -35,14 +35,19 @@ proof: >-
   See the write-up. Take the rigid structure $\mathfrak R$ and represented powers
   $\mathcal P_1,\dots,\mathcal P_n$ given by the premise for the arities occurring in the sentence $A$.
   Extend the induction of analytic-necessitism-implies-necessity-of-analysis to second-order formulas
-  whose relation parameters are instances of the $\mathcal P_k$: such a parameter is rigid and holds only
-  of tuples from $X$, so its atomic facts are necessary if true and impossible if false as before; a
+  whose relation parameters are instances of the $\mathcal P_k$: such a parameter is rigid and holds only of numbers and reals of the structure, so its atomic facts are necessary if true and impossible if false as before; a
   relation quantifier $\forall R\,\psi(R)$ is necessarily equivalent to $\forall R\in\mathcal P_k\,\psi(R)$,
-  because necessarily every relation agrees on $X$-tuples with an instance of $\mathcal P_k$ and $\psi$
+  because necessarily every relation agrees on the structure's numbers and reals with an instance of $\mathcal P_k$ and $\psi$
   cannot distinguish relations so agreeing (Analytic Extensionality), and the restricted quantifier is
-  handled by the rigidity of $\mathcal P_k$ as the quantifier over $X$ was. Categoricity for
+  handled by the rigidity of $\mathcal P_k$ as the quantifiers over $N$ and $X$ were. Categoricity for
   second-order analytical sentences finishes as in the first-order case.
 notes: >-
   Every second-order analytical sentence uses finitely many arities, so the instance of the premise with
   $n$ the largest of them suffices. With [[necessity-of-second-order-analysis-implies-non-contingency-of-ch]]
   this gives the Non-contingency of the Continuum Hypothesis from Second-Order Analytic Necessitism.
+changes:
+- date: '2026-11-26'
+  by: Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell
+  summary: Reworded for real number structures as numbers and reals with a membership relation
+    (Background, Analysis), in place of complete ordered fields.
+  minor: true

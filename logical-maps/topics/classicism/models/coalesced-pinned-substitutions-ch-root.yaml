@@ -86,11 +86,17 @@ arguments:
     $et$: at $R_N$ the entity with value $E$ at every map of the constants and empty at the arrows into the
     component is pinned down by $\varnothing$ and lands, with extension $E$ at the identity, for any set $E$ of
     tuples in $N$. So quantifiers over relations at $R_N$ range over all such sets, there are continuum many (in
-    $N$) entities of type $et$ there, and the real number structures at $et$ there are $N$'s complete ordered
-    fields on sets of them, CH holding of them iff $N\models\mathrm{CH}$. A closed pure sentence holds at an
+    $N$) entities of type $et$ there, and the real number structures at $et$ there are those of $N$
+    on sets of them, CH holding of them iff $N\models\mathrm{CH}$. A closed pure sentence holds at an
     arrow $\langle R_N,I\rangle$ iff it holds at $R_N$, so at $W_0$ the arrows into $R_{N_-}$ refute
     $\Box\forall\mathfrak R\,.\,\operatorname{Real}_{et}(\mathfrak R)\to\operatorname{CH}(\mathfrak R)$ and those into
     $R_{N_+}$ its counterpart with $\neg\operatorname{CH}$.
+  revisions:
+  - date: '2026-11-26'
+    by: Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell
+    note: >-
+      Reworded for real number structures as numbers and reals with a membership relation (Background,
+      Analysis), in place of complete ordered fields. The verdict is unchanged.
 - id: boxed-through-components
   holds:
   - necessary-five-implies-two-hat-necessity
@@ -166,9 +172,9 @@ arguments:
     At type $et$, where there are real number structures at every reachable object (see the argument
     atomlessness-and-ch). Let $A$ be the first-order analytical sentence saying that some real codes a
     well-founded model of ZFC, a sentence of second-order arithmetic. At $W_0$, extensionally full at its
-    identity, every real number structure at $et$ is isomorphic to the reals of the metatheory, and $A$
-    is true there: $L_\alpha$ is countable, so a real codes it. At $R_N$ and at $V_N$ every real number
-    structure is isomorphic inside $N$ to $N$'s reals, and $A$ has there its truth value in $N$, since
+    identity, every real number structure at $et$ is isomorphic to the
+    natural numbers with all their sets in the metatheory, and $A$ is true there: $L_\alpha$ is countable, so a real codes it. At $R_N$ and at $V_N$ every real number structure is isomorphic inside $N$ to $N$'s natural numbers with
+    their sets, and $A$ has there its truth value in $N$, since
     $N$ is transitive and well-foundedness of a relation on $\omega$ is absolute. In $N$, $A$ is false:
     a model coded by a real in $N$ that is well-founded collapses, inside $N$, to a transitive model $T$
     of ZFC, of height $\beta<\alpha$ since $N$ has height $\alpha$; then $L^T=L_\beta\models\mathrm{ZFC}$,
@@ -176,6 +182,12 @@ arguments:
     R)\to A(\mathfrak R)$, false at the arrows into $R_{N_+}$, nor $\Box\forall\mathfrak
     R\,.\,\operatorname{Real}_{et}(\mathfrak R)\to\neg A(\mathfrak R)$, false at the identity, holds at
     $W_0$.
+  revisions:
+  - date: '2026-11-26'
+    by: Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell
+    note: >-
+      Reworded for real number structures as numbers and reals with a membership relation (Background,
+      Analysis), in place of complete ordered fields. The verdict is unchanged.
 notes: 'Proposed on 29 October 2026 in a trawl for the open questions created by □Atomlessness: □Atomlessness
   does not give Non-contingency of CH. On 30 October 2026, at the direction of Cian Dorr, the components were fixed
   as $L_\alpha$ and a Cohen extension of it, in place of arbitrary models of ZFC ± CH, so that arithmetic is

@@ -70,13 +70,18 @@ arguments:
   text: >-
     $\mathbb N_\sigma$ is a closed pure term, so its profile is constant, with the numerals, fixed by every
     arrow, as instances: it is rigid with necessarily distinct instances. For analysis: at a type
-    $\sigma\ne t$ with a relational argument, the constant profiles of continuum many fixed entities, with
-    constant operations and constant represented powers, form a rigid real structure, real at every
+    $\sigma\ne t$ with a relational argument, the constant profiles of continuum many fixed entities, with constant relations and constant represented powers, form a rigid real structure, real at every
     arrow since every set of the fixed entities is the extension of a constant profile. At $t$ (and at
     types with only individual arguments), the propositions $p_x:=\{m:\#_a(m_o)-\#_b(m_o)\in x\}$,
     $x\subseteq\mathbb Z$, are transported by integer shifts of $x$, injectively; the exact images of a
     real structure on continuum many of them, and of all relations among them, are supported by $\{o\}$
     and are rigid, and every transport is an isomorphic real structure. See the write-up.
+  revisions:
+  - date: '2026-11-26'
+    by: Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell
+    note: >-
+      Reworded for real number structures as numbers and reals with a membership relation (Background,
+      Analysis), in place of complete ordered fields. The verdict is unchanged.
 
 notes: >-
   Separates Logical Necessity, with □BF and □Relational Choice, from Actuality, Vicinity and the
