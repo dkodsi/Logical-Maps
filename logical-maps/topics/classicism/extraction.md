@@ -385,13 +385,16 @@ arithmetic, with the structure's sum and product defined from zero and successor
 
 Bacon's revised forcing result (16 November 2026) was recorded for a cardinal continuum hypothesis, about
 the at-least numbers over individuals and their rigid properties. Under its premises those rigid
-properties are the reals of a real number structure (Background, `rigid-power-of-the-numbers`), so the
-three cardinal principles were replaced by `possible-ch-e` and `possible-failure-of-ch-e`, his three
-results restated with that last step added, and the third again refutes `non-contingency-of-ch`, as his
-Theorem 6.1 does. Withdrawn with the cardinal principles: the records linking them, their Lean
-statements, and two general arguments giving them verdicts in models with boundedly many individuals.
-Those arguments were about the at-least numbers over individuals, which are finitely many there; the new
-principles are about every real number structure of the type, and nothing so simple settles them.
+properties are the reals of a real number structure (Background, `rigid-power-of-the-numbers`), so his theorem is
+restated with that last step added and again refutes `non-contingency-of-ch`, as his Theorem 6.1 does.
+The three cardinal principles were first replaced by two, the possibility of the continuum hypothesis and
+of its failure in a real number structure at type $\nu_et$. They settled nothing on the map but led to
+that theorem, and no model had a verdict on them, so they were withdrawn the same day, following Zachary
+Goodsell's assessment, with the two results concluding them, whose proofs are in the theorem's record.
+Withdrawn with the cardinal principles: the records linking them, their Lean statements, and two general
+arguments giving them verdicts in models with boundedly many individuals. Those arguments were about the
+at-least numbers over individuals, which are finitely many there, not about every real number structure
+of the type.
 
 A first draft took the reals to be properties of the numbers, one type above them. That changes Analytic
 Necessitism and its second-order form at types that are infinite without holding a continuum: in

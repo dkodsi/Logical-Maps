@@ -626,7 +626,7 @@ numbers, and $\{n\}$ is a member of it just in case $Y\{n\}$, for every number $
 At $\tau=e$ the continuum hypothesis of this structure says that every collection of rigid
 properties of at-least numbers over individuals injects into the at-least numbers, by way of
 the properties $\{n\}$, or is in bijection with the rigid properties of them. That is the
-cardinal continuum hypothesis of Bacon's forcing argument, whose conclusions are therefore
-the possibility of the continuum hypothesis, and of its failure, in a real number structure
-([[possible-ch-e]], [[possible-failure-of-ch-e]]).
+cardinal continuum hypothesis of Bacon's forcing argument, whose conclusions are therefore the possibility of the continuum hypothesis, and of its failure,
+in a real number structure, so that Non-contingency of the Continuum Hypothesis fails
+([[mathematical-possibilism-and-relational-choice-incompatible-with-non-contingency-of-ch]]).
 :::

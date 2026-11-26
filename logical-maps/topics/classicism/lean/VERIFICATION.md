@@ -1551,6 +1551,6 @@ every module.
 stated and the three records it certified. The map now states Bacon's results for real number
 structures, which are numbers and reals with a membership relation (Background, Analysis); under
 his premises the rigid properties of the at-least numbers are the reals of one, whose continuum
-hypothesis is his cardinal statement. Like the other principles of analysis, the two that
-replace the three have no Lean statement here.
+hypothesis is his cardinal statement. His theorem is kept, refuting Non-contingency of the
+Continuum Hypothesis, which like the other principles of analysis has no Lean statement here.
 

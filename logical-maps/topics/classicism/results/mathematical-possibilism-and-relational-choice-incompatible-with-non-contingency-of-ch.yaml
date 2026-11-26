@@ -28,17 +28,31 @@ source_names:
 - Bacon, finite-power CH
 - Goodsell 26 Nov
 proof: >-
-  Conjoin the positive and negative possibility conclusions for the same lower-natural carrier and its rigid power.
-  The negative proof uses no Relational Choice.
+  Conjoin the positive and negative possibility conclusions for the same lower-natural carrier and its
+  rigid power. The negative proof uses no Relational Choice.
 
 
-  Under the premises the rigid power of that carrier is the reals of a real number structure at $\nu_et$ at the worlds
-  in question ([[mathematical-possibilism-and-relational-choice-imply-possible-ch-e]], [[mathematical-possibilism-implies-possible-failure-of-ch-e]]). So possibly
-  a real number structure at $\nu_et$ satisfies the continuum hypothesis and possibly one falsifies it, and
-  neither disjunct of Non-contingency of the Continuum Hypothesis holds at that type ([[possible-ch-e-and-possible-failure-of-ch-e-incompatible-with-non-contingency-of-ch]]).
-  This is Bacon's Theorem 6.1 of *Could the truths of mathematics have been different?* with its premises
-  revised: Mathematical Possibilism in its power-closed form, and □Potential Infinity (type e) and Relational
-  Choice added.
+  The negative conclusion. Use the regular-open completion of finite Cohen conditions at the second
+  Hartogs carrier. The forced family witnesses a subcollection of the rigid power which does not embed
+  into the lower naturals and into which the rigid power does not embed. The positive conclusion. Use the
+  regular-open completion of the countable-condition collapse. Relational Choice supplies the sequence of
+  countability codes and the successive dense refinements. See the write-up.
+
+
+  Under the premises the rigid power of that carrier is the reals of a real number structure at $\nu_et$
+  at the worlds in question, each number being represented by the property of being it (Background,
+  [[rigid-power-of-the-numbers]]), and the continuum hypothesis of that structure is the cardinal
+  statement. So possibly a real number structure at $\nu_et$ satisfies the continuum hypothesis, and
+  possibly one falsifies it. The first denies the second disjunct of Non-contingency of the Continuum
+  Hypothesis at that type and the second denies the first. This is Bacon's Theorem 6.1 of *Could the
+  truths of mathematics have been different?* with its premises revised: Mathematical Possibilism in its
+  power-closed form, and □Potential Infinity (type e) and Relational Choice added.
+notes: >-
+  The failure of the continuum hypothesis needs no Relational Choice: Mathematical Possibilism with □Rigid
+  Comprehension, Intensional Choice and □Potential Infinity (type e) makes it possible in a real number
+  structure. Its possibility, the positive conclusion, uses Relational Choice. Bacon recorded the two
+  conclusions as separate results, for his cardinal continuum hypothesis; the map keeps the theorem, whose
+  proof gives both.
 changes:
 - date: '2026-11-24'
   by: Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell
@@ -50,3 +64,9 @@ changes:
   summary: Restated for real number structures, with the last step of the proof added. The record was
     `power-closed-mp-and-choice-imply-cardinal-ch-contingency`, whose conclusion was Contingency of Cardinal CH, for the at-least numbers over individuals and their rigid
     properties.
+- date: '2026-11-26'
+  by: Claude Opus 5.5 (Anthropic), prompted by Zachary Goodsell
+  summary: Bacon's two results giving the possibility of the continuum hypothesis and of its failure are
+    folded into this record, with his proofs of them; the two principles they concluded, which settled
+    nothing on the map but led here, are withdrawn, following Zachary Goodsell's assessment that they were
+    not good principles for the graph. The notes say which conclusion uses Relational Choice.
