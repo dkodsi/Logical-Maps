@@ -25,7 +25,8 @@ necessary fact between $w$ and the actual world, in either direction.
 first-order fact with parameters from the instances is necessary if true and impossible if false: this
 is Lemmas 1 and 3 of the write-up of analytic-necessitism-implies-necessity-of-analysis, which use only
 persistence, inextensibility, the necessity of identity and necessary distinctness. ND gives the
-necessary distinctness of all instances at every type.
+necessary distinctness of all instances at every type. A quantifier not restricted to one of these
+relations is covered as well: the universal property of a type is rigid, by BF.
 
 **The rigidified structure.** At $w$, Rigid Comprehension gives rigid $Y_N$, $Y_S$, $Y_X$, $Y_E$
 coextensive there with $N$, $S$, $X$, $E$. Write $\mathfrak Y=(Y_N,0,Y_S,Y_X,Y_E)$. By Lemma 1 its

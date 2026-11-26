@@ -48,7 +48,7 @@ false.
 $m,n,k$ and $n'$, $k'$ are the successors of $n$, $k$; these are theorems of C for any $0$ and $S$. In
 a real number structure it is moreover the graph of a function on the numbers, by the recursion theorem,
 a theorem of the non-modal fragment; so necessarily it is one in $\mathfrak R$. Fix $m$, and let $W$
-hold of the numbers $n$ for which some $k$ has $\Box\operatorname{Sum}(m,n,k)$. $W$ holds of $0$, with
+hold of the numbers $n$ for which some number $k$ has $\Box\operatorname{Sum}(m,n,k)$. $W$ holds of $0$, with
 $k:=m$. If it holds of $n$ with $k$, and $n'$, $k'$ are the successors of $n$, $k$, then $\Box Snn'$
 and $\Box Skk'$ by the persistence of $S$, so $\Box\operatorname{Sum}(m,n',k')$, and $W$ holds of $n'$.
 $N$ being least, $W$ holds of every number. So a true $\operatorname{Sum}(m,n,k)$ is necessary: the

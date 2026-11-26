@@ -286,11 +286,12 @@ arguments:
     is a real number structure, so its numbers are a copy of the natural numbers and the sets of members
     of its reals are the sets of numbers in $V$. The root extensions of its numbers, reals and
     membership are sets in $V$ and, these being rigid, their $C_0$-extensions are their images under
-    $h$, the same numbers and reals with the same members. At $C_0$ every property is available, in
-    particular one holding of just the numbers in a set of $V[G]$ that is not in $V$; no real has just
-    those for its members, the members of each real making up a set in $V$. So the structure is not full
-    at $C_0$, $\Box\operatorname{Real}_{et}(\mathfrak R)$ fails, and the instance fails: a real number
-    structure is possible, indeed actual, and no rigid one is necessarily a real number structure.
+    $h$, which is one-to-one on its numbers and reals since they are necessarily distinct: the same
+    numbers and reals with the same members. At $C_0$ every property is available, in particular one
+    holding of just the numbers in a set of $V[G]$ that is not in $V$; no real has just those for its
+    members, the members of each real making up a set in $V$. So the structure is not full at $C_0$,
+    $\Box\operatorname{Real}_{et}(\mathfrak R)$ fails, and the instance fails: a real number structure
+    is possible, indeed actual, and no rigid one is necessarily a real number structure.
   revisions:
   - date: '2026-10-25'
     by: Claude Opus 5.5 (Anthropic), prompted by Cian Dorr

@@ -108,8 +108,8 @@ theorem of the non-modal fragment ([[real-structures-isomorphic]]). A
 *first-order analytical sentence* is a closed formula in the variables of a
 real number structure built from the atomic formulas $Smn$,
 $\operatorname{Sum}(m,n,k)$, $\operatorname{Prod}(m,n,k)$, $Enx$, $m=n$ and
-$x=y$, whose terms are $0$, number variables $m,n,k$ and real variables
-$x,y$, all of type $\sigma$, by $\neg$, $\lor$, $\land$ and quantifiers
+$x=y$, in which $m,n,k$ are number terms, $0$ or number variables, and $x,y$
+are real variables, all of type $\sigma$, by $\neg$, $\lor$, $\land$ and quantifiers
 $\forall n\in N$ and $\forall x\in X$: a sentence of second-order
 arithmetic. A *second-order analytical sentence* may also use variables $R$
 for relations of any finite arity, each place of a variable being for
@@ -517,9 +517,10 @@ be a complete ordered field with its natural numbers at $\sigma$, by 1; and ther
 one that is necessarily a real number structure, with represented powers or without, just in
 case there is such a field, by 2 and 3. Those are the instances at $\sigma$ of Analytic
 Necessitism and of its second-order form. For the necessity schemas, an analytical sentence
-read in $\mathfrak F^\ast$ is a sentence of the language of $\mathfrak F$ of the same order,
-and a sentence of that language read in $\mathfrak R^\circ$ is an analytical sentence of the
-same order; and within a world all the structures of either kind agree on each of these, being
+read in $\mathfrak F^\ast$ is equivalent to a sentence of the language of $\mathfrak F$ of the
+same order, the sum and product of $\mathfrak F^\ast$ being $+$ and $\times$ on $N$, and a
+sentence of that language read in $\mathfrak R^\circ$ is equivalent to an analytical sentence of
+the same order; and within a world all the structures of either kind agree on each of these, being
 isomorphic ([[real-structures-isomorphic]]; Huntington's theorem for the fields). The
 continuum hypothesis of $\mathfrak F^\ast$ is equivalent to that of $\mathfrak F$ as it was
 stated, every subproperty of $X$ injecting into $N$ or being in bijection with $X$: the reals
@@ -560,12 +561,17 @@ $D_1,\ldots,D_k$ is rigid. It is persistent, its facts being necessary if true. 
 inextensible by the inextensibility of $D_k,\ldots,D_1$ in turn: if every instance of $Q$
 necessarily has $Z$, then for $u_1,\ldots,u_{k-1}$ in $D_1,\ldots,D_{k-1}$ each instance
 $u_k$ of $D_k$ necessarily has $Q\bar u\to Z\bar u$, whichever way $Q\bar u$ is settled, so
-necessarily every instance of $D_k$ has it; and so on down to $D_1$. The successor, reals and
+necessarily every instance of $D_k$ has it; and so on down to $D_1$. This holds at every world
+as at the actual one, which is what the leading boxes of persistence and inextensibility ask:
+the hypotheses are necessary if true, rigidity by [[rigid-necessary]], being necessarily of its
+kind by 4, and the necessary distinctness of the instances of rigid properties by 4 and their
+inextensibility. The successor, reals and
 membership of $\mathfrak F^\ast$ are so defined among instances of $N$ and $X$, and the
 elements, order, sum, product and natural numbers of $\mathfrak R^\circ$ among instances of
 its $X$. Necessary distinctness is inherited, the numbers and reals of $\mathfrak F^\ast$
 being instances of $X$ and the elements of $\mathfrak R^\circ$ reals of $\mathfrak R$. That
-the defined structure is necessarily of its kind is 1, necessitated.
+the defined structure is necessarily of its kind is 1, necessitated; the zero and one of
+$\mathfrak R^\circ$, reals picked out by their members, have those members necessarily.
 
 3. Let $\mathcal P$ be a represented power of arity $k$ for the given structure, and $D'$ the
 property of being a number or a real, or an element, of the structure it defines. The
@@ -574,7 +580,7 @@ and of each of those it is necessary or impossible that it is an instance of $D'
 because a number of $\mathfrak R$ that is not a real is necessarily not one, by the
 inextensibility of $X$, every real being necessarily distinct from it. So the restrictions
 $\lambda\bar u\, .\,Q\bar u\land\bigwedge_iD'u_i$ of the instances $Q$ of $\mathcal P$ are
-rigid: persistent with $Q$, and inextensible by the inextensibility of $Q$, each tuple it holds
+rigid, at every world as in 2: persistent with $Q$, and inextensible by the inextensibility of $Q$, each tuple it holds
 of being necessarily one of instances of $D'$ or necessarily not. The property of being such a
 restriction is persistent by the persistence of $\mathcal P$ and the necessity of identity, and
 inextensible by the inextensibility of $\mathcal P$. And a relation that agrees
