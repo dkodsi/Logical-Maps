@@ -17,7 +17,7 @@
 - **¬ □Truths are 5-necessary.** Necessarily, every truth is 5-necessary: necessary under every S5 operator. In C this is the identity $\Box_5=\lambda p\, .\,p$.
 - **¬ Self-Atomicity (type t).** Every possible proposition is entailed by a self-atom: a possible proposition that necessarily, if true, is an atom, that is, one that entails that it is the actual world.
 - **¬ B for pure sentences.** The B instance for every closed sentence in the pure language.
-- **¬ Analytic Necessitism.** If there could be a real number structure, there is a rigid one that is necessarily a real number structure: a rigid property with necessarily distinct instances, with rigid order, addition, multiplication and natural numbers, which necessarily form a complete ordered field. One sentence for each type $\sigma$.
+- **¬ Analytic Necessitism.** If there could be a real number structure, there is a rigid one that is necessarily a real number structure: rigid numbers and reals, necessarily distinct, with rigid successor and membership. One sentence for each type $\sigma$.
 - **¬ Self-atoms are atoms (type t).** Every self-atom is an atom.
 - **¬ Self-atoms are strong atoms (type t).** Every self-atom is a strong atom.
 - **¬ □Potential Infinity (type e).** Necessarily, for every natural number there could be at least that many individuals.

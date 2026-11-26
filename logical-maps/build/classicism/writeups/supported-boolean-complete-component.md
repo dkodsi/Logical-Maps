@@ -10,14 +10,12 @@
 - **□BF.** Necessarily, the Barcan Formula holds at every type. The predicate formulation closes the formula schema using lambda abstraction.
 - **□ND.** Necessarily, distinct things of any type are necessarily distinct.
 - **□Intensional Choice.** Necessarily, if a property is necessarily instantiated, then some property entailing it is necessarily uniquely instantiated.
-- **Possible failure of Cardinal CH.** Cardinal CH possibly fails.
 - **□Self-atoms are atoms.** Necessarily, at each relational type, every self-atom is an atom.
 - **□Self-atoms are strong atoms.** Necessarily, at each relational type, every self-atom is a strong atom: it necessarily entails every entity of the type or its negation.
 - **□Atoms are self-atoms.** Necessarily, at each relational type, every atom is a self-atom: necessarily, if it is instantiated, it is an atom.
 - **□Atoms are strong atoms.** Necessarily, at each relational type, every atom is a strong atom: it necessarily entails every entity of the type or its negation.
 - **¬ Actuality.** There is a true proposition that entails every true proposition.
 - **¬ Relational Choice.** Every serial binary relation has a functional subrelation.
-- **¬ Possible Cardinal CH.** Cardinal CH possibly holds.
 - **¬ Self-Atomicity (type t).** Every possible proposition is entailed by a self-atom: a possible proposition that necessarily, if true, is an atom, that is, one that entails that it is the actual world.
 - **¬ Axiom of Infinity (type e).** There are not finitely many individuals. No finite cardinality holds of the universal property, so the domain of the type cannot be exhausted by finitely many steps from the empty property.
 - **¬ Infinity Schema (type e).** There are arbitrarily many pairwise distinct entities of this fixed type; one sentence for each positive integer n.
@@ -83,12 +81,6 @@ At every type. Every arrow acts as the identity and an entity is the same relati
 At every type. In the component, let $F$ be instantiated at every world, with fibre $\hat c_x$ at $x$. The clopen sets $\hat c_x$ cover the Stone space of $B$, so by compactness finitely many do, those of $x_1,\dots,x_k$, distinct. Let $G$ hold of $x_i$ exactly on $\hat e_i$, where $e_i:=c_{x_i}\wedge\neg\bigvee_{j<i}c_{x_j}$, and of nothing else. Its fibres are in $B$, and it is supported by the supports of the $x_i$ together with the $e_i$, which are support points; so $G$ is admitted, $G\le F$, and at each world exactly one $x_i$ has $G$. With a free root $r$, a root $F=(R,a)$ with $\Box\exists x\,Fx$ has a nonempty current extension and a component part $a$ as above; pair a singleton $\{x_0\}\subseteq R$ with the $G$ built for $a$. Only finitely many choices are made. So Intensional Choice holds at every world the evaluation point sees, and at $r$.
 
 *From the group *Supported models over an S5 component*, shared argument `supported-s5-components#intensional-choice-compactness`. It requires that The worlds are the ultrafilters of a Boolean algebra $B$, each fibre of an admitted relation is $\hat b:=\{U:b\in U\}$ for some $b\in B$, and the elements of $B$ are among the support points. Here: The worlds are the ultrafilters of $B$, the fibres are its elements' clopen sets, and its elements are the support points. By Claude Opus 5.5 (Anthropic), prompted by Cian Dorr, 2026-10-29.*
-
-### Holds Possible failure of Cardinal CH. Fails Possible Cardinal CH.
-
-Cardinal CH fails at every world, so it is not possible, and its failure, being actual, is possible. With one individual at every world, $N=\operatorname{LowerNat}_e$ has exactly three instances at every world. At-least zero, $z=\lambda A\, .\,\top$, and its successor, which holds of the properties with an instance, differ at the empty property. The successor of that holds of the properties with two distinct instances, so of none at any world; it is $\lambda A\, .\,\bot$ by Intensionality, so is its own successor, and differs from the other two, which hold of the universal property. Being one of the three is a property of cardinalities that $z$ has and that passes to successors, so $N$ has no other instance. The rest is the argument cardinal-ch-boundedly-many-individuals with $m=3$: the rigid subproperties of $N$ are the eight disjunctions of haecceities of its instances, and a property holding of four of them neither injects into the three instances of $N$ nor is in bijection with the eight. No choice is used.
-
-*General argument `arguments/cardinal-ch-one-individual`. It requires that There is exactly one individual, at every world. Here: There is a single individual. By Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell, 2026-11-25.*
 
 ### Holds □Self-atoms are atoms, □Self-atoms are strong atoms. Fails Self-Atomicity (type t).
 

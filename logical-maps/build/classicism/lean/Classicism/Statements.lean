@@ -1,6 +1,5 @@
 import Classicism.Certified.Signatures
 import Classicism.Certified.Arithmetic
-import Classicism.Certified.CardinalCH
 
 /-!
 # Generated statements
@@ -79,10 +78,6 @@ example {Sig : Classicism.Meta.Signature} : Classicism.Meta.AxiomSet Sig :=
 /-- Principle definition check: `boolean-completeness-t`. -/
 example {Sig : Classicism.Meta.Signature} : Classicism.Meta.AxiomSet Sig :=
   Classicism.P.BooleanCompletenessT.schemaIn
-
-/-- Principle definition check: `contingency-of-cardinal-ch`. -/
-example {Sig : Classicism.Meta.Signature} : Classicism.Meta.AxiomSet Sig :=
-  Classicism.P.ContingencyOfCardinalCH.schemaIn
 
 /-- Principle definition check: `converse-witnessed-possibility-r`. -/
 example {Sig : Classicism.Meta.Signature} : Classicism.Meta.AxiomSet Sig :=
@@ -451,14 +446,6 @@ example {Sig : Classicism.Meta.Signature} : Classicism.Meta.AxiomSet Sig :=
 /-- Principle definition check: `possibility-plus-signature-r`. -/
 example {Sig : Classicism.Meta.Signature} : Classicism.Meta.AxiomSet Sig :=
   (Classicism.Meta.AxiomSet.possibilityPlusSig _)
-
-/-- Principle definition check: `possible-cardinal-ch`. -/
-example {Sig : Classicism.Meta.Signature} : Classicism.Meta.AxiomSet Sig :=
-  Classicism.P.PossibleCardinalCH.schemaIn
-
-/-- Principle definition check: `possible-failure-of-cardinal-ch`. -/
-example {Sig : Classicism.Meta.Signature} : Classicism.Meta.AxiomSet Sig :=
-  Classicism.P.PossibleFailureOfCardinalCH.schemaIn
 
 /-- Principle definition check: `possible-infinity-e`. -/
 example {Sig : Classicism.Meta.Signature} : Classicism.Meta.AxiomSet Sig :=
@@ -1376,22 +1363,6 @@ def completeness_and_actuality_imply_weak_rigid_comprehension : Prop :=
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompleteness.schemaIn →
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Actuality.schemaIn →
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WeakRigidComprehension.schemaIn
-
-/-- `contingency-of-cardinal-ch-implies-possible-cardinal-ch`
-
-Contingency of Cardinal CH ⇒ Possible Cardinal CH -/
-def contingency_of_cardinal_ch_implies_possible_cardinal_ch : Prop :=
-  ∀ {Sig : Classicism.Meta.Signature} (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig),
-    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.ContingencyOfCardinalCH.schemaIn →
-    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleCardinalCH.schemaIn
-
-/-- `contingency-of-cardinal-ch-implies-possible-failure-of-cardinal-ch`
-
-Contingency of Cardinal CH ⇒ Possible failure of Cardinal CH -/
-def contingency_of_cardinal_ch_implies_possible_failure_of_cardinal_ch : Prop :=
-  ∀ {Sig : Classicism.Meta.Signature} (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig),
-    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.ContingencyOfCardinalCH.schemaIn →
-    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleFailureOfCardinalCH.schemaIn
 
 /-- `converse-witnessed-possibility-r-implies-no-pure-contingency-r`
 
@@ -4645,15 +4616,6 @@ def possibility_plus_signature_r_implies_possibility_plus_r : Prop :=
     Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.possibilityPlusSig _) →
     Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.possibilityPlus)
 
-/-- `possible-cardinal-ch-and-possible-failure-of-cardinal-ch-imply-contingency-of-cardinal-ch`
-
-Possible Cardinal CH ∧ Possible failure of Cardinal CH ⇒ Contingency of Cardinal CH -/
-def possible_cardinal_ch_and_possible_failure_of_cardinal_ch_imply_contingency_of_cardinal_ch : Prop :=
-  ∀ {Sig : Classicism.Meta.Signature} (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig),
-    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleCardinalCH.schemaIn →
-    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleFailureOfCardinalCH.schemaIn →
-    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.ContingencyOfCardinalCH.schemaIn
-
 /-- `possible-infinity-e-and-bf-imply-axiom-of-infinity-e`
 
 Possible Infinity (type e) ∧ BF ⇒ Axiom of Infinity (type e) -/
@@ -5408,6 +5370,14 @@ def strong_possibility_r_implies_distinctness_schema_r : Prop :=
     Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.strongPossibility) →
     Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.distinctnessC)
 
+/-- `strong-possibility-r-inconsistent`  (conjectured)
+
+Strong Possibility (pure) ⇒ ⊥ -/
+def strong_possibility_r_inconsistent : Prop :=
+  ∀ {Sig : Classicism.Meta.Signature} (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig),
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.strongPossibility) →
+    ¬ Classicism.Meta.AxiomSet.Consistent Ax
+
 /-- `strong-possibility-signature-and-truths-are-nd-necessary-incompatible`
 
 Strong Possibility (signature Σ) ∧ Truths are ND-necessary ⇒ ⊥ -/
@@ -5801,8 +5771,8 @@ def stitched_cohen_coalesced_middle : Prop :=
 
 /-- `supported-boolean-complete-component`
 
-Supported model over the ultrafilters of a complete homogeneous algebra: a witness satisfying 11 principles
-and violating 12. -/
+Supported model over the ultrafilters of a complete homogeneous algebra: a witness satisfying 10 principles
+and violating 11. -/
 def supported_boolean_complete_component : Prop :=
   ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBooleanCompletenessT.schemaIn ∧
@@ -5811,14 +5781,12 @@ def supported_boolean_complete_component : Prop :=
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBarcan.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecNecessityOfDistinctness.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecIntensionalChoice.schemaIn ∧
-    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleFailureOfCardinalCH.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecSelfAtomsAreAtoms.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecSelfAtomsAreStrongAtoms.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAtomsAreSelfAtoms.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAtomsAreStrongAtoms.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Actuality.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.RelationalChoice.schemaIn ∧
-    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleCardinalCH.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.SelfAtomicityT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AxiomOfInfinityE.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.infinityE) ∧
@@ -5831,8 +5799,8 @@ def supported_boolean_complete_component : Prop :=
 
 /-- `supported-boolean-complete-predecessor`
 
-Supported model over the ultrafilters of a complete homogeneous algebra, with a free root: a witness satisfying 14 principles
-and violating 13. -/
+Supported model over the ultrafilters of a complete homogeneous algebra, with a free root: a witness satisfying 13 principles
+and violating 12. -/
 def supported_boolean_complete_predecessor : Prop :=
   ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBooleanCompletenessT.schemaIn ∧
@@ -5847,13 +5815,11 @@ def supported_boolean_complete_predecessor : Prop :=
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAxiomOfInfinityT.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBarcan.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecIntensionalChoice.schemaIn ∧
-    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleFailureOfCardinalCH.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TruthsAreNDNecessary.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AtomicityT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecActuality.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.CountableBooleanCompleteness.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.signatureB) ∧
-    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleCardinalCH.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AxiomOfInfinityE.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.infinityE) ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleInfinityE.schemaIn ∧
@@ -5865,8 +5831,8 @@ def supported_boolean_complete_predecessor : Prop :=
 
 /-- `supported-diagonal-tail-permutations`
 
-Supported model over Cantor space with diagonal tail permutations: a witness satisfying 13 principles
-and violating 13. -/
+Supported model over Cantor space with diagonal tail permutations: a witness satisfying 12 principles
+and violating 12. -/
 def supported_diagonal_tail_permutations : Prop :=
   ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAtomlessness.schemaIn ∧
@@ -5875,7 +5841,6 @@ def supported_diagonal_tail_permutations : Prop :=
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBarcan.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecNecessityOfDistinctness.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecIntensionalChoice.schemaIn ∧
-    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleFailureOfCardinalCH.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecSelfAtomsAreAtoms.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecSelfAtomsAreStrongAtoms.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAtomsAreSelfAtoms.schemaIn ∧
@@ -5885,7 +5850,6 @@ def supported_diagonal_tail_permutations : Prop :=
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Actuality.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.RelationalChoice.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Transversal.schemaIn ∧
-    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleCardinalCH.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.SelfAtomicityT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AxiomOfInfinityE.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.infinityE) ∧
@@ -5956,8 +5920,8 @@ def symmetric_collapse_pair_and_point_sigma_true_atom : Prop :=
 
 /-- `symmetric-collapse-pair-and-point-individuals-singleton`
 
-Symmetric ideally-full model: collapsers of a fixed pair, and a point [one individual]: a witness satisfying 10 principles
-and violating 13. -/
+Symmetric ideally-full model: collapsers of a fixed pair, and a point [one individual]: a witness satisfying 9 principles
+and violating 12. -/
 def symmetric_collapse_pair_and_point_individuals_singleton : Prop :=
   ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Barcan.schemaIn ∧
@@ -5967,12 +5931,10 @@ def symmetric_collapse_pair_and_point_individuals_singleton : Prop :=
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Actuality.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompleteness.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.ArithmeticNecessitism.schemaIn ∧
-    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleFailureOfCardinalCH.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TruthsAreNDNecessary.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecPotentialInfinityT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBarcanT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AtomicityT.schemaIn ∧
-    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleCardinalCH.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAxiomOfInfinityE.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAxiomOfInfinityT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AxiomOfInfinityE.schemaIn ∧
@@ -5986,8 +5948,8 @@ def symmetric_collapse_pair_and_point_individuals_singleton : Prop :=
 
 /-- `symmetric-collapse-pair-and-point-individuals-singleton-sigma-true-atom`
 
-Symmetric ideally-full model: collapsers of a fixed pair, and a point [one individual; Σ true atom]: a witness satisfying 10 principles
-and violating 15. -/
+Symmetric ideally-full model: collapsers of a fixed pair, and a point [one individual; Σ true atom]: a witness satisfying 9 principles
+and violating 14. -/
 def symmetric_collapse_pair_and_point_individuals_singleton_sigma_true_atom : Prop :=
   ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Barcan.schemaIn ∧
@@ -5997,12 +5959,10 @@ def symmetric_collapse_pair_and_point_individuals_singleton_sigma_true_atom : Pr
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Actuality.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompleteness.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.ArithmeticNecessitism.schemaIn ∧
-    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleFailureOfCardinalCH.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TruthsAreNDNecessary.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecPotentialInfinityT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBarcanT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AtomicityT.schemaIn ∧
-    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleCardinalCH.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAxiomOfInfinityE.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAxiomOfInfinityT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AxiomOfInfinityE.schemaIn ∧
@@ -6018,8 +5978,8 @@ def symmetric_collapse_pair_and_point_individuals_singleton_sigma_true_atom : Pr
 
 /-- `symmetric-entrance-qualitative-links`
 
-Symmetric ideally-full model: a one-point entrance to the qualitative-links tail: a witness satisfying 15 principles
-and violating 21. -/
+Symmetric ideally-full model: a one-point entrance to the qualitative-links tail: a witness satisfying 14 principles
+and violating 20. -/
 def symmetric_entrance_qualitative_links : Prop :=
   ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.SelfAtomsAreAtoms.schemaIn ∧
@@ -6034,7 +5994,6 @@ def symmetric_entrance_qualitative_links : Prop :=
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleInfinityT.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Actuality.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.ArithmeticNecessitism.schemaIn ∧
-    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleFailureOfCardinalCH.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TruthsAreNDNecessary.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecPotentialInfinityT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AtomsAreSelfAtomsT.schemaIn ∧
@@ -6049,7 +6008,6 @@ def symmetric_entrance_qualitative_links : Prop :=
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecRigidPower.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.infinityT) ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.signatureB) ∧
-    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleCardinalCH.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AxiomOfInfinityE.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.infinityE) ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleInfinityE.schemaIn ∧
@@ -6061,8 +6019,8 @@ def symmetric_entrance_qualitative_links : Prop :=
 
 /-- `symmetric-entrance-qualitative-links-sigma-true-atom`
 
-Symmetric ideally-full model: a one-point entrance to the qualitative-links tail [Σ true atom]: a witness satisfying 15 principles
-and violating 22. -/
+Symmetric ideally-full model: a one-point entrance to the qualitative-links tail [Σ true atom]: a witness satisfying 14 principles
+and violating 21. -/
 def symmetric_entrance_qualitative_links_sigma_true_atom : Prop :=
   ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.SelfAtomsAreAtoms.schemaIn ∧
@@ -6077,7 +6035,6 @@ def symmetric_entrance_qualitative_links_sigma_true_atom : Prop :=
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleInfinityT.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Actuality.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.ArithmeticNecessitism.schemaIn ∧
-    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleFailureOfCardinalCH.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TruthsAreNDNecessary.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecPotentialInfinityT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AtomsAreSelfAtomsT.schemaIn ∧
@@ -6092,7 +6049,6 @@ def symmetric_entrance_qualitative_links_sigma_true_atom : Prop :=
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecRigidPower.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.infinityT) ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.signatureB) ∧
-    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleCardinalCH.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AxiomOfInfinityE.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.infinityE) ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleInfinityE.schemaIn ∧
@@ -6139,8 +6095,8 @@ def symmetric_finite_compression_entrance : Prop :=
 
 /-- `symmetric-finite-compression-entrance-individuals-singleton`
 
-Symmetric ideally-full model: finite-compression labels at an entrance [one individual]: a witness satisfying 11 principles
-and violating 13. -/
+Symmetric ideally-full model: finite-compression labels at an entrance [one individual]: a witness satisfying 10 principles
+and violating 12. -/
 def symmetric_finite_compression_entrance_individuals_singleton : Prop :=
   ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Atomlessness.schemaIn ∧
@@ -6148,7 +6104,6 @@ def symmetric_finite_compression_entrance_individuals_singleton : Prop :=
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AxiomOfInfinityT.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompleteness.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.ArithmeticNecessitism.schemaIn ∧
-    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleFailureOfCardinalCH.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAtomlessness.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAtomsAreSelfAtoms.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAtomsAreStrongAtoms.schemaIn ∧
@@ -6157,7 +6112,6 @@ def symmetric_finite_compression_entrance_individuals_singleton : Prop :=
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BarcanT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecTruthsAreNDNecessary.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.signatureB) ∧
-    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleCardinalCH.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.SelfAtomicityT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AxiomOfInfinityE.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.infinityE) ∧
@@ -6170,8 +6124,8 @@ def symmetric_finite_compression_entrance_individuals_singleton : Prop :=
 
 /-- `symmetric-old-new-individuals-individuals-singleton`
 
-Symmetric ideally-full model: old and new individuals [one individual]: a witness satisfying 15 principles
-and violating 14. -/
+Symmetric ideally-full model: old and new individuals [one individual]: a witness satisfying 14 principles
+and violating 13. -/
 def symmetric_old_new_individuals_individuals_singleton : Prop :=
   ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecSelfAtomsAreAtoms.schemaIn ∧
@@ -6188,12 +6142,10 @@ def symmetric_old_new_individuals_individuals_singleton : Prop :=
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.CountableBooleanCompleteness.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecCountableBooleanCompleteness.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.ArithmeticNecessitism.schemaIn ∧
-    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleFailureOfCardinalCH.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.StrongAtomicityT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.infinityT) ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TwoHatImpliesNdNecessity.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PotentialInfinityT.schemaIn ∧
-    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleCardinalCH.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleInfinityT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AxiomOfInfinityE.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.infinityE) ∧
@@ -6206,8 +6158,8 @@ def symmetric_old_new_individuals_individuals_singleton : Prop :=
 
 /-- `symmetric-permutations-infinite-classes-individuals-singleton`
 
-Symmetric ideally-full model: permutations, with the automorphisms of infinitely many infinite classes as symmetries [one individual]: a witness satisfying 10 principles
-and violating 10. -/
+Symmetric ideally-full model: permutations, with the automorphisms of infinitely many infinite classes as symmetries [one individual]: a witness satisfying 9 principles
+and violating 9. -/
 def symmetric_permutations_infinite_classes_individuals_singleton : Prop :=
   ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecNecessityOfDistinctness.schemaIn ∧
@@ -6216,11 +6168,9 @@ def symmetric_permutations_infinite_classes_individuals_singleton : Prop :=
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.CountableBooleanCompleteness.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Barcan.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.ArithmeticNecessitism.schemaIn ∧
-    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleFailureOfCardinalCH.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.noContingency) ∧
     Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.noContingency _) ∧
     Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.signatureB _) ∧
-    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleCardinalCH.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.IntensionalChoice.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AxiomOfInfinityE.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.infinityE) ∧
@@ -6233,8 +6183,8 @@ def symmetric_permutations_infinite_classes_individuals_singleton : Prop :=
 
 /-- `symmetric-qualitative-links-individuals-singleton`
 
-Symmetric ideally-full model: qualitative link structure (Base 3) [one individual]: a witness satisfying 13 principles
-and violating 14. -/
+Symmetric ideally-full model: qualitative link structure (Base 3) [one individual]: a witness satisfying 12 principles
+and violating 13. -/
 def symmetric_qualitative_links_individuals_singleton : Prop :=
   ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecSelfAtomicity.schemaIn ∧
@@ -6244,7 +6194,6 @@ def symmetric_qualitative_links_individuals_singleton : Prop :=
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Barcan.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Actuality.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.ArithmeticNecessitism.schemaIn ∧
-    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleFailureOfCardinalCH.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TruthsAreNDNecessary.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAxiomOfInfinityT.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.noContingency) ∧
@@ -6255,7 +6204,6 @@ def symmetric_qualitative_links_individuals_singleton : Prop :=
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AtomicityT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.RigidPower.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TameRigidity.schemaIn ∧
-    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleCardinalCH.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AxiomOfInfinityE.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.infinityE) ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleInfinityE.schemaIn ∧
@@ -6267,8 +6215,8 @@ def symmetric_qualitative_links_individuals_singleton : Prop :=
 
 /-- `symmetric-qualitative-links-individuals-singleton-sigma-true-atom`
 
-Symmetric ideally-full model: qualitative link structure (Base 3) [one individual; Σ true atom]: a witness satisfying 11 principles
-and violating 16. -/
+Symmetric ideally-full model: qualitative link structure (Base 3) [one individual; Σ true atom]: a witness satisfying 10 principles
+and violating 15. -/
 def symmetric_qualitative_links_individuals_singleton_sigma_true_atom : Prop :=
   ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecSelfAtomicity.schemaIn ∧
@@ -6278,7 +6226,6 @@ def symmetric_qualitative_links_individuals_singleton_sigma_true_atom : Prop :=
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Barcan.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Actuality.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.ArithmeticNecessitism.schemaIn ∧
-    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleFailureOfCardinalCH.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TruthsAreNDNecessary.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAxiomOfInfinityT.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.noContingency) ∧
@@ -6287,7 +6234,6 @@ def symmetric_qualitative_links_individuals_singleton_sigma_true_atom : Prop :=
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AtomicityT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.RigidPower.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TameRigidity.schemaIn ∧
-    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleCardinalCH.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AxiomOfInfinityE.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.infinityE) ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleInfinityE.schemaIn ∧
@@ -6336,8 +6282,8 @@ def symmetric_recurrent_colours : Prop :=
 
 /-- `symmetric-recurrent-colours-individuals-singleton`
 
-Symmetric ideally-full model: recurrent finite colour approximations [one individual]: a witness satisfying 15 principles
-and violating 11. -/
+Symmetric ideally-full model: recurrent finite colour approximations [one individual]: a witness satisfying 14 principles
+and violating 10. -/
 def symmetric_recurrent_colours_individuals_singleton : Prop :=
   ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBarcan.schemaIn ∧
@@ -6349,14 +6295,12 @@ def symmetric_recurrent_colours_individuals_singleton : Prop :=
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Barcan.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompleteness.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.ArithmeticNecessitism.schemaIn ∧
-    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleFailureOfCardinalCH.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAtomlessness.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAtomsAreSelfAtoms.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAtomsAreStrongAtoms.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecSelfAtomsAreAtoms.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecSelfAtomsAreStrongAtoms.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TwoHatImpliesNdNecessity.schemaIn ∧
-    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleCardinalCH.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.SelfAtomicityT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AxiomOfInfinityE.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.infinityE) ∧
@@ -6394,8 +6338,8 @@ def symmetric_two_object_all_maps : Prop :=
 
 /-- `symmetric-two-object-all-maps-individuals-singleton`
 
-Symmetric ideally-full model: N and a point, all maps [one individual]: a witness satisfying 7 principles
-and violating 14. -/
+Symmetric ideally-full model: N and a point, all maps [one individual]: a witness satisfying 6 principles
+and violating 13. -/
 def symmetric_two_object_all_maps_individuals_singleton : Prop :=
   ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Barcan.schemaIn ∧
@@ -6403,12 +6347,10 @@ def symmetric_two_object_all_maps_individuals_singleton : Prop :=
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AxiomOfInfinityT.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompleteness.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.ArithmeticNecessitism.schemaIn ∧
-    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleFailureOfCardinalCH.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecPotentialInfinityT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBarcanT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AtomicityT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Actuality.schemaIn ∧
-    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleCardinalCH.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAxiomOfInfinityE.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAxiomOfInfinityT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AxiomOfInfinityE.schemaIn ∧

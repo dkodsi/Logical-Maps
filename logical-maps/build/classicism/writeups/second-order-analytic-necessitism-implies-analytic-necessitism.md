@@ -4,11 +4,11 @@
 
 ## Premises
 
-- **Second-Order Analytic Necessitism.** If there could be a real number structure, there is a rigid one, necessarily a real number structure, together with represented powers of every arity up to $n$: rigid properties of rigid relations among the structure's elements that necessarily represent every relation on them. One sentence for each type $\sigma$ and each $n\ge1$.
+- **Second-Order Analytic Necessitism.** If there could be a real number structure, there is a rigid one, necessarily a real number structure, together with represented powers of every arity up to $n$: rigid properties of rigid relations among the structure's numbers and reals that necessarily represent every relation on them. One sentence for each type $\sigma$ and each $n\ge1$.
 
 ## Conclusion
 
-- **Analytic Necessitism.** If there could be a real number structure, there is a rigid one that is necessarily a real number structure: a rigid property with necessarily distinct instances, with rigid order, addition, multiplication and natural numbers, which necessarily form a complete ordered field. One sentence for each type $\sigma$.
+- **Analytic Necessitism.** If there could be a real number structure, there is a rigid one that is necessarily a real number structure: rigid numbers and reals, necessarily distinct, with rigid successor and membership. One sentence for each type $\sigma$.
 
 ## Proof
 

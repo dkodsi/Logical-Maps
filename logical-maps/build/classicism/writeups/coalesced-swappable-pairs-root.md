@@ -103,9 +103,11 @@ Distinctness-Necessity at $t$ fails at the root and holds in the one-world $H$; 
 
 ### Holds Necessity of Second-Order Analysis.
 
-At the root real number structures are standard, root extensions being arbitrary. In $H$, a real number structure has a carrier and relations fixed by the swaps vanishing on some finite $N$, each of which acts as an order-automorphism of a complete ordered field, hence trivially on the carrier; so every subset of the carrier and every relation on it is admitted, and the structure is standard with full second-order quantification. So an analytical sentence is true in every real number structure at every world, or false in every one.
+At the root real number structures are standard, root extensions being arbitrary. In $H$, a real number structure has its numbers, reals and relations fixed by the swaps vanishing on some finite $N$. Each such swap fixes its zero and preserves its successor, so it fixes every member of the closure of zero under successor; that closure is therefore the extension of a property in the domain, and so is all of the numbers. The swap also preserves membership, so it carries each real to a real with the same members, which is that real, by extensionality. So every set of numbers and reals and every relation on them is fixed by these swaps and is admitted, and the structure is standard with full second-order quantification. So an analytical sentence is true in every real number structure at every world, or false in every one.
 
 *Address: `coalesced-swappable-pairs-root#second-order-analysis`. By Claude Opus 5.5 (Anthropic), prompted by Cian Dorr, in a trawl for cheaply settled verdicts; checked by Claude Opus 5.5 (Anthropic), prompted by Cian Dorr, 2026-10-28.*
+
+*Revised 2026-11-26 by Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell:* Re-argued for real number structures as numbers and reals with a membership relation (Background, Analysis), in place of complete ordered fields. The swaps act trivially on a structure because each fixes its zero and preserves its successor and membership; the argument had been that each is an automorphism of a complete ordered field. The verdict is unchanged.
 
 ### Holds Relational Choice.
 

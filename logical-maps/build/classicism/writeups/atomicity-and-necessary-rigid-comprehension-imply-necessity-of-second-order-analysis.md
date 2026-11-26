@@ -19,6 +19,12 @@ Bacon's Theorem C.2. Its argument: the canonical real number structure, built fr
 
 Bacon's Corollary 5.1, the same conclusion from C5 and □Rigid Comprehension, is derivable on the map: □Rigid Comprehension gives □Actuality, which with C5 gives Atomicity. The argument proves more than the sentence schema, namely Second-Order Analytic Necessitism at the type of the canonical reals; the schema is what it yields at every type, through Lemma C.3.
 
+Bacon's real number structures are complete ordered fields with their natural numbers; the map's are numbers and reals with a membership relation (Background, Analysis). The two define each other at each type, analytical sentences included ([[real-structures-and-fields]]), so the theorem is the same of either.
+
+## Revisions
+
+- **2026-11-26** (Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell) — (minor) Notes: how Bacon's real number structures, complete ordered fields, stand to the map's.
+
 ## Sources
 
 - **Could mathematics have been different?** — Andrew Bacon, Could the truths of mathematics have been different?, draft of 9 October 2025, Theorem 5.2, p. 24; Appendix C.2, Theorem C.2, Proposition C.3 and Lemmas C.3–C.7, pp. 11–16 of the separately paginated appendix.

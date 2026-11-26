@@ -11,7 +11,6 @@ import Classicism.Results.SentenceSchemas.SeparatedStructure
 import Classicism.Results.SentenceSchemas.ArithmeticMeta
 import Classicism.Results.SentenceSchemas.ArithmeticNecessitism
 import Classicism.Results.SentenceSchemas.PotentialInfinity
-import Classicism.Certified.CardinalCH
 import Classicism.Certified.Research
 import Classicism.Results.Research.NPCC5Atomicity
 import Classicism.Results.Research.RigidityClosureResearchAtomicPowerCertificates
@@ -2418,19 +2417,5 @@ theorem necessary_potential_infinity_t.peano : Statements.necessary_potential_in
 theorem necessary_potential_infinity_t.at_least : Statements.necessary_potential_infinity_t.at_least := by
   map_form P.NecPotentialInfinityT.to_at_least.entails
     P.NecPotentialInfinityT.of_at_least.entails
-
-/-! ## Cardinal CH: contingency is the conjunction (25 November 2026) -/
-
-/-- `contingency-of-cardinal-ch-implies-possible-cardinal-ch` -/
-theorem contingency_of_cardinal_ch_implies_possible_cardinal_ch : Statements.contingency_of_cardinal_ch_implies_possible_cardinal_ch := by
-  map_cert Proofs.contingency_of_cardinal_ch_implies_possible_cardinal_ch.entails
-
-/-- `contingency-of-cardinal-ch-implies-possible-failure-of-cardinal-ch` -/
-theorem contingency_of_cardinal_ch_implies_possible_failure_of_cardinal_ch : Statements.contingency_of_cardinal_ch_implies_possible_failure_of_cardinal_ch := by
-  map_cert Proofs.contingency_of_cardinal_ch_implies_possible_failure_of_cardinal_ch.entails
-
-/-- `possible-cardinal-ch-and-possible-failure-of-cardinal-ch-imply-contingency-of-cardinal-ch` -/
-theorem possible_cardinal_ch_and_possible_failure_of_cardinal_ch_imply_contingency_of_cardinal_ch : Statements.possible_cardinal_ch_and_possible_failure_of_cardinal_ch_imply_contingency_of_cardinal_ch := by
-  map_cert Proofs.possible_cardinal_ch_and_possible_failure_of_cardinal_ch_imply_contingency_of_cardinal_ch.entails
 
 end Classicism.Map

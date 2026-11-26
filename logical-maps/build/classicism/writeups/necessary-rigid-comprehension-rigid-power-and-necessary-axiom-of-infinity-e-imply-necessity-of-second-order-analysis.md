@@ -10,6 +10,11 @@ The argument is Barton and Goodsell's (*Continuum Contingency*, §§5.6–5.9, T
 the reals and of the classes of reals; Rigid Power supplies it. Written out by Claude Opus 5.5
 (Anthropic), prompted by Cian Dorr. Not Lean-verified.
 
+§4 and two sentences of §5 were revised by Claude Fable 5.2 (Anthropic), prompted by Zachary
+Goodsell, 26 November 2026, for real number structures as numbers and reals with a membership relation:
+the canonical structure is the reals of §2 with the numbers, where it was a field of Dedekind cuts
+among them.
+
 Fix the type $\sigma$ of the infinity premise ($e$ here, $t$ in the companion record), and write
 $\mathbb N:=\mathbb N_\sigma$ for the finite cardinalities at $\sigma$, of type $\nu_\sigma$. Assume
 □Rigid Comprehension, Rigid Power, and $\Box\operatorname{AxInf}_\sigma$. "At every world" means at
@@ -58,27 +63,29 @@ coded by an actual member of $\mathcal P R$.
 
 ## 4. The canonical real number structure
 
-Fix an arithmetical coding of the ordered field. For example, code the rationals in $\mathbb N$, let the
-canonical reals $X_{\mathbb R}$ be the members of $R$ that are Dedekind cuts, and define $\le$, $+$,
-$\times$, $0$, $1$ and the natural numbers of the field by formulas that quantify only over $\mathbb N$
-and $R$.
+Its reals are the members of $R$. Its numbers are the properties $\{n\}:=\lambda m\, .\,m=n$ of being
+a given number $n$ in $\mathbb N$, with $\{\mathbf 0\}$ for zero and $\{\operatorname{Suc} n\}$ for the
+successor of $\{n\}$; and $\{n\}$ is a member of a real $X$ when $Xn$ (Background,
+[[rigid-power-of-the-numbers]]).
 
 **It is necessarily a real number structure.**
-- At any world it is an ordered field, by second-order arithmetic (Theorem 2, using Rigid Comprehension
-  there).
-- It is complete there. A nonempty bounded subproperty $S$ of $X_{\mathbb R}$ has as its union
-  $\lambda q\, .\,\exists x\, .\,Sx\land xq$, a property of numbers. By §2 that union is coextensive with
-  an actual real, which is a cut and is the least upper bound of $S$.
+- At any world its numbers satisfy the conditions on zero and successor, by §1.
+- It is extensional there: reals with the same members are coextensive rigid properties, so identical
+  (Background).
+- It is full there. A property of the $\{n\}$ picks out a property of numbers, which by §2 is
+  coextensive with an actual real.
 
 **Its components are rigid.** They are defined from rigid properties by formulas whose atomic parts are
-non-contingent, and they are restricted to rigid domains.
+non-contingent, and they are restricted to rigid domains. Its numbers are among its reals, which are
+necessarily distinct (§2).
 
 ## 5. Non-contingency
 
 Take a second-order analytical sentence $A$.
 - By §3, at every world, $A$ read in the canonical structure is equivalent to a sentence $A^*$ of
   Barton and Goodsell's second order. Its first-order variables range over $\mathbb N$ and $R$, its
-  second-order variables over $\mathcal P R$, and its atomic formulas are memberships and identities.
+  second-order variables over $\mathcal P R$, and its atomic formulas are memberships and identities,
+  with the sums and products of numbers, which §1 makes non-contingent.
 - By their Theorem 7, $\Box A^*\lor\Box\neg A^*$:
   - the atomic formulas are non-contingent, by rigidity and necessary distinctness;
   - Boolean combinations of non-contingent formulas are non-contingent;
@@ -87,7 +94,8 @@ Take a second-order analytical sentence $A$.
 - So $A$ is non-contingent in the canonical structure.
 
 Finally, compare with an arbitrary real number structure. At any world, any real number structure, at
-any type, is isomorphic to the canonical one there (Huntington's theorem, in the non-modal fragment).
+any type, is isomorphic to the canonical one there (Background, [[real-structures-isomorphic]], in the
+non-modal fragment).
 Isomorphic structures agree on second-order analytical sentences, because relations transfer along the
 isomorphism by composition, which Ordinary Comprehension supplies. Hence
 $\Box\forall\mathfrak R\, .\,\operatorname{Real}(\mathfrak R)\to A(\mathfrak R)$ or the same with
