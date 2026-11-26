@@ -381,7 +381,6 @@ Classicism/Certified/Derivations.lean   the record theorems derived; home of foo
 Classicism/Certified/Entailed.lean      the records as entailments; home of foo.entails
 Classicism/Certified/Vectorized.lean    checks of the vectorization on three principles and one arrow
 Classicism/Certified/Signatures.lean    each principle as a schema at every signature: P.X.schemaIn, pureVersion
-Classicism/Certified/CardinalCH.lean    the three cardinal CH principles stated (vocabulary transcribed from Bacon's Lean package, pull request #28), with their schemas, and the three records that Contingency of Cardinal CH is the conjunction of the other two
 Classicism/Statements.lean              the map's statements, written by the map's generator (pmap lean classicism)
 Classicism/Map.lean                     one certificate per map result proved and per form, of its generated statement: the map's lean_refs
 Classicism/ModelStatements.lean         the map's models' single verdicts, written by the map's generator

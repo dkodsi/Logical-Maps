@@ -1546,3 +1546,11 @@ establish (GPT-6 Astra Pro, prompted by Andrew Bacon, 28 October 2026:
 `at-least-numbers` and the four principles now say so; the docstrings of
 `Background/Arithmetic.lean` will at the library's next full rebuild, a change there rebuilding
 every module.
+
+*Withdrawn, 26 November.* `Certified/CardinalCH.lean` goes, with the three cardinal CH principles it
+stated and the three records it certified. The map now states Bacon's results for real number
+structures, which are natural-number structures with their full powers (Background, Analysis);
+the at-least numbers with their rigid properties are one under his premises, and its continuum
+hypothesis is his cardinal statement. Like the other principles of analysis, the two that
+replace the three have no Lean statement here.
+

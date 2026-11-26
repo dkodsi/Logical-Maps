@@ -6,12 +6,13 @@ statement: >-
   possible world or false in every real number structure in every possible world. One sentence for each
   type $\sigma$ and each second-order analytical sentence.
 formal: >-
-  $\Box\forall\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\to A(\mathfrak R)\;\lor\;
-  \Box\forall\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\to\neg A(\mathfrak R)\quad
-  (A\text{ a second-order analytical sentence})$
+  $\Box\bigl(\exists\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\to\forall\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\toA(\mathfrak R)\bigr)\;\lor$
+  $\Box\bigl(\exists\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\to\forall\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\to\neg A(\mathfrak R)\bigr)\quad$
+  $(A\text{ a second-order analytical sentence})$
 definitions: >-
   See Background, Analysis. A second-order analytical sentence may quantify over relations of any finite
-  arity among the type's entities, applied to the structure's elements; the continuum hypothesis is one.
+  arity among the structure's numbers and reals; the continuum hypothesis is one. The antecedent of each
+  disjunct, that there is a real number structure, is redundant; it says what the disjunct is about.
   Bacon restricts the second-order quantifiers to rigid properties, which makes no difference under
   Rigid Comprehension (his Proposition C.3, Analytic Extensionality); the unrestricted reading is used
   so that the schema assumes nothing about rigidity.
@@ -41,3 +42,9 @@ notes: >-
   the continuum hypothesis is structurally contingent, and the stitched forcing models of Barton and
   Goodsell with a forcing that changes the continuum hypothesis refute it under □Rigid Comprehension;
   neither verdict is recorded yet.
+changes:
+- date: '2026-11-26'
+  by: Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell
+  summary: Restated with real number structures as natural-number structures with their full powers (Background,
+    Analysis), in place of complete ordered fields, at Zachary Goodsell's direction; the two presentations are
+    interdefinable. Each disjunct is written with its antecedent, that there is a real number structure, which is redundant.

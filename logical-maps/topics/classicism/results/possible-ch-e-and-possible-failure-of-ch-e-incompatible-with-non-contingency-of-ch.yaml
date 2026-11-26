@@ -1,0 +1,24 @@
+id: possible-ch-e-and-possible-failure-of-ch-e-incompatible-with-non-contingency-of-ch
+premises:
+- possible-ch-e
+- possible-failure-of-ch-e
+- non-contingency-of-ch
+conclusion: 'false'
+status: proved
+certificate:
+  source_id: misc
+  produced_by: Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell, 26 November 2026
+  recorded_by: Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell, 26 November 2026
+  checked_by: []
+  date: '2026-11-26'
+  lean: none
+sources:
+- Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell, 26 November 2026, from the statements of the three
+  principles.
+source_names:
+- Claude Fable 5.2 generated 26 Nov
+proof: >-
+  At the type $\nu_e$, Non-contingency of the Continuum Hypothesis says that necessarily every real number
+  structure satisfies the continuum hypothesis, or necessarily every one falsifies it. The possibility of one
+  that falsifies it denies the first, and the possibility of one that satisfies it denies the second.
+notes: ''

@@ -67,45 +67,69 @@ successors of terms, by $\neg$, $\lor$, $\land$ and quantifiers
 $\forall v\in\mathbb N_\sigma$. These are Definitions 3–8 of Goodsell's
 draft. Where the type is fixed by context the subscript $\sigma$ is dropped.
 
-**Analysis.** A *real number structure* at a type $\sigma$ is a tuple
-$\mathfrak R=(X^{\sigma t},\le^{\sigma\sigma t},+^{\sigma\sigma\sigma t},
-\times^{\sigma\sigma\sigma t},0^\sigma,1^\sigma,N^{\sigma t})$ such that
-$\le$, $+$ and $\times$ hold only of instances of $X$, $X$ with them and
-with $0$ and $1$ is a complete ordered field, $+$ and $\times$ being
-functional on $X$ and every nonempty subproperty of $X$ with an upper bound in $X$
-having a least upper bound in $X$, and $N$ is the least subproperty of $X$
-containing $0$ and closed under adding $1$; write
-$\operatorname{Real}_\sigma(\mathfrak R)$. Any two real number structures,
-at one type or at two, are isomorphic (Huntington), a theorem of the
-non-modal fragment. A *first-order analytical sentence* is a closed formula
-in the variables of a real number structure built from the atomic formulas
-$x\le y$, $+(x,y,z)$, $\times(x,y,z)$, $Nx$ and $x=y$, whose terms are
-variables of type $\sigma$, $0$ and $1$, by $\neg$, $\lor$, $\land$ and
-quantifiers $\forall v\in X$; a *second-order analytical sentence* may also
-use variables $R$ for relations of any finite arity among entities of type
-$\sigma$, in atomic formulas $R\bar x$ and unrestricted quantifiers
-$\forall R$. For a sentence $A$, $A(\mathfrak R)$ is its reading in
-$\mathfrak R$. These follow Barton and Goodsell, *Continuum Contingency*,
-§5.7, with the structure's elements in place of their rigid properties of
-numbers, and Bacon's second-order analysis (*Could the truths of mathematics
-have been different?*, Appendix C.2) without his restriction of the
-second-order quantifiers to rigid properties, which makes no difference
-under Rigid Comprehension (his Proposition C.3). The *continuum hypothesis*
-$\operatorname{CH}(\mathfrak R)$ is the second-order analytical sentence
-$\forall Y^{\sigma t}\, .\,(\forall x\, .\,Yx\to Xx)\to
-(Y\precsim N\lor Y\approx X)$, where $Y\precsim Z$ says that some relation
-is an injection from the $Y$s into the $Z$s and $Y\approx Z$ that some
-relation is a bijection between them. A real number structure is *rigid*,
-$\operatorname{RigidStr}(\mathfrak R)$, when $X$, $\le$, $+$, $\times$ and
-$N$ are rigid and the instances of $X$ are necessarily distinct,
-$\forall x\,y\in X\, .\,x\ne y\to\Box\,x\ne y$. A *represented power* of
-arity $k$ for $X$, $\operatorname{RepPower}_k(\mathcal P,X)$, is a rigid
-property $\mathcal P$ of rigid $k$-ary relations holding only of tuples of
-instances of $X$, such that necessarily every $k$-ary relation agrees on
-such tuples with an instance of $\mathcal P$:
+**Analysis.** A *real number structure* at a type $\sigma$ is a natural-number
+structure on entities of type $\sigma$ together with its full power, one
+property for each coextension. It is a tuple
+$\mathfrak R=(N^{\sigma t},0^\sigma,S^{\sigma\sigma t},X^{(\sigma t)t})$ such that:
+
+- *numbers.* $0$ is an instance of $N$; $S$ holds only of instances of $N$,
+  and each instance of $N$ bears it to exactly one thing; $0$ is no
+  successor, and distinct instances of $N$ have distinct successors; and $N$
+  is the least property containing $0$ and closed under $S$.
+- *reals.* Every instance of $X$ holds only of instances of $N$.
+- *extensional.* Instances of $X$ with the same instances are identical:
+  $\forall A\,B\in X\, .\,(\forall n\, .\,An\leftrightarrow Bn)\to A=B$.
+- *full.* Every property of numbers is coextensive on them with an instance
+  of $X$: $\forall Y^{\sigma t}\,\exists A\in X\,\forall n\in N\, .\,An\leftrightarrow Yn$.
+
+Write $\operatorname{Real}_\sigma(\mathfrak R)$. The instances of $N$ are the
+structure's *numbers* and those of $X$ its *reals*: a real is a set of
+numbers, and $X$ has one property for each. The type $\sigma$ is that of the
+numbers; the reals have type $\sigma t$. Any two real number structures, at
+one type or at two, are isomorphic, a theorem of the non-modal fragment
+([[real-structures-isomorphic]]). A *first-order analytical sentence* is a
+closed formula in the variables of a real number structure built from the
+atomic formulas $Smn$, $An$, $m=n$ and $A=B$, whose terms are $0$, number
+variables $m,n$ of type $\sigma$ and real variables $A,B$ of type
+$\sigma t$, by $\neg$, $\lor$, $\land$ and quantifiers $\forall n\in N$ and
+$\forall A\in X$: a sentence of second-order arithmetic. A *second-order
+analytical sentence* may also use variables $R$ for relations of any finite
+arity among numbers and reals, in atomic formulas $R\bar u$, and unrestricted
+quantifiers $\forall R$. For a sentence $A$, $A(\mathfrak R)$ is its reading
+in $\mathfrak R$. This is Barton and Goodsell's presentation, *Continuum
+Contingency*, §5.7, where the reals are the rigid properties of numbers,
+without the rigidity: a structure's reals are any properties of its numbers
+that include one of each coextension, so that nothing is assumed about
+which properties are rigid ([[rigid-power-of-the-numbers]] is the case of
+theirs). Bacon's second-order analysis (*Could the truths of mathematics have
+been different?*, Appendix C.2) presents the same theory through a complete
+ordered field, as the map did until 26 November 2026. The field is
+bookkeeping: a structure in the present sense carries a complete ordered
+field on its Dedekind cuts, and a complete ordered field with its natural
+numbers carries one in the present sense, on the sets of numbers read off
+the digits of its reals. Bacon restricts the second-order quantifiers to
+rigid properties, which makes no difference under Rigid Comprehension (his
+Proposition C.3). The *continuum hypothesis* $\operatorname{CH}(\mathfrak R)$
+is the second-order analytical sentence
+$\forall Y^{(\sigma t)t}\, .\,(\forall A\, .\,YA\to XA)\to
+(Y\precsim N\lor Y\approx X)$: every collection of reals injects into the
+numbers or is in bijection with the reals. Here $Y\precsim Z$ says that some
+relation is an injection from the $Y$s into the $Z$s and $Y\approx Z$ that
+some relation is a bijection between them. A real number structure is
+*rigid*, $\operatorname{RigidStr}(\mathfrak R)$, when $N$, $S$ and $X$ are
+rigid, every real is a rigid property, and the numbers are necessarily
+distinct, $\forall m\,n\in N\, .\,m\ne n\to\Box\,m\ne n$; its reals are then
+necessarily distinct too. A *represented power* for $\mathfrak R$ of a
+signature $s$, a finite sequence each of whose places is for a number or for
+a real, $\operatorname{RepPower}_s(\mathcal P,\mathfrak R)$, is a rigid
+property $\mathcal P$ of rigid relations of that signature holding only of
+numbers and reals of $\mathfrak R$, such that necessarily every relation of
+the signature agrees on them with an instance of $\mathcal P$:
 $\operatorname{Rigid}(\mathcal P)\land
-(\forall S\, .\,\mathcal PS\to\operatorname{Rigid}(S)\land\forall\bar y\, .\,S\bar y\to\textstyle\bigwedge_iXy_i)\land
-\Box\forall R\,\exists S\, .\,\mathcal PS\land\forall\bar x\in X\, .\,(S\bar x\leftrightarrow R\bar x)$.
+(\forall Q\, .\,\mathcal PQ\to\operatorname{Rigid}(Q)\land\forall\bar u\, .\,Q\bar u\to\bar u\in\mathfrak R)\land
+\Box\forall R\,\exists Q\, .\,\mathcal PQ\land\forall\bar u\in\mathfrak R\, .\,(Q\bar u\leftrightarrow R\bar u)$,
+where $\bar u\in\mathfrak R$ says that each $u_i$ is a number or a real of
+$\mathfrak R$ as its place requires.
 
 The schematic $\sigma$ is what lets the principles say what they intend
 whatever the size of a given type. Where $\sigma$ necessarily has only
@@ -398,3 +422,71 @@ there, and the propositions $nU$ of step 2 are indexed by our numbers. At type $
 of the kind holds, the propositions that there are exactly $n$ individuals being no obstacle
 to there being finitely many individuals.
 :::
+
+::: lemma {#real-structures-isomorphic}
+title: real number structures are isomorphic
+credit: Dedekind's categoricity theorem for the numbers, carried to the reals by extensionality and fullness; written out by Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell, 26 November 2026
+---
+In the non-modal fragment of C. Let $\mathfrak R=(N,0,S,X)$ and $\mathfrak R'=(N',0',S',X')$ be
+real number structures, at types $\sigma$ and $\sigma'$. Then there are relations
+$f^{\sigma\sigma' t}$ and $g^{(\sigma t)(\sigma' t)t}$ such that $f$ is a bijection between the
+numbers of $\mathfrak R$ and those of $\mathfrak R'$ taking $0$ to $0'$ and successors to
+successors, $g$ is a bijection between their reals, and $An\leftrightarrow A'n'$ whenever $fnn'$
+and $gAA'$. So every analytical sentence, first-order or second-order, has the same truth value
+in the two.
+
+*Proof.* Let $f$ be the least relation holding of $0$ and $0'$ and of the successors of any
+$m$ and $m'$ it holds of:
+$fnn':=\forall F^{\sigma\sigma' t}\, .\,(F00'\land\forall m\,m'\,k\,k'\, .\,Fmm'\land Smk\land S'm'k'\to Fkk')\to Fnn'$.
+
+- By the induction that $N$ provides, every number of $\mathfrak R$ bears $f$ to a number of
+  $\mathfrak R'$, and to one only. $0$ bears it to $0'$ alone: $0$ is no successor, so $f$
+  without the pairs of $0$ with the other numbers of $\mathfrak R'$ still holds of $0$ and $0'$
+  and of successors, and $f$ is the least such relation. And if $m$ bears $f$ to $m'$ alone,
+  the successor of $m$ bears it to the successor of $m'$ alone, by the same argument and the
+  injectivity of $S$.
+- The same with the structures exchanged: every number of $\mathfrak R'$ has $f$ borne to it by
+  exactly one number of $\mathfrak R$.
+- Let $gAA':=XA\land X'A'\land\forall n\,n'\, .\,fnn'\to(An\leftrightarrow A'n')$. For a real $A$
+  of $\mathfrak R$, the property $\lambda n'\, .\,\exists n\, .\,fnn'\land An$ is coextensive on
+  the numbers of $\mathfrak R'$ with a real $A'$ of it, by fullness, and then $gAA'$. A second
+  such real has the same instances as $A'$ and so is $A'$, by extensionality. The same with the
+  structures exchanged makes $g$ a bijection.
+- An analytical sentence keeps its truth value, by induction on formulas: a relation among the
+  numbers and reals of one structure is carried to one among those of the other by
+  $\lambda$-abstraction along $f$ and $g$, and back. $\square$
+:::
+
+::: lemma {#rigid-power-of-the-numbers}
+title: the numbers with their rigid properties are a real number structure
+credit: Zachary Goodsell, 26 November 2026 (that with real number structures defined by their powers the passage from Bacon's cardinal continuum hypothesis is immediate); written out by Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell
+---
+In C, at a type $\tau$. Write $\nu$ for $\nu_\tau$, $N$ for the at-least numbers at $\tau$,
+$\operatorname{LowerNat}_\tau$, $0$ for $\mathbf 0^{\ge}_\tau$, $S$ for
+$\lambda m\,n\, .\,Nm\land n=\operatorname{Suc}_\tau m$, and $\mathcal P_rN$ for the rigid
+properties of numbers, $\lambda A^{\nu t}\, .\,\operatorname{Rigid}(A)\land\forall n\, .\,An\to Nn$.
+Suppose that the Peano conditions hold on the at-least numbers, which is Potential Infinity at
+$\tau$ ([[at-least-numbers]]), and that every property of type $\nu t$ is coextensive with a
+rigid one, which is Rigid Comprehension at that type. Then $(N,0,S,\mathcal P_rN)$ is a real
+number structure at $\nu$. The same holds of the numbers $\mathbb N_\tau$ with
+$\mathbf 0_\tau$.
+
+*Proof.* *Numbers.* $0$ is an at-least number and the successor of one is one, by the
+definition of $N$, which is also why $N$ is least. $0$ is no successor and distinct at-least
+numbers have distinct successors, by the Peano conditions. *Reals.* By the definition of
+$\mathcal P_rN$. *Extensional.* Let $A$ and $B$ be rigid properties of numbers with the same
+instances. Each instance of $A$ is an instance of $B$, and necessarily one, $B$ being
+persistent; so by the inextensibility of $A$, necessarily every instance of $A$ is one of $B$.
+Likewise necessarily every instance of $B$ is one of $A$. So $A=B$, by Intensionality. *Full.*
+For a property $Y$ of type $\nu t$, Rigid Comprehension gives a rigid $Z$ coextensive with
+$\lambda n\, .\,Nn\land Yn$. It holds only of numbers, so it is a rigid property of numbers,
+and $Zn\leftrightarrow Yn$ for every number $n$. $\square$
+
+At $\tau=e$ the continuum hypothesis of this structure says that every collection of rigid
+properties of at-least numbers over individuals injects into the at-least numbers or is in
+bijection with the rigid properties of them. That is the cardinal continuum hypothesis of
+Bacon's forcing argument, whose conclusions are therefore the possibility of the continuum
+hypothesis, and of its failure, in a real number structure ([[possible-ch-e]],
+[[possible-failure-of-ch-e]]).
+:::
+
