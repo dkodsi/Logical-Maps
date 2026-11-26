@@ -383,11 +383,6 @@ recorded on each argument; withdrawn arguments and the earlier entries of this f
 fields, carriers and Dedekind cuts. First-order analytical sentences are sentences of second-order
 arithmetic, with the structure's sum and product defined from zero and successor.
 
-The three non-contingency principles are written in the form
-$\Box(\exists\mathfrak R\,.\,\operatorname{Real}\to\forall\mathfrak R\,.\,\operatorname{Real}\to A)\lor
-\Box(\exists\mathfrak R\,.\,\operatorname{Real}\to\forall\mathfrak R\,.\,\operatorname{Real}\to\neg A)$,
-whose antecedents are redundant.
-
 Bacon's revised forcing result (16 November 2026) was recorded for a cardinal continuum hypothesis, about
 the at-least numbers over individuals and their rigid properties. Under its premises those rigid
 properties are the reals of a real number structure (Background, `rigid-power-of-the-numbers`), so the

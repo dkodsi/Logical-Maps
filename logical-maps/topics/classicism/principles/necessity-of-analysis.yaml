@@ -6,9 +6,9 @@ statement: >-
   world or false in every real number structure in every possible world. One sentence for each type
   $\sigma$ and each first-order analytical sentence.
 formal: >-
-  $\Box\bigl(\exists\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\to\forall\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\to A(\mathfrak R)\bigr)\;\lor$
-  $\Box\bigl(\exists\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\to\forall\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\to\neg A(\mathfrak R)\bigr)\quad$
-  $(A\text{ a first-order analytical sentence})$
+  $\Box\forall\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\to A(\mathfrak R)\;\lor\;
+  \Box\forall\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\to\neg A(\mathfrak R)\quad
+  (A\text{ a first-order analytical sentence})$
 definitions: >-
   See Background, Analysis: a real number structure at $\sigma$ is a natural-number structure on entities
   of type $\sigma$ together with entities of that type, its reals, that stand for the sets of its numbers,
@@ -16,10 +16,8 @@ definitions: >-
   built from successor, sum, product, membership and identity with quantifiers over its numbers and over
   its reals. Any two real number
   structures are isomorphic in the non-modal fragment, so within a world all of them agree on $A$; the
-  schema says that the worlds with a continuum agree too. The antecedent of each disjunct, that there is
-  a real number structure, is redundant, the disjunct being equivalent to its consequent boxed; it says
-  what the disjunct is about. The schema quantifies over all real number structures rather than fixing
-  the reals as the rigid properties of numbers, so it assumes neither Rigid Comprehension nor choice,
+  schema says that the worlds with a continuum agree too. It quantifies over all real number structures rather than fixing the reals as rigid
+  properties of numbers, so it assumes neither Rigid Comprehension nor choice,
   and its instances at a type with no real number structure in any world are trivially true.
 date: '2026-10-23'
 sources:
@@ -63,8 +61,7 @@ changes:
   minor: true
 - date: '2026-11-26'
   by: Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell
-  summary: Restated with real number structures as numbers and reals with a membership relation
-    (Background, Analysis), in place of complete ordered fields, at Zachary Goodsell's direction. The two
-    kinds of structure define each other rigidly at each type (Background,
-    [[real-structures-and-fields]]), so every instance says what it said. Each disjunct is written with
-    its antecedent, that there is a real number structure, which is redundant.
+  summary: Real number structures are now numbers and reals with a membership relation (Background,
+    Analysis), in place of complete ordered fields, at Zachary Goodsell's direction. The two kinds of
+    structure define each other rigidly at each type (Background, [[real-structures-and-fields]]), so
+    every instance says what it said. The definitions describe the new structures.

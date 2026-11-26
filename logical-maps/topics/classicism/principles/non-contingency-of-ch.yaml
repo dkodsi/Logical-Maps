@@ -2,18 +2,16 @@ id: non-contingency-of-ch
 name: Non-contingency of the Continuum Hypothesis
 category: mathematical-contingency
 statement: >-
-  Either necessarily, if there is a real number structure then every real number structure satisfies the
-  continuum hypothesis, or necessarily, if there is one then every one falsifies it. The continuum
-  hypothesis of a structure says that every collection of its reals injects into its numbers or is in
-  bijection with its reals. One sentence for each type $\sigma$.
+  Either necessarily every real number structure satisfies the continuum hypothesis, or necessarily
+  every real number structure falsifies it: that every subproperty of the continuum either injects into
+  the natural numbers or is in bijection with the continuum. One sentence for each type $\sigma$.
 formal: >-
-  $\Box\bigl(\exists\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\to\forall\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\to\operatorname{CH}(\mathfrak R)\bigr)\;\lor$
-  $\Box\bigl(\exists\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\to\forall\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\to\neg\operatorname{CH}(\mathfrak R)\bigr)$
+  $\Box\forall\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\to\operatorname{CH}(\mathfrak R)
+  \;\lor\;\Box\forall\mathfrak R\, .\,\operatorname{Real}_\sigma(\mathfrak R)\to
+  \neg\operatorname{CH}(\mathfrak R)$
 definitions: >-
-  See Background, Analysis, for real number structures and for $\operatorname{CH}(\mathfrak R)$, with
-  injections and bijections as relations. The
-  antecedent of each disjunct, that there is a real number structure, is redundant, the disjunct being
-  equivalent to its consequent boxed; it says what the disjunct is about. This is the instance of the Necessity of Second-Order Analysis at the continuum hypothesis,
+  See Background, Analysis, for $\operatorname{CH}(\mathfrak R)$, with injections and bijections as
+  relations. This is the instance of the Necessity of Second-Order Analysis at the continuum hypothesis,
   kept apart because the sources treat it on its own. Which way it fails, true but possibly false or
   false but possibly true, is a matter of models, not of the principle.
 date: '2026-10-23'
@@ -62,9 +60,8 @@ changes:
   minor: true
 - date: '2026-11-26'
   by: Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell
-  summary: Restated with real number structures as numbers and reals with a membership relation
-    (Background, Analysis), in place of complete ordered fields, at Zachary Goodsell's direction. The two
-    kinds of structure define each other rigidly at each type (Background,
-    [[real-structures-and-fields]]), so every instance says what it said. Each disjunct is written with
-    its antecedent, that there is a real number structure, which is redundant. Notes updated for Bacon's
-    forcing result, now stated for real number structures.
+  summary: Real number structures are now numbers and reals with a membership relation (Background,
+    Analysis), in place of complete ordered fields, at Zachary Goodsell's direction. The two kinds of
+    structure define each other rigidly at each type (Background, [[real-structures-and-fields]]), so
+    every instance says what it said. Notes updated for Bacon's forcing result, now stated for real number
+    structures.

@@ -11,8 +11,7 @@ Lemma 2, on sum and product, is new. Informal, not Lean-verified.
 analysis. Fix an instance of the Necessity of Analysis: a first-order analytical sentence $A$, and the
 disjunction
 $\Box\forall\mathfrak R'(\operatorname{Real}_\sigma\mathfrak R'\to A(\mathfrak R'))\lor
-\Box\forall\mathfrak R'(\operatorname{Real}_\sigma\mathfrak R'\to\neg A(\mathfrak R'))$,
-to which the instance is equivalent, the antecedent of each of its disjuncts being redundant.
+\Box\forall\mathfrak R'(\operatorname{Real}_\sigma\mathfrak R'\to\neg A(\mathfrak R'))$.
 If $\neg\Diamond\exists\mathfrak R'\operatorname{Real}_\sigma\mathfrak R'$, both disjuncts hold
 vacuously. Otherwise Analytic Necessitism supplies $\mathfrak R=(N,0,S,X,E)$ with $N$, $S$, $X$ and
 $E$ rigid, its numbers and reals necessarily distinct, and
