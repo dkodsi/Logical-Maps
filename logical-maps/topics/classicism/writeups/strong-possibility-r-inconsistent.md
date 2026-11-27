@@ -275,3 +275,110 @@ The extension thus supplies a source proposition whose realizations
 meet the entire Max theory and return conditions above. SP also
 requires returns through arbitrary Max-consistent higher-order
 sentences. Their simultaneous realization remains open.
+
+## Returning individual cardinalities and scalar coding at an actual atom
+
+Let $N=\mathbb N_e$, $I=I^*_e$ and $U=\lambda x^e.\top$. Write $J(n)=(\operatorname{Suc}_e n)(U)$. At the standard numeral $j$, this says that exactly $j+1$ individuals exist. All statements below quantify over the full current $N$.
+
+### Pure Strong Possibility realizes every positive finite size on a return
+
+There is a pure Maximalist point satisfying the single sentence
+$$
+ \Theta=I\land\forall n\,(Nn\to\Diamond_{\ne}J(n)).
+$$
+For the existence claim, use the [construction of a single proposition spanning the full Max theory](strong-possibility-r-inconsistent.html). In an elementary extension of a pure Max model it gives a possible self-atom $b$. At every point where $b$ is true, pure Max and the Peano guard hold, and each local $n\in N$ admits a path through $J(n)$ back to $b$. Since $b$ is the actual atom there, these are precisely the required distinctness-preserving possibilities. Choose one such point.
+
+Suppose $r$ satisfies pure Strong Possibility. The preceding consistency certificate gives $\Diamond_{\ne}\Theta$. Take any $n\in N$ and any true $q$ at $r$. Reach a $\Theta$-point where $\Diamond q$; numberhood persists along the entrance. At that point apply the $n$-instance of $\Theta$ using the current truth $\Diamond q$ as its test. This reaches $J(n)$ with $\Diamond\Diamond q$, hence with $\Diamond q$ by transitivity. This proves $\Diamond_{\ne}J(n)$ at $r$. Pure Max already gives $I$ there.
+
+### An actual atom encodes number predicates in propositions
+
+Let $a$ be a true atom at $r$. For each $n\in N$ define $C_n=J(n)\land\Diamond a$. These propositions are nonzero by testing the preceding result with $a$. Every $a$-point has the same parameter truths as $r$: a true atom entails each current truth, including any formula in any current tuple and the negation of each false formula. In particular $a\le I$. At every $C_n$-point $I$ is therefore possible and hence holds, by the Peano guard's equivalence to its ordinary possibility at type $e$.
+
+For a current predicate $X$ on the number type, set
+$$
+ s_X=\exists k\,\bigl(Nk\land J(k)\land\Diamond a\land(a\le Xk)\bigr).
+$$
+This is a single native term in $a,X$. At every $C_n$-point the transported $n$ satisfies $Nn$ and $J(n)$. If any number there, including one new to that point, satisfies $J(k)$, its successor and the successor of the transported $n$ both count $U$. [Numbers with a common instance are identical](../index.html#background/arithmetic). The Peano guard gives successor injectivity there, so $k$ equals the transported $n$. In particular the existential cannot introduce a spurious sign. At $r$ either $a\le Xn$ or $a\le\neg Xn$ according to the current truth of $Xn$. The order identity persists, and $a$ is nonzero at every $C_n$-point. Thus throughout $C_n$ the bit of $s_X$ is exactly the current bit of $Xn$.
+
+If $X$ and $Y$ agree currently on every number, the identity
+$$
+ a\le\forall k\,(Nk\to(Xk\leftrightarrow Yk))
+$$
+holds at $r$. At any later point and any $k$ satisfying $Nk$ there, numberhood persists throughout its future. The identity therefore gives $a\land Xk=a\land Yk$ at that point. It follows directly from the definition that $s_X=s_Y$. Conversely, a current disagreement at $n$ gives opposite bits on the nonzero $C_n$, so $s_X\ne s_Y$. The closed abstraction in the parameter $a$ thus embeds the extensional equivalence classes of current predicates on $N$ into the scalar domain.
+
+Consequently there is no current relation which functionally enumerates all scalar entities by $N$. Indeed, suppose $E(n,p)$ were such an enumeration, and form the admitted predicate
+$$
+ X(n)=\neg\exists p\,(E(n,p)\land C_n\le p).
+$$
+Choose a current $j\in N$ with $E(j,s_X)$. Functionality gives $Xj$ exactly when $C_j\nleq s_X$, whereas the proven bit rule and $C_j\ne\bot$ give $Xj$ exactly when $C_j\le s_X$. An injection of all scalars into $N$ would give a functional enumeration by reversing its graph and assigning bottom to unused numbers, also impossible. This is internal uncountability at the actual point, with counts measured at individual type. A countable Henkin presentation externally is compatible with this conclusion. Ordinary pure Max admits the opposite internal verdict at its countable-scalar definable root, whose unrestricted current graph enumerates its scalars with the standard individual Frege numerals.
+
+### A real number structure on propositions
+
+Take the pairwise distinct nonzero $b_n=\mathrm{Fr}\land J(n)$ of the [pure SP finite-cell argument](strong-possibility-and-boolean-completeness-t-incompatible.html) as number labels, and the $s_X$ as real labels. These two classes of labels are disjoint. Every $s_X$ entails $\Diamond a$. At an $a$-point the Fregean Axiom is false, since it is already false at the source by Maximalism and $a$ entails each actual truth. At a Fregean point the axiom persists, excluding $\Diamond a$. Thus even the zero real label differs from each nonzero $b_n$.
+
+Define the two carriers by their displayed images, equip the first with the zero and successor coming from $N$, and put $b_n\in s_X$ exactly when $Xn$. All these are current relations supplied by abstraction. The classification of the $s_X$ makes membership well defined and gives real extensionality. For every current property $P$ of number labels the predicate $n\mapsto P(b_n)$ supplies the real coding its extension. A current inductive subproperty of the number labels pulls back to an inductive subproperty of $N$, so the number part satisfies Peano induction. This is an actual membership-presentation real structure at type $t$. In the ordinary pure descriptor Max root, $D_t$ is externally countable and the current rows include every subset of every number part, so no real structure at $t$ is possible *as an actual structure at that root*.
+
+The returning sizes, the treatment of newly available numbers, the enumeration obstruction and this real-structure corollary received a separate GPT-6 mathematical review on 27 November 2026.
+
+## Internal proof reflection and true arithmetic at the second level
+
+Write \(N=\mathbb N_e\) and \(I=I_e^*\). Fix a pure formula \(A(v)\)
+whose only free parameter is a Frege number variable. Let \(L_A(n,k)\)
+be the primitive recursive proof check that \(k\) is a C-refutation of
+\(A(\bar n)\). Use the effective pure C calculus, annotating axiom
+instances by their enumeration certificates if necessary. The
+function producing the syntax of the Frege numeral is primitive
+recursive. This is one fixed PA graph, including at nonstandard
+arguments.
+
+At every pure SP point,
+\[
+ \forall n\in N\quad
+ \big(\neg\Diamond A(n)\ \longleftrightarrow\
+                   \exists k\in N\, L_A(n,k)\big).
+\]
+The modal formula has \(n\) as an actual parameter. The proof check
+on the right operates inside the source arithmetic; for nonstandard
+\(n,k\) it is not a claim about an external finite derivation.
+
+The displayed sentence, together with \(I\), holds at the standard
+singleton descriptor Max point \(V\). All its numbers are standard,
+and for each standard numeral a closed sentence is possible there
+exactly when it is C-consistent. Pure SP therefore supplies
+distinctness-preserving possibility of that one uniform sentence.
+Every SP point also satisfies \(I\).
+
+Suppose \(A(n)\) is impossible at the source without an internal
+refutation. Request a return to \(I\land\neg\exists k\in N\,L_A(n,k)\)
+through the displayed sentence with its Peano guard. The source
+identity \(A(n)=\bot\) persists to the intermediate point, and the
+sentence supplies a refutation code there. Its numberhood and its
+primitive recursive proof check persist to the Peano return, contrary
+to its guard.
+
+If \(A(n)\) is possible and \(L_A(n,k)\) holds at the source, request
+a return to \(\Diamond A(n)\) through the same Peano sentence. The
+primitive recursive proof check is preserved from source to
+intermediate, so \(A(n)=\bot\) there. This persists to the return,
+contrary to possibility of \(A(n)\). This proves the equivalence
+for all internal indices. Multiple numerical parameters can be
+treated together. Taking \(A(v)\) to assert a failure of identity
+also gives a uniform numerical test for identity of two fixed
+parameterized pure terms in the source.
+
+The same method proves that the source arithmetic satisfies every
+true first-order \(\Pi^0_2\) sentence. Write the sentence in the
+form \(\forall n\exists m\,R(n,m)\) with a primitive recursive
+matrix. It holds at \(V\). If an actual \(n\) of the source had no
+witness, request a return to \(I\land\neg\exists m\in N\,R(n,m)\).
+At the intermediate Peano point choose \(m\) and carry it to the
+return. Its PA graph and numberhood are preserved, a contradiction.
+In particular any standard program which really halts on every
+standard input is internally total on the source natural numbers.
+No assertion about correctness of every arithmetical sentence, or
+about arithmetic in all accessible worlds, is needed.
+
+The arithmetic transport fact used here is proved in the
+[finite-cell Boolean Completeness argument](strong-possibility-and-boolean-completeness-t-incompatible.html).
+
+OpenAI Codex (GPT-6), prompted by Daniel Kodsi, 27 November 2026.

@@ -128,3 +128,31 @@ of Countable Boolean Completeness suffices for the contradiction here too.
 The analogous pure instance uses \(p=b_n\). Goodsell already obtained
 the incompatibility with the full Countable Boolean Completeness schema
 from ordinary pure Maximalism. [Goodsell’s theorem](../index.html#result/possibility-and-countable-boolean-completeness-incompatible)
+
+## Incomplete principal intervals
+
+Let $N=\mathbb N_e$ and $b_n=\mathrm{Fr}\land(\operatorname{Suc}_e n)(\lambda x.\top)$. Fix any total computable strictly increasing function $f:\mathbb N\to\mathbb N$ in the external metatheory. At a pure Strong Possibility point, no internally Boolean-complete principal scalar interval $\mathord\downarrow v$ contains $b_{f(i)}$ for all current $i\in N$. Here $f$ on nonstandard numbers is read through the numerical graph of one fixed program for $f$.
+
+In particular, if $v$ is a **closed pure proposition** true on infinitely many positive individual sizes in the ordinary full finite Fregean hierarchies, then its principal interval is internally incomplete. There is no density or growth-rate restriction on that infinite spectrum.
+
+If the actual $N$ is externally standard, the conclusion also says that for **any** $v$ with complete interval the ordinary set $\{n:b_n\le v\}$ contains no infinite computably enumerable subset. An infinite computably enumerable set contains the range of a total strictly increasing computable function, obtained by waiting for a value larger than the previous one. Thus an infinite such spectrum must be immune in the usual computability-theoretic sense.
+
+### The diagonal on a subsequence
+
+Let $I=I_e^*$. In the singleton descriptor Maximalist model with standard $N$, enumerate the closed proposition descriptors with one individual marker as $T_0,T_1,\ldots$. The bit $\operatorname{Eval}(T_i,j)$ is the effective truth value of the descriptor in the full finite Fregean hierarchy on $j\ge1$ individuals. Let $D$ be the fixed program for
+$$
+ D(i)=1-\operatorname{Eval}(T_i,f(i)+1).
+$$
+It is total and returns a bit. Pure SP makes true first-order $\Pi_2$ arithmetic hold at the source. Thus the programs for $f$ and $D$ are internally total, including at its nonstandard inputs. Strict increase and bit-valuedness follow as well: a failure of either, with terminating computations, would give a finite numerical witness to a false $\Sigma_1$ statement. [Pure SP arithmetic reflection](strong-possibility-r-inconsistent.html)
+
+In the standard descriptor model the following is true. $I$ holds, the two programs are total with bit-valued $D$, and for every scalar $s$ there are current numbers $i,j$ and a bit $d$ such that $f(i)=j$, $D(i)=d$ and $b_j\le s^{1-d}$. Here $s^1=s$ and $s^0=\neg s$. To see this, take $i$ to be the index of the descriptor of $s$. On $b_{f(i)}$ its value is the evaluated bit. Write all the program graphs by existential quantification of finite halting-computation certificates with primitive recursive checking. This gives one closed pure Max-consistent sentence $\Psi$.
+
+Suppose $\mathord\downarrow v$ is internally complete and contains every current $b_{f(i)}$. Join the admitted subfamily with $D(i)=1$ inside that interval and call its join $s$. The source cells are nonzero and pairwise disjoint, and the indices $f(i)$ are distinct. Thus $b_{f(i)}\le s^{D(i)}$ for each $i$. For a negative bit, $v\land\neg b_{f(i)}$ is a relative upper bound for the whole selected family, so $s$ is disjoint from that cell.
+
+Test strong possibility of $\Psi$ with the actual proposition asserting $I$, totality of the programs, nonzeroness of all the indexed cells and the displayed universal agreement for this particular $s$. The intermediate point finds an index and the halting computations for a bit giving the opposite inequality. Both numberhood and the order identity persist. The primitive recursive verification of the particular computation certificates is preserved between that intermediate Peano point and the return, so the two programs give the same values there; determinism ensures uniqueness. The transported nonzero cell would lie under $s$ and under its complement. Thus this one internally countable subfamily in $\mathord\downarrow v$ already lacks a relative supremum. [Original finite-cell diagonal](strong-possibility-and-boolean-completeness-t-incompatible.html)
+
+### Closed pure propositions
+
+For a fixed closed pure $v$, its finite Fregean spectrum is decided by an elementary-time program $A_v$ on unary input, by finite-type evaluation. At the standard descriptor point $b_n\le v^{A_v(n)}$ for every $n$. At a pure SP point the same uniform rule holds on all its current numbers: a contrary source disequality can be required again on a return through the standard-root sentence, while the arithmetic computation and the opposite inequality survive to that return. When the standard positive spectrum is infinite, take $f$ to be the increasing search for inputs accepted by $A_v$. This search is genuinely total and its algorithm ensures that every terminated output is accepted; checking the trace proves the latter in PA. All current $b_{f(i)}$ therefore lie below $v$, and the preceding obstruction applies.
+
+Two other GPT-6 research agents independently checked the restriction to a relative join, subsequence enumeration, and numerical transfer on 27 November 2026.

@@ -4027,6 +4027,18 @@
     "lines": [602, 604],
     "file": "Classicism/Map.lean",
     "axioms": ["propext", "Quot.sound"]}},
+  "necessary-distinctness-necessary-t-and-necessary-strong-actuality-imply-necessary-self-atoms-are-strong-atoms-r":
+  {"proofs":
+   [{"name":
+     "Classicism.Proofs.necessary_distinctness_necessary_t_and_necessary_strong_actuality_imply_necessary_self_atoms_are_strong_atoms_r",
+     "lines": [57, 61],
+     "file": "Classicism/Results/Research/GallinSelfAtoms.lean"}],
+   "certificate":
+   {"name":
+    "Classicism.Map.necessary_distinctness_necessary_t_and_necessary_strong_actuality_imply_necessary_self_atoms_are_strong_atoms_r",
+    "lines": [85, 90],
+    "file": "Classicism/Results/Research/GallinSelfAtoms.lean",
+    "axioms": ["propext", "Quot.sound"]}},
   "necessary-distinctness-necessary-r-implies-necessary-modal-five":
   {"proofs":
    [{"name":
@@ -5921,6 +5933,18 @@
    {"name": "Classicism.Map.distinctness_necessary_t_implies_modal_five",
     "lines": [337, 339],
     "file": "Classicism/Map.lean",
+    "axioms": ["propext", "Quot.sound"]}},
+  "distinctness-necessary-t-and-strong-actuality-imply-self-atoms-are-strong-atoms-r":
+  {"proofs":
+   [{"name":
+     "Classicism.Proofs.distinctness_necessary_t_and_strong_actuality_imply_self_atoms_are_strong_atoms_r",
+     "lines": [52, 55],
+     "file": "Classicism/Results/Research/GallinSelfAtoms.lean"}],
+   "certificate":
+   {"name":
+    "Classicism.Map.distinctness_necessary_t_and_strong_actuality_imply_self_atoms_are_strong_atoms_r",
+    "lines": [78, 83],
+    "file": "Classicism/Results/Research/GallinSelfAtoms.lean",
     "axioms": ["propext", "Quot.sound"]}},
   "distinctness-necessary-t-and-inextensible-comprehension-imply-weakly-rigid-power":
   {"proofs":

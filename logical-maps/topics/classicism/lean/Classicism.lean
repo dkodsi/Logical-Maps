@@ -95,6 +95,7 @@ import Classicism.Map
 import Classicism.MapAtoms
 import Classicism.Results.Research.SelfAtomsUnderNecessity
 import Classicism.Results.Research.MixedAtomicity
+import Classicism.Results.Research.GallinSelfAtoms
 import Classicism.Tools.MapIndex
 import Classicism.ModelStatements
 import Classicism.MapModels

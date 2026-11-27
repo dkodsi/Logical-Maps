@@ -408,3 +408,82 @@ descriptor and is true iff $c_\top\in S$.
 This proves the Theorem for these signatures, with a unique twin in each
 model.
 
+
+## Further restrictions for first-order signatures
+
+OpenAI GPT-6, prompted by Daniel Kodsi, 27 November 2026. Two independent researchers checked the Barcan arguments below.
+
+With $m$ public individual names, where $m$ is externally finite, signature Strong Possibility forces exactly $\max(1,m)$ individuals at the evaluation point. The [descriptor model](coalesced-definable-root-signature.html) has signature Maximalism and exactly that many individuals. The upper bound reflects through ND-possibility: a tuple violating it supplies as guard the conjunction of its pairwise disequalities, which by necessity of identity prevents the tuple from collapsing wherever that guard remains possible. Distinct public names denote different individuals at a Maximalist point, since the possibility of their disequality excludes identity. The case without individual names is Dorr’s October monism argument. Consequently unboxed Barcan at individual type fails: the finite union of these actual individual haecceities necessarily covers every current individual and some accessible point has more. With infinitely many public individual names the distinctness argument yields all standard finite lower bounds. [October reflection and descriptor constructions](https://github.com/dkodsi/Logical-Maps/blob/67b116acaf7cee286614307468f5361f6a195c6e/submissions/classicism-results-2026-10-24-v2/source/research/2026-10-22/sp-structural-proof-package/profile-root-construction-20261022.md)
+
+### Which signatures admit a closed Barcan counterexample?
+
+Consider a fixed $\Sigma$ and a formula $\Phi(p)$ at type $t$ with no free variable other than the displayed proposition. It may contain arbitrary closed $\Sigma$-terms, modalities, and typed quantifiers. Its Barcan instance at a point is
+$$
+ (\forall p\,\Box\Phi(p))\to\Box\forall p\,\Phi(p).
+$$
+
+**Infinitely many nonindividual constants.** Every such instance holds at every ordinary $\Sigma$-Maximalist point. Suppose $\Diamond\exists p\,\neg\Phi(p)$ there, and take a pointed $\Sigma$-model with a witness $b$ to the existential. Choose a nonindividual name $c$ absent from the finite formula, including its displayed closed terms. Its type can be any relational $\tau=\bar\alpha t$. At the witness interpret $c$ by $\lambda\bar x.b$; when $\bar\alpha$ is empty use $b$. Its scalar projection $c^\circ=\exists\bar x\,c(\bar x)$ then equals $b$ as an entire proposition. At each accessible point the constant lift gives the transported $b$ on all inputs and each argument domain is inhabited. The reinterpretation preserves $\neg\Phi(b)$. Consequently $\neg\Phi(c^\circ)$ is a C-consistent closed $\Sigma$-sentence. Ordinary signature Maximalism entails $\Diamond\neg\Phi(c^\circ)$, which contradicts the antecedent of the Barcan instance.
+
+In this case any actual failure of the internal statement $\mathrm{BF}_t$ at a $\Sigma$-Maximalist point must be witnessed by a property of propositions that no closed $\Sigma$-term denotes there. A point at which all such properties have closed names consequently satisfies the full internal $\mathrm{BF}_t$. The argument applies to infinitely many names at unbounded finite types, even when no propositional name occurs.
+
+**Finitely many nonindividual constants.** Signature Strong Possibility implies the failure of one explicit closed Barcan instance, with no bound on the number of individual names. Conjoin the pure cell $B$ asserting necessary propositional distinctness, one individual and four propositions with the finitely many identities assigning bottom to the nonindividual names. Call the result $\Delta$. At the ordinary signature-definable Maximalist root, every proposition descriptor evaluated anywhere in $\Delta$ is invariant under exchanging the two atoms of the four-element proposition algebra. All individual names, including any extra individual marker, already denote the sole individual there; every named relation has its stipulated bottom value. The full finite hierarchy is invariant under this exchange. Thus $\Delta$ is a nonzero root atom, and the universal identity statement that it is an atom transfers by signature Strong Possibility. The usual stable-cell calculation shows that $\Phi(p)=(\Delta\to(p=\top\lor p=\bot))$ is necessary for each current $p$. At a possible $\Delta$-point two of the four propositions are neither endpoint, so $\Box\forall p\,\Phi(p)$ fails. [Original finite-signature proof](https://github.com/dkodsi/Logical-Maps/blob/67b116acaf7cee286614307468f5361f6a195c6e/submissions/classicism-results-2026-10-24-v2/source/research/2026-10-22/notes/signature-sp-barcan-20261022.md)
+
+There is also a reduct consequence. Let $\Sigma$ have finitely many nonindividual names and any set of individual names, and extend it to $\Theta$ by at least one new nonindividual name $c$. No pointed $\Theta$-interpretation can satisfy ordinary $\Theta$-Maximalism and satisfy $\mathrm{SP}_\Sigma$ in its reduct. Indeed the $\Sigma$ formula $\Phi$ above passes necessarily at every current input. But a two-world model of $\Delta$ can interpret $c$ as the constant lift of a nonendpoint proposition; hence $\Theta$-Maximalism makes $\Delta\land(c^\circ\ne\top)\land(c^\circ\ne\bot)$ possible. This contradicts the test with current input $c^\circ$. The case where $\Sigma$ is pure is Dorr's established signature-versus-pure obstruction.
+
+These conclusions concern syntactically closed tests or explicit changes of signature. They do not decide the internal local $\mathrm{BF}_t$ in an infinite relational signature. Two independent GPT-6 research agents checked the two directions on 27 November 2026.
+
+### The four-proposition cell under signature Strong Possibility and local Barcan
+
+Let $\Sigma$ be any set of free typed constants. Write $B$ for the closed pure assertion that $\Box\mathrm{ND}_t$ holds, that there is exactly one individual, and that there are four propositions. At a point with $\mathrm{SP}_\Sigma$ and local $\mathrm{BF}_t$, the following holds for every true proposition $a$. There is a current nonzero proposition $u\le B$ and an accessible point where $a$ holds and the transported $u$ is bottom. Thus even the possible propositions in this single specified region cannot all remain possible on every realization of any current truth.
+
+#### The model for the consistency side condition
+
+Use the ordinary signature-definable coalesced root. Add an auxiliary scalar $d$ and, if needed, one individual marker to the descriptor language. As the bulk take a set of pointed models witnessing each C-consistent closed $\Sigma$-sentence. Expand them by $d=\bot$ throughout and choose the marker freely. Add one further component, the full classical intensional hierarchy over the indiscrete two-world S5 frame with one individual, where $d=\top$. Every public relation is bottom throughout this component and every individual symbol is its sole individual. Use an independent entrance into each pointed component and keep all old postcomposites. The root individuals are the public individual names and the optional marker. Each root relation has an unrestricted current row and one closed descriptor evaluated throughout all old components. Quotient descriptors by equality of their actual old traces. Constants receive their own descriptor. Give $d$ the false current bit.
+
+Term closure uses the current lambda table at the root and the descriptor obtained by substituting the finitely many parameter descriptors at all old arrows. No completeness requirement in the expanded language is needed for this equality-of-traces version. Each bulk $\Sigma$-sentence witness remains unchanged, so the root is $\Sigma$-Maximalist. In the special component exchange the two worlds and transport the full typed hierarchy by the induced automorphism. It fixes every name, including $d$ and the marker, so every closed descriptor at type $t$ there is either top or bottom. The scalar algebra itself has four elements, and $\Box\mathrm{ND}_t$ holds. Thus $d$ is nonzero, it is below $B$, and the root satisfies
+$$
+ \Psi(d)\;:=\;d\ne\bot\ \land\ d\le B\ \land\
+ \forall p^t\,\Box\bigl(d\to(p=\bot\lor p=\top)\bigr).
+$$
+The sentence $\exists d\,\Psi(d)$ lies in the pure language and is consistent with ordinary Maximalism in the actual signature $\Sigma$. The root uses one auxiliary value to witness the existential. The argument allows infinitely many public relation symbols.
+
+#### Two applications of local Barcan
+
+At the putative $\mathrm{SP}_\Sigma+\mathrm{BF}_t$ point $r$, fix any true $a$. Strong possibility of the closed existential gives
+$$
+ \Diamond\exists d\,(\Psi(d)\land\Diamond a).
+$$
+Apply dual $\mathrm{BF}_t$ at $r$ to the displayed predicate. It gives a current $d_0$ and arrows $r\to w\to z$ such that $\Psi(d_0)$ holds at $w$ and $a$ holds at $z$, with every parameter transported along its path. Since $d_0$ is nonzero and below $B$ at $w$, a further point from $w$ satisfies $d_0\land B$. The further point has a proposition unequal to both endpoints. In particular the source satisfies $\Diamond\exists p\,(d_0\land B\land p\ne\top\land p\ne\bot)$. A second application of dual $\mathrm{BF}_t$ at $r$ yields an old $p_0$ witnessing this possibility. Hence
+$$
+ u=d_0\land B\land(p_0\ne\top)\land(p_0\ne\bot)
+$$
+is nonzero at $r$. It is below $B$ by construction. The universal clause of $\Psi$ at $w$ applies to the transported $p_0$, so $u$ there is bottom. Identity persists to $z$, which realizes $a$.
+
+Vicinity would supply a true $a$ such that $a\le\Diamond q$ for every current true $q$. Apply it to $q=\Diamond u$. By $\Diamond\Diamond u=\Diamond u$, this $u$ would still be possible at $z$. Actuality gives Vicinity. The incompatibility with either of these full native hypotheses already follows from the recorded implications from Vicinity plus local Barcan to two-hat-implies-ND and its incompatibility with signature Strong Possibility. The restriction to $u\le B$ is the extra conclusion here.
+
+The argument does not force $d_0$ or $u$ to remain nonzero on a return chosen using an arbitrary initial $a$. A boxed Barcan assumption has an independent, shorter refutation: even ordinary signature Maximalism sees a possible failure of local Barcan, since a C-countermodel can be given any interpretations for its free constants. No box on Barcan is used in either of the two applications above.
+
+#### A single return through all the finite-size cells
+
+Let $N$ be the Frege numbers at individual type. Set
+$$
+ B_n=\Box\mathrm{ND}_t\ \land\ \text{there are four propositions}\
+     \land\ (\operatorname{Suc}_e n)(\lambda x^e.\top).
+$$
+Use a separate special two-world component of every standard positive individual size $j$. In each such component use identity transport on the $j$ individuals, assign all individual names to the same chosen individual, assign bottom to every public relation, and give the auxiliary $d$ the value top. The two-world interchange fixes the individuals pointwise. It again forces every present proposition descriptor to have an endpoint value on every $d$-component. The root's full current rows admit its standard numeral cut. The finite components separate the standard numerals, so these are exactly the actual, pairwise distinct members of $N$ there. Consequently the same root witnesses the single sentence
+$$
+ \exists d\left[
+   \forall n\in N\;\Diamond(d\land B_n)
+   \ \land\
+   \forall p^t\,\Box\bigl(d\to(p=\bot\lor p=\top)\bigr)
+ \right].
+$$
+At this root, $\forall n\in N\,(B_n\ne\bot)$ holds, and $B_n\land B_m=\bot$ for distinct current $n,m\in N$. For the disjointness, the two distinct standard counts cannot count the same instantiated individual universe. These assertions transfer to a signature SP point by universal identity reflection: numberhood is persistent, so its application may be replaced by its identity to top in the universal formula.
+
+At $r$ fix any true $a$ and request a return to $a\land\forall n\in N\,(B_n\ne\bot)$ through the displayed existential. The first application of local Barcan gives the same source $d_0$ for this whole path. Every old $n$ is still a number at $w$. Since $d_0\land B_n$ is possible there, it is possible at $r$. At a realization there are four propositions. Apply source $\mathrm{BF}_t$ to obtain an old $p$ for which
+$$
+ d_0\land B_n\land(p\ne\bot)\land(p\ne\top)
+$$
+is possible. This nonzero source element below $B_n$ has become bottom at $w$ and remains bottom at $z$. At both $w$ and $z$ the image of the entire cell $B_n$ remains nonzero. The arrows $r\to w\to z$ were chosen before the arbitrary index $n$. Thus the same Boolean homomorphism from $r$ to $z$ kills a nonzero part of **each** disjoint $B_n$, including when the starting arithmetic is nonstandard, and preserves the nonzeroness of every entire cell. No simultaneous choice of the $p$'s as an internally represented function is needed.
+
+The model and the two Barcan steps were checked by independent GPT-6 research agents on 27 November 2026.
