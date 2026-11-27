@@ -2,6 +2,8 @@
 
 There is a model of revised Mathematical Possibilism in which individuals are necessarily infinite, propositional Boolean Completeness and Barcan at every type are necessary, and accessible worlds disagree about arithmetic, analysis and CH. There is also a model with the same three necessary principles in which arithmetic and second-order analysis are necessary. Both models lack a join for a countable family of individual properties.
 
+The [free-word variants](stone-terminals-witnessed-possibility.html) satisfy Possibly Witnessed Possibility as well.
+
 ## The terminals and root
 
 Work in ZFC. Use the [Stone-terminal construction](stone-terminal-maximalist.html) with countably infinitely many root individuals $I$ and only the identity root loop. The ordinary terminals are copies of one full classical one-world type hierarchy on $I$. Write $F_\tau$ for its domain at type $\tau$. A second version includes three additional one-world Henkin components, described below. Write $K^j_\tau$ for their domains. There are no arrows between terminals. Use $I=\omega\times\prod_j K^j_e$ as the root individual domain. All ordinary terminals receive the first coordinate, and each additional terminal receives its respective coordinate. The product with no additional components identifies with $\omega$. Interpret any free relational names by top and individual names by fixed individuals and their images.

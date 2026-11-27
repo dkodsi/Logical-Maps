@@ -41,7 +41,7 @@ the words themselves carry no atom movement.
 A pure sentence has the same truth value at every word since there is one
 object. For each realizable pure matrix and ordered list of variable types
 choose one witnessing tuple at that object. There are countably many such
-choices. Use an alphabet of size $\max(\aleph_0,|\Sigma|)$, supplying a
+choices. Use an alphabet of size at least $\max(\aleph_0,|\Sigma|)$, supplying a
 separate last letter for each instance with distinct matching constant
 names. Interpret a participating relational constant on a word $v j$ by
 the row at $v$ of its witness for that matrix, where $j$ labels the
@@ -141,3 +141,41 @@ The selected output must belong to the pair and be fixed by the flip,
 which is impossible. Likewise no supported linear ordering of the
 individuals can compare the two elements of a fresh pair antisymmetrically.
 These failures hold at every stage.
+
+## Intensional Choice and the number of words
+
+Use the countable-support hierarchy on $\omega_1$ pairs described above.
+With a countably infinite alphabet, Intensional Choice holds necessarily at
+every type. With an uncountable alphabet, it already fails for a property
+of individuals. One propositional constant suffices for Logical Necessity
+in both cases.
+
+Suppose first that the alphabet is countable. Its set of finite words is
+countable. If $F$ is necessarily instantiated, use countable choice in the
+metatheory to select $a_w\in F_w$ at every word $w$. At each word give $Y$
+the row $\{a_w\}$. The union of countably many countable supports of the
+$a_w$ supports this entire profile, since the flips fix the words. Thus
+$Y\le F$ and $Y$ is necessarily uniquely instantiated. This works also
+for tuples, taking the union of the finitely many component supports. The
+argument applies at the unique object under every assignment.
+
+For an uncountable alphabet, index the pairs by $i<\omega_1$, write them
+as $C_i$, and fix distinct letters $j_i$. Define an individual property
+$F$ by $F_{j_i}=C_i$ and $F_w=A$ at every other word. Every flip fixes
+$F$, and all its rows are nonempty. If $Y\le F$ were necessarily uniquely
+instantiated, a countable support of $Y$ would miss both members of some
+$C_i$. The transposition of those two members fixes $Y$ and fixes the word
+$j_i$. It exchanges the two elements of $C_i$, although it must preserve the
+singleton $Y_{j_i}\subseteq C_i$. This refutes Intensional Choice
+at the individual input type.
+
+## Boolean completeness at every type
+
+Let $E$ be the current extension of an admitted family of relations. The
+pointwise stabilizer of the family's countable support preserves $E$ as a
+set of entities. Define $L_w=\bigcup_{F\in E} F_w$ at every word. Each
+permutation in this stabilizer fixes $w$ and permutes the relations in $E$,
+so it preserves $L_w$. The common support therefore admits the entire
+profile $L$. Entailment compares relations by inclusion at every word,
+which makes $L$ the least upper bound of $E$. This proves necessary
+Boolean Completeness at all relational types for either alphabet size.

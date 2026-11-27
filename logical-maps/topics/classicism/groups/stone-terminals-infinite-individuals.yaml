@@ -1,14 +1,24 @@
 id: stone-terminals-infinite-individuals
 name: Stone terminals with necessarily infinitely many individuals
 definition: >-
-  The root has countably infinitely many individuals and just the identity loop. The ordinary
-  terminals are copies of the full one-world hierarchy on the naturals, indexed by the Stone
-  space of the product of all nontrivial complete Boolean algebras of size below the strong
-  limit cut in the write-up. A root relation has an unrestricted current row and a locally
-  constant section into the discrete ordinary terminal domain. Give it one independent value
-  for each additional component. Root individuals are tuples of one individual from each independent component and one from the ordinary hierarchy. Entrances project onto their corresponding coordinate. Interpret each
-  relational name by top. Evaluate at the root. {{components}}
+  Take the full one-world hierarchy on the naturals at all ordinary terminals, indexed by the
+  Stone space of the product of all nontrivial complete Boolean algebras of size below the
+  strong limit cut in the write-up. At each root word a relation has an unrestricted row, a
+  locally constant section into the discrete ordinary terminal domain and one independent
+  value for each additional component. Evaluate at the empty word. {{frame}} {{components}}
 parameters:
+  frame:
+    text: Root arrows, individuals and interpretation of the free signature.
+    values:
+      identity: >-
+        Only the identity word occurs. Individuals are tuples of one individual from each
+        additional component and one from the ordinary hierarchy, with coordinate projections
+        at the entrances. Interpret each relational name by top.
+      words: >-
+        Use the free monoid on at least as many letters as there are syntactic instances in
+        the signature. Individuals are arrays of coordinate tuples indexed by words. Word
+        transport shifts suffixes. The constants realize their possible witnesses on
+        disjoint last-letter coordinates.
   components:
     text: Additional isolated one-world classical Henkin components.
     values:
@@ -69,8 +79,10 @@ arguments:
   date: '2026-11-26'
   writeup: stone-terminals-infinite-individuals
   text: >-
-    A relation with the prescribed current row and empty exits is inextensible. Every proper
-    target is one-world, so a weakly rigid root relation remains weakly rigid at every target.
+    Use the prescribed current row and bottom at every other coordinate for an inextensible
+    coextension. Word rows of a weakly rigid relation are exact images of its current row.
+    Copying a tester into a suffix extends the weak inextensibility argument to every word.
+    All other targets have only their identity arrow.
 - id: atomic-profiles
   holds: [necessary-strong-actuality, necessary-atoms-are-strong-atoms-r]
   fails: [atomicity-t, self-atoms-are-atoms-t]
@@ -142,3 +154,24 @@ arguments:
     A rigid subcollection at an isolated ordinary terminal can have noninternal
     image under the bijection. Lifting it would require a root weakly rigid
     subrelation with precisely that noninternal image in the nonstandard component.
+- id: identity-guard
+  holds: [truths-are-nd-necessary]
+  choice: free
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-26'
+  writeup: stone-terminals-witnessed-possibility
+  text: >-
+    The proposition true only at the identity word cannot return to truth after any
+    nonidentity arrow. It witnesses ND-necessity for every current truth.
+- id: witnesses-in-the-signature
+  when: {frame: words}
+  holds: [possibly-witnessed-possibility-r]
+  choice: uses
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-26'
+  writeup: stone-terminals-witnessed-possibility
+  text: >-
+    Each possibly witnessed matrix and tuple of distinct constants gets its own last
+    letter. Copy a root witness into a suffix, or install a terminal witness at that
+    letter's entrance into the relevant component. The ordinary section for any
+    terminal prescription can be constant. All assignments are disjoint.

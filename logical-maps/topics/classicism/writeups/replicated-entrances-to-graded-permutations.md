@@ -84,7 +84,7 @@ Every entrance is onto at each sort: for a given upper value $b$ take
 a central preimage $x$ under $m$ and choose no exceptional rows.
 Every upper arrow is onto as well. Thus every future instance of a
 predicate has a preimage along the witnessing arrow, proving necessary
-[BF](../principles/necessary-barcan-r.html) at every type.
+[BF](../index.html#principle/necessary-barcan-r) at every type.
 
 A single tuple confined to the current root row is an atom. So is a
 single tuple confined to one finite-indexed entrance $(m,i)$: take the
@@ -94,9 +94,9 @@ becomes bottom, since proper continuations only reach an
 infinite-indexed entrance. Both sorts of atoms are strong. A nonzero
 root relation has an occupied root row or an occupied finite-indexed
 entrance row, since an occupied central row is also occupied at all
-but finitely many copies. This proves [Strong Atomicity](../principles/strong-atomicity-r.html)
+but finitely many copies. This proves [Strong Atomicity](../index.html#principle/strong-atomicity-r)
 there. The root's identity-only truth and its counterpart at $s$ give
-necessary [Strong Actuality](../principles/necessary-strong-actuality.html).
+necessary [Strong Actuality](../index.html#principle/necessary-strong-actuality).
 Self-Atomicity holds at both points. The failure of Atomicity at $s$
 proves the failure of necessary propositional Atomicity at the root.
 
@@ -106,7 +106,7 @@ $i\in\mathbb N$. Its actual row and its graph to the corresponding
 distinct Frege numerals counted at type $t$ are admitted. The numerals
 are distinguished by current sets of propositions of every finite
 size; arbitrary current rows supply these sets. This is the map's
-[countability test](../background/arithmetic.html).
+[countability test](../index.html#background/arithmetic).
 Any least upper bound must be true at every even copy and false at
 every odd copy: the complement of each odd singleton is an upper
 bound for the entire family. This violates eventual agreement with

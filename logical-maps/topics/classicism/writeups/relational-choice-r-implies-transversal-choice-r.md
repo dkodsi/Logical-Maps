@@ -231,3 +231,21 @@ one-row criterion uses only the instance from $\sigma t$ to $\sigma$.
 
 The internal two-dimensional refinement was developed and independently
 checked by two OpenAI Codex agents, prompted by Daniel Kodsi, 26 November 2026.
+
+## Supported rows on maps of individuals
+
+In a class of action models used to test the choice conjecture, one instance of Relational Choice already forces every current tuple subset to be represented by a relation. The argument uses choice in the external set theory.
+
+Fix an object $o$ with individual set $A$ and a group $G\leq\operatorname{Sym}(A)$ of allowed automorphisms. Suppose all profiles satisfying the following two conditions are admitted. First, an allowed set $P\subseteq A$ pins the profile. Among arrows with a common target and common auxiliary labels, agreement of their individual maps on $P$ implies equality of the whole current tuple rows. Second, profiles commute with the action of target automorphisms on rows and tuples. Assume the identity arrows and all $g\in G$ carry the same auxiliary labels, and composition with these automorphisms preserves those labels. An endomorphism acts on source entities by precomposition; for the automorphisms this is the usual group action. The empty pin is allowed. These assumptions allow noninvertible arrows, multiple objects and word labels. They require the pins to consist of actual individuals at $o$.
+
+Suppose Relational Choice holds at $o$ for inputs of type $eet$ and outputs of type $e$. For a binary relation entity $X$, let $G_X$ be its stabilizer as an entity. Define the current serial relation $U(X,y)$ to require that some member of $G_X$ moves $y$, whenever $G_X$ moves any individual. If $G_X$ acts trivially, allow every $y$. Conjugation of stabilizers makes this relation $G$-invariant. Taking this same row at each arrow into $o$ and the empty row at other targets gives an admitted profile with empty pin.
+
+Let $S$ be a selector for $U$, with pin $P$. Its current graph is invariant under the pointwise stabilizer $G_P$. Indeed, the identity and every $g\in G_P$ agree on $P$, and target equivariance sends one row to the $g$-translate of the other. Well-order $P$ externally, using the reflexive ordering so that every member of $P$ occurs in its field. Define $X_P$ at each arrow $f$ by the direct image of this ordering under $f$ on individuals. This is a target-equivariant profile pinned by $P$. A permutation fixing $P$ pointwise fixes the entire entity $X_P$. Conversely a permutation fixing $X_P$ preserves the current ordered field $P$ and hence fixes every element of $P$. Thus $G_{X_P}=G_P$.
+
+The unique output $y$ of $S$ at $X_P$ must be fixed by $G_P$. But if $G_P$ moves any individual, $U(X_P,y)$ requires some element of $G_P$ to move $y$. This contradiction gives $G_P=\{1\}$.
+
+Now take *any* external subset $E$ of a current tuple domain. At each arrow $f$ into $o$ with the identity labels, assign the row $g[E]$ if $f|_P=g|_P$ for some $g\in G$; take the empty row otherwise, including at other targets and labels. The permutation $g$ is unique whenever it exists, since $G_P$ is trivial. The resulting profile is pinned by $P$, commutes with all target automorphisms and has current row $E$. In particular an externally chosen transversal of any current equivalence relation has an admitted profile. Thus these models cannot separate full Relational Choice from Transversal Choice at $o$.
+
+The argument requires admission of every profile satisfying the stated pin and equivariance conditions, including the well-order profile for the selector's pin. The unrestricted implication for Henkin models remains open.
+
+Ordinary proof by OpenAI Codex (GPT-6), prompted by Daniel Kodsi, 26 November 2026. Two other OpenAI Codex agents independently reviewed the proof and its model hypotheses.
