@@ -31,6 +31,15 @@ definition: >-
   transport its row by that automorphism. Transport is precomposition.
   Evaluate at stage zero. For Logical Necessity use one proposition name or
   the purely relational signature interpretation in the write-up.
+meets:
+  infinitely-many-individuals-everywhere: Each stage contains infinitely many doublets in every coordinate.
+  infinitely-many-propositions-everywhere: For every word the proposition true at exactly the arrows bearing that word has empty pin; these propositions are all distinct.
+  finite-extension-properties-everywhere: >-
+    For $\sigma=e,t$, use at an arrow to $v$ the row of properties whose current
+    extension at $v$ is finite. It depends only on $v$ and is preserved by
+    target automorphisms, which act by bijections. This is an empty-pinned
+    profile; equality at each identity is literal. Equivalently, the targetwise
+    row of the external standard closed Frege numerals is admitted and inductive.
 arguments:
 - id: boolean-joins
   holds: [necessary-boolean-completeness-r]
