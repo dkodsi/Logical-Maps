@@ -56,7 +56,7 @@ $$
  \Box\bigl(G\to\forall n\in N\,X(n)\bigr).
 $$
 
-The numerical Barcan inference from the join is also verified in Lean. [Guarded Barcan derivation](../lean/Classicism/Results/Research/RecurrentCells.lean)
+Lean verifies the native countability predicate for this family at its counting type and the numerical Barcan inference from its join. [Guarded Barcan derivation](../lean/Classicism/Results/Research/RecurrentCells.lean)
 
 ## Arithmetic gives the contradiction
 

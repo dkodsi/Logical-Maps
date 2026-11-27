@@ -6330,7 +6330,7 @@ def independent_disjoint_propositions_source_finite_support_permutations : Prop 
 
 /-- `independent-numeral-predicates`
 
-Pointed pure models with one independent relation: a witness satisfying 5 principles
+Pointed pure models with one independent relation: a witness satisfying 6 principles
 and violating 2. -/
 def independent_numeral_predicates : Prop :=
   ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
@@ -6339,6 +6339,7 @@ def independent_numeral_predicates : Prop :=
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBarcan.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBooleanCompleteness.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecRigidPower.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _) ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.witnessedPossibility _) ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.RigidComprehension.schemaIn
 
@@ -6378,7 +6379,7 @@ def independent_numeral_predicates_source_descriptor_entrance_to_two_returns : P
 /-- `independent-numeral-predicates-source-finite-support-sections-and-projection`
 
 Pointed pure models with one independent relation [Finite-support action model: N and N×2, sections and projection]: a witness satisfying 4 principles
-and violating 2. -/
+and violating 3. -/
 def independent_numeral_predicates_source_finite_support_sections_and_projection : Prop :=
   ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
     Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.independence _) ∧
@@ -6386,12 +6387,13 @@ def independent_numeral_predicates_source_finite_support_sections_and_projection
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecessityOfDistinctness.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecStrongActuality.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.witnessedPossibility _) ∧
-    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Plenitude.schemaIn
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Plenitude.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _)
 
 /-- `independent-numeral-predicates-source-finite-support-truncations`
 
 Pointed pure models with one independent relation [Finite-support action model: truncations of N]: a witness satisfying 7 principles
-and violating 4. -/
+and violating 5. -/
 def independent_numeral_predicates_source_finite_support_truncations : Prop :=
   ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
     Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.independence _) ∧
@@ -6404,12 +6406,13 @@ def independent_numeral_predicates_source_finite_support_truncations : Prop :=
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.witnessedPossibility _) ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompletenessT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.CountableBooleanCompleteness.schemaIn ∧
-    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WeaklyInextensibleComprehension.schemaIn
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WeaklyInextensibleComprehension.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _)
 
 /-- `independent-numeral-predicates-source-finite-support-two-object-all-maps-at-singleton`
 
 Pointed pure models with one independent relation [Finite-support action model: N and singleton, all maps, evaluated at the singleton]: a witness satisfying 8 principles
-and violating 3. -/
+and violating 4. -/
 def independent_numeral_predicates_source_finite_support_two_object_all_maps_at_singleton : Prop :=
   ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
     Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.independence _) ∧
@@ -6422,7 +6425,8 @@ def independent_numeral_predicates_source_finite_support_two_object_all_maps_at_
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TameRigidity.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.witnessedPossibility _) ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecVicinity.schemaIn ∧
-    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecWeaklyRigidPower.schemaIn
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecWeaklyRigidPower.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _)
 
 /-- `independent-numeral-predicates-source-four-proposition-entrance-to-paired-stages`
 
@@ -6453,7 +6457,7 @@ def independent_numeral_predicates_source_full_infinite_s5_metatheory_socks : Pr
 
 /-- `independent-numeral-predicates-source-full-monoid-ac-equals-bc`
 
-Pointed pure models with one independent relation [Full action model: the monoid with ac = bc]: a witness satisfying 8 principles
+Pointed pure models with one independent relation [Full action model: the monoid with ac = bc]: a witness satisfying 9 principles
 and violating 2. -/
 def independent_numeral_predicates_source_full_monoid_ac_equals_bc : Prop :=
   ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
@@ -6465,25 +6469,27 @@ def independent_numeral_predicates_source_full_monoid_ac_equals_bc : Prop :=
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecSelfAtomicity.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.noContingency) ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TruthsAreNDNecessary.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _) ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.witnessedPossibility _) ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.StrongAtomicityT.schemaIn
 
 /-- `independent-numeral-predicates-source-full-omega-chain-new-individuals`
 
 Pointed pure models with one independent relation [Full action model: ω-chain, one new individual at each step]: a witness satisfying 2 principles
-and violating 3. -/
+and violating 4. -/
 def independent_numeral_predicates_source_full_omega_chain_new_individuals : Prop :=
   ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
     Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.independence _) ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecPotentialInfinityE.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.witnessedPossibility _) ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.infinityE) ∧
-    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleInfinityE.schemaIn
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleInfinityE.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _)
 
 /-- `independent-numeral-predicates-source-full-two-object-double-retraction-individuals-fixed-infinite`
 
 Pointed pure models with one independent relation [Full action model: two-object retract with two retractions [infinitely many fixed individuals]]: a witness satisfying 5 principles
-and violating 3. -/
+and violating 4. -/
 def independent_numeral_predicates_source_full_two_object_double_retraction_individuals_fixed_infinite : Prop :=
   ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
     Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.independence _) ∧
@@ -6493,7 +6499,8 @@ def independent_numeral_predicates_source_full_two_object_double_retraction_indi
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecTransversalChoice.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.witnessedPossibility _) ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecSelfAtomsAreAtomsT.schemaIn ∧
-    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.StrongActuality.schemaIn
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.StrongActuality.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _)
 
 /-- `independent-numeral-predicates-source-paired-individuals-two-object`
 
@@ -6729,7 +6736,7 @@ def independent_numeral_predicates_source_universal_actual_diagonal_tails : Prop
 /-- `injective-integer-stages-top`
 
 Integer stages with injective coordinates and a top proposition name: a witness satisfying 13 principles
-and violating 8. -/
+and violating 9. -/
 def injective_integer_stages_top : Prop :=
   ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
     Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.noContingency) ∧
@@ -6749,6 +6756,7 @@ def injective_integer_stages_top : Prop :=
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TameRigidity.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BarcanT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.RelationalChoice.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _) ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.witnessedPossibility _) ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.separatedStructure _) ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.independence _) ∧
@@ -6757,7 +6765,7 @@ def injective_integer_stages_top : Prop :=
 /-- `injective-integer-stages`
 
 Integer stages with injective old-and-new coordinates: a witness satisfying 11 principles
-and violating 4. -/
+and violating 5. -/
 def injective_integer_stages : Prop :=
   ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
     Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.logicalNecessity _) ∧
@@ -6774,7 +6782,8 @@ def injective_integer_stages : Prop :=
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.InextensibleComprehension.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TameRigidity.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BarcanT.schemaIn ∧
-    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.RelationalChoice.schemaIn
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.RelationalChoice.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _)
 
 /-- `injective-stages-with-surjections`
 
@@ -7082,7 +7091,7 @@ def isolated_root_before_truncation_words : Prop :=
 /-- `iterated-ultrafilter-fronts-top`
 
 Iterated ultrafilter fronts with a top proposition name: a witness satisfying 10 principles
-and violating 8. -/
+and violating 9. -/
 def iterated_ultrafilter_fronts_top : Prop :=
   ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.ModalWellOrdering.schemaIn ∧
@@ -7099,6 +7108,7 @@ def iterated_ultrafilter_fronts_top : Prop :=
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Barcan.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompletenessT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WeaklyRigidPower.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _) ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.witnessedPossibility _) ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.separatedStructure _) ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.independence _) ∧
@@ -7129,7 +7139,7 @@ def maximalist_diagonal_tails_fixed : Prop :=
 /-- `pair-shift-with-an-ultrafilter-character`
 
 Pair shift with an ultrafilter character: a witness satisfying 8 principles
-and violating 3. -/
+and violating 4. -/
 def pair_shift_with_an_ultrafilter_character : Prop :=
   ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
     Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.logicalNecessity _) ∧
@@ -7142,7 +7152,8 @@ def pair_shift_with_an_ultrafilter_character : Prop :=
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAxiomOfInfinityT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AtomsAreSelfAtoms.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompleteness.schemaIn ∧
-    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BarcanRelational.schemaIn
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BarcanRelational.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _)
 
 /-- `paired-descriptor-sites-with-an-idempotent`
 
@@ -7337,7 +7348,7 @@ def separate_exits_for_pure_and_named_witnesses : Prop :=
 /-- `sequence-cover-of-a-swapped-terminal-pair`
 
 Sequence cover of a swapped terminal pair: a witness satisfying 7 principles
-and violating 3. -/
+and violating 4. -/
 def sequence_cover_of_a_swapped_terminal_pair : Prop :=
   ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.StrongAtomicity.schemaIn ∧
@@ -7349,11 +7360,12 @@ def sequence_cover_of_a_swapped_terminal_pair : Prop :=
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBarcanT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAtomsAreSelfAtoms.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAtomsAreStrongAtoms.schemaIn ∧
-    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBarcanRelational.schemaIn
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBarcanRelational.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _)
 
 /-- `sequence-cover-of-both-levels-of-the-merged-fork`
 
-Sequence cover of both levels of the fork with a merged composite: a witness satisfying 6 principles
+Sequence cover of both levels of the fork with a merged composite: a witness satisfying 7 principles
 and violating 2. -/
 def sequence_cover_of_both_levels_of_the_merged_fork : Prop :=
   ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
@@ -7363,13 +7375,14 @@ def sequence_cover_of_both_levels_of_the_merged_fork : Prop :=
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAtomsAreSelfAtoms.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecStrongActuality.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Barcan.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _) ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAtomsAreStrongAtomsT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBarcanT.schemaIn
 
 /-- `sequence-cover-of-periodic-integer-entrance`
 
 A sequence cover of the periodic integer entrance: a witness satisfying 5 principles
-and violating 6. -/
+and violating 7. -/
 def sequence_cover_of_periodic_integer_entrance : Prop :=
   ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.StrongAtomicity.schemaIn ∧
@@ -7382,7 +7395,8 @@ def sequence_cover_of_periodic_integer_entrance : Prop :=
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.SelfAtomsAreAtomsT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBarcanRelational.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.CountableBooleanCompleteness.schemaIn ∧
-    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompletenessT.schemaIn
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompletenessT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _)
 
 /-- `singleton-free-words-with-definable-exits`
 

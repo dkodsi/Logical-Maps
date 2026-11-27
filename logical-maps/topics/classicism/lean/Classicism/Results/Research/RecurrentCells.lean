@@ -16,6 +16,12 @@ def cell (G : Prop) (J : Num σ → Prop) (n : Num σ) := G ∧ J n
 def family (G : Prop) (J : Num σ → Prop) (p : Prop) :=
   ∃ n, FiniteCardinality n ∧ p = cell G J n
 
+/-- The precise native countability predicate holds for this family at its counting sort. -/
+theorem countable_family (G : Prop) (J : Num σ → Prop) : Ctbl σ (family G J) :=
+  ⟨fun p n => p = cell G J n, fun _ _ hpq =>
+    ⟨fun h => h.elim fun _ ⟨_, hp, hq⟩ => hp.trans hq.symm,
+     fun hpq' => hpq.1.elim fun n ⟨hn, hp⟩ => ⟨n, hn, hp, hpq'.symm.trans hp⟩⟩⟩
+
 def uniqueLabel (J : Num σ → Prop) := ∀ n k, FiniteCardinality n → FiniteCardinality k →
   J n → J k → k = n
 
@@ -110,3 +116,4 @@ end Classicism.Proofs.RecurrentCells
 
 #classicism_derive Classicism.Proofs.RecurrentCells.guarded_numerical_barcan
 #classicism_derive Classicism.Proofs.RecurrentCells.guarded_numerical_barcan_of_join
+#classicism_derive Classicism.Proofs.RecurrentCells.countable_family

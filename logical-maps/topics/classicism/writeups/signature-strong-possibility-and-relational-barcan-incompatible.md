@@ -55,6 +55,68 @@ Thus $C$ holds necessarily of each current $Y$, but the tester is not the top pr
 
 The failure extends to each individual input type $\tau=\beta_1\ldots\beta_n t$ with at least one relational argument $\beta_i=\bar\gamma t$. Indeed $tt$ is a definable retract of $\tau$. Encode $Y^{tt}$ by the relation with value $Y(\forall\bar z\,X_i[\bar z])$ on its arguments. To decode $Z^\tau$ at $p^t$, take its $i$th argument to be $\lambda\bar z.p$ and universally bind the other arguments. The decoder composed with the encoder is the identity on operators because all domains are nonempty. This also covers empty $\bar\gamma$. Pull $C$ back along the decoder. Every current input then passes necessarily, and encoding the failing operator at the future point still fails the new tester. No such retract is asserted at scalar input.
 
+## Distinctness-preserving possibility of scalar Barcan failure
+
+In the definition of $B(f)$ above, replace $\Box\mathrm{BF}_e$ by local $\mathrm{BF}_e$. With this weaker guard put $M(Y)=\exists f\,(B(f)\land S_{tt}Y\ne Y)$ and $m=\exists Y^{tt}M(Y)$. At any pure Strong Possibility point, or any signature Strong Possibility point for an arbitrary first-order signature, each old $Y$ has $M(Y)=\bot$ while $\Diamond_{\ne}m$ holds. In particular $\Diamond_{\ne}\neg\mathrm{BF}_t$ holds. The movement in this assertion concerns a later operator. It does not refute scalar Barcan at the source.
+
+### The unboxed individual guard
+
+For a public predicate $c$ of individuals the scalar fixing clause gives
+$\forall x_1\cdots x_k\,\Box(f(c[\bar x])=c[\bar x])$. Holding
+$x_1,\ldots,x_{k-1}$ fixed, apply local individual Barcan to the last
+variable. Repeat at the same point, using successively the matrices
+with the later variables universally bound. The result is
+$\Box\forall\bar x(f(c[\bar x])=c[\bar x])$. It identifies $S_fc$
+with $c$ as an entity. The identity persists under every transport.
+This is the only step of the term induction that uses individual Barcan.
+
+At the signature descriptor root a guarding $f$ fixes every interpreted
+closed descriptor as a whole. To see why it also fixes a root entity
+whose current row differs from its descriptor's, induct on type.
+Individuals are unchanged, and propositions are fixed by the guard.
+For a relation $Y$ pick its closed descriptor $u$. Along every proper
+arrow $Y$ and $u$ have identical transports, so the necessary identity
+$S_fu=u$ gives agreement there. At the identity arrow, apply the
+induction hypothesis to every current argument and to the resulting
+lower-type value of $Y$. This gives agreement of the current rows,
+hence $S_fY=Y$. The argument on proper exits in the earlier proof
+uses the same term induction with the transported descriptors. Thus
+the descriptor root satisfies $\forall Y(M(Y)=\bot)$. Its universal
+identity form transfers to the corresponding Strong Possibility point.
+
+### A Maximalist point with a moved operator
+
+Let $K$ be a pointed signature Maximalist model with local individual
+Barcan, for example the pinned-interpretations root. Use its entire
+cone as one component and a full four-world S5 clique with singleton
+individuals as a second. At a new root use the individual carrier of
+$K$, mapping identically into $K$ and constantly to the private
+clique. At each relational type allow an arbitrary current row, a
+whole entity from $K$, and a whole entity in the clique invariant
+under $H=\langle(12)(34)\rangle$. Give each public symbol its
+interpretation in the $K$ coordinate. An arbitrary invariant choice
+is available in the clique. Lambda closure in each coordinate follows
+from ordinary evaluation in $K$ and equivariance of clique evaluation
+under the external action of $H$.
+
+The new root reaches $K$ and so has signature Maximalism. If every
+current individual satisfies a tester necessarily, its transport to
+$K$ necessarily holds of each individual of $K$. Local individual
+Barcan at $K$ gives the result over that cone. Every individual in
+the private component is already an image. This establishes local
+individual Barcan at the new root.
+
+Let $f$ read the current bit at the root, be the identity at $K$ and
+act by $(12)$ on the clique. It necessarily is a Boolean involution
+and fixes every current scalar as a whole, since every current clique
+coordinate is a union of $H$-orbits. Take for $Y$ any operation with
+private coordinate $(13)(24)$. Its conjugate by $f$ differs on the
+private clique, so $m$ holds at this Maximalist root. Thus Strong
+Possibility gives $\Diamond_{\ne}m$ at the original point. At every
+$m$-point local scalar Barcan fails. Otherwise $\forall p(fp=p)$
+would give $\Box\forall p(fp=p)$ by scalar Barcan and necessary
+identity, making $f$ the identity and $S_fY=Y$.
+
 ## Intensional Choice
 
 Dorr’s October result already excludes local Intensional Choice under ordinary pure Maximalism, using an individual parameter. The same construction here supplies a single closed pure property of operators under either pure or signature Strong Possibility. [Dorr’s individual-type argument](../index.html#result/maximalism-incompatible-with-intensional-choice) For each fixed relational type $\tau$, abbreviate the tester $\forall f(B(f)\to S_\tau Z=Z)$ by $C_\tau(Z)$. At the corresponding descriptor Maximalist root every current $Z$ satisfies $C_\tau(Z)=\top$. This universally quantified identity reflects as above, so every actual $Z$ at the Strong Possibility source passes its typed test necessarily. Only the first conjunct of the preceding reflection is needed here. For pure Strong Possibility use the pure signature and its single auxiliary individual marker. For a higher-order public signature the established inconsistency applies.
