@@ -1,13 +1,18 @@
-# Strong Possibility (signature Σ) ⇒ ⊥ (conjecture)
+# Strong Possibility (signature Σ) ⇒ ⊥
+
+**Theorem.** Strong Possibility is inconsistent for every set-sized free signature $\Sigma$ admitted by the map. The same two closed pure sentences witness the contradiction in every signature. One is propositional Atomlessness. The other uses a six-place relation on individuals to test the Russell–Myhill collision. Each has an ordinary Maximalist witness interpreting the given signature. The [full proof](strong-possibility-r-inconsistent.html) includes the [construction with all signature constants](strong-possibility-r-inconsistent.html#extension-to-an-arbitrary-free-signature).
+
+The full proof is by OpenAI Codex (GPT-6), prompted by Daniel Kodsi, 27 November 2026. Independent GPT-6 researchers checked the interpretation of all individual and higher-type names and the use of both same-signature Maximalist models. The following argument is the earlier proof for higher-order signatures.
+
+## The November 22 argument
 
 The question of the consistency of Strong Possibility is raised at the end of *Classicism*.  This conjecture was added on 22 November 2026, as a site for the proof below, which shows that it holds for a broad range of signatures Σ. Essentially: classicism forces a Russell–Myhill collision, and different
 maximalist models can place its witness differently. Claude Fable 5.2
 (Anthropic), prompted by Cian Dorr, found the sentences and the models and
-wrote the proofs below, 21–22 November 2026. Cian Dorr checked the argument on 25 November 2026. No Lean verification exists yet.
+wrote the proofs below, 21–22 November 2026. Cian Dorr checked the argument on 25 November 2026. The November 22 argument was recorded with mathematical verification.
 
-**Status.** Proved when $\Sigma$ has a constant of type 
-$\beta_1\cdots\beta_n t$, with some $\beta_i\ne e$.  Open when $\Sigma$ is a *first-order* signature: one in which every constant is an individual
-constant, a propositional constant, or a predicate of individuals.
+**Scope of the earlier proof.** It applies when $\Sigma$ has a constant of type
+$\beta_1\cdots\beta_n t$, with some $\beta_i\ne e$.  The new proof also covers first-order signatures, whose constants are individual constants, propositional constants or predicates of individuals.
 
 The Appendix below proves an easier version of the theorem, which requires a constant of type $\beta_1\cdots\beta_n t$ where some $\beta_i$ itself has an argument of a type other than $e$: for instance $\beta_i=t\to t$, but not $\beta_i=et$.  
 
@@ -284,13 +289,9 @@ This proves the Theorem.
   operators and not only one argument at a time, and a shorter argument
   with a unique twin is available. It is in the Appendix.
 
-## What is open
+## First-order signatures
 
-The signatures all of whose constants are individual constants,
-propositional constants or predicates of individuals. No closed term then
-has a freely choosable root extension on relational arguments, and nothing
-is known. The question includes Strong Possibility (pure), left open in
-*Classicism*.
+For individual constants, propositional constants and predicates of individuals, the preceding argument lacks a freely choosable root extension on relational arguments. The [six-place construction](strong-possibility-r-inconsistent.html#the-closed-terms) uses only pure terms and supplies the missing case.
 
 ## Appendix: constants with a higher-order argument
 

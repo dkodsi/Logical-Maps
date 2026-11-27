@@ -2,52 +2,69 @@ id: strong-possibility-signature-r-inconsistent
 premises:
 - strong-possibility-signature-r
 conclusion: false
-status: conjectured
+status: proved
+was_conjectured: true
 certificate:
   source_id: misc
   produced_by: Cian Dorr (the conjecture, and the idea that different maximalist models can place the
     witness of a Russell–Myhill collision differently), with Claude Fable 5.2 (Anthropic), prompted by
     Cian Dorr, who found the sentences and the models and wrote the partial proof, 21–22 November
-    2026
+    2026. OpenAI Codex (GPT-6), prompted by Daniel Kodsi,
+    supplied the full proof on 27 November 2026.
   recorded_by: Claude Fable 5.2 (Anthropic), prompted by Cian Dorr, 22 November 2026
   checked_by:
-  - Cian Dorr (the proof in the write-up, for signatures with a constant having an argument of a type other than e), 25 November 2026
+  - Cian Dorr checked the earlier restricted proof for signatures with a higher-order argument
+    on 25 November 2026.
+  - Independent OpenAI Codex (GPT-6) researchers, prompted by Daniel Kodsi, checked the typed
+    construction, descriptor projection and restoration of the guard on 27 November 2026.
+  - Two further independent reviews checked arbitrary sets of individual and higher-type names
+    and both ordinary Maximalist witnesses in the specified signature.
+  - Lean 4 verified the generated map statement for every admitted signature, 27 November 2026.
   date: '2026-11-22'
-  lean: stated
+  lean: verified
+  lean_ref: Classicism.Map.strong_possibility_signature_r_inconsistent
 sources:
 - Cian Dorr, conjecture of 22 November 2026.
 - Claude Fable 5.2 (Anthropic), prompted by Cian Dorr, 21–22 November 2026, for the partial proof in the
   write-up.
+- OpenAI Codex (GPT-6), prompted by Daniel Kodsi, 27 November 2026, the six-place Russell–Myhill construction and the two incompatible pure instances.
 source_names:
 - Dorr 22 Nov
 - Fable 22 Nov
-proof: ''
+- Codex via Kodsi
+proof: >-
+  Let S be the type of six-place relations on individuals. The write-up defines
+  a closed pure operator Q, the predicate ρ(x) saying that some F satisfies
+  QF = x and rejects x, and d = Qρ. Classicism proves ρ(d), hence provides F with
+  QF = d and Fd distinct from top. At a definable Maximalist root, each F has a
+  term descriptor f. An auxiliary site for each old arrow and each target tuple
+  tests the whole six-place relation d. It follows that provable Qf = d entails
+  provable f(d) = top. Thus the descriptor root satisfies the sentence Ψ saying
+  that Strong Actuality holds and that, whenever QF = d, every continuation
+  failing Strong Actuality has Fd = top. A second ordinary Maximalist root has
+  an atomless algebra of propositions. Its distinctness-preserving possibility
+  excludes Strong Actuality. At a point satisfying both possibility instances,
+  restore the true guard “Strong Actuality fails and Fd is distinct from top”
+  through a Ψ-point. The identity QF = d persists, so Ψ forces Fd = top on
+  restoration, a contradiction.
+  In the term test every relational name retains its old value and each
+  individual name has its own eight-element fibre at each auxiliary site.
+  The descriptor and atomless roots are ordinary Maximalist models in the
+  specified signature. Both sentences therefore have the required licences
+  even with arbitrarily many names.
 references:
 - paper: bacon-dorr-classicism
   role: background
   locator: §2.5, pp. 37–39; §2.6, pp. 41–42
   note: Strong Possibility and the distinctness-preserving modality; its consistency is left open there.
 notes: >-
-  Conjectured for every signature $\Sigma$ of the kind the map assumes. Proved, in the write-up, when
-  $\Sigma$ has a constant with an argument of a type other than $e$: for instance a constant of type
-  $t\to t$, $(e\to t)\to t$ or $(t\to t)\to t$. For such a $\Sigma$ a closed term $r$ of type $t\to t$
-  built from the constant can be made true of any chosen set of root propositions in the model
-  [[coalesced-definable-root-signature]]. From $r$ one defines a pairing, a closed term $Q$ of type
-  $(t\to t)\to t$, and two existential sentences $E_1$, $E_2$ that split the Russell–Myhill collision
-  for $Q$ by whether its witness agrees with $\rho$ at $\top$. C($\Sigma$) proves $E_1\lor E_2$, and
-  Maximalism (signature Σ) is consistent with $\neg E_1$ and with $\neg E_2$, by two members of that
-  family of models that differ in the root extension of the constant. Each $E_i$ is an existential
-  closure of identities and distinctnesses, so C proves $E_i\to\Box_{\ne}E_i$, and Strong Possibility
-  (signature Σ) is refuted outright.
-
-
-  Not proved: the signatures every constant of which is an individual constant, a propositional
-  constant or a predicate of individuals. No closed term then has a freely choosable root extension
-  on relational arguments. This case contains the question for the pure language, Strong Possibility
-  (pure), which the source leaves open.
-
-
-  What would settle it: for such a signature, either a disjunction of existential identity sentences
-  that Maximalism (signature Σ) proves without proving a disjunct, or a model of Strong Possibility
-  (signature Σ). A model for some $\Sigma$ would refute the conjecture as stated for arbitrary
-  $\Sigma$.
+  Cian Dorr conjectured the result for arbitrary signatures. The 21–22 November
+  proof by Cian Dorr and Claude Fable 5.2 (Anthropic), prompted by Cian Dorr,
+  established it for signatures containing a constant with an argument of type
+  other than e. The new proof includes all first-order signatures. Its shared
+  pure argument appears in [[strong-possibility-r-inconsistent]].
+changes:
+- date: '2026-11-27'
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  summary: Recorded the full inconsistency proof using a closed pure six-place test and
+    two individually Maximalist-compatible sentences.
