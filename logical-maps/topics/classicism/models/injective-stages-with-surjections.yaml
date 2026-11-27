@@ -67,3 +67,19 @@ arguments:
     the individual and proposition domains are infinite everywhere.
     Guarded arithmetic is standard and the necessary Peano guard gives
     exact transport on the number row.
+- id: rigid-power
+  holds: [necessary-rigid-power-r]
+  choice: uses
+  writeup: injective-stages-with-surjections
+  text: >-
+    Use representatives which are bijections onto the permitted injection
+    ranges and have auxiliary surjections with every fibre of size
+    $\kappa^+$. Their rows in a weakly rigid relation are the direct images
+    of its current extension. Composites retain the auxiliary fibre size,
+    so the virtual injection argument for the integer stages makes every
+    supported subset of a rigid bound rigid under these rows. To lift a
+    future rigid subrelation, normalize the auxiliary pins of preimages
+    by selecting one point in each fibre outside the bound's fixed pin.
+    Closing these preimages under source symmetries fixing the pulled-back
+    target pin still maps into the subrelation, by its persistence under
+    target surjections. This proves the power assertion at every stage.

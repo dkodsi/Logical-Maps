@@ -81,3 +81,20 @@ arguments:
     Additional source probes carry its ordinary support to every arrow of
     that kind. The number of kinds and the resulting common pin are at
     most the chosen support bound.
+- id: rigid-power
+  holds: [necessary-rigid-power-r]
+  choice: uses
+  writeup: injective-integer-stages
+  text: >-
+    At an arrow bijective onto the ranges permitted by its kind, every weakly
+    rigid relation has as its row the direct image of its current extension.
+    A symmetry-supported subset of the current extension of a fully rigid
+    relation again gives a fully rigid relation when defined by these rows.
+    For two successive representatives, their composite differs from an
+    onto-range representative on the left by an injection of the ordinary
+    pools fixing the combined parameter pin and all target markers. This
+    injection acts by local interpolation with symmetries. Full rigidity
+    makes it surjective on the larger representative row, whence it is
+    also surjective on the supported subset. A future rigid subrelation
+    therefore lifts by taking its inverse image within the current bound
+    at a representative. The proof applies at every stage.

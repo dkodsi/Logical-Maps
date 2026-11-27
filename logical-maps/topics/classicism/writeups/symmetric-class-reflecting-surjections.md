@@ -193,3 +193,5 @@ These two proofs are due to OpenAI Codex (GPT-6) at Daniel Kodsi's direction, 27
 ## Left open
 
 Rigid Power, Rigid Rigidity and their weak forms remain open in this model. The exact image criterion above reduces the powers question to lifting rigid subrelations of transported bounds.
+
+The truth-collapse argument above applies at the single object for every proposition parameter there. The box of the closed truth-collapse schema therefore holds too. Combined with necessary Tame Rigidity and the original failure of Transversal, this separates the conjunction of the two necessary schemata from Transversal.

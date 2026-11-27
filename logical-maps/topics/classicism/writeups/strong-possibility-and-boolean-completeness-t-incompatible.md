@@ -121,5 +121,10 @@ Primitive recursive arithmetic preserves the sign across these two
 Peano points. By \(\Gamma\) there is then a further path through a
 singleton to a point satisfying the transported \(c_m\). The boxed
 conditional gives the opposite sign of \(s\) there, while the order
-identity at the return gives its chosen sign. This contradiction
-proves the claim.
+identity at the return gives its chosen sign. This contradiction proves the claim. In each signature case the graph
+\(p=c_n\) on the selected positive cells witnesses internal countability
+relative to \(e\). Consequently the single unboxed \( (e,t) \) instance
+of Countable Boolean Completeness suffices for the contradiction here too.
+The analogous pure instance uses \(p=b_n\). Goodsell already obtained
+the incompatibility with the full Countable Boolean Completeness schema
+from ordinary pure Maximalism. [Goodsell’s theorem](../index.html#result/possibility-and-countable-boolean-completeness-incompatible)

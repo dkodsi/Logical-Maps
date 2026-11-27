@@ -75,3 +75,26 @@ arguments:
     current graphs then exclude every infinite carrier from revised
     smallness. The independent stage truth bits at the root give
     principal intervals for all finite Boolean algebras.
+- id: self-atoms
+  holds: [necessary-self-atoms-are-strong-atoms-r]
+  choice: free
+  writeup: split-root-before-integer-stages
+  text: >-
+    At an ordinary upper occurrence the instantiated relation splits on
+    whether two fresh points have the same image, without changing the
+    row on its pin. A self-atom therefore has no ordinary occurrence.
+    At the root it must be a root-only tuple singleton; at an upper
+    stage it must be the sole-return copy of that singleton. These
+    are atoms at every point where they survive.
+- id: exact-number-labels
+  holds: [second-order-analytic-necessitism, necessary-axiom-of-infinity-t, arithmetic-necessitism, necessity-of-arithmetic]
+  choice: uses
+  writeup: split-root-before-integer-stages
+  text: >-
+    The independent stage bits supply continuum-many labels at every
+    relational type, transported bijectively as a family even after
+    returning to the root. Exact relations on those labels and the
+    exact families of all such relations realize standard full real
+    structures with their represented powers. Individual type is a
+    singleton. The closed standard numeral values give a transported
+    inductive cut; scalar carriers are everywhere infinite.

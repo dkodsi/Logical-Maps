@@ -143,7 +143,7 @@ arguments:
     D)$, while $D\subseteq Y_1$. So Weakly Inextensible Comprehension fails, and with it Boolean
     Completeness and Inextensible Comprehension.
 - id: tame-and-countable-joins
-  holds: [necessary-tame-rigidity-r, necessary-countable-boolean-completeness-r]
+  holds: [necessary-tame-rigidity-r, necessary-countable-boolean-completeness-r, necessary-truths-are-nd-necessary]
   by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi, with two independent Codex reviews
   date: '2026-11-27'
   choice: uses

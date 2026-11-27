@@ -67,3 +67,17 @@ arguments:
     current row of a future weakly rigid subrelation of a source bound pulls
     back to a source tuple set, whose exact images give that very subrelation
     by uniqueness of weakly rigid coextensions.
+- id: all-self-atoms-are-strong
+  holds: [necessary-self-atoms-are-strong-atoms-r]
+  choice: free
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi; independently checked by two other GPT-6 researchers
+  date: '2026-11-27'
+  writeup: self-atoms-at-split-return-stages
+  text: >-
+    Any instantiated relation with nonzero ordinary and return coordinates splits.
+    Root self-atoms are current-only singletons, and a nonzero return coordinate
+    in a self-atom elsewhere is a pure return of such a singleton.
+    At the partial-injection sites, two finite tags split each occupied identity
+    row. At the supported permutation site an occupied exit splits by two group
+    addresses at the unrestricted site. The remaining ordinary self-atoms
+    only undergo invertible transports or become bottom.
