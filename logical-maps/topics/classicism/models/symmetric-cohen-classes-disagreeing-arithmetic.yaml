@@ -42,3 +42,11 @@ arguments:
     all source numbers. Every exit projects onto the entire old domain and
     all other arrows are bijective. All three points have quantified
     infinity at propositional type.
+- id: generic-classmate-choice
+  fails: [relational-choice-r, necessary-relational-choice-r, modalized-relational-choice-r]
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-27'
+  choice: uses
+  writeup: analysis-with-disagreeing-arithmetic
+  text: >-
+    At the generic source and at its first old component, the serial relation assigns to each class-bit scalar the other labels in its generic class. A putative selector with finite support has its output exchanged with a fresh classmate by a permutation fixing the input, support and generic. The old coordinates are fixed by these permutations.

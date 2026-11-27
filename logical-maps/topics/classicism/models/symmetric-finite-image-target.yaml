@@ -79,6 +79,17 @@ arguments:
     Consequently every bounded rigid upper subrelation lifts by taking
     an inverse image on the lower extension. At the upper object the
     unrestricted symmetric domains admit all exact-image hulls.
+- id: finite-scalar-atom-obstruction
+  fails: [forcing-possibilism]
+  choice: free
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-27'
+  writeup: finite-scalar-atoms-exclude-mathematical-possibilism
+  text: >-
+    The permutation loops make one atom. The unrestricted entrance maps split
+    on equality of two fresh images, regardless of subsequent target loops.
+    Mathematical Possibilism would require arbitrarily many propositional
+    atoms by representing the finite power algebras.
 notes: >-
   The original [[symmetric-two-object-unpinned]] allows every target
   endomap and fails the necessary self-atom bridge. This model changes

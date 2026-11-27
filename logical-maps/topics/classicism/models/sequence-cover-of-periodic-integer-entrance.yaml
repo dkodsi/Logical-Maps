@@ -47,3 +47,14 @@ arguments:
     the limit agrees with its isolated values off a finite set. The periodic
     component retains its counterexample to relational Barcan. The even
     isolated scalar atoms are countable but have no join.
+- id: ordinal-benchmark-and-scalar-intervals
+  fails: [forcing-possibilism]
+  choice: free
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-27'
+  writeup: countable-bases-and-mathematical-possibilism
+  text: >-
+    Individual arrays with distinct finite exceptions give an infinite root
+    individual carrier. Full current rows make Cantor regular open sets a
+    small complete Boolean algebra, while every nontrivial scalar interval
+    contains an atom.

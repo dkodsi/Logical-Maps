@@ -610,6 +610,52 @@ arguments:
     its complete pure theory.
   by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
   date: '2026-11-27'
+- id: finite-atoms-in-the-pure-reduct
+  when:
+    source: [boolean-valued-collapse-without-new-reals, full-boolean-valued-atom-and-cohen-real-universe-constructible, four-proposition-entrance-to-paired-stages, symmetric-collapse-pair, symmetric-entrance-qualitative-links, symmetric-old-new-individuals, symmetric-qualitative-links, symmetric-two-object-unpinned]
+  fails: [forcing-possibilism]
+  choice: uses
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-27'
+  writeup: finite-scalar-atoms-exclude-mathematical-possibilism
+  text: >-
+    The indicated reduct has a fixed finite bound on its number of scalar
+    atoms. In the Boolean-valued examples the second Boolean factor is
+    atomless. The four-proposition entrance, the fixed one-point entrance
+    to qualitative links and the old-and-new-individuals example have
+    finite scalar carriers. In the three remaining symmetric cases all
+    nonpermutation cylinders split. A finite upper bound on the number
+    of scalar atoms is a single pure sentence, and is preserved by the
+    expansion. Small finite Boolean algebras require arbitrarily many
+    scalar atoms for Mathematical Possibilism.
+- id: ordinal-benchmark-sources-obstructing-possibilism
+  when:
+    source: [finite-support-sections-and-projection, finite-support-truncations, finite-support-two-object-all-maps-at-singleton, full-omega-chain-new-individuals, full-two-object-double-retraction-individuals-fixed-infinite, iterated-ultrafilter-fronts]
+  fails: [forcing-possibilism]
+  choice: uses
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-27'
+  writeup: countable-bases-and-mathematical-possibilism
+  text: >-
+    Each source sees finite individual fields of every standard size
+    and has full current coding. In the finite-pin cases there is a
+    countably based observation in every nonzero scalar interval. In
+    the full action models and the iterated fronts each such interval
+    contains an atom. A presented small Cantor regular-open algebra
+    witnesses the failure; this pure instance persists in the expansion.
+- id: finite-benchmark-sources-satisfying-possibilism
+  when:
+    source: [full-monoid-ac-equals-bc, ultralimit-fork]
+  holds: [forcing-possibilism]
+  choice: uses
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-27'
+  writeup: countable-bases-and-mathematical-possibilism
+  text: >-
+    At both chosen source settings there is one individual throughout,
+    the current rows are unrestricted, and arbitrarily many scalar
+    atoms give finite principal intervals. Thus every small algebra has
+    a representation there. The expansion preserves each pure instance.
 references:
 - paper: bacon-dorr-classicism
   role: background

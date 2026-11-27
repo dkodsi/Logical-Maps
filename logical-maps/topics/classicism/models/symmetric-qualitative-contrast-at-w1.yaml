@@ -118,6 +118,18 @@ arguments:
     a point outside $N$; so the propositions below a proposition number $1$, $2$ or
     infinitely many. But $\bot$, $q_0$, $\neg q_0$ and $\top$ form a complete four-element Boolean
     algebra, so Forcing Possibilism fails.
+- id: finite-scalar-atom-obstruction
+  fails: [forcing-possibilism]
+  choice: free
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-27'
+  writeup: finite-scalar-atoms-exclude-mathematical-possibilism
+  text: >-
+    Arrows to the fully symmetric object give the only atom. At the trivially
+    symmetric target, two permutations can agree on the finite pin and take a
+    fresh input to different values. Mathematical Possibilism would require
+    arbitrarily many propositional atoms by representing the finite power
+    algebras.
 notes: >-
   Recorded for the separation of Relational Choice from its necessitation under C5: Relational Choice
   holds at $W_1$ because its symmetry group is trivial, and fails at $W_0$, which $W_1$ sees. Astra's note

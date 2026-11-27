@@ -181,3 +181,9 @@ algebras use the scalar factor of the S5 component, $\mathcal P(\omega)$:
 the union of $j$ singleton-world atoms, with every other coordinate
 bottom, has the desired interval of $2^j$ propositions. The order
 isomorphism is a current graph. Bottom gives the one-element interval.
+
+## Relational Choice at the arithmetic components
+
+The two-stage generic source and its first old component both fail even the instance of Relational Choice with scalar inputs and outputs. In the first old component this is the [generic-classmate obstruction](symmetric-cohen-classes-with-new-numbers.html). At the generic source take the same generic class-bit scalars and use bottom on both extra coordinates. They still distinguish all labels. Ask each such scalar to select a different label from its actual generic class, and use bottom as the only output for every other input. The current row with this demand is the same finitely supported ground Boolean-valued relation as at the auxiliary component, with bottom on the two old coordinates. It is actually serial. For any proposed selector choose an input from a class disjoint from its finite pin. A transposition in that class exchanges the selected output with a third classmate and fixes the input, pin and generic. It preserves the whole selector, including its two fixed old coordinates. This contradicts functionality. In the three-component coalesced model the outer full-current root does supply local Relational Choice by its actual well-order. Its entrance to the first generic-class component still refutes necessary Relational Choice, hence Modalized Relational Choice as well.
+
+Checked independently by two OpenAI Codex (GPT-6) researchers, prompted by Daniel Kodsi, 27 November 2026.

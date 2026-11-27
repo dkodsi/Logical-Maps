@@ -83,3 +83,14 @@ arguments:
     cut is represented. In contrast, neither of the two identity-only singleton
     properties of the new pair is the shift of any source property. A tester omitting
     just these two properties at the shift refutes Barcan for unary individual properties.
+- id: ordinal-benchmark-and-scalar-intervals
+  fails: [forcing-possibilism]
+  choice: free
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-27'
+  writeup: countable-bases-and-mathematical-possibilism
+  text: >-
+    The pair flips act trivially on the full scalar powerset of words. Word
+    codes and the closed ordinal thresholds therefore admit the current
+    graphs for the small complete atomless Cantor algebra. Every nonempty
+    scalar interval has a singleton-word atom.

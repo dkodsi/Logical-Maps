@@ -97,7 +97,7 @@ import Classicism.Results.Research.SelfAtomsUnderNecessity
 import Classicism.Results.Research.MixedAtomicity
 import Classicism.Results.Research.GallinSelfAtoms
 import Classicism.Results.Research.FixedOperatorBarcanCertificates
-import Classicism.Results.Research.RecurrentCells
+import Classicism.Results.Research.RecurrentPossibility
 import Classicism.Tools.MapIndex
 import Classicism.ModelStatements
 import Classicism.MapModels

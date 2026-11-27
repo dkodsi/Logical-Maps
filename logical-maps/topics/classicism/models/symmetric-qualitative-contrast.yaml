@@ -157,6 +157,17 @@ arguments:
     the identity and of nothing at arrows into $W_0$, so pinned down by $\emptyset$ and symmetric.
     The numerals at $t$ are standard at $W_1$ by the same fullness, so the family is countable
     relative to $t$. This uses no individuals, so it holds in every variant.
+- id: finite-scalar-atom-obstruction
+  fails: [forcing-possibilism]
+  choice: free
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-27'
+  writeup: finite-scalar-atoms-exclude-mathematical-possibilism
+  text: >-
+    All arrows into the symmetric object form one atom. At the trivially
+    symmetric target, a finite permutation cylinder splits by prescribing a
+    fresh input's image. Mathematical Possibilism would require arbitrarily
+    many propositional atoms by representing the finite power algebras.
 notes: >-
   The cited construction is a model of the map’s relational-type framework. The description
   identifies its evaluation point; construction and verification are given at the PDF locations in
