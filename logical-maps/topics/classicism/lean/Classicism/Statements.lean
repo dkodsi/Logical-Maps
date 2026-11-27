@@ -5830,6 +5830,20 @@ def finite_multisets_free_words : Prop :=
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompletenessT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBooleanCompletenessT.schemaIn
 
+/-- `free-words-over-disagreeing-arithmetics`
+
+Free words over two disagreeing arithmetics: a witness satisfying 6 principles
+and violating 1. -/
+def free_words_over_disagreeing_arithmetics : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.possiblyWitnessedPossibility _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAxiomOfInfinityE.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBarcan.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecStrongAtomicity.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBooleanCompletenessT.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.ModalWellOrdering.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.ofPure Classicism.Meta.AxiomSet.necessityOfArithmetic)
+
 /-- `free-words-supported-pair-flips`
 
 Free words with supported flips of individual pairs: a witness satisfying 8 principles
@@ -5885,6 +5899,33 @@ def integer_stages_paired_individuals_glued_constants : Prop :=
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.FiveImpliesTwoHatNecessity.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TwoHatImpliesNdNecessity.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompletenessT.schemaIn
+
+/-- `reduced-power-retraction`
+
+Reduced-power retraction: a witness satisfying 6 principles
+and violating 1. -/
+def reduced_power_retraction : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.FunctionalChoice.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAtomsAreStrongAtoms.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecStrongActuality.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TameRigidity.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WeaklyRigidPower.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.RigidPower.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BarcanT.schemaIn
+
+/-- `replicated-entrances-to-graded-permutations`
+
+Replicated entrances to graded permutations: a witness satisfying 4 principles
+and violating 2. -/
+def replicated_entrances_to_graded_permutations : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBarcan.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.StrongAtomicity.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecSelfAtomicity.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecStrongActuality.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAtomicityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.CountableBooleanCompleteness.schemaIn
 
 /-- `stitched-cohen-coalesced-middle`
 
@@ -6284,7 +6325,7 @@ def symmetric_infinite_classes_glued_constants : Prop :=
 
 /-- `symmetric-integer-paired-stages`
 
-Symmetric integer stages of paired individuals: a witness satisfying 4 principles
+Symmetric integer stages of paired individuals: a witness satisfying 8 principles
 and violating 4. -/
 def symmetric_integer_paired_stages : Prop :=
   ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
@@ -6292,6 +6333,10 @@ def symmetric_integer_paired_stages : Prop :=
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBarcan.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAtomlessness.schemaIn ∧
     Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.logicalNecessity _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecInextensibleComprehension.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecTameRigidity.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecRigidPower.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecWeaklyRigidPower.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.FiveImpliesTwoHatNecessity.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecFiveImpliesTwoHatNecessity.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TwoHatImpliesNdNecessity.schemaIn ∧

@@ -2,8 +2,10 @@
 
 Necessary Boolean Completeness at every relational type is consistent with
 a 5-necessary proposition that fails to be two-hat necessary. The same
-example satisfies necessary Barcan at every type, necessary Atomlessness
-and Logical Necessity for a purely relational signature. A second
+example satisfies necessary Barcan at every type, necessary Atomlessness,
+necessary Inextensible Comprehension, necessary Tame Rigidity, both
+necessary rigid power principles, and Logical Necessity for a purely
+relational signature. A second
 proposition is two-hat necessary and fails distinctness-preserving necessity.
 
 Use the stages, arrows and words of the [integer-stage model](integer-stages-paired-individuals-glued-constants.html).
@@ -97,6 +99,132 @@ them while its target, word and values on the pin stay fixed. The test
 that their images differ is pinned by the doublet and is equivariant under
 every target automorphism. It divides the proposition into two nonzero
 parts, proving necessary Atomlessness.
+
+## Inextensible Comprehension
+
+Fix $X$ at stage $n$, put $E=X_{\mathrm{id},\epsilon}$, and enlarge a
+countable pin $N$ of $X$ to contain whole blocks and all source singletons.
+The group fixing $N$ pointwise preserves $E$. Say a map embeds a union
+of blocks when its restriction is injective and sends distinct blocks
+into distinct blocks. A singleton is allowed to map to one member of an
+ordinary doublet.
+
+Define a relation $Y$ with empty rows on nonempty words. At $(f,\epsilon):n\to m$
+put into its row every $t\cdot a$ such that $a\in E$, a countable union of
+blocks $C\supseteq N$ pins the tuple $a$, and $t:n\to m$ agrees with $f$ on
+$N$ and embeds $C$. Here and below maps without specified words have the
+empty word. This row rule is pinned by $N$ and equivariant on the left. At
+the source identity such a $t|_C$ extends to a source block automorphism
+fixing $N$: singletons have already been fixed, and each remaining doublet
+is carried bijectively onto a distinct doublet. It follows that $Y$ and
+$X$ have exactly the same present members.
+
+We show $hY$ is weakly inextensible after any $h:n\to m$. Let $Z$ be a
+tester at $m$ which necessarily accepts every member of the present
+$Y_h$. If a member $b$ occurs in $Y_{gh}$, both words are empty and
+$b=t\cdot a$ for $a,C,t$ as above, with $t|_N=gh|_N$. Since $gh$ embeds
+$N$, $h$ does also. Choose a pin $P$ for $Z$. Extend $h|_N$ to an
+embedding of $C$ by mapping the additional ordinary doublets to fresh
+doublets at $m$ outside the blocks meeting $P\cup h[N]$. No further source
+singletons occur. Extend this prescription arbitrarily to an arrow $u$;
+then $c=u\cdot a\in Y_h$. Let $g'$ agree with $g$ on all blocks meeting
+$P\cup h[N]$, and on the fresh doublets prescribe $g'u=t$ on $C\setminus N$.
+The prescriptions extend to a block-respecting map, with $g'u=t$ on all of
+$C$. Thus $g'\cdot c=b$. By the tester hypothesis $b$ lies in $Z_{g'}$,
+and $Z_{g'}=Z_g$ by pinning. This proves the required necessary inclusion.
+The argument covers every word: if the composite has nonempty word its
+$Y$-row was empty. Therefore $Y$ is an inextensible coextension at each
+stage, giving necessary Inextensible Comprehension.
+
+## Weak rigidity, rigidity and powers
+
+For a set $E$ of current tuples and a countable union $P$ of source blocks
+containing every source singleton, write
+\[
+ B_P(E)_{f,w}=
+ \bigcup_{t|_P=f|_P}(t,w)[E],
+\]
+where $t$ has the same source and target as $f$ and the image uses typed
+transport on tuples. This is a profile pinned by $P$; a target
+automorphism bijectively postcomposes the eligible maps and transports
+their images.
+
+**Weak rigidity persists.** Suppose $F$ is weakly rigid, $P$ pins $F$,
+and $E$ is its present extension. Then $F=B_P(E)$. For every eligible
+$t$ weak persistence puts $(t,w)[E]$ into $F_{t,w}=F_{f,w}$. Conversely,
+$B_P(E)$ necessarily accepts every current member of $E$, so weak
+inextensibility gives $F\le B_P(E)$.
+
+Indeed any such $F$ is rigid. After an arrow $h$, persistence follows by
+postcomposing a witness $t$ to membership in $B_P(E)_h$: its composite with
+$g$ still agrees with $gh$ on $P$. For weak inextensibility of $hF$, let
+$Z$ necessarily accept all current $F_h$-members and take any tuple in
+$F_{gh}$. This tuple is the image of $a\in E$ along a map $t$ agreeing with
+$gh$ on $P$, at their common composite word. Take a countable block-closed
+pin $C\supseteq P$ for $a$. As in the preceding factorization, extend $h|_P$
+by sending the extra doublets of $C$ bijectively to fresh ordinary doublets
+off the blocks meeting $h[P]$ or the pin of $Z$. This gives a new first
+arrow $u$ with the word of $h$; no assumption that $h$ embeds $P$ is needed
+here. Adjust the second map $g$ on these fresh doublets only, retaining its
+word, to make $g'u=t$ on $C$. The intermediate tuple $u\cdot a$ belongs to
+$F_h$. Its $g'$-image is the prescribed tuple, and $Z_{g'}=Z_g$. This proves
+weak inextensibility at every arrow. Consequently necessary Tame Rigidity
+holds.
+
+We will also use the converse construction. If $E$ is closed under every
+empty-word source endomap fixing $P$ pointwise, $B_P(E)$ has present
+extension exactly $E$. It is weakly persistent by the defining union.
+For weak inextensibility, use the just-given factorization at the identity
+arrow: it produces an intermediary $u$ fixing $P$, so $u\cdot a$ lies in
+$E$ by the closure assumption. Thus $B_P(E)$ is weakly rigid, and hence
+rigid by Tame Rigidity.
+
+**Testing the power property.** Let $F$ be rigid and let $Z$ necessarily
+hold of every current rigid subrelation of $F$. Choose $N$ as above to
+pin both $F$ and $Z$, and put $E=F_{\mathrm{id},\epsilon}$. At a given
+$h:n\to m$ consider any rigid $X\le hF$, with row $E'$ at $m$. Enlarge
+a pin $T$ of $X$ to a countable union of blocks containing all singletons
+of $m$. We construct a rigid $Y\le F$ and an arrow $j$ whose map agrees
+with $h$ on $N$, with the same word, such that $jY=X$.
+
+Take a countable union $D$ of target blocks containing $T\cup h[N]$.
+Choose a countable union $C\supseteq N$ of source blocks, adding a fresh
+doublet for each block of $D$ in the same coordinate. Define $j$ to agree
+with $h$ on $N$ and send each reserved doublet onto its assigned block.
+Outside $C$ choose a block isomorphism onto the complement of $D$.
+The complements in each coordinate still consist of $\aleph_1$ ordinary
+doublets. The map part of $j$ is split epic, via a section on the reserved
+doublets and the ordinary inverse outside $D$.
+
+For every such split epimorphism the current row of $B_P(A)$ at $j$ is
+$j[A]$, whenever $A$ is closed under the endomaps fixing $P$. Indeed for
+$t|_P=j|_P$ use an endomap $u$ equal to the identity on $P$ and to the
+chosen section of $j$ composed with $t$ off $P$. Since $P$ is a union of
+blocks this is allowed. Then $ju=t$ with $u$ taking the empty word. Apply
+this first to $F=B_N(E)$: weak persistence makes $E$ closed under the
+indicated maps, and $F_j=j[E]$. Since $jF=hF$ as whole profiles by
+pinning, $E'\subseteq j[E]$.
+
+Set $A=\{a\in E:j\cdot a\in E'\}$. It has $j[A]=E'$ and is closed
+under every source endomap $u$ of empty word fixing $C$ pointwise.
+To see this, define $v$ at $m$ to fix $D$ pointwise, and off $D$ use
+$v(jx)=j(ux)$; this is well-defined and block-respecting by the
+isomorphism on the complements. Then $ju=vj$ and $v$ fixes $T$. By
+weak persistence and pinning $u[E]\subseteq E$ and $v[E']\subseteq E'$,
+proving closure. Hence $Y=B_C(A)$ is rigid. It is below $F$ since each
+map with its specified restriction on $C$ has the specified restriction
+on $N$, and $A\subseteq E$. At $j$ its current row is exactly $j[A]=E'$.
+Both $jY$ and $X$ are rigid, so their current coextension gives entity
+identity. Test each against the other: persistence gives boxed membership
+for each current common member and weak inextensibility gives both inclusions.
+
+The tester therefore accepts $X$ at $j$, hence also at $h$ by pinning.
+This proves weak inextensibility of the rigid power property of $F$. Its
+persistence follows because both rigidity and relation inclusion persist.
+Tame Rigidity now makes the power property rigid. As weak rigidity and
+rigidity coincide throughout the cone, the weak power property has the
+same profile and its schema holds as well. These statements hold at every
+stage, giving necessary Rigid Power and necessary Weakly Rigid Power.
 
 ## The two modal separations
 

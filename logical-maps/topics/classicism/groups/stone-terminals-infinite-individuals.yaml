@@ -1,0 +1,144 @@
+id: stone-terminals-infinite-individuals
+name: Stone terminals with necessarily infinitely many individuals
+definition: >-
+  The root has countably infinitely many individuals and just the identity loop. The ordinary
+  terminals are copies of the full one-world hierarchy on the naturals, indexed by the Stone
+  space of the product of all nontrivial complete Boolean algebras of size below the strong
+  limit cut in the write-up. A root relation has an unrestricted current row and a locally
+  constant section into the discrete ordinary terminal domain. Give it one independent value
+  for each additional component. Root individuals are tuples of one individual from each independent component and one from the ordinary hierarchy. Entrances project onto their corresponding coordinate. Interpret each
+  relational name by top. Evaluate at the root. {{components}}
+parameters:
+  components:
+    text: Additional isolated one-world classical Henkin components.
+    values:
+      standard: Use only the ordinary terminals.
+      mixed: >-
+        Add three hierarchies computed over the internal naturals of countable models of
+        Zermelo set theory with Choice. One model believes that this set theory proves
+        a contradiction. Two other models disagree on structural CH.
+arguments:
+- id: represent-small-algebras
+  holds: [forcing-possibilism]
+  choice: uses
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-26'
+  writeup: stone-terminals-infinite-individuals
+  text: >-
+    Take the inductive test of ordinal codes with extension-invariant current application
+    and constant ordinary terminal value. A homogeneous tester for the terminal values of
+    a rigid family's current members keeps its limit inside the test. The bound on codes
+    is independent of the Stone factor. Every revised-small complete algebra then has size
+    below the cut and is represented by its own principal interval.
+- id: completeness
+  holds: [necessary-boolean-completeness-t]
+  fails: [countable-boolean-completeness-r]
+  choice: uses
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-26'
+  writeup: stone-terminals-infinite-individuals
+  text: >-
+    The root proposition algebra is a Boolean product of complete algebras and each terminal
+    is classical. At individual-property type take the countable family whose nth member
+    is the singleton of n at its own isolated Stone point and empty elsewhere. A join would
+    take infinitely many distinct terminal values. Compactness gives every section finite range.
+- id: individual-infinity
+  holds: [necessary-axiom-of-infinity-e, necessary-barcan-r]
+  choice: uses
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-26'
+  writeup: stone-terminals-infinite-individuals
+  text: >-
+    Full current tests give just the external standard Frege numerals at the root. Every
+    terminal satisfies its internal quantified infinity assertion. Constant ordinary sections,
+    independent isolated coordinates and the projections on individuals give surjectivity
+    at every type.
+- id: well-orders
+  holds: [modal-well-ordering-r]
+  choice: uses
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-26'
+  writeup: stone-terminals-infinite-individuals
+  text: >-
+    Choose a current well-order, one constant well-order for all ordinary terminals, and an
+    internal well-order from each isolated component. Together they necessarily well-order the type.
+- id: rigidity-at-terminals
+  holds: [necessary-tame-rigidity-r, necessary-inextensible-comprehension-r]
+  choice: free
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-26'
+  writeup: stone-terminals-infinite-individuals
+  text: >-
+    A relation with the prescribed current row and empty exits is inextensible. Every proper
+    target is one-world, so a weakly rigid root relation remains weakly rigid at every target.
+- id: atomic-profiles
+  holds: [necessary-strong-actuality, necessary-atoms-are-strong-atoms-r]
+  fails: [atomicity-t, self-atoms-are-atoms-t]
+  choice: uses
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-26'
+  writeup: stone-terminals-infinite-individuals
+  text: >-
+    Every atom is a singleton in one coordinate. An atomic section must live on a single
+    isolated Stone point since clopens separate points. Its transports are atoms or bottom.
+    The isolated identity is a true strong atom. The proposition supporting the regular-open
+    Cantor factor is a self-atom with no atom below it.
+- id: no-necessary-continuum-on-propositions
+  fails: [analytic-necessitism, second-order-analytic-necessitism]
+  choice: uses
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-26'
+  writeup: stone-terminals-infinite-individuals
+  text: >-
+    The powerset-of-naturals factor provides a continuum of root propositions, and all current
+    relations for a real number structure are available. No ordinary terminal has three
+    distinct propositions.
+- id: agreement
+  when: {components: standard}
+  holds: [arithmetic-necessitism, necessity-of-arithmetic, necessity-of-second-order-analysis]
+  choice: free
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-26'
+  writeup: stone-terminals-infinite-individuals
+  text: >-
+    With the Peano condition the numbers are the distinct standard numerals. When it is
+    necessary, they transport exactly onto every future number set and remain distinct.
+    Every real number structure has the ground natural numbers and their entire powerset,
+    with all relations on its carriers admitted at the point.
+- id: disagreement
+  when: {components: mixed}
+  fails: [necessity-of-arithmetic, arithmetic-necessitism, necessity-of-analysis, non-contingency-of-ch]
+  choice: uses
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-26'
+  writeup: stone-terminals-infinite-individuals
+  text: >-
+    An ordinary terminal and the nonstandard component disagree on the arithmetical
+    consistency sentence. A tester full except for one nonstandard Frege number there
+    refutes inextensibility of the numbers. At individual-property type each isolated
+    component has its internal real number structure. Two such components disagree on CH.
+- id: lifting-rigid-relations
+  holds: [necessary-rigid-rigidity-r, necessary-weakly-rigid-weak-rigidity-r]
+  choice: uses
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-26'
+  writeup: stone-terminals-infinite-individuals
+  text: >-
+    For each relation at a terminal, lift its argument tuples while fixing every
+    other independent component. The root relation with these current tuples
+    and their exact terminal images is rigid. Every terminal relation therefore
+    has a rigid lift, giving rigidity of the rigidity predicate. All terminal
+    relations are weakly rigid as well, and root weak rigidity implies rigidity.
+- id: correlated-subrelations
+  when: {components: mixed}
+  fails: [weakly-rigid-power-r, rigid-power-r]
+  choice: uses
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-26'
+  writeup: stone-terminals-infinite-individuals
+  text: >-
+    Correlate the ordinary and nonstandard coordinates of root individuals by an
+    external bijection. This bound's entire image is present at both terminals.
+    A rigid subcollection at an isolated ordinary terminal can have noninternal
+    image under the bijection. Lifting it would require a root weakly rigid
+    subrelation with precisely that noninternal image in the nonstandard component.

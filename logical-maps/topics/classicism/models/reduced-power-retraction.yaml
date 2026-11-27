@@ -1,0 +1,74 @@
+id: reduced-power-retraction
+name: Reduced-power retraction
+certificate:
+  source_id: misc
+  produced_by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  recorded_by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  checked_by:
+  - Two additional OpenAI Codex (GPT-6) agents independently reviewed the model and its verdicts.
+  date: '2026-11-26'
+  lean: none
+sources:
+- OpenAI Codex (GPT-6), prompted by Daniel Kodsi, reduced-power retraction, 26 November 2026.
+- The map's full two-object retraction and iterated-ultrafilter-front constructions.
+source_names:
+- Codex via Kodsi, 26 Nov
+- Retraction and ultrafilter models
+references:
+- paper: bacon-dorr-classicism
+  role: background
+  locator: §§3.4–3.5, pp. 55–61, typed intensional action models
+definition: >-
+  Stages alternate between two sorts of base structures. At $r$ an entity of relational type
+  consists of a full current row and a sequence of entrance rows on $s$-arguments modulo
+  eventual equality of whole rows. At $s$ it consists of a full current row and a return
+  coordinate in the corresponding $r$-sort. A step from $r$ evaluates the sequence after a
+  free-ultrafilter extension, chosen per current index. A step from $s$ projects to the return
+  coordinate. The designated point is the initial $r$-stage. Its individual domain is a
+  singleton. The $s$-domain has an additional individual.
+arguments:
+- id: functional-choice
+  holds: [functional-choice-r]
+  choice: uses
+  writeup: reduced-power-retraction
+  text: >-
+    Choose an output $Y_a$ for each current input of the serial relation.
+    Each representative entrance map $h_i$ has common left inverse $j$.
+    Prescribe the selector's $i$th row on $h_i a$ by the current row of
+    $h_iY_a$, and similarly prescribe its current row on $a$. The resulting
+    operation returns each selected output as an entire entity.
+- id: strong-atoms
+  holds: [necessary-atoms-are-strong-atoms-r, necessary-strong-actuality]
+  choice: uses
+  writeup: reduced-power-retraction
+  text: >-
+    Every nonzero sequence class splits on two infinite sets of indices.
+    The only $r$-atoms are singletons in the current row. At an entrance each
+    becomes a singleton on the return coordinate and projecting carries it back.
+    At $s$ every atom is a current singleton, which projects to bottom, or a
+    return-coordinate atom. These computations pass to every iterated stage by
+    Łoś. The current singleton at $t$ is a true strong atom in both base structures.
+- id: barcan
+  fails: [barcan-t]
+  choice: uses
+  writeup: reduced-power-retraction
+  text: >-
+    At any input type let the root tester have full current row and $i$th entrance
+    row the image of $h_i$. Every current input necessarily satisfies it through
+    all entrance and return steps. At each index some target entity lies outside
+    the image: at a relational type choose a different current row above a
+    fixed return coordinate, and at $e$ use the extra individual. An ultrapower
+    family of those entities fails the tester at the first entrance. Thus BF
+    fails at each input type, including $t$.
+- id: finite-weak-bounds
+  holds: [tame-rigidity-r, weakly-rigid-power-r, rigid-power-r]
+  choice: uses
+  writeup: reduced-power-retraction
+  text: >-
+    If a weakly rigid root bound contains distinct tuples $x_n$ for all standard $n$,
+    persistence puts $h_i x_n$ in the entrance row on a cofinite set for each fixed $n$.
+    Choose $k(i)$ tending to infinity with $h_i x_{k(i)}$ in the bound on a cofinite set.
+    Excluding just that tuple in the $i$th tester row preserves necessary membership
+    for every old tuple by injectivity of $h_i$, but the first ultrapower has a
+    counterexample to weak inextensibility. Root weak bounds are therefore finite
+    haecceity unions; they and their two canonical powers are rigid.

@@ -88,3 +88,44 @@ arguments:
     pure matrix on its designated final letter. Equivariance is preserved
     separately on each last-letter sector. Sharing the tuples across choices
     of names keeps the pin of each constant countable.
+- id: inextensible-comprehension
+  holds: [necessary-inextensible-comprehension-r]
+  choice: uses
+  writeup: symmetric-integer-paired-stages
+  text: >-
+    Enlarge the pin of a current row to a union of blocks containing all
+    source singletons. Use empty nonempty-word rows; otherwise take images
+    of current members under maps agreeing on that pin and embedding a
+    countable block support of the member. At the identity each such partial
+    embedding extends to a block automorphism fixing the pin, giving the
+    original row. To test inextensibility after any arrow, factor a witnessing
+    map through fresh intermediate doublets outside the later tester's pin.
+    The second map can then keep its tester row and still send the intermediate
+    member to the prescribed future tuple.
+- id: tame-rigidity
+  holds: [necessary-tame-rigidity-r]
+  choice: uses
+  writeup: symmetric-integer-paired-stages
+  text: >-
+    A weakly rigid relation with block-closed pin $P$ containing all the
+    source singletons equals the union of the typed images of its current
+    members over maps agreeing on $P$: persistence gives inclusion in the
+    relation, and weak inextensibility gives the reverse. Postcomposition
+    proves persistence after each arrow. For future weak inextensibility
+    factor an individual witnessing map through fresh intermediate doublets
+    while keeping the tester's pin fixed. Thus every transport is weakly rigid.
+- id: both-rigid-powers
+  holds: [necessary-rigid-power-r, necessary-weakly-rigid-power-r]
+  choice: uses
+  writeup: symmetric-integer-paired-stages
+  text: >-
+    Replace a witnessing arrow, on the pins of the bound and tester, by a split
+    epimorphism $j$ that is a block isomorphism off countable exception sets.
+    A future rigid subrelation with current row $D$ lifts to the rigid relation
+    formed by saturating $\{a\in F_{\rm current}:ja\in D\}$ under maps
+    agreeing on the source exception set. Closure under endomaps fixing that
+    set follows by factoring them across $j$ to endomaps fixing the target
+    subrelation's pin. The lift lies below $F$ and its image under $j$ has
+    exactly row $D$. Rigid coextension makes it the desired subrelation as an
+    entity, so it passes every power tester. Tame Rigidity identifies the
+    two candidate power properties at each stage.
