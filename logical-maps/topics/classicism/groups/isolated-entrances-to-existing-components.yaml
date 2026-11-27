@@ -48,6 +48,20 @@ parameters:
           Use the pure reduct of [[symmetry-constrained-full-point-and-three-forward]]. Include the independent Stone catalogue.
         label: three point catalogue
 arguments:
+- id: powers-over-s5-entrances
+  when: {component: [finite-s5-ultraproduct, countable-s5-ultraproduct, choiceless-s5]}
+  holds: [necessary-weakly-rigid-power-r]
+  choice: uses
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-27'
+  writeup: isolated-entrances-to-existing-components
+  text: >-
+    The old S5 point has necessary distinctness, Tame Rigidity and both hereditary powers.
+    The old coordinate of a weakly rigid root bound is weakly rigid. Testing against each
+    old tuple's persistent inequality removes anything outside the image of its root row.
+    Old subbounds therefore lift by retaining them as the entire old coordinate and taking
+    their preimages in the root row. These lifts and the old power's inextensibility cover
+    every later test. This proves the weak power necessarily and yields both other boxed conclusions.
 - id: isolated-root
   holds: [strong-actuality, well-ordering-r, truths-are-nd-necessary, inextensible-comprehension-r, independence-signature-r]
   fails: [possibly-witnessed-possibility-r]

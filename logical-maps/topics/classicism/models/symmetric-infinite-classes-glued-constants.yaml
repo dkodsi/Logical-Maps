@@ -32,6 +32,17 @@ definition: >-
   Assign relational constants by gluing profiles at distinct last letters and individual
   constants to distinct individuals. Evaluate at the identity.
 arguments:
+- id: modal-comparison-on-permutation-units
+  holds: [necessary-five-implies-nd-necessity]
+  fails: [truth-implies-five-necessity]
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-27'
+  choice: uses
+  writeup: partial-embeddings-of-infinite-classes
+  text: >-
+    Quantifying over the entire subgroup of permutation units gives an admitted S5 operator. The guard requiring a live injective
+    restriction to the pin, the empty word and, when present, a sufficiently high tag ensures agreement on the pin with a permutation.
+    This makes every 5-necessity ND-necessary. An invertible change of the class pattern of two outputs refutes 5-necessity of their original pattern.
 - id: logical-necessity
   holds: [logical-necessity-r]
   choice: uses

@@ -14,6 +14,15 @@ parameters:
       fixed: Evaluate at one of the countably many fixed points.
       free: Evaluate at the identity of the regular group orbit.
 arguments:
+- id: accessible-even-cylinders
+  fails: [necessary-boolean-completeness-t, necessary-countable-boolean-completeness-r]
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-27'
+  choice: uses
+  writeup: profinite-s5-boolean-algebras
+  text: >-
+    Every world sees the free-orbit world. There the countable first-one cylinder family
+    in regular-point has no least upper bound among the supported clopens.
 - id: extensional-identity
   holds: [necessary-distinctness-necessary-r]
   choice: free

@@ -212,3 +212,15 @@ therefore fails, and the closed pure failure repeats at the sole object.
 The graded construction and its separation were developed by OpenAI Codex
 (GPT-6), prompted by Daniel Kodsi, on 26 November 2026. Two additional
 OpenAI Codex agents independently reviewed the argument.
+
+## Tame Rigidity in the unrestricted graded model
+
+Let $F$ be weakly rigid, $E$ its current row, and $N$ any set of size at most $\kappa$ containing a pin of $F$. At an arrow $h$ form the union of $t[E]$ over all $t$ of the same grade and word that agree with $h$ on $N$. These rows form an admitted tester pinned by $N$ which necessarily contains each member of $E$. Weak inextensibility puts $F_h$ inside the union. Weak persistence and pinning give the other inclusion. This description of the rows also gives hereditary persistence: if $y=t z$ with $z\in E$ and $t$ agrees with $h$ on $N$, then $k y=(k t)z$ lies in the row for $kh$.
+
+For hereditary weak inextensibility, fix $h$ and a tester pinned by $P$ which necessarily accepts every member of $F_h$. Take a continuation $k$ and $y\in F_{kh}$. In the union just proved write $y=d z$ for $z\in E$, with $d$ matching $kh$ on $N$ at the same grade and word. Take a pin $L$ for $z$ (the union of its argument pins). We construct arrows $h',k'$ of the same grades and words as $h,k$. The coefficient of $h'$ agrees with $h$ on $N$ and that of $k'$ agrees with $k$ on $P$, and their composite agrees with $d$ on $L$.
+
+If both grades are positive, keep the prescribed values of $h'$ on $N$ and send the points of $L\setminus N$ injectively to fresh intermediate points outside $P\cup h[N]$. Keep $k'$ equal to $k$ on $P\cup h[N]$. At the fresh intermediate points send $h'(a)$ to $d(a)$. These partial prescriptions extend to arbitrary functions. If $h$ has grade zero, its coefficient is the identity. Enlarge $N$ to contain $P$ before taking the representation by $d$, and use the coefficient of $d$ for $k'$. If $k$ has grade zero, keep its identity coefficient and take the coefficient of $d$ for $h'$. The grade-zero convention also covers the case of two zero grades. The word factors always retain the original split of the concatenation.
+
+Now $h'z\in F_h$ and $k'h'z=d z=y$ by the whole-entity pin of $z$. The tester at $k'$ accepts $y$ and its row at $k$ is the same. Thus $hF$ is weakly inextensible. The argument applies at every arrow and every point, proving necessary Tame Rigidity.
+
+A relation with the desired extension only at the identity is inextensible because all its proper transports are bottom. Constant-row well-orders are necessarily well-orders. Every carrier is infinite, and at $e$ and $t$ the standard numeral cut gives the necessary Axioms of Infinity. The earlier power tester, which concerns the universal bound, also refutes both rigidity predicates. The infinite individuals provide a small complete presentation of the Cantor regular-open algebra, while each nonzero scalar interval has a countably complete evaluation ultrafilter. The regular-open algebra has no such ultrafilter. [The scalar interval calculation](partitioned-graded-maps-with-free-words.html)

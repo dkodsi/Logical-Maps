@@ -121,3 +121,11 @@ word maps with $f(d)=u_i$, hold exactly when $f(x_i)=b_0$. For any
 proposed pin $P$ choose $x_i\notin P$. Two grade-zero maps can agree
 on $P$, have $f(d)=u_i$, fix $B$, and differ on this test at $x_i$.
 This contradicts pinning.
+
+## A current set without a weakly inextensible coextension
+
+Choose distinct sites $a_i$ outside the preserved pair and distinct subsets $S_i$ of the nonempty words, for $i<\kappa^+$. There are $2^\kappa$ subsets to choose from. On any nonempty word $w$, the proposition $p_i$ reads $w\in S_i$. At grade zero and the empty word it reads $f(a_i)=a_i$. Put its remaining rows false. The set $E=\{p_i:i<\kappa^+\}$ is an admitted current row.
+
+Suppose $Y$ is a weakly inextensible coextension with pin $P$. Choose $a_i$ outside $P$ and an empty-word grade-zero arrow $h$ fixing $P$ while moving $a_i$. Its map may fix the preserved pair. Then $Y_h=Y_1=E$. Use a tester that omits the single entity $p_i$ on precisely the empty-word grade-zero arrows $g$ which move $a_i$, with full rows elsewhere. This is pinned by $a_i$. It necessarily accepts every member of $E$. On a tested arrow $g$, the proposition $gp_i$ is false at the identity while $p_i$ is true. For $j\ne i$, evaluating $gp_j$ after a nonempty-word continuation reads the distinct label $S_j$, so $gp_j\ne p_i$. But $Y_h$ contains $p_i$ at this tested arrow. This refutes Weakly Inextensible Comprehension at the unary proposition-input type and hence also Inextensible Comprehension.
+
+Since every countable union of pins is a pin, evaluation at a point induces a countably complete ultrafilter in each nonzero scalar interval. The small Cantor regular-open algebra present over the infinite individual domain has no such ultrafilter, refuting revised Mathematical Possibilism. [Smallness and the interval test](partitioned-graded-maps-with-free-words.html)

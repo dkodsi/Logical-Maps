@@ -28,6 +28,19 @@ definition: >-
   old whole entity fixed by every permutation of the coefficient set.
   Interpret relational signature symbols as top.
 arguments:
+- id: old-cone-necessity-and-transversal
+  holds: [necessary-truths-are-nd-necessary, necessary-transversal-r]
+  choice: uses
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-27'
+  writeup: fixed-traces-before-symmetric-surjections
+  text: >-
+    The source has a true identity-only atom and arbitrary current rows. At the old object
+    every truth with pin P has the guard that the coefficient is injective on P and the word
+    is empty. Any arrow that can reach this guard already agrees with a permutation on P
+    and has empty word, so it satisfies the truth. The old component also has necessary
+    coextension Transversal by the support-intersection argument. The source and its entire
+    old cone therefore satisfy both principles.
 - id: complete-algebras
   holds: [necessary-boolean-completeness-r, atomicity-r, well-ordering-r, truths-are-nd-necessary]
   fails: [necessary-actuality, barcan-t, self-atomicity-t]

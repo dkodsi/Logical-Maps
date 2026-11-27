@@ -30,6 +30,19 @@ definition: >-
   $\kappa$, uniform over grades and words. Evaluate at the identity, with the constants
   glued at last letters for the given signature.
 arguments:
+- id: inextensibility-with-moving-word-labels
+  fails: [weakly-inextensible-comprehension-r, forcing-possibilism]
+  choice: uses
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-27'
+  writeup: graded-maps-with-a-preserved-pair
+  text: >-
+    Give κ⁺ propositions distinct nonempty-word labels. On grade-zero empty-word arrows let
+    each test whether its own private site stays fixed. For any alleged weakly inextensible
+    coextension of their current family, move a private site outside its pin. Its row still
+    contains that whole proposition, while an admitted tester omits it there and necessarily
+    accepts every old family member. Countable scalar intersections and full current coding
+    with infinite individuals also exclude the revised-small Cantor regular-open algebra.
 - id: logical-necessity
   holds: [logical-necessity-r]
   choice: uses

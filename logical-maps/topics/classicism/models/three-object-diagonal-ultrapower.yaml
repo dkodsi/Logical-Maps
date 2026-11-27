@@ -90,6 +90,19 @@ arguments:
     tester of $et$-arguments can take the full current row, the set of middle properties having
     diagonal terminal row at $s$, and top at $t$. It is necessary of every root property and fails
     of the middle property with a nondiagonal tail, refuting BF at the relational type $et$.
+- id: isolated-root-witness-and-rigidity
+  holds: [necessary-rigid-power-r, weak-rigid-comprehension-r, necessary-inextensible-comprehension-r, modal-well-ordering-r]
+  fails: [witnessed-possibility-r, tame-rigidity-r, analytic-necessitism]
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-27'
+  choice: uses
+  writeup: witnessed-possibility-before-diagonal-ultrapowers
+  text: >-
+    The existence of eight scalar entities isolates the root. Testing equality to top and bottom under this guard
+    refutes Witnessed Possibility for every allowed naming. This frame is the height-zero diagonal-tree construction.
+    Its root rigid bounds have externally finite diagonal terminal projections, so every subset of a rigid root bound lifts exactly.
+    The weak hull of any current row uses its ground diagonal closure. The universal individual bound is weak but loses weak
+    inextensibility at the middle point. A rigid number predicate of a real structure would have only finitely many terminal members.
 notes: >-
   Even local Boolean Completeness at every relational type, with necessary Strong Atomicity and
   necessary Well-Ordering, fails to imply Arithmetic Necessitism. The middle object is essential:

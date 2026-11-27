@@ -488,6 +488,26 @@ arguments:
   - date: '2026-10-02'
     by: Claude Opus 5.5 (Anthropic), at Cian Dorr's direction
     note: Stated once for the group, the witness moving to the condition evens-avoidable.
+- id: weakly-inextensible-scalar-even-codes
+  when: {individuals: singleton}
+  requires: [evens-avoidable]
+  fails: [weakly-inextensible-comprehension-r]
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-27'
+  choice: free
+  text: >-
+    For each coefficient index $i$ let $p_i$ say that its image is even.
+    These scalars satisfy $h p_i=p_{h(i)}$ and are distinct in each of the
+    four members meeting this condition. Permutations separate two indices
+    by opposite parities. For $i<j$ the monotone surjection $u(k)=\max(0,k-j+1)$
+    sends $i,j$ to $0,1$, and the truncation at $i+1$ sends them to $i,i+1$.
+    The current set $D=\{p_i:i\text{ even}\}$ is admitted by a constant row.
+    If a coextension has pin $N_0$, use the condition's arrow $h$ fixing that
+    pin and its even $b$ and larger pin $N'$. The coextension still contains
+    $p_b$ at $h$. A tester omits $p_b$ on the cylinder of maps agreeing with
+    $h$ on $N'$ and is full elsewhere. It necessarily contains each member
+    of $D$, since no even index is carried to $b$ on this cylinder. Thus no
+    coextension of $D$ is weakly inextensible, even with one individual.
 - id: countable-character-excludes-possibilism
   when: {individuals: naturals}
   fails: [forcing-possibilism]

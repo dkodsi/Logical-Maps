@@ -25,6 +25,22 @@ definition: >-
   words of that entity. Transport is precomposition. Interpret the constants by the
   simultaneous assignments in the write-up.
 arguments:
+- id: tame-at-every-type
+  holds: [necessary-tame-rigidity-r, necessary-inextensible-comprehension-r, modal-well-ordering-r, necessary-axiom-of-infinity-e, necessary-axiom-of-infinity-t]
+  fails: [rigid-rigidity-r, weakly-rigid-weak-rigidity-r, forcing-possibilism]
+  choice: uses
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-27'
+  writeup: graded-maps-free-words-glued-constants
+  text: >-
+    Saturating the transported current members over maps agreeing on a pin gives precisely the
+    rows of a weakly rigid property. Two positive-grade functions can be perturbed on fresh
+    intermediate points to match any further tuple from this saturation while preserving
+    the tester's pin. Thus every transport remains weakly rigid. Identity-only rows give
+    inextensible coextensions, and constant-row well-orders and current numeral cuts are admitted.
+    The original rigid-power counterexample is over the universal bound and witnesses both
+    failures about rigidity itself. Countable scalar intersections and the infinite individual
+    carrier preclude a representation of the small Cantor regular-open algebra.
 - id: self-atomicity
   holds: [necessary-self-atomicity-r]
   choice: free

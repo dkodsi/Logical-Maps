@@ -284,3 +284,38 @@ The actual predicate $T$ contains zero and is closed under successor. The impred
 There is a related distinction in constructive type theory. Carlström proves that intensional choice, excluded middle and a weak extensionality principle yield extensional choice for setoids. The extensionality hypothesis concerns boolean-valued functions. His theorem is in a different theory from C. [Jesper Carlström, *EM + Ext⁻ + ACint ⇔ ACext*](https://www2.math.su.se/reports/2003/14/2003-14.pdf)
 
 OpenAI Codex (GPT-6), prompted by Daniel Kodsi, obtained this restriction on 27 November 2026. Two other GPT-6 research agents independently checked the fixed-point construction, the standard-number argument and the use of local choice.
+
+## Well-foundedness at a point with an unselectable well-ordered quotient
+
+Suppose local Relational Choice holds and a represented equivalence relation on a domain $X$ of type $\sigma$ has no transversal. Suppose further that its quotient $Q$ has a represented ordering on the representatives which, externally, well-orders the classes. Let $\alpha$ be its order type. Then **every internally well-ordered linear order on a represented domain at any finite type is externally well-ordered**. At each type a single admitted tester recognizes the externally well-ordered inputs. In particular the numerical sets represented at this point form a $\beta$-model of full second-order arithmetic.
+
+To prove this, first observe that every represented genuine well-order on labels of any type has order type strictly below $\alpha$. At equality, the preceding comparison lemma matches each class of $Q$ to its own label. Relational Choice then chooses a representative per label. In a longer order use the represented initial segment bounded by the label in position $\alpha$.
+
+Fix any represented domain $D$ and any represented strict linear order $R$ on it. Use the preceding least pre-fixed-point definition of $L(x,i)$, with $x$ ranging over representatives of $Q$ and $i$ over $D$. In current extension it satisfies
+
+$$
+ L(x,i)\quad\longleftrightarrow\quad
+ (\forall y<x\,\exists jRi\,L(y,j))
+ \land (\forall jRi\,\exists y<x\,L(y,j)).
+$$
+
+External induction on the position $\xi$ of $[x]$ shows that $L(x,i)$ holds precisely when the predecessors of $i$ are well-ordered with type $\xi$. This works even when $R$ is ill-founded. The second clause makes each predecessor of $i$ have a well-ordered lower segment of rank below $\xi$. The entire lower segment is then well-ordered. Given a nonempty subset, pick one member. If there is a smaller member, take the least such member in the chosen member's well-ordered lower segment. The first clause realizes every rank below $\xi$, which gives the exact order type. Conversely, two well-orders of the same type have the same predecessor positions, giving both clauses by the induction hypothesis.
+
+Test the whole of $D$ by asking whether for some $x$,
+
+$$
+ (\forall y<x\,\exists i\in D\,L(y,i))
+ \land (\forall i\in D\,\exists y<x\,L(y,i)).
+$$
+
+The test succeeds precisely when $D$ has the order type of the predecessors of $[x]$. Every represented genuine well-order has length below $\alpha$, so each passes. The formula with $D,R$ as arguments defines one admitted tester per type. Apply it to the lower segment at each element of a given order. This gives the externally well-founded part as a single represented current property. In an ill-founded linear order its nonempty complement has no least member. A least member there would have a well-ordered predecessor segment and belong to the well-founded part. This refutes the internal well-order condition on every externally ill-founded input.
+
+At the counting type $\sigma$, the standard-cut argument above makes the Frege numbers standard. Take as reals the **current traces** of admitted number predicates. Ordinary second-order comprehension holds for these traces by typed abstraction. In translating set equality one compares membership at each number. For an admitted tree of finite sequences of natural numbers, its Kleene–Brouwer order is a represented linear order and is well-founded exactly when the tree has no branch in the ambient mathematics. Apply the tester to the subtree at each node. Starting in an ill-founded subtree, recursively take the least child whose subtree is ill-founded. The graph of the branch is represented by testing finite sequences for this deterministic rule. Hence each externally ill-founded represented tree has a represented branch. This is the tree characterization of a $\beta$-model.
+
+For example, let $a$ be any represented numerical real. Its actual hyperjump, coded by the indices of well-founded $a$-recursive trees, is represented by the same tester. In fact there is a represented real coding the entire hyperjump hierarchy along any represented genuine well-order on a subset of the numbers. A history through a position assigns each column the hyperjump of the join of $a$ and all earlier columns with their numerical labels. External induction gives uniqueness of the columns as current sets. At a limit, comprehension of the pairs $(j,k)$ for which some history through $j$ has $k$ in its $j$th column assembles all earlier histories. The tester yields the next hyperjump. Applying the same comprehension over the entire ordering collects the hierarchy in one real. Thus the earlier ordinal restriction applies also to the ordinals computable from these iterated hyperjumps. It already applies beyond all ordinary computable ordinals.
+
+There is a further cofinality restriction. In a given set-sized point, take an unselectable externally well-ordered quotient of **least** order type among all such represented quotients at all types. Each proper initial segment then has a transversal. The induced order on that transversal represents its ordinal on a subset of $X$. Every $\beta<\alpha$ is therefore represented in this one sort. The ordinal $\alpha$ is a limit, since one representative from a last class could be adjoined to a transversal for its predecessors.
+
+There is no represented cofinal family of classes indexed by a represented well-order of labels. Such a family need only be functional modulo the equivalence relation. For each label $i$, the segment through its assigned class has a transversal. Apply Relational Choice to select one whole such predicate $T_i$ for each $i$, allowing arbitrary outputs off the label domain. For each class use the first index whose segment covers it, and retain the member of the class selected by this $T_i$. This defines an admitted transversal of $Q$, a contradiction.
+
+The external well-order on the original quotient is an additional hypothesis. The unrestricted Relational Choice conjecture remains open. These restrictions were obtained by OpenAI Codex (GPT-6), prompted by Daniel Kodsi, on 27 November 2026. Two additional GPT-6 researchers independently checked the order comparison on ill-founded inputs and the numerical tree argument. The hierarchy and cofinality refinements were checked separately.

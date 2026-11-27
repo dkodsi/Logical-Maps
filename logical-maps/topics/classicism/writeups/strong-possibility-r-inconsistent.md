@@ -382,3 +382,64 @@ The arithmetic transport fact used here is proved in the
 [finite-cell Boolean Completeness argument](strong-possibility-and-boolean-completeness-t-incompatible.html).
 
 OpenAI Codex (GPT-6), prompted by Daniel Kodsi, 27 November 2026.
+
+## Returns with an unbounded increase at both steps
+
+There is a single true arithmetic \(\Pi^0_2\) sentence
+\(\Phi=\forall n\exists m\,R(n,m)\), with primitive recursive
+\(R\), with the following property. In every model of pure Strong
+Possibility, and in every model of signature Strong Possibility for
+any signature, each current truth \(q\) has a round trip through
+\(I\land\neg\Phi\) to a point satisfying \(q\land I\land\Phi\).
+Each of the two arithmetic embeddings along this round trip has
+noncofinal image. One may continue making such trips from the return
+point while keeping the original \(q\) true at successive returns.
+
+Choose a computably presented countably infinite signature
+\(\Omega\) with infinitely many symbols of each type. The axioms of
+\(T=\operatorname{Max}_\Omega(C)+I\) can be enumerated using the
+halting problem as an oracle, since the ordinary C calculus is
+effective and its consistency tests concern single formulas. The
+signature-definable Maximalist root has exactly the standard
+\(e\)-numerals as its numbers. Its unrestricted current predicates
+include a test for exactly these numerals. This test is inductive
+at the root, and the possible finite Fregean sizes distinguish the
+different standard numerals. Thus all arithmetic consequences of
+\(T\) hold in the standard natural numbers. The true \(\Pi^0_2\)
+sentences are not computably enumerable with the halting oracle,
+so some true \(\Phi\) of the stated form is unprovable in \(T\).
+
+For any signature \(\Sigma\), the sentence \(P=I\land\neg\Phi\)
+is consistent with \(\operatorname{Max}_\Sigma(C)\). Otherwise a
+proof of \(\Phi\) from \(\operatorname{Max}_\Sigma(C)+I\) uses only
+finitely many symbols. A type-preserving injection of those
+symbols into \(\Omega\) carries each used Max axiom to a Max axiom.
+Indeed satisfiability of a formula in a finite vocabulary is
+preserved when further unconstrained names are introduced. The
+renamed proof would contradict the choice of \(\Phi\). The same
+argument covers the pure vocabulary. Conversely the standard
+numeral root for any \(\Sigma\) satisfies \(I\land\Phi\), so the
+earlier two-step proof of true \(\Pi^0_2\) reflection also works
+for signature Strong Possibility, using its own reference theory.
+
+At the Strong Possibility source, request a return through \(P\) to
+the truth \(q\land I\land\Phi\land\Diamond_{\ne}P\). At the
+intermediate point choose a number \(k\) with no witness to
+\(R(k,m)\). For each original number \(a\), PA and \(\Phi\) give
+an original number \(c\) with
+\(\forall i\le a\,\exists j\le c\,R(i,j)\). This last assertion
+is a bounded primitive recursive test on \(a,c\). Its value is
+preserved between the two Peano points, even if new numbers occur
+below the image of an old number. Consequently \(k\) is greater
+than the image of every source number. At the returning Peano
+point choose \(y\) witnessing \(R(k,y)\). For each number \(b\)
+at the intermediate point the bounded test
+\(\forall j\le b\,\neg R(k,j)\) is true and remains true at the
+return. Thus \(y\) exceeds every image from the intermediate point.
+The specified return truth again includes \(\Diamond_{\ne}P\),
+which permits iteration of the same test without assuming the
+entire Strong Possibility schema at each successive return.
+
+In particular a model with standard arithmetic at all its Peano
+points cannot realize either form of Strong Possibility. This
+obstruction applies even in the absence of a true atom. The bounded-computation transport used above is the one established in the [finite-cell argument](strong-possibility-and-boolean-completeness-t-incompatible.html). An independent researcher checked both embeddings and the finite renaming argument for the common choice of \(\Phi\).
