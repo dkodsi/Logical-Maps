@@ -53,14 +53,17 @@ arguments:
     is the singleton of n at its own isolated Stone point and empty elsewhere. A join would
     take infinitely many distinct terminal values. Compactness gives every section finite range.
 - id: individual-infinity
-  holds: [necessary-axiom-of-infinity-e, necessary-barcan-r]
+  holds: [necessary-axiom-of-infinity-e, axiom-of-infinity-t, necessary-barcan-r]
+  fails: [necessary-potential-infinity-t]
   choice: uses
   by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
   date: '2026-11-26'
   writeup: stone-terminals-infinite-individuals
   text: >-
     Full current tests give just the external standard Frege numerals at the root. Every
-    terminal satisfies its internal quantified infinity assertion. Constant ordinary sections,
+    terminal satisfies its internal individual infinity assertion. The root proposition carrier
+    is infinite. At an ordinary terminal the third Frege numeral counts nothing, even possibly,
+    since the terminal has just two propositions. Constant ordinary sections,
     independent isolated coordinates and the projections on individuals give surjectivity
     at every type.
 - id: well-orders
@@ -141,6 +144,18 @@ arguments:
     and their exact terminal images is rigid. Every terminal relation therefore
     has a rigid lift, giving rigidity of the rigidity predicate. All terminal
     relations are weakly rigid as well, and root weak rigidity implies rigidity.
+- id: isolated-terminal-swaps
+  fails: [weakly-rigid-power-r, rigid-power-r]
+  choice: uses
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-26'
+  writeup: stone-terminals-infinite-individuals
+  text: >-
+    At infinitely many isolated terminals interchange a different pair of labels.
+    The family of all labels has constant image and forms a rigid bound. Its even
+    labels at a further isolated terminal determine all the current members of
+    any weakly rigid lift below the bound. Their forced images at the swap
+    terminals take infinitely many different values, violating compactness.
 - id: correlated-subrelations
   when: {components: mixed}
   fails: [weakly-rigid-power-r, rigid-power-r]
@@ -155,14 +170,17 @@ arguments:
     image under the bijection. Lifting it would require a root weakly rigid
     subrelation with precisely that noninternal image in the nonstandard component.
 - id: identity-guard
-  holds: [truths-are-nd-necessary]
+  holds: [necessary-truths-are-nd-necessary]
+  fails: [pure-b-r]
   choice: free
   by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
   date: '2026-11-26'
   writeup: stone-terminals-witnessed-possibility
   text: >-
     The proposition true only at the identity word cannot return to truth after any
-    nonidentity arrow. It witnesses ND-necessity for every current truth.
+    nonidentity arrow. It witnesses ND-necessity for each truth at a root, and every
+    terminal is classical. A pure sentence asserting the existence of a contingent
+    truth holds at the root and is impossible at an ordinary terminal.
 - id: witnesses-in-the-signature
   when: {frame: words}
   holds: [possibly-witnessed-possibility-r]

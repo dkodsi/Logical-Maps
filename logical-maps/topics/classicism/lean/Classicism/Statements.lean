@@ -5361,6 +5361,15 @@ def strong_atomicity_weak_rigid_comprehension_and_relational_choice_imply_intens
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.RelationalChoice.schemaIn →
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.IntensionalChoice.schemaIn
 
+/-- `strong-possibility-and-boolean-completeness-t-incompatible`
+
+Strong Possibility (pure) ∧ Boolean Completeness (type t) ⇒ ⊥ -/
+def strong_possibility_and_boolean_completeness_t_incompatible : Prop :=
+  ∀ {Sig : Classicism.Meta.Signature} (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig),
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.strongPossibility) →
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompletenessT.schemaIn →
+    ¬ Classicism.Meta.AxiomSet.Consistent Ax
+
 /-- `strong-possibility-and-infinity-e-incompatible`
 
 Strong Possibility (pure) ∧ Infinity Schema (type e) ⇒ ⊥ -/
@@ -5397,6 +5406,15 @@ def strong_possibility_and_two_hat_implies_nd_incompatible : Prop :=
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TwoHatImpliesNdNecessity.schemaIn →
     ¬ Classicism.Meta.AxiomSet.Consistent Ax
 
+/-- `strong-possibility-and-witnessed-possibility-incompatible`
+
+Strong Possibility (pure) ∧ Witnessed Possibility ⇒ ⊥ -/
+def strong_possibility_and_witnessed_possibility_incompatible : Prop :=
+  ∀ {Sig : Classicism.Meta.Signature} (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig),
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.strongPossibility) →
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.witnessedPossibility _) →
+    ¬ Classicism.Meta.AxiomSet.Consistent Ax
+
 /-- `strong-possibility-incompatible-with-atoms-are-self-atoms-t`
 
 Strong Possibility (pure) ∧ Atoms are self-atoms (type t) ⇒ ⊥ -/
@@ -5423,6 +5441,14 @@ def strong_possibility_r_implies_distinctness_schema_r : Prop :=
     Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.strongPossibility) →
     Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.distinctnessC)
 
+/-- `strong-possibility-r-implies-possibility-plus-r`
+
+Strong Possibility (pure) ⇒ Possibility+ (pure) -/
+def strong_possibility_r_implies_possibility_plus_r : Prop :=
+  ∀ {Sig : Classicism.Meta.Signature} (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig),
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.strongPossibility) →
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.possibilityPlus)
+
 /-- `strong-possibility-r-inconsistent`  (conjectured)
 
 Strong Possibility (pure) ⇒ ⊥ -/
@@ -5447,6 +5473,14 @@ def strong_possibility_signature_r_implies_distinctness_signature_r : Prop :=
   ∀ {Sig : Classicism.Meta.Signature} (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig),
     Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.strongPossibility _) →
     Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.distinctnessC _)
+
+/-- `strong-possibility-signature-r-implies-possibility-plus-signature-r`
+
+Strong Possibility (signature Σ) ⇒ Possibility+ (signature Σ) -/
+def strong_possibility_signature_r_implies_possibility_plus_signature_r : Prop :=
+  ∀ {Sig : Classicism.Meta.Signature} (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig),
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.strongPossibility _) →
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.possibilityPlusSig _)
 
 /-- `strong-possibility-signature-r-inconsistent`  (conjectured)
 
@@ -5855,6 +5889,19 @@ def countable_words_supported_pair_flips : Prop :=
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TransversalChoice.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WellOrdering.schemaIn
 
+/-- `descriptor-entrance-to-two-returns`
+
+Descriptor entrance to the two-return category: a witness satisfying 3 principles
+and violating 3. -/
+def descriptor_entrance_to_two_returns : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.SelfAtomicity.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.StrongActuality.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecActuality.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecTwoHatImpliesNdNecessity.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecStrongActuality.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AtomicityT.schemaIn
+
 /-- `finite-multisets-free-words-involution`
 
 Finite multisets with free words and an involution: a witness satisfying 5 principles
@@ -5884,6 +5931,20 @@ def finite_multisets_free_words : Prop :=
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecTruthsAreNDNecessary.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompletenessT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBooleanCompletenessT.schemaIn
+
+/-- `four-proposition-entrance-to-paired-stages`
+
+Four-proposition entrance to the paired integer stages: a witness satisfying 4 principles
+and violating 3. -/
+def four_proposition_entrance_to_paired_stages : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AtomicityT.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.StrongActuality.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompletenessT.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WellOrdering.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.infinityT) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecFiveImpliesTwoHatNecessity.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecTwoHatImpliesNdNecessity.schemaIn
 
 /-- `free-words-supported-pair-flips`
 

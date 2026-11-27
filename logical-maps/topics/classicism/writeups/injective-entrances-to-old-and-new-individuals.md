@@ -237,7 +237,7 @@ whole entity, but exchanges its only two eligible outputs. Thus
 Relational Choice fails at $E$. No root relation can select necessarily
 from the displayed serial relation, since its transport to $E$ would
 make this forbidden selection. This shows precisely where the
-[known implication from necessary Relational Choice](../results/necessary-relational-choice-and-intensional-choice-imply-modalized-relational-choice.html)
+[known implication from necessary Relational Choice](../index.html#result/necessary-relational-choice-and-intensional-choice-imply-modalized-relational-choice)
 uses its box. The existing
 [swappable-pairs countermodel](coalesced-swappable-pairs-root.html) already
 refutes that unboxed strengthening.
