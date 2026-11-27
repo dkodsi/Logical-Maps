@@ -1569,6 +1569,74 @@ def Models.full_involution_group_sigma_true_atom.relational_choice_r : Prop :=
 def Models.full_involution_group_sigma_true_atom.transversal_choice_r : Prop :=
   (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).IsModel ∧ (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).HoldsAx Classicism.P.TransversalChoice.schemaIn
 
+/-- `full-involution-group-sigma-opposite-singletons`: Gallin Extensional Comprehension holds. -/
+def Models.full_involution_group_sigma_opposite_singletons.gallin_extensional_comprehension_r : Prop :=
+  (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).IsModel ∧ (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).HoldsAx Classicism.P.GallinExtensionalComprehension.schemaIn
+
+/-- `full-involution-group-sigma-opposite-singletons`: Possible Infinity (type t) fails. -/
+def Models.full_involution_group_sigma_opposite_singletons.possible_infinity_t : Prop :=
+  (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).IsModel ∧ ¬ (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).HoldsAx Classicism.P.PossibleInfinityT.schemaIn
+
+/-- `full-involution-group-sigma-opposite-singletons`: Infinity Schema (type t) fails. -/
+def Models.full_involution_group_sigma_opposite_singletons.infinity_t : Prop :=
+  (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).IsModel ∧ ¬ (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).HoldsAx (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.infinityT)
+
+/-- `full-involution-group-sigma-opposite-singletons`: Axiom of Infinity (type t) fails. -/
+def Models.full_involution_group_sigma_opposite_singletons.axiom_of_infinity_t : Prop :=
+  (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).IsModel ∧ ¬ (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).HoldsAx Classicism.P.AxiomOfInfinityT.schemaIn
+
+/-- `full-involution-group-sigma-opposite-singletons`: □Atomicity holds. -/
+def Models.full_involution_group_sigma_opposite_singletons.necessary_atomicity_r : Prop :=
+  (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).IsModel ∧ (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).HoldsAx Classicism.P.NecAtomicity.schemaIn
+
+/-- `full-involution-group-sigma-opposite-singletons`: □BF holds. -/
+def Models.full_involution_group_sigma_opposite_singletons.necessary_barcan_r : Prop :=
+  (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).IsModel ∧ (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).HoldsAx Classicism.P.NecBarcan.schemaIn
+
+/-- `full-involution-group-sigma-opposite-singletons`: □Rigid Comprehension holds. -/
+def Models.full_involution_group_sigma_opposite_singletons.necessary_rigid_comprehension_r : Prop :=
+  (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).IsModel ∧ (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).HoldsAx Classicism.P.NecRigidComprehension.schemaIn
+
+/-- `full-involution-group-sigma-opposite-singletons`: □ND holds. -/
+def Models.full_involution_group_sigma_opposite_singletons.necessary_distinctness_necessary_r : Prop :=
+  (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).IsModel ∧ (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).HoldsAx Classicism.P.NecNecessityOfDistinctness.schemaIn
+
+/-- `full-involution-group-sigma-opposite-singletons`: Truths are ND-necessary fails. -/
+def Models.full_involution_group_sigma_opposite_singletons.truths_are_nd_necessary : Prop :=
+  (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).IsModel ∧ ¬ (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).HoldsAx Classicism.P.TruthsAreNDNecessary.schemaIn
+
+/-- `full-involution-group-sigma-opposite-singletons`: No Pure Contingency holds. -/
+def Models.full_involution_group_sigma_opposite_singletons.no_pure_contingency_r : Prop :=
+  (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).IsModel ∧ (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).HoldsAx (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.noContingency)
+
+/-- `full-involution-group-sigma-opposite-singletons`: Fregean Axiom fails. -/
+def Models.full_involution_group_sigma_opposite_singletons.fregean_axiom : Prop :=
+  (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).IsModel ∧ ¬ (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).HoldsAx Classicism.P.FregeanAxiom.schemaIn
+
+/-- `full-involution-group-sigma-opposite-singletons`: Infinity Schema (type e) fails. -/
+def Models.full_involution_group_sigma_opposite_singletons.infinity_e : Prop :=
+  (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).IsModel ∧ ¬ (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).HoldsAx (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.infinityE)
+
+/-- `full-involution-group-sigma-opposite-singletons`: Axiom of Infinity (type e) fails. -/
+def Models.full_involution_group_sigma_opposite_singletons.axiom_of_infinity_e : Prop :=
+  (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).IsModel ∧ ¬ (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).HoldsAx Classicism.P.AxiomOfInfinityE.schemaIn
+
+/-- `full-involution-group-sigma-opposite-singletons`: Possible Infinity (type e) fails. -/
+def Models.full_involution_group_sigma_opposite_singletons.possible_infinity_e : Prop :=
+  (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).IsModel ∧ ¬ (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).HoldsAx Classicism.P.PossibleInfinityE.schemaIn
+
+/-- `full-involution-group-sigma-opposite-singletons`: □Relational Choice holds. -/
+def Models.full_involution_group_sigma_opposite_singletons.necessary_relational_choice_r : Prop :=
+  (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).IsModel ∧ (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).HoldsAx Classicism.P.NecRelationalChoice.schemaIn
+
+/-- `full-involution-group-sigma-opposite-singletons`: Relational Choice holds. -/
+def Models.full_involution_group_sigma_opposite_singletons.relational_choice_r : Prop :=
+  (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).IsModel ∧ (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).HoldsAx Classicism.P.RelationalChoice.schemaIn
+
+/-- `full-involution-group-sigma-opposite-singletons`: Transversal Choice holds. -/
+def Models.full_involution_group_sigma_opposite_singletons.transversal_choice_r : Prop :=
+  (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).IsModel ∧ (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Invol).HoldsAx Classicism.P.TransversalChoice.schemaIn
+
 /-- `full-permutation-group-infinite-set`: Gallin Extensional Comprehension holds. -/
 def Models.full_permutation_group_infinite_set.gallin_extensional_comprehension_r : Prop :=
   (Classicism.Meta.Intensional.MSet.model (Equiv.Perm ℕ)).IsModel ∧ (Classicism.Meta.Intensional.MSet.model (Equiv.Perm ℕ)).HoldsAx Classicism.P.GallinExtensionalComprehension.schemaIn

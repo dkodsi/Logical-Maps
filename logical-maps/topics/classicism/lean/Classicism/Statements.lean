@@ -2715,6 +2715,14 @@ def necessary_completeness_and_necessary_actuality_imply_necessary_weak_rigid_co
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecActuality.schemaIn →
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecWeakRigidComprehension.schemaIn
 
+/-- `necessary-countable-boolean-completeness-implies-arithmetic-necessitism`
+
+□Countable Boolean Completeness ⇒ Arithmetic Necessitism -/
+def necessary_countable_boolean_completeness_implies_arithmetic_necessitism : Prop :=
+  ∀ {Sig : Classicism.Meta.Signature} (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig),
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecCountableBooleanCompleteness.schemaIn →
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.ArithmeticNecessitism.schemaIn
+
 /-- `necessary-countable-boolean-completeness-r-implies-countable-boolean-completeness-r`
 
 □Countable Boolean Completeness ⇒ Countable Boolean Completeness -/
@@ -5353,6 +5361,15 @@ def strong_possibility_and_two_hat_implies_nd_incompatible : Prop :=
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TwoHatImpliesNdNecessity.schemaIn →
     ¬ Classicism.Meta.AxiomSet.Consistent Ax
 
+/-- `strong-possibility-incompatible-with-atoms-are-self-atoms-t`
+
+Strong Possibility (pure) ∧ Atoms are self-atoms (type t) ⇒ ⊥ -/
+def strong_possibility_incompatible_with_atoms_are_self_atoms_t : Prop :=
+  ∀ {Sig : Classicism.Meta.Signature} (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig),
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.strongPossibility) →
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AtomsAreSelfAtomsT.schemaIn →
+    ¬ Classicism.Meta.AxiomSet.Consistent Ax
+
 /-- `strong-possibility-incompatible-with-barcan-t`
 
 Strong Possibility (pure) ∧ BF (type t) ⇒ ⊥ -/
@@ -5429,6 +5446,15 @@ def tame_rigidity_and_bf_t_imply_necessary_bf_t : Prop :=
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TameRigidity.schemaIn →
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BarcanT.schemaIn →
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBarcanT.schemaIn
+
+/-- `tame-rigidity-and-countable-boolean-completeness-imply-arithmetic-necessitism`
+
+Tame Rigidity ∧ Countable Boolean Completeness ⇒ Arithmetic Necessitism -/
+def tame_rigidity_and_countable_boolean_completeness_imply_arithmetic_necessitism : Prop :=
+  ∀ {Sig : Classicism.Meta.Signature} (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig),
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TameRigidity.schemaIn →
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.CountableBooleanCompleteness.schemaIn →
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.ArithmeticNecessitism.schemaIn
 
 /-- `tame-rigidity-and-rigid-power-imply-weakly-rigid-power`  (conjectured)
 
@@ -5711,6 +5737,15 @@ def witnessed_possibility_and_no_pure_contingency_imply_logical_necessity : Prop
     Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.noContingency) →
     Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.logicalNecessity _)
 
+/-- `witnessed-possibility-and-no-pure-contingency-imply-necessary-axiom-of-infinity-t`
+
+Witnessed Possibility ∧ No Pure Contingency ⇒ □Axiom of Infinity (type t) -/
+def witnessed_possibility_and_no_pure_contingency_imply_necessary_axiom_of_infinity_t : Prop :=
+  ∀ {Sig : Classicism.Meta.Signature} (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig),
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.witnessedPossibility _) →
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.noContingency) →
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAxiomOfInfinityT.schemaIn
+
 /-- `witnessed-possibility-and-npc-imply-possibly-witnessed-possibility`
 
 Witnessed Possibility ∧ No Pure Contingency ⇒ Possibly Witnessed Possibility -/
@@ -5744,6 +5779,17 @@ def zorn_r_implies_well_ordering_r : Prop :=
   ∀ {Sig : Classicism.Meta.Signature} (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig),
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Zorn.schemaIn →
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WellOrdering.schemaIn
+
+/-- `absorbing-entrance-hyperfinite-group`
+
+Four-proposition entrance into a hyperfinite group action: a witness satisfying 2 principles
+and violating 2. -/
+def absorbing_entrance_hyperfinite_group : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PotentialInfinityT.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBooleanCompletenessT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleInfinityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecPotentialInfinityT.schemaIn
 
 /-- `stitched-cohen-coalesced-middle`
 
@@ -6361,6 +6407,22 @@ def symmetric_two_object_all_maps_individuals_singleton : Prop :=
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.separatedStructure _) ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.independence _) ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.distinctnessC _)
+
+/-- `three-object-diagonal-ultrapower`
+
+Three-object chain into a diagonal ultrapower: a witness satisfying 6 principles
+and violating 3. -/
+def three_object_diagonal_ultrapower : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompleteness.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBooleanCompletenessT.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAxiomOfInfinityE.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecWellOrdering.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecStrongAtomicity.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBarcanT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.ArithmeticNecessitism.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PotentialInfinityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BarcanRelational.schemaIn
 
 /-- `ultraproduct-finite-full-s5`
 

@@ -2,7 +2,7 @@
 
 Potential Infinity at type $t$ can hold while Possible Infinity at type $t$ fails, even with necessary Boolean Completeness at type $t$. At the evaluation object every internal number is a standard numeral. At its only other reachable object, each of those numerals counts a property of propositions, and one additional, nonstandard finite cardinality counts all the propositions there.
 
-The notes to [Potential Infinity at type $t$](potential-infinity-t.html) proposed a four-proposition entrance into a hyperfinite world. OpenAI Codex (GPT-6), prompted by Daniel Kodsi, supplied the following cyclic-group construction and verifications on 26 November 2026. Two related constructions are the [full entrance with an ordinary infinite future](full-two-object-chain-free-loop.html) and the [Henkin ultraproduct of finite full S5 models](ultraproduct-finite-full-s5.html).
+The notes to [Potential Infinity at type $t$](https://github.com/zwlgzwlg/Logical-Maps/blob/4bb9287187ed7cb09567eb3a6302cb896c986ec4/logical-maps/topics/classicism/principles/potential-infinity-t.yaml#L87) proposed a four-proposition entrance into a hyperfinite world. OpenAI Codex (GPT-6), prompted by Daniel Kodsi, supplied the following cyclic-group construction and verifications on 26 November 2026. Two related constructions are the [full entrance with an ordinary infinite future](full-two-object-chain-free-loop.html) and the [Henkin ultraproduct of finite full S5 models](ultraproduct-finite-full-s5.html).
 
 ## The future object
 

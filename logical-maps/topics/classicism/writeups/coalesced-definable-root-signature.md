@@ -376,6 +376,36 @@ with this value satisfies the property there. This refutes
 $\Diamond\exists Y\, .\,HY\to\exists Y\, .\,\Diamond HY$.
 It covers signatures with arbitrarily many individual names.
 
+**Conversely, infinitely many relational constants suffice for BF at
+type $t$, even if there are only finitely many of each type.** Suppose
+$X=(E,v)$ has $\forall p\, .\,\Box Xp$ at the root. Then $E$ is full and
+C proves $v(s)$ for every closed proposition $s$ of $\mathcal L(\Sigma^+)$,
+by completeness at the exits. Choose a relational constant $c$ absent
+from $v$, of type $\bar\tau t$. Use the closed proposition
+$s=\forall\bar y\, .\,c[\bar y]$ (just $c$ at arity zero). In the resulting
+theorem substitute $\lambda\bar y\, .\,p$ for $c$, where $p$ is fresh.
+Quantification of an input-independent proposition over nonempty sorts
+gives that proposition. Thus C proves $v(p)$ uniformly and hence
+$\forall p\, .\,v(p)$. This and the full identity row give
+$\Box\forall p\, .\,Xp$ at the root. Together with the preceding proof,
+$\mathrm{BF}_t$ holds here exactly when the signature has infinitely many
+relational constants. Freshness concerns relation symbols; the construction
+already supplies an auxiliary individual name if it needs one.
+
+**Every infinite signature refutes Tame Rigidity and Weakly Rigid Power
+in this model.** When the relational constants are infinite, actual
+$\mathrm{BF}_t$ makes the universal property of propositions weakly
+rigid: weak persistence is immediate and its weak inextensibility is
+exactly $\mathrm{BF}_t$. But some component fails $\mathrm{BF}_t$,
+because its failure is C-consistent, also in an expansion by freely
+interpreted constants. Thus this property is not rigid. This also
+follows from [[tame-rigidity-and-bf-t-imply-necessary-bf-t]] and pure
+Maximalism. If the relational constants are finite and the signature is
+infinite, its individual constants are infinite and the earlier
+individual-sort argument applies. In both cases apply
+[[weakly-rigid-power-implies-tame-rigidity]]. This leaves the finite
+signatures for the all-type weak power question in this family.
+
 **Strong Possibility in these signatures.** The denotation of $\beta$
 itself at the root is $(0,[\beta])$. Its current bit is zero because the
 root has infinitely many propositions, as witnessed by the pairwise
@@ -391,16 +421,117 @@ C($\Sigma$) that $\beta$ is not a self-atom. Hence Strong Possibility
 under the finite-relational-constant hypothesis. The result for the pure
 language is recorded at [[strong-possibility-incompatible-with-atoms-are-self-atoms-t]].
 
+## Power at the singleton-individual root
+
+*OpenAI Codex (GPT-6), prompted by Daniel Kodsi, 26 November 2026.*
+
+Suppose $\Sigma^+$ has exactly one individual name $d$, and let $F$ be
+weakly rigid at the root. Separate its individual arguments $\bar x$ from
+its relational arguments $\bar z$ and write $D(\bar x)$ for
+$\bigwedge_i(x_i=d)$. Every actual member necessarily satisfies $D$.
+By weak inextensibility $F\le D$, so throughout the cone $F$ equals
+$D(\bar x)\land G(\bar z)$, where $G(\bar z)=F(d,\ldots,d,\bar z)$.
+This applies also to infinite extensions and does not assume BF.
+
+The slice $s(X)(\bar z)=X(d,\ldots,d,\bar z)$ and the extension
+$t(Y)(\bar x,\bar z)=D(\bar x)\land Y(\bar z)$ are inverse, order-preserving
+term operations on the subrelations of $F$ and $G$ at every future point.
+Weak persistence transfers by necessity of identity. For weak
+inextensibility of a slice, pull a test $Q$ back to the tuple test
+$(\bar x,\bar z)\mapsto Q(\bar z)$. For an extension, evaluate a tuple
+test at $(d,\ldots,d,\bar z)$ and then substitute equal individuals.
+These arguments also transfer full rigidity by applying them throughout
+the cone. Thus each canonical power at one bound is the direct image of
+its counterpart at the other under the corresponding term operation.
+Direct images preserve rigidity ([[rigid-direct-image]]) and also weak
+rigidity: for the latter, lift an actual image member for persistence,
+and for inextensibility pull a necessary test back to the domain.
+Consequently the two power questions here reduce exactly to arities
+with only relational arguments, including the empty tuple. The case
+of a relation on individual arguments alone reduces to a proposition
+and satisfies both power principles. For any arity the separate
+[[internally-finite-rigid-power|Frege-finite bound lemma]] applies.
+
+## Finite subrelations detected by root tests
+
+*OpenAI Codex (GPT-6), prompted by Daniel Kodsi, 26 November 2026.*
+
+Suppose $F$ is weakly rigid and a tester $W$ holds necessarily of each
+current rigid $X\le F$. At any component point, $W$ holds of every
+weakly rigid $Z\le F$ there whose actual tuples form a finite list
+denoted there by closed descriptor terms $\bar k_i$. The list need not
+come from root members of $F$, and no completeness assumption on the
+theory of that particular component point is required.
+
+In fact $Z$ at that point equals the finite union $z$ of the
+tuple-haecceities of the $\bar k_i$. Weak inextensibility tested on their
+union gives one inclusion and weak persistence gives the other. If $W$
+fails there, the closed guard $A=\bigwedge_i u[\bar k_i]\land\neg w(z)$
+is consistent, where $u,w$ are the descriptors of $F,W$. For each $i$
+there must be an actual $F$-member with descriptor $\bar s_i$ such that
+$A\land(\bar s_i=\bar k_i)$ is consistent. Otherwise the root test with
+full actual row and descriptor $\lambda\bar x\, .\,A\to\bar x\ne\bar k_i$
+holds necessarily of every actual member of $F$, forcing
+$\vdash A\to\neg u[\bar k_i]$ by weak inextensibility and completeness
+of the component family. Refine $A$ by the chosen equality before
+selecting the next member. At an exit realizing all of these choices
+and the original guard, the union of the chosen *root members'*
+haecceities has value $z$. This root subrelation is rigid and entails $F$
+by persistence, so it passes $W$ necessarily, a contradiction.
+The argument applies also to a tester of all current weakly rigid
+subrelations, which include the rigid ones.
+
+In particular a test that depends only on the current truth bits of finitely
+many $Z[\bar k_i]$ cannot witness a failure even on an *infinite* $Z$:
+at an alleged bad point take the union of the haecceities of those
+listed tuples at which $Z$ is true. This finite subrelation entails $Z$
+by persistence and has the identical observed bits.
+
+**Fregean components in finite monadic signatures.** Suppose the
+signature contains only finitely many individual, propositional and unary
+individual-predicate names, and every input of $F$ is an individual or
+a first-order relation $e^n\to t$, including $n=0$. At any component
+satisfying the Fregean Axiom, the finite named-subrelations argument
+covers *all* weakly rigid subrelations of the image of $F$, for any size
+of individual domain. To see this, color each individual by the truth
+values of the named unary predicates. Every name-fixing transposition
+of two individuals of the same color induces an automorphism of the local
+typed structure. At a Fregean point necessity is the identity on the
+two-element propositional algebra and actual coextension suffices for
+identity. Recursively the action on $\bar\sigma t$ sends $f$ to
+$\lambda\bar y\, .\,\exists\bar x\,(\bigwedge_i T_i(x_i,y_i)\land f[\bar x])$,
+where the $T_i$ are the graphs of the actions already defined at the input
+sorts. At $e$ use the definable graph of the two-point swap and at $t$
+use identity. Each resulting map is an involution and preserves
+application and quantification. This works with Henkin domains, because
+the transformed relation is given by a lambda term. All closed
+descriptors are fixed.
+
+Use a tester with full actual row and descriptor saying that, if
+the Fregean Axiom holds, every relation argument is fixed by all such
+transpositions and each individual argument is one of the individual
+names of $\Sigma^+$. This necessarily holds on all root members, hence
+weak inextensibility puts $F$ below the tester. In a Fregean component
+each permitted $e^n\to t$ relation is a union of the finitely many
+tuple classes given by equality patterns, equalities to names and colors.
+Any two tuples of the same class are connected by a finite product of
+the allowed swaps. Every union of classes is given by a closed
+finite disjunction, and every allowed individual coordinate is named
+by the separate guard. Thus the image of $F$ is supported on a finite
+list of named tuples there. This excludes these components as sites of
+failure for root power testers. Non-Fregean or higher-type cases remain.
+
 ## Remaining questions for the family
 
-- **Tame Rigidity** and **Weakly Rigid Power.** Both fail when $\Sigma^{+}$
-  has infinitely many individual constants. The root property with every
+- **Tame Rigidity** and **Weakly Rigid Power.** Both fail for every infinite signature, as shown above. When
+  there are infinitely many individual constants the original argument is as follows. The root property with every
   constant in its root extension and descriptor $\lambda x\, .\,\top$ is
   weakly rigid at $W_0$, by generalization on a fresh constant. It is rigid
   only if C proves BF at type $e$. Weakly Rigid Power implies Tame Rigidity.
   With finitely many constants, a weakly rigid root relation with finite
   root extension has a descriptor provably equal to a disjunction of
-  haecceities of closed terms, and so is rigid. The infinite case is open.
+  haecceities of closed terms, and so is rigid. For finite signatures, a bound
+  with infinitely many current tuples is still a potential obstruction.
 - **Rigid Power.**
 - **Contingency of Cardinal CH**, **Possible Cardinal CH** and **Possible
   failure of Cardinal CH**, added on 24 November 2026, remain undecided.

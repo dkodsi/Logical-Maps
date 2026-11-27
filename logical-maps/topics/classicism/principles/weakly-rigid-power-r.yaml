@@ -17,4 +17,6 @@ notes: >-
   property has type $(\bar\sigma t)t$. It implies Tame Rigidity and Rigid Power, and □Tame Rigidity
   with Rigid Power implies it; with BF it implies □Tame Rigidity, so under BF it is equivalent to □Tame
   Rigidity and Rigid Power. Whether Tame Rigidity and Rigid Power imply it is open.
+  The [[internally-finite-rigid-power|internally finite bound lemma]] proves this instance whenever
+  the current tuple set of the weakly rigid bound has a Frege finite cardinality.
 lean_def: Classicism.P.WeaklyRigidPower.schemaIn

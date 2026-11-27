@@ -41,6 +41,10 @@ notes: >-
   property of being a number inextensible. Without such help what can fail is inextensibility: numbers are
   necessarily numbers in C, but at a world where no property has exactly the numerals as its extension,
   $\mathbb N_\sigma$, the least inductive property, gains members there.
+  Necessary Countable Boolean Completeness also suffices, by
+  [[necessary-countable-boolean-completeness-implies-arithmetic-necessitism]]. With Tame Rigidity the
+  countable completeness premise can be unboxed, so ordinary Rigid Comprehension also suffices
+  ([[tame-rigidity-and-countable-boolean-completeness-imply-arithmetic-necessitism]]).
 changes:
 - date: '2026-10-24'
   by: Claude Opus 5.5 (Anthropic), prompted by Cian Dorr
@@ -49,5 +53,9 @@ changes:
 - date: '2026-11-24'
   by: Claude Fable 5.2 (Anthropic), prompted by Zachary Goodsell
   summary: 'Definitions: the antecedent identified as □Potential Infinity, now a recorded principle at types e and t.'
+  minor: true
+- date: '2026-11-26'
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  summary: Added the countable completeness criteria and their unboxed Rigid Comprehension consequence.
   minor: true
 lean_def: Classicism.P.ArithmeticNecessitism.schemaIn

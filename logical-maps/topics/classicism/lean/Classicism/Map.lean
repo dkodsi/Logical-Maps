@@ -1,4 +1,5 @@
 import Classicism.Statements
+import Classicism.Results.Research.ArithmeticRigidity
 import Classicism.Results.Arity
 import Classicism.Results.Boxed
 import Classicism.Results.SentenceSchemas.Incompatibilities
@@ -1365,6 +1366,16 @@ theorem necessary_rigid_power_r_implies_rigid_power_r : Statements.necessary_rig
 /-- `necessary-rigid-comprehension-implies-necessary-weak-rigid-comprehension` -/
 theorem necessary_rigid_comprehension_implies_necessary_weak_rigid_comprehension : Statements.necessary_rigid_comprehension_implies_necessary_weak_rigid_comprehension := by
   map_cert Proofs.necessary_rigid_comprehension_implies_necessary_weak_rigid_comprehension.entails
+
+/-- `necessary-countable-boolean-completeness-implies-arithmetic-necessitism` -/
+theorem necessary_countable_boolean_completeness_implies_arithmetic_necessitism :
+    Statements.necessary_countable_boolean_completeness_implies_arithmetic_necessitism := by
+  map_cert Proofs.necessary_countable_boolean_completeness_implies_arithmetic_necessitism.entails
+
+/-- `tame-rigidity-and-countable-boolean-completeness-imply-arithmetic-necessitism` -/
+theorem tame_rigidity_and_countable_boolean_completeness_imply_arithmetic_necessitism :
+    Statements.tame_rigidity_and_countable_boolean_completeness_imply_arithmetic_necessitism := by
+  map_cert Proofs.tame_rigidity_and_countable_boolean_completeness_imply_arithmetic_necessitism.entails
 
 /-- `necessary-rigid-comprehension-implies-arithmetic-necessitism` -/
 theorem necessary_rigid_comprehension_implies_arithmetic_necessitism : Statements.necessary_rigid_comprehension_implies_arithmetic_necessitism := by

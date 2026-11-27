@@ -6,7 +6,7 @@ For a proposition $p$, consider how many times its truth value can alternate alo
 
 ## 1. Bounded initial segments
 
-Write $N(n)$ for $n\in\mathbb N_t$, $S$ for the Frege successor, and $R(n)$ for $\exists X\, .\,nX$. Say $a$ *fits* $b$, written $a\preceq b$, when $\exists X,Y\, .\,bX\land aY\land Y\subseteq X$, using inclusion of current extensions. We use the arithmetic facts in Background [Cardinality, arithmetic and analysis](background.html#finite-cardinality-arithmetic). Finite cardinalities respect current coextension. A finite count persists as a number. A member can be added to or removed from a finite property according to the successor equations. No proper subproperty of a finite property has its count. Two finite numbers that could count the same property are identical.
+Write $N(n)$ for $n\in\mathbb N_t$, $S$ for the Frege successor, and $R(n)$ for $\exists X\, .\,nX$. Say $a$ *fits* $b$, written $a\preceq b$, when $\exists X,Y\, .\,bX\land aY\land Y\subseteq X$, using inclusion of current extensions. We use the arithmetic facts in Background [Cardinality, arithmetic and analysis](https://github.com/zwlgzwlg/Logical-Maps/blob/4bb9287187ed7cb09567eb3a6302cb896c986ec4/logical-maps/topics/classicism/background/arithmetic.md#L229). Finite cardinalities respect current coextension. A finite count persists as a number. A member can be added to or removed from a finite property according to the successor equations. No proper subproperty of a finite property has its count. Two finite numbers that could count the same property are identical.
 
 For $N(n)$ put $C_n(k):=N(k)\land R(k)\land\neg(n\preceq k)$. Then
 
@@ -71,7 +71,9 @@ At either witnessing point take $m$ with $H(m)$ and $E_m^b(c)$. There $h\preceq 
 
 Section 4 now supplies a current witness to $P(Sh)$, contrary to $H(h)$. We have excluded $\exists h\, .\,H(h)$. Thus $P$ is closed under successor. A constant coloring witnesses $P(0)$, so induction gives $P(n)$ for every internal finite $n$. Complementation again gives exact rank $n$ with either initial bit. The universal assertion is pure, so No Pure Contingency makes it necessary.
 
-At any point satisfying that assertion, no finite cardinality $a$ can count the universal property of propositions. The finite number $Sa$ has an instance by $P(Sa)$, and removing one member from it would leave a proper $a$-counted subproperty of the universal property. This proves the stated necessary Axiom of Infinity. In total the argument uses two fixed Witnessed Possibility instances and two pure-sentence instances of No Pure Contingency.
+There is also a single represented injection $n\mapsto\lambda p.E_n(p)$ from the internal numbers into $tt$. Indeed all numbers are realized, so the Peano conditions and induction give the usual comparison by addition; if $m=n+Sk$, induction on $k$ gives $L_m(p)\le L_{n+1}(p)$, whence $E_m$ and $E_n$ are disjoint as current properties of $p$, and each has an instance.
+
+At any point satisfying the rank assertion, no finite cardinality $a$ can count the universal property of propositions. The finite number $Sa$ has an instance by $P(Sa)$, and removing one member from it would leave a proper $a$-counted subproperty of the universal property. This proves the stated necessary Axiom of Infinity. In total the argument uses two fixed Witnessed Possibility instances and two pure-sentence instances of No Pure Contingency.
 
 ## Relational types and the individual type
 
