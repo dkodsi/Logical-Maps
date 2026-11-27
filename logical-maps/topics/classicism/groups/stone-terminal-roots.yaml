@@ -23,6 +23,7 @@ parameters:
       named: Use the signature-definable coalesced root for a signature with a proposition name and no individual names. Its root individual carrier is a singleton.
       paired: Use that signature-definable point and an independent copy of the pure definable root that fails propositional Barcan. Its signature expansion sends the proposition name to top. Both entrances preserve the sole individual.
       abundant: Use the signature-definable coalesced point with infinitely many free constants of every admitted type. Take its individuals as the new root individuals, with identity entrance.
+      finite-support-rigid: Use the signature-Maximalist coalesced point where every weakly rigid bound has finite descriptor support. Take its individuals as root individuals, with identity entrance.
       permutation: Use the one-object finite-support permutation model on the naturals with its given signature interpretation. Take its individuals as root individuals, with identity entrance.
   names:
     text: Interpretation of the free constants in the assembled model.
@@ -63,7 +64,7 @@ arguments:
   writeup: stone-terminal-maximalist
   text: An old propositional algebra lacking a join is a principal interval of the root algebra. Its offending family is admitted as a current property.
 - id: old-signature-witnesses
-  when: {core: [named, paired, abundant], names: inherited}
+  when: {core: [named, paired, abundant, finite-support-rigid], names: inherited}
   holds: [possibility-plus-signature-r]
   choice: uses
   by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
