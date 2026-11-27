@@ -249,3 +249,17 @@ Now take *any* external subset $E$ of a current tuple domain. At each arrow $f$ 
 The argument requires admission of every profile satisfying the stated pin and equivariance conditions, including the well-order profile for the selector's pin. The unrestricted implication for Henkin models remains open.
 
 Ordinary proof by OpenAI Codex (GPT-6), prompted by Daniel Kodsi, 26 November 2026. Two other OpenAI Codex agents independently reviewed the proof and its model hypotheses.
+
+## Compact symmetry groups acting on arbitrary types
+
+A separate obstruction applies to models in which the automorphisms can act on the worlds or on higher types while fixing every individual. Suppose the group $H$ of symmetries fixing the current world is compact and acts continuously on each discrete typed domain. Assume that a current tuple set is represented by a relation exactly when some open subgroup of $H$ preserves it. Assume also that the constant relation giving a fixed finite ordering of any finite list of entities is admitted and carries the induced action on its ordered field. These hypotheses hold, for example, in full smooth equivariant S5 models with identity transports and closed world stabilizers. In such a model a current row invariant under the intersection of the world stabilizer and an open subgroup $V$ of the ambient group can be extended equivariantly over the $V$-orbit of the world, with empty rows elsewhere.
+
+Fix an input sort $\sigma$. Only the Relational Choice instance from binary relations on $\sigma$ to $\sigma$ is needed. Let $U(X,y)$ require $y$ to be moved by some member of $J_X=\mathrm{Stab}_H(X)$ whenever $J_X$ moves any element of $D_\sigma$, and allow all outputs otherwise. Conjugation makes this current row $H$-invariant. A selector for its serial relation therefore has a current functional graph invariant under some open subgroup $H_0$.
+
+Write $L$ for the kernel of $H$ acting on $D_\sigma$. It is a closed normal subgroup. The complement of $H_0L$ is compact, since $H_0L$ is an open subgroup. Each element of this complement moves some $\sigma$-entity, and the elements moving that entity form an open set. By compactness there is a finite list $a_1,\ldots,a_k$ such that their common stabilizer $J$ lies in $H_0L$. Take $X$ to give the reflexive finite order of this list after removing repetitions. Its stabilizer is exactly $J$, an open subgroup containing $L$. In case the complement is empty the empty list suffices. Since $L\subseteq J\subseteq H_0L$,
+
+$$J=(J\cap H_0)L.$$
+
+The unique selected output at $X$ is fixed by $J\cap H_0$, hence by $J$, because $L$ acts trivially on the output sort. If $L$ were not open, the open subgroup $J$ could not be contained in $L$. Thus $J$ would move some $\sigma$-entity and $U(X,y)$ would insist on a moved output. This contradiction shows that $L$ is open. Every external current set of $\sigma$-tuples is consequently represented. In particular a metatheoretically chosen transversal for an equivalence relation on $\sigma$ is available. The conclusion applies to each sort at which the corresponding Relational Choice instance holds.
+
+Ordinary proof by OpenAI Codex (GPT-6), prompted by Daniel Kodsi, 26 November 2026. Two other OpenAI Codex agents independently reviewed the compactness and stabilizer arguments.
