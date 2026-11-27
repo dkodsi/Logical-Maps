@@ -51,6 +51,7 @@ import Classicism.Models.ContingentBarcan
 import Classicism.Models.MonoidModel
 import Classicism.Models.Monoids
 import Classicism.Models.Permutations
+import Classicism.Models.PeriodicIntegerRows
 import Classicism.Models.Pointed
 import Classicism.Models.PointedParts
 -- Metalogical results, each with the object-level reasoning it rests on

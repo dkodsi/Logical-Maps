@@ -57,3 +57,11 @@ $Y$. The empty collection cannot be larger than the ordinal benchmark. The propo
 algebra has $2^{|D|}>|D|$ elements, more than the entire propositional domain, so
 no propositional interval is order-isomorphic to it. The same fixed assertion
 holds at every vertex in each factor and transfers to the ultraproduct.
+
+### The remaining modal and analytic verdicts
+
+At each vertex the singleton proposition true only there is impossible after every proper arrow. For every current truth $p$, this gives a current $q$ with $\Box(\Diamond q\to p)$, as required for distinctness necessity. This argument applies at all vertices. In any tree of positive height, choose two leaves. Their union is an atom everywhere it is instantiated, since an individual leaf has no proper descendants, yet the two singletons split that union at the root. This disproves Self-Atoms Are Atoms at $t$. Pure B fails there as well. The pure sentence “some true proposition could be false” is true at the root and impossible at either leaf. Trees of positive height form an ultrafilter-large set. For example, in the construction require a fragment's tree to have height at least the fragment's size. Equivalently, any fragment containing a matrix that can only be witnessed in a nontrivial tree already requires positive height.
+
+Every simple type is finite at every vertex in a factor. An injective successor of an inhabited finite set cannot omit its zero. This rules out a real structure at each type at each vertex. The same argument applied to the Frege cardinalities rules out the Peano condition $I^*_\sigma$. For each fixed $\sigma$, the boxed assertions of these exclusions are single sentences and transfer to the ultraproduct. In particular Second-Order Analytic Necessitism holds, as do Arithmetic Necessitism and the guarded sentence schemata for arithmetic and analysis.
+
+OpenAI Codex (GPT-6), prompted by Daniel Kodsi, obtained these additional verdicts on 27 November 2026. Two other GPT-6 research agents independently checked the finite-factor arguments and their transfer.

@@ -90,6 +90,31 @@ arguments:
     nonempty collection is power-closed, by applying the definition to its subset missing
     one member. The algebra is therefore revised-small, but it has more elements than the
     entire proposition domain. This gives a fixed type-$tt$ failure in every factor.
+- id: finite-peano-carriers
+  holds: [second-order-analytic-necessitism]
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi; checked by two other GPT-6 agents
+  date: '2026-11-27'
+  choice: free
+  writeup: witnessed-possibility-implies-infinity-schema-t
+  text: >-
+    At every vertex of a finite factor every simple type is finite. No inhabited number carrier
+    can have an injective successor omitting its zero, so no real structure exists. At each fixed
+    type the boxed assertion that none exists is one sentence and transfers to the ultraproduct.
+    This makes the antecedent of each Second-Order Analytic Necessitism instance false.
+- id: singleton-guards-and-leaf-pairs
+  holds: [necessary-truths-are-nd-necessary]
+  fails: [self-atoms-are-atoms-t, pure-b-r]
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi; checked by two other GPT-6 agents
+  date: '2026-11-27'
+  choice: free
+  writeup: witnessed-possibility-implies-infinity-schema-t
+  text: >-
+    The proposition true only at a given vertex becomes impossible after every proper arrow,
+    so it witnesses distinctness necessity of each current truth. At any nonleaf root, the
+    proposition true only at two distinct leaves is an atom wherever instantiated, yet it splits
+    into the two leaf singletons. At the root some true proposition might be false, while at a
+    leaf this pure assertion is impossible. The negative sentences hold in a fine cone of
+    factors of positive height.
 notes: >-
   The positive implication [[witnessed-possibility-implies-infinity-schema-t]] gives arbitrarily many
   distinct propositions at the root. The uniform failures of the quantified principles do not

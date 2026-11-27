@@ -247,3 +247,5 @@ Apply this construction to $E=H\cdot x$, for any $x\in D_\sigma(o)$. The unique 
 The full-profile admission hypothesis matters: a more restricted Henkin domain need not contain the property constructed on matching coefficient maps. The unrestricted implication remains open.
 
 Proof by OpenAI Codex (GPT-6), prompted by Daniel Kodsi, extending the symmetric-model argument earlier on this page, 26 November 2026. Two other OpenAI Codex agents independently checked the extension to noninvertible arrows.
+
+A represented well-order on the quotient gives a further restriction. Relational Choice supplies a transversal whenever the quotient has computable external order type, and more generally when the same order type is represented on a domain of available labels. [Comparison of quotient orders and the standard Frege cut](relational-choice-for-well-ordered-quotients.html)

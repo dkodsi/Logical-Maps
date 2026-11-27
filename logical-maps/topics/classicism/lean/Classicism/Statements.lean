@@ -1,5 +1,6 @@
 import Classicism.Certified.Signatures
 import Classicism.Certified.Arithmetic
+import Classicism.Coalesced.StoneCatalogueModel
 
 /-!
 # Generated statements
@@ -114,6 +115,10 @@ example {Sig : Classicism.Meta.Signature} : Classicism.Meta.AxiomSet Sig :=
 /-- Principle definition check: `five-implies-two-hat-necessity`. -/
 example {Sig : Classicism.Meta.Signature} : Classicism.Meta.AxiomSet Sig :=
   Classicism.P.FiveImpliesTwoHatNecessity.schemaIn
+
+/-- Principle definition check: `forcing-possibilism`. -/
+example {Sig : Classicism.Meta.Signature} : Classicism.Meta.AxiomSet Sig :=
+  (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _)
 
 /-- Principle definition check: `fregean-axiom`. -/
 example {Sig : Classicism.Meta.Signature} : Classicism.Meta.AxiomSet Sig :=
@@ -918,6 +923,15 @@ def atomlessness_implies_infinity_t : Prop :=
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Atomlessness.schemaIn →
     Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.infinityT)
 
+/-- `atomlessness-incompatible-with-forcing-possibilism`
+
+Atomlessness ∧ Mathematical Possibilism ⇒ ⊥ -/
+def atomlessness_incompatible_with_forcing_possibilism : Prop :=
+  ∀ {Sig : Classicism.Meta.Signature} (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig),
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Atomlessness.schemaIn →
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _) →
+    ¬ Classicism.Meta.AxiomSet.Consistent Ax
+
 /-- `atoms-are-self-atoms-r-and-self-atoms-are-strong-atoms-r-imply-atoms-are-strong-atoms-r`
 
 Atoms are self-atoms ∧ Self-atoms are strong atoms ⇒ Atoms are strong atoms -/
@@ -1612,6 +1626,14 @@ def five_implies_two_hat_and_truth_implies_five_imply_truth_implies_two_hat : Pr
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.FiveImpliesTwoHatNecessity.schemaIn →
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TruthImpliesFiveNecessity.schemaIn →
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TruthImpliesTwoHatNecessity.schemaIn
+
+/-- `forcing-possibilism-implies-axiom-of-infinity-t`
+
+Mathematical Possibilism ⇒ Axiom of Infinity (type t) -/
+def forcing_possibilism_implies_axiom_of_infinity_t : Prop :=
+  ∀ {Sig : Classicism.Meta.Signature} (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig),
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _) →
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AxiomOfInfinityT.schemaIn
 
 /-- `fregean-axiom-implies-extensionality-r`
 
@@ -5858,17 +5880,6 @@ def zorn_r_implies_well_ordering_r : Prop :=
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Zorn.schemaIn →
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WellOrdering.schemaIn
 
-/-- `absorbing-entrance-hyperfinite-group`
-
-Four-proposition entrance into a hyperfinite group action: a witness satisfying 2 principles
-and violating 2. -/
-def absorbing_entrance_hyperfinite_group : Prop :=
-  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
-    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PotentialInfinityT.schemaIn ∧
-    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBooleanCompletenessT.schemaIn ∧
-    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleInfinityT.schemaIn ∧
-    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecPotentialInfinityT.schemaIn
-
 /-- `coalesced-pinned-substitutions-root-top`
 
 Finitely pinned root with substitution arrows with a top proposition name: a witness satisfying 6 principles
@@ -5987,6 +5998,27 @@ def fixed_or_collapsed_pairs : Prop :=
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TwoHatImpliesNdNecessity.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompletenessT.schemaIn
 
+/-- `fixed-traces-before-symmetric-surjections`
+
+Invariant traces before symmetric surjections: a witness satisfying 9 principles
+and violating 5. -/
+def fixed_traces_before_symmetric_surjections : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBooleanCompleteness.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Atomicity.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WellOrdering.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TruthsAreNDNecessary.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.RigidComprehension.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecTameRigidity.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecRigidPower.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecWeaklyRigidPower.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecActuality.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BarcanT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.SelfAtomicityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.RigidRigidity.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WeaklyRigidWeakRigidity.schemaIn
+
 /-- `four-proposition-entrance-to-paired-stages`
 
 Four-proposition entrance to the paired integer stages: a witness satisfying 4 principles
@@ -6063,6 +6095,20 @@ def increasing_hyperfinite_stages : Prop :=
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleInfinityT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AtomsAreSelfAtomsT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TruthImpliesFiveNecessity.schemaIn
+
+/-- `independent-disjoint-propositions`
+
+Pointed pure models with two independent disjoint propositions: a witness satisfying 4 principles
+and violating 3. -/
+def independent_disjoint_propositions : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.independence _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAxiomOfInfinityT.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecFunctionalChoice.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.modalFreedom _) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.noContingency _) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.witnessedPossibility _)
 
 /-- `independent-disjoint-propositions-source-symmetric-all-surjections`
 
@@ -6468,6 +6514,62 @@ def independent_numeral_predicates_source_ultraproduct_finite_full_s5 : Prop :=
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.witnessedPossibility _) ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleInfinityE.schemaIn
 
+/-- `independent-numeral-predicates-source-universal-actual-diagonal-tails`
+
+Pointed pure models with one independent relation [Universal diagonal-tail model at an isolated fixed world]: a witness satisfying 5 principles
+and violating 3. -/
+def independent_numeral_predicates_source_universal_actual_diagonal_tails : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.independence _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.signatureB _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecNecessityOfDistinctness.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.RigidComprehension.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.witnessedPossibility _) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.IntensionalChoice.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecTransversal.schemaIn
+
+/-- `injective-integer-stages`
+
+Integer stages with injective old-and-new coordinates: a witness satisfying 10 principles
+and violating 4. -/
+def injective_integer_stages : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.logicalNecessity _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecStrongActuality.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBooleanCompleteness.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAxiomOfInfinityE.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAxiomOfInfinityT.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.ArithmeticNecessitism.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.ofPure Classicism.Meta.AxiomSet.necessityOfArithmetic) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAtomicity.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecTransversal.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecIntensionalChoice.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.InextensibleComprehension.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TameRigidity.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BarcanT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.RelationalChoice.schemaIn
+
+/-- `injective-stages-with-surjections`
+
+Injective integer stages with an auxiliary surjection: a witness satisfying 9 principles
+and violating 4. -/
+def injective_stages_with_surjections : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBooleanCompleteness.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.logicalNecessity _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAtomlessness.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAtomsAreStrongAtoms.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecSelfAtomsAreStrongAtoms.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAxiomOfInfinityE.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAxiomOfInfinityT.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.ArithmeticNecessitism.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.ofPure Classicism.Meta.AxiomSet.necessityOfArithmetic) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.InextensibleComprehension.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TameRigidity.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BarcanT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.RelationalChoice.schemaIn
+
 /-- `integer-stages-paired-individuals-glued-constants-top`
 
 Integer stages of paired individuals with a top proposition name: a witness satisfying 8 principles
@@ -6541,6 +6643,18 @@ def maximalist_diagonal_tails_cantor : Prop :=
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Transversal.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.RelationalChoice.schemaIn
 
+/-- `maximalist-diagonal-tails-fixed`
+
+Diagonal tails with Maximalist exits at a fixed point: a witness satisfying 3 principles
+and violating 2. -/
+def maximalist_diagonal_tails_fixed : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.possibilityPlusSig _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.StrongActuality.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.RelationalChoice.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TransversalChoice.schemaIn
+
 /-- `pair-shift-with-an-ultrafilter-character`
 
 Pair shift with an ultrafilter character: a witness satisfying 8 principles
@@ -6559,6 +6673,24 @@ def pair_shift_with_an_ultrafilter_character : Prop :=
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompleteness.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BarcanRelational.schemaIn
 
+/-- `profinite-cosets-with-finite-stabilizers-and-terminals`
+
+Profinite cosets with finite stabilizers and classical exits: a witness satisfying 9 principles
+and violating 2. -/
+def profinite_cosets_with_finite_stabilizers_and_terminals : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecWellOrdering.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecTransversalChoice.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecRelationalChoice.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBarcan.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAtomsAreStrongAtoms.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecTameRigidity.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecWeaklyRigidPower.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecRigidPower.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.IntensionalChoice.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.ModalWellOrdering.schemaIn
+
 /-- `replicated-entrances-to-graded-permutations`
 
 Replicated entrances to graded permutations: a witness satisfying 4 principles
@@ -6571,6 +6703,58 @@ def replicated_entrances_to_graded_permutations : Prop :=
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecStrongActuality.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAtomicityT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.CountableBooleanCompleteness.schemaIn
+
+/-- `separate-exits-for-pure-and-named-witnesses`
+
+Separate exits for pure and named witnesses: a witness satisfying 2 principles
+and violating 1. -/
+def separate_exits_for_pure_and_named_witnesses : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.possibilityPlus) ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.possiblyWitnessedPossibility _) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.possibilityPlusSig _)
+
+/-- `singleton-free-words-with-definable-exits`
+
+Free words with definable exits: a witness satisfying 7 principles
+and violating 7. -/
+def singleton_free_words_with_definable_exits : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.possibilityPlus) ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.witnessedPossibility _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WellOrdering.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TransversalChoice.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.InextensibleComprehension.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.StrongActuality.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TruthsAreNDNecessary.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.distinctnessC _) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.possiblyWitnessedPossibility _) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.infinityE) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AxiomOfInfinityE.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompletenessT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.CountableBooleanCompleteness.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _)
+
+/-- `split-root-before-integer-stages`
+
+Split root before the paired integer stages: a witness satisfying 11 principles
+and violating 3. -/
+def split_root_before_integer_stages : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.FunctionalChoice.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecessityOfDistinctness.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.StrongActuality.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TruthImpliesTwoHatNecessity.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WellOrdering.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.RigidComprehension.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TameRigidity.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.RigidPower.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WeaklyRigidPower.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompleteness.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecFiveImpliesTwoHatNecessity.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecTwoHatImpliesNdNecessity.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BarcanT.schemaIn
 
 /-- `stitched-cohen-coalesced-middle`
 
@@ -6595,6 +6779,304 @@ def stitched_cohen_coalesced_middle : Prop :=
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.separatedStructure _) ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.independence _) ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.distinctnessC _)
+
+/-- `stone-terminal-bounded-catalogue`
+
+Stone terminals over the bounded Boolean algebra catalogue: a witness satisfying 3 principles
+and violating 0. -/
+def stone_terminal_bounded_catalogue : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.distinctnessC) ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.distinctnessC _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _)
+
+/-- `stone-terminal-cantor-finite-rigid-support-top`
+
+Cantor root loops with a finite-support component with a top proposition name: a witness satisfying 5 principles
+and violating 6. -/
+def stone_terminal_cantor_finite_rigid_support_top : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.possibilityPlus) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Vicinity.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WeaklyRigidPower.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WellOrdering.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Actuality.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.strongPossibility) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.witnessedPossibility _) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.separatedStructure _) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.independence _) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.distinctnessC _)
+
+/-- `stone-terminal-cantor-finite-rigid-support`
+
+Cantor root loops with a signature-Maximalist rigid-power component: a witness satisfying 6 principles
+and violating 10. -/
+def stone_terminal_cantor_finite_rigid_support : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WeaklyRigidPower.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WellOrdering.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.possibilityPlusSig _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Vicinity.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AxiomOfInfinityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BarcanT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.SelfAtomsAreAtomsT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AtomicityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TruthsAreNDNecessary.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Actuality.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.CountableBooleanCompleteness.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompletenessT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecPotentialInfinityE.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecPotentialInfinityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.signatureB)
+
+/-- `stone-terminal-cantor-paired`
+
+Cantor root loops with Maximalism and a Barcan counterexample: a witness satisfying 5 principles
+and violating 11. -/
+def stone_terminal_cantor_paired : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WellOrdering.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.possibilityPlusSig _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Vicinity.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AxiomOfInfinityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.SelfAtomsAreAtomsT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AtomicityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.infinityE) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BarcanT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TruthsAreNDNecessary.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Actuality.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.CountableBooleanCompleteness.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompletenessT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecPotentialInfinityE.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecPotentialInfinityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.signatureB)
+
+/-- `stone-terminal-cantor-permutation`
+
+Cantor root loops with a finite-support permutation component: a witness satisfying 9 principles
+and violating 10. -/
+def stone_terminal_cantor_permutation : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WellOrdering.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Vicinity.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBarcan.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAtomsAreStrongAtoms.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecRigidRigidity.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecTameRigidity.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecWeaklyRigidPower.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AxiomOfInfinityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.SelfAtomsAreAtomsT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AtomicityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TruthsAreNDNecessary.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Actuality.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.CountableBooleanCompleteness.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompletenessT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecActuality.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecPotentialInfinityE.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecPotentialInfinityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.signatureB)
+
+/-- `stone-terminal-cantor`
+
+Cantor root loops with Maximalism and current Barcan: a witness satisfying 6 principles
+and violating 9. -/
+def stone_terminal_cantor : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Barcan.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WellOrdering.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.possibilityPlusSig _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Vicinity.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AxiomOfInfinityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.SelfAtomsAreAtomsT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AtomicityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TruthsAreNDNecessary.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Actuality.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.CountableBooleanCompleteness.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompletenessT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecPotentialInfinityE.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecPotentialInfinityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.signatureB)
+
+/-- `stone-terminal-involution-fixed-name`
+
+Stone terminals with a root involution and a name fixed at top: a witness satisfying 5 principles
+and violating 10. -/
+def stone_terminal_involution_fixed_name : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.possibilityPlus) ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WellOrdering.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.StrongActuality.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AxiomOfInfinityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.distinctnessC _) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.SelfAtomsAreAtomsT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AtomicityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompletenessT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.infinityE) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BarcanT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TruthsAreNDNecessary.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecPotentialInfinityE.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecPotentialInfinityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.signatureB)
+
+/-- `stone-terminal-involution`
+
+Stone terminals with a root involution: a witness satisfying 5 principles
+and violating 9. -/
+def stone_terminal_involution : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WellOrdering.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.possibilityPlusSig _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.StrongActuality.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AxiomOfInfinityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.SelfAtomsAreAtomsT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AtomicityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompletenessT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.infinityE) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BarcanT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TruthsAreNDNecessary.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecPotentialInfinityE.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecPotentialInfinityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.signatureB)
+
+/-- `stone-terminal-left-inverses`
+
+Stone terminals with two left inverses at the root: a witness satisfying 6 principles
+and violating 10. -/
+def stone_terminal_left_inverses : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Actuality.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TruthImpliesTwoHatNecessity.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WellOrdering.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.possibilityPlusSig _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AxiomOfInfinityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.StrongActuality.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.FiveImpliesNdNecessity.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.SelfAtomsAreAtomsT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AtomicityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompletenessT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.infinityE) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BarcanT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecPotentialInfinityE.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecPotentialInfinityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.signatureB)
+
+/-- `stone-terminal-maximalist`
+
+Stone terminals with a signature-Maximalist root: a witness satisfying 6 principles
+and violating 7. -/
+def stone_terminal_maximalist : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WellOrdering.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.possibilityPlusSig _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.StrongActuality.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TruthsAreNDNecessary.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AxiomOfInfinityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.SelfAtomsAreAtomsT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AtomicityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompletenessT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.infinityE) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecPotentialInfinityE.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecPotentialInfinityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.signatureB)
+
+/-- `stone-terminal-permutation`
+
+Stone terminals with a finite-support permutation component: a witness satisfying 10 principles
+and violating 7. -/
+def stone_terminal_permutation : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WellOrdering.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.StrongActuality.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TruthsAreNDNecessary.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBarcan.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAtomsAreStrongAtoms.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecRigidRigidity.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecTameRigidity.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecWeaklyRigidPower.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AxiomOfInfinityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.SelfAtomsAreAtomsT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AtomicityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompletenessT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecActuality.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecPotentialInfinityE.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecPotentialInfinityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.signatureB)
+
+/-- `stone-terminals-over-bounded-partial-injections`
+
+Signature Possibility+ and Mathematical Possibilism without Transversal: a witness satisfying 2 principles
+and violating 6. -/
+def stone_terminals_over_bounded_partial_injections : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.possibilityPlusSig _) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Transversal.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TransversalChoice.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.RelationalChoice.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompletenessT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.CountableBooleanCompleteness.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Actuality.schemaIn
+
+/-- `stone-terminals-paired-sites-at-v`
+
+Stone terminals with two-hat necessity of every truth: a witness satisfying 4 principles
+and violating 5. -/
+def stone_terminals_paired_sites_at_v : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.possibilityPlusSig _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TruthImpliesTwoHatNecessity.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WellOrdering.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TwoHatImpliesNdNecessity.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.SelfAtomsAreAtomsT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AtomicityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompletenessT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.infinityE)
+
+/-- `stone-terminals-paired-sites`
+
+Paired sites with signature Possibility+ and Mathematical Possibilism: a witness satisfying 3 principles
+and violating 6. -/
+def stone_terminals_paired_sites : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.possibilityPlusSig _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WellOrdering.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.FiveImpliesTwoHatNecessity.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TwoHatImpliesNdNecessity.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.SelfAtomsAreAtomsT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AtomicityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompletenessT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.infinityE)
+
+/-- `stone-terminals-with-correlated-haecceities`
+
+Stone terminals with correlated haecceities: a witness satisfying 7 principles
+and violating 5. -/
+def stone_terminals_with_correlated_haecceities : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.possibilityPlusSig _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Barcan.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.StrongActuality.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TruthsAreNDNecessary.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WellOrdering.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Transversal.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.RigidPower.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WeaklyRigidPower.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecRelationalChoice.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecTransversalChoice.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.ModalWellOrdering.schemaIn
 
 /-- `supported-boolean-complete-component`
 
@@ -6702,6 +7184,82 @@ def supported_source_with_two_projections : Prop :=
     Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompleteness.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecRigidPower.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecWeaklyRigidPower.schemaIn
+
+/-- `supported-stone-pairs`
+
+Supported Stone terminals with Possibility+, both rigid powers and failure of choice: a witness satisfying 7 principles
+and violating 2. -/
+def supported_stone_pairs : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WeaklyRigidPower.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.possibilityPlusSig _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AtomsAreStrongAtoms.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AxiomOfInfinityE.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.StrongActuality.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TruthsAreNDNecessary.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.RelationalChoice.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompletenessT.schemaIn
+
+/-- `symmetric-boolean-prefix-recurrent-colours`
+
+Symmetric ideally-full model: atomless Boolean prefix with recurrent colour subalgebras: a witness satisfying 13 principles
+and violating 12. -/
+def symmetric_boolean_prefix_recurrent_colours : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBarcan.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.RigidComprehension.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecRigidPower.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecSelfAtomsAreStrongAtoms.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecSelfAtomsAreAtoms.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AxiomOfInfinityE.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AxiomOfInfinityT.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Barcan.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Actuality.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.ArithmeticNecessitism.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TruthsAreNDNecessary.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAxiomOfInfinityE.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAxiomOfInfinityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecTameRigidity.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WeaklyRigidPower.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.signatureB) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecVicinity.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.IntensionalChoice.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecTwoHatImpliesNdNecessity.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.RelationalChoice.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.witnessedPossibility _) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.separatedStructure _) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.independence _) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.distinctnessC _)
+
+/-- `symmetric-boolean-prefix-recurrent-colours-individuals-singleton`
+
+Symmetric ideally-full model: atomless Boolean prefix with recurrent colour subalgebras [one individual]: a witness satisfying 9 principles
+and violating 12. -/
+def symmetric_boolean_prefix_recurrent_colours_individuals_singleton : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBarcan.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecSelfAtomsAreStrongAtoms.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecSelfAtomsAreAtoms.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AxiomOfInfinityT.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Barcan.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Actuality.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.ArithmeticNecessitism.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TruthsAreNDNecessary.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAxiomOfInfinityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.signatureB) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecVicinity.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecTwoHatImpliesNdNecessity.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AxiomOfInfinityE.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.infinityE) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleInfinityE.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PotentialInfinityE.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.witnessedPossibility _) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.separatedStructure _) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.independence _) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.distinctnessC _)
 
 /-- `symmetric-collapse-pair-and-point`
 
@@ -7239,6 +7797,96 @@ def three_object_diagonal_ultrapower : Prop :=
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.ArithmeticNecessitism.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PotentialInfinityT.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BarcanRelational.schemaIn
+
+/-- `truncation-words-top`
+
+Truncations of a regular cardinal with a top proposition name: a witness satisfying 10 principles
+and violating 8. -/
+def truncation_words_top : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAtomicity.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAxiomOfInfinityT.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecCountableBooleanCompleteness.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecSelfAtomsAreStrongAtoms.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecWeaklyRigidPower.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.noContingency) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TransversalChoice.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.noContingency _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.signatureB _) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompletenessT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.infinityE) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PotentialInfinityE.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WeaklyInextensibleComprehension.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.witnessedPossibility _) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.separatedStructure _) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.independence _) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.distinctnessC _)
+
+/-- `two-colour-multisets-with-a-word-guard`
+
+Two-colour multisets with a word guard: a witness satisfying 7 principles
+and violating 2. -/
+def two_colour_multisets_with_a_word_guard : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.logicalNecessity _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecStrongAtomicity.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecStrongActuality.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecTruthsAreNDNecessary.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecCountableBooleanCompleteness.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAxiomOfInfinityT.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BarcanT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompletenessT.schemaIn
+
+/-- `two-returning-sites-with-named-witnesses`
+
+Two returning sites with named witnesses: a witness satisfying 12 principles
+and violating 2. -/
+def two_returning_sites_with_named_witnesses : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.possiblyWitnessedPossibility _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.signatureB) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBooleanCompleteness.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecStrongAtomicity.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecStrongActuality.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecTruthsAreNDNecessary.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBarcanRelational.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecRigidComprehension.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecRigidPower.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecWeaklyRigidPower.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.ModalWellOrdering.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecIntensionalChoice.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.logicalNecessity _) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Barcan.schemaIn
+
+/-- `ultraproduct-countable-full-s5-finite-individuals`
+
+Henkin ultraproduct: countable full S5 models with n individuals: a witness satisfying 16 principles
+and violating 5. -/
+def ultraproduct_countable_full_s5_finite_individuals : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.AxiomOfInfinityT.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecFunctionalChoice.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecIntensionalChoice.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBarcan.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecNecessityOfDistinctness.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAtomicity.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecActuality.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecRigidComprehension.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecStrongAtomicity.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecWellOrdering.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.noContingency) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAxiomOfInfinityT.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.infinityE) ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.noContingency _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.signatureB _) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.PossibleInfinityE.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.witnessedPossibility _) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.separatedStructure _) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.independence _) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.distinctnessC _)
 
 /-- `ultraproduct-finite-full-s5`
 

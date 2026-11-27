@@ -181,3 +181,57 @@ upper bound would have to hold at every even tag and fail at every odd
 tag. Taking the empty coefficient and empty word at all sufficiently
 large finite tags contradicts its finite cutoff. Thus unboxed Boolean
 Completeness at $t$ and Countable Boolean Completeness both fail.
+
+## Revised Mathematical Possibilism without Transversal
+
+Use a singleton individual domain. Take $\aleph_1$ equivalence classes
+of $\aleph_1$ auxiliary sites each, and allow a countable source pin.
+Keep the finite cutoff bound and the same free-word coordinate. The
+term closure proof is unchanged, since finite unions of countable
+pins are countable. A countable pin still misses entire classes, and a
+countable set in any class can still be moved off itself pointwise
+outside a prescribed countable pin. The partial identity on the first
+pin is an arrow at tag $\infty$, even when that pin is infinite. Thus
+the scalar class obstruction to Transversal remains valid, as do the
+choice counterexamples, the word-coded continuum, and the missing
+even-tag join.
+
+Suppose $Z$ is a set of current tuples invariant under all class
+automorphisms fixing some countable $P$ pointwise. Use row $\pi[Z]$
+when $f|_P=\pi|_P$ for an automorphism $\pi$, and the empty row
+otherwise. Any two matching permutations differ on the right by one
+fixing $P$. This gives an equivariant profile pinned by $P$, with
+current row $Z$. In particular, for any countably many whole entities
+there is one stabilizer fixing them all: take the union of their pins.
+Every external set of tuples of these entities is available as a
+current row.
+
+For the ordinal bound use the
+[singleton-individual table argument](two-colour-multisets-with-a-word-guard.html).
+The entities given by a single finite extensional table on individual
+orders and fields at every arrow form a finite invariant set. It is
+therefore available as a current test. Zero and successor preserve the
+test. A rigid family of members of this finite set is the union of
+their tuple-haecceities, by persistence and weak inextensibility.
+Its ordinal limit consequently uses one such table at every arrow.
+The inexact ordinals are contained in this finite set.
+
+For an externally infinite Boolean algebra carrier choose a countably
+infinite subset $Y$. All subsets of $Y$, their graphs, and comparisons
+with the finite ordinal bound are current rows by the common-pin result.
+Thus $Y$ is strictly larger than the ordinal benchmark. Any internally
+strictly smaller subset of $Y$ is finite, since an external bijection
+from an infinite subset onto $Y$ would be admitted. For a finite
+subset all its subcollections are coded on a finite subset of $Y$
+with their membership graph. Hence $Y$ is power-closed. Only externally
+finite Boolean algebras can satisfy revised smallness.
+
+At tag zero the empty partial injection is the only coefficient.
+Specifying this tag and one word gives a scalar atom, by postcomposition
+equivariance or simply because it is a single arrow. The interval below
+the union of $j$ such atoms is the Boolean algebra with $j$ atoms. Its
+order isomorphism with any given finite Boolean algebra is a finite
+current graph with a common pin. Use bottom for the one-element algebra.
+This proves revised Mathematical Possibilism. It holds with Logical
+Necessity by the finite gluing and compactness argument above, at a
+point that still fails Transversal at propositional argument type.

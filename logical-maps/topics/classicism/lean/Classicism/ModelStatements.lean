@@ -1,5 +1,6 @@
 import Classicism.Certified.Signatures
 import Classicism.Certified.Arithmetic
+import Classicism.Coalesced.StoneCatalogueModel
 import Classicism.Semantics.IntensionalTheory
 import Classicism.Models.Permutations
 import Classicism.Models.Monoids
@@ -308,6 +309,18 @@ def Models.full_free_product_glued_constants.logical_necessity_r : Prop :=
 /-- `full-idempotent-monoid`: Atoms are self-atoms (type t) fails. -/
 def Models.full_idempotent_monoid.atoms_are_self_atoms_t : Prop :=
   (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Idem).IsModel ∧ ¬ (Classicism.Meta.Intensional.MSet.model Classicism.Meta.Intensional.Idem).HoldsAx Classicism.P.AtomsAreSelfAtomsT.schemaIn
+
+/-- `stone-terminal-bounded-catalogue`: Maximalism (pure) holds. -/
+def Models.stone_terminal_bounded_catalogue.distinctness_schema_r : Prop :=
+  (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.model).IsModel ∧ (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.model).HoldsAx (Classicism.Meta.AxiomSet.pureVersion Classicism.Meta.AxiomSet.distinctnessC)
+
+/-- `stone-terminal-bounded-catalogue`: Maximalism (signature Σ) holds. -/
+def Models.stone_terminal_bounded_catalogue.distinctness_signature_r : Prop :=
+  (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.model).Admitted ∧ (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.model).IsModel ∧ (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.model).HoldsAx (Classicism.Meta.AxiomSet.distinctnessC _)
+
+/-- `stone-terminal-bounded-catalogue`: Mathematical Possibilism holds. -/
+def Models.stone_terminal_bounded_catalogue.forcing_possibilism : Prop :=
+  (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.model).IsModel ∧ (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.model).HoldsAx (Classicism.Meta.Coalesced.StoneFan.CatalogueModel.revisedMP _)
 
 /-- `symmetric-all-surjections`: Intensional Choice fails. -/
 def Models.symmetric_all_surjections.intensional_choice_r : Prop :=

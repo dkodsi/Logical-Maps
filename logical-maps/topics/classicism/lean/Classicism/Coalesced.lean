@@ -16,6 +16,7 @@ import Classicism.Coalesced.StoneCurrent
 import Classicism.Coalesced.StoneMaximalist
 import Classicism.Coalesced.StoneCatalogue
 import Classicism.Coalesced.StoneOrdinalBound
+import Classicism.Coalesced.StonePossibilism
 
 /-!
 # Coalesced sums
@@ -79,7 +80,13 @@ clopen sets of the label space (`StoneFan.Canonical.proposition_order`). For eve
 type κ, one such fan simultaneously represents every current typed Boolean algebra whose
 carrier embeds into κ by a native graph onto an entailment interval
 (`StoneFan.Canonical.maximalist_represents_bounded`). The actual PR 28 inexact ordinals
-inject into a type independent of the leaf space (`StoneFan.Canonical.ordinalEmbedding`).
+inject into a type independent of the leaf space (`StoneFan.Canonical.ordinalEmbedding`). Their bound
+yields a strong-limit cut above which no current carrier meets the revised smallness
+test. For a countable signature of closed types the resulting catalogue fan satisfies
+signature Maximalism, pure Maximalism and revised Mathematical Possibilism at every
+type (`StoneFan.Canonical.maximalist_mathematical_possibilism`). The theorem
+`StoneFan.Canonical.joint_complete_theory` gives the corresponding complete,
+consistent theory over an admitted one-constant signature.
 
 In standard terms the coalesced sum of the categories is the *collage* (cograph) of the
 profunctor from the one-object category `End` to `Σ k, C k` given by `R`, and an action is
