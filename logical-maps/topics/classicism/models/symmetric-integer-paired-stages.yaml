@@ -181,3 +181,18 @@ arguments:
     the same truth on that automorphism as on the identity, so $p$ holds
     at $h$. This proves two-hat and hence 5-necessity of $D\to p$, and
     therefore 5-necessity of $p$. The proof applies at every stage.
+- id: canonical-transversal
+  holds: [necessary-transversal-r]
+  choice: uses
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-27'
+  writeup: transversals-from-intersecting-supports
+  text: >-
+    Two pointwise supports for a current extension have an intersection which
+    still supports it, by extending permutations on spare blocks. Take the
+    union of the images of the extension by all automorphisms agreeing with
+    the coefficient on some support, using the identity monoid coordinate
+    and the current target. Intersecting supports shows that each support
+    pins this representative. Its assignment is equivariant and its current
+    row recovers the extension. The family of these representatives is thus
+    an invariant current row selecting one entity per coextension class.

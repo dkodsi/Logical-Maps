@@ -50,4 +50,76 @@ The witness $m$ can be new at $u$ and can lie above every transported starting n
 
 For **every finite signature** $\Sigma$, Strong Possibility for $\Sigma$ is likewise incompatible with local Boolean Completeness at $t$. In the proof replace $b_n$ by $b_n\land\delta_\Sigma$, where $\delta_\Sigma$ says that all original individual constants coincide and each original nonindividual constant equals the bottom entity of its type. Empty conjunctions are true. Use the [signature-definable root](coalesced-definable-root-signature.html) for $\operatorname{Max}(C(\Sigma))$, using one auxiliary individual marker when needed. Every standard positive finite size admits a full Fregean model with the stipulated default interpretations, so all the restricted cells are possible. At the root the cells are false and the numbers are standard by the unrestricted current numerical predicate row.
 
-On each such cell a proposition descriptor becomes a pure one-marker sentence by substituting bottom for nonindividual constants and the common marker for individual constants. Every clause of this substitution is correct throughout the finite Fregean cell, because literal identity and term interpretation commute with transport. Consequently the single pure one-marker evaluation algorithm above gives the required diagonal on these restricted cells. The analogues of $\Pi$ and $\Psi$ are closed sentences of $\mathcal L(\Sigma)$ consistent with $\operatorname{Max}(C(\Sigma))$. Signature Strong Possibility gives their distinctness-preserving possibilities under this reference theory. The coding and return arguments apply verbatim. This includes finite signatures consisting of any number of individual names, propositions and predicates of individuals. For arbitrary infinite signatures the conjunction $\delta_\Sigma$ need not be a formula.
+On each such cell a proposition descriptor becomes a pure one-marker sentence by substituting bottom for nonindividual constants and the common marker for individual constants. Every clause of this substitution is correct throughout the finite Fregean cell, because literal identity and term interpretation commute with transport. Consequently the single pure one-marker evaluation algorithm above gives the required diagonal on these restricted cells. The analogues of $\Pi$ and $\Psi$ are closed sentences of $\mathcal L(\Sigma)$ consistent with $\operatorname{Max}(C(\Sigma))$. Signature Strong Possibility gives their distinctness-preserving possibilities under this reference theory. The coding and return arguments apply verbatim. This includes finite signatures consisting of any number of individual names, propositions and predicates of individuals. The next argument allows infinitely many individual names.
+
+## Arbitrarily many individual names
+
+Let \(\Sigma\) have any set of individual constants and finitely many
+nonindividual constants. Strong Possibility for \(\Sigma\) is incompatible
+with unboxed Boolean Completeness at \(t\). The argument permits a
+different interpretation of every individual name at the starting point.
+
+Retain \(N,I,\mathrm{Fr}\) and \(b_n\) from the
+pure proof above.
+Let \(E_1\) say there is exactly one individual. Let \(\delta\) be the
+finite conjunction saying that each nonindividual symbol is bottom,
+and put \(c_n=b_n\land\delta\). In the standard signature-definable
+root \(V\) for \(\operatorname{Max}(C(\Sigma))\), numbers are standard
+and proposition values have closed descriptors in the signature with
+one auxiliary individual marker if needed. This is valid also when
+the root has many named individuals: a free current row isolates the
+standard numeral values and finite Fregean components distinguish them.
+
+At \(V\) one has the closed sentence
+\[
+ \Gamma=I\land\forall n\in N\;\Diamond(E_1\land\Diamond c_n).
+\]
+For each standard \(n\), take a singleton C point with an arrow to
+a full finite Fregean world of size \(n+1\). Send its sole individual
+to one marked element, and interpret all the original individual names
+by these chosen individuals. Interpret the remaining constants by bottom.
+A full action model on this two-object frame gives the required
+consistent sentence and hence its possibility at \(V\).
+At a signature SP point \(o\), ordinary Maximalism gives both \(I\)
+and \(\Diamond\Gamma\). Any failure of the indicated possibility at
+a current \(n\in N\) would persist, as would numberhood, to a
+\(\Gamma\)-point. Hence \(\Gamma\) holds at \(o\) itself.
+
+Write \(D(j)=1-\operatorname{Eval}(T_j,j+1)\) for the primitive
+recursive diagonal on the pure one-marker descriptors. The following
+single sentence also holds at \(V\):
+\[
+ I\ \land\ \forall p \ \exists n\in N\
+    \Box\big(E_1\to (c_n\le p^{1-D(n)})\big).
+\]
+Here the sign is chosen at the Peano point before the box, using the
+two guarded clauses for the numerical bit. For a given \(p\),
+replace all individual names in an old descriptor by a single marker
+and replace its nonindividual symbols by their bottom terms. Use a
+code of the resulting pure one-marker term for \(n\).
+Every arrow *through* a singleton makes all individual names equal
+for the rest of that path. At a subsequent \(c_n\)-world the
+nonindividual symbols are bottom and the finite Fregean hierarchy
+is the one used in the evaluation. Thus the asserted order identity
+holds at each old singleton. If \(V\) itself is a singleton, the
+same argument applies to all its old exits and the current non-Fregean
+point is outside \(c_n\).
+
+The family \(c_n\) is nonzero at \(o\) by \(\Gamma\). It is pairwise
+disjoint there by strong possibility of the disjointness sentence at
+\(V\), a universal Boolean combination of identities using persistence
+of numberhood. Boolean Completeness now supplies \(s\) with
+\(c_n\le s^{D(n)}\) for all current \(n\), by joining the positive
+cells. In strong possibility of the displayed diagonal sentence
+request a return to the true proposition
+\[
+ \Gamma\ \land\ \forall n\in N\;(c_n\le s^{D(n)}).
+\]
+At the intermediate point take the index \(m\) for the transported
+\(s\). Its boxed conditional remains true at the return by transitivity.
+Primitive recursive arithmetic preserves the sign across these two
+Peano points. By \(\Gamma\) there is then a further path through a
+singleton to a point satisfying the transported \(c_m\). The boxed
+conditional gives the opposite sign of \(s\) there, while the order
+identity at the return gives its chosen sign. This contradiction
+proves the claim.

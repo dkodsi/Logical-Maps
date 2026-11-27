@@ -14,6 +14,8 @@ import Classicism.Coalesced.Pinned
 import Classicism.Coalesced.PinnedBarcan
 import Classicism.Coalesced.StoneCurrent
 import Classicism.Coalesced.StoneMaximalist
+import Classicism.Coalesced.StoneCatalogue
+import Classicism.Coalesced.StoneOrdinalBound
 
 /-!
 # Coalesced sums
@@ -73,7 +75,11 @@ extension at the root (`StoneFan.current_ext_full`). For a countable signature o
 types, the canonical Maximalist and a full singleton leaf give a fan satisfying
 Maximalism (`StoneFan.Canonical.singleton_fan_maximalist`). Root proposition entailment
 is the product of the current truth bit, the old proposition order, and inclusion on the
-clopen sets of the label space (`StoneFan.Canonical.proposition_order`).
+clopen sets of the label space (`StoneFan.Canonical.proposition_order`). For every bounding
+type κ, one such fan simultaneously represents every current typed Boolean algebra whose
+carrier embeds into κ by a native graph onto an entailment interval
+(`StoneFan.Canonical.maximalist_represents_bounded`). The actual PR 28 inexact ordinals
+inject into a type independent of the leaf space (`StoneFan.Canonical.ordinalEmbedding`).
 
 In standard terms the coalesced sum of the categories is the *collage* (cograph) of the
 profunctor from the one-object category `End` to `Σ k, C k` given by `R`, and an action is
