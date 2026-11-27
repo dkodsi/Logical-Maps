@@ -45,14 +45,6 @@ theorem canonical_proxy_separation [Countable Sig.Const] (build : Predecessors S
   rw [StrongPossibilityReturn.positive_instantiate, return_diag] at H
   exact H
 
-theorem pure_from_predecessors
-    (one : Predecessors (DescriptorColours.individualNames Unit))
-    (two : Predecessors (DescriptorColours.individualNames Bool)) :
-    ¬AxiomSet.Consistent (AxiomSet.strongPossibility Signature.pure) := by
-  apply StrongPossibilityLicences.pure_inconsistent Q Q_closedTypes
-  · rw [ofPure_Q]; exact canonical_proxy_separation one
-  · rw [ofPure_Q]; exact canonical_proxy_separation two
-
 theorem named_from_predecessors [Countable Sig.Const] (hS : Sig.Closed)
     (hn : Nonempty (DistinguishedDefinable.names (Sig := Sig) .e)) (build : Predecessors Sig)
     (c : Sig.Const) {ρ : RTy} (hc : Sig.typeOf c = .rel ρ) :

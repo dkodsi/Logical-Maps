@@ -1,4 +1,5 @@
 import Classicism.Syntax.Blocks
+import Classicism.Syntax.Russell
 import Classicism.Semantics.IntensionalFacts
 
 /-! Native syntax for the six-individual proxy diagonal. The signature can be arbitrary.
@@ -80,10 +81,7 @@ def Q : Term Sig [] ((Tester : Ty) ⇒ S) :=
   .lam (lamBlock roles (search ((v0 : Term Sig [Tester] Tester).rename (Ren.wkBlock roles))
     controls))
 
-/-- The Russell predicate attached to a closed operator. -/
-def russell {s : RTy} (q : Term Sig [] (((s : Ty) ⇒ RTy.t) ⇒ s)) :
-    Term Sig [] ((s : Ty) ⇒ RTy.t) :=
-  .lam (exists' (conj (eq' (.app q.close v0) v1) (neg (.app v0 v1))))
+export Diagonal (russell)
 
 def rho : Term Sig [] Tester := russell Q
 def d : Term Sig [] S := .app Q rho

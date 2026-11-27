@@ -1,3 +1,4 @@
+import Classicism.StrongPossibility.UnaryArbitrarySignature
 import Classicism.StrongPossibility.FiniteProxyGuards
 import Classicism.StrongPossibility.Predecessor
 import Classicism.StrongPossibility.ProxyCanonical
@@ -31,17 +32,7 @@ theorem arbitrary_licence (hS : Sig.Closed) (c : Sig.Const)
 
 /-- Strong Possibility is inconsistent in every signature admitted by the map. -/
 theorem inconsistent_in_admitted_signature (hs : Sig.Admitted) :
-    ¬ AxiomSet.Consistent (AxiomSet.strongPossibility Sig) := by
-  obtain ⟨hS,c,hn⟩ := hs
-  obtain ⟨ρ,h⟩ : ∃ ρ, Sig.typeOf c = .rel ρ := by
-    cases he : Sig.typeOf c with
-    | e => exact False.elim (hn he)
-    | var i => exact False.elim (hS.not_var c i he)
-    | rel ρ => exact ⟨ρ,rfl⟩
-  have hc : (Ty.rel ρ).Closed := by rw [← h]; exact hS c
-  have ce := closed_emptyRow h hc
-  apply inconsistent_of_two_licenses Q (emptyRow c h)
-  · exact licensed ce Q_closedTypes (arbitrary_licence hS c h true)
-  · exact licensed (by simpa using ce) Q_closedTypes (arbitrary_licence hS c h false)
+    ¬ AxiomSet.Consistent (AxiomSet.strongPossibility Sig) :=
+  UnarySP.inconsistent_in_admitted_signature hs
 
 end Classicism.Meta.ProxyDiagonal

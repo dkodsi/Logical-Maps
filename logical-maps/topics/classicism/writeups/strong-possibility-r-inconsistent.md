@@ -1,5 +1,123 @@
 # Strong Possibility (pure) ⇒ ⊥
 
+## A unary diagonal {#unary-proof}
+
+**Theorem.** The same two closed pure sentences witness the inconsistency of Strong Possibility in the pure language and in every admitted signature. Each sentence is separately consistent with ordinary Maximalism in that language. Their distinctness-preserving possibilities are jointly inconsistent in Classicism.
+
+Write $C$ for Classicism, $\Diamond$ for ordinary possibility and $D$ for distinctness-preserving possibility. Thus $DP$ says that for each currently true proposition $q$, one can reach a $P$-world from which $q$ is again possible. Ordinary Maximalism adds to $C$ every closed disequality of the language that is consistent with $C$ in that language. Strong Possibility requires $DP$ for every closed sentence $P$ consistent with this maximalist theory.
+
+### A distinction that can become permanent
+
+Can every distinction between individuals be made permanent? Two ordinary Maximalist worlds suggest opposite answers. In the first, any two distinct individuals have different names, and there is a future where the names stay apart forever. In the second, two individuals are distinct now but are sent to the same individual at every proper exit. Let
+
+$$
+ K=\forall x^e y^e\,[x\ne y\ \to\ \Diamond\Box(x\ne y)].
+$$
+
+Then $DK\to K$. Given distinct $x,y$ here, use $DK$ to visit a $K$-world from which their distinctness can be restored. They must still differ at the visit, since equality persists. By $K$ they have a further future where their distinctness is permanent. That future was accessible from here all along.
+
+The first world will license $K$, forcing $K$ here under SP. At the second world we seek a law whose strong possibility forces $\neg K$ here. To find such a law, consider two testers that disagree about their common output.
+
+Let $S=e\to t$ be the type of unary predicates, and call an entity of type $S\to t$ a *tester*. Suppose that for each individual $b$ we have an operator $Q_b$ taking testers to unary predicates. Form the Russell tester and its output
+
+$$
+ \rho_b(p)=\exists F\,(Q_bF=p\land\neg F(p)),
+ \qquad d_b=Q_b\rho_b .
+$$
+
+Then $\rho_b(d_b)$ holds. If it failed, $\rho_b$ itself would witness it. Unpacking its truth gives, at every world, a tester $F$ with
+
+$$
+ Q_bF=d_b \qquad\text{and}\qquad \neg F(d_b). \tag{R}
+$$
+
+The rejection is at the world in question, and the witness may vary from world to world. This use of the Russell–Myhill diagonal adapts the earlier argument for a language with a higher-order relation name. [Earlier signature argument](strong-possibility-signature-r-inconsistent.html)
+
+For any sentence $g$, form the law
+
+$$
+ H(g)=\forall b^e F^{S\to t}\,[Q_bF=d_b\ \to\ \Box(g\to F(d_b))].
+$$
+
+If both $H(g)$ and $g$ hold here, (R) gives a contradiction. The witness has the diagonal output, so the law makes it accept $d_b$, although it rejects $d_b$.
+
+The outer box in $H(g)$ lets us draw the same conclusion from a *visit* to the law. An implication between identities reflects to the starting world.
+
+$$
+ D(x=y\to u=v)\ \longrightarrow\ (x=y\to u=v).
+$$
+
+If $x=y$ and $u\ne v$ held here, ask to restore $u\ne v$. The premise persists to the visit, where the implication gives $u=v$. That equality precludes the restoration. Each instance of $H(g)$ has this form because $\Box P$ means $P=\top$. Instantiating at the transported parameters gives $DH(g)\to H(g)$, hence $DH(g)\to\neg g$. Thus $K$ and $H(K)$ are the two sentences we seek, once we have an operator $Q$ for which each has an ordinary Maximalist witness.
+
+### The two Maximalist worlds
+
+Work first in a finite signature whose constants have closed types and which has an individual name $m$. Both licensing worlds use the definable-root construction over a complete family of pointed canonical action models for this language. Add a root with one entrance into each component. Its only outgoing arrows are its identity and these entrances followed by component arrows. At the root, relations may have arbitrary current extension, with one closed expression, their *descriptor*, giving their transported value across **all** entrances. Each public relation name uses itself as descriptor. Each root individual is assigned an individual name as its descriptor and travels to that name's denotation along each entrance. Substitution of descriptors for parameters gives an abstraction a single closed description on every component. We use the action semantics and completeness of Bacon and Dorr, “Classicism,” in *Higher-Order Metaphysics* (2024), §§3.5–3.6 and Appendix E in the draft numbering, and the definable-root construction described in the project notes. [Dorr’s one-name construction](coalesced-definable-root.html) · [Construction with a fixed signature](coalesced-definable-root-signature.html)
+
+At either root every consistent closed sentence of the ordinary language (with no schematic type variables) is true at some entrance by completeness, hence ordinarily possible. In particular every consistent closed disequality holds at the root, since it is possible there and equality persists. Thus both roots satisfy ordinary Maximalism.
+
+**The world for $K$.** Take one individual for each individual name, with that name as its descriptor. Two distinct root individuals therefore have different names $i,j$. A one-world classical model interpreting them differently witnesses the consistency of $\Box(i\ne j)$. Some entrance consequently makes the pair permanently distinct. This proves $K$.
+
+**The world for $H(K)$.** Give each individual name $i$ two root individuals $i_0,i_1$, both with descriptor $i$, and interpret $i$ by $i_0$. In particular $m_0,m_1$ are distinct at the root and coincide at every proper exit. They can never become permanently distinct. At the root there is an exit merging them, and at each proper exit they are already equal. Hence $K$ is false at the root.
+
+Now suppose $Q_bF=d_b$ there. Let $n$ be the name of which $b$ is a copy, and let $f$ be a descriptor of $F$. The identity persists to every entrance, giving $Q_nf=d_n$ uniformly in the canonical family. This is where we need a particular choice of $Q$. Its required property is proved below.
+
+**Separation.** If a closed tester $f$ rejects $d_n$ at some continuation of a canonical component, then $Q_nf=d_n$ fails at some canonical entrance. [Proof of separation](#unary-reading)
+
+Given separation, $f(d_n)$ holds throughout every component. In root parameters this says that $F(d_b)$ holds at every proper exit. Since $K$ is false at the root itself, $\Box(K\to F(d_b))$ holds there. We have obtained $H(K)$. The Russell witness in (R) concerns a tester at one world. The separation claim concerns a *single closed expression across all entrances*, which is why the local diagonal argument alone could not supply this licence.
+
+### Removing names {#unary-signatures}
+
+The two sentences $K,H(K)$ are pure. For the pure theorem one auxiliary individual name suffices. Any pointed pure model can interpret it, and forgetting it in the two licensing models preserves the sentences and pure Maximalism.
+
+Let the public language be any set-sized free signature whose constants have closed types. This includes every signature admitted by the map. The consistency tests must be taken in the whole signature. Suppose ordinary Maximalism with either $K$ or $H(K)$ proved a contradiction there. The derivation uses only finitely many names and finitely many Maximalist disequalities. Keep this finite sublanguage and add a fresh individual name $m$. Every cited disequality is still a Maximalist axiom there. Otherwise its equality would be provable in the finite language with $m$. Reinsert the public names, replace $m$ by a fresh individual variable, and discharge that variable using existence at type $e$. This would prove the equality in the original language, contrary to the cited axiom. The two sentences contain no names to change, so the derivation would contradict the finite named case. This licenses the same two sentences even when the public language has no individual name. SP now gives both $DK$ and $DH(K)$. The first implies $K$ and the second implies $\neg K$.
+
+### Proof of separation {#unary-reading}
+
+Suppose $f$ rejects $d_n$ at an old world. We already know how $f$ and $\rho_n$ differ. The former can reject the old diagonal, and the latter accepts it everywhere. We need their *outputs* to differ. It suffices to find one individual $a$ at which the output of a tester reads “can this tester reject the old diagonal?”
+
+A unary predicate can be recorded by giving each individual one copy where the predicate is true and two where it is false. Current values alone would lose information. A tester can ask whether its input equals a specified predicate, and two predicates agreeing here can differ at an individual that appears later. We therefore record the values at every old continuation. One marked pair tells the language when to read the copies and when to apply the tester. While the markers differ, choose a predicate agreeing with the recorded values. When they coincide, ask the tester about that predicate.
+
+Here is the pure operator implementing this idea. For individual parameters $a,b$, abbreviate $a=b$ by $B$ and put
+
+$$
+\begin{aligned}
+ L(x)&=\exists y\,[x\ne y\land\Box(B\to x=y)],\\
+ \operatorname{Code}(r)&=(r=\lambda x.\Diamond r(x))\\
+ &\quad{}\land\Box\bigl(\neg B\to\forall x\,[\neg L(x)\leftrightarrow\Diamond(B\land r(x))]\bigr),\\
+ (Q_bF)(a)&=\Diamond\bigl(\neg B\land\exists r^S\,
+                [\operatorname{Code}(r)\land\Diamond(B\land\neg F(r))]\bigr).
+\end{aligned}
+$$
+
+Every output $p=Q_bF$ satisfies $p=\lambda x.\Diamond p(x)$, by reflexivity and transitivity of ordinary possibility and intensionality. Call such a predicate *possibility-fixed*. Every output also fails at $b$, since identical markers can never become distinct.
+
+In an action model the worlds and arrows form a category, and individuals transport along arrows. A relation at $w$ is determined by its truth value for each arrow $h:w\to z$ and each tuple of arguments at $z$. Write $p_h(u)$ for a unary predicate's value at the arrow $h$ and individual $u$.
+
+**Reading lemma.** Fix a pointed action model $(A,w)$ in a signature containing an individual name $b$. There is an action model with a new starting world above $w$ and an individual $a$ there such that, for every closed tester $f$,
+
+$$
+ (Q_bf)(a)\text{ holds at the new world}
+ \quad\Longleftrightarrow\quad (A,w)\models\Diamond\neg f(d_b). \tag{T}
+$$
+
+*Proof.* Let $p$ denote $d_b$ in the old model. It is possibility-fixed and false of $b$ by the definition of $Q$. Keep the old model as a lower layer. Add an upper world for each $h:w\to z$, starting at $1_w$. Each old arrow $k:z\to z'$ gives an upper arrow from $h$ to $kh$ and an exit from $h$ to the lower $z'$. Composition is induced by old composition. Every arrow out of a lower world stays lower.
+
+Over each individual $u$ at $z$ put one copy $u_0$, and a second copy $u_1$ exactly when $p_h(u)$ is false. A second copy, once present, persists along upper arrows. Indeed, truth at any later image of $u$ would already make $p_h(u)$ possibly true, hence true. Upper transport thus preserves the subscript. Exits forget it and apply the old transport. Lift every individual name to its first copy. Choose $a$ to be the second copy of $b$'s old denotation, which exists since $p(b)$ is false. The markers differ throughout the upper layer and coincide throughout the lower layer reached from it.
+
+At each relational type, admit at $h:w\to z$ a pair consisting of an arbitrary set of upper rows and one admitted old entity of that type at $z$. An upper row specifies an upper arrow from $h$ and a tuple of arguments at its target. The old entity supplies all the values on exits. This defines the domains inductively on types, since the arguments of a relation have lower type. Interpret a relational constant by taking empty upper rows and its original denotation below. At a schematic type variable, copy the old carrier, transport, and any named value. Upper transport restricts the rows by composition and transports the old entity. An exit transports just the old entity. Upper arrows recover the first entry of the pair, and the immediate exit to $z$ recovers the second, so the resulting intension determines the pair.
+
+To check closure under terms, first evaluate below. Induction on the term gives its old interpretation, since all domains and all continuations there are old. Term evaluation commutes with transport, so restricting an upper denotation along the immediate exit gives the old term on the projected parameters, an admitted entity. Its upper rows are unrestricted. In particular an abstraction takes its prescribed value on every target tuple, including tuples first appearing later.
+
+At an upper world, $\Box(B\to x=y)$ says exactly that $x,y$ project to the same old individual. The immediate exit tests equality of their images, and that equality persists along every later exit. Thus $\neg L(x)$ holds precisely when the old predicate is true of the image of $x$.
+
+Suppose $r$ passes $\operatorname{Code}$ at $h$. For each $k:z\to z'$ and *every* individual $u$ at $z'$, apply the boxed test upstairs at $kh$ to $u_0$. Its left side reads $p_{kh}(u)$. Its right side reads possible truth of the lower restriction of $r$ at $(k,u)$, since the markers coincide exactly on exits and every old continuation is available. The first conjunct of $\operatorname{Code}$ makes that possible truth equal to the actual row. Consequently the lower restriction of $r$ equals the entire transported $p$. Conversely, the term $d_b$ itself supplies a passing code at any upper world. It is admitted there and possibility-fixed, as every output of $Q_b$ is. Its lower restriction is the transported $p$, by preservation of old term denotations. The same row calculation therefore gives the boxed test.
+
+A successful search by $Q_bf$ therefore chooses its code upstairs and ends downstairs where $f$ rejects the transported $p$. Conversely, given an old rejection, choose the passing code at $1_w$ and cross along the rejecting arrow. This proves (T). $\square$
+
+To prove separation, take a continuation where $f(d_n)$ fails as the old base and use the name $n$ as the marker in (T). The identity arrow witnesses rejection by $f$. No old arrow witnesses rejection by $\rho_n$, since $\rho_n(d_n)$ holds everywhere. The new model therefore distinguishes $Q_nf$ from $Q_n\rho_n=d_n$ at the upper twin. By completeness in the named language this refutation also occurs at a canonical point. If $f$ contains schematic type variables, this use of completeness requires witnesses at those sorts. Canonical models supply them, transport preserves them upon changing base, and the upper model retains their carriers. This proves separation and completes the argument. $\square$
+
+## Earlier proof using atomlessness and a six-place diagonal {#uniform-pair}
+
 **Theorem.** In Classicism there are two closed pure sentences $A_0$ and $\Psi$, each consistent with ordinary pure Maximalism, for which
 $$
  C\vdash\neg(\Diamond_{\ne} A_0\land\Diamond_{\ne}\Psi).
@@ -8,7 +126,7 @@ Consequently pure Strong Possibility is inconsistent. The same two sentences wit
 
 Here $A_0$ says that the Boolean algebra of propositions is atomless. Write $D=\Diamond_{\ne}$. At a $DP$-point, each currently true proposition can still be made true after reaching a $P$-point. Applying this to a true strong atom shows that $DA_0$ rules out Strong Actuality. To define $\Psi$, the proof uses the Russell–Myhill diagonal at the type of six-place relations on individuals. An auxiliary world for each old arrow and individual tuple tests the entire interpretation of such a relation. This produces a sentence true at a definable Maximalist root whose distinctness-preserving possibility contradicts the diagonal whenever Strong Actuality fails.
 
-OpenAI Codex (GPT-6), prompted by Daniel Kodsi, found the construction and completed the proof on 27 November 2026. Independent GPT-6 researchers checked the native types, full action-model extension, descriptor argument, and the two licences in each signature. The diagonal adapts the earlier [higher-order-signature proof](strong-possibility-signature-r-inconsistent.html) of Cian Dorr and Claude Fable 5.2 (Anthropic), prompted by Cian Dorr. Lean verifies both map statements. The [formalization](#lean-verification) gives a second choice of incompatible possibilities.
+OpenAI Codex (GPT-6), prompted by Daniel Kodsi, found the construction and completed the proof on 27 November 2026. Independent GPT-6 researchers checked the native types, full action-model extension, descriptor argument, and the two licences in each signature. The diagonal adapts the earlier [higher-order-signature proof](strong-possibility-signature-r-inconsistent.html) of Cian Dorr and Claude Fable 5.2 (Anthropic), prompted by Cian Dorr. Lean verifies both map statements. The [unary proof](#unary-proof) gives another choice of incompatible possibilities.
 
 ## The closed terms
 
@@ -111,8 +229,6 @@ At scalar type every nonzero loop row or old value occurs on a nonempty clopen p
 
 ## Lean verification
 
-The formalization constructs the same closed six-place operator, proves the Russell inference in the native calculus, and tests every tuple at every accessible old object. The source of each test uses one descriptor for each entity. The direct old projection and the projection through a test object therefore agree at every type and every subsequent old arrow.
+Both exported proofs apply the same theorem for signatures whose constants have closed types. The first licence realizes $K$ at the ordinary named root. The second realizes $H(K)$ at the root with two copies of each individual name. In (T), the upper term $d_b$ itself supplies the passing code. [Permanence and reflection](../lean/Classicism/StrongPossibility/Permanent.lean) · [First licence](../lean/Classicism/StrongPossibility/UnaryUniformPositive.lean) · [Second licence](../lean/Classicism/StrongPossibility/UnaryUniformNegative.lean) · [Diagonal reading](../lean/Classicism/StrongPossibility/UnarySeparation.lean) · [Uniform signature theorem](../lean/Classicism/StrongPossibility/UnaryArbitrarySignature.lean)
 
-For the pure result, two definable Maximalist roots disagree on whether there are at least two individuals. The boxed return conditions using this sentence and its negation cannot both be possible in the distinctness-preserving sense. For the signature result the two roots disagree about whether one public relational name has empty current extension. The finite set of names used in any proposed derivation suffices to transfer the two consistency witnesses to an arbitrary admitted signature. The written proof above gives the additional uniform choice of the same two pure sentences in every signature.
-
-The exported theorems are `Classicism.Map.strong_possibility_r_inconsistent` and `Classicism.Map.strong_possibility_signature_r_inconsistent`. From `logical-maps/`, using the Python environment described in the repository README, run `python scripts/pmap.py lean-check classicism` to rebuild the certificates, compare their types with the generated map statements, and audit their axiom dependencies.
+The exports are `Classicism.Map.strong_possibility_r_inconsistent` and `Classicism.Map.strong_possibility_signature_r_inconsistent`. The registry verifies both. The proof-body audit traces each to the two licences, the reflection arguments, the Russell witness, and the unary reading. Each uses exactly `propext`, `Classical.choice`, and `Quot.sound`. From `logical-maps/`, run `python scripts/pmap.py lean-check classicism` to check the generated statements and audit their Lean axioms. From `topics/classicism/lean/`, run `lake env lean scripts/StrongPossibility.lean` to trace both proof bodies to the unary reading theorem. [Proof dependency check](../lean/scripts/StrongPossibility.lean)
