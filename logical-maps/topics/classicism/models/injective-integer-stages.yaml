@@ -84,7 +84,7 @@ arguments:
 - id: rigid-power
   holds: [necessary-rigid-power-r]
   choice: uses
-  writeup: injective-integer-stages
+  writeup: injective-integer-stage-rigid-power
   text: >-
     At an arrow bijective onto the ranges permitted by its kind, every weakly
     rigid relation has as its row the direct image of its current extension.

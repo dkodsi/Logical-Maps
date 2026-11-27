@@ -541,8 +541,8 @@ arguments:
 - id: reduct-symmetric-two-object-unpinned
   when:
     source: symmetric-two-object-unpinned
-  holds: [necessary-self-atoms-are-atoms-r]
-  fails: [necessary-self-atoms-are-strong-atoms-t]
+  holds: [self-atoms-are-strong-atoms-r]
+  fails: [necessary-self-atoms-are-atoms-t, necessary-self-atoms-are-strong-atoms-t]
   choice: uses
   writeup: independent-numeral-predicates
   text: >-

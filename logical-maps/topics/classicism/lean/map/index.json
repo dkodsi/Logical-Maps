@@ -964,6 +964,18 @@
     "lines": [339, 341],
     "file": "Classicism/MapAtoms.lean",
     "axioms": ["propext", "Quot.sound"]}},
+  "self-atomicity-r-and-strong-atomicity-t-imply-strong-atomicity-r":
+  {"proofs":
+   [{"name":
+     "Classicism.Proofs.self_atomicity_r_and_strong_atomicity_t_imply_strong_atomicity_r",
+     "lines": [49, 61],
+     "file": "Classicism/Results/Research/MixedAtomicity.lean"}],
+   "certificate":
+   {"name":
+    "Classicism.Map.self_atomicity_r_and_strong_atomicity_t_imply_strong_atomicity_r",
+    "lines": [101, 106],
+    "file": "Classicism/Results/Research/MixedAtomicity.lean",
+    "axioms": ["propext", "Quot.sound"]}},
   "self-atomicity-r-and-self-atoms-are-strong-atoms-r-imply-strong-atomicity-r":
   {"proofs":
    [{"name":
@@ -3118,6 +3130,18 @@
     "lines": [261, 263],
     "file": "Classicism/MapAtoms.lean",
     "axioms": ["propext", "Quot.sound"]}},
+  "necessary-self-atoms-are-atoms-r-implies-necessary-self-atoms-are-strong-atoms-r":
+  {"proofs":
+   [{"name":
+     "Classicism.Proofs.necessary_self_atoms_are_atoms_r_implies_necessary_self_atoms_are_strong_atoms_r",
+     "lines": [20, 22],
+     "file": "Classicism/Results/Research/SelfAtomsUnderNecessity.lean"}],
+   "certificate":
+   {"name":
+    "Classicism.Map.necessary_self_atoms_are_atoms_r_implies_necessary_self_atoms_are_strong_atoms_r",
+    "lines": [33, 37],
+    "file": "Classicism/Results/Research/SelfAtomsUnderNecessity.lean",
+    "axioms": ["propext", "Quot.sound"]}},
   "necessary-self-atoms-are-atoms-r-implies-necessary-self-atoms-are-atoms-t":
   {"proofs":
    [{"name": "Classicism.Meta.AxiomSet.entails_ofPure_of_unbox",
@@ -3293,6 +3317,18 @@
     "Classicism.Map.necessary_self_atomicity_r_implies_necessary_atoms_are_self_atoms_r",
     "lines": [495, 497],
     "file": "Classicism/MapAtoms.lean",
+    "axioms": ["propext", "Quot.sound"]}},
+  "necessary-self-atomicity-r-and-necessary-strong-atomicity-t-imply-necessary-strong-atomicity-r":
+  {"proofs":
+   [{"name":
+     "Classicism.Proofs.necessary_self_atomicity_r_and_necessary_strong_atomicity_t_imply_necessary_strong_atomicity_r",
+     "lines": [63, 66],
+     "file": "Classicism/Results/Research/MixedAtomicity.lean"}],
+   "certificate":
+   {"name":
+    "Classicism.Map.necessary_self_atomicity_r_and_necessary_strong_atomicity_t_imply_necessary_strong_atomicity_r",
+    "lines": [108, 113],
+    "file": "Classicism/Results/Research/MixedAtomicity.lean",
     "axioms": ["propext", "Quot.sound"]}},
   "necessary-self-atomicity-r-and-necessary-self-atoms-are-strong-atoms-r-imply-necessary-strong-atomicity-r":
   {"proofs":
@@ -4588,6 +4624,18 @@
     "Classicism.Map.necessary_atoms_are_self_atoms_r_and_necessary_self_atoms_are_strong_atoms_r_imply_necessary_atoms_are_strong_atoms_r",
     "lines": [439, 441],
     "file": "Classicism/MapAtoms.lean",
+    "axioms": ["propext", "Quot.sound"]}},
+  "necessary-atoms-are-self-atoms-r-and-necessary-atoms-are-strong-atoms-t-imply-necessary-atoms-are-strong-atoms-r":
+  {"proofs":
+   [{"name":
+     "Classicism.Proofs.necessary_atoms_are_self_atoms_r_and_necessary_atoms_are_strong_atoms_t_imply_necessary_atoms_are_strong_atoms_r",
+     "lines": [18, 21],
+     "file": "Classicism/Results/Research/MixedAtomicity.lean"}],
+   "certificate":
+   {"name":
+    "Classicism.Map.necessary_atoms_are_self_atoms_r_and_necessary_atoms_are_strong_atoms_t_imply_necessary_atoms_are_strong_atoms_r",
+    "lines": [94, 99],
+    "file": "Classicism/Results/Research/MixedAtomicity.lean",
     "axioms": ["propext", "Quot.sound"]}},
   "necessary-atomlessness-implies-necessary-self-atoms-are-strong-atoms-r":
   {"proofs":
@@ -6573,6 +6621,18 @@
     "Classicism.Map.atoms_are_self_atoms_r_and_self_atoms_are_strong_atoms_r_imply_atoms_are_strong_atoms_r",
     "lines": [169, 171],
     "file": "Classicism/MapAtoms.lean",
+    "axioms": ["propext", "Quot.sound"]}},
+  "atoms-are-self-atoms-r-and-atoms-are-strong-atoms-t-imply-atoms-are-strong-atoms-r":
+  {"proofs":
+   [{"name":
+     "Classicism.Proofs.atoms_are_self_atoms_r_and_atoms_are_strong_atoms_t_imply_atoms_are_strong_atoms_r",
+     "lines": [14, 16],
+     "file": "Classicism/Results/Research/MixedAtomicity.lean"}],
+   "certificate":
+   {"name":
+    "Classicism.Map.atoms_are_self_atoms_r_and_atoms_are_strong_atoms_t_imply_atoms_are_strong_atoms_r",
+    "lines": [87, 92],
+    "file": "Classicism/Results/Research/MixedAtomicity.lean",
     "axioms": ["propext", "Quot.sound"]}},
   "atomlessness-implies-infinity-t":
   {"proofs":
