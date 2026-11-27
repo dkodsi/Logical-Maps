@@ -1,0 +1,79 @@
+id: graded-maps-free-words-glued-constants
+name: Graded maps with free words and glued constants
+certificate:
+  source_id: misc
+  produced_by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi, 26 November 2026
+  recorded_by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi, 26 November 2026
+  checked_by:
+  - OpenAI Codex (GPT-6), prompted by Daniel Kodsi, two independent reviews of the model and its local verdicts, 26 November 2026
+  date: '2026-11-26'
+  lean: none
+sources:
+- OpenAI Codex (GPT-6), prompted by Daniel Kodsi, graded-map construction and separation, 26 November 2026.
+- The supported product and free-word gluing in symmetric-surjection-products, adapted to graded maps.
+source_names:
+- Codex via Kodsi, 26 Nov
+- Supported products and gluing
+definition: >-
+  Given a set-sized signature $\Sigma$, put $\kappa=\max(\aleph_0,|\Sigma|)$ and take
+  $\kappa^+$ individuals. Arrows at one object consist of a finite word over an alphabet of
+  size $\kappa$, a natural-number grade, and a map of the individuals. Every map is allowed
+  in positive grade and only the identity map in grade zero. Composition adds grades,
+  composes maps, and concatenates words. At each relational type an entity assigns each
+  arrow a row of argument tuples. At a fixed grade and word the row depends only on
+  the map's values on one set of at most $\kappa$ individuals, common to all grades and
+  words of that entity. Transport is precomposition. Interpret the constants by the
+  simultaneous assignments in the write-up.
+arguments:
+- id: self-atomicity
+  holds: [necessary-self-atomicity-r]
+  choice: free
+  writeup: graded-maps-free-words-glued-constants
+  text: >-
+    Choose an occurrence of a tuple in a nonzero entity. Restrict the entity to that
+    tuple, grade, and word. The restriction is nonzero. Wherever instantiated, it has
+    just one tuple at the identity and an empty row at all other arrows, since only
+    the identity continuation preserves both the grade and the word. It is an atom
+    there. This works at every relational type, including propositions.
+- id: strong-actuality
+  holds: [necessary-strong-actuality]
+  choice: free
+  writeup: graded-maps-free-words-glued-constants
+  text: >-
+    The proposition supported at the monoid identity is a true atom. Its transport at
+    every other arrow is bottom. Consequently at every arrow it entails each proposition
+    or its complement. The same true strong atom is available at the sole object.
+- id: barcan
+  holds: [necessary-barcan-r]
+  choice: uses
+  writeup: graded-maps-free-words-glued-constants
+  text: >-
+    Given a possible witness for a property, agree with the witnessing map on the
+    property's pin and choose a surjective map at the same grade and word. This
+    preserves the property's row. Along a surjective map every typed entity lifts:
+    choose preimages for its pin, prescribe the lifted rows on continuation cylinders,
+    and use right cancellation of words and addition of grades for compatibility.
+    The witness therefore comes from a current entity. The proof applies at the sole object.
+- id: logical-necessity
+  holds: [logical-necessity-r]
+  choice: uses
+  writeup: graded-maps-free-words-glued-constants
+  text: >-
+    Choose one assignment per realizable sentence over the given signature. Use distinct
+    initial individual names and choose a positive-grade surjection to each assignment
+    of those names. Lift relational assignments along this surjection. Glue the lifts
+    on distinct final letters; their at most $\kappa$ pins together have size at most
+    $\kappa$. All names take the chosen values together after the prescribed arrow.
+    The single object gives the converse for the Logical Necessity scheme.
+- id: missing-boolean-join
+  fails: [boolean-completeness-t, necessary-boolean-completeness-t]
+  choice: free
+  writeup: graded-maps-free-words-glued-constants
+  text: >-
+    Fix individuals $d,b$, distinct $a_i$ away from $d$, and distinct $c_i$, indexed
+    by $\kappa^+$. Admit the family of propositions $p_i$ selecting exactly grade-one,
+    empty-word maps with $f(d)=c_i$ and $f(a_i)=b$. A proposed join has a pin omitting
+    some $a_j$. Two maps agreeing on the pin can share $f(d)=c_j$ and disagree on
+    whether $f(a_j)=b$. The positive case lies in $p_j$. The negative case lies in a
+    cylinder disjoint from every $p_i$, whose complement is an upper bound. A join
+    must distinguish the two maps, contrary to its pin.

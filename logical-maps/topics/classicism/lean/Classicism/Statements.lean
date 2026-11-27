@@ -5809,6 +5809,19 @@ def free_words_supported_pair_flips : Prop :=
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.TransversalChoice.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WellOrdering.schemaIn
 
+/-- `graded-maps-free-words-glued-constants`
+
+Graded maps with free words and glued constants: a witness satisfying 4 principles
+and violating 2. -/
+def graded_maps_free_words_glued_constants : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecSelfAtomicity.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecStrongActuality.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBarcan.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.logicalNecessity _) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.BooleanCompletenessT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBooleanCompletenessT.schemaIn
+
 /-- `integer-stages-paired-individuals-glued-constants`
 
 Integer stages of paired individuals with glued constants: a witness satisfying 6 principles
@@ -6201,6 +6214,25 @@ def symmetric_finite_compression_entrance_individuals_singleton : Prop :=
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.separatedStructure _) ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.independence _) ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.distinctnessC _)
+
+/-- `symmetric-infinite-classes-glued-constants`
+
+Symmetric surjections of infinite classes with glued constants: a witness satisfying 9 principles
+and violating 3. -/
+def symmetric_infinite_classes_glued_constants : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.logicalNecessity _) ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBarcan.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecBooleanCompleteness.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecTameRigidity.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecRigidPower.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecWeaklyRigidPower.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAtomlessness.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAxiomOfInfinityE.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.NecAxiomOfInfinityT.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Transversal.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.RelationalChoice.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.IntensionalChoice.schemaIn
 
 /-- `symmetric-old-new-individuals-individuals-singleton`
 

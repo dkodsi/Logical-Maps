@@ -7,6 +7,14 @@ even when the returning atom splits along the way. These are ordinary
 arguments by OpenAI GPT-6, prompted by Daniel Kodsi and independently
 reviewed by a second GPT-6 research agent on 26 November 2026.
 
+## A restriction on the Russell–Myhill argument
+
+The [signature argument](strong-possibility-signature-r-inconsistent.html#the-sentences) uses a closed operator $Q:(t\to t)\to t$. Put $\rho(p)=\exists F\,(QF=p\land\neg Fp)$ and $d=Q\rho$. Classicism proves there is a collision witness $F$ with $QF=d$ and $Fd\ne\rho d$. The two existential sentences $E_1,E_2$ ask whether such a witness can respectively agree or disagree with $\rho$ at $\top$. To use them against pure SP, each sentence must fail in some pure Max model.
+
+Suppose there are finitely many fixed closed pure propositions $r_i$ and C proves $QF=QG\leftrightarrow\bigwedge_i Fr_i=Gr_i$ for all $F,G$. This includes evaluation at any single closed proposition. **No such $Q$ gives the required split.** Indeed C proves $d\ne r_i$ for each $i$, since a collision witness must agree with $\rho$ at $r_i$ and disagree at $d$. At a Max point, two closed pure terms are identical exactly when C proves their identity. Otherwise Max realizes their possible distinctness, whereas identity would persist. Thus the equalities of $d$ and of each $r_i$ with $\top$ are settled uniformly across all Max points. If $d=\top$, $E_1$ fails everywhere and $E_2$ holds everywhere. If any $r_i=\top$, the reverse holds.
+
+In the remaining case both sentences hold at every Max point. Write $A(p)=\bigwedge_i p\ne r_i$. Obtain $F_1(p)$ from $\rho(p)$ by exclusive disjunction with $(p=d\land p\ne\top\land A(p))$, and $F_2(p)$ by exclusive disjunction with $((p=d\lor p=\top)\land A(p))$. Both guards are identically false on each probe, so $QF_1=QF_2=d$. Both flip the truth value at $d$. The first preserves the whole proposition $\rho(\top)$, and the second flips its truth value at the current point. These witnesses also explain why finite observations at fixed probes leave the unrestricted Russell–Myhill question open.
+
 ## Elementary returns
 
 Let $a$ witness Actuality at $x$. For any current proposition $p$,
