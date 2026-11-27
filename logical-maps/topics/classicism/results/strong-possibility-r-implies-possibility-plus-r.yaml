@@ -10,7 +10,8 @@ certificate:
   checked_by:
   - OpenAI Codex (GPT-6), a further independent agent checked the pure unary case, local monism and signature restrictions.
   date: '2026-11-26'
-  lean: none
+  lean: verified
+  lean_ref: Classicism.Map.strong_possibility_r_implies_possibility_plus_r
 sources:
 - OpenAI Codex, prompted by Daniel Kodsi, profile-root-construction, §6, 22 October 2026.
 - OpenAI Codex, prompted by Daniel Kodsi, direct distinctness-preserving proof, 26 November 2026.
@@ -22,6 +23,8 @@ references:
   role: background
   locator: §2.6, pp. 41–42 and n. 61; Appendix E, p. 83
 proof: >-
+  By [[strong-possibility-r-inconsistent]], any theory satisfying the premises proves $\bot$ and hence every instance of Possibility+ (pure).
+
   Fix an instance $A=\forall\bar x\, .\,D(\bar x)\to\Diamond P(\bar x)$ of pure
   Possibility+, with $D$ the conjunction of the pairwise disequalities. This is a closed
   pure sentence consistent with pure Maximalism, since both hold in

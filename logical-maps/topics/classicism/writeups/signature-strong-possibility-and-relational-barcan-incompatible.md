@@ -1,6 +1,6 @@
 # Signature Strong Possibility excludes relational Barcan
 
-For every first-order signature, finite or infinite, signature Strong Possibility refutes one explicit Barcan instance at input type $tt$. Hence signature Strong Possibility and BF at relational types are incompatible in every signature: a signature with a higher-order constant already falls under [Dorr and Fable's Russell–Myhill argument](strong-possibility-signature-r-inconsistent.html). The purely propositional Barcan assumption is weaker and the argument below does not settle it.
+For every first-order signature, finite or infinite, signature Strong Possibility refutes one explicit Barcan instance at input type $tt$. Hence signature Strong Possibility and BF at relational types are incompatible in every signature: a signature with a higher-order constant already falls under [Dorr and Fable's Russell–Myhill argument](strong-possibility-signature-r-inconsistent.html). For propositional Barcan, the [general inconsistency theorem](strong-possibility-signature-r-inconsistent.html) settles the full-schema incompatibility. The following construction identifies a particular failed Barcan test at the higher input type.
 
 ## A pure test on operators
 

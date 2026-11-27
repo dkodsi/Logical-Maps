@@ -6,13 +6,8 @@ the current point on the carrier $\tau=\nu t$. Only the current instance of
 Countable Boolean Completeness with counting type $\sigma$ and output type
 $\tau$ is needed.
 
-For each $n$ in $N$ put $h_n=\lambda x^\nu.\,x=n$. If $m,n$ are distinct
-current numbers then they remain distinct throughout the cone. Indeed,
-in the current Peano system one is a positive increment of the other,
-say $n=m+Sk$ for some $k\in N$. This equation and the numberhood of its
-arguments persist, and the Peano condition at each successor rules out
-$m=m+Sk$. This uses the
-[persistence of true addition equations](arithmetic-necessitism-and-pure-b-imply-necessity-of-arithmetic.html).
+For each $n$ in $N$ put $h_n=\lambda x^\nu.\,x=n$. By Lemma 4 of Zachary Goodsell's *Arithmetic is Necessary*, distinct current numbers remain distinct at every point satisfying $I^*_\sigma$. Here the guard is necessary, so $m\ne n$ gives $\Box(m\ne n)$. [Goodsell's guarded numerical distinctness lemma](necessary-countable-boolean-completeness-implies-arithmetic-necessitism.html)
+
 Consequently $h_m\leq\neg h_n$ for distinct current numbers. Application
 at $n$ also shows that $n\mapsto h_n$ is injective at the current point.
 
@@ -41,11 +36,4 @@ members. All predicates and relations of the structure are thus given by
 formulas, including the real predicate itself. The map's definition of
 a real number structure permits the two sorts to overlap.
 
-The current structure witnesses the antecedent of Analytic Necessitism at
-$\tau$. Take its rigid, necessarily real witness. The
-[hereditary Peano match](analytic-necessitism-and-transversal-imply-arithmetic-necessitism.html)
-identifies its number system with $N$ throughout the cone. Induction gives
-persistence of each matched pair, so weak inextensibility of the rigid
-numbers transfers to $N$ at every accessible point. Together with
-persistence and the necessary distinctness proved above, this gives the
-Arithmetic Necessitism conclusion at $\sigma$.
+The current real structure on $\tau=\nu t$ gives a possible one by reflexivity. Apply the [cross-type Peano matching lemma](analytic-necessitism-and-transversal-imply-arithmetic-necessitism.html#matching-numbers) at the designated point. In particular Arithmetic Necessitism holds at $\sigma$. Thus for this instance the construction used Countable Boolean Completeness only at counting type $\sigma$ and output type $\nu t$.

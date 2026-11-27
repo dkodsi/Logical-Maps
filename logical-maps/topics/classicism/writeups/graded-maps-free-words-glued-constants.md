@@ -80,11 +80,10 @@ profile becomes bottom or another single-word, single-tuple profile: a
 continuation at grade zero can occur only after grade zero and the word
 suffix cancels. Every atom is consequently a strong atom, necessarily.
 
-At the designated point let $q$ be the proposition true only at the identity.
-Every proper arrow takes $q$ to bottom, so at its target $\Diamond q$ is false.
-At the identity, any current truth $p$ holds. Hence $q$ witnesses
-$\Box_{\ne}p$ by $q\land\Box(\Diamond q\to p)$. The resulting universal
-statement is pure and holds at every object.
+The identity-only proposition vanishes after every proper arrow: neither a
+positive grade nor a nonempty word can be cancelled to the identity. It
+therefore guards $\Box_{\ne}p$ for each current truth $p$, as in the
+[finite multiset model](finite-multisets-free-words.html).
 
 ## The Barcan Formula
 
@@ -148,22 +147,13 @@ power schemata fail. The closed pure failures hold at the sole object.
 
 ## Countable Boolean Completeness
 
-For each base type $\sigma$ take as a current property of numerical entities
-the externally enumerated set of values of the standard Frege numerals at
-$\sigma$. This is an admitted identity row. It contains zero and is closed
-at this object under successor, so Frege induction puts every current
-$\sigma$-number in this set. In particular, there are at most countably many
-current numbers, including when different numerals have the same value.
-
-The map's predicate for countability provides each current member of a
-countable family with a nonempty fiber of numerical values, with disjoint
-fibers for distinct members. Taking the least standard index representing a
-value in each fiber injects the family into the ordinary natural numbers.
-For any such family of relations, form the union of its members row by row.
-A countable union of pins of size at most $\kappa$ has size at most $\kappa$,
-so the union profile is admitted. By rowwise inclusion it is the least upper
-bound. This proves necessary Countable Boolean Completeness at all the
-indicated types.
+Every current tuple set is an admitted identity row in this one-object
+model. In particular the standard numerals form an admitted successor-closed
+row, so induction exhausts the current numbers at each counting type. The
+[countability argument for finite multisets](finite-multisets-free-words.html)
+therefore makes each internally countable family externally countable.
+The union of its pins has size at most $\kappa$ and pins the rowwise union,
+its least upper bound. With a single object the verdict holds necessarily.
 
 ## Logical Necessity
 

@@ -200,8 +200,9 @@ arguments:
 notes: >-
   The first of the draft's two variants in which BF is made to fail. Actuality and the range
   deficiency come from the same finite test here, which is what the next variant prises apart.
-  Atomicity and Rigid Comprehension are not settled in the draft and are left unknown. The source
-  is a work in progress. Everything that implies these fails with them.
+  The recorded argument for failure of propositional Atomicity refutes all-type Atomicity as well. Rigid Comprehension
+  follows from the recorded Tame Rigidity, Boolean Completeness and Actuality by
+  [[completeness-and-actuality-imply-weak-rigid-comprehension]] and [[tame-rigidity-and-weak-rigid-comprehension-imply-rigid-comprehension]].
 
 # The old `changes` log, verbatim and frozen.
 history:

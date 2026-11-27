@@ -264,11 +264,10 @@ decisions in the map's [strong-atom definition](../index.html#background/atoms).
 Hence $A$ is a strong atom; pure Łoś gives necessary Strong Atomicity
 at every relational type.
 
-At the designated point let $q$ be the proposition true only at the identity.
-Every proper arrow takes $q$ to bottom, so at its target $\Diamond q$ is false.
-At the identity, any current truth $p$ holds. Hence $q$ witnesses
-$\Box_{\ne}p$ by $q\land\Box(\Diamond q\to p)$. The resulting universal
-statement is pure and holds at every object.
+The empty-string proposition above guards $\Box_{\ne}p$ for each truth
+$p$ at the base, since it is impossible after every proper refinement.
+This is the [identity-only guard argument](finite-multisets-free-words.html).
+Pure Łoś transfers the resulting universal statement to every front.
 
 ## A countable family of propositions without a supremum
 

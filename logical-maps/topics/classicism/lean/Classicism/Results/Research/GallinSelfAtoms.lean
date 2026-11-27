@@ -54,11 +54,15 @@ theorem distinctness_necessary_t_and_strong_actuality_imply_self_atoms_are_stron
   self_atoms_are_strong_atoms_t_implies_self_atoms_are_strong_atoms_r
     (distinctness_necessary_t_and_strong_actuality_imply_self_atoms_are_strong_atoms_t nd actual)
 
+/-- In the boxed result, propositional ND already gives the boxed modal axiom 5. -/
+theorem necessary_nd_t_implies_necessary_strong_self_atoms :
+    NecNecessityOfDistinctnessT → NecSelfAtomsAreStrongAtoms τ := fun nd =>
+  necessary_modal_five_implies_necessary_self_atoms_are_strong_atoms_r
+    (necessary_distinctness_necessary_r_implies_necessary_modal_five nd)
+
 theorem necessary_distinctness_necessary_t_and_necessary_strong_actuality_imply_necessary_self_atoms_are_strong_atoms_r :
-    NecNecessityOfDistinctnessT → NecStrongActuality → NecSelfAtomsAreStrongAtoms τ := fun nd actual =>
-  modal_K _ _ (modal_K _ _ (nec%
-    (distinctness_necessary_t_and_strong_actuality_imply_self_atoms_are_strong_atoms_r (τ := τ))) nd)
-    actual
+    NecNecessityOfDistinctnessT → NecStrongActuality → NecSelfAtomsAreStrongAtoms τ :=
+  fun nd _ => necessary_nd_t_implies_necessary_strong_self_atoms nd
 
 end Classicism.Proofs
 
@@ -68,6 +72,7 @@ end Classicism.Proofs
 #classicism_derive Classicism.Proofs.recurring_guard_decides_self
 #classicism_derive Classicism.Proofs.distinctness_necessary_t_and_strong_actuality_imply_self_atoms_are_strong_atoms_t
 #classicism_derive Classicism.Proofs.distinctness_necessary_t_and_strong_actuality_imply_self_atoms_are_strong_atoms_r
+#classicism_derive Classicism.Proofs.necessary_nd_t_implies_necessary_strong_self_atoms
 #classicism_derive Classicism.Proofs.necessary_distinctness_necessary_t_and_necessary_strong_actuality_imply_necessary_self_atoms_are_strong_atoms_r
 
 #classicism_entails Classicism.Proofs.distinctness_necessary_t_and_strong_actuality_imply_self_atoms_are_strong_atoms_r

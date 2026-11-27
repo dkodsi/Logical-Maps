@@ -41,15 +41,13 @@ The construction uses only quantified predicates and lambda terms.
 The definition permits the number and real sorts to overlap.
 
 Thus $\Diamond\exists\mathfrak R\,\operatorname{Real}_\tau(\mathfrak R)$
-at the designated point. Analytic Necessitism there supplies a
-structure $\mathfrak B$ at type $\tau$ which is rigid and necessarily
-a real number structure. Only its number system will be used from
-now on. Write $D,o,A$ for its number predicate, zero and successor
-graph. In particular $D$ and $A$ are rigid, $\mathfrak B$-numbers
-are necessarily distinct if distinct, and necessarily $(D,o,A)$
-is a Peano system.
+at the designated point. This supplies the existence premise of the following lemma for the specified $\sigma$.
 
-## Matching numbers through the cone
+## Matching numbers through the cone {#matching-numbers}
+
+**Lemma.** Suppose Analytic Necessitism holds at a point and a real number structure at some one type $\tau$ is possible there. Then both Arithmetic Necessitism and Necessity of Arithmetic hold at that point. The same $\tau$ works for every counting type $\sigma$ for which $\Box I^*_\sigma$ holds.
+
+**Proof.** Analytic Necessitism at $\tau$ supplies a structure $\mathfrak B$ of that type which is rigid and necessarily a real number structure. Write $D,o,A$ for its number predicate, zero and successor graph. The relations $D$ and $A$ are rigid, distinct current $\mathfrak B$-numbers are necessarily distinct, and $(D,o,A)$ is necessarily a Peano system. Fix any counting type $\sigma$ satisfying $\Box I^*_\sigma$ and put $\nu=(\sigma t)t$. The two carrier types $\tau$ and $\nu$ may differ.
 
 At each accessible point, match $o$ to $0$ and corresponding
 successors to successors. More precisely let $J(a,n)$ assert
@@ -101,6 +99,8 @@ Those matches stay distinct by rigid structure, and the two matching
 pairs persist. Injectivity of the match at every future point forces
 the transported $m,n$ to remain distinct. This completes the native
 Arithmetic Necessitism conclusion.
+
+For the sentence-level claim, take any fixed arithmetical sentence $P$ at $\sigma$ and any accessible point satisfying the local guard $I_\sigma$. By the [equivalent forms of Potential Infinity](../index.html#background/arithmetic), $I^*_\sigma$ holds there. The ordinary two-type Peano isomorphism identifies the truth of $P$ there with its number-only reading in the transported real structure $\mathfrak B$. Analytic Necessitism gives [Necessity of Analysis](analytic-necessitism-implies-necessity-of-analysis.html). The reading of $P$ in $\mathfrak B$ consequently has the same truth value throughout the cone, since $\mathfrak B$ is necessarily a real structure. This gives $\Box(I_\sigma\to P)\lor\Box(I_\sigma\to\neg P)$ and requires only the *local* guard at each point being compared. [Application to models with disagreeing arithmetic](analysis-with-disagreeing-arithmetic.html)
 
 ## Possible Actuality
 

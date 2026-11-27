@@ -25,6 +25,11 @@ definition: >-
   Each relation gives arbitrary rows on zero arrows and uses one countable pin on
   ordinary arrows. Transport precomposes. Interpret the signature by gluing witnesses
   on private last-letter cylinders. Evaluate at the identity at stage 0.
+meets:
+  unrestricted-block-maps-at-paired-stages: >-
+    Adjoining zero coefficients retains every ordinary block map between the external paired coordinates.
+  integer-stages-with-countably-pinned-pair-profiles: >-
+    The paired coordinates and ordinary arrows are those of the unrestricted stages. Each zero address has an unrestricted row, and the individual domain is a singleton.
 arguments:
 - id: homogeneous-stages
   holds: [logical-necessity-r]
@@ -84,49 +89,3 @@ arguments:
     rows at every stage. One individual cannot support a real number structure.
     Full current rows also make every actual real number structure standard and
     supply every unrestricted second-order relation on its numbers and reals.
-- id: no-weakly-inextensible-coextension
-  fails: [weakly-inextensible-comprehension-r]
-  choice: uses
-  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
-  date: '2026-11-27'
-  writeup: weak-inextensibility-at-the-paired-stages
-  text: >-
-    Give one proposition per ordinary pair a different nonempty-word
-    profile and make its empty-word test ask whether the coefficient
-    fixes the selected seat of that pair. A predicate representing
-    this whole current family repeats its row at an endomorphism
-    collapsing a pair off its pin. The tester deleting that pair's
-    proposition on empty-word endomorphisms moving its seat still
-    necessarily accepts every old family member, by the distinct word
-    profiles and the selected seat's truth bit. It misses the repeated
-    member, so no such predicate is weakly inextensible.
-- id: tame-rigidity-by-countable-factorization
-  holds: [necessary-tame-rigidity-r]
-  choice: uses
-  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
-  date: '2026-11-27'
-  writeup: tame-rigidity-at-the-paired-stages
-  text: >-
-    A weakly rigid relation has the union of the images of its current
-    members over arrows agreeing on any enlarged countable pin. Enlarge
-    the source pin to include the source copies of intermediate ordinary
-    pairs meeting the next tester's pin or the image of the enlarged
-    source pin. Pairs required to stay fixed can now stay fixed through
-    both factors. Fresh intermediate pairs implement the prescribed
-    values on the remaining member support. Thus any tester necessarily
-    covering an intermediate row also covers every later row. Zeros,
-    when present, have exact current images by their isolated addresses.
-- id: both-powers-by-split-block-maps
-  holds: [necessary-rigid-power-r, necessary-weakly-rigid-power-r]
-  choice: uses
-  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
-  date: '2026-11-27'
-  writeup: rigid-powers-at-the-unrestricted-paired-stages
-  text: >-
-    Match an ordinary arrow on a common pin of the bound and tester by
-    a map split on every target block. Pull a future rigid subrelation
-    back through this map and saturate its preimage over an enlarged
-    source pin. The resulting rigid subrelation has the required whole
-    image. Zero arrows, when present, already give exact images, and
-    absorb the endomorphisms used in the saturation. Necessary Tame
-    Rigidity identifies the two power properties at every stage.

@@ -10,7 +10,8 @@ certificate:
   recorded_by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi, 26 November 2026
   checked_by: []
   date: '2026-11-26'
-  lean: none
+  lean: verified
+  lean_ref: Classicism.Map.strong_possibility_and_witnessed_possibility_incompatible
 sources:
 - OpenAI Codex, prompted by Daniel Kodsi, 26 November 2026.
 source_names:
@@ -20,6 +21,8 @@ references:
   role: background
   locator: §2.5, pp. 38–39; §2.6, p. 42
 proof: >-
+  Pure Strong Possibility alone gives the contradiction by [[strong-possibility-r-inconsistent]].
+
   Fix a nonindividual constant $c$ as in the map's signature convention,
   and let $b$ be any nonzero closed pure proposition.
   For a variable $X$ of its type put $T(X)=\forall\bar z\, .\,X[\bar z]$,

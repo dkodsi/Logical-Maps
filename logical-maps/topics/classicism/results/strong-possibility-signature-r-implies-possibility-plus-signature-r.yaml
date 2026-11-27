@@ -9,7 +9,8 @@ certificate:
   recorded_by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi, 26 November 2026
   checked_by: []
   date: '2026-11-26'
-  lean: none
+  lean: verified
+  lean_ref: Classicism.Map.strong_possibility_signature_r_implies_possibility_plus_signature_r
 sources:
 - OpenAI Codex, prompted by Daniel Kodsi, distinctness-preserving proof, 26 November 2026.
 source_names:
@@ -19,6 +20,8 @@ references:
   role: background
   locator: §2.5, pp. 37–39; §2.6, pp. 41–42
 proof: >-
+  By [[strong-possibility-signature-r-inconsistent]], any theory satisfying the premises proves $\bot$ and hence every instance of Possibility+ (signature Σ).
+
   For a fixed signature Possibility+ instance put
   $A=\forall\bar x\, .\,D(\bar x)\to\Diamond P(\bar x)$, where $D$
   says that the displayed individuals are pairwise distinct and differ from the

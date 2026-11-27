@@ -51,7 +51,7 @@ $$
 $$
 is supported by $F\cup\{a\}$. Its actual trace on the numbers is $r_a$: distinct standard iterates are distinct by the Peano conditions. Fullness would give an $x\in X$ with exactly this trace. The fresh Cohen factor gives $r_a\notin M[H|F]$, a contradiction. This excludes a real number structure at every type. For the terminal point apply Łoś to the pure sentence excluding such a structure at each fixed type in $E$. There is thus no possible real number structure at the source, so Analytic Necessitism and its second-order strengthening both hold there.
 
-The absence of possible real structures at every type is necessary for this separation. Under Analytic Necessitism, a possible real number structure at any type would give a rigid structure there that is necessarily a real number structure. Its Peano part then transfers rigidity and necessary distinctness to the Frege numbers at every type satisfying the boxed Peano condition, by the cross-type matching argument in [Analytic Necessitism and Transversal imply Arithmetic Necessitism](analytic-necessitism-and-transversal-imply-arithmetic-necessitism.md). That would give Arithmetic Necessitism.
+Every countermodel to Analytic Necessitism implying Arithmetic Necessitism must exclude possible real number structures at *every* type. A single possible real structure, even at a carrier different from the counting type in a failed instance, would suffice by the [cross-type Peano matching lemma](analytic-necessitism-and-transversal-imply-arithmetic-necessitism.html#matching-numbers).
 
 ## New Frege numbers
 

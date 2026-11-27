@@ -9,12 +9,15 @@ certificate:
   checked_by:
   - Two further OpenAI Codex (GPT-6) agents independently checked the reduced-power argument, the transport of inextensibility and the arithmetic contradiction.
   date: '2026-11-27'
-  lean: none
+  lean: verified
+  lean_ref: Classicism.Map.strong_possibility_and_inextensible_comprehension_incompatible
 sources:
 - OpenAI Codex (GPT-6), prompted by Daniel Kodsi, the moving-tuple argument in the reduced-power retraction, 26 November 2026, and its Maximalist extension and Strong Possibility consequence, 27 November 2026.
 source_names:
 - Codex via Kodsi, 26–27 Nov
 proof: >-
+  Pure Strong Possibility alone gives the contradiction by [[strong-possibility-r-inconsistent]].
+
   Add an exit into a Maximalist point to the reduced-power retraction. Its
   moving-tuple test forces the present extension of every inextensible relation
   to be externally finite. Weak inextensibility then bounds that relation by the

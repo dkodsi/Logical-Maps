@@ -9,12 +9,15 @@ certificate:
   checked_by:
   - Two further OpenAI Codex (GPT-6) agents checked the finite-bound argument and the use of a signature-Maximalist exit.
   date: '2026-11-27'
-  lean: none
+  lean: verified
+  lean_ref: Classicism.Map.signature_strong_possibility_and_inextensible_comprehension_incompatible
 sources:
 - OpenAI Codex (GPT-6), prompted by Daniel Kodsi, the moving-tuple argument in the reduced-power retraction and its Maximalist extension, 26–27 November 2026.
 source_names:
 - Codex via Kodsi, 26–27 Nov
 proof: >-
+  Signature Strong Possibility alone gives the contradiction by [[strong-possibility-signature-r-inconsistent]].
+
   For the given signature use a reduced-power retraction with an exit into a
   signature-Maximalist point, sending each named entity to its old interpretation.
   The resulting signature-Maximalist root satisfies the same pure sentence

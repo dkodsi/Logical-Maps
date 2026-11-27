@@ -1,445 +1,148 @@
-# Strong Possibility (pure) ⇒ ⊥ (conjecture)
+# Strong Possibility (pure) ⇒ ⊥
 
-The consistency of pure Strong Possibility (SP) remains open. An SP root
-with Actuality would require elementary returns through every individually
-Max-consistent pure sentence. Many such returns can be modeled together,
-even when the returning atom splits along the way. These are ordinary
-arguments by OpenAI GPT-6, prompted by Daniel Kodsi and independently
-reviewed by a second GPT-6 research agent on 26 November 2026.
-
-## A restriction on the Russell–Myhill argument
-
-The [signature argument](strong-possibility-signature-r-inconsistent.html#the-sentences) uses a closed operator $Q:(t\to t)\to t$. Put $\rho(p)=\exists F\,(QF=p\land\neg Fp)$ and $d=Q\rho$. Classicism proves there is a collision witness $F$ with $QF=d$ and $Fd\ne\rho d$. The two existential sentences $E_1,E_2$ ask whether such a witness can respectively agree or disagree with $\rho$ at $\top$. To use them against pure SP, each sentence must fail in some pure Max model.
-
-Suppose $R$ is a closed pure property of propositions and C proves, for all $F,G$,
+**Theorem.** In Classicism there are two closed pure sentences $A_0$ and $\Psi$, each consistent with ordinary pure Maximalism, for which
 $$
- QF=QG\quad\longleftrightarrow\quad
- \forall p\,(Rp\to Fp=Gp).
+ C\vdash\neg(\Diamond_{\ne} A_0\land\Diamond_{\ne}\Psi).
 $$
-Then these observations cannot produce the split. The probes may form an internally infinite family, and membership in $R$ may change along an arrow.
+Consequently pure Strong Possibility is inconsistent. The same two sentences witness the inconsistency of Strong Possibility for every free signature admitted by the map, with both consistency tests taken in that signature.
 
-To see this, note that $d=\top$ has the same verdict at every pure Max point. If C proves the identity it holds everywhere. Otherwise its negation is C-consistent, so Max requires its possibility, which is incompatible with a current identity. If $d=\top$, the unavoidable collision witnesses $E_2$ at every Max point. Suppose instead that $d\ne\top$. Choose $F$ with $QF=d$ and with $Fd$ opposite in current truth value to $\rho d$. Such an $F$ exists since the diagonal first gives $\rho d$, and its definition then supplies the witness. With $\mathbin{\triangle}$ for exclusive disjunction, set
-$$
- G(p)=\rho(p)\mathbin{\triangle}
-       \bigl((F(p)\mathbin{\triangle}\rho(p))\land p\ne\top\bigr).
-$$
-At every current probe $p$, $Fp=\rho p$ as propositions, so their exclusive disjunction is the bottom proposition. Thus $Gp=\rho p$ as propositions at every probe and $QG=d$. Also $G\top=\rho\top$ identically. At $d$ the guard is currently true, hence $Gd$ differs in truth value from $\rho d$. This witnesses $E_1$ at every Max point. In either case one of the two sentences holds throughout the class, whereas Dorr's argument requires each to fail somewhere.
+Here $A_0$ says that the Boolean algebra of propositions is atomless. Write $D=\Diamond_{\ne}$. At a $DP$-point, each currently true proposition can still be made true after reaching a $P$-point. Applying this to a true strong atom shows that $DA_0$ rules out Strong Actuality. To define $\Psi$, the proof uses the Russell–Myhill diagonal at the type of six-place relations on individuals. An auxiliary world for each old arrow and individual tuple tests the entire interpretation of such a relation. This produces a sentence true at a definable Maximalist root whose distinctness-preserving possibility contradicts the diagonal whenever Strong Actuality fails.
 
-For finitely many named closed probes $r_i$, use $R(p)=\bigvee_i p=r_i$. This includes an operator that evaluates its argument at a single fixed proposition. In this finite case there is a further classification. A collision forces $d\ne r_i$ for each $i$. If a probe equals $\top$, any collision witness agrees with $\rho$ at $\top$, so only $E_1$ holds. If $d$ differs from $\top$ and every probe differs from $\top$, both sentences hold. To witness $E_2$, flip $\rho(p)$ by exclusive disjunction with $((p=d\lor p=\top)\land\bigwedge_i p\ne r_i)$. This leaves every probed output unchanged as an entity and changes the current truth values at both $d$ and $\top$.
+OpenAI Codex (GPT-6), prompted by Daniel Kodsi, found the construction and completed the proof on 27 November 2026. Independent GPT-6 researchers checked the native types, full action-model extension, descriptor argument, and the two licences in each signature. The diagonal adapts the earlier [higher-order-signature proof](strong-possibility-signature-r-inconsistent.html) of Cian Dorr and Claude Fable 5.2 (Anthropic), prompted by Cian Dorr. Lean verifies both map statements. The [formalization](#lean-verification) gives a second choice of incompatible possibilities. The [results on fragments](#fragments) describe collections of return requirements that ordinary Maximalism does realize.
 
-## Elementary returns
+## The closed terms
 
-Let $a$ witness Actuality at $x$. For any current proposition $p$,
-$\Diamond_{\ne}p$ holds at $x$ iff there are arrows
-$f:x\to y$, $h:y\to z$ with $fp$ true at $y$ and $hf(a)$ true at $z$.
-Indeed the definition tests each true $q$ for
-$\Diamond(p\land\Diamond q)$. Use $q=a$ in one direction; in the other
-direction $a$ entails every such $q$. On any such return $hf$ preserves
-and reflects every native formula with parameters of every type at $x$.
-Apply the truth observation to the formula and its negation, and use
-transport of term values. Conversely an elementary composite through a
-$p$-point returns the truth of $a$. At $z$ its transported value again
-witnesses Actuality, including for newly available propositions.
-An SP point therefore returns to another SP point in this situation.
-One can iterate through any prescribed countable sequence of individually
-Max-consistent closed sentences, in the same model.
+Let \(S=e^6t\) denote the type of six-place relations on individuals. Write a tuple of six individuals as \(\bar a=(a_0,a_1,b_0,b_1,c_0,c_1)\). With this tuple as parameter define
 
-Without Actuality, fix a finite menu $P_1,\ldots,P_k$ of such sentences.
-The closed $Q=\bigwedge_i\Diamond_{\ne}P_i$ holds at an SP point.
-Wherever $Q\land q$ holds, test $\Diamond_{\ne}P_i$ against $Q\land q$.
-Some path through $P_i$ returns to $Q$ with the transported $q$ true.
-This realizes arbitrary infinite words over the menu while preserving
-any specified finite diagram of current parameter truths at the returns.
-Further true parameters can be added after each return.
-
-## Uniform numerical consequences of SP
-
-Write $F$ for the Fregean Axiom, $E_j$ for exactly $j$ individuals and
-$E^t_j$ for exactly $j$ propositions. For positive integers $d,m$, put
-$B_{d,m}=\Box\mathrm{ND}_t\land\Box E_d\land\Box E^t_{2^m}$.
-Let $N=\mathbb N_e$, let $U=\lambda x^e.\top$, and write
-$J(n)=(\operatorname{Suc}_e n)(U)$. At the standard numeral $k$,
-$J(k)$ says there are exactly $k+1$ individuals. If $r\ne\bot$
-and $r=\Diamond r$, SP entails that the single term
-$n\mapsto r\land J(n)$ gives pairwise disjoint nonzero propositions
-for **all** $n\in N$. The single term $n\mapsto F\land J(n)$
-also gives pairwise disjoint weak atoms for all $n\in N$. These
-quantifiers include nonstandard numbers. The October calculation
-gave each externally indexed finite Fregean cell separately.
-[Finite Fregean cells, §§3–4](https://github.com/dkodsi/Logical-Maps/blob/67b116acaf7cee286614307468f5361f6a195c6e/submissions/classicism-results-2026-10-24-v2/source/research/2026-10-22/sp-structural-proof-package/profile-root-construction-20261022.md#L21)
-
-The transfer uses universal Boolean combinations of typed identities.
-If one of these sentences fails, its countertuple witnesses a finite
-identity diagram. True identities persist. Let $q$ be the conjunction
-of its true disequalities. Wherever transported $q$ remains possible
-those disequalities still hold, by necessity of identity. Thus a
-countertuple prevents the sentence from holding under $\Diamond_{\ne}$.
-Consequently SP entails every individually Max-consistent sentence
-of this form. In C, $N(n)$ is persistent and hence equivalent to
-$N(n)=\top$. Nonzeroness, disjointness and the definition of a weak
-atom all have the required identity form, universally quantifying
-over a possible subproposition in the atom condition.
-[Universal reflection, §§2–4](https://github.com/dkodsi/Logical-Maps/blob/67b116acaf7cee286614307468f5361f6a195c6e/submissions/classicism-results-2026-10-24-v2/source/research/2026-10-22/sp-structural-proof-package/reflection-universal-core-20261022.md#L11)
-
-For the first claim choose one individual set $X_j$ of each positive finite
-size $j$, with all functions between these sets as arrows and exits into a C-complete family of
-old components. From $X_j$ to an old object use all $j$-tuples of
-individuals there, postcomposing by transport. At each new relational
-type give an entity unrestricted rows on all its internal arrows and a
-single old descriptor with $j$ free individual markers, evaluated at
-the tuple of the exit. Internal transport precomposes the rows and
-substitutes the markers according to the individual map. Take old
-components complete also for formulas with finitely many markers.
-Equality of the old traces is then provable descriptor equality.
-The lambda and quantifier check uses the transported parameters at
-each internal target and substitutes their descriptors at old targets.
-Every new point satisfies Max. At the singleton $X_1$, $N$ is exactly
-the standard numeral values by the unrestricted current row argument.
-A nonzero possibility-fixed $r$ is true there. Each section
-$X_1\to X_j$ has a return, so transported $r$ is possible at $X_j$,
-hence true there. This realizes $r\land J(j-1)$. Different standard
-sizes are disjoint at every world, giving the universal sentence at
-$X_1$.
-
-For the second claim use the ordinary singleton definable root. Its
-current numbers are again standard. In a Fregean world of fixed
-positive finite individual size the extensional hierarchy is full by
-finite comprehension. Permutations of its individuals act transitively
-on interpretations of the single marker. Each proposition descriptor
-therefore has constant value on the entire cell $F\land E_j$; the cell
-is false at the root and possible on an old exit. It is consequently
-an atom. All these standard-index assertions hold at the same Max
-point, so universal reflection gives the claim on its full internal
-index set at every SP point.
-
-A third represented injection concerns any current operator
-$H:\sigma\to\rho$ with relational output. There are $N$-many distinct
-operators agreeing with $H$ in their output *entities* at every current
-input. Put $b(n)=\Box\mathrm{ND}_t\land\Box((\operatorname{Suc}_e^2
-n)(U))\land\Box E^t_4$. At standard $k$ this is $B_{k+2,2}$.
-For relational $\sigma$, let $S_\sigma$ be the October term lifting
-the swap of the two atoms of the four-element proposition algebra,
-and put $T_n(X)=K_\rho(b(n)\land S_\sigma(X)\ne X)$, where $K_\rho$
-lifts a proposition constantly. On a $b(k)$-cell the swap acts
-trivially on individuals and lifts by conjugation through each type,
-fixing every descriptor with its individual marker. A moved
-proposition, lifted constantly to $\sigma$, witnesses nonzeroness
-there. Thus at the singleton definable root $T_k$ is nonzero but
-$T_k(X)=\bot_\rho$ for every current $X$. For $\sigma=e$ take instead
-$T_n(x)=K_\rho(b(n)\land x\ne a)$ with its sole current individual
-$a$; the use of $k+2$ supplies distinct individuals in the finite
-cell. Different $k$ give disjoint operators. The uniform statement
-about nonzeroness, disjointness and current vanishing again consists
-of universal Boolean combinations of identities; universally close
-$a$ in the individual case. Reflection transfers it to all $n\in N$.
-The required injection is $n\mapsto H\mathbin{\triangle}T_n$, by
-Boolean cancellation. The archive proved each external finite
-multiplicity bound; the displayed term indexes the entire internal
-family. [Finite-cell operators, §§19 and 25](https://github.com/dkodsi/Logical-Maps/blob/67b116acaf7cee286614307468f5361f6a195c6e/submissions/classicism-results-2026-10-24-v2/source/research/2026-10-22/notes/sp-existential-products-20261022.md#L948)
-
-## Purely definable atoms for finite fragments
-
-The October research proves that pure SP forces
-each $\mathrm{Atom}(B_{d,m})$ and that the singleton profile model
-satisfies these sentences together with pure Max.
-[Finite homogeneous cells, §§17.1–17.5](https://github.com/dkodsi/Logical-Maps/blob/67b116acaf7cee286614307468f5361f6a195c6e/submissions/classicism-results-2026-10-24-v2/source/research/2026-10-22/notes/sp-existential-products-20261022.md#L532)
-
-Let $\Gamma$ be a finite conjunction of ordinary possibility axioms
-of pure Max. There is a model of $\Gamma$ and *all* these cell-atom
-sentences with a singleton individual domain and a true atom named by
-a closed pure term. It can have literal returns through every positive
-finite individual cardinality and an arbitrarily wide split of that atom
-on one return path.
-
-To find two separated old components, take the consistent recursively
-enumerable theory
-$$
- T=C+\Gamma+\Diamond\neg F+
-              \{\mathrm{Atom}(B_{d,m}): d,m\ge1\}.
-$$
-Some consistent $\eta=F\land I_e^*\land\theta$ has
-$T+\neg\Diamond\eta$ consistent. Here $I_e^*$ is the arithmetic
-Peano condition on the Frege numbers at $e$. Otherwise, for each
-sentence $A$, dovetail proofs of $A$ in $C+F+I_e^*$ and proofs of
-$\Diamond(F\land I_e^*\land\neg A)$ in $T$. Exactly one search
-would succeed, deciding the former theory. Its undecidability already
-follows from first-order validity with a binary relation. Relativize
-to a nonempty unary predicate, universally bind both predicates,
-and expand any counterstructure to a full classical one-world
-hierarchy over an infinite domain containing the counterstructure.
-Completeness of first-order logic gives the positive direction.
-
-Choose an old point $w\models T+\neg\Diamond\eta$ and an old
-point $u\models\eta$, in disjoint components. All successors of $w$
-miss $\eta$. All successors of $u$ are Fregean and satisfy $I_e^*$:
-at a Fregean point each true proposition equals top. In particular
-their individual domains are externally infinite, since no standard
-finite domain in a Fregean cone with $I_e^*$ satisfies the Peano
-condition.
-
-For any $l\ge2$ use two objects $r,s$ with a map $f:r\to s$ and
-distinct $g_i:s\to r$ ($1\le i\le l$), with $g_i f=1_r$.
-The other maps are identities and $e_i=fg_i:s\to s$; composition
-reduces by these equations. Take the product of this category with
-the category of nonempty finite sets and functions, using one
-representative $X_j$ of each size $j$. The individuals at $(X_j,t)$
-are $X_j\times D_t$, where $D_r$ is a singleton and $D_s$ a doubleton;
-$f$ picks a point and the $g_i$ collapse $D_s$ to the singleton.
-Use all these product maps as internal arrows. Add one entrance
-from each new object to each of $w,u$ and all its old postcomposites,
-indexed by their old arrows. Internal precomposition changes only the
-source of an entrance. Send every individual to a fixed chosen
-individual of the appropriate old point. These constant maps respect
-the composition rule.
-
-At a new object a relational entity has an unrestricted extension row
-for every outgoing internal arrow, together with one whole old value
-of its type at each of $w,u$. The empty tuple gives proposition rows.
-Internal transport precomposes the row table and keeps the old values;
-entrance transport takes the appropriate old value. At an old
-postcomposite apply its original transport. The domains are defined
-inductively in the argument types. A lambda has on each internal arrow
-the row given by evaluating its body on transported parameters and
-all arguments then available. Its two old values are the original
-lambda values on the respective transported parameters. Induction on
-terms gives the required transport equation, including quantifiers
-over the full target domains. Old domains and arrows out of old points
-stay as in the two original components. This is the old finite-set
-retraction construction with a second, explicitly split, factor.
-[October retraction construction, §§1–3](https://github.com/dkodsi/Logical-Maps/blob/67b116acaf7cee286614307468f5361f6a195c6e/submissions/classicism-results-2026-10-24-v2/source/research/2026-10-22/sp-structural-proof-package/reflection-retract-fragments-20261022.md#L11)
-
-Put $R=(X_1,r)$ and
-$c=\Diamond\eta\land\Diamond\neg F\land E_1$.
-The first two conjuncts hold at each new object and jointly at no
-old successor. The individual condition selects just $R$. Consequently
-the row of $c$ out of $R$ is true only at its identity: $c$ is its
-actual atom. At $(X_1,s)$ the rows where $c$ is true are exactly the
-$l$ arrows $g_i$ to $R$. The interval below its transported value has
-$2^l$ elements, since each mask on those rows is admitted. Each
-$g_i f$ returns by the identity. For every $j\ge1$, choosing any
-point of $X_j$ gives a section $R\to(X_j,r)$ with a literal return
-to $R$. At $R$ the Frege numbers $\mathbb N_e$ are exactly the
-standard numeral values: arbitrary current rows admit the set of those
-values as an inductive predicate, and the finite objects distinguish
-every pair of standard numerals. Thus even the internal universal
-quantification over finite cardinalities in the next paragraph holds
-there. The $\Gamma$-diamonds follow from the entrance to $w$.
-Each $B_{d,m}$ is false at all internal objects, all of which see $u$,
-and impossible at $u$. Its only nonbottom coordinate at $R$ is its
-old atom at $w$, so it is an atom at $R$.
-
-## A single source proposition spanning the full Max theory
-
-Every pointed pure Max model has an elementary extension of its
-action-and-evaluation structure in which the original point admits
-a nonzero self-atom $b$ with all the following properties throughout
-its truth set.
-
-* Every $b$-point satisfies pure Max, $E_1$, $\neg F$ and every
-  $\mathrm{Atom}(B_{d,m})$. There $b$ witnesses Actuality.
-* For every $n\in\mathbb N_e$ at a $b$-point there is a path through
-  $(\operatorname{Suc}_e n)(\lambda x^e.\top)$ and back to a
-  $b$-point. At the intermediate point the number parameter is
-  transported. For each standard $l$ there is also a path through
-  a point where $b$ has at least $l$ pairwise disjoint nonzero parts,
-  and back to $b$. All these returns are elementary on the parameters
-  at the starting $b$-point by the first section.
-
-For the finite satisfiability check, let $G(z)$ conjoin finitely
-many requested local conditions, including the desired diamonds with
-$z$ marking the return. In the construction above choose $l$ large
-enough. At $R$, $c$ is the actual atom and $G(c)$ holds. Set
-$d=c\land\mathrm{Atom}(c)\land G(c)$. As a matter of C alone,
-at any $d$-point the nonzero $d\le c$ must equal the atom $c$
-as a proposition, giving both $\mathrm{Atom}(d)$ and $G(d)$ there.
-This equality also justifies occurrences of $d$ *inside* the return
-diamonds. Since $d$ is a C-consistent closed pure proposition, every
-Max point has $\Diamond d$. Its local $d$ is therefore a self-atom
-satisfying the finite list of entailments $d\le G(d)$. Compactness
-with the elementary diagram of the given model supplies one new
-$b$ for the entire list. This uses many-sorted first-order
-presentations of Henkin action models, with the usual evaluation
-translation for each standard typed formula.
-
-No fixed closed pure term can name a true atom at a Max point.
-If $c$ did so, it would entail each pure Max axiom $K$ there.
-This entailment is a closed pure identity, so it is already provable
-in C: failure of the identity is C-consistent and Max would otherwise
-require its possibility, contrary to necessity of identity. Then the
-consistent recursively enumerable theory $C+c$ would entail pure Max.
-The October argument excludes this by dovetailing C identity proofs
-and proofs of their Max disequalities.
-[Non-effective axiomatizability, §§9–10](https://github.com/dkodsi/Logical-Maps/blob/67b116acaf7cee286614307468f5361f6a195c6e/submissions/classicism-results-2026-10-24-v2/source/research/2026-10-22/notes/sp-essential-extension-20261022.md#L95)
-
-The extension thus supplies a source proposition whose realizations
-meet the entire Max theory and return conditions above. SP also
-requires returns through arbitrary Max-consistent higher-order
-sentences. Their simultaneous realization remains open.
-
-## Returning individual cardinalities and scalar coding at an actual atom
-
-Let $N=\mathbb N_e$, $I=I^*_e$ and $U=\lambda x^e.\top$. Write $J(n)=(\operatorname{Suc}_e n)(U)$. At the standard numeral $j$, this says that exactly $j+1$ individuals exist. All statements below quantify over the full current $N$.
-
-### Pure Strong Possibility realizes every positive finite size on a return
-
-There is a pure Maximalist point satisfying the single sentence
-$$
- \Theta=I\land\forall n\,(Nn\to\Diamond_{\ne}J(n)).
-$$
-For the existence claim, use the [construction of a single proposition spanning the full Max theory](strong-possibility-r-inconsistent.html). In an elementary extension of a pure Max model it gives a possible self-atom $b$. At every point where $b$ is true, pure Max and the Peano guard hold, and each local $n\in N$ admits a path through $J(n)$ back to $b$. Since $b$ is the actual atom there, these are precisely the required distinctness-preserving possibilities. Choose one such point.
-
-Suppose $r$ satisfies pure Strong Possibility. The preceding consistency certificate gives $\Diamond_{\ne}\Theta$. Take any $n\in N$ and any true $q$ at $r$. Reach a $\Theta$-point where $\Diamond q$; numberhood persists along the entrance. At that point apply the $n$-instance of $\Theta$ using the current truth $\Diamond q$ as its test. This reaches $J(n)$ with $\Diamond\Diamond q$, hence with $\Diamond q$ by transitivity. This proves $\Diamond_{\ne}J(n)$ at $r$. Pure Max already gives $I$ there.
-
-### An actual atom encodes number predicates in propositions
-
-Let $a$ be a true atom at $r$. For each $n\in N$ define $C_n=J(n)\land\Diamond a$. These propositions are nonzero by testing the preceding result with $a$. Every $a$-point has the same parameter truths as $r$: a true atom entails each current truth, including any formula in any current tuple and the negation of each false formula. In particular $a\le I$. At every $C_n$-point $I$ is therefore possible and hence holds, by the Peano guard's equivalence to its ordinary possibility at type $e$.
-
-For a current predicate $X$ on the number type, set
-$$
- s_X=\exists k\,\bigl(Nk\land J(k)\land\Diamond a\land(a\le Xk)\bigr).
-$$
-This is a single native term in $a,X$. At every $C_n$-point the transported $n$ satisfies $Nn$ and $J(n)$. If any number there, including one new to that point, satisfies $J(k)$, its successor and the successor of the transported $n$ both count $U$. [Numbers with a common instance are identical](../index.html#background/arithmetic). The Peano guard gives successor injectivity there, so $k$ equals the transported $n$. In particular the existential cannot introduce a spurious sign. At $r$ either $a\le Xn$ or $a\le\neg Xn$ according to the current truth of $Xn$. The order identity persists, and $a$ is nonzero at every $C_n$-point. Thus throughout $C_n$ the bit of $s_X$ is exactly the current bit of $Xn$.
-
-If $X$ and $Y$ agree currently on every number, the identity
-$$
- a\le\forall k\,(Nk\to(Xk\leftrightarrow Yk))
-$$
-holds at $r$. At any later point and any $k$ satisfying $Nk$ there, numberhood persists throughout its future. The identity therefore gives $a\land Xk=a\land Yk$ at that point. It follows directly from the definition that $s_X=s_Y$. Conversely, a current disagreement at $n$ gives opposite bits on the nonzero $C_n$, so $s_X\ne s_Y$. The closed abstraction in the parameter $a$ thus embeds the extensional equivalence classes of current predicates on $N$ into the scalar domain.
-
-Consequently there is no current relation which functionally enumerates all scalar entities by $N$. Indeed, suppose $E(n,p)$ were such an enumeration, and form the admitted predicate
-$$
- X(n)=\neg\exists p\,(E(n,p)\land C_n\le p).
-$$
-Choose a current $j\in N$ with $E(j,s_X)$. Functionality gives $Xj$ exactly when $C_j\nleq s_X$, whereas the proven bit rule and $C_j\ne\bot$ give $Xj$ exactly when $C_j\le s_X$. An injection of all scalars into $N$ would give a functional enumeration by reversing its graph and assigning bottom to unused numbers, also impossible. This is internal uncountability at the actual point, with counts measured at individual type. A countable Henkin presentation externally is compatible with this conclusion. Ordinary pure Max admits the opposite internal verdict at its countable-scalar definable root, whose unrestricted current graph enumerates its scalars with the standard individual Frege numerals.
-
-### A real number structure on propositions
-
-Take the pairwise distinct nonzero $b_n=\mathrm{Fr}\land J(n)$ of the [pure SP finite-cell argument](strong-possibility-and-boolean-completeness-t-incompatible.html) as number labels, and the $s_X$ as real labels. These two classes of labels are disjoint. Every $s_X$ entails $\Diamond a$. At an $a$-point the Fregean Axiom is false, since it is already false at the source by Maximalism and $a$ entails each actual truth. At a Fregean point the axiom persists, excluding $\Diamond a$. Thus even the zero real label differs from each nonzero $b_n$.
-
-Define the two carriers by their displayed images, equip the first with the zero and successor coming from $N$, and put $b_n\in s_X$ exactly when $Xn$. All these are current relations supplied by abstraction. The classification of the $s_X$ makes membership well defined and gives real extensionality. For every current property $P$ of number labels the predicate $n\mapsto P(b_n)$ supplies the real coding its extension. A current inductive subproperty of the number labels pulls back to an inductive subproperty of $N$, so the number part satisfies Peano induction. This is an actual membership-presentation real structure at type $t$. In the ordinary pure descriptor Max root, $D_t$ is externally countable and the current rows include every subset of every number part, so no real structure at $t$ is possible *as an actual structure at that root*.
-
-The returning sizes, the treatment of newly available numbers, the enumeration obstruction and this real-structure corollary received a separate GPT-6 mathematical review on 27 November 2026.
-
-## Internal proof reflection and true arithmetic at the second level
-
-Write \(N=\mathbb N_e\) and \(I=I_e^*\). Fix a pure formula \(A(v)\)
-whose only free parameter is a Frege number variable. Let \(L_A(n,k)\)
-be the primitive recursive proof check that \(k\) is a C-refutation of
-\(A(\bar n)\). Use the effective pure C calculus, annotating axiom
-instances by their enumeration certificates if necessary. The
-function producing the syntax of the Frege numeral is primitive
-recursive. This is one fixed PA graph, including at nonstandard
-arguments.
-
-At every pure SP point,
 \[
- \forall n\in N\quad
- \big(\neg\Diamond A(n)\ \longleftrightarrow\
-                   \exists k\in N\, L_A(n,k)\big).
+ A=(a_0\ne a_1),\quad B=(b_0=b_1),\quad
+ T=\neg A\land\neg B\land c_0\ne c_1,\quad
+ U=\neg A\land\neg B\land c_0=c_1.
 \]
-The modal formula has \(n\) as an actual parameter. The proof check
-on the right operates inside the source arithmetic; for nonstandard
-\(n,k\) it is not a claim about an external finite derivation.
 
-The displayed sentence, together with \(I\), holds at the standard
-singleton descriptor Max point \(V\). All its numbers are standard,
-and for each standard numeral a closed sentence is possible there
-exactly when it is C-consistent. Pure SP therefore supplies
-distinctness-preserving possibility of that one uniform sentence.
-Every SP point also satisfies \(I\).
+Put \(x\sim y\) for \(\Box(U\to x=y)\). Let \(C_i(x)\) say that exactly \(i\) current individuals \(y\) satisfy \(x\sim y\), using the usual finite first-order formula, for \(1\le i\le7\). Set \(J=\exists x\,C_7(x)\). These formulas all use the same six transported parameters. For \(p:S\) put
 
-Suppose \(A(n)\) is impossible at the source without an internal
-refutation. Request a return to \(I\land\neg\exists k\in N\,L_A(n,k)\)
-through the displayed sentence with its Peano guard. The source
-identity \(A(n)=\bot\) persists to the intermediate point, and the
-sentence supplies a refutation code there. Its numberhood and its
-primitive recursive proof check persist to the Peano return, contrary
-to its guard.
+\[
+\begin{split}
+ \operatorname{Code}(p;\bar a)={}&(p=\lambda\bar v.\Diamond p(\bar v))\\
+ &{}\land\Box\bigl(T\to\forall v_1\ldots v_6\,[(\bigwedge_{i=1}^6 C_i(v_i))
+              \to(J\leftrightarrow\Diamond(B\land p(\bar v))) ]\bigr).
+\end{split}
+\]
 
-If \(A(n)\) is possible and \(L_A(n,k)\) holds at the source, request
-a return to \(\Diamond A(n)\) through the same Peano sentence. The
-primitive recursive proof check is preserved from source to
-intermediate, so \(A(n)=\bot\) there. This persists to the return,
-contrary to possibility of \(A(n)\). This proves the equivalence
-for all internal indices. Multiple numerical parameters can be
-treated together. Taking \(A(v)\) to assert a failure of identity
-also gives a uniform numerical test for identity of two fixed
-parameterized pure terms in the source.
+Define
 
-The same method proves that the source arithmetic satisfies every
-true first-order \(\Pi^0_2\) sentence. Write the sentence in the
-form \(\forall n\exists m\,R(n,m)\) with a primitive recursive
-matrix. It holds at \(V\). If an actual \(n\) of the source had no
-witness, request a return to \(I\land\neg\exists m\in N\,R(n,m)\).
-At the intermediate Peano point choose \(m\) and carry it to the
-return. Its PA graph and numberhood are preserved, a contradiction.
-In particular any standard program which really halts on every
-standard input is internally total on the source natural numbers.
-No assertion about correctness of every arithmetical sentence, or
-about arithmetic in all accessible worlds, is needed.
+\[
+\begin{split}
+  (QF)(\bar a)&=\Diamond\left(A\land\exists p^S\,[\operatorname{Code}(p;\bar a)
+                              \land\Diamond(B\land\neg Fp)]\right),\\
+  \rho(x)&=\exists F^{St}\,[QF=x\land\neg Fx],\qquad d=Q\rho.
+\end{split}
+\]
 
-The arithmetic transport fact used here is proved in the
-[finite-cell Boolean Completeness argument](strong-possibility-and-boolean-completeness-t-incompatible.html).
+Here \(QF\) abbreviates the six-individual lambda abstraction displayed above. Equivalently its uncurried relation takes one input of type \(St\) followed by six inputs of type \(e\). In particular \(d=Q\rho\) is a relation of type \(S\). All its output rows are fixed by ordinary possibility: \(QF=\lambda\bar v.\Diamond((QF)(\bar v))\) by S4 and intensionality. The Russell–Myhill argument gives \(\rho d=\top\). If \(\rho d\) were false, \(F=\rho\) would make it true. Unfolding the resulting theorem gives
 
-OpenAI Codex (GPT-6), prompted by Daniel Kodsi, 27 November 2026.
+\[
+ C\vdash\exists F^{St}\,[QF=d\land Fd\ne\top]. \tag{1}
+\]
 
-## Returns with an unbounded increase at both steps
+## Testing a marked term
 
-There is a single true arithmetic \(\Pi^0_2\) sentence
-\(\Phi=\forall n\exists m\,R(n,m)\), with primitive recursive
-\(R\), with the following property. In every model of pure Strong
-Possibility, and in every model of signature Strong Possibility for
-any signature, each current truth \(q\) has a round trip through
-\(I\land\neg\Phi\) to a point satisfying \(q\land I\land\Phi\).
-Each of the two arithmetic embeddings along this round trip has
-noncofinal image. One may continue making such trips from the return
-point while keeping the original \(q\) true at successive returns.
+Let \(f:St\) be any term closed apart from one freely interpreted individual marker. Suppose \(f(d)=\top\) is not provable in marked C. By completeness a countermodel to the identity has an ordinary continuation where the proposition is false. Repointing there, with the transported marker, gives a marked C action model \(w\) with \(\neg f(d)\). Keep its generated cone unchanged. At \(w\) fix the marker's original individual as an anchor.
 
-Choose a computably presented countably infinite signature
-\(\Omega\) with infinitely many symbols of each type. The axioms of
-\(T=\operatorname{Max}_\Omega(C)+I\) can be enumerated using the
-halting problem as an oracle, since the ordinary C calculus is
-effective and its consistency tests concern single formulas. The
-signature-definable Maximalist root has exactly the standard
-\(e\)-numerals as its numbers. Its unrestricted current predicates
-include a test for exactly these numerals. This test is inductive
-at the root, and the possible finite Fregean sizes distinguish the
-different standard numerals. Thus all arithmetic consequences of
-\(T\) hold in the standard natural numbers. The true \(\Pi^0_2\)
-sentences are not computably enumerable with the halting oracle,
-so some true \(\Phi\) of the stated form is unprovable in \(T\).
+Adjoin a new root \(o\) and an arrow \(l:o\to w\). For every old arrow \(h:w\to z\), including the identity, and every tuple \(\bar u\in D_e(z)^6\), add a fresh object \(t=t_{h,\bar u}\), with arrows \(i_t:o\to t\) and \(k_t:t\to z\). Impose \(k_t i_t=h l\). Also add one fresh classical terminal \(v_t\) and an arrow \(j_t:t\to v_t\). These generators and the old compositions impose all the identifications. In particular every path from \(o\) into the old cone factors through \(l\), and every path from \(t\) into the old cone factors through \(k_t\).
 
-For any signature \(\Sigma\), the sentence \(P=I\land\neg\Phi\)
-is consistent with \(\operatorname{Max}_\Sigma(C)\). Otherwise a
-proof of \(\Phi\) from \(\operatorname{Max}_\Sigma(C)+I\) uses only
-finitely many symbols. A type-preserving injection of those
-symbols into \(\Omega\) carries each used Max axiom to a Max axiom.
-Indeed satisfiability of a formula in a finite vocabulary is
-preserved when further unconstrained names are introduced. The
-renamed proof would contradict the choice of \(\Phi\). The same
-argument covers the pure vocabulary. Conversely the standard
-numeral root for any \(\Sigma\) satisfies \(I\land\Phi\), so the
-earlier two-step proof of true \(\Pi^0_2\) reflection also works
-for signature Strong Possibility, using its own reference theory.
+Choose a root tuple \(\bar a\) with the three pairs distinct at \(o\). All six entries go to the anchor under \(l\). At each \(t\) merge the first pair and keep the other two pairs distinct. At \(v_t\) keep only the \(b\)-pair distinct. Under \(k_t\) all six transported root entries map to \(h\) of the anchor. Thus \(A\) holds only at \(o\), \(B\) holds precisely in the old cone, \(T\) holds at the test objects \(t\), and \(U\) holds at the private terminals \(v_t\), for this choice of \(\bar a\).
 
-At the Strong Possibility source, request a return through \(P\) to
-the truth \(q\land I\land\Phi\land\Diamond_{\ne}P\). At the
-intermediate point choose a number \(k\) with no witness to
-\(R(k,m)\). For each original number \(a\), PA and \(\Phi\) give
-an original number \(c\) with
-\(\forall i\le a\,\exists j\le c\,R(i,j)\). This last assertion
-is a bounded primitive recursive test on \(a,c\). Its value is
-preserved between the two Peano points, even if new numbers occur
-below the image of an old number. Consequently \(k\) is greater
-than the image of every source number. At the returning Peano
-point choose \(y\) witnessing \(R(k,y)\). For each number \(b\)
-at the intermediate point the bounded test
-\(\forall j\le b\,\neg R(k,j)\) is true and remains true at the
-return. Thus \(y\) exceeds every image from the intermediate point.
-The specified return truth again includes \(\Diamond_{\ne}P\),
-which permits iteration of the same test without assuming the
-entire Strong Possibility schema at each successive return.
+At \(t\) the relation \(x\sim y\) is exactly \(j_tx=j_ty\). Implement its fibres as follows. For each \(i=1,\ldots,6\) create one fibre of size \(i\) and send *every* member of that fibre to \(u_i\) under \(k_t\). Add one fibre of size seven precisely when \(d(\bar u)\) is true at the old point \(z\). Its elements can go to the transported anchor. Use two further fibres of size eight for the incoming root controls and any fillers. For example take distinct local control representatives except for the already merged \(a\)-pair. Place the two \(b\)-representatives in opposite size-eight fibres, the two \(c\)-representatives in the same one, and send all control representatives to the transported anchor under \(k_t\). Use the fibres themselves as distinct terminal individuals, and let \(j_t\) send each element to its fibre. This realizes the cardinalities and both required individual compositions. The colour of the optional fibre uses the value of an already defined closed term in the **original** component. Adding predecessors does not enter its interpretation there.
 
-In particular a model with standard arithmetic at all its Peano
-points cannot realize either form of Strong Possibility. This
-obstruction applies even in the absence of a true atom. The bounded-computation transport used above is the one established in the [finite-cell argument](strong-possibility-and-boolean-completeness-t-incompatible.html). An independent researcher checked both embeddings and the finite renaming argument for the common choice of \(\Phi\).
+For clarity, the new relations form an action model at every standard type. At a test object \(t\) admit an arbitrary current row, one entire \(z\)-entity, and one entire \(v_t\)-entity. At \(o\) admit an arbitrary current row, an arbitrary current row at each \(i_t\), one whole \(v_t\)-entity per \(t\), and one whole \(w\)-entity. Its value transported to \(t\) has the prescribed test row, prescribed private entity, and old entity transported along \(h\) from \(w\). The terminal hierarchies are full. These descriptions are inductive on types since rows use only lower-type arguments. Distinct entities are separated at their differing row or in a continuation of their differing old or terminal component. Lambda abstraction takes the body row on *all* target arguments at each new row, and takes the native abstraction in the original or terminal cone on transported parameters. Hence every abstract has the prescribed form, including those with new higher-type parameters. The test objects consequently preserve the equation $k_t i_t=h l$ also on higher-type parameters. The marked individual of the new pointed test can be any root individual transported to the original anchor.
+
+## What the code determines
+
+If \(p\) satisfies \(\operatorname{Code}(p;\bar a)\) at \(o\), its old projection equals \(d\) as a **whole** \(S\)-entity at \(w\). To check an arbitrary old row choose \(h:w\to z\) and any six current individuals \(\bar u\) at \(z\). At its test object choose a member of the size-\(i\) fibre as \(v_i\), independently at each coordinate. The antecedent in the code holds. Possibility of \(B\land p(\bar v)\) there is precisely possibility of the projected row of \(p\) on \(\bar u\) at \(z\), since the old continuations are exactly those through \(k_t\). The first code condition makes that row possibility-fixed. Its possibility therefore equals its current truth at \(z\). The colour \(J\) is exactly the previously recorded truth of \(d(\bar u)\) there. Every old row on every old tuple agrees, proving equality by intensionality.
+
+Conversely \(p=d\) passes the code at \(o\). Its rows are possibility-fixed by construction. At a test site *every* member of the size-\(i\) fibre has the stipulated old image, so the comparison holds for every tuple satisfying the antecedent. The transported selected root parameters disable the comparison everywhere else.
+
+It follows that \((Qf)(\bar a)\) is true at \(o\), using \(d\) as code and the old \(w\) itself for \(B\land\neg f(d)\). But \((Q\rho)(\bar a)\) is false. The only possible site satisfying \(A\) is \(o\) itself. Every passing code equals \(d\) throughout the old cone, and \(\rho(d)=\top\) throughout that cone. Thus \(Qf=d\) is not a theorem of marked C.
+
+Consequently no standard marked term solves (1): whenever a marked term satisfies the required identity, it fails the required disequality in the term algebra.
+
+## The contradiction at a proposed Strong Possibility point
+
+Let \(V\) be the standard coalesced definable ordinary pure Maximalist root. Its sole individual supplies the construction's auxiliary marker. Every relational entity there has a closed one-marker term descriptor, evaluated on its marked target at every proper exit. An abstraction with root parameters has as descriptor the same abstraction with their descriptors substituted. Root identities imply provable identities between these descriptors: the components and their possible marker interpretations are complete for marked C. The scalar true only at the identity of the root is a true strong atom. It decides every root proposition there and transports to bottom at each proper exit, so Strong Actuality (\(\mathrm{SA}\)) holds at \(V\). [Descriptor root](coalesced-definable-root.html)
+
+If \(QF=d\) holds at \(V\), the descriptor \(f\) of \(F\) satisfies \(Qf=d\) provably in marked C. The test just proved gives provable \(f(d)=\top\). Consequently \(Fd=\top\) holds at every proper exit of \(V\). The identity of \(V\) satisfies \(\mathrm{SA}\), so the following **one pure sentence** is true at this ordinary Maximalist point:
+
+\[
+   \Psi=\mathrm{SA}\land\forall F^{St}\,
+       [QF=d\to\Box(\neg\mathrm{SA}\to Fd=\top)].
+\]
+
+Pure Strong Possibility excludes Strong Actuality. Indeed there is an ordinary pure Maximalist point with an atomless scalar algebra. If a Strong Possibility point had a true strong atom, use that atom as the true guard in distinctness-preserving possibility of atomlessness. At the intermediate atomless point the transported atom is nonzero since it is true at a continuation. Its necessary decision of every scalar persists, which makes it an atom and gives a contradiction. [Strong-atom obstruction](strong-possibility-and-strong-actuality-incompatible.html)
+
+At a putative pure Strong Possibility point choose \(F\) from (1). The scalar \(\neg\mathrm{SA}\land Fd\ne\top\) is true. Apply \(\Diamond_{\ne}\Psi\) with that scalar as guard. This gives an intermediate site satisfying \(\Psi\) and a subsequent site restoring the guard on the transported parameter. Since identity persists, \(QF=d\) still holds at the intermediate site. Its boxed conditional gives \(Fd=\top\) at the subsequent site, contrary to the restored guard. This proves inconsistency of pure Strong Possibility.
+
+Explicitly, let \(A_0\) be propositional Atomlessness. The strong-atom argument gives \(\Diamond_{\ne} A_0\to\neg\mathrm{SA}\) already in C. Hence (1) and the guard above give the pure failed disjunction
+\[
+     C\vdash \Box_{\ne}\neg A_0\ \lor\ \Box_{\ne}\neg\Psi.
+\]
+Neither \(\neg A_0\) nor \(\neg\Psi\) is provable in ordinary pure Maximalism. Only these two Strong Possibility instances are needed.
+
+The same pair also tests the local modal axiom B. If B holds, then every currently true guard $q$ satisfies $\Box\Diamond q$. Thus every ordinary possibility $\Diamond P$ passes the return test for $DP$. A point where $A_0$ and $\Psi$ are both ordinarily possible therefore fails B. For ordinary Maximalism, Bacon's earlier argument already excludes B restricted to pure sentences. [Bacon's Exercise 8.19 and its recorded proof](../index.html#result/pure-b-and-pure-possibility-incompatible)
+
+## Extension to an arbitrary free signature
+
+Let \(\Sigma\) be any set-sized free signature admitted by the map. Use \(\Sigma^+=\Sigma\) when it already has an individual constant, and otherwise add one individual marker. The terms \(Q,\rho,d\) and the sentence \(\Psi\) remain pure.
+
+The test of a closed \(\Sigma^+\)-term \(f\) works with its constants retained. Start with a marked old point where \(\neg f(d)\). Give each relational constant its prescribed old value at \(w\), empty new current rows and bottom values at private terminals. At each test object its old component is the transport along \(h\) of its value at \(w\). For each individual constant add a distinct individual at \(o\) with its specified image at \(w\). At each \(t_{h,\bar u}\) give its image a fresh fibre of size eight, distinct from the control and size-one-through-seven fibres. Send that entire fibre to \(h\) of the constant's old value. The image at the private terminal is its fibre. These choices commute with the imposed square and make no new size-seven classes. The control individuals themselves remain separate from the added individuals. The construction works for arbitrarily many constants since the fibres are disjoint and all eight-element fibres are ignored by the six selectors and the colour. The same proof gives
+\[
+ C(\Sigma^+)\vdash Qf=d\quad\Longrightarrow\quad
+ C(\Sigma^+)\vdash f(d)=\top .
+\]
+
+The ordinary signature-Maximalist coalesced descriptor root gives every entity a closed \(\Sigma^+\)-descriptor and is strongly actual. It therefore satisfies the same pure \(\Psi\). The atomless ordinary signature-Maximalist point exists in this same signature, so signature Strong Possibility excludes Strong Actuality and also gives \(\Diamond_{\ne}\Psi\). Applying the same single return guard to (1) gives the contradiction for signature Strong Possibility, including first-order signatures and infinite sets of names. [Signature descriptor root](coalesced-definable-root-signature.html) · [Atomless model in the given signature](#an-atomless-ordinary-maximalist-point)
+
+## An atomless ordinary Maximalist point
+
+Fix a pointed ordinary Maximalist model \(K,w\) for the given signature, for example the [signature descriptor root](coalesced-definable-root-signature.html). Take two copies \(G,X\) of the Cantor space \(2^{\mathbb N}\), with \(G\) acting as a group by coordinatewise addition modulo two. Add a new root with the individuals of \(w\), loops indexed by \(G\) fixing all individuals, and an entrance to an independent copy of \(K,w\) for each \(x\in X\). Each entrance absorbs every loop and acts identically on individuals. Include all old postcomposites.
+
+At each relational type \(\tau\) a root entity consists of a locally constant table on \(G\) of current rows and an independent locally constant function \(X\to D_\tau(w)\) of whole old entities. Both ranges have the discrete topology. Loops right-translate the table and fix the old section. An entrance evaluates the section at its index. Give each relational name a constant table and the constant section of its prescribed old value. Individual names keep their old interpretations. Compactness of Cantor space gives a common finite prefix on which every entry of a finite list of tables depends. Thus the transported parameters of an abstraction are locally constant as whole entities along the loops, and evaluating its body on all current tuples gives another locally constant table. At the entrances the native abstraction on the transported old parameters is likewise locally constant as a whole old entity. This includes quantification over new target arguments. Differences of entities are witnessed on a loop or in a continuation of an old copy. The action therefore validates C, and the entrances retain every ordinary Maximalist possibility in the given signature.
+
+At scalar type every nonzero loop row or old value occurs on a nonempty clopen patch. Split that patch into two nonempty clopen pieces. Restrict the scalar to the appropriate coordinate and one piece, setting it to bottom elsewhere. This gives a nonzero proper part, since the other piece retains a nonzero value witnessed on a loop or an old continuation. Thus the scalar algebra at this ordinary Maximalist root is atomless.
+
+## Lean verification
+
+The formalization constructs the same closed six-place operator, proves the Russell inference in the native calculus, and tests every tuple at every accessible old object. The source of each test uses one descriptor for each entity. The direct old projection and the projection through a test object therefore agree at every type and every subsequent old arrow.
+
+For the pure result, two definable Maximalist roots disagree on whether there are at least two individuals. The boxed return conditions using this sentence and its negation cannot both be possible in the distinctness-preserving sense. For the signature result the two roots disagree about whether one public relational name has empty current extension. The finite set of names used in any proposed derivation suffices to transfer the two consistency witnesses to an arbitrary admitted signature. The written proof above gives the additional uniform choice of the same two pure sentences in every signature.
+
+The exported theorems are `Classicism.Map.strong_possibility_r_inconsistent` and `Classicism.Map.strong_possibility_signature_r_inconsistent`. From `logical-maps/`, using the Python environment described in the repository README, run `python scripts/pmap.py lean-check classicism` to rebuild the certificates, compare their types with the generated map statements, and audit their axiom dependencies.
+
+## Fragments realized under ordinary Maximalism {#fragments}
+
+The two instances used in the theorem form a minimal inconsistent set over ordinary Maximalism. Each licensed sentence $P$ is true at some ordinary Maximalist point, where reflexivity gives $DP$. Consequently there is a Maximalist point satisfying $DA_0$ and failing $D\Psi$, and another satisfying $D\Psi$ and failing $DA_0$. The following results concern other, jointly realizable requirements. OpenAI GPT-6, prompted by Daniel Kodsi, developed these constructions on 26–27 November 2026. The original manuscripts give the mathematical reviews and the October sources on which the arguments build. [Pure-language manuscript](https://github.com/dkodsi/Logical-Maps/blob/efaa69ad16060ad8a73a52f8a8d4107da32f1327/logical-maps/topics/classicism/writeups/strong-possibility-r-inconsistent.md#L1-L445) · [First-order signature fragments](strong-possibility-signature-r-inconsistent.html#signature-fragments)
+
+### Elementary returns at an actual atom {#elementary-returns}
+
+Suppose $a$ is a true propositional atom at $x$. Then $DP$ holds precisely when some path from $x$ goes through a $P$-point and reaches a point where transported $a$ is true. Test $DP$ with the true guard $a$ in one direction. Conversely $a$ entails each currently true guard, so that one return works for them all. Its composite preserves and reflects the truth of every formula in parameters from $x$, by applying the same argument to the formula or its negation. At the return the transported $a$ is again a true atom. Indeed $a$ entails the current truth that $a$ is an atom, so that truth holds even for quantification over properties newly available at the return. [Proof](https://github.com/dkodsi/Logical-Maps/blob/efaa69ad16060ad8a73a52f8a8d4107da32f1327/logical-maps/topics/classicism/writeups/strong-possibility-r-inconsistent.md#L30-L51)
+
+There is also a finite-menu statement with no Actuality premise. Suppose a point satisfies $G=\bigwedge_{i=1}^k DP_i$. For any current truth $q$ and any $i$, use $G\land q$ as guard in $DP_i$. A return through $P_i$ restores both $G$ and $q$. Iteration realizes each prescribed infinite word over the menu in the same model. One can include the true signs of any finite list of parameter formulas in the guard. The argument needs joint satisfaction of the displayed finite menu. [Finite-menu argument](https://github.com/dkodsi/Logical-Maps/blob/efaa69ad16060ad8a73a52f8a8d4107da32f1327/logical-maps/topics/classicism/writeups/strong-possibility-r-inconsistent.md#L45-L53)
+
+### Finite Fregean cells and cardinality returns {#finite-cells}
+
+Write $N=\mathbb N_e$, $I=I^*_e$, $F$ for the Fregean Axiom and $J(n)=(\operatorname{Suc}_e n)(\lambda x^e.\top)$. In the singleton definable Maximalist root the terms $F\land J(n)$ form a represented family of pairwise disjoint nonzero scalar atoms for all current $n\in N$. Its unrestricted current predicates make $N$ standard there. In each Fregean cell of fixed finite individual size, finite comprehension gives the full hierarchy and permutations act transitively on assignments to the individual marker. Each descriptor is constant on that cell. The universal identity assertion about these atoms therefore has its own ordinary Maximalist witness. Whenever its distinctness-preserving possibility holds, universal identity reflection yields the conclusion for every current index, including nonstandard ones. [Full cell proof and uniform operator variations](https://github.com/dkodsi/Logical-Maps/blob/efaa69ad16060ad8a73a52f8a8d4107da32f1327/logical-maps/topics/classicism/writeups/strong-possibility-r-inconsistent.md#L55-L138)
+
+Every pointed pure Maximalist model has an elementary extension of its action-and-evaluation structure with a possible self-atom $b$ whose realizations satisfy pure Maximalism and Actuality. At each such realization and for every current $n\in N$, an elementary return through $J(n)$ is available. Along return paths the image of $b$ can split into arbitrarily many disjoint nonzero parts. For a finite set of the requirements, take the finite-set retraction construction with a second split factor, with as many left inverses as the requested splitting needs. Its singleton base has a definable actual atom and split entrances to each finite cardinality. For each finite conjunction $G(c)$ witnessed by the atom $c$, the sentence $d=c\land\mathrm{Atom}(c)\land G(c)$ is possible at every pure Maximalist point. At each $d$-point, $d$ equals $c$ and $G(d)$ holds. Compactness over the elementary diagram realizes all these requirements on a single self-atom. [Finite construction](https://github.com/dkodsi/Logical-Maps/blob/efaa69ad16060ad8a73a52f8a8d4107da32f1327/logical-maps/topics/classicism/writeups/strong-possibility-r-inconsistent.md#L140-L229) · [Elementary extension](https://github.com/dkodsi/Logical-Maps/blob/efaa69ad16060ad8a73a52f8a8d4107da32f1327/logical-maps/topics/classicism/writeups/strong-possibility-r-inconsistent.md#L231-L274)
+
+In particular there is an actual pure Maximalist point satisfying $I\land\forall n\in N\,DJ(n)$. At any point with these last conditions and a true atom $a$, set $C_n=J(n)\land\Diamond a$. Each $C_n$ is nonzero. For every admitted numerical predicate $X$, the scalar
+\[
+  s_X=\exists k\,\bigl(Nk\land J(k)\land\Diamond a\land(a\le Xk)\bigr)
+\]
+codes its current extension. On the whole of $C_n$ its bit is the current bit of $Xn$. Uniqueness of the number counting the universal property, together with successor injectivity at a Peano point, rules out an extra index arriving later. Current coextension of $X,Y$ gives $s_X=s_Y$ because the true atom entails their current agreement on all numbers. A differing bit gives a difference on the corresponding nonzero $C_n$. A diagonal numerical predicate now rules out a represented functional enumeration of all scalars by $N$. With the additional disjoint nonzero Fregean labels $F\land J(n)$ at a pure Maximalist point, the same coding yields an actual real number structure on propositions. Each of these claims concerns represented predicates and enumerations. [Coding, diagonal and real structure](https://github.com/dkodsi/Logical-Maps/blob/efaa69ad16060ad8a73a52f8a8d4107da32f1327/logical-maps/topics/classicism/writeups/strong-possibility-r-inconsistent.md#L279-L321)
+
+### Arithmetic and the scope of the diagonal {#arithmetic-reflection}
+
+Fix a pure formula $A(v)$ with a numerical parameter and its primitive recursive test for C-refutations of the numeral instance. At the singleton descriptor Maximalist point, the Peano guard and standardness give one sentence equating impossibility of $A(n)$ with internal existence of a checked refutation, uniformly in $n$. A Peano point satisfying the distinctness-preserving possibility of this guarded sentence inherits the equivalence for its own numbers. A wrong sign gives a return guarding the discrepancy, while the checked computation persists between the two Peano points. For a fixed true $\Pi^0_2$ sentence, the analogous argument requires only its Peano-guarded return instance. The original proof also exhibits one true $\Pi^0_2$ sentence whose opposite sign is consistent with ordinary Maximalism at a Peano point in every signature. [Internal proof reflection](https://github.com/dkodsi/Logical-Maps/blob/efaa69ad16060ad8a73a52f8a8d4107da32f1327/logical-maps/topics/classicism/writeups/strong-possibility-r-inconsistent.md#L323-L384) · [The common arithmetic sentence and the noncofinal return calculation](https://github.com/dkodsi/Logical-Maps/blob/efaa69ad16060ad8a73a52f8a8d4107da32f1327/logical-maps/topics/classicism/writeups/strong-possibility-r-inconsistent.md#L386-L445)
+
+The earlier Russell–Myhill test also has a limitation independent of SP. Suppose a closed pure operator identifies $F,G$ exactly when they agree as whole entities on every member of a fixed definable family of scalar probes. One of the two candidate collision patterns must then hold at every pure Maximalist point. When $d\ne\top$, modify a collision witness away from the probes to preserve agreement with $\rho$ at $\top$ while differing at $d$. When $d=\top$, the collision itself fixes the other pattern. This calculation explains the role of the six-place test in the theorem above. [Operator calculation](https://github.com/dkodsi/Logical-Maps/blob/efaa69ad16060ad8a73a52f8a8d4107da32f1327/logical-maps/topics/classicism/writeups/strong-possibility-r-inconsistent.md#L10-L28)

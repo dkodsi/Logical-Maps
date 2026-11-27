@@ -11,7 +11,8 @@ certificate:
   checked_by:
   - Two further OpenAI Codex (GPT-6) agents independently checked the diagonal argument, universal reflection and nonstandard Frege indices.
   date: '2026-11-26'
-  lean: none
+  lean: verified
+  lean_ref: Classicism.Map.strong_possibility_and_boolean_completeness_t_incompatible
 sources:
 - OpenAI Codex, prompted by Daniel Kodsi, finite Fregean cells, 22 October 2026, and the distinctness-preserving diagonal proof, 26 November 2026.
 source_names:
@@ -21,6 +22,8 @@ references:
   role: background
   locator: §2.2, pp. 23–26; §2.6, pp. 41–42; Appendix E, p. 83
 proof: >-
+  Pure Strong Possibility alone gives the contradiction by [[strong-possibility-r-inconsistent]].
+
   Write $b_n$ for the Fregean cell with one more individual than $n$ counts.
   At a pure Strong Possibility point the $b_n$ are nonzero and pairwise disjoint.
   At the singleton definable Maximalist root every proposition has a finite

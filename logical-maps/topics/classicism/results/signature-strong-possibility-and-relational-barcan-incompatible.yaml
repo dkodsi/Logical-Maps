@@ -9,7 +9,8 @@ certificate:
   checked_by:
   - Independent GPT-6 researchers reviewed the finite action, Boolean involutions, typed quantifiers, first-order names and reflection.
   date: '2026-11-27'
-  lean: none
+  lean: verified
+  lean_ref: Classicism.Map.signature_strong_possibility_and_relational_barcan_incompatible
 sources:
 - OpenAI Codex (GPT-6), prompted by Daniel Kodsi, 27 November 2026, the fixed-operator tester and finite two-stage counterpoint.
 - Cian Dorr with Claude Fable 5.2, 21–25 November 2026, the Russell–Myhill inconsistency for signatures containing a higher-order constant.
@@ -23,6 +24,8 @@ references:
   role: background
   locator: Appendix D, Proposition D3 and Corollary D6, pp. 402–406
 proof: >-
+  Signature Strong Possibility alone gives the contradiction by [[strong-possibility-signature-r-inconsistent]].
+
   For first-order signatures use the pure tester on operators Y which says
   that every necessarily Boolean involution fixing all current scalars under
   necessary individual Barcan also fixes Y by conjugation. Such involutions

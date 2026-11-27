@@ -128,17 +128,7 @@ All standard numerals necessarily pass, since distinct numbers remain
 distinct under the Peano guard. The $K_1$-number $m$ fails the tester.
 This refutes weak inextensibility of the source numbers.
 
-The absence of real structures here is forced by the two verdicts.
-If first-order Analytic Necessitism holds and a real structure of any
-type is possible, there is one rigid, necessarily real structure.
-At any counting type with necessary Peano guard, its number system
-gives the [hereditary Peano match](analytic-necessitism-and-transversal-imply-arithmetic-necessitism.html).
-At any accessible point merely satisfying the local guard, the
-ordinary two-type Peano isomorphism also identifies each arithmetic
-sentence with the number-only reading of that rigid structure. Its
-first-order analytical theory is constant throughout the cone. Thus
-the same witness suffices for both Arithmetic Necessitism and
-Necessity of Arithmetic at all counting types.
+The absence of possible real structures is forced by either arithmetic failure in this model. With Analytic Necessitism, a possible real structure at any type would give both Arithmetic Necessitism and Necessity of Arithmetic by the [cross-type Peano matching lemma](analytic-necessitism-and-transversal-imply-arithmetic-necessitism.html#matching-numbers).
 
 ## A source with actual real number structures
 

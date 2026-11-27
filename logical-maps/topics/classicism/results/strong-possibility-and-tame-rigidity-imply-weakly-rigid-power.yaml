@@ -11,12 +11,15 @@ certificate:
   checked_by:
   - Two further OpenAI Codex (GPT-6) agents independently checked the use of local Tame Rigidity and the finite-power theorem.
   date: '2026-11-27'
-  lean: none
+  lean: verified
+  lean_ref: Classicism.Map.strong_possibility_and_tame_rigidity_imply_weakly_rigid_power
 sources:
 - OpenAI Codex (GPT-6), Pure Strong Possibility forces rigid relations to be Frege-finite, 27 November 2026.
 source_names:
 - Codex via Kodsi, 27 Nov 2026
 proof: >-
+  By [[strong-possibility-r-inconsistent]], any theory satisfying the premises proves $\bot$ and hence every instance of Weakly Rigid Power.
+
   By [[strong-possibility-implies-rigid-power]], every current rigid relation
   has Frege-finite extension at a pure Strong Possibility point. Under local
   Tame Rigidity this applies to every current weakly rigid relation. The

@@ -16,5 +16,10 @@ sources:
 source_names:
 - Codex via Kodsi, 27 Nov
 proof: >-
-  At each accessible point apply [[distinctness-necessary-t-and-strong-actuality-imply-self-atoms-are-strong-atoms-r]]
-  to the local instances of the two necessary premises.
+  Necessary propositional ND alone suffices. It gives necessary ND at every type by
+  [[necessary-distinctness-necessary-t-implies-necessary-distinctness-necessary-r]],
+  then necessary 5 by [[necessary-distinctness-necessary-r-implies-necessary-modal-five]].
+  Apply [[necessary-modal-five-implies-necessary-self-atoms-are-strong-atoms-r]].
+notes: >-
+  The original proof applied [[distinctness-necessary-t-and-strong-actuality-imply-self-atoms-are-strong-atoms-r]]
+  at each accessible point. That result also applies when the two assumptions hold only at the point of evaluation.
