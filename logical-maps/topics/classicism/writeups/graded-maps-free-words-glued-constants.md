@@ -1,11 +1,12 @@
 # Graded maps with free words and glued constants
 
-For every set-sized signature $\Sigma$ there is a C action model of Logical Necessity,
-necessary Strong Actuality, necessary Self-Atomicity at every relational type, and
-the necessary Barcan Formula at every type, in which propositional Boolean
-Completeness fails. Thus even their conjunction allows an admitted family of
-propositions without a least upper bound. A single propositional constant and a
-countable alphabet suffice for a nonempty example of the scheme.
+For each set-sized signature $\Sigma$ this one-object C action model satisfies
+Logical Necessity, necessary Strong Actuality, necessary Self-Atomicity at all
+relational types, necessary Countable Boolean Completeness and necessary Barcan
+at every type. An admitted family of propositions lacks a join, and a nonzero
+proposition has no atom below it. Every atom is strong. The universal
+individual property is rigid, yet its family of rigid subproperties gains a
+member, refuting Rigid Power. The same witness refutes Weakly Rigid Power.
 
 ## The action model
 
@@ -61,6 +62,30 @@ no continuation returning that arrow to $1$. At every arrow it therefore
 entails each proposition or its complement. This supplies a true strong
 atom at the sole object and gives necessary Strong Actuality.
 
+In fact propositional Atomicity fails. Let $B$ select precisely the grade-one,
+empty-word arrows. For any nonzero $Q\le B$ with pin $S$, take a witnessing
+map $f$ and choose $a\in A\setminus S$. Change $f(a)$ while fixing $S$ to
+obtain a second witness. The admitted cylinder requiring the original value
+at $a$ cuts $Q$ into two nonzero parts. Hence no atom lies below $B$. The
+failure holds necessarily by the one-object pure semantics.
+
+The same splitting test classifies the atoms at every relational type. If a
+row at a positive grade contains a tuple, changing the map at a fresh
+individual preserves that occurrence; testing the map's value there splits
+the original relation into two nonzero parts. An atom therefore has only
+grade-zero occurrences. Each grade-zero word has just one map, so the
+single-word, single-tuple profile obtained from any such occurrence is an
+admitted nonzero subrelation. The atom must equal it. Along any arrow this
+profile becomes bottom or another single-word, single-tuple profile: a
+continuation at grade zero can occur only after grade zero and the word
+suffix cancels. Every atom is consequently a strong atom, necessarily.
+
+At the designated point let $q$ be the proposition true only at the identity.
+Every proper arrow takes $q$ to bottom, so at its target $\Diamond q$ is false.
+At the identity, any current truth $p$ holds. Hence $q$ witnesses
+$\Box_{\ne}p$ by $q\land\Box(\Diamond q\to p)$. The resulting universal
+statement is pure and holds at every object.
+
 ## The Barcan Formula
 
 First take $h=(s,n,w)$ with $s$ surjective. Every typed entity at its target
@@ -85,6 +110,60 @@ to an actual witness $a$. It follows that
 $\Diamond\exists x\,R(x)\to\exists x\,\Diamond R(x)$, the dual of Barcan.
 Lambda abstraction permits arbitrary matrices and the proof applies at
 every type. The one-object pure reduct therefore satisfies necessary Barcan.
+
+## Failure of both rigid powers
+
+Call a set of individuals small here when it has size at most $\kappa$. Let
+$R$ be any current weakly rigid individual property, with actual extension
+$D$. If $D$ is small, the tester with row $f[D]$ at $(f,n,w)$ is pinned by
+$D$ and necessarily holds of every actual member of $D$. Weak inextensibility
+of $R$ then bounds each row of $R$ by $f[D]$. If $D$ is large, take $a\in D$
+outside a pin for $R$. For any positive-grade arrow and any desired value
+$b\in A$, change its map at $a$ to $b$ while fixing its grade, word and pin.
+Persistence of $R$ puts $b$ in the unchanged row. Thus at every
+positive-grade arrow every old weakly rigid property has a small or a full row.
+
+For each large $B\subseteq A$, let $H_B$ have row $B$ at every grade-zero
+arrow and full rows at positive grades. This profile has empty pin and is
+persistent. If a tester $Y$ necessarily holds of each actual $b\in B$,
+its grade-zero rows contain $B$. At every positive grade, change the map
+at a member of $B$ outside a pin for $Y$ to obtain each desired value.
+Hence its positive rows are full, proving $H_B\le Y$ and thus weak
+inextensibility. At grade zero $H_B$ transports to itself; at positive
+grades it transports to $H_A=\top_{et}$. The same proof with $B=A$
+shows that top is weakly rigid at every stage. Consequently each $H_B$
+is fully rigid.
+
+Define a tester of individual properties whose grade-zero rows accept all
+properties and whose positive-grade rows accept exactly those with small or
+full present extension at the target. This is an admitted profile with empty
+pin. By the first paragraph it necessarily accepts each actual weakly rigid
+subrelation of $\top_{et}$, and hence each actual rigid subrelation as well.
+Choose a large proper $B\subset A$. At any positive-grade target the rigid
+relation $H_B$ is a subrelation of top and the tester rejects it there.
+The canonical weakly rigid and rigid power properties of top travel to those
+same canonical properties at that target. The tester thus witnesses failure
+of weak inextensibility for both powers. Top itself is rigid, so both native
+power schemata fail. The closed pure failures hold at the sole object.
+
+## Countable Boolean Completeness
+
+For each base type $\sigma$ take as a current property of numerical entities
+the externally enumerated set of values of the standard Frege numerals at
+$\sigma$. This is an admitted identity row. It contains zero and is closed
+at this object under successor, so Frege induction puts every current
+$\sigma$-number in this set. In particular, there are at most countably many
+current numbers, including when different numerals have the same value.
+
+The map's predicate for countability provides each current member of a
+countable family with a nonempty fiber of numerical values, with disjoint
+fibers for distinct members. Taking the least standard index representing a
+value in each fiber injects the family into the ordinary natural numbers.
+For any such family of relations, form the union of its members row by row.
+A countable union of pins of size at most $\kappa$ has size at most $\kappa$,
+so the union profile is admitted. By rowwise inclusion it is the least upper
+bound. This proves necessary Countable Boolean Completeness at all the
+indicated types.
 
 ## Logical Necessity
 

@@ -45,6 +45,8 @@ notes: >-
   [[necessary-countable-boolean-completeness-implies-arithmetic-necessitism]]. With Tame Rigidity the
   countable completeness premise can be unboxed, so ordinary Rigid Comprehension also suffices
   ([[tame-rigidity-and-countable-boolean-completeness-imply-arithmetic-necessitism]]).
+  Logical Necessity allows a successor with a new Frege number even when every world agrees
+  on every pure sentence and satisfies the Axiom of Infinity at $e$. See [[iterated-ultrafilter-fronts]].
 changes:
 - date: '2026-10-24'
   by: Claude Opus 5.5 (Anthropic), prompted by Cian Dorr
@@ -56,6 +58,6 @@ changes:
   minor: true
 - date: '2026-11-26'
   by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
-  summary: Added the countable completeness criteria and their unboxed Rigid Comprehension consequence.
+  summary: Added the countable completeness criteria, the Rigid Comprehension consequence and the countermodel under Logical Necessity.
   minor: true
 lean_def: Classicism.P.ArithmeticNecessitism.schemaIn

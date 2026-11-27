@@ -11,9 +11,21 @@ reviewed by a second GPT-6 research agent on 26 November 2026.
 
 The [signature argument](strong-possibility-signature-r-inconsistent.html#the-sentences) uses a closed operator $Q:(t\to t)\to t$. Put $\rho(p)=\exists F\,(QF=p\land\neg Fp)$ and $d=Q\rho$. Classicism proves there is a collision witness $F$ with $QF=d$ and $Fd\ne\rho d$. The two existential sentences $E_1,E_2$ ask whether such a witness can respectively agree or disagree with $\rho$ at $\top$. To use them against pure SP, each sentence must fail in some pure Max model.
 
-Suppose there are finitely many fixed closed pure propositions $r_i$ and C proves $QF=QG\leftrightarrow\bigwedge_i Fr_i=Gr_i$ for all $F,G$. This includes evaluation at any single closed proposition. **No such $Q$ gives the required split.** Indeed C proves $d\ne r_i$ for each $i$, since a collision witness must agree with $\rho$ at $r_i$ and disagree at $d$. At a Max point, two closed pure terms are identical exactly when C proves their identity. Otherwise Max realizes their possible distinctness, whereas identity would persist. Thus the equalities of $d$ and of each $r_i$ with $\top$ are settled uniformly across all Max points. If $d=\top$, $E_1$ fails everywhere and $E_2$ holds everywhere. If any $r_i=\top$, the reverse holds.
+Suppose $R$ is a closed pure property of propositions and C proves, for all $F,G$,
+$$
+ QF=QG\quad\longleftrightarrow\quad
+ \forall p\,(Rp\to Fp=Gp).
+$$
+Then these observations cannot produce the split. The probes may form an internally infinite family, and membership in $R$ may change along an arrow.
 
-In the remaining case both sentences hold at every Max point. Write $A(p)=\bigwedge_i p\ne r_i$. Obtain $F_1(p)$ from $\rho(p)$ by exclusive disjunction with $(p=d\land p\ne\top\land A(p))$, and $F_2(p)$ by exclusive disjunction with $((p=d\lor p=\top)\land A(p))$. Both guards are identically false on each probe, so $QF_1=QF_2=d$. Both flip the truth value at $d$. The first preserves the whole proposition $\rho(\top)$, and the second flips its truth value at the current point. These witnesses also explain why finite observations at fixed probes leave the unrestricted Russell–Myhill question open.
+To see this, note that $d=\top$ has the same verdict at every pure Max point. If C proves the identity it holds everywhere. Otherwise its negation is C-consistent, so Max requires its possibility, which is incompatible with a current identity. If $d=\top$, the unavoidable collision witnesses $E_2$ at every Max point. Suppose instead that $d\ne\top$. Choose $F$ with $QF=d$ and with $Fd$ opposite in current truth value to $\rho d$. Such an $F$ exists since the diagonal first gives $\rho d$, and its definition then supplies the witness. With $\mathbin{\triangle}$ for exclusive disjunction, set
+$$
+ G(p)=\rho(p)\mathbin{\triangle}
+       \bigl((F(p)\mathbin{\triangle}\rho(p))\land p\ne\top\bigr).
+$$
+At every current probe $p$, $Fp=\rho p$ as propositions, so their exclusive disjunction is the bottom proposition. Thus $Gp=\rho p$ as propositions at every probe and $QG=d$. Also $G\top=\rho\top$ identically. At $d$ the guard is currently true, hence $Gd$ differs in truth value from $\rho d$. This witnesses $E_1$ at every Max point. In either case one of the two sentences holds throughout the class, whereas Dorr's argument requires each to fail somewhere.
+
+For finitely many named closed probes $r_i$, use $R(p)=\bigvee_i p=r_i$. This includes an operator that evaluates its argument at a single fixed proposition. In this finite case there is a further classification. A collision forces $d\ne r_i$ for each $i$. If a probe equals $\top$, any collision witness agrees with $\rho$ at $\top$, so only $E_1$ holds. If $d$ differs from $\top$ and every probe differs from $\top$, both sentences hold. To witness $E_2$, flip $\rho(p)$ by exclusive disjunction with $((p=d\lor p=\top)\land\bigwedge_i p\ne r_i)$. This leaves every probed output unchanged as an entity and changes the current truth values at both $d$ and $\top$.
 
 ## Elementary returns
 
