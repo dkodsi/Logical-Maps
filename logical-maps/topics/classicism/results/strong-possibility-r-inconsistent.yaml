@@ -25,26 +25,26 @@ sources:
 - Andrew Bacon and Cian Dorr, Classicism, draft of 16 May 2023, §2.6, p. 42, where the consistency of Strong
   Possibility is left open.
 - OpenAI Codex (GPT-6), prompted by Daniel Kodsi, 27 November 2026, the six-place Russell–Myhill construction and the two incompatible pure instances.
+  The unary proof uses singleton and twin fibres to recover each tester's argument.
 source_names:
 - Goodsell 26 Nov
 - Dorr 22 Nov
 - Classicism
 - Codex via Kodsi
 proof: >-
-  Let S be the type of six-place relations on individuals. The write-up defines
-  a closed pure operator Q, the predicate ρ(x) saying that some F satisfies
-  QF = x and rejects x, and d = Qρ. Classicism proves ρ(d), hence provides F with
-  QF = d and Fd distinct from top. At a definable Maximalist root, each F has a
-  term descriptor f. An auxiliary site for each old arrow and each target tuple
-  tests the whole six-place relation d. It follows that provable Qf = d entails
-  provable f(d) = top. Thus the descriptor root satisfies the sentence Ψ saying
-  that Strong Actuality holds and that, whenever QF = d, every continuation
-  failing Strong Actuality has Fd = top. A second ordinary Maximalist root has
-  an atomless algebra of propositions. Its distinctness-preserving possibility
-  excludes Strong Actuality. At a point satisfying both possibility instances,
-  restore the true guard “Strong Actuality fails and Fd is distinct from top”
-  through a Ψ-point. The identity QF = d persists, so Ψ forces Fd = top on
-  restoration, a contradiction.
+  Let K say that any two distinct individuals can become permanently distinct.
+  Strong possibility of K implies K. Ask for the present distinction to be
+  restored after a visit to K. The two individuals must still differ at the
+  visit, so K supplies a continuation where they remain distinct forever.
+  An ordinary Maximalist root whose individuals are names satisfies K.
+  Now give every name two representatives that merge on every proper exit.
+  This root is still Maximalist and satisfies a second pure sentence H(K).
+  It says that a tester sharing the Russell tester's unary output must accept
+  that output wherever K holds. A second copy of an individual records a
+  false predicate value, letting one distinguish any closed tester that would
+  violate the law from Russell's tester. Strong possibility of the law brings
+  it back to the starting world. Since some tester shares the output and
+  rejects it there, the law gives the negation of K.
 references:
 - paper: bacon-dorr-classicism
   role: background
@@ -52,8 +52,8 @@ references:
   note: Strong Possibility and the distinctness-preserving modality; its consistency is left open there.
 notes: >-
   Zachary Goodsell proposed and ranked the pure conjecture on 26 November 2026.
-  The proof uses no nonlogical constants in either sentence. The same two sentences
-  also resolve [[strong-possibility-signature-r-inconsistent]]. Cian Dorr’s earlier approach is recorded
+  The very same two pure sentences resolve [[strong-possibility-signature-r-inconsistent]].
+  The write-up also preserves the earlier six-place proof. Cian Dorr’s earlier approach is recorded
   in the write-up for that signature result. Earlier necessary conditions on any putative pure model
   were established in [[strong-possibility-and-infinity-e-incompatible]],
   [[strong-possibility-incompatible-with-barcan-t]], [[strong-possibility-and-strong-actuality-incompatible]],
@@ -65,3 +65,6 @@ changes:
   by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
   summary: Recorded the full inconsistency proof using a closed pure six-place test and
     two individually Maximalist-compatible sentences.
+- date: '2026-11-27'
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  summary: Gave a uniform unary proof using a distinction that can become permanent and a pair that merges on every exit.

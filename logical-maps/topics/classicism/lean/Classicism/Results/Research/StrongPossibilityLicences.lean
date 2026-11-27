@@ -10,13 +10,6 @@ open CategoryTheory Intensional Coalesced DescriptorColours StrongPossibilityRet
 
 variable {Sig : Signature}
 
-/-- Embedding the pure diagonal guard into a signature preserves all its substitutions. -/
-theorem ofPure_guarded {Γ : Ctx} (b : Formula Signature.pure Γ)
-    (q : Term Signature.pure Γ operator) :
-    ofPure (Sig := Sig) (guardedPsi b q) = guardedPsi (ofPure b) (ofPure q) := by
-  simp [guardedPsi, positive, negative, diag, rho, forall', Term.imp, disj, conj,
-    neg, box, eq', top, exists', v0, v1, ofPure_weaken]
-
 theorem closed_guarded {Γ : Ctx} {b : Formula Sig Γ} {q : Term Sig Γ operator}
     (hb : b.closedTypes = true) (hq : q.closedTypes = true) :
     (guardedPsi b q).closedTypes = true := by
@@ -69,29 +62,5 @@ theorem named_inconsistent (c : Sig.Const) {ρ : RTy} (h : Sig.typeOf c = .rel �
     (licensed he hq pos) (licensed (by simpa using he) hq neg)
 
 end Named
-
-noncomputable abbrev markerFamily (X : Type) [Countable X] := canonicalFamily (individualNames X)
-
-theorem pure_inconsistent (q : Term Signature.pure [] operator) (hq : q.closedTypes = true)
-    (sepOne : TermSeparation (A := markerFamily Unit) (ofPure q))
-    (sepTwo : TermSeparation (A := markerFamily Bool) (ofPure q)) :
-    ¬ AxiomSet.Consistent (AxiomSet.strongPossibility Signature.pure) := by
-  let b := twoIndividuals Signature.pure
-  have hc : b.closedTypes = true := rfl
-  apply inconsistent_of_two_licenses q b
-  · apply licensed hc hq
-    apply pure_licence (individualNames_closed Unit) (namedIndividual Unit) false
-    rw [ofPure_guarded]
-    exact descriptor_guarded_endpoint _ _ (transports _ false) canonicalFamily_isModel
-      (isModel _ _ canonicalFamily_isModel false) _ _ sepOne (one_name _ canonicalFamily_isModel)
-  · apply licensed (by simpa using hc) hq
-    apply pure_licence (individualNames_closed Bool) (namedIndividual Bool) false
-    rw [ofPure_guarded]
-    apply descriptor_guarded_endpoint _ _ (transports _ false) canonicalFamily_isModel
-      (isModel _ _ canonicalFamily_isModel false) _ _ sepTwo
-    intro H
-    have B := (model (markerFamily Bool) (namedIndividual Bool) false).holds_neg
-      (isModel _ _ canonicalFamily_isModel false) (𝟙 _) .nil (twoIndividuals _)
-    exact B.mp H (two_names _ canonicalFamily_isModel)
 
 end Classicism.Meta.StrongPossibilityLicences

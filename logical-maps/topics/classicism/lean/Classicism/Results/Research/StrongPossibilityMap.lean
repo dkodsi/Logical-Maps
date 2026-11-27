@@ -1,32 +1,27 @@
-import Classicism.StrongPossibility.ArbitrarySignatureLicences
-import Classicism.StrongPossibility.Predecessor
-import Classicism.StrongPossibility.ProxyCanonical
+import Classicism.StrongPossibility.UnaryInconsistent
 import Classicism.Statements
 
-/-! The private predecessor supplies the term-separation theorem at both
-individual-marker signatures. Their descriptor roots license incompatible
-returns in the original language. -/
+/-! Both forms of Strong Possibility use the same two pure sentences in every
+closed-type signature. A named distinction can be permanent at the ordinary
+descriptor root; its private copy can merge at every exit of the second root. -/
 
 namespace Classicism.Meta.StrongPossibilityMap
 
-open ProxyDiagonal
-
 /-- No theory in the pure language can consistently assert all the instances of SP. -/
 theorem pure_inconsistent : ¬ AxiomSet.Consistent (AxiomSet.strongPossibility Signature.pure) :=
-  pure_from_predecessors (predecessors _) (predecessors _)
+  UnarySP.pure_inconsistent
 
 /-- Strong Possibility (pure) implies a contradiction in any admitted ambient signature. -/
 theorem strong_possibility_r_inconsistent : Classicism.Statements.strong_possibility_r_inconsistent := by
   intro Sig _ Ax ent cons
   exact AxiomSet.not_consistent_ofPure pure_inconsistent (AxiomSet.Consistent.of_entails ent cons)
 
-/-- The two-colour argument for a countable closed signature with a public individual
-name and a public relation name. -/
+/-- The named case of the uniform closed-signature argument. -/
 theorem named_inconsistent {Sig : Signature} [Countable Sig.Const] (hS : Sig.Closed)
-    (hn : Nonempty (Coalesced.DistinguishedDefinable.names (Sig := Sig) .e))
-    (c : Sig.Const) {ρ : RTy} (hc : Sig.typeOf c = .rel ρ) :
+    (_hn : Nonempty (Coalesced.DistinguishedDefinable.names (Sig := Sig) .e))
+    (c : Sig.Const) {ρ : RTy} (_hc : Sig.typeOf c = .rel ρ) :
     ¬ AxiomSet.Consistent (AxiomSet.strongPossibility Sig) :=
-  named_from_predecessors hS hn (predecessors Sig) c hc
+  UnarySP.inconsistent_in_closed_signature hS
 
 /-- Lift uniform object-theory inconsistency to the generated signature map statement. -/
 theorem signature_map_of_inconsistent
@@ -39,6 +34,6 @@ theorem signature_map_of_inconsistent
 and signatures without a public individual name. -/
 theorem strong_possibility_signature_r_inconsistent :
     Classicism.Statements.strong_possibility_signature_r_inconsistent :=
-  signature_map_of_inconsistent (fun hs => inconsistent_in_admitted_signature hs)
+  signature_map_of_inconsistent UnarySP.inconsistent_in_admitted_signature
 
 end Classicism.Meta.StrongPossibilityMap

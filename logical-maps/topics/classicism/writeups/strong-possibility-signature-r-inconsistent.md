@@ -1,6 +1,10 @@
 # Strong Possibility (signature Σ) ⇒ ⊥
 
-**Theorem.** Strong Possibility is inconsistent for every set-sized free signature $\Sigma$ admitted by the map. The same two closed pure sentences witness the contradiction in every signature. One is propositional Atomlessness. The other uses a six-place relation on individuals to test the Russell–Myhill collision. Each has an ordinary Maximalist witness interpreting the given signature. The [full proof](strong-possibility-r-inconsistent.html) includes the [construction with all signature constants](strong-possibility-r-inconsistent.html#extension-to-an-arbitrary-free-signature).
+## [The uniform unary proof](strong-possibility-r-inconsistent.html#unary-proof)
+
+**Theorem.** The same two closed pure sentences witness the inconsistency of Strong Possibility for every set-sized free signature admitted by the map, with both consistency tests taken in that signature. Let $K$ say that any two distinct individuals can become permanently distinct. One ordinary Maximalist root realizes $K$. A second has two individuals which merge on every proper exit and realizes a law $H(K)$ about a unary Russell diagonal. Their distinctness-preserving possibilities imply $K$ and $\neg K$, respectively. [Passage to arbitrary signatures](strong-possibility-r-inconsistent.html#unary-signatures) · [Verified certificates](strong-possibility-r-inconsistent.html#lean-verification)
+
+An earlier proof gives another uniform pair of pure sentences. One is propositional Atomlessness. The other uses a six-place relation on individuals to test the Russell–Myhill collision. Each has an ordinary Maximalist witness interpreting the given signature. [Earlier uniform pair](strong-possibility-r-inconsistent.html#uniform-pair) · [Interpretation of all signature constants](strong-possibility-r-inconsistent.html#extension-to-an-arbitrary-free-signature)
 
 The full proof is by OpenAI Codex (GPT-6), prompted by Daniel Kodsi, 27 November 2026. Independent GPT-6 researchers checked the interpretation of all individual and higher-type names and the use of both same-signature Maximalist models. The following argument is the earlier proof for higher-order signatures.
 
