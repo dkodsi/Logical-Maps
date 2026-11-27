@@ -457,41 +457,69 @@ and satisfies both power principles. For any arity the separate
 *OpenAI Codex (GPT-6), prompted by Daniel Kodsi, 26 November 2026.*
 
 Suppose $F$ is weakly rigid and a tester $W$ holds necessarily of each
-current rigid $X\le F$. At any component point, $W$ holds of every
-weakly rigid $Z\le F$ there whose actual tuples form a finite list
-denoted there by closed descriptor terms $\bar k_i$. The list need not
-come from root members of $F$, and no completeness assumption on the
-theory of that particular component point is required.
+current rigid $X\le F$. At any component point $W$ holds of **every**
+weakly rigid $Z\le F$ having externally finite current extension.
+The tuples of $Z$ may be unnamed at that point. The general
+[[finite-subrelations-of-rigid-bounds|finite-subrelation lemma]] applies
+in any C model, including to transported nonstandard counts. The
+ground-term argument below also gives a finite-tuple realization
+property specific to this construction. The conclusion applies also to a
+tester of all current weakly rigid subrelations, which include the rigid
+ones.
 
-In fact $Z$ at that point equals the finite union $z$ of the
-tuple-haecceities of the $\bar k_i$. Weak inextensibility tested on their
-union gives one inclusion and weak persistence gives the other. If $W$
-fails there, the closed guard $A=\bigwedge_i u[\bar k_i]\land\neg w(z)$
-is consistent, where $u,w$ are the descriptors of $F,W$. For each $i$
-there must be an actual $F$-member with descriptor $\bar s_i$ such that
-$A\land(\bar s_i=\bar k_i)$ is consistent. Otherwise the root test with
-full actual row and descriptor $\lambda\bar x\, .\,A\to\bar x\ne\bar k_i$
-holds necessarily of every actual member of $F$, forcing
-$\vdash A\to\neg u[\bar k_i]$ by weak inextensibility and completeness
-of the component family. Refine $A$ by the chosen equality before
-selecting the next member. At an exit realizing all of these choices
-and the original guard, the union of the chosen *root members'*
-haecceities has value $z$. This root subrelation is rigid and entails $F$
-by persistence, so it passes $W$ necessarily, a contradiction.
-The argument applies also to a tester of all current weakly rigid
-subrelations, which include the rigid ones.
+Let $u,w$ be the descriptors of $F,W$, and let $S$ consist of
+the descriptor tuples of actual members of $F$. By persistence
+$\vdash u(\bar s)$ for each $\bar s\in S$. The root tester with full
+actual row and arbitrary descriptor $v$ shows by weak inextensibility
+and completeness of the old components that
+$$
+  (\forall\bar s\in S\;\vdash v(\bar s))
+       \quad\Longrightarrow\quad
+  \vdash\forall\bar x\,(u(\bar x)\to v(\bar x)).
+$$
+Consequently any consistent formula
+$\exists\bar x_1\cdots\bar x_m\,
+  (\bigwedge_i u(\bar x_i)\land A(\bar x_1,\ldots,\bar x_m))$
+can be realized with $\bar x_i$ equal to some $\bar s_i\in S$, possibly
+at a different point. For the first tuple take $v(\bar x_1)$ to negate
+the existential condition on the remaining tuples. The displayed
+implication supplies an $\bar s_1$ for which that remaining condition
+is consistent. Substitute it before treating the next tuple.
+All provability and consistency tests here are over the fixed
+descriptor language; $A$ can contain arbitrary typed quantifiers and
+modalities.
 
-In particular a test that depends only on the current truth bits of finitely
-many $Z[\bar k_i]$ cannot witness a failure even on an *infinite* $Z$:
-at an alleged bad point take the union of the haecceities of those
-listed tuples at which $Z$ is true. This finite subrelation entails $Z$
-by persistence and has the identical observed bits.
+At a point with an externally finite weakly rigid $Z$, let
+$\bar x_1,\ldots,\bar x_m$ enumerate its current members. As an
+entity $Z$ equals the union $H(\bar x_1,\ldots,\bar x_m)$ of their
+tuple-haecceities. Weak inextensibility tested on that union gives
+one inclusion and weak persistence the other. If $W$ failed there,
+take $A=\neg w(H(\bar x_1,\ldots,\bar x_m))$ above. Choose original
+$F$-members with the resulting descriptors $\bar s_i$. Their finite
+haecceity union is rigid, entails $F$ by persistence and necessarily
+passes $W$. On the old components this gives
+$\vdash w(H(\bar s_1,\ldots,\bar s_m))$, contradicting the retained
+consistency. For $m=0$ use the actual bottom subrelation directly.
+
+Thus even on an infinite $Z$ no test detectable by finitely many
+actual membership observations can witness a failure. In particular
+this covers testers of the form $\forall\bar y\,\theta(Z,\bar y)$
+where $\theta$ is a Boolean combination of finitely many applications
+of $Z$ to terms independent of $Z$ and arbitrary formulas independent
+of $Z$. Fix witnesses $\bar y$ to failure and take the haecceity
+union of the observed tuples belonging to $Z$. This rigid subrelation
+entails $Z$ by weak persistence, has the same observed bits, and
+would itself fail the tester. The same argument applies to the boxed
+version at a further point provided $Z$ is rigid throughout that
+part of the cone. External finiteness in the first conclusion allows
+each ordinary finite size; a single nonstandard finite extension
+need not admit such an external enumeration.
 
 **Fregean components in finite monadic signatures.** Suppose the
 signature contains only finitely many individual, propositional and unary
 individual-predicate names, and every input of $F$ is an individual or
 a first-order relation $e^n\to t$, including $n=0$. At any component
-satisfying the Fregean Axiom, the finite named-subrelations argument
+satisfying the Fregean Axiom, the finite-subrelation argument
 covers *all* weakly rigid subrelations of the image of $F$, for any size
 of individual domain. To see this, color each individual by the truth
 values of the named unary predicates. Every name-fixing transposition
@@ -542,3 +570,75 @@ failure for root power testers. Non-Fregean or higher-type cases remain.
 The group's shared arguments for Tame Rigidity and Rigid Power transfer a
 component's counterexample to the root. They build root entities with freely
 chosen component parts, which are not available here.
+
+## Weakly rigid bounds have finite numerical images
+
+*OpenAI GPT-6, prompted by Daniel Kodsi, 26 November 2026. Independently
+reviewed ordinary proof.*
+
+Let $F$ be weakly rigid at the signature-definable root, with descriptor
+$u$. Suppose $d(\bar x)$ is a term such that
+$\mathrm C(\Theta)\vdash u(\bar x)\to\mathbb N_e(d(\bar x))$.
+There is a finite set $K$ of standard natural numbers for which
+$$
+ \mathrm C(\Theta)\vdash
+   \forall\bar x\,\Big(u(\bar x)\to
+          \bigvee_{k\in K}d(\bar x)=\bar k_e\Big).
+$$
+In particular every weakly rigid bound below the Frege numbers at $e$
+has finite descriptor support, even when its current row contains
+many entities in each descriptor fibre. The same holds whenever $d$
+is C-provably injective on $u$. Both canonical powers of these bounds
+are fully rigid.
+
+Let $S$ be the descriptor tuples of the actual $F$-members. Every
+$\bar s\in S$ satisfies $\vdash u(\bar s)$. Each $d(\bar s)$ is
+C-provably equal to a standard numeral: the actual set of standard
+numeral denotations is an available identity row of an inductive
+predicate at the root, and equality of two closed terms there implies
+provable identity by completeness of the old components.
+
+Suppose infinitely many standard indices occur on $S$. Let $\Delta$
+say that $I_e^*$ holds and that $d[u]$ is cofinal in $\mathbb N_e$.
+This is consistent: interpret the free constants in a full classical
+one-world hierarchy over $e=\mathbb N$. Its Frege numbers at $e$
+are standard, and each provable $u(\bar s)$ and
+$d(\bar s)=\bar k_e$ holds there. An infinite subset of these standard
+indices is cofinal.
+
+In the ordinary first-order arithmetic language form the theory
+$T=\{A:\mathrm C(\Theta)+\Delta\vdash A^e\}$, where $A^e$ is the
+Frege interpretation. It is consistent, recursively enumerable and
+extends PA under the Peano condition in $\Delta$. For effectiveness
+only the finite sublanguage of $\Delta$ is needed, by conservativity
+of adjoining free constants. Fix the usual primitive recursive
+verification of proof certificates for $T$ with enumeration
+certificates for its recursively enumerable axioms.
+For every fixed standard $k$, PA verifies the finite assertion that
+no code $i\le k$ is a $T$-proof of contradiction. Thus the tester
+$$
+ v(\bar x):=\Delta\to
+   \forall i\in\mathbb N_e\,
+     (i\le d(\bar x)\to\neg\mathrm{Prf}_T(i,\bot))
+$$
+is C-provable on each $\bar s\in S$. Weak inextensibility, applied
+to the full current row with old descriptor $v$, gives
+$\mathrm C(\Theta)\vdash\forall\bar x\,(u(\bar x)\to v(\bar x))$.
+The cofinality conjunct of $\Delta$ now implies $T\vdash\mathrm{Con}(T)$,
+contrary to Gödel's second incompleteness theorem. The arithmetic
+interpretation used here is also used in
+[[possibility-and-necessity-of-arithmetic-incompatible]].
+
+The indices occurring on $S$ therefore form a finite $K$. Their
+disjunction is C-provable on every member of $S$; the same weak
+inextensibility argument proves the displayed theorem. If the
+numerical labeling is injective on $u$, any two ground tuples with
+the same index are provably identical, leaving only finitely many
+descriptor classes. With one actual representative of each class,
+weak persistence and weak inextensibility identify every old transport
+of $F$ with the finite union of their transported tuple-haecceities.
+At every old point each weakly rigid subrelation is consequently a
+finite subunion and lifts from a rigid finite subunion at the root.
+This gives full rigidity of both powers: root weak subrelations have
+the same finite-support property, and the old finite-bound instances
+follow from [[internally-finite-rigid-power]].

@@ -195,3 +195,39 @@ This restriction and the represented iteration are due to OpenAI Codex
 (GPT-6), prompted by Daniel Kodsi, 26 November 2026. A second OpenAI Codex
 agent independently checked the argument. The finite representative argument
 appears in the [October research notes, §13](https://github.com/dkodsi/Logical-Maps/blob/67b116acaf7cee286614307468f5361f6a195c6e/submissions/classicism-results-2026-10-24-v2/source/research/2026-10-22/notes/quotient-abstraction-lane.md).
+
+### An internal family of infinite classes
+
+Under full Relational Choice, the same argument gives a two-dimensional
+restriction. Suppose $R$ has no transversal. Given any admitted cover $D$
+meeting every class and any admitted partial transversal $T$, there is a
+single admitted ternary graph assigning $d_{n,m}\in D$ to each
+$n,m\in\mathbb N_\sigma$. Its entries are distinct, their classes avoid
+all classes met by $T$, and $R(d_{n,m},d_{n',m'})$ holds exactly when
+$n=n'$. Both coordinates range over the entire internal number family.
+
+Indeed, let $U$ be any partial transversal extending $T$. Some class missed
+by $U$ meets $D$ in an infinite property, i.e. one having no finite Frege
+count. Otherwise the property containing $U$ together with the members of
+$D$ in missed classes would meet each class in a nonempty finite property.
+The preceding criterion would then provide a full transversal. In particular,
+taking $U=T$ already supplies an infinite property and hence the realization
+and successor-cancellation facts about $\mathbb N_\sigma$ used above.
+
+Apply the same represented iteration, starting with $B_0=\varnothing$.
+When $T\cup B$ is partial, the serial relation on $(B,a)$ asks for $a\in D$
+in a missed class with $D\cap[a]$ infinite; for other $B$ allow any $a$.
+Relational Choice from $\sigma t$ to $\sigma$ gives a deterministic update.
+Induction and the comparison of internal indices proved above give a graph
+of representatives $a_n$ in pairwise different classes missed by $T$, all
+of whose $D$-intersections are infinite. For each $n$ the first theorem
+therefore gives a represented injection from $\mathbb N_\sigma$ into
+$D\cap[a_n]$. To choose these row graphs simultaneously, use Relational
+Choice again, now from $\nu_\sigma=(\sigma t)t$ to $\nu_\sigma\sigma t$.
+On non-number inputs allow any graph. Applying the selected graph at $n$
+to $m$ gives the claimed single ternary relation. This last step uses the
+additional choice instance of full Relational Choice; the original
+one-row criterion uses only the instance from $\sigma t$ to $\sigma$.
+
+The internal two-dimensional refinement was developed and independently
+checked by two OpenAI Codex agents, prompted by Daniel Kodsi, 26 November 2026.

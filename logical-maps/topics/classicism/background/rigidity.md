@@ -244,6 +244,90 @@ establishes rigidity for externally finite bounds. The induction above
 gives rigidity for all internally finite weakly rigid bounds.
 :::
 
+
+::: lemma {#finite-subrelations-of-rigid-bounds}
+title: testing finite subrelations of arbitrary weakly rigid bounds
+---
+Work at a point with a weakly rigid unary predicate $F$ on type $\sigma$.
+Let $N=\mathbb N_\sigma$ denote Frege numberhood and put
+$$
+ L_F(Z):=\operatorname{WeaklyRigid}(Z)\land Z\le F\land
+                 \exists n\in N\, .\, n(Z).
+$$
+Suppose $W$ necessarily holds of each **current** member of $L_F$.
+For every **current** $n\in N$,
+$$
+ \Box\forall Z\, .\,
+    (\operatorname{WeaklyRigid}(Z)\land Z\le F\land n(Z))\to W(Z).
+ \tag{1}
+$$
+In particular, at every future $W$ covers every externally finite
+weakly rigid subrelation, irrespective of the availability of names
+for its tuples. It also covers a subrelation counted by the transport
+of a nonstandard current number. The bound $F$ itself can be infinite.
+
+*Proof.* Write $C_n(Z)$ for the three conjuncts in (1). Induct
+internally on $n$ with (1) generalized over **all** current testers
+$W$ satisfying its hypothesis; $F$ is a fixed parameter. The Frege
+induction predicate is an admitted lambda term, including the tester
+quantifier and its conditional hypothesis. Numberhood persists.
+At zero, a weakly rigid relation with empty current extension is
+bottom by weak inextensibility. Bottom is a current member of $L_F$.
+
+For the successor, fix such a tester $W$. For every current $a$ in
+$F$ the term $W_a(Y)=W(Y\lor H_a)$ is another tester satisfying the
+hypothesis, where $H_a$ is the haecceity of $a$. Indeed every current
+member $Y$ of $L_F$ is rigid by [[internally-finite-rigid-power]],
+its union with $H_a$ is rigid and internally finite, and $H_a\le F$
+by weak persistence. At $n$ the induction hypothesis therefore gives
+$$
+  \Box\forall Y\, .\,C_n(Y)\to W(Y\lor H_a).
+$$
+Apply weak inextensibility of $F$ to the tester
+$\lambda x\, .\,\forall Y\, .\,C_n(Y)\to W(Y\lor H_x)$.
+The implication now holds for **every** $a\in F$ at **every** future
+point, with $n,F,W$ transported there.
+
+At such a point let $C_{\operatorname{Suc}(n)}(Z)$ hold. Take an
+$a\in Z$ whose deletion leaves a current predicate counted by $n$,
+as in the definition of successor. The finite representative
+construction in [[internally-finite-rigid-power]] gives a rigid $Y$
+coextensive with that deletion; the transported $n$ counts $Y$ by
+invariance under current coextension. Since $Z$ is weakly persistent,
+every current $Y$-member necessarily belongs to $Z$. Weak
+inextensibility of $Y$ gives $Y\le Z\le F$. Thus $C_n(Y)$ holds.
+Now $Z$ and $Y\lor H_a$ are coextensive weakly rigid predicates:
+weak inextensibility of each and weak persistence of the other yield
+both entailments, hence identity. The displayed implication gives
+$W(Z)$, completing the Frege induction. For each ordinary finite
+cardinality its numeral is already present and correctly counts an
+extension of that size at every point. $\square$
+
+If $N$ is currently weakly inextensible, apply its defining property
+to $n\mapsto\forall Z\, .\,C_n(Z)\to W(Z)$ in (1). This gives
+$L_F\le W$, also for subrelations counted by newly available numbers.
+The property $L_F$ is weakly persistent in bare C: its current members
+are fully rigid and necessarily finite by [[internally-finite-rigid-power]],
+and their entailment of $F$ persists. Thus $L_F$ is weakly rigid. If
+$F$ and $N$ are both rigid, the same reasoning at every future gives
+full rigidity of $L_F$. For a polyadic bound use the tuple-haecceity
+coding and the corresponding Frege numbers on codes as in
+[[internally-finite-rigid-power]].
+
+For the unrestricted Rigid Power, any failing test must miss a
+**proper** rigid subrelation of the future bound, whose extension no
+transported current Frege number counts. Indeed all current finite
+members are rigid and so pass the test, while the bound itself is a
+current rigid member of its own power and necessarily passes as well.
+This deduction applies at the point where weak inextensibility of the
+power is tested, which may be a successor of the original point.
+For Weakly Rigid Power the same exclusion of finite missed members
+applies to its weak-inextensibility test. The additional weak
+persistence condition concerns whether a current weak subrelation
+can lose weak rigidity. Every internally finite weak subrelation
+is already fully rigid.
+:::
+
 ::: lemma {#rigid-power-unary-tower}
 title: testing the power principles on a unary type tower
 ---
