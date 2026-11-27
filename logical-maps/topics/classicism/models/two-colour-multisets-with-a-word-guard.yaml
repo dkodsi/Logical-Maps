@@ -67,3 +67,41 @@ arguments:
     preserve that set, using the finite haecceity union for a rigid family of its members.
     Only finite Boolean algebras are revised-small, and every finite Boolean algebra
     is represented by a finite collection of propositional atoms.
+- id: exact-rows-and-unit-comprehension
+  holds: [necessary-tame-rigidity-r, necessary-inextensible-comprehension-r]
+  choice: free
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-27'
+  writeup: rigid-relations-in-the-multiset-models
+  text: >-
+    The tester deleting one tuple at one isolated address forces every
+    weakly rigid bound to have exactly its current members' images there.
+    Composition makes these equalities hereditary. An arbitrary current
+    set has an inextensible representative with its exact images on
+    the group of units and empty rows at all nonunits.
+- id: two-word-rigid-bound
+  fails: [rigid-power-r, weakly-rigid-power-r]
+  choice: uses
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-27'
+  writeup: rigid-relations-in-the-multiset-models
+  text: >-
+    Index a rigid bound by the multiset labels: at degree zero a member
+    codes a word profile on one private suffix, and at degree one it
+    has its label's singleton mark on another suffix. At degree one
+    the full bound has the same residual marker for every label. The
+    first suffix has a rigid subbound selecting a set of labels that
+    cannot be pinned. Any source sublift would have to distinguish those
+    labels by that same residual marker, violating admission.
+- id: missing-rigid-haecceity
+  fails: [rigid-rigidity-r, weakly-rigid-weak-rigidity-r]
+  choice: free
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-27'
+  writeup: rigid-relations-in-the-multiset-models
+  text: >-
+    At the distinguished letter the haecceity of the proposition
+    missing from its image is rigid. No old weakly rigid relation
+    can transport to it, since its exact current projection would
+    then contain that missing proposition. Delete just this haecceity
+    at that one address to refute weak inextensibility of both predicates.

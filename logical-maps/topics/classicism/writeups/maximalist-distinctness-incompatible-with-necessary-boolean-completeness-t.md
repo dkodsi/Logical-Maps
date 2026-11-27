@@ -16,8 +16,7 @@ decision reduction is unconditional:
 \]
 The same equivalence holds with two-hat necessity or 5-necessity replacing
 ND-necessity on the left. If the joint theory is consistent, it admits a
-Strong Actuality point realizing either outcome for each collapse. The joint consistency question remains open. The construction uses
-the map’s Boolean Completeness for admitted families.
+Strong Actuality point realizing either outcome for each collapse. A subsequent proof excludes the joint theory even for pure Maximalism, by exhibiting one countable family of propositions without a least upper bound. The conditional construction below uses Boolean Completeness for admitted families. [The unboxed incompatibility](pure-maximalism-and-boolean-completeness-t-incompatible.html)
 
 ## Changing a root without making its families externally full
 

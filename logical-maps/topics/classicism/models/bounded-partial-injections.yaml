@@ -67,3 +67,15 @@ arguments:
     numeral row makes all Frege numbers standard. In contrast, the
     internally countable family of exact even tags has no join, since no
     scalar can alternate indefinitely at a fixed coefficient and word.
+- id: internally-finite-clopens
+  fails: [forcing-possibilism]
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-27'
+  choice: uses
+  writeup: dedekind-finite-small-algebras-at-bounded-partial-injections
+  text: >-
+    The finite-coordinate clopens on auxiliary sites form a represented
+    internally complete atomless algebra. It is Dedekind finite because a
+    fixed finite pin fixes only finitely many clopens. Every Dedekind-finite
+    carrier is revised-small, and no principal scalar interval is atomless
+    and nontrivial. The assertion is a single pure instance at type t.

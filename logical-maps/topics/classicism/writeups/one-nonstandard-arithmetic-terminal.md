@@ -46,4 +46,30 @@ In the group version the single individual at all stages gives a finite bound on
 
 In the classical version \(H\) has at least eight members: the first eight successive ordinal thresholds are distinguished by actual well-ordered finite sets of the corresponding sizes. Thus the eight-element Boolean algebra is small and cannot be represented in the four-element proposition algebra.
 
-OpenAI Codex (GPT-6), prompted by Daniel Kodsi, 27 November 2026. Two other GPT-6 researchers independently checked the single-exit construction, the Frege-number calculation and the rigid lifts. Both also checked the singleton-individual group and the revised-small algebra argument.
+## A restriction on arithmetic disagreement under Functional Choice
+
+Fix an input type $\sigma$, write $N$ for its Frege numbers and $I^*_\sigma$ for its Peano guard. Let $h:r\to w$ be an arrow between Peano points in an action model. Suppose $a$ is an actual propositional atom at $r$ and $ha$ is possible at $w$. Let $\mathcal A_r$ consist of the subsets of $N_r$ that occur as the actual trace of an admitted predicate of numbers. These hypotheses concern one arrow. Under Actuality and local propositional ND the same $a$ works at every accessible $w$, because a nonbottom source proposition remains nonbottom. Plenitude and Functional Choice both imply these two local conditions. Gallin Extensional Comprehension does also.
+
+Every trace $A\in\mathcal A_r$ has an admitted target predicate that reads it correctly on the image of $N_r$. Choose a source predicate $X$ presenting $A$ and use
+
+$$
+P_{hX}(z)=\Diamond(ha\land (hX)z)
+$$
+
+at $w$. For each $n\in N_r$, the true atom entails $Xn$ if $n\in A$, and entails its negation otherwise. These entailments survive $h$, and $ha$ is possible. Thus $P_{hX}(hn)$ has precisely the desired bit. The assignment does not require choosing a representative for each coextension class inside the model.
+
+If $b\in N_w$ exceeds every member of $h[N_r]$, then
+
+$$
+|\mathcal A_r|\leq |N_w|.
+$$
+
+In Peano arithmetic with the admitted parameter $P=P_{hX}$, Frege induction proves that for every $b$ there exists a unique number $d<2^b$ whose binary digits in positions $i<b$ are $P(i)$. At zero choose zero. At $b+1$ keep the old code if $P(b)$ fails and add $2^b$ otherwise. Uniqueness follows from the same two disjoint ranges and the uniqueness of the old code. This proof covers nonstandard $b$. Two different source traces cannot yield the same code, even if their presenting predicates and their target extensions away from the numerical image differ. Equivalently, the sets of possible codes for distinct traces are nonempty and disjoint; the least code may be picked externally using any well-order of $N_w$.
+
+In particular the bound applies to **every arithmetic-disagreeing arrow** satisfying the atom hypothesis. Arithmetic transport between Peano points is $\Delta_0$-elementary by the primitive recursive characteristic-function calculation. Gaifman's cofinal-embedding theorem for PA implies that if the arrow changes a first-order arithmetic sentence, its numerical image is noncofinal. Both endpoints satisfy first-order Peano arithmetic. The numerical carriers may be externally nonstandard. [Kaye, On cofinal extensions of models of fragments of arithmetic](https://doi.org/10.1305/ndjfl/1093635836)
+
+For a current-full root the lower bound on each disagreeing target is $2^{|N_r|}$. There is also a result without arithmetic disagreement: at any nonstandard Peano target, take $b$ above all standard numerals. The same proof shows that its ordinary standard system contains the restriction of every source predicate to the standard numerals. Full current source extensions therefore force the target's standard system to contain every real. No countable nonstandard target is then possible. If all accessible numerical carriers have size below $2^{\aleph_0}$, and the Peano guard holds necessarily, every accessible number at every stage must be a standard numeral. All the numerical maps are then onto; persistence, necessary distinctness and these exact images give rigidity of $N$ in the native Arithmetic Necessitism instance.
+
+This restricts countermodels to the open implications from Actuality plus ND, Plenitude, and Functional Choice to Necessity of Arithmetic. A countable source with restricted Henkin rows may have $\mathcal A_r$ countable, and a current-full source can have targets of at least continuum size. The argument leaves the general question open.
+
+OpenAI Codex (GPT-6), prompted by Daniel Kodsi, 27 November 2026. Two other GPT-6 researchers independently checked the single-exit construction, the Frege-number calculation and the rigid lifts. Both also checked the singleton-individual group and the revised-small algebra argument. Two researchers also checked the trace and coding argument at an actual atom.

@@ -69,3 +69,35 @@ arguments:
     can cover any countable target pin by collapsing fresh pairs to its members.
     The uncountable family without a join likewise needs only the freedom to
     collapse two distinct source pairs to prescribed targets.
+- id: no-weakly-inextensible-coextension
+  fails: [weakly-inextensible-comprehension-r]
+  choice: uses
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-27'
+  writeup: weak-inextensibility-at-the-paired-stages
+  text: >-
+    Give one proposition per ordinary pair a different nonempty-word
+    profile and make its empty-word test ask whether the coefficient
+    fixes the selected seat of that pair. A predicate representing
+    this whole current family repeats its row at an endomorphism
+    collapsing a pair off its pin. The tester deleting that pair's
+    proposition on empty-word endomorphisms moving its seat still
+    necessarily accepts every old family member, by the distinct word
+    profiles and the selected seat's truth bit. It misses the repeated
+    member, so no such predicate is weakly inextensible.
+- id: tame-rigidity-by-countable-factorization
+  holds: [necessary-tame-rigidity-r]
+  choice: uses
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-27'
+  writeup: tame-rigidity-at-the-paired-stages
+  text: >-
+    A weakly rigid relation has the union of the images of its current
+    members over arrows agreeing on any enlarged countable pin. Enlarge
+    the source pin to include the source copies of intermediate ordinary
+    pairs meeting the next tester's pin or the image of the enlarged
+    source pin. Pairs required to stay fixed can now stay fixed through
+    both factors. Fresh intermediate pairs implement the prescribed
+    values on the remaining member support. Thus any tester necessarily
+    covering an intermediate row also covers every later row. Zeros,
+    when present, have exact current images by their isolated addresses.

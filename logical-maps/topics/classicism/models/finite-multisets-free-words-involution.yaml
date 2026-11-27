@@ -78,3 +78,44 @@ arguments:
     its test reads $p(h)$ and $p(sh)$. This two-point test satisfies N, K
     and B necessarily; B uses $s^2=1$. The proposition supported exactly
     at the identity is true but fails the test. It is not 5-necessary.
+- id: exact-rows-and-unit-comprehension
+  holds: [necessary-tame-rigidity-r, necessary-inextensible-comprehension-r]
+  choice: free
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-27'
+  writeup: rigid-relations-in-the-multiset-models
+  text: >-
+    The tester deleting one tuple at one isolated address forces every
+    weakly rigid bound to have exactly its current members' images there.
+    Composition makes these equalities hereditary. An arbitrary current
+    set has an inextensible representative with its exact images on
+    the group of units and empty rows at all nonunits.
+- id: two-word-rigid-bound
+  fails: [rigid-power-r, weakly-rigid-power-r]
+  choice: uses
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-27'
+  writeup: rigid-relations-in-the-multiset-models
+  text: >-
+    Index a rigid bound by the multiset labels: at degree zero a member
+    codes a word profile on one private suffix, and at degree one it
+    has its label's singleton mark on another suffix. At degree one
+    the full bound has the same residual marker for every label. The
+    first suffix has a rigid subbound selecting a set of labels that
+    cannot be pinned. Any source sublift would have to distinguish those
+    labels by that same residual marker, violating admission.
+- id: rigidity-of-the-rigidity-predicates
+  holds: [necessary-rigid-rigidity-r, necessary-weakly-rigid-weak-rigidity-r]
+  choice: free
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-27'
+  writeup: rigid-relations-in-the-multiset-models
+  text: >-
+    Extend typed inputs by empty rows outside the suffix of the
+    prescribed arrow. To calculate a translate of this section,
+    cancel the common shorter word suffix and the coordinatewise
+    minimum of multiset coefficients. For a rigid target relation this
+    gives an admitted exact-image relation on the lifted tuples, pinned
+    by the target pin and the finite support of the prescribed arrow.
+    Thus every future rigid relation has a rigid preimage. The weak
+    and full rigidity predicates agree everywhere.
