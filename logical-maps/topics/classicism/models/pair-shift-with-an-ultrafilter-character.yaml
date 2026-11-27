@@ -72,3 +72,14 @@ arguments:
     at the shift to each of the other new pairs by matching their bits. Opposite-bit pairs
     give complementary upper bounds. A join at the shift successor would distinguish matching
     bits at uncountably many independently flippable coordinates, violating countable support.
+- id: barcan-and-infinity
+  holds: [necessary-barcan-t, necessary-axiom-of-infinity-t]
+  fails: [barcan-relational]
+  choice: free
+  writeup: pair-shift-with-an-ultrafilter-character
+  text: >-
+    Right cancellation makes suffix transport onto the full powerset of words, giving
+    propositional Barcan. That powerset is infinite, and its current standard numeral
+    cut is represented. In contrast, neither of the two identity-only singleton
+    properties of the new pair is the shift of any source property. A tester omitting
+    just these two properties at the shift refutes Barcan for unary individual properties.

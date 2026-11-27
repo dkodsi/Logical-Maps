@@ -27,6 +27,10 @@ parameters:
         Add three hierarchies computed over the internal naturals of countable models of
         Zermelo set theory with Choice. One model believes that this set theory proves
         a contradiction. Two other models disagree on structural CH.
+      fixed: >-
+        Put T equal to Zermelo set theory with Choice plus the ambient CH sign.
+        Take three isolated copies of the classical finite-type hierarchy over
+        the naturals of a countable model of T + ¬Con(T).
 arguments:
 - id: represent-small-algebras
   holds: [forcing-possibilism]
@@ -193,3 +197,17 @@ arguments:
     letter. Copy a root witness into a suffix, or install a terminal witness at that
     letter's entrance into the relevant component. The ordinary section for any
     terminal prescription can be constant. All assignments are disjoint.
+- id: fixed-ch-and-disagreeing-arithmetic
+  when: {components: fixed}
+  holds: [non-contingency-of-ch]
+  fails: [necessity-of-arithmetic, arithmetic-necessitism, necessity-of-analysis]
+  choice: uses
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-27'
+  writeup: fixed-ch-and-disagreeing-arithmetic
+  text: >-
+    The ordinary and isolated terminals agree about CH at every real structure
+    and disagree on Con(T) at the Peano numbers and at their internal reals.
+    Each root has full current rows, so its real structures also have the
+    ambient CH sign. An isolated terminal's new nonstandard Frege number can
+    be omitted alone by the tester from the mixed case.

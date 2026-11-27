@@ -12,4 +12,14 @@ Let a₀ be the whole proposition supported just at the identity row. It is true
 
 For any root proposition p, the root truth of □≠p is equivalent to p holding on every left-invertible root loop. Indeed a₀ witnesses sufficiency in the definition ∃q(q ∧ □(◇q → p)): its transport can possibly be true after m precisely when some h satisfies hm=1, and no exterior component returns. Conversely any true q can return to truth after every such m. This characterization applies also to every transported parameter at the root object.
 
-Take p supported on the set of units of M and with zero external coordinates. We have ¬□≠p since s is left-invertible but is not a unit. Use a₀ to witness the hat of □≠ applied to p, with the matrix □≠(◇≠a₀ → p). At a left-invertible g, the transported a₀ is distinctness-preservingly possible only if some left-invertible h has hg=1. Such an h has both a left inverse and g as a right inverse, so h and g are units. The matrix follows. The theorem of C ordering the two-hat and 5 operators therefore gives □₅p. This refutes “5-necessities are ND-necessary”. [Native modalities and ordering](https://github.com/zwlgzwlg/Logical-Maps/blob/4bb9287187ed7cb09567eb3a6302cb896c986ec4/logical-maps/topics/classicism/background/varieties.md)
+## Which truths are two-hat necessary?
+
+For any proposition $p$, two-hat necessity tests exactly the unit loops. To see sufficiency, take the identity-only proposition $a_0$ for the true guard in
+$\exists q\,(q\land\Box(\Diamond_{\ne}q\to p))$.
+At an arbitrary loop $g$, the transported $a_0$ is $\Diamond_{\ne}$-possible exactly when some left-invertible $h$ has $hg=1$. This follows by dualizing the preceding characterization of $\Box_{\ne}$ at the root object. Such an $h$ has a left inverse and has $g$ as a right inverse, so $h$ and $g$ are units. The guard is impossible at every external exit. Thus the ordinary box in the displayed formula holds whenever $p$ is true on all units. Conversely, for any unit $g$ and any true guard $q$, the inverse of $g$ is left-invertible and returns $q$ to truth. The displayed box therefore requires $p$ at $g$.
+
+The monoid used here has only the identity unit. Cancel each occurrence of $l_i s$ in a generator word. The remaining word starts with a power of $s$ followed by zero or more of the $l_i$. If any $l_i$ remains, the rightmost generator is noninjective. If only a positive power of $s$ remains, the composite misses $0$. Thus every current truth is two-hat necessary.
+
+In particular $a_0$ is two-hat necessary and hence 5-necessary. It fails distinctness-preserving necessity because $s$ has a left inverse and $a_0$ is false there. This separates 5-necessity from distinctness-preserving necessity even with signature Possibility+, revised Mathematical Possibilism, and two-hat necessity of every truth at the same point. [Definitions and ordering of the modal operators](../#background/varieties)
+
+The characterization by unit loops and the universal two-hat verdict were checked independently by two other OpenAI Codex (GPT-6) research agents, prompted by Daniel Kodsi, on 27 November 2026.

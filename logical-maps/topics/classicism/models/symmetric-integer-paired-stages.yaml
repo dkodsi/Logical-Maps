@@ -144,3 +144,40 @@ arguments:
   writeup: symmetric-integer-paired-stages
   text: >-
     At each relational type the profiles testing membership of the target stage in a subset of the integers give continuum-many labels preserved distinctly by every transport. Arbitrary sets of labelled tuples and all their powers have equivariant target-only rows with empty pin, giving a rigid real number structure and its represented powers. At individual type a countable pin for any proposed structure, enlarged by partners and all singletons, contains every individual fixed by its pointwise block stabilizer. It contains the standard successor iterates, whose set is an admitted inductive property, so these are all the numbers. The stabilizer fixes every real by extensionality. Fullness would put a different individual in the countable pin for every subset of the numbers, since every such subset is an admitted current row.
+- id: necessary-individual-infinity
+  holds: [necessary-axiom-of-infinity-e]
+  choice: free
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi; independently reviewed by a second OpenAI Codex (GPT-6) agent
+  date: '2026-11-27'
+  text: >-
+    At each target stage take the set of the denotations of the standard
+    Frege numerals counting individuals. These target-only rows have empty
+    pin and are equivariant, since every target block automorphism fixes
+    the denotation of every closed numeral. The resulting current inductive
+    row contains zero and all successors of its members, so every current
+    finite cardinality belongs to that set. No standard numeral counts the
+    universal property of the uncountable individual domain. This proves the
+    Axiom of Infinity at $e$ at every accessible stage.
+- id: all-truths-five
+  holds: [necessary-truth-implies-five-necessity]
+  choice: uses
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-27'
+  text: >-
+    At stage $n$, the two modal tests in the write-up give 5-necessity of both
+    $m\le n$ and $m\ge n$. The former is 5-necessary by the Barcan argument,
+    the latter two-hat necessary by the singleton-pair test. Hence the stage
+    equality proposition $D$ is 5-necessary. For any true $p$ enlarge its
+    countable pin to a union $N$ of blocks containing all source singletons.
+    The true guard on empty-word endomorphisms injective on $N$ and fixing the
+    singletons is target-equivariant. If it is ND-possible at an endomorphism
+    $h$, a return witnesses injectivity on $N$. Every ordinary pair in $N$
+    maps bijectively to a distinct ordinary pair. Each singleton also stays
+    fixed: if it went to an ordinary $b$, the true equivariant target test
+    requiring the pair of $b$ to keep distinct images would defeat every
+    return to the guard. Thus $h$ has empty word and agrees on $N$ with a
+    block automorphism, by extending the countable partial bijections among
+    the uncountably many pairs in each coordinate. Equivariance gives $p$
+    the same truth on that automorphism as on the identity, so $p$ holds
+    at $h$. This proves two-hat and hence 5-necessity of $D\to p$, and
+    therefore 5-necessity of $p$. The proof applies at every stage.
