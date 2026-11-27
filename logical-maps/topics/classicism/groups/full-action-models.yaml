@@ -100,6 +100,11 @@ parameters:
         requires: [sigma-apart, actuality-contingent]
         meets:
           sigma-true-atom: This is the interpretation.
+      opposite-singletons:
+        text: The free signature has two propositional constants. They denote respectively the singleton of the identity arrow and the singleton of the other group arrow.
+        label: two opposite proposition names
+        brief: the two names denote the two complementary singleton propositions
+        requires: [two-element-arrow-group]
   metatheory:
     text: The metatheory in which the construction is carried out. Each member is recorded with
       the axiom of choice; its variants under the other values are generated where their
@@ -173,6 +178,8 @@ meets:
     $1\in k\cdot a$ would need $1\circ k=1$.
 
 conditions:
+- id: two-element-arrow-group
+  text: The pointed category has one object and its arrows form a group of order two.
 - id: sigma-apart
   text: >-
     The construction does not itself interpret Σ, so any of the group's interpretations can be

@@ -213,9 +213,72 @@ be the Fregean Axiom $\forall p\, .\,p=\top\lor p=\bot$, and $s:=(0,\mathrm F)$.
 
 The map derives the versions at all relational types.
 
+## Mathematical Possibilism fails for every signature
+
+*The Cantor regular-open obstruction for the pure definable root was recorded
+by OpenAI Codex (GPT-6), prompted by Andrew Bacon, on 16 November 2026. The
+arbitrary-signature argument here is by OpenAI Codex (GPT-6), prompted by
+Daniel Kodsi, 26 November 2026. Work in external ZFC.*
+
+**No infinite principal interval is complete.** Suppose $[0,b]$ is an
+infinite complete principal interval in $L$. Choose countably many disjoint
+nonzero elements $a_n\le b$. Such a sequence exists in any infinite Boolean
+algebra in ZFC: choose countably many atoms if there are infinitely many,
+or repeatedly split a nonzero element in the atomless remainder. Choose
+closed representatives for $b$ and for all the $a_n$. Together these use a
+countable sublanguage. For $S\subseteq\mathbb N$ let $s$ represent the join
+of the $a_n$ for $n\in S$ in the interval. Replace the finitely many
+constants of $s$ outside the sublanguage by fresh variables of their
+respective types, and universally quantify those variables to obtain $s_0$.
+For every $n\in S$, C proves $a_n\to s$ and, by generalization on the
+fresh constants, $a_n\to s_0$. As $s_0\le s\le b$, its being an upper
+bound implies $[s_0]=[s]$. Thus *every* such join has a representative
+in the same countable language. Distinct $S$ have distinct joins: for
+$m\notin S$, $b\land\neg a_m$ is an upper bound. There are only countably
+many representatives and continuum many $S$, a contradiction. An
+infinite principal interval of $2\times L$ has an infinite $L$-factor;
+completeness of the product interval would make this factor complete.
+
+**The small complete algebra.** At every root relation type,
+an arbitrary set of current tuples is allowed as the identity row,
+independently of its old descriptor (take the everywhere-bottom term).
+Consequently every current subset and every graph between the fixed
+current carriers used below is admitted, including at the types of the
+order, subcollections and injections. The ordinal benchmark
+$H=\operatorname{Ordinal}_e$ contains
+$\alpha_n=\operatorname{OrdSuc}^n(\operatorname{OrdZero})$ for every
+standard $n$. These are distinct root intensions. On a finite linear
+order, $\alpha_n$ accepts precisely orders of length at least $n$,
+by the definition of successor on restricted initial segments.
+For $m<n$ the consistent pure sentence asserting such an order of length
+$m$ with $\alpha_m$ true and $\alpha_n$ false is realized at a
+component exit (for $m=0$ take the empty field). Equality at the root
+would persist at this exit. Thus $|H|\ge\aleph_0$.
+
+Let $\rho$ be the ordinal-carrier type. At $\rho t$ the subsets of
+$\{\alpha_n:n\in\mathbb N\}$, with empty old descriptor, provide
+$2^{\aleph_0}$ distinct carrier elements. On elements of this type code
+the complete algebra of regular opens of Cantor space, with its order, by
+a root subset and a root graph. Its size is continuum: a countable
+clopen basis bounds the number of open sets above, and Boolean joins
+of subfamilies of a countably infinite disjoint family of nonzero
+clopens give continuum many distinct regular opens. Full current rows
+make this an internal complete Boolean algebra for the actual order
+and all actual subcollections.
+
+Its carrier $B$ is small in the revised sense. If $H<Y\subseteq B$,
+take a countably infinite $A\subseteq Y$. Then $|A|<|Y|$ and the
+$2^{\aleph_0}$ external subsets of $A$ are all admitted current
+subcollections. The distinct codes required by $\operatorname{Pow}(C,A)$
+would force $|C|\ge 2^{\aleph_0}\ge |Y|$, contradicting $C<Y$.
+Hence no such $Y$ is power-closed. An actual relational order isomorphism
+of $B$ to an entailment interval would make that interval infinite and
+complete, excluded above. This refutes the revised [[forcing-possibilism]]
+at a single specified carrier type, for every set-sized signature.
+
 ## Left open
 
-The map leaves eighteen principles undecided for this model. The record lists
+The model record lists
 only verdicts that hold for every $\Sigma$ and every choice of the $E_c$, and
 many of these go different ways for different $\Sigma$. The facts
 below were found on 23 November 2026 by Claude Opus 5.5 (Anthropic),
@@ -228,7 +291,7 @@ what makes the verdicts turn on how many constants $\Sigma$ has.
 
 | Principle | Fails when | Holds when |
 |---|---|---|
-| BF (all types, type $t$, relational types), Functionality, Tractarianism | $\Sigma^{+}$ has finitely many individual constants (BF at type $e$); or $\Sigma=\emptyset$, at type $t$ | $\Sigma^{+}$ has infinitely many constants of every type |
+| BF (all types, type $t$, relational types), Functionality, Tractarianism | $\Sigma^{+}$ has finitely many individual constants (BF at type $e$); or finitely many relational constants, at every relational input type | $\Sigma^{+}$ has infinitely many constants of every type |
 | Infinity Schema (type $e$), Axiom of Infinity (type $e$) | finitely many individual constants | infinitely many individual constants (at least the Schema) |
 | Atoms are strong atoms (type $t$; relational types) | $\Sigma=\emptyset$ | infinitely many relational constants |
 
@@ -260,13 +323,76 @@ what makes the verdicts turn on how many constants $\Sigma$ has.
   the root proposition false at the root and true in both components, and
   $q$ is true in just one component.
 
-Open for every $\Sigma$ tried:
+## The number of relational constants and the two-world cell
 
-- **Atoms are self-atoms** (type $t$; relational types). They hold when $L$
-  is atomless, by the previous point. For $\Sigma=\emptyset$ the question is
-  whether some atom $v$ of $L$ has $\vdash v\to\neg\operatorname{Atom}(v)$.
-  A finite axiomatization of the full S5 model with two worlds and one
-  individual would give one.
+*Added 26 November 2026 by OpenAI Codex (GPT-6), prompted by Daniel Kodsi.
+The two-world cell and its pointed completeness were proved in the October
+work used in [[strong-possibility-incompatible-with-barcan-t]].*
+
+**Atoms are self-atoms at the root if and only if there are infinitely many
+relational constants.** This holds for both the type-$t$ bridge and the
+schema over relational types. With infinitely many such constants the
+preceding fresh-constant argument shows that every root atom is strong.
+Suppose instead that there are only finitely many relational constants.
+The number of individual constants can be arbitrary. Let $B$ say that
+$\Box\mathrm{ND}_t$ holds and there are exactly one individual and four
+propositions, as in the proof cited above. Form the closed sentence
+
+$$
+\beta=B\land\bigwedge_{\text{relational }c\in\Sigma}(c=\bot_{\operatorname{type}(c)}).
+$$
+
+The full two-world S5 model with one individual and these interpretations
+realizes $\beta$. C proves $B\to\Box B$ by step (1) of the cited proof,
+so $\beta\to\Box\beta$ by NI. The complete finite structure in step (2)
+of that proof decides every closed sentence of $\mathcal L(\Sigma^+)$ under
+$\beta$. Indeed all relational names in such a sentence have their fixed
+bottom values throughout the cone. All individual names denote the sole
+individual there and can be replaced by a single individual variable.
+The pointed finite-structure argument applies to that variable as well.
+Thus $[\beta]$ is an atom of $L$, and $(0,[\beta])$ is an atom in
+$2\times L$. At an exit where $\beta$ holds, that atom transports to
+$\beta=\top$. It is true there, and a four-element Boolean algebra
+has a proper nonzero element below $\top$. Hence this root atom is not
+a self-atom, refuting the scheme already at type $t$.
+
+**BF fails at each relational input type when there are finitely many
+relational constants.** Consider an input type $\tau=\bar\sigma t$. Fix a
+closed tuple $\bar d$ of argument terms in $\mathcal L(\Sigma^+)$, with
+any individual name at $e$ and bottom at other types. For arity zero take
+the empty tuple. Give a root property empty current extension and descriptor
+
+$$
+\lambda Y^\tau\, .\, \beta\land Y[\bar d]\ne\top\land Y[\bar d]\ne\bot .
+$$
+
+For any root $Y$ its application to $\bar d$ projects to a closed
+proposition. That proposition has a fixed truth value throughout all
+$\beta$-points by completeness. Since $\beta$ persists, at any
+$\beta$-point it equals one of the two endpoints. Consequently no root
+$Y$ can possibly satisfy the displayed property. At a $\beta$ exit
+choose a proposition strictly between the endpoints; the constant relation
+with this value satisfies the property there. This refutes
+$\Diamond\exists Y\, .\,HY\to\exists Y\, .\,\Diamond HY$.
+It covers signatures with arbitrarily many individual names.
+
+**Strong Possibility in these signatures.** The denotation of $\beta$
+itself at the root is $(0,[\beta])$. Its current bit is zero because the
+root has infinitely many propositions, as witnessed by the pairwise
+incompatible, consistent individual-cardinality sentences. Thus
+$\operatorname{Atom}_t(\beta)$ is consistent with Maximalism in this very
+signature. It is a universal Boolean combination of identities, so the
+reflection lemma of [[strong-possibility-and-strong-actuality-incompatible]]
+applies in the fixed language. Strong Possibility (signature $\Sigma$)
+therefore gives $\operatorname{Atom}_t(\beta)$. At every $\beta$-point
+$\beta$ equals top in the four-element algebra, which proves in
+C($\Sigma$) that $\beta$ is not a self-atom. Hence Strong Possibility
+(signature $\Sigma$) is incompatible with Atoms are self-atoms (type $t$)
+under the finite-relational-constant hypothesis. The result for the pure
+language is recorded at [[strong-possibility-incompatible-with-atoms-are-self-atoms-t]].
+
+## Remaining questions for the family
+
 - **Tame Rigidity** and **Weakly Rigid Power.** Both fail when $\Sigma^{+}$
   has infinitely many individual constants. The root property with every
   constant in its root extension and descriptor $\lambda x\, .\,\top$ is
@@ -276,18 +402,11 @@ Open for every $\Sigma$ tried:
   root extension has a descriptor provably equal to a disjunction of
   haecceities of closed terms, and so is rigid. The infinite case is open.
 - **Rigid Power.**
-- **Forcing Possibilism**, in the formulation of Andrew Bacon's pull request
-  (dated 16 November 2026, merged 24 November 2026), and **Contingency of Cardinal CH**, **Possible
-  Cardinal CH** and **Possible failure of Cardinal CH**, added in the same
-  revision. These have not been examined for this model. Under the earlier
-  formulation, in which the algebras counted were the finite ones and those
-  with fewer elements than the propositions, Forcing Possibilism failed with
-  infinitely many relational constants and held with $\Sigma=\emptyset$. With
-  infinitely many relational constants $L$ is atomless, so no interval
-  $[\bot,p]$ has four elements. With $\Sigma=\emptyset$ the atoms
-  $\mathrm F\land{}$"exactly $n$ individuals" of $L$ give every finite
-  interval. Whether the smallness condition of the new formulation admits
-  the same algebras at $W_0$ has not been checked.
+- **Contingency of Cardinal CH**, **Possible Cardinal CH** and **Possible
+  failure of Cardinal CH**, added on 24 November 2026, remain undecided.
+  The earlier strict-smallness argument for Forcing Possibilism is
+  historical. The revised Mathematical Possibilism is refuted above.
+
 
 The group's shared arguments for Tame Rigidity and Rigid Power transfer a
 component's counterexample to the root. They build root entities with freely

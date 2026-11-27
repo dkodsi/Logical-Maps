@@ -119,3 +119,79 @@ relation, with definable choice for every definable serial relation but no
 definable transversal. No construction of that kind is available in the
 sources of the map. The expectation recorded here is that the implication
 fails.
+
+## A restriction on countermodels (26 November 2026)
+
+Suppose Relational Choice holds from $\sigma t$ to $\sigma$ at the evaluation
+point. If no finite Frege number at $\sigma$ counts the extension of a property
+$A$, there is an admitted injection from the whole internal family
+$\mathbb N_\sigma$ into $A$. In particular, $A$ admits an injective self-map
+whose image omits one of its members. Here maps are represented by typed
+relations that are total and single-valued on their stated domains at the
+point. This includes $\sigma=e$.
+
+Write $s$ for numerical successor. First, each $n\in\mathbb N_\sigma$ counts
+some subproperty of $A$. The empty property witnesses zero. An $n$-counted
+subproperty leaves an element of $A$ outside it, since counting respects
+current coextension. Adjoin that element for the successor step. Impredicative
+induction proves the claim. Every number and its successor therefore have an
+instance. Zero differs from every successor. If $sn=sm$, remove one member
+from an instance of their common successor. Both $n$ and $m$ count the
+remainder, so they coincide by the common-instance lemma for finite numbers.
+
+Apply the stated instance of Relational Choice to the serial relation
+
+$$
+U(B,a)\quad\leftrightarrow\quad (A(a)\land\neg B(a))\lor
+                              \forall x\,(A(x)\to B(x)).
+$$
+
+Its chosen subrelation $G(B,a)$ determines a single update of each property
+entity $B$, namely the entity $\lambda x\,(B(x)\lor x=a)$ for its selected
+$a$. Define $T(n,B)$ by quantifying over all binary relations that contain
+$(0,\lambda x\,\bot)$ and are closed under numerical successor paired with
+this update. A pair belongs to $T$ just when it belongs to every such relation.
+Every pair in $T$ is the base pair or an immediate image of a pair in $T$,
+since that disjunction itself defines a closed relation containing the base.
+The number indices of $T$ belong to $\mathbb N_\sigma$ by the same closure
+argument. It follows by induction that each number $n$ occurs with exactly
+one $B_n$. For uniqueness, use the decomposition, zero's disjointness from
+successors, injectivity of $s$ on numbers, and functionality of the update
+on property entities.
+
+Induction gives $B_n\subseteq A$ and $n(B_n)$. Its chosen $a_n$ is therefore
+in $A\setminus B_n$, and $B_{sn}$ contains both $a_n$ and $B_n$. For distinct
+internal indices, one is $n+sr$ for the other $n$ and some number $r$.
+Indeed, addition is defined by the same least-relation recursion with base
+$n+0=n$ and step $n+sr=s(n+r)$. Induction gives $0+r=r$ and
+$(sn)+r=s(n+r)$, and comparison follows by induction on one index, splitting
+the other into zero or successor. Now $a_n\in B_{n+sr}$ by induction on $r$,
+whereas $a_{n+sr}\notin B_{n+sr}$. Thus the admitted relation
+$J(n,a)\leftrightarrow\mathbb N_\sigma(n)\land\exists B\,(T(n,B)\land G(B,a))$
+is the claimed injection, including any nonstandard indices. Send $a_n$ to
+$a_{sn}$ and fix the members of $A$ outside the image of $J$. This defines
+an injective self-map of $A$ omitting $a_0$.
+
+In particular, let $D$ be an admitted property meeting every equivalence
+class of $R$. If each nonempty intersection $D\cap[x]$ has no such proper
+self-injection, each intersection is Frege-finite. A finite property has a
+rigid coextensive representative by induction on a count. At zero use the
+empty property, and at a successor take the rigid representative after
+removing one member and adjoin its rigid singleton. Two rigid coextensive
+properties are identical. Hence equivalent $x$ determine the same representative
+of $D\cap[x]$. Apply Relational Choice to pick a member of each nonempty
+representative; their selected members form a transversal. Consequently, in
+any separator **every admitted property meeting all classes meets at least one
+class in a set containing a represented copy of the entire internal
+$\mathbb N_\sigma$**. This leaves open whether such a separator exists.
+
+At type $t$, Witnessed Possibility and No Pure Contingency yield the Axiom
+of Infinity by the [necessary infinity result](witnessed-possibility-and-no-pure-contingency-imply-necessary-axiom-of-infinity-t.html).
+With the current choice instance $(tt,t)$, the universal property of
+propositions therefore admits the injection and the proper self-injection
+above. A boxed choice instance gives the corresponding necessary conclusion.
+
+This restriction and the represented iteration are due to OpenAI Codex
+(GPT-6), prompted by Daniel Kodsi, 26 November 2026. A second OpenAI Codex
+agent independently checked the argument. The finite representative argument
+appears in the [October research notes, §13](https://github.com/dkodsi/Logical-Maps/blob/67b116acaf7cee286614307468f5361f6a195c6e/submissions/classicism-results-2026-10-24-v2/source/research/2026-10-22/notes/quotient-abstraction-lane.md).

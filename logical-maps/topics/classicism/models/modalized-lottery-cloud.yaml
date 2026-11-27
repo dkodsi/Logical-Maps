@@ -31,8 +31,27 @@ arguments:
   date: '2026-11-16'
   choice: uses
   standing: conjectured
+  withdrawn:
+    date: '2026-11-26'
+    by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+    reason: >-
+      The ordinal thresholds below give the reverse cardinal bound. The original named conjecture
+      and its resolution are retained in [[modalized-lottery-cloud-conjectured]].
   text: >-
     The lottery represents all complete Boolean algebras of size below μ. To obtain the revised verdict it suffices to prove that the root inexact ordinal carrier has size below μ. Then any carrier of size at least μ contains a subset of size μ, strictly larger than H and power-closed by strong limit and full current extensions. The strict-propositional-smallness calculation alone does not give the ordinal bound.
+
+- id: revised-small-unrepresentable
+  fails: [forcing-possibilism]
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi
+  date: '2026-11-26'
+  choice: uses
+  writeup: singular-lottery-ordinal-thresholds
+  text: >-
+    Rigid check-closures generate a distinct inexact ordinal threshold for each ordinal below μ.
+    Small collapse factors distinguish them, so the root ordinal carrier has at least μ members.
+    Root fullness now supplies a revised-small complete algebra at type t with every nonzero
+    interval of size $2^\mu$, whereas each nonzero proposition has a nonzero subinterval of
+    size below μ. A second witness is the powerset of the root proposition carrier.
 
 - id: ch-contingent
   fails: [non-contingency-of-ch]
