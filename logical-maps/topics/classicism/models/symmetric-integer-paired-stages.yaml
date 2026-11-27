@@ -1,0 +1,90 @@
+id: symmetric-integer-paired-stages
+name: Symmetric integer stages of paired individuals
+certificate:
+  source_id: misc
+  produced_by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi, 26 November 2026
+  recorded_by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi, 26 November 2026
+  checked_by:
+  - OpenAI Codex (GPT-6), prompted by Daniel Kodsi, two independent reviews of the construction and its local verdicts, 26 November 2026
+  date: '2026-11-26'
+  lean: none
+sources:
+- OpenAI Codex (GPT-6), prompted by Daniel Kodsi, symmetric integer-stage construction, 26 November 2026.
+- The stages, word gluing and doublet return arguments of integer-stages-paired-individuals-glued-constants, adapting the two-object model of Cian Dorr and Claude Fable 5.1.
+- The Boolean join proof of symmetric-surjection-products, based on Cian Dorr's symmetric surjection model.
+source_names:
+- Codex via Kodsi, 26 Nov
+- Paired integer stages
+- Symmetric surjection products
+references:
+- paper: bounds-of-possibility
+  role: background
+  locator: Appendix D, pp. 400–409
+  note: Two-hat necessity, 5-necessity and the Barcan formula for 5-necessity.
+definition: >-
+  At integer stage $n$ the individuals have coordinates $i\in\mathbb Z$, each
+  with $\aleph_1$ doublets and also a singleton if $i\le n$. Arrows are all
+  coordinate-preserving maps sending each block into a block, with a free-word
+  label. At a relational type require a common countable pin of source
+  individuals for all profile rows at fixed target and word. In addition,
+  postcomposing a map with a coordinate-preserving block automorphism must
+  transport its row by that automorphism. Transport is precomposition.
+  Evaluate at stage zero. For Logical Necessity use one proposition name or
+  the purely relational signature interpretation in the write-up.
+arguments:
+- id: boolean-joins
+  holds: [necessary-boolean-completeness-r]
+  choice: uses
+  writeup: symmetric-integer-paired-stages
+  text: >-
+    Pin a current family by a countable block-closed set $N$ containing all
+    source singletons. At each target, word and map take the union of the
+    members' rows over maps agreeing there on $N$. The union is pinned and
+    equivariant. For any upper bound, move the additional pin doublets of a
+    chosen member off the upper bound's pin by an automorphism fixing $N$,
+    then amalgamate the two prescribed restrictions on whole blocks. The
+    moved member remains in the family and the upper bound contains the
+    original contribution. The constructed union is least at each type.
+- id: barcan
+  holds: [necessary-barcan-r]
+  choice: uses
+  writeup: symmetric-integer-paired-stages
+  text: >-
+    On the pin of a property a possible witnessing map agrees with a
+    block-respecting split epimorphism. For every target block reserve a
+    fresh source doublet to supply its section. Transport along the section
+    lifts any typed entity, and stripping a word suffix lifts the remaining
+    word coordinate. This yields Barcan at every stage and all types.
+- id: modal-separations
+  fails: [five-implies-two-hat-necessity, necessary-five-implies-two-hat-necessity, two-hat-implies-nd-necessity, necessary-two-hat-implies-nd-necessity]
+  choice: free
+  writeup: symmetric-integer-paired-stages
+  text: >-
+    The coordinate inclusion and its approximate returns defeat two-hat
+    necessity of the proposition that coordinate one lacks a singleton. For
+    5-necessity, use the equivariant property of admitting a pin omitting
+    that singleton. Each current proposition passes its test two-hat
+    necessarily: require a possible return injective on the original pin
+    and its partners. The Barcan formula for 5-necessity gives the result.
+    For the reverse separation use the coordinate-zero singleton and test
+    distinctness of the images of its replacement doublet. Translation
+    repeats both separations at every stage.
+- id: atomlessness
+  holds: [necessary-atomlessness]
+  choice: free
+  writeup: symmetric-integer-paired-stages
+  text: >-
+    Keep a witnessing arrow fixed on the pin of a nonzero proposition.
+    At a fresh ordinary doublet one may send the two inputs to distinct
+    or coinciding values. Testing their distinctness is equivariant and
+    splits the original proposition into two nonempty parts at every stage.
+- id: logical-necessity
+  holds: [logical-necessity-r]
+  choice: uses
+  writeup: symmetric-integer-paired-stages
+  text: >-
+    Translating stages and coordinate labels preserves the symmetry and all
+    pure sentences. Assign the constants a realizing tuple for each possible
+    pure matrix on its designated final letter. Equivariance is preserved
+    separately on each last-letter sector. Sharing the tuples across choices
+    of names keeps the pin of each constant countable.

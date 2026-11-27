@@ -25,6 +25,19 @@ settings:
   family: Fix a strong limit cardinal μ>ω with cf(μ)=ω. Use one representative of every nontrivial complete
     Boolean algebra of cardinality <μ (Definition 6.4).
 arguments:
+- id: necessity-of-analysis-constructible
+  when: {universe: constructible}
+  fails: [necessity-of-analysis]
+  choice: uses
+  by: OpenAI Codex (GPT-6), prompted by Daniel Kodsi, independently checked by a second GPT-6 agent
+  date: '2026-11-26'
+  writeup: modalized-cloud-analysis
+  text: >-
+    The Cohen algebra has size below the strong limit $\mu$ and occurs as a factor. The parameter-free analytical
+    sentence that every real is constructible holds at the isolated root built in $L$.
+    The Cohen factor forces a nonconstructible real. At type $et$ there is a real number
+    structure at the root and a forced one in that factor, so neither necessity disjunct
+    holds. In an arbitrary ground universe the verdict depends on its analytical theory.
 - id: mathematical-possibilism
   holds: [forcing-possibilism]
   by: OpenAI Codex (GPT-6), prompted by Andrew Bacon

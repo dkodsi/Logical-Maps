@@ -1,5 +1,6 @@
 import Classicism.Statements
 import Classicism.Results.Research.ArithmeticRigidity
+import Classicism.Results.Research.LocalModalBarcan
 import Classicism.Results.Arity
 import Classicism.Results.Boxed
 import Classicism.Results.SentenceSchemas.Incompatibilities
@@ -497,6 +498,10 @@ theorem maximalist_distinctness_incompatible_with_necessary_tractarianism_r : St
     (not_consistent_mono (B := maximalist ∪ P.NecTractarianism.schema)
       (union_subset_union_right (A := maximalist) (B := AxiomSet.box P.Tractarianism.schema)
         (B' := P.NecTractarianism.schema) (by map_box)) maximalist_necTractarianism_inconsistent)
+
+/-- `modal-b-and-five-implies-nd-imply-barcan` -/
+theorem modal_b_and_five_implies_nd_imply_barcan : Statements.modal_b_and_five_implies_nd_imply_barcan := by
+  map_cert Proofs.modal_b_and_five_implies_nd_imply_barcan.entails
 
 /-- `modal-b-implies-distinctness-necessary-r` -/
 theorem modal_b_implies_distinctness_necessary_r : Statements.modal_b_implies_distinctness_necessary_r := by
