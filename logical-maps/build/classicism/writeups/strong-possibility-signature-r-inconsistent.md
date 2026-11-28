@@ -6,8 +6,8 @@ Let $D=\Diamond_{\ne}$ and let $K$ say that any two distinct individuals can bec
 
 $$
 \begin{aligned}
-&\operatorname{Max}(C_\Sigma)+K \text{ is consistent},\\
-&\operatorname{Max}(C_\Sigma)+H(K) \text{ is consistent},\\
+&\mathrm{Max}(C_\Sigma)+K \text{ is consistent},\\
+&\mathrm{Max}(C_\Sigma)+H(K) \text{ is consistent},\\
 &C_\Sigma\vdash DK\to K,\qquad C_\Sigma\vdash D H(K)\to\neg K.
 \end{aligned}
 $$
