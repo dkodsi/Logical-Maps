@@ -560,7 +560,7 @@ failure for root power testers. Non-Fregean or higher-type cases remain.
   root extension has a descriptor provably equal to a disjunction of
   haecceities of closed terms, and so is rigid. For finite signatures, a bound
   with infinitely many current tuples is still a potential obstruction.
-- **Rigid Power.**
+- **Rigid Power** holds [with one individual name and countably infinitely many unary predicate names](coalesced-definable-root-unary-signature.md). The member with this signature separates Rigid Power from both Tame Rigidity and Weakly Rigid Power even under signature Maximalism.
 - **Contingency of Cardinal CH**, **Possible Cardinal CH** and **Possible
   failure of Cardinal CH**, added on 24 November 2026, remain undecided.
   The earlier strict-smallness argument for Forcing Possibilism is

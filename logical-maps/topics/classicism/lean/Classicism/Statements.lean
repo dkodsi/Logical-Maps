@@ -7336,6 +7336,17 @@ def profinite_cosets_with_finite_stabilizers_and_terminals : Prop :=
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.IntensionalChoice.schemaIn ∧
     ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.ModalWellOrdering.schemaIn
 
+/-- `recurrent-worlds-with-disagreeing-arithmetic`
+
+Recurrent worlds with disagreeing arithmetic: a witness satisfying 2 principles
+and violating 2. -/
+def recurrent_worlds_with_disagreeing_arithmetic : Prop :=
+  ∃ (Sig : Classicism.Meta.Signature) (_ : Sig.Admitted) (Ax : Classicism.Meta.AxiomSet Sig), Classicism.Meta.AxiomSet.Consistent Ax ∧ Classicism.Meta.AxiomSet.Complete Ax ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.GallinExtensionalComprehension.schemaIn ∧
+    Classicism.Meta.AxiomSet.Entails Ax Classicism.P.WellOrdering.schemaIn ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax (Classicism.Meta.AxiomSet.ofPure Classicism.Meta.AxiomSet.necessityOfArithmetic) ∧
+    ¬ Classicism.Meta.AxiomSet.Entails Ax Classicism.P.Plenitude.schemaIn
+
 /-- `replicated-entrances-to-graded-permutations`
 
 Replicated entrances to graded permutations: a witness satisfying 4 principles
