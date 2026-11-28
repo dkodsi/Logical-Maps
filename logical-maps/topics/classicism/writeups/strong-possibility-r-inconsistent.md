@@ -10,13 +10,13 @@
 
 $$
 \begin{aligned}
-&\operatorname{Max}(C_\Sigma)+K \text{ is consistent},\\
-&\operatorname{Max}(C_\Sigma)+H(K) \text{ is consistent},\\
+&\mathrm{Max}(C_\Sigma)+K \text{ is consistent},\\
+&\mathrm{Max}(C_\Sigma)+H(K) \text{ is consistent},\\
 &C_\Sigma\vdash\neg\bigl(DK\land D H(K)\bigr).
 \end{aligned}
 $$
 
-Write $C_\Sigma$ for Classicism in the language $\Sigma$. Its ordinary Maximalist theory $\operatorname{Max}(C_\Sigma)$ adds every $C_\Sigma$-consistent closed disequality. Strong Possibility (SP) asserts $DP$ for each closed sentence $P$ consistent with that theory. The first two claims therefore give the two instances of SP contradicted by the third.
+Write $C_\Sigma$ for Classicism in the language $\Sigma$. Its ordinary Maximalist theory $\mathrm{Max}(C_\Sigma)$ adds every $C_\Sigma$-consistent closed disequality. Strong Possibility (SP) asserts $DP$ for each closed sentence $P$ consistent with that theory. The first two claims therefore give the two instances of SP contradicted by the third.
 
 ### The contradiction
 
@@ -106,12 +106,12 @@ $$
 \begin{gathered}
 B \equiv (a=b),\\
 L_{a,b}(x)\equiv \exists y^e\thinspace \bigl(x\ne y\land\Box(B\to x=y)\bigr),\\
-\operatorname{Code}_{a,b}(r)\equiv
+\mathrm{Code}_{a,b}(r)\equiv
 (r=\lambda x.\Diamond r(x))\\
 \qquad{}\land\Box\bigl(\neg B\to\forall x^e\thinspace
 (\neg L_{a,b}(x)\leftrightarrow\Diamond(B\land r(x)))\bigr),\\
 (Q_bF)(a)\equiv\Diamond\bigl(\neg B\land\exists r^S\thinspace
-(\operatorname{Code}_{a,b}(r)\land\Diamond(B\land\neg F(r)))\bigr).
+(\mathrm{Code}_{a,b}(r)\land\Diamond(B\land\neg F(r)))\bigr).
 \end{gathered}
 $$
 
@@ -146,7 +146,7 @@ $$
 \widehat h\models\neg L_{a,n}(u_j)\quad\Longleftrightarrow\quad p_h(u).
 $$
 
-Suppose $\widehat h\models\operatorname{Code}_{a,n}(r)$ and let $r^\downarrow$ be its old component at $z$. Take **any** $k:z\to z'$ and **any** $u\in A_e(z')$. Evaluate the boxed conjunct of $\operatorname{Code}$ on the first copy $u_0$ at $\widehat{kh}$. It gives
+Suppose $\widehat h\models\mathrm{Code}_{a,n}(r)$ and let $r^\downarrow$ be its old component at $z$. Take **any** $k:z\to z'$ and **any** $u\in A_e(z')$. Evaluate the boxed conjunct of $\mathrm{Code}$ on the first copy $u_0$ at $\widehat{kh}$. It gives
 
 $$
 \begin{aligned}
@@ -178,7 +178,7 @@ The first line uses the identity arrow. The second uses the Russell argument, va
 
 Both $K$ and $H(K)$ are closed and pure: $b$ is bound in $H$, and the definitions of $Q,\rho,d$ use no names. For the pure case one auxiliary individual name suffices to construct the two models. Forgetting that name preserves the two sentences and every pure Maximalist axiom.
 
-For any admitted free signature $\Sigma$, suppose a derivation refuted either sentence over $\operatorname{Max}(C_\Sigma)$. It uses finitely many names and finitely many Maximalist disequalities. Retain these names and add a fresh individual name $m$. Each cited disequality is still consistent with $C$ in this finite language: a proof of its opposite equality could be returned to $\Sigma$ by replacing $m$ with a fresh individual variable and using existence at type $e$. The same finite derivation would therefore refute the sentence in a language in which we have constructed its Maximalist model. This proves both consistency claims for $\Sigma$. Applying SP now yields $DK$ and $D H(K)$, and the contradiction above concludes the proof. $\square$
+For any admitted free signature $\Sigma$, suppose a derivation refuted either sentence over $\mathrm{Max}(C_\Sigma)$. It uses finitely many names and finitely many Maximalist disequalities. Retain these names and add a fresh individual name $m$. Each cited disequality is still consistent with $C$ in this finite language: a proof of its opposite equality could be returned to $\Sigma$ by replacing $m$ with a fresh individual variable and using existence at type $e$. The same finite derivation would therefore refute the sentence in a language in which we have constructed its Maximalist model. This proves both consistency claims for $\Sigma$. Applying SP now yields $DK$ and $D H(K)$, and the contradiction above concludes the proof. $\square$
 
 <a id="uniform-pair" name="uniform-pair"></a>
 
@@ -210,7 +210,7 @@ Put $x\sim y$ for $\Box(U\to x=y)$. Let $C_i(x)$ say that exactly $i$ current in
 
 $$
 \begin{split}
-\operatorname{Code}(p;\bar a)={}&(p=\lambda\bar v.\Diamond p(\bar v))\\
+\mathrm{Code}(p;\bar a)={}&(p=\lambda\bar v.\Diamond p(\bar v))\\
 &{}\land\Box\bigl(T\to\forall v_1\ldots v_6\thinspace [(\bigwedge_{i=1}^6 C_i(v_i))
 \to(J\leftrightarrow\Diamond(B\land p(\bar v))) ]\bigr).
 \end{split}
@@ -220,7 +220,7 @@ Define
 
 $$
 \begin{split}
-(QF)(\bar a)&=\Diamond\left(A\land\exists p^S\thinspace [\operatorname{Code}(p;\bar a)
+(QF)(\bar a)&=\Diamond\left(A\land\exists p^S\thinspace [\mathrm{Code}(p;\bar a)
 \land\Diamond(B\land\neg Fp)]\right),\\
 \rho(x)&=\exists F^{St}\thinspace [QF=x\land\neg Fx],\qquad d=Q\rho.
 \end{split}
@@ -246,7 +246,7 @@ For clarity, the new relations form an action model at every standard type. At a
 
 ## What the code determines
 
-If $p$ satisfies $\operatorname{Code}(p;\bar a)$ at $o$, its old projection equals $d$ as a **whole** $S$-entity at $w$. To check an arbitrary old row choose $h:w\to z$ and any six current individuals $\bar u$ at $z$. At its test object choose a member of the fibre of size $i$ as $v_i$, independently at each coordinate. The antecedent in the code holds. Possibility of $B\land p(\bar v)$ there is precisely possibility of the projected row of $p$ on $\bar u$ at $z$, since the old continuations are exactly those through $k_t$. The first code condition makes that row possibility-fixed. Its possibility therefore equals its current truth at $z$. The colour $J$ is exactly the previously recorded truth of $d(\bar u)$ there. Every old row on every old tuple agrees, proving equality by intensionality.
+If $p$ satisfies $\mathrm{Code}(p;\bar a)$ at $o$, its old projection equals $d$ as a **whole** $S$-entity at $w$. To check an arbitrary old row choose $h:w\to z$ and any six current individuals $\bar u$ at $z$. At its test object choose a member of the fibre of size $i$ as $v_i$, independently at each coordinate. The antecedent in the code holds. Possibility of $B\land p(\bar v)$ there is precisely possibility of the projected row of $p$ on $\bar u$ at $z$, since the old continuations are exactly those through $k_t$. The first code condition makes that row possibility-fixed. Its possibility therefore equals its current truth at $z$. The colour $J$ is exactly the previously recorded truth of $d(\bar u)$ there. Every old row on every old tuple agrees, proving equality by intensionality.
 
 Conversely $p=d$ passes the code at $o$. Its rows are possibility-fixed by construction. At a test site *every* member of the fibre of size $i$ has the stipulated old image, so the comparison holds for every tuple satisfying the antecedent. The transported selected root parameters disable the comparison everywhere else.
 
